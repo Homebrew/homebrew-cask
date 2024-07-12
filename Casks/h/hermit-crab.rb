@@ -19,4 +19,8 @@ cask "hermit-crab" do
   uninstall quit: "com.belkadan.Hermit-Crab"
 
   zap trash: "~/Library/Preferences/com.belkadan.Hermit-Crab.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
