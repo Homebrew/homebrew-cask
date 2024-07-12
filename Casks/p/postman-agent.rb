@@ -1,9 +1,9 @@
 cask "postman-agent" do
   arch arm: "osx_arm64", intel: "osx_64"
 
-  version "0.4.26"
-  sha256 arm:   "62b1c702e61a8038cc0c0209d53d1e68b7537b9a47c8fc25bbcf57efc739f9e1",
-         intel: "c30be4868db8b784d402dcaf52431f48796154938d41c8dfbbd5e8301a6f50a6"
+  version "0.4.27"
+  sha256 arm:   "e0ee7bde926511b24d5803d196f15a3e46751158135585c7bd549161fc66c6f9",
+         intel: "8affe6d8765ebb8aef2908cc16bc6fab566c7ed07713837a1e92aee64f5a787a"
 
   url "https://dl-agent.pstmn.io/download/version/#{version}/#{arch}",
       verified: "dl-agent.pstmn.io/download/version/"
