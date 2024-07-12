@@ -42,7 +42,7 @@ cask "maintenance" do
     url "https://www.titanium-software.fr/download/13/Maintenance.dmg"
   end
   on_sonoma :or_newer do
-    version "3.1.7"
+    version "3.1.8"
 
     url "https://www.titanium-software.fr/download/14/Maintenance.dmg"
   end
