@@ -1,6 +1,6 @@
 cask "slack-cli" do
-  version "2.26.0"
-  sha256 "e3f68bd7710d6665d670c5556905a8b2dba317cffd7ef3cb02a6b693ef642d31"
+  version "2.27.1"
+  sha256 "7fbd080f8056dae014941bf885f4406a7727b68206b449a4fbc169e8f2a5bd47"
 
   url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_64-bit.tar.gz",
       verified: "downloads.slack-edge.com/slack-cli/"
@@ -18,4 +18,7 @@ cask "slack-cli" do
   binary "bin/slack"
 
   # No zap stanza required
+  caveats do
+    requires_rosetta
+  end
 end
