@@ -22,4 +22,10 @@ cask "dexed" do
               "com.digitalsuburban.dexed.vst3.pkg",
             ],
             delete:  "/Applications/Dexed.app"
+
+  zap trash: [
+    "/private/var/db/receipts/com.digitalsuburban.dexed.*",
+    "~/Library/Application Support/Dexed.settings",
+    "~/Library/Saved Application State/com.digitalsuburban.Dexed.savedState",
+  ]
 end
