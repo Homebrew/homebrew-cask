@@ -8,8 +8,14 @@ cask "hdrmerge" do
   desc "Creates raw images with extended dynamic range"
   homepage "https://jcelaya.github.io/hdrmerge/"
 
+  deprecate! date: "2024-07-12", because: :unmaintained
+
   app "HDRMerge.app"
   binary "#{appdir}/HDRMerge.app/Contents/MacOS/hdrmerge"
 
   zap trash: "~/Library/Preferences/com.j-celaya.HdrMerge.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
