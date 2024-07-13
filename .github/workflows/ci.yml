@@ -59,7 +59,7 @@ jobs:
         run: |
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]
           then
-            brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" ${{ github.event.inputs.skip_install  && '--skip-install' }} ${{ github.event.inputs.new_cask  && '--new' }} --casks=${{ github.event.inputs.casks }}
+            brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" ${{ github.event.inputs.skip_install && '--skip-install' }} ${{ github.event.inputs.new_cask && '--new' }} --casks="$INPUT_CASKS"
           elif [[ "${GITHUB_EVENT_NAME}" == "push" ]]
           then
             brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" --syntax-only
@@ -126,7 +126,6 @@ jobs:
              ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
             echo '::warning::Uninstalling Mono is no longer necessary.'
           fi
-        
 
       - name: Cache Homebrew Gems
         id: cache
