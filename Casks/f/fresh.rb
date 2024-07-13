@@ -1,5 +1,5 @@
 cask "fresh" do
-  version "4.0.7,407.101"
+  version "4.0.7"
   sha256 :no_check
 
   url "https://ironicsoftware.com/downloads/Fresh.zip"
@@ -8,8 +8,8 @@ cask "fresh" do
   homepage "https://ironicsoftware.com/fresh/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://ironicsoftware.com/downloads/fresh#{version.major}.xml"
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :high_sierra"
@@ -17,11 +17,11 @@ cask "fresh" do
   app "Fresh.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.ironic.fresh4",
+    "~/Library/Application Scripts/com.ironic.fresh#{version.major}",
     "~/Library/Application Support/Fresh",
-    "~/Library/Caches/com.ironic.fresh4",
-    "~/Library/Containers/com.ironic.fresh4",
-    "~/Library/HTTPStorages/com.ironic.fresh4",
-    "~/Library/Preferences/com.ironic.fresh4.plist",
+    "~/Library/Caches/com.ironic.fresh#{version.major}",
+    "~/Library/Containers/com.ironic.fresh#{version.major}",
+    "~/Library/HTTPStorages/com.ironic.fresh#{version.major}",
+    "~/Library/Preferences/com.ironic.fresh#{version.major}.plist",
   ]
 end
