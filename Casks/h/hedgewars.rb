@@ -13,4 +13,8 @@ cask "hedgewars" do
   end
 
   app "Hedgewars.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -13,5 +13,11 @@ cask "honto" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :mojave"
+
   app "honto.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

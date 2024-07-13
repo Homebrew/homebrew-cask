@@ -18,4 +18,8 @@ cask "happymac" do
   app "happymac.app"
 
   zap trash: "~/HappyMacApp"
+
+  caveats do
+    requires_rosetta
+  end
 end

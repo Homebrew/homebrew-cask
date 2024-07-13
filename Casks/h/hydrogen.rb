@@ -18,4 +18,8 @@ cask "hydrogen" do
   app "Hydrogen.app"
 
   zap trash: "~/Library/Application Support/Hydrogen"
+
+  caveats do
+    requires_rosetta
+  end
 end

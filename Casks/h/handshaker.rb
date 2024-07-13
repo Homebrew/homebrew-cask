@@ -14,4 +14,8 @@ cask "handshaker" do
   end
 
   app "HandShaker.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

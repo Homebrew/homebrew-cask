@@ -37,4 +37,8 @@ cask "haptic-touch-bar" do
     "~/Library/Cookies/com.bopsoft.HapticTouchBar.binarycookies",
     "~/Library/Preferences/com.bopsoft.HapticTouchBar.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
