@@ -11,8 +11,8 @@ cask "framer" do
   homepage "https://www.framer.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://updates.framer.com/electron/darwin/#{arch}/version-stable"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true
