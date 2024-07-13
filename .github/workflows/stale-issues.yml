@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mark/Close Stale Issues and Pull Requests
-        uses: actions/stale@v9
+        uses: actions/stale@28ca1036281a5e5922ead5184a1bbf96e5fc984e # v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-stale: 21
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mark/Close Stale `bump-formula-pr` and `bump-cask-pr` Pull Requests
-        uses: actions/stale@v9
+        uses: actions/stale@28ca1036281a5e5922ead5184a1bbf96e5fc984e # v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-stale: 2
