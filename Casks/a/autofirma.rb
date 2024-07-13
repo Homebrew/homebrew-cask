@@ -13,8 +13,11 @@ cask "autofirma" do
   homepage "https://firmaelectronica.gob.es/Home/Descargas.htm"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(%r{autofirma/(\d+)/(\d+)/(\d+)/AutoFirma[._-]Mac[._-]#{arch}\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}.#{match[2]}" }
+    end
   end
 
   pkg "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
