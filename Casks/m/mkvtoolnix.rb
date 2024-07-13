@@ -47,4 +47,8 @@ cask "mkvtoolnix" do
     "~/Library/Preferences/bunkus.org/mkvtoolnix-gui",
     "~/Library/Saved Application State/download.mkvtoolnix.MKVToolNix.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
