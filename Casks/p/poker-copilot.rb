@@ -1,6 +1,6 @@
 cask "poker-copilot" do
-  version "7.48,9357"
-  sha256 "3f4fa1508d78d49afdd9efdb2f2c83abdde9292ef0a64f7b61ae2cdb17de919a"
+  version "7.49,9374"
+  sha256 "5bf0079fd916c4dcc958813433276f5330bafbf119bd5bf2006f4597c1c02131"
 
   url "https://static.pokercopilot.com/pokercopilot_macos_#{version.csv.first.dots_to_underscores}_build_#{version.csv.second}.dmg"
   name "Poker Copilot"
@@ -20,4 +20,8 @@ cask "poker-copilot" do
   app "Poker Copilot.app"
 
   zap trash: "~/Library/Application Support/com.barbarysoftware.pokercopilot"
+
+  caveats do
+    requires_rosetta
+  end
 end
