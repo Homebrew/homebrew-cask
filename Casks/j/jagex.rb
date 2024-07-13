@@ -17,6 +17,10 @@ cask "jagex" do
   uninstall quit:   "com.jagex.launcher",
             delete: "/Applications/Jagex Launcher.app"
 
+  zap trash: [
+    "~/Library/Application Support/Jagex Launcher"
+  ]
+
   caveats do
     requires_rosetta
   end
