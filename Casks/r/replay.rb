@@ -23,4 +23,8 @@ cask "replay" do
     "~/Library/Preferences/org.mozilla.replay.plist",
     "~/Library/Saved Application State/org.mozilla.replay.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
