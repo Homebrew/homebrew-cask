@@ -134,6 +134,7 @@ coteditor
 couchbase-server-community
 couchbase-server-enterprise
 craft
+crashplan
 creality-print
 crossover
 cryptomator
