@@ -1,9 +1,9 @@
 cask "yass" do
   arch arm: "-arm64", intel: "-x64"
 
-  version "1.11.3"
-  sha256 arm:   "6dec9a348f7daaefd49e404cf0b4a69bbe17c8aa59dccb67668dc19a4eda8be5",
-         intel: "1ee71f80af397ec627ac48df6e2a591ebc726ca94b514fadbb3e10e5019a0d29"
+  version "1.11.4"
+  sha256 arm:   "90fa61a5301cd3f8eb20b03f65064a16cf0721e57f9e09ca6ea761aef385923b",
+         intel: "b79c8449b3058c4a7cf231c6ee97138c650fd90528ab9b4678c27a1929d9606c"
 
   url "https://github.com/Chilledheart/yass/releases/download/#{version}/yass-macos-release#{arch}-#{version}.dmg"
   name "Yet Another Shadow Socket"
