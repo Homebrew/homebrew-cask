@@ -21,4 +21,8 @@ cask "zenbeats" do
     "~/Library/Caches/jp.co.roland.zenbeats",
     "~/Library/Saved Application State/jp.co.roland.zenbeats.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
