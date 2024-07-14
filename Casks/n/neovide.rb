@@ -6,7 +6,7 @@ cask "neovide" do
          intel: "42a8765b24b8073bd798e11b143dc5ab06a56563f8db25441364c390f0819332"
 
   url "https://github.com/neovide/neovide/releases/download/#{version}/Neovide-#{arch}-apple-darwin.dmg"
-  name "eovide"
+  name "Neovide"
   desc "Neovim Client"
   homepage "https://github.com/neovide/neovide"
 
