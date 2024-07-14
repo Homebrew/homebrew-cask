@@ -2,8 +2,7 @@ cask "pingid" do
   version "1.7.5"
   sha256 :no_check
 
-  url "https://pingone-downloads.s3.amazonaws.com/pingid/mac-client/PingID.pkg",
-      verified: "pingone-downloads.s3.amazonaws.com/pingid/mac-client/"
+  url "https://downloads.pingidentity.com/pingid/mac-client/PingID.pkg"
   name "PingID"
   desc "Cloud-based, multi-factor authentication"
   homepage "https://www.pingidentity.com/"
@@ -22,4 +21,8 @@ cask "pingid" do
     "~/Library/Preferences/com.pingidentity.pingid.plist",
     "~/Library/Saved Application State/com.pingidentity.pingid.pcclient.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
