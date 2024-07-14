@@ -30,7 +30,7 @@ cask "android-sdk" do
   end
 
   uninstall_postflight do
-    FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/android-sdk")
+    FileUtils.rm("#{HOMEBREW_PREFIX}/share/android-sdk")
   end
 
   zap trash: "~/.android"
