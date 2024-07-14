@@ -27,6 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: false
+
       - name: Checkout google/fonts
         uses: actions/checkout@v4
         with:
@@ -38,27 +39,37 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+
       - name: Install Python packages
         run: pip3 install gftools html2text jinja2 protobuf
+
+      - name: Configure Git user
+        id: git-user-config
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
+
+      - name: Set up commit signing
+        uses: Homebrew/actions/setup-commit-signing@master
+        with:
+          signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
 
       - name: Import Google Fonts
         run: ./developer/bin/import_google_fonts vendor/google-fonts ${{ matrix.mode }}
 
       - name: Create pull request with updated files
-        id: create-pull-request
-        uses: peter-evans/create-pull-request@c5a7806660adbe173f04e3e038b0ccdcd758773c
-        with:
-          branch: auto-${{ matrix.mode }}-google-fonts
-          commit-message: Update Google Fonts
-          base: master
-          author: BrewTestBot <BrewTestBot@users.noreply.github.com>
-          committer: BrewTestBot <BrewTestBot@users.noreply.github.com>
-          title: Automatic ${{ matrix.noun }} of Google Fonts
-          body: |
-            This pull request was created automatically by the [`google-fonts`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) workflow.
-          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
-      - name: Print pull request URL
-        if: steps.create-pull-request.outputs.pull-request-number
         run: |
-          echo "Created pull request:"
-          echo "  https://github.com/${{ github.repository }}/pull/${{ steps.create-pull-request.outputs.pull-request-number }}"
+          set -euo pipefail
+
+          if ! git diff --stat --exit-code
+          then
+            git checkout -b "auto-${{ matrix.mode }}-google-fonts"
+
+            git commit -am "Update Google Fonts" -m "This pull request was created automatically by the [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) workflow."
+
+            gh pr create --head "auto-${{ matrix.mode }}-google-fonts"
+          fi
+        env:
+          GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
+          GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
+          HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
