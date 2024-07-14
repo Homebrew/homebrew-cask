@@ -14,7 +14,13 @@ cask "fontlab" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "FontLab #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/FontLab",
+    "~/Library/Preferences/com.fontlab.fontlab#{version.major}.plist",
+    "~/Library/Saved Application State/com.fontlab.fontlab#{version.major}.savedState",
+  ]
 end
