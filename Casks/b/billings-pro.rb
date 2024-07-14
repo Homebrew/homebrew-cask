@@ -16,5 +16,10 @@ cask "billings-pro" do
 
   app "Billings Pro.app"
 
-  zap trash: "~/Library/Application Support/Billings Pro"
+  zap trash: [
+    "~/Library/Application Support/Billings Pro",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.marketcircle.bpsynchelper.sfl*",
+    "~/Library/Preferences/com.marketcircle.BillingsPro.plist",
+    "~/Library/Saved Application State/com.marketcircle.BillingsPro.savedState",
+  ]
 end
