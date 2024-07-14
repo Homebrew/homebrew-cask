@@ -1,11 +1,11 @@
 cask "wordpresscom-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.4"
-  sha256 arm:   "9ae53c21dbd72996e260775492be85605259437a2226aa7a3f5864fa33a7ec86",
-         intel: "0ab3adc2017d868f31a3180880840ea1db3e96ec1c7b49c68c6038954347a21e"
+  version "1.0.5"
+  sha256 arm:   "25966f43630c04f2ed883d788def1e10d06711b28e58b9251df3ee8edad114c7",
+         intel: "6078e1dee033ff8a7b37c31eb5c801b243d6b1e9b48ad24e3685269ce1663687"
 
-  url "https://cdn.a8c-ci.services/studio/studio-darwin-#{arch}-v#{version}.app.zip",
+  url "https://cdn.a8c-ci.services/studio/studio-darwin-#{arch}-v#{version}.dmg",
       verified: "cdn.a8c-ci.services/studio/"
   name "Wordpress Studio"
   desc "WordPress local development environment"
@@ -13,7 +13,7 @@ cask "wordpresscom-studio" do
 
   livecheck do
     url :homepage
-    regex(/studio[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.app\.zip/i)
+    regex(/studio[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
