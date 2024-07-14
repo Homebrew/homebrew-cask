@@ -1,5 +1,5 @@
 cask "dockey" do
-  version "1.1"
+  version "1.2"
   sha256 :no_check
 
   url "https://dockey.publicspace.co/download/Dockey-latest.zip"
@@ -17,8 +17,4 @@ cask "dockey" do
   app "dockey.app"
 
   uninstall quit: "com.igorstumberger.dockey"
-
-  caveats do
-    requires_rosetta
-  end
 end
