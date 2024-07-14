@@ -7,10 +7,11 @@ cask "pingmenu" do
   desc "Utility that shows the current network latency in the menu bar"
   homepage "https://github.com/kalleboo/PingMenu"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-14", because: :unmaintained
 
   app "PingMenu.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
