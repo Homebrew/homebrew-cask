@@ -1,8 +1,8 @@
 cask "digikam" do
-  version "8.3.0"
-  sha256 "20f0f8cfa757d19d3d955ba84e8fe67c7690b6f043ec3a9be948657ba05e8a23"
+  version "8.4.0"
+  sha256 "eb6502c93a2a843759b219f5127a82b1d146ff2acfdb2708140e78bbbce589e0"
 
-  url "https://download.kde.org/stable/digikam/#{version}/digiKam-#{version}-MacOS-x86-64.pkg",
+  url "https://download.kde.org/stable/digikam/#{version}/digiKam-#{version}-Qt5-MacOS-x86_64.pkg",
       verified: "kde.org/stable/digikam/"
   name "digiKam"
   desc "Digital photo manager"
@@ -13,7 +13,7 @@ cask "digikam" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
-  pkg "digiKam-#{version}-MacOS-x86-64.pkg"
+  pkg "digiKam-#{version}-Qt5-MacOS-x86_64.pkg"
 
   uninstall pkgutil: [
               "org.digiKam",
