@@ -40,7 +40,7 @@ cask "wezterm" do
     staged_subfolder = staged_path.glob(["WezTerm-*", "wezterm-*"]).first
     if staged_subfolder
       FileUtils.mv(staged_subfolder/"WezTerm.app", staged_path)
-      FileUtils.rm_rf(staged_subfolder)
+      FileUtils.rm_r(staged_subfolder)
     end
   end
 

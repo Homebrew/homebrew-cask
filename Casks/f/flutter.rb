@@ -26,7 +26,7 @@ cask "flutter" do
   end
 
   uninstall_postflight do
-    FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/flutter")
+    FileUtils.rm("#{HOMEBREW_PREFIX}/share/flutter")
   end
 
   zap trash: "~/.flutter"
