@@ -20,5 +20,11 @@ cask "ankerwork" do
 
   app "AnkerWork.app"
 
-  zap trash: "~/Library/Application Support/AnkerWork"
+  zap trash: [
+    "~/Library/Application Support/AnkerWork",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.anker.pcankerwork.sfl*",
+    "~/Library/Logs/AnkerWork",
+    "~/Library/Preferences/com.anker.pcankerwork.plist",
+    "~/Library/Saved Application State/com.anker.pcankerwork.savedState",
+  ]
 end
