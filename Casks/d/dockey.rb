@@ -12,9 +12,11 @@ cask "dockey" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "dockey.app"
 
   uninstall quit: "com.igorstumberger.dockey"
+
+  # No zap stanza required
 end
