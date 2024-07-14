@@ -10,7 +10,6 @@ updates:
   - dependency-type: all
   ignore:
   - dependency-name: actions/stale
-  - dependency-name: dessant/lock-threads
   groups:
     artifacts:
       patterns:
