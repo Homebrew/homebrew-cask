@@ -7,10 +7,7 @@ cask "unraid-usb-creator" do
   desc "Utility for installing Unraid on a USB drive"
   homepage "https://unraid.net/"
 
-  livecheck do
-    url "https://unraid.net/download"
-    regex(/href=.*?Unraid[._-]USB[._-]Creator[._-]macOS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end
+  deprecate! date: "2024-07-14", because: :discontinued
 
   app "Unraid USB Creator.app"
 end
