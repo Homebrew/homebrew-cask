@@ -1,20 +1,21 @@
 cask "folding-at-home" do
-  version "7.6.21"
-  sha256 "c6a559f46e25aa7a9e67227affbccfef77527f663da80be6c55a4f7e7e29866f"
+  version "8.3.18"
+  sha256 "8aed0c5c6db94175eaede4d5d570c7768c8ea44b5a9af10483da553934069d1e"
 
-  url "https://download.foldingathome.org/releases/public/release/fah-installer/osx-10.11-64bit/v#{version.major_minor}/fah-installer_#{version}_x86_64.mpkg.zip"
+  url "https://download.foldingathome.org/releases/public/fah-client/macos-12-universal/release/fah-client_#{version}_universal.pkg"
   name "Folding@home"
   desc "Graphical interface control for Folding"
   homepage "https://foldingathome.org/"
 
   livecheck do
-    url "https://download.foldingathome.org/releases/public/release/fah-installer/osx-10.11-64bit/v#{version.major_minor}/"
-    regex(/href=.*?fah[._-]installer[._-]v?(\d+(?:\.\d+)+)[._-]x86[._-]64.mpkg\.zip/i)
+    url "https://download.foldingathome.org/releases/public/fah-client/macos-12-universal/release/"
+    regex(/href=.*?fah[._-]?client[._-]v?(\d+(?:\.\d+)*)(_universal)?\.pkg/i)
   end
 
   conflicts_with cask: "folding-at-home@beta"
+  depends_on macos: ">= :high_sierra"
 
-  pkg "fah-installer_#{version}_x86_64-b.pkg"
+  pkg "fah-client_#{version}_universal.pkg"
 
   uninstall launchctl: "org.foldingathome.fahclient",
             quit:      [
