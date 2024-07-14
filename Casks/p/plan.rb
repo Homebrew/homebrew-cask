@@ -24,4 +24,8 @@ cask "plan" do
     "~/Library/Saved Application State/com.getplan.mac.savedState",
     "~/Library/Saved Application State/com.getplan.Plan.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
