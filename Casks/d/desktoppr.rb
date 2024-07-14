@@ -27,4 +27,6 @@ cask "desktoppr" do
   pkg "desktoppr-#{version.tr(",", "-")}.pkg"
 
   uninstall pkgutil: "com.scriptingosx.desktoppr"
+
+  # No zap stanza required
 end
