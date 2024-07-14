@@ -1,9 +1,12 @@
 cask "neovide" do
-  version "0.13.1"
-  sha256 "34f205f483b5794971b8bb1cbe005d330ed5e192d818df8fcea9b9b976af0cf4"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://github.com/neovide/neovide/releases/download/#{version}/Neovide.dmg.zip"
-  name "neovide"
+  version "0.13.2"
+  sha256 arm:   "505647c2c5c7b2ecde96e22e68d50af3c7c1d459e0bbc308066e11864838d326",
+         intel: "42a8765b24b8073bd798e11b143dc5ab06a56563f8db25441364c390f0819332"
+
+  url "https://github.com/neovide/neovide/releases/download/#{version}/Neovide-#{arch}-apple-darwin.dmg"
+  name "eovide"
   desc "Neovim Client"
   homepage "https://github.com/neovide/neovide"
 
