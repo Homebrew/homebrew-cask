@@ -1,8 +1,11 @@
 cask "nuclear" do
-  version "0.6.30"
-  sha256 "206daca8686562def115c969209ac13700138f918fa82dedb3a0f1eb8b1c1935"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}.dmg",
+  version "0.6.31"
+  sha256 arm:   "0618fbe8dff0dc3ab862dcc3afe93e76bb34afa073b0440c956778bfaa699841",
+         intel: "2679bb823ce9043d3685c0d6323afec3be9e91aaa5a3a898c5b65309e34c8240"
+
+  url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}-#{arch}.dmg",
       verified: "github.com/nukeop/nuclear/"
   name "Nuclear"
   desc "Streaming music player"
@@ -21,8 +24,4 @@ cask "nuclear" do
     "~/Library/Preferences/nuclear.plist",
     "~/Library/Saved Application State/nuclear.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
