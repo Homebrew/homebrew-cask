@@ -26,7 +26,7 @@ cask "visual-studio" do
   end
 
   deprecate! date: "2024-08-31", because: :discontinued
-  
+
   auto_updates true
   depends_on macos: ">= :catalina"
   depends_on cask: "mono-mdk-for-visual-studio"
