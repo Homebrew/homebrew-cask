@@ -7,10 +7,7 @@ cask "launchy" do
   desc "Utility desktop shortcut utility"
   homepage "https://www.launchy.net/"
 
-  livecheck do
-    url "https://www.launchy.net/download.php"
-    regex(%r{href=.*?/Launchy(\d+(?:\.\d+)*)\.dmg}i)
-  end
+  disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "Launchy.app"
 end
