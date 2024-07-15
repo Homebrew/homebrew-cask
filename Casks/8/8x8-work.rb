@@ -1,8 +1,11 @@
 cask "8x8-work" do
-  version "8.13.2-4"
-  sha256 "ae438c182ff7e6a18f9c94bc523d3361af7c72ca2d06d4ca6a61d1fb4c6c8314"
+  arch arm: "-arm64"
 
-  url "https://vod-updates.8x8.com/ga/work-dmg-v#{version}.dmg"
+  version "8.14.2-6"
+  sha256 arm:   "c85986642bf817b1d92eadf57c3b7582913ae2395f2a33bf5a1d9cc4c89f5385",
+         intel: "a70473ae9415fc764d3ed4c68c8c72dce3edd971808e985795d69e9a9720025c"
+
+  url "https://work-desktop-assets.8x8.com/prod-publish/ga/work#{arch}-dmg-v#{version}.dmg"
   name "8x8_work"
   desc "Communications application with voice, video, chat, and web conferencing"
   homepage "https://www.8x8.com/products/apps"
@@ -17,8 +20,4 @@ cask "8x8-work" do
   app "8x8 Work.app"
 
   zap trash: "~/Library/Application Support/8x8 Work"
-
-  caveats do
-    requires_rosetta
-  end
 end
