@@ -21,5 +21,6 @@ cask "backblaze-downloader" do
   zap trash: [
     "~/Library/Logs/BackblazeDownloader",
     "~/Library/Preferences/com.backblaze.BackblazeDownloader.plist",
+    "~/Library/Saved Application State/com.backblaze.BackblazeDownloader.savedState",
   ]
 end
