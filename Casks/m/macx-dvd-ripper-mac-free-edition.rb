@@ -4,12 +4,10 @@ cask "macx-dvd-ripper-mac-free-edition" do
 
   url "https://www.macxdvd.com/download/converter_ripper_org/macx-dvd-ripper-mac-free-edition.dmg"
   name "MacX DVD Ripper Mac Free Edition"
+  desc "DVD ripping application"
   homepage "https://www.macxdvd.com/dvd-ripper-mac-free/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-07-15", because: "is 32-bit only"
 
   app "MacX DVD Ripper Mac Free Edition.app"
 end
