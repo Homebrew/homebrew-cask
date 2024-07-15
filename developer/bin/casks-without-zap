@@ -3,6 +3,7 @@
 
 # rubocop:disable Style/TopLevelMethodDefinition
 
+require "fileutils"
 require "find"
 require "json"
 require "open-uri"
@@ -13,7 +14,7 @@ require "tmpdir"
 
 # Exit cleanup
 TMP_DIR = Pathname.new(Dir.mktmpdir).freeze
-at_exit { TMP_DIR.rmtree }
+at_exit { FileUtils.rm_r(TMP_DIR) }
 
 # Constants
 ONLINE_ISSUE = "https://github.com/Homebrew/homebrew-cask/issues/88469"

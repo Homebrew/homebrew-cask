@@ -43,7 +43,7 @@ cask "google-cloud-sdk" do
 
   preflight do
     FileUtils.cp_r staged_path/"google-cloud-sdk/.", google_cloud_sdk_root, remove_destination: true
-    (staged_path/"google-cloud-sdk").rmtree
+    FileUtils.rm_r(staged_path/"google-cloud-sdk")
     FileUtils.ln_s google_cloud_sdk_root, (staged_path/"google-cloud-sdk")
   end
 
