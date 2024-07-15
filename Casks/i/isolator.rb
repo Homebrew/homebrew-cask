@@ -7,10 +7,7 @@ cask "isolator" do
   desc "Menu bar app that hides desktop, inactive windows, etc."
   homepage "https://www.willmore.eu/software/isolator/"
 
-  livecheck do
-    url "https://www.willmore.eu/software/isolator/allversions.xml"
-    strategy :sparkle
-  end
+  disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "Isolator.app"
 end
