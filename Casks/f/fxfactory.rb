@@ -1,6 +1,6 @@
 cask "fxfactory" do
   version "8.0.16,7877"
-  sha256 "59967d2ae46570dafa7ab4bf680e068c0b26ec909e70046e2491d61b7dd263b7"
+  sha256 :no_check # required as upstream package is often updated in place
 
   url "https://fxfactory.s3.amazonaws.com/noiseindustries/fxfactory/FxFactory-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "fxfactory.s3.amazonaws.com/noiseindustries/"
