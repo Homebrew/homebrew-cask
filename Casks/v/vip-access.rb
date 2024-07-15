@@ -23,4 +23,8 @@ cask "vip-access" do
     "~/Library/Caches/com.symantec.VIP-Access",
     "~/Library/Preferences/com.symantec.VIP-Access.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
