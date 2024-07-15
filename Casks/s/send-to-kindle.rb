@@ -24,4 +24,8 @@ cask "send-to-kindle" do
     "~/Library/Logs/SendToKindleInstall.log",
     "~/Library/Preferences/com.amazon.SendToKindle.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
