@@ -5,11 +5,12 @@ cask "x32-edit" do
   url "https://mediadl.musictribe.com/download/software/behringer/X32/X32-Edit_MAC_#{version}.zip",
       verified: "musictribe.com/"
   name "x32-edit"
-  desc "Remote control for the X32 console"
+  desc "Remote control for Behringer X32 audio consoles"
   homepage "https://www.behringer.com/product.html?modelCode=0603-ACE"
 
   livecheck do
-    skip "No version information available"
+    url "https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=0603-ACE"
+    regex(/X32[._-]Edit[._-]MAC[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :big_sur"
