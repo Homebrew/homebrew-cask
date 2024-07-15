@@ -314,6 +314,7 @@ hoppscotch
 hstracker
 http-toolkit
 hydrus-network
+hyperkey
 ibackup-viewer
 ibkr
 ibm-cloud-cli
