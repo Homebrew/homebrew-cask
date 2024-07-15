@@ -19,6 +19,7 @@ cask "roblox" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "RobloxPlayer.app", target: "Roblox.app"
 
@@ -30,4 +31,8 @@ cask "roblox" do
     "~/Library/Preferences/com.roblox.RobloxPlayer.plist",
     "~/Library/Preferences/com.roblox.RobloxPlayerChannel.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
