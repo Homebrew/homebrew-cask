@@ -1,9 +1,9 @@
-cask "alinof-timer" do
+cask "as-timer" do
   version "6.0,162"
   sha256 :no_check
 
   url "https://downloads.alinofsoftware.ch/current/macos/astimer.dmg"
-  name "Alinof Timer"
+  name "AS Timer"
   desc "Timer app"
   homepage "https://www.alinofsoftware.ch/apps/products-timer/index.html"
 
