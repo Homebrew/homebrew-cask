@@ -1,9 +1,9 @@
 cask "sonarr" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.0.6.1805"
-  sha256 arm:   "62c8a1fbbe6492e49007e7913ecb880d5dd30b44b489c48de3833a61832d84c6",
-         intel: "e6faaf7285eef01d00f631eb8c453f39647ca406a77673100c8ebcf2b1a6571e"
+  version "4.0.7.1863"
+  sha256 arm:   "3670f078366e583d854017e0979be41c783b641e75a380fb23332c56af8d4839",
+         intel: "55ad3aad0bf5374dd85b332dbfba05baeb16a5357c4d1aaea1b69c48d33cdfd5"
 
   url "https://github.com/Sonarr/Sonarr/releases/download/v#{version}/Sonarr.main.#{version}.osx-#{arch}-app.zip",
       verified: "github.com/Sonarr/Sonarr/"
