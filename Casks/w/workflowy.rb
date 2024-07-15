@@ -8,6 +8,11 @@ cask "workflowy" do
   desc "Notetaking tool"
   homepage "https://workflowy.com/downloads/mac/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "WorkFlowy.app"
