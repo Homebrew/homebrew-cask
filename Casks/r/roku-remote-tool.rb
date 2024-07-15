@@ -5,7 +5,7 @@ cask "roku-remote-tool" do
   url "https://devtools.web.roku.com/RokuRemote/app/roku-remote-tool-mac.zip"
   name "Roku Remote Tool"
   desc "Configuration tool"
-  homepage "https://devtools.web.roku.com/RokuRemote/electron.html"
+  homepage "https://devtools.web.roku.com/RokuRemote/"
 
   livecheck do
     url :url
@@ -19,4 +19,8 @@ cask "roku-remote-tool" do
     "~/Library/Logs/roku_remote_tool",
     "~/Library/Preferences/com.rokuremotetool.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
