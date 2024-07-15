@@ -421,6 +421,7 @@ mindmac
 mini-program-studio
 miniforge
 miro
+mist
 mitmproxy
 mixed-in-key
 mixxx
