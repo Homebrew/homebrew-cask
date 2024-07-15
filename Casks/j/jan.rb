@@ -1,9 +1,9 @@
 cask "jan" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.5.1"
-  sha256 arm:   "1b0b3797324b7b4263e3f88e06f795ee5c12ab4fb9f67f36319491cda687cc7f",
-         intel: "610b25f8f2166c089d1a5d8a77461a04d570f421e979708fdfe780589e08013f"
+  version "0.5.2"
+  sha256 arm:   "fc8acc5e9ef78f276c34db5e3547ca8d573de0d9c7b283801a9f2b586e263839",
+         intel: "5509109bf41bb5d3829cd7fb3187c8c9582e056c3dbae8cf3e591fbcf83a1d32"
 
   url "https://github.com/janhq/jan/releases/download/v#{version}/jan-mac-#{arch}-#{version}.dmg",
       verified: "github.com/janhq/jan/"
