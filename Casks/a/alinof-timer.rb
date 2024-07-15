@@ -1,8 +1,8 @@
 cask "alinof-timer" do
-  version "4.0.0"
+  version "6.0,162"
   sha256 :no_check
 
-  url "https://www.alinofsoftware.ch/resources/AlinofTimer.pkg"
+  url "https://downloads.alinofsoftware.ch/current/macos/astimer.dmg"
   name "Alinof Timer"
   desc "Timer app"
   homepage "https://www.alinofsoftware.ch/apps/products-timer/index.html"
@@ -12,7 +12,12 @@ cask "alinof-timer" do
     strategy :extract_plist
   end
 
-  pkg "AlinofTimer.pkg"
+  depends_on macos: ">= :mojave"
 
-  uninstall pkgutil: "com.alinofsoftware.alinoftimer"
+  app "AS Timer.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.alinofsoftware.alinoftimer",
+    "~/Library/Containers/com.alinofsoftware.alinoftimer",
+  ]
 end
