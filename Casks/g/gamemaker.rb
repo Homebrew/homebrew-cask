@@ -1,6 +1,6 @@
 cask "gamemaker" do
-  version "2024.6.1.160"
-  sha256 "06f820dcfb2084f59c74be0e544a1fa638b74814e0a5b6a3d540751041ef1ad7"
+  version "2024.06.2.162"
+  sha256 "25ef676aaa397c84efeb3aed95f3ffbbdf9ee833fb7470fa2b0f4d8be148d483"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
       verified: "gms.yoyogames.com/"
