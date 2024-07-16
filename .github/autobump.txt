@@ -109,6 +109,7 @@ chromium-gost
 chronycontrol
 cisdem-data-recovery
 cisdem-pdf-converter-ocr
+clash-verge-rev
 clay
 cleanclip
 cleanmymac
