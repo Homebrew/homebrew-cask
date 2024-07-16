@@ -10,11 +10,11 @@ cask "roblox" do
 
   livecheck do
     url "https://clientsettingscdn.roblox.com/v1/client-version/MacPlayer"
-    regex(/version":"([^"]+)".*version[._-]([^"]+)/i)
-    strategy :page_match do |page, regex|
-      main_version = page[regex, 1]
-      client_version = page[regex, 2]
-      "#{main_version},#{client_version}"
+    strategy :json do |json|
+      version = json["version"]
+      client_version = json["clientVersionUpload"]&.split("-")&.second
+      next if version.blank? || client_version.blank?
+      "#{version},#{client_version}"
     end
   end
 
