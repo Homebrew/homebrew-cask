@@ -1,6 +1,6 @@
 cask "tableau-prep" do
-  version "2024.1.3"
-  sha256 "d74c5eb931d4ca0eee635a4ceead8f053292e485730fb452cb50d302bdd606ab"
+  version "2024.1.4"
+  sha256 "3944ded280bbb03f47ed58f0f1726d0436c93f8466705c2ebf2adf5061b633f5"
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg",
       user_agent: "curl/8.7.1"
