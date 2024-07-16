@@ -22,6 +22,7 @@ cask "roblox" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
+  # The default installer installs the application as `Roblox.app` - so do the same for consistency
   app "RobloxPlayer.app", target: "Roblox.app"
 
   uninstall quit:   "com.roblox.RobloxPlayer",
