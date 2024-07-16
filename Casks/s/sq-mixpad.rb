@@ -16,7 +16,7 @@ cask "sq-mixpad" do
 
   app "SQ MixPad #{version}.app"
 
-  zap trash: "~/Library/Preferences/com.allen-heath.SQ-MixPad V1.5.1 - Rev. 56771.plist"
+  zap trash: "~/Library/Preferences/com.allen-heath.SQ-MixPad*.plist"
 
   caveats do
     requires_rosetta
