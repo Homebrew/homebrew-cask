@@ -8,4 +8,8 @@ cask "invesalius" do
   homepage "https://github.com/invesalius/invesalius3/"
 
   app "InVesalius.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
