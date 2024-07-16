@@ -24,4 +24,8 @@ cask "icons8" do
     "~/Library/Containers/com.visualpharm.StandaloneLoginHelper",
     "~/Library/Preferences/com.visualpharm.Icons8.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
