@@ -1,6 +1,6 @@
 cask "ubiquiti-unifi-controller" do
-  version "8.2.93"
-  sha256 "33f34d367609b2cfa2d6c975a414e8a96c7ad809d842e28548faa5393836a066"
+  version "8.3.32"
+  sha256 "7ac09db2aefcc71bf202af02ac270adef23aeb6b86df6922607b641735c94320"
 
   url "https://dl.ubnt.com/unifi/#{version}/UniFi-Network-Server.dmg",
       verified: "dl.ubnt.com/"
@@ -24,6 +24,7 @@ cask "ubiquiti-unifi-controller" do
   ]
 
   caveats do
+    requires_rosetta
     license "https://www.ui.com/eula/"
   end
 end
