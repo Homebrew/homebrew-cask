@@ -439,6 +439,7 @@ moneymanager
 mongodb-compass
 mongodb-compass-isolated-edition
 mongodb-compass-readonly
+mongodb-compass@beta
 morgen
 mountain-duck
 mp3tag
