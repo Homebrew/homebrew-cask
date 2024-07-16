@@ -6,11 +6,6 @@ cask "brain-workshop" do
   name "Brain Workshop"
   homepage "https://brainworkshop.sourceforge.net/"
 
-  livecheck do
-    url :url
-    regex(%r{url=.*?/brainworkshop[._-]v?(\d+(?:\.\d+)+)-MacOSX\.zip}i)
-  end
-
   disable! date: "2024-07-09", because: "is 32-bit only"
 
   app "Brain Workshop.app"
