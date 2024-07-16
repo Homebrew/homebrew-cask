@@ -9,8 +9,7 @@ cask "sq-mixpad" do
 
   livecheck do
     url "https://www.allen-heath.com/hardware/sq/sq-mixpad"
-    regex(%r{href=.*?/SQ-MixPad-(\d+(?:\.\d+)*)\.zip}i)
-    strategy :page_match
+    regex(/href=.*?SQ[._-]MixPad[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :sierra"
