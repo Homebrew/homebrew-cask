@@ -14,6 +14,7 @@ cask "roblox" do
       version = json["version"]
       client_version = json["clientVersionUpload"]&.split("-")&.second
       next if version.blank? || client_version.blank?
+
       "#{version},#{client_version}"
     end
   end
