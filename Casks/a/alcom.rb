@@ -1,6 +1,6 @@
 cask "alcom" do
-  version "0.1.9"
-  sha256 "5acd4c0291c7a9ee1bfee6ebb9f556c9b6fc9cfb1539132275081707b276812d"
+  version "0.1.10"
+  sha256 "80621468225bb82fe67f77e4d0aab5a0087c0b9a672eaa294935dfc666d2560d"
 
   url "https://github.com/vrc-get/vrc-get/releases/download/gui-v#{version}/ALCOM-#{version}-universal.dmg",
       verified: "github.com/vrc-get/vrc-get/"
