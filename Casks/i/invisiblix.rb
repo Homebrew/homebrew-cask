@@ -14,4 +14,8 @@ cask "invisiblix" do
   end
 
   app "invisibliX.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
