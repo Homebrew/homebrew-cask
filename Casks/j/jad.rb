@@ -7,18 +7,10 @@ cask "jad" do
   desc "Java decompiler"
   homepage "https://varaneckas.com/jad/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-07-14", because: "is 32-bit only"
 
   depends_on macos: "<= :mojave"
 
   binary "jad"
   manpage "jad.1"
-
-  caveats do
-    <<~EOS
-      Instructions on using jad are available in
-
-        #{staged_path}/Readme.txt
-    EOS
-  end
 end
