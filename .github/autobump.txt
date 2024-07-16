@@ -465,6 +465,7 @@ netron
 nextcloud
 ngrok
 nordlayer
+nordlocker
 nordpass
 nordvpn
 notebooks
