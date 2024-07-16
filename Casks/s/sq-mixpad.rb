@@ -3,7 +3,7 @@ cask "sq-mixpad" do
   sha256 "99eaf53e1ca0b63cfde57d9d97a5d7628da20d317c4803b51ba2fdcbf225bfb2"
 
   url "https://www.allen-heath.com/content/uploads/2023/05/SQ-MixPad-#{version}.zip"
-  name "sq-mixpad"
+  name "SQ MixPad"
   desc "Remote control for Allen & Heath SQ audio consoles"
   homepage "https://www.allen-heath.com/hardware/sq/sq-mixpad/"
 
