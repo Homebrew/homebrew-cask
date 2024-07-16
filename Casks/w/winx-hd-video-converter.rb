@@ -18,4 +18,8 @@ cask "winx-hd-video-converter" do
     "~/Library/Caches/com.winxdvd.hdvideoconverterformac/",
     "~/Library/Preferences/com.winxdvd.hdvideoconverterformac.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
