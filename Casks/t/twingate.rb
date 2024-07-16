@@ -22,13 +22,17 @@ cask "twingate" do
             login_item: "Twingate Launcher.app",
             pkgutil:    "com.twingate.macos"
 
-  zap trash: [
-    "~/Library/Application Scripts/6GX8KVTR9H.com.twingate",
-    "~/Library/Application Scripts/group.com.twingate",
-    "~/Library/Containers/com.twingate.macos",
-    "~/Library/Containers/com.twingate.macos.tunnelprovider",
-    "~/Library/Group Containers/6GX8KVTR9H.com.twingate",
-    "~/Library/Group Containers/group.com.twingate",
-    "~/Library/Preferences/com.twingate.macos.plist",
-  ]
+  zap script: {
+        executable: "networksetup",
+        args:       ["-deletepppoeservice", "Twingate"],
+      },
+      trash:  [
+        "~/Library/Application Scripts/6GX8KVTR9H.com.twingate",
+        "~/Library/Application Scripts/group.com.twingate",
+        "~/Library/Containers/com.twingate.macos",
+        "~/Library/Containers/com.twingate.macos.tunnelprovider",
+        "~/Library/Group Containers/6GX8KVTR9H.com.twingate",
+        "~/Library/Group Containers/group.com.twingate",
+        "~/Library/Preferences/com.twingate.macos.plist",
+      ]
 end
