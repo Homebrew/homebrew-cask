@@ -1,5 +1,5 @@
 cask "adobe-acrobat-pro" do
-  version "24.002.20893"
+  version "24.002.20933"
   sha256 :no_check
 
   url "https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_DC_Web_WWMUI.dmg",
@@ -7,7 +7,7 @@ cask "adobe-acrobat-pro" do
       cookies:    { "MM_TRIALS" => "1234" }
   name "Adobe Acrobat Pro DC"
   desc "View, create, manipulate, print and manage files in Portable Document Format"
-  homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
+  homepage "https://www.adobe.com/acrobat/pdf-reader.html"
 
   livecheck do
     url "https://armmf.adobe.com/arm-manifests/mac/AcrobatDC/acrobat/current_version.txt"
