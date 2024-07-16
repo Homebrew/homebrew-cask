@@ -7,6 +7,8 @@ cask "ieasemusic" do
   desc "Third-party NetEase cloud music player"
   homepage "https://github.com/trazyn/ieaseMusic"
 
+  deprecate! date: "2024-07-15", because: :repo_archived
+
   auto_updates true
 
   app "ieaseMusic.app"
@@ -17,4 +19,8 @@ cask "ieasemusic" do
     "~/Library/Preferences/gh.trazyn.ieasemusic.plist",
     "~/Library/Saved Application State/gh.trazyn.ieasemusic.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
