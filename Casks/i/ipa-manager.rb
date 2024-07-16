@@ -7,10 +7,7 @@ cask "ipa-manager" do
   desc "International Phonetic Alphabet input method"
   homepage "https://www.blugs.com/IPA/"
 
-  livecheck do
-    url "https://www.blugs.com/Appcasts/IPAPalette.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-07-17", because: :discontinued
 
   auto_updates true
 
