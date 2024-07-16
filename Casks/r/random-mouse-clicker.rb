@@ -13,6 +13,15 @@ cask "random-mouse-clicker" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Random Mouse Clicker by MurGaa.com.app"
+
+  zap trash: [
+    "~/Library/Caches/com.murgaa.Random-Mouse-Clicker-by-MurGaa-com",
+    "~/Library/Containers/com.murgaa",
+    "~/Library/HTTPStorages/com.murgaa.Random-Mouse-Clicker-by-MurGaa-com",
+    "~/Library/Preferences/com.murgaa.Random-Mouse-Clicker-by-MurGaa-com.plist",
+    "~/Library/Saved Application State/com.murgaa.Random-Mouse-Clicker-by-MurGaa-com.savedState",
+  ]
 end
