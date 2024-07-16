@@ -13,4 +13,8 @@ cask "iphoto-library-manager" do
   end
 
   app "iPhoto Library Manager.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
