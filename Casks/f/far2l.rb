@@ -3,12 +3,12 @@ cask "far2l" do
   version "2.6.2"
 
   on_mojave :or_older do
-    sha256 "d66f6468538f7f3648d0134e4b4bf39c264e84f84ce73795ca2edfadedb6cf21"
+    sha256 "4e5bcb07bcc5881e0c53781706011ddd2a34fd16cb2f0ced37a1ad24a3755a5b"
 
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.11-x64.dmg"
   end
   on_catalina do
-    sha256 "8bf09a4cb1548b145952cffdce80ea6230e6e6b10738e3a4148ef8d5e656f4c5"
+    sha256 "a70275f836a3defbf42dfbe05d74ffb6f11b46aa6876d4472bd38c03ffca3637"
 
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.15-x64.dmg"
   end
