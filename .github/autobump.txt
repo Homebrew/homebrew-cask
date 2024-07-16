@@ -19,6 +19,7 @@ adguard
 adguard-vpn
 adguard-vpn@nightly
 adguard@nightly
+adobe-acrobat-pro
 adrive
 affine
 affinity-designer
