@@ -15,4 +15,8 @@ cask "instatus-out" do
     "~/Library/Preferences/com.instatus.out.plist",
     "~/Library/Saved Application State/com.instatus.out.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
