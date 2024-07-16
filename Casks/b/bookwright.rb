@@ -1,6 +1,6 @@
 cask "bookwright" do
-  version "3.0.2"
-  sha256 "0bfc6cdbaa48c22f1d840ca6371f4dc3bcb43938e172106218bf789a369aa93f"
+  version "3.1.0"
+  sha256 "beeb1f6e35cc6a2d8eef426d1284c82df35b46fd83edf71a87af898a50f1d575"
 
   url "https://software.blurb.com/bookwright_v2/#{version}/BookWright.dmg"
   name "bookwright"
@@ -11,7 +11,9 @@ cask "bookwright" do
   # either the download url or the livecheck url.
   livecheck do
     url "https://www.blurb.com/bookwright_v2/versions.json"
-    regex(/["']version["']:\s*?["']v?(\d+(?:\.\d+)+)["']/i)
+    strategy :json do |json|
+      json["versions"]&.map { |version| version["version"] }
+    end
   end
 
   depends_on macos: ">= :high_sierra"
@@ -25,4 +27,8 @@ cask "bookwright" do
     "~/Library/Preferences/com.blurb.bookwright.plist",
     "~/Library/Saved Application State/com.blurb.bookwright.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
