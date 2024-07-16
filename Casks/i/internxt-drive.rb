@@ -12,7 +12,7 @@ cask "internxt-drive" do
   # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    regex(/^Internxt-Drive[._-]v?(\d+(?:\.\d+)+)\.(?:dmg)$/i)
+    regex(/^Internxt[._-]Drive[._-]v?(\d+(?:\.\d+)+)\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
@@ -39,4 +39,8 @@ cask "internxt-drive" do
     "~/Library/Logs/internxt-drive",
     "~/Library/Preferences/com.internxt.drive.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
