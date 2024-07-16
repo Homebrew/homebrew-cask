@@ -11,6 +11,9 @@ cask "nextcloud" do
     version "3.13.2"
     sha256 "11078c6ce49835d8e202b8a376a7f78f363cd594e49a36439f87601e728eb499"
 
+    # Upstream publishes releases for multiple different minor versions and the
+    # "latest" release is sometimes a lower version. Until the "latest" release
+    # is reliably the highest version, we have to check multiple releases.
     livecheck do
       url :url
       regex(/^Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg$/i)
