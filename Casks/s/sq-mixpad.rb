@@ -4,7 +4,7 @@ cask "sq-mixpad" do
 
   url "https://www.allen-heath.com/content/uploads/2023/05/SQ-MixPad-#{version}.zip"
   name "sq-mixpad"
-  desc "Remote control for SQ mixers"
+  desc "Remote control for Allen & Heath SQ audio consoles"
   homepage "https://www.allen-heath.com/hardware/sq/sq-mixpad/"
 
   livecheck do
