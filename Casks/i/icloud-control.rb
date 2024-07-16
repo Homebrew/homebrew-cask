@@ -8,4 +8,8 @@ cask "icloud-control" do
   homepage "https://github.com/Obbut/iCloud-Control"
 
   app "iCloud Control.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
