@@ -21,4 +21,8 @@ cask "ipa-manager" do
     "~/Library/Caches/com.blugs.IPAManager",
     "~/Library/Preferences/com.blugs.IPAManager.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
