@@ -16,4 +16,8 @@ cask "iglance" do
     "~/Library/Caches/io.github.iglance.iGlance",
     "~/Library/Preferences/io.github.iglance.iGlance.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
