@@ -1,8 +1,8 @@
 cask "protopie" do
-  version "8.1.0"
-  sha256 "386532c0f579ab1bfa7d7c74e8dd08e4ef4d889198fc71a469a3c7bc0cd3543e"
+  version "8.2.0"
+  sha256 "d6d2006fa5b55aa674825740125cc43854f9d416f953c6f4827bb8444e0f7ab9"
 
-  url "https://release.protopie.io/ProtoPie-#{version}.dmg"
+  url "https://release.protopie.io/ProtoPie-#{version}-universal.dmg"
   name "ProtoPie"
   desc "Create interactive prototypes"
   homepage "https://www.protopie.io/"
