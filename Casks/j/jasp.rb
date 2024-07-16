@@ -2,9 +2,9 @@ cask "jasp" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_folder = on_arch_conditional arm: "-apple-silicon"
 
-  version "0.18.3.0,2"
-  sha256 arm:   "9d701af21055dca67a98fc8269720d6d23bcfb82cceb3fa8f4774cb74d197bbb",
-         intel: "37c10c0fb3c53b1b01fc4cf696b21273a62b7eb224eaa2ef0632b36cbcfa94ae"
+  version "0.19.0.0,"
+  sha256 arm:   "df72c602f6bd12f8904e537510052bfca65fbc093ec7f3b995282aefc053bbe6",
+         intel: "b6df9ec477beafaf62624eedfcc1396df5d7544143e1d318d0e57c51d56bca89"
 
   url "https://static.jasp-stats.org/JASP-#{version.csv.first}-macOS-#{arch}#{"_#{version.csv.second}" if version.csv.second}.dmg"
   name "JASP"
