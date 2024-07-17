@@ -8,18 +8,7 @@ cask "nightingale" do
   desc "Working tree for the community fork of Songbird"
   homepage "https://getnightingale.com/"
 
-  livecheck do
-    url :url
-    regex(/^Nightingale[._-]v?(\d+(?:\.\d+)+)-(\d+)_macosx-i686\.dmg$/i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
-  end
+  disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "Nightingale.app"
 end
