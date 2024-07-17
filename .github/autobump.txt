@@ -302,6 +302,7 @@ gpxsee
 gqrx
 grammarly-desktop
 grandtotal
+gridtracker
 groestlcoin-core
 gstreamer-development
 gstreamer-runtime
