@@ -1,20 +1,17 @@
 cask "loopback" do
   sha256 :no_check
 
-  macosversion_no_dots = "145"
-  audio_engine = "ark"
-
   on_ventura :or_older do
-    # macOS 11.0 is oldest supported version
-    macosversion_no_dots = "110"
-    audio_engine = "ace"
-
     version "2.3.3"
+
+    url "https://rogueamoeba.com/loopback/download-ace.php"
 
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "2.4.1"
+
+    url "https://rogueamoeba.com/loopback/download-ark.php"
 
     depends_on macos: ">= :sonoma"
 
@@ -22,13 +19,12 @@ cask "loopback" do
     caveats "Loopback #{version} requires macOS 14.5 or newer."
   end
 
-  url "https://rogueamoeba.com/loopback/download-#{audio_engine}.php"
   name "Loopback"
   desc "Cable-free audio router"
   homepage "https://rogueamoeba.com/loopback/"
 
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=#{macosversion_no_dots}&bundleid=com.rogueamoeba.Loopback&platform=osx&version=#{version.no_dots}8000"
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=#{MacOS.full_version.to_s.delete(".")}&bundleid=com.rogueamoeba.Loopback&platform=osx&version=#{version.no_dots}8000"
     strategy :sparkle
   end
 
