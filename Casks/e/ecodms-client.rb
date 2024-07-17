@@ -1,5 +1,5 @@
 cask "ecodms-client" do
-  version "23.02"
+  version "2401"
   sha256 :no_check
 
   url "https://www.ecodms.de/index.php/de/component/jdownloads/?task=download.send&id=413&catid=162&m=0&Itemid=661"
