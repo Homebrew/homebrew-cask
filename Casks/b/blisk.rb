@@ -16,7 +16,7 @@ cask "blisk" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Blisk.app"
 
