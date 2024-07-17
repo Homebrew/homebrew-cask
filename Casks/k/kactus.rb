@@ -11,4 +11,8 @@ cask "kactus" do
   depends_on cask: "sketch"
 
   app "Kactus.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
