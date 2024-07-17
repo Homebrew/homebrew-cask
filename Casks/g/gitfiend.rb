@@ -1,8 +1,11 @@
 cask "gitfiend" do
-  version "0.44.3"
-  sha256 "ad06ff9c0247993a9ec9aa4bb93b880662097742072cd4ff1cc302b621e4cadc"
+  arch arm: "-arm64"
 
-  url "https://gitfiend.com/resources/GitFiend-#{version}.dmg"
+  version "0.44.3"
+  sha256 arm:   "524f4b00b4819b5fdf2d453fd8947dee5045b68ab832d175123c8274048e1e98",
+         intel: "ad06ff9c0247993a9ec9aa4bb93b880662097742072cd4ff1cc302b621e4cadc"
+
+  url "https://gitfiend.com/resources/GitFiend-#{version}#{arch}.dmg"
   name "GitFiend"
   desc "Git client"
   homepage "https://gitfiend.com/"
@@ -34,8 +37,4 @@ cask "gitfiend" do
     "~/Library/Preferences/com.tobysuggate.gitfiend.plist",
     "~/Library/Saved Application State/com.tobysuggate.gitfiend.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
