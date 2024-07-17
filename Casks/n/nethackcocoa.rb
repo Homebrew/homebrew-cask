@@ -6,5 +6,7 @@ cask "nethackcocoa" do
   name "NetHackCocoa"
   homepage "https://github.com/dirkz/NetHack-Cocoa"
 
+  disable! date: "2024-07-16", because: "is 32-bit only"
+
   app "NetHackCocoa.app"
 end
