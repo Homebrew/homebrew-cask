@@ -12,6 +12,8 @@ cask "black-light" do
     regex(/href=.*?black-light[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "BLack Light.app"
 
   zap trash: [
