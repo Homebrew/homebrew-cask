@@ -14,4 +14,8 @@ cask "klatexformula" do
     "~/Library/Preferences/org.klatexformula.klatexformula.plist",
     "~/Library/Saved Application State/org.klatexformula.klatexformula.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

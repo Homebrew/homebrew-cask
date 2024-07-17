@@ -14,4 +14,8 @@ cask "katrain" do
   app "KaTrain.app"
 
   zap trash: "~/.katrain"
+
+  caveats do
+    requires_rosetta
+  end
 end

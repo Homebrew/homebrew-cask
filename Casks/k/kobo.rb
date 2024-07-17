@@ -12,4 +12,8 @@ cask "kobo" do
   end
 
   app "Kobo.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -19,4 +19,8 @@ cask "keepassx" do
   end
 
   zap trash: "~/.keepassx"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -20,4 +20,8 @@ cask "kiibohd-configurator" do
     "~/Library/Preferences/club.input.KiibohdConfigurator.plist",
     "~/Library/Saved Application State/club.input.KiibohdConfigurator.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

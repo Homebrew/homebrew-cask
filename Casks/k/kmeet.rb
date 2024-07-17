@@ -22,4 +22,8 @@ cask "kmeet" do
     "~/Library/Logs/kMeet",
     "~/Library/Preferences/com.infomaniak.meet.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
