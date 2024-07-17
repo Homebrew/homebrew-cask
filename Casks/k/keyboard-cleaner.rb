@@ -13,4 +13,8 @@ cask "keyboard-cleaner" do
   end
 
   app "Keyboard Cleaner.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
