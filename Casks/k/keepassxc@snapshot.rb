@@ -16,4 +16,8 @@ cask "keepassxc@snapshot" do
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
 
   zap trash: "~/.keepassxc"
+
+  caveats do
+    requires_rosetta
+  end
 end
