@@ -6,7 +6,7 @@ cask "almighty" do
       verified: "almighty-app.s3.amazonaws.com/"
   name "Almighty"
   desc "Settings and tweaks configurator"
-  homepage "https://onmyway133.com/almighty/"
+  homepage "https://indiegoodies.com/almighty"
 
   livecheck do
     url "https://raw.githubusercontent.com/onmyway133/archives/master/AlmightyCast.xml"
