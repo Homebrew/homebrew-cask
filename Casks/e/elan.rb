@@ -1,8 +1,11 @@
 cask "elan" do
-  version "6.8"
-  sha256 "ef487113e6498f20def9c1feea78b64c4611066b7cce3a12772324c39e7f8b87"
+  arch arm: "_M1"
 
-  url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}_mac.zip"
+  version "6.8"
+  sha256 arm:   "428e89317fdaf48b181922a3d9572552e4c9ea01cf548836a4273075f2570037",
+         intel: "ef487113e6498f20def9c1feea78b64c4611066b7cce3a12772324c39e7f8b87"
+
+  url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}#{arch}_mac.zip"
   name "ELAN"
   desc "Annotation tool for audio and video recordings"
   homepage "https://archive.mpi.nl/tla/elan"
@@ -10,7 +13,7 @@ cask "elan" do
   livecheck do
     url "https://archive.mpi.nl/tla/elan/download"
     strategy :page_match do |page|
-      v = page[/href=.*?ELAN[._-]v?(\d+(?:-\d+)+)[._-]mac\.zip/i, 1]
+      v = page[/href=.*?ELAN[._-]v?(\d+(?:-\d+)+)#{arch}[._-]mac\.zip/i, 1]
       next if v.blank?
 
       v.tr("-", ".")
@@ -25,8 +28,4 @@ cask "elan" do
     "~/Library/Preferences/ELAN",
     "~/Library/Preferences/nl.mpi.elan.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
