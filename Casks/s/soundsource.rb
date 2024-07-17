@@ -7,8 +7,6 @@ cask "soundsource" do
   desc "Sound and audio controller"
   homepage "https://rogueamoeba.com/soundsource/"
 
-  # NOTE: The `system` value will need to be kept up to date with the latest
-  # macOS version (e.g. 1441 for 14.4.1).
   livecheck do
     url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=#{MacOS.full_version.to_s.delete(".")}&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
     strategy :sparkle
