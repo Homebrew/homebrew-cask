@@ -4,14 +4,14 @@ cask "airfoil" do
   on_ventura :or_older do
     version "5.11.8"
 
-    url "https://rogueamoeba.com/airfoil/mac/download-ace.php"
+    url "https://cdn.rogueamoeba.com/airfoil/mac/download/Airfoil-ACE.zip"
 
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "5.12.1"
 
-    url "https://rogueamoeba.com/airfoil/mac/download-ark.php"
+    url "https://cdn.rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
 
     depends_on macos: ">= :sonoma"
 

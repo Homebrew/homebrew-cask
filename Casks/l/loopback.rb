@@ -4,14 +4,14 @@ cask "loopback" do
   on_ventura :or_older do
     version "2.3.3"
 
-    url "https://rogueamoeba.com/loopback/download-ace.php"
+    url "https://cdn.rogueamoeba.com/loopback/download/Loopback.zip"
 
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "2.4.1"
 
-    url "https://rogueamoeba.com/loopback/download-ark.php"
+    url "https://cdn.rogueamoeba.com/loopback/download/Loopback-ARK.zip"
 
     depends_on macos: ">= :sonoma"
 

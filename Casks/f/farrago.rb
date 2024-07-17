@@ -2,7 +2,7 @@ cask "farrago" do
   version "2.0.7"
   sha256 :no_check
 
-  url "https://rogueamoeba.com/farrago/download/Farrago.zip"
+  url "https://cdn.rogueamoeba.com/farrago/download/Farrago.zip"
   name "Farrago"
   desc "Audio playback"
   homepage "https://rogueamoeba.com/farrago/"

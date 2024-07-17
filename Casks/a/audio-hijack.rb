@@ -4,14 +4,14 @@ cask "audio-hijack" do
   on_ventura :or_older do
     version "4.3.3"
 
-    url "https://rogueamoeba.com/audiohijack/download-ace.php"
+    url "https://cdn.rogueamoeba.com/audiohijack/download/AudioHijack-ACE.zip"
 
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "4.4.2"
 
-    url "https://rogueamoeba.com/audiohijack/download-ark.php"
+    url "https://cdn.rogueamoeba.com/audiohijack/download/AudioHijack.zip"
 
     depends_on macos: ">= :sonoma"
 

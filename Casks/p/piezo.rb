@@ -4,14 +4,14 @@ cask "piezo" do
   on_ventura :or_older do
     version "1.8.2"
 
-    url "https://rogueamoeba.com/piezo/download-ace.php"
+    url "https://cdn.rogueamoeba.com/piezo/download/Piezo-ACE.zip"
 
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "1.9.2"
 
-    url "https://rogueamoeba.com/piezo/download-ark.php"
+    url "https://cdn.rogueamoeba.com/piezo/download/Piezo.zip"
 
     depends_on macos: ">= :sonoma"
 
