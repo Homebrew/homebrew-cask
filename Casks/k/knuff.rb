@@ -7,5 +7,11 @@ cask "knuff" do
   desc "Debug application for Apple Push Notification Service (APNs)"
   homepage "https://github.com/KnuffApp/Knuff"
 
+  depends_on macos: ">= :sierra"
+
   app "Knuff.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
