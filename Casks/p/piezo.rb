@@ -4,12 +4,19 @@ cask "piezo" do
   on_ventura :or_older do
     version "1.8.2"
 
-    url "https://rogueamoeba.com/piezo/download/Piezo.zip"
+    url "https://rogueamoeba.com/piezo/download-ace.php"
+
+    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "1.9.2"
 
-    url "https://rogueamoeba.com/piezo/download/Piezo-ARK.zip"
+    url "https://rogueamoeba.com/piezo/download-ark.php"
+
+    depends_on macos: ">= :sonoma"
+
+    # NOTE: see https://weblog.rogueamoeba.com/2024/03/13/piezo-ark-update-launches/
+    caveats "Piezo #{version} requires macOS 14.4 or higher."
   end
 
   name "Piezo"
@@ -22,7 +29,6 @@ cask "piezo" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
 
   app "Piezo.app"
 
