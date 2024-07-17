@@ -1,9 +1,9 @@
 cask "onlyoffice" do
   arch arm: "arm", intel: "x86_64"
 
-  version "8.1.0"
-  sha256 arm:   "f0fd55399141f9e6a0878888d16170645cb6343fdd11660981d428c18618efef",
-         intel: "8f0816eba4dfeda12ba492ffc0de0308db6f38b51a8e105bc178da9a630ac2a8"
+  version "8.1.1"
+  sha256 arm:   "0c7203de5e4cce8f6f920bfd696663f59e50b8c0b70deec57c6d99e9378a58f7",
+         intel: "0ca53ebbf4b0c624d2b830056f26ac2f4638240c17ee46a8882bc35ad586bec1"
 
   url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg",
       verified: "github.com/ONLYOFFICE/DesktopEditors/"
