@@ -7,5 +7,7 @@ cask "mame" do
   desc "Port of the multi-purpose emulation framework"
   homepage "https://sourceforge.net/projects/mameosx/"
 
+  disable! date: "2024-07-16", because: "is 32-bit only"
+
   app "MAME OS X.app"
 end
