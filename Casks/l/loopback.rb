@@ -15,7 +15,7 @@ cask "loopback" do
 
     depends_on macos: ">= :sonoma"
 
-    # NOTE: see https://weblog.rogueamoeba.com/2024/06/07/now-you-can-install-loopback-in-under-one-minute/#fn1-2024-06-loopback
+    # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=Loopback
     caveats "Loopback #{version} requires macOS 14.5 or newer."
   end
 

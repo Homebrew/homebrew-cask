@@ -15,7 +15,7 @@ cask "piezo" do
 
     depends_on macos: ">= :sonoma"
 
-    # NOTE: see https://weblog.rogueamoeba.com/2024/03/13/piezo-ark-update-launches/
+    # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=Piezo
     caveats "Piezo #{version} requires macOS 14.4 or higher."
   end
 

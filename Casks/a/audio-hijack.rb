@@ -15,8 +15,8 @@ cask "audio-hijack" do
 
     depends_on macos: ">= :sonoma"
 
-    # NOTE: see https://weblog.rogueamoeba.com/2024/04/05/our-new-installer-free-setup-comes-to-audio-hijack/#fn1-2024-04-audiohijack
-    caveats "Loopback #{version} requires macOS 14.5 or higher."
+    # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=Audio+Hijack
+    caveats "Audio Hijack #{version} requires macOS 14.5 or higher."
   end
 
   name "Audio Hijack"

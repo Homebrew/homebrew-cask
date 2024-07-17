@@ -15,7 +15,7 @@ cask "airfoil" do
 
     depends_on macos: ">= :sonoma"
 
-    # NOTE: see https://rogueamoeba.com/airfoil/mac/
+    # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=Airfoil+for+Mac
     caveats "Airfoil #{version} requires macOS 14.4 or higher."
   end
 
