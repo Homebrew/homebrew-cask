@@ -7,10 +7,7 @@ cask "pflists" do
   desc "Basic PF firewall frontend"
   homepage "https://www.hanynet.com/pflists/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/pflists[._-]v?(\d+(?:\.\d+)+)\.zip}i)
-  end
+  disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "PFLists.app"
 end
