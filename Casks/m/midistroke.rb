@@ -7,7 +7,7 @@ cask "midistroke" do
   desc "Converts midi note, program or CC messages into keystrokes"
   homepage "https://www.charlie-roberts.com/midiStroke/"
 
-  disable! date: "2024-07-05", because: :unmaintained
+  disable! date: "2024-07-05", because: "is 32-bit only"
 
   app "midiStroke.app"
 
