@@ -7,5 +7,11 @@ cask "icloud-control" do
   desc "User-controlled selective sync for iCloud Drive"
   homepage "https://github.com/Obbut/iCloud-Control"
 
+  deprecate! date: "2024-07-17", because: :discontinued
+
   app "iCloud Control.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

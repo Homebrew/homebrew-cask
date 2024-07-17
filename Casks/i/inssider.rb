@@ -13,5 +13,11 @@ cask "inssider" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :sierra"
+
   app "inSSIDer.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -20,4 +20,8 @@ cask "imagex" do
     "~/Library/Preferences/de.htw.lcs.imagex.plist",
     "~/Library/Saved Application State/de.htw.lcs.imagex.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

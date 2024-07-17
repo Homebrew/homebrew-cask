@@ -7,10 +7,11 @@ cask "iphoto-library-manager" do
   desc "App for organising photos among multiple iPhoto libraries"
   homepage "https://www.fatcatsoftware.com/iplm/"
 
-  livecheck do
-    url "https://www.fatcatsoftware.com/iplm/iplm#{version.major}_appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-07-17", because: :discontinued
 
   app "iPhoto Library Manager.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -8,10 +8,7 @@ cask "icons8" do
   desc "App for browsing icon, photo and music packages"
   homepage "https://icons8.com/"
 
-  livecheck do
-    url "https://desktop.icons8.com/updates/mac/icons8_cast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-07-17", because: :discontinued
 
   depends_on macos: ">= :high_sierra"
 
@@ -24,4 +21,8 @@ cask "icons8" do
     "~/Library/Containers/com.visualpharm.StandaloneLoginHelper",
     "~/Library/Preferences/com.visualpharm.Icons8.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

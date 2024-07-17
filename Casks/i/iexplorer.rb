@@ -15,4 +15,8 @@ cask "iexplorer" do
   end
 
   app "iExplorer.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

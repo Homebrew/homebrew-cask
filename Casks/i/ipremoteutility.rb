@@ -21,4 +21,8 @@ cask "ipremoteutility" do
     "~/Library/Caches/FlandersScientific/IPRemoteUtility",
     "~/Library/Preferences/com.flandersscientific.IPRemoteUtility.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
