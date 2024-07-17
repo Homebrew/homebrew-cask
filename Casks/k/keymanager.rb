@@ -14,4 +14,8 @@ cask "keymanager" do
   end
 
   app "KeyManager.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
