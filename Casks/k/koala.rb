@@ -7,10 +7,11 @@ cask "koala" do
   name "Koala"
   homepage "http://koala-app.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-07-17", because: :unmaintained
 
   app "Koala.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
