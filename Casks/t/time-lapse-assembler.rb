@@ -7,10 +7,7 @@ cask "time-lapse-assembler" do
   desc "Tool to create movies from a sequence of images"
   homepage "https://www.dayofthenewdan.com/projects/time-lapse-assembler-1/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-17", because: :unmaintained
 
   app "Time Lapse Assembler.app"
 
