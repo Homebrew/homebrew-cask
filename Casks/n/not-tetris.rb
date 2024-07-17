@@ -7,10 +7,7 @@ cask "not-tetris" do
   desc "Successor of the classic Tetris mixed with physics"
   homepage "https://stabyourself.net/nottetris2/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/nottetrisv?(\d+)[._-]osx\.zip}i)
-  end
+  disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "Not Tetris #{version}.app"
 

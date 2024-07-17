@@ -7,7 +7,7 @@ cask "pitchperfect" do
   desc "Guitar tuning software"
   homepage "https://www.nch.com.au/tuner/"
 
-  disable! date: "2024-07-06", because: :no_longer_meets_criteria
+  disable! date: "2024-07-06", because: "is 32-bit only"
 
   app "PitchPerfect.app"
 

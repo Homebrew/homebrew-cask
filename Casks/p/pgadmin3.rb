@@ -9,7 +9,7 @@ cask "pgadmin3" do
   desc "Administration and development platform for PostgreSQL"
   homepage "https://www.pgadmin.org/"
 
-  disable! date: "2024-07-06", because: :no_longer_meets_criteria
+  disable! date: "2024-07-06", because: "is 32-bit only"
 
   app "pgAdmin3.app"
 
