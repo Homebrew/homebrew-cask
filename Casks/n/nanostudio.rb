@@ -7,10 +7,7 @@ cask "nanostudio" do
   desc "Music production for 32 bit iOS devices"
   homepage "https://www.blipinteractive.co.uk/nanostudio1/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/NanoStudio[._-]v?(\d+(?:\.\d+)+)\.dmg\.zip}i)
-  end
+  disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "NanoStudio.app"
   app "NanoStudio-Phone.app"
