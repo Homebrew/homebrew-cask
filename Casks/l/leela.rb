@@ -16,4 +16,8 @@ cask "leela" do
 
   app "Leela.app"
   app "Leela OpenCL.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

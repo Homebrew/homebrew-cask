@@ -10,4 +10,8 @@ cask "leocad" do
   depends_on macos: ">= :sierra"
 
   app "LeoCAD.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

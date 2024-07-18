@@ -21,4 +21,8 @@ cask "luminance-hdr" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.luminance-hdr.sfl*",
     "~/Library/Preferences/com.luminance-hdr.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
