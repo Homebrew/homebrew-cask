@@ -5,7 +5,7 @@ cask "longplay" do
   url "https://download.longplay.app/mac/longplay-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "download.longplay.app/"
   name "Longplay"
-  desc "Rediscover, enjoy and organise your album collection"
+  desc "Album-focused music player"
   homepage "https://longplay.rocks/"
 
   livecheck do
