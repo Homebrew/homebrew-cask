@@ -9,4 +9,8 @@ cask "lockdown" do
   homepage "https://objective-see.com/products/lockdown.html"
 
   app "Lockdown.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
