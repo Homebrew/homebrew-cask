@@ -12,7 +12,7 @@ cask "nudge" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   pkg "Nudge-#{version}.pkg"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
