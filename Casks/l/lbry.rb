@@ -40,4 +40,8 @@ cask "lbry" do
     "~/Library/Preferences/io.lbry.LBRY.plist",
     "~/Library/Saved Application State/io.lbry.LBRY.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
