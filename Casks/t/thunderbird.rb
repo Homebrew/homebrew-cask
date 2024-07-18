@@ -229,8 +229,10 @@ cask "thunderbird" do
   homepage "https://www.thunderbird.net/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?thunderbird[._-]v?(\d+(?:\.\d+)+)[._-]SSL/i)
+    url "https://product-details.mozilla.org/1.0/thunderbird_versions.json"
+    strategy :json do |json|
+      json["LATEST_THUNDERBIRD_VERSION"]
+    end
   end
 
   auto_updates true
