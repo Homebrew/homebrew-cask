@@ -1,4 +1,4 @@
-cask "gitkraken-serverless" do
+cask "gitkraken-on-premise-serverless" do
   arch arm: "darwin-arm64", intel: "darwin"
 
   version "10.1.1"
