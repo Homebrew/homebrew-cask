@@ -13,4 +13,8 @@ cask "logicsniffer" do
   end
 
   app "LogicSniffer.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
