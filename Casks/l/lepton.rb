@@ -16,4 +16,8 @@ cask "lepton" do
     "~/Library/Preferences/com.cosmox.lepton.plist",
     "~/Library/Saved Application State/com.cosmox.lepton.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
