@@ -17,8 +17,4 @@ cask "topcat" do
   binary "#{appdir}/TOPCAT.app/Contents/Resources/app/stilts"
 
   # No zap stanza required
-
-  caveats do
-    depends_on_java "8+"
-  end
 end
