@@ -22,4 +22,8 @@ cask "lastfm" do
     "~/Library/Logs/Last.fm",
     "~/Library/Preferences/fm.last*",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
