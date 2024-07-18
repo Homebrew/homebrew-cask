@@ -10,4 +10,8 @@ cask "logisim-evolution" do
   app "Logisim-evolution.app"
 
   zap trash: "~/Library/Preferences/com.cburch.logisim.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
