@@ -1,7 +1,7 @@
 cask "hackolade" do
   arch arm: "ARM64"
 
-  version "7.6.1"
+  version "7.7.0"
   sha256 :no_check
 
   url "https://hackolade.s3.amazonaws.com/current/Hackolade-mac#{arch}-setup-signed.pkg",
