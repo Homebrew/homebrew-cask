@@ -631,6 +631,7 @@ shadow@beta
 shapr3d
 shattered-pixel-dungeon
 shearwater-cloud
+shift
 sigmaos
 signal
 signal@beta
