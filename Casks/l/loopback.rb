@@ -9,7 +9,7 @@ cask "loopback" do
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "2.4.1"
+    version "2.4.2"
 
     url "https://cdn.rogueamoeba.com/loopback/download/Loopback-ARK.zip"
 
