@@ -514,6 +514,7 @@ pdf-expert
 pdf-expert@beta
 pdf-reader-pro
 pdfelement
+perforce
 permute
 pgadmin4
 phoenix-code
