@@ -1,6 +1,6 @@
 cask "beyond-compare" do
-  version "5.0.0.29773"
-  sha256 "a9c83f1bf1ec9f369ba070057475d369e4788d240eec6b8f866a890ef3cf5872"
+  version "5.0.1.29877"
+  sha256 "43681a833a33c86c915725bdbcf49fde7d491e16b82c3e58b28ff70df76fdc47"
 
   url "https://www.scootersoftware.com/files/BCompareOSX-#{version}.zip"
   name "Beyond Compare"
