@@ -634,6 +634,7 @@ shearwater-cloud
 sigmaos
 signal
 signal@beta
+simplenote
 simplex
 sip
 sipgate-clinq
