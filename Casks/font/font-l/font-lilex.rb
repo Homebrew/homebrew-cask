@@ -12,7 +12,7 @@ cask "font-lilex" do
   font "ttf/Lilex-Medium.ttf"
   font "ttf/Lilex-Regular.ttf"
   font "ttf/Lilex-Thin.ttf"
-  font "variable/Lilex-VF.ttf"
+  font "variable/Lilex[wght].ttf"
 
   # No zap stanza required
 end
