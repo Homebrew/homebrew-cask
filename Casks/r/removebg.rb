@@ -7,9 +7,11 @@ cask "removebg" do
   desc "Automatic bulk background removal"
   homepage "https://www.remove.bg/"
 
+  # The in-app updater returns a JSON file, but it is not a valid JSON file
+  # so we check the response with a regex using the :page_match strategy instead
   livecheck do
-    url "https://www.remove.bg/windows-mac-linux/download"
-    regex(%r{/removebg[._-]for[._-]mac[._-](\d+(?:\.\d+)+)\.dmg}i)
+    url "https://storage.googleapis.com/removebg-static/desktop/release/darwin/x64/RELEASES.json"
+    regex(/currentRelease"\s*:\s*"v?(\d+(?:\.\d+)+)[ "]/i)
   end
 
   app "remove.bg.app"
