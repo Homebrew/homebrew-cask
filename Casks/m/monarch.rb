@@ -8,7 +8,7 @@ cask "monarch" do
   url "https://monarchlauncher.s3.amazonaws.com/#{arch}/monarch-#{version}.dmg",
       verified: "monarchlauncher.s3.amazonaws.com/"
   name "Monarch"
-  desc "Spotlight Search with Superpowers"
+  desc "Spotlight Search"
   homepage "https://monarchlauncher.com/"
 
   livecheck do
