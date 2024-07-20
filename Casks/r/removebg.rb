@@ -11,7 +11,7 @@ cask "removebg" do
   # use the `Json` strategy until this is resolved.
   livecheck do
     url "https://storage.googleapis.com/removebg-static/desktop/release/darwin/x64/RELEASES.json"
-    regex(/currentRelease"\s*:\s*"v?(\d+(?:\.\d+)+)[ "]/i)
+    regex(/"currentRelease"\s*:\s*"v?(\d+(?:\.\d+)+)"/i)
   end
 
   app "remove.bg.app"
