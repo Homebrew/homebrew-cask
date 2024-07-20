@@ -1,9 +1,9 @@
 cask "gitfiend" do
   arch arm: "-arm64"
 
-  version "0.44.3"
-  sha256 arm:   "524f4b00b4819b5fdf2d453fd8947dee5045b68ab832d175123c8274048e1e98",
-         intel: "ad06ff9c0247993a9ec9aa4bb93b880662097742072cd4ff1cc302b621e4cadc"
+  version "0.45.3"
+  sha256 arm:   "ad3d40ba86badb361f64082b0969a58700fc5960b8bd5a60a781d95b6e1e139e",
+         intel: "ad3d40ba86badb361f64082b0969a58700fc5960b8bd5a60a781d95b6e1e139e"
 
   url "https://gitfiend.com/resources/GitFiend-#{version}#{arch}.dmg"
   name "GitFiend"
