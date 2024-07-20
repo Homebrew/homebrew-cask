@@ -1,13 +1,12 @@
 cask "mumuplayer" do
   version "1.4.38"
-  sha256 "9e82ed1a39b2cd813afa6311313e91a0c80246b31eacc0e49aa175576236143d"
+  sha256 "1abebdc6a5e40d0a3e2caabdb0913f8d9ceee929207f6af872a4e73e82e02f1d"
 
-  url "https://a11.gdl.netease.com/MuMuPlayerPro-v#{version}.dmg",
+  url "https://a11.gdl.netease.com/MuMuPlayerPro-v#{version}-global.dmg",
       verified: "a11.gdl.netease.com/"
-  name "Mumu Player Pro"
-  name "MuMu模拟器Pro"
-  desc "Android emulator"
-  homepage "https://mumu.163.com/mac/"
+  name "MumuPlayer Pro"
+  desc "Seamlessly run Android games and apps on your Apple Silicon Mac"
+  homepage "https://www.mumuplayer.com/mac/"
 
   livecheck do
     url "https://mumu.nie.netease.com/api/mac/pro/appcast/alter?architecture=arm64&version=#{version}"
@@ -26,16 +25,16 @@ cask "mumuplayer" do
   depends_on macos: ">= :big_sur"
   depends_on arch: :arm64
 
-  app "MuMuLauncher.app"
+  app "MumuPlayer Pro.app"
 
   zap trash: [
-    "~/Library/Application Scripts/*.group.com.netease.mumu.nemux",
-    "~/Library/Application Support/com.netease.mumu.nemux",
-    "~/Library/Caches/com.netease.mumu.nemux*",
-    "~/Library/Group Containers/*.group.com.netease.mumu.nemux",
-    "~/Library/HTTPStorages/com.netease.mumu.nemux*",
-    "~/Library/Preferences/*.netease.mumu*.plist",
-    "~/Library/Saved Application State/com.netease.mumu.nemux*.savedState",
-    "~/Library/WebKit/com.netease.mumu.nemux*",
+    "~/Library/Application Scripts/*.group.com.netease.mumu.nemux-global",
+    "~/Library/Application Support/com.netease.mumu.nemux-global",
+    "~/Library/Caches/com.netease.mumu.nemux-global*",
+    "~/Library/Group Containers/*.group.com.netease.mumu.nemux-global",
+    "~/Library/HTTPStorages/com.netease.mumu.nemux-global*",
+    "~/Library/Preferences/com.netease.mumu.nemux-global*.plist",
+    "~/Library/Saved Application State/com.netease.mumu.nemux-global*.savedState",
+    "~/Library/WebKit/com.netease.mumu.nemux-global*",
   ]
 end
