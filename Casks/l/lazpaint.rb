@@ -14,4 +14,8 @@ cask "lazpaint" do
   end
 
   app "LazPaint.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

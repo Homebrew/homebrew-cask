@@ -514,6 +514,7 @@ pdf-expert
 pdf-expert@beta
 pdf-reader-pro
 pdfelement
+perforce
 permute
 pgadmin4
 phoenix-code
@@ -536,6 +537,7 @@ popo
 popsql
 portfolioperformance
 positron
+postbox
 postman
 postman-agent
 postman-cli
@@ -631,9 +633,11 @@ shadow@beta
 shapr3d
 shattered-pixel-dungeon
 shearwater-cloud
+shift
 sigmaos
 signal
 signal@beta
+simplenote
 simplex
 sip
 sipgate-clinq
@@ -674,6 +678,7 @@ supernotes
 superproductivity
 surge
 swiftformat-for-xcode
+tabby
 tableflip
 tableplus
 tageditor
@@ -719,6 +724,7 @@ tsh
 tsh@13
 tuist
 tunnelbear
+tunnelblick@beta
 tuple
 tuta-mail
 typeface

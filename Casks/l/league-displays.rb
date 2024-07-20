@@ -19,4 +19,8 @@ cask "league-displays" do
     "~/Library/Logs/LeagueDisplays-Configurator.log",
     "~/Library/Screen Savers/League.saver",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

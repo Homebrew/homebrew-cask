@@ -8,7 +8,7 @@ cask "fetch" do
   homepage "https://fetchsoftworks.com/fetch/"
 
   livecheck do
-    url "https://fetchsoftworks.com/fetch/release-notes/"
+    url :homepage
     regex(/href=.*Fetch[._-]v?(\d+(?:\.\d+)+)\.zip"/i)
   end
 

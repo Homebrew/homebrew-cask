@@ -9,6 +9,8 @@ cask "tenor" do
 
   disable! date: "2024-07-20", because: :moved_to_mas
 
+  disable! date: "2024-07-20", because: :moved_to_mas
+
   depends_on macos: ">= :el_capitan"
 
   app "Tenor.app"

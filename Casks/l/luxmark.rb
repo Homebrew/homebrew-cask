@@ -14,4 +14,8 @@ cask "luxmark" do
   end
 
   app "LuxMark.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -1,6 +1,6 @@
 cask "font-lilex" do
-  version "2.510"
-  sha256 "2fd9cf5d12ca390bba8c487f189f78e5900e7f6f7d6a702d6ed5074c26260537"
+  version "2.520"
+  sha256 "c19cac5d41d763f6edd92fed1799e2522ee994452ab6ce979bbcedcef187c46d"
 
   url "https://github.com/mishamyrt/Lilex/releases/download/#{version}/Lilex.zip"
   name "Lilex"
@@ -8,11 +8,10 @@ cask "font-lilex" do
 
   font "ttf/Lilex-Bold.ttf"
   font "ttf/Lilex-ExtraLight.ttf"
-  font "ttf/Lilex-ExtraThick.ttf"
   font "ttf/Lilex-Medium.ttf"
   font "ttf/Lilex-Regular.ttf"
   font "ttf/Lilex-Thin.ttf"
-  font "variable/Lilex-VF.ttf"
+  font "variable/Lilex[wght].ttf"
 
   # No zap stanza required
 end

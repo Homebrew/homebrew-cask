@@ -1,23 +1,23 @@
-cask "gitkraken" do
+cask "gitkraken-on-premise-serverless" do
   arch arm: "darwin-arm64", intel: "darwin"
 
   version "10.1.1"
-  sha256 arm:   "d5a102fb7dbb6828115227e887506e392fa6a92a4299b906053b71b46f330bfb",
-         intel: "74861bf0a9f7019d99e8b48aa4b359e50f338939d9fdd393bf17425c16a55ec0"
+  sha256 arm:   "fc5cd736682b86e134567c82bf3b474c5c0e90f9ada797a53ad7c66e0639affe",
+         intel: "bf1be6a44f1861d28c1b066eff286c2fded42cb182407d4c365932bae4be0bf0"
 
-  url "https://release.axocdn.com/#{arch}/GitKraken-v#{version}.zip",
+  url "https://release.axocdn.com/#{arch}-standalone/GitKraken-v#{version}.zip",
       verified: "release.axocdn.com/"
-  name "GitKraken"
+  name "GitKraken Serverless"
   desc "Git client focusing on productivity"
-  homepage "https://www.gitkraken.com/"
+  homepage "https://www.gitkraken.com/git-client/on-premise"
 
   livecheck do
-    url "https://help.gitkraken.com/gitkraken-client/current/"
-    regex(/Version\s(\d+(?:\.\d+)+)/i)
+    url "https://www.gitkraken.com/download-on-premise-serverless"
+    regex(/Latest\srelease:\s(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
-  conflicts_with cask: "gitkraken-on-premise-serverless"
+  conflicts_with cask: "gitkraken"
   depends_on macos: ">= :el_capitan"
 
   app "GitKraken.app"
