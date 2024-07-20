@@ -2,8 +2,8 @@ cask "monarch" do
   arch arm: "arm64", intel: "x64"
 
   version "0.6.70"
-  sha256 arm:   "e4b557c50f5ffa37ab0d2dc18dca43935bc6a5a6ce919531b2dd656faab79f14",
-         intel: "7db2c4940c483e3c96df64f0bb37ae6fcbbda90d45cb61075897031ac1765a8c"
+  sha256 arm:   "9104067a45f5083cf391c6f37bd097516229f49ca958f93d7c7505a1103a6720",
+         intel: "f6624a23ce4713b5a876c5588d9fb8eeca02a70deb7584eaa3d9734f3d105f44"
 
   url "https://monarchlauncher.s3.amazonaws.com/#{arch}/monarch-#{version}.dmg",
       verified: "monarchlauncher.s3.amazonaws.com/"
