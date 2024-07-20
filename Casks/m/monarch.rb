@@ -13,9 +13,7 @@ cask "monarch" do
 
   livecheck do
     url "https://monarchlauncher.s3.amazonaws.com/#{arch}/latest-mac.yml"
-    strategy :yaml do |yaml|
-      yaml["version"]
-    end
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :monterey"
