@@ -1,6 +1,6 @@
 cask "font-iosevka-slab" do
-  version "30.3.2"
-  sha256 "dff20106f377f283e2a42f408a02e5d9d549ad838f561ec8dc7427f4737b0167"
+  version "30.3.3"
+  sha256 "d2cbafbf055a264d3b288630e221c8158a78658be85c00a5078dd01f3003696a"
 
   url "https://github.com/be5invis/Iosevka/releases/download/v#{version}/PkgTTC-IosevkaSlab-#{version}.zip"
   name "Iosevka Slab"
