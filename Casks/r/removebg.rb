@@ -22,4 +22,8 @@ cask "removebg" do
     "~/Library/Preferences/bg.remove.mac.new.plist",
     "~/Library/Saved Application State/bg.remove.mac.new.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
