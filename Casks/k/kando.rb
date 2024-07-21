@@ -7,7 +7,7 @@ cask "kando" do
 
   url "https://github.com/kando-menu/kando/releases/download/v#{version}/Kando-#{version}-#{arch}.dmg"
   name "Kando"
-  desc "The Cross-Platform Pie Menu"
+  desc "Cross-Platform Pie Menu"
   homepage "https://github.com/kando-menu/kando"
 
   livecheck do
