@@ -1,6 +1,6 @@
 cask "zight" do
-  version "8.2.0,2812"
-  sha256 "fcb114d5807269d00a30bade35f581639719fef18b6d9f893a7fa26c71bca23c"
+  version "8.2.1,2847"
+  sha256 "599977dc60ccce2c7ea6d83d81b440384de50aec73a4a3d5575e763ab1be06df"
 
   url "https://downloads.zight.com/mac/Zight-#{version.csv.first}.#{version.csv.second}.zip"
   name "Zight"
