@@ -2,10 +2,11 @@ cask "gitfiend" do
   arch arm: "-arm64"
 
   version "0.45.3"
-  sha256 arm:   "ad3d40ba86badb361f64082b0969a58700fc5960b8bd5a60a781d95b6e1e139e",
-         intel: "ad3d40ba86badb361f64082b0969a58700fc5960b8bd5a60a781d95b6e1e139e"
+  sha256 arm:   "f23c033b28516c6160566439d3217bb8d350dcf2441e29ac629219c6b42a54c5",
+         intel: "bff456d1b422c1a40e61fdb8555736740974bee8fc37c17dd693f70bab3872e8"
 
-  url "https://gitfiend.com/resources/GitFiend-#{version}#{arch}.dmg"
+  url "https://github.com/GitFiend/Support/releases/download/v#{version}/GitFiend-#{version}#{arch}.dmg",
+      verified: "github.com/GitFiend/Support/"
   name "GitFiend"
   desc "Git client"
   homepage "https://gitfiend.com/"
@@ -18,7 +19,7 @@ cask "gitfiend" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "GitFiend.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
