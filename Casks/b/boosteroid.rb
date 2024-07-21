@@ -5,12 +5,7 @@ cask "boosteroid" do
   version "1.8.11"
   sha256 :no_check
 
-  on_arm do
-    depends_on macos: ">= :catalina"
-  end
-  on_intel do
-    depends_on macos: ">= :high_sierra"
-  end
+  depends_on macos: ">= :high_sierra"
 
   url "https://boosteroid.com/macos#{folder}/installer/boosteroid-install-#{arch}.dmg",
       user_agent: :fake
