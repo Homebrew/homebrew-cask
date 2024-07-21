@@ -21,17 +21,17 @@ google-chrome                google-chrome@beta           google-chrome@canary  
 
 ## Installing Casks
 
-The command `brew install --cask` accepts one or multiple cask tokens. Let’s try to install Firefox:
+The command `brew install --cask` accepts one or multiple cask tokens. Let’s try to install Mozilla Firefox:
 
 ```console
 $ brew install --cask firefox
 ==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-cask/ba243ff8f7984a43088e0a1721e872cdd9ae7df0/Casks/f/firefox.rb
 ######################################################################## 100.0%
-==> Downloading https://download-installer.cdn.mozilla.net/pub/firefox/releases/128.0/mac/ja-JP-mac/Firefox%20128.0.dmg
+==> Downloading https://download-installer.cdn.mozilla.net/pub/firefox/releases/128.0/mac/en-US/Firefox%20128.0.dmg
 ######################################################################## 100.0%
 ==> Installing Cask firefox
 ==> Moving App 'Firefox.app' to '/Applications/Firefox.app'
-==> Linking Binary 'firefox.wrapper.sh' to '/usr/local/bin/firefox'
+==> Linking Binary 'firefox.wrapper.sh' to '/opt/homebrew/bin/firefox'
 🍺  firefox was successfully installed!
 ```
 
