@@ -5,10 +5,14 @@ cask "boosteroid" do
   on_arm do
     url "https://boosteroid.com/macos_ARM/installer/boosteroid-install-arm64.dmg",
         user_agent: :fake
+
+    depends_on macos: ">= :catalina"
   end
   on_intel do
     url "https://boosteroid.com/macos/installer/boosteroid-install-x64.dmg",
         user_agent: :fake
+
+    depends_on macos: ">= :high_sierra"
   end
 
   name "Boosteroid"
@@ -21,8 +25,6 @@ cask "boosteroid" do
       page.scan(/\[(\d+(?:\.\d+)+)\]/i).map { |match| match[0] }
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   app "Boosteroid.app"
 
