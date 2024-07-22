@@ -13,7 +13,7 @@ cask "treeviewer" do
   app "TreeViewer.app"
 
   zap trash: [
-    "/private/var/db/receipts/io.github.arklumpus.TreeViewer.bom",
-    "/private/var/db/receipts/io.github.arklumpus.TreeViewer.plist",
+    "~/.local/share/TreeViewer",
+    "~/Library/Saved Application State/io.github.arklumpus.TreeViewer.savedState",
   ]
 end
