@@ -1,5 +1,5 @@
 cask "winx-hd-video-converter" do
-  version "6.8.2,20240112"
+  version "6.8.2"
   sha256 :no_check
 
   url "https://www.winxdvd.com/download/winx-hd-video-converter-for-mac.dmg"
@@ -8,8 +8,8 @@ cask "winx-hd-video-converter" do
   homepage "https://www.winxdvd.com/hd-video-converter-for-mac/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.winxdvd.com/hd-video-converter-for-mac/updatelog.htm"
+    regex(/for\s*Mac\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Winx HD Video Converter for Mac.app"
