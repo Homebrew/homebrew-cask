@@ -1,6 +1,3 @@
-# Documentation: https://docs.brew.sh/Cask-Cookbook
-#                https://docs.brew.sh/Adding-Software-to-Homebrew#cask-stanzas
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 cask "treeviewer" do
   arch arm: "arm64", intel: "x64"
 
@@ -13,7 +10,6 @@ cask "treeviewer" do
   desc "Flexible, modular software to visualise and manipulate phylogenetic trees"
   homepage "https://github.com/arklumpus/TreeViewer"
 
-  # Documentation: https://docs.brew.sh/Brew-Livecheck
   livecheck do
     url "https://github.com/arklumpus/TreeViewer/releases/"
     strategy :github_latest
@@ -21,7 +17,6 @@ cask "treeviewer" do
 
   app "TreeViewer.app"
 
-  # Documentation: https://docs.brew.sh/Cask-Cookbook#stanza-zap
   zap trash: [
     "/private/var/db/receipts/io.github.arklumpus.TreeViewer.bom",
     "/private/var/db/receipts/io.github.arklumpus.TreeViewer.plist",
