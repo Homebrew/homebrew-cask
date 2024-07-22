@@ -7,7 +7,7 @@ cask "treeviewer" do
 
   url "https://github.com/arklumpus/TreeViewer/releases/download/v#{version}/TreeViewer-Mac-#{arch}.dmg"
   name "TreeViewer"
-  desc "Flexible, modular software to visualise and manipulate phylogenetic trees"
+  desc "Phylogenetic tree viewer"
   homepage "https://github.com/arklumpus/TreeViewer"
 
   livecheck do
