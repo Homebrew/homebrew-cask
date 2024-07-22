@@ -1,0 +1,105 @@
+name: Re-run Workflow
+
+on:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
+  pull_request_target:
+    types:
+      - closed
+      - labeled
+      - unlabeled
+  schedule:
+    - cron: '30 */3 * * *' # every 3 hours (30 minutes past the hour)
+  workflow_dispatch:
+
+env:
+  GH_REPO: ${{ github.repository }}
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  scheduled-retry:
+    if: >
+      github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Re-run CI workflow
+        run: |
+          PR_NUMBERS=$(gh pr list -l 'ci-retry' --json number --jq '.[].number')
+          for PR_NUMBER in $PR_NUMBERS; do
+            echo "Processing PR #$PR_NUMBER"
+            WORKFLOW_RUN_ID=$(gh pr view "$PR_NUMBER" --json headRefName --jq '.headRefName' | xargs -I {} gh run list --workflow=ci.yml --branch={} --json databaseId --jq '.[].databaseId')
+            if [ -n "$WORKFLOW_RUN_ID" ]; then
+              echo "Rerunning workflow run #$WORKFLOW_RUN_ID for PR #$PR_NUMBER"
+              gh run rerun "$WORKFLOW_RUN_ID"
+            else
+              echo "No runs found for PR #$PR_NUMBER"
+            fi
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  scheduled-retry-failed-jobs:
+    if: >
+      github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Re-run CI workflow
+        run: |
+          PR_NUMBERS=$(gh pr list -l 'ci-retry-failed-jobs' --json number --jq '.[].number')
+          for PR_NUMBER in $PR_NUMBERS; do
+            echo "Processing PR #$PR_NUMBER"
+            WORKFLOW_RUN_ID=$(gh pr view "$PR_NUMBER" --json headRefName --jq '.headRefName' | xargs -I {} gh run list --workflow=ci.yml --branch={} --json databaseId --jq '.[].databaseId')
+            if [ -n "$WORKFLOW_RUN_ID" ]; then
+              echo "Rerunning workflow run #$WORKFLOW_RUN_ID for PR #$PR_NUMBER"
+              gh run rerun "$WORKFLOW_RUN_ID" --failed
+            else
+              echo "No runs found for PR #$PR_NUMBER"
+            fi
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  trigger-rerun:
+    if: >
+      (
+        github.event.label.name == 'ci-syntax-only' ||
+        github.event.label.name == 'ci-requeue' ||
+        github.event.label.name == 'ci-skip-install'
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Re-run CI workflow
+        run: |
+          PR_NUMBER=$(gh pr view "${{ github.event.pull_request.number }}" --json headRefName --jq '.headRefName')
+          WORKFLOW_RUN_ID=$(gh pr view "${{ github.event.pull_request.number }}" --json headRefName --jq '.headRefName' | xargs -I {} gh run list --workflow=ci.yml --branch={} --json databaseId,status --jq '.[].databaseId')
+          if [ -n "$WORKFLOW_RUN_ID" ]; then
+            echo "Rerunning workflow run #$WORKFLOW_RUN_ID for PR #$PR_NUMBER"
+            gh run rerun "$WORKFLOW_RUN_ID"
+          else
+            echo "No runs found for PR #$PR_NUMBER"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+  trigger-retry-failed-jobs: 
+      if: github.event.label.name == 'ci-requeue-failed-jobs'
+      runs-on: ubuntu-latest
+      steps:
+        - name: Re-run CI workflow
+          run: |
+            PR_NUMBER=$(gh pr view "${{ github.event.pull_request.number }}" --json headRefName --jq '.headRefName')
+            WORKFLOW_RUN_ID=$(gh pr view "${{ github.event.pull_request.number }}" --json headRefName --jq '.headRefName' | xargs -I {} gh run list --workflow=ci.yml --branch={} --json databaseId --jq '.[].databaseId')
+            if [ -n "$WORKFLOW_RUN_ID" ]; then
+              echo "Rerunning workflow run #$WORKFLOW_RUN_ID for PR #$PR_NUMBER"
+              gh run rerun "$WORKFLOW_RUN_ID" --failed
+            else
+              echo "No runs found for PR #$PR_NUMBER"
+            fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
