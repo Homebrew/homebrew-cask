@@ -52,6 +52,7 @@ aptakube
 aqua
 arc
 atlauncher
+audacity
 audius
 avast-secure-browser
 axure-rp
