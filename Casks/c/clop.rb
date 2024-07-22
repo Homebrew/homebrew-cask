@@ -18,8 +18,14 @@ cask "clop" do
   app "Clop.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.lowtechguys.Clop",
+    "~/Library/Application Scripts/com.lowtechguys.Clop.FinderOptimiser",
     "~/Library/Application Support/Clop",
     "~/Library/Caches/Clop",
+    "~/Library/Containers/com.lowtechguys.Clop.FinderOptimiser",
+    "~/Library/Daemon Containers/54F7B6C1*/Data/com.apple.kvs/ChangeTokens/NoEncryption/Clop/*.com.lowtechguys.Clop",
+    "~/Library/HTTPStorages/com.lowtechguys.Clop",
+    "~/Library/HTTPStorages/com.lowtechguys.Clop.binarycookies",
     "~/Library/Preferences/com.lowtechguys.Clop.plist",
   ]
 end
