@@ -17,6 +17,8 @@ cask "sequel-ace" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Sequel Ace.app"
 
   zap trash: [
