@@ -8,6 +8,8 @@ cask "koa11y" do
   desc "Easily check for website accessibility issues"
   homepage "https://open-indy.github.io/Koa11y/"
 
+  deprecate! date: "2024-07-21", because: :unmaintained
+
   app "Koa11y.app"
 
   caveats do
