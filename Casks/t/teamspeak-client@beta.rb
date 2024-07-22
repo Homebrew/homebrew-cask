@@ -10,7 +10,7 @@ cask "teamspeak-client@beta" do
 
   livecheck do
     url "https://teamspeak.com/en/downloads"
-    regex(%r{href=.*?/client/([\d\.]+-beta\d+)/teamspeak-client\.dmg}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+[^/]*)/teamspeak[._-]client\.dmg}i)
   end
 
   auto_updates true
