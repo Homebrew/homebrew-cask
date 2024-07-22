@@ -1,15 +1,17 @@
 cask "nordpass" do
+  arch arm: "arm/"
+
   version "5.19.2"
   sha256 :no_check
 
-  url "https://downloads.npass.app/mac/NordPass.dmg",
+  url "https://downloads.npass.app/mac/#{arch}NordPass.dmg",
       verified: "downloads.npass.app/mac/"
   name "NordPass"
   desc "Password manager"
   homepage "https://nordpass.com/"
 
   livecheck do
-    url "https://downloads.npass.app/mac/latest-mac.yml"
+    url "https://downloads.npass.app/mac/#{arch}latest-mac.yml"
     strategy :electron_builder
   end
 
@@ -29,8 +31,4 @@ cask "nordpass" do
     "~/Library/Preferences/com.nordsec.nordpass.plist",
     "~/Library/Saved Application State/com.nordsec.nordpass.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
