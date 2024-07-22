@@ -10,11 +10,6 @@ cask "treeviewer" do
   desc "Phylogenetic tree viewer"
   homepage "https://github.com/arklumpus/TreeViewer"
 
-  livecheck do
-    url "https://github.com/arklumpus/TreeViewer/releases/"
-    strategy :github_latest
-  end
-
   app "TreeViewer.app"
 
   zap trash: [
