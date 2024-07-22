@@ -729,6 +729,7 @@ tunnelbear
 tunnelblick@beta
 tuple
 tuta-mail
+twine
 typeface
 typora
 typora@dev
