@@ -8,8 +8,8 @@ cask "pingid" do
   homepage "https://www.pingidentity.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://docs.pingidentity.com/api/khub/maps/v6hqiVhowIDI52XNglkuRw/pages"
+    regex(/Desktop\s+app\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   pkg "PingID.pkg"
