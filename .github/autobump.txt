@@ -476,6 +476,7 @@ notion
 notion-calendar
 nova
 nozbe
+nudge
 obs-advanced-scene-switcher
 obs@beta
 ocenaudio
