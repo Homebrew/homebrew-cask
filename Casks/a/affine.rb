@@ -1,9 +1,9 @@
 cask "affine" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.15.6"
-  sha256 arm:   "fa1590b42f7a75d5c327814a023fd343e95d077b1d9c6b0635f25a791e5c7599",
-         intel: "ebe4a0246ab2e28773cb12eb0e33574b4d7772d8abd13db01fdf679dbe593916"
+  version "0.15.7"
+  sha256 arm:   "7c388574a89b89a57c34351fb07aed0c974bfd8b0ba7203e5398883f973026be",
+         intel: "b10cb7b5af505096e44da34c4e536adc332ab92b52d1b9f2c964e3c440836cd0"
 
   url "https://github.com/toeverything/AFFiNE/releases/download/v#{version}/affine-#{version}-stable-macos-#{arch}.zip",
       verified: "github.com/toeverything/AFFiNE/"
