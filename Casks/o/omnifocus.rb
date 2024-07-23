@@ -60,8 +60,8 @@ cask "omnifocus" do
     uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
   end
   on_big_sur do
-    version "3.15.6"
-    sha256 "7995fea297b5a8a1d7fafd1c3f3ec9f00ebcbe12ac64e91b3f0e55e273749d69"
+    version "3.15.7"
+    sha256 "239f3e90e5d6f3b83d652f3eb43f0e2f22ff2a1dcd14661c1a22f28ffd54ec03"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniFocus-#{version}.dmg"
 
@@ -72,8 +72,8 @@ cask "omnifocus" do
     uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
   end
   on_monterey do
-    version "3.15.6"
-    sha256 "7995fea297b5a8a1d7fafd1c3f3ec9f00ebcbe12ac64e91b3f0e55e273749d69"
+    version "3.15.7"
+    sha256 "239f3e90e5d6f3b83d652f3eb43f0e2f22ff2a1dcd14661c1a22f28ffd54ec03"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniFocus-#{version}.dmg"
 
