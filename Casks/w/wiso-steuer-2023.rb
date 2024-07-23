@@ -1,9 +1,9 @@
 cask "wiso-steuer-2023" do
   # NOTE: "2023" is not a version number, but an intrinsic part of the product name
-  version "30.14.4340"
-  sha256 "fc59b630ca312d6fae28804f21e0c1464c83b42991b3fb5eea8bfba564df1d6b"
+  version "30.14.4490"
+  sha256 "d8bfaff75a899e0544726235607f1e8c297b29470b15009b1c0b9f5ba899fef8"
 
-  url "https://update.buhl-data.com/Updates/Steuer/2023/Mac/Files/#{version}-RC1/SteuerMac2023-#{version}.dmg",
+  url "https://update.buhl-data.com/Updates/Steuer/2023/Mac/Files/#{version}-HF1/SteuerMac2023-#{version}.dmg",
       verified: "update.buhl-data.com/Updates/Steuer/"
   name "WISO Steuer 2023"
   desc "Tax declaration for the fiscal year 2022"
