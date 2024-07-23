@@ -9,7 +9,7 @@ cask "arq" do
 
   livecheck do
     url "https://www.arqbackup.com/download/arqbackup/arq#{version.major}_release_notes.html"
-    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
