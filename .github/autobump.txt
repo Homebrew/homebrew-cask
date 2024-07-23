@@ -51,6 +51,7 @@ appflowy
 aptakube
 aqua
 arc
+arq
 atlauncher
 audacity
 audius
