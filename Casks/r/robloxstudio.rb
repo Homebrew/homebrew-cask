@@ -1,4 +1,4 @@
-cask "roblox-studio" do
+cask "robloxstudio" do
   arch arm: "arm64/"
 
   version "0.634.0.6340420,f0cf2b7d1f064073"
