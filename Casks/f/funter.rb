@@ -1,5 +1,5 @@
 cask "funter" do
-  version "6.2.4"
+  version "6.2.5"
   sha256 :no_check
 
   url "https://download.nektony.com/download/funter/Funter.dmg"
