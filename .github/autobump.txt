@@ -241,6 +241,7 @@ flutter
 fmail2
 focusrite-control
 focusrite-control-2
+foldit
 font-iosevka
 font-iosevka-aile
 font-iosevka-curly

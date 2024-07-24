@@ -1,5 +1,5 @@
 cask "foldit" do
-  version "39"
+  version "40"
   sha256 :no_check
 
   url "https://files.ipd.uw.edu/pub/foldit/Foldit-macos_x64.dmg",
