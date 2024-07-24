@@ -360,6 +360,7 @@ kdenlive
 keyboard-cowboy
 keymapp
 keysafe
+kindle-previewer
 kitty
 kkbox
 krisp
