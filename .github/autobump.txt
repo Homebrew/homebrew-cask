@@ -754,6 +754,7 @@ vamiga
 vellum
 virtualbox@beta
 virtualbuddy
+virtualc64
 virtualhere
 virtualhereserver
 visual-paradigm
