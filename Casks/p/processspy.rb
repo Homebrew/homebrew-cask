@@ -4,7 +4,7 @@ cask "processspy" do
 
   url "https://process-spy.app/archive/ProcessSpy_#{version}.dmg"
   name "ProcessSpy"
-  desc "Monitor macOS processes with command line arguments"
+  desc "Monitor processes with command-line arguments"
   homepage "https://process-spy.app/"
 
   livecheck do
