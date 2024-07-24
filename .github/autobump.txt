@@ -753,6 +753,7 @@ utools
 uvtools
 valentina-studio
 vamiga
+vcam
 vellum
 virtualbox@beta
 virtualbuddy
