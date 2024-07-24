@@ -191,6 +191,7 @@ drata-agent
 draw-things
 drawio
 dropbox
+dropbox-dash
 dropbox@beta
 dropshare
 dropzone
