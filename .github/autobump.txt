@@ -795,6 +795,7 @@ wing-personal
 wondershare-uniconverter
 wordpresscom-studio
 workflowy
+wpsoffice-cn
 writerside
 xcodepilot
 xemu
