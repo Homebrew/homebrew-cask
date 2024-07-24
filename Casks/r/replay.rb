@@ -7,7 +7,7 @@ cask "replay" do
   desc "Time travel debugging"
   homepage "https://replay.io/"
 
-  deprecate! date: "2024-07-24", because: "moved to npm"
+  deprecate! date: "2024-07-24", because: :discontinued
 
   depends_on macos: ">= :sierra"
 
