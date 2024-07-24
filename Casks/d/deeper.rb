@@ -42,7 +42,7 @@ cask "deeper" do
     url "https://www.titanium-software.fr/download/13/Deeper.dmg"
   end
   on_sonoma :or_newer do
-    version "3.0.7"
+    version "3.0.8"
 
     url "https://www.titanium-software.fr/download/14/Deeper.dmg"
   end
