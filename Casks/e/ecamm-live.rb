@@ -1,5 +1,5 @@
 cask "ecamm-live" do
-  version "4.3.4"
+  version "4.3.5"
   sha256 :no_check
 
   url "https://downloads.ecamm.com/EcammLive.zip"
