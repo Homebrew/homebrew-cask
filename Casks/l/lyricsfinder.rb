@@ -17,4 +17,8 @@ cask "lyricsfinder" do
   app "LyricsFinder.app"
 
   zap trash: "~/Library/Preferences/com.mediahuman.Lyrics Finder.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

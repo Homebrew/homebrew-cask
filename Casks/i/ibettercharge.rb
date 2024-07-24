@@ -20,4 +20,8 @@ cask "ibettercharge" do
   end
 
   app "iBetterCharge.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

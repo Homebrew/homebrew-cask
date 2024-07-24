@@ -1,5 +1,5 @@
 cask "meld-studio" do
-  version "0.7.0.2"
+  version "0.7.1.0"
   sha256 :no_check
 
   url "https://packages.streamwithmeld.com/MeldStudioInstaller.dmg",

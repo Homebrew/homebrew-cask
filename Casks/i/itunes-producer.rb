@@ -1,5 +1,5 @@
 cask "itunes-producer" do
-  version "3.1.4,1085"
+  version "3.1.4"
   sha256 :no_check
 
   url "https://itunespartner.apple.com/assets/downloads/iTunesProducer.dmg"
@@ -8,8 +8,14 @@ cask "itunes-producer" do
   homepage "https://itunespartner.apple.com/books/tools"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://help.apple.com/itc/musicitp/en.lproj/navigation.json"
+    regex(/iTunes\s+Producer\s+v?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      match = json["title"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   pkg "iTunesProducer.pkg"

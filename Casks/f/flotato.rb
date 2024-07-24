@@ -8,10 +8,7 @@ cask "flotato" do
   desc "Tool to turn any web page into a desktop app"
   homepage "https://flotato.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-15", because: :unmaintained
 
   depends_on macos: ">= :high_sierra"
 
@@ -21,7 +18,10 @@ cask "flotato" do
     "/Applications/Flotato Help.app",
     "~/Library/Application Support/Flotato",
     "~/Library/Caches/com.mortenjust.flotato",
+    "~/Library/HTTPStorages/com.mortenjust.flotato",
+    "~/Library/HTTPStorages/com.mortenjust.flotato.binarycookies",
     "~/Library/Preferences/com.mortenjust.flotato.plist",
+    "~/Library/Saved Application State/com.mortenjust.flotato.savedState",
     "~/Library/WebKit/com.mortenjust.flotato",
   ]
 end

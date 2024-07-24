@@ -7,10 +7,7 @@ cask "tenor" do
   desc "Send, share and save gifs from the menu bar"
   homepage "https://tenor.com/mac"
 
-  livecheck do
-    url "https://media.tenor.com/mac/gif_for_mac_appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2024-07-20", because: :moved_to_mas
 
   depends_on macos: ">= :el_capitan"
 

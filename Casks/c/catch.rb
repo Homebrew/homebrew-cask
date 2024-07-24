@@ -8,7 +8,7 @@ cask "catch" do
   desc "Broadcatching made easy"
   homepage "https://www.giorgiocalderolla.com/catch.html"
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :sierra"
 
   app "Catch.app"
 

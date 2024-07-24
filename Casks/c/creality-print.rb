@@ -1,6 +1,6 @@
 cask "creality-print" do
-  version "5.1.0.9488,9223615b5414577a3c158a5ba7bc4950"
-  sha256 "3ac4ea468784c410f3cd1ea7fc754120bbf618db8c767290630c3e0c39ad2113"
+  version "5.1.1.9490,21e5a2a7b4468f713ce0f2147c7f0115"
+  sha256 "c84fc2d6a2b095a1a08db1d923cf9192e5daa9825b62928ecf24aeebf295cebe"
 
   url "https://file2-cdn.creality.com/file/#{version.csv.second}/Creality_Print-v#{version.csv.first}-macx-x86_64-Release.dmg"
   name "Creality Print"

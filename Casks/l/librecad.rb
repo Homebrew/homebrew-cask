@@ -15,4 +15,8 @@ cask "librecad" do
     "~/Library/Preferences/com.librecad.LibreCAD.plist",
     "~/Library/Saved Application State/com.yourcompany.LibreCAD.savedstate",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -1,6 +1,6 @@
 cask "wine@staging" do
-  version "9.11"
-  sha256 "bd8ee4bf411a4fd8f11de428978a154c3e03f2b9294716f9f36b62c93164af3e"
+  version "9.13"
+  sha256 "5cba0633ded5c211d33ff6314ba965fa5cfdea5f778d30480ee4424222743e47"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
@@ -48,9 +48,6 @@ cask "wine@staging" do
   binary "#{dir_path}/wine/bin/regedit"
   binary "#{dir_path}/wine/bin/regsvr32"
   binary "#{dir_path}/wine/bin/wine"
-  binary "#{dir_path}/wine/bin/wine-preloader"
-  binary "#{dir_path}/wine/bin/wine64"
-  binary "#{dir_path}/wine/bin/wine64-preloader"
   binary "#{dir_path}/wine/bin/wineboot"
   binary "#{dir_path}/wine/bin/winecfg"
   binary "#{dir_path}/wine/bin/wineconsole"

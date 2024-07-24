@@ -12,4 +12,8 @@ cask "invisionsync" do
   end
 
   app "InVisionSync.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

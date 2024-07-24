@@ -1,9 +1,9 @@
 cask "jamie" do
   arch arm: "-arm64"
 
-  version "4.1.5"
-  sha256 arm:   "4da56d1aaf9f62f8cdceb225b08531075160b5388ab6b14a883aa82fda707b5f",
-         intel: "79573e4b82e63b7db9854708570da0c546176f4eeba47bde82355d03b15a17c3"
+  version "4.1.8"
+  sha256 arm:   "1aa65cdd554c36bdc903d04058b2b4b5aa6b3a22b6fe6ba882448dca1af40025",
+         intel: "4f7317455ac72bffe8a89095d9d521ac8e4c989eb6bae6a48663e2d9a39cb5ca"
 
   url "https://github.com/louismorgner/jamie-release/releases/download/v#{version}/jamie-#{version}#{arch}.dmg",
       verified: "github.com/louismorgner/jamie-release/"

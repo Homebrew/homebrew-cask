@@ -1,6 +1,6 @@
 cask "youtube-downloader" do
-  version "0.12"
-  sha256 "85f5ca5df1060ee32a0db6ccb9671fa8082b1e139ebb5793cc03f18c1ac24471"
+  version "0.14"
+  sha256 "f74ec3c4e27235c35356ba423e16babae566271c0dbc8163c4172169aea14339"
 
   url "https://github.com/DenBeke/YouTube-Downloader-for-macOS/releases/download/v#{version}/Youtube.Downloader.zip"
   name "YouTube Downloader"

@@ -214,8 +214,14 @@ cask "firefox@esr" do
   homepage "https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr"
 
   livecheck do
-    url "https://download.mozilla.org/?product=firefox-esr-latest-ssl&os=osx&lang=en-US"
-    strategy :header_match
+    url "https://product-details.mozilla.org/1.0/firefox_versions.json"
+    regex(/v?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      match = json["FIREFOX_ESR"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   auto_updates true

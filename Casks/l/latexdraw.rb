@@ -19,4 +19,8 @@ cask "latexdraw" do
     "~/Library/Preferences/latexdraw.plist",
     "~/Library/Saved Application State/latexdraw.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

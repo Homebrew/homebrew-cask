@@ -27,4 +27,8 @@ cask "lastpass" do
     "~/Library/Preferences/com.lastpass.lastpassmacdesktop.plist",
     "~/Library/WebKit/com.lastpass.lastpassmacdesktop",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

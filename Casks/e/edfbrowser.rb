@@ -8,13 +8,7 @@ cask "edfbrowser" do
   desc "EDF+ and BDF+ viewer and toolbox"
   homepage "https://www.teuniz.net/edfbrowser"
 
-  livecheck do
-    url "https://gitlab.com/whitone/EDFbrowser/-/releases.json"
-    regex(%r{/uploads/(\h+)/EDFbrowser[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
-  end
+  deprecate! date: "2024-07-17", because: :unmaintained
 
   app "EDFbrowser.app"
 

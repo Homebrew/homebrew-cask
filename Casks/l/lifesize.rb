@@ -14,6 +14,7 @@ cask "lifesize" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Lifesize.app"
 
@@ -27,4 +28,8 @@ cask "lifesize" do
     "~/Library/Preferences/com.lifesize.cloud.plist",
     "~/Library/Saved Application State/com.lifesize.cloud.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

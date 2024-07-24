@@ -22,6 +22,6 @@ cask "ipartition" do
   zap trash: "~/Library/Preferences/com.coriolis-systems.iPartition.plist"
 
   caveats do
-    free_license "https://coriolis-systems.com/downloads/iPartition.png"
+    requires_rosetta
   end
 end

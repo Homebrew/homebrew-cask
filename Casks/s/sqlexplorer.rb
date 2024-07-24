@@ -7,10 +7,7 @@ cask "sqlexplorer" do
   desc "SQL Client for JDBC compliant databases"
   homepage "https://eclipsesql.sourceforge.net/"
 
-  livecheck do
-    url "https://sourceforge.net/projects/eclipsesql/rss?path=/SQL%20Explorer%20RCP%20%28exc%20JRE%29"
-    regex(%r{url=.*?/sqlexplorer[._-]rcp[._-]v?(\d+(?:\.\d+)+)[._-]macosx?[^"' ]*?\.(?:t|zip)}i)
-  end
+  disable! date: "2024-07-17", because: "is 32-bit only"
 
   app "SQLExplorer/sqlexplorer.app"
 end
