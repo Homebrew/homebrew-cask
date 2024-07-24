@@ -602,6 +602,7 @@ restfox
 rhino
 ricochet-refresh
 rider
+rightfont
 ringcentral
 rio
 rippling
