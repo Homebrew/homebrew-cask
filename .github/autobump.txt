@@ -279,6 +279,7 @@ fsnotes
 futubull
 fxfactory
 gather
+gb-studio
 gcs
 gdevelop
 genesys-cloud
