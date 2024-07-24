@@ -1,9 +1,9 @@
 cask "flipper" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.257.0"
-  sha256 arm:   "02ce80558c6c456b618702addb04b93840772e9782e3463817f584fd30fcbecd",
-         intel: "d53e6bf7549891125eb94db5c41ee88385106a2407ea0f1e6760cda58606d2d3"
+  version "0.259.0"
+  sha256 arm:   "a4e01d054dda438c5783f17c8360481ed212a55b4e84f407a94291200b8ba88a",
+         intel: "4831b4defcb457758c1284fc685a32b75b15f64b332a4f601fa12b209c42a85a"
 
   url "https://github.com/facebook/flipper/releases/download/v#{version}/Flipper-server-mac-#{arch}.dmg",
       verified: "github.com/facebook/flipper/"

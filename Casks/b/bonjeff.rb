@@ -7,7 +7,7 @@ cask "bonjeff" do
   desc "Shows a live display of the Bonjour services published on your network"
   homepage "https://github.com/lapcat/Bonjeff"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Bonjeff.app"
 

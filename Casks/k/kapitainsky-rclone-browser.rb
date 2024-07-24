@@ -7,20 +7,13 @@ cask "kapitainsky-rclone-browser" do
   desc "GUI for rclone"
   homepage "https://github.com/kapitainsky/RcloneBrowser"
 
-  livecheck do
-    url :url
-    regex(/^rclone-browser[._-]v?(\d+(?:\.\d+)+)-([0-9a-f]+)-macos\.dmg/i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
-  end
+  deprecate! date: "2024-07-17", because: :unmaintained
 
   depends_on formula: "rclone"
 
   app "Rclone Browser.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

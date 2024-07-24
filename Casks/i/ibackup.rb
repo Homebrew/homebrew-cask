@@ -7,10 +7,7 @@ cask "ibackup" do
   desc "Backup utility"
   homepage "https://www.grapefruit.ch/iBackup/"
 
-  livecheck do
-    url "https://www.grapefruit.ch/iBackup/downloads.html"
-    regex(%r{href=.*?/iBackup\s*v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "iBackup.app"
 end

@@ -12,5 +12,11 @@ cask "kugoumusic" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "KugouMusic.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

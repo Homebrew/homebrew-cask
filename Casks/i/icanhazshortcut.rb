@@ -12,4 +12,8 @@ cask "icanhazshortcut" do
   uninstall quit: "info.deseven.icanhazshortcut"
 
   zap trash: "~/Library/Preference/info.deseven.icanhazshortcut"
+
+  caveats do
+    requires_rosetta
+  end
 end

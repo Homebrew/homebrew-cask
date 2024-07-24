@@ -1,15 +1,15 @@
 cask "sony-ps-remote-play" do
-  version "7.0.1"
+  version "7.0.3"
   sha256 :no_check
 
   url "https://remoteplay.dl.playstation.net/remoteplay/module/mac/RemotePlayInstaller.pkg"
   name "PS Remote Play"
   desc "Application to control your PlayStation 4 or PlayStation 5"
-  homepage "https://remoteplay.dl.playstation.net/remoteplay/"
+  homepage "https://remoteplay.dl.playstation.net/remoteplay/lang/en/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/Version\s*v?(\d+(?:\.\d+)+)\s*for\s*Mac/i)
   end
 
   depends_on macos: ">= :high_sierra"
@@ -27,4 +27,8 @@ cask "sony-ps-remote-play" do
     "~/Library/Preferences/com.playstation.RemotePlay.plist",
     "~/Library/WebKit/com.playstation.RemotePlay",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

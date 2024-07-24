@@ -13,7 +13,7 @@ cask "cctalk" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "CCtalk.app"
 

@@ -8,7 +8,7 @@ cask "aware" do
   desc "Menubar app to track active computer use"
   homepage "https://awaremac.com/"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Aware.app"
 

@@ -1,5 +1,5 @@
 cask "binary-ninja" do
-  version "4.0.5336"
+  version "4.1.5747"
   sha256 :no_check
 
   url "https://cdn.binary.ninja/installers/binaryninja_free_macosx.dmg"
@@ -8,10 +8,15 @@ cask "binary-ninja" do
   homepage "https://binary.ninja/"
 
   livecheck do
-    url :url
-    regex(/(\d+(?:\.\d+)+)/)
-    strategy :extract_plist do |items|
-      items["com.vector35.binaryninja"].short_version[regex, 1]
+    url "https://binary.ninja/js/changelog.json"
+    regex(/v?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      json.map do |item|
+        match = item["version"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
     end
   end
 

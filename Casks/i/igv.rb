@@ -21,6 +21,7 @@ cask "igv" do
   ]
 
   caveats do
-    depends_on_java "11+"
+    requires_rosetta
+    depends_on_java "17+"
   end
 end

@@ -16,4 +16,8 @@ cask "macx-video-converter-pro" do
   app "MacX Video Converter Pro.app"
 
   zap trash: "~/Library/Preferences/com.macxdvd.macxvdoconverterpro.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

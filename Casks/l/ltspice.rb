@@ -8,8 +8,8 @@ cask "ltspice" do
   homepage "https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/for\s+MacOS[\s\S]*Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   pkg "LTspice.pkg"
@@ -21,8 +21,10 @@ cask "ltspice" do
 
   zap trash: [
         "~/Documents/LTspice/examples",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.analog.ltspice.app.sfl*",
         "~/Library/Application Support/LTspice",
         "~/Library/Preferences/com.analog.LTspice.App.plist",
+        "~/Library/Saved Application State/com.analog.LTspice.App.savedState",
       ],
       rmdir: "~/Documents/LTspice"
 end

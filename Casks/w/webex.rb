@@ -10,11 +10,12 @@ cask "webex" do
   homepage "https://www.webex.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://help.webex.com/en-us/article/mqkve8"
+    regex(/>\s*Mac[^<]*?v?(\d+(?:\.\d+)+)\s*</i)
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Webex.app"
 

@@ -18,4 +18,8 @@ cask "invisor-lite" do
     "~/Library/Preferences/com.pozdeev.invisorfree.plist",
     "~/Library/Saved Application State/com.pozdeev.invisorfree.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -12,6 +12,8 @@ cask "betterandbetter" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "BetterAndBetter.app"
 
   zap trash: [

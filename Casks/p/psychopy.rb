@@ -1,8 +1,8 @@
 cask "psychopy" do
-  version "2024.1.5"
-  sha256 "98cbcef6ea40fba188b31e461ccd4232810d1dfb486ea722118ce1b1095253b7"
+  version "2024.2.0"
+  sha256 "303c9945d2c8605bade16c4a72b9e072ec024c25857b2df5da0ed5777832bcc1"
 
-  url "https://github.com/psychopy/psychopy/releases/download/#{version.major_minor_patch}/StandalonePsychoPy-#{version}-macOS.dmg"
+  url "https://github.com/psychopy/psychopy/releases/download/#{version.major_minor_patch}/StandalonePsychoPy-#{version}-macOS-py3.10.dmg"
   name "PsychoPy"
   desc "Create experiments in behavioral science"
   homepage "https://github.com/psychopy/psychopy"
@@ -19,4 +19,8 @@ cask "psychopy" do
     "~/Library/Preferences/org.opensciencetools.psychopy.plist",
     "~/Library/Saved Application State/org.opensciencetools.psychopy.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

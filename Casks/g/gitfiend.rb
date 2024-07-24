@@ -1,8 +1,12 @@
 cask "gitfiend" do
-  version "0.44.3"
-  sha256 "ad06ff9c0247993a9ec9aa4bb93b880662097742072cd4ff1cc302b621e4cadc"
+  arch arm: "-arm64"
 
-  url "https://gitfiend.com/resources/GitFiend-#{version}.dmg"
+  version "0.45.3"
+  sha256 arm:   "f23c033b28516c6160566439d3217bb8d350dcf2441e29ac629219c6b42a54c5",
+         intel: "bff456d1b422c1a40e61fdb8555736740974bee8fc37c17dd693f70bab3872e8"
+
+  url "https://github.com/GitFiend/Support/releases/download/v#{version}/GitFiend-#{version}#{arch}.dmg",
+      verified: "github.com/GitFiend/Support/"
   name "GitFiend"
   desc "Git client"
   homepage "https://gitfiend.com/"
@@ -15,7 +19,7 @@ cask "gitfiend" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "GitFiend.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
@@ -34,8 +38,4 @@ cask "gitfiend" do
     "~/Library/Preferences/com.tobysuggate.gitfiend.plist",
     "~/Library/Saved Application State/com.tobysuggate.gitfiend.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -19,4 +19,8 @@ cask "igdm" do
     "~/Library/Preferences/com.ifedapoolarewaju.desktop.igdm.plist",
     "~/Library/Saved Application State/com.ifedapoolarewaju.desktop.igdm.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -16,10 +16,14 @@ cask "miro" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Miro.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.realtimeboard.sfl*",
+    "~/Library/Application Support/RealtimeBoard",
+    "~/Library/Logs/RealtimeBoard",
     "~/Library/Preferences/com.electron.realtimeboard.plist",
     "~/Library/Saved Application State/com.electron.realtimeboard.savedState",
   ]

@@ -11,4 +11,8 @@ cask "lmms" do
   depends_on macos: ">= :high_sierra"
 
   app "LMMS.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

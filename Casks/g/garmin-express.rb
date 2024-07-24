@@ -29,4 +29,8 @@ cask "garmin-express" do
     "~/Library/Caches/com.garmin.renu.service.crashreporter",
     "~/Library/Preferences/com.garmin.renu*",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

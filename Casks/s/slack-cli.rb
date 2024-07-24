@@ -9,8 +9,10 @@ cask "slack-cli" do
   homepage "https://api.slack.com/future/tools/cli"
 
   livecheck do
-    url "https://api.slack.com/automation/changelog"
-    regex(%r{h2.*?v?(\d+(?:\.\d+)+).*?/h2}i)
+    url "https://api.slack.com/slackcli/metadata.json"
+    strategy :json do |json|
+      json.dig("slack-cli", "releases")&.map { |release| release["version"] }
+    end
   end
 
   depends_on formula: "deno"

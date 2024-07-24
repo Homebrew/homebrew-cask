@@ -22,4 +22,8 @@ cask "lycheeslicer" do
     "~/Library/Preferences/com.mango3d.lychee.plist",
     "~/Library/Saved Application State/com.mango3d.lychee.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

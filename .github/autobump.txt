@@ -19,6 +19,7 @@ adguard
 adguard-vpn
 adguard-vpn@nightly
 adguard@nightly
+adobe-acrobat-pro
 adrive
 affine
 affinity-designer
@@ -50,7 +51,9 @@ appflowy
 aptakube
 aqua
 arc
+arq
 atlauncher
+audacity
 audius
 avast-secure-browser
 axure-rp
@@ -109,6 +112,7 @@ chromium-gost
 chronycontrol
 cisdem-data-recovery
 cisdem-pdf-converter-ocr
+clash-verge-rev
 clay
 cleanclip
 cleanmymac
@@ -300,6 +304,7 @@ gpxsee
 gqrx
 grammarly-desktop
 grandtotal
+gridtracker
 groestlcoin-core
 gstreamer-development
 gstreamer-runtime
@@ -437,6 +442,7 @@ moneymanager
 mongodb-compass
 mongodb-compass-isolated-edition
 mongodb-compass-readonly
+mongodb-compass@beta
 morgen
 mountain-duck
 mp3tag
@@ -462,6 +468,7 @@ netron
 nextcloud
 ngrok
 nordlayer
+nordlocker
 nordpass
 nordvpn
 notebooks
@@ -470,6 +477,8 @@ notion
 notion-calendar
 nova
 nozbe
+nudge
+obs
 obs-advanced-scene-switcher
 obs@beta
 ocenaudio
@@ -509,6 +518,7 @@ pdf-expert
 pdf-expert@beta
 pdf-reader-pro
 pdfelement
+perforce
 permute
 pgadmin4
 phoenix-code
@@ -531,6 +541,7 @@ popo
 popsql
 portfolioperformance
 positron
+postbox
 postman
 postman-agent
 postman-cli
@@ -581,6 +592,7 @@ remotehamradio
 removebg
 replit
 reqable
+resolume-arena
 restfox
 rhino
 ricochet-refresh
@@ -625,9 +637,11 @@ shadow@beta
 shapr3d
 shattered-pixel-dungeon
 shearwater-cloud
+shift
 sigmaos
 signal
 signal@beta
+simplenote
 simplex
 sip
 sipgate-clinq
@@ -668,6 +682,7 @@ supernotes
 superproductivity
 surge
 swiftformat-for-xcode
+tabby
 tableflip
 tableplus
 tageditor
@@ -713,8 +728,10 @@ tsh
 tsh@13
 tuist
 tunnelbear
+tunnelblick@beta
 tuple
 tuta-mail
+twine
 typeface
 typora
 typora@dev
@@ -764,6 +781,7 @@ whatsapp@beta
 whisky
 wing-personal
 wondershare-uniconverter
+wordpresscom-studio
 workflowy
 writerside
 xcodepilot

@@ -7,8 +7,14 @@ cask "kmbmpdc" do
   name "kawaii menu bar music player daemon controller"
   homepage "https://github.com/arttuperala/kmbmpdc"
 
+  deprecate! date: "2024-07-17", because: :unmaintained
+
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "kmbmpdc.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

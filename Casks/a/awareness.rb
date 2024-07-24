@@ -7,11 +7,6 @@ cask "awareness" do
   desc "Time tracking application"
   homepage "http://iamfutureproof.com/tools/awareness/"
 
-  livecheck do
-    url "http://iamfutureproof.com/javascripts/tools/awareness.js"
-    regex(%r{/Awareness-(\d+(?:\.\d+)+)\.dmg}i)
-  end
-
   disable! date: "2024-07-09", because: "is 32-bit only"
 
   app "Awareness.app"

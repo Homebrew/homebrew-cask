@@ -11,26 +11,30 @@ Homebrew Cask is implemented as part of [Homebrew](https://brew.sh). All Homebre
 
 ## Searching for Casks
 
-To search for casks, use `brew search`. Let’s see if there’s a cask for Google Chrome:
+To search for casks, use `brew search`. Let’s see if there’s a cask for Mozilla Firefox:
 
 ```console
-$ brew search --cask google-chrome
+$ brew search --cask firefox
 ==> Casks
-google-chrome                google-chrome@beta           google-chrome@canary         google-chrome@dev
+firefox                      firefox@cn                   firefox@esr
+firefox@beta                 firefox@developer-edition    firefox@nightly
+Use `brew desc` to list packages with a short description.
 ```
 
 ## Installing Casks
 
-The command `brew install --cask` accepts one or multiple cask tokens. Let’s try to install Google Chrome:
+The command `brew install --cask` accepts one or multiple cask tokens. Let’s try to install Mozilla Firefox:
 
 ```console
-$ brew install --cask google-chrome
-==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+$ brew install --cask firefox
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-cask/ba243ff8f7984a43088e0a1721e872cdd9ae7df0/Casks/f/firefox.rb
 ######################################################################## 100.0%
-==> Verifying SHA-256 checksum for Cask 'google-chrome'.
-==> Installing Cask google-chrome
-==> Moving App 'Google Chrome.app' to '/Applications/Google Chrome.app'.
-🍺  google-chrome was successfully installed!
+==> Downloading https://download-installer.cdn.mozilla.net/pub/firefox/releases/128.0/mac/en-US/Firefox%20128.0.dmg
+######################################################################## 100.0%
+==> Installing Cask firefox
+==> Moving App 'Firefox.app' to '/Applications/Firefox.app'
+==> Linking Binary 'firefox.wrapper.sh' to '/opt/homebrew/bin/firefox'
+🍺  firefox was successfully installed!
 ```
 
 ## Uninstalling Casks
@@ -38,7 +42,7 @@ $ brew install --cask google-chrome
 Easy peasy:
 
 ```console
-$ brew uninstall --cask google-chrome
+$ brew uninstall --cask firefox
 ```
 
 This will both uninstall the cask and remove the applications that were moved to `/Applications`.
@@ -52,8 +56,8 @@ Unless noted, these are run with `--cask <cask_token>` to apply to Homebrew Cask
 * `--cache` — displays the expected path to Homebrew's local cache of application files.
 * `doctor` — checks for configuration issues (run with no arguments).
 * `style` — checks style for the given cask using RuboCop.
-* `home` — opens the homepage of the given cask; or with no arguments, the Homebrew project page.
-* `uninstall --zap` — try to remove *all* files associated with a cask (may include resources shared with other applications).
+* `home` — opens the homepage of the given cask; or, with no arguments, the Homebrew project page.
+* `uninstall --zap` — try to remove _all_ files associated with a cask (may include resources shared with other applications).
 * `outdated` — lists all outdated casks (run with just `--cask`).
 * `upgrade` — updates all outdated casks (run with just `--cask`).
 
@@ -94,22 +98,25 @@ $ brew list --cask
 firefox       google-chrome     opera
 ```
 
-With `--full-name` any external tap names will also be included, _e.g._: `purple/monkey/dishwasher` for the cask `dishwasher` installed from the tap `purple/monkey`.
+With `--full-name`, any external tap names will also be included, _e.g._: `purple/monkey/dishwasher` for the cask `dishwasher` installed from the tap `purple/monkey`.
 
 Show details about a specific cask:
 
 ```console
-$ brew info keepingyouawake
-==> keepingyouawake: 1.6.4 (auto_updates)
-https://keepingyouawake.app/
-/usr/local/Caskroom/keepingyouawake/1.6.4 (129B)
-From: https://github.com/Homebrew/homebrew-cask/blob/HEAD/Casks/k/keepingyouawake.rb
+$ brew info firefox
+==> firefox: 128.0 (auto_updates)
+https://www.mozilla.org/firefox/
+Not installed
+From: https://github.com/Homebrew/homebrew-cask/blob/HEAD/Casks/f/firefox.rb
 ==> Name
-KeepingYouAwake
+Mozilla Firefox
 ==> Description
-Tool to prevent the system from going into sleep mode
+Web browser
+==> Languages
+af, ar, be, bg, bn, ca, cs, de, en-CA, en-GB, en, eo, es-AR, es-CL, es-ES, fa, ff, fi, fr, gl, gn, gu, he, hi, in, it, ja, ka, ko, mr, my, ne, nl, pa-IN, pl, pt-BR, pt, ru, si, sq, sr, sv, ta, te, th, tl, tr, uk, ur, zh-TW, zh
 ==> Artifacts
-KeepingYouAwake.app (App)
+Firefox.app (App)
+/opt/homebrew/Caskroom/firefox/128.0/firefox.wrapper.sh -> firefox (Binary)
 ```
 
 ## Updating/Upgrading Casks
@@ -126,7 +133,7 @@ Homebrew [automatically taps and keeps Homebrew Cask updated](https://github.com
 
 * `--version`: print version and exit.
 * `--debug`: output debug information.
-* `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`.
+* `--no-binaries`: skip symlinking executable binaries into `/opt/homebrew/bin`.
 * `--require-sha`: abort installation of cask if no checksum is defined.
 * `--no-quarantine`: [disable Apple’s quarantining](https://docs.brew.sh/FAQ#why-cant-i-open-a-mac-app-from-an-unidentified-developer) for the specific app.
 * `--language=<iso-language>[,<iso-language> ... ]`: changes the language of the cask to be installed. The first matching language is used, otherwise it uses the default language of the cask.
@@ -148,23 +155,23 @@ export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
 Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing options in the command line:
 
 ```bash
-# Will force the Google Chrome app to be moved to /Applications
+# Will force the Mozilla Firefox app to be moved to /Applications
 # even though HOMEBREW_CASK_OPTS specified ~/Applications
-brew install --appdir="/Applications" google-chrome
+brew install --appdir="/Applications" firefox
 ```
 
 ## Other Ways to Specify a Cask
 
 Most `brew` commands can accept a cask token as an argument. As described above, the token on the command line can take the form of:
 
-* A simple token, _e.g._: `google-chrome`.
-* A fully-qualified token which includes the tap, _e.g._: `homebrew/cask/google-chrome`.
+* A simple token, _e.g._: `firefox`.
+* A fully-qualified token which includes the tap, _e.g._: `homebrew/cask/firefox`.
 
 `brew` also accepts three other forms as arguments:
 
-* A path to a cask file, _e.g._: `/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/g/google-chrome.rb`.
-* A `curl`-retrievable URI to a cask file, _e.g._: `https://raw.githubusercontent.com/Homebrew/homebrew-cask/HEAD/Casks/g/google-chrome.rb`.
-* A file in the current working directory, _e.g._: `my-modified-google-chrome.rb`. Note that matching tapped cask tokens will be preferred over this form when there is a conflict. To force the use of a cask file in the current directory, specify a pathname with slashes, _e.g._: `./google-chrome.rb`.
+* A path to a cask file, _e.g._: `/opt/homebrew/Library/Taps/homebrew/homebrew-cask/Casks/f/firefox.rb`.
+* A `curl`-retrievable URI to a cask file, _e.g._: `https://raw.githubusercontent.com/Homebrew/homebrew-cask/HEAD/Casks/f/firefox.rb`.
+* A file in the current working directory, _e.g._: `my-modified-firefox.rb`. Note that matching tapped cask tokens will be preferred over this form when there is a conflict. To force the use of a cask file in the current directory, specify a pathname with slashes, _e.g._: `./firefox.rb`.
 
 The last three forms are intended for users who wish to maintain private casks.
 

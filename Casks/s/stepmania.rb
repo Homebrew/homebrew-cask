@@ -8,10 +8,7 @@ cask "stepmania" do
   desc "Advanced rhythm game designed for both home and arcade use"
   homepage "https://www.stepmania.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  disable! date: "2024-07-17", because: "is 32-bit only"
 
   app "StepMania-#{version}/Stepmania.app"
 end

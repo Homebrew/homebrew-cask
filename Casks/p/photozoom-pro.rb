@@ -10,7 +10,7 @@ cask "photozoom-pro" do
 
   livecheck do
     url "https://www.benvista.com/downloads"
-    regex(%r{PhotoZoom.+Version\s(\d+(?:\.\d+)+).+</td>}i)
+    regex(/PhotoZoom.*?Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   pkg "PhotoZoom Pro #{version.major} Installer.mpkg"

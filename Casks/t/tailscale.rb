@@ -1,10 +1,10 @@
 cask "tailscale" do
-  version "1.68.2"
-  sha256 "7dad62fa1787d1439ae9ccceaff72156b515a5b8b1a2b91d91b17c04b80b4600"
+  version "1.70.0"
+  sha256 "15134284147db110de12a87f33d0b617f02e85b176580fc5e30cdf33468923c9"
 
-  url "https://pkgs.tailscale.com/stable/Tailscale-#{version}-macos.zip"
+  url "https://pkgs.tailscale.com/stable/Tailscale-#{version}-macos.pkg"
   name "Tailscale"
-  desc "Mesh VPN based on Wireguard"
+  desc "Mesh VPN based on WireGuard"
   homepage "https://tailscale.com/"
 
   livecheck do
@@ -16,7 +16,7 @@ cask "tailscale" do
   conflicts_with formula: "tailscale"
   depends_on macos: ">= :catalina"
 
-  app "Tailscale.app"
+  pkg "Tailscale-#{version}-macos.pkg"
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/tailscale.wrapper.sh"
   binary shimscript, target: "tailscale"
@@ -29,17 +29,28 @@ cask "tailscale" do
   end
 
   uninstall quit:       "io.tailscale.ipn.macsys",
-            login_item: "Tailscale"
+            login_item: "Tailscale",
+            pkgutil:    "com.tailscale.ipn.macsys"
 
   zap trash: [
     "~/Library/Application Scripts/*.io.tailscale.ipn.macsys",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys",
+    "~/Library/Application Scripts/io.tailscale.ipn.macsys.login-item-helper",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys.share-extension",
+    "~/Library/Caches/io.tailscale.ipn.macsys",
     "~/Library/Containers/io.tailscale.ipn.macos.network-extension",
     "~/Library/Containers/io.tailscale.ipn.macsys",
+    "~/Library/Containers/io.tailscale.ipn.macsys.login-item-helper",
     "~/Library/Containers/io.tailscale.ipn.macsys.share-extension",
     "~/Library/Containers/Tailscale",
     "~/Library/Group Containers/*.io.tailscale.ipn.macsys",
+    "~/Library/HTTPStorages/io.tailscale.ipn.macsys",
+    "~/Library/Preferences/io.tailscale.ipn.macsys.plist",
     "~/Library/Tailscale",
   ]
+
+  caveats do
+    kext
+    license "https://tailscale.com/terms"
+  end
 end

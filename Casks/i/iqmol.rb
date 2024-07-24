@@ -19,4 +19,8 @@ cask "iqmol" do
     "~/Library/Preferences/org.iqmol.plist",
     "~/Library/Saved Application State/org.iqmol.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

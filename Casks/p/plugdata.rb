@@ -1,6 +1,6 @@
 cask "plugdata" do
-  version "0.8.3"
-  sha256 "f1dc46b31d6ded4c6ab578fd00ab57faa666eec69ec79c5daf565c4a6b2a9be3"
+  version "0.9.0"
+  sha256 "8d90e6c6c9671a5f48263c77ec61d256d29f8e58fa0f99ad8f246a541e6ef703"
 
   url "https://github.com/timothyschoen/PlugData/releases/download/v#{version}/plugdata-macOS-Universal.pkg"
   name "PlugData"

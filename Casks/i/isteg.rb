@@ -7,10 +7,7 @@ cask "isteg" do
   desc "Encryption tool"
   homepage "https://www.hanynet.com/isteg/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/isteg[._-]v?(\d+(?:\.\d+)+)\.zip}i)
-  end
+  disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "iSteg.app"
 end

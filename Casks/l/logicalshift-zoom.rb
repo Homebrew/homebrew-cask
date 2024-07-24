@@ -7,10 +7,7 @@ cask "logicalshift-zoom" do
   desc "Player for Z-Code, TADS, and HUGO stories or games"
   homepage "https://www.logicalshift.co.uk/unix/zoom/"
 
-  livecheck do
-    url "https://www.logicalshift.co.uk/unix/zoom/older.html"
-    regex(%r{href=.*?/Zoom-(\d+(?:\.\d+)*)\.dmg}i)
-  end
+  disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "Zoom.app"
 end

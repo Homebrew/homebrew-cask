@@ -8,11 +8,11 @@ cask "one-switch" do
   homepage "https://fireball.studio/oneswitch"
 
   livecheck do
-    url "https://fireball.studio/api/release_manager/downloads/studio.fireball.OneSwitchOfficial.dmg"
-    strategy :extract_plist
+    url "https://fireball.studio/api/release_manager/studio.fireball.OneSwitchOfficial.xml"
+    strategy :sparkle
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "One Switch.app"
 
