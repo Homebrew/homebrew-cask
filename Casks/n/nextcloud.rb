@@ -39,6 +39,7 @@ cask "nextcloud" do
   homepage "https://nextcloud.com/"
 
   auto_updates true
+  conflicts_with cask: "nextcloud-vfs"
   depends_on macos: ">= :mojave"
 
   pkg "Nextcloud-#{version}.pkg"
