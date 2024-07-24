@@ -409,6 +409,7 @@ memory-cleaner
 mendeley-reference-manager
 messenger
 metasploit
+mi@beta
 microsoft-auto-update
 microsoft-azure-storage-explorer
 microsoft-edge
