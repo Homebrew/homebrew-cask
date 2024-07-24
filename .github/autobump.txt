@@ -403,6 +403,7 @@ media-center
 mediainfo
 mediamate
 melodics
+memory-cleaner
 mendeley-reference-manager
 messenger
 metasploit
