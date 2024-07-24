@@ -667,6 +667,7 @@ snapmaker-luban
 sol
 sonarr
 soulver
+sound-control
 sourcetree
 sourcetree@beta
 spacedrive
