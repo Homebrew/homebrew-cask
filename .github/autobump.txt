@@ -755,6 +755,7 @@ vellum
 virtualbox@beta
 virtualbuddy
 virtualc64
+virtualdj
 virtualhere
 virtualhereserver
 visual-paradigm
