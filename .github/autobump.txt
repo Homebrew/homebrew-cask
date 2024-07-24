@@ -412,6 +412,7 @@ mendeley-reference-manager
 messenger
 metasploit
 mi@beta
+microblog
 microsoft-auto-update
 microsoft-azure-storage-explorer
 microsoft-edge
