@@ -10,8 +10,8 @@ cask "sketch" do
     end
   end
   on_monterey :or_newer do
-    version "100.2,180162"
-    sha256 "e1eb71f363a6e32867b39b403e97d70a959d3c96ad6970760a20e45a020986e4"
+    version "100.3,180165"
+    sha256 "e51efde061eb3d5b9b999f7821d0d547114ce5b3ed06c0ca3278d60fb4d92678"
 
     url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
 

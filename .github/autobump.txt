@@ -656,6 +656,7 @@ sip
 sipgate-clinq
 sitesucker-pro
 siyuan
+sketch
 sketch@beta
 skype
 skype@preview
