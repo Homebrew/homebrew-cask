@@ -489,6 +489,7 @@ nudge
 obs
 obs-advanced-scene-switcher
 obs@beta
+obsbot-center
 ocenaudio
 okta-advanced-server-access
 ollama
