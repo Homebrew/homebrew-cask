@@ -5,7 +5,7 @@ cask "brightvpn" do
   url "https://brightdata.com/static/BrightVPN-1.1-#{version}.dmg",
       verified: "brightdata.com/static/"
   name "Bright VPN"
-  desc "Free VPN service"
+  desc "VPN service"
   homepage "https://brightvpn.com/"
 
   livecheck do
