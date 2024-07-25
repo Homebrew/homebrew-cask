@@ -22,5 +22,13 @@ cask "brightvpn" do
     "io.luminati.sdk.net-updater-launcher",
   ]
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/BrightVPN",
+    "~/Library/Caches/brightvpn.com",
+    "~/Library/HTTPStorages/brightvpn.com",
+    "~/Library/Preferences/brightvpn.com.perr.plist",
+    "~/Library/Preferences/brightvpn.com.perr_once.plist",
+    "~/Library/Preferences/brightvpn.com.plist",
+    "~/Library/Preferences/group.brightvpn.com.widget-container.plist",
+  ]
 end
