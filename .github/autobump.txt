@@ -359,6 +359,7 @@ jupyterlab
 juxtacode
 kdenlive
 keyboard-cowboy
+keyman
 keymapp
 keysafe
 kindle-previewer
