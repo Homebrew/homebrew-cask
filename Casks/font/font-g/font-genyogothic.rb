@@ -5,7 +5,6 @@ cask "font-genyogothic" do
   url "https://github.com/ButTaiwan/genyog-font/releases/download/v#{version}/GenYoGothic#{version.major}-ttc.zip"
   name "GenYoGothic"
   name "源樣黑體"
-  desc "Open-source Chinese font derived from Source Han Sans"
   homepage "https://github.com/ButTaiwan/genyog-font"
 
   font "GenYoGothic#{version.major}-B.ttc"
