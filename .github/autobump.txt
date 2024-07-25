@@ -199,6 +199,7 @@ duckduckgo
 ecamm-live
 electerm
 electron
+electron-fiddle
 electrum
 elektron-transfer
 element
