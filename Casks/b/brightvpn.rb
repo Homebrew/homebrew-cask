@@ -10,7 +10,7 @@ cask "brightvpn" do
 
   livecheck do
     url :homepage
-    regex(/"vpn_mac"\s*:\s*"v?(\d+(?:[.-]\d+)+)"/i )
+    regex(/"vpn_mac"\s*:\s*"v?(\d+(?:[.-]\d+)+)"/i)
   end
 
   depends_on macos: ">= :catalina"
