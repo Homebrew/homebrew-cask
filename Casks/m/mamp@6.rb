@@ -1,4 +1,4 @@
-cask "mamp" do
+cask "mamp@6" do
   arch arm: "M1-arm", intel: "Intel-x86"
 
   version "6.9"
