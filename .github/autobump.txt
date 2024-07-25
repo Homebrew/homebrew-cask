@@ -602,6 +602,7 @@ replit
 reqable
 resolume-arena
 restfox
+reveal
 rhino
 ricochet-refresh
 rider
