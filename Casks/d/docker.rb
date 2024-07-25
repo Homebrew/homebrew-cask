@@ -24,9 +24,9 @@ cask "docker" do
     end
   end
   on_monterey :or_newer do
-    version "4.31.0,153195"
-    sha256 arm:   "1ae620e92ae1cf87b6607b86b11a792a1a7a4ebfdda1663cb9bce8f275f40b10",
-           intel: "b2571ed2a749572675330d31d0de7ef53425ef8b722b54239ab7eb927eeebcb8"
+    version "4.33.0,160616"
+    sha256 arm:   "33070a04c96d8778fd7aaa6f06b4b656b6d9cad243f6db7111b4aa560f6dedc4",
+           intel: "2b74ad908f9ad7b6472df72f920fe71a9eb955d5537c027a79b3a22402b9d37d"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
@@ -58,12 +58,8 @@ cask "docker" do
   depends_on macos: ">= :catalina"
 
   app "Docker.app"
-  binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.cli",
-         target: "/usr/local/bin/com.docker.cli"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",
          target: "/usr/local/bin/docker"
-  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-compose",
-         target: "/usr/local/bin/docker-compose"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-desktop",
          target: "/usr/local/bin/docker-credential-desktop"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
@@ -76,6 +72,8 @@ cask "docker" do
          target: "/usr/local/bin/hub-tool"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/kubectl",
          target: "/usr/local/bin/kubectl.docker"
+  binary "#{appdir}/Docker.app/Contents/Resources/cli-plugins/docker-compose",
+         target: "/usr/local/cli-plugins/docker-compose"
   binary "Docker.app/Contents/Resources/etc/docker.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
   binary "Docker.app/Contents/Resources/etc/docker.zsh-completion",
