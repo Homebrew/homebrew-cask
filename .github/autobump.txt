@@ -581,6 +581,7 @@ qownnotes
 qq
 qqlive
 qqmusic
+qt-creator
 quarto
 quickbooks
 quicken
