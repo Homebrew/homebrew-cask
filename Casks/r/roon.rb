@@ -1,5 +1,5 @@
 cask "roon" do
-  version "1.0"
+  version "2.0.39"
   sha256 :no_check
 
   url "https://download.roonlabs.net/builds/Roon.dmg",
@@ -9,8 +9,13 @@ cask "roon" do
   homepage "https://roonlabs.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://community.roonlabs.com/c/roon/software-release-notes/18.json"
+    regex(/Roon\s+v?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      json.dig("topic_list", "topics")&.map do |item|
+        item["title"]&.match(regex) { |match| match[1] }
+      end
+    end
   end
 
   depends_on macos: ">= :catalina"
