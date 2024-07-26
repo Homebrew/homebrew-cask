@@ -12,7 +12,7 @@ cask "cloudflare-warp" do
     # :sparkle strategy using appcenter url cannot be used - see below link
     # https://github.com/Homebrew/homebrew-cask/pull/109118#issuecomment-887184248
     url "https://1111-releases.cloudflareclient.com/mac/latest"
-    regex(%r{/Cloudflare[._-]WARP[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    regex(/Cloudflare[._-]WARP[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     strategy :header_match
   end
 
