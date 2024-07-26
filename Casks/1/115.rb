@@ -9,12 +9,7 @@ cask "115" do
   desc "Client for the 115 cloud storage service"
   homepage "https://pc.115.com/index.html#mac"
 
-  livecheck do
-    url "https://appversion.115.com/1/web/1.0/api/chrome"
-    strategy :json do |json|
-      json.dig("data", "mac_115", "version_code")
-    end
-  end
+  disable! date: "2024-07-25", because: :no_longer_available
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
