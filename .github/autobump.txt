@@ -359,6 +359,7 @@ julia
 jumpshare
 jupyterlab
 juxtacode
+kaleidoscope
 kdenlive
 keyboard-cowboy
 keyman
