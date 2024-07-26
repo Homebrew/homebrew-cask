@@ -498,6 +498,7 @@ obsbot-center
 ocenaudio
 okta-advanced-server-access
 ollama
+ollamac
 omnifocus
 omnigraffle
 onedrive
