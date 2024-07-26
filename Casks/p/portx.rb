@@ -21,7 +21,10 @@ cask "portx" do
   app "PortX.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.netsarang.portx.sfl*",
     "~/Library/Application Support/PortX",
     "~/Library/Logs/PortX",
+    "~/Library/Preferences/com.netsarang.portx.plist",
+    "~/Library/Saved Application State/com.netsarang.portx.savedState",
   ]
 end
