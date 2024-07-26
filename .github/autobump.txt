@@ -810,6 +810,7 @@ xmind
 xnviewmp
 yass
 yealink-meeting
+yinxiangbiji
 youtube-to-mp3
 zalo
 zappy
