@@ -1,16 +1,16 @@
 cask "font-gensekigothic" do
-  version "1.501"
-  sha256 "d4baad35c36428fe355648615c30bfb5f74bc1d4eca12e88af664a83fb7c7d6a"
+  version "2.000"
+  sha256 "08b6ef44aac95cae3e58c780c1d75800640eb1e481982c221fa1bf2ec885cb25"
 
-  url "https://github.com/ButTaiwan/genseki-font/releases/download/v#{version}/GenSekiGothic.zip"
+  url "https://github.com/ButTaiwan/genseki-font/releases/download/v#{version}/GenSekiGothic#{version.major}-ttc.zip"
   name "GenSekiGothic"
   homepage "https://github.com/ButTaiwan/genseki-font"
 
-  font "GenSekiGothic-B.ttc"
-  font "GenSekiGothic-H.ttc"
-  font "GenSekiGothic-L.ttc"
-  font "GenSekiGothic-M.ttc"
-  font "GenSekiGothic-R.ttc"
+  font "GenSekiGothic#{version.major}-B.ttc"
+  font "GenSekiGothic#{version.major}-H.ttc"
+  font "GenSekiGothic#{version.major}-L.ttc"
+  font "GenSekiGothic#{version.major}-M.ttc"
+  font "GenSekiGothic#{version.major}-R.ttc"
 
   # No zap stanza required
 end
