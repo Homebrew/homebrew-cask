@@ -75,6 +75,7 @@ bike
 bilibili
 binance
 bitwarden
+blender@lts
 blockbench
 bloop
 boinc
