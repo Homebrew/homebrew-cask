@@ -806,6 +806,7 @@ wpsoffice-cn
 writerside
 xcodepilot
 xemu
+xiv-on-mac
 xmind
 xnviewmp
 yass
