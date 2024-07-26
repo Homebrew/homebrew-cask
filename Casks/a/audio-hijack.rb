@@ -9,7 +9,7 @@ cask "audio-hijack" do
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "4.4.2"
+    version "4.4.3"
 
     url "https://cdn.rogueamoeba.com/audiohijack/download/AudioHijack.zip"
 
