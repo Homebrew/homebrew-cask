@@ -1,8 +1,8 @@
 cask "insta360-studio" do
-  version "5.2.0,RC_build30,84acf671bafadec72df1d4df6dc7d2d2,20240612_173040_signed_1718184717294"
-  sha256 "5ba0f747de63a6d937c83e4d2e990e04e5b3890b20e7cd5fdb7f84ba8731e77d"
+  version "5.2.2,RC_build48,932ebe75b2b149334fd921e9bb4ae144,20240717_213629_signed"
+  sha256 "36eed5aadede8b2dc534f9ffa485346a7d79c9a1f36c8026912523c75b21048f"
 
-  url "https://file.insta360.com/static/#{version.csv.third}/Insta360Studio_#{version.csv.first}(#{version.csv.second})_#{version.csv.fourth}.pkg"
+  url "https://file.insta360.com/static/#{version.csv.third}/Insta360%20Studio_#{version.csv.first}(#{version.csv.second})_#{version.csv.fourth}.pkg"
   name "Insta360 Studio"
   desc "Video and photo editor"
   homepage "https://www.insta360.com/"
@@ -40,7 +40,7 @@ cask "insta360-studio" do
     end
   end
 
-  pkg "Insta360Studio_#{version.csv.first}(#{version.csv.second})_#{version.csv.fourth}.pkg"
+  pkg "Insta360 Studio_#{version.csv.first}(#{version.csv.second})_#{version.csv.fourth}.pkg"
 
   uninstall quit:    "com.insta360.studio",
             pkgutil: [
