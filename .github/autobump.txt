@@ -276,6 +276,7 @@ foxit-pdf-editor
 free-download-manager
 free42-binary
 free42-decimal
+freeshow
 freeyourmusic
 front
 fsnotes
