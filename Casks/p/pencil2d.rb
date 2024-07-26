@@ -9,7 +9,11 @@ cask "pencil2d" do
   desc "Open-source tool to make 2D hand-drawn animations"
   homepage "https://www.pencil2d.org/"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
-  app "Pencil2D/Pencil2D.app"
+  app "Pencil2D.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
