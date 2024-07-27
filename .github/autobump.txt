@@ -27,6 +27,7 @@ affinity-photo
 affinity-publisher
 airtame
 akiflow
+alcom
 alex313031-thorium
 alfred
 alt-tab
