@@ -8,13 +8,7 @@ cask "mtgaprotracker" do
   desc "Advanced Magic: The Gathering Arena tracking tool"
   homepage "https://mtgarena.pro/mtga-pro-tracker/"
 
-  # GitHub releases don't regularly provide a file for macOS. We check the link
-  # to the latest Mac version from the README, as it's unlikely for there to be
-  # a release with a macOS file in the recent releases.
-  livecheck do
-    url "https://raw.githubusercontent.com/Razviar/mtgap/master/README.md"
-    regex(/Mac(?:OS)?\s+version.*?v?(\d+(?:\.\d+)+)/i)
-  end
+  deprecate! date: "2024-07-27", because: :discontinued
 
   app "mtgaprotracker.app"
 
@@ -25,4 +19,8 @@ cask "mtgaprotracker" do
     "~/Library/Logs/MTGAproTracker",
     "~/Library/Preferences/com.mtgarenapro.mtgaprotracker.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
