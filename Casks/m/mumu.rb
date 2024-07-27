@@ -27,4 +27,8 @@ cask "mumu" do
     "~/Library/Cookies/com.wilbertliu.mumu.binarycookies",
     "~/Library/Preferences/com.wilbertliu.mumu.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
