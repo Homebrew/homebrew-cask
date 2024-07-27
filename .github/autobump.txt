@@ -771,6 +771,7 @@ valentina-studio
 vamiga
 vcam
 vellum
+vimr
 virtualbox@beta
 virtualbuddy
 virtualc64
