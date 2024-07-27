@@ -18,4 +18,8 @@ cask "oscilloscope" do
     "~/Library/Application Scripts/org.sd.oscilloscope",
     "~/Library/Containers/org.sd.oscilloscope",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
