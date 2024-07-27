@@ -23,4 +23,8 @@ cask "macgamestore" do
     "/Applications/MacGameStore",
     "~/Library/Application Support/MacGameStore.com",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
