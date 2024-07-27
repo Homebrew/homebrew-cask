@@ -14,4 +14,8 @@ cask "omnidb" do
   end
 
   app "OmniDB.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
