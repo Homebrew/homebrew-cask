@@ -18,4 +18,8 @@ cask "old-school-runescape" do
     "~/jagexcache/oldschool",
     "~/random.dat",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
