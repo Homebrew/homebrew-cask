@@ -22,4 +22,8 @@ cask "navicat-data-modeler" do
     "~/Library/Preferences/com.prect.NavicatDataModeler#{version.major}.plist",
     "~/Library/Saved Application State/com.prect.NavicatDataModeler#{version.major}.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
