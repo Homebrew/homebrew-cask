@@ -21,4 +21,8 @@ cask "mechvibes" do
         "~/Library/Saved Application State/com.electron.mechvibes.savedState",
       ],
       rmdir: "~/mechvibes_custom"
+
+  caveats do
+    requires_rosetta
+  end
 end
