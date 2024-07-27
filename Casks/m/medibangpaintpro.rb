@@ -21,4 +21,8 @@ cask "medibangpaintpro" do
     "~/Library/Preferences/com.medibang.cloudalpaca.plist",
     "~/Library/Saved Application State/com.medibang.cloudalpaca.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
