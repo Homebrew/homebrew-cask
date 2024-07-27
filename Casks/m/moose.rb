@@ -15,4 +15,8 @@ cask "moose" do
     "~/Library/Preferences/com.riteshkr.moose.plist",
     "~/Library/Saved Application State/com.riteshkr.moose.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
