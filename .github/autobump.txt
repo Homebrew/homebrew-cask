@@ -574,6 +574,7 @@ proton-mail
 proton-pass
 protonmail-bridge
 protonvpn
+prowlarr
 proxyman
 psychopy
 purei-play
