@@ -7,6 +7,8 @@ cask "mellow" do
   desc "Rule-based global transparent proxy client"
   homepage "https://github.com/mellow-io/mellow"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   app "Mellow.app"
 
   zap trash: [
@@ -14,4 +16,8 @@ cask "mellow" do
     "~/Library/Logs/Mellow",
     "~/Library/Preferences/org.mellow.mellow.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
