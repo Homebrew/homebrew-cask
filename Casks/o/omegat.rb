@@ -22,4 +22,8 @@ cask "omegat" do
     "~/Library/Preferences/OmegaT",
     "~/Library/Saved Application State/org.omegat.OmegaT.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
