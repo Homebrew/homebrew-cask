@@ -15,4 +15,8 @@ cask "material-colors" do
     "~/Library/Caches/net.nurik.roman.materialcolors",
     "~/Library/Preferences/net.nurik.roman.materialcolors.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
