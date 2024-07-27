@@ -7,13 +7,13 @@ cask "font-goorm-sans" do
   homepage "https://goorm-sans.goorm.io/"
 
   livecheck do
-    url "https://goorm-sans.goorm.io"
-    strategy :page_match do |page|
-      page.scan(/href=.*?goorm-sans-(\d+(?:\.\d+)*)\.zip/i).map { |match| match[0] }
-    end
+    url :homepage
+    regex(/href=.*?goorm-sans-(\d+(?:\.\d+)*)\.zip/i)
   end
 
   font "goorm sans/Public/TTF/goorm-sans-regular.ttf"
   font "goorm sans/Public/TTF/goorm-sans-medium.ttf"
   font "goorm sans/Public/TTF/goorm-sans-bold.ttf"
+
+  # No zap stanza required
 end
