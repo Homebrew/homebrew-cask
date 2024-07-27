@@ -545,6 +545,7 @@ phpwebstudy
 piclist
 pieces
 pieces-os
+pile
 pitch
 plasticscm-cloud-edition
 playdate-simulator
