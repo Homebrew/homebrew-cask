@@ -8,7 +8,7 @@ cask "font-goorm-sans-code" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?goorm[._-]sans[._-]code[._-](\d+(?:\.\d+)*)\.zip/i)
+    regex(/href=.*?goorm[._-]sans[._-]code[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   font "goorm sans code 2/Public/goorm_Sans_Code_400.ttf"
