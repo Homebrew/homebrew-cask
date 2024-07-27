@@ -8,5 +8,11 @@ cask "magiccap" do
   desc "Image/GIF capture suite"
   homepage "https://magiccap.me/"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   app "MagicCap.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
