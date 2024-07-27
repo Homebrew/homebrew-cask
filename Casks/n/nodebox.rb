@@ -21,4 +21,8 @@ cask "nodebox" do
     "~/Library/Logs/NodeBox",
     "~/Library/NodeBox",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
