@@ -8,10 +8,11 @@ cask "mcedit" do
   desc "Minecraft world editor"
   homepage "https://www.mcedit-unified.net/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-07-27", because: :unmaintained
 
   app "mcedit.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
