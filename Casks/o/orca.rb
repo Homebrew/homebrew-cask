@@ -14,4 +14,8 @@ cask "orca" do
   container nested: "orca-#{version}.dmg"
 
   app "orca.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
