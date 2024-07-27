@@ -33,4 +33,8 @@ cask "macdown" do
     "~/Library/Saved Application State/com.uranusjr.macdown.savedState",
     "~/Library/WebKit/com.uranusjr.macdown",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
