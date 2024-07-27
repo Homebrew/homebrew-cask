@@ -23,4 +23,8 @@ cask "noxappplayer" do
     "~/Library/Application Support/NoxAppPlayer",
     "~/Library/Saved Application State/com.nox.NoxAppPlayer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
