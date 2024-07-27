@@ -386,6 +386,7 @@ librewolf
 lightburn
 limitless
 linear-linear
+lingon-x
 little-snitch
 live-home-3d
 lm-studio
