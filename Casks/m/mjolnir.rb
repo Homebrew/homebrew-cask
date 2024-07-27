@@ -18,4 +18,8 @@ cask "mjolnir" do
     "~/Library/Preferences/org.degutis.Mjolnir.plist",
     "~/Library/Saved Application State/org.degutis.Mjolnir.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

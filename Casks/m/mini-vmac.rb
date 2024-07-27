@@ -13,4 +13,8 @@ cask "mini-vmac" do
   end
 
   app "Mini vMac.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

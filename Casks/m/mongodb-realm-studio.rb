@@ -21,4 +21,8 @@ cask "mongodb-realm-studio" do
     "~/Library/Preferences/io.realm.realm-studio.plist",
     "~/Library/Saved Application State/io.realm.realm-studio.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -24,4 +24,8 @@ cask "monolingual" do
     "~/Library/Application Scripts/com.github.IngmarStein.Monolingual",
     "~/Library/Containers/com.github.IngmarStein.Monolingual",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

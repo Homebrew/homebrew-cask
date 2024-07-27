@@ -14,4 +14,8 @@ cask "moebius" do
     "~/Library/Application Support/Moebius",
     "~/Library/Preferences/org.andyherbert.moebius.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

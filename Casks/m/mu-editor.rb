@@ -15,4 +15,8 @@ cask "mu-editor" do
         "~/Library/Logs/mu",
       ],
       rmdir: "~/mu_code"
+
+  caveats do
+    requires_rosetta
+  end
 end

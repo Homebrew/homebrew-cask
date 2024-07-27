@@ -18,4 +18,8 @@ cask "mkvtools" do
     "~/Library/Application Support/EmmGunn",
     "~/Library/Preferences/com.emmgunn.MKVtools#{version.major}.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

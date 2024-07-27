@@ -17,4 +17,8 @@ cask "midi-router-client" do
     "~/Library/Preferences/com.electron.midi-router-client.plist",
     "~/Library/Preferences/com.shemeshg.MidiRouter.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

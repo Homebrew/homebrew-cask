@@ -20,4 +20,8 @@ cask "mountain" do
     "~/Library/Application Support/Mountain",
     "~/Library/Preferences/de.appgineers.Mountain.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
