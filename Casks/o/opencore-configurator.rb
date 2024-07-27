@@ -24,4 +24,8 @@ cask "opencore-configurator" do
     "~/Library/HTTPStorages/org.altervista.mackie100projects.OpenCore-Configurator",
     "~/Library/Preferences/org.altervista.mackie100projects.OpenCore-Configurator.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
