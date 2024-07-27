@@ -14,4 +14,8 @@ cask "multifirefox" do
   end
 
   app "MultiFirefox.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
