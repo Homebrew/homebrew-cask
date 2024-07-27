@@ -13,4 +13,8 @@ cask "macpar-deluxe" do
   end
 
   app "MacPAR deLuxe.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
