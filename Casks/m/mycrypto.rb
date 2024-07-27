@@ -22,4 +22,8 @@ cask "mycrypto" do
     "~/Library/Preferences/com.github.mycrypto.mycryptohq.plist",
     "~/Library/Saved Application State/com.github.mycrypto.mycryptohq.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
