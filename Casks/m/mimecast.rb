@@ -26,4 +26,8 @@ cask "mimecast" do
     "~/Library/Logs/Mimecast",
     "~/Library/Preferences/com.mimecast.Mimecast-Mail.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
