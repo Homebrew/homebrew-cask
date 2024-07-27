@@ -1,6 +1,6 @@
 cask "routeconverter" do
-  version "3.0"
-  sha256 "308d86626c30d24456dbca433610d0785ab946990d46f84756121b21f4961cb2"
+  version "3.1"
+  sha256 "1d9b18f8cb7d20e4276ccec6bf3ae793ff62deafe96489d9a33d2cfcd3d385f6"
 
   url "https://static.routeconverter.com/download/previous-releases/#{version}/RouteConverterMacOpenSource.app.zip"
   name "RouteConverter"
