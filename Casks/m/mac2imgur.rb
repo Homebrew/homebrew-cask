@@ -7,10 +7,16 @@ cask "mac2imgur" do
   desc "Upload images and screenshots to Imgur"
   homepage "https://github.com/mileswd/mac2imgur"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   app "mac2imgur.app"
 
   zap trash: [
     "~/Library/Caches/com.mileswd.mac2imgur",
     "~/Library/Preferences/com.mileswd.mac2imgur.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
