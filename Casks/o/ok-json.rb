@@ -1,5 +1,5 @@
 cask "ok-json" do
-  version "2.6.3"
+  version "2.6.4"
   sha256 :no_check
 
   url "https://okjson.app/download/okjson-latest.zip"
