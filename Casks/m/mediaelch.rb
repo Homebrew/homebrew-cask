@@ -29,4 +29,8 @@ cask "mediaelch" do
     "~/Library/Preferences/com.kvibes.MediaElch.plist",
     "~/Library/Saved Application State/com.kvibes.MediaElch.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
