@@ -1,13 +1,11 @@
 cask "pablodraw" do
-  version "3.2.1"
-  sha256 "91a89ac33ba3e064a7a2b44d5c7c271cbd1303882874e7ce159b8fb058589301"
+  version "3.3.13-beta"
+  sha256 "52aa4b66385055eb9ff2a1dc5f2459c6ed4b5a072f360652e6d9d3bf65c13c5c"
 
-  url "https://github.com/cwensley/pablodraw/releases/download/#{version}/PabloDrawMac-#{version}.zip"
+  url "https://github.com/cwensley/pablodraw/releases/download/#{version}/PabloDraw-Mac.dmg"
   name "PabloDraw"
   desc "Ansi/Ascii text and RIPscrip editor/viewer"
   homepage "https://github.com/cwensley/pablodraw/"
-
-  disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "PabloDraw.app"
 
