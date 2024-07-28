@@ -8,13 +8,7 @@ cask "processing@3" do
   desc "Flexible software sketchbook and a language for learning how to code"
   homepage "https://processing.org/"
 
-  livecheck do
-    url :url
-    regex(/^processing[._-](\d+(?:\.\d+)*)[@_-](3(?:\.\d+)+)$/i)
-    strategy :github_latest do |json, regex|
-      json["tag_name"]&.scan(regex)&.map { |match| "#{match[1]},#{match[0]}" }
-    end
-  end
+  deprecate! date: "2024-07-28", because: :unmaintained
 
   conflicts_with cask: "processing"
 
@@ -27,4 +21,8 @@ cask "processing@3" do
     "~/Preferences/org.processing.app.plist",
     "~/Preferences/processing.app.tools.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
