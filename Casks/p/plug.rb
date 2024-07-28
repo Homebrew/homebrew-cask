@@ -21,4 +21,8 @@ cask "plug" do
     "~/Library/Caches/com.plug.Plug2",
     "~/Library/Preferences/com.plug.Plug2.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
