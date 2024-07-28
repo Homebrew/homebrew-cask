@@ -7,7 +7,13 @@ cask "qsyncthingtray" do
   desc "Tray app for Syncthing"
   homepage "https://github.com/sieren/QSyncthingTray"
 
+  deprecate! date: "2024-07-28", because: :unmaintained
+
   app "QSyncthingTray.app"
 
   zap trash: "~/Library/Preferences/com.sieren.QSyncthingTray.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
