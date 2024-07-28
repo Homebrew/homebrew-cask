@@ -9,8 +9,8 @@ cask "quodlibet" do
   homepage "https://quodlibet.readthedocs.io/"
 
   livecheck do
-    url "https://quodlibet.readthedocs.io/en/latest/downloads.html"
-    regex(/QuodLibet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url :url
+    strategy :github_latest
   end
 
   app "QuodLibet.app"
