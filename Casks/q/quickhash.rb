@@ -27,4 +27,8 @@ cask "quickhash" do
     "~/.Quickhash-GUI",
     "~/Library/Saved Application State/www.Quickhash-GUI.org.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
