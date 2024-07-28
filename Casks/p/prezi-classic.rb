@@ -27,4 +27,8 @@ cask "prezi-classic" do
     "~/Library/Preferences/com.prezi.desktop.plist",
     "~/Library/Saved Application State/com.prezi.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
