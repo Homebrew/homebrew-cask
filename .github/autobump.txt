@@ -785,6 +785,7 @@ visual-paradigm-ce
 visual-studio-code
 vivaldi
 vivaldi@snapshot
+vk-calls
 vpn-tracker-365
 vrew
 vscodium
