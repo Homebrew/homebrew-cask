@@ -707,6 +707,7 @@ supernotes
 superproductivity
 surge
 swiftformat-for-xcode
+syncovery
 tabby
 tableflip
 tableplus
