@@ -516,6 +516,7 @@ opera-gx
 opera@beta
 opera@developer
 operadriver
+opgg
 oracle-jdk
 oracle-jdk-javadoc
 orbstack
