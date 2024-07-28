@@ -17,4 +17,8 @@ cask "preferencecleaner" do
   app "PreferenceCleaner #{version.major}.app"
 
   zap trash: "~/Library/Caches/uk.co.echomist.PreferenceCleaner#{version.major}"
+
+  caveats do
+    requires_rosetta
+  end
 end
