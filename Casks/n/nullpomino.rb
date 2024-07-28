@@ -7,5 +7,11 @@ cask "nullpomino" do
   desc "Action puzzle game"
   homepage "https://github.com/nullpomino/nullpomino"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   app "NullpoMino_#{version}.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
