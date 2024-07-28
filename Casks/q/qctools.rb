@@ -12,5 +12,11 @@ cask "qctools" do
     regex(/href=.*?QCTools[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   app "QCTools.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
