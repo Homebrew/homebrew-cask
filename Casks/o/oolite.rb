@@ -8,10 +8,11 @@ cask "oolite" do
   desc "Space trading and combat simulator"
   homepage "https://www.oolite.space/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-07-27", because: :discontinued
 
   app "Oolite.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
