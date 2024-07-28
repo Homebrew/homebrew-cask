@@ -18,4 +18,8 @@ cask "powder" do
     "~/Library/Application Support/The Powder Toy",
     "~/Library/Saved Application State/uk.co.powdertoy.tpt.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
