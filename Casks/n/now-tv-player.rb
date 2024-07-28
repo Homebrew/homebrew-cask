@@ -21,4 +21,8 @@ cask "now-tv-player" do
     "~/Library/Preferences/com.electron.now-tv-player.plist",
     "~/Library/Saved Application State/com.electron.now-tv-player.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
