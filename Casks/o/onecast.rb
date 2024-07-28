@@ -13,6 +13,7 @@ cask "onecast" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "OneCast.app"
 
@@ -22,4 +23,8 @@ cask "onecast" do
     "~/Library/Preferences/com.onecast.macos.plist",
     "~/Library/WebKit/com.onecast.macos",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

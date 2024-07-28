@@ -7,4 +7,8 @@ cask "objektiv" do
   homepage "https://github.com/nthloop/Objektiv"
 
   app "Objektiv.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

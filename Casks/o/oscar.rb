@@ -21,4 +21,8 @@ cask "oscar" do
     "~/Library/Preferences/org.oscar-team.OSCAR.plist",
     "~/Library/Saved Application State/org.oscar-team.OSCAR.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

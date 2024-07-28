@@ -22,4 +22,8 @@ cask "openscad" do
     "~/Library/Preferences/org.openscad.OpenSCAD.plist",
     "~/Library/Saved Application State/org.openscad.OpenSCAD.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -24,4 +24,8 @@ cask "opgg" do
     "~/Library/Preferences/desktop.op.gg.plist",
     "~/Library/Saved Application State/desktop.op.gg.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
