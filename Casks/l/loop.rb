@@ -4,7 +4,7 @@ cask "loop" do
 
   url "https://github.com/MrKai77/Loop/releases/download/#{version}/Loop.zip"
   name "Loop"
-  desc "Window management made elegant."
+  desc "Window management made elegant"
   homepage "https://github.com/MrKai77/Loop"
 
   auto_updates true
