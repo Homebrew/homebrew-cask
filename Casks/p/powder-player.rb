@@ -8,4 +8,8 @@ cask "powder-player" do
   homepage "https://powder.media/"
 
   app "Powder Player.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
