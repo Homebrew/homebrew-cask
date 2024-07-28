@@ -16,7 +16,7 @@ cask "pdf-squeezer" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "PDF Squeezer.app"
 
@@ -26,4 +26,8 @@ cask "pdf-squeezer" do
     "~/Library/Containers/com.witt-software.PDF-Squeezer",
     "~/Library/Group Containers/group.witt-software.com.PDF-Squeezer",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
