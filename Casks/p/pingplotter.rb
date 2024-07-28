@@ -22,4 +22,8 @@ cask "pingplotter" do
     "~/Library/Preferences/com.pingman.pingplotter.mac.plist",
     "~/Library/Saved Application State/com.pingman.pingplotter.mac.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
