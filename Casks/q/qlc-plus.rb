@@ -15,4 +15,8 @@ cask "qlc-plus" do
   app "QLC+.app"
 
   zap trash: "~/Library/Application Support/QLC+"
+
+  caveats do
+    requires_rosetta
+  end
 end
