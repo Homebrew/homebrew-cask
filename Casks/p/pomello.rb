@@ -23,4 +23,8 @@ cask "pomello" do
     "~/Library/Preferences/com.tinynudge.pomello.plist",
     "~/Library/Saved Application State/com.tinynudge.pomello.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

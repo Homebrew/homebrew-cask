@@ -22,4 +22,8 @@ cask "psi" do
     "~/Library/Caches/Psi",
     "~/Library/Saved Application State/org.psi-im.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

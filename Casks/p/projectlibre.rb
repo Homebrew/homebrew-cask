@@ -11,4 +11,8 @@ cask "projectlibre" do
   app "ProjectLibre.app"
 
   zap trash: "~/Library/Preferences/com.projectlibre#{version.major}.*"
+
+  caveats do
+    requires_rosetta
+  end
 end

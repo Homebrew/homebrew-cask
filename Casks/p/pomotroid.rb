@@ -14,4 +14,8 @@ cask "pomotroid" do
     "~/Library/Preferences/com.splode.pomotroid.plist",
     "~/Library/Saved Application State/com.splode.pomotroid.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

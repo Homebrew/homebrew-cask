@@ -19,4 +19,8 @@ cask "ppduck" do
     "~/Library/Logs/PPDuck#{version.major}",
     "~/Library/Preferences/com.weiju.ppduck.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

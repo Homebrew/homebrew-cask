@@ -12,4 +12,8 @@ cask "popmaker" do
   end
 
   app "PopMaker.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
