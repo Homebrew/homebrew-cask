@@ -1,16 +1,11 @@
 cask "loop" do
-  version "1.0.0"
-  sha256 "d4343a3ba4240f4e3f99e4b45da4b4fafa6bfaf77971fc0649e855f1056062d2"
+  version "1.1.1"
+  sha256 "785f01e2b9a4c93b53d2f59372375a35a5821d64a53df4b8b95576f4bfb05e23"
 
   url "https://github.com/MrKai77/Loop/releases/download/#{version}/Loop.zip"
   name "Loop"
-  desc "Window manager"
+  desc "Window management made elegant."
   homepage "https://github.com/MrKai77/Loop"
-
-  livecheck do
-    url "https://mrkai77.github.io/Loop/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
 
   auto_updates true
   depends_on macos: ">= :ventura"
