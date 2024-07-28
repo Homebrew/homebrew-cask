@@ -15,4 +15,8 @@ cask "pester" do
   depends_on macos: ">= :sierra"
 
   app "Pester.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

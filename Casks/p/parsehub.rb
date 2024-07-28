@@ -22,4 +22,8 @@ cask "parsehub" do
     "~/Library/Preferences/com.parsehub.client.plist",
     "~/Library/Saved Application State/com.parsehub.client.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -21,4 +21,8 @@ cask "pandora" do
     "~/Library/Preferences/com.pandora.desktop.plist",
     "~/Library/Saved Application State/com.pandora.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

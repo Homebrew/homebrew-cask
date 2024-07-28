@@ -12,4 +12,8 @@ cask "pdf-toolbox" do
   end
 
   app "PDF Toolbox.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

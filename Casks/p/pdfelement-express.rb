@@ -28,4 +28,8 @@ cask "pdfelement-express" do
     "~/Library/Preferences/com.wondershare.PDFelement.Express.plist",
     "~/Library/Saved Application State/com.wondershare.PDFelement.Express.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

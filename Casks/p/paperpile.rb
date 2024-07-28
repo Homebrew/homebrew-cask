@@ -21,4 +21,8 @@ cask "paperpile" do
     "~/Library/Group Containers/*.Office/User Content.localized/Startup.localized/Word/paperpile*",
     "~/Library/Preferences/com.paperpile.paperpile.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

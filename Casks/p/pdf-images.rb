@@ -8,4 +8,8 @@ cask "pdf-images" do
 
   app "PDF-Images.app"
   binary "#{appdir}/PDF-Images.app/Contents/MacOS/pdfimages"
+
+  caveats do
+    requires_rosetta
+  end
 end
