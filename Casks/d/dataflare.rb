@@ -29,7 +29,7 @@ cask "dataflare" do
     "~/Library/HTTPStorages/Dataflare.binarycookies",
     "~/Library/Preferences/app.dataflare.desktop.plist",
     "~/Library/Preferences/Dataflare.plist",
+    "~/Library/WebKit/app.dataflare.desktop",
     "~/Library/WebKit/Dataflare",
-    "~/Library/WebKit/app.dataflare.desktop"
   ]
 end
