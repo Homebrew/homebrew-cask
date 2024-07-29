@@ -7,7 +7,7 @@ cask "dataflare" do
 
   url "https://assets.dataflare.app/release/darwin/#{arch}/Dataflare-#{version}.dmg"
   name "Dataflare"
-  desc "Simple and elegant database manager"
+  desc "Database manager"
   homepage "https://dataflare.app/"
 
   livecheck do
