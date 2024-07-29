@@ -1,8 +1,11 @@
 cask "gnucash" do
-  version "5.8-2"
-  sha256 "ddfbbecc87db276dc30a164a90b51189702215d4326160346824cb69d7f0ffe9"
+  arch arm: "Arm", intel: "Intel"
 
-  url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-Intel-#{version}.dmg",
+  version "5.8-2"
+  sha256 arm:   "d3f24a955547d30fa4116252d1bc35247117b6449cdedf51236b502f294cb436",
+         intel: "ddfbbecc87db276dc30a164a90b51189702215d4326160346824cb69d7f0ffe9"
+
+  url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-#{arch}-#{version}.dmg",
       verified: "github.com/Gnucash/gnucash/"
   name "GnuCash"
   desc "Double-entry accounting program"
@@ -28,8 +31,4 @@ cask "gnucash" do
     "~/Library/Preferences/org.gnucash.Gnucash.plist",
     "~/Library/Saved Application State/org.gnucash.Gnucash.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
