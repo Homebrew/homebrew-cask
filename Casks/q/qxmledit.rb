@@ -14,4 +14,8 @@ cask "qxmledit" do
   end
 
   app "QXmlEdit.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

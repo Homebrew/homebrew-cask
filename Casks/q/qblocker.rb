@@ -27,4 +27,8 @@ cask "qblocker" do
     "~/Library/Logs/uk.co.wearecocoon.QBlocker",
     "~/Library/Preferences/uk.co.wearecocoon.QBlocker.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
