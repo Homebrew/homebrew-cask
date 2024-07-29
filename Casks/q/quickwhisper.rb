@@ -2,15 +2,18 @@ cask "quickwhisper" do
   version "1.0"
   sha256 :no_check
 
-  url "https://f002.backblazeb2.com/file/quickwhisperapp/QuickWhisper.zip",
-      verified: "backblazeb2.com/file/quickwhisperapp/"
+  url "https://quickwhisperapp.s3.us-west-002.backblazeb2.com/QuickWhisper_#{version}.zip",
+      verified: "quickwhisperapp.s3.us-west-002.backblazeb2.com/"
   name "QuickWhisper"
   desc "Fast and secure transcriptions"
   homepage "https://quickwhisper.app/"
 
   livecheck do
     url "https://f002.backblazeb2.com/file/quickwhisperapp/appcast.xml"
-    strategy :sparkle, &:short_version
+    regex(/QuickWhisper[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    strategy :sparkle do |item, regex|
+      item.url[regex, 1]
+    end
   end
 
   auto_updates true
