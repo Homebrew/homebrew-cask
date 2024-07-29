@@ -218,6 +218,7 @@ ente-auth
 evernote
 expressvpn
 fantastical
+fbreader
 fedistar
 feed-the-beast
 ferdium
