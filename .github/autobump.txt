@@ -386,6 +386,7 @@ libreoffice
 libreoffice-language-pack
 librewolf
 lightburn
+lightkey
 limitless
 linear-linear
 lingon-x
