@@ -21,4 +21,8 @@ cask "neat-reader" do
     "~/Library/Preferences/com.reader.neat.plist",
     "~/Library/Saved Application State/com.reader.neat.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

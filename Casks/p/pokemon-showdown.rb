@@ -12,4 +12,8 @@ cask "pokemon-showdown" do
   end
 
   app "Pokemon Showdown.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

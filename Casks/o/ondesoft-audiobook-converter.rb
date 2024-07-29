@@ -13,4 +13,8 @@ cask "ondesoft-audiobook-converter" do
   end
 
   app "Ondesoft AudioBook Converter.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

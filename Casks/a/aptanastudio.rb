@@ -5,12 +5,10 @@ cask "aptanastudio" do
   url "https://github.com/aptana/studio3/releases/download/#{version}/Aptana_Studio_#{version.major}.dmg",
       verified: "github.com/aptana/studio3/"
   name "Aptana Studio"
+  desc "IDE for web development"
   homepage "https://www.aptana.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-07-17", because: :unmaintained
 
   app "AptanaStudio.app"
 

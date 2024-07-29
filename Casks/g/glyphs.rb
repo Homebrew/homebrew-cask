@@ -1,6 +1,6 @@
 cask "glyphs" do
-  version "3.3,3311"
-  sha256 "3e5cc7565c7589842f8cec1d06b2d54622e4a35f623c418ebf1533be8c68f542"
+  version "3.3,3314"
+  sha256 "72b21a0a92aec93b020c7536863c0c7e8578c9098eda5a9dda5bfd54f6bc289c"
 
   url "https://updates.glyphsapp.com/Glyphs#{version.csv.first}-#{version.csv.second}.zip"
   name "Glyphs"

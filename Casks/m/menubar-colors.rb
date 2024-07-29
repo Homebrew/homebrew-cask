@@ -7,6 +7,8 @@ cask "menubar-colors" do
   desc "Menu bar app for convenient access to the system colour panel"
   homepage "https://github.com/nvzqz/Menubar-Colors"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   app "Menubar Colors.app"
 
   uninstall quit: "com.nikolaivazquez.Menubar-Colors"
@@ -15,4 +17,8 @@ cask "menubar-colors" do
     "~/Library/Caches/com.nikolaivazquez.Menubar-Colors",
     "~/Library/Preferences/com.nikolaivazquez.Menubar-Colors.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

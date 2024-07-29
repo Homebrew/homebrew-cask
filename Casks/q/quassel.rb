@@ -14,4 +14,8 @@ cask "quassel" do
   end
 
   app "Quassel.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

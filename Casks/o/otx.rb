@@ -7,21 +7,14 @@ cask "otx" do
   desc "Mach-O disassembler"
   homepage "https://github.com/x43x61x69/otx"
 
-  livecheck do
-    url :url
-    regex(%r{/v?(\d+(?:\.\d+)+)/otx[._-](\h+)\.zip$}i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["browser_download_url"]&.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
-  end
+  deprecate! date: "2024-07-27", because: :unmaintained
 
   auto_updates true
 
   app "otx.app"
   binary "otx"
+
+  caveats do
+    requires_rosetta
+  end
 end

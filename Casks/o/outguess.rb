@@ -15,4 +15,8 @@ cask "outguess" do
   depends_on macos: ">= :el_capitan"
 
   app "Outguess.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -42,4 +42,8 @@ cask "kaleidoscope@2" do
     "~/Library/Preferences/com.blackpixel.kaleidoscope.plist",
     "~/Library/Saved Application State/com.blackpixel.kaleidoscope.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

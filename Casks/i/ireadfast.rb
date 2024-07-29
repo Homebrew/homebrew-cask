@@ -7,10 +7,7 @@ cask "ireadfast" do
   desc "Speed reading program"
   homepage "https://www.gengis.net/prodotti/iReadFast_Mac/en/index.php"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/iReadFast\s*v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  disable! date: "2024-07-14", because: "is 32-bit only"
 
   depends_on macos: "<= :mojave"
 

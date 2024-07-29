@@ -18,4 +18,8 @@ cask "magicplot" do
     "~/Library/Application Support/MagicPlot",
     "~/Library/Saved Application State/com.magicplot.MagicPlot.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -1,8 +1,11 @@
 cask "kindle-comic-converter" do
-  version "5.6.5"
-  sha256 "c32d71b35f1d8f34a8706a79cda2766b24b5f7ad5cab10253ebf28e7464972a6"
+  arch arm: "arm", intel: "i386"
 
-  url "https://github.com/ciromattia/kcc/releases/download/v#{version}/KindleComicConverter_osx_#{version}.dmg",
+  version "6.1.0"
+  sha256 arm:   "20382501b34ad97527db98b7912ba1a7f9ebbd77bd67303040180fb7e0b4dc94",
+         intel: "2496b294203d2fe12f7d1831f6a6b5611bc1072e2e5dbf19531c3292db4460b6"
+
+  url "https://github.com/ciromattia/kcc/releases/download/v#{version}/kcc_macos_#{arch}_#{version}.dmg",
       verified: "github.com/ciromattia/kcc/"
   name "Kindle Comic Converter"
   name "KCC"

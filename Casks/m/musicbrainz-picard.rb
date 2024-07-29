@@ -22,4 +22,8 @@ cask "musicbrainz-picard" do
     "~/Library/Preferences/org.musicbrainz.picard.plist",
     "~/Library/Saved Application State/org.musicbrainz.picard.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -27,4 +27,8 @@ cask "kubernetic" do
     "~/Library/Preferences/com.kubernetic.desktop.*",
     "~/Library/Saved Application State/com.kubernetic.desktop.*",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

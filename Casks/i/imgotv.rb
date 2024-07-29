@@ -23,4 +23,8 @@ cask "imgotv" do
     "~/Library/Preferences/com.mgtv.pcclientx.plist",
     "~/Library/Saved Application State/com.mgtv.pcclientx.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

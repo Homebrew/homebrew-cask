@@ -18,10 +18,16 @@ cask "kdocs" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "金山文档.app"
 
   zap trash: [
     "~/Library/Preferences/com.kingsoft.kdocs.mac.plist",
     "~/Library/Saved Application State/com.kingsoft.kdocs.mac.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

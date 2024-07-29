@@ -7,10 +7,11 @@ cask "pngyu" do
   desc "Front-end GUI application for pngquant"
   homepage "https://nukesaq88.github.io/Pngyu/"
 
-  livecheck do
-    url :homepage
-    regex(/mac:\s*(\d+(?:\.\d+)*)/i)
-  end
+  deprecate! date: "2024-07-28", because: :unmaintained
 
   app "Pngyu.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

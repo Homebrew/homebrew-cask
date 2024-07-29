@@ -22,5 +22,6 @@ cask "podpisuj" do
 
   caveats do
     license "https://www.podpisuj.sk/privacy"
+    requires_rosetta
   end
 end

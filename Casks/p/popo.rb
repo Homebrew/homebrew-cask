@@ -1,6 +1,6 @@
 cask "popo" do
-  version "4.7.1,1718884995215"
-  sha256 "3f048371c1be531fc9ce0298fc61ce0e49710a0e4f02a08fd24b2d7856991899"
+  version "4.9.0,1721732601553"
+  sha256 "11c6669817f4a4735539fdc72c2c5a71d1beb9c1add1c01d53ff7b41a2f1ea0a"
 
   url "https://popo.netease.com/file/popomac/POPO-setup_prod_#{version.csv.second}.dmg"
   name "NetEase POPO"
@@ -25,4 +25,8 @@ cask "popo" do
     "~/Library/Preferences/com.netease.game.popo.plist",
     "~/Library/Saved Application State/com.netease.game.popo.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

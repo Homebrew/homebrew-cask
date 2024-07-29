@@ -22,4 +22,8 @@ cask "multimc" do
     "~/Library/Preferences/org.multimc.MultiMC5.plist",
     "~/Library/Saved Application State/org.multimc.MultiMC5.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

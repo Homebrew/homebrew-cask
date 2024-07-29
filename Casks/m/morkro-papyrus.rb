@@ -8,4 +8,8 @@ cask "morkro-papyrus" do
   homepage "https://github.com/morkro/papyrus"
 
   app "Papyrus.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

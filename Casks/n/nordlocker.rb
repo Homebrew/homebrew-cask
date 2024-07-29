@@ -1,5 +1,5 @@
 cask "nordlocker" do
-  version "4.25.0"
+  version "4.26.0"
   sha256 :no_check
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest11plus/latest/NordLocker.pkg",

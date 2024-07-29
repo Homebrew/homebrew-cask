@@ -21,4 +21,8 @@ cask "pdfsam-basic" do
     "~/Library/Preferences/org.pdfsam.user.plist",
     "~/Library/Saved Application State/org.pdfsam.basic.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

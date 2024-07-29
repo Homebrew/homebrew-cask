@@ -22,4 +22,8 @@ cask "optimage" do
     "~/Library/Application Support/com.vmdanilov.optimage.cfg",
     "~/Library/Preferences/com.vmdanilov.optimage.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

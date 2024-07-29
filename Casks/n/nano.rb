@@ -22,4 +22,8 @@ cask "nano" do
     "~/Library/RaiBlocks",
     "~/Library/Saved Application State/net.raiblocks.rai_wallet.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

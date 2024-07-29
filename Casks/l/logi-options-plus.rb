@@ -1,17 +1,42 @@
 cask "logi-options-plus" do
-  version "1.76.583666"
-  sha256 :no_check
+  on_catalina do
+    version "1.44.415778"
+    sha256 "c38b38aada01a296d32dcebb61200b53977e876089b8502b7f8453d1efa3a3f6"
 
-  url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
-      verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
+    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip",
+        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur do
+    version "1.60.495862"
+    sha256 "711d64f48b9dc2ed48f50dccc8610e64b3ce437383ed6ff3da6e220380271434"
+
+    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip",
+        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
+    version "1.78.588966"
+    sha256 :no_check
+
+    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
+        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
+
+    livecheck do
+      url "https://support.logi.com/hc/en-gb/articles/1500005516462"
+      regex(/version\D*?(\d+(?:\.\d+)+)/i)
+    end
+  end
+
   name "Logitech Options+"
   desc "Software for Logitech devices"
   homepage "https://www.logitech.com/en-us/software/logi-options-plus.html"
-
-  livecheck do
-    url "https://support.logi.com/hc/en-gb/articles/1500005516462"
-    regex(/version\D*?(\d+(?:\.\d+)+)/i)
-  end
 
   auto_updates true
   depends_on macos: ">= :catalina"

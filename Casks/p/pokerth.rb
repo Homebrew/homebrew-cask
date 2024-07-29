@@ -9,4 +9,8 @@ cask "pokerth" do
   homepage "https://www.pokerth.net/"
 
   app "pokerth.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

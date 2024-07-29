@@ -22,4 +22,8 @@ cask "knock" do
         "~/Library/Preferences/com.knock.mac.plist",
       ],
       rmdir: "~/Library/Caches/com.crashlytics.data"
+
+  caveats do
+    requires_rosetta
+  end
 end

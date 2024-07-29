@@ -1,7 +1,7 @@
 cask "webex" do
   arch arm: "Desktop-MACOS-Apple-Silicon", intel: "TeamsDesktop-MACOS"
 
-  version "44.7.0.30141"
+  version "44.7.0.30285"
   sha256 :no_check
 
   url "https://binaries.webex.com/Webex#{arch}-Gold/Webex.dmg"
@@ -10,11 +10,12 @@ cask "webex" do
   homepage "https://www.webex.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://help.webex.com/en-us/article/mqkve8"
+    regex(/>\s*Mac[^<]*?v?(\d+(?:\.\d+)+)\s*</i)
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Webex.app"
 

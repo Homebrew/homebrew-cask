@@ -11,16 +11,23 @@ cask "nextcloud" do
     version "3.13.2"
     sha256 "11078c6ce49835d8e202b8a376a7f78f363cd594e49a36439f87601e728eb499"
 
+    # Upstream publishes releases for multiple different minor versions and the
+    # "latest" release is sometimes a lower version. Until the "latest" release
+    # is reliably the highest version, we have to check multiple releases.
     livecheck do
       url :url
       regex(/^Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg$/i)
-      strategy :github_latest do |json, regex|
-        json["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
+      strategy :github_releases do |json, regex|
+        json.map do |release|
+          next if release["draft"] || release["prerelease"]
 
-          match[1]
-        end
+          release["assets"]&.map do |asset|
+            match = asset["name"]&.match(regex)
+            next if match.blank?
+
+            match[1]
+          end
+        end.flatten
       end
     end
   end
@@ -32,6 +39,7 @@ cask "nextcloud" do
   homepage "https://nextcloud.com/"
 
   auto_updates true
+  conflicts_with cask: "nextcloud-vfs"
   depends_on macos: ">= :mojave"
 
   pkg "Nextcloud-#{version}.pkg"

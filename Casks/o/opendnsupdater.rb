@@ -13,4 +13,8 @@ cask "opendnsupdater" do
   end
 
   app "OpenDNSUpdater.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

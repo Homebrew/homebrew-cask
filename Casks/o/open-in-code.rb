@@ -7,5 +7,11 @@ cask "open-in-code" do
   desc "Finder toolbar app to open current folder in Visual Studio Code"
   homepage "https://github.com/sozercan/OpenInCode"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   app "Open in Code.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

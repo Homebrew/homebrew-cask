@@ -7,10 +7,7 @@ cask "gactions" do
   desc "CLI tool for Google Actions SDK"
   homepage "https://developers.google.com/assistant/conversational"
 
-  livecheck do
-    url "https://developers.google.com/assistant/conversational/quickstart"
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)*)/release/gactions[._-]sdk[._-]darwin\.t}i)
-  end
+  disable! date: "2024-07-17", because: :no_longer_available
 
   binary "gactions-sdk/gactions"
 

@@ -72,4 +72,8 @@ cask "parallels@15" do
     "~/Library/Preferences/com.parallels.Parallels.plist",
     "~/Library/Preferences/com.parallels.PDInfo.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

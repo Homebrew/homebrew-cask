@@ -7,10 +7,7 @@ cask "shimeike-formulatepro" do
   desc "Overlays text and graphics on PDF documents"
   homepage "https://github.com/shimeike/formulatepro/"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)[a-z]?$/i)
-  end
+  disable! date: "2024-07-17", because: "is 32-bit only"
 
   app "FormulatePro.app"
 end

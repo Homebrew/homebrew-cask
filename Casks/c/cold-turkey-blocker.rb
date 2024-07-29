@@ -8,8 +8,8 @@ cask "cold-turkey-blocker" do
   homepage "https://getcoldturkey.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://getcoldturkey.com/news/"
+    regex(/Blocker\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   pkg "Cold_Turkey_Mac_Installer.pkg"
@@ -33,4 +33,8 @@ cask "cold-turkey-blocker" do
     "~/Library/Preferences/com.getcoldturkey.blocker.plist",
     "~/Library/WebKit/com.getcoldturkey.blocker",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

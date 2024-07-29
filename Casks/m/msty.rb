@@ -1,7 +1,7 @@
 cask "msty" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.4"
+  version "1.0.5"
   sha256 :no_check
 
   url "https://assets.msty.app/Msty_#{arch}.dmg"

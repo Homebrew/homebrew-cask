@@ -1,8 +1,11 @@
 cask "internxt-drive" do
-  version "2.0.0"
-  sha256 "0a218560e645a99d65c052597ab125a148c93827bf27b5c2060213c6127418e5"
+  arch arm: "-arm64"
 
-  url "https://github.com/internxt/drive-desktop/releases/download/v#{version}/internxt-drive-#{version}.dmg",
+  version "2.0.0"
+  sha256 arm:   "22d8076850f6834cbf3c22d07dcc9e916478c1ce8464464827e55fbcac7c2788",
+         intel: "0a218560e645a99d65c052597ab125a148c93827bf27b5c2060213c6127418e5"
+
+  url "https://github.com/internxt/drive-desktop/releases/download/v#{version}/internxt-drive-#{version}#{arch}.dmg",
       verified: "github.com/internxt/drive-desktop/"
   name "Internxt Drive"
   desc "Client for Internxt file storage service"
@@ -12,7 +15,7 @@ cask "internxt-drive" do
   # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    regex(/^Internxt-Drive[._-]v?(\d+(?:\.\d+)+)\.(?:dmg)$/i)
+    regex(/^Internxt[._-]Drive[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]

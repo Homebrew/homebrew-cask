@@ -8,12 +8,11 @@ cask "my-budget" do
   desc "Budgeting tool"
   homepage "https://rezach.github.io/my-budget/"
 
-  # This cask uses an unstable version and this `livecheck` block is only used
-  # to prevent livecheck from skipping pre-release versions by default. This
-  # should be removed/updated if the cask is updated to a stable version.
-  livecheck do
-    url :url
-  end
+  deprecate! date: "2024-07-27", because: :unmaintained
 
   app "My Budget.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

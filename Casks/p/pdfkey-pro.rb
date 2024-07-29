@@ -13,4 +13,8 @@ cask "pdfkey-pro" do
   end
 
   app "PDFKey Pro.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

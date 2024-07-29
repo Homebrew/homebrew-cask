@@ -11,4 +11,8 @@ cask "modelio" do
   app "Modelio #{version.major_minor}.app"
 
   zap trash: "~/.modelio"
+
+  caveats do
+    requires_rosetta
+  end
 end

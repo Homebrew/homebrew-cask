@@ -7,5 +7,11 @@ cask "nimbus" do
   desc "Standalone IRCCloud desktop client"
   homepage "https://github.com/jnordberg/irccloudapp"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   app "Nimbus.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

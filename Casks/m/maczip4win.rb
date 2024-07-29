@@ -7,13 +7,7 @@ cask "maczip4win" do
   desc "Create zip files for use on Windows"
   homepage "https://ynomura.com/wp/?page_id=116"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?MacZip4win[._-]v?(\d+(?:[._]\d+)+)\.zip/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].tr("_", ".") }
-    end
-  end
+  disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "MacZip4win #{version}/MacZip4Win.app"
 end

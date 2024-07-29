@@ -14,4 +14,8 @@ cask "metabase" do
   end
 
   app "Metabase.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

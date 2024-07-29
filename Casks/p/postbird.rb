@@ -14,4 +14,8 @@ cask "postbird" do
     "~/Library/Preferences/com.electron.postbird.plist",
     "~/Library/Saved Application State/com.electron.postbird.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

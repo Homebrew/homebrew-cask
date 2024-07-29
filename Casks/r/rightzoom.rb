@@ -1,5 +1,5 @@
 cask "rightzoom" do
-  version "3.1"
+  version "3.0"
   sha256 :no_check
 
   url "https://www.blazingtools.com/mac/RightZoom.zip"
@@ -8,9 +8,11 @@ cask "rightzoom" do
   homepage "https://www.blazingtools.com/right_zoom_mac.html"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/Right\s*Zoom.*v?(\d+(?:\.\d+)+)\s+for\s+macOS/i)
   end
 
   app "RightZoom.app"
+
+  # No zap stanza required
 end

@@ -1,5 +1,5 @@
 cask "boom" do
-  version "1.7.13,101.7.13008"
+  version "1.7.14,101.7.14005"
   sha256 :no_check
 
   url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg",

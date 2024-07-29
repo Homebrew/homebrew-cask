@@ -1,6 +1,6 @@
 cask "youtube-to-mp3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "3.9.9.92"
+  version "3.9.9.94"
   sha256 :no_check
 
   url "https://www.mediahuman.net/files/YouTubeToMP3.dmg"
@@ -22,4 +22,8 @@ cask "youtube-to-mp3" do
     "~/Library/Preferences/com.mediahuman.YouTube to MP3.plist",
     "~/Library/Saved Application State/com.mediahuman.YouTube to MP3.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

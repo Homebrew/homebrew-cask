@@ -8,6 +8,8 @@ cask "playback" do
   desc "Video player"
   homepage "https://mafintosh.github.io/playback/"
 
+  deprecate! date: "2024-07-28", because: :unmaintained
+
   app "Playback.app"
 
   zap trash: [
@@ -15,4 +17,8 @@ cask "playback" do
     "~/Library/Caches/playback",
     "~/Library/Preferences/com.electron.playback.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -7,6 +7,8 @@ cask "hackmd" do
   desc "Desktop Software for HackMD Note-Taking and Collaboration"
   homepage "https://github.com/hackmdio/hackmd-desktop"
 
+  deprecate! date: "2024-07-17", because: :unmaintained
+
   app "HackMD.app"
 
   zap trash: [

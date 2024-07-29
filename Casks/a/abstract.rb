@@ -1,15 +1,18 @@
 cask "abstract" do
-  version "98.3.3"
-  sha256 "e19e3de0f26d13094a9f8b540ae041bb0cad24c8b0797578ad622036712ed442"
+  version "98.4.0"
+  sha256 "ee7f0cb5e460b8aff371d0123ccbbe9e18c3b128e9a2bc29ee1dce9414623a2e"
 
-  url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip"
+  url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip",
+      verified: "downloads.goabstract.com/"
   name "Abstract"
   desc "Collaborative design tool with support for Sketch files"
-  homepage "https://www.goabstract.com/"
+  homepage "https://www.abstract.com/"
 
   livecheck do
-    url "https://api.goabstract.com/releases/latest/download"
-    strategy :header_match
+    url "https://api.goabstract.com/releases/latest"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
@@ -25,4 +28,8 @@ cask "abstract" do
     "~/Library/Preferences/com.elasticprojects.abstract-desktop.plist",
     "~/Library/Saved Application State/com.elasticprojects.abstract-desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

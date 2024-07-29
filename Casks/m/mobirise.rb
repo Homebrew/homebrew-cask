@@ -20,4 +20,8 @@ cask "mobirise" do
     "~/Library/Preferences/com.mobirise.Mobirise.plist",
     "~/Library/Saved Application State/com.mobirise.Mobirise.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

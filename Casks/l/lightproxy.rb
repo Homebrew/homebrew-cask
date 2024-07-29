@@ -21,4 +21,8 @@ cask "lightproxy" do
                      sudo: true
     end
   end
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -1,5 +1,5 @@
 cask "mediahuman-youtube-downloader" do
-  version "3.9.9.92"
+  version "3.9.9.94"
   sha256 :no_check
 
   url "https://www.mediahuman.net/files/YouTubeDownloader.dmg"
@@ -20,4 +20,8 @@ cask "mediahuman-youtube-downloader" do
     "~/Library/Preferences/com.mediahuman.YouTube Downloader.plist",
     "~/Library/Saved Application State/com.mediahuman.YouTube Downloader.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

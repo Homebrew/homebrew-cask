@@ -7,12 +7,7 @@ cask "memo" do
   desc "Note taking app using GitHub Gists"
   homepage "https://usememo.com/"
 
-  livecheck do
-    url "https://raw.githubusercontent.com/btk/memo/master/package.json"
-    strategy :json do |json|
-      json["version"]
-    end
-  end
+  deprecate! date: "2024-07-27", because: :unmaintained
 
   app "Memo.app"
 
@@ -21,4 +16,8 @@ cask "memo" do
     "~/Library/Preferences/com.usememo.app.plist",
     "~/Library/Saved Application State/com.usememo.app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

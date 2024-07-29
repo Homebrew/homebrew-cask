@@ -6,15 +6,7 @@ cask "shupapan" do
   name "Shupapan"
   homepage "http://sunsky3s.s41.xrea.com/shupapan/"
 
-  livecheck do
-    url "http://sunsky3s.s41.xrea.com/shupapan/download/index.html"
-    regex(%r{href=.*?/Shupapan_v(\d+)(\d+)(\d+)(\d+)\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[0]}.#{match[1]}.#{match[2]}.#{match[3]}"
-      end
-    end
-  end
+  disable! date: "2024-07-17", because: "is 32-bit only"
 
   app "Shupapan.app"
 end

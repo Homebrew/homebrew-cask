@@ -13,4 +13,8 @@ cask "maelstrom" do
   end
 
   app "Maelstrom.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -28,4 +28,8 @@ cask "mailmate" do
     "~/Library/Preferences/com.freron.MailMate.plist",
     "~/Library/Saved Application State/com.freron.MailMate.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

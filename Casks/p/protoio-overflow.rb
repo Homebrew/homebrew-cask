@@ -18,4 +18,8 @@ cask "protoio-overflow" do
     "~/Library/Application Support/overflow",
     "~/Library/Preferences/io.overflow.mac.app.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -21,4 +21,8 @@ cask "macx-dvd-ripper-pro" do
     "~/Library/Preferences/com.macxdvd.macxvideoconverterpro.plist",
     "~/Library/Saved Application State/com.macxdvd.macxvideoconverterpro.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

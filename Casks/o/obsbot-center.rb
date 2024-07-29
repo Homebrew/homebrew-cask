@@ -1,6 +1,6 @@
 cask "obsbot-center" do
-  version "2.0.9.20"
-  sha256 "487d56d356ebeedd167ce0512dc8d9d14fefe9d34e165263de0fdc8bb685d319"
+  version "2.0.9.26"
+  sha256 "5928325de8ed94543d4bad404b15c94f98a24a2a013981ce2c8d67d63cd87103"
 
   url "https://resource-cdn.obsbothk.com/download/obsbot-center/Obsbot_Center_OA_E_MacOS_#{version}_release.dmg",
       verified: "resource-cdn.obsbothk.com/download/obsbot-center/"
@@ -23,4 +23,8 @@ cask "obsbot-center" do
     "~/Library/HTTPStorages/com.obsbot.OBSBOT_Center",
     "~/Library/Preferences/com.obsbot.OBSBOT_Center.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

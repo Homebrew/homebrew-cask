@@ -21,4 +21,8 @@ cask "paparazzi" do
     "~/Library/Preferences/org.derailer.Paparazzi.plist",
     "~/Library/Saved Application State/org.derailer.Paparazzi.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

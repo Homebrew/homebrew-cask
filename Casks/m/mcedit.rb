@@ -6,12 +6,13 @@ cask "mcedit" do
       verified: "github.com/Podshot/MCEdit-Unified/"
   name "MCEdit-Unified"
   desc "Minecraft world editor"
-  homepage "https://www.mcedit-unified.net/"
+  homepage "https://www.mcedit.net/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-07-27", because: :unmaintained
 
   app "mcedit.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

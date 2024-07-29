@@ -36,4 +36,8 @@ cask "pb" do
     "~/Library/Saved Application State/de.sidneys.pb-for-desktop.savedState",
     "~/Library/WebKit/de.sidneys.pb-for-desktop",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -1,18 +1,18 @@
 cask "font-genyomin" do
-  version "1.501"
-  sha256 "6feafd61b261bdeccc4e69eba8661f5f1dd7ec79d8ef3a78b19fb20759cf366f"
+  version "2.000"
+  sha256 "555d78284473dc73e22e45f9f727ef8cd794b096b41eada80afd508f5d406bfb"
 
-  url "https://github.com/ButTaiwan/genyo-font/releases/download/v#{version}/GenYoMin.zip"
+  url "https://github.com/ButTaiwan/genyo-font/releases/download/v#{version}/GenYoMin#{version.major}-ttc.zip"
   name "GenYoMin"
   homepage "https://github.com/ButTaiwan/genyo-font"
 
-  font "GenYoMin-B.ttc"
-  font "GenYoMin-EL.ttc"
-  font "GenYoMin-H.ttc"
-  font "GenYoMin-L.ttc"
-  font "GenYoMin-M.ttc"
-  font "GenYoMin-R.ttc"
-  font "GenYoMin-SB.ttc"
+  font "GenYoMin#{version.major}-B.ttc"
+  font "GenYoMin#{version.major}-EL.ttc"
+  font "GenYoMin#{version.major}-H.ttc"
+  font "GenYoMin#{version.major}-L.ttc"
+  font "GenYoMin#{version.major}-M.ttc"
+  font "GenYoMin#{version.major}-R.ttc"
+  font "GenYoMin#{version.major}-SB.ttc"
 
   # No zap stanza required
 end

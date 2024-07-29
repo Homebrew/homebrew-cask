@@ -1,7 +1,7 @@
 cask "beeper" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.107.2"
+  version "3.108.3"
   sha256 :no_check
 
   url "https://download.beeper.com/mac/dmg/#{arch}"
@@ -16,7 +16,7 @@ cask "beeper" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Beeper.app"
 

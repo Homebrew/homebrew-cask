@@ -19,4 +19,8 @@ cask "porting-kit" do
     "~/Library/Preferences/com.paulthetall.portingkit.plist",
     "~/Library/Saved Application State/com.paulthetall.portingkit.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -8,14 +8,6 @@ cask "command-x" do
   desc "Cut and paste files in Finder"
   homepage "https://sindresorhus.com/command-x"
 
-  livecheck do
-    url :homepage
-    regex(%r{href.*?/scl/fi/(\w+)/Command-X-([\d.-]+)\.zip\?rlkey=(\w+)}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]},#{match[2]}" }
-    end
-  end
-
   deprecate! date: "2024-07-09", because: :moved_to_mas
 
   depends_on macos: ">= :ventura"

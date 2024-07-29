@@ -7,6 +7,8 @@ cask "markright" do
   desc "Electron-powered markdown editor with live preview"
   homepage "https://github.com/dvcrn/markright"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   app "MarkRight.app"
 
   zap trash: [
@@ -14,4 +16,8 @@ cask "markright" do
     "~/Library/Caches/MarkRight",
     "~/Library/Preferences/com.electron.markright.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

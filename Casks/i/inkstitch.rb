@@ -1,21 +1,24 @@
 cask "inkstitch" do
-  version "3.0.1"
+  version "3.1.0"
 
-  on_sierra :or_older do
-    sha256 "7a52e13a01dc74fd3267aa0efb1b0718c2463d88fbcca4c06822ab8065f936d1"
+  on_big_sur :or_older do
+    sha256 "e7b789873d828bac53a632a3acee59791bb971a31e4ec57ae5f49a272c8ccbe9"
 
-    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-capitan-catalina-osx.pkg",
+    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-high-sierra-catalina-osx-x86_64.pkg",
         verified: "github.com/inkstitch/inkstitch/"
 
-    pkg "inkstitch-v#{version}-sierra-osx.pkg"
+    pkg "inkstitch-v#{version}-high-sierra-catalina-osx-x86_64.pkg"
   end
-  on_high_sierra :or_newer do
-    sha256 "64c5c2a38958b803e988783230169ec965f2aec58f27868d4ccddbf73d93141a"
+  on_monterey :or_newer do
+    arch arm: "arm64", intel: "x86_64"
 
-    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx.pkg",
+    sha256 arm:   "2c8c85285373245dca11fb1d2e516839b3c5ef0a795bbf93a79f01e4d37e5ef3",
+           intel: "08f8d593e0776860cb6721d235a3da3e2cb4559dab0c300964705d66cf26c9a8"
+
+    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx-#{arch}.pkg",
         verified: "github.com/inkstitch/inkstitch/"
 
-    pkg "inkstitch-v#{version}-osx.pkg"
+    pkg "inkstitch-v#{version}-osx-#{arch}.pkg"
   end
 
   name "Inkstitch"
@@ -28,7 +31,7 @@ cask "inkstitch" do
   end
 
   depends_on cask: "inkscape"
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   preflight do
     # This needs to exist, otherwise the installer gets stuck at a prompt asking the user to run Inkscape first.

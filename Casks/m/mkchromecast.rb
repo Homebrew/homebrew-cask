@@ -8,7 +8,13 @@ cask "mkchromecast" do
   desc "Tool to cast audio/video to Google Cast and Sonos Devices"
   homepage "https://mkchromecast.com/"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   depends_on cask: "soundflower"
 
   app "mkchromecast.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

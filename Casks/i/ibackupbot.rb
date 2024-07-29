@@ -12,4 +12,8 @@ cask "ibackupbot" do
   end
 
   app "iBackupBot.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

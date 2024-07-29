@@ -14,4 +14,8 @@ cask "istat-server" do
   end
 
   app "iStat Server.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

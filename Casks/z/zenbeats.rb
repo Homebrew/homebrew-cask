@@ -1,5 +1,5 @@
 cask "zenbeats" do
-  version "3.1.7,9379"
+  version "3.1.7"
   sha256 :no_check
 
   url "https://static.roland.com/assets/media/pkg/Zenbeats_Installer.pkg"
@@ -8,8 +8,8 @@ cask "zenbeats" do
   homepage "https://www.roland.com/us/products/zenbeats/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.rolandcloud.com/news"
+    regex(/Zenbeats\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   pkg "Zenbeats_Installer.pkg"

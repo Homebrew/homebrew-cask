@@ -13,7 +13,7 @@ cask "kkbox" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "KKBOX.app"
 
@@ -32,4 +32,8 @@ cask "kkbox" do
     "~/Library/Preferences/com.kkbox.KKBOX.plist",
     "~/Library/Saved Application State/com.kkbox.electron-app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

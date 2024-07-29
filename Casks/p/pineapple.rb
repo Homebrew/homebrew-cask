@@ -7,10 +7,11 @@ cask "pineapple" do
   name "Pineapple"
   homepage "https://nwhitehead.github.io/pineapple/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/Pineapple-(\d+(?:\.\d+)*)-Python3\.5\.dmg}i)
-  end
+  deprecate! date: "2024-07-28", because: :unmaintained
 
   app "Pineapple.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

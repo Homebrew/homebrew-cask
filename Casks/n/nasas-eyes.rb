@@ -13,4 +13,8 @@ cask "nasas-eyes" do
   end
 
   app "NASA's Eyes.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -21,4 +21,8 @@ cask "minitube" do
     "~/Library/Preferences/org.tordini.flavio.minitube.plist",
     "~/Library/Saved Application State/org.tordini.flavio.minitube.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

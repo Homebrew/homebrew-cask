@@ -22,4 +22,8 @@ cask "osculator" do
     "~/Library/Caches/net.osculator.OSCulator",
     "~/Library/Preferences/net.osculator.OSCulator.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
