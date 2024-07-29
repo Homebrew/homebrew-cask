@@ -20,7 +20,18 @@ cask "itau" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Itau.app"
 
-  zap trash: "~/.aplicativoitau"
+  zap trash: [
+    "~/.aplicativoitau",
+    "~/Library/Caches/br.com.itau.aplicativoitau",
+    "~/Library/Preferences/br.com.itau.aplicativoitau.plist",
+    "~/Library/Saved Application State/br.com.itau.aplicativoitau.savedState",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
 end
