@@ -8,10 +8,7 @@ cask "remix-ide" do
   desc "Desktop version of Remix web IDE used for Ethereum smart contract development"
   homepage "https://remix-project.org/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-07-28", because: :repo_archived
 
   app "Remix IDE.app"
 
@@ -19,4 +16,8 @@ cask "remix-ide" do
     "~/Library/Preferences/org.ethereum.remix-ide.plist",
     "~/Library/Saved Application State/org.ethereum.remix-ide.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
