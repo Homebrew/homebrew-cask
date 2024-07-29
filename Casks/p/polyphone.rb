@@ -20,6 +20,11 @@ cask "polyphone" do
 
   app "polyphone.app"
 
+  zap trash: [
+    "~/Library/Preferences/com.polyphone.Polyphone.plist",
+    "~/Library/Saved Application State/fr.polyphone.Polyphone.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
