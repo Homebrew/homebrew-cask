@@ -471,6 +471,7 @@ mullvadvpn@beta
 multiapp
 multitouch
 multiviewer-for-f1
+mumuplayer
 native-access
 naver-whale
 navicat-for-mariadb
