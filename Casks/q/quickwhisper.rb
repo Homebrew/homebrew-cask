@@ -5,7 +5,7 @@ cask "quickwhisper" do
   url "https://quickwhisperapp.s3.us-west-002.backblazeb2.com/QuickWhisper_#{version}.zip",
       verified: "quickwhisperapp.s3.us-west-002.backblazeb2.com/"
   name "QuickWhisper"
-  desc "Fast and secure transcriptions"
+  desc "Audio transcription tool"
   homepage "https://quickwhisper.app/"
 
   livecheck do
