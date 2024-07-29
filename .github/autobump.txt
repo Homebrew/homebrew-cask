@@ -729,6 +729,7 @@ termius@beta
 texstudio
 thangs-sync
 theiaide
+threema@beta
 ths
 thunderbird
 ticktick
