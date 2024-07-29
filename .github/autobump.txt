@@ -215,6 +215,7 @@ embyserver
 emclient
 enpass
 ente-auth
+entry
 evernote
 expressvpn
 fantastical
