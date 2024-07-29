@@ -1,8 +1,8 @@
 cask "tencent-lemon" do
-  version "5.1.9"
-  sha256 "f97aa97b4a0886be469224fd996d6518763aaacd89d4333af1e16c3ba7bca64a"
+  version "5.1.9.1019"
+  sha256 "9a2d7525b4ad651cf39afa6d21671a4c3210275d5b46d2f68b0f76a78b3ee43f"
 
-  url "https://github.com/Tencent/lemon-cleaner/releases/download/v#{version}/Lemon.dmg",
+  url "https://github.com/Tencent/lemon-cleaner/releases/download/v#{version}/Lemon_v#{version}.dmg",
       verified: "github.com/Tencent/lemon-cleaner/"
   name "Tencent Lemon Cleaner"
   desc "Cleanup and system status tool"
