@@ -1,19 +1,34 @@
 cask "virtualbuddy@beta" do
-  version "1.3,100"
-  sha256 "599b848a8d2dd13e1bde0785f2fd68e60ab795d98e5f1fa3d8ea70f28b3a42d9"
+  version "2.0,200,b1"
+  sha256 "7ba42e15eeb9e6563c6df75d6ceaa5a6ec18692b6cea9797f6d3fee9b929ad37"
 
-  url "https://github.com/insidegui/VirtualBuddy/releases/download/#{version.csv.first}-beta/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
+  url "https://github.com/insidegui/VirtualBuddy/releases/download/#{version.csv.first}#{"-#{version.csv.third}" if version.csv.third}/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "VirtualBuddy"
   desc "Virtualization tool"
   homepage "https://github.com/insidegui/VirtualBuddy"
 
   livecheck do
-    skip "No reliable way to get version info"
+    url :url
+    regex(/^VirtualBuddy[._-]v?(\d+(?:[.-]\d+)+)\.dmg$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        tag_suffix = release["tag_name"][/-(.+)$/i, 1]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          tag_suffix ? "#{match[1].tr("-", ",")},#{tag_suffix}" : match[1].tr("-", ",")
+        end
+      end.flatten
+    end
   end
 
   conflicts_with cask: "virtualbuddy"
   depends_on arch: :arm64
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "VirtualBuddy.app"
 
