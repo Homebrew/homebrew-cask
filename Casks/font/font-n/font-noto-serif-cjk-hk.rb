@@ -1,6 +1,6 @@
 cask "font-noto-serif-cjk-hk" do
-  version "2.002"
-  sha256 "7f02747e29f8aeb1988d3f3a41166bf309d3c1f27ab263d760e48ac9857c37e7"
+  version "2.003"
+  sha256 "2eaf73871cbc53e72bb1021d760eb64b395955d33fdc560964e15b429a64c288"
 
   url "https://github.com/notofonts/noto-cjk/releases/download/Serif#{version}/11_NotoSerifCJKhk.zip"
   name "Noto Serif CJK HK"
