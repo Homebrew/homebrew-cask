@@ -24,5 +24,10 @@ cask "parsec" do
   uninstall quit:    "tv.parsec.www",
             pkgutil: "tv.parsec.www"
 
-  zap trash: "~/.parsec"
+  zap trash: [
+    "~/.parsec",
+    "~/Library/Caches/tv.parsec.www",
+    "~/Library/HTTPStorages/tv.parsec.www",
+    "~/Library/Preferences/tv.parsec.www.plist",
+  ]
 end
