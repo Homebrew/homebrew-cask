@@ -7,11 +7,7 @@ cask "camera-live" do
   desc "Syphon server for connected Canon DSLR cameras"
   homepage "https://github.com/v002/v002-Camera-Live"
 
-  livecheck do
-    url :url
-    regex(/v?(\d+)/i)
-    strategy :github_latest
-  end
+  deprecate! date: "2024-07-28", because: :repo_archived
 
   app "Camera Live.app"
 

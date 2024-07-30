@@ -13,10 +13,16 @@ cask "niftyman" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Niftyman.app"
 
   zap trash: [
     "~/Library/Application Support/Niftyman",
     "~/Library/Preferences/com.shadowfax.niftyman.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

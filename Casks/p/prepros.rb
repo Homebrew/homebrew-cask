@@ -12,6 +12,8 @@ cask "prepros" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Prepros.app"
 
   zap trash: [
@@ -20,4 +22,8 @@ cask "prepros" do
     "~/Library/Preferences/io.prepros.prepros.plist",
     "~/Library/Saved Application State/io.prepros.prepros.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

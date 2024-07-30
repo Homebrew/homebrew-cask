@@ -8,5 +8,11 @@ cask "manta" do
   desc "Invoicing desktop app with customizable templates"
   homepage "https://getmanta.app/"
 
+  deprecate! date: "2024-07-27", because: :unmaintained
+
   app "Manta.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

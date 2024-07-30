@@ -1,8 +1,8 @@
 cask "pixelorama" do
-  version "0.11.4"
-  sha256 "efd5247ce8700bcd36ff085472a172165051ca65ec8dd2cc0f56a24e79e2dca7"
+  version "1.0"
+  sha256 "88b4e4ea89d6ff271631e26e1deb91ae84aec7e4def15df3faaa36417fd961c9"
 
-  url "https://github.com/Orama-Interactive/Pixelorama/releases/download/v#{version}/Pixelorama.Mac.dmg",
+  url "https://github.com/Orama-Interactive/Pixelorama/releases/download/v#{version}/Pixelorama-Mac.dmg",
       verified: "github.com/Orama-Interactive/Pixelorama/"
   name "Pixelorama"
   desc "2D sprite editor made with the Godot Engine"

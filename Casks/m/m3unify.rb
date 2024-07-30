@@ -15,4 +15,8 @@ cask "m3unify" do
   depends_on macos: ">= :mojave"
 
   app "M3Unify.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

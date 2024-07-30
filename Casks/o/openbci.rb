@@ -26,4 +26,8 @@ cask "openbci" do
   app "OpenBCI_GUI.app"
 
   zap trash: "~/Documents/OpenBCI_GUI"
+
+  caveats do
+    requires_rosetta
+  end
 end

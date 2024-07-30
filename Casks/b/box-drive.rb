@@ -33,8 +33,12 @@ cask "box-drive" do
             pkgutil:   "com.box.desktop.installer.*"
 
   zap trash: [
+    "~/.Box_*",
     "~/Library/Application Support/Box/Box",
+    "~/Library/Application Support/FileProvider/com.box.desktop.boxfileprovider",
     "~/Library/Containers/com.box.desktop.findersyncext",
     "~/Library/Logs/Box/Box",
+    "~/Library/Preferences/com.box.desktop.plist",
+    "~/Library/Preferences/com.box.desktop.ui.plist",
   ]
 end

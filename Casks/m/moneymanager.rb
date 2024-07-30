@@ -26,4 +26,8 @@ cask "moneymanager" do
     "~/Library/Preferences/com.realbyteapps.moneymanagerpc.plist",
     "~/Library/Saved Application State/com.realbyteapps.moneymanagerpc.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

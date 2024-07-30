@@ -24,4 +24,8 @@ cask "noto" do
     "~/Library/Preferences/com.brunophilipe.Noto.plist",
     "~/Library/Saved Application State/com.brunophilipe.Noto.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

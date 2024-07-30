@@ -12,4 +12,8 @@ cask "machg" do
   end
 
   app "MacHg.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

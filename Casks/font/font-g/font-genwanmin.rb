@@ -1,16 +1,16 @@
 cask "font-genwanmin" do
-  version "1.501"
-  sha256 "8eb2b17f7c4d3fc1bd16a51f2e70e55a51f1ea39afc967640fa35af1102da1d6"
+  version "2.000"
+  sha256 "15ef26d0184849a450afba405704c09a60591ddbdebee2fa8e2496a96fc351f7"
 
-  url "https://github.com/ButTaiwan/genwan-font/releases/download/v#{version}/GenWanMin.zip"
+  url "https://github.com/ButTaiwan/genwan-font/releases/download/v#{version}/GenWanMin#{version.major}-ttc.zip"
   name "GenWanMin"
   homepage "https://github.com/ButTaiwan/genwan-font"
 
-  font "GenWanMin-EL.ttc"
-  font "GenWanMin-L.ttc"
-  font "GenWanMin-M.ttc"
-  font "GenWanMin-R.ttc"
-  font "GenWanMin-SB.ttc"
+  font "GenWanMin#{version.major}-EL.ttc"
+  font "GenWanMin#{version.major}-L.ttc"
+  font "GenWanMin#{version.major}-M.ttc"
+  font "GenWanMin#{version.major}-R.ttc"
+  font "GenWanMin#{version.major}-SB.ttc"
 
   # No zap stanza required
 end

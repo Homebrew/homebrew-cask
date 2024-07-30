@@ -11,4 +11,8 @@ cask "qtpass" do
   depends_on macos: ">= :sierra"
 
   app "QtPass.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

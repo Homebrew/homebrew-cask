@@ -22,4 +22,8 @@ cask "mathcha-notebook" do
     "~/Library/Preferences/mathcha.com.mathnotebook.plist",
     "~/Library/Saved Application State/mathcha.com.mathnotebook.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

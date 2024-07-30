@@ -1,6 +1,6 @@
 cask "philips-hue-sync" do
-  version "1.12.0.64,8b10db6f-3066-451c-b08a-d1b860935be1,64"
-  sha256 "1b18327ca982c48660ec267be7aff437f0d8bc299eba1c2791d56a787a4b4b1e"
+  version "1.12.1.65,8b638f13-916e-4fe9-b9ca-460cda522b8f,65"
+  sha256 "afffd7c81a2c5eb383ff0576364b6031277174008030735383ea2544f78b2f18"
 
   url "https://firmware.meethue.com/storage/huesyncmac/#{version.csv.third}/#{version.csv.second}/HueSyncInstaller_#{version.csv.first}.pkg",
       verified: "firmware.meethue.com/storage/huesyncmac/"

@@ -18,4 +18,8 @@ cask "mp4tools" do
     "~/Library/Application Support/EmmGunn",
     "~/Library/Preferences/com.emmgunn.MP4tools#{version.major}.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

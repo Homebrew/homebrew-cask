@@ -19,4 +19,8 @@ cask "megazeux" do
     "~/.megazeux-config",
     "~/Library/Application Support/MegaZeux",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -1,11 +1,11 @@
 cask "yaak" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2024.6.6"
-  sha256 arm:   "b91564f1b42587abc27a79b245b64367dcf0474fa5812a29c8ec39dd840e17ab",
-         intel: "d64ecd5245ed0eb7ad8f75182618b929644d7e4ad1590a24feb130f8affaeee6"
+  version "2024.7.0"
+  sha256 arm:   "eddb287a7e7bc3fa4f576835d24e8f9eb311e25d555384244f1bde3cb5f0c586",
+         intel: "2b01ced6c714471d08dbe9d12d3877c03d4b71594dfb606cf115b4c3a491a691"
 
-  url "https://releases.yaak.app/releases/#{version}/yaak_#{version}_#{arch}.dmg"
+  url "https://releases.yaak.app/releases/#{version}/Yaak_#{version}_#{arch}.dmg"
   name "Yaak"
   desc "REST, GraphQL and gRPC client"
   homepage "https://yaak.app/"

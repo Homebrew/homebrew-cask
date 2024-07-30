@@ -13,4 +13,8 @@ cask "nzbvortex" do
   end
 
   app "NZBVortex #{version.major}.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

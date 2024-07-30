@@ -35,4 +35,8 @@ cask "manuskript" do
     "~/Library/Preferences/com.manuskript.manuskript.plist",
     "~/Library/Saved Application State/ch.theologeek.manuskript.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

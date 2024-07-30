@@ -8,10 +8,11 @@ cask "notedup" do
   desc "Transfer data from Evernote International to Evernote"
   homepage "https://appcenter.yinxiang.com/app/notedup/mac/"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?NoteDup_Mac[._-]v?(\d+(?:\.\d+)*)\.zip/i)
-  end
+  disable! date: "2024-07-27", because: :unmaintained
 
   app "NoteDup.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

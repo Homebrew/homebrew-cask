@@ -9,4 +9,8 @@ cask "prudent" do
   homepage "https://prudent.me/"
 
   app "Prudent.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

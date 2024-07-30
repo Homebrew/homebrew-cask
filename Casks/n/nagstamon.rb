@@ -11,4 +11,8 @@ cask "nagstamon" do
   app "Nagstamon.app"
 
   zap trash: "~/.nagstamon"
+
+  caveats do
+    requires_rosetta
+  end
 end

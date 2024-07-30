@@ -8,4 +8,8 @@ cask "nslogger" do
   homepage "https://github.com/fpillet/NSLogger"
 
   app "NSLogger.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -27,6 +27,7 @@ affinity-photo
 affinity-publisher
 airtame
 akiflow
+alcom
 alex313031-thorium
 alfred
 alt-tab
@@ -75,6 +76,7 @@ bike
 bilibili
 binance
 bitwarden
+blender@lts
 blockbench
 bloop
 boinc
@@ -213,9 +215,11 @@ embyserver
 emclient
 enpass
 ente-auth
+entry
 evernote
 expressvpn
 fantastical
+fbreader
 fedistar
 feed-the-beast
 ferdium
@@ -276,6 +280,7 @@ foxit-pdf-editor
 free-download-manager
 free42-binary
 free42-decimal
+freeshow
 freeyourmusic
 front
 fsnotes
@@ -358,6 +363,7 @@ julia
 jumpshare
 jupyterlab
 juxtacode
+kaleidoscope
 kdenlive
 keyboard-cowboy
 keyman
@@ -380,8 +386,10 @@ libreoffice
 libreoffice-language-pack
 librewolf
 lightburn
+lightkey
 limitless
 linear-linear
+lingon-x
 little-snitch
 live-home-3d
 lm-studio
@@ -464,6 +472,7 @@ mullvadvpn@beta
 multiapp
 multitouch
 multiviewer-for-f1
+mumuplayer
 native-access
 naver-whale
 navicat-for-mariadb
@@ -495,6 +504,7 @@ obsbot-center
 ocenaudio
 okta-advanced-server-access
 ollama
+ollamac
 omnifocus
 omnigraffle
 onedrive
@@ -510,6 +520,7 @@ opera-gx
 opera@beta
 opera@developer
 operadriver
+opgg
 oracle-jdk
 oracle-jdk-javadoc
 orbstack
@@ -539,6 +550,7 @@ phpwebstudy
 piclist
 pieces
 pieces-os
+pile
 pitch
 plasticscm-cloud-edition
 playdate-simulator
@@ -570,6 +582,7 @@ proton-mail
 proton-pass
 protonmail-bridge
 protonvpn
+prowlarr
 proxyman
 psychopy
 purei-play
@@ -698,6 +711,7 @@ supernotes
 superproductivity
 surge
 swiftformat-for-xcode
+syncovery
 tabby
 tableflip
 tableplus
@@ -717,6 +731,7 @@ termius@beta
 texstudio
 thangs-sync
 theiaide
+threema@beta
 ths
 thunderbird
 ticktick
@@ -724,6 +739,7 @@ tidelift
 timeular
 timing
 tinkerwell
+tinymediamanager
 to-audio-converter
 todoist
 topaz-gigapixel-ai
@@ -765,6 +781,7 @@ valentina-studio
 vamiga
 vcam
 vellum
+vimr
 virtualbox@beta
 virtualbuddy
 virtualc64
@@ -776,6 +793,7 @@ visual-paradigm-ce
 visual-studio-code
 vivaldi
 vivaldi@snapshot
+vk-calls
 vpn-tracker-365
 vrew
 vscodium
@@ -795,6 +813,7 @@ webstorm
 webull
 wechat
 wechatwork
+wetype
 whatsapp
 whatsapp@beta
 whisky
@@ -806,10 +825,13 @@ wpsoffice-cn
 writerside
 xcodepilot
 xemu
+xiv-on-mac
 xmind
 xnviewmp
+yandex-music
 yass
 yealink-meeting
+yinxiangbiji
 youtube-to-mp3
 zalo
 zappy

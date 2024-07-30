@@ -12,7 +12,7 @@ cask "musictube" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Musictube.app"
 
@@ -20,4 +20,8 @@ cask "musictube" do
     "~/Library/Preferences/org.tordini.flavio.musictube.plist",
     "~/Library/Saved Application State/org.tordini.flavio.musictube.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

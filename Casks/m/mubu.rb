@@ -22,4 +22,8 @@ cask "mubu" do
     "~/Library/Preferences/com.mubu.desktop.plist",
     "~/Library/Saved Application State/com.mubu.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

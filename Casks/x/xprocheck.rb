@@ -1,9 +1,8 @@
 cask "xprocheck" do
-  version "1.5,2023.04"
-  sha256 "882c1ee83a3bee4372d7afcd9a65b3fa8342282534cbdf21565fe0aa4c87839d"
+  version "1.6,2024.07"
+  sha256 "6775fd9beb44d018a0287a00b944dc39a402763985cdaa19598b7d11167dabaa"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/xprocheck#{version.csv.first.no_dots}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/xprocheck#{version.csv.first.no_dots}-1.zip"
   name "XProCheck"
   desc "Anti-malware scan logging tool"
   homepage "https://eclecticlight.co/consolation-t2m2-and-log-utilities/"

@@ -12,4 +12,8 @@ cask "menucalendarclock-ical" do
   end
 
   app "MenuCalendarClock iCal.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -2,8 +2,8 @@ cask "mamp" do
   arch arm: "Apple-chip", intel: "Intel-x86"
 
   version "7.0"
-  sha256 arm:   "9867fca12c1344abcfda43dfab6a415c3135eb9efaa492de97b22667c892c01e",
-         intel: "f33a147b7bb90fc116083b5bc9b2dbf8a73606ddad63201da0ec8b03dcb1db8a"
+  sha256 arm:   "2f0c89c0682247c5543706911513af17304bd39d3a324473f8f919acad3a7fdd",
+         intel: "80b680cb002fdfeccd43bb4de8f73ea071d21544e9a024ffd0bab21eb2e8ecca"
 
   url "https://downloads.mamp.info/MAMP-PRO/macOS/MAMP-PRO/MAMP-MAMP-PRO-#{version}-#{arch}.pkg"
   name "MAMP"

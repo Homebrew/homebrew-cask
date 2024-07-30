@@ -1,8 +1,8 @@
 cask "ticktick" do
-  version "6.0.10"
-  sha256 "dd7ef19399af593a1e261e104632225586fe5f66febbc89a6e4bb43d00844830"
+  version "6.0.20,371"
+  sha256 "a3898a3feee5f3442c920604c7fa26697a4c92fe258644a646eaea13fd9faf37"
 
-  url "https://ticktick-download-mac.s3.amazonaws.com/download/mac/TickTick_#{version}.dmg",
+  url "https://ticktick-download-mac.s3.amazonaws.com/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "ticktick-download-mac.s3.amazonaws.com/download/mac/"
   name "TickTick"
   desc "To-do & task list manager"
@@ -10,11 +10,16 @@ cask "ticktick" do
 
   livecheck do
     url "https://www.ticktick.com/static/getApp/download?type=mac"
-    strategy :header_match
+    strategy :header_match do |headers|
+      match = headers["location"].match(/TickTick[._-]v?(\d+(?:\.\d+)+)[_-](\d+)\.dmg/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "TickTick.app"
 

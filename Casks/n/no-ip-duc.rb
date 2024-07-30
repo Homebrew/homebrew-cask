@@ -19,4 +19,8 @@ cask "no-ip-duc" do
     "~/Library/HTTPStorages/com.noip.No-IP-DUC",
     "~/Library/Preferences/com.noip.No-IP-DUC.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

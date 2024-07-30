@@ -24,4 +24,8 @@ cask "neo4j" do
     "~/Library/Preferences/com.neo4j.neo4j-desktop.plist",
     "~/Library/Saved Application State/com.neo4j.neo4j-desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

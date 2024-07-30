@@ -1,5 +1,5 @@
 cask "publish-or-perish" do
-  version "8.12.4612.8838"
+  version "8.14.4635.8976"
   sha256 :no_check
 
   url "https://harzing.com/download/PoP#{version.major}Mac.pkg"
@@ -16,7 +16,10 @@ cask "publish-or-perish" do
 
   pkg "PoP#{version.major}Mac.pkg"
 
-  uninstall pkgutil: "com.tarma.popmac.pkg"
+  uninstall pkgutil: [
+    "com.tarma.popmac",
+    "com.tarma.popmac.pkg",
+  ]
 
   zap trash: [
     "~/Library/Application Support/Publish or Perish",

@@ -22,4 +22,8 @@ cask "proclaim" do
     "~/Library/Preferences/com.logos.Proclaim.plist",
     "~/Library/Saved Application State/com.logos.Proclaim.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

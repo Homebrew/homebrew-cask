@@ -7,10 +7,16 @@ cask "pdfshaver" do
   desc "Shrink PDF files to make them smaller"
   homepage "https://github.com/tparry/PDFShaver.app"
 
+  deprecate! date: "2024-07-28", because: :unmaintained
+
   app "PDFShaver.app"
 
   zap trash: [
     "~/Library/Preferences/com.tparry.PDFShaver.plist",
     "~/Library/Saved Application State/com.tparry.PDFShaver.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

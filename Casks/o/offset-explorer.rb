@@ -16,4 +16,8 @@ cask "offset-explorer" do
   app "Offset Explorer 2.app"
 
   zap trash: "~/.kafkatool2"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -14,4 +14,8 @@ cask "password-gorilla" do
   end
 
   app "Password Gorilla.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -13,4 +13,8 @@ cask "pixel-check" do
   end
 
   app "PiXel Check #{version}/PiXel Check.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

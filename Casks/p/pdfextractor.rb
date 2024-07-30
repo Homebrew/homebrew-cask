@@ -19,4 +19,8 @@ cask "pdfextractor" do
     "~/Library/Preferences/com.briksoftware.pdfextractor.plist",
     "~/Library/Saved Application State/com.briksoftware.pdfextractor.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

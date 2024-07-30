@@ -16,4 +16,8 @@ cask "pieces-cli" do
   binary "pieces"
 
   zap trash: "~/Library/.piecescli-cache"
+
+  caveats do
+    requires_rosetta
+  end
 end
