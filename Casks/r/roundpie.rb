@@ -8,10 +8,7 @@ cask "roundpie" do
   desc "Pomodoro time tracker"
   homepage "https://theroundpie.com/"
 
-  livecheck do
-    url "https://pmdn.co/osx"
-    strategy :header_match
-  end
+  disable! date: "2024-07-29", because: :discontinued
 
   app "RoundPie.app"
 
@@ -21,4 +18,8 @@ cask "roundpie" do
     "~/Library/Preferences/com.atgalaikas.app.plist",
     "~/Library/Saved Application State/com.atgalaikas.app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
