@@ -60,8 +60,8 @@ cask "omnioutliner" do
     end
   end
   on_monterey :or_newer do
-    version "5.13"
-    sha256 "5c6d0aa969f9cd1fc309b0cd173f8f1d9e3e33173fc69cf1ec0542b90c9aacea"
+    version "5.13.1"
+    sha256 "79c54a93d3831eef97f8dababe9bcada1706589b16f2d278862a315959f3d35f"
 
     url "https://downloads.omnigroup.com/software/macOS/12/OmniOutliner-#{version}.dmg"
 
