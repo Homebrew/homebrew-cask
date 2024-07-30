@@ -24,4 +24,8 @@ cask "soundboosterlite" do
     "~/Library/Application Scripts/com.froyosoft.SoundBoosterLite",
     "~/Library/Containers/com.froyosoft.SoundBoosterLite",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
