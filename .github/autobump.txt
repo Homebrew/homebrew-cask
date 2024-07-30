@@ -413,6 +413,7 @@ macwhisper
 maestral
 mailbutler
 mambaforge
+marked
 media-center
 mediainfo
 mediamate
