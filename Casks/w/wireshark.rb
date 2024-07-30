@@ -6,7 +6,7 @@ cask "wireshark" do
   sha256 arm:   "11fc3f8b12b8369398e373058f9b8f0730e3228611ecf3d7ecc63c5f1855241e",
          intel: "41601877fa5294ec7c20f8d81c799612c6bca7fa689f237fdbf6595b5fc22071"
 
-  url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{arch}%2064.dmg"
+  url "https://2.na.dl.wireshark.org/osx/all-versions/Wireshark%20#{version}%20#{arch}%2064.dmg"
   name "Wireshark"
   desc "Network protocol analyzer"
   homepage "https://www.wireshark.org/"
