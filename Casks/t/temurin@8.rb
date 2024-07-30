@@ -6,10 +6,10 @@ cask "temurin@8" do
   #   regex : remove "\.(\d+)"
   #   livecheck strategy version string : remove ",#{match[4]}"
 
-  version "8,422,05,1"
+  version "8,422,05.1"
   sha256 "809d7c0b6c7c2fd483711fb784e4fb101ad431c71dc8e96aa9c2cffaa8bfa7b7"
 
-  url "https://github.com/adoptium/temurin8-binaries/releases/download/jdk#{version.csv.first}u#{version.csv.second}-b#{version.csv.third}.#{version.csv.fourth}/OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{version.csv.third}.pkg",
+  url "https://github.com/adoptium/temurin8-binaries/releases/download/jdk#{version.csv.first}u#{version.csv.second}-b#{version.csv.third}/OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{version.csv.third.split(".").first}.pkg",
       verified: "github.com/adoptium/temurin8-binaries/"
   name "Eclipse Temurin 8"
   desc "JDK from the Eclipse Foundation (Adoptium)"
