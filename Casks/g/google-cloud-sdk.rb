@@ -60,19 +60,4 @@ cask "google-cloud-sdk" do
     "#{google_cloud_sdk_root}.staging",
     google_cloud_sdk_root,
   ]
-
-  caveats <<~EOS
-    To add gcloud components to your PATH, add this to your profile:
-
-      for bash users
-        source "$(brew --prefix)/share/google-cloud-sdk/path.bash.inc"
-
-      for zsh users
-        source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-        source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-
-      for fish users
-        source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
-
-  EOS
 end
