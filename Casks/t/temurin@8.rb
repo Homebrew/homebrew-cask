@@ -23,7 +23,7 @@ cask "temurin@8" do
         match = release["release_name"]&.match(regex)
         next if match.blank?
 
-        "#{match[1]},#{match[2]},#{match[3]},#{match[4]}"
+        "#{match[1]},#{match[2]},#{match[3]}"
       end
     end
   end
