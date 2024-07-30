@@ -8,8 +8,8 @@ cask "moradownloader" do
   homepage "https://mora.jp/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://mora.jp/contents/data/system/noticeTouch.json"
+    regex(/Mac.*?v?[._-](\d+(?:\.\d+)+)/i)
   end
 
   pkg "MoraDownloader.pkg"
