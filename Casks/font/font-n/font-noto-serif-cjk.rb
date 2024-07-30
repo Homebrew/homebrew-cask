@@ -1,6 +1,6 @@
 cask "font-noto-serif-cjk" do
-  version "2.002"
-  sha256 "e78b23ea9f803d8376eee66d330a556e1133b713ff97014a75991d5723324f85"
+  version "2.003"
+  sha256 "5009285197f068fe9a58f2cf8d6d312f4bf185887305751aae2608db4e02e48f"
 
   url "https://github.com/notofonts/noto-cjk/releases/download/Serif#{version}/01_NotoSerifCJK.ttc.zip"
   name "Noto Serif CJK"
