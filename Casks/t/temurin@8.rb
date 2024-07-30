@@ -1,10 +1,4 @@
 cask "temurin@8" do
-  # NOTE: Last update was for jdk8u422-b05.1 "point release" re-build, next release will need to remove
-  # the version.csv.fourth etc in 4 places:
-  #   version string : remove ",1"
-  #   url : remove ".#{version.csv.fourth}"
-  #   regex : remove "\.(\d+)"
-  #   livecheck strategy version string : remove ",#{match[4]}"
 
   version "8,422,05.1"
   sha256 "809d7c0b6c7c2fd483711fb784e4fb101ad431c71dc8e96aa9c2cffaa8bfa7b7"
