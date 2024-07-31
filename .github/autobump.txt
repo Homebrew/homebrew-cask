@@ -30,6 +30,7 @@ akiflow
 alcom
 alex313031-thorium
 alfred
+aliworkbench
 alt-tab
 altair-graphql-client
 amazon-chime
