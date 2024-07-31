@@ -1,6 +1,6 @@
 cask "mweb-pro" do
-  version "4.6.2"
-  sha256 "75d8a2bb707a5ff8ff94f5f4582b8de778c2c3394b7a05c0cb0b440976113f32"
+  version "4.6.3"
+  sha256 "d58493dd59d466ab1af7d5124717410132f06c696975e4f8fe82d8ee49325668"
 
   url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}.dmg",
       verified: "cdn.mwebapp.cn/"
