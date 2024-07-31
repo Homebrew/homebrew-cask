@@ -225,6 +225,7 @@ fantastical
 fbreader
 fedistar
 feed-the-beast
+feishu
 ferdium
 fightcade
 figma
