@@ -178,6 +178,7 @@ descript
 desktoppr
 devpod
 devtunnel
+dialpad
 dingtalk
 discord
 discord@canary
