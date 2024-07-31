@@ -1,17 +1,36 @@
 cask "font-meslo-for-powerline" do
-  version "2015-12-04"
-  sha256 "3a0b73abca6334b5e6bddefab67f6eb1b2fac1231817d95fc79126c8998c4844"
+  version :latest
+  sha256 :no_check
 
-  url "https://github.com/powerline/fonts/archive/refs/tags/#{version}.tar.gz"
+  url "https://github.com/powerline/fonts.git",
+      branch: "master"
   name "Meslo for Powerline"
   homepage "https://github.com/powerline/fonts"
 
-  font "fonts-#{version}/Meslo/Meslo LG L DZ Regular for Powerline.otf"
-  font "fonts-#{version}/Meslo/Meslo LG L Regular for Powerline.otf"
-  font "fonts-#{version}/Meslo/Meslo LG M DZ Regular for Powerline.otf"
-  font "fonts-#{version}/Meslo/Meslo LG M Regular for Powerline.otf"
-  font "fonts-#{version}/Meslo/Meslo LG S DZ Regular for Powerline.otf"
-  font "fonts-#{version}/Meslo/Meslo LG S Regular for Powerline.otf"
+  font "Meslo Slashed/Meslo LG L Regular for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG L Bold for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG L Italic for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG L Bold Italic for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG M Regular for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG M Bold for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG M Italic for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG M Bold Italic for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG S Regular for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG S Bold for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG S Italic for Powerline.ttf"
+  font "Meslo Slashed/Meslo LG S Bold Italic for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG L DZ Regular for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG L DZ Bold for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG L DZ Italic for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG L DZ Bold Italic for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG M DZ Regular for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG M DZ Bold for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG M DZ Italic for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG M DZ Bold Italic for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG S DZ Regular for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG S DZ Bold for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG S DZ Italic for Powerline.ttf"
+  font "Meslo Dotted/Meslo LG S DZ Bold Italic for Powerline.ttf"
 
   # No zap stanza required
 end
