@@ -33,6 +33,7 @@ alfred
 alt-tab
 altair-graphql-client
 amazon-chime
+amazon-q
 amie
 android-studio
 android-studio-preview@beta
