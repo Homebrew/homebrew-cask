@@ -125,6 +125,7 @@ clion
 clion@eap
 clock-signal
 clockify
+cloudflare-warp
 cloudnet
 cmake
 codeql
