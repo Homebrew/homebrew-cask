@@ -13,7 +13,7 @@ cask "ogdesign-eagle" do
 
   livecheck do
     url "https://eagle.cool/check-for-update"
-    regex(/Eagle[._-]v?(\d+(?:\.\d+)+)-#{arch}-build(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Eagle[._-]v?(\d+(?:\.\d+)+)-#{arch}[._-]?build(\d+(?:\.\d+)*)\.dmg/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
