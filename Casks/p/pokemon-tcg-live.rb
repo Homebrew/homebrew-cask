@@ -1,5 +1,5 @@
 cask "pokemon-tcg-live" do
-  version "1.15.0,333109"
+  version "1.16.0,348418"
   sha256 :no_check
 
   url "https://installer.studio-prod.pokemon.com/installer/PokemonTCGLiveInstaller_Mac.dmg"
@@ -27,7 +27,6 @@ cask "pokemon-tcg-live" do
       rmdir: "~/Library/Logs/pokemon"
 
   caveats do
-    requires_rosetta
     license "https://www.pokemon.com/us/terms-of-use/"
   end
 end
