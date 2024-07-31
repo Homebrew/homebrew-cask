@@ -7,6 +7,10 @@ cask "quakespasm" do
   desc "Engine for iD software's Quake"
   homepage "https://quakespasm.sourceforge.net/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/quakespasm/rss?path=/Mac"
+  end
+
   suite "QuakeSpasm"
 
   preflight do
