@@ -1,8 +1,8 @@
 cask "sonic-visualiser" do
-  version "4.5.2,2851"
-  sha256 "d91ce0890fe9fc099fd7dfe4ed725d535f9a5a7da7bacd56130803736597ac6b"
+  version "5.0.0,2861"
+  sha256 "bfc48161a35f376bcc6d33cbc7d7bb34c80e4ff8f6d5e2181b144a064a80df65"
 
-  url "https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v#{version.csv.first}/Sonic.Visualiser-#{version.csv.first}.dmg",
+  url "https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v#{version.csv.first.major_minor}/Sonic.Visualiser.#{version.csv.first}.dmg",
       verified: "github.com/sonic-visualiser/sonic-visualiser/"
   name "Sonic Visualiser"
   desc "Visualisation, analysis, and annotation of music audio recordings"
@@ -10,7 +10,7 @@ cask "sonic-visualiser" do
 
   livecheck do
     url "https://www.sonicvisualiser.org/download.html"
-    regex(%r{href=.*?/(\d+)/Sonic%20Visualiser-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/(\d+)/Sonic%20Visualiser%20(\d+(?:\.\d+)*)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
