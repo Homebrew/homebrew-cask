@@ -445,6 +445,7 @@ milanote
 millie
 mimestream
 mindmac
+minecraft-education
 mini-program-studio
 miniforge
 miro

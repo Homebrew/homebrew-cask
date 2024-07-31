@@ -1,6 +1,6 @@
-cask "minecraftpe" do
-  version "1.20.13.0"
-  sha256 "ca4a7de7302e8796a69ec41a93c973db34508e0559482e4d3465d2e0fbd1d7aa"
+cask "minecraft-education" do
+  version "1.21.03.0"
+  sha256 "6cdf1ae6eebd99152fe87a5e8462bfee1a35a070aed48a418316ac2766db73cd"
 
   url "https://downloads.minecrafteduservices.com/retailbuilds/MacOS/Minecraft_Education_#{version}.dmg",
       verified: "downloads.minecrafteduservices.com/"
@@ -16,7 +16,8 @@ cask "minecraftpe" do
 
   depends_on macos: ">= :sierra"
 
-  app "minecraftpe.app"
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app "minecraft-edu.app", target: "Minecraft Education.app"
 
   zap trash: [
     "~/Library/Application Support/com.microsoft.minecraftpe",
