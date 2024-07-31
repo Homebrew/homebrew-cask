@@ -9,7 +9,7 @@ cask "istat-menus" do
   homepage "https://bjango.com/mac/istatmenus/"
 
   livecheck do
-    url "https://download.bjango.com/istatmenus/"
+    url "https://download.bjango.com/istatmenus#{version.major}/"
     strategy :header_match
   end
 
