@@ -9,10 +9,7 @@ cask "todesk" do
   desc "Remote control software"
   homepage "https://www.todesk.com/"
 
-  livecheck do
-    url "https://www.todesk.com/download.html"
-    regex(/ToDesk[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
-  end
+  disable! date: "2024-08-01", because: "download artifact behind CAPTCHA-verified url"
 
   auto_updates true
 
@@ -33,6 +30,7 @@ cask "todesk" do
     "~/Library/Containers/com.youqu.todesk.mac.LaunchHelper",
     "~/Library/Group Containers/group.youqu.todesk",
     "~/Library/Preferences/com.youqu.todesk.mac.plist",
+    "~/Library/Saved Application State/com.youqu.todesk.mac.savedState",
     "~/Library/ToDesk",
   ]
 end
