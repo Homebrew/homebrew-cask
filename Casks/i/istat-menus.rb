@@ -1,8 +1,8 @@
 cask "istat-menus" do
-  version "6.73"
+  version "7.0.2"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://cdn.istatmenus.app/files/istatmenus#{version.major}/istatmenus#{version}.zip",
+  url "https://cdn.istatmenus.app/files/istatmenus#{version.major}/versions/iStatMenus#{version}.zip",
       verified: "cdn.istatmenus.app/"
   name "iStats Menus"
   desc "System monitoring app"
@@ -14,7 +14,7 @@ cask "istat-menus" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "iStat Menus.app"
 
