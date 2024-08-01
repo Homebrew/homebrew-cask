@@ -1,8 +1,6 @@
 cask "db-browser-for-sqlite" do
   arch arm: "-arm64"
 
-  # Latest version is not available for macOS 10.15 and older.
-  # For more information, please see: https://github.com/sqlitebrowser/sqlitebrowser/issues/3691
   on_catalina :or_older do
     version "3.12.2"
     sha256 arm:   "0c2076e4479cb9db5c85123cfe9750641f92566694ff9f6c99906321a2c424e8",
