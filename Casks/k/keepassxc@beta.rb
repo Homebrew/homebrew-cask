@@ -11,6 +11,11 @@ cask "keepassxc@beta" do
   desc "Password manager app"
   homepage "https://keepassxc.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   conflicts_with cask: "keepassxc"
   depends_on macos: ">= :high_sierra"
 
