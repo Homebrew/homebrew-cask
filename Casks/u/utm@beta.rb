@@ -8,8 +8,22 @@ cask "utm@beta" do
   desc "Virtual machines UI using QEMU"
   homepage "https://mac.getutm.app/"
 
-  # Use the default livecheck strategy to return the "latest" release
-  # regardless of how it is tagged. https://github.com/Homebrew/homebrew-cask-versions/pull/18839#issuecomment-1874765632
+  # This uses the `GithubReleases` strategy and includes releases marked as
+  # "pre-release", so this will use both unstable and stable releases.
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+.*)$/i)
+    strategy :github_releases do |json|
+      json.map do |release|
+        next if release["draft"]
+
+        match = release["tag_name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
+  end
 
   conflicts_with cask: "utm"
   depends_on macos: ">= :big_sur"
