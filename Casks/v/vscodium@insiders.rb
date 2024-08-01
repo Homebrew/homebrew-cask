@@ -12,6 +12,12 @@ cask "vscodium@insiders" do
   desc "Code editor"
   homepage "https://vscodium.com/"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+.*)$/i)
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   app "VSCodium - Insiders.app"
