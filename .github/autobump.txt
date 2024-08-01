@@ -490,6 +490,7 @@ navicat-for-postgresql
 navicat-for-sql-server
 navicat-for-sqlite
 navicat-premium
+navicat-premium-lite
 neovide
 netron
 nextcloud
