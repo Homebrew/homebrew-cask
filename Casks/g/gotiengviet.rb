@@ -1,5 +1,5 @@
 cask "gotiengviet" do
-  version "2.4,32"
+  version "2.4"
   sha256 :no_check
 
   url "https://www.trankynam.com/gotv/downloads/GoTiengViet.dmg"
@@ -8,8 +8,8 @@ cask "gotiengviet" do
   homepage "https://www.trankynam.com/gotv/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/macOS.*?>\s*v?(\d+(?:\.\d+)+)[^<]*</im)
   end
 
   app "GoTiengViet.app"
