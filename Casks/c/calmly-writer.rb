@@ -20,9 +20,8 @@ cask "calmly-writer" do
 
   livecheck do
     url "https://calmlywriter.com/releases/#{arch}/download.php"
-    strategy :header_match do |headers|
-      headers["location"][/Calmly(?:\s|%20)Writer[._-]v?(\d+(?:\.\d+)+)/i, 1]
-    end
+    regex(/Calmly(?:\s+|%20|[._-])?Writer[._-]v?(\d+(?:\.\d+)+)/i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :high_sierra"
