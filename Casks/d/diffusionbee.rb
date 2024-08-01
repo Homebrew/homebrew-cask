@@ -11,7 +11,12 @@ cask "diffusionbee" do
   desc "Run Stable Diffusion locally"
   homepage "https://diffusionbee.com/"
 
-  depends_on macos: ">= :ventura"
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on macos: ">= :monterey"
 
   app "DiffusionBee.app"
 
