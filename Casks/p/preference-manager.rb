@@ -1,19 +1,19 @@
 cask "preference-manager" do
-  version "4.5.4.0"
+  version "4.5.4,4540"
   sha256 "dcaa511f529cf5e659e86f0e6ae49f4bbcd63669a4e66ebf6ccfee4a9a9b7295"
 
-  url "https://www.digitalrebellion.com/download/prefman?version=#{version.no_dots}"
+  url "https://www.digitalrebellion.com/download/prefman?version=#{version.csv.second}",
+      user_agent: :fake
   name "Preference Manager"
   desc "Trash, backup, lock and restore video editor preferences"
   homepage "https://www.digitalrebellion.com/prefman/"
 
   livecheck do
-    url "https://www.digitalrebellion.com/prefman/download"
-    regex(%r{href=.*?/prefman\?version=(\d+(?:\.\d+)*)"}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].gsub(/./, '\0.').chop.to_s }
-    end
+    url "https://www.digitalrebellion.com/rss/appcast?app=prefman"
+    strategy :sparkle
   end
+
+  auto_updates true
 
   app "Preference Manager.app"
 
