@@ -7,7 +7,7 @@ cask "db-browser-for-sqlite" do
            intel: "546d57b6c88c2be7517759c016c0bf0313dfcc14adfcb43967f3c5d24657f366"
 
     livecheck do
-      skip "Latest version is not available for macOS 10.15 and older"
+      skip "Legacy version"
     end
   end
   on_big_sur :or_newer do
