@@ -1,21 +1,22 @@
 cask "native-access" do
-  arch arm: "M1", intel: "Intel"
+  arch arm: "arm64", intel: "x64"
+  folder = on_arch_conditional arm: "arm64/"
 
-  version "3.12.1"
+  version "3.13.0"
   sha256 :no_check
 
-  url "https://native-instruments.com/fileadmin/downloads/Native-Access_2_Mac_#{arch}.dmg"
+  url "https://na-update.native-instruments.com/#{folder}Native-Access-#{arch}-mac.zip"
   name "Native Access"
   desc "Administration tool for Native Instruments products"
-  homepage "https://native-instruments.com/specials/native-access-2"
+  homepage "https://www.native-instruments.com/en/specials/native-access-2/"
 
   livecheck do
-    url "https://community.native-instruments.com/discussion/4823/official-update-status-native-access-current-version-2-0-8"
-    regex(/current\s*version:\s*v?(\d+(?:\.\d+)+)\)/i)
+    url "https://na-update.native-instruments.com/#{folder}latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Native Access.app"
 
