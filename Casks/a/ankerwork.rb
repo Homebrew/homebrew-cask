@@ -12,8 +12,8 @@ cask "ankerwork" do
   homepage "https://us.ankerwork.com/pages/download-software"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/For\s+Mac.*?>\s*V?(\d+(?:\.\d+)+)\s*</im)
   end
 
   depends_on macos: ">= :mojave"
