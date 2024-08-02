@@ -49,7 +49,7 @@ cask "onyx" do
   on_sequoia do
     version "4.7.0"
 
-    url "https://www.titanium-software.fr/download/15/OnyX.dmg"
+    url "https://www.titanium-software.fr/download/beta/OnyX.dmg"
   end
 
   name "OnyX"
