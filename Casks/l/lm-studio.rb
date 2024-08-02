@@ -1,5 +1,5 @@
 cask "lm-studio" do
-  version "0.2.29"
+  version "0.2.31"
   sha256 :no_check
 
   url "https://s3.amazonaws.com/releases.lmstudio.ai/#{version}/LM+Studio-darwin-arm64-#{version}.zip",
