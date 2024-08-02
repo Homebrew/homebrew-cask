@@ -16,7 +16,13 @@ cask "meta-quest-developer-hub" do
 
   app "Meta Quest Developer Hub.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.oculus.odh.sfl*",
+    "~/Library/Application Support/Meta Quest Developer Hub",
+    "~/Library/Application Support/odh",
+    "~/Library/Preferences/com.oculus.odh.plist",
+    "~/Library/Saved Application State/com.oculus.odh.savedState",
+  ]
 
   caveats do
     license "https://developer.oculus.com/licenses/oculussdk"
