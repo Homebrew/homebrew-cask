@@ -1,6 +1,6 @@
 cask "youtube-to-mp3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "3.9.9.94"
+  version "3.9.9.95"
   sha256 :no_check
 
   url "https://www.mediahuman.net/files/YouTubeToMP3.dmg"
