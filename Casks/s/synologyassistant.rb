@@ -1,6 +1,6 @@
 cask "synologyassistant" do
-  version "7.0.4,50051"
-  sha256 "6b578266e0d43218bc35bbed112e7761bd7e682e432b8d5f53fb90c573aa3f4f"
+  version "7.0.5,50070"
+  sha256 "760e70deb917f580598eb83b2e3f8185cdd1b7591d70aca04c69e20f240fdf41"
 
   url "https://global.download.synology.com/download/Utility/Assistant/#{version.csv.first}-#{version.csv.second}/Mac/synology-assistant-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Synology Assistant"
@@ -18,4 +18,8 @@ cask "synologyassistant" do
   app "SynologyAssistant.app"
 
   zap trash: "~/Library/Preferences/com.synology.DSAssistant.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
