@@ -756,6 +756,7 @@ topaz-gigapixel-ai
 topaz-photo-ai
 topaz-video-ai
 tor-browser
+tor-browser@alpha
 touchosc
 tower
 trader-workstation
