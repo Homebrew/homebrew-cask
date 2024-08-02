@@ -8,8 +8,8 @@ cask "meta-quest-developer-hub" do
   homepage "https://developer.oculus.com/meta-quest-developer-hub/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.oculus.com/electron-updates/mqdh/latest-mac.yml"
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :catalina"
