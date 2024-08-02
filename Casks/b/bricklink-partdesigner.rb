@@ -1,5 +1,5 @@
 cask "bricklink-partdesigner" do
-  version "2.24.2_1"
+  version "2.24.7_1"
   sha256 :no_check
 
   url "https://dzncyaxjqx7p3.cloudfront.net/PartDesigner/PartDesigner.pkg",
