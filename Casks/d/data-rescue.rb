@@ -1,6 +1,6 @@
 cask "data-rescue" do
-  version "6.0.8"
-  sha256 "74526630976a9973905936766e6aff8d90f7ed9910014ba154849da7da6b3ad2"
+  version "6.0.9"
+  sha256 "8968377be610cd034aab69f6fa6267fb3524dd772d9ceb0cca138b4a668ced17"
 
   url "https://downloads.prosofteng.com/dr/Data_Rescue_#{version}.dmg"
   name "Data Rescue #{version.major}"
@@ -26,4 +26,8 @@ cask "data-rescue" do
     "~/Library/Preferences/com.prosofteng.DataRescue.plist",
     "~/Library/Saved Application State/com.prosofteng.DataRescue.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
