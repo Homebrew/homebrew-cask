@@ -8,6 +8,11 @@ cask "spatterlight" do
   desc "Play most kinds of interactive fiction game files"
   homepage "https://ccxvii.net/spatterlight/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   app "Spatterlight.app"
