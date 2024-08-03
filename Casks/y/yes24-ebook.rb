@@ -1,6 +1,6 @@
 cask "yes24-ebook" do
-  version "1.0.1.12001"
-  sha256 "b2be9ddf88af78e0c9ca6e91fa97ccedc87b55b66e561fb767db46aaf4afda36"
+  version "1.0.1.14"
+  sha256 "f966cae98dbf802a48894ecc3efc0fd2287d8dc84f753581e0827c18a49563ac"
 
   url "https://ebookcdn.yes24.com/UPGRADE/PC_CREMA/mac/#{version}/YES24eBook.dmg"
   name "YES24eBook"
@@ -15,7 +15,7 @@ cask "yes24-ebook" do
   auto_updates true
   depends_on macos: ">= :big_sur"
 
-  app "YES24eBook.app"
+  app "YES24_eBook.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.yes24.macEBook",
