@@ -10,9 +10,7 @@ cask "arm-performance-libraries" do
 
   livecheck do
     url "https://developer.arm.com/downloads/-/arm-performance-libraries"
-    regex(
-      /href=.*?arm-performance-libraries_v?(\d+(?:\.\d+)+)_macOS\.t/i,
-    )
+    regex(/Version[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on arch: :arm64
