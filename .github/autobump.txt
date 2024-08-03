@@ -827,6 +827,7 @@ wechatwork
 wetype
 whatsapp
 whatsapp@beta
+whatsapp@legacy
 whisky
 wing-personal
 wondershare-uniconverter
