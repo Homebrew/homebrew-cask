@@ -1,8 +1,8 @@
 cask "safari-technology-preview" do
   # when adjusting the on_{os} scoping, also update the livecheck regex
   on_sonoma :or_older do
-    version "199,062-41346-20240717-A798E20B-9699-44D5-88E4-25D360324F3A"
-    sha256 "d0e1deb8b45a5b01fc14fb4e09bb00d4220114dc0caea93cb064c155b0fc6b6b"
+    version "200,062-45444-20240730-7f42485e-d0ea-4c1c-848f-bd0e973ac04d"
+    sha256 "a064d667122c2c3a120a72d1ab114402391e04b38f40200c5d385de042e98f3e"
 
     livecheck do
       url :homepage
@@ -11,15 +11,15 @@ cask "safari-technology-preview" do
         .*?macOS(?:\s|&nbsp;)*14[\s.<]
       }ix)
       strategy :page_match do |page, regex|
-        release = page[%r{>\s*Release\s*</p>\s*<p[^>]*>\s*(\d+)\s*<}i, 1]
+        release = page[%r{>\s*Release\s*</p>\s*<p[^>]*>\s*(\d+)[^<]*<}i, 1]
         id = page[regex, 1]
         "#{release},#{id}"
       end
     end
   end
   on_sequoia :or_newer do
-    version "199,062-41372-20240717-3DE69CF6-1ED4-4952-916C-D3DF73FA2B0A"
-    sha256 "253dc1ed9987681ad3030f11d6c637a391b70a8b14ee366e931a67a58e4dc548"
+    version "200,062-45563-20240730-36fd5025-68ff-4b61-81f8-99c873b23ffa"
+    sha256 "96f6d50a2cbd0023e739be6e1736f050b160a4e346b652830568d8f127becb60"
 
     livecheck do
       url :homepage
@@ -28,7 +28,7 @@ cask "safari-technology-preview" do
         .*?macOS(?:\s|&nbsp;)*15[\s.<]
       }ix)
       strategy :page_match do |page, regex|
-        release = page[%r{>\s*Release\s*</p>\s*<p[^>]*>\s*(\d+)\s*<}i, 1]
+        release = page[%r{>\s*Release\s*</p>\s*<p[^>]*>\s*(\d+)[^<]*<}i, 1]
         id = page[regex, 1]
         "#{release},#{id}"
       end
