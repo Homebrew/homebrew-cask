@@ -1,9 +1,9 @@
 cask "feed-the-beast" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.25.15"
-  sha256 arm:   "8ca35e82332c2b67d3b5383ca291b5cd054774bfbb6b7de867860135276dadd5",
-         intel: "82ff00cb8bc1b70d47597e5da999a23b0699b2e38ebb9426e0f8bf53eb90e463"
+  version "1.25.16"
+  sha256 arm:   "baf34b620afdcc4d4e7b9a8950dde4016e1e84fb42cfc8f0090972a3aaa56b50",
+         intel: "9d35e1bcdbd0249aa930b6fa7d615f92ccaa68e6e964e5da5c1f24b40b9711d0"
 
   url "https://piston.feed-the-beast.com/app/ftb-app-#{version}-#{arch}.dmg"
   name "Feed the Beast"
