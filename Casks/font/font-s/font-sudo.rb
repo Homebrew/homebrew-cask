@@ -1,6 +1,6 @@
 cask "font-sudo" do
-  version "1.3"
-  sha256 "b7e2e9c6a22daf0139d759bea2fdefe745cc8b69ba216e6dab660a710dcb1eed"
+  version "1.4"
+  sha256 "cbb84bbfd5394734800f6156baf5253c03609ba871d971d4f7bd74f24effc9d5"
 
   url "https://github.com/jenskutilek/sudo-font/releases/download/v#{version}/sudo.zip"
   name "Sudo"
