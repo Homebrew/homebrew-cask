@@ -7,6 +7,7 @@ cask "dockdoor" do
   desc "Window peeking utility app"
   homepage "https://github.com/ejbills/DockDoor"
 
+  auto_updates true
   depends_on macos: ">= :sonoma"
 
   app "DockDoor.app"
