@@ -12,8 +12,9 @@ cask "pearcleaner" do
 
   app "Pearcleaner.app"
 
-  uninstall launchctl: "com.alienator88.PearcleanerSentinel",
-            quit:      "com.alienator88.Pearcleaner"
+  uninstall launchctl:  "com.alienator88.PearcleanerSentinel*",
+            quit:       "com.alienator88.Pearcleaner",
+            login_item: "Pearcleaner"
 
   zap trash: [
     "~/Library/Application Scripts/com.alienator88.Pearcleaner*",
