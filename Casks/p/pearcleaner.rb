@@ -8,11 +8,6 @@ cask "pearcleaner" do
   desc "Utility to uninstall apps and remove leftover files from old/uninstalled apps"
   homepage "https://itsalin.com/appInfo/?id=pearcleaner"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :ventura"
 
   app "Pearcleaner.app"
