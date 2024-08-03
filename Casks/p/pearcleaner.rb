@@ -15,5 +15,14 @@ cask "pearcleaner" do
   uninstall launchctl: "com.alienator88.PearcleanerSentinel",
             quit:      "com.alienator88.Pearcleaner"
 
-  zap trash: "~/Library/Application Support/Pearcleaner"
+  zap trash: [
+    "~/Library/Application Scripts/com.alienator88.Pearcleaner*",
+    "~/Library/Application Support/Pearcleaner",
+    "~/Library/Caches/com.alienator88.Pearcleaner",
+    "~/Library/Containers/com.alienator88.Pearcleaner*",
+    "~/Library/Group Containers/com.alienator88.Pearcleaner",
+    "~/Library/HTTPStorages/com.alienator88.Pearcleaner",
+    "~/Library/Preferences/com.alienator88.Pearcleaner.plist",
+    "~/Library/Saved Application State/com.alienator88.Pearcleaner.savedState",
+  ]
 end
