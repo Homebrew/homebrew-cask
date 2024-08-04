@@ -1,6 +1,6 @@
 cask "kstars" do
-  version "3.7.1"
-  sha256 "85b45488dec161c4169703aa84ff922e488aa4b567375f84d3bf69b3a1be47d4"
+  version "3.7.2"
+  sha256 "0d4f203300aa62cb573256ee713ec6deb2b72e2dfee31d0b0bd4fd9632447912"
 
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg",
       verified: "indilib.org/jdownloads/kstars/"
@@ -23,4 +23,8 @@ cask "kstars" do
     "~/Library/Preferences/kstars",
     "~/Library/Preferences/kstarsrc",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
