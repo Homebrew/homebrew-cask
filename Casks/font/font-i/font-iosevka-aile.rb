@@ -1,8 +1,8 @@
 cask "font-iosevka-aile" do
   version "31.1.0"
-  sha256 "df236325448d064e4c33e46f415a582c8c7ffdffd2bd26f6344e7bb40ad2a575"
+  sha256 "1a187f95a725e408783dab1077008ddf7e97e3048576a337065c096e47115cfc"
 
-  url "https://github.com/be5invis/Iosevka/releases/download/v#{version}/PkgTTC-IosevkaAile-#{version}.zip"
+  url "https://github.com/be5invis/Iosevka/releases/download/v#{version}/SuperTTC-IosevkaAile-#{version}.zip"
   name "Iosevka Aile"
   homepage "https://github.com/be5invis/Iosevka/"
 
@@ -11,15 +11,7 @@ cask "font-iosevka-aile" do
     strategy :github_latest
   end
 
-  font "IosevkaAile-Bold.ttc"
-  font "IosevkaAile-ExtraBold.ttc"
-  font "IosevkaAile-ExtraLight.ttc"
-  font "IosevkaAile-Heavy.ttc"
-  font "IosevkaAile-Light.ttc"
-  font "IosevkaAile-Medium.ttc"
-  font "IosevkaAile-Regular.ttc"
-  font "IosevkaAile-SemiBold.ttc"
-  font "IosevkaAile-Thin.ttc"
+  font "IosevkaAile.ttc"
 
   # No zap stanza required
 end
