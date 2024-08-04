@@ -88,7 +88,7 @@ cask "cocktail" do
     end
   end
   on_sonoma do
-    version "17.5"
+    version "17.5.1"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
