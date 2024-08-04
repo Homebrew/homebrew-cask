@@ -1,8 +1,11 @@
 cask "td-agent" do
-  version "4.4.1"
-  sha256 "518d9089f8f163a6da51fe55622535776fc5dd5b45bdb277745cf8a14f600ff7"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://s3.amazonaws.com/packages.treasuredata.com/#{version.major}/macosx/td-agent-#{version}.dmg",
+  version "4.5.2"
+  sha256 arm:   "d256618c6bff60c9217ac5e74cb96f2b95c84f05fd31081548441ffec3826036",
+         intel: "f8acfbdc5d941198b7e275093127d08bb687b334a2f0f1e20b7484cc6af53398"
+
+  url "https://s3.amazonaws.com/packages.treasuredata.com/#{version.major}/macosx/td-agent-#{version}-#{arch}.dmg",
       verified: "s3.amazonaws.com/packages.treasuredata.com/"
   name "td-agent"
   desc "Fluentd distribution package"
@@ -10,7 +13,7 @@ cask "td-agent" do
 
   livecheck do
     url "https://td-agent-package-browser.herokuapp.com/#{version.major}/macosx"
-    regex(/href=.*?td-agent[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?td-agent[._-]?v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   pkg "td-agent-#{version}.pkg"
