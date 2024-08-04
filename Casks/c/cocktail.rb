@@ -98,7 +98,7 @@ cask "cocktail" do
       strategy :extract_plist
     end
   end
-  on_sequoia do
+  on_sequoia :or_newer do
     version "18.0"
     sha256 :no_check
 
