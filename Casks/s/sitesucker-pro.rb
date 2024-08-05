@@ -16,8 +16,8 @@ cask "sitesucker-pro" do
     end
   end
   on_monterey :or_newer do
-    version "5.4.3"
-    sha256 "7fe744afb225990ffe018b36bbd2525f0f48ec1d1eff1ebbd6e38e0165baeb05"
+    version "5.4.5"
+    sha256 "a2c03acc64ec086f5ac65b31381ba25ce9f095019fe1378d917c63ed2cce38c3"
 
     livecheck do
       url "https://ricks-apps.com/osx/sitesucker/pro-versions.plist"
