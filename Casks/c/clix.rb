@@ -13,6 +13,8 @@ cask "clix" do
     end
   end
 
+  disable! date: "2024-08-05", because: :no_longer_available
+
   app "CLIX/CLIX.app"
 
   preflight do
