@@ -359,6 +359,7 @@ jamie
 jan
 java@beta
 jdownloader
+jellyfin
 jetbrains-gateway
 jetbrains-toolbox
 jgrennison-openttd
