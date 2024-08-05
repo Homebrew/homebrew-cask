@@ -741,6 +741,7 @@ tenable-nessus-agent
 tencent-meeting
 termius
 termius@beta
+texshop
 texstudio
 thangs-sync
 theiaide
