@@ -4,7 +4,7 @@ cask "zipic" do
 
   url "https://zipic.5km.tech/Zipic%20#{version}.dmg"
   name "Zipic"
-  desc "Sleek tool for efficient image compression"
+  desc "Image compression tool"
   homepage "https://zipic.5km.tech/"
 
   livecheck do
