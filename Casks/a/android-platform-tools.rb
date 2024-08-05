@@ -1,6 +1,6 @@
 cask "android-platform-tools" do
-  version "35.0.1"
-  sha256 "0556ad1d5828b38aee125501493735ec773ab0ffc062a1c77e95ebcfed29a89b"
+  version "35.0.2"
+  sha256 "1820078db90bf21628d257ff052528af1c61bb48f754b3555648f5652fa35d78"
 
   url "https://dl.google.com/android/repository/platform-tools_r#{version}-darwin.zip",
       verified: "google.com/android/repository/"
