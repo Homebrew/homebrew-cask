@@ -26,10 +26,11 @@ cask "phpstorm" do
   binary "#{appdir}/PhpStorm.app/Contents/MacOS/phpstorm"
 
   zap trash: [
-    "~/Library/Application Support/PhpStorm#{version.major_minor}",
-    "~/Library/Caches/PhpStorm#{version.major_minor}",
-    "~/Library/Logs/PhpStorm#{version.major_minor}",
-    "~/Library/Preferences/jetbrains.phpstorm.*.plist",
-    "~/Library/Preferences/PhpStorm#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/PhpStorm#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/consentOptions",
+    "~/Library/Caches/JetBrains/PhpStorm#{version.major_minor}",
+    "~/Library/Logs/JetBrains/PhpStorm#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.PhpStorm.plist",
+    "~/Library/Preferences/jetbrains.jetprofile.asset.plist",
   ]
 end
