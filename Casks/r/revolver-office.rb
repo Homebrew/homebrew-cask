@@ -1,6 +1,6 @@
 cask "revolver-office" do
-  version "8.13.0"
-  sha256 "f93b788e3ed092d51045586b3d566de284706a7c225de177031626d21850331c"
+  version "8.12.6"
+  sha256 "2de4124eddc8422ca376a96d8e6f5fccbd552d70ecfcbc1d9940fdc62b7d3236"
 
   url "https://download.revolver.info/r#{version.major}/#{version.minor}/#{version.patch}/mac/revolveroffice#{version.no_dots}.dmg"
   name "Revolver Office"
@@ -9,7 +9,7 @@ cask "revolver-office" do
 
   livecheck do
     url "https://www.revolver.info/downloads/"
-    regex(/Revolver\s*(\d+(?:\.\d+)+)/i)
+    regex(/>\s*Revolver\s+v?(\d+(?:\.\d+)+)\s*</i)
   end
 
   depends_on macos: ">= :high_sierra"
