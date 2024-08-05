@@ -421,6 +421,7 @@ maestral
 mailbutler
 mambaforge
 marked
+mcreator
 media-center
 mediainfo
 mediamate
