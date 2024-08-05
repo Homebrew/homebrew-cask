@@ -500,6 +500,7 @@ nordlayer
 nordlocker
 nordpass
 nordvpn
+nosqlbooster-for-mongodb
 notebooks
 notesnook
 notion
