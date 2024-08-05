@@ -14,4 +14,9 @@ cask "yggdrasil" do
 
   uninstall launchctl: "yggdrasil",
             pkgutil:   "io.github.yggdrasil-network.pkg"
+
+  zap delete: [
+    "/etc/yggdrasil.conf",
+    "/Library/Preferences/Yggdrasil",
+  ]
 end
