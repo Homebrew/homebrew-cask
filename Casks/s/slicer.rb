@@ -19,6 +19,8 @@ cask "slicer" do
     end
   end
 
+  conflicts_with cask: "slicer@preview"
+
   app "Slicer.app"
 
   zap trash: [
