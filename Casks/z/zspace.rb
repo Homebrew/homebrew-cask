@@ -3,12 +3,12 @@ cask "zspace" do
   folder = on_arch_conditional arm: "ARM"
 
   on_arm do
-    version "2.8.2024071901,1721974963,071916"
-    sha256 "98f01f5a20a422af2621377e0025799f587ba84a136e5392a0ac73932bd7e647"
+    version "2.9.2024073001,1722929385,073117"
+    sha256 "7241e7c508332bddb221822c5517c84d54d3bfc3e0e192f99849bca38bd4709e"
   end
   on_intel do
-    version "2.8.2024071901,1721974757,071916"
-    sha256 "7094571cffc95f04fa0d432afd207a0942ab89a7bf3b8aa00ec3d3f4ca28a221"
+    version "2.9.2024073001,1722929262,073122"
+    sha256 "b48516682d18b7dd22357c1c1355160a6d66632d205aa32cc5ced2c01319f73e"
   end
 
   url "https://update.zenithspace.net/app/APP_ZSPACE_DESKTOP_MAC#{folder}/V#{version.csv.first}/zspace/#{version.csv.second}/zspace_mac_#{arch}_#{version.csv.first}_#{version.csv.third}.dmg",
