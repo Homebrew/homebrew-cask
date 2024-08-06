@@ -13,6 +13,7 @@ cask "plugdata" do
   end
 
   auto_updates true
+  conflicts_with cask: "plugdata@nightly"
 
   pkg "plugdata-macOS-Universal.pkg"
 
