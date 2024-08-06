@@ -1,5 +1,5 @@
 cask "nordvpn" do
-  version "8.25.0"
+  version "8.25.1"
   sha256 :no_check
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/NordVPN.pkg",
