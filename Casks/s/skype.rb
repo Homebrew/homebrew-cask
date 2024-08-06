@@ -14,6 +14,7 @@ cask "skype" do
   end
 
   auto_updates true
+  conflicts_with cask: "skype@preview"
   depends_on macos: ">= :high_sierra"
 
   app "Skype.app"
