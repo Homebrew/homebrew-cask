@@ -12,6 +12,7 @@ cask "wpsoffice" do
     skip "No version information available"
   end
 
+  conflicts_with cask: "wpsoffice-cn"
   depends_on macos: ">= :sierra"
 
   app "wpsoffice.app"
