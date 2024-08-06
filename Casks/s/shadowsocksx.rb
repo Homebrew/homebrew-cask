@@ -10,4 +10,8 @@ cask "shadowsocksx" do
   conflicts_with cask: "shadowsocksx-ng-r"
 
   app "ShadowsocksX.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
