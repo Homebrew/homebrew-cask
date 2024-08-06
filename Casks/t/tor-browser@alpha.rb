@@ -13,6 +13,7 @@ cask "tor-browser@alpha" do
   end
 
   auto_updates true
+  conflicts_with cask: "tor-browser"
   depends_on macos: ">= :sierra"
 
   app "Tor Browser Alpha.app"
