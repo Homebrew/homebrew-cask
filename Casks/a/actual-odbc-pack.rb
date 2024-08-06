@@ -15,6 +15,8 @@ cask "actual-odbc-pack" do
     end
   end
 
+  conflicts_with cask: "odbc-manager"
+
   pkg "Actual ODBC Pack.pkg"
 
   uninstall pkgutil: [
