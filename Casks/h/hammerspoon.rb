@@ -12,8 +12,8 @@ cask "hammerspoon" do
     end
   end
   on_catalina :or_newer do
-    version "0.9.100"
-    sha256 "6dcfc807c7cec692caf3b18c36cc1ea3af6b9f42699b4df277734408e4e07399"
+    version "1.0.0"
+    sha256 "5db702b55da47dc306e8f5948d91ef85bebd315ddfa29428322a0af7ed7e6a7e"
 
     url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip",
         verified: "github.com/Hammerspoon/hammerspoon/"
