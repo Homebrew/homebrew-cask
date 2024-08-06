@@ -16,6 +16,7 @@ cask "android-messages" do
   zap trash: "~/Library/Application Support/Android Messages"
 
   caveats do
+    requires_rosetta
     <<~EOS
       #{token} has been deprecated in favor of OrangeDrangon Android Messages.
         brew install --cask orangedrangon-android-messages
