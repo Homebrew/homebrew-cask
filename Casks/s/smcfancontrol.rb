@@ -22,4 +22,8 @@ cask "smcfancontrol" do
     "~/Library/Caches/com.eidac.smcFanControl#{version.major}",
     "~/Library/Preferences/com.eidac.smcFanControl#{version.major}.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
