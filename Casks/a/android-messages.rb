@@ -9,6 +9,8 @@ cask "android-messages" do
 
   deprecate! date: "2023-12-17", because: :discontinued
 
+  conflicts_with cask: "orangedrangon-android-messages"
+
   app "Android Messages.app"
 
   zap trash: "~/Library/Application Support/Android Messages"
