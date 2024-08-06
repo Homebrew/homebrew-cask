@@ -30,4 +30,8 @@ cask "slicer" do
     "~/Library/Preferences/Slicer.plist",
     "~/Library/Saved Application State/org.slicer.slicer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
