@@ -13,6 +13,8 @@ cask "thorium" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "alex313031-thorium"
+
   app "Thorium.app"
 
   zap trash: [
