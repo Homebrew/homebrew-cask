@@ -21,4 +21,8 @@ cask "thorium" do
     "~/Library/Application Support/EDRLab.ThoriumReader",
     "~/Library/Preferences/io.github.edrlab.thorium.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
