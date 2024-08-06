@@ -19,6 +19,8 @@ cask "slicer" do
     end
   end
 
+  conflicts_with cask: "slicer@preview"
+
   app "Slicer.app"
 
   zap trash: [
@@ -28,4 +30,8 @@ cask "slicer" do
     "~/Library/Preferences/Slicer.plist",
     "~/Library/Saved Application State/org.slicer.slicer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

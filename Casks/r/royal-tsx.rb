@@ -13,6 +13,7 @@ cask "royal-tsx" do
   end
 
   auto_updates true
+  conflicts_with cask: "royal-tsx@beta"
   depends_on macos: ">= :mojave"
 
   app "Royal TSX.app"
