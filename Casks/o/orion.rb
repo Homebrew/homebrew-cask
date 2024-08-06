@@ -61,7 +61,7 @@ cask "orion" do
 
     depends_on macos: :ventura
   end
-  on_sonoma :or_newer do
+  on_sonoma do
     sha256 "09ec195da5e1858ed63c2202cd63d5616183c056a6069f8cf4698701ebcd2d4c"
 
     url "https://browser.kagi.com/updates/14_0/#{version.csv.second}.zip"
@@ -72,6 +72,18 @@ cask "orion" do
     end
 
     depends_on macos: :sonoma
+  end
+  on_sequoia :or_newer do
+    sha256 "bc84ddb9d5f6e877e1b5db69a4bd683b02e423d0b9eb3edf3b6d081089960cc7"
+
+    url "https://browser.kagi.com/updates/15_0/#{version.csv.second}.zip"
+
+    livecheck do
+      url "https://cdn.kagi.com/updates/15_0/appcast.xml"
+      strategy :sparkle
+    end
+
+    depends_on macos: ">= :sequoia"
   end
 
   name "Orion Browser"
