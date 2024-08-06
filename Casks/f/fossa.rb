@@ -1,6 +1,6 @@
 cask "fossa" do
-  version "3.9.28"
-  sha256 "3f76be6dd76471af89a33dfc322e5aaf76d7b5cd9cad00599715725fc739f8f8"
+  version "3.9.29"
+  sha256 "ce22c921c0406d8188002cc0d8dbe7d23b8079766f6ecb4af898d12631e08a77"
 
   url "https://github.com/fossas/fossa-cli/releases/download/v#{version}/fossa_#{version}_darwin_amd64.zip",
       verified: "github.com/fossas/fossa-cli/"
