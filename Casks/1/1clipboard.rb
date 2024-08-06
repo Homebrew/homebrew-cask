@@ -7,10 +7,7 @@ cask "1clipboard" do
   desc "Clipboard managing app"
   homepage "https://1clipboard.io/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-08-05", because: :unmaintained
 
   app "1Clipboard.app"
 
