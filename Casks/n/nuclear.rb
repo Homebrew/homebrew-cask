@@ -1,9 +1,9 @@
 cask "nuclear" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.6.33"
-  sha256 arm:   "17535559242543a0fd49a5a61a8b19ec65a2c5be66f9e6aa46dd3ecb925e9346",
-         intel: "1c862bed01e78d2c34c4599e057a1050dc4faf8d92eabe6b1dc9b87d568488bd"
+  version "0.6.35"
+  sha256 arm:   "e8fe79f5659069f885e680c257354ab8f855a2036cfcca2ac0ea3e419e104daf",
+         intel: "3a4017d96b5361f6d5697f5e3eae2a254a45b2d3beab9c061865bd97df72e4c7"
 
   url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}-#{arch}.dmg",
       verified: "github.com/nukeop/nuclear/"
