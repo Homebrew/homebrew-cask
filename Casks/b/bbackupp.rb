@@ -4,7 +4,7 @@ cask "bbackupp" do
 
   url "https://github.com/Lakr233/BBackupp/releases/download/#{version}/BBackupp.zip"
   name "BBackupp"
-  desc "Automated iOS Backup Robot"
+  desc "iOS device backup software"
   homepage "https://github.com/Lakr233/BBackupp"
 
   livecheck do
