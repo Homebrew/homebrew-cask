@@ -21,5 +21,6 @@ cask "bbackupp" do
     "~/Library/HTTPStorages/wiki.qaq.BBackupp",
     "~/Library/HTTPStorages/wiki.qaq.BBackupp.binarycookies",
     "~/Library/Preferences/wiki.qaq.BBackupp.plist",
+    "~/Library/Saved Application State/wiki.qaq.BBackupp.savedState",
   ]
 end
