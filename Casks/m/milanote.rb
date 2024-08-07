@@ -1,6 +1,6 @@
 cask "milanote" do
-  version "3.4.79"
-  sha256 "dbc07bb925ac7a04920efda1e4d46a6d7161ee5b15567b0a065810001dd0e044"
+  version "3.4.80"
+  sha256 "5fba77368962014cd7b8be9ff66e62d7fa34f75949d0c3b49ab3fe28bb129a35"
 
   url "https://milanote-app-releases.s3.amazonaws.com/Milanote-#{version}.dmg",
       verified: "milanote-app-releases.s3.amazonaws.com/"
