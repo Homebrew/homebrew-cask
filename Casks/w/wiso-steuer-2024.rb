@@ -1,9 +1,9 @@
 cask "wiso-steuer-2024" do
   # NOTE: "2024" is not a version number, but an intrinsic part of the product name
-  version "31.09.4100,-RC1"
+  version "31.09.4100-RC1"
   sha256 "3b21d169989dd7a799c318879839a6f2bfb0e0703021f13a5e9cba3c3d32d897"
 
-  url "https://update.buhl-data.com/Updates/Steuer/2024/Mac/Files/#{version.csv.first}#{version.csv.second}/SteuerMac2024-#{version.csv.first}.dmg",
+  url "https://update.buhl-data.com/Updates/Steuer/2024/Mac/Files/#{version}/SteuerMac2024-#{version.split("-").first}.dmg",
       verified: "update.buhl-data.com/Updates/Steuer/"
   name "WISO Steuer 2024"
   desc "Tax declaration for the fiscal year 2023"
@@ -11,12 +11,12 @@ cask "wiso-steuer-2024" do
 
   livecheck do
     url "https://update.buhl-data.com/Updates/Steuer/2024/Mac/Aktuell/appcast-steuer.xml"
-    regex(%r{/v?(\d+(?:\.\d+)+)([^/]+)?/SteuerMac2024[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{/v?(\d+(?:\.\d+)+[^/]*)/SteuerMac2024[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :sparkle do |item, regex|
       match = item.url&.match(regex)
       next if match.blank?
 
-      match[2] ? "#{match[1]},#{match[2]}" : match[1]
+      match[1]
     end
   end
 
