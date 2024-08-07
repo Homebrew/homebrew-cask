@@ -1,9 +1,9 @@
 cask "switchhosts" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.1.2.6086"
-  sha256 arm:   "85c2918308c849c3f70de5436b0e597107e925283c925e7d9b69496c26f31466",
-         intel: "8a8556ca83496ffd965af493a139e84cec25c38e9f64eb26f1a134a621bc9ec3"
+  version "4.2.0.6119"
+  sha256 arm:   "28491e01af40f1f9e4b7032177cdb39b6af1cc92813958c6820c1a1758fda611",
+         intel: "71e1ac2fd425a80fc6ad290b2849c3f1bda8fe385d4f3f9cd205ddf0be7ddc32"
 
   url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts_mac_#{arch}_#{version}.dmg",
       verified: "github.com/oldj/SwitchHosts/"
