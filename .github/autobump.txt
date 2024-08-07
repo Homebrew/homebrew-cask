@@ -372,6 +372,7 @@ jupyterlab
 juxtacode
 kaleidoscope
 kdenlive
+kdrive
 keyboard-cowboy
 keyman
 keymapp
