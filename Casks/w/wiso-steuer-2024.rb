@@ -11,12 +11,12 @@ cask "wiso-steuer-2024" do
 
   livecheck do
     url "https://update.buhl-data.com/Updates/Steuer/2024/Mac/Aktuell/appcast-steuer.xml"
-    regex(%r{/Files/(\d+(?:\.\d+)+)([_-]\w+\d+)/SteuerMac2024[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{/v?(\d+(?:\.\d+)+)([^/]+)?/SteuerMac2024[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :sparkle do |item, regex|
       match = item.url&.match(regex)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      match[2] ? "#{match[1]},#{match[2]}" : match[1]
     end
   end
 
