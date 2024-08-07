@@ -1,15 +1,15 @@
 cask "holavpn" do
-  version "2.80,1.213.148"
-  sha256 "d479d02813b3b10bd129cfe8073162c43ae718d2124a670a62f398e0f694f088"
+  version "3.1,1.228.37"
+  sha256 "27acdd985f66b6ab50ab17384430ab3cd6eb6847d8f30c342f8f9975f5f35eb9"
 
-  url "https://cdn4.hola.org/static/HolaVPN#{version.csv.first.major}E-#{version.csv.first}-#{version.csv.second}.dmg"
+  url "https://cdn4.hola.org/static/HolaVPN2E-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Hola VPN"
   desc "Peer-to-peer VPN"
   homepage "https://hola.org/"
 
   livecheck do
-    url "https://hola.org/download"
-    regex(/"iosmac2e":"(#{version.csv.first.major}[^"]+)"(?:,"iosmac2e_next":"[^"]+")?,"iosmac2e_build":"([^"]+)"/i)
+    url "https://hola.org/products/desktop"
+    regex(/svc[_-]versions.*?"iosmac2e":\s*"(\d+(?:\.\d+)*)".*?"iosmac2e[_-]build":\s*"(\d+(?:\.\d+)*)"/i)
     strategy :page_match do |page|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
@@ -17,12 +17,16 @@ cask "holavpn" do
 
   depends_on macos: ">= :catalina"
 
-  app "HolaVPN#{version.csv.first.major}E.app"
+  app "HolaVPN2E.app"
 
   zap trash: [
-    "~/Documents/holavpn#{version.csv.first.major}e.db*",
-    "~/Library/Caches/org.hola.hola#{version.csv.first.major}e-nosdk",
-    "~/Library/Preferences/org.hola.hola#{version.csv.first.major}e-nosdk.plist",
-    "~/Library/Saved Application State/org.hola.hola#{version.csv.first.major}e-nosdk~iosmac.savedState",
+    "~/Documents/holavpn2e.db*",
+    "~/Library/Application Support/Hola2E",
+    "~/Library/Caches/org.hola.hola2e*",
+    "~/Library/HTTPStorages/org.hola.hola2e*",
+    "~/Library/LaunchAgents/org.hola.svc.plist",
+    "~/Library/Preferences/group.org.hola.hola2e.widget-container.plist",
+    "~/Library/Preferences/org.hola.hola2e*.plist",
+    "~/Library/Saved Application State/org.hola.hola2e*.savedState",
   ]
 end
