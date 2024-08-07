@@ -378,6 +378,7 @@ keymapp
 keysafe
 kindle-previewer
 kitty
+kiwi-for-gmail
 kkbox
 krisp
 lagrange
