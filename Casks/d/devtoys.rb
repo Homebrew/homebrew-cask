@@ -1,9 +1,9 @@
 cask "devtoys" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.4.0"
-  sha256 arm:   "9dbaf65cf5059da45fec0b6669b22df06e7b24de343c648cc5fda89ceffeb4c3",
-         intel: "e75d28c52cdd3f672fe6c56bf995ca5b2229e43dad8a18b2438c90c7c79df8a2"
+  version "2.0.5.0"
+  sha256 arm:   "34742eb7e10652044599ca08ccef174cf84e804513fd9ae2522c1229b9e36cf3",
+         intel: "9f9e31d64330349538a61a635ccae758c7ad850a94de12f40df24ab7acb522ab"
 
   url "https://github.com/DevToys-app/DevToys/releases/download/v#{version}/devtoys_osx_#{arch}.zip"
   name "DevToys"
