@@ -8,9 +8,13 @@ cask "chatgpt" do
   desc "OpenAI's official ChatGPT desktop app"
   homepage "https://chatgpt.com/"
 
+  # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
+  # work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://persistent.oaistatic.com/sidekick/public/sparkle_public_appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.map { |item| "#{item.short_version},#{item.version}" }
+    end
   end
 
   auto_updates true
