@@ -18,6 +18,10 @@ cask "jamulus" do
   desc "Play music online with friends"
   homepage "https://jamulus.io/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/llcon/rss?path=/Jamulus"
+  end
+
   app "Jamulus.app"
   app "JamulusServer.app"
 end
