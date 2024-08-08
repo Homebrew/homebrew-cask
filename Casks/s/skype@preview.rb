@@ -9,7 +9,7 @@ cask "skype@preview" do
   homepage "https://www.skype.com/en/insider/"
 
   livecheck do
-    url "https://go.skype.com/mac.preview.download"
+    url "https://get.skype.com/go/getskype-skypeformacinsider"
     strategy :header_match
   end
 
