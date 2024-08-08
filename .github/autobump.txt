@@ -646,6 +646,7 @@ rio
 rippling
 rive
 roblox
+robloxstudio
 rocket-typist
 rode-central
 rotki
