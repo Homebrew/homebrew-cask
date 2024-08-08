@@ -1,9 +1,9 @@
 cask "aqua" do
   arch arm: "-aarch64"
 
-  version "2024.1.2,241.17011.162"
-  sha256 arm:   "1a3766eb93b6fefb6c2a18c3a424309748af64981d5d2ee95114be1ddcdf5167",
-         intel: "ba1918f9c91dd034e64c1d65d51b050bedaed1d7502797d38265d9d6250740c1"
+  version "2024.2,242.20224.331"
+  sha256 arm:   "2da73b2896cf8c7114291f7ab64730d494ed1adca83542b56702a6fb2fcaa92d",
+         intel: "0ea9875335a53d60722f91a7059847d1da857788fe3362685bf1e66dfe9aafed"
 
   url "https://download.jetbrains.com/aqua/aqua-#{version.csv.first}#{arch}.dmg"
   name "Aqua"
