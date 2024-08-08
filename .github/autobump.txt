@@ -432,6 +432,7 @@ memory-cleaner
 mendeley-reference-manager
 messenger
 metasploit
+mi
 mi@beta
 microblog
 microsoft-auto-update
