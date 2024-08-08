@@ -8,12 +8,6 @@ cask "cork" do
   desc "GUI companion app for Homebrew"
   homepage "https://www.corkmac.app/"
 
-  livecheck do
-    url :url
-    regex(/v?(\d+(?:[.-]\d+)+)/i)
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :ventura"
 
   app "Cork.app"
