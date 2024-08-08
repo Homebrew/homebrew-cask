@@ -643,6 +643,7 @@ rio
 rippling
 rive
 roblox
+rocket-typist
 rode-central
 rotki
 royal-tsx
