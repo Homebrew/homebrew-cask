@@ -27,8 +27,4 @@ cask "sony-ps-remote-play" do
     "~/Library/Preferences/com.playstation.RemotePlay.plist",
     "~/Library/WebKit/com.playstation.RemotePlay",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
