@@ -277,6 +277,7 @@ font-iosevka-ss15
 font-iosevka-ss16
 font-iosevka-ss17
 font-iosevka-ss18
+font-lxgw-neozhisong
 font-sarasa-gothic
 fork
 forkgram-telegram
