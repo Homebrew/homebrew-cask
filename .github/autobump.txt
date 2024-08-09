@@ -710,6 +710,7 @@ soulver
 sound-control
 sourcetree
 sourcetree@beta
+space-capsule
 spacedrive
 spark-ar-studio
 sparkle
