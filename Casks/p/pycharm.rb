@@ -1,9 +1,9 @@
 cask "pycharm" do
   arch arm: "-aarch64"
 
-  version "2024.1.5,241.18968.29"
-  sha256 arm:   "7bec1964f65d0768ff631023e38ea781e3ec82f02a45b8a0b41c085d770751c0",
-         intel: "68cfbebb5f1fbd949a66d86240ec2153b2d84119464a7fb80fd719a693b03f4e"
+  version "2024.1.6,241.19072.16"
+  sha256 arm:   "d9251d697afc55d9c19f31f540781fb73219b798e865644e74ca8e74c820bea3",
+         intel: "d0e3097b947a0a842744bebfe0b32a0dac552a46e9b93044a6f3ec26df128214"
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
   name "PyCharm"
