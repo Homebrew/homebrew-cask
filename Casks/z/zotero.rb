@@ -1,6 +1,6 @@
 cask "zotero" do
-  version "6.0.37"
-  sha256 "b050f0a776122c114c22ba7ef0e0430c524a8fb189dd68cc73627612a3d140d5"
+  version "7.0"
+  sha256 "c68a6334c425ed189f2866b106ae4f52c9caefa2f18bfb4f2480d1f6a8d1e316"
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   name "Zotero"
@@ -24,8 +24,4 @@ cask "zotero" do
     "~/Library/Preferences/org.zotero.zotero.plist",
     "~/Library/Saved Application State/org.zotero.zotero.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

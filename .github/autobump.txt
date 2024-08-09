@@ -43,6 +43,7 @@ anki
 ankiapp
 anydesk
 anydo
+anythingllm
 anytype
 apidog
 apidog-europe
@@ -340,6 +341,7 @@ hyperkey
 ibackup-viewer
 ibkr
 ibm-cloud-cli
+idrive
 iina-plus
 imazing
 imhex
@@ -710,6 +712,7 @@ soulver
 sound-control
 sourcetree
 sourcetree@beta
+space-capsule
 spacedrive
 spark-ar-studio
 sparkle
