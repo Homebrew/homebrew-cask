@@ -7,6 +7,7 @@ cask "font-satoshi" do
   desc "Modernist sans serif typeface"
   homepage "https://www.fontshare.com/fonts/satoshi"
 
+  font "Satoshi_Complete/Fonts/OTF/Satoshi-Black.otf"
   font "Satoshi_Complete/Fonts/OTF/Satoshi-BlackItalic.otf"
   font "Satoshi_Complete/Fonts/OTF/Satoshi-Bold.otf"
   font "Satoshi_Complete/Fonts/OTF/Satoshi-BoldItalic.otf"
