@@ -7,7 +7,7 @@ cask "betterdisplay" do
       skip "Legacy version"
     end
   end
-  on_monterey do    
+  on_monterey do
     version "2.3.9"
     sha256 "3ee043fd5893ab354efbc4c9a92295a21b365e55af34cc64612255878b746722"
 
