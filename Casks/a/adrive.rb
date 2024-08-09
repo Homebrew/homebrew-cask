@@ -3,7 +3,7 @@ cask "adrive" do
 
   version "6.1.0"
   sha256 arm:   "39f00f245f6bebddfa30010233c4a3d5e731b7d350317dbc3b54c18fdfe8c34d",
-         intel: "fcc8357e11b04de3ff8ea1222c4829bea23e2e75927f60cf9feeba7e42519960"
+         intel: "058288035577b32bf16815662c2aa8825cc52216ca45f814a566bc32d751fa22"
 
   url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-#{version}#{arch}.dmg",
       verified:   "cdn.aliyundrive.net/",
