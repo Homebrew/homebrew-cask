@@ -11,8 +11,15 @@ cask "roam" do
   homepage "https://ro.am/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://ro.am/release-notes"
+    regex(/version:\s*"([^"]+)"/i)
+    strategy :page_match do |page, regex|
+      js_match = page[/src=.*?(index[._-]\w+\.js)/i, 1]
+      next if js_match.blank?
+
+      js_page = Homebrew::Livecheck::Strategy.page_content("https://ro.am/website/#{js_match}")
+      js_page[:content]&.scan(regex)&.map { |match| match[0] }
+    end
   end
 
   auto_updates true
