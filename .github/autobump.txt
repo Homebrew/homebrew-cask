@@ -43,6 +43,7 @@ anki
 ankiapp
 anydesk
 anydo
+anythingllm
 anytype
 apidog
 apidog-europe
