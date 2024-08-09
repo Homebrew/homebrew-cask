@@ -309,6 +309,7 @@ github@beta
 gitify
 gitkraken
 gitkraken-cli
+gitkraken-on-premise-serverless
 glyphs
 gns3
 godspeed
