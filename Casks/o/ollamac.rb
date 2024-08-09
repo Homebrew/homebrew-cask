@@ -1,6 +1,6 @@
 cask "ollamac" do
-  version "2.1.2"
-  sha256 "9072d9a172204f333853faebe16b4e9393a026f244d02397f54d249062b0dfac"
+  version "3.0.0"
+  sha256 "7bfba357b595de47b43b2d1e396f98db1130c00ead0829f5c3641f51c834fd5d"
 
   url "https://github.com/kevinhermawan/Ollamac/releases/download/v#{version}/Ollamac-#{version}.dmg"
   name "Ollamac"
