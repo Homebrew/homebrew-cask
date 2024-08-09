@@ -341,6 +341,7 @@ hyperkey
 ibackup-viewer
 ibkr
 ibm-cloud-cli
+idrive
 iina-plus
 imazing
 imhex
