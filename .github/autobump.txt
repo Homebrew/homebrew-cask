@@ -650,6 +650,7 @@ rippling
 rive
 roblox
 robloxstudio
+roboform
 rocket-typist
 rode-central
 rotki
