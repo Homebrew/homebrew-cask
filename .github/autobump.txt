@@ -140,6 +140,7 @@ cookie
 copilot
 copilot-for-xcode
 copyq
+core-tunnel
 coscreen
 coteditor
 couchbase-server-community
