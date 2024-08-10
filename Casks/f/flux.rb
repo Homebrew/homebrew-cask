@@ -7,12 +7,9 @@ cask "flux" do
   desc "Screen colour temperature controller"
   homepage "https://justgetflux.com/"
 
-  # The sparkle feed "https://justgetflux.com/mac/macflux.xml" is currently
-  # unstable and often outputs the older version 40.1 as the latest release.
-  # As a workaround, we extract the version from plist of unversioned download.
   livecheck do
-    url "https://justgetflux.com/mac/Flux.zip"
-    strategy :extract_plist
+    url "https://justgetflux.com/mac/macflux.xml"
+    strategy :sparkle
   end
 
   auto_updates true
