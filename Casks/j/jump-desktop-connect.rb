@@ -12,10 +12,8 @@ cask "jump-desktop-connect" do
     sha256 "94a3f4c2100335fef6c254fe0bd565d4a59af1b78564f026ac7cbec940c423df"
 
     livecheck do
-      url :url
-      strategy :extract_plist do |versions|
-        versions.values.filter_map(&:short_version).first
-      end
+      url "https://mirror.jumpdesktop.com/downloads/connect/connect-mac.xml"
+      strategy :sparkle, &:short_version
     end
   end
 
@@ -23,6 +21,8 @@ cask "jump-desktop-connect" do
   name "Jump Desktop Connect"
   desc "Remote desktop app"
   homepage "https://jumpdesktop.com/connect/"
+
+  auto_updates true
 
   pkg ".jdc.sparkle_guided.pkg"
 
