@@ -237,6 +237,7 @@ figma@beta
 fiji
 finbar
 finch
+find-any-file
 firealpaca
 firefly
 firefly-shimmer
