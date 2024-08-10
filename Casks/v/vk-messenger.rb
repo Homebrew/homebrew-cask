@@ -20,4 +20,8 @@ cask "vk-messenger" do
     "~/Library/Preferences/com.vk.messages.plist",
     "~/Library/Saved Application State/com.vk.messages.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
