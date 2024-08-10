@@ -1,4 +1,4 @@
-cask "intel-psxe-ce-c-plus-plus" do
+cask "intel-psxe-ce-c++" do
   version "2020.2.899,16768"
   sha256 "d224821978c56d3744ee04ae1f1e400e2b6294a4d6186bd06d8c4fd6565c4967"
 

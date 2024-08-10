@@ -1,4 +1,4 @@
-cask "xournal-plus-plus" do
+cask "xournal++" do
   version "1.2.3"
   sha256 "3fdd861352c1663c43d7a4cd30f0c2297f9d593acac23d311ecd63ec9a7cd231"
 

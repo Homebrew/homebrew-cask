@@ -1,4 +1,4 @@
-cask "tla-plus-toolbox" do
+cask "tla+-toolbox" do
   version "1.7.1"
   sha256 "78e7d0ecbcba63ef7f13f9f315bfb0365a4f1d952caaa11a0a6f86a1bae5ac99"
 

@@ -1,4 +1,4 @@
-cask "qlc-plus" do
+cask "qlc+" do
   version "4.13.1"
   sha256 "d4f9c3d81de0c3c957d55edc9f8449edb1e64cdbc5084e6d1c9336dcb46c4585"
 
