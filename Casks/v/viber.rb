@@ -1,8 +1,10 @@
 cask "viber" do
+  arch arm: "_arm"
+
   version "23.3.0,2330"
   sha256 :no_check
 
-  url "https://download.viber.com/desktop/mac/Viber.dmg"
+  url "https://download.viber.com/desktop/mac#{arch}/Viber.dmg"
   name "Viber"
   desc "Calling and messaging application focusing on security"
   homepage "https://www.viber.com/"
@@ -13,7 +15,7 @@ cask "viber" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Viber.app"
 
@@ -28,8 +30,4 @@ cask "viber" do
         "~/Library/Saved Application State/com.viber.osx.savedState",
       ],
       rmdir: "~/Documents/ViberDownloads"
-
-  caveats do
-    requires_rosetta
-  end
 end
