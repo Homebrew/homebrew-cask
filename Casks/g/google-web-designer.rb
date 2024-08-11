@@ -8,8 +8,8 @@ cask "google-web-designer" do
   homepage "https://www.google.com/webdesigner/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://support.google.com/webdesigner/topic/6350071"
+    regex(/Shell\s+Build\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Google Web Designer.app"
