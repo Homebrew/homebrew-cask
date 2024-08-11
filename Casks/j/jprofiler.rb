@@ -5,10 +5,10 @@ cask "jprofiler" do
   url "https://download-gcdn.ej-technologies.com/jprofiler/jprofiler_macos_#{version.dots_to_underscores}.dmg"
   name "JProfiler"
   desc "Java profiler"
-  homepage "https://www.ej-technologies.com/products/jprofiler/overview.html"
+  homepage "https://www.ej-technologies.com/jprofiler"
 
   livecheck do
-    url "https://www.ej-technologies.com/feeds/jprofiler/"
+    url "https://www.ej-technologies.com/feeds/jprofiler"
     regex(/JProfiler\s*Release\s*v?(\d+(?:\.\d+)+)/i)
   end
 
