@@ -1,8 +1,8 @@
 cask "asset-catalog-tinkerer" do
-  version "2.7"
-  sha256 "2034e46b75d7a156d917b1a82b510674d037199826a3c86390f37540ee15cd4b"
+  version "2.9"
+  sha256 "ab18ece5d597960f9002c84cc800b61b2b22f4f61a63d6695dac378340ded5c0"
 
-  url "https://github.com/insidegui/AssetCatalogTinkerer/releases/download/#{version}/AssetCatalogTinkerer_v#{version}.zip"
+  url "https://github.com/insidegui/AssetCatalogTinkerer/releases/download/#{version}/AssetCatalogTinkerer_v#{version}-#{version.no_dots.ljust(3, "0")}.zip"
   name "Asset Catalog Tinkerer"
   desc "Browse/extract images from .car files"
   homepage "https://github.com/insidegui/AssetCatalogTinkerer"
