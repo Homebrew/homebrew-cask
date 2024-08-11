@@ -7,12 +7,7 @@ cask "soundboosterlite" do
   desc "App for an enhanced audio experience"
   homepage "https://froyosoft.com/soundbooster.php"
 
-  livecheck do
-    url :url
-    strategy :extract_plist do |items|
-      items["com.froyosoft.SoundBoosterLite"].short_version
-    end
-  end
+  deprecate! date: "2024-08-11", because: :unmaintained
 
   pkg "SoundBoosterLite.pkg"
 
