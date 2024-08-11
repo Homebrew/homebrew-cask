@@ -7,10 +7,7 @@ cask "rubymotion" do
   desc "Write cross-platform native apps in Ruby"
   homepage "http://www.rubymotion.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-08-11", because: :unmaintained
 
   installer manual: "RubyMotion Installer.app"
 
