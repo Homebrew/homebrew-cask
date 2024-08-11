@@ -7,11 +7,6 @@ cask "approf" do
   desc "Native app for pprof"
   homepage "https://github.com/moderato-app/approf"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :sonoma"
 
