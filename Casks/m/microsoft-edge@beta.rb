@@ -2,12 +2,12 @@ cask "microsoft-edge@beta" do
   linkid = on_arch_conditional arm: "2099618", intel: "2069439"
 
   on_arm do
-    version "128.0.2739.9,5f1476ff-415d-4c5c-a797-0d65143f781f"
-    sha256 "b18a180c586ef783e3014f9314e4daba98d9c6f7e26119386ce9ee9bd1a4e0d7"
+    version "128.0.2739.22,cf95a918-859f-494a-b586-f6ae742d5252"
+    sha256 "42e556f647a68d33c9e4127eff7b792453c918ea77a112b570f9f7e52d53572b"
   end
   on_intel do
-    version "128.0.2739.9,00927ab1-fb1c-4357-9ad9-1191bf816f13"
-    sha256 "c7737c96653ae6aae1c08572d07a5cdf87195a7ffeefcc20a5b9c894ef052b44"
+    version "128.0.2739.22,d555a433-b363-4a64-b0e8-5b33365f5259"
+    sha256 "d08e8cf5f4cf9da8b9b6722d0a523bb4c1fdbd62e73a26e902637cd78e0d6236"
   end
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdgeBeta-#{version.csv.first}.pkg"
