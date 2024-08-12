@@ -11,13 +11,17 @@ cask "opencpn" do
   livecheck do
     url :url
     regex(/^OpenCPN[._-]?v?(\d+(?:\.+\d+)+)((?:-\d+)?\+\d+\.\h+)?\.(?:dmg|pkg)$/i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
-        next if match.blank?
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
 
-        match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
-      end
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+        end
+      end.flatten
     end
   end
 
