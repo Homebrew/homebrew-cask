@@ -1,6 +1,6 @@
 cask "proton-drive" do
-  version "1.7.0"
-  sha256 "0c718f96ca67735ef66aae36bc309aace212f943e37c17fc261731b2a4952ff7"
+  version "1.8.0"
+  sha256 "3035b3b64dc0d3b9732c654cd70e0f4b89c40e988ce74e314df7500efc94d493"
 
   url "https://proton.me/download/drive/macos/ProtonDrive-#{version}.dmg"
   name "Proton Drive"
