@@ -1,5 +1,5 @@
 cask "karafun" do
-  version "2.6.2"
+  version "2.7.0"
   sha256 :no_check
 
   url "https://www.karafun.com/download/mac.html"
