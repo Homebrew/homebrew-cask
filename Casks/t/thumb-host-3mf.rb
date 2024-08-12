@@ -4,8 +4,8 @@ cask "thumb-host-3mf" do
        
   url "https://github.com/DavidPhillipOster/ThumbHost3mf/releases/download/#{version}/ThumbHost3mfVersion#{version}.zip"
   name "ThumbHost3mf"
-  desc "Menu bar status indicator"
-  homepage "A macOS app that hosts a thumbnail provider that makes the Finder displays the thumbnails built in to some .gcode, .bgcode, and .3mf files."
+  desc "A macOS app that hosts a thumbnail provider that makes the Finder displays the thumbnails built in to some .gcode, .bgcode, and .3mf files."
+  homepage "https://github.com/DavidPhillipOster/ThumbHost3mf/"
 
   app "ThumbHost3mf.app"
 end
