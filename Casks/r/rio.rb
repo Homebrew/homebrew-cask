@@ -1,6 +1,6 @@
 cask "rio" do
-  version "0.1.5"
-  sha256 "3877ca514a139028a21bf17618952e904c8b8d301ebbb33164df86a122490999"
+  version "0.1.6"
+  sha256 "875d8972e117d97b573ca47e811e4fb53020c218f6e6d017d02c0ea93e75c7a1"
 
   url "https://github.com/raphamorim/rio/releases/download/v#{version}/Rio-v#{version}.dmg"
   name "Rio"
