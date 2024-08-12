@@ -1,6 +1,6 @@
 cask "spatial" do
-  version "0.6.1"
-  sha256 "29aa4cfe759c266a4240728a961ffc7bc7633b3a3d27ff407d979bf4b6cc2d28"
+  version "0.6.2"
+  sha256 "50b4c64e6c58e62e1d1e67ab03ac71cee6db88e1d081e6e159e9387d82655eb8"
 
   url "https://www.mikeswanson.com/spatial/releases/spatial_#{version}.zip"
   name "Spatial"
