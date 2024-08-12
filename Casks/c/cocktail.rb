@@ -87,8 +87,19 @@ cask "cocktail" do
       strategy :extract_plist
     end
   end
-  on_sonoma :or_newer do
-    version "17.5"
+  on_sonoma do
+    version "17.5.1"
+    sha256 :no_check
+
+    url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
+
+    livecheck do
+      url :url
+      strategy :extract_plist
+    end
+  end
+  on_sequoia :or_newer do
+    version "18.0.1"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
