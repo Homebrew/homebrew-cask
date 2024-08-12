@@ -9,7 +9,7 @@ cask "aws-vpn-client" do
   homepage "https://aws.amazon.com/vpn/"
 
   livecheck do
-    url "https://docs.aws.amazon.com/vpn/latest/clientvpn-user/client-vpn-connect-macos.html"
+    url "https://docs.aws.amazon.com/vpn/latest/clientvpn-user/client-vpn-connect-macos-release-notes.html"
     regex(%r{href=.*?v?(\d+(?:\.\d+)+)/AWS_VPN_Client\.pkg}i)
   end
 
