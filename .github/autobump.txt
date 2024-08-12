@@ -36,6 +36,7 @@ altair-graphql-client
 amazon-chime
 amazon-q
 amie
+ammonite
 android-studio
 android-studio-preview@beta
 android-studio-preview@canary
