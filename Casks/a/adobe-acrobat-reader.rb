@@ -5,7 +5,7 @@ cask "adobe-acrobat-reader" do
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   name "Adobe Acrobat Reader"
   desc "View, print, and comment on PDF documents"
-  homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
+  homepage "https://www.adobe.com/acrobat/pdf-reader.html"
 
   livecheck do
     url "https://rdc.adobe.io/reader/products?lang=en&site=landing&os=Mac%20OS%2010.15&api_key=dc-get-adobereader-cdn"
