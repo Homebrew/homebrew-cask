@@ -1,5 +1,5 @@
 cask "jagex" do
-  version "1.17.1"
+  version "1.17.2"
   sha256 :no_check
 
   url "https://cdn.jagex.com/Jagex%20Launcher%20Installer.dmg"
