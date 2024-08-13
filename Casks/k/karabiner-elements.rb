@@ -9,9 +9,6 @@ cask "karabiner-elements" do
       sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
     end
 
-    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
-        verified: "github.com/pqrs-org/Karabiner-Elements/"
-
     livecheck do
       skip "Legacy version"
     end
@@ -36,20 +33,43 @@ cask "karabiner-elements" do
               pkgutil:   "org.pqrs.Karabiner-Elements",
               delete:    "/Library/Application Support/org.pqrs/"
   end
-  on_catalina do
-    version "13.7.0"
-    sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
+  on_catalina :or_newer do
+    on_catalina do
+      version "13.7.0"
+      sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
 
-    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
-        verified: "github.com/pqrs-org/Karabiner-Elements/"
+      livecheck do
+        skip "Legacy version"
+      end
+    end
+    on_big_sur do
+      version "14.13.0"
+      sha256 "826270a21b7f4df9b9a8c79c9aad4de8f48021f58eaacbee1d4f150c963c6cbc"
 
-    livecheck do
-      skip "Legacy version"
+      livecheck do
+        skip "Legacy version"
+      end
+    end
+    on_monterey do
+      version "14.13.0"
+      sha256 "826270a21b7f4df9b9a8c79c9aad4de8f48021f58eaacbee1d4f150c963c6cbc"
+
+      livecheck do
+        skip "Legacy version"
+      end
+    end
+    on_ventura :or_newer do
+      version "15.0.0"
+      sha256 "c560ac6e43fd7159c38d61538169792ab47bc04a5c41833831df7da5323f975e"
+
+      livecheck do
+        url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
+        strategy :sparkle
+      end
     end
 
     pkg "Karabiner-Elements.pkg"
-  end
-  on_catalina :or_newer do
+
     uninstall early_script: {
                 executable: "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
                 sudo:       true,
@@ -78,47 +98,9 @@ cask "karabiner-elements" do
               delete:       "/Library/Application Support/org.pqrs/"
     # The system extension 'org.pqrs.Karabiner-DriverKit-VirtualHIDDevice*' should not be uninstalled by Cask
   end
-  on_big_sur do
-    version "14.13.0"
-    sha256 "826270a21b7f4df9b9a8c79c9aad4de8f48021f58eaacbee1d4f150c963c6cbc"
 
-    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
-        verified: "github.com/pqrs-org/Karabiner-Elements/"
-
-    livecheck do
-      skip "Legacy version"
-    end
-
-    pkg "Karabiner-Elements.pkg"
-  end
-  on_monterey do
-    version "14.13.0"
-    sha256 "826270a21b7f4df9b9a8c79c9aad4de8f48021f58eaacbee1d4f150c963c6cbc"
-
-    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
-        verified: "github.com/pqrs-org/Karabiner-Elements/"
-
-    livecheck do
-      skip "Legacy version"
-    end
-
-    pkg "Karabiner-Elements.pkg"
-  end
-  on_ventura :or_newer do
-    version "15.0.0"
-    sha256 "c560ac6e43fd7159c38d61538169792ab47bc04a5c41833831df7da5323f975e"
-
-    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
-        verified: "github.com/pqrs-org/Karabiner-Elements/"
-
-    livecheck do
-      url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
-      strategy :sparkle
-    end
-
-    pkg "Karabiner-Elements.pkg"
-  end
-
+  url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+      verified: "github.com/pqrs-org/Karabiner-Elements/"
   name "Karabiner Elements"
   desc "Keyboard customiser"
   homepage "https://karabiner-elements.pqrs.org/"
