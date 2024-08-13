@@ -1,6 +1,6 @@
 cask "bbackupp" do
-  version "2.13.73"
-  sha256 "f48b40c5d97d2f196730e51617de72b7d3526afcf5b8fd0e5fc67ba8a4807577"
+  version "2.14.74"
+  sha256 "2870ff5a6c5c7b0a6c3af37d52eb6c2c6546dae8cb503aa579363d1d8bd260c5"
 
   url "https://github.com/Lakr233/BBackupp/releases/download/#{version}/BBackupp.zip"
   name "BBackupp"
