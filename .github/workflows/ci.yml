@@ -179,9 +179,14 @@ jobs:
             cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
 
             was_installed = cask.installed?
-            manual_installer = cask.artifacts.any? { |artifact|
-              artifact.is_a?(Cask::Artifact::Installer::ManualInstaller)
-            }
+            manual_installer = cask.artifacts.any? do |artifact|
+              if defined?(artifact.manual_install)
+                artifact.manual_install
+              else
+                # TODO: Remove this branch when ManualInstaller is removed from brew
+                artifact.is_a?(Cask::Artifact::Installer::ManualInstaller)
+              end
+            end
 
             macos_requirement_satisfied = if macos_requirement = cask.depends_on.macos
               macos_requirement.satisfied?
