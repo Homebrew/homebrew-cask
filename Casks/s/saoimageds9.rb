@@ -2,25 +2,27 @@ cask "saoimageds9" do
   arch arm: "arm64", intel: "x86"
 
   # NOTE: "9" is not a version number, but an intrinsic part of the product name
-  version "8.5"
 
   on_big_sur do
-    sha256 "46917bdab7fd22cb4cfd85145e9813c59e03dc1468f961172ad5ca396616fbb4"
+    version "8.5"
+    sha256 arm:   "b50a92cc729e5054aaf511911a189dea9cd13c4f6685a53c404b77efbc071854",
+           intel: "46917bdab7fd22cb4cfd85145e9813c59e03dc1468f961172ad5ca396616fbb4"
 
-    url "https://ds9.si.edu/download/macosbigsurx86/SAOImageDS9%20#{version}.dmg",
-        verified: "ds9.si.edu/download/",
-        using:    :homebrew_curl
+    url "https://ds9.si.edu/download/macosbigsur#{arch}/SAOImageDS9%20#{version}.dmg",
+        verified: "ds9.si.edu/download/"
   end
   on_monterey do
-    sha256 arm:   "309367b8cfc45eeb481e1cddbb03c3bb615d17eca83fb6c215755bef1e2a9205",
-           intel: "473bf1c8421f1120bfa39543a469b91f95ae7509807f911ee44f5e69868424ec"
+    version "8.6"
+    sha256 arm:   "f582d22a632de2b1ec60f164daa42905ad201d4681a2e933b7c03722b2fbd001",
+           intel: "e3ca246b630c291b75d2e20d4c23326775e77e3b8a378104494a16342d017749"
 
     url "https://ds9.si.edu/download/macosmonterey#{arch}/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/"
   end
   on_ventura :or_newer do
-    sha256 arm:   "a9c21eb7d05840723849b6a95cc3195cc16b2f43209f037ccc2ca598bee52a05",
-           intel: "750810c657fcd8e6ef917b189415a940c6ef8d4c46aafe460f48f3ba3f691389"
+    version "8.6"
+    sha256 arm:   "7baba4d9aaba0cd29f3ae10d1f42ae440528ffbb24fa2014a27f9a36d70ffa70",
+           intel: "f539ffae60b8bac6e362952d457587cc4be262a1468523c56c6e65a11d813919"
 
     url "https://ds9.si.edu/download/macosventura#{arch}/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/"
