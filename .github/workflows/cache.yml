@@ -44,4 +44,4 @@ jobs:
 
       - name: Install Homebrew Gems
         id: gems
-        run: brew install-bundler-gems --groups=audit,bootsnap,style
+        run: brew install-bundler-gems --groups=audit,style
