@@ -1,6 +1,6 @@
 cask "vagrant-vmware-utility" do
-  version "1.0.22"
-  sha256 "85ef6375d8a98cfb007d7dd9f7e4af5924b9a4ad102498e1d3ececdcf8bb1eb4"
+  version "1.0.23"
+  sha256 "79bcafaf49b9d32474702384e9777c249872f21be4e2c80b703dbc100674b57b"
 
   url "https://releases.hashicorp.com/vagrant-vmware-utility/#{version}/vagrant-vmware-utility_#{version}_darwin_amd64.dmg"
   name "Vagrant VMware Utility"
