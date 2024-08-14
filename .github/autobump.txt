@@ -80,6 +80,7 @@ bike
 bilibili
 binance
 bitwarden
+bitwig-studio
 blender@lts
 blockbench
 bloop
