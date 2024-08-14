@@ -15,4 +15,8 @@ cask "xournal-plus-plus" do
     "~/.xournalpp",
     "~/Library/Saved Application State/com.github.xournalpp.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
