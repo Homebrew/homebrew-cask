@@ -11,6 +11,11 @@ cask "blockstream-green" do
   desc "Multi-platform Bitcoin and Liquid wallet"
   homepage "https://blockstream.com/green/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Blockstream Green.app"
 
   zap trash: [
