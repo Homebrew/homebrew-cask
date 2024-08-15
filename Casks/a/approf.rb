@@ -1,6 +1,6 @@
 cask "approf" do
-  version "14.1.2"
-  sha256 "82d0850f1cd7d2e7429650ef99f4ea9bd42dff23f3fed0ea7ec221d0dde3d52e"
+  version "14.1.3"
+  sha256 "cc6317df3877668b94d88643ae57b974e30c713ff2593e4f8d7755c9f58f28c2"
 
   url "https://github.com/moderato-app/approf/releases/download/v#{version}/approf-#{version}.app.zip"
   name "approf"
