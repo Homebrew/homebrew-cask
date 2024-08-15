@@ -1,5 +1,5 @@
 cask "mmhmm" do
-  version "2.9.0"
+  version "3.0.0"
   sha256 :no_check
 
   url "https://updates.mmhmm.app/mac/hybrid/beta/mmhmm.pkg"
