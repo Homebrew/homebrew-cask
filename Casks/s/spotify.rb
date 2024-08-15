@@ -4,10 +4,10 @@ cask "spotify" do
   sha256 :no_check
 
   on_arm do
-    version "1.2.43.420,c7b23f70,2569"
+    version "1.2.44.405,81fd6352,3712"
   end
   on_intel do
-    version "1.2.43.420,c7b23f70,2567"
+    version "1.2.44.405,81fd6352,3707"
   end
 
   url "https://download.scdn.co/Spotify#{arch}.dmg",
