@@ -1,6 +1,6 @@
 cask "wetype" do
-  version "1.2.2,381"
-  sha256 "81e949ce5a5ea887b78e098f4a330b8a343a4e76372eb03696ac5b355496e4fa"
+  version "1.2.3,390"
+  sha256 "0248721a4add5dd01f6949825f52c4f65a60a772d3802ea952ec5117ad72cd19"
 
   url "https://download.z.weixin.qq.com/app/mac/#{version.csv.first}/WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
