@@ -752,6 +752,7 @@ tableplus
 tageditor
 tagspaces
 tailscale
+tastytrade
 teamviewer
 telegram
 telegram-a
