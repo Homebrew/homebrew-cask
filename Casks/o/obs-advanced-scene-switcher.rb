@@ -1,6 +1,6 @@
 cask "obs-advanced-scene-switcher" do
-  version "1.26.4"
-  sha256 "311f55b35f1b6ea11c5724d4ff574d47e96e325b89ba648f0fbebc01a588ffb7"
+  version "1.27.0"
+  sha256 "a869eb1ffdc25b6928f3b4517a8a9e6104bf251868cf8f2bdf0ae6f35bf32ba2"
 
   url "https://github.com/WarmUpTill/SceneSwitcher/releases/download/#{version}/advanced-scene-switcher-#{version}-macos-universal.pkg",
       verified: "github.com/WarmUpTill/SceneSwitcher/"
