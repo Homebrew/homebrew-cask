@@ -828,6 +828,7 @@ visual-studio-code
 vivaldi
 vivaldi@snapshot
 vk-calls
+vnc-viewer
 vpn-tracker-365
 vrew
 vscodium
