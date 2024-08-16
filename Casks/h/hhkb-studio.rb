@@ -10,11 +10,7 @@ cask "hhkb-studio" do
 
   livecheck do
     url "https://happyhackingkb.com/download/"
-    regex(/macOS\s+:\s+Version\s+(\d+(?:\.\d+)+)/i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      (match[1]).to_s
-    end
+    regex(%r{macOS\s*</td>.*?HHKBStudiokeymapTool[._-]v?\d+(?:\.\d+)*[^.]*?\.dmg.*?>\s*v?(\d+(?:\.\d+)+)\s*<}im)
   end
 
   depends_on macos: ">= :big_sur"
