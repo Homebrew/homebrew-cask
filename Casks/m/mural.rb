@@ -1,6 +1,6 @@
 cask "mural" do
   version "3.0.1"
-  sha256 "2bf4ac7c2bbf7c8d98708ffde37763b118667908e7b6c45bfbe5251ef85a2e55"
+  sha256 "634e07489d9ea1c7383a6a6cc58096556008c1d287c5f49986859d95c4a62f2d"
 
   url "https://download.mural.co/mac-app/Mural-#{version}.dmg"
   name "MURAL"
