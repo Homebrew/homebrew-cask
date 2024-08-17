@@ -18,7 +18,7 @@ at_exit { FileUtils.rm_r(TMP_DIR) }
 
 # Constants
 ONLINE_ISSUE = "https://github.com/Homebrew/homebrew-cask/issues/88469"
-CASK_REPOS = %w[homebrew-cask homebrew-cask-versions].freeze
+CASK_REPOS = %w[homebrew-cask].freeze
 CASK_JSON_URL = "https://formulae.brew.sh/api/analytics/cask-install/365d.json"
 
 # Download the file and save it to the specified directory
@@ -75,7 +75,7 @@ ALL_CASKS = CASK_DIRS.each_with_object({}) do |tap_dir, casks|
   casks[tap_dir] = []
 
   # Recursively find all Ruby files in the tap directory
-  Find.find(tap_dir) do |path|
+  Find.find(tap_dir.to_s) do |path|
     # Skip if not a file or not a Ruby file
     next unless File.file?(path)
     next if File.extname(path) != ".rb"
