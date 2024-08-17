@@ -8,4 +8,9 @@ cask "cpuinfo" do
   homepage "https://github.com/yusukeshibata/cpuinfo/"
 
   app "cpuinfo.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/io.fata.shibata.cpuinfo",
+    "~/Library/Containers/io.fata.shibata.cpuinfo",
+  ]
 end
