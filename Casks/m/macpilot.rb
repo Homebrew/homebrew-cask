@@ -10,7 +10,7 @@ cask "macpilot" do
     end
   end
   on_mojave :or_newer do
-    version "15.0.3"
+    version "16.0"
     sha256 :no_check
 
     url "https://www.koingosw.com/products/macpilot/download/macpilot.dmg"
