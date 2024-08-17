@@ -14,6 +14,8 @@ cask "keyboard-cleaner" do
 
   app "Keyboard Cleaner.app"
 
+  # No zap stanza required
+
   caveats do
     requires_rosetta
   end

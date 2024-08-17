@@ -12,6 +12,8 @@ cask "workbench" do
 
   app "Workbench.app"
 
+  zap trash: "~/Library/Preferences/com.codebasesaga.macOS.Workbench.plist"
+
   caveats do
     requires_rosetta
   end
