@@ -83,6 +83,7 @@ bitwarden
 bitwig-studio
 blender@lts
 blockbench
+blockstream-green
 bloop
 boinc
 boltai
