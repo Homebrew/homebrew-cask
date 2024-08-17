@@ -14,6 +14,11 @@ cask "freemind" do
 
   app "FreeMind.app"
 
+  zap trash: [
+    "~/.freemind",
+    "~/Library/Saved Application State/freemind.main.FreeMind.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
