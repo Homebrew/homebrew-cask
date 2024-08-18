@@ -7,11 +7,23 @@ cask "font-gilbert" do
   name "Gilbert"
   homepage "https://typewithpride.com/"
 
+  # This uses the `GithubReleases` strategy because all releases are marked as
+  # pre-release on GitHub. We should be able to switch to the `GithubLatest`
+  # strategy if/when there's a "latest" release in the future.
   livecheck do
-    url "https://github.com/Fontself/TypeWithPride/releases/"
-    strategy :page_match do |page|
-      page.scan(/href=.*?Gilbert[._-]v?(\d+(?:\.\d+)+)[._-](.*)\.zip/i)
-          .map { |matches| "#{matches[0]},#{matches[1]}" }
+    url :url
+    regex(/Gilbert[._-]v?(\d+(?:\.\d+)+)[._-](.*)\.zip/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[2] ? "#{match[1]},#{match[2]}" : match[1]
+        end
+      end.flatten
     end
   end
 
