@@ -14,4 +14,6 @@ cask "font-noto-serif" do
 
   font "NotoSerif/unhinted/variable/NotoSerif-Italic[wdth,wght].ttf"
   font "NotoSerif/unhinted/variable/NotoSerif[wdth,wght].ttf"
+
+  # No zap stanza required
 end
