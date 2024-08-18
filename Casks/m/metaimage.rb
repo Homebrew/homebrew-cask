@@ -1,6 +1,6 @@
 cask "metaimage" do
-  version "2.6.3"
-  sha256 "e841ab98b173a4b95206df275c74de19c13eadab2d5a1b4cc5fa80902fe6ecff"
+  version "2.6.4"
+  sha256 "e6968869af157acb48a9ce72f40d2bc55a01e2561c7ed670c1628f349ae4c3b8"
 
   url "https://neededapps.com/appcasts/metaimage/versions/#{version}"
   name "MetaImage"
