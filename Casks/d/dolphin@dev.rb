@@ -16,7 +16,6 @@ cask "dolphin@dev" do
   depends_on macos: ">= :catalina"
 
   app "Dolphin.app"
-  app "Dolphin Updater.app"
 
   zap trash: [
     "~/Library/Application Support/Dolphin",
