@@ -31,6 +31,8 @@ end
 CASK_JSON = File.read("#{TMP_DIR}/cask.json").freeze
 CASK_DATA = JSON.parse(CASK_JSON).freeze
 
+EXCLUSION_PATTERNS = [/\s+(# No )?zap /, /\s+discontinued /, /\s+deprecate! /, /\s+disable! /].freeze
+
 # Helpers
 def cask_name(cask_path)
   cask_path.basename.sub(/\.rb$/, "")
@@ -88,9 +90,9 @@ end.freeze
 # Filter casks that are missing a 'zap' stanza and are not discontinued
 CASKS_NO_ZAP = ALL_CASKS.each_with_object({}) do |(tap_dir, casks), without_zap|
   without_zap[tap_dir] = casks.reject do |file|
-    # Read file content and check if it contains 'zap' or 'discontinued'
+    # Read file content and check if it matches any pattern in the exclusion list
     file_content = file.read
-    file_content.match?(/\s+(# No )?zap /) || file_content.match?(/\s+discontinued /)
+    EXCLUSION_PATTERNS.any? { |pattern| file_content.match?(pattern) }
   end
 
   # Remove the tap directory from the result if it has no casks missing 'zap'
