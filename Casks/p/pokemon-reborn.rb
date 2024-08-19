@@ -12,5 +12,7 @@ cask "pokemon-reborn" do
     regex(/Updated to v?(\d+(?:\.\d+)+)["< ]/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Pokemon Reborn/Pokémon Reborn.app"
 end

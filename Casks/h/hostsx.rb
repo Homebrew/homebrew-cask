@@ -7,7 +7,7 @@ cask "hostsx" do
   desc "Local hosts update tool"
   homepage "https://github.com/ZzzM/HostsX"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "HostsX.app"
 end

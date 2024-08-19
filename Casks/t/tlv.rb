@@ -7,5 +7,7 @@ cask "tlv" do
   desc "Tool for working with Tableau logs"
   homepage "https://github.com/tableau/tableau-log-viewer"
 
+  depends_on macos: ">= :mojave"
+
   app "tlv.app"
 end

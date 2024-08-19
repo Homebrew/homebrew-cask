@@ -8,5 +8,7 @@ cask "stella" do
   desc "Multi-platform Atari 2600 Emulator"
   homepage "https://stella-emu.github.io/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Stella.app"
 end

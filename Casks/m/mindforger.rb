@@ -21,6 +21,8 @@ cask "mindforger" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "mindforger.app"
 
   caveats do

@@ -12,5 +12,7 @@ cask "thingsmacsandboxhelper" do
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/ThingsHelper\.zip}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "ThingsMacSandboxHelper.app"
 end

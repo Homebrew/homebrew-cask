@@ -15,5 +15,7 @@ cask "epic" do
     regex(%r{href=.*?/epic[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Epic.app"
 end
