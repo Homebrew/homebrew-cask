@@ -5,7 +5,10 @@ cask "comma-chameleon" do
   url "https://github.com/theodi/comma-chameleon/releases/download/#{version}/Comma.Chameleon-darwin-x64.zip",
       verified: "github.com/theodi/comma-chameleon/"
   name "Comma Chameleon"
+  desc "CSV editor"
   homepage "https://comma-chameleon.io/"
+
+  deprecate! date: "2024-08-19", because: :discontinued
 
   app "Comma Chameleon-darwin-x64/Comma Chameleon.app"
 
