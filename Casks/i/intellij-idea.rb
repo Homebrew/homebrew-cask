@@ -20,6 +20,7 @@ cask "intellij-idea" do
   end
 
   auto_updates true
+  conflicts_with cask: "intellij-idea@eap"
   depends_on macos: ">= :high_sierra"
 
   app "IntelliJ IDEA.app"
