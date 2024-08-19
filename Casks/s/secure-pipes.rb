@@ -27,4 +27,8 @@ cask "secure-pipes" do
   end
 
   app "Secure Pipes.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
