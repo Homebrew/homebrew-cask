@@ -13,4 +13,8 @@ cask "surfeasy-vpn" do
   end
 
   app "SurfEasy VPN.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
