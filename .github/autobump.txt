@@ -612,6 +612,7 @@ prepros
 prezi-video
 pritunl
 private-internet-access
+propresenter
 propresenter@beta
 proton-drive
 proton-mail
