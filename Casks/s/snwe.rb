@@ -8,4 +8,8 @@ cask "snwe" do
   homepage "https://github.com/blahsd/snwe"
 
   app "snwe.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
