@@ -12,4 +12,8 @@ cask "shrinkit" do
   end
 
   app "ShrinkIt.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
