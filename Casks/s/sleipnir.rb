@@ -13,4 +13,8 @@ cask "sleipnir" do
   end
 
   app "Sleipnir.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
