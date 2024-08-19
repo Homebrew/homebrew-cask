@@ -13,4 +13,8 @@ cask "stationtv-link" do
   end
 
   app "StationTV Link.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
