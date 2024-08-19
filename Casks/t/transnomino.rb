@@ -8,12 +8,14 @@ cask "transnomino" do
   homepage "https://www.transnomino.com/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/Transnomino[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://www.transnomino.com/download/version.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Transnomino.app"
 
