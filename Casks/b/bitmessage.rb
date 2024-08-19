@@ -9,4 +9,8 @@ cask "bitmessage" do
   homepage "https://bitmessage.org/"
 
   app "Bitmessage.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
