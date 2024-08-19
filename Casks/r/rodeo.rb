@@ -8,4 +8,8 @@ cask "rodeo" do
   homepage "https://github.com/yhat/rodeo"
 
   app "Rodeo.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
