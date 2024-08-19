@@ -12,4 +12,8 @@ cask "rosaimagewriter" do
   end
 
   app "RosaImageWriter.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -5,7 +5,11 @@ cask "leanote" do
   url "https://github.com/leanote/desktop-app/releases/download/v#{version}/leanote-desktop-mac-v#{version}.zip",
       verified: "github.com/leanote/desktop-app/"
   name "Leanote"
-  homepage "http://leanote.org/"
+  homepage "https://leanote.org/"
 
   app "Leanote.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

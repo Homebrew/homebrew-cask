@@ -12,4 +12,8 @@ cask "fauxpas" do
   end
 
   app "FauxPas.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

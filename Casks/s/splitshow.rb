@@ -15,4 +15,8 @@ cask "splitshow" do
   end
 
   app "SplitShow.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

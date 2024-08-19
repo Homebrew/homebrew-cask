@@ -9,4 +9,8 @@ cask "rolisteam" do
   homepage "https://rolisteam.org/"
 
   app "rolisteam.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

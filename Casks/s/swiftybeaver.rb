@@ -14,4 +14,8 @@ cask "swiftybeaver" do
   end
 
   app "SwiftyBeaver.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
