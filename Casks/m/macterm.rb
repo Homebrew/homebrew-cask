@@ -4,6 +4,7 @@ cask "macterm" do
 
   url "https://www.macterm.net/updates/macterm-#{version}.dmg"
   name "MacTerm"
+  desc "Terminal emulator"
   homepage "https://www.macterm.net/"
 
   livecheck do
