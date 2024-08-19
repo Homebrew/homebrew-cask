@@ -1,6 +1,6 @@
 cask "zoom-for-it-admins" do
-  version "6.1.6.37851"
-  sha256 "37fdf73688ca4e9bc95972ff0526524318c74c90f59bd7bf1b0ed5a77a4cfb86"
+  version "6.1.10.38818"
+  sha256 "1084b6c17d2cc974cfba973b6dfbba899c7fdd9126a65a333babc63877f50802"
 
   url "https://cdn.zoom.us/prod/#{version}/ZoomInstallerIT.pkg"
   name "Zoom for IT Admins"
