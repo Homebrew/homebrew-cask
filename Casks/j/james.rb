@@ -8,4 +8,8 @@ cask "james" do
   homepage "https://github.com/james-proxy/james"
 
   app "James.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
