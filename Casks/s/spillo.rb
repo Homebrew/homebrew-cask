@@ -13,4 +13,8 @@ cask "spillo" do
   end
 
   app "Spillo.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
