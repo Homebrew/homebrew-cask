@@ -1,6 +1,6 @@
 cask "wakatime" do
-  version "5.19.0"
-  sha256 "63c0c78dc51ce4a7e99ec4db030bd9981aa030c05e7f6fbde71a850b3675cda1"
+  version "5.20.0"
+  sha256 "178f4919816cf13513c4729bd473ab462bde9dfccdaf572e99764844c160627b"
 
   url "https://github.com/wakatime/macos-wakatime/releases/download/v#{version}/macos-wakatime.zip",
       verified: "github.com/wakatime/macos-wakatime/"
