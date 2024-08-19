@@ -7,13 +7,7 @@ cask "dupscanub" do
   desc "Searches for duplicated files in specified folders"
   homepage "http://www5.wind.ne.jp/miko/mac_soft/dup_scan/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/DupScanUB_(\d+)(\d+)(\d+).dmg\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}.#{match[2]}" }
-    end
-  end
+  disable! date: "2024-08-19", because: "is 32-bit only"
 
   app "DupScan(UB).app"
 end
