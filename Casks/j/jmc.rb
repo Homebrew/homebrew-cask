@@ -17,4 +17,8 @@ cask "jmc" do
   end
 
   app "jmc.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
