@@ -13,5 +13,7 @@ cask "flic" do
     regex(/Flic\.(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Flic.app"
 end
