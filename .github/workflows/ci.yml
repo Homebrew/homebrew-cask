@@ -182,9 +182,6 @@ jobs:
             manual_installer = cask.artifacts.any? do |artifact|
               if defined?(artifact.manual_install)
                 artifact.manual_install
-              else
-                # TODO: Remove this branch when ManualInstaller is removed from brew
-                artifact.is_a?(Cask::Artifact::Installer::ManualInstaller)
               end
             end
 
