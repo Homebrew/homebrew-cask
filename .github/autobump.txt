@@ -822,6 +822,7 @@ utools
 uvtools
 valentina-studio
 vamiga
+vbrokers
 vcam
 vellum
 vimr
