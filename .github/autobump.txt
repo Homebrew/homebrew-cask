@@ -529,6 +529,7 @@ notion
 notion-calendar
 nova
 nozbe
+nuclear
 nudge
 obs
 obs-advanced-scene-switcher

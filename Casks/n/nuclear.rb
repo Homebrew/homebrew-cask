@@ -1,9 +1,9 @@
 cask "nuclear" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.6.37"
-  sha256 arm:   "1f2d69e4f63688cfe40422fa2cfe331c0884bb41291691b926364f8ff08df5dd",
-         intel: "fa012e2faf4b3b4f6f2d8496b4e8734dab7861ce3cdd9d453614aaff5fa36f60"
+  version "0.6.38"
+  sha256 arm:   "c6b65134ba448fba394e2dc04be570706065d1734822f0d518b6c9c8e9220c15",
+         intel: "68f7b9b844fbd80e25ce3d3ab38054a075374e093a3ee18cfbad8c655cdc2f15"
 
   url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}-#{arch}.dmg",
       verified: "github.com/nukeop/nuclear/"
@@ -13,7 +13,7 @@ cask "nuclear" do
 
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+)/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "nuclear.app"
