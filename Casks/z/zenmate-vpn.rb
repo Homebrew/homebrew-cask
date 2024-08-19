@@ -17,4 +17,8 @@ cask "zenmate-vpn" do
   depends_on macos: ">= :sierra"
 
   app "ZenMate VPN.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
