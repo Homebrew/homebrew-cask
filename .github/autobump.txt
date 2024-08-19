@@ -212,6 +212,7 @@ dropshare
 dropzone
 duckduckgo
 ecamm-live
+egnyte
 electerm
 electron
 electron-fiddle
