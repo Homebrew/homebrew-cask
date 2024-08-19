@@ -126,6 +126,7 @@ cisdem-pdf-converter-ocr
 clash-verge-rev
 clay
 cleanclip
+cleaneronepro
 cleanmymac
 clickhouse
 clickup
