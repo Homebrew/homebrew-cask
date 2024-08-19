@@ -2,10 +2,9 @@ cask "font-gilbert" do
   version "1.005,alpha"
   sha256 "d3ac3075efe00bf4302264b2e626f548e3549740d359a43991605b2a180d8cbe"
 
-  url "https://github.com/Fontself/TypeWithPride/releases/download/#{version.csv.first}/Gilbert_#{version.csv.first}_#{version.csv.second}.zip",
-      verified: "github.com/Fontself/TypeWithPride/"
+  url "https://github.com/Fontself/TypeWithPride/releases/download/#{version.csv.first}/Gilbert_#{version.csv.first}_#{version.csv.second}.zip"
   name "Gilbert"
-  homepage "https://typewithpride.com/"
+  homepage "https://github.com/Fontself/TypeWithPride"
 
   # This uses the `GithubReleases` strategy because all releases are marked as
   # pre-release on GitHub. We should be able to switch to the `GithubLatest`
