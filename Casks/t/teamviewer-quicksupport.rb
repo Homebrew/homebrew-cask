@@ -14,6 +14,8 @@ cask "teamviewer-quicksupport" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :big_sur"
+
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "TeamViewerQS.app", target: "TeamViewer QuickSupport.app"
 end
