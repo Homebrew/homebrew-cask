@@ -12,5 +12,7 @@ cask "teamviewermeeting" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "TeamViewerMeeting.app"
 end
