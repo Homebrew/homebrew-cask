@@ -13,4 +13,8 @@ cask "ryver" do
   end
 
   app "Ryver.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
