@@ -1,9 +1,9 @@
 cask "microsoft-azure-storage-explorer" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.34.0"
-  sha256 arm:   "1ca063d72237c3f3c52e47a88e56177dcee398e5214d382804cd019d430adb57",
-         intel: "036a9029e3b883ded8de9d9bdde3f63dd86d3403b7ed767b1efc3037c9d37bc4"
+  version "1.35.0"
+  sha256 arm:   "723d9ead8ff6a563b4db294848bc589a0e4065aaf8b7f22d00c533272a7c1d32",
+         intel: "c610835d3238e4432634984e0b83e4f7c194142ba5c04a5eaefc34a6ed048fdf"
 
   url "https://github.com/microsoft/AzureStorageExplorer/releases/download/v#{version}/StorageExplorer-darwin-#{arch}.zip",
       verified: "github.com/microsoft/AzureStorageExplorer/"
