@@ -12,4 +12,8 @@ cask "rember" do
   end
 
   app "Rember.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
