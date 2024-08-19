@@ -8,5 +8,11 @@ cask "sync-my-l2p" do
   desc "Synchronises your documents from the L2P and Moodle of RWTH Aachen"
   homepage "https://www.syncmyl2p.de/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Sync-my-L2P.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
