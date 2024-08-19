@@ -1,16 +1,16 @@
 cask "thangs-sync" do
   version "1.8.3"
-  sha256 :no_check
+  sha256 "55d386a03ac37e83fd672b95d895058051c9f59ca4551c6ac878032795fb84ce"
 
-  url "https://thangs.com/api/system/sync-client-location?type=mac"
+  url "https://storage.googleapis.com/production-thangs-public/sync/darwin/latest/Thangs%20Sync-#{version}-mac.zip",
+      verified: "storage.googleapis.com/production-thangs-public/"
   name "Thangs Sync"
   desc "Secure, 3D-native revision control in the cloud"
   homepage "https://thangs.com/sync"
 
   livecheck do
-    url :url
-    regex(/Thangs%20Sync[._-]v?(\d+(?:\.\d+)+)\./i)
-    strategy :header_match
+    url "https://storage.googleapis.com/production-thangs-public/sync/darwin/latest/latest-mac.yml"
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :el_capitan"
