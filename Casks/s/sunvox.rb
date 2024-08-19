@@ -12,5 +12,7 @@ cask "sunvox" do
     regex(/^v(\d+(?:\.\d+)*[a-z]?)\s*\(\d+/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "sunvox/sunvox/macos/SunVox.app"
 end
