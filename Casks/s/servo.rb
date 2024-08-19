@@ -13,4 +13,8 @@ cask "servo" do
   end
 
   app "Servo.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
