@@ -13,4 +13,8 @@ cask "sharepod" do
   end
 
   app "Sharepod.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
