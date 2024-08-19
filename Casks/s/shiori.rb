@@ -13,4 +13,8 @@ cask "shiori" do
   end
 
   app "Shiori.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

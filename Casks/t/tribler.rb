@@ -14,4 +14,8 @@ cask "tribler" do
   end
 
   app "Tribler.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

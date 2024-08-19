@@ -12,4 +12,8 @@ cask "r-name" do
   end
 
   app "R-Name.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

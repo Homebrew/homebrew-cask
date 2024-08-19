@@ -8,4 +8,8 @@ cask "statusfy" do
   homepage "https://github.com/paulyoung/Statusfy"
 
   app "Statusfy.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

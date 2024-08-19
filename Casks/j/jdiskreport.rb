@@ -18,4 +18,8 @@ cask "jdiskreport" do
   end
 
   app "JDiskReport #{version}/JDiskReport.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

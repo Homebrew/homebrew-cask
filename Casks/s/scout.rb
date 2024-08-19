@@ -9,4 +9,8 @@ cask "scout" do
   homepage "https://scout-app.io/"
 
   app "Scout-App.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

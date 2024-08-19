@@ -9,4 +9,8 @@ cask "splayer" do
   homepage "https://splayer.org/"
 
   app "SPlayer.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

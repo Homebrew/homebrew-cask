@@ -8,4 +8,8 @@ cask "ao" do
   homepage "https://github.com/klaussinani/ao"
 
   app "Ao.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

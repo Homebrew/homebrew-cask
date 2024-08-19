@@ -9,4 +9,8 @@ cask "gplates" do
   homepage "https://www.gplates.org/"
 
   app "GPlates-#{version}.0/GPlates.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

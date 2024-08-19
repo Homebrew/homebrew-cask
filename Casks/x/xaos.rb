@@ -13,5 +13,11 @@ cask "xaos" do
     regex(/^release[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "XaoS.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -13,4 +13,8 @@ cask "sequential" do
   end
 
   app "Sequential.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

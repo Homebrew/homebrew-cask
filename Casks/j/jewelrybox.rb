@@ -8,4 +8,8 @@ cask "jewelrybox" do
   homepage "https://github.com/remear/jewelrybox"
 
   app "JewelryBox.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

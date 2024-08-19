@@ -17,4 +17,8 @@ cask "amazon-workdocs" do
   end
 
   app "Amazon WorkDocs.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

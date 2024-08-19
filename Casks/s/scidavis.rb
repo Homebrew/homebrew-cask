@@ -13,4 +13,8 @@ cask "scidavis" do
   end
 
   app "scidavis.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

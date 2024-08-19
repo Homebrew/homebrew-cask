@@ -15,4 +15,8 @@ cask "sparkleshare" do
   end
 
   app "SparkleShare.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

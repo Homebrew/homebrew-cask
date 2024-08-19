@@ -8,4 +8,8 @@ cask "speedcrunch" do
   homepage "https://www.speedcrunch.org/"
 
   app "SpeedCrunch.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

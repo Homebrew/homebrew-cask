@@ -16,4 +16,8 @@ cask "there" do
   app "There.app"
 
   uninstall signal: ["TERM", "pm.there.desktop"]
+
+  caveats do
+    requires_rosetta
+  end
 end

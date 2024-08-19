@@ -12,4 +12,8 @@ cask "slimbatterymonitor" do
   end
 
   app "SlimBatteryMonitor.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
