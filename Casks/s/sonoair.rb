@@ -12,4 +12,8 @@ cask "sonoair" do
   end
 
   app "SonoAir.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
