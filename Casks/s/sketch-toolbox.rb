@@ -13,4 +13,8 @@ cask "sketch-toolbox" do
   end
 
   app "Sketch Toolbox.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
