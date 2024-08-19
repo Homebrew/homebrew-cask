@@ -12,4 +12,8 @@ cask "supersync" do
   end
 
   app "SuperSync.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
