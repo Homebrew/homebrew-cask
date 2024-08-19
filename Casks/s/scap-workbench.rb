@@ -11,4 +11,8 @@ cask "scap-workbench" do
   depends_on macos: ">= :sierra"
 
   app "scap-workbench.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
