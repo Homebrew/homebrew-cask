@@ -10,9 +10,9 @@ cask "copilot" do
 
   livecheck do
     url "https://releases.copilot.money/last_release?channel=production"
-    regex(/copilot[._-](\d+(?:\.\d+)+)-(\d+)-(\w+)/i)
+    regex(/copilot[._-](\d+(?:\.\d+)+)-(\d+-\h+)/i)
     strategy :json do |json, regex|
-      json["url"]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}-#{match[2]}" }
+      json["url"]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
