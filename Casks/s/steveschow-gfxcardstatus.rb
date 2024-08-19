@@ -7,4 +7,8 @@ cask "steveschow-gfxcardstatus" do
   homepage "https://github.com/steveschow/gfxCardStatus"
 
   app "gfxCardStatus.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
