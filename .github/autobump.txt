@@ -475,6 +475,7 @@ miro
 mist
 mitmproxy
 mixed-in-key
+mixin
 mixxx
 mixxx@snapshot
 mmhmm
