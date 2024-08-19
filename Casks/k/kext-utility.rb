@@ -13,4 +13,8 @@ cask "kext-utility" do
   end
 
   app "Kext Utility.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
