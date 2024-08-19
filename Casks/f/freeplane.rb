@@ -1,9 +1,9 @@
 cask "freeplane" do
   arch arm: "apple", intel: "intel"
 
-  version "1.12.3"
-  sha256 arm:   "5332d2a2a996e91576119e73888708507c4aeb6f5f61fa854cb20dcd876ff955",
-         intel: "4da28355ee4c26f077ea7eb23ec61fb6f8cd15dc068ddab01b7843d12ac80da9"
+  version "1.12.4"
+  sha256 arm:   "a051e4422fbb2ac39448b32f89acdd217da43f79ac1ce6f01c3740a1ab7798c0",
+         intel: "fd699301fa33577d5ab373101c9245e536fd92544040fd7c9e4a411e707d2604"
 
   url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg",
       verified: "downloads.sourceforge.net/freeplane/"
@@ -13,8 +13,7 @@ cask "freeplane" do
 
   livecheck do
     url "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
-    regex(%r{/freeplane%20stable/Freeplane[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
-    strategy :page_match
+    regex(%r{url=.*?/Freeplane[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
   end
 
   depends_on macos: ">= :el_capitan"
