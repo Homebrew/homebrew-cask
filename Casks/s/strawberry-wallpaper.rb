@@ -14,4 +14,8 @@ cask "strawberry-wallpaper" do
   end
 
   app "Strawberry Wallpaper.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
