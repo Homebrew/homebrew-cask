@@ -11,5 +11,7 @@ cask "google-ads-editor" do
     skip "unversioned QT application"
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Google Ads Editor.app"
 end
