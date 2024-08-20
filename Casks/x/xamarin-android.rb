@@ -7,10 +7,7 @@ cask "xamarin-android" do
   desc "Gives .NET developers complete access to Android SDK's"
   homepage "https://www.xamarin.com/platform"
 
-  livecheck do
-    url "https://software.xamarin.com/Service/Updates?v=2&pvd1ec039f-f3db-468b-a508-896d7c382999=0"
-    regex(%r{/xamarin\.android[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
-  end
+  deprecate! date: "2024-08-20", because: :discontinued
 
   pkg "xamarin.android-#{version}.pkg"
 
