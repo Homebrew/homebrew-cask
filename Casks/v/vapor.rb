@@ -1,11 +1,11 @@
 cask "vapor" do
-  arch arm: "M1", intel: "x86"
+  arch arm: "AppleSilicon", intel: "Darwinx86"
 
-  version "3.9.2"
-  sha256 arm:   "130806331261298a53c07451ab11bc728e5fe0fc86483bcc8a8f49a5d8018751",
-         intel: "00dbfcea7e6a7512d76fd6684af9471ba9bd0cc62dd324b6ee9e941e091f174d"
+  version "3.9.3"
+  sha256 arm:   "a154eda16c8c6e5264ca9857c8a57044634e908d21aabb1a1ce90edbd20e23f3",
+         intel: "ecd1521c1e318a7af766266516bf32138712e28e6d07ce2e975caf410d365705"
 
-  url "https://github.com/NCAR/VAPOR/releases/download/v#{version}/VAPOR#{version.major}-#{version}-MacOS-#{arch}.dmg"
+  url "https://github.com/NCAR/VAPOR/releases/download/v#{version}/VAPOR#{version.major}-#{version}-#{arch}.dmg"
   name "VAPOR"
   desc "Visualisation and analysis platform"
   homepage "https://github.com/NCAR/VAPOR"
