@@ -1,6 +1,6 @@
 cask "transnomino" do
-  version "8.5.3"
-  sha256 "86d921c17a8ce1297ef4758ba99a9c67e0451f8a9329c9941ff821bf73bf797c"
+  version "8.6"
+  sha256 "ff5bb9118fe1cd047243f966768d59f8573b006f404feaa02387b59c8bbad1d3"
 
   url "https://www.transnomino.com/download/Transnomino-#{version}.dmg"
   name "Transnomino"
@@ -8,12 +8,14 @@ cask "transnomino" do
   homepage "https://www.transnomino.com/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/Transnomino[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://www.transnomino.com/download/version.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Transnomino.app"
 
