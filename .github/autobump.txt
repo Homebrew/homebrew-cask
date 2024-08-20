@@ -575,6 +575,7 @@ pdf-expert
 pdf-expert@beta
 pdf-reader-pro
 pdfelement
+pdfsam-basic
 perforce
 permute
 pgadmin4
