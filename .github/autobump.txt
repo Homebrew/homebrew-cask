@@ -843,6 +843,7 @@ vivaldi
 vivaldi@snapshot
 vk-calls
 vnc-viewer
+volanta
 vpn-tracker-365
 vrew
 vscodium
