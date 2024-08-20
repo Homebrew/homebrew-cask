@@ -14,9 +14,9 @@ cask "smartgit" do
     url "https://www.syntevo.com/downloads/smartgit/archive/smartgit-#{arch}-#{version.dots_to_underscores}.dmg"
   end
   on_mojave :or_newer do
-    version "23.1.3"
-    sha256 arm:   "717ec021fdba69871db8bf75252f17f0314fc10b8c007c49483257efc093adfa",
-           intel: "8c131142c7a1c93ba70a4ebc9f120b6c2dfdc87ebc94ef22b3feb688768888af"
+    version "23.1.4"
+    sha256 arm:   "f60d0bc6f1b527cc98e05898e71cc5ceba2146e637a56566a5fd077e12b117ef",
+           intel: "9bb539aa0165a282df3dfe38f45e95d1731a17e239e808856ab2d16f6de4b8e8"
 
     url "https://www.syntevo.com/downloads/smartgit/smartgit-#{arch}-#{version.dots_to_underscores}.dmg"
   end
