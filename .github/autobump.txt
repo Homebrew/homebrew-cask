@@ -81,6 +81,7 @@ bilibili
 binance
 bitwarden
 bitwig-studio
+blender
 blender@lts
 blockbench
 blockstream-green
