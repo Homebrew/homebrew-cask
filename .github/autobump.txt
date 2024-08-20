@@ -881,6 +881,7 @@ yandex-music
 yass
 yealink-meeting
 yinxiangbiji
+youku
 youtube-downloader
 youtube-to-mp3
 zalo
