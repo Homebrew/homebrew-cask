@@ -9,10 +9,10 @@ cask "copilot" do
   homepage "https://copilot.money/"
 
   livecheck do
-    url "https://releases.copilot.money/latest"
-    regex(/copilot[._-](\d+(?:\.\d+)+)-(\d+)-(\w+)/i)
-    strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map { |match| "#{match[0]},#{match[1]}-#{match[2]}" }
+    url "https://releases.copilot.money/last_release?channel=production"
+    regex(/copilot[._-](\d+(?:\.\d+)+)-(\d+-\h+)/i)
+    strategy :json do |json, regex|
+      json["url"]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
