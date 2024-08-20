@@ -7,15 +7,7 @@ cask "xamarin-ios" do
   desc "Gives .NET developers complete access to iOS, watchOS, and tvOS SDK's"
   homepage "https://dotnet.microsoft.com/en-us/apps/xamarin"
 
-  livecheck do
-    url "https://software.xamarin.com/Service/Updates?v=2&pv4569c276-1397-4adb-9485-82a7696df22e=0"
-    regex(%r{/download/pr/([^/]+)/([^/]+)/xamarin[._-]ios[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[2]},#{match[0]},#{match[1]}"
-      end
-    end
-  end
+  deprecate! date: "2024-08-20", because: :discontinued
 
   pkg "xamarin.ios-#{version.csv.first}.pkg"
 
