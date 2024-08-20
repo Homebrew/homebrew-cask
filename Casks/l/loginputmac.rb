@@ -1,8 +1,8 @@
 cask "loginputmac" do
-  version "3.3.7"
-  sha256 "dedfbe67c376364dce2bddc440b809247a322c721c1a8accb6994accbc88bcef"
+  version "3.3.8,11751"
+  sha256 "2c4dee60eefc1930a89153105c435b771791178f7fcbb41b22fcaac123e34816"
 
-  url "https://loginput-mac2.totest.top/loginputmac#{version.major}_latest.dmg",
+  url "https://loginput-mac2.totest.top/LogInputMac#{version.csv.first.major}.app#{version.csv.second}.zip",
       verified: "loginput-mac2.totest.top/"
   name "LoginputMac"
   desc "Chinese input method"
@@ -10,16 +10,15 @@ cask "loginputmac" do
 
   livecheck do
     url "https://im.logcg.com/appcast#{version.major}.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  pkg "落格输入法 macOS #{version.major}.pkg"
+  app "LogInputMac#{version.csv.first.major}.app"
 
-  uninstall quit:    "com.logcg.inputmethod.LogInputMac#{version.major}",
-            pkgutil: "com.logcg.pkg.LoginputMac#{version.major}"
+  uninstall quit: "com.logcg.inputmethod.LogInputMac#{version.major}"
 
   zap trash: [
     "~/Documents/落格输入法",
