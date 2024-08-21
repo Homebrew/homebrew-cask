@@ -17,7 +17,10 @@ cask "miniforge" do
   end
 
   auto_updates true
-  conflicts_with cask: "miniconda"
+  conflicts_with cask: [
+    "mambaforge",
+    "miniconda",
+  ]
   container type: :naked
 
   installer script: {
