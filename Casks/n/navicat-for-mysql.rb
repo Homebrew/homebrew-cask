@@ -1,8 +1,8 @@
 cask "navicat-for-mysql" do
-  version "17.0.14"
+  version "17.1.0"
   sha256 :no_check
 
-  url "https://dn.navicat.com/download/navicat#{version.major_minor.no_dots}_mysql_en.dmg"
+  url "https://dn.navicat.com/download/navicat#{version.major}_mysql_en.dmg"
   name "Navicat for MySQL"
   desc "Database administration and development tool"
   homepage "https://www.navicat.com/products/navicat-for-mysql"
@@ -11,7 +11,7 @@ cask "navicat-for-mysql" do
     cask "navicat-premium"
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Navicat for MySQL.app"
 
