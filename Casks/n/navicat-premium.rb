@@ -1,15 +1,15 @@
 cask "navicat-premium" do
-  version "17.0.14"
+  version "17.1.0"
   sha256 :no_check
 
-  url "https://dn.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
+  url "https://dn.navicat.com/download/navicat#{version.major}_premium_en.dmg"
   name "Navicat Premium"
   desc "Database administration and development tool"
   homepage "https://www.navicat.com/products/navicat-premium"
 
   livecheck do
-    url "https://www.navicat.com/en/products/navicat-premium-release-note#M"
-    regex(/Navicat\sPremium\s\(macOS\)\sversion\s(\d+(?:\.\d+)+)/i)
+    url "https://updater.navicat.com/mac/v#{version.major}/navicat_updates.php?appName=Navicat%20Premium"
+    strategy :sparkle, &:short_version
   end
 
   conflicts_with cask: "navicat-premium@15"
