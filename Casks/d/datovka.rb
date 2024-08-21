@@ -5,8 +5,8 @@ cask "datovka" do
   sha256 arm:   "db1578453161b74c886b46b6b9fc9f3864ed73ee1023174e890cc606cf4531b2",
          intel: "931e632a54b1c9be3d991c9f559eb07c006ab47a304372487694901d7ce9d9f2"
 
-  url "https://secure.nic.cz/files/datove_schranky/#{version}/datovka-#{version}-#{arch}.dmg",
-      verified: "secure.nic.cz/files/datove_schranky/"
+  url "https://datovka.nic.cz/#{version}/datovka-#{version}-#{arch}.dmg",
+      verified: "datovka.nic.cz/"
   name "Datovka"
   desc "Access and store data messages in a local database"
   homepage "https://www.datovka.cz/"
