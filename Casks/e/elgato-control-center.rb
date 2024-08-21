@@ -1,15 +1,15 @@
 cask "elgato-control-center" do
-  version "1.7.1.20508"
+  version "1.7.1,20508"
   sha256 "8adc110411e409df00f99bfa4cbe67784793544c5d52cc4ca1886a5b0ffca1f3"
 
-  url "https://edge.elgato.com/egc/macos/eccm/#{version.major_minor_patch}/ElgatoControlCenter-#{version}.app.zip"
+  url "https://edge.elgato.com/egc/macos/eccm/#{version.csv.first}/ElgatoControlCenter-#{version.csv.first}.#{version.csv.second}.app.zip"
   name "Elgato Control Center"
   desc "Control your Elgato key lights"
   homepage "https://www.elgato.com/ww/en/s/downloads"
 
   livecheck do
     url "https://gc-updates.elgato.com/mac/control-center-update/feed.xml"
-    regex(/ElgatoControlCenter[._-]v?(\d+(?:\.\d+)+)\.app\.zip/i)
+    strategy :sparkle
   end
 
   auto_updates true
