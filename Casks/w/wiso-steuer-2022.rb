@@ -34,8 +34,4 @@ cask "wiso-steuer-2022" do
     "~/Library/Saved Application State/com.BuhlData.WISOsteuerMac2022.savedState",
     "~/Library/WebKit/com.BuhlData.WISOsteuerMac2022",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
