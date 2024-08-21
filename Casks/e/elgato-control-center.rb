@@ -12,6 +12,7 @@ cask "elgato-control-center" do
     regex(/ElgatoControlCenter[._-]v?(\d+(?:\.\d+)+)\.app\.zip/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Elgato Control Center.app"
