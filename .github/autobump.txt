@@ -830,6 +830,7 @@ vamiga
 vbrokers
 vcam
 vellum
+viber
 vimr
 virtualbox@beta
 virtualbuddy
