@@ -1,6 +1,6 @@
 cask "aleph-one" do
-  version "20240712"
-  sha256 "01b61b68441cb1cab8d70e41768595be3149a89fcec088ed6bc4d535d2f09fb9"
+  version "20240822"
+  sha256 "3374f3b639f8db1792b8215e23ab5959979b7349e3bf223463880caed9d2a2ae"
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/AlephOne-#{version}-Mac.dmg",
       verified: "github.com/Aleph-One-Marathon/alephone/"
