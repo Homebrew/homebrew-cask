@@ -2,9 +2,9 @@ cask "monero-wallet" do
   arch arm: "armv8", intel: "x64"
   livecheck_folder = on_arch_conditional arm: "arm8", intel: "64"
 
-  version "0.18.3.3"
-  sha256 arm:   "cd745209d328dddc9a4deb3073aad40144f9d544970bdada1789cc5b5cbef0e5",
-         intel: "a7777e1ca4a8ba3621cb6f79bafd160c93914f7250b739e33c846e1f9b8634c4"
+  version "0.18.3.4"
+  sha256 arm:   "eedbf827513607a3ef579077dacd573e65892b199102effef97dff9d73138ca6",
+         intel: "54eb151d7511a9f26130864e2c02f258344803b2b68311c8be29850d7faef359"
 
   url "https://downloads.getmonero.org/gui/monero-gui-mac-#{arch}-v#{version}.dmg"
   name "Monero Wallet"
