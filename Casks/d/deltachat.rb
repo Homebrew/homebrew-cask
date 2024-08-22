@@ -1,9 +1,9 @@
 cask "deltachat" do
   arch arm: "arm64", intel: "universal"
 
-  version "1.46.1"
-  sha256 arm:   "4ef319b3608594e8477fde66ef5711fe3e658c67cc2f76ad17eb8cecca21df6b",
-         intel: "e07972fb2f8e4ce83ad77339b57b77e18aac954000f0e3387429600230821656"
+  version "1.46.5"
+  sha256 arm:   "e01f675429ae605b80958d331bb4319f268a55bf20900e0e616f02ca5bfb6b24",
+         intel: "0894d2b4544f53b9c7400387a5724101635665d7b52c687ce2041b93930df7b4"
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}-#{arch}.dmg"
   name "DeltaChat"
@@ -14,6 +14,8 @@ cask "deltachat" do
     url "https://delta.chat/en/download"
     regex(/href=.*?DeltaChat[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
+
+  depends_on macos: ">= :catalina"
 
   app "DeltaChat.app"
 
