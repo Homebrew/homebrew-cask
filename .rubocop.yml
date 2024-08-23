@@ -11,6 +11,7 @@ AllCops:
   - Homebrew/bin/*
   - Homebrew/vendor/**/*
   - Taps/*/*/vendor/**/*
+  - "**/vendor/**/*"
   SuggestExtensions:
     rubocop-minitest: false
 Layout/ArgumentAlignment:
