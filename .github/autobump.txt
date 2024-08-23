@@ -358,6 +358,7 @@ ibackup-viewer
 ibkr
 ibm-cloud-cli
 idrive
+igv
 iina-plus
 imazing
 imhex
