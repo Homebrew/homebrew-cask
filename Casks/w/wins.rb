@@ -1,6 +1,6 @@
 cask "wins" do
-  version "2.1.1"
-  sha256 "41cf4bf35676ce9ff77082bc919baeac499269c8bcc7b31828884fe6ae3b9298"
+  version "2.3"
+  sha256 "907059e8656d29aa0935a044767b4cd1bef14e4d21470fe5b3d4965ae38331d3"
 
   url "https://f005.backblazeb2.com/file/winsWebsite/Wins-latest-#{version}.dmg",
       verified: "f005.backblazeb2.com/file/winsWebsite/"

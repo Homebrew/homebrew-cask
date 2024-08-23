@@ -877,6 +877,7 @@ whatsapp@beta
 whatsapp@legacy
 whisky
 wing-personal
+wins
 wondershare-uniconverter
 wordpresscom-studio
 workflowy
