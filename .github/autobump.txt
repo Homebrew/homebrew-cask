@@ -29,6 +29,7 @@ airtame
 akiflow
 alcom
 alex313031-thorium
+alfaview
 alfred
 aliworkbench
 alt-tab
