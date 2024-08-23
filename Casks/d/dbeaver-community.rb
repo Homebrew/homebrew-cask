@@ -25,7 +25,9 @@ cask "dbeaver-community" do
   uninstall signal: ["TERM", "org.jkiss.dbeaver.core.product"]
 
   zap trash: [
+    "~/Library/Caches/org.jkiss.dbeaver.core.product",
     "~/Library/DBeaverData",
+    "~/Library/HTTPStorages/org.jkiss.dbeaver.core.product",
     "~/Library/Preferences/org.jkiss.dbeaver.core.product.plist",
     "~/Library/Saved Application State/org.jkiss.dbeaver.core.product.savedState",
   ]
