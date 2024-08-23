@@ -3,7 +3,7 @@
 1password-cli@beta
 1password@beta
 4k-video-downloader
-4k-video-downloaderplus
+4k-video-downloader+
 4k-youtube-to-mp3
 8x8-work
 a-better-finder-attributes
@@ -361,7 +361,7 @@ ibkr
 ibm-cloud-cli
 idrive
 igv
-iina-plus
+iina+
 imazing
 imhex
 inkdown
@@ -424,7 +424,7 @@ lingon-x
 little-snitch
 live-home-3d
 lm-studio
-logi-options-plus
+logi-options+
 logitech-g-hub
 logos
 logseq
