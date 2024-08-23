@@ -1,4 +1,4 @@
-cask "iina-plus" do
+cask "iina+" do
   version "0.8.2"
   sha256 "16fe0595668f762d0bbff5b7cb6b2f0667b586deb1d67fd4775e4a7aa3386751"
 

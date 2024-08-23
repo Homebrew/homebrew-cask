@@ -1,4 +1,4 @@
-cask "logi-options-plus" do
+cask "logi-options+" do
   on_catalina do
     version "1.44.415778"
     sha256 "c38b38aada01a296d32dcebb61200b53977e876089b8502b7f8453d1efa3a3f6"

@@ -1,4 +1,4 @@
-cask "4k-video-downloaderplus" do
+cask "4k-video-downloader+" do
   arch arm: "arm64", intel: "x64"
 
   version "1.8.5"

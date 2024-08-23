@@ -1,4 +1,4 @@
-cask "starnet-plus-plus" do
+cask "starnet++" do
   version "2,03,2022"
   sha256 "35f0c11f49a1bde466e317565e75beb32b57ebfead85379c23cc3953c1c42fc7"
 

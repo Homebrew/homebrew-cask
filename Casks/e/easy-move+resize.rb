@@ -1,4 +1,4 @@
-cask "easy-move-plus-resize" do
+cask "easy-move+resize" do
   version "1.7.0"
   sha256 "5c7bab623ae11bfa1daa48535495f97678532e4d66bcd3920ebe1c303228c53d"
 

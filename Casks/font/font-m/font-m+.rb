@@ -1,4 +1,4 @@
-cask "font-mplus" do
+cask "font-m+" do
   version "063a"
   sha256 "44eb973b4b6aff574de454db105ddc23e6749c2294734bd9cb1e0d734e4cdd79"
 
