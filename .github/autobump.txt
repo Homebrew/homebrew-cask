@@ -85,6 +85,7 @@ bitwarden
 bitwig-studio
 blender
 blender@lts
+blitz-gg
 blockbench
 blockstream-green
 bloop
