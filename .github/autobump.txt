@@ -443,7 +443,6 @@ macupdater
 macwhisper
 maestral
 mailbutler
-mambaforge
 marked
 mcreator
 media-center
