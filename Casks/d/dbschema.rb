@@ -1,7 +1,7 @@
 cask "dbschema" do
   version "9.6.1"
-  sha256 :no_check # required as upstream package is updated in-place
-
+  sha256 "30bf470b85860984297e7aad0250964ab0cdae46673fd866f80fdbc4f8f58ba4" # See sha256sums at https://dbschema.com/download/sha256sums
+  
   url "https://dbschema.com/download/DbSchema_macos_#{version.dots_to_underscores}.tgz"
   name "DbSchema"
   desc "Design, document and deploy databases"
