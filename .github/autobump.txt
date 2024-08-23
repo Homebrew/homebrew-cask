@@ -501,6 +501,7 @@ morgen
 mountain-duck
 mp3tag
 mqttx
+msty
 mudlet
 mullvad-browser
 mullvadvpn
