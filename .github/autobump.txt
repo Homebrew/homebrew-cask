@@ -709,6 +709,7 @@ setapp
 sf
 sfm
 shadow
+shadow-bot
 shadow@beta
 shapr3d
 shattered-pixel-dungeon
