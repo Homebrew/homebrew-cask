@@ -26,12 +26,20 @@ cask "cursor" do
   depends_on macos: ">= :catalina"
 
   app "Cursor.app"
+  binary "#{appdir}/Cursor.app/Contents/Resources/app/bin/cursor"
 
   zap trash: [
-    "~/cursor-tutor",
+    "~/.cursor",
+    "~/.cursor-tutor",
+    "~/Library/Application Support/Caches/cursor-updater",
     "~/Library/Application Support/Cursor",
+    "~/Library/Caches/com.todesktop.*",
+    "~/Library/Caches/com.todesktop.*.ShipIt",
+    "~/Library/HTTPStorages/com.todesktop.*",
     "~/Library/Logs/Cursor",
-    "~/Library/Preferences/com.todesktop.*",
+    "~/Library/Preferences/ByHost/com.todesktop.*.ShipIt.*.plist",
+    "~/Library/Preferences/com.todesktop.*.plist",
+    "~/Library/Saved Application State/com.todesktop.*.savedState",
     "~/Library/Saved Application State/todesktop.com.ToDesktop-Installer.savedState",
   ]
 end
