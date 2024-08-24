@@ -1,6 +1,6 @@
 cask "metashapepro" do
   version "2.1.2"
-  sha256 "c982fcea27b4f2ec987494b78bd67aefb2724474992070faf99d29199bb3624c"
+  sha256 "0039aaa86b063a97c45e2755f9f25ec48796b551555164ef0d0d1ab417757bb6"
 
   url "https://s3-eu-west-1.amazonaws.com/download.agisoft.com/metashape-pro_#{version.dots_to_underscores}.dmg",
       verified: "s3-eu-west-1.amazonaws.com/download.agisoft.com/"
