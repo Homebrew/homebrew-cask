@@ -21,4 +21,8 @@ cask "ripcord" do
     "~/Library/Preferences/com.cancelfm.Ripcord.plist",
     "~/Library/Saved Application State/com.cancelfm.Ripcord.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
