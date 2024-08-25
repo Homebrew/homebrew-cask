@@ -2,15 +2,12 @@ cask "rsyncosx" do
   version "6.8.0"
   sha256 "18ea590825ec6901b3df1cde7209cbaec8faa287a00539ad299af1f0ec9f41b7"
 
-  url "https://github.com/rsyncOSX/RsyncOSX/releases/download/v#{version}/RsyncOSX.#{version}.dmg"
+  url "https://github.com/rsyncOSX/RsyncOSX_archived/releases/download/v#{version}/RsyncOSX.#{version}.dmg"
   name "RsyncOSX"
   desc "GUI for rsync"
-  homepage "https://github.com/rsyncOSX/RsyncOSX"
+  homepage "https://github.com/rsyncOSX/RsyncOSX_archived"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-08-25", because: :discontinued
 
   depends_on macos: ">= :big_sur"
 
