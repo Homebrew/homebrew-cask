@@ -22,4 +22,8 @@ cask "soduto" do
     "~/Library/Containers/com.soduto.SodutoLauncher",
     "~/Library/Saved Application State/com.soduto.SodutoBrowser.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
