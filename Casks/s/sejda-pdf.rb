@@ -24,4 +24,8 @@ cask "sejda-pdf" do
     "~/Library/Preferences/com.sejda.sejda-desktop.plist",
     "~/Library/Saved Application State/com.sejda.sejda-desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
