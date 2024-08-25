@@ -19,4 +19,8 @@ cask "rockboxutility" do
     "~/Library/Preferences/org.rockbox.rbutil.plist",
     "~/Library/Saved Application State/org.rockbox.rbutil.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

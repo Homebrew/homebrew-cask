@@ -19,4 +19,8 @@ cask "ringcentral-phone" do
     "~/Library/Preferences/com.ringcentral.RingCentral Phone.plist",
     "~/Library/Saved Application State/com.ringcentral.ringcentralformac.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

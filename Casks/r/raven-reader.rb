@@ -25,4 +25,8 @@ cask "raven-reader" do
     "~/Library/Preferences/org.helloefficiency.ravenreader.plist",
     "~/Library/Saved Application State/org.helloefficiency.ravenreader.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

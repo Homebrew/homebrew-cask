@@ -16,4 +16,8 @@ cask "roonbridge" do
   app "RoonBridge.app"
 
   zap trash: "~/Library/RoonBridge"
+
+  caveats do
+    requires_rosetta
+  end
 end
