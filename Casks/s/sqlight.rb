@@ -33,4 +33,8 @@ cask "sqlight" do
     "~/Library/Preferences/com.aurvan.sqlight.macosx.plist",
     "~/Library/Saved Application State/com.aurvan.sqlight.macosx.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
