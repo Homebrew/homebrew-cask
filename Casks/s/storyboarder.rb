@@ -16,4 +16,8 @@ cask "storyboarder" do
     "~/Library/Preferences/com.wonderunit.storyboarder.plist",
     "~/Library/Saved Application State/com.wonderunit.storyboarder.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
