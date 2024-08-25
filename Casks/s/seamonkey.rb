@@ -114,4 +114,8 @@ cask "seamonkey" do
     "~/Library/Preferences/org.mozilla.seamonkey.plist",
     "~/Library/Saved Application State/org.mozilla.seamonkey.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
