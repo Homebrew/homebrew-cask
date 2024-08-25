@@ -1,8 +1,8 @@
 cask "opgg" do
-  version "1.4.16"
-  sha256 "9a4ab422492969daf4552726da3a2890a7e328a063cc98d4122917a872a7cf1a"
+  version "1.4.21"
+  sha256 "e3627f8e912a17cdd2fa2e7ee0f552bd578937a90b64e1c62cf8d1bf4f6336ee"
 
-  url "https://desktop-patch.op.gg/update/general/OP.GG-#{version}.dmg"
+  url "https://desktop-patch.op.gg/update/general/OP.GG-#{version}-universal.dmg"
   name "OP.GG Desktop"
   desc "Game records and champion analysis"
   homepage "https://op.gg/desktop/"
@@ -13,6 +13,7 @@ cask "opgg" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "OP.GG.app"
 
@@ -24,8 +25,4 @@ cask "opgg" do
     "~/Library/Preferences/desktop.op.gg.plist",
     "~/Library/Saved Application State/desktop.op.gg.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
