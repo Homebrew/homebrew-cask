@@ -6,10 +6,7 @@ cask "slimbatterymonitor" do
   name "SlimBatteryMonitor"
   homepage "https://www.orange-carb.org/SBM/"
 
-  livecheck do
-    url "https://www.orange-carb.org/SBM/updates/sbm.xml"
-    strategy :sparkle
-  end
+  deprecate! date: "2024-08-25", because: :unmaintained
 
   app "SlimBatteryMonitor.app"
 
