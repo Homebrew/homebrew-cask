@@ -20,4 +20,8 @@ cask "scratch" do
     "~/Library/Application Support/Scratch",
     "~/Library/Preferences/edu.mit.scratch.scratch-desktop.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
