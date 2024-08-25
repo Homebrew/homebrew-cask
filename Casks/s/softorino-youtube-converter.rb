@@ -24,4 +24,8 @@ cask "softorino-youtube-converter" do
     "~/Library/Preferences/com.softorino.syc2.plist",
     "~/Library/Saved Application State/com.softorino.syc2.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
