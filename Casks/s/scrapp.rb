@@ -19,4 +19,8 @@ cask "scrapp" do
     "~/Library/Application Support/com.noArt.Scrapp",
     "~/Library/Caches/com.noArt.Scrapp",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
