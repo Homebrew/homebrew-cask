@@ -14,4 +14,8 @@ cask "syncterm" do
     "~/Library/Preferences/SyncTERM",
     "~/Library/Preferences/syncterm.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
