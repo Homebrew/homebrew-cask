@@ -24,4 +24,8 @@ cask "shimo" do
     "~/Library/HTTPStorages/com.feingeist.Shimo.binarycookies",
     "~/Library/Preferences/com.feingeist.Shimo.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
