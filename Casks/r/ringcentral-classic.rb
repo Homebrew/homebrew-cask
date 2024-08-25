@@ -28,4 +28,8 @@ cask "ringcentral-classic" do
     "~/Library/Preferences/com.Glip.Glip.plist",
     "~/Library/Saved Application State/com.Glip.Glip.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
