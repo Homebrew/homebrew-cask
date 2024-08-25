@@ -31,4 +31,8 @@ cask "sioyek" do
     "~/Library/Application Support/sioyek",
     "~/Library/Saved Application State/com.yourcompany.sioyek.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
