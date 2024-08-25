@@ -20,4 +20,8 @@ cask "serene" do
     "~/Library/Logs/Serene",
     "~/Library/Saved Application State/com.vh.sereneapp.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
