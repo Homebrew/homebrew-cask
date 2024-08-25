@@ -24,4 +24,8 @@ cask "swinsian" do
     "~/Library/Containers/com.swinsian.SwinsianChapterReader/",
     "~/Library/Preferences/com.swinsian.Swinsian.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
