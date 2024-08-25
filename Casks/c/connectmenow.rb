@@ -1,20 +1,21 @@
 cask "connectmenow" do
-  version "3.0.7"
-  sha256 "6bc729e41788b43fa9f0629e114e23f51dcc950d984341e8fb43b63eedabc124"
+  arch arm: "arm64", intel: "x86-64"
 
-  url "https://www.tweaking4all.com/downloads/network/ConnectMeNow-v#{version}-macOS-64bit.dmg"
+  version "4.0.18"
+  sha256 arm:   "001648f6418d472be39900af2decf4d9687c2992374312696073c159faa5dbbe",
+         intel: "ed566ca22643d7d4bd2e2f22488a41b99ae3eb3f71e5bf8af97c4b959da901c1"
+
+  url "https://www.tweaking4all.com/downloads/network/ConnectMeNow#{version.major}-v#{version}-macOS-#{arch}.dmg"
   name "ConnectMeNow"
   desc "Mount network shares quick and easy"
   homepage "https://www.tweaking4all.com/os-tips-and-tricks/macosx-tips-and-tricks/connectmenow-v#{version.major}/"
 
   livecheck do
-    url "https://www.tweaking4all.com/os-tips-and-tricks/macosx-tips-and-tricks/connectmenow-v#{version.major}/"
-    regex(%r{href=.*?/ConnectMeNow[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]64bit\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/ConnectMeNow#{version.major}[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.dmg}i)
   end
 
-  app "ConnectMeNow.app"
+  app "ConnectMeNow#{version.major}.app"
 
-  caveats do
-    requires_rosetta
-  end
+  zap trash: "~/Library/Preferences/com.Tweaking4All.ConnectMeNow#{version.major}.*"
 end
