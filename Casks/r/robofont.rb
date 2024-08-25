@@ -18,6 +18,8 @@ cask "robofont" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "RoboFont.app"
 
   zap trash: [
@@ -25,4 +27,8 @@ cask "robofont" do
     "~/Library/Preferences/com.typemytype.robofont#{version.major}.plist",
     "~/Library/Saved Application State/com.typemytype.robofont#{version.major}.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
