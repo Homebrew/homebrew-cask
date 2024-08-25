@@ -33,4 +33,8 @@ cask "synfigstudio" do
   app "SynfigStudio.app"
 
   zap trash: "~/Library/Synfig"
+
+  caveats do
+    requires_rosetta
+  end
 end
