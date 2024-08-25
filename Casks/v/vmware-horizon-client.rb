@@ -64,7 +64,6 @@ cask "vmware-horizon-client" do
             ]
 
   zap trash: [
-    "/usr/share/file/magic/vmware",
     "~/.vmware",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.horizon.sfl*",
     "~/Library/Application Support/VMware Horizon View Client",
