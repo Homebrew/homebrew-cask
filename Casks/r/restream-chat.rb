@@ -15,4 +15,8 @@ cask "restream-chat" do
   app "Restream Chat.app"
 
   zap trash: "~/Library/Application Support/Restream Chat"
+
+  caveats do
+    requires_rosetta
+  end
 end
