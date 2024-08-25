@@ -35,4 +35,8 @@ cask "shadowsocksx-ng-r" do
     "~/Library/Caches/com.qiuyuzhou.ShadowsocksX-NG",
     "~/Library/Preferences/com.qiuyuzhou.ShadowsocksX-NG.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
