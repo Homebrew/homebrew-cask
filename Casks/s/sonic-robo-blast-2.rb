@@ -17,4 +17,8 @@ cask "sonic-robo-blast-2" do
   app "Sonic Robo Blast 2.app"
 
   zap trash: "~/srb2"
+
+  caveats do
+    requires_rosetta
+  end
 end
