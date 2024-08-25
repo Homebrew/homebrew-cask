@@ -23,4 +23,8 @@ cask "sonarr@beta" do
     "~/.config/Sonarr",
     "~/Library/Saved Application State/com.osx.sonarr.tv.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

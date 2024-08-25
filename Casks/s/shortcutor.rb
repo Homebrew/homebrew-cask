@@ -23,4 +23,8 @@ cask "shortcutor" do
     "~/Library/Logs/Shortcutor",
     "~/Library/Preferences/com.shortcutor.shortcutor.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -20,4 +20,8 @@ cask "sizeup" do
     "~/Library/Application Support/SizeUp",
     "~/Library/Preferences/com.irradiatedsoftware.SizeUp.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

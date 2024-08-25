@@ -16,4 +16,8 @@ cask "scatter" do
     "~/Library/Preferences/com.get-scatter.server.plist",
     "~/Library/Saved Application State/com.get-scatter.server.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

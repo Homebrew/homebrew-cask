@@ -26,4 +26,8 @@ cask "sonic-lineup" do
     "~/Library/Preferences/org.sonicvisualiser.SonicLineup.plist",
     "~/Library/Saved Application State/org.sonicvisualiser.SonicLineup.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

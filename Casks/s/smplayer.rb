@@ -19,4 +19,8 @@ cask "smplayer" do
     "~/Library/Preferences/info.smplayer.SMPlayer.plist",
     "~/Library/Saved Application State/info.smplayer.SMPlayer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

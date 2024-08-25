@@ -18,4 +18,8 @@ cask "sim-daltonism" do
     "~/Library/Application Scripts/com.michelf.sim-daltonism",
     "~/Library/Containers/com.michelf.sim-daltonism",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
