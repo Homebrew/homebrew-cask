@@ -17,4 +17,8 @@ cask "streamlink-twitch-gui" do
     "~/Library/Caches/streamlink-twitch-gui",
     "~/Library/Logs/streamlink-twitch-gui",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
