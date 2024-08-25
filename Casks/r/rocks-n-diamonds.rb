@@ -18,4 +18,8 @@ cask "rocks-n-diamonds" do
     "~/Documents/Rocks'n'Diamonds",
     "~/Library/Saved Application State/org.artsoft.rocksndiamonds.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
