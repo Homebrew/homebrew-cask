@@ -19,4 +19,8 @@ cask "supermjograph" do
     "~/Library/Caches/com.mjo.SuperMjograph",
     "~/Library/Preferences/com.mjo.SuperMjograph.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
