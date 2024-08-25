@@ -36,4 +36,8 @@ cask "stolendata-mpv" do
     "~/Library/Preferences/io.mpv.plist",
     "~/Library/Preferences/mpv.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

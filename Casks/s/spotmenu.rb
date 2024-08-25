@@ -21,4 +21,8 @@ cask "spotmenu" do
     "~/Library/Group Containers/group.KMikiy.SpotMenu",
     "~/Library/Preferences/com.KMikiy.SpotMenu.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

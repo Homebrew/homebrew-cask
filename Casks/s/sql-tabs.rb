@@ -10,4 +10,8 @@ cask "sql-tabs" do
   app "SQL Tabs.app"
 
   zap trash: "~/.sqltabs"
+
+  caveats do
+    requires_rosetta
+  end
 end

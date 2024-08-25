@@ -20,4 +20,8 @@ cask "swift" do
     "~/Library/Preferences/im.swift.Swift.plist",
     "~/Library/Saved Application State/im.swift.Swift.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

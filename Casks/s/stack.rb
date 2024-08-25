@@ -22,4 +22,8 @@ cask "stack" do
     "~/Library/Application Support/STACK/",
     "~/Library/Caches/nl.transip.stack",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

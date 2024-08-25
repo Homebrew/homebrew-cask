@@ -18,5 +18,6 @@ cask "sqlworkbenchj" do
 
   caveats do
     depends_on_java "11+"
+    requires_rosetta
   end
 end

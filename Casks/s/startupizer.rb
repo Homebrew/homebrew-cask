@@ -25,4 +25,8 @@ cask "startupizer" do
     "~/Library/Caches/com.gentlebytes.Startupizer#{version.major}",
     "~/Library/Preferences/com.gentlebytes.Startupizer#{version.major}.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

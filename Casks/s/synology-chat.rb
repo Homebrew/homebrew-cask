@@ -15,4 +15,8 @@ cask "synology-chat" do
   app "Synology Chat.app"
 
   zap trash: "~/Library/Application Support/Synology Chat"
+
+  caveats do
+    requires_rosetta
+  end
 end

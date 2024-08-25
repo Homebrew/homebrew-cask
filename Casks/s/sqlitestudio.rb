@@ -17,4 +17,8 @@ cask "sqlitestudio" do
     "~/Library/Saved Application State/com.yourcompany.SQLiteStudio.savedState",
     "~/Library/Saved Application State/pl.com.salsoft.SQLiteStudio.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -20,4 +20,8 @@ cask "sonos-s1-controller" do
   app "Sonos S1 Controller.app"
 
   zap trash: "~/Library/Application Support/Sonos"
+
+  caveats do
+    requires_rosetta
+  end
 end
