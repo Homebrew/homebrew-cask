@@ -18,4 +18,8 @@ cask "snapndrag" do
     "~/Library/Application Support/com.yellowmug.SnapNDrag",
     "~/Library/Preferences/com.yellowmug.SnapNDrag.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
