@@ -18,4 +18,8 @@ cask "subtools" do
     "~/Library/Application Support/EmmGunn",
     "~/Library/Preferences/com.emmgunn.SUBtools.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
