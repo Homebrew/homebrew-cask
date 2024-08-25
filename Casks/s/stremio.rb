@@ -22,4 +22,8 @@ cask "stremio" do
     "~/Library/Preferences/com.stremio.Stremio.plist",
     "~/Library/Saved Application State/com.smartcodeltd.stremio.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
