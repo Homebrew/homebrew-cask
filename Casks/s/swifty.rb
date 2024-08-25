@@ -18,4 +18,8 @@ cask "swifty" do
     "~/Library/Preferences/com.electron.swifty.plist",
     "~/Library/Saved Application State/com.electron.swifty.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
