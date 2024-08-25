@@ -19,4 +19,8 @@ cask "sqlitemanager" do
     "~/Library/Preferences/com.sqlabs.sqlitemanager4.plist",
     "~/Library/Saved Application State/com.sqlabs.sqlitemanager4.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
