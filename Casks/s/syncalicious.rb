@@ -18,4 +18,8 @@ cask "syncalicious" do
     "~/Library/Preferences/com.zenangst.Syncalicious.plist",
     "~/Library/Saved Application State/com.zenangst.Syncalicious.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
