@@ -31,4 +31,8 @@ cask "react-studio" do
     "~/Library/Preferences/com.neonto.ReactStudio.plist*",
     "~/Library/Saved Application State/com.neonto.ReactStudio.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
