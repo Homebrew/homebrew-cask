@@ -8,13 +8,7 @@ cask "xamarin-profiler" do
   desc "Mono log profiler graphical interface"
   homepage "https://learn.microsoft.com/en-us/xamarin/tools/profiler/?tabs=macos"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?profiler[._-]mac[._-]v?(\d+(?:\.\d+)+)-(\d+)\.pkg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.first},#{match.second}" }
-    end
-  end
+  disable! date: "2024-08-26", because: :no_longer_available
 
   pkg "profiler-mac-#{version.csv.first}-#{version.csv.second}.pkg"
 
