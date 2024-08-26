@@ -8,6 +8,7 @@ cask "codeedit" do
   desc "Code editor"
   homepage "https://www.codeedit.app/"
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "CodeEdit.app"
