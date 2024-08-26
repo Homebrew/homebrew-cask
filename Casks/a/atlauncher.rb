@@ -1,6 +1,6 @@
 cask "atlauncher" do
-  version "3.4.36.10"
-  sha256 "594a21048303424be3861bd125f11c0b9bb96d1e12c448e38285e1b84e84dfd0"
+  version "3.4.37.0"
+  sha256 "6d46cf793fff5f59c223ce39f6f25f89476fc7078175d705a2bd5cd36b04314b"
 
   url "https://github.com/ATLauncher/ATLauncher/releases/download/v#{version}/ATLauncher-#{version}.zip",
       verified: "github.com/ATLauncher/ATLauncher/"
