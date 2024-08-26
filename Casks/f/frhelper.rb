@@ -1,5 +1,5 @@
 cask "frhelper" do
-  version :latest
+  version "2024-07-26"
   sha256 :no_check
 
   url "https://static.eudic.net/pkg/fhmac.dmg",
