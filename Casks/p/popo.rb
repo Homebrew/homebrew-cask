@@ -1,6 +1,6 @@
 cask "popo" do
-  version "4.10.0,1722535671130"
-  sha256 "ac8285dbd2810a8172575feacd0a262b70543e3c8a02efd0e2b83d381997cb46"
+  version "4.11.0,1724665179011"
+  sha256 "e0bb37bf91576aeb653f446a2323e62f87ec3bbcb4da903efc75449c61ec5a61"
 
   url "https://popo.netease.com/file/popomac/POPO-setup_prod_#{version.csv.second}.dmg"
   name "NetEase POPO"
@@ -17,6 +17,8 @@ cask "popo" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "popo_mac.app"
 
   zap trash: [
@@ -25,8 +27,4 @@ cask "popo" do
     "~/Library/Preferences/com.netease.game.popo.plist",
     "~/Library/Saved Application State/com.netease.game.popo.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
