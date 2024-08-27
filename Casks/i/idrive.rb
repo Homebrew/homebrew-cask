@@ -8,8 +8,10 @@ cask "idrive" do
   desc "Cloud backup and storage solution"
   homepage "https://www.idrive.com/"
 
+  # The upstream download page appends a UNIX epoch timestamp (in milliseconds)
+  # to the JSON URL, so we do the same (in case it affects the returned data).
   livecheck do
-    url "https://static.idriveonlinebackup.com/downloads/version_mac.js"
+    url "https://static.idriveonlinebackup.com/downloads/version_mac.js?v=#{DateTime.now.strftime("%Q")}"
     strategy :page_match do |page|
       version_match = page.match(/Version:?\s*v?(\d+(?:\.\d+)+)/i)
       next if version_match.blank?
