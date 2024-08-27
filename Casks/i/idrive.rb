@@ -9,7 +9,7 @@ cask "idrive" do
   homepage "https://www.idrive.com/"
 
   # The upstream download page appends a UNIX epoch timestamp (in milliseconds)
-  # to the JSON URL, so we do the same (in case it affects the returned data).
+  # to the JavaScript URL, so we do the same (in case it affects the returned data).
   livecheck do
     url "https://static.idriveonlinebackup.com/downloads/version_mac.js?v=#{DateTime.now.strftime("%Q")}"
     strategy :page_match do |page|
