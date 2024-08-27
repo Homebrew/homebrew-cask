@@ -694,6 +694,7 @@ screen-studio
 screens-connect
 sdm
 seafile-client
+second-life-viewer
 securityspy
 segger-jlink
 segger-ozone
