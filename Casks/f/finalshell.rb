@@ -1,7 +1,7 @@
 cask "finalshell" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.5"
+  version "4.5.6"
   sha256 :no_check
 
   url "http://www.hostbuf.com/downloads/finalshell_macos_#{arch}.pkg"
