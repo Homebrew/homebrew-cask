@@ -1,9 +1,9 @@
 cask "spyder" do
   arch arm: "_arm64"
 
-  version "5.5.5"
-  sha256 arm:   "c6e4a1d6bb2129e141d67a88b1ae406bc6b4a8b3eb4c67db2ab0b32541a18140",
-         intel: "690ef00e2ff531ff7ca97cae377734baa76db709f47f56edac321b2c6f574237"
+  version "5.5.6"
+  sha256 arm:   "e3b87830e32b6c0585c8973acb38db005b57a37088f3f0c50143d6a5b16c7690",
+         intel: "022afd6c59a3f0831950f0546be82238a8372a7d97360a8b5da0c932dabe8f41"
 
   url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder#{arch}.dmg",
       verified: "github.com/spyder-ide/spyder/"
