@@ -3,6 +3,7 @@ cask "eudic" do
   sha256 :no_check
 
   url "https://static.frdic.com/pkg/eudicmac.dmg",
+      verified:   "static.frdic.com/",
       user_agent: :fake
   name "Eudic"
   name "欧路词典"
