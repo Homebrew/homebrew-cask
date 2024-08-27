@@ -656,6 +656,7 @@ reaper
 rectangle
 rectangle-pro
 reflect
+rekordbox
 remote-desktop-manager
 remotehamradio
 removebg
