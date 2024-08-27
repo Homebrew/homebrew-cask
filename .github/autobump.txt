@@ -1,3 +1,4 @@
+115browser
 1password
 1password-cli
 1password-cli@beta
