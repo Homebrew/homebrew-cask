@@ -1,6 +1,6 @@
 cask "idrive" do
-  version "4.0.0.2,081324"
-  sha256 "78af27442fb9a98d77bee0d26597b7545ee14d075e4c2f5d7c06b6ff14fb7c69"
+  version "4.0.0.2,082624"
+  sha256 "59efe21e25c3400feaf06718fde64b2f34d885fe131d64032bf6aaf6b080ec75"
 
   url "https://static.idriveonlinebackup.com/downloads/#{version.csv.second}/IDrive.dmg",
       verified: "static.idriveonlinebackup.com/downloads/"
@@ -8,8 +8,10 @@ cask "idrive" do
   desc "Cloud backup and storage solution"
   homepage "https://www.idrive.com/"
 
+  # The upstream download page appends a UNIX epoch timestamp (in milliseconds)
+  # to the JavaScript URL, so we do the same (in case it affects the returned data).
   livecheck do
-    url "https://static.idriveonlinebackup.com/downloads/version_mac.js"
+    url "https://static.idriveonlinebackup.com/downloads/version_mac.js?v=#{DateTime.now.strftime("%Q")}"
     strategy :page_match do |page|
       version_match = page.match(/Version:?\s*v?(\d+(?:\.\d+)+)/i)
       next if version_match.blank?
