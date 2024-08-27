@@ -568,6 +568,7 @@ origami-studio
 oscar
 ossia-score
 osu
+outline
 output-factory
 ovito
 ovito-pro
