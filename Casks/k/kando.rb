@@ -1,9 +1,9 @@
 cask "kando" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.0"
-  sha256 arm:   "ee20889ab29bc05988e06363bcc9c77f26a1743c5db52b61ccab23b3b52ef534",
-         intel: "b04b5d89d33887777711586e0aa61640ff8bfa98335871d993feb12c1957cb9a"
+  version "1.3.0"
+  sha256 arm:   "5fdd3aaa799367ffb743f717226d366f19635e9fc6b6b416e4f8ae87788c4776",
+         intel: "05c8babc72d8252ee0a9b9bdb5d8ee8b4215015d49b6e7590ed4741b423d76f6"
 
   url "https://github.com/kando-menu/kando/releases/download/v#{version}/Kando-#{version}-#{arch}.dmg"
   name "Kando"
