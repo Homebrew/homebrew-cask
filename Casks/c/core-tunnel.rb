@@ -1,6 +1,6 @@
 cask "core-tunnel" do
-  version "3.10.3"
-  sha256 "e47ab9dd80b8b531bb120aba544226dd36e3b888e41b6eeb9c8346e0cf07bdef"
+  version "3.10.4"
+  sha256 "3e08cb3f7a5946145550933e133157073ecc2176fe38ec485c541dd560d19b0b"
 
   url "https://codinn.com/update/tunnel/Core%20Tunnel-#{version}.zip"
   name "Core Tunnel"
