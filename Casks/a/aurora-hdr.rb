@@ -12,6 +12,8 @@ cask "aurora-hdr" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "Aurora HDR.app"
 
   uninstall delete: [
