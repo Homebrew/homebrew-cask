@@ -433,6 +433,7 @@ logseq
 lookaway
 loom
 loupedeck
+lunacy
 lunar
 lunar-client
 maa
