@@ -16,7 +16,7 @@ cask "aurora-hdr" do
 
   app "Aurora HDR.app"
 
-  uninstall delete: [
+  zap trash: [
     "~/Library/Caches/com.macphun.auroraHDR2019",
     "~/Library/Preferences/com.macphun.auroraHDR2019.plist",
   ]
