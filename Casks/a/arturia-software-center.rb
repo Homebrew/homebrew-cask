@@ -19,6 +19,8 @@ cask "arturia-software-center" do
     end
   end
 
+  auto_updates true
+
   pkg "Arturia_Software_Center__#{version.dots_to_underscores}.pkg"
 
   uninstall launchctl: "com.Arturia.ArturiaSoftwareCenterAgent",
