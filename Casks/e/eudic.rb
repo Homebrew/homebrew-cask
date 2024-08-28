@@ -2,7 +2,7 @@ cask "eudic" do
   version :latest
   sha256 :no_check
 
-  url "https://static.frdic.com/pkg/eudicmac.dmg",
+  url "https://static.frdic.com/pkg/eudicmac.dmg?v=2024-07-28",
       verified:   "static.frdic.com/",
       user_agent: :fake
   name "Eudic"
