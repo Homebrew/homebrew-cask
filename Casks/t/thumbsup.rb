@@ -2,9 +2,9 @@ cask "thumbsup" do
   version "4.5.3"
   sha256 "05e1bbefd09e098eeb7faec29ea7556f76cf17b49be719af93e443d993beeb8c"
 
-  url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/thumbsup/#{version}/ThumbsUp.app.zip",
-      verified: "s3.amazonaws.com/DTWebsiteSupport/"
+  url "https://download.devontechnologies.com/download/freeware/thumbsup/#{version}/ThumbsUp.app.zip"
   name "ThumbsUp"
+  desc "Batch image thumbnail generation utility"
   homepage "https://www.devontechnologies.com/apps/freeware"
 
   livecheck do
@@ -13,6 +13,13 @@ cask "thumbsup" do
   end
 
   app "ThumbsUp.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/com.devontechnologies.thumbsup.help*",
+    "~/Library/Caches/com.devon-technologies.ThumbsUp",
+    "~/Library/Preferences/com.devon-technologies.ThumbsUp.plist",
+    "~/Library/Saved Application State/com.devon-technologies.ThumbsUp.savedState",
+  ]
 
   caveats do
     requires_rosetta
