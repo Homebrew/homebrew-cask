@@ -1,6 +1,6 @@
 cask "musicbrainz-picard" do
-  version "2.12.1"
-  sha256 "7d2fc8335c8d4f01b346aaf2ce5e7d8a1a9c938f70be84bbb423625910825efe"
+  version "2.12.2"
+  sha256 "ef7df3ac8d0b395161d3f74765fe2eed8ab3ae0fb2fc77838fa57d684c55ec93"
 
   url "https://data.musicbrainz.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}-macOS-10.14.dmg"
   name "MusicBrainz Picard"
