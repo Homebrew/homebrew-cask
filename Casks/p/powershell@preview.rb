@@ -1,9 +1,9 @@
 cask "powershell@preview" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.5.0-preview.3"
-  sha256 arm:   "5e2365f24b8ab74fdfeb091bca5e4f0cc69d88b9f060be723426a214258691ce",
-         intel: "62af23021c3777f5844903458133ab787683e605ced0bb074b36df5edafa5167"
+  version "7.5.0-preview.4"
+  sha256 arm:   "294510dab4e3f1f62c56c6dd2c2ce459e3077064484d461bb10613fef35c9595",
+         intel: "b897c201f41e63430f40ea87a830eacda9ff5f46a694d322dd0773042f604f6d"
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
   name "PowerShell"
