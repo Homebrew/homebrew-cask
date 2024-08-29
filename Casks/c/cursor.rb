@@ -26,7 +26,7 @@ cask "cursor" do
   depends_on macos: ">= :catalina"
 
   app "Cursor.app"
-  binary "#{appdir}/Cursor.app/Contents/Resources/app/bin/cursor"
+  binary "#{appdir}/Cursor.app/Contents/Resources/app/bin/code", target: "cursor"
 
   zap trash: [
     "~/.cursor",
