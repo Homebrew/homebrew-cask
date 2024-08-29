@@ -23,7 +23,7 @@ module ChangedFiles
     modified_ruby_files = modified_files.select { |path| path.extname == ".rb" }
     modified_command_files = modified_files.select { |path| path.ascend.to_a.last.to_s == "cmd" }
     modified_github_actions_files = modified_files.select { |path| path.to_s.start_with?(".github/actions/") }
-    modified_cask_files = modified_files.select { |path| cask_file?(path) }
+    modified_cask_files = modified_files.select { |path| cask_file?(path.to_s) }
 
     {
       modified_files:,
