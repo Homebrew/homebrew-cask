@@ -1,6 +1,6 @@
 cask "tradingview" do
-  version "2.9.0"
-  sha256 "1d3eccbe7f23534f92c99f75f44f2f5941cdd0c2b168d829afba121536706a09"
+  version "2.9.1"
+  sha256 "d0e53a4ed028d32cade84d063f98a8906e61363e16cfd86ed11c56d951e9b58a"
 
   url "https://tvd-packages.tradingview.com/stable/#{version}/darwin/TradingView.dmg"
   name "TradingView Desktop"
