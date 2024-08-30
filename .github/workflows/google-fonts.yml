@@ -67,9 +67,10 @@ jobs:
 
             git commit -am "Update Google Fonts" -m "This pull request was created automatically by the [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) workflow."
 
-            gh pr create --head "auto-${{ matrix.mode }}-google-fonts"
+            gh pr create --fill --head "auto-${{ matrix.mode }}-google-fonts"
           fi
         env:
+          GH_TOKEN: ${{ github.token }}
           GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
           GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
           HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
