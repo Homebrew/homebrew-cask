@@ -28,8 +28,7 @@ cask "roblox" do
   # The default installer installs the application as `Roblox.app` - so do the same for consistency
   app "RobloxPlayer.app", target: "Roblox.app"
 
-  uninstall quit:   "com.roblox.RobloxPlayer",
-            delete: "/Applications/Roblox.app"
+  uninstall quit: "com.roblox.RobloxPlayer"
 
   zap trash: [
     "~/Library/Preferences/com.Roblox.Roblox.plist",
