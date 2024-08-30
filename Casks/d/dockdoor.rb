@@ -8,7 +8,7 @@ cask "dockdoor" do
   homepage "https://github.com/ejbills/DockDoor"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :ventura"
 
   app "DockDoor.app"
 
