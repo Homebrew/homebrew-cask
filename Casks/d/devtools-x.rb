@@ -9,7 +9,7 @@ cask "devtools-x" do
   url "https://github.com/fosslife/devtools-x/releases/download/devtoolsx-v#{version}/dev-tools_#{version}_#{arch}.dmg"
 
   name "devtools-x"
-  desc "Collection of offline first developer utilities available as desktop application. all in one place, cross-platform!"
+  desc "Collection of offline first developer utilities available as desktop application"
 
   homepage "https://github.com/fosslife/devtools-x"
 
