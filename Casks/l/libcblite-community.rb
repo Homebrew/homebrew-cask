@@ -1,6 +1,6 @@
 cask "libcblite-community" do
-  version "3.1.7"
-  sha256 "7ead63b38fe0d9264ef2ee0f22e58b2f6d9136a752f188c3b578fc4b198da606"
+  version "3.2.0"
+  sha256 "f299c190eb26a1fd5c15361c17e11907172d563e82d133e33a9696fb0ba8563f"
 
   url "https://packages.couchbase.com/releases/couchbase-lite-c/#{version}/couchbase-lite-c-community-#{version}-macos.zip"
   name "Couchbase Lite (Community Edition)"
