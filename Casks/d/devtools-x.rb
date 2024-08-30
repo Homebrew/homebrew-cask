@@ -6,7 +6,6 @@ cask "devtools-x" do
          intel: "fbf6b020c9107c60231846b2e76d5e6a9bfbf0293ad0ec5bf46ec7ed889ea783"
 
   url "https://github.com/fosslife/devtools-x/releases/download/devtoolsx-v#{version}/dev-tools_#{version}_#{arch}.dmg"
-
   name "devtools-x"
   desc "Collection of offline first developer utilities available as desktop application"
   homepage "https://github.com/fosslife/devtools-x"
