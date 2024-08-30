@@ -1,9 +1,9 @@
 cask "loom" do
   arch arm: "-arm64"
 
-  version "0.250.0"
-  sha256 arm:   "a27323d92547d3b8aeee603afa3e26760247faf68ae48548922b64f5873f89f2",
-         intel: "c45ea9f962613390de09c5414b53411cec057f9e3a516e5f2333aa1382fbeb2b"
+  version "0.251.1"
+  sha256 arm:   "0d12df56321afb5748f79106d00d0bb2b2063a90824e3a950d68ba8c7a1f8fc8",
+         intel: "69b7d9dd97cc3d455ba49dde7eb3b7af3cbcc878d45df8c89fa4c70766705392"
 
   url "https://packages.loom.com/desktop-packages/Loom-#{version}#{arch}.dmg"
   name "Loom"
