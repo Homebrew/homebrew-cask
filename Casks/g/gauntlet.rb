@@ -7,17 +7,6 @@ cask "gauntlet" do
   desc "Open-source cross-platform application launcher"
   homepage "https://github.com/project-gauntlet/gauntlet"
 
-  livecheck do
-    url :url
-    regex(/^v(\d)$/i)
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
-  end
-
   depends_on arch: :arm64
 
   app "Gauntlet.app"
