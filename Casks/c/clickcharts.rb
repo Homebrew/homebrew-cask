@@ -1,5 +1,5 @@
 cask "clickcharts" do
-  version "9.28"
+  version "9.45"
   sha256 :no_check
 
   url "https://www.nchsoftware.com/chart/clickchartspmaci.zip",
