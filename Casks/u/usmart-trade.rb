@@ -24,4 +24,8 @@ cask "usmart-trade" do
     "~/Library/Preferences/com.usmart.mac.test.plist",
     "~/Library/Saved Application State/com.usmart.mac.test.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
