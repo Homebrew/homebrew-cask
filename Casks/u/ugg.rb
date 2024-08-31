@@ -25,4 +25,8 @@ cask "ugg" do
     "~/Library/Preferences/com.electron.u.gg.plist",
     "~/Library/Saved Application State/com.electron.u.gg.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
