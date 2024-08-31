@@ -26,4 +26,8 @@ cask "texworks" do
   app "TeXworks.app"
 
   zap trash: "~/Library/Preferences/org.tug.TeXworks.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

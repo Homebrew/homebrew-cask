@@ -20,4 +20,8 @@ cask "textadept" do
     "~/.textadept",
     "~/Library/Saved Application State/com.textadept.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

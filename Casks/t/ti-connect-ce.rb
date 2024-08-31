@@ -22,4 +22,8 @@ cask "ti-connect-ce" do
     "~/Library/Preferences/com.ti.et.elg.tiConnect.TIConnectApplication.plist",
     "~/Library/Saved Application State/com.ti.et.elg.tiConnect.TIConnectApplication.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

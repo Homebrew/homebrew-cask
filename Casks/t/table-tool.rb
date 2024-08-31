@@ -14,4 +14,8 @@ cask "table-tool" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/at.eggerapps.tabletool.sfl*",
     "~/Library/Containers/at.eggerapps.tabletool",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

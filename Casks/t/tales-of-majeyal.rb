@@ -19,4 +19,8 @@ cask "tales-of-majeyal" do
     "~/Library/Application Support/T-Engine",
     "~/Library/Saved Application State/org.te4.T-Engine.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
