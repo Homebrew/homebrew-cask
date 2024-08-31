@@ -1,8 +1,11 @@
 cask "geoda" do
-  version "1.22.0.6"
-  sha256 "1722be14d82fbf78fcdff2f895d9681a9532371e9197ce7dd4f6fe680873a1ef"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://github.com/GeoDaCenter/geoda/releases/download/v#{version}/GeoDa#{version}-Installer.dmg",
+  version "1.22.0.8"
+  sha256 arm:   "0026f101763e5eed1c62a326e04c732d9796e5d6c7e09404f98dace098594da8",
+         intel: "7273994f74e838b3cf08513e714279402f0fd0b9dd6305027ecf26c30c4f9789"
+
+  url "https://github.com/GeoDaCenter/geoda/releases/download/v#{version}/GeoDa#{version}-#{arch}-Installer.dmg",
       verified: "github.com/GeoDaCenter/geoda/"
   name "GeoDa"
   desc "Spatial analysis, statistics, autocorrelation and regression"
@@ -16,10 +19,6 @@ cask "geoda" do
   depends_on macos: ">= :catalina"
 
   app "GeoDa.app"
-
-  caveats do
-    requires_rosetta
-  end
 
   # No zap stanza required
 end
