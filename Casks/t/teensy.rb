@@ -15,4 +15,8 @@ cask "teensy" do
   app "teensy.app"
 
   zap trash: "~/Library/Saved Application State/com.pjrc.teensy.savedState"
+
+  caveats do
+    requires_rosetta
+  end
 end
