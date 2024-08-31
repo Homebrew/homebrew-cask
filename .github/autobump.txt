@@ -297,6 +297,7 @@ font-lxgw-fasmartgothic
 font-lxgw-heartserif
 font-lxgw-neoxihei
 font-lxgw-neozhisong
+font-lxgw-simxihei
 font-lxgw-simzhisong
 font-sarasa-gothic
 fork
