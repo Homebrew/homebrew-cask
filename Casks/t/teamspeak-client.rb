@@ -34,4 +34,8 @@ cask "teamspeak-client" do
     "~/Library/Preferences/com.teamspeak.TeamSpeak#{version.major}.plist*",
     "~/Library/Saved Application State/com.teamspeak.TeamSpeak#{version.major}.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
