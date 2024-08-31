@@ -13,6 +13,7 @@ cask "thor" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Thor.app"
 
@@ -22,4 +23,8 @@ cask "thor" do
     "~/Library/Application Scripts/me.alvinzhu.Thor",
     "~/Library/Containers/me.alvinzhu.Thor",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
