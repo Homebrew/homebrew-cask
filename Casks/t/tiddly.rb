@@ -15,4 +15,8 @@ cask "tiddly" do
     "~/Library/Preferences/com.tiddlywiki.plist",
     "~/Library/Saved Application State/com.tiddlywiki.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
