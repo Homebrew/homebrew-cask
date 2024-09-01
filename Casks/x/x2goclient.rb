@@ -28,4 +28,8 @@ cask "x2goclient" do
     "~/Library/Application Support/CrashReporter/x2goclient_*.plist",
     "~/Library/Preferences/x2goclient.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
