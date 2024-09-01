@@ -22,4 +22,8 @@ cask "xstation5" do
     "~/Library/Preferences/xStation5.desktop.x64.plist",
     "~/Library/Saved Application State/xStation5.desktop.x64.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
