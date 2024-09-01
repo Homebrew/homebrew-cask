@@ -8,6 +8,11 @@ cask "airdash" do
   desc "Transfer photos and files to any device"
   homepage "https://airdash-project.web.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :big_sur"
 
   app "AirDash#{version.patch}.app"
