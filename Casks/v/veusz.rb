@@ -24,4 +24,8 @@ cask "veusz" do
   app "Veusz.app"
 
   zap trash: "~/Library/Preferences/org.veusz.veusz*.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

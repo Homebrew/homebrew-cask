@@ -23,4 +23,8 @@ cask "voodoopad" do
     "~/Library/Caches/com.flyingmeat.VoodooPad5",
     "~/Library/Preferences/com.flyingmeat.VoodooPad5.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

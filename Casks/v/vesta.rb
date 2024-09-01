@@ -18,4 +18,8 @@ cask "vesta" do
     "~/Library/Application Support/VESTA",
     "~/Library/Preferences/VESTA.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

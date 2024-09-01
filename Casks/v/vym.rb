@@ -15,4 +15,8 @@ cask "vym" do
   app "vym.app"
 
   zap trash: "~/Library/Preferences/com.insilmaril.vym.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
