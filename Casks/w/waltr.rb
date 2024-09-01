@@ -21,4 +21,8 @@ cask "waltr" do
     "~/Library/Application Support/Waltr",
     "~/Library/Preferences/com.softorino.waltr2.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
