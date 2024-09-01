@@ -20,4 +20,8 @@ cask "valkyrie" do
     "~/Library/Preferences/unity.NA.Valkyrie.plist",
     "~/Library/Saved Application State/unity.NA.Valkyrie.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
