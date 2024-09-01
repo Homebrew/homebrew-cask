@@ -1,6 +1,6 @@
 cask "notes-better" do
-  version "2.2.1"
-  sha256 "8148f8239abc5352e8abc9adac181f109994c616ff652d505e93b341c94138aa"
+  version "2.3.0"
+  sha256 "f9525c711ecadfccb5f2a90f4ffa51ff2fa918e69ee01991dc4b00b50e8ab32d"
 
   url "https://github.com/nuttyartist/notes/releases/download/v#{version}/Notes.#{version}.dmg",
       verified: "github.com/nuttyartist/notes/"
@@ -17,4 +17,8 @@ cask "notes-better" do
     "~/Library/Preferences/io.github.nuttyartist.notes.plist",
     "~/Library/Saved Application State/io.github.nuttyartist.notes.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
