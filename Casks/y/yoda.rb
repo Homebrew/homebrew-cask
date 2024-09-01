@@ -7,6 +7,8 @@ cask "yoda" do
   desc "App to browse and download YouTube videos"
   homepage "https://github.com/whoisandy/yoda"
 
+  deprecate! date: "2024-09-01", because: :unmaintained
+
   app "Yoda.app"
 
   zap trash: [
@@ -15,4 +17,8 @@ cask "yoda" do
     "~/Library/Preferences/com.whoisandie.yoda.plist",
     "~/Library/Saved Application State/com.whoisandie.yoda.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
