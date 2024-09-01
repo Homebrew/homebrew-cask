@@ -1,6 +1,6 @@
 cask "dmidiplayer" do
-  version "1.7.3"
-  sha256 "b21833b052c0ecb5b3ed0e8393a99af7d30797bb7496a5ac92fcd7acf052262e"
+  version "1.7.4"
+  sha256 "4c664843bbc54c0102da32568b20927a33083e2c14e2f0111725f39a24a8f85c"
 
   url "https://downloads.sourceforge.net/dmidiplayer/#{version}/dmidiplayer-#{version}-mac-x64.dmg",
       verified: "downloads.sourceforge.net/dmidiplayer/"
@@ -24,4 +24,8 @@ cask "dmidiplayer" do
     "~/Library/Preferences/net.sourceforge.drumstick.Drumstick MIDI File Multiplatform Player.plist",
     "~/Library/Saved Application State/net.sourceforge.dmidiplayer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
