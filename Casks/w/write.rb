@@ -22,4 +22,8 @@ cask "write" do
     "~/.config/styluslabs",
     "~/Library/Saved Application State/com.styluslabs.write3mac.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

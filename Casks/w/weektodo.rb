@@ -20,4 +20,8 @@ cask "weektodo" do
     "~/Library/Preferences/weektodo-app.netlify.app.plist",
     "~/Library/Saved Application State/weektodo-app.netlify.app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

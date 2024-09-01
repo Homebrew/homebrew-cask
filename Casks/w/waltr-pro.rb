@@ -24,4 +24,8 @@ cask "waltr-pro" do
     "~/Library/Preferences/com.softorino.waltrpro.plist",
     "~/Library/Saved Application State/com.softorino.waltrpro.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

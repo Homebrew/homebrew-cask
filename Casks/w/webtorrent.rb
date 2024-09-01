@@ -25,4 +25,8 @@ cask "webtorrent" do
     "~/Library/Saved Application State/io.webtorrent.webtorrent.savedState",
     "~/Library/WebKit/io.webtorrent.webtorrent",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
