@@ -19,4 +19,8 @@ cask "valley" do
     "~/Library/Application Support/Valley",
     "~/Library/Saved Application State/com.Unigine.Valley.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
