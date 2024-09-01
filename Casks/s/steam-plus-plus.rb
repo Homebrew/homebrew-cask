@@ -1,6 +1,6 @@
 cask "steam-plus-plus" do
-  version "3.0.0-rc.9"
-  sha256 "d0d61583530c0e4f09b888d12b582704f972786ac4b0cdc5c5575f71741a1371"
+  version "3.0.0-rc.10"
+  sha256 "12beb2bb8b221c2cc8b860ab1a974900a06083b94336a7fe798b19e524185c99"
 
   url "https://github.com/BeyondDimension/SteamTools/releases/download/#{version}/Steam++_v#{version}_macos.dmg",
       verified: "github.com/BeyondDimension/SteamTools/"
