@@ -15,16 +15,6 @@ cask "visual-studio" do
   desc "Integrated development environment"
   homepage "https://visualstudio.microsoft.com/vs/mac/"
 
-  livecheck do
-    url "https://aka.ms/vsmac/manifest/#{version.major}-stable"
-    regex(%r{/download/pr/([^/]+)/([^/]+)/visualstudioformac[._-]v?(\d+(?:\.\d+)+)-#{arch}.dmg}i)
-    strategy :json do |json|
-      json["items"].flat_map do |item|
-        item["url"]&.scan(regex)&.map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
-      end
-    end
-  end
-
   deprecate! date: "2024-08-31", because: :discontinued
 
   auto_updates true
