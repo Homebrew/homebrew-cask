@@ -7,13 +7,7 @@ cask "cr" do
   desc "XML/CSS based eBook reader"
   homepage "https://sourceforge.net/projects/crengine/"
 
-  livecheck do
-    url "https://sourceforge.net/projects/crengine/rss?path=/CoolReader#{version.major}/cr#{version.major}-#{version.csv.first}"
-    regex(%r{url=.*?/cr(\d+(?:\.\d+)+)-(\d+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
-  end
+  deprecate! date: "2024-09-01", because: :unmaintained
 
   app "cr#{version.major}.app"
 
