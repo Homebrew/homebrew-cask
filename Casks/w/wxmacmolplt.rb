@@ -1,6 +1,6 @@
 cask "wxmacmolplt" do
-  version "7.7,ijfreodzydtqn214qui3snyvj5vdovqr"
-  sha256 "c3bf2e39a85d0c55ef28c9cc61b0897304a2804b79c34f765eb4537c1a97a5e8"
+  version "7.7.3,026tyu30ck2xeldbxhgjkmmuxvwg87mc"
+  sha256 "5a822760b8f3160cfcac0ab24a32a3aff5af8fc7d16d78ea736651df1e9145df"
 
   url "https://uofi.box.com/shared/static/#{version.csv.second}.gz",
       verified: "uofi.box.com/shared/static/"
@@ -11,9 +11,7 @@ cask "wxmacmolplt" do
   livecheck do
     url "https://brettbode.github.io/wxmacmolplt/downloads.html"
     strategy :page_match do |page|
-      match = page.match(
-        /([a-z0-9]+)\.gz">\n.*wxMacMolPlt\s(\d+(?:\.\d+)*).+Does\snot\sinclude\sQuickTime\ssupport/i,
-      )
+      match = page.match(/([a-z0-9]+)\.gz">\n.*wxMacMolPlt\s(\d+(?:\.\d+)*)/i)
       "#{match[2]},#{match[1]}"
     end
   end
