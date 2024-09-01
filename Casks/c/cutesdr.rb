@@ -7,16 +7,7 @@ cask "cutesdr" do
   desc "Demodulation and spectrum display program"
   homepage "https://sourceforge.net/projects/cutesdr/"
 
-  livecheck do
-    url :url
-    regex(%r{url=.*?/CuteSdr[._-]?v?(\d+(?:\.\d+)*)\.dmg}i)
-    strategy :sourceforge do |page, regex|
-      page.scan(regex).map do |match|
-        # Naively convert filename versions like `120` to `1.20`
-        match[0].include?(".") ? match[0] : match[0].insert(1, ".")
-      end
-    end
-  end
+  deprecate! date: "2024-09-01", because: :unmaintained
 
   app "cutesdr.app"
 
