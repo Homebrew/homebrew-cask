@@ -560,6 +560,7 @@ opal-composer
 openaudible
 opencat
 openlens
+openrct2
 openscad@snapshot
 openshift-client
 opera
