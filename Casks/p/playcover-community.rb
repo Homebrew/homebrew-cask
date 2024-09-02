@@ -1,6 +1,6 @@
 cask "playcover-community" do
-  version "3.0.0"
-  sha256 "c25deeedbe4806d4c5c486e05e7696e3479c1294a7c51f0baf1715ed53371e26"
+  version "3.1.0"
+  sha256 "5c3a291827f4802f665daf5c33a6bfe6ef0df2c6dff3f9e554db6514176196e7"
 
   url "https://github.com/PlayCover/PlayCover/releases/download/#{version}/PlayCover_#{version}.dmg"
   name "PlayCover"
