@@ -1,21 +1,24 @@
 cask "font-ibm-plex-sans-devanagari" do
-  version :latest
-  sha256 :no_check
+  version "1.0.0"
+  sha256 "33d7517d3a67968f4db557a369861680c8f93e68c925754a5d7893e371d4c6c8"
 
-  url "https://github.com/google/fonts.git",
-      verified:  "github.com/google/fonts",
-      branch:    "main",
-      only_path: "ofl/ibmplexsansdevanagari"
+  url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans-devanagari%40#{version}/ibm-plex-sans-devanagari.zip"
   name "IBM Plex Sans Devanagari"
-  homepage "https://fonts.google.com/specimen/IBM+Plex+Sans+Devanagari"
+  homepage "https://github.com/IBM/plex"
 
-  font "IBMPlexSansDevanagari-Bold.ttf"
-  font "IBMPlexSansDevanagari-ExtraLight.ttf"
-  font "IBMPlexSansDevanagari-Light.ttf"
-  font "IBMPlexSansDevanagari-Medium.ttf"
-  font "IBMPlexSansDevanagari-Regular.ttf"
-  font "IBMPlexSansDevanagari-SemiBold.ttf"
-  font "IBMPlexSansDevanagari-Thin.ttf"
+  livecheck do
+    url :url
+    regex(%r{^@ibm/plex-sans-devanagari@?(\d+(?:\.\d+)+)$}i)
+  end
+
+  font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Bold.otf"
+  font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-ExtraLight.otf"
+  font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Light.otf"
+  font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Medium.otf"
+  font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Regular.otf"
+  font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-SemiBold.otf"
+  font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Text.otf"
+  font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Thin.otf"
 
   # No zap stanza required
 end
