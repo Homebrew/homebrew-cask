@@ -1,9 +1,9 @@
 cask "decentr" do
   arch arm: "arm", intel: "x86"
 
-  version "1.7.1"
-  sha256 arm:   "f8ff587ac6a068df70b2aaab73b2a0137b556a0ab411b75c2559ff31018e18db",
-         intel: "bd2edea84e37ca06bb6c12fc31b0f578b6ac4d811182669e9bb360c6c296ffd2"
+  version "1.8.0"
+  sha256 arm:   "8696a855cd466f39e2cbd5878a5402fbc6af8a8a8d8323a003a4e983ca79ba14",
+         intel: "94eaf700d836f417b6f8adfb82eb412bb4ec6359764229f393c14320c0966ab2"
 
   url "https://decentr.net/MacOS_#{arch}_Decentr_#{version}.dmg"
   name "Decentr"
