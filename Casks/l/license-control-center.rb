@@ -1,5 +1,5 @@
 cask "license-control-center" do
-  version "6.12.10.1325"
+  version "6.12.10.1326"
   sha256 :no_check
 
   url "https://download.steinberg.net/downloads/eLicenserControl.dmg",
