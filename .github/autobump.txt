@@ -92,6 +92,7 @@ blockstream-green
 bloop
 boinc
 boltai
+box-drive
 brave-browser
 brave-browser@beta
 brave-browser@dev
