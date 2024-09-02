@@ -1,6 +1,6 @@
 cask "box-drive" do
-  version "2.39.179"
-  sha256 "e691dcb988a350bf608684d3a78ef8f4ff1d62253fdc01df8e27b560cc9242c2"
+  version "2.40.344"
+  sha256 "467bf6477b640237b5dc8a854eee9d2388b70c48d2fbfb8db4530ad85fc650ca"
 
   url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive-#{version}.pkg",
       verified: "e3.boxcdn.net/desktop/releases/mac/"
@@ -9,9 +9,9 @@ cask "box-drive" do
   homepage "https://www.box.com/drive"
 
   livecheck do
-    url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive.pkg"
-    strategy :extract_plist do |item|
-      item["com.box.desktop"].version
+    url "https://cdn07.boxcdn.net/Autoupdate5.json"
+    strategy :json do |json|
+      json.dig("mac", "free", "version")
     end
   end
 
