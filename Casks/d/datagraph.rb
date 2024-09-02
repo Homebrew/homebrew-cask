@@ -1,5 +1,5 @@
 cask "datagraph" do
-  version "5.3,66"
+  version "5.4,67"
   sha256 :no_check
 
   url "https://www.visualdatatools.com/DataGraph/DataGraph.dmg"
