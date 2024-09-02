@@ -7,10 +7,7 @@ cask "convert3dgui" do
   desc "Command-line tool for converting 3D images between common file formats"
   homepage "https://sourceforge.net/projects/c3d"
 
-  livecheck do
-    url :url
-    regex(%r{url=.*?/c3d/(\d+(?:\.\d+)+)/c3d[._-]v?\1[._-]MacOS}i)
-  end
+  deprecate! date: "2024-09-02", because: :unmaintained
 
   app "Convert3DGUI.app"
   binary "#{appdir}/Convert3DGUI.app/Contents/bin/c2d"
