@@ -1,6 +1,6 @@
 cask "cashnotify" do
-  version "3.6.7"
-  sha256 "3bb085ed582d5ecf65d0c94ab77f27ff11916ce6eb1d22e66dc20bc1c1b1b93c"
+  version "3.7.0"
+  sha256 "98977df0f1b9776b890285c353bebf1f03eed1cf3d15cb6d85412f5bee30db87"
 
   url "https://github.com/BaguetteEngineering/download.cashnotify.com/releases/download/v#{version}/CashNotify-#{version}.dmg",
       verified: "github.com/BaguetteEngineering/download.cashnotify.com/"
