@@ -816,6 +816,7 @@ tower
 trader-workstation
 tradingview
 trainerroad
+transnomino
 treesheets
 tresorit
 trezor-suite
