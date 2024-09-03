@@ -307,6 +307,7 @@ forkgram-telegram
 fossa
 foxglove-studio
 foxit-pdf-editor
+framer
 free-download-manager
 free42-binary
 free42-decimal
