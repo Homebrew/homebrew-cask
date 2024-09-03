@@ -1,9 +1,9 @@
 cask "flox" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.3.0"
-  sha256 arm:   "37fabc57b7dc5b9095ea990db729c36eb785ddbe778c3ba1873037fb1a79e8a6",
-         intel: "170760a36b72591a6fe4c88e3189bb6904ae5eb0a109fb16fcdf3a46c7717254"
+  version "1.3.1"
+  sha256 arm:   "662338f471d111d0c078b33c79d24b5464f22a0de8386380cf7d3ed12d60428d",
+         intel: "ca61fd5d52dbb67f2998c8e81e067598f19868eef70a178d1bf1c2eadc3ae5cd"
 
   url "https://downloads.flox.dev/by-env/stable/osx/flox-#{version}.#{arch}-darwin.pkg"
   name "flox"
