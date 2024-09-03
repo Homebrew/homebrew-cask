@@ -11,6 +11,8 @@ cask "rize" do
   desc "Maximize Your Productivity with A.I"
   homepage "https://rize.io/"
 
+  depends_on macos: ">= :catalina"
+
   livecheck do
     url :url
     strategy :github_latest
