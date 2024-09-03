@@ -57,20 +57,50 @@ jobs:
       - name: Import Google Fonts
         run: ./developer/bin/import_google_fonts vendor/google-fonts ${{ matrix.mode }}
 
-      - name: Create pull request with updated files
+      - name: Check for changes
+        id: changes-check
         run: |
-          set -euo pipefail
-
-          if ! git diff --stat --exit-code
+          if git diff --stat --exit-code
           then
-            git checkout -b "auto-${{ matrix.mode }}-google-fonts"
-
-            git commit -am "Update Google Fonts" -m "This pull request was created automatically by the [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) workflow."
-
-            gh pr create --fill --head "auto-${{ matrix.mode }}-google-fonts"
+            echo "changes=false" >> "$GITHUB_ENV"
+          else
+            echo "changes=true" >> "$GITHUB_ENV"
           fi
+
+      - name: Checkout branch
+        if: env.changes == 'true'
+        run: git checkout -b "auto-${{ matrix.mode }}-google-fonts"
+
+      - name: Create commits
+        if: env.changes == 'true'
+        run: |
+          git add .
+          git commit \
+            --message "${{matrix.mode}} Google Fonts" \
+            --message "This commit was created automatically by the [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) workflow."
         env:
-          GH_TOKEN: ${{ github.token }}
           GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
           GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
           HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
+
+      - name: Push commits
+        if: env.changes == 'true'
+        uses: Homebrew/actions/git-try-push@master
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          branch: "auto-${{ matrix.mode }}-google-fonts"
+
+      - name: Create pull request with updated files
+        if: env.changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          PR_BODY: >
+            This pull request was created automatically by the 
+            [`google-fonts`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) 
+            workflow.
+        run: |
+          gh pr create \
+            --base master \
+            --body "$PR_BODY" \
+            --head "auto-${{ matrix.mode }}-google-fonts" \
+            --title "${{matrix.mode}} Google Fonts"
