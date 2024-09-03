@@ -30,6 +30,7 @@ affinity-publisher
 airtame
 akiflow
 alcom
+aldente
 alex313031-thorium
 alfaview
 alfred
