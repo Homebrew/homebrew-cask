@@ -189,6 +189,7 @@ default-folder-x
 defold
 defold@alpha
 defold@beta
+deltachat
 descript
 desktoppr
 devpod
