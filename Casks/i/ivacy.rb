@@ -1,5 +1,5 @@
 cask "ivacy" do
-  version "7.0.0,8"
+  version "7.0.1"
   sha256 :no_check
 
   url "https://apps-ivacy.s3.amazonaws.com/mac/Ivacy.dmg",
