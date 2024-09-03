@@ -394,6 +394,7 @@ jgrennison-openttd
 jitsi-meet
 joplin
 jordanbaird-ice
+josm
 julia
 jumpshare
 jupyterlab
