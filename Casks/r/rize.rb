@@ -8,7 +8,7 @@ cask "rize" do
   url "https://github.com/rize-io/lua/releases/download/v#{version}/Rize-#{version}-#{arch}.dmg",
       verified: "github.com/rize-io/lua/"
   name "Rize"
-  desc "Maximize Your Productivity with A.I"
+  desc "AI time tracker"
   homepage "https://rize.io/"
 
   livecheck do
