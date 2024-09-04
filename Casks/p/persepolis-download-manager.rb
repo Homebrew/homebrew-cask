@@ -5,7 +5,7 @@ cask "persepolis-download-manager" do
   url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version}_macos.dmg",
       verified: "github.com/persepolisdm/persepolis/"
   name "Persepolis"
-  desc "Persepolis Download Manager"
+  desc "Download manager"
   homepage "https://persepolisdm.github.io/"
 
   livecheck do
