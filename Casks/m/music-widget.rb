@@ -1,5 +1,5 @@
 cask "music-widget" do
-  version "1.26"
+  version "1.27"
   sha256 :no_check
 
   url "https://marioaguzman.github.io/musicwidget/updater/Music%20Widget.dmg"
