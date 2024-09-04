@@ -1,6 +1,6 @@
 cask "understand" do
-  version "6.5.1200"
-  sha256 "224c5a41ecc6e373f9e2f2c62e0c1f78a4291c662118511ff24b1875a63ac075"
+  version "6.5.1201"
+  sha256 "f092493ff8690df3b1c360db9d301aece5ee673849375da688f4f85151c7ce1b"
 
   url "https://latest.scitools.com/Understand/Understand-#{version}-macOS-Universal.dmg"
   name "SciTools Understand"
