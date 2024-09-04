@@ -1,6 +1,6 @@
 cask "aerial" do
-  version "3.5.0"
-  sha256 "c96527b7845bb5240e05e98d4adbcef0d088d92f59e88363279e86fcd3340485"
+  version "3.5.1"
+  sha256 "69b44915c9ec2685a44ab42e4a472f0859699ba1a084b91654fa52742074e082"
 
   url "https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.saver.zip",
       verified: "github.com/JohnCoates/Aerial/"
