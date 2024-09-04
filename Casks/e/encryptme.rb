@@ -1,6 +1,6 @@
 cask "encryptme" do
-  version "4.4.0"
-  sha256 "3dda64ebde80fea167184e18647b0a42ff8d190c6119197e58e3883245ebf477"
+  version "4.4.1"
+  sha256 "5fc959899e2c011df822ec55b999ce853d9e7dc56577b2cac759286fb89220e4"
 
   url "https://static.encrypt.me/downloads/osx/updates/Release/EncryptMe-#{version}.dmg"
   name "EncryptMe"
