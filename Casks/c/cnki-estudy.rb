@@ -2,7 +2,7 @@ cask "cnki-estudy" do
   version "4.3.1"
   sha256 :no_check
 
-  url "https://picx.cnki.net/estudy/CNKI%20E-Study%20For%20Mac.dmg"
+  url "https://download.cnki.net/CNKI%20E-Study%20For%20Mac.dmg"
   name "cnki-estudy"
   name "知网研学"
   desc "Academic research platform"
