@@ -1,18 +1,16 @@
 cask "cnki-estudy" do
   version "4.3.1"
-  sha256 :no_check
+  sha256 "013b4a25f82183227bb05daf34d148716bda20f34f9ff3029b503e8a38b438ca"
 
-  url "https://download.cnki.net/CNKI%20E-Study%20For%20Mac.dmg"
+  url "https://picx.cnki.net/estudy/CNKI%20E-Study%20For%20Mac#{version}.dmg"
   name "cnki-estudy"
   name "知网研学"
   desc "Academic research platform"
-  homepage "https://x.cnki.net/web/search/#/home"
+  homepage "https://estudy.cnki.net/"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |item|
-      item["net.cnki.EStudy"]&.short_version
-    end
+    url :homepage
+    regex(/Mac(\d+(?:\.\d+)*)/i)
   end
 
   depends_on macos: ">= :sierra"
