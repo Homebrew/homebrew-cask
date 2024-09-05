@@ -1,14 +1,8 @@
 cask "spotify" do
   arch arm: "ARM64"
 
+  version "1.2.45.454"
   sha256 :no_check
-
-  on_arm do
-    version "1.2.44.405,81fd6352,3712"
-  end
-  on_intel do
-    version "1.2.44.405,81fd6352,3707"
-  end
 
   url "https://download.scdn.co/Spotify#{arch}.dmg",
       verified: "download.scdn.co/"
@@ -18,12 +12,7 @@ cask "spotify" do
 
   livecheck do
     url :url
-    strategy :extract_plist do |items|
-      match = items["com.spotify.client"].version.match(/^(\d+(?:\.\d+)+)[._-]g(\h+)[._-](\d+)$/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]},#{match[3]}"
-    end
+    strategy :extract_plist
   end
 
   auto_updates true
