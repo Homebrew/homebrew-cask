@@ -1,6 +1,6 @@
 cask "amazon-chime" do
-  version "5.23.22226"
-  sha256 "e97adf95ce1d899188398181e4a15a86a22dc8609c613b450e5e28b54b8714c4"
+  version "5.23.22227"
+  sha256 "54304f3de15b6544523d7395153b23620518af405480a10824dcfac58cb8d568"
 
   url "https://clients.chime.aws/mac-nme/AmazonChime-#{version}.dmg"
   name "Amazon Chime"
