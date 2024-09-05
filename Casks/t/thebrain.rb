@@ -1,6 +1,6 @@
 cask "thebrain" do
-  version "13.0.46.0"
-  sha256 "bd88de4df4b787b0f4f78c74c6fe09a9ff7226577469b1ca2f352963535de430"
+  version "14.0.101.0"
+  sha256 "725744668139881caee67a63c69550f34a80c23fc5371f6ce1966a98208b7df9"
 
   url "https://updater.thebrain.com/files/TheBrain#{version}.dmg"
   name "TheBrain"
@@ -8,7 +8,7 @@ cask "thebrain" do
   homepage "https://www.thebrain.com/"
 
   livecheck do
-    url "https://salesapi.thebrain.com/?a=doDirectDownload&id=13000"
+    url "https://salesapi.thebrain.com/?a=doDirectDownload&id=#{version.major}000"
     strategy :header_match
   end
 
