@@ -1,4 +1,4 @@
-cask "blood-on-the-clocktower" do
+cask "blood-on-the-clocktower-online" do
   arch arm: "aarch64", intel: "x64"
 
   version "3.31.0"
@@ -8,7 +8,7 @@ cask "blood-on-the-clocktower" do
   url "https://github.com/ThePandemoniumInstitute/botc-release/releases/download/v#{version}/Blood.on.the.Clocktower.Online_#{version}_#{arch}.dmg",
       verified: "github.com/ThePandemoniumInstitute/botc-release/"
   name "Blood on the Clocktower Online"
-  desc "Client for the popular social deduction game Blood on the Clocktower"
+  desc "Client for the game Blood on the Clocktower"
   homepage "https://bloodontheclocktower.com/"
 
   depends_on macos: ">= :high_sierra"
