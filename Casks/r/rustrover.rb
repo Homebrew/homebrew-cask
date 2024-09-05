@@ -1,7 +1,7 @@
 cask "rustrover" do
   arch arm: "-aarch64"
 
-  version "2024.1.8,241.18968.39"
+  version "2024.2,242.21829.198"
   sha256 :no_check
 
   url "https://download.jetbrains.com/rustrover/RustRover-#{version.csv.first}#{arch}.dmg"
