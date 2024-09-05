@@ -503,6 +503,7 @@ mochi
 mochi-diffusion
 monal
 monal@beta
+monarch
 moneydance
 moneymanager
 mongodb-compass
