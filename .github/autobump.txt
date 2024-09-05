@@ -143,6 +143,7 @@ clion@eap
 clock-signal
 clockify
 cloudflare-warp
+cloudmounter
 cloudnet
 cmake
 codeql
