@@ -2,7 +2,8 @@ cask "trader-workstation" do
   arch arm: "-arm", intel: "x-x64"
 
   version "10.31.1i"
-  sha256 :no_check
+  sha256 arm:   "517209f66ea802906ae913c7eb1add1fce758e3a73c1e523212a240f0e0c8394",
+         intel: "27edb40e2c8b2acd7af102e37484038c195e8e6682dc9a137cb5cbba04f4fdf4"
 
   url "https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-macos#{arch}.dmg"
   name "Trader Workstation"
