@@ -1,6 +1,6 @@
 cask "softube-central" do
-  version "1.11.0"
-  sha256 "1870f6fab2ed6849778d19d1f3003a1ebcad7a3206020ecdf832c73a173eb34b"
+  version "1.11.1"
+  sha256 "0aaeb48c3e66e8e7ec614e06cada783433f0669e607b5b59a626dfe56457a3e4"
 
   url "https://softubestorage.b-cdn.net/softubecentraldata/softubecentral/Softube%20Central-#{version}-universal.pkg",
       verified: "softubestorage.b-cdn.net/"
