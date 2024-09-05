@@ -127,6 +127,15 @@ jobs:
             echo '::warning::Uninstalling Mono is no longer necessary.'
           fi
 
+      - name: Clean up CI Xcode Versions
+        if: matrix.runner == 'macos-14'
+        run: |
+          df -hI /dev/disk3s1s1
+          sudo rm -rf /Applications/Xcode_15.1.app
+          sudo rm -rf /Applications/Xcode_15.2.app
+          sudo rm -rf /Applications/Xcode_15.3.app
+          df -hI /dev/disk3s1s1
+
       - name: Cache Homebrew Gems
         id: cache
         uses: actions/cache@v4
