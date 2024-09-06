@@ -10,6 +10,12 @@ cask "jedit" do
 
   app "jEdit.app"
 
+  zap trash: [
+    "~/Library/jEdit",
+    "~/Library/Preferences/org.gjt.sp.jedit.plist",
+    "~/Library/Saved Application State/org.gjt.sp.jedit.savedState",
+  ]
+
   caveats do
     depends_on_java "11+"
   end
