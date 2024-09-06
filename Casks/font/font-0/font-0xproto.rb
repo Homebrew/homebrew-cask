@@ -1,6 +1,6 @@
 cask "font-0xproto" do
-  version "2.200"
-  sha256 "80c27d825d021178d3788aed41bb2082228fb8227012e8926039d290ce0be8a4"
+  version "2.201"
+  sha256 "201c9ee7c8f32245c4d97798b46235e2caa3586e930522ec6885c4040d08fa70"
 
   url "https://github.com/0xType/0xProto/releases/download/#{version}/0xProto_#{version.dots_to_underscores}.zip"
   name "0xProto"
