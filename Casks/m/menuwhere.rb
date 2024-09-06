@@ -1,8 +1,8 @@
 cask "menuwhere" do
   version "2.2.2"
-  sha256 :no_check
+  sha256 "eccd3a9e986d1e5ee20717ad00387ff669ad21abfc8a7d2b50e99e0f5f8ca978"
 
-  url "https://manytricks.com/download/menuwhere"
+  url "https://manytricks.com/download/_do_not_hotlink_/menuwhere#{version.no_dots}.dmg"
   name "Menuwhere"
   desc "Access the menu from anywhere"
   homepage "https://manytricks.com/menuwhere/"
@@ -13,6 +13,7 @@ cask "menuwhere" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Menuwhere.app"
 
