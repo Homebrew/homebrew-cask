@@ -15,4 +15,9 @@ cask "time-sink" do
   auto_updates true
 
   app "Time Sink.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.manytricks.TimeSinkClient.plist",
+    "~/Library/Time Sink",
+  ]
 end
