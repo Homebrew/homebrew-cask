@@ -1,6 +1,6 @@
 cask "nx-studio" do
-  version "1.6.1"
-  sha256 "681b7b5125d20b65de42f8d946ba82dcdb3255e1433784cb4646b52b52874ed9"
+  version "1.7.0"
+  sha256 "26b7c182e9616bfe2fa040caed4a368a7ef400563ed4dc6634ed8d37557740aa"
 
   url "https://download.nikonimglib.com/archive6/YpxKh00fsUc706q0WSc56VsvZm75/S-NXSTDO-#{version.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg",
       verified: "download.nikonimglib.com/"
