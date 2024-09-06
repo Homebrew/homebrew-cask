@@ -10,7 +10,7 @@ cask "nx-studio" do
 
   livecheck do
     url "https://downloadcenter.nikonimglib.com/en/products/564/NX_Studio.html"
-    regex(/Ver.\s+(\d+(?:\.\d+)+)/i)
+    regex(/Ver\.\s+(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
