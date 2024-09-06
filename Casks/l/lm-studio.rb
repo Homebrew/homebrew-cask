@@ -8,7 +8,10 @@ cask "lm-studio" do
   homepage "https://lmstudio.ai/"
 
   livecheck do
-    skip "No version information available"
+    url "https://versions-prod.lmstudio.ai/darwin/arm64/#{version}"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on arch: :arm64
