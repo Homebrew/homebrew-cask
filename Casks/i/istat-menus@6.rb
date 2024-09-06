@@ -1,5 +1,5 @@
 cask "istat-menus@6" do
-  version "6.73"
+  version "6.73.1"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://cdn.istatmenus.app/files/istatmenus#{version.major}/istatmenus#{version}.zip",
