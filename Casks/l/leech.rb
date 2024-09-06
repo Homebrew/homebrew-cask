@@ -16,4 +16,11 @@ cask "leech" do
   depends_on macos: ">= :high_sierra"
 
   app "Leech.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/METK467GW2.com.manytricks.Leech.Shared",
+    "~/Library/Application Support/Leech",
+    "~/Library/Group Containers/METK467GW2.com.manytricks.Leech.Shared",
+    "~/Library/Preferences/com.manytricks.Leech.plist",
+  ]
 end
