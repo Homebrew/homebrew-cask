@@ -15,8 +15,6 @@ cask "dfcf" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "东方财富.app"
 
   caveats do
