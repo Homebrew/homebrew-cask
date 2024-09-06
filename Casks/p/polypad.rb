@@ -8,10 +8,9 @@ cask "polypad" do
   desc "Scriptable Textpad for Developers"
   homepage "https://polypad.io/"
 
-  livecheck do
-    url "https://polypad-releases.s3.us-west-1.amazonaws.com/mac/latest-mac.yml"
-    strategy :electron_builder
-  end
+  # Downloads are no longer available, have been missing since April 2024
+  # https://github.com/mattebot/Polypad/issues/7
+  disable! date: "2024-09-07", because: :no_longer_available
 
   app "Polypad.app"
 
