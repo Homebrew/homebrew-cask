@@ -1,8 +1,8 @@
 cask "witch" do
   version "4.6.2"
-  sha256 :no_check
+  sha256 "c9d54299613aefbf737e6d47bc9dfeac75a95172cf6350952986532fd55a3905"
 
-  url "https://manytricks.com/download/witch"
+  url "https://manytricks.com/download/_do_not_hotlink_/witch#{version.no_dots}.dmg"
   name "Witch"
   desc "Switch apps, windows, or tabs"
   homepage "https://manytricks.com/witch/"
@@ -13,6 +13,7 @@ cask "witch" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   prefpane "Witch.prefPane"
 
