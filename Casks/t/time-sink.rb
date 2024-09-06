@@ -8,8 +8,8 @@ cask "time-sink" do
   homepage "https://manytricks.com/timesink/"
 
   livecheck do
-    url "https://manytricks.com/timesink/releasenotes/?rref=appcast"
-    regex(/<h2>Time\s+Sink\s+v?(\d+(?:\.\d+)+)[-\s]/i)
+    url "https://manytricks.com/timesink/appcast/"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
