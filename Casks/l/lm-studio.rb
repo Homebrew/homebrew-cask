@@ -1,19 +1,19 @@
 cask "lm-studio" do
-  version "0.2.31"
-  sha256 :no_check
+  version "0.3.2"
+  sha256 "b4e811ab74d9fd908e9dcd2b7766052fb1ddba95a50593eb7d9993aa24e43362"
 
-  url "https://s3.amazonaws.com/releases.lmstudio.ai/#{version}/LM+Studio-darwin-arm64-#{version}.zip",
-      verified: "s3.amazonaws.com/releases.lmstudio.ai/"
+  url "https://releases.lmstudio.ai/darwin/arm64/#{version}/2/LM-Studio-#{version}-arm64.dmg"
   name "LM Studio"
   desc "Discover, download, and run local LLMs"
   homepage "https://lmstudio.ai/"
 
   livecheck do
-    url "https://s3.amazonaws.com/releases.lmstudio.ai/update.json"
-    regex(/LM\+Studio[._-]darwin[._-]arm64[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    url "https://versions-prod.lmstudio.ai/darwin/arm64/#{version}"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
-  auto_updates true
   depends_on arch: :arm64
 
   app "LM Studio.app"
