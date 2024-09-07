@@ -11,15 +11,7 @@ cask "lando" do
   desc "Local development environment and DevOps tool built on Docker"
   homepage "https://lando.dev/"
 
-  # Upstream doesn't label all unstable releases (e.g. alpha, beta, rc) as
-  # pre-release on GitHub, so the "latest" release is sometimes an unstable
-  # version. Until this changes we have to use the `GithubReleases` strategy
-  # with a regex to only match stable versions.
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_releases
-  end
+  deprecate! date: "2024-09-07", because: "no longer distributing an install package"
 
   conflicts_with cask: "lando@edge"
   depends_on cask: "docker"
