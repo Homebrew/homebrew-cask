@@ -11,10 +11,7 @@ cask "lando@edge" do
   desc "Local development environment and DevOps tool built on Docker"
   homepage "https://docs.lando.dev/"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
+  deprecate! date: "2024-09-07", because: "no longer distributing an install package"
 
   conflicts_with cask: "lando"
   depends_on cask: "docker"
