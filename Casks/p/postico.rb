@@ -8,12 +8,8 @@ cask "postico" do
   homepage "https://eggerapps.at/postico#{version.major}/"
 
   livecheck do
-    url "https://releases.eggerapps.at/postico2/changelog"
-    strategy :page_match do |page|
-      v = page[/["']>\n*?(\d+(?:\.\d+)+)/i, 1]
-      build = page[/Build\s+(\d+)</, 1]
-      "#{v},#{build}" if v && build
-    end
+    url "https://releases.eggerapps.at/postico#{version.major}/appcast.xml?update_channel=2"
+    strategy :sparkle
   end
 
   auto_updates true
