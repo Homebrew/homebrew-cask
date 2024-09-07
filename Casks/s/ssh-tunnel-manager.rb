@@ -8,18 +8,13 @@ cask "ssh-tunnel-manager" do
   desc "Application for managing SSH tunnels"
   homepage "https://tynsoe.org/stm/"
 
-  livecheck do
-    url "https://updates.devmate.com/org.tynsoe.sshtunnelmanager.xml"
-    regex(%r{/(\d+)/SSHTunnelManager\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
-  end
+  deprecate! date: "2024-09-06", because: :unmaintained
 
   app "SSH Tunnel Manager.app"
 
   zap trash: "~/Library/Preferences/org.tynsoe.sshtunnelmanager.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
