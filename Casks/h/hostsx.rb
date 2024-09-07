@@ -10,4 +10,9 @@ cask "hostsx" do
   depends_on macos: ">= :high_sierra"
 
   app "HostsX.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.alpha.hostsx",
+    "~/Library/Preferences/com.alpha.hostsx.plist",
+  ]
 end
