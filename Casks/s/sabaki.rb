@@ -12,4 +12,10 @@ cask "sabaki" do
   homepage "https://sabaki.yichuanshen.de/"
 
   app "Sabaki.app"
+
+  zap trash: [
+    "~/Library/Application Support/Sabaki",
+    "~/Library/Preferences/de.yichuanshen.sabaki.plist",
+    "~/Library/Saved Application State/de.yichuanshen.sabaki.savedState",
+  ]
 end
