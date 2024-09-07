@@ -11,4 +11,6 @@ cask "stella" do
   depends_on macos: ">= :high_sierra"
 
   app "Stella.app"
+
+  zap trash: "~/Library/Application Support/Stella"
 end
