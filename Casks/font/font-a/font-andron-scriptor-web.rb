@@ -6,6 +6,11 @@ cask "font-andron-scriptor-web" do
   name "Andron Scriptor Web"
   homepage "https://folk.uib.no/hnooh/mufi/fonts/"
 
+  livecheck do
+    url :homepage
+    regex(/AND[._-]SCR[._-]WEB[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
+
   font "AND_SCR_WEB_#{version}/Andron Scriptor Web.ttf"
 
   # No zap stanza required
