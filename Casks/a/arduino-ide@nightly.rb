@@ -16,4 +16,8 @@ cask "arduino-ide@nightly" do
     "~/.arduinoIDE",
     "~/Library/Application Support/arduino-ide",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
