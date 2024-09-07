@@ -11,6 +11,26 @@ cask "katrain" do
   desc "Tool for analyzing games and playing go with AI feedback from KataGo"
   homepage "https://github.com/sanderland/katrain"
 
+  # Most recent release doesn't provide a file forr macOS, so we check multiple
+  # recent releases instead of only the "latest" release. NOTE: We should be
+  # able to remove this next release when upstream provides a file for macOS again.
+  livecheck do
+    url :url
+    regex(%r{/v?(\d+(?:\.\d+)+)/KaTrainOSX\.(?:dmg|pkg)$}i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
+  end
+
   app "KaTrain.app"
 
   zap trash: "~/.katrain"
