@@ -8,6 +8,29 @@ cask "snes9x" do
   desc "Video game console emulator"
   homepage "https://www.snes9x.com/"
 
+  # Releases sometimes don't have a macOS build, so we check multiple
+  # recent releases instead of only the "latest" release. NOTE: We should be
+  # able to use `strategy :github_latest` or drop livecheck altogether
+  # when subsequent releases provide files for macOS again.
+  livecheck do
+    url :url
+    regex(/^snes9x[._-]v?(\d+(?:\.\d+)+)[._-]Mac\.zip$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
+  end
+
+  depends_on macos: ">= :sierra"
+
   app "Snes9x.app"
 
   zap trash: [
