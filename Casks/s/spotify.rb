@@ -21,6 +21,7 @@ cask "spotify" do
   app "Spotify.app"
 
   uninstall launchctl: [
+              "*.spotify.client.*",
               "com.spotify.client.startuphelper",
               "com.spotify.webhelper",
             ],
