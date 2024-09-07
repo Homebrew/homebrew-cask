@@ -7,12 +7,7 @@ cask "zenmate-vpn" do
   desc "VPN client"
   homepage "https://zenmate.com/products/vpn-for-osx/"
 
-  livecheck do
-    url "https://download.zenmate.com/mac/zenmate.xml"
-    strategy :sparkle do |item|
-      item.url[%r{/zm_(\d+(?:\.\d+)*)\.dmg}i, 1]
-    end
-  end
+  disable! date: "2024-09-07", because: :discontinued
 
   depends_on macos: ">= :sierra"
 
