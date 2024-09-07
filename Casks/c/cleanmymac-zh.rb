@@ -1,6 +1,6 @@
 cask "cleanmymac-zh" do
   version "4.15.6"
-  sha256 "e16da664b02ede2a5e5f67c65207a35b480d7e781dcaae08c236d56001fff0fe"
+  sha256 "38446723dcb8a1783d3ef8de43f6e5c6a1ad1a2a3a705855aed1602953416a96"
 
   url "https://dl.devmate.com/com.macpaw.zh.CleanMyMac#{version.major}/CleanMyMacXChinese.dmg",
       verified: "dl.devmate.com/"
