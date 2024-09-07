@@ -9,7 +9,19 @@ cask "devilutionx" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(%r{/v?(\d+(?:\.\d+)+)/devilutionx[._-]macos[._-]x86_64\.dmg$}i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   depends_on macos: ">= :high_sierra"
