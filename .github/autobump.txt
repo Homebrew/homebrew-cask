@@ -491,7 +491,6 @@ mindmac
 minecraft-education
 mini-program-studio
 miniforge
-miro
 mist
 mitmproxy
 mixed-in-key
@@ -784,7 +783,6 @@ syncovery
 tabby
 tableflip
 tableplus
-tageditor
 tagspaces
 tailscale
 tastytrade
@@ -855,7 +853,6 @@ vamiga
 vbrokers
 vcam
 vellum
-viber
 vimr
 virtualbox@beta
 virtualbuddy
@@ -868,7 +865,6 @@ visual-paradigm-ce
 visual-studio-code
 vivaldi
 vivaldi@snapshot
-vk-calls
 vnc-viewer
 volanta
 vpn-tracker-365
