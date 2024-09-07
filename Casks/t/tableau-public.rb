@@ -1,8 +1,11 @@
 cask "tableau-public" do
-  version "2024.2.1"
-  sha256 "da5d17e27ca0a058885c95efad62085879fb063f5495521183f2d8966cb3f57a"
+  arch arm: "-arm64"
 
-  url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg",
+  version "2024.2.2"
+  sha256 arm:   "9cad1cc57f5e07483dee7f1c20d452b4802bb5ca9dae666eec28d385fd06e7ed",
+         intel: "0787b816f5ab6fe4c9ecc58cee0d519a6b7daf573ff1bc90ee16c8c6f5335add"
+
+  url "https://downloads.tableau.com/esdalt/#{version}/TableauPublic-#{version.dots_to_hyphens}#{arch}.pkg",
       user_agent: "curl/8.7.1"
   name "Tableau Public"
   desc "Explore, create and publicly share data visualisations online"
@@ -15,7 +18,7 @@ cask "tableau-public" do
     end
   end
 
-  pkg "Tableau Public.pkg"
+  pkg "TableauPublic-#{version.dots_to_hyphens}#{arch}.pkg"
 
   uninstall pkgutil: [
     "com.tableausoftware.FLEXNet.*",
