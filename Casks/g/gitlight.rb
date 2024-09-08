@@ -15,5 +15,12 @@ cask "gitlight" do
 
   app "GitLight.app"
 
-  zap trash: "~/Library/Application Support/app.gitlight"
+  zap trash: [
+    "~/Library/Application Support/app.gitlight",
+    "~/Library/Caches/app.gitlight",
+    "~/Library/LaunchAgents/GitLight.plist",
+    "~/Library/Preferences/app.gitlight.plist",
+    "~/Library/Saved Application State/app.gitlight.savedState",
+    "~/Library/WebKit/app.gitlight",
+  ]
 end
