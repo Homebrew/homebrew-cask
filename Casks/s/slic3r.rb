@@ -8,6 +8,9 @@ cask "slic3r" do
   desc "3D printing toolbox"
   homepage "https://slic3r.org/"
 
+  # https://github.com/slic3r/Slic3r/issues/5187
+  disable! date: "2024-09-08", because: :unmaintained
+
   app "Slic3r.app"
   binary "#{appdir}/Slic3r.app/Contents/MacOS/Slic3r", target: "slic3r"
 
