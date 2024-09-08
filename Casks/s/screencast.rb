@@ -7,6 +7,8 @@ cask "screencast" do
   desc "Simple screen video capture application"
   homepage "https://github.com/soh335/Screencast"
 
+  deprecate! date: "2024-09-08", because: :unmaintained
+
   app "Screencast.app"
 
   zap trash: "~/Library/Preferences/jp.makeitreal.Screencast.plist"
