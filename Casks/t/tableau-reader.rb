@@ -1,8 +1,11 @@
 cask "tableau-reader" do
-  version "2024.2.1"
-  sha256 "ed83214b60b5222482d63851c44a27526c612cd1764365256b2e9b0015135852"
+  arch arm: "-arm64"
 
-  url "https://downloads.tableau.com/tssoftware/TableauReader-#{version.dots_to_hyphens}.dmg",
+  version "2024.2.2"
+  sha256 arm:   "72952d202ee37d1e369da509e372a93ed1d07b78717f54e19a5d21b730b444dc",
+         intel: "40d6cd867b2b2eca6de40d9924f3c7386e054b166f9b84c7cd002bd8b90fac8a"
+
+  url "https://downloads.tableau.com/esdalt/#{version}/TableauReader-#{version.dots_to_hyphens}#{arch}.pkg",
       user_agent: "curl/8.7.1"
   name "Tableau Reader"
   desc "Open and interact with data visualisations built in Tableau Desktop"
@@ -15,7 +18,7 @@ cask "tableau-reader" do
     end
   end
 
-  pkg "Tableau Reader.pkg"
+  pkg "TableauReader-#{version.dots_to_hyphens}#{arch}.pkg"
 
   uninstall pkgutil: [
     "com.tableausoftware.FLEXNet.*",
