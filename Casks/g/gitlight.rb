@@ -7,7 +7,7 @@ cask "gitlight" do
 
   url "https://github.com/colinlienard/gitlight/releases/download/gitlight-v#{version}/GitLight_#{version}_#{arch}.dmg",
       verified: "github.com/colinlienard/gitlight/"
-  name "gitlight"
+  name "GitLight"
   desc "GitHub & GitLab notifications on your desktop"
   homepage "https://gitlight.app/"
 
