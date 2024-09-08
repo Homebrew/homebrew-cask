@@ -15,4 +15,13 @@ cask "audiobook-builder" do
   depends_on macos: ">= :el_capitan"
 
   app "Audiobook Builder.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/KQZ94N9248.com.splasm.audiobookbuilder",
+    "~/Library/Caches/com.splasm.audiobookbuilder#{version.major}",
+    "~/Library/Group Containers/KQZ94N9248.com.splasm.audiobookbuilder",
+    "~/Library/Preferences/com.splasm.audiobookbuilder#{version.major}.plist",
+    "~/Library/Saved Application State/com.splasm.audiobookbuilder#{version.major}.savedState",
+    "~/Library/WebKit/com.splasm.audiobookbuilder#{version.major}",
+  ]
 end
