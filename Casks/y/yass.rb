@@ -19,7 +19,6 @@ cask "yass" do
   depends_on macos: ">= :mojave"
 
   app "yass.app"
-  binary "#{appdir}/yass.app/Contents/MacOS/yass"
 
   zap trash: [
     "~/Library/Preferences/it.gui.yass.plist",
