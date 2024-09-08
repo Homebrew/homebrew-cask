@@ -9,7 +9,7 @@ cask "polyphone" do
 
   livecheck do
     url "https://www.polyphone.io/en/software"
-    regex(/Polyphone\s+(\d+(?:\.\d+)+).*download&file_id=(\d+).*Mac OS X/im)
+    regex(/Polyphone\s+(\d+(?:\.\d+)+).*download\?file_id=(\d+).*Mac OS X/im)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
