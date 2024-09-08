@@ -6,10 +6,7 @@ cask "rosaimagewriter" do
   name "ROSA ImageWriter"
   homepage "http://wiki.rosalab.ru/en/index.php/ROSA_ImageWriter"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/RosaImageWriter-(\d+(?:\.\d+)*)-osx\.dmg}i)
-  end
+  disable! date: "2024-09-08", because: :unmaintained
 
   app "RosaImageWriter.app"
 
