@@ -7,6 +7,8 @@ cask "rodeo" do
   desc "Data science IDE for Python"
   homepage "https://github.com/yhat/rodeo"
 
+  deprecate! date: "2024-09-08", because: :unmaintained
+
   app "Rodeo.app"
 
   caveats do
