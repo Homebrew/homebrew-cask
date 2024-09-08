@@ -8,7 +8,7 @@ cask "gitlight" do
   url "https://github.com/colinlienard/gitlight/releases/download/gitlight-v#{version}/GitLight_#{version}_#{arch}.dmg",
       verified: "github.com/colinlienard/gitlight/"
   name "GitLight"
-  desc "GitHub & GitLab notifications on your desktop"
+  desc "Desktop notifications for GitHub & GitLab"
   homepage "https://gitlight.app/"
 
   depends_on macos: ">= :high_sierra"
