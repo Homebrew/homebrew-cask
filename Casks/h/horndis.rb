@@ -7,6 +7,8 @@ cask "horndis" do
   desc "Android USB tethering driver"
   homepage "https://github.com/jwise/HoRNDIS"
 
+  disable! date: "2024-09-08", because: :unmaintained
+
   depends_on macos: [
     :el_capitan,
     :sierra,
@@ -18,4 +20,8 @@ cask "horndis" do
 
   uninstall kext:    "com.joshuawise.kexts.HoRNDIS",
             pkgutil: "com.joshuawise.*"
+
+  caveats do
+    requires_rosetta
+  end
 end
