@@ -13,4 +13,9 @@ cask "combine-pdfs" do
   end
 
   app "Combine PDFs.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/de.monkeybreadsoftware.combinepdf",
+    "~/Library/Preferences/de.monkeybreadsoftware.combinepdf.plist",
+  ]
 end
