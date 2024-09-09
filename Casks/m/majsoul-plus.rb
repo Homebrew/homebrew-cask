@@ -7,4 +7,8 @@ cask "majsoul-plus" do
   homepage "https://github.com/MajsoulPlus/majsoul-plus/"
 
   app "Majsoul Plus.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
