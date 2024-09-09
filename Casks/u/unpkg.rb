@@ -13,4 +13,9 @@ cask "unpkg" do
   end
 
   app "unpkg #{version}/unpkg.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.timdoug.unpkg.plist",
+    "~/Library/Saved Application State/org.timdoug.unpkg.savedState",
+  ]
 end
