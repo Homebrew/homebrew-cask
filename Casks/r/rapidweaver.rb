@@ -16,4 +16,10 @@ cask "rapidweaver" do
   depends_on macos: ">= :mojave"
 
   app "RapidWeaver.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/*.com.realmacsoftware.rapidweaver*",
+    "~/Library/Containers/com.realmacsoftware.rapidweaver*",
+    "~/Library/Group Containers/*.com.realmacsoftware.rapidweaver*",
+  ]
 end
