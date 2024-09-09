@@ -13,4 +13,8 @@ cask "zerobranestudio" do
   end
 
   app "ZeroBraneStudio.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
