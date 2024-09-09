@@ -881,6 +881,7 @@ wasabi-wallet
 waterfox
 wave
 wavebox
+wealthfolio
 webcatalog
 webstorm
 webull
