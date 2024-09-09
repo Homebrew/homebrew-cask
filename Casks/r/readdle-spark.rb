@@ -1,6 +1,6 @@
 cask "readdle-spark" do
-  version "3.17.5.84173"
-  sha256 "3cda0d09d6d4cd10bfc834029e281ca5df4a12e31c12a7b68d8e5a0ad65f4f82"
+  version "3.17.6.84309"
+  sha256 "53890c3a81f1b3c5384d789b4346120a8451fb031e84fa317e299da7c8c36588"
 
   url "https://downloads.sparkmailapp.com/Spark#{version.major}/mac/dist/#{version}/Spark.zip"
   name "Spark"
