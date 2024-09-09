@@ -1,6 +1,6 @@
 cask "gridtracker" do
-  version "1.24.0814"
-  sha256 "97ca93223ecd4ac6fce0116a2617672265024e19929b83ae57163702e760835f"
+  version "1.24.0908"
+  sha256 "30c2ccf70b1ade12e80792a08b14b36d7abf79a237933c86d00cc6dff8b6e70a"
 
   url "https://downloads.gridtracker.org/v#{version}/GridTracker-#{version}-mac-x64.zip"
   name "GridTracker"
@@ -8,8 +8,8 @@ cask "gridtracker" do
   homepage "https://gridtracker.org/"
 
   livecheck do
-    url "https://gridtracker.org/index.php/documentation/change-log"
-    regex(/v(\d+(?:\.\d+)+)/i)
+    url "https://gridtracker.org/index.php/downloads/gridtracker-downloads"
+    regex(/href=.*?GridTracker[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]x64\.zip/i)
   end
 
   depends_on macos: ">= :mojave"
