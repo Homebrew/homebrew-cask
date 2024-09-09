@@ -7,6 +7,8 @@ cask "automute" do
   desc "Mute or unmute the system based on the current Wi-Fi network"
   homepage "https://github.com/Lorenzo45/AutoMute"
 
+  deprecate! date: "2024-09-08", because: :unmaintained
+
   app "AutoMute.app"
 
   caveats do
