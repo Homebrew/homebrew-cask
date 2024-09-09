@@ -17,4 +17,9 @@ cask "ipepresenter" do
   end
 
   app "IpePresenter.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.otfried.ipe.IpePresenter.plist",
+    "~/Library/Saved Application State/org.otfried.ipe.IpePresenter.savedState",
+  ]
 end
