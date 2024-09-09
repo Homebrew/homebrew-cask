@@ -43,9 +43,13 @@ cask "sip" do
     version "3.5.1"
     sha256 "59f69f6c73dfc3a2984ee4ff869d8086781dbe45c30c73c260f848a2d1561fc0"
 
+    # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
+    # work with all of the items in the feed (not just the newest one).
     livecheck do
-      url "https://sipapp.io/updates/"
-      regex(%r{href=.*?/sip[._-]v?(\d+(?:\.\d+)*)\.dmg}i)
+      url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip.xml"
+      strategy :sparkle do |items|
+        items.map(&:short_version)
+      end
     end
   end
 
