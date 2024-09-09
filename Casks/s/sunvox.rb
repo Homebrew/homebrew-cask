@@ -15,4 +15,11 @@ cask "sunvox" do
   depends_on macos: ">= :high_sierra"
 
   app "sunvox/sunvox/macos/SunVox.app"
+
+  zap trash: [
+    "/Applications/sunvox_log.txt",
+    "~/Library/Application Support/SunVox",
+    "~/Library/Preferences/nightradio.SunVox.plist",
+    "~/Library/Saved Application State/nightradio.SunVox.savedState",
+  ]
 end
