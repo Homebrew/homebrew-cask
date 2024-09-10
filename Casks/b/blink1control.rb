@@ -15,4 +15,11 @@ cask "blink1control" do
   depends_on macos: ">= :el_capitan"
 
   app "Blink1Control#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Blink1Control#{version.major}",
+    "~/Library/Logs/Blink1Control#{version.major}",
+    "~/Library/Preferences/com.thingm.blink1control#{version.major}.plist",
+    "~/Library/Saved Application State/com.thingm.blink1control#{version.major}.savedState",
+  ]
 end
