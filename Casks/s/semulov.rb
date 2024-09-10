@@ -8,4 +8,6 @@ cask "semulov" do
   homepage "https://github.com/kainjow/Semulov"
 
   app "Semulov.app"
+
+  zap trash: "~/Library/Preferences/com.kainjow.Semulov.plist"
 end
