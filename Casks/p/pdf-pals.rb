@@ -1,6 +1,6 @@
 cask "pdf-pals" do
-  version "1.8.0"
-  sha256 "f9273cb48bba1e9839889f7e003b4e1f6dcf9b3497f5cacac73cd722bf4a45fa"
+  version "1.8.1"
+  sha256 "3eadbcc357f6a220523a4f3d9d12b836b67b0b1056dbb55388805d7a92e5d8ee"
 
   url "https://download.pdfpals.com/releases/PDFPals-#{version}.dmg"
   name "PDF Pals"
