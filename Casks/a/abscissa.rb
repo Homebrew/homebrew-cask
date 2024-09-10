@@ -15,4 +15,9 @@ cask "abscissa" do
   depends_on macos: ">= :sierra"
 
   app "Abscissa.app"
+
+  zap trash: [
+    "~/Library/Preferences/de.macbay.rbruehl.Abscissa.plist",
+    "~/Library/Saved Application State/de.macbay.rbruehl.Abscissa.savedState",
+  ]
 end
