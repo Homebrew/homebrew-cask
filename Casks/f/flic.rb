@@ -16,4 +16,9 @@ cask "flic" do
   depends_on macos: ">= :sierra"
 
   app "Flic.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.shortcutlabs.FlicMac",
+    "~/Library/Containers/com.shortcutlabs.FlicMac",
+  ]
 end
