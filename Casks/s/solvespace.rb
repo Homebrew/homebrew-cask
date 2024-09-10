@@ -9,4 +9,9 @@ cask "solvespace" do
   homepage "https://solvespace.com/index.pl/"
 
   app "SolveSpace.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.solvespace.plist",
+    "~/Library/Saved Application State/com.solvespace.savedState",
+  ]
 end
