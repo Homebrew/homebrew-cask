@@ -2,7 +2,7 @@ cask "font-atkinson-hyperlegible" do
   version "2020-0514"
   sha256 "9e1a65d53ddadc8253791e958a07bf5aba210ef6155ea9c91b2b4c46bbce53e3"
 
-  url "https://www.brailleinstitute.org/wp-content/uploads/atkinson-hyperlegible-font/Atkinson-Hyperlegible-Font-Print-and-Web-#{version}.zip"
+  url "https://www.brailleinstitute.org/atkinson-hyperlegible-font/Atkinson-Hyperlegible-Font-Print-and-Web-#{version}.zip"
   name "Atkinson Hyperlegible"
   homepage "https://www.brailleinstitute.org/freefont"
 
