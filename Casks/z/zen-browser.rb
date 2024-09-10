@@ -8,7 +8,7 @@ cask "zen-browser" do
   url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen.macos-#{arch}.dmg",
       verified: "github.com/zen-browser/desktop/"
   name "Zen Browser"
-  desc "Customizable Gecko-based browser"
+  desc "Gecko based web browser"
   homepage "https://zen-browser.app/"
 
   auto_updates true
