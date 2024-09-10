@@ -12,8 +12,8 @@ cask "microsoft-auto-update" do
     sha256 "abde56323f4753a90a99ca26a3c62060a498328bd90e0421395ec14a47d49101"
   end
   on_mojave :or_newer do
-    version "4.74.24081116"
-    sha256 "07fd1c2566c693978f4b359fc295e38f527e2b4389bee69fdc79128c3c2cddad"
+    version "4.75.24090815"
+    sha256 "d3c45383873b13cbf3508d7138510792e6f0582d4135c803b2d55fafe9c83d91"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
