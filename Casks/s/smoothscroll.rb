@@ -1,5 +1,5 @@
 cask "smoothscroll" do
-  version "1.6.0"
+  version "1.7.1"
   sha256 :no_check
 
   url "https://www.smoothscroll.net/mac/download/SmoothScroll.app.zip"
@@ -15,4 +15,12 @@ cask "smoothscroll" do
   depends_on macos: ">= :high_sierra"
 
   app "SmoothScroll.app"
+
+  uninstall login_item: "SmoothScroll"
+
+  zap trash: [
+    "~/Library/Caches/com.galambalazs.SmoothScroll",
+    "~/Library/HTTPStorages/com.galambalazs.SmoothScroll",
+    "~/Library/Preferences/com.galambalazs.SmoothScroll.plist",
+  ]
 end
