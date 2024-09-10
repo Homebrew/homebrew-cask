@@ -10,4 +10,9 @@ cask "console" do
   depends_on macos: ">= :el_capitan"
 
   app "Console.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.xs-labs.Console.plist",
+    "~/Library/Saved Application State/com.xs-labs.Console.savedState",
+  ]
 end
