@@ -8,6 +8,8 @@ cask "the-cheat" do
   desc "Game trainer"
   homepage "https://github.com/chazmcgarvey/thecheat"
 
+  deprecate! date: "2024-09-09", because: :unmaintained
+
   app "The Cheat.app"
 
   caveats do
