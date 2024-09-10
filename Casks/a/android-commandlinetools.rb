@@ -25,6 +25,7 @@ cask "android-commandlinetools" do
   binary "#{android_clt_dir}/bin/retrace"
   binary "#{android_clt_dir}/bin/screenshot2"
   binary "#{android_clt_dir}/bin/sdkmanager"
+  binary "#{android_sdk_root}/emulator/emulator"
   artifact "cmdline-tools", target: android_clt_dir
 
   zap trash: android_sdk_root
