@@ -1,6 +1,6 @@
 cask "nano" do
-  version "26.1"
-  sha256 "4a0a28373f81054da50f18e0deeb461d6773b0a6cd15a11bbdfb30aead02a1d8"
+  version "27.1"
+  sha256 "9c0ef9d3f33c8bdae157332d3d0028e608d722f1ad141a952a504398b8e972ba"
 
   url "https://github.com/nanocurrency/nano-node/releases/download/V#{version}/nano-node-V#{version}-Darwin.dmg",
       verified: "github.com/nanocurrency/nano-node/"
@@ -22,8 +22,4 @@ cask "nano" do
     "~/Library/RaiBlocks",
     "~/Library/Saved Application State/net.raiblocks.rai_wallet.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
