@@ -9,4 +9,8 @@ cask "armory" do
   homepage "https://btcarmory.com/"
 
   app "Armory.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
