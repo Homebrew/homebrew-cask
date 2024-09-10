@@ -780,6 +780,7 @@ superproductivity
 surge
 swiftformat-for-xcode
 syncovery
+syncthing
 tabby
 tableflip
 tableplus
