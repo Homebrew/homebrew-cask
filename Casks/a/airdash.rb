@@ -1,6 +1,6 @@
 cask "airdash" do
-  version "2.0.155"
-  sha256 "38c96e57d824479904fb9866d04f42c2179ac3c8f2cc85a7194b7ad914b4d376"
+  version "2.0.158"
+  sha256 "990a683d6200fe595da3963bbcb0ec806d7f4d755a1ec73bd1ae21e50a5079fd"
 
   url "https://github.com/simonbengtsson/airdash/releases/download/v#{version}/airdash.dmg",
       verified: "github.com/simonbengtsson/airdash/"
