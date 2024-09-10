@@ -13,4 +13,8 @@ cask "djv" do
   end
 
   app "DJV.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
