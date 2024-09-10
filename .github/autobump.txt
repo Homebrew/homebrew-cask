@@ -111,6 +111,7 @@ buttercup
 c0re100-qbittorrent
 cahier
 calibre
+camerabag-photo
 camtasia
 camunda-modeler
 canva
