@@ -1,9 +1,9 @@
 cask "orka-desktop" do
-  version "3.0.0-beta.1"
-  sha256 "73979664b53c186e28ce83962639151a63c50be3fdddad2348c7a634bdfd85d8"
+  version "3.0.0"
+  sha256 "c0b5c99a73f7b627d5091eea3fa6458115c48a0d3bb64b0d47d4543d4a2e4588"
 
   url "https://github.com/macstadium/orka-desktop/releases/download/#{version}/OrkaDesktop-#{version}.dmg"
-  name "Orka Desktop (Beta)"
+  name "Orka Desktop"
   desc "Run macOS virtual machines locally and build images for use with Orka"
   homepage "https://github.com/macstadium/orka-desktop"
 
