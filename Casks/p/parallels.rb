@@ -9,7 +9,7 @@ cask "parallels" do
 
   livecheck do
     url "https://kb.parallels.com/130212"
-    regex(/<h2[^>]*?>[^<]*?(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
+    regex(/<p[^>]*?>[^<]*?(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]}-#{match[1]}" }
     end
