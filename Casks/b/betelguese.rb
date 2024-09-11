@@ -8,4 +8,6 @@ cask "betelguese" do
   homepage "https://github.com/23Aaron/Betelguese"
 
   app "Betelguese.app"
+
+  zap trash: "~/Library/Saved Application State/com.23aaron.Betelgeuse.savedState"
 end
