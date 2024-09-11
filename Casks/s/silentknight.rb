@@ -8,8 +8,8 @@ cask "silentknight" do
     end
   end
   on_catalina :or_newer do
-    version "2.10,2024.08"
-    sha256 "11be3fac806d71d772c4d1f1278e91ee30ec91669e47732c741471f3aa08407d"
+    version "2.11,2024.09"
+    sha256 "083fe1d6afe5aa9700cc113f03e7d2f219397cf5da2a1906c1f56ea60062a6e2"
 
     livecheck do
       url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
