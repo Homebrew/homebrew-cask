@@ -1,6 +1,6 @@
 cask "vcam" do
-  version "2.0.192"
-  sha256 "06bd6320f4db6470ab7f7144dfb8a9ec71e6b0c043a205515a3e9f2e12eed1a1"
+  version "2.0.202"
+  sha256 "eede3b77ca5abce23cbd201313a03e7d1be40a58b7879ed7ab1f95611b63ba9a"
 
   url "https://downloads.vcam.ai/mac/VCam.ai_#{version}.pkg"
   name "VCam.ai"
