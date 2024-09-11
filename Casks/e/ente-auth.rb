@@ -6,7 +6,7 @@ cask "ente-auth" do
       verified: "github.com/ente-io/ente/"
   name "Ente Auth"
   desc "Desktop client for Ente Auth"
-  homepage "https://ente.io/"
+  homepage "https://ente.io/auth/"
 
   livecheck do
     url :url
