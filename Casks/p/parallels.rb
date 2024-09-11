@@ -1,6 +1,6 @@
 cask "parallels" do
-  version "19.4.1-54985"
-  sha256 "5411c2b3168c23a99f99cfe24388495bfe7ddab29c93d1e29535f61eaec76f9b"
+  version "20.0.0-55653"
+  sha256 "a211a168b5735ee47f990e93a1e19b4e2c4acb4d45d78252813b35dbcbc66573"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
@@ -8,8 +8,8 @@ cask "parallels" do
   homepage "https://www.parallels.com/products/desktop/"
 
   livecheck do
-    url "https://kb.parallels.com/129860"
-    regex(/<h2[^>]*?>[^<]*?(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
+    url "https://kb.parallels.com/130212"
+    regex(/<p[^>]*?>[^<]*?(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]}-#{match[1]}" }
     end
