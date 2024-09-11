@@ -9,7 +9,7 @@ cask "piezo" do
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "1.9.3"
+    version "1.9.4"
 
     url "https://cdn.rogueamoeba.com/piezo/download/Piezo.zip"
 
