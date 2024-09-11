@@ -1,6 +1,6 @@
 cask "thonny" do
-  version "4.1.4"
-  sha256 "3acf16c0111fbecf351bd0c9d15e7cc0db06578699dac930ac3f9de19c6b0c8d"
+  version "4.1.6"
+  sha256 "06cc85f3f835e80e63062a04581cbfacb97098ae613bc15f5c5e8ba04670d1bb"
 
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg",
       verified: "github.com/thonny/thonny/"
