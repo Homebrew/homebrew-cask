@@ -13,4 +13,9 @@ cask "repetier-host" do
   end
 
   app "Repetier-Host Mac.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.repetier.Repetier-Host-Mac.plist",
+    "~/Library/Saved Application State/com.repetier.Repetier-Host-Mac.savedState",
+  ]
 end
