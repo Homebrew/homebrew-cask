@@ -24,6 +24,7 @@ cask "parallels@15" do
     "parallels@16",
     "parallels@17",
     "parallels@18",
+    "parallels@19",
   ]
   depends_on macos: ">= :sierra"
 
