@@ -15,4 +15,10 @@ cask "licensed" do
   depends_on macos: ">= :high_sierra"
 
   app "Licensed.app"
+
+  zap trash: [
+    "~/Library/Application Support/Licensed",
+    "~/Library/Preferences/com.asagoo.licensed.plist",
+    "~/Library/Saved Application State/com.asagoo.licensed.savedState",
+  ]
 end
