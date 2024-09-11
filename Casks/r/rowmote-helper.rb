@@ -16,4 +16,12 @@ cask "rowmote-helper" do
   depends_on macos: ">= :el_capitan"
 
   app "Rowmote Helper.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.regularrateandrhythm.rowmotehelper-Helper",
+    "~/Library/Caches/com.regularrateandrhythm.rowmotehelper",
+    "~/Library/Containers/com.regularrateandrhythm.rowmotehelper-Helper",
+    "~/Library/HTTPStorages/com.regularrateandrhythm.rowmotehelper",
+    "~/Library/Preferences/com.regularrateandrhythm.rowmotehelper.plist",
+  ]
 end
