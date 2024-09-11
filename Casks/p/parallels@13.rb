@@ -7,13 +7,7 @@ cask "parallels@13" do
   desc "Desktop virtualization software"
   homepage "https://www.parallels.com/products/desktop/"
 
-  livecheck do
-    url "https://kb.parallels.com/124262"
-    regex(/(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}-#{match[1]}" }
-    end
-  end
+  deprecate! date: "2024-09-11", because: :discontinued
 
   conflicts_with cask: [
     "parallels",
@@ -23,6 +17,7 @@ cask "parallels@13" do
     "parallels@16",
     "parallels@17",
     "parallels@18",
+    "parallels@19",
   ]
   depends_on macos: "<= :high_sierra"
 

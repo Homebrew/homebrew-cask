@@ -24,6 +24,7 @@ cask "parallels@18" do
     "parallels@15",
     "parallels@16",
     "parallels@17",
+    "parallels@19",
   ]
   depends_on macos: ">= :mojave"
 
