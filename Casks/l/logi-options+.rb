@@ -22,7 +22,7 @@ cask "logi-options+" do
     end
   end
   on_monterey :or_newer do
-    version "1.81.613202"
+    version "1.82.618412"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
