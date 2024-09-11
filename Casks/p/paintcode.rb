@@ -14,4 +14,11 @@ cask "paintcode" do
   end
 
   app "PaintCode.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.pixelcut.paintcode*",
+    "~/Library/HTTPStorages/com.pixelcut.paintcode*",
+    "~/Library/Preferences/com.pixelcut.paintcode*.plist",
+    "~/Library/Saved Application State/com.pixelcut.paintcode*.savedState",
+  ]
 end
