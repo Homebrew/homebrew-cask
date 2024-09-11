@@ -15,4 +15,9 @@ cask "space-saver" do
   depends_on macos: ">= :high_sierra"
 
   app "Space Saver.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.mariogt.space-saver.plist",
+    "~/Library/Saved Application State/com.mariogt.space-saver.savedState",
+  ]
 end
