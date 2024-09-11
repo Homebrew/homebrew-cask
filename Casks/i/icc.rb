@@ -8,15 +8,7 @@ cask "icc" do
   desc "Chess club client"
   homepage "https://www.chessclub.com/"
 
-  livecheck do
-    url "https://www.chessclub.com/software-download/icc-for-mac"
-    strategy :page_match do |page|
-      match = page.match(/>\s*(\d+(?:\.\d+)*)\s*r(\d+)\s*/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
-  end
+  deprecate! date: "2024-09-11", because: :discontinued
 
   pkg "ICCforMac.r#{version.csv.second}.pkg"
 
