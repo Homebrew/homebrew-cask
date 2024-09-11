@@ -12,7 +12,16 @@ cask "suitcase-fusion" do
     regex(/Current\s*version:\s*(\d+(?:\.\d+)*)/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Suitcase Fusion.app"
+
+  zap trash: [
+    "~/Library/Caches/com.extensis.SuitcaseFusion",
+    "~/Library/HTTPStorages/com.extensis.SuitcaseFusion",
+    "~/Library/HTTPStorages/com.extensis.SuitcaseFusion.binarycookies",
+    "~/Library/Preferences/com.extensis.SuitcaseFusion.plist",
+    "~/Library/Saved Application State/com.extensis.SuitcaseFusion.savedState",
+  ]
 end
