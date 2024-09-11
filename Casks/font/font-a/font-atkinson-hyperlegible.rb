@@ -6,6 +6,11 @@ cask "font-atkinson-hyperlegible" do
   name "Atkinson Hyperlegible"
   homepage "https://www.brailleinstitute.org/freefont"
 
+  # Collecting the version information involves sending a POST request to the homepage
+  livecheck do
+    skip "No version information available"
+  end
+
   font "Atkinson-Hyperlegible-Font-Print-and-Web-#{version}/Print Fonts/Atkinson-Hyperlegible-Bold-102.otf"
   font "Atkinson-Hyperlegible-Font-Print-and-Web-#{version}/Print Fonts/Atkinson-Hyperlegible-BoldItalic-102.otf"
   font "Atkinson-Hyperlegible-Font-Print-and-Web-#{version}/Print Fonts/Atkinson-Hyperlegible-Italic-102.otf"
