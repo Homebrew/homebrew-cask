@@ -392,6 +392,7 @@ ivideonserver
 jami
 jamie
 jan
+jasp
 java@beta
 jdownloader
 jellyfin
