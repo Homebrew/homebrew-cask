@@ -469,6 +469,7 @@ melodics
 memory-cleaner
 mendeley-reference-manager
 messenger
+metashape
 metasploit
 mi
 mi@beta
