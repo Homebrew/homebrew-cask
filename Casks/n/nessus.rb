@@ -1,6 +1,6 @@
 cask "nessus" do
-  version "10.8.2"
-  sha256 "f591e9ca51c8e6ec431f09b855f2a138d6b53f1d08258e3237454072f696d04e"
+  version "10.8.3"
+  sha256 "6502852b546de17ced3cdd9cd670c86c621e452bca332d6f117fd12ee42ca806"
 
   url "https://www.tenable.com/downloads/api/v2/pages/nessus/files/Nessus-#{version}.dmg"
   name "Tenable Nessus"
