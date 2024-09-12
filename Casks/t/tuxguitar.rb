@@ -14,4 +14,6 @@ cask "tuxguitar" do
   end
 
   app "tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app"
+
+  zap trash: "~/Library/Application Support/tuxguitar"
 end
