@@ -1,6 +1,6 @@
 cask "imazing-profile-editor" do
-  version "1.9.0,298401"
-  sha256 "772df3cdc58b701e7dc74d5965a949995cdae51005b918ae9877394eb6633871"
+  version "1.9.1,304001"
+  sha256 "ba1414257c21615e6b8c04a4d98d5ab963bfd1eb52b67f248991dbe79c1bf2ed"
 
   url "https://downloads.imazing.com/mac/iMazing-Profile-Editor/#{version.csv.first}.#{version.csv.second}/iMazing_Profile_Editor_#{version.csv.first}.#{version.csv.second}.dmg"
   name "iMazing Profile Editor"
