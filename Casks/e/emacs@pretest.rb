@@ -1,8 +1,8 @@
 cask "emacs@pretest" do
-  arch arm: "arm64-11", intel: "x86_64-10_11"
+  arch arm: "arm64-11", intel: "x86_64-10_12"
 
-  version "29.1.90"
-  sha256 "e3a8fa0e6289052003ef8c729abe7bee5fbd6bd8de60a638940c5d3971934bc9"
+  version "30.0.91"
+  sha256 "33708f6a12a039d7c5fd9aab4255f747644cbb7882cfb6806821b70384e82a4d"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-pretest-#{version}-universal.dmg"
   name "Emacs"
