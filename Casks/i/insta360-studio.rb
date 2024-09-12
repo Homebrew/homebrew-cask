@@ -7,9 +7,12 @@ cask "insta360-studio" do
   desc "Video and photo editor"
   homepage "https://www.insta360.com/"
 
-  # The download URL flucuates between versions, so capture a majority of the url string in the version
-  # the url includes `()` characters which cannot be used in a version, so split at these characters
-  # versions can include the string "beta" or "rc" but are sourced from what is distributed upstream
+  # The filename format can fluctuate between versions, so we have to include
+  # any text that may vary in the cask `version`. However, some filenames
+  # include parentheses and we can't include those characters in the cask
+  # `version`, so we have to chunk the text to work around this limitation.
+  # NOTE: We simply follow what upstream presents as the newest version and
+  # that may be beta, RC, etc.
   livecheck do
     url "https://openapi.insta360.com/app/appDownload/getGroupApp?group=insta360-go2&X-Language=en-us"
     regex(%r{/(\h+)/Insta360(?:%20)?Studio(?:[._-]|%20)v?(?:\d+(?:\.\d+)+)[._-](.+)[._-]signed\.pkg}i)
