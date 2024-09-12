@@ -1,8 +1,11 @@
 cask "virtualbox" do
-  version "7.1.0,164728"
-  sha256 "8ce622e23913cab562b404df7c588cea6ec3205f9063437e6f97fab2982ddae0"
+  arch arm: "macOSArm64", intel: "OSX"
 
-  url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-OSX.dmg"
+  version "7.1.0,164728"
+  sha256 arm:   "5ba5d31f379aa6d35d578f67f29c175db7356b1939d7a2a478b7e9de487c33ba",
+         intel: "8ce622e23913cab562b404df7c588cea6ec3205f9063437e6f97fab2982ddae0"
+
+  url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg"
   name "Oracle VirtualBox"
   desc "Virtualiser for x86 hardware"
   homepage "https://www.virtualbox.org/"
@@ -22,7 +25,6 @@ cask "virtualbox" do
     "virtualbox@beta",
   ]
   depends_on macos: ">= :catalina"
-  depends_on arch: :x86_64
 
   pkg "VirtualBox.pkg",
       choices: [
