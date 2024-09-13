@@ -6,6 +6,11 @@ cask "font-cardo" do
   name "Cardo"
   homepage "https://scholarsfonts.net/cardofnt.html"
 
+  livecheck do
+    url :homepage
+    regex(/Cardo\s+v?(\d+(?:\.\d+)+)/i)
+  end
+
   font "Cardo104s.ttf"
   font "Cardoi99.ttf"
   font "Cardob101.ttf"
