@@ -17,4 +17,13 @@ cask "encryptme" do
   depends_on macos: ">= :monterey"
 
   app "EncryptMe.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.bourgeoisbits.cloak.agent",
+    "~/Library/Caches/com.bourgeoisbits.cloak.agent",
+    "~/Library/HTTPStorages/com.bourgeoisbits.cloak.agent",
+    "~/Library/HTTPStorages/com.bourgeoisbits.cloak.agent.binarycookies",
+    "~/Library/Preferences/com.bourgeoisbits.cloak.agent.plist",
+    "~/Library/WebKit/com.bourgeoisbits.cloak.agent",
+  ]
 end
