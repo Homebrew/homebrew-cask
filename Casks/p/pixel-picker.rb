@@ -10,4 +10,9 @@ cask "pixel-picker" do
   depends_on macos: ">= :sierra"
 
   app "Pixel Picker.app"
+
+  zap trash: [
+    "~/Library/Logs/Pixel Picker",
+    "~/Library/Preferences/Pixel Picker",
+  ]
 end
