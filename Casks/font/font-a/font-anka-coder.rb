@@ -7,6 +7,19 @@ cask "font-anka-coder" do
   name "Anka/Coder"
   homepage "https://code.google.com/p/anka-coder-fonts/"
 
+  livecheck do
+    url "https://storage.googleapis.com/storage/v1/b/google-code-archive/o/v2%2Fcode.google.com%2Fanka-coder-fonts%2Fdownloads-page-1.json?alt=media"
+    regex(/^AnkaCoder[._-]v?(\d+(?:\.\d+)+)\.zip$/i)
+    strategy :json do |json, regex|
+      json["downloads"]&.map do |item|
+        match = item["filename"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
+  end
+
   font "AnkaCoder-b.ttf"
   font "AnkaCoder-bi.ttf"
   font "AnkaCoder-i.ttf"
