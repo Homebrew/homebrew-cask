@@ -14,4 +14,8 @@ cask "figtree" do
 
   app "FigTree v#{version}.app"
   qlplugin "QuickLook Plugin/FigTreeQuickLookPlugin.qlgenerator"
+
+  caveats do
+    requires_rosetta
+  end
 end
