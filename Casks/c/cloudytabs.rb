@@ -7,9 +7,13 @@ cask "cloudytabs" do
   desc "Menu bar application that lists iCloud Tabs"
   homepage "https://github.com/josh-/CloudyTabs/"
 
-  deprecate! date: "2024-06-16", because: :repo_archived
+  deprecate! date: "2024-06-16", because: :discontinued
 
   depends_on macos: ">= :high_sierra"
 
   app "CloudyTabs.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
