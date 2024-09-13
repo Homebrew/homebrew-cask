@@ -8,7 +8,7 @@ cask "remix-ide" do
   desc "Desktop version of Remix web IDE used for Ethereum smart contract development"
   homepage "https://remix-project.org/"
 
-  deprecate! date: "2024-07-28", because: :repo_archived
+  deprecate! date: "2024-07-28", because: :discontinued
 
   app "Remix IDE.app"
 
