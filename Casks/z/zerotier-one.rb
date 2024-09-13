@@ -8,8 +8,8 @@ cask "zerotier-one" do
   homepage "https://www.zerotier.com/"
 
   livecheck do
-    url "https://www.zerotier.com/download/"
-    regex(/Latest\s+Version[\s:|]+?v?(\d+(?:\.\d+)+)/i)
+    url "https://download.zerotier.com/RELEASES/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   depends_on macos: ">= :high_sierra"
