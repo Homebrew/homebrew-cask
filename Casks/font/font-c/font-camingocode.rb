@@ -6,6 +6,11 @@ cask "font-camingocode" do
   name "CamingoCode"
   homepage "https://www.janfromm.de/typefaces/camingomono/camingocode/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   font "TTF/CamingoCode-Bold.ttf"
   font "TTF/CamingoCode-BoldItalic.ttf"
   font "TTF/CamingoCode-Italic.ttf"
