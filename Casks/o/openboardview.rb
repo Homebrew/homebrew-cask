@@ -14,4 +14,6 @@ cask "openboardview" do
   end
 
   app "openboardview.app"
+
+  zap trash: "~/Library/Application Support/OpenBoardView"
 end
