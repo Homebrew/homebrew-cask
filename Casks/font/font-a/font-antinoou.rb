@@ -6,6 +6,11 @@ cask "font-antinoou" do
   name "Antinoou"
   homepage "https://www.evertype.com/fonts/coptic/"
 
+  livecheck do
+    url :homepage
+    regex(/Antinoou\s+is\s+v?(\d+(?:\.\d+)+)/i)
+  end
+
   font "AntinoouFont-#{version}/Antinoou.ttf"
   font "AntinoouFont-#{version}/AntinoouItalic.ttf"
 
