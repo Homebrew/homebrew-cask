@@ -1,6 +1,6 @@
 cask "customshortcuts" do
-  version "1.1"
-  sha256 "e6bda7397e2c2eed0475e1210bf33c22d3d94a2d78ebff89843685969a73f4dc"
+  version "1.2.1"
+  sha256 "8855cbdcd314e6d8b1fe2364595fb36cd23e948914441c70f5e344f06b14e892"
 
   url "https://dl.houdah.com/customShortcuts/updates/cast_assets/CustomShortcuts#{version}.zip"
   name "CustomShortcuts"
