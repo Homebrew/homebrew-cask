@@ -19,8 +19,8 @@ cask "blockblock" do
     }
   end
   on_catalina :or_newer do
-    version "2.2.3"
-    sha256 "e20a7f195aa3f339b831f10cd1c20bee71dcc11d22da86acabafbc02394a9cbc"
+    version "2.2.4"
+    sha256 "6edd747e43148d7773adb6569b3f6fe085c82850bab6833850084ff2427b7bad"
 
     url "https://github.com/objective-see/BlockBlock/releases/download/v#{version}/BlockBlock_#{version}.zip",
         verified: "github.com/objective-see/BlockBlock/"
