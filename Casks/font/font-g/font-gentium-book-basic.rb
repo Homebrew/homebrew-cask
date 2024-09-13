@@ -6,6 +6,11 @@ cask "font-gentium-book-basic" do
   name "Gentium Book Basic"
   homepage "https://software.sil.org/gentium/"
 
+  livecheck do
+    url "https://software.sil.org/gentium/download/"
+    regex(/Gentium\s+Basic\s+v?(\d+(?:\.\d+)+)/i)
+  end
+
   font "GentiumBasic_#{version.no_dots}/GenBkBasB.ttf"
   font "GentiumBasic_#{version.no_dots}/GenBkBasBI.ttf"
   font "GentiumBasic_#{version.no_dots}/GenBkBasI.ttf"
