@@ -7,6 +7,10 @@ cask "font-monoid" do
   name "Monoid"
   homepage "https://larsenwork.com/monoid/"
 
+  livecheck do
+    url :url
+  end
+
   font "Monoid-Bold.ttf"
   font "Monoid-Italic.ttf"
   font "Monoid-Regular.ttf"
