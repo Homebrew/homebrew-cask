@@ -1,9 +1,9 @@
 cask "zoho-mail" do
   arch arm: "arm64-"
 
-  version "1.6.3"
-  sha256 arm:   "b79c5f61ecb149dbd539f9446e85a37bb1e549693365c76789490b2054ddc9fc",
-         intel: "1986c21ec7816bd8f790b13086018aa9cc2a8ee3b58fa114b49338731bed95d2"
+  version "1.6.4"
+  sha256 arm:   "5fb90c3a7ab93b2e7d369a852c4325bfdd52df6d75beb0d0e7b9f6d5be6ff6be",
+         intel: "1440691ad04b2444b04b3276261d30877de54f88ebf44c1d5b1326da949e9f67"
 
   url "https://downloads.zohocdn.com/zmail-desktop/mac/zoho-mail-desktop-lite-installer-#{arch}v#{version}.dmg",
       verified: "downloads.zohocdn.com/zmail-desktop/mac/"
