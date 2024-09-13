@@ -6,6 +6,11 @@ cask "font-freefont" do
   name "FreeFont"
   homepage "https://www.gnu.org/software/freefont/"
 
+  livecheck do
+    url "http://ftp.gnu.org/gnu/freefont/"
+    regex(/href=.*?freefont[._-]otf[._-]v?(\d+)\.t/i)
+  end
+
   font "freefont-#{version}/FreeMono.otf"
   font "freefont-#{version}/FreeMonoBold.otf"
   font "freefont-#{version}/FreeMonoBoldOblique.otf"
