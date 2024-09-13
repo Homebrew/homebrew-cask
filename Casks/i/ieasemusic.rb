@@ -7,7 +7,7 @@ cask "ieasemusic" do
   desc "Third-party NetEase cloud music player"
   homepage "https://github.com/trazyn/ieaseMusic"
 
-  deprecate! date: "2024-07-15", because: :repo_archived
+  deprecate! date: "2024-07-15", because: :discontinued
 
   auto_updates true
 

@@ -7,7 +7,7 @@ cask "joshjon-nocturnal" do
   desc "Dimness and night shift menu bar app"
   homepage "https://github.com/joshjon/nocturnal"
 
-  deprecate! date: "2024-08-22", because: :repo_archived
+  deprecate! date: "2024-08-22", because: :discontinued
 
   depends_on macos: ">= :high_sierra"
 
