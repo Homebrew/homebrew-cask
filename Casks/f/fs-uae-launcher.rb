@@ -16,4 +16,9 @@ cask "fs-uae-launcher" do
   end
 
   app "FS-UAE-Launcher/macOS/#{arch}/FS-UAE Launcher.app"
+
+  zap trash: [
+    "~/Library/Preferences/fs-uae-launcher",
+    "~/Library/Saved Application State/no.fengestad.fs-uae-launcher.savedState",
+  ]
 end
