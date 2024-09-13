@@ -6,6 +6,11 @@ cask "font-everson-mono" do
   name "Everson Mono"
   homepage "https://www.evertype.com/emono/"
 
+  livecheck do
+    url :homepage
+    regex(/current\s+version.*?v?(\d+(?:\.\d+)+)/i)
+  end
+
   font "evermono-#{version}/Everson Mono.ttf"
   font "evermono-#{version}/Everson Mono Bold.ttf"
   font "evermono-#{version}/Everson Mono Bold Oblique.ttf"
