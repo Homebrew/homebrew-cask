@@ -18,4 +18,9 @@ cask "fs-uae" do
   depends_on cask: "fs-uae-launcher"
 
   app "FS-UAE/macOS/#{arch}/FS-UAE.app"
+
+  zap trash: [
+    "~/Library/Preferences/fs-uae",
+    "~/Library/Saved Application State/no.fengestad.fs-uae.savedState",
+  ]
 end
