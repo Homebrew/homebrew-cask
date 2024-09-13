@@ -2,9 +2,9 @@ cask "shadow-bot" do
   arch arm: "-arm64"
   livecheck_query = on_arch_conditional arm: "arm64", intel: "intel"
 
-  version "1.9.5"
-  sha256 arm:   "ee280fe9b8f35b9320ec51e66f092e7a96282d7cd8a27ac50e11db2104f76d40",
-         intel: "4f5a4ca26d68eabf4513484885ce17d69f1825e2ac0fa2d3fa58a5f77435a48f"
+  version "1.9.6"
+  sha256 arm:   "aaf09bfe0ddf81c4dca1975ca9a2fb38c00395d44797bc77c1a58ea058489497",
+         intel: "66e7fa384817cc800d6df67e5cc5f51eb81b412d8191558ad9faf9515b9cc7db"
 
   url "https://winrobot-pub-a-cos.winrobot360.com/client/install/ShadowBot-#{version}#{arch}.dmg",
       verified: "winrobot-pub-a-cos.winrobot360.com/"
