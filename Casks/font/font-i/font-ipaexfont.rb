@@ -6,6 +6,11 @@ cask "font-ipaexfont" do
   name "IPAex Fonts"
   homepage "https://moji.or.jp/ipafont/"
 
+  livecheck do
+    url :homepage
+    regex(/IPAexフォント\(\s*Ver[._-](\d+(?:\.\d+)+)\s*\)/i)
+  end
+
   font "IPAexfont#{version.no_dots}/ipaexg.ttf"
   font "IPAexfont#{version.no_dots}/ipaexm.ttf"
 
