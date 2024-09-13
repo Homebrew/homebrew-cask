@@ -540,6 +540,7 @@ navicat-premium-lite
 neovide
 netron
 nextcloud
+nextcloud-vfs
 ngrok
 nordlayer
 nordlocker
