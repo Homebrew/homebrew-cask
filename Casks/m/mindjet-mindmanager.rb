@@ -16,4 +16,14 @@ cask "mindjet-mindmanager" do
   depends_on macos: ">= :big_sur"
 
   app "MindManager.app"
+
+  zap trash: [
+    "~/Library/Application Support/Mindjet",
+    "~/Library/Application Support/MindManager",
+    "~/Library/Caches/com.mindjet.mindmanager.*",
+    "~/Library/HTTPStorages/com.mindjet.mindmanager.*.binarycookies",
+    "~/Library/Preferences/ByHost/com.mindjet.mindmanager.*.6B4DD3EE-2BFA-5A1C-A64F-50799C342D41.plist",
+    "~/Library/Preferences/com.mindjet.mindmanager.*.plist",
+    "~/Library/WebKit/com.mindjet.mindmanager.*",
+  ]
 end
