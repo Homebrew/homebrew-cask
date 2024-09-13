@@ -1,6 +1,6 @@
 cask "pdf-reader-pro" do
-  version "4.1.1"
-  sha256 "769438446178ec31da7f0da707f0494b7b8347a6ddbd633062dcf8e14d6219a8"
+  version "4.6.0"
+  sha256 "c4ba2d02bf5ce5e59b8ff6e6e79e808b792516f6551566fcf6791e31d90b702e"
 
   url "https://www.pdfreaderpro.com/downloads/PDFReaderPro_v#{version.major_minor_patch}.dmg"
   name "PDF Reader Pro"
