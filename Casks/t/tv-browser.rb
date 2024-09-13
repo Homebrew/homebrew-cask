@@ -16,4 +16,11 @@ cask "tv-browser" do
   end
 
   app "TV-Browser.app"
+
+  zap trash: [
+    "~/Library/Application Support/TV-Browser",
+    "~/Library/Preferences/TV-Browser",
+    "~/Library/Preferences/tvbrowser.TVBrowser.plist",
+    "~/Library/Saved Application State/tvbrowser.TVBrowser.savedState",
+  ]
 end
