@@ -1,9 +1,9 @@
 cask "uvtools" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.4.1"
-  sha256 arm:   "4137593359c561c703288ec23a62ade632a0349b1a2838f3bb98de7260cfe058",
-         intel: "568a203a46ac4f0966e3a91daa39424ba9318625ad32bb271b699f429f33674d"
+  version "4.4.2"
+  sha256 arm:   "6f3a261c28273c4240cfbf323cd0c2bfbff982e9ed5d4c8837d9791091f513bb",
+         intel: "1d6ce0fe4fcafd16e1466b646bfc765e7a2974d5bde553131f5155692789a7bf"
 
   url "https://github.com/sn4k3/UVtools/releases/download/v#{version}/UVtools_osx-#{arch}_v#{version}.zip"
   name "UVtools"
