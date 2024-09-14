@@ -1,6 +1,6 @@
 cask "parsehub" do
-  version "2.4.35"
-  sha256 "3a8459f24399d2a3b5a71adf62d65ab933170f010189339b065f4d77f996b873"
+  version "2.4.36"
+  sha256 "b3ed41917ba231a6388e5571710aa6d8d89945c95a25ef6cedea168b590363d6"
 
   url "https://parsehub.com/static/client/ParseHub-#{version}-mac.zip"
   name "ParseHub"
