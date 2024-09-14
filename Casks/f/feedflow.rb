@@ -9,14 +9,8 @@ cask "feedflow" do
   homepage "https://www.feedflow.dev/"
 
   livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)[._-]desktop$/i)
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
+    url :url
+    strategy :github_latest
   end
 
   depends_on macos: ">= :monterey"
