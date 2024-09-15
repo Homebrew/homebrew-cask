@@ -7,8 +7,8 @@ cask "font-freefont" do
   homepage "https://www.gnu.org/software/freefont/"
 
   livecheck do
-    url "http://ftp.gnu.org/gnu/freefont/"
-    regex(/href=.*?freefont[._-]otf[._-]v?(\d+)\.t/i)
+    url :url
+    regex(/href=.*?freefont[._-]otf[._-]v?(\d+(?:\.\d+)*)\.t/i)
   end
 
   font "freefont-#{version}/FreeMono.otf"
