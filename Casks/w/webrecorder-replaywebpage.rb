@@ -6,7 +6,7 @@ cask "webrecorder-replaywebpage" do
       verified: "github.com/webrecorder/replayweb.page/"
   name "ReplayWeb.page"
   desc "Web archive viewer for WARC and WACZ files"
-  homepage "https://replayweb.page"
+  homepage "https://replayweb.page/"
 
   livecheck do
     url :url
@@ -20,8 +20,7 @@ cask "webrecorder-replaywebpage" do
   zap trash: [
     "~/Library/Application Support/ReplayWeb.page",
     "~/Library/Logs/ReplayWeb.page",
-    "~/Library/Saved Application State/net.webrecorder.replaywebpage.savedState",
     "~/Library/Preferences/net.webrecorder.replaywebpage.plst",
+    "~/Library/Saved Application State/net.webrecorder.replaywebpage.savedState",
   ]
-
 end
