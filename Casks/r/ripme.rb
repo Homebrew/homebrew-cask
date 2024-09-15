@@ -10,7 +10,7 @@ cask "ripme" do
   auto_updates true
   container type: :naked
 
-  app "ripme.jar"
+  artifact "ripme.jar", target: "#{appdir}/ripme.jar"
 
   uninstall delete: "/Applications/rips"
 
