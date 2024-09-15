@@ -14,6 +14,7 @@ cask "universal-desktop" do
   end
 
   auto_updates true
+  conflicts_with cask: "universal-desktop@beta"
   depends_on macos: ">= :ventura"
 
   app "Universal Desktop.app"
