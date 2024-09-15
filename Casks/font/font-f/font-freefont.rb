@@ -8,7 +8,7 @@ cask "font-freefont" do
 
   livecheck do
     url :url
-    regex(/href=.*?freefont[._-]otf[._-]v?(\d+)\.t/i)
+    regex(/href=.*?freefont[._-]otf[._-]v?(\d+(?:\.\d+)*)\.t/i)
   end
 
   font "freefont-#{version}/FreeMono.otf"
