@@ -7,11 +7,6 @@ cask "font-gnu-unifont" do
   name "GNU Unifont"
   homepage "https://unifoundry.com/unifont.html"
 
-  livecheck do
-    url "https://unifoundry.com/pub/unifont/"
-    regex(%r{href=["']?unifont[._-]v?(\d+(?:\.\d+)+)/?["' >]}i)
-  end
-
   font "unifont-#{version}/font/precompiled/unifont-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_upper-#{version}.otf"
   font "unifont-#{version}/font/precompiled/unifont_sample-#{version}.otf"
