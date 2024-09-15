@@ -9,7 +9,7 @@ cask "electricbinary" do
 
   livecheck do
     url :url
-    regex(/href=.*?electricBinary-(\d+(?:\.\d+)*)\.jar/i)
+    regex(/href=.*?electricBinary[._-]v?(\d+(?:\.\d+)+)\.jar/i)
   end
 
   container type: :naked
