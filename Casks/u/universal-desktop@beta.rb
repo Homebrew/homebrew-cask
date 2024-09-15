@@ -5,7 +5,7 @@ cask "universal-desktop@beta" do
   url "https://github.com/adrianjagielak/universal-desktop-website/releases/download/v#{version.csv.first}-#{version.csv.second}/Universal.Desktop.dmg",
       verified: "github.com/adrianjagielak/universal-desktop-website/"
   name "Universal Desktop (Beta)"
-  desc "Stream Mac apps to Apple Vision Pro as native visionOS windows"
+  desc "Stream apps to Vision Pro as native visionOS windows"
   homepage "https://universaldesktop.app/"
 
   livecheck do
@@ -19,7 +19,7 @@ cask "universal-desktop@beta" do
   app "Universal Desktop.app"
 
   zap trash: [
-    "~/Library/Preferences/dev.adrianjagielak.UniversalDesktop.plist",
     "~/Library/HTTPStorages/dev.adrianjagielak.UniversalDesktop",
+    "~/Library/Preferences/dev.adrianjagielak.UniversalDesktop.plist",
   ]
 end
