@@ -12,7 +12,7 @@ cask "recaf" do
   container type: :naked
 
   # Renamed for clarity: jar file name is overly complex
-  app "recaf-#{version}-J8-jar-with-dependencies.jar", target: "Recaf.jar"
+  artifact "recaf-#{version}-J8-jar-with-dependencies.jar", target: "#{appdir}/Recaf.jar"
 
   zap trash: "~/Library/Preferences/Recaf"
 
