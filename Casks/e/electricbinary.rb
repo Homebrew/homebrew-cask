@@ -14,7 +14,7 @@ cask "electricbinary" do
 
   container type: :naked
 
-  artifact "electricBinary-#{version}.jar", target: "/Applications/electricBinary-#{version}.jar"
+  artifact "electricBinary-#{version}.jar", target: "#{appdir}/electricBinary-#{version}.jar"
 
   caveats do
     depends_on_java
