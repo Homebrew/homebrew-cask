@@ -807,6 +807,8 @@ texshop
 texstudio
 thangs-sync
 theiaide
+threema
+threema-work
 threema@beta
 ths
 thunderbird
