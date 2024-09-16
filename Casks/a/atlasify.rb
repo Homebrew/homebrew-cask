@@ -13,7 +13,6 @@ cask "atlasify" do
   end
 
   auto_updates true
-
   depends_on macos: ">= :catalina"
 
   app "Atlasify.app"
@@ -36,8 +35,8 @@ cask "atlasify" do
   zap trash: [
     "~/Library/Application Support/atlasify",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.atlasify.sfl*",
-    "~/Library/Caches/com.electron.atlasify*",
     "~/Library/Caches/atlasify-updater",
+    "~/Library/Caches/com.electron.atlasify*",
     "~/Library/HTTPStorages/com.electron.atlasify",
     "~/Library/Preferences/com.electron.atlasify*.plist",
     "~/Library/Saved Application State/com.electron.atlasify.savedState",
