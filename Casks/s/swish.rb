@@ -1,6 +1,6 @@
 cask "swish" do
-  version "1.10.3"
-  sha256 "b41b769d7ca7cdc8abf36fb6a27dd00ca9548af11634ab24c73cafa653f44608"
+  version "1.10.4"
+  sha256 "1ca142fdc5b771d04ed30e8e54cf7667665cfc1487a028541fb6d4e37e72df8d"
 
   url "https://github.com/chrenn/swish-dl/releases/download/#{version}/Swish.dmg",
       verified: "github.com/chrenn/swish-dl/"
