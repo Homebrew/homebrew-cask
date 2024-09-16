@@ -1,6 +1,6 @@
 cask "textsniper" do
-  version "1.10.1"
-  sha256 "3542eedfa1a1d15b8d5351d7fee0ae28451d0b3d01d474995f214bf675eb76d2"
+  version "1.11"
+  sha256 "421d1c615bc920943c73e6e4d61f99c08737cb5e477fe1d75598ad447ba86e2a"
 
   url "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper#{version}.dmg",
       verified: "s3.amazonaws.com/textsniper.app/Gumroad/"
