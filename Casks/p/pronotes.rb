@@ -1,4 +1,4 @@
-cask "pro-notes" do
+cask "pronotes" do
   version "0.7.6"
   sha256 "655cd62f286539610c0523fee835ac5f3dcccd74bb9d63e245ee51f5a898e8f5"
 
