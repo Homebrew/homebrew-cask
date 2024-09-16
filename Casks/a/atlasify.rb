@@ -1,6 +1,6 @@
 cask "atlasify" do
   version "0.1.0"
-  sha256 "7c1598e0ca86b7da7851aba39a6e61453d0c29aaa446f93b1b36c7cf939d6d47"
+  sha256 "fdee7eaa752428590ec4da4e3779f6ea7e2e9129e9bbf0e595bd1e311ddabc91"
 
   url "https://github.com/setchy/atlasify/releases/download/v#{version}/Atlasify-#{version}-universal-mac.zip"
   name "Atlasify"
@@ -13,6 +13,8 @@ cask "atlasify" do
   end
 
   auto_updates true
+
+  depends_on macos: ">= :catalina"
 
   app "Atlasify.app"
 
@@ -32,8 +34,8 @@ cask "atlasify" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.atlasify.sfl*",
     "~/Library/Application Support/atlasify",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.atlasify.sfl*",
     "~/Library/Caches/com.electron.atlasify*",
     "~/Library/Caches/atlasify-updater",
     "~/Library/HTTPStorages/com.electron.atlasify",
