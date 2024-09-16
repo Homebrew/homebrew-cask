@@ -1,4 +1,4 @@
-cask "webrecorder-replaywebpage" do
+cask "replaywebpage" do
   version "2.1.4"
   sha256 "e67db03fc107879c3fe4a028d421a4a48b09d26463ec88fc4a339af3ed196eef"
 
