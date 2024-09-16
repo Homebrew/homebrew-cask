@@ -1,5 +1,5 @@
 cask "bridge" do
-  version "2023.1.0"
+  version "2024.0.2"
   sha256 :no_check
 
   url "https://d2shgxa8i058x8.cloudfront.net/bridge/mac/Bridge.dmg",
