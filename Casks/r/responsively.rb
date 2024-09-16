@@ -11,6 +11,8 @@ cask "responsively" do
   desc "Modified browser that helps in responsive web development"
   homepage "https://responsively.app/"
 
+  auto_updates true
+
   app "ResponsivelyApp.app"
 
   zap trash: [
