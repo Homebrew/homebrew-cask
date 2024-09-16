@@ -14,7 +14,7 @@ cask "maccy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :sonoma"
 
   app "Maccy.app"
 
