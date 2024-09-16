@@ -13,8 +13,12 @@ cask "pieces-cli" do
 
   livecheck do
     url "https://builds.pieces.app/stages/production/pieces_cli/version"
-    regex(/"version":\s*"(\d+\.\d+\.\d+)"/i)
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   binary "pieces"
+
+  # No zap stanza required
 end
