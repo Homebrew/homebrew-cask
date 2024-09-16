@@ -60,8 +60,8 @@ cask "omnifocus" do
     uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
   end
   on_big_sur do
-    version "3.15.7"
-    sha256 "239f3e90e5d6f3b83d652f3eb43f0e2f22ff2a1dcd14661c1a22f28ffd54ec03"
+    version "3.15.8"
+    sha256 "f0fe7bf0fafc35d50a23fe0d614b9403b58de9439704a2e3d93fbdc602aab661"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniFocus-#{version}.dmg"
 
@@ -72,8 +72,8 @@ cask "omnifocus" do
     uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
   end
   on_monterey do
-    version "3.15.7"
-    sha256 "239f3e90e5d6f3b83d652f3eb43f0e2f22ff2a1dcd14661c1a22f28ffd54ec03"
+    version "3.15.8"
+    sha256 "f0fe7bf0fafc35d50a23fe0d614b9403b58de9439704a2e3d93fbdc602aab661"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniFocus-#{version}.dmg"
 
@@ -83,11 +83,23 @@ cask "omnifocus" do
 
     uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
   end
-  on_ventura :or_newer do
+  on_ventura do
     version "4.3.3"
     sha256 "3baf339d5ea9e421d0467c41d64c9ee0de820b1881ceb28acbc6597c4c93a53a"
 
     url "https://downloads.omnigroup.com/software/macOS/13/OmniFocus-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
+  end
+  on_sonoma :or_newer do
+    version "4.4"
+    sha256 "081014ad3327f32763e3ead891f5cb12005fc54afadd1c252157a7c7e156a4e6"
+
+    url "https://downloads.omnigroup.com/software/macOS/14/OmniFocus-#{version}.dmg"
 
     livecheck do
       url "https://www.omnigroup.com/download/latest/omnifocus/"
@@ -106,12 +118,15 @@ cask "omnifocus" do
   app "OmniFocus.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnifocus#{version}.sfl*",
-    "~/Library/Caches/Metadata/com.omnigroup.OmniFocus#{version}",
-    "~/Library/Containers/com.omnigroup.OmniFocus#{version}",
+    "~/Library/Application Scripts/34YW5XSRB7.com.omnigroup.OmniFocus*",
+    "~/Library/Application Scripts/34YW5XSRB7.com.omnigroup.OmniSoftwareUpdate",
+    "~/Library/Application Scripts/com.omnigroup.OmniFocus*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnifocus*.sfl*",
+    "~/Library/Caches/Metadata/com.omnigroup.OmniFocus*",
+    "~/Library/Containers/com.omnigroup.OmniFocus*",
     "~/Library/Group Containers/34YW5XSRB7.com.omnigroup.OmniFocus",
-    "~/Library/Preferences/com.omnigroup.OmniFocus#{version}.LSSharedFileList.plist",
+    "~/Library/Preferences/com.omnigroup.OmniFocus*.LSSharedFileList.plist",
     "~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist",
-    "~/Library/Saved Application State/com.omnigroup.OmniFocus#{version}.savedState",
+    "~/Library/Saved Application State/com.omnigroup.OmniFocus*.savedState",
   ]
 end
