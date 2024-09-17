@@ -1,11 +1,11 @@
 cask "spyder" do
-  arch arm: "_arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  version "5.5.6"
-  sha256 arm:   "e3b87830e32b6c0585c8973acb38db005b57a37088f3f0c50143d6a5b16c7690",
-         intel: "022afd6c59a3f0831950f0546be82238a8372a7d97360a8b5da0c932dabe8f41"
+  version "6.0.0"
+  sha256 arm:   "9d7efa94424e8a799950ed963244288b0cd943a9189fd47451e9a85fd5faa868",
+         intel: "57f36b5b71b2d7aa23d67765716cef57cb8fde2fd8c95e49b8aea35748db7663"
 
-  url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder#{arch}.dmg",
+  url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder-macOS-#{arch}.pkg",
       verified: "github.com/spyder-ide/spyder/"
   name "Spyder"
   desc "Scientific Python IDE"
@@ -18,7 +18,11 @@ cask "spyder" do
 
   depends_on macos: ">= :big_sur"
 
-  app "Spyder.app"
+  pkg "Spyder-macOS-#{arch}.pkg"
+
+  uninstall quit:    "org.spyder-ide.Spyder",
+            pkgutil: "org.spyder-ide.Spyder.pkg*",
+            delete:  "/Applications/Spyder #{version.major}.app"
 
   zap trash: [
     "~/.spyder-py3",
