@@ -8,7 +8,14 @@ cask "openmsx" do
   desc "MSX emulator"
   homepage "https://openmsx.org/"
 
+  livecheck do
+    url :url
+    regex(/^RELEASE_(\d+(?:[._-]\d+)+)$/i)
+  end
+
   app "openMSX.app"
+
+  zap trash: "~/.openMSX"
 
   caveats do
     requires_rosetta
