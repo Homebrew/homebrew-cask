@@ -8,8 +8,8 @@ cask "tuxera-ntfs" do
   homepage "https://ntfsformac.tuxera.com/"
 
   livecheck do
-    url "https://ntfsformac.tuxera.com/support/"
-    regex(/Release\s*?v?(\d+(?:\.\d+)*)/i)
+    url "https://download.tuxera.com/mac/tuxerantfs_latest.dmg"
+    strategy :header_match
   end
 
   auto_updates true
