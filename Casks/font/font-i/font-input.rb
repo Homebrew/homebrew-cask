@@ -1,12 +1,17 @@
 cask "font-input" do
-  version :latest
+  version "1.2"
   sha256 :no_check
 
   # the served font is built dynamically, according to the query string;
   # we pass the default parameters, plus the required license agreement.
-  url "https://input.djr.com/build/?basic=1&fontSelection=whole&a=0&g=0&i=0&l=0&zero=0&asterisk=0&lineHeight=1.2&accept=I+do"
+  url "https://input.djr.com/build/?fontSelection=whole&a=0&g=0&i=0&l=0&zero=0&asterisk=0&braces=0&preset=default&line-height=1.2&accept=I+do"
   name "Input"
   homepage "https://input.djr.com/"
+
+  livecheck do
+    url "https://input.djr.com/changelog/"
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
+  end
 
   font "Input_Fonts/InputMono/InputMono/InputMono-Black.ttf"
   font "Input_Fonts/InputMono/InputMono/InputMono-BlackItalic.ttf"
