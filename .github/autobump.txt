@@ -795,6 +795,7 @@ tagspaces
 tailscale
 tastytrade
 teamviewer
+teamviewermeeting
 telegram
 telegram-a
 telegram-desktop
