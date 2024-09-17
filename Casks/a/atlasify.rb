@@ -4,7 +4,7 @@ cask "atlasify" do
 
   url "https://github.com/setchy/atlasify/releases/download/v#{version}/Atlasify-#{version}-universal-mac.zip"
   name "Atlasify"
-  desc "Atlassian Notifications on your menu bar"
+  desc "Atlassian notifications on your menu bar"
   homepage "https://github.com/setchy/atlasify"
 
   livecheck do
