@@ -10,14 +10,9 @@ cask "openmsx" do
 
   livecheck do
     url :url
-    regex(/^RELEASE[._-]v?(\d+(?:[._-]\d+)+)$/i)
+    regex(/^RELEASE[._-]v?(\d+(?:[._]\d+)+)$/i)
     strategy :git do |tags, regex|
-      tags.filter_map do |tag|
-        match = tag.match(regex)
-        next if match.blank?
-
-        match[1].tr("_", ".")
-      end
+      tags.filter_map { |tag| tag[regex, 1]&.tr("_", ".") }
     end
   end
 
