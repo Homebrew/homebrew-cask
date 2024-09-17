@@ -1,14 +1,36 @@
 cask "wljs-notebook" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.5.5"
-  sha256 arm:   "4515cfa4b17f7b54361ebd45fb7093a7dbaaafa7ccb2b62a09cb42ecfee4f7f9",
-         intel: "051956a302fb0a97fc3584f8c7bafc0679bfed8ab77c8c54ecb181723248aa25"
+  version "2.5.6,2.5.6FIX"
+  sha256 arm:   "0aefd5dfe2f518c3a22e357193f196774e48232a4b7ac8bdeb58c48bcee25d33",
+         intel: "21f2e42bc6fff7b70e751dc6221a09bd7d613bedccb91b04a69e13ecc78e9377"
 
-  url "https://github.com/JerryI/wolfram-js-frontend/releases/download/#{version}/wljs-notebook-#{version}-#{arch}.dmg"
+  url "https://github.com/JerryI/wolfram-js-frontend/releases/download/#{version.csv.second || version.csv.first}/wljs-notebook-#{version.csv.first}-#{arch}.dmg"
   name "WLJS Notebook"
   desc "Javascript frontend for Wolfram Engine"
   homepage "https://github.com/JerryI/wolfram-js-frontend"
+
+  # The current version of wljs-notebook has a tag that differs
+  # from the version present in the filename
+  livecheck do
+    url :url
+    regex(/wljs[._-]notebook[._-]v?(\d+(?:\.\d+)+)/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        tag_version = release["tag_name"]
+        next if tag_version.blank?
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          (match[1] == tag_version) ? tag_version : "#{match[1]},#{tag_version}"
+        end
+      end.flatten
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"
