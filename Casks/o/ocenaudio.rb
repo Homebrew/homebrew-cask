@@ -22,8 +22,8 @@ cask "ocenaudio" do
   homepage "https://www.ocenaudio.com/en"
 
   livecheck do
-    url "https://www.ocenaudio.com/changelog"
-    regex(/download\?version=v?(\d+(?:\.\d+)+)/i)
+    url :url
+    strategy :header_match
   end
 
   depends_on macos: ">= :sierra"
