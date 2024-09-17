@@ -903,6 +903,7 @@ whatsapp
 whatsapp@beta
 whatsapp@legacy
 whisky
+windscribe
 wing-personal
 wins
 wondershare-uniconverter
