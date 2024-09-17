@@ -656,6 +656,7 @@ pycharm
 pycharm-ce
 pyfa
 qbittorrent
+qbittorrent@lt20
 qgis
 qlab
 qownnotes
