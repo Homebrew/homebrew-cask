@@ -8,6 +8,11 @@ cask "mongodb-realm-studio" do
   desc "Tool for the Realm Database and Realm Platform"
   homepage "https://realm.io/products/realm-studio/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Realm Studio.app"
