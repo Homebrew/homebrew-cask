@@ -12,8 +12,10 @@ cask "yaak" do
   homepage "https://yaak.app/"
 
   livecheck do
-    url "https://yaak.app/download"
-    regex(/href=.*?yaak[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+    url "https://update.yaak.app/check/darwin/#{arch}/0"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on macos: ">= :high_sierra"
