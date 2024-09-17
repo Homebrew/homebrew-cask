@@ -1,8 +1,8 @@
 cask "safari-technology-preview" do
   # when adjusting the on_{os} scoping, also update the livecheck regex
   on_sonoma :or_older do
-    version "202,062-72357-20240828-E33E17E6-7C37-4308-BD2C-175ED49A78FF"
-    sha256 "985c01b4b73e7581c51f7fe05b52265859be6d4fb2c126dd779aaf794a5dfcaa"
+    version "203,062-78843-20240910-c1740b64-60e4-4d94-8cb8-edf47fe8e436"
+    sha256 "b2bd13ae412579008ceffdaf99c79e736839f6174dec8420531918a03b612708"
 
     livecheck do
       url :homepage
@@ -18,8 +18,8 @@ cask "safari-technology-preview" do
     end
   end
   on_sequoia :or_newer do
-    version "202,062-72354-20240828-DC0FA32E-47D0-42F1-87EA-590365357565"
-    sha256 "647e773b4d4a5f0ab30c11fcbdb20d1674640f39b52f0eb881acac0fb2bea922"
+    version "203,062-78746-20240910-1edf96ec-407a-4edb-9138-db3e7e8ee105"
+    sha256 "28239665058d3e9328fe38e2ea08ac99dc4ffc26bab671a524d22fc140f11712"
 
     livecheck do
       url :homepage
@@ -35,7 +35,7 @@ cask "safari-technology-preview" do
     end
   end
 
-  url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/Safari+Technology+Preview.dmg"
+  url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
   name "Safari Technology Preview"
   desc "Web browser"
   homepage "https://developer.apple.com/safari/resources/"
