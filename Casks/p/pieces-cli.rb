@@ -20,5 +20,5 @@ cask "pieces-cli" do
 
   binary "pieces"
 
-  # No zap stanza required
+  zap trash: "~/Library/Application Support/cli-agent"
 end
