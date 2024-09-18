@@ -5,7 +5,7 @@ cask "citrix-workspace" do
   url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/Receiver/Mac/CitrixWorkspaceAppUniversal#{version}.pkg"
   name "Citrix Workspace"
   desc "Managed desktop virtualization solution"
-  homepage "https://www.citrix.com/"
+  homepage "https://docs.citrix.com/en-us/citrix-workspace"
 
   livecheck do
     url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/catalog_macos2.xml"
