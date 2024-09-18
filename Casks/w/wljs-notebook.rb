@@ -19,7 +19,7 @@ cask "wljs-notebook" do
       json.map do |release|
         next if release["draft"] || release["prerelease"]
 
-        tag_version = release["tag_name"]
+        tag_version = release["tag_name"][/^v?(\d+(?:\.\d+)+.*)$/i, 1]
         next if tag_version.blank?
 
         release["assets"]&.map do |asset|
