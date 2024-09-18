@@ -1,5 +1,5 @@
 cask "boom" do
-  version "1.7.14,101.7.14005"
+  version "1.7.14"
   sha256 :no_check
 
   url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg",
@@ -9,8 +9,10 @@ cask "boom" do
   homepage "https://www.globaldelight.com/boom2/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://cms.globaldelight.net/api/whats-news?populate=versions&filters[product][productID][$eq]=boom2_mac"
+    strategy :json do |json|
+      json.dig("data", 0, "attributes", "versions")&.map { |version| version["version"] }
+    end
   end
 
   depends_on macos: ">= :mojave"
