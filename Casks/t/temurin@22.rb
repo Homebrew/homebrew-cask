@@ -1,4 +1,4 @@
-cask "temurin" do
+cask "temurin@22" do
   arch arm: "aarch64", intel: "x64"
 
   version "22.0.2,9"
