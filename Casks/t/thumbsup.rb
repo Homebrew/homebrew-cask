@@ -9,7 +9,7 @@ cask "thumbsup" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/thumbsup/v?(\d+(?:\.\d+)+)/ThumbsUp\.app\.zip}i)
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/ThumbsUp\.app\.zip}i)
   end
 
   app "ThumbsUp.app"
