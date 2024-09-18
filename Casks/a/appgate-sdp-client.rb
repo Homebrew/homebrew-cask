@@ -12,13 +12,12 @@ cask "appgate-sdp-client" do
     sha256 "bceed509db9fd8dab10f31686264ff7f073048d78470f85f06bbd6233eb9b111"
 
     livecheck do
-      url "https://www.appgate.com/support/software-defined-perimeter-support/sdp-v6-0"
-      regex(%r{href=.*?/Appgate[._-]SDP[._-]v?(\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
+      skip "Legacy version"
     end
   end
   on_big_sur :or_newer do
-    version "6.3.3"
-    sha256 "d004f90f4dfa8dbde52099d7ad75081996bbc35e20916097207144cb6cc9c4c3"
+    version "6.4.0"
+    sha256 "4e9f3e99c6a7bb84d51fcc8e2fd117159eb15da0897db15d0626c3ea1ec8e517"
 
     livecheck do
       url :homepage
