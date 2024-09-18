@@ -1,6 +1,6 @@
 cask "contour" do
-  version "0.4.3.6442"
-  sha256 "569c74d4410321e5a6987276be7e311017cd842e44b7ec1883a47bcd2ecba985"
+  version "0.5.0.7168"
+  sha256 "903354e43f30404f591fda60df8e2c43e74781078e8f7dcd877a1473c8acff9c"
 
   url "https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-osx.dmg"
   name "contour"
@@ -15,8 +15,4 @@ cask "contour" do
          target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/63/contour"
 
   zap trash: "~/.config/contour"
-
-  caveats do
-    requires_rosetta
-  end
 end
