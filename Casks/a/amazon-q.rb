@@ -21,6 +21,13 @@ cask "amazon-q" do
   app "Amazon Q.app"
 
   zap trash: [
+    "~/.local/bin/bash (qterm)",
+    "~/.local/bin/fish (qterm)",
+    "~/.local/bin/nu (qterm)",
+    "~/.local/bin/q",
+    "~/.local/bin/qterm",
+    "~/.local/bin/zsh (qterm)",
+    "~/Library/Application Support/amazon-q",
     "~/Library/Application Support/codewhisperer",
     "~/Library/Caches/com.amazon.codewhisperer",
     "~/Library/LaunchAgents/com.amazon.codewhisperer.launcher.plist",
