@@ -1,6 +1,6 @@
 cask "zalo" do
-  version "24.9.1"
-  sha256 "818eca970dae44a5d776af0345d07566e80f60bae06fddde6dcbbc45fbbfe2ef"
+  version "24.9.2"
+  sha256 "a54888e948a665d63c9b22d1596ba7c6d1cd2ff985b18470f53c9972556eb4e6"
 
   url "https://res-zaloapp-aka.zdn.vn/mac/ZaloSetup-universal-#{version}.dmg",
       verified: "res-zaloapp-aka.zdn.vn/mac/"
