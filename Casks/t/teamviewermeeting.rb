@@ -15,4 +15,12 @@ cask "teamviewermeeting" do
   depends_on macos: ">= :big_sur"
 
   app "TeamViewerMeeting.app"
+
+  zap trash: [
+    "~/Library/Caches/com.teamviewer.blizz",
+    "~/Library/HTTPStorages/com.teamviewer.blizz",
+    "~/Library/Preferences/com.teamviewer.blizz.plist",
+    "~/Library/Preferences/com.teamviewer.blizz.preferences.Machine.plist",
+    "~/Library/Preferences/com.teamviewer.blizz.preferences.plist",
+  ]
 end
