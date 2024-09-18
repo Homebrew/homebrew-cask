@@ -9,8 +9,14 @@ cask "vk-messenger" do
   homepage "https://vk.com/messenger"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://desktop.userapi.com/mac/master/latest.json"
+    strategy :json do |json|
+      version = json["version"]
+      build = json["build"]
+      next if version.blank? || build.blank?
+
+      "#{version},#{build}"
+    end
   end
 
   app "VK Messenger.app"
