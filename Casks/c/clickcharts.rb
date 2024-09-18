@@ -9,8 +9,8 @@ cask "clickcharts" do
   homepage "https://www.nchsoftware.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.nchsoftware.com/chart/versions.html"
+    regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
 
   app "ClickCharts.app"
