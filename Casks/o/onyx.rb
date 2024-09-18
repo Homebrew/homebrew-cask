@@ -49,7 +49,7 @@ cask "onyx" do
   on_sequoia do
     version "4.7.0"
 
-    url "https://www.titanium-software.fr/download/beta/OnyX.dmg"
+    url "https://www.titanium-software.fr/download/15/OnyX.dmg"
   end
 
   name "OnyX"
@@ -57,8 +57,10 @@ cask "onyx" do
   homepage "https://www.titanium-software.fr/en/onyx.html"
 
   livecheck do
-    url :homepage
-    regex(/>\s*OnyX\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+    url "https://www.titanium-software.fr/download/#{MacOS.version}/OnyX.plist"
+    strategy :xml do |xml|
+      xml.elements["//key[text()='Version']"]&.next_element&.text&.strip
+    end
   end
 
   depends_on macos: [
