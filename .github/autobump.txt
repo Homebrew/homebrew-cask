@@ -919,7 +919,6 @@ xmind
 xnviewmp
 yaak
 yandex-music
-yass
 yealink-meeting
 yinxiangbiji
 youdaonote
