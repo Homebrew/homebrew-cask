@@ -9,7 +9,8 @@ cask "there" do
   homepage "https://there.pm/"
 
   livecheck do
-    strategy :github_releases
+    url :url
+    strategy :github_latest
   end
 
   app "There.app"
