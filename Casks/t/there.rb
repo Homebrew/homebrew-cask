@@ -1,11 +1,11 @@
 cask "there" do
-  version "1.8.10"
-  sha256 "8c5b6e2e8a35d0f1088c15cf8d4f9b5a407feeeeccbc764a08098c354a181939"
+  version "2.0.0"
+  sha256 "5a9dd8eebbb385f6fa09309b559f4d0341231519f39527bea2315140f7301c7f"
 
-  url "https://github.com/therehq/there-desktop/releases/download/v#{version}/There-#{version}-mac.zip",
-      verified: "github.com/therehq/there-desktop/"
+  url "https://github.com/dena-sohrabi/There/releases/download/v#{version}/There.zip",
+      verified: "github.com/dena-sohrabi/There/"
   name "There"
-  desc "Tool to display the local times of people in a team"
+  desc "Tool to display the local times of friends, teammates, cities or any time zone"
   homepage "https://there.pm/"
 
   livecheck do
@@ -15,9 +15,12 @@ cask "there" do
 
   app "There.app"
 
-  uninstall signal: ["TERM", "pm.there.desktop"]
+  uninstall signal: ["TERM", "pm.there.There"]
 
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+    "~/Library/Application Support/There",
+    "~/Library/Caches/pm.there.There",
+    "~/Library/Logs/There",
+    "~/Library/Preferences/pm.there.There.plist",
+  ]
 end
