@@ -9,7 +9,7 @@ cask "xmenu" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/xmenu/v?(\d+(?:\.\d+)+)/XMenu\.app\.zip}i)
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/XMenu\.app\.zip}i)
   end
 
   app "XMenu.app"
