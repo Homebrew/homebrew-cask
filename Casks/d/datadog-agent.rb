@@ -1,6 +1,6 @@
 cask "datadog-agent" do
-  version "7.57.0-1"
-  sha256 "6ea394ab13b747c5d192e8f8145a3141c14465333a0935dfadde75447251ac60"
+  version "7.57.1-1"
+  sha256 "77908803c7c9fb2264b140ededd643c9d75efc916d9c0511ac032fde429c20a2"
 
   url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.dmg",
       verified: "dd-agent.s3.amazonaws.com/"
