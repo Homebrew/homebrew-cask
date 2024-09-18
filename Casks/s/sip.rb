@@ -40,8 +40,8 @@ cask "sip" do
     end
   end
   on_monterey :or_newer do
-    version "3.5.1"
-    sha256 "59f69f6c73dfc3a2984ee4ff869d8086781dbe45c30c73c260f848a2d1561fc0"
+    version "3.6"
+    sha256 "dd13b765993963e2b6088d57c06d597b06ff732aaea42002420a2206a984e854"
 
     # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
     # work with all of the items in the feed (not just the newest one).
