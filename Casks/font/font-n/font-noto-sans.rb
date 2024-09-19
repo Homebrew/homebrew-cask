@@ -12,8 +12,8 @@ cask "font-noto-sans" do
     regex(/^NotoSans-v?(\d+(?:\.\d+)+)$/i)
   end
 
-  font "NotoSans/unhinted/variable/NotoSans-Italic[wdth,wght].ttf"
-  font "NotoSans/unhinted/variable/NotoSans[wdth,wght].ttf"
+  font "NotoSans/unhinted/variable-ttf/NotoSans-Italic[wdth,wght].ttf"
+  font "NotoSans/unhinted/variable-ttf/NotoSans[wdth,wght].ttf"
   font "NotoSans/unhinted/ttf/NotoSans-Black.ttf"
   font "NotoSans/unhinted/ttf/NotoSans-BlackItalic.ttf"
   font "NotoSans/unhinted/ttf/NotoSans-Bold.ttf"
