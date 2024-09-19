@@ -1,6 +1,6 @@
 cask "font-noto-serif" do
-  version "2.013"
-  sha256 "fb4c6c75f10365f63b5c8ad5a1864ebe46dd0c70c40d0461cb0dc1b1b7c13a35"
+  version "2.014"
+  sha256 "6abce0a80df4ef6d5a944d60c81099364481d6a7015b0721d87bc4c16acc1fd3"
 
   url "https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSerif-v#{version}/NotoSerif-v#{version}.zip",
       verified: "github.com/notofonts/"
@@ -12,8 +12,8 @@ cask "font-noto-serif" do
     regex(/^NotoSerif-v?(\d+(?:\.\d+)+)$/i)
   end
 
-  font "NotoSerif/unhinted/variable/NotoSerif-Italic[wdth,wght].ttf"
-  font "NotoSerif/unhinted/variable/NotoSerif[wdth,wght].ttf"
+  font "NotoSerif/unhinted/variable-ttf/NotoSerif-Italic[wdth,wght].ttf"
+  font "NotoSerif/unhinted/variable-ttf/NotoSerif[wdth,wght].ttf"
 
   # No zap stanza required
 end
