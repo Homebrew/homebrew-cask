@@ -112,6 +112,7 @@ busycal
 buttercup
 c0re100-qbittorrent
 cahier
+calhash
 calibre
 camerabag-photo
 camtasia
