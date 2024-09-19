@@ -1,6 +1,6 @@
 cask "zipic" do
-  version "1.6.4"
-  sha256 "9d999655ebac3f96626dcf0818db77676d263e5cde7458f62bfdfecf1b3a470d"
+  version "1.7"
+  sha256 "34f0c6727a0b6d08fda2cda6a30bb8a365e479fd087b74646a6b032fca73efe6"
 
   url "https://zipic.5km.tech/Zipic%20#{version}.dmg"
   name "Zipic"
