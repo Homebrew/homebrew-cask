@@ -1,15 +1,15 @@
 cask "devilutionx" do
-  version "1.5.2"
-  sha256 "a752d7ddb26fd1d6987fbbaf9d71f7d661c650c3054667aaa7ea5fb92b47407d"
+  version "1.5.3"
+  sha256 "311f86355af67162651deabe1b55e0df6cc58fad911dc1e730658ded7255190c"
 
-  url "https://github.com/diasurgical/devilutionX/releases/download/#{version}/devilutionx-macos-x86_64.dmg"
+  url "https://github.com/diasurgical/devilutionX/releases/download/#{version}/devilutionx-macos-universal.dmg"
   name "DevilutionX"
   desc "Diablo build for modern operating systems"
   homepage "https://github.com/diasurgical/devilutionX/"
 
   livecheck do
     url :url
-    regex(%r{/v?(\d+(?:\.\d+)+)/devilutionx[._-]macos[._-]x86_64\.dmg$}i)
+    regex(%r{/v?(\d+(?:\.\d+)+)/devilutionx[._-]macos[._-]universal\.dmg$}i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
@@ -26,15 +26,12 @@ cask "devilutionx" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "devilutionx.app"
+  app "devilutionX.app"
 
   zap trash: [
         "~/Library/Application Support/CrashReporter/devilutionX_*.plist",
         "~/Library/Application Support/diasurgical/devilution",
+        "~/Library/Saved Application State/com.diasurgical.devilutionx.savedState",
       ],
       rmdir: "~/Library/Application Support/diasurgical"
-
-  caveats do
-    requires_rosetta
-  end
 end
