@@ -47,7 +47,7 @@ cask "omnidisksweeper" do
 
     livecheck do
       url "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper"
-      regex(/OmniDiskSweeper[._-](\d+(?:\.\d+)+)\.dmg/i)
+      regex(/OmniDiskSweeper[._-](\d+(?:\.\d+)+b?)\.dmg/i)
     end
   end
 
