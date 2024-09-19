@@ -12,8 +12,8 @@ cask "font-noto-serif" do
     regex(/^NotoSerif-v?(\d+(?:\.\d+)+)$/i)
   end
 
-  font "NotoSerif/unhinted/variable/NotoSerif-Italic[wdth,wght].ttf"
-  font "NotoSerif/unhinted/variable/NotoSerif[wdth,wght].ttf"
+  font "NotoSerif/unhinted/variable-ttf/NotoSerif-Italic[wdth,wght].ttf"
+  font "NotoSerif/unhinted/variable-ttf/NotoSerif[wdth,wght].ttf"
 
   # No zap stanza required
 end
