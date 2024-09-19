@@ -1,6 +1,6 @@
 cask "mac-mouse-fix" do
-  version "3.0.2"
-  sha256 "b839288d5a2bb14042dc40405d1c826c0e9efad424da37ed3e2482d87c21f21d"
+  version "3.0.3"
+  sha256 "6eda564bf2eb92f1cfe01d8965a9f52f1233880122c7ce401c7f25c37505f560"
 
   url "https://github.com/noah-nuebling/mac-mouse-fix/releases/download/#{version}/MacMouseFixApp.zip",
       verified: "github.com/noah-nuebling/mac-mouse-fix/"
@@ -21,6 +21,14 @@ cask "mac-mouse-fix" do
 
   zap trash: [
     "~/Library/Application Support/com.nuebling.mac-mouse-fix",
-    "~/Library/LaunchAgents/com.nuebling.mac-mouse-fix.helper.plist",
+    "~/Library/Caches/com.nuebling.mac-mouse-fix",
+    "~/Library/Caches/com.nuebling.mac-mouse-fix.helper",
+    "~/Library/HTTPStorages/com.nuebling.mac-mouse-fix",
+    "~/Library/HTTPStorages/com.nuebling.mac-mouse-fix.binarycookies",
+    "~/Library/HTTPStorages/com.nuebling.mac-mouse-fix.helper",
+    "~/Library/HTTPStorages/com.nuebling.mac-mouse-fix.helper.binarycookies",
+    "~/Library/Preferences/com.nuebling.mac-mouse-fix.helper.plist",
+    "~/Library/Preferences/com.nuebling.mac-mouse-fix.plist",
+    "~/Library/WebKit/com.nuebling.mac-mouse-fix",
   ]
 end
