@@ -7,8 +7,8 @@ cask "caido" do
 
   url "https://caido.download/releases/v#{version}/caido-desktop-v#{version}-mac-#{arch}.dmg",
       verified: "caido.download/"
-  name "caido"
-  desc "Lightweight web security auditing toolkit"
+  name "Caido"
+  desc "Web security auditing toolkit"
   homepage "https://caido.io/"
 
   livecheck do
