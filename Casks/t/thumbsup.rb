@@ -8,8 +8,10 @@ cask "thumbsup" do
   homepage "https://www.devontechnologies.com/apps/freeware"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/thumbsup/v?(\d+(?:\.\d+)+)/ThumbsUp\.app\.zip}i)
+    url "https://api.devontechnologies.com/1/apps/updates.plist.php?product=ThumbsUp&version=#{version}"
+    strategy :xml do |xml|
+      xml.elements["//key[text()='ThumbsUp']"]&.next_element&.text&.strip
+    end
   end
 
   app "ThumbsUp.app"
@@ -17,6 +19,7 @@ cask "thumbsup" do
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/com.devontechnologies.thumbsup.help*",
     "~/Library/Caches/com.devon-technologies.ThumbsUp",
+    "~/Library/HTTPStorages/com.devon-technologies.ThumbsUp",
     "~/Library/Preferences/com.devon-technologies.ThumbsUp.plist",
     "~/Library/Saved Application State/com.devon-technologies.ThumbsUp.savedState",
   ]

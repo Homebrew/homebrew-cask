@@ -8,8 +8,10 @@ cask "photostickies" do
   homepage "https://www.devontechnologies.com/apps/freeware"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/photostickies/v?(\d+(?:\.\d+)+)/PhotoStickies\.app\.zip}i)
+    url "https://api.devontechnologies.com/1/apps/updates.plist.php?product=PhotoStickies&version=#{version}"
+    strategy :xml do |xml|
+      xml.elements["//key[text()='PhotoStickies']"]&.next_element&.text&.strip
+    end
   end
 
   app "PhotoStickies.app"
