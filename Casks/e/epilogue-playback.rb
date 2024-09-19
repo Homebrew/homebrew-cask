@@ -9,11 +9,8 @@ cask "epilogue-playback" do
   homepage "https://www.epilogue.co/"
 
   livecheck do
-    url "https://www.epilogue.co/v2/api/update"
-    strategy :json do |json|
-      v = json.dig("operator-app", "osx", "version")
-      "#{v["major"]}.#{v["minor"]}.#{v["patch"]}"
-    end
+    url "https://www.epilogue.co/downloads"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/release/mac}i)
   end
 
   depends_on macos: ">= :big_sur"
