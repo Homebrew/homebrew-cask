@@ -40,14 +40,14 @@ cask "omnidisksweeper" do
     end
   end
   on_big_sur :or_newer do
-    version "1.15"
-    sha256 "6006cfc0ab6d1a8fc04564d35608bb6d30a89d8d64d4c2769879f99ccc72007a"
+    version "1.15.1b"
+    sha256 "e079d644e8c0d64a4926d4b426bb0e4932a1b25707901a07c3a227cfdf7574f0"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniDiskSweeper-#{version}.dmg"
 
     livecheck do
       url "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper"
-      regex(/OmniDiskSweeper[._-](\d+(?:\.\d+)+)\.dmg/i)
+      regex(/OmniDiskSweeper[._-](\d+(?:\.\d+)+b?)\.dmg/i)
     end
   end
 
