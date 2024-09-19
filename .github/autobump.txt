@@ -60,6 +60,7 @@ appflowy
 aptakube
 aqua
 arc
+archivewebpage
 arctic
 arq
 atlauncher
