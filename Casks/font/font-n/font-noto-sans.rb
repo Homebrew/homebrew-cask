@@ -1,6 +1,6 @@
 cask "font-noto-sans" do
-  version "2.013"
-  sha256 "9fd595dd701d7ea103a9ba8a9cfdcf0c35c5574ef754fecabe718eadad8bccde"
+  version "2.014"
+  sha256 "1dffbaf31a0a699ee2c57dfb60c1a628010425301dd076cfb485adbe017352c1"
 
   url "https://github.com/notofonts/latin-greek-cyrillic/releases/download/NotoSans-v#{version}/NotoSans-v#{version}.zip",
       verified: "github.com/notofonts/"
