@@ -92,6 +92,7 @@ blender@lts
 blitz-gg
 blockbench
 blockstream-green
+blood-on-the-clocktower-online
 bloop
 boinc
 boltai
