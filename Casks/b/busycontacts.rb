@@ -1,6 +1,6 @@
 cask "busycontacts" do
   version "2024.3.1"
-  sha256 "fba998ab3612ed96bd31f4b9ec50e65f5d7973e9db7478a013ded2b8cc8a0602"
+  sha256 "0c1eee64ffb10e98e45b2a405b6f3800227cfb9da577f25c7b8317f26ec6d59d"
 
   url "https://www.busymac.com/download/bct-#{version}.zip"
   name "BusyContacts"
