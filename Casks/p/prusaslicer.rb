@@ -1,6 +1,6 @@
 cask "prusaslicer" do
-  version "2.8.0,202406270936"
-  sha256 "42963067a3f2d5d302d237c648d84b64c4320fa0ca5613a29d2a505d7b9e5a49"
+  version "2.8.1,202409181403"
+  sha256 "8a5e482a67ed674da66b26c84e93f3268e736b07e3ab7df4616c440074597cee"
 
   url "https://github.com/prusa3d/PrusaSlicer/releases/download/version_#{version.csv.first}/PrusaSlicer-#{version.csv.first}+MacOS-universal-#{version.csv.second}.dmg",
       verified: "github.com/prusa3d/PrusaSlicer/"
@@ -12,7 +12,7 @@ cask "prusaslicer" do
     skip "No reliable way to get version info"
   end
 
-  app "PrusaSlicer.app"
+  app "Original Prusa Drivers/PrusaSlicer.app"
 
   zap trash: [
     "~/Library/Application Support/PrusaSlicer",
