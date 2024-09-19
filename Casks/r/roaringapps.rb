@@ -1,6 +1,6 @@
 cask "roaringapps" do
-  version "1.7.0"
-  sha256 "0f0eed2536d496934937f69aae399ef15b4ef8ae1998457cc9cf44c20a096745"
+  version "1.7.2"
+  sha256 "e818ba7edf1020dc4a5a3a97c49e947ca2336e33e77087015a2d8f46f13fe7b9"
 
   url "https://roaringapps.com/downloads/RoaringApps-#{version}.zip"
   name "RoaringApps"
