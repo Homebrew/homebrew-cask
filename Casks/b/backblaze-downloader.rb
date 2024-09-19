@@ -8,10 +8,8 @@ cask "backblaze-downloader" do
   homepage "https://www.backblaze.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |item|
-      item["com.backblaze.BackblazeDownloader"].short_version
-    end
+    url "https://www.backblaze.com/computer-backup/docs/downloader-app-release-notes-mac"
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Backblaze Downloader.app"
