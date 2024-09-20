@@ -41,10 +41,15 @@ cask "maintenance" do
 
     url "https://www.titanium-software.fr/download/13/Maintenance.dmg"
   end
-  on_sonoma :or_newer do
+  on_sonoma do
     version "3.2.0"
 
     url "https://www.titanium-software.fr/download/14/Maintenance.dmg"
+  end
+  on_sequoia :or_newer do
+    version "3.2.5"
+
+    url "https://www.titanium-software.fr/download/15/Maintenance.dmg"
   end
 
   name "Maintenance"
@@ -66,6 +71,7 @@ cask "maintenance" do
     :monterey,
     :ventura,
     :sonoma,
+    :sequoia,
   ]
 
   app "Maintenance.app"
