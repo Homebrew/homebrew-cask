@@ -1,7 +1,7 @@
 cask "iterm2@nightly" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "3_5_20240919"
-  sha256 "e744868b70231396957795e86f5e565d74508d2dcab1885c677ca7778fa407bb"
+  version "3_5_20240920"
+  sha256 "ab19d4f070efd14e64aa86794cf6303da59dfac90145d4eea376e18909643633"
 
   url "https://iterm2.com/nightly/iTerm2-#{version}-nightly.zip"
   name "iTerm2"
