@@ -1,8 +1,8 @@
 cask "font-libertinus" do
-  version "7.040"
-  sha256 "7fe9f022722d1c1cc67dc2c28a110b3bb55bae3575196160d2422c89333b3850"
+  version "7.050"
+  sha256 "cbb54c4c482376eb17bb6397494489baacff0755d3864f9b5c772e2f3d43d429"
 
-  url "https://github.com/alerque/libertinus/releases/download/v#{version}/Libertinus-#{version}.tar.xz"
+  url "https://github.com/alerque/libertinus/releases/download/v#{version}/Libertinus-#{version}.tar.zst"
   name "Libertinus"
   homepage "https://github.com/alerque/libertinus"
 
