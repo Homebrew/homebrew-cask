@@ -867,6 +867,7 @@ unity
 universal-gcode-platform
 universal-media-server
 updf
+usmart-trade
 utools
 uvtools
 valentina-studio
