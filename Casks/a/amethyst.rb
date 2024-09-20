@@ -10,8 +10,8 @@ cask "amethyst" do
     end
   end
   on_catalina :or_newer do
-    version "0.21.1"
-    sha256 "4c6482aefe9e7976812756f63fa999b855df4d043fec28d38b203554e6070828"
+    version "0.21.2"
+    sha256 "a6a53370d50ff2fde5b3af012335978205e05157b5c1cfdb37906d5ea2875cce"
 
     url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
         verified: "github.com/ianyh/Amethyst/"
