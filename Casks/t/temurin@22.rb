@@ -12,10 +12,11 @@ cask "temurin@22" do
   homepage "https://adoptium.net/"
 
   livecheck do
-    url "https://api.adoptium.net/v3/info/release_versions?release_type=ga&architecture=#{arch}&image_type=jdk&jvm_impl=hotspot&os=mac&page=0&page_size=1&project=jdk&sort_method=DEFAULT&sort_order=DESC&vendor=eclipse"
-    strategy :json do |json|
-      json["versions"].filter_map do |version|
-        match = version["openjdk_version"].match(/^(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)(?:-LTS)?$/i)
+    url "https://api.adoptium.net/v3/assets/feature_releases/#{version.major}/ga?architecture=#{arch}&image_type=jdk&jvm_impl=hotspot&os=mac&page=0&page_size=1&project=jdk&sort_method=DEFAULT&sort_order=DESC&vendor=eclipse"
+    regex(/^jdk-(\d+(?:\.\d+)*?)\+(\d+(?:\.\d+)*)(?:-LTS)?$/i)
+    strategy :json do |json, regex|
+      json.map do |release|
+        match = release["release_name"]&.match(regex)
         next if match.blank?
 
         "#{match[1]},#{match[2]}"
