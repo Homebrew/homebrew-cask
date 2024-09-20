@@ -1,9 +1,9 @@
 cask "restfox" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.25.0"
-  sha256 arm:   "36de06fa59f449d896a20be4cbd0aff7c430d73196fdb0bcc06ef2ddf32b9dbd",
-         intel: "5b2bdf7014cfaa085e31eb0522d21c53e310dd39cb43a2b50d39c90934d357f5"
+  version "0.26.0"
+  sha256 arm:   "ae6bbbdb99ee9207df773af0a4385909fbd9194a2af9efa080f91c638220753c",
+         intel: "ce4553e0dc11ac62134629b81496b10ab430dd7eba7de42aa10737357172918a"
 
   url "https://github.com/flawiddsouza/Restfox/releases/download/v#{version}/Restfox-darwin-#{arch}-#{version}.zip",
       verified: "github.com/flawiddsouza/Restfox/releases/download/"
