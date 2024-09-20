@@ -442,6 +442,7 @@ linear-linear
 lingon-x
 little-snitch
 live-home-3d
+livebook
 lm-studio
 logi-options+
 logitech-g-hub
