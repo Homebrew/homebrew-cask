@@ -508,6 +508,7 @@ mixin
 mixxx
 mixxx@snapshot
 mmhmm
+mmhmm-studio
 mochi
 mochi-diffusion
 monal

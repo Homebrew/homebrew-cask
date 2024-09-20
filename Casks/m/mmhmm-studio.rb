@@ -8,8 +8,8 @@ cask "mmhmm-studio" do
     end
   end
   on_ventura :or_newer do
-    version "2.6.3,1703105000"
-    sha256 "b009b9ca5a936500e0d0c6954e8d59d8929ee1c3d0522c044a8bb9b830e517f5"
+    version "2.6.4,1726550000"
+    sha256 "960737943bfbde565926f8b336b78843ce52a07f948805ad48701eb8e1e68bab"
 
     # This appcast sometimes uses a newer pubDate for an older version, so we
     # have to ignore the default `Sparkle` strategy sorting (which involves the
