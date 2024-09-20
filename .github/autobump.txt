@@ -704,6 +704,7 @@ ringcentral
 rio
 rippling
 rive
+roam
 roblox
 robloxstudio
 roboform
