@@ -1,6 +1,6 @@
 cask "firestorm" do
-  version "7.1.9.74745"
-  sha256 "d888c9c2b9170ece9060fc500b70d3008609f43b72e50709d86c66e22cdf3432"
+  version "7.1.10.75913"
+  sha256 "78e96abec46a6ae1f397a9e524a59ac5f7b71e2d69800e148da58897834e8eee"
 
   url "https://downloads.firestormviewer.org/release/mac/Phoenix-Firestorm-Releasex64-#{version.dots_to_hyphens}.dmg"
   name "Phoenix Firestorm viewer for Second Life"
