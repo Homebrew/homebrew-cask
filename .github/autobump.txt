@@ -864,6 +864,7 @@ uhk-agent
 ultimate
 understand
 unity
+unity-hub
 universal-gcode-platform
 universal-media-server
 updf
