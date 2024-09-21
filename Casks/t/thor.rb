@@ -1,6 +1,6 @@
 cask "thor" do
-  version "1.5.14"
-  sha256 "20061ec1fd2798d1a81c977eee10cbe4fa48e7b31281f047e0da89ee8b0c8b11"
+  version "1.5.16"
+  sha256 "a22d11d609fc87a7e67de1002077b47f6596d73cd82cdce4457bc88a6839b8d2"
 
   url "https://github.com/gbammc/Thor/releases/download/#{version}/Thor_#{version}.zip"
   name "Thor"
@@ -23,8 +23,4 @@ cask "thor" do
     "~/Library/Application Scripts/me.alvinzhu.Thor",
     "~/Library/Containers/me.alvinzhu.Thor",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
