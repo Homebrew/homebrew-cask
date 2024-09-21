@@ -5,7 +5,7 @@ cask "ibabel" do
   url "https://macinchem.org/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/iBabel.zip"
   name "iBabel"
   desc "GUI for the cheminformatics toolkit OpenBabel"
-  homepage "https://www.macinchem.org/ibabel/"
+  homepage "https://macinchem.org/ibabel/"
 
   livecheck do
     url :homepage

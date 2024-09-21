@@ -6,7 +6,7 @@ cask "find-any-file" do
       verified: "s3.amazonaws.com/"
   name "Find Any File"
   desc "File finder"
-  homepage "https://apps.tempel.org/FindAnyFile/"
+  homepage "https://findanyfile.app/"
 
   livecheck do
     url :homepage

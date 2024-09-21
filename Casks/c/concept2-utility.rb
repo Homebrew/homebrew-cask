@@ -20,7 +20,7 @@ cask "concept2-utility" do
   url "https://software.concept2.com/utility/Concept2Utility0#{version.no_dots}.dmg"
   name "Concept2 Utility"
   desc "Utilities for the Concept2 Performance Monitor"
-  homepage "https://www.concept2.com/service/software/concept2-utility"
+  homepage "https://www.concept2.com/support/software/utility"
 
   pkg "Concept2 Utility #{version}.pkg"
 
