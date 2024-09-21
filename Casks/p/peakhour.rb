@@ -5,12 +5,9 @@ cask "peakhour" do
   url "https://updates.peakhourapp.com/releases/PeakHour%20#{version}.zip"
   name "PeakHour"
   desc "Network bandwidth and network quality visualiser"
-  homepage "https://www.peakhourapp.com/"
+  homepage "https://old.peakhourapp.com/"
 
-  livecheck do
-    url "https://updates.peakhourapp.com/PeakHour#{version.major}Appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-09-21", because: :moved_to_mas
 
   auto_updates true
 
