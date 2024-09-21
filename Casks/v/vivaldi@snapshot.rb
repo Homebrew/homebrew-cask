@@ -20,6 +20,9 @@ cask "vivaldi@snapshot" do
   uninstall quit: "com.vivaldi.Vivaldi.snapshot"
 
   zap trash: [
+    "/Library/Logs/DiagnosticReports/Vivaldi Helper (Renderer)_*.diag",
+    "/Library/Logs/DiagnosticReports/Vivaldi Snapshot_*.diag",
+    "~/Library/Application Support/CrashReporter/Vivaldi Snapshot_*.plist",
     "~/Library/Application Support/Vivaldi Snapshot",
     "~/Library/Caches/com.vivaldi.Vivaldi.snapshot",
     "~/Library/Caches/Vivaldi Snapshot",
