@@ -39,7 +39,15 @@ cask "sip" do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
+  on_monterey do
+    version "3.5.1"
+    sha256 "8dd74db34c925c9712c5b383bae43dc9cb2339ed3af2ad0a8677e0a22815f35f"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_ventura :or_newer do
     version "3.6"
     sha256 "dd13b765993963e2b6088d57c06d597b06ff732aaea42002420a2206a984e854"
 
