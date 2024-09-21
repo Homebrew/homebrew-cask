@@ -9,7 +9,7 @@ cask "teamspeak-client@beta" do
   homepage "https://www.teamspeak.com/"
 
   livecheck do
-    url "https://teamspeak.com/en/downloads"
+    url "https://teamspeak.com/en/downloads/"
     regex(%r{href=.*?/(\d+(?:\.\d+)+[^/]*)/teamspeak[._-]client\.dmg}i)
   end
 
