@@ -4,7 +4,7 @@ cask "font-new-computer-modern" do
 
   url "https://download.gnu.org.ua/release/newcm/newcm-#{version}.txz"
   name "New Computer Modern"
-  homepage "https://download.gnu.org.ua/release/newcm/"
+  homepage "https://git.gnu.org.ua/newcm.git/about/"
 
   livecheck do
     url "https://download.gnu.org.ua/release/newcm/"
