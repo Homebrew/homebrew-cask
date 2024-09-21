@@ -1,6 +1,6 @@
 cask "treesheets" do
-  version "10965883650"
-  sha256 "795c7bc0d17e9b381b214fb9dcbce173b21e5e0ba4e35f2beda6d219d0774109"
+  version "10970177113"
+  sha256 "4a60adc7c4a51bebaf988579038b835e8c75321dfab1b82e7333516cda529075"
 
   url "https://github.com/aardappel/treesheets/releases/download/#{version}/mac_treesheets.zip",
       verified: "github.com/aardappel/treesheets/"
