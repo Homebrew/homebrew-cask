@@ -8,7 +8,7 @@ cask "font-new-computer-modern" do
 
   livecheck do
     url "https://download.gnu.org.ua/release/newcm/"
-    regex(/newcm-(\d+(?:\.\d+)+)\.txz/i)
+    regex(/href=.*?newcm[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   font "newcm-6.0.0/otf/NewCM08-Book.otf"
