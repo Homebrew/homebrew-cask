@@ -6,10 +6,10 @@ cask "keycue" do
       user_agent: :fake
   name "KeyCue"
   desc "Finds, learns and remembers keyboard shortcuts"
-  homepage "https://www.ergonis.com/products/keycue/"
+  homepage "https://ergonis.com/keycue"
 
   livecheck do
-    url "https://www.ergonis.com/products/keycue/history.html"
+    url "https://ergonis.com/keycue/download"
     regex(/<h\d.*?KeyCue\sv?(\d+(?:\.\d+)+)/i)
   end
 
