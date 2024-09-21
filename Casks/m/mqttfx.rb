@@ -9,10 +9,10 @@ cask "mqttfx" do
       verified: "download.softblade.net/"
   name "MQTT.fx"
   desc "IoT route testing tool"
-  homepage "https://softblade.de/"
+  homepage "https://www.softblade.de/"
 
   livecheck do
-    url "https://softblade.de/download/"
+    url "https://www.softblade.de/download/"
     regex(/href=.*?mqttfx[._-]v?(\d+(?:\.\d+)+)-macos/i)
   end
 
