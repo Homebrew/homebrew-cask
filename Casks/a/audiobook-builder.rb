@@ -1,6 +1,6 @@
 cask "audiobook-builder" do
-  version "2.2.8"
-  sha256 "756953a222f84c917a73288e9f210e908fdaf3e3f4b689164f40afb547cd8c0b"
+  version "2.2.9"
+  sha256 "31b4f51cbbd1ac329243207dc431eff2d455033c55cd79374af5321697f012b4"
 
   url "https://www.splasm.com/downloads/audiobookbuilder/Audiobook%20Builder%20#{version}.dmg"
   name "Audiobook Builder"
