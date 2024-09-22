@@ -8,8 +8,11 @@ cask "geneious-prime" do
   homepage "https://www.geneious.com/"
 
   livecheck do
-    url "https://assets.geneious.com/documentation/geneious/release_notes.html"
-    regex(/href="#v?(\d+(?:\.\d+)+)">/i)
+    url "https://www.geneious.com/updates"
+    regex(/href=.*?Geneious[._-]Prime[._-]mac64[._-]v?(\d+(?:[._]\d+)+).*?\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex)&.map { |match| match[0].tr("_", ".") }
+    end
   end
 
   app "Geneious Prime.app"
