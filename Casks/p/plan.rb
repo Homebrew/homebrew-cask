@@ -7,10 +7,7 @@ cask "plan" do
   desc "Calendar and project manager"
   homepage "https://getplan.co/login"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-09-22", because: :unmaintained
 
   app "Plan.app"
 
