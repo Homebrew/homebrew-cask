@@ -239,22 +239,23 @@ class AppName
     self.class.new(@string.delete("\v"))
   end
 
-  def remove_interior_versions!
+  def remove_interior_versions
     # done separately from REMOVE_TRAILING_PATS because this
     # requires a substitution with a backreference
-    @string.sub!(/(?<=.)[.\d]+(#{self.class.after_interior_version_pat})\Z/i, '\1')
-    @string.sub!(/(?<=.)[\s.\d-]*\d[\s.\d-]*(#{self.class.after_interior_version_pat})\Z/i, '-\1')
+    app_name = @string
+               .sub(/(?<=.)[.\d]+(#{self.class.after_interior_version_pat})\Z/i, '\1')
+               .sub(/(?<=.)[\s.\d-]*\d[\s.\d-]*(#{self.class.after_interior_version_pat})\Z/i, '-\1')
+    self.class.new(app_name)
   end
 
   def remove_trailing_strings_and_versions
     app_name = insert_vertical_tabs_for_camel_case
-               .insert_vertical_tabs_for_snake_case
-    while self.class.remove_trailing_pat.match(app_name.to_s) &&
-          !self.class.preserve_trailing_pat.match(app_name.to_s)
+               .insert_vertical_tabs_for_snake_case.to_s
+    while self.class.remove_trailing_pat.match(app_name) &&
+          !self.class.preserve_trailing_pat.match(app_name)
       app_name.sub!(self.class.remove_trailing_pat, "")
     end
-    app_name.remove_interior_versions!
-    app_name.clean_up_vertical_tabs
+    self.class.new(app_name).remove_interior_versions.clean_up_vertical_tabs
   end
 
   def simplified
