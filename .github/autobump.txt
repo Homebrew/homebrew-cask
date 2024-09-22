@@ -66,6 +66,7 @@ arq
 atlauncher
 audacity
 audius
+automattic-texts
 avast-secure-browser
 axure-rp
 backblaze
