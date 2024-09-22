@@ -929,6 +929,7 @@ whatsapp
 whatsapp@beta
 whatsapp@legacy
 whisky
+windows-app
 windscribe
 wing-personal
 wins
