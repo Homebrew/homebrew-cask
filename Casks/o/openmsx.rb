@@ -1,8 +1,11 @@
 cask "openmsx" do
-  version "19.1"
-  sha256 "e81a31cd19b1fdf029b08b55879fef6793cb0bbcbdc79e6e4cc8892f64d82d8b"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://github.com/openMSX/openMSX/releases/download/RELEASE_#{version.dots_to_underscores}/openmsx-#{version}-mac-x86_64-bin.dmg",
+  version "20.0"
+  sha256 arm:   "bba6437e047cc9874ce6e7a3d00ff971168fef346646b66ec223aebf2227fad8",
+         intel: "bde52158dbbe6fc1f1c9e9bcecd9ff674ff39614c9624dd4f690ac4f4ff5b173"
+
+  url "https://github.com/openMSX/openMSX/releases/download/RELEASE_#{version.dots_to_underscores}/openmsx-#{version}-mac-#{arch}-bin.dmg",
       verified: "github.com/openMSX/openMSX/"
   name "openMSX"
   desc "MSX emulator"
@@ -19,8 +22,4 @@ cask "openmsx" do
   app "openMSX.app"
 
   zap trash: "~/.openMSX"
-
-  caveats do
-    requires_rosetta
-  end
 end
