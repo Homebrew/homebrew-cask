@@ -1,6 +1,6 @@
 cask "sol" do
-  version "2.1.83"
-  sha256 "df6ba330c3294109bd9b2ebd81605071c05c14f2b2ca0b8ea09435a3e210d04d"
+  version "2.1.84"
+  sha256 "2b1c4f150e1b4bc3c431c9ef1a83d2d47a36670d38f2cac793ba1c645798a1aa"
 
   url "https://raw.githubusercontent.com/ospfranco/sol/main/releases/#{version}.zip",
       verified: "raw.githubusercontent.com/ospfranco/sol/"
