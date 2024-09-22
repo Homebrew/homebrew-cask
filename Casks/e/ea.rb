@@ -9,8 +9,10 @@ cask "ea" do
   homepage "https://www.ea.com/ea-app"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://autopatch.juno.ea.com/autopatch/upgrade/buckets/999"
+    strategy :json do |json|
+      json.dig("recommended", "version")
+    end
   end
 
   auto_updates true
