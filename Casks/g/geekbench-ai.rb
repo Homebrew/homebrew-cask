@@ -7,12 +7,9 @@ cask "geekbench-ai" do
   desc "Cross-platform AI benchmark to evaluate AI workload performance"
   homepage "https://www.geekbench.com/ai/"
 
-  # Upstream's appcast feed is not populated but may be able to be used in the future
-  # url "https://www.primatelabs.com/appcast/geekbenchai.xml"
-  # strategy :sparkle, &:short_version
   livecheck do
-    url "https://www.geekbench.com/ai/download/mac/"
-    regex(/href=.*?GeekbenchAI[._-]v?(\d+(?:\.\d+)+)[._-]Mac\.zip/i)
+    url "https://www.primatelabs.com/appcast/geekbenchai.xml"
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :ventura"
