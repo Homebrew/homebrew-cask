@@ -626,6 +626,7 @@ playdate-simulator
 plex
 plex-htpc
 plex-media-server
+plexamp
 plus42-binary
 plus42-decimal
 polypane
