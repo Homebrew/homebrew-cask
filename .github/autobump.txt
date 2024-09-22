@@ -502,6 +502,7 @@ mindmac
 minecraft-education
 mini-program-studio
 miniforge
+minisim
 mist
 mitmproxy
 mixed-in-key
