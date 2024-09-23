@@ -1,5 +1,6 @@
 cask "ideamaker" do
   arch arm: "-arm64"
+  livecheck_arch = on_arch_conditional arm: "apple-silicon", intel: "intel"
 
   version "5.0.6.8380"
   sha256 arm:   "11d2f2a8af237e047cdd1c28875dc59f5643d41d8314dda27d34185fe6a8eb7a",
@@ -11,8 +12,8 @@ cask "ideamaker" do
   homepage "https://www.raise3d.com/ideamaker/"
 
   livecheck do
-    url "https://www.raise3d.com/download/"
-    regex(%r{href=.*?/install[._-]ideaMaker[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://www.raise3d.com/download-ideamaker-mac-#{livecheck_arch}/"
+    regex(/install[._-]ideaMaker[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
