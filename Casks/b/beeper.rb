@@ -1,9 +1,9 @@
 cask "beeper" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.108.3,2407188w36frwla"
-  sha256 arm:   "51495143c1ebb499266bef8005e41fe8829f65e5baced6afa4da530cbd96d2d9",
-         intel: "c03d4c5a2bec94275c0f1916468f708b94c2f1cd3ed1a31b2869dbabb6a56765"
+  version "3.109.1,240923466rji1i4"
+  sha256 arm:   "d5765331838883b68ca8b1725cc26e69c6c2aabc3111c889af9a6b17c3e050a3",
+         intel: "43ce287609b172ecefaaa6a140f28b088dae8397d15bbfd8bb7396ac6d980643"
 
   url "https://download.todesktop.com/2003241lzgn20jd/Beeper%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/2003241lzgn20jd/"
