@@ -7,6 +7,11 @@ cask "butt" do
   desc "Shoutcast and Icecast streaming client"
   homepage "https://danielnoethen.de/butt/"
 
+  livecheck do
+    url "https://danielnoethen.de/butt/release/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+  end
+
   app "butt.app"
 
   zap trash: "~/.buttrc"
