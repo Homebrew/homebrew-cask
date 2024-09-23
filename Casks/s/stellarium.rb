@@ -11,8 +11,8 @@ cask "stellarium" do
     end
   end
   on_mojave do
-    version "24.2"
-    sha256 "64174eac7608146397ba1d3bbafbcc005e3d8f863590db87c4cdd31abdd7cd01"
+    version "24.3"
+    sha256 "6e4fb74715010f213fa4bf55affa1661b572b4b9e1705aa3f882744293350394"
 
     url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-qt5-x86_64.zip",
         verified: "github.com/Stellarium/stellarium/"
@@ -23,8 +23,8 @@ cask "stellarium" do
     end
   end
   on_catalina do
-    version "24.2"
-    sha256 "64174eac7608146397ba1d3bbafbcc005e3d8f863590db87c4cdd31abdd7cd01"
+    version "24.3"
+    sha256 "6e4fb74715010f213fa4bf55affa1661b572b4b9e1705aa3f882744293350394"
 
     url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-qt5-x86_64.zip",
         verified: "github.com/Stellarium/stellarium/"
@@ -35,8 +35,8 @@ cask "stellarium" do
     end
   end
   on_big_sur :or_newer do
-    version "24.2"
-    sha256 "34bdec53ba5dfb2569a52545ab06306f12843ef483970d548c59cd49e77b5c99"
+    version "24.3"
+    sha256 "52462403d3d5c16613c364b023efbddbb1b036140d60e68f70f67a6c0dc8e519"
 
     url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-qt6-macOS.zip",
         verified: "github.com/Stellarium/stellarium/"
