@@ -1,6 +1,6 @@
 cask "bluefish" do
-  version "2.2.12"
-  sha256 "85fc22336e929ccae9010d80df76dc1426296912f57dc622abbd345a0a24bd47"
+  version "2.2.16"
+  sha256 "63fe6f486d56021112527124b0bfc36677ef1dd1f005b081116fe435270f4ebc"
 
   url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/Bluefish-#{version}.dmg",
       verified: "bennewitz.com/"
