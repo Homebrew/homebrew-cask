@@ -26,7 +26,7 @@ cask "fujifilm-x-raw-studio" do
   app "FUJIFILM X RAW STUDIO.app"
 
   zap trash: [
-    "~/Library/Application Support/com.fujifilm.denji",
+    "~/Library/Application Support/com.fujifilm.denji/X RAW STUDIO",
     "~/Library/Preferences/com.fujifilm.denji.X-RAW-STUDIO.plist",
   ]
 end
