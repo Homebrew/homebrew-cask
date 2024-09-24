@@ -1,9 +1,9 @@
 cask "zui" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.17.0"
-  sha256 arm:   "9b2fee43edef6983a118bea15310cdfe8a4c9f6865ae60f0a30164752bb9d0b8",
-         intel: "5ca17333e94d37af7718057953a7c658ce7ec6ad599611193e45d8f38f7aa0e4"
+  version "1.18.0"
+  sha256 arm:   "d28bd3144781cf1d8b6d2ba654e4c65b826c945004d480f2c0497235dfda4390",
+         intel: "463e57018e87d201dd240e7199dc68d252eda2ab61ccae575efd7957dd7fc364"
 
   url "https://github.com/brimdata/zui/releases/download/v#{version}/Zui-#{version}-#{arch}.dmg",
       verified: "github.com/brimdata/zui/"
