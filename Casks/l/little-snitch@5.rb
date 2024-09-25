@@ -1,24 +1,28 @@
 cask "little-snitch@5" do
-  version "5.7.6"
-  sha256 "f0a9905f0f4222273febf4f1ae1a330770a064b7454583bd48e8152cc4bb30f8"
+  on_sonoma :or_older do
+    version "5.7.6"
+    sha256 "f0a9905f0f4222273febf4f1ae1a330770a064b7454583bd48e8152cc4bb30f8"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sequoia :or_newer do
+    version "5.8"
+    sha256 "0cfd0a5e4b2d5baaee11e190c73fb3d81f00f41a34558d248e0e170b0fa73b39"
+
+    # The plist file that the app checks doesn't list the newest version as of
+    # writing, so we check the download page for older versions for now.
+    livecheck do
+      url "https://www.obdev.at/products/littlesnitch/download-previous-versions.html"
+      regex(/LittleSnitch[._-]v?(#{version.major}(?:\.\d+)+)\.dmg/)
+    end
+  end
 
   url "https://www.obdev.at/downloads/littlesnitch/legacy/LittleSnitch-#{version}.dmg"
   name "Little Snitch"
   desc "Host-based application firewall"
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
-
-  livecheck do
-    url "https://sw-update.obdev.at/update-feeds/littlesnitch#{version.major}.plist"
-    regex(/LittleSnitch[._-]v?(\d+(?:\.\d+)+)\.dmg/)
-    strategy :xml do |xml, regex|
-      xml.get_elements("//key[text()='DownloadURL']").map do |item|
-        match = item.next_element&.text&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
-  end
 
   auto_updates true
   conflicts_with cask: [
