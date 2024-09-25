@@ -32,6 +32,10 @@ cask "keybase" do
   postflight do
     system_command "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
                    args: ["install-auto"]
+    system_command "/usr/bin/xattr",
+                   args: ["-c",
+                          "#{appdir}/Keybase.app/Contents/Resources" \
+                          "/KeybaseInstaller.app/Contents/Resources/kbfuse.bundle"]
   end
 
   uninstall launchctl: "keybase.Helper",
