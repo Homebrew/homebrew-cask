@@ -1,17 +1,18 @@
 cask "vlc@nightly" do
   arch arm: "arm64", intel: "x86_64"
+  livecheck_arch = on_arch_conditional arm: "-arm64", intel: "-intel64"
 
   on_arm do
-    version "20240924-0413,daab68e6"
-    sha256 "4ce9455a08682876d8a9660883d305d74e6edb144e9d830d5b81f8489babd6f2"
+    version "4.0.0,20240925-0413,7df26860"
+    sha256 "62843cf361be0018d4aca1ef5d1edc283fe25464f52b585475cf0ccfcdcfdd31"
 
-    url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{version.csv.first}/vlc-4.0.0-dev-arm64-#{version.csv.second}.dmg"
+    url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{version.csv.second}/vlc-#{version.csv.first}-dev-arm64-#{version.csv.third}.dmg"
   end
   on_intel do
-    version "20240924-0416,daab68e6"
-    sha256 "f617a21edee78c509a8dbb31dbac8cd27705a48188adec88a2e53c2615c1a6e8"
+    version "4.0.0,20240925-0415,7df26860"
+    sha256 "42814cb5289539e08867c6f721ed629e177aa80a05598562385516299dd1a5b7"
 
-    url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{version.csv.first}/vlc-4.0.0-dev-intel64-#{version.csv.second}.dmg"
+    url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{version.csv.second}/vlc-#{version.csv.first}-dev-intel64-#{version.csv.third}.dmg"
   end
 
   name "VLC media player"
@@ -20,11 +21,24 @@ cask "vlc@nightly" do
 
   livecheck do
     url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/"
-    strategy :page_match do |page|
-      date = page[%r{href="(\d+-\d+)/"}, 1]
-      filename_arch = (arch == "x86_64") ? "intel64" : arch
-      version_page = Homebrew::Livecheck::Strategy.page_content("https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{date}/")
-      "#{date},#{version_page[:content].scan(/href=.*?vlc-4\.0\.0-dev-#{filename_arch}-([0-9a-f]+)\.dmg/i).flatten.first}"
+    regex(/href=.*?vlc[._-]v?(\d+(?:\.\d+)+)-dev#{livecheck_arch}-(\h+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      directory = page.scan(%r{href=["']?v?(\d+(?:[.-]\d+)+)/?["' >]}i)
+                      .flatten
+                      .uniq
+                      .max
+      next if directory.blank?
+
+      # Fetch the directory listing page for newest build
+      build_response = Homebrew::Livecheck::Strategy.page_content(
+        "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{directory}/",
+      )
+      next if (build_page = build_response[:content]).blank?
+
+      match = build_page.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{directory},#{match[2]}"
     end
   end
 
