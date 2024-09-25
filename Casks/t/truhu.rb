@@ -1,6 +1,6 @@
 cask "truhu" do
-  version "318"
-  sha256 "491d0288a6be1158ab7078c077d9904054ca378ed288047b54467f2b40b4c848"
+  version "319"
+  sha256 "eef51c5053f87185aa5deb7924c05965e45d2e53f7fca4defc59ad58c651f9ce"
 
   url "https://truhu-mobile-builds.s3.amazonaws.com/TruHu+Desktop+#{version}.dmg",
       verified: "truhu-mobile-builds.s3.amazonaws.com/"
