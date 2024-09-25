@@ -1,6 +1,6 @@
 cask "ente-auth" do
-  version "4.0.0"
-  sha256 "bcb108c252d3d386a20c39a10a08b252cdb3adb865d370ef72de0347d5c958dc"
+  version "4.0.1"
+  sha256 "e9a61e03ed5d4f68d672da7ce662fe03c0953a991373f3d4d49e13248badd844"
 
   url "https://github.com/ente-io/ente/releases/download/auth-v#{version}/ente-auth-v#{version}.dmg",
       verified: "github.com/ente-io/ente/"
