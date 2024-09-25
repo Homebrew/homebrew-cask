@@ -1,6 +1,6 @@
 cask "ammonite" do
-  version "1.27.1"
-  sha256 "ab7e4fc99784d0a63beb7d140d470168e03b452f3ae59493ff0b0c91507d81c3"
+  version "1.28"
+  sha256 "602c1acdd83b57dbb45ee87bcf7da61f177bdb2ddd8a63275bddb5ef69c299c4"
 
   url "https://www.soma-zone.com/download/files/Ammonite-#{version}.tar.xz"
   name "Ammonite"
