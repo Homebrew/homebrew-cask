@@ -41,10 +41,15 @@ cask "deeper" do
 
     url "https://www.titanium-software.fr/download/13/Deeper.dmg"
   end
-  on_sonoma :or_newer do
+  on_sonoma do
     version "3.0.9"
 
     url "https://www.titanium-software.fr/download/14/Deeper.dmg"
+  end
+  on_sequoia :or_newer do
+    version "3.1.0"
+
+    url "https://www.titanium-software.fr/download/15/Deeper.dmg"
   end
 
   name "Deeper"
@@ -66,6 +71,7 @@ cask "deeper" do
     :monterey,
     :ventura,
     :sonoma,
+    :sequoia,
   ]
 
   app "Deeper.app"
