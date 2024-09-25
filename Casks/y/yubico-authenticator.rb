@@ -1,6 +1,6 @@
 cask "yubico-authenticator" do
-  version "7.0.0"
-  sha256 "ea9e07d5f3ada7d75c1555de42b93a6d91ccc4dab0460520a3ddd9ac7be80bf1"
+  version "7.1.0"
+  sha256 "918684e75518dcd7fe008709582eb8040b06e4323b15b4fa979aab2a9946719a"
 
   url "https://github.com/Yubico/yubioath-flutter/releases/download/#{version}/yubico-authenticator-#{version}-mac.dmg",
       verified: "github.com/Yubico/yubioath-flutter/releases/download/"
