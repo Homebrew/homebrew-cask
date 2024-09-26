@@ -68,6 +68,7 @@ audacity
 audius
 automattic-texts
 avast-secure-browser
+aws-vpn-client
 axure-rp
 backblaze
 badlion-client
