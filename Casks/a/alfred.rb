@@ -1,8 +1,8 @@
 cask "alfred" do
-  version "5.5,2257"
-  sha256 "eed7e21b531f3974ccd440f1cc56ba3ce6a2fed2d413864a9c4a4e6f2a637b54"
+  version "5.5.1,2273"
+  sha256 "a9c0ee9b2aa993e178875fd02e4b870fe47bb5459dbba4f8637bec9f22bafbd3"
 
-  url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.dmg"
+  url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.tar.gz"
   name "Alfred"
   desc "Application launcher and productivity software"
   homepage "https://www.alfredapp.com/"
