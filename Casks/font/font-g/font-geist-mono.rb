@@ -12,16 +12,16 @@ cask "font-geist-mono" do
     strategy :github_latest
   end
 
-  font "GeistMono-#{version}/statics-otf/GeistMono-Black.otf"
-  font "GeistMono-#{version}/statics-otf/GeistMono-Bold.otf"
-  font "GeistMono-#{version}/statics-otf/GeistMono-Light.otf"
-  font "GeistMono-#{version}/statics-otf/GeistMono-Medium.otf"
-  font "GeistMono-#{version}/statics-otf/GeistMono-Regular.otf"
-  font "GeistMono-#{version}/statics-otf/GeistMono-SemiBold.otf"
-  font "GeistMono-#{version}/statics-otf/GeistMono-Thin.otf"
-  font "GeistMono-#{version}/statics-otf/GeistMono-UltraBlack.otf"
-  font "GeistMono-#{version}/statics-otf/GeistMono-UltraLight.otf"
-  font "GeistMono-#{version}/variable-ttf/GeistMonoVF.ttf"
+  font "GeistMono/otf/GeistMono-Black.otf"
+  font "GeistMono/otf/GeistMono-Bold.otf"
+  font "GeistMono/otf/GeistMono-Light.otf"
+  font "GeistMono/otf/GeistMono-Medium.otf"
+  font "GeistMono/otf/GeistMono-Regular.otf"
+  font "GeistMono/otf/GeistMono-SemiBold.otf"
+  font "GeistMono/otf/GeistMono-Thin.otf"
+  font "GeistMono/otf/GeistMono-UltraBlack.otf"
+  font "GeistMono/otf/GeistMono-UltraLight.otf"
+  font "GeistMono/variable/GeistMono[wght].ttf"
 
   # No zap stanza required
 end
