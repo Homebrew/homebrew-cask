@@ -116,6 +116,7 @@ cahier
 calhash
 calibre
 camerabag-photo
+camo-studio
 camtasia
 camunda-modeler
 canva
