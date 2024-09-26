@@ -1,6 +1,6 @@
 cask "font-geist" do
-  version "1.3.0"
-  sha256 "6a656e5efc991a0b465bc288b5455eebd7219e0668a936f8705a2e9d3a2a62c9"
+  version "1.4.0"
+  sha256 "1bd906111a8853f0720831d08a363077358afc755acf893c6d4ed29529bef139"
 
   url "https://github.com/vercel/geist-font/releases/download/#{version}/Geist-#{version}.zip",
       verified: "github.com/vercel/geist-font/"
