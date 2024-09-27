@@ -501,7 +501,6 @@ microsoft-onenote
 microsoft-openjdk
 microsoft-outlook
 microsoft-powerpoint
-microsoft-remote-desktop
 microsoft-teams
 microsoft-word
 milanote
