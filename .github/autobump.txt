@@ -71,6 +71,7 @@ avast-secure-browser
 aws-vpn-client
 axure-rp
 backblaze
+backuploupe
 badlion-client
 baidunetdisk
 banana-cake-pop
