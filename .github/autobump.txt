@@ -685,6 +685,7 @@ qt-creator
 quarto
 quickbooks
 quicken
+quicktune
 quip
 racket
 rancher
