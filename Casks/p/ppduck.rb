@@ -1,8 +1,8 @@
 cask "ppduck" do
-  version "3.10.19"
-  sha256 "36b563c048a53dd16a50b37a0702e27733d5da8a486f0d480c8b5c33c7d461f2"
+  version "3.10.20"
+  sha256 "6a433d9ed5e742229deb5ce222815a568041177244eedf591f537111388d1bba"
 
-  url "https://download.ppduck.com/PPDuck#{version.major}_#{version}.dmg"
+  url "https://ppduck.com/static/downloads/PPDuck#{version.major}_#{version}.dmg"
   name "PPDuck"
   desc "Integrates several image compression algorithms"
   homepage "https://ppduck.com/"
