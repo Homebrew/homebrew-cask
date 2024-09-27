@@ -213,6 +213,7 @@ discord@development
 discord@ptb
 diskcatalogmaker
 dockx
+dolphin@dev
 dotnet
 dotnet-sdk
 dotnet-sdk@preview
