@@ -16,11 +16,6 @@ cask "starnet++" do
   end
 
   bin_path = "#{staged_path}/StarNetv#{version.csv.first}CLI_MacOS"
-  bins = [
-    "starnet++",
-    "libtensorflow.2.dylib",
-    "libtensorflow_framework.2.dylib",
-  ]
 
   shimscript = "#{staged_path}/starnet_wrapper.sh"
   binary shimscript, target: "starnet++"
@@ -45,9 +40,6 @@ cask "starnet++" do
 
   postflight do
     set_permissions "#{bin_path}/starnet++", "0755"
-    bins.each do |bin|
-      system_command "xattr", args: ["-c", "#{bin_path}/#{bin}"]
-    end
   end
 
   caveats do
