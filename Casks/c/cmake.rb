@@ -1,6 +1,6 @@
 cask "cmake" do
-  version "3.30.3"
-  sha256 "f5aabecc73d9d373d298ca1f13798f36b4cc96932cc86ea4e3833442508bb99d"
+  version "3.30.4"
+  sha256 "dc0532ee511e8b04664fff73e5c91b0aa584af0a47876b284504fecc6ba4e5a0"
 
   url "https://cmake.org/files/v#{version.major_minor}/cmake-#{version}-macos-universal.dmg"
   name "CMake"
