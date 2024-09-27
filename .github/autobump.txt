@@ -483,6 +483,7 @@ melodics
 memory-cleaner
 mendeley-reference-manager
 messenger
+meta-quest-developer-hub
 metashape
 metasploit
 mi
