@@ -899,6 +899,7 @@ visual-paradigm-ce
 visual-studio-code
 vivaldi
 vivaldi@snapshot
+vlc@nightly
 vnc-viewer
 volanta
 vpn-tracker-365
