@@ -1,13 +1,13 @@
 cask "effect-house" do
-  arch arm: "_M1_101", intel: "_Intel_101"
+  arch arm: "_Applesilicon_101", intel: "_Intel_101"
 
   on_arm do
-    version "4.4.1,1705,08142024"
-    sha256 "0c43a941bb891a95dddb8884e2822bbb0c25ae9c033ae85febc093138c0c4365"
+    version "4.6.1,8521,09182024"
+    sha256 "c6dd57f3d91c537d20a89aef25edc5d52163eacc48417841cf6c7d44d770cc96"
   end
   on_intel do
-    version "4.4.1,1709,08142024"
-    sha256 "7fac73e618cbe46969437ab3390e881f441c780a4dd3846ac8e3d518a45f4eb1"
+    version "4.6.1,8522,09182024"
+    sha256 "3cd2ba0fbdfc9dc7e9e6a935fad49aa546c35999f8f25e25fe6f45b9449a22d3"
   end
 
   url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_Builds_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}#{arch}.dmg",
