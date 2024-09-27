@@ -160,7 +160,7 @@ jobs:
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
         id: fetch
         run: |
-          brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} '${{ matrix.cask.path }}'
+          brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} ${{ matrix.cask.token }}
         timeout-minutes: 30
         if: >
           always() &&
@@ -170,7 +170,7 @@ jobs:
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         id: audit
         run: |
-          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
+          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         timeout-minutes: 30
         if: >
           always() &&
@@ -185,7 +185,7 @@ jobs:
             require 'cask/cask_loader'
             require 'cask/installer'
 
-            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+            cask = Cask::CaskLoader.load('${{ matrix.cask.token }}')
 
             was_installed = cask.installed?
             manual_installer = cask.artifacts.any? do |artifact|
@@ -235,7 +235,7 @@ jobs:
 
       - name: Run brew uninstall --cask --zap ${{ matrix.cask.token }}
         run: |
-          brew uninstall --cask --zap '${{ matrix.cask.path }}'
+          brew uninstall --cask --zap ${{ matrix.cask.token }}
         if: always() && steps.info.outcome == 'success' && fromJSON(steps.info.outputs.was_installed)
         timeout-minutes: 30
 
@@ -251,7 +251,7 @@ jobs:
 
       - name: Run brew install --cask ${{ matrix.cask.token }}
         id: install
-        run: brew install --cask '${{ matrix.cask.path }}'
+        run: brew install --cask ${{ matrix.cask.token }}
         if: >
           always() && steps.info.outcome == 'success' &&
           fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
@@ -259,7 +259,7 @@ jobs:
         timeout-minutes: 30
 
       - name: Run brew uninstall --cask ${{ matrix.cask.token }}
-        run: brew uninstall --cask '${{ matrix.cask.path }}'
+        run: brew uninstall --cask ${{ matrix.cask.token }}
         if: always() && steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
         timeout-minutes: 30
 
@@ -280,12 +280,12 @@ jobs:
             EOS
             after = Check.all
 
-            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+            cask = Cask::CaskLoader.load('${{ matrix.cask.token }}')
             errors = Check.errors(before, after, cask: cask)
 
             errors.each do |error|
               onoe error
-              puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
+              puts GitHub::Actions::Annotation.new(:error, error, file: ${{ matrix.cask.token }})
             end
 
             exit 1 if errors.any?
