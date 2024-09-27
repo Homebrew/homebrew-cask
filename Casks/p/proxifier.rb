@@ -21,8 +21,8 @@ cask "proxifier" do
     end
   end
   on_monterey :or_newer do
-    version "3.11"
-    sha256 "c391178f8e1b7ffe4175ec8e7218f1e488973a6aca0d55292b0f0c42184eab8c"
+    version "3.12"
+    sha256 "d04152eb690d70b5e028bcd89ffcf46f7ddc9b7fd191e8351041f71fc344c9e1"
 
     url "https://www.proxifier.com/download/ProxifierMac#{version.major}.dmg"
 
