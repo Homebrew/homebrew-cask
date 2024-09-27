@@ -434,6 +434,7 @@ krisp
 lagrange
 languagetool
 lark
+lazycat
 leapp
 ledger-live
 lehreroffice
