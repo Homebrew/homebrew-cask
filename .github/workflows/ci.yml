@@ -26,6 +26,7 @@ env:
   HOMEBREW_NO_AUTO_UPDATE: 1
   HOMEBREW_NO_INSTALL_FROM_API: 1
   HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
+  HOMEBREW_TESTS: 1
 
 concurrency:
   group: "${{ github.ref }}"
