@@ -373,6 +373,7 @@ hbuilderx
 heptabase
 heroic
 holavpn
+home-assistant
 hoppscotch
 hstracker
 http-toolkit
