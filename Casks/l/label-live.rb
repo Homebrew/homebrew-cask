@@ -8,8 +8,8 @@ cask "label-live" do
   homepage "https://label.live/"
 
   livecheck do
-    url "https://label.live/thank-you"
-    regex(/"VERSION"\s*:\s*"(\d+(:?\.\d+)+)"/i)
+    url "https://s3.amazonaws.com/labellive.semireg.com/latest-mac.yml"
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :high_sierra"
