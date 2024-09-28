@@ -1,5 +1,5 @@
 cask "smultron" do
-  version "14.1,14100"
+  version "14.1.2,14120"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.peterborgapps.com/downloads/Smultron#{version.major}.zip"
@@ -8,15 +8,13 @@ cask "smultron" do
   homepage "https://www.peterborgapps.com/smultron/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?Smultron[._-]?v?(\d+)\.zip/i)
-    strategy :page_match do |page, regex|
-      major_version = page[regex, 1]
-      next if major_version.blank?
+    url "https://www.peterborgapps.com/updates/smultron#{version.major}.plist"
+    strategy :xml do |xml|
+      version = xml.elements["//key[text()='version']"]&.next_element&.text&.strip
+      build = xml.elements["//key[text()='build']"]&.next_element&.text&.strip
+      next if version.blank? || build.blank?
 
-      cask = CaskLoader.load(__FILE__)
-      download_url = "https://www.peterborgapps.com/downloads/Smultron#{major_version}.zip"
-      Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask:, url: download_url)[:matches].values
+      "#{version},#{build}"
     end
   end
 
