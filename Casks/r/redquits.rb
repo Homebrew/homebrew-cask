@@ -1,5 +1,5 @@
 cask "redquits" do
-  version "2.0,1"
+  version "2.0"
   sha256 :no_check
 
   url "https://redquits.s3.amazonaws.com/RedQuits_v#{version.major}.pkg",
@@ -10,15 +10,7 @@ cask "redquits" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?RedQuits[._-]v?(\d+(?:\.\d+)*)\.pkg/i)
-    strategy :page_match do |page, regex|
-      major_version = page[regex, 1]
-      next if major_version.blank?
-
-      cask = CaskLoader.load(__FILE__)
-      download_url = "http://redquits.s3.amazonaws.com/RedQuits_v#{major_version}.pkg"
-      Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask:, url: download_url)[:matches].values
-    end
+    regex(/RedQuits\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   pkg "RedQuits_v#{version.major}.pkg"
