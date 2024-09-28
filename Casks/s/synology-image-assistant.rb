@@ -18,6 +18,7 @@ cask "synology-image-assistant" do
   pkg "SynologyImageAssistant-#{version}-#{arch}.pkg"
 
   uninstall launchctl: "com.synology.Photos",
+            quit:      "com.synology.Photos",
             pkgutil:   "com.synology.Photos",
             delete:    "/Applications/Synology Image Assistant.app"
 
