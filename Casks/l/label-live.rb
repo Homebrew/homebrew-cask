@@ -19,6 +19,7 @@ cask "label-live" do
   zap trash: [
     "~/Library/Application Support/Label LIVE",
     "~/Library/Logs/Label LIVE",
+    "~/Library/Preferences/com.semireg.LabelLIVE.plist",
     "~/Library/Saved Application State/com.semireg.LabelLIVE.savedState",
   ]
 end
