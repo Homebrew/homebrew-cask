@@ -1,6 +1,6 @@
 cask "uu-booster" do
-  version "2.8.2,251"
-  sha256 "f5669b16f6fed2e27da6f6233de2d947afdb2e472b910db3ca171e37e0dc5a35"
+  version "2.8.3,253"
+  sha256 "4b91007ba26d9622ea31c2f4e80b25b7de5b816bc36a89e7b5e7ced5939e3c2a"
 
   url "https://uu.gdl.netease.com/UU-macOS-#{version.csv.first}(#{version.csv.second}).dmg",
       verified: "uu.gdl.netease.com/"
