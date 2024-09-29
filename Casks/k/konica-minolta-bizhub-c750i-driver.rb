@@ -10,8 +10,8 @@ cask "konica-minolta-bizhub-c750i-driver" do
     pkg "A4/C750i_C650i_C360i_C287i_C286i_C4050i_C4000i_C3320i.pkg"
   end
   on_big_sur :or_newer do
-    version "5.1.9A,e189a7b4f0280caf96f8d5431da6cca9,141503"
-    sha256 "c1f2fe4b42159bf4176e1c8bec05484ac3b11a87726f8aecd2476a16252a5864"
+    version "5.2.12,62192137c2085a856e07c392c615de99,143774"
+    sha256 "d42e6623fdab78278f3466236178702358b83455ebb979c0e7749ac196ccae70"
 
     livecheck do
       url "https://dl.konicaminolta.eu/en?tx_kmdownloadcenter_dlajaxservice[action]=getDocuments&tx_kmdownloadcenter_dlajaxservice[controller]=AjaxService&tx_kmdownloadcenter_dlajaxservice[productId]=103745&tx_kmdownloadcenter_dlajaxservice[system]=KonicaMinolta&cHash=dd72618a38434b6cb3edfc20595d58c5&type=1527583889"
@@ -29,7 +29,7 @@ cask "konica-minolta-bizhub-c750i-driver" do
       end
     end
 
-    pkg "C750i_C287i_C4050i_C451i_C4051i_11.pkg"
+    pkg "C750i_C287i_C4050i_C751i_C4051i.pkg"
   end
 
   url "https://dl.konicaminolta.eu/en?tx_kmdownloadcentersite_downloadproxy[fileId]=#{version.csv.second}&tx_kmdownloadcentersite_downloadproxy[documentId]=#{version.csv.third}&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685"
@@ -43,11 +43,11 @@ cask "konica-minolta-bizhub-c750i-driver" do
     set_ownership "/Library/Printers/KONICAMINOLTA/Preferences"
   end
 
-  uninstall pkgutil: "jp.konicaminolta.print.package.C750i"
+  uninstall pkgutil: "jp.konicaminolta.print.package.C751i"
 
   zap trash: [
-        "/Library/Printers/KONICAMINOLTA/Preferences/jp.konicaminolta.printers.C750i",
-        "/Library/Printers/KONICAMINOLTA/Preferences/jp.konicaminolta.printers.C750i.plist",
+        "/Library/Printers/KONICAMINOLTA/Preferences/jp.konicaminolta.printers.C751i",
+        "/Library/Printers/KONICAMINOLTA/Preferences/jp.konicaminolta.printers.C751i.plist",
       ],
       rmdir: "/Library/Printers/KONICAMINOLTA"
 end
