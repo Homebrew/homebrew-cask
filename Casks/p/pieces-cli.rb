@@ -1,9 +1,9 @@
 cask "pieces-cli" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.6.2"
-  sha256 arm:   "b19ae0529e2bdd49d8243c2c8bae27690ce87c4738e1a709cbbefda440197bc8",
-         intel: "687cd1864669e8b837b19e1df3b326a73222a6cad2adb93dc598e62ebb8a0567"
+  version "1.7.0"
+  sha256 arm:   "fd8f4db441d33518530e67798d068f0fd484633378ef6bebee0495b1b22fe42f",
+         intel: "16f79b91f2f6ce5f63acd5eb995ca30f2f90d9ec347987ffdd9019c24395444b"
 
   url "https://storage.googleapis.com/app-releases-production/pieces_cli/release/pieces-cli-mac_#{arch}-#{version}.zip",
       verified: "storage.googleapis.com/app-releases-production/pieces_cli/release/"
