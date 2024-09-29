@@ -889,6 +889,7 @@ vamiga
 vbrokers
 vcam
 vellum
+vienna-assistant
 vimr
 virtualbox@beta
 virtualbuddy
