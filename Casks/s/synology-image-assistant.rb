@@ -7,7 +7,7 @@ cask "synology-image-assistant" do
 
   url "https://global.download.synology.com/download/Utility/SynologyImageAssistant/#{version}/Mac/SynologyImageAssistant-#{version}-#{arch}.pkg"
   name "Synology Image Assistant"
-  desc "Assistant to generate image previews of formats like HEIC and HEVC formats"
+  desc "Assistant to generate image previews of formats like HEIC and HEVC"
   homepage "https://www.synology.com/"
 
   livecheck do
