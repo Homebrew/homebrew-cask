@@ -11,8 +11,8 @@ cask "synology-image-assistant" do
   homepage "https://www.synology.com/"
 
   livecheck do
-    url "https://www.synology.com/en-us/releaseNote/SynologyImageAssistant"
-    regex(/>\s*Version:\s*(\d+(?:\.\d+)*-\d+)\s*</i)
+    url "https://utyupdate.synology.com/electron/SynologyImageAssistant/latest-mac.yml"
+    strategy :electron_builder
   end
 
   pkg "SynologyImageAssistant-#{version}-#{arch}.pkg"
