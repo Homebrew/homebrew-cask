@@ -1,11 +1,11 @@
 cask "devpod" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.5.20"
-  sha256 arm:   "18f763c7abbcd83bda8c02868a6be6d4fb20e76b9dc7ca88665a278cf31a7c63",
-         intel: "6ade3d4c58ce6c5b34820ebd70d6cb04830f7b328c73c9e1bed8f9b5a88a7420"
+  version "0.5.21"
+  sha256 arm:   "6ad83b765d783ed4b3b39cbe1dd3baa9908a615003120684ef830ce002a87535",
+         intel: "6e214607944371b970b4882767e12dae228d75683a2b76bc755e02ab008f60f6"
 
-  url "https://github.com/loft-sh/devpod/releases/download/v#{version}/DevPod_macos_#{arch}.dmg",
+  url "https://github.com/loft-sh/devpod/releases/download/v#{version}/DevPod_#{version}_#{arch}.dmg",
       verified: "github.com/loft-sh/devpod/"
   name "DevPod"
   desc "UI to create reproducible developer environments based on a devcontainer.json"
