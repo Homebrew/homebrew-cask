@@ -11,8 +11,8 @@ cask "mochi" do
   homepage "https://mochi.cards/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?Mochi[._-]?v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
+    url "https://mochi.cards/releases/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Mochi.app"
