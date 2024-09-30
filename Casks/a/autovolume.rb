@@ -7,6 +7,8 @@ cask "autovolume" do
   desc "Tool that automatically sets the volume to a specified volume"
   homepage "https://github.com/jesse-c/AutoVolume"
 
+  deprecate! date: "2024-09-30", because: :unmaintained
+
   depends_on macos: ">= :sierra"
 
   app "AutoVolume.app"
