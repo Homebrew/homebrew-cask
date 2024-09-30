@@ -819,6 +819,7 @@ tableflip
 tableplus
 tagspaces
 tailscale
+taskade
 tastytrade
 teamviewer
 teamviewermeeting
