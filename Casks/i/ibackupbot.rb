@@ -6,10 +6,7 @@ cask "ibackupbot" do
   name "iBackupBot"
   homepage "https://www.icopybot.com/itunes-backup-manager.htm"
 
-  livecheck do
-    url :homepage
-    regex(/V\s+(\d+(?:\.\d+)+)/i)
-  end
+  deprecate! date: "2024-09-30", because: :unmaintaned
 
   app "iBackupBot.app"
 
