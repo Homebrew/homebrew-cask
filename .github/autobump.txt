@@ -558,6 +558,7 @@ netron
 nextcloud
 nextcloud-vfs
 ngrok
+nitro-pdf-pro
 nordlayer
 nordlocker
 nordpass
