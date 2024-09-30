@@ -7,10 +7,7 @@ cask "rightzoom" do
   desc "Changes the way the full screen button acts"
   homepage "https://blazingtools.com/right_zoom_mac.html"
 
-  livecheck do
-    url :homepage
-    regex(/Right\s*Zoom.*v?(\d+(?:\.\d+)+)\s+for\s+macOS/i)
-  end
+  disable! date: "2024-09-30", because: :no_longer_available
 
   app "RightZoom.app"
 
