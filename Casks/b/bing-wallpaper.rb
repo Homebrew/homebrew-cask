@@ -23,6 +23,7 @@ cask "bing-wallpaper" do
             ],
             quit:      [
               "com.microsoft.autoupdate2",
+              "com.microsoft.MicrosoftBingSearch",
               "com.microsoft.msbwapp",
               "com.microsoft.msbwdefaults",
             ],
