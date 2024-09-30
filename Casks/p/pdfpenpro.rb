@@ -7,10 +7,7 @@ cask "pdfpenpro" do
   desc "PDF editing software"
   homepage "https://smilesoftware.com/PDFpenPro"
 
-  livecheck do
-    url "https://cgi.pdfpen.com/appcast/PDFpenPro#{version.major}.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-09-30", because: "has been replaced by nitro-pdf-pro"
 
   depends_on macos: ">= :sierra"
 
