@@ -2,8 +2,8 @@ cask "frappe-books" do
   arch arm: "-arm64"
 
   on_arm do
-    version "0.22.0"
-    sha256 "06ca67133f11f20b7aaff28f968d028db53b3e8483967493ff09a464c53fbbc6"
+    version "0.23.0"
+    sha256 "2731e2ecfe7bd7c10d8476587f0a953ef0cb9dcfa4dd19bf8d02beb0cfa2b7b7"
   end
   on_intel do
     version "0.21.2"
