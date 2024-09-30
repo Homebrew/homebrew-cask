@@ -1,24 +1,25 @@
 cask "cloudcompare" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "_arm64", intel: "Universal"
 
-  version "2.12.3"
-  sha256 arm:   "1a2fd67461844d06b34f7c4670e3be61bc97d6fc94024a169b5886735cca58fd",
-         intel: "e3cabeff81458d6c20b1dcf105656722089424ca24a3604cb6cb522995d01895"
+  version "2.13.2"
+  sha256 arm:   "490f16a203f2196e64d562750bd815d1bb3e1ba5a206dcebfd32ecc882dfd554",
+         intel: "47a38e81e06c60fcefbef8ee8f52584cf8c156e685051721a333651a567ada12"
 
-  url "https://www.danielgm.net/cc/release/CloudCompare-#{version}-#{arch}.dmg"
+  # MacOS binaries are built by a third-party. They are linked from the official website.
+  url "https://www.simulation.openfields.fr/phocadownload/CloudCompare_#{version}_#{arch}.dmg",
+      verified: "simulation.openfields.fr/phocadownload/"
   name "CloudCompare"
+  desc "3D point cloud and mesh processing software"
   homepage "https://www.danielgm.net/cc/"
 
   livecheck do
-    url "https://www.danielgm.net/cc/release/index.html"
-    regex(/CloudCompare[._-](\d+(?:\.\d+)+)[._-][^.]+\.dmg/i)
-    strategy :page_match do |page, regex|
-      page = page.split(/stable\s+release/i, 2).second
-      page[regex, 1]
-    end
+    url "https://www.simulation.openfields.fr/index.php/cloudcompare-downloads/7-cloudcompare-macos-binaries"
+    regex(/href=.*CloudCompare[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"
 
   app "CloudCompare.app"
+
+  zap trash: "~/Library/Preferences/com.cccorp.CloudCompare.plist"
 end
