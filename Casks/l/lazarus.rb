@@ -1,6 +1,6 @@
 cask "lazarus" do
-  version "3.4"
-  sha256 "c7a27a4dbe0ecfcea5ad5fa40f76c962d219f3f5b5e1ae40e882151599786ae5"
+  version "3.6"
+  sha256 "c32f1fcfb16a969153d660a92e2200f32f5e40ec65d42bbd6af829cd9fe74afb"
 
   url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version}/Lazarus-#{version}-macosx-x86_64.pkg",
       verified: "sourceforge.net/lazarus/"
