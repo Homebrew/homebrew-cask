@@ -948,6 +948,7 @@ xemu
 xiv-on-mac
 xmind
 xnviewmp
+xpra
 yaak
 yandex-music
 yealink-meeting
