@@ -126,6 +126,7 @@ canva
 capacities
 captain
 carbon-copy-cloner
+cardhop
 cardpresso
 chatall
 chatbox
