@@ -963,6 +963,7 @@ zalo
 zappy
 zed
 zed@preview
+zen-browser
 zeplin
 znote
 zoc
