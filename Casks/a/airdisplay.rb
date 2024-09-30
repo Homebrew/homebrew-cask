@@ -7,10 +7,7 @@ cask "airdisplay" do
   desc "Utility for using a tablet as a second monitor"
   homepage "https://avatron.com/applications/air-display/"
 
-  livecheck do
-    url "https://avatron.com/updates/software/airdisplay/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2024-09-30", because: :no_longer_available
 
   depends_on macos: ">= :mojave"
 
