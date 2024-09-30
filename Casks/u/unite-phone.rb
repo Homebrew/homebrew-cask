@@ -1,6 +1,6 @@
 cask "unite-phone" do
-  version "2024.9.1"
-  sha256 "e6d3147241dce465b902f3b2c70885a52c8d0d5d793ab09c8398d8acf7bf5a93"
+  version "2024.9.3"
+  sha256 "a623d3fdf0247941773e72de8f62365797477f99859cab5cdfadadf8b7c05b2b"
 
   url "https://update.unitephone.nl/download/unite_phone-#{version}-universal.dmg",
       user_agent: :fake
@@ -10,7 +10,6 @@ cask "unite-phone" do
 
   livecheck do
     url "https://unitephone.nl/unitephone-app/macos"
-    regex(/unite_phone[._-]v?(\d+(?:\.\d+)*)[._-]universal\.dmg/i)
     strategy :header_match
   end
 
