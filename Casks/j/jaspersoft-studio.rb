@@ -9,7 +9,7 @@ cask "jaspersoft-studio" do
   homepage "https://community.jaspersoft.com/downloads/community-edition/"
 
   # https://community.jaspersoft.com/knowledgebase/faq/faqs-on-community-edition-changes-effective-january-25-2024-r4629/
-  deprecate! date: "2024-02-11", because: :repo_removed
+  disable! date: "2024-02-11", because: :no_longer_available
 
   auto_updates true
 
