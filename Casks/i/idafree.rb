@@ -10,10 +10,7 @@ cask "idafree" do
   desc "Binary code analysis tool"
   homepage "https://hex-rays.com/ida-free/"
 
-  livecheck do
-    url "https://hex-rays.com/products/ida/news/"
-    regex(/>\s*IDA\s*v?(\d+(?:\.\d+)+)[^<]*?</i)
-  end
+  disable! date: "2024-09-30", because: "requires authentication to download"
 
   depends_on macos: ">= :catalina"
 
