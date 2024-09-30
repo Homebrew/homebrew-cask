@@ -350,6 +350,7 @@ gitkraken-cli
 gitkraken-on-premise-serverless
 glyphs
 gns3
+gnucash
 godspeed
 goland
 goodsync
