@@ -1,5 +1,5 @@
 cask "quicktune" do
-  version "7.4"
+  version "7.4.1"
   sha256 :no_check
 
   url "https://marioaguzman.github.io/quicktune/updater/QuickTune.dmg"
