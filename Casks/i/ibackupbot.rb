@@ -6,7 +6,7 @@ cask "ibackupbot" do
   name "iBackupBot"
   homepage "https://www.icopybot.com/itunes-backup-manager.htm"
 
-  deprecate! date: "2024-09-30", because: :unmaintaned
+  deprecate! date: "2024-09-30", because: :unmaintained
 
   app "iBackupBot.app"
 
