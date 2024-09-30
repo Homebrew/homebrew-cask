@@ -436,6 +436,7 @@ languagetool
 lark
 lazycat
 leapp
+lectrote
 ledger-live
 lehreroffice
 lens
