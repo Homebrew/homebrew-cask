@@ -1,8 +1,8 @@
 cask "font-geist" do
   version "1.4.0"
-  sha256 "1bd906111a8853f0720831d08a363077358afc755acf893c6d4ed29529bef139"
+  sha256 "b2c99487cd205def10ce8ab4b2ca045426c5c0e60f9707ec53c31146c63eb7b2"
 
-  url "https://github.com/vercel/geist-font/releases/download/#{version}/Geist-#{version}.zip",
+  url "https://github.com/vercel/geist-font/releases/download/#{version}/Geist-v#{version}.zip",
       verified: "github.com/vercel/geist-font/"
   name "Geist"
   homepage "https://vercel.com/font/sans"
