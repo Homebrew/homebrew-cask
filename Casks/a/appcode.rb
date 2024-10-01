@@ -1,14 +1,13 @@
 cask "appcode" do
   arch arm: "-aarch64"
 
-
   version "2023.1.5,231.9423.10"
   sha256 arm:   "fe1b1e2258cd7ae954bddf96dc661584653b1d36603f39d0a93c6162e7e57702",
          intel: "5145f184d76cf852f4dbb247f8aa36e7c061a9055bd203d73399b8b00b053673"
 
   url "https://download.jetbrains.com/objc/AppCode-#{version.csv.first}#{arch}.dmg"
   name "AppCode"
-  desc "A smart IDE for iOS/macOS development"
+  desc "IDE for Swift, Objective-C, C, and C++ development"
   homepage "https://www.jetbrains.com/objc/"
 
   livecheck do
