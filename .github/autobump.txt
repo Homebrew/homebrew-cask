@@ -374,6 +374,7 @@ hackolade
 hashbackup
 hbuilderx
 heptabase
+herd
 heroic
 holavpn
 home-assistant
