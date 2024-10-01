@@ -185,6 +185,7 @@ dataspell
 datovka
 dbeaver-community
 dbgate
+dcommander
 dcp-o-matic
 dcp-o-matic-batch-converter
 dcp-o-matic-combiner
