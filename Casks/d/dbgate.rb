@@ -13,7 +13,7 @@ cask "dbgate" do
     strategy :github_latest
   end
 
-  app "dbgate.app"
+  app "DbGate.app"
 
   zap trash: [
     "~/dbgate-data",

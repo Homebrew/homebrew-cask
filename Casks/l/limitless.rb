@@ -1,5 +1,5 @@
 cask "limitless" do
-  version "1.513.1"
+  version "1.547.1"
   sha256 :no_check
 
   url "https://download.limitless.ai/Limitless.dmg"

@@ -185,6 +185,7 @@ dataspell
 datovka
 dbeaver-community
 dbgate
+dcommander
 dcp-o-matic
 dcp-o-matic-batch-converter
 dcp-o-matic-combiner
@@ -374,6 +375,7 @@ hackolade
 hashbackup
 hbuilderx
 heptabase
+herd
 heroic
 holavpn
 home-assistant
