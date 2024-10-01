@@ -1,19 +1,27 @@
 cask "appcode" do
   arch arm: "-aarch64"
 
-  version "2022.3.2,223.8617.49"
-  sha256 arm:   "c38bf4e2558d2a41ab856390f713f01a44fade55d21b107cfaef0c8bf6606f86",
-         intel: "b78910b83ccbd6e19b7912fdfb675912e2b003fd1e4c800d656258504994ede1"
+
+  version "2023.1.5,231.9423.10"
+  sha256 arm:   "fe1b1e2258cd7ae954bddf96dc661584653b1d36603f39d0a93c6162e7e57702",
+         intel: "5145f184d76cf852f4dbb247f8aa36e7c061a9055bd203d73399b8b00b053673"
 
   url "https://download.jetbrains.com/objc/AppCode-#{version.csv.first}#{arch}.dmg"
   name "AppCode"
-  desc "IDE for Swift, Objective-C, C, and C++ development"
+  desc "A smart IDE for iOS/macOS development"
   homepage "https://www.jetbrains.com/objc/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release"
+    strategy :json do |json|
+      json["AC"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "AppCode.app"
 
