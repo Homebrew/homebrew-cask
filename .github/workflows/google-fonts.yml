@@ -60,7 +60,9 @@ jobs:
       - name: Check for changes
         id: changes-check
         run: |
-          if [[ -z $(git status --porcelain) ]]; then
+          git add Casks
+          if git diff --cached --stat --exit-code
+          then
             echo "changes=false" >> "$GITHUB_ENV"
           else
             echo "changes=true" >> "$GITHUB_ENV"
@@ -73,14 +75,20 @@ jobs:
       - name: Create commits
         if: env.changes == 'true'
         run: |
-          git add .
-          git commit \
-            --message "${{matrix.mode}} Google Fonts" \
-            --message "This commit was created automatically by the [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) workflow."
+            # Silence lint error to avoid excessive double quote escaping.
+            # shellcheck disable=SC2016
+            git diff --cached --name-only -z |  xargs -0 -I {} sh -c '
+              MESSAGE="$(basename "{}" .rb)"
+              git commit "{}" --message="$MESSAGE: $MODE" --message="$COMMIT_BODY"'
         env:
+          COMMIT_BODY: >
+            This commit was created automatically by the
+            [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) 
+            workflow.
           GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
           GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
           HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
+          MODE: ${{ matrix.mode }}
 
       - name: Push commits
         if: env.changes == 'true'
