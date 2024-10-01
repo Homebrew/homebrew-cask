@@ -71,16 +71,23 @@ jobs:
         run: git checkout -b "auto-${{ matrix.mode }}-google-fonts"
 
       - name: Create commits
-        if: env.changes == 'true'
+        if: env.changes == 'true'         
         run: |
-          git add .
-          git commit \
-            --message "${{matrix.mode}} Google Fonts" \
-            --message "This commit was created automatically by the [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) workflow."
+          for FILENAME in $(git ls-files --modified); do
+          MESSAGE="$(echo "$FILENAME" | sed -e 's|^Casks/font/font-[a-z]/||' \
+            -e 's/\.rb//' \
+            -e 's/$/: /')"
+            git add "$FILENAME"
+            git commit "$FILENAME" --message="${MESSAGE} ${{matrix.mode}}" --message="$COMMIT_BODY"
+          done
         env:
           GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
           GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
           HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
+          COMMIT_BODY: >
+            This commit was created automatically by the
+            [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) 
+            workflow.
 
       - name: Push commits
         if: env.changes == 'true'
