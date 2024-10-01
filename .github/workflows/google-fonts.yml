@@ -60,8 +60,7 @@ jobs:
       - name: Check for changes
         id: changes-check
         run: |
-          if git diff --stat --exit-code
-          then
+          if [[ -z $(git status --porcelain) ]]; then
             echo "changes=false" >> "$GITHUB_ENV"
           else
             echo "changes=true" >> "$GITHUB_ENV"
