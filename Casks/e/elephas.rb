@@ -1,8 +1,8 @@
 cask "elephas" do
-  version "9.36"
-  sha256 "fd9dac458c0a1dff82f94e14903eebc8d092dd2edc88256943649db7401e5ac4"
+  version "10.06"
+  sha256 "51905ed97d51e954bb8cb5b6936ff4144938d4dcdde685cc939da35191ab7f51"
 
-  url "https://assets.elephas.app/Elephas_#{version.no_dots}.dmg"
+  url "https://assets.elephas.app/Elephas_#{version.dots_to_underscores}.dmg"
   name "Elephas"
   desc "Personal AI Writing Assistant"
   homepage "https://elephas.app/"
