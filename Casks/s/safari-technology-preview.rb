@@ -18,8 +18,8 @@ cask "safari-technology-preview" do
     end
   end
   on_sequoia :or_newer do
-    version "203,062-78746-20240910-1edf96ec-407a-4edb-9138-db3e7e8ee105"
-    sha256 "28239665058d3e9328fe38e2ea08ac99dc4ffc26bab671a524d22fc140f11712"
+    version "204,062-87727-20240930-663580F7-4503-4D39-B829-52CB016D06F8"
+    sha256 "b62dfead26864dfab0fd83977e3cbdcaf6c317a1603bf17fea5235d99c24eb67"
 
     livecheck do
       url :homepage
