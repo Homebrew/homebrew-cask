@@ -4,10 +4,10 @@ cask "itau" do
   sha256 :no_check
 
   on_arm do
-    version "2.3.2.17"
+    version "2.3.2.18"
   end
   on_intel do
-    version "2.2.2.17"
+    version "2.2.2.18"
   end
 
   url "https://guardiao.itau.com.br/UpdateServer/aplicativoitau#{arch}.dmg"
