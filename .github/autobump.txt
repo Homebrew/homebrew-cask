@@ -103,7 +103,6 @@ boltai
 box-drive
 brave-browser
 brave-browser@beta
-brave-browser@dev
 brave-browser@nightly
 brewtarget
 bricklink-studio
