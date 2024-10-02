@@ -1,8 +1,8 @@
 cask "lm-studio" do
-  version "0.3.2"
-  sha256 "b4e811ab74d9fd908e9dcd2b7766052fb1ddba95a50593eb7d9993aa24e43362"
+  version "0.3.3"
+  sha256 "3e65de90ceeb1d8f04229ea5d9788b425c72201d343094b90b483315f7b58bbd"
 
-  url "https://releases.lmstudio.ai/darwin/arm64/#{version}/2/LM-Studio-#{version}-arm64.dmg"
+  url "https://releases.lmstudio.ai/darwin/arm64/#{version}/LM-Studio-#{version}-arm64.dmg"
   name "LM Studio"
   desc "Discover, download, and run local LLMs"
   homepage "https://lmstudio.ai/"
