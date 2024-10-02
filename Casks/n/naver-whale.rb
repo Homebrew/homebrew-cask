@@ -18,6 +18,7 @@ cask "naver-whale" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Whale.app"
 
