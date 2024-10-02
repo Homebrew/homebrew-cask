@@ -24,6 +24,7 @@ cask "microsoft-edge" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   pkg "MicrosoftEdge-#{version.csv.first}.pkg",
       choices: [
