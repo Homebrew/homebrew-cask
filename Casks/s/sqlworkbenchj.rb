@@ -14,10 +14,29 @@ cask "sqlworkbenchj" do
 
   app "SQLWorkbenchJ.app"
 
+  postflight do
+    app_path = "#{appdir}/SQLWorkbenchJ.app"
+
+    launcher_script = <<~EOS
+      #!/bin/sh
+      cd "$(dirname "$0")"/../Java
+      exec java -Dapple.laf.useScreenMenuBar=true -Dapple.awt.showGrowBoxtrue=true -Xmx2048m -Xdock:name=SQLWorkbench/J -jar sqlworkbench.jar
+    EOS
+
+    FileUtils.rm("#{app_path}/Contents/MacOS/JavaAppLauncher")
+    File.write("#{app_path}/Contents/MacOS/JavaAppLauncher", launcher_script)
+
+    FileUtils.chmod "+x", "#{app_path}/Contents/MacOS/JavaAppLauncher"
+  end
+
   # No zap stanza required
 
   caveats do
     depends_on_java "11+"
     requires_rosetta
+
+    <<~EOS
+      Due to macOS security restrictions, you may need to right-click on "SQLWorkbenchJ.app" in the /Applications folder and select "Open" to launch the application for the first time.
+    EOS
   end
 end
