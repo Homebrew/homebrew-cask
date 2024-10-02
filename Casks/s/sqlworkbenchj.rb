@@ -12,6 +12,8 @@ cask "sqlworkbenchj" do
     regex(/Workbench[._-]Build(\d+)[._-]Mac\.t/i)
   end
 
+  deprecate! date: "2024-10-02", because: "is no longer built for macOS by the vendor"
+
   app "SQLWorkbenchJ.app"
 
   # No zap stanza required
