@@ -12,10 +12,7 @@ cask "brave-browser@dev" do
   desc "Web browser focusing on privacy"
   homepage "https://brave.com/download-dev/"
 
-  livecheck do
-    url "https://updates.bravesoftware.com/sparkle/Brave-Browser/#{folder}/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2023-12-04", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :catalina"
