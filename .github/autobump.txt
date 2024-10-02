@@ -639,6 +639,7 @@ pieces
 pieces-os
 pile
 pitch
+pixel-shift-combiner
 plasticscm-cloud-edition
 playdate-simulator
 plex
