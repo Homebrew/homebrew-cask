@@ -1,7 +1,7 @@
 cask "webex" do
   arch arm: "Desktop-MACOS-Apple-Silicon", intel: "TeamsDesktop-MACOS"
 
-  version "44.9.1.30809"
+  version "44.10.0.30906"
   sha256 :no_check
 
   url "https://binaries.webex.com/Webex#{arch}-Gold/Webex.dmg"
