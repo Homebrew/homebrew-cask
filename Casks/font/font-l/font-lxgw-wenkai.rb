@@ -7,11 +7,11 @@ cask "font-lxgw-wenkai" do
   name "霞鹜文楷"
   homepage "https://github.com/lxgw/LxgwWenKai"
 
-  font "lxgw-wenkai-v#{version}/LXGWWenKai-Bold.ttf"
   font "lxgw-wenkai-v#{version}/LXGWWenKai-Light.ttf"
+  font "lxgw-wenkai-v#{version}/LXGWWenKai-Medium.ttf"
   font "lxgw-wenkai-v#{version}/LXGWWenKai-Regular.ttf"
-  font "lxgw-wenkai-v#{version}/LXGWWenKaiMono-Bold.ttf"
   font "lxgw-wenkai-v#{version}/LXGWWenKaiMono-Light.ttf"
+  font "lxgw-wenkai-v#{version}/LXGWWenKaiMono-Medium.ttf"
   font "lxgw-wenkai-v#{version}/LXGWWenKaiMono-Regular.ttf"
 
   # No zap stanza required
