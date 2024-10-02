@@ -4,7 +4,7 @@ cask "keyguard" do
 
   url "https://github.com/AChep/keyguard-app/releases/download/#{version.csv.first}/Keyguard-#{version.csv.second}.dmg"
   name "Keyguard"
-  desc "Is an alternative client for the Bitwarden platform"
+  desc "Client for the Bitwarden platform"
   homepage "https://github.com/AChep/keyguard-app"
 
   livecheck do
