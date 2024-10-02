@@ -1,8 +1,8 @@
 cask "keyguard" do
-  version "r20241002,1.6.0"
+  version "1.6.0,20241002"
   sha256 "3631112e36eb33d5b9c7d2019bd418650c777d98b1fe2af1f9797e47364bf0ef"
 
-  url "https://github.com/AChep/keyguard-app/releases/download/#{version.csv.first}/Keyguard-#{version.csv.second}.dmg"
+  url "https://github.com/AChep/keyguard-app/releases/download/r#{version.csv.second}/Keyguard-#{version.csv.first}.dmg"
   name "Keyguard"
   desc "Client for the Bitwarden platform"
   homepage "https://github.com/AChep/keyguard-app"
