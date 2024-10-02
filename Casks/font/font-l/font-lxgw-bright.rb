@@ -7,11 +7,11 @@ cask "font-lxgw-bright" do
   homepage "https://github.com/lxgw/LxgwBright"
 
   font "LXGWBright/LXGWBright-Italic.ttf"
+  font "LXGWBright/LXGWBright-Light.ttf"
+  font "LXGWBright/LXGWBright-LightItalic.ttf"
   font "LXGWBright/LXGWBright-Medium.ttf"
   font "LXGWBright/LXGWBright-MediumItalic.ttf"
   font "LXGWBright/LXGWBright-Regular.ttf"
-  font "LXGWBright/LXGWBright-SemiLight.ttf"
-  font "LXGWBright/LXGWBright-SemiLightItalic.ttf"
 
   # No zap stanza required
 end
