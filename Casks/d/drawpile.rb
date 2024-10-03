@@ -38,6 +38,8 @@ cask "drawpile" do
   desc "Collaborative drawing app"
   homepage "https://drawpile.net/"
 
+  conflicts_with cask: "drawpile@beta"
+
   app "Drawpile.app"
 
   zap trash: [
