@@ -1,6 +1,6 @@
 cask "cirrus" do
-  version "1.14,2024.02"
-  sha256 "9a0169344c6c37ed7907eb1d8f32c4e1f3b02907fd33b5e991bb8d2ebba906ee"
+  version "1.15,2024.09"
+  sha256 "0c62650f938de2fd626f692d0746291ac3876b1a4485546991fb4351efb0c860"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/cirrus#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
