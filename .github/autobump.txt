@@ -372,6 +372,7 @@ gstreamer-runtime
 gyazo
 hackolade
 hashbackup
+hazel
 hbuilderx
 heptabase
 herd
