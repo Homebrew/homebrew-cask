@@ -11,6 +11,7 @@ cask "stolendata-mpv" do
         regex(/mpv-arm64-(\d+(?:\.\d+)+)\.t/i)
       end
     end
+    depends_on macos: ">= :sonoma"
   end
   on_intel do
     on_catalina :or_older do
@@ -39,7 +40,6 @@ cask "stolendata-mpv" do
   homepage "https://mpv.io/"
 
   conflicts_with formula: "mpv"
-  depends_on macos: ">= :mojave"
 
   app "mpv.app"
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
