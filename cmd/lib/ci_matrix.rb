@@ -13,7 +13,8 @@ module CiMatrix
     { symbol: :ventura,  name: "macos-13", arch: :intel } => 1.0,
   }.freeze
   ARM_RUNNERS = {
-    { symbol: :sonoma,   name: "macos-14", arch: :arm   } => 1.0,
+    { symbol: :sonoma,   name: "macos-14", arch: :arm   } => 0.0,
+    { symbol: :sequoia,   name: "macos-15", arch: :arm }  => 1.0,
   }.freeze
   RUNNERS = INTEL_RUNNERS.merge(ARM_RUNNERS).freeze
 
