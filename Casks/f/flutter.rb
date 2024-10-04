@@ -20,14 +20,7 @@ cask "flutter" do
 
   binary "flutter/bin/dart"
   binary "flutter/bin/flutter"
-
-  postflight do
-    FileUtils.ln_sf("#{staged_path}/flutter", "#{HOMEBREW_PREFIX}/share/flutter")
-  end
-
-  uninstall_postflight do
-    FileUtils.rm("#{HOMEBREW_PREFIX}/share/flutter")
-  end
+  binary "flutter", target: "#{HOMEBREW_PREFIX}/share/flutter"
 
   zap trash: "~/.flutter"
 end
