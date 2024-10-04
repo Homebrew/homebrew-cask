@@ -1,6 +1,6 @@
 cask "keyguard" do
-  version "1.6.0,20241002"
-  sha256 "3631112e36eb33d5b9c7d2019bd418650c777d98b1fe2af1f9797e47364bf0ef"
+  version "1.6.1,20241004"
+  sha256 "0f5cfe020ee5a99847ca91bf8adb1936e0a3200488c29debb101e1aebafdbc8b"
 
   url "https://github.com/AChep/keyguard-app/releases/download/r#{version.csv.second}/Keyguard-#{version.csv.first}.dmg"
   name "Keyguard"
