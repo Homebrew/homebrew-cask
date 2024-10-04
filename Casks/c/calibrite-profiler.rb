@@ -8,9 +8,13 @@ cask "calibrite-profiler" do
   desc "Display calibration software for Calibrite, ColorChecker and X-Rite devices"
   homepage "https://calibrite.com/calibrite-profiler/"
 
+  # Upstream sometimes marks a release as "pre-release" on GitHub but the
+  # first-party download page links to the release as the latest stable
+  # version. This checks the download page, which links to the latest dmg file
+  # on GitHub without having to worry about latest/pre-release.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://calibrite.com/us/software-downloads/"
+    regex(/href=.*?calibrite-PROFILER[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
