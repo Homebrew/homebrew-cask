@@ -10,7 +10,7 @@ cask "android-ndk" do
 
   livecheck do
     url "https://developer.android.com/ndk/downloads"
-    regex(/Latest\b(?!\s+Beta).*?r(\d+[a-z]?)/i)
+    regex(/Latest\b(?!\s+Beta|\s+Pre-Release).*?r(\d+[a-z]?)/i)
   end
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
