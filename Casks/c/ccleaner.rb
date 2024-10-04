@@ -12,6 +12,8 @@ cask "ccleaner" do
     regex(/CCleaner\s*for\s*Mac\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
+
   pkg "Install CCleaner.pkg"
 
   uninstall launchctl: [
