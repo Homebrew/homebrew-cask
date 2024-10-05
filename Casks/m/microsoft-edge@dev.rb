@@ -38,15 +38,26 @@ cask "microsoft-edge@dev" do
   uninstall launchctl: [
               "com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system",
               "com.microsoft.EdgeUpdater.update.system",
-              "com.microsoft.EdgeUpdater.wake.109.0.1518.89.system",
               "com.microsoft.EdgeUpdater.wake.system",
             ],
             pkgutil:   "com.microsoft.edgemac.Dev"
 
-  zap trash: [
-    "~/Library/Application Support/Microsoft Edge Dev",
-    "~/Library/Caches/Microsoft Edge Dev",
-    "~/Library/Preferences/com.microsoft.edgemac.Dev.plist",
-    "~/Library/Saved Application State/com.microsoft.edgemac.Dev.savedState",
-  ]
+  zap delete: "/Library/Application Support/Microsoft/EdgeUpdater",
+      trash:  [
+        "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension.Dev",
+        "~/Library/Application Support/Microsoft Edge Dev",
+        "~/Library/Caches/com.microsoft.edgemac.Dev",
+        "~/Library/Caches/Microsoft Edge Dev",
+        "~/Library/Containers/com.microsoft.edgemac.wdgExtension.Dev",
+        "~/Library/HTTPStorages/com.microsoft.edgemac.Dev",
+        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.*.plist",
+        "~/Library/Microsoft/MicrosoftSoftwareUpdate/Actives/com.microsoft.edgemac.Dev",
+        "~/Library/Preferences/com.microsoft.edgemac.Dev.plist",
+        "~/Library/Saved Application State/com.microsoft.edgemac.Dev.savedState",
+        "~/Library/WebKit/com.microsoft.edgemac.Dev",
+      ],
+      rmdir:  [
+        "/Library/Application Support/Microsoft",
+        "~/Library/Microsoft",
+      ]
 end
