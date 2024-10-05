@@ -8,16 +8,7 @@ cask "batteryboi" do
   desc "Battery indicator for the menu bar"
   homepage "https://batteryboi.ovatar.io/"
 
-  livecheck do
-    url :url
-    regex(/^(?:Version[._-]?)?v?(\d+(?:\.\d+)+)(?:#(\d+))?$/i)
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
-    end
-  end
+  deprecate! date: "2024-10-04", because: :unmaintained
 
   depends_on macos: ">= :big_sur"
 
