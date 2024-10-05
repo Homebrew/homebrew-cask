@@ -23,11 +23,15 @@ cask "brave-browser" do
   app "Brave Browser.app"
 
   zap trash: [
-    "~/Library/Application Support/BraveSoftware",
-    "~/Library/Caches/BraveSoftware",
-    "~/Library/Caches/com.brave.Browser",
-    "~/Library/HTTPStorages/com.brave.Browser",
-    "~/Library/Preferences/com.brave.Browser.plist",
-    "~/Library/Saved Application State/com.brave.Browser.savedState",
-  ]
+        "~/Library/Application Support/BraveSoftware/Brave-Browser",
+        "~/Library/Caches/BraveSoftware/Brave-Browser",
+        "~/Library/Caches/com.brave.Browser",
+        "~/Library/HTTPStorages/com.brave.Browser",
+        "~/Library/Preferences/com.brave.Browser.plist",
+        "~/Library/Saved Application State/com.brave.Browser.savedState",
+      ],
+      rmdir: [
+        "~/Library/Application Support/BraveSoftware",
+        "~/Library/Caches/BraveSoftware",
+      ]
 end
