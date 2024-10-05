@@ -7,7 +7,7 @@ cask "font-rounded-mplus" do
       branch:    "main",
       only_path: "ofl/roundedmplus1c"
   name "Rounded Mplus"
-  homepage ""
+  homepage "http://jikasei.me/font/rounded-mpl"
 
   font "RoundedMplus1c-Black.ttf"
   font "RoundedMplus1c-Bold.ttf"
