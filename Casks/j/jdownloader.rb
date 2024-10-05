@@ -9,18 +9,18 @@ cask "jdownloader" do
   desc "Download manager"
   homepage "https://jdownloader.org/"
 
-  preflight do
-    system_command "#{staged_path}/JDownloader 2 Installer.app/Contents/MacOS/JavaApplicationStub",
-                   args:         [
-                     "-dir", appdir.to_s,
-                     "-q",
-                     "-Dinstall4j.suppressStdout=true",
-                     "-Dinstall4j.debug=false",
-                     "-VcreateDesktopLinkAction$Boolean=false",
-                     "-VaddToDockAction$Boolean=false"
-                   ],
-                   print_stderr: false
-  end
+  installer script: {
+    executable:   "JDownloader 2 Installer.app/Contents/MacOS/JavaApplicationStub",
+    args:         [
+      "-dir", appdir.to_s,
+      "-q",
+      "-Dinstall4j.suppressStdout=true",
+      "-Dinstall4j.debug=false",
+      "-VcreateDesktopLinkAction$Boolean=false",
+      "-VaddToDockAction$Boolean=false"
+    ],
+    print_stderr: false,
+  }
 
   uninstall delete: [
     "#{appdir}/JDownloader 2",
