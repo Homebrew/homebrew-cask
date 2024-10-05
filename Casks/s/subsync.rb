@@ -8,10 +8,7 @@ cask "subsync" do
   desc "Subtitle speech synchroniser"
   homepage "https://subsync.online/"
 
-  livecheck do
-    url "https://subsync.online/en/download.html"
-    regex(%r{href=.*?/subsync[._-]v?(\d+(?:\.\d+)+)-mac-x86_64\.dmg}i)
-  end
+  deprecate! date: "2024-10-04", because: :unmaintained
 
   app "subsync.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
