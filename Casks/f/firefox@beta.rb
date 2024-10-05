@@ -99,7 +99,7 @@ cask "firefox@beta" do
   livecheck do
     url "https://product-details.mozilla.org/1.0/firefox_versions.json"
     strategy :json do |json|
-      json["FIREFOX_DEVEDITION"]
+      json["LATEST_FIREFOX_RELEASED_DEVEL_VERSION"]
     end
   end
 
