@@ -273,6 +273,7 @@ firealpaca
 firefly
 firefly-shimmer
 firefox
+firefox@beta
 firefox@developer-edition
 firefox@esr
 fixkey
