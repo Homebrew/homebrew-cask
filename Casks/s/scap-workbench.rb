@@ -8,6 +8,8 @@ cask "scap-workbench" do
   desc "SCAP Scanner And Tailoring Graphical User Interface"
   homepage "https://www.open-scap.org/tools/scap-workbench/"
 
+  deprecate! date: "2024-10-04", because: :unmaintained
+
   depends_on macos: ">= :sierra"
 
   app "scap-workbench.app"
