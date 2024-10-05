@@ -24,13 +24,13 @@ cask "screen-studio" do
   app "Screen Studio.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.timpler.screenstudio.sfl*",
-    "~/Library/Application Support/Screen Studio",
-    "~/Library/Caches/com.timpler.screenstudio",
-    "~/Library/Caches/com.timpler.screenstudio.ShipIt",
-    "~/Library/HTTPStorages/com.timpler.screenstudio",
-    "~/Library/Preferences/com.timpler.screenstudio.plist",
-    "~/Library/Saved Application State/com.timpler.screenstudio.savedState",
-    "~/Screen Studio Projects",
-  ]
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.timpler.screenstudio.sfl*",
+        "~/Library/Application Support/Screen Studio",
+        "~/Library/Caches/com.timpler.screenstudio",
+        "~/Library/Caches/com.timpler.screenstudio.ShipIt",
+        "~/Library/HTTPStorages/com.timpler.screenstudio",
+        "~/Library/Preferences/com.timpler.screenstudio.plist",
+        "~/Library/Saved Application State/com.timpler.screenstudio.savedState",
+      ],
+      rmdir: "~/Screen Studio Projects"
 end
