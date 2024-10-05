@@ -15,19 +15,19 @@ cask "biglybt" do
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
-  preflight do
-    system_command "#{staged_path}/BiglyBT Installer.app/Contents/MacOS/JavaApplicationStub",
-                   args:         [
-                     "-dir", "#{appdir}/BiglyBT",
-                     "-q",
-                     "-Dinstall4j.suppressStdout=true",
-                     "-Dinstall4j.debug=false",
-                     "-VcreateDesktopLinkAction$Boolean=false",
-                     "-VaddToDockAction$Boolean=false"
-                   ],
-                   print_stderr: false,
-                   sudo:         true
-  end
+  installer script: {
+    executable:   "BiglyBT Installer.app/Contents/MacOS/JavaApplicationStub",
+    args:         [
+      "-dir", "#{appdir}/BiglyBT",
+      "-q",
+      "-Dinstall4j.suppressStdout=true",
+      "-Dinstall4j.debug=false",
+      "-VcreateDesktopLinkAction$Boolean=false",
+      "-VaddToDockAction$Boolean=false"
+    ],
+    print_stderr: false,
+    sudo:         true,
+  }
 
   uninstall delete: "#{appdir}/BiglyBT"
 
