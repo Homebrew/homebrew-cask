@@ -23,8 +23,15 @@ cask "brave-browser@beta" do
   app "Brave Browser Beta.app"
 
   zap trash: [
-    "~/Library/Application Support/brave",
-    "~/Library/Preferences/com.electron.brave.plist",
-    "~/Library/Saved Application State/com.electron.brave.savedState",
-  ]
+        "~/Library/Application Support/BraveSoftware/Brave-Browser-Beta",
+        "~/Library/Caches/BraveSoftware/Brave-Browser-Beta",
+        "~/Library/Caches/com.brave.Browser.beta",
+        "~/Library/HTTPStorages/com.brave.Browser.beta",
+        "~/Library/Preferences/com.brave.Browser.beta.plist",
+        "~/Library/Saved Application State/com.brave.Browser.beta.savedState",
+      ],
+      rmdir: [
+        "~/Library/Application Support/BraveSoftware",
+        "~/Library/Caches/BraveSoftware",
+      ]
 end
