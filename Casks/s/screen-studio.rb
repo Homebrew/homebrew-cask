@@ -31,6 +31,5 @@ cask "screen-studio" do
     "~/Library/HTTPStorages/com.timpler.screenstudio",
     "~/Library/Preferences/com.timpler.screenstudio.plist",
     "~/Library/Saved Application State/com.timpler.screenstudio.savedState",
-    "~/Screen Studio Projects",
   ]
 end
