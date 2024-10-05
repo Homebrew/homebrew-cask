@@ -23,8 +23,15 @@ cask "brave-browser@nightly" do
   app "Brave Browser Nightly.app"
 
   zap trash: [
-    "~/Library/Application Support/brave",
-    "~/Library/Preferences/com.electron.brave.plist",
-    "~/Library/Saved Application State/com.electron.brave.savedState",
-  ]
+        "~/Library/Application Support/BraveSoftware/Brave-Browser-Nightly",
+        "~/Library/Caches/BraveSoftware/Brave-Browser-Nightly",
+        "~/Library/Caches/com.brave.Browser.nightly",
+        "~/Library/HTTPStorages/com.brave.Browser.nightly",
+        "~/Library/Preferences/com.brave.Browser.nightly.plist",
+        "~/Library/Saved Application State/com.brave.Browser.nightly.savedState",
+      ],
+      rmdir: [
+        "~/Library/Application Support/BraveSoftware",
+        "~/Library/Caches/BraveSoftware",
+      ]
 end
