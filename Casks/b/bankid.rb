@@ -9,7 +9,7 @@ cask "bankid" do
 
   livecheck do
     url "https://install.bankid.com/api/file-download/Mac"
-    strategy :extract_plist
+    strategy :header_match
   end
 
   pkg "BankID_installation_#{version.dots_to_underscores}.pkg"
