@@ -1,6 +1,6 @@
 cask "calibrite-profiler" do
-  version "1.3.2"
-  sha256 "ac3ef76116de2efec11fbe67c68b1ba0ba225fa3108831788df5985d3a6dca50"
+  version "1.3.3"
+  sha256 "beab575669a526520a20a64f47f510e01471d0631246cfea77ef727d91cea083"
 
   url "https://github.com/LUMESCA/calibrite-profiler-releases/releases/download/v#{version}/calibrite-PROFILER-#{version}.dmg",
       verified: "github.com/LUMESCA/calibrite-profiler-releases/"
@@ -8,9 +8,13 @@ cask "calibrite-profiler" do
   desc "Display calibration software for Calibrite, ColorChecker and X-Rite devices"
   homepage "https://calibrite.com/calibrite-profiler/"
 
+  # Upstream sometimes marks a release as "pre-release" on GitHub but the
+  # first-party download page links to the release as the latest stable
+  # version. This checks the download page, which links to the latest dmg file
+  # on GitHub without having to worry about latest/pre-release.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://calibrite.com/us/software-downloads/"
+    regex(/href=.*?calibrite-PROFILER[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
