@@ -1,9 +1,9 @@
 cask "eloston-chromium" do
   arch arm: "arm64", intel: "x86-64"
 
-  version "129.0.6668.70-1.1"
-  sha256 arm:   "ced1c22d9009bd23c310f3e9f200d159acda71d6907c3c89a75306380b31e2e8",
-         intel: "b504872f5b00253e0c526bdf9024b934c77c0f5fc73573c04177b2e2d369e671"
+  version "129.0.6668.89-1.1"
+  sha256 arm:   "16c9c862041c85dbca20abc913092e617fc6208bd9f21c6d60c8c9646267251c",
+         intel: "59759a0305ad389513cbe285ba314dd2d49cd69f451fe3bbfab85a81a5d3a28c"
 
   url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}_#{arch}-macos.dmg",
       verified: "github.com/ungoogled-software/ungoogled-chromium-macos/"
