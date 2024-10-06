@@ -11,6 +11,11 @@ cask "requestly" do
   desc "Intercept and modify HTTP requests"
   homepage "https://requestly.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Requestly.app"
