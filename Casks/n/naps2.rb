@@ -12,6 +12,11 @@ cask "naps2" do
   desc "Document scanning application"
   homepage "https://www.naps2.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   pkg "naps2-#{version}-mac-#{arch}.pkg"
