@@ -469,6 +469,7 @@ logos
 logseq
 lookaway
 loom
+losslesscut
 loupedeck
 lunacy
 lunar
