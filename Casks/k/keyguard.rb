@@ -1,15 +1,18 @@
 cask "keyguard" do
-  version "1.6.1,20241004"
-  sha256 "0f5cfe020ee5a99847ca91bf8adb1936e0a3200488c29debb101e1aebafdbc8b"
+  arch arm: "apple", intel: "intel"
 
-  url "https://github.com/AChep/keyguard-app/releases/download/r#{version.csv.second}/Keyguard-#{version.csv.first}.dmg"
+  version "1.6.2,20241007"
+  sha256 arm:   "a9abbfa4cbc0487e94d709c1a9759d7af7b8eb648f3774fcaef7f9c8d99fec97",
+         intel: "7550d423e3fca39f20379216802481ad9cf0f2e36b407e15c81221c2c337578f"
+
+  url "https://github.com/AChep/keyguard-app/releases/download/r#{version.csv.second}/Keyguard-#{version.csv.first}-#{arch}.dmg"
   name "Keyguard"
   desc "Client for the Bitwarden platform"
   homepage "https://github.com/AChep/keyguard-app"
 
   livecheck do
     url :url
-    regex(%r{/r?(\d+(?:\.\d+)*)/Keyguard[._-](\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{/r?(\d+(?:\.\d+)*)/Keyguard[._-](\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["browser_download_url"]&.match(regex)
@@ -28,8 +31,4 @@ cask "keyguard" do
     "~/Library/Application Support/keyguard",
     "~/Library/Saved Application State/com.artemchep.keyguard.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
