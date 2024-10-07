@@ -504,6 +504,7 @@ microsoft-auto-update
 microsoft-azure-storage-explorer
 microsoft-edge
 microsoft-edge@beta
+microsoft-edge@canary
 microsoft-edge@dev
 microsoft-excel
 microsoft-office
