@@ -43,6 +43,7 @@ cask "mixed-in-key" do
     "~/Library/Caches/com.mixedinkey.application",
     "~/Library/HTTPStorages/com.mixedinkey.application",
     "~/Library/Preferences/com.mixedinkey.application.plist",
+    "~/Library/Saved Application State/com.mixedinkey.application.savedState",
     "~/Library/WebKit/com.mixedinkey.application",
   ]
 end
