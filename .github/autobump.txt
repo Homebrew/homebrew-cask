@@ -9,6 +9,7 @@
 86box
 8x8-work
 a-better-finder-attributes
+a-better-finder-rename
 ableton-live-intro
 ableton-live-intro@11
 ableton-live-lite
@@ -138,6 +139,7 @@ chromedriver
 chromedriver@beta
 chromium-gost
 chronycontrol
+cinderella
 cisdem-data-recovery
 cisdem-pdf-converter-ocr
 clash-verge-rev
@@ -174,6 +176,7 @@ craft
 crashplan
 creality-print
 crossover
+crosspaste
 cryptomator
 crystalmaker
 curseforge
@@ -211,6 +214,7 @@ devpod
 devtunnel
 dialpad
 dingtalk
+direqual
 discord
 discord@canary
 discord@development
@@ -235,6 +239,7 @@ dropbox@beta
 dropshare
 dropzone
 duckduckgo
+ea
 ecamm-live
 egnyte
 electerm
@@ -475,6 +480,7 @@ lunacy
 lunar
 lunar-client
 maa
+maccy
 macfuse
 macloggerdx
 macloggerdx@beta
@@ -741,6 +747,7 @@ roboform
 rocket-typist
 rode-central
 rotki
+routine
 royal-tsx
 royal-tsx@beta
 rstudio
@@ -856,6 +863,7 @@ ths
 thunderbird
 ticktick
 tidelift
+timemachinestatus
 timeular
 timing
 tinkerwell
@@ -949,6 +957,7 @@ whatsapp
 whatsapp@beta
 whatsapp@legacy
 whisky
+wifispoof
 windows-app
 windscribe
 wing-personal
