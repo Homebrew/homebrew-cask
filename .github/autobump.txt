@@ -145,6 +145,7 @@ clay
 cleanclip
 cleaneronepro
 cleanmymac
+cleanmymac-zh
 clickhouse
 clickup
 clion
@@ -177,6 +178,7 @@ cryptomator
 crystalmaker
 curseforge
 cursor
+cyberduck
 datadog-agent
 dataflare
 datagrip
@@ -288,6 +290,7 @@ fmail2
 focusrite-control
 focusrite-control-2
 foldit
+font-chiron-hei-hk
 font-iosevka
 font-iosevka-aile
 font-iosevka-curly
@@ -518,6 +521,7 @@ minecraft-education
 mini-program-studio
 miniforge
 minisim
+minizincide
 mist
 mitmproxy
 mixed-in-key
@@ -538,6 +542,7 @@ mongodb-compass-isolated-edition
 mongodb-compass-readonly
 mongodb-compass@beta
 morgen
+motion
 mountain-duck
 mp3tag
 mqttx
@@ -661,6 +666,7 @@ postman-cli
 postman@canary
 powerphotos
 powershell
+powershell@preview
 praat
 preform
 prepros
