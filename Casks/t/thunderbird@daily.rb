@@ -168,21 +168,21 @@ cask "thunderbird@daily" do
     "zh-CN"
   end
 
-  url "https://download.mozilla.org/?product=thunderbird-nightly-latest-l10n-ssl&os=osx&lang=#{language}"
-  name "Earlybird"
-  name "Thunderbird Daily"
+  url "https://download.mozilla.org/?product=thunderbird-nightly-latest-SSL&os=osx&lang=#{language}",
+      verified: "download.mozilla.org/"
+  name "Mozilla Thunderbird Daily"
   desc "Customizable email client"
-  homepage "https://www.mozilla.org/en-US/thunderbird/channel/"
+  homepage "https://www.thunderbird.net/#{language}/download/daily/"
 
   depends_on macos: ">= :catalina"
 
   app "Thunderbird Daily.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird*.sfl*",
     "~/Library/Caches/Thunderbird",
-    "~/Library/Preferences/org.mozilla.thunderbird daily.plist",
-    "~/Library/Saved Application State/org.mozilla.thunderbird.savedState",
+    "~/Library/Preferences/org.mozilla.thunderbird*.plist",
+    "~/Library/Saved Application State/org.mozilla.thunderbird*.savedState",
     "~/Library/Thunderbird",
   ]
 end
