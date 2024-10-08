@@ -641,6 +641,7 @@ pdf-expert@beta
 pdf-reader-pro
 pdfelement
 pdfsam-basic
+pearcleaner
 perforce
 permute
 pgadmin4
