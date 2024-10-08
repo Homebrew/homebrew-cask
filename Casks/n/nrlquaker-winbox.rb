@@ -12,6 +12,8 @@ cask "nrlquaker-winbox" do
     strategy :github_latest
   end
 
+  depends_on macos: "<= :sonoma"
+
   app "Winbox-mac.app"
 
   zap trash: "~/Library/Application Support/com.mikrotik.winbox"
