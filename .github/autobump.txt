@@ -863,6 +863,7 @@ threema@beta
 ths
 thunderbird
 thunderbird@beta
+thunderbird@esr
 ticktick
 tidelift
 timemachinestatus
