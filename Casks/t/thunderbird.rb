@@ -226,7 +226,7 @@ cask "thunderbird" do
       verified: "download-installer.cdn.mozilla.net/pub/thunderbird/"
   name "Mozilla Thunderbird"
   desc "Customizable email client"
-  homepage "https://www.thunderbird.net/"
+  homepage "https://www.thunderbird.net/#{language}/"
 
   livecheck do
     url "https://product-details.mozilla.org/1.0/thunderbird_versions.json"
@@ -241,10 +241,10 @@ cask "thunderbird" do
   app "Thunderbird.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird*.sfl*",
     "~/Library/Caches/Thunderbird",
-    "~/Library/Preferences/org.mozilla.thunderbird.plist",
-    "~/Library/Saved Application State/org.mozilla.thunderbird.savedState",
+    "~/Library/Preferences/org.mozilla.thunderbird*.plist",
+    "~/Library/Saved Application State/org.mozilla.thunderbird*.savedState",
     "~/Library/Thunderbird",
   ]
 end
