@@ -862,6 +862,7 @@ threema-work
 threema@beta
 ths
 thunderbird
+thunderbird@beta
 ticktick
 tidelift
 timemachinestatus
