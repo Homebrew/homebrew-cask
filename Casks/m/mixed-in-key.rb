@@ -7,26 +7,37 @@ cask "mixed-in-key" do
   desc "Harmonic mixing for DJs and music producers"
   homepage "https://mixedinkey.com/get#{version.major}/"
 
-  # The download page changes with each major version. The version can only be
-  # found by checking the headers on the download url, which has a variable
-  # download id. Therefore multiple steps are required to find an accurate version.
+  # The version for the latest file can only be found by checking the headers
+  # (`Location` or `Content-Disposition`) of the unversioned URL for the latest
+  # file. This URL includes a numeric ID that varies based on major version and
+  # platform (Mac, Windows). The upstream download page is specific to a given
+  # major version, so we have to fetch multiple pages to identify the current
+  # URL for the latest file.
   livecheck do
-    url "https://mixedinkey.com/learn-more/"
-    regex(%r{/Mixed%2BIn%2BKey[._-]v?(\d+(?:\.\d+)+)}i)
+    url "https://shop.mixedinkey.com"
+    regex(/Mixed(?:%2B|[+._-])In(?:%2B|[+._-])Key[._-]v?(\d+(?:\.\d+)+)/i)
     strategy :page_match do |page, regex|
-      major_version = page[/Mixed\s+in\s+Key\s+v?(\d+)["< ]/i, 1]
+      # Find the current major version
+      major_version = page[/Mixed\s+in\s+Key\s+v?(\d+)\s*</i, 1]
       next if major_version.blank?
 
+      # Fetch the download page for the current major version
       download_page = Homebrew::Livecheck::Strategy.page_content("https://mixedinkey.com/get#{major_version}/")
-      download_id = download_page[:content].scan(%r{href=.*download/(\d+)/release})&.flatten&.first
+      next if (download_page_content = download_page[:content]).blank?
+
+      # Find the download ID for the Mac version
+      download_id = download_page_content[%r{href=.*?/download/(\d+)/release/.+?download(?:-|\s+for\s+)mac}im, 1]
       next if download_id.blank?
 
-      header_url = "https://builds.mixedinkey.com/download/#{download_id}/release/latest?key=public"
-      headers = Homebrew::Livecheck::Strategy.page_headers(header_url)
-      version = headers.first["location"].match(regex)&.captures&.first
-      next if version.blank?
+      # Identify version from the filename in headers
+      Homebrew::Livecheck::Strategy.page_headers(
+        "https://builds.mixedinkey.com/download/#{download_id}/release/latest?key=public",
+      )&.map do |headers|
+        match = (headers["location"] || headers["content-disposition"])&.match(regex)
+        next if match.blank?
 
-      "#{version},#{download_id}"
+        "#{match[1]},#{download_id}"
+      end
     end
   end
 
