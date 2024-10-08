@@ -182,7 +182,7 @@ cask "thunderbird@daily" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird*.sfl*",
     "~/Library/Caches/Thunderbird",
     "~/Library/Preferences/org.mozilla.thunderbird*.plist",
-    "~/Library/Saved Application State/org.mozilla.thunderbird-daily.savedState",
+    "~/Library/Saved Application State/org.mozilla.thunderbird*.savedState",
     "~/Library/Thunderbird",
   ]
 end
