@@ -22,7 +22,7 @@ cask "postgres-unofficial" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Postgres.app"
 
