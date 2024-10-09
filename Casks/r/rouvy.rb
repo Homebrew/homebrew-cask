@@ -2,7 +2,7 @@ cask "rouvy" do
   version "3.8.3"
   sha256 :no_check
 
-  url "https://cdn.rouvy.com/update/RouvyInstaller.dmg"
+  url "https://cdn.rouvy.com/update/Rouvy_Installer.dmg"
   name "ROUVY"
   desc "Indoor cycling and workout app"
   homepage "https://rouvy.com/"
