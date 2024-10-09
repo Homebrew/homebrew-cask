@@ -19,7 +19,10 @@ cask "anytype@beta" do
   end
 
   auto_updates true
-  conflicts_with cask: "anytype"
+  conflicts_with cask: [
+    "anytype",
+    "anytype@alpha",
+  ]
   depends_on macos: ">= :catalina"
 
   app "Anytype.app"
