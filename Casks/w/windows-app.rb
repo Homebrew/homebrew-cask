@@ -13,7 +13,6 @@ cask "windows-app" do
     strategy :header_match
   end
 
-  auto_updates true
   conflicts_with cask: "microsoft-remote-desktop"
   depends_on macos: ">= :monterey"
 
