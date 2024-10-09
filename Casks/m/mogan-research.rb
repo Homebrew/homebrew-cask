@@ -6,7 +6,7 @@ cask "mogan-research" do
          intel: "25bc5fc683bcc60ee720a5995b8ad5990fd702365baea5e7d0590973675cf746"
 
   url "https://github.com/XmacsLabs/mogan/releases/download/v#{version}/MoganResearch-v#{version}#{arch}.dmg",
-      verified: "XmacsLabs/mogan/releases/download/"
+      verified: "github.com/XmacsLabs/mogan/releases/download/"
   name "Mogan Research"
   desc "one of the distribution of GNU TeXmacs which is a structured scientific editing platform"
   homepage "https://mogan.app/"
