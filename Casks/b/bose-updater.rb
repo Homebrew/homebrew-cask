@@ -1,6 +1,6 @@
 cask "bose-updater" do
-  version "7.1.13.5238"
-  sha256 "8a2190385a37973b623f8bd52551ea8da8bb382ae01fe6a110e66f37a29ea8df"
+  version "7.1.13.5323"
+  sha256 "3129bc66c8e81489c0fa95fe2ac637eb91c73a657dbd22434d7f5fdeb5574cc5"
 
   url "https://downloads.bose.com/ced/boseupdater/mac/BoseUpdater_#{version}.dmg"
   name "Bose Device Updater"
