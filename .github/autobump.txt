@@ -18,6 +18,7 @@ ableton-live-standard
 ableton-live-standard@11
 ableton-live-suite
 ableton-live-suite@11
+actual
 adguard
 adguard-vpn
 adguard-vpn@nightly
@@ -183,6 +184,7 @@ crystalmaker
 curseforge
 cursor
 cyberduck
+cycling74-max
 datadog-agent
 dataflare
 datagrip
@@ -274,6 +276,7 @@ figma
 figma-agent
 figma@beta
 fiji
+finalshell
 finbar
 finch
 find-any-file
@@ -480,6 +483,7 @@ loupedeck
 lunacy
 lunar
 lunar-client
+lynx
 maa
 maccy
 macfuse
@@ -656,6 +660,7 @@ pieces-os
 pile
 pitch
 pixel-shift-combiner
+planet
 plasticscm-cloud-edition
 playdate-simulator
 plex
