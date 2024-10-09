@@ -98,34 +98,7 @@ jobs:
 
       - name: Clean up CI machine
         if: runner.os == 'macOS'
-        run: |
-          if [ "${{ matrix.runner }}" == 'macos-12' ] && ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
-            echo '::warning::Removing Julia is no longer necessary.'
-          fi
-
-          if ! rm /usr/local/bin/dotnet; then
-            echo "::warning::Removing \`dotnet\` symlink is no longer necessary."
-          fi
-
-          if ! rm /usr/local/bin/pod; then
-            echo "::warning::Removing \`cocoapods\` symlink is no longer necessary."
-          fi
-
-          if ! rm /usr/local/bin/chromedriver; then
-            echo "::warning::Removing \`chromedriver\` symlink is no longer necessary."
-          fi
-
-          brew unlink python && brew link --overwrite python
-
-      - name: Clean up Mono from CI machine
-        if: matrix.runner != 'macos-14' && matrix.arch != 'arm'
-        run: |
-          if ! rm /usr/local/share/man/man1/al.1 || \
-             ! sudo rm /etc/paths.d/mono-commands || \
-             ! sudo rm -r /Library/Frameworks/Mono.framework || \
-             ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
-            echo '::warning::Uninstalling Mono is no longer necessary.'
-          fi
+        run: brew test-bot --cleanup --only-cleanup-before
 
       - name: Cache Homebrew Gems
         id: cache
