@@ -756,6 +756,7 @@ rocket-typist
 rode-central
 rotki
 routine
+rouvy
 royal-tsx
 royal-tsx@beta
 rstudio
