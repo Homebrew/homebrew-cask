@@ -151,7 +151,6 @@ jobs:
 
             cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
 
-            was_installed = cask.installed?
             manual_installer = cask.artifacts.any? do |artifact|
               if defined?(artifact.manual_install)
                 artifact.manual_install
@@ -174,7 +173,6 @@ jobs:
             formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
 
             File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
-              f.puts "was_installed=#{JSON.generate(was_installed)}"
               f.puts "manual_installer=#{JSON.generate(manual_installer)}"
               f.puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
               f.puts "cask_conflicts=#{JSON.generate(cask_conflicts)}"
@@ -197,10 +195,10 @@ jobs:
         if: always() && steps.info.outcome == 'success' && join(fromJSON(steps.info.outputs.cask_conflicts)) != ''
         timeout-minutes: 30
 
-      - name: Run brew uninstall --cask --zap ${{ matrix.cask.token }}
+      - name: Run brew uninstall --cask --force --zap ${{ matrix.cask.token }}
         run: |
-          brew uninstall --cask --zap '${{ matrix.cask.path }}'
-        if: always() && steps.info.outcome == 'success' && fromJSON(steps.info.outputs.was_installed)
+          brew uninstall --cask --force --zap '${{ matrix.cask.path }}'
+        if: always() && steps.info.outcome == 'success'
         timeout-minutes: 30
 
       - name: Take snapshot of installed and running apps and services
