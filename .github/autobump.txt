@@ -51,6 +51,7 @@ anydesk
 anydo
 anythingllm
 anytype
+anytype@beta
 apidog
 apidog-europe
 apifox
