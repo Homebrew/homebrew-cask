@@ -739,6 +739,7 @@ readdle-spark
 reader
 readyapi
 reaper
+receipts
 rectangle
 rectangle-pro
 reflect
