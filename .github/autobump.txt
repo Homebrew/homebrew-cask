@@ -506,6 +506,7 @@ mailbutler
 marked
 markedit
 mcreator
+mdrp
 media-center
 mediainfo
 mediamate
