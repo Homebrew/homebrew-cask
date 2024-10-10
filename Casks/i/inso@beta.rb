@@ -1,8 +1,8 @@
 cask "inso@beta" do
-  version "9.3.0-beta.0"
-  sha256 "43ce0efd3f3cfc4ae37ec2c9026359565d15034e0499ee5004298da3bd07ee2e"
+  version "10.1.0-beta.1"
+  sha256 "a52580688020397be4fcf9bb935f50de116a02ff2aa8028f5d953597afda22ed"
 
-  url "https://github.com/Kong/insomnia/releases/download/lib%40#{version}/inso-macos-#{version}.zip",
+  url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/inso-macos-#{version}.zip",
       verified: "github.com/Kong/insomnia/"
   name "inso"
   desc "CLI HTTP and GraphQL Client"
@@ -10,7 +10,7 @@ cask "inso@beta" do
 
   livecheck do
     url "https://github.com/Kong/insomnia/releases?q=prerelease%3Atrue+Inso+CLI"
-    regex(%r{href=["']?[^"' >]*?/tag/lib%40([^"' >]+?)["' >]}i)
+    regex(%r{href=["']?[^"' >]*?/tag/core%40([^"' >]+?)["' >]}i)
     strategy :page_match
   end
 
@@ -19,4 +19,8 @@ cask "inso@beta" do
   binary "inso"
 
   # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end
