@@ -1,6 +1,6 @@
 cask "odrive" do
-  version "7441"
-  sha256 "c3e15cd59a526e0fe01ba83749c453c5c89b20d102848dfb527c647920ba0d33"
+  version "7450"
+  sha256 "398c709b08e35eaaa09ace82232a90d379a358086fd687335f6a46a06df2a621"
 
   url "https://d3huse1s6vwzq6.cloudfront.net/odrivesync.#{version}.pkg",
       verified: "d3huse1s6vwzq6.cloudfront.net/"
@@ -17,7 +17,10 @@ cask "odrive" do
 
   # Should also remove ~/.odrive/bin/ on uninstall, but causes
   # faulty reinstall unless ~/.odrive is removed entirely.
-  uninstall quit:    "com.oxygen.odriveapp",
+  uninstall quit:    [
+              "com.oxygen.odriveapp",
+              "com.oxygencloud.odrive",
+            ],
             pkgutil: "com.oxygen.odrive.*"
 
   zap trash: "~/.odrive"
