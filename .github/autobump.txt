@@ -924,6 +924,7 @@ twine
 typeface
 typora
 typora@dev
+ubiquiti-unifi-controller
 ueli
 uhk-agent
 ultimate
