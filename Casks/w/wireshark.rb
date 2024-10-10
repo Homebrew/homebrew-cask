@@ -69,18 +69,14 @@ cask "wireshark" do
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man4/extcap.4"
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man4/wireshark-filter.4"
 
-  uninstall_preflight do
-    system_command "/usr/sbin/installer",
-                   args:         ["-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg", "-target", "/"],
-                   sudo:         true,
-                   sudo_as_root: true
-    system_command "/usr/sbin/installer",
-                   args:         ["-pkg", "#{staged_path}/Remove Wireshark from the system path.pkg", "-target", "/"],
-                   sudo:         true,
-                   sudo_as_root: true
-  end
-
-  uninstall pkgutil: "org.wireshark.*"
+  uninstall early_script: {
+              executable:   "/usr/sbin/installer",
+              args:         ["-pkg", "#{staged_path}/Remove Wireshark from the system path.pkg", "-target", "/"],
+              sudo:         true,
+              must_succeed: false,
+            },
+            launchctl:    "org.wireshark.ChmodBPF",
+            pkgutil:      "org.wireshark.*"
 
   zap trash: [
     "~/.config/wireshark",
