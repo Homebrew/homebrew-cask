@@ -942,6 +942,7 @@ vamiga
 vbrokers
 vcam
 vellum
+videofusion
 vienna-assistant
 vimr
 virtualbox@beta
