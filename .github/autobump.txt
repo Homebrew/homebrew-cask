@@ -24,7 +24,6 @@ adguard-vpn
 adguard-vpn@nightly
 adguard@nightly
 adobe-acrobat-pro
-adobe-creative-cloud-cleaner-tool
 adrive
 affine
 affinity-designer
