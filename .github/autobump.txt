@@ -478,6 +478,7 @@ livebook
 lm-studio
 logi-options+
 logitech-g-hub
+logitune
 logos
 logseq
 lookaway
