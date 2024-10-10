@@ -399,6 +399,7 @@ hoppscotch
 hstracker
 http-toolkit
 hydrus-network
+hyperbackupexplorer
 hyperkey
 ibackup-viewer
 ibkr
