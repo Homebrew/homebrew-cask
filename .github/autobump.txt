@@ -445,6 +445,7 @@ juxtacode
 kaleidoscope
 kdenlive
 kdrive
+keepassxc@snapshot
 keyboard-cowboy
 keyman
 keymapp
