@@ -989,6 +989,7 @@ windows-app
 windscribe
 wing-personal
 wins
+wire
 wondershare-uniconverter
 wordpresscom-studio
 workflowy
