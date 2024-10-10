@@ -436,6 +436,7 @@ joplin
 jordanbaird-ice
 josm
 julia
+julia@lts
 jumpshare
 jupyterlab
 juxtacode
