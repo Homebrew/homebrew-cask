@@ -890,6 +890,7 @@ thunderbird@beta
 thunderbird@esr
 ticktick
 tidelift
+tiger-trade
 timemachinestatus
 timeular
 timing
