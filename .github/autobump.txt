@@ -628,6 +628,7 @@ openlens
 openrct2
 openscad@snapshot
 openshift-client
+openshot-video-editor@daily
 opera
 opera-gx
 opera@beta
