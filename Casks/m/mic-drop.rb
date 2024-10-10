@@ -1,6 +1,6 @@
 cask "mic-drop" do
-  version "1.4.6"
-  sha256 "24bac5d600f30eacbbfed2094cc674feea5286a009c32821edafece0fc465fdf"
+  version "1.5.0"
+  sha256 "be01a9de5ef716e10d2885def7d2ead92799a68fa62c5f32a257a0ae2580b0bd"
 
   url "https://github.com/octopusthink/getmicdrop.com/releases/download/v#{version}/Mic.Drop.#{version}.zip",
       verified: "github.com/octopusthink/getmicdrop.com/"
@@ -8,10 +8,7 @@ cask "mic-drop" do
   desc "Quickly mute your microphone with a global shortcut or menu bar control"
   homepage "https://getmicdrop.com/"
 
-  livecheck do
-    url "https://getmicdrop.com/downloads/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-10-08", because: :moved_to_mas
 
   auto_updates true
   depends_on macos: ">= :catalina"
