@@ -17,7 +17,10 @@ cask "odrive" do
 
   # Should also remove ~/.odrive/bin/ on uninstall, but causes
   # faulty reinstall unless ~/.odrive is removed entirely.
-  uninstall quit:    "com.oxygen.odriveapp",
+  uninstall quit:    [
+              "com.oxygen.odriveapp",
+              "com.oxygencloud.odrive",
+            ],
             pkgutil: "com.oxygen.odrive.*"
 
   zap trash: "~/.odrive"
