@@ -14,7 +14,7 @@ cask "motu-m-series" do
 
   depends_on macos: ">= :mojave"
 
-  pkg "MOTU MSeries Installer (#{version}).pkg"
+  pkg "MOTU M Series Installer (#{version}).pkg"
 
   uninstall launchctl: "com.motu.coreuac.reenumerator",
             pkgutil:   [
