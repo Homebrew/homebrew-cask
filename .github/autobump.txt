@@ -663,6 +663,7 @@ piclist
 pieces
 pieces-os
 pile
+pingplotter
 pitch
 pixel-shift-combiner
 planet
