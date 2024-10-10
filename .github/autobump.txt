@@ -356,6 +356,7 @@ gb-studio
 gcs
 gdevelop
 genesys-cloud
+geoda
 geogebra
 geogebra@5
 git-credential-manager
