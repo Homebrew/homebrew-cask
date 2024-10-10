@@ -1,68 +1,68 @@
 cask "thunderbird@beta" do
-  version "132.0b2"
+  version "132.0b3"
 
   language "cs" do
-    sha256 "97e7c02e387c70467a89229447fec083da51a73fba468313b1d30d3b0bfc3806"
+    sha256 "9b7bf7a803de177d0223620d133d29f7627c4bb0337d3592dd185b194236ee61"
     "cs"
   end
   language "de" do
-    sha256 "1f33cadb82c99bdc0237e1c8a672be33ec230a6bb0f1e06b448e0e38d73b5cf2"
+    sha256 "e685af21b64663b3d1506e727a7f80f83fb3e314d367f2bc06017adf9fa65762"
     "de"
   end
   language "en-GB" do
-    sha256 "9fe51b4b299af94ad98f1f6135939b873e4ae84d693e9a466f72806ceca8b130"
+    sha256 "4d98c61e8e9ea38a92d8c4198697027147858e49d0f590b8f0e82dc1098a749f"
     "en-GB"
   end
   language "en", default: true do
-    sha256 "fba21adc5762d012d9910cc6cd993948aa6879c797f9dfc817b5bf9dd92cf5fb"
+    sha256 "dcd66a33f2f17b20fbf5bbac22625e9ff66848a32b8c13ec1de2264a48cab4d1"
     "en-US"
   end
   language "fr" do
-    sha256 "25a39d4d783ae5c60a87478495d3eb70363d3c1fb362ba4a08e67f8d5cce1ad2"
+    sha256 "168aaf188a12d7fd4a5b86043a365a44da7bf0a4ec5f5b13ddda56565631b251"
     "fr"
   end
   language "gl" do
-    sha256 "05ebac0d3025f725a413297a9dac5bc60a93bc391ad524b1ac0de5b087e9299a"
+    sha256 "b663b4981e0a10d1b1bde5ec2f3882c31894a2570a0129b45a051e8554309e86"
     "gl"
   end
   language "it" do
-    sha256 "71d7e2fa00fc94f923946893cb826234c7a0074690381e425f96c910c2d0f07a"
+    sha256 "710f39b45b29828c7f3e7eb8262ddbae5c0217b342c17d986eb43f34bd4993df"
     "it"
   end
   language "ja" do
-    sha256 "7d0ca929620d7e8bc478838867a8c73dd447b0366a258a141cc5bc30ff6baaa8"
+    sha256 "1293371d84c223659ab65b8ec334769527b60dcf43e2afe74d5040c33fbd6324"
     "ja-JP-mac"
   end
   language "nl" do
-    sha256 "86e1c4d06dfc72489f30a773a04689eb9e51364586c3c8c3418d81656d007dd0"
+    sha256 "0aa26fe12a750d80b5a5f145b7d4a58fc1ae5d0fc197fcd16578b13f54ab4232"
     "nl"
   end
   language "pl" do
-    sha256 "84ea1f030eae711819aefcbdffb94f81cb54bbd55c208250c62706056f856648"
+    sha256 "21b6839a38362031aaf195fce23ff638b690ee6f8e50a589ded54df32ddaca83"
     "pl"
   end
   language "pt" do
-    sha256 "c06bcff8baf03cbb2cc211bd9a72a4e816c46e2037a570a143b12be75c4465dc"
+    sha256 "24f0735f68aeb10a5ed7e711fa89ed59123188ca66146ca9926b84b1ca30a50a"
     "pt-PT"
   end
   language "pt-BR" do
-    sha256 "4de0bbbdb7e5431598e2c3134b00efea1a6b477013df2e2521c196fe907901b9"
+    sha256 "902c6c5a3ca1636a9039346415685b4cdb0888e4c00479d01437aa71306f8813"
     "pt-BR"
   end
   language "ru" do
-    sha256 "8aba513c653f98e0302d25df46f2569808b9e814524b2d4957ebbac4816a0584"
+    sha256 "e7a9b5f8c4df6bf8f23a761c0ddb2eeff09493f9bc84b0079c64e2784f70fbf0"
     "ru"
   end
   language "uk" do
-    sha256 "8c65748d2f07b469e218c3afac5fbada96bb1765a630f91cb7e7690e04b4af08"
+    sha256 "c2e030aad83dbf658a5dfb6959dceb8df632f5755259b6503265d44f872be08b"
     "uk"
   end
   language "zh-TW" do
-    sha256 "47175689d0f30785b1ffa3e8cb2ad08eefcd191b22c9abd5ef4d4ae478c1f5c8"
+    sha256 "9ab1481eee66077e97e541c5ea5ca5dab8b985a50a1fcf7c9263b06b71078024"
     "zh-TW"
   end
   language "zh" do
-    sha256 "d1e8cbb9cf2fb06025168d501329811fbbccb5c000decdc8c8d6ce7a84683234"
+    sha256 "bb0d7d225c86eb8182423f10fdee5ae5dabffcbb708bed456e4541288563ee52"
     "zh-CN"
   end
 
