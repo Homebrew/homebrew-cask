@@ -735,6 +735,7 @@ quip
 racket
 rancher
 rapidapi
+rapidweaver
 razorsql
 readdle-spark
 reader
