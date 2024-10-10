@@ -27,6 +27,8 @@ cask "wireshark-chmodbpf" do
             },
             pkgutil:      "org.wireshark.ChmodBPF.pkg"
 
+  # No zap stanza required
+
   caveats do
     reboot
     <<~EOS
