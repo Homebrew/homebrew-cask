@@ -393,6 +393,7 @@ hbuilderx
 heptabase
 herd
 heroic
+hhkb-studio
 holavpn
 home-assistant
 hoppscotch
@@ -404,6 +405,7 @@ hyperkey
 ibackup-viewer
 ibkr
 ibm-cloud-cli
+icollections
 idrive
 igv
 iina+
@@ -543,6 +545,7 @@ minecraft-education
 mini-program-studio
 miniforge
 minisim
+minitube
 minizincide
 mist
 mitmproxy
