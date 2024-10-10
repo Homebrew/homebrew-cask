@@ -733,6 +733,7 @@ quicktune
 quip
 racket
 rancher
+rapidapi
 razorsql
 readdle-spark
 reader
