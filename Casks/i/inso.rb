@@ -1,8 +1,8 @@
 cask "inso" do
-  version "9.2.0"
-  sha256 "780ef8a25cdf2b3a143a7ec9d2776285f934c4bf1ba2e0ab740a671cca5d4e56"
+  version "10.0.0"
+  sha256 "8620df5107129a92aef5f1f6d4886ab49596742b3d663de46431aa4d91524526"
 
-  url "https://github.com/Kong/insomnia/releases/download/lib%40#{version}/inso-macos-#{version}.zip",
+  url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/inso-macos-#{version}.zip",
       verified: "github.com/Kong/insomnia/"
   name "inso"
   desc "CLI HTTP and GraphQL Client"
@@ -13,7 +13,7 @@ cask "inso" do
   # numerically higher, so we have to avoid matching them.
   livecheck do
     url :url
-    regex(/^lib@v?(\d{1,3}(?:\.\d+)+)$/i)
+    regex(/^core@v?(\d{1,3}(?:\.\d+)+)$/i)
   end
 
   conflicts_with cask: "inso@beta"
@@ -21,4 +21,8 @@ cask "inso" do
   binary "inso"
 
   # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end
