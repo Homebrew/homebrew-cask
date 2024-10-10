@@ -40,7 +40,7 @@ cask "insta360-studio" do
     end
   end
 
-  pkg "Insta360 Studio_#{version.csv.first}_#{version.csv.third}(#{version.csv.fourth})#{version.csv.fifth}.pkg"
+  pkg "Insta360Studio_#{version.csv.first}_#{version.csv.third}(#{version.csv.fourth})#{version.csv.fifth}.pkg"
 
   uninstall quit:    "com.insta360.studio",
             pkgutil: [
