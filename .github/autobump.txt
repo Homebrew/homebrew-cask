@@ -836,6 +836,7 @@ stash
 stats
 steamcmd
 steelseries-gg
+steinberg-activation-manager
 studio-3t
 sublime-text@dev
 superhuman
