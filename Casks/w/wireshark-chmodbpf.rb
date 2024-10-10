@@ -19,14 +19,13 @@ cask "wireshark-chmodbpf" do
 
   pkg "Install ChmodBPF.pkg"
 
-  uninstall_preflight do
-    system_command "/usr/sbin/installer",
-                   args:         ["-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg", "-target", "/"],
-                   sudo:         true,
-                   sudo_as_root: true
-  end
-
-  uninstall pkgutil: "org.wireshark.ChmodBPF.pkg"
+  uninstall early_script: {
+              executable:   "/usr/sbin/installer",
+              args:         ["-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg", "-target", "/"],
+              sudo:         true,
+              must_succeed: false,
+            },
+            pkgutil:      "org.wireshark.ChmodBPF.pkg"
 
   caveats do
     reboot
