@@ -1,6 +1,6 @@
 cask "vmware-fusion" do
-  version "13.6.0,24238079"
-  sha256 "035314f22a825f0fb92627fac286ed3b3485fab2c80df946ab0443344e829d60"
+  version "13.6.1,24319021"
+  sha256 "8fbc16ac3c8ff6075c785cc899fba3af0362974e49e2e64198a44179d8a7e41b"
 
   url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/universal/core/com.vmware.fusion.zip.tar"
   name "VMware Fusion"
