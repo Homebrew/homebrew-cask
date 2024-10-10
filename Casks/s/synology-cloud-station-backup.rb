@@ -7,13 +7,7 @@ cask "synology-cloud-station-backup" do
   desc "Back up files to a centralised Synology NAS"
   homepage "https://www.synology.com/"
 
-  livecheck do
-    url "https://www.synology.com/en-us/releaseNote/CloudStationBackup"
-    regex(/Version:\s*(\d+(?:\.\d+)+)-(\d+)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
-  end
+  deprecate! date: "2024-10-08", because: :discontinued
 
   auto_updates true
 
