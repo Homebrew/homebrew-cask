@@ -1018,6 +1018,7 @@ zen-browser
 zeplin
 znote
 zoc
+zoho-mail
 zoom
 zoom-for-it-admins
 zotero
