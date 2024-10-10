@@ -95,6 +95,7 @@ binance
 bing-wallpaper
 bitwarden
 bitwig-studio
+black-ink
 blender
 blender@lts
 blitz-gg
