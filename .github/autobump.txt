@@ -466,6 +466,7 @@ libcblite-community
 libreoffice
 libreoffice-language-pack
 librewolf
+lidarr
 lightburn
 lightkey
 limitless
