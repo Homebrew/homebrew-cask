@@ -573,6 +573,7 @@ multiapp
 multitouch
 multiviewer-for-f1
 mumuplayer
+murus
 native-access
 naver-whale
 navicat-for-mariadb
