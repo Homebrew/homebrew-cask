@@ -2,9 +2,9 @@ cask "wireshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  version "4.4.0"
-  sha256 arm:   "13349959456d29b9b5d2214ba7bfd8d88016f5ac24bf5a7a5a4945ff46584a29",
-         intel: "edb07ee6afbce6b5231d08b301bab31c0ba6c31f7277f1a74bd370ec59369ef7"
+  version "4.4.1"
+  sha256 arm:   "0b401cfc149d20858ef602e90edd98f8bad9795320d0953ed78b9e72f9e88fc8",
+         intel: "267dcb2dd19d1ebb483e3cff150ad613b18437089c110754fe2ed74dc6c0e978"
 
   url "https://2.na.dl.wireshark.org/osx/all-versions/Wireshark%20#{version}%20#{arch}%2064.dmg"
   name "Wireshark"
@@ -69,18 +69,14 @@ cask "wireshark" do
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man4/extcap.4"
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man4/wireshark-filter.4"
 
-  uninstall_preflight do
-    system_command "/usr/sbin/installer",
-                   args:         ["-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg", "-target", "/"],
-                   sudo:         true,
-                   sudo_as_root: true
-    system_command "/usr/sbin/installer",
-                   args:         ["-pkg", "#{staged_path}/Remove Wireshark from the system path.pkg", "-target", "/"],
-                   sudo:         true,
-                   sudo_as_root: true
-  end
-
-  uninstall pkgutil: "org.wireshark.*"
+  uninstall early_script: {
+              executable:   "/usr/sbin/installer",
+              args:         ["-pkg", "#{staged_path}/Remove Wireshark from the system path.pkg", "-target", "/"],
+              sudo:         true,
+              must_succeed: false,
+            },
+            launchctl:    "org.wireshark.ChmodBPF",
+            pkgutil:      "org.wireshark.*"
 
   zap trash: [
     "~/.config/wireshark",
