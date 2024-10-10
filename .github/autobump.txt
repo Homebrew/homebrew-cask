@@ -560,6 +560,7 @@ mongodb-compass-readonly
 mongodb-compass@beta
 morgen
 motion
+motu-m-series
 mountain-duck
 mp3tag
 mqttx
