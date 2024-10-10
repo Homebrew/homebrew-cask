@@ -1,5 +1,3 @@
-# typed: false
-
 cask "magicquit" do
   version "1.4"
   sha256 "2deebd8efc69f06ae51cbc17eecfa15310a8a6a46a800645b285d2be360fd922"
