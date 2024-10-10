@@ -1,5 +1,5 @@
 cask "kindle-create" do
-  version "1.93"
+  version "1.94"
   sha256 :no_check
 
   url "https://d2bzeorukaqrvt.cloudfront.net/KindleCreateInstaller.pkg",
