@@ -1,18 +1,21 @@
 cask "prolific-pl2303" do
-  version "2.2.2_20221228"
-  sha256 "46983d662c07ef8e734aed9f81e4a6112b1eb4857e1f02bacd0138ac6eace979"
+  version "2.2.5,20240808"
+  sha256 "cb83f3d4d6102325a4daedb1e34acdda740d0f4798e21654b721202e9d192b36"
 
-  url "https://www.prolific.com.tw/UserFiles/files/PL2303HXD_G_Mac%20Driver_v#{version.dots_to_underscores}.zip"
+  url "https://www.prolific.com.tw/UserFiles/files/PL2303HXD_G_Mac%20Driver_v#{version.csv.first.dots_to_underscores}_#{version.csv.second}_pkg.zip"
   name "Prolific USB to Serial Cable driver"
   desc "PL2303 USB-to-serial driver"
   homepage "https://www.prolific.com.tw/US/"
 
   livecheck do
     url "https://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41"
-    regex(/PL2303HXD_G_Mac\s*Driver_v?(\d+(?:\.\d+)*_\d+)\.zip/i)
+    regex(/href=.*?PL2303HXD_G_Mac\s*Driver[._-]v?(\d+(?:[._]\d+)+)[_-](\d+)[._-]pkg\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
+    end
   end
 
-  pkg "PL2303HXD_G_Mac Driver_v#{version}.pkg"
+  pkg "PL2303HXD_G_Mac Driver_v#{version.csv.first}_#{version.csv.second}.pkg"
 
   uninstall quit:    [
               "com.prolific.cdc.PLCdcFSDriver",
