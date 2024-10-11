@@ -13,12 +13,17 @@ cask "bentobox" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "BentoBox.app"
 
   zap trash: [
+    "~/Library/Application Support/org.friendlyventures.BentoBox",
+    "~/Library/Caches/org.friendlyventures.BentoBox",
+    "~/Library/HTTPStorages/org.friendlyventures.BentoBox",
     "~/Library/Preferences/org.friendlyventures.BentoBox.plist",
     "~/Library/Saved Application State/org.friendlyventures.BentoBox.savedState",
+    "~/Library/WebKit/org.friendlyventures.BentoBox",
   ]
 end
