@@ -170,7 +170,7 @@ Style/InvertibleUnlessCondition:
   Enabled: true
   InverseMethods:
     :==: :!=
-    :zero?: 
+    :zero?:
     :blank?: :present?
 Style/MutableConstant:
   EnforcedStyle: strict
