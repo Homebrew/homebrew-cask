@@ -1,6 +1,6 @@
 cask "yandex-music" do
-  version "5.23.1"
-  sha256 "95674a21515b149fc8080736a4620e2bee8fdc2b56e858c5fe27e9a17f74974b"
+  version "5.23.2"
+  sha256 "33623f662f894ff470e4373d483082912c765f4588124646686235c6636311d4"
 
   url "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_universal_#{version}.dmg",
       verified: "music-desktop-application.s3.yandex.net/stable/"
