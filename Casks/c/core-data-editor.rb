@@ -6,6 +6,8 @@ cask "core-data-editor" do
   name "Core Data Editor"
   homepage "https://github.com/ChristianKienle/Core-Data-Editor/"
 
+  deprecate! date: "2024-10-10", because: :unmaintained
+
   depends_on macos: ">= :sierra"
 
   app "Core Data Editor.app"
