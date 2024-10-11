@@ -8,4 +8,6 @@ cask "modmove" do
   homepage "https://github.com/keith/modmove"
 
   app "ModMove.app"
+
+  # No zap stanza required
 end
