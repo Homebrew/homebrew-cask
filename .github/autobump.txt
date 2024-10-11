@@ -449,6 +449,7 @@ julia@lts
 jumpshare
 jupyterlab
 juxtacode
+jyutping
 kaleidoscope
 kdenlive
 kdrive
