@@ -5,7 +5,7 @@ cask "legcord" do
   url "https://github.com/legcord/legcord/releases/download/v#{version}/legcord-#{version}-mac-universal.dmg",
       verified: "github.com/legcord/legcord/"
   name "Legcord"
-  desc "Custom lightweight Discord client designed to enhance your experience"
+  desc "Custom Discord client"
   homepage "https://legcord.app/"
 
   depends_on macos: ">= :catalina"
