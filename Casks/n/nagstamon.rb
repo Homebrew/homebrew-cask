@@ -8,6 +8,11 @@ cask "nagstamon" do
   desc "Nagios status monitor"
   homepage "https://nagstamon.de/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Nagstamon.app"
 
   zap trash: "~/.nagstamon"
