@@ -21,7 +21,23 @@ cask "1password-cli" do
     "1password-cli@beta",
   ]
 
+  zsh_completion = "#{staged_path}/_op"
+  bash_completion = "#{staged_path}/op.bash"
+  fish_completion = "#{staged_path}/op.fish"
+
   binary "op"
+  binary zsh_completion, target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_op"
+  binary bash_completion, target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/op"
+  binary fish_completion, target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/op.fish"
+
+  preflight do
+    stdout, * = system_command "#{staged_path}/op", args: ["completion", "zsh"]
+    File.write zsh_completion, stdout
+    stdout, * = system_command "#{staged_path}/op", args: ["completion", "bash"]
+    File.write bash_completion, stdout
+    stdout, * = system_command "#{staged_path}/op", args: ["completion", "fish"]
+    File.write fish_completion, stdout
+  end
 
   zap trash: "~/.op"
 end
