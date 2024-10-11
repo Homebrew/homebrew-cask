@@ -9,7 +9,7 @@ cask "soundsource" do
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "5.7.1"
+    version "5.7.2"
 
     url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource.zip"
 
