@@ -105,6 +105,7 @@ blood-on-the-clocktower-online
 bloop
 boinc
 boltai
+boosteroid
 box-drive
 brave-browser
 brave-browser@beta
