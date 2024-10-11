@@ -78,9 +78,11 @@ backblaze
 backuploupe
 badlion-client
 baidunetdisk
+balenaetcher
 banana-cake-pop
 banking-4
 banktivity
+bazecor
 bbedit
 beekeeper-studio
 beeper
@@ -162,6 +164,8 @@ cloudflare-warp
 cloudmounter
 cloudnet
 cmake
+codeedit
+codekit
 codeql
 codux
 cog
@@ -194,6 +198,7 @@ dataspell
 datovka
 dbeaver-community
 dbgate
+dbschema
 dcommander
 dcp-o-matic
 dcp-o-matic-batch-converter
@@ -246,6 +251,7 @@ dropzone
 duckduckgo
 ea
 ecamm-live
+edrawmind
 egnyte
 electerm
 electron
@@ -687,6 +693,7 @@ plex-media-server
 plexamp
 plus42-binary
 plus42-decimal
+polymail
 polypane
 popo
 popsql
@@ -716,6 +723,7 @@ protonvpn
 prowlarr
 proxyman
 psychopy
+publish-or-perish
 purei-play
 puzzles
 pycharm
@@ -737,6 +745,7 @@ quicken
 quicktune
 quip
 racket
+radarr
 rancher
 rapidapi
 rapidweaver
@@ -835,6 +844,7 @@ snagit
 snapmaker-luban
 sol
 sonarr
+songkong
 soulver
 sound-control
 sourcetree
@@ -861,6 +871,7 @@ superkey
 superlist
 supernotes
 superproductivity
+surfshark
 surge
 swiftformat-for-xcode
 syncovery
@@ -929,6 +940,7 @@ tuple
 tuta-mail
 tuxera-ntfs
 twine
+tyme
 typeface
 typora
 typora@dev
