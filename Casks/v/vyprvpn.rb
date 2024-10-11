@@ -1,16 +1,15 @@
 cask "vyprvpn" do
-  version "5.1.1.10028"
-  sha256 "369f2173e3ea1b4bb58c1eda3989344286a7fac9c880d7420dcdd7f0157ec2fb"
+  version "5.2.0.10702"
+  sha256 "d6ec7e71ed6d0f85c778e5fcadf0073859e13aea7513f1ce4837a38700f595a7"
 
-  url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg",
-      verified: "goldenfrog.com/downloads/vyprvpn/"
+  url "https://www.vyprvpn.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version.major_minor_patch}.dmg"
   name "VyprVPN"
   desc "VPN client"
   homepage "https://www.vyprvpn.com/"
 
   livecheck do
     url "https://www.vyprvpn.com/vpn-apps/vpn-for-mac"
-    regex(/href=.*?VyprVPN[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/VyprVPN.*?\.dmg}i)
   end
 
   auto_updates true
