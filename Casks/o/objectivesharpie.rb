@@ -1,6 +1,6 @@
 cask "objectivesharpie" do
-  version "3.5.76,87c92e02-3d02-45de-bdd5-41721ed5bfc9,60cd0050e247aa99da79a52ef3228f32"
-  sha256 "e6a4683863e80c634e0aaec25f6a1737c6ecac7142954f1fd7842266aef8bfce"
+  version "3.5.116,3a748cc2-780d-403c-88ba-700aa9a2d299,88cbfd86e85f56b4c61e092d0f0b9ad9"
+  sha256 "4fc3acf4687d491a500194db0e7c915a767acdddd9804082c7f04805540b103a"
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/objectivesharpie-#{version.csv.first}.pkg"
   name "Objective Sharpie"
