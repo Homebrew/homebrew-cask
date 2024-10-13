@@ -5,7 +5,7 @@ cask "webkinz" do
   url "http://downloads.webkinz.com/apps/wxsetup-#{version}.dmg"
   name "Webkinz Classic"
   desc "Virtual pet MMO"
-  homepage "https://webkinz.com"
+  homepage "https://webkinz.com/"
 
   livecheck do
     url "http://downloads.webkinz.com/apps/latest-mac.yml"
@@ -18,10 +18,10 @@ cask "webkinz" do
   app "Webkinz.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ganz.webkinz.sfl*",
     "~/Library/Application Support/Webkinz",
     "~/Library/Logs/Webkinz",
     "~/Library/Saved Application State/Ganz.Webkinz.savedState",
     "~/Preferences/Ganz.Webkinz.plist",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ganz.webkinz.sfl3",
   ]
 end
