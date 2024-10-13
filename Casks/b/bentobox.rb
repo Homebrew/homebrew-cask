@@ -1,6 +1,6 @@
 cask "bentobox" do
-  version "0.7.8"
-  sha256 "4b31d45e0647642293ea40fbe21ceae3c01b39dcf2b62e5be73ffb250014da21"
+  version "0.7.9"
+  sha256 "53131afe571124f7b02efe3e7ce2c442b90fa3f235f9672e4f992e8be3168ccd"
 
   url "https://releases.bentobox.friendlyventures.org/#{version}/bentobox-macos-universal.zip",
       verified: "releases.bentobox.friendlyventures.org/"
