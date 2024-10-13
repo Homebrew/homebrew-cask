@@ -8,8 +8,23 @@ cask "cubicsdr" do
   desc "Cross-platform software-defined radio application"
   homepage "https://cubicsdr.com/"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
-    skip "No reliable way to get version info"
+    url :url
+    regex(/^CubicSDR[._-]v?(\d+(?:\.\d+)+)(?:[._-]Darwin)?\.(?:dmg|pkg|zip)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   app "CubicSDR.app"
