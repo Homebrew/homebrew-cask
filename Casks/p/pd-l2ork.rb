@@ -1,6 +1,6 @@
 cask "pd-l2ork" do
-  version "2.19.3"
-  sha256 "c0ffc0cd92295376e880455d3e69d1c7382f03093de0602a201846608ac007d3"
+  version "2.20.0"
+  sha256 "2592eb36a2387c7a357cb942b1b895e6201f3ec28b97e29070475b7ed6ba26f5"
 
   url "https://github.com/agraef/purr-data/releases/download/#{version.csv.first}/purr-data-#{version.csv.first}-macos-x86_64.zip",
       verified: "github.com/agraef/purr-data/"
