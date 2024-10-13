@@ -6,6 +6,8 @@ cask "mysides" do
   name "mysides"
   homepage "https://github.com/mosen/mysides"
 
+  deprecate! date: "2024-10-13", because: :unmaintained
+
   pkg "mysides-#{version}.pkg"
 
   uninstall pkgutil: "com.github.mosen.mysides"
