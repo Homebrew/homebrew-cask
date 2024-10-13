@@ -8,8 +8,23 @@ cask "duckietv" do
   desc "Tool to track TV shows with semi-automagic torrent integration"
   homepage "https://schizoduckie.github.io/DuckieTV/"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
-    skip "No reliable way to get version info"
+    url :url
+    regex(/^DuckieTV[._-]v?(\d+(?:\.\d+)+)[._-](?:mac|OSX)[._-]x64\.(?:dmg|pkg|zip)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   pkg "DuckieTV-#{version}-OSX-x64.pkg"
