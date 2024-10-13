@@ -6,5 +6,7 @@ cask "epubmdimporter" do
   name "EPUB Spotlight"
   homepage "https://github.com/jaketmp/ePub-quicklook"
 
+  deprecate! date: "2024-10-13", because: :unmaintained
+
   mdimporter "epub.mdimporter", target: "AA_epub.mdimporter"
 end
