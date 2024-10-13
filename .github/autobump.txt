@@ -86,6 +86,7 @@ bazecor
 bbedit
 beekeeper-studio
 beeper
+bentobox
 betterdisplay
 bettermouse
 bettertouchtool
