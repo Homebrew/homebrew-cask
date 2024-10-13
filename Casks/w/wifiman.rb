@@ -1,11 +1,11 @@
 cask "wifiman" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "arm64", intel: "amd64"
 
-  version "0.3.0"
-  sha256 arm:   "47c1794e20d8a728f790beb26e8bdbd5a30a251fd421419d2589fb40ca3faf7a",
-         intel: "be1e7bb2123a94ecb624ebc26ad3b83d075193aa0d70b06b05bd0f0fb2f70da9"
+  version "1.1.0"
+  sha256 arm:   "f9544ae95a76bf0f5dec77fa0b3a37b0115190349df63a11e5318e67141ddd67",
+         intel: "ad0f92c992c8aa60f8bc442e8d3c4c801d21dbce87f0120effb129b61b315091"
 
-  url "https://desktop.wifiman.com/wifiman-desktop-#{version}-mac-#{arch}.pkg"
+  url "https://desktop.wifiman.com/wifiman-desktop-#{version}-#{arch}.pkg"
   name "WiFiman Desktop"
   desc "Network monitoring and troubleshooting tool"
   homepage "https://wifiman.com/"
@@ -14,17 +14,20 @@ cask "wifiman" do
     skip "No version information available"
   end
 
-  pkg "wifiman-desktop-#{version}-mac-#{arch}.pkg"
+  pkg "wifiman-desktop-#{version}-#{arch}.pkg"
 
   uninstall launchctl: "wifiman-desktop",
-            pkgutil:   "com.ui.wifiman-desktop",
+            pkgutil:   [
+              "ui.wifiman.com",
+              "ui.wifiman.network.helper.WiFimanNetworkHelper",
+            ],
             delete:    "/Applications/WiFiman Desktop.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ui.wifiman-desktop.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ui.wifiman-desktop.sfl*",
     "~/Library/Application Support/wifiman-desktop",
     "~/Library/Logs/wifiman-desktop",
-    "~/Library/Preferences/com.ui.wifiman-desktop.plist",
-    "~/Library/Saved Application State/com.ui.wifiman-desktop.savedState",
+    "~/Library/Preferences/ui.wifiman-desktop.plist",
+    "~/Library/Saved Application State/ui.wifiman-desktop.savedState",
   ]
 end
