@@ -8,10 +8,7 @@ cask "multifirefox" do
   desc "Launcher utility to run multiple versions of Firefox side-by-side"
   homepage "https://davemartorana.com/multifirefox/"
 
-  livecheck do
-    url "https://mff_sparkle.s3.amazonaws.com/MultiFirefoxAppcast#{version.major}.xml"
-    strategy :sparkle
-  end
+  deprecate! date: "2024-10-12", because: :unmaintained
 
   app "MultiFirefox.app"
 
