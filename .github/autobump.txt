@@ -300,6 +300,7 @@ firefox@esr
 fixkey
 fleet
 flipper
+fliqlo
 flirc
 floorp
 flox
