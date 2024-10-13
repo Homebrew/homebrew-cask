@@ -4,7 +4,7 @@ cask "devcleaner" do
 
   url "https://github.com/vashpan/xcode-dev-cleaner/releases/download/#{version.sub(/-\d+/, "")}/DevCleaner-#{version}.zip"
   name "DevCleaner"
-  desc "Reclaim tens of gigabytes of your storage used for various Xcode caches"
+  desc "Reclaim storage used for Xcode caches"
   homepage "https://github.com/vashpan/xcode-dev-cleaner"
 
   livecheck do
