@@ -8,10 +8,7 @@ cask "luxmark" do
   desc "OpenCL benchmark"
   homepage "http://www.luxmark.info/"
 
-  livecheck do
-    url :url
-    regex(/^luxmark[._-]v?(\d+(?:\.\d+)+)$/i)
-  end
+  deprecate! date: "2024-10-12", because: :unmaintained
 
   app "LuxMark.app"
 
