@@ -1,6 +1,6 @@
 cask "menubarx" do
-  version "1.7.1"
-  sha256 "0875300fffc0649e00046dd4402c24e09f590d38aa345ce2ae9bc15a5ebc754f"
+  version "1.7.2"
+  sha256 "13342a318b9d35827f41b90744fc89d346ac6947b7edc3ef7b60bb44b71dfe0b"
 
   url "https://menubarx-1251679148.file.myqcloud.com/download/MenubarX-#{version}.dmg",
       verified: "menubarx-1251679148.file.myqcloud.com/download/"
