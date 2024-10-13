@@ -1,8 +1,8 @@
 cask "fl-studio" do
-  version "24.1.1.3936"
-  sha256 "2c417716d7009270386e85c459c138b14377210a56a6b63eab5ab79c53162bc0"
+  version "24.1.2.4038"
+  sha256 "01ac07fa739aef1fb14fc342a933987194a681a1bb6814d712a4337060b4adfb"
 
-  url "https://install.image-line.com/flstudio/flstudio_mac_#{version}.dmg",
+  url "https://demodownload.image-line.com/flstudio/flstudio_mac_#{version}.dmg",
       referer:    "https://www.image-line.com/fl-studio-download/",
       user_agent: :browser
   name "FL Studio"
