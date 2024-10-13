@@ -7,10 +7,7 @@ cask "better-window-manager" do
   desc "Tools to save/restore window states"
   homepage "http://www.gngrwzrd.com/better-window-manager/"
 
-  livecheck do
-    url "http://www.gngrwzrd.com/betterwindowmanager-appcast.xml"
-    strategy :sparkle
-  end
+  deprecate! date: "2024-10-12", because: :unmaintained
 
   app "Better Window Manager.app"
 
