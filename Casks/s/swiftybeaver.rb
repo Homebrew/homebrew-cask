@@ -8,10 +8,7 @@ cask "swiftybeaver" do
   desc "Swift logging"
   homepage "https://swiftybeaver.com/"
 
-  livecheck do
-    url "https://swiftybeaver.s3.amazonaws.com/sbmac-appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-10-12", because: :unmaintained
 
   app "SwiftyBeaver.app"
 
