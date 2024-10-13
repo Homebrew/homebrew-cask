@@ -7,6 +7,8 @@ cask "lighting" do
   desc "Tool to control LIFX lights via a Notification Center widget"
   homepage "https://github.com/tatey/Lighting"
 
+  deprecate! date: "2024-10-12", because: :unmaintained
+
   app "Lighting.app"
 
   caveats do
