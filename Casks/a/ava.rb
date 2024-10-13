@@ -9,7 +9,7 @@ cask "ava" do
   homepage "https://avapls.com/"
 
   livecheck do
-    url :homepage
+    url "https://avapls.com/docs/archive.html"
     regex(/href=.*?Ava[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
