@@ -13,7 +13,6 @@ cask "webkinz" do
   end
 
   depends_on macos: ">= :el_capitan"
-  depends_on arch: :x86_64
 
   app "Webkinz.app"
 
@@ -24,4 +23,8 @@ cask "webkinz" do
     "~/Library/Saved Application State/Ganz.Webkinz.savedState",
     "~/Preferences/Ganz.Webkinz.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
