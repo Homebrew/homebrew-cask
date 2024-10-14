@@ -7,10 +7,7 @@ cask "cmdtap" do
   desc "Adds other functions to Task Switcher"
   homepage "https://www.yingdev.com/projects/cmdtap"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/(\d+(?:\.\d+)+)/CmdTap\.zip}i)
-  end
+  deprecate! date: "2024-10-14", because: :unmaintained
 
   app "CmdTap.app"
 
