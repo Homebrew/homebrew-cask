@@ -16,4 +16,13 @@ cask "meta" do
   depends_on macos: ">= :high_sierra"
 
   app "Meta.app"
+
+  zap trash: [
+    "~/Library/Application Support/Meta",
+    "~/Library/Caches/com.nightbirdsevolve.Meta",
+    "~/Library/HTTPStorages/com.nightbirdsevolve.Meta",
+    "~/Library/HTTPStorages/com.nightbirdsevolve.Meta.binarycookies",
+    "~/Library/Preferences/com.nightbirdsevolve.Meta.plist",
+    "~/Library/Saved Application State/com.nightbirdsevolve.Meta.savedState",
+  ]
 end
