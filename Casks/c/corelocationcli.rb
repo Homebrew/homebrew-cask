@@ -8,4 +8,6 @@ cask "corelocationcli" do
   homepage "https://github.com/fulldecent/corelocationcli"
 
   binary "CoreLocationCLI"
+
+  # no zap stanza required
 end
