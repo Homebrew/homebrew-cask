@@ -9,16 +9,7 @@ cask "ghosttile" do
   desc "Hide your running applications from Dock"
   homepage "https://ghosttile.kernelpanic.im/"
 
-  livecheck do
-    url "https://updates.devmate.com/im.kernelpanic.GhostTile.xml"
-    regex(%r{/(\d+)/GhostTile\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
-
-      "#{item.short_version},#{match[2]},#{match[1]}"
-    end
-  end
+  deprecate! date: "2024-10-14", because: :unmaintained
 
   app "GhostTile.app"
 
