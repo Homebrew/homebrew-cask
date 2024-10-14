@@ -8,10 +8,7 @@ cask "gutenprint" do
   desc "Drivers for various printers for use with CUPS and GIMP"
   homepage "https://gimp-print.sourceforge.io/"
 
-  livecheck do
-    url "https://gimp-print.sourceforge.io/MacOSX.php"
-    regex(/gutenprint[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end
+  deprecate! date: "2024-10-14", because: :discontinued
 
   pkg "gutenprint-#{version}.pkg"
 
