@@ -8,6 +8,8 @@ cask "fenix" do
   desc "Simple and visual static web server with collaboration features"
   homepage "http://fenixwebserver.com/"
 
+  disable! date: "2024-10-14", because: "is 32-bit only"
+
   container nested: "Fenix_#{version}.dmg"
 
   app "Fenix.app"
