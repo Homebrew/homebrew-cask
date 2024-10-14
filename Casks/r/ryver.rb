@@ -1,16 +1,18 @@
 cask "ryver" do
-  version "1.3.2"
-  sha256 "949abb92a3df5034fd8c81e1fe78a9c7bd7be2ad699bef9d423ad3a39cd48d54"
+  version "1.3.3"
+  sha256 "8186020f264ef51c94430321710c74f3043b34aabb08be29fafe1e7b4aa1c3ae"
 
-  url "https://d3vkb1nw20iqfq.cloudfront.net/mac/Ryver-#{version}.dmg",
-      verified: "d3vkb1nw20iqfq.cloudfront.net/"
+  url "https://downloads.ryver.com/mac/ryver-#{version}.zip"
   name "Ryver"
+  desc "Team communication and collaboration software"
   homepage "https://ryver.com/"
 
   livecheck do
-    url "https://ryver.com/download/mac/stable"
+    url "https://downloads.ryver.com/mac/stable"
     strategy :header_match
   end
+
+  container nested: "Ryver-#{version}.dmg"
 
   app "Ryver.app"
 
