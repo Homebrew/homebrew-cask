@@ -20,8 +20,8 @@ cask "webkinz" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ganz.webkinz.sfl*",
     "~/Library/Application Support/Webkinz",
     "~/Library/Logs/Webkinz",
-    "~/Library/Saved Application State/Ganz.Webkinz.savedState",
     "~/Library/Preferences/Ganz.Webkinz.plist",
+    "~/Library/Saved Application State/Ganz.Webkinz.savedState",
   ]
 
   caveats do
