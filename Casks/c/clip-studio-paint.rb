@@ -1,6 +1,6 @@
 cask "clip-studio-paint" do
-  version "2.3.4"
-  sha256 "52303ea331dbdced3b8ae73cec0e9c3f1d5ae7b842bebba8988215262baef6a1"
+  version "3.0.4"
+  sha256 "9839be29b8a3cd94213c6ba3992885b12142689dd3bf75cc04ea0c4da17ef84a"
 
   url "https://vd.clipstudio.net/clipcontent/paint/app/#{version.no_dots}/CSP_#{version.no_dots}m_app.pkg"
   name "Clip Studio Paint"
@@ -8,11 +8,11 @@ cask "clip-studio-paint" do
   homepage "https://www.clipstudio.net/en"
 
   livecheck do
-    url "https://www.clipstudio.net/en/dl/release_note/v2/"
-    regex(/Clip\s+Studio\s+Paint\s+(?:v|Ver\.?|Version)?\s*(\d+(?:\.\d+)+)/i)
+    url "https://www.clipstudio.net/en/dl/v#{version.major}/"
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   installer manual: "CSP_#{version.no_dots}m_app.pkg"
 
