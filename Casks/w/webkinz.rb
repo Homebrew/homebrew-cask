@@ -21,7 +21,7 @@ cask "webkinz" do
     "~/Library/Application Support/Webkinz",
     "~/Library/Logs/Webkinz",
     "~/Library/Saved Application State/Ganz.Webkinz.savedState",
-    "~/Preferences/Ganz.Webkinz.plist",
+    "~/Library/Preferences/Ganz.Webkinz.plist",
   ]
 
   caveats do
