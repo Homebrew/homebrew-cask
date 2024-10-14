@@ -397,6 +397,7 @@ gstreamer-development
 gstreamer-runtime
 gyazo
 hackolade
+hancom-docs
 hashbackup
 hazel
 hbuilderx
