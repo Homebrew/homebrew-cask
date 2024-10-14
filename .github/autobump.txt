@@ -472,6 +472,7 @@ krisp
 lagrange
 languagetool
 lark
+launchbar
 lazycat
 leapp
 lectrote
@@ -505,6 +506,7 @@ loupedeck
 lunacy
 lunar
 lunar-client
+lycheeslicer
 lynx
 maa
 maccy
@@ -594,6 +596,7 @@ multitouch
 multiviewer-for-f1
 mumuplayer
 murus
+mutedeck
 mweb-pro
 native-access
 naver-whale
@@ -701,6 +704,7 @@ plus42-binary
 plus42-decimal
 polymail
 polypane
+popchar
 popo
 popsql
 portfolioperformance
@@ -900,6 +904,7 @@ tenable-nessus-agent
 tencent-meeting
 termius
 termius@beta
+texifier
 texshop
 texstudio
 thangs-sync
@@ -1022,6 +1027,7 @@ wordpresscom-studio
 workflowy
 wpsoffice-cn
 writerside
+xca
 xcodepilot
 xemu
 xiv-on-mac
