@@ -130,8 +130,4 @@ cask "adobe-creative-cloud" do
         "~/Library/Application Support/Adobe",
         "~/Library/Logs/Adobe",
       ]
-
-  caveats do
-    requires_rosetta
-  end
 end
