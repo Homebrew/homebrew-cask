@@ -6,9 +6,9 @@ cask "font-envy-code-r" do
   name "Envy Code R"
   homepage "https://damieng.com/blog/tag/envy-code/"
 
-  font "Envy Code R PR7/Envy Code R Bold.ttf"
-  font "Envy Code R PR7/Envy Code R Italic.ttf"
-  font "Envy Code R PR7/Envy Code R.ttf"
+  font "Envy Code R #{version}/Envy Code R Bold.ttf"
+  font "Envy Code R #{version}/Envy Code R Italic.ttf"
+  font "Envy Code R #{version}/Envy Code R.ttf"
 
   # No zap stanza required
 end
