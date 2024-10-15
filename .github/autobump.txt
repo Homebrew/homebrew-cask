@@ -1013,6 +1013,7 @@ wasabi-wallet
 waterfox
 wave
 wavebox
+waves-central
 wealthfolio
 webcatalog
 webstorm
