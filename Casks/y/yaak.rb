@@ -18,7 +18,8 @@ cask "yaak" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "yaak.app"
 
