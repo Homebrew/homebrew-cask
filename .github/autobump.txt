@@ -391,6 +391,7 @@ google-cloud-sdk
 gpg-suite@nightly
 gpxsee
 gqrx
+graalvm-jdk@21
 grammarly-desktop
 grandtotal
 gridtracker
