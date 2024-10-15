@@ -704,6 +704,7 @@ plex-media-server
 plexamp
 plus42-binary
 plus42-decimal
+poker-copilot
 polymail
 polypane
 popchar
