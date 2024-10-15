@@ -27,13 +27,13 @@ cask "morisawa-desktop-manager" do
             delete:    "/Application/Morisawa Desktop Manager.app"
 
   zap trash: [
-    "/Library/Application Support/Morisawa Desktop Manager",
-    "/Library/Application Support/Morisawa/Logs/MdmInstall.log",
-    "~/Library/Application Support/jp.co.morisawa.MorisawaDesktopManager",
-    "~/Library/Application Support/Morisawa Desktop Manager",
-    "~/Library/Application Support/MorisawaFonts",
-    "~/Library/Fonts/MorisawaFonts",
-    "~/Library/HTTPStorages/jp.co.morisawa.MorisawaDesktopManager",
-    "~/Library/Preferences/jp.co.morisawa.MorisawaDesktopManager.plist",
-  ]
+        "/Library/Application Support/Morisawa Desktop Manager",
+        "/Library/Application Support/Morisawa/Logs/MdmInstall.log",
+        "~/Library/Application Support/jp.co.morisawa.MorisawaDesktopManager",
+        "~/Library/Application Support/Morisawa Desktop Manager",
+        "~/Library/Application Support/MorisawaFonts",
+        "~/Library/HTTPStorages/jp.co.morisawa.MorisawaDesktopManager",
+        "~/Library/Preferences/jp.co.morisawa.MorisawaDesktopManager.plist",
+      ],
+      rmdir: "~/Library/Fonts/MorisawaFonts"
 end
