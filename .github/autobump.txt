@@ -712,6 +712,7 @@ popsql
 portfolioperformance
 positron
 postbox
+postico
 postman
 postman-agent
 postman-cli
