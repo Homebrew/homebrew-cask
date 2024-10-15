@@ -5,7 +5,7 @@ cask "morisawa-desktop-manager" do
   url "https://morisawafonts.com/resources/dm/#{version}/mac/site/MorisawaDesktopManager_#{version}.dmg"
   name "Morisawa Desktop Manager"
   desc "Manager for Morisawa Fonts"
-  homepage "https://morisawafonts.com/mypage/dm/"
+  homepage "https://en.morisawafonts.com/"
 
   livecheck do
     url "https://morisawafonts.com/resources/dm/mf_updates.mac.json"
