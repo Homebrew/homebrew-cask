@@ -1044,6 +1044,7 @@ xpra
 yaak
 yandex-music
 yealink-meeting
+yes24-ebook
 yinxiangbiji
 youdaonote
 youku
