@@ -11,7 +11,7 @@ cask "font-tex-gyre-schola-math" do
     regex(/Schola\sMath\s\(OTF\),\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
-  font "texgyreschola-math-1533/opentype/texgyreschola-math.otf"
+  font "texgyreschola-math-#{version.no_dots}/opentype/texgyreschola-math.otf"
 
   # No zap stanza required
 end
