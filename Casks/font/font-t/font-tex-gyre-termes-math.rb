@@ -11,7 +11,7 @@ cask "font-tex-gyre-termes-math" do
     regex(/Termes\sMath\s\(OTF\),\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
-  font "texgyretermes-math-1543/opentype/texgyretermes-math.otf"
+  font "texgyretermes-math-#{version.no_dots}/opentype/texgyretermes-math.otf"
 
   # No zap stanza required
 end
