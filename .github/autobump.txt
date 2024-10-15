@@ -589,6 +589,7 @@ mountain-duck
 mp3tag
 mqttx
 msty
+mubu
 mudlet
 mullvad-browser
 mullvadvpn
