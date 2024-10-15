@@ -12,7 +12,7 @@ cask "mars" do
 
   container type: :naked
 
-  artifact "Mars#{version.csv.first.dots_to_underscores}.jar", target: "#{appdir}/Mars.jar"
+  artifact "Mars#{version.major_minor.dots_to_underscores}.jar", target: "#{appdir}/Mars.jar"
 
   caveats do
     depends_on_java "9+"
