@@ -464,6 +464,7 @@ keyboard-cowboy
 keyman
 keymapp
 keysafe
+kicad
 kindle-comic-converter
 kindle-previewer
 kitty
