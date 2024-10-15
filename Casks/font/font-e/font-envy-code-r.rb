@@ -4,7 +4,12 @@ cask "font-envy-code-r" do
 
   url "https://download.damieng.com/fonts/original/EnvyCodeR-#{version}.zip"
   name "Envy Code R"
-  homepage "https://damieng.com/blog/tag/envy-code/"
+  homepage "https://damieng.com/blog/2008/05/26/envy-code-r-preview-7-coding-font-released"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?EnvyCodeR[._-](.*?)\.zip/i)
+  end
 
   font "Envy Code R #{version}/Envy Code R Bold.ttf"
   font "Envy Code R #{version}/Envy Code R Italic.ttf"
