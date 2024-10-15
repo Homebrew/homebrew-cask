@@ -756,6 +756,7 @@ qt-creator
 quarto
 quickbooks
 quicken
+quicksilver
 quicktune
 quip
 racket
