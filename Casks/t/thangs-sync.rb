@@ -1,6 +1,6 @@
 cask "thangs-sync" do
-  version "1.8.3"
-  sha256 "55d386a03ac37e83fd672b95d895058051c9f59ca4551c6ac878032795fb84ce"
+  version "1.9.0"
+  sha256 "125b1c5e48edd569b8c0ede188144adc26509e694cc12f8b591348ca7ee6d5c3"
 
   url "https://storage.googleapis.com/production-thangs-public/sync/darwin/latest/Thangs%20Sync-#{version}-mac.zip",
       verified: "storage.googleapis.com/production-thangs-public/"
