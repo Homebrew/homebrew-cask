@@ -903,6 +903,7 @@ telegram-desktop
 telegram-desktop@beta
 teleport-connect
 tenable-nessus-agent
+tencent-lemon
 tencent-meeting
 termius
 termius@beta
