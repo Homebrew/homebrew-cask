@@ -850,6 +850,7 @@ sitesucker-pro
 siyuan
 sketch
 sketch@beta
+skim
 skype
 skype@preview
 slack
