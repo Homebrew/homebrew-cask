@@ -25,13 +25,9 @@ cask "fldigi" do
     strategy :page_match
   end
 
-  app "fldigi.app"
-  app "flarq.app"
-
-  preflight do
-    staged_path.glob("fldigi-*.app").first.rename(staged_path/"fldigi.app")
-    staged_path.glob("flarq-*.app").first.rename(staged_path/"flarq.app")
-  end
+  # flarq has a different version number and must be updated manually
+  app "flarq-4.3.9.app"
+  app "fldigi-#{version}.app"
 
   zap trash: "~/.fldigi"
 end
