@@ -792,6 +792,7 @@ ringcentral
 rio
 rippling
 rive
+rize
 roam
 roblox
 robloxstudio
