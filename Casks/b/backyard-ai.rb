@@ -1,7 +1,7 @@
 cask "backyard-ai" do
   arch arm: "Arm64"
 
-  version "0.28.22"
+  version "0.29.2"
   sha256 :no_check
 
   url "https://update.backyard.ai/download/dmg#{arch}"
