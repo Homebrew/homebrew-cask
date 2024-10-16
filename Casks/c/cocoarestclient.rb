@@ -11,4 +11,11 @@ cask "cocoarestclient" do
   depends_on macos: ">= :mojave"
 
   app "CocoaRestClient.app"
+
+  zap trash: [
+    "~/Library/Application Support/CocoaRestClient",
+    "~/Library/HTTPStorages/org.restlesscode.cocoarestclient",
+    "~/Library/Preferences/org.restlesscode.cocoarestclient.plist",
+    "~/Library/Saved Application State/org.restlesscode.cocoarestclient.savedState",
+  ]
 end
