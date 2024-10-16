@@ -7,10 +7,7 @@ cask "mari0" do
   desc "Recreation of Super Mario Bros"
   homepage "https://stabyourself.net/mari0/"
 
-  livecheck do
-    url "https://stabyourself.net/mari0/#download"
-    regex(/mari0[._-]v?(\d+)/i)
-  end
+  disable! date: "2024-10-15", because: :unmaintained
 
   app "Mari0.app"
 end
