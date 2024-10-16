@@ -895,6 +895,7 @@ superproductivity
 surfshark
 surge
 swiftformat-for-xcode
+sync
 syncovery
 syncthing
 tabby
