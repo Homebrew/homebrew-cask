@@ -651,6 +651,7 @@ onekey
 opal-composer
 openaudible
 opencat
+opencore-configurator
 openlens
 openrct2
 openscad@snapshot
