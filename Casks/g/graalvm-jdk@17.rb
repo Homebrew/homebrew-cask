@@ -1,11 +1,11 @@
 cask "graalvm-jdk@17" do
   arch arm: "aarch64", intel: "x64"
 
-  version "17.0.12"
-  sha256 arm:   "4cdfdc6c9395f6773efcd191b6605f1b7c8e1b78ab900ab5cff34720a3feffc5",
-         intel: "3ecac1471f3fa95a56c5b75c65db9e60ac4551f56eda09eb9da95e6049ea77d7"
+  version "17.0.13"
+  sha256 arm:   "3305ca55dcc626745b338cd1755de5bbcf1a647b63737361fb3c1821eddbaae1",
+         intel: "bc19284b9db6c150fcbdfebaa9f3dc2bf722af1c62b6cca2cad682cba043642c"
 
-  url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version}_macos-#{arch}_bin.tar.gz",
+  url "https://download.oracle.com/otn/utilities_drivers/oracle-labs/graalvm-jdk-#{version}_macos-#{arch}_bin.tar.gz",
       verified: "download.oracle.com/"
   name "GraalVM Java Development Kit"
   desc "GraalVM from Oracle"
