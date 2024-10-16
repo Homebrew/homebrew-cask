@@ -22,4 +22,13 @@ cask "sunlogincontrol" do
 
   uninstall quit:    "com.oray.remote",
             pkgutil: "com.oray.remote"
+
+  zap trash: [
+    "~/Library/Caches/com.oray.remote",
+    "~/Library/HTTPStorages/com.oray.remote.binarycookies",
+    "~/Library/Preferences/com.oray.remote.plist",
+    "~/Library/Saved Application State/com.oray.remote.savedState",
+    "~/Library/WebKit/com.oray.remote",
+    "~/Sunlogin",
+  ]
 end
