@@ -47,9 +47,17 @@ cask "microsoft-powerpoint" do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
+  on_monterey do
     version "16.89.24091630"
     sha256 "44801ae2e12318f6f8982da6fabb1c7c1d79fb38cc464fecfd60189aa36e9555"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_ventura :or_newer do
+    version "16.90.24101387"
+    sha256 "1ea9342528f488ffcdffe2ea7c61b858ef33183225a9d4a16cf95ef22a6e2ecb"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
