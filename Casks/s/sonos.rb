@@ -1,6 +1,6 @@
 cask "sonos" do
-  version "80.1-55014,xqkmivn9QB"
-  sha256 "cac8a5f9e13c2959bd2dff239a8576c40c2fb84afa7f412ac393dabf7b120461"
+  version "81.1-58074,R3MV5bKh64"
+  sha256 "9eac889a38810a321fcffc6c23b0481474b1480576e23bba5d01d026eac5f6d7"
 
   url "https://update-software.sonos.com/software/#{version.csv.second}/Sonos_#{version.csv.first}.dmg"
   name "Sonos S2"
