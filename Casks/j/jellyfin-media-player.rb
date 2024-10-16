@@ -2,9 +2,11 @@ cask "jellyfin-media-player" do
   version "1.11.1"
 
   on_ventura :or_older do
+    # Monterey and Ventura require Rosetta on Apple Silicon
     arch arm: "Intel", intel: "Intel"
 
     sha256 "2683c358606d8b3196c890759331a29f204438e53408640429e832ca3d92ffe0"
+
     caveats do
       requires_rosetta
     end
