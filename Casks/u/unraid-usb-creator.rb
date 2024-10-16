@@ -1,13 +1,19 @@
 cask "unraid-usb-creator" do
-  version "2.1"
-  sha256 "befa042b7fd611f106e182a3128e197173a15072e9f36f979dc89776e698da84"
+  version "1.0.1"
+  sha256 "403cbfb11c6072f197fccf74a0c061e0d60561274bc8cd531b8de9db2019959d"
 
-  url "https://craftassets.unraid.net/uploads/downloads/Unraid.USB.Creator.macOS-#{version}.dmg"
+  url "https://github.com/unraid/usb-creator-next/releases/download/v#{version}/unraid-usb-creator-#{version}.dmg",
+      verified: "github.com/unraid/usb-creator-next/"
   name "Unraid USB Creator"
-  desc "Utility for installing Unraid on a USB drive"
-  homepage "https://unraid.net/"
+  desc "Home of the Next-Gen Unraid USB Creator, a fork of the Raspberry Pi Imager"
+  homepage "https://unraid.net/download/"
 
-  deprecate! date: "2024-07-14", because: :discontinued
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Unraid USB Creator.app"
+
+  zap trash: "~/Library/Preferences/net.unraid.Unraid USB Creator.plist"
 end
