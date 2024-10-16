@@ -1,9 +1,9 @@
 cask "graalvm-jdk@21" do
   arch arm: "aarch64", intel: "x64"
 
-  version "21.0.4"
-  sha256 arm:   "1a38609765bb7f985783b438c0488dca1a03ee2d418c2d94a1aaabd6ea9960be",
-         intel: "4cfe4037fbb4190c27899e13ebdee8a034309f7a96e9e20f73fc94b28783a98d"
+  version "21.0.5"
+  sha256 arm:   "cb68cb2c796f42f37a56fcd1385d8b86cca12e0b46c5618a5ed3ec7dd2260f6f",
+         intel: "2d9b09e28bc1bb6ff219bf62eacc4626c7740b4f1829ede9ea4450f33e9c0826"
 
   url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version}_macos-#{arch}_bin.tar.gz",
       verified: "download.oracle.com/"
@@ -16,7 +16,7 @@ cask "graalvm-jdk@21" do
     regex(/graalvm\s+for\s+jdk\s+(21(?:\.\d+)+)/i)
   end
 
-  artifact "graalvm-jdk-#{version}+8.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
+  artifact "graalvm-jdk-#{version}+9.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
   # No zap stanza required
 
