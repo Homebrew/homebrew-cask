@@ -576,6 +576,7 @@ mmhmm
 mmhmm-studio
 mochi
 mochi-diffusion
+modrinth
 monal
 monal@beta
 monarch
