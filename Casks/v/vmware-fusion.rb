@@ -62,31 +62,13 @@ cask "vmware-fusion" do
   uninstall delete: "/etc/paths.d/com.vmware.fusion.public"
 
   zap trash: [
-    "/Library/Application Support/VMware",
-    "/Library/Logs/VMware Fusion Services.log",
-    "/Library/Logs/VMware USB Arbitrator Service.log",
-    "/Library/Logs/VMware",
-    "/Library/Preferences/VMware Fusion",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl*",
-    "~/Library/Application Support/VMware Fusion Applications Menu",
+    "/Applications/VMware Fusion.app",
     "~/Library/Application Support/VMware Fusion",
-    "~/Library/Caches/com.vmware.fusion",
-    "~/Library/Logs/VMware Fusion Applications Menu",
+    "/Library/Logs/VMware Fusion",
     "~/Library/Logs/VMware Fusion",
-    "~/Library/Logs/VMware Graphics Service.log",
-    "~/Library/Logs/VMware",
-    "~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist",
-    "~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile",
+    "~/Library/Logs/VMware Fusion Services.log",
     "~/Library/Preferences/com.vmware.fusion.plist",
-    "~/Library/Preferences/com.vmware.fusion.plist.lockfile",
-    "~/Library/Preferences/com.vmware.fusionApplicationsMenu.helper.plist",
-    "~/Library/Preferences/com.vmware.fusionApplicationsMenu.plist",
-    "~/Library/Preferences/com.vmware.fusionDaemon.plist",
-    "~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile",
     "~/Library/Preferences/com.vmware.fusionStartMenu.plist",
-    "~/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile",
-    "~/Library/Preferences/VMware Fusion",
-    "~/Library/Saved Application State/com.vmware.fusion.savedState",
-    "~/Library/WebKit/com.vmware.fusion",
+    "~/Library/Preferences/VMware Fusion"
   ]
 end
