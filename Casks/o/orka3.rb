@@ -1,9 +1,9 @@
 cask "orka3" do
   arch arm: "arm64", intel: "amd64"
 
-  version "3.1.0"
-  sha256 arm:   "5b489bcbfe108a9720dc5eb68cbd8b47e239575515286b64c1f80b6529b3eb96",
-         intel: "2507649ad61b33b03a805bf11018b97a484aac18db4c614586ba18727b739c80"
+  version "3.2.0"
+  sha256 arm:   "6da6577be695e1214fbe469d8189d8459210c1d6292ebdcdca8e38bd68858d45",
+         intel: "e7df8d497fe6bd77f17ebbe16f0ab01fc674dc6335a1ec9b4aab723306ef2f11"
 
   url "https://cli-builds-public.s3.amazonaws.com/official/#{version}/orka3/macos/#{arch}/orka3.pkg",
       verified: "cli-builds-public.s3.amazonaws.com/official/"
