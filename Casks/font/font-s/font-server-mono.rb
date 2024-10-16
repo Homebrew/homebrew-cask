@@ -5,7 +5,6 @@ cask "font-server-mono" do
   url "https://github.com/internet-development/www-server-mono/archive/refs/tags/#{version}.tar.gz",
       verified: "github.com/internet-development/www-server-mono/"
   name "Server Mono"
-  desc "Programming font designed for ASCII art and CLI tools"
   homepage "https://servermono.com/"
 
   font "www-server-mono-#{version}/fonts/ServerMono-Regular.otf"
