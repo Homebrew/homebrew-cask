@@ -1,5 +1,5 @@
 cask "pokemon-tcg-live" do
-  version "1.18.0,367780"
+  version "1.19.0,384348"
   sha256 :no_check
 
   url "https://installer.studio-prod.pokemon.com/installer/PokemonTCGLiveInstaller_Mac.dmg"
@@ -8,8 +8,14 @@ cask "pokemon-tcg-live" do
   homepage "https://tcg.pokemon.com/en-us/tcgl/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://cdn.studio-prod.pokemon.com/rainier/updater/StandaloneOSX/ReleaseNotes/notes_en.json"
+    regex(/^Version\s+v?(\d+(?:\.\d+)+)\s+\((\d+)\)$/i)
+    strategy :json do |json, regex|
+      match = json["Version"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   auto_updates true
