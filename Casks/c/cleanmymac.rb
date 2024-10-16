@@ -23,7 +23,8 @@ cask "cleanmymac" do
   conflicts_with cask: "cleanmymac-zh"
   depends_on macos: ">= :big_sur"
 
-  app "CleanMyMac.app"
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app "CleanMyMac_#{version.major}.app", target: "CleanMyMac.app"
 
   uninstall launchctl:  [
               "com.macpaw.CleanMyMac#{version.major}.HealthMonitor",
