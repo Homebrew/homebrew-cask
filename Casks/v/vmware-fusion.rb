@@ -62,13 +62,15 @@ cask "vmware-fusion" do
   uninstall delete: "/etc/paths.d/com.vmware.fusion.public"
 
   zap trash: [
-    "/Applications/VMware Fusion.app",
-    "~/Library/Application Support/VMware Fusion",
-    "/Library/Logs/VMware Fusion",
-    "~/Library/Logs/VMware Fusion",
-    "~/Library/Logs/VMware Fusion Services.log",
-    "~/Library/Preferences/com.vmware.fusion.plist",
-    "~/Library/Preferences/com.vmware.fusionStartMenu.plist",
-    "~/Library/Preferences/VMware Fusion",
+    *%w[
+      /Applications/VMware Fusion.app
+      ~/Library/Application Support/VMware Fusion
+      /Library/Logs/VMware Fusion
+      ~/Library/Logs/VMware Fusion
+      ~/Library/Logs/VMware Fusion Services.log
+      ~/Library/Preferences/com.vmware.fusion.plist
+      ~/Library/Preferences/com.vmware.fusionStartMenu.plist
+      ~/Library/Preferences/VMware Fusion
+    ].sort
   ]
 end
