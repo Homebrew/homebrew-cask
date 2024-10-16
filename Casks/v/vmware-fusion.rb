@@ -69,6 +69,6 @@ cask "vmware-fusion" do
     "~/Library/Logs/VMware Fusion Services.log",
     "~/Library/Preferences/com.vmware.fusion.plist",
     "~/Library/Preferences/com.vmware.fusionStartMenu.plist",
-    "~/Library/Preferences/VMware Fusion"
+    "~/Library/Preferences/VMware Fusion",
   ]
 end
