@@ -439,6 +439,7 @@ iterm2
 iterm2@beta
 iterm2@nightly
 ivideonserver
+jabra-direct
 jami
 jamie
 jan
