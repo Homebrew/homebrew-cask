@@ -1,8 +1,8 @@
 cask "paragon-camptune" do
-  version "11.1.26"
+  version "12.0.37"
   sha256 :no_check
 
-  url "https://dl.paragon-software.com/demo/camptune_demo_11.dmg"
+  url "https://dl.paragon-software.com/demo/camptune_demo_#{version.major}.dmg"
   name "Paragon CampTune"
   desc "Manage disk space on Macs with Boot Camp"
   homepage "https://www.paragon-software.com/home/camptune/"
@@ -32,4 +32,8 @@ cask "paragon-camptune" do
     "~/Library/Preferences/com.paragon-software.camptunex.plist",
     "~/Library/Saved Application State/com.paragon-software.camptunex.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
