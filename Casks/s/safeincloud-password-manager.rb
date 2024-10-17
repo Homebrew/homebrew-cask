@@ -1,5 +1,5 @@
 cask "safeincloud-password-manager" do
-  version "24.9.4,2409004"
+  version "24.14.1,2414001"
   sha256 :no_check
 
   url "https://www.safe-in-cloud.com/download/SafeInCloud.dmg"
