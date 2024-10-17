@@ -19,5 +19,4 @@ cask "nagstamon" do
   app "Nagstamon.app"
 
   zap trash: "~/.nagstamon"
-
 end
