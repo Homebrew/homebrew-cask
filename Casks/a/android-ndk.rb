@@ -34,9 +34,7 @@ cask "android-ndk" do
     ndk-which
   ].each { |link_name| binary shimscript, target: link_name }
 
-  uninstall delete: [
-    "#{HOMEBREW_PREFIX}/share/android-ndk",
-  ]
+  uninstall delete: "#{HOMEBREW_PREFIX}/share/android-ndk"
 
   # No zap stanza required
 
