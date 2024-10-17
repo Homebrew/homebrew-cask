@@ -1,10 +1,10 @@
 cask "adlock" do
   version "2.1.6.4"
-  sha256 "f0f925c4a9e681a2741c6c063ee04ad0a058c7f91435cc5ec873b253df12af18"
+  sha256 :no_check
 
   url "https://downloads.adlock.com/mac/AdLock_Installer.dmg"
   name "AdLock"
-  desc "The Premier Ad Blocker for Distraction-Free Surfing"
+  desc "Premier Ad Blocker for Distraction-Free Surfing"
   homepage "https://adlock.com/"
 
   livecheck do
@@ -24,8 +24,8 @@ cask "adlock" do
   pkg "AdLock-Installer.pkg"
 
   uninstall launchctl: [
-              "com.hankuper.adlock.desktop.launcher",
               "application.com.hankuper.adlock.desktop.146095782.146095788",
+              "com.hankuper.adlock.desktop.launcher",
             ],
             quit:      "com.hankuper.adlock.desktop",
             pkgutil:   [
