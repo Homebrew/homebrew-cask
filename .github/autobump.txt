@@ -413,6 +413,7 @@ hhkb-studio
 holavpn
 home-assistant
 hoppscotch
+houdahspot
 hstracker
 http-toolkit
 hydrus-network
