@@ -10,10 +10,13 @@ cask "attachecase" do
 
   livecheck do
     url "https://hibara.org/software/attachecase/json/attachecase_mac_history_en.json"
-    regex(/AtcMacv?(\d)(\d)(\d)\.zip/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[0]}.#{match[1]}.#{match[2]}"
+    regex(/^\D*(\d+(?:\.\d+)+)$/i)
+    strategy :json do |json, regex|
+      json.map do |item|
+        match = item["version"]&.match(regex)
+        next if match.blank?
+
+        match[1]
       end
     end
   end
