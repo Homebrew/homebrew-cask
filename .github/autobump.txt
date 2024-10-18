@@ -1042,6 +1042,7 @@ windscribe
 wing-personal
 wins
 wire
+wirecast
 wondershare-uniconverter
 wordpresscom-studio
 workflowy
