@@ -9,7 +9,15 @@ cask "wrike" do
 
   livecheck do
     url "https://www.wrike.com/frontend/electron-app/changelog.json"
-    regex(/"version"\s*:\s*"v?(\d+(?:\.\d+)+)(?:"|\s*\(for\s+Mac)/i)
+    regex(/^v?(\d+(?:\.\d+)+)(?:$|\s*\(for\s+Mac)/i)
+    strategy :json do |json, regex|
+      json.map do |item|
+        match = item["version"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   app "Wrike for Mac.app"
