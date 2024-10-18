@@ -10,8 +10,13 @@ cask "pitch" do
   livecheck do
     url "https://desktop-app-builds.pitch.com/latest-mac.yml"
     regex(/Pitch[._-]v?(\d+(?:\.\d+)+)-([^-]+)-ci(\d+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.first},#{match.second},#{match.third}" }
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]},#{match[3]}"
+      end
     end
   end
 
