@@ -133,6 +133,7 @@ camo-studio
 camtasia
 camunda-modeler
 canva
+cap
 capacities
 captain
 carbon-copy-cloner
