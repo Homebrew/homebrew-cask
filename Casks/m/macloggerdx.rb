@@ -1,6 +1,6 @@
 cask "macloggerdx" do
-  version "6.52"
-  sha256 "14b6a1c8e466826dfca3681b92bdedba0c8737f3e4592014af8a8fce58ebb33d"
+  version "6.53"
+  sha256 "999b70a1fc5d3d6666d3fe5cdf451c0f34a83f01331e8fc784ffa2e80c30d21d"
 
   url "https://www.dogparksoftware.com/files/MacLoggerDX#{version.no_dots}.dmg"
   name "MacLoggerDX"
