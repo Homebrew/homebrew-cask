@@ -9,7 +9,13 @@ cask "screenflick" do
 
   livecheck do
     url "https://arweb-assets.s3.amazonaws.com/downloads/screenflick/updates.json"
-    regex(/Screenflick(\d+(?:\.\d+)+)\.zip/i)
+    strategy :json do |json|
+      json["release"]&.map do |release|
+        next if release["downloadURL"].blank?
+
+        release["version"]
+      end
+    end
   end
 
   depends_on macos: ">= :mojave"
