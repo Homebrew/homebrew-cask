@@ -9,9 +9,14 @@ cask "volanta" do
 
   livecheck do
     url "https://api.volanta.app/api/v1/ClientUpdate/latest-mac.yml"
-    regex(%r{volanta-app/(\d+(?:\.\d+)+)-(.+)/}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    regex(%r{volanta-app/v?(\d+(?:\.\d+)+)[._-](\h+)/}i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
+      end
     end
   end
 
