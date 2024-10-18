@@ -9,10 +9,7 @@ cask "firefly" do
 
   livecheck do
     url "https://dl.firefly.iota.org/latest-mac.yml"
-    regex(/firefly[._-]desktop[._-]v?(\d+(?:\.\d+)+)/i)
-    strategy :yaml do |yaml|
-      yaml["version"]
-    end
+    strategy :electron_builder
   end
 
   auto_updates true
