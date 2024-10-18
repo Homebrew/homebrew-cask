@@ -10,7 +10,15 @@ cask "canon-ufrii-driver" do
 
   livecheck do
     url "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json"
-    regex(/UFRII[._-]v?(\d+(?:\.\d+)+)[._-]Mac/i)
+    regex(/UFRII[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
+    strategy :json do |json, regex|
+      json.map do |item|
+        match = item["fileUrl"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   depends_on macos: ">= :catalina"
