@@ -4,7 +4,7 @@ cask "adlock" do
 
   url "https://downloads.adlock.com/mac/AdLock_Installer.dmg"
   name "AdLock"
-  desc "Premier Ad Blocker for Distraction-Free Surfing"
+  desc "Proxy-based ad blocking tool"
   homepage "https://adlock.com/"
 
   livecheck do
