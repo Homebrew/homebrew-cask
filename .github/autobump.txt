@@ -762,6 +762,7 @@ qq
 qqlive
 qqmusic
 qt-creator
+qt-creator@dev
 quarto
 quickbooks
 quicken
