@@ -1,5 +1,6 @@
 cask "zoho-mail" do
   arch arm: "arm64-"
+  livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
   version "1.6.5"
   sha256 arm:   "46ab4533ce034e4e9329a8e12187c43f7d5ca6aae7239ccfc45cd6ef3fe192d5",
@@ -13,7 +14,15 @@ cask "zoho-mail" do
 
   livecheck do
     url "https://downloads.zohocdn.com/zmail-desktop/artifacts.json"
-    regex(/zoho[._-]mail[._-]desktop[._-]lite[._-]installer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/zoho[._-]mail[._-]desktop[._-]lite[._-]installer[._-]#{arch}v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :json do |json|
+      json["mac"]&.map do |_, item|
+        match = item[livecheck_arch]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   depends_on macos: ">= :high_sierra"
