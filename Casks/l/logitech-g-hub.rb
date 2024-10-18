@@ -10,7 +10,15 @@ cask "logitech-g-hub" do
 
   livecheck do
     url "https://support.logi.com/api/v2/help_center/en-us/articles.json?label_names=webcontent=productdownload,websoftware=eee3033c-8e0b-11e9-8db1-d7e925481d4d"
-    regex(/Software\sVersion:.+?(\d+(?:\.\d+)+)\\u/i)
+    regex(/Software\s+Version:.*?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      json["articles"]&.map do |article|
+        match = article["body"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   auto_updates true

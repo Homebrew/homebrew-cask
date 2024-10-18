@@ -11,6 +11,14 @@ cask "logitech-presentation" do
   livecheck do
     url "https://support.logi.com/api/v2/help_center/en-us/articles.json?label_names=webcontent=productdownload,websoftware=ee425650-8e0b-11e9-8db1-773d1e87aeb4"
     regex(/href=.*?LogiPresentation[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :json do |json, regex|
+      json["articles"]&.map do |article|
+        match = article["body"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   auto_updates true
