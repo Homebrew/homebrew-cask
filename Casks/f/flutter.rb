@@ -13,7 +13,13 @@ cask "flutter" do
 
   livecheck do
     url "https://storage.googleapis.com/flutter_infra_release/releases/releases_macos.json"
-    regex(%r{/flutter[._-]macos[._-]v?(\d+(?:\.\d+)+)[._-]stable\.zip}i)
+    strategy :json do |json|
+      json["releases"]&.map do |release|
+        next if release["channel"] != "stable"
+
+        release["version"]
+      end
+    end
   end
 
   auto_updates true
