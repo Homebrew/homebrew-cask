@@ -9,7 +9,9 @@ cask "querious" do
 
   livecheck do
     url "https://arweb-assets.s3.amazonaws.com/downloads/querious/updates.json"
-    regex(/Queriousv?(\d+(?:\.\d+)+)\.zip/i)
+    strategy :json do |json|
+      json["release"]&.map { |release| release["version"] }
+    end
   end
 
   auto_updates true
