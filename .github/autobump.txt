@@ -533,6 +533,7 @@ markedit
 mcreator
 mdrp
 media-center
+mediahuman-youtube-downloader
 mediainfo
 mediamate
 melodics
