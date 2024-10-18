@@ -9,7 +9,15 @@ cask "moradownloader" do
 
   livecheck do
     url "https://mora.jp/contents/data/system/noticeTouch.json"
-    regex(/Mac.*?v?[._-](\d+(?:\.\d+)+)/i)
+    regex(/Mac.*?v?\.?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      json["noticelist"]&.map do |notice|
+        match = notice["context"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   pkg "MoraDownloader.pkg"
