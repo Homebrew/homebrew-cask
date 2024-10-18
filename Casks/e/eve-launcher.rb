@@ -9,7 +9,9 @@ cask "eve-launcher" do
 
   livecheck do
     url "https://launcher.eveonline.com/launcherVersions.json"
-    regex(/"mac"\s*:\s*(\d+)/i)
+    strategy :json do |json|
+      json["mac"]&.to_s
+    end
   end
 
   auto_updates true
