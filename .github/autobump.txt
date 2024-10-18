@@ -777,6 +777,7 @@ rapidweaver
 razorsql
 readdle-spark
 reader
+readmoreading
 readyapi
 reaper
 receipts
