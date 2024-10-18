@@ -893,6 +893,7 @@ steermouse
 steinberg-activation-manager
 studio-3t
 sublime-text@dev
+sunsama
 superhuman
 superkey
 superlist
