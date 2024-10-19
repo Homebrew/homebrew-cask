@@ -9,11 +9,11 @@ cask "protonvpn" do
 
   livecheck do
     url "https://protonvpn.com/download/macos-update3.xml"
-    regex(/ProtonVPN[._-]mac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "ProtonVPN.app"
 
