@@ -599,6 +599,7 @@ mp3tag
 mqttx
 msty
 mubu
+mucommander
 mudlet
 mullvad-browser
 mullvadvpn
