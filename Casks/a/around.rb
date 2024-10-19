@@ -10,8 +10,8 @@ cask "around" do
   homepage "https://www.around.co/"
 
   livecheck do
-    url "https://downloads.around.co/latest.yml"
-    regex(/version: (\d+(?:\.\d+)+)/i)
+    url "https://downloads.around.co/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
