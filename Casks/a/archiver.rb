@@ -10,10 +10,10 @@ cask "archiver" do
 
   livecheck do
     url "https://api.incrediblebee.com/appcasts/archiver-#{version.major}.xml"
-    regex(%r{url=.*?/Archiver-(\d+(?:\.\d+)+)\.zip}i)
+    strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :ventura"
 
   app "Archiver.app"
 
