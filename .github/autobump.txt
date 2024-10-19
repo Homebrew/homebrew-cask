@@ -922,6 +922,7 @@ telegram-a
 telegram-desktop
 telegram-desktop@beta
 teleport-connect
+temurin@17
 tenable-nessus-agent
 tencent-lemon
 tencent-meeting
