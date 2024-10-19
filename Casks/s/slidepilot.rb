@@ -7,9 +7,15 @@ cask "slidepilot" do
   desc "PDF presentation tool"
   homepage "https://slidepilotapp.com/en"
 
+  # The Sparkle feed contains `pubDate` values that are in German (e.g.
+  # Fr., 05 März 2021 10:29:18 +0100), so the `Sparkle` strategy doesn't
+  # accurately sort the items by date. We have to work with all the feed items
+  # in the `strategy` block, as a way of avoiding the sorting issues.
   livecheck do
     url "https://slidepilotapp.com/updates/versions.xml"
-    regex(/SlidePilot-(\d+(?:\.\d+)+)\.zip/i)
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true
