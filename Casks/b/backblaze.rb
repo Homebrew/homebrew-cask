@@ -9,7 +9,9 @@ cask "backblaze" do
 
   livecheck do
     url "https://secure.backblaze.com/api/clientversion.xml"
-    regex(/mac[._-]version=.*?(\d+(?:\.\d+)+)/i)
+    strategy :xml do |xml|
+      xml.get_elements("//release").map { |item| item.attributes["mac_version"] }
+    end
   end
 
   auto_updates true
