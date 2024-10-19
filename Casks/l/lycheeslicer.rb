@@ -9,7 +9,7 @@ cask "lycheeslicer" do
   homepage "https://mango3d.io/"
 
   livecheck do
-    url "https://mango-lychee.nyc3.digitaloceanspaces.com/latest.yml"
+    url "https://mango-lychee.nyc3.digitaloceanspaces.com/latest-mac.yml"
     strategy :electron_builder
   end
 
