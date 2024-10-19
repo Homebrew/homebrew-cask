@@ -10,6 +10,16 @@ cask "maltego" do
   livecheck do
     url "https://downloads.maltego.com/maltego-v#{version.major}/info.json"
     regex(/Maltego[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :json do |json, regex|
+      json.map do |item|
+        next if item["os"] != "mac"
+
+        match = item["filename"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   app "Maltego.app"
