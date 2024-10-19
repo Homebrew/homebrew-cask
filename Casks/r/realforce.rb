@@ -11,7 +11,7 @@ cask "realforce" do
     url "https://www.realforce.co.jp/support/download/software/"
     regex(%r{href=.*?/REALFORCE\s*?CONNECT\s*?Software[._-](\d+(?:-\d+)+)\.pkg})
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].tr("-", ".").to_s }
+      page.scan(regex).map { |match| match[0].tr("-", ".") }
     end
   end
 
