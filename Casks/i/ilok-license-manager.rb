@@ -10,7 +10,7 @@ cask "ilok-license-manager" do
   livecheck do
     url "https://updates.ilok.com/iloklicensemanager/LicenseSupportInstallerMacAppcast.xml"
     strategy :sparkle do |item|
-      item.short_version.split.first.to_s
+      item.short_version.split.first
     end
   end
 

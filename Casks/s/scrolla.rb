@@ -9,9 +9,7 @@ cask "scrolla" do
 
   livecheck do
     url "https://scrolla.app/releases/appcast.xml"
-    strategy :sparkle do |item|
-      item.version.to_s
-    end
+    strategy :sparkle, &:version
   end
 
   depends_on macos: ">= :monterey"
