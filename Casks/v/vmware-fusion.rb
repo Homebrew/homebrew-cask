@@ -10,8 +10,13 @@ cask "vmware-fusion" do
   livecheck do
     url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion-universal.xml"
     regex(%r{fusion/(\d+(?:\.\d+)+/\d+)}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match&.first&.tr("/", ",") }
+    strategy :xml do |xml, regex|
+      xml.get_elements("//url").map do |item|
+        match = item.text&.strip&.match(regex)
+        next if match.blank?
+
+        match[1].tr("/", ",")
+      end
     end
   end
 
