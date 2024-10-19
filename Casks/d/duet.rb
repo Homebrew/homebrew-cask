@@ -22,7 +22,7 @@ cask "duet" do
       regex(/duet[._-]dd[._-]v?(\d+(?:-\d+)+)\.zip/i)
       strategy :header_match do |headers, regex|
         headers["location"].scan(regex).map do |match|
-          match[0].tr("-", ".").to_s
+          match[0].tr("-", ".")
         end
       end
     end
