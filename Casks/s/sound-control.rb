@@ -10,12 +10,9 @@ cask "sound-control" do
 
   livecheck do
     url :homepage
-    regex(%r{/download/(\d+)}i)
-    strategy :page_match do |page, _regex|
-      version = page[/Sound Control v?(\d+(?:\.\d+)+) Release Notes/i, 1]
-      next if version.blank?
-
-      version.to_s
+    regex(/Sound\s+Control\s+v?(\d+(?:\.\d+)+)\s+Release\s+Notes/im)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0] }
     end
   end
 
