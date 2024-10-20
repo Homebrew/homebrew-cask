@@ -279,6 +279,7 @@ entry
 evernote
 expressvpn
 fantastical
+fastrawviewer
 fbreader
 fedistar
 feed-the-beast
