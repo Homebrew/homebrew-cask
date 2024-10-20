@@ -17,11 +17,13 @@ cask "dotnet-sdk@preview" do
 
   livecheck do
     url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
-    regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-sdk-v?(.+)-osx-#{arch}\.pkg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[2]},#{match[0]},#{match[1]}"
-      end
+    regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-sdk[._-]v?(.+)[._-]osx[._-]#{arch}\.pkg}i)
+    strategy :json do |json, regex|
+      json["releases"]&.map do |release|
+        release.dig("sdk", "files")&.map do |file|
+          file["url"]&.scan(regex)&.map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
+        end
+      end&.flatten
     end
   end
 
