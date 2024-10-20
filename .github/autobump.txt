@@ -665,6 +665,7 @@ openrct2
 openscad@snapshot
 openshift-client
 openshot-video-editor@daily
+openvanilla
 opera
 opera-gx
 opera@beta
