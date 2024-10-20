@@ -9,7 +9,9 @@ cask "irpf2024" do
 
   livecheck do
     url "https://downloadirpf.receita.fazenda.gov.br/irpf/2024/irpf/update/latest.xml"
-    regex(%r{<pkgver>(\d+(\.\d+)+)</pkgver>}i)
+    strategy :xml do |xml|
+      xml.elements["//pkgver"]&.text&.strip
+    end
   end
 
   depends_on macos: ">= :sierra"

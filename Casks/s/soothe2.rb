@@ -1,7 +1,7 @@
 cask "soothe2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.3.1"
-  sha256 "cc9bac7e1fd8ea873d8ea31545f423d9e3b0abaab5a37b967e57298e31dd5bc6"
+  version "1.3.2"
+  sha256 "6d00277b7f2f4bc1655aa807db9f16ae7d883fcc2e4826c1ecd131d65878143d"
 
   url "https://oeksound.ams3.cdn.digitaloceanspaces.com/soothe2_v#{version.no_dots}_Mac.pkg",
       verified: "oeksound.ams3.cdn.digitaloceanspaces.com/"

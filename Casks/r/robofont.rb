@@ -1,8 +1,8 @@
 cask "robofont" do
   version "4.4,2310101500"
-  sha256 :no_check
+  sha256 "0b110f54731a79518cdbce23869d03553ebf04ac26d2b1c230777d3e0f809562"
 
-  url "https://static.typemytype.com/robofont/RoboFont.dmg",
+  url "https://static.typemytype.com/robofont/versionHistory/RoboFont_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "static.typemytype.com/robofont/"
   name "RoboFont"
   desc "Font editor"
@@ -10,11 +10,9 @@ cask "robofont" do
 
   livecheck do
     url "https://doc.robofont.com/appcast.xml"
-    strategy :page_match do |page|
-      match = page.match(/Version\s(\d+(?:\.\d+)+)\s\(build\s(\d+(?:\.\d+)*)\)/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(/(?:buil[dt]\s+)?v?(\d+(?:\.\d+)*)/i)
+    strategy :sparkle do |item, regex|
+      "#{item.short_version},#{item.version[regex, 1]}"
     end
   end
 

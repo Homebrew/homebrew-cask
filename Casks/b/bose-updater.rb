@@ -9,7 +9,9 @@ cask "bose-updater" do
 
   livecheck do
     url "https://btu.bose.com/data/MUV.xml"
-    regex(/ROOT\sMUV="(\d+(?:.\d+)*)"/i)
+    strategy :xml do |xml|
+      xml.elements["//ROOT"]&.attributes&.[]("MUV")
+    end
   end
 
   app "Bose Updater.app"

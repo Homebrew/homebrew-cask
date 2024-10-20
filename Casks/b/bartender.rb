@@ -15,9 +15,9 @@ cask "bartender" do
 
   livecheck do
     url "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"
-    regex(%r{https://macbartender.com/B2/updates/(\d+(?:-\d+)+)/Bartender%20#{version.major}.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex)&.map { |match| match[0].tr("-", ".") }
+    regex(%r{/v?(\d+(?:[.-]\d+)+)/Bartender%20#{version.major}.zip}i)
+    strategy :sparkle do |item, regex|
+      item.url.scan(regex)&.map { |match| match[0].tr("-", ".") }
     end
   end
 

@@ -99,7 +99,7 @@ cask "cocktail" do
     end
   end
   on_sequoia :or_newer do
-    version "18.1.3"
+    version "18.2"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"

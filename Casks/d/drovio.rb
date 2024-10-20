@@ -9,7 +9,9 @@ cask "drovio" do
 
   livecheck do
     url "https://repository.drovio.com/stable/drovio/macos_universal/latest_version/release.json"
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true

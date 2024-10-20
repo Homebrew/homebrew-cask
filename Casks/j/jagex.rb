@@ -1,5 +1,5 @@
 cask "jagex" do
-  version "1.17.2"
+  version "1.17.3"
   sha256 :no_check
 
   url "https://cdn.jagex.com/Jagex%20Launcher%20Installer.dmg"
@@ -17,7 +17,7 @@ cask "jagex" do
   uninstall quit:   "com.jagex.launcher",
             delete: "/Applications/Jagex Launcher.app"
 
-  zap trash: "~~/Library/Application Support/Jagex Launcher"
+  zap trash: "~/Library/Application Support/Jagex Launcher"
 
   caveats do
     requires_rosetta

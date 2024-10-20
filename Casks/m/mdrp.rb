@@ -9,11 +9,12 @@ cask "mdrp" do
 
   livecheck do
     url "https://www.macdvdripperpro.com/mdrp_sparkle.xml"
-    strategy :page_match do |page|
-      match = page.match(/MDRP[._-]v?(\d{2})(\d)(\d)(?:r(\d+))?\.zip/i)
+    regex(/MDRP[._-]v?(\d{2})(\d)(\d)(?:r(\d+))?\.zip/i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
       next if match.blank?
 
-      return "#{match[1]}.#{match[2]}.#{match[3]}" unless match[4]
+      next "#{match[1]}.#{match[2]}.#{match[3]}" unless match[4]
 
       "#{match[1]}.#{match[2]}.#{match[3]},#{match[4]}"
     end

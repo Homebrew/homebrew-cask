@@ -10,7 +10,9 @@ cask "bbedit" do
 
   livecheck do
     url "https://versioncheck.barebones.com/BBEdit.xml"
-    regex(/BBEdit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :xml do |xml|
+      xml.get_elements("//key[text()='SUFeedEntryShortVersionString']").map { |item| item.next_element&.text&.strip }
+    end
   end
 
   auto_updates true

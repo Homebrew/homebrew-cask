@@ -15,7 +15,19 @@ cask "sapmachine-jdk" do
   # following JSON file, so we have to check it instead.
   livecheck do
     url "https://sap.github.io/SapMachine/assets/data/sapmachine-releases-latest.json"
-    regex(/["']tag["']:\s*["']sapmachine[._-]v?(\d+(?:\.\d+)*)["']/i)
+    regex(/^sapmachine[._-]v?(\d+(?:\.\d+)*)$/i)
+    strategy :json do |json, regex|
+      json.map do |_, item|
+        next if item["ea"]
+
+        item["releases"]&.map do |release|
+          match = release["tag"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk.jdk"

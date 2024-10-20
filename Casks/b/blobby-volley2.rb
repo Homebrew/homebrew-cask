@@ -12,4 +12,6 @@ cask "blobby-volley2" do
   depends_on macos: ">= :ventura"
 
   app "blobby.app"
+
+  zap trash: "~/Library/Application Support/blobby"
 end

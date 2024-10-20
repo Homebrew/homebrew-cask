@@ -11,6 +11,14 @@ cask "berrycast" do
   livecheck do
     url "https://media.berrycast.app/desktop-installer/v2/latest-mac.yml"
     regex(/Berrycast[._-]?v?(\d+(?:\.\d+)+)[._-]latest\.dmg/i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   depends_on macos: ">= :high_sierra"
