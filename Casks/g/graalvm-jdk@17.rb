@@ -11,10 +11,7 @@ cask "graalvm-jdk@17" do
   desc "GraalVM from Oracle"
   homepage "https://www.graalvm.org/"
 
-  livecheck do
-    url "https://www.oracle.com/java/technologies/downloads/"
-    regex(/graalvm\s+for\s+jdk\s+(17(?:\.\d+)+)/i)
-  end
+  deprecate! date: "2024-10-20", because: :no_longer_meets_criteria
 
   artifact "graalvm-jdk-#{version}+8.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
