@@ -539,6 +539,7 @@ mediamate
 melodics
 memory-cleaner
 mendeley-reference-manager
+menubarx
 messenger
 meta-quest-developer-hub
 metashape
