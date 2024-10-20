@@ -5,7 +5,7 @@ cask "langgraph-studio" do
   url "https://github.com/langchain-ai/langgraph-studio/releases/download/v#{version}/LangGraph-Studio-#{version}-universal.dmg"
   name "LangGraph Studio"
   desc "Desktop app for prototyping and debugging LangGraph applications locally"
-  homepage "https://github.com/langchain-ai/langgraph-studio/"
+  homepage "https://studio.langchain.com/"
 
   # Documentation: https://docs.brew.sh/Brew-Livecheck
   livecheck do
