@@ -17,14 +17,13 @@ cask "winclone" do
 
   pkg "Winclone.pkg"
 
-  uninstall_preflight do
-    system_command "/usr/sbin/installer",
-                   args:         ["-pkg", "#{staged_path}/Uninstaller/Uninstall Winclone.pkg", "-target", "/"],
-                   sudo:         true,
-                   sudo_as_root: true
-  end
-
   uninstall signal:  ["TERM", "com.twocanoes.Winclone#{version.major}"],
+            script:  {
+              executable:   "/usr/sbin/installer",
+              args:         ["-pkg", "#{staged_path}/Uninstaller/Uninstall Winclone.pkg", "-target", "/"],
+              sudo:         true,
+              must_succeed: false,
+            },
             pkgutil: "com.twocanoes.pkg.Winclone*"
 
   zap trash: [
