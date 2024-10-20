@@ -1,6 +1,6 @@
 cask "height" do
-  version "0.28.0"
-  sha256 "dd9f2f1d6858888ff4c142139e3bd666416c6a4a9b488d5c0ccc8e91bf8c6c33"
+  version "0.28.1"
+  sha256 "26a8018e6d314fee7dd03d9acd0e978f803bb060f98aadda6ba3d2b30f2a34d4"
 
   url "https://storage.googleapis.com/height-statics/_app/Height-#{version}-universal.dmg",
       verified: "storage.googleapis.com/height-statics/_app/"

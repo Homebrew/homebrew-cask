@@ -9,11 +9,12 @@ cask "epoccam" do
 
   livecheck do
     url "https://help.elgato.com/api/v2/help_center/en-us/articles/360052826852.json"
-    strategy :page_match do |page|
-      match = page[/EpocCam[._-]Installer[._-]v?(\d+(?:[._]\d+)+)\.pkg/i, 1]
+    regex(/EpocCam[._-]Installer[._-]v?(\d+(?:[._]\d+)+)\.pkg/)
+    strategy :json do |json, regex|
+      match = json.dig("article", "body")&.match(regex)
       next if match.blank?
 
-      match.tr("_", ".")
+      match[1].tr("_", ".")
     end
   end
 

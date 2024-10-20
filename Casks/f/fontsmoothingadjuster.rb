@@ -10,7 +10,7 @@ cask "fontsmoothingadjuster" do
 
   livecheck do
     url "https://font-smoothing-adjuster-updates.s3.amazonaws.com/appcast.xml"
-    regex(/Font%20Smoothing%20Adjuster%20v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle
   end
 
   app "Font Smoothing Adjuster.app"

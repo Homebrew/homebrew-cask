@@ -20,9 +20,13 @@ cask "dotnet" do
   # check will automatically update its behavior when the cask is updated.
   livecheck do
     url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
-    regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-runtime-v?(\d+(?:\.\d+)+)-osx-#{arch}\.pkg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
+    regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-runtime[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]#{arch}\.pkg}i)
+    strategy :json do |json, regex|
+      json["releases"]&.map do |release|
+        release.dig("runtime", "files")&.map do |file|
+          file["url"]&.scan(regex)&.map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
+        end
+      end&.flatten
     end
   end
 

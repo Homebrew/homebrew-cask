@@ -9,8 +9,10 @@ cask "macx-video-converter-pro" do
 
   livecheck do
     url "https://www.macxdvd.com/mac-video-converter-pro/upgrade/video-converter-pro.xml"
-    # `LastestVersion` is an upstream typo of `LatestVersion`
-    regex(%r{LastestVersion</key>\s*<string>(\d+(?:\.\d+)+)<}i)
+    strategy :xml do |xml|
+      # `LastestVersion` is an upstream typo of `LatestVersion`
+      xml.get_elements("//key[text()='LastestVersion']").map { |item| item.next_element&.text&.strip }
+    end
   end
 
   app "MacX Video Converter Pro.app"

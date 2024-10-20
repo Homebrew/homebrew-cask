@@ -10,8 +10,13 @@ cask "connectiq" do
   livecheck do
     url "https://developer.garmin.com/downloads/connect-iq/sdks/sdks.json"
     regex(/connectiq-sdk-mac[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:-\d+)+)[._-](\h+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
+    strategy :json do |json, regex|
+      json.map do |item|
+        match = item["mac"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]},#{match[3]}"
+      end
     end
   end
 

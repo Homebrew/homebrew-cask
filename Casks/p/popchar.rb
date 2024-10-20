@@ -10,10 +10,12 @@ cask "popchar" do
 
   livecheck do
     url "https://update.ergonis.com/vck/popcharx.xml"
-    regex(/<Program_Version>(\d+(?:\.\d+)+)</i)
+    strategy :xml do |xml|
+      xml.elements["//Program_Info/Program_Version"]&.text&.strip
+    end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   app "PopChar.app"
 

@@ -10,7 +10,9 @@ cask "typinator" do
 
   livecheck do
     url "https://update.ergonis.com/vck/typinator.xml"
-    regex(%r{<Program_Version>(\d+(?:\.\d+)+)</Program_Version>}i)
+    strategy :xml do |xml|
+      xml.elements["//Program_Info/Program_Version"]&.text&.strip
+    end
   end
 
   app "Typinator.app"

@@ -9,9 +9,12 @@ cask "alfred" do
 
   livecheck do
     url "https://www.alfredapp.com/app/update#{version.major}/general.xml"
-    regex(/Alfred[._-]v?(\d(?:\.\d+)+)[._-](\d+)\.tar\.gz/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    strategy :xml do |xml|
+      version = xml.elements["//key[text()='version']"]&.next_element&.text&.strip
+      build = xml.elements["//key[text()='build']"]&.next_element&.text&.strip
+      next if version.blank? || build.blank?
+
+      "#{version},#{build}"
     end
   end
 

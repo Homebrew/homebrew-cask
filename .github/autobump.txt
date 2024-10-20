@@ -49,6 +49,7 @@ android-studio-preview@beta
 android-studio-preview@canary
 anki
 ankiapp
+another-redis-desktop-manager
 anydesk
 anydo
 anythingllm
@@ -133,6 +134,7 @@ camo-studio
 camtasia
 camunda-modeler
 canva
+cap
 capacities
 captain
 carbon-copy-cloner
@@ -277,6 +279,7 @@ entry
 evernote
 expressvpn
 fantastical
+fastrawviewer
 fbreader
 fedistar
 feed-the-beast
@@ -309,6 +312,7 @@ flox
 flutter
 flutterflow
 fmail2
+focus
 focusrite-control
 focusrite-control-2
 foldit
@@ -412,6 +416,7 @@ hhkb-studio
 holavpn
 home-assistant
 hoppscotch
+houdahspot
 hstracker
 http-toolkit
 hydrus-network
@@ -439,6 +444,7 @@ iterm2
 iterm2@beta
 iterm2@nightly
 ivideonserver
+jabra-direct
 jami
 jamie
 jan
@@ -529,11 +535,13 @@ markedit
 mcreator
 mdrp
 media-center
+mediahuman-youtube-downloader
 mediainfo
 mediamate
 melodics
 memory-cleaner
 mendeley-reference-manager
+menubarx
 messenger
 meta-quest-developer-hub
 metashape
@@ -594,6 +602,7 @@ mp3tag
 mqttx
 msty
 mubu
+mucommander
 mudlet
 mullvad-browser
 mullvadvpn
@@ -657,6 +666,7 @@ openrct2
 openscad@snapshot
 openshift-client
 openshot-video-editor@daily
+openvanilla
 opera
 opera-gx
 opera@beta
@@ -759,6 +769,7 @@ qq
 qqlive
 qqmusic
 qt-creator
+qt-creator@dev
 quarto
 quickbooks
 quicken
@@ -773,6 +784,7 @@ rapidweaver
 razorsql
 readdle-spark
 reader
+readmoreading
 readyapi
 reaper
 receipts
@@ -889,6 +901,7 @@ steermouse
 steinberg-activation-manager
 studio-3t
 sublime-text@dev
+sunsama
 superhuman
 superkey
 superlist
@@ -914,6 +927,9 @@ telegram-a
 telegram-desktop
 telegram-desktop@beta
 teleport-connect
+temurin
+temurin@17
+temurin@21
 tenable-nessus-agent
 tencent-lemon
 tencent-meeting
@@ -1038,6 +1054,7 @@ windscribe
 wing-personal
 wins
 wire
+wirecast
 wondershare-uniconverter
 wordpresscom-studio
 workflowy

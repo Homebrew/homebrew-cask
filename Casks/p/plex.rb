@@ -9,9 +9,8 @@ cask "plex" do
 
   livecheck do
     url "https://plex.tv/api/downloads/6.json"
-    regex(/"version"\s*:\s*"(\d(?:\.\d+)*)-([a-f0-9]{8})"/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    strategy :json do |json|
+      json.dig("computer", "MacOS", "version")&.tr("-", ",")
     end
   end
 

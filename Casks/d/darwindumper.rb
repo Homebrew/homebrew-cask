@@ -10,7 +10,7 @@ cask "darwindumper" do
   livecheck do
     url "https://bytebucket.org/blackosx/darwindumper/wiki/DD_AppCast.xml"
     strategy :sparkle do |item|
-      item.short_version.delete_prefix("r").to_s
+      item.short_version.delete_prefix("r")
     end
   end
 

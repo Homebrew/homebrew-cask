@@ -15,4 +15,9 @@ cask "pokemon-reborn" do
   depends_on macos: ">= :high_sierra"
 
   app "Reborn.app"
+
+  zap trash: [
+    "~/Library/Application Support/Pokemon Reborn",
+    "~/Library/Saved Application State/org.struma.mkxp-z.savedState",
+  ]
 end

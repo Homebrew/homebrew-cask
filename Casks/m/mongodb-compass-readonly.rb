@@ -12,7 +12,15 @@ cask "mongodb-compass-readonly" do
 
   livecheck do
     url "https://info-mongodb-com.s3.amazonaws.com/com-download-center/compass.json"
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)\s*\(Readonly/i)
+    regex(/^v?(\d+(?:\.\d+)+)[._-]readonly$/i)
+    strategy :json do |json, regex|
+      json["versions"]&.map do |item|
+        match = item["_id"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   app "MongoDB Compass Readonly.app"

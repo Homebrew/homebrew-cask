@@ -18,7 +18,13 @@ cask "molotov" do
 
   livecheck do
     url "https://desktop-auto-upgrade.molotov.tv/mac/#{arch_folder}manifest.json"
-    regex(%r{/Molotov-v?(\d+(?:\.\d+)+)-mac\.zip}i)
+    regex(/^\D*(\d+(?:\.\d+)+)$/i)
+    strategy :json do |json, regex|
+      match = json["version"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   depends_on macos: ">= :catalina"
