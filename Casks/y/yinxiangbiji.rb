@@ -1,6 +1,6 @@
 cask "yinxiangbiji" do
-  version "9.7.21_476234"
-  sha256 "50285405fd542eda43a0194aa22cf90e2dd94e58b2089e6ad76297720a49dbcd"
+  version "9.7.22_476431"
+  sha256 "209b96e388f196dc71f16ff264af688ea9987246b6d16640d9208d1e0b8c1a7f"
 
   url "https://cdn.yinxiang.com/mac-smd/public/YinxiangBiji_RELEASE_#{version}.zip"
   name "Evernote"
