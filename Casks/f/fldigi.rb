@@ -21,8 +21,7 @@ cask "fldigi" do
 
   livecheck do
     url "https://sourceforge.net/projects/fldigi/rss?path=/fldigi"
-    regex(/fldigi[._-]v?(\d+(?:\.\d+)+)[._-].+\.dmg/i)
-    strategy :page_match
+    regex(%r{url=.*?/fldigi[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
   # flarq has a different version number and must be updated manually

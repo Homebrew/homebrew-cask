@@ -10,8 +10,7 @@ cask "qbittorrent@lt20" do
 
   livecheck do
     url "https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac"
-    regex(/qbittorrent[._-]v?(\d+(?:\.\d+)+)[._-]lt20\.dmg/i)
-    strategy :page_match
+    regex(%r{url=.*?/qbittorrent[._-]v?(\d+(?:\.\d+)+)[._-]lt20\.dmg}i)
   end
 
   deprecate! date: "2025-05-01", because: :unsigned
