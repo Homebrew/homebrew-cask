@@ -1,26 +1,16 @@
 cask "follow@nightly" do
-  version "0.0.1,20241019"
-  sha256 "2616e06c4cd91d0bc93746a23e5f0ce866e37ce9b18d9d7f384163e8ab1f53b9"
+  version "0.0.1-nightly.20241020"
+  sha256 "c4386f071903820afefb54d8979e9446d2672f81ec3e173b895493a6b2af6d66"
 
-  url "https://github.com/RSSNext/Follow/releases/download/nightly-#{version.csv.first}-nightly.#{version.csv.second}/Follow-#{version.csv.first}-nightly.#{version.csv.second}-macos-universal.dmg",
+  url "https://github.com/RSSNext/Follow/releases/download/nightly-#{version}/Follow-#{version}-macos-universal.dmg",
       verified: "github.com/RSSNext/Follow/"
   name "Follow Nightly"
-  desc "Next generation information browser"
+  desc "Information browser"
   homepage "https://follow.is/"
 
   livecheck do
     url :url
-    regex(/^nightly-(\d+\.\d+\.\d+)-nightly\.(\d{8})$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"]
-
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
+    regex(/^nightly-?(\d+(?:\.\d+)+(?:[._-]nightly[._-]?\d+)?)$/i)
   end
 
   depends_on macos: ">= :big_sur"
