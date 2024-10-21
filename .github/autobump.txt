@@ -182,6 +182,7 @@ copilot
 copilot-for-xcode
 copyq
 core-tunnel
+cork
 coscreen
 coteditor
 couchbase-server-community
