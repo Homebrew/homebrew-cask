@@ -1,18 +1,17 @@
 cask "elektron-overbridge" do
-  version "2.8.4,81d9083e-9d00-5cf4-8f24-b32cfb53fb53"
-  sha256 "1cf6c2769cd88056906e59762faf26e783a06fea96ef51083653183a1c6e33c5"
+  version "2.13.4,10,2024"
+  sha256 "4c64786cf1e0ec485de955f7cb688bed2a3fd7c0d91cd99389a76f9e5cee541c"
 
-  url "https://se-elektron-devops.s3.amazonaws.com/release/#{version.csv.second}/Elektron_Overbridge_#{version.csv.first}.dmg",
-      verified: "se-elektron-devops.s3.amazonaws.com/"
+  url "https://elektron.se/wp-content/uploads/#{version.csv.third}/#{version.csv.second}/Elektron_Overbridge_#{version.csv.first}.dmg"
   name "Overbridge"
   desc "Integrate Elektron hardware into music software"
-  homepage "https://www.elektron.se/overbridge/"
+  homepage "https://elektron.se/overbridge"
 
   livecheck do
-    url "https://www.elektron.se/us/download-support-overbridge-new"
-    regex(%r{/([\w._-]+)/Elektron[._-]?Overbridge[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://elektron.se/support-downloads/overbridge"
+    regex(%r{uploads/(\d+)/(\d+)/Elektron[._-]?Overbridge[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+      page.scan(regex).map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
     end
   end
 
