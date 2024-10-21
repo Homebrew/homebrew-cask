@@ -11,7 +11,7 @@ cask "utm@beta" do
   # This uses the `GithubReleases` strategy and includes releases marked as
   # "pre-release", so this will use both unstable and stable releases.
   livecheck do
-    url :stable
+    url :url
     regex(/^v?(\d+(?:\.\d+)+.*)$/i)
     strategy :github_releases do |json|
       json.map do |release|
