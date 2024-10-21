@@ -1,6 +1,6 @@
 cask "winclone" do
-  version "10.3"
-  sha256 "907ffff3da10c2b6cdf32276001e581966e457b6eb4fc383055b1c015c8b8329"
+  version "10.4"
+  sha256 "5ee2c0fe9389d1523a2a2d1a22b771250c2888d84710603f87dbaa5f92764742"
 
   url "https://twocanoes-software-updates.s3.amazonaws.com/Winclone#{version.major}.dmg",
       verified: "twocanoes-software-updates.s3.amazonaws.com/"
@@ -17,14 +17,13 @@ cask "winclone" do
 
   pkg "Winclone.pkg"
 
-  uninstall_preflight do
-    system_command "/usr/sbin/installer",
-                   args:         ["-pkg", "#{staged_path}/Uninstaller/Uninstall Winclone.pkg", "-target", "/"],
-                   sudo:         true,
-                   sudo_as_root: true
-  end
-
   uninstall signal:  ["TERM", "com.twocanoes.Winclone#{version.major}"],
+            script:  {
+              executable:   "/usr/sbin/installer",
+              args:         ["-pkg", "#{staged_path}/Uninstaller/Uninstall Winclone.pkg", "-target", "/"],
+              sudo:         true,
+              must_succeed: false,
+            },
             pkgutil: "com.twocanoes.pkg.Winclone*"
 
   zap trash: [
