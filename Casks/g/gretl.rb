@@ -11,9 +11,8 @@ cask "gretl" do
   homepage "https://gretl.sourceforge.net/"
 
   livecheck do
-    url "https://gretl.sourceforge.net/osx.html"
-    regex(/gretl[._-]v?(\d+\w)[._-]macos[._-]#{arch}\.pkg/i)
-    strategy :page_match
+    url "https://sourceforge.net/projects/gretl/rss?path=/gretl"
+    regex(%r{url=.*?/gretl[._-]v?(\d+(?:\.\d+)*[a-z]?)[._-]macos[._-]#{arch}\.pkg}i)
   end
 
   pkg "gretl-#{version}-macos-#{arch}.pkg"
