@@ -18,8 +18,7 @@ cask "flrig" do
 
   livecheck do
     url "https://sourceforge.net/projects/fldigi/rss?path=/flrig"
-    regex(/flrig[._-]v?(\d+(?:\.\d+)+)\w*\.dmg/i)
-    strategy :page_match
+    regex(%r{url=.*?/flrig[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
   app "flrig.app"
