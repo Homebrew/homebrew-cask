@@ -7,9 +7,8 @@ cask "font-tengwar-formal-csur" do
   homepage "https://freetengwar.sourceforge.net/formal.html"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?TengwarFormalCSUR(\d+)\.zip/i)
-    strategy :page_match
+    url "https://sourceforge.net/projects/freetengwar/rss?path=/TengwarFont"
+    regex(%r{url=.*?/TengwarFormalCSUR[._-]?v?(\d+(?:\.\d+)*)\.zip}i)
   end
 
   font "TengwarFormalCSUR#{version}/TengwarFormalCSUR.ttf"
