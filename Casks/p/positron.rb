@@ -1,6 +1,6 @@
 cask "positron" do
-  version "2024.11.0-49"
-  sha256 "1cec5d937d172c41a1249d2b0bbddf857fc89cd8eb9f9c0c20780d41f3f32c27"
+  version "2024.11.0-69"
+  sha256 "51b038ab02db6873990ec18318b2d1f2c8aea036345c34f50a267e3d0dae61a0"
 
   url "https://github.com/posit-dev/positron/releases/download/#{version}/Positron-#{version}.dmg"
   name "Positron"
