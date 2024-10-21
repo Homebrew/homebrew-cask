@@ -1,5 +1,5 @@
 cask "moneydance" do
-  version "2024.1,5118"
+  version "2024.2,5172"
   sha256 :no_check
 
   url "https://infinitekind.com/stabledl/current/Moneydance.dmg"
