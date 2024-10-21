@@ -1,7 +1,7 @@
 cask "roam" do
   arch arm: "arm64", intel: "x64"
 
-  version "8666720"
+  version "131.1.2-beta001"
   sha256 :no_check
 
   url "https://download.ro.am/Roam/8a86d88cfc9da3551063102e9a4e2a83/latest/darwin/#{arch}/Roam.dmg"
@@ -11,7 +11,7 @@ cask "roam" do
 
   livecheck do
     url "https://ro.am/release-notes"
-    regex(/version:\s*"([^"]+)"/i)
+    regex(/version:\s*"v?(\d+(?:\.\d+)+(?:[._-]beta\d+)?)"/i)
     strategy :page_match do |page, regex|
       js_match = page[/src=.*?(index[._-]\w+\.js)/i, 1]
       next if js_match.blank?
