@@ -13,8 +13,7 @@ cask "qbittorrent" do
 
     livecheck do
       url "https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac"
-      regex(/qbittorrent[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-      strategy :page_match
+      regex(%r{url=.*?/qbittorrent[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     end
   end
 
