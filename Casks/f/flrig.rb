@@ -21,11 +21,7 @@ cask "flrig" do
     regex(%r{url=.*?/flrig[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
-  app "flrig.app"
-
-  preflight do
-    staged_path.glob("flrig-*.app").first.rename(staged_path/"flrig.app")
-  end
+  app "flrig-#{version}.app"
 
   zap trash: "~/.flrig"
 end
