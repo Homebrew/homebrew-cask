@@ -317,6 +317,7 @@ focusrite-control
 focusrite-control-2
 foldit
 font-chiron-hei-hk
+font-chiron-sung-hk
 font-iosevka
 font-iosevka-aile
 font-iosevka-curly
