@@ -1,12 +1,12 @@
 cask "acreom" do
   arch arm: "-arm64"
 
-  version "1.20.1"
-  sha256 arm:   "5b8df0a3e3fc149f3d954733e2544f0e54e6cc1e3c0c413a0e6f14f3400780cb",
-         intel: "8ba63c0321f8c6a62f57d9800ca60e39122cd1680fdcbdb370a33ebe2e6d6cc9"
+  version "1.20.3"
+  sha256 arm:   "8af9c30e8a85dbd6b9d7bc5601e443541749363f522033397b8a89d40f05c8c7",
+         intel: "2c6df1aff353804f1479985825d9873dfa207e052bad17ece4e0ce15867234d4"
 
-  url "https://github.com/Acreom/releases/releases/download/v#{version}/acreom-#{version}#{arch}.dmg",
-      verified: "github.com/Acreom/releases/"
+  url "https://github.com/Acreom/app/releases/download/v#{version}/acreom-#{version}#{arch}.dmg",
+      verified: "github.com/Acreom/app/"
   name "acreom"
   desc "Personal knowledge base for developers"
   homepage "https://acreom.com/"
