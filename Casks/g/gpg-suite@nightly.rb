@@ -1,6 +1,6 @@
 cask "gpg-suite@nightly" do
-  version "2024.1b3"
-  sha256 "c1d87f1a2bf08bbd8651b4e34404178b5df0cc6a29a8a1425491824dba499c36"
+  version "3568n"
+  sha256 "7695e19a1419ed2f963b6a66ec9bf54d1f8f0d43a572c6f1ab6f6544e2dd9b14"
 
   url "https://releases.gpgtools.org/nightlies/GPG_Suite-#{version}.dmg"
   name "GPG Suite Nightly"
@@ -9,7 +9,7 @@ cask "gpg-suite@nightly" do
 
   livecheck do
     url "https://releases.gpgtools.org/nightlies/"
-    regex(/href=.*?GPG[._-]Suite[._-]v?(\d+(?:\.\d+)+(?:b\d+)?)\.dmg/i)
+    regex(/href=.*?GPG[._-]Suite[._-]v?(\d+(?:\.\d+)*(?:[a-z]\d*)?)\.dmg/i)
   end
 
   auto_updates true
