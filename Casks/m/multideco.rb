@@ -5,7 +5,7 @@ cask "multideco" do
   url "https://www.hhssoftware.com/multideco/installfile.php?file=multideco_4.22.0_arm_intel.dmg&keytag=1608834&qwerty=17296\
 25551&os=mac_intel",
       verified: "hhssoftware.com"
-  name "MultiDeco"
+  name "multideco"
   desc "Dive decompression planning software"
   homepage "https://www.hhssoftware.com/multideco/"
 
