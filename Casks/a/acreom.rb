@@ -11,6 +11,11 @@ cask "acreom" do
   desc "Personal knowledge base for developers"
   homepage "https://acreom.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "acreom.app"
