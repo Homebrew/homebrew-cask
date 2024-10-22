@@ -11,7 +11,14 @@ cask "ibkr" do
 
   livecheck do
     url "https://download2.interactivebrokers.com/installers/ntws/latest-standalone/version.json"
-    regex(/(\d+(?:\.\d+)+[a-z]*)/i)
+    regex(/callback\((.+)\)/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      json = Homebrew::Livecheck::Strategy::Json.parse_json(match[1])
+      json["buildVersion"]
+    end
   end
 
   installer script: {
