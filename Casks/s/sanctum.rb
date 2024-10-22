@@ -2,9 +2,9 @@ cask "sanctum" do
   arch arm: "aarch64", intel: "x64"
   folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
-  version "1.8.1"
-  sha256 arm:   "51039e6380be8983649a10f5cca7e5803f52f53344fb21dfcfc91adee8781535",
-         intel: "21b88233655ad8a00bacd6bae234925aaa9fb354147ae4982083825e8e42d870"
+  version "1.8.2"
+  sha256 arm:   "06f1cf9b0bc721d24bf593ce5ca433acfaa273c93e885ba210528bd87bd9b254",
+         intel: "5ab92aaf7d0073368004371d8a6d4bcf736c8c4b100f86e9af3711cf12be0d1f"
 
   url "https://sanctum.ai/darwin-#{folder}/Sanctum_#{version}_#{arch}.dmg",
       user_agent: :fake
