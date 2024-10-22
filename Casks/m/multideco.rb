@@ -6,7 +6,13 @@ cask "multideco" do
   name "MultiDeco"
   desc "Dive decompression planning software"
   homepage "https://www.hhssoftware.com/multideco/"
-
+  
+  livecheck do
+    url "https://www.hhssoftware.com/multideco/download.php"
+    strategy :page_match
+    regex(/Mac[[:space:]]v?(\d+(?:\.\d+)+)/i)
+  end
+  
   auto_updates true
   
   pkg "MultiDeco_arm_intel.pkg"
