@@ -10,6 +10,7 @@
   "devtoys": "all",
   "drop-to-gif": "all",
   "duplicati": "all",
+  "follow@nightly": "all",
   "font-devicons": "all",
   "font-gilbert": "all",
   "font-zhuque-fangsong": "all",
@@ -52,6 +53,5 @@
   "universal-android-debloater": "all",
   "utm@beta": "all",
   "wezterm@nightly": "all",
-  "xit": "all",
-  "follow@nightly": "all"
+  "xit": "all"
 }
