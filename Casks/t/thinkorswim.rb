@@ -2,10 +2,10 @@ cask "thinkorswim" do
   version :latest
   sha256 :no_check
 
-  url "https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim_installer.dmg"
+  url "https://tosmediaserver.schwab.com/installer/InstFiles/thinkorswim_installer.dmg"
   name "thinkDesktop"
   desc "Desktop client for TD Ameritrade trading platform"
-  homepage "https://mediaserver.thinkorswim.com/installer/install.html#macosx"
+  homepage "https://www.schwab.com/trading/thinkorswim/desktop"
 
   livecheck do
     skip "unversioned Java application"
