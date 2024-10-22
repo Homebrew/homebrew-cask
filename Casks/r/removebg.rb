@@ -1,18 +1,21 @@
 cask "removebg" do
-  version "2.2.2"
-  sha256 "e97ae10fc7584ef78fac5b5f0f650b6ce705b39782bbd87d0605b2e5f3e29bb3"
+  version "2.2.3"
+  sha256 "874c5b99abfc172fccb79889debd7a71fa6e9f915ecfec1659957a47bcbb90e9"
 
-  url "https://static.remove.bg/download/removebg-for-mac-#{version}.dmg"
+  url "https://storage.googleapis.com/removebg-static/desktop/release/darwin/x64/remove.bg-darwin-x64-#{version}.zip",
+      verified: "storage.googleapis.com/removebg-static/"
   name "remove.bg"
   desc "Automatic bulk background removal"
   homepage "https://www.remove.bg/"
 
-  # The in-app updater checks a JSON file but it has syntax issues, so we can't
-  # use the `Json` strategy until this is resolved.
   livecheck do
     url "https://storage.googleapis.com/removebg-static/desktop/release/darwin/x64/RELEASES.json"
-    regex(/"currentRelease"\s*:\s*"v?(\d+(?:\.\d+)+)"/i)
+    strategy :json do |json|
+      json["currentRelease"]
+    end
   end
+
+  depends_on macos: ">= :catalina"
 
   app "remove.bg.app"
 
