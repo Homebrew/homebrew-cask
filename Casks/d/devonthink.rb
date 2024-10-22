@@ -8,8 +8,8 @@ cask "devonthink" do
     end
   end
   on_big_sur :or_newer do
-    version "3.9.7"
-    sha256 "70f9c06eeb316bea36fd15900cec96a2ff84224760b11ae1ac13d415b8354c5d"
+    version "3.9.8"
+    sha256 "c56169fa98b72c2f043f6c2ca55c996a8fddc539e0df2b351ea45714e2427c1e"
 
     livecheck do
       url "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000"
