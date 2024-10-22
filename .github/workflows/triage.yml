@@ -72,7 +72,7 @@ jobs:
 
             - label: extract_plist livecheck
               path: Casks/.+
-              content: \n  strategy :extract_plist.*\n
+              content: strategy :extract_plist
 
             - label: missing zap
               path: Casks/.+
