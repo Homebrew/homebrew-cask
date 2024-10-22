@@ -11,10 +11,11 @@ cask "huly" do
   homepage "https://huly.io/"
 
   livecheck do
-    url "https://github.com/hcengineering/platform/releases"
-    strategy :github_latest
+    url "https://dist.huly.io/latest-mac.yml"
+    strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Huly.app"
