@@ -12,7 +12,7 @@ cask "multideco" do
   uninstall pkgutil: "com.hhssoftware.pkg.MultiDeco"
 
   zap trash: [
-    "~/Library/Saved Application State/com.hhssoftware.multideco.savedState",
     "~/Library/Preferences/com.hhssoftware.multideco.plist",
+    "~/Library/Saved Application State/com.hhssoftware.multideco.savedState"
   ]
 end
