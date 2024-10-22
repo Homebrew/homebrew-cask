@@ -11,7 +11,7 @@ cask "huly" do
   homepage "https://huly.io/"
 
   livecheck do
-    url "https://dist.huly.io/latest-mac.yml"
+    url "https://dist.huly.io/huly-mac.yml"
     strategy :electron_builder
   end
 
