@@ -21,7 +21,10 @@ cask "huly" do
   app "Huly.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/hc.hcengineering.huly.sfl*",
     "~/Library/Application Support/Huly Desktop",
     "~/Library/Logs/Huly Desktop",
+    "~/Library/Preferences/hc.hcengineering.Huly.plist",
+    "~/Library/Saved Application State/hc.hcengineering.Huly.savedState",
   ]
 end
