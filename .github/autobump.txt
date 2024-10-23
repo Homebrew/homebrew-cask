@@ -194,6 +194,7 @@ crossover
 crosspaste
 cryptomator
 crystalmaker
+crystalviewer
 curseforge
 cursor
 cyberduck
