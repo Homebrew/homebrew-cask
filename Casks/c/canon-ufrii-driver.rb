@@ -1,6 +1,6 @@
 cask "canon-ufrii-driver" do
-  version "10.19.17"
-  sha256 "2a88985f07ad8de870b750c13826c480c0ded9e982c1678eff43152cc279fab7"
+  version "10.19.19"
+  sha256 "d32c30cc7ccd7cece27ed5e2d7a66da30b144dc3dc5209c9d3d782670aaa083d"
 
   url "https://downloads.canon.com/bicg2024/drivers/UFRII_v#{version}_mac.zip",
       verified: "downloads.canon.com/"
