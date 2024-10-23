@@ -18,6 +18,7 @@ ableton-live-standard
 ableton-live-standard@11
 ableton-live-suite
 ableton-live-suite@11
+abstract
 actual
 adguard
 adguard-vpn
