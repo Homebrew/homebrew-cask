@@ -1,6 +1,6 @@
 cask "rescuetime" do
-  version "3.2.2.1"
-  sha256 "9f554c2d0189f2f17ca010221357f7525d52eb83dec7bd627c763c5d942e7a9a"
+  version "3.2.3.2"
+  sha256 "25c7930603764253848546a820cec51c2d2d4a074d942e25719afd739d9bf6fd"
 
   url "https://assets.rescuetime.com/installers/RescueTimeInstaller_#{version}.app.zip"
   name "RescueTime"
