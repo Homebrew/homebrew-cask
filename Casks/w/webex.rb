@@ -1,10 +1,10 @@
 cask "webex" do
-  arch arm: "Desktop-MACOS-Apple-Silicon", intel: "TeamsDesktop-MACOS"
+  arch arm: "macos-apple-silicon", intel: "macos-intel"
 
   version "44.10.1.31028"
   sha256 :no_check
 
-  url "https://binaries.webex.com/Webex#{arch}-Gold/Webex.dmg"
+  url "https://binaries.webex.com/webex-#{arch}/Webex.dmg"
   name "Webex Teams"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
