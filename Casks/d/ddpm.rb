@@ -16,7 +16,7 @@ cask "ddpm" do
     end
   end
 
-  pkg "DDPM_Installer.pkg"
+  pkg "DDPMv#{version}/DDPM_Installer.pkg"
   binary "/Applications/DDPM/DDPM.app/Contents/MacOS/DDPM"
 
   uninstall pkgutil: "Qisda.pkg.DDPM",
