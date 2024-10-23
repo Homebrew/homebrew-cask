@@ -1,6 +1,6 @@
 cask "elektron-transfer" do
-  version "1.8.11,10,2024"
-  sha256 "2141bf49898f3704c016326dee4bed4efbd88adc8cede80d2e3627324fe382cf"
+  version "1.9.5,10,2024"
+  sha256 "ff023c8bb6f51d41f09846a40794d666850b2e69dc7a9599c0b27720ec37ce45"
 
   url "https://elektron.se/wp-content/uploads/#{version.csv.third}/#{version.csv.second}/Elektron_Transfer_#{version.csv.first}.dmg"
   name "Elektron Transfer"
