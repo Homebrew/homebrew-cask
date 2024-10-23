@@ -198,6 +198,7 @@ curseforge
 cursor
 cyberduck
 cycling74-max
+dash-dash
 datadog-agent
 dataflare
 datagrip
