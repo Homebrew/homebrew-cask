@@ -8,6 +8,11 @@ cask "greenery" do
   desc "Cryptocurrency bookkeeping and accounting wallet"
   homepage "https://www.greenery.finance/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Greenery.app"
