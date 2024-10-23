@@ -221,6 +221,7 @@ dcp-o-matic-kdm-creator
 dcp-o-matic-player
 dcp-o-matic-playlist-editor
 ddnet
+ddpm
 deckset
 deeper
 deezer
