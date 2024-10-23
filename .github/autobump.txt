@@ -133,6 +133,7 @@ camerabag-photo
 camo-studio
 camtasia
 camunda-modeler
+canon-ufrii-driver
 canva
 cap
 capacities
