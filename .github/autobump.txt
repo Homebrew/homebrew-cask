@@ -99,6 +99,7 @@ bike
 bilibili
 binance
 bing-wallpaper
+bitbox
 bitwarden
 bitwig-studio
 black-ink
