@@ -1,15 +1,9 @@
 cask "ghost-browser" do
   arch arm: "_arm64"
 
-  sha256 arm:   "60c2d73bab0784b69675697e1a233a5021419b7431156da256758e9344b9662e",
-         intel: "63dc9782cdadd80f240071385d4698acd4fd69bf3bec8a0a768a65188de32046"
-
-  on_arm do
-    version "2.3.0.4"
-  end
-  on_intel do
-    version "2.3.0.3"
-  end
+  version "2.4.0.1"
+  sha256 arm:   "33ac084baded6e530ee5203494b62efe04e1ef96016e132e6ff6aee5f5e314fa",
+         intel: "33656bf6b5a1e85cc9015fec84d9e17e919e546b5ef0e1110e6a6819d7b5955d"
 
   url "https://downloads.ghostbrowser.com/GhostBrowser-#{version}#{arch}.dmg"
   name "Ghost Browser"
@@ -22,6 +16,7 @@ cask "ghost-browser" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Ghost Browser.app"
 
