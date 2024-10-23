@@ -578,6 +578,7 @@ millie
 mimestream
 mindmac
 minecraft-education
+minecraft-server
 mini-program-studio
 miniforge
 minisim
