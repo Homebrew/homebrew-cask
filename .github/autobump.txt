@@ -428,6 +428,7 @@ hoppscotch
 houdahspot
 hstracker
 http-toolkit
+huggingchat
 huly
 hydrus-network
 hyperbackupexplorer
