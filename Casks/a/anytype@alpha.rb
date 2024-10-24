@@ -12,10 +12,8 @@ cask "anytype@alpha" do
   homepage "https://anytype.io/"
 
   livecheck do
-    url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/alpha-mac.yml"
-    strategy :electron_builder do |yaml|
-      yaml["version"]&.sub(/[._-]alpha.*$/i, "")
-    end
+    url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/alpha-mac.yml?v=#{Time.new.to_i}"
+    strategy :electron_builder
   end
 
   auto_updates true
