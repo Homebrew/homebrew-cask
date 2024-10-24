@@ -1,6 +1,6 @@
 cask "opera-gx" do
-  version "114.0.5282.106"
-  sha256 "d8a3e9e1f604ec7bdbbc93e2d4d0845432bc937456f22c34d0d468d43db2ef29"
+  version "114.0.5282.123"
+  sha256 "4e7e088cfecab323c8f6053e90336ead2e5285c45210c1391b92c2a2a6695fbc"
 
   url "https://get.geo.opera.com/pub/opera_gx/#{version}/mac/Opera_GX_#{version}_Setup.dmg"
   name "Opera GX"
