@@ -94,6 +94,7 @@ bentobox
 betterdisplay
 bettermouse
 bettertouchtool
+beyond-compare
 bezel
 bibdesk
 bike
