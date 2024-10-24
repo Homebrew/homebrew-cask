@@ -13,6 +13,10 @@ cask "follow" do
     regex(/^v?(\d+(?:\.\d+)+(?:[._-]beta[._-]?\d+)?)$/i)
   end
 
+  conflicts_with cask: [
+    "follow@alpha",
+    "follow@nightly",
+  ]
   depends_on macos: ">= :catalina"
 
   app "Follow.app"

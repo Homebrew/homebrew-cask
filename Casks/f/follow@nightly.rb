@@ -13,6 +13,10 @@ cask "follow@nightly" do
     regex(/^nightly[._-]v?(\d+(?:\.\d+)+(?:[._-]nightly[._-]?\d+)?)$/i)
   end
 
+  conflicts_with cask: [
+    "follow",
+    "follow@alpha",
+  ]
   depends_on macos: ">= :big_sur"
 
   app "Follow.app"
