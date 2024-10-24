@@ -1,9 +1,9 @@
 cask "scilab" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2024.1.0"
-  sha256 arm:   "8d198194b7b4b0531568ea72e3662c94d76d1a31369b019846c5b99c7f0bbbfc",
-         intel: "a856a62a85622654c6dff0a4035c1b9f152d1c6d99b4edee67e1589baa68c196"
+  version "2025.0.0"
+  sha256 arm:   "8501444f342282eaa254a06e22b71eeb6798109d3ae81d651cdd087a335468f4",
+         intel: "d02ae625f8d3b7b1a4a3a7ad0671fd6142edab0c01ee90d81c3c04fda92e5ae0"
 
   url "https://www.scilab.org/download/#{version}/scilab-#{version}-#{arch}.dmg"
   name "Scilab"
