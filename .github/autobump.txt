@@ -360,6 +360,7 @@ font-lxgw-simzhisong
 font-sarasa-gothic
 fork
 forkgram-telegram
+forklift
 fossa
 foxglove-studio
 foxit-pdf-editor
