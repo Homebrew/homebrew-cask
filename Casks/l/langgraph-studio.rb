@@ -12,5 +12,9 @@ cask "langgraph-studio" do
 
   app "LangGraph Studio.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/LangGraph Studio",
+    "~/Library/Preferences/com.electron.langgraph-studio-desktop.plist",
+    "~/Library/Saved Application State/com.electron.langgraph-studio-desktop.savedState",
+  ]
 end
