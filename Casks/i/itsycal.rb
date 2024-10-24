@@ -38,8 +38,8 @@ cask "itsycal" do
     end
   end
   on_big_sur :or_newer do
-    version "0.15.4"
-    sha256 "4a60fa65ec49f95498a28f81f1c3e5d6c098020f4c43641f5890880bf73c86e8"
+    version "0.15.5"
+    sha256 "f3fc3c8fe6bb8bcbf8e97faf055506d796f05bd1b2258c972ed19213c898cd18"
 
     livecheck do
       url "https://itsycal.s3.amazonaws.com/itsycal.xml"
