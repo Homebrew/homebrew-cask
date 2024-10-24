@@ -1069,6 +1069,7 @@ wins
 wire
 wirecast
 wondershare-uniconverter
+wooshy
 wordpresscom-studio
 workflowy
 wpsoffice-cn
