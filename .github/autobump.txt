@@ -631,6 +631,7 @@ mumuplayer
 murus
 mutedeck
 mweb-pro
+nagstamon
 native-access
 naver-whale
 navicat-for-mariadb
