@@ -293,6 +293,7 @@ fantastical
 fastrawviewer
 fbreader
 fedistar
+feedflow
 feed-the-beast
 feishu
 ferdium
