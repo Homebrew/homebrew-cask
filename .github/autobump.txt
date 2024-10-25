@@ -48,6 +48,7 @@ ammonite
 android-studio
 android-studio-preview@beta
 android-studio-preview@canary
+anka-virtualization
 anki
 ankiapp
 another-redis-desktop-manager
