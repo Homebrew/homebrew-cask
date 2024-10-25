@@ -1,9 +1,9 @@
 cask "hackolade" do
   arch arm: "ARM64"
 
-  version "7.8.1"
-  sha256 arm:   "b297a4761d24ce2e8f24388ce4dcd6203954822f46815fc1e473a8817041527c",
-         intel: "5654a16efc8bd442ebe221b65747105a38413d79a77794d19d891534e72e53f4"
+  version "7.8.2"
+  sha256 arm:   "b75bf691270553afc7ddd7a97f598d7a365e22e0360619ee6ddddc0be059c245",
+         intel: "760ff3c9e9839d6e66d35fde51f95812d5833e691dc204f06ea4942e7a2e6c25"
 
   url "https://hackolade.s3.amazonaws.com/previous/v#{version}/Hackolade-mac#{arch}-setup-signed.pkg",
       verified: "hackolade.s3.amazonaws.com/"
