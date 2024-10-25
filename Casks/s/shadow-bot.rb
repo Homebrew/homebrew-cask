@@ -2,12 +2,11 @@ cask "shadow-bot" do
   arch arm: "-arm64"
   livecheck_query = on_arch_conditional arm: "arm64", intel: "intel"
 
-  version "1.9.6"
-  sha256 arm:   "aaf09bfe0ddf81c4dca1975ca9a2fb38c00395d44797bc77c1a58ea058489497",
-         intel: "66e7fa384817cc800d6df67e5cc5f51eb81b412d8191558ad9faf9515b9cc7db"
+  version "1.9.7"
+  sha256 arm:   "1f376878a3c16f080f42f77edee8b9c6a3cb5f52ca4aafdc0797537b339186ab",
+         intel: "f24359d0fe7abd6a00c883fbd3eb11dece09b95d7ad50525301a42f90b15c18f"
 
-  url "https://winrobot-pub-a-cos.winrobot360.com/client/install/ShadowBot-#{version}#{arch}.dmg",
-      verified: "winrobot-pub-a-cos.winrobot360.com/"
+  url "https://winrobot-pub-a-cos.yingdao.com/client/install/ShadowBot-#{version}#{arch}.dmg"
   name "Shadow Bot"
   name "影刀"
   desc "Application for robotic process automation"
