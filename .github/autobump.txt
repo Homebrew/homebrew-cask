@@ -890,6 +890,7 @@ skype@preview
 slack
 slack-cli
 slack@beta
+smooze-pro
 smultron
 snagit
 snapmaker-luban
