@@ -6,6 +6,8 @@ cask "font-oppo-sans" do
   name "OPPO Sans"
   homepage "https://www.coloros.com/index/newsDetail?id=72"
 
+  disable! date: "2024-10-23", because: "terms specified no redistribution"
+
   font "3.0 Designer_分级/OPlusSans3-ExtraLight.ttf"
   font "3.0 Designer_分级/OPlusSans3-Light.ttf"
   font "3.0 Designer_分级/OPlusSans3-Regular.ttf"
