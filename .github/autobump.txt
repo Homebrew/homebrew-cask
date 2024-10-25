@@ -326,6 +326,7 @@ focus
 focusrite-control
 focusrite-control-2
 foldit
+follow@nightly
 font-chiron-hei-hk
 font-chiron-sung-hk
 font-iosevka
