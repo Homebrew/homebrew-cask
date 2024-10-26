@@ -9,7 +9,8 @@ cask "hopper-disassembler" do
   homepage "https://www.hopperapp.com/"
 
   livecheck do
-    skip "Cannot get version info unless livecheck can specify user_agent"
+    url "https://www.hopperapp.com/rss/changelog.xml"
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
