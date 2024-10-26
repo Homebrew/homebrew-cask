@@ -8,7 +8,7 @@ cask "notesollama" do
   homepage "https://smallest.app/notesollama/"
 
   livecheck do
-    url "https://smallest.app/notesollama/"
+    url :homepage
     regex(/NotesOllama-(\d+(?:\.\d+)*)\.zip/i)
   end
 
