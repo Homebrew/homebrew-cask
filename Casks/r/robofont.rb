@@ -1,6 +1,6 @@
 cask "robofont" do
-  version "4.4,2310101500"
-  sha256 "0b110f54731a79518cdbce23869d03553ebf04ac26d2b1c230777d3e0f809562"
+  version "4.5,2410251426"
+  sha256 "67ee65c74a2b9f8488e57aa99b64b1f8f22a4bb3cafb9baaf6a889d3deee0953"
 
   url "https://static.typemytype.com/robofont/versionHistory/RoboFont_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "static.typemytype.com/robofont/"
@@ -25,8 +25,4 @@ cask "robofont" do
     "~/Library/Preferences/com.typemytype.robofont#{version.major}.plist",
     "~/Library/Saved Application State/com.typemytype.robofont#{version.major}.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
