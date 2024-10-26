@@ -11,7 +11,16 @@ cask "superslicer" do
   homepage "https://github.com/supermerill/SuperSlicer"
 
   livecheck do
-    skip "Requires checking separate GitHub release asset list HTML"
+    url :url
+    regex(/^SuperSlicer[._-]v?(\d+(?:\.\d+)+)[._-]macos#{arch}[._-](\d+)\.dmg$/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
+      end
+    end
   end
 
   depends_on formula: "zstd"
