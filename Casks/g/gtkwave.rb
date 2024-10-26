@@ -12,6 +12,8 @@ cask "gtkwave" do
     regex(%r{url=.*?/gtkwave[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]app/}i)
   end
 
+  deprecate! date: "2024-10-29", because: :discontinued
+
   app "gtkwave.app"
   binary "#{appdir}/gtkwave.app/Contents/Resources/bin/gtkwave", target: "gtkwave"
 
