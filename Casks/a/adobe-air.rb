@@ -12,7 +12,7 @@ cask "adobe-air" do
   # Since the <number> is not fixed in the filename, the current JavaScript
   # file needs to be extracted from the download page.
   livecheck do
-    url "https://airsdk.harman.com/"
+    url :homepage
     regex(%r{/v?(\d+(?:\.\d+)+)/AdobeAIR\.dmg}i)
     strategy :page_match do |page, regex|
       js_file = page[/src=["']?(main.+\.js)\??["' >]/i, 1]
