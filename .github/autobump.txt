@@ -645,6 +645,7 @@ navicat-premium
 navicat-premium-lite
 neovide
 netron
+netspot
 nextcloud
 nextcloud-vfs
 ngrok

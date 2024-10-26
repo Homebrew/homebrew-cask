@@ -1,5 +1,5 @@
 cask "netspot" do
-  version "4.0.4453"
+  version "4.0.4462"
   sha256 :no_check
 
   url "https://cdn.netspotapp.com/download/NetSpot.dmg"
