@@ -12,6 +12,9 @@ cask "fellow" do
     strategy :header_match
   end
 
+  auto_updates true
+  depends_on macos: ">= :catalina"
+
   app "Fellow.app"
 
   zap trash: [
