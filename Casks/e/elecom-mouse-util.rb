@@ -8,7 +8,7 @@ cask "elecom-mouse-util" do
   homepage "https://www.elecom.co.jp/global/download-list/utility/mouse_assistant/mac/"
 
   livecheck do
-    url "https://www.elecom.co.jp/global/download-list/utility/mouse_assistant/mac/"
+    url :homepage
     regex(/ELECOM[._-]Mouse[._-]Installer[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 

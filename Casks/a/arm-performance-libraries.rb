@@ -9,7 +9,7 @@ cask "arm-performance-libraries" do
   homepage "https://developer.arm.com/downloads/-/arm-performance-libraries"
 
   livecheck do
-    url "https://developer.arm.com/downloads/-/arm-performance-libraries"
+    url :homepage
     regex(/Version[._-]v?(\d+(?:\.\d+)+)/i)
   end
 

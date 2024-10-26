@@ -9,7 +9,7 @@ cask "wins" do
   homepage "https://wins.cool/"
 
   livecheck do
-    url "https://wins.cool/"
+    url :homepage
     regex(/href=.*?Wins[._-]latest[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
