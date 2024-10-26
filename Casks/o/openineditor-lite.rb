@@ -7,8 +7,24 @@ cask "openineditor-lite" do
   desc "Finder Toolbar app to open the current directory in Editor"
   homepage "https://github.com/Ji4n1ng/OpenInTerminal"
 
+  # Not every GitHub release provides a `openineditor-lite` file, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
-    skip "No reliable way to get version info"
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases do |json, regex|
+      file_regex = /^OpenInEditor[._-]Lite\.zip$/i
+
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+        next unless release["assets"]&.any? { |asset| asset["name"]&.match?(file_regex) }
+
+        match = release["tag_name"].match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   app "OpenInEditor-Lite.app"
