@@ -1,6 +1,6 @@
 cask "purei-play" do
-  version "0.65"
-  sha256 "721d1574f8e262b6a75a035730c5436c9138d9b8cd7bbcddbfba2d0b4573b2fa"
+  version "0.67"
+  sha256 "d7fa2e47d3748a5c2dcbf5716adfd0cd0af174784db05c80418ce04354aa52ce"
 
   url "https://purei.org/downloads/play/stable/#{version}/Play.dmg"
   name "Play!"
