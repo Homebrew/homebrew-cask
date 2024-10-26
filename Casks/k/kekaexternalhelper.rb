@@ -16,13 +16,17 @@ cask "kekaexternalhelper" do
   livecheck do
     url :url
     regex(%r{/v?(\d+(?:\.\d+)+)/KekaExternalHelper[._-]v?(\d+(?:\.\d+)+)\.zip$}i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["browser_download_url"]&.match(regex)
-        next if match.blank?
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
 
-        "#{match[2]},#{match[1]}"
-      end
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          "#{match[2]},#{match[1]}"
+        end
+      end.flatten
     end
   end
 
