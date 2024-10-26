@@ -295,6 +295,7 @@ fbreader
 fedistar
 feed-the-beast
 feishu
+fellow
 ferdium
 ff-works
 fightcade
