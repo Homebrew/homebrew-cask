@@ -71,6 +71,7 @@ arc
 archivewebpage
 arctic
 arq
+asana
 atlauncher
 audacity
 audius
@@ -297,8 +298,8 @@ fantastical
 fastrawviewer
 fbreader
 fedistar
-feedflow
 feed-the-beast
+feedflow
 feishu
 fellow
 ferdium
@@ -492,6 +493,7 @@ kaleidoscope
 kdenlive
 kdrive
 keepassxc@snapshot
+keeper-password-manager
 keyboard-cowboy
 keyman
 keymapp
