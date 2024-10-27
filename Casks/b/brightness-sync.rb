@@ -10,4 +10,6 @@ cask "brightness-sync" do
   depends_on macos: ">= :catalina"
 
   app "Brightness Sync.app"
+
+  # No zap stanza required
 end
