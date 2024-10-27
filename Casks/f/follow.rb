@@ -1,6 +1,6 @@
 cask "follow" do
-  version "0.1.1-beta.0"
-  sha256 "e759c4a1f44a67d34100399bbae9dd00b5fe9f063935565707f450146cc4ee89"
+  version "0.1.1-beta.1"
+  sha256 "59f9f9d0fcaeb45b8b9fc309cca67e189581f347ff1e109da4fa4868113b8555"
 
   url "https://github.com/RSSNext/Follow/releases/download/v#{version}/Follow-#{version}-macos-universal.dmg",
       verified: "github.com/RSSNext/Follow/"
@@ -13,6 +13,7 @@ cask "follow" do
     regex(/^v?(\d+(?:\.\d+)+(?:[._-]beta[._-]?\d+)?)$/i)
   end
 
+  auto_updates true
   conflicts_with cask: [
     "follow@alpha",
     "follow@nightly",
