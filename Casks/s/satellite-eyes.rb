@@ -13,7 +13,15 @@ cask "satellite-eyes" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Satellite Eyes.app"
+
+  zap trash: [
+    "~/Library/Application Support/Satellite Eyes",
+    "~/Library/Caches/uk.co.tomtaylor.SatelliteEyes",
+    "~/Library/HTTPStorages/uk.co.tomtaylor.SatelliteEyes",
+    "~/Library/Preferences/uk.co.tomtaylor.SatelliteEyes.plist",
+  ]
 end
