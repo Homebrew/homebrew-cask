@@ -13,7 +13,15 @@ cask "commandq" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "CommandQ.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.commandqapp.CommandQ",
+    "~/Library/Caches/com.commandqapp.CommandQ",
+    "~/Library/HTTPStorages/com.commandqapp.CommandQ",
+    "~/Library/Preferences/com.commandqapp.CommandQ.plist",
+  ]
 end
