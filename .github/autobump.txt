@@ -1031,6 +1031,7 @@ vbrokers
 vcam
 vellum
 videofusion
+vienna
 vienna-assistant
 vimr
 virtualbox@beta
