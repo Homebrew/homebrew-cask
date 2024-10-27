@@ -1,6 +1,6 @@
 cask "endless-sky-high-dpi" do
-  version "0.10.9"
-  sha256 "e2e279a262ff7166cab1d595fc61a8364259d6a446f6ed8064feaf7b753b1230"
+  version "0.10.10"
+  sha256 "b10d61befc3a63d64ef23de0dda53f0da1dad297459987927b170b17c2654a00"
 
   url "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v#{version}.tar.gz",
       verified: "github.com/endless-sky/endless-sky-high-dpi/"
