@@ -7,10 +7,7 @@ cask "macterm" do
   desc "Terminal emulator"
   homepage "https://www.macterm.net/"
 
-  livecheck do
-    url "https://www.macterm.net/updates/daily.html"
-    regex(/macterm[._-](\d+(?:\.\d+)+)\.dmg/i)
-  end
+  deprecate! date: "2024-10-27", because: :unmaintained
 
   depends_on macos: "<= :mojave"
 
