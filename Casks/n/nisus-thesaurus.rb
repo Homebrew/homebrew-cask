@@ -4,7 +4,7 @@ cask "nisus-thesaurus" do
 
   url "https://nisus.com/files/public/NisusThesaurus-v#{version.no_dots}.zip"
   name "Nisus Thesaurus"
-  desc "Electronic thesaurus that for the 'Service' menu"
+  desc "Electronic thesaurus for the 'Service' menu"
   homepage "https://nisus.com/Thesaurus/"
 
   livecheck do
@@ -15,4 +15,9 @@ cask "nisus-thesaurus" do
   depends_on macos: ">= :catalina"
 
   app "Nisus Thesaurus.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.nisus.NisusThesaurus",
+    "~/Library/Containers/com.nisus.NisusThesaurus",
+  ]
 end
