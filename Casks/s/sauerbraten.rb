@@ -10,11 +10,15 @@ cask "sauerbraten" do
 
   livecheck do
     url :homepage
-    regex(%r{(\d+(?:_\d+)*)/sauerbraten[._-]?(\d+(?:_\d+)*)[._-]?macos.dmg}i)
+    regex(%r{(\d+(?:_\d+)*)/sauerbraten[._-]?v?(\d+(?:_\d+)*)[._-]?macos\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1].tr("_", ".")}" }
     end
   end
 
   app "Sauerbraten.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
