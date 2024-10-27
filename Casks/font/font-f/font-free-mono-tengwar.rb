@@ -8,7 +8,7 @@ cask "font-free-mono-tengwar" do
 
   livecheck do
     url "https://sourceforge.net/projects/freetengwar/rss?path=/TengwarFont"
-    regex(/FreeMonoTengwar\.(\d+(?:-\d+)*)/)
+    regex(/FreeMonoTengwar\.(\d+(?:-\d+)*)/i)
   end
 
   font "FreeMonoTengwar.#{version}/FreeMonoTengwar-embedding.ttf"

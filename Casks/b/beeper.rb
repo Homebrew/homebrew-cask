@@ -13,7 +13,7 @@ cask "beeper" do
 
   livecheck do
     url "https://download.todesktop.com/2003241lzgn20jd/latest-mac.yml"
-    regex(/Beeper\sv?(\d+(?:\.\d+)+)(?:\s-\sBuild\s([a-z\d]+?))?-#{arch}-mac\.zip/)
+    regex(/Beeper\sv?(\d+(?:\.\d+)+)(?:\s-\sBuild\s([a-z\d]+?))?-#{arch}-mac\.zip/i)
     strategy :electron_builder do |yaml, regex|
       yaml["files"]&.map do |item|
         match = item["url"]&.match(regex)

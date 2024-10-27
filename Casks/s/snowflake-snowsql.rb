@@ -13,7 +13,7 @@ cask "snowflake-snowsql" do
 
   livecheck do
     url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/#{version.major_minor}/darwin_#{arch}/index.html"
-    regex(%r{">snowsql-(\d+(?:\.\d+)+)-darwin_#{arch}.pkg</a>})
+    regex(%r{">snowsql-(\d+(?:\.\d+)+)-darwin_#{arch}.pkg</a>}i)
   end
 
   pkg "snowsql-#{version}-darwin_#{arch}.pkg"

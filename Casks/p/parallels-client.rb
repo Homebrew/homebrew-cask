@@ -9,7 +9,7 @@ cask "parallels-client" do
 
   livecheck do
     url "https://download.parallels.com/website_links/ras/#{version.csv.first.major}/builds-en_US.json"
-    regex(/RasClient[._-]Mac[._-]Notarized[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.pkg/)
+    regex(/RasClient[._-]Mac[._-]Notarized[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.pkg/i)
     strategy :json do |json, regex|
       client_json = json.select { |item| item.dig("category", "name")&.start_with?("Client") }&.first
       mac_client_json = client_json&.dig("contents")&.select { |item| item["subcategory"] == "Mac" }&.first

@@ -9,7 +9,7 @@ cask "little-snitch" do
 
   livecheck do
     url "https://sw-update.obdev.at/update-feeds/littlesnitch#{version.major}.plist"
-    regex(/LittleSnitch[._-]v?(\d+(?:\.\d+)+)\.dmg/)
+    regex(/LittleSnitch[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :xml do |xml, regex|
       xml.get_elements("//key[text()='DownloadURL']").map do |item|
         match = item.next_element&.text&.match(regex)

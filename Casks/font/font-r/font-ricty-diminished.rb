@@ -8,7 +8,7 @@ cask "font-ricty-diminished" do
 
   livecheck do
     url :homepage
-    regex(%r{/ricty_diminished-(\d+(?:\.\d+)*)\.t})
+    regex(%r{/ricty_diminished-(\d+(?:\.\d+)*)\.t}i)
   end
 
   font "RictyDiminished-Bold.ttf"

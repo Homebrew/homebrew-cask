@@ -8,7 +8,7 @@ cask "font-aileron" do
 
   livecheck do
     url :homepage
-    regex(/Version\s+(\d+(?:\.\d+)*)/)
+    regex(/Version\s+(\d+(?:\.\d+)*)/i)
   end
 
   font "Aileron-Black.otf"
