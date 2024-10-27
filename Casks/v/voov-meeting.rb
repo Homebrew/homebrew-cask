@@ -19,7 +19,7 @@ cask "voov-meeting" do
 
   livecheck do
     url %Q(https://voovmeeting.com/web-service/query-download-info?q=[{"package-type":"app","channel":"1410000198","platform":"mac","arch":"#{arch}","decorators":["intl"]}]&nonce=1234567890123456)
-    regex(%r{/cos/(\h+)/VooVMeeting[._-].+?v?(\d+(?:\.\d+)+)})
+    regex(%r{/cos/(\h+)/VooVMeeting[._-].+?v?(\d+(?:\.\d+)+)}i)
     strategy :json do |json, regex|
       json["info-list"]&.map do |item|
         match = item["url"]&.match(regex)
