@@ -16,6 +16,12 @@ cask "talon" do
 
   app "Talon.app"
 
+  zap trash: [
+    "~/.talon",
+    "~/Library/HTTPStorages/com.talonvoice.Talon",
+    "~/Library/Preferences/com.talonvoice.Talon.plist",
+  ]
+
   caveats do
     license "https://talonvoice.com/EULA.txt"
   end
