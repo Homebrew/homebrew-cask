@@ -9,8 +9,10 @@ cask "lotus" do
   homepage "https://getlotus.app/"
 
   livecheck do
-    url "https://app-updates.vadimdemedes.com/lotus/download/osx"
-    strategy :header_match
+    url "https://lotus-updates.vercel.app/update/darwin/0.0.0"
+    strategy :json do |json|
+      json["name"]&.tr("v", "")
+    end
   end
 
   depends_on macos: ">= :el_capitan"
