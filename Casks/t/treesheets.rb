@@ -10,7 +10,7 @@ cask "treesheets" do
 
   livecheck do
     url :url
-    regex(/^(\d+)$/)
+    regex(/^(\d+)$/i)
     strategy :github_latest
   end
 
