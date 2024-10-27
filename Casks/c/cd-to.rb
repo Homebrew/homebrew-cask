@@ -35,4 +35,6 @@ cask "cd-to" do
     To use, just click on the new button and instantly opens a new Terminal.app
     window.
   EOS
+
+  # No zap stanza required
 end
