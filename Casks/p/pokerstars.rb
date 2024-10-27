@@ -1,5 +1,5 @@
 cask "pokerstars" do
-  version "70.295"
+  version "72.374"
   sha256 :no_check
 
   url "https://download.pokerstars.net/PokerStars.net.app.zip"
@@ -13,18 +13,20 @@ cask "pokerstars" do
   end
 
   depends_on macos: ">= :high_sierra"
-  container nested: "PokerStars.net/PokerStars.net.dmg"
+  container nested: "PokerStars/PokerStars.dmg"
 
-  app "PokerStars.net.app"
+  app "PokerStars.app"
 
   uninstall quit:   [
-              "com.pokerstars.PokerStars.net",
+              "com.pokerstars.PokerStars",
               "com.pokerstars.PokerStarsBrowse",
             ],
-            delete: "#{appdir}/PokerStars.net.app"
+            delete: "#{appdir}/PokerStars.app"
 
   zap trash: [
-    "~/Library/Application Support/PokerStars.net",
+    "~/Library/Application Support/PokerStars",
+    "~/Library/Caches/PokerStars",
+    "~/Library/Logs/PokerStars",
     "~/Library/Preferences/com.pokerstars.net.user.ini",
     "~/Library/Preferences/com.pokerstars.NetworkStatus.plist",
     "~/Library/Preferences/com.pokerstars.PokerStars.net.plist",
