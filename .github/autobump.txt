@@ -247,6 +247,7 @@ discord@ptb
 diskcatalogmaker
 dockx
 dolphin@dev
+dosbox-staging
 dotnet
 dotnet-sdk
 dotnet-sdk@preview
