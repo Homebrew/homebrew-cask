@@ -18,4 +18,9 @@ cask "teamviewer-quickjoin" do
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "TeamViewerQJ.app", target: "TeamViewer QuickJoin.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.teamviewer.TeamViewerQJ.plist",
+    "~/Library/Saved Application State/com.teamviewer.TeamViewerQJ.savedState",
+  ]
 end
