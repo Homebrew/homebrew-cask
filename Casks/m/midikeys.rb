@@ -5,6 +5,7 @@ cask "midikeys" do
   url "https://github.com/flit/MidiKeys/releases/download/v#{version}/MidiKeys_#{version}.zip",
       verified: "github.com/flit/MidiKeys/"
   name "MidiKeys"
+  desc "Onscreen MIDI keyboard"
   homepage "https://www.manyetas.com/creed/midikeys.html"
 
   livecheck do
@@ -12,5 +13,13 @@ cask "midikeys" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "MidiKeys.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.immosw.MidiKeys",
+    "~/Library/Preferences/com.immosw.MidiKeys.plist",
+    "~/Library/Saved Application State/com.immosw.MidiKeys.savedState",
+  ]
 end
