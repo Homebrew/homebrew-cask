@@ -7,10 +7,7 @@ cask "obs-ndi" do
   desc "NDI integration for OBS Studio"
   homepage "https://github.com/obs-ndi/obs-ndi"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-10-27", because: :discontinued
 
   depends_on cask: "libndi"
 
