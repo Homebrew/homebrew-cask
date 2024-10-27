@@ -9,11 +9,16 @@ cask "lyrics-master" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      v = page[%r{href=.*?/LyricsMaster(\d+(?:\.\d+)*)\.dmg}i, 1]
-      v.chars.join(".")
+    regex(/href=.*?LyricsMaster[._-]?v?(\d+(?:\.\d+)*)\.dmg/)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      match[1].chars.join(".")
     end
   end
 
   app "Lyrics Master.app"
+
+  zap trash: "~/Library/Preferences/preferences.lyricsmaster"
 end
