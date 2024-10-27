@@ -8,7 +8,7 @@ cask "pingid" do
   homepage "https://www.pingidentity.com/"
 
   livecheck do
-    url "https://docs.pingidentity.com/api/khub/maps/v6hqiVhowIDI52XNglkuRw/pages"
+    url "https://docs.pingidentity.com/pingid/release_notes/pid_general_release_notes.html"
     regex(/Desktop\s+app\s+v?(\d+(?:\.\d+)+)/i)
   end
 
