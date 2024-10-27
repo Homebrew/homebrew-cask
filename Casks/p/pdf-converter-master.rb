@@ -8,9 +8,15 @@ cask "pdf-converter-master" do
   homepage "https://www.lightenpdf.com/pdf-converter-mac.html"
 
   livecheck do
-    url :homepage
-    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
+    url "https://www.lightenpdf.com/xml/PDF-Converter-Mac.xml"
+    strategy :sparkle
   end
 
   app "PDF Converter Master.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.lightenpdf.pdfconverterweb",
+    "~/Library/Preferences/com.lightenpdf.pdfconverterweb.plist",
+    "~/Library/Saved Application State/com.lightenpdf.pdfconverterweb.savedState",
+  ]
 end
