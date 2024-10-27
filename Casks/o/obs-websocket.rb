@@ -15,6 +15,8 @@ cask "obs-websocket" do
     strategy :github_releases
   end
 
+  deprecate! date: "2024-10-27", because: :discontinued
+
   pkg "obs-websocket-#{version}-macOS.pkg"
 
   uninstall pkgutil: "com.obsproject.obs-websocket"
