@@ -9,7 +9,7 @@ cask "bluestacks" do
 
   livecheck do
     url "https://cloud.bluestacks.com/api/getdownloadnow?platform=mac&mac_version=#{MacOS.full_version}"
-    regex(%r{/(\d+(?:\.\d+)*)/([^/]+)/})
+    regex(%r{/(\d+(?:\.\d+)*)/([^/]+)/}i)
     strategy :header_match do |headers, regex|
       headers["location"].scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
