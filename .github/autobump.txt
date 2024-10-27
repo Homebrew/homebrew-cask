@@ -285,6 +285,7 @@ emacs@nightly
 embyserver
 emclient
 endless-sky
+endless-sky-high-dpi
 enpass
 ente-auth
 entry
