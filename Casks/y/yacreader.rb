@@ -9,8 +9,16 @@ cask "yacreader" do
   homepage "https://www.yacreader.com/"
 
   livecheck do
-    url "https://www.yacreader.com/downloads"
-    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]U[._-]Qt6\.dmg}i)
+    url :url
+    regex(/^YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]U[._-]Qt6\.dmg$/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   app "YACReader.app"
