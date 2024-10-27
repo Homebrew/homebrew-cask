@@ -284,6 +284,7 @@ eloston-chromium
 emacs@nightly
 embyserver
 emclient
+endless-sky
 enpass
 ente-auth
 entry
