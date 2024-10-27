@@ -245,6 +245,7 @@ discord@canary
 discord@development
 discord@ptb
 diskcatalogmaker
+dockside
 dockx
 dolphin@dev
 dosbox-staging
