@@ -10,7 +10,7 @@ cask "outfox" do
 
   livecheck do
     url :url
-    regex(%r{/([^/]+?)/([^/]+)-v?(\d+(?:\.\d+)+[^/]*?)-(MacOSX?[^/]*)\.dmg$})
+    regex(%r{/([^/]+?)/([^/]+)-v?(\d+(?:\.\d+)+[^/]*?)-(MacOSX?[^/]*)\.dmg$}i)
     strategy :github_releases do |json, regex|
       # Temporarily restrict the ten newest releases, to work around older
       # versions using a 4.13.0 version scheme instead of the newer 0.4.14.
