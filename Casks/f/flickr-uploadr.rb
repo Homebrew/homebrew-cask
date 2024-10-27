@@ -8,9 +8,21 @@ cask "flickr-uploadr" do
   homepage "https://www.flickr.com/tools/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://downloads.flickr.com/uploadr/DEVBRANCH94103_FlickrUploadr-Info.plist"
+    strategy :xml do |xml|
+      short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text&.strip
+      version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text&.strip
+      next if short_version.blank? || version.blank?
+
+      "#{short_version},#{version}"
+    end
   end
 
   app "Flickr Uploadr.app"
+
+  zap trash: [
+    "~/Library/Caches/com.flickr.flickrmac",
+    "~/Library/HTTPStorages/com.flickr.flickrmac",
+    "~/Library/Preferences/com.flickr.flickrmac.plist",
+  ]
 end
