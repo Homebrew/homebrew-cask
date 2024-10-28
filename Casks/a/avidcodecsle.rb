@@ -8,9 +8,7 @@ cask "avidcodecsle" do
   desc "Use QuickTime movies using Avid codecs on systems without Media Composer"
   homepage "https://avid.secure.force.com/pkb/articles/en_US/download/Avid-QuickTime-Codecs-LE"
 
-  livecheck do
-    skip "No version information available"
-  end
+  disable! date: "2024-10-28", because: "is 32-bit only"
 
   pkg "AvidCodecsLE.pkg"
 
