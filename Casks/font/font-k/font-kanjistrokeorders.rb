@@ -8,7 +8,10 @@ cask "font-kanjistrokeorders" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?drive\.google\.com/uc\?export=download&amp;id=([\w-]+?)[&"' >].+?KanjiStrokeOrders[._-]v?(\d+(?:\.\d+)+)\.zip}im)
+    regex(%r{
+      href=.*?drive\.google\.com/uc\?export=download&amp;id=([\w-]+?)[&"' >]
+      .+?KanjiStrokeOrders[._-]v?(\d+(?:\.\d+)+)\.zip
+    }imx)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
