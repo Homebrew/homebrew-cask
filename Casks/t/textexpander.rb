@@ -17,5 +17,12 @@ cask "textexpander" do
 
   app "TextExpander.app"
 
-  zap trash: "~/Library/Application Support/TextExpander/"
+  zap trash: [
+    "~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.smileonmymac.textexpander.json",
+    "~/Library/Application Support/TextExpander",
+    "~/Library/Caches/com.smileonmymac.textexpander",
+    "~/Library/Preferences/com.smileonmymac.textexpander.plist",
+    "~/Library/Saved Application State/com.smileonmymac.textexpander.savedState",
+    "~/Library/Webkit/com.smileonmymac.textexpander",
+  ]
 end
