@@ -930,6 +930,7 @@ steelseries-gg
 steermouse
 steinberg-activation-manager
 studio-3t
+sublime-merge
 sublime-text@dev
 sunsama
 superhuman
