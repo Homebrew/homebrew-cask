@@ -7,6 +7,8 @@ cask "crypter" do
   desc "Encryption software"
   homepage "https://github.com/HR/Crypter"
 
+  deprecate! date: "2024-10-27", because: :unmaintained
+
   app "Crypter.app"
 
   zap trash: [
