@@ -132,6 +132,7 @@ burp-suite-professional
 busycal
 buttercup
 c0re100-qbittorrent
+cables
 cahier
 calhash
 calibre
