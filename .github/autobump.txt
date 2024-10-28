@@ -1100,6 +1100,7 @@ writerside
 xca
 xcodepilot
 xemu
+xiaomi-cloud
 xiv-on-mac
 xmind
 xnviewmp
