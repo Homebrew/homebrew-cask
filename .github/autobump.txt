@@ -183,6 +183,7 @@ codux
 cog
 coin-wallet
 confluent-cli
+connect-fonts
 cookie
 copilot
 copilot-for-xcode
