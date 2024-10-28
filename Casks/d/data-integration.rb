@@ -14,4 +14,8 @@ cask "data-integration" do
   end
 
   app "data-integration/Data Integration.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
