@@ -1,5 +1,5 @@
 cask "google-ads-editor" do
-  version :latest
+  version "2.7"
   sha256 :no_check
 
   url "https://dl.google.com/adwords_editor/Google_AdWords_Editor.dmg"
@@ -8,10 +8,14 @@ cask "google-ads-editor" do
   homepage "https://ads.google.com/home/tools/ads-editor/"
 
   livecheck do
-    skip "unversioned QT application"
+    url "https://support.google.com/google-ads/editor/topic/13728"
+    regex(/version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Google Ads Editor.app"
+
+  zap trash: "~/Library/Saved Application State/com.google.googleadseditor.savedState"
 end
