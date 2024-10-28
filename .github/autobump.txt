@@ -291,6 +291,7 @@ emclient
 endless-sky
 endless-sky-high-dpi
 enpass
+ente
 ente-auth
 entry
 eset-cyber-security
