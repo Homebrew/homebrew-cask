@@ -960,6 +960,7 @@ telegram-a
 telegram-desktop
 telegram-desktop@beta
 teleport-connect
+tella
 temurin
 temurin@17
 temurin@21
