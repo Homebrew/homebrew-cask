@@ -9,7 +9,7 @@ cask "sqlworkbenchj" do
 
   livecheck do
     url "https://www.sql-workbench.eu/dev-download.html"
-    regex(/Workbench[._-]Build(\d+\.\d+)\.zip/i)
+    regex(/Workbench[._-]Build(\d+(?:\.\d+)*)\.zip/i)
   end
 
   app "SQLWorkbenchJ.app"
