@@ -610,6 +610,7 @@ mmhmm
 mmhmm-studio
 mochi
 mochi-diffusion
+mockoon
 modrinth
 monal
 monal@beta
@@ -1039,6 +1040,7 @@ videofusion
 vienna
 vienna-assistant
 vimr
+virtualbox
 virtualbox@beta
 virtualbuddy
 virtualc64
@@ -1075,6 +1077,7 @@ webull
 wechat
 wechatwork
 wetype
+whalebird
 whatsapp
 whatsapp@beta
 whatsapp@legacy
