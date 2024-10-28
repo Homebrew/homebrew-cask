@@ -1,5 +1,5 @@
 cask "tageditor" do
-  version "1.0.15,1249"
+  version "1.0.15,1262"
   sha256 :no_check
 
   url "https://amvidia.com/downloads/tag-editor-mac.dmg"
