@@ -8,10 +8,9 @@ cask "melonbooksviewer" do
   desc "Ebook viewer"
   homepage "https://www.melonbooks.co.jp/ebook/list.php?category_id=77"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  # The website is geoblocked and only accessible in certain regions outside of Japan.
+  # The `homepage` and `url` can return a 404 error page instead of the expected content.
+  disable! date: "2024-10-27", because: :no_longer_available
 
   pkg "installer-signed-melon.pkg"
 
