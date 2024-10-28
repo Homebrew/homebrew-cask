@@ -1,6 +1,6 @@
 cask "robofont" do
-  version "4.5,2410251426"
-  sha256 "67ee65c74a2b9f8488e57aa99b64b1f8f22a4bb3cafb9baaf6a889d3deee0953"
+  version "4.5,2410282152"
+  sha256 "f44eb78425aab433877d5dee6b463891f36c4ebdb2965def8c36421b77e105b6"
 
   url "https://static.typemytype.com/robofont/versionHistory/RoboFont_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "static.typemytype.com/robofont/"
