@@ -1,9 +1,9 @@
 cask "adrive" do
   arch arm: "-arm64"
 
-  version "6.5.0"
-  sha256 arm:   "1954d6c5ac9e5d539457efcc6e5ecacffe320821d4498e94cfa4efcfb8a6aa5f",
-         intel: "88eef68ac6ab0c0ec4055143c10d8b128b5ef28b2ff7345cd67d055a8e99baa4"
+  version "6.6.0"
+  sha256 arm:   "ddcf6e7778977d614a08621b20c9451ccd0725ff772ee35543286a56fa17e58b",
+         intel: "45c0c757f86406166d2aec1591f250ae168a9e939cc19ec56dd37d4e1531d458"
 
   url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-#{version}#{arch}.dmg",
       verified:   "cdn.aliyundrive.net/",
