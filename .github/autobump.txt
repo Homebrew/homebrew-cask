@@ -707,6 +707,7 @@ opgg
 oracle-jdk
 oracle-jdk-javadoc
 orbstack
+orcaslicer
 origami-studio
 oscar
 ossia-score
