@@ -1,5 +1,5 @@
 cask "tageditor" do
-  version "1.0.15,1262"
+  version "1.0.15"
   sha256 :no_check
 
   url "https://amvidia.com/downloads/tag-editor-mac.dmg"
@@ -8,8 +8,8 @@ cask "tageditor" do
   homepage "https://amvidia.com/tag-editor"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://amvidia.com/tag-editor/what-s-new"
+    regex(/Tag\s+Editor\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
