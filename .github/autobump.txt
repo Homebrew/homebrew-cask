@@ -1124,6 +1124,7 @@ zed
 zed@preview
 zen-browser
 zeplin
+zettlr
 znote
 zoc
 zoho-mail
