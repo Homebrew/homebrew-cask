@@ -1,6 +1,6 @@
 cask "tower" do
-  version "12.1,437,b831ed78"
-  sha256 "60d1e2da8a49cc3307bea10e93bbe523faf5c536388670c5b8efe3e058126d8f"
+  version "12.2,441,c7f962a4"
+  sha256 "b6554b122b92f0185d52e9b04b5a0c4ba6eb036f9014ca1208fbe3078aaa123c"
 
   url "https://www.git-tower.com/apps/tower3-mac/#{version.csv.second}-#{version.csv.third}/Tower-#{version.csv.first}-#{version.csv.second}.zip"
   name "Tower"
