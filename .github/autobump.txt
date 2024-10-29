@@ -403,6 +403,7 @@ geogebra@5
 git-credential-manager
 gitbutler
 github
+github-copilot-for-xcode
 github@beta
 gitify
 gitkraken
