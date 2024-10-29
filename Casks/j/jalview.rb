@@ -15,7 +15,7 @@ cask "jalview" do
     regex(/Jalview-(\d(?:_\d+)*)-macos-x64-java_8\.dmg/i)
     strategy :header_match do |headers, regex|
       headers["location"].scan(regex).map do |match|
-        match[0].tr("_", ".").to_s
+        match[0].tr("_", ".")
       end
     end
   end
