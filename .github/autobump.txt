@@ -859,6 +859,7 @@ royal-tsx@beta
 rstudio
 rstudio@daily
 rubymine
+rustdesk
 rustrover
 santa
 sapmachine-jdk
