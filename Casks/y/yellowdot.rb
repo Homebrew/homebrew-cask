@@ -24,14 +24,14 @@ cask "yellowdot" do
   end
 
   name "Yellow Dot"
-  desc "Hide the macOS yellow recording dot in the corner of your screen"
+  desc "Hide the yellow recording dot in the corner of your screen"
   homepage "https://lowtechguys.com/yellowdot"
 
   depends_on macos: ">= :monterey"
 
   app "YellowDot.app"
 
-  uninstall quit: "com.lowtechguys.YellowDot",
+  uninstall quit:       "com.lowtechguys.YellowDot",
             login_item: "YellowDot"
 
   zap trash: "~/Library/Preferences/com.lowtechguys.YellowDot.plist"
