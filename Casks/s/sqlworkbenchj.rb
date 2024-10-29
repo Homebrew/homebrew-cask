@@ -1,18 +1,16 @@
 cask "sqlworkbenchj" do
-  version "124"
-  sha256 "2173c7f00172bef3fed23e7f57e168a9d156c72c311af032ba469139f80d9fe9"
+  version "131.3"
+  sha256 "3025881c49489fbafd2b796fd1086b173652b943a259b3facbf6349363787f26"
 
-  url "https://www.sql-workbench.eu/archive/Workbench-Build#{version}-Mac.tgz"
+  url "https://www.sql-workbench.eu/Workbench-Build#{version}-Mac-with-optional-libs.tgz"
   name "SQL Workbench/J"
   desc "DBMS-independent SQL query tool"
   homepage "https://www.sql-workbench.eu/"
 
   livecheck do
-    url "https://www.sql-workbench.eu/download-archive.html"
-    regex(/Workbench[._-]Build(\d+)[._-]Mac\.t/i)
+    url "https://www.sql-workbench.eu/dev-download.html"
+    regex(/Workbench[._-]Build(\d+(?:\.\d+)*)\.zip/i)
   end
-
-  deprecate! date: "2024-10-02", because: "is no longer built for macOS by the vendor"
 
   app "SQLWorkbenchJ.app"
 
@@ -20,6 +18,5 @@ cask "sqlworkbenchj" do
 
   caveats do
     depends_on_java "11+"
-    requires_rosetta
   end
 end
