@@ -1,14 +1,9 @@
 cask "frappe-books" do
   arch arm: "-arm64"
 
-  on_arm do
-    version "0.23.0"
-    sha256 "2731e2ecfe7bd7c10d8476587f0a953ef0cb9dcfa4dd19bf8d02beb0cfa2b7b7"
-  end
-  on_intel do
-    version "0.21.2"
-    sha256 "9fd0a360f35d9c0745ca43b459d133b7da555122005499a8372eb6fa90719723"
-  end
+  version "0.24.0"
+  sha256 arm:   "3b504151b043afdf696710071e9a1a6c82bad5054c7553de8f51d927dd008496",
+         intel: "9ac8579aefeb240c720f515edd70d981c8f002dba7a91eadcd43cf675d32ab81"
 
   url "https://github.com/frappe/books/releases/download/v#{version}/Frappe-Books-#{version}#{arch}.dmg",
       verified: "github.com/frappe/books/"
@@ -18,17 +13,7 @@ cask "frappe-books" do
 
   livecheck do
     url :url
-    regex(/^Frappe[._-]Books[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
+    strategy :github_latest
   end
 
   depends_on macos: ">= :high_sierra"
