@@ -1,5 +1,5 @@
 cask "send-to-kindle" do
-  version "1.1.1.256"
+  version "1.1.1.258"
   sha256 :no_check
 
   url "https://sendtokindle.s3.amazonaws.com/SendToKindleForMac-installer.pkg",
