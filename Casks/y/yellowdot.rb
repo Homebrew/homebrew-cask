@@ -1,4 +1,4 @@
-cask "yellow-dot" do
+cask "yellowdot" do
   on_monterey do
     version "1"
     sha256 "6ef028d450c3a102f0031e70bffe2c22dc8363661bc463673130a01b0e186fde"
