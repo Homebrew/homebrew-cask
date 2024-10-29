@@ -1,5 +1,5 @@
 cask "yellowdot" do
-  on_monterey do
+  on_monterey :or_older do
     version "1"
     sha256 "6ef028d450c3a102f0031e70bffe2c22dc8363661bc463673130a01b0e186fde"
 
@@ -27,7 +27,7 @@ cask "yellowdot" do
   desc "Hide the yellow recording dot in the corner of your screen"
   homepage "https://lowtechguys.com/yellowdot"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :big_sur"
 
   app "YellowDot.app"
 
