@@ -2,8 +2,8 @@ cask "xpra" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "6.2.0,0"
-    sha256 "0ccf831dbad3b290971c94ad9b6cfbf64d46c67a900d7c17219bb28d4427e0ad"
+    version "6.2.1,0"
+    sha256 "e50e54da1b54604f0432e8ee2288254cc2cc48a2a1e1bdf8d0a55404d8cbd879"
   end
   on_intel do
     version "6.2.0,0"
