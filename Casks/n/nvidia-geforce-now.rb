@@ -8,8 +8,10 @@ cask "nvidia-geforce-now" do
   homepage "https://www.nvidia.com/en-us/geforce-now/download/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://play.geforcenow.com/mall/shared/assets/config/config.json"
+    strategy :json do |json|
+      json.dig("build", "version")
+    end
   end
 
   depends_on macos: ">= :el_capitan"
