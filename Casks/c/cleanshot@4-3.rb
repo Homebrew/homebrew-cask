@@ -8,8 +8,7 @@ cask "cleanshot@4-3" do
   homepage "https://getcleanshot.com/"
 
   livecheck do
-    url "https://cleanshot.com/changelog"
-    regex(/class="number"[^>]*?>(\d+(?:\.\d+)+)</i)
+    skip "Using versioned cask"
   end
 
   auto_updates true
