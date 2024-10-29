@@ -504,6 +504,7 @@ keyman
 keymapp
 keysafe
 kicad
+kindavim
 kindle-comic-converter
 kindle-previewer
 kitty
