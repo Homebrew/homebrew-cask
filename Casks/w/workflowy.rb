@@ -1,6 +1,6 @@
 cask "workflowy" do
-  version "4.0.2410221430"
-  sha256 "d44334d98bb3ecdd9c81f6fd61e95b04d97d4c3fd4ecaeddc001a91f6634b86e"
+  version "4.0.2410291153"
+  sha256 "d818cc3fc6c4850512333ad87edde4d36218d7ac43a704d1736fde2f8a1b3b97"
 
   url "https://github.com/workflowy/desktop/releases/download/v#{version}/WorkFlowy.zip",
       verified: "github.com/workflowy/desktop/"
