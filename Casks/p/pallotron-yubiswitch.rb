@@ -1,6 +1,6 @@
 cask "pallotron-yubiswitch" do
-  version "0.16"
-  sha256 "4ef75931712d44f3ae8f4038f7e59d4f3493b83990a8b3c828858ea3e3ec2a07"
+  version "0.17"
+  sha256 "48787eadef7df2383a508587ff93932f35800c146c808269def5db99f6dc869c"
 
   url "https://github.com/pallotron/yubiswitch/releases/download/v#{version}/yubiswitch_#{version}.dmg"
   name "Yubiswitch"
