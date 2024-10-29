@@ -3,10 +3,11 @@ cask "github-copilot-for-xcode" do
   sha256 "0448dfe270ce69aca94e9e747d1a1c1c04a168cb56c8bae2ae25f66b4f844657"
 
   url "https://github.com/github/CopilotForXcode/releases/download/#{version}/GitHubCopilotForXcode.dmg"
-  name "github-copilot-for-xcode"
+  name "GitHub Copilot for Xcode"
   desc "Xcode extension for GitHub Copilot"
   homepage "https://github.com/github/CopilotForXcode"
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "GitHub Copilot for Xcode.app"
