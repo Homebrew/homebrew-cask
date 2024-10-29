@@ -1,6 +1,6 @@
 cask "textexpander" do
-  version "7.8,780.21"
-  sha256 "162c34f6ea04aa0764ab7f796cefc22cce3d4a196713b7baade13304cf45d9ff"
+  version "8.1,810.6"
+  sha256 "b9457e2b8801311ea22d79fbe0dcb882120528cffdcb5fee7e36d2f19c47b8b2"
 
   url "https://cdn.textexpander.com/mac/#{version.csv.second}/TextExpander_#{version.csv.first}.dmg"
   name "TextExpander"
@@ -17,5 +17,12 @@ cask "textexpander" do
 
   app "TextExpander.app"
 
-  zap trash: "~/Library/Application Support/TextExpander/"
+  zap trash: [
+    "~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.smileonmymac.textexpander.json",
+    "~/Library/Application Support/TextExpander",
+    "~/Library/Caches/com.smileonmymac.textexpander",
+    "~/Library/Preferences/com.smileonmymac.textexpander.plist",
+    "~/Library/Saved Application State/com.smileonmymac.textexpander.savedState",
+    "~/Library/Webkit/com.smileonmymac.textexpander",
+  ]
 end
