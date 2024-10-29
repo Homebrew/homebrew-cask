@@ -4,19 +4,17 @@ cask "fladder" do
 
   url "https://github.com/DonutWare/Fladder/releases/download/v#{version}/Fladder-macOS-#{version}.dmg"
   name "fladder"
-  desc "Fladder - A Simple Jellyfin Frontend built on top of Flutter. "
+  desc "Simple Jellyfin Frontend built on top of Flutter"
   homepage "https://github.com/DonutWare/Fladder"
-
-  app "Fladder.app"
-
-  depends_on macos: ">= :mojave"
 
   livecheck do
     url :url
     strategy :github_latest
   end
 
-  zap trash: [
-    "~/Library/Containers/Fladder"
-  ]
+  depends_on macos: ">= :mojave"
+
+  app "Fladder.app"
+
+  zap trash: "~/Library/Containers/Fladder"
 end
