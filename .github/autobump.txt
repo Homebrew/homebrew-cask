@@ -888,6 +888,7 @@ sfm
 shadow
 shadow-bot
 shadow@beta
+shadowsocksx-ng
 shapr3d
 shattered-pixel-dungeon
 shearwater-cloud
