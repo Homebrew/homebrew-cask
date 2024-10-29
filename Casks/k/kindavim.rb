@@ -1,5 +1,5 @@
 cask "kindavim" do
-  version "2828.66.0"
+  version "2828.67.0"
   sha256 :no_check
 
   url "https://kindavim.app/releases/kindaVim.zip"
