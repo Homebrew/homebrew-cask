@@ -13,7 +13,9 @@ cask "azure-data-studio" do
 
   livecheck do
     url "https://azuredatastudio-update.azurewebsites.net/api/update/#{arch}/stable/VERSION"
-    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
+    strategy :json do |json|
+      json["productVersion"]
+    end
   end
 
   auto_updates true
