@@ -16,4 +16,10 @@ cask "photozoom-pro" do
   pkg "PhotoZoom Pro #{version.major} Installer.mpkg"
 
   uninstall pkgutil: "com.benvista.pkg.PhotoZoom-Pro-#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/BenVista",
+    "~/Library/Preferences/com.benvista.PhotoZoom-Pro-#{version.major}.app.plist",
+    "~/Library/Saved Application State/com.benvista.PhotoZoom-Pro-#{version.major}.app.savedState",
+  ]
 end
