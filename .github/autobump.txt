@@ -870,6 +870,7 @@ screaming-frog-log-file-analyser
 screaming-frog-seo-spider
 screen-studio
 screens-connect
+scrolla
 sdm
 seafile-client
 second-life-viewer
