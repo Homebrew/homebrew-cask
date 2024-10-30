@@ -16,11 +16,6 @@ cask "yellowdot" do
 
     url "https://github.com/FuzzyIdeas/YellowDot/releases/download/v#{version}/YellowDot-#{version}.dmg",
         verified: "github.com/FuzzyIdeas/YellowDot/"
-
-    livecheck do
-      url :url
-      strategy :github_latest
-    end
   end
 
   name "Yellow Dot"
