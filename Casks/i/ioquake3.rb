@@ -15,6 +15,12 @@ cask "ioquake3" do
 
   app "ioquake3.app"
 
+  zap trash: [
+        "~/Library/Application Support/Quake3/baseq3",
+        "~/Library/Saved Application State/org.ioquake.ioquake3.savedState",
+      ],
+      rmdir: "~/Library/Application Support/Quake3"
+
   caveats <<~EOS
     To complete the installation of #{token}, you will have to copy the file
     'pak0.pk3' from your Quake 3 Arena installation support directory into
