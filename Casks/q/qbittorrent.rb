@@ -7,7 +7,23 @@ cask "qbittorrent" do
       skip "Legacy version"
     end
   end
-  on_mojave :or_newer do
+  on_mojave do
+    version "4.3.9"
+    sha256 "c43323a625a937383da68e50a99d823d56e6843580dc8550dd4942683467c3ed"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_catalina do
+    version "4.6.7"
+    sha256 "0b1051af73562fc3f7c0c71abd27c3433ad238fbca0c4612f554db35be3eba6e"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur :or_newer do
     version "5.0.1"
     sha256 "e0d52860cc41929bdab42df6c3405c1fb867d8dad514e4295df1eadcd64580f1"
 
@@ -18,7 +34,7 @@ cask "qbittorrent" do
   end
 
   url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg",
-      verified: "sourceforge.net/qbittorrent/"
+      verified: "downloads.sourceforge.net/qbittorrent/qbittorrent-mac/"
   name "qBittorrent"
   desc "Peer to peer Bitorrent client"
   homepage "https://www.qbittorrent.org/"
