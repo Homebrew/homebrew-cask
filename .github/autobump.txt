@@ -73,6 +73,7 @@ archivewebpage
 arctic
 arq
 asana
+astah-professional
 atlauncher
 audacity
 audius
