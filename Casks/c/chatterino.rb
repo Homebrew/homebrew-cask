@@ -10,7 +10,9 @@ cask "chatterino" do
 
   livecheck do
     url "https://notitia.chatterino.com/version/chatterino/macos/stable"
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)*(-\w+\d+)?)"/i)
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   app "chatterino.app"
