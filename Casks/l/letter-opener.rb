@@ -25,4 +25,19 @@ cask "letter-opener" do
               "com.restoroot.Letter-Opener",
               "pkg.app.letteropener.*",
             ]
+
+  zap trash: [
+    "~/Library/Application Scripts/2WB96AW889.app.letteropener",
+    "~/Library/Application Scripts/com.restoroot.Letter-Opener",
+    "~/Library/Application Scripts/com.restoroot.Letter-Opener.QuickLook-Extension",
+    "~/Library/Application Support/app.letteropener.agent",
+    "~/Library/Caches/app.letteropener.agent",
+    "~/Library/Containers/com.restoroot.Letter-Opener",
+    "~/Library/Containers/com.restoroot.Letter-Opener.QuickLook-Extension",
+    "~/Library/Group Containers/2WB96AW889.app.letteropener",
+    "~/Library/HTTPStorages/app.letteropener.agent",
+    "~/Library/HTTPStorages/app.letteropener.softwareupdate",
+    "~/Library/Preferences/app.letteropener.agent.plist",
+    "~/Library/Preferences/app.letteropener.softwareupdate.plist",
+  ]
 end
