@@ -302,6 +302,7 @@ fantastical
 fastrawviewer
 fbreader
 fedistar
+fedora-media-writer
 feed-the-beast
 feedflow
 feishu
