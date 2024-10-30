@@ -433,6 +433,7 @@ gstreamer-development
 gstreamer-runtime
 gyazo
 hackolade
+halloy
 hancom-docs
 hancom-word
 hashbackup
@@ -578,6 +579,7 @@ melodics
 memory-cleaner
 mendeley-reference-manager
 menubarx
+merlin-project
 messenger
 meta-quest-developer-hub
 metashape
@@ -703,6 +705,7 @@ opencat
 opencore-configurator
 openlens
 openrct2
+openrefine
 openscad@snapshot
 openshift-client
 openshot-video-editor@daily
@@ -1017,6 +1020,7 @@ tower
 trader-workstation
 tradingview
 trainerroad
+transmission@nightly
 transnomino
 treesheets
 tresorit
@@ -1116,6 +1120,7 @@ wpsoffice-cn
 writerside
 xca
 xcodepilot
+xcodes
 xemu
 xiaomi-cloud
 xiv-on-mac
