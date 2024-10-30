@@ -512,6 +512,7 @@ kiwi-for-gmail
 kkbox
 krisp
 lagrange
+langgraph-studio
 languagetool
 lark
 launchbar
