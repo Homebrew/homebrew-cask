@@ -16,4 +16,8 @@ cask "electric-sheep" do
   pkg "Electric Sheep.pkg"
 
   uninstall pkgutil: "org.electricsheep.electricSheep.*"
+
+  caveats do
+    requires_rosetta
+  end
 end
