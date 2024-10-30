@@ -1,9 +1,9 @@
 cask "anytype" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.42.8"
-  sha256 arm:   "0326e67888b32f49e14d381cda36801ed04c5258792a46509150f537067299b6",
-         intel: "5dbe971a2b749cc83d0e2f05187cbefa0507d82e844672240203fc590f172aad"
+  version "0.43.2"
+  sha256 arm:   "c3148adf4d28010b2db600770dac72e3d40f03b71c45aea47a20fa88fa02a821",
+         intel: "b3bb32eeae794cfd4614343c083dd7c69f799938358a7c5deead37aefdb5dc22"
 
   url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-#{version}-mac-#{arch}.dmg",
       verified: "anytype-release.fra1.cdn.digitaloceanspaces.com/"
@@ -12,7 +12,7 @@ cask "anytype" do
   homepage "https://anytype.io/"
 
   livecheck do
-    url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/latest-mac.yml"
+    url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/latest-mac.yml?v=#{Time.new.to_i}"
     strategy :electron_builder
   end
 
