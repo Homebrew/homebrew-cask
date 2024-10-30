@@ -10,7 +10,9 @@ cask "sublime-merge" do
 
   livecheck do
     url "https://www.sublimemerge.com/updates/stable_update_check"
-    regex(/"latest_version":\s*(\d+)/i)
+    strategy :json do |json|
+      json["latest_version"]&.to_s
+    end
   end
 
   auto_updates true
