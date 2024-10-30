@@ -934,6 +934,7 @@ spacedrive
 spark-ar-studio
 sparkle
 sparrow
+spike
 splice
 springtoolsuite
 spybuster
