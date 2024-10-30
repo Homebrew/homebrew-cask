@@ -7,13 +7,16 @@ cask "post-haste" do
   desc "Digital media project management tool"
   homepage "https://www.digitalrebellion.com/posthaste/"
 
+  # Upstream filenames use a version without dots, so we check the support page
+  # that displays version history.
   livecheck do
-    url "https://www.digitalrebellion.com/download/posthaste"
-    strategy :header_match do |headers|
-      match = headers["location"].match(/_((\d+)(\d+)(\d+)\d+)\.dmg/)
-      next if match.blank?
-
-      "#{match[2]}.#{match[3]}.#{match[4]},#{match[1]}"
+    url "https://www.digitalrebellion.com/support/posthaste"
+    regex(%r{
+      href=.*?/download/posthaste\?version=(\d+(?:\.\d+)*)[^>]*?>
+      \s*Post\s+Haste\s+for\s+Mac\s+v?(\d+(?:\.\d+)+)
+    }imx)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
