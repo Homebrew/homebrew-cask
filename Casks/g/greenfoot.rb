@@ -1,8 +1,11 @@
 cask "greenfoot" do
-  version "3.8.2"
-  sha256 "5938f08627794f570c01299cc9cb9153e141a3264545e9a0d875d0cbbb9fb091"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://www.greenfoot.org/download/files/Greenfoot-mac-#{version.no_dots}.dmg"
+  version "3.9.0"
+  sha256 arm:   "ba33e14149e58ed95423b108e4b6c401c5dd822b36460ccee2ae71dcbc996261",
+         intel: "ab6488f1d736248193fcc1e93f56e2b12c051b8b6888df55e2b9885f902b7071"
+
+  url "https://www.greenfoot.org/download/files/Greenfoot-mac-#{arch}-#{version.no_dots}.dmg"
   name "Greenfoot"
   desc "Teach object orientation with Java"
   homepage "https://www.greenfoot.org/home"
