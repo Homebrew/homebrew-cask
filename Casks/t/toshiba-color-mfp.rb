@@ -9,11 +9,16 @@ cask "toshiba-color-mfp" do
 
   livecheck do
     url "https://business.toshiba.com/support/downloads/GetDownloads.jsp?model=e-STUDIO3515AC"
-    strategy :page_match do |page|
-      match = page.match(/"MacDC",.*?"id":"(\d+)",.*?"versionName":"(\d+(?:\.\d+)+)",/)
-      next if match.blank?
+    strategy :json do |json|
+      json["drivers"]&.map do |item|
+        next unless item["name"]&.include?("MacDC")
 
-      "#{match[2]},#{match[1]}"
+        id = item["id"]
+        version = item["versionName"]
+        next if id.blank? || version.blank?
+
+        "#{version},#{id}"
+      end
     end
   end
 

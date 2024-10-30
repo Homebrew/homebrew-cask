@@ -12,8 +12,9 @@ cask "virtualbox" do
 
   livecheck do
     url "https://www.virtualbox.org/wiki/Downloads"
-    strategy :page_match do |page|
-      match = page.match(/href=.*?VirtualBox[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]OSX.dmg/)
+    regex(/href=.*?VirtualBox[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]OSX.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
