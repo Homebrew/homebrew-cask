@@ -19,7 +19,7 @@ cask "yellowdot" do
   end
 
   name "Yellow Dot"
-  desc "Hide the yellow recording dot in the corner of your screen"
+  desc "Hides privacy indicators"
   homepage "https://lowtechguys.com/yellowdot"
 
   depends_on macos: ">= :big_sur"
