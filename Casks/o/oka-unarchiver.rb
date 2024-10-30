@@ -8,8 +8,10 @@ cask "oka-unarchiver" do
   homepage "https://okaapps.com/product/1441507725"
 
   livecheck do
-    url :homepage
-    regex(/"softwareVersion":\s"v?(\d+(?:\.\d+)+)"/i)
+    url "https://api.7littlemen.com/homepage/version?appid=1441507725&version=0.0.0"
+    strategy :json do |json|
+      json.dig("data", "lastest_version")
+    end
   end
 
   auto_updates true
