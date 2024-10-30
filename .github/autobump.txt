@@ -869,6 +869,7 @@ schism-tracker
 screaming-frog-log-file-analyser
 screaming-frog-seo-spider
 screen-studio
+screenmemory
 screens-connect
 sdm
 seafile-client
