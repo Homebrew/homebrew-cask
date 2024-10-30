@@ -532,6 +532,7 @@ lightkey
 limitless
 linear-linear
 lingon-x
+litecoin
 little-snitch
 live-home-3d
 livebook
