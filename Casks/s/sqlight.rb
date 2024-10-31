@@ -7,8 +7,8 @@ cask "sqlight" do
   desc "Database management tool"
   homepage "https://www.aurvan.com/sqlight/"
 
-  # The download page is rendered using JavaScript with the download links obtained
-  # from https://www.aurvan.com/com-aurvan-satva-ui-reactjs-release/static/js/main.<hash>.chunk.js
+  # The download page is rendered using JavaScript with the download links
+  # obtained from https://www.aurvan.com/com-aurvan-satva-ui-reactjs-release/static/js/main.<hash>.chunk.js
   # Since the <hash> is not fixed in the filename, the current JavaScript file
   # needs to be extracted from the download page.
   livecheck do
@@ -16,12 +16,12 @@ cask "sqlight" do
     regex(/sqlight[._-]v?(\d+(?:[._]\d+)+)[._-]app\.dmg/i)
     strategy :page_match do |page, regex|
       js_file = page[%r{src=["']?(/com-aurvan-satva-ui-reactjs-release/static/js/main\.\w+\.chunk\.js)["' >]}i, 1]
-      next [] if js_file.blank?
+      next if js_file.blank?
 
       js_file_data = Homebrew::Livecheck::Strategy.page_content("https://www.aurvan.com/#{js_file}")
-      next [] if js_file_data[:content].blank?
+      next if js_file_data[:content].blank?
 
-      js_file_data[:content].scan(regex).map { |match| match&.first&.tr("_", ".") }
+      js_file_data[:content].scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
 
