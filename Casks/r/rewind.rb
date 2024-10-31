@@ -9,8 +9,12 @@ cask "rewind" do
 
   livecheck do
     url "https://updates.rewind.ai/appcasts/main.xml"
-    strategy :sparkle do |item|
-      "#{item.version},#{item.url.match(/[._-](\w+)\.zip/i)[1]}"
+    regex(/[._-](\w+)\.zip/i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.version},#{match[1]}"
     end
   end
 
