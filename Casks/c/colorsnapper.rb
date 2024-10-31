@@ -13,7 +13,9 @@ cask "colorsnapper" do
   # we find the latest version using the value of `sparkle:version`.
   livecheck do
     url "https://cs2-appcast.s3.amazonaws.com/appcast.xml"
-    regex(/sparkle:version=["']?(\d+(?:\.\d+)+)["' >]/i)
+    strategy :sparkle do |items|
+      items.map(&:version)
+    end
   end
 
   depends_on macos: ">= :sierra"
