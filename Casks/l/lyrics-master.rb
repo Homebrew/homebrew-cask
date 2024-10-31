@@ -9,7 +9,7 @@ cask "lyrics-master" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?LyricsMaster[._-]?v?(\d+(?:\.\d+)*)\.dmg/)
+    regex(/href=.*?LyricsMaster[._-]?v?(\d+(?:\.\d+)*)\.dmg/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?

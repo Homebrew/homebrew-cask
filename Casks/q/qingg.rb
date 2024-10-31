@@ -14,7 +14,7 @@ cask "qingg" do
   livecheck do
     url "https://qingg.im/sparkle/appcast.php"
     regex(/Qingg[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)/i)
-    strategy :sparkle do |item|
+    strategy :sparkle do |item, regex|
       match = item&.url&.match(regex)
       next if match.blank?
 

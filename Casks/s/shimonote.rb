@@ -14,7 +14,7 @@ cask "shimonote" do
   livecheck do
     url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/shimo-mac.yml"
     regex(/石墨文档[._-]v?(\d+(?:\.\d+)+)-release\.(\h+).shimo_darwin-#{arch}\.zip/i)
-    strategy :electron_builder do |item|
+    strategy :electron_builder do |item, regex|
       match = item["path"].match(regex)
       next if match.blank?
 

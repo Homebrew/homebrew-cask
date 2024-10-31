@@ -7,10 +7,7 @@ cask "crosspack-avr" do
   desc "Development environment for Atmel’s AVR microcontrollers"
   homepage "https://www.obdev.at/products/crosspack/index.html"
 
-  livecheck do
-    url "https://www.obdev.at/products/crosspack/download.html"
-    regex(/>Crosspack\s*(\d+(?:[.-]\d+)+)/i)
-  end
+  disable! date: "2024-10-29", because: "is 32-bit only"
 
   pkg "CrossPack-AVR.pkg"
 

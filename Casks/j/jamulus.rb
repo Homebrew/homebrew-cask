@@ -24,4 +24,9 @@ cask "jamulus" do
 
   app "Jamulus.app"
   app "JamulusServer.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/app.jamulussoftware.Jamulus*",
+    "~/Library/Containers/app.jamulussoftware.Jamulus*",
+  ]
 end

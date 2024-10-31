@@ -73,6 +73,7 @@ archivewebpage
 arctic
 arq
 asana
+astah-professional
 atlauncher
 audacity
 audius
@@ -302,6 +303,7 @@ fantastical
 fastrawviewer
 fbreader
 fedistar
+fedora-media-writer
 feed-the-beast
 feedflow
 feishu
@@ -431,6 +433,7 @@ gstreamer-development
 gstreamer-runtime
 gyazo
 hackolade
+halloy
 hancom-docs
 hancom-word
 hashbackup
@@ -446,6 +449,7 @@ hoppscotch
 houdahspot
 hstracker
 http-toolkit
+hubstaff
 huggingchat
 huly
 hydrus-network
@@ -504,6 +508,7 @@ keyman
 keymapp
 keysafe
 kicad
+kindavim
 kindle-comic-converter
 kindle-previewer
 kitty
@@ -511,6 +516,7 @@ kiwi-for-gmail
 kkbox
 krisp
 lagrange
+langgraph-studio
 languagetool
 lark
 launchbar
@@ -531,6 +537,7 @@ lightkey
 limitless
 linear-linear
 lingon-x
+litecoin
 little-snitch
 live-home-3d
 livebook
@@ -572,6 +579,7 @@ melodics
 memory-cleaner
 mendeley-reference-manager
 menubarx
+merlin-project
 messenger
 meta-quest-developer-hub
 metashape
@@ -697,6 +705,7 @@ opencat
 opencore-configurator
 openlens
 openrct2
+openrefine
 openscad@snapshot
 openshift-client
 openshot-video-editor@daily
@@ -868,7 +877,9 @@ schism-tracker
 screaming-frog-log-file-analyser
 screaming-frog-seo-spider
 screen-studio
+screenmemory
 screens-connect
+scrolla
 sdm
 seafile-client
 second-life-viewer
@@ -927,6 +938,7 @@ spacedrive
 spark-ar-studio
 sparkle
 sparrow
+spike
 splice
 springtoolsuite
 spybuster
@@ -1008,6 +1020,7 @@ tower
 trader-workstation
 tradingview
 trainerroad
+transmission@nightly
 transnomino
 treesheets
 tresorit
@@ -1107,6 +1120,7 @@ wpsoffice-cn
 writerside
 xca
 xcodepilot
+xcodes
 xemu
 xiaomi-cloud
 xiv-on-mac

@@ -5,9 +5,16 @@ cask "speedcrunch" do
   url "https://bitbucket.org/heldercorreia/speedcrunch/downloads/SpeedCrunch-#{version}.dmg",
       verified: "bitbucket.org/heldercorreia/speedcrunch/"
   name "SpeedCrunch"
-  homepage "https://www.speedcrunch.org/"
+  homepage "https://heldercorreia.bitbucket.io/speedcrunch/"
+
+  deprecate! date: "2024-10-29", because: :unmaintained
 
   app "SpeedCrunch.app"
+
+  zap trash: [
+    "~/Library/Application Support/SpeedCrunch",
+    "~/Library/Preferences/SpeedCrunch",
+  ]
 
   caveats do
     requires_rosetta

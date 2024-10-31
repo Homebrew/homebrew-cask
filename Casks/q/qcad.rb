@@ -19,7 +19,7 @@ cask "qcad" do
     url "https://www.qcad.org/en/download"
     regex(/qcad[._-]v?(\d+(?:\.\d+)+)[._-]trial[._-]macos[._-](\d+(?:[._-]\d+)+(?:[._-]qt\d)?)#{arch}\.dmg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.first},#{match.second}" }
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

@@ -15,7 +15,7 @@ cask "little-snitch@5" do
     # writing, so we check the download page for older versions for now.
     livecheck do
       url "https://www.obdev.at/products/littlesnitch/download-previous-versions.html"
-      regex(/LittleSnitch[._-]v?(#{version.major}(?:\.\d+)+)\.dmg/)
+      regex(/LittleSnitch[._-]v?(#{version.major}(?:\.\d+)+)\.dmg/i)
     end
   end
 

@@ -9,7 +9,7 @@ cask "draw-things" do
 
   livecheck do
     url "https://drawthings.ai/releases/"
-    regex(/href=.*?DrawThings[._-]v?(\d+(?:\.\d+)+(?:-[\da-f]*)?)\.zip/i)
+    regex(/href=.*?DrawThings[._-]v?(\d+(?:\.\d+)+(?:-\h+)?)\.zip/i)
   end
 
   app "Draw Things.app"

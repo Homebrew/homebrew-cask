@@ -1,6 +1,6 @@
 cask "cleanmymac" do
-  version "5.0.0,50000.0.2410151250,1729015075"
-  sha256 "3367cea510f05e89e9e6a6bf2ede22c2909d002a822ee681493314e1ac39a92c"
+  version "5.0.1,50001.0.2410291427,1730230705"
+  sha256 "e3696200b32abb75f6d9b1279072936b341a1198965f31a3733eb1a997fab860"
 
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.csv.second}/#{version.csv.third}/CleanMyMac#{version.major}-#{version.csv.second}.zip",
       verified: "dl.devmate.com/"
@@ -11,7 +11,7 @@ cask "cleanmymac" do
   livecheck do
     url "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml"
     regex(%r{/([^/]+)/CleanMyMac#{version.major}[._-]v?(?:\d+(?:\.\d+)+)\.zip}i)
-    strategy :sparkle do |item|
+    strategy :sparkle do |item, regex|
       directory = item.url[regex, 1]
       next if directory.blank?
 

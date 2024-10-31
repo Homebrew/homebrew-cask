@@ -1,6 +1,6 @@
 cask "mochi-diffusion" do
-  version "5.1"
-  sha256 "2a09a8f4d3329acdbea227de6952cf6ad89875c1ffea54107d6323e43d02283f"
+  version "5.2"
+  sha256 "fbb7ec461bb2f4056e4ace50758307d7a622cdc04b70ef01148f1f521386681c"
 
   url "https://github.com/godly-devotion/MochiDiffusion/releases/download/v#{version}/MochiDiffusion_v#{version}.dmg"
   name "Mochi Diffusion"

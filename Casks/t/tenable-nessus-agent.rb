@@ -9,8 +9,9 @@ cask "tenable-nessus-agent" do
 
   livecheck do
     url "https://www.tenable.com/downloads/nessus-agents?loginAttempted=true"
-    strategy :page_match do |page|
-      match = page.match(/"id"\s*:\s*(\d+)\s*,\s*"file"\s*:\s*"NessusAgent[._-]v?(\d+(?:\.\d+)+)\.dmg"/)
+    regex(/"id"\s*:\s*(\d+)\s*,\s*"file"\s*:\s*"NessusAgent[._-]v?(\d+(?:\.\d+)+)\.dmg"/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[2]},#{match[1]}"
