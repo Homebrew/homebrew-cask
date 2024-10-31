@@ -13,7 +13,10 @@ cask "tencent-docs" do
 
   livecheck do
     url "https://docs.qq.com/api/package/update"
-    regex(/"version.*?(\d+(?:\.\d+)+)[\\ "]/i)
+    strategy :json do |json|
+      info_json = Homebrew::Livecheck::Strategy::Json.parse_json(json.dig("result", "update_info").to_s)
+      info_json["version"]
+    end
   end
 
   auto_updates true
