@@ -11,7 +11,7 @@ cask "usmart-trade" do
   livecheck do
     url "https://www.usmart.hk/en/download"
     regex(%r{href=['"].*?file/(\d+[-_]\d+[-_]\d+)/((?:\w+-)+(?:\w+))/.*?Trade[-_]?(\d+(?:\.\d+)+).dmg}i)
-    strategy :page_match do |page|
+    strategy :page_match do |page, regex|
       page.scan(regex)
           .map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
     end
