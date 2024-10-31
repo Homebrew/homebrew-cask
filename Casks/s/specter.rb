@@ -8,10 +8,12 @@ cask "specter" do
   desc "Desktop GUI for Bitcoin Core optimised to work with hardware wallets"
   homepage "https://specter.solutions/"
 
+  # Upstream doesn't reliably mark unstable versions as pre-release on GitHub.
+  # We check the upstream download page, which links to the latest stable files
+  # on GitHub.
   livecheck do
-    url "https://github.com/cryptoadvance/specter-desktop/releases/"
-    regex(%r{v?(\d+(?:\.\d+)+)/Specter.*?\.dmg}i)
-    strategy :page_match
+    url "https://specter.solutions/downloads/"
+    regex(/href=.*?Specter[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
