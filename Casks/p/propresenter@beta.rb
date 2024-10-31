@@ -15,8 +15,8 @@ cask "propresenter@beta" do
     end
   end
   on_monterey :or_newer do
-    version "17.1,285278217"
-    sha256 "340f24d866740729bf27bb423f5e5192d25fa1675715f8799206911a14c43913"
+    version "18,301989901"
+    sha256 "8f112371d2f2bffd2772b748c76dbff6e47107c1d3b4418ff8561af4da7dfe54"
 
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=#{MacOS.full_version}&appVersion=0&buildNumber=0&includeNotes=0&channel=beta"
