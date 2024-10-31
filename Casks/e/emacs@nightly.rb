@@ -11,7 +11,7 @@ cask "emacs@nightly" do
 
   livecheck do
     url "https://emacsformacosx.com/atom/daily"
-    regex(/href=.*?Emacs[._-](\d+-\d+-\d+_\d+-\d+-\d+)[._-]([a-f0-9]+)[._-]universal\.dmg/i)
+    regex(/href=.*?Emacs[._-]v?(\d+-\d+-\d+_\d+-\d+-\d+)[._-](\h+)[._-]universal\.dmg/i)
     strategy :page_match do |page|
       match = page.match(regex)
       next if match.blank?
