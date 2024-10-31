@@ -17,7 +17,7 @@ cask "typora@dev" do
   livecheck do
     url "https://typora.io/releases/dev_macos.xml"
     regex(/Typora[._-]v?(\d+(?:\.\d+)+)(?:-dev)\.dmg/i)
-    strategy :sparkle do |item|
+    strategy :sparkle do |item, regex|
       item.url[regex, 1]
     end
   end
