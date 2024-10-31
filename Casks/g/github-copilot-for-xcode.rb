@@ -7,6 +7,11 @@ cask "github-copilot-for-xcode" do
   desc "Xcode extension for GitHub Copilot"
   homepage "https://github.com/github/CopilotForXcode"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :monterey"
 
