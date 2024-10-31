@@ -9,12 +9,7 @@ cask "fabfilter-pro-c" do
 
   livecheck do
     url "https://www.fabfilter.com/download"
-    strategy :page_match do |page|
-      match = page.match(/ffproc(\d)(\d+)\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}"
-    end
+    regex(/FabFilter\s+Pro-C.*?v?(\d+(?:\.\d+)+)/im)
   end
 
   depends_on macos: ">= :sierra"
