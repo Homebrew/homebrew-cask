@@ -37,7 +37,7 @@ cask "evernote" do
 
     livecheck do
       url "https://updates.desktop.evernote.com/mac/public/latest-mac.yml"
-      regex(/Evernote[._-](\d+(?:\.\d+)+)-mac-ddl-stage-(\d+(?:\.\d+)*)-([0-9a-f]+)\.dmg/i)
+      regex(/Evernote[._-]v?(\d+(?:\.\d+)+)-mac-ddl-stage-(\d+(?:\.\d+)*)-(\h+)\.dmg/i)
       strategy :electron_builder do |yaml, regex|
         yaml["files"]&.map do |file|
           match = file["url"]&.match(regex)
