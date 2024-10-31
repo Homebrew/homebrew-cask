@@ -9,15 +9,13 @@ cask "yuque" do
   desc "Cloud knowledge base"
   homepage "https://www.yuque.com/"
 
-  # The stable version is that listed on the download page. See:
-  #   https://github.com/Homebrew/homebrew-cask/pull/111472
+  # The version on the download page is the stable version (see:
+  # https://github.com/Homebrew/homebrew-cask/pull/111472)
   livecheck do
     url "https://www.yuque.com/download/"
-    regex(/yuque-desktop%2F(\d+(?:\.\d+)+)%2F([A-Za-z0-9]+).*?\.dmg/i)
+    regex(/yuque-desktop%2Fv?(\d+(?:\.\d+)+)%2F([a-z0-9]+).*?\.dmg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

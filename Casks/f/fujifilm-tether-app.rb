@@ -9,7 +9,7 @@ cask "fujifilm-tether-app" do
 
   livecheck do
     url :homepage
-    regex(%r{Mac\sVersion:\s(\d+(?:\.\d+)+).*href=.*?tether-app-mac\d+-([a-zA-Z0-9]+)/}im)
+    regex(%r{Mac\sVersion:\s(\d+(?:\.\d+)+).*href=.*?tether-app-mac\d+-([a-z0-9]+)/}im)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
