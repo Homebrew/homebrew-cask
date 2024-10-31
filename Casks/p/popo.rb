@@ -8,12 +8,20 @@ cask "popo" do
   homepage "https://popo.netease.com/"
 
   livecheck do
-    url "https://popo.netease.com/api/open/jsonp/check_version?device=4&callback="
-    strategy :page_match do |page|
-      match = page.match(/["']version["']\s*:\s*["'](\d+(?:\.\d+)+)["'].*?(\d+)\.dmg/i)
+    url "https://popo.netease.com/api/open/jsonp/check_version?device=4&callback=callback"
+    regex(/callback\((.+)\)/i)
+    strategy :page_match do |page, regex|
+      build_regex = /^.*?(\d+)\.dmg$/
+
+      match = page.match(regex)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      json = Homebrew::Livecheck::Strategy::Json.parse_json(match[1])
+      version = json.dig("data", "version")
+      build = json.dig("data", "url")&.[](build_regex, 1)
+      next if version.blank? || build.blank?
+
+      "#{version},#{build}"
     end
   end
 
