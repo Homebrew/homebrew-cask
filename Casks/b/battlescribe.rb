@@ -24,4 +24,8 @@ cask "battlescribe" do
               "/Applications/BattleScribe Tools/",
               "/Applications/BattleScribe.app",
             ]
+
+  caveats do
+    requires_rosetta
+  end
 end
