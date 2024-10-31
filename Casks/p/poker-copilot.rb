@@ -10,7 +10,7 @@ cask "poker-copilot" do
   livecheck do
     url :homepage
     regex(%r{href=.*?/pokercopilot_macos[._-]v?(\d+(?:[._]\d+)+)[._-]build[._-](\d+)\.dmg}i)
-    strategy :page_match do |page|
+    strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
     end
   end
