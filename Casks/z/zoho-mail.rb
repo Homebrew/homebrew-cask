@@ -15,7 +15,7 @@ cask "zoho-mail" do
   livecheck do
     url "https://downloads.zohocdn.com/zmail-desktop/artifacts.json"
     regex(/zoho[._-]mail[._-]desktop[._-]lite[._-]installer[._-]#{arch}v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :json do |json|
+    strategy :json do |json, regex|
       json["mac"]&.map do |_, item|
         match = item[livecheck_arch]&.match(regex)
         next if match.blank?

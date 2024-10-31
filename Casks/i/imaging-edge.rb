@@ -10,7 +10,7 @@ cask "imaging-edge" do
   livecheck do
     url "https://support.d-imaging.sony.co.jp/disoft_DL/desktop_DL/mac?fm=us"
     regex(%r{/([a-z0-9]+)/ied_(\d+(?:_\d+)+)\.dmg}i)
-    strategy :header_match do |headers|
+    strategy :header_match do |headers, regex|
       match = headers["location"]&.scan(regex)&.flatten
       next if match.blank?
 

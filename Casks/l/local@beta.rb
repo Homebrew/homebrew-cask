@@ -13,7 +13,7 @@ cask "local@beta" do
   livecheck do
     url "https://cdn.localwp.com/beta/latest/mac#{arch}"
     regex(%r{/(\d+(?:\.\d+)+)\+local-beta-(\d+)/}i)
-    strategy :header_match do |headers|
+    strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
       next if match.blank?
 
