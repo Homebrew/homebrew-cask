@@ -14,7 +14,7 @@ cask "gitbutler" do
   livecheck do
     url "https://app.gitbutler.com/downloads/release/darwin/#{arch}/dmg"
     regex(%r{/releases/release/(\d+(?:\.\d+)+)[._-](\d+)/macos}i)
-    strategy :header_match do |headers|
+    strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
 
       next if match.blank?
