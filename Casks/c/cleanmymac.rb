@@ -11,7 +11,7 @@ cask "cleanmymac" do
   livecheck do
     url "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml"
     regex(%r{/([^/]+)/CleanMyMac#{version.major}[._-]v?(?:\d+(?:\.\d+)+)\.zip}i)
-    strategy :sparkle do |item|
+    strategy :sparkle do |item, regex|
       directory = item.url[regex, 1]
       next if directory.blank?
 
