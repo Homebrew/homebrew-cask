@@ -9,7 +9,7 @@ cask "simplemind" do
 
   livecheck do
     url "https://simpleapps.eu/download/full-edition/simplemind-pro-mac/"
-    regex(%r{<b>Version: ([\d.]+) ([a-zA-Z0-9]+)</b>}i)
+    regex(%r{<b>\s*Version:\s*v?(\d+(?:\.\d+)+)\s+([a-z0-9]+)\s*</b>}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
