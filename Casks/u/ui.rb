@@ -10,9 +10,9 @@ cask "ui" do
 
   livecheck do
     url "https://api-gw.uid.alpha.ui.com:443/location/api/v1/public/fw/download/latest/?app=UI-DESKTOP-MACOS"
-    regex(/(\w+)[._-]macOS[._-](\d+(?:\.\d+)+)[._-]([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})/i)
+    regex(/(\w+)[._-]macOS[._-](\d+(?:\.\d+)+)[._-](\h{8}-\h{4}-\h{4}-\h{4}-\h{12})/i)
     strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[2]},#{match[3]},#{match[1]}"
