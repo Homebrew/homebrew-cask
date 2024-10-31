@@ -10,8 +10,13 @@ cask "kdocs" do
 
   livecheck do
     url "https://www.kdocs.cn/kd/api/configure/list?idList=appOfficial"
-    strategy :page_match do |page|
-      match = page.match(/kdocs[._-](\d+(?:\.\d+)*)[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/kdocs[._-](\d+(?:\.\d+)*)[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :json do |json, regex|
+      json_string = json.dig("data", "appOfficial")
+      next if json_string.blank?
+
+      app_json = Homebrew::Livecheck::Strategy::Json.parse_json(json_string)
+      match = app_json.dig("kdesktopMacOfficial", 0, "url")&.match(regex)
       next if match.blank?
 
       "#{match[2]},#{match[1]}"
