@@ -1,15 +1,17 @@
 cask "todesk" do
-  version "4.7.2.1"
-  sha256 "cba50ad3b10523f71175953d4606d3daf122d344dd1e5f130fd190a93ba509e8"
-
+  version "4.7.5.1"
+  sha256 "e410c11729c2e170cff36b4c5b060ff79c93f9eb84c2b58b5b4e198eb7eb9660"
+  
   url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg",
-      user_agent: :fake,
       referer:    "https://www.todesk.com/"
   name "ToDesk"
   desc "Remote control software"
   homepage "https://www.todesk.com/"
 
-  disable! date: "2024-08-01", because: "download artifact behind CAPTCHA-verified url"
+  livecheck do
+    url "https://www.todesk.com/download.html"
+    regex(/ToDesk[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+  end
 
   auto_updates true
 
