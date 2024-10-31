@@ -9,7 +9,7 @@ cask "pixel-shift-combiner" do
 
   livecheck do
     url :homepage
-    regex(%r{Mac\sVersion:\s(\d+(?:\.\d+)+).*href=.*?pixel-shift-combiner-mac(\d+)[._-]([a-zA-Z0-9]+)/}im)
+    regex(%r{Mac\sVersion:\s*v?(\d+(?:\.\d+)+).*href=.*?pixel-shift-combiner-mac(\d+)[._-]([a-z0-9]+)/}im)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?

@@ -19,7 +19,7 @@ cask "ngrok" do
   livecheck do
     url "https://dl.equinox.io/ngrok/ngrok-v#{version.major}/stable/archive"
     regex(%r{href=.*?/([^/]+)/([^/]+)/ngrok[._-]v#{version.major}[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]#{arch}\.zip}i)
-    strategy :page_match do |page|
+    strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
     end
   end

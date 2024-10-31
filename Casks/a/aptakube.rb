@@ -9,7 +9,9 @@ cask "aptakube" do
 
   livecheck do
     url "https://aptakube.com/api/latest"
-    regex(/"version": "(\d+(?:\.\d+)+)"/i)
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true

@@ -11,8 +11,11 @@ cask "mfiles" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      match = page.match(/mfiles[._-]helper[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-](\d+)\.dmg/)
+    regex(/mfiles[._-]helper[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-](\d+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

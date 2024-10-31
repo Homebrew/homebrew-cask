@@ -5,16 +5,11 @@ cask "fabfilter-timeless" do
   url "https://cdn-b.fabfilter.com/downloads/fftimeless#{version.no_dots}.dmg"
   name "FabFilter Timeless"
   desc "Tape delay plug-in"
-  homepage "https://www.fabfilter.com/products/timeless-2-stereo-tape-delay-plug-in"
+  homepage "https://www.fabfilter.com/products/timeless-3-delay-plug-in"
 
   livecheck do
     url "https://www.fabfilter.com/download"
-    strategy :page_match do |page|
-      match = page.match(/fftimeless(\d)(\d+)\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}"
-    end
+    regex(/FabFilter\s+Timeless.*?v?(\d+(?:\.\d+)+)/im)
   end
 
   depends_on macos: ">= :sierra"

@@ -19,7 +19,7 @@ cask "cap" do
   livecheck do
     url "https://cdn.crabnebula.app/update/cap/cap/darwin-#{arch}/0.0.0"
     regex(%r{cdn.crabnebula.app/asset/(.+)}i)
-    strategy :json do |json|
+    strategy :json do |json, regex|
       asset_id = json["url"][regex, 1]
       version = json["version"]
       next if asset_id.blank? || version.blank?

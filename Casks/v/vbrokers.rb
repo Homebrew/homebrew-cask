@@ -10,7 +10,7 @@ cask "vbrokers" do
   livecheck do
     url "https://www.hstong.com/download"
     regex(%r{href=['"].*?/HSTONG[-_]?Mac[-_]?(\d+)[-_]?(\d+(?:\.\d+)+)[-_]?(\d+).dmg}i)
-    strategy :page_match do |page|
+    strategy :page_match do |page, regex|
       page.scan(regex)
           .map { |match| "#{match[1]},#{match[0]},#{match[2]}" }
     end

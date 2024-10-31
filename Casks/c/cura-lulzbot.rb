@@ -10,7 +10,7 @@ cask "cura-lulzbot" do
 
   livecheck do
     url "https://gitlab.com/api/v4/projects/15405668/releases"
-    regex(%r{/uploads/([0-9a-f]+)/cura[._-]?lulzbot[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{/uploads/(\h+)/cura[._-]?lulzbot[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end

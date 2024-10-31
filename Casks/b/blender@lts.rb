@@ -29,7 +29,7 @@ cask "blender@lts" do
       next if lts_versions.blank?
 
       version_page = Homebrew::Livecheck::Strategy.page_content("https://www.blender.org/download/lts/#{lts_versions.max}/")
-      next [] if version_page[:content].blank?
+      next if version_page[:content].blank?
 
       # If the version page has a download link, return it as the livecheck version
       matched_versions = version_page[:content].scan(regex).flatten

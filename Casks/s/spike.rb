@@ -1,6 +1,6 @@
 cask "spike" do
-  version "3.4.3"
-  sha256 "b0b890cc7894c4954db8b946b664a399eb479acd0867ad89f28a16c1df948d22"
+  version "3.4.5"
+  sha256 "cfc84ff2f7ea4cc7c9ec4765a9ba408f1532ac778d50441add9efc3635518e33"
 
   url "https://education.lego.com/_/downloads/SPIKE_APP_#{version.major}_macOS__#{version}_Global.dmg"
   name "Lego SPIKE"

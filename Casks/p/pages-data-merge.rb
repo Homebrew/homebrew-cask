@@ -12,7 +12,7 @@ cask "pages-data-merge" do
     url :homepage
     regex(/href=.*?data[._-]merge[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match&.first&.tr("-", ".") }
+      page.scan(regex).map { |match| match[0].tr("-", ".") }
     end
   end
 

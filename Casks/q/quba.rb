@@ -1,14 +1,15 @@
 cask "quba" do
-  version "1.4.0"
-  sha256 "4a30c194d59fc850650bd007a717745d53dd060e26792642f47e5368f373f1bb"
+  version "1.4.1"
+  sha256 "f16c094dbc132da7326b3982d832398454fbadc72ce96a54fb46f25a1a8f3080"
 
-  url "https://quba-viewer.org/files/Quba-#{version}-arm64.dmg"
+  url "https://github.com/ZUGFeRD/quba-viewer/releases/download/v#{version}/Quba-#{version}-universal.dmg",
+      verified: "github.com/ZUGFeRD/quba-viewer/"
   name "Quba-Viewer"
   desc "Viewer for electronic invoices"
   homepage "https://quba-viewer.org/"
 
   livecheck do
-    url "https://github.com/ZUGFeRD/quba-viewer"
+    url :url
     strategy :github_latest
   end
 

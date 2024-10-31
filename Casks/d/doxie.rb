@@ -8,8 +8,8 @@ cask "doxie" do
   homepage "https://www.getdoxie.com/"
 
   livecheck do
-    url "https://r.getdoxie.com/app/doxie/release-notes-latest.html"
-    regex(/Doxie.(\d+(?:\.\d+)+)/i)
+    url "https://r.getdoxie.com/app/download_mac/"
+    strategy :header_match
   end
 
   app "Doxie.app"

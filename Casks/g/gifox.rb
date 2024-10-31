@@ -9,12 +9,10 @@ cask "gifox" do
   homepage "https://gifox.io/"
 
   livecheck do
-    url "https://gifox.io/download/latest"
-    regex(%r{/(\d(\d)\d(\d)\d(\d).\d\d)\.dmg}i)
-    strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map do |match|
-        "#{match[1]}.#{match[2]}.#{match[3]},#{match[0]}"
-      end
+    url "https://gifox.app/changelog/"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)\.dmg.*?Version\s+v?(\d+(?:\.\d+)+)}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

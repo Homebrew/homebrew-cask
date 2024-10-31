@@ -1,6 +1,6 @@
 cask "follow@nightly" do
-  version "0.1.1-nightly.20241028"
-  sha256 "cd276efacb1cc1eb56053e6d25fb4c8b94f4e28db15196e49be8cb62cb79ee79"
+  version "0.1.1-nightly.20241030"
+  sha256 "604f7dacac5fc750ea0b174d288b0ff16b3e575ab8513a4d0fd09b364671fb40"
 
   url "https://github.com/RSSNext/Follow/releases/download/nightly-#{version}/Follow-#{version}-macos-universal.dmg",
       verified: "github.com/RSSNext/Follow/"
