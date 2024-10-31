@@ -16,7 +16,7 @@ cask "clickup" do
   livecheck do
     url "https://download.todesktop.com/221003ra4tebclw/latest-mac.yml"
     regex(/ClickUp\s*v?(\d+(?:\.\d+)+).*?Build\s*([a-z0-9]+)[._-]#{arch}\.dmg/i)
-    strategy :electron_builder do |yaml|
+    strategy :electron_builder do |yaml, regex|
       yaml["files"]&.map do |item|
         match = item["url"]&.match(regex)
         next if match.blank?
