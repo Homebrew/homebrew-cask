@@ -12,7 +12,6 @@ cask "lens" do
 
   livecheck do
     url "https://api.k8slens.dev/binaries/latest-mac.json/"
-    regex(/(\d+(?:\.\d+)+)/i)
     strategy :json do |json|
       json["version"].sub("-latest", "")
     end
