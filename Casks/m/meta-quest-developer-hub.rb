@@ -10,7 +10,7 @@ cask "meta-quest-developer-hub" do
   livecheck do
     url "https://www.oculus.com/electron-updates/mqdh/latest-mac.yml"
     regex(%r{([^/]+)/Meta\s+Quest\s+Developer\s+Hub[._-]v?(\d+(?:\.\d+)+)\.zip}i)
-    strategy :electron_builder do |item|
+    strategy :electron_builder do |item, regex|
       match = item["path"]&.match(regex)
       next if match.blank?
 
