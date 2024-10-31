@@ -1,5 +1,5 @@
 # This file is synced from the `.github` repository, do not modify it directly.
-name: Workflow Syntax
+name: Actionlint
 
 on:
   push:
@@ -45,7 +45,7 @@ jobs:
 
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          persist-credentials: ${{ github.event.repository.private }}
 
       - run: zizmor --format sarif . >results.sarif
 
@@ -63,7 +63,11 @@ jobs:
   upload_sarif:
     needs: workflow_syntax
     # We want to always upload this even if `actionlint` failed.
-    if: always() && !contains(fromJSON('[["cancelled", "skipped"]]'), needs.workflow_syntax.result)
+    # This is only available on public repositories.
+    if: >
+      always() &&
+      !contains(fromJSON('[["cancelled", "skipped"]]'), needs.workflow_syntax.result) &&
+      !github.repository.private
     runs-on: ubuntu-latest
     permissions:
       contents: read
