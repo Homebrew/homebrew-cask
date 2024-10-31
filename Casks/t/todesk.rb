@@ -1,9 +1,9 @@
 cask "todesk" do
   version "4.7.5.1"
   sha256 "e410c11729c2e170cff36b4c5b060ff79c93f9eb84c2b58b5b4e198eb7eb9660"
-  
+
   url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg",
-      referer:    "https://www.todesk.com/"
+      referer: "https://www.todesk.com/"
   name "ToDesk"
   desc "Remote control software"
   homepage "https://www.todesk.com/"
