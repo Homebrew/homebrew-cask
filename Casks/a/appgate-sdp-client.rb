@@ -26,7 +26,7 @@ cask "appgate-sdp-client" do
         support_versions =
           page.scan(%r{href=["']?([^"' >]*?/software-defined-perimeter-support/sdp[._-]v?(\d+(?:[.-]\d+)+))["' >]}i)
               .sort_by { |match| Version.new(match[1]) }
-        next [] if support_versions.blank?
+        next if support_versions.blank?
 
         # Assume the last-sorted version is newest
         version_page_path, = support_versions.last
@@ -36,7 +36,7 @@ cask "appgate-sdp-client" do
         version_page = Homebrew::Livecheck::Strategy.page_content(
           URI.join("https://www.appgate.com/", version_page_path).to_s,
         )
-        next [] if version_page[:content].blank?
+        next if version_page[:content].blank?
 
         version_page[:content].scan(regex).map(&:first)
       end
