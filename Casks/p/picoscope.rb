@@ -1,6 +1,6 @@
 cask "picoscope" do
-  version "7.1.29.19560"
-  sha256 "b4d1b08acc73b449e4ea377a3d44874846710e8d8d7249ba50cceff0558438b9"
+  version "7.1.39.3737"
+  sha256 "2d4326de407133a97fdba2c91a6a4e7942caf94786bba4348a378a2f30f904f6"
 
   url "https://www.picotech.com/download/software/sr/PicoScope_#{version.major}_TandM_#{version}.pkg"
   name "PicoScope"
