@@ -1,5 +1,5 @@
 cask "diskcatalogmaker" do
-  version "9.0.9.1"
+  version "9.0.9f1"
   sha256 "37d4328a30f15b13376b7962aed278fb8ebb45a3c5149402c0d473b996bb7960"
 
   url "https://download.diskcatalogmaker.com/download/zip/DiskCatalogMaker#{version.no_dots}.zip"
@@ -8,16 +8,12 @@ cask "diskcatalogmaker" do
   homepage "https://diskcatalogmaker.com/"
 
   livecheck do
-    url "https://download.diskcatalogmaker.com/zip/DiskCatalogMaker.zip"
-    strategy :header_match do |headers|
-      match = headers["location"].match(/DiskCatalogMaker(\d+)f?(\d+)\.zip/i)
-      next if match.blank?
-
-      "#{match[1].split("", 3).reject(&:empty?).join(".")}.#{match[2]}"
-    end
+    url "https://update2.diskcatalogmaker.com/info/appcast/DiskCatalogMaker.xml"
+    strategy :sparkle, &:version
   end
 
-  depends_on macos: ">= :el_capitan"
+  auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "DiskCatalogMaker.app"
 
