@@ -1,8 +1,10 @@
-name: actionlint
+# This file is synced from the `.github` repository, do not modify it directly.
+name: Workflow Syntax
 
 on:
   push:
     branches:
+      - main
       - master
     paths:
       - '.github/workflows/*.ya?ml'
@@ -29,28 +31,21 @@ jobs:
   workflow_syntax:
     if: github.repository_owner == 'Homebrew'
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/homebrew/ubuntu22.04:master
     steps:
       - name: Set up Homebrew
         id: setup-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
           core: false
-          cask: true
+          cask: false
           test-bot: false
 
       - name: Install tools
         run: brew install actionlint shellcheck zizmor
 
-      - name: Set up GITHUB_WORKSPACE
-        env:
-          HOMEBREW_TAP_REPOSITORY: ${{ steps.setup-homebrew.outputs.repository-path }}
-        run: |
-          # Annotations work only relative to GITHUB_WORKSPACE
-          (shopt -s dotglob; rm -rf "${GITHUB_WORKSPACE:?}"/*; mv "${HOMEBREW_TAP_REPOSITORY:?}"/* "$GITHUB_WORKSPACE")
-          rmdir "$HOMEBREW_TAP_REPOSITORY"
-          ln -vs "$GITHUB_WORKSPACE" "$HOMEBREW_TAP_REPOSITORY"
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - run: zizmor --format sarif . >results.sarif
 
@@ -61,15 +56,14 @@ jobs:
           path: results.sarif
 
       - name: Set up actionlint
-        run: |
-          # The JSON matcher needs to be accessible to the container host.
-          cp "$(brew --repository)/.github/actionlint-matcher.json" "$HOME"
-          echo "::add-matcher::$HOME/actionlint-matcher.json"
+        run: echo "::add-matcher::$(brew --repository)/.github/actionlint-matcher.json"
 
       - run: actionlint
 
   upload_sarif:
     needs: workflow_syntax
+    # We want to always upload this even if `actionlint` failed.
+    if: always() && !contains(fromJSON('[["cancelled", "skipped"]]'), needs.workflow_syntax.result)
     runs-on: ubuntu-latest
     permissions:
       contents: read
