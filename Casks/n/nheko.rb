@@ -16,7 +16,7 @@ cask "nheko" do
     strategy :github_latest
   end
 
-  app "Nheko.app"
+  app "nheko.app"
 
   zap trash: [
     "~/Library/Application Support/nheko",
