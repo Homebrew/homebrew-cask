@@ -13,7 +13,7 @@ cask "utm@beta" do
   livecheck do
     url :url
     regex(/^v?(\d+(?:\.\d+)+.*)$/i)
-    strategy :github_releases do |json|
+    strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"]
 
