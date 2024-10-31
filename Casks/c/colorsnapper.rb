@@ -8,9 +8,9 @@ cask "colorsnapper" do
   desc "Colour picker"
   homepage "https://colorsnapper.com/"
 
-  # The Sparkle feed has incorrect pubDates for newer items, which causes the
-  # `:sparkle` strategy to choose an older version as latest. As a workaround,
-  # we find the latest version using the value of `sparkle:version`.
+  # The appcast has incorrect `pubDate` values for newer items, which causes
+  # the `Sparkle` strategy to choose an older version as latest. Until the
+  # dates are fixed, it's necessary to work with all the items in the feed.
   livecheck do
     url "https://cs2-appcast.s3.amazonaws.com/appcast.xml"
     strategy :sparkle do |items|
