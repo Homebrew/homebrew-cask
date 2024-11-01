@@ -42,4 +42,8 @@ cask "remotix-agent" do
               "/Library/LaunchAgents/com.nulana.rxagentmac.user.plist",
               "/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist",
             ]
+
+  caveats do
+    requires_rosetta
+  end
 end
