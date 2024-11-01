@@ -800,6 +800,7 @@ protonvpn
 prowlarr
 proxyman
 psychopy
+publii
 publish-or-perish
 purei-play
 puzzles
