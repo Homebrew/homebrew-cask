@@ -9,10 +9,7 @@ cask "font-migmix-1m" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      page.scan(/href=.*migmix-1m[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
-          .map { |match| match[0].insert(4, ".") }
-    end
+    regex(%r{href=.*?/download/v?(\d+(?:\.\d+)+)/migmix-1m[._-]}i)
   end
 
   font "migmix-1m-#{version.no_dots}/migmix-1m-bold.ttf"

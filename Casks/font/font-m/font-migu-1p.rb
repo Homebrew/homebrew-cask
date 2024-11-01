@@ -9,10 +9,7 @@ cask "font-migu-1p" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      page.scan(/href=.*migu-1p[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
-          .map { |match| match[0].insert(4, ".") }
-    end
+    regex(%r{href=.*?/download/v?(\d+(?:\.\d+)+)/migu-1p[._-]}i)
   end
 
   font "migu-1p-#{version.no_dots}/migu-1p-bold.ttf"
