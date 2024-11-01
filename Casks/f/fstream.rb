@@ -7,10 +7,7 @@ cask "fstream" do
   desc "WebRadio listener/recorder software"
   homepage "https://www.sourcemac.com/?page=fstream"
 
-  livecheck do
-    url "https://www.sourcemac.com/sparkle.php?id=156&content=xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-11-01", because: :unmaintained
 
   app "FStream.app"
 
