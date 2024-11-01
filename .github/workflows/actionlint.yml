@@ -6,11 +6,7 @@ on:
     branches:
       - main
       - master
-    paths:
-      - '.github/workflows/*.ya?ml'
   pull_request:
-    paths:
-      - '.github/workflows/*.ya?ml'
 
 defaults:
   run:
