@@ -159,6 +159,7 @@ chirp
 chromedriver
 chromedriver@beta
 chromium-gost
+chronosync
 chronycontrol
 cinderella
 cisdem-data-recovery
