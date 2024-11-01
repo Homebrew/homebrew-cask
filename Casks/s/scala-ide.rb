@@ -7,16 +7,7 @@ cask "scala-ide" do
   name "Scala IDE"
   homepage "https://scala-ide.org/"
 
-  livecheck do
-    url "https://scala-ide.org/download/sdk.html"
-    regex(%r{prefix:.*?(\d+(?:\.\d+)+)-vfinal-[a-z]+-\d+-(\d+)/scala-SDK-\1-vfinal-(\d+(?:\.\d+)+)["']}i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      "#{match[1]},#{match[3]},#{match[2]}"
-    end
-  end
+  deprecate! date: "2024-11-01", because: :unmaintained
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.
