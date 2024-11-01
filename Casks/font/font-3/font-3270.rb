@@ -7,15 +7,19 @@ cask "font-3270" do
   homepage "https://github.com/rbanffy/3270font"
 
   livecheck do
-    url "https://github.com/rbanffy/3270font/releases/latest"
-    regex(%r{v?(\d+(?:\.\d+)+)/3270[._-]fonts[._-](.*)\.zip}i)
+    url :url
+    regex(%r{v?(\d+(?:\.\d+)+)/3270[._-]fonts[._-](\h+)\.zip}i)
     strategy :github_releases do |json, regex|
-      json.first["assets"].map do |asset|
-        match = asset["browser_download_url"].match(regex)
-        next if match.blank?
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
 
-        "#{match[1]},#{match[2]}"
-      end
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          "#{match[1]},#{match[2]}"
+        end
+      end.flatten
     end
   end
 
