@@ -752,6 +752,7 @@ phpstorm
 phpwebstudy
 piclist
 pieces
+pieces-cli
 pieces-os
 pile
 pingplotter
