@@ -1,6 +1,6 @@
 cask "lyn" do
-  version "2.4"
-  sha256 "e71467942da444c2004ed0208d80ef6694c9d8c3926f2f9092e89c0d57cbdeb1"
+  version "2.4.1"
+  sha256 "f7d040e04c468f8f9d8440ed4bf22aa2c6a882a721ea5682c65f219be43113ac"
 
   url "https://www.lynapp.com/downloads/Lyn-#{version}.dmg"
   name "Lyn"
