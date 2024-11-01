@@ -7,15 +7,7 @@ cask "jdiskreport" do
   desc "Disk usage utility"
   homepage "https://www.jgoodies.com/freeware/jdiskreport/"
 
-  livecheck do
-    url "https://www.jgoodies.com/downloads/jdiskreport/"
-    strategy :page_match do |page|
-      match = page[/href=.*?jdiskreport[._-]?v?(\d+(?:_\d+)+)[._-]mac\.zip/i, 1]
-      next if match.blank?
-
-      match.tr("_", ".")
-    end
-  end
+  deprecate! date: "2024-11-01", because: :unmaintained
 
   app "JDiskReport #{version}/JDiskReport.app"
 
