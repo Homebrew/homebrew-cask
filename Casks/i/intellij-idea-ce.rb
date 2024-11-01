@@ -14,8 +14,12 @@ cask "intellij-idea-ce" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
     strategy :json do |json|
-      json["IIC"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["IIC"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end

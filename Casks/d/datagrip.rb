@@ -13,8 +13,12 @@ cask "datagrip" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release"
     strategy :json do |json|
-      json["DG"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["DG"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end

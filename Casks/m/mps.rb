@@ -13,8 +13,12 @@ cask "mps" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release"
     strategy :json do |json|
-      json["MPS"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["MPS"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end
