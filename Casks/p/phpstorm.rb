@@ -13,8 +13,12 @@ cask "phpstorm" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release"
     strategy :json do |json|
-      json["PS"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["PS"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end
