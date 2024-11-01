@@ -1,5 +1,5 @@
 cask "classicftp" do
-  version "4.03"
+  version "5.00"
   sha256 :no_check
 
   url "https://www.nchsoftware.com/classic/classicmaci.zip"
