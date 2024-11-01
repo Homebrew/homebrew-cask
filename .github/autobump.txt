@@ -474,6 +474,7 @@ intellij-idea
 intellij-idea-ce
 intellij-idea@eap
 ipfs
+istat-menus
 iterm2
 iterm2@beta
 iterm2@nightly
