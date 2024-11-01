@@ -818,6 +818,7 @@ qqmusic
 qt-creator
 qt-creator@dev
 quarto
+quba
 quickbooks
 quicken
 quicksilver
