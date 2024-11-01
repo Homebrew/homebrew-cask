@@ -16,6 +16,8 @@ cask "jmc" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "jmc.app"
 
   caveats do
