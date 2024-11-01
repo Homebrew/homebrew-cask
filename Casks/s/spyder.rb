@@ -20,9 +20,12 @@ cask "spyder" do
 
   pkg "Spyder-macOS-#{arch}.pkg"
 
-  uninstall quit:    "org.spyder-ide.Spyder",
+  uninstall quit:    "org.spyder-ide.Spyder-#{version.major}",
             pkgutil: "org.spyder-ide.Spyder.pkg*",
-            delete:  "/Applications/Spyder #{version.major}.app"
+            delete:  [
+              "/Applications/REQUIRED.app",
+              "/Applications/Spyder #{version.major}.app",
+            ]
 
   zap trash: [
     "~/.spyder-py3",
