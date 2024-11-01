@@ -9,9 +9,12 @@ cask "edrawmind" do
 
   livecheck do
     url "https://www.edrawsoft.com/download-edrawmind.html"
-    strategy :page_match do |page|
-      match = page.match(/for\s+Mac.*?(\d+(?:\.\d+)+).*?edrawmind[._-]full(\d+)\./m)
-      "#{match[1]},#{match[2]}" if match
+    regex(/for\s+Mac.*?v?(\d+(?:\.\d+)+).*?edrawmind[._-]full(\d+)\./im)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
