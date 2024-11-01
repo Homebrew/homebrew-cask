@@ -8,10 +8,7 @@ cask "dropbox-passwords" do
   desc "Password manager that syncs across devices"
   homepage "https://www.dropbox.com/features/security/passwords"
 
-  livecheck do
-    url "https://www.dropbox.com/dropbox-passwords-download/mac/stable"
-    strategy :sparkle
-  end
+  deprecate! date: "2024-11-01", because: :discontinued
 
   depends_on macos: ">= :sierra"
 
