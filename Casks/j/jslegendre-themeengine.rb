@@ -9,11 +9,12 @@ cask "jslegendre-themeengine" do
 
   livecheck do
     url :url
-    strategy :git do |tags|
-      tags.filter_map do |tag|
-        match = tag.match(/^v(\d+(?:\.\d+)*)\((\d+)\)$/i)
-        "#{match[1]},#{match[2]}" if match
-      end
+    regex(/^v?(\d+(?:\.\d+)+)(?:\((\d+)\))?$/i)
+    strategy :github_latest do |json, regex|
+      match = json["tag_name"]&.match(regex)
+      next if match.blank?
+
+      match[2] ? "#{match[1]},#{match[2]}" : match[1]
     end
   end
 
