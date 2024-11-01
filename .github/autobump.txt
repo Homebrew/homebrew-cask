@@ -945,6 +945,7 @@ spike
 splice
 springtoolsuite
 spybuster
+spyder
 standard-notes
 stash
 stats
