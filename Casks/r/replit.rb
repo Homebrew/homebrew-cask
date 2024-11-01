@@ -1,9 +1,9 @@
 cask "replit" do
   arch intel: "-Intel"
 
-  version "1.0.12"
-  sha256 arm:   "c2cfc0c6bfdab45d36981ed8bd4ee247a95b068022e989c22a9eb26f242f5671",
-         intel: "b7ae1e249c04dbffb3386e7bcc000af13a96705f284dea8c50ff1509d9a69f61"
+  version "1.0.14"
+  sha256 arm:   "193c4282d69c0b49bc4d3780c4db102b2602bfb6d3f7cd7322957cde5ff6cb41",
+         intel: "4d2bbec2d40060f97b3140a8390ac2ae8baf7bb4e769783550748a5d599a7d6c"
 
   url "https://github.com/replit/desktop/releases/download/v#{version}/Replit#{arch}.dmg",
       verified: "github.com/replit/desktop/"
