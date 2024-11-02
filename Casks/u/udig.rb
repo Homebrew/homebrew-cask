@@ -6,10 +6,7 @@ cask "udig" do
   name "uDig"
   homepage "http://udig.refractions.net/"
 
-  livecheck do
-    url "http://udig.refractions.net/download/"
-    regex(%r{href=.*?/udig-(\d+(?:\.\d+)*)\.macosx\.cocoa\.x86_64\.dmg}i)
-  end
+  deprecate! date: "2024-11-01", because: :unmaintained
 
   suite "udig"
 
