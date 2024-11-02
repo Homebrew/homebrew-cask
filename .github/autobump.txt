@@ -486,6 +486,7 @@ jamie
 jan
 jasp
 java@beta
+jazz2-resurrection
 jdownloader
 jellyfin
 jetbrains-gateway
