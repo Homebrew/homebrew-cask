@@ -8,15 +8,7 @@ cask "vu" do
   desc "Instagram client"
   homepage "https://datastills.com/vu/"
 
-  livecheck do
-    url "https://updates.devmate.com/com.boriskarulin.vu.xml"
-    regex(%r{/(\d+)/vu-(\d+(?:\.\d+)*)\.dmg}i)
-    strategy :sparkle do |item, regex|
-      item.url.scan(regex).map do |match|
-        "#{item.short_version},#{item.version},#{match[0]}"
-      end
-    end
-  end
+  deprecate! date: "2024-11-01", because: :unmaintained
 
   depends_on macos: ">= :sierra"
 
