@@ -823,6 +823,7 @@ qt-creator
 qt-creator@dev
 quarto
 quba
+querious
 quickbooks
 quicken
 quicksilver
