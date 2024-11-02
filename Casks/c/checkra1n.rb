@@ -13,6 +13,7 @@ cask "checkra1n" do
   end
 
   app "checkra1n.app"
+  binary "#{appdir}/checkra1n.app/Contents/MacOS/checkra1n"
 
   caveats do
     requires_rosetta
