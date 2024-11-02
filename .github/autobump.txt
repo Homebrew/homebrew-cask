@@ -935,6 +935,7 @@ smultron
 snagit
 snapmaker-luban
 sol
+solar2d
 sonarr
 songkong
 soulver
