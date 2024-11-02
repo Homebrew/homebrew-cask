@@ -49,9 +49,39 @@ cask "choosy" do
 
     pkg "Choosy.pkg"
   end
-  on_big_sur :or_newer do
+  on_big_sur do
     version "2.3.1"
     sha256 "8d6a44b78ed256d6f502872fd1f62cf1f7fea877906bedddc5bbf26f93b6ea57"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    pkg "Choosy.pkg"
+  end
+  on_monterey do
+    version "2.3.1"
+    sha256 "8d6a44b78ed256d6f502872fd1f62cf1f7fea877906bedddc5bbf26f93b6ea57"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    pkg "Choosy.pkg"
+  end
+  on_ventura do
+    version "2.3.1"
+    sha256 "8d6a44b78ed256d6f502872fd1f62cf1f7fea877906bedddc5bbf26f93b6ea57"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    pkg "Choosy.pkg"
+  end
+  on_sonoma :or_newer do
+    version "2.3.2"
+    sha256 "85e3b41b32b954869143ba0682324f4aa3e11e7216ae7c217acd35539f714387"
 
     livecheck do
       url "https://choosy.app/sparkle/feed"
