@@ -547,6 +547,7 @@ live-home-3d
 livebook
 lm-studio
 logi-options+
+loginputmac
 logitech-g-hub
 logitune
 logos
