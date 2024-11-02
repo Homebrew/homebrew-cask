@@ -7,10 +7,7 @@ cask "pixel-check" do
   desc "Check your monitor for dead pixels"
   homepage "http://macguitar.me/apps/pixelcheck/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/PXC(\d+(?:\.\d+)+)\.zip}i)
-  end
+  deprecate! date: "2024-11-01", because: :unmaintained
 
   app "PiXel Check #{version}/PiXel Check.app"
 
