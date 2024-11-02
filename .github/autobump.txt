@@ -165,6 +165,7 @@ cinderella
 cisdem-data-recovery
 cisdem-pdf-converter-ocr
 clash-verge-rev
+claude
 clay
 cleanclip
 cleaneronepro
