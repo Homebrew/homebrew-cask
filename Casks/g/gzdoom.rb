@@ -1,6 +1,6 @@
 cask "gzdoom" do
-  version "4.13.1,4.13.1"
-  sha256 "b1d24886961beb4bb87378d1c06ba634a468aff63fad26a38fe9793896716622"
+  version "4.13.2"
+  sha256 "8ef31d1ff48dfcdc2443c4a61aa5b598302cd463c9fac3d781e5a35a1b388e71"
 
   url "https://github.com/ZDoom/gzdoom/releases/download/g#{version.csv.second || version.csv.first}/gzdoom-#{version.csv.first.dots_to_hyphens}-macOS.zip"
   name "GZDoom"
@@ -15,7 +15,7 @@ cask "gzdoom" do
         match = asset["browser_download_url"]&.match(regex)
         next if match.blank?
 
-        (match[2] == match[1]) ? match[1] : "#{match[2].tr("-", ".")},#{match[1]}"
+        (match[2].tr("-", ".") == match[1]) ? match[1] : "#{match[2].tr("-", ".")},#{match[1]}"
       end
     end
   end
