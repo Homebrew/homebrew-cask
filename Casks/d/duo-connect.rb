@@ -22,4 +22,8 @@ cask "duo-connect" do
               "com.duo.connect.tun.plist",
             ],
             pkgutil:   "com.duo.connect.bin"
+
+  caveats do
+    requires_rosetta
+  end
 end
