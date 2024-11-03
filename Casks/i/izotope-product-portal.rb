@@ -30,4 +30,8 @@ cask "izotope-product-portal" do
     "~/Library/Application Support/iZotope",
     "~/Library/Saved Application State/com.izotope.audioplugins.productportal.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
