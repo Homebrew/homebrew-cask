@@ -22,4 +22,8 @@ cask "colorchecker-camera-calibration" do
       "com.xrite.colorcheckercameracalibration.colorcheckercameracalibration.XRiteColorCheckerCameraCalibration.pkg",
     ],
     delete:  "/System/Applications/ColorChecker Camera Calibration.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
