@@ -30,4 +30,8 @@ cask "isyncr" do
 
   uninstall quit:    "com.JRTStudio.iSyncrWiFi",
             pkgutil: "com.jrtstudio.iSyncrDesktop"
+
+  caveats do
+    requires_rosetta
+  end
 end
