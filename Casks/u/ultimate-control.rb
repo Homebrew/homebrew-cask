@@ -7,10 +7,7 @@ cask "ultimate-control" do
   desc "Take control of your computer wirelessly"
   homepage "https://www.negusoft.com/ucontrol/"
 
-  livecheck do
-    url "https://www.negusoft.com/ucontrol/downloads/mac.html"
-    regex(/ultimate[._-]control[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
-  end
+  deprecate! date: "2024-11-01", because: :unmaintained
 
   app "Ultimate Control.app"
 
