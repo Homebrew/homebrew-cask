@@ -7,10 +7,7 @@ cask "iridium" do
   desc "Web browser focusing on security and privacy"
   homepage "https://iridiumbrowser.de/"
 
-  livecheck do
-    url "https://iridiumbrowser.de/downloads/macos"
-    regex(/iridium[._-]browser[._-]?v?(\d+(?:\.\d+)+)[._-]macos[._-]universal\.dmg/i)
-  end
+  deprecate! date: "2024-11-03", because: :discontinued
 
   depends_on macos: ">= :catalina"
 
