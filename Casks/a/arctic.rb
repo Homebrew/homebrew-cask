@@ -9,8 +9,11 @@ cask "arctic" do
 
   livecheck do
     url "https://updates.hedge.video/arctic/macos/appcast/arctic-prod.xml"
-    strategy :sparkle do |item|
-      date = item.url[/Arctic[._-](\d+)[._-]/, 1]
+    regex(/Arctic[._-](\d+)[._-]/i)
+    strategy :sparkle do |item, regex|
+      date = item.url[regex, 1]
+      next if date.blank?
+
       "#{item.short_version},#{item.version},#{date}"
     end
   end
