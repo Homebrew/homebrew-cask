@@ -954,6 +954,7 @@ springtoolsuite
 spybuster
 spyder
 standard-notes
+staruml
 stash
 stats
 steamcmd
