@@ -7,6 +7,11 @@ cask "easydict" do
   desc "Dictionary and translator app"
   homepage "https://github.com/tisfeng/Easydict/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :big_sur"
 
