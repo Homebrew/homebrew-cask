@@ -17,4 +17,8 @@ cask "qldds" do
 
   uninstall launchctl: "uk.org.marginal.qldds.mdimporter",
             pkgutil:   "uk.org.marginal.qldds"
+
+  caveats do
+    requires_rosetta
+  end
 end
