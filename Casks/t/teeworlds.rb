@@ -8,7 +8,7 @@ cask "teeworlds" do
 
   livecheck do
     url "https://teeworlds.com/?page=downloads"
-    regex(%r{href=.*?/teeworlds-(\d+(?:\.\d+)*)-osx\.dmg}i)
+    regex(%r{href=.*?/teeworlds[._-](\d+(?:\.\d+)*)[._-]osx\.dmg}i)
   end
 
   app "Teeworlds.app"
