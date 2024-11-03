@@ -9,8 +9,12 @@ cask "dcommander" do
 
   livecheck do
     url "https://devstorm-apps.com/dc/download.php"
-    strategy :header_match do |headers|
-      headers["content-disposition"][/DCommander-(\d+)\.dmg/i, 1].split("", 4).join(".")
+    regex(/DCommander[._-]v?(\d+)\.dmg/i)
+    strategy :header_match do |headers, regex|
+      match = headers["content-disposition"]&.match(regex)
+      next if match.blank?
+
+      match[1].split("", 4).join(".")
     end
   end
 
