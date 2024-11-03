@@ -15,4 +15,8 @@ cask "isyncer" do
   pkg "iSyncer-installer-#{version}.pkg"
 
   uninstall pkgutil: "main.ISyncer.*"
+
+  caveats do
+    requires_rosetta
+  end
 end
