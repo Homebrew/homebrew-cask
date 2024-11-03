@@ -786,6 +786,7 @@ postman
 postman-agent
 postman-cli
 postman@canary
+power-manager
 powerphotos
 powershell
 powershell@preview
