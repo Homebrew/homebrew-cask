@@ -9,7 +9,7 @@ cask "font-ebh" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*/EBH[-_.]v(\d+(?:\.\d+)+)\.zip}i)
+    regex(%r{href=.*/EBH[._-]v(\d+(?:\.\d+)+)\.zip}i)
   end
 
   font "EBH-v#{version}/EBH Alternates.otf"
