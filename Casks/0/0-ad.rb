@@ -13,7 +13,7 @@ cask "0-ad" do
 
   livecheck do
     url "https://play0ad.com/download/mac/"
-    regex(/href=.*?0ad[._-]v?(.*?)-osx64\.dmg/i)
+    regex(/href=.*?0ad[._-]v?(.*?)[._-]osx64\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"
