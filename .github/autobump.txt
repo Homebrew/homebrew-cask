@@ -546,6 +546,7 @@ little-snitch
 live-home-3d
 livebook
 lm-studio
+localsend
 logi-options+
 loginputmac
 logitech-g-hub
