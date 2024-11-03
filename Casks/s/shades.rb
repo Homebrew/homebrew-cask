@@ -6,10 +6,7 @@ cask "shades" do
   name "Shades"
   homepage "https://www.charcoaldesign.co.uk/shades"
 
-  livecheck do
-    url :homepage
-    regex(/version\s+(?:<a[^>]*>\s*)?(\d+(?:\.\d+)+)/i)
-  end
+  disable! date: "2024-11-01", because: :unmaintained
 
   prefpane "Shades Preferences.prefPane"
 
