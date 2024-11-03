@@ -2,12 +2,12 @@ cask "effect-house" do
   arch arm: "Applesilicon", intel: "Intel"
 
   on_arm do
-    version "4.6.2,4202,10082024,104"
-    sha256 "a166faf807538f2beb19f84a448c56bf8b074b5e9652cc543787525d44438e26"
+    version "4.7.2,8994,10282024,104"
+    sha256 "0613233dbc3de06b88d31f3b0734095c0478b4bb5795164780fd1561c230de26"
   end
   on_intel do
-    version "4.6.2,4206,10082024,104"
-    sha256 "c457cfdebea39ab06b2830f0b4422d48c0319783ead3bced37699cc07c335466"
+    version "4.7.2,8998,10282024,104"
+    sha256 "83775f9b1e1ef8b268aa9b16b3d45175b6516e9fc62a4b7aa047aa5cd85fdfe8"
   end
 
   url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_Builds_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}_#{arch}_#{version.csv.fourth}.dmg",
