@@ -1,5 +1,5 @@
 cask "bookends" do
-  version "15.0.7"
+  version "15.0.8"
   sha256 :no_check
 
   url "https://www.sonnysoftware.com/bookends-for-mac/downloads/Bookends.dmg"
@@ -8,8 +8,10 @@ cask "bookends" do
   homepage "https://www.sonnysoftware.com/bookends-for-mac"
 
   livecheck do
-    url :homepage
-    regex(/appversion\s=\s"\sin\sv\.\s(\d+(?:\.\d+)+)"/i)
+    url "https://www.sonnysoftware.com/media/pages/bookends-for-mac/downloads/491184d1e3-1730473393/currentversiondictionary.text"
+    strategy :json do |json|
+      json["CurrentVersionText"]
+    end
   end
 
   depends_on macos: ">= :high_sierra"
