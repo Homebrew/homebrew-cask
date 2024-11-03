@@ -10,9 +10,7 @@ cask "classroom-mode-for-minecraft" do
 
   livecheck do
     url "https://aka.ms/meecmmacos"
-    strategy :header_match do |headers|
-      headers["location"][/Classroom[._-]Mode[._-]v?(\d+(?:_v?\d+)+)\.dmg/i, 1].tr("_", ".")
-    end
+    strategy :header_match
   end
 
   app "Classroom Mode for Minecraft.app"
