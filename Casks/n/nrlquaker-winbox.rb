@@ -1,6 +1,6 @@
 cask "nrlquaker-winbox" do
-  version "3.41.0"
-  sha256 "7fda44219199bf30cff987fe4d3a7508c223c3054afa967500ed59d1ca142f06"
+  version "3.41.1"
+  sha256 "510bcd45fec2a566e225f35a9707b76aad032bac446ce51351665ca0a52a1247"
 
   url "https://github.com/nrlquaker/winbox-mac/releases/download/v#{version}/Winbox-mac-#{version}.zip"
   name "Winbox-mac"
@@ -11,8 +11,6 @@ cask "nrlquaker-winbox" do
     url :url
     strategy :github_latest
   end
-
-  depends_on macos: "<= :sonoma"
 
   app "Winbox-mac.app"
 
