@@ -7,6 +7,8 @@ cask "cornercal" do
   desc "Clock app"
   homepage "https://github.com/ekreutz/CornerCal"
 
+  deprecate! date: "2024-11-01", because: :unmaintained
+
   depends_on macos: ">= :sierra"
 
   app "CornerCal.app"
