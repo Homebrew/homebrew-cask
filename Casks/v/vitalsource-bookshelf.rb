@@ -10,7 +10,7 @@ cask "vitalsource-bookshelf" do
 
   livecheck do
     url "https://support.vitalsource.com/api/v2/help_center/en-us/articles/360014107913"
-    regex(/href=.*?VitalSource[-_.]Bookshelf[-_.]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?VitalSource[._-]Bookshelf[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
