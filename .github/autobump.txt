@@ -504,6 +504,7 @@ jupyterlab
 juxtacode
 jyutping
 kaleidoscope
+kando
 kdenlive
 kdrive
 keepassxc@snapshot
