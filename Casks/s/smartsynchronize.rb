@@ -12,11 +12,12 @@ cask "smartsynchronize" do
 
   livecheck do
     url "https://www.syntevo.com/smartsynchronize/download/"
-    strategy :page_match do |page|
-      v = page[/smartsynchronize[._-]#{arch}[._-]v?(\d+(?:_\d+)+)\.dmg/i, 1]
-      next if v.blank?
+    regex(/smartsynchronize[._-]#{arch}[._-]v?(\d+(?:_\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
 
-      v.tr("_", ".")
+      match[1].tr("_", ".")
     end
   end
 
