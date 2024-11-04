@@ -7,10 +7,7 @@ cask "pongsaver" do
   desc "Screensaver which plays a game of Pong against itself"
   homepage "https://mikeash.com/software/pongsaver"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-11-03", because: :unmaintained
 
   screen_saver "PongSaver.saver"
 end
