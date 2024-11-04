@@ -9,8 +9,9 @@ cask "coconutbattery" do
 
   livecheck do
     url "https://coconut-flavour.com/updates/coconutBattery.xml"
-    strategy :sparkle do |item|
-      "#{item.version},#{item.url[/_\d+_(.*?)\./i, 1]}"
+    regex(/_\d+_(.*?)\./i)
+    strategy :sparkle do |item, regex|
+      "#{item.version},#{item.url[regex, 1]}"
     end
   end
 
