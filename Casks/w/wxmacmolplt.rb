@@ -10,8 +10,11 @@ cask "wxmacmolplt" do
 
   livecheck do
     url "https://brettbode.github.io/wxmacmolplt/downloads.html"
-    strategy :page_match do |page|
-      match = page.match(/([a-z0-9]+)\.gz">\n.*wxMacMolPlt\s(\d+(?:\.\d+)*)/i)
+    regex(/([a-z0-9]+)\.gz">\n.*wxMacMolPlt\s(\d+(?:\.\d+)*)/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end
