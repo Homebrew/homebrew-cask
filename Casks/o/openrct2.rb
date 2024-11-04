@@ -6,6 +6,10 @@ cask "openrct2" do
 
     url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-#{version}-macos-x86_64.zip",
         verified: "github.com/OpenRCT2/OpenRCT2/"
+
+    livecheck do
+      skip "Legacy version"
+    end
   end
   on_high_sierra do
     version "0.3.4.1"
@@ -13,12 +17,16 @@ cask "openrct2" do
 
     url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-#{version}-macos-x86-64.zip",
         verified: "github.com/OpenRCT2/OpenRCT2/"
+
+    livecheck do
+      skip "Legacy version"
+    end
   end
   on_mojave :or_newer do
-    version "0.4.15"
-    sha256 "b9640ea782badfd5b0e288e896f56abc5705512ac938a7a26cafeaab08d7fb12"
+    version "0.4.16"
+    sha256 "40b33a13f8b53f958ee200b3b172e64c2eb74d468311ffc4cd66708270eb230b"
 
-    url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-#{version}-macos-universal.zip",
+    url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-v#{version}-macos-universal.zip",
         verified: "github.com/OpenRCT2/OpenRCT2/"
   end
 
