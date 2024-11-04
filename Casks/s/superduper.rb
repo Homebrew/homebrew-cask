@@ -10,8 +10,9 @@ cask "superduper" do
 
   livecheck do
     url "https://shirtpocket.s3.amazonaws.com/SuperDuper/superduperinfo.rtf"
-    strategy :page_match do |page|
-      match = page.match(/SuperDuper!\s*v?(\d+(?:\.\d+)+)\s*\(v(\d+)\)/i)
+    regex(/SuperDuper!\s*v?(\d+(?:\.\d+)+)\s*\(v(\d+)\)/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
