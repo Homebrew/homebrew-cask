@@ -797,6 +797,7 @@ power-manager
 powerphotos
 powershell
 powershell@preview
+ppsspp
 praat
 preform
 prepros
