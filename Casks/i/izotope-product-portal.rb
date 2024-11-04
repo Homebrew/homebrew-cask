@@ -10,11 +10,12 @@ cask "izotope-product-portal" do
 
   livecheck do
     url "https://www.izotope.com/in-app/pp/download/mac"
-    strategy :header_match do |headers|
-      match = headers["location"][/iZotope[._-]Product[._-]Portal[._-]v?(\d+(?:[._-]\d+)+\w?)\.dmg/i, 1]
+    regex(/iZotope[._-]Product[._-]Portal[._-]v?(\d+(?:[._-]\d+)+\w?)\.dmg/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
-      match.tr("_", ".")
+      match[1].tr("_", ".")
     end
   end
 
