@@ -10,9 +10,8 @@ cask "gotomeeting" do
 
   livecheck do
     url "https://link.gotomeeting.com/latest-dmg"
-    strategy :header_match do |headers|
-      headers["location"][%r{/([^/]+)/GoToMeeting\.dmg}i, 1]
-    end
+    regex(%r{/([^/]+)/GoToMeeting\.dmg}i)
+    strategy :header_match
   end
 
   app "GoToMeeting.app"
