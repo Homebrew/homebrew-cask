@@ -547,6 +547,7 @@ limitless
 linear-linear
 lingon-x
 litecoin
+little-navmap
 little-snitch
 live-home-3d
 livebook
