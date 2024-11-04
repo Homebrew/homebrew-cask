@@ -9,7 +9,6 @@ module CiMatrix
 
   # Weight for each arch must add up to 1.0.
   INTEL_RUNNERS = {
-    { symbol: :monterey, name: "macos-12", arch: :intel } => 0.0,
     { symbol: :ventura,  name: "macos-13", arch: :intel } => 1.0,
   }.freeze
   ARM_RUNNERS = {
