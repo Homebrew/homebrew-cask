@@ -9,8 +9,9 @@ cask "triplecheese" do
 
   livecheck do
     url "https://u-he.com/products/triplecheese/releasenotes.html"
-    strategy :page_match do |page|
-      match = page.match(/Triple\s*Cheese\s*(\d+(?:\.\d+)*)\s*\(revision\s*(\d+(?:\.\d+)*)\)/i)
+    regex(/Triple\s*Cheese\s*(\d+(?:\.\d+)*)\s*\(revision\s*(\d+(?:\.\d+)*)\)/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
