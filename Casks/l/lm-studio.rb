@@ -14,7 +14,9 @@ cask "lm-studio" do
     end
   end
 
+  auto_updates true
   depends_on arch: :arm64
+  depends_on macos: ">= :high_sierra"
 
   app "LM Studio.app"
 
