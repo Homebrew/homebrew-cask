@@ -9,8 +9,9 @@ cask "metasploit" do
 
   livecheck do
     url "https://osx.metasploit.com/LATEST"
-    strategy :page_match do |page|
-      match = page.match(/metasploit[._-]framework[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:\.git\.\d+\.\h+)?).*\.pkg/i)
+    regex(/metasploit[._-]framework[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:\.git\.\d+\.\h+)?).*\.pkg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
