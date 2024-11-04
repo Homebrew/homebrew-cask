@@ -7,10 +7,7 @@ cask "nzbvortex" do
   desc "NZB client, optimised for performance and ease of use"
   homepage "https://www.nzbvortex.com/landing/"
 
-  livecheck do
-    url "https://www.nzbvortex.com/update/appcast_v#{version.major}.xml"
-    strategy :sparkle
-  end
+  deprecate! date: "2024-11-04", because: :unmaintained
 
   app "NZBVortex #{version.major}.app"
 
