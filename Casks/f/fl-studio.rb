@@ -16,9 +16,10 @@ cask "fl-studio" do
   # the URL that the download page uses to fetch version information.
   livecheck do
     url "https://support.image-line.com/api.php?call=get_version_info&callback=il_get_version_info_cb"
-    strategy :page_match do |page|
+    regex(/il_get_version_info_cb\("(.+?)"\);/i)
+    strategy :page_match do |page, regex|
       # Extract the JSON text from the JavaScript
-      match = page.match(/il_get_version_info_cb\("(.+?)"\);/i)
+      match = page.match(regex)
       next if match.blank?
 
       # Unescape the JSON text and parse it
