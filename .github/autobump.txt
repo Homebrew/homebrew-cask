@@ -488,6 +488,7 @@ jan
 jasp
 java@beta
 jazz2-resurrection
+jbrowse
 jdownloader
 jellyfin
 jetbrains-gateway
