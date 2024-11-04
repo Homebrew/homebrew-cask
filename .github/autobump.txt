@@ -609,6 +609,7 @@ microsoft-outlook
 microsoft-powerpoint
 microsoft-teams
 microsoft-word
+middle
 milanote
 millie
 mimestream
