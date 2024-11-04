@@ -128,6 +128,7 @@ brave-browser@nightly
 brewtarget
 bricklink-studio
 brickstore
+bridge
 browser-deputy
 bruno
 burp-suite
