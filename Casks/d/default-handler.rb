@@ -4,7 +4,7 @@ cask "default-handler" do
 
   url "https://updates.edovia.com/com.edovia.Default-Handler/DefaultHandler_#{version.csv.first}b#{version.csv.second}.zip"
   name "Default Handler"
-  desc "Change default URL scheme handler for apps"
+  desc "Utility for changing default URL scheme handlers"
   homepage "https://blog.edovia.com/2024/03/14/introducing-default-handler/"
 
   livecheck do
