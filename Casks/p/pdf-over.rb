@@ -14,9 +14,7 @@ cask "pdf-over" do
   livecheck do
     url "https://technology.a-sit.at/download/#{folder}"
     regex(/PDF[._-]Over[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
-    strategy :header_match do |headers, regex|
-      headers["content-disposition"][regex, 1]
-    end
+    strategy :header_match
   end
 
   app "PDF-Over.app"
