@@ -19,10 +19,13 @@ cask "isyncr" do
   # file needs to be extracted from the download page.
   livecheck do
     url "https://www.jrtstudio.com/iSyncr-Desktop-Download"
-    strategy :page_match do |page|
+    regex(/iSyncr\s*Desktop\s*v?(\d+(?:\.\d+)+)\.pkg/i)
+    strategy :page_match do |page, regex|
       js_file = page[%r{src=["']?/(files/SlashiSyncr\d+\.js)\??["' >]}i, 1]
+      next if js_file.blank?
+
       version_page = Homebrew::Livecheck::Strategy.page_content("https://www.jrtstudio.com/#{js_file}")
-      version_page[:content].scan(/iSyncr\s*Desktop\s*(\d+(?:\.\d+)+)\.pkg/i).flatten
+      version_page[:content]&.scan(regex)&.map { |match| match[0] }
     end
   end
 
