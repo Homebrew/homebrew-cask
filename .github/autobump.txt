@@ -620,6 +620,7 @@ miniforge
 minisim
 minitube
 minizincide
+mints
 mist
 mitmproxy
 mixed-in-key
