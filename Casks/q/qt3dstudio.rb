@@ -9,11 +9,13 @@ cask "qt3dstudio" do
 
   livecheck do
     url "https://download.qt.io/official_releases/qt3dstudio/"
-    strategy :page_match do |page|
-      version_major_minor = page[%r{href="(\d+(?:\.\d+)*)/"}i, 1]
-      version_page = Homebrew::Livecheck::Strategy.page_content("#{url}#{version_major_minor}/")[:content]
-      version = version_page.scan(/qt-3dstudio-opensource-mac-x64-(\d+(?:\.\d+)*)\.dmg/i)
-      version[0]
+    regex(/qt[._-]3dstudio[._-]opensource[._-]mac[._-]x64[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      version_major_minor = page[%r{href="(\d+(?:\.\d+)+)/"}i, 1]
+      next if version_major_minor.blank?
+
+      version_page = Homebrew::Livecheck::Strategy.page_content("#{url}#{version_major_minor}/")
+      version_page[:content]&.scan(regex)&.map { |match| match[0] }
     end
   end
 
