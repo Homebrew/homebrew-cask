@@ -1,6 +1,6 @@
 cask "blocs" do
-  version "5.2.6"
-  sha256 "3503197d00930898e0bcf090f0e415970b75d008c743e47162be8be47e480bb7"
+  version "5.2.7"
+  sha256 "80c134460b6ee25425e27b3395683e77ae40b807c76e15184ab63136f35ee2dd"
 
   url "https://blocsapp.com/download/archives/Blocs#{version}.zip"
   name "Blocs"
