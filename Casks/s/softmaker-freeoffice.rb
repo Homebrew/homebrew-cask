@@ -10,8 +10,9 @@ cask "softmaker-freeoffice" do
 
   livecheck do
     url "https://www.freeoffice.com/en/download/servicepacks"
-    strategy :page_match do |page|
-      match = page.match(/softmaker[._-]freeoffice[._-](\d+(?:\.\d+)*)\.pkg.*?Revision\s*(\d+)\s*</im)
+    regex(/softmaker[._-]freeoffice[._-](\d+(?:\.\d+)*)\.pkg.*?Revision\s*(\d+)\s*</im)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"

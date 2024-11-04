@@ -9,10 +9,9 @@ cask "moneydance" do
 
   livecheck do
     url "https://infinitekind.com/download-moneydance-personal-finance-software"
-    strategy :page_match do |page|
-      page.scan(/Moneydance\s*v?(\d+(?:\.\d+)*)\s*\((\d+)\)/i).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+    regex(/Moneydance\s*v?(\d+(?:\.\d+)*)\s*\((\d+)\)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

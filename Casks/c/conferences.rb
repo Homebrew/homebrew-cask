@@ -9,8 +9,9 @@ cask "conferences" do
 
   livecheck do
     url "https://zagahr.github.io/Conferences.digital/appcast.xml"
-    strategy :sparkle do |item|
-      item.url[/_v(\d+(?:\.\d+)*-.*?)\.zip/i, 1]
+    regex(/_v(\d+(?:\.\d+)*-.*?)\.zip/i)
+    strategy :sparkle do |item, regex|
+      item.url[regex, 1]
     end
   end
 

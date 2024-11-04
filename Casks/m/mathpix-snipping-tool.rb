@@ -9,8 +9,9 @@ cask "mathpix-snipping-tool" do
 
   livecheck do
     url "https://mathpix.com/appcast.xml"
-    strategy :sparkle do |item|
-      item.url[/SnippingTool[._-]v?(\d+(?:\.\d+)+)\.dmg/i, 1]
+    regex(/SnippingTool[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      item.url[regex, 1]
     end
   end
 

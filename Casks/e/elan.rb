@@ -12,11 +12,12 @@ cask "elan" do
 
   livecheck do
     url "https://archive.mpi.nl/tla/elan/download"
-    strategy :page_match do |page|
-      v = page[/href=.*?ELAN[._-]v?(\d+(?:-\d+)+)#{arch}[._-]mac\.zip/i, 1]
-      next if v.blank?
+    regex(/href=.*?ELAN[._-]v?(\d+(?:-\d+)+)#{arch}[._-]mac\.zip/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
 
-      v.tr("-", ".")
+      match[1].tr("-", ".")
     end
   end
 
