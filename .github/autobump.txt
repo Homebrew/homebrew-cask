@@ -851,6 +851,7 @@ rekordbox
 remote-desktop-manager
 remotehamradio
 removebg
+replacicon
 replaywebpage
 replit
 reqable
