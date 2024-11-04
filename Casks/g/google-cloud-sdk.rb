@@ -16,7 +16,6 @@ cask "google-cloud-sdk" do
   end
 
   auto_updates true
-  depends_on formula: "python@3.11"
 
   google_cloud_sdk_root = "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
 
@@ -42,6 +41,7 @@ cask "google-cloud-sdk" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_google_cloud_sdk"
 
   preflight do
+    FileUtils.mkdir_p google_cloud_sdk_root
     FileUtils.cp_r staged_path/"google-cloud-sdk/.", google_cloud_sdk_root, remove_destination: true
     FileUtils.rm_r(staged_path/"google-cloud-sdk")
     FileUtils.ln_s google_cloud_sdk_root, (staged_path/"google-cloud-sdk")
