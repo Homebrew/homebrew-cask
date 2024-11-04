@@ -9,8 +9,9 @@ cask "qgis" do
 
   livecheck do
     url "https://download.qgis.org/downloads/macos/qgis-macos-pr.sha256sum"
-    strategy :page_match do |page|
-      match = page.match(/qgis_pr_final[._-]v?(\d+(?:_\d+)+)[._-](\d+_\d+)\.dmg/i)
+    regex(/qgis_pr_final[._-]v?(\d+(?:_\d+)+)[._-](\d+_\d+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1].tr("_", ".")},#{match[2]}"
