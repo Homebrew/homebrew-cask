@@ -10,7 +10,10 @@ cask "photostickies" do
   livecheck do
     url "https://api.devontechnologies.com/1/apps/updates.plist.php?product=PhotoStickies&version=#{version}"
     strategy :xml do |xml|
-      xml.elements["//key[text()='PhotoStickies']"]&.next_element&.text&.strip
+      version = xml.elements["//key[text()='PhotoStickies']"]&.next_element&.text
+      next if version.blank?
+
+      version.strip
     end
   end
 
