@@ -189,6 +189,8 @@ Style/OptionalBooleanParameter:
   AllowedMethods:
   - respond_to?
   - respond_to_missing?
+Style/RedundantLineContinuation:
+  Enabled: false
 Style/RescueStandardError:
   EnforcedStyle: implicit
 Style/ReturnNil:
