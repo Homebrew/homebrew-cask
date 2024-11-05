@@ -15,7 +15,11 @@ cask "obs@beta" do
     url "https://obsproject.com/osx_update/updates_#{livecheck_folder}_v2.xml"
     regex(/obs[._-]studio[._-](\d+(?:[.-]\d+)+(?:(?:-beta)|(?:-rc))\d+)[._-]macos/i)
     strategy :sparkle do |items, regex|
-      items.find { |item| item.channel == "beta" }&.url&.scan(regex)&.flatten
+      items.map do |item|
+        next if item.channel != "beta"
+
+        item.url&.[](regex, 1)
+      end
     end
   end
 

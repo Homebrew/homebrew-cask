@@ -22,7 +22,10 @@ cask "sitesucker-pro" do
     livecheck do
       url "https://ricks-apps.com/osx/sitesucker/pro-versions.plist"
       strategy :xml do |xml|
-        xml.elements["//dict/key[text()='App Version']"]&.next_element&.text&.strip
+        version = xml.elements["//dict/key[text()='App Version']"]&.next_element&.text
+        next if version.blank?
+
+        version.strip
       end
     end
   end

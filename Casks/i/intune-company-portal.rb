@@ -11,8 +11,8 @@ cask "intune-company-portal" do
     url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409IMCP01.xml"
     regex(/^CompanyPortal[._-]v?(\d+(?:\.+\d+)+)[._-]Upgrade\.pkg$/i)
     strategy :xml do |xml, regex|
-      filename = xml.elements["//key[text()='Payload']"]&.next_element&.text&.strip
-      match = filename&.match(regex)
+      filename = xml.elements["//key[text()='Payload']"]&.next_element&.text
+      match = filename.strip.match(regex) if filename
       next if match.blank?
 
       match[1]
