@@ -1,5 +1,5 @@
 cask "lynx" do
-  version "8.4.10.0"
+  version "8.4.11.0"
   sha256 :no_check
 
   url "https://downloads.lynxcloud.app/lynx-whiteboard/releases/macx/lynx-whiteboard.pkg"
