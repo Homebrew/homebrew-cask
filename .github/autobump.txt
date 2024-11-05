@@ -703,6 +703,7 @@ obs
 obs-advanced-scene-switcher
 obs@beta
 obsbot-center
+obsidian
 ocenaudio
 odrive
 okta-advanced-server-access
