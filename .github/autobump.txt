@@ -742,6 +742,7 @@ orbstack
 orcaslicer
 origami-studio
 oscar
+osquery
 ossia-score
 osu
 outline
