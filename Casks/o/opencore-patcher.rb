@@ -1,6 +1,6 @@
 cask "opencore-patcher" do
-  version "2.1.0"
-  sha256 "e9239cc40465fb426a6eeab98ac9c214855102dca6f77d3b6b6617b5426d6fb6"
+  version "2.1.1"
+  sha256 "b4858a9ec4665a3c35d8484f862bf99aee23eaf6c7dd6126e6c3009f5eb0f99a"
 
   url "https://github.com/dortania/OpenCore-Legacy-Patcher/releases/download/#{version}/OpenCore-Patcher.pkg",
       verified: "github.com/dortania/OpenCore-Legacy-Patcher/"
