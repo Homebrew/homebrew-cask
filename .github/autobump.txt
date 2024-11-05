@@ -749,6 +749,7 @@ pagico
 panoply
 parsehub
 path-finder
+pcoipclient
 pdf-expert
 pdf-expert@beta
 pdf-reader-pro
