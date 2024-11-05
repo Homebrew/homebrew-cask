@@ -1,6 +1,6 @@
 cask "viz" do
-  version "1.6"
-  sha256 "c2d68bd36962d95fe411f355913535620669ad98f80a3faffa0e33c0e43bde78"
+  version "1.7"
+  sha256 "3da80a3fd54d65dea19fd60d49b05dfa07460d956560cb74a36d6c8a43bedc7b"
 
   url "https://github.com/alienator88/Viz/releases/download/#{version}/Viz.zip",
       verified: "github.com/alienator88/Viz/"
