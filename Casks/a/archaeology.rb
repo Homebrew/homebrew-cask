@@ -10,11 +10,11 @@ cask "archaeology" do
   livecheck do
     url "https://www.mothersruin.com/software/Archaeology/data/ArchaeologyVersionInfo.plist"
     strategy :xml do |xml|
-      short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text&.strip
-      version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text&.strip
+      short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text
+      version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text
       next if short_version.blank? || version.blank?
 
-      "#{short_version},#{version}"
+      "#{short_version.strip},#{version.strip}"
     end
   end
 
