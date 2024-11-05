@@ -8,9 +8,9 @@ cask "font-liberation" do
 
   livecheck do
     url "https://github.com/liberationfonts/liberation-fonts/releases/latest"
-    strategy :page_match do |page|
-      page.scan(%r{href=.*?files/(\d+)/liberation[._-]fonts[._-]ttf[._-]v?(\d+(?:\.\d+)+)\.t}i)
-          .map { |matches| "#{matches[1]},#{matches[0]}" }
+    regex(%r{href=.*?files/(\d+)/liberation[._-]fonts[._-]ttf[._-]v?(\d+(?:\.\d+)+)\.t}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
