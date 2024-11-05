@@ -1045,6 +1045,7 @@ trader-workstation
 tradingview
 trainerroad
 transmission@nightly
+transmit
 transnomino
 treesheets
 tresorit
