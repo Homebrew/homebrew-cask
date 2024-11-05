@@ -14,11 +14,12 @@ cask "xprocheck" do
       item = xml.elements["//dict[key[text()='AppName']/following-sibling::*[1][text()='XProCheck']]"]
       next unless item
 
-      version = item.elements["key[text()='Version']"]&.next_element&.text&.strip
-      match = item.elements["key[text()='URL']"]&.next_element&.text&.strip&.match(regex)
+      version = item.elements["key[text()='Version']"]&.next_element&.text
+      url = item.elements["key[text()='URL']"]&.next_element&.text
+      match = url.strip.match(regex) if url
       next if version.blank? || match.blank?
 
-      "#{version},#{match[1]}.#{match[2]}"
+      "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
 
