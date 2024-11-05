@@ -699,6 +699,7 @@ nova
 nozbe
 nuclear
 nudge
+nvidia-geforce-now
 obs
 obs-advanced-scene-switcher
 obs@beta
