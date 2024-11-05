@@ -56,8 +56,8 @@ cask "coteditor" do
     end
   end
   on_ventura :or_newer do
-    version "5.0.3"
-    sha256 "586a5afc38045934b49d54c2a4d070d415e3746980fab4291b10b6e2fd32ce5d"
+    version "5.0.4"
+    sha256 "1d022a2a965135ca17243347ed76a39b9066b7985e645162ac245330909d5d85"
 
     livecheck do
       url :url
