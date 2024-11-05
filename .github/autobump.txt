@@ -71,6 +71,7 @@ aqua
 arc
 archivewebpage
 arctic
+ares
 arq
 asana
 astah-professional
