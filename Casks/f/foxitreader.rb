@@ -10,8 +10,9 @@ cask "foxitreader" do
 
   livecheck do
     url "https://www.foxit.com/downloads/latest.html?product=Foxit-Reader&platform=Mac-OS-X&language=English"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/(\d+\.\d)/FoxitPDFReader(\d+)\.L10N\.Setup\.pkg}i)
+    regex(%r{/(\d+\.\d)/FoxitPDFReader(\d+)\.L10N\.Setup\.pkg}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       match[1]
