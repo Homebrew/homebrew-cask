@@ -500,6 +500,7 @@ jitsi-meet
 joplin
 jordanbaird-ice
 josm
+jprofiler
 julia
 julia@lts
 jumpshare
