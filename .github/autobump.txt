@@ -847,6 +847,7 @@ quickbooks
 quicken
 quicksilver
 quicktune
+quickwhisper
 quip
 racket
 radarr
