@@ -902,6 +902,7 @@ rustdesk
 rustrover
 santa
 sapmachine-jdk
+sauce-connect
 schism-tracker
 screaming-frog-log-file-analyser
 screaming-frog-seo-spider
