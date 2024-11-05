@@ -9,7 +9,7 @@ cask "denemo" do
 
   livecheck do
     url "https://denemo.org/downloads/"
-    regex(/href=.*?denemo[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]x64.tar\.bz2/i)
+    regex(/href=.*?denemo[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]x64\.t/i)
   end
 
   app "Denemo.app"
