@@ -1,9 +1,9 @@
 cask "unison" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.53.5"
-  sha256 arm:   "545b3b0818e671b7f966cd2f8d61df71b79f07a6cf7f180b969ddf26d50a0931",
-         intel: "ff2ab52930f6642a8ca4c903a75ec6341ca8e886701819a1c39c678dfd492228"
+  version "2.53.6"
+  sha256 arm:   "a7265636bc1077f77000f058ead0a2a0de522c69fbe95a9edbacd90f5b786fdd",
+         intel: "74bfc81dfc975ade4bba3fdd242a07ce4a3c5bc4d1ff8dff495082748abd8556"
 
   url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}-macos-#{arch}.app.tar.gz",
       verified: "github.com/bcpierce00/unison/"
