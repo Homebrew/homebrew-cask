@@ -644,6 +644,7 @@ monal@beta
 monarch
 moneydance
 moneymanager
+moneymoney
 mongodb-compass
 mongodb-compass-isolated-edition
 mongodb-compass-readonly
