@@ -568,6 +568,7 @@ lunacy
 lunar
 lunar-client
 lycheeslicer
+lyn
 lynx
 maa
 maccy
