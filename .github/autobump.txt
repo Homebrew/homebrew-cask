@@ -69,6 +69,7 @@ appflowy
 aptakube
 aqua
 arc
+archipelago
 archivewebpage
 arctic
 ares
