@@ -16,8 +16,10 @@ cask "adobe-air" do
     regex(%r{/v?(\d+(?:\.\d+)+)/AdobeAIR\.dmg}i)
     strategy :page_match do |page, regex|
       js_file = page[/src=["']?(main.+\.js)\??["' >]/i, 1]
+      next if js_file.blank?
+
       version_page = Homebrew::Livecheck::Strategy.page_content("https://airsdk.harman.com/#{js_file}")
-      version_page[:content].scan(regex).flatten
+      version_page[:content]&.scan(regex)&.map { |match| match[0] }
     end
   end
 
