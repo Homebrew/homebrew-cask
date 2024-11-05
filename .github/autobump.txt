@@ -1082,6 +1082,7 @@ ueli
 uhk-agent
 ultimate
 understand
+uninstallpkg
 unite-phone
 unity
 unity-hub
