@@ -1,6 +1,6 @@
 cask "onedrive" do
-  version "24.186.0915.0004"
-  sha256 "30f8782c0d8f7749a8325a7c06791a977781a8c632c81563ce75dc987fcad8ee"
+  version "24.201.1006.0005"
+  sha256 "57b6db23468b0fc0437caff47f86b14c8bf92732abee4902823ef2e17668c495"
 
   url "https://oneclient.sfx.ms/Mac/Installers/#{version}/universal/OneDrive.pkg",
       verified: "oneclient.sfx.ms/Mac/Installers/"
