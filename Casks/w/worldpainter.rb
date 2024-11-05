@@ -9,7 +9,7 @@ cask "worldpainter" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/files/worldpainter[._-]v?(\d+(?:\.\d+)+)\.tgz}i)
+    regex(%r{href=.*?/files/worldpainter[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
   depends_on macos: ">= :el_capitan"
