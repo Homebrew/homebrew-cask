@@ -1,6 +1,6 @@
 cask "jprofiler" do
-  version "14.0.4"
-  sha256 "fa5611ddb2ee788b514db3b5c661e2b2cf9e9c0f496b44a16a4dc67314e825e8"
+  version "14.0.5"
+  sha256 "b635bc31d18cf5e9adec2b4cd9b5ceda2687b4bbf2581da01f242c05b5b77324"
 
   url "https://download-gcdn.ej-technologies.com/jprofiler/jprofiler_macos_#{version.dots_to_underscores}.dmg"
   name "JProfiler"
@@ -10,6 +10,14 @@ cask "jprofiler" do
   livecheck do
     url "https://www.ej-technologies.com/feeds/jprofiler"
     regex(/JProfiler\s*Release\s*v?(\d+(?:\.\d+)+)/i)
+    strategy :xml do |xml, regex|
+      xml.get_elements("//title").map do |item|
+        match = item.text&.strip&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   app "JProfiler.app"
