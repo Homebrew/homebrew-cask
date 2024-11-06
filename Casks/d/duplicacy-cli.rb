@@ -1,9 +1,9 @@
 cask "duplicacy-cli" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.2.3"
-  sha256 arm:   "efaadc14cfb07e305ec00a95b2fcdc4f28db5ae5bedda0d5b4cbfb24386d53fc",
-         intel: "49c6f617ef9fc954865d54b5445eaf37ee7afb0f0dd72ec993cf21ec6cd710f1"
+  version "3.2.4"
+  sha256 arm:   "4e834ab166ea7579bc0e4e3d9fb5825ad9ef8b002c354e7d5d58b0b8d6cf8620",
+         intel: "c910e83d7d2aac4bfa287cf9552167301dbe673da9c8fc58aa1318e908024b7e"
 
   url "https://github.com/gilbertchen/duplicacy/releases/download/v#{version}/duplicacy_osx_#{arch}_#{version}",
       verified: "github.com/gilbertchen/duplicacy/"
