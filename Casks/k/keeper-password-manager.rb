@@ -8,7 +8,7 @@ cask "keeper-password-manager" do
   homepage "https://keepersecurity.com/"
 
   livecheck do
-    url "https://docs.keeper.io/en/v/release-notes/desktop"
+    url "https://docs.keeper.io/en/release-notes/desktop"
     regex(/Release\s+v?(\d+(?:\.\d+)+)/i)
   end
 

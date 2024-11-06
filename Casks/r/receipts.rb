@@ -2,13 +2,13 @@ cask "receipts" do
   version "1.16-762"
   sha256 "76349f6602c457ed490b43187df36b118822deb76130abb1f2a440612485445d"
 
-  url "https://www.receipts-app.com/update/download/Receipts-#{version}.zip"
+  url "https://receipts-app.com/update/download/Receipts-#{version}.zip"
   name "Receipts"
   desc "Document management"
-  homepage "https://www.receipts-app.com/"
+  homepage "https://receipts-app.com/"
 
   livecheck do
-    url "https://www.receipts-app.com/updater.php"
+    url "https://receipts-app.com/updater.php"
     regex(/href=.*?Receipts[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
   end
 

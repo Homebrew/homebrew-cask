@@ -4,7 +4,7 @@ cask "font-anonymous-pro" do
 
   url "https://www.marksimonson.com/assets/content/fonts/AnonymousPro-#{version.dots_to_underscores}.zip"
   name "Anonymous Pro"
-  homepage "https://www.marksimonson.com/fonts/view/anonymous-pro"
+  homepage "https://www.marksimonson.com/fonts/view/anonymous-pro/"
 
   livecheck do
     url :homepage
