@@ -1057,6 +1057,7 @@ todoist
 topaz-gigapixel-ai
 topaz-photo-ai
 topaz-video-ai
+topcat
 tor-browser
 tor-browser@alpha
 touch-portal
