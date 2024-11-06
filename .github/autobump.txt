@@ -792,6 +792,7 @@ plex-media-server
 plexamp
 plus42-binary
 plus42-decimal
+pokemon-tcg-live
 poker-copilot
 polymail
 polypane
