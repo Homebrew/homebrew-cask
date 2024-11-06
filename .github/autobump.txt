@@ -1121,6 +1121,7 @@ virtualhereserver
 visual-paradigm
 visual-paradigm-ce
 visual-studio-code
+vitamin-r
 vivaldi
 vivaldi@snapshot
 vlc@nightly
