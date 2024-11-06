@@ -9,7 +9,7 @@ cask "dcv-viewer" do
       verified: "d1uj6qtbmh3dt5.cloudfront.net/"
   name "NICE DCV Viewer"
   desc "Client for NICE DCV remote display protocol"
-  homepage "https://www.nice-dcv.com/"
+  homepage "https://www.amazondcv.com/"
 
   livecheck do
     url :homepage
