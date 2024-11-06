@@ -7,5 +7,9 @@
     "canon-ufrii-driver": "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json",
     "gotomeeting": "https://www.goto.com/meeting",
     "logmein-client": "https://www.logmein.com/pro",
-    "native-access": "https://www.native-instruments.com/en/specials/native-access-2/"
+    "native-access": "https://www.native-instruments.com/en/specials/native-access-2/",
+    "tableau": [
+        "https://www.tableau.com/products/desktop",
+        "https://downloads.tableau.com/TableauAutoUpdate.xml"
+    ]
 }
