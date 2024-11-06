@@ -9,9 +9,12 @@ cask "kid3" do
         verified: "downloads.sourceforge.net/kid3/"
   end
   on_mojave :or_newer do
-    sha256 "34ef3f1f157be232f7c4c59468081266f9cd3c99be499d82c1d32e858a7bb0e4"
+    arch arm: "arm64", intel: "amd64"
 
-    url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-amd64.dmg",
+    sha256 arm:   "f16a4bc4d8351270b70de0e0e9016f3654ad7eb5af51974b1874a7b1a7269e6e",
+           intel: "34ef3f1f157be232f7c4c59468081266f9cd3c99be499d82c1d32e858a7bb0e4"
+
+    url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-#{arch}.dmg",
         verified: "downloads.sourceforge.net/kid3/"
   end
 
@@ -25,8 +28,4 @@ cask "kid3" do
   binary "#{appdir}/kid3.app/Contents/MacOS/kid3-cli"
 
   zap trash: "~/Library/Preferences/com.kid3.Kid3.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end
