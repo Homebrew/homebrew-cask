@@ -8,7 +8,7 @@ cask "usb-overdrive" do
   homepage "https://www.usboverdrive.com/"
 
   livecheck do
-    url "https://www.usboverdrive.com/index.php/download/"
+    url "https://www.usboverdrive.com/downloads/"
     regex(/>USB\s+Overdrive\s+v?(\d+(?:\.\d+)+)/i)
   end
 
