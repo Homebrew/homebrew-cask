@@ -10,7 +10,7 @@ cask "ngrok" do
     sha256 "ff279c44f7efc156622fc834576e3c6f0179352cf4219aff316864261610de56"
   end
 
-  url "https://bin.equinox.io/#{version.csv.third}/#{version.csv.second}/ngrok-v#{version.major}-#{version.csv.first}-stable-darwin-#{arch}.zip",
+  url "https://bin.equinox.io/#{version.csv.third}/#{version.csv.second}/ngrok-v#{version.major}-#{version.csv.first}-darwin-#{arch}.zip",
       verified: "bin.equinox.io/"
   name "ngrok"
   desc "Reverse proxy, secure introspectable tunnels to localhost"
