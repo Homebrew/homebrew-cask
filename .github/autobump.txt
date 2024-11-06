@@ -529,6 +529,7 @@ kindle-previewer
 kitty
 kiwi-for-gmail
 kkbox
+knime
 krisp
 label-live
 lagrange
