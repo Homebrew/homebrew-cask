@@ -962,6 +962,7 @@ skype@preview
 slack
 slack-cli
 slack@beta
+smartgit
 smooze-pro
 smultron
 snagit
