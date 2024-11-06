@@ -2,9 +2,9 @@ cask "gitbutler" do
   arch arm: "aarch64", intel: "x86_64"
   arch_suffix = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  version "0.13.10,1443"
-  sha256 arm:   "40aa15a336a705d08c96f5122f55e97668d9cba234e4c19a815a0e58f81b61a7",
-         intel: "96083f99a9530ba94a824c2d5a72016b053348ce93fcb7b73369ad910dcaf1d8"
+  version "0.13.11,1445"
+  sha256 arm:   "ab4c5ad5e4264ab2602b5118dc57422fefbf6cb73c0300d431ccd77c55334714",
+         intel: "45644f060b3dbd529c7b2055dd8cd1653ef7c99894e08eb0c46bae6029abb295"
 
   url "https://releases.gitbutler.com/releases/release/#{version.csv.first}-#{version.csv.second}/macos/#{arch}/GitButler_#{version.csv.first}_#{arch_suffix}.dmg"
   name "GitButler"
