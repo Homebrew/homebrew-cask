@@ -1,4 +1,4 @@
-cask "liner" do
+cask "liner@beta" do
   version "0.2.0"
   sha256 "65f574adc04814b99adaac3c9ac557993e9354a0e33c8c905f6b8db9675fabfb"
 
