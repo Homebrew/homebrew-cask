@@ -1031,6 +1031,7 @@ termius@beta
 texifier
 texshop
 texstudio
+texturepacker
 thangs-sync
 theiaide
 threema
