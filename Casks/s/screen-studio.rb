@@ -9,10 +9,10 @@ cask "screen-studio" do
       verified: "screenstudioassets.com/"
   name "Screen Studio"
   desc "Screen recorder and editor"
-  homepage "https://www.screen.studio/"
+  homepage "https://screen.studio/"
 
   livecheck do
-    url "https://www.screen.studio/api/trpc/appInfo.latestVersionInfo?input=%7B%22isBeta%22%3Afalse%7D"
+    url "https://screen.studio/api/trpc/appInfo.latestVersionInfo?input=%7B%22isBeta%22%3Afalse%7D"
     strategy :json do |json|
       json.dig("result", "data", "version")
     end
