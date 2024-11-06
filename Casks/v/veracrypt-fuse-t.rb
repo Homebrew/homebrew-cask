@@ -13,7 +13,7 @@ cask "veracrypt-fuse-t" do
     regex(/href=.*?VeraCrypt_FUSE-T[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on cask: "fuse-t"
+  depends_on cask: "macos-fuse-t/homebrew-cask/fuse-t"
 
   pkg "VeraCrypt_Installer.pkg"
 
@@ -24,4 +24,11 @@ cask "veracrypt-fuse-t" do
     "~/Library/Preferences/org.idrix.VeraCrypt.plist",
     "~/Library/Saved Application State/org.idrix.VeraCrypt.savedState",
   ]
+  caveats <<~EOS
+    #{token} requires fuse-t to run. Run the following commands to install:
+
+    brew tap macos-fuse-t/homebrew-cask
+    brew install fuse-t
+
+  EOS
 end
