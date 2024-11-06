@@ -241,6 +241,7 @@ ddnet
 ddpm
 deckset
 deeper
+deepl
 deezer
 default-folder-x
 defold
@@ -997,11 +998,11 @@ studio-3t
 sublime-merge
 sublime-text@dev
 sunsama
+super-productivity
 superhuman
 superkey
 superlist
 supernotes
-super-productivity
 surfshark
 surge
 swiftformat-for-xcode
