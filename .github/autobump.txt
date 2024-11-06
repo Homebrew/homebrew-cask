@@ -217,6 +217,7 @@ curseforge
 cursor
 cyberduck
 cycling74-max
+dangerzone
 dash-dash
 datadog-agent
 dataflare
