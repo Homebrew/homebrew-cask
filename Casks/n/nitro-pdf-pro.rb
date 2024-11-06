@@ -1,6 +1,6 @@
 cask "nitro-pdf-pro" do
-  version "14.4"
-  sha256 "da6f911f3af1b364882f1386c29378788e168752fd2ee52ac5f48da66fd955f1"
+  version "14.5"
+  sha256 "90cccbcfd56675f298f630e2314152af33699ea6e7e80f31036f641449a7c2ed"
 
   url "https://downloads.gonitro.com/macos/Nitro%20PDF%20Pro_#{version}.dmg"
   name "Nitro PDF Pro"
