@@ -1,6 +1,6 @@
 cask "volanta" do
-  version "1.10.3,be4c648b"
-  sha256 "b6fdd7f8adb4178062e29934ae81dc966271d782b5f993af66b8222958e8b928"
+  version "1.10.4,f65b388c"
+  sha256 "2345ef8c5494542d980ae9f94a9cb650e6c87e0c4fbdf478c460b7a964d67ef4"
 
   url "https://cdn.volanta.app/software/volanta-app/#{version.csv.first}-#{version.csv.second}/volanta-#{version.csv.first}.dmg"
   name "Volanta"
