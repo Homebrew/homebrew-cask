@@ -6,6 +6,10 @@ cask "font-jaapokki" do
   name "Jaapokki"
   homepage "https://type.mikkonuuttila.com/jaapokki/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "Jaapokki-Regular.otf"
   font "Jaapokkienchance-Regular.otf"
   font "Jaapokkisubtract-Regular.otf"
