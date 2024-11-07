@@ -412,6 +412,7 @@ genesys-cloud
 geoda
 geogebra
 geogebra@5
+geph
 git-credential-manager
 gitbutler
 github
