@@ -9,7 +9,19 @@
     "logmein-client": "https://www.logmein.com/pro",
     "native-access": "https://www.native-instruments.com/en/specials/native-access-2/",
     "tableau": [
-        "https://www.tableau.com/products/desktop",
-        "https://downloads.tableau.com/TableauAutoUpdate.xml"
+      "https://www.tableau.com/products/desktop",
+      "https://downloads.tableau.com/TableauAutoUpdate.xml"
+    ],
+    "tableau-prep": [
+      "https://www.tableau.com/products/prep",
+      "https://downloads.tableau.com/TableauAutoUpdate.xml"
+    ],
+    "tableau-public": [
+      "https://public.tableau.com/s",
+      "https://downloads.tableau.com/TableauAutoUpdate.xml"
+    ],
+    "tableau-reader": [
+      "https://www.tableau.com/products/reader",
+      "https://downloads.tableau.com/TableauAutoUpdate.xml"
     ]
 }
