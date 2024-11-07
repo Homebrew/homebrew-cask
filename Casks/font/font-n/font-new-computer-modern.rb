@@ -45,6 +45,7 @@ cask "font-new-computer-modern" do
   font "newcm-#{version}/otf/NewCMSans10-BookOblique.otf"
   font "newcm-#{version}/otf/NewCMSans10-Oblique.otf"
   font "newcm-#{version}/otf/NewCMSans10-Regular.otf"
+  font "newcm-#{version}/otf/NewCMSansMath-Regular.otf"
   font "newcm-#{version}/otf/NewCMUncial08-Bold.otf"
   font "newcm-#{version}/otf/NewCMUncial08-Book.otf"
   font "newcm-#{version}/otf/NewCMUncial08-Regular.otf"
