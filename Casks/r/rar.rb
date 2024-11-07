@@ -12,7 +12,7 @@ cask "rar" do
 
   livecheck do
     url "https://www.rarlab.com/download.htm"
-    regex(/>s*RAR\s*for\s*macOS.*v?(\d+(:?\.\d+)+)[ "<]/i)
+    regex(/>\s*RAR\s+for\s+macOS.*?v?(\d+(:?\.\d+)+)\s*</i)
   end
 
   binary "rar/rar"
