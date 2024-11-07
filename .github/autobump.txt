@@ -1079,6 +1079,7 @@ tresorit
 trezor-suite
 trilium-notes
 truhu
+trunk-io
 tsh
 tsh@13
 tuist
