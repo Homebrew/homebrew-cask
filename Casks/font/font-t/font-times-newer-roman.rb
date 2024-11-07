@@ -6,6 +6,10 @@ cask "font-times-newer-roman" do
   name "Times Newer Roman"
   homepage "https://timesnewerroman.com/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "TimesNewerRoman-Bold.otf"
   font "TimesNewerRoman-BoldItalic.otf"
   font "TimesNewerRoman-Italic.otf"
