@@ -1,8 +1,8 @@
 cask "openvpn-connect" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.5.0,5200"
-  sha256 "a8f35d83fafac92d065c2469063d8cdfc0a07e5d62aca4db06f4af005fe91a8e"
+  version "3.5.1,5326"
+  sha256 "a485db94fa219ec85bf0a9888ace6292d638527be044090763f4afbf0b0bcb73"
 
   url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.csv.first}.#{version.csv.second}_signed.dmg"
   name "OpenVPN Connect client"
@@ -39,8 +39,9 @@ cask "openvpn-connect" do
             ]
 
   zap script: {
-        executable: "security",
-        args:       ["delete-keychain", "openvpn.keychain-db"],
+        executable:   "security",
+        args:         ["delete-keychain", "openvpn.keychain-db"],
+        must_succeed: false,
       },
       trash:  [
         "~/Library/Application Support/OpenVPN Connect",
