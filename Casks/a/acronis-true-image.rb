@@ -9,7 +9,7 @@ cask "acronis-true-image" do
 
   livecheck do
     url "https://www.acronis.com/en-us/support/updates/changes.html?p=42798"
-    regex(/Build.*?>\s*v?(\d+(?:\.\d+)*)\s*</)
+    regex(/Build.*?>\s*v?(\d+(?:\.\d+)*)\s*</i)
   end
 
   auto_updates true
