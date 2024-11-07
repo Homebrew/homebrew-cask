@@ -8,7 +8,7 @@ cask "codespace" do
   homepage "https://codespace.app/"
 
   livecheck do
-    url "https://codespace.app/download/latest"
+    url :url
     strategy :header_match
   end
 
