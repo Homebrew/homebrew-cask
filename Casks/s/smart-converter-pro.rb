@@ -1,6 +1,6 @@
 cask "smart-converter-pro" do
-  version "3.1.5"
-  sha256 "7387468462738ec23ee7bdb9baa87575c74204f14ef646f14efa267a9d81a67e"
+  version "3.1.6"
+  sha256 "6690f2c2fa5c8147699ca5226b37f6177a01ff0df93c5f77c4254e86a81e0d18"
 
   url "https://download.shedworx.com/scp#{version.major}/SmartConverterPro-#{version}.dmg"
   name "Smart Converter Pro"
@@ -20,4 +20,8 @@ cask "smart-converter-pro" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shedworx.smartconverter.sfl*",
     "~/Library/Containers/com.shedworx.smartconverter",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
