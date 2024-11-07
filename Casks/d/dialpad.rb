@@ -1,9 +1,9 @@
 cask "dialpad" do
   arch arm: "arm64", intel: "x64"
 
-  version "2410.3.0"
-  sha256 arm:   "78adf779cceaae9112b7bc98c8a068a8a0bbab0fad8adbbfdfb5ec189832c422",
-         intel: "ddec606e2bd573b1c255aa1a8347ca88531dbcf847ecc35ebb1bb893708a8add"
+  version "2410.3.1"
+  sha256 arm:   "f01b9f26f2273a2dee5d01d7dd04b4558d46b943ca7d96f502b6d45cc42faa43",
+         intel: "b6e8fc243d991bd789013876035ce471460cfa9aa5403bf3aa3281e1954d54bb"
 
   url "https://storage.googleapis.com/dialpad_native/osx/#{arch}/Dialpad.#{version}.zip",
       verified: "storage.googleapis.com/dialpad_native/osx/#{arch}"
