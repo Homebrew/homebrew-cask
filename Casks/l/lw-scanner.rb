@@ -1,8 +1,8 @@
 cask "lw-scanner" do
-  version "0.27.0"
-  sha256 "2bc25d2734d5f4a69982e9aed670003965505a875b3ea5495e792b6811bade1e"
+  version "0.27.1"
+  sha256 "b9df89e3005d70ceb1c8fd3ce2735852aa4dfb96555e1867b32b1590377e8ba8"
 
-  url "https://github.com/lacework/lacework-vulnerability-scanner/releases/download/#{version}/lw-scanner-darwin-amd64",
+  url "https://github.com/lacework/lacework-vulnerability-scanner/releases/download/v#{version}/lw-scanner-darwin-amd64",
       verified: "github.com/lacework/lacework-vulnerability-scanner/"
   name "Lacework vulnerability scanner"
   desc "Lacework inline scanner"
