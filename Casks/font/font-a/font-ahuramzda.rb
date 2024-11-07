@@ -6,6 +6,10 @@ cask "font-ahuramzda" do
   name "Ahuramzda"
   homepage "https://fontlibrary.org/font/ahuramazda/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "Ahuramazda-Avestan-Font-#{version}/ahuramazda.ttf"
 
   # No zap stanza required

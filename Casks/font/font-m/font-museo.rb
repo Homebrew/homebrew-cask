@@ -7,6 +7,10 @@ cask "font-museo" do
   name "Museo"
   homepage "https://www.abstractfonts.com/font/14890"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "Museo300-Regular.otf"
   font "Museo700-Regular.otf"
 

@@ -6,6 +6,10 @@ cask "font-infini" do
   name "Infini"
   homepage "https://www.cnap.fr/sites/infini/en/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "Infini-cnap-engl_fonts-specimen-v2/01_Fonts/01_Regular/infini-regular.otf"
   font "Infini-cnap-engl_fonts-specimen-v2/01_Fonts/02_Italic/infini-italic.otf"
   font "Infini-cnap-engl_fonts-specimen-v2/01_Fonts/03_Bold/infini-bold.otf"
