@@ -1,27 +1,27 @@
 {
-    "adobe-acrobat-pro": "https://www.adobe.com/acrobat/pdf-reader.html",
-    "adobe-acrobat-reader": "https://www.adobe.com/acrobat/pdf-reader.html",
-    "adobe-connect": "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html",
-    "adobe-creative-cloud": "https://www.adobe.com/creativecloud.html",
-    "adobe-creative-cloud-cleaner-tool": "https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems.html",
-    "canon-ufrii-driver": "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json",
-    "gotomeeting": "https://www.goto.com/meeting",
-    "logmein-client": "https://www.logmein.com/pro",
-    "native-access": "https://www.native-instruments.com/en/specials/native-access-2/",
-    "tableau": [
-      "https://www.tableau.com/products/desktop",
-      "https://downloads.tableau.com/TableauAutoUpdate.xml"
-    ],
-    "tableau-prep": [
-      "https://www.tableau.com/products/prep",
-      "https://downloads.tableau.com/TableauAutoUpdate.xml"
-    ],
-    "tableau-public": [
-      "https://public.tableau.com/s",
-      "https://downloads.tableau.com/TableauAutoUpdate.xml"
-    ],
-    "tableau-reader": [
-      "https://www.tableau.com/products/reader",
-      "https://downloads.tableau.com/TableauAutoUpdate.xml"
-    ]
+  "adobe-acrobat-pro": "https://www.adobe.com/acrobat/pdf-reader.html",
+  "adobe-acrobat-reader": "https://www.adobe.com/acrobat/pdf-reader.html",
+  "adobe-connect": "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html",
+  "adobe-creative-cloud": "https://www.adobe.com/creativecloud.html",
+  "adobe-creative-cloud-cleaner-tool": "https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems.html",
+  "canon-ufrii-driver": "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json",
+  "gotomeeting": "https://www.goto.com/meeting",
+  "logmein-client": "https://www.logmein.com/pro",
+  "native-access": "https://www.native-instruments.com/en/specials/native-access-2/",
+  "tableau": [
+    "https://www.tableau.com/products/desktop",
+    "https://downloads.tableau.com/TableauAutoUpdate.xml"
+  ],
+  "tableau-prep": [
+    "https://www.tableau.com/products/prep",
+    "https://downloads.tableau.com/TableauAutoUpdate.xml"
+  ],
+  "tableau-public": [
+    "https://public.tableau.com/s",
+    "https://downloads.tableau.com/TableauAutoUpdate.xml"
+  ],
+  "tableau-reader": [
+    "https://www.tableau.com/products/reader",
+    "https://downloads.tableau.com/TableauAutoUpdate.xml"
+  ]
 }
