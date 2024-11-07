@@ -9,7 +9,7 @@ cask "acronis-true-image-cleanup-tool" do
 
   livecheck do
     url :url
-    regex(/\x00cleanup_tool_mac_macarm64[._-]v?(\d+(?:\.\d+)*)\x00/)
+    regex(/\x00cleanup_tool_mac_macarm64[._-]v?(\d+(?:\.\d+)*)\x00/i)
   end
 
   depends_on macos: ">= :big_sur"
