@@ -1182,6 +1182,7 @@ xemu
 xiaomi-cloud
 xiv-on-mac
 xmind
+xnconvert
 xnviewmp
 xpra
 yaak
