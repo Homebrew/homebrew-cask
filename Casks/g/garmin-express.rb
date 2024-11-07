@@ -10,7 +10,7 @@ cask "garmin-express" do
     end
   end
   on_big_sur :or_newer do
-    version "7.23.0"
+    version "7.24.0"
     sha256 :no_check
 
     url "https://download.garmin.com/omt/express/GarminExpress.dmg"
