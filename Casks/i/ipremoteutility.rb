@@ -1,6 +1,6 @@
 cask "ipremoteutility" do
-  version "1.9.9"
-  sha256 "5c62cc2e48917aada05f646fb73e23ee2da138d59a206231bde0680694f13e42"
+  version "1.9.10"
+  sha256 "af29d7e628a1388ae315c4145b947345e3ae5a58792d511130e5f16e0cc37208"
 
   url "https://www.flandersscientific.com/ip-remote/release/IPRemoteUtility-#{version}-macOS.zip"
   name "Flanders IP Remote Utility"
