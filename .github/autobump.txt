@@ -468,6 +468,7 @@ huggingchat
 huly
 hydrus-network
 hyperbackupexplorer
+hyperconnect
 hyperkey
 i1profiler
 ibackup-viewer
