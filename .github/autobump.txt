@@ -836,6 +836,7 @@ proton-mail
 proton-pass
 protonmail-bridge
 protonvpn
+protopie
 prowlarr
 proxyman
 psychopy
