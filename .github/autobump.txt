@@ -47,6 +47,7 @@ amazon-chime
 amazon-q
 amie
 ammonite
+amneziavpn
 android-studio
 android-studio-preview@beta
 android-studio-preview@canary
