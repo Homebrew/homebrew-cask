@@ -1,13 +1,12 @@
 cask "vienna-assistant" do
-  version "1.2.450"
+  version "1.2.465"
   sha256 :no_check
 
   url "https://www.vsl.co.at/service/vamac",
-      verified:   "vsl.co.at",
       user_agent: :fake
   name "Vienna Assistant"
   desc "Manager for Vienna Symphonic Library sound samples"
-  homepage "https://www.vsl.info/en/manuals/vienna-assistant/introduction"
+  homepage "https://www.vsl.co.at/manuals/getting-started/va"
 
   livecheck do
     url "https://api.vsl.co.at/data/.well-known/dataservice-configuration"
