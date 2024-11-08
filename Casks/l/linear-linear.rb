@@ -1,9 +1,9 @@
 cask "linear-linear" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.27.2,241001y7eyfn6cr"
-  sha256 arm:   "5a97b90f976c3e83c182a0910d7d8f9a92b013beb05bb6baeb192e9b0542a8ea",
-         intel: "8f4f27109fbd1882e60b8ada1c9f88efffa26d36fa9d08b5760c4945ea96976e"
+  version "1.27.4,2411070utbesidf"
+  sha256 arm:   "956f708dcaf51520616c71592ee9638dd648116dd3b26b493bf576ddf53138ab",
+         intel: "8817f8b26eb363f2f3b7cdef10712a968d3b235f7f0bce90112695b9ee3270c1"
 
   url "https://download.todesktop.com/200315glz2793v6/Linear%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/200315glz2793v6/"
