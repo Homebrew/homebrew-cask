@@ -16,6 +16,12 @@ Notice an application that's out-of-date in Homebrew Cask? In most cases, it's v
 brew bump --open-pr <outdated_cask>
 ```
 
+:warning: You will probably first need to run the command:
+
+```bash
+brew tap --force homebrew/cask
+```
+
 You can also follow the steps in the documentation on [adding a cask](https://docs.brew.sh/Adding-Software-to-Homebrew#casks) for more complicated changes.
 
 ## Getting Set Up To Contribute
