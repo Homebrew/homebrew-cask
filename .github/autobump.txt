@@ -1115,6 +1115,7 @@ utools
 uvtools
 valentina-studio
 vamiga
+vassal
 vbrokers
 vcam
 vellum
