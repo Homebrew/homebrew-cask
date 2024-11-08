@@ -13,7 +13,7 @@ cask "espanso" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+(?:-beta\.?\d*)?)$/i)
+    strategy :github_latest
   end
 
   app "Espanso.app"
