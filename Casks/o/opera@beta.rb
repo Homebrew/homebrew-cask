@@ -19,7 +19,11 @@ cask "opera@beta" do
 
   zap trash: [
     "~/Library/Application Support/com.operasoftware.OperaNext",
+    "~/Library/Caches/com.operasoftware.Installer.OperaNext",
     "~/Library/Caches/com.operasoftware.OperaNext",
+    "~/Library/Cookies/com.operasoftware.OperaNext.binarycookies",
+    "~/Library/HTTPStorages/com.operasoftware.Installer.OperaNext",
     "~/Library/Preferences/com.operasoftware.OperaNext.plist",
+    "~/Library/Saved Application State/com.operasoftware.OperaNext.savedState",
   ]
 end
