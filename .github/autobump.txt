@@ -995,6 +995,7 @@ splice
 springtoolsuite
 spybuster
 spyder
+sqlcl
 standard-notes
 staruml
 stash
