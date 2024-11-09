@@ -17,5 +17,13 @@ cask "opera-gx" do
 
   app "Opera GX.app"
 
-  zap trash: "~/Library/Application Support/com.operasoftware.OperaGX"
+  zap trash: [
+    "~/Library/Application Support/com.operasoftware.OperaGX",
+    "~/Library/Caches/com.operasoftware.Installer.OperaGX",
+    "~/Library/Caches/com.operasoftware.OperaGX",
+    "~/Library/Cookies/com.operasoftware.OperaGX.binarycookies",
+    "~/Library/HTTPStorages/com.operasoftware.Installer.OperaGX",
+    "~/Library/Preferences/com.operasoftware.OperaGX.plist",
+    "~/Library/Saved Application State/com.operasoftware.OperaGX.savedState",
+  ]
 end
