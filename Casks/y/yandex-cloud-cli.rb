@@ -1,5 +1,5 @@
 cask "yandex-cloud-cli" do
-  version "0.133.0"
+  version "0.138.0"
   sha256 :no_check
 
   url "https://storage.yandexcloud.net/yandexcloud-yc/install.sh",
@@ -8,11 +8,9 @@ cask "yandex-cloud-cli" do
   desc "CLI for Yandex Cloud"
   homepage "https://cloud.yandex.com/docs/cli/"
 
-  # This can return a page with a CAPTCHA instead of the expected content
-  # (e.g. when the check is run in the homebrew/cask CI environment).
   livecheck do
-    url "https://yandex.cloud/en/docs/cli/release-notes"
-    regex(/Version\s+(\d+(?:\.\d+)+)\s+\(/i)
+    url "https://storage.yandexcloud.net/yandexcloud-yc/release/stable"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   installer script: {
