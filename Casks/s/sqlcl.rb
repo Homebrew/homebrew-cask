@@ -1,5 +1,5 @@
 cask "sqlcl" do
-  version "24.3.0.285.0530"
+  version "24.3.1.311.1631"
   sha256 :no_check
 
   url "https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip"
