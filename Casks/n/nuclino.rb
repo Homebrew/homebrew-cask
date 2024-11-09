@@ -1,8 +1,8 @@
 cask "nuclino" do
-  version "1.6.5"
-  sha256 "2dd3f4486940e0b831bde83c7ab34f0ae5d1052a0bd2c774022128ba91040f94"
+  version "1.6.6"
+  sha256 "82eae43a646d976a548d9864b9f3cfb0260b7b49fe9755970cba0f5aebbdcb7c"
 
-  url "https://s3-eu-central-1.amazonaws.com/repository.nuclino.com/mac/Nuclino-#{version}-x64.dmg",
+  url "https://s3-eu-central-1.amazonaws.com/repository.nuclino.com/mac/Nuclino-#{version}-universal.dmg",
       verified: "s3-eu-central-1.amazonaws.com/repository.nuclino.com/"
   name "Nuclino"
   desc "Collaborative wiki and knowledgebase"
@@ -21,8 +21,4 @@ cask "nuclino" do
     "~/Library/Logs/Nuclino",
     "~/Library/Preferences/com.nuclino.desktop.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
