@@ -1092,6 +1092,7 @@ tuist
 tunnelbear
 tunnelblick@beta
 tuple
+turbovnc-viewer
 tuta-mail
 tuxera-ntfs
 twine
