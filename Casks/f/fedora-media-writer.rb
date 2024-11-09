@@ -20,5 +20,8 @@ cask "fedora-media-writer" do
 
   app "FedoraMediaWriter.app"
 
-  zap trash: "~/Library/Saved Application State/org.fedoraproject.MediaWriter.savedState"
+  zap trash: [
+    "~/Library/Caches/fedoraproject.org",
+    "~/Library/Saved Application State/org.fedoraproject.MediaWriter.savedState",
+  ]
 end
