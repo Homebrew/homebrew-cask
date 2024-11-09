@@ -1046,6 +1046,7 @@ texshop
 texstudio
 texturepacker
 thangs-sync
+the-battle-for-wesnoth
 theiaide
 threema
 threema-work
