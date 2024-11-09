@@ -2,7 +2,7 @@ cask "mercury-browser" do
   version "129.0.2"
   sha256 "dd31d1150ead565f5ffa5d515638548d970f43f786359314d3cafe61833f7178"  
 
-  url "https://github.com/Alex313031/Mercury/releases/download/v#{version}/mercury-#{version}_mac_ARM64.dmg"
+  url "https://github.com/Alex313031/Mercury/releases/download/v.#{version}/mercury-#{version}_mac_ARM64.dmg"
   name "Mercury"
   desc "Firefox fork with compiler optimizations and patches from Librewolf, Waterfox, Ghostery, and BetterFox."
   homepage "https://github.com/Alex313031/Mercury"
@@ -10,9 +10,8 @@ cask "mercury-browser" do
   livecheck do
     url "https://github.com/Alex313031/Mercury/releases/latest"
     strategy :page_match
-    regex(/href=.*?\/v?(\d+(?:\.\d+)+)\/mercury-\1_mac_ARM64\.dmg/i)
+    regex(/href=.*?\/v\.(\d+(?:\.\d+)+)\/mercury-\1_mac_ARM64\.dmg/i)
   end
-
   
   app "Mercury.app"
   
