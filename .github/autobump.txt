@@ -10,6 +10,7 @@
 8x8-work
 a-better-finder-attributes
 a-better-finder-rename
+ableset
 ableton-live-intro
 ableton-live-intro@11
 ableton-live-lite
