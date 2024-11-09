@@ -10,7 +10,7 @@ cask "deepl" do
       regex(%r{^old/v?(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)/DeepL\.(?:zip|t)}i)
       strategy :xml do |xml, regex|
         xml.get_elements("//Contents/Key").map do |item|
-          match = item.text&.match(regex)
+          match = item.text&.strip&.match(regex)
           next if match.blank?
 
           "#{match[1]}.#{match[2]}"
@@ -38,8 +38,8 @@ cask "deepl" do
       url "https://appdownload.deepl.com/macos/"
       regex(%r{^v?(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)/DeepL\.t}i)
       strategy :xml do |xml, regex|
-        xml.get_elements("//ListBucketResult//Contents//Key").map do |item|
-          match = item.text.match(regex)
+        xml.get_elements("//Contents/Key").map do |item|
+          match = item.text&.strip&.match(regex)
           next if match.blank?
 
           "#{match[1]}.#{match[2]}"
