@@ -13,6 +13,7 @@ cask "opera@developer" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Opera Developer.app"
 
