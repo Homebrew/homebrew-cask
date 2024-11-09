@@ -1,5 +1,5 @@
 cask "virtual-ii" do
-  version "12.0"
+  version "12.1"
   sha256 :no_check
 
   url "https://virtualii.com/VirtualII.dmg"
