@@ -14,12 +14,6 @@ cask "mercury-browser" do
   end
   
   app "Mercury.app"
-  
-  # If you have any post-installation steps (e.g., cleaning up), add them here:
-  postflight do
-    # Example: move mercury to /Applications
-    system_command "/bin/mv", args: ["#{staged_path}/Mercury.app", "/Applications"]
-  end
 
   uninstall quit: "com.alex313031.mercury.com.alex313031.mercury"
   
