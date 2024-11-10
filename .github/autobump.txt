@@ -741,6 +741,7 @@ openaudible
 opencat
 opencore-configurator
 openlens
+openlp
 openrct2
 openrefine
 openscad@snapshot
