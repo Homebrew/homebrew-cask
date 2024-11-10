@@ -712,6 +712,7 @@ nordlocker
 nordpass
 nordvpn
 nosqlbooster-for-mongodb
+notchnook
 notebooks
 notesnook
 notion
