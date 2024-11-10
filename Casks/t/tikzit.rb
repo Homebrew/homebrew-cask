@@ -12,6 +12,12 @@ cask "tikzit" do
 
   app "TikZiT.app"
 
+  zap trash: [
+    "~/Library/Preferences/com.tikzit.tikzit.plist",
+    "~/Library/Preferences/io.github.tikzit.plist",
+    "~/Library/Saved Application State/io.github.tikzit.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
