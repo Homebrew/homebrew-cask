@@ -10,7 +10,16 @@ cask "ripx" do
 
   livecheck do
     url "https://hitnmix.com/changes/"
-    regex(/v?(\d+(?:\.\d+)+)\s*changes/i)
+    regex(/^\s*v?(\d+(?:\.\d+)+)\s+changes(?:\s+\([^)]+?\))?(?:\s*(?:&[^;]+?;|.)?\s*mac(?:OS)?\s+Only)?\s*$/i)
+    strategy :page_match do |page, regex|
+      page.scan(%r{<h3[^>]*?>.+?</h3>}i).map do |match|
+        # Remove HTML tags from text to simplify matching
+        match = match.gsub(/<[^>]+?>/, "").match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   depends_on macos: ">= :sierra"
