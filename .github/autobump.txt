@@ -443,7 +443,7 @@ gqrx
 graalvm-jdk@21
 grammarly-desktop
 grandtotal
-gridtracker
+gridtracker2
 groestlcoin-core
 gstreamer-development
 gstreamer-runtime
