@@ -12,8 +12,8 @@ cask "mcreator" do
   homepage "https://mcreator.net/"
 
   livecheck do
-    url "https://mcreator.net/changelog"
-    regex(/>v?(\d+(?:\.\d+)+)</i)
+    url :url
+    strategy :github_latest
   end
 
   app "MCreator.app"
