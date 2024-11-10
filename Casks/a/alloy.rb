@@ -15,6 +15,8 @@ cask "alloy" do
 
   app "Alloy.app"
 
+  zap trash: "~/Library/Saved Application State/org.alloytools.alloy.savedState"
+
   caveats do
     requires_rosetta
   end
