@@ -746,6 +746,7 @@ openrefine
 openscad@snapshot
 openshift-client
 openshot-video-editor@daily
+openthesaurus-deutsch
 openvanilla
 opera
 opera-gx
