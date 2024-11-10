@@ -12,7 +12,7 @@ cask "memoryanalyzer" do
   homepage "https://eclipse.dev/mat/"
 
   livecheck do
-    url "https://eclipse.dev/mat/downloads.php"
+    url "https://eclipse.dev/mat/download/"
     regex(/href=.*?MemoryAnalyzer-(\d+(?:\.\d+)*).*?\.dmg/i)
   end
 
