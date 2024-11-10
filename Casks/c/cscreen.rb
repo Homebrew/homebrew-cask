@@ -7,13 +7,7 @@ cask "cscreen" do
   desc "Command-line display management utility"
   homepage "https://www.pyehouse.com/cscreen/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/(\d{4})/(\d{2})/cscreenIntel\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}" }
-    end
-  end
+  disable! date: "2024-11-10", because: :no_longer_available
 
   binary "cscreen"
 
