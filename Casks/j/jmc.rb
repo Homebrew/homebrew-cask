@@ -7,18 +7,17 @@ cask "jmc" do
   desc "Media organiser"
   homepage "https://github.com/jcm93/jmc"
 
-  # This regex should be removed or tightened (/^v?(\d+(?:\.\d+)+)$/i) when
-  # upstream starts publishing stable versions. Until then, it has to be loose
-  # enough to match unstable versions like `0.2-beta.6`, etc.).
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+.+)$/i)
-    strategy :github_latest
-  end
+  deprecate! date: "2024-11-10", because: :unmaintained
 
   depends_on macos: ">= :catalina"
 
   app "jmc.app"
+
+  zap trash: [
+        "~/Library/Application Support/jcm.jmc",
+        "~/Library/Preferences/com.jcm.jmc.plist",
+      ],
+      rmdir: "~/Music/jmc"
 
   caveats do
     requires_rosetta
