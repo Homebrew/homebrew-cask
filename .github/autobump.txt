@@ -597,6 +597,7 @@ macupdater
 macwhisper
 maestral
 mailbutler
+marginnote
 marked
 markedit
 mcreator
