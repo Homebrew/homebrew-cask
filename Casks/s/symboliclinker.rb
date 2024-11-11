@@ -8,4 +8,6 @@ cask "symboliclinker" do
   homepage "https://github.com/nickzman/symboliclinker"
 
   service "SymbolicLinker.service"
+
+  # No zap stanza required
 end
