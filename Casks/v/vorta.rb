@@ -12,7 +12,7 @@ cask "vorta" do
 
   livecheck do
     url :url
-    regex(/^Vorta[._-]v?(\d+(?:\.\d+)+)-?(?:intel|arm)?\.(?:dmg|pkg|zip)$/i)
+    regex(/^Vorta[._-]v?(\d+(?:\.\d+)+)(:?[._-]#{arch})?\.(?:dmg|pkg|zip)$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
