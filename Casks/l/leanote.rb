@@ -5,9 +5,15 @@ cask "leanote" do
   url "https://github.com/leanote/desktop-app/releases/download/v#{version}/leanote-desktop-mac-v#{version}.zip",
       verified: "github.com/leanote/desktop-app/"
   name "Leanote"
+  desc "Open source cloud notepad"
   homepage "https://leanote.org/"
 
   app "Leanote.app"
+
+  zap trash: [
+    "~/Library/Application Support/leanote",
+    "~/Library/Application Support/Leanote-Desktop",
+  ]
 
   caveats do
     requires_rosetta
