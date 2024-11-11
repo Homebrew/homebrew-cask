@@ -5,12 +5,14 @@ cask "fathom" do
   url "https://storage.googleapis.com/electron_releases/v#{version}/Fathom-darwin-arm64-#{version}.dmg",
       verified: "storage.googleapis.com/electron_releases/"
   name "Fathom"
-  desc "Video conference support, automatic transcription"
+  desc "Record and transcribe video conferences"
   homepage "https://fathom.video/"
 
   livecheck do
-    url "https://electron-update.fathom.video/"
-    regex(%r{<div id="version">v(\d+(?:\.\d+)*)</div>}i)
+    url "https://electron-update.fathom.video/update/darwin_arm64/0.0.0"
+    strategy :json do |json|
+      json["name"]&.tr("v", "")
+    end
   end
 
   depends_on macos: ">= :catalina"
@@ -20,13 +22,6 @@ cask "fathom" do
   uninstall quit: [
     "Fathom Helper",
     "Fathom",
-  ]
-  uninstall delete: [
-    "/Applications/Fathom.app",
-    "/Applications/Fathom.app/Contents/Frameworks/Fathom Helper (GPU).app",
-    "/Applications/Fathom.app/Contents/Frameworks/Fathom Helper (Plugin).app",
-    "/Applications/Fathom.app/Contents/Frameworks/Fathom Helper (Renderer).app",
-    "/Applications/Fathom.app/Contents/Frameworks/Fathom Helper.app",
   ]
 
   zap trash: [
