@@ -15,6 +15,12 @@ cask "bluefish" do
 
   app "Bluefish.app"
 
+  zap trash: [
+    "~/.bluefish",
+    "~/Library/Preferences/nl.openoffice.bluefish.plist",
+    "~/Library/Saved Application State/nl.openoffice.bluefish.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
