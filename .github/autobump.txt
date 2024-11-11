@@ -180,6 +180,7 @@ cleanclip
 cleaneronepro
 cleanmymac
 cleanmymac-zh
+clearvpn
 clickhouse
 clickup
 clion
