@@ -12,6 +12,11 @@ cask "qtpass" do
 
   app "QtPass.app"
 
+  zap trash: [
+    "~/Library/Preferences/org.ijhack.QtPass.plist",
+    "~/Library/Saved Application State/org.qtpass.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
