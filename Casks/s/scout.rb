@@ -8,7 +8,11 @@ cask "scout" do
   desc "Simple Sass processor"
   homepage "https://scout-app.io/"
 
+  deprecate! date: "2024-11-11", because: :unmaintained
+
   app "Scout-App.app"
+
+  zap trash: "~/Library/Application Support/scout-app"
 
   caveats do
     requires_rosetta
