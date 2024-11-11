@@ -4,6 +4,7 @@ cask "colorpicker-propicker" do
 
   url "https://irradiated.net/files/pro-picker.zip"
   name "Pro Picker"
+  desc "Colour picker"
   homepage "https://irradiated.net/tool/pro-picker/"
 
   livecheck do
@@ -12,4 +13,6 @@ cask "colorpicker-propicker" do
   end
 
   colorpicker "ProPicker.colorPicker"
+
+  # No zap stanza required
 end
