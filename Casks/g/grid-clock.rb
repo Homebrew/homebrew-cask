@@ -7,4 +7,6 @@ cask "grid-clock" do
   homepage "https://github.com/chrstphrknwtn/grid-clock-screensaver"
 
   screen_saver "Grid Clock.saver"
+
+  # No zap stanza required
 end
