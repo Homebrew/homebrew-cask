@@ -15,6 +15,11 @@ cask "bino" do
 
   app "Bino.app"
 
+  zap trash: [
+    "~/Library/Preferences/org.bino3d.Bino.plist",
+    "~/Library/Saved Application State/org.bino3d.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
