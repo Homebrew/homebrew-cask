@@ -12,4 +12,6 @@ cask "terminology" do
   end
 
   dictionary "Terminology-for-OS-X/Terminology.dictionary"
+
+  # No zap stanza required
 end
