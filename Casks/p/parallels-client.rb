@@ -25,4 +25,9 @@ cask "parallels-client" do
 
   uninstall quit:    "com.2X.Client.Mac",
             pkgutil: "com.2X.Client.Mac"
+
+  zap trash: [
+    "~/Library/Application Support/com.2X.Client.Mac",
+    "~/Library/Containers/com.2X.Client.Mac",
+  ]
 end
