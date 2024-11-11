@@ -13,6 +13,11 @@ cask "pdf-toolbox" do
 
   app "PDF Toolbox.app"
 
+  zap trash: [
+    "~/Library/Preferences/com.lightenpdf.pdftoolboxweb.plist",
+    "~/Library/Saved Application State/com.lightenpdf.pdftoolboxweb.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
