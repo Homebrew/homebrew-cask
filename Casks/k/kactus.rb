@@ -12,6 +12,16 @@ cask "kactus" do
 
   app "Kactus.app"
 
+  zap trash: [
+    "~/Library/Application Support/Kactus",
+    "~/Library/Caches/io.kactus.KactusClient",
+    "~/Library/Caches/io.kactus.KactusClient.ShipIt",
+    "~/Library/HTTPStorages/io.kactus.KactusClient",
+    "~/Library/Logs/Kactus",
+    "~/Library/Preferences/io.kactus.Kactus.plist",
+    "~/Library/Saved Application State/io.kactus.Kactus.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
