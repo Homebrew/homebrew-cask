@@ -13,4 +13,6 @@ cask "cursorcerer" do
   end
 
   prefpane "Cursorcerer.prefPane"
+
+  zap trash: "~/Library/Preferences/com.doomlaser.cursorcerer.plist"
 end
