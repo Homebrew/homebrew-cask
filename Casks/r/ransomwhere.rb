@@ -19,4 +19,10 @@ cask "ransomwhere" do
     args:       ["-uninstall"],
     sudo:       true,
   }
+
+  # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end
