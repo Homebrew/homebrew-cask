@@ -188,6 +188,7 @@ clion
 clion@eap
 clock-signal
 clockify
+clop
 cloudflare-warp
 cloudmounter
 cloudnet
