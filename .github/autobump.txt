@@ -901,6 +901,7 @@ resolume-arena
 responsively
 restfox
 retcon
+retrobatch
 reveal
 rhino
 ricochet-refresh
