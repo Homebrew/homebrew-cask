@@ -17,6 +17,11 @@ cask "papyrus" do
 
   app "Papyrus.app"
 
+  zap trash: [
+    "~/Library/Preferences/org.eclipse.papyrus.rcp.product.plist",
+    "~/Library/Saved Application State/org.eclipse.papyrus.rcp.product.savedState",
+  ]
+
   caveats do
     depends_on_java "11+"
     requires_rosetta
