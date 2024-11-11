@@ -16,6 +16,11 @@ cask "qtspim" do
 
   uninstall pkgutil: "org.larusstone.pkg.QtSpim"
 
+  zap trash: [
+    "~/Library/Preferences/org.larus.qtspim.plist",
+    "~/Library/Saved Application State/org.larus.qtspim.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
