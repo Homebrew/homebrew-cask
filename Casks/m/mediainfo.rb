@@ -1,15 +1,17 @@
 cask "mediainfo" do
-  version "24.06"
-  sha256 "ece6a7c8bb28a706d9d784392b90766aa4ebe23955ae30cc0e72a4188fb21d1c"
+  version "24.11"
+  sha256 "65ae00f87a594215193b064123ef65c7ead1e4115336582465f74360f6b67d06"
 
   url "https://mediaarea.net/download/binary/mediainfo-gui/#{version}/MediaInfo_GUI_#{version}_Mac.dmg"
   name "MediaInfo"
   desc "Display technical and tag data for video and audio files"
   homepage "https://mediaarea.net/en/MediaInfo"
 
+  # We check the first-party download page, as the Sparkle feed has contained
+  # outdated versions or ones that are no longer available.
   livecheck do
-    url "https://mediaarea.net/rss/mediainfo_updates.xml"
-    strategy :sparkle
+    url "https://mediaarea.net/en/MediaInfo/Download/Mac_OS"
+    regex(/href=.*?MediaInfo[._-]GUI[._-]v?(\d+(?:\.\d+)+)(?:[._-]Mac)?\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
