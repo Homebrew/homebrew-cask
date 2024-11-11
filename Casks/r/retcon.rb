@@ -1,6 +1,6 @@
 cask "retcon" do
-  version "1.1.2"
-  sha256 "d558a6280706305af51e624a06a150e4e976840a2f2ab09a311dc1627eab66ca"
+  version "1.1.3"
+  sha256 "e1592b9fb16c48a96516c25159061357abef4fee1c6610a5aff06ec0022c15a8"
 
   url "https://f000.backblazeb2.com/file/downloads-lemon-garden/retcon/retcon-#{version}.dmg",
       verified: "f000.backblazeb2.com/file/downloads-lemon-garden/"
