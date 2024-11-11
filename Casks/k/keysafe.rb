@@ -9,9 +9,10 @@ cask "keysafe" do
 
   livecheck do
     url "https://miln.eu/keysafe/miln-keysafe-darwin-universal.zip"
-    regex(/miln-keysafe[._-]v?(\d+(?:\.\d+)+)-darwin-universal\.zip/i)
     strategy :header_match
   end
 
   binary "miln-keysafe-v#{version}-darwin-universal/keysafe"
+
+  # No zap stanza required
 end
