@@ -8,4 +8,6 @@ cask "epoch-flip-clock" do
   homepage "https://github.com/chrstphrknwtn/epoch-flip-clock-screensaver/"
 
   screen_saver "Epoch Flip Clock.saver"
+
+  # No zap stanza required
 end
