@@ -22,6 +22,12 @@ cask "lmms" do
 
   app "LMMS.app"
 
+  zap trash: [
+        "~/.lmmsrc.xml",
+        "~/Library/Saved Application State/io.lmms.savedState",
+      ],
+      rmdir: "~/Documents/lmms"
+
   caveats do
     requires_rosetta
   end
