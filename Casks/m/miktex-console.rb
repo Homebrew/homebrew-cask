@@ -9,10 +9,15 @@ cask "miktex-console" do
 
   livecheck do
     url "https://miktex.org/download"
-    regex(%r{href=.*?/miktex-(\d+(?:\.\d+)+)-darwin-x86_64\.dmg}i)
+    regex(%r{href=.*?/miktex[._-](\d+(?:\.\d+)+)[._-]darwin[._-]x86_64\.dmg}i)
   end
 
   app "MiKTeX Console.app"
+
+  zap trash: [
+    "~/Library/Application Support/MiKTeX",
+    "~/Library/Saved Application State/org.miktex.console.savedState",
+  ]
 
   caveats do
     requires_rosetta
