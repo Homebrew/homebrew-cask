@@ -4,9 +4,12 @@ cask "colorpicker-materialdesign" do
 
   url "https://github.com/CodeCatalyst/MaterialDesignColorPicker/releases/download/v#{version}/MaterialDesignColorPicker.colorPicker.zip"
   name "Material Design"
+  desc "Colour picker"
   homepage "https://github.com/CodeCatalyst/MaterialDesignColorPicker"
 
   depends_on macos: ">= :el_capitan"
 
   colorpicker "MaterialDesignColorPicker.colorPicker"
+
+  # No zap stanza required
 end
