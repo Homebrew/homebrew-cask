@@ -21,4 +21,6 @@ cask "wings3d" do
   end
 
   app "Wings3D.app"
+
+  zap trash: "~/Library/Caches/Wings3D"
 end
