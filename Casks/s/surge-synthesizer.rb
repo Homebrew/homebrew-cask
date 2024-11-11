@@ -18,4 +18,8 @@ cask "surge-synthesizer" do
     "org.surge-synthesizer.fxau.pkg",
     "org.surge-synthesizer.fxvst3.pkg",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
