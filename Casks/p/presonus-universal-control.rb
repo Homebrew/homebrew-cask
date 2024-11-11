@@ -6,12 +6,12 @@ cask "presonus-universal-control" do
       verified: "fmicassets.com/Damroot/Original/"
   name "Universal Control"
   desc "PreSonus software control interface"
-  homepage "https://www.presonus.com/products/Universal-Control"
+  homepage "https://www.presonus.com/pages/universal-control"
 
   # There is no page available specifically for the software
   # so we return the downloads from one of the popular products
   livecheck do
-    url "https://www.presonus.com/products/studiolive-classic-1602-usb-digital-console-mixer"
+    url "https://www.presonus.com/products/audiobox-usb-96-studio"
     regex(%r{href=.*?/(\d+)/PreSonus[._-]Universal[._-]Control[._-]v?(\d+(?:[._]\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1].tr("_", ".")},#{match[0]}" }
