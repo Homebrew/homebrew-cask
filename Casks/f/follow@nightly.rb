@@ -1,9 +1,9 @@
 cask "follow@nightly" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.0-nightly.20241108"
-  sha256 arm:   "410edf9b1e1878d6abd27aa9c9815fd95ecfd8e7d23d06ad94bb29ac5000740c",
-         intel: "c80753e48536cbb1e95a589e6ca05c30f62e8d27f3bf24ad6125ade72966dfc0"
+  version "0.2.0-nightly.20241110"
+  sha256 arm:   "27cc0e49a1ecf2fee06d2097031c34a25433d8f1ca317f1bceacd8db1df6bcd3",
+         intel: "86a31d5f77d830c7537af7b51a83b109432fae838fc52352b5194813a7bb359d"
 
   url "https://github.com/RSSNext/Follow/releases/download/nightly-#{version}/Follow-#{version}-macos-#{arch}.dmg",
       verified: "github.com/RSSNext/Follow/"
