@@ -14,6 +14,13 @@ cask "gitblade" do
 
   app "GitBlade.app"
 
+  zap trash: [
+    "~/Library/Application Support/GitBlade",
+    "~/Library/Logs/GitBlade",
+    "~/Library/Preferences/com.electron.gitblade.plist",
+    "~/Library/Saved Application State/com.electron.gitblade.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
