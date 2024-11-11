@@ -3,7 +3,8 @@ cask "terminology" do
   sha256 :no_check
 
   url "http://media.agiletortoise.com/Terminology-for-OS-X/Terminology-for-OS-X.zip"
-  name "terminology"
+  name "Terminology"
+  desc "Semantic lexical reference for Apple Dictionary"
   homepage "https://agiletortoise.com/terminology/mac/"
 
   livecheck do
@@ -12,4 +13,6 @@ cask "terminology" do
   end
 
   dictionary "Terminology-for-OS-X/Terminology.dictionary"
+
+  # No zap stanza required
 end
