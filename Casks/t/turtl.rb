@@ -21,6 +21,14 @@ cask "turtl" do
 
   app "Turtl.app"
 
+  zap trash: [
+    "~/Library/Application Support/Turtl",
+    "~/Library/Logs/Turtl",
+    "~/Library/Preferemces/com.electron.turtl.helper.plist",
+    "~/Library/Preferences/com.electron.turtl.plist",
+    "~/Library/Saved Application State/com.electron.turtl.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
