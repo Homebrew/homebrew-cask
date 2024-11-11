@@ -1,9 +1,9 @@
 cask "zen-browser" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.0.1-a.18"
-  sha256 arm:   "d6e98f861dfcfc5d520d2bf5880c9ab66c4c1af90ecf3476ca21b115a7764322",
-         intel: "60f28eef843b2f99eb611dc57ddffc48f19304edc65b7f95a2be1cd20230194b"
+  version "1.0.1-a.19"
+  sha256 arm:   "228f79a57cc8077af46ce5407008b32193e1b01823eaf7fa27a21c39f340b4cf",
+         intel: "0f3973a0454f65212bf37ebcf0e9eaf56f5b129cf5c2884beabdbe32dd82c5d9"
 
   url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen.macos-#{arch}.dmg",
       verified: "github.com/zen-browser/desktop/"
