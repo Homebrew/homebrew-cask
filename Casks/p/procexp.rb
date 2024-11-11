@@ -13,4 +13,6 @@ cask "procexp" do
 
   binary "procexp.universal", target: "procexp"
   manpage "procexp.1"
+
+  # No zap stanza required
 end
