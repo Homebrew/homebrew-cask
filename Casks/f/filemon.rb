@@ -13,4 +13,6 @@ cask "filemon" do
   end
 
   binary "filemon"
+
+  # No zap stanza required
 end
