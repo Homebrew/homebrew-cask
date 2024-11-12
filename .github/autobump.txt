@@ -435,6 +435,7 @@ glyphs
 gns3
 gnucash
 godspeed
+gog-galaxy
 goland
 goodsync
 google-chrome@beta
