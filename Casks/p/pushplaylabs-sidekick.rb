@@ -20,7 +20,10 @@ cask "pushplaylabs-sidekick" do
     url "https://api.meetsidekick.com/downloads/df/#{livecheck_folder}"
     regex(/[_-](\d+(?:\.\d+)+)[_-](.+)[._-](?:default|df)\.dmg/i)
     strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
