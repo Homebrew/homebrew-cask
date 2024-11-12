@@ -11,7 +11,7 @@ cask "actual-odbc-pack" do
   livecheck do
     url :url
     strategy :extract_plist do |items|
-      items["com.actualtechnologies.odbcmanager"].short_version
+      items["com.actualtechnologies.odbcmanager"]&.short_version
     end
   end
 
