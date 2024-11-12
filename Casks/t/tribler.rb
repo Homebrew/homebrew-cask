@@ -15,6 +15,13 @@ cask "tribler" do
 
   app "Tribler.app"
 
+  zap trash: [
+    "~/.Tribler",
+    "~/Library/Preferences/com.nl-tudelft-tribler.plist",
+    "~/Library/Preferences/nl.tudelft.tribler.plist",
+    "~/Library/Saved Application State/nl.tudelft.tribler.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
