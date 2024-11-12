@@ -718,6 +718,7 @@ nordlayer
 nordlocker
 nordpass
 nordvpn
+nosql-workbench
 nosqlbooster-for-mongodb
 notchnook
 notebooks
