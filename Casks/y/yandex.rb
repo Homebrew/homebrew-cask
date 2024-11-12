@@ -14,9 +14,10 @@ cask "yandex" do
     url :url
     regex(/(\d+)_(\d+)_(\d+)/i)
     strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map do |match|
-        "#{match[0]}.#{match[1]}.#{match[2]}"
-      end
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]}.#{match[2]}.#{match[3]}"
     end
   end
 
