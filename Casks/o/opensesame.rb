@@ -10,7 +10,19 @@ cask "opensesame" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/opensesame[._-]v?(\d+(?:\.\d+)+)[._-].*\.dmg/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   app "OpenSesame.app"
