@@ -1,5 +1,5 @@
 cask "onecast" do
-  version "2.1"
+  version "2.2"
   sha256 :no_check
 
   url "https://onecast.me/downloads/OneCast.dmg"
@@ -23,8 +23,4 @@ cask "onecast" do
     "~/Library/Preferences/com.onecast.macos.plist",
     "~/Library/WebKit/com.onecast.macos",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
