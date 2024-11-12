@@ -225,6 +225,7 @@ cyberduck
 cycling74-max
 dangerzone
 dash-dash
+dashcam-viewer
 datadog-agent
 dataflare
 datagrip
