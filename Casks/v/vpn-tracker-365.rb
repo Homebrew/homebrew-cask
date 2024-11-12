@@ -13,7 +13,7 @@ cask "vpn-tracker-365" do
     url "https://www.equinux.com/dlc/?l=/x/products/vpntracker/download.html&cc=com.equinux.VPNTracker&v=365&d"
     regex(/VPN[\s._-]Tracker[\s._-]365[\s._-]+v?(\d+(?:\.\d+)+)[\s._-](\d+(?:\.\d+)*)\.zip/i)
     strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
