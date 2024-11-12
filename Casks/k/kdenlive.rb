@@ -25,5 +25,6 @@ cask "kdenlive" do
     "~/Library/Caches/kdenlive",
     "~/Library/Preferences/kdenlive-layoutsrc",
     "~/Library/Preferences/kdenliverc",
+    "~/Library/Preferences/org.kde.Kdenlive.plist",
   ]
 end

@@ -18,6 +18,7 @@ cask "heroic" do
     "~/Library/Application Support/heroic",
     "~/Library/Logs/heroic",
     "~/Library/Preferences/com.electron.heroic.plist",
+    "~/Library/Preferences/com.heroicgameslauncher.hgl.plist",
     "~/Library/Saved Application State/com.electron.heroic.savedState",
   ]
 end

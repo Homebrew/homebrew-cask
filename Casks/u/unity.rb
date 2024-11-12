@@ -40,7 +40,10 @@ cask "unity" do
     "~/Library/Application Support/Unity*",
     "~/Library/Caches/com.unity3d.UnityEditor",
     "~/Library/Logs/Unity",
+    "~/Library/Preferences/com.unity.BugReporterV2.plist",
+    "~/Library/Preferences/com.unity3d.UnityEditor5.x.plist",
     "~/Library/Preferences/com.unity3d.unityhub.plist",
+    "~/Library/Preferences/unity.DefaultCompany.*",
     "~/Library/Saved Application State/com.unity3d.unityhub.savedState",
     "~/Library/Unity",
   ]
