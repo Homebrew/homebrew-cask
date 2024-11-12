@@ -26,8 +26,10 @@ cask "libcblite-community" do
   end
 
   uninstall_postflight do
-    puts "Removing library symlinks in #{HOMEBREW_PREFIX}/lib"
-    File.unlink("#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib", "#{HOMEBREW_PREFIX}/lib/libcblite.dylib")
+    if File.symlink?("#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib")
+      puts "Removing library symlinks in #{HOMEBREW_PREFIX}/lib"
+      File.unlink("#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib", "#{HOMEBREW_PREFIX}/lib/libcblite.dylib")
+    end
   end
 
   # No zap stanza required
