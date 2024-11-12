@@ -1111,6 +1111,7 @@ turbovnc-viewer
 tuta-mail
 tuxera-ntfs
 twine
+twingate
 tyme
 typeface
 typora
