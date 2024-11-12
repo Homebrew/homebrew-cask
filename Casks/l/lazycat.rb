@@ -13,7 +13,7 @@ cask "lazycat" do
   livecheck do
     url "https://dl.lazycat.cloud/client/desktop/lzc-client-desktop_#{arch}.dmg.metadata.json"
     strategy :json do |json|
-      json["buildVersion"].delete_prefix("v")
+      json["buildVersion"]&.delete_prefix("v")
     end
   end
 
