@@ -1060,6 +1060,7 @@ texstudio
 texturepacker
 thangs-sync
 the-battle-for-wesnoth
+the-clock
 theiaide
 threema
 threema-work
