@@ -11,7 +11,7 @@ cask "objectivesharpie" do
     url "https://aka.ms/objective-sharpie"
     regex(%r{/download/pr/([^/]+)/([^/]+)/objectivesharpie[._-](\d+(?:\.\d+)+)\.pkg}i)
     strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[3]},#{match[1]},#{match[2]}"
