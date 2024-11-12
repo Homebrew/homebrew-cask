@@ -19,9 +19,9 @@ cask "burp-suite-professional" do
 
       all_versions.filter_map do |item|
         item["version"] if
-              item["releaseChannels"].include?("Stable") &&
-              item["categories"].include?("Professional") &&
-              item["builds"].any? do |build|
+              item["releaseChannels"]&.include?("Stable") &&
+              item["categories"]&.include?("Professional") &&
+              item["builds"]&.any? do |build|
                 build["ProductPlatform"] == arch.to_s
               end
       end
