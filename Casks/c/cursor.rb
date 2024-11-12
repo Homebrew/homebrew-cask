@@ -14,11 +14,13 @@ cask "cursor" do
   livecheck do
     url "https://download.todesktop.com/230313mzl4w4u92/latest-mac.yml"
     regex(/Build[ ._-]([^-]+)[._-]/i)
-    strategy :electron_builder do |item, regex|
-      build = item["files"].first["url"][regex, 1]
-      next if build.blank?
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
 
-      "#{item["version"]},#{build}"
+        "#{yaml["version"]},#{match[1]}"
+      end
     end
   end
 
