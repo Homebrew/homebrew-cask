@@ -13,7 +13,7 @@ cask "lens" do
   livecheck do
     url "https://api.k8slens.dev/binaries/latest-mac.json/"
     strategy :json do |json|
-      json["version"].sub("-latest", "")
+      json["version"]&.sub("-latest", "")
     end
   end
 
