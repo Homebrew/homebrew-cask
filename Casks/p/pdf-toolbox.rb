@@ -4,6 +4,7 @@ cask "pdf-toolbox" do
 
   url "https://www.lightenpdf.com/upload/download/PDF-Toolbox-Mac-#{version.no_dots}.dmg"
   name "PDF Toolbox"
+  desc "Utilities for working with PDF files"
   homepage "https://www.lightenpdf.com/pdf-toolbox-mac.html"
 
   livecheck do
