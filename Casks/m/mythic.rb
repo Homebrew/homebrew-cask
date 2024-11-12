@@ -4,7 +4,7 @@ cask "mythic" do
 
   url "https://dl.getmythic.app/sparkle-temp/Mythic-#{version}.zip"
   name "Mythic"
-  desc "Unique open-source game launcher with the ability to run Windows games"
+  desc "Game launcher with the ability to run Windows games"
   homepage "https://getmythic.app/"
 
   livecheck do
