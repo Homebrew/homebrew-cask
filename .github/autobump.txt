@@ -971,6 +971,7 @@ signal
 signal@beta
 simplenote
 simplex
+singlebox
 sip
 sipgate-clinq
 sitesucker-pro
