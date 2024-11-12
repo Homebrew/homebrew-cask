@@ -11,7 +11,7 @@ cask "google-japanese-ime" do
   livecheck do
     url :url
     strategy :extract_plist do |items|
-      items["com.google.inputmethod.Japanese"].short_version
+      items["com.google.inputmethod.Japanese"]&.short_version
     end
   end
 
