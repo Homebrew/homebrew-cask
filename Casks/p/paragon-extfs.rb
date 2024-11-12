@@ -10,7 +10,7 @@ cask "paragon-extfs" do
   livecheck do
     url :url
     strategy :extract_plist do |items|
-      items["com.paragon-software.filesystems.extfs"].short_version
+      items["com.paragon-software.filesystems.extfs"]&.short_version
     end
   end
 
