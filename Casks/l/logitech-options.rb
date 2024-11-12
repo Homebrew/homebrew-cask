@@ -66,8 +66,8 @@ cask "logitech-options" do
       url "https://support.logi.com/api/v2/help_center/en-us/articles.json?label_names=webcontent=productdownload,webos=mac-macos-x-11.0"
       regex(/Software Version: .*?v?(\d+(?:\.\d+)+)/i)
       strategy :json do |json, regex|
-        json["articles"].select { |item| item["name"] == "Logitech Options" }
-                        .map { |item| item["body"][regex, 1] }
+        json["articles"]&.select { |item| item["name"] == "Logitech Options" }
+                        &.map { |item| item["body"]&.[](regex, 1) }
       end
     end
 
