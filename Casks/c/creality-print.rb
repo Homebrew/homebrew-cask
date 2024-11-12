@@ -1,17 +1,32 @@
 cask "creality-print" do
-  version "5.1.4.10249,6d12d03c600006f52e3bd31411258dab"
-  sha256 "9a32f88c0fa69ce657b5424af42e8a55462e73742f5d67e70be1b961710d4472"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://file2-cdn.creality.com/file/#{version.csv.second}/Creality_Print-v#{version.csv.first}-macx-x86_64-Release.dmg"
+  version "5.1.6.10470"
+  sha256 arm:   "01dfdff70bf35258028f60ce5f835ee216cb884494df90277e4e85db3a3d6a8a",
+         intel: "37ccd52b214460e13f643c41c8112afbf3b8dc0aa07eeeb01dcfdadae3060280"
+
+  url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.csv.first.major_minor_patch}/Creality_Print-v#{version.csv.first}-macx-#{arch}-Release.dmg",
+      verified: "github.com/CrealityOfficial/CrealityPrint/"
   name "Creality Print"
   desc "Slicer and cloud services for some Creality FDM 3D printers"
   homepage "https://www.creality.com/pages/download-software"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
-    url :homepage
-    regex(%r{/([^/]+)/Creality[._-]Print[._-]v?(\d+(?:\.\d+)+)[._-]macx[._-]x86[._-]64[._-]Release\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+    url :url
+    regex(/Creality[._-]Print[._-]v?(\d+(?:\.\d+)+)[._-]macx[._-]#{arch}[._-]Release\.dmg/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
     end
   end
 
@@ -22,8 +37,4 @@ cask "creality-print" do
     "~/Library/Caches/Creality",
     "~/Library/Saved Application State/com.creality.crealityprint.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
