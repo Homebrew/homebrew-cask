@@ -12,7 +12,7 @@ cask "vmware-horizon-client" do
     url "https://customerconnect.omnissa.com/channel/public/api/v1.0/products/getRelatedDLGList?locale=en_US&category=desktop_end_user_computing&product=vmware_horizon_clients&version=horizon_8&dlgType=PRODUCT_BINARY"
     regex(%r{/([^/]+)/VMware[._-]Horizon[._-]Client[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
     strategy :json do |json, regex|
-      mac_json_info = json["dlgEditionsLists"]&.select { |item| item["name"].match(/mac/i) }&.first
+      mac_json_info = json["dlgEditionsLists"]&.select { |item| item["name"]&.match(/mac/i) }&.first
       api_item = mac_json_info["dlgList"]&.first
       next if api_item.blank?
 
