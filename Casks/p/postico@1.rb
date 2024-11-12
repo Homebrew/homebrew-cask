@@ -17,7 +17,7 @@ cask "postico@1" do
 
       header_url = "https://eggerapps.at/postico/download/"
       headers = Homebrew::Livecheck::Strategy.page_headers(header_url)
-      id = headers.first["location"].match(/postico-(\d+(?:\.\d+)*)\.zip/i)
+      id = headers.first["location"]&.match(/postico-(\d+(?:\.\d+)*)\.zip/i)
 
       next if v.blank? || id.blank?
 
