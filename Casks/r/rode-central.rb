@@ -1,5 +1,5 @@
 cask "rode-central" do
-  version "2.0.59"
+  version "2.0.61"
   sha256 :no_check
 
   url "https://update.rode.com/central/RODE_Central_MACOS.zip"
