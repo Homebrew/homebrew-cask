@@ -11,7 +11,7 @@ cask "aifun" do
   livecheck do
     url "https://static.aifun.kapokcloud.com/updater/updater.json"
     strategy :json do |json|
-      json["version"].sub("v", "")
+      json["version"]&.sub("v", "")
     end
   end
 

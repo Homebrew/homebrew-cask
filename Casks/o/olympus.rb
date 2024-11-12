@@ -12,7 +12,7 @@ cask "olympus" do
     url "https://dev.azure.com/EverestAPI/Olympus/_apis/build/builds"
     strategy :json do |json|
       json["value"]&.map do |build|
-        build["id"].to_s if build["sourceBranch"] == "refs/heads/stable"
+        build["id"]&.to_s if build["sourceBranch"] == "refs/heads/stable"
       end
     end
   end

@@ -12,7 +12,10 @@ cask "spitfire-audio" do
     url "https://www2.spitfireaudio.com/library-manager/download/mac/"
     regex(%r{/(\d+)/.*-(\d+(?:\.\d+)+)\.dmg}i)
     strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
     end
   end
 

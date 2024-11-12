@@ -12,7 +12,7 @@ cask "bria" do
     url "https://www.counterpath.com/downloads/Bria6ForMac.php"
     regex(/Bria_(\d+(?:\.\d+)+)_(\d+)\.dmg/i)
     strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"

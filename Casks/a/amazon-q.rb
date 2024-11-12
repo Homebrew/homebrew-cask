@@ -11,7 +11,7 @@ cask "amazon-q" do
   livecheck do
     url "https://desktop-release.codewhisperer.us-east-1.amazonaws.com/index.json"
     strategy :json do |json|
-      json["versions"].map { |item| item["version"] }
+      json["versions"]&.map { |item| item["version"] }
     end
   end
 

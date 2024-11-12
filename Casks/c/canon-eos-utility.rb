@@ -21,7 +21,7 @@ cask "canon-eos-utility" do
       headers = Homebrew::Livecheck::Strategy.page_headers(url)
       next if headers.blank?
 
-      match = headers[0]["location"].match(regex)
+      match = headers[0]["location"]&.match(regex)
       next if match.blank?
 
       "#{match[3]},#{match[2]},#{match[1]}"

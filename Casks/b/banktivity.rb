@@ -11,7 +11,7 @@ cask "banktivity" do
   livecheck do
     url "https://www.iggsoft.com/banktivity/banktivity#{version.major}-versions-feed.json"
     strategy :json do |json|
-      json["Banktivity"].map do |release|
+      json["Banktivity"]&.map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

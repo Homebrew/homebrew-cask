@@ -13,7 +13,7 @@ cask "aliworkbench" do
   livecheck do
     url "https://pc.work.taobao.com/version/getOfficialVersion"
     strategy :json do |json|
-      json["model"].map do |item|
+      json["model"]&.map do |item|
         next if item["platform"] != "mac"
 
         item["version"]

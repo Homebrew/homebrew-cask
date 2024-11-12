@@ -11,8 +11,10 @@ cask "write" do
     url "http://www.styluslabs.com/download/write-dmg"
     regex(/write[._-]?v?(\d+)\.dmg/i)
     strategy :header_match do |header, regex|
-      version = header["location"].match(regex)[1]
-      version.include?(".") ? version : version.sub(/(\d)(\d)(\d)/, '\1.\2.\3')
+      match = header["location"]&.match(regex)
+      next if match.blank?
+
+      match[1].include?(".") ? match[1] : match[1].sub(/(\d)(\d)(\d)/, '\1.\2.\3')
     end
   end
 

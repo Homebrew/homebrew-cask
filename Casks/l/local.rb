@@ -14,7 +14,7 @@ cask "local" do
     url "https://cdn.localwp.com/stable/latest/mac#{arch}"
     regex(%r{/(\d+(?:\.\d+)+)\+(\d+)/}i)
     strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"

@@ -20,8 +20,11 @@ cask "multiviewer-for-f1" do
     url "https://api.multiviewer.dev/api/v1/releases/latest"
     regex(%r{/([^/]+?)/MultiViewer[._-]for[._-]F1[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
     strategy :json do |json, regex|
-      json["downloads"].flat_map do |item|
-        item["url"].scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+      json["downloads"]&.flat_map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[2]},#{match[1]}"
       end
     end
   end

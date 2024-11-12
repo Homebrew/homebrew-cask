@@ -11,7 +11,7 @@ cask "virtualdj" do
     url "https://virtualdj.com/download/mac"
     regex(%r{/([^/]+)/install[._-]virtualdj[._-]v?(\d+(?:\.\d+)*)[._-]b(\d+)[._-]mac\.pkg}i)
     strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[2]},#{match[3]},#{match[1]}"

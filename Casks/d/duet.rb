@@ -21,9 +21,10 @@ cask "duet" do
       url "https://updates.duetdisplay.com/AppleSilicon"
       regex(/duet[._-]dd[._-]v?(\d+(?:-\d+)+)\.dmg/i)
       strategy :header_match do |headers, regex|
-        headers["location"].scan(regex).map do |match|
-          match[0].tr("-", ".")
-        end
+        match = headers["location"]&.match(regex)
+        next if match.blank?
+
+        match[1].tr("-", ".")
       end
     end
   end
