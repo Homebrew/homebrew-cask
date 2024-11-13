@@ -1,6 +1,6 @@
 cask "snes9x" do
-  version "1.62.3"
-  sha256 "d2e71fad2c2ebdcf6b31a91d0a7f60e9df1799a1454a6b29bc2a089b9022cec7"
+  version "1.63"
+  sha256 "dce88223b0b373357249bfb604415a379dcba6a996ca254bdeca5b16a8564c69"
 
   url "https://github.com/snes9xgit/snes9x/releases/download/#{version}/snes9x-#{version}-Mac.zip",
       verified: "github.com/snes9xgit/snes9x/"
