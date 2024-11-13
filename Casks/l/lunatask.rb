@@ -1,6 +1,6 @@
 cask "lunatask" do
-  version "2.0.12"
-  sha256 "9516f96a77b2213b2e43cb801a31ebf609f8a5887ff3a81d8dc735516c01052a"
+  version "2.0.13"
+  sha256 "1b4038cb59b0f33ebdb9e1a08d20f4321d6c8542b5536270229be0249f0e734f"
 
   url "https://lunatask.app/download/Lunatask-#{version}-universal.dmg"
   name "Lunatask"
