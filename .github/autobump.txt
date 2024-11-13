@@ -1064,6 +1064,7 @@ texturepacker
 thangs-sync
 the-battle-for-wesnoth
 the-clock
+thebrain
 theiaide
 threema
 threema-work
