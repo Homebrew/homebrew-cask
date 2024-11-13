@@ -79,6 +79,7 @@ archy
 arctic
 ares
 arq
+arturia-software-center
 asana
 astah-professional
 atlauncher
