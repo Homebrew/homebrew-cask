@@ -211,6 +211,7 @@ coscreen
 coteditor
 couchbase-server-community
 couchbase-server-enterprise
+cozy-drive
 craft
 crashplan
 creality-print
