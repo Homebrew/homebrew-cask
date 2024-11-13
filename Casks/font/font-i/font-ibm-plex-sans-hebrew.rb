@@ -1,6 +1,6 @@
 cask "font-ibm-plex-sans-hebrew" do
-  version "1.0.0"
-  sha256 "06ad64c91a9e485a80b2c16f38e60659f0e75c0cfe3ceae23dd7830adde667c2"
+  version "1.1.0"
+  sha256 "d7d490b8a767b972a7f361055fdcf60ad7cb7c270b38ff1bf859562a021369fd"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans-hebrew%40#{version}/ibm-plex-sans-hebrew.zip"
   name "IBM Plex Sans Hebrew"
