@@ -1,5 +1,5 @@
 cask "moneymoney" do
-  version "2.4.42"
+  version "2.4.43"
   sha256 :no_check
 
   url "https://service.moneymoney-app.com/1/MoneyMoney.zip"
