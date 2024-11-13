@@ -1,6 +1,6 @@
 cask "nuclino" do
-  version "1.6.6"
-  sha256 "82eae43a646d976a548d9864b9f3cfb0260b7b49fe9755970cba0f5aebbdcb7c"
+  version "1.6.7"
+  sha256 "73052aafeadd2adb7b768351b5296681fc84946f28284a19e3ca6fb21e83584f"
 
   url "https://s3-eu-central-1.amazonaws.com/repository.nuclino.com/mac/Nuclino-#{version}-universal.dmg",
       verified: "s3-eu-central-1.amazonaws.com/repository.nuclino.com/"
