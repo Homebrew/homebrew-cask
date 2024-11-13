@@ -1,6 +1,6 @@
 cask "font-ibm-plex-sans-tc" do
-  version "1.0.0"
-  sha256 "38f4b86e52b5735eb926b6a0a41293ace6708632e41a0280618939d601dd5aaf"
+  version "1.1.0"
+  sha256 "b79600d3c9155fa05c9024eb81cfe2fbdd8cd068503dfafd79405ea577aa9fec"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans-tc%40#{version}/ibm-plex-sans-tc.zip"
   name "IBM Plex Sans TC"
