@@ -67,6 +67,7 @@ apidog
 apidog-europe
 apifox
 apipost
+app-cleaner
 apparency
 appcleaner
 appflowy
