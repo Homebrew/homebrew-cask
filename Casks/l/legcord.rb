@@ -9,11 +9,13 @@ cask "legcord" do
   homepage "https://legcord.app/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://legcord.app/latest.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "legcord.app"
 
