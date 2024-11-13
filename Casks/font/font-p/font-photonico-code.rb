@@ -1,6 +1,6 @@
 cask "font-photonico-code" do
-  version "1.4"
-  sha256 "a6919ca4e80089843027c0e17bee2ab1f7a8f022ad651425cabe8c07ef8e53a2"
+  version "1.5"
+  sha256 "7d553f8f28a8a35b5a1a820bdcd68b42a6f1b54c820a25c76ec9e41e2bc807c1"
 
   url "https://github.com/Photonico/Photonico_Code/releases/download/#{version}/Photonico.#{version}.Regular.ttf"
   name "Photonico Code"
