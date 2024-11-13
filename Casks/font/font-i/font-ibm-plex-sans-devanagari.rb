@@ -1,6 +1,6 @@
 cask "font-ibm-plex-sans-devanagari" do
-  version "1.0.0"
-  sha256 "33d7517d3a67968f4db557a369861680c8f93e68c925754a5d7893e371d4c6c8"
+  version "1.1.0"
+  sha256 "effc4a35b2908c80806c97a4d5033e63f437611d17a3e09b237edd5c33d8ac94"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans-devanagari%40#{version}/ibm-plex-sans-devanagari.zip"
   name "IBM Plex Sans Devanagari"
