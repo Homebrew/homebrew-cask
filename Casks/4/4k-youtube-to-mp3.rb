@@ -2,9 +2,9 @@ cask "4k-youtube-to-mp3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x64"
 
-  version "5.6.4"
-  sha256 arm:   "5e3cac22c7c0ba9e1440166570b5454b979f6a99cb1f645226956281dbfd276a",
-         intel: "1a2655adb58fcb66f974ea210767a7ee4ab845087bffed80c54674a9101204e1"
+  version "5.6.5"
+  sha256 arm:   "217cf7589a47e5a87976d2b0fa519835d95d6427b800021e4b737e744421220d",
+         intel: "a1936ae8ef4f6ed7820dbb488924df9804704975e6ebbae4abc569dc5ea5d80a"
 
   url "https://dl.4kdownload.com/app/4kyoutubetomp3_#{version}_#{arch}.dmg"
   name "4K YouTube to MP3"
