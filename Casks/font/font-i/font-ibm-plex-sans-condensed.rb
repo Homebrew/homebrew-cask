@@ -1,6 +1,6 @@
 cask "font-ibm-plex-sans-condensed" do
-  version "1.0.0"
-  sha256 "4c3298d50688e08ebbc9f238a1f1dfe907f9bcdabaf0c2c3aab0fbeaa3e1d38d"
+  version "1.1.0"
+  sha256 "c172bedb417831bc6ba35ccb727f33959b7f2f8382902386947660bcd66a8077"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans-condensed%40#{version}/ibm-plex-sans-condensed.zip"
   name "IBM Plex Sans Condensed"
