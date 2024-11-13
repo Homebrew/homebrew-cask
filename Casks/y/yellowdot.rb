@@ -11,8 +11,8 @@ cask "yellowdot" do
     end
   end
   on_ventura :or_newer do
-    version "2.5"
-    sha256 "ee5263c3858cb899484d0afc7bf502904015fff9ea7e8a6daa19116f4a308fba"
+    version "2.6"
+    sha256 "f94b255f1cc580ab250541581104d1b5ee65542fdd7694c7f9b20c30b86b4659"
 
     url "https://github.com/FuzzyIdeas/YellowDot/releases/download/v#{version}/YellowDot-#{version}.dmg",
         verified: "github.com/FuzzyIdeas/YellowDot/"
