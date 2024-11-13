@@ -1,6 +1,6 @@
 cask "font-ibm-plex-sans-jp" do
-  version "1.0.0"
-  sha256 "6946948f66b511560786fd0ec7d561de985a1f6d8692b0ed44fbf7d880a994fa"
+  version "1.1.0"
+  sha256 "96e7b8af07b5b38fad9c531c11854559c47332b45de7e65c45672b5415f3cd55"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-sans-jp%40#{version}/ibm-plex-sans-jp.zip"
   name "IBM Plex Sans JP"
