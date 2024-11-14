@@ -1009,6 +1009,7 @@ spark-ar-studio
 sparkle
 sparrow
 spike
+splashtop-streamer
 splice
 springtoolsuite
 spybuster
