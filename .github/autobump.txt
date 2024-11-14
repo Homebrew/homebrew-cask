@@ -99,6 +99,7 @@ balenaetcher
 banana-cake-pop
 banking-4
 banktivity
+batteries
 bazecor
 bbedit
 beekeeper-studio
