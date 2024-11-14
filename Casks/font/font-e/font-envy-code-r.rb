@@ -8,7 +8,7 @@ cask "font-envy-code-r" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?EnvyCodeR[._-](.*?)\.zip/i)
+    regex(%r{href=.*?original/EnvyCodeR[._-](.*)\.zip}i)
   end
 
   font "Envy Code R #{version}/Envy Code R Bold.ttf"
