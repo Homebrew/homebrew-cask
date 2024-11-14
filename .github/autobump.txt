@@ -697,6 +697,7 @@ multiviewer-for-f1
 mumuplayer
 murus
 mutedeck
+mutesync
 mweb-pro
 nagstamon
 native-access
