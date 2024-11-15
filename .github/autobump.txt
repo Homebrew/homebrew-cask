@@ -866,6 +866,7 @@ puzzles
 pycharm
 pycharm-ce
 pyfa
+pyzo
 qbittorrent
 qbittorrent@lt20
 qcad
