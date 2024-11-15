@@ -1196,6 +1196,7 @@ whatsapp
 whatsapp@beta
 whatsapp@legacy
 whisky
+widelands
 wifispoof
 windows-app
 windscribe
