@@ -6,10 +6,7 @@ cask "logitech-options-plus" do
   sha256 :no_check
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
-    verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
-
-  installer manual: "logioptionsplus_installer.app"
-
+      verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
   name "Logitech Options Plus"
   desc "Software for Logitech peripherals"
   homepage "https://www.logitech.com/en-ca/software/logi-options-plus.html?utm_campaign=CPX_OptionsPlus&utm_source=InAppMac&utm_medium=app"
@@ -21,8 +18,9 @@ cask "logitech-options-plus" do
     strategy :pagematch
   end
 
-
   depends_on macos: ">= :sierra"
+
+  installer manual: "logioptionsplus_installer.app"
 
   uninstall
 
