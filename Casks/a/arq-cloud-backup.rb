@@ -17,4 +17,8 @@ cask "arq-cloud-backup" do
   uninstall launchctl: "com.haystacksoftware.arqcloudagent",
             quit:      "com.haystacksoftware.ArqCloudBackup",
             pkgutil:   "com.haystacksoftware.ArqCloudBackup"
+
+  caveats do
+    requires_rosetta
+  end
 end
