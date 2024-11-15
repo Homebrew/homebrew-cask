@@ -21,4 +21,8 @@ cask "itunes-producer" do
   pkg "iTunesProducer.pkg"
 
   uninstall pkgutil: "com.apple.pkg.iTunesProducer"
+
+  caveats do
+    requires_rosetta
+  end
 end
