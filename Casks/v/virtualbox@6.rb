@@ -7,13 +7,7 @@ cask "virtualbox@6" do
   desc "Virtualizer for x86 hardware"
   homepage "https://www.virtualbox.org/"
 
-  livecheck do
-    url "https://www.virtualbox.org/wiki/Download_Old_Builds_6_1"
-    regex(/href=.*?VirtualBox-(\d+(?:\.\d+)+)-(\d+)-OSX.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
-  end
+  deprecate! date: "2024-11-15", because: :discontinued
 
   conflicts_with cask: [
     "virtualbox",
