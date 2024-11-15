@@ -1,16 +1,27 @@
 cask "gplates" do
-  version "2.2"
-  sha256 "a4658d7dd7e123c53d847c7b98e91d3f9cf222beb0dadaea6a4868eddcf5d85a"
+  arch arm: "arm64", intel: "x86_64"
+  livecheck_id = on_arch_conditional arm: "10116", intel: "10118"
 
-  url "https://downloads.sourceforge.net/gplates/#{version}/GPlates-#{version}.0-Darwin-x86_64.dmg",
-      verified: "downloads.sourceforge.net/gplates/"
+  version "2.5.0"
+  sha256 :no_check
+
+  url "https://www.earthbyte.org/download/#{livecheck_id}/",
+      verified: "earthbyte.org/"
   name "GPlates"
   desc "Plate tectonics program"
   homepage "https://www.gplates.org/"
 
-  app "GPlates-#{version}.0/GPlates.app"
-
-  caveats do
-    requires_rosetta
+  livecheck do
+    url :url
+    regex(/gplates[._-]v?(\d+(?:\.\d+)+)[._-]Darwin[._-]#{arch}\.dmg/i)
+    strategy :header_match
   end
+
+  app "GPlates_#{version}/gplates.app"
+
+  zap trash: [
+    "~/Library/Application Support/GPlates",
+    "~/Library/Preferences/org.gplates.GPlates.plist",
+    "~/Library/Saved Application State/GPlates*.savedState",
+  ]
 end
