@@ -486,6 +486,7 @@ ibackup-viewer
 ibkr
 ibm-cloud-cli
 icollections
+ideamaker
 idrive
 igv
 iina+
