@@ -1,6 +1,6 @@
 cask "corelocationcli" do
-  version "4.0.2"
-  sha256 "ca70f0492d78c317182a095a25153dc1a5cd4d22fea1b71f6e9dd46c6e3dcab1"
+  version "4.0.3"
+  sha256 "39e6159b2c4ccb64e7aebb59bec8ef067fdcf57314eb2809fbddf80edf06df17"
 
   url "https://github.com/fulldecent/corelocationcli/releases/download/#{version}/CoreLocationCLI.zip"
   name "Core Location CLI"
