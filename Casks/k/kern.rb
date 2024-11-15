@@ -1,6 +1,6 @@
 cask "kern" do
   version "1.1.5"
-  sha256 "3b0420f5673227f20a16973208a434ab7c6faa7ec26161dc1c7d6f36dcc86ad7"
+  sha256 "f52a4ec22637a66044d6e88e525e36f2a06cbd4a232086ee5532f3fdd75c10da"
 
   url "https://www.fullbucket.de/music/dl/kern_#{version.dots_to_underscores}_mac.pkg"
   name "Kern"
@@ -21,5 +21,6 @@ cask "kern" do
 
   caveats do
     reboot
+    requires_rosetta
   end
 end
