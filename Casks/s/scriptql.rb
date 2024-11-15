@@ -7,10 +7,7 @@ cask "scriptql" do
   desc "AppleScript Quick Look plugin"
   homepage "https://kainjow.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-11-15", because: :unmaintained
 
   qlplugin "ScriptQL.qlgenerator"
 
