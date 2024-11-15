@@ -24,4 +24,9 @@ cask "bandage" do
       exec '#{appdir}/Bandage.app/Contents/MacOS/Bandage' "$@"
     EOS
   end
+
+  zap trash: [
+    "~/Library/Preferences/com.rrwick.Bandage.plist",
+    "~/Library/Saved Application State/com.rrwick.Bandage.savedState",
+  ]
 end
