@@ -18,6 +18,14 @@ cask "arq-cloud-backup" do
             quit:      "com.haystacksoftware.ArqCloudBackup",
             pkgutil:   "com.haystacksoftware.ArqCloudBackup"
 
+  zap trash: [
+    "~/Library/Application Support/ArqCloudBackup",
+    "~/Library/HTTPStorages/com.haystacksoftware.ArqCloudBackup",
+    "~/Library/Logs/Arq Cloud Backup",
+    "~/Library/Preferences/com.haystacksoftware.ArqCloudBackup.plist",
+    "~/Library/Saved Application State/com.haystacksoftware.ArqCloudBackup.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
