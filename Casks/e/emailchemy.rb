@@ -15,6 +15,8 @@ cask "emailchemy" do
 
   app "Emailchemy.app"
 
+  zap trash: "~/Library/Preferences/com.weirdkid.es.plist"
+
   caveats do
     requires_rosetta
   end
