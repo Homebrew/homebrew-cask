@@ -16,6 +16,12 @@ cask "contraste" do
 
   app "Contraste.app"
 
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.13bold.contraste.sfl*",
+    "~/Library/HTTPStorages/com.13bold.Contraste",
+    "~/Library/Preferences/com.13bold.contraste.plist",
+  ]
+
   caveats do
     requires_rosetta
   end
