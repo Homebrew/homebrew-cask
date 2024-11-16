@@ -14,6 +14,11 @@ cask "scidavis" do
 
   app "scidavis.app"
 
+  zap trash: [
+    "~/.config/SciDAVis",
+    "~/Library/Saved Application State/net.sourceforge.scidavis.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
