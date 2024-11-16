@@ -15,6 +15,12 @@ cask "qxmledit" do
 
   app "QXmlEdit.app"
 
+  zap trash: [
+    "~/Library/Application Support/QXmlEdit",
+    "~/Library/Preferences/org.qxmledit.QXmlEdit.plist",
+    "~/Library/Saved Application State/org.qxmledit.QXmlEdit.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
