@@ -15,6 +15,8 @@ cask "crushftp" do
 
   suite "CrushFTP#{version}"
 
+  # No zap stanza required
+
   caveats do
     depends_on_java
   end
