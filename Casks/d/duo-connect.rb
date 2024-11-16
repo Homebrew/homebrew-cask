@@ -23,6 +23,12 @@ cask "duo-connect" do
             ],
             pkgutil:   "com.duo.connect.bin"
 
+  zap trash: [
+        "~/.duoconnect",
+        "~/Liibrary/Logs/Duo/Duoconnect",
+      ],
+      rmdir: "~/Library/Logs/Duo"
+
   caveats do
     requires_rosetta
   end
