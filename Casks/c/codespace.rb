@@ -16,6 +16,14 @@ cask "codespace" do
 
   app "Codespace.app"
 
+  zap trash: [
+    "~/Library/Application Support/Codespace",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tristanedwards.codespace.sfl*",
+    "~/Library/Logs/CodeSpace",
+    "~/Library/Preferences/com.tristanedwards.codespace.plist",
+    "~/Library/Saved Application State/com.tristanedwards.codespace.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
