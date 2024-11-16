@@ -16,7 +16,12 @@ cask "electricbinary" do
 
   artifact "electricBinary-#{version}.jar", target: "#{appdir}/electricBinary-#{version}.jar"
 
+  zap trash: [
+    "~/electric.log",
+    "~/Library/Preferences/com.sun.electric.plist",
+  ]
+
   caveats do
-    depends_on_java
+    depends_on_java "8"
   end
 end
