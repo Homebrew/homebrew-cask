@@ -356,6 +356,7 @@ floorp
 flox
 flutter
 flutterflow
+flyenv
 fmail2
 focus
 focusrite-control
@@ -806,7 +807,6 @@ pgadmin4
 phoenix-code
 phoenix-slides
 phpstorm
-phpwebstudy
 piclist
 pieces
 pieces-cli
