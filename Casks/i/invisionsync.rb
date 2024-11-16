@@ -11,6 +11,8 @@ cask "invisionsync" do
     strategy :sparkle
   end
 
+  disable! date: "2024-12-31", because: :no_longer_available
+
   app "InVisionSync.app"
 
   caveats do
