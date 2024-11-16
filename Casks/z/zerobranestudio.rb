@@ -14,6 +14,8 @@ cask "zerobranestudio" do
 
   app "ZeroBraneStudio.app"
 
+  zap trash: "~/Library/Preferences/ZeroBraneStudio Preferences"
+
   caveats do
     requires_rosetta
   end
