@@ -908,6 +908,7 @@ rekordbox
 remote-desktop-manager
 remotehamradio
 removebg
+renpy
 replacicon
 replaywebpage
 replit
