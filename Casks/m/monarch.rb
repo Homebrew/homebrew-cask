@@ -1,11 +1,11 @@
 cask "monarch" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "e6c3af45451c0f88c312e24059d0ce0cb4c615b13dc2cecd8742a80f6232286e",
+  sha256 arm:   "a6044a0c8e41b42594317c60621a565e08cd5594e282a81473cf3b74a2f1d007",
          intel: "8af3bc79b1cc9769002cacbf18302daa7cb48a7796728aab49969ef550a464fc"
 
   on_arm do
-    version "0.7.11"
+    version "0.7.12"
   end
   on_intel do
     version "0.7.11"
