@@ -1,5 +1,5 @@
 cask "font-th-sarabun-new" do
-  version "1.0"
+  version "1.35"
   sha256 :no_check
 
   url "https://www.f0nt.com/?dl_name=sipafonts/THSarabunNew.zip"
