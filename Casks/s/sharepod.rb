@@ -5,6 +5,7 @@ cask "sharepod" do
   url "https://assets.macroplant.com/download/32/Sharepod-#{version}.dmg",
       verified: "assets.macroplant.com/"
   name "Sharepod"
+  desc "Transfer music from iOS to Macs or PC"
   homepage "https://www.getsharepod.com/"
 
   livecheck do
@@ -13,6 +14,14 @@ cask "sharepod" do
   end
 
   app "Sharepod.app"
+
+  zap trash: [
+        "~/Library/HTTPStorages/com.macroplant.Sharepod",
+        "~/Library/HTTPStorages/com.macroplant.Sharepod.binarycookies",
+        "~/Library/Preferences/com.macroplant.Sharepod.plist",
+        "~/Library/Saved Application State/com.macroplant.Sharepod.savedState",
+      ],
+      rmdir: "~/Music/Sharepod Import"
 
   caveats do
     requires_rosetta
