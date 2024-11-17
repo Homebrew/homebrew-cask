@@ -7,10 +7,16 @@ cask "denemo" do
   desc "Music notation program"
   homepage "https://denemo.org/"
 
-  livecheck do
-    url "https://denemo.org/downloads/"
-    regex(/href=.*?denemo[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]x64\.t/i)
-  end
+  deprecate! date: "2024-11-16", because: :discontinued
 
   app "Denemo.app"
+
+  zap trash: [
+    "~/Library/Fonts/truetype/denemo",
+    "~/Library/Preferences/denemo.plist",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
 end
