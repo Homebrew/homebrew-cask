@@ -14,6 +14,13 @@ cask "hedgewars" do
 
   app "Hedgewars.app"
 
+  zap trash: [
+    "~/Library/Application Support/Hedgewars",
+    "~/Library/HTTPStorages/org.hedgewars.desktop",
+    "~/Library/Preferences/org.hedgewars.desktop.plist",
+    "~/Library/Saved Application State/org.hedgewars.desktop.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
