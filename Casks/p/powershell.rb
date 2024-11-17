@@ -15,7 +15,6 @@ cask "powershell" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on formula: "openssl"
   depends_on macos: ">= :mojave"
 
   pkg "powershell-#{version}-osx-#{arch}.pkg"
