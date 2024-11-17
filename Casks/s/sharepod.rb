@@ -14,6 +14,14 @@ cask "sharepod" do
 
   app "Sharepod.app"
 
+  zap trash: [
+        "~/Library/HTTPStorages/com.macroplant.Sharepod",
+        "~/Library/HTTPStorages/com.macroplant.Sharepod.binarycookies",
+        "~/Library/Preferences/com.macroplant.Sharepod.plist",
+        "~/Library/Saved Application State/com.macroplant.Sharepod.savedState",
+      ],
+      rmdir: "~/Music/Sharepod Import"
+
   caveats do
     requires_rosetta
   end
