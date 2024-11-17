@@ -12,6 +12,8 @@ cask "deepstream" do
 
   uninstall pkgutil: "deepstream.io"
 
+  # No zap stanza required
+
   caveats do
     files_in_usr_local
   end
