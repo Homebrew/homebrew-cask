@@ -9,11 +9,12 @@ cask "beyond-compare" do
 
   livecheck do
     url "https://www.scootersoftware.com/download"
-    regex(/BCompareOSX[_.-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/BCompareOSX[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   auto_updates true
   conflicts_with cask: "beyond-compare@beta"
+  depends_on macos: ">= :monterey"
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
