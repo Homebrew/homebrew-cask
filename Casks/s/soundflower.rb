@@ -6,6 +6,10 @@ cask "soundflower" do
   name "Soundflower"
   homepage "https://github.com/mattingalls/Soundflower"
 
+  deprecate! date: "2024-11-16", because: :unmaintained
+
+  depends_on arch: :x86_64
+
   pkg "Soundflower.pkg"
 
   postflight do
