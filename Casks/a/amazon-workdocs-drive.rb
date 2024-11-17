@@ -16,7 +16,7 @@ cask "amazon-workdocs-drive" do
   desc "Fully managed, secure enterprise storage and sharing service"
   homepage "https://aws.amazon.com/workdocs/"
 
-  deprecate! date: "2024-07-24", because: :discontinued
+  disable! date: "2025-04-25", because: :discontinued
 
   depends_on macos: ">= :el_capitan"
 
