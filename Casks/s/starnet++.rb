@@ -42,6 +42,8 @@ cask "starnet++" do
     set_permissions "#{bin_path}/starnet++", "0755"
   end
 
+  # No zap stanza required
+
   caveats do
     requires_rosetta
   end
