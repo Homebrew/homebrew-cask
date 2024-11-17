@@ -15,6 +15,11 @@ cask "dremel-slicer" do
 
   app "Dremel3DSlicer-#{version}-mac/Dremel DigiLab 3D Slicer.app"
 
+  zap trash: [
+    "~/Library/Application Support/cura",
+    "~/Library/Preferences/com.eht3.slicer.Dremel DigiLab 3D Slicer.plist",
+  ]
+
   caveats do
     requires_rosetta
   end
