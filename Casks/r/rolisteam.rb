@@ -10,6 +10,11 @@ cask "rolisteam" do
 
   app "rolisteam.app"
 
+  zap trash: [
+    "~/Library/Preferences/com.rolisteam.rolisteam*",
+    "~/Library/Saved Application State/com.yourcompany.rolisteam.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
