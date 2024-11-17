@@ -30,7 +30,7 @@ cask "apparency" do
     end
   end
   on_monterey :or_newer do
-    version "2.1,441"
+    version "2.2,483"
     sha256 :no_check
 
     url "https://mothersruin.com/software/downloads/Apparency.dmg"
