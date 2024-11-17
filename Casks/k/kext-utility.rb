@@ -7,10 +7,7 @@ cask "kext-utility" do
   desc "Kext repair tool"
   homepage "https://cvad-mac.narod.ru/index/0-4"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/Kext[._-]Utility\.app\.v?(\d+(?:\.\d+)+)\.zip}i)
-  end
+  disable! date: "2024-11-16", because: :unmaintained
 
   app "Kext Utility.app"
 
