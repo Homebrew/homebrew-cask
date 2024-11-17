@@ -11,6 +11,14 @@ cask "knuff" do
 
   app "Knuff.app"
 
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.madebybowtie.knuff-osx.sfl*",
+    "~/Library/Application Support/com.makebybowtie.Knuff-OSX",
+    "~/Library/Caches/com.crashlytics.data/com.madebybowtie.Knuff-OSX",
+    "~/Library/HTTPStorages/com.madebybowtie.Knuff-OSX",
+    "~/Library/Preferences/com.madebybowtie.Knuff-OSX.plist",
+  ]
+
   caveats do
     requires_rosetta
   end
