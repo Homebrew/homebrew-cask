@@ -26,6 +26,8 @@ cask "retroshare" do
 
   app "retroshare.app"
 
+  zap trash: "~/.retroshare"
+
   caveats do
     requires_rosetta
   end
