@@ -17,6 +17,17 @@ cask "syncmate" do
 
   app "SyncMate.app"
 
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eltima.syncmate.com.eltima.syncmateservice.sfl*",
+    "~/Library/Application Support/SyncMate*",
+    "~/Library/Caches/com.eltima.SyncMate",
+    "~/Library/HTTPStorages/com.eltima.SyncMate",
+    "~/Library/Logs/SyncMate.log",
+    "~/Library/Preferences/com.eltima.SyncMate.com.eltima.SyncMateService.plist",
+    "~/Library/Preferences/com.eltima.SyncMate.plist",
+    "~/Library/Saved Application State/com.eltima.SyncMate.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
