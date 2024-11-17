@@ -34,6 +34,12 @@ cask "isyncr" do
   uninstall quit:    "com.JRTStudio.iSyncrWiFi",
             pkgutil: "com.jrtstudio.iSyncrDesktop"
 
+  zap trash: [
+    "~/Library/Caches/com.JRTStudio.iSyncrWiFi",
+    "~/Library/HTTPStorages/com.JRTStudio.iSyncrWiFi",
+    "~/Library/Preferences/com.JRTStudio.iSyncrWiFi.plist",
+  ]
+
   caveats do
     requires_rosetta
   end
