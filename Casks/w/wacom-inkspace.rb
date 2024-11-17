@@ -13,6 +13,16 @@ cask "wacom-inkspace" do
 
   app "Wacom Inkspace App.app"
 
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.wacom-inkspace-app.sfl*",
+    "~/Library/Application Support/Wacom InkSpace App",
+    "~/Library/Caches/com.electron.wacom-inkspace-app",
+    "~/Library/Caches/com.electron.wacom-inkspace-app.ShipIt",
+    "~/Library/HTTPStorages/com.electron.wacom-inkspace-app",
+    "~/Library/Preferences/com.electron.wacom-inkspace-app.plist",
+    "~/Library/Saved Application State/com.electron.wacom-inkspace-app.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
