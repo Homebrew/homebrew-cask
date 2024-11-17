@@ -17,6 +17,11 @@ cask "honto" do
 
   app "honto.app"
 
+  zap trash: [
+    "~/Library/Application Scripts/jp.co.dnp.hontoformac",
+    "~/Library/Containers/jp.co.dnp.hontoformac",
+  ]
+
   caveats do
     requires_rosetta
   end
