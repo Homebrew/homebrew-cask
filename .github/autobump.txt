@@ -1120,7 +1120,6 @@ trilium-notes
 truhu
 trunk-io
 tsh
-tsh@13
 tuist
 tunnelbear
 tunnelblick@beta
