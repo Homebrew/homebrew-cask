@@ -39,7 +39,7 @@ cask "gimp" do
 
   zap trash: [
     "~/Library/Application Support/Gimp",
-    "~/Library/Preferences/org.gimp.gimp-#{version.major_minor}:.plist",
-    "~/Library/Saved Application State/org.gimp.gimp-#{version.major_minor}:.savedState",
+    "~/Library/Preferences/org.gimp.gimp-#{version.major_minor}.plist",
+    "~/Library/Saved Application State/org.gimp.gimp-#{version.major_minor}.savedState",
   ]
 end
