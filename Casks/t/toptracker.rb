@@ -17,6 +17,13 @@ cask "toptracker" do
 
   app "TopTracker.app"
 
+  zap trash: [
+    "~/Library/Application Support/TopTracker",
+    "~/Library/HTTPStorages/com.toptracker",
+    "~/Library/Preferences/com.toptracker.plist",
+    "~/Library/Saved Application State/com.toptracker.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
