@@ -8,4 +8,6 @@ cask "emojipedia" do
   homepage "https://github.com/gingerbeardman/Emojipedia"
 
   dictionary "Emojipedia.dictionary"
+
+  # No zap stanza required
 end
