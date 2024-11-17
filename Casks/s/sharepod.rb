@@ -5,6 +5,7 @@ cask "sharepod" do
   url "https://assets.macroplant.com/download/32/Sharepod-#{version}.dmg",
       verified: "assets.macroplant.com/"
   name "Sharepod"
+  desc "Transfer music from iOS to Macs or PC"
   homepage "https://www.getsharepod.com/"
 
   livecheck do
