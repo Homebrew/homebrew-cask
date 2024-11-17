@@ -16,6 +16,14 @@ cask "ryver" do
 
   app "Ryver.app"
 
+  zap trash: [
+    "~/Library/Application Support/Ryver",
+    "~/Library/Logs/Ryver",
+    "~/Library/Preferences/Ryver.helper.plist",
+    "~/Library/Preferences/Ryver.plist",
+    "~/Library/Saved Application State/Ryver.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
