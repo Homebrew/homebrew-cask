@@ -15,6 +15,8 @@ cask "papyrus" do
     end
   end
 
+  conflicts_with cask: "morkro-papyrus"
+
   app "Papyrus.app"
 
   zap trash: [
