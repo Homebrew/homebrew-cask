@@ -21,6 +21,12 @@ cask "ibettercharge" do
 
   app "iBetterCharge.app"
 
+  zap trash: [
+    "~/Library/HTTPStorages/com.softorino.iBetterCharge",
+    "~/Library/HTTPStorages/com.softorino.iBetterCharge.binarycookies",
+    "~/Library/Preferences/com.softorino.iBetterCharge.plist",
+  ]
+
   caveats do
     requires_rosetta
   end
