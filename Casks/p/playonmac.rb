@@ -28,5 +28,6 @@ cask "playonmac" do
     "~/Library/PlayOnMac",
     "~/Library/Preferences/org.playonmac.playonmac.plist",
     "~/Library/Saved Application State/org.playonmac.playonmac.savedState",
+    "~/PlayOnMac's virtual drives",
   ]
 end
