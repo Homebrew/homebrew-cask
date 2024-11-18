@@ -321,6 +321,7 @@ eset-cyber-security
 evernote
 expressvpn
 fantastical
+far2l
 fastrawviewer
 fbreader
 fedistar
