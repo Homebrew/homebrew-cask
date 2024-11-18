@@ -865,7 +865,6 @@ psychopy
 publii
 publish-or-perish
 purei-play
-puzzles
 pycharm
 pycharm-ce
 pyfa
