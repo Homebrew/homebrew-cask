@@ -1,5 +1,5 @@
 cask "djstudio" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   on_mojave :or_older do
     version "2.6.28"
@@ -16,7 +16,7 @@ cask "djstudio" do
   end
 
   name "DJ.Studio"
-  desc "Ultimate DAW for DJs"
+  desc "DAW for DJs"
   homepage "https://dj.studio/"
 
   livecheck do
