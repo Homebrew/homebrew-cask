@@ -1119,7 +1119,6 @@ trezor-suite
 trilium-notes
 truhu
 trunk-io
-tsh
 tuist
 tunnelbear
 tunnelblick@beta
