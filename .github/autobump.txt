@@ -1023,6 +1023,7 @@ springtoolsuite
 spybuster
 spyder
 sqlcl
+squash
 standard-notes
 staruml
 stash
