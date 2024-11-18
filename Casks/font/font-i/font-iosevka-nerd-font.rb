@@ -1,6 +1,6 @@
 cask "font-iosevka-nerd-font" do
-  version "3.2.1"
-  sha256 "40e4256822d648bcd147be0f9afbe89e9eb611b59edf3d757768d51ad593963d"
+  version "3.3.0"
+  sha256 "a55e4e6d1ef065d0d09d5d6c6c6f3b9dd547d734db5850e107993a92e3258283"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Iosevka.zip"
   name "Iosevka Nerd Font (Iosevka)"

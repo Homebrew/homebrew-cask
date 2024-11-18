@@ -1,6 +1,6 @@
 cask "font-terminess-ttf-nerd-font" do
-  version "3.2.1"
-  sha256 "b850527aa4699ace0efef45012a12f128a26a7a74e1b55d69ccbb5ff4877ced3"
+  version "3.3.0"
+  sha256 "d40b0b46b64718b462341500255dbd6a7c0cc9285d0bed2aaf3f176673aa5857"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Terminus.zip"
   name "Terminess Nerd Font (Terminus)"
