@@ -8,8 +8,8 @@ cask "pixpin" do
   homepage "https://pixpinapp.com/"
 
   livecheck do
-    url "https://pixpinapp.com/"
-    regex(/href=.*PixPin[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url :homepage
+    regex(/href=.*?PixPin[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
