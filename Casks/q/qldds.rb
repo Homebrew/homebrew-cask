@@ -7,11 +7,7 @@ cask "qldds" do
   desc "Quick Look plugin for DirectDraw Surface (DDS) texture files"
   homepage "https://github.com/Marginal/QLdds"
 
-  livecheck do
-    url :url
-    regex(/Release\s+(\d+(?:\.\d+)*)/i)
-    strategy :github_latest
-  end
+  deprecate! date: "2024-11-17", because: :unmaintained
 
   pkg "QLdds_#{version.no_dots}.pkg"
 
