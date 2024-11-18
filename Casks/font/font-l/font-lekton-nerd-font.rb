@@ -1,6 +1,6 @@
 cask "font-lekton-nerd-font" do
-  version "3.2.1"
-  sha256 "76685975a18c6047e391141ca4a49d8e0ff549b02f69aa77dd3afc1e1e98cc4e"
+  version "3.3.0"
+  sha256 "f06a33458f12bb64996a8be7026f8de6434fb7b52c923cbbf0a9b3ebfa76f2ca"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Lekton.zip"
   name "Lekton Nerd Font (Lekton)"
