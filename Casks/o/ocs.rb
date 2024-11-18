@@ -1,4 +1,4 @@
-cask "ocs-desktop" do
+cask "ocs" do
   arch arm: "arm64", intel: "x64"
 
   version "2.6.10"
@@ -6,10 +6,14 @@ cask "ocs-desktop" do
          intel: "97e75a71c86f2ff511ed9039a5b36aa736b820301eaed7ebce01263fe6ca3922"
 
   url "https://github.com/ocsjs/ocs-desktop/releases/download/#{version}/ocs-#{version}-setup-mac-#{arch}.dmg"
+
   name "OCS Desktop"
   desc "OCS网课助手"
+
   homepage "https://github.com/ocsjs/ocs-desktop"
 
+  auto_updates true
+  
   livecheck do
     url :url
     strategy :github_latest
