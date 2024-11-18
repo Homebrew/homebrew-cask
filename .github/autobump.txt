@@ -1059,6 +1059,7 @@ telegram
 telegram-a
 telegram-desktop
 telegram-desktop@beta
+teleport
 teleport-connect
 tella
 temurin
