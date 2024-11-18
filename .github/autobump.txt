@@ -879,6 +879,7 @@ qownnotes
 qq
 qqlive
 qqmusic
+qspace-pro
 qt-creator
 qt-creator@dev
 quarto
