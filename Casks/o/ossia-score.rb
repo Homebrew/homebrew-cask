@@ -1,9 +1,14 @@
 cask "ossia-score" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  version "3.3.0"
-  sha256 arm:   "e454890582201ca76b9da82ed4fbf15b7320adb7e83063ed556bab3ea4f3f0e9",
-         intel: "ae331792a64722a4d7276ccc4ed3059c525a25bcef24d8cefc69a35491056b96"
+  on_arm do
+    version "3.3.2"
+    sha256 "8cb5b0038633fa43c1c160985802c6445e1a7a7fcbd0be47b126f7d9d74507cf"
+  end
+  on_intel do
+    version "3.3.0"
+    sha256 "ae331792a64722a4d7276ccc4ed3059c525a25bcef24d8cefc69a35491056b96"
+  end
 
   url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/ossia/score/"
@@ -13,8 +18,19 @@ cask "ossia-score" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:[.-]\d+)+)$/i)
-    strategy :github_latest
+    regex(/ossia[._-]score[._-]v?(\d+(?:[.-]\d+)+)[._-]macOS[._-]#{arch}\.dmg/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   depends_on macos: ">= :catalina"
