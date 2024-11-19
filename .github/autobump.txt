@@ -619,6 +619,7 @@ media-center
 mediahuman-youtube-downloader
 mediainfo
 mediamate
+megasync
 melodics
 memory-cleaner
 mendeley-reference-manager
