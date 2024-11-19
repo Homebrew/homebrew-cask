@@ -8,7 +8,7 @@ cask "algodoo" do
   homepage "https://www.algodoo.com/"
 
   livecheck do
-    url "http://www.algodoo.com/download/"
+    url "https://www.algodoo.com/download/"
     regex(%r{href=.*?/Algodoo_(\d+(?:_\d+)*)-MacOS\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex)&.map { |match| match[0].tr("_", ".") }
