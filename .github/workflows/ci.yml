@@ -65,7 +65,7 @@ jobs:
             brew generate-cask-ci-matrix ${{ github.event.inputs.skip_install && '--skip-install' }} ${{ github.event.inputs.new_cask && '--new' }} --casks $INPUT_CASKS
           elif [[ "${GITHUB_EVENT_NAME}" == "push" ]]
           then
-            brew generate-cask-ci-matrix --url --syntax-only "${{ github.event.pull_request.url }}"
+            brew generate-cask-ci-matrix --syntax-only
           else
             brew generate-cask-ci-matrix --url "${{ github.event.pull_request.url }}"
           fi
