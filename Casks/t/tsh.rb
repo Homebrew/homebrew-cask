@@ -8,12 +8,12 @@ cask "tsh" do
   desc "SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
 
-  livecheck do
-    url "https://goteleport.com/download/"
-    regex(/tsh[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
-  end
+  deprecate! date: "2024-11-18", because: :unmaintained, replacement: "teleport"
 
-  conflicts_with cask:    "tsh@13",
+  conflicts_with cask:    [
+                   "teleport",
+                   "tsh@13",
+                 ],
                  formula: "teleport"
 
   pkg "tsh-#{version}.pkg"
