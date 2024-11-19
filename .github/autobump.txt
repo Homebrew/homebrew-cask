@@ -1139,6 +1139,7 @@ typora@dev
 ubiquiti-unifi-controller
 ueli
 uhk-agent
+ui
 ultimate
 understand
 uninstallpkg
