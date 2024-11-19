@@ -1,4 +1,4 @@
-cask "font-maple" do
+cask "font-maple-mono" do
   # Check on next version bump if the `container` stanza can be removed
   version "6.4"
   sha256 "7f07c594d6da5971428dc9e8ecd2b7759a80cec1cb87dadd1a44aadbac5cf6ac"
