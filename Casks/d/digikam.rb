@@ -34,8 +34,4 @@ cask "digikam" do
     "~/Library/Preferences/digikamrc",
     "~/Library/Saved Application State/digikam.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
