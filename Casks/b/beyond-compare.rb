@@ -13,7 +13,10 @@ cask "beyond-compare" do
   end
 
   auto_updates true
-  conflicts_with cask: "beyond-compare@beta"
+  conflicts_with cask: [
+    "beyond-compare@4",
+    "beyond-compare@beta",
+  ]
   depends_on macos: ">= :monterey"
 
   app "Beyond Compare.app"
