@@ -10,11 +10,24 @@ cask "iexplorer" do
   livecheck do
     url "https://macroplant.com/iexplorer/mac/v#{version.major}/appcast"
     strategy :sparkle do |item|
-      "#{item.version},#{item.url[%r{/(\d+)/iExplorer-(?:\d+(?:\.\d+)*)\.dmg}, 1]}"
+      build = item.url[%r{/(\d+)/iExplorer[._-](?:\d+(?:\.\d+)*)\.dmg}i, 1]
+      next if build.blank?
+
+      "#{item.version},#{build}"
     end
   end
 
   app "iExplorer.app"
+
+  zap trash: [
+        "~/Library/Caches/com.macroplant.iExplorer",
+        "~/Library/Caches/KSCrash/iExplorer",
+        "~/Library/HTTPStorages/com.macroplant.iExplorer",
+        "~/Library/HTTPStorages/com.macroplant.iExplorer.binarycookies",
+        "~/Library/Preferences/com.macroplant.iExplorer.plist",
+        "~/Library/Saved Application State/com.macroplant.iExplorer.savedState",
+      ],
+      rmdir: "~/Music/iExplorer Import"
 
   caveats do
     requires_rosetta
