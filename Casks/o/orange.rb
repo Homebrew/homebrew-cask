@@ -1,9 +1,9 @@
 cask "orange" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.37.0"
-  sha256 arm:   "df30efed58362e5c4b7a6e49fb03ee4527188ac4b6644aa6fe46484880bf9b13",
-         intel: "0b6197229b884ca4ed3ec19f9aecca35acd204ef96183d020e18bc1c27ed0027"
+  version "3.38.0"
+  sha256 arm:   "69a5e1875699999beb1cd3481c6b113ec4f52dfe30f64794c10307d7a6596c9f",
+         intel: "b3f789745267040badf53459a96527abed526803655795d5f4d1af3350af10be"
 
   on_arm do
     url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.11.8-#{arch}.dmg",
