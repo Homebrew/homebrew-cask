@@ -3,7 +3,7 @@ cask "freeplane" do
 
   version "1.12.6"
   sha256 arm:   "03cce45be596dd314e45d6c7cf31293f848d08281e4e7a9ed9245c156017149b",
-         intel: "cbbf02b77cba0b40300b7b66b8b41955dd6e98c8568b1cd0a4b706eaec83070a"
+         intel: "c41d08ac0937dfd20851a1ad8c39dd38ca025f4bfe1fd6b6ddc894cffd01d8d8"
 
   url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg",
       verified: "downloads.sourceforge.net/freeplane/"
