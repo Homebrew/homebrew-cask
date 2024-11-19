@@ -4,7 +4,7 @@ cask "testfully" do
 
   url "https://releases.testfully.io/desktop/build-#{version.csv.second}/Testfully.app.zip"
   name "Testfully"
-  desc "Simple & elegant platform for API testing and monitoring"
+  desc "Platform for API testing and monitoring"
   homepage "https://docs.testfully.io/"
 
   livecheck do
