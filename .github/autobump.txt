@@ -584,6 +584,7 @@ little-snitch
 live-home-3d
 livebook
 lm-studio
+localcan
 localsend
 logi-options+
 loginputmac
