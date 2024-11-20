@@ -1,5 +1,5 @@
 cask "binary-ninja" do
-  version "4.1.5902"
+  version "4.2.6455"
   sha256 :no_check
 
   url "https://cdn.binary.ninja/installers/binaryninja_free_macosx.dmg"
