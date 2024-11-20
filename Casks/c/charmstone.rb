@@ -1,6 +1,6 @@
 cask "charmstone" do
-  version "1.32"
-  sha256 "ec9b6f4771e305aa705d1aabf262bd0afa684ed6006fd6078123c8a70399ae92"
+  version "1.33"
+  sha256 "93935d34b5abf1276c6a3c13f0b12e46f4f341ddada0c71d4edad2ff92b656f6"
 
   url "https://charmstone.app/downloads/Charmstone#{version}.dmg"
   name "Charmstone"
