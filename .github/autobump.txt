@@ -500,6 +500,7 @@ inso
 inso@beta
 insomnia
 insomnia@alpha
+integrity
 intellij-idea
 intellij-idea-ce
 intellij-idea@eap
