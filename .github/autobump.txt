@@ -1017,6 +1017,7 @@ sourcetree
 sourcetree@beta
 space-capsule
 spacedrive
+spamsieve
 spark-ar-studio
 sparkle
 sparrow
