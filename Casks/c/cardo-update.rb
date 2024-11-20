@@ -1,6 +1,6 @@
 cask "cardo-update" do
-  version "4.2.0"
-  sha256 "4e8698968179412beae7caeb08b5c70190ba912e994d3ce42b5e1c18d67cbca3"
+  version "4.5.0"
+  sha256 "196251e40a151f0cfece2032731bf42d12ee9200d7b69f001f0a078e43f94156"
 
   url "https://update.cardosystems.com/cardo-app/Cardo%20Update-#{version}-mac.zip"
   name "Cardo Update"
