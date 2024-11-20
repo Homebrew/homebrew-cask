@@ -1,5 +1,5 @@
 cask "integrity" do
-  version "12.9.2"
+  version "12.10.0"
   sha256 :no_check
 
   url "https://peacockmedia.software/mac/integrity/integrity.dmg"
