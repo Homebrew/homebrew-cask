@@ -611,6 +611,7 @@ macupdater
 macwhisper
 maestral
 mailbutler
+manictime
 marginnote
 marked
 markedit
