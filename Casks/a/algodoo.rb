@@ -1,15 +1,15 @@
 cask "algodoo" do
-  version "2.1.3"
-  sha256 "9f3419d0da9cca0f0f5abc0b8a228197221c92fcbc35138ed2bb0b9251820a66"
+  version "2.2.1"
+  sha256 "67bad62930161e38356ceeb1e4fa8dd0b28eb234fa0aaa14ca927766808330ce"
 
-  url "https://www.algodoo.com/download/Algodoo_#{version.dots_to_underscores}-MacOS.dmg"
+  url "https://www.algodoo.com/download/Algodoo_#{version.dots_to_underscores}-macOS.dmg"
   name "Algodoo"
   desc "Draw and interact with physical systems"
   homepage "https://www.algodoo.com/"
 
   livecheck do
     url "https://www.algodoo.com/download/"
-    regex(%r{href=.*?/Algodoo_(\d+(?:_\d+)*)-MacOS\.dmg}i)
+    regex(/href=.*?Algodoo[._-]v?(\d+(?:[._]\d+)+)[._-]macOS\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex)&.map { |match| match[0].tr("_", ".") }
     end
@@ -22,8 +22,4 @@ cask "algodoo" do
     "~/Library/Preferences/se.algoryx.Algodoo.plist",
     "~/Library/Saved Application State/se.algoryx.algodoo-regular.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
