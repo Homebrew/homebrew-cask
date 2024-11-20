@@ -1157,6 +1157,7 @@ vamiga
 vassal
 vbrokers
 vcam
+vcv-rack
 vellum
 videofusion
 vienna
