@@ -1,24 +1,26 @@
 cask "privileges" do
-  version "1.5.4"
-  sha256 "6f16af136a928a9e0c233ef7d36db4458588224e676b079ede1b626c8ddba346"
+  version "2.0.0"
+  sha256 "99cf00557e4965ed949a41665d22211d778ae0b8601e9647970c38e2c48b866f"
 
-  url "https://github.com/SAP/macOS-enterprise-privileges/releases/download/#{version}/Privileges.zip"
+  url "https://github.com/SAP/macOS-enterprise-privileges/releases/download/#{version}/Privileges_#{version}.pkg"
   name "Privileges"
   desc "Admin rights switcher"
   homepage "https://github.com/SAP/macOS-enterprise-privileges"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :big_sur"
 
-  app "Privileges.app"
-  binary "#{appdir}/Privileges.app/Contents/Resources/PrivilegesCLI", target: "privileges-cli"
+  pkg "Privileges_#{version}.pkg"
+  binary "#{appdir}/Privileges.app/Contents/MacOS/PrivilegesCLI"
 
-  uninstall delete: [
-    "/Library/LaunchDaemons/corp.sap.privileges.helper.plist",
-    "/Library/PrivilegedHelperTools/corp.sap.privileges.helper",
-  ]
+  uninstall launchctl: [
+              "corp.sap.privileges.agent",
+              "corp.sap.privileges.daemon",
+            ],
+            pkgutil:   "corp.sap.privileges.pkg"
 
   zap trash: [
     "~/Library/Application Scripts/corp.sap.privileges",
     "~/Library/Containers/corp.sap.privileges",
+    "~/Library/Group Containers/*.corp.sap.privileges",
   ]
 end
