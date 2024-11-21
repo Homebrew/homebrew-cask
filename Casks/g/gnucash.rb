@@ -1,9 +1,9 @@
 cask "gnucash" do
   arch arm: "Arm", intel: "Intel"
 
-  version "5.9-1"
-  sha256 arm:   "ab56dc3d9e7e07ad5b3abd97e181070780d62010a4184ff826bbe935a7d84a1d",
-         intel: "ebb05ce936059a1f6d5ceecd2de2de4aa7a5808210b35c8df318cdce9fc40475"
+  version "5.9-2"
+  sha256 arm:   "df9d99afee94039f377e2b4a5b385ba0065fc25d86f3314054fade661f057d61",
+         intel: "6adde04334cb7c55d7e80faa904be02f387e61ae91dda79ba643bcfdafec5ac4"
 
   url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-#{arch}-#{version}.dmg",
       verified: "github.com/Gnucash/gnucash/"
