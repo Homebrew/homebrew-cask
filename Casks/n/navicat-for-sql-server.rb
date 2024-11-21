@@ -1,5 +1,5 @@
 cask "navicat-for-sql-server" do
-  version "17.1.6"
+  version "17.1.7"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicat#{version.major}_sqlserver_en.dmg"
