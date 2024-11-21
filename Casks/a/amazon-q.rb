@@ -1,6 +1,6 @@
 cask "amazon-q" do
-  version "1.4.6"
-  sha256 "f6a8974e4c1574001e2ba20a09abff988ed1aaa0fe0c280901c7817e00a31dd7"
+  version "1.5.0"
+  sha256 "b8dc32846bddfb76d7abdf7be8f67b0f4a4def9d75be649667f3e4c87b736d1e"
 
   url "https://desktop-release.codewhisperer.us-east-1.amazonaws.com/#{version}/Amazon%20Q.dmg",
       verified: "desktop-release.codewhisperer.us-east-1.amazonaws.com/"
