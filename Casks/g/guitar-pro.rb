@@ -12,6 +12,8 @@ cask "guitar-pro" do
     regex(/Guitar\s+Pro\s+v?(\d+(?:\.\d+)*)/i)
   end
 
+  auto_updates true
+
   pkg "guitar-pro-#{version.major}-setup.pkg"
 
   uninstall pkgutil: [
