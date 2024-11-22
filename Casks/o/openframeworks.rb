@@ -8,9 +8,13 @@ cask "openframeworks" do
   desc "C++ toolkit for creative coding"
   homepage "https://openframeworks.cc/"
 
+  # Sometimes the "latest" release on GitHub is a `latest` tag that doesn't
+  # correspond to a version. This checks the first-party download page, which
+  # links to the newest versioned macOS file from GitHub, as this is lighter
+  # than using the `GithubReleases` strategy to check multiple recent releases.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://openframeworks.cc/download/"
+    regex(/href=.*?of[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]release\.zip/i)
   end
 
   suite "of_v#{version}_osx_release"
