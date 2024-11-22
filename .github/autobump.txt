@@ -1076,6 +1076,7 @@ tencent-lemon
 tencent-meeting
 termius
 termius@beta
+testfully
 texifier
 texshop
 texstudio
