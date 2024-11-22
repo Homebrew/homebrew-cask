@@ -80,6 +80,7 @@ archy
 arctic
 ares
 arq
+artisan
 arturia-software-center
 asana
 astah-professional
