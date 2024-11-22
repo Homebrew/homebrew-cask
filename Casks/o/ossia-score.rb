@@ -6,8 +6,8 @@ cask "ossia-score" do
     sha256 "8cb5b0038633fa43c1c160985802c6445e1a7a7fcbd0be47b126f7d9d74507cf"
   end
   on_intel do
-    version "3.3.0"
-    sha256 "ae331792a64722a4d7276ccc4ed3059c525a25bcef24d8cefc69a35491056b96"
+    version "3.3.2"
+    sha256 "c6ff72d1dbb78ed4f61fd6e7e31bb5271b988016d1bfc42d6a4f8051b21740f2"
   end
 
   url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg",
