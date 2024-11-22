@@ -1,6 +1,6 @@
 cask "adobe-connect" do
-  version "2024.9.127,11"
-  sha256 "06d0353c3750f6b624862703afc42cfa09850c06ef52537f023bc9050d3b4208"
+  version "2024.11.64,11"
+  sha256 "0b5481409f831934885ea5e51403aec89467829076257625cc86a28f9dd07cf7"
 
   url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.csv.second}/AdobeConnect_#{version.csv.first.dots_to_underscores}.dmg"
   name "Adobe Connect"
