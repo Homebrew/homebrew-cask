@@ -293,6 +293,7 @@ dropshare
 dropzone
 duckduckgo
 ea
+eaglefiler
 ecamm-live
 edrawmind
 egnyte
