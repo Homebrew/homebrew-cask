@@ -393,7 +393,6 @@ font-iosevka-ss15
 font-iosevka-ss16
 font-iosevka-ss17
 font-iosevka-ss18
-font-lxgw-fasmartgothic
 font-lxgw-heartserif
 font-lxgw-neoxihei
 font-lxgw-neozhisong
