@@ -250,6 +250,7 @@ dcp-o-matic-player
 dcp-o-matic-playlist-editor
 ddnet
 ddpm
+decentr
 deckset
 deeper
 deepl
