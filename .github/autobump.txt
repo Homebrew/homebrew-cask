@@ -868,6 +868,7 @@ proxyman
 psychopy
 publii
 publish-or-perish
+pulsar
 purei-play
 pycharm
 pycharm-ce
