@@ -33,9 +33,7 @@ cask "clion" do
     "~/Library/Application Support/JetBrains/CLion#{version.major_minor}",
     "~/Library/Caches/JetBrains/CLion#{version.major_minor}",
     "~/Library/Logs/JetBrains/CLion#{version.major_minor}",
-    "~/Library/Preferences/CLion#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.CLion.plist",
-    "~/Library/Preferences/jetbrains.clion.*.plist",
     "~/Library/Saved Application State/com.jetbrains.CLion.savedState",
   ]
 end
