@@ -1,5 +1,5 @@
 cask "mixed-in-key-live" do
-  version "9676-494"
+  version "11.0.1.550"
   sha256 :no_check
 
   url "https://builds.mixedinkey.com/download/55/release/latest?key=public"
