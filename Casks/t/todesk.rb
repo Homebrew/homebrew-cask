@@ -3,7 +3,7 @@ cask "todesk" do
   sha256 "3c04d90360b0d2ba36dcec38939bff9fe157d9423457da8d7046e975b48f0208"
 
   url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg",
-      user_agent: :fake,
+      user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
       referer:    "https://www.todesk.com/"
   name "ToDesk"
   desc "Remote control software"
