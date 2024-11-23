@@ -36,6 +36,7 @@ cask "istat-menus" do
               "/Library/Application Support/iStat Menus #{version.major}",
               "/Library/LaunchDaemons/com.bjango.istatmenus.fans.plist",
               "/Library/Logs/iStat Menus",
+              "/Library/PrivilegedHelperTools/com.bjango.istatmenus.installer",
               "/Library/PrivilegedHelperTools/com.bjango.istatmenus.installerhelper",
             ]
 
