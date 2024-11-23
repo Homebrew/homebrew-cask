@@ -21,5 +21,9 @@ cask "ontime" do
 
   app "ontime.app"
 
-  zap trash: ""
+  zap trash: [
+    "~/Library/Application Support/ontime",
+    "~/Library/Preferences/no.lightdev.ontime.plist",
+    "~/Library/Saved Application State/no.lightdev.ontime.savedState",
+  ]
 end
