@@ -9,7 +9,7 @@ cask "aqua-data-studio" do
 
   livecheck do
     url "https://www.aquafold.com/support-update/"
-    regex(/href=["'].*?["']>Version\s?(\d+(?:\.\d+)+)/i)
+    regex(/>\s*Version\s?v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Aqua Data Studio.app"
