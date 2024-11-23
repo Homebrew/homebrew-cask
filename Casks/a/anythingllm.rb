@@ -1,9 +1,9 @@
 cask "anythingllm" do
   arch arm: "-Silicon"
 
-  version "1.6.10"
-  sha256 arm:   "915ab07c2441ee68c28106286dfbe0670453916009fd36ce2affcf22f4e991a2",
-         intel: "a9a2023e35fcf0dbcc92497686d06f70514c7cb567ffc8380d142062f6829faa"
+  version "1.6.11"
+  sha256 arm:   "abde60086548918a8aaf1c84b7e0052167e09668eb7bac43c999fc21677653df",
+         intel: "11ebd573d9d24154d5d8365988914f9b1188b3ab1e3997537fae86fe53875e56"
 
   url "https://s3-us-west-1.amazonaws.com/public.useanything.com/latest/AnythingLLMDesktop#{arch}.dmg",
       verified: "s3-us-west-1.amazonaws.com/public.useanything.com/"
