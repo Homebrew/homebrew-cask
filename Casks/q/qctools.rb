@@ -16,6 +16,12 @@ cask "qctools" do
 
   app "QCTools.app"
 
+  zap trash: [
+    "~/Library/Preferences/net.mediaarea.qctools.mac.plist",
+    "~/Library/Preferences/net.mediaarea.QCTools.plist",
+    "~/Library/Saved Application State/net.mediaarea.qctools.mac.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

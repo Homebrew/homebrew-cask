@@ -14,6 +14,15 @@ cask "gyazmail" do
 
   app "GyazMail.app"
 
+  zap trash: [
+    "~/Library/Application Support/GyazMail",
+    "~/Library/Caches/com.apple.helpd/Generated/GyazMail Help*",
+    "~/Library/Caches/jp.gyazsquare.GyazMail",
+    "~/Library/HTTPStorages/jp.gyazsquare.GyazMail",
+    "~/Library/Preferences/jp.gyazsquare.GyazMail.plist",
+    "~/Library/Saved Application State/jp.gyazsquare.GyazMail.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

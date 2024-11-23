@@ -8,6 +8,11 @@ cask "langgraph-studio" do
   desc "Desktop app for prototyping and debugging LangGraph applications locally"
   homepage "https://studio.langchain.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   app "LangGraph Studio.app"

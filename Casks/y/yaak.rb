@@ -1,9 +1,9 @@
 cask "yaak" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2024.11.5"
-  sha256 arm:   "a64fe592cc2e4400eb365f150d07687e47600f73ed542673075f9e6cac545629",
-         intel: "ef1c8ca1a5abb20b45bac4fa68f872cc24fa0eeefa909b8a078abb11e0457e05"
+  version "2024.12.1"
+  sha256 arm:   "0a7c7ea0a55734096f597d925a4b44ab233fe5b748e86eb18f5e4781603b44a6",
+         intel: "428b800825ddb74cd9a6fdebf7dafcf155df168fddf6bbe6cf209230cc8fa2ef"
 
   url "https://github.com/yaakapp/app/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
       verified: "github.com/yaakapp/app/"

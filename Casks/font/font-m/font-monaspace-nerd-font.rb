@@ -1,6 +1,6 @@
 cask "font-monaspace-nerd-font" do
-  version "3.2.1"
-  sha256 "64ff3e00d928230576b7d0cfa443ed25438388bc5fc869c61aff267a59a18f7e"
+  version "3.3.0"
+  sha256 "91a13b333535805029b6da0c0e8b008c7ea1c1665f079b735791b4bb24ee9459"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Monaspace.zip"
   name "Monaspice Nerd Font families (Monaspace)"

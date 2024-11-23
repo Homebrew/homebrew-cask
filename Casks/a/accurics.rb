@@ -10,15 +10,7 @@ cask "accurics" do
   desc "Security and compliance for Infrastructure as Code"
   homepage "https://www.tenable.com/products/tenable-cs"
 
-  livecheck do
-    url "https://www.tenable.com/downloads/api/v2/pages/cloud-security"
-    regex(/Accurics\sv?(\d+(?:\.\d+)+)/i)
-    strategy :json do |json, regex|
-      json.dig("releases", "latest")&.keys&.map do |item|
-        item.match(regex) { |match| match[1] }
-      end
-    end
-  end
+  disable! date: "2024-11-19", because: :no_longer_available
 
   binary "accurics"
 

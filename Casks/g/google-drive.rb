@@ -1,5 +1,5 @@
 cask "google-drive" do
-  version "100.0"
+  version "100.0.2"
   sha256 :no_check
 
   # "5-percent" is included in the url to ensure that `brew upgrade` does not update to an older version as the
@@ -12,7 +12,7 @@ cask "google-drive" do
   livecheck do
     url :url
     strategy :extract_plist do |item|
-      item["com.google.drivefs"]&.short_version
+      item["com.google.drivefs"]&.version
     end
   end
 

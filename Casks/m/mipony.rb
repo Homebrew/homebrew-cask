@@ -26,4 +26,8 @@ cask "mipony" do
     "~/Library/Preferences/com.downloader.Mipony.plist",
     "~/Library/Saved Application State/com.downloader.Mipony.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

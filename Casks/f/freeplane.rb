@@ -2,8 +2,8 @@ cask "freeplane" do
   arch arm: "apple", intel: "intel"
 
   version "1.12.6"
-  sha256 arm:   "42e76134645f3279e7b55528b3b274a2f0938c85965ceca75248293cd81664d9",
-         intel: "cbbf02b77cba0b40300b7b66b8b41955dd6e98c8568b1cd0a4b706eaec83070a"
+  sha256 arm:   "03cce45be596dd314e45d6c7cf31293f848d08281e4e7a9ed9245c156017149b",
+         intel: "c41d08ac0937dfd20851a1ad8c39dd38ca025f4bfe1fd6b6ddc894cffd01d8d8"
 
   url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg",
       verified: "downloads.sourceforge.net/freeplane/"

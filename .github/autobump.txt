@@ -80,6 +80,7 @@ archy
 arctic
 ares
 arq
+artisan
 arturia-software-center
 asana
 astah-professional
@@ -99,6 +100,7 @@ balenaetcher
 banana-cake-pop
 banking-4
 banktivity
+batteries
 bazecor
 bbedit
 beekeeper-studio
@@ -249,6 +251,7 @@ dcp-o-matic-player
 dcp-o-matic-playlist-editor
 ddnet
 ddpm
+decentr
 deckset
 deeper
 deepl
@@ -292,6 +295,7 @@ dropshare
 dropzone
 duckduckgo
 ea
+eaglefiler
 ecamm-live
 edrawmind
 egnyte
@@ -320,6 +324,7 @@ eset-cyber-security
 evernote
 expressvpn
 fantastical
+far2l
 fastrawviewer
 fbreader
 fedistar
@@ -355,15 +360,18 @@ floorp
 flox
 flutter
 flutterflow
+flyenv
 fmail2
 focus
 focusrite-control
 focusrite-control-2
+folding-at-home@beta
 foldit
 follow
 follow@nightly
 font-chiron-hei-hk
 font-chiron-sung-hk
+font-inter
 font-iosevka
 font-iosevka-aile
 font-iosevka-curly
@@ -388,8 +396,6 @@ font-iosevka-ss15
 font-iosevka-ss16
 font-iosevka-ss17
 font-iosevka-ss18
-font-lxgw-fasmartgothic
-font-lxgw-heartserif
 font-lxgw-neoxihei
 font-lxgw-neozhisong
 font-lxgw-simxihei
@@ -485,6 +491,7 @@ ibackup-viewer
 ibkr
 ibm-cloud-cli
 icollections
+ideamaker
 idrive
 igv
 iina+
@@ -495,6 +502,7 @@ inso
 inso@beta
 insomnia
 insomnia@alpha
+integrity
 intellij-idea
 intellij-idea-ce
 intellij-idea@eap
@@ -547,6 +555,7 @@ kitty
 kiwi-for-gmail
 kkbox
 knime
+kopiaui
 krisp
 label-live
 lagrange
@@ -577,6 +586,7 @@ little-snitch
 live-home-3d
 livebook
 lm-studio
+localcan
 localsend
 logi-options+
 loginputmac
@@ -605,6 +615,7 @@ macupdater
 macwhisper
 maestral
 mailbutler
+manictime
 marginnote
 marked
 markedit
@@ -614,6 +625,7 @@ media-center
 mediahuman-youtube-downloader
 mediainfo
 mediamate
+megasync
 melodics
 memory-cleaner
 mendeley-reference-manager
@@ -749,6 +761,7 @@ omnifocus
 omnigraffle
 onedrive
 onekey
+onlyoffice
 opal-composer
 openaudible
 opencat
@@ -802,7 +815,6 @@ pgadmin4
 phoenix-code
 phoenix-slides
 phpstorm
-phpwebstudy
 piclist
 pieces
 pieces-cli
@@ -846,6 +858,7 @@ prepros
 prezi-video
 pritunl
 private-internet-access
+processspy
 propresenter
 propresenter@beta
 proton-drive
@@ -859,11 +872,12 @@ proxyman
 psychopy
 publii
 publish-or-perish
+pulsar
 purei-play
-puzzles
 pycharm
 pycharm-ce
 pyfa
+pyzo
 qbittorrent
 qbittorrent@lt20
 qcad
@@ -873,6 +887,7 @@ qownnotes
 qq
 qqlive
 qqmusic
+qspace-pro
 qt-creator
 qt-creator@dev
 quarto
@@ -903,6 +918,7 @@ rekordbox
 remote-desktop-manager
 remotehamradio
 removebg
+renpy
 replacicon
 replaywebpage
 replit
@@ -1006,6 +1022,7 @@ sourcetree
 sourcetree@beta
 space-capsule
 spacedrive
+spamsieve
 spark-ar-studio
 sparkle
 sparrow
@@ -1016,6 +1033,7 @@ springtoolsuite
 spybuster
 spyder
 sqlcl
+squash
 standard-notes
 staruml
 stash
@@ -1052,6 +1070,7 @@ telegram
 telegram-a
 telegram-desktop
 telegram-desktop@beta
+teleport
 teleport-connect
 tella
 temurin
@@ -1062,10 +1081,12 @@ tencent-lemon
 tencent-meeting
 termius
 termius@beta
+testfully
 texifier
 texshop
 texstudio
 texturepacker
+tg-pro
 thangs-sync
 the-battle-for-wesnoth
 the-clock
@@ -1086,6 +1107,7 @@ timeular
 timing
 tinkerwell
 tinymediamanager
+tmpdisk
 to-audio-converter
 todoist
 topaz-gigapixel-ai
@@ -1110,8 +1132,6 @@ trezor-suite
 trilium-notes
 truhu
 trunk-io
-tsh
-tsh@13
 tuist
 tunnelbear
 tunnelblick@beta
@@ -1128,6 +1148,7 @@ typora@dev
 ubiquiti-unifi-controller
 ueli
 uhk-agent
+ui
 ultimate
 understand
 uninstallpkg
@@ -1145,6 +1166,7 @@ vamiga
 vassal
 vbrokers
 vcam
+vcv-rack
 vellum
 videofusion
 vienna
@@ -1194,6 +1216,7 @@ whatsapp
 whatsapp@beta
 whatsapp@legacy
 whisky
+widelands
 wifispoof
 windows-app
 windscribe

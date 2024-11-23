@@ -12,10 +12,7 @@ cask "tableau-reader" do
   homepage "https://www.tableau.com/products/reader"
 
   livecheck do
-    url "https://downloads.tableau.com/TableauAutoUpdate.xml"
-    strategy :xml do |xml|
-      xml.get_elements("//version").map { |item| item.attributes["releaseNotesVersion"] }
-    end
+    cask "tableau"
   end
 
   pkg "TableauReader-#{version.dots_to_hyphens}#{arch}.pkg"

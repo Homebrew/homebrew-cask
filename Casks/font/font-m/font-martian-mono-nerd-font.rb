@@ -1,6 +1,6 @@
 cask "font-martian-mono-nerd-font" do
-  version "3.2.1"
-  sha256 "a0bb5ab838bb2dcbcc2a7824e6a73505e8dc8f95f48183e056d82790108c32ea"
+  version "3.3.0"
+  sha256 "706e539ce2a3019b306e4f90364b8ff57c7076c8e2f160a486028e4bb3f243b2"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/MartianMono.zip"
   name "MartianMono Nerd Font (MartianMono)"

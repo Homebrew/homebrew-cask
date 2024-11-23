@@ -15,6 +15,14 @@ cask "keymanager" do
 
   app "KeyManager.app"
 
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/keymanager.sfl*",
+    "~/Library/Application Support/keymanager",
+    "~/Library/Logs/keymanager",
+    "~/Library/Preferences/keymanager.plist",
+    "~/Library/Saved Application State/keymanager.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

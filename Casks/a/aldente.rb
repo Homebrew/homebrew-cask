@@ -1,6 +1,6 @@
 cask "aldente" do
-  version "1.28.6"
-  sha256 "839d971f1d632b454480b4092febd7d7a6c577c78cbb4770f05aa9e213ad56d1"
+  version "1.29"
+  sha256 "175f436678e7959ef27603613cd51aec5a8fa79fcccc371046d92c2245e0222b"
 
   url "https://github.com/AppHouseKitchen/AlDente-Charge-Limiter/releases/download/#{version}/AlDente.dmg",
       verified: "github.com/AppHouseKitchen/AlDente-Charge-Limiter/"

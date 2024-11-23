@@ -1,9 +1,9 @@
 cask "widelands" do
   arch arm: "14-arm64", intel: "12-x86"
 
-  version "1.2"
-  sha256 arm:   "7b19ba62c561daa7880a4fa5683591d916f43a4b846f1fc527e1c47e6e84d4e4",
-         intel: "ca3a4db1c6ccf07d2ff246d6bd979f5e7e116a8529d3ae41fdfc8d66bf4d5f93"
+  version "1.2.1"
+  sha256 arm:   "7067e26809ba92395644b58ced3d99b2ecd5f83844c913c1cae7290351cc6f38",
+         intel: "de55c686a82c904c4e585cf93802af3b475ed330e5420b3ef9b4a23d649e6b9e"
 
   on_arm do
     depends_on macos: ">= :sonoma"

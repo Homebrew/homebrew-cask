@@ -10,6 +10,13 @@ cask "prudent" do
 
   app "Prudent.app"
 
+  zap trash: [
+    "~/Library/Application Support/Prudent",
+    "~/Library/Caches/Pruent",
+    "~/Library/Preferences/com.runningroot.prudent.plist",
+    "~/Library/Saved Application State/com.runningroot.prudent.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

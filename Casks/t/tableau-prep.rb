@@ -13,10 +13,7 @@ cask "tableau-prep" do
   homepage "https://www.tableau.com/support/releases/prep"
 
   livecheck do
-    url "https://downloads.tableau.com/TableauAutoUpdate.xml"
-    strategy :xml do |xml|
-      xml.get_elements("//version").map { |item| item.attributes["releaseNotesVersion"] }
-    end
+    cask "tableau"
   end
 
   depends_on macos: ">= :el_capitan"

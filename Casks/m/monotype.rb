@@ -1,6 +1,6 @@
 cask "monotype" do
-  version "7.3.2"
-  sha256 "2b75990d888f21b953c5136159d9782b558c6d7a4059afc92bb009e259839432"
+  version "7.4.0"
+  sha256 "e2f9e10ea816a876b02bf50d2877372e5ce3cda822a8e22a940c2315f3587fad"
 
   url "https://monotypeapp.monotype.com/release/#{version.no_dots}/mac/MTFInstallerMacOS.zip"
   name "Monotype Desktop App"

@@ -7,12 +7,13 @@ cask "osirix-quicklook" do
   desc "Quick Look plugin for OsiriX DICOM files"
   homepage "https://www.osirix-viewer.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-11-15", because: :unmaintained
 
   pkg "OsiriXQuickLookInstaller.pkg"
 
   uninstall pkgutil: "com.pixmeo.osirix.osirixQuicklookPlugin.OsiriXQuickLookPlugin.pkg"
+
+  caveats do
+    requires_rosetta
+  end
 end

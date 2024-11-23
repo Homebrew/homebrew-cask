@@ -15,6 +15,11 @@ cask "electrumsv" do
 
   app "ElectrumSV.app"
 
+  zap trash: [
+    "~/Library/Preferences/io.electrumsv.ElectrumSV.plist",
+    "~/Library/Saved Application State/io.electrumsv.ElectrumSV.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

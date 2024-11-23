@@ -9,7 +9,7 @@ cask "loopback" do
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "2.4.4"
+    version "2.4.5"
 
     url "https://cdn.rogueamoeba.com/loopback/download/Loopback.zip"
 

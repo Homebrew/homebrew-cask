@@ -1,6 +1,6 @@
 cask "font-caskaydia-mono-nerd-font" do
-  version "3.2.1"
-  sha256 "603c68495918d6fddd800ffb6ab1ae726f5e410affc6b02047b1cdb00453efab"
+  version "3.3.0"
+  sha256 "50b54f568224836b976edbda730c274a626384ba5dc69452dab4ddccb4c8ad06"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/CascadiaMono.zip"
   name "CaskaydiaMono Nerd Font (Cascadia Mono)"

@@ -16,6 +16,12 @@ cask "cornerstone" do
 
   app "Cornerstone.app"
 
+  zap trash: [
+    "~/Library/Application Scripts/com.zennaware.Cornerstone*",
+    "~/Library/Caches/com.apple.helpd/Generated/Cornerstone Help*",
+    "~/Library/Containers/com.zennaware.Cornerstone*",
+  ]
+
   caveats do
     requires_rosetta
   end

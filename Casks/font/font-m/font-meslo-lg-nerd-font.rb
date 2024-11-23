@@ -1,6 +1,6 @@
 cask "font-meslo-lg-nerd-font" do
-  version "3.2.1"
-  sha256 "c54d6ad2eabaaac59a436b9d37de62f2f8407516e85a31023313f6e91ca12694"
+  version "3.3.0"
+  sha256 "322d3a72da704b75cce5e52a6c3b875cbff3ca5ad01b40d0e2ad2f65be21648e"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Meslo.zip"
   name "MesloLG Nerd Font families (Meslo LG)"

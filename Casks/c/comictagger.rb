@@ -14,6 +14,12 @@ cask "comictagger" do
 
   app "ComicTagger.app"
 
+  zap trash: [
+    "~/.ComicTagger",
+    "~/Library/Preferences/ComicTagger.plist",
+    "~/Library/Saved Application State/ComicTagger.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

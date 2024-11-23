@@ -1,5 +1,5 @@
 cask "hp-easy-admin" do
-  version "2.12.2,221209"
+  version "2.15.0,240916"
   sha256 :no_check
 
   url "https://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/Applications/HP_Easy_Admin.app.zip"

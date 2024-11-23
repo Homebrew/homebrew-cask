@@ -10,12 +10,18 @@ cask "makehuman" do
 
   livecheck do
     url "https://download.tuxfamily.org/makehuman/releases/"
-    regex(/makehuman-community-(\d+(?:\.\d+)*)-macos\.zip/i)
+    regex(/makehuman[._-]community[._-]v?(\d+(?:\.\d+)+)[._-]macos\.zip/i)
   end
 
   depends_on macos: ">= :sierra"
 
   app "MakeHuman.app"
+
+  zap trash: [
+        "~/Documents/MakeHumanv#{version.major}py3",
+        "~/Library/Saved Application State/org.pythonmac.unspecified.MakeHuman.savedState",
+      ],
+      rmdir: "~/Documents/MakeHumanv#{version.major}py3"
 
   caveats do
     requires_rosetta

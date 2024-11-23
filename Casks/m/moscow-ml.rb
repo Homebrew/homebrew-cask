@@ -11,4 +11,10 @@ cask "moscow-ml" do
   pkg "mosml-#{version}.pkg"
 
   uninstall pkgutil: "org.mosml"
+
+  # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -1,9 +1,9 @@
 cask "siyuan" do
   arch arm: "-arm64"
 
-  version "3.1.11"
-  sha256 arm:   "735d2ff32306c34b3d1151fa7f645d93bd596bd9459b65f21f321ef75824237d",
-         intel: "b75e6e592adf4ca474230c72fc8fab0c54ed641b1772e6f36a92d78f87ea10a8"
+  version "3.1.13"
+  sha256 arm:   "76b8f0a8067814f3a50856dfbfb6bad1d53eb496aed3233a7179e83e0ab6a903",
+         intel: "638e66d87b812777b1755d577899c71c649e5fddee750847ad88a0b45198adf5"
 
   url "https://github.com/siyuan-note/siyuan/releases/download/v#{version}/siyuan-#{version}-mac#{arch}.dmg"
   name "SiYuan"

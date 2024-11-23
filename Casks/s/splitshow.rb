@@ -7,14 +7,14 @@ cask "splitshow" do
   desc "Dual-head presentation of PDF slides"
   homepage "https://github.com/mpflanzer/splitshow"
 
-  # This cask uses an unstable version and this `livecheck` block is only used
-  # to prevent livecheck from skipping pre-release versions by default. This
-  # should be removed/updated if the cask is updated to a stable version.
-  livecheck do
-    url :url
-  end
+  deprecate! date: "2024-11-16", because: :unmaintained
 
   app "SplitShow.app"
+
+  zap trash: [
+    "~/Library/Preferences/eu.mpflanzer.SplitShow.plist",
+    "~/Library/Saved Application State/eu.mpflanzer.SplitShow.savedState",
+  ]
 
   caveats do
     requires_rosetta

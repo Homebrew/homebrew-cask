@@ -16,6 +16,12 @@ cask "couleurs" do
 
   app "Couleurs.app"
 
+  zap trash: [
+    "~/Library/HTTPStorages/com.13bold.Couleurs",
+    "~/Library/Preferences/com.13bold.Couleurs.plist",
+    "~/Library/Saved Application State/com.13bold.Couleurs.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end

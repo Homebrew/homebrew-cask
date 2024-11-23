@@ -1,6 +1,6 @@
 cask "font-m+-nerd-font" do
-  version "3.2.1"
-  sha256 "2dfa4dedd98bbfe625ff56f0a31713aea77776aa7227bac300fd4246f2c79043"
+  version "3.3.0"
+  sha256 "3f85b91067737c45f519c583594eb445d5c3e921a5c0f40cb43c02eba513b952"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/MPlus.zip"
   name "M+ Nerd Font families (MPlus)"

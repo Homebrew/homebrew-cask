@@ -1,14 +1,14 @@
 cask "monarch" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "cdf327fbb2682e6a6f6ef0d3f65c2a734dfe2546e964e646b94940a656deea79",
-         intel: "65a79fc7befb19ad409bc12f584fbf1f3d328a975fbf947778700ddfe2703566"
+  sha256 arm:   "1d79522451231c24699a3141c8acf78ff2c9fbbc59590cd5c6c029b00801c591",
+         intel: "8af3bc79b1cc9769002cacbf18302daa7cb48a7796728aab49969ef550a464fc"
 
   on_arm do
-    version "0.7.10"
+    version "0.7.14"
   end
   on_intel do
-    version "0.7.10"
+    version "0.7.11"
   end
 
   url "https://storage.googleapis.com/monarchlauncher/#{arch}/monarch-#{version}.dmg",

@@ -7,6 +7,8 @@ cask "font-lxgw-heartserif" do
   name "霞鹜铭心宋"
   homepage "https://github.com/lxgw/LxgwHeartSerif"
 
+  deprecate! date: "2024-11-22", because: :discontinued
+
   font "LXGWHeartSerif.ttf"
 
   # No zap stanza required

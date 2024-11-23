@@ -1,10 +1,10 @@
 cask "macupdater" do
   on_monterey :or_older do
-    version "2.3.16"
-    sha256 "31f081d2a447de66d52330ed6090a0ed29aec9e257114ff736cffee76a8e40a0"
+    version "2.3.18"
+    sha256 "81e7a1f64499128c131d169408829962ca913996830a7e19d372099e657d5894"
   end
   on_ventura :or_newer do
-    version "3.3.4"
+    version "3.3.5"
     # required as upstream package is regularly updated in-place https://github.com/Homebrew/homebrew-cask/pull/182188#issuecomment-2284199515
     sha256 :no_check
 

@@ -1,9 +1,9 @@
 cask "powershell@preview" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.5.0-preview.5"
-  sha256 arm:   "9ccac91d32fe5e6a40ec6a157f2764ec2f5d19b16b77c91e84429a356306e38d",
-         intel: "994ee19e3250a98457da7fd307db56b2043e3bb2126447d5e94a3f8dcd498b0a"
+  version "7.5.0-rc.1"
+  sha256 arm:   "f87280782de0575584a31a2b8c45cf47f05b8811167fb2ea256ca2d03f6935b7",
+         intel: "bb49a9bdbd500a92abeed1d83b0ba448123d9e38b1de06f08f8ded58a95b537d"
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
   name "PowerShell"
@@ -15,7 +15,6 @@ cask "powershell@preview" do
     regex(/^v?(\d+(?:\.\d+)+[_-](?:preview|rc)(?:\.\d+)?)$/i)
   end
 
-  depends_on formula: "openssl"
   depends_on macos: ">= :mojave"
 
   pkg "powershell-#{version}-osx-#{arch}.pkg"

@@ -1,9 +1,9 @@
 cask "zed@preview" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.162.0"
-  sha256 arm:   "7659832ae113abc719c441257625e46ee94b2426ae44e00fcf0b1dc5b13ae681",
-         intel: "ad9c918b075642179b4678f64720a959b41fca8d42db4ee8a9541a69862b2f82"
+  version "0.163.2"
+  sha256 arm:   "a8307e748701d2e9129287857eef8de236458da9c43fa69f63b093fbdddadb92",
+         intel: "ce0a7e7538f67658460d272feecf4f09978383179ce583afc3814bf4b0dc935c"
 
   url "https://zed.dev/api/releases/preview/#{version}/Zed-#{arch}.dmg"
   name "Zed Preview"
@@ -11,7 +11,7 @@ cask "zed@preview" do
   homepage "https://zed.dev/"
 
   livecheck do
-    url "https://zed.dev/api/releases/latest?asset=Zed.dmg&preview=1"
+    url "https://zed.dev/api/releases/latest?asset=Zed.dmg&preview=1&os=macos&arch=#{arch}"
     strategy :json do |json|
       json["version"]
     end

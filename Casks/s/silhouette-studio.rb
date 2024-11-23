@@ -9,7 +9,7 @@ cask "silhouette-studio" do
   homepage "https://www.silhouetteamerica.com/silhouette-studio"
 
   livecheck do
-    url "https://www.silhouetteamerica.com/software/legacy/id/3"
+    url :homepage
     regex(/SS[._-]V?((?:\d+(?:\.\d+)+)[._-]M6R(?:[._-]\d+)?)\.dmg/i)
   end
 

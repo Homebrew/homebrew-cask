@@ -1,6 +1,6 @@
 cask "ipfs" do
-  version "0.39.0"
-  sha256 "aeb96efc89e5fcd62b49fb86da934f9ea0e41a9c63116c4e44070467def53b57"
+  version "0.40.0"
+  sha256 "158514664081f06f25e15042d5dbd9afbcbcf1cfa663c10be3cf0d1c6e2c79a6"
 
   url "https://github.com/ipfs/ipfs-desktop/releases/download/v#{version}/ipfs-desktop-#{version}-mac.dmg"
   name "IPFS Desktop"

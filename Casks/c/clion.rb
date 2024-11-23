@@ -1,9 +1,9 @@
 cask "clion" do
   arch arm: "-aarch64"
 
-  version "2024.2.3,242.23726.125"
-  sha256 arm:   "998d629381e6f596b8e0cf5289fe8ca7cfd3221fc73b6c8548d768889b14196f",
-         intel: "0dfc4d50268e58bb6b3c42c270ea8cca638a8733a5e2e010447cc74d585895e8"
+  version "2024.3,243.21565.238"
+  sha256 arm:   "2f4ad6ea4ffb0862f85780cd960b46925ea6c9e5f97e9fa290f3007652103825",
+         intel: "e3d82ad3303cb4f373efce378f7f289afd3b35d3315d03ac53dc27302c87aa6f"
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.csv.first}#{arch}.dmg"
   name "CLion"
@@ -33,9 +33,7 @@ cask "clion" do
     "~/Library/Application Support/JetBrains/CLion#{version.major_minor}",
     "~/Library/Caches/JetBrains/CLion#{version.major_minor}",
     "~/Library/Logs/JetBrains/CLion#{version.major_minor}",
-    "~/Library/Preferences/CLion#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.CLion.plist",
-    "~/Library/Preferences/jetbrains.clion.*.plist",
     "~/Library/Saved Application State/com.jetbrains.CLion.savedState",
   ]
 end

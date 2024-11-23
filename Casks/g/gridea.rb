@@ -12,6 +12,14 @@ cask "gridea" do
 
   app "Gridea.app"
 
+  zap trash: [
+        "~/.gridea",
+        "~/Library/Application Support/gridea",
+        "~/Library/Preferences/com.electron.gridea.plist",
+        "~/Library/Saved Application State/com.electron.gridea.savedState",
+      ],
+      rmdir: "~/Documents/Gridea"
+
   caveats do
     requires_rosetta
   end

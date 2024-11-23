@@ -1,9 +1,9 @@
 cask "trezor-suite" do
   arch arm: "arm64", intel: "x64"
 
-  version "24.10.1"
-  sha256 arm:   "9cc6bc1ffe3b66e0c43c969970a7658d1e86bc1496f2c291113d82e0bd52dc38",
-         intel: "916b12bef34ec568f58bdfcfa1ed7361c72909f048bf3c510b18e42c7ac2518a"
+  version "24.11.2"
+  sha256 arm:   "54846611e4a666fc158ab2a2adc3249c749402722b4542f511571b7c4a200971",
+         intel: "cf338632801a101bf25bbaff3153f818544a00da8cbe83959e47cca8b03351f9"
 
   url "https://github.com/trezor/trezor-suite/releases/download/v#{version}/Trezor-Suite-#{version}-mac-#{arch}.dmg",
       verified: "github.com/trezor/trezor-suite/"

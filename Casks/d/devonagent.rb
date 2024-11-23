@@ -8,8 +8,8 @@ cask "devonagent" do
     end
   end
   on_mojave :or_newer do
-    version "3.11.8"
-    sha256 "81809652d8821376d3c6df1b68212c61944ec18a874e1c49a310a535050e36fc"
+    version "3.11.9"
+    sha256 "f6d6544926de83c11943737150605b386037d29803fa0b99c01b9613ff44e96d"
 
     livecheck do
       url "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300005193"

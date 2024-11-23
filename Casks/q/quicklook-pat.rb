@@ -4,9 +4,16 @@ cask "quicklook-pat" do
 
   url "https://github.com/pixelrowdies/quicklook-pat/releases/download/#{version}/PatternQuickLook.pkg"
   name "Adobe Photoshop Patterns Quicklook Plugin"
+  desc "Quick Look plugin for Adobe Photoshop pattern files"
   homepage "https://github.com/pixelrowdies/quicklook-pat"
+
+  deprecate! date: "2024-11-15", because: :unmaintained
 
   pkg "PatternQuickLook.pkg"
 
   uninstall pkgutil: "de.pixelrowdies.PatternQuickLook"
+
+  caveats do
+    requires_rosetta
+  end
 end
