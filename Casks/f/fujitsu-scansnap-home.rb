@@ -43,4 +43,8 @@ cask "fujitsu-scansnap-home" do
         "~/Library/Saved Application State/com.fujitsu.pfu.ScanSnapHome.savedState",
         "~/Library/Saved Application State/jp.co.pfu.SSHomeWizard.savedState",
       ]
+
+  caveats do
+    requires_rosetta
+  end
 end
