@@ -16,6 +16,7 @@ cask "fujitsu-scansnap-home" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
   container nested: "Download/MacSSHomeInstaller_#{version.dots_to_underscores}.dmg"
 
