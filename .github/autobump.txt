@@ -1013,6 +1013,7 @@ smooze-pro
 smultron
 snagit
 snapmaker-luban
+softmaker-freeoffice
 sol
 solar2d
 sonarr
