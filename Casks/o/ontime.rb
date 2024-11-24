@@ -7,8 +7,8 @@ cask "ontime" do
 
   url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg",
       verified: "github.com/cpvalente/ontime/"
-  name "ontime"
-  desc "Free, open-source time keeping for live events"
+  name "Ontime"
+  desc "Time keeping for live events"
   homepage "https://getontime.no/"
 
   livecheck do
