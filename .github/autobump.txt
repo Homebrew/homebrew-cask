@@ -34,6 +34,7 @@ affine
 affinity-designer
 affinity-photo
 affinity-publisher
+aide-app
 airtame
 akiflow
 alcom
