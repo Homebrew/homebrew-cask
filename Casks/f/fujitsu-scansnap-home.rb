@@ -15,7 +15,7 @@ cask "fujitsu-scansnap-home" do
       page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
-  
+
   auto_updates true
   depends_on macos: ">= :sierra"
   container nested: "Download/MacSSHomeInstaller_#{version.dots_to_underscores}.dmg"
