@@ -12,8 +12,8 @@ cask "wave" do
   homepage "https://www.waveterm.dev/"
 
   livecheck do
-    url "https://www.waveterm.dev/download"
-    regex(/href=.*?Wave.+?[._-]?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://dl.waveterm.dev/releases-w2/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
