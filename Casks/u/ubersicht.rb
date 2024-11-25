@@ -8,12 +8,12 @@ cask "ubersicht" do
   homepage "https://tracesof.net/uebersicht/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/Uebersicht[._-]v?(\d+(?:\.\d+)+)\.app\.zip}i)
+    url "https://raw.githubusercontent.com/felixhageloh/uebersicht/gh-pages/updates.xml.rss"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :monterey"
 
   app "Übersicht.app"
 
