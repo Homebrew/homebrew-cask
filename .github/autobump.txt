@@ -92,6 +92,7 @@ automattic-texts
 avast-secure-browser
 aws-vpn-client
 axure-rp
+ba-connected
 backblaze
 backuploupe
 backyard-ai
