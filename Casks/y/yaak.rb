@@ -2,11 +2,11 @@ cask "yaak" do
   arch arm: "aarch64", intel: "x64"
 
   version "2024.12.1"
-  sha256 arm:   "0a7c7ea0a55734096f597d925a4b44ab233fe5b748e86eb18f5e4781603b44a6",
-         intel: "428b800825ddb74cd9a6fdebf7dafcf155df168fddf6bbe6cf209230cc8fa2ef"
+  sha256 arm:   "f268976584beee63fdf343a80ecd00d6beba56d1e3933fde067f6cf7640fceb5",
+         intel: "72f67494f1db8af4cd6f97858f10b77cea2f2ecca98666b458677d13580c7c0e"
 
-  url "https://github.com/yaakapp/app/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
-      verified: "github.com/yaakapp/app/"
+  url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
+      verified: "github.com/mountain-loop/yaak/"
   name "Yaak"
   desc "REST, GraphQL and gRPC client"
   homepage "https://yaak.app/"
