@@ -8,8 +8,13 @@ cask "packages" do
   homepage "http://s.sudre.free.fr/Software/Packages/about.html"
 
   livecheck do
-    url "http://s.sudre.free.fr/Software/Packages/release_notes.html"
-    regex(/Release[._-]notes[._-]Version[^>]*>\s*(\d+(?:\.\d+)+)/i)
+    url "http://s.sudre.free.fr/Software/documentation/RemoteVersion.plist"
+    strategy :xml do |xml|
+      version = xml.elements["//key[text()='WBRemoteAvailableVersion']"]&.next_element&.text
+      next if version.blank?
+
+      version.strip
+    end
   end
 
   auto_updates true
