@@ -179,6 +179,7 @@ chronycontrol
 cinderella
 cisdem-data-recovery
 cisdem-pdf-converter-ocr
+cityofzion-neon
 clash-verge-rev
 claude
 clay
