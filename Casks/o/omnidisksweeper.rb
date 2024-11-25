@@ -47,7 +47,10 @@ cask "omnidisksweeper" do
 
     livecheck do
       url "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper"
-      regex(/OmniDiskSweeper[._-](\d+(?:\.\d+)+b?)\.dmg/i)
+      regex(/OmniDiskSweeper[._-]v?(\d+(?:\.\d+)+[a-z]?)\.dmg/i)
+      strategy :sparkle do |item, regex|
+        item.url[regex, 1]
+      end
     end
   end
 
