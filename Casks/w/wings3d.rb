@@ -17,6 +17,7 @@ cask "wings3d" do
   homepage "https://www.wings3d.com/"
 
   livecheck do
+    url :url
     regex(/url=.*?wings[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
   end
 
