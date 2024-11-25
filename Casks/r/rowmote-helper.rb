@@ -8,8 +8,8 @@ cask "rowmote-helper" do
   homepage "https://regularrateandrhythm.com/apps/rowmote-pro/"
 
   livecheck do
-    url "https://www.regularrateandrhythm.com/apps/rowmote-pro/rowmote-helper-versions.php"
-    regex(/Rowmote\s+Helper\s+v?(\d+(?:\.\d+)+)/i)
+    url "https://rowmote.com/rowmote-appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
