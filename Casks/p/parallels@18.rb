@@ -8,10 +8,14 @@ cask "parallels@18" do
   homepage "https://www.parallels.com/products/desktop/"
 
   livecheck do
-    url "https://kb.parallels.com/129060"
-    regex(/<h2[^>]*?>[^<]*?(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}-#{match[1]}" }
+    url "https://update.parallels.com/desktop/v#{version.major}/parallels/parallels_updates.xml"
+    regex(/ParallelsDesktop[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    strategy :xml do |xml, regex|
+      url = xml.elements["//FilePath"]&.text&.strip
+      match = url.match(regex) if url
+      next if match.blank?
+
+      match[1]
     end
   end
 
