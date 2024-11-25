@@ -8,8 +8,8 @@ cask "xnviewmp" do
   homepage "https://www.xnview.com/en/xnviewmp/"
 
   livecheck do
-    url :homepage
-    regex(/>XnView\sMP\sv?(\d+(?:\.\d+)+)[\s<]/i)
+    url "http://www.xnview.com/update.txt"
+    regex(/\[XnViewMP\].*?v?(\d+(?:\.\d+)+)/im)
   end
 
   auto_updates true
