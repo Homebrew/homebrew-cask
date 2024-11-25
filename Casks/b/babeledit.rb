@@ -8,8 +8,8 @@ cask "babeledit" do
   homepage "https://www.codeandweb.com/babeledit"
 
   livecheck do
-    url "https://www.codeandweb.com/babeledit/download"
-    regex(%r{babeledit/download/v?(\d+(?:\.\d+)+)/mac-64}i)
+    url "https://www.codeandweb.com/releases/babeledit/updatecheck.php?b=no&o=mac"
+    strategy :sparkle
   end
 
   auto_updates true
