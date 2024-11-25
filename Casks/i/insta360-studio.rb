@@ -36,7 +36,7 @@ cask "insta360-studio" do
       match = channel["download_url"]&.match(regex)
       next if version.blank? || match.blank?
 
-      "#{version},#{match[1]},#{match[2].split(/[()]/).join(",")}"
+      "#{version},#{match[1]},#{match[2].tr("()", ",")}"
     end
   end
 
