@@ -8,8 +8,10 @@ cask "selfcontrol" do
   homepage "https://selfcontrolapp.com/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/SelfControl[._-](\d+(?:\.\d+)+)\.zip}i)
+    url "https://update.selfcontrolapp.com/feeds/selfcontrol"
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true
