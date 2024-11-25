@@ -1,8 +1,11 @@
 cask "thorium" do
-  version "3.0.0"
-  sha256 "340c04e31e750de699a838aca643b4c2c966751d7ad0627cd33f531e1b596d65"
+  arch arm: "-arm64"
 
-  url "https://github.com/edrlab/thorium-reader/releases/download/v#{version}/Thorium-#{version}.dmg",
+  version "3.0.0"
+  sha256 arm:   "14e476435f3a9d040adf57cb579b370029115da47e34d29af8766678f2f1b987",
+         intel: "eab3b2d4f8e173e65fa7e3a1696c0def0d6a6844d4041f98932eff0a84343841"
+
+  url "https://github.com/edrlab/thorium-reader/releases/download/v#{version}/Thorium-#{version}#{arch}.dmg",
       verified: "github.com/edrlab/thorium-reader/"
   name "Thorium Reader"
   desc "Epub reader"
@@ -14,6 +17,7 @@ cask "thorium" do
   end
 
   conflicts_with cask: "alex313031-thorium"
+  depends_on macos: ">= :catalina"
 
   app "Thorium.app"
 
@@ -21,8 +25,4 @@ cask "thorium" do
     "~/Library/Application Support/EDRLab.ThoriumReader",
     "~/Library/Preferences/io.github.edrlab.thorium.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
