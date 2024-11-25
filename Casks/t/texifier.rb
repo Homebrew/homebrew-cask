@@ -8,15 +8,18 @@ cask "texifier" do
   homepage "https://www.texifier.com/mac"
 
   livecheck do
-    url :homepage
-    regex(/href=["'].*?download\.texifier\.com.*?osx.*?Texifier_(\d+(?:_\d+)+)__(\d+)__([^_]+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]},#{match[2]}" }
+    url "https://www.texifier.com/apps/updates/texifier/appcast-stable.xml"
+    regex(/Texifier[._-]v?(\d+(?:[._]\d+)+)__(\d+)__(\h+)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{match[1].tr("_", ".")},#{match[2]},#{match[3]}"
     end
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Texifier.app"
 
