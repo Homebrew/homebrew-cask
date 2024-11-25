@@ -404,6 +404,7 @@ font-lxgw-neozhisong
 font-lxgw-simxihei
 font-lxgw-simzhisong
 font-sarasa-gothic
+foobar2000
 fork
 forkgram-telegram
 forklift
