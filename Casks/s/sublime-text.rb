@@ -9,8 +9,10 @@ cask "sublime-text" do
   homepage "https://www.sublimetext.com/"
 
   livecheck do
-    url "https://www.sublimetext.com/download_thanks?target=mac"
-    regex(/href=.*?v?(\d+)_mac\.zip/i)
+    url "https://www.sublimetext.com/updates/#{version[0]}/stable_update_check"
+    strategy :json do |json|
+      json["latest_version"]&.to_s
+    end
   end
 
   auto_updates true
