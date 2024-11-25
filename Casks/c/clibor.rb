@@ -14,8 +14,10 @@ cask "clibor" do
   homepage "https://chigusa-web.com/clibor-for-mac-en/"
 
   livecheck do
-    url "https://chigusa-web.com/clibor-for-mac-en/download/"
-    regex(/Clibor\.dmg\s*(?:[–—-]|&[a-z]+;)?\s*v?(\d+(?:\.\d+)+)/i)
+    url "https://chigusa-web.com/appinfo/clibor-for-mac.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
