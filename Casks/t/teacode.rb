@@ -1,15 +1,15 @@
 cask "teacode" do
-  version "1.1.43"
-  sha256 "7e49e18d70799477e7d58f14a8312324494b484a0b93a3679fb43c58eff59dd9"
+  version "1.1.3"
+  sha256 "2e2545beafe4c77ef52e76ff49edf1d4dbceed2a6bf6c8c1b22424112480478b"
 
-  url "https://www.apptorium.com/public/products/teacode/releases/TeaCode-#{version}.zip"
+  url "https://cdn.apptorium.com/products/teacode/releases/TeaCode-#{version}.zip"
   name "TeaCode"
   desc "Text expanding app for developers"
   homepage "https://www.apptorium.com/teacode"
 
   livecheck do
-    url "https://www.apptorium.com/teacode/trial"
-    regex(/href=.*?TeaCode[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    url "https://www.apptorium.com/updates/teacode"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
