@@ -547,6 +547,7 @@ kdenlive
 kdrive
 keepassxc@snapshot
 keeper-password-manager
+keka
 keyboard-cowboy
 keyman
 keymapp
