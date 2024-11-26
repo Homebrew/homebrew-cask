@@ -22,6 +22,12 @@ cask "start" do
   livecheck do
     url "https://api.start.qq.com/cfg/get?biztypes=macos-update-info#{livecheck_arch}"
     regex(/START-Installer[._-]#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    strategy :json do |json, regex|
+      match = json.dig("configs", "macos-update-info#{livecheck_arch}", "value")&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   auto_updates true
