@@ -1,5 +1,6 @@
 cask "feishu" do
   arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "_m1"
 
   on_arm do
     version "7.31.8,b63010d1"
@@ -19,9 +20,11 @@ cask "feishu" do
   livecheck do
     url "https://www.feishu.cn/api/downloads"
     regex(%r{/(\h+)/Feishu[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)[._-]signed\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex)
-          .map { |match| "#{match[1]},#{match[0]}" }
+    strategy :json do |json, regex|
+      match = json.dig("versions", "MacOS#{livecheck_arch}", "download_link")&.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
     end
   end
 
