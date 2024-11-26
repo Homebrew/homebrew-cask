@@ -1,6 +1,6 @@
 cask "hidock" do
-  version "1.3"
-  sha256 "26673a21c6d53b2e56e5769c19ad8232716c83b42897d949b8e420425d614010"
+  version "1.4"
+  sha256 "29e95a7eb061236658ccccbc86c1ba0ee872bf5e627c0fff0a37ca29b056f60e"
 
   url "https://hidock.app/HiDock_#{version}.zip"
   name "HiDock"
