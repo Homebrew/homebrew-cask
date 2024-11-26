@@ -1,6 +1,6 @@
 cask "strongvpn" do
-  version "2.4.3,124208"
-  sha256 "cfe8bfd076715268048acebb279a012788e1028eff2aa6adc5239f41e6f4d746"
+  version "2.4.4,126332"
+  sha256 "4ff9dfe2de824f3f7d078c0810ac787313b9d4a14cdcb329cf79c74585d84547"
 
   url "https://static.colomovers.com/mac/StrongVPN_v#{version.csv.first}_b#{version.csv.second}.zip",
       verified: "static.colomovers.com/mac/"
@@ -8,20 +8,9 @@ cask "strongvpn" do
   desc "VPN app with support for multiple protocols"
   homepage "https://strongvpn.com/vpn-apps/macos/"
 
-  # The version returned by the default :sparkle strategy is incorrect, as there
-  # is a mismatch between the version in the URL and the version in the appcast.
-  # The version in the URL is the correct one, so we need to pull the version
-  # and build from the URL. This can likely be removed in the next release
   livecheck do
     url "https://static.colomovers.com/mac/updates.xml"
-    regex(/StrongVPN[._-]*v?(\d+(?:\.\d+)+)[._-]b(\d+)\.zip/i)
-    strategy :sparkle do |item, regex|
-      item.url.scan(regex).map do |match|
-        next if match.blank?
-
-        "#{match[0]},#{match[1]}"
-      end
-    end
+    strategy :sparkle
   end
 
   auto_updates true
