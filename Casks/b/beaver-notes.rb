@@ -8,11 +8,6 @@ cask "beaver-notes" do
   desc "Your personal note-taking haven for privacy and efficiency"
   homepage "https://beavernotes.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :catalina"
 
   app "Beaver-Notes.app"
