@@ -1,9 +1,9 @@
 cask "ovito-pro" do
   arch arm: "arm64", intel: "intel"
 
-  version "3.11.1"
-  sha256 arm:   "80bef544e08a7997b910f589266caf571da87fc0a05b21ec13b5826bdeff2da5",
-         intel: "31640adc8c4bb8a4da6f484c4ed4d889e9fa26737bca41b7b3a0640d7fdd6187"
+  version "3.11.2"
+  sha256 arm:   "1284969d513894f10c28a58c5855fb73a5c08fe3bce421e165dab0391a339f1c",
+         intel: "8b940c4a070c26ac0d6fcae5c98dd19fc17547b33d65eccf2db0c11cc71a9c61"
 
   url "https://www.ovito.org/download/master/ovito-pro-#{version}-macos-#{arch}.dmg"
   name "OVITO Pro"
