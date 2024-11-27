@@ -5,7 +5,7 @@ cask "beaver-notes" do
   url "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/#{version}/Beaver-notes.dmg",
       verified: "github.com/Beaver-Notes/Beaver-Notes/"
   name "Beaver Notes"
-  desc "Your personal note-taking haven for privacy and efficiency"
+  desc "Privacy-focused note-taking app"
   homepage "https://beavernotes.com/"
 
   depends_on macos: ">= :catalina"
