@@ -11,9 +11,16 @@ cask "mongodb-compass@beta" do
   homepage "https://www.mongodb.com/try/download/compass"
 
   livecheck do
-    url "https://github.com/mongodb-js/compass/releases?q=prerelease%3Atrue&expanded=true"
-    regex(%r{href=["']?[^"' >]*?/tag/\D*?(\d+(?:\.\d+)+-beta\.\d)[^"' >]*?["' >]}i)
-    strategy :page_match
+    url "https://info-mongodb-com.s3.amazonaws.com/com-download-center/compass.json"
+    regex(/^v?(\d+(?:\.\d+)+[._-]beta[._-]\d+)$/i)
+    strategy :json do |json, regex|
+      json["versions"]&.map do |item|
+        match = item["_id"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   depends_on macos: ">= :catalina"
