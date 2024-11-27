@@ -10,7 +10,7 @@ cask "insomnia@alpha" do
 
   livecheck do
     url :url
-    regex(/^core@v?(\d+(?:\.\d+)+[._-](?:alpha|beta|rc)[._-]?\d*)$/i)
+    regex(/^core@v?(\d+(?:\.\d+)+(?:[._-](?:alpha|beta|rc)[._-]?\d*)?)$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"]
