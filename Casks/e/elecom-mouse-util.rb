@@ -1,6 +1,6 @@
 cask "elecom-mouse-util" do
-  version "5.2.14.001"
-  sha256 "13509b196c273b6dfef07abf6c20a19c4e9040d8715c154edac367fe7acb1a39"
+  version "5.2.15.000"
+  sha256 "3ab7a2c3338736821be294dd5a4e5d5633e367bd2c51248e3ceee55be8c3e5bb"
 
   url "https://dl.elecom.co.jp/support/download/peripheral/mouse/assistant/mac/ELECOM_Mouse_Installer_#{version}.zip"
   name "ELECOM Mouse Assistant"
