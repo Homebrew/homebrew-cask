@@ -9,9 +9,18 @@ cask "inso@beta" do
   homepage "https://insomnia.rest/products/inso"
 
   livecheck do
-    url "https://github.com/Kong/insomnia/releases?q=prerelease%3Atrue+Inso+CLI"
-    regex(%r{href=["']?[^"' >]*?/tag/core%40([^"' >]+?)["' >]}i)
-    strategy :page_match
+    url :url
+    regex(/^core@v?(\d+(?:\.\d+)+(?:[._-](?:beta|rc)[._-]?\d*)?)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        match = release["tag_name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   conflicts_with cask: "inso"
