@@ -4,13 +4,7 @@ cask "font-sketchybar-app-font" do
 
   url "https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v#{version}/sketchybar-app-font.ttf"
   name "sketchybar-app-font"
-  desc "Contains many useful app icons used by Sketchybar"
   homepage "https://github.com/kvndrsslr/sketchybar-app-font"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   font "sketchybar-app-font.ttf"
 
