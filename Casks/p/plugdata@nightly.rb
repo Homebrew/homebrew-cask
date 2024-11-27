@@ -2,8 +2,8 @@ cask "plugdata@nightly" do
   version :latest
   sha256 :no_check
 
-  url "https://glyphpress.com/plugdata/plugdata-macOS-Universal.pkg",
-      verified: "glyphpress.com/plugdata/"
+  url "https://storage.googleapis.com/plugdata-nightly/plugdata-macOS-Universal.pkg",
+      verified: "storage.googleapis.com/plugdata-nightly/"
   name "PlugData"
   desc "Plugin wrapper for PureData"
   homepage "https://plugdata.org/"
