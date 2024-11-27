@@ -35,5 +35,8 @@ cask "wezterm" do
   binary "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/wezterm.fish"
 
-  zap trash: "~/Library/Saved Application State/com.github.wez.wezterm.savedState"
+  zap trash: [
+    "~/.local/share/wezterm",
+    "~/Library/Saved Application State/com.github.wez.wezterm.savedState",
+  ]
 end
