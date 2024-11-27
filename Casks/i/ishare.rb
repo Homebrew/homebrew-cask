@@ -4,7 +4,7 @@ cask "ishare" do
 
   url "https://github.com/castdrian/ishare/releases/download/v#{version}/ishare.dmg"
   name "ishare"
-  desc "Simple and efficient screenshot capture utility"
+  desc "Screenshot capture utility"
   homepage "https://github.com/castdrian/ishare/"
 
   livecheck do
