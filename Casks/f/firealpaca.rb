@@ -1,5 +1,5 @@
 cask "firealpaca" do
-  version "2.13.3"
+  version "2.13.4"
   sha256 :no_check
 
   url "https://firealpaca.com/download/mac",
@@ -13,7 +13,7 @@ cask "firealpaca" do
     strategy :header_match
   end
 
-  app "FireAlpaca.app"
+  app "FireAlpacaMac_#{version.dots_to_underscores}.app"
 
   zap trash: "~/Library/Application Support/FireAlpaca"
 
