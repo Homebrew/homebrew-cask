@@ -325,6 +325,7 @@ ente-auth
 entry
 eset-cyber-security
 evernote
+excalidrawz
 expressvpn
 fantastical
 far2l
