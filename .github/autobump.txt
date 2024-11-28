@@ -922,6 +922,7 @@ reaper
 receipts
 rectangle
 rectangle-pro
+redisinsight
 reflect
 rekordbox
 remote-desktop-manager
