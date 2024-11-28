@@ -784,6 +784,7 @@ openshift-client
 openshot-video-editor@daily
 openthesaurus-deutsch
 openvanilla
+openwebstart
 opera
 opera-gx
 opera@beta
@@ -922,6 +923,7 @@ reaper
 receipts
 rectangle
 rectangle-pro
+redisinsight
 reflect
 rekordbox
 remote-desktop-manager
@@ -1028,6 +1030,7 @@ sonarr
 songkong
 soulver
 sound-control
+sound-siphon
 sourcetree
 sourcetree@beta
 space-capsule
@@ -1048,6 +1051,7 @@ standard-notes
 staruml
 stash
 stats
+steam-plus-plus
 steamcmd
 steelseries-gg
 steermouse
@@ -1112,6 +1116,7 @@ thunderbird@beta
 thunderbird@esr
 ticktick
 tidelift
+tidgi
 tiger-trade
 timemachinestatus
 timeular
@@ -1140,6 +1145,7 @@ treesheets
 tresorit
 trex
 trezor-suite
+tribler
 trilium-notes
 truhu
 trunk-io

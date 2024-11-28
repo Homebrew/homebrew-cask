@@ -1,6 +1,6 @@
 cask "snapmotion" do
-  version "5.2.4"
-  sha256 "fcb1b8c0a74f3369484c6b99dd672369e46e183320291040f0095f6e9845344a"
+  version "5.2.5"
+  sha256 "e311b9fc66c83be06b5b300641b7126a7450bf6e747f8d7428e48861a6060912"
 
   url "https://neededapps.com/appcasts/snapmotion/versions/#{version}"
   name "SnapMotion"

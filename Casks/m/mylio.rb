@@ -1,5 +1,5 @@
 cask "mylio" do
-  version "24.5.7787"
+  version "24.5.7798"
   sha256 :no_check
 
   url "https://myliodownloads.com/Mylio.dmg",
