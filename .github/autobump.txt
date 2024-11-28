@@ -1112,6 +1112,7 @@ thunderbird@beta
 thunderbird@esr
 ticktick
 tidelift
+tidgi
 tiger-trade
 timemachinestatus
 timeular
