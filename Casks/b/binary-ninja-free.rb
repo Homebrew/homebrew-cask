@@ -1,4 +1,4 @@
-cask "binary-ninja" do
+cask "binary-ninja-free" do
   version "4.2.6455"
   sha256 :no_check
 
