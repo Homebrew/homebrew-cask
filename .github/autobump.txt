@@ -784,6 +784,7 @@ openshift-client
 openshot-video-editor@daily
 openthesaurus-deutsch
 openvanilla
+openwebstart
 opera
 opera-gx
 opera@beta
