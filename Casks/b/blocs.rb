@@ -1,8 +1,8 @@
 cask "blocs" do
-  version "5.2.7"
-  sha256 "80c134460b6ee25425e27b3395683e77ae40b807c76e15184ab63136f35ee2dd"
+  version "5.2.8"
+  sha256 "43ba87292d9c2cc7373dbae262de554cc9496cf4c36ba67097f119ddd99ada71"
 
-  url "https://blocsapp.com/download/archives/Blocs#{version}.zip"
+  url "https://blocsapp.com/download/archives/blocs-#{version.major}/Blocs#{version}.zip"
   name "Blocs"
   desc "Visual web design software"
   homepage "https://blocsapp.com/"
