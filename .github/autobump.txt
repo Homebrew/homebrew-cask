@@ -512,6 +512,7 @@ intellij-idea-ce
 intellij-idea@eap
 ipfs
 ipvanish-vpn
+ireal-pro
 istat-menus
 iterm2
 iterm2@beta
