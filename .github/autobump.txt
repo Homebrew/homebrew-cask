@@ -1049,6 +1049,7 @@ standard-notes
 staruml
 stash
 stats
+steam-plus-plus
 steamcmd
 steelseries-gg
 steermouse
