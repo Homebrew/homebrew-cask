@@ -8,6 +8,8 @@ cask "tuist" do
   desc "Create, maintain, and interact with Xcode projects at scale"
   homepage "https://tuist.io/"
 
+  deprecate! date: "2025-05-28", because: :discontinued
+
   binary "tuist"
 
   zap trash: "~/.tuist"
