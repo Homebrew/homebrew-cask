@@ -11,10 +11,10 @@ cask "geogebra@5" do
     url "https://download.geogebra.org/package/mac"
     regex(%r{/GeoGebra[._-]MacOS[._-]Installer[._-]withJava[._-]v?(\d+(?:-\d+)+)\.zip}i)
     strategy :header_match do |headers, regex|
-      match = headers["location"][regex, 1]
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
-      match.tr("-", ".")
+      match[1].tr("-", ".")
     end
   end
 
