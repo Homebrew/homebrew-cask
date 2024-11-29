@@ -1,6 +1,6 @@
 cask "entry" do
-  version "2.1.20"
-  sha256 "050ab016e96014615d948e4b8bb909baad863a242fa0977ef876e31f289daed0"
+  version "2.1.21"
+  sha256 "216e255b5101706e43afeb3c7220f9ac890dc5d3b1ad9b79643e3c862dd6b37e"
 
   url "https://playentry.org/uploads/data/installers/Entry-#{version}.pkg"
   name "entry"
