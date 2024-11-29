@@ -6,6 +6,12 @@ cask "font-poppins-latin" do
   name "PoppinsLatin"
   homepage "https://github.com/itfoundry/poppins"
 
+  livecheck do
+    url "https://github.com/itfoundry/Poppins/tree/master/products"
+    regex(/href=.*?PoppinsLatin[._-]v?(\d+(?:\.\d+)+)(?:[._-]Latin)?[._-]OTF\.zip/i)
+    strategy :page_match
+  end
+
   font "PoppinsLatin-Black.otf"
   font "PoppinsLatin-BlackItalic.otf"
   font "PoppinsLatin-Bold.otf"
