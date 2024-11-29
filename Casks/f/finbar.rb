@@ -2,13 +2,13 @@ cask "finbar" do
   version "1.13.6"
   sha256 "9e9e05cdc461fa30f93d40407740e90f386bc760433d8bdff0b9b08e5c3074c1"
 
-  url "https://www.roeybiran.com/apps/finbar/Finbar%20#{version}.dmg"
+  url "https://roeybiran.com/apps/finbar/Finbar%20#{version}.dmg"
   name "Finbar"
   desc "Menu bar searching utility"
-  homepage "https://www.roeybiran.com/apps/finbar"
+  homepage "https://roeybiran.com/apps/finbar/"
 
   livecheck do
-    url "https://www.roeybiran.com/apps/finbar/appcast.xml"
+    url "https://roeybiran.com/apps/finbar/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
