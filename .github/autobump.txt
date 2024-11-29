@@ -979,6 +979,7 @@ scrolla
 sdm
 seafile-client
 second-life-viewer
+securesafe
 securityspy
 segger-jlink
 segger-ozone
