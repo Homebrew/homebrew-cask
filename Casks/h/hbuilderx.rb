@@ -1,6 +1,6 @@
 cask "hbuilderx" do
-  version "4.29.2024093009"
-  sha256 "fb2c4aa1ef956a9d51f8a2a76d200f4233dafe6e63d6def830780a9f03c2caa0"
+  version "4.36.2024112817"
+  sha256 "fe0f6440d2130ced5c8e9a9fcd5743af078ad56a79ed2ff24b64de637012ea8a"
 
   url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}.dmg",
       verified: "download1.dcloud.net.cn/download/"
