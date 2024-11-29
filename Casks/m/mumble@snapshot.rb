@@ -9,10 +9,7 @@ cask "mumble@snapshot" do
 
   livecheck do
     url "https://dl.mumble.info/latest/snapshot/client-macos-x64"
-    regex(/mumble[._-]client[._-](.+?)(?:\.x64|~snapshot)?\.dmg/i)
-    strategy :header_match do |headers, regex|
-      headers["content-disposition"][regex, 1].tr("~", "_")
-    end
+    strategy :header_match
   end
 
   deprecate! date: "2025-05-01", because: :unsigned
