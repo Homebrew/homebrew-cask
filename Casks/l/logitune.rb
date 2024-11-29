@@ -11,7 +11,12 @@ cask "logitune" do
     url "https://prosupport.logi.com/api/v2/help_center/de/articles.json?label_names=webcontent=productdownload,webproduct=bad331b5-1feb-11ea-ae1b-a561623ae541"
     regex(/Software[\s-]Version:.*?v?(\d+(?:\.\d+)+)/i)
     strategy :json do |json, regex|
-      json["articles"]&.map { |item| item["body"][regex, 1] }
+      json["articles"]&.map do |item|
+        match = item["body"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
     end
   end
 
