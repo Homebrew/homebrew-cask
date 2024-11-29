@@ -55,6 +55,7 @@ android-studio
 android-studio-preview@beta
 android-studio-preview@canary
 anka-virtualization
+ankama
 anki
 ankiapp
 another-redis-desktop-manager
