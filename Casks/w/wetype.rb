@@ -10,9 +10,11 @@ cask "wetype" do
 
   livecheck do
     url "https://z.weixin.qq.com/web/api/app_info"
-    regex(/WeTypeInstaller[._-]v?(\d+(?:.\d+)+)[._-](\d+).zip/i)
+    regex(/WeTypeInstaller[._-]v?(\d+(?:.\d+)+)[._-](\d+)\.zip/i)
     strategy :json do |json, regex|
       match = json.dig("data", "mac", "download_link")&.match(regex)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end
