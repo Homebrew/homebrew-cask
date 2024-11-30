@@ -682,6 +682,7 @@ mixed-in-key
 mixin
 mixxx
 mixxx@snapshot
+mmex
 mmhmm
 mmhmm-studio
 mochi
