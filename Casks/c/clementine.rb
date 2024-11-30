@@ -8,6 +8,8 @@ cask "clementine" do
   desc "Music player and library organiser"
   homepage "https://www.clementine-player.org/"
 
+  deprecate! date: "2024-11-30", because: :discontinued
+
   app "clementine.app"
 
   zap trash: [
