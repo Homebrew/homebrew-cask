@@ -1,23 +1,26 @@
 cask "bananas" do
-  version "0.0.11"
-  sha256 "c70ba0b7d2f334d71e2d263f6c60b7d4d537a4b1206331757775af99a5ccc977"
+  version :latest
+  sha256 :no_check
 
-  url "https://github.com/mistweaverco/bananas/releases/download/v#{version}/bananas_universal.dmg",
+  url "https://github.com/mistweaverco/bananas/releases/latest/download/bananas_universal.dmg",
       verified: "github.com/mistweaverco/bananas/"
   name "bananas"
   desc "Cross-Platform screen sharing made simple"
   homepage "https://getbananas.net/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :big_sur"
 
   app "bananas.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-d", "com.apple.quarantine", "#{appdir}/bananas.app"],
+                   sudo: false
+  end
+
   zap trash: [
-      "~/Library/Application Support/bananas",
+      "~/Library/Preferences/net.getbananas.app.plist",
+      "~/Library/Saved Application State/net.getbananas.app.savedState",
+    "~/Library/Application Support/bananas",
   ]
 end
