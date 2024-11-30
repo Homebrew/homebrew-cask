@@ -1265,6 +1265,7 @@ xnconvert
 xnviewmp
 xpra
 yaak
+yandex-cloud-cli
 yandex-music
 yealink-meeting
 yes24-ebook
