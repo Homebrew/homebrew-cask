@@ -18,7 +18,7 @@ cask "konica-minolta-bizhub-c759-c658-c368-c287-c3851-driver" do
       strategy :json do |json|
         items = json.select do |i|
           i["TypeOfApplicationName_textS"]&.match?(/driver/i) &&
-            i["OperatingSystemsNames_textM"]&.grep(/macOS.*?#{Regexp.escape(MacOS.version.to_s)}/i)&.any?
+            i["OperatingSystemsNames_textM"]&.any? { |item| item =~ /macOS/i }
         end
 
         item = items.max_by { |i| i["ReleaseDate_textS"] }
