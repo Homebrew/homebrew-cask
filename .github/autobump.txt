@@ -1003,6 +1003,7 @@ shapr3d
 shattered-pixel-dungeon
 shearwater-cloud
 shift
+shortwave
 sigmaos
 signal
 signal@beta
