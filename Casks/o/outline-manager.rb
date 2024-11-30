@@ -1,8 +1,8 @@
 cask "outline-manager" do
-  version "1.15.2"
-  sha256 "9c5ccba90834056bcf18ee0ca84d3e036483f503576966da020450bc5bdd1a1d"
+  version "1.16.0,3"
+  sha256 "d99f271ba178f19a54c94008f2039b2706eb6e3cff420baae16d8fb8c266f1f8"
 
-  url "https://s3.amazonaws.com/outline-releases/manager/macos/#{version}/1/Outline-Manager.dmg",
+  url "https://s3.amazonaws.com/outline-releases/manager/macos/#{version.csv.first}/#{version.csv.second}/Outline-Manager.dmg",
       verified: "s3.amazonaws.com/outline-releases/manager/macos/"
   name "Outline Manager"
   desc "Tool to create and manage Outline servers, powered by Shadowsocks"
@@ -10,7 +10,15 @@ cask "outline-manager" do
 
   livecheck do
     url "https://s3.amazonaws.com/outline-releases/manager/latest-mac.yml"
-    strategy :electron_builder
+    regex(%r{/(\d+)/Outline-Manager\.dmg}i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        "#{yaml["version"]},#{match[1]}"
+      end
+    end
   end
 
   app "Outline Manager.app"
