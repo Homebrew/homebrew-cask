@@ -1043,6 +1043,7 @@ spamsieve
 spark-ar-studio
 sparkle
 sparrow
+spatterlight
 spike
 splashtop-streamer
 splice
