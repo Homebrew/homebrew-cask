@@ -8,12 +8,13 @@ cask "iexplorer" do
   homepage "https://macroplant.com/iexplorer"
 
   livecheck do
-    url "https://macroplant.com/iexplorer/mac/v#{version.major}/appcast"
-    strategy :sparkle do |item|
-      build = item.url[%r{/(\d+)/iExplorer[._-](?:\d+(?:\.\d+)*)\.dmg}i, 1]
-      next if build.blank?
+    url "https://macroplant.com/iexplorer/mac/v#{version.csv.first.major}/appcast"
+    regex(%r{/(\d+)/iExplorer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
 
-      "#{item.version},#{build}"
+      "#{item.version},#{match[1]}"
     end
   end
 
