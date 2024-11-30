@@ -1,9 +1,9 @@
 cask "tidgi" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.11.2"
-  sha256 arm:   "ca98bcd0baaed033be99599c201a3f152897eba464da96ab3bc9fcb75a46965d",
-         intel: "14d7a8d85fa3f1b31cf39f1a2478fbd966d3bc01e3429e631ba4d27833b01f0b"
+  version "0.11.3"
+  sha256 arm:   "5d40704977165e77bab79303ecc8a7591351b9cf33b2706425bd160120cb4351",
+         intel: "9878bde1449d710933c55eaabf8ecd438ae9c25873acea023486dac42c6a0199"
 
   url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TidGi-darwin-#{arch}-#{version}.zip"
   name "TidGi"
