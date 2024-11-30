@@ -10,8 +10,12 @@ cask "qdslrdashboard" do
 
   livecheck do
     url "https://dslrdashboard.info/downloads/"
-    strategy :page_match do |page|
-      page[%r{href=.*?/qdslrdashboard[._-]v?(\d+(?:-\d+)*)[._-]macos}i, 1].tr("-", ".")
+    regex(/href=.*?qdslrdashboard[._-]v?(\d+(?:[.-]\d+)+)[._-]macos/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      match[1].tr("-", ".")
     end
   end
 
