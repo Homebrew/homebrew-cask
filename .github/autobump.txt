@@ -1152,6 +1152,7 @@ trilium-notes
 truhu
 trunk-io
 tuist
+tunetag
 tunnelbear
 tunnelblick@beta
 tuple
