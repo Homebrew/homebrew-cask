@@ -17,7 +17,8 @@ cask "adobe-creative-cloud" do
       item = xml.elements["//feature-entry[@id='ccd.fw.update.greenline.latest']/data"]&.text&.strip
       next if item.blank?
 
-      JSON.parse(item)["version"]
+      json = Homebrew::Livecheck::Strategy::Json.parse_json(item)
+      json["version"]
     end
   end
 
