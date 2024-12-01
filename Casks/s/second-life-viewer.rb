@@ -9,11 +9,12 @@ cask "second-life-viewer" do
 
   livecheck do
     url "https://secondlife.com/support/downloads/"
-    strategy :page_match do |page|
-      v = page[%r{href=.*?/Second_Life_(\d+(?:_\d+)+)_x86_64\.dmg}i, 1]
-      next if v.blank?
+    regex(/href=.*?Second[._-]Life[._-]v?(\d+(?:[._]\d+)+)(?:[._-]x86_64)?\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
 
-      v.tr("_", ".")
+      match[1].tr("_", ".")
     end
   end
 

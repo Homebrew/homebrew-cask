@@ -9,8 +9,12 @@ cask "hubstaff" do
 
   livecheck do
     url "https://app.hubstaff.com/appcast.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version.split("-").first},#{item.url[%r{/(\d+)(?:-standard)?-mac.*?-release}i, 1]}"
+    regex(%r{/(\d+)(?:-standard)?-mac.*?-release}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.short_version.split("-").first},#{match[1]}"
     end
   end
 

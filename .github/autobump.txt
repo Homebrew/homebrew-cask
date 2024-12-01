@@ -81,6 +81,7 @@ archivewebpage
 archy
 arctic
 ares
+ariang
 arq
 artisan
 arturia-software-center

@@ -2,7 +2,7 @@ cask "circuitjs1" do
   arch arm: "arm"
 
   # NOTE: "1" is not a version number, but an intrinsic part of the product name
-  version "2.9.1js"
+  version "3.0.1js"
   sha256 :no_check
 
   url "https://www.falstad.com/circuit/offline/CircuitJS1-mac#{arch}.dmg"

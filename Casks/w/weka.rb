@@ -9,12 +9,16 @@ cask "weka" do
       verified: "sourceforge.net/weka/"
   name "Weka"
   desc "Collection of machine learning algorithms for data mining tasks"
-  homepage "https://www.cs.waikato.ac.nz/ml/weka/"
+  homepage "https://ml.cms.waikato.ac.nz/weka"
 
   livecheck do
     url "https://waikato.github.io/weka-wiki/downloading_weka/"
-    strategy :page_match do |page|
-      page[%r{href=.*?/weka[._-]v?(\d+(?:-\d+)+)[._-]azul[._-]zulu[._-]#{arch}\.dmg}i, 1].tr("-", ".")
+    regex(/href=.*?weka[._-]v?(\d+(?:[.-]\d+)+)[._-]azul[._-]zulu[._-]#{arch}\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      match[1].tr("-", ".")
     end
   end
 

@@ -9,8 +9,12 @@ cask "melodics" do
 
   livecheck do
     url "https://web-cdn.melodics.com/download/osxupdatescastv2.xml"
-    strategy :sparkle do |item|
-      "#{item.version},#{item.url[%r{/(\h+(?:-\h+)+)\.zip}i, 1]}"
+    regex(%r{/(\h+(?:-\h+)+)\.zip}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.version},#{match[1]}"
     end
   end
 
