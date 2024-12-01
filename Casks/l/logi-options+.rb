@@ -29,8 +29,10 @@ cask "logi-options+" do
         verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
 
     livecheck do
-      url "https://support.logi.com/hc/en-gb/articles/1500005516462"
-      regex(/version\D*?(\d+(?:\.\d+)+)/i)
+      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus3/osx/public/update.json"
+      strategy :json do |json|
+        json["version"]
+      end
     end
   end
 
