@@ -8,15 +8,9 @@ cask "bananas" do
   desc "Cross-Platform screen sharing made simple"
   homepage "https://getbananas.net/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "bananas.app"
-
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-d", "com.apple.quarantine", "#{appdir}/bananas.app"],
-                   sudo: false
-  end
 
   zap trash: [
       "~/Library/Preferences/net.getbananas.app.plist",
