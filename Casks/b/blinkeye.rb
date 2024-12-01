@@ -6,12 +6,11 @@ cask "blinkeye" do
       verified: "github.com/nomandhoni-cs/blink-eye/"
   name "Blink Eye"
   desc "Break time reminder app"
-  homepage "https://blinkeye.vercel.app"
+  homepage "https://blinkeye.vercel.app/"
 
   auto_updates true
 
   app "Blink Eye.app"
 
   uninstall quit: "com.blinkeye.app"
-
 end
