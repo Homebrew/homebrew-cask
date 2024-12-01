@@ -13,8 +13,8 @@ cask "bananas" do
   app "bananas.app"
 
   zap trash: [
+    "~/Library/Application Support/bananas",
     "~/Library/Preferences/net.getbananas.app.plist",
     "~/Library/Saved Application State/net.getbananas.app.savedState",
-    "~/Library/Application Support/bananas",
   ]
 end
