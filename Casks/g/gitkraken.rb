@@ -12,8 +12,10 @@ cask "gitkraken" do
   homepage "https://www.gitkraken.com/"
 
   livecheck do
-    url "https://help.gitkraken.com/gitkraken-desktop/current/"
-    regex(/Version\s(\d+(?:\.\d+)+)/i)
+    url "https://release.axocdn.com/#{arch}/RELEASES?v=0.0.0&darwin=999"
+    strategy :json do |json|
+      json["name"]
+    end
   end
 
   auto_updates true
