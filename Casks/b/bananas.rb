@@ -1,6 +1,6 @@
 cask "bananas" do
-  version "0.0.12"
-  sha256 "aeb3d6ab40937524a28a0a569a4d03247d256255641c959dfa97f2c19e725ed8"
+  version "0.0.13"
+  sha256 "b2d51a7a1f6e203909f398e1ce4195477a8bfefc77e0e86bff336ccb496bfd05"
 
   url "https://github.com/mistweaverco/bananas/releases/download/v#{version}/bananas_universal.dmg",
       verified: "github.com/mistweaverco/bananas/"
