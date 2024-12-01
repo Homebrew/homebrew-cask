@@ -12,7 +12,10 @@ cask "caido" do
   homepage "https://caido.io/"
 
   livecheck do
-    url "https://github.com/caido/caido/"
+    url "https://api.caido.io/releases/latest"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on macos: ">= :catalina"
