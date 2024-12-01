@@ -11,12 +11,7 @@ cask "flipper" do
   desc "Desktop debugging platform for mobile developers"
   homepage "https://fbflipper.com/"
 
-  livecheck do
-    url "https://www.facebook.com/fbflipper/public/latest.json?version=0.0.0"
-    strategy :json do |json|
-      json["version"]
-    end
-  end
+  deprecate! date: "2024-12-01", because: :discontinued
 
   app "Flipper.app"
 
