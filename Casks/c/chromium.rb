@@ -1,3 +1,6 @@
+# typed: strict
+# frozen_string_literal: true
+
 cask "chromium" do
   arch arm: "Mac_Arm", intel: "Mac"
 
@@ -26,6 +29,20 @@ cask "chromium" do
       #!/bin/sh
       exec '#{appdir}/Chromium.app/Contents/MacOS/Chromium' "$@"
     EOS
+  end
+
+  postflight do
+    dict = {
+      "LSEnvironment.GOOGLE_API_KEY"               => "AIzaSyCkfPOPZXDKNn8hhgu3JrA62wIgC93d44k",
+      "LSEnvironment.GOOGLE_DEFAULT_CLIENT_ID"     => "811574891467.apps.googleusercontent.com",
+      "LSEnvironment.GOOGLE_DEFAULT_CLIENT_SECRET" => "kdloedMFGdGla2P1zacGjAQh",
+    }
+
+    plist = "#{appdir}/Chromium.app/Contents/Info.plist"
+
+    dict.each do |key, val|
+      system("plutil -replace #{key} -string '#{val}' #{plist}")
+    end
   end
 
   zap trash: [
