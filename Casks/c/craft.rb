@@ -1,5 +1,5 @@
 cask "craft" do
-  version "3.0.0"
+  version :latest
   sha256 :no_check
 
   url "https://res.craft.do/native/sparkle/Craft.dmg"
@@ -7,12 +7,6 @@ cask "craft" do
   desc "Native document editor"
   homepage "https://www.craft.do/"
 
-  livecheck do
-    url "https://luki-prod-us-east-1-resources.s3.amazonaws.com/native/sparkle/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
-
-  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Craft.app"
