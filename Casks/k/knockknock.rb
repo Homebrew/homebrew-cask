@@ -1,12 +1,14 @@
 cask "knockknock" do
-  version "2.5.0"
-  sha256 "1ba31195a8312b97c40955db3c554947b261a82c319d29cface4619fa50f3daa"
+  version "3.0.0"
+  sha256 "e9c8954f5153fdb2c22d23c8191c4ebcca19e55058afa9d6b5d670bb60c92b6c"
 
   url "https://github.com/objective-see/KnockKnock/releases/download/v#{version}/KnockKnock_#{version}.zip",
       verified: "github.com/objective-see/KnockKnock/"
   name "KnockKnock"
   desc "Tool to show what is persistently installed on the computer"
   homepage "https://objective-see.com/products/knockknock.html"
+
+  depends_on macos: ">= :catalina"
 
   app "KnockKnock.app"
 
