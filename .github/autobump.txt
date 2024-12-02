@@ -1248,6 +1248,7 @@ whatsapp@legacy
 whisky
 widelands
 wifispoof
+winbox
 windows-app
 windscribe
 wing-personal
