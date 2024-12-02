@@ -1051,6 +1051,7 @@ sparkle
 sparrow
 spatterlight
 spike
+splashtop-business
 splashtop-streamer
 splice
 springtoolsuite
