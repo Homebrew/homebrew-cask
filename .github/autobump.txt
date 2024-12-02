@@ -361,7 +361,6 @@ firefox@developer-edition
 firefox@esr
 fixkey
 fleet
-flipper
 fliqlo
 flirc
 floorp
