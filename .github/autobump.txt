@@ -280,6 +280,7 @@ discord@ptb
 diskcatalogmaker
 dockside
 dockx
+dogecoin
 dolphin@dev
 dosbox-staging
 dotnet
