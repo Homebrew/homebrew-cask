@@ -640,6 +640,7 @@ melodics
 memory-cleaner
 mendeley-reference-manager
 menubarx
+meridiem
 merlin-project
 messenger
 meta-quest-developer-hub
