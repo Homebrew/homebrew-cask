@@ -80,8 +80,8 @@ cask "choosy" do
     pkg "Choosy.pkg"
   end
   on_sonoma :or_newer do
-    version "2.4"
-    sha256 "cf2772cf8a89b13ec30c924e19a4c381d560f869161094374b01fa75d7be267b"
+    version "2.4.1"
+    sha256 "7ef83b151d312ca75413f5bc12ecbe5a07ef74e816e46f34284e08601c97d699"
 
     livecheck do
       url "https://choosy.app/sparkle/feed"
