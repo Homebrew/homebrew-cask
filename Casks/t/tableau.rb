@@ -11,11 +11,22 @@ cask "tableau" do
   desc "Data visualization software"
   homepage "https://www.tableau.com/products/desktop"
 
+  # This checks the upstream Releases page because the XML file we were checking
+  # (https://downloads.tableau.com/TableauAutoUpdate.xml) was missing the newest
+  # versions. This check works locally but fails in our CI environment, so we
+  # should return to checking the XML file if/when it starts being reliably
+  # updated to include the newest releases again.
   livecheck do
-    url "https://www.tableau.com/app/discover/desktop"
-    strategy :page_match do |page|
-      match = page.match(/<section[^>]+data-version-before=["'](\d+\.\d+\.\d+)["']/i)
-      match[1] if match
+    url "https://www.tableau.com/support/releases"
+    regex(%r{href=.*?desktop/v?(\d+(?:\.\d+)+)[^"' >]*["' >]}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        if (version = match[0]).count(".") >= 2
+          version
+        else
+          "#{version}.0"
+        end
+      end
     end
   end
 
