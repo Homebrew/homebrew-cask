@@ -1,6 +1,6 @@
 cask "algodoo" do
-  version "2.2.1"
-  sha256 "67bad62930161e38356ceeb1e4fa8dd0b28eb234fa0aaa14ca927766808330ce"
+  version "2.2.2"
+  sha256 "9b91b3356ccbc880ab9b3e8a838a82aec18ff513b2a8b313218b5d63c7817c94"
 
   url "https://www.algodoo.com/download/Algodoo_#{version.dots_to_underscores}-macOS.dmg"
   name "Algodoo"
