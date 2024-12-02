@@ -1,5 +1,5 @@
 cask "zoho-workdrive" do
-  version "2.7.44"
+  version "2.7.48"
   sha256 :no_check
 
   url "https://files-accl.zohopublic.com/public/wdbin/download/46f971e4fc4a32b68ad5d7dade38a7d2",
