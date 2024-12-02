@@ -102,6 +102,7 @@ badlion-client
 baidunetdisk
 balenaetcher
 banana-cake-pop
+bananas
 banking-4
 banktivity
 batteries
@@ -164,6 +165,7 @@ canon-ufrii-driver
 canva
 cap
 capacities
+caprine
 captain
 carbon-copy-cloner
 cardhop
@@ -475,6 +477,7 @@ hackolade
 halloy
 hancom-docs
 hancom-word
+handbrake
 hashbackup
 hazel
 hbuilderx
@@ -1059,6 +1062,7 @@ springtoolsuite
 spybuster
 spyder
 sqlcl
+sqlitestudio
 squash
 standard-notes
 staruml
@@ -1088,6 +1092,7 @@ syncthing
 tabby
 tableflip
 tableplus
+tabtab
 tagspaces
 tailscale
 taskade
