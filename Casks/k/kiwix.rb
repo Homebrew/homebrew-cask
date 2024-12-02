@@ -7,10 +7,7 @@ cask "kiwix" do
   desc "App providing offline access to Wikipedia and many other web sites"
   homepage "https://www.kiwix.org/"
 
-  livecheck do
-    url "https://download.kiwix.org/release/kiwix-macos/kiwix-macos.dmg"
-    strategy :header_match
-  end
+  disable! date: "2024-12-02", because: :moved_to_mas
 
   app "Kiwix.app"
 
