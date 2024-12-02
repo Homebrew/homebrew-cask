@@ -120,6 +120,7 @@ bike
 bilibili
 binance
 bing-wallpaper
+bisq
 bitbox
 bitwarden
 bitwig-studio
