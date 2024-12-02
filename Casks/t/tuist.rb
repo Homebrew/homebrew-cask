@@ -1,16 +1,14 @@
-cask "tuist" do
-  version "4.36.0"
-  sha256 "6e6f177982396555c518214aa4506c03d6b3c3e01bf4962c8d688dc137b4a6f3"
+cask "tuist@0.8.1" do
+  version "0.8.1"
+  sha256 "4e121a0fa1803a9837cbfce740bedbd03531815df69ebd69dc92d555ab6b22f2"
 
-  url "https://github.com/tuist/tuist/releases/download/#{version}/tuist.zip",
-      verified: "github.com/tuist/tuist/"
+  url "https://github.com/tuist/tuist/releases/download/app@0.8.1/Tuist.dmg"
   name "Tuist"
-  desc "Create, maintain, and interact with Xcode projects at scale"
-  homepage "https://tuist.io/"
+  desc "Tuist macOS app"
+  homepage "https://github.com/tuist/tuist"
 
-  deprecate! date: "2025-05-28", because: :discontinued
+  auto_updates true
+  conflicts_with formula: "tuist"
 
-  binary "tuist"
-
-  zap trash: "~/.tuist"
+  app "Tuist.app"
 end
