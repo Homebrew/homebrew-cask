@@ -1,9 +1,9 @@
 cask "tableau" do
   arch arm: "-arm64"
 
-  version "2024.2.4"
-  sha256 arm:   "f2524f6db177bbc4ef639f519c98e4e59fcde8f7aa84aa2ff77e5062228121d0",
-         intel: "f496583c475601f9a9f0993b2fa7f53d6f9f502efa7ce6d5ba8498076cb606e3"
+  version "2024.3.1"
+  sha256 arm:   "cf6a00486ae06716f41cf1552425fea296ab227ed3cbd38febaa09b9c563b528",
+         intel: "f98a2631784242eccd68e4a41707d9b0d3aaee6ec9b40dea9847bb724f5d34d4"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauDesktop-#{version.dots_to_hyphens}#{arch}.dmg",
       user_agent: "curl/8.7.1"
@@ -11,10 +11,22 @@ cask "tableau" do
   desc "Data visualization software"
   homepage "https://www.tableau.com/products/desktop"
 
+  # This checks the upstream Releases page because the XML file we were checking
+  # (https://downloads.tableau.com/TableauAutoUpdate.xml) was missing the newest
+  # versions. This check works locally but fails in our CI environment, so we
+  # should return to checking the XML file if/when it starts being reliably
+  # updated to include the newest releases again.
   livecheck do
-    url "https://downloads.tableau.com/TableauAutoUpdate.xml"
-    strategy :xml do |xml|
-      xml.get_elements("//version").map { |item| item.attributes["releaseNotesVersion"] }
+    url "https://www.tableau.com/support/releases"
+    regex(%r{href=.*?desktop/v?(\d+(?:\.\d+)+)[^"' >]*["' >]}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        if (version = match[0]).count(".") >= 2
+          version
+        else
+          "#{version}.0"
+        end
+      end
     end
   end
 
