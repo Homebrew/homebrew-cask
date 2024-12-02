@@ -611,6 +611,7 @@ lookaway
 loom
 losslesscut
 loupedeck
+low-profile
 lunacy
 lunar
 lunar-client
