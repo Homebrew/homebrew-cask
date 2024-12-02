@@ -435,6 +435,7 @@ gather
 gb-studio
 gcs
 gdevelop
+geekbench-ai
 genesys-cloud
 geoda
 geogebra
