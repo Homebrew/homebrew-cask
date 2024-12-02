@@ -900,6 +900,7 @@ qbittorrent
 qbittorrent@lt20
 qcad
 qgis
+qgroundcontrol
 qlab
 qownnotes
 qq
