@@ -575,6 +575,7 @@ langgraph-studio
 languagetool
 lark
 launchbar
+launchcontrol
 lazycat
 leapp
 lectrote
