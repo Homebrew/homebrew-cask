@@ -17,4 +17,8 @@ cask "firework" do
     "~/Library/Preferences/cloud.firework.plist",
     "~/Library/Saved Application State/cloud.firework.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
