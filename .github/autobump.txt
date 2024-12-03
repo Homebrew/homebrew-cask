@@ -1262,6 +1262,7 @@ wing-personal
 wins
 wire
 wirecast
+wizcli
 wljs-notebook
 wondershare-uniconverter
 wooshy
