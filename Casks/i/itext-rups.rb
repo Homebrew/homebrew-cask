@@ -14,15 +14,13 @@ cask "itext-rups" do
 
   container type: :zip
 
-  # Create the wrapper script in the binary directory
-  wrapper_script = "#{staged_path}/itext-rups.wrapper.sh"
-  binary wrapper_script, target: "itext-rups"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/itext-rups.wrapper.sh"
+  binary shimscript, target: "itext-rups"
 
   preflight do
     jar_path = "#{staged_path}/itext-rups-#{version}.jar"
-
-    # Write the wrapper script before the binary stanza executes
-    File.write(wrapper_script, <<~EOS)
+    File.write shimscript, <<~EOS
       #!/bin/bash
       exec java -jar "#{jar_path}" "$@"
     EOS
