@@ -11,7 +11,7 @@ cask "zen-browser@twilight" do
   homepage "https://zen-browser.app/"
 
   livecheck do
-    url "https://github.com/zen-browser/desktop/releases?q=twilight"
+    url "https://github.com/zen-browser/desktop/releases/tag/twilight"
     regex(%r{/tag/twilight[^>]+?>.+?v?(\d+(?:\.\d+)+(?:[._-][a-z]\.\d+)?)}i)
     strategy :page_match
   end
