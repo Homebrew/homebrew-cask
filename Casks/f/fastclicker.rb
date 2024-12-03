@@ -10,4 +10,8 @@ cask "fastclicker" do
   deprecate! date: "2023-12-17", because: :discontinued
 
   app "FastClicker.app"
+
+  postflight do
+    set_permissions "#{appdir}/FastClicker.app/Contents/MacOS/Mac Auto Clicker", "a+x"
+  end
 end
