@@ -1,9 +1,9 @@
 cask "satyrn" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.98"
-  sha256 arm:   "42431875f1f82d311ce3aa6130b972e24f280e39f6984ecbce7f19e6097ff70b",
-         intel: "d853e41f6a4a448e72d63b42b8def2532a278a18c55a551c0156943c14ee30c6"
+  version "0.0.99"
+  sha256 arm:   "22dffe5aba79a21f4373d2d38fefe594d456c0343870dde285378fbe38217821",
+         intel: "2dc1d9e96aa48fadbc2fa96085e877c14c64fa4e62a3d4a715f243cd4a14d5a5"
 
   url "https://satyrn-updates.s3.amazonaws.com/satyrn-#{version}-#{arch}.dmg",
       verified: "satyrn-updates.s3.amazonaws.com/"
