@@ -30,6 +30,7 @@ adguard@nightly
 adobe-acrobat-pro
 adobe-acrobat-reader
 adrive
+aerial@beta
 affine
 affinity-designer
 affinity-photo
