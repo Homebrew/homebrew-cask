@@ -795,6 +795,7 @@ openrefine
 openscad@snapshot
 openshift-client
 openshot-video-editor@daily
+opensoundmeter
 openthesaurus-deutsch
 openvanilla
 openwebstart
