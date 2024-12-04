@@ -1,8 +1,8 @@
 cask "loupedeck" do
-  version "5.9.1.19365"
-  sha256 "cf0357880332e537827b328716345b9c6dff0537a189f3181f6ff8565aef2db7"
+  version "6.0.2.21225,656092"
+  sha256 "1e6f4da7f28c3c711cab164076c5bf6720fd50bc54a3995ad920ad2165b6c3f4"
 
-  url "https://5145542.fs1.hubspotusercontent-na1.net/hubfs/5145542/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor_patch.chomp(".0")}/LoupedeckInstaller_#{version}.dmg",
+  url "https://5145542.fs1.hubspotusercontent-na1.net/hubfs/5145542/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor_patch.chomp(".0")}/LoupedeckInstaller_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "5145542.fs1.hubspotusercontent-na1.net/hubfs/5145542/"
   name "Loupdeck"
   desc "Software for Loupedeck consoles"
@@ -10,7 +10,10 @@ cask "loupedeck" do
 
   livecheck do
     url "https://loupedeck.com/downloads/"
-    regex(/href=.*?LoupedeckInstaller(?:[._\s-]|%20)+v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?LoupedeckInstaller(?:[._\s-]|%20)+v?(\d+(?:\.\d+)+)_(\d+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match.first},#{match.second}" }
+    end
   end
 
   depends_on macos: ">= :sierra"
