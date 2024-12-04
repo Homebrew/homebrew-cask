@@ -1,6 +1,6 @@
 cask "timecamp" do
-  version "1.7.2.0"
-  sha256 "165045e6170fd17a8ef77bd3d75318594dd687b5f51255e5c63c318ab9250cfd"
+  version "1.8.0.0"
+  sha256 "4989d37fc2805d67245111ec725bc0a69e2b5af2b39895fc296ed439e74e6dfa"
 
   url "https://timecamp.s3.amazonaws.com/downloadsoft/#{version}/TimeCampSetup_macOS.dmg",
       verified: "timecamp.s3.amazonaws.com/"
