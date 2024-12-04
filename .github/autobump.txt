@@ -80,6 +80,7 @@ archipelago
 archivewebpage
 archy
 arctic
+arduino-ide
 ares
 ariang
 arq
