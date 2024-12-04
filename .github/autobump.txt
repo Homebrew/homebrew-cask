@@ -513,6 +513,7 @@ iina+
 imazing
 imhex
 inkdown
+inkdrop
 inso
 inso@beta
 insomnia
