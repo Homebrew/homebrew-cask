@@ -1,5 +1,5 @@
 cask "eobcanka" do
-  version "3.4.3"
+  version "3.4.4"
   sha256 :no_check
 
   url "https://info.identitaobcana.cz/download/eObcanka.dmg"
