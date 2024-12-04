@@ -1,9 +1,9 @@
 cask "opensoundmeter" do
   arch arm: "arm", intel: "intel"
 
-  version "1.3"
-  sha256 arm:   "98c8c301890af8f2d6a3d4e12c3a1eae45f19a5b558eb8e7c60b0839953a15f8",
-         intel: "41f6ef5b98fc4b8fd5f231fdf936e58fa65072fe7f293ae9db597886e5f9e279"
+  version "1.4"
+  sha256 arm:   "050e334ab991386a9dedab8bad139922ec9cf3aeb4f0af065b5c2701f2dbb954",
+         intel: "207e66d8bab2c432bed73684d1caaa5513276fe4fb7d52d1a65382b95b3458c4"
 
   url "https://github.com/psmokotnin/osm/releases/download/v#{version}/OpenSoundMeter_#{arch}.dmg",
       verified: "github.com/psmokotnin/osm/"
