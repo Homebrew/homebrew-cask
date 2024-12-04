@@ -905,6 +905,7 @@ pyzo
 qbittorrent
 qbittorrent@lt20
 qcad
+qfinder-pro
 qgis
 qgroundcontrol
 qlab
