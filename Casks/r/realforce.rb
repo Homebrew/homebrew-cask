@@ -1,6 +1,6 @@
 cask "realforce" do
-  version "3.3.0"
-  sha256 "85c6a76425933c88070d6c61d61224c534e067addeaa99f5f93d973bd4c7d2b7"
+  version "3.3.1"
+  sha256 "95f501a3d48017d436dab02e8f2581adf2e72f703e3c0e8f8321f9cd0c694ffe"
 
   url "https://www.realforce.co.jp/support/download/software/mac/files/REALFORCE%20CONNECT%20Software_#{version.dots_to_hyphens}.pkg"
   name "REALFORCE for Mac"
