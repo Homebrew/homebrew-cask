@@ -329,6 +329,7 @@ enpass
 ente
 ente-auth
 entry
+epic-games
 eset-cyber-security
 evernote
 excalidrawz
