@@ -1018,6 +1018,7 @@ shattered-pixel-dungeon
 shearwater-cloud
 shift
 shortwave
+shutter-encoder
 sigmaos
 signal
 signal@beta
