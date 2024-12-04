@@ -996,6 +996,7 @@ screenmemory
 screens-connect
 scrolla
 sdm
+seadrive
 seafile-client
 second-life-viewer
 securesafe
