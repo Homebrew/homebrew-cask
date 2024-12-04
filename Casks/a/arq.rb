@@ -15,6 +15,7 @@ cask "arq" do
   auto_updates true
 
   pkg "Arq#{version}.pkg"
+  binary "#{appdir}/Arq.app/Contents/Resources/arqc"
 
   uninstall launchctl: [
               "com.haystacksoftware.arqagent",
