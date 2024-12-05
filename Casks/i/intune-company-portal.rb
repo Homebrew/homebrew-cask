@@ -1,6 +1,6 @@
 cask "intune-company-portal" do
-  version "5.2409.1"
-  sha256 "5fc90f74ffd980c0d696a5698a8df6743743b8882e7ad99b58f61eb050476e6c"
+  version "5.2410.1"
+  sha256 "489c6d0cef53104865dbcea6fc293d56290a82ce37d311e08e360c64d6fbba3a"
 
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/CompanyPortal_#{version}-Upgrade.pkg"
   name "Company Portal"
@@ -32,12 +32,13 @@ cask "intune-company-portal" do
         },
       ]
 
-  uninstall quit:    "com.microsoft.autoupdate2",
-            pkgutil: [
+  uninstall launchctl: "com.microsoft.update.agent",
+            quit:      "com.microsoft.autoupdate2",
+            pkgutil:   [
               "com.microsoft.CompanyPortal",
               "com.microsoft.CompanyPortalMac",
             ],
-            delete:  "/Applications/Company Portal.app"
+            delete:    "/Applications/Company Portal.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.CompanyPortalMac.ssoextension/",
