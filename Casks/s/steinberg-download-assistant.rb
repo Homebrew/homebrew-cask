@@ -8,7 +8,7 @@ cask "steinberg-download-assistant" do
   homepage "https://o.steinberg.net/en/support/content_and_accessories/steinberg_download_assistant.html"
 
   livecheck do
-    url "https://www.steinberg.net/sda-mac"
+    url "https://r.mb.steinberg.net/sda-latest-mac"
     regex(%r{/absolute-downloader-v?(\d+(?:\.\d+)+)-([^/]+)/}i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
