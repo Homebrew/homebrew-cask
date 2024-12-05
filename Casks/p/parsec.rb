@@ -1,5 +1,5 @@
 cask "parsec" do
-  version "150-95e"
+  version "150-96a"
   sha256 :no_check
 
   url "https://builds.parsec.app/package/parsec-macos.pkg"
