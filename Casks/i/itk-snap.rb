@@ -1,9 +1,9 @@
 cask "itk-snap" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "4.2.0,20240422"
-  sha256 arm:   "250c119c723398c2a88afa84015a0c08b082261f54f48f062ce0e8105b6eeaaa",
-         intel: "f4414b5eed59599b233efbf1963a0684304fa35901cc61e2420ca623be0f8997"
+  version "4.2.2,20241202"
+  sha256 arm:   "424fe1e3b63195ac7c3bd0b844cedd51d2cbfe06fa6bb63f74d2bbb7682c96ca",
+         intel: "db7a8e05baac941ebfc2c9cd64fd0a87493729c17eabde81919a20432b9a057c"
 
   url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version.csv.first}-#{version.csv.second}-Darwin-#{arch}.dmg",
       verified: "downloads.sourceforge.net/itk-snap/"
