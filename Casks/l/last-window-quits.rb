@@ -1,6 +1,6 @@
 cask "last-window-quits" do
-  version "1.1.3,2024,11"
-  sha256 "2b6645a0910f27a7021828a44a8744e03db7a7a99b75c3d88ad5fc09c31f29e0"
+  version "1.1.4,2024,12"
+  sha256 "10938d6cd6e201914d3041673509891f80e102c6fa78be8ddf1c3caed1fd862d"
 
   url "https://lawand.io/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/last-window-quits-#{version.csv.first}.zip"
   name "Last Window Quits"
