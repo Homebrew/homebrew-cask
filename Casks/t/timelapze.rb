@@ -1,6 +1,6 @@
 cask "timelapze" do
-  version "1.2.0"
-  sha256 "e25d7ed27941d06001bf0b06443bf8163c675113371edac8044a38925c229ad8"
+  version "1.2.2"
+  sha256 "5ab0fad611d6b627a10ee4db673fd74bbca1296e6b15ea152eabc8ca88a10187"
 
   url "https://github.com/wkaisertexas/ScreenTimeLapse/releases/download/v#{version}/TimeLapze.zip"
   name "TimeLapze"
@@ -8,7 +8,7 @@ cask "timelapze" do
   homepage "https://github.com/wkaisertexas/ScreenTimeLapse"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "TimeLapze.app"
 
