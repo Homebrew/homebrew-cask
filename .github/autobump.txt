@@ -313,6 +313,7 @@ edrawmind
 egnyte
 electerm
 electron
+electron-cash
 electron-fiddle
 electrum
 elektron-overbridge
