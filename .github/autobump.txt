@@ -288,6 +288,7 @@ dockx
 dogecoin
 dolphin@dev
 dosbox-staging
+dosbox-x
 dotnet
 dotnet-sdk
 dotnet-sdk@preview
