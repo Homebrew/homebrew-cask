@@ -213,6 +213,7 @@ codeql
 codux
 cog
 coin-wallet
+commandpost
 confluent-cli
 connect-fonts
 cookie
