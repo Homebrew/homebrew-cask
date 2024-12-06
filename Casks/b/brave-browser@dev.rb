@@ -12,7 +12,7 @@ cask "brave-browser@dev" do
   desc "Web browser focusing on privacy"
   homepage "https://brave.com/download-dev/"
 
-  deprecate! date: "2023-12-04", because: :discontinued
+  disable! date: "2023-12-04", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :catalina"
