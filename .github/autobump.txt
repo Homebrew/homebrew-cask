@@ -788,6 +788,7 @@ ollamac
 olympus
 omnifocus
 omnigraffle
+onecast
 onedrive
 onekey
 onlyoffice
