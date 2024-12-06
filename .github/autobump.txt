@@ -283,6 +283,7 @@ discord@canary
 discord@development
 discord@ptb
 diskcatalogmaker
+djstudio
 dockside
 dockx
 dogecoin
