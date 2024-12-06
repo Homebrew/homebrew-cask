@@ -18,7 +18,8 @@ cask "alfaview" do
 
   pkg "alfaview-mac-production-#{version}.pkg"
 
-  uninstall pkgutil: "placeholder"
+  uninstall quit:    "com.alfaview.desktop",
+            pkgutil: "com.alfaview.desktop"
 
   zap trash: "~/Library/Application Support/alfaview"
 end
