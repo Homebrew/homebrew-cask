@@ -693,6 +693,7 @@ miniforge
 minisim
 minitube
 minizincide
+minstaller
 mints
 mist
 mitmproxy
