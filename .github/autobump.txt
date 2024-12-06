@@ -156,6 +156,7 @@ busycal
 buttercup
 c0re100-qbittorrent
 cables
+cacher
 cahier
 calhash
 calibre
