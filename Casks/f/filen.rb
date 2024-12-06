@@ -14,10 +14,17 @@ cask "filen" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Filen.app"
 
   zap trash: [
+    "~/Library/Application Support/@filen",
     "~/Library/Application Support/filen-desktop",
+    "~/Library/Caches/@filendesktop-updater",
+    "~/Library/Caches/io.filen.desktop",
+    "~/Library/Caches/io.filen.desktop.ShipIt",
+    "~/Library/HTTPStorages/io.filen.desktop",
     "~/Library/Logs/filen-desktop",
     "~/Library/Preferences/io.filen.desktop.plist",
     "~/Library/Saved Application State/io.filen.desktop.savedState",
