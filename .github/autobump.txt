@@ -492,6 +492,7 @@ heptabase
 herd
 heroic
 hhkb-studio
+hides
 holavpn
 home-assistant
 hoppscotch
