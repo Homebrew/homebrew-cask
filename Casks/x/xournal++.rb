@@ -1,11 +1,11 @@
 cask "xournal++" do
-  arch arm: "macos-arm.dmg", intel: "macos.zip"
+  arch arm: "ARM64", intel: "X64"
 
-  version "1.2.4"
-  sha256 arm:   "6a6f890cb64f2fc6201d92369c138e37eae33faf38d9c695c72c3ad02a3b54cc",
-         intel: "441f4b075548ae942a6a1217c958b2dcaa05575d0016c8cc27541358e8669c3a"
+  version "1.2.5"
+  sha256 arm:   "993aec0ffde20c8dd8c731e7bc2216bfe7e6e6d80356bda0e6ea9bfbe0b97a46",
+         intel: "d640c34d7792ce9ab706c7291686527eadaa9de36e71756c028168cdc6cc0766"
 
-  url "https://github.com/xournalpp/xournalpp/releases/download/v#{version}/xournalpp-#{version}-#{arch}"
+  url "https://github.com/xournalpp/xournalpp/releases/download/v#{version}/xournalpp-#{version}-macOS-#{arch}.dmg"
   name "Xournal++"
   desc "Handwriting notetaking software"
   homepage "https://github.com/xournalpp/xournalpp"
