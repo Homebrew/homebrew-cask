@@ -790,6 +790,7 @@ ollamac
 olympus
 omnifocus
 omnigraffle
+omnioutliner
 onecast
 onedrive
 onekey
