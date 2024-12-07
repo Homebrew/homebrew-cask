@@ -709,6 +709,7 @@ mmhmm-studio
 mochi
 mochi-diffusion
 mockoon
+modern-csv
 modrinth
 monal
 monal@beta
@@ -997,6 +998,7 @@ rubymine
 rustdesk
 rustrover
 safe-exam-browser
+sanctum
 santa
 sapmachine-jdk
 sauce-connect
@@ -1282,6 +1284,7 @@ wifispoof
 winbox
 windows-app
 windscribe
+windsurf
 wing-personal
 wins
 wire
