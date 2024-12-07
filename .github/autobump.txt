@@ -1216,6 +1216,7 @@ updf
 usmart-trade
 utm
 utools
+uu-booster
 uvtools
 valentina-studio
 vamiga
