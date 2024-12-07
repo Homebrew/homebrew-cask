@@ -1,6 +1,6 @@
 cask "font-oppo-sans" do
-  version "4.0,202410,18,62d51f494591f1a9040d83b597745911"
-  sha256 "f8bef382e209a4965fe589efdb72fd6bef45a9b4fdb494e20ffa16b31cd364d5"
+  version "4.0,202412,05,0f155015fff7700fbbcef7fa2aad78dc"
+  sha256 "4a314ad9446d0ba86fde57f18dbe8b7376c32dd5cdf6e3c8119a5d1ccf934ba8"
 
   url "https://openfs.oppomobile.com/open/oop/#{version.csv.second}/#{version.csv.third}/#{version.csv.fourth}.zip"
   name "OPPO Sans"
