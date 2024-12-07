@@ -980,6 +980,7 @@ rippling
 rive
 rize
 roam
+roam-research
 roblox
 robloxstudio
 roboform
