@@ -1,6 +1,6 @@
 cask "keepassxc@snapshot" do
-  version "2.8.0,255789"
-  sha256 "6e04fe12dc0c3a68a5d7d3341ad4e296dfd7166bf46b830b22bb9ec27a511bfc"
+  version "2.8.0,255989"
+  sha256 "517444dbb85e9fc84eb1178982c5980b30dae8408f79d1557b16b3b119f9fd45"
 
   url "https://snapshot.keepassxc.org/build-#{version.csv.second}/KeePassXC-#{version.csv.first}-snapshot.dmg"
   name "KeePassXC"
