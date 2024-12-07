@@ -8,13 +8,13 @@ cask "octarine" do
 
   url "https://pub-3d35bc018fc54f11bde129e3e73e8002.r2.dev/#{version}/#{folder}/octarine_#{version}_#{arch}.dmg",
       verified: "pub-3d35bc018fc54f11bde129e3e73e8002.r2.dev/"
-  name "octarine"
-  desc "Markdown based note taking app with a focus on speed, simplicity, and ownership"
+  name "Octarine"
+  desc "Markdown-based note-taking app"
   homepage "https://octarine.app/"
 
   livecheck do
     url "https://octarine.app/releases"
-    regex(/href=.*?octarine[._-]v?(\d+(?:\.\d+)+)_aarch64\.dmg/i)
+    regex(/href=.*?octarine[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
