@@ -418,6 +418,7 @@ font-lxgw-neozhisong
 font-lxgw-simxihei
 font-lxgw-simzhisong
 font-sarasa-gothic
+font-sudo
 foobar2000
 fork
 forkgram-telegram
