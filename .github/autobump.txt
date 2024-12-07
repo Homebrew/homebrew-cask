@@ -993,6 +993,7 @@ rstudio@daily
 rubymine
 rustdesk
 rustrover
+safe-exam-browser
 santa
 sapmachine-jdk
 sauce-connect
