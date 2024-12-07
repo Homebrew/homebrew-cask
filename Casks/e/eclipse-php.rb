@@ -1,9 +1,9 @@
 cask "eclipse-php" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.33.0,2024-09"
-  sha256 arm:   "550df37fe03b0aa2b8d302bc2161647849c37e18193376ab69b9957a37c0e5ae",
-         intel: "df6bc240e357d57be812a210a9be96f8f0a88a771cae9856bd653c8551b8b524"
+  version "4.34.0,2024-12"
+  sha256 arm:   "c9d9876ae1b333e1c5ebd10c78477c171f6d6b79ba8bca233bc5ba7ba1179cc2",
+         intel: "8336e2d952ec09eb3721e7e93ac4fce50bb5fdb939f638256d40ff1483f48ec0"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-php-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for PHP Developers"
