@@ -1,6 +1,6 @@
 cask "huggingchat" do
-  version "0.6.0"
-  sha256 "14a264b02595bd2560d947091e92cea3b496a9e003db36059c1431efcf1b4fac"
+  version "0.7.0"
+  sha256 "6a9601d793f25dc62fe6cec9314a7a99d51106937d283c90fabd45e29f1d83e4"
 
   url "https://github.com/huggingface/chat-macOS/releases/download/v#{version}/HuggingChat.zip"
   name "huggingchat"
@@ -9,7 +9,7 @@ cask "huggingchat" do
 
   depends_on macos: ">= :sonoma"
 
-  app "HuggingChat.app"
+  app "HuggingChat/HuggingChat.app"
 
   zap trash: [
     "~/Library/Application Scripts/cyrilzakka.HuggingChat-Mac",
