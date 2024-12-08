@@ -3,10 +3,11 @@ cask "font-hind-mysuru" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
+      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/hindmysuru"
   name "Hind Mysuru"
-  homepage "https://github.com/itfoundry/hind-mysuru"
+  homepage "https://fonts.google.com/specimen/Hind+Mysuru"
 
   font "HindMysuru-Bold.ttf"
   font "HindMysuru-Light.ttf"
