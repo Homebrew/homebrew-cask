@@ -1,7 +1,6 @@
 cask "catalyst-browse" do
-  version "1.1"
-  sha256 "3c7251bc7425a3368fa486037d3cb99dd1eabbe3e4b15b6726414007d18b41e4"
-
+  version ""
+  sha256 :no_check
   url "https://support.d-imaging.sony.co.jp/disoft_DL/CatalystBrowse_DL/mac?fm=eu",
       verified: "support.d-imaging.sony.co.jp/disoft_DL/"
   name "Catalyst Browse"
@@ -12,6 +11,7 @@ cask "catalyst-browse" do
     url "https://support.d-imaging.sony.co.jp/disoft_DL/CatalystBrowse_DL/mac?fm=eu"
     strategy :header_match
   end
+  
 
   depends_on macos: ">= :mojave"
 
