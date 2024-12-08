@@ -1,6 +1,6 @@
 cask "mumble" do
-  version "1.5.634"
-  sha256 "74556f79a48b6a9fef3c5d8458915d80f38e55384fe02db5fbd5df37c87ca387"
+  version "1.5.735"
+  sha256 "9f7e5f0677e577a480269df218349dca4263a3785461294f3c8f26ca4c308641"
 
   url "https://github.com/mumble-voip/mumble/releases/download/v#{version}/mumble_client-#{version}.x64.dmg",
       verified: "github.com/mumble-voip/mumble/"
