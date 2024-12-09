@@ -318,6 +318,7 @@ electerm
 electron
 electron-cash
 electron-fiddle
+electronmail
 electrum
 elektron-overbridge
 elektron-transfer
