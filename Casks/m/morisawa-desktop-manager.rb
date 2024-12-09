@@ -21,6 +21,7 @@ cask "morisawa-desktop-manager" do
 
   uninstall launchctl: [
               "application.MDMAgentManager.*",
+              "application.MDMService.*",
               "jp.co.morisawa.MorisawaDesktopManager.ServiceManager",
             ],
             pkgutil:   "jp.co.morisawa.MorisawaDesktopManager.*",
