@@ -1,6 +1,6 @@
 cask "mgba" do
-  version "0.10.3"
-  sha256 "dc9d50b81c5dd032970873e267f347b7b5be5e9e6309f6a28a008cca1b8c007c"
+  version "0.10.4"
+  sha256 "9bd4e7b26ea4cdf26c493aa651ba4f7d93b3cc5a81e8184e98ea3abdf3932023"
 
   url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-macos.dmg",
       verified: "github.com/mgba-emu/mgba/"
