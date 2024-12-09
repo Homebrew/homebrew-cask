@@ -1,9 +1,9 @@
 cask "shortwave" do
   arch arm: "arm64", intel: "x64"
 
-  version "2024.12.03"
-  sha256  arm:   "6024e4ebb478b8cf57b2f566b935a4bd8382f621c57598f9fb6df4cbe3a8dc44",
-          intel: "da8fe4be492ef7410cac8a68f0602a58b9df60b1be6389b7f8c076f2ffdb04bb"
+  version "2024.12.04"
+  sha256  arm:   "91ec34460443ecb0745b38105d9f98a7492ad026d29019f6a45ad7b0c6feb08c",
+          intel: "5090d7c8b4a3d342861c21fbc3161ac4ca75e2a2d70d97a66fbf8198ca8f1a7d"
 
   url "https://storage.googleapis.com/shortwave-downloads/desktop_app/darwin/#{arch}/Shortwave-darwin-#{arch}-#{version}.zip",
       verified: "storage.googleapis.com/shortwave-downloads/"
