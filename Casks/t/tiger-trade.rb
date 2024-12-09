@@ -1,6 +1,6 @@
 cask "tiger-trade" do
-  version "8.33.3,AA2913"
-  sha256 "a035a32da7d5af9666585a1ed20856ea98384d3cf8540301065b9a1f595bd54c"
+  version "8.34.2,B80D9A"
+  sha256 "4978b65d39a54e47caf964bf9a7a14f94de0b0545f838e5051bd8a7aeca5a2f1"
 
   url "https://s.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version.tr(",", "_")}.dmg",
       verified: "s.tigerfintech.com/"
