@@ -62,6 +62,7 @@ ankiapp
 another-redis-desktop-manager
 anydesk
 anydo
+anypointstudio
 anythingllm
 anytype
 anytype@alpha
