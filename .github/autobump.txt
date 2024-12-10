@@ -566,6 +566,7 @@ jyutping
 kaleidoscope
 kando
 kdenlive
+kdiff3
 kdrive
 keepassxc@snapshot
 keeper-password-manager

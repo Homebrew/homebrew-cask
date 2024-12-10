@@ -3,12 +3,12 @@ cask "kdiff3" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "1.11.5"
-    sha256 "ccbafb9468d30afd2e580306882d85caeb356ff2c4c51ef69162f5eea0b21ee8"
+    version "1.12.0"
+    sha256 "e1abaf0fa973420e2261d5d368b04f1d2366376fc4d0292db39fa885ef8e66ef"
   end
   on_intel do
-    version "1.11.5"
-    sha256 "ca18a5b21a7140197696f1a365a1b6e813bca9f43ccddae19a955626b057bf77"
+    version "1.12.0"
+    sha256 "a813f787f205b7bb5fa8ebd8cc83f8a9d598d0da8812bc3eed77fd98c8da5edb"
   end
 
   url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-#{arch}.dmg"
