@@ -1,6 +1,6 @@
 cask "retro-virtual-machine" do
-  version "2.1.18"
-  sha256 "16afd0c60ea624e72289659fb16977123499d56fef8611fecd8d1df2f531934c"
+  version "2.1.19"
+  sha256 "4b871b87217f9c5c6d1910437c524b6b20533ce31d099c06c6f1d3f289b32cef"
 
   url "https://static.retrovm.org/release/#{version}/RetroVirtualMachine.#{version}.dmg",
       verified: "static.retrovm.org/release/"
