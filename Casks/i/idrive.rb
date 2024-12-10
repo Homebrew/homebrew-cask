@@ -1,6 +1,6 @@
 cask "idrive" do
-  version "4.0.0.11,120624"
-  sha256 "baf9778d3bb2f1f03c59dbde4710d7c15c717806236634b645420c8250755fe2"
+  version "4.0.0.12,121024"
+  sha256 "54ae2da211d3d1dea869b93a24fd10ad3e0f91f05edc5fb87d39a4fefa670bdf"
 
   url "https://static.idriveonlinebackup.com/downloads/#{version.csv.second}/IDrive.dmg",
       verified: "static.idriveonlinebackup.com/downloads/"
