@@ -959,6 +959,7 @@ rectangle
 rectangle-pro
 redisinsight
 reflect
+reflector
 rekordbox
 remote-desktop-manager
 remotehamradio
