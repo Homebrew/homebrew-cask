@@ -1,9 +1,9 @@
 cask "cljstyle" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.16.626"
-  sha256 arm:   "28d88717199ae12720cdb23fa3672203b87b92f73b86f12a42358e5f7067f9ec",
-         intel: "86064430f03c048cbe68810625c64e750837c757a04b201f8ff2660bd55d5ba3"
+  version "0.17.642"
+  sha256 arm:   "34d7798e94a63fac46c85c66cd3a1e6132ce06e369eab7ffbf0212ae8bbf8c85",
+         intel: "fa0226a3bad13f9b76fb797b0c0771d10e7ee6adc871e1d43841281046293117"
 
   url "https://github.com/greglook/cljstyle/releases/download/#{version}/cljstyle_#{version}_macos_#{arch}.zip"
   name "cljstyle"
