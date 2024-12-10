@@ -999,6 +999,7 @@ rstudio@daily
 rubymine
 rustdesk
 rustrover
+sabnzbd
 safe-exam-browser
 sanctum
 santa
