@@ -359,6 +359,7 @@ figma
 figma-agent
 figma@beta
 fiji
+filen
 finalshell
 finbar
 finch
