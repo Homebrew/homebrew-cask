@@ -1,9 +1,9 @@
 cask "inkdown" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.1"
-  sha256 arm:   "25f6b694118aa0596b84aede48db7692320d4f4b2526f9c5f14ecf6cad5b3b26",
-         intel: "81aa7e79d3c561bda36a0dc61b319ddd3c0137449006acdf102aa2d96513eb4e"
+  version "1.2.2"
+  sha256 arm:   "b2c0c2a688d4cccfb20cc59f5efe8cfb4c062b58f2d265c5f6de738b8353da64",
+         intel: "7ccc25dec1f2995c2f2226454f3eb1419b8a57ce1574b48f23eb8e15c2ca77a9"
 
   url "https://github.com/1943time/inkdown/releases/download/v#{version}/inkdown-mac-#{arch}.dmg"
   name "Inkdown"
