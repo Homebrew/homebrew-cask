@@ -1,6 +1,6 @@
 cask "futubull" do
-  version "14.37.9508"
-  sha256 "2c6b50a350e4146cc394ac95656c132004bfa08c650e93db666162034b3402e1"
+  version "14.37.9518"
+  sha256 "eb61e70504b39ee8a79d8251b1f261d99c09c3a2a8125e825600c98744042705"
 
   url "https://softwaredownload.futunn.com/FTNNForMac_#{version}_Website.dmg",
       user_agent: :fake,
