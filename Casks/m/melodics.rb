@@ -1,6 +1,6 @@
 cask "melodics" do
-  version "4.1.13,69670097-7581-4099-8260-9F74D61BDF36"
-  sha256 "60a2a83d35366079b9c2ff9f5b9ea6b0bcef0aa828c81a9d0c0f4c857c6bacb1"
+  version "4.1.41,ECE04BA0-7574-48E7-A28D-2F3B9E2BC1CB"
+  sha256 "47e923e0e1dd7b66e88294d56f67c934df579f2a71fce7f287733f340f4c56af"
 
   url "https://web-cdn.melodics.com/download/#{version.csv.second}.zip"
   name "Melodics"
