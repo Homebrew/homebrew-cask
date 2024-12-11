@@ -1,6 +1,6 @@
 cask "pika" do
-  version "0.0.18"
-  sha256 "bf4a41680b75dae005b687482f1a327e043d6d4600a5651dc51fafb4c429a369"
+  version "1.0.0"
+  sha256 "655de9f3ae65a7ad73a5f518ce1ed3c5173edcc5add349c3278bbf27316c8f74"
 
   url "https://github.com/superhighfives/pika/releases/download/#{version}/Pika-#{version}.dmg",
       verified: "github.com/superhighfives/pika/"
