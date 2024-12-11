@@ -808,6 +808,7 @@ opal-composer
 openaudible
 opencat
 opencore-configurator
+opencore-patcher
 openlens
 openlp
 openrct2
