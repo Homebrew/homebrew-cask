@@ -9,7 +9,7 @@ cask "airfoil" do
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "5.12.3"
+    version "5.12.4"
 
     url "https://cdn.rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
 
