@@ -863,6 +863,7 @@ piclist
 pieces
 pieces-cli
 pieces-os
+pika
 pile
 pingplotter
 pitch
