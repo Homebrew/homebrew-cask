@@ -1,9 +1,9 @@
 cask "tandem" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.1624,241209mvtuo08v4"
-  sha256 arm:   "027abbb408dbb933774964ddcc3e6280844749ddbf3faacd2541d39e6a6eb13a",
-         intel: "72d68c4b710c8c1da8a237ab88d2ac1b2b65a16aee734016bf1d2a65fe0d0c59"
+  version "2.2.1625,2412111ddou26b4"
+  sha256 arm:   "f38b5be536f231ad32959c17d7bc9f346799c7461e70fc63d83a1ec1992957b8",
+         intel: "4830a7944a6a8d40ed2231a68a8934a8c2b3b76b943c005889ef739090e37e9a"
 
   url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
       verified: "download.todesktop.com/200527auaqaacsy/"
