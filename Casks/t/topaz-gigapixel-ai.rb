@@ -12,6 +12,8 @@ cask "topaz-gigapixel-ai" do
     strategy :header_match
   end
 
+  auto_updates true
+
   pkg "TopazGigapixelAI-#{version}.pkg"
 
   uninstall pkgutil: "com.topazlabs.TopazGigapixelAI"
