@@ -1,9 +1,9 @@
 cask "dataspell" do
   arch arm: "-aarch64"
 
-  version "2024.3,243.21565.247"
-  sha256 arm:   "2f680c2294959c3d477bc8b34e2e2ecd3e6ead395b74527c5b465b920e5488e4",
-         intel: "ca55c7f57cfb907c44e67ebb7e7be304910e202ff57eb5d494a7b69d194e0bb1"
+  version "2024.3.1,243.22562.185"
+  sha256 arm:   "2c98c572e2eea113448758e70df5ceaba99291af66f28e10e8bf84d08a2526e2",
+         intel: "a64eabb192181f81700f0c46c65ba7e6951f249f2f2055986c9e39b3dda911c0"
 
   url "https://download.jetbrains.com/python/dataspell-#{version.csv.first}#{arch}.dmg"
   name "DataSpell"
