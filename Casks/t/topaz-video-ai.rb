@@ -12,6 +12,8 @@ cask "topaz-video-ai" do
     strategy :header_match
   end
 
+  auto_updates true
+
   app "Topaz Video AI.app"
 
   zap trash: [
