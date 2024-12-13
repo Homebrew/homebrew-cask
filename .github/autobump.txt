@@ -1021,6 +1021,7 @@ screaming-frog-seo-spider
 screen-studio
 screenmemory
 screens-connect
+scrivener
 scrolla
 sdm
 seadrive
