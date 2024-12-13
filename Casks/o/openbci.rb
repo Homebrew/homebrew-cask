@@ -1,8 +1,8 @@
 cask "openbci" do
-  version "5.2.2,2023-08-25_23-54-44"
-  sha256 "6fb21f9d76464bbfe0af55ee014be4775e4e640f111a07b9e71c1518c01f35fa"
+  version "6.0.0,beta.1"
+  sha256 "4170c88adef9c5aba80e7b43155716729b871db0058f8f22374f828b2a7ddfde"
 
-  url "https://github.com/OpenBCI/OpenBCI_GUI/releases/download/v#{version.csv.first}/openbcigui_v#{version.csv.first}_#{version.csv.second}_macosx.dmg",
+  url "https://github.com/OpenBCI/OpenBCI_GUI/releases/download/v#{version.csv.first}-#{version.csv.second}/openbcigui_v#{version.csv.first}-#{version.csv.second}_macosx.dmg",
       verified: "github.com/OpenBCI/OpenBCI_GUI/"
   name "OpenBCI"
   desc "Connect to OpenBCI hardware, visualise and stream physiological data"
