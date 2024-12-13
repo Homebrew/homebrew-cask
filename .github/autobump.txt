@@ -1080,6 +1080,7 @@ sol
 solar2d
 sonarr
 songkong
+sonos
 soulver
 sound-control
 sound-siphon
