@@ -1017,6 +1017,7 @@ rustdesk
 rustrover
 sabnzbd
 safe-exam-browser
+saleae-logic
 sanctum
 santa
 sapmachine-jdk
