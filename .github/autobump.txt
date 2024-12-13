@@ -91,6 +91,7 @@ arturia-software-center
 asana
 astah-professional
 atlauncher
+atomic-wallet
 audacity
 audius
 automattic-texts
