@@ -242,6 +242,7 @@ curseforge
 cursor
 cyberduck
 cycling74-max
+daedalus-mainnet
 dangerzone
 dash-dash
 dashcam-viewer
