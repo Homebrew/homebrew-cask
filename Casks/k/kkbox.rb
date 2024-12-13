@@ -1,8 +1,8 @@
 cask "kkbox" do
-  version "24.11.1"
-  sha256 "7ac243924ea7b2a81df0061ac8cda305673484f18c5618c062cf5f045ef548dd"
+  version "24.12.1"
+  sha256 "b14bc940f43a9255fabd3cfb243cc38e5c014c7b04f2aa3bfe1bc14f6cd6b030"
 
-  url "https://dl-universal-v2.kfs.io/KKBOX-#{version}.dmg",
+  url "https://dl-universal-v2.kfs.io/KKBOX-#{version}-universal.dmg",
       verified: "dl-universal-v2.kfs.io/"
   name "KKBOX"
   desc "Music streaming service"
@@ -13,7 +13,7 @@ cask "kkbox" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "KKBOX.app"
 
@@ -32,8 +32,4 @@ cask "kkbox" do
     "~/Library/Preferences/com.kkbox.KKBOX.plist",
     "~/Library/Saved Application State/com.kkbox.electron-app.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

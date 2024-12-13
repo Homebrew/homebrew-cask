@@ -1,9 +1,9 @@
 cask "dash-dash" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "21.1.1"
-  sha256 arm:   "cd6543c015a6b811ae2efe33036516155940df836e871f9608b3e8869077dc71",
-         intel: "f232337045b54474769162c8c1ec6897eb5cefa4dfc084f92533febf92db867d"
+  version "22.0.0"
+  sha256 arm:   "8411b317a2c4cb5cf279a667b72203f308d58701d58dfbebc3a999113d0cfda4",
+         intel: "647ba48f9555de99bb19c1a6538044ddf255aa49a851ea74d3d2d03aab28d463"
 
   url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-#{arch}-apple-darwin.dmg",
       verified: "github.com/dashpay/dash/"

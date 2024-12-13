@@ -1,6 +1,6 @@
 cask "font-zhuque-fangsong" do
-  version "0.108"
-  sha256 "ff7bab9764b88d58f0f4b18fe197fd1b3eac3a67c10030a240556da8dca0c60a"
+  version "0.200"
+  sha256 "b0fbffc4a8875c5ab41c07f9f2e83b0be7d58d18bdaf4f7f24d3d401682eca8c"
 
   url "https://github.com/TrionesType/zhuque/releases/download/v#{version}/ZhuqueFangsong-v#{version}.zip"
   name "Zhuque Fangsong"

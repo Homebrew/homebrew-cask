@@ -242,6 +242,7 @@ curseforge
 cursor
 cyberduck
 cycling74-max
+daedalus-mainnet
 dangerzone
 dash-dash
 dashcam-viewer
@@ -763,6 +764,7 @@ navicat-premium
 navicat-premium-lite
 neohtop
 neovide
+netbeans
 netron
 netspot
 nextcloud
@@ -773,6 +775,7 @@ nordlayer
 nordlocker
 nordpass
 nordvpn
+northern-softworks-cache-cleaner
 nosql-workbench
 nosqlbooster-for-mongodb
 notchnook
@@ -781,8 +784,10 @@ notesnook
 notion
 notion-calendar
 nova
+novabench
 nozbe
 nuclear
+nucleo
 nudge
 nvidia-geforce-now
 obs
@@ -904,7 +909,9 @@ prepros
 prezi-video
 pritunl
 private-internet-access
+processing
 processspy
+progressive-downloader
 propresenter
 propresenter@beta
 proton-drive
@@ -974,6 +981,7 @@ replacicon
 replaywebpage
 replit
 reqable
+requestly
 resolume-arena
 responsively
 restfox
@@ -1018,6 +1026,7 @@ screaming-frog-seo-spider
 screen-studio
 screenmemory
 screens-connect
+scrivener
 scrolla
 sdm
 seadrive
@@ -1077,6 +1086,7 @@ sol
 solar2d
 sonarr
 songkong
+sonos
 soulver
 sound-control
 sound-siphon
@@ -1341,4 +1351,5 @@ zoom
 zoom-for-it-admins
 zotero
 zotero@beta
+zspace
 zulu

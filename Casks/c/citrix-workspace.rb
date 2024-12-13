@@ -1,6 +1,6 @@
 cask "citrix-workspace" do
-  version "24.09.10.26"
-  sha256 "e4d9a652e7d9c7c5f4b0cafa39895f3c45d0d48df6261f67f8c7225e7e86936e"
+  version "24.11.0.55"
+  sha256 "117b2ab2cf24ee7b695bce2c11e6e79de23f32388a49e45c1ab93a59ac74bbb9"
 
   url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/Receiver/Mac/CitrixWorkspaceAppUniversal#{version}.pkg"
   name "Citrix Workspace"
