@@ -433,6 +433,7 @@ fossa
 foxglove-studio
 foxit-pdf-editor
 framer
+frappe-books
 free-download-manager
 free42-binary
 free42-decimal
