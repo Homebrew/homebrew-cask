@@ -6,25 +6,25 @@ cask "trashme@3" do
   name "TrashMe 3"
   desc "Cleaner and uninstaller from Jibapps"
   homepage "https://www.jibapps.com/apps/trashme3/"
-  
+
   livecheck do
     url "https://www.jibapps.com/ressources/trashme3/appcast.php"
     strategy :sparkle, &:short_version
   end
-  
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
-  
+
   app "TrashMe 3.app"
-  
+
   uninstall launchctl: "com.jibapps.TrashMe3.Helper",
             quit:      "com.jibapps.TrashMe3"
 
   zap trash: [
-    "~/Library/Group Containers/85Y258L5RV.com.jibapps.TrashMe3",
-    "~/Library/Containers/com.jibapps.TrashMe3",
-    "~/Library/Containers/com.jibapps.TrashMe3.Helper",
     "~/Library/Application Scripts/com.jibapps.TrashMe3",
     "~/Library/Application Scripts/com.jibapps.TrashMe3.Helper",
+    "~/Library/Containers/com.jibapps.TrashMe3",
+    "~/Library/Containers/com.jibapps.TrashMe3.Helper",
+    "~/Library/Group Containers/85Y258L5RV.com.jibapps.TrashMe3",
   ]
 end
