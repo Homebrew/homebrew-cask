@@ -764,6 +764,7 @@ navicat-premium
 navicat-premium-lite
 neohtop
 neovide
+netbeans
 netron
 netspot
 nextcloud
