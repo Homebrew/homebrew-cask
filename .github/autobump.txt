@@ -1344,4 +1344,5 @@ zoom
 zoom-for-it-admins
 zotero
 zotero@beta
+zspace
 zulu
