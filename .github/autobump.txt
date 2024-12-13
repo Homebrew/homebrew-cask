@@ -782,6 +782,7 @@ notesnook
 notion
 notion-calendar
 nova
+novabench
 nozbe
 nuclear
 nucleo
