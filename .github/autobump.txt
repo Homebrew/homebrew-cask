@@ -905,6 +905,7 @@ prezi-video
 pritunl
 private-internet-access
 processspy
+progressive-downloader
 propresenter
 propresenter@beta
 proton-drive
