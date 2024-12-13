@@ -1,8 +1,8 @@
 cask "betterandbetter" do
-  version "2.6.1,2024061301"
-  sha256 "c298ed157effc5a8e774d267da3a28aa3d92136e9e69f92a4fbbbeced3934fb2"
+  version "2.6.3,2024121203"
+  sha256 "a0ba2bb8942780a9ca134ac2f4864f18832f64e3a574361e4aa3ecf0636308d8"
 
-  url "https://cdn.better365.cn/BetterAndBetter/BetterAndBetter#{version.csv.second}.zip"
+  url "https://cdn.better365.cn/BetterAndBetter/#{version.csv.second[0, 4]}/BetterAndBetter#{version.csv.first}_#{version.csv.second}.zip"
   name "Better And Better"
   desc "Keyboard, mouse and touchpad motion gestures"
   homepage "https://www.better365.cn/bab2.html"
