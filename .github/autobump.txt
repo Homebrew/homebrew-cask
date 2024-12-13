@@ -978,6 +978,7 @@ replacicon
 replaywebpage
 replit
 reqable
+requestly
 resolume-arena
 responsively
 restfox
