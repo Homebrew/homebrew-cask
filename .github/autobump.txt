@@ -783,6 +783,7 @@ notion-calendar
 nova
 nozbe
 nuclear
+nucleo
 nudge
 nvidia-geforce-now
 obs
