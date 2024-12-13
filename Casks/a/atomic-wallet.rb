@@ -1,8 +1,8 @@
 cask "atomic-wallet" do
-  version "2.89.8"
-  sha256 "c08c449d1144dfdd995b441119b03bb55ba52ba79f437b61e89026a4566037b4"
+  version "2.90.6"
+  sha256 "089b0f002e4a166792d9fbd786cb937618faac6d79501c493f4e0ab9411497e0"
 
-  url "https://releases.atomicwallet.io/AtomicWallet-#{version}.dmg"
+  url "https://releases.atomicwallet.io/Atomic.Wallet-#{version}.dmg"
   name "Atomic Wallet"
   desc "Manage Bitcoin, Ethereum, XRP, Litecoin, XLM and over 300 other coins and tokens"
   homepage "https://atomicwallet.io/"
@@ -16,9 +16,10 @@ cask "atomic-wallet" do
 
   app "Atomic Wallet.app"
 
-  zap trash: "~/Library/Application Support/atomic"
-
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+    "~/Library/Application Support/atomic",
+    "~/Library/Logs/atomic",
+    "~/Library/Preferences/io.atomicwallet.plist",
+    "~/Library/Saved Application State/io.atomicwallet.savedState",
+  ]
 end
