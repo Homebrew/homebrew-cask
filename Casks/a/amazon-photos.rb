@@ -1,5 +1,5 @@
 cask "amazon-photos" do
-  version "10.7.0,433"
+  version "10.7.1,434"
   sha256 :no_check
 
   url "https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosApp.zip",
