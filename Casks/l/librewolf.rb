@@ -2,12 +2,12 @@ cask "librewolf" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "133.0,3"
-    sha256 "07adb6bc864a740bc3f09dae057bd2ffb10d07574277b9b1c30334b19edafeff"
+    version "133.0.3,1"
+    sha256 "e0ba3376b5620ddd7cba223aeb2909e12b144e1e16bd93b992893aa5c453d487"
   end
   on_intel do
-    version "133.0,3"
-    sha256 "c2f07b52f3231bf715d4e1ef54428ca797b799edc84791d257970387cd151639"
+    version "133.0.3,1"
+    sha256 "2a0e9325e366146a79cf579c90ec4ea68d057648564c796f2945282ed08fb212"
   end
 
   url "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/#{version.csv.first}-#{version.csv.second}/librewolf-#{version.csv.first}-#{version.csv.second}-macos-#{arch}-package.dmg",
