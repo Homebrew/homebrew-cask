@@ -1,5 +1,5 @@
 cask "purevpn" do
-  version "9.23.0"
+  version "9.25.0"
   sha256 :no_check
 
   url "https://dzglif4kkvz04.cloudfront.net/mac-2.0/packages/Production/PureVPN.pkg",
@@ -9,8 +9,10 @@ cask "purevpn" do
   homepage "https://www.purevpn.com/"
 
   livecheck do
-    url "https://support.purevpn.com/mac-release-notes"
-    regex(/>\s*Version\s*v?(\d+(?:\.\d+)+)\s*</i)
+    url :url
+    strategy :extract_plist do |items|
+      items["com.purevpn.app.mac"]&.short_version
+    end
   end
 
   pkg "PureVPN.pkg"
