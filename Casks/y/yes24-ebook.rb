@@ -9,8 +9,12 @@ cask "yes24-ebook" do
 
   livecheck do
     url "https://cremaupdate.k-epub.com/sv_update.aspx?usrid=&old=0"
-    strategy :xml do |xml|
-      xml.elements["//VERSION"]&.text&.strip
+    regex(%r{/v?(\d+(?:\.\d+)+)/YES24eBook\.dmg}i)
+    strategy :xml do |xml, regex|
+      url = xml.elements["//PATH"]&.text&.strip
+      match = url.match(regex) if url
+
+      match[1]
     end
   end
 
