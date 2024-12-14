@@ -11,8 +11,8 @@ cask "ireal-pro" do
     end
   end
   on_big_sur :or_newer do
-    version "2024.10,20241015"
-    sha256 "d70b85eaef5cb264aa3466e029f717e72f3a9003104100ecd593479d55ec87c3"
+    version "2024.12,20241206"
+    sha256 "897d4e9f2fbe16d451403a4cd3df6be3455f9cc7f307a1fb9b252246c574b4c0"
 
     url "https://ireal-pro.s3.amazonaws.com/iRealPro#{version.csv.second}.zip",
         verified: "ireal-pro.s3.amazonaws.com/"
