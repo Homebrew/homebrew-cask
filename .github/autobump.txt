@@ -394,6 +394,7 @@ follow
 follow@nightly
 font-chiron-hei-hk
 font-chiron-sung-hk
+font-elstobd
 font-inter
 font-iosevka
 font-iosevka-aile

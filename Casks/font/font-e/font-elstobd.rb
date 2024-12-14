@@ -6,6 +6,11 @@ cask "font-elstobd" do
   name "ElstobD"
   homepage "https://github.com/psb1558/Elstob-font"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   font "Elstob_font/variable/Elstob-Italic.ttf"
   font "Elstob_font/variable/Elstob.ttf"
 
