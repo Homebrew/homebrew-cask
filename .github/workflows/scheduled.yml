@@ -51,6 +51,7 @@ jobs:
     needs: create_matrix
     name: "Online check (${{ matrix.os }}): ${{ matrix.cask }}"
     env:
+      CASK: ${{ matrix.cask }}
       HOMEBREW_GITHUB_API_TOKEN: "${{ github.token }}"
       GH_TOKEN: "${{ github.token }}"
       REPORTING_ISSUE: 172732
@@ -72,34 +73,34 @@ jobs:
 
       - name: Check cask source is not archived.
         id: archived
-        run: brew audit --cask --online --skip-style --only github_repository_archived,gitlab_repository_archived ${{ matrix.cask }}
+        run: brew audit --cask --online --skip-style --only github_repository_archived,gitlab_repository_archived "$CASK"
 
       - name: Report online issues
         if: ${{ failure() && steps.archived.conclusion == 'failure' }}
         run: |
           gh issue comment "$REPORTING_ISSUE" \
                            --repo homebrew/homebrew-cask \
-                           --body "${{ matrix.cask }} should be archived. Check ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                           --body "$CASK should be archived. Check $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
 
       - name: Check cask for unavailable homepage.
         id: homepage
-        run: brew audit --cask --online --skip-style --only homepage ${{ matrix.cask }}
+        run: brew audit --cask --online --skip-style --only homepage "$CASK"
 
       - name: Report homepage issues
         if: ${{ failure() && steps.homepage.conclusion == 'failure' }}
         run:  |
           gh issue comment "$REPORTING_ISSUE" \
                            --repo homebrew/homebrew-cask \
-                           --body "${{ matrix.cask }} has homepage issues. Check ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                           --body "$CASK has homepage issues. Check $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
 
       - name: Check cask for missing sources.
         id: fetch
-        run: brew fetch --cask ${{ matrix.cask }}
+        run: brew fetch --cask "$CASK"
 
       - name: Report fetch issues
         if: ${{ failure() && steps.fetch.conclusion == 'failure' }}
         run:  |
           gh issue comment "$REPORTING_ISSUE" \
                            --repo homebrew/homebrew-cask \
-                           --body "${{ matrix.cask }} source has problems. Check ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                           --body "$CASK source has problems. Check $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
 
