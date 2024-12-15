@@ -180,24 +180,29 @@ jobs:
             File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
               f.puts "manual_installer=#{JSON.generate(manual_installer)}"
               f.puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
-              f.puts "cask_conflicts=#{JSON.generate(cask_conflicts)}"
-              f.puts "cask_dependencies=#{JSON.generate(cask_dependencies)}"
-              f.puts "formula_conflicts=#{JSON.generate(formula_conflicts)}"
               f.puts "formula_dependencies=#{JSON.generate(formula_dependencies)}"
+            end
+
+            File.open(ENV.fetch("GITHUB_ENV"), "a") do |f|
+              f.puts "CASK_CONFLICTS=\"#{cask_conflicts&.join(" ")}\"" if cask_conflicts.present?
+              f.puts "CASK_DEPENDENCIES=\"#{cask_dependencies&.join(" ")}\"" if cask_dependencies.present?
+              f.puts "FORMULA_CONFLICTS=\"#{formula_conflicts&.join(" ")}\"" if formula_conflicts.present?
             end
           EOF
         if: always() && steps.fetch.outcome == 'success' && matrix.cask
 
       - name: Uninstall conflicting formulae
         run: |
-          brew uninstall --formula ${{ join(fromJSON(steps.info.outputs.formula_conflicts), ' ') }}
-        if: always() && steps.info.outcome == 'success' && join(fromJSON(steps.info.outputs.formula_conflicts)) != ''
+          # shellcheck disable=SC2086
+          brew uninstall --formula $FORMULA_CONFLICTS
+        if: ${{ always() && steps.info.outcome == 'success' && env.FORMULA_CONFLICTS != '' }}
         timeout-minutes: 30
 
       - name: Uninstall conflicting casks
         run: |
-          brew uninstall --cask ${{ join(fromJSON(steps.info.outputs.cask_conflicts), ' ') }}
-        if: always() && steps.info.outcome == 'success' && join(fromJSON(steps.info.outputs.cask_conflicts)) != ''
+          # shellcheck disable=SC2086
+          brew uninstall --cask $CASK_CONFLICTS
+        if: ${{ always() && steps.info.outcome == 'success' && env.CASK_CONFLICTS != '' }}
         timeout-minutes: 30
 
       - name: Run brew uninstall --cask --force --zap ${{ matrix.cask.token }}
@@ -210,8 +215,10 @@ jobs:
         id: snapshot
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
-            File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
-              f.puts "before=#{JSON.generate(Check.all)}"
+            File.open(ENV.fetch("GITHUB_ENV"), "a") do |f|
+              # We have to use a `HOMEBREW_` prefix so it will survive the
+              # environment variable filtering in `brew`.
+              f.puts "HOMEBREW_SNAPSHOT_BEFORE=#{JSON.generate(Check.all)}"
             end
           EOF
         if: always() && steps.info.outcome == 'success'
@@ -232,8 +239,9 @@ jobs:
 
       - name: Uninstall cask dependencies
         run: |
-          brew uninstall --cask ${{ join(fromJSON(steps.info.outputs.cask_dependencies), ' ') }}
-        if: always() && steps.install.outcome == 'success' && join(fromJSON(steps.info.outputs.cask_dependencies)) != ''
+          # shellcheck disable=SC2086
+          brew uninstall --cask $CASK_DEPENDENCIES
+        if: ${{ always() && steps.install.outcome == 'success' && env.CASK_DEPENDENCIES != '' }}
         timeout-minutes: 30
 
       - name: Compare installed and running apps and services with snapshot
@@ -242,9 +250,8 @@ jobs:
             require "cask/cask_loader"
             require "utils/github/actions"
 
-            before = JSON.parse(<<~'EOS').transform_keys(&:to_sym)
-              ${{ steps.snapshot.outputs.before }}
-            EOS
+            before = JSON.parse(ENV.fetch("HOMEBREW_SNAPSHOT_BEFORE", "{}"))
+                         .transform_keys(&:to_sym)
             after = Check.all
 
             cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
