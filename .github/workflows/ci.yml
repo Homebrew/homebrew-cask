@@ -59,6 +59,7 @@ jobs:
         id: generate-matrix
         env:
           INPUT_CASKS: ${{ github.event.inputs.casks }}
+          PULL_REQUEST_URL: ${{ github.event.pull_request.url }}
         run: |
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]
           then
@@ -68,7 +69,7 @@ jobs:
           then
             brew generate-cask-ci-matrix --syntax-only
           else
-            brew generate-cask-ci-matrix --url "${{ github.event.pull_request.url }}"
+            brew generate-cask-ci-matrix --url "$PULL_REQUEST_URL"
           fi
 
   test:
