@@ -12,6 +12,7 @@ cask "ecamm-live" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Ecamm Live v#{version}/Ecamm Live.app"
