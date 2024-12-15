@@ -1,13 +1,13 @@
 cask "cardinal" do
-  version "24.09"
-  sha256 "bc763c50325f46f519f4ed77c99563e8c9d176cd4a250d50265d704b8aa08b3a"
+  version "24.12"
+  sha256 "ee4cb6c3d94056e72c8249a9bd061722704689eb98f8db3e1d910ad51ec87255"
 
-  url "https://github.com/DISTRHO/Cardinal/releases/download/#{version}/Cardinal-macOS-universal-10.15-#{version}.pkg"
+  url "https://github.com/DISTRHO/Cardinal/releases/download/#{version}/Cardinal-macOS-universal-#{version}.pkg"
   name "Cardinal"
   desc "Virtual modular synthesiser plugin"
   homepage "https://github.com/DISTRHO/Cardinal"
 
-  pkg "Cardinal-macOS-universal-10.15-#{version}.pkg"
+  pkg "Cardinal-macOS-universal-#{version}.pkg"
 
   uninstall pkgutil: [
     "studio.kx.distrho.cardinal.resources",
