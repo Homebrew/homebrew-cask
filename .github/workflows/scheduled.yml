@@ -14,9 +14,6 @@ concurrency:
   group: scheduled
   cancel-in-progress: true
 
-permissions:
-  issues: write
-
 jobs:
   create_matrix:
     if: startsWith( github.repository, 'Homebrew/' )
@@ -57,6 +54,8 @@ jobs:
       HOMEBREW_GITHUB_API_TOKEN: "${{ github.token }}"
       GH_TOKEN: "${{ github.token }}"
       REPORTING_ISSUE: 172732
+    permissions:
+      issues: write # To create issues
     strategy:
       fail-fast: false
       matrix:
