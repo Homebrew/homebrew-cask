@@ -9,16 +9,8 @@ cask "font-cormorant-infant" do
   name "Cormorant Infant"
   homepage "https://fonts.google.com/specimen/Cormorant+Infant"
 
-  font "CormorantInfant-Bold.ttf"
-  font "CormorantInfant-BoldItalic.ttf"
-  font "CormorantInfant-Italic.ttf"
-  font "CormorantInfant-Light.ttf"
-  font "CormorantInfant-LightItalic.ttf"
-  font "CormorantInfant-Medium.ttf"
-  font "CormorantInfant-MediumItalic.ttf"
-  font "CormorantInfant-Regular.ttf"
-  font "CormorantInfant-SemiBold.ttf"
-  font "CormorantInfant-SemiBoldItalic.ttf"
+  font "CormorantInfant-Italic[wght].ttf"
+  font "CormorantInfant[wght].ttf"
 
   # No zap stanza required
 end

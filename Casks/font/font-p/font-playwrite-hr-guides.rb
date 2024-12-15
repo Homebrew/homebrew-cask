@@ -2,9 +2,10 @@ cask "font-playwrite-hr-guides" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/playwritehrguides/PlaywriteHRGuides-Regular.ttf"
+  url "https://github.com/google/fonts/raw/main/ofl/playwritehrguides/PlaywriteHRGuides-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Playwrite HR Guides"
-  homepage "https://github.com/TypeTogether/Playwrite"
+  homepage "https://fonts.google.com/specimen/Playwrite+HR+Guides"
 
   font "PlaywriteHRGuides-Regular.ttf"
 
