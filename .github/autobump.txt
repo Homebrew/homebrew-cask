@@ -1347,6 +1347,7 @@ zappy
 zed
 zed@preview
 zen-browser
+zen-browser@twilight
 zeplin
 zettlr
 znote
