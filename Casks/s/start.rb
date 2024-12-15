@@ -38,10 +38,14 @@ cask "start" do
   uninstall quit: "com.tencent.start.mac.Start"
 
   zap trash: [
+    "~/.START",
     "~/Library/Caches/com.tencent.start.mac.Start",
     "~/Library/Caches/com.tencent.start.mac.Start.STGame",
     "~/Library/Group Containers/com.tencent.start.mac",
+    "~/Library/HTTPStorages/com.tencent.start.mac.Start",
+    "~/Library/HTTPStorages/com.tencent.start.mac.Start.STGame",
     "~/Library/Preferences/com.tencent.start.mac.Start.plist",
     "~/Library/Preferences/com.tencent.start.mac.Start.STGame.plist",
+    "~/Library/Saved Application State/com.tencent.start.mac.Start.savedState",
   ]
 end
