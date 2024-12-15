@@ -8,8 +8,8 @@ cask "atomic-wallet" do
   homepage "https://atomicwallet.io/"
 
   livecheck do
-    url "https://releases.atomicwallet.io/latest-mac.yml"
-    strategy :electron_builder
+    url "https://releases.atomicwallet.io/download/latest-mac.txt"
+    regex(/v?(\d+(?:[.-]\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
