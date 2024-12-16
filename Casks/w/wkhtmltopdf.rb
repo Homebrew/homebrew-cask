@@ -8,7 +8,7 @@ cask "wkhtmltopdf" do
   desc "HTML to PDF renderer"
   homepage "https://wkhtmltopdf.org/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "wkhtmltox-#{version}.macos-cocoa.pkg"
 
