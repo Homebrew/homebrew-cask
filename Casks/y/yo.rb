@@ -7,7 +7,7 @@ cask "yo" do
   desc "Utility to emit Notification Center messages from the command-line"
   homepage "https://github.com/sheagcraig/yo"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "yo-#{version}.pkg"
 
