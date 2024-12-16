@@ -13,7 +13,7 @@ cask "clean-me" do
   desc "System cleaner for logs, caches and more"
   homepage "https://github.com/Kevin-De-Koninck/Clean-Me"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :sierra"
 
