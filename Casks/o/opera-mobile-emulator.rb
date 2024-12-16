@@ -7,7 +7,7 @@ cask "opera-mobile-emulator" do
   desc "Browser emulator"
   homepage "https://www.opera.com/developer/mobile-emulator"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Opera Mobile Emulator.app"
 end
