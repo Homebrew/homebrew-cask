@@ -7,7 +7,7 @@ cask "font-amiri" do
   name "Amiri"
   homepage "https://www.amirifont.org/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   font "Amiri-#{version}/Amiri-Bold.ttf"
   font "Amiri-#{version}/Amiri-BoldItalic.ttf"
