@@ -8,7 +8,7 @@ cask "skiff" do
   desc "End-to-end encrypted email, calendar, documents, and files support"
   homepage "https://skiff.com/"
 
-  deprecate! date: "2023-12-17", because: :moved_to_mas
+  disable! date: "2024-12-16", because: :moved_to_mas
 
   auto_updates true
   depends_on macos: ">= :catalina"
