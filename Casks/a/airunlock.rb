@@ -7,7 +7,7 @@ cask "airunlock" do
   desc "Tool to lock or unlock the macbook using an Android phone via Bluetooth"
   homepage "https://github.com/pinetum/AirUnlock-for-Mac"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "AirUnlock.app"
 end
