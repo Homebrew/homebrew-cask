@@ -9,7 +9,7 @@ cask "dwarf-fortress" do
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/df_osx/df.wrapper.sh"
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   binary shimscript, target: "dwarf-fortress"
 
