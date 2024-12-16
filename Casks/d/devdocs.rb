@@ -7,7 +7,7 @@ cask "devdocs" do
   desc "Full-featured desktop app for DevDocs.io"
   homepage "https://github.com/egoist/devdocs-desktop/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "DevDocs.app"
 
