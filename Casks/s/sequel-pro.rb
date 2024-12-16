@@ -8,7 +8,7 @@ cask "sequel-pro" do
   desc "MySQL/MariaDB database management platform"
   homepage "https://www.sequelpro.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Sequel Pro.app"
 
