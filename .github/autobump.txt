@@ -766,6 +766,7 @@ navicat-for-sql-server
 navicat-for-sqlite
 navicat-premium
 navicat-premium-lite
+neofinder
 neohtop
 neovide
 netbeans
