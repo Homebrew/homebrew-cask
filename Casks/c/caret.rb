@@ -7,7 +7,7 @@ cask "caret" do
   name "Caret"
   homepage "https://caret.io/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Caret.app"
 
