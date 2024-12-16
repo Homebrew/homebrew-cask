@@ -8,7 +8,7 @@ cask "xamarin-studio" do
   desc "IDE for mobile app development"
   homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   conflicts_with cask: "xamarin"
 
