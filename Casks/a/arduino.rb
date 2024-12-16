@@ -7,7 +7,7 @@ cask "arduino" do
   desc "Electronics prototyping platform"
   homepage "https://www.arduino.cc/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Arduino.app"
   binary "#{appdir}/Arduino.app/Contents/Java/arduino-builder"
