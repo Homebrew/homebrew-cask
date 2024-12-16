@@ -7,7 +7,7 @@ cask "sonarr-menu" do
   desc "Utility that adds a menu to the Status Bar for managing Sonarr"
   homepage "https://github.com/jefbarn/Sonarr-Menu/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   depends_on cask: "sonarr"
 
