@@ -26,6 +26,7 @@ cask "chatgpt" do
   uninstall quit: "com.openai.chat"
 
   zap trash: [
+    "~/Library/Application Support/ChatGPT",
     "~/Library/Application Support/com.openai.chat",
     "~/Library/Caches/com.openai.chat",
     "~/Library/HTTPStorages/com.openai.chat",
