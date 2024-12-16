@@ -1,6 +1,6 @@
 cask "rstudio" do
-  version "2024.09.1,394"
-  sha256 "f1aac1c83640b95948cb8da21de55c45153a0784aa29e6f638cce15435d740a5"
+  version "2024.12.0,467"
+  sha256 "46958fb441ea8990a44e02cb5f89a331d8634a955a441a7e46fcf6714081e3c2"
 
   url "https://download1.rstudio.org/electron/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "download1.rstudio.org/electron/macos/"
