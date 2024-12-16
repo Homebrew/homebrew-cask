@@ -8,7 +8,7 @@ cask "sketchbook" do
   desc "Draw, paint, & sketch application"
   homepage "https://www.sketchbook.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "SketchBook_v#{version.csv.first}_mac.pkg"
 
