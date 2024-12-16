@@ -7,7 +7,7 @@ cask "svgcleaner" do
   desc "Tool to clean up SVG files by removing unnecessary data"
   homepage "https://github.com/RazrFalcon/svgcleaner-gui/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   conflicts_with formula: "svgcleaner"
 
