@@ -8,7 +8,7 @@ cask "yu-writer" do
   desc "Markdown editor"
   homepage "https://ivarptr.github.io/yu-writer.site/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Yu Writer.app"
 
