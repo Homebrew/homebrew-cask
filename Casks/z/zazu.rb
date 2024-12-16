@@ -8,7 +8,7 @@ cask "zazu" do
   desc "Extensible and open-source launcher for hackers, creators and dabblers"
   homepage "https://zazuapp.org/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Zazu.app"
 
