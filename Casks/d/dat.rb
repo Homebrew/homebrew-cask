@@ -8,7 +8,7 @@ cask "dat" do
   desc "Peer to peer data sharing app built for humans"
   homepage "https://dat-ecosystem.org/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Dat Desktop.app"
 
