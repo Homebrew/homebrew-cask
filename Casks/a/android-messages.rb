@@ -7,7 +7,7 @@ cask "android-messages" do
   desc "Desktop client for Android Messages"
   homepage "https://github.com/chrisknepper/android-messages-desktop"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   conflicts_with cask: "orangedrangon-android-messages"
 
