@@ -8,7 +8,7 @@ cask "lightform" do
   desc "AR projection and audio reactivity software for Lightform devices"
   homepage "https://lightform.com/creator"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :mojave"
 
