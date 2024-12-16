@@ -8,7 +8,7 @@ cask "docker-toolbox" do
   desc "Install Docker, Docker Machine, Docker Compose, and Kitematic"
   homepage "https://www.docker.com/products/docker-toolbox"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   depends_on cask: "virtualbox"
 
