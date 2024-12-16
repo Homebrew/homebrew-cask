@@ -7,7 +7,7 @@ cask "webpack-dashboard" do
   desc "Electron Desktop GUI for Webpack Dashboard"
   homepage "https://github.com/FormidableLabs/electron-webpack-dashboard"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Webpack Dashboard.app"
 
