@@ -8,7 +8,7 @@ cask "spectacle" do
   desc "Move and resize windows with ease"
   homepage "https://www.spectacleapp.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
 
