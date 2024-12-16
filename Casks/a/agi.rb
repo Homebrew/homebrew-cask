@@ -1,8 +1,8 @@
 cask "agi" do
-  version "3.3.1"
-  sha256 "d8a658b5a81e8be2c98277f128897e5a99b43799cb0713995d22740ab03bd819"
+  version "3.3.2"
+  sha256 "1901407d93c5eb32256f98a2f3a4c941cad80174539d335f434b1357b63b3a55"
 
-  url "https://github.com/google/agi/releases/download/#{version}/agi-#{version}-macos.dmg",
+  url "https://github.com/google/agi/releases/download/v#{version}/agi-#{version}-macos.dmg",
       verified: "github.com/google/agi/"
   name "agi"
   desc "Android GPU Inspector"
