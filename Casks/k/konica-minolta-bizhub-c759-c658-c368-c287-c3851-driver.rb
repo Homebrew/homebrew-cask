@@ -16,16 +16,20 @@ cask "konica-minolta-bizhub-c759-c658-c368-c287-c3851-driver" do
     livecheck do
       url "https://dl.konicaminolta.eu/en?tx_kmdownloadcenter_dlajaxservice[action]=getDocuments&tx_kmdownloadcenter_dlajaxservice[controller]=AjaxService&tx_kmdownloadcenter_dlajaxservice[productId]=102314&tx_kmdownloadcenter_dlajaxservice[system]=KonicaMinolta&cHash=dd72618a38434b6cb3edfc20595d58c5&type=1527583889"
       strategy :json do |json|
-        items = json.select do |i|
-          i["TypeOfApplicationName_textS"]&.match?(/driver/i) &&
-            i["OperatingSystemsNames_textM"]&.any? { |item| item =~ /macOS/i }
+        json.map do |item|
+          next if item["TypeOfApplicationId_textS"] != "1"
+          next unless item["OperatingSystemsNames_textM"]&.any? { |os| os =~ /macOS/i }
+
+          version = item["Version_textS"]
+          document_id = item["AnacondaId_textS"]
+          next if version.blank? || document_id.blank?
+
+          files = item["DownloadFiles_textS"]&.split("\n")&.map { |file| file.split("|") }
+          dmg_file = files.find { |file| file.first.end_with?(".dmg") } if files
+          next if dmg_file.blank?
+
+          "#{version},#{Digest::MD5.hexdigest(dmg_file[2])},#{document_id}"
         end
-
-        item = items.max_by { |i| i["ReleaseDate_textS"] }
-        files = item["DownloadFiles_textS"].split("\n").map { |file| file.split("|") }
-        dmg = files.find { |f| f.first.end_with?(".dmg") }
-
-        "#{item["Version_textS"]},#{Digest::MD5.hexdigest(dmg[2])},#{item["AnacondaId_textS"]}"
       end
     end
 
