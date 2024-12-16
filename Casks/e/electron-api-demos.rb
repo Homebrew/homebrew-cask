@@ -7,7 +7,7 @@ cask "electron-api-demos" do
   desc "Explore the Electron APIs"
   homepage "https://github.com/electron/electron-api-demos"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Electron API Demos.app"
 
