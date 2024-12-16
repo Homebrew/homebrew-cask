@@ -7,7 +7,7 @@ cask "amorphousdiskmark" do
   desc "App to measure storage read/write performance"
   homepage "https://katsurashareware.com/amorphousdiskmark/"
 
-  deprecate! date: "2023-12-17", because: :moved_to_mas
+  disable! date: "2024-12-16", because: :moved_to_mas
 
   app "AmorphousDiskMark.app"
 
