@@ -6,7 +6,7 @@ cask "joker" do
   name "Joker iOS kernelcache handling utility"
   homepage "https://newosxbook.com/tools/joker.html"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   binary "joker.universal", target: "joker"
 end
