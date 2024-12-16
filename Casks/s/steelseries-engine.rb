@@ -8,7 +8,7 @@ cask "steelseries-engine" do
   desc "Settings for SteelSeries peripherals and accessories"
   homepage "https://steelseries.com/engine"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
   conflicts_with cask: "steelseries-gg"
