@@ -7,7 +7,7 @@ cask "x-mirage" do
   desc "AirPlay and Google Cast receiver"
   homepage "https://www.x-mirage.com/x-mirage/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "X-Mirage.app"
 end
