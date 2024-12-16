@@ -8,7 +8,7 @@ cask "kindle" do
   desc "Interface for reading and syncing eBooks"
   homepage "https://www.amazon.com/gp/digital/fiona/kcp-landing-page"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :mojave"
