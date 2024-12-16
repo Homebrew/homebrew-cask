@@ -7,7 +7,7 @@ cask "edex-ui" do
   desc "Sci-fi themed terminal emulator and system monitor"
   homepage "https://github.com/GitSquared/edex-ui"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "eDEX-UI.app"
 
