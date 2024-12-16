@@ -8,7 +8,7 @@ cask "difffork" do
   desc "Compare both folders and files, present the differences in a visual format"
   homepage "https://dotfork.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "DiffFork.app"
 end
