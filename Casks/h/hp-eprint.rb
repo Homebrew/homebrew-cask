@@ -7,7 +7,7 @@ cask "hp-eprint" do
   desc "Mobile printing solution"
   homepage "https://h20331.www2.hp.com/hpsub/us/en/eprint/overview.html"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "HP ePrint Installer.pkg"
 

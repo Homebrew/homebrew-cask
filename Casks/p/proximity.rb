@@ -7,7 +7,7 @@ cask "proximity" do
   name "Proximity"
   homepage "https://www.tokyodawn.net/proximity/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   container nested: "macOS/Proximity-VST-AU.dmg"
 

@@ -7,7 +7,7 @@ cask "seaglass" do
   desc "Matrix client"
   homepage "https://github.com/neilalexander/seaglass/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

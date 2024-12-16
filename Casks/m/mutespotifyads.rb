@@ -6,7 +6,7 @@ cask "mutespotifyads" do
   name "MuteSpotifyAds"
   homepage "https://github.com/simonmeusel/MuteSpotifyAds"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :sierra"
 

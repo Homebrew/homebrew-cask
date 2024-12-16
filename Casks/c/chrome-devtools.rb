@@ -7,7 +7,7 @@ cask "chrome-devtools" do
   desc "Standalone Chrome development tools"
   homepage "https://github.com/auchenberg/chrome-devtools-app"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Chrome DevTools App.app"
 

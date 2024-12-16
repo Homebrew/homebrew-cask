@@ -8,7 +8,7 @@ cask "xampp-vm" do
   desc "Virtual machine with apache distribution containing MySQL, PHP, and Perl"
   homepage "https://www.apachefriends.org/index.html"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "xampp-osx-#{version}-vm.app"
 end

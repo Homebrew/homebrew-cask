@@ -7,7 +7,7 @@ cask "profilecreator" do
   desc "Create standard or customised configuration profiles"
   homepage "https://github.com/erikberglund/ProfileCreator"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :sierra"
 

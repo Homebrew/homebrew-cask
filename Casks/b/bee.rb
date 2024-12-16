@@ -8,7 +8,7 @@ cask "bee" do
   desc "Issue tracker frontend"
   homepage "https://www.neat.io/bee/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Bee.app"
 

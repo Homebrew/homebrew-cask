@@ -8,7 +8,7 @@ cask "tagger" do
   desc "Music metadata editor supporting batch edits and importing VGMdb data"
   homepage "https://bilalh.github.io/projects/tagger/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Tagger.app"
 end

@@ -8,7 +8,7 @@ cask "adoptopenjdk" do
   desc "JDK from the Java User Group (JUG)"
   homepage "https://adoptopenjdk.net/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
 

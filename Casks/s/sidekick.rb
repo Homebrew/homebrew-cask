@@ -7,7 +7,7 @@ cask "sidekick" do
   desc "Location-based settings manager"
   homepage "http://oomphalot.com/sidekick/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
 

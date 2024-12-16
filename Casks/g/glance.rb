@@ -7,7 +7,7 @@ cask "glance" do
   desc "Utility to provide quick look previews for files that aren't natively supported"
   homepage "https://github.com/samuelmeuli/glance"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :catalina"
 

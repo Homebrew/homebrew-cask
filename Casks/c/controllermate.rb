@@ -18,7 +18,7 @@ cask "controllermate" do
   desc "Create virtual mouse, tablet, and joystick devices"
   homepage "https://www.orderedbytes.com/controllermate/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "#temp#/ControllerMate.sparkle_interactive.pkg"
 

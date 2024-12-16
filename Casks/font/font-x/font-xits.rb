@@ -6,7 +6,7 @@ cask "font-xits" do
   name "XITS"
   homepage "https://github.com/khaledhosny/xits"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   font "xits-#{version}/xits-bold.otf"
   font "xits-#{version}/xits-bolditalic.otf"

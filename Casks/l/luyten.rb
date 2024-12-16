@@ -8,7 +8,7 @@ cask "luyten" do
   desc "Open-source Java decompiler GUI for Procyon"
   homepage "https://deathmarine.github.io/Luyten/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Luyten.app"
 end

@@ -8,7 +8,7 @@ cask "googleappengine" do
   desc "Cloud computing platform"
   homepage "https://cloud.google.com/appengine/docs/standard/python/download#appengine_sdk/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "GoogleAppEngineLauncher.app"
 

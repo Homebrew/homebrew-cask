@@ -8,7 +8,7 @@ cask "logdna-agent" do
   desc "Agent streams from log files to your LogDNA account"
   homepage "https://logdna.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "logdna-agent-#{version}.pkg"
 

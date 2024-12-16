@@ -8,7 +8,7 @@ cask "zecwallet-lite" do
   desc "Zcash Light Wallet"
   homepage "https://www.zecwallet.co/#download"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Zecwallet Lite.app"
 

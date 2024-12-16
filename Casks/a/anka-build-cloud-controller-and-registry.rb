@@ -10,7 +10,7 @@ cask "anka-build-cloud-controller-and-registry" do
   desc "Virtual machine management GUI/API and registry"
   homepage "https://veertu.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "AnkaControllerRegistry#{arch}-#{version}.pkg"
 

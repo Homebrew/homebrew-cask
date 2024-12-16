@@ -7,7 +7,7 @@ cask "cantata" do
   desc "Qt5 Graphical MPD Client"
   homepage "https://github.com/cdrummond/cantata"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :sierra"
 
