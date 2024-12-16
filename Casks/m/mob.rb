@@ -6,7 +6,7 @@ cask "mob" do
   name "Mob"
   homepage "https://github.com/zenghongtu/Mob"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Mob.app"
 
