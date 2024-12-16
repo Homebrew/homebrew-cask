@@ -6,7 +6,7 @@ cask "deathtodsstore" do
   name "DeathToDSStore"
   homepage "https://www.aorensoftware.com/blog/2011/12/24/death-to-ds_store/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "DeathToDSStore.app"
 end
