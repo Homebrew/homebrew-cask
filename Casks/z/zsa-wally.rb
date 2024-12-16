@@ -8,7 +8,7 @@ cask "zsa-wally" do
   desc "Flash tool for ZSA keyboards"
   homepage "https://ergodox-ez.com/pages/wally"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Wally.app"
 
