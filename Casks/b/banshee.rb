@@ -8,7 +8,7 @@ cask "banshee" do
   desc "Multimedia management and playback application"
   homepage "https://banshee.fm/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Banshee.app"
 
