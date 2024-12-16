@@ -14,7 +14,7 @@ cask "virtualbuddy@beta" do
       json.map do |release|
         next if release["draft"]
 
-        tag_suffix = release["tag_name"][/-(.+)$/i, 1]
+        tag_suffix = release["tag_name"]&.[](/-(.+)$/i, 1)
 
         release["assets"]&.map do |asset|
           match = asset["name"]&.match(regex)
