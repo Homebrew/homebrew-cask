@@ -1,9 +1,9 @@
 cask "mattermost" do
   arch arm: "m1", intel: "x64"
 
-  version "5.10.1"
-  sha256 arm:   "4a17032900cf18aba42ff16f970c463b56655552896ebae7e55fc3b6ea93461a",
-         intel: "ccc03196391cc3e9ba158e342348eb7a6b9bf80c9c07b57cd614edbf762c6777"
+  version "5.10.2"
+  sha256 arm:   "e8a1d76e88bb64b313fc8fed47676187691710dc74f240a3db17bbf8faf4eb0d",
+         intel: "47371fa62ef12424d01631e6affac61eeec49aba3ea36ec84711ece0a955b5ab"
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac-#{arch}.zip"
   name "Mattermost"
