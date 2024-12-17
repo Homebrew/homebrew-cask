@@ -9,15 +9,9 @@ cask "logitech-g-hub" do
   homepage "https://www.logitechg.com/en-us/innovation/g-hub.html"
 
   livecheck do
-    url "https://support.logi.com/api/v2/help_center/en-us/articles.json?label_names=webcontent=productdownload,websoftware=eee3033c-8e0b-11e9-8db1-d7e925481d4d"
-    regex(/Software\s+Version:.*?(\d+(?:\.\d+)+)/i)
-    strategy :json do |json, regex|
-      json["articles"]&.map do |article|
-        match = article["body"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
+    url "https://updates.ghub.logitechg.com/pipeline/v2/update/ghub10/osx/public/update.json"
+    strategy :json do |json|
+      json["version"]
     end
   end
 
