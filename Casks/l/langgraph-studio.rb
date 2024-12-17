@@ -1,6 +1,6 @@
 cask "langgraph-studio" do
-  version "0.0.32"
-  sha256 "d7058a6cdddae96b68068adcd12bf75d4db7b64cb6b7c82f7d2adf66c93bec3c"
+  version "0.0.33"
+  sha256 "424286f2713f6f3ed6fb3622723e944b8179d718c7e6edddbc033d634975141e"
 
   url "https://github.com/langchain-ai/langgraph-studio/releases/download/v#{version}/LangGraph-Studio-#{version}-universal.dmg",
       verified: "github.com/langchain-ai/langgraph-studio/"
