@@ -1,9 +1,9 @@
 cask "datovka" do
   arch arm: "arm64-macos13.3", intel: "64bit-macos10.12"
 
-  version "4.24.2"
-  sha256 arm:   "94d89c2cde3af843893d81fadf536205c027cd86d02a66643327aed32c8073d0",
-         intel: "800d9473841f866dc9014759f2c5625190cb9224366e45b9cd4e5edb85434b9b"
+  version "4.25.0"
+  sha256 arm:   "b3f4169b587ee221d46e35dcb5833397f19e8f61c1bdfff686ae23122be23165",
+         intel: "f81c21fe3c328e2e403a63b152dea098536efb702c9cf49cf3783a7fc1038028"
 
   url "https://datovka.nic.cz/#{version}/datovka-#{version}-#{arch}.dmg",
       verified: "datovka.nic.cz/"
