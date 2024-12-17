@@ -16,29 +16,26 @@ cask "clamxav" do
 
   pkg "ClamXAV_#{version.csv.first}_#{version.csv.second}_Installer.pkg"
 
-  postflight do
-    # Partial uninstaller used because the full uninstaller removes user preferences
-    system_command "/usr/bin/curl",
-                   args: [
-                     "-L",
-                     "https://www.clamxav.com/downloads/StandaloneUninstaller-Partial.pkg",
-                     "-o",
-                     "#{staged_path}/StandaloneUninstaller-Partial.pkg",
-                   ]
-  end
-
-  uninstall script:  {
-              executable:   "/usr/sbin/installer",
-              args:         [
-                "-pkg", "#{staged_path}/StandaloneUninstaller-Partial.pkg",
-                "-target", "/"
-              ],
-              must_succeed: false,
-              sudo:         true,
-            },
-            pkgutil: [
+  uninstall launchctl: [
+              "uk.co.canimaansoftware.ClamXAV.Engine",
+              "uk.co.canimaansoftware.ClamXAV.HelperTool",
+              "uk.co.canimaansoftware.ClamXAV.HelperToolUpdater",
+              "uk.co.canimaansoftware.ClamXAV.Satellite",
+              "uk.co.canimaansoftware.ClamXAV.UI-Helper",
+              "uk.co.canimaansoftware.ClamXAV.UninstallWatcher",
+              "uk.co.canimaansoftware.ClamXavHelper",
+              "uk.co.canimaansoftware.ClamXavHelperUpdater",
+            ],
+            quit:      "uk.co.canimaansoftware.ClamXAV",
+            pkgutil:   [
               "uk.co.canimaansoftware.clamxav*",
               "uk.co.canimaansoftware.ClamXAV*",
+            ],
+            delete:    [
+              "/Applications/ClamXAV.app",
+              "/Library/PrivilegedHelperTools/uk.co.canimaansoftware.ClamX*",
+              "/usr/local/clamXav",
+              "/usr/local/ClamXAV3",
             ]
 
   zap trash: [
