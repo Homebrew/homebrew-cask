@@ -13,6 +13,7 @@ cask "yes24-ebook" do
     strategy :xml do |xml, regex|
       url = xml.elements["//PATH"]&.text&.strip
       match = url.match(regex) if url
+      next if match.blank?
 
       match[1]
     end

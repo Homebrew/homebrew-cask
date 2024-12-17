@@ -13,6 +13,7 @@ cask "sys-pc-tool" do
     strategy :xml do |xml, regex|
       url = xml.elements["//sysui_config[@machine='mac']/file"]&.text&.strip
       match = url.match(regex) if url
+      next if match.blank?
 
       match[1]
     end
