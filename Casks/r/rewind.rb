@@ -17,7 +17,9 @@ cask "rewind" do
 
   app "Rewind.app"
 
-  uninstall quit: "com.memoryvault.MemoryVault"
+  uninstall launchctl:  "com.rewind.Rewind",
+            quit:       "com.memoryvault.MemoryVault",
+            login_item: "Rewind"
 
   zap trash: [
     "~/Documents/rewind_logs_*.zip",
