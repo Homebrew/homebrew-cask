@@ -9,7 +9,9 @@ cask "google-earth-pro" do
 
   livecheck do
     url "https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg"
-    strategy :extract_plist
+    strategy :extract_plist do |items|
+      items["com.Google.GoogleEarthPro"]&.version
+    end
   end
 
   pkg "Install Google Earth Pro #{version}.pkg"
