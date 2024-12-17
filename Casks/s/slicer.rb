@@ -9,13 +9,13 @@ cask "slicer" do
   homepage "https://www.slicer.org/"
 
   livecheck do
-    url "https://download.slicer.org"
+    url "https://download.slicer.org/?os=macosx&stability=release"
     regex(%r{href=.*?/bitstream/(\h+)["' >].+?["']header["'][^>]*?>\s*v?(\d+(?:\.\d+)+)}im)
     strategy :page_match do |page, regex|
-      match = page.scan(regex)
-      next if match.length < 2
+      match = page.match(regex)
+      next if match.blank?
 
-      "#{match[1][1]},#{match[1][0]}"
+      "#{match[2]},#{match[1]}"
     end
   end
 
