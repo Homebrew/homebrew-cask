@@ -1,15 +1,19 @@
 cask "boltai" do
-  version "1.29.2"
-  sha256 "669aa3910bb3b49d4250488a88221687ea6653dfdbeaab56e5fe4600d79dc919"
+  version "1.29.3"
+  sha256 "03873caa61e89ed5e8aa56841cd068a0ba8f7c81509ed2c138411f0b938cb667"
 
   url "https://download.boltai.com/releases/BoltAI-#{version}.dmg"
   name "BoltAI"
   desc "AI chat client"
   homepage "https://boltai.com/"
 
+  # The Sparkle feed can contain items on the "beta" channel, so we restrict
+  # matching to the default channel.
   livecheck do
     url "https://boltai.com/sparkle/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
