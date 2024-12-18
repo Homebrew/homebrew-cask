@@ -1,8 +1,11 @@
 cask "duplicati" do
-  version "2.0.8.1_beta_2024-05-07"
-  sha256 "c5576c52e838f81c12b7988a70d34562d8622013e024356d28df450835a34523"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://updates.duplicati.com/beta/duplicati-#{version}.dmg"
+  version "2.1.0.2_beta_2024-11-29"
+  sha256 intel: "62045156094c0796c2d9631068ea6746ec24f704b166e8bdb36a0158ea7395af",
+         arm:   "fc69b70df98b8966731aeddd94abe15dae1e1033e405d47e4082e16789c2d8ac"
+
+  url "https://updates.duplicati.com/beta/duplicati-#{version}-osx-#{arch}-gui.dmg"
   name "Duplicati"
   desc "Store securely encrypted backups in the cloud"
   homepage "https://www.duplicati.com/"
@@ -20,8 +23,4 @@ cask "duplicati" do
     "~/.config/Duplicati",
     "~/Library/Application Support/Duplicati",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
