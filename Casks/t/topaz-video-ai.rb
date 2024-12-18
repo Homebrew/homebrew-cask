@@ -1,6 +1,6 @@
 cask "topaz-video-ai" do
-  version "5.5.1"
-  sha256 "c71f1f29cba6436ddcf47ece7c7957b9f9adf491f1b711e9827688668302e4c8"
+  version "6.0.0"
+  sha256 "fcd81c15d98ba589f3ea400e7234bf1d82541b17deb64c3aea6207dbf37e1cf1"
 
   url "https://downloads.topazlabs.com/deploy/TopazVideoAI/#{version}/TopazVideoAI-#{version}.dmg"
   name "Topaz Video AI"
