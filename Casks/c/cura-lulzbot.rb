@@ -1,22 +1,20 @@
 cask "cura-lulzbot" do
-  version "3.6.21,ce3e47a08065c6687f0a226a4f1b2dc3"
-  sha256 "1548b15734ab2299f2fb8106e1b6f3242e5efe66286306f64b7675a0f354ff2c"
+  version "4.13.10"
+  sha256 "e899f81b8759eea8d8c1dfb98ff020e6cec7c485dd27a3245924c113d1f71d65"
 
-  url "https://gitlab.com/lulzbot3d/cura-le/cura-lulzbot/uploads/#{version.csv.second}/cura-lulzbot_#{version.csv.first}.dmg",
-      verified: "gitlab.com/lulzbot3d/cura-le/cura-lulzbot/"
+  url "https://software.lulzbot.com/MacOSX/Cura%20LulzBot%20Edition%20#{version.major_minor}/#{version}/Cura_LulzBot_Edition-#{version}.dmg"
   name "Cura LulzBot Edition"
   desc "3D printing solution"
-  homepage "https://www.lulzbot.com/learn/tutorials/cura-lulzbot-edition-installation-macos"
+  homepage "https://lulzbot.com/support/cura"
 
   livecheck do
-    url "https://gitlab.com/api/v4/projects/15405668/releases"
-    regex(%r{/uploads/(\h+)/cura[._-]?lulzbot[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
+    url "https://lulzbot.com/support/cura-le-macos"
+    regex(/href=.*?Cura[._-]LulzBot[._-]Edition[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  app "cura-lulzbot.app"
+  depends_on macos: ">= :big_sur"
+
+  app "Cura LulzBot Edition.app"
 
   zap trash: [
     "~/.cura",
