@@ -1,5 +1,5 @@
 cask "railway-wallet" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "arm64", intel: "x64"
 
   version :latest
   sha256 :no_check
