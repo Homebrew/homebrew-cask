@@ -1,6 +1,6 @@
 cask "wing-personal" do
-  version "10.0.7.0"
-  sha256 "977f9cca0a8e281699bcb3ade0ff77f3ae571468b523bf0092684feb9daeb02d"
+  version "10.0.8.0"
+  sha256 "3aceb5d1e6cc7a4db32ab7794cf3415308d0e71a3dedf40f3675d904647212e9"
 
   url "https://wingware.com/pub/wing-personal/#{version}/wing-personal-#{version}.dmg"
   name "Wing Personal"
