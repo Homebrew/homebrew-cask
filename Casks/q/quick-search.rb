@@ -10,4 +10,6 @@ cask "quick-search" do
   depends_on macos: ">= :sequoia"
 
   app "QuickSearch.app"
+
+  # No zap stanza required
 end
