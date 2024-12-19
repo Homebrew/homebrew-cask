@@ -1,9 +1,8 @@
 cask "mdb-accdb-viewer" do
-  version "2.3.1"
-  sha256 "8f6ee157d169182c26f2f3b8cffe1387010203a33a9d3bddaf71706e40783493"
+  version "2.3.2"
+  sha256 "5897a9d1bcfbb4711189716aedc88ca47f5ade821a67f5195a2d03c46bc22ece"
 
-  url "https://eggerapps-downloads.s3.amazonaws.com/mdbviewer-#{version}.zip",
-      verified: "eggerapps-downloads.s3.amazonaws.com/"
+  url "https://downloads.eggerapps.at/mdbviewer/mdbviewer-#{version}.zip"
   name "MDB/ACCDB Viewer"
   desc "Open Microsoft Access Databases"
   homepage "https://eggerapps.at/mdbviewer/"
