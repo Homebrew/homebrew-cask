@@ -1,8 +1,11 @@
 cask "soapui" do
-  version "5.7.2"
-  sha256 "25cf37f861c2bc95fea272d8ccbaff04fdcb8e14dfa1cc1b1d649918ef51a4d4"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://dl.eviware.com/soapuios/#{version}/SoapUI-#{version}.dmg",
+  version "5.8.0"
+  sha256 arm:   "2119fe26d55a4b7e1380b2caadbe301e489e8475a45429d47fb1409712edc6fd",
+         intel: "076a5322d5a8f56d814b55d51115b1520221e8206b5f54beb1e0338230a48b22"
+
+  url "https://dl.eviware.com/soapuios/#{version}/SoapUI-#{arch}-#{version}.dmg",
       verified: "dl.eviware.com/soapuios/"
   name "SmartBear SoapUI"
   desc "API testing tool"
@@ -10,7 +13,7 @@ cask "soapui" do
 
   livecheck do
     url "https://www.soapui.org/downloads/latest-release/"
-    regex(%r{href=.*?/SoapUI[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/SoapUI[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   installer script: {
