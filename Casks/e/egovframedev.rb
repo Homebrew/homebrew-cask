@@ -12,7 +12,7 @@ cask "egovframedev" do
 
   livecheck do
     url "https://www.egovframe.go.kr/home/sub.do?menuNo=39"
-    regex(/개발자용\s개발환경\s(\d+(?:\.\d+)+).*/i)
+    regex(/개발자용\s+개발환경\s+v?(\d+(?:\.\d+)+)\s+(?!Beta)/i)
   end
 
   depends_on macos: ">= :big_sur"
