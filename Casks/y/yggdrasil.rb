@@ -1,9 +1,9 @@
 cask "yggdrasil" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.5.11"
-  sha256 arm:   "f00357ee4117a66e71531fea639726f8973aa896ef5fa1beff553f10faf1223f",
-         intel: "9e2606306c031e79c60893e21843571183828836b2108b172e496654054df731"
+  version "0.5.12"
+  sha256 arm:   "631b1d841c7bcf2fdc870f0ef9294500ff04322498f0d9f1bef3354083d506ca",
+         intel: "d574e03247be3b00633b1300c326b3d1e856c06dd82df52886965ee3cc166fce"
 
   url "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v#{version}/yggdrasil-#{version}-macos-#{arch}.pkg"
   name "Yggdrasil"
