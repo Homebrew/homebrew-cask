@@ -1,9 +1,9 @@
 cask "screen-studio" do
   arch arm: "-arm64"
 
-  version "2.26.0-3175"
-  sha256 arm:   "a5f9316d5a9d29b46f6a4c7b3eff1820368f0530b96d22bf717966160936d649",
-         intel: "5143cbd8038528d1a1f2bdcaa1b156e2313ea2801abac6b28dd3d061b16d4901"
+  version "2.26.0-3178"
+  sha256 arm:   "a18f1807fd5765aca5d3b1e552a81492ac8f23b1c0a9e7521e1c60b857779ee1",
+         intel: "fd3dab4a17eebb3ae103b2d01d6ee437111f8bef4dc4229dd972e6d2ac68fc1b"
 
   url "https://screenstudioassets.com/releases/#{version}/Screen%20Studio-#{version}#{arch}-mac.zip",
       verified: "screenstudioassets.com/"
