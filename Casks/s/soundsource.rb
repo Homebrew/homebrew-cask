@@ -29,6 +29,7 @@ cask "soundsource" do
   end
 
   auto_updates true
+  conflicts_with cask: "soundsource@test"
 
   app "SoundSource.app"
 
