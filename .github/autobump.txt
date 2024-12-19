@@ -638,6 +638,7 @@ loom
 losslesscut
 loupedeck
 low-profile
+lulu
 lunacy
 lunar
 lunar-client
