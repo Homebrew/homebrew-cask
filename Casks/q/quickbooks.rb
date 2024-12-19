@@ -1,11 +1,11 @@
 cask "quickbooks" do
-  version "22.0.6.776,2023"
+  version "22.0.6.784,2023"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://http-download.intuit.com/http.intuit/Downloads/#{version.csv.second}/Latest/QuickBooksMac#{version.csv.second}.dmg"
   name "QuickBooks Desktop"
   desc "Accounting software"
-  homepage "https://quickbooks.intuit.com/desktop/mac/"
+  homepage "https://quickbooks.intuit.com/desktop/"
 
   livecheck do
     url "https://http-download.intuit.com/http.intuit/Downloads/Mac/QuickBooks/022/F86D4547-DFA0-4E55-A113-2502002DA600/app/appcast.xml"
