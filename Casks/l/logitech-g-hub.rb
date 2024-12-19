@@ -1,5 +1,5 @@
 cask "logitech-g-hub" do
-  version "2024.8.641856"
+  version "2024.9.649333"
   sha256 :no_check
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.zip",
@@ -30,17 +30,23 @@ cask "logitech-g-hub" do
   }
 
   postflight do
-    set_ownership   ["#{appdir}/lghub.app", "/Users/Shared/LGHUB"]
+    set_ownership "#{appdir}/lghub.app"
+    set_ownership "/Users/Shared/LGHUB"
     set_permissions "#{appdir}/lghub.app", "0755"
   end
 
-  uninstall script: {
-              executable: "/Applications/lghub.app/Contents/MacOS/lghub_updater.app/Contents/MacOS/lghub_updater",
-              args:       ["--uninstall"],
-              sudo:       true,
-            },
-            delete: "/Applications/lghub.app",
-            trash:  "/Users/Shared/LGHUB"
+  uninstall launchctl: [
+              "com.logi.ghub",
+              "com.logi.ghub.agent",
+              "com.logi.ghub.updater",
+            ],
+            quit:      [
+              "com.logi.ghub",
+              "com.logi.ghub.agent",
+              "com.logi.ghub.updater",
+            ],
+            delete:    "/Applications/lghub.app",
+            trash:     "/Users/Shared/LGHUB"
 
   zap trash: [
     "~/Library/Application Support/lghub",
