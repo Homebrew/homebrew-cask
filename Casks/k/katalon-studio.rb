@@ -11,8 +11,8 @@ cask "katalon-studio" do
   homepage "https://katalon.com/download"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*/(\d+(?:\.\d+)+)/Katalon}i)
+    url "https://github.com/katalon-studio/katalon-studio/"
+    regex(/^free[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "Katalon Studio.app"
