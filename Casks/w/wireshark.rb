@@ -2,29 +2,49 @@ cask "wireshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  version "4.4.2"
-  sha256 arm:   "e60c577e9e2ffff7b2fc10d50c27f41a061d3140ae3bc2a223dba882da00c428",
-         intel: "5f379065fa16424c68362346177b146b6050fcb77f2468b85cf197f09e399113"
+  on_mojave :or_older do
+    version "4.2.9"
+    sha256 arm:   "9dafd0d3eb9ca5d0372eb4ef00b264dd457cce3c22bb430aadeafa054853cad6",
+           intel: "64f5a653d812f4c248fcdb17f2dd43ab227880992ceed77994fd2b3604ff6997"
+
+    livecheck do
+      url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/#{livecheck_arch}64/en-US/development.xml"
+      strategy :sparkle do |items|
+        items.map do |item|
+          next unless item.minimum_system_version
+          next if item.minimum_system_version < :high_sierra ||
+                  item.minimum_system_version >= :catalina
+
+          item.version
+        end
+      end
+    end
+  end
+  on_catalina :or_newer do
+    version "4.4.2"
+    sha256 arm:   "e60c577e9e2ffff7b2fc10d50c27f41a061d3140ae3bc2a223dba882da00c428",
+           intel: "5f379065fa16424c68362346177b146b6050fcb77f2468b85cf197f09e399113"
+
+    # This appcast sometimes uses a newer pubDate for an older version, so we
+    # have to ignore the default `Sparkle` strategy sorting (which involves the
+    # pubDate) and simply work with the version numbers.
+    livecheck do
+      url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/#{livecheck_arch}64/en-US/stable.xml"
+      strategy :sparkle do |items|
+        items.map(&:nice_version)
+      end
+    end
+  end
 
   url "https://2.na.dl.wireshark.org/osx/all-versions/Wireshark%20#{version}%20#{arch}%2064.dmg"
   name "Wireshark"
   desc "Network protocol analyzer"
   homepage "https://www.wireshark.org/"
 
-  # This appcast sometimes uses a newer pubDate for an older version, so we
-  # have to ignore the default `Sparkle` strategy sorting (which involves the
-  # pubDate) and simply work with the version numbers.
-  livecheck do
-    url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/#{livecheck_arch}64/en-US/stable.xml"
-    strategy :sparkle do |items|
-      items.map(&:nice_version)
-    end
-  end
-
   auto_updates true
   conflicts_with cask:    "wireshark-chmodbpf",
                  formula: "wireshark"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   app "Wireshark.app"
   pkg "Add Wireshark to the system path.pkg"
