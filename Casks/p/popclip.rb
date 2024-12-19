@@ -1,6 +1,6 @@
 cask "popclip" do
-  version "2024.5.2"
-  sha256 "7dffdff233d684903589531b3e424088cac22816da3470f4b941383f46d5d2cc"
+  version "2024.12"
+  sha256 "22b223f1a6b3a3f63883e71af5e607e7ab4d80833d19d1bb9e0c049049863953"
 
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip",
       verified: "pilotmoon.com/downloads/"
