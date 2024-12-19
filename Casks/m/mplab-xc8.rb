@@ -1,6 +1,6 @@
 cask "mplab-xc8" do
-  version "2.50"
-  sha256 "1bfa239afc1c690cc4be1e58b280e2d55ef9d0fbace1e74a256677869225420b"
+  version "3.00"
+  sha256 "2289bfff62df4a1903d99ffa3d7a6fbc913b7e21b07078ec179327d93b430bc9"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc8-v#{version}-full-install-macos-x64-installer.dmg"
   name "MPLab XC8 Compiler"
@@ -26,9 +26,9 @@ cask "mplab-xc8" do
     sudo:       true,
   }
   binary "#{staged_path}/bin/xc-ccov"
-  binary "#{staged_path}/bin/xc8"
   binary "#{staged_path}/bin/xc8-ar"
   binary "#{staged_path}/bin/xc8-cc"
+  binary "#{staged_path}/bin/xc8-clangd"
   binary "#{staged_path}/bin/xclm"
 
   postflight do
