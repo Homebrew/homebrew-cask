@@ -9,7 +9,7 @@ cask "wacom-tablet" do
 
   livecheck do
     url :homepage
-    regex(%r{/WacomTablet[._-]?v?(\d+(?:\.\d+)+(?:[_-]\d+)+(?:[a-zA-Z])?)\.dmg}i)
+    regex(%r{/WacomTablet[._-]?v?(\d+(?:\.\d+)+(?:[_-]\d+[a-z]?)?)\.dmg}i)
   end
 
   depends_on macos: ">= :catalina"
