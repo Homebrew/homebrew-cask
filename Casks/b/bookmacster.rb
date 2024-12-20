@@ -17,6 +17,7 @@ cask "bookmacster" do
   end
 
   auto_updates true
+  conflicts_with cask: "bookmacster@beta"
   depends_on macos: ">= :big_sur"
 
   app "BookMacster.app"
