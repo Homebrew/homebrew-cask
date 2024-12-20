@@ -1,9 +1,9 @@
 cask "workspace-one-intelligent-hub" do
-  version "24.07.2"
+  version "24.07.3"
   sha256 :no_check
 
-  url "https://packages.vmware.com/wsone/VMwareWorkspaceONEIntelligentHub.pkg",
-      verified: "packages.vmware.com/wsone/"
+  url "https://packages.omnissa.com/wsone/WorkspaceONEIntelligentHub.pkg",
+      verified: "packages.omnissa.com/wsone/"
   name "Workspace ONE Intelligent Hub"
   desc "VMware workspace"
   homepage "https://www.getwsone.com/"
@@ -16,7 +16,7 @@ cask "workspace-one-intelligent-hub" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  pkg "VMwareWorkspaceONEIntelligentHub.pkg"
+  pkg "WorkspaceONEIntelligentHub.pkg"
 
   uninstall launchctl: [
               "com.airwatch.awcmd",
