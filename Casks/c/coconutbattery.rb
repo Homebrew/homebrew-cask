@@ -1,6 +1,6 @@
 cask "coconutbattery" do
-  version "4.0.0,0122"
-  sha256 "edc4b2b2e376a36c32739ece0dcce0cbac1c07051020342be09d24fa1714db8f"
+  version "4.0.1,130"
+  sha256 "30a48f0fd4090e1a29623ac24f7cff26ffbb406e9603923ea38c7d2a61122cf4"
 
   url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.csv.first.no_dots}_#{version.csv.second}.zip"
   name "coconutBattery"
@@ -16,7 +16,7 @@ cask "coconutbattery" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :monterey"
 
   app "coconutBattery.app"
 
