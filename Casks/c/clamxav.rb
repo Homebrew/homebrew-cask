@@ -40,17 +40,10 @@ cask "clamxav" do
 
   zap trash: [
     "/Library/Application Support/ClamXAV",
-    "~/Library/Caches/uk.co.canimaansoftware.ClamXAV",
-    "~/Library/Caches/uk.co.canimaansoftware.ClamXAV-UI-Helper",
-    "~/Library/Caches/uk.co.canimaansoftware.ClamXAV.XAV",
-    "~/Library/HTTPStorages/uk.co.canimaansoftware.ClamXAV",
-    "~/Library/HTTPStorages/uk.co.canimaansoftware.ClamXAV-UI-Helper",
-    "~/Library/HTTPStorages/uk.co.canimaansoftware.ClamXAV.binarycookies",
-    "~/Library/HTTPStorages/uk.co.canimaansoftware.ClamXAV.XAV",
-    "~/Library/Logs/ClamXAV-Console.log",
-    "~/Library/Logs/ClamXAV-UI-Helper-Console.log",
-    "~/Library/Preferences/uk.co.canimaansoftware.ClamXAV-UI-Helper.plist",
-    "~/Library/Preferences/uk.co.canimaansoftware.ClamXAV.plist",
+    "~/Library/Caches/uk.co.canimaansoftware.ClamXAV*",
+    "~/Library/HTTPStorages/uk.co.canimaansoftware.ClamXAV*",
+    "~/Library/Logs/ClamXAV-*Console.log",
+    "~/Library/Preferences/uk.co.canimaansoftware.ClamXAV*.plist",
   ]
 
   caveats do
