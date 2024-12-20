@@ -1,9 +1,9 @@
 cask "polypane" do
   arch arm: "-arm64"
 
-  version "22.1.0"
-  sha256 arm:   "4aac966a36c073c2ada1440452958f6e655ea10f45e311d78747876b35c6f2ef",
-         intel: "2682d3baadd03864253cd8aeafa2dbe5684078a1920c5faa4c593a91bc3cf7d1"
+  version "22.1.1"
+  sha256 arm:   "036810a1c75ec00ecf5feee821b6835107b5b91039f38ef79948a8aa4bb2d760",
+         intel: "87477fd9863c6239c63e2ba1038bcdd66f7baaba9546c540f0d49df7dac7ecb3"
 
   url "https://github.com/firstversionist/polypane/releases/download/v#{version}/Polypane-#{version}#{arch}.dmg",
       verified: "github.com/firstversionist/polypane/"
