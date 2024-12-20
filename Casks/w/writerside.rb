@@ -1,9 +1,9 @@
 cask "writerside" do
   arch arm: "-aarch64"
 
-  version "2024.3,243.22562.163"
-  sha256 arm:   "29f78599e6896080ca714ad65fd3713afd69a90ecd8d848ddad1c0b42a32aed9",
-         intel: "5ab49b342f940f931cbd55feeafaf7b0d3cae64e2ca66f0906c00a57089e5083"
+  version "2024.3,243.22562.371"
+  sha256 arm:   "9d86ef50b4c6d2a07d236219e9b05c0557241fb017d52ac395719bdb425130f5",
+         intel: "0c78b8035497c855aea5666256716778abd46dadf68f51e4f91c0db01f62b280"
 
   url "https://download.jetbrains.com/writerside/writerside-#{version.csv.second}#{arch}.dmg"
   name "Writerside"
