@@ -1,6 +1,6 @@
 cask "thinlinc-client" do
-  version "4.17.0_3543"
-  sha256 "34283ca262cbc308e5170cc0304f5036f58167fbbcea6d98988202405fcb9838"
+  version "4.18.0_3768"
+  sha256 "3a8ca607e386a9b0f8a6e15b183f96a1d3abeac607b8d12510206d135d9201a3"
 
   url "https://www.cendio.com/downloads/clients/tl-#{version}-client-macos.iso"
   name "ThinLinc"
