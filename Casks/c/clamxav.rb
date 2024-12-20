@@ -42,7 +42,7 @@ cask "clamxav" do
     "/Library/Application Support/ClamXAV",
     "~/Library/Caches/uk.co.canimaansoftware.ClamXAV*",
     "~/Library/HTTPStorages/uk.co.canimaansoftware.ClamXAV*",
-    "~/Library/Logs/ClamXAV-*Console.log",
+    "~/Library/Logs/ClamXAV*-Console.log",
     "~/Library/Preferences/uk.co.canimaansoftware.ClamXAV*.plist",
   ]
 
