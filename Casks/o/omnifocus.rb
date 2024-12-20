@@ -96,8 +96,8 @@ cask "omnifocus" do
     uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
   end
   on_sonoma :or_newer do
-    version "4.5"
-    sha256 "ecbc02f0698fe161c978c91ae32c656fb6f87f94807fd4eba0fa468f271c39ff"
+    version "4.5.1"
+    sha256 "a4d986e7d053a63ac3915cfe5aed4007637556dc849b9993033b3a90710fb0e6"
 
     url "https://downloads.omnigroup.com/software/macOS/14/OmniFocus-#{version}.dmg"
 
