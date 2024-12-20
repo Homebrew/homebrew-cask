@@ -1,9 +1,9 @@
 cask "memoryanalyzer" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.15.0.20231206"
-  sha256 arm:   "e9feff5992a930a7ca8259cd36ef068df29a24ebb3d021f39bc5166620b9a26f",
-         intel: "07333cbe1449b93adce5a8398342aec819972d42d967f24d31be260f8ea0c7fc"
+  version "1.16.0.20241216"
+  sha256 arm:   "7bfc59d5f4be2d1d0ad9c79326d4ea44bfa6fe1c4aa98a4efdafc252454c368d",
+         intel: "c0c796dbe22ba1d4b005ff0a287dd6a7d74988ecb41107c822778cacb96d1fa6"
 
   url "https://download.eclipse.org/mat/#{version.major_minor_patch}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.#{arch}.dmg",
       verified: "download.eclipse.org/mat/"
