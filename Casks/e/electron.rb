@@ -25,5 +25,6 @@ cask "electron" do
     "~/Library/Caches/Electron",
     "~/Library/Preferences/com.github.electron.helper.plist",
     "~/Library/Preferences/com.github.electron.plist",
+    "~/Library/Saved Application State/com.github.Electron.savedState",
   ]
 end
