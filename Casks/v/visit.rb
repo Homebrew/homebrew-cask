@@ -9,12 +9,19 @@ cask "visit" do
     livecheck do
       skip "Legacy version"
     end
+
+    caveats do
+      requires_rosetta
+    end
   end
   on_monterey :or_newer do
-    version "3.4.1"
-    sha256 "909f482c6a5e1777ede98d4c0a8019cd23f41ac0fde1eb58942ca99da84ef132"
+    arch arm: "23-arm64", intel: "22-x86_64"
 
-    url "https://github.com/visit-dav/visit/releases/download/v#{version}/VisIt-#{version}.dmg",
+    version "3.4.2"
+    sha256 arm:   "75b4d4bc4f8b4d9d8d0ef55e14d34e97442fbf2cf7e10b4726dd773f30b7e827",
+           intel: "27399911756a57817e6081d3a6e22e3d569028b9261fe04bf8ee1841fddad591"
+
+    url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version.dots_to_underscores}.darwin#{arch}.dmg",
         verified: "github.com/visit-dav/visit/"
 
     livecheck do
@@ -32,8 +39,4 @@ cask "visit" do
   app "VisIt.app"
 
   zap trash: "~/Library/Saved Application State/gov.llnl.visit.gui.savedState"
-
-  caveats do
-    requires_rosetta
-  end
 end
