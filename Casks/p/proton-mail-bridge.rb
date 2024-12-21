@@ -1,4 +1,4 @@
-cask "protonmail-bridge" do
+cask "proton-mail-bridge" do
   version "3.15.1"
   sha256 "1578930d5e2bc754e04c9a5a44199035190a6b9f980d6d3ad1722f5969c705e8"
 

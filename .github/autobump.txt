@@ -925,8 +925,8 @@ propresenter
 propresenter@beta
 proton-drive
 proton-mail
+proton-mail-bridge
 proton-pass
-protonmail-bridge
 protonvpn
 protopie
 prowlarr
