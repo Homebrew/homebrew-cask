@@ -4,7 +4,7 @@ cask "mouseless" do
 
   url "https://mouseless.click/mouseless-installer_v#{version}.dmg"
   name "mouseless"
-  desc "Mouse control with the keyboard"
+  desc "Full, fast mouse control with the keyboard"
   homepage "https://mouseless.click/"
 
   livecheck do
@@ -14,7 +14,7 @@ cask "mouseless" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
 
   app "Mouseless.app"
