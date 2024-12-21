@@ -4,7 +4,7 @@ cask "mouseless" do
 
   url "https://mouseless.click/mouseless-installer_v#{version}.dmg"
   name "mouseless"
-  desc "Full, fast mouse control with the keyboard"
+  desc "Mouse control with the keyboard"
   homepage "https://mouseless.click/"
 
   livecheck do
