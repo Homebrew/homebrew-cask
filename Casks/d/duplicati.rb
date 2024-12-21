@@ -21,8 +21,6 @@ cask "duplicati" do
     end
   end
 
-  depends_on formula: "mono"
-
   app "Duplicati.app"
 
   zap trash: [
