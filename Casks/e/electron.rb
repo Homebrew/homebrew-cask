@@ -20,6 +20,7 @@ cask "electron" do
   binary "#{appdir}/Electron.app/Contents/MacOS/Electron", target: "electron"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.electron.sfl*"
     "~/Library/Application Support/Electron",
     "~/Library/Caches/Electron",
     "~/Library/Preferences/com.github.electron.helper.plist",
