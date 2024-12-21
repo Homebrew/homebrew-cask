@@ -19,6 +19,7 @@ cask "runjs" do
   app "RunJS.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.lukehaas.runjs.sfl*",
     "~/Library/Application Support/runjs",
     "~/Library/Logs/RunJS",
     "~/Library/Preferences/me.lukehaas.runjs.plist",
