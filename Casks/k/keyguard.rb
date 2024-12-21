@@ -1,9 +1,9 @@
 cask "keyguard" do
   arch arm: "apple", intel: "intel"
 
-  version "1.7.0,20241212.2"
-  sha256 arm:   "643b789793d534f3663e150c9447e1d72847703405bb325acc0b38aa4b0419a5",
-         intel: "758eeb90c830acb2af5238a17ffa9656daa46437f140e58978de9bfeb0d06582"
+  version "1.7.1,20241221"
+  sha256 arm:   "ac96f5a5d5060b6fd4218c31bee1ad7f83e7d14fb3d6b1e0c87e08789534b6e3",
+         intel: "e5a2341db880641fa4d8c3cefaf49e531c33f5c77f36062d1e94f86ec8f24c42"
 
   url "https://github.com/AChep/keyguard-app/releases/download/r#{version.csv.second}/Keyguard-#{version.csv.first}-#{arch}.dmg"
   name "Keyguard"
