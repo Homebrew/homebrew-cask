@@ -1,8 +1,8 @@
 cask "vyprvpn" do
-  version "5.2.0.10702"
-  sha256 "d6ec7e71ed6d0f85c778e5fcadf0073859e13aea7513f1ce4837a38700f595a7"
+  version "5.2.4.10748"
+  sha256 "ad8f94cf8b8c23538f53a98aee81f0e38636e7fb7f7d898757f4bff2e9fd41ef"
 
-  url "https://www.vyprvpn.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version.major_minor_patch}.dmg"
+  url "https://downloads.vyprvpn.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg"
   name "VyprVPN"
   desc "VPN client"
   homepage "https://www.vyprvpn.com/"
