@@ -99,6 +99,7 @@ avast-secure-browser
 aws-vpn-client
 axure-rp
 ba-connected
+babeledit
 backblaze
 backuploupe
 backyard-ai
@@ -472,6 +473,8 @@ gitkraken-on-premise-serverless
 glyphs
 gns3
 gnucash
+go-agent
+go-server
 godspeed
 gog-galaxy
 goland
@@ -805,6 +808,7 @@ obs@beta
 obsbot-center
 obsidian
 ocenaudio
+octarine
 odrive
 okta-advanced-server-access
 ollama
