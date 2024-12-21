@@ -9,6 +9,7 @@ cask "atom" do
   homepage "https://atom.io/"
 
   deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-12-21", because: :discontinued
 
   auto_updates true
 
