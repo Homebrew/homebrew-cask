@@ -10,12 +10,12 @@ cask "mattermost" do
   desc "Open-source, self-hosted Slack-alternative"
   homepage "https://mattermost.com/"
 
-  # Upstream publishes file links in the description of GitHub releases.
   livecheck do
-    url "https://github.com/mattermost/desktop"
-    strategy :github_latest
+    url "https://releases.mattermost.com/desktop/latest-mac.yml"
+    strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Mattermost.app"
