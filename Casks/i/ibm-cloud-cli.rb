@@ -10,16 +10,8 @@ cask "ibm-cloud-cli" do
   desc "Command-line API client"
   homepage "https://cloud.ibm.com/docs/cli/index.html"
 
-  # Upstream publishes file links in the description of GitHub releases.
   livecheck do
     url "https://github.com/IBM-Cloud/ibm-cloud-cli-release"
-    regex(/IBM[._-]Cloud[._-]CLI[._-]v?(\d+(?:\.\d+)+)#{arch}\.(?:dmg|pkg)/i)
-    strategy :github_latest do |json, regex|
-      match = json["body"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
   end
 
   pkg "IBM_Cloud_CLI_#{version}#{arch}.pkg"
