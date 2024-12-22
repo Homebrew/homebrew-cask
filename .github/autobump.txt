@@ -1133,6 +1133,7 @@ steamcmd
 steelseries-gg
 steermouse
 steinberg-activation-manager
+stratoshark
 strongvpn
 studio-3t
 sublime-merge
