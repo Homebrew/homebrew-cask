@@ -8,7 +8,7 @@ cask "font-jetbrains-mono" do
   homepage "https://www.jetbrains.com/lp/mono"
 
   livecheck do
-    url "https://github.com/JetBrains/JetBrainsMono"
+    url :url
     strategy :gitHub_latest
   end
 

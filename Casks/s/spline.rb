@@ -11,7 +11,7 @@ cask "spline" do
   homepage "https://spline.design/"
 
   livecheck do
-    url "https://spline.design/#download"
+    url :homepage
     regex(/Spline[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]mac\.zip/i)
   end
 

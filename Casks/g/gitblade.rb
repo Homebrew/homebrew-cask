@@ -8,7 +8,7 @@ cask "gitblade" do
   homepage "https://gitblade.com/"
 
   livecheck do
-    url "https://gitblade.com/#download"
+    url :homepage
     regex(%r{href=.*?/gitblade[._-]v?(\d+(?:\.\d+)*)[._-]darwin[._-]x64\.dmg}i)
   end
 
