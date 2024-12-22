@@ -12,6 +12,8 @@ cask "jagex" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   installer manual: "Jagex Launcher Installer.app"
 
   uninstall quit:   "com.jagex.launcher",
