@@ -1,7 +1,7 @@
 cask "sublime-text@dev" do
   # NOTE: The first digit of the build number is the major version.
-  version "4188"
-  sha256 "8d1bee67cf9be78a87940a1a95ef9284899ad17eea8577761aabd62ff40e790b"
+  version "4190"
+  sha256 "e6e049e2e95420ded374cebc0d0d2b7ab9a75ab62ea78639c789894f82d172e5"
 
   url "https://download.sublimetext.com/sublime_text_build_#{version}_mac.zip"
   name "Sublime Text"
