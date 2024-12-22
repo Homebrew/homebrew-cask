@@ -1,18 +1,19 @@
 cask "boxy-suite" do
-  version "2.1.4"
+  version "3.0.0"
   sha256 :no_check
 
-  url "https://boxyteam-static.s3.amazonaws.com/release/Boxy%20Suite.dmg",
-      verified: "boxyteam-static.s3.amazonaws.com/release/"
+  url "https://boxysuite.s3.amazonaws.com/release/Boxy%20Suite.dmg",
+      verified: "boxysuite.s3.amazonaws.com/release/"
   name "Boxy Suite"
   desc "Gmail, Calendar, Keep and Contacts apps"
   homepage "https://www.boxysuite.com/"
 
   livecheck do
-    url "https://www.boxysuite.com/updates/"
-    regex(/Version\s+(\d+(?:\.\d+)+)/i)
+    url "https://boxysuite.s3.amazonaws.com/appcast/gmail.xml"
+    strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Boxy for Gmail.app"
@@ -21,8 +22,4 @@ cask "boxy-suite" do
   app "Boxy for Contacts.app"
 
   zap trash: "~/Library/Caches/co.boxyapp.gmail*"
-
-  caveats do
-    requires_rosetta
-  end
 end
