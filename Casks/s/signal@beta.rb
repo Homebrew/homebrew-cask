@@ -11,8 +11,8 @@ cask "signal@beta" do
   homepage "https://signal.org/"
 
   livecheck do
-    url "https://github.com/signalapp/Signal-Desktop"
-    regex(/^v?(\d+(?:\.\d+)+[._-]beta\.\d+)$/i)
+    url "https://updates.signal.org/desktop/beta-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
