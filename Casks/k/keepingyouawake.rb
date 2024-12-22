@@ -9,8 +9,8 @@ cask "keepingyouawake" do
   homepage "https://keepingyouawake.app/"
 
   livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    url "https://newmarcel.github.io/KeepingYouAwake/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
