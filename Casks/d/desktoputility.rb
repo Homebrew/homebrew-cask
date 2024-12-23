@@ -12,7 +12,7 @@ cask "desktoputility" do
     regex(/<h\d+>\s*(\d+(?:\.\d+)+)\s*</i)
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :big_sur"
 
   app "DesktopUtility.app"
 
