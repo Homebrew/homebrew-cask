@@ -1,8 +1,8 @@
 cask "polyphone" do
-  version "2.4.1,109"
-  sha256 "2cb3e037333cb3307df408eb1b77bd4b8df1da5d97a476985fcca5cd63ed898b"
+  version "2.5.0,124"
+  sha256 "031ad6ab2dc78841aefd5159d35194ffcf197d4845f3a084f0e0e5bb438d962b"
 
-  url "https://www.polyphone.io/download/0/v#{version.csv.second}/Polyphone-MacOS_11.0-#{version.csv.first}.dmg",
+  url "https://www.polyphone.io/download/0/v#{version.csv.second}/Polyphone-MacOS_12-#{version.csv.first}.dmg",
       user_agent: :browser
   name "Polyphone"
   desc "Soundfont editor for quickly designing musical instruments"
