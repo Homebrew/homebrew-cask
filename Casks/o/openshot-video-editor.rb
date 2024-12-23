@@ -1,6 +1,6 @@
 cask "openshot-video-editor" do
-  version "3.2.1"
-  sha256 "f5e63b893cb875e538618724e22d86749ce50aac584d547510374f6714ebcea6"
+  version "3.3.0"
+  sha256 "bfa2dfbf5e3208ceebaf268e3bb8896e6dcbeb7af6d2c56d7f48c2fd849a3d1e"
 
   url "https://github.com/OpenShot/openshot-qt/releases/download/v#{version}/OpenShot-v#{version}-x86_64.dmg",
       verified: "github.com/OpenShot/openshot-qt/"
