@@ -24,6 +24,8 @@ cask "stratoshark" do
   app "Stratoshark.app"
   binary "#{appdir}/Stratoshark.app/Contents/MacOS/extcap/falcodump"
   binary "#{appdir}/Stratoshark.app/Contents/MacOS/extcap/sshdig"
+  manpage "#{appdir}/Stratoshark.app/Contents/Resources/share/man/man1/falcodump.1"
+  manpage "#{appdir}/Stratoshark.app/Contents/Resources/share/man/man1/sshdig.1"
 
   uninstall quit: "org.wireshark.Stratoshark"
 
