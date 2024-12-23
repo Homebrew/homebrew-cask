@@ -27,6 +27,11 @@ jobs:
     permissions:
       contents: write # for Homebrew/actions/git-try-push
     steps:
+
+      - name: Clean up CI machine
+        if: runner.os == 'macOS'
+        run: brew test-bot --cleanup --only-cleanup-before
+
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
