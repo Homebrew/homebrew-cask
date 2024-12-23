@@ -21,9 +21,7 @@ permissions:
 jobs:
   remove-disabled-packages:
     if: github.repository_owner == 'Homebrew'
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/homebrew/ubuntu22.04:master
+    runs-on: macos-latest
     env:
       REMOVAL_BRANCH: remove-disabled-packages
     permissions:
