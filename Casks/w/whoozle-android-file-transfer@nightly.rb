@@ -8,7 +8,7 @@ cask "whoozle-android-file-transfer@nightly" do
   desc "Android File Transfer for Linux"
   homepage "https://whoozle.github.io/android-file-transfer-linux/"
 
-  deprecate! date: "2025-05-01", because: :unsigned
+  disable! date: "2024-12-22", because: :unmaintained
 
   conflicts_with cask: "whoozle-android-file-transfer"
   depends_on macos: ">= :sierra"
