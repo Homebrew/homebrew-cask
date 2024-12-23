@@ -4,7 +4,7 @@ cask "fastdmg" do
 
   url "https://sveinbjorn.org/files/software/fastdmg/FastDMG-#{version}.zip"
   name "FastDMG"
-  desc "Replacement for Apple's DiskImageMounter app"
+  desc "Alternative to Apple's DiskImageMounter app"
   homepage "https://sveinbjorn.org/fastdmg"
 
   livecheck do
