@@ -1,6 +1,6 @@
 cask "usmart-trade" do
-  version "3.28.2,fc0fd290-d88e-438a-b4d0-706ee50408e2,2024-09-19"
-  sha256 "8883e2b9d45619c701d66ac290792b210c098b160766a4f75f18afb2c6985787"
+  version "3.29.0,1b92ec9e-9c12-4a90-a5cd-8cea3cf60a7c,2024-12-23"
+  sha256 "7b5f1aa7dcdb39a87885564bb5fa9dbb52a36c2547e2b2961a99fb46fc840bc7"
 
   url "https://jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/admin/app-version-file/#{version.csv.third}/#{version.csv.second}/uSMART%20Trade-#{version.csv.first}.dmg",
       verified: "jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/"
