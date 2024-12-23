@@ -1,5 +1,5 @@
 cask "mailmate@beta" do
-  version "5937"
+  version "6067"
   sha256 :no_check
 
   url "https://updates.mailmate-app.com/archives/MailMateBeta.tbz",
