@@ -1,6 +1,6 @@
 cask "pronotes" do
-  version "0.7.6"
-  sha256 "655cd62f286539610c0523fee835ac5f3dcccd74bb9d63e245ee51f5a898e8f5"
+  version "0.7.7"
+  sha256 "582ef7c759e4995255ef51ded5532c045c323e7d92e1e6071fe8e08e33a9550d"
 
   url "https://assets.pronotes.app/downloads/ProNotes-#{version}.zip"
   name "ProNotes"
