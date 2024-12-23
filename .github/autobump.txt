@@ -143,6 +143,8 @@ bluewallet
 boinc
 boltai
 bookends
+bookmacster
+bookmacster@beta
 boosteroid
 box-drive
 brave-browser
