@@ -1,9 +1,9 @@
 cask "stratoshark" do
   arch arm: "Arm", intel: "Intel"
 
-  version "0.9.0rc0,1361,029b3b5a89a8"
-  sha256 arm:   "1bec5cc1cdb5707e8a431f736f36aa3ca1165046d540ab173023e2e30dd115fe",
-         intel: "6709b9691a7f26dce74fbf5057762bd3935f8e7535695a70a211bde3b47c99c8"
+  version "0.9.0rc0,1364,5cf528c8e64a"
+  sha256 arm:   "099d8a940c38e0448b6d9af159654bb963c7d77b3b1e2aca5ae47fe395504470",
+         intel: "2afdad31ca0eea3f5c750b99e343d284497e0c98fb0a7b748c4752c4b3f3df91"
 
   url "https://www.wireshark.org/download/automated/osx/Stratoshark%20#{version.csv.first}-#{version.csv.second}-g#{version.csv.third}%20#{arch}%2064.dmg"
   name "Stratoshark"
