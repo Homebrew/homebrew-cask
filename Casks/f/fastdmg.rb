@@ -1,15 +1,15 @@
 cask "fastdmg" do
   version "1.0.2"
-  sha256 :no_check
+  sha256 "405c99ee251ebe1a5f3e4cbec8b84e6211ee8b89e5abf0f50b7b2cee9567062a"
 
-  url "https://sveinbjorn.org/files/software/FastDMG.zip"
+  url "https://sveinbjorn.org/files/software/fastdmg/FastDMG-#{version}.zip"
   name "FastDMG"
-  desc "Very fast and reliable replacement for Apple's inefficient DiskImageMounter app"
+  desc "Replacement for Apple's DiskImageMounter app"
   homepage "https://sveinbjorn.org/fastdmg"
 
   livecheck do
-    url "https://github.com/sveinbjornt/FastDMG"
-    strategy :github_latest
+    url "https://sveinbjorn.org/files/software/fastdmg/"
+    regex(/href=.*?FastDMG[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :el_capitan"
