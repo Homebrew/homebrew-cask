@@ -1,5 +1,5 @@
 cask "desktoputility" do
-  version "5.3.2"
+  version "5.3.4"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/desktoputility/DesktopUtility.dmg"
@@ -12,7 +12,7 @@ cask "desktoputility" do
     regex(/<h\d+>\s*(\d+(?:\.\d+)+)\s*</i)
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :big_sur"
 
   app "DesktopUtility.app"
 
