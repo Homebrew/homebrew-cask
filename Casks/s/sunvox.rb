@@ -8,8 +8,8 @@ cask "sunvox" do
   homepage "https://www.warmplace.ru/soft/sunvox/"
 
   livecheck do
-    url "https://www.warmplace.ru/soft/sunvox/changelog.txt"
-    regex(/^v(\d+(?:\.\d+)*[a-z]?)\s*\(\d+/i)
+    url :homepage
+    regex(/href=.*?sunvox[._-]v?(\d+(?:\.\d+)+[a-z]?)\.zip/i)
   end
 
   depends_on macos: ">= :high_sierra"
