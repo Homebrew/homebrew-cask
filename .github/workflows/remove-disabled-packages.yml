@@ -36,7 +36,7 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
-          core: true
+          core: false
           cask: true
           test-bot: false
 
@@ -46,10 +46,10 @@ jobs:
         with:
           username: BrewTestBot
 
-      - name: Set up commit signing
-        uses: Homebrew/actions/setup-commit-signing@master
-        with:
-          signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
+      # - name: Set up commit signing
+      #   uses: Homebrew/actions/setup-commit-signing@master
+      #   with:
+      #     signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
 
       - name: Checkout removal branch
         run: git checkout -b "$REMOVAL_BRANCH" origin/master
