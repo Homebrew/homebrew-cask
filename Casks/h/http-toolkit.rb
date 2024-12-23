@@ -1,6 +1,6 @@
 cask "http-toolkit" do
-  version "1.19.1"
-  sha256 "aae8de3770f00d7be5fc4714d7f809c473fadb920e75dac2ee787dda17f336d6"
+  version "1.19.2"
+  sha256 "c5bd2d1e55eac7c914ff57d64fe5da45f5bf8f901fe9c379a17d56af32578415"
 
   url "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v#{version}/HttpToolkit-#{version}.dmg",
       verified: "github.com/httptoolkit/httptoolkit-desktop/"
