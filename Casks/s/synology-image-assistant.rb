@@ -1,9 +1,9 @@
 cask "synology-image-assistant" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.0-43"
-  sha256 arm:   "322ba03618fff941ce4af008de124523cdfc604b1beb4bfaafdce6efbd636da3",
-         intel: "07cf27ff568dc30c3be6ecc74116fc71ed479fd7499d53a7840cb56ef29b055e"
+  version "1.0.1-54"
+  sha256 arm:   "e9c0046cd2d6bfe6673725b772f509ce7bb6681b42481d91c5bac83bae12a778",
+         intel: "da43dd988875fcace7447e63aae7f491a451008c558c4ae8c3b641db4b903bf2"
 
   url "https://global.download.synology.com/download/Utility/SynologyImageAssistant/#{version}/Mac/SynologyImageAssistant-#{version}-#{arch}.pkg"
   name "Synology Image Assistant"
