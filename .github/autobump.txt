@@ -218,6 +218,7 @@ codeql
 codux
 cog
 coin-wallet
+commander-one
 commandpost
 confluent-cli
 connect-fonts
@@ -925,6 +926,7 @@ private-internet-access
 processing
 processspy
 progressive-downloader
+pronotes
 propresenter
 propresenter@beta
 proton-drive
@@ -1144,6 +1146,7 @@ superhuman
 superkey
 superlist
 supernotes
+superwhisper
 surfshark
 surge
 swiftformat-for-xcode
@@ -1340,6 +1343,7 @@ xcodes
 xemu
 xiaomi-cloud
 xiv-on-mac
+xliff-editor
 xmind
 xnconvert
 xnviewmp
