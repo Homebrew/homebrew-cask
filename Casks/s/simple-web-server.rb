@@ -1,9 +1,9 @@
 cask "simple-web-server" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.12"
-  sha256 arm:   "3d685dd533e986e8b705b4e74832d984c327f041b3dd4fab6a5f061b9e8890c8",
-         intel: "5c4489781578e65da66ee88ac3c9ffcd81b3da9199226bf1a0060ee727982439"
+  version "1.2.14"
+  sha256 arm:   "534b0b1d896b85631443f8ab7779f25fc8560b8c1c16ee51b583d93402570598",
+         intel: "b2487cc9cfdd15d2382ffc963383f046d6975d011afca27924b6170a4da8e45b"
 
   url "https://github.com/terreng/simple-web-server/releases/download/v#{version}/Simple-Web-Server-macOS-#{version}-#{arch}.dmg",
       verified: "github.com/terreng/simple-web-server/"
