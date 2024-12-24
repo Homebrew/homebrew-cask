@@ -4,7 +4,7 @@ cask "alcove" do
 
   url "https://releases.tryalcove.com/latest/Alcove.dmg"
   name "Alcove"
-  desc "Dynamıc Island now for your Mac"
+  desc "Utility to add Dynamic Island like features to notch area"
   homepage "https://tryalcove.com/"
 
   livecheck do
