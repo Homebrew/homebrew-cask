@@ -1,8 +1,8 @@
 cask "brightvpn" do
-  version "1.232.902"
-  sha256 "1b49de4cfd30d1e2d3d7c04362f5ddcea131682818550ab76c8dcc48a84df949"
+  version "1.511.632"
+  sha256 "ce4a04866cab06c5693378e36ffd344bfe4adb6a84d6a4af8fa8634a855b841a"
 
-  url "https://brightdata.com/static/BrightVPN-1.1-#{version}.dmg",
+  url "https://brightdata.com/static/BrightVPN-#{version}.dmg",
       verified: "brightdata.com/static/"
   name "Bright VPN"
   desc "VPN service"
@@ -10,10 +10,10 @@ cask "brightvpn" do
 
   livecheck do
     url :homepage
-    regex(/"vpn_mac"\s*:\s*"v?(\d+(?:[.-]\d+)+)"/i)
+    regex(/"vpn_mac"\s*:\s*"(\d+\.\d+\.\d+)"/i)
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "BrightVPN.app"
 
