@@ -1,6 +1,6 @@
 cask "xact" do
-  version "2.55"
-  sha256 "95c577637d7b263d3b6d5ce847134ba0ffe42f4c885ee2ae8354b051b8e00882"
+  version "2.56"
+  sha256 "827016a4990f2756c357a3ebdc041abb32873633e1eac5fdfc8feb05f7bbe799"
 
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
   name "xACT"
