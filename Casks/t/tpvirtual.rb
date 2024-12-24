@@ -9,9 +9,7 @@ cask "tpvirtual" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      page[/TPVirtual-Installer_v(\d+)\.dmg/i, 1]
-    end
+    regex(/href=.*?TPVirtual[._-]Installer[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
