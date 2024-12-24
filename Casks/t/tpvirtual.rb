@@ -19,7 +19,7 @@ cask "tpvirtual" do
   app "TPVirtual-Launcher.app"
 
   zap trash: [
-    "~/Library/Application Support/com.indievelo.client/",
-    "~/Library/Application Support/com.indieVelo.launcher/",
+    "~/Library/Application Support/com.indievelo.client",
+    "~/Library/Application Support/com.indieVelo.launcher",
   ]
 end
