@@ -9,7 +9,7 @@ cask "brightvpn" do
   homepage "https://brightvpn.com/"
 
   livecheck do
-    url :homepage
+    url "https://brightdata.com/brightvpn_versions.json"
     regex(/"vpn_mac"\s*:\s*"(\d+\.\d+\.\d+)"/i)
   end
 
