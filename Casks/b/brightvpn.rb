@@ -10,7 +10,9 @@ cask "brightvpn" do
 
   livecheck do
     url "https://brightdata.com/brightvpn_versions.json"
-    regex(/"vpn_mac"\s*:\s*"(\d+\.\d+\.\d+)"/i)
+    strategy :json do |json|
+      json["vpn_mac"]
+    end
   end
 
   depends_on macos: ">= :big_sur"
