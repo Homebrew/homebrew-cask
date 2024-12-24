@@ -1,7 +1,7 @@
 cask "zen-browser@twilight" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.0.2-t.5"
+  version "1.0.2-t.6"
   sha256 :no_check
 
   url "https://github.com/zen-browser/desktop/releases/download/twilight/zen.macos-#{arch}.dmg",
