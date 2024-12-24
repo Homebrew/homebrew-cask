@@ -15,6 +15,7 @@ cask "clamxav" do
   auto_updates true
 
   pkg "ClamXAV_#{version.csv.first}_#{version.csv.second}_Installer.pkg"
+  binary "#{appdir}/ClamXAV.app/Contents/MacOS/XAV"
 
   uninstall launchctl: [
               "uk.co.canimaansoftware.ClamXAV.Engine",
