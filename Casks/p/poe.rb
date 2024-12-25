@@ -12,7 +12,14 @@ cask "poe" do
   homepage "https://poe.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://updater.poe.com/darwin_#{arch}/0.0.0"
+    regex(/v?(\d+(?:\.\d+)+)\.zip/i)
+    strategy :json do |json|
+      match = json["url"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   depends_on macos: ">= :high_sierra"
