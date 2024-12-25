@@ -28,5 +28,6 @@
   "tableau-reader": [
     "https://www.tableau.com/products/reader",
     "https://downloads.tableau.com/TableauAutoUpdate.xml"
-  ]
+  ],
+  "vuze": "https://www.vuze.com/"
 }
