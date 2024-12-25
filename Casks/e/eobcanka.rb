@@ -2,13 +2,13 @@ cask "eobcanka" do
   version "3.4.4"
   sha256 :no_check
 
-  url "https://info.identitaobcana.cz/download/eObcanka.dmg"
+  url "https://info.identita.gov.cz/download/eObcanka.dmg"
   name "eObčanka"
   desc "Czech national identity card app"
-  homepage "https://info.identitaobcana.cz/eop/InstalacemacOS.aspx"
+  homepage "https://info.identita.gov.cz/eop/InstalacemacOS.aspx"
 
   livecheck do
-    url "https://info.identitaobcana.cz/eop/ZmenySWMacOS.aspx"
+    url "https://info.identita.gov.cz/eop/ZmenySWMacOS.aspx"
     regex(%r{<h3>Verze\s(\d+(?:\.\d+)+)</h3>}i)
   end
 
