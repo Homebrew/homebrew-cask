@@ -1,11 +1,11 @@
 cask "eloston-chromium" do
   arch arm: "arm64", intel: "x86-64"
 
-  sha256 arm:   "b8a5bcaaa0f9a9a5ca9bd0c0fd3643a9df659f55b8acc2036551fbe359b1e9aa",
+  sha256 arm:   "1b2815ba51961767e30a46d210045f222bc536b2e4678925fe919ffc4391c628",
          intel: "08a6d509a51c6056a5775e9ed9d4ba2233378d8fa532bcc917a6371dae017e5c"
 
   on_arm do
-    version "131.0.6778.139-1.1"
+    version "131.0.6778.204-1.1"
 
     livecheck do
       url :url
