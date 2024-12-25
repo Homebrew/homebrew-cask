@@ -5,6 +5,10 @@ cask "displaylink" do
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20USB%20Graphics%20Software%20for%20Mac%20OS%20X%20and%20macOS#{version.csv.first}-EXE.dmg"
 
+    livecheck do
+      skip "Legacy version"
+    end
+
     pkg "DisplayLink Software Installer.pkg"
   end
   on_high_sierra do
@@ -12,6 +16,10 @@ cask "displaylink" do
     sha256 "1ac9093f8113af8c35d6f3ff5b1ae3f119a5aff0d5309d75c7a1742f159184b5"
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20USB%20Graphics%20Software%20for%20macOS#{version.csv.first}-EXE.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
 
     pkg "DisplayLink Software Installer.pkg"
   end
@@ -21,6 +29,10 @@ cask "displaylink" do
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20USB%20Graphics%20Software%20for%20macOS#{version.csv.first}-EXE.dmg"
 
+    livecheck do
+      skip "Legacy version"
+    end
+
     pkg "DisplayLink Software Installer.pkg"
   end
   on_catalina do
@@ -28,6 +40,10 @@ cask "displaylink" do
     sha256 "d703cc8e9093e4d163c5e612326c0907a02c6d4eec6aaca8d0727503859ef95d"
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
+
+    livecheck do
+      skip "Legacy version"
+    end
 
     pkg "DisplayLink Manager Graphics Connectivity#{version.csv.first}-EXE.pkg"
   end
@@ -37,6 +53,10 @@ cask "displaylink" do
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
 
+    livecheck do
+      skip "Legacy version"
+    end
+
     pkg "DisplayLink Manager Graphics Connectivity#{version.csv.first}-EXE.pkg"
   end
   on_monterey :or_newer do
@@ -45,16 +65,20 @@ cask "displaylink" do
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
 
+    livecheck do
+      url "https://www.synaptics.com/products/displaylink-graphics/downloads/macos"
+      regex(%r{href=.*?/(\d+(?:[.-]\d+)+)/DisplayLink%20Manager%20Graphics%20Connectivityv?(\d+(?:\.\d+)+).*?\.txt}i)
+      strategy :page_match do |page, regex|
+        page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+      end
+    end
+
     pkg "DisplayLink Manager Graphics Connectivity#{version.csv.first}-EXE.pkg"
   end
 
   name "DisplayLink USB Graphics Software"
   desc "Drivers for DisplayLink docks, adapters and monitors"
   homepage "https://www.synaptics.com/products/displaylink-graphics"
-
-  livecheck do
-    skip "No version information available"
-  end
 
   uninstall launchctl: [
               "73YQY62QM3.com.displaylink.DisplayLinkAPServer",
