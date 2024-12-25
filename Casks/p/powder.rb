@@ -1,5 +1,5 @@
 cask "powder" do
-  version "98.2"
+  version "99.0"
   sha256 :no_check
 
   url "https://powdertoy.co.uk/Download/powder.dmg"
