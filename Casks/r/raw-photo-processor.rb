@@ -1,7 +1,7 @@
 cask "raw-photo-processor" do
   # Betas of this software are release quality: https://groups.google.com/d/msg/raw-photo-processor/PJyyP2JwIwI/dn3CFknuCwAJ
-  version "1949Beta"
-  sha256 "12f2a9f31df5b797fc483ba821981aa58e6503c209537c5b126eb554e988cf49"
+  version "1950Beta"
+  sha256 "02c4b8a248b1302a5d3aa81b32478777eff16421a6b8cee84582543816691a0d"
 
   url "https://www.raw-photo-processor.com/RPP/RPP64_#{version}.zip"
   name "Raw Photo Processor"
