@@ -1360,6 +1360,7 @@ youdaonote
 youku
 youtube-downloader
 youtube-to-mp3
+yuque
 zalo
 zappy
 zed
