@@ -5,6 +5,10 @@ cask "ftdi-vcp-driver" do
 
     url "https://www.ftdichip.com/Drivers/VCP/MacOSX/FTDIUSBSerialDriver_v#{version.dots_to_underscores}.dmg"
 
+    livecheck do
+      skip "Legacy version"
+    end
+
     pkg "FTDIUSBSerial.pkg"
 
     uninstall kext:    "com.FTDI.driver.FTDIUSBSerialDriver",
@@ -32,13 +36,21 @@ cask "ftdi-vcp-driver" do
     end
   end
   on_catalina :or_newer do
-    version "1.5.0"
+    version "1.5.0,2022,06"
     sha256 "f535d604d5098c4ecde0f213a80732cd45906339472ae30c0723959336a50b9c"
 
-    url "https://ftdichip.com/wp-content/uploads/2022/06/FTDIUSBSerialDextInstaller_#{version.dots_to_underscores}.dmg"
+    url "https://ftdichip.com/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/FTDIUSBSerialDextInstaller_#{version.csv.first.dots_to_underscores}.dmg"
+
+    livecheck do
+      url "https://ftdichip.com/drivers/vcp-drivers/"
+      regex(%r{href=.*?/(\d+)/(\d+)/FTDIUSBSerialDextInstaller[._-]v?(\d+(?:[._]\d+)+)\.dmg}i)
+      strategy :page_match do |page, regex|
+        page.scan(regex).map { |match| "#{match[2].tr("_", ".")},#{match[0]},#{match[1]}" }
+      end
+    end
 
     # App must be installed in `/Applications`.
-    app "FTDIUSBSerialDextInstaller_#{version.dots_to_underscores}.app",
+    app "FTDIUSBSerialDextInstaller_#{version.csv.first.dots_to_underscores}.app",
         target: "/Applications/FTDIUSBSerialDextInstaller.app"
     installer manual: "/Applications/FTDIUSBSerialDextInstaller.app"
 
@@ -75,8 +87,4 @@ cask "ftdi-vcp-driver" do
   name "FTDI VCP Driver"
   desc "Virtual COM port driver"
   homepage "https://www.ftdichip.com/Drivers/VCP.htm"
-
-  livecheck do
-    skip "No reliable way to get version info"
-  end
 end
