@@ -8,7 +8,8 @@ cask "vuze" do
   homepage "https://www.vuze.com/"
 
   livecheck do
-    skip "version is contained in the mounted DMG volume name"
+    url :url
+    strategy :extract_plist
   end
 
   installer script: {
