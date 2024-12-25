@@ -1,8 +1,11 @@
 cask "wpsoffice" do
-  version "3.2.0,6370"
-  sha256 "042636b16099802cd8e9145b2c5db3901c418bc744fee0f58ce032bda0952a95"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version.csv.first}.#{version.csv.second}/WPSOffice_#{version.csv.first}(#{version.csv.second}).dmg",
+  version "6.10.2,0024.21300060"
+  sha256 arm:   "8d922751369855ac070b3fcdcf36f6abdf14157f7827efe69830004072cee140",
+         intel: "b8911c6ece98ba068896feba3fa28f18d63db783de6a462c198f97f65be23462"
+
+  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/installer/WPSOffice_#{arch}_#{version.csv.second}.dmg",
       verified: "wdl1.pcfg.cache.wpscdn.com/"
   name "WPS Office"
   desc "All-in-one office suite"
