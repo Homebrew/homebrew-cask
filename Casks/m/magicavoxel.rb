@@ -12,7 +12,7 @@ cask "magicavoxel" do
   # check multiple GitHub releases instead of only the "latest" one.
   livecheck do
     url :url
-    regex(/MagicaVoxel[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]10.15\.zip/i)
+    regex(/MagicaVoxel[._-]v?(\d+(?:\.\d+)+)[._-]macos.*?\.zip/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"]
