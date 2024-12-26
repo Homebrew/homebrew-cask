@@ -20,4 +20,4 @@ cask "libresprite" do
         "~/Library/Application Support/LibreSprite",
         "~/Library/Preferences/org.libresprite.Libresprite.plist",
     ]
-  end
+end
