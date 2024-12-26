@@ -1,6 +1,6 @@
 cask "bing-wallpaper" do
-  version "1.1.5"
-  sha256 "c3e9d7ccccabb58df1c2f9671241198bdb5b3b2038b23898d6550ae41f98d8f8"
+  version "1.1.6"
+  sha256 "63dfe61a6e7f463186a35ac69c9191ba9412e7902f2fef0bf3be0a85db917865"
 
   url "https://download.microsoft.com/download/a/b/9/ab92b51f-92ea-4d46-9d21-9446bd20eed8/Mac/Installer/#{version}/Bing/Flight1/MW011/Defaults/Bing%20Wallpaper.pkg"
   name "Bing Wallpaper"
