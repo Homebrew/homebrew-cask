@@ -1,8 +1,11 @@
 cask "contour" do
-  version "0.5.1.7247"
-  sha256 "70484619b15eab2af562a2b11cc8bd44e67e514992ad1bb615ac2a0180708fae"
+  arch arm: "arm", intel: "x86"
 
-  url "https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-osx.dmg"
+  version "0.6.0.7452"
+  sha256 arm:   "0bbde7becfd6f7ab5d11c5cfcd266db7f942e91dede8d2898e1f8adabe64aae5",
+         intel: "f26f10883e1abc5b0099fcfee69831583058dab72f64f198ec3bbe08c608e916"
+
+  url "https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-macOS-#{arch}.dmg"
   name "contour"
   desc "Terminal emulator"
   homepage "https://github.com/contour-terminal/contour/"
