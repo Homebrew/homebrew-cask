@@ -8,11 +8,6 @@ cask "libresprite" do
   desc "Open-source program for creating 2D animations, pixel art, and sprites"
   homepage "https://libresprite.github.io/"
 
-  livecheck do
-    url "https://github.com/LibreSprite/LibreSprite/releases"
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :big_sur"
 
   app "LibreSprite.app"
