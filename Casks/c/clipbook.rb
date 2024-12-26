@@ -12,7 +12,7 @@ cask "clipbook" do
   homepage "https://clipbook.app/"
 
   livecheck do
-    url "https://clipbook.app/downloads/mac/arm64/appcast.xml"
+    url "https://clipbook.app/downloads/mac/#{arch}/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
