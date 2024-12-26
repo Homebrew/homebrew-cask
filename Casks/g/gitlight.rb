@@ -1,9 +1,9 @@
 cask "gitlight" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.17.5"
-  sha256 arm:   "11cf26a907520b734b009b91578240b750c7210f8e498fc742c4eca0b87c5995",
-         intel: "fd066caa44b37fd81619ca1e3ed9fb3465b00cfd3bddbb938d88d72162805890"
+  version "0.17.6"
+  sha256 arm:   "939c3774cf3ea4e3b8e8b308d16dbdae7e07ee00778125633170c52559c812ce",
+         intel: "76714506d4b3f5f1a2e4b5374e67b126b5b1a2e658223355e988806f55b2e845"
 
   url "https://github.com/colinlienard/gitlight/releases/download/gitlight-v#{version}/GitLight_#{version}_#{arch}.dmg",
       verified: "github.com/colinlienard/gitlight/"
