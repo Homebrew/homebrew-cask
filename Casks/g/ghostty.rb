@@ -4,11 +4,16 @@ cask "ghostty" do
 
   url "https://release.files.ghostty.org/#{version}/Ghostty.dmg"
   name "Ghostty"
-  desc "Fast, native, feature-rich terminal emulator pushing modern features"
+  desc "Terminal emulator that uses platform-native UI and GPU acceleration"
   homepage "https://ghostty.org/"
 
+  livecheck do
+    url "https://release.files.ghostty.org/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Ghostty.app"
   binary "#{appdir}/Ghostty.app/Contents/MacOS/ghostty"
