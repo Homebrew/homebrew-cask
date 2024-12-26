@@ -22,7 +22,6 @@ cask "ghostty" do
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man5/ghostty.5"
 
   zap trash: [
-    "/Applications/Ghostty.app/Contents/Resources/terminfo/67/ghostty",
     "~/.config/ghostty/",
     "~/Library/Caches/com.mitchellh.ghostty",
     "~/Library/HTTPStorages/com.mitchellh.ghostty",
