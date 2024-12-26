@@ -4,7 +4,7 @@ cask "nexonplug" do
 
   url "https://platform.nexon.com/NGM/Bin/Install_NexonPlug.pkg"
   name "Nexon Plug"
-  desc "Launcher for Nexon games including MapleStory"
+  desc "Launcher for Nexon games"
   homepage "https://www.nexon.com/"
 
   depends_on macos: ">= :catalina"
