@@ -1,21 +1,25 @@
 cask "mindmaster-cn" do
-  version "12.1.6"
-  sha256 :no_check
+  version "12.1.2,5379"
+  sha256 "02ba1da906de8235ee564dad2e10f339ff0230b1b09ac0eae8841e3c6fb51501"
 
-  url "https://cc-download.edrawsoft.cn/cbs_down/mindmaster_cn_full5379.dmg"
+  url "https://cc-download.edrawsoft.cn/cbs_down/mindmaster_cn_#{version.csv.first}_full#{version.csv.second}.zip"
   name "MindMaster"
   name "亿图脑图MindMaster"
   desc "Mind mapping software"
   homepage "https://www.edrawsoft.cn/mindmaster/"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |item|
-      item["com.edrawsoft.mindmaster"]&.short_version
+    url "https://www.edrawsoft.cn/download/"
+    regex(/href=.*?mindmaster[._-]cn[._-]full(\d+)\.dmg.*?版本v?(\d+(?:\.\d+)+)/im)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
     end
   end
 
-  app "亿图脑图MindMaster.app"
+  app "MindMaster.app"
 
   caveats do
     requires_rosetta
