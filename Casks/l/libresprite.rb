@@ -17,7 +17,7 @@ cask "libresprite" do
     app "LibreSprite.app"
 
     zap trash: [
-      "~/Library/Preferences/org.libresprite.Libresprite.plist",
-      "~/Library/Application Support/LibreSprite",
+        "~/Library/Application Support/LibreSprite",
+        "~/Library/Preferences/org.libresprite.Libresprite.plist",
     ]
   end
