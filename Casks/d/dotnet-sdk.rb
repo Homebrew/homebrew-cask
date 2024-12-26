@@ -19,7 +19,7 @@ cask "dotnet-sdk" do
   # cask version. New major/minor releases occur annually in November and the
   # check will automatically update its behavior when the cask is updated.
   livecheck do
-    url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
+    url "https://builds.dotnet.microsoft.com/dotnet/release-metadata/#{version.major_minor}/releases.json"
     regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-sdk[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]#{arch}\.pkg}i)
     strategy :json do |json, regex|
       json["releases"]&.map do |release|
