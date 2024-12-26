@@ -7,11 +7,18 @@ cask "ghostty" do
   desc "Terminal emulator with platform-native UI and GPU acceleration"
   homepage "https://ghostty.org/"
 
+  livecheck do
+    url "https://ghostty.org/download"
+    regex(%r{https://release\.files\.ghostty\.org/(\d+\.\d+\.\d+)/Ghostty\.dmg}i)
+  end
+
+  depends_on macos: ">= :ventura"
+
   app "Ghostty.app"
 
   zap trash: [
     "./.cache/ghostty",
-    "Library/Preferences/com.mitchellh.ghostty.plist",
     "Library/HTTPStorages/com.mitchellh.ghostty/",
+    "Library/Preferences/com.mitchellh.ghostty.plist",
   ]
 end
