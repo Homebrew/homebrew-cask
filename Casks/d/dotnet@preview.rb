@@ -16,7 +16,7 @@ cask "dotnet@preview" do
   homepage "https://dotnet.microsoft.com/en-us/"
 
   livecheck do
-    url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
+    url "https://builds.dotnet.microsoft.com/dotnet/release-metadata/#{version.major_minor}/releases.json"
     regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-runtime[._-]v?(.+)[._-]osx[._-]#{arch}\.pkg}i)
     strategy :json do |json, regex|
       json["releases"]&.map do |release|
