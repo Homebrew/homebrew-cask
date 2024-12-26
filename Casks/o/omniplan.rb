@@ -60,8 +60,8 @@ cask "omniplan" do
     end
   end
   on_monterey :or_newer do
-    version "4.9.1"
-    sha256 "e968e898eef8744852466ce12f823b03d4017d5f177bda4e63637837a273bd25"
+    version "4.9.2"
+    sha256 "8ca71156ece089690271c9808f0342ef9fe770275ab9e8a22470f91c6b1310fe"
 
     url "https://downloads.omnigroup.com/software/macOS/12/OmniPlan-#{version}.dmg"
 
