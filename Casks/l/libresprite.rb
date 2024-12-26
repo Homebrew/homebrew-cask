@@ -1,6 +1,6 @@
 cask "libresprite" do
     version "1.0"
-    sha256 "e76532c3bc435d9fd4dd6a6f4d6618f46a9c6b006699882f544e9a316eec658c"
+    sha256 "85004254166204291a9c08007592cb6d38ac89a01faec3aa37c037a39d86b9eb"
 
     url "https://github.com/LibreSprite/LibreSprite/releases/download/v#{version}/LibreSprite-macos-x86_64.zip"
     name "LibreSprite"
