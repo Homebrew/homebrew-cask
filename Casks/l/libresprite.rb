@@ -20,4 +20,8 @@ cask "libresprite" do
         "~/Library/Application Support/LibreSprite",
         "~/Library/Preferences/org.libresprite.Libresprite.plist",
     ]
+
+    caveats do
+        requires_rosetta
+      end
 end
