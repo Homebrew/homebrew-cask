@@ -14,7 +14,7 @@ cask "libresprite" do
   end
 
   depends_on macos: ">= :big_sur"
-  
+
   app "LibreSprite.app"
 
   zap trash: [
