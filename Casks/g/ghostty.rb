@@ -28,6 +28,7 @@ cask "ghostty" do
 
   zap trash: [
     "~/.config/ghostty/",
+    "~/Library/Application Support/com.mitchellh.ghostty/config",
     "~/Library/Caches/com.mitchellh.ghostty",
     "~/Library/HTTPStorages/com.mitchellh.ghostty",
     "~/Library/Preferences/com.mitchellh.ghostty.plist",
