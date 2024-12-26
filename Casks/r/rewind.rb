@@ -1,21 +1,15 @@
 cask "rewind" do
-  version "15310.1,5f6bcc5"
-  sha256  "cc422c5f1aff54b2948efb32f479ec1054f5eafb2b37d540511d226792e73318"
+  version "1.5310,15310.1"
+  sha256  :no_check
 
-  url "https://updates.rewind.ai/builds/main/b#{version.csv.first}-main-#{version.csv.second}.zip"
+  url "https://download.rewind.ai/Rewind.dmg"
   name "Rewind"
   desc "Record and search your screen and audio"
   homepage "https://www.rewind.ai/"
 
   livecheck do
-    url "https://updates.rewind.ai/appcasts/main.xml"
-    regex(/[._-](\w+)\.zip/i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
-
-      "#{item.version},#{match[1]}"
-    end
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
@@ -23,7 +17,9 @@ cask "rewind" do
 
   app "Rewind.app"
 
-  uninstall quit: "com.memoryvault.MemoryVault"
+  uninstall launchctl:  "com.rewind.Rewind",
+            quit:       "com.memoryvault.MemoryVault",
+            login_item: "Rewind"
 
   zap trash: [
     "~/Documents/rewind_logs_*.zip",
