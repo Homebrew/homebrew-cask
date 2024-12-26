@@ -12,13 +12,28 @@ cask "ghostty" do
     regex(%r{https://release\.files\.ghostty\.org/(\d+\.\d+\.\d+)/Ghostty\.dmg}i)
   end
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "Ghostty.app"
+  binary "#{appdir}/Ghostty.app/Contents/MacOS/ghostty"
+  binary "#{appdir}/Ghostty.app/Contents/Resources/fish/vendor_completions.d/ghostty.fish",
+         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/ghostty.fish"
+  binary "#{appdir}/Ghostty.app/Contents/Resources/terminfo/67/ghostty",
+         target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/67/ghostty"
+  binary "#{appdir}/Ghostty.app/Contents/Resources/terminfo/78/xterm-ghostty",
+         target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/78/xterm-ghostty"
+  manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man1/ghostty.1"
+  manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man5/ghostty.5"
 
   zap trash: [
     "./.cache/ghostty",
-    "Library/HTTPStorages/com.mitchellh.ghostty/",
-    "Library/Preferences/com.mitchellh.ghostty.plist",
+    "/Applications/Ghostty.app/Contents/Resources/terminfo/67/ghostty",
+    "~/.config/ghostty/",
+    "~/Library/Caches/com.mitchellh.ghostty",
+    "~/Library/HTTPStorages/com.mitchellh.ghostty",
+    "~/Library/Preferences/com.mitchellh.ghostty.plist",
+    "~/Library/Saved Application State/com.mitchellh.ghostty.savedState",
+    "~/Library/WebKit/com.mitchellh.ghostty",
   ]
 end
