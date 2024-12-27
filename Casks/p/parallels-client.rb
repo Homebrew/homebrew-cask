@@ -11,10 +11,13 @@ cask "parallels-client" do
     url "https://download.parallels.com/website_links/ras/#{version.csv.first.major}/builds-en_US.json"
     regex(/RasClient[._-]Mac[._-]Notarized[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.pkg/i)
     strategy :json do |json, regex|
-      client_json = json.select { |item| item.dig("category", "name")&.start_with?("Client") }&.first
-      mac_client_json = client_json&.dig("contents")&.select { |item| item["subcategory"] == "Mac" }&.first
-      download_url = mac_client_json&.dig("files", "Mac Client")
-      match = download_url&.match(regex)
+      client_json = json.find { |item| item.dig("category", "name")&.start_with?("Client") }
+      next if client_json.blank?
+
+      mac_client_json = client_json["contents"]&.find { |item| item["subcategory"] == "Mac" }
+      next if mac_client_json.blank?
+
+      match = mac_client_json.dig("files", "Mac Client")&.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
