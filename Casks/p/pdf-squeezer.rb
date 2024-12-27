@@ -9,11 +9,7 @@ cask "pdf-squeezer" do
 
   livecheck do
     url "https://www.witt-software.com/downloads/pdfsqueezer/pdfsq#{version.major}-appcast.xml"
-    regex(/^(\d+(?:\.\d+)+)$/i)
-    strategy :sparkle do |items, regex|
-      items.select { |item| item.short_version.match(regex) }
-           .map(&:short_version)
-    end
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :big_sur"
