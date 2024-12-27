@@ -21,7 +21,7 @@
   "huggingchat": "all",
   "hyper@canary": "all",
   "imagemin": "all",
-  "inso@beta": "all",
+  "inso@beta": "any",
   "insomnia@alpha": "any",
   "irccloud": "all",
   "jenkins-menu": "all",
