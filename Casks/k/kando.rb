@@ -1,14 +1,15 @@
 cask "kando" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.0"
-  sha256 arm:   "33c8137a66650ce53b0f2a6bb68fa3a95de9ff627e0c43b2f4ba2b420d85c918",
-         intel: "6910eacb592230e9d8cd1c57f02fb9e06d06074400760c4bdeee3097b0f81a4f"
+  version "1.7.0"
+  sha256 arm:   "c3304a17a51523d1517cbc4a6a523fc4e99b4648288f5fe0b57b13abbb00a2b0",
+         intel: "4c6b27af16743aa530c443749408328a6158b8d55d6393207680fae1ca8e4cf4"
 
-  url "https://github.com/kando-menu/kando/releases/download/v#{version}/Kando-#{version}-#{arch}.dmg"
+  url "https://github.com/kando-menu/kando/releases/download/v#{version}/Kando-#{version}-#{arch}.dmg",
+      verified: "github.com/kando-menu/kando/"
   name "Kando"
-  desc "Pie Menu"
-  homepage "https://github.com/kando-menu/kando"
+  desc "Pie menu"
+  homepage "https://kando.menu/"
 
   depends_on macos: ">= :catalina"
 
