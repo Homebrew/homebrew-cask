@@ -1,9 +1,9 @@
 cask "overt" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.5.7"
-  sha256 arm:   "b6cb163d0eaef9b91a721aff258752d6cc7e8e8ac2753e825febe6e0d7aa90aa",
-         intel: "eca463377bb48c5111b2d1364c98572aa49003061995649e95b082a9b7e65b49"
+  version "0.6.0"
+  sha256 arm:   "ba1a584b1c0a3afcefdb4dc25aebd829d8395c744b8def525bcf63b1af24d1cf",
+         intel: "7d9aa67e7c314034b1307aa36a0cf701e88fa3e6c659dfced3d7740693606e21"
 
   url "https://github.com/GetOvert/Overt/releases/download/v#{version}/Overt-darwin-#{arch}-#{version}.zip",
       verified: "github.com/GetOvert/Overt/"
