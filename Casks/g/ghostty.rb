@@ -13,6 +13,7 @@ cask "ghostty" do
   end
 
   auto_updates true
+  conflicts_with cask: "ghostty@tip"
   depends_on macos: ">= :ventura"
 
   app "Ghostty.app"
