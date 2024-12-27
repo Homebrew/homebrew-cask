@@ -1,5 +1,5 @@
 cask "caldigit-docking-utility" do
-  version "1.9.31"
+  version "1.931"
   sha256 :no_check
 
   url "https://downloads.caldigit.com/CalDigit-Docking-Station-Utility.zip"
@@ -8,7 +8,10 @@ cask "caldigit-docking-utility" do
   homepage "https://www.caldigit.com/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist do |items|
+      items["CalDigit.CalDigit-Docking-Station-Utility"]&.short_version
+    end
   end
 
   pkg "CalDigit Docking Station Utility v#{version}.pkg"
