@@ -465,6 +465,7 @@ geoda
 geogebra
 geogebra@5
 geph
+ghostty@tip
 git-credential-manager
 gitbutler
 github
