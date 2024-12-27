@@ -10,6 +10,7 @@ cask "meld" do
 
   disable! date: "2024-12-16", because: :discontinued
 
+  conflicts_with cask: "dehesselle-meld"
   depends_on macos: ">= :high_sierra"
 
   app "Meld.app"
