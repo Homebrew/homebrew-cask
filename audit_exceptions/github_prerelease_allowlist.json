@@ -22,7 +22,7 @@
   "hyper@canary": "all",
   "imagemin": "all",
   "inso@beta": "all",
-  "insomnia@alpha": "all",
+  "insomnia@alpha": "any",
   "irccloud": "all",
   "jenkins-menu": "all",
   "keka@beta": "all",
