@@ -6,11 +6,19 @@ cask "data-integration" do
       verified: "privatefilesbucket-community-edition.s3.amazonaws.com/"
   name "Pentaho Data Integration"
   desc "End to end data integration and analytics platform"
-  homepage "https://www.hitachivantara.com/en-us/products/pentaho-platform/data-integration-analytics/pentaho-community-edition.html"
+  homepage "https://pentaho.com/products/pentaho-data-integration/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?pdi-ce[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
+    url "https://privatefilesbucket-community-edition.s3.amazonaws.com/"
+    regex(/pdi-ce[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
+    strategy :xml do |xml, regex|
+      xml.get_elements("//Contents/Key").map do |item|
+        match = item.text&.strip&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   app "data-integration/Data Integration.app"
