@@ -17,8 +17,12 @@ cask "ghostty" do
 
   app "Ghostty.app"
   binary "#{appdir}/Ghostty.app/Contents/MacOS/ghostty"
+  binary "#{appdir}/Ghostty.app/Contents/Resources/bash-completion/completions/ghostty.bash",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/ghostty"
   binary "#{appdir}/Ghostty.app/Contents/Resources/fish/vendor_completions.d/ghostty.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/ghostty.fish"
+  binary "#{appdir}/Ghostty.app/Contents/Resources/zsh/site-functions/_ghostty",
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_ghostty"
   binary "#{appdir}/Ghostty.app/Contents/Resources/terminfo/67/ghostty",
          target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/67/ghostty"
   binary "#{appdir}/Ghostty.app/Contents/Resources/terminfo/78/xterm-ghostty",
@@ -28,7 +32,7 @@ cask "ghostty" do
 
   zap trash: [
     "~/.config/ghostty/",
-    "~/Library/Application Support/com.mitchellh.ghostty/config",
+    "~/Library/Application Support/com.mitchellh.ghostty",
     "~/Library/Caches/com.mitchellh.ghostty",
     "~/Library/HTTPStorages/com.mitchellh.ghostty",
     "~/Library/Preferences/com.mitchellh.ghostty.plist",
