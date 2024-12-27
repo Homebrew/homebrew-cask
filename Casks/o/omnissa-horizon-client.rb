@@ -11,7 +11,9 @@ cask "omnissa-horizon-client" do
     url "https://customerconnect.omnissa.com/channel/public/api/v1.0/products/getRelatedDLGList?locale=en_US&category=desktop_end_user_computing&product=omnissa_horizon_clients&version=8&dlgType=PRODUCT_BINARY"
     regex(%r{/([^/]+)/Omnissa[._-]Horizon[._-]Client[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
     strategy :json do |json, regex|
-      mac_json_info = json["dlgEditionsLists"]&.select { |item| item["name"]&.match(/mac/i) }&.first
+      mac_json_info = json["dlgEditionsLists"]&.find { |item| item["name"]&.match(/mac/i) }
+      next if mac_json_info.blank?
+
       api_item = mac_json_info["dlgList"]&.first
       next if api_item.blank?
 
