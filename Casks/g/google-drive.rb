@@ -1,4 +1,5 @@
 cask "google-drive" do
+  # CI test
   version "101.0.3"
   sha256 :no_check
 
