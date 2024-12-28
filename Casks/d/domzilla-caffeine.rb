@@ -20,8 +20,8 @@ cask "domzilla-caffeine" do
     sha256 "5d1127fe3a5be772c61b9685915bd244b2e47b4607242b0d3b9cc517f5269c43"
 
     livecheck do
-      url "https://www.caffeine-app.net/download"
-      strategy :header_match
+      url "https://dr-caffeine-mac.s3.amazonaws.com/appcast.xml"
+      strategy :sparkle, &:short_version
     end
   end
 
