@@ -1,6 +1,6 @@
 cask "dymo-label" do
-  version "1.4.6.60"
-  sha256 "0c6f5a8fe77601334f75dc9786baa5edfd2656dadde6ea0f28f38c8ff4bbe657"
+  version "1.4.7.49"
+  sha256 "f8a6f2028467babfd6dc5480dd78735bee9d5cba5f5f6ee2b22123cb6d981072"
 
   url "https://download.dymo.com/dymo/Software/Mac/DCDMac#{version}.pkg"
   name "Dymo Label"
@@ -21,7 +21,10 @@ cask "dymo-label" do
               "com.dymo.pnpd",
             ],
             quit:      "com.dymo.DYMO-WebApi-Mac-Host",
-            pkgutil:   "com.dymo.dymo-connect"
+            pkgutil:   [
+              "com.dymo.dymo-connect",
+              "com.dymo.webapi.host",
+            ]
 
   zap trash: "~/Library/Preferences/com.dymo.DYMO-WebApi-Mac-Host.plist"
 end
