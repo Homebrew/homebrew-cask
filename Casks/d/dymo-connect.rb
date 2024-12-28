@@ -1,9 +1,9 @@
-cask "dymo-label" do
+cask "dymo-connect" do
   version "1.4.7.49"
   sha256 "f8a6f2028467babfd6dc5480dd78735bee9d5cba5f5f6ee2b22123cb6d981072"
 
   url "https://download.dymo.com/dymo/Software/Mac/DCDMac#{version}.pkg"
-  name "Dymo Label"
+  name "Dymo Connect"
   desc "Software for DYMO LabelWriters"
   homepage "https://www.dymo.com/support?cfid=online-support"
 
