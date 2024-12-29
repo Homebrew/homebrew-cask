@@ -1,5 +1,6 @@
 cask "hyper@canary" do
   arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "_arm64"
 
   version "4.0.0-canary.5"
   sha256 arm:   "b23c51a1a2c6a0c1940965f959d30a6a185111954204132402aa29038d30ad98",
@@ -12,8 +13,10 @@ cask "hyper@canary" do
   homepage "https://hyper.is/"
 
   livecheck do
-    url "https://releases-canary.hyper.is/"
-    regex(/hyper-(\d+(?:\.\d+)*.+)-mac-#{arch}\.zip/i)
+    url "https://releases-canary.hyper.is/update/mac#{livecheck_arch}/0.0.0"
+    strategy :json do |json|
+      json["name"]&.delete_prefix("v")
+    end
   end
 
   auto_updates true
