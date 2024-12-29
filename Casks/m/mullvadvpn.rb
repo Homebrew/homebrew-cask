@@ -2,8 +2,7 @@ cask "mullvadvpn" do
   version "2024.8"
   sha256 "ef7373e89bda812c8da747dc905b65bd11e6c129fab69c0c5d6292622d78fea3"
 
-  url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg",
-      verified: "github.com/mullvad/mullvadvpn-app/"
+  url "https://cdn.mullvad.net/app/desktop/releases/#{version}/MullvadVPN-#{version}.pkg"
   name "Mullvad VPN"
   desc "VPN client"
   homepage "https://mullvad.net/"
@@ -14,7 +13,7 @@ cask "mullvadvpn" do
   end
 
   conflicts_with cask: "mullvadvpn@beta"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   pkg "MullvadVPN-#{version}.pkg"
 
