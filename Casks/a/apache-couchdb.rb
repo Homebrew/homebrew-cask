@@ -13,7 +13,7 @@ cask "apache-couchdb" do
 
   livecheck do
     url "https://neighbourhood.ie/download-apache-couchdb-mac/"
-    regex(%r{href=.*?/(\d+(?:[.-]\d+)*)/mac/(arm64|x86_64)/Apache-CouchDB\.zip}i)
+    regex(%r{href=.*?/(\d+(?:[.-]\d+)*)/mac/#{arch}/Apache-CouchDB\.zip}i)
   end
 
   # see https://neighbourhood.ie/download-apache-couchdb-mac/
