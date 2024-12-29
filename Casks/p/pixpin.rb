@@ -9,7 +9,7 @@ cask "pixpin" do
 
   livecheck do
     url :homepage
-    regex(%r{href="/docs/official-log/v?(\d+(?:\.\d+)+)}i)
+    regex(%r{href=.*?/docs/official-log/v?(\d+(?:\.\d+)+)(?:\.html)?["' >]}i)
   end
 
   auto_updates true
