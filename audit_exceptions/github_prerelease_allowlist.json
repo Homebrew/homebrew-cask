@@ -31,7 +31,7 @@
   "messenger-native": "all",
   "mongotron": "all",
   "my-budget": "all",
-  "netnewswire@beta": "all",
+  "netnewswire@beta": "any",
   "nuclear": "all",
   "openra-playtest": "all",
   "openshot-video-editor@daily": "all",
