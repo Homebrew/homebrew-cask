@@ -988,7 +988,7 @@ reaper
 receipts
 rectangle
 rectangle-pro
-redisinsight
+redis-insight
 reflect
 reflector
 rekordbox
