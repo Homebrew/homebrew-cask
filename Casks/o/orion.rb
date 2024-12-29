@@ -1,8 +1,8 @@
 cask "orion" do
-  version "0.99,130.1"
+  version "0.99,130.2"
 
   on_mojave :or_older do
-    sha256 "e99441ef8c8567cb89f33973ebe0e44aaf1fbe7c5b8be08fc8fb02dfc4049aad"
+    sha256 "217404487cb9c3d7d26ed5eb98261ba627f626e6a052f877784b7cc99781fcb7"
 
     url "https://browser.kagi.com/updates/10_14/#{version.csv.second}.zip"
 
@@ -14,7 +14,7 @@ cask "orion" do
     depends_on macos: :mojave
   end
   on_catalina do
-    sha256 "2c06813ecf954c4ad7d07c8801394832a9246099271867b0ea339a57c24608b4"
+    sha256 "43cc4ece1c66083266ab0fad096e9405551595a3e2e441539f29a8918e4a673e"
 
     url "https://browser.kagi.com/updates/10_15/#{version.csv.second}.zip"
 
@@ -26,7 +26,7 @@ cask "orion" do
     depends_on macos: :catalina
   end
   on_big_sur do
-    sha256 "e1cb4f651dba750bcd2ab3be1448af448ccf9ec82b54e2677c0cbf859c337fd4"
+    sha256 "b54426535e250ea422c45502b0725828878cafa4c22bf49e46cb673ffbf6ac30"
 
     url "https://browser.kagi.com/updates/11_0/#{version.csv.second}.zip"
 
@@ -38,7 +38,7 @@ cask "orion" do
     depends_on macos: :big_sur
   end
   on_monterey do
-    sha256 "287b032c017f28a171477c7de2a3681269b1a61256377e66767e4fde5091086d"
+    sha256 "054423c59d69da328191f849904ce9c81d48e2d3cc2d9b44b0e641a8911ffd41"
 
     url "https://browser.kagi.com/updates/12_0/#{version.csv.second}.zip"
 
@@ -50,7 +50,7 @@ cask "orion" do
     depends_on macos: :monterey
   end
   on_ventura do
-    sha256 "5ad2fe40ffcfbb34bd52d31501a617813710f5501062df28916f4738f9c0cf7a"
+    sha256 "d86223e196e4e391feddd980a300bbfa59ddbe602ff49b736de09eeab9b90331"
 
     url "https://browser.kagi.com/updates/13_0/#{version.csv.second}.zip"
 
@@ -62,7 +62,7 @@ cask "orion" do
     depends_on macos: :ventura
   end
   on_sonoma do
-    sha256 "59b2b922d9c2db898c9046158fbd85f70b5c32a811c7b320077b18ab552202af"
+    sha256 "7bafd3aba8580e28a3a0898c2489a2d2fa990ec940a6b5f4ae783d6cd11f1c1f"
 
     url "https://browser.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
@@ -74,7 +74,7 @@ cask "orion" do
     depends_on macos: :sonoma
   end
   on_sequoia :or_newer do
-    sha256 "a7df26f11c6205254b9804dc72900f52ac8ef14a8384d748a3fee8f1d73f4fc5"
+    sha256 "18ac63a3535ff597f8e58fbe02373e1034c7b4350b4d650f2886447422acdec1"
 
     url "https://browser.kagi.com/updates/15_0/#{version.csv.second}.zip"
 
