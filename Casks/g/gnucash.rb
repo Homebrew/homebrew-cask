@@ -13,7 +13,7 @@ cask "gnucash" do
 
   livecheck do
     url :url
-    regex(/^Gnucash-Intel[._-]v?(\d+(?:[.-]\d+)+)\.dmg$/i)
+    regex(/^Gnucash-#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg$/i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["name"]&.match(regex)
