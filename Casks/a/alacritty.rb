@@ -30,7 +30,7 @@ cask "alacritty" do
   manpage "Alacritty.app/Contents/Resources/alacritty-bindings.5.gz"
 
   zap trash: [
-    "~/Library/Preferences/io.alacritty.plist",
-    "~/Library/Saved Application State/io.alacritty.savedState",
+    "~/Library/Preferences/org.alacritty.plist",
+    "~/Library/Saved Application State/org.alacritty.savedState",
   ]
 end
