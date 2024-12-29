@@ -1,4 +1,4 @@
-cask "redisinsight" do
+cask "redis-insight" do
   arch arm: "arm64", intel: "x64"
 
   version "2.64.1"
@@ -6,7 +6,7 @@ cask "redisinsight" do
 
   url "https://s3.amazonaws.com/redisinsight.download/public/latest/Redis-Insight-mac-#{arch}.dmg",
       verified: "s3.amazonaws.com/redisinsight.download/"
-  name "RedisInsight"
+  name "Redis Insight"
   desc "GUI for streamlined Redis application development"
   homepage "https://redis.com/redis-enterprise/redis-insight/"
 
