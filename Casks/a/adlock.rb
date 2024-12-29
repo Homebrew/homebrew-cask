@@ -30,7 +30,7 @@ cask "adlock" do
             quit:      "com.hankuper.adlock.desktop",
             pkgutil:   [
               "com.hankuper.adlock-desktop-ui.pkg",
-              "com.hankuper.adlock-resourses.pkg",
+              "com.hankuper.adlock-resourses.pkg", # `resourses` is an upstream typo of `resources`
             ],
             delete:    [
               "/Applications/AdLock.app",

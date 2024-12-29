@@ -10,6 +10,7 @@ cask "oka-unarchiver" do
   livecheck do
     url "https://api.7littlemen.com/homepage/version?appid=1441507725&version=0.0.0"
     strategy :json do |json|
+      # `lastest_version` is an upstream typo of `latest_version`
       json.dig("data", "lastest_version")
     end
   end
