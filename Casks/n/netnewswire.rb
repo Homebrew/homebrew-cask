@@ -18,8 +18,8 @@ cask "netnewswire" do
         verified: "github.com/Ranchero-Software/NetNewsWire/"
 
     livecheck do
-      url :url
-      regex(/^mac[._-]v?(\d+(?:\.\d+)+)(?:[._-]release)?$/i)
+      url "https://ranchero.com/downloads/netnewswire-release.xml"
+      strategy :sparkle, &:short_version
     end
   end
 
