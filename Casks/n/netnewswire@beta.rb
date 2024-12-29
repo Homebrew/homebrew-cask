@@ -1,6 +1,6 @@
 cask "netnewswire@beta" do
-  version "6.1.8b1"
-  sha256 "16bf64fddaf09e9750fe734aa3663ed1e563739a805ab363fe72efbe61aa6ffe"
+  version "6.1.8"
+  sha256 "ff1872d2017660760154f500970c921f4ff221e94c35e16553b61afc00f1d4d2"
 
   url "https://github.com/brentsimmons/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip",
       verified: "github.com/brentsimmons/NetNewsWire/"
@@ -9,13 +9,13 @@ cask "netnewswire@beta" do
   homepage "https://ranchero.com/netnewswire/"
 
   livecheck do
-    url :url
-    regex(/^mac-(\d+(?:\.\d+)*b\d+)$/i)
+    url "https://ranchero.com/downloads/netnewswire-beta.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
   conflicts_with cask: "netnewswire"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "NetNewsWire.app"
 
