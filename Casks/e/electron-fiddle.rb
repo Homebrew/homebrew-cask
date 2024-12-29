@@ -15,7 +15,7 @@ cask "electron-fiddle" do
   # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    regex(/^Electron[._-]Fiddle[._-]darwin[._-](?:x64|arm64)[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)$/i)
+    regex(/^Electron[._-]Fiddle[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
