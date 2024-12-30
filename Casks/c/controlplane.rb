@@ -10,6 +10,7 @@ cask "controlplane" do
 
   # app crash and homepage is gone
   deprecate! date: "2023-12-29", because: :discontinued
+  disable! date: "2024-12-30", because: :discontinued
 
   app "ControlPlane.app"
 

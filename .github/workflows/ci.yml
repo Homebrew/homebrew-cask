@@ -184,24 +184,24 @@ jobs:
             end
 
             File.open(ENV.fetch("GITHUB_ENV"), "a") do |f|
-              f.puts "CASK_CONFLICTS=\"#{cask_conflicts&.join(" ")}\"" if cask_conflicts.present?
-              f.puts "CASK_DEPENDENCIES=\"#{cask_dependencies&.join(" ")}\"" if cask_dependencies.present?
-              f.puts "FORMULA_CONFLICTS=\"#{formula_conflicts&.join(" ")}\"" if formula_conflicts.present?
+              f.puts "CASK_CONFLICTS=#{cask_conflicts&.join(" ")}" if cask_conflicts.present?
+              f.puts "CASK_DEPENDENCIES=#{cask_dependencies&.join(" ")}" if cask_dependencies.present?
+              f.puts "FORMULA_CONFLICTS=#{formula_conflicts&.join(" ")}" if formula_conflicts.present?
             end
           EOF
         if: always() && steps.fetch.outcome == 'success' && matrix.cask
 
       - name: Uninstall conflicting formulae
         run: |
-          # shellcheck disable=SC2086
-          brew uninstall --formula $FORMULA_CONFLICTS
+          read -r -a formula_conflicts_array <<< "$FORMULA_CONFLICTS"
+          brew uninstall --formula "${formula_conflicts_array[@]}"
         if: ${{ always() && steps.info.outcome == 'success' && env.FORMULA_CONFLICTS != '' }}
         timeout-minutes: 30
 
       - name: Uninstall conflicting casks
         run: |
-          # shellcheck disable=SC2086
-          brew uninstall --cask $CASK_CONFLICTS
+          read -r -a cask_conflicts_array <<< "$CASK_CONFLICTS"
+          brew uninstall --cask "${cask_conflicts_array[@]}"
         if: ${{ always() && steps.info.outcome == 'success' && env.CASK_CONFLICTS != '' }}
         timeout-minutes: 30
 
@@ -239,8 +239,8 @@ jobs:
 
       - name: Uninstall cask dependencies
         run: |
-          # shellcheck disable=SC2086
-          brew uninstall --cask $CASK_DEPENDENCIES
+          read -r -a cask_dependencies_array <<< "$CASK_DEPENDENCIES"
+          brew uninstall --cask "${cask_dependencies_array[@]}"
         if: ${{ always() && steps.install.outcome == 'success' && env.CASK_DEPENDENCIES != '' }}
         timeout-minutes: 30
 
