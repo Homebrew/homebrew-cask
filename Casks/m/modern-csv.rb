@@ -8,8 +8,8 @@ cask "modern-csv" do
   homepage "https://www.moderncsv.com/"
 
   livecheck do
-    url "https://www.moderncsv.com/download/"
-    regex(/href=.*?Mac[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://www.moderncsv.com/download-mac"
+    strategy :header_match
   end
 
   app "Modern CSV.app"
