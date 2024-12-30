@@ -7,6 +7,8 @@ cask "bitbar" do
   desc "Utility to display the output from any script or program in the menu bar"
   homepage "https://github.com/matryer/bitbar/"
 
+  deprecate! date: "2024-12-30", because: :unmaintained
+
   app "BitBar.app"
 
   zap trash: [
