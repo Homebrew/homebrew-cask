@@ -1,9 +1,9 @@
 cask "another-redis-desktop-manager" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.7.0"
-  sha256 arm:   "385a5488f3b748ed51f2b13d330669fab1fb23c0a46fd304b8fa0cd2a65f4b76",
-         intel: "51cec983ac4e9ea95d003d470603c6a2cf90fff7c45f60cc887fde272173ea02"
+  version "1.7.1"
+  sha256 arm:   "1833e153cd7d9c66cc6d88ec1448b081dfeb5c122c3c65bcae47be1c4d760235",
+         intel: "2e399909abb1c24f963fcd0bf62e493abd76b36d767d7fa9e31bde66008f33bc"
 
   url "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v#{version}/Another-Redis-Desktop-Manager-mac-#{version}-#{arch}.dmg"
   name "Another Redis Desktop Manager"
