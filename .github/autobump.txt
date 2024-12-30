@@ -1144,6 +1144,7 @@ strongvpn
 studio-3t
 sublime-merge
 sublime-text@dev
+subsurface
 sunsama
 super-productivity
 superhuman
