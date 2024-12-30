@@ -1,6 +1,6 @@
 cask "aliworkbench" do
-  version "9.66.00QNM"
-  sha256 "e6ab9ad7e2011e6d8fa67d5a80e4298297fc74a7c44345bfa39ffe3d03060d63"
+  version "9.66.01QNM"
+  sha256 "e4e41002c5aaca26b83eff47cfc6437f1cd9940d113a953dbf68e95feb1bc655"
 
   url "https://download.alicdn.com/wangwang/AliworkbenchQN_(#{version}).dmg",
       verified: "download.alicdn.com/wangwang/"
@@ -16,7 +16,7 @@ cask "aliworkbench" do
       json["model"]&.map do |item|
         next if item["platform"] != "mac"
 
-        item["version"]
+        item["version"]&.strip
       end
     end
   end
