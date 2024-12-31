@@ -7,10 +7,7 @@ cask "rewind" do
   desc "Record and search your screen and audio"
   homepage "https://www.rewind.ai/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-12-31", because: :unmaintained
 
   auto_updates true
   depends_on macos: ">= :monterey"
