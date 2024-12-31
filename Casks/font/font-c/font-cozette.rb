@@ -11,6 +11,8 @@ cask "font-cozette" do
     strategy :github_latest
   end
 
+  font "CozetteFonts/CozetteCrossedSevenVector.otf"
+  font "CozetteFonts/CozetteCrossedSevenVectorBold.otf"
   font "CozetteFonts/CozetteVector.otf"
   font "CozetteFonts/CozetteVectorBold.otf"
 
