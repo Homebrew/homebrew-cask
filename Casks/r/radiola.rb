@@ -8,8 +8,8 @@ cask "radiola" do
   homepage "https://github.com/SokoloffA/radiola"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://sokoloffa.github.io/radiola/feed.xml"
+    strategy :sparkle
   end
 
   auto_updates true
