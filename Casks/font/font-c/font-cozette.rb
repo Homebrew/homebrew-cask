@@ -1,6 +1,6 @@
 cask "font-cozette" do
-  version "1.25.2"
-  sha256 "0ee8292f9273b56e64c19e3a4d978d6f5c4b091220ec129083287d99a059cd18"
+  version "1.26.0"
+  sha256 "0f1582d475afc685c82184e49a67d78907fa2137a51b73ea99aaa5fb54c27b54"
 
   url "https://github.com/slavfox/Cozette/releases/download/v.#{version}/CozetteFonts-v-#{version.dots_to_hyphens}.zip"
   name "Cozette"
@@ -11,6 +11,8 @@ cask "font-cozette" do
     strategy :github_latest
   end
 
+  font "CozetteFonts/CozetteCrossedSevenVector.otf"
+  font "CozetteFonts/CozetteCrossedSevenVectorBold.otf"
   font "CozetteFonts/CozetteVector.otf"
   font "CozetteFonts/CozetteVectorBold.otf"
 
