@@ -10,10 +10,7 @@ cask "now-tv-player" do
   livecheck do
     url "https://web.static.nowtv.com/watch/player/nowtv/gb/latest/update.json"
     strategy :json do |json|
-      version = json.dig("platforms", "darwin", "version")
-      next if version.blank?
-
-      version
+      json.dig("platforms", "darwin", "version")
     end
   end
 
