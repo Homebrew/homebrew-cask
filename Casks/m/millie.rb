@@ -1,26 +1,26 @@
 cask "millie" do
-  version "6.0.0"
-  sha256 "565fb364ad51eeb37acc3b7ab99ddbff27be5dfaf5c4a506a806befa3e54b91e"
+  version "2.1.2,100"
+  sha256 "1ec0830ae6daeafd0eefe335f8b005feacfb9b3af2b14ddddd6e33db13917123"
 
-  url "https://apis.millie.co.kr/v1/download/installer/mac/Millie-#{version}.dmg"
-  name "millie"
+  url "https://install.millie.co.kr/flutter/#{version.csv.first}/millie.dmg"
+  name "Millie"
   desc "Korean e-book store"
   homepage "https://www.millie.co.kr/"
 
   livecheck do
-    url "https://install.millie.co.kr/mac/latest-mac.yml"
-    strategy :electron_builder
+    url "https://install.millie.co.kr/flutter/millie.dmg"
+    strategy :extract_plist
   end
 
-  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Millie.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.millie.sfl*",
-    "~/Library/Application Support/millie",
-    "~/Library/Logs/millie",
-    "~/Library/Preferences/com.electron.millie.plist",
-    "~/Library/Saved Application State/com.electron.millie.savedState",
+    "~/Library/Application Support/kr.co.millie.MillieShelf/",
+    "~/Library/Caches/kr.co.millie.MillieShelf",
+    "~/Library/HTTPStorages/kr.co.millie.MillieShelf.binarycookies",
+    "~/Library/Saved Application State/kr.co.millie.MillieShelf.savedState",
+    "~/Library/WebKit/kr.co.millie.MillieShelf",
   ]
 end
