@@ -1,7 +1,7 @@
 cask "calendar-366" do
   # NOTE: "366" is not a version number, but an intrinsic part of the product name
-  version "2.15.6"
-  sha256 "d87c8e7838b79995cf041fff3fb1325e84261a83e7d2bb27e62250adb24581c6"
+  version "2.15.7"
+  sha256 "075907f10feecff8a9e3fd0154ec54ff3df3151a88735b359be067a36a6237d7"
 
   url "https://nspektor.com/downloads/Calendar366_v#{version}.dmg"
   name "Calendar 366 II"
