@@ -7,8 +7,13 @@ cask "syntax-highlight" do
   desc "Quicklook extension for source files"
   homepage "https://github.com/sbarex/SourceCodeSyntaxHighlight"
 
+  livecheck do
+    url "https://sbarex.github.io/SourceCodeSyntaxHighlight/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Syntax Highlight.app"
   binary "#{appdir}/Syntax Highlight.app/Contents/Resources/syntax_highlight_cli"
