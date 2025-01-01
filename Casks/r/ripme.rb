@@ -1,8 +1,8 @@
 cask "ripme" do
-  version "1.7.95"
-  sha256 "008201e406f401b27248277a4188f26203bb9da0170872de900125f8a6c8b558"
+  version "2.1.12-7-d0b97acd"
+  sha256 "87671af2600aca3374295680ac2b7ffbc3aed5eadff85669e995e584fc8b29da"
 
-  url "https://github.com/RipMeApp/ripme/releases/download/#{version}/ripme.jar"
+  url "https://github.com/RipMeApp/ripme/releases/download/#{version}/ripme-#{version}-0.jar"
   name "RipMe"
   desc "Album ripper for various websites"
   homepage "https://github.com/RipMeApp/ripme"
@@ -10,13 +10,13 @@ cask "ripme" do
   auto_updates true
   container type: :naked
 
-  artifact "ripme.jar", target: "#{appdir}/ripme.jar"
+  artifact "ripme-#{version}-0.jar", target: "#{appdir}/ripme.jar"
 
   uninstall delete: "/Applications/rips"
 
   zap trash: "~/Library/Application Support/ripme"
 
   caveats do
-    depends_on_java "8+"
+    depends_on_java "17+"
   end
 end
