@@ -225,6 +225,7 @@ commander-one
 commandpost
 confluent-cli
 connect-fonts
+contour
 cookie
 copilot
 copilot-for-xcode
