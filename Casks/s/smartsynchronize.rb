@@ -1,9 +1,9 @@
 cask "smartsynchronize" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.5.0"
-  sha256 arm:   "b81090b32ee069f8b496a1e8ae4d594c1d43c500cc7cb95807ec6e67c2fa012a",
-         intel: "1f94395f0715d283a7a50132bd7c653d9fdeb838102334edc6272c4d9be90c99"
+  version "4.6.0"
+  sha256 arm:   "a843db14ce4e003fba9e794491b89ca331de7ab636c5d4bc7165f1db31ae8f30",
+         intel: "b22271d4ac925432facdc5151af4b19ed4f4b47448664a18afb983bfc3bf87ab"
 
   url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-#{arch}-#{version.dots_to_underscores}.dmg"
   name "SmartSynchronize"
