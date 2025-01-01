@@ -1102,6 +1102,7 @@ slack
 slack-cli
 slack@beta
 smartgit
+smartsynchronize
 smooze-pro
 smultron
 snagit
