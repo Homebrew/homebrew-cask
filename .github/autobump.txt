@@ -1264,6 +1264,7 @@ ui
 ultimate
 understand
 uninstallpkg
+unite
 unite-phone
 unity
 unity-hub
