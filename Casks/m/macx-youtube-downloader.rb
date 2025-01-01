@@ -10,7 +10,6 @@ cask "macx-youtube-downloader" do
   livecheck do
     url "http://www.macxdvd.com/free-youtube-video-downloader-mac/upgrade/macx-youtube-downloader#{version.major}.plist"
     strategy :xml do |xml|
-      puts xml
       version = xml.elements["//key[text()='LastestVersion']"]&.next_element&.text
       next if version.blank?
 
