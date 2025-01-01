@@ -7,8 +7,13 @@ cask "qlmarkdown" do
   desc "Quick Look generator for Markdown files"
   homepage "https://github.com/sbarex/QLMarkdown"
 
+  livecheck do
+    url "https://sbarex.github.io/QLMarkdown/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "QLMarkdown.app"
   binary "#{appdir}/QLMarkdown.app/Contents/Resources/qlmarkdown_cli"
