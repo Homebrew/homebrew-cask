@@ -958,6 +958,7 @@ qfinder-pro
 qgis
 qgroundcontrol
 qlab
+qlmarkdown
 qownnotes
 qq
 qqlive
