@@ -29,5 +29,6 @@
     "https://www.tableau.com/products/reader",
     "https://downloads.tableau.com/TableauAutoUpdate.xml"
   ],
-  "vuze": "https://www.vuze.com/"
+  "vuze": "https://www.vuze.com/",
+  "xcodepilot": "https://xcodepilot.thriller.fun/docs/"
 }
