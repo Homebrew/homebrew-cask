@@ -770,6 +770,7 @@ mutedeck
 mutesync
 mweb-pro
 nagstamon
+naps2
 native-access
 naver-whale
 navicat-for-mariadb
