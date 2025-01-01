@@ -1,11 +1,11 @@
 cask "browser-deputy" do
-  version "1.6.3"
+  version "1.7.0"
   sha256 :no_check
 
   url "https://anybox.ltd/browser-deputy/download/browserdeputy-latest.zip"
   name "Browser Deputy"
   desc "Command palette in any application"
-  homepage "https://anybox.ltd/en/browser-deputy"
+  homepage "https://anybox.ltd/browser-deputy"
 
   livecheck do
     url "https://anybox.ltd/browser-deputy/download/appcast.xml"
