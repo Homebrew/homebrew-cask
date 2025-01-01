@@ -1165,6 +1165,7 @@ swiftformat-for-xcode
 sync
 syncovery
 syncthing
+syntax-highlight
 tabby
 tableflip
 tableplus
