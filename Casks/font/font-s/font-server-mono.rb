@@ -7,8 +7,8 @@ cask "font-server-mono" do
   name "Server Mono"
   homepage "https://servermono.com/"
 
-  font "www-server-mono-#{version}/fonts/ServerMono-Regular.otf"
   font "www-server-mono-#{version}/fonts/ServerMono-Regular-Italic.otf"
+  font "www-server-mono-#{version}/fonts/ServerMono-Regular.otf"
 
   # No zap stanza required
 end
