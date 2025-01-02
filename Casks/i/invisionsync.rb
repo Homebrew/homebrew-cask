@@ -6,11 +6,6 @@ cask "invisionsync" do
   name "InVision Sync"
   homepage "https://www.invisionapp.com/"
 
-  livecheck do
-    url "https://projects.invisionapp.com/native_app/mac/sparkle/appcast_v2.xml"
-    strategy :sparkle
-  end
-
   disable! date: "2024-12-31", because: :no_longer_available
 
   app "InVisionSync.app"
