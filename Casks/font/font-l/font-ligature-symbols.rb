@@ -6,10 +6,7 @@ cask "font-ligature-symbols" do
   name "Ligature Symbols"
   homepage "https://kudakurage.com/ligature_symbols/"
 
-  livecheck do
-    url :homepage
-    regex(/ver\.\s*v?(\d+(?:\.\d+)+)/i)
-  end
+  disable! date: "2025-01-02", because: :no_longer_available
 
   font "LigatureSymbols/LigatureSymbols-#{version}.otf"
 
