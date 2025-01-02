@@ -1075,7 +1075,6 @@ setapp
 sf
 sfm
 shadow
-shadow-bot
 shadow@beta
 shadowsocksx-ng
 shapr3d
