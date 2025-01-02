@@ -487,7 +487,6 @@ gog-galaxy
 goland
 goodsync
 google-chrome@beta
-google-chrome@canary
 google-chrome@dev
 google-cloud-sdk
 gpg-suite@nightly
@@ -567,7 +566,6 @@ jasp
 java@beta
 jazz2-resurrection
 jbrowse
-jdownloader
 jellyfin
 jetbrains-gateway
 jetbrains-toolbox
