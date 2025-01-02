@@ -13,9 +13,17 @@ cask "nessus" do
   end
 
   pkg ".Nessus.pkg"
+  binary "/Library/Nessus/run/bin/nasl"
+  binary "/Library/Nessus/run/bin/ndbg"
+  binary "/Library/Nessus/run/sbin/nessuscli", target: "#{HOMEBREW_PREFIX}/sbin/nessuscli"
+  binary "/Library/Nessus/run/sbin/nessusmgt", target: "#{HOMEBREW_PREFIX}/sbin/nessusmgt"
 
   uninstall launchctl: "com.tenablesecurity.nessusd",
             pkgutil:   "com.tenablesecurity.Nessus.Preferences"
 
   zap trash: "/Library/Nessus"
+
+  caveats do
+    free_license "https://www.tenable.com/products/nessus/nessus-essentials"
+  end
 end
