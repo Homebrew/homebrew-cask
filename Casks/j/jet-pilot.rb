@@ -1,9 +1,9 @@
 cask "jet-pilot" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.31.1"
-  sha256  arm:   "912225a43aaad3b7fd4fb0224ed017fd4b25b4a46339e363935472cfb41269ac",
-          intel: "f88e55da1b922681acbef0f1e235c9c997d6187f2716073ff441e85f53f83f58"
+  version "1.32.0"
+  sha256  arm:   "095952e3be1d15d57863b83b2da77d8b048b77fcacfc0b8b1e428983f7624094",
+          intel: "e2abee1b30dba166d40389d473f3f1675e765d2a17e33b2c3bf33d448742ee92"
 
   url "https://github.com/unxsist/jet-pilot/releases/download/v#{version}/JET.Pilot_#{version}_#{arch}.dmg",
       verified: "github.com/unxsist/jet-pilot/"

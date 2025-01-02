@@ -568,6 +568,7 @@ java@beta
 jazz2-resurrection
 jbrowse
 jellyfin
+jet-pilot
 jetbrains-gateway
 jetbrains-toolbox
 jgrennison-openttd
