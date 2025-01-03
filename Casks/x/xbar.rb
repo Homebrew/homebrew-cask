@@ -20,6 +20,8 @@ cask "xbar" do
   uninstall quit: "com.xbarapp.app"
 
   zap trash: [
+    "~/Library/Application Support/xbar",
+    "~/Library/Caches/com.xbarapp.app",
     "~/Library/Preferences/com.xbarapp.app.plist",
     "~/Library/WebKit/com.xbarapp.app",
   ]
