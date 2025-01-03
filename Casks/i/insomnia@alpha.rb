@@ -9,17 +9,9 @@ cask "insomnia@alpha" do
   homepage "https://insomnia.rest/"
 
   livecheck do
-    url :url
-    regex(/^core@v?(\d+(?:\.\d+)+(?:[._-](?:alpha|beta|rc)[._-]?\d*)?)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"]
-
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
+    url "https://updates.insomnia.rest/builds/check/mac?v=#{version.major}.0.0&app=com.insomnia.app&channel=beta"
+    strategy :json do |json|
+      json["name"]
     end
   end
 

@@ -9,9 +9,10 @@ cask "insomnia" do
   homepage "https://insomnia.rest/"
 
   livecheck do
-    url :url
-    regex(/^core@v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_latest
+    url "https://updates.insomnia.rest/builds/check/mac?v=#{version.major}.0.0&app=com.insomnia.app&channel=stable"
+    strategy :json do |json|
+      json["name"]
+    end
   end
 
   auto_updates true
