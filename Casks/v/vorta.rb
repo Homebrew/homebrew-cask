@@ -11,20 +11,8 @@ cask "vorta" do
   homepage "https://github.com/borgbase/vorta"
 
   livecheck do
-    url :url
-    regex(/^Vorta[._-]v?(\d+(?:\.\d+)+)(:?[._-]#{arch})?\.(?:dmg|pkg|zip)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
+    url "https://borgbase.github.io/vorta/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
