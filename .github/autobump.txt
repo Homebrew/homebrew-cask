@@ -224,6 +224,7 @@ cog
 coin-wallet
 commander-one
 commandpost
+compositor
 confluent-cli
 connect-fonts
 contour
