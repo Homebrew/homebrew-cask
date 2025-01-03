@@ -1,6 +1,6 @@
 cask "qth" do
-  version "0.8.11"
-  sha256 "43ad0a2d3d2e56b5bd0b9d4f4e37fd97f6c9f3e46302353f74a515c365da444f"
+  version "0.8.13"
+  sha256 "9edcd0262bb1a8adcde5cfe209d69ef4e2fd4c0084a491364a031725fff491ec"
 
   url "https://www.w8wjb.com/qth/QTH-#{version}.dmg"
   name "QTH"
