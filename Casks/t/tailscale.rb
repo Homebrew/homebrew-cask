@@ -45,6 +45,7 @@ cask "tailscale" do
     "~/Library/Containers/Tailscale",
     "~/Library/Group Containers/*.io.tailscale.ipn.macsys",
     "~/Library/HTTPStorages/io.tailscale.ipn.macsys",
+    "~/Library/HTTPStorages/io.tailscale.ipn.macsys.binarycookies",
     "~/Library/Preferences/io.tailscale.ipn.macsys.plist",
     "~/Library/Tailscale",
   ]

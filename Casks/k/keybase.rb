@@ -48,9 +48,11 @@ cask "keybase" do
             ]
 
   zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/keybase.*.sfl*",
         "~/Library/Application Support/Keybase",
         "~/Library/Caches/Keybase",
         "~/Library/Group Containers/keybase",
+        "~/Library/LaunchAgents/keybase.*.plist",
         "~/Library/Logs/Keybase*",
         "~/Library/Preferences/keybase*",
       ],

@@ -25,6 +25,7 @@ cask "protonvpn" do
             quit:      "ch.protonvpn.mac"
 
   zap trash: [
+    "~/Library/Application Scripts/*.group.ch.protonvpn.mac",
     "~/Library/Application Scripts/ch.protonvpn.*",
     "~/Library/Application Support/CrashReporter/ProtonVPN*",
     "~/Library/Application Support/ProtonVPN",
@@ -33,6 +34,7 @@ cask "protonvpn" do
     "~/Library/Caches/SentryCrash/ProtonVPN",
     "~/Library/Containers/ch.protonvpn.*",
     "~/Library/Cookies/ch.protonvpn.mac.binarycookies",
+    "~/Library/Group Containers/*.group.ch.protonvpn.mac",
     "~/Library/Logs/ProtonVPN.log",
     "~/Library/Preferences/ch.protonvpn.mac.plist",
     "~/Library/WebKit/ch.protonvpn.mac",
