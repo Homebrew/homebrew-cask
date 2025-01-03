@@ -13,6 +13,10 @@ cask "huggingchat" do
 
   zap trash: [
     "~/Library/Application Scripts/cyrilzakka.HuggingChat-Mac",
+    "~/Library/Caches/cyrilzakka.HuggingChat-Mac",
     "~/Library/Containers/cyrilzakka.HuggingChat-Mac",
+    "~/Library/HTTPStorages/cyrilzakka.HuggingChat-Mac",
+    "~/Library/HTTPStorages/cyrilzakka.HuggingChat-Mac.binarycookies",
+    "~/Library/Preferences/cyrilzakka.HuggingChat-Mac.plist",
   ]
 end
