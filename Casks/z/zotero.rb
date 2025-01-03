@@ -8,13 +8,13 @@ cask "zotero" do
   homepage "https://www.zotero.org/"
 
   livecheck do
-    url "https://www.zotero.org/download/"
-    regex(/standaloneVersions.*?"mac"\s*:\s*"(\d+(?:\.\d+)+)"/i)
+    url "https://www.zotero.org/download/client/dl?channel=release&platform=mac"
+    strategy :header_match
   end
 
   auto_updates true
   conflicts_with cask: "zotero@beta"
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :sierra"
 
   app "Zotero.app"
 
