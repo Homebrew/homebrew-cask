@@ -1,9 +1,9 @@
 cask "visual-paradigm-ce" do
   arch arm: "AArch64", intel: "WithJRE"
 
-  version "17.2,20241205"
-  sha256 arm:   "b9ff4a7d0c9c2ca03dd65b5ac6b0a2016b10d84487201d7392e8968f2a048e9d",
-         intel: "92127d36d03de79056492476c89800a99a1d1c1b54500a09226dfaf2b1ba94cc"
+  version "17.2,20250101"
+  sha256 arm:   "22fa0a9e9a494da13e06d08ac420791bd31876ea3d4a27ab0731717f62dd8677",
+         intel: "c83525324c806742cfa409a56fe591d28d8f3977791cd349f8577871b39f43dd"
 
   url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm Community Edition"
