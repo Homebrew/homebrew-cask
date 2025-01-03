@@ -6,7 +6,7 @@ cask "gingko" do
       verified: "github.com/gingko/client/"
   name "Gingko"
   desc "Word processor that shows structure and content"
-  homepage "https://gingko.io/"
+  homepage "https://gingkowriter.com/"
 
   livecheck do
     url :url
