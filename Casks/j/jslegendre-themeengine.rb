@@ -1,6 +1,6 @@
 cask "jslegendre-themeengine" do
-  version "1.0.0,118"
-  sha256 "5d471654427f192c9729362b157fa18d0c485371cd9f3fd32ecf23831bfa05c9"
+  version "1.0.0,119"
+  sha256 "d4330aeeaa354ecd9eb13c02661836262f97a28dedc3d8820f99714995eaaf77"
 
   url "https://github.com/jslegendre/ThemeEngine/releases/download/v#{version.csv.first}(#{version.csv.second})/ThemeEngine.zip"
   name "ThemeEngine"
