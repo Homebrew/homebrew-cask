@@ -1046,6 +1046,7 @@ saleae-logic
 sanctum
 santa
 sapmachine-jdk
+satyrn
 sauce-connect
 schism-tracker
 screaming-frog-log-file-analyser
