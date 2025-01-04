@@ -13,7 +13,7 @@ cask "spybuster" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "SpyBuster.app"
 
