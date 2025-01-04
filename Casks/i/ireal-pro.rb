@@ -10,7 +10,18 @@ cask "ireal-pro" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "2024.7,20240707"
+    sha256 "19dd261ce559a8c8e1efd49dbc63b55248e7dca75f2b8bf2940ecec08c94ab49"
+
+    url "https://ireal-pro.s3.amazonaws.com/iRealPro#{version.csv.second}.zip",
+        verified: "ireal-pro.s3.amazonaws.com/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "2024.12.2,20241220"
     sha256 "41cae903b46d9dd603c695f090a259d77ff51ca913eb60d4d945b45c493c795c"
 
