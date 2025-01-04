@@ -5,10 +5,12 @@ cask "flowkeeper" do
 
   on_arm do
     sha256 "d499a6235ee79e78270924e2fc97dbdbe4cca4afec368e8e8473173e282bd097"
+
     url "https://github.com/flowkeeper-org/fk-desktop/releases/download/#{version}/Flowkeeper.dmg"
   end
   on_intel do
     sha256 "629c911ec98fa3c7eb6e67a85c9f9f5296d28d2f81b07271c13a48ea05bb2c1a"
+
     url "https://github.com/flowkeeper-org/fk-desktop/releases/download/#{version}/Flowkeeper-x86.dmg"
   end
 
