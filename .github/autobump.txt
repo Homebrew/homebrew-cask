@@ -485,6 +485,7 @@ gns3
 gnucash
 go-agent
 go-server
+go-shiori
 godspeed
 gog-galaxy
 goland
@@ -821,6 +822,7 @@ obsidian
 ocenaudio
 octarine
 odrive
+ok-json
 okta-advanced-server-access
 ollama
 ollamac
@@ -989,6 +991,7 @@ rapidweaver
 razorsql
 readdle-spark
 reader
+readest
 readmoreading
 readyapi
 realforce
@@ -1335,8 +1338,10 @@ whalebird
 whatsapp
 whatsapp@beta
 whatsapp@legacy
+whatsize
 whisky
 widelands
+wifi-explorer-pro
 wifispoof
 winbox
 windows-app
@@ -1362,6 +1367,7 @@ xiaomi-cloud
 xiv-on-mac
 xliff-editor
 xmind
+xmplify
 xnconvert
 xnviewmp
 xpra
