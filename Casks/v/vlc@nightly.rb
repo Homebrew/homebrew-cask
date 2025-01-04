@@ -39,8 +39,6 @@ cask "vlc@nightly" do
     end
   end
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   conflicts_with cask: "vlc"
 
   app "VLC.app"
