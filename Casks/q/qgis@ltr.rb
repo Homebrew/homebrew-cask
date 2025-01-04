@@ -15,8 +15,6 @@ cask "qgis@ltr" do
     end
   end
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   depends_on macos: ">= :high_sierra"
 
   app "QGIS-LTR.app"
