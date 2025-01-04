@@ -2,7 +2,7 @@ cask "font-cochineal" do
   version :latest
   sha256 :no_check
 
-  url "http://mirrors.ctan.org/fonts/cochineal.zip"
+  url "https://mirrors.ctan.org/fonts/cochineal.zip"
   name "Cochineal"
   homepage "https://ctan.org/pkg/cochineal"
 
