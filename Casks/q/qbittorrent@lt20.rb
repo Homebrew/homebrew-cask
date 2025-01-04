@@ -13,8 +13,6 @@ cask "qbittorrent@lt20" do
     regex(%r{url=.*?/qbittorrent[._-]v?(\d+(?:\.\d+)+)[._-]lt20\.dmg}i)
   end
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   conflicts_with cask: "qbittorrent"
   depends_on macos: ">= :big_sur"
 
