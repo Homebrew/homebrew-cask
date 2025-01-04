@@ -12,7 +12,7 @@ cask "merlin-project" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Merlin Project.app"
 
