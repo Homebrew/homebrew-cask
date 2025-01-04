@@ -6,7 +6,7 @@ cask "squirrelsql" do
       verified: "sourceforge.net/squirrel-sql/"
   name "SQuirrel SQL"
   desc "Graphical Java program for viewing the structure of a JDBC compliant database"
-  homepage "http://www.squirrelsql.org/"
+  homepage "https://squirrel-sql.sourceforge.io/"
 
   container type: :naked
 
