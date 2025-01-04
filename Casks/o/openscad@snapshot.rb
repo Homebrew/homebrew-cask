@@ -12,8 +12,6 @@ cask "openscad@snapshot" do
     regex(/OpenSCAD[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   conflicts_with cask: "openscad"
 
   app "OpenSCAD.app"
