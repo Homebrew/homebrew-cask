@@ -515,6 +515,7 @@ hbuilderx
 heptabase
 herd
 heroic
+heynote
 hhkb-studio
 hides
 holavpn
