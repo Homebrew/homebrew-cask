@@ -11,10 +11,7 @@ cask "infoflow" do
   desc "AI office platform"
   homepage "https://infoflow.baidu.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2025-01-04", because: :no_longer_meets_criteria
 
   app "如流.app"
 
