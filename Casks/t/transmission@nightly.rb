@@ -15,8 +15,6 @@ cask "transmission@nightly" do
     end
   end
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   conflicts_with cask: "transmission"
   depends_on macos: ">= :big_sur"
 
