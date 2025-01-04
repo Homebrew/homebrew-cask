@@ -30,11 +30,18 @@ cask "morisawa-desktop-manager" do
   zap trash: [
         "/Library/Application Support/Morisawa Desktop Manager",
         "/Library/Application Support/Morisawa/Logs/MdmInstall.log",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.co.morisawa.morisawadesktopmanager.sfl*",
         "~/Library/Application Support/jp.co.morisawa.MorisawaDesktopManager",
         "~/Library/Application Support/Morisawa Desktop Manager",
         "~/Library/Application Support/MorisawaFonts",
+        "~/Library/Caches/jp.co.morisawa.MorisawaDesktopManager",
         "~/Library/HTTPStorages/jp.co.morisawa.MorisawaDesktopManager",
+        "~/Library/HTTPStorages/jp.co.morisawa.MorisawaDesktopManager.binarycookies",
         "~/Library/Preferences/jp.co.morisawa.MorisawaDesktopManager.plist",
       ],
-      rmdir: "~/Library/Fonts/MorisawaFonts"
+      rmdir: [
+        "/Library/Application Support/Morisawa",
+        "/Library/Application Support/Morisawa/Logs",
+        "~/Library/Fonts/MorisawaFonts",
+      ]
 end
