@@ -8,7 +8,7 @@ cask "sys-pc-tool" do
   homepage "https://www.syride.com/"
 
   livecheck do
-    url "http://www.syride.com/downloads/SYS_PC_Tool/webconfig-para4.xml"
+    url "https://www.syride.com/downloads/SYS_PC_Tool/webconfig-para4.xml"
     regex(/SYS[._-]PC[._-]Tool[._-]setup[._-]mac[._-]v?(\d+(?:[.-]\d+)+)\.pkg/i)
     strategy :xml do |xml, regex|
       url = xml.elements["//sysui_config[@machine='mac']/file"]&.text&.strip
