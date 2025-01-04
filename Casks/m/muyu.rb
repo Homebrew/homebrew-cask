@@ -7,10 +7,7 @@ cask "muyu" do
   desc "Combination of work efficiency and health"
   homepage "https://breakit.thriller.fun/"
 
-  livecheck do
-    url "https://breakit.thriller.fun/packages/appcast/appcast.xml"
-    strategy :sparkle
-  end
+  disable! date: "2025-01-04", because: :no_longer_available
 
   auto_updates true
   depends_on macos: ">= :ventura"
