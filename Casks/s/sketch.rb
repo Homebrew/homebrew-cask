@@ -3,17 +3,21 @@ cask "sketch" do
     version "96.3,167315"
     sha256 "3ba2c147aab6b2fcb4b5cc3e3ee7fce3f63551e6ef743a7afe459bd0a87bb4a6"
 
-    url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey do
+    version "100.3,180165"
+    sha256 "e51efde061eb3d5b9b999f7821d0d547114ce5b3ed06c0ca3278d60fb4d92678"
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
+  on_ventura :or_newer do
     version "101.6,182078"
     sha256 "30bcd1bbde8aa493592402d9fdceb5167543b440ee0954d451b6b5292a14cdd7"
-
-    url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
 
     livecheck do
       url "https://download.sketch.com/sketch-versions.xml"
@@ -21,6 +25,7 @@ cask "sketch" do
     end
   end
 
+  url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
   name "Sketch"
   desc "Digital design and prototyping platform"
   homepage "https://www.sketch.com/"
