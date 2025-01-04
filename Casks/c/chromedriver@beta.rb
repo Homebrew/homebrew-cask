@@ -18,8 +18,6 @@ cask "chromedriver@beta" do
     end
   end
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   conflicts_with cask: "chromedriver"
 
   binary "chromedriver-mac-#{arch}/chromedriver"
