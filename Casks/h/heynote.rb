@@ -16,6 +16,7 @@ cask "heynote" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Heynote.app"
