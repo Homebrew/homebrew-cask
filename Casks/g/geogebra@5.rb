@@ -18,8 +18,6 @@ cask "geogebra@5" do
     end
   end
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   app "Geogebra.app"
 
   uninstall quit:       "org.geogebra#{version.major}.mac",
