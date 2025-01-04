@@ -12,7 +12,7 @@ cask "tyme" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Tyme.app"
 
