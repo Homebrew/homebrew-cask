@@ -6,7 +6,7 @@ cask "qgroundcontrol" do
       verified: "github.com/mavlink/qgroundcontrol/"
   name "QGroundControl"
   desc "Ground control station for drones"
-  homepage "http://qgroundcontrol.com/"
+  homepage "https://qgroundcontrol.com/"
 
   livecheck do
     url :url
