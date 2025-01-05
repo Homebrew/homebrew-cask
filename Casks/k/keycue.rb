@@ -13,6 +13,8 @@ cask "keycue" do
     regex(/<h\d.*?KeyCue\sv?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "KeyCue.app"
 
   zap trash: [
