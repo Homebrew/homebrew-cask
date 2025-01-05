@@ -2,10 +2,11 @@ cask "aegisub" do
   version "3.4.1"
   sha256 "006f69f117552a071503f723ad9ac8685e8c051055dcb132e6409c9a2f4cde64"
 
-  url "https://github.com/TypesettingTools/Aegisub/releases/download/v#{version}/Aegisub-#{version}.dmg"
+  url "https://github.com/TypesettingTools/Aegisub/releases/download/v#{version}/Aegisub-#{version}.dmg",
+      verified: "github.com/TypesettingTools/Aegisub/"
   name "Aegisub"
   desc "Create and modify subtitles"
-  homepage "https://github.com/TypesettingTools/Aegisub"
+  homepage "https://aegisub.org/"
 
   livecheck do
     url :url
