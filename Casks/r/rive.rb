@@ -12,6 +12,8 @@ cask "rive" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Rive.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "redis-pro" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "redis-pro.app"
 
   zap trash: [

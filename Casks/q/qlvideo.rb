@@ -20,6 +20,8 @@ cask "qlvideo" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "QuickLook Video.app"
 
   zap trash: [
