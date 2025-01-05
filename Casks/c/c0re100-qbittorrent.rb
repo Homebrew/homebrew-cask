@@ -13,7 +13,7 @@ cask "c0re100-qbittorrent" do
   end
 
   conflicts_with cask: "qbittorrent"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "qbittorrent.app"
 
