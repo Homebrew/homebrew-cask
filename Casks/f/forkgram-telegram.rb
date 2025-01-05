@@ -30,6 +30,8 @@ cask "forkgram-telegram" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   # Renamed to avoid conflict with telegram
   app "Telegram.app", target: "Forkgram.app"
 
