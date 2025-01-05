@@ -30,6 +30,8 @@ cask "electron-fiddle" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Electron Fiddle.app"
 
   zap trash: [
