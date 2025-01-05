@@ -11,6 +11,8 @@ cask "vieb" do
   desc "Vim Inspired Electron Browser"
   homepage "https://vieb.dev/"
 
+  depends_on macos: ">= :big_sur"
+
   app "Vieb.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/vieb.wrapper.sh"
