@@ -12,7 +12,7 @@ cask "nitro-pdf-pro" do
     regex(/href=.*Nitro%20PDF%20Pro[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Nitro PDF Pro.app"
 
