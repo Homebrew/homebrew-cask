@@ -12,7 +12,7 @@ cask "focus" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "Focus.app"
 
