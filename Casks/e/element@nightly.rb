@@ -8,7 +8,7 @@ cask "element@nightly" do
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Element Nightly.app"
 
