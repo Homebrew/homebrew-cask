@@ -13,7 +13,7 @@ cask "orangedrangon-android-messages" do
   end
 
   conflicts_with cask: "android-messages"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Android Messages.app"
 
