@@ -27,6 +27,8 @@ cask "polkadot-js" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Polkadot-JS Apps.app"
 
   zap trash: [
