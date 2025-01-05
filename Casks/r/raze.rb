@@ -26,6 +26,8 @@ cask "raze" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Raze.app"
 
   zap trash: [
