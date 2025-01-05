@@ -14,6 +14,8 @@ cask "favro" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Favro.app"
 
   zap trash: [
