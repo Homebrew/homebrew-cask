@@ -12,7 +12,7 @@ cask "jamie" do
   homepage "https://meetjamie.ai/"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :ventura"
 
   app "jamie.app"
 

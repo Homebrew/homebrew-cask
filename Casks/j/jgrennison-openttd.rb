@@ -7,6 +7,8 @@ cask "jgrennison-openttd" do
   desc "Collection of patches applied to OpenTTD"
   homepage "https://github.com/JGRennison/OpenTTD-patches/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "OpenTTD.app"
 
   zap trash: [

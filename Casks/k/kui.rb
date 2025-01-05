@@ -15,6 +15,8 @@ cask "kui" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Kui-darwin-#{arch}/Kui.app"
   binary "#{appdir}/Kui.app/Contents/Resources/kubectl-kui"
 

@@ -7,6 +7,8 @@ cask "keypad-layout" do
   desc "Utility to control window layout using the Ctrl key and the numeric keypad"
   homepage "https://github.com/janten/keypad-layout"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Keypad Layout.app"
 
   zap trash: "~/Library/Preferences/com.jan-gerd.keypad-layout.plist"

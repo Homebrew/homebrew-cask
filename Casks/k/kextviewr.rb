@@ -8,6 +8,8 @@ cask "kextviewr" do
   desc "Display all currently loaded kexts"
   homepage "https://objective-see.com/products/kextviewr.html"
 
+  depends_on macos: ">= :big_sur"
+
   app "KextViewr.app"
 
   zap trash: "~/Library/Caches/com.objective-see.KextViewr"
