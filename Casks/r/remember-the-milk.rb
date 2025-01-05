@@ -15,6 +15,8 @@ cask "remember-the-milk" do
     regex(%r{<b>Version:</b>\s*(\d+(?:\.\d+)+)}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Remember The Milk.app"
 
   zap trash: [
