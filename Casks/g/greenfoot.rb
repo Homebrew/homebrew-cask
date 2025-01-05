@@ -2,8 +2,8 @@ cask "greenfoot" do
   arch arm: "aarch64", intel: "x64"
 
   version "3.9.0"
-  sha256 arm:   "ba33e14149e58ed95423b108e4b6c401c5dd822b36460ccee2ae71dcbc996261",
-         intel: "ab6488f1d736248193fcc1e93f56e2b12c051b8b6888df55e2b9885f902b7071"
+  sha256 arm:   "410c7e749a41e55a56bb455cd36314da7192381be061dcb00b6467de037f40f3",
+         intel: "18d4c1815c664f49b8760d7b38f15f8e7cfe22cae7fd78f46028f55acaf61281"
 
   url "https://www.greenfoot.org/download/files/Greenfoot-mac-#{arch}-#{version.no_dots}.dmg"
   name "Greenfoot"
@@ -14,6 +14,8 @@ cask "greenfoot" do
     url "https://www.greenfoot.org/download"
     regex(/Version:\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Greenfoot.app"
 
