@@ -8,7 +8,7 @@ cask "notes-better" do
   desc "Simple note-taking app for markdown and kanban"
   homepage "https://get-notes.com/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Notes Better.app"
 
