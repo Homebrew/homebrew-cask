@@ -14,7 +14,7 @@ cask "amazon-photos" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :sierra"
 
   app "Amazon Photos.app"
 
