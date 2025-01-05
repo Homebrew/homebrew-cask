@@ -13,6 +13,7 @@ cask "sioyek" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
   container nested: "build/sioyek.dmg"
 
   app "sioyek.app"
