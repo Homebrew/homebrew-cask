@@ -8,6 +8,8 @@ cask "via" do
   desc "Keyboard configurator"
   homepage "https://caniusevia.com/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "VIA.app"
 
   zap trash: [

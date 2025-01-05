@@ -13,6 +13,8 @@ cask "vysor" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Vysor.app"
 
   zap trash: [

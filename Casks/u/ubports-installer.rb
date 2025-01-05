@@ -14,6 +14,8 @@ cask "ubports-installer" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "ubports-installer.app"
 
   zap trash: [

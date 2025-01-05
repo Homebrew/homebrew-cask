@@ -7,6 +7,8 @@ cask "vitals" do
   desc "Tiny process monitor"
   homepage "https://github.com/hmarr/vitals/"
 
+  depends_on macos: ">= :catalina"
+
   app "Vitals.app"
 
   zap trash: [
