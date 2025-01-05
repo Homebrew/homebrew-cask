@@ -11,6 +11,7 @@ cask "heroic" do
   homepage "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/"
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Heroic.app"
 
