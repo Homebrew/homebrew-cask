@@ -16,6 +16,8 @@ cask "utools" do
     regex(/uTools[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "uTools.app"
 
   zap trash: [
