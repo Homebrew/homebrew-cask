@@ -101,11 +101,14 @@ cask "wireshark" do
             pkgutil:      "org.wireshark.*"
 
   zap trash: [
+    "/Library/Application Support/Wireshark",
     "~/.config/wireshark",
     "~/Library/Caches/org.wireshark.Wireshark",
     "~/Library/Cookies/org.wireshark.Wireshark.binarycookies",
+    "~/Library/HTTPStorages/org.wireshark.Wireshark",
     "~/Library/HTTPStorages/org.wireshark.Wireshark.binarycookies",
     "~/Library/Preferences/org.wireshark.Wireshark.plist",
     "~/Library/Saved Application State/org.wireshark.Wireshark.savedState",
+    "~/Library/WebKit/org.wireshark.Wireshark",
   ]
 end

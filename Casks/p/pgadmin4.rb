@@ -21,6 +21,8 @@ cask "pgadmin4" do
   zap trash: [
     "~/.pgadmin",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.pgadmin.pgadmin4.sfl*",
+    "~/Library/Application Support/pgAdmin 4",
+    "~/Library/Caches/pgAdmin 4",
     "~/Library/Preferences/org.pgadmin.pgadmin4.plist",
     "~/Library/Saved Application State/org.pgadmin.pgAdmin4.savedState",
   ]
