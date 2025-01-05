@@ -12,6 +12,8 @@ cask "safeincloud-password-manager" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "SafeInCloud Password Manager.app"
 
   zap trash: [
