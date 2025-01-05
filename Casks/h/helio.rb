@@ -9,7 +9,7 @@ cask "helio" do
 
   livecheck do
     url :homepage
-    regex(/helio[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?helio[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
