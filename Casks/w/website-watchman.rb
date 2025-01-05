@@ -12,6 +12,8 @@ cask "website-watchman" do
     regex(/Version\s+(\d+(?:\.\d+)+)\s*released/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Website Watchman.app"
 
   zap trash: [
