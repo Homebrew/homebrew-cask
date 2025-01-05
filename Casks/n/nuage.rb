@@ -7,7 +7,7 @@ cask "nuage" do
   desc "Free and open-source SoundCloud client"
   homepage "https://github.com/lbrndnr/nuage-macos"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "Nuage.app"
 
