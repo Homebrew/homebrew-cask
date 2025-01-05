@@ -25,7 +25,7 @@ cask "zoho-mail" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Zoho Mail - Desktop.app"
 
