@@ -9,6 +9,7 @@ cask "rambox" do
   homepage "https://rambox.app/"
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Rambox.app"
 
