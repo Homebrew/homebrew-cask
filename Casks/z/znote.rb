@@ -11,7 +11,7 @@ cask "znote" do
   desc "Notes-taking app"
   homepage "https://znote.io/"
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "znote.app"
 
