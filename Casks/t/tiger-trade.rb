@@ -20,7 +20,7 @@ cask "tiger-trade" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Tiger Trade.app"
 
