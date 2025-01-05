@@ -29,6 +29,7 @@ cask "cloudflare-warp" do
             pkgutil:   "com.cloudflare.1dot1dot1dot1.macos"
 
   zap trash: [
+    "/Library/LaunchDaemons/com.cloudflare.1dot1dot1dot1.macos.warp.daemon.plist",
     "~/Library/Application Scripts/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
     "~/Library/Application Support/com.cloudflare.1dot1dot1dot1.macos",
     "~/Library/Caches/com.cloudflare.1dot1dot1dot1.macos",
@@ -37,5 +38,6 @@ cask "cloudflare-warp" do
     "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos",
     "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos.binarycookies",
     "~/Library/Preferences/com.cloudflare.1dot1dot1dot1.macos.plist",
+    "~/Library/WebKit/com.cloudflare.1dot1dot1dot1.macos",
   ]
 end
