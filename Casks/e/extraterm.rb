@@ -13,6 +13,8 @@ cask "extraterm" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "ExtratermQt.app"
 
   zap trash: [
