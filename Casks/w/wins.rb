@@ -1,6 +1,6 @@
 cask "wins" do
-  version "2.5"
-  sha256 "de02157d6ae2d59e4a95e76acae5038f94e5a05f75a96cca96a6f4b4348f806d"
+  version "2.5.1"
+  sha256 "86d50fa860c4e5b3669a07cb65d323817f7cb045a11b047834a4f34dd7549b21"
 
   url "https://f005.backblazeb2.com/file/winsWebsite/Wins-latest-#{version}.dmg",
       verified: "f005.backblazeb2.com/file/winsWebsite/"
@@ -9,10 +9,11 @@ cask "wins" do
   homepage "https://wins.cool/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?Wins[._-]latest[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://wins.cool/update/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Wins.app"
