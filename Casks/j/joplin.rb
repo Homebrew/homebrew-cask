@@ -16,6 +16,8 @@ cask "joplin" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Joplin.app"
 
   zap trash: [
