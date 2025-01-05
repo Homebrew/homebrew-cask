@@ -12,6 +12,8 @@ cask "mural" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :catalina"
+
   app "MURAL.app"
 
   zap trash: [
