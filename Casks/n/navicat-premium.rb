@@ -13,7 +13,7 @@ cask "navicat-premium" do
   end
 
   conflicts_with cask: "navicat-premium@15"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Navicat Premium.app"
 
