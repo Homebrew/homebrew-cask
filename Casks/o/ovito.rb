@@ -17,7 +17,7 @@ cask "ovito" do
 
   auto_updates true
   conflicts_with cask: "ovito-pro"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Ovito.app"
 
