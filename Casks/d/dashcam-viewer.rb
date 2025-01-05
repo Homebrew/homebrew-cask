@@ -14,7 +14,7 @@ cask "dashcam-viewer" do
     regex(%r{href=.*?/Dashcam[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Dashcam Viewer.app"
 
