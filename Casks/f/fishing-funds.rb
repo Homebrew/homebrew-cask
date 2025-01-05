@@ -11,6 +11,8 @@ cask "fishing-funds" do
   desc "Display real-time trends of Chinese funds in the menubar"
   homepage "https://ff.1zilc.top/"
 
+  depends_on macos: ">= :big_sur"
+
   app "Fishing Funds.app"
 
   zap trash: [
