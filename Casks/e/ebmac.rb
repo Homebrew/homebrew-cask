@@ -12,6 +12,8 @@ cask "ebmac" do
     regex(%r{href=.*?/EBMacv?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "EBMac.app"
 
   zap trash: [
