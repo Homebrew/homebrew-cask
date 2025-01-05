@@ -17,6 +17,7 @@ cask "ferdium" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Ferdium.app"
 
