@@ -10,10 +10,11 @@ cask "planet" do
 
   livecheck do
     url :url
-    regex(/^release-(\d+(?:[.-]\d+)+)$/i)
+    regex(/^release[._-](\d+(?:[.-]\d+)+)$/i)
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Planet.app"
 
