@@ -12,6 +12,8 @@ cask "litecoin" do
     regex(/href=.*?litecoin[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Litecoin-Qt.app"
 
   preflight do

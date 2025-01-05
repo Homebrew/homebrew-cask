@@ -9,6 +9,7 @@ cask "llamachat" do
   homepage "https://llamachat.app/"
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "LlamaChat.app"
 
