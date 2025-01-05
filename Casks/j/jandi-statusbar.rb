@@ -7,6 +7,8 @@ cask "jandi-statusbar" do
   desc "GitHub contributions in your status bar"
   homepage "https://github.com/techinpark/Jandi"
 
+  depends_on macos: ">= :ventura"
+
   app "jandi.app"
 
   zap trash: [
