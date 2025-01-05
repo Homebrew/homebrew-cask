@@ -14,7 +14,7 @@ cask "final-fantasy-xiv-online" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :sierra"
 
   app "FINAL FANTASY XIV ONLINE.app"
 
