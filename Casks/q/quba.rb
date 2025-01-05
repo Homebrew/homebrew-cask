@@ -14,7 +14,7 @@ cask "quba" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Quba.app"
 
