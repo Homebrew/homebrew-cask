@@ -12,6 +12,8 @@ cask "simplenote" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Simplenote.app"
 
   zap trash: [
