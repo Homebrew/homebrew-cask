@@ -12,6 +12,8 @@ cask "scene-maestro" do
     regex(/href=.*?scene-maestro[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Scene Maestro.app"
 
   zap trash: [
