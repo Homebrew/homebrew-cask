@@ -13,7 +13,7 @@ cask "ipfs" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :big_sur"
 
   app "IPFS Desktop.app"
 
