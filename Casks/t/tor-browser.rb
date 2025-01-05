@@ -14,7 +14,7 @@ cask "tor-browser" do
 
   auto_updates true
   conflicts_with cask: "tor-browser@alpha"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "Tor Browser.app"
 
