@@ -23,6 +23,8 @@ cask "nwjs" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "nwjs-sdk-v#{version}-osx-#{arch}/nwjs.app"
   binary "nwjs-sdk-v#{version}-osx-#{arch}/nwjc"
 

@@ -13,6 +13,8 @@ cask "nuclino" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Nuclino.app"
 
   zap trash: [
