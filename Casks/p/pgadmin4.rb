@@ -13,7 +13,7 @@ cask "pgadmin4" do
 
   livecheck do
     url "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/"
-    regex(/href="v?(\d+(?:\.\d+)+)/i)
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   app "pgAdmin 4.app"
