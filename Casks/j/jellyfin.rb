@@ -15,6 +15,8 @@ cask "jellyfin" do
     regex(/href=.*?jellyfin[._-]v?(\d+(?:[.-]\d+)+)-#{arch}\.dmg/i)
   end
 
+  depends_on macos: ">= :monterey"
+
   app "Jellyfin.app"
 
   zap trash: [
