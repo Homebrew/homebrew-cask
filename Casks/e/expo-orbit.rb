@@ -7,7 +7,7 @@ cask "expo-orbit" do
   desc "Launch builds and start simulators from your menu bar"
   homepage "https://github.com/expo/orbit/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Expo Orbit.app"
 
