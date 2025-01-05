@@ -13,6 +13,8 @@ cask "wallpaper-wizard" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Wallpaper Wizard.app"
 
   uninstall quit: "com.macpaw.WallWiz-site"
