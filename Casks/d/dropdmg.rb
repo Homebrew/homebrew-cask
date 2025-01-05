@@ -12,6 +12,8 @@ cask "dropdmg" do
     regex(%r{href=.*?/DropDMG[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "DropDMG.app"
 
   zap trash: [

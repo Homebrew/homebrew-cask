@@ -20,6 +20,8 @@ cask "devcleaner" do
     end
   end
 
+  depends_on macos: ">= :ventura"
+
   app "DevCleaner.app"
 
   zap trash: [
