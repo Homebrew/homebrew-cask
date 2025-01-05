@@ -24,7 +24,7 @@ cask "writerside" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :high_sierra"
 
   app "Writerside #{version.before_comma} EAP.app", target: "Writerside.app"
   binary "#{appdir}/Writerside.app/Contents/MacOS/writerside"
