@@ -14,6 +14,8 @@ cask "treesheets" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "TreeSheets.app"
 
   uninstall quit: "dot3labs.TreeSheets"

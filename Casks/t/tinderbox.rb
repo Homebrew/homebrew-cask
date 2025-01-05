@@ -12,7 +12,7 @@ cask "tinderbox" do
     regex(/>Download.*?Tinderbox\s+v?(\d+(?:\.\d+)+)[<\s]/im)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Tinderbox #{version.major}.app"
 

@@ -13,7 +13,7 @@ cask "thangs-sync" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Thangs Sync.app"
 

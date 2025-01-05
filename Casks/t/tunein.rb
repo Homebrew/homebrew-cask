@@ -12,6 +12,8 @@ cask "tunein" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :catalina"
+
   app "TuneIn.app"
 
   zap trash: [

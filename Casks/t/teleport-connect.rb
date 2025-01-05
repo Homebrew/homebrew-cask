@@ -13,6 +13,8 @@ cask "teleport-connect" do
     regex(/href=.*?Teleport%20Connect[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Teleport Connect.app"
 
   zap trash: [

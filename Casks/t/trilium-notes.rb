@@ -12,6 +12,8 @@ cask "trilium-notes" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "trilium-mac-x64/Trilium Notes.app"
 
   zap trash: [

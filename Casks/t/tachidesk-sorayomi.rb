@@ -7,7 +7,7 @@ cask "tachidesk-sorayomi" do
   desc "Manga reader"
   homepage "https://github.com/Suwayomi/Tachidesk-Sorayomi/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Tachidesk Sorayomi.app"
 
