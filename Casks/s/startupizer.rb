@@ -8,16 +8,7 @@ cask "startupizer" do
   desc "Login items handler"
   homepage "http://gentlebytes.com/startupizer/"
 
-  livecheck do
-    url "https://updates.devmate.com/com.gentlebytes.Startupizer#{version.major}.xml"
-    regex(%r{/(\d+)/Startupizer(\d+?)[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
-
-      "#{match[2]},#{match[3]},#{match[1]}"
-    end
-  end
+  deprecate! date: "2025-01-05", because: :discontinued
 
   app "Startupizer#{version.major}.app"
 
