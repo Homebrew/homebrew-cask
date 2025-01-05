@@ -11,6 +11,8 @@ cask "simple-web-server" do
   desc "Create local web servers"
   homepage "https://simplewebserver.org/"
 
+  depends_on macos: ">= :big_sur"
+
   app "Simple Web Server.app"
 
   zap trash: [
