@@ -10,7 +10,7 @@ cask "cinco" do
 
   livecheck do
     url "https://ls5download.cs.tu-dortmund.de/cinco/releases/"
-    regex(%r{href="(\d+(?:\.\d+)+)/"}i)
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   pkg "Install Cinco.pkg"
