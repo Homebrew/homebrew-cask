@@ -14,6 +14,7 @@ cask "mia-for-gmail" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Mia for Gmail.app"
 
