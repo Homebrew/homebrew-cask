@@ -12,6 +12,8 @@ cask "soulseek" do
     regex(%r{href=.*?/SoulseekQt[._-]v?(\d+(?:-\d+)+)\.dmg}i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "SoulseekQt.app"
 
   zap trash: [
