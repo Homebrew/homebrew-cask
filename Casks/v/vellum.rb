@@ -14,7 +14,7 @@ cask "vellum" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   app "Vellum.app"
 

@@ -14,7 +14,7 @@ cask "tailscale" do
 
   auto_updates true
   conflicts_with formula: "tailscale"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   pkg "Tailscale-#{version}-macos.pkg"
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)

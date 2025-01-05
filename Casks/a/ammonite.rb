@@ -12,6 +12,8 @@ cask "ammonite" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Ammonite.app"
 
   zap trash: [
