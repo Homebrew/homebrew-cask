@@ -9,7 +9,7 @@ cask "opera@developer" do
 
   livecheck do
     url "https://get.geo.opera.com/pub/opera-developer/"
-    regex(/href="(\d+(?:\.\d+)+)/i)
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   auto_updates true
