@@ -16,6 +16,8 @@ cask "electron" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Electron.app"
   binary "#{appdir}/Electron.app/Contents/MacOS/Electron", target: "electron"
 
