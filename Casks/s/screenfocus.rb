@@ -12,6 +12,8 @@ cask "screenfocus" do
     regex(/href=.*?ScreenFocus[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   app "ScreenFocus.app"
 
   zap trash: [
