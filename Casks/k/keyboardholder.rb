@@ -8,6 +8,8 @@ cask "keyboardholder" do
   desc "Switch input method per application"
   homepage "https://keyboardholder.leavesc.com/"
 
+  depends_on macos: ">= :big_sur"
+
   app "KeyboardHolder.app"
 
   zap trash: [
