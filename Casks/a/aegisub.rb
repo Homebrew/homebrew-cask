@@ -7,12 +7,9 @@ cask "aegisub" do
   desc "Create and modify subtitles"
   homepage "https://github.com/TypesettingTools/Aegisub"
 
-  # The repo has a garbage "r6962" tag from 2012 that should be excluded
   livecheck do
-    strategy :git do |tags|
-      # example: v3.4.1
-      tags.filter_map { |tag| tag[/^v?(\d+(?:\.\d+)*)$/i, 1] }
-    end
+    url :url
+    strategy :github_latest
   end
 
   app "Aegisub.app"
