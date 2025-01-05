@@ -30,5 +30,9 @@ cask "anki" do
 
   app "Anki.app"
 
-  zap trash: "~/Library/Application Support/Anki*"
+  zap trash: [
+    "~/Library/Application Support/Anki*",
+    "~/Library/Caches/Anki",
+    "~/Library/Saved Application State/net.ankiweb.dtop.savedState",
+  ]
 end

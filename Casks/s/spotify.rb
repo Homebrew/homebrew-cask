@@ -28,11 +28,13 @@ cask "spotify" do
             quit:      "com.spotify.client"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.spotify.client.startuphelper.sfl*",
     "~/Library/Application Support/Spotify",
     "~/Library/Caches/com.spotify.client",
     "~/Library/Caches/com.spotify.client.helper",
     "~/Library/Cookies/com.spotify.client.binarycookies",
     "~/Library/HTTPStorages/com.spotify.client",
+    "~/Library/HTTPStorages/com.spotify.client.helper",
     "~/Library/Logs/Spotify",
     "~/Library/Preferences/com.spotify.client.helper.plist",
     "~/Library/Preferences/com.spotify.client.plist",

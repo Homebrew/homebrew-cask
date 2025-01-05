@@ -40,11 +40,14 @@ cask "raycast" do
 
   zap trash: [
     "~/.config/raycast",
+    "~/Library/Application Scripts/com.raycast.macos.BrowserExtension",
     "~/Library/Application Support/com.raycast.macos",
     "~/Library/Caches/com.raycast.macos",
     "~/Library/Caches/SentryCrash/Raycast",
+    "~/Library/Containers/com.raycast.macos.BrowserExtension",
     "~/Library/Cookies/com.raycast.macos.binarycookies",
     "~/Library/HTTPStorages/com.raycast.macos",
     "~/Library/Preferences/com.raycast.macos.plist",
+    "~/Library/WebKit/com.raycast.macos",
   ]
 end
