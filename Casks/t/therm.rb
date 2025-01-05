@@ -12,6 +12,8 @@ cask "therm" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Therm.app"
 
   zap trash: [
