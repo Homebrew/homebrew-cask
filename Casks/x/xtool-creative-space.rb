@@ -26,6 +26,8 @@ cask "xtool-creative-space" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "xTool Creative Space.app"
 
   zap trash: [
