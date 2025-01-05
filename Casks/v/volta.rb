@@ -16,6 +16,8 @@ cask "volta" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Volta.app"
 
   uninstall quit: "com.volta.net"
