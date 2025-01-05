@@ -11,6 +11,8 @@ cask "gcs" do
   desc "Character sheet editor for the GURPS Fourth Edition roleplaying game"
   homepage "https://gurpscharactersheet.com/"
 
+  depends_on macos: ">= :mojave"
+
   app "GCS.app"
 
   zap trash: [
