@@ -15,6 +15,8 @@ cask "futubull" do
     regex(/FTNNForMac[._-]v?(\d+(?:\.\d+)+)[._-]Website\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "FutuNiuniu.app", target: "Futubull.app"
 
