@@ -12,6 +12,7 @@ cask "panwriter" do
   homepage "https://panwriter.com/"
 
   depends_on formula: "pandoc"
+  depends_on macos: ">= :high_sierra"
 
   app "PanWriter.app"
 
