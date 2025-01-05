@@ -17,6 +17,7 @@ cask "windows95" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "windows95.app"
 
