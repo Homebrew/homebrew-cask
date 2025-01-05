@@ -15,6 +15,8 @@ cask "filebot" do
     regex(/href=.*?FileBot[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.pkg/i)
   end
 
+  depends_on macos: ">= :catalina"
+
   app "FileBot.app"
   binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: "filebot"
   binary "#{appdir}/FileBot.app/Contents/Resources/bash_completion.d/filebot_completion",
