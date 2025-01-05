@@ -16,6 +16,8 @@ cask "shift" do
     regex(/href=.*?(\d+(?:[._-]\d+)+)[._-]stable.*?\.dmg/i)
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Shift.app"
 
   zap trash: [
