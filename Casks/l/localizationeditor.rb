@@ -7,7 +7,7 @@ cask "localizationeditor" do
   desc "iOS app localization manager"
   homepage "https://github.com/igorkulman/iOSLocalizationEditor/"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "LocalizationEditor.app"
 
