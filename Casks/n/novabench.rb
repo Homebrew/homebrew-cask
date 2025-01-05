@@ -12,6 +12,8 @@ cask "novabench" do
     regex(/Novabench\s*(?:<!--[^>]*-->)?\s*(\d+(?:\.\d+)*)/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Novabench.app"
 
   zap trash: [
