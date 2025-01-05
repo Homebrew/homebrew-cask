@@ -20,8 +20,10 @@ cask "xld" do
   binary "CLI/xld"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.tmkk.xld.sfl*",
     "~/Library/Application Support/XLD",
     "~/Library/Caches/jp.tmkk.XLD",
+    "~/Library/HTTPStorages/jp.tmkk.XLD",
     "~/Library/Preferences/jp.tmkk.XLD.plist",
     "~/Library/Saved Application State/jp.tmkk.XLD.savedState",
   ]
