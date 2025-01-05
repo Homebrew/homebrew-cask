@@ -12,6 +12,8 @@ cask "qflipper" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  depends_on macos: ">= :mojave"
+
   app "qFlipper.app"
   binary "#{appdir}/qFlipper.app/Contents/MacOS/qFlipper-cli"
 
