@@ -13,7 +13,7 @@ cask "launchbar" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "LaunchBar.app"
 
