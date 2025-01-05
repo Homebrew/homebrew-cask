@@ -13,7 +13,7 @@ cask "mindjet-mindmanager" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "MindManager.app"
 
