@@ -13,6 +13,8 @@ cask "thedesk" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "TheDesk.app"
 
   zap trash: [
