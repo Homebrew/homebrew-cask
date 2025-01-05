@@ -7,6 +7,8 @@ cask "spaceid" do
   desc "Menu bar indicator showing the currently selected space"
   homepage "https://github.com/dshnkao/SpaceId/"
 
+  depends_on macos: ">= :sierra"
+
   app "SpaceId.app"
 
   preflight do
