@@ -1,19 +1,25 @@
 cask "proclaim" do
-  version "3.1.0.0092"
-  sha256 "03263a343503e041755e41b223ec1d23d8b110232cc2298fada55175b9a698d1"
+  arch arm: "-arm"
 
-  url "https://downloads.logoscdn.com/Proclaim/Installer/#{version}/Proclaim.dmg",
+  version "4.7.0.0202"
+  sha256 arm:   "b2fa4b9551ac73e433cca543d3822a59a8ff77b0acc3619f2451f607a8df9366",
+         intel: "3d149ea2ae8f304b48515221274fa622d56b5be9350c998ce0f9d2acf2294412"
+
+  url "https://downloads.logoscdn.com/Proclaim/Installer/#{version}/Proclaim#{arch}.dmg",
       verified: "logoscdn.com/Proclaim/"
   name "Faithlife Proclaim"
   desc "Church presentation software"
-  homepage "https://faithlife.com/products/proclaim"
+  homepage "https://proclaim.logos.com/"
 
   livecheck do
-    url "http://downloads.proclaimonline.com/mac/appcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://clientservices.logos.com/update/v1/feed/proclaim-mac/stable.xml"
+    strategy :xml do |xml|
+      xml.get_elements("//logos:version")&.map { |item| item.text&.strip }
+    end
   end
 
-  depends_on macos: ">= :mojave"
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Proclaim.app"
 
@@ -22,8 +28,4 @@ cask "proclaim" do
     "~/Library/Preferences/com.logos.Proclaim.plist",
     "~/Library/Saved Application State/com.logos.Proclaim.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
