@@ -23,9 +23,10 @@ cask "moradownloader" do
   uninstall pkgutil: "jp.co.sonymusicsolutions.moradownloader"
 
   zap trash: [
-    "~/Library/Application Support/moraDownloader",
-    "~/Library/Caches/jp.co.sonymusicsolutions.moradownloader",
-    "~/Library/HTTPStorages/jp.co.sonymusicsolutions.moradownloader",
-    "~/Library/Preferences/jp.co.sonymusicsolutions.moradownloader.plist",
-  ]
+        "~/Library/Application Support/moraDownloader",
+        "~/Library/Caches/jp.co.sonymusicsolutions.moradownloader",
+        "~/Library/HTTPStorages/jp.co.sonymusicsolutions.moradownloader",
+        "~/Library/Preferences/jp.co.sonymusicsolutions.moradownloader.plist",
+      ],
+      rmdir: "~/Music/mora"
 end

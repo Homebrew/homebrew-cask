@@ -15,5 +15,10 @@ cask "jordanbaird-ice" do
 
   uninstall quit: "com.jordanbaird.Ice"
 
-  zap trash: "~/Library/Preferences/com.jordanbaird.Ice.plist"
+  zap trash: [
+    "~/Library/Caches/com.jordanbaird.Ice",
+    "~/Library/HTTPStorages/com.jordanbaird.Ice",
+    "~/Library/Preferences/com.jordanbaird.Ice.plist",
+    "~/Library/WebKit/com.jordanbaird.Ice",
+  ]
 end
