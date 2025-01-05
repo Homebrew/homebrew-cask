@@ -14,7 +14,7 @@ cask "steam-plus-plus" do
     regex(/v?(\d+(?:\.\d+)+(?:-rc\.(\d+)?))/i)
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Steam++.app"
 
