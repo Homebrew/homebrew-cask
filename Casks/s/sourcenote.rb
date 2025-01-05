@@ -12,6 +12,8 @@ cask "sourcenote" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :catalina"
+
   app "SourceNote.app"
 
   zap trash: [
