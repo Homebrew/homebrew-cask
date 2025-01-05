@@ -12,6 +12,8 @@ cask "flying-carpet" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "FlyingCarpet.app"
 
   zap trash: [
