@@ -8,7 +8,7 @@ cask "ballast" do
   desc "Status Bar app to keep the audio balance from drifting"
   homepage "https://jamsinclair.nz/ballast"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :monterey"
 
   app "ballast.app"
 
