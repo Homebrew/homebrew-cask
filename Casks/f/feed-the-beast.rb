@@ -23,6 +23,7 @@ cask "feed-the-beast" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "FTB Electron App.app"
 
