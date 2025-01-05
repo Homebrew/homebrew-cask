@@ -16,7 +16,7 @@ cask "home-assistant" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Home Assistant.app"
 
