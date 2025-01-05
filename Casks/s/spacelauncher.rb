@@ -12,6 +12,8 @@ cask "spacelauncher" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :monterey"
+
   app "SpaceLauncher.app"
 
   zap trash: [
