@@ -11,6 +11,8 @@ cask "gitdock" do
     url "https://gitlab.com/mvanremmerden/gitdock.git"
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "GitDock.app"
 
   zap trash: [

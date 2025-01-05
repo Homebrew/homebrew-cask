@@ -24,6 +24,8 @@ cask "gnucash" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Gnucash.app"
 
   zap trash: [
