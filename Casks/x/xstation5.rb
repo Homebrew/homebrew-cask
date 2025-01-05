@@ -13,6 +13,8 @@ cask "xstation5" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "xStation5.app"
 
   zap trash: [
