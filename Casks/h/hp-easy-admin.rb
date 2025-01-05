@@ -12,6 +12,8 @@ cask "hp-easy-admin" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :catalina"
+
   app "HP Easy Admin.app"
 
   zap trash: [

@@ -7,7 +7,7 @@ cask "ha-menu" do
   desc "Menu Bar app to perform common Home Assistant functions"
   homepage "https://github.com/codechimp-org/ha-menu"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "HA Menu.app"
 
