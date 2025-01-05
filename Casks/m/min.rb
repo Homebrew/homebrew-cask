@@ -11,6 +11,8 @@ cask "min" do
   desc "Minimal browser that protects privacy"
   homepage "https://minbrowser.github.io/min/"
 
+  depends_on macos: ">= :catalina"
+
   app "Min.app"
 
   zap trash: [

@@ -17,6 +17,7 @@ cask "media-center" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Media Center #{version.major}.app"
 

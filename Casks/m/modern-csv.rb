@@ -12,6 +12,8 @@ cask "modern-csv" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Modern CSV.app"
 
   zap trash: [

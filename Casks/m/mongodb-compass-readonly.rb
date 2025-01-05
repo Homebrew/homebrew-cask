@@ -23,6 +23,8 @@ cask "mongodb-compass-readonly" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "MongoDB Compass Readonly.app"
 
   zap trash: [

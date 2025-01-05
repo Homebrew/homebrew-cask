@@ -12,7 +12,7 @@ cask "musictube" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Musictube.app"
 

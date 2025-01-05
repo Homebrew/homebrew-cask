@@ -8,6 +8,8 @@ cask "miaoyan" do
   desc "Markdown editor"
   homepage "https://miaoyan.app/"
 
+  depends_on macos: ">= :catalina"
+
   app "MiaoYan.app"
 
   zap trash: [

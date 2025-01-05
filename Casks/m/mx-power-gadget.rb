@@ -12,6 +12,8 @@ cask "mx-power-gadget" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :ventura"
+
   app "Mx Power Gadget.app"
 
   zap trash: [

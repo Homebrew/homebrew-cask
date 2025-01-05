@@ -13,6 +13,7 @@ cask "messenger" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Messenger.app"
 
