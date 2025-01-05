@@ -12,6 +12,8 @@ cask "lunacy" do
     regex(/Lunacy[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Lunacy.app"
 
   zap trash: "~/.local/share/Icons8/Lunacy"
