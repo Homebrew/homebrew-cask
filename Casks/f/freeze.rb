@@ -12,7 +12,7 @@ cask "freeze" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Freeze.app"
 

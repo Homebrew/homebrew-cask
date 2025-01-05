@@ -12,7 +12,7 @@ cask "finicky" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Finicky.app"
 

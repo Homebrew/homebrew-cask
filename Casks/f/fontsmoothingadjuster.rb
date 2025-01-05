@@ -13,6 +13,8 @@ cask "fontsmoothingadjuster" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Font Smoothing Adjuster.app"
 
   zap trash: [

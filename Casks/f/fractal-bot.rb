@@ -12,6 +12,8 @@ cask "fractal-bot" do
     regex(/Version\s*(\d+(?:\.\d+)+).*?\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Fractal-Bot.app"
 
   zap trash: "~/Library/Application Support/Fractal Audio/Fractal-Bot"
