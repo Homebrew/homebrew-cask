@@ -8,7 +8,7 @@ cask "submariner" do
   desc "Subsonic client"
   homepage "https://submarinerapp.com/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Submariner.app"
 
