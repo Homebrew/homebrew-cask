@@ -14,7 +14,7 @@ cask "teamviewer-quickjoin" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "TeamViewerQJ.app", target: "TeamViewer QuickJoin.app"
