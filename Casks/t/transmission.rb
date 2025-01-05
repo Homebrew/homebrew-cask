@@ -15,6 +15,7 @@ cask "transmission" do
 
   auto_updates true
   conflicts_with cask: "transmission@nightly"
+  depends_on macos: ">= :high_sierra"
 
   app "Transmission.app"
 
