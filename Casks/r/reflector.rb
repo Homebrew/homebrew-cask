@@ -12,6 +12,8 @@ cask "reflector" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Reflector #{version.major}.app"
 
   zap trash: [
