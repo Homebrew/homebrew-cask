@@ -8,8 +8,10 @@ cask "mullvadvpn@beta" do
   homepage "https://mullvad.net/"
 
   livecheck do
-    url "https://mullvad.net/download/app/pkg/latest-beta"
-    strategy :header_match
+    url "https://api.mullvad.net/app/v1/releases/macos/#{version}"
+    strategy :json do |json|
+      json["latest_beta"]
+    end
   end
 
   conflicts_with cask: "mullvadvpn"
