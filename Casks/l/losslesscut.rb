@@ -15,6 +15,8 @@ cask "losslesscut" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "LosslessCut.app"
 
   zap trash: [
