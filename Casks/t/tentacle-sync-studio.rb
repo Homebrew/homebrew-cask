@@ -15,7 +15,7 @@ cask "tentacle-sync-studio" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Tentacle Sync Studio.app"
 
