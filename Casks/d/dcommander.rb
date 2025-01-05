@@ -18,6 +18,8 @@ cask "dcommander" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "DCommander.app"
 
   zap trash: "~/Library/Containers/com.devstorm.dc3"
