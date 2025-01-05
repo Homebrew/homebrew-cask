@@ -13,6 +13,8 @@ cask "sqlpro-for-postgres" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "SQLPro for Postgres.app"
 
   zap trash: [
