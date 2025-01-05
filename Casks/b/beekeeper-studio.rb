@@ -17,6 +17,7 @@ cask "beekeeper-studio" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Beekeeper Studio.app"
 
