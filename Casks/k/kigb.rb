@@ -12,7 +12,7 @@ cask "kigb" do
     regex(/>\s*?KiGB\s+?v?(\d+(?:\.\d+)+)\s*?</i)
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   app "KiGB v#{version}/KiGB.app"
 
