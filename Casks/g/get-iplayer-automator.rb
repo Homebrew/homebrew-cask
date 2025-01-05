@@ -20,6 +20,8 @@ cask "get-iplayer-automator" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Get iPlayer Automator.app"
 
   zap trash: [
