@@ -18,6 +18,8 @@ cask "openrgb" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "OpenRGB.app"
 
   zap trash: [
