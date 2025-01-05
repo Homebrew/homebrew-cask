@@ -9,6 +9,7 @@ cask "breaktimer" do
   homepage "https://breaktimer.app/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "BreakTimer.app"
   binary "#{appdir}/BreakTimer.app/Contents/MacOS/BreakTimer", target: "breaktimer"
