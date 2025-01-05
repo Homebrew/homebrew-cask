@@ -13,7 +13,7 @@ cask "safe-exam-browser" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Safe Exam Browser.app"
 

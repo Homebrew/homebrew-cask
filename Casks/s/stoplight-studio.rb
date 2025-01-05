@@ -24,6 +24,8 @@ cask "stoplight-studio" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Stoplight Studio.app"
 
   zap trash: [

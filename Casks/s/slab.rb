@@ -12,7 +12,7 @@ cask "slab" do
   homepage "https://slab.com/"
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "Slab.app"
 

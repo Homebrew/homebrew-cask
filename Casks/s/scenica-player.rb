@@ -12,6 +12,8 @@ cask "scenica-player" do
     regex(/href=.*?scenica[._-]player[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Scenica Player.app"
 
   zap trash: "~/Library/Preferences/ByHost/ca.sceni.Player.*.plist"

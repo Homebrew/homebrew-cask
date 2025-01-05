@@ -12,7 +12,7 @@ cask "sound-siphon" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Sound Siphon.app"
 

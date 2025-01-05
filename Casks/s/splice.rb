@@ -16,6 +16,8 @@ cask "splice" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Splice.app"
 
   uninstall quit: "com.splice.Splice"

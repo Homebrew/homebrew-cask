@@ -18,7 +18,7 @@ cask "second-life-viewer" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Second Life Viewer.app"
 

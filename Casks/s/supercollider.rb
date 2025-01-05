@@ -13,6 +13,8 @@ cask "supercollider" do
     regex(/^Version[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on macos: ">= :mojave"
+
   app "SuperCollider.app"
 
   zap trash: [

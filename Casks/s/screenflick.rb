@@ -18,7 +18,7 @@ cask "screenflick" do
     end
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Screenflick.app"
 
