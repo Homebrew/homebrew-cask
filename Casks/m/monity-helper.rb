@@ -7,10 +7,7 @@ cask "monity-helper" do
   desc "Helper app for Monity to provide system stats"
   homepage "https://monityapp.com/helper/"
 
-  livecheck do
-    url :homepage
-    regex(/MonityHelper\.pkg.+?Version:\s+(\d+(?:\.\d+)+)/im)
-  end
+  disable! date: "2025-01-04", because: :no_longer_available
 
   pkg "MonityHelper.pkg"
 
