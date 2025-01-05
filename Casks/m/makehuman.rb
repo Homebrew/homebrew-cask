@@ -6,12 +6,9 @@ cask "makehuman" do
       verified: "tuxfamily.org/makehuman/"
   name "MakeHuman"
   desc "Open Source tool for making 3D characters"
-  homepage "http://www.makehumancommunity.org/"
+  homepage "https://static.makehumancommunity.org/"
 
-  livecheck do
-    url "https://download.tuxfamily.org/makehuman/releases/"
-    regex(/makehuman[._-]community[._-]v?(\d+(?:\.\d+)+)[._-]macos\.zip/i)
-  end
+  disable! date: "2025-01-04", because: :no_longer_available
 
   depends_on macos: ">= :sierra"
 
