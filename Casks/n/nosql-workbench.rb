@@ -17,6 +17,7 @@ cask "nosql-workbench" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "NoSQL Workbench.app"
 
