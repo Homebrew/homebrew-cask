@@ -8,7 +8,7 @@ cask "moonlight" do
   desc "GameStream client"
   homepage "https://moonlight-stream.org/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Moonlight.app"
 
