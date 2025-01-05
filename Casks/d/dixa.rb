@@ -13,6 +13,8 @@ cask "dixa" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Dixa.app"
 
   zap trash: [
