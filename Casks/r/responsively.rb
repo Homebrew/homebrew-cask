@@ -12,6 +12,7 @@ cask "responsively" do
   homepage "https://responsively.app/"
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "ResponsivelyApp.app"
 
