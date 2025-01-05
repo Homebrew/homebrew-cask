@@ -15,7 +15,7 @@ cask "mac-mouse-fix" do
 
   auto_updates true
   conflicts_with cask: "mac-mouse-fix@2"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Mac Mouse Fix.app"
 
