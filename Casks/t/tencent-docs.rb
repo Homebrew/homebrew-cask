@@ -20,6 +20,7 @@ cask "tencent-docs" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "TencentDocs.app"
 
