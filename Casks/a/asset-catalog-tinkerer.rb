@@ -12,7 +12,7 @@ cask "asset-catalog-tinkerer" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Asset Catalog Tinkerer.app"
 
