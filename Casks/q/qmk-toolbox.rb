@@ -8,6 +8,8 @@ cask "qmk-toolbox" do
   desc "Toolbox companion for QMK Firmware"
   homepage "https://qmk.fm/"
 
+  depends_on macos: ">= :monterey"
+
   app "QMK Toolbox.app"
 
   uninstall quit: "fm.qmk.toolbox"
