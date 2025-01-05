@@ -13,7 +13,7 @@ cask "longplay" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sequoia"
 
   app "Longplay.app"
 
