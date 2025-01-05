@@ -20,6 +20,8 @@ cask "mini-program-studio" do
     regex(/MiniProgramStudio[._-](\d+(?:\.\d+)*)/i)
   end
 
+  depends_on macos: ">= :catalina"
+
   app "小程序开发者工具.app"
 
   zap trash: [
