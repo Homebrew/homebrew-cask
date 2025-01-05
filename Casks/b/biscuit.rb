@@ -12,7 +12,7 @@ cask "biscuit" do
   homepage "https://eatbiscuit.com/"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Biscuit.app"
 

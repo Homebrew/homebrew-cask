@@ -16,6 +16,8 @@ cask "altair-graphql-client" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Altair GraphQL Client.app"
 
   zap trash: [

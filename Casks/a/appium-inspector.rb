@@ -29,6 +29,8 @@ cask "appium-inspector" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Appium Inspector.app"
 
   zap trash: [

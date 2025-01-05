@@ -24,7 +24,7 @@ cask "cirrus" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "cirrus#{version.csv.first.major}#{version.csv.first.minor}/Cirrus.app"
 

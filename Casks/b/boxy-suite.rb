@@ -14,7 +14,7 @@ cask "boxy-suite" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Boxy for Gmail.app"
   app "Boxy for Calendar.app"

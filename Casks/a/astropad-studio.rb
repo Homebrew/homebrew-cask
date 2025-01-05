@@ -13,6 +13,7 @@ cask "astropad-studio" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Astropad Studio.app"
 

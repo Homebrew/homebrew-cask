@@ -12,7 +12,7 @@ cask "cursorsense" do
     regex(%r{href=.*?/CursorSensev?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "CursorSense.app"
 

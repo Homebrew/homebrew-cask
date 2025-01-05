@@ -13,7 +13,7 @@ cask "command-tab-plus" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Command-Tab Plus #{version.major}.app"
 
