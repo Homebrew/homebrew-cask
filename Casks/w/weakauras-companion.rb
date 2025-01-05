@@ -8,6 +8,8 @@ cask "weakauras-companion" do
   desc "Update your auras from Wago.io and creates regular backups of them"
   homepage "https://weakauras.wtf/"
 
+  depends_on macos: ">= :catalina"
+
   app "WeakAuras Companion.app"
 
   zap trash: [
