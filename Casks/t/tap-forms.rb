@@ -19,6 +19,8 @@ cask "tap-forms" do
     end
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Tap Forms Mac #{version.major}.app"
 
   zap trash: [
