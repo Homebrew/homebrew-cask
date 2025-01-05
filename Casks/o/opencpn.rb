@@ -1,6 +1,6 @@
 cask "opencpn" do
-  version "5.8.4,-0+637.1637c28"
-  sha256 "2c3dc08908c002dcfe61a67b8e594a14d4de7ec486f6e44fc4ddc18219b65b44"
+  version "5.10.2,-universal+11049.12e5712b6-14"
+  sha256 "680a79637b33799fec579d61546ac51b5533d7bcaf147466eed3e8327cc2cd82"
 
   url "https://github.com/OpenCPN/OpenCPN/releases/download/Release_#{version.csv.first}/OpenCPN_#{version.csv.first}#{version.csv.second}.pkg",
       verified: "github.com/OpenCPN/OpenCPN/"
@@ -9,19 +9,13 @@ cask "opencpn" do
   homepage "https://www.opencpn.org/"
 
   livecheck do
-    url :url
-    regex(/^OpenCPN[._-]?v?(\d+(?:\.+\d+)+)((?:-\d+)?\+\d+\.\h+)?\.(?:dmg|pkg)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
+    url "https://www.opencpn.org/OpenCPN/info/downloadopencpn.html"
+    regex(/href=.*?OpenCPN[._-]?v?(\d+(?:\.+\d+)+)((?:-\d+)?(?:-universal)?\+\d+\.\h+(?:-\d+)?)?\.(?:dmg|pkg)/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
 
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
-        end
-      end.flatten
+      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
     end
   end
 
