@@ -13,6 +13,8 @@ cask "munkiadmin" do
     regex(/^v?(\d+(?:\.\d+)*)$/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "MunkiAdmin.app"
 
   zap trash: [
