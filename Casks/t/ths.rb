@@ -14,6 +14,8 @@ cask "ths" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "同花顺.app"
 
   zap trash: [
