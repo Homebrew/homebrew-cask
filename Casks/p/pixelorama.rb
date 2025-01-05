@@ -8,6 +8,8 @@ cask "pixelorama" do
   desc "2D sprite editor made with the Godot Engine"
   homepage "https://orama-interactive.itch.io/pixelorama"
 
+  depends_on macos: ">= :sierra"
+
   app "Pixelorama.app"
 
   zap trash: "~/Library/Saved Application State/com.orama_interactive.pixelorama.savedState"
