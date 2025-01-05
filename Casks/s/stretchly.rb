@@ -11,7 +11,7 @@ cask "stretchly" do
   desc "Break time reminder app"
   homepage "https://hovancik.net/stretchly/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Stretchly.app"
 
