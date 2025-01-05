@@ -29,8 +29,6 @@ cask "keepassxc@snapshot" do
     end
   end
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
 
