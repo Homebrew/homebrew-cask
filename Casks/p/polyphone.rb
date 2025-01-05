@@ -19,6 +19,8 @@ cask "polyphone" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   app "polyphone.app"
 
   zap trash: [

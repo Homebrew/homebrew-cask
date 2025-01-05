@@ -12,7 +12,7 @@ cask "progressive-downloader" do
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/PSD[^"' >]*?\.dmg}i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Progressive Downloader.app"
 

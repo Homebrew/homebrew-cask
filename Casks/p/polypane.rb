@@ -11,6 +11,8 @@ cask "polypane" do
   desc "Browser for ambitious developers"
   homepage "https://polypane.app/"
 
+  depends_on macos: ">= :big_sur"
+
   app "Polypane.app"
 
   zap trash: [

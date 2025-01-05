@@ -12,6 +12,8 @@ cask "printopia" do
     regex(%r{/Printopia_(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Printopia.app"
 
   uninstall launchctl: "com.decisivetactics.printopia-server",

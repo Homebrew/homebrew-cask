@@ -12,6 +12,8 @@ cask "plus42-binary" do
     regex(/:\s*release\s*(\d+(?:\.\d+)+[a-z]?)\s*(?:$|\([^\n)]*MacOS)/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Plus42 Binary.app"
 
   zap trash: [

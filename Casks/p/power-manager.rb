@@ -13,7 +13,7 @@ cask "power-manager" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Power Manager.app"
 

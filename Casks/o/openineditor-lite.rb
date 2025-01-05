@@ -27,6 +27,8 @@ cask "openineditor-lite" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "OpenInEditor-Lite.app"
 
   zap trash: "~/Library/Preferences/wang.jianing.app.OpenInEditor-Lite.plist"

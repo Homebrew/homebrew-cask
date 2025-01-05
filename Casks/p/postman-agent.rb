@@ -17,6 +17,7 @@ cask "postman-agent" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Postman Agent.app"
 

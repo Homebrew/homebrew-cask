@@ -12,6 +12,8 @@ cask "olive" do
     regex(/golegacy\?hash=(.*)&type=/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Olive.app"
 
   uninstall rmdir: "~/Library/Application Support/olivevideoeditor.org{/Olive,}"

@@ -20,7 +20,7 @@ cask "processing" do
   end
 
   conflicts_with cask: "processing@3"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :mojave"
 
   app "Processing.app"
 

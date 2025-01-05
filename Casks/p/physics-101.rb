@@ -12,6 +12,8 @@ cask "physics-101" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Physics 101.app"
 
   zap trash: [
