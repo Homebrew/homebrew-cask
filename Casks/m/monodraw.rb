@@ -13,7 +13,7 @@ cask "monodraw" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Monodraw.app"
   binary "#{appdir}/Monodraw.app/Contents/Resources/monodraw"
