@@ -16,7 +16,7 @@ cask "todoist" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "Todoist.app"
 
