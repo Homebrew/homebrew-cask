@@ -7,7 +7,7 @@ cask "glance-chamburr" do
   desc "Utility to provide quick look previews for files that aren't natively supported"
   homepage "https://github.com/chamburr/glance"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Glance.app"
 
