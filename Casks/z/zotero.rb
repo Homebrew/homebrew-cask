@@ -19,9 +19,12 @@ cask "zotero" do
   app "Zotero.app"
 
   zap trash: [
-    "~/Library/Application Support/Zotero",
-    "~/Library/Caches/Zotero",
-    "~/Library/Preferences/org.zotero.zotero.plist",
-    "~/Library/Saved Application State/org.zotero.zotero.savedState",
-  ]
+        "~/Library/Application Scripts/org.zotero.SafariExtensionApp.SafariExtension",
+        "~/Library/Application Support/Zotero",
+        "~/Library/Caches/Zotero",
+        "~/Library/Containers/org.zotero.SafariExtensionApp.SafariExtension",
+        "~/Library/Preferences/org.zotero.zotero.plist",
+        "~/Library/Saved Application State/org.zotero.zotero.savedState",
+      ],
+      rmdir: "~/Zotero"
 end
