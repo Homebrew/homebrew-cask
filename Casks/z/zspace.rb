@@ -27,6 +27,7 @@ cask "zspace" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "极空间.app"
 

@@ -13,6 +13,8 @@ cask "warzone-2100" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Warzone 2100.app"
 
   zap trash: [

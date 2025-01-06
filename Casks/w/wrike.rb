@@ -20,6 +20,8 @@ cask "wrike" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Wrike for Mac.app"
 
   zap trash: [

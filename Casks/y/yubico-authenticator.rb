@@ -8,7 +8,7 @@ cask "yubico-authenticator" do
   desc "Application for generating TOTP and HOTP codes"
   homepage "https://developers.yubico.com/yubioath-flutter/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "Yubico Authenticator.app"
 

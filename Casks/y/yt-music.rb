@@ -7,6 +7,8 @@ cask "yt-music" do
   desc "App wrapper for music.youtube.com"
   homepage "https://github.com/steve228uk/YouTube-Music"
 
+  depends_on macos: ">= :high_sierra"
+
   app "YT Music.app"
 
   zap trash: [

@@ -8,6 +8,8 @@ cask "whalebird" do
   desc "Mastodon, Pleroma, and Misskey client"
   homepage "https://whalebird.social/"
 
+  depends_on macos: ">= :sonoma"
+
   app "Whalebird.app"
 
   zap trash: [

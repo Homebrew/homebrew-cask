@@ -13,6 +13,8 @@ cask "weiyun" do
     regex(/Weiyun[._-]mac[._-]x64[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Weiyun.app"
 
   uninstall quit: "com.tencent.MacWeiyun"

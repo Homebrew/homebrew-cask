@@ -21,6 +21,8 @@ cask "wondershare-edrawmax" do
     regex(/EdrawMax\s*V?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   zap trash: [
     "~/Library/Edraw",
     "~/Library/Preferences/com.edrawsoft.edrawmax.plist",
