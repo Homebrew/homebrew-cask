@@ -7,7 +7,7 @@ cask "proclaim" do
 
   url "https://downloads.logoscdn.com/Proclaim/Installer/#{version}/Proclaim#{arch}.dmg",
       verified: "logoscdn.com/Proclaim/"
-  name "Faithlife Proclaim"
+  name "Proclaim"
   desc "Church presentation software"
   homepage "https://proclaim.logos.com/"
 
