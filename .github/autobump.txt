@@ -140,7 +140,6 @@ blockbench
 blockstream-green
 blocs
 blood-on-the-clocktower-online
-bloop
 bluewallet
 boinc
 boltai

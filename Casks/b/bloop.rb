@@ -11,10 +11,7 @@ cask "bloop" do
   desc "Code search engine"
   homepage "https://bloop.ai/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2025-01-05", because: :discontinued
 
   depends_on macos: ">= :big_sur"
 
