@@ -13,7 +13,8 @@ cask "jordanbaird-ice" do
 
   app "Ice.app"
 
-  uninstall quit: "com.jordanbaird.Ice"
+  uninstall quit:       "com.jordanbaird.Ice",
+            login_item: "Ice"
 
   zap trash: [
     "~/Library/Caches/com.jordanbaird.Ice",
