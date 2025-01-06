@@ -9,6 +9,7 @@ cask "knotes" do
   homepage "https://knotesapp.com/"
 
   deprecate! date: "2024-01-05", because: :unmaintained
+  disable! date: "2025-01-06", because: :unmaintained
 
   app "Knotes.app"
 
