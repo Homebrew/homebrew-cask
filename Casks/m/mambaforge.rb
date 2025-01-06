@@ -11,6 +11,7 @@ cask "mambaforge" do
   homepage "https://github.com/conda-forge/miniforge"
 
   deprecate! date: "2024-07-30", because: :discontinued
+  disable! date: "2025-01-06", because: :discontinued
 
   auto_updates true
   conflicts_with cask: [
