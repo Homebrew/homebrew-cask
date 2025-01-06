@@ -663,6 +663,7 @@ maccy
 macfuse
 macloggerdx
 macloggerdx@beta
+macpilot
 macrorecorder
 mactracker
 macupdater
