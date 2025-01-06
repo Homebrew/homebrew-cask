@@ -1,5 +1,5 @@
 cask "music-remote" do
-  version "1.5"
+  version "1.6"
   sha256 :no_check
 
   url "https://marioaguzman.github.io/musicremote/updater/Music%20Remote.dmg"
