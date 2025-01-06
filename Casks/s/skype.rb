@@ -2,8 +2,7 @@ cask "skype" do
   version "8.134.0.202"
   sha256 "b1f3e95fe7df4f9f849769dadc315aa6eeca3398825a6ea23e58bd98538b2313"
 
-  url "https://endpoint920510.azureedge.net/s4l/s4l/download/mac/Skype-#{version}.dmg",
-      verified: "endpoint920510.azureedge.net/s4l/s4l/download/mac/"
+  url "https://download.skype.com/s4l/download/mac/Skype-#{version}.dmg"
   name "Skype"
   desc "Video chat, voice call and instant messaging application"
   homepage "https://www.skype.com/"

@@ -2,8 +2,7 @@ cask "skype@preview" do
   version "8.134.76.202"
   sha256 "872e3f49730fdbc049393e889c30c22349b19a4e2d7c4d69b54db0a0b3e8ab95"
 
-  url "https://endpoint920510.azureedge.net/s4l/s4l/download/mac/Skype-#{version}.dmg",
-      verified: "endpoint920510.azureedge.net/s4l/s4l/download/mac/"
+  url "https://download.skype.com/s4l/download/mac/Skype-#{version}.dmg"
   name "Skype Preview"
   desc "Video chat, voice call and instant messaging application"
   homepage "https://www.skype.com/en/insider/"
