@@ -1,11 +1,11 @@
 cask "ultrastardeluxe" do
   arch arm: "ARM", intel: "x86"
 
-  version "2024.10.0"
-  sha256 arm:   "899bdaefb75a659eb52840848a82cdcd086abb8ea205ec0ef782e5ffdcc2d478",
-         intel: "ef4a4d2e2b4323db3de67dee5b461bd9bcb6cd6c3194b69aea8ce2c9449b2d0c"
+  version "2025.1.0"
+  sha256 arm:   "ef67b839ce6773e6a61135b916a1e321151036a4738f836a046e4fc640e0845f",
+         intel: "849fad67b8747fb09f0c31e3a9c6145ef64d35095ee1961d54f144dcdae6fe57"
 
-  url "https://github.com/UltraStar-Deluxe/USDX/releases/download/v#{version}/UltraStarDeluxe-#{arch}-#{version}.dmg",
+  url "https://github.com/UltraStar-Deluxe/USDX/releases/download/v#{version}/UltraStarDeluxe-mac-#{arch}-#{version}.dmg",
       verified: "github.com/UltraStar-Deluxe/USDX/"
   name "UltraStar Deluxe"
   desc "Karaoke game"
