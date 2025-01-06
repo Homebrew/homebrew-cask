@@ -57,10 +57,12 @@ cask "apparency" do
   binary "#{appdir}/Apparency.app/Contents/MacOS/appy"
 
   zap trash: [
+    "~/Library/Application Scripts/*.com.mothersruin.Apparency.SharedPrefs",
     "~/Library/Application Scripts/com.mothersruin.Apparency",
     "~/Library/Application Scripts/com.mothersruin.Apparency.QLPreviewExtension",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mothersruin.apparency.sfl*",
     "~/Library/Containers/com.mothersruin.Apparency",
     "~/Library/Containers/com.mothersruin.Apparency.QLPreviewExtension",
+    "~/Library/Group Containers/*.com.mothersruin.Apparency.SharedPrefs",
   ]
 end
