@@ -36,7 +36,8 @@ cask "raycast" do
 
   app "Raycast.app"
 
-  uninstall quit: "com.raycast.macos"
+  uninstall quit:       "com.raycast.macos",
+            login_item: "Raycast"
 
   zap trash: [
     "~/.config/raycast",
