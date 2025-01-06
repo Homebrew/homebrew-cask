@@ -8,7 +8,7 @@ cask "utterly" do
   homepage "https://www.utterly.app/"
 
   livecheck do
-    url "https://utterly.app/full_minimum_version.json"
+    url "https://www.utterly.app/full_minimum_version.json"
     strategy :json do |json|
       json["latest_version"]
     end
