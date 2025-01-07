@@ -10,13 +10,11 @@ cask "defold" do
   desc "Game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
 
-  # Upstream only marks alpha releases as "pre-release", so the "latest" GitHub
-  # release is sometimes a beta version. As such, it's necessary to check
-  # multiple recent releases to identify the latest stable version.
   livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_releases
+    url "http://d.defold.com/stable/info.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
