@@ -10,7 +10,7 @@ cask "green-go-control" do
 
   livecheck do
     url "https://manual.greengoconnect.com/en/release-notes/software/"
-    regex(%r{href=.*?/(\d+(?:\.\d+)+)/macos/green-go-control.dmg}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/macos/green-go-control\.dmg}i)
   end
 
   depends_on macos: ">= :big_sur"

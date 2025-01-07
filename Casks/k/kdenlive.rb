@@ -13,7 +13,7 @@ cask "kdenlive" do
 
   livecheck do
     url "https://kdenlive.org/en/download/"
-    regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)-#{arch}.dmg/i)
+    regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)-#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :big_sur"
