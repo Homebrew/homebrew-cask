@@ -1,8 +1,8 @@
 cask "beaver-notes" do
-  version "3.7.0"
-  sha256 "a4cd9fa4db758507747c32b55c2cc8908ddd0d2e6729033fb5cc7105642e6929"
+  version "3.8.0"
+  sha256 "c7680d03949fcf890fcfc94adfcda0dc231501581ad4d713d788c02ebadd666c"
 
-  url "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/#{version}/Beaver-notes.dmg",
+  url "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/#{version}/Beaver-notes-#{version}-universal.dmg",
       verified: "github.com/Beaver-Notes/Beaver-Notes/"
   name "Beaver Notes"
   desc "Privacy-focused note-taking app"
