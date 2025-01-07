@@ -15,7 +15,7 @@ cask "bartender" do
 
   livecheck do
     url "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"
-    regex(%r{/v?(\d+(?:[.-]\d+)+)/Bartender%20#{version.major}.zip}i)
+    regex(%r{/v?(\d+(?:[.-]\d+)+)/Bartender%20#{version.major}\.zip}i)
     strategy :sparkle do |item, regex|
       item.url.scan(regex)&.map { |match| match[0].tr("-", ".") }
     end
