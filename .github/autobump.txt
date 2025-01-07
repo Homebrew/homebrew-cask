@@ -966,6 +966,7 @@ qgis
 qgroundcontrol
 qlab
 qlmarkdown
+qlvideo
 qownnotes
 qq
 qqlive
