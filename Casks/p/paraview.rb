@@ -2,12 +2,12 @@ cask "paraview" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "5.13.1,MPI-OSX11.0-Python3.10"
-    sha256 "228438f7feb582a0b0baf519a037b291ca2bb2eb503a99458e3c5ac42713bf1a"
+    version "5.13.2,MPI-OSX11.0-Python3.10"
+    sha256 "a1777fca9889bd88b2818f27c51c03b243891ed35dfd54584c349083b8ad98e9"
   end
   on_intel do
-    version "5.13.1,MPI-OSX10.15-Python3.10"
-    sha256 "9912623a5fc1b7607f1fac88cb280017ee87587e42c4f32050005cebca4f8218"
+    version "5.13.2,MPI-OSX10.15-Python3.10"
+    sha256 "dbf6e006927b6bcc91040440078b9aaf355ac34f4ccb7fbd20b117df9f74f485"
   end
 
   url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.csv.first.major_minor}&type=binary&os=macOS&downloadFile=ParaView-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
