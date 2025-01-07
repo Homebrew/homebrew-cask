@@ -9,7 +9,7 @@ cask "cisco-jabber" do
 
   livecheck do
     url :homepage
-    regex(%r{jabberAppUrl =.*?(\d+)/Install[._-]Cisco[._-]Jabber[._-]Mac.pkg}i)
+    regex(%r{jabberAppUrl =.*?(\d+)/Install[._-]Cisco[._-]Jabber[._-]Mac\.pkg}i)
   end
 
   pkg "Install_Cisco-Jabber-Mac.pkg"
