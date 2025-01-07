@@ -1,6 +1,6 @@
 cask "douyin" do
-  version "5.2.1,7044145585217083655,12263191"
-  sha256 "86a98e62ec3557b09f7913f68e1083e2b829f0a9a5db5f46aa56021eac470a93"
+  version "5.3.1,7044145585217083655,12270856"
+  sha256 "6a9cb5334de4f7e8126fc2721afbd50afc200d4ae128ce9c7ef179dad47e51a7"
 
   url "https://www.douyin.com/download/pc/obj/douyin-pc-web//douyin-pc-client/#{version.csv.second}/releases/#{version.csv.third}/#{version.csv.first}/darwin-universal/douyin-v#{version.csv.first}-darwin-universal.dmg"
   name "Douyin"
