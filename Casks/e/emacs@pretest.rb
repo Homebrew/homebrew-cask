@@ -11,7 +11,7 @@ cask "emacs@pretest" do
 
   livecheck do
     url "https://emacsformacosx.com/atom/pretest"
-    regex(/Emacs[._-]pretest[._-]v?(\d+(?:\.\d+)+)[._-]universal.dmg/i)
+    regex(/Emacs[._-]pretest[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg/i)
   end
 
   conflicts_with cask:    [
