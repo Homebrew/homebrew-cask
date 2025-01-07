@@ -7,6 +7,11 @@ cask "codeql" do
   desc "Semantic code analysis engine"
   homepage "https://codeql.github.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   binary "#{staged_path}/codeql/codeql"
 
   # No zap stanza required
