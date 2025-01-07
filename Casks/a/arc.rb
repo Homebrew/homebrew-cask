@@ -9,7 +9,7 @@ cask "arc" do
 
   livecheck do
     url "https://releases.arc.net/updates.xml"
-    regex(%r{/Arc[._-]v?(\d+(?:\.\d+)+)[._-](\d+).zip}i)
+    regex(%r{/Arc[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.zip}i)
     strategy :sparkle do |item, regex|
       match = item.url.match(regex)
       next if match.blank?
