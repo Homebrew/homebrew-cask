@@ -53,7 +53,12 @@ cask "starnet2" do
 
   uninstaller = "#{bin_path}/uninstaller.sh"
   uninstall_preflight do
-    libs = Dir.children("#{caskroom_path}/#{version}/StarNet2T_MacOS/lib").map { |lib| "/usr/local/lib/#{lib}" }
+    script_dir = "#{caskroom_path}/#{version}/StarNet2T_MacOS/lib"
+
+    # skip if the script directory doesn't exist
+    next unless Dir.exist?(script_dir)
+
+    libs = Dir.children(script_dir).map { |lib| "/usr/local/lib/#{lib}" }
     File.write uninstaller, <<~EOS
       rm #{libs.join(" ")}
     EOS
