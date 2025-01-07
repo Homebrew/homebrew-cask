@@ -5,14 +5,14 @@ cask "anythingllm" do
   sha256 arm:   "5e3b9a406aa22b3a3d278fc0c27b95fec34fff33d4b65c1c7c58ffa9d22f588d",
          intel: "a067a5bdcd7995b5946b019554685b3ad46117ed613a04b0641ec42fcfa5d59f"
 
-  url "https://s3-us-west-1.amazonaws.com/public.useanything.com/latest/AnythingLLMDesktop#{arch}.dmg",
-      verified: "s3-us-west-1.amazonaws.com/public.useanything.com/"
+  url "https://cdn.useanything.com/latest/AnythingLLMDesktop#{arch}.dmg",
+      verified: "cdn.useanything.com/"
   name "AnythingLLM"
   desc "Private desktop AI chat application"
-  homepage "https://useanything.com/"
+  homepage "https://anythingllm.com/"
 
   livecheck do
-    url "https://s3-us-west-1.amazonaws.com/public.useanything.com/latest/version.txt"
+    url "https://cdn.useanything.com/latest/version.txt"
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
