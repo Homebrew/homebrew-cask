@@ -1,6 +1,6 @@
 cask "neteasemusic" do
-  version "2.3.21_1077"
-  sha256 "ec75e32da23e59a3dde1fcc97a57da87c76bbbb72d4ca36396b554318d2d02eb"
+  version "3.0.6.2300"
+  sha256 "8f03e22cbcb03391f7639f3d680b7a2c56d499bc0cafc018a1b3ef04b50c75c0"
 
   url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version}_web.dmg",
       verified:   "d1.music.126.net/",
@@ -10,17 +10,15 @@ cask "neteasemusic" do
   desc "Music streaming platform"
   homepage "https://music.163.com/"
 
-  # The Sparkle feed uses non-English pubDates, which are not parsed correctly
-  # by the `:sparkle` strategy. As a workaround, the version is just extracted
-  # from the XML using a regex pattern on the download URLs.
+  # NeteaseMusic(>3.0) uses POST method to fetch the latest download URL. 
+  # POST method currently is not supported by Homebrew's `:url` strategy.
+  # See https://github.com/orgs/Homebrew/discussions/5756.
   livecheck do
-    url "https://music.163.com/api/osx/download/latest"
-    regex(/NeteaseMusic[._-]v?(\d+(?:[._]\d+)+)_web/i)
-    strategy :header_match
+    skip "No version information available without POST method."
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "NeteaseMusic.app"
 
@@ -30,8 +28,10 @@ cask "neteasemusic" do
     "~/Library/Application Support/com.netease.163music",
     "~/Library/Caches/com.netease.163music",
     "~/Library/Containers/com.netease.163music",
+    "~/Library/HTTPStorages/com.netease.163music",
     "~/Library/Cookies/com.netease.163music.binarycookies",
     "~/Library/Preferences/com.netease.163music.plist",
+    "~/Library/WebKit/com.netease.163music",
     "~/Library/Saved Application State/com.netease.163music.savedState",
   ]
 end
