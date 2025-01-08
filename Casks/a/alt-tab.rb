@@ -9,8 +9,8 @@ cask "alt-tab" do
   homepage "https://alt-tab-macos.netlify.app/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/lwouis/alt-tab-macos/master/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
