@@ -1391,6 +1391,7 @@ zen-browser
 zen-browser@twilight
 zeplin
 zettlr
+zipic
 znote
 zoc
 zoho-mail
