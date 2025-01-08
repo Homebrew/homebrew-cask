@@ -8,6 +8,7 @@ cask "manymc" do
   homepage "https://github.com/MinecraftMachina/ManyMC"
 
   deprecate! date: "2024-01-07", because: :discontinued
+  disable! date: "2025-01-07", because: :discontinued
 
   depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
