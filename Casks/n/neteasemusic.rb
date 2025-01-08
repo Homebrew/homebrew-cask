@@ -10,7 +10,7 @@ cask "neteasemusic" do
   desc "Music streaming platform"
   homepage "https://music.163.com/"
 
-  # NeteaseMusic(>3.0) uses POST method to fetch the latest download URL. 
+  # NeteaseMusic(>3.0) uses POST method to fetch the latest download URL.
   # POST method currently is not supported by Homebrew's `:url` strategy.
   # See https://github.com/orgs/Homebrew/discussions/5756.
   livecheck do
@@ -28,10 +28,10 @@ cask "neteasemusic" do
     "~/Library/Application Support/com.netease.163music",
     "~/Library/Caches/com.netease.163music",
     "~/Library/Containers/com.netease.163music",
-    "~/Library/HTTPStorages/com.netease.163music",
     "~/Library/Cookies/com.netease.163music.binarycookies",
+    "~/Library/HTTPStorages/com.netease.163music",
     "~/Library/Preferences/com.netease.163music.plist",
-    "~/Library/WebKit/com.netease.163music",
     "~/Library/Saved Application State/com.netease.163music.savedState",
+    "~/Library/WebKit/com.netease.163music",
   ]
 end
