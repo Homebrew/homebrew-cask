@@ -15,8 +15,6 @@ cask "another-redis-desktop-manager" do
     strategy :github_latest
   end
 
-  auto_updates true
-
   app "Another Redis Desktop Manager.app"
 
   zap trash: [
