@@ -7,6 +7,11 @@ cask "keycastr" do
   desc "Open-source keystroke visualiser"
   homepage "https://github.com/keycastr/keycastr"
 
+  livecheck do
+    url "https://keycastr.github.io/appcast.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
