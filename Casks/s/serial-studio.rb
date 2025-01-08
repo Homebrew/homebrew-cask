@@ -8,7 +8,7 @@ cask "serial-studio" do
   url "https://github.com/Serial-Studio/Serial-Studio/releases/download/v#{version}/Serial-Studio-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/Serial-Studio/Serial-Studio/"
   name "Serial Studio"
-  desc "Data visualization software for embedded devices and projects"
+  desc "Data visualisation software for embedded devices and projects"
   homepage "https://serial-studio.github.io/"
 
   livecheck do
