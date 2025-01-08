@@ -1,6 +1,6 @@
 cask "vamiga" do
-  version "3.0"
-  sha256 "de3c1d3a5fb3dac0b353821fe2664409dabb0e92a5b09bc276b71f6b43740fc9"
+  version "3.1"
+  sha256 "001ce85d60864df4da66b0e1f50d64eee2697a52a64606fe14aba11810081e16"
 
   url "https://github.com/dirkwhoffmann/vAmiga/releases/download/v#{version}/vAmiga.app.zip",
       verified: "github.com/dirkwhoffmann/vAmiga/"
