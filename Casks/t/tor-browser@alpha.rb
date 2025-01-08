@@ -8,8 +8,10 @@ cask "tor-browser@alpha" do
   homepage "https://www.torproject.org/"
 
   livecheck do
-    url "https://www.torproject.org/download/alpha/"
-    regex(%r{href=.*?/tor[._-]browser[._-]macos[._-]v?(\d+(?:.\d+)*)\.dmg}i)
+    url "https://aus1.torproject.org/torbrowser/update_3/alpha/downloads.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
