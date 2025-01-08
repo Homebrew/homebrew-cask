@@ -8,6 +8,11 @@ cask "squirrel" do
   desc "Rime input method engine"
   homepage "https://rime.im/"
 
+  livecheck do
+    url "https://rime.github.io/release/squirrel/appcast.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
   depends_on macos: ">= :ventura"
 
