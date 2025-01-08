@@ -10,11 +10,17 @@ cask "neteasemusic" do
   desc "Music streaming platform"
   homepage "https://music.163.com/"
 
-  # NeteaseMusic(>3.0) uses POST method to fetch the latest download URL.
-  # POST method currently is not supported by Homebrew's `:url` strategy.
-  # See https://github.com/orgs/Homebrew/discussions/5756.
+  # The upstream download page (https://music.163.com/#/download) uses a POST
+  # request to fetch download link information but livecheck doesn't support
+  # POST requests yet. Additionally, the request parameters are encrypted in a
+  # particular way (see https://github.com/orgs/Homebrew/discussions/5756).
+  # That said, the API endpoint appears to work with a simple `GET` request.
   livecheck do
-    skip "No version information available without POST method."
+    url "https://music.163.com/api/appcustomconfig/get"
+    regex(/NeteaseMusic[._-]v?(\d+(?:[._]\d+)+)[._-]web/i)
+    strategy :json do |json, regex|
+      json.dig("data", "web-new-download", "osx", "downloadUrl")&.[](regex, 1)
+    end
   end
 
   auto_updates true
