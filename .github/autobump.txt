@@ -770,6 +770,7 @@ multitouch
 multiviewer-for-f1
 mumuplayer
 murus
+museeks
 mutedeck
 mutesync
 mweb-pro
