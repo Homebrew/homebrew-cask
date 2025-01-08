@@ -1,9 +1,9 @@
 cask "popsql" do
   arch arm: "-arm64"
 
-  version "1.0.132"
-  sha256 arm:   "eb52b218d141a6da3a51ac61f0287a978deb844ff736c9aa40342f37d0926cdb",
-         intel: "c845723bdf7031c859aa90248466d85f5dd5f17ff675a99005c7cf29b492575c"
+  version "1.0.133"
+  sha256 arm:   "6e0c457888ef7964e3c84d1c0f2179d213885e99ef5bae8f3f4b4421c5fc629f",
+         intel: "7575074d2c56d99a9f3844d9699a77039aff8f6261f43d0e5f29053909e7c751"
 
   url "https://popsql-releases.s3.amazonaws.com/mac/PopSQL-#{version}#{arch}.dmg",
       verified: "popsql-releases.s3.amazonaws.com/"
