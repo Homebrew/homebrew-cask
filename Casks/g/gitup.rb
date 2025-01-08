@@ -9,8 +9,8 @@ cask "gitup" do
   homepage "https://gitup.co/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/git-up/GitUp/master/appcasts/stable/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
