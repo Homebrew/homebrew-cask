@@ -2,18 +2,18 @@ cask "font-nanum-square" do
   version :latest
   sha256 :no_check
 
-  url "https://hangeul.naver.com/hangeul_static/webfont/zips/nanum-square.zip"
+  url "https://campaign.naver.com/nanumsquare_neo/download/NaverNanumSquare.zip"
   name "NanumSquare"
   homepage "https://campaign.naver.com/nanumsquare_neo/"
 
-  font "NanumSquareB.ttf"
-  font "NanumSquareEB.ttf"
-  font "NanumSquareL.ttf"
-  font "NanumSquareR.ttf"
-  font "NanumSquare_acB.ttf"
-  font "NanumSquare_acEB.ttf"
-  font "NanumSquare_acL.ttf"
-  font "NanumSquare_acR.ttf"
+  font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquareB.ttf"
+  font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquareEB.ttf"
+  font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquareL.ttf"
+  font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquareR.ttf"
+  font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquare_acB.ttf"
+  font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquare_acEB.ttf"
+  font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquare_acL.ttf"
+  font "NaverNanumSquare/NanumFontSetup_TTF_SQUARE/NanumSquare_acR.ttf"
 
   # No zap stanza required
 end
