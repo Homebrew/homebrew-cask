@@ -1,9 +1,9 @@
 cask "tableau-reader" do
   arch arm: "-arm64"
 
-  version "2024.3.1"
-  sha256 arm:   "b6d64af76a9773851c0cfcb055c595de82308400862b7045dbd2d939f4b9bc67",
-         intel: "4f98d27f522177038a1601bb7d7a08ec76f41f9112b8010bb136298538bc506b"
+  version "2024.3.2"
+  sha256 arm:   "b9cade3d4af7a3dbcf13dafff57937c644f0c378afc70cfa5b75b86248cb5470",
+         intel: "0bdd5763ed9f6165ab98157bac864c4aeb36434fd87f32ff2e544f05cbfce433"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauReader-#{version.dots_to_hyphens}#{arch}.pkg",
       user_agent: "curl/8.7.1"
