@@ -8,9 +8,11 @@ cask "scummvm" do
   homepage "https://www.scummvm.org/"
 
   livecheck do
-    url "https://www.scummvm.org/downloads/"
-    regex(%r{href=.*?/scummvm[._-]v?(\d+(?:\.\d+)+)[._-]macosx\.dmg}i)
+    url "https://www.scummvm.org/appcasts/macosx/release.xml"
+    strategy :sparkle
   end
+
+  auto_updates true
 
   app "ScummVM.app"
 
