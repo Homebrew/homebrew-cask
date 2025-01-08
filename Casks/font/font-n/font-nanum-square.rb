@@ -13,6 +13,7 @@ cask "font-nanum-square" do
   font "NanumSquare_acB.ttf"
   font "NanumSquare_acEB.ttf"
   font "NanumSquare_acL.ttf"
+  font "NanumSquare_acR.ttf"
 
   # No zap stanza required
 end
