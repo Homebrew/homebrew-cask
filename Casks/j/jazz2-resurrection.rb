@@ -2,8 +2,8 @@ cask "jazz2-resurrection" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
   arch arm: "ARM64", intel: "x64"
 
-  version "3.0.0"
-  sha256 "61bf69c621fb84fb2b59a6f7b9685cec9a1fffb8e6ca7af97c3b106a1d087b78"
+  version "3.1.0"
+  sha256 "ac48826f3d93c6241840e8dcf1e776072afc942b96b266ed83f58a417607ce40"
 
   url "https://github.com/deathkiller/jazz2/releases/download/#{version}/Jazz2_#{version}_MacOS.zip",
       verified: "github.com/deathkiller/jazz2/"
