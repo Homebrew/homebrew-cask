@@ -8,10 +8,11 @@ cask "izip" do
   homepage "https://www.izip.com/"
 
   livecheck do
-    url "https://www.izip.com/download"
-    regex(%r{<li>Version:?\s*(\d+(?:\.\d+)+)</li>}i)
+    url "https://www.izip.com/updates"
+    strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "iZip.app"
