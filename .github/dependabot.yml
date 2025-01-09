@@ -5,7 +5,7 @@ updates:
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   allow:
   - dependency-type: all
   ignore:
