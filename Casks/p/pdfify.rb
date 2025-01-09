@@ -9,9 +9,7 @@ cask "pdfify" do
 
   livecheck do
     url "https://pdfify.app/updater-macos"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}"
-    end
+    strategy :sparkle
   end
 
   depends_on macos: ">= :high_sierra"
