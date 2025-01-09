@@ -5,7 +5,7 @@ cask "grandtotal" do
   url "https://www.mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.dmg"
   name "GrandTotal"
   desc "Create invoices and estimates"
-  homepage "https://www.mediaatelier.com/GrandTotal#{version.major}/"
+  homepage "https://www.mediaatelier.com/GrandTotal/"
 
   livecheck do
     url "https://www.mediaatelier.com/GrandTotal#{version.major}/feed.php"
@@ -21,10 +21,10 @@ cask "grandtotal" do
   app "GrandTotal.app"
 
   zap trash: [
-    "~/Library/Application Support/com.mediaatelier.GrandTotal3",
-    "~/Library/Caches/com.mediaatelier.GrandTotal3",
-    "~/Library/HTTPStorages/com.mediaatelier.GrandTotal3",
-    "~/Library/Preferences/com.mediaatelier.GrandTotal3.plist",
-    "~/Library/Saved Application State/com.mediaatelier.GrandTotal3.savedState",
+    "~/Library/Application Support/com.mediaatelier.GrandTotal*",
+    "~/Library/Caches/com.mediaatelier.GrandTotal*",
+    "~/Library/HTTPStorages/com.mediaatelier.GrandTotal*",
+    "~/Library/Preferences/com.mediaatelier.GrandTotal*.plist",
+    "~/Library/Saved Application State/com.mediaatelier.GrandTotal*.savedState",
   ]
 end
