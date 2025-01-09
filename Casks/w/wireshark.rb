@@ -3,9 +3,9 @@ cask "wireshark" do
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
   on_mojave :or_older do
-    version "4.2.9"
-    sha256 arm:   "9dafd0d3eb9ca5d0372eb4ef00b264dd457cce3c22bb430aadeafa054853cad6",
-           intel: "64f5a653d812f4c248fcdb17f2dd43ab227880992ceed77994fd2b3604ff6997"
+    version "4.2.10"
+    sha256 arm:   "87026714a407b8964b0234d4aae5ba7bb2236dafb976472954f10ecef7442c36",
+           intel: "4a41640ff80b8ff5c5ff03c5cc264918441611158d3037c35614d1a648fca08d"
 
     livecheck do
       url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/#{livecheck_arch}64/en-US/development.xml"
@@ -21,9 +21,9 @@ cask "wireshark" do
     end
   end
   on_catalina :or_newer do
-    version "4.4.2"
-    sha256 arm:   "e60c577e9e2ffff7b2fc10d50c27f41a061d3140ae3bc2a223dba882da00c428",
-           intel: "5f379065fa16424c68362346177b146b6050fcb77f2468b85cf197f09e399113"
+    version "4.4.3"
+    sha256 arm:   "0e18380fa0dfb8047d6b51c6a91d42eb1940f3814bb1fddbd96784dd669bbf1a",
+           intel: "031119f725913fc4dff00350474670666da90d4f506ece1a998770f4cdbca3c2"
 
     # This appcast sometimes uses a newer pubDate for an older version, so we
     # have to ignore the default `Sparkle` strategy sorting (which involves the
