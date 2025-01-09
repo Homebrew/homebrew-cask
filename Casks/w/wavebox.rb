@@ -1,19 +1,19 @@
 cask "wavebox" do
-  arch arm: "macarm64", intel: "mac"
+  arch arm: "arm64"
 
   version "10.131.18.2"
-  sha256 arm:   "5c812f2f116a24e390a9195d00b64a1f99d0c3846a2f183e703a7da72ac371fa",
-         intel: "73a53525d1f0e8f032d7c290dd81f22e09553c2c58f5913690efb83272c70ca1"
+  sha256 arm:   "590a996c22500215eae9c377ea2c8e1384b178aff2698b238303c5988191eed8",
+         intel: "2afb2f87b9cf2109d771ba6003e66eb68ea52d21779c145336b4ddfc1eb4cbdd"
 
-  url "https://download.wavebox.app/stable/#{arch}/Install%20Wavebox%20#{version}.dmg",
+  url "https://download.wavebox.app/stable/mac#{arch}/Wavebox_#{version}.zip",
       verified: "download.wavebox.app/"
   name "Wavebox"
   desc "Web browser"
   homepage "https://wavebox.io/"
 
   livecheck do
-    url "https://download.wavebox.app/latest/stable/mac"
-    strategy :header_match
+    url "https://download.wavebox.app/stable/mac#{arch}/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
