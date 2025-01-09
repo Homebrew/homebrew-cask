@@ -1,6 +1,6 @@
 cask "winzip" do
   version "12.0.7282"
-  sha256 "b30418309c9969d39398c7286a0aab682dea2f42bc7dc67ebc1610fe181585c6"
+  sha256 "ac69719cdadcefcb75729831983d884f44e9e57e5cc608672b3d4a1c87963c0e"
 
   url "https://download.winzip.com/winzipmacedition#{version.major}.dmg"
   name "WinZip"
