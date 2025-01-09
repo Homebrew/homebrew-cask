@@ -12,7 +12,7 @@ cask "boosteroid" do
   homepage "https://boosteroid.com/"
 
   livecheck do
-    url "https://boosteroid.com/macos_ARM/client/changelog.md"
+    url "https://boosteroid.com/macos#{folder}/client/changelog.md"
     regex(/\[\s*\v?(\d+(?:\.\d+)+)\s*\]/i)
   end
 

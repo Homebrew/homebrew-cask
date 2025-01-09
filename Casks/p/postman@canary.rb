@@ -16,7 +16,7 @@ cask "postman@canary" do
   # version. We cannot use #{version} as the URL does not exist if #{version}
   # is the latest version available.
   livecheck do
-    url "https://dl.pstmn.io/update/status?currentVersion=#{version.major}.0.0&platform=osx_arm64&channel=canary"
+    url "https://dl.pstmn.io/update/status?currentVersion=#{version.major}.0.0&platform=#{arch}&channel=canary"
     strategy :json do |json|
       json["version"]
     end
