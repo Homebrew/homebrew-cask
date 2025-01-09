@@ -7,11 +7,6 @@ cask "craftmanager" do
   desc "Helps keep your Craft tools up to date"
   homepage "https://www.invisionapp.com/craft"
 
-  livecheck do
-    url "https://craft-assets.invisionapp.com/CraftManager/production/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
-
   disable! date: "2025-01-09", because: :no_longer_available
 
   auto_updates true
