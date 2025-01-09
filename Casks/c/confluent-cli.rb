@@ -13,7 +13,15 @@ cask "confluent-cli" do
 
   livecheck do
     url "https://s3-us-west-2.amazonaws.com/confluent.cloud?prefix=confluent-cli/archives/&delimiter=/"
-    regex(%r{<Prefix>confluent[._-]cli/archives/v?(\d+(?:\.\d+)+)/</Prefix>}i)
+    regex(%r{confluent[._-]cli/archives/v?(\d+(?:\.\d+)+)/}i)
+    strategy :xml do |xml, regex|
+      xml.get_elements("//Prefix").map do |item|
+        match = item.text&.strip&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   binary "confluent/confluent"
