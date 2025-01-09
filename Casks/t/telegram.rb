@@ -9,15 +9,7 @@ cask "telegram" do
 
   livecheck do
     url "https://osx.telegram.org/updates/versions.xml"
-    regex(/Telegram[._-]v?(\d+(?:\.\d+)+)\.(\d{4,})\.app\.zip/i)
-    strategy :sparkle do |items, regex|
-      items.map do |item|
-        match = item.url.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
+    strategy :sparkle
   end
 
   auto_updates true
