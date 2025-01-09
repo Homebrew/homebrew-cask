@@ -1,5 +1,5 @@
 cask "pdfelement" do
-  version "11.4.3"
+  version "11.4.5"
   sha256 :no_check
 
   url "https://download.wondershare.com/cbs_down/mac-pdfelement_full5237.dmg"
@@ -31,4 +31,8 @@ cask "pdfelement" do
     "~/Library/Saved Application State/com.wondershare.PDFelement.savedState",
     "~/Library/WebKit/com.wondershare.PDFelement",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
