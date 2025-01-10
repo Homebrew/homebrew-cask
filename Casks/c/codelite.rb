@@ -23,8 +23,8 @@ cask "codelite" do
     on_sonoma :or_newer do
       arch arm: "macOS_14.7.2-arm64"
 
-      version "18.0.0"
-      sha256 "ebaa1649142033bbb7eeff2c2e4f2dab9deefd61c0304dfe4aa9c36012cf7dc6"
+      version "18.1.0"
+      sha256 "ba61b4a13cadc0eb4a4a220bbece25cbccd23e16c1f29c55337a00d6cadc092a"
 
       livecheck do
         url "https://downloads.codelite.org/"
