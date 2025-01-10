@@ -12,6 +12,7 @@ cask "openinterminal" do
   app "OpenInTerminal.app"
 
   zap trash: [
+    "~/Library/Application Scripts/group.wang.jianing.app.OpenInTerminal",
     "~/Library/Application Scripts/wang.jianing.app.OpenInTerminal",
     "~/Library/Application Scripts/wang.jianing.app.OpenInTerminal.OpenInTerminalFinderExtension",
     "~/Library/Application Scripts/wang.jianing.app.OpenInTerminalHelper",
@@ -20,5 +21,6 @@ cask "openinterminal" do
     "~/Library/Containers/wang.jianing.app.OpenInTerminalHelper",
     "~/Library/Group Containers/group.wang.jianing.app.OpenInTerminal",
     "~/Library/Logs/OpenInTerminal",
+    "~/Library/Preferences/wang.jianing.app.OpenInTerminal.plist",
   ]
 end
