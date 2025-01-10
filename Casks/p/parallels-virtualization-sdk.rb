@@ -1,6 +1,6 @@
 cask "parallels-virtualization-sdk" do
-  version "20.1.3-55743"
-  sha256 "e465a1bae408f3bba67fc03d1f64d391b547491b44beb192c46776c48ae7959d"
+  version "20.2.0-55872"
+  sha256 "1fbdc19428b01493ff8b44b2531129ab9954557a99008cc431175f32bb45e404"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsVirtualizationSDK-#{version}-mac.dmg"
   name "Parallels Virtualization SDK"
