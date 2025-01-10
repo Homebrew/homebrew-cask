@@ -11,6 +11,13 @@ cask "jet-pilot" do
   desc "Kubernetes desktop client"
   homepage "https://www.jet-pilot.app/"
 
+  livecheck do
+    url "https://updates.jet-pilot.app/latest.json"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
