@@ -1,12 +1,18 @@
 cask "element@nightly" do
-  version :latest
-  sha256 :no_check
+  version "2025011001"
+  sha256 "9479f9d96bb8a8ad82093a658abb2f9c849a1fbd3ac955a13c5bb7df4cfb58a2"
 
-  url "https://packages.riot.im/nightly/install/macos/Element%20Nightly.dmg",
-      verified: "packages.riot.im/nightly/install/macos/"
+  url "https://packages.element.io/nightly/update/macos/Element%20Nightly-#{version}-universal-mac.zip"
   name "Element Nightly"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
+
+  livecheck do
+    url "https://packages.element.io/nightly/update/macos/releases.json"
+    strategy :json do |json|
+      json["currentRelease"]
+    end
+  end
 
   depends_on macos: ">= :big_sur"
 
@@ -17,7 +23,9 @@ cask "element@nightly" do
     "~/Library/Application Support/Riot",
     "~/Library/Caches/im.riot.app",
     "~/Library/Caches/im.riot.app.ShipIt",
+    "~/Library/HTTPStorages/im.riot.app",
     "~/Library/Logs/Riot",
+    "~/Library/Preferences/ByHost/im.riot.app.ShipIt.*.plist",
     "~/Library/Preferences/im.riot.app.helper.plist",
     "~/Library/Preferences/im.riot.app.plist",
     "~/Library/Saved Application State/im.riot.app.savedState",
