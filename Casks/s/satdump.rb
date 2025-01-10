@@ -17,6 +17,7 @@ cask "satdump" do
   end
 
   app "SatDump.app"
+  binary "#{appdir}/SatDump.app/Contents/MacOS/satdump"
 
   zap trash: "~/Library/Saved Application State/com.altillimity.satdump.savedState"
 end
