@@ -9,8 +9,10 @@ cask "hstracker" do
   homepage "https://hsdecktracker.net/"
 
   livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    url "https://hsdecktracker.net/hstracker/appcast2.xml"
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true
