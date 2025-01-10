@@ -11,8 +11,14 @@ cask "remember-the-milk" do
   homepage "https://www.rememberthemilk.com/"
 
   livecheck do
-    url "https://www.rememberthemilk.com/services/mac/"
-    regex(%r{<b>Version:</b>\s*(\d+(?:\.\d+)+)}i)
+    url "https://www.rememberthemilk.com/deskmilk-squirrel-updates?arch=#{arch}"
+    regex(/RememberTheMilk[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.zip/i)
+    strategy :json do |json, regex|
+      match = json["url"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   depends_on macos: ">= :high_sierra"
