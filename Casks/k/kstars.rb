@@ -1,6 +1,6 @@
 cask "kstars" do
   version "3.7.4"
-  sha256 "3cd0d7baecb97a618dd42dfbfb741f6f987e8115abf3cce70657b757f30805b9"
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg",
       verified: "indilib.org/jdownloads/kstars/"
