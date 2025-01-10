@@ -10,9 +10,7 @@ cask "affinity-publisher" do
 
   livecheck do
     url "https://go.seriflabs.com/affinity-update-mac-retail-publisher#{version.csv.first.major}"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}"
-    end
+    strategy :sparkle
   end
 
   auto_updates true

@@ -13,7 +13,7 @@ cask "chatgpt" do
   livecheck do
     url "https://persistent.oaistatic.com/sidekick/public/sparkle_public_appcast.xml"
     strategy :sparkle do |items|
-      items.map { |item| "#{item.short_version},#{item.version}" }
+      items.map(&:nice_version)
     end
   end
 

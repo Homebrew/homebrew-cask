@@ -10,9 +10,7 @@ cask "affinity-designer" do
 
   livecheck do
     url "https://go.seriflabs.com/affinity-update-mac-retail-designer#{version.csv.first.major}"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}"
-    end
+    strategy :sparkle
   end
 
   auto_updates true

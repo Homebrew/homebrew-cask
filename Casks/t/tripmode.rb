@@ -23,9 +23,9 @@ cask "tripmode" do
       strategy :sparkle do |item, regex|
         item.url.scan(regex).map do |match|
           if match[1] == item.version
-            "#{item.short_version},#{item.version}"
+            item.nice_version
           else
-            "#{item.short_version},#{item.version},#{match[1]}"
+            "#{item.nice_version},#{match[1]}"
           end
         end
       end

@@ -12,7 +12,7 @@ cask "cyberghost-vpn" do
   livecheck do
     url "https://download.cyberghostvpn.com/mac/updates/v7/cyberghost_mac_update_v3.inf"
     strategy :sparkle do |items|
-      items.map { |item| "#{item.short_version},#{item.version}" }
+      items.map(&:nice_version)
     end
   end
 
