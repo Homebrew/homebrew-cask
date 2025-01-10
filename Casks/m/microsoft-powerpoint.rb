@@ -95,9 +95,9 @@ cask "microsoft-powerpoint" do
             delete:    "/Applications/Microsoft PowerPoint.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.microsoft.Powerpoint",
+    "~/Library/Application Scripts/com.microsoft.Powerpoint*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
-    "~/Library/Containers/com.microsoft.Powerpoint",
+    "~/Library/Containers/com.microsoft.Powerpoint*",
     "~/Library/Preferences/com.microsoft.Powerpoint.plist",
     "~/Library/Saved Application State/com.microsoft.Powerpoint.savedState",
   ]
