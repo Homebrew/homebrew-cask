@@ -1,6 +1,6 @@
 cask "doxygen" do
-  version "1.13.1"
-  sha256 "93468594ea8a4ee682838253f58953e328ea632304d5408e4cc94c082c621932"
+  version "1.13.2"
+  sha256 "dc981a4212875e8c6b81727eb43bb634167df0d4bc1681fb9053cc850e918acf"
 
   url "https://doxygen.nl/files/Doxygen-#{version}.dmg"
   name "Doxygen"
