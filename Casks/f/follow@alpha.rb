@@ -8,10 +8,7 @@ cask "follow@alpha" do
   desc "Information browser"
   homepage "https://follow.is/"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+(?:[._-]alpha[._-]?\d+)?)$/i)
-  end
+  disable! date: "2025-01-10", because: :discontinued
 
   conflicts_with cask: [
     "follow",
