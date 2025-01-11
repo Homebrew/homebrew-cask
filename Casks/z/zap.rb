@@ -1,9 +1,9 @@
 cask "zap" do
   arch arm: "_aarch64"
 
-  version "2.15.0"
-  sha256 arm:   "4426253f4702bbd5fb4779bcf4d62490b2c10ec851c4ebc94ced8f156d2e5509",
-         intel: "ae025403e46cdefff013cd0c3b88d8edc5a183a76daa63cb62c7c629005337a5"
+  version "2.16.0"
+  sha256 arm:   "189a051acccde0dee8a6f194abf782906af65fbdab7bc6a572edfc6a58f048ab",
+         intel: "dc353ddd98e4678cd545c174c717ce630ce76ae2f06f2dbebb107a813cf54b74"
 
   url "https://github.com/zaproxy/zaproxy/releases/download/v#{version}/ZAP_#{version}#{arch}.dmg",
       verified: "github.com/zaproxy/zaproxy/"
