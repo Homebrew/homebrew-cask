@@ -8,8 +8,8 @@ cask "jedit-omega" do
     sha256 "fbcebb742f060e4941d901d2e6b9fcd79e575828cafc38f7808ead048a3451ce"
   end
   on_high_sierra :or_newer do
-    version "3.09"
-    sha256 "7b961f997ba5d6dd518cf0cf629484252cc6ceb62fec91b859636101f963a7f0"
+    version "3.10"
+    sha256 "8a1116ba3d700fb2351216d962f30c25695102a8d22247c0a8911730a8483187"
   end
 
   url "https://artman21.site/JeditOmega#{version.no_dots}.pkg",
