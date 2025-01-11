@@ -1,6 +1,6 @@
 cask "dcp-o-matic-encode-server" do
-  version "2.18.2"
-  sha256 "1ae7c28b89ee86d357cd24e227e9a4ce249f56b474fe71b5ae36465a1a4ec09c"
+  version "2.18.3"
+  sha256 "7a2bac92a95cedcc96b0ab8b837b41aa5d3dded2abcc7aaf95b4763eb0af2331"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.10-server&version=#{version}"
   name "DCP-o-matic Encode Server"
