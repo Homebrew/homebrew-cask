@@ -1,5 +1,5 @@
 cask "prismlauncher" do
-  version "9.1"
+  version "9.2"
 
   on_mojave :or_older do
     sha256 "f18a940c49d5109fb67f9e46e0aa6b045aedb7528797211307f68b1672a4b90d"
@@ -8,7 +8,7 @@ cask "prismlauncher" do
         verified: "github.com/PrismLauncher/PrismLauncher/"
   end
   on_catalina :or_newer do
-    sha256 "2ff2764b70cc78f976c89ed8da9b72e3b0c96bcabdf45ed398d40971b3507dc6"
+    sha256 "637901e5244ca55411f3d106949b265f23858ca58e1942c60a4ac484d9f1c316"
 
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip",
         verified: "github.com/PrismLauncher/PrismLauncher/"
