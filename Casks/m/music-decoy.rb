@@ -1,6 +1,6 @@
 cask "music-decoy" do
-  version "1.0"
-  sha256 "e4fa4670e24522ac5e0999ed6c483201d257e858fc644d3490edee6887b847eb"
+  version "1.1"
+  sha256 "d8cc0121ced173bc1e7f38e34b514177c2680288405e399829dca8d729584f98"
 
   url "https://github.com/FuzzyIdeas/MusicDecoy/releases/download/v#{version}/MusicDecoy.zip",
       verified: "github.com/FuzzyIdeas/MusicDecoy/"
