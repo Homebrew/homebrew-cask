@@ -40,6 +40,7 @@ airflow
 airtame
 akiflow
 alcom
+alcove
 aldente
 alex313031-thorium
 alfaview
@@ -165,6 +166,7 @@ c0re100-qbittorrent
 cables
 cacher
 cahier
+caido
 calhash
 calibre
 camerabag-photo
@@ -795,6 +797,7 @@ netron
 netspot
 nextcloud
 nextcloud-vfs
+netxms-console
 ngrok
 nitro-pdf-pro
 nordlayer
