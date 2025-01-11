@@ -14,6 +14,8 @@ cask "netbeans" do
     regex(/>\s*Apache\s*NetBeans\s*v?(\d+(?:\.\d+)*)\s*</im)
   end
 
+  depends_on macos: ">= :big_sur"
+
   pkg "Apache-NetBeans-#{version}.pkg"
 
   uninstall pkgutil: [
