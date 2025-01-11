@@ -7,10 +7,7 @@ cask "laconvolver" do
   desc "AU plug-in for convolving the audio stream with an impulse response audio file"
   homepage "https://audio.lernvall.com/"
 
-  livecheck do
-    url :homepage
-    regex(/href="LAConvolverv?(\d+(?:\.\d+)*)\.zip"/i)
-  end
+  disable! date: "2025-01-11", because: :no_longer_available
 
   audio_unit_plugin "LAConvolver/LAConvolver.component"
 
