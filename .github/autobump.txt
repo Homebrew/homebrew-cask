@@ -685,6 +685,7 @@ mediahuman-youtube-downloader
 mediainfo
 mediamate
 megasync
+mellel
 melodics
 memory-cleaner
 mendeley-reference-manager
@@ -796,9 +797,9 @@ neovide
 netbeans
 netron
 netspot
+netxms-console
 nextcloud
 nextcloud-vfs
-netxms-console
 ngrok
 nitro-pdf-pro
 nordlayer
