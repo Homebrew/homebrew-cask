@@ -338,6 +338,7 @@ electrum
 elektron-overbridge
 elektron-transfer
 element
+element@nightly
 elephas
 elephicon
 elgato-camera-hub
