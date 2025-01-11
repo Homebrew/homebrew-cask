@@ -1,8 +1,8 @@
 cask "mechvibes" do
-  version "2.3.6"
-  sha256 "ad3a0a6679a9995274b2bb0a207dbbdeb93583e914b6a83c56d73e5bf4b9fce6"
+  version "2.3.6-hotfix,2.3.6"
+  sha256 "29db0b74bdde3895e4d7b38165eebb1dec91ae546244be9d1285123999b4326a"
 
-  url "https://github.com/hainguyents13/mechvibes/releases/download/v#{version}/Mechvibes-#{version}.dmg",
+  url "https://github.com/hainguyents13/mechvibes/releases/download/v#{version.csv.second || version.csv.first}/Mechvibes-#{version.csv.first}.dmg",
       verified: "github.com/hainguyents13/mechvibes/"
   name "Mechvibes"
   desc "Play mechanical keyboard sounds as you type"
@@ -10,7 +10,15 @@ cask "mechvibes" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(%r{/v?(\d+(?:\.\d+)+)/Mechvibes[._-]v?(\d+(?:\.\d+)+(?:-hotfix)?)\.dmg}i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["browser_download_url"]&.match(regex)
+        next if match.blank?
+
+        (match[2] == match[1]) ? match[1] : "#{match[2]},#{match[1]}"
+      end
+    end
   end
 
   app "Mechvibes.app"
