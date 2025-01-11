@@ -2,7 +2,7 @@ cask "moneymoney" do
   version "2.4.48"
   sha256 :no_check
 
-  url "https://service.moneymoney-app.com/1/MoneyMoney.zip"
+  url "https://moneymoney-app.com/download/MoneyMoney.pkg"
   name "MoneyMoney"
   desc "German banking and financial management software"
   homepage "https://moneymoney-app.com/"
@@ -15,7 +15,9 @@ cask "moneymoney" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "MoneyMoney.app"
+  pkg "MoneyMoney.pkg"
+
+  uninstall pkgutil: "com.moneymoney-app.retail"
 
   zap trash: [
     "~/Library/Application Scripts/com.moneymoney-app.retail",
