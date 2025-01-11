@@ -1,6 +1,6 @@
 cask "mythic" do
-  version "0.4.2"
-  sha256 "13f10cedb4d410ec6e9b939df6ab96726c6e4aa9bde777cc1bfa862bb080b775"
+  version "0.4.3"
+  sha256 "352a926180c849f0ad718ac11e093d42f3a04d3d7363daf7c4f17b5736f23d28"
 
   url "https://dl.getmythic.app/sparkle-temp/Mythic-#{version}.zip"
   name "Mythic"
