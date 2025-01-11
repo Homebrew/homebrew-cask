@@ -2,7 +2,7 @@ cask "mechvibes" do
   version "2.3.6"
   sha256 "ad3a0a6679a9995274b2bb0a207dbbdeb93583e914b6a83c56d73e5bf4b9fce6"
 
-  url "https://github.com/hainguyents13/mechvibes/releases/download/v#{version}/Mechvibes-#{version}.dmg",
+  url "https://github.com/hainguyents13/mechvibes/releases/download/v#{version}/Mechvibes-#{version}-hotfix.dmg",
       verified: "github.com/hainguyents13/mechvibes/"
   name "Mechvibes"
   desc "Play mechanical keyboard sounds as you type"
