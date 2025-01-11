@@ -40,6 +40,7 @@ cask "slack" do
   uninstall quit: "com.tinyspeck.slackmacgap"
 
   zap trash: [
+    "/Library/Logs/DiagnosticReports/Slack_*",
     "~/Library/Application Scripts/com.tinyspeck.slackmacgap",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl*",
     "~/Library/Application Support/Slack",
