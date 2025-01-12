@@ -567,6 +567,7 @@ iterm2@beta
 iterm2@nightly
 ivideonserver
 ivpn
+izip
 jabra-direct
 jami
 jamie
