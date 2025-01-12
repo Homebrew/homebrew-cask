@@ -1344,6 +1344,7 @@ wechat
 wechatwork
 wetype
 whalebird
+whatroute
 whatsapp
 whatsapp@beta
 whatsapp@legacy
