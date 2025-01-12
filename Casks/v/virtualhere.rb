@@ -1,5 +1,5 @@
 cask "virtualhere" do
-  version "5.8.1"
+  version "5.8.2"
   sha256 :no_check
 
   url "https://www.virtualhere.com/sites/default/files/usbclient/VirtualHereUniversal.dmg"
