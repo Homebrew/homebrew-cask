@@ -8,6 +8,7 @@ cask "notch-simulator" do
   homepage "https://github.com/megabitsenmzq/Notch-Simulator"
 
   deprecate! date: "2024-01-12", because: :discontinued
+  disable! date: "2025-01-12", because: :discontinued
 
   app "Notch Simulator.app"
 
