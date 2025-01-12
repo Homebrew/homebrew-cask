@@ -1,53 +1,81 @@
-{
-  "azure-cli": "homebrew/core",
-  "basex": "homebrew/core",
-  "borgbackup": "homebrew/core",
-  "chronograf": "homebrew/core",
-  "consul": "homebrew/core",
-  "consul-template": "homebrew/core",
-  "cryptol": "homebrew/core",
-  "cups-pdf": "homebrew/core",
-  "dmd": "homebrew/core",
-  "docker-compose": "homebrew/core",
-  "exa": "homebrew/core",
-  "exiftool": "homebrew/core",
-  "fastlane": "homebrew/core",
-  "fpc": "homebrew/core",
-  "gedit": "homebrew/core",
-  "gfortran": "homebrew/core",
-  "ghc": "homebrew/core",
-  "go": "homebrew/core",
-  "graphviz": "homebrew/core",
-  "handbrakecli": "homebrew/core",
-  "helm": "homebrew/core",
-  "hub": "homebrew/core",
-  "idris": "homebrew/core",
-  "java": "homebrew/core",
-  "jenkins": "homebrew/core",
-  "lunchy": "homebrew/core",
-  "micromamba": "homebrew/core",
-  "minikube": "homebrew/core",
-  "mosh": "homebrew/core",
-  "nmap": "homebrew/core",
-  "node": "homebrew/core",
-  "otto": "homebrew/core",
-  "packer": "homebrew/core",
-  "pandoc": "homebrew/core",
-  "pgloader": "homebrew/core",
-  "pgweb": "homebrew/core",
-  "podman": "homebrew/core",
-  "purescript": "homebrew/core",
-  "python": "homebrew/core",
-  "python3": "homebrew/core",
-  "rust": "homebrew/core",
-  "serf": "homebrew/core",
-  "sickbeard": "homebrew/core",
-  "srclib": "homebrew/core",
-  "sshfs": "homebrew/core",
-  "sslmate": "homebrew/core",
-  "swi-prolog": "homebrew/core",
-  "terraform": "homebrew/core",
-  "vault": "homebrew/core",
-  "vfuse": "homebrew/core",
-  "volatility": "homebrew/core"
+# Dictionary containing the mappings
+software_repos = {
+    "azure-cli": "homebrew/core",
+    "basex": "homebrew/core",
+    "borgbackup": "homebrew/core",
+    "chronograf": "homebrew/core",
+    "consul": "homebrew/core",
+    "consul-template": "homebrew/core",
+    "cryptol": "homebrew/core",
+    "cups-pdf": "homebrew/core",
+    "dmd": "homebrew/core",
+    "docker-compose": "homebrew/core",
+    "exa": "homebrew/core",
+    "exiftool": "homebrew/core",
+    "fastlane": "homebrew/core",
+    "fpc": "homebrew/core",
+    "gedit": "homebrew/core",
+    "gfortran": "homebrew/core",
+    "ghc": "homebrew/core",
+    "go": "homebrew/core",
+    "graphviz": "homebrew/core",
+    "handbrakecli": "homebrew/core",
+    "helm": "homebrew/core",
+    "hub": "homebrew/core",
+    "idris": "homebrew/core",
+    "java": "homebrew/core",
+    "jenkins": "homebrew/core",
+    "lunchy": "homebrew/core",
+    "micromamba": "homebrew/core",
+    "minikube": "homebrew/core",
+    "mosh": "homebrew/core",
+    "nmap": "homebrew/core",
+    "node": "homebrew/core",
+    "otto": "homebrew/core",
+    "packer": "homebrew/core",
+    "pandoc": "homebrew/core",
+    "pgloader": "homebrew/core",
+    "pgweb": "homebrew/core",
+    "podman": "homebrew/core",
+    "purescript": "homebrew/core",
+    "python": "homebrew/core",
+    "python3": "homebrew/core",
+    "rust": "homebrew/core",
+    "serf": "homebrew/core",
+    "sickbeard": "homebrew/core",
+    "srclib": "homebrew/core",
+    "sshfs": "homebrew/core",
+    "sslmate": "homebrew/core",
+    "swi-prolog": "homebrew/core",
+    "terraform": "homebrew/core",
+    "vault": "homebrew/core",
+    "vfuse": "homebrew/core",
+    "volatility": "homebrew/core",
 }
+
+# Example function to work with this data
+def update_repositories(data, updates):
+    """
+    Function to update software repositories based on the provided updates.
+
+    Args:
+        data (dict): Current software repository data.
+        updates (dict): Mapping of software to their repositories.
+
+    Returns:
+        dict: Updated software repository data.
+    """
+    updated_data = {**data, **updates}
+    return updated_data
+
+# Example updates to apply
+additional_updates = {
+    "azure-cli": "homebrew/custom-repo",  # Example of updating an existing entry
+    "new-software": "homebrew/new-repo",  # Example of adding a new entry
+}
+
+# Update the repository data
+updated_software_repos = update_repositories(software_repos, additional_updates)
+
+# Print the updated repository data
+print(updated_software_repos)
