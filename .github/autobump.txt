@@ -286,6 +286,7 @@ default-folder-x
 defold
 defold@alpha
 defold@beta
+dehesselle-meld
 deltachat
 descript
 desktoppr
