@@ -1,5 +1,8 @@
+# EditorConfig is awesome: https://editorconfig.org
+
 root = true
 
+# Global settings for all files
 [*]
 indent_style = space
 indent_size = 2
