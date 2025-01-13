@@ -797,6 +797,8 @@ neofinder
 neohtop
 neovide
 netbeans
+netnewswire
+netnewswire@beta
 netron
 netspot
 netxms-console
