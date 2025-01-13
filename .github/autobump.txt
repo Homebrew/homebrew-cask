@@ -562,6 +562,7 @@ ipfs
 ipvanish-vpn
 ireal-pro
 istat-menus
+istherenet
 iterm2
 iterm2@beta
 iterm2@nightly
