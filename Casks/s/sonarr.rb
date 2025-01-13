@@ -23,4 +23,9 @@ cask "sonarr" do
   app "Sonarr.app"
 
   zap trash: "~/.config/Sonarr"
+
+  postflight do
+    puts "Must self sign before usage. See https://sonarr.tv/#downloads-macos"
+  end
+
 end
