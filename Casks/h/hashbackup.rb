@@ -1,5 +1,5 @@
 cask "hashbackup" do
-  version "3287"
+  version "3291"
   sha256 :no_check
 
   url "https://www.hashbackup.com/download/hb-mac-64bit.tar.gz"
