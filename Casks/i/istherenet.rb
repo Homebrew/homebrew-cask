@@ -1,6 +1,6 @@
 cask "istherenet" do
-  version "1.7.0"
-  sha256 "f5788db9b8c7a2650982baced73191e818b7bbddbca610c2dd125e9f5fcc2fa8"
+  version "1.7.1"
+  sha256 "dd2febaa9a8991e252153b4114921746947cb2c5b5a673ec4e285427837ceb4c"
 
   url "https://files.lowtechguys.com/releases/IsThereNet-#{version}.dmg"
   name "IsThereNet"
