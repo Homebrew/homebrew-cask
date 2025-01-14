@@ -1,8 +1,8 @@
 cask "guitar-pro" do
   version "8.1.3-121"
-  sha256 "89c3cf2f3110ad39e034bbec879972d717199b56283b551bed7a3b62596caa87"
+  sha256 "3c7ed10d1945b7ccd83caeb7caa9aec6852ac24640ab35192bf11bd8a16d182a"
 
-  url "https://downloads.guitar-pro.com/gp#{version.major}/#{version}/macOS/guitar-pro.tar.gz"
+  url "https://downloads.guitar-pro.com/gp#{version.major}/#{version}/macOS/guitar-pro-soundbank-full.tar.gz"
   name "Guitar Pro"
   desc "Sheet music editor software for guitar, bass, keyboards, drums and more"
   homepage "https://www.guitar-pro.com/"
