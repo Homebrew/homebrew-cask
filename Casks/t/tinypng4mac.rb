@@ -12,10 +12,10 @@ cask "tinypng4mac" do
     app "TinyPNG4Mac.app"
   end
   on_ventura :or_newer do
-    version "2.0.1"
-    sha256 "e7e2b9c9d92d33ed40ad80ed70624aa0ac5bc08e9cd558c52d08370370a6f55b"
+    version "2.1.0"
+    sha256 "8857dc6cbd6962d52eb2dd61696bcb13bfa397c6077c12def820bc9618c95857"
 
-    url "https://github.com/kyleduo/TinyPNG4Mac/releases/download/v#{version}/Tiny-Image-Installer.dmg"
+    url "https://github.com/kyleduo/TinyPNG4Mac/releases/download/v#{version}/Tiny-Image-Installer-#{version.major}0#{version.minor}#{version.patch}0.dmg"
 
     app "Tiny Image.app"
   end
