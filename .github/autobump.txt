@@ -29,6 +29,7 @@ adguard-vpn@nightly
 adguard@nightly
 adobe-acrobat-pro
 adobe-acrobat-reader
+adobe-air
 adrive
 aerial@beta
 affine
