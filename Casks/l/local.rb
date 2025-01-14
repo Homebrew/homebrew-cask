@@ -1,9 +1,9 @@
 cask "local" do
   arch arm: "-arm64"
 
-  version "9.1.1,6738"
-  sha256  arm:   "2a4e6129ec8fc725dd642e4a0f843278da09d779c6aabd05a5edf0f0f312ec5f",
-          intel: "61c91bbed2584a814795a3742221463ccc899a0e140e490653e7ab7c2c0e76ed"
+  version "9.2.0,6762"
+  sha256  arm:   "49a8b441d0cd148793c360df1f9c5b21bc957ce4a8163c781443a78d41930bb8",
+          intel: "564aff6e92df21f4ea62a8c61684b85adb70029070f23c79892d4b793a4a2128"
 
   url "https://cdn.localwp.com/releases-stable/#{version.csv.first}+#{version.csv.second}/local-#{version.csv.first}-mac#{arch}.dmg"
   name "Local"
