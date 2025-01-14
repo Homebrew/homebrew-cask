@@ -1,6 +1,6 @@
 cask "writemapper" do
-  version "4.4.1"
-  sha256 "61c23d2bbea1cb00cf7d0c59b9ba69ce0baadcd857c31976688b03ec06417cfe"
+  version "4.4.2"
+  sha256 "36b35c50ea8be546a248b4a44bcd7b660f08958d526412cc5a4b0a17896680b9"
 
   url "https://writemapper.sfo3.cdn.digitaloceanspaces.com/writemapper-#{version.major}/mac/WriteMapper-#{version}-universal.dmg",
       verified: "writemapper.sfo3.cdn.digitaloceanspaces.com/"
