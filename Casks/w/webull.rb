@@ -9,7 +9,7 @@ cask "webull" do
   homepage "https://www.webull.com/"
 
   livecheck do
-    url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global&osv=14"
+    url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global"
     regex(/Webull%20Desktop[._-]v?(\d+(?:[._]\d+)+).*?\.dmg/i)
     strategy :json do |json, regex|
       json["upgradeUrl"]&.scan(regex)&.map { |match| match[0].tr("_", ",") }
