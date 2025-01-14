@@ -7,6 +7,7 @@ cask "openbazaar" do
   homepage "https://github.com/OpenBazaar/openbazaar-desktop/"
 
   deprecate! date: "2024-01-14", because: :discontinued
+  disable! date: "2025-01-14", because: :discontinued
 
   app "OpenBazaar#{version.major}.app"
 
