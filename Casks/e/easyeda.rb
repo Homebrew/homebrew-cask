@@ -11,8 +11,10 @@ cask "easyeda" do
   homepage "https://easyeda.com/"
 
   livecheck do
-    url "https://easyeda.com/page/download"
-    regex(%r{href=.*?/easyeda[._-]mac[._-]x64[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    url "https://easyeda.com/api/latestClientVersion"
+    strategy :json do |json|
+      json["result"]
+    end
   end
 
   app "EasyEDA.app"
