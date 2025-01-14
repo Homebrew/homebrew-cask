@@ -1,6 +1,6 @@
 cask "internxt-drive" do
-  version "2.5.1.70"
-  sha256 "2c379bd18e5a466738613fdb7520f73333597dbf40c413a35502b2193317961c"
+  version "2.5.2.71"
+  sha256 "c8d46b400011bacd4e3ad3e76a6834c402c1f677521130ea8a5a1e786e56d483"
 
   url "https://github.com/internxt/drive-desktop-macos/releases/download/v#{version}/Internxt_Drive_#{version}.dmg",
       verified: "github.com/internxt/drive-desktop-macos/"
