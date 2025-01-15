@@ -10,6 +10,7 @@ cask "engine-prime" do
 
   # https://community.enginedj.com/t/engine-prime-vs-engine-dj/40181
   deprecate! date: "2024-01-15", because: :unmaintained
+  disable! date: "2025-01-15", because: :unmaintained
 
   pkg "Engine Prime_#{version.csv.first}_Setup.pkg"
 
