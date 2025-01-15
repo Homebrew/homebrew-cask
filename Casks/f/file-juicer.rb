@@ -1,5 +1,5 @@
 cask "file-juicer" do
-  version "4.105"
+  version "4.106"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://echoone.com/filejuicer/FileJuicer-#{version}.zip"
@@ -12,7 +12,7 @@ cask "file-juicer" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "File Juicer.app"
 
