@@ -7,14 +7,17 @@ cask "iexplorer" do
   desc "iOS device backup software and file manager"
   homepage "https://macroplant.com/iexplorer"
 
+  # The response format of this URL seems to randomly switch between a plain
+  # text changelog and a Sparkle appcast XML file. This matches the version
+  # from dmg URLs in the text, which should work in either format.
   livecheck do
-    url "https://macroplant.com/iexplorer/mac/v#{version.csv.first.major}/appcast"
+    url "https://macroplant.com/iexplorer/appcast"
     regex(%r{/(\d+)/iExplorer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
-      "#{item.version},#{match[1]}"
+      "#{match[2]},#{match[1]}"
     end
   end
 
