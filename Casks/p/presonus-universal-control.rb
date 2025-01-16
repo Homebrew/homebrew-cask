@@ -1,6 +1,6 @@
 cask "presonus-universal-control" do
-  version "4.5.0.102825,10072"
-  sha256 "a4d82645e03c231d33622c556200d800537a9359472a96fa1e2899e8c786b5de"
+  version "4.6.0.103899,10084"
+  sha256 "91ba6cbc4356d49043d7df6221766ef4dfd1baf1e5593b9c3bcda9658138c8eb"
 
   url "https://www.fmicassets.com/Damroot/Original/#{version.csv.second}/PreSonus_Universal_Control_v#{version.csv.first.dots_to_underscores}.dmg",
       verified: "fmicassets.com/Damroot/Original/"
