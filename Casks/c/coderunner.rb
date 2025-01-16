@@ -1,6 +1,6 @@
 cask "coderunner" do
-  version "4.4"
-  sha256 "cf3f3f034337d25e5327602dfd5f6b3c7f8560371ae9f9ba86165caea436f66a"
+  version "4.4.1"
+  sha256 "588435c4e46bc0cc7423d3127b0dd8777e04b62cd7563af6fea185d456e1e33b"
 
   url "https://coderunnerapp.com/download/update/CodeRunner-#{version}.zip"
   name "CodeRunner"
