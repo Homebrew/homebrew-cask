@@ -1,4 +1,4 @@
-cask "v2rayN" do
+cask "v2rayn" do
   arch arm: "arm64", intel: "x64"
 
   version "7.5.6"
