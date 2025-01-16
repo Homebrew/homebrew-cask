@@ -10,7 +10,10 @@ cask "bambu-studio" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*/v?(\d+(?:\.\d+)+)/Bambu[._-]Studio[._-]mac[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg}i)
+    regex(%r{
+      href=.*/v?(\d+(?:\.\d+)+)/Bambu[._-]Studio[._-]mac[._-]v?
+      (\d+(?:\.\d+)+)[._-](\d+)\.dmg.+?>Bambu\s*Studio\s*\(Mac\)
+    }imx)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         if match[2] == match[0]
