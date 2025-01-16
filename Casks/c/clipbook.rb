@@ -1,14 +1,14 @@
 cask "clipbook" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.14.0"
-  sha256 arm:   "d7c8fd3699e566c5b46715bc97ce68a747a6fe2e479871c356d02213fface854",
-         intel: "7e6aa8987bb146b67ab11738ef44a4b2d2cbdb64f2607bb44856b08beec47b11"
+  version "1.15.0"
+  sha256 arm:   "b0f3fce73aff5a44901b65387746686e1abc030ddd5af5527c0d4f9d6aefe718",
+         intel: "94044a62042e3525988a0bd8495c84b1f7ed24322b10d723eb9f3b81aa8d61a7"
 
   url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}-#{arch}.dmg",
       verified: "f005.backblazeb2.com/file/clipbook/"
   name "ClipBook"
-  desc "Clipboard history utility"
+  desc "Clipboard history app"
   homepage "https://clipbook.app/"
 
   livecheck do
