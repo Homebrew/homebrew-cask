@@ -9,7 +9,7 @@ cask "tdr-prism" do
 
   livecheck do
     url :homepage
-    regex(%r{latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
+    regex(%r{href=.*?Prism/v?(\d+(?:\.\d+)+)/TDR(%20|\s)Prism\.zip}i)
   end
 
   pkg "TDR Prism.pkg"
