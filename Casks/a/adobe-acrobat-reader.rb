@@ -8,7 +8,7 @@ cask "adobe-acrobat-reader" do
   homepage "https://www.adobe.com/acrobat/pdf-reader.html"
 
   livecheck do
-    url "https://rdc.adobe.io/reader/products?lang=en&site=landing&os=Mac%20OS%2010.15&api_key=dc-get-adobereader-cdn"
+    url "https://rdc.adobe.io/reader/products?lang=en&site=landing&os=Mac%20OS%2012.0&api_key=dc-get-adobereader-cdn"
     strategy :json do |json|
       json.dig("products", "reader").map { |product| product["version"] }
     end
