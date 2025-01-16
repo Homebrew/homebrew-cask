@@ -8,7 +8,7 @@ cask "v2rayN" do
   url "https://github.com/2dust/v2rayN/releases/download/#{version}/v2rayN-macos-#{arch}.dmg",
       verified: "github.com/2dust/v2rayN/"
   name "v2rayN"
-  desc "GUI client for Xray 和 sing-box 和 others"
+  desc "GUI client for Xray,sing-box..."
   homepage "https://github.com/2dust/v2rayN"
 
   # A tag using the stable version format is sometimes marked as "Pre-release"
