@@ -1,5 +1,5 @@
-cask "v2rayn" do
-  arch arm: "arm64"， intel: "64"
+cask "v2rayn" do 
+  arch arm: "arm64",intel: "64"
 
   version "7.5.6"
   sha256 arm:   "58cf20e2b6921b3725bdc930cb09d1e306384c9018f16010ae91fbb48f04a9c3",
