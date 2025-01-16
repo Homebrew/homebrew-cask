@@ -1,5 +1,5 @@
 cask "v2rayN" do
-  arch arm: "arm64"， intel: "64"
+  arch arm: "arm64", intel: "x64"
 
   version "7.5.6"
   sha256 arm:   "58cf20e2b6921b3725bdc930cb09d1e306384c9018f16010ae91fbb48f04a9c3",
@@ -8,7 +8,7 @@ cask "v2rayN" do
   url "https://github.com/2dust/v2rayN/releases/download/#{version}/v2rayN-macos-#{arch}.dmg",
       verified: "github.com/2dust/v2rayN/"
   name "v2rayN"
-  desc "A GUI client"
+  desc "GUI client for Xray 和 sing-box 和 others"
   homepage "https://github.com/2dust/v2rayN"
 
   # A tag using the stable version format is sometimes marked as "Pre-release"
