@@ -14,9 +14,9 @@ cask "raycast" do
 
     livecheck_arch = on_arch_conditional arm: "arm", intel: "x86"
 
-    version "1.88.4"
-    sha256 arm:   "ab7a57fe63a5feef4a31c01fbd79b882260a8e74c1f74dcdd626ee6ef68ef54c",
-           intel: "97ad4054ac7e6989a09d52bc77e6f2da92a2bb570802e78b8a94633b30af89be"
+    version "1.89.0"
+    sha256 arm:   "bffd1283b7ffa5fef0b7baf4f9ec125c62a006a3059cec2574a414c0a43c173d",
+           intel: "50876815c9d7782a5fd424814e677190fe6e2b3f96a09b79bb9bba3170aa9c6e"
 
     url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
 
