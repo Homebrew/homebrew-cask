@@ -1,8 +1,8 @@
 cask "sqlitestudio" do
-  version "3.4.13"
-  sha256 "c78cc98cdd371435dff3d541c69826135c10f511a373faf7f674ad425b5cb765"
+  version "3.4.15"
+  sha256 "6b546bb03cf8d82ccd35f34c4633cb79b53adfe50dfd3c31d8a0c89bbf38de07"
 
-  url "https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/sqlitestudio-#{version}.dmg",
+  url "https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/sqlitestudio-#{version}-macos-x64.dmg",
       verified: "github.com/pawelsalawa/sqlitestudio/releases/download/"
   name "SQLiteStudio"
   desc "Create, edit, browse SQLite databases"
