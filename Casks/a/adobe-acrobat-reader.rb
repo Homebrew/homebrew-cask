@@ -1,6 +1,6 @@
 cask "adobe-acrobat-reader" do
-  version "24.004.20272"
-  sha256 "caf55cce07d1c1b00fb4178d904c2d29d4e47d100c5c8af55287f612e5d97fee"
+  version "24.005.20320"
+  sha256 "6389ff521e53fcffdb6d90f954adb5adbbda184ab252996b8dc4b8826834bf9c"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   name "Adobe Acrobat Reader"
@@ -8,7 +8,7 @@ cask "adobe-acrobat-reader" do
   homepage "https://www.adobe.com/acrobat/pdf-reader.html"
 
   livecheck do
-    url "https://rdc.adobe.io/reader/products?lang=en&site=landing&os=Mac%20OS%2010.15&api_key=dc-get-adobereader-cdn"
+    url "https://rdc.adobe.io/reader/products?lang=en&site=landing&os=Mac%20OS%2012.0&api_key=dc-get-adobereader-cdn"
     strategy :json do |json|
       json.dig("products", "reader").map { |product| product["version"] }
     end
