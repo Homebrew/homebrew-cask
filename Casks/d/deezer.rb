@@ -1,6 +1,6 @@
 cask "deezer" do
-  version "6.0.290"
-  sha256 "cc17f414a2be3933551baa1974d03874a6edc2885e582e7a21d1e8d5eb69dfe1"
+  version "7.0.1"
+  sha256 "1d6c599c289af307da96dd35ca07e73f113fbab91b89c38febe6a4191225eb91"
 
   url "https://www.deezer.com/desktop/download/artifact/darwin/x64/#{version}"
   name "Deezer"
@@ -13,7 +13,7 @@ cask "deezer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Deezer.app"
 
@@ -27,8 +27,4 @@ cask "deezer" do
     "~/Library/Preferences/com.deezer.deezer-desktop.plist",
     "~/Library/Saved Application State/com.deezer.deezer-desktop.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
