@@ -8,7 +8,7 @@ cask "clickhouse" do
   url "https://github.com/ClickHouse/ClickHouse/releases/download/v#{version}/clickhouse-macos#{arch}",
       verified: "github.com/ClickHouse/ClickHouse/"
   name "Clickhouse"
-  desc "Column-oriented database management system"
+  desc "Superfast database for analytics"
   homepage "https://clickhouse.com/"
 
   livecheck do
@@ -17,6 +17,10 @@ cask "clickhouse" do
   end
 
   binary "clickhouse-macos#{arch}", target: "clickhouse"
+
+  postflight do
+    system "xattr", "-d", "com.apple.quarantine", "#{staged_path}/clickhouse-macos#{arch}"
+  end
 
   # No zap stanza required
 end
