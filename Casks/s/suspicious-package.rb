@@ -51,7 +51,7 @@ cask "suspicious-package" do
   end
   on_monterey :or_newer do
     version "4.5,1213"
-    sha256 :no_check
+    sha256 "fff88bec145da31f8a0350899c6b6d5108947ec92e05e306adfd5850db7f9bdd"
 
     url "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg"
 
