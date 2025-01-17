@@ -2,18 +2,15 @@ cask "cloudflare-warp" do
   version "2024.12.554.0"
   sha256 "1cc6d8a35452216165000266e13a03ac893dfc6b13302ea226fea6357c907a6d"
 
-  url "https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP_#{version}.pkg",
-      verified: "1111-releases.cloudflareclient.com/mac/"
+  url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}",
+      verified: "downloads.cloudflareclient.com/v1/download/macos/"
   name "Cloudflare WARP"
   desc "Free app that makes your Internet safer"
   homepage "https://cloudflarewarp.com/"
 
   livecheck do
-    # :sparkle strategy using appcenter url cannot be used - see below link
-    # https://github.com/Homebrew/homebrew-cask/pull/109118#issuecomment-887184248
-    url "https://1111-releases.cloudflareclient.com/mac/latest"
-    regex(/Cloudflare[._-]WARP[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
-    strategy :header_match
+    url "https://downloads.cloudflareclient.com/v1/update/sparkle/macos/ga"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
