@@ -2,18 +2,11 @@ cask "amiberry" do
   arch arm: "apple-silicon", intel: "x86_64"
 
   version "7.0.1"
+  sha256 arm:   "47fbbd4504e432814f5dd6b822955ff664623b93124acd78e349666fbb945c2a",
+         intel: "8e2fdd5696557729bf4416b462508e1346df900759ab7772b30cf758b6dd546c"
 
-  on_arm do
-    sha256 "47fbbd4504e432814f5dd6b822955ff664623b93124acd78e349666fbb945c2a"
-
-    url "https://github.com/BlitterStudio/amiberry/releases/download/v#{version}/Amiberry-v#{version}-macOS-apple-silicon.zip"
-  end
-  on_intel do
-    sha256 "8e2fdd5696557729bf4416b462508e1346df900759ab7772b30cf758b6dd546c"
-
-    url "https://github.com/BlitterStudio/amiberry/releases/download/v#{version}/Amiberry-v#{version}-macOS-x86_64.zip"
-  end
-
+  url "https://github.com/BlitterStudio/amiberry/releases/download/v#{version}/Amiberry-v#{version}-macOS-#{arch}.zip",
+      verified: "github.com/BlitterStudio/amiberry/"
   name "Amiberry"
   desc "Optimized Amiga emulator for multiple platforms"
   homepage "https://github.com/BlitterStudio/amiberry"
