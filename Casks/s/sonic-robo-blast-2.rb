@@ -1,7 +1,7 @@
 cask "sonic-robo-blast-2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.2.13"
-  sha256 "06e1d7f9e47cb095b950daaedf2a232e4275c0c2a8894d0ac1110242289efeb4"
+  version "2.2.14"
+  sha256 "9f6df580143b5f5a3866923b1c5cc678dd27cebcc49bfeec8a62c96fc9d558c8"
 
   url "https://github.com/STJr/SRB2/releases/download/SRB2_release_#{version}/SRB2-#{version}-macOS-Installer.dmg",
       verified: "github.com/STJr/SRB2/"
@@ -17,8 +17,4 @@ cask "sonic-robo-blast-2" do
   app "Sonic Robo Blast 2.app"
 
   zap trash: "~/srb2"
-
-  caveats do
-    requires_rosetta
-  end
 end
