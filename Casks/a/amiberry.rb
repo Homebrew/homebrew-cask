@@ -8,7 +8,7 @@ cask "amiberry" do
   url "https://github.com/BlitterStudio/amiberry/releases/download/v#{version}/Amiberry-v#{version}-macOS-#{arch}.zip",
       verified: "github.com/BlitterStudio/amiberry/"
   name "Amiberry"
-  desc "Optimized Amiga emulator for multiple platforms"
+  desc "Amiga emulator"
   homepage "https://amiberry.com/"
 
   livecheck do
