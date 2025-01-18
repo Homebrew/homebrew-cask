@@ -9,7 +9,7 @@ cask "amiberry" do
       verified: "github.com/BlitterStudio/amiberry/"
   name "Amiberry"
   desc "Optimized Amiga emulator for multiple platforms"
-  homepage "https://github.com/BlitterStudio/amiberry"
+  homepage "https://amiberry.com/"
 
   livecheck do
     url "https://github.com/BlitterStudio/amiberry"
