@@ -1,5 +1,5 @@
 cask "amiberry" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "apple-silicon", intel: "x86_64"
 
   version "7.0.1"
 
