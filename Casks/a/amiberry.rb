@@ -26,6 +26,6 @@ cask "amiberry" do
   app "Amiberry.app"
 
   zap trash: [
-    "~/Library/Application Support/Amiberry"
+    "~/Library/Application Support/Amiberry",
   ]
 end
