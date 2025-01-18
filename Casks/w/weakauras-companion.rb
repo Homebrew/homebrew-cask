@@ -1,14 +1,13 @@
 cask "weakauras-companion" do
-  version "5.2.7"
-  sha256 "77dc9952535c8f2fe4efa1eb62a10a8751cc2846bccce60edf1dcf28854afb34"
+  version "5.2.10"
+  sha256 "acd79515c9a9c66489a17025e79961532b601f6721d5593ea176ac9e2416c913"
 
-  url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac-universal.dmg",
-      verified: "github.com/WeakAuras/WeakAuras-Companion/"
+  url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac-universal.dmg"
   name "WeakAuras Companion"
   desc "Update your auras from Wago.io and creates regular backups of them"
-  homepage "https://weakauras.wtf/"
+  homepage "https://github.com/WeakAuras/WeakAuras-Companion/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "WeakAuras Companion.app"
 
