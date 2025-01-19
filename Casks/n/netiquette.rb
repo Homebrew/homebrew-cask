@@ -6,7 +6,7 @@ cask "netiquette" do
       verified: "github.com/objective-see/"
   name "Netiquette"
   desc "Network monitor"
-  homepage "https://objective-see.com/products/netiquette.html"
+  homepage "https://objective-see.org/products/netiquette.html"
 
   depends_on macos: ">= :catalina"
 
