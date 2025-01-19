@@ -1,6 +1,6 @@
 cask "font-moralerspace-jpdoc" do
-  version "1.0.2"
-  sha256 "0c22320b9466d5cfb9e66c9ecba1bef6a71afe2a5890e81927efd78ba721261e"
+  version "1.1.0"
+  sha256 "46581e9c3f2f41da4601649a9dacf54e0551b06a35ebea56b8760cb9358dde0f"
 
   url "https://github.com/yuru7/moralerspace/releases/download/v#{version}/MoralerspaceJPDOC_v#{version}.zip"
   name "Moralerspace JPDOC"
