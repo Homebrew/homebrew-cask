@@ -12,7 +12,7 @@ cask "amiberry" do
   homepage "https://amiberry.com/"
 
   livecheck do
-    url "https://github.com/BlitterStudio/amiberry"
+    url :url
     strategy :github_latest
   end
 
