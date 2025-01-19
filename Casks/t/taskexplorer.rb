@@ -6,7 +6,7 @@ cask "taskexplorer" do
       verified: "bitbucket.org/objective-see/"
   name "TaskExplorer"
   desc "Tool to explore all the running tasks (processes)"
-  homepage "https://objective-see.com/products/taskexplorer.html"
+  homepage "https://objective-see.org/products/taskexplorer.html"
 
   app "TaskExplorer.app"
 

@@ -6,7 +6,7 @@ cask "knockknock" do
       verified: "github.com/objective-see/KnockKnock/"
   name "KnockKnock"
   desc "Tool to show what is persistently installed on the computer"
-  homepage "https://objective-see.com/products/knockknock.html"
+  homepage "https://objective-see.org/products/knockknock.html"
 
   depends_on macos: ">= :catalina"
 

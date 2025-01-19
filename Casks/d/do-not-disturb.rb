@@ -6,7 +6,7 @@ cask "do-not-disturb" do
       verified: "bitbucket.org/objective-see/"
   name "Do Not Disturb"
   desc "Open-source physical access (aka 'evil maid') attack detector"
-  homepage "https://objective-see.com/products/dnd.html"
+  homepage "https://objective-see.org/products/dnd.html"
 
   deprecate! date: "2024-11-16", because: :unmaintained
 

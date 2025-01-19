@@ -28,7 +28,7 @@ cask "blockblock" do
 
   name "BlockBlock"
   desc "Monitors common persistence locations"
-  homepage "https://objective-see.com/products/blockblock.html"
+  homepage "https://objective-see.org/products/blockblock.html"
 
   installer script: {
     executable: "#{staged_path}/BlockBlock Installer.app/Contents/MacOS/BlockBlock Installer",

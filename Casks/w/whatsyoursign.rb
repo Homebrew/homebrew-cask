@@ -6,7 +6,7 @@ cask "whatsyoursign" do
       verified: "github.com/objective-see/"
   name "What's Your Sign?"
   desc "Shows a files cryptographic signing information"
-  homepage "https://objective-see.com/products/whatsyoursign.html"
+  homepage "https://objective-see.org/products/whatsyoursign.html"
 
   installer manual: "WhatsYourSign Installer.app"
 

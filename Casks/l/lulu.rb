@@ -6,7 +6,7 @@ cask "lulu" do
       verified: "github.com/objective-see/LuLu/"
   name "LuLu"
   desc "Open-source firewall to block unknown outgoing connections"
-  homepage "https://objective-see.com/products/lulu.html"
+  homepage "https://objective-see.org/products/lulu.html"
 
   livecheck do
     url :url

@@ -6,7 +6,7 @@ cask "lockdown" do
       verified: "bitbucket.org/objective-see/"
   name "Lockdown"
   desc "Audits and remediates security configuration settings"
-  homepage "https://objective-see.com/products/lockdown.html"
+  homepage "https://objective-see.org/products/lockdown.html"
 
   app "Lockdown.app"
 
