@@ -1,9 +1,9 @@
 cask "kodi" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "21.1-Omega"
-  sha256 arm:   "9b21477b444dddeb309fcfddbcaeeb109d9fa430c04d7a932d3a2c4c35603efc",
-         intel: "f8e93515c6a1b8918ee3dc9ec87c3ffcefa70b95f4cf0673c1a4e894aca0d85d"
+  version "21.2-Omega"
+  sha256 arm:   "fef454cc79107fb7e600d81fd1ad173bb2f2481a3a32c78fe84f927b58446832",
+         intel: "3639fdb737e95fc2126b44e25cc4a88db6b857df7795f27ba8ed8d20eaa232f6"
 
   url "https://mirrors.kodi.tv/releases/osx/#{arch}/kodi-#{version}-#{arch}.dmg"
   name "Kodi"
