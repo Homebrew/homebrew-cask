@@ -11,6 +11,11 @@ cask "znote" do
   desc "Notes-taking app"
   homepage "https://znote.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   app "znote.app"
