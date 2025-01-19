@@ -1,6 +1,6 @@
 cask "metavideo" do
-  version "1.1.3"
-  sha256 "6866827f215ea48165d775639cbd31ae2851c8292fcf8901953055479bbd0738"
+  version "1.1.6"
+  sha256 "293faefc57d37057b3c36a9c64bf73a210d0a4887d91e34530340193733baa0f"
 
   url "https://neededapps.com/appcasts/metavideo/versions/#{version}"
   name "MetaVideo"
