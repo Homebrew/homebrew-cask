@@ -8,8 +8,10 @@ cask "zotero" do
   homepage "https://www.zotero.org/"
 
   livecheck do
-    url "https://www.zotero.org/download/client/dl?channel=release&platform=mac"
-    strategy :header_match
+    url "https://www.zotero.org/download/client/update/0/0/Darwin/0/release/update.xml?force=1"
+    strategy :xml do |xml|
+      xml.get_elements("//update").map { |item| item.attributes["version"] }
+    end
   end
 
   auto_updates true
