@@ -225,6 +225,7 @@ codeql
 codux
 cog
 coin-wallet
+colorwell
 commander-one
 commandpost
 compositor
