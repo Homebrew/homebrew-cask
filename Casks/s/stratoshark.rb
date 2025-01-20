@@ -17,6 +17,7 @@ cask "stratoshark" do
   end
 
   auto_updates true
+  conflicts_with cask: "stratoshark@dev"
   depends_on macos: ">= :big_sur"
 
   app "Stratoshark.app"
