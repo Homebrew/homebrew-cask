@@ -670,6 +670,7 @@ lynx
 maa
 maccy
 macfuse
+macfuse@dev
 macloggerdx
 macloggerdx@beta
 macpilot
