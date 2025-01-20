@@ -1169,6 +1169,7 @@ steelseries-gg
 steermouse
 steinberg-activation-manager
 stratoshark
+stratoshark@dev
 strongvpn
 studio-3t
 sublime-merge
