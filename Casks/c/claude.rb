@@ -32,6 +32,7 @@ cask "claude" do
     "~/Library/Caches/com.anthropic.claudefordesktop",
     "~/Library/Caches/com.anthropic.claudefordesktop.ShipIt",
     "~/Library/HTTPStorages/com.anthropic.claudefordesktop",
+    "~/Library/Logs/Claude",
     "~/Library/Preferences/com.anthropic.claudefordesktop.plist",
     "~/Library/Saved Application State/com.anthropic.claudefordesktop.savedState",
   ]
