@@ -1,6 +1,6 @@
 cask "duckduckgo" do
-  version "1.121.0,340"
-  sha256 "e133c93512235e73187846a96d577bce3d2eb0483f7d45a70421ea8f6e086740"
+  version "1.122.0,346"
+  sha256 "81f5374535cf7a2e81ca2cdfec72b7c218009f3ac196ce37281db1c3062635c8"
 
   url "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-#{version.csv.first}.#{version.csv.second}.dmg"
   name "DuckDuckGo"
