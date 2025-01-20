@@ -1,6 +1,6 @@
 cask "agi" do
-  version "3.3.2"
-  sha256 "1901407d93c5eb32256f98a2f3a4c941cad80174539d335f434b1357b63b3a55"
+  version "3.3.3"
+  sha256 "7b045ba934274eeced3d1f9df3101f0c67a6ec62d99a7d1986e54bec4de9d2af"
 
   url "https://github.com/google/agi/releases/download/v#{version}/agi-#{version}-macos.dmg",
       verified: "github.com/google/agi/"
