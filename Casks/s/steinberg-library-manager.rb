@@ -5,7 +5,7 @@ cask "steinberg-library-manager" do
   url "https://download.steinberg.net/static_content/runtime-components/steinberg-library-manager/#{version.csv.first}-#{version.csv.second}/Steinberg_Library_Manager_mac.dmg"
   name "Steinberg Library Manager"
   desc "Library manager for Steinberg software"
-  homepage "https://o.steinberg.net/en/support/content_and_accessories/steinberg_library_manager.html"
+  homepage "https://o.steinberg.net/en/support/downloads/steinberg_library_manager.html"
 
   livecheck do
     url "https://r.mb.steinberg.net/rc-slm-mac"
