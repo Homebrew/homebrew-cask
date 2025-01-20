@@ -8,8 +8,8 @@ cask "coteditor" do
     end
   end
   on_sierra do
-    version "3.9.7"
-    sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
+    version "3.7.8"
+    sha256 "c67a0b5049da7096228074d7b71e7678fcaaf795a5ae45bc593019662f0c6f09"
 
     livecheck do
       skip "Legacy version"
@@ -55,13 +55,21 @@ cask "coteditor" do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
+  on_ventura do
+    version "4.8.7"
+    sha256 "9c439ace99d6b74cf94738d24368ccc39c579902c7062f8e107c596061a58dda"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sonoma :or_newer do
     version "5.0.8"
     sha256 "1f0773115410510cc0074b01110260a03788e4a00c059eb7dd855b09226f3b17"
 
     livecheck do
-      url :url
-      strategy :github_latest
+      url "https://coteditor.com/appcast.xml"
+      strategy :sparkle, &:short_version
     end
   end
 
