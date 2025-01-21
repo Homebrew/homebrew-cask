@@ -598,6 +598,7 @@ juxtacode
 jyutping
 kaleidoscope
 kando
+katalon-studio
 kdenlive
 kdiff3
 kdrive
