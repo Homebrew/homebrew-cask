@@ -1,7 +1,7 @@
 cask "nordpass" do
   arch arm: "arm/"
 
-  version "5.26.18"
+  version "5.27.12"
   sha256 :no_check
 
   url "https://downloads.npass.app/mac/#{arch}NordPass.dmg",
