@@ -10,4 +10,6 @@ cask "filenic" do
   depends_on macos: ">= :ventura"
 
   app "FileNic.app"
+
+  zap trash: "~/Library/Application Support/FileNic"
 end
