@@ -1,6 +1,6 @@
 cask "ricoh-theta" do
-  version "3.20.0"
-  sha256 "78c215e3f44fe4c9422ba018ed21dae5323f3d6907c7c275d349436f51109696"
+  version "3.21.0"
+  sha256 "4c1d58b4bb1087c9129b99ac9cce1ff4cdc0439d1fa269b683b7f8b9e608f7a3"
 
   url "https://theta360-statics.s3.amazonaws.com/app/viewer/SphericalViewerUpdate/RICOH%20THETA.#{version}.app.zip",
       verified: "theta360-statics.s3.amazonaws.com/app/viewer/"
