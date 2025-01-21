@@ -158,6 +158,7 @@ bricklink-studio
 brickstore
 bridge
 browser-deputy
+browserosaurus
 bruno
 burp-suite
 burp-suite-professional
