@@ -1,6 +1,6 @@
 cask "yes24-ebook" do
-  version "1.0.1.17"
-  sha256 "e37845aec8ca49dac93a63e7343cc4b4042436cc412939f0179200ad0e0633e8"
+  version "1.0.1.18"
+  sha256 "77a8e4daec5035446de89107bdb9c5ae2a2e4fe9f407289e84c62e893148dc65"
 
   url "https://ebookcdn.yes24.com/UPGRADE/PC_CREMA/mac/#{version}/YES24eBook.dmg"
   name "YES24eBook"
