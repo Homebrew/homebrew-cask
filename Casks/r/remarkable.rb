@@ -9,6 +9,7 @@ cask "remarkable" do
   homepage "https://remarkable.com/"
 
   deprecate! date: "2024-01-17", because: :moved_to_mas
+  disable! date: "2025-01-22", because: :moved_to_mas
 
   auto_updates true
   depends_on macos: ">= :big_sur"
