@@ -1,6 +1,6 @@
 cask "legcord" do
-  version "1.0.7"
-  sha256 "80a8fef3b6be4105ab0c2c5fd5297bc04bbaf23659a25971f144ec6dfb207531"
+  version "1.0.8"
+  sha256 "b2aacc01d4f5c7eeee244aef871bbebedc881b4c28304edcec476f74312abb0f"
 
   url "https://github.com/legcord/legcord/releases/download/v#{version}/legcord-#{version}-mac-universal.dmg",
       verified: "github.com/legcord/legcord/"
