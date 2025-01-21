@@ -1,6 +1,6 @@
 cask "font-new-computer-modern" do
-  version "7.0.0"
-  sha256 "607c558ed73ed07df3b4be4a837c394d0cfb4e6206c1570c1064466162a0713e"
+  version "7.0.1"
+  sha256 "cf6608117e8354d9a89b851bba17cd505bcddca5b4f6499ec069e3488b1b2d15"
 
   url "https://download.gnu.org.ua/release/newcm/newcm-#{version}.txz"
   name "New Computer Modern"
