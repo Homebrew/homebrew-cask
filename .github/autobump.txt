@@ -679,6 +679,7 @@ mactracker
 macupdater
 macwhisper
 maestral
+mailbird
 mailbutler
 manictime
 marginnote
