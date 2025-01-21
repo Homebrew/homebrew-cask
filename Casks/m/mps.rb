@@ -1,9 +1,9 @@
 cask "mps" do
   arch arm: "macos-aarch64", intel: "macos"
 
-  version "2024.1.1,241.19072.1155"
-  sha256 arm:   "381b6c527f444ca2ea652054e172afee2096c29ad445cec7fa7fe6432cb41bea",
-         intel: "85f936a8d4a610b0232f5716f364cfae6edac5322fd40714c07e9ffabb11e85a"
+  version "2024.3,243.21565.447"
+  sha256 arm:   "9c7118db757ba4fa7b6725efa5b006f4e6db47ca2b2948a92e43c435329c9c79",
+         intel: "a5476c8aa604f3c37c192a5301eebf1c33d2ae733be018f485f3bf48d2a52366"
 
   url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.csv.first}-#{arch}.dmg"
   name "JetBrains MPS"
