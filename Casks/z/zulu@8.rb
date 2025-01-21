@@ -1,9 +1,9 @@
 cask "zulu@8" do
   arch arm: "aarch64", intel: "x64"
 
-  version "8.0.432,8.82.0.21"
-  sha256 arm:   "c7a5a7aa2270a5538b9a6e646b34b7df2197b15d7c0f754cbe176ffe92576e12",
-         intel: "f0416768b80e570e8e9e6dc6e1042f36632a33f3052c089586b55d09f59da515"
+  version "8.0.442,8.84.0.15"
+  sha256 arm:   "deaab641622ea649bbbf5d4766018f10e57b12a9e8bd07b3ada308eafe10cb6e",
+         intel: "10e4ef3f5307f8e477f206dc40eab52e555b4f720fc7153e04c6e4d60d6241a0"
 
   url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-ca-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/"
