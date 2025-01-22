@@ -1,6 +1,6 @@
 cask "simple-comic" do
-  version "1.9.8"
-  sha256 "4346ad5fe036ce7f37831d9a7e1e4ee4a1cd3f2fae64b92ca9a0cd028f95d545"
+  version "1.9.9"
+  sha256 "34fa1777c0643d145b8e8ba90b6c6eeb096b21c3beb34728c9df97dad9a1f1ac"
 
   url "https://github.com/MaddTheSane/Simple-Comic/releases/download/App-Store-#{version}/Simple.Comic.#{version}.zip"
   name "Simple Comic"
