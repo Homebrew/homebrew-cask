@@ -1,8 +1,11 @@
 cask "inav-configurator" do
-  version "7.1.2"
-  sha256 "afc1b988549f48e81839e900b3a46380a213b5e943fe0c27dfd2659047553891"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/iNavFlight/inav-configurator/releases/download/#{version}/INAV-Configurator_macOS_#{version}.zip"
+  version "8.0.0"
+  sha256 arm:   "7967c017eb21b2f6ae3b582a9d3b31b15652b670b0217f01fed3946b9775aeb7",
+         intel: "497a59fbc3117b99841158ec081e3f656eaa70039765942ddfe3cc464d5375dd"
+
+  url "https://github.com/iNavFlight/inav-configurator/releases/download/#{version}/INAV-Configurator_darwin_#{arch}_#{version}.zip"
   name "INAV Configurator"
   desc "Configuration tool for the INAV flight control system"
   homepage "https://github.com/iNavFlight/inav-configurator/"
@@ -20,8 +23,4 @@ cask "inav-configurator" do
     "~/Library/Preferences/com.nw-builder.inav-configurator.plist",
     "~/Library/Saved Application State/com.nw-builder.inav-configurator.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
