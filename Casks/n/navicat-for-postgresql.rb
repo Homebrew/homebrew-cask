@@ -1,5 +1,5 @@
 cask "navicat-for-postgresql" do
-  version "17.1.8"
+  version "17.1.9"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicat#{version.major}_pgsql_en.dmg"
