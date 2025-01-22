@@ -16,8 +16,8 @@ cask "sketch" do
     end
   end
   on_ventura :or_newer do
-    version "101.6,182078"
-    sha256 "30bcd1bbde8aa493592402d9fdceb5167543b440ee0954d451b6b5292a14cdd7"
+    version "101.8,182106"
+    sha256 "619913f16a7ec019748b1c5c4ed1a39cbb7bc26c9b68038f02ca330e5ab31725"
 
     livecheck do
       url "https://download.sketch.com/sketch-versions.xml"
