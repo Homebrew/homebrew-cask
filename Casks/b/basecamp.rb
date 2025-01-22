@@ -1,9 +1,9 @@
 cask "basecamp" do
   arch arm: "_arm64"
 
-  version "3,2.3.16"
-  sha256 arm:   "90b7a1833330495a76fdccaa04cd4f5de4c39e6c7e0c859927121c97186638ad",
-         intel: "d82f1d739361543d12e648d347c3d2f3cc446380818fb37a611c7eccadaf6c38"
+  version "3,2.4.0"
+  sha256 arm:   "e95fb757e6a1aa7b93543156605e36d1013dcf5ff75948d5e7ad9c09bd73bdfe",
+         intel: "56fa0db38a60e6c36267699a87ae04ea69ecaef0739d5fb7ee569a5275ea96ae"
 
   url "https://bc#{version.major}-desktop.s3.amazonaws.com/mac#{arch}/basecamp#{version.major}-#{version.csv.second}.zip",
       verified: "bc3-desktop.s3.amazonaws.com/"
@@ -25,7 +25,7 @@ cask "basecamp" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  app "Basecamp #{version.major}.app"
+  app "Basecamp.app"
 
   zap trash: [
     "~/Library/Application Support/Basecamp*",
