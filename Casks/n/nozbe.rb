@@ -1,6 +1,6 @@
 cask "nozbe" do
-  version "2025.01"
-  sha256 "d4151f8c37d1159b709f3e207f8aa6bea6c71902f11394a731311eaa402812cb"
+  version "2025.02"
+  sha256 "80498c831cbf6cf48c50d3e20d19fd32444392c70ae7f25eac161428283c25da"
 
   url "https://builds.nozbe.com/mac/#{version}/Nozbe.app.zip"
   name "Nozbe"
