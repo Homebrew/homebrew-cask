@@ -1,9 +1,9 @@
 cask "adobe-creative-cloud" do
   arch arm: "macarm64", intel: "osx10"
 
-  version "6.4.0.361"
-  sha256 arm:   "356cc46fb85e40405701a06acc42364395eb536dca3f49d7a6af1233f41ed4e5",
-         intel: "9fba05132eb535897fc36ad7e8612c5d9d178c7bbe0832fe7d2916567bfb88ce"
+  version "6.5.0.348"
+  sha256 arm:   "1607e7fdf40d3ac56486f92e4b92b3f0781557af6bb05cafbfe7af082909956b",
+         intel: "805dfacf145fa7714be7fde35be7038d4ad70ac928cd8e812f269514aa71b6c4"
 
   # If url breaks you can find the latest static urls - https://helpx.adobe.com/download-install/kb/creative-cloud-desktop-app-download.html
   url "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/#{version.major_minor_patch}/#{version.split(".").fourth}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
