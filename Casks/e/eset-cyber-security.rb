@@ -8,8 +8,10 @@ cask "eset-cyber-security" do
   homepage "https://www.eset.com/"
 
   livecheck do
-    url "https://help.eset.com/latestVersions/"
-    regex(%r{ESET\sCyber\sSecurity</p>\n.*/span>\sv?(\d+(?:\.\d+)+)}i)
+    url "https://www.eset.com/us/home/cyber-security/download/?tx_esetdownloads_ajax[product]=84&tx_esetdownloads_ajax[plugin_id]=1&type=13554"
+    strategy :json do |json|
+      json.dig("files", "installer")&.map { |_, item| item["full_version"] }
+    end
   end
 
   depends_on macos: ">= :big_sur"
