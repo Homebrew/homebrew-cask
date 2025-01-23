@@ -1,6 +1,6 @@
 cask "polyphone" do
-  version "2.5.0,124"
-  sha256 "031ad6ab2dc78841aefd5159d35194ffcf197d4845f3a084f0e0e5bb438d962b"
+  version "2.5.1,129"
+  sha256 "89a60fc2444a4502719d23f2d5404a1fa9677db64ef09267ebced0eddf77a0dc"
 
   url "https://www.polyphone.io/download/0/v#{version.csv.second}/Polyphone-MacOS_12-#{version.csv.first}.dmg",
       user_agent: :browser
