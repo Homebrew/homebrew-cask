@@ -18,13 +18,7 @@ cask "valhalla-supermassive" do
 
   pkg "ValhallaSupermassiveOSX.pkg"
 
-  uninstall pkgutil: [
-    "com.valhalladsp.supermassive.pkg.aax",
-    "com.valhalladsp.supermassive.pkg.au",
-    "com.valhalladsp.supermassive.pkg.presets",
-    "com.valhalladsp.supermassive.pkg.vst",
-    "com.valhalladsp.supermassive.pkg.vst3",
-  ]
+  uninstall pkgutil: "com.valhalladsp.supermassive.pkg.*"
 
   # No zap stanza required
 end
