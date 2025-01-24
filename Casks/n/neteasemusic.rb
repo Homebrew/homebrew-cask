@@ -17,7 +17,7 @@ cask "neteasemusic" do
   # That said, the API endpoint appears to work with a simple `GET` request.
   livecheck do
     url "https://music.163.com/api/appcustomconfig/get"
-    regex(/NeteaseCloudMusic_Music_official[._-]v?(\d+(?:[._]\d+)+)[._-]/i)
+    regex(/NeteaseCloudMusic[._-]Music[._-]official[._-]v?(\d+(?:[._]\d+)+)/i)
     strategy :json do |json, regex|
       json.dig("data", "web-new-download", "osx", "downloadUrl")&.[](regex, 1)
     end
