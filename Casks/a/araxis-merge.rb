@@ -57,11 +57,12 @@ cask "araxis-merge" do
   ]
 
   caveats <<~EOS
-    For the default git integration, edit the config file:
+    For instructions to integrate Araxis Merge with Finder or other applications,
+    see https://www.araxis.com/merge/documentation-os-x/installing.en
+
+    Note that integrations that depend on the `compare` tool will require adjustment,
+    e.g. for git:
       [mergetool "araxis"]
 	    path = "#{HOMEBREW_PREFIX}/bin/araxiscompare"
-
-    For general instructions to integrate Araxis Merge with Finder or other applications,
-    see https://www.araxis.com/merge/documentation-os-x/installing.en
   EOS
 end
