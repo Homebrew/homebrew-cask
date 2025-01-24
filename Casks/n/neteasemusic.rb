@@ -1,8 +1,8 @@
 cask "neteasemusic" do
-  version "3.0.6.2300"
-  sha256 "8f03e22cbcb03391f7639f3d680b7a2c56d499bc0cafc018a1b3ef04b50c75c0"
+  version "3.0.11.2382"
+  sha256 "a59b040076f9372123011f380ab3073e43aea26b1fb13783ba598e64f0af0a03"
 
-  url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version}_web.dmg",
+  url "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_#{version}.dmg",
       verified:   "d1.music.126.net/",
       user_agent: :fake
   name "NetEase cloud music"
@@ -17,7 +17,7 @@ cask "neteasemusic" do
   # That said, the API endpoint appears to work with a simple `GET` request.
   livecheck do
     url "https://music.163.com/api/appcustomconfig/get"
-    regex(/NeteaseMusic[._-]v?(\d+(?:[._]\d+)+)[._-]web/i)
+    regex(/NeteaseCloudMusic[._-]Music[._-]official[._-]v?(\d+(?:[._]\d+)+)/i)
     strategy :json do |json, regex|
       json.dig("data", "web-new-download", "osx", "downloadUrl")&.[](regex, 1)
     end
