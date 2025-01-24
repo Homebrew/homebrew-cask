@@ -1,5 +1,5 @@
 cask "mycloud" do
-  version "24.49.479"
+  version "25.04.590"
   sha256 :no_check
 
   url "https://filehostdesktopmac.mycloud.ch/myCloudDesktop.dmg"
