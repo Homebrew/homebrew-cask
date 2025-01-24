@@ -1,6 +1,6 @@
 cask "sanesidebuttons" do
-  version "1.2.0"
-  sha256 "c9bdf7cf464a7c68614c189a014fcb3bb2c92edcdc2826e33b983046e69ab742"
+  version "1.4.0"
+  sha256 "f8d56421f42af599f74250229e50abf6af32afc0ecdc1afec4726fc0417bfd63"
 
   url "https://github.com/thealpa/SaneSideButtons/releases/download/#{version}/SaneSideButtons.dmg"
   name "SaneSideButtons"
