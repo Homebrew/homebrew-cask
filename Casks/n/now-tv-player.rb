@@ -1,8 +1,8 @@
 cask "now-tv-player" do
   version "8.15.0"
-  sha256 :no_check
+  sha256 "dbc52d496e7f17cc0f8d20aef8c2fe447934217c0dec1e750b8058ce1bbbb1b8"
 
-  url "https://web.static.nowtv.com/watch/player/nowtv/gb/latest/NOWTVPlayer-Mac.dmg"
+  url "https://web.static.nowtv.com/watch/player/nowtv/gb/#{version}/NOWTVPlayer-Mac.dmg"
   name "NOW TV Player"
   desc "Video streaming service player"
   homepage "https://www.nowtv.com/"
