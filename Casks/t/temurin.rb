@@ -3,7 +3,7 @@ cask "temurin" do
 
   version "23.0.2,7"
   sha256 arm:   "ea222ea18eb240eb6e585c803a699c1afdeba645e0cb8acf55e39b009d5a4cbe",
-         intel: "557fd8563fac31ebf7c31de1e71146523334a14484e2502cbf4a33ce4b2519ea"
+         intel: "4a967b483a9f2010cf3b3ad7f2300031d1cea04bdc5ef6fde055391bc8e375d3"
 
   url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
       verified: "github.com/adoptium/"
