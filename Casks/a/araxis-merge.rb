@@ -59,5 +59,10 @@ cask "araxis-merge" do
   caveats <<~EOS
     For instructions to integrate Araxis Merge with Finder or other applications,
     see https://www.araxis.com/merge/documentation-os-x/installing.en
+
+    Note that integrations that depend on the `compare` tool will require adjustment,
+    e.g. for git:
+      [mergetool "araxis"]
+	    path = "#{HOMEBREW_PREFIX}/bin/araxiscompare"
   EOS
 end
