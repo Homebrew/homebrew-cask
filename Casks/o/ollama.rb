@@ -23,5 +23,7 @@ cask "ollama" do
   zap trash: [
     "~/.ollama",
     "~/Library/Application Support/Ollama",
+    "~/Library/Preferences/com.electron.ollama.plist",
+    "~/Library/Saved Application State/com.electron.ollama.savedState",
   ]
 end
