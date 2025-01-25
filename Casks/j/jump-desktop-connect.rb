@@ -8,8 +8,8 @@ cask "jump-desktop-connect" do
     end
   end
   on_high_sierra :or_newer do
-    version "6.10.37"
-    sha256 "980657c864b3dc8c9bfab3274afb531561a4d83b1e09fd6822b6dc66497367a6"
+    version "7.1.40"
+    sha256 "06a30591022d06d2f5ae580e15902a8ef1de1028819d02ee241bccd25976f8d2"
 
     livecheck do
       url "https://mirror.jumpdesktop.com/downloads/connect/connect-mac.xml"
@@ -17,7 +17,7 @@ cask "jump-desktop-connect" do
     end
   end
 
-  url "https://jumpdesktop.com/downloads/connect/JumpDesktopConnect-#{version}.dmg"
+  url "https://mirror.jumpdesktop.com/downloads/connect/JumpDesktopConnect-#{version}.dmg"
   name "Jump Desktop Connect"
   desc "Remote desktop app"
   homepage "https://jumpdesktop.com/connect/"
