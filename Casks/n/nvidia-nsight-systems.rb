@@ -28,7 +28,7 @@ cask "nvidia-nsight-systems" do
 
   app "NVIDIA Nsight Systems.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Saved Application State/com.nvidia.devtools.QuadD.savedState"
 
   caveats do
     requires_rosetta
