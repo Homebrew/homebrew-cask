@@ -11,10 +11,7 @@ cask "mutesync" do
   desc "Companion app to the mütesync physical button"
   homepage "https://mutesync.com/"
 
-  livecheck do
-    url "https://mutesync.s3.amazonaws.com/latest-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2025-01-26", because: :discontinued
 
   auto_updates true
 
