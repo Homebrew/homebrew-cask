@@ -24,11 +24,8 @@ cask "font-3270" do
   end
 
   font "3270-Regular.otf"
-  font "3270-Regular.ttf"
   font "3270Condensed-Regular.otf"
-  font "3270Condensed-Regular.ttf"
   font "3270SemiCondensed-Regular.otf"
-  font "3270SemiCondensed-Regular.ttf"
 
   # No zap stanza required
 end
