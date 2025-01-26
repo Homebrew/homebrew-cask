@@ -10,6 +10,7 @@ cask "box-notes" do
 
   # https://support.box.com/hc/en-us/articles/5504613283859-Box-Notes-Desktop-app-EOL-on-June-15-2022
   deprecate! date: "2024-01-24", because: :discontinued
+  disable! date: "2025-01-26", because: :discontinued
 
   app "Box Notes.app"
 
