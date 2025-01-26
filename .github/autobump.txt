@@ -1222,6 +1222,7 @@ testfully
 texifier
 texshop
 texstudio
+textual
 texturepacker
 tg-pro
 thangs-sync
