@@ -8,13 +8,22 @@ cask "squidman" do
   homepage "https://squidman.net/squidman/"
 
   livecheck do
-    url "https://squidman.net/squidman/releasenotes/index.html"
-    regex(/Version\s*?(\d+(?:\.\d+)+).*?released/i)
+    url :homepage
+    regex(%r{href=.*?/resources/downloads/?[^>]+?>\s*version\s+v?(\d+(?:\.\d+)+)\s*<}im)
   end
 
   app "SquidMan.app"
 
-  zap trash: "/usr/local/squid"
+  zap trash: [
+    "/Library/LaunchDaemons/com.mac.adg.SquidMan.plist",
+    "/Library/PrivilegedHelperTools/com.mac.adg.SquidMan",
+    "/usr/local/squid",
+    "~/Library/Caches/squid",
+    "~/Library/Logs/squid",
+    "~/Library/Preferences/com.mac.adg.SquidMan.plist",
+    "~/Library/Preferences/squid.conf",
+    "~/Library/Saved Application State/com.mac.adg.SquidMan.savedState",
+  ]
 
   caveats do
     files_in_usr_local
