@@ -15,11 +15,16 @@ cask "linearmouse" do
   end
 
   auto_updates true
+  conflicts_with cask: "linearmouse@beta"
   depends_on macos: ">= :catalina"
 
   app "LinearMouse.app"
 
-  uninstall quit: "com.lujjjh.LinearMouse"
+  uninstall quit:       "com.lujjjh.LinearMouse",
+            login_item: "LinearMouse"
 
-  zap trash: "~/Library/Preferences/com.lujjjh.LinearMouse.plist"
+  zap trash: [
+    "~/.config/linearmouse",
+    "~/Library/Preferences/com.lujjjh.LinearMouse.plist",
+  ]
 end
