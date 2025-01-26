@@ -10,25 +10,6 @@ cask "finch" do
   desc "Open source container development tool"
   homepage "https://github.com/runfinch/finch"
 
-  # Not every GitHub release provides a file for macOS, so we check multiple
-  # recent releases instead of only the "latest" release.
-  livecheck do
-    url :url
-    regex(/^Finch[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.(?:dmg|pkg|zip)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
-  end
-
   pkg "Finch-v#{version}-#{arch}.pkg"
 
   uninstall script: {
