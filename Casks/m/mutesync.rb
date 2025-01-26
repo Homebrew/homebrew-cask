@@ -11,7 +11,7 @@ cask "mutesync" do
   desc "Companion app to the mütesync physical button"
   homepage "https://mutesync.com/"
 
-  disable! date: "2025-01-26", because: :discontinued
+  disable! date: "2025-01-26", because: :discontinued, replacement: "muteme"
 
   auto_updates true
 
