@@ -8,23 +8,9 @@ cask "manuskript" do
   desc "Tool for writers"
   homepage "https://www.theologeek.ch/manuskript/"
 
-  # Not every GitHub release provides a file for macOS, so we check multiple
-  # recent releases instead of only the "latest" release.
   livecheck do
-    url :url
-    regex(/^manuskript[._-]v?(\d+(?:\.\d+)+)[._-]osx\.(?:dmg|pkg|zip)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
+    url "https://www.theologeek.ch/manuskript/download/"
+    regex(/href.*?manuskript[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg/i)
   end
 
   app "manuskript.app"
