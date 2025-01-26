@@ -8,25 +8,7 @@ cask "xdm" do
   desc "Tool to increase download speed"
   homepage "https://xtremedownloadmanager.com/"
 
-  # Not every GitHub release provides a file for macOS, so we check multiple
-  # recent releases instead of only the "latest" release.
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_releases do |json, regex|
-      file_regex = /^XDMSetup\.dmg$/i
-
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-        next unless release["assets"]&.any? { |asset| asset["name"]&.match?(file_regex) }
-
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
-  end
+  deprecate! date: "2024-01-26", because: :unmaintained
 
   installer script: {
     executable: "#{staged_path}/install",
