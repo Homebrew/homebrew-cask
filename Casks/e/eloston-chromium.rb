@@ -1,54 +1,26 @@
 cask "eloston-chromium" do
-  arch arm: "arm64", intel: "x86-64"
+  arch arm: "arm64", intel: "x86_64"
 
-  sha256 arm:   "9d6eb10dd60ce80df0f705cb15fc8b6a46480a0815294c8b5cd7b7ab60fa395b",
-         intel: "08a6d509a51c6056a5775e9ed9d4ba2233378d8fa532bcc917a6371dae017e5c"
-
-  on_arm do
-    version "131.0.6778.264-1.1"
-
-    livecheck do
-      url :url
-      regex(/^v?(\d+(?:[.-]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?$/i)
-      strategy :github_latest do |json, regex|
-        match = json["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
-  end
-  on_intel do
-    version "130.0.6723.116-1.1"
-
-    # Upstream isn't able to provide Intel builds for the time being, so we
-    # have to use the `GithubReleases` strategy to check recent releases and
-    # identify the latest version with an Intel release asset.
-    # TODO: Switch back to one `GithubLatest` `livecheck` block when upstream
-    # reliably publishes Intel builds again.
-    livecheck do
-      url :url
-      regex(/ungoogled[._-]chromium[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}[._-]macos\.dmg/i)
-      strategy :github_releases do |json, regex|
-        json.map do |release|
-          next if release["draft"] || release["prerelease"]
-
-          release["assets"]&.map do |asset|
-            match = asset["name"]&.match(regex)
-            next if match.blank?
-
-            match[1]
-          end
-        end.flatten
-      end
-    end
-  end
+  version "132.0.6834.110-1.1"
+  sha256 arm:   "7cdab8658cccff9a9a0a79ff961a95dd0efee234f9bd1a0e8a7ee297805ea37a",
+         intel: "bf71f36d27ed8139379f9303cabba4f125683e967585182cd2812958264058ad"
 
   url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}_#{arch}-macos.dmg",
       verified: "github.com/ungoogled-software/ungoogled-chromium-macos/"
   name "Ungoogled Chromium"
   desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:[.-]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?$/i)
+    strategy :github_latest do |json, regex|
+      match = json["tag_name"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
+  end
 
   conflicts_with cask: [
     "chromium",
