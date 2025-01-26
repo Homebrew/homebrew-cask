@@ -8,21 +8,9 @@ cask "aerial@beta" do
   desc "Apple TV Aerial screensaver"
   homepage "https://aerialscreensaver.github.io/"
 
-  # Beta releases are marked as pre-release, so we have to use the
-  # `GithubReleases` strategy to check all recent releases.
   livecheck do
     url :url
     regex(/^v?(\d+(?:\.\d+)*(?:[._-]?beta\d+)?)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"]
-
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
   end
 
   conflicts_with cask: "aerial"
