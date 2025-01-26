@@ -1,9 +1,9 @@
 cask "powder" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "99.0.377"
-  sha256 arm:   "778efa97a6bcc44a4903e5e6b0a5326a6ffeab2bf2f477ee04cccf9130fee358",
-         intel: "8379db8ea3b7c35de56437af2d8f9b6a46bdabb975dce901282570f8fa277b06"
+  version "99.1.380"
+  sha256 arm:   "b43a17d78f1b2b98966330c77b7f12e02db00eeec0b78c18019ddfeaeac11d62",
+         intel: "be4e99c40d5c5fa86d3054c3e120ebef45fc33d14d10f6eb47757754a68e3168"
 
   url "https://github.com/The-Powder-Toy/The-Powder-Toy/releases/download/v#{version}/powder-v#{version}-#{arch}-darwin-macos.dmg",
       verified: "github.com/The-Powder-Toy/The-Powder-Toy/"
