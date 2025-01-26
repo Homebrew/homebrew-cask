@@ -2,30 +2,14 @@ cask "nextcloud-vfs" do
   version "3.15.3"
   sha256 "f2ca9a7acd71415668f62e5d73d20af2c3bb239104889da497632c8a487b9ce1"
 
-  url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}-macOS-vfs.pkg",
-      verified: "github.com/nextcloud-releases/desktop/"
+  url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}-macOS-vfs.pkg"
   name "Nextcloud Virtual Files"
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"
 
-  # Upstream publishes releases for multiple different minor versions and the
-  # "latest" release is sometimes a lower version. Until the "latest" release
-  # is reliably the highest version, we have to check multiple releases.
   livecheck do
-    url :url
-    regex(/^Nextcloud[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]vfs\.pkg$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
+    url "https://download.nextcloud.com/desktop/releases/Mac/Installer/"
+    regex(/href=.*?Nextcloud[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]vfs\.pkg/i)
   end
 
   auto_updates true
