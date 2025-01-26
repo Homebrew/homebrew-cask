@@ -8,10 +8,7 @@ cask "lazarus" do
   desc "IDE for rapid application development"
   homepage "https://www.lazarus-ide.org/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?macOS%20x86-64/Lazarus%20v?(\d+(?:\.\d+)+)/}i)
-  end
+  deprecate! date: "2025-01-26", because: :no_longer_meets_criteria
 
   depends_on cask: "fpc-laz"
   depends_on cask: "fpc-src-laz"
