@@ -28,6 +28,7 @@ cask "zed" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zed.zed.sfl*",
     "~/Library/Application Support/Zed",
     "~/Library/Caches/dev.zed.Zed",
+    "~/Library/Caches/Zed",
     "~/Library/HTTPStorages/dev.zed.Zed",
     "~/Library/Logs/Zed",
     "~/Library/Preferences/dev.zed.Zed.plist",
