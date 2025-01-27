@@ -1,25 +1,34 @@
 cask "font-maple-mono" do
   # Check on next version bump if the `container` stanza can be removed
-  version "6.4"
-  sha256 "7f07c594d6da5971428dc9e8ecd2b7759a80cec1cb87dadd1a44aadbac5cf6ac"
+  version "7.0-beta36"
+  sha256 "2774a3ac6ab66e46bfaaea98d3cd71bff696eabcb8c103eab7fc7bae461a534c"
 
-  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-otf.zip"
+  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-ttf.zip"
   name "Maple Mono"
   homepage "https://github.com/subframe7536/Maple-font"
 
   livecheck do
     url :url
+    regex(/^v?(\d+(?:\.\d+)+(?:-beta\d+)?)$/i)
     strategy :github_latest
   end
 
-  container type: :tar
-
-  font "MapleMono-Bold.otf"
-  font "MapleMono-BoldItalic.otf"
-  font "MapleMono-Italic.otf"
-  font "MapleMono-Light.otf"
-  font "MapleMono-LightItalic.otf"
-  font "MapleMono-Regular.otf"
+  font "MapleMono-Bold.ttf"
+  font "MapleMono-BoldItalic.ttf"
+  font "MapleMono-ExtraBold.ttf"
+  font "MapleMono-ExtraBoldItalic.ttf"
+  font "MapleMono-ExtraLight.ttf"
+  font "MapleMono-ExtraLightItalic.ttf"
+  font "MapleMono-Italic.ttf"
+  font "MapleMono-Light.ttf"
+  font "MapleMono-LightItalic.ttf"
+  font "MapleMono-Medium.ttf"
+  font "MapleMono-MediumItalic.ttf"
+  font "MapleMono-Regular.ttf"
+  font "MapleMono-SemiBold.ttf"
+  font "MapleMono-SemiBoldItalic.ttf"
+  font "MapleMono-Thin.ttf"
+  font "MapleMono-ThinItalic.ttf"
 
   # No zap stanza required
 end
