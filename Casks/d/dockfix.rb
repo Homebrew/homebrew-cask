@@ -9,7 +9,7 @@ cask "dockfix" do
 
   livecheck do
     url "https://dockfix.lubker.dk/changelog/"
-    regex(/<h2[^>]*?>[^<]*?v?(\d+(?:\.\d+)+)[ <"]/i)
+    regex(/<h\d[^>]*?>[^<]*?v?(\d+(?:\.\d+)+)[ <"]/i)
   end
 
   auto_updates true
