@@ -380,6 +380,7 @@ figma
 figma-agent
 figma@beta
 fiji
+file-juicer
 filen
 finalshell
 finbar
