@@ -988,6 +988,7 @@ qfinder-pro
 qgis
 qgroundcontrol
 qlab
+qlc+
 qlmarkdown
 qlvideo
 qownnotes
