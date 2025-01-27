@@ -393,6 +393,7 @@ firefox@beta
 firefox@developer-edition
 firefox@esr
 fixkey
+flashspace
 fleet
 fliqlo
 flirc
