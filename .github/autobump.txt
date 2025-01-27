@@ -131,6 +131,7 @@ bilibili
 binance
 bing-wallpaper
 bisq
+bit-slicer
 bitbox
 bitwarden
 bitwig-studio
