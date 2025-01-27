@@ -8,11 +8,7 @@ cask "dingtalk-lite" do
   desc "Teamwork app by Alibaba Group"
   homepage "https://www.dingtalk.com/"
 
-  livecheck do
-    url "https://www.dingtalk.com/mac/d/qd=20170420173511985"
-    regex(/DingTalkLite_v(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :header_match
-  end
+  disable! date: "2024-01-27", because: :no_longer_available
 
   auto_updates true
 
