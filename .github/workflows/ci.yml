@@ -264,7 +264,7 @@ jobs:
 
             exit 1 if errors.any?
           EOF
-        if: always() && steps.snapshot.outcome == 'success'
+        if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success'
 
   conclusion:
     name: conclusion
