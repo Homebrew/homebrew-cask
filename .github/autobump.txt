@@ -120,6 +120,7 @@ bbedit
 beekeeper-studio
 beeper
 bentobox
+betterandbetter
 betterdisplay
 bettermouse
 bettertouchtool
