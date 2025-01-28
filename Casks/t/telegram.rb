@@ -7,9 +7,13 @@ cask "telegram" do
   desc "Messaging app with a focus on speed and security"
   homepage "https://macos.telegram.org/"
 
+  # The sparkle feed uses incorrect pubDate values, so it's necessary to
+  # work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://osx.telegram.org/updates/versions.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.map(&:nice_version)
+    end
   end
 
   auto_updates true
