@@ -677,6 +677,7 @@ lx-music
 lycheeslicer
 lyn
 lynx
+lyricsfinder
 maa
 maccy
 macfuse
