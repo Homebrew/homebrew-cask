@@ -213,6 +213,7 @@ clickhouse
 clickup
 clion
 clion@eap
+clip-studio-paint
 clipbook
 clock-signal
 clockify
