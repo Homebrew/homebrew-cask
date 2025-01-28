@@ -369,6 +369,7 @@ expressvpn
 fantastical
 far2l
 fastrawviewer
+fathom
 fbreader
 fedistar
 fedora-media-writer

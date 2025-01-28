@@ -2,9 +2,9 @@ cask "fathom" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "_arm64"
 
-  version "1.36.0"
-  sha256 arm:   "a41140c4f92ed15bd33deb40136aff0b773c66f4fd660c72f83891c9c5934771",
-         intel: "877c70b85c561b8c25978fd872343375bafc1d5ba770017d571d6a326e92561e"
+  version "1.37.0"
+  sha256 arm:   "4afbbaf21180906f589efd2c2336f6e5adeda625e379d7e293c267094d4925db",
+         intel: "7a43e6b04f1d2a32b6b598e196e5834b481b960b1d6e86d58b42bb74a3f745ea"
 
   url "https://storage.googleapis.com/electron_releases/v#{version}/Fathom-darwin-#{arch}-#{version}.dmg",
       verified: "storage.googleapis.com/electron_releases/"
