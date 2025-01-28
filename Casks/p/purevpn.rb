@@ -1,5 +1,5 @@
 cask "purevpn" do
-  version "9.27.0"
+  version "9.28.0"
   sha256 :no_check
 
   url "https://dzglif4kkvz04.cloudfront.net/mac-2.0/packages/Production/PureVPN.pkg",
