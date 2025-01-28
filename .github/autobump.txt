@@ -1224,6 +1224,7 @@ temurin
 temurin@17
 temurin@21
 tenable-nessus-agent
+tencent-docs
 tencent-lemon
 tencent-meeting
 termius
