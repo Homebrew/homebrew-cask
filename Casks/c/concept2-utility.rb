@@ -13,7 +13,7 @@ cask "concept2-utility" do
   end
   on_mojave :or_newer do
     version "7.15.00"
-    sha256 "fefc76612a36aae7a2717433681df3b22a0d36259c65a24c27ca71f3e7c1195b"
+    sha256 "49970f8773ed253ce3db4cc922e05528bfc43ffd3c3bd67d3889a8710589b21f"
 
     url "https://software.concept2.com/utility/Concept2Utility#{version.no_dots}.pkg"
 
