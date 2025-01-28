@@ -965,6 +965,7 @@ private-internet-access
 privileges
 processing
 processspy
+proclaim
 progressive-downloader
 pronotes
 propresenter
