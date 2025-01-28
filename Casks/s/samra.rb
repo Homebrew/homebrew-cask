@@ -19,7 +19,7 @@ cask "samra" do
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args:         ["-d", "com.apple.quarantine", "#{appdir}/Samra.app"],
+                   args:         ["-rd", "com.apple.quarantine", "#{appdir}/Samra.app"],
                    sudo:         false,
                    print_stderr: false
   end
