@@ -349,6 +349,7 @@ element@nightly
 elephas
 elephicon
 elgato-camera-hub
+elgato-control-center
 elgato-stream-deck
 eloston-chromium
 emacs@nightly
