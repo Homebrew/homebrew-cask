@@ -1,12 +1,8 @@
-# typed: strict
-# frozen_string_literal: true
-
 cask "samra" do
-  version :latest
+  version "1.4.1"
   sha256 :no_check
 
-  url "https://github.com/NSAntoine/Samra/releases/latest/download/Samra.app.zip",
-      verified: "github.com/NSAntoine/Samra/"
+  url "https://github.com/NSAntoine/Samra/releases/latest/download/Samra.app.zip"
   name "Samra"
   desc "Native Asset Catalog explorer & editor"
   homepage "https://github.com/NSAntoine/Samra"
@@ -21,11 +17,11 @@ cask "samra" do
 
   app "Samra.app"
 
-  # Remove quarantine attribute for Gatekeeper
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-d", "com.apple.quarantine", "#{appdir}/Samra.app"],
-                   sudo: false
+                   args:         ["-d", "com.apple.quarantine", "#{appdir}/Samra.app"],
+                   sudo:         false,
+                   print_stderr: false
   end
 
   zap trash: [
