@@ -1,9 +1,9 @@
 cask "virtualbox@beta" do
   arch arm: "macOSArm64", intel: "OSX"
 
-  version "7.1.7-167180"
-  sha256 arm:   "83b0c5515536bc9356d62a466a66a8897dcf2c79f5c89130cfc583c987f64b28",
-         intel: "e2d8d8b2f7017f2d5d506c6419f18449636f9e9c5e9ec4cbacb33941bfbb99a9"
+  version "7.1.7-167229"
+  sha256 arm:   "b27cbc5dea77092cb11a18ae75e187cd2a63dccfa4a60caa9b84bcd75e6acd1b",
+         intel: "b22fb0ac1b811bf3f726841af497429c559f15b1370835dbda8c6446a2f4a21e"
 
   url "https://www.virtualbox.org/download/testcase/VirtualBox-#{version}-#{arch}.dmg"
   name "Oracle VirtualBox"
