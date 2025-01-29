@@ -2,9 +2,9 @@ cask "timeular" do
   arch arm: "-m1-arm64"
   livecheck_folder = on_arch_conditional arm: "m1", intel: "latest"
 
-  version "6.8.5"
-  sha256 arm:   "bcc572f0c3d2d266dd388320ec0b48820b363b2b1664be78e4b59089bcebe7e2",
-         intel: "e3dbf1e2932f50f1690a436c51da430ec846942d2b33bc1e59254c599a2debf3"
+  version "6.9.0"
+  sha256 arm:   "920f7aee05d6386e382080ff112a2a7ee02e42f074e3a59b8f1a7d5a5625380d",
+         intel: "b756c07870cbe5fd583f270a713a303a3de74828b8635834d43e4850744cf511"
 
   url "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/Timeular-#{version}#{arch}.dmg",
       verified: "timeular-desktop-packages.s3.amazonaws.com/"
