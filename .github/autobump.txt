@@ -103,6 +103,7 @@ automattic-texts
 avast-secure-browser
 aws-vpn-client
 axure-rp
+azure-data-studio
 ba-connected
 babeledit
 backblaze
