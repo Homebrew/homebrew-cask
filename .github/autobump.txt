@@ -97,6 +97,7 @@ astah-professional
 atlauncher
 atomic-wallet
 audacity
+audio-hijack
 audius
 automattic-texts
 avast-secure-browser
