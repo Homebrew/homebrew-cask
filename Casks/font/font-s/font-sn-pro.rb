@@ -1,6 +1,6 @@
 cask "font-sn-pro" do
-  version "1.3.0"
-  sha256 "db163ac2c3689a7490bca084ca992d757d9f861fff1eb1841989d9a1b44f2ac4"
+  version "1.4.0"
+  sha256 "d746f61b0a25d10b159e4a5ac577cf66522fbc7faf66defcce207e8379696a66"
 
   url "https://github.com/supernotes/sn-pro/releases/download/#{version}/SN-Pro.zip",
       verified: "github.com/supernotes/sn-pro/"
