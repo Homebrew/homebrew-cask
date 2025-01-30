@@ -1,5 +1,5 @@
 cask "dockfix" do
-  version "3.5"
+  version "3.5.1"
   sha256 :no_check
 
   url "https://lubker.dk/dockfix/download.php"
