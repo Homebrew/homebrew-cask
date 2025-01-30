@@ -490,6 +490,7 @@ ghostty
 ghostty@tip
 git-credential-manager
 gitbutler
+gitfox
 github
 github-copilot-for-xcode
 github@beta
