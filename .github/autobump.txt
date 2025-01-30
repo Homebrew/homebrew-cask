@@ -116,6 +116,7 @@ banana-cake-pop
 bananas
 banking-4
 banktivity
+basecamp
 batteries
 bazecor
 bbedit
