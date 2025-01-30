@@ -556,6 +556,7 @@ ia-presenter
 ibackup-viewer
 ibkr
 ibm-cloud-cli
+ice
 icollections
 ideamaker
 idrive
