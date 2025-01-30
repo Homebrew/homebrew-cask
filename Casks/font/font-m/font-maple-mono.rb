@@ -1,9 +1,8 @@
 cask "font-maple-mono" do
-  # Check on next version bump if the `container` stanza can be removed
   version "7.0-beta36"
   sha256 "2774a3ac6ab66e46bfaaea98d3cd71bff696eabcb8c103eab7fc7bae461a534c"
 
-  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-ttf.zip"
+  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-TTF.zip"
   name "Maple Mono"
   homepage "https://github.com/subframe7536/Maple-font"
 
