@@ -18,8 +18,9 @@ cask "gisto" do
   desc "Snippets management desktop application"
   homepage "https://www.gisto.org/"
 
-  # Disable livecheck as this is pre-release
-  livecheck false
+  livecheck do
+    skip "No version information available"
+  end
 
   app "Gisto.app"
 
