@@ -15,6 +15,7 @@
   "native-access": "https://www.native-instruments.com/en/specials/native-access-2/",
   "tableau": [
     "https://www.tableau.com/products/desktop",
+    "https://www.tableau.com/support/releases",
     "https://downloads.tableau.com/TableauAutoUpdate.xml"
   ],
   "tableau-prep": [
