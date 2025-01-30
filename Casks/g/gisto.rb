@@ -1,25 +1,22 @@
 cask "gisto" do
-  version "1.13.4"
-  sha256 "40b8cb8654231af8550d0df76d39a8e69eb1e2fc909faba68882f2fe3576800e"
+  version "2.0.0-beta+1"
 
-  url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto-#{version}.dmg",
-      verified: "github.com/Gisto/Gisto/"
+  on_arm do
+    sha256 "b5064a2b27415d21ae7ea0c0900e605080ad815f2b3218cc08f404092da67143"
+
+    url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto_#{version}_aarch64.dmg",
+        verified: "github.com/Gisto/Gisto"
+  end
+  on_intel do
+    sha256 "59ebde1cd1ba76781e0b37087ba526bc4261df559ff27b36a6329544938ca3ad"
+
+    url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto_#{version}_x64.dmg",
+        verified: "github.com/Gisto/Gisto"
+  end
+
   name "Gisto"
-  desc "Snippets management desktop application with (team) sharing options"
-  homepage "https://www.gistoapp.com/"
-
-  deprecate! date: "2024-07-11", because: :unmaintained
+  desc "Snippets management desktop application"
+  homepage "https://www.gisto.org/"
 
   app "Gisto.app"
-
-  zap trash: [
-    "~/Library/Application Support/Gisto",
-    "~/Library/Logs/Gisto",
-    "~/Library/Preferences/com.gistoapp.gisto2.plist",
-    "~/Library/Saved Application State/com.gistoapp.gisto2.savedState",
-  ]
-
-  caveats do
-    requires_rosetta
-  end
 end
