@@ -1,9 +1,6 @@
 cask "gisto" do
   version "2.0.0-beta+1"
 
-  # Disable livecheck as this is pre-release
-  livecheck false
-
   on_arm do
     sha256 "b5064a2b27415d21ae7ea0c0900e605080ad815f2b3218cc08f404092da67143"
 
@@ -20,6 +17,9 @@ cask "gisto" do
   name "Gisto"
   desc "Snippets management desktop application"
   homepage "https://www.gisto.org/"
+
+  # Disable livecheck as this is pre-release
+  livecheck false
 
   app "Gisto.app"
 
