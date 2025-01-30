@@ -2,13 +2,13 @@ cask "gisto" do
   version "2.0.0-1"
 
   on_arm do
-    sha256 "b5064a2b27415d21ae7ea0c0900e605080ad815f2b3218cc08f404092da67143"
+    sha256 "e53304e5bc6ab8ef3a420bf4d02e5507cbb58d3e7993c221cd5a95f7c4ef9643"
 
     url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto_#{version}_aarch64.dmg",
         verified: "github.com/Gisto/Gisto"
   end
   on_intel do
-    sha256 "59ebde1cd1ba76781e0b37087ba526bc4261df559ff27b36a6329544938ca3ad"
+    sha256 "f281a9b63ddc1e7660a0c99333145616e377557d95ffb8bc64f29e7db3a6150e"
 
     url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto_#{version}_x64.dmg",
         verified: "github.com/Gisto/Gisto"
