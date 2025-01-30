@@ -648,6 +648,7 @@ libcblite
 libcblite-community
 libreoffice
 libreoffice-language-pack
+libreoffice-still
 librewolf
 lidarr
 lightburn
