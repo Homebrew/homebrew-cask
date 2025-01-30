@@ -9,6 +9,7 @@ cask "xdm" do
   homepage "https://xtremedownloadmanager.com/"
 
   deprecate! date: "2024-01-26", because: :unmaintained
+  disable! date: "2025-01-30", because: :unmaintained
 
   installer script: {
     executable: "#{staged_path}/install",
