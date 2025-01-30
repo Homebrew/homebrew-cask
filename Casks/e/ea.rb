@@ -1,5 +1,5 @@
 cask "ea" do
-  version "13.380.0.5893"
+  version "13.387.0.5900"
   sha256 :no_check
 
   url "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EA%20app.dmg",
