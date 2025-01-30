@@ -1,9 +1,9 @@
 cask "crosspaste" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "1.1.0.1184"
-  sha256 arm:   "ff5326676af75b224dc6a29a2ed1b9c86156a72ea1086fd14725c7e0e932818a",
-         intel: "810dfc25471a48b8c20fe305415b67003081e7bd353a36d46deed4077bf35e74"
+  version "1.1.1.1232"
+  sha256 arm:   "83357aa589b3f2d6dfe617d796a38f605fee04ed3bb75e65d3caf36fec794dbb",
+         intel: "807353b82b0c3b29de1b4cd0c7cd9f7c783c24684f027a31e2c2143e38814bd2"
 
   url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-mac-#{arch}.zip",
       verified: "github.com/CrossPaste/crosspaste-desktop/"
