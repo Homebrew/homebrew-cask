@@ -19,4 +19,13 @@ cask "gisto" do
   homepage "https://www.gisto.org/"
 
   app "Gisto.app"
+
+  zap trash: [
+    "~/Library/Application Support/Gisto",
+    "~/Library/Caches/com.gistoapp.gisto2",
+    "~/Library/Logs/Gisto",
+    "~/Library/Preferences/com.gistoapp.gisto2.helper.plist",
+    "~/Library/Preferences/com.gistoapp.gisto2.plist",
+    "~/Library/Saved Application State/com.gistoapp.gisto2.savedState",
+  ]
 end
