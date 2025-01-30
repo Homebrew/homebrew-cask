@@ -1,21 +1,17 @@
 cask "lantern" do
-  version "7.9.5"
-  sha256 :no_check
+  version "8.0.0"
+  sha256 "5ad26312c7b54438675b9a5bcdfcab49213bee6744476a03f0c4fb1e367a75b5"
 
-  url "https://lantern.s3.amazonaws.com/lantern-installer.dmg",
-      verified: "lantern.s3.amazonaws.com/"
+  url "https://github.com/getlantern/lantern-binaries/raw/main/lantern-installer-#{version}.dmg",
+      verified: "github.com/getlantern/lantern-binaries/"
   name "Lantern"
   desc "Open Internet For All"
   homepage "https://lantern.io/"
 
-  # The first-party download page (https://lantern.io/download?os=mac) only
-  # links to an unversioned file, with no version information on the page. We
-  # check GitHub releases as a best guess of when a new version is released.
-  # Upstream has not marked recent releases as "latest", so we have to check
-  # multiple releases until upstream reliably marks releases as "latest" again.
   livecheck do
-    url "https://github.com/getlantern/lantern"
-    strategy :github_releases
+    url "https://github.com/getlantern/lantern-binaries"
+    regex(/href=.*?lantern[._-]installer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match
   end
 
   app "Lantern.app"
@@ -29,8 +25,4 @@ cask "lantern" do
     "~/Library/Application Support/Lantern",
     "~/Library/Logs/Lantern",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
