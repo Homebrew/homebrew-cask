@@ -1,5 +1,5 @@
 cask "gosign" do
-  version "2.3.2"
+  version "2.3.3"
   sha256 :no_check
 
   url "https://rinnovofirma.infocert.it/gosign/download/darwin/latest"
