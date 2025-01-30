@@ -1,9 +1,9 @@
 cask "blisk" do
   arch arm: "-m1"
 
-  version "24.0.397.155"
-  sha256 arm:   "40c9cc0fb051f84708d81e898e96143076a3081611d5b82b26e9aef6b4a10ae9",
-         intel: "ecb02f088c2e2bc9ca7832786fe655bb7cef4a62123ab99b351b9c59a525d71b"
+  version "24.0.411.33"
+  sha256 arm:   "fca7dee8b53fb006ece0e3e3e34e74158d0be2e29b5048b9802de7fb3cefafc3",
+         intel: "7838f241eea11cc33be92d064ab52f9fdda57dec5b0572993cb6e50f63d8647e"
 
   url "https://bliskcloudstorage.blob.core.windows.net/mac#{arch}-installers/BliskInstaller_#{version}.dmg",
       verified: "bliskcloudstorage.blob.core.windows.net/"
