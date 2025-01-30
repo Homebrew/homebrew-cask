@@ -451,6 +451,7 @@ font-lxgw-neozhisong
 font-lxgw-simxihei
 font-lxgw-simzhisong
 font-sarasa-gothic
+font-sn-pro
 font-sudo
 foobar2000
 fork
