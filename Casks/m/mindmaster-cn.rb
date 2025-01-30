@@ -1,8 +1,8 @@
 cask "mindmaster-cn" do
-  version "12.1.2,5379"
-  sha256 "02ba1da906de8235ee564dad2e10f339ff0230b1b09ac0eae8841e3c6fb51501"
+  version "12.2.3,5379"
+  sha256 "b415c5fcb5ff026d106c06632ab87a9c1b966f55903fbc44948077b81385bf41"
 
-  url "https://cc-download.edrawsoft.cn/cbs_down/mindmaster_cn_#{version.csv.first}_full#{version.csv.second}.zip"
+  url "https://cc-download.edrawsoft.cn/mindmaster_cn_full#{version.csv.second}.dmg"
   name "MindMaster"
   name "亿图脑图MindMaster"
   desc "Mind mapping software"
@@ -19,7 +19,7 @@ cask "mindmaster-cn" do
     end
   end
 
-  app "MindMaster.app"
+  app "亿图脑图MindMaster.app"
 
   caveats do
     requires_rosetta
