@@ -678,6 +678,7 @@ lulu
 lunacy
 lunar
 lunar-client
+lunatask
 lx-music
 lycheeslicer
 lyn
