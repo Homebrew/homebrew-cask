@@ -785,6 +785,7 @@ motion
 motu-m-series
 mountain-duck
 mp3tag
+mplab-xc32
 mqttx
 msty
 mubu
