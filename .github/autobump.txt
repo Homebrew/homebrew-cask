@@ -1347,6 +1347,7 @@ vitamin-r
 vivaldi
 vivaldi@snapshot
 viz
+vk-calls
 vlc@nightly
 vnc-viewer
 volanta
