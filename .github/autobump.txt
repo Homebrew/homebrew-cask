@@ -1168,6 +1168,7 @@ sonos
 soulver
 sound-control
 sound-siphon
+soundsource@test
 sourcetree
 sourcetree@beta
 space-capsule
