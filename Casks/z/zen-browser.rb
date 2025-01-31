@@ -1,11 +1,8 @@
 cask "zen-browser" do
-  arch arm: "aarch64", intel: "x86_64"
+  version "1.7.4b"
+  sha256 "4ac808cfdc82f97936b4deca8e61330fb08a2121f5c654e788ccf0d0b828af07"
 
-  version "1.7.2b"
-  sha256 arm:   "1e1c004d22e9eae0806bf4c62e932b1ab8e24dba011b563408eb573ef5439605",
-         intel: "a8dc7f04a87f24f51fc80fbb946629c3d66a10740275690747fed97ed7ba5ae0"
-
-  url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen.macos-#{arch}.dmg",
+  url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen.macos-universal.dmg",
       verified: "github.com/zen-browser/desktop/"
   name "Zen Browser"
   desc "Gecko based web browser"
