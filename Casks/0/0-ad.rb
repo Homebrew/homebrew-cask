@@ -1,11 +1,11 @@
 cask "0-ad" do
-  arch arm: "osx-aarch64", intel: "osx64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "0.0.26-alpha"
-  sha256 arm:   "3ef9a974ffa6f32577ba54f73b34a9d81a3798781fd8e30ea836626e3fdd3ac5",
-         intel: "f8f0f9237d33f3b2acabc1d5b50ee6da32768231d5610a2ff52d1e65df76bf2c"
+  version "0.27.0"
+  sha256 arm:   "21decc117d06fe882f491b101ca533e09174a47c7f5139fcb8160cd15a91d6e3",
+         intel: "bca8deb6461c8055e4f34216867d439a22657a13dfbc7c98e0f8497d8c8643cd"
 
-  url "https://releases.wildfiregames.com/0ad-#{version}-#{arch}.dmg",
+  url "https://releases.wildfiregames.com/0ad-#{version}-macos-#{arch}.dmg",
       verified: "releases.wildfiregames.com/"
   name "0 A.D."
   desc "Real-time strategy game"
@@ -13,7 +13,7 @@ cask "0-ad" do
 
   livecheck do
     url "https://play0ad.com/download/mac/"
-    regex(/href=.*?0ad[._-]v?(.*?)[._-]#{arch}\.dmg/i)
+    regex(/href=.*?0ad[._-]v?(.*?)[._-]macos[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"
