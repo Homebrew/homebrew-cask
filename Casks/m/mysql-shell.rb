@@ -68,7 +68,7 @@ cask "mysql-shell" do
     sha256 arm:   "bb887018744ba6865efedd8f89bebc4c665fb8ad74cfa8a85fe4690791008faa",
            intel: "5abc9c25fe04df8622365705e5181cc3054fe7d1824e00116a8c06f11a217aea"
 
-    url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg"
+    url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg", user_agent: "curl/8.7.1"
 
     livecheck do
       url "https://dev.mysql.com/downloads/shell/?tpl=platform&os=33"
