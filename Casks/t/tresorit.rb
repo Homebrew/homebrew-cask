@@ -1,5 +1,5 @@
 cask "tresorit" do
-  version "3.5.3116.4340"
+  version "3.5.3194.4440"
   sha256 :no_check
 
   url "https://installer.tresorit.com/Tresorit.dmg"
