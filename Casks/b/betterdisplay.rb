@@ -16,8 +16,8 @@ cask "betterdisplay" do
     end
   end
   on_ventura :or_newer do
-    version "3.3.3"
-    sha256 "fdb0e9b08478de26f75d5326efc827b3fe05397019cfcf9d0a29771c00f66058"
+    version "3.3.4"
+    sha256 "c62c5c12f913d173dec846190f4264ee61013c48058c24d5ad2422e19c3d8a8f"
 
     livecheck do
       url :url
