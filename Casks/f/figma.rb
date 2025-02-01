@@ -11,7 +11,7 @@ cask "figma" do
   homepage "https://www.figma.com/"
 
   livecheck do
-    url "https://desktop.figma.com/#{arch}/RELEASE.json"
+    url "https://desktop.figma.com/#{arch}/RELEASE.json?localVersion=#{version}"
     strategy :json do |json|
       json["version"]
     end
