@@ -3,7 +3,7 @@ cask "xamarin-android" do
   sha256 :no_check
 
   url "https://aka.ms/xamarin-android-commercial-d17-8-macos",
-      verified: "aka.ms"
+      verified: "aka.ms/"
   name "Xamarin.Android"
   desc "Gives .NET developers complete access to Android SDK's"
   homepage "https://www.xamarin.com/platform"
