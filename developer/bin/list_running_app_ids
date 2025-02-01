@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# Standalone scripts are fine to use global variables andtop-level methods
 # rubocop:disable Style/GlobalVars, Style/TopLevelMethodDefinition
 
 #
