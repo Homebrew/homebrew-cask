@@ -7,14 +7,6 @@ cask "obs-websocket" do
   desc "Remote-control OBS Studio through WebSockets"
   homepage "https://github.com/obsproject/obs-websocket"
 
-  # Upstream has published releases for two different major versions, so the
-  # "latest" release may be for an older major version. Unless/until this is
-  # resolved, we have to check more than just the "latest" release.
-  livecheck do
-    url :url
-    strategy :github_releases
-  end
-
   deprecate! date: "2024-10-27", because: :discontinued
 
   pkg "obs-websocket-#{version}-macOS.pkg"
