@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# Standalone scripts are fine to use top-level methods
 # rubocop:disable Style/TopLevelMethodDefinition
 
 #
@@ -131,17 +132,20 @@ class AppName
     @string = string
   end
 
+  # Using class variables here for more optimal global caching
+  # rubocop:disable Style/ClassVars
   def self.remove_trailing_pat
-    @@remove_trailing_pat ||= /(?<=.)(?:#{REMOVE_TRAILING_PATS.join("|")})\Z/i # rubocop:disable Style/ClassVars
+    @@remove_trailing_pat ||= /(?<=.)(?:#{REMOVE_TRAILING_PATS.join("|")})\Z/i
   end
 
   def self.preserve_trailing_pat
-    @@preserve_trailing_pat ||= /(?:#{PRESERVE_TRAILING_PATS.join("|")})\Z/i # rubocop:disable Style/ClassVars
+    @@preserve_trailing_pat ||= /(?:#{PRESERVE_TRAILING_PATS.join("|")})\Z/i
   end
 
   def self.after_interior_version_pat
-    @@after_interior_version_pat ||= /(?:#{AFTER_INTERIOR_VERSION_PATS.join("|")})/i # rubocop:disable Style/ClassVars
+    @@after_interior_version_pat ||= /(?:#{AFTER_INTERIOR_VERSION_PATS.join("|")})/i
   end
+  # rubocop:enable Style/ClassVars
 
   def english_from_app_bundle
     return self if @string.ascii_only?
@@ -394,6 +398,7 @@ def warnings
 end
 
 def report
+  # Debug flag needs to be globally accessible across the script
   puts "Proposed Simplified App name: #{simplified_app_name}" if $debug # rubocop:disable Style/GlobalVars
   puts "Proposed token:               #{cask_token}"
   puts "Proposed file name:           #{cask_file_name}"
@@ -426,6 +431,7 @@ if /^-+h(elp)?$/i.match?(ARGV.first)
 end
 
 if /^-+debug?$/i.match?(ARGV.first)
+  # Debug flag needs to be globally accessible in the script
   $debug = 1 # rubocop:disable Style/GlobalVars
   ARGV.shift
 end

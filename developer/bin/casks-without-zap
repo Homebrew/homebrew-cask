@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# Standalone scripts are fine to use top-level methods
 # rubocop:disable Style/TopLevelMethodDefinition
 
 require "fileutils"
