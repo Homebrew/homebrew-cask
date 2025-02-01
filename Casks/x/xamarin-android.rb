@@ -2,7 +2,7 @@ cask "xamarin-android" do
   version "13.2.2.0"
   sha256 "aeb215d33324f8d8dbf41aae2a987249433a7a4c264588384a40695c162877f4"
 
-  url "https://dl.xamarin.com/MonoforAndroid/Mac/xamarin.android-#{version}.pkg"
+  url "https://aka.ms/xamarin-android-commercial-d17-8-macos"
   name "Xamarin.Android"
   desc "Gives .NET developers complete access to Android SDK's"
   homepage "https://www.xamarin.com/platform"
