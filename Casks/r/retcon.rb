@@ -20,6 +20,7 @@ cask "retcon" do
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/garden.lemon.retcon.sfl*",
+    "~/Library/Application Support/Retcon",
     "~/Library/Caches/garden.lemon.Retcon",
     "~/Library/HTTPStorages/garden.lemon.Retcon",
     "~/Library/Preferences/garden.lemon.Retcon.plist",
