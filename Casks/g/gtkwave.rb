@@ -7,11 +7,6 @@ cask "gtkwave" do
   desc "GTK+ based wave viewer"
   homepage "https://gtkwave.sourceforge.net/"
 
-  livecheck do
-    url :url
-    regex(%r{url=.*?/gtkwave[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]app/}i)
-  end
-
   deprecate! date: "2024-10-29", because: :discontinued
 
   app "gtkwave.app"
