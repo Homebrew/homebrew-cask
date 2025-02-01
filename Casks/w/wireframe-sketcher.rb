@@ -1,11 +1,11 @@
 cask "wireframe-sketcher" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "7.2.1"
-  sha256 arm:   "3a2571d715329bd109e33fb104122e974c9b2632358f8dd33a1ba269303afa02",
-         intel: "3cade723fc32284d0ccc728c06baa2834619346909a602d4e264d1408705c0ce"
+  version "7.2.2"
+  sha256 arm:   "b8e2ae79ec9f905dc8798f4791447ba71ea4febb476764f3dfb8db852b305f6a",
+         intel: "379810702a6573ac791579862228c60985f115f1b64aa1277eacd2b8190e50fa"
 
-  url "https://wireframesketcher.com/downloads/studio/WireframeSketcher-#{version}-macosx.#{arch}.zip"
+  url "https://wireframesketcher.com/downloads/studio/dist/WireframeSketcher-#{version}-macosx.#{arch}.zip"
   name "WireframeSketcher"
   desc "Tool for creating wireframes, mockups and prototypes"
   homepage "https://wireframesketcher.com/"
