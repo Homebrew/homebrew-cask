@@ -9,14 +9,8 @@ cask "font-merriweather" do
   name "Merriweather"
   homepage "https://fonts.google.com/specimen/Merriweather"
 
-  font "Merriweather-Black.ttf"
-  font "Merriweather-BlackItalic.ttf"
-  font "Merriweather-Bold.ttf"
-  font "Merriweather-BoldItalic.ttf"
-  font "Merriweather-Italic.ttf"
-  font "Merriweather-Light.ttf"
-  font "Merriweather-LightItalic.ttf"
-  font "Merriweather-Regular.ttf"
+  font "Merriweather-Italic[opsz,wdth,wght].ttf"
+  font "Merriweather[opsz,wdth,wght].ttf"
 
   # No zap stanza required
 end
