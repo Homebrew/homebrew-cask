@@ -10,7 +10,7 @@ cask "xamarin-android" do
 
   deprecate! date: "2024-08-20", because: :discontinued
 
-  pkg "xamarin.android-#{version}.pkg"
+  pkg "xamarin.android-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.xamarin.android.pkg"
 
