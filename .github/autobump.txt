@@ -688,6 +688,7 @@ lyn
 lynx
 lyricsfinder
 maa
+macai
 maccy
 macfuse
 macfuse@dev
