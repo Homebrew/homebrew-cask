@@ -1,6 +1,6 @@
 cask "startupfolder" do
-  version "1.1.2"
-  sha256 "9096aafe3b8be6b61416f2ba7cabd64fca08911598536cd0d819eadf954e0873"
+  version "1.1.3"
+  sha256 "b4c8484b11fc289257f907cac29517fef4f3643d3b8830558737d0b6f8bb1f13"
 
   url "https://files.lowtechguys.com/releases/StartupFolder-#{version}.dmg"
   name "Startup Folder"
