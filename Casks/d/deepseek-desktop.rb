@@ -4,7 +4,7 @@ cask "deepseek-desktop" do
 
   url "https://github.com/besil/deepseek-desktop/releases/download/v#{version}/deepseek-desktop-macos.zip"
   name "DeepSeek Desktop"
-  desc "A simple electron wrapper for Deepseek web app"
+  desc "Simple electron wrapper for Deepseek web app"
   homepage "https://github.com/besil/deepseek-desktop"
 
   livecheck do
