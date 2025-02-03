@@ -1071,6 +1071,7 @@ rider
 rightfont
 ringcentral
 rio
+ripme
 rippling
 rive
 rize
