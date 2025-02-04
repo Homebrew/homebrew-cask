@@ -15,5 +15,8 @@ cask "neovide" do
   app "Neovide.app"
   binary "#{appdir}/Neovide.app/Contents/MacOS/neovide"
 
-  zap trash: "~/Library/Saved Application State/com.neovide.neovide"
+  zap trash: [
+    "~/Library/Application Support/neovide",
+    "~/Library/Saved Application State/com.neovide.neovide.savedState",
+  ]
 end
