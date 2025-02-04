@@ -1,9 +1,9 @@
 cask "laravel-kit" do
   arch arm: "-arm64"
 
-  version "2.0.8"
-  sha256 arm:   "f5cc20ce507ca6bef4e6de99d7e00aee12f55d9ef01dab85be7f1a6074b8a045",
-         intel: "fb748da7a99911a7b182ac7958862dfa1a9e036ec82529a2fb65e4b768c72b1a"
+  version "2.0.9"
+  sha256 arm:   "ddab08305eefb11f46009d257685b87b8649fb928afee318b1f5d7eaa7a538f8",
+         intel: "5d17be67b3bfc4fedcf6de0e64e8e4a93df9b467cb8540e073c3d52b4346697d"
 
   url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/Laravel-Kit-#{version}#{arch}-mac.zip",
       verified: "github.com/tmdh/laravel-kit/"
