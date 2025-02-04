@@ -6,10 +6,10 @@ cask "font-space-mono" do
   name "Space Mono"
   homepage "https://github.com/googlefonts/spacemono"
 
-  font "spacemono-main/fonts/SpaceMono-Bold.ttf"
-  font "spacemono-main/fonts/SpaceMono-BoldItalic.ttf"
-  font "spacemono-main/fonts/SpaceMono-Italic.ttf"
-  font "spacemono-main/fonts/SpaceMono-Regular.ttf"
+  font "spacemono-main/fonts/ttf/SpaceMono-Bold.ttf"
+  font "spacemono-main/fonts/ttf/SpaceMono-BoldItalic.ttf"
+  font "spacemono-main/fonts/ttf/SpaceMono-Italic.ttf"
+  font "spacemono-main/fonts/ttf/SpaceMono-Regular.ttf"
 
   # No zap stanza required
 end
