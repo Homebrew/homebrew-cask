@@ -1,7 +1,7 @@
 cask "megasync" do
   arch arm: "Arm64"
 
-  version "5.7.1.1"
+  version "5.8.0.2"
   sha256 :no_check
 
   url "https://mega.nz/MEGAsyncSetup#{arch}.dmg"
