@@ -1,9 +1,9 @@
 cask "huly" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.6.423"
-  sha256 arm:   "c3806c0fd4b94a8fa06e2de92dcc68154945c67b8d355e35cee7746f0eac8066",
-         intel: "4cc5dbbd1bd010836da25144c5836a28328f4bbd3b44f2b54c1bfdc5f98e72d2"
+  version "0.6.428"
+  sha256 arm:   "dc284127d43df4b4cf8530c473ad35e6a7278cfc85e6f8ebf7248d25fc61c1b5",
+         intel: "d48046aa00b177915c6953e4950ae941bfa35614c3cfda77683192d50ae73761"
 
   url "https://dist.huly.io/Huly-macos-#{version}-#{arch}.zip"
   name "Huly"
