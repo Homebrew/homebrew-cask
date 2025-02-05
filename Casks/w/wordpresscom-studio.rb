@@ -1,9 +1,9 @@
 cask "wordpresscom-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.2"
-  sha256 arm:   "9bf306a77c9e6b2d1bce91fb96630e1c5f9c09389cdf20da5bc42a3419e7ffb1",
-         intel: "6058991842ee123109b466a7d403d69a38115833958513e3ec34681067ad563f"
+  version "1.3.3"
+  sha256 arm:   "24e5aa1276bc2a91b22f1f905e00372b447125833edd87b04e7d5069ee35f76f",
+         intel: "21f864b05f6dc9b0c9df4e5eb05d70597e91dda35e9b5516cd21d6e70499f009"
 
   url "https://cdn.a8c-ci.services/studio/studio-darwin-#{arch}-v#{version}.app.zip",
       verified: "cdn.a8c-ci.services/studio/"
