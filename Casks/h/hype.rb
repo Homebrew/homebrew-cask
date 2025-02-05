@@ -12,6 +12,8 @@ cask "hype" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   # Renamed for consistency: app name is different in the Finder and in a shell
   app "Hype#{version.major}.app", target: "Hype #{version.major}.app"
 
