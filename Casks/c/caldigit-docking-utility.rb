@@ -1,5 +1,7 @@
 cask "caldigit-docking-utility" do
-  version "1.9.33"
+  arch arm: "arm", intel: "x86"
+
+  version "1.9.34"
   sha256 :no_check
 
   url "https://downloads.caldigit.com/CalDigit-Docking-Station-Utility.zip"
@@ -14,7 +16,7 @@ cask "caldigit-docking-utility" do
   pkg "CalDigit Docking Station Utility v#{version}.pkg"
 
   uninstall signal:  ["TERM", "CalDigit.CalDigit-Docking-Station-Utility"],
-            pkgutil: "com.CalDigit.CDSU.pkg"
+            pkgutil: "com.CalDigit.CDSU#{arch}.pkg"
 
   zap trash: [
     "~/Library/Preferences/CalDigit.CalDigit-Docking-Station-Utility.plist",
