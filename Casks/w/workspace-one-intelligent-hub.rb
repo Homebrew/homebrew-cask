@@ -1,5 +1,5 @@
 cask "workspace-one-intelligent-hub" do
-  version "24.07.3"
+  version "24.10.0"
   sha256 :no_check
 
   url "https://packages.omnissa.com/wsone/WorkspaceONEIntelligentHub.pkg",
@@ -14,7 +14,7 @@ cask "workspace-one-intelligent-hub" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :ventura"
 
   pkg "WorkspaceONEIntelligentHub.pkg"
 
