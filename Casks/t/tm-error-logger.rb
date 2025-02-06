@@ -1,5 +1,5 @@
 cask "tm-error-logger" do
-  version "8.0.2"
+  version "8.0.3"
   sha256 :no_check
 
   url "https://carnationsoftware.com/ftp/TM_Error_Logger_Installer.dmg"
