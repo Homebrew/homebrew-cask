@@ -1,6 +1,6 @@
 cask "rekordbox" do
-  version "7.0.8,20241224191039"
-  sha256 "774b5f33e18dc95cffed0f92e2977c9da9efe3c30455f392ca60c09d3845a62a"
+  version "7.0.9,20250203174138"
+  sha256 "68cf5ff49ec68d5adde0b8ee8da0c51a3983b9699a0b4698693a53e6e287b982"
 
   url "https://cdn.rekordbox.com/files/#{version.csv.second}/Install_rekordbox_#{version.csv.first.dots_to_underscores}.pkg_.zip"
   name "rekordbox"
