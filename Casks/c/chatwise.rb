@@ -8,7 +8,7 @@ cask "chatwise" do
   url "https://github.com/egoist/chatwise-releases/releases/download/v#{version}/ChatWise_#{version}_#{arch}.dmg",
       verified: "github.com/egoist/chatwise-releases/"
   name "ChatWise"
-  desc "Fast AI chatbot for many LLMs"
+  desc "AI chatbot for many LLMs"
   homepage "https://chatwise.app/"
 
   livecheck do
