@@ -2,8 +2,8 @@ cask "wpsoffice" do
   arch arm: "arm64", intel: "x64"
 
   version "6.10.2,0024.21300060"
-  sha256 arm:   "8d922751369855ac070b3fcdcf36f6abdf14157f7827efe69830004072cee140",
-         intel: "b8911c6ece98ba068896feba3fa28f18d63db783de6a462c198f97f65be23462"
+  sha256 arm:   "3a90be5d9fb48e188f47273a15f66276a20b3b8d53db85ea01f742740e7aae39",
+         intel: "0aa3c2b23f53ff8f56264b8a6dde601bfda4c9363a9760632a62d548a3c4d600"
 
   url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/installer/WPSOffice_#{arch}_#{version.csv.second}.dmg",
       verified: "wdl1.pcfg.cache.wpscdn.com/"
