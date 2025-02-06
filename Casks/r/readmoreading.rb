@@ -1,9 +1,9 @@
 cask "readmoreading" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.42"
-  sha256 arm:   "c58d1d004e1dd7ea260389cbdc73c9823fc4fe0d33069f5da3c434b94da17ec5",
-         intel: "f8cdab5a1c3ee56ff6eb068e5fbd5c41d511bb8d4bfcdcd67f804f1e131cb86e"
+  version "1.1.43"
+  sha256 arm:   "98b95624bf18a2a4a068a5bb63181941a41e87369e653de692bf1bbde12bd644",
+         intel: "23622589827b7463f06287a9d5a19d5df7fae36af4d218e783eff7f072219feb"
 
   url "https://github.com/eCrowdMedia/remake/releases/download/v#{version}/Readmoo.-#{version}-#{arch}.dmg",
       verified: "github.com/eCrowdMedia/remake/"
