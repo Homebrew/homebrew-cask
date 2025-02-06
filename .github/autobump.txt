@@ -309,6 +309,7 @@ discord@canary
 discord@development
 discord@ptb
 diskcatalogmaker
+distroav
 djstudio
 dockdoor
 dockside
