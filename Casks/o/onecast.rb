@@ -1,6 +1,6 @@
 cask "onecast" do
-  version "2.34"
-  sha256 "0920cfae35deb3e4ca323231a09d7559c2cd1df80d77ad3eec11cc4e16d39647"
+  version "2.35"
+  sha256 "9ae5a9d354ac738009a51c558a55923851b856f2e2b0cbb3652f57ec00662cdc"
 
   url "https://onecast.me/updates/release/OneCast-#{version}.dmg"
   name "OneCast"
