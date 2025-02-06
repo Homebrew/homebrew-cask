@@ -52,7 +52,8 @@ jobs:
       - name: Set up commit signing
         uses: Homebrew/actions/setup-commit-signing@master
         with:
-          signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
+          ssh: true
+          signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
       - name: Import Google Fonts
         run: ./developer/bin/import_google_fonts vendor/google-fonts ${{ matrix.mode }}
@@ -83,11 +84,10 @@ jobs:
         env:
           COMMIT_BODY: >
             This commit was created automatically by the
-            [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) 
+            [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml)
             workflow.
           GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
           GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
-          HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
           MODE: ${{ matrix.mode }}
 
       - name: Push commits
@@ -98,7 +98,6 @@ jobs:
           branch: "auto-${{ matrix.mode }}-google-fonts"
           GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
           GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
-          HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
 
 
       - name: Create pull request with updated files
@@ -106,8 +105,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           PR_BODY: >
-            This pull request was created automatically by the 
-            [`google-fonts`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) 
+            This pull request was created automatically by the
+            [`google-fonts`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml)
             workflow.
         run: |
           gh pr create \
