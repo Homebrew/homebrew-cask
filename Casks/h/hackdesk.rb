@@ -8,8 +8,8 @@ cask "hackdesk" do
   url "https://github.com/EastSun5566/hackdesk/releases/download/hackdesk-v#{version}/HackDesk_#{version}_#{arch}.dmg",
       verified: "github.com/EastSun5566/hackdesk/"
   name "HackDesk"
-  desc "A hackable HackMD desktop application"
-  homepage "https://hackdesk.eastsun.me"
+  desc "Hackable HackMD desktop application"
+  homepage "https://hackdesk.eastsun.me/"
 
   livecheck do
     url :url
@@ -23,8 +23,8 @@ cask "hackdesk" do
   zap trash: [
     "~/.hackdesk",
     "~/Library/Application Support/eastsun5566.github.hackdesk",
+    "~/Library/Caches/eastsun5566.github.hackdesk",
     "~/Library/Preferences/eastsun5566.github.hackdesk.plist",
     "~/Library/Saved Application State/eastsun5566.github.hackdesk.savedState",
-    "~/Library/Caches/eastsun5566.github.hackdesk"
   ]
 end
