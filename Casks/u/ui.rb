@@ -1,6 +1,6 @@
 cask "ui" do
-  version "0.83.1,247e0da2-e897-406e-ab55-fab75720bc60,1e8e"
-  sha256 "00d25ef41c4a9a60bc6ebd7493ab0dcd2c2e0ca87db76d9b8b1c9aad2c03c0b2"
+  version "0.83.2,fade75a5-ce7c-49e9-802b-5ac5150c6912,496a"
+  sha256 "bf74a06392706af488350f82c600ed649a3f8fd2f06d3ffb21dd14ff636d785c"
 
   url "https://fw-download.ubnt.com/data/uid-ui-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
       verified: "fw-download.ubnt.com/data/uid-ui-desktop-app/"
