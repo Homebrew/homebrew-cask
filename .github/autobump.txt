@@ -952,6 +952,7 @@ plus42-binary
 plus42-decimal
 pocket-casts
 podpisuj
+poe
 pokemon-tcg-live
 poker-copilot
 polymail
