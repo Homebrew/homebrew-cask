@@ -901,6 +901,7 @@ operadriver
 opgg
 oracle-jdk
 oracle-jdk-javadoc
+oracle-jdk-javadoc@21
 orangedrangon-android-messages
 orbstack
 orcaslicer
