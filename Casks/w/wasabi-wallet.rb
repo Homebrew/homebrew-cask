@@ -1,9 +1,9 @@
 cask "wasabi-wallet" do
   arch arm: "-arm64"
 
-  version "2.4.0"
-  sha256 arm:   "932188909e7ed9bd97acd28fbb32b38995d223f6aebdcb81f4756e8e3616914e",
-         intel: "3f4f50790154d845e14dc9299aa5bb7033bd7f483507d64ff7de05933881794c"
+  version "2.5.0"
+  sha256 arm:   "449d2db01dc6ee8f813cdf200540a34e3b1530b3ae20045415381036d203166e",
+         intel: "9f1fb02fc90261e1e77031a6aab226a1b4dfe8b893a0d279df71e12da4a9fca6"
 
   url "https://github.com/zkSNACKs/WalletWasabi/releases/download/v#{version}/Wasabi-#{version}#{arch}.dmg"
   name "Wasabi Wallet"
