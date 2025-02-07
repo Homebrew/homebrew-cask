@@ -24,6 +24,8 @@ cask "parallels-client" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   pkg "RasClient-Mac-Notarized-#{version.csv.first.major_minor_patch}-#{version.csv.second}.pkg"
 
   uninstall quit:    "com.2X.Client.Mac",
