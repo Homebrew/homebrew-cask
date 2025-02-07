@@ -1,6 +1,6 @@
 cask "speedify" do
-  version "15.1.1,10495"
-  sha256 "ff4fdcf8e0ae67cd7d5c6079c8fa1da38815c7f6aa90e696a2c599a6156eaf15"
+  version "15.2.0,3237"
+  sha256 "215f65f4787b60fb9e80cebe0e2b4d31506185d2e64973e7c79b281609a6df68"
 
   url "https://downloads.speedify.com/Speedify-#{version.csv.first}.#{version.csv.second}.dmg"
   name "Speedify"
@@ -23,8 +23,4 @@ cask "speedify" do
   ]
 
   zap trash: "~/Library/Speedify"
-
-  caveats do
-    requires_rosetta
-  end
 end
