@@ -1,9 +1,9 @@
 cask "spyder" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.0.3"
-  sha256 arm:   "d5d07d27f2cd57c7d8923db74e762a8db2841fd750f98f9ff678992deaffed0a",
-         intel: "267e5c1bc154c493fc90037a2f9679ff78b2df297a1fb00a3a6c023645fba67b"
+  version "6.0.4"
+  sha256 arm:   "315540acb8ae622f7ba4256be4c1398425b2160ddeb5e2f9e44fe9006358ad95",
+         intel: "9a723d3a033bf480228fb4167549e9d33f214dfc9276c83dedbced5d5de86b5d"
 
   url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder-macOS-#{arch}.pkg",
       verified: "github.com/spyder-ide/spyder/"
