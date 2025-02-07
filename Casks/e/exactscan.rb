@@ -1,6 +1,6 @@
 cask "exactscan" do
-  version "23.2"
-  sha256 "81998738431d680d022c2fd03ce2cefd81bc630de3a0bcadba24ddddc9c67da7"
+  version "24.6"
+  sha256 "c76827b04ff5e6ea023f0438a31322876ca947c481c6d90e705add739296d303"
 
   url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg",
       verified: "dl.exactcode.com/"
