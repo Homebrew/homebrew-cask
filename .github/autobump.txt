@@ -468,6 +468,7 @@ frappe-books
 free-download-manager
 free42-binary
 free42-decimal
+freeplane
 freeshow
 freetube
 freeyourmusic
