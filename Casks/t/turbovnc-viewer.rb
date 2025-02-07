@@ -11,6 +11,11 @@ cask "turbovnc-viewer" do
   desc "Remote display system"
   homepage "https://www.turbovnc.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "TurboVNC.pkg"
 
   uninstall script:  {
