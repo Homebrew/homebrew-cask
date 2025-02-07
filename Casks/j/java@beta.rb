@@ -11,10 +11,14 @@ cask "java@beta" do
   homepage "https://jdk.java.net/"
 
   livecheck do
-    url "https://jdk.java.net/#{version.major}/"
+    url :homepage
     regex(%r{href=.*?/GPL/openjdk-(\d+)-ea\+(\d+)_macos-#{arch}_bin\.t}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+      latest_major = page[/Early\s*access:.*?JDK\s*(\d+)/i, 1]
+      next if latest_major.blank?
+
+      version_page = Homebrew::Livecheck::Strategy.page_content("https://jdk.java.net/#{latest_major}/")
+      version_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
