@@ -1,6 +1,6 @@
 cask "qlvideo" do
-  version "2.20"
-  sha256 "2949e890dce580c8e6704a87765ae23edcba02f2cc9ac2994234f149daaf4241"
+  version "2.21"
+  sha256 "b250d1a33978bf474693440b4d269331ef59700dfc7f97d116a8013f369b3a43"
 
   url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.no_dots}/QLVideo_#{version.no_dots}.dmg"
   name "QuickLook Video"
