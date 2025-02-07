@@ -192,6 +192,7 @@ cardpresso
 chatall
 chatbox
 chatgpt
+chatwise
 chatwork
 chia
 chipmunk
