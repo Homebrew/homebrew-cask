@@ -17,7 +17,7 @@ cask "blackhole-16ch" do
   pkg "BlackHole16ch-#{version}.pkg"
 
   uninstall quit:    "com.apple.audio.AudioMIDISetup",
-            pkgutil: "audio.existential.BlackHole2ch"
+            pkgutil: "audio.existential.BlackHole16ch"
 
   # No zap stanza required
 
