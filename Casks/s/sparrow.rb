@@ -1,9 +1,9 @@
 cask "sparrow" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2.1.1"
-  sha256 arm:   "25656b7722189186dd7f86f202e06e529d0971ad647eb742ac40f50f15932062",
-         intel: "742353f5b3f18dff3a9018bdb0a232ded67d556d8c4cffce7737565e7a15703a"
+  version "2.1.2"
+  sha256 arm:   "cb2f68a6903e2f9798f7b9581fc982d6c90345b8d9e5ea9f336dfbf85845164a",
+         intel: "6ad4ec3c9ac4451a5265fc314421b394ff065d7bb8d146dfb3c3ccb793bebb94"
 
   url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}-#{arch}.dmg",
       verified: "github.com/sparrowwallet/sparrow/"
