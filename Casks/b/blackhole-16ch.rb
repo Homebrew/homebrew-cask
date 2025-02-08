@@ -1,6 +1,6 @@
 cask "blackhole-16ch" do
-  version "0.6.0"
-  sha256 "269b9ae060af99721b2c8a67e4230bf4270345e07ee7846f473c91bb13f1549d"
+  version "0.6.1"
+  sha256 "43f39f30ac9c1a455a90840345725ce6e3e2c3f69f69a7aaaf15b1edbf0a9de2"
 
   url "https://existential.audio/downloads/BlackHole16ch-#{version}.pkg"
   name "BlackHole 16ch"
@@ -16,15 +16,12 @@ cask "blackhole-16ch" do
 
   pkg "BlackHole16ch-#{version}.pkg"
 
-  uninstall_postflight do
-    system_command "/usr/bin/killall",
-                   args:         ["coreaudiod"],
-                   sudo:         true,
-                   must_succeed: true
-  end
-
   uninstall quit:    "com.apple.audio.AudioMIDISetup",
             pkgutil: "audio.existential.BlackHole16ch"
 
   # No zap stanza required
+
+  caveats do
+    reboot
+  end
 end
