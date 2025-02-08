@@ -16,7 +16,8 @@ cask "libreoffice-still" do
   # cask, so we need to make sure that the former always checks a page that
   # provides the latest versions for both Fresh and Still.
   livecheck do
-    cask "libreoffice"
+    url "https://wiki.documentfoundation.org/Main_Page"
+    regex(/>\s*Download\s+LibreOffice\s+v?(\d+(?:\.\d+)+)\s*</im)
     strategy :page_match do |page, regex|
       versions = page.scan(regex).map(&:first)
       uniq_major_minor = versions.map { |version| Version.new(version).major_minor }.uniq.sort.reverse
