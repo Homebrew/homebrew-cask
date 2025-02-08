@@ -1,8 +1,8 @@
 cask "freeorion" do
-  version "0.5.0.1"
-  sha256 "c6436383071148dbc7b5d63981ae7afebda52340710f603b35f0e22a0aa9ecf5"
+  version "0.5.1"
+  sha256 "74a1245eb6eca926d296a9cfc8d42ffdc7719db3aa796702c265d7be3cccf5c3"
 
-  url "https://github.com/freeorion/freeorion/releases/download/v#{version}/FreeOrion_v#{version}_MacOSX_10.12.dmg",
+  url "https://github.com/freeorion/freeorion/releases/download/v#{version}/FreeOrion_v#{version}_macOS_10.15.dmg",
       verified: "github.com/freeorion/"
   name "FreeOrion"
   desc "Turn-based space empire and galactic conquest game"
@@ -13,7 +13,7 @@ cask "freeorion" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "FreeOrion.app"
 
