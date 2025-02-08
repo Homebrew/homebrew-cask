@@ -4,7 +4,9 @@ require "forwardable"
 require "system_command"
 
 APPLE_LAUNCHJOBS_REGEX =
-  /\A(?:application\.)?com\.apple\.(installer|Preview|Safari|systemevents|systempreferences|Terminal)(?:\.|$)/
+  /\A(?:application\.)?com\.apple\.
+  (AppStore|installer|Preview|Safari|systemevents|systempreferences|Terminal)
+  (?:\.|$)/x
 
 module Check
   # TODO: replace with public API like Utils.safe_popen_read that's less likely to be volatile to changes
