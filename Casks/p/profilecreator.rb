@@ -1,21 +1,19 @@
 cask "profilecreator" do
-  version "0.3.2,201907171032-beta"
-  sha256 "a4a1b45bfaa6bc83aac7ef532981aaa0c807cd17fbfb1f157980144e5d309aea"
+  version "0.3.7"
+  sha256 "8579e70603a932faa8498181056e09469fa55b3fc2d0397fba165ac21f3a84ba"
 
-  url "https://github.com/erikberglund/ProfileCreator/releases/download/v#{version.csv.first}/ProfileCreator_v#{version.csv.first}-#{version.csv.second}.dmg"
+  url "https://github.com/ProfileCreator/ProfileCreator/releases/download/#{version}/ProfileCreator-#{version}.dmg"
   name "ProfileCreator"
   desc "Create standard or customised configuration profiles"
-  homepage "https://github.com/erikberglund/ProfileCreator"
+  homepage "https://github.com/ProfileCreator/ProfileCreator"
 
-  disable! date: "2024-12-16", because: :discontinued
-
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :big_sur"
 
   app "ProfileCreator.app"
 
   zap trash: [
     "~/Library/Application Support/ProfileCreator",
     "~/Library/Application Support/ProfilePayloads",
-    "~/Library/Preferences/com.github.erikberglund.ProfileCreator.plist",
+    "~/Library/Preferences/com.github.ProfileCreator.plist",
   ]
 end
