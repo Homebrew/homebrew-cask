@@ -16,15 +16,12 @@ cask "blackhole-2ch" do
 
   pkg "BlackHole2ch-#{version}.pkg"
 
-  uninstall_postflight do
-    system_command "/usr/bin/killall",
-                   args:         ["coreaudiod"],
-                   sudo:         true,
-                   must_succeed: true
-  end
-
   uninstall quit:    "com.apple.audio.AudioMIDISetup",
             pkgutil: "audio.existential.BlackHole2ch"
 
   # No zap stanza required
+
+  caveats do
+    reboot
+  end
 end
