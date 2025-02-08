@@ -1,6 +1,6 @@
 cask "yuque" do
-  version "4.0.5.1309,BJe833739b4f8f477fbd930ac4a3acbfed"
-  sha256 "40cc46c385debed7dca51a50723f3f9e861737e4baf6ab8fc286247dff0eebbf"
+  version "4.0.6.1311,BJ1ea01862c92f4578ba85309b2c4b4624"
+  sha256 "e26750764c897a5d5ff3e70099cc5329b8620a1fd57d4449ce350eabb07ee5f3"
 
   url "https://app.nlark.com/yuque-desktop/#{version.csv.first}/#{version.csv.second}/Yuque-#{version.csv.first}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
@@ -13,9 +13,9 @@ cask "yuque" do
   # https://github.com/Homebrew/homebrew-cask/pull/111472)
   livecheck do
     url "https://www.yuque.com/download/"
-    regex(/yuque-desktop%2Fv?(\d+(?:\.\d+)+)%2F([a-z0-9]+).*?\.dmg/i)
+    regex(/%2F([a-z0-9]+)%2FYuque[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
