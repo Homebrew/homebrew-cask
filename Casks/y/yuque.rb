@@ -13,9 +13,9 @@ cask "yuque" do
   # https://github.com/Homebrew/homebrew-cask/pull/111472)
   livecheck do
     url "https://www.yuque.com/download/"
-    regex(/yuque-desktop%2Fv?(\d+(?:\.\d+)+)%2F([a-z0-9]+).*?\.dmg/i)
+    regex(/%2F([a-z0-9]+)%2FYuque[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
