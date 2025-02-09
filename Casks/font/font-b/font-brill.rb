@@ -4,10 +4,10 @@ cask "font-brill" do
 
   url "https://brill.com/fileasset/The_Brill_Typeface_Package_v_#{version.dots_to_underscores}.zip"
   name "Brill"
-  homepage "https://brill.com/page/BrillFont/"
+  homepage "https://brill.com/page/resources_brilltypeface"
 
   livecheck do
-    url "https://brill.com/page/BrillFontDownloads/Download-The-Brill-Typeface"
+    url "https://brill.com/page/resources_fontsdownloads"
     regex(/href=.*?The[._-]Brill[._-]Typeface[._-]Package[._-]v?[._-]?(\d+(?:[._]\d+)+)\.zip/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
