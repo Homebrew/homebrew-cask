@@ -1,9 +1,9 @@
 cask "cherry-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.9.19"
-  sha256 arm:   "e0bc7dbc1d55001b4fd9421d33d3bb320e135c6894a745a382c0abb72c893455",
-         intel: "d6dcd58e7326d572eb49ff9fbc58e56d99e404c3284a847e8223a1ae65f2d038"
+  version "0.9.21"
+  sha256 arm:   "fecb922f38cde4d2d0fc7c646fe60b52f921058909eafd06c29c6b14ed12fd72",
+         intel: "f0865390bb55b2c35650b8d687294ace1515fa6035794591ded9fa2728e74dc3"
 
   url "https://github.com/CherryHQ/cherry-studio/releases/download/v#{version}/Cherry-Studio-#{version}-#{arch}.zip",
       verified: "github.com/CherryHQ/cherry-studio/"
