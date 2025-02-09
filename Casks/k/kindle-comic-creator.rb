@@ -8,10 +8,7 @@ cask "kindle-comic-creator" do
   desc "Turns comics, graphic novels and manga into Kindle books"
   homepage "https://www.amazon.com/b?node=23496309011"
 
-  livecheck do
-    url :homepage
-    regex(/v?(\d+(?:\.\d+)+)\s+for\s+Intel\s+Mac/i)
-  end
+  deprecate! date: "2025-02-09", because: :unmaintained
 
   pkg "Kindle Comic Creator.pkg"
 
