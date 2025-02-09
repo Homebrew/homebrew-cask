@@ -1,9 +1,9 @@
 cask "turbovnc-viewer" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.1.3"
-  sha256 arm:   "31ba59b2780075dc5fadfc7d1094726f37f49f6461f09279dd23c7f93f299e87",
-         intel: "0e0274ec406ef875f38fc29961f93506a4fa7f44abe3645024ce5aa99e10696f"
+  version "3.1.4"
+  sha256 arm:   "a8de81ee24e265c867167b482c9476d2385a07b8de703702a6583d1ddbb0709a",
+         intel: "1df2b5f340bc6e621c251572f3940426c412b215a89aa4f55190899b9ef1386c"
 
   url "https://github.com/TurboVNC/turbovnc/releases/download/#{version}/TurboVNC-#{version}-#{arch}.dmg",
       verified: "github.com/TurboVNC/turbovnc/"
