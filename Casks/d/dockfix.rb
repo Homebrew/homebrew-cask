@@ -1,15 +1,15 @@
 cask "dockfix" do
-  version "3.5.1"
+  version "3.5.2"
   sha256 :no_check
 
-  url "https://lubker.dk/dockfix/download.php"
+  url "https://www.dockfix.app/downloads/DockFix.dmg"
   name "DockFix"
   desc "Dock replacement"
-  homepage "https://dockfix.lubker.dk/"
+  homepage "https://www.dockfix.app/"
 
   livecheck do
-    url "https://dockfix.lubker.dk/changelog/"
-    regex(/<h\d[^>]*?>[^<]*?v?(\d+(?:\.\d+)+)[ <"]/i)
+    url "https://www.dockfix.app/changelog"
+    regex(/>[^<]*?v?(\d+(?:\.\d+)+)\s*</i)
   end
 
   auto_updates true
