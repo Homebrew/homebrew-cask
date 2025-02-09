@@ -1,23 +1,31 @@
 cask "liclipse" do
-  version "11.1.0,bh5hc47dg1iamp7"
-  sha256 "0245e5c79a3433f1861b624ed1e2c913ca2ee0299118b135962ebc75dcfda6c6"
+  arch arm: "Aarch64", intel: "x86_64"
 
-  url "https://www.mediafire.com/file/#{version.csv.second}/liclipse_#{version.csv.first}_macosx.cocoa.x86_64.tar.gz",
-      verified: "mediafire.com/file/"
+  on_arm do
+    version "12.0.1,o9ccnc5f0ks4dgq"
+    sha256 "d0ecbe035cf7a0684d5e2481ac967b23d6c2fc42330f062bb0485c09dc25d931"
+  end
+  on_intel do
+    version "12.0.1,b8h7wnjqtalkxls"
+    sha256 "9206476c44c1023d818a4599a1cb1578d6247f337049ac5a4206b8d3525e6a1b"
+  end
+
+  url "https://www.mediafire.com/file_premium/#{version.csv.second}/liclipse_#{version.csv.first}_macosx.cocoa.#{arch.downcase}.tar.gz",
+      verified: "mediafire.com/file_premium/"
   name "LiClipse"
   desc "Lightweight editors, theming and usability improvements for Eclipse"
   homepage "https://www.liclipse.com/"
 
   livecheck do
     url "https://www.liclipse.com/download.html"
-    regex(%r{href=.*?/([0-9a-z]+)/liclipse[._-]v?(\d+(?:\.\d+)+)_macosx\.cocoa\.x86_64\.t}i)
+    regex(%r{href=.*?/([0-9a-z]+)/liclipse[._-]v?(\d+(?:\.\d+)+)_macosx\.cocoa\.#{arch.downcase}\.t}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
-  app "LiClipse_x86_64/LiClipse.app"
-  app "LiClipse_x86_64/LiClipseJre19.app"
+  app "LiClipse_#{arch}/LiClipse.app"
+  artifact "LiClipse_#{arch}/LiClipseJre19.app", target: "#{appdir}/LiClipseJre19.app"
 
   zap trash: [
     "~/.liclipse",
