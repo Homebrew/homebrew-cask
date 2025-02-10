@@ -2,9 +2,10 @@ cask "filen" do
   arch arm: "arm64", intel: "x64"
 
   version "3.0.47"
-  sha256 :no_check
+  sha256 arm:   "041f30b361fb5b07f9039d380cf9f3e56b1180491a1ebf711cc5d2d81d5f741b",
+         intel: "405a75b94f26814562f568e5098735ce28bbe80317f47eef920b993bc6b4ef69"
 
-  url "https://cdn.filen.io/@filen/desktop/release/latest/Filen_mac_#{arch}.dmg"
+  url "https://cdn.filen.io/@filen/desktop/release/v#{version}/Filen_mac_#{arch}.dmg"
   name "Filen"
   desc "Desktop client for Filen.io"
   homepage "https://filen.io/"
