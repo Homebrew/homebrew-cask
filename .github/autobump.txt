@@ -951,6 +951,7 @@ plex
 plex-htpc
 plex-media-server
 plexamp
+plover
 plus42-binary
 plus42-decimal
 pocket-casts
