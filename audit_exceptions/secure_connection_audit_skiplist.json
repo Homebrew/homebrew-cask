@@ -11,6 +11,10 @@
   "canon-ufrii-driver": "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json",
   "elecom-mouse-util": "https://www.elecom.co.jp/global/download-list/utility/mouse_assistant/mac/",
   "gotomeeting": "https://www.goto.com/meeting",
+  "izotope-product-portal": [
+    "https://www.izotope.com/en/products/downloads.html",
+    "https://www.izotope.com/in-app/pp/download/mac"
+  ],
   "logmein-client": "https://www.logmein.com/pro",
   "mysql-shell": [
     "https://dev.mysql.com/downloads/shell/",
