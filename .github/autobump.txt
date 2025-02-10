@@ -311,6 +311,7 @@ discord@canary
 discord@development
 discord@ptb
 diskcatalogmaker
+display-pilot
 distroav
 djstudio
 dockdoor
