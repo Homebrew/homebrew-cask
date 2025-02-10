@@ -1,8 +1,8 @@
 cask "recents" do
   version "2.3.2"
-  sha256 :no_check
+  sha256 "eb27a28081d6a5d66c839480f59556aecf69fda280cbeba6c03238b9586e91c2"
 
-  url "https://recentsapp.com/releases/Recents_latest.dmg"
+  url "https://recentsapp.com/releases/Recents_#{version}.dmg"
   name "Recents"
   desc "File launcher"
   homepage "https://recentsapp.com/"
