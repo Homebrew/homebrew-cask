@@ -19,4 +19,8 @@ cask "lantern" do
     "~/Library/Application Support/Lantern",
     "~/Library/Logs/Lantern",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
