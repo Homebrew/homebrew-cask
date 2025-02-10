@@ -10,7 +10,9 @@ cask "weiyun" do
 
   livecheck do
     url "https://jsonschema.qpic.cn/2993ffb0f5d89de287319113301f3fca/179b0d35c9b088e5e72862a680864254/config"
-    regex(/Weiyun[._-]mac[._-]x64[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :json do |json|
+      json.dig("electron_mac", "version")
+    end
   end
 
   depends_on macos: ">= :high_sierra"
