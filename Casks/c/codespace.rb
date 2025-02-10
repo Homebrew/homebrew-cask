@@ -1,14 +1,14 @@
 cask "codespace" do
   version "1.6.1"
-  sha256 :no_check
+  sha256 "a0ea71a761820080493be13bb75f7651d38588203999b31e8c37c0164a0216b7"
 
-  url "https://codespace.app/download/latest"
+  url "https://codespace.app/download/#{version}"
   name "Codespace"
   desc "Code snippet manager"
   homepage "https://codespace.app/"
 
   livecheck do
-    url :url
+    url "https://codespace.app/download/latest"
     strategy :header_match
   end
 
