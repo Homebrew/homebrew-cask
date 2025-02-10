@@ -1,9 +1,9 @@
 cask "panwriter" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.8.8"
-  sha256 arm:   "9b5ffc080850c9f6edb2749332d1a4de39d96a9412921d8d5eec5765eecfb48f",
-         intel: "44de06ac8a2f2f9c6ae5d025843e85d735ac252b464ea84db771b2882d4340f4"
+  version "0.8.9"
+  sha256 arm:   "d37d73a101079410fcad54ac6b8a071c226614c9e548e28a0aeaec4f4aecc1c7",
+         intel: "82861d4945b3f54c568cea08aaeac5d98f55b2e03917489ddc7ab06b02c3cfc9"
 
   url "https://github.com/mb21/panwriter/releases/download/v#{version}/PanWriter-#{version}-#{arch}.dmg",
       verified: "github.com/mb21/panwriter/"
