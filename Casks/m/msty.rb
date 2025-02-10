@@ -1,7 +1,7 @@
 cask "msty" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.1"
+  version "1.7.0"
   sha256 :no_check
 
   url "https://assets.msty.app/prod/latest/mac/Msty_#{arch}.dmg"
