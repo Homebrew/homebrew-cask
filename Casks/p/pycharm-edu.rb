@@ -11,18 +11,7 @@ cask "pycharm-edu" do
   desc "Professional IDE for scientific and web Python development"
   homepage "https://www.jetbrains.com/pycharm-edu/"
 
-  livecheck do
-    url "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
-    strategy :json do |json|
-      json["PCE"]&.map do |release|
-        version = release["version"]
-        build = release["build"]
-        next if version.blank? || build.blank?
-
-        "#{version},#{build}"
-      end
-    end
-  end
+  deprecate! date: "2025-02-10", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :el_capitan"
