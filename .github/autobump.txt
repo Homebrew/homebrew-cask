@@ -759,6 +759,7 @@ mindmac
 minecraft-education
 minecraft-server
 mini-program-studio
+miniconda
 miniforge
 minisim
 minitube
