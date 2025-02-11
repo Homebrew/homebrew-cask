@@ -1,9 +1,9 @@
 cask "deltawalker" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.6.4"
-  sha256 arm:   "f92abbf7b971a7e1d986fe0991e26daa3121449f428f380af89fe06eaa7cccea",
-         intel: "8d508521c98c4dec3a7affe1190e4911818032ffc82a17a7fb4a64b0a097246f"
+  version "2.7.0"
+  sha256 arm:   "b1ec0b9bb355b934fce2f38ab471f3b885ed73018c11a39bea1d3736e1a55726",
+         intel: "21abf7076556c86baa13d47dc0934658126cda734ff08703c029d1fd193c24f9"
 
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg",
       verified: "deltawalker.s3.amazonaws.com/"
@@ -19,7 +19,7 @@ cask "deltawalker" do
   app "DeltaWalker.app"
 
   uninstall script: {
-    executable:   "#{staged_path}/run-me-first",
+    executable:   "#{staged_path}/run-me-first.command",
     sudo:         false,
     must_succeed: false,
   }
