@@ -11,8 +11,8 @@ cask "duet" do
     end
   end
   on_big_sur :or_newer do
-    version "3.20.2.0"
-    sha256 "caee77ce3ef16e9a2167e0d8d7f500315beefbfdaf7b37ef3fe27b1012b979dd"
+    version "3.20.3.0"
+    sha256 "2edcc20b4238f1490579595956c1e18dfd441d0e6abbb69c9cba788640e80ab9"
 
     url "https://duetdownload.com/Mac/#{version.major}_x/duet-dd-#{version.dots_to_hyphens}.dmg",
         verified: "duetdownload.com/Mac/"
