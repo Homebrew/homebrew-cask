@@ -1,6 +1,6 @@
 cask "syncmate" do
-  version "8.8.539"
-  sha256 "7b6ccad507afc729fb720577121ab3f4c638e29f88e7740e0a8c6639c00b2746"
+  version "8.9.563"
+  sha256 "312fd1fe034b4e268bc009cb1532fa13a23a609fb78f0d4748738b824f314e70"
 
   url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip",
       verified: "cdn.electronic.us/products/syncmate/"
