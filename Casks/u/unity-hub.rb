@@ -1,5 +1,5 @@
 cask "unity-hub" do
-  version "3.11.0"
+  version "3.11.1"
   sha256 :no_check
 
   url "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg"
