@@ -1,5 +1,5 @@
 cask "almighty" do
-  version "2.7.1"
+  version "2.8.0"
   sha256 :no_check
 
   url "https://almighty-app.s3.amazonaws.com/Almighty.zip",
