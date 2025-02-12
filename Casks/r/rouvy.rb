@@ -1,5 +1,5 @@
 cask "rouvy" do
-  version "3.9.5"
+  version "3.10.2"
   sha256 :no_check
 
   url "https://cdn.rouvy.com/update/Rouvy_Installer.dmg"
