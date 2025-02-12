@@ -1409,6 +1409,7 @@ whatsapp
 whatsapp@beta
 whatsapp@legacy
 whatsize
+whimsical
 whisky
 widelands
 wifi-explorer-pro
