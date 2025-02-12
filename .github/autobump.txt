@@ -928,6 +928,7 @@ p4
 p4v
 pagico
 panoply
+parallels
 parsehub
 path-finder
 pcoipclient
