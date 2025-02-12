@@ -1233,6 +1233,7 @@ sweet-home3d
 swiftformat-for-xcode
 sync
 syncovery
+syncterm
 syncthing
 syntax-highlight
 tabby
