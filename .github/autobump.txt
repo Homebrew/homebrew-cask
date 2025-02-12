@@ -266,6 +266,7 @@ cyberduck
 cycling74-max
 daedalus-mainnet
 dangerzone
+darktable
 dash-dash
 dashcam-viewer
 datadog-agent
