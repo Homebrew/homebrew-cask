@@ -1225,6 +1225,7 @@ supernotes
 superwhisper
 surfshark
 surge
+sweet-home3d
 swiftformat-for-xcode
 sync
 syncovery
