@@ -673,6 +673,7 @@ little-snitch
 live-home-3d
 livebook
 lm-studio
+local@beta
 localcan
 localsend
 logi-options+
