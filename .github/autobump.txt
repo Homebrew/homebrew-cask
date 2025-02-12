@@ -1162,6 +1162,7 @@ sketch@beta
 skim
 skype
 skype@preview
+slab
 slack
 slack-cli
 slack@beta
