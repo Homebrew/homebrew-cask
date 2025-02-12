@@ -1116,6 +1116,7 @@ screaming-frog-log-file-analyser
 screaming-frog-seo-spider
 screen-studio
 screenmemory
+screens-assist
 screens-connect
 scrivener
 scrolla
