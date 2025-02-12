@@ -1,6 +1,6 @@
 cask "transmit" do
-  version "5.10.7"
-  sha256 "e2f6cfe089f9dbd1c404aa6d07a30a6942241dcc8751ea3be8f709d64e23281e"
+  version "5.10.6"
+  sha256 "0c686c9c636856a6739470ebf6abe4398f4985a37f6e4524edb0d8d4b79b4381"
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   name "Transmit"
@@ -8,8 +8,8 @@ cask "transmit" do
   homepage "https://panic.com/transmit/"
 
   livecheck do
-    url "https://help.panic.com/transmit/transmit#{version.major}/release-integrity/"
-    regex(/href=.*?Transmit[\s._-]?v?(\d+(?:\.\d+)+)\.zip/i)
+    url "https://download.panic.com/transmit/Transmit-#{version.major}-Latest.zip"
+    strategy :header_match
   end
 
   auto_updates true
