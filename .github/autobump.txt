@@ -1386,6 +1386,7 @@ vscodium
 vscodium@insiders
 vsee
 vuescan
+wacom-tablet
 wakatime
 warcraft-logs-uploader
 warp
