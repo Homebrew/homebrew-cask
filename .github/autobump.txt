@@ -1228,6 +1228,7 @@ surge
 swiftformat-for-xcode
 sync
 syncovery
+syncterm
 syncthing
 syntax-highlight
 tabby
