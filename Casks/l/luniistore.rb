@@ -1,11 +1,11 @@
 cask "luniistore" do
   arch arm: "arm64", intel: "i386"
 
-  version "2.6.312"
-  sha256 arm:   "922603785e55f11dda4776af851763f20d579f6bb1c8ac4b6ef83e2506555490",
-         intel: "f235a1bac95b76488fcb6582ca86208a796e4467c69e9224ef0db6aefbb2714f"
+  version "4.0.312"
+  sha256 arm:   "8832d1e84d5897f9e4b334097b38485906f2a8bccfa552b0245798dc8a94b498",
+         intel: "6cde650bbc5a4ed23539eca2eb7bf4ff16777469601fd9c02fe9a8dce2375c9c"
 
-  url "https://storage.googleapis.com/storage.lunii.fr/public/deploy/installers/macos/#{arch}/Luniistore-#{version}-#{arch}.pkg",
+  url "https://storage.googleapis.com/storage.lunii.fr/public/deploy/installers/macos/#{arch}/Lunii-#{version}-#{arch}.pkg",
       verified: "storage.googleapis.com/storage.lunii.fr/"
   name "Luniistore"
   desc "Utility for My Fabulous Storyteller"
@@ -18,7 +18,7 @@ cask "luniistore" do
 
   auto_updates true
 
-  pkg "Luniistore-#{version}-#{arch}.pkg"
+  pkg "Lunii-#{version}-#{arch}.pkg"
 
   postflight do
     # The postinstall script automatically opens the app. Therefore, we must
@@ -26,7 +26,7 @@ cask "luniistore" do
     retries ||= 3
     ohai "The Luniistore package postinstall script launches the app" if retries >= 3
     ohai "Attempting to close Luniistore to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Luniistore.app"]
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Lunii.app"]
   end
 
   uninstall quit:    "com.lunii.luniistore",
