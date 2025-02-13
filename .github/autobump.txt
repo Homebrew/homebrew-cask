@@ -1227,6 +1227,7 @@ steinberg-mediabay
 stratoshark
 stratoshark@dev
 strongvpn
+structuredlogviewer
 studio-3t
 sublime-merge
 sublime-text@dev
