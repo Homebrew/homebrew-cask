@@ -956,6 +956,7 @@ pieces-os
 pika
 pile
 pingplotter
+pinwheel
 pitch
 pixel-shift-combiner
 planet
