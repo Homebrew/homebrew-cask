@@ -7,7 +7,7 @@ cask "structuredlogviewer" do
 
   url "https://github.com/KirillOsenkov/MSBuildStructuredLog/releases/download/v#{version}/StructuredLogViewer-#{arch}.dmg",
       verified: "github.com/KirillOsenkov/MSBuildStructuredLog/"
-  name "StructuredLogViewer"
+  name "Structured Log Viewer"
   desc "Interactive log viewer for MSBuild structured logs (*.binlog)"
   homepage "https://msbuildlog.com/"
 
