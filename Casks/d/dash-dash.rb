@@ -1,11 +1,11 @@
 cask "dash-dash" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "22.0.0"
-  sha256 arm:   "8411b317a2c4cb5cf279a667b72203f308d58701d58dfbebc3a999113d0cfda4",
-         intel: "647ba48f9555de99bb19c1a6538044ddf255aa49a851ea74d3d2d03aab28d463"
+  version "22.1.0"
+  sha256 arm:   "4d19310ee4bd93aa4cd254bbe842155e1ecb8ead5519b25792f6aa9399c38c65",
+         intel: "d00deb355e9187c644b9afc15903acde294a5152fa81e97623f83731c82841c5"
 
-  url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-#{arch}-apple-darwin.dmg",
+  url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-#{arch}-apple-darwin.zip",
       verified: "github.com/dashpay/dash/"
   name "Dash"
   desc "Dash - Reinventing Cryptocurrency"
