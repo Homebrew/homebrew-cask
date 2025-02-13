@@ -32,7 +32,7 @@ cask "ibkr" do
               ["TERM", "IBKR Desktop.app"],
             ],
             script: {
-              executable: "/Applications/IBKR Desktop/IBKR Desktop Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+              executable: "~/Applications/IBKR Desktop/IBKR Desktop Uninstaller.app/Contents/MacOS/JavaApplicationStub",
               args:       ["-q"],
             }
 
