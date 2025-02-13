@@ -56,8 +56,9 @@ cask "vmware-fusion" do
 
   postflight do
     system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
-                   args: ["set"],
-                   sudo: true
+                   args:         ["set"],
+                   sudo:         true,
+                   sudo_as_root: true
   end
 
   uninstall_preflight do
