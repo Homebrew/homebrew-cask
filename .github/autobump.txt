@@ -30,6 +30,7 @@ adguard@nightly
 adobe-acrobat-pro
 adobe-acrobat-reader
 adobe-air
+adobe-dng-converter
 adrive
 aerial@beta
 affine
