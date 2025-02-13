@@ -1,6 +1,6 @@
 cask "time-sink" do
-  version "2.2.3"
-  sha256 "560ebfb30b2203e3376241954c6fe118f6de47f89e27052c06128655852f5b93"
+  version "2.2.4"
+  sha256 "6300ae766877918c286714fb8de093cc8b3e66adee287aae5693f946d91486bb"
 
   url "https://manytricks.com/download/_do_not_hotlink_/timesink#{version.no_dots}.dmg"
   name "Time Sink"
