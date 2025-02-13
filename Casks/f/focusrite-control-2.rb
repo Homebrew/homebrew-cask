@@ -1,7 +1,7 @@
 cask "focusrite-control-2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.449.0.26180"
-  sha256 "6376ed28f251226f55508343ccd51553e059799430ac9a103a112a37f68868b7"
+  version "1.479.0.27041"
+  sha256 "fd6e75cd7eb2d10c4b6d0e69c6f5060870b2bfe9afbc7843c58a1670ab7245fa"
 
   url "https://releases.focusrite.com/com.focusrite.focusrite-control/release/Focusrite-Control-2-#{version}.dmg"
   name "Focusrite Control 2"
