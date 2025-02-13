@@ -9,6 +9,7 @@ cask "qtox" do
   homepage "https://qtox.github.io/"
 
   deprecate! date: "2024-02-13", because: :discontinued
+  disable! date: "2025-02-13", because: :discontinued
 
   app "qTox.app"
 
