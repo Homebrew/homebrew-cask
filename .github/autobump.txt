@@ -1346,6 +1346,7 @@ ubiquiti-unifi-controller
 ueli
 uhk-agent
 ui
+ui-tars
 ultimate
 understand
 uninstallpkg
