@@ -538,6 +538,7 @@ halloy
 hancom-docs
 hancom-word
 handbrake
+hapigo
 hashbackup
 hazel
 hbuilderx
