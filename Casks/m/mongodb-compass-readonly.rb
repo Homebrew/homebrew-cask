@@ -1,9 +1,9 @@
 cask "mongodb-compass-readonly" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.45.2"
-  sha256 arm:   "62e2b00d92b718ff077ac400e360bfeb75a5b1831a830fec6524b6583fd050df",
-         intel: "115a43f02bfcb78ec5c9077fdb1bcd017b05afa44a930e9cc99bb0704e779e2b"
+  version "1.45.3"
+  sha256 arm:   "4b6ccedb54a75859536ec7939f4aca597ad9b31146acc5e08933a2ca7cc097ca",
+         intel: "730a0c5625d05d17ece93e77c03f8cfbdeae045beb34e7c4f7da0739ea73f678"
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-readonly-#{version}-darwin-#{arch}.dmg"
   name "MongoDB Compass Readonly"
