@@ -196,6 +196,7 @@ chatbox
 chatgpt
 chatwise
 chatwork
+cherry-studio
 chia
 chipmunk
 chirp
