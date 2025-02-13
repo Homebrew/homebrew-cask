@@ -1,9 +1,9 @@
 cask "xiaomi-cloud" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.1"
-  sha256 arm:   "e928c81d1803900a49be6fb70bef76f749aa19b628dda73c0fa4805fad350992",
-         intel: "c4e59f296c3d1398d8cf89125d99617af2cc2adeac7fcf6232ccc6a93982843b"
+  version "3.0.2"
+  sha256 arm:   "805dba3c4713d77e32b464b463a6277898b5af2db9f92ad3673ad89ac6ade339",
+         intel: "ff4b2b1d620e335d9d7a2f747d2e3147bc565465ec602e4c234c93fc45e39d20"
 
   url "https://cdn.cnbj1.fds.api.mi-img.com/archive/update-server/public/darwin/#{arch}/XiaomiCloud-#{version}.dmg",
       verified: "cdn.cnbj1.fds.api.mi-img.com/archive/update-server/public/darwin/"
