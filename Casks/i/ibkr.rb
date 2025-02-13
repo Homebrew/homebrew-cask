@@ -23,7 +23,10 @@ cask "ibkr" do
 
   installer script: {
     executable: "#{staged_path}/IBKR Desktop Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
+    args:       [
+      "-dir", "#{appdir}/IBKR Desktop",
+      "-q"
+    ],
   }
 
   uninstall signal: [
@@ -32,13 +35,12 @@ cask "ibkr" do
               ["TERM", "IBKR Desktop.app"],
             ],
             script: {
-              executable: "/Applications/IBKR Desktop/IBKR Desktop Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+              executable: "#{appdir}/IBKR Desktop/IBKR Desktop Uninstaller.app/Contents/MacOS/JavaApplicationStub",
               args:       ["-q"],
             }
 
   zap trash: [
-    "/Applications/IBKR Desktop",
-    "~/Applications/IBKR Desktop",
+    "#{appdir}/IBKR Desktop",
     "~/Desktop/IBKR Desktop",
     "~/Jts",
     "~/Library/Application Support/IBKR Desktop",
