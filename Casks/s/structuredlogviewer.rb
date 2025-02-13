@@ -12,4 +12,6 @@ cask "structuredlogviewer" do
   homepage "https://msbuildlog.com/"
 
   app "StructuredLogViewer.app"
+
+  # No zap stanza required
 end
