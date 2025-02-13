@@ -931,6 +931,7 @@ p4v
 pagico
 panoply
 parallels
+parallels-virtualization-sdk
 parsehub
 path-finder
 pcoipclient
