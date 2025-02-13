@@ -1,8 +1,8 @@
 cask "hookmark" do
-  version "6.4.1,2024,10"
-  sha256 "84261f5980993babd8353ed8766a92472c05accc242a81690389e7628a0577ac"
+  version "6.7"
+  sha256 "dddc46b26d35cc473613dd14bce697ad32cb9014216784e57f72066c934b60ab"
 
-  url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/Hookmark-app-#{version.csv.first}.dmg_.zip",
+  url "https://hookproductivity.com/downloads/Hookmark-app-#{version}.dmg",
       user_agent: :fake
   name "Hook"
   desc "Link and retrieve key information"
@@ -10,9 +10,9 @@ cask "hookmark" do
 
   livecheck do
     url "https://hookproductivity.com/download"
-    regex(%r{href=.*?/(\d+)/(\d+)/Hookmark[._-]app[._-]\v?(\d+(?:\.\d+)+)\.dmg[_-]?\.zip}i)
+    regex(%r{href=.*?/Hookmark[._-]app[._-]\v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
+      page.scan(regex).map { |match| match[0] }
     end
   end
 
