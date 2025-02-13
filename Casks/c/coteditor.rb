@@ -68,8 +68,8 @@ cask "coteditor" do
     sha256 "1f0773115410510cc0074b01110260a03788e4a00c059eb7dd855b09226f3b17"
 
     livecheck do
-      url "https://coteditor.com/appcast.xml"
-      strategy :sparkle, &:short_version
+      url :url
+      strategy :github_latest
     end
   end
 
