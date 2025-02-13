@@ -1,5 +1,5 @@
 cask "free42-decimal" do
-  version "3.2.1"
+  version "3.2.2"
   sha256 :no_check
 
   url "https://thomasokken.com/free42/download/Free42Mac.zip"
