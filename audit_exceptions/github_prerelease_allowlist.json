@@ -10,7 +10,7 @@
   "devtoys": "all",
   "drop-to-gif": "all",
   "duplicati": "all",
-  "follow@nightly": "all",
+  "follow@nightly": "any",
   "font-bravura": "all",
   "font-devicons": "all",
   "font-gilbert": "all",

@@ -1,11 +1,11 @@
 cask "follow@nightly" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.3.4-nightly.20250213"
-  sha256 arm:   "d7f93e19f2b57555db28bd836f975f9a6a2979b5325ed46611e58d91f44a8dd1",
-         intel: "0b860ef2a6ac6d70f3944c0769f5427dca8e27b90a4c3e354fd2bb493890beb5"
+  version "0.3.5"
+  sha256 arm:   "28f8e58a92802f7579ef181a4c815f9216aa57bd832e41e40aa233861282e4ef",
+         intel: "1b4c1e13545981b1b7fd77a1904ce0154c82de4806d5c1bf4cedd783c653644c"
 
-  url "https://github.com/RSSNext/Follow/releases/download/#{version}/Follow-#{version}-macos-#{arch}.dmg",
+  url "https://github.com/RSSNext/Follow/releases/download/v#{version}/Follow-#{version}-macos-#{arch}.dmg",
       verified: "github.com/RSSNext/Follow/"
   name "Follow Nightly"
   desc "Information browser"
