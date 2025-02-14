@@ -216,6 +216,7 @@ cleanclip
 cleaneronepro
 cleanmymac
 cleanmymac-zh
+cleanshot
 clearvpn
 clickhouse
 clickup
