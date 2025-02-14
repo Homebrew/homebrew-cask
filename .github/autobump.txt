@@ -982,6 +982,7 @@ popsql
 portfolioperformance
 positron
 postbox
+postgres-unofficial
 postico
 postman
 postman-agent
