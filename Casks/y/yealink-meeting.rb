@@ -2,11 +2,11 @@ cask "yealink-meeting" do
   arch arm: "arm", intel: "X86"
 
   on_arm do
-    version "4.7.12,926bdd3764ceebc87135c11656a7326c"
-    sha256 "95f4a71ccae8284e3b27c26ccc6c617a373f003f550e21815ccc705a1a4f5caa"
+    version "4.7.14,4160074ffd214b8e125358bbe77d3c8f"
+    sha256 "184832efc2b437699320533b73fca9aaaf1106d6bcec964e1601db0243608781"
   end
   on_intel do
-    version "4.7.11,94bcfa4662cabecc2c083941a8083336"
+    version "4.7.13,c0271512475b6e1adfe855208eb7d5fc"
     sha256 "a680ee1d345d8000b2d94a2484dfda6f7810cf636bc046025d5d2f5977c7bac4"
   end
 
