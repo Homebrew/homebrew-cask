@@ -825,6 +825,7 @@ mutedeck
 mutesync
 mweb-pro
 nagstamon
+name-mangler
 naps2
 native-access
 naver-whale
