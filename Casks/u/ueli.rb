@@ -1,9 +1,9 @@
 cask "ueli" do
   arch arm: "-arm64"
 
-  version "9.17.0"
-  sha256 intel: "779ada040ed4377b1dd24f278c6fc639f6c1de4a336b2891fd4ee272012f7a4a",
-         arm:   "1317ab8c3c3158fb20ca57b5fe00e4d55f04e9c5e625997954ab375510331279"
+  version "9.18.0"
+  sha256 intel: "9d5000017eec897aaad9a0967eadd8b120fe90951bbee29faa9cea3c323ca710",
+         arm:   "65682d607dbdadcc4227318e15cd175509a4d4d3db61af068f4e44697371d94c"
 
   url "https://github.com/oliverschwendener/ueli/releases/download/v#{version}/Ueli-#{version}#{arch}.dmg",
       verified: "github.com/oliverschwendener/ueli/"
