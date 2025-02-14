@@ -1,9 +1,9 @@
 cask "knime" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "5.4.1"
-  sha256 arm:   "c8393352f5dde2226ae9750bfe35f2c99fd9fc25f8cb3ba9c5e19178d36aad3f",
-         intel: "f7664fca79c52c52487e513398b9c3fd871d7346f996afe4a8a686c5f3830cbf"
+  version "5.4.2"
+  sha256 arm:   "b8b3cb1cd1fec497973fefaf39f38848e78481c6ddb52f4e6d9f4dc9df081edc",
+         intel: "d9d6e93335c3a6d0bc7ee0c88ceedf05e93915e0304d7034273a7c9fcc917852"
 
   url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.#{arch}.dmg",
       verified: "download.knime.org/analytics-platform/macosx/"
