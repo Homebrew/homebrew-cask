@@ -13,7 +13,7 @@ cask "texworks" do
   url "https://github.com/TeXworks/texworks/releases/download/release-#{version.csv.first}/TeXworks-macos11-#{version.csv.first}-#{arch}-#{version.csv.second}-git_#{version.csv.third}.dmg",
       verified: "github.com/TeXworks/texworks/"
   name "TeXworks"
-  desc "Main codebase"
+  desc "LaTeX editor"
   homepage "https://www.tug.org/texworks/"
 
   livecheck do
