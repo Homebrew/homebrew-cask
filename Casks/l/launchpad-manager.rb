@@ -8,8 +8,8 @@ cask "launchpad-manager" do
     end
   end
   on_big_sur :or_newer do
-    version "1.0.13"
-    sha256 "6b3042d9ae4d08bfba3e237b901f798674d7d0ab4a33b025a29c0852e9e1aa7d"
+    version "1.0.14"
+    sha256 "e972bc4605138c9b036d4386a23da397b609981dff2f291d17985162df9f5372"
 
     livecheck do
       url "https://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg"
