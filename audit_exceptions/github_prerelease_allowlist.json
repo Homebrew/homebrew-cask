@@ -25,7 +25,7 @@
   "insomnia@alpha": "any",
   "irccloud": "all",
   "jenkins-menu": "all",
-  "keka@beta": "all",
+  "keka@beta": "any",
   "kitty@nightly": "all",
   "macfuse@dev": "any",
   "magicavoxel": "all",
