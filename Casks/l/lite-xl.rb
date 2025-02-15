@@ -8,7 +8,7 @@ cask "lite-xl" do
   url "https://github.com/lite-xl/lite-xl/releases/download/v#{version}/lite-xl-v#{version}-macos-#{arch}.dmg"
 verified "github.com/lite-xl/lite-xl/"
   name "Lite XL"
-  desc "lightweight text editor written in Lua, adapted from lite"
+  desc "Lightweight text editor written in Lua, adapted from lite"
   homepage "https://lite-xl.com/"
 
   livecheck do
