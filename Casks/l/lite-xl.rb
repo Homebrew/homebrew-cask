@@ -6,7 +6,7 @@ cask "lite-xl" do
          intel: "df49f0653600b7a132e5d5b3f1b65f7a5eb361b2f6224ba4fbe5908c93e6b11e"
 
   url "https://github.com/lite-xl/lite-xl/releases/download/v#{version}/lite-xl-v#{version}-macos-#{arch}.dmg"
-      verified: "github.com/lite-xl/lite-xl/"
+  verified "github.com/lite-xl/lite-xl/"
   name "Lite XL"
   desc "A lightweight text editor written in Lua, adapted from lite"
   homepage "https://lite-xl.com/"
