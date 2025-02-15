@@ -8,6 +8,11 @@ cask "brewtarget" do
   desc "Beer recipe creation tool"
   homepage "https://www.brewtarget.beer/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "brewtarget_#{version}_MacOS.app"
 
   zap trash: [
