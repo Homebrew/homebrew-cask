@@ -8,10 +8,7 @@ cask "workplace-chat" do
   desc "Communications portal for your organisation"
   homepage "https://www.facebook.com/workplace/chat-app"
 
-  livecheck do
-    url :url
-    strategy :header_match
-  end
+  disable! date: "2025-02-15", because: :discontinued
 
   app "Workplace Chat.app"
 
