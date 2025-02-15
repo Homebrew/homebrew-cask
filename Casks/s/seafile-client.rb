@@ -1,6 +1,6 @@
 cask "seafile-client" do
-  version "9.0.11"
-  sha256 "f0a45015eee313a5245b5a8f29d3509df8b884168a38e90bf4248091fc0bd14a"
+  version "9.0.12"
+  sha256 "80fd82cfa023917fe2f2606328b825c7b73f9234f3c27eaf6fb28e134081fc58"
 
   url "https://download.seadrive.org/seafile-client-#{version}.dmg",
       verified: "seadrive.org/"
