@@ -1,6 +1,6 @@
 cask "font-brass-mono" do
-  version "1.100"
-  sha256 "8aa2761baf1003c293b5619cf15e0a23ff86cd3cd56b60df6819b70093cd4d18"
+  version "1.101"
+  sha256 "674285de45647fd35f9378f358cc85ca405026be67df991b26c35292ffd71459"
 
   url "https://github.com/fonsecapeter/brass_mono/releases/download/v#{version}/BrassMono.zip"
   name "Brass Mono"
