@@ -9,22 +9,26 @@ cask "turbotax-2024" do
 
   livecheck do
     url "https://downloadpatch.esd.intuit.com/requestadapter/ctg/comp/2024/turbotaxpersonal/mcusi0000pp00/mac/deliverytarget_live.xml"
-    regex(%r{.*?/ESD/Files/CTG/comp/([^/]+)/.*}i)
+    regex(%r{/ESD/Files/CTG/comp/([^/]+)/}i)
     strategy :xml do |xml, regex|
-      latest_version = xml.get_elements("//DeliveryPackages/CoreDeliveryPackageInfo/InternalName")
-                          .map { |item| item.text&.strip }.max
-      latest_package_info = xml.elements["//InternalName[text()='#{latest_version}']"]&.parent
-      latest_xml_url = latest_package_info.elements["BaseUri"]&.text
-      internal_version = latest_package_info.elements["InternalName"]&.text&.match(/(\d+(?:\.\d+)*)/i)
-      latest_content = Homebrew::Livecheck::Strategy.page_content(latest_xml_url)
-      next if latest_content.blank?
+      latest_package_info =
+        xml.get_elements("//DeliveryPackages/CoreDeliveryPackageInfo")
+           .max_by { |item| item.elements["InternalName"]&.text }
+      next unless latest_package_info
 
-      latest_xml = Homebrew::Livecheck::Strategy::Xml.parse_xml(latest_content[:content])
+      version = latest_package_info.elements["InternalName"]&.text&.[](/v?(\d+(?:\.\d+)+)/i, 1)
+      latest_xml_url = latest_package_info.elements["BaseUri"]&.text&.strip
+      next if !version || !latest_xml_url
+
+      latest_xml_page = Homebrew::Livecheck::Strategy.page_content(latest_xml_url)
+      next if (latest_xml_content = latest_xml_page[:content]).blank?
+
+      latest_xml = Homebrew::Livecheck::Strategy::Xml.parse_xml(latest_xml_content)
       latest_url = latest_xml.elements["//DeliveryPackageData/FileContent/ContentNetworkBaseUri"]&.text&.strip
       match = latest_url&.match(regex)
       next if match.blank?
 
-      "#{internal_version},#{match[1]}"
+      "#{version},#{match[1]}"
     end
   end
 
