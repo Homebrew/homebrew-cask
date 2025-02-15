@@ -8,8 +8,8 @@ cask "fontcreator" do
   homepage "https://www.high-logic.com/font-editor/fontcreator"
 
   livecheck do
-    url "https://www.high-logic.com/font-editor/fontcreator/changelog"
-    regex(/FontCreator\s+v?(\d+(?:\.\d+)+)/i)
+    url :homepage
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :big_sur"
