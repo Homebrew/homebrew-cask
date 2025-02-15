@@ -1,5 +1,5 @@
 cask "virtualhereserver" do
-  version "4.7.4"
+  version "4.7.5"
   sha256 :no_check
 
   on_mojave :or_older do
