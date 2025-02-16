@@ -632,6 +632,7 @@ keepassxc@snapshot
 keeper-password-manager
 keka
 keyboard-cowboy
+keyguard
 keyman
 keymapp
 keysafe
