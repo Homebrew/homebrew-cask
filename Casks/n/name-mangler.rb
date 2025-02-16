@@ -1,6 +1,6 @@
 cask "name-mangler" do
-  version "3.9.2"
-  sha256 "bcce4805138e4817b678a77838d96c2b136da53f8ac9690f7c91b2c374f76559"
+  version "3.9.3"
+  sha256 "97cb71af1145bb5b7bec59d7350f3542c554db2569508fb159785ee370578b5f"
 
   url "https://manytricks.com/download/_do_not_hotlink_/namemangler#{version.no_dots}.dmg"
   name "Name Mangler"
