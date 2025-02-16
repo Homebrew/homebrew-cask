@@ -1,9 +1,9 @@
 cask "gisto" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.0.5"
-  sha256 arm:   "812e99b0157dd3633db900a9eaa30809aec396f0e1019b2741deff617487de14",
-         intel: "f9bf360aa2b4bff73a173bbb3025309611abc14648d2efd5b95affb5bfa7d0bb"
+  version "2.0.6"
+  sha256 arm:   "b1f7d77f51f3856e241f18363e2f070a309a2eb35893268b61039ed506b7ce2b",
+         intel: "3e2ba6e09ee213601a3ecb2d4dea3b1383384b5f3e0d9cd2467a06f7d3540bd2"
 
   url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto_#{version}_#{arch}.dmg",
       verified: "github.com/Gisto/Gisto/"
