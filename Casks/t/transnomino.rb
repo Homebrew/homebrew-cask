@@ -1,6 +1,6 @@
 cask "transnomino" do
-  version "9.0"
-  sha256 "9634c39e5c138e4837e255a5e0e2c972e6ed560709f5caff8318e4bb1686eb4e"
+  version "9.0.1"
+  sha256 "192696151cdaac736da468762f5abdd63243f9ecb05d392bf4e6e2fe8b213dc0"
 
   url "https://www.transnomino.com/download/Transnomino-#{version}.dmg"
   name "Transnomino"
