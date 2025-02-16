@@ -1,11 +1,10 @@
 cask "oso-cloud" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.26.0"
-  sha256 arm:   "8880d68f1a45615e9ce6e024630ab17e2bd9ef08a598eb7bbf6b73e6b85841d3",
-         intel: "c2879ef2ad0d41586bf6e896d4d9af10c4cc1fccbf5feb4d0dc07410be9c8f9a"
+  version "0.26.1"
+  sha256 :no_check
 
-  url "https://d3i4cc4dqewpo9.cloudfront.net/#{version}/oso_cli_mac_osx_#{arch}",
+  url "https://d3i4cc4dqewpo9.cloudfront.net/latest/oso_cli_mac_osx_#{arch}",
       verified: "d3i4cc4dqewpo9.cloudfront.net/"
   name "OSO Cloud CLI"
   desc "Tool for interacting with OSO Cloud"
