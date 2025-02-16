@@ -8,8 +8,8 @@ cask "monotype" do
   homepage "https://support.monotype.com/en/articles/7860542-monotype-desktop-app"
 
   livecheck do
-    url "https://support.monotype.com/en/articles/8617063-latest-release-notes"
-    regex(/>Version\s*v?(\d+(?:\.\d+)+)[ "<]/i)
+    url "https://support.monotype.com/en/articles/8617063-release-notes"
+    regex(/>\s*Version\s*v?(\d+(?:\.\d+)+)\s*["'<]/im)
   end
 
   auto_updates true
