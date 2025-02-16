@@ -7,6 +7,11 @@ cask "positron" do
   desc "Data science IDE"
   homepage "https://github.com/posit-dev/positron"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+(?:-\d+)?)$/i)
+  end
+
   depends_on macos: ">= :catalina"
 
   app "Positron.app"
