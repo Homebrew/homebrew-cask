@@ -3,17 +3,23 @@ cask "precize" do
   sha256 "59339442a7e662d6de5eafb2779b6811a6d27e0919daa71924b921125c56f66c"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/precize#{version.csv.first.no_dots}.zip"
-  name "precize"
+  name "Precize"
   desc "Detailed information for files, bundles and folders"
   homepage "https://eclecticlight.co/taccy-signet-precize-alifix-utiutility-alisma/"
 
   livecheck do
     url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    strategy :page_match do |page|
-      match = page.match(%r{(\d+)/(\d+)/precize(\d+)\.zip}i)
-      next if match.blank?
+    regex(%r{/(\d+)/(\d+)/[^/]+?$}i)
+    strategy :xml do |xml, regex|
+      item = xml.elements["//dict[key[text()='AppName']/following-sibling::*[1][text()='Precize']]"]
+      next unless item
 
-      "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
+      version = item.elements["key[text()='Version']"]&.next_element&.text
+      url = item.elements["key[text()='URL']"]&.next_element&.text
+      match = url.strip.match(regex) if url
+      next if version.blank? || match.blank?
+
+      "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
 
