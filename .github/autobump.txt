@@ -1062,6 +1062,7 @@ radiola
 rancher
 rapidapi
 rapidweaver
+rar
 razorsql
 reactotron
 readdle-spark
