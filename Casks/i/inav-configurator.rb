@@ -15,6 +15,8 @@ cask "inav-configurator" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "INAV Configurator.app"
 
   zap trash: [
