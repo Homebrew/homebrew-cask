@@ -964,6 +964,7 @@ pingplotter
 pinwheel
 pitch
 pixel-shift-combiner
+pktriot
 planet
 plasticscm-cloud-edition
 playdate-simulator
