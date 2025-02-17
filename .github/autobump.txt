@@ -27,6 +27,7 @@ adguard
 adguard-vpn
 adguard-vpn@nightly
 adguard@nightly
+adlock
 adobe-acrobat-pro
 adobe-acrobat-reader
 adobe-air
