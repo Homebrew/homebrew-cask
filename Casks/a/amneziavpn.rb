@@ -8,9 +8,20 @@ cask "amneziavpn" do
   desc "VPN client"
   homepage "https://amnezia.org/"
 
+  # Upstream tags GitHub release that can be pre-releases or betas,
+  # so we need to check the download page for the latest stable version.
+  # The website is hydrated with JavaScript, so we need to extract
+  # the version from the JavaScript file.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://amnezia.org/en/downloads"
+    regex(/AmneziaVPN[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      js_file = page[%r{src=["']?/assets/(index.+\.js)\??["' >]}i, 1]
+      next if js_file.blank?
+
+      version_page = Homebrew::Livecheck::Strategy.page_content("https://amnezia.org/assets/#{js_file}")
+      version_page[:content]&.scan(regex)&.map { |match| match[0] }
+    end
   end
 
   depends_on macos: ">= :high_sierra"
