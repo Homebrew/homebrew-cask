@@ -1172,6 +1172,7 @@ shutter-encoder
 sigmaos
 signal
 signal@beta
+simplemind
 simplenote
 simplex
 singlebox
