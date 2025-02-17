@@ -1,6 +1,6 @@
 cask "rivet" do
-  version "1.10.0"
-  sha256 "6491438f9b86d9da76c6caeafce142c0356b0ab5888d324509c36501f36c7af4"
+  version "1.10.1"
+  sha256 "2b75b61280282100aca3cddb1ca6e250ff10b273a639f7036d6d04e0abb9e781"
 
   url "https://github.com/Ironclad/rivet/releases/download/app-v#{version}/Rivet.dmg", verified: "github.com/Ironclad/rivet/"
   name "Rivet"
