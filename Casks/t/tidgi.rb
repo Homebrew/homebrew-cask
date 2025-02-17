@@ -12,6 +12,7 @@ cask "tidgi" do
 
   livecheck do
     url :url
+    regex(/^\D*?(\d+(?:\.\d+)+.*)$/i)
     strategy :github_latest
   end
 
