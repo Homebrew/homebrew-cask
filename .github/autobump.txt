@@ -1178,6 +1178,7 @@ simplemind
 simplenote
 simplex
 singlebox
+singlecrystal
 sip
 sipgate-clinq
 sitesucker-pro
