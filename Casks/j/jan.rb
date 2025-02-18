@@ -1,6 +1,6 @@
 cask "jan" do
-  version "0.5.14"
-  sha256 "ff00c64ec655da58921ebc9bbe74b6d1ff71377bf63f11e2d86d59b3ff865951"
+  version "0.5.15"
+  sha256 "389e4645310b525fd745eb89d9cbc8727624d606394631e3dbbcf109cc305986"
 
   url "https://github.com/janhq/jan/releases/download/v#{version}/jan-mac-universal-#{version}.dmg",
       verified: "github.com/janhq/jan/"
