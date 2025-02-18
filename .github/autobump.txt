@@ -1291,6 +1291,7 @@ tencent-lemon
 tencent-meeting
 termius
 termius@beta
+termora
 testfully
 texifier
 texshop
