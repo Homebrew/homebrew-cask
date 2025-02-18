@@ -1303,6 +1303,7 @@ the-battle-for-wesnoth
 the-clock
 thebrain
 theiaide
+thorium
 threema
 threema-work
 threema@beta
