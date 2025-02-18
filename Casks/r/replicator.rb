@@ -1,9 +1,9 @@
-cask "jamf-migrator" do
+cask "replicator" do
   version "8.0.0"
   sha256 "68943248106a3b0c737e1d3bac3d3ba24fb7817cc4e54678d0f90783c6f0b504"
 
   url "https://github.com/jamf/Replicator/releases/download/v#{version}/Replicator.zip"
-  name "JamfMigrator"
+  name "Replicator"
   desc "Tool to migrate data granularly between Jamf Pro servers"
   homepage "https://github.com/jamf/Replicator"
 
