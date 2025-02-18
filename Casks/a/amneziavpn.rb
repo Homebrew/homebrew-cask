@@ -28,11 +28,9 @@ cask "amneziavpn" do
 
   app "AmneziaVPN.app"
 
-  uninstall quit:   [
-              "AmneziaVPN",
-              "AmneziaVPN-service",
-            ],
-            delete: [
+  uninstall launchctl: "AmneziaVPN-service",
+            quit:      "AmneziaVPN",
+            delete:    [
               "/Applications/AmneziaVPN.app",
               "/Library/LaunchDaemons/AmneziaVPN.plist",
             ]
