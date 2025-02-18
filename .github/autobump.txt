@@ -405,6 +405,7 @@ finalshell
 finbar
 finch
 find-any-file
+fing
 firealpaca
 firefly
 firefly-shimmer
