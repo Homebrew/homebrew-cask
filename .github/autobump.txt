@@ -877,6 +877,7 @@ nozbe
 nuclear
 nucleo
 nudge
+nutstore
 nvidia-geforce-now
 obs
 obs-advanced-scene-switcher
