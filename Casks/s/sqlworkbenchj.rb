@@ -8,7 +8,7 @@ cask "sqlworkbenchj" do
   homepage "https://www.sql-workbench.eu/"
 
   livecheck do
-    url "https://www.sql-workbench.eu/dev-download.html"
+    url "https://www.sql-workbench.eu/downloads.html"
     regex(/Workbench[._-]Build(\d+(?:\.\d+)*)\.zip/i)
   end
 
