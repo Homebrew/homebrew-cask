@@ -189,6 +189,7 @@ cap
 capacities
 caprine
 captain
+carbide-create
 carbon-copy-cloner
 cardhop
 cardpresso
