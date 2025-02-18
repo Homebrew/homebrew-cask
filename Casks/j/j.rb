@@ -60,4 +60,13 @@ cask "j" do
   # Not actually necessary, since it would be deleted anyway.
   # It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
   uninstall delete: "#{staged_path}/#{token}"
+
+  zap trash: [
+    "~/Library/Application Support/j",
+    "~/Library/Caches/com.jsoftware.jqt",
+    "~/Library/Caches/j",
+    "~/Library/Preferences/com.jsoftware.jqt.plist",
+    "~/Library/Preferences/jqt.ini",
+    "~/Library/Saved Application State/com.jsoftware.jqt.savedState",
+  ]
 end
