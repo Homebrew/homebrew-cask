@@ -263,6 +263,7 @@ creality-print
 crossover
 crosspaste
 cryptomator
+crystaldiffract
 crystalmaker
 crystalviewer
 curseforge
