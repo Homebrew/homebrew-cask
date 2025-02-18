@@ -2,13 +2,13 @@ cask "font-aileron" do
   version "0.102"
   sha256 "a93a1327f44912a7b1410ad0056fec3e904074413b0bd9da550f6175587cf958"
 
-  url "https://dotcolon.net/downloads/fonts/aileron_#{version.no_dots}.zip"
+  url "https://dotcolon.net/files/fonts/aileron_#{version.no_dots}.zip"
   name "Aileron"
-  homepage "https://dotcolon.net/font/aileron/"
+  homepage "https://dotcolon.net/fonts/aileron/"
 
   livecheck do
     url :homepage
-    regex(/Version\s+(\d+(?:\.\d+)*)/i)
+    regex(/Version.*?(\d+(?:\.\d+)*)/i)
   end
 
   font "Aileron-Black.otf"
