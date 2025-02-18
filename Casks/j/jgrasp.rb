@@ -16,6 +16,13 @@ cask "jgrasp" do
 
   uninstall pkgutil: "jgrasp"
 
+  zap trash: [
+    "~/Library/Application Support/jGRASP",
+    "~/Library/Caches/org.jgrasp.jGRASP",
+    "~/Library/Preferences/org.jgrasp.jGRASP.plist",
+    "~/Library/Saved Application State/org.jgrasp.jGRASP.savedState",
+  ]
+
   caveats do
     depends_on_java "11+"
   end
