@@ -2,8 +2,8 @@ cask "tencent-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "3.30.30.419,fbaf17b9b8f4a75df6eda3da8a01a573"
-    sha256 "54137248c6c8b7f2b1a5d4dc8738a01d680851f37094e9affa498aeec2a3d70a"
+    version "3.31.2.431,3866bd6756af079a0ee3d555c0d6feff"
+    sha256 "35f8b0c5f00fcc605922db8a989f916ba147f39f2ebbcc103df174dbbd3fd172"
   end
   on_intel do
     version "3.30.30.419,42f43682757e3cf2e9de6612102e1e30"
