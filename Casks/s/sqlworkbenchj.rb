@@ -8,8 +8,10 @@ cask "sqlworkbenchj" do
   homepage "https://www.sql-workbench.eu/"
 
   livecheck do
-    url "https://www.sql-workbench.eu/dev-download.html"
-    regex(/Workbench[._-]Build(\d+(?:\.\d+)*)\.zip/i)
+    url "https://www.sql-workbench.eu/workbench_pad.xml"
+    strategy :xml do |xml|
+      xml.elements["//Program_Version"]&.text&.strip
+    end
   end
 
   app "SQLWorkbenchJ.app"
