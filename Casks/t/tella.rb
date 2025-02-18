@@ -1,6 +1,6 @@
 cask "tella" do
-  version "1.42"
-  sha256 "c885912da8c6773989f373e18b5caaee9d749467dcf936afbd7c1066a2f17f11"
+  version "1.43"
+  sha256 "5360e1ed92bf0c28eeec45146a15ac55ef42132d199452f944e2762335825dbc"
 
   url "https://mac.tella.tv/Tella-#{version}.dmg"
   name "Tella"
