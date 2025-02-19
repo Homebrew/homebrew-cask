@@ -7,6 +7,7 @@ cask "font-glow-sans-sc-extended" do
   homepage "https://github.com/welai/glow-sans"
 
   deprecate! date: "2024-02-17", because: :discontinued
+  disable! date: "2025-02-19", because: :discontinued
 
   font "GlowSansSC-Extended-Bold.otf"
   font "GlowSansSC-Extended-Book.otf"
