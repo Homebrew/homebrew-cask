@@ -2,12 +2,12 @@ cask "ultimaker-cura" do
   arch arm: "ARM64", intel: "X64"
 
   on_arm do
-    version "5.9.0"
-    sha256 "55ba3809a33f8e882f7a2fe608994190bcfbec6d10e53345ee2f2fabd02d80eb"
+    version "5.9.1"
+    sha256 "44f23535df79e5d836c6567d9ca96ddc8cc4d90a1ccc187f4187399639eda025"
   end
   on_intel do
-    version "5.9.0"
-    sha256 "beeb3a32381d48fea8d5c27b737acf008b44363b7c75e16b9bed98379dc9de84"
+    version "5.9.1"
+    sha256 "6a0e131ca6e0cabb82a1f016a71067f4995bb3906f11e196aaad4c0a99bb7a0d"
   end
 
   url "https://github.com/Ultimaker/Cura/releases/download/#{version.csv.second || version.csv.first}/UltiMaker-Cura-#{version.csv.first}-macos-#{arch}.dmg",
