@@ -1,6 +1,6 @@
 cask "shearwater-cloud" do
-  version "2.12.2"
-  sha256 "080060a50a4344259bef1c3323018d0511755463570af184b5b355575eaa62f5"
+  version "2.12.3"
+  sha256 "aa4004b2d5f48fc0e31f3a0465a13ee16914c06e7d4e4e4d51c6a78d3feb30db"
 
   url "https://downloads.shearwater.com/livedownloads/ShearwaterCloudInstaller_#{version}.dmg"
   name "Shearwater Cloud"
@@ -12,13 +12,9 @@ cask "shearwater-cloud" do
     regex(/href=.*?ShearwaterCloudInstaller[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Shearwater Cloud.app"
 
   zap trash: "~/Library/Containers/unity.Shearwater-Research.Shearwater"
-
-  caveats do
-    requires_rosetta
-  end
 end
