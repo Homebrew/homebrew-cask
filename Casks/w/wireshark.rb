@@ -2,7 +2,7 @@ cask "wireshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  on_mojave :or_older do
+  on_catalina :or_older do
     version "4.2.10"
     sha256 arm:   "87026714a407b8964b0234d4aae5ba7bb2236dafb976472954f10ecef7442c36",
            intel: "4a41640ff80b8ff5c5ff03c5cc264918441611158d3037c35614d1a648fca08d"
@@ -20,7 +20,7 @@ cask "wireshark" do
       end
     end
   end
-  on_catalina :or_newer do
+  on_big_sur :or_newer do
     version "4.4.3"
     sha256 arm:   "0e18380fa0dfb8047d6b51c6a91d42eb1940f3814bb1fddbd96784dd669bbf1a",
            intel: "031119f725913fc4dff00350474670666da90d4f506ece1a998770f4cdbca3c2"
@@ -44,7 +44,7 @@ cask "wireshark" do
   auto_updates true
   conflicts_with cask:    "wireshark-chmodbpf",
                  formula: "wireshark"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Wireshark.app"
   pkg "Add Wireshark to the system path.pkg"
