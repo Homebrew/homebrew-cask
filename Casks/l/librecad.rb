@@ -8,6 +8,11 @@ cask "librecad" do
   desc "CAD application"
   homepage "https://librecad.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "LibreCAD.app"
 
   zap trash: [
