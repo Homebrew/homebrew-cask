@@ -1,6 +1,6 @@
 cask "affinity-publisher" do
-  version "2.5.7,2948"
-  sha256 "516a66d52ff01ea2397f1965ef6e4c57e167840de38f9eb590ebba8b5a18fc02"
+  version "2.6.0,3134"
+  sha256 "676d4f5577216663f06f8ab83e32e8837fcc42ec6e0c9031e10f6413de5fcd53"
 
   url "https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Publisher%20#{version.csv.first.major}%20Affinity%20Store%20#{version.csv.second}.zip",
       verified: "affinity-update.s3.amazonaws.com/"
