@@ -1,6 +1,6 @@
 cask "amazon-q" do
-  version "1.6.1"
-  sha256 "691816c4543dab01f7de7f87ef83d5a6b4f7c8081c879b71ad177cd02c3d15ce"
+  version "1.6.2"
+  sha256 "1ecd877657bd3b3e7b2467ec9da690b925fb1ad1bdb10d5cfae6f19a95c98ee9"
 
   url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/Amazon%20Q.dmg",
       verified: "desktop-release.q.us-east-1.amazonaws.com/"
