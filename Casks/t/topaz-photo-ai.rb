@@ -1,6 +1,6 @@
 cask "topaz-photo-ai" do
-  version "3.5.0"
-  sha256 "b093e2763428a3071d7479616cc32df4264d59be8436b400888bd333e53b92ad"
+  version "3.5.1"
+  sha256 "4b2b6a325030cb218d4b494761954717109bf67fa9fb8cfbeb29f5fab36adb36"
 
   url "https://downloads.topazlabs.com/deploy/TopazPhotoAI/#{version}/TopazPhotoAI-#{version}.pkg"
   name "Topaz Photo AI"
