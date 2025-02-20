@@ -1,9 +1,9 @@
 cask "kunkun" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.23"
-  sha256 arm:   "fd97679e4edf86e2d46ab2947525a96e0e6d4c231c6ccf2f05015b7a1dfa7589",
-         intel: "04201a5d4524500088ae50cebee19da27b337bbca5230157b3a58e727f19ba06"
+  version "0.1.24"
+  sha256 arm:   "a923f6feb11418b0b68ea0ea7e3fdb9b017d83b216ccb7087039749db2080d14",
+         intel: "dc2aa957ff65cdf607314b1fd84ad114b6d070c70b82d6ee888d5dc10af35e15"
 
   url "https://download.kunkun.sh/Kunkun-v#{version}/kunkun_#{arch}.app.tar.gz"
   name "Kunkun"
