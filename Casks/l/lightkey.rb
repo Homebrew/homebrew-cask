@@ -21,8 +21,8 @@ cask "lightkey" do
     end
   end
   on_ventura :or_newer do
-    version "5.2.3"
-    sha256 "a714ca47e722cc0e5db3eef4b5a85030d330ebd8c5e59d2280467c62e15c7464"
+    version "5.2.4"
+    sha256 "241d33c6d8b0f7ab3a89dafebc99c7057588928f57174390196409a17952baf1"
 
     # Upstream also publishes legacy versions (with a lower minor version) in
     # the appcast, so the first `item` after sorting by `pubDate`/`version` may
