@@ -8,8 +8,8 @@ cask "deezer" do
   homepage "https://www.deezer.com/download"
 
   livecheck do
-    url "https://www.deezer.com/desktop/download?platform=darwin&architecture=x64"
-    strategy :header_match
+    url "https://www.deezer.com/desktop/update/latest.yml?architecture=x64&platform=darwin&platformVersion=99"
+    strategy :electron_builder
   end
 
   auto_updates true
