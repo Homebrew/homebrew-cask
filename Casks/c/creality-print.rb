@@ -9,8 +9,8 @@ cask "creality-print" do
         verified: "github.com/CrealityOfficial/CrealityPrint/"
   end
   on_intel do
-    version "6.0.2.1574"
-    sha256 "aaf78d1f0fb96d3ceccc7a6fc14430899bf429f0d338cf62fe3dffbbcbbeca8e"
+    version "6.0.3.1591"
+    sha256 "bc423a2842c064beb9572eb389632c9f2e3474166fec3b971f1d9dbf8bd7e3b2"
 
     url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.csv.first.major_minor_patch}/CrealityPrint_#{version.csv.first}_Release.dmg",
         verified: "github.com/CrealityOfficial/CrealityPrint/"
