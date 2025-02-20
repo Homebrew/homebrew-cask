@@ -1,12 +1,9 @@
 cask "quanshi-meeting" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
   version "6.26.25011701"
 
-  if Hardware::CPU.intel?
-    sha256 "f20f091a833ba996c4e4aafd84cde1a1070181c4f33e269f546a2c7410985e9f"
-  else
-    sha256 "be040b0d9d8f951a26173bcee7db0c24f820b77b194c00e7ee6f393cd208b215"
-  end
+  sha256 arm:   "be040b0d9d8f951a26173bcee7db0c24f820b77b194c00e7ee6f393cd208b215",
+         intel: "f20f091a833ba996c4e4aafd84cde1a1070181c4f33e269f546a2c7410985e9f"
 
   url "https://dle.quanshi.com/onemeeting/download/auto/mac/#{version}/#{arch}/G-Net_MeetNow.pkg"
   name "Quanshi Meeting"
@@ -15,14 +12,26 @@ cask "quanshi-meeting" do
   homepage "https://www.quanshi.com"
 
   # Documentation: https://docs.brew.sh/Brew-Livecheck
+
   livecheck do
-        skip "No version information available"
+    url "https://dle.quanshi.com/onemeeting/download/v2/G-Net_MeetNow.pkg"
+    strategy :extract_plist
   end
 
-  auto_updates false
 
   pkg "G-Net_MeetNow.pkg"
 
+  uninstall signal:    ["KILL", "TangMeeting"],
+            delete:    [
+              "/Applications/TangMeeting.app",
+            ]
+
   # Documentation: https://docs.brew.sh/Cask-Cookbook#stanza-zap
-  zap trash: ""
+    zap trash: [
+    "~/Library/Logs/Quanshi",
+    "~/Library/LaunchDaemons/com.quanshi.daemonsvcd.plist",
+    "~/Library/LaunchAgents/com.quanshi.daemonapp.plist",
+    "~/Library/Preferences/com.gnet.uc.mac.helper.plist",
+  ]
+
 end
