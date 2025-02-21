@@ -34,10 +34,13 @@ cask "dropbox-capture" do
             login_item: "Dropbox Capture"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.dropbox-capture.sfl*",
     "~/Library/Application Support/Dropbox-Capture",
     "~/Library/Caches/com.electron.dropbox-capture",
     "~/Library/Caches/com.electron.dropbox-capture.ShipIt",
     "~/Library/Caches/Dropbox-Capture",
+    "~/Library/HTTPStorages/com.electron.dropbox-capture",
+    "~/Library/HTTPStorages/com.electron.dropbox-capture.binarycookies",
     "~/Library/Logs/Dropbox-Capture",
     "~/Library/Preferences/com.electron.dropbox-capture.plist",
   ]
