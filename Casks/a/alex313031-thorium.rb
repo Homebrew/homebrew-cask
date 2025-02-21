@@ -14,19 +14,7 @@ cask "alex313031-thorium" do
   livecheck do
     url :url
     regex(/^(M?\d+(?:\.\d+)+)$/i)
-    strategy :github_releases do |json, regex|
-      file_regex = /^Thorium[._-]macOS[._-]#{arch}\.dmg$/i
-
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-        next unless release["assets"]&.any? { |asset| asset["name"]&.match?(file_regex) }
-
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
+    strategy :github_latest
   end
 
   conflicts_with cask: "thorium"
