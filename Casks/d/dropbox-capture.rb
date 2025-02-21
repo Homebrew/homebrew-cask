@@ -26,6 +26,13 @@ cask "dropbox-capture" do
 
   app "Dropbox Capture.app"
 
+  uninstall quit:       [
+              "com.dropbox.capture.systemaudio",
+              "com.electron.dropbox-capture",
+              "com.electron.dropbox-capture.helper",
+            ],
+            login_item: "Dropbox Capture"
+
   zap trash: [
     "~/Library/Application Support/Dropbox-Capture",
     "~/Library/Caches/com.electron.dropbox-capture",
