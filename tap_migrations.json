@@ -3,7 +3,6 @@
   "basex": "homebrew/core",
   "borgbackup": "homebrew/core",
   "chronograf": "homebrew/core",
-  "consul": "homebrew/core",
   "consul-template": "homebrew/core",
   "cryptol": "homebrew/core",
   "cups-pdf": "homebrew/core",
