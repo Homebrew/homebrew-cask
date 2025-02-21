@@ -16,8 +16,10 @@ cask "mixxx@snapshot" do
   homepage "https://www.mixxx.org/"
 
   livecheck do
-    url "https://mixxx.org/download/"
-    regex(%r{href=.*?/snapshots/main/mixxx[._-]v?(.+)[._-]macos#{arch}\.dmg}i)
+    url "https://downloads.mixxx.org/snapshots/main/manifest.json"
+    strategy :json do |json|
+      json.dig("macos-macos#{arch}", "git_describe")
+    end
   end
 
   conflicts_with cask: "mixxx"
