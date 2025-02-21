@@ -3,8 +3,8 @@ cask "font-mona-sans" do
   sha256 "c5e44e736b72bbbd47ae7fecfde8f0c149ba2c0a436d27a2f1ec6392ba3ecd0b"
 
   url "https://github.com/github/mona-sans/releases/download/v#{version}/MonaSans.zip"
-  name "Mona-Sans"
-  homepage "https://github.com/github/mona-sans"
+  name "Mona Sans"
+  homepage "https://github.com/mona-sans"
 
   font "Mona Sans/OTF/MonaSans-Black.otf"
   font "Mona Sans/OTF/MonaSans-BlackItalic.otf"

@@ -2,10 +2,10 @@ cask "wireshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  on_mojave :or_older do
-    version "4.2.10"
-    sha256 arm:   "87026714a407b8964b0234d4aae5ba7bb2236dafb976472954f10ecef7442c36",
-           intel: "4a41640ff80b8ff5c5ff03c5cc264918441611158d3037c35614d1a648fca08d"
+  on_catalina :or_older do
+    version "4.2.11"
+    sha256 arm:   "aa12b6237fe04890816dc5163e4c2990aaf83da206ce51bb53375164b7fbbcde",
+           intel: "11b3e1bb6b5b8f067b2d286c4805e7df0a487df59a432b5f3aef2c1d410b9747"
 
     livecheck do
       url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/#{livecheck_arch}64/en-US/development.xml"
@@ -20,10 +20,10 @@ cask "wireshark" do
       end
     end
   end
-  on_catalina :or_newer do
-    version "4.4.3"
-    sha256 arm:   "0e18380fa0dfb8047d6b51c6a91d42eb1940f3814bb1fddbd96784dd669bbf1a",
-           intel: "031119f725913fc4dff00350474670666da90d4f506ece1a998770f4cdbca3c2"
+  on_big_sur :or_newer do
+    version "4.4.4"
+    sha256 arm:   "24cdce2f5869653b98032e8f6f06a08bd4f4899f178a27eb6d751fc27ac9cb47",
+           intel: "46b267bdd78222aa272937a65fa91b09c3755bc0ec01fa52e8b63984699c0afb"
 
     # This appcast sometimes uses a newer pubDate for an older version, so we
     # have to ignore the default `Sparkle` strategy sorting (which involves the
@@ -44,7 +44,7 @@ cask "wireshark" do
   auto_updates true
   conflicts_with cask:    "wireshark-chmodbpf",
                  formula: "wireshark"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Wireshark.app"
   pkg "Add Wireshark to the system path.pkg"

@@ -9,6 +9,7 @@ cask "nzbget" do
   homepage "https://nzbget.net/"
 
   deprecate! date: "2024-02-19", because: :discontinued
+  disable! date: "2025-02-19", because: :discontinued
 
   app "NZBGet.app"
 

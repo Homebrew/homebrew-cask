@@ -2,9 +2,9 @@ cask "stratoshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  version "0.9.0"
-  sha256 arm:   "ac3f7b697c41c4305d60805ac6f97c7d1f67aff6aa6ba562245315f9411d48ff",
-         intel: "cff7cb12394de096b9001915d791e98c9ce6f07127f74571249eb3e8fcee5ec3"
+  version "0.9.1"
+  sha256 arm:   "6b8db90d758d305fbe267f7bb347bde7e97a6a6518f9c23cf9a3a9f143437418",
+         intel: "dfc8049d1ceacd7ce9e562abd2df02a18354d4743d3421c31ca04339878b12ba"
 
   url "https://2.na.dl.wireshark.org/osx/all-versions/Stratoshark%20#{version}%20#{arch}%2064.dmg",
       verified: "wireshark.org/osx/all-versions/"

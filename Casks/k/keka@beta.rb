@@ -1,6 +1,6 @@
 cask "keka@beta" do
-  version "1.4.0-dev.r5423"
-  sha256 "f25f579c532fd5e528aa4d61db8625988da75d032195cf5381cdc9c4f9122a7e"
+  version "1.4.7"
+  sha256 "a9aedc5de8777ddc2afa8c2967b41b9ff94dc069ee624fa01e0d2a6dee56e2b6"
 
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
       verified: "github.com/aonez/Keka/"
@@ -10,7 +10,7 @@ cask "keka@beta" do
 
   livecheck do
     url :url
-    regex(/^v?((?:\d+(?:\.\d+)+)-(?:beta|dev)(?:\.\w?\d+)?)?/i)
+    regex(/^v?((?:\d+(?:\.\d+)+)([._-](?:beta|dev)(?:\.\w?\d+)?)?)/i)
   end
 
   auto_updates true

@@ -1,5 +1,5 @@
 cask "emby" do
-  version "2.2.34,30"
+  version "2.2.35,31"
   sha256 :no_check
 
   url "https://github.com/MediaBrowser/Emby.Releases/raw/master/macos/Emby.app.zip",

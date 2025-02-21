@@ -1,6 +1,6 @@
 cask "nvidia-nsight-systems" do
-  version "2025.1.1.103-3542797"
-  sha256 "9af04009a25c1c5a2a6e77a290354f194987f6b0f477582471a94512ad4ff8f4"
+  version "2025.1.1.131-3554042"
+  sha256 "85e1b3319695003f2dfe26a35916e35856b0d43db063053419a079f75b53625c"
 
   url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-systems/#{version.major_minor.dots_to_underscores}/NsightSystems-macos-public-#{version}.dmg"
   name "NVIDIA Nsight Systems"

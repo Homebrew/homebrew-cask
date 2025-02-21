@@ -1,9 +1,9 @@
 cask "yed" do
   arch arm: "arm64", intel: "amd64"
 
-  version "3.25"
-  sha256 arm:   "5cfeff6cb48b7aa671070ed2d2fd13a38e201131d3f02cb1bbb0e4a5f8b67112",
-         intel: "73723d901f1f51218c4b09300e7a50a25dc6642d37dc104b8e4b949f0ee86816"
+  version "3.25.1"
+  sha256 arm:   "db6870a59f3128b3e9b42afb80723963478378cb6e05e6dd9cd3c8a3d99e903b",
+         intel: "bfe6d2eeaa52e5333262256c092747191905a7736d0e218dcfcc8dc8fce48d99"
 
   url "https://www.yworks.com/resources/yed/demo/yEd-#{version}_with-JRE21_#{arch}.dmg"
   name "yWorks yEd"

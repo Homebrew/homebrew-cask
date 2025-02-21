@@ -27,6 +27,7 @@ adguard
 adguard-vpn
 adguard-vpn@nightly
 adguard@nightly
+adlock
 adobe-acrobat-pro
 adobe-acrobat-reader
 adobe-air
@@ -188,6 +189,7 @@ cap
 capacities
 caprine
 captain
+carbide-create
 carbon-copy-cloner
 cardhop
 cardpresso
@@ -196,6 +198,7 @@ chatbox
 chatgpt
 chatwise
 chatwork
+cherry-studio
 chia
 chipmunk
 chirp
@@ -215,6 +218,7 @@ cleanclip
 cleaneronepro
 cleanmymac
 cleanmymac-zh
+cleanshot
 clearvpn
 clickhouse
 clickup
@@ -259,6 +263,7 @@ creality-print
 crossover
 crosspaste
 cryptomator
+crystaldiffract
 crystalmaker
 crystalviewer
 curseforge
@@ -400,6 +405,7 @@ finalshell
 finbar
 finch
 find-any-file
+fing
 firealpaca
 firefly
 firefly-shimmer
@@ -460,6 +466,7 @@ font-lxgw-neozhisong
 font-lxgw-simxihei
 font-lxgw-simzhisong
 font-sarasa-gothic
+font-sketchybar-app-font
 font-sn-pro
 font-sudo
 foobar2000
@@ -474,6 +481,7 @@ frappe-books
 free-download-manager
 free42-binary
 free42-decimal
+freelens
 freeplane
 freeshow
 freetube
@@ -630,6 +638,7 @@ keepassxc@snapshot
 keeper-password-manager
 keka
 keyboard-cowboy
+keyguard
 keyman
 keymapp
 keysafe
@@ -824,6 +833,7 @@ mutedeck
 mutesync
 mweb-pro
 nagstamon
+name-mangler
 naps2
 native-access
 naver-whale
@@ -867,6 +877,7 @@ nozbe
 nuclear
 nucleo
 nudge
+nutstore
 nvidia-geforce-now
 obs
 obs-advanced-scene-switcher
@@ -955,8 +966,10 @@ pieces-os
 pika
 pile
 pingplotter
+pinwheel
 pitch
 pixel-shift-combiner
+pktriot
 planet
 plasticscm-cloud-edition
 playdate-simulator
@@ -980,6 +993,7 @@ popsql
 portfolioperformance
 positron
 postbox
+postgres-unofficial
 postico
 postman
 postman-agent
@@ -1000,6 +1014,7 @@ privileges
 processing
 processspy
 proclaim
+profind
 progressive-downloader
 pronotes
 propresenter
@@ -1053,6 +1068,7 @@ radiola
 rancher
 rapidapi
 rapidweaver
+rar
 razorsql
 reactotron
 readdle-spark
@@ -1094,6 +1110,7 @@ rio
 ripme
 rippling
 rive
+rivet
 rize
 roam
 roam-research
@@ -1162,9 +1179,11 @@ shutter-encoder
 sigmaos
 signal
 signal@beta
+simplemind
 simplenote
 simplex
 singlebox
+singlecrystal
 sip
 sipgate-clinq
 sitesucker-pro
@@ -1226,6 +1245,7 @@ steinberg-mediabay
 stratoshark
 stratoshark@dev
 strongvpn
+structuredlogviewer
 studio-3t
 sublime-merge
 sublime-text@dev
@@ -1272,6 +1292,7 @@ tencent-lemon
 tencent-meeting
 termius
 termius@beta
+termora
 testfully
 texifier
 texshop
@@ -1284,6 +1305,7 @@ the-battle-for-wesnoth
 the-clock
 thebrain
 theiaide
+thorium
 threema
 threema-work
 threema@beta
@@ -1346,6 +1368,7 @@ ubiquiti-unifi-controller
 ueli
 uhk-agent
 ui
+ui-tars
 ultimate
 understand
 uninstallpkg
@@ -1434,6 +1457,7 @@ wing-personal
 wins
 wire
 wirecast
+wiso-steuer-2025
 wizcli
 wljs-notebook
 wondershare-uniconverter
