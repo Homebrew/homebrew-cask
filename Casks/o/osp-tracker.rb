@@ -1,16 +1,27 @@
 cask "osp-tracker" do
-  version "6.2.0"
-  sha256 "04a3041b0a628b8241aaa8f3a40d3545927c017f835a955827397c0352bf6ceb"
+  on_arm do
+    version "6.2.0"
+    sha256 "04a3041b0a628b8241aaa8f3a40d3545927c017f835a955827397c0352bf6ceb"
 
-  url "https://physlets.org/tracker/installers/download.php?file=Tracker-#{version}-osx-installer.dmg"
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_intel do
+    version "6.3.0"
+    sha256 "375eeaf93a9cfb437e54a5063d5722463dc8aa9818648f5fdc2344c797c45ce9"
+
+    livecheck do
+      url :homepage
+      regex(/href=.*?Tracker[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]installer\.dmg/i)
+    end
+  end
+
+  url "https://physlets.org/tracker/installers/Tracker-#{version}-osx-installer.dmg",
+      verified: "physlets.org/tracker/installers/"
   name "Tracker"
   desc "Video analysis and modelling tool for physics education"
-  homepage "https://physlets.org/tracker/"
-
-  livecheck do
-    url :homepage
-    regex(/href=.*?file=Tracker[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
-  end
+  homepage "https://opensourcephysics.github.io/tracker-website/"
 
   installer script: {
     executable: "Tracker-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
