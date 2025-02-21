@@ -16,6 +16,8 @@ cask "dropbox-capture" do
     strategy :header_match
   end
 
+  disable! date: "2025-03-24", because: :discontinued
+
   auto_updates true
   depends_on macos: ">= :catalina"
 
