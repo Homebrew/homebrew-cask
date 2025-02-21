@@ -6,7 +6,7 @@ cask "dehesselle-meld" do
          intel: "c1ae72cb2f0436ff68e524227ca1e04bb0e641765e2ed6f224474d3b16b9e054"
 
   url "https://gitlab.com/api/v4/projects/51547804/packages/generic/meld_macos/#{version}/Meld-#{version}_#{arch}.dmg"
-  name "Meld for OSX"
+  name "Meld for macOS"
   desc "Visual diff and merge tool"
   homepage "https://gitlab.com/dehesselle/meld_macos"
 
