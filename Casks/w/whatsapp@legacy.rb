@@ -7,12 +7,7 @@ cask "whatsapp@legacy" do
   desc "Legacy desktop client for WhatsApp"
   homepage "https://www.whatsapp.com/"
 
-  livecheck do
-    url "https://web.whatsapp.com/desktop/mac/releases"
-    strategy :json do |json|
-      json["name"]
-    end
-  end
+  disable! date: "2025-02-22", because: :no_longer_available
 
   auto_updates true
   conflicts_with cask: [
