@@ -19,7 +19,7 @@ cask "xctu" do
   end
 
   installer script: {
-    executable: "#{staged_path}/xctu_installer.app/Contents/MacOS/installbuilder.sh",
+    executable: "#{staged_path}/xctu_installer.app/Contents/MacOS/osx-x86_64",
     args:       ["--mode", "unattended"],
   }
 
@@ -30,4 +30,8 @@ cask "xctu" do
     "~/Library/Preferences/XCTU.plist",
     "~/Library/Saved Application State/XCTU.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
