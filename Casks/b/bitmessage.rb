@@ -8,6 +8,8 @@ cask "bitmessage" do
   desc "P2P communications protocol"
   homepage "https://bitmessage.org/"
 
+  deprecate! date: "2025-02-22", because: :unmaintained
+
   app "Bitmessage.app"
 
   caveats do
