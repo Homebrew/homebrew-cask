@@ -1000,6 +1000,7 @@ postman
 postman-agent
 postman-cli
 postman@canary
+powder
 power-manager
 powerphotos
 powershell
