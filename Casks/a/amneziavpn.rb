@@ -1,8 +1,8 @@
 cask "amneziavpn" do
-  version "4.8.2.3"
-  sha256 "eb65c0347d3a0a5880046acb3bb4e672fb6c4d5e23e901177e6945842ff19e75"
+  version "4.8.3.1"
+  sha256 "f11e91087270e28749d26dca3e0cc389e5bf67d8d8b3ee42ad5a8bd9da6e020a"
 
-  url "https://github.com/amnezia-vpn/amnezia-client/releases/download/#{version}/AmneziaVPN_#{version}.dmg",
+  url "https://github.com/amnezia-vpn/amnezia-client/releases/download/#{version}/AmneziaVPN_#{version}_macos.dmg",
       verified: "github.com/amnezia-vpn/amnezia-client/"
   name "Amnezia VPN"
   desc "VPN client"
@@ -14,7 +14,7 @@ cask "amneziavpn" do
   # the version from the JavaScript file.
   livecheck do
     url "https://amnezia.org/en/downloads"
-    regex(/AmneziaVPN[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/AmneziaVPN[._-]v?(\d+(?:\.\d+)+)[._-]macos\.dmg/i)
     strategy :page_match do |page, regex|
       js_file = page[%r{src=["']?/assets/(index.+\.js)\??["' >]}i, 1]
       next if js_file.blank?
