@@ -1,9 +1,9 @@
 cask "lectrote" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.2"
-  sha256 arm:   "b727d4bc64d503eea6f2378782df786100851309bb970c7cc2ff475f5d2f70fb",
-         intel: "19351bb7f76a0a6b348e85b182cbcf6acbf3aadb903cb65e43cf4dd49cccb996"
+  version "1.5.3"
+  sha256 arm:   "2434154bcfe5f04d4d8ca0783f1b1a6b02d26398556a33700229be09fed31ef4",
+         intel: "47f264ac9b07d79ac922a572252b05fa2b4da81ca038a10f9ec8199250c5d93e"
 
   url "https://github.com/erkyrath/lectrote/releases/download/lectrote-#{version}/Lectrote-#{version}-macos-#{arch}.dmg"
   name "lectrote"
