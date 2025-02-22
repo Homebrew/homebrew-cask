@@ -1,13 +1,11 @@
 cask "gauntlet" do
-  version "14"
-  sha256 "24d4c995375a62990d3a48cf6a042d589f2e296ed3029bb827aae6fa7618ad06"
+  version "15"
+  sha256 "02c11b5922535efaed2870d4fd1a5cf2b2a56f49c45e80d98f76cdd542d62c02"
 
-  url "https://github.com/project-gauntlet/gauntlet/releases/download/v#{version}/gauntlet-aarch64-macos.dmg"
+  url "https://github.com/project-gauntlet/gauntlet/releases/download/v#{version}/gauntlet-universal-macos.dmg"
   name "Gauntlet"
   desc "Open-source cross-platform application launcher"
   homepage "https://github.com/project-gauntlet/gauntlet"
-
-  depends_on arch: :arm64
 
   app "Gauntlet.app"
 
