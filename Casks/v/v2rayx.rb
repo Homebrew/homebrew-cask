@@ -9,6 +9,7 @@ cask "v2rayx" do
   homepage "https://github.com/Cenmrev/V2RayX"
 
   deprecate! date: "2024-02-21", because: :discontinued
+  disable! date: "2025-02-22", because: :discontinued
 
   app "V2RayX.app"
 
