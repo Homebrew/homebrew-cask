@@ -8,8 +8,8 @@ cask "tentacle-sync-studio" do
   homepage "https://tentaclesync.com/"
 
   livecheck do
-    url "https://tentaclesync.zendesk.com/api/v2/help_center/en-us/articles/115003866805"
-    regex(%r{href=.*?/ttsyncstudio-v?(\d+(?:[._-]\d+)+)\.dmg}i)
+    url "https://tentaclesync.com/api/collections/downloads/entries"
+    regex(/ttsyncstudio[._-]v?(\d+(?:[._-]\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
