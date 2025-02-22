@@ -20,6 +20,8 @@ cask "kern" do
     "de.fullbucket.vst3.pkg.Kern",
   ]
 
+  zap trash: "~/Music/FullBucketMusic/kern.ini"
+
   caveats do
     reboot
   end
