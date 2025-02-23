@@ -1,14 +1,15 @@
-cask "quanshi-meeting" do
+cask "tangmeeting" do
   arch arm: "arm64", intel: "x86_64"
-  version "6.26.25011701"    
-  sha256 arm:   "be040b0d9d8f951a26173bcee7db0c24f820b77b194c00e7ee6f393cd208b215",
+
+  version "6.26.25011701"
+  sha256 arm:   "2a33c2c15fd420a0b4a0424f626fd994cbfa791a85f5656d91d7234ce23eba2b",
          intel: "f20f091a833ba996c4e4aafd84cde1a1070181c4f33e269f546a2c7410985e9f"
 
   url "https://dle.quanshi.com/onemeeting/download/auto/mac/#{version}/#{arch}/G-Net_MeetNow.pkg"
   name "Quanshi Meeting"
   name "全时云会议"
   desc "Cloud video conferencing"
-  homepage "https://www.quanshi.com/" 
+  homepage "https://www.quanshi.com/"
 
   livecheck do
     url "https://dle.quanshi.com/onemeeting/download/v2/G-Net_MeetNow.pkg"
@@ -16,16 +17,13 @@ cask "quanshi-meeting" do
   end
 
   pkg "G-Net_MeetNow.pkg"
-  uninstall signal:    ["KILL", "TangMeeting"],
-            delete:    [
-              "/Applications/TangMeeting.app",
-            ]
 
-  # Documentation: https://docs.brew.sh/Cask-Cookbook#stanza-zap
-    zap trash: [
-    "~/Library/Logs/Quanshi",
-    "~/Library/LaunchDaemons/com.quanshi.daemonsvcd.plist",
+  uninstall pkgutil: "com.quanshi.pkg.MeetNowMac"
+
+  zap trash: [
     "~/Library/LaunchAgents/com.quanshi.daemonapp.plist",
+    "~/Library/LaunchDaemons/com.quanshi.daemonsvcd.plist",
+    "~/Library/Logs/Quanshi",
     "~/Library/Preferences/com.gnet.uc.mac.helper.plist",
   ]
 end
