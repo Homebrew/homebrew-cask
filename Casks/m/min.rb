@@ -9,8 +9,16 @@ cask "min" do
       verified: "github.com/minbrowser/min/"
   name "Min"
   desc "Minimal browser that protects privacy"
-  homepage "https://minbrowser.github.io/min/"
+  homepage "https://minbrowser.org/"
 
+  livecheck do
+    url "https://minbrowser.org/min/updates/latestVersion.json"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
+
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Min.app"
