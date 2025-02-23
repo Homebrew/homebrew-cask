@@ -55,6 +55,7 @@ altair-graphql-client
 amadine
 amazon-chime
 amazon-q
+amiberry
 amie
 ammonite
 amneziavpn
@@ -82,6 +83,7 @@ apparency
 appcleaner
 appflowy
 aptakube
+aptible
 aqua
 arc
 archipelago
@@ -208,6 +210,7 @@ chromium-gost
 chronosync
 chronycontrol
 cinderella
+cisco-jabber
 cisdem-data-recovery
 cisdem-pdf-converter-ocr
 cityofzion-neon
@@ -233,6 +236,7 @@ cloudflare-warp
 cloudmounter
 cloudnet
 cmake
+coconutbattery
 codeedit
 codekit
 codeql
@@ -323,6 +327,7 @@ display-pilot
 distroav
 djstudio
 dockdoor
+dockfix
 dockside
 dockx
 dogecoin
@@ -346,6 +351,7 @@ dropbox@beta
 dropshare
 dropzone
 duckduckgo
+duet
 ea
 eaglefiler
 ecamm-live
@@ -583,7 +589,9 @@ idrive
 igv
 iina+
 imazing
+imgotv
 imhex
+inav-configurator
 inkdown
 inkdrop
 inso
@@ -602,6 +610,7 @@ istherenet
 iterm2
 iterm2@beta
 iterm2@nightly
+itsycal
 ivideonserver
 ivpn
 izip
@@ -664,6 +673,7 @@ lazycat
 leapp
 lectrote
 ledger-live
+legcord
 lehreroffice
 lens
 libcblite
@@ -685,6 +695,7 @@ little-snitch
 live-home-3d
 livebook
 lm-studio
+local
 local@beta
 localcan
 localsend
@@ -720,14 +731,18 @@ macpilot
 macrorecorder
 mactracker
 macupdater
+macvim
 macwhisper
 maestral
 mailbird
 mailbutler
+manico
 manictime
 marginnote
 marked
 markedit
+marsedit
+mattermost
 mcreator
 mdrp
 media-center
@@ -769,6 +784,7 @@ microsoft-powerpoint
 microsoft-teams
 microsoft-word
 middle
+mihomo-party
 milanote
 millie
 mimestream
@@ -789,6 +805,7 @@ mixed-in-key
 mixin
 mixxx
 mixxx@snapshot
+mkvtoolnix
 mmex
 mmhmm
 mmhmm-studio
@@ -813,6 +830,7 @@ morgen
 motion
 motu-m-series
 mountain-duck
+mouseless
 mp3tag
 mplab-xc32
 mqttx
@@ -880,6 +898,7 @@ nucleo
 nudge
 nutstore
 nvidia-geforce-now
+nwjs
 obs
 obs-advanced-scene-switcher
 obs@beta
@@ -916,6 +935,7 @@ openshot-video-editor@daily
 opensoundmeter
 openthesaurus-deutsch
 openvanilla
+openvpn-connect
 openwebstart
 opera
 opera-gx
@@ -931,6 +951,7 @@ orbstack
 orcaslicer
 origami-studio
 oscar
+oso-cloud
 osquery
 ossia-score
 osu
@@ -1043,6 +1064,7 @@ qbittorrent@lt20
 qcad
 qfinder-pro
 qgis
+qgis@ltr
 qgroundcontrol
 qlab
 qlc+
@@ -1067,6 +1089,7 @@ quip
 racket
 radarr
 radiola
+raindropio
 rancher
 rapidapi
 rapidweaver
@@ -1199,12 +1222,14 @@ slab
 slack
 slack-cli
 slack@beta
+slippi-dolphin
 smartgit
 smartsynchronize
 smooze-pro
 smultron
 snagit
 snapmaker-luban
+snowflake-snowsql
 softmaker-freeoffice
 sol
 solar2d
@@ -1251,6 +1276,7 @@ structuredlogviewer
 studio-3t
 sublime-merge
 sublime-text@dev
+submariner
 subsurface
 sunsama
 super-productivity
@@ -1267,11 +1293,13 @@ sync
 syncovery
 syncterm
 syncthing
+synology-drive
 syntax-highlight
 tabby
 tableflip
 tableplus
 tabtab
+tageditor
 tagspaces
 tailscale
 taskade
@@ -1299,6 +1327,7 @@ testfully
 texifier
 texshop
 texstudio
+textexpander
 textual
 texturepacker
 tg-pro
@@ -1312,6 +1341,7 @@ threema
 threema-work
 threema@beta
 ths
+thunder
 thunderbird
 thunderbird@beta
 thunderbird@esr
@@ -1357,6 +1387,7 @@ tunetag
 tunnelbear
 tunnelblick@beta
 tuple
+turbotax-2024
 turbovnc-viewer
 tuta-mail
 tuxera-ntfs
@@ -1371,6 +1402,7 @@ ueli
 uhk-agent
 ui
 ui-tars
+ultimaker-cura
 ultimate
 understand
 uninstallpkg
