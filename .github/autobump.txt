@@ -223,6 +223,7 @@ cleanmymac
 cleanmymac-zh
 cleanshot
 clearvpn
+clibor
 clickhouse
 clickup
 clion
