@@ -671,6 +671,7 @@ lark
 launchbar
 launchcontrol
 lazycat
+leader-key
 leapp
 lectrote
 ledger-live

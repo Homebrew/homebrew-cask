@@ -1,6 +1,6 @@
 cask "leader-key" do
-  version "1.8.0,77"
-  sha256 "8b9c7a3546977a6643871cd03716273e227176e7d82e8d7825786c33e5b06e2f"
+  version "1.9.0,89"
+  sha256 "b1e75d7ba88933a82dc7829d1a073c81941903bdbe36c92cd572fe637ecae3b9"
 
   url "https://leader-key-updates.s3.amazonaws.com/Leader%20Key.b#{version.csv.second}.zip",
       verified: "leader-key-updates.s3.amazonaws.com/"
