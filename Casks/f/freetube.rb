@@ -13,9 +13,9 @@ cask "freetube" do
     end
   end
   on_big_sur :or_newer do
-    version "0.23.1"
-    sha256 arm:   "0a6131658230d20b34a055e58c53a0a8f5c3adeb13ed6c19312e383b08da7c1f",
-           intel: "29524f9653569bf81c65cdfd9138320ea10eaca93d3ef2653a411d89b76f782a"
+    version "0.23.2"
+    sha256 arm:   "488dfe64f037e753c3de7322eb21e07e8900d88329fb8aef629b60445ab38dcf",
+           intel: "2e7de3dd0dd7343673d24a65c13471edc69d09b675190ea9b6e7d04ec94c2993"
 
     url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-mac-#{arch}.dmg",
         verified: "github.com/FreeTubeApp/FreeTube/"
