@@ -1,5 +1,5 @@
 cask "zen-browser@twilight" do
-  version "1.8"
+  version "1.8.1"
   sha256 :no_check
 
   url "https://github.com/zen-browser/desktop/releases/download/twilight/zen.macos-universal.dmg",
@@ -17,7 +17,7 @@ cask "zen-browser@twilight" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  app "Zen Twilight.app"
+  app "Twilight.app"
 
   zap trash: [
         "~/Library/Application Support/Zen",
