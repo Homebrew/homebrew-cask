@@ -11,6 +11,7 @@ cask "zen-browser" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
+  # Note: Please leave it as "Zen Browser" instead of "Zen" to avoid having weird migrations
   app "Zen Browser.app"
 
   zap trash: [
