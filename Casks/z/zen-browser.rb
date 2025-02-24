@@ -11,7 +11,7 @@ cask "zen-browser" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  app "Zen.app"
+  app "Zen Browser.app"
 
   zap trash: [
         "~/Library/Application Support/zen",
