@@ -7,10 +7,7 @@ cask "qth" do
   desc "APRS client application"
   homepage "https://www.w8wjb.com/wp/qth/"
 
-  livecheck do
-    url "https://www.w8wjb.com/wp/qth/qth-app-changelog/"
-    regex(%r{href=.*?/QTH[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  deprecate! date: "2025-02-24", because: :moved_to_mas
 
   depends_on macos: ">= :high_sierra"
 
