@@ -21,9 +21,12 @@ cask "zen-browser@twilight" do
 
   zap trash: [
         "~/Library/Application Support/Zen",
+        "~/Library/Caches/Mozilla/updates/Applications/Twilight",
         "~/Library/Caches/Mozilla/updates/Applications/Zen Twilight",
-        "~/Library/Caches/zen",
+        "~/Library/Caches/Zen",
+        "~/Library/Preferences/app.zen-browser.zen.plist",
         "~/Library/Preferences/org.mozilla.com.zen.browser.plist",
+        "~/Library/Saved Application State/app.zen-browser.zen.savedState",
         "~/Library/Saved Application State/org.mozilla.com.zen.browser.savedState",
       ],
       rmdir: "~/Library/Caches/Mozilla"
