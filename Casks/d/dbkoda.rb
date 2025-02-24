@@ -9,6 +9,7 @@ cask "dbkoda" do
   homepage "https://www.dbkoda.com/"
 
   deprecate! date: "2024-07-04", because: :discontinued
+  disable! date: "2025-02-24", because: :discontinued
 
   app "dbKoda.app"
 
