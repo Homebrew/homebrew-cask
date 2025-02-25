@@ -794,6 +794,7 @@ milanote
 millie
 mimestream
 mindmac
+mindmaster-cn
 minecraft-education
 minecraft-server
 mini-program-studio
