@@ -9,7 +9,7 @@ cask "lookaway" do
   homepage "https://lookaway.app/"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "LookAway.app"
 
