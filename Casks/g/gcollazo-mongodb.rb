@@ -1,6 +1,6 @@
 cask "gcollazo-mongodb" do
-  version "7.0.3-build.2"
-  sha256 "8e89523f92fa2e1bca4cfa405096f4346da15c767456303f3fb53d1edf43f26b"
+  version "8.0.5-build.1"
+  sha256 "bc545179d510b4fc80ac9866d34228faa7153137eea8f5ebcac957abf9d3ef89"
 
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip",
       verified: "github.com/gcollazo/mongodbapp/"
