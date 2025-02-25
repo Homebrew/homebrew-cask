@@ -181,6 +181,7 @@ cahier
 caido
 calhash
 calibre
+calmly-writer
 camerabag-photo
 camo-studio
 camtasia
