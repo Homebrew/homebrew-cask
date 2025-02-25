@@ -1,5 +1,6 @@
 name: Reproducible Bug Report
 description: If you’re sure it’s reproducible and not just your machine, submit an issue so we can investigate
+type: "Bug"
 body:
   - type: checkboxes
     attributes:
