@@ -13,6 +13,7 @@ cask "veracrypt" do
     regex(/href=.*?VeraCrypt[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  conflicts_with cask: "veracrypt-fuse-t"
   depends_on cask: "macfuse"
 
   pkg "VeraCrypt_Installer.pkg"
@@ -24,4 +25,10 @@ cask "veracrypt" do
     "~/Library/Preferences/org.idrix.VeraCrypt.plist",
     "~/Library/Saved Application State/org.idrix.VeraCrypt.savedState",
   ]
+
+  caveats <<~EOS
+    #{if OS.mac? && on_arm?
+        "Warning: VeraCrypt Fuse-T is recommended for ARM-based Apple Silicon systems. Consider installing cask/veracrypt-fuse-t instead. See: https://www.veracrypt.fr/en/Downloads.html"
+    end}
+  EOS
 end
