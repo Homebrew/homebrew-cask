@@ -8,8 +8,8 @@ cask "bzflag" do
   homepage "https://www.bzflag.org/"
 
   livecheck do
-    url :homepage
-    regex(%r{Download\s(\d+(?:\.\d+)+)\sfor</.*?\n\s*macOS}i)
+    url "https://download.bzflag.org/bzflag/macos/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   depends_on macos: ">= :high_sierra"
