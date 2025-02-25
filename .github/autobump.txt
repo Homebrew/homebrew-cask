@@ -961,6 +961,7 @@ osquery
 ossia-score
 osu
 outline
+outline-manager
 output-factory
 overlayed
 ovito
