@@ -159,6 +159,7 @@ bookmacster
 bookmacster@beta
 boosteroid
 box-drive
+box-tools
 brave-browser
 brave-browser@beta
 brave-browser@nightly
