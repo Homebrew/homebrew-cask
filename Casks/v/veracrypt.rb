@@ -7,13 +7,16 @@ cask "veracrypt" do
   name "VeraCrypt"
   desc "Disk encryption software focusing on security based on TrueCrypt"
   homepage "https://www.veracrypt.fr/"
-
+  license "Apache-2.0"
+  
   livecheck do
     url "https://www.veracrypt.fr/en/Downloads.html"
     regex(/href=.*?VeraCrypt[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on cask: "macfuse"
+
+  conflicts_with cask: "veracrypt-fuse-t"
 
   pkg "VeraCrypt_Installer.pkg"
 
@@ -24,4 +27,11 @@ cask "veracrypt" do
     "~/Library/Preferences/org.idrix.VeraCrypt.plist",
     "~/Library/Saved Application State/org.idrix.VeraCrypt.savedState",
   ]
+
+  caveats <<~EOS
+    #{if OS.mac? && Hardware::CPU.arm?
+        "Warning: VeraCrypt Fuse-T is recommended for ARM-based Apple Silicon systems. Consider installing cask/veracrypt-fuse-t instead. See: https://www.veracrypt.fr/en/Downloads.html"
+      end}
+  EOS
+
 end
