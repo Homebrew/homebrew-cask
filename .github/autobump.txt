@@ -539,6 +539,7 @@ google-chrome@beta
 google-chrome@dev
 google-cloud-sdk
 gpg-suite@nightly
+gpt4all
 gpxsee
 gqrx
 graalvm-jdk@21
@@ -1224,6 +1225,7 @@ slab
 slack
 slack-cli
 slack@beta
+sleek
 slippi-dolphin
 smartgit
 smartsynchronize
