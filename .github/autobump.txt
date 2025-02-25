@@ -602,6 +602,7 @@ inso
 inso@beta
 insomnia
 insomnia@alpha
+insta360-studio
 integrity
 intellij-idea
 intellij-idea-ce
