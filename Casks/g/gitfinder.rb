@@ -1,6 +1,6 @@
 cask "gitfinder" do
-  version "1.7.10"
-  sha256 "6cb3f5719116b2835b2dc0403e2f232a8f2bd9fed71d2fc6dde3f21bed94b9f6"
+  version "1.7.11"
+  sha256 "7e44b01f839cbf3004af918a18d4479b0962450c7befcf5785ca4c4d28906cce"
 
   url "https://gitfinder.com/updates/GitFinder#{version.dots_to_underscores}.dmg"
   name "GitFinder"
