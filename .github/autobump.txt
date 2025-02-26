@@ -1395,6 +1395,7 @@ trunk-io
 tuist
 tunetag
 tunnelbear
+tunnelblick
 tunnelblick@beta
 tuple
 turbotax-2024
