@@ -39,6 +39,7 @@ affinity-designer
 affinity-photo
 affinity-publisher
 aide-app
+airdroid
 airflow
 airtame
 akiflow
