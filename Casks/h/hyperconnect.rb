@@ -1,6 +1,6 @@
 cask "hyperconnect" do
-  version "1.2.0"
-  sha256 "e164c24941a37ee117b00bb74de99ba83a19cad15f96780177bb3721f79d15eb"
+  version "1.3.0"
+  sha256 "430d008e0341eee37ece0a1e568a3c722a7bf6d308921442235ff7fb9aefc742"
 
   url "https://cdn.cnbj1.fds.api.mi-img.com/mijia-ios-adhoc/hyperconnect/HyperConnect-#{version}.dmg",
       verified: "mi-img.com/mijia-ios-adhoc/hyperconnect/"
