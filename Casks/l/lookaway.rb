@@ -1,6 +1,6 @@
 cask "lookaway" do
-  version "1.10.3"
-  sha256 "78ffcfb803336b0325fcb7c0185b15574b0e3c934174771c60d81793a01d211f"
+  version "1.10.4"
+  sha256 "4bdb040c0bf1f5d37cb9b92fdd18bc64d91d150bc846a625422ecaa689c4e49e"
 
   url "https://github.com/mysticalbits/lookaway-releases/releases/download/#{version}/LookAway.dmg",
       verified: "github.com/mysticalbits/lookaway-releases/"
