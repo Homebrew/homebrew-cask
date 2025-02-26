@@ -973,6 +973,7 @@ ovito-pro
 p4
 p4v
 pagico
+paletro
 panoply
 parallels
 parallels-virtualization-sdk
