@@ -346,6 +346,7 @@ double-commander
 douyin
 douyin-chat
 downie
+doxie
 drata-agent
 draw-things
 drawio
