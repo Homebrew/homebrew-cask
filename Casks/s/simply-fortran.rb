@@ -1,7 +1,7 @@
 cask "simply-fortran" do
   arch arm: "-arm64", intel: "-x86_64"
 
-  version "3.38.4336"
+  version "3.39.4385"
 
   on_big_sur :or_older do
     sha256 "50ad3792ea1db61bed86e86181101e482ee86dbf3422fe0ec56b15f12813d6c8"
@@ -18,7 +18,7 @@ cask "simply-fortran" do
     end
   end
   on_monterey do
-    sha256 "bbae48d7040d5f83cc4957fbdb5d0079f5a8c31b5d841f12d5fa66b3f710bd4c"
+    sha256 "e560b0c87f9b1ced5a831f6cf50f27a322955d784c1988fa0e32d87ac2b1ab14"
 
     url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}-x86_64.dmg"
 
@@ -32,7 +32,7 @@ cask "simply-fortran" do
     end
   end
   on_ventura do
-    sha256 "bbae48d7040d5f83cc4957fbdb5d0079f5a8c31b5d841f12d5fa66b3f710bd4c"
+    sha256 "e560b0c87f9b1ced5a831f6cf50f27a322955d784c1988fa0e32d87ac2b1ab14"
 
     url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}-x86_64.dmg"
 
@@ -46,8 +46,8 @@ cask "simply-fortran" do
     end
   end
   on_sonoma :or_newer do
-    sha256 arm:   "b6a779b62eec58edbdcc2c7aaead2848abc561c1c7bffb184c0857b75068eecd",
-           intel: "bbae48d7040d5f83cc4957fbdb5d0079f5a8c31b5d841f12d5fa66b3f710bd4c"
+    sha256 arm:   "b9fac5a1947c35a5b525a1a382cf7814504ca4fa7f1960625ddbf161929fdf20",
+           intel: "e560b0c87f9b1ced5a831f6cf50f27a322955d784c1988fa0e32d87ac2b1ab14"
 
     url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{arch}.dmg"
 
