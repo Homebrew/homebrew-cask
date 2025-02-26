@@ -1,14 +1,8 @@
 cask "nordpass" do
   arch arm: "arm/"
 
+  version "5.28.13"
   sha256 :no_check
-
-  on_arm do
-    version "5.28.13"
-  end
-  on_intel do
-    version "5.27.12"
-  end
 
   url "https://downloads.npass.app/mac/#{arch}NordPass.dmg",
       verified: "downloads.npass.app/mac/"
@@ -22,7 +16,7 @@ cask "nordpass" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "NordPass.app"
 
