@@ -18,8 +18,4 @@ cask "zwift" do
             pkgutil: "com.zwift.ZwiftLauncher"
 
   zap trash: "~/Library/Application Support/Zwift"
-
-  caveats do
-    requires_rosetta
-  end
 end
