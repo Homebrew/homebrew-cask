@@ -1,6 +1,6 @@
 cask "openvanilla" do
-  version "1.8.0,3433"
-  sha256 "c61705f6b25024bb7adc922b9e03d396e3b91329d757b7065ed16d6e8265451b"
+  version "1.8.1,3437"
+  sha256 "1c5ea2af7a4a8593b0679579be7010cebbde626a34585d4884f4436562af042d"
 
   url "https://github.com/openvanilla/openvanilla/releases/download/#{version.csv.first}/OpenVanilla-Installer-Mac-#{version.csv.first}.zip",
       verified: "github.com/openvanilla/openvanilla/"
