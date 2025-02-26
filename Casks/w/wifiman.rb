@@ -1,9 +1,9 @@
 cask "wifiman" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.1.0"
-  sha256 arm:   "f9544ae95a76bf0f5dec77fa0b3a37b0115190349df63a11e5318e67141ddd67",
-         intel: "ad0f92c992c8aa60f8bc442e8d3c4c801d21dbce87f0120effb129b61b315091"
+  version "1.1.3"
+  sha256 arm:   "cedb1e12544422f2a1f26f96af0fad11b360658295182b4023f1b28ac5297a46",
+         intel: "ca075d6ab6e8e5331247c0b60c4295456a394fecfc6bc29c23571386194bf60e"
 
   url "https://desktop.wifiman.com/wifiman-desktop-#{version}-#{arch}.pkg"
   name "WiFiman Desktop"
