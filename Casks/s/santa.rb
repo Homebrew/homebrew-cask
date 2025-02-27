@@ -1,6 +1,6 @@
 cask "santa" do
-  version "2025.1"
-  sha256 "4e7fe15d582ddff8886d759ae39c8fb16b7b7edd64b55fdace27475d7cd70f7f"
+  version "2025.2"
+  sha256 "f66bc5fe463687f281c678a5cb52b5c6e505f2979a5b145f8ad82a6d2b497ef3"
 
   url "https://github.com/northpolesec/santa/releases/download/#{version}/santa-#{version}.dmg"
   name "Santa"
