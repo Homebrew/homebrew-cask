@@ -11,6 +11,11 @@ cask "clash-verge-rev" do
   desc "Continuation of Clash Verge - A Clash Meta GUI based on Tauri"
   homepage "https://clash-verge-rev.github.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :catalina"
 
