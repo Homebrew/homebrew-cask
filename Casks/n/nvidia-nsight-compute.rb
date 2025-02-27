@@ -1,5 +1,5 @@
 cask "nvidia-nsight-compute" do
-  version "2024.3.1.2-34702747"
+  version "2024.3.2.3-34861637"
   sha256 "768124386651e3b68b985974c2888fcbe5027909216d227d8ca8143972d21773"
 
   url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-compute/#{version.major_minor_patch.dots_to_underscores}/nsight-compute-mac-#{version}.dmg"
