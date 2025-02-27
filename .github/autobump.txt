@@ -1507,6 +1507,7 @@ wing-personal
 wins
 wire
 wirecast
+wiso-steuer-2024
 wiso-steuer-2025
 wizcli
 wljs-notebook
