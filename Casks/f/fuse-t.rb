@@ -4,8 +4,13 @@ cask "fuse-t" do
 
   url "https://github.com/macos-fuse-t/fuse-t/releases/download/#{version}/fuse-t-macos-installer-#{version}.pkg",
       verified: "github.com/macos-fuse-t/fuse-t/"
+<<<<<<< Updated upstream
   name "fuse-t"
   desc "Is a kext-less implementation of FUSE that uses a kext-less NFS v4 local server"
+=======
+  name "FUSE-T"
+  desc "Kext-less implementation of FUSE"
+>>>>>>> Stashed changes
   homepage "https://www.fuse-t.org/"
 
   livecheck do
