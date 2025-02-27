@@ -8,7 +8,8 @@ cask "zenmap" do
   homepage "https://nmap.org/zenmap/"
 
   livecheck do
-    formula "nmap"
+    url "https://nmap.org/download.html"
+    regex(/href=.*?nmap[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   conflicts_with formula: "nmap"
