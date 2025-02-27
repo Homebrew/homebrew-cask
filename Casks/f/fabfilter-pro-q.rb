@@ -1,6 +1,6 @@
 cask "fabfilter-pro-q" do
-  version "4.01"
-  sha256 "8e936e5c5aec7ab1b48378b7736fdd953284ce160f840812591a8ca018458e83"
+  version "4.02"
+  sha256 "23c7dc464f5f81205e0055d34d93771d5f1efe202255b9b20caf382369096f57"
 
   url "https://cdn-b.fabfilter.com/downloads/ffproq#{version.no_dots}.dmg"
   name "FabFilter Pro-Q"
@@ -12,7 +12,7 @@ cask "fabfilter-pro-q" do
     regex(/FabFilter\s+Pro-Q.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "FabFilter Pro-Q #{version} Installer.pkg"
 
