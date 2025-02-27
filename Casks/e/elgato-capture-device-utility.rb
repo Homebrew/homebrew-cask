@@ -1,6 +1,6 @@
 cask "elgato-capture-device-utility" do
-  version "1.3.0,629"
-  sha256 "c521200d7a13eeb9c1a0eaa79f87b8bac47bae94413087b16309de50596b9e66"
+  version "1.3.1,684"
+  sha256 "4a7885e0cbb85ba94847c43a5b59cc62b7b129c2607626c7233344570f35e154"
 
   url "https://edge.elgato.com/egc/macos/ecdu/#{version.csv.first}/ElgatoCaptureDeviceUtility-#{version.csv.first}.#{version.csv.second}.app.zip"
   name "Elgato Capture Device Utility"
