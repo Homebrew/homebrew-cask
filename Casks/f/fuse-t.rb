@@ -17,8 +17,8 @@ cask "fuse-t" do
 
   uninstall script: {
     executable: "/Library/Application Support/fuse-t/uninstall.sh",
-    input: ["Y"],
-    sudo: true,
+    input:      ["Y"],
+    sudo:       true,
   }
 
   # No zap stanza required
