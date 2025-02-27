@@ -1,6 +1,6 @@
 cask "insomnia@alpha" do
-  version "11.0.0-beta.0"
-  sha256 "769db1dbaba9ea0a3391a70e237986cad116252f63468da315152bd552976859"
+  version "11.0.0-beta.2"
+  sha256 "58bf25d7b6de50d994193579c1029753a150b4c9d3eaf99da9ab3a13e8def80e"
 
   url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg",
       verified: "github.com/Kong/insomnia/"
@@ -9,7 +9,7 @@ cask "insomnia@alpha" do
   homepage "https://insomnia.rest/"
 
   livecheck do
-    url "https://updates.insomnia.rest/builds/check/mac?v=#{version.major}.0.0&app=com.insomnia.app&channel=beta"
+    url "https://updates.insomnia.rest/builds/check/mac?v=#{version.major}.0.0#{"-beta.0" if version.split("-")&.second}&app=com.insomnia.app&channel=beta"
     strategy :json do |json|
       json["name"]
     end
