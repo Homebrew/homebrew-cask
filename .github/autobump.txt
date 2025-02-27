@@ -1525,6 +1525,7 @@ xiaomi-cloud
 xiv-on-mac
 xliff-editor
 xmind
+xmind@beta
 xmplify
 xnconvert
 xnviewmp
