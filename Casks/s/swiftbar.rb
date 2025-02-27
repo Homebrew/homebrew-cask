@@ -1,8 +1,8 @@
 cask "swiftbar" do
-  version "2.0.0"
-  sha256 "626dacd22126dd3d9821892277ec7fdaf0390953344dc1d8ab5caa1abf6762b6"
+  version "2.0.1"
+  sha256 "ac70a9cbdde20d58dae27d360764aa42c3698f6e1bc4618c4b03297a2cee67fa"
 
-  url "https://github.com/swiftbar/SwiftBar/releases/download/v#{version}/SwiftBar.v#{version}.b520.zip",
+  url "https://github.com/swiftbar/SwiftBar/releases/download/v#{version}/SwiftBar.v#{version}.b536.zip",
       verified: "github.com/swiftbar/SwiftBar/"
   name "SwiftBar"
   desc "Menu bar customization tool"
