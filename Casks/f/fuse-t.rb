@@ -15,16 +15,11 @@ cask "fuse-t" do
 
   pkg "fuse-t-macos-installer-#{version}.pkg"
 
-  uninstall pkgutil: "org.fuse-t.#{version}"
-  # pkg does not uninstall the following and are owned by root, thus requiring a custom uninstall delete stanza
-  uninstall delete: [
-    "/Library/Application Support/fuse-t",
-    "/usr/local/lib/libfuse-t-#{version}.a",
-    "/usr/local/lib/libfuse-t-#{version}.dylib",
-    "/usr/local/lib/libfuse-t.a",
-    "/usr/local/lib/libfuse-t.dylib",
-    "/usr/local/lib/pkgconfig/fuse-t.pc",
-  ]
+  uninstall script: {
+    executable: "/Library/Application Support/fuse-t/uninstall.sh",
+    input: ["Y"],
+    sudo: true,
+  }
 
   # No zap stanza required
 end
