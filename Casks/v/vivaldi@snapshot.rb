@@ -1,6 +1,6 @@
 cask "vivaldi@snapshot" do
-  version "7.2.3610.4"
-  sha256 "84d90608401b908cba5931f85af9724cdb6b37c8d5b934bca4c46548c84ed863"
+  version "7.2.3616.4"
+  sha256 "b14496d3a9980d1084cf2c6354f73d0f772e7747de44c23604eb14681af64035"
 
   url "https://downloads.vivaldi.com/snapshot-auto/Vivaldi.#{version}.universal.tar.xz"
   name "Vivaldi Snapshot"
