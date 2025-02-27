@@ -52,6 +52,13 @@ cask "parallels" do
   end
 
   uninstall signal: ["TERM", "com.parallels.desktop.console"],
+            # This will stop parallels desktop if running in background.
+            # 'TERM' signal and 'quit:' does not work if parallels desktop is running in background.
+            script: {
+              executable:   "/usr/bin/pkill",
+              args:         ["-TERM", "prl_client_app"],
+              must_succeed: false,
+            },
             delete: [
               "/Library/Preferences/Parallels",
               "/usr/local/bin/prl_convert",
