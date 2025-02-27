@@ -8,7 +8,7 @@ cask "zenmap" do
   homepage "https://nmap.org/zenmap/"
 
   livecheck do
-    url "https://nmap.org/dist/?C=M;O=D"
+    url "https://nmap.org/download.html"
     regex(/href=.*?nmap[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
