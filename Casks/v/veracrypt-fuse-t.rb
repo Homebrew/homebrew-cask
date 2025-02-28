@@ -10,7 +10,7 @@ cask "veracrypt-fuse-t" do
 
   livecheck do
     url "https://www.veracrypt.fr/en/Downloads.html"
-    regex(/href=.*?VeraCrypt_FUSE-T[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?VeraCrypt[._-]FUSE[._-]T[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   conflicts_with cask: "veracrypt"
