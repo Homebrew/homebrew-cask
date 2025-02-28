@@ -393,6 +393,7 @@ epic-games
 eset-cyber-security
 evernote
 excalidrawz
+expo-orbit
 expressvpn
 fantastical
 far2l
