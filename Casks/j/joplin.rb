@@ -1,9 +1,9 @@
 cask "joplin" do
   arch arm: "-arm64"
 
-  version "3.2.12"
-  sha256 arm:   "809cea6e92aaecd56b93365b22a53580b2b64261e3877f77e6388ea87c5a4a30",
-         intel: "f315afbd40438c1ffbbcd535d817c7df37befadc26ba26231c86b681d81749b4"
+  version "3.2.13"
+  sha256 arm:   "70543d378246fc0af3bf5830dc77cc6277dee0aae14cd73ab73e6f60d474f964",
+         intel: "eecee19aba227c2ba79c0f3b1a445a183bad67c1c47e9ec50b4e16f40fb834fd"
 
   url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}#{arch}.DMG",
       verified: "github.com/laurent22/joplin/"
