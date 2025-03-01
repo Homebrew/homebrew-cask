@@ -1103,6 +1103,7 @@ quicksilver
 quicktune
 quickwhisper
 quip
+r
 racket
 radarr
 radiola
