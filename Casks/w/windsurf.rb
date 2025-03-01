@@ -32,6 +32,7 @@ cask "windsurf" do
             quit:      "com.exafunction.windsurf"
 
   zap trash: [
+    "~/.windsurf"
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.exafunction.windsurf.sfl*",
     "~/Library/Application Support/Windsurf",
     "~/Library/Caches/com.exafunction.windsurf",
