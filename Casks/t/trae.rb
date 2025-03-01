@@ -23,8 +23,18 @@ cask "trae" do
 
   app "Trae.app"
 
+  uninstall launchctl: "com.trae.ShipIt",
+            quit:      "com.trae.app"
+
   zap trash: [
+    "~/.trae",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.trae.app.sfl*",
     "~/Library/Application Support/Trae",
+    "~/Library/Caches/com.trae.app",
+    "~/Library/Caches/com.trae.ShipIt",
+    "~/Library/HTTPStorages/com.trae.app",
+    "~/Library/Preferences/ByHost/com.trae.ShipIt.*.plist",
+    "~/Library/Preferences/com.trae.app.helper.plist",
     "~/Library/Preferences/com.trae.app.plist",
     "~/Library/Saved Application State/com.trae.app.savedState",
   ]
