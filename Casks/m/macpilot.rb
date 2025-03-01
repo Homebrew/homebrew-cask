@@ -24,8 +24,10 @@ cask "macpilot" do
     url "https://www.koingosw.com/products/macpilot/download/macpilot.dmg"
 
     livecheck do
-      url "https://www.koingosw.com/postback/versioncheck.php?appname=macpilot&type=sparkle"
-      strategy :sparkle
+      url "https://www.koingosw.com/postback/versioncheck.php?appname=macpilot"
+      strategy :xml do |xml|
+        xml.elements["//macpilot/version"]&.text&.strip
+      end
     end
   end
 
