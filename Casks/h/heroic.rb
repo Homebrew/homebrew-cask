@@ -10,6 +10,11 @@ cask "heroic" do
   desc "Game launcher"
   homepage "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :catalina"
 
