@@ -26,7 +26,7 @@ cask "mixed-in-key" do
       next if (download_page_content = download_page[:content]).blank?
 
       # Find the download ID for the Mac version
-      download_id = download_page_content[%r{href=.*?/download/(\d+)/release/.+?download(?:-|\s+for\s+)mac}im, 1]
+      download_id = download_page_content[%r{href=.*?/download/(\d+)/.+?download(?:-|\s+for\s+)mac}im, 1]
       next if download_id.blank?
 
       # Identify version from the filename in headers
