@@ -8,10 +8,7 @@ cask "password-gorilla" do
   desc "Password database manager"
   homepage "https://github.com/zdia/gorilla"
 
-  livecheck do
-    url "https://gorilla.dp100.com/downloads/"
-    regex(/gorilla\.mac\.(\d+)\.zip/i)
-  end
+  deprecate! date: "2025-03-01", because: :unmaintained
 
   app "Password Gorilla.app"
 
