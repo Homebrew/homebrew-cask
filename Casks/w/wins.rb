@@ -1,8 +1,8 @@
 cask "wins" do
-  version "2.5.1"
-  sha256 "86d50fa860c4e5b3669a07cb65d323817f7cb045a11b047834a4f34dd7549b21"
+  version "2.6"
+  sha256 "713f5c3c49eeccae2189e1c9059876efde19c0e6bde99e0c9852b3e9364512df"
 
-  url "https://f005.backblazeb2.com/file/winsWebsite/Wins-latest-#{version}.dmg",
+  url "https://f005.backblazeb2.com/file/winsWebsite/Wins_#{version}.zip",
       verified: "f005.backblazeb2.com/file/winsWebsite/"
   name "Wins"
   desc "Window manager"
@@ -14,7 +14,7 @@ cask "wins" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Wins.app"
 
