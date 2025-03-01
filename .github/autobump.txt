@@ -765,6 +765,7 @@ mediamate
 mediathekview
 mega
 megasync
+megazeux
 mellel
 melodics
 memory-cleaner

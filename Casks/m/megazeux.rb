@@ -1,5 +1,5 @@
 cask "megazeux" do
-  version "2.93b"
+  version "2.93c"
   sha256 :no_check
 
   url "https://www.digitalmzx.com/download.php?latest=osx"
@@ -19,8 +19,4 @@ cask "megazeux" do
     "~/.megazeux-config",
     "~/Library/Application Support/MegaZeux",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
