@@ -1,22 +1,15 @@
 cask "leader-key" do
-  version "1.9.0,89"
-  sha256 "b1e75d7ba88933a82dc7829d1a073c81941903bdbe36c92cd572fe637ecae3b9"
+  version "1.10.1"
+  sha256 "f7b76965be9d41ad8d086ed26399e78e48aa31de769c04c66dcba1e554edcd95"
 
-  url "https://leader-key-updates.s3.amazonaws.com/Leader%20Key.b#{version.csv.second}.zip",
-      verified: "leader-key-updates.s3.amazonaws.com/"
+  url "https://github.com/mikker/LeaderKey.app/releases/download/v#{version}/Leader.Key.app.zip"
   name "Leader Key"
   desc "Application launcher"
   homepage "https://github.com/mikker/LeaderKey.app"
 
   livecheck do
-    url "https://leader-key-updates.s3.amazonaws.com/appcast.xml"
-    regex(%r{/Leader%20Key[._-]b(\d+(?:\.\d+)*)\.zip}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
-
-      "#{item.short_version},#{match[1]}"
-    end
+    url "https://mikker.github.io/LeaderKey.app/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
