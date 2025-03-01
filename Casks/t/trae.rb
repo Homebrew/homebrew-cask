@@ -28,8 +28,8 @@ cask "trae" do
 
   zap trash: [
     "~/.trae",
-    "~/Library/Application Support/Trae",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.trae.app.sfl*",
+    "~/Library/Application Support/Trae",
     "~/Library/Caches/com.trae.app",
     "~/Library/Caches/com.trae.ShipIt",
     "~/Library/HTTPStorages/com.trae.app",
