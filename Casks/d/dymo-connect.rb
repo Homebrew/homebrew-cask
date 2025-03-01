@@ -1,6 +1,6 @@
 cask "dymo-connect" do
-  version "1.4.7.49"
-  sha256 "f8a6f2028467babfd6dc5480dd78735bee9d5cba5f5f6ee2b22123cb6d981072"
+  version "1.4.8.2"
+  sha256 "a8bcc3eb6abfe4ec1fcdb674c1e026a0938e7569dda25bf146b4aa16f8ed6e3d"
 
   url "https://download.dymo.com/dymo/Software/Mac/DCDMac#{version}.pkg"
   name "Dymo Connect"
