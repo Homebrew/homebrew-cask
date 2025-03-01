@@ -55,9 +55,9 @@ cask "r" do
     pkg "R-#{version}#{arch_legacy}.pkg"
   end
   on_big_sur :or_newer do
-    version "4.4.2"
-    sha256 arm:   "0c2c6cc57b1976746cf3f0937a1764120648fd4cac0be53cc9bf99d215a5f213",
-           intel: "d7704eaab96f00612af6eb588911bc1e536d93b8d47ac44b519d7520fd58d573"
+    version "4.4.3"
+    sha256 arm:   "f768eb245c06b17740c6b6f1e0129b437584e73ce5f15a25d818698ebdc678f0",
+           intel: "d941c8f05f9c7a3de0add1724e9de8ed1638f9d344d7e94e8cfb7fbb3d31c088"
 
     url "https://cloud.r-project.org/bin/macosx/big-sur-#{arch}/base/R-#{version}-#{arch}.pkg"
 
