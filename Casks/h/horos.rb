@@ -26,7 +26,7 @@ cask "horos" do
 
   livecheck do
     url "https://horosproject.org/horos-content/"
-    regex(/href=.*?Horos[._-]?v?(\d+(?:.\d+)+)[._-]?#{arch}\.dmg/i)
+    regex(/href=.*?Horos[._-]?v?(\d+(?:\.\d+)+)[._-]?#{arch}\.dmg/i)
   end
 
   app "Horos.app"
