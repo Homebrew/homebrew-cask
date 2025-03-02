@@ -12,8 +12,8 @@ cask "pgadmin4" do
   homepage "https://www.pgadmin.org/"
 
   livecheck do
-    url "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/"
-    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+    url "https://www.pgadmin.org/download/pgadmin-4-macos/"
+    regex(%r{href=.*?/pgadmin4/v?(\d+(?:\.\d+)+)/macos/?["' >]}i)
   end
 
   app "pgAdmin 4.app"
