@@ -3,7 +3,7 @@ cask "wiso-steuer-2025" do
   version "32.04.2230-HF1,32.04.2230-b"
   sha256 "af691b766dfb521fb0ae456d01db583385b1fe3090e94e18ef460530da9359b9"
 
-  url "https://update.buhl-data.com/Updates/Steuer/2025/Mac/Files/#{version.csv.first}/SteuerMac2025-#{version.csv.second}.dmg",
+  url "https://update.buhl-data.com/Updates/Steuer/2025/Mac/Files/#{version.csv.first}/SteuerMac2025-#{version.csv.second || version.csv.first.split("-").first}.dmg",
       verified: "update.buhl-data.com/Updates/Steuer/"
   name "WISO Steuer 2025"
   desc "Tax declaration for the fiscal year 2024"
