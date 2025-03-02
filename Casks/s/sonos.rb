@@ -9,7 +9,7 @@ cask "sonos" do
 
   livecheck do
     url "https://www.sonos.com/redir/controller_software_mac2"
-    regex(%r{software/(\w+)/Sonos[._-]v?(\d+(?:.\d+)+)\.dmg}i)
+    regex(%r{software/(\w+)/Sonos[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
     strategy :header_match do |headers, regex|
       headers["location"]&.scan(regex)&.map { |match| "#{match[1]},#{match[0]}" }
     end
