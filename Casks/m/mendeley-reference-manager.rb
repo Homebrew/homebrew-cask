@@ -8,8 +8,8 @@ cask "mendeley-reference-manager" do
   homepage "https://www.mendeley.com/download-reference-manager/macOS/"
 
   livecheck do
-    url "https://static.mendeley.com/bin/desktop/latest-mac.yml"
-    strategy :electron_builder
+    url :homepage
+    regex(/href=.*?mendeley-reference-manager[._-]v?(\d+(?:\.\d+)+)(?:[._-]x64)?\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
