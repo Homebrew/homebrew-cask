@@ -668,6 +668,7 @@ kindle-comic-converter
 kindle-previewer
 kitty
 kiwi-for-gmail
+kiwix
 kkbox
 knime
 kopiaui
