@@ -7,10 +7,7 @@ cask "tnefs-enough" do
   desc "Read and extract files from Microsoft TNEF files"
   homepage "https://www.joshjacob.com/mac-development/tnef.php"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/TNEF(\d+(?:\.\d+)*)\.dmg}i)
-  end
+  deprecate! date: "2025-03-02", because: :unmaintained
 
   app "TNEF's Enough.app"
 
