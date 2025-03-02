@@ -8,10 +8,7 @@ cask "electric-sheep" do
   desc "Collaborative abstract artwork software"
   homepage "https://gold.electricsheep.org/"
 
-  livecheck do
-    url "https://electricsheep.org/#/download"
-    regex(%r{href=.*?/electricsheep[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  deprecate! date: "2025-03-02", because: :unmaintained
 
   pkg "Electric Sheep.pkg"
 
