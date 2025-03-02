@@ -8,6 +8,8 @@ cask "surge-synthesizer" do
   desc "Hybrid synthesiser"
   homepage "https://surge-synthesizer.github.io/"
 
+  deprecate! date: "2025-03-02", because: :discontinued, replacement: "surge-xt"
+
   pkg "Surge-#{version}-Setup.pkg"
 
   uninstall pkgutil: [
