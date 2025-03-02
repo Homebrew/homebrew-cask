@@ -11,9 +11,16 @@ cask "gologin" do
   desc "Antidetect browser"
   homepage "https://gologin.com/"
 
+  # The `latest-mac.yml` file is served with a `Content-Encoding: aws-chunked`
+  # header, which will cause curl to error if the `--compressed` option is used.
+  # This checks the version on the first-party download page until we can
+  # account for this situation in livecheck.
   livecheck do
-    url "https://releases#{livecheck_arch}.gologin.com/latest-mac.yml"
-    strategy :electron_builder
+    url "https://gologin.com/download/"
+    regex(%r{href=.*?/release/gologin[._-]v?(\d+(?:[.-]\d+)+)}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("-", ".") }
+    end
   end
 
   auto_updates true
