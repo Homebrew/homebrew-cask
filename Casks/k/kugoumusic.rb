@@ -7,10 +7,7 @@ cask "kugoumusic" do
   desc "Digital music service"
   homepage "https://www.kugou.com/"
 
-  livecheck do
-    url "https://download.kugou.com/download/kugou_mac"
-    strategy :header_match
-  end
+  disable! date: "2024-03-03", because: "download artifact behind signed url"
 
   depends_on macos: ">= :high_sierra"
 
