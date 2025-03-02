@@ -8,10 +8,7 @@ cask "tvrenamer" do
   desc "Utility to rename TV episodes from TV listings"
   homepage "https://www.tvrenamer.org/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2025-03-02", because: :unmaintained
 
   app "TVRenamer-#{version}.app"
 
