@@ -265,6 +265,7 @@ coteditor
 couchbase-server-community
 couchbase-server-enterprise
 cozy-drive
+cpu-info
 craft
 crashplan
 creality-print
