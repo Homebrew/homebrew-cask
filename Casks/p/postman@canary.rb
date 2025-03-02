@@ -11,15 +11,10 @@ cask "postman@canary" do
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"
 
-  # This is a workaround to a slow-to-update livecheck. It uses the in-app
-  # update check link and queries the available versions for a generic major
-  # version. We cannot use #{version} as the URL does not exist if #{version}
-  # is the latest version available.
   livecheck do
-    url "https://dl.pstmn.io/update/status?currentVersion=#{version.major}.0.0&platform=#{arch}&channel=canary"
-    strategy :json do |json|
-      json["version"]
-    end
+    url "https://dl.pstmn.io/download/channel/canary/#{arch}"
+    regex(/PostmanCanary(?:%20|[._-])v?(\d+(?:\.\d+)+[._-]canary[._-]?(\d+(?:[.-]\d+)*))/i)
+    strategy :header_match
   end
 
   auto_updates true
