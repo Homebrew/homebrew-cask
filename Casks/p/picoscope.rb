@@ -9,7 +9,7 @@ cask "picoscope" do
 
   livecheck do
     url "https://www.picotech.com/downloads/_lightbox/picoscope-#{version.major}-stable-for-macos"
-    regex(%r{href=.*?/PicoScope[._-]#{version.major}[._-]T(?:and|n)M[._-]v?(\d+(?:.\d+)+)\.pkg}i)
+    regex(%r{href=.*?/PicoScope[._-]#{version.major}[._-]T(?:and|n)M[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   conflicts_with cask: "picoscope@beta"

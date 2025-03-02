@@ -9,7 +9,7 @@ cask "get-iplayer-automator" do
 
   livecheck do
     url :url
-    regex(/^Get\.?iPlayer\.?Automator\.?v?(\d+(?:.\d+)*)\.b(\d+)\.zip$/i)
+    regex(/^Get\.?iPlayer\.?Automator\.?v?(\d+(?:\.\d+)*)\.b(\d+)\.zip$/i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["name"]&.match(regex)

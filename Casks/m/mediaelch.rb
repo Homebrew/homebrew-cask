@@ -10,7 +10,7 @@ cask "mediaelch" do
 
   livecheck do
     url :url
-    regex(/^MediaElch_macOS_.*?[._-]v?(\d+(?:\.\d+)+)_(\d+(?:.\d+)*)_git-(.+?)\.dmg$/i)
+    regex(/^MediaElch_macOS_.*?[._-]v?(\d+(?:\.\d+)+)_(\d+(?:[.-]\d+)*)_git-(.+?)\.dmg$/i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["name"]&.match(regex)
