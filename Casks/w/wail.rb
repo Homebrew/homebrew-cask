@@ -8,4 +8,11 @@ cask "wail" do
   homepage "https://github.com/machawk1/wail"
 
   app "WAIL.app"
+
+  zap trash: [
+    "~/Library/Application Support/WAIL",
+    "~/Library/Preferences/com.matkelly.wail.plist",
+    "~/Library/Preferences/WAIL_cli.plist",
+    "~/Library/Saved Application State/com.matkelly.wail.savedState",
+  ]
 end
