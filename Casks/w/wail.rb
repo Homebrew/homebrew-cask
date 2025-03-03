@@ -8,5 +8,4 @@ cask "wail" do
   homepage "https://github.com/machawk1/wail"
 
   app "WAIL.app"
-
 end
