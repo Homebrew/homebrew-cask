@@ -755,6 +755,7 @@ manico
 manictime
 marathon
 marathon-2
+marathon-infinity
 marginnote
 marked
 markedit
