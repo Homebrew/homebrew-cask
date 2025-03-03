@@ -9,7 +9,4 @@ cask "wail" do
 
   app "WAIL.app"
 
-  caveats do
-    requires_rosetta
-  end
 end
