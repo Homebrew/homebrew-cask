@@ -2,9 +2,9 @@ cask "studio-3t" do
   arch arm: "-aarch64"
   livecheckarch = on_arch_conditional arm: "_aarch64"
 
-  version "2025.3.0"
-  sha256 arm:   "3fe59f68d1661a849a96ba65d148e747a51b4d4a399119ec71db654be8967fe6",
-         intel: "5e67c0cb7785599c0f06398b3cb69632e695110a634e12499d0b55ea4a5ac0a8"
+  version "2025.4.0"
+  sha256 arm:   "96cc09cc6d6aaf390f1d7b6f7ad88c9955053626f94706e3733f2d7477695af3",
+         intel: "53af8d31737bda3b8ce7ae4d815d8a73365117bd72ce2c85958bea12c90a8f05"
 
   url "https://download.studio3t.com/studio-3t/mac#{arch}/#{version}/Studio-3T.dmg"
   name "Studio 3T"
