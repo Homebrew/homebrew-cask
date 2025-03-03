@@ -12,8 +12,6 @@ cask "raycast" do
   on_monterey :or_newer do
     arch arm: "arm", intel: "x86_64"
 
-    livecheck_arch = on_arch_conditional arm: "arm", intel: "x86"
-
     version "1.93.0"
     sha256 arm:   "b1f6e90c1363dd98516eca532c80d0554ec2ac1375b7b49158519ded97829101",
            intel: "4e371ef91d19c3e826f3499e75b17a8de2ce84ceddfb7377fffa977818f46f6c"
