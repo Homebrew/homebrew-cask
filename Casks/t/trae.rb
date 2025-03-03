@@ -5,8 +5,7 @@ cask "trae" do
   sha256 arm:   "6de06c783ea44e03d09e6818ab4cc4edf916e5a9f8c7cad25dd7f237a242f15f",
          intel: "515932498d45de8e9ba1a06fb475ad2d77eb7efeda5c0348ba93e6ae38e06689"
 
-  url "https://lf-trae.toscdn.com/obj/trae-ai-cn/pkg/app/releases/stable/#{version}/darwin/Trae-darwin-#{arch}.dmg",
-      verified: "lf-trae.toscdn.com/"
+  url "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/#{version}/darwin/Trae-darwin-#{arch}.dmg"
   name "Trae"
   desc "Adaptive AI IDE"
   homepage "https://www.trae.ai/"
