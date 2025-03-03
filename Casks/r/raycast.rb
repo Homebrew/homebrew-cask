@@ -12,17 +12,15 @@ cask "raycast" do
   on_monterey :or_newer do
     arch arm: "arm", intel: "x86_64"
 
-    livecheck_arch = on_arch_conditional arm: "arm", intel: "x86"
-
-    version "1.93.1"
-    sha256 arm:   "8edd26c24b930f5611121d8984862f5eb8af5db41134c99d531f8deab7ba1167",
-           intel: "ac45f62653ac0730fde1a540c9d33548a0f0b2e4387bb78c96a4cb4b170e7094"
+    version "1.93.0"
+    sha256 arm:   "b1f6e90c1363dd98516eca532c80d0554ec2ac1375b7b49158519ded97829101",
+           intel: "4e371ef91d19c3e826f3499e75b17a8de2ce84ceddfb7377fffa977818f46f6c"
 
     url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
 
     livecheck do
-      url :url
-      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]#{livecheck_arch}\.dmg/i)
+      url "https://releases.raycast.com/download"
+      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]universal\.dmg/i)
       strategy :header_match
     end
   end
