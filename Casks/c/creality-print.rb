@@ -1,28 +1,19 @@
 cask "creality-print" do
-  arch arm: "-macx-arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  on_arm do
-    version "5.1.7.10514"
-    sha256 "a45d861399ef48110aaffa76a94972c780bd06177121f818127af810534b135e"
+  version "6.0.4.1793"
+  sha256 arm:   "61c3d5508db1548515ba57c0bb049dc7d2295aec377c473fb9ec7de593ee8e08",
+         intel: "8ede800ba13104e9e68134f1a7f482f3bc7beed6fff8f9f3a37df5def214ed50"
 
-    url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.csv.first.major_minor_patch}/Creality_Print-v#{version.csv.first}#{arch}-Release.dmg",
-        verified: "github.com/CrealityOfficial/CrealityPrint/"
-  end
-  on_intel do
-    version "6.0.3.1591"
-    sha256 "bc423a2842c064beb9572eb389632c9f2e3474166fec3b971f1d9dbf8bd7e3b2"
-
-    url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.csv.first.major_minor_patch}/CrealityPrint_#{version.csv.first}_Release.dmg",
-        verified: "github.com/CrealityOfficial/CrealityPrint/"
-  end
-
+  url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.major_minor_patch}/CrealityPrint-#{version}-macx-#{arch}-Release.dmg",
+      verified: "github.com/CrealityOfficial/CrealityPrint/"
   name "Creality Print"
   desc "Slicer and cloud services for some Creality FDM 3D printers"
   homepage "https://www.creality.com/pages/download-software"
 
   livecheck do
     url :homepage
-    regex(/href=.*?Creality[._-]?Print[._-]v?(\d+(?:\.\d+)+)#{arch}[._-]Release\.dmg/i)
+    regex(/href=.*?Creality[._-]?Print[._-]v?(\d+(?:\.\d+)+)[._-]macx[._-]#{arch}[._-]Release\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
