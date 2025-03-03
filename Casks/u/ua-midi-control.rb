@@ -13,6 +13,7 @@ cask "ua-midi-control" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "UA Midi Control.app"
