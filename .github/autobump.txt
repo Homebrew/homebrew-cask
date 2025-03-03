@@ -1396,6 +1396,7 @@ touchosc
 tower
 trader-workstation
 tradingview
+trae
 trainerroad
 transmission@nightly
 transmit
