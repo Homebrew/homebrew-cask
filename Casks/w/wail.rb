@@ -1,6 +1,6 @@
 cask "wail" do
-  version "0.2019.05.21"
-  sha256 "45a50a28bfe4c385e93b4053259fdc35265ef0603a3e65e5caf37f1432788b79"
+  version "0.2025.03.03"
+  sha256 "534858b2b542af575788c2b6c223e5716ab8dd42684f23a54e0753583ed238c1"
 
   url "https://github.com/machawk1/wail/releases/download/v#{version}/WAIL_v#{version}_macOS.dmg"
   name "WAIL"
