@@ -172,6 +172,7 @@ brickstore
 bridge
 browser-deputy
 browserosaurus
+browserstacklocal
 bruno
 burp-suite
 burp-suite-professional
