@@ -1,6 +1,6 @@
 cask "skype" do
-  version "8.136.0.203"
-  sha256 "627dd22e7d97770d697e746f8558811184fc7538a19e532a01ff85bc40031505"
+  version "8.137.0.425"
+  sha256 "0bc09a88c8f07fd1e05ef30aef95b825d33ace576b16108ff056c47049730314"
 
   url "https://download.skype.com/s4l/download/mac/Skype-#{version}.dmg"
   name "Skype"
