@@ -1,6 +1,6 @@
 cask "mindjet-mindmanager" do
-  version "24.0.144"
-  sha256 "da4cc7517c96967e0594a1f23786fa7101db2ea8b4a62720ae9622dd8d965487"
+  version "24.1.155"
+  sha256 "984641a6620551efdf85066165ac6413d274c5b1a97378e08582c8c13a97fccb"
 
   url "https://download.mindjet.com/MindManager_Mac_#{version}.dmg"
   name "Mindmanager"
