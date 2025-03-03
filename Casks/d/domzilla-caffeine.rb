@@ -16,8 +16,8 @@ cask "domzilla-caffeine" do
     end
   end
   on_sonoma :or_newer do
-    version "1.5"
-    sha256 "e53e4c223166d4087d6276aba1e72d7bc0e28b50d7626ccc048d72d04068230a"
+    version "1.5.1"
+    sha256 "04f032f9616acda0a2ad3dadeaa6d7e863d6f6b13664a7c0caf6ed8b4478c4e7"
 
     livecheck do
       url "https://dr-caffeine-mac.s3.amazonaws.com/appcast.xml"
