@@ -1,9 +1,9 @@
 cask "cernbox" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.3.1.14387"
-  sha256 arm:   "027da01a323f0d897658127aa06ef98bcab06e7f4b3234f0cc15868bc9dc76fe",
-         intel: "f16c2b102000e6ec1f077a74b09c7b8bae970bc04c3c7b208df8d58c2b73d540"
+  version "5.3.2.15486"
+  sha256 arm:   "d421a2e07f546bac998c64f2f93db8ed8ee0c17125c538a77a9440d46f080195",
+         intel: "12c8ba2c90bdf08a63c7540b7dcc7c048db610745b1e834167237b3068e8c739"
 
   url "https://cernbox.cern.ch/cernbox/doc/MacOSX/cernbox-#{version}-#{arch}.pkg"
   name "CERNBox Client"
