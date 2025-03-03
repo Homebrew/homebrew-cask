@@ -810,6 +810,7 @@ mihomo-party
 milanote
 millie
 mimestream
+mindjet-mindmanager
 mindmac
 mindmaster-cn
 minecraft-education
