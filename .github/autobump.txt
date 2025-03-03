@@ -200,6 +200,7 @@ carbide-create
 carbon-copy-cloner
 cardhop
 cardpresso
+cernbox
 chatall
 chatbox
 chatgpt
