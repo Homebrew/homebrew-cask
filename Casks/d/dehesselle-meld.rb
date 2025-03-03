@@ -1,9 +1,9 @@
 cask "dehesselle-meld" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.22.3+100"
-  sha256 arm:   "e2ed99dbe470837f314db06f74093ff027e270855597dd4866c8e328506e6dd9",
-         intel: "c1ae72cb2f0436ff68e524227ca1e04bb0e641765e2ed6f224474d3b16b9e054"
+  version "3.22.3+105"
+  sha256 arm:   "aea65bbe21842e9c2e72c547df996858abbe05b2610c583f5121215556009527",
+         intel: "db6be60ccf93f173851da8912b8b5cbf4a2aa6cdf419db4970c573f7fe0f7693"
 
   url "https://gitlab.com/api/v4/projects/51547804/packages/generic/meld_macos/#{version}/Meld-#{version}_#{arch}.dmg"
   name "Meld for macOS"
