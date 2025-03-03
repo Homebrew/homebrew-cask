@@ -11,7 +11,7 @@ cask "cernbox" do
   homepage "https://cernbox.web.cern.ch/cernbox/"
 
   livecheck do
-    url "https://cernbox.web.cern.ch/cernbox/downloads/"
+    url "https://cernbox.cern.ch/cernbox/doc/MacOSX/"
     regex(/href=.*?cernbox[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.pkg/i)
   end
 
