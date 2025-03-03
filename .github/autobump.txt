@@ -46,6 +46,7 @@ akiflow
 alcom
 alcove
 aldente
+aleph-one
 alex313031-thorium
 alfaview
 alfred
