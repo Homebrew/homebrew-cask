@@ -1,6 +1,6 @@
 cask "positron" do
-  version "2025.03.0-97"
-  sha256 "75714fcf5d53dcdc3e363ee0e87b9457a518df09726a5415d3ba9d8c45d7c097"
+  version "2025.03.0-116"
+  sha256 "b2cfa261dc4c8d40ee230ba78afb4e48e515645952c6cb53f8f5048c97dc69a8"
 
   url "https://cdn.posit.co/positron/prereleases/mac/universal/Positron-#{version}.dmg"
   name "Positron"
