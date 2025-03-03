@@ -60,8 +60,8 @@ cask "displaylink" do
     pkg "DisplayLink Manager Graphics Connectivity#{version.csv.first}-EXE.pkg"
   end
   on_monterey :or_newer do
-    version "1.11,2024-10"
-    sha256 "e154588f340aefe887d10e3566703ac381592eefc0175b7f1a53569fcc315a3f"
+    version "1.12,2025-03"
+    sha256 "88a0df867abd556799c8079a06f3fb51259fddd94bf5eebfacb9e2a178cdf08c"
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
 
@@ -85,6 +85,7 @@ cask "displaylink" do
               "com.displaylink.displaylinkmanager",
               "com.displaylink.useragent",
               "com.displaylink.useragent-prelogin",
+              "com.displaylink.XpcService",
             ],
             quit:      "DisplayLinkUserAgent",
             pkgutil:   "com.displaylink.*",
