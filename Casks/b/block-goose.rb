@@ -1,6 +1,6 @@
 cask "block-goose" do
-  version "1.0.11"
-  sha256 "4d57cc77f90d6770f6441877b077eb34babc52e4c75d84694ea5e48fbd50647a"
+  version "1.0.12"
+  sha256 "eb7e74596476b27dcae56983bc9e2983adb41a805ab3e10d8cfeb10c613cb50a"
 
   url "https://github.com/block/goose/releases/download/v#{version}/Goose.zip",
       verified: "github.com/block/goose/"
