@@ -1,9 +1,9 @@
 cask "wizcli" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.74.0"
-  sha256 arm:   "a9872afb3fcf63771ac5b04d49fa14ccc2b579aedc8231d2b6dca300ac967d54",
-         intel: "fcc9c134f0ad4aac20caadd1a03c304a96752b5980a5a3044ba8259b04ae3dce"
+  version "0.75.0"
+  sha256 arm:   "71ca7cea0564657a8b7368daffd9aeebe5131f0def8591c961ec57067dccdb92",
+         intel: "1f3a1cc516deecbb3ac20569413e1dd091e5d06522a9407f0dddf7de048b9820"
 
   url "https://downloads.wiz.io/wizcli/#{version}/wizcli-darwin-#{arch}"
   name "Wiz CLI"
