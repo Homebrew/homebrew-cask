@@ -16,7 +16,7 @@ cask "pieces-os" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :mojave"
 
   app "Pieces OS.app"
 
