@@ -1,6 +1,6 @@
 cask "screens-assist" do
-  version "1.6,20081"
-  sha256 "b7b9589b559bbecb3401613b7da635b59175afb7cc099d4e6a1900a0de98942e"
+  version "1.6.1,20082"
+  sha256 "bca4d193c7358f1c5982efabfda3dc3edebfbce515988d3c50c536d68905f94e"
 
   url "https://updates.edovia.com/com.edovia.screens.connect.express/ScreensAssist_#{version.csv.first}b#{version.csv.second}.zip"
   name "Screens Assist"
