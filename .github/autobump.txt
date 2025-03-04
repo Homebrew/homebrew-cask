@@ -1252,6 +1252,7 @@ slack
 slack-cli
 slack@beta
 sleek
+slicer
 slippi-dolphin
 smartgit
 smartsynchronize
