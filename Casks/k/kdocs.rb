@@ -1,6 +1,6 @@
 cask "kdocs" do
-  version "3.9.8,1001"
-  sha256 "c04dd170cf0ef1c9fd6d442c556fb9e8cc9a698ebb997254389e161c29f54a8d"
+  version "3.10.2,1001"
+  sha256 "c95c4aa5dd4639578e4df8c949871dc0577c5fe5576b003b682f30c7001e1511"
 
   url "https://qn.cache.wpscdn.cn/kdocs/apk/kdesktopmac/KDocs_#{version.csv.second}_v#{version.csv.first}.dmg",
       verified: "qn.cache.wpscdn.cn/kdocs/apk/kdesktopmac/"
@@ -9,7 +9,7 @@ cask "kdocs" do
   homepage "https://www.kdocs.cn/"
 
   livecheck do
-    url "https://www.kdocs.cn/kd/api/configure/list?idList=appOfficial"
+    url "https://www.kdocs.cn/kdg/api/v1/configure?idList=appOfficial"
     regex(/kdocs[._-](\d+(?:\.\d+)*)[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :json do |json, regex|
       json_string = json.dig("data", "appOfficial")
