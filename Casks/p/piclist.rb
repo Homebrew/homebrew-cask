@@ -9,6 +9,7 @@ cask "piclist" do
   name "PicList"
   desc "Cloud storage manager tool"
   homepage "https://piclist.cn/"
+  auto_updates true
 
   livecheck do
     url "https://release.piclist.cn/latest/latest-mac.yml"
