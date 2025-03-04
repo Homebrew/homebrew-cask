@@ -115,6 +115,7 @@ babeledit
 backblaze
 backuploupe
 backyard-ai
+badgeify
 badlion-client
 baidunetdisk
 balenaetcher
