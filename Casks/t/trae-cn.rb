@@ -1,4 +1,4 @@
-cask "trae@cn" do
+cask "trae-cn" do
   arch arm: "arm64", intel: "x64"
 
   version "1.0.8055"
