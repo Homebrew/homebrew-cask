@@ -8,7 +8,7 @@ cask "code-composer-studio" do
   homepage "https://www.ti.com/tool/CCSTUDIO"
 
   livecheck do
-    url :homepage
+    url "https://www.ti.com/tool/download/CCSTUDIO"
     regex(/href=.*?CCS[._-]?v?(\d+(?:\.\d+)+)[._-]mac[._-]x86\.dmg/i)
   end
 
