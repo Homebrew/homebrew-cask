@@ -3,7 +3,7 @@ cask "publii" do
 
   version "0.46.4"
   sha256 arm:   "99dbb99716aaffec27c846f29f89260702e6a1c997e72dfe514be9b12698fb6d",
-         intel: "5ac351c5da08c325e1e3d490a44c40408b874e68cceb4d82a58db7f409c0732d"
+         intel: "4058915775162e0ef0cddf7989c9facc7f12ea9b561ec7e809b64304663501d9"
 
   url "https://getpublii.com/download/Publii-#{version}-#{arch}.dmg"
   name "Publii"
