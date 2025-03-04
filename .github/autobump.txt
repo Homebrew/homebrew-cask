@@ -149,6 +149,7 @@ black-ink
 blender
 blender@lts
 blitz-gg
+block-goose
 blockbench
 blockstream-green
 blocs
