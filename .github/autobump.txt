@@ -658,6 +658,7 @@ katalon-studio
 kdenlive
 kdiff3
 kdrive
+keepassxc
 keepassxc@snapshot
 keeper-password-manager
 keka
