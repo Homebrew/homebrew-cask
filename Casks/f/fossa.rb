@@ -1,9 +1,9 @@
 cask "fossa" do
   arch arm: "arm64", intel: "amd64"
 
-  version "3.10.0"
-  sha256 arm:   "3edd4c16aa6482cc1daac062ba84763b724dc8a0c98ca643cb40fd787ed0dd00",
-         intel: "f978ab34a27d713780ca2ebc19332460d3f1aeea49bdb03682c9ce3f266de216"
+  version "3.10.1"
+  sha256 arm:   "ae3d6a2a9b76fea5f81646ccfca03ee9d63471a16b4944acc69cd30c0fd439c2",
+         intel: "bf108d0605c5e5fc9f5f731d0af61cb68c339453ebfcb0ecbd274eb6c96205f0"
 
   url "https://github.com/fossas/fossa-cli/releases/download/v#{version}/fossa_#{version}_darwin_#{arch}.zip",
       verified: "github.com/fossas/fossa-cli/"
