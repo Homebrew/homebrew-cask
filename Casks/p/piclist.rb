@@ -9,13 +9,14 @@ cask "piclist" do
   name "PicList"
   desc "Cloud storage manager tool"
   homepage "https://piclist.cn/"
-  auto_updates true
+  
 
   livecheck do
     url "https://release.piclist.cn/latest/latest-mac.yml"
     strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "PicList.app"
