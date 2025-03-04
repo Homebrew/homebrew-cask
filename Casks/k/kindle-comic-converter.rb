@@ -1,9 +1,9 @@
 cask "kindle-comic-converter" do
   arch arm: "arm", intel: "i386"
 
-  version "7.2.1"
-  sha256 arm:   "4fbb6b7f7c94bc56ab35b804951ccb3fca9102f2ec59e4373489bc31d185fe34",
-         intel: "878caf893759d922cfe9db7c14857429a07f08cb652ffceaacb267748097e99e"
+  version "7.2.3"
+  sha256 arm:   "612948894db1a6cee3d2c6695ecdef0f381e834ec676d1a9dc1ceb7eb53d023c",
+         intel: "7f0156fdab71fbf2386a6a78a8c8a892825374f0bf71a6bde43c8fb47d088ae0"
 
   url "https://github.com/ciromattia/kcc/releases/download/v#{version}/kcc_macos_#{arch}_#{version}.dmg",
       verified: "github.com/ciromattia/kcc/"
