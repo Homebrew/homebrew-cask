@@ -13,6 +13,7 @@ cask "veracrypt" do
     regex(/href=.*?VeraCrypt[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  conflicts_with cask: "veracrypt-fuse-t"
   depends_on cask: "macfuse"
 
   pkg "VeraCrypt_Installer.pkg"
