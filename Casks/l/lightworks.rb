@@ -1,6 +1,6 @@
 cask "lightworks" do
-  version "2025.1,149111"
-  sha256 "848940400a620ccf6f178cb7962af7e0fc9f14f002d5797d3af1697baa15d307"
+  version "2025.1,149933"
+  sha256 "06ca7ebada7236bb8dfec4040a6517a65d0b9a5f6740b41e1a0ca118e9d62d82"
 
   url "https://cdn.lwks.com/releases/#{version.csv.first}/lightworks_#{version.csv.first.major_minor}_r#{version.csv.second}.dmg"
   name "Lightworks"
@@ -8,7 +8,11 @@ cask "lightworks" do
   homepage "https://www.lwks.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://forum.lwks.com/forums/product-releases.19/index.rss"
+    regex(/v?(\d+(?:\.\d+)+).*?revision\s+(\d+)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
   depends_on macos: ">= :big_sur"
