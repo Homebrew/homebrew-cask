@@ -1410,6 +1410,7 @@ tower
 trader-workstation
 tradingview
 trae
+trae-cn
 trainerroad
 transmission@nightly
 transmit
