@@ -1401,6 +1401,7 @@ topcat
 tor-browser
 tor-browser@alpha
 touch-portal
+touchdesigner
 touchosc
 tower
 trader-workstation
