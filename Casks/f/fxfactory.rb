@@ -1,8 +1,8 @@
 cask "fxfactory" do
-  version "8.0.21,8056"
+  version "8.0.22,8145"
   sha256 :no_check # required as upstream package is often updated in place
 
-  url "https://store.fxfactory.com/products/noiseindustries/fxfactory/FxFactory-#{version.csv.first}-#{version.csv.second}.zip"
+  url "https://files.fxfactory.com/fxfactory/FxFactory-#{version.csv.first}-#{version.csv.second}.zip"
   name "FxFactory"
   desc "Browse, install and purchase effects and plugins from a huge catalogue"
   homepage "https://fxfactory.com/"
