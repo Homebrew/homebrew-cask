@@ -50,6 +50,5 @@ cask "tencent-meeting" do
     "~/Library/Preferences/com.tencent.meeting*.plist",
     "~/Library/Saved Application State/com.tencent.meeting.savedState",
     "~/Library/WebKit/com.tencent.meeting",
-    "~/Library/WebKit/com.tencent.meeting",
   ]
 end
