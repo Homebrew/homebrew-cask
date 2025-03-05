@@ -204,6 +204,7 @@ carbon-copy-cloner
 cardhop
 cardpresso
 cernbox
+charmstone
 chatall
 chatbox
 chatgpt
