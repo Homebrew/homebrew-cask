@@ -757,6 +757,7 @@ macwhisper
 maestral
 mailbird
 mailbutler
+malwarebytes
 manico
 manictime
 marathon
