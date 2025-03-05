@@ -1,6 +1,6 @@
 cask "mplabx-ide" do
-  version "6.20"
-  sha256 "18ba349f93f1f18ddae57cbbe8f52418ece2969a2154fa892acb7216fdb9a537"
+  version "6.25"
+  sha256 "289fd90eef9e9399623e2313cef81f13e2e9709743a403a6e8e2a01160438292"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v#{version}-osx-installer.dmg",
       referer: "https://www.microchip.com/"
@@ -21,7 +21,6 @@ cask "mplabx-ide" do
       "--ide", "1",
       "--ipe", "1",
       "--othermcu", "0",
-      "--exepermission", "no",
       "--collectInfo", "0",
       "--collectMyMicrochipInfo", "0",
       "--installdir", staged_path.to_s
@@ -59,7 +58,7 @@ cask "mplabx-ide" do
             },
             delete: [
               # The below version number needs to be updated manually each time this Cask is updated
-              "/Applications/microchip/mplabcomm/3.53.00",
+              "/Applications/microchip/mplabcomm/3.54.00",
               "/Applications/microchip/mplabx/#{version}",
             ],
             rmdir:  [
