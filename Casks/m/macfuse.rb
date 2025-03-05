@@ -30,7 +30,11 @@ cask "macfuse" do
     "io.macfuse.installer.components.preferencepane",
   ]
 
-  zap trash: "/Library/PreferencePanes/macFUSE.prefPane"
+  zap trash: [
+    "/Library/PreferencePanes/macFUSE.prefPane",
+    "~/Library/Caches/io.macfuse.preferencepanes.macfuse",
+    "~/Library/HTTPStorages/io.macfuse.preferencepanes.macfuse",
+  ]
 
   caveats do
     kext
