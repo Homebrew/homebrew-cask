@@ -4,6 +4,10 @@
   "adobe-connect": "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html",
   "adobe-creative-cloud": "https://www.adobe.com/creativecloud.html",
   "adobe-creative-cloud-cleaner-tool": "https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems.html",
+  "adobe-digital-editions": [
+    "https://www.adobe.com/solutions/ebook/digital-editions.html",
+    "https://www.adobe.com/solutions/ebook/digital-editions/download.html"
+  ],
   "adobe-dng-converter": [
     "https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html",
     "https://helpx.adobe.com/photoshop/kb/uptodate.html"
