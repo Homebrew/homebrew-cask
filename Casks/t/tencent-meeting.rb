@@ -44,9 +44,12 @@ cask "tencent-meeting" do
     "~/Library/Containers/com.tencent.meeting*",
     "~/Library/Containers/com.tencent.wemeet.FileDelta",
     "~/Library/Group Containers/FN2V63AD2J.com.tencent.meeting",
+    "~/Library/HTTPStorages/com.tencent.meeting",
     "~/Library/HTTPStorages/com.tencent.meeting*",
+    "~/Library/HTTPStorages/com.tencent.meeting.binarycookies",
     "~/Library/Preferences/com.tencent.meeting*.plist",
     "~/Library/Saved Application State/com.tencent.meeting.savedState",
+    "~/Library/WebKit/com.tencent.meeting",
     "~/Library/WebKit/com.tencent.meeting",
   ]
 end
