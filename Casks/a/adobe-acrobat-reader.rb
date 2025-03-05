@@ -40,9 +40,12 @@ cask "adobe-acrobat-reader" do
 
   zap trash: [
     "~/Library/Caches/com.adobe.Reader",
+    "~/Library/HTTPStorages/com.adobe.Reader",
     "~/Library/HTTPStorages/com.adobe.Reader.binarycookies",
     "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
     "~/Library/Preferences/com.adobe.crashreporter.plist",
+    "~/Library/Preferences/com.adobe.Install.Reader.plist",
     "~/Library/Preferences/com.adobe.Reader.plist",
+    "~/Library/Saved Application State/com.adobe.Reader.savedState",
   ]
 end
