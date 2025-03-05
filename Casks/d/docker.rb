@@ -33,11 +33,11 @@ cask "docker" do
   depends_on macos: ">= :monterey"
 
   app "Docker.app"
-  binary "Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
-  binary "Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker-compose"
-  binary "Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",
          target: "/usr/local/bin/docker"
@@ -53,11 +53,11 @@ cask "docker" do
          target: "/usr/local/bin/kubectl.docker"
   binary "#{appdir}/Docker.app/Contents/Resources/cli-plugins/docker-compose",
          target: "/usr/local/cli-plugins/docker-compose"
-  binary "Docker.app/Contents/Resources/etc/docker.bash-completion",
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
-  binary "Docker.app/Contents/Resources/etc/docker.zsh-completion",
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.zsh-completion",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker"
-  binary "Docker.app/Contents/Resources/etc/docker.fish-completion",
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish"
 
   postflight do
