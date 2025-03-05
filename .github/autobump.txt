@@ -858,6 +858,7 @@ mongodb-compass@beta
 monotype
 moom
 morgen
+morisawa-desktop-manager
 motion
 motu-m-series
 mountain-duck
