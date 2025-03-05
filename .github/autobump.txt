@@ -1498,6 +1498,7 @@ warcraft-logs-uploader
 warp
 warzone-2100
 wasabi-wallet
+watchfacestudio
 waterfox
 wave
 wavebox
