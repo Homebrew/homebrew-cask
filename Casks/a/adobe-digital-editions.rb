@@ -18,5 +18,9 @@ cask "adobe-digital-editions" do
             pkgutil: "com.adobe.adobedigitaleditions.app",
             delete:  "/Applications/Adobe Digital Editions.app"
 
-  zap trash: "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adobe.adobedigitaleditions.app.sfl*"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adobe.adobedigitaleditions.app.sfl*",
+    "~/Library/HTTPStorages/com.adobe.adobedigitaleditions.app",
+    "~/Library/Preferences/com.adobe.adobedigitaleditions.app.plist",
+  ]
 end
