@@ -57,6 +57,7 @@ altair-graphql-client
 amadine
 amazon-chime
 amazon-q
+amazon-workspaces
 amiberry
 amie
 ammonite
