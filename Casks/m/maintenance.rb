@@ -47,7 +47,7 @@ cask "maintenance" do
     url "https://www.titanium-software.fr/download/14/Maintenance.dmg"
   end
   on_sequoia :or_newer do
-    version "3.2.8"
+    version "3.2.9"
 
     url "https://www.titanium-software.fr/download/15/Maintenance.dmg"
   end
