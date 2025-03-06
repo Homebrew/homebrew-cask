@@ -11,7 +11,16 @@ cask "wifiman" do
   homepage "https://wifiman.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://community.svc.ui.com/", post_json: {
+      query: "query { releases(tags: [\"wifiman\"]) { items { title version } } }",
+    }
+    strategy :json do |json|
+      json.dig("data", "releases", "items")&.map do |item|
+        next unless item["title"]&.include?("Desktop")
+
+        item["version"]
+      end
+    end
   end
 
   pkg "wifiman-desktop-#{version}-#{arch}.pkg"
