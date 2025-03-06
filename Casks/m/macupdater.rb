@@ -4,7 +4,7 @@ cask "macupdater" do
     sha256 "81e7a1f64499128c131d169408829962ca913996830a7e19d372099e657d5894"
   end
   on_ventura :or_newer do
-    version "3.4.0"
+    version "3.4.1"
     # required as upstream package is regularly updated in-place https://github.com/Homebrew/homebrew-cask/pull/182188#issuecomment-2284199515
     sha256 :no_check
 
