@@ -1,6 +1,6 @@
 cask "schism-tracker" do
-  version "20250208"
-  sha256 "7c5e29104343eccddeb9f15df0521fe8b4aff33550aa81f1fcdb64306eacce16"
+  version "20250305"
+  sha256 "60ec0dc4b3d20799828c3fcf62688a63eb0b887de4df2ff05e309ce96d793bdc"
 
   url "https://github.com/schismtracker/schismtracker/releases/download/#{version}/schismtracker-#{version}-macos.zip"
   name "Schism Tracker"
