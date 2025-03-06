@@ -1226,6 +1226,7 @@ semeru-jdk-open@21
 semeru-jdk-open@8
 sentinel
 sequel-ace
+servo
 session
 sessionrestore
 setapp
