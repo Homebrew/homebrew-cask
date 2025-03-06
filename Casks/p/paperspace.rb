@@ -8,11 +8,13 @@ cask "paperspace" do
   homepage "https://www.paperspace.com/app/"
 
   livecheck do
-    # curl -H 'Content-Type: application/json' \
-    #   --data-binary \
-    #   '{"component": "paperspaceInstaller", "os": "mac"}' \
-    #   https://api.paperspace.io/receivers/latestVersion
-    skip "No version information available"
+    url "https://api.paperspace.io/receivers/latestVersion", post_json: {
+      component: "paperspaceInstaller",
+      os:        "mac",
+    }
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on macos: ">= :high_sierra"
