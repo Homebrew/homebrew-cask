@@ -1330,6 +1330,7 @@ surfshark
 surge
 sweet-home3d
 swiftformat-for-xcode
+swish
 sync
 syncovery
 syncterm
