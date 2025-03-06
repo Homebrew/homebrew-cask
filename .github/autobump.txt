@@ -835,6 +835,7 @@ mist
 mitmproxy
 mixed-in-key
 mixin
+mixing-station
 mixxx
 mixxx@snapshot
 mkvtoolnix
