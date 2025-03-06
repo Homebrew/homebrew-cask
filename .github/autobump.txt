@@ -548,6 +548,7 @@ go-shiori
 godspeed
 gog-galaxy
 goland
+gologin
 goodsync
 google-chrome@beta
 google-chrome@dev
