@@ -9,8 +9,14 @@ cask "ba-connected" do
   homepage "https://www.brightsign.biz/resources/software-downloads/"
 
   livecheck do
-    url "https://downloads.bsn.cloud/latest-mac.yml"
-    strategy :electron_builder
+    url "https://brightsign-builds.s3.us-east-1.amazonaws.com/web/bs-download-versions.json"
+    regex(/BA(?:[+._-]|%20)connected[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :json do |json|
+      match = json.dig("general", "bacon", "mac-link")&.match(regex)
+      next unless match
+
+      match[1]
+    end
   end
 
   depends_on macos: ">= :catalina"
