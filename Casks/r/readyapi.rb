@@ -12,8 +12,8 @@ cask "readyapi" do
   homepage "https://smartbear.com/product/ready-api/overview/"
 
   livecheck do
-    url "https://support.smartbear.com/readyapi/docs/general-info/whats-new.html"
-    regex(/(\d+(?:\.\d+)+)\s\(latest\sversion\)/i)
+    url "https://support.smartbear.com/readyapi/docs/en/what-s-new/version-history.html"
+    regex(/>\s*Ready(?:!\s+)?API\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   installer script: {
