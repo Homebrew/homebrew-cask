@@ -8,8 +8,8 @@ cask "jump-desktop-connect" do
     end
   end
   on_high_sierra :or_newer do
-    version "7.1.41"
-    sha256 "589748f89ba14a448f62fda404ff982b1f510f50788fce39dd6414aefffb6f48"
+    version "7.1.45"
+    sha256 "73f8bff07be7982f6d30ddb3f17eb871fff09036784c367af5a5d181ed59699c"
 
     livecheck do
       url "https://mirror.jumpdesktop.com/downloads/connect/connect-mac.xml"
