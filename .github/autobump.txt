@@ -760,6 +760,7 @@ macwhisper
 maestral
 mailbird
 mailbutler
+maintenance
 malwarebytes
 manico
 manictime
