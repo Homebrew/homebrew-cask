@@ -2,7 +2,7 @@ cask "boosteroid" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "_ARM"
 
-  version "1.9.15"
+  version "1.9.16"
   sha256 :no_check
 
   url "https://boosteroid.com/macos#{folder}/installer/boosteroid-install-#{arch}.dmg",
