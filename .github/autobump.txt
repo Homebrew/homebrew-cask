@@ -1124,6 +1124,7 @@ quicken
 quicksilver
 quicktune
 quickwhisper
+quiet
 quip
 r
 racket
