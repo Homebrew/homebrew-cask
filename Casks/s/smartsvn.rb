@@ -1,9 +1,9 @@
 cask "smartsvn" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "14.4.1"
-  sha256 arm:   "655de8c2e107db6cc93553e1143c65d8586dd3104d4b31f6a8226b44a7784b9f",
-         intel: "68333aedc81e6a8ed880762fb052fe8b783f77e12dc6c7e90f184d5eae463bac"
+  version "14.5.0"
+  sha256 arm:   "61c72a9bf156dff297021ff1cb179c8068fe0c5b5b9b9f659054b4f561010165",
+         intel: "ae89c038b93c962cce46d1d489011cc43228d42a404032b38edf84d7613713b8"
 
   url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-#{arch}-#{version.dots_to_underscores}.dmg"
   name "SmartSVN"
