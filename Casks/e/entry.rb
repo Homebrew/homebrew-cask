@@ -7,13 +7,14 @@ cask "entry" do
   desc "Block-based coding platform"
   homepage "https://playentry.org/"
 
-  # The download page (https://playentry.org/download/offline) fetches the
-  # version information from https://playentry.org/graphql using a `POST`
-  # request but livecheck can't do that yet. We check GitHub releases as a best
-  # guess of when a new version is released.
   livecheck do
-    url "https://github.com/entrylabs/entry-offline"
-    strategy :github_latest
+    url "https://playentry.org/api/checkVersion", post_json: {
+      category: "offline",
+      version:  version,
+    }
+    strategy :json do |json|
+      json["recentVersion"]
+    end
   end
 
   pkg "Entry-#{version}.pkg"
