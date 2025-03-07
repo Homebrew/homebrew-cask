@@ -8,6 +8,13 @@ cask "zen-browser" do
   desc "Gecko based web browser"
   homepage "https://zen-browser.app/"
 
+  livecheck do
+    url "https://updates.zen-browser.app/updates/browser/Darwin_aarch64-gcc3/release/update.xml"
+    strategy :xml do |xml|
+      xml.get_elements("//update").map { |item| item.attributes["appVersion"] }
+    end
+  end
+
   auto_updates true
   depends_on macos: ">= :catalina"
 
