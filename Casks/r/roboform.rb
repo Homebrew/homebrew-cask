@@ -1,8 +1,8 @@
 cask "roboform" do
-  version "9.6.6"
-  sha256 :no_check
+  version "9.6.5"
+  sha256 "bb8a3e8d860a13334d86ddf4d91d9d3875ea0743d8e92a04f9336163a0294731"
 
-  url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg", cache: false
+  url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
   name "RoboForm"
   desc "Password manager and form filler application"
   homepage "https://www.roboform.com/"
