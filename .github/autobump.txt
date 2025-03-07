@@ -1183,6 +1183,7 @@ roam-research
 roblox
 robloxstudio
 roboform
+rocket-chat
 rocket-typist
 rode-central
 rotki
