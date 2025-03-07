@@ -17,6 +17,7 @@ cask "db-browser-for-sqlite" do
 
   zap trash: [
     "~/Library/Preferences/com.sqlitebrowser.sqlitebrowser.plist",
+    "~/Library/Preferences/net.sourceforge.sqlitebrowser.plist",
     "~/Library/Saved Application State/net.sourceforge.sqlitebrowser.savedState",
   ]
 end
