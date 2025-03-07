@@ -6,8 +6,8 @@ cask "microsoft-edge@canary" do
     sha256 "495711e9506d5df66a73bc067dbda6ee69f90b723173f3dc16d5788fe7a86b54"
   end
   on_intel do
-    version "135.0.3178.0,bc7b53af-95cc-4964-997c-e9d9e5569dce"
-    sha256 "32ae8be80ce26e7f06f45e6086342629fe7d47ae34a44839f5b22638dd09b6f3"
+    version "135.0.3179.0,87477220-cfb8-4e1c-93fc-449f0293543d"
+    sha256 "47eb78e1b40ea908593a1f1a31afcb99a4a8768b0e0c3b0acd7038e9018f8c23"
   end
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdgeCanary-#{version.csv.first}.pkg"
