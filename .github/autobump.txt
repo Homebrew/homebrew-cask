@@ -368,6 +368,7 @@ duckduckgo
 duet
 ea
 eaglefiler
+easydict
 ecamm-live
 edrawmind
 egnyte
