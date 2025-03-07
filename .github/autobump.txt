@@ -1268,6 +1268,7 @@ sleek
 slicer
 slippi-dolphin
 smartgit
+smartsvn
 smartsynchronize
 smooze-pro
 smultron
