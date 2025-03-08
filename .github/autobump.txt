@@ -884,6 +884,7 @@ multitouch
 multiviewer-for-f1
 mumuplayer
 munki
+mural
 murus
 museeks
 mutedeck
