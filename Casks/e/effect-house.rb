@@ -1,5 +1,6 @@
 cask "effect-house" do
   arch arm: "Applesilicon", intel: "Intel"
+  livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   on_arm do
     version "4.11.2,6777,02262025,104"
@@ -17,7 +18,18 @@ cask "effect-house" do
   homepage "https://effecthouse.tiktok.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://effecthouse.tiktok.com/api/web/download", post_form: {
+      osType:     "macOS",
+      arch:       livecheck_arch,
+      entryPoint: version.csv.fourth,
+    }
+    regex(%r{(\d+)/Effect[._-]House[._-]v?(\d+(?:\.\d+)+)(?:\.(\d+))(?:[._-]#{arch})?[._-](\d+)\.dmg}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[3]},#{match[1]},#{match[4]}"
+    end
   end
 
   depends_on macos: ">= :sierra"
