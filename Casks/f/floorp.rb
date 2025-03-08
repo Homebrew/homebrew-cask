@@ -9,8 +9,10 @@ cask "floorp" do
   homepage "https://floorp.app/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://floorp-update.ablaze.one/browser/10.8.0/Darwin/aarch64/update.xml"
+    strategy :xml do |xml|
+      xml.get_elements("//update").map { |item| item.attributes["displayVersion"] }
+    end
   end
 
   auto_updates true
