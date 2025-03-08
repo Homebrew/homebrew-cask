@@ -131,6 +131,7 @@ bbedit
 beekeeper-studio
 beeper
 bentobox
+berrycast
 betterandbetter
 betterdisplay
 bettermouse
