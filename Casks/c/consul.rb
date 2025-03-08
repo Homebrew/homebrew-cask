@@ -13,7 +13,7 @@ cask "consul" do
 
   livecheck do
     url "https://releases.hashicorp.com/consul/"
-    regex(/href=.*?consul[._-]v?(\d+(?:\.\d+)+)/i)
+    regex(%r{href=.*?/consul/v?(\d+(?:\.\d+)+)/}i)
   end
 
   binary "consul"
