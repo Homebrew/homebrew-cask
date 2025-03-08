@@ -1,6 +1,6 @@
 cask "berrycast" do
-  version "0.39.0"
-  sha256 "71f2acd14ba722b8a1208d1f11549d719a6e9853f05f2aa31f0fa54ba436b716"
+  version "0.39.1"
+  sha256 "2d6fa192b318f8dab6d0aa9c3f41bc3bf20f99b177b0c53bf83e4ff764440f6d"
 
   url "https://media.berrycast.app/desktop-installer/Berrycast-#{version}-latest.dmg",
       verified: "media.berrycast.app/"
@@ -21,7 +21,7 @@ cask "berrycast" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Berrycast.app"
 
