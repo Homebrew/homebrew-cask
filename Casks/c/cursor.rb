@@ -1,9 +1,9 @@
 cask "cursor" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.46.9,3395357a4ee2975d5d03595e7607ee84e3db0f2c"
-  sha256 arm:   "9b2606fdd735a98efe89c95c123e32e66f9c6365dc26ce13de83615381e7bdf5",
-         intel: "2b4223d038d0cf92a5af2c8203f18d0e9c14f2b3cbccc805a81a60cce46204c6"
+  version "0.46.11,ae378be9dc2f5f1a6a1a220c6e25f9f03c8d4e19"
+  sha256 arm:   "4340f8037df9bd59d20f2c1a809c58231f9c5b692d77c9a840e5aab64fd291ef",
+         intel: "c6855b29306b21744a81ee37c7330a4f78156a4d9e92e3e315aa456fcf6ca83d"
 
   url "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/#{version.csv.second}/darwin/#{arch}/Cursor-darwin-#{arch}.zip",
       verified: "anysphere-binaries.s3.us-east-1.amazonaws.com/"
