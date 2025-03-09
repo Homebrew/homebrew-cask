@@ -22,9 +22,5 @@ cask "sokim" do
 
   caveats do
     logout
-    <<~EOS
-      Installing or uninstalling this cask requires some preparation.
-      For more information, see GitHub: https://github.com/kiding/SokIM
-    EOS
   end
 end
