@@ -8,11 +8,6 @@ cask "sokim" do
   desc "Korean-English Input Method Editor"
   homepage "https://github.com/kiding/SokIM"
 
-  livecheck do
-    url "https://github.com/kiding/SokIM/releases"
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :ventura"
 
   pkg "SokIM.pkg"
