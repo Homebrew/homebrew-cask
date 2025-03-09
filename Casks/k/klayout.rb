@@ -29,13 +29,12 @@ cask "klayout" do
         verified: "klayout.org/downloads/MacOS/"
 
     livecheck do
-      url "https://www.klayout.de/build.html"
-      regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Monterey.*?\.dmg/i)
+      skip "Legacy version"
     end
   end
   on_ventura do
-    version "0.29.11"
-    sha256 "93b00036ca5b8125bcfbc228160b19d73d4afaf4a6e6dd9db3bb27a752d62466"
+    version "0.29.12"
+    sha256 "9f0aa9fc490329adc5a4777495c960b793b04a34e6206b54311e208bc6d91aef"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Ventura-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
@@ -45,9 +44,9 @@ cask "klayout" do
       regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Ventura.*?\.dmg/i)
     end
   end
-  on_sonoma :or_newer do
-    version "0.29.11"
-    sha256 "f1e6d4f729d7f5baa06f2dfc526840d4634bff4b0a0286c32d59b8fbb2f88f62"
+  on_sonoma do
+    version "0.29.12"
+    sha256 "c79f7975467f5e96e4b4799be61ae9a0fdac39e960269c7031f398ee831728a0"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sonoma-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
@@ -55,6 +54,18 @@ cask "klayout" do
     livecheck do
       url "https://www.klayout.de/build.html"
       regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Sonoma.*?\.dmg/i)
+    end
+  end
+  on_sequoia :or_newer do
+    version "0.29.12"
+    sha256 "af71b11a948af5e55046ce4353254701c99838022ae592e9876bb48a9d80cb12"
+
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sequoia-1-qt5MP-RsysPhb311.dmg",
+        verified: "klayout.org/downloads/MacOS/"
+
+    livecheck do
+      url "https://www.klayout.de/build.html"
+      regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Sequoia.*?\.dmg/i)
     end
   end
 
