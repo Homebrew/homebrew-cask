@@ -14,6 +14,7 @@ cask "cloudflare-warp" do
   end
 
   auto_updates true
+  conflicts_with cask: "cloudflare-warp@beta"
   depends_on macos: ">= :catalina"
 
   pkg "Cloudflare_WARP_#{version}.pkg"
