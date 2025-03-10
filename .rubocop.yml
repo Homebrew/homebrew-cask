@@ -1,5 +1,12 @@
 # This file is synced from `Homebrew/brew` by the `.github` repository, do not modify it directly.
 ---
+plugins:
+- rubocop-md:
+    plugin_class_name: RuboCop::Markdown::Plugin
+- rubocop-performance:
+    plugin_class_name: RuboCop::Performance::Plugin
+- rubocop-rspec:
+    plugin_class_name: RuboCop::RSpec::Plugin
 AllCops:
   TargetRubyVersion: 3.3
   NewCops: enable
