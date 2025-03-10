@@ -1,5 +1,5 @@
 cask "karafun" do
-  version "2.9.0"
+  version "2.10.0"
   sha256 :no_check
 
   url "https://www.karafun.com/download/mac.html"
@@ -8,12 +8,12 @@ cask "karafun" do
   homepage "https://www.karafun.com/"
 
   livecheck do
-    url :url
-    strategy :header_match
+    url "https://www.karafun.fr/osx/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sonoma"
 
   app "KaraFun.app"
 
