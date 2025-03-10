@@ -1323,6 +1323,7 @@ strongvpn
 structuredlogviewer
 studio-3t
 sublime-merge
+sublime-merge@dev
 sublime-text@dev
 submariner
 subsurface
