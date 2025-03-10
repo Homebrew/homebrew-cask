@@ -8,8 +8,25 @@ cask "lg-onscreen-control" do
   desc "Displays all connected LG monitor information"
   homepage "https://www.lg.com/us/support/monitors"
 
+  # There is no page available specifically for the software
+  # so we return the downloads from one of the popular products
   livecheck do
-    skip "No version information available"
+    url "https://www.lg.com/us/support/product/lg-27GN950-B.AUS"
+    regex(/Mac[._-]OSC[._-]v?(\d+(?:\.\d+)+)\.zip/)
+    strategy :page_match do |page, regex|
+      json_string = page[/NEXT[._-]DATA[^>]*>\s*([^<]+)\s*</i, 1]
+      next if json_string.blank?
+
+      json = Homebrew::Livecheck::Strategy::Json.parse_json(json_string)
+      json.dig("props", "pageProps", "softwareData", "fileData")&.map do |_, files|
+        files.map do |file|
+          match = file["originalFileName"]&.match(regex)
+          next if match.blank? || (filename = file["fileName"]).blank?
+
+          "#{match[1]},#{filename}"
+        end
+      end&.flatten
+    end
   end
 
   depends_on macos: ">= :mojave"
