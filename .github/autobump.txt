@@ -460,6 +460,7 @@ font-chiron-sung-hk
 font-elstobd
 font-fontawesome
 font-iansui
+font-inconsolata-lgc
 font-inter
 font-iosevka
 font-iosevka-aile
