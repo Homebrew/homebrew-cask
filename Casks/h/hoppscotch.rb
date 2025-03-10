@@ -1,5 +1,5 @@
 cask "hoppscotch" do
-  arch arm: "aarch64", intel: "x86_64"
+  arch arm: "aarch64", intel: "x64"
 
   version "25.2.1-0"
   sha256 arm:   "2b8929feff4582716163d7e9abc20522b19644f2ba0bd9fe49637a43f1455f38",
