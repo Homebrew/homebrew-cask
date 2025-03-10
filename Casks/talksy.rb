@@ -1,6 +1,6 @@
 cask "talksy" do
     version "0.0.23"
-    sha256 "3760cf900f8a6d0515ccb82072d77746b887b97f9a44c8dd4ce5b11ff1a25991"
+    sha256 "920962d69eb62a6d1edbe09e707604f8aba88266a909eced26f194ce39d59229"
     url "https://repo.cyberkoalastudios.com/mtalksy/TalksyInstaller.zip"
     name "Talksy"
     desc "Video calling app"
