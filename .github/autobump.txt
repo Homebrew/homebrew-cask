@@ -345,6 +345,7 @@ dockfix
 dockside
 dockx
 dogecoin
+dolphin
 dolphin@dev
 dosbox-staging
 dosbox-x
