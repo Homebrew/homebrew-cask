@@ -1533,7 +1533,6 @@ whalebird
 whatroute
 whatsapp
 whatsapp@beta
-whatsapp@legacy
 whatsize
 whimsical
 whisky
