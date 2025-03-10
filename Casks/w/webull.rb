@@ -1,6 +1,6 @@
 cask "webull" do
-  version "8.10.5,8000100008"
-  sha256 "411b9e8aef3c7bc2aac01520895fad7797f65334c14275c10df2628efa5ecd12"
+  version "8.11.1,8000110004"
+  sha256 "4c3086f0707e1a6f167417ae4ee996b14a6afb6b2ef33e823bc8176043c30957"
 
   url "https://u1sweb.webullfintech.com/us/Webull%20Desktop_#{version.csv.first}_#{version.csv.second}_global_universalsigned.dmg",
       verified: "u1sweb.webullfintech.com/us/"
