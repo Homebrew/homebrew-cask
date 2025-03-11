@@ -1005,6 +1005,7 @@ ovito-pro
 p4
 p4v
 pagico
+paintcode
 paletro
 panoply
 parallels
