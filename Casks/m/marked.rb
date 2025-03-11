@@ -1,8 +1,8 @@
 cask "marked" do
-  version "2.6.45,1068"
-  sha256 "ad10cde7edefd0430a501f72ff78882cff3fad6211212f7b22d5656517976450"
+  version "2.6.46,1071"
+  sha256 "9d67af603347b00f6c4b2b40eea6c0aef7f3b4c88abc3c77453a7d836f050626"
 
-  url "https://updates.marked2app.com/Marked.#{version.csv.second}.dmg"
+  url "https://updates.marked2app.com/Marked#{version.delete(",")}.dmg"
   name "Marked"
   desc "Previewer for Markdown, MultiMarkdown and other text markup languages"
   homepage "https://marked2app.com/"
