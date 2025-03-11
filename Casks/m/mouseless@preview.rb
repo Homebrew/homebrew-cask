@@ -1,9 +1,9 @@
-cask "mouseless-at-preview" do
+cask "mouseless@preview" do
   version "0.4.0-preview.0"
   sha256 "8016d617bcfa4cff8a2cf7476ade22964211e7a8df2cc526b5abcbaffd3de225"
 
   url "https://mouseless.click/mouseless-installer_v#{version}.dmg"
-  name "mouseless@preview"
+  name "mouseless preview channel"
   desc "Mouse control with the keyboard"
   homepage "https://mouseless.click/"
 
