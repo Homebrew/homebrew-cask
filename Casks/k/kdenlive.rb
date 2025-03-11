@@ -1,9 +1,9 @@
 cask "kdenlive" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "24.12.2"
-  sha256 arm:   "4dbfe13f38e1751bb4f5932455939e5bd98cddc0534ed159480a6435c95b3df8",
-         intel: "3a2b4b7fae691f9fb5cc0691f4cc01ccc259d7a8d8fb09d949b85b9fc5cdb828"
+  version "24.12.3"
+  sha256 arm:   "09b7a27c57c3c04aa55bdb35df8b5eb6627ffd3f22d7c5ba294fd78951edf023",
+         intel: "ae3aa17ea40dc33148cd100f0298eb0d17c62915cd20a8fd3eef507f3944fe60"
 
   url "https://cdn.download.kde.org/stable/kdenlive/#{version.major_minor}/macOS/kdenlive-#{version}-#{arch}.dmg",
       verified: "cdn.download.kde.org/stable/kdenlive/"
