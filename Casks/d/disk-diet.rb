@@ -1,6 +1,6 @@
 cask "disk-diet" do
-  version "5.6.1"
-  sha256 "74a4525d6dd6bf76470829f6aa3b24a6703a7a1373c1ce75a41ec7b46af77acd"
+  version "5.6.2"
+  sha256 "f5adbe02a706459967dfd387ffa29012305db9c19591fa66c3c974dca6442a4f"
 
   url "https://www.tunabellysoftware.com/resources/Disk%20Diet%20#{version}.dmg"
   name "Disk Diet"
