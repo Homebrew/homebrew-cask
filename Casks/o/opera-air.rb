@@ -1,15 +1,15 @@
 cask "opera-air" do
-  version "116.0.5366.82"
-  sha256 "d9b9ad9cf82d36f8393a51db3bfbf8dc3cd4f0b9c9945a606b2c1a8643c391f2"
+  version "116.0.5366.171"
+  sha256 "bd4d295e4009f90633e8f42b6dff0301ded0e5c62f38ff2942f9395497b2cfdb"
 
-  url "https://get.geo.opera.com/ftp/.private/opera_air/#{version}/mac/Opera_Air_#{version}_Setup.dmg"
+  url "https://get.geo.opera.com/pub/opera_air/#{version}/mac/Opera_Air_#{version}_Setup.dmg"
   name "Opera Air"
   desc "Web browser"
   homepage "https://www.opera.com/air"
 
   livecheck do
-    url "https://download.opera.com/download/get/?id=69847&nothanks=yes"
-    strategy :header_match
+    url "https://ftp.opera.com/pub/opera_air/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   auto_updates true
