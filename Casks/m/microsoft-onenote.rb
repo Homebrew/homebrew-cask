@@ -1,6 +1,6 @@
 cask "microsoft-onenote" do
-  version "16.94.25020927"
-  sha256 "2e57ad240cfb7edb02693bc4764040455a58e4edbb60cf5ab113511d093f1340"
+  version "16.95.25030928"
+  sha256 "20173c3d2a6a3404875669ec3ab71159aed204abdad7ce5d00fb9c705229d00a"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_OneNote_#{version}_Updater.pkg"
   name "Microsoft OneNote"
