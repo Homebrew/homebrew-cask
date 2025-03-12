@@ -24,8 +24,9 @@ cask "ghdl" do
   end
 
   url "https://github.com/ghdl/ghdl/releases/download/v#{version}/ghdl-llvm-#{version}-macos#{macos_version}-#{arch}.tar.gz"
+
   name "ghdl"
-  desc "VHDL 2008/93/87 simulator"
+  desc "VHDL 2019/2008/93/87 simulator"
   homepage "https://github.com/ghdl/ghdl/"
 
   livecheck do
@@ -35,10 +36,22 @@ cask "ghdl" do
 
   directory = "ghdl-llvm-#{version}-macos#{macos_version}-#{arch}"
 
-  binary "#{directory}/bin/ghdl"
-  binary "#{directory}/bin/ghwdump"
+  ghdlbins = ["ghdl", "ghwdump", "ghdl1-llvm"]
+  ghdlbins.each { |_bin|
+    binary "#{directory}/bin/#{_bin}"
+  }
+
   binary "#{directory}/include/ghdl", target: "#{HOMEBREW_PREFIX}/include/ghdl"
   binary "#{directory}/lib/ghdl", target: "#{HOMEBREW_PREFIX}/lib/ghdl"
+
+  postflight do
+    puts "Setting files as being from a nice developer"
+    ghdlbins.each { |_bin|
+      `xattr -dr com.apple.quarantine #{HOMEBREW_PREFIX}/bin/#{_bin}`
+    }
+    `xattr -dr com.apple.quarantine #{HOMEBREW_PREFIX}/include/ghdl`
+    `xattr -dr com.apple.quarantine #{HOMEBREW_PREFIX}/lib/ghdl`
+  end
 
   # No zap stanza required
 end
