@@ -655,6 +655,7 @@ jitsi-meet
 joplin
 jordanbaird-ice
 josm
+jottacloud
 jprofiler
 julia
 julia@lts
