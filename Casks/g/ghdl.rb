@@ -43,14 +43,5 @@ cask "ghdl" do
   binary "#{directory}/include/ghdl", target: "#{HOMEBREW_PREFIX}/include/ghdl"
   binary "#{directory}/lib/ghdl", target: "#{HOMEBREW_PREFIX}/lib/ghdl"
 
-  postflight do
-    puts "Setting files as being from a nice developer"
-    ghdlbins.each do |bin|
-      `xattr -dr com.apple.quarantine #{HOMEBREW_PREFIX}/bin/#{bin}`
-    end
-    `xattr -dr com.apple.quarantine #{HOMEBREW_PREFIX}/include/ghdl`
-    `xattr -dr com.apple.quarantine #{HOMEBREW_PREFIX}/lib/ghdl`
-  end
-
   # No zap stanza required
 end
