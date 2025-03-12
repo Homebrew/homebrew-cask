@@ -1,6 +1,6 @@
 cask "mellel" do
-  version "6.3.0,63005"
-  sha256 "7846609ae4e8bded2d9ec3d66aa897ff44007423e12c3948908183f4966da74e"
+  version "6.3.1,63101"
+  sha256 "626aca82a3ca63651fa765dce89dffb8cc9c89da731f80ce316c4284696fa383"
 
   url "https://d1riogbqt3a9uw.cloudfront.net/mellel_#{version.csv.second}.dmg",
       verified: "d1riogbqt3a9uw.cloudfront.net/"
