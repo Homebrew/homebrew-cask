@@ -1545,6 +1545,7 @@ windows-app
 windscribe
 windsurf
 windsurf@next
+windterm
 wing-personal
 wins
 wire
