@@ -564,6 +564,7 @@ gqrx
 graalvm-jdk@21
 grammarly-desktop
 grandtotal
+granola
 graphicconverter
 gridtracker2
 groestlcoin-core
