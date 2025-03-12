@@ -1,15 +1,15 @@
 cask "cura-lulzbot" do
-  version "4.13.10"
-  sha256 "e899f81b8759eea8d8c1dfb98ff020e6cec7c485dd27a3245924c113d1f71d65"
+  version "4.13.15-patch"
+  sha256 "a1e8139958bee541e9b006f80df7e843baebf930ee88ba1e8d800aafeacc2422"
 
-  url "https://software.lulzbot.com/MacOSX/Cura%20LulzBot%20Edition%20#{version.major_minor}/#{version}/Cura_LulzBot_Edition-#{version}.dmg"
+  url "https://software.lulzbot.com/MacOSX/Cura%20LulzBot%20Edition%20#{version.major_minor}/#{version.split("-").first}/Cura_LulzBot_Edition-#{version}.dmg"
   name "Cura LulzBot Edition"
   desc "3D printing solution"
   homepage "https://lulzbot.com/support/cura"
 
   livecheck do
     url "https://lulzbot.com/support/cura-le-macos"
-    regex(/href=.*?Cura[._-]LulzBot[._-]Edition[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?Cura[._-]LulzBot[._-]Edition[._-]v?(\d+(?:\.\d+)+(?:-patch)?)\.dmg/i)
   end
 
   depends_on macos: ">= :big_sur"
