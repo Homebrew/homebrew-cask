@@ -5,6 +5,7 @@ cask "vscodium" do
     version "1.97.2.25045"
     sha256 arm:   "48d01a0663b7a6396f41ddc11296eb812d58e9fe3b671b9d33e6b21621e40f21",
            intel: "af8fe5721ef431ab59fe05a06a3a462c40884229f61cc2962ea01d3e66997243"
+
     livecheck do
       skip "Legacy version"
     end
