@@ -26,7 +26,7 @@ cask "ghdl" do
   url "https://github.com/ghdl/ghdl/releases/download/v#{version}/ghdl-llvm-#{version}-macos#{macos_version}-#{arch}.tar.gz"
 
   name "ghdl"
-  desc "VHDL 2019/2008/93/87 simulator"
+  desc "VHDL 2008/93/87 simulator"
   homepage "https://github.com/ghdl/ghdl/"
 
   livecheck do
