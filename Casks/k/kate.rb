@@ -1,8 +1,9 @@
 cask "kate" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "24.12,9168" # Format: "version,build"
-  sha256 "bbff57a3ad6bd028b2ae30b3e2861abd2008d05b853f6a8d0353e3e18818906a"
+  version "24.12,9168"
+  sha256 arm:   "bbff57a3ad6bd028b2ae30b3e2861abd2008d05b853f6a8d0353e3e18818906a",
+         intel: "e4039245989d5af32a7acf4af6c3fd54b5d8eb31e7b38f29accba7bd25263bff"
 
   url "https://cdn.kde.org/ci-builds/utilities/kate/release-#{version.csv.first}/macos-#{arch}/kate-release_#{version.csv.first}-#{version.csv.second}-macos-clang-#{arch}.dmg", verified: "cdn.kde.org/ci-builds/utilities/kate/"
   name "Kate"
@@ -11,22 +12,21 @@ cask "kate" do
 
   livecheck do
     url "https://cdn.kde.org/ci-builds/utilities/kate/"
-    regex(/release-(\d+\.\d+)/i)
+    regex(/href=.*?kate-release[._-]v?(\d+(?:[.-]\d+)+)[^"' >]*?[._-]#{arch}\.dmg/i)
     strategy :page_match do |page, regex|
-      # First, find the latest version
-      version = page.scan(regex).flatten.map { |v| Gem::Version.new(v) }.max&.to_s
-      next if version.nil?
+      # Find the release directory with the highest version
+      release_dir = page.scan(%r{href=["']?(release[._-]v?(\d+(?:\.\d+)*))/?["' >]}i)
+                        .max_by { |match| Version.new(match[1]) }
+                        &.first
+      next unless release_dir
 
-      # Then, find the builds for that version
-      builds_url = "https://cdn.kde.org/ci-builds/utilities/kate/release-#{version}/macos-#{arch}/"
-      builds_page = Homebrew::Livecheck::Strategy.page_content(builds_url)
-      next if builds_page[:content].blank?
+      # Fetch the release directory listing page
+      builds_page = Homebrew::Livecheck::Strategy.page_content(
+        "https://cdn.kde.org/ci-builds/utilities/kate/#{release_dir}/macos-#{arch}/",
+      )
+      next if (builds_content = builds_page[:content]).blank?
 
-      build_regex = /kate-release_#{version}-(\d+)-macos-clang-#{arch}\.dmg/i
-      build = builds_page[:content].scan(build_regex).flatten.map(&:to_i).max
-      next if build.nil?
-
-      "#{version},#{build}"
+      builds_content.scan(regex).map { |match| match[0].tr("-", ",") }
     end
   end
 
