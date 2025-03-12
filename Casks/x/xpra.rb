@@ -6,8 +6,8 @@ cask "xpra" do
     sha256 "762c4e40987193096b187e546b9e02e1cc3891af6e09bc14e1170c64c888b53d"
   end
   on_intel do
-    version "6.2.4,0"
-    sha256 "164d8597aceaeb7f5c83f2c2506081bcf5449bc06b871dd5e3992912bfca3c9b"
+    version "6.2.5,0"
+    sha256 "0081002f2a867a2d5cf41a81d4b04b9bbc888d455c65b98cb1c3142e7bae7b78"
   end
 
   url "https://xpra.org/dists/MacOS/#{arch}/Xpra-#{arch}-#{version.csv.first}-r#{version.csv.second}.dmg",
