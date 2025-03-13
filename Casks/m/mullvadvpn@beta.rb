@@ -1,6 +1,6 @@
 cask "mullvadvpn@beta" do
-  version "2025.4-beta1"
-  sha256 "79e1af48a288f0077c18c1e84b065418dd4544e9cad183a4c9402b0bf57c3de1"
+  version "2025.5-beta1"
+  sha256 "f31455954612a895abe87c113a055bc023b33f38dae0753f4c62fb9cf6966475"
 
   url "https://cdn.mullvad.net/app/desktop/releases/#{version}/MullvadVPN-#{version}.pkg"
   name "Mullvad VPN"
