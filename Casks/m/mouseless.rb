@@ -14,6 +14,7 @@ cask "mouseless" do
     end
   end
 
+  conflicts_with cask: "mouseless@preview"
   depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
 
