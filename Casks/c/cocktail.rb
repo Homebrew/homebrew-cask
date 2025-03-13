@@ -69,7 +69,7 @@ cask "cocktail" do
 
     livecheck do
       url :homepage
-      regex(/macOS\s+#{MacOS.version}.*?v?(\d+(?:\.\d+)+)/i)
+      regex(/macOS\s+#{os_version}.*?v?(\d+(?:\.\d+)+)/i)
     end
   end
 
