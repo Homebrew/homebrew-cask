@@ -7,6 +7,11 @@ cask "wail" do
   desc "Web Archiving Integration Layer: One-Click User Instigated Preservation"
   homepage "https://github.com/machawk1/wail"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "WAIL.app"
 
   zap trash: [
