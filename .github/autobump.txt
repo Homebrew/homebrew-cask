@@ -525,6 +525,7 @@ gb-studio
 gcs
 gdevelop
 geekbench-ai
+geneious-prime
 genesys-cloud
 geoda
 geogebra
