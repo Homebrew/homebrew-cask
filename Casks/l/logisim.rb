@@ -8,7 +8,7 @@ cask "logisim" do
   desc "Tool for designing and simulating digital logic circuits"
   homepage "http://www.cburch.com/logisim/"
 
-  disable! date: "2024-12-16", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued, replacement: "--cask logisim-evolution"
 
   app "Logisim.app"
 
