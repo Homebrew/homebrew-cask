@@ -12,7 +12,7 @@ cask "1password@beta" do
 
   livecheck do
     url "https://app-updates.agilebits.com/product_history/OPM#{version.major}"
-    regex(%r{href=.*?/1Password[._-]?v?(\d+(?:[.-]\d+)*(?:[._-]BETA))[._-]?\$ARCH\.zip}i)
+    regex(%r{href=.*?/1Password[._-]?v?(\d+(?:[.-]\d+)+(?:[._-]BETA))\.zip}i)
   end
 
   auto_updates true
