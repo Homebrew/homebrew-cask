@@ -768,6 +768,7 @@ maestral
 mailbird
 mailbutler
 maintenance
+maltego
 malwarebytes
 manico
 manictime
