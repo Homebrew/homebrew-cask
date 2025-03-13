@@ -1,6 +1,6 @@
 cask "pyfa" do
-  version "2.62.0"
-  sha256 "bdbd7bfea8bd07273fae62d046f92ebe46eff2cadd5bdcfb4ca49dea56d75164"
+  version "2.62.1"
+  sha256 "b3708bd797a70a5e48ef5629d1c90579102b1d04b1a7e950295252aa492fe0e7"
 
   url "https://github.com/pyfa-org/Pyfa/releases/download/v#{version}/pyfa-v#{version}-mac.zip"
   name "pyfa"
