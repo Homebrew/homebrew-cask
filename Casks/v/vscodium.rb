@@ -11,9 +11,9 @@ cask "vscodium" do
     end
   end
   on_big_sur :or_newer do
-    version "1.98.1.25070"
-    sha256 arm:   "6463f2beb0a834e59da6d386e797a09f6b33e0d089b93995df09257a1ef58377",
-           intel: "dcaa9e1a73cc5ae93c4cb82971e0b457b168f42f1e07c05df806bf7ce9252039"
+    version "1.98.2.25072"
+    sha256 arm:   "dffd692196c5bbb0ead64e5692e0e58b98d35b7096a0610b7dbd67df94a858a7",
+           intel: "b8f248a884fbb1d88bc5015132216c15bb8dd0bf0f95aa5f9626424e71a59fa4"
 
     livecheck do
       url :url
