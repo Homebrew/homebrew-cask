@@ -595,6 +595,7 @@ hoppscotch
 houdahspot
 hstracker
 http-toolkit
+httpie
 hubstaff
 huggingchat
 huly
