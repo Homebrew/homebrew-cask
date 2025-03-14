@@ -492,6 +492,7 @@ font-lxgw-neoxihei
 font-lxgw-neozhisong
 font-lxgw-simxihei
 font-lxgw-simzhisong
+font-new-computer-modern
 font-sarasa-gothic
 font-sketchybar-app-font
 font-sn-pro
