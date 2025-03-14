@@ -9,7 +9,7 @@ cask "qt-design-studio" do
 
   livecheck do
     url "https://wiki.qt.io/QtDesignStudio"
-    regex(/Qt Design Studio (\d+(?:\.\d+)+)/i)
+    regex(%r{href=["']/QtDesignStudio[._-]changelog?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   depends_on macos: ">= :monterey"
