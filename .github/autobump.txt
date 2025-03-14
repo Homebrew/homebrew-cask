@@ -827,6 +827,7 @@ microsoft-powerpoint
 microsoft-teams
 microsoft-word
 middle
+midi-router-client
 mihomo-party
 milanote
 millie
