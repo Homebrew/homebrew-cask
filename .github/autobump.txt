@@ -139,6 +139,7 @@ bettertouchtool
 beyond-compare
 bezel
 bibdesk
+biglybt
 bike
 bilibili
 binance
