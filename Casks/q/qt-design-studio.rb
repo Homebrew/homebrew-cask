@@ -7,7 +7,6 @@ cask "qt-design-studio" do
   desc "UI design and development tool"
   homepage "https://www.qt.io/product/ui-design-tools"
 
-  # in the wiki page, the version is in the format "Qt Design Studio 2.0.0"
   livecheck do
     url "https://wiki.qt.io/QtDesignStudio"
     regex(/Qt Design Studio (\d+(?:\.\d+)+)/i)
