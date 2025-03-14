@@ -1316,6 +1316,7 @@ sqlcl
 sqlitestudio
 squash
 standard-notes
+startupfolder
 staruml
 stash
 stats
