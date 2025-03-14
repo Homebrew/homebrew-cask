@@ -1,6 +1,6 @@
 cask "isabelle" do
-  version "2024"
-  sha256 "22035f996f71ea1f03063f6f144195eb6a04974d4d916ed0772cd79569a28bc7"
+  version "2025"
+  sha256 "ea5754c228857f5d9d3ae254ec9814797f2453ea290df20b2f6dcb2ef0e2e7f8"
 
   url "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}_macos.tar.gz"
   name "Isabelle"
@@ -12,8 +12,8 @@ cask "isabelle" do
     regex(%r{href=.*?/Isabelle(\d+(?:\.\d+)*)_macos\.t}i)
   end
 
-  app "Isabelle#{version}.app"
   binary "#{appdir}/Isabelle#{version}.app/bin/isabelle"
+  artifact "Isabelle#{version}.app", target: "#{appdir}/Isabelle#{version}.app"
 
   # No zap stanza required
 end
