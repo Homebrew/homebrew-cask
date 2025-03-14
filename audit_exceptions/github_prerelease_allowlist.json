@@ -2,7 +2,7 @@
   "aerial@beta": "any",
   "altdeploy": "all",
   "bitbar": "all",
-  "calibrite-profiler": "all",
+  "calibrite-profiler": "any",
   "cleartext": "all",
   "comma-chameleon": "all",
   "creality-print": "any",
