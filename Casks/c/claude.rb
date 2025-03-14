@@ -1,6 +1,6 @@
 cask "claude" do
-  version "0.8.0,8898115386c12dc3dbfa8fe1c52c919752c7dd44"
-  sha256 "b42f2f6ab6f74b17b9cfb7bed8138b63097d6e1632ccef57aee00bc5142b0159"
+  version "0.8.1,35953a838eeb412a90121aef8c256aa1f579d8b5"
+  sha256 "67c7c0cc4a99858b305cbf50289c6cedae880ffef3d43b735288ac4e2e24b141"
 
   url "https://storage.googleapis.com/osprey-downloads-c02f6a0d-347c-492b-a752-3e0651722e97/nest/release-#{version.csv.first}-artifact-#{version.csv.second}.zip",
       verified: "storage.googleapis.com/osprey-downloads-c02f6a0d-347c-492b-a752-3e0651722e97/nest/"
