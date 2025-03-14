@@ -1,5 +1,5 @@
 cask "nifty" do
-  version "3.103.3"
+  version "3.104.16"
   sha256 :no_check
 
   url "https://nifty-apps.s3.amazonaws.com/Nifty.dmg",
