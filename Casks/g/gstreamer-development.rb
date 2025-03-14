@@ -32,6 +32,7 @@ cask "gstreamer-development" do
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-net-devel",
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-net-restricted-devel",
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-playback-devel",
+    "org.freedesktop.gstreamer.universal.gstreamer-1.0-python-devel",
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-system-devel",
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-visualizers-devel",
   ]
