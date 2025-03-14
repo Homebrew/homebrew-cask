@@ -1,6 +1,6 @@
 cask "vcv-rack" do
-  version "2.6.0"
-  sha256 "8efe37947428e08dafc618674e97f0514ef73dcad8608584660b7899b5b91b55"
+  version "2.6.1"
+  sha256 "f216008008c8e7bdee3a56e4170b2f868b44cffb965ab90d653c6454c11b0ba9"
 
   url "https://vcvrack.com/downloads/RackFree-#{version}-mac-x64+arm64.pkg"
   name "VCV Rack"
@@ -14,7 +14,7 @@ cask "vcv-rack" do
 
   pkg "RackFree-#{version}-mac-x64+arm64.pkg"
 
-  uninstall pkgutil: "com.vcvrack.rack"
+  uninstall pkgutil: "com.vcvrack.rack*"
 
   zap trash: [
     "~/Documents/Rack2/*.json",
