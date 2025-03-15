@@ -13,6 +13,23 @@ cask "librewolf" do
 
   livecheck do
     url "https://gitlab.com/librewolf-community/browser/bsys6.git"
+    # Version is `<firefox_version>-<librewolf_release>`, e.g. `136.0.1-1`
+    regex(/^(?<firefox_version>\d+(?:\.\d+)+)-(?<librewolf_release>\d+)/i)
+    strategy :git do |tags, regex|
+      tags.map do |tag|
+        match = tag.match(regex)
+        next unless match
+
+        # Normalize Firefox version to 3 parts, e.g. `136.0`, becomes `136.0.0`.
+        # This ensures the LibreWolf release number is always compared separately,
+        # so that `136.0-2` is not newer than `136.0.1-1`.
+        firefox_version_parts = match[:firefox_version].split(".")
+        while firefox_version_parts.size < 3
+          firefox_version_parts << "0"
+        end
+        "#{firefox_version_parts.join('.')}-#{match[:librewolf_release]}"
+      end.compact
+    end
   end
 
   depends_on macos: ">= :catalina"
