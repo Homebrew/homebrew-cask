@@ -57,7 +57,7 @@ cask "onyx" do
   homepage "https://www.titanium-software.fr/en/onyx.html"
 
   livecheck do
-    url "https://www.titanium-software.fr/download/#{MacOS.version}/OnyX.plist"
+    url "https://www.titanium-software.fr/download/#{os_version}/OnyX.plist"
     strategy :xml do |xml|
       version = xml.elements["//key[text()='Version']"]&.next_element&.text
       next if version.blank?

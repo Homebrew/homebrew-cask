@@ -58,7 +58,7 @@ cask "maintenance" do
 
   livecheck do
     url :homepage
-    regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+    regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{os_version}\s*</i)
   end
 
   depends_on macos: [

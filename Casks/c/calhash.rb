@@ -38,7 +38,7 @@ cask "calhash" do
 
   livecheck do
     url :homepage
-    regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+    regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{os_version}\s*</i)
   end
 
   depends_on macos: [
