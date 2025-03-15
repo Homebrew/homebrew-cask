@@ -1,6 +1,6 @@
 cask "blu-ray-player" do
-  version "3.3.22,231010_0359"
-  sha256 "881881dbc991260a4590968af43a3444693d93f3c4d97cd445e1886748d2b2dc"
+  version "3.3.23,250315_0521"
+  sha256 "ffac1323400359c074332611d1d8697b24ad417206c8a846236ca6588147c47d"
 
   url "https://cdn.macblurayplayer.com/mac-bluray-player-#{version.major}/Blu-ray_Player_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Macgo Mac Blu-ray Player"
