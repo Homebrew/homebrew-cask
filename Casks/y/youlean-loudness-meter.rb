@@ -22,6 +22,7 @@ cask "youlean-loudness-meter" do
   uninstall pkgutil: [
     "com.Youlean.aax.pkg.YouleanLoudnessMeter#{version.major}",
     "com.Youlean.au.pkg.YouleanLoudnessMeter#{version.major}",
+    "com.Youlean.cmd.pkg.YouleanLoudnessMeter#{version.major}",
     "com.Youlean.standalone.pkg.YouleanLoudnessMeter#{version.major}",
     "com.Youlean.vst.pkg.YouleanLoudnessMeter#{version.major}",
     "com.Youlean.vst3.pkg.YouleanLoudnessMeter#{version.major}",
