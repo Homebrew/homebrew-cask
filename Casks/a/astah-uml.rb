@@ -9,13 +9,10 @@ cask "astah-uml" do
   homepage "https://astah.net/products/astah-uml/"
 
   livecheck do
-    url "https://members.change-vision.com/download/files/astah_UML/latest/mac_pkg"
+    url "https://astah.net/support/astah-uml/system-requirements/"
     regex(/astah[._-]uml[._-]v?(\d+(?:[._]\d+)+)[._-](\h+)[._-]MacOs\.dmg/i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next if match.blank?
-
-      "#{match[1].tr("_", ".")},#{match[2]}"
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
     end
   end
 
