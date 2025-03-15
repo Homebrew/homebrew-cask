@@ -16,7 +16,7 @@ cask "librewolf" do
     # Version is `<firefox_version>-<librewolf_release>`, e.g. `136.0.1-1`
     regex(/^(?<firefox_version>\d+(?:\.\d+)+)-(?<librewolf_release>\d+)/i)
     strategy :git do |tags, regex|
-      tags.map do |tag|
+      tags.filter_map do |tag|
         match = tag.match(regex)
         next unless match
 
@@ -24,11 +24,9 @@ cask "librewolf" do
         # This ensures the LibreWolf release number is always compared separately,
         # so that `136.0-2` is not newer than `136.0.1-1`.
         firefox_version_parts = match[:firefox_version].split(".")
-        while firefox_version_parts.size < 3
-          firefox_version_parts << "0"
-        end
-        "#{firefox_version_parts.join('.')}-#{match[:librewolf_release]}"
-      end.compact
+        firefox_version_parts << "0" while firefox_version_parts.size < 3
+        "#{firefox_version_parts.join(".")}-#{match[:librewolf_release]}"
+      end
     end
   end
 
