@@ -13,21 +13,7 @@ cask "isyncr" do
   desc "Syncs iTunes to Android over a USB or WiFi connection"
   homepage "https://www.jrtstudio.com/iSyncr-iTunes-for-Android"
 
-  # The download page is rendered using JavaScript with the download links
-  # obtained from https://www.jrtstudio.com/files/SlashiSyncr<number>.js
-  # Since the <number> is not fixed in the filename, the current JavaScript
-  # file needs to be extracted from the download page.
-  livecheck do
-    url "https://www.jrtstudio.com/iSyncr-Desktop-Download"
-    regex(/iSyncr\s*Desktop\s*v?(\d+(?:\.\d+)+)\.pkg/i)
-    strategy :page_match do |page, regex|
-      js_file = page[%r{src=["']?/(files/SlashiSyncr\d+\.js)\??["' >]}i, 1]
-      next if js_file.blank?
-
-      version_page = Homebrew::Livecheck::Strategy.page_content("https://www.jrtstudio.com/#{js_file}")
-      version_page[:content]&.scan(regex)&.map { |match| match[0] }
-    end
-  end
+  disable! date: "2025-03-15", because: :no_longer_available
 
   pkg "iSyncr Desktop #{version}.pkg"
 
