@@ -1,9 +1,9 @@
 cask "digikam" do
   arch arm: "Qt6-MacOS-arm64", intel: "Qt5-MacOS-x86_64"
 
-  version "8.5.0"
-  sha256 arm:   "96f7a14870ae5ed962670354549273274f4cdd1699bf68bdcca486a6b10f71af",
-         intel: "fe990ab364205c10f70deea221a3d407e6e9ca2a4fde1c948d0cd432a92506da"
+  version "8.6.0"
+  sha256 arm:   "2cd60745e9f6b140285fed592682ba964f5e5f09095f11b34fac85238f4ce5bb",
+         intel: "97a7af71871c4908e9b933212e074f0bce35c2a53f823196cf1888ef3b029988"
 
   url "https://download.kde.org/stable/digikam/#{version}/digiKam-#{version}-#{arch}.pkg",
       verified: "kde.org/stable/digikam/"
