@@ -397,6 +397,7 @@ embyserver
 emclient
 endless-sky
 endless-sky-high-dpi
+energiza
 enpass
 ente
 ente-auth
