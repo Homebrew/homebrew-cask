@@ -246,6 +246,7 @@ clock-signal
 clockify
 clop
 cloudflare-warp
+cloudflare-warp@beta
 cloudmounter
 cloudnet
 cmake
@@ -347,6 +348,7 @@ dockside
 dockx
 dogecoin
 dolphin
+dolphin@beta
 dolphin@dev
 dosbox-staging
 dosbox-x
@@ -369,6 +371,7 @@ dropshare
 dropzone
 duckduckgo
 duet
+duplicati
 ea
 eaglefiler
 easydict
@@ -750,6 +753,7 @@ lunacy
 lunar
 lunar-client
 lunatask
+lw-scanner
 lx-music
 lycheeslicer
 lyn
@@ -1560,6 +1564,8 @@ wing-personal
 wins
 wire
 wirecast
+wireshark
+wireshark-chmodbpf
 wiso-steuer-2024
 wiso-steuer-2025
 wizcli
