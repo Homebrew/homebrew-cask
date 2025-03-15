@@ -6,9 +6,7 @@ cask "fantasy-grounds" do
   name "Fantasy Grounds"
   homepage "https://www.fantasygrounds.com/home/home.php"
 
-  livecheck do
-    skip "unversioned WineSkin application"
-  end
+  deprecate! date: "2025-03-15", because: :discontinued
 
   app "Fantasy Grounds.app"
 
