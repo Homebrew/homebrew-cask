@@ -1,5 +1,5 @@
 cask "youdaodict" do
-  version "11.1.4,1007"
+  version "11.2.0,1009"
   sha256 :no_check
 
   url "https://codown.youdao.com/cidian/download/MacDict.dmg"
