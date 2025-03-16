@@ -8,7 +8,7 @@ cask "mendeley" do
   homepage "https://www.mendeley.com/reference-management/mendeley-desktop"
 
   deprecate! date: "2024-03-12", because: :discontinued
-  disable! date: "2024-03-15", because: :discontinued, replacement: "mendeley-reference-manager"
+  disable! date: "2025-03-15", because: :discontinued, replacement: "mendeley-reference-manager"
 
   app "Mendeley Desktop.app"
 
