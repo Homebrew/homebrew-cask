@@ -1031,6 +1031,7 @@ pdf-expert@beta
 pdf-reader-pro
 pdfelement
 pdfsam-basic
+pdl
 pearcleaner
 perforce
 permute
