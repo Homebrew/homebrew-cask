@@ -12,6 +12,8 @@ cask "charles@4" do
     regex(/Version (4(?:\.\d+)+)/i)
   end
 
+  conflicts_with cask: "charles"
+
   app "Charles.app"
 
   uninstall_postflight do
