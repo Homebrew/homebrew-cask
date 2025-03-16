@@ -5,8 +5,7 @@ cask "cursor" do
   sha256 arm:   "dcf93c70dee13534beb7e504a96f58794940122c664ffe1fa3673594fe5c8dcc",
          intel: "2b6f30e1514c6fbb5692f11cf3c3340ba126ab4c0973905b4d54452ce35188f7"
 
-  url "https://anysphere-binaries.s3.us-east-1.amazonaws.com/production/#{version.csv.second}/darwin/#{arch}/Cursor-darwin-#{arch}.zip",
-      verified: "anysphere-binaries.s3.us-east-1.amazonaws.com/"
+  url "https://downloads.cursor.com/production/#{version.csv.second}/darwin/#{arch}/Cursor-darwin-#{arch}.zip"
   name "Cursor"
   desc "Write, edit, and chat about your code with AI"
   homepage "https://www.cursor.com/"
