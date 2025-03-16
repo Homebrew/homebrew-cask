@@ -8,6 +8,7 @@ cask "mendeley" do
   homepage "https://www.mendeley.com/reference-management/mendeley-desktop"
 
   deprecate! date: "2024-03-12", because: :discontinued
+  disable! date: "2024-03-15", because: :discontinued, replacement: "mendeley-reference-manager"
 
   app "Mendeley Desktop.app"
 
@@ -18,13 +19,4 @@ cask "mendeley" do
     "~/Library/Preferences/com.mendeley.Mendeley Desktop.plist",
     "~/Library/Saved Application State/com.mendeley.desktop.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-    <<~EOS
-      mendeley-reference-manager is the successor to this software:
-
-        brew install --cask mendeley-reference-manager
-    EOS
-  end
 end
