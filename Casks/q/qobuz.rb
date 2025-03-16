@@ -11,10 +11,9 @@ cask "qobuz" do
   homepage "https://www.qobuz.com/applications"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)-b(\d+)/Qobuz\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    url "https://desktop.qobuz.com/updates/check/darwin/#{arch}/updates.json"
+    strategy :json do |json|
+      json["version"]&.sub("-b", ",")
     end
   end
 
