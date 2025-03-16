@@ -3,7 +3,7 @@ cask "find-any-file" do
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://s3.amazonaws.com/files.tempel.org/FindAnyFile_#{version.csv.first}.zip",
-      verified: "s3.amazonaws.com/"
+      verified: "s3.amazonaws.com/files.tempel.org/"
   name "Find Any File"
   desc "File finder"
   homepage "https://findanyfile.app/"

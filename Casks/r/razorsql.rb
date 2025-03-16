@@ -6,7 +6,7 @@ cask "razorsql" do
          intel: "57bb91a31298bac9730efa13a1d8c78262175b07aa637d2f3b2a5f2f8a8bc9dc"
 
   url "https://s3.amazonaws.com/downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}#{arch}.dmg",
-      verified: "s3.amazonaws.com/"
+      verified: "s3.amazonaws.com/downloads.razorsql.com/downloads/"
   name "RazorSQL"
   desc "SQL query tool and SQL editor"
   homepage "https://razorsql.com/"
