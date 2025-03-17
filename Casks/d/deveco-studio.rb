@@ -21,10 +21,7 @@ cask "deveco-studio" do
   desc "Development platform for HarmonyOS and OpenHarmony"
   homepage "https://developer.huawei.com/consumer/cn/"
 
-  livecheck do
-    url "https://developer.huawei.com/consumer/cn/deveco-studio/"
-    regex(/devecostudio[._-]mac#{arch}[._-](\d+(?:\.\d+)+)\.zip/i)
-  end
+  disable! date: "2025-03-17", because: :no_longer_available
 
   depends_on macos: ">= :catalina"
   container nested: "devecostudio-mac#{arch}-#{version}/deveco-studio-#{version}#{arch_suffix}.dmg"
