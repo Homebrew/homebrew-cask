@@ -9,7 +9,7 @@ cask "sfdx" do
   desc "SalesForce CLI tools"
   homepage "https://developer.salesforce.com/tools/sfdxcli"
 
-  disable! date: "2024-12-16", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued, replacement: "sf"
 
   pkg "sfdx-#{arch}.pkg"
 
@@ -24,12 +24,4 @@ cask "sfdx" do
     "~/.config/sfdx",
     "~/.local/share/sfdx",
   ]
-
-  caveats do
-    <<~EOS
-      `sf` is the official successor to this software
-
-        brew install --cask sf
-    EOS
-  end
 end
