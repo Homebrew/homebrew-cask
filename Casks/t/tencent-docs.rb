@@ -12,10 +12,21 @@ cask "tencent-docs" do
   homepage "https://docs.qq.com/"
 
   livecheck do
-    url "https://docs.qq.com/api/package/update"
+    url "https://docs.qq.com/rainbow/config.v2.ConfigService/PullConfigReq", post_json: {
+      pull_item: {
+        app_id:  "e4099bf9-f579-4233-9a15-6625a48bcb56",
+        group:   "Prod.Common.AutoUpdate",
+        envName: "Default",
+      },
+    }
     strategy :json do |json|
-      info_json = Homebrew::Livecheck::Strategy::Json.parse_json(json.dig("result", "update_info").to_s)
-      info_json["version"]
+      json.dig("config", "items")&.map do |item|
+        yaml_string = item["key_values"]&.find { |key_value| key_value["key"] == "app.yaml" }&.dig("value")
+        next if yaml_string.blank?
+
+        yaml = Homebrew::Livecheck::Strategy::Yaml.parse_yaml(yaml_string)
+        yaml.dig("channelMap", "30001")
+      end
     end
   end
 
