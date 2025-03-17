@@ -8,7 +8,7 @@ cask "adoptopenjdk" do
   desc "JDK from the Java User Group (JUG)"
   homepage "https://adoptopenjdk.net/"
 
-  disable! date: "2024-12-16", because: :discontinued
+  disable! date: "2024-12-16", because: :discontinued, replacement: "temurin"
 
   pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
 
@@ -22,10 +22,5 @@ cask "adoptopenjdk" do
 
   caveats do
     requires_rosetta
-    <<~EOS
-      Temurin is the official successor to this software:
-
-        brew install --cask temurin
-    EOS
   end
 end
