@@ -1,6 +1,5 @@
 cask "wizcli" do
   arch arm: "arm64", intel: "amd64"
-
   os macos: "darwin", linux: "linux"
 
   version "0.77.0"
