@@ -1,6 +1,5 @@
 cask "1password-cli" do
   arch arm: "arm64", intel: "amd64"
-
   os macos: "darwin", linux: "linux"
 
   version "2.30.3"
