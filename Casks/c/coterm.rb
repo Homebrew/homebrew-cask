@@ -1,6 +1,5 @@
 cask "coterm" do
   arch arm: "arm64", intel: "x64"
-
   os macos: "macos", linux: "linux"
 
   version "1.0.0"
