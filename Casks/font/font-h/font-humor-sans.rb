@@ -8,7 +8,8 @@ cask "font-humor-sans" do
   homepage "https://xkcdsucks.blogspot.com.au/2009/03/xkcdsucks-is-proud-to-present-humor.html"
 
   livecheck do
-    skip "No version information available"
+    url "http://antiyawn.com/uploads/humorsans.html"
+    regex(/href=.*Humor[._-]Sans[._-]v?(\d+(?:\.\d+)+)\.ttf/i)
   end
 
   font "Humor-Sans-#{version}.ttf"
