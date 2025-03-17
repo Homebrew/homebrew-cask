@@ -1,6 +1,6 @@
 cask "gitup" do
-  version "1.4.2"
-  sha256 "67b2612ef7aac75194b4fb77a27b2a06b031fccac56db71d9e358d362c2e3b25"
+  version "1.4.3"
+  sha256 "f0f1896dae7a17e3f51f6872cc57a79061ab3f47692d64b5a8216cfb6dddb4dc"
 
   url "https://github.com/git-up/GitUp/releases/download/v#{version}/GitUp.zip",
       verified: "github.com/git-up/GitUp/"
