@@ -10,19 +10,11 @@ cask "engine-prime" do
 
   # https://community.enginedj.com/t/engine-prime-vs-engine-dj/40181
   deprecate! date: "2024-01-15", because: :unmaintained
-  disable! date: "2025-01-15", because: :unmaintained
+  disable! date: "2025-01-15", because: :unmaintained, replacement: "engine-dj"
 
   pkg "Engine Prime_#{version.csv.first}_Setup.pkg"
 
   uninstall pkgutil: "com.airmusictechnology.engineprime.application"
 
   zap trash: "~/Music/Engine Library"
-
-  caveats do
-    <<~EOS
-      engine-dj is the official successor to this software:
-
-        brew install --cask engine-dj
-    EOS
-  end
 end
