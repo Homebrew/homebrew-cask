@@ -1,6 +1,6 @@
 cask "sound-control" do
-  version "3.2.2"
-  sha256 "70a6ac69fb2e3127a01149b270676f973c1bfcf449f187374417201ede244c45"
+  version "3.2.3"
+  sha256 "0b03787d33c404d63c0341ef508c8f93b7e6802b4e85bd94cade58b22b911f3c"
 
   url "https://s3.amazonaws.com/staticz.net/downloads/soundcontrol/SoundControl_#{version}.dmg",
       verified: "s3.amazonaws.com/staticz.net/downloads/soundcontrol/"
