@@ -1,6 +1,6 @@
 cask "skype@preview" do
-  version "8.138.76.207"
-  sha256 "070378debdea7ced27fd4c744d1cb0884cda8c6e11ce0043ca4a4eca98aab8a1"
+  version "8.138.76.208"
+  sha256 "f099074668a6e54c754a09067ba138bd8612e01399e950be70d83da323d93479"
 
   url "https://download.skype.com/s4l/download/mac/Skype-#{version}.dmg"
   name "Skype Preview"
