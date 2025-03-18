@@ -1492,6 +1492,7 @@ utools
 uu-booster
 uvtools
 valentina-studio
+vallum
 vamiga
 vassal
 vbrokers
