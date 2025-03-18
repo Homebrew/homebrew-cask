@@ -10,10 +10,8 @@ cask "xlplayer" do
   homepage "https://video.xunlei.com/mac.html"
 
   livecheck do
-    url "https://static-xl.a.88cdn.com/json/xunlei_video_version_mac.json"
-    strategy :json do |json|
-      json["version"]
-    end
+    url "https://dl.xunlei.com/"
+    regex(/href=.*?player[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
