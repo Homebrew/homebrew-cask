@@ -1355,6 +1355,7 @@ superkey
 superlist
 supernotes
 superwhisper
+supremo
 surfshark
 surge
 sweet-home3d
