@@ -16,19 +16,21 @@ cask "gimp" do
            intel: "e1f8350b48f777ac3a1bf5c31894bd69dd0f8ef98fc430c40e7e272765722e56"
 
     livecheck do
-      url "https://www.gimp.org/downloads/"
-      regex(%r{href=.*?/gimp[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}(?:-(\d+))?\.dmg}i)
-      strategy :page_match do |page, regex|
-        page.scan(regex).map do |match|
-          next match[0] unless match[1]
+      url "https://www.gimp.org/gimp_versions.json"
+      strategy :json do |json|
+        json["STABLE"]&.map do |release|
+          release["macos"]&.map do |build|
+            next unless build["filename"]&.match?(/#{arch}/i)
+            next release["version"] unless build["revision"]
 
-          "#{match[0]},#{match[1]}"
-        end
+            "#{release["version"]},#{build["revision"]}"
+          end
+        end&.flatten
       end
     end
   end
 
-  url "https://download.gimp.org/gimp/v#{version.major_minor}/macos/gimp-#{version}-#{arch}#{version.csv.second ? "-" + version.csv.second : ""}.dmg"
+  url "https://download.gimp.org/gimp/v#{version.major_minor}/macos/gimp-#{version.csv.first}-#{arch}#{"-#{version.csv.second}" if version.csv.second}.dmg"
   name "GIMP"
   name "GNU Image Manipulation Program"
   desc "Free and open-source image editor"
