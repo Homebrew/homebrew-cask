@@ -574,6 +574,7 @@ grammarly-desktop
 grandtotal
 granola
 graphicconverter
+green-go-control
 gridtracker2
 groestlcoin-core
 gstreamer-development
