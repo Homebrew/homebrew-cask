@@ -2,12 +2,12 @@ cask "microsoft-edge@canary" do
   linkid = on_arch_conditional arm: "2093293", intel: "2069147"
 
   on_arm do
-    version "136.0.3202.0,527fae1e-e817-4491-a022-8364c379565b"
-    sha256 "5e0c6dd3cb4634850f949d81024e3fb1b30f033c2409c928182bfec543a2297a"
+    version "136.0.3203.0,b6634aef-ea69-4637-85a4-c56de6a6fdaf"
+    sha256 "8b95e1f8a6c087acc5111b7396cab6f95a54be497db27b7e865a09b17e8353ed"
   end
   on_intel do
-    version "136.0.3202.0,a6840be7-312d-40f5-9312-ecf9ad106538"
-    sha256 "0d683816e3df9ab3da296579e28d055cd6c902a864df0b474d3f6473ce052029"
+    version "136.0.3203.0,f74574b4-2073-44c4-96dd-9e9290a1bc46"
+    sha256 "245cee5099b3156315c7b67ea359cb9aaf7bcfcba678e3f78a925d15bfb1645f"
   end
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdgeCanary-#{version.csv.first}.pkg"
