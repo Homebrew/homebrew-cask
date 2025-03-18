@@ -1180,6 +1180,7 @@ replaywebpage
 replit
 reqable
 requestly
+rescuetime
 resolume-arena
 responsively
 restfox
