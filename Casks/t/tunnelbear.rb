@@ -8,8 +8,8 @@ cask "tunnelbear" do
     end
   end
   on_big_sur :or_newer do
-    version "5.4.0"
-    sha256 "a230097523b0d31f9c1582a789074d152018cb1430dbb41caad4724105cc660c"
+    version "5.5.0"
+    sha256 "569118fa38e89a79d465041099b7dc0ec3911ac12b3cf28b0dd09ee547589da4"
 
     # Older versions may have a more recent `pubDate` than newer versions, so we
     # have to check all the items in the appcast.
