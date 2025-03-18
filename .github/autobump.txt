@@ -537,6 +537,7 @@ geoda
 geogebra
 geogebra@5
 geph
+get-api
 ghostty
 ghostty@tip
 gisto
