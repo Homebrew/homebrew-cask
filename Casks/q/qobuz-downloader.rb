@@ -9,7 +9,7 @@ cask "qobuz-downloader" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)\+(\d+)/qobuz[._-]downloader\.dmg}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)\+(\d+)/qobuz[._-]downloader\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
