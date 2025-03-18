@@ -1,23 +1,26 @@
 cask "xtool-creative-space" do
-  arch arm: "-arm64"
+  arch arm: "arm64", intel: "amd64"
 
   on_arm do
-    version "2.4.27,28,30848857-c17a-455c-8590-91fd91814b3d,2025-01-14-11-30-45"
-    sha256  "64994eb3d6cd5d48c5d5a68e2e9c99bee390908991eaa394a4166ad875cf3273"
+    version "2.5.20,28,e9ad8acb-9485-464f-8721-2249c0a57316,2025-03-11-11-28-37"
+    sha256  "e363dd535e2fb91da57dd3c95c24f2d62eae9fb0ed4eba91ab1a6b09ed91cd5c"
   end
   on_intel do
-    version "2.4.27,16,675209ac-6c84-470a-8367-7988294895bc,2025-01-14-11-26-04"
-    sha256 "ccbb8e0e8719d9cfa6d129e004fc57fe65924b1271c9d2d061ce70720394a2b6"
+    version "2.5.20,16,ce209f24-c42b-4402-98f2-5445fc5a265b,2025-03-11-11-26-08"
+    sha256 "93092cfcfb922d55e2ac31ace7900125d1d6e0fd0bc7a9e92a0088b1c1916894"
   end
 
-  url "https://storage-us.xtool.com/resource/efficacy/xcs/prod-us/packages/#{version.csv.second}/#{version.csv.third}/xTool-Creative-Space-#{version.csv.first}-#{version.csv.fourth}#{arch}.dmg"
+  url "https://storage-us.xtool.com/resource/efficacy/xcs/prod-us/packages/#{version.csv.second}/#{version.csv.third}/xTool-Creative-Space-#{version.csv.first}-#{version.csv.fourth}-#{arch}.dmg"
   name "xTool Creative Space"
   desc "Design and control software for xTool laser machines"
   homepage "https://www.xtool.com/pages/software"
 
   livecheck do
     url :homepage
-    regex(%r{/([^/]+)/([^/]+)/xTool[._-]Creative[._-]Space[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:-\d+)+)#{arch}\.dmg}i)
+    regex(%r{
+      /([^/]+)/([^/]+)/xTool[._-]Creative[._-]Space[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:-\d+)+)
+      (?:[._-]#{arch})?\.dmg
+    }ix)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
