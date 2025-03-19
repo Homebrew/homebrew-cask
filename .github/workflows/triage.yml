@@ -55,6 +55,7 @@ jobs:
             - label: new cask
               status: added
               path: Casks/.+
+              allow_any_match: true
 
             - label: marked for removal/rejection
               status: removed
