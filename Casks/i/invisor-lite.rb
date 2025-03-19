@@ -1,6 +1,6 @@
 cask "invisor-lite" do
-  version "3.17"
-  sha256 "acdbf1f7b09fff9a450feb99f1a9686b698f82c71303fe6297f0485829fca09f"
+  version "3.27"
+  sha256 "25675d8f42ff47b5cb8df461b88a8f1c06d873dc0efeff43de64ba6a2f7fb787"
 
   url "https://www.invisorapp.com/download/InvisorLite-#{version}.dmg"
   name "Invisor Lite"
@@ -18,8 +18,4 @@ cask "invisor-lite" do
     "~/Library/Preferences/com.pozdeev.invisorfree.plist",
     "~/Library/Saved Application State/com.pozdeev.invisorfree.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
