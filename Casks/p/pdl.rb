@@ -1,6 +1,6 @@
 cask "pdl" do
-  version "0.4.2"
-  sha256 "82c59369a25c9ea8d4422f22b00d10e1d7191a52c4caed5c35d1c4919e50b5b8"
+  version "0.5.0"
+  sha256 "6ab7441bda872307b173cce567c169d4ad11b198d11f8490e76e1bb27784ac4d"
 
   url "https://github.com/IBM/prompt-declaration-language/releases/download/v#{version}/PDL_#{version}_universal.dmg",
       verified: "github.com/IBM/prompt-declaration-language/"
