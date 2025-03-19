@@ -1,6 +1,6 @@
 cask "persepolis-download-manager" do
-  version "5.0.1"
-  sha256 "a2b178da461c1095c6f897fd243663483a1ec09ec3f5a41158fae6043a195240"
+  version "5.0.2"
+  sha256 "4405ab1967ee30268383476d5c4701bbd1761104b53009f1e662b16bf1522334"
 
   url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version}_macos.dmg",
       verified: "github.com/persepolisdm/persepolis/"
@@ -19,8 +19,4 @@ cask "persepolis-download-manager" do
     "~/.persepolis",
     "~/Library/Application Support/persepolis_download_manager",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
