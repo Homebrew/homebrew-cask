@@ -1,7 +1,7 @@
 cask "ace-studio" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.9.8.1022"
+  version "1.9.8,1022"
   sha256 arm:   "3a74a78bbae6163c67bdfc989a1545223efce468e4e86c92175bf734da735eaf",
          intel: "a405589c5ff05331223fe6bef682cfb659bb9931f57a29a7ca005548e54cdfdf"
 
