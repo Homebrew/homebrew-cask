@@ -3,7 +3,7 @@ cask "lowtechguys-cling" do
   sha256 "9f9b31d95fd4610735fa1afcc79d77b0162dfc8f5502bd24a4f08821d0062c71"
 
   url "https://files.lowtechguys.com/releases/Cling-#{version}.dmg"
-  name "Low Tech Guys Cling"
+  name "The low-tech guys Cling"
   desc "Instant fuzzy finder for files including system and hidden files"
   homepage "https://lowtechguys.com/cling"
 
