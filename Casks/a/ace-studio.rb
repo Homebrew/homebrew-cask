@@ -5,7 +5,7 @@ cask "ace-studio" do
   sha256 arm:   "3a74a78bbae6163c67bdfc989a1545223efce468e4e86c92175bf734da735eaf",
          intel: "a405589c5ff05331223fe6bef682cfb659bb9931f57a29a7ca005548e54cdfdf"
 
-  url "https://as-api-ws-cdn-1.tdacestudio.com/web/app/ACE_Studio_#{version.sub(/\.([^.]*)$/, "")}_#{version.sub(/(.*)\./, "")}_#{arch}_general.dmg",
+  url "https://as-api-ws-cdn-1.tdacestudio.com/web/app/ACE_Studio_#{version.csv.first}_#{version.csv.second}_#{arch}_general.dmg",
       verified: "as-api-ws-cdn-1.tdacestudio.com/web/app/"
   name "ACE Studio"
   desc "AI Singing Voice Generator"
