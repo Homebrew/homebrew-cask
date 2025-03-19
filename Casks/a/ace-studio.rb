@@ -12,8 +12,11 @@ cask "ace-studio" do
   homepage "https://acestudio.ai/versions"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://as-api.tdacestudio.com/api/as/web/app/v2/previous?cl=general"
+    regex(/ACE[._-]Studio[._-]v?(\d+(?:[._]\d+)+)[._-]#{arch}[._-]general\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex)&.map { |match| match[0].tr("_", ",") }
+    end
   end
 
   depends_on macos: ">= :mojave"
