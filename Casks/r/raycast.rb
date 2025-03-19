@@ -12,9 +12,9 @@ cask "raycast" do
   on_monterey :or_newer do
     arch arm: "arm", intel: "x86_64"
 
-    version "1.93.2"
-    sha256 arm:   "0d22b8d84d756447dc4c55cb63b773e7886a7515f35fc45406fd981cab8e30c4",
-           intel: "4cc6e06843713e23365044cd9a93f9066547c1d36ce3edc51acb1a3aa341cdec"
+    version "1.94.0"
+    sha256 arm:   "8d21a5321fbc2b6ee5a73f282f14c62da111e71d7e09e2e118aee9213275dab4",
+           intel: "a6698a3d29ebebf9a2c5d3427e0a6f06eee7f21593fd4d58c95d03c0e86a7e19"
 
     url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
 
