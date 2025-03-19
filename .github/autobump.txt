@@ -1341,6 +1341,7 @@ steinberg-activation-manager
 steinberg-mediabay
 stratoshark
 stratoshark@dev
+streammusic
 strongvpn
 structuredlogviewer
 studio-3t
