@@ -1,9 +1,9 @@
 cask "caido" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.47.0"
-  sha256 arm:   "44da2d31dd10d4cb643eca00a2b405a01778b454bf54aaa1851dfb71c408f4c2",
-         intel: "cea35318197b5ce1bf6bd782619831cb74965d04d51770ad20ef88338e0e271d"
+  version "0.47.1"
+  sha256 arm:   "56eb3384b2fd66c7fd6a43bd9ed29e9f867e119b29e35930a52c283434d0ad5c",
+         intel: "494d97399a620764c2d8f96f5a9bc62fb5045ef48bd1cd32924477946fc732f8"
 
   url "https://caido.download/releases/v#{version}/caido-desktop-v#{version}-mac-#{arch}.dmg",
       verified: "caido.download/"
