@@ -1,6 +1,6 @@
 cask "sketch@beta" do
-  version "2025.1,199105"
-  sha256 "59b382dcc52ff331864362c2f306e5249c20fa0fe8127042ed3686c1a2550d05"
+  version "2025.1,199275"
+  sha256 "88406bd19cc2a3b966275f9d6a0f47f8310b04399a1a5ad8e1cecc81275d0622"
 
   url "https://beta-download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
   name "Sketch"
