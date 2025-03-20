@@ -860,6 +860,7 @@ minstaller
 mints
 mist
 mitmproxy
+mitti
 mixed-in-key
 mixin
 mixing-station
