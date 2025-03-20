@@ -176,6 +176,7 @@ brewtarget
 bricklink-studio
 brickstore
 bridge
+brightvpn
 browser-deputy
 browserosaurus
 browserstacklocal
