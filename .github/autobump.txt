@@ -677,6 +677,7 @@ jumpshare
 jupyterlab
 juxtacode
 jyutping
+k6-studio
 kaleidoscope
 kando
 katalon-studio
