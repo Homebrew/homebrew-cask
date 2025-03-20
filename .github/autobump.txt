@@ -502,6 +502,7 @@ font-new-computer-modern
 font-sarasa-gothic
 font-sketchybar-app-font
 font-sn-pro
+font-stix
 font-sudo
 foobar2000
 fork
