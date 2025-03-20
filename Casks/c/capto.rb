@@ -1,5 +1,5 @@
 cask "capto" do
-  version "2.1.2,1002.1.2013"
+  version "2.1.3,1002.1.3011"
   sha256 :no_check
 
   url "https://d3l6g06uqih57x.cloudfront.net/Captomac/webstore/Capto.dmg",
