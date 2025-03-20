@@ -1,6 +1,6 @@
 cask "elektron-overbridge" do
-  version "2.13.4,10,2024"
-  sha256 "4c64786cf1e0ec485de955f7cb688bed2a3fd7c0d91cd99389a76f9e5cee541c"
+  version "2.18.5,03,2025"
+  sha256 "43f6a9b0b075bf369e64c0b82e7914061c8892d8933a59e6d4f516f58afb25c9"
 
   url "https://elektron.se/wp-content/uploads/#{version.csv.third}/#{version.csv.second}/Elektron_Overbridge_#{version.csv.first}.dmg"
   name "Overbridge"
