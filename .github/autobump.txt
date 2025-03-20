@@ -704,6 +704,7 @@ kiwix
 kkbox
 knime
 kopiaui
+kotlin-native
 krisp
 kunkun
 label-live
