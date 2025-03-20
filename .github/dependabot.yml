@@ -6,6 +6,8 @@ updates:
   directory: "/"
   schedule:
     interval: weekly
+    day: monday
+    time: '08:00'
   allow:
   - dependency-type: all
   ignore:
