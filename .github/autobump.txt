@@ -38,6 +38,7 @@ affine
 affinity-designer
 affinity-photo
 affinity-publisher
+agent-tars
 aide-app
 airdroid
 airflow
