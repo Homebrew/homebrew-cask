@@ -1,9 +1,9 @@
 cask "blood-on-the-clocktower-online" do
   arch arm: "aarch64", intel: "x64"
 
-  version "3.39.1"
-  sha256 arm:   "a2ac19985befce7ad936292c71ecf698521864bcb7bb18b17ffe81d67f18f265",
-         intel: "78f7ba90a83f4d463ce846c8998769c6fb767f6c7d61dcc92c770545a86eb0f9"
+  version "3.39.2"
+  sha256 arm:   "0ae5e3bda53b1d726c25bb61c269ff15fd7face6c6dab02f47eba8d807260f56",
+         intel: "4aa5c7fdaedc5681a3de8739f69f8c432110fe16f38dd0f7c242e8b05e345fd6"
 
   url "https://github.com/ThePandemoniumInstitute/botc-release/releases/download/v#{version}/Blood.on.the.Clocktower.Online_#{version}_#{arch}.dmg",
       verified: "github.com/ThePandemoniumInstitute/botc-release/"
