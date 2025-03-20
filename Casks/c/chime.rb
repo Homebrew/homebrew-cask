@@ -13,6 +13,7 @@ cask "chime" do
   end
 
   auto_updates true
+  conflicts_with cask: "chime@alpha"
   depends_on macos: ">= :monterey"
 
   app "Chime.app"
