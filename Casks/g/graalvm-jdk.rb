@@ -1,11 +1,11 @@
 cask "graalvm-jdk" do
   arch arm: "aarch64", intel: "x64"
 
-  version "23.0.2"
-  sha256 arm:   "0e644b92d03d39bdf4842e378b8b22713faaa4edae8efff0da9929d1e04dd0cb",
-         intel: "b4599fbfd394304a84e9435bf7c673069d4fe0c565d2d44d70f0f6f5804cea35"
+  version "24,36"
+  sha256 arm:   "acfe2188f93d44dc0fe9c0dee6765ed8c5cc789ce3f1d6625c68e886a6ac83ab",
+         intel: "4c820eb9554f37344dd960be9efeef98765ce41e1f958a6d789ae38e25eb6d19"
 
-  url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version}_macos-#{arch}_bin.tar.gz",
+  url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version.csv.first}_macos-#{arch}_bin.tar.gz",
       verified: "download.oracle.com/"
   name "GraalVM Java Development Kit"
   desc "GraalVM from Oracle"
@@ -13,10 +13,23 @@ cask "graalvm-jdk" do
 
   livecheck do
     url "https://www.oracle.com/java/technologies/downloads/"
-    regex(/GraalVM\s+for\s+JDK\s+v?(\d+(?:\.\d+)*)\s+downloads/im)
+    regex(%r{/otn_software/java/jdk/(\d+(?:\.\d+)*)\+(\d+)/}i)
+    strategy :page_match do |page, regex|
+      major = page.scan(%r{href=.*?/technologies/javase-jdk(\d+)-doc-downloads\.html}i)
+                  .max_by { |match| Version.new(match[0]) }
+                  &.first
+      next if major.blank?
+
+      download_page = Homebrew::Livecheck::Strategy.page_content(
+        "https://www.oracle.com/java/technologies/javase-jdk#{major}-doc-downloads.html",
+      )
+      next if (download_page_content = download_page[:content]).blank?
+
+      download_page_content.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
-  artifact "graalvm-jdk-#{version}+7.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
+  artifact "graalvm-jdk-#{version.csv.first}+#{version.csv.second}.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
   # No zap stanza required
 
