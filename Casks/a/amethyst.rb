@@ -9,9 +9,20 @@ cask "amethyst" do
       skip "Legacy version"
     end
   end
-  on_catalina :or_newer do
+  on_catalina do
     version "0.22.2"
     sha256 "43b16fadf9d349c5d3f5a406917f60e31d0ea65b1f9fc529b09292e906f75e50"
+
+    url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
+        verified: "github.com/ianyh/Amethyst/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur :or_newer do
+    version "0.23.0"
+    sha256 "ec7b6afe4477738b2bb5d871382e22a3ccbb32c4301a7e39e2fc79e9f76f7e86"
 
     url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
         verified: "github.com/ianyh/Amethyst/"
