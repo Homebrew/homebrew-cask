@@ -1,6 +1,6 @@
 cask "quaternion" do
-  version "0.0.97"
-  sha256 "b935c8f026edc9dd72a6d4cfc27479c58c5b102c509e3b84a0faee20af941785"
+  version "0.0.97.1"
+  sha256 "17b695d7f3c6e2850638d2789497b9d193919ca10e11cbe381839016c933d940"
 
   url "https://github.com/quotient-im/Quaternion/releases/download/#{version}/quaternion-#{version}.dmg"
   name "Quaternion"
