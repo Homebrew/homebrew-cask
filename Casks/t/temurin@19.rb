@@ -11,13 +11,7 @@ cask "temurin@19" do
   desc "JDK from the Eclipse Foundation (Adoptium)"
   homepage "https://adoptium.net/"
 
-  livecheck do
-    url :url
-    regex(/^jdk[._-](\d+(?:\.\d+)*)\+(\d+)$/i)
-    strategy :github_latest do |json, regex|
-      json["tag_name"]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
-    end
-  end
+  deprecate! date: "2025-03-21", because: :discontinued
 
   pkg "OpenJDK19U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
 
