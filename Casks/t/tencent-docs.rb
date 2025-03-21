@@ -1,9 +1,9 @@
 cask "tencent-docs" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.9.10"
-  sha256 arm:   "472c86f09c4329cfe9f37f3d5e601f2ef301cfe748daba1098e27e70f1f763a2",
-         intel: "629187b982b72f907c8c81f11b8452a6f407a63df89a0cd77149d1500a654c80"
+  version "3.9.11"
+  sha256 arm:   "5d9c20bf0ca6beef22192fa925dbcbe584c7384cf7a759ceaed931215c8e3d34",
+         intel: "ba2b1ef3ca235b3e994fcbba2a42db16ac1a7048c0689a2db7191be054094aa8"
 
   url "https://desktop.docs.qq.com/Installer/30001/#{version}/TencentDocs-#{arch}.dmg"
   name "Tencent Docs"
