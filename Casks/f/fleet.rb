@@ -2,9 +2,9 @@ cask "fleet" do
   arch arm: "aarch64", intel: "x64"
   arch_suffix = on_arch_conditional arm: "-aarch64"
 
-  version "1.46.97"
-  sha256 arm:   "b70ea5c533f23a138d77c8de0ca3f47e7f108e1e1aa6127875b470519e656eb1",
-         intel: "4544eaa97b34d9191bb01957898688d2e61ccaa1f7299492e2260e38502d010c"
+  version "1.47.158"
+  sha256 arm:   "88c1e55db99b8f993d5f4cbbb3f6654ed576520cb4cd81dc9f2f13ec18421696",
+         intel: "04910e40ced5e34b248d9ce8f2186abd07667e9f62d43cc3cf45abc9ba438ade"
 
   url "https://download.jetbrains.com/fleet/installers/macos_#{arch}/Fleet-#{version}#{arch_suffix}.dmg"
   name "Fleet"
