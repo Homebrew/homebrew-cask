@@ -59,6 +59,7 @@ amadine
 amazon-chime
 amazon-q
 amazon-workspaces
+amethyst
 amiberry
 amie
 ammonite
