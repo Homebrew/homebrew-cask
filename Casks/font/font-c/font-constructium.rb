@@ -1,6 +1,6 @@
 cask "font-constructium" do
-  version "2024-06-01"
-  sha256 "85cf9d728b143169ddf4f9c00a53025dce533a748646d1d7afbe24c18d6dbe2e"
+  version "2025-03-20"
+  sha256 "2ffa30cae61bac79a03827a12e48db8f88691f2c0655f1ef376b8ec9cdf788c2"
 
   url "https://github.com/kreativekorp/open-relay/releases/download/#{version}/Constructium.zip",
       verified: "github.com/kreativekorp/open-relay/"
