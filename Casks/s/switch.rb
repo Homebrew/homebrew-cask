@@ -9,7 +9,7 @@ cask "switch" do
 
   livecheck do
     url "https://www.nch.com.au/switch/versions.html"
-    regex(%r{Version\s+v?(\d+(?:\.\d+)+)\s*</h\d>\s*macOS\s+Release}im)
+    regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
 
   app "Switch.app"
