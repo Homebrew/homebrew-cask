@@ -1,6 +1,6 @@
 cask "subler" do
-  version "1.8.7"
-  sha256 "535816afef74edef9dff43f09693813351a5bcf747fda4dfe754a2e5366e905e"
+  version "1.8.8"
+  sha256 "1f98ba2a31514d8eca319a0b3bb319827eea17facfd17e755fc6c1481da82d1f"
 
   url "https://github.com/SublerApp/Subler/releases/download/#{version}/Subler-#{version}.zip",
       verified: "github.com/SublerApp/Subler/"
