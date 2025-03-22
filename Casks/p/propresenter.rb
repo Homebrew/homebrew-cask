@@ -19,7 +19,7 @@ cask "propresenter" do
     sha256 "e5524ebba8c5c7007bcafb9985f02617197d0cff3b47e2243f66c4cf9f099dcd"
 
     livecheck do
-      url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=#{MacOS.full_version}&appVersion=0&buildNumber=0&includeNotes=0"
+      url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=#{os_version}&appVersion=0&buildNumber=0&includeNotes=0"
       strategy :json do |json|
         json["upgrades"]&.map do |item|
           next if item["version"].blank? || item["buildNumber"].blank?

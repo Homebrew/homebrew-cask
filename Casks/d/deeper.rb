@@ -58,7 +58,7 @@ cask "deeper" do
 
   livecheck do
     url :homepage
-    regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+    regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{os_version}\s*</i)
   end
 
   depends_on macos: [

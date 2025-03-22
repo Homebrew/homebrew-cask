@@ -24,7 +24,7 @@ cask "piezo" do
   homepage "https://rogueamoeba.com/piezo/"
 
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=#{MacOS.full_version.to_s.delete(".")}&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=#{os_version.to_s.delete(".")}&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
     strategy :sparkle
   end
 
