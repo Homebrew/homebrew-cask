@@ -9,7 +9,7 @@ cask "expressscribe" do
 
   livecheck do
     url "https://www.nch.com.au/scribe/versions.html"
-    regex(/Version\s*v?(\d+(?:\.\d+)+)\s*<[^>]+>\s*macOS\s+Release/im)
+    regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
 
   app "ExpressScribe.app"
