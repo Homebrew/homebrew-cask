@@ -8,10 +8,7 @@ cask "detexify" do
   desc "LaTeX handwritten symbol recognition"
   homepage "https://detexify.kirelabs.org/classify.html"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2025-03-21", because: :discontinued
 
   app "Detexify.app"
 
