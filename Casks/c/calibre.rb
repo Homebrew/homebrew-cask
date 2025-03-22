@@ -39,7 +39,15 @@ cask "calibre" do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
+  on_ventura do
+    version "7.26.0"
+    sha256 "6c329e20bc575fb2445b2279f1c9df73efecfd371a3864a35f1b575b87332ee4"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sonoma :or_newer do
     version "8.0.1"
     sha256 "bed7e5adadc67ba33d582bd7ed065b8bdc92bf3a3286a66f6bbb137f710b6e03"
 
