@@ -1,6 +1,6 @@
 cask "samsung-magician" do
-  version "8.2.0.880"
-  sha256 "09fa6961389e27668d5d387920d753a33ae17b0ccce85462069acfb79a5c0420"
+  version "8.3.0.810"
+  sha256 "2db151725ca9c385a5266fefe3a316a6ef6ba6d6d73523374978a93f24631199"
 
   url "https://download.semiconductor.samsung.com/resources/software-resources/Samsung_Magician_Installer_Official_#{version}.pkg"
   name "Samsung Magician Software"
