@@ -1,6 +1,6 @@
 cask "sipgate-clinq" do
-  version "2.6.4"
-  sha256 "5860168a527c4fd1ed16c6e9744014089f965de287c42388659c905f973433cb"
+  version "2.7.0"
+  sha256 "1f68396db8b15a3493bda2dbe23606c0587c8026eaf1bfff1d4bd89ae7bc5c87"
 
   url "https://s3-eu-central-1.amazonaws.com/desktop.download.sipgate.com/sipgate%20CLINQ-#{version}.zip",
       verified: "s3-eu-central-1.amazonaws.com/desktop.download.sipgate.com/"
