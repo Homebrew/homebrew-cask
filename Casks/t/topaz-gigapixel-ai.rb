@@ -1,6 +1,6 @@
 cask "topaz-gigapixel-ai" do
-  version "8.3.1"
-  sha256 "8035336acd1bc4d30512832d948b53270a2f9932d17a63e00281d0b5748a20f0"
+  version "8.3.2"
+  sha256 "113e06c8b96e11fbf992e9a2624d973145f1bbc9312c076584fd694164d8ffa5"
 
   url "https://downloads.topazlabs.com/deploy/TopazGigapixelAI/#{version}/TopazGigapixelAI-#{version}.pkg"
   name "Topaz Gigapixel AI"
