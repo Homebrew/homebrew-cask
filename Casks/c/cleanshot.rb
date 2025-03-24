@@ -1,6 +1,6 @@
 cask "cleanshot" do
-  version "4.7.5"
-  sha256 "cb8639ee68637d7d2dc69355a5c24a6d432be2f5755c5b3c2630b93eee0105b2"
+  version "4.7.6"
+  sha256 "677178b8060c5e3d579d5a534792c2b9649c835b1d07aa307f18a28a73307b55"
 
   url "https://updates.getcleanshot.com/v3/CleanShot-X-#{version}.dmg"
   name "CleanShot"
