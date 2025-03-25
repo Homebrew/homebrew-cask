@@ -733,6 +733,7 @@ libreoffice
 libreoffice-language-pack
 libreoffice-still
 libreoffice-still-language-pack
+librepcb
 librewolf
 lidarr
 lightburn
