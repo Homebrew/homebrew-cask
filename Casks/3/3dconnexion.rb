@@ -7,7 +7,6 @@ cask "3dconnexion" do
       skip "Legacy version"
     end
   end
-
   on_catalina :or_newer do
     version "10-8-7,r3836,81855983"
     sha256 "167b6b68adc64b21ae5579bc84b5aa990a6fb61e20857bae323674cbf0e85515"
@@ -30,19 +29,19 @@ cask "3dconnexion" do
 
   pkg "Install 3Dconnexion software.pkg"
 
-  uninstall pkgutil:   "com.3dconnexion.*",
-            launchctl: [
+  uninstall launchctl: [
               "com.3dconnexion.helper",
               "com.3dconnexion.nlserverIPalias",
             ],
             quit:      [
-              "com.3Dconnexion.3DxUpdater",
               "com.3dconnexion.*",
+              "com.3Dconnexion.3DxUpdater",
             ],
             script:    [
               { executable: "#{appdir}/3Dconnexion/Uninstall 3Dconnexion Driver.app/Contents/Resources/rm3dcx",
                 sudo:       true },
             ],
+            pkgutil:   "com.3dconnexion.*",
             delete:    [
               "/Applications/3Dconnexion",
               "/Library/Application Support/3Dconnexion",
