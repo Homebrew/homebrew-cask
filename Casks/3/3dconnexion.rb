@@ -38,12 +38,14 @@ cask "3dconnexion" do
               "com.3Dconnexion.3DxUpdater",
             ],
             script:    [
-              { executable: "#{appdir}/3Dconnexion/Uninstall 3Dconnexion Driver.app/Contents/Resources/rm3dcx",
+              { executable: "#{appdir}/3DconnexionUninstaller.app/Contents/Resources/rm3dcx",
                 sudo:       true },
             ],
             pkgutil:   "com.3dconnexion.*",
             delete:    [
               "/Applications/3Dconnexion",
+              "/Applications/3DconnexionHelper.app",
+              "/Applications/3DconnexionUninstaller.app",
               "/Library/Application Support/3Dconnexion",
               "/Library/Extensions/3Dconnexion.kext",
               "/Library/Frameworks/3DconnexionClient.framework",
