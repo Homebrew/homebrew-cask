@@ -60,8 +60,8 @@ cask "omnigraffle" do
     end
   end
   on_monterey :or_newer do
-    version "7.24.2"
-    sha256 "0ef1b4b914ba888dfc2f7ed1c87c4b911d2c37ba9ca83a4bd23745dd466d65da"
+    version "7.24.3"
+    sha256 "ecfe024a72add6f22775538c2dbc6363e36ff3379df6a0b5692d964cc39876b0"
 
     url "https://downloads.omnigroup.com/software/macOS/12/OmniGraffle-#{version}.dmg"
 
