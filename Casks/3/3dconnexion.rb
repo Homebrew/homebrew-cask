@@ -9,8 +9,8 @@ cask "3dconnexion" do
   end
 
   on_catalina :or_newer do
-    version "10-8-0,r3554,84D61C7D-29AE-4BE1-B02E-461ED14BDE2E"
-    sha256 "6edacc2ba5ff3bb095393b97192fe00b9b026f3d38b2f0c5130a481806b869af"
+    version "10-8-7,r3836,81855983"
+    sha256 "167b6b68adc64b21ae5579bc84b5aa990a6fb61e20857bae323674cbf0e85515"
 
     livecheck do
       url "https://3dconnexion.com/us/drivers/"
