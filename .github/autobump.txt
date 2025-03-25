@@ -1584,6 +1584,7 @@ windsurf
 windsurf@next
 windterm
 wine@devel
+wine@staging
 wing-personal
 wins
 wire
