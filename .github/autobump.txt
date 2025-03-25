@@ -33,6 +33,7 @@ adobe-acrobat-reader
 adobe-air
 adobe-dng-converter
 adrive
+advanced-renamer
 aerial@beta
 affine
 affinity-designer
