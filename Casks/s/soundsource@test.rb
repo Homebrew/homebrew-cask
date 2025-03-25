@@ -1,6 +1,6 @@
 cask "soundsource@test" do
-  version "5.7.6,17,20250319,1755,5767011"
-  sha256 "81de9e9c28c60e973f9f057fef2b4be42330296adda1b94d8d4bcc7daa0ead64"
+  version "5.7.6,18,20250325,0649,5767012"
+  sha256 "a74a8881fd038a5b90b33c440dea4f49e47d772fc9ac87bbe92dfad263707b2f"
 
   url "https://download.rogueamoeba.com/builds/SoundSource/SoundSource_#{version.csv.fifth}_#{version.csv.third}_#{version.csv.fourth}.zip"
   name "SoundSource"
