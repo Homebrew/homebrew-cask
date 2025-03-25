@@ -1495,6 +1495,7 @@ ui
 ui-tars
 ultimaker-cura
 ultimate
+ultrastardeluxe
 understand
 uninstallpkg
 unite
