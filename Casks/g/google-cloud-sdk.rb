@@ -54,7 +54,7 @@ cask "google-cloud-sdk" do
     end
   end
 
-  uninstall delete: staged_path.dirname/"latest"
+  uninstall trash: staged_path.dirname/"latest"
 
   zap trash: [
     "#{google_cloud_sdk_root}.staging",
