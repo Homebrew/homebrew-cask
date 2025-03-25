@@ -847,6 +847,7 @@ middle
 midi-router-client
 mihomo-party
 milanote
+milkman
 millie
 mimestream
 mindjet-mindmanager
