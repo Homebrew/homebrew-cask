@@ -8,8 +8,10 @@ cask "sony-ps-remote-play" do
   homepage "https://remoteplay.dl.playstation.net/remoteplay/lang/en/"
 
   livecheck do
-    url :homepage
-    regex(/Version\s*v?(\d+(?:\.\d+)+)\s*for\s*Mac/i)
+    url "https://remoteplay.dl.playstation.net/remoteplay/module/mac/rp-version-mac.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on macos: ">= :high_sierra"
