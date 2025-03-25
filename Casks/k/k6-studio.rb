@@ -1,6 +1,5 @@
 cask "k6-studio" do
   arch arm: "arm64", intel: "x64"
-  folder = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   version "1.0.2"
   sha256  arm:   "bc86a6fff6547aca5c8123eb83e830f15279dd3e0efc33610b9113d9dc4c19fd",
@@ -16,7 +15,6 @@ cask "k6-studio" do
   depends_on macos: ">= :catalina"
 
   app "k6 Studio.app"
-  binary "#{appdir}/k6 Studio.app/Contents/Resources/#{folder}/k6"
 
   zap trash: [
         "~/Library/Application Support/k6 Studio",
