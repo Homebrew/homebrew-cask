@@ -693,6 +693,7 @@ keepassxc
 keepassxc@snapshot
 keeper-password-manager
 keka
+keka@beta
 keyboard-cowboy
 keyguard
 keyman
