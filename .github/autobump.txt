@@ -1583,6 +1583,7 @@ windscribe
 windsurf
 windsurf@next
 windterm
+wine@devel
 wing-personal
 wins
 wire
