@@ -1317,6 +1317,7 @@ solar2d
 sonarr
 songkong
 sonos
+sony-ps-remote-play
 soulver
 sound-control
 sound-siphon
