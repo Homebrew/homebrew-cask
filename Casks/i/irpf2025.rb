@@ -1,6 +1,6 @@
 cask "irpf2025" do
-  version "1.0"
-  sha256 "cb84124a625485028bb406f5a3f42ad4eadcbda011c508e6bd51bd4b11d285c5"
+  version "1.1"
+  sha256 "0dbb0b4bb7a77b035e7073420aa5bcae03590946e2676f2beb2e9ac7ef2afc16"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2025/irpf/arquivos/IRPF2025-v#{version}.dmg"
   name "IRPF 2025"
