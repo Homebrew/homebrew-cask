@@ -1525,6 +1525,7 @@ vellum
 videofusion
 vienna
 vienna-assistant
+vimcal
 vimr
 virtualbox
 virtualbox@beta
