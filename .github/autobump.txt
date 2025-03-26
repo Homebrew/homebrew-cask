@@ -346,6 +346,7 @@ discord
 discord@canary
 discord@development
 discord@ptb
+disk-drill
 diskcatalogmaker
 display-pilot
 distroav
