@@ -652,6 +652,7 @@ intellij-idea@eap
 ipfs
 ipvanish-vpn
 ireal-pro
+irpf2023
 irpf2024
 istat-menus
 istherenet
