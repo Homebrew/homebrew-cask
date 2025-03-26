@@ -310,6 +310,7 @@ davmail
 dbeaver-community
 dbgate
 dbschema
+dbvisualizer
 dcommander
 dcp-o-matic
 dcp-o-matic-batch-converter
