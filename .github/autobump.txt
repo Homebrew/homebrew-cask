@@ -1632,6 +1632,7 @@ youtube-downloader
 youtube-to-mp3
 yuque
 zalo
+zap
 zappy
 zed
 zed@preview
