@@ -410,6 +410,7 @@ emclient
 endless-sky
 endless-sky-high-dpi
 energiza
+engine-dj
 enpass
 ente
 ente-auth
