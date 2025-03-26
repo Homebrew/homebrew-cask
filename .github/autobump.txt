@@ -1604,6 +1604,7 @@ wooshy
 wordpresscom-studio
 workflowy
 workspace-one-intelligent-hub
+workspaces
 wpsoffice-cn
 wrike
 writerside
