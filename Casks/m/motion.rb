@@ -1,9 +1,9 @@
 cask "motion" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "0.95.0"
-  sha256 arm:   "eaf86098a64c910d0ea333f965352828ae3b8923d433d7e8c3e94672af025bfe",
-         intel: "9a8b97fe8b8a7111bb9272a813e54ffd6fcb5595a620f1edeb3f62cf85066aa9"
+  version "0.96.0"
+  sha256 arm:   "8aee7c58e84c5b9492fb27125e10802c0849337b161d9aa822702892d90554c1",
+         intel: "ce9c7ac0c3d3f726c9462c360a065fc9d7c5c5e6dc0e7c479148d1bac6f6aa3e"
 
   url "https://github.com/usemotion/desktopapp/releases/download/#{version}/motion-#{version}-mac-#{arch}.zip",
       verified: "github.com/usemotion/desktopapp/"
