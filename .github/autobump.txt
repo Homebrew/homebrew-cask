@@ -1642,6 +1642,7 @@ youdaonote
 youku
 youtube-downloader
 youtube-to-mp3
+yubico-authenticator
 yuque
 zalo
 zap
