@@ -17,8 +17,8 @@ cask "folo@nightly" do
   end
 
   conflicts_with cask: [
-    "follow",
     "follow@alpha",
+    "folo",
   ]
   depends_on macos: ">= :big_sur"
 

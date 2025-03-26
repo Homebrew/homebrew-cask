@@ -20,7 +20,7 @@ cask "folo" do
   auto_updates true
   conflicts_with cask: [
     "follow@alpha",
-    "follow@nightly",
+    "folo@nightly",
   ]
   depends_on macos: ">= :big_sur"
 
