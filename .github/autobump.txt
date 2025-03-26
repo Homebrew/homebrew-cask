@@ -511,6 +511,7 @@ font-sketchybar-app-font
 font-sn-pro
 font-stix
 font-sudo
+fontcreator
 foobar2000
 fork
 forkgram-telegram
