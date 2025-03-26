@@ -610,6 +610,7 @@ hhkb-studio
 hides
 holavpn
 home-assistant
+hopper-disassembler
 hoppscotch
 houdahspot
 hstracker
