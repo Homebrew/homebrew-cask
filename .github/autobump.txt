@@ -217,6 +217,7 @@ chatbox
 chatgpt
 chatwise
 chatwork
+chemdoodle
 cherry-studio
 chia
 chipmunk
