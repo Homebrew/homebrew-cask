@@ -655,6 +655,7 @@ integrity
 intellij-idea
 intellij-idea-ce
 intellij-idea@eap
+intune-company-portal
 ipfs
 ipvanish-vpn
 ireal-pro
