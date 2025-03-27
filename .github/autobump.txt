@@ -954,6 +954,7 @@ neofinder
 neohtop
 neovide
 netbeans
+neteasemusic
 netnewswire
 netnewswire@beta
 netron
