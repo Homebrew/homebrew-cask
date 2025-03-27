@@ -828,6 +828,7 @@ mediainfo
 mediamate
 mediathekview
 mega
+megacmd
 megasync
 megazeux
 mellel
