@@ -1456,6 +1456,7 @@ thunder
 thunderbird
 thunderbird@beta
 thunderbird@esr
+ti-connect-ce
 ticktick
 tidelift
 tidgi
