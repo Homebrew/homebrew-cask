@@ -2,8 +2,8 @@ cask "plugdata@nightly" do
   version :latest
   sha256 :no_check
 
-  url "https://storage.googleapis.com/plugdata-nightly/plugdata-macOS-Universal.pkg",
-      verified: "storage.googleapis.com/plugdata-nightly/"
+  url "https://plugdata-nightly.s3.amazonaws.com/plugdata-macOS-Universal.pkg",
+      verified: "plugdata-nightly.s3.amazonaws.com/"
   name "PlugData"
   desc "Plugin wrapper for PureData"
   homepage "https://plugdata.org/"
