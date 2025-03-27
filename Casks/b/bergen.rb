@@ -4,7 +4,7 @@ cask "bergen" do
 
   url "https://github.com/kkarimi/bergen/releases/download/v#{version}/bergen-macos-v0.1.4.zip"
   name "Bergen"
-  desc "A React Native macOS app for Markdown editing"
+  desc "A React Native macOS app for Markdown viewing"
   homepage "https://github.com/kkarimi/bergen"
 
   app "bergen.app"
