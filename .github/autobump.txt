@@ -575,6 +575,7 @@ go-agent
 go-server
 go-shiori
 godot
+godot-mono
 godspeed
 gog-galaxy
 goland
