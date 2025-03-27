@@ -1564,6 +1564,7 @@ viz
 vk-calls
 vlc@nightly
 vnc-viewer
+voiceink
 volanta
 vpn-tracker-365
 vrew
