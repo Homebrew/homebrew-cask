@@ -573,6 +573,7 @@ gnucash
 go-agent
 go-server
 go-shiori
+godot
 godspeed
 gog-galaxy
 goland
