@@ -1,6 +1,6 @@
 cask "ti-smartview-ce-for-the-ti-84-plus-family" do
-  version "6.0.1.344"
-  sha256 "c9f86050e40d0c50b3e067e11032770025de672c767356d7bdbd090fd5610164"
+  version "6.0.3.619"
+  sha256 "07845acdc00a95e5c2e1b35aa39e81d2a3405cc751a0d0b4346059fae9f5d074"
 
   url "https://d13g8g4x8s9rc1.cloudfront.net/downloads/files/cdn/smartview/84ce/#{version.major_minor_patch}/TI-SmartView-CE-84-#{version}.dmg",
       verified: "d13g8g4x8s9rc1.cloudfront.net/downloads/files/cdn/smartview/84ce/"
