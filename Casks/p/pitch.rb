@@ -1,6 +1,6 @@
 cask "pitch" do
-  version "2.67.1,stable.1,7112513"
-  sha256 "51a57a6025dc7a2fe21f1d12a501822bd63d2aa3836e0093f6064c396365dfca"
+  version "2.67.1,stable.2,7115115"
+  sha256 "040deb409931cd870c48822ed968c3daa274c3a29b73b28f67ee2dd2220065f6"
 
   url "https://desktop-app-builds.pitch.com/Pitch-#{version.csv.first}-#{version.csv.second}-ci#{version.csv.third}.dmg"
   name "Pitch"
