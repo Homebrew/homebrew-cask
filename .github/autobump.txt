@@ -673,6 +673,7 @@ jasp
 java@beta
 jazz2-resurrection
 jbrowse
+jdk-mission-control
 jellyfin
 jet-pilot
 jetbrains-gateway
