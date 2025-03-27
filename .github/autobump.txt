@@ -309,6 +309,7 @@ datovka
 davmail
 dbeaver-community
 dbgate
+dbngin
 dbschema
 dbvisualizer
 dcommander
