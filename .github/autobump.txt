@@ -1302,6 +1302,7 @@ sherlock
 shift
 shortwave
 shutter-encoder
+sidenotes
 sigmaos
 signal
 signal@beta
