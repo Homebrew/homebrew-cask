@@ -419,6 +419,7 @@ ente-auth
 entry
 epic-games
 eset-cyber-security
+espanso
 evernote
 excalidrawz
 expo-orbit
