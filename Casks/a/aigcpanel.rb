@@ -4,7 +4,8 @@ cask "aigcpanel" do
   version "0.9.0"
   sha256 :no_check
 
-  url "https://github.com/modstart-lib/aigcpanel/releases/download/v#{version}/AigcPanelPro-#{version}-mac-#{arch}.dmg"
+  url "https://github.com/modstart-lib/aigcpanel/releases/download/v#{version}/AigcPanelPro-#{version}-mac-#{arch}.dmg",
+    verified: "aigcpanel.com"
   name "AigcPanel"
   desc "OpenSource Digital Human"
   homepage "https://aigcpanel.com/"
