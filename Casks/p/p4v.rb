@@ -10,11 +10,8 @@ cask "p4v" do
   homepage "https://www.perforce.com/products/helix-core-apps/helix-visual-client-p4v"
 
   livecheck do
-    url "https://www.perforce.com/support/software-release-index"
-    regex(%r{(?:Patch|Release) for[^<]+?Helix Visual Client[^<]+?v?(\d+(?:\.\d+)+)/(\d+)}im)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
+    url "https://help.perforce.com/helix-core/release-notes/current/p4vnotes.txt"
+    regex(%r{\((\d{4}\.\d/\d+)\)}) # e.g., (2025.1/2731664)
   end
 
   app "p4v.app"
