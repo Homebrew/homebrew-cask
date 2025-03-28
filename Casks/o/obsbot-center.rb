@@ -1,8 +1,8 @@
 cask "obsbot-center" do
-  version "2.0.10.40"
-  sha256 "7b1c1eff35d192f63dd6cf3f1d3d993223c53f4a1b3f43217509aca65de4140c"
+  version "2.0.11.22"
+  sha256 "6f75df4757caef4b74931b84aadae314751252a90e6907dedc6afffde8c094ea"
 
-  url "https://resource-cdn.obsbothk.com/download/obsbot-center/Obsbot_Center_OA_E_MacOS_#{version}_release.dmg",
+  url "https://resource-cdn.obsbothk.com/202503282046/0accb7b41b8b76df960bc8b028f2a9b5/download/obsbot-center/obsbot_center_oa_e_mac_os_2_0_11_22_release_3e32fa92.dmg",
       verified: "resource-cdn.obsbothk.com/download/obsbot-center/"
   name "OBSBOT Center"
   desc "Configuration and firmware update utility for OBSBOT Tiny and Meet series"
