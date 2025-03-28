@@ -48,8 +48,8 @@ cask "sip" do
     end
   end
   on_ventura :or_newer do
-    version "3.6.1"
-    sha256 "f80121fb381be4744f942a886b9ce0961295a281b0e74709d2e8124ba2e331f2"
+    version "3.6.2"
+    sha256 "d8c43036940aefee8d9f632f2e5fd78939edebac0e658534729c226b7619af25"
 
     # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
     # work with all of the items in the feed (not just the newest one).
