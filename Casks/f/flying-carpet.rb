@@ -1,8 +1,8 @@
 cask "flying-carpet" do
-  version "8.0.1"
-  sha256 "8002868545273069959a3343146212bbf16587e9727dcd8dbd604e160caa983f"
+  version "9.0.0"
+  sha256 "aa05edc1553b88c9662997e0d76d1d8e46f9a97b55ef02cb2491dfb3268f4a46"
 
-  url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version}/macOS_FlyingCarpet_#{version}_universal.dmg"
+  url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version}/macOS_FlyingCarpet_#{version}.zip"
   name "Flying Carpet"
   desc "File transfer over ad-hoc wifi"
   homepage "https://github.com/spieglt/flyingcarpet"
