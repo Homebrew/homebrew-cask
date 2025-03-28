@@ -1,11 +1,11 @@
 cask "inav-configurator" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.0.0"
-  sha256 arm:   "7967c017eb21b2f6ae3b582a9d3b31b15652b670b0217f01fed3946b9775aeb7",
-         intel: "497a59fbc3117b99841158ec081e3f656eaa70039765942ddfe3cc464d5375dd"
+  version "8.0.1"
+  sha256 arm:   "235919b9f98b7560dddce10e4e5e4107c56f5f9edce14d69b5acbea9bf758837",
+         intel: "61ffc113f93ef7ff6b19c208006f96773170e4beb1afd934b819a70ad598a0e3"
 
-  url "https://github.com/iNavFlight/inav-configurator/releases/download/#{version}/INAV-Configurator_darwin_#{arch}_#{version}.zip"
+  url "https://github.com/iNavFlight/inav-configurator/releases/download/#{version}/INAV-Configurator_MacOS_#{arch}_#{version}.zip"
   name "INAV Configurator"
   desc "Configuration tool for the INAV flight control system"
   homepage "https://github.com/iNavFlight/inav-configurator/"
