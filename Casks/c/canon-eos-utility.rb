@@ -35,6 +35,7 @@ cask "canon-eos-utility" do
   uninstall delete: [
               "/Applications/Canon Utilities/CameraSurveyProgram",
               "/Applications/Canon Utilities/EOS Lens Registration Tool",
+              "/Applications/Canon Utilities/EOS Network Setting Tool",
               "/Applications/Canon Utilities/EOS Utility",
               "/Applications/Canon Utilities/EOS Web Service Registration Tool",
               "/Library/Application Support/Canon_Inc_IC/ImageBrowser EX Shared/Camera/{A2E97706-9B71-482d-92F1-70B1D010B943}.plist",
