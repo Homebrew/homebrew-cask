@@ -1,6 +1,6 @@
 cask "crystalfetch" do
-  version "2.1.1"
-  sha256 "1459e953b71895e96d2cd36275b77b82209ffbc8e0c42c4ce5bac04473ffa50b"
+  version "2.2.0"
+  sha256 "6e428a419bc5deded21da0c9eafae4507fd5b2fb6e2c8cf8b59f97522f01deee"
 
   url "https://github.com/TuringSoftware/CrystalFetch/releases/download/v#{version}/CrystalFetch.dmg"
   name "Crystalfetch"
