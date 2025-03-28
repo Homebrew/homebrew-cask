@@ -92,6 +92,14 @@ cask "openzfs" do
             ],
             pkgutil:   "org.openzfsonosx.zfs"
 
+  zap trash: [
+    "~/Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist",
+    "~/Library/LaunchDaemons/org.openzfsonosx.zconfigd.plist",
+    "~/Library/LaunchDaemons/org.openzfsonosx.zed.plist",
+    "~/Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist",
+    "~/Library/LaunchDaemons/org.openzfsonosx.zpool-import.plist",
+  ]
+
   caveats do
     kext
   end
