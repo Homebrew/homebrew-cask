@@ -8,6 +8,13 @@ cask "coin-wallet" do
   desc "Digital currency wallet"
   homepage "https://coin.space/"
 
+  livecheck do
+    url "https://coin.space/api/v4/update/mac/x64/v0.0.0"
+    strategy :json do |json|
+      json["version"]&.sub("v", "")
+    end
+  end
+
   auto_updates true
 
   app "Coin Wallet.app"
