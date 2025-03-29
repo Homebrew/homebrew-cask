@@ -1,11 +1,11 @@
 cask "ontime" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.14.2"
-  sha256 arm:   "4037ec2cf99e55f1410b263438841fe994f08c7b26f774fcf00fd0ce1933a2c5",
-         intel: "cac6c2c1cdd5d4c594cd34c97a61c5b91e6a12660e721d99f4bb6f086d95818d"
+  version "3.14.3"
+  sha256 arm:   "751b2869292dbad7848e989d137efb970c730e325a267c6a0039023247a01f20",
+         intel: "b2c6c2443be059c34aafb0c876e1a08fa660b9cce7d9f39d1d4d1e3e756e7747"
 
-  url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg",
+  url "https://github.com/cpvalente/ontime/releases/download/v.#{version}/ontime-macOS-#{arch}.dmg",
       verified: "github.com/cpvalente/ontime/"
   name "Ontime"
   desc "Time keeping for live events"
