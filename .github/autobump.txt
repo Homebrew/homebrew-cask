@@ -1329,6 +1329,7 @@ slack-cli
 slack@beta
 sleek
 slicer
+slidepad
 slippi-dolphin
 smartgit
 smartsvn
