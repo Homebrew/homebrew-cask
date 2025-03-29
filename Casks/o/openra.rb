@@ -1,6 +1,6 @@
 cask "openra" do
-  version "20250303"
-  sha256 "3e2239d9776e660d49ce509cf318a305eed086feccaa799c0f7c3b0c0b1d0d1b"
+  version "20250330"
+  sha256 "76f0b5e41c2bd2af331b51b73ed1e43bed833e457926f095bdf59b772d65de27"
 
   url "https://github.com/OpenRA/OpenRA/releases/download/release-#{version}/OpenRA-release-#{version}.dmg",
       verified: "github.com/OpenRA/OpenRA/"
