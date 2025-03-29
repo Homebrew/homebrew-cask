@@ -1,6 +1,6 @@
 cask "1password-cli@beta" do
-  version "2.30.0-beta.03"
-  sha256 "d0eca14110185dab4e43674d60a20f530fd43b640d9fe18520b69b5e7b058010"
+  version "2.30.3"
+  sha256 "4559e0ee1b997d1451f7d4cb2b09a6ba7eb0a1288884ce589da11f5a074f26be"
 
   url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_apple_universal_v#{version}.pkg",
       verified: "cache.agilebits.com/dist/1P/op2/pkg/"
@@ -9,8 +9,10 @@ cask "1password-cli@beta" do
   homepage "https://developer.1password.com/docs/cli"
 
   livecheck do
-    url "https://app-updates.agilebits.com/product_history/CLI2"
-    regex(%r{href=.*?/op_apple_universal[._-]v?(\d+(?:\.\d+)+-beta\.\d+)\.pkg}i)
+    url "https://app-updates.agilebits.com/check/1/0/CLI2/en/0/Y"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   conflicts_with cask: [
