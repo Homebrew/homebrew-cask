@@ -1551,6 +1551,7 @@ vbrokers
 vcam
 vcv-rack
 vellum
+vial
 videofusion
 vienna
 vienna-assistant
