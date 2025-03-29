@@ -2,12 +2,12 @@ cask "automattic-texts" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "0.84.10,58984f0f17"
-    sha256 "92c4d98c3a3d7f81af882c0927f1636ea3c124bdb4ab6d1e3fccb0a6cfa4e572"
+    version "0.84.11,38355d866e"
+    sha256 "5916ebc691950d96237b1421396eb8567dbf67db0f927be8951cb6ce518108de"
   end
   on_intel do
-    version "0.84.10,eb568eace3"
-    sha256 "c7e9675210523734961fd906a0648e8a0f0339dcf40b9a7890f78dbcb7abf949"
+    version "0.84.11,791ab1496c"
+    sha256 "74786545cd3b37b17cde3e866a9a4d5047d11d85cb7f9f47e02d0ca00efb3b61"
   end
 
   url "https://texts-binaries.texts.com/builds/Texts-macOS-#{arch}-v#{version.csv.first}-#{version.csv.second}.zip"
