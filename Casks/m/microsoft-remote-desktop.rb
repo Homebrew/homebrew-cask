@@ -8,7 +8,7 @@ cask "microsoft-remote-desktop" do
   desc "Remote desktop client"
   homepage "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac"
 
-  deprecate! date: "2024-09-30", because: "has been replaced by windows-app"
+  deprecate! date: "2024-09-30", because: :discontinued, replacement: "windows-app"
 
   auto_updates true
   conflicts_with cask: "windows-app"
