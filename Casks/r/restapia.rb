@@ -1,6 +1,4 @@
 cask "restapia" do
-  arch arm: "arm64"
-
   version "0.8.12"
   sha256 "d2996269fc44aa86d26d79fcdceaf6c29a095b2370aee04acf48dd1b03946eb0"
 
