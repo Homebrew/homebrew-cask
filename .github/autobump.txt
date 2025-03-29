@@ -1088,6 +1088,7 @@ pingplotter
 pinwheel
 pitch
 pixel-shift-combiner
+pixelorama
 pktriot
 planet
 plasticscm-cloud-edition
