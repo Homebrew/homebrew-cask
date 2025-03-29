@@ -1,5 +1,6 @@
 cask "julia" do
   arch arm: "aarch64", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
   version "1.11.4"
   sha256 arm:   "8978e7bed0ae882648c1723b02d1e329454955eba4f7fe897bf572b684acae3f",
@@ -11,8 +12,15 @@ cask "julia" do
   homepage "https://julialang.org/"
 
   livecheck do
-    url "https://julialang.org/downloads/"
-    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]mac#{arch.delete_prefix("x")}\.dmg/i)
+    url "https://julialang-s3.julialang.org/bin/versions.json"
+    strategy :json do |json|
+      json.map do |version, release|
+        next unless release["stable"]
+        next unless release["files"].any? { |file| file["os"] == "mac" && file["arch"] == livecheck_arch }
+
+        version
+      end
+    end
   end
 
   app "Julia-#{version.major_minor}.app"
