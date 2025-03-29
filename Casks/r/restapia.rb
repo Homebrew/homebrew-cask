@@ -5,7 +5,7 @@ cask "restapia" do
   url "https://github.com/RestApia/Releases.Osx.Stable/releases/download/v#{version}-osx-stable/RestApia-osx-stable-Setup.pkg",
       verified: "github.com/RestApia/Releases.Osx.Stable/releases/download/"
   name "RestApia"
-  desc "HTTP API client offering flexible, code-based request definition"
+  desc "HTTP API client"
   homepage "https://www.restapia.app/"
 
   livecheck do
