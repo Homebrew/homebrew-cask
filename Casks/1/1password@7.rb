@@ -8,8 +8,10 @@ cask "1password@7" do
   homepage "https://1password.com/"
 
   livecheck do
-    url "https://app-updates.agilebits.com/product_history/OPM#{version.major}"
-    regex(%r{href=.*?/1Password-(\d+(?:\.\d+)+)\.pkg}i)
+    url "https://app-updates.agilebits.com/check/1/99/OPM#{version.major}/en/0"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
