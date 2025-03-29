@@ -9,7 +9,7 @@ cask "kilohearts-installer" do
 
   livecheck do
     url :homepage
-    regex(/v?(\d+(?:\.\d+)+).*?\s+[._-]/i)
+    regex(/v?(\d+(?:\.\d+)+)\s+for\s+Mac/i)
   end
 
   auto_updates true
