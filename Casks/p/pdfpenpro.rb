@@ -7,7 +7,7 @@ cask "pdfpenpro" do
   desc "PDF editing software"
   homepage "https://smilesoftware.com/PDFpenPro"
 
-  deprecate! date: "2024-09-30", because: "has been replaced by nitro-pdf-pro"
+  deprecate! date: "2024-09-30", because: :discontinued, replacement: "nitro-pdf-pro"
 
   depends_on macos: ">= :sierra"
 
