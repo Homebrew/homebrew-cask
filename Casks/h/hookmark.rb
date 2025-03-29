@@ -2,18 +2,15 @@ cask "hookmark" do
   version "6.8"
   sha256 "4e63ca48349d1050ed4fd4d98829200be37fdfcbe0707acbcda25a4d35250d68"
 
-  url "https://hookproductivity.com/downloads/Hookmark-app-#{version}.dmg",
+  url "https://updates.hookproductivity.com/downloads/Hookmark-app-#{version}.dmg",
       user_agent: :fake
   name "Hook"
   desc "Link and retrieve key information"
   homepage "https://hookproductivity.com/"
 
   livecheck do
-    url "https://hookproductivity.com/download"
-    regex(%r{href=.*?/Hookmark[._-]app[._-]\v?(\d+(?:\.\d+)+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0] }
-    end
+    url "https://updates.hookproductivity.com/updates/a77a1a87-7d69-435d-90ea-7365b2f7bddb"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
