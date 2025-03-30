@@ -21,8 +21,8 @@ cask "amethyst" do
     end
   end
   on_big_sur :or_newer do
-    version "0.23.0"
-    sha256 "ec7b6afe4477738b2bb5d871382e22a3ccbb32c4301a7e39e2fc79e9f76f7e86"
+    version "0.23.1"
+    sha256 "b8c833ffe00585075a8a6935c13cf2a0d5991bc5e6e6f5e3809a1fb5fd2c67a3"
 
     url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
         verified: "github.com/ianyh/Amethyst/"
