@@ -1,6 +1,6 @@
 cask "curio" do
-  version "29.0,29004"
-  sha256 "03b9b381fb272f10e8b5e0316a499dbed45450eebfcea5bb6deb66589498a4fb"
+  version "31.0.2,31022"
+  sha256 "18cd43d6242ae0c4de8c74298027b09616b8ff592e9ba73ca66345a2f8153fe4"
 
   url "https://www.zengobi.com/downloads/Curio#{version.csv.second.no_dots}.dmg"
   name "Curio"
@@ -12,7 +12,8 @@ cask "curio" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
+  auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "Curio.app"
 
