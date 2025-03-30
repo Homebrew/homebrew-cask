@@ -11,7 +11,10 @@ cask "p4v" do
 
   livecheck do
     url "https://help.perforce.com/helix-core/release-notes/current/p4vnotes.txt"
-    regex(%r{\((\d{4}\.\d)/(\d+)\)}) # e.g., (2025.1/2731664)
+    regex(%r{\(\s*v?(\d+(?:\.\d+)+)/(\d+)\s*\)}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
