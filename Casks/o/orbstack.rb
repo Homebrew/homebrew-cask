@@ -1,19 +1,18 @@
 cask "orbstack" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.10.3_19083"
+  version "1.10.3,19083"
   sha256 arm:   "1ead215c7edf9e233542453d49747fd3b9505dd1b9ba2944555f80302de82c67",
          intel: "53f2096605932345d97ed8c126e2fc41d5dfb6f8bf04be2532c943c7c8d9caec"
 
-  url "https://cdn-updates.orbstack.dev/#{arch}/OrbStack_v#{version}_#{arch}.dmg"
+  url "https://cdn-updates.orbstack.dev/#{arch}/OrbStack_v#{version.csv.first}_#{version.csv.second}_#{arch}.dmg"
   name "OrbStack"
   desc "Replacement for Docker Desktop"
   homepage "https://orbstack.dev/"
 
   livecheck do
-    url "https://orbstack.dev/download/stable/latest/#{arch}"
-    regex(/OrbStack[._-]v?(\d+(?:[._-]\d+)+)[._-]#{arch}\.dmg/i)
-    strategy :header_match
+    url "https://cdn-updates.orbstack.dev/#{arch}/appcast.new.xml"
+    strategy :sparkle
   end
 
   auto_updates true
