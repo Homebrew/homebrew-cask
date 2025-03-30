@@ -84,3 +84,7 @@ jobs:
             - label: autobump
               path: \.github/autobump\.txt
               allow_any_match: true
+
+            - label: linux cask
+              path: Casks/.+
+              content: (x86_64|arm64)_linux
