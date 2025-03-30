@@ -1,14 +1,14 @@
 cask "bruno" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.40.1"
-  sha256 arm:   "3d91ec2602b590655c8f3dd1bb5a98820fbfd185a06fe5f9b218ead387b6c4a9",
-         intel: "7b5b04966baad570d68bdfae2b58177088b8336113f4cf16a17e95bff9c6d4bf"
+  version "2.0.1"
+  sha256 arm:   "aec3e427fcc62e4c3f7c78e02b3c7e091e0bd8e0b7754619c44c7ac3722103ac",
+         intel: "807b04b4f308f6ec3d38b91283cae2eb6d7c2d8808a34daebbadbfae638430ca"
 
   url "https://github.com/usebruno/bruno/releases/download/v#{version}/bruno_#{version}_#{arch}_mac.dmg",
       verified: "github.com/usebruno/bruno/"
   name "Bruno"
-  desc "Opensource IDE for exploring and testing api's"
+  desc "Open source IDE for exploring and testing APIs"
   homepage "https://www.usebruno.com/"
 
   livecheck do
@@ -16,7 +16,7 @@ cask "bruno" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Bruno.app"
 
