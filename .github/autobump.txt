@@ -618,6 +618,7 @@ hhkb-studio
 hides
 holavpn
 home-assistant
+hookmark
 hopper-disassembler
 hoppscotch
 houdahspot
