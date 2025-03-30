@@ -12,6 +12,8 @@ cask "ankama" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Ankama Launcher.app"
 
   uninstall quit: "Ankama Launcher"
