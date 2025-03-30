@@ -12,6 +12,7 @@ cask "ammonite" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Ammonite.app"
