@@ -8,10 +8,7 @@ cask "osxfuse" do
   desc "File system integration"
   homepage "https://osxfuse.github.io/"
 
-  livecheck do
-    url :url
-    regex(/^osxfuse[._-]v?(\d+(?:\.\d+)+)$/i)
-  end
+  deprecate! date: "2025-03-28", because: :discontinued, replacement: "macfuse"
 
   pkg "Extras/FUSE for macOS #{version}.pkg"
 
@@ -30,12 +27,5 @@ cask "osxfuse" do
 
   caveats do
     reboot
-    <<~EOS
-      `#{token}` has been succeeded by `macfuse` as of version 4.0.0.
-
-      To update to a newer version, do:
-        brew uninstall #{token}
-        brew install macfuse
-    EOS
   end
 end
