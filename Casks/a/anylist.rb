@@ -13,6 +13,8 @@ cask "anylist" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "AnyList.app"
 
   zap trash: [
