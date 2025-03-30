@@ -800,6 +800,7 @@ macloggerdx
 macloggerdx@beta
 macpilot
 macrorecorder
+macskk
 mactracker
 macupdater
 macvim
