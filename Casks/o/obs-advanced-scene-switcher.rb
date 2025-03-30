@@ -8,6 +8,11 @@ cask "obs-advanced-scene-switcher" do
   desc "Automated scene switcher for OBS Studio"
   homepage "https://obsproject.com/forum/resources/advanced-scene-switcher.395"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on cask: "obs"
 
   pkg "advanced-scene-switcher-#{version}-macos-universal.pkg"
