@@ -12,7 +12,9 @@ cask "orbstack" do
 
   livecheck do
     url "https://cdn-updates.orbstack.dev/#{arch}/appcast.new.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel == "stable" }&.nice_version
+    end
   end
 
   auto_updates true
