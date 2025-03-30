@@ -11,9 +11,9 @@ cask "lens" do
   homepage "https://k8slens.dev/"
 
   livecheck do
-    url "https://api.k8slens.dev/binaries/latest-mac.json/"
-    strategy :json do |json|
-      json["version"]&.sub("-latest", "")
+    url "https://api.k8slens.dev/binaries/latest-mac.yml"
+    strategy :electron_builder do |yaml|
+      yaml["version"]&.sub("-latest", "")
     end
   end
 
