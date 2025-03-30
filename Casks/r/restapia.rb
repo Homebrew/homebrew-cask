@@ -1,6 +1,6 @@
 cask "restapia" do
-  version "0.8.12"
-  sha256 "d2996269fc44aa86d26d79fcdceaf6c29a095b2370aee04acf48dd1b03946eb0"
+  version "0.8.14"
+  sha256 "f9d2d232c1757046d3d83f35aa63cacb152dcfb8812add29b54f69603bdad384"
 
   url "https://github.com/RestApia/Releases.Osx.Stable/releases/download/v#{version}-osx-stable/RestApia-osx-stable-Setup.pkg",
       verified: "github.com/RestApia/Releases.Osx.Stable/releases/download/"
