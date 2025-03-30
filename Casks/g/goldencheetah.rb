@@ -1,6 +1,6 @@
 cask "goldencheetah" do
-  version "3.6"
-  sha256 "7d3d8f5682f664b030af61b6988b94a333526dbc686cc7d1f94b6f37889cdb50"
+  version "3.7"
+  sha256 "000f49df0cb3da1b8b48656f8c0fecb7591be9a0d3eae400d54b76d52d465363"
 
   url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/v#{version}/GoldenCheetah_v#{version}_x64.dmg",
       verified: "github.com/GoldenCheetah/GoldenCheetah/"
