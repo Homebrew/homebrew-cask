@@ -3,7 +3,7 @@ cask "transfer" do
   sha256 "64898ae7227ddc2a7f0b90721366bea7176f37b77bb955b1be9586d4fbee2331"
 
   url "https://www.intuitibits.com/downloads/Transfer_#{version}.dmg"
-  name "transfer"
+  name "Transfer"
   desc "Standalone TFTP, FTP, and SFTP server"
   homepage "https://www.intuitibits.com/products/transfer/"
 
