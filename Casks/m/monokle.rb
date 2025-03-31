@@ -3,7 +3,7 @@ cask "monokle" do
   sha256 "43e45f9d67ffec7bcfc4c23ad1adaef6ef81fe4a8d1b95837d18b0ef39b9df84"
 
   url "https://github.com/kubeshop/monokle/releases/download/v#{version}/Monokle-mac-#{version}-universal.dmg"
-  name "monokle"
+  name "Monokle"
   desc "IDE dedicated to high-quality Kubernetes YAML configurations"
   homepage "https://github.com/kubeshop/monokle"
 
