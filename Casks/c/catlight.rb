@@ -3,7 +3,7 @@ cask "catlight" do
   sha256 "d0e279f07136d0665b5188386d2a3a59a8ad9a456c968fca196a5d260569f098"
 
   url "https://download.catlight.io/rel/mac/release/CatLightSetup-#{version}.zip"
-  name "catlight"
+  name "CatLight"
   desc "Action center for developers"
   homepage "https://catlight.io/"
 
