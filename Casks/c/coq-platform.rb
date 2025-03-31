@@ -2,8 +2,8 @@ cask "coq-platform" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "2024.10.0,8.19.2024.10"
-    sha256 "20cee7656b1c2d5dee50c0eede2fbb860a96354dcab2d32ecba6f1186ec03cf8"
+    version "2025.01.0,8.20.2025.01"
+    sha256 "5bfced11017a61e6a0d71787e2a7a31ffbc09707792d783235caf99d0f41f0d3"
   end
   on_intel do
     version "2023.11.0,8.18.2023.11"
