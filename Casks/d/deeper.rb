@@ -29,7 +29,7 @@ cask "deeper" do
     version "3.0.9"
   end
   on_sequoia :or_newer do
-    version "3.1.2"
+    version "3.1.3"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Deeper.dmg"
