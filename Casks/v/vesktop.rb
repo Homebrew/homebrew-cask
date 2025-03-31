@@ -4,7 +4,7 @@ cask "vesktop" do
 
   url "https://github.com/Vencord/Vesktop/releases/download/v#{version}/Vesktop-#{version}-universal.dmg"
   name "Vesktop"
-  desc "Custom Discord App aiming to give better performance and improve linux support"
+  desc "Custom Discord App aiming to give better performance"
   homepage "https://github.com/Vencord/Vesktop"
 
   livecheck do
