@@ -3,7 +3,7 @@ cask "dnsmonitor" do
   sha256 "2d70c45f55e67d4e71823acd7232e7ad1aa41ca7a2223f8d0263a1474c647e8d"
 
   url "https://github.com/objective-see/DNSMonitor/releases/download/v#{version}/DNSMonitor_#{version}.zip"
-  name "dnsmonitor"
+  name "DNSMonitor"
   desc "Monitor DNS activity"
   homepage "https://github.com/objective-see/DNSMonitor/"
 
