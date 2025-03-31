@@ -3,7 +3,7 @@ cask "swiftplantumlapp" do
   sha256 "74b2c77abd793681f02e9ef310972aae0d601f290d708aaf8ba487c5a23f067d"
 
   url "https://github.com/MarcoEidinger/SwiftPlantUML-Xcode-Extension/releases/download/#{version}/SwiftPlantUMLApp.zip"
-  name "swiftplantumlapp"
+  name "SwiftPlantUMLApp"
   desc "Generate and view a class diagram for Swift code in Xcode"
   homepage "https://github.com/MarcoEidinger/SwiftPlantUML-Xcode-Extension"
 
