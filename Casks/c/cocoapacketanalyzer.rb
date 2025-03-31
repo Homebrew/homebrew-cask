@@ -3,7 +3,7 @@ cask "cocoapacketanalyzer" do
   sha256 "38adc0282b74f6ccba16725a3222d37774765db460dd965bb9fcba92c539b169"
 
   url "https://www.tastycocoabytes.com/_downloads/CPA_#{version.no_dots}.dmg"
-  name "cocoapacketanalyzer"
+  name "Cocoa Packet Analyzer"
   desc "Network protocol analyzer and packet sniffer"
   homepage "https://www.tastycocoabytes.com/"
 
