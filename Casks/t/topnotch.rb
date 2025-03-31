@@ -3,7 +3,7 @@ cask "topnotch" do
   sha256 "bedf07c46884e7c6bf43482fd48061beaf2f032a1e8bb23b422d55b85963e3d7"
 
   url "https://updates.topnotch.app/TopNotch-#{version}.dmg"
-  name "topnotch"
+  name "TopNotch"
   desc "Utility to hide the notch"
   homepage "https://topnotch.app/"
 

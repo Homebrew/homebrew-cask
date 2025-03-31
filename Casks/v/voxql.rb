@@ -3,7 +3,7 @@ cask "voxql" do
   sha256 "d827f01af571e5924974736dc7b9e3ee07f7304442a4cf57fa06e42284dab2ad"
 
   url "https://github.com/heptal/VoxQL/releases/download/#{version}/VoxQL.qlgenerator.zip"
-  name "voxql"
+  name "VoxQL"
   desc "Quick Look generator for MagicaVoxel files"
   homepage "https://github.com/heptal/VoxQL"
 

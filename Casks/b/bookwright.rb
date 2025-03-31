@@ -3,7 +3,7 @@ cask "bookwright" do
   sha256 "fecdcde26a29345a96663a36a519e6b5fd9421514d1a18326c249fbe861fd0ec"
 
   url "https://software.blurb.com/bookwright_v2/#{version}/BookWright.dmg"
-  name "bookwright"
+  name "BookWright"
   desc "Make a book with this tool and the Blurb printing service"
   homepage "https://www.blurb.com/bookwright"
 

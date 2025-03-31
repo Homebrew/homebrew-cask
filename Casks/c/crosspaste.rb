@@ -7,7 +7,7 @@ cask "crosspaste" do
 
   url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-mac-#{arch}.zip",
       verified: "github.com/CrossPaste/crosspaste-desktop/"
-  name "crosspaste"
+  name "CrossPaste"
   desc "Universal Pasteboard Across Devices"
   homepage "https://crosspaste.com/en/"
 

@@ -6,7 +6,7 @@ cask "lectrote" do
          intel: "47f264ac9b07d79ac922a572252b05fa2b4da81ca038a10f9ec8199250c5d93e"
 
   url "https://github.com/erkyrath/lectrote/releases/download/lectrote-#{version}/Lectrote-#{version}-macos-#{arch}.dmg"
-  name "lectrote"
+  name "Lectrote"
   desc "Interactive Fiction interpreter in an Electron shell"
   homepage "https://github.com/erkyrath/lectrote"
 
