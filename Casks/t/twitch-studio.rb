@@ -9,6 +9,7 @@ cask "twitch-studio" do
   homepage "https://www.twitch.tv/broadcast/studio/"
 
   deprecate! date: "2024-03-31", because: :discontinued
+  disable! date: "2025-03-31", because: :discontinued
 
   auto_updates true
 
