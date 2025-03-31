@@ -4,7 +4,7 @@ cask "dockview" do
 
   url "https://macplus-software.com/downloads/DockViewStandard.zip",
       verified: "macplus-software.com/downloads/"
-  name "dockview"
+  name "DockView"
   desc "Utility to preview application windows in the dock"
   homepage "https://noteifyapp.com/dockview/"
 
