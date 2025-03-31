@@ -4,7 +4,7 @@ cask "stability-matrix" do
 
   url "https://github.com/LykosAI/StabilityMatrix/releases/download/v#{version}/StabilityMatrix-macos-arm64.dmg"
   name "Stability Matrix"
-  desc "Multi-Platform Package Manager and Inference UI for Stable Diffusion"
+  desc "Package manager and inference UI for Stable Diffusion"
   homepage "https://github.com/LykosAI/StabilityMatrix"
 
   livecheck do
@@ -13,6 +13,7 @@ cask "stability-matrix" do
   end
 
   auto_updates true
+  depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
 
   app "Stability Matrix.app"
