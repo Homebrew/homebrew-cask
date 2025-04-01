@@ -2,8 +2,8 @@ cask "paraview" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "5.13.2,MPI-OSX11.0-Python3.10"
-    sha256 "a1777fca9889bd88b2818f27c51c03b243891ed35dfd54584c349083b8ad98e9"
+    version "5.13.3,MPI-OSX11.0-Python3.10"
+    sha256 "d37e9d7e83733b8881d63a260b2252800afff167cd37f7297c3f0c06e06b94cb"
   end
   on_intel do
     version "5.13.2,MPI-OSX10.15-Python3.10"
