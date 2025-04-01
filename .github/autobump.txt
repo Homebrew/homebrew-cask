@@ -548,6 +548,7 @@ gather
 gb-studio
 gcs
 gdevelop
+gearsystem
 geekbench-ai
 geneious-prime
 genesys-cloud
