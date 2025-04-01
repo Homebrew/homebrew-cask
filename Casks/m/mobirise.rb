@@ -1,8 +1,10 @@
 cask "mobirise" do
-  version "5.9.0"
+  arch arm: "-m"
+
+  version "6.0.1"
   sha256 :no_check
 
-  url "https://download.mobirise.com/MobiriseSetup.dmg"
+  url "https://download.mobirise.com/MobiriseSetup#{arch}.dmg"
   name "Mobirise"
   desc "No-code website creator"
   homepage "https://mobirise.com/"
@@ -20,8 +22,4 @@ cask "mobirise" do
     "~/Library/Preferences/com.mobirise.Mobirise.plist",
     "~/Library/Saved Application State/com.mobirise.Mobirise.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
