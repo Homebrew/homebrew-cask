@@ -8,16 +8,7 @@ cask "geektool" do
   desc "Desktop customization tool"
   homepage "https://www.tynsoe.org/geektool/"
 
-  livecheck do
-    url "https://updates.devmate.com/org.tynsoe.GeekTool.xml"
-    regex(%r{/(\d+)/GeekTool\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
-
-      "#{item.short_version},#{match[2]},#{match[1]}"
-    end
-  end
+  deprecate! date: "2025-03-31", because: :unmaintained
 
   app "GeekTool.app"
 
