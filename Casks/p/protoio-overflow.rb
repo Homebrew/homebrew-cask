@@ -1,16 +1,18 @@
 cask "protoio-overflow" do
-  version "1.10.1"
-  sha256 "2a682fc721e0d8a712f845cde460490b7c353c256e80e3fa4714bffa44f2a683"
+  version "3.5.405"
+  sha256 "22148f2248a47d4923e85b606130e13e6340bc9b61649ad583eda65182163cce"
 
-  url "https://app-updates.overflow.io/packages/updates/osx_64/271fc3c23d7c9ae00a2c76f4fbdd91288fc65467/Overflow-#{version}.dmg"
+  url "https://app-updates.overflow.io/packages/updates/osx_64/d37e5a83f1842cf59085310d43389b17dc73069b/Overflow-#{version}.dmg"
   name "Overflow"
   desc "Create interactive user flow diagrams"
   homepage "https://overflow.io/"
 
   livecheck do
-    url "https://prod-overflow-release-server.s3.amazonaws.com/packages/updates/osx_64/271fc3c23d7c9ae00a2c76f4fbdd91288fc65467/latest-mac.yml"
+    url "https://prod-overflow-release-server.s3.amazonaws.com/packages/updates/osx_64/d37e5a83f1842cf59085310d43389b17dc73069b/latest-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
 
   app "Overflow.app"
 
@@ -18,8 +20,4 @@ cask "protoio-overflow" do
     "~/Library/Application Support/overflow",
     "~/Library/Preferences/io.overflow.mac.app.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
