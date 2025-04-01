@@ -736,6 +736,7 @@ lagrange
 langgraph-studio
 languagetool
 lark
+lasso
 launchbar
 launchcontrol
 lazycat
