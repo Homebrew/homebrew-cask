@@ -1,6 +1,6 @@
 cask "reunion" do
-  version "14.0.0,250318unr"
-  sha256 "b3639edce7959e9185b902347b6b47e55ad9ffffc2bd50b5fb5217b346bc7324"
+  version "14.0.0,250331unr"
+  sha256 "3b4ea0410100fd1a47e3364cd206bc099502be86225fe31812a72869a2be5ad4"
 
   url "https://store.leisterpro.com/updates/reunion#{version.major}/Reunion-#{version.csv.first.dots_to_hyphens}-#{version.csv.second}.zip"
   name "Reunion"
