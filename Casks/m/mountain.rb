@@ -7,10 +7,7 @@ cask "mountain" do
   desc "Display notifications when mounting/unmounting volumes"
   homepage "https://appgineers.de/mountain/"
 
-  livecheck do
-    url "https://appgineers.de/mountain/files/mountaincast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2025-03-31", because: :unmaintained
 
   app "Mountain.app"
 
