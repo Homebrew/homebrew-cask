@@ -44,7 +44,6 @@ jobs:
       - name: Set up commit signing
         uses: Homebrew/actions/setup-commit-signing@master
         with:
-          ssh: true
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
       - name: Checkout removal branch
