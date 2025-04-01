@@ -22,5 +22,4 @@ cask "interview-coder" do
     zap trash: [
         "~/Library/Application Support/Interview Coder",
     ]
-end    
-  
+end
