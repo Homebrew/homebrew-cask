@@ -1,17 +1,18 @@
 cask "jollysfastvnc" do
-  version "1.64"
-  sha256 :no_check
+  version "1.64,22052516"
+  sha256 "a8fd7f4691008689cf7aae2e349a364e187b4d989ca675101a9f716c3b9525eb"
 
-  url "https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.current.dmg"
+  url "https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.#{version.csv.first}.(#{version.csv.second}).11.0.dmg"
   name "JollysFastVNC"
   desc "Control computers fast and securely from anywhere"
   homepage "https://www.jinx.de/JollysFastVNC.html"
 
   livecheck do
-    url "https://www.jinx.de/JollysFastVNC.update.12.x86_64.xml"
-    strategy :sparkle, &:short_version
+    url "https://www.jinx.de/JollysFastVNC.update.11.0.xml"
+    strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "JollysFastVNC.app"
