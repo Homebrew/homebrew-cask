@@ -1677,6 +1677,7 @@ zen-browser
 zen-browser@twilight
 zeplin
 zettlr
+zight
 zipic
 znote
 zoc
