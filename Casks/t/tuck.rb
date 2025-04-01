@@ -7,10 +7,7 @@ cask "tuck" do
   desc "Window manager"
   homepage "https://www.irradiatedsoftware.com/tuck/"
 
-  livecheck do
-    url "https://www.irradiatedsoftware.com/updates/profiles/tuck.php"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2025-03-31", because: :unmaintained
 
   app "Tuck.app"
 
