@@ -10,7 +10,9 @@ cask "retcon" do
 
   livecheck do
     url "https://lemon.garden/retcon/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel == "release" }&.short_version
+    end
   end
 
   auto_updates true
