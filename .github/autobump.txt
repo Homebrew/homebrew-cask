@@ -1321,7 +1321,7 @@ simplex
 singlebox
 singlecrystal
 sip
-sipgate-clinq
+sipgate
 sitesucker-pro
 siyuan
 sketch
