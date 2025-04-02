@@ -4,7 +4,7 @@ cask "vesktop" do
 
   url "https://github.com/Vencord/Vesktop/releases/download/v#{version}/Vesktop-#{version}-universal.dmg"
   name "Vesktop"
-  desc "Custom Discord App aiming to give better performance"
+  desc "Custom Discord App"
   homepage "https://github.com/Vencord/Vesktop"
 
   livecheck do
@@ -12,6 +12,7 @@ cask "vesktop" do
     strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Vesktop.app"
