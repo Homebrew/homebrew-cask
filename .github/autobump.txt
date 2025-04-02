@@ -1555,6 +1555,7 @@ vbrokers
 vcam
 vcv-rack
 vellum
+vesktop
 vial
 videofusion
 vienna
