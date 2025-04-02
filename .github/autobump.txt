@@ -1631,6 +1631,7 @@ wing-personal
 wins
 wire
 wirecast
+wireframe-sketcher
 wireshark
 wireshark-chmodbpf
 wiso-steuer-2024
