@@ -7,7 +7,6 @@ on:
       - main
       - master
   pull_request:
-  merge_group:
 
 defaults:
   run:
