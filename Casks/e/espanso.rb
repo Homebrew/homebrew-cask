@@ -11,9 +11,15 @@ cask "espanso" do
   desc "Cross-platform Text Expander written in Rust"
   homepage "https://espanso.org/"
 
+  # Upstream may not mark unstable releases like `1.2.3-beta` as pre-release
+  # on GitHub, so they can end up as the "latest" release. They also tag
+  # versions that may not end up with a release and some releases use a stable
+  # version format but are marked as pre-release, so we can't rely on Git tags.
+  # This checks the first-party website's Installation page, which links to
+  # release files on GitHub.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://espanso.org/install/"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/Espanso-Mac-#{arch}\.zip}i)
   end
 
   app "Espanso.app"
