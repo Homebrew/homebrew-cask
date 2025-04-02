@@ -31,6 +31,11 @@ jobs:
         with:
           username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
 
+      - name: Set up commit signing
+        uses: Homebrew/actions/setup-commit-signing@master
+        with:
+          signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
+
       - name: Get list of autobump casks
         id: autobump
         run: echo "autobump_list=$(xargs < "$(brew --repo homebrew/cask)"/.github/autobump.txt)" >> "$GITHUB_OUTPUT"
