@@ -1,8 +1,8 @@
 cask "atomic-wallet" do
-  version "2.90.6"
-  sha256 "089b0f002e4a166792d9fbd786cb937618faac6d79501c493f4e0ab9411497e0"
+  version "2.91.5"
+  sha256 "086ffd14dfd1da5c27433c0289b585fe5637c7e9c60b72e67659dc956b99eaa3"
 
-  url "https://releases.atomicwallet.io/Atomic.Wallet-#{version}.dmg"
+  url "https://releases.atomicwallet.io/AtomicWallet-#{version}.dmg"
   name "Atomic Wallet"
   desc "Manage Bitcoin, Ethereum, XRP, Litecoin, XLM and over 300 other coins and tokens"
   homepage "https://atomicwallet.io/"
