@@ -10,6 +10,7 @@ cask "font-plemol-jp" do
   font "PlemolJP_v#{version}/PlemolJP/PlemolJP-BoldItalic.ttf"
   font "PlemolJP_v#{version}/PlemolJP/PlemolJP-ExtraLight.ttf"
   font "PlemolJP_v#{version}/PlemolJP/PlemolJP-ExtraLightItalic.ttf"
+  font "PlemolJP_v#{version}/PlemolJP/PlemolJP-Italic.ttf"
   font "PlemolJP_v#{version}/PlemolJP/PlemolJP-Light.ttf"
   font "PlemolJP_v#{version}/PlemolJP/PlemolJP-LightItalic.ttf"
   font "PlemolJP_v#{version}/PlemolJP/PlemolJP-Medium.ttf"
