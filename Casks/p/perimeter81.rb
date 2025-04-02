@@ -1,7 +1,7 @@
 cask "perimeter81" do
   # NOTE: "81" is not a version number, but an intrinsic part of the product name
-  version "11.2.1.3411"
-  sha256 "0674143d208627a64ee9fc1b1a5a57f2cd7d7e1690edca1ddf43a0171ed93219"
+  version "11.5.0.4178"
+  sha256 "7f84e5fba493cb7e00dfc3026d30493c1d61082af20799790029aad1bafc4a01"
 
   url "https://static.perimeter81.com/agents/mac/Harmony_SASE_#{version}.pkg"
   name "Perimeter 81"
@@ -13,7 +13,7 @@ cask "perimeter81" do
     regex(/href=.*?Harmony[._-]SASE[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   pkg "Harmony_SASE_#{version}.pkg"
 
@@ -28,13 +28,15 @@ cask "perimeter81" do
             pkgutil:   "com.safervpn.osx.smb",
             delete:    [
               "/Library/PrivilegedHelperTools/com.perimeter81.osx.HelperTool",
-              "/Library/PrivilegedHelperTools/com.perimeter81d.app/Contents/MacOS/com.perimeter81d",
+              "/Library/PrivilegedHelperTools/com.perimeter81d.app",
             ]
 
   zap trash: [
     "~/Library/Application Support/com.safervpn.osx.smb",
     "~/Library/Caches/com.safervpn.osx.smb",
     "~/Library/Caches/Perimeter 81",
+    "~/Library/HTTPStorages/com.safervpn.osx.smb",
+    "~/Library/Logs/Perimeter81*",
     "~/Library/Preferences/com.safervpn.osx.smb.plist",
     "~/Library/Saved Application State/com.safervpn.osx.smb.savedState",
   ]
