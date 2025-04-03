@@ -49,6 +49,8 @@ jobs:
 
       - name: Upload SARIF file
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        # We can't use the SARIF file when triggered by `merge_group` so we don't upload it.
+        if: always() && github.event_name != 'merge_group'
         with:
           name: results.sarif
           path: results.sarif
@@ -65,7 +67,8 @@ jobs:
     if: >
       always() &&
       !contains(fromJSON('["cancelled", "skipped"]'), needs.workflow_syntax.result) &&
-      !github.event.repository.private
+      !github.event.repository.private &&
+      github.event_name != 'merge_group'
     runs-on: ubuntu-latest
     permissions:
       contents: read
