@@ -1,9 +1,9 @@
 cask "anka-build-cloud-controller" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.46.0-d8fb9604"
-  sha256 arm:   "e6a08822aa960ecfafe88deecd89b9e48b182ba897e8719d8f620e08ef03e829",
-         intel: "eb55972cfb4aced69c5c4ed20b9077194a43d3e2b7421f4610bb83587e397dde"
+  version "1.46.1-f1e9637c"
+  sha256 arm:   "d6f38c3a759af621200494c3c507ae091cb581f17afc746c9175764c87cefbf3",
+         intel: "98271c7b12ef7c02cef71972bfe7d31f549caf4ea78c3fb34e7960f4be67f589"
 
   url "https://downloads.veertu.com/anka/anka-controller-#{arch}-#{version}.pkg"
   name "Anka Build Cloud Controller"
