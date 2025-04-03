@@ -22,7 +22,7 @@ cask "logi-options+" do
     end
   end
   on_monterey :or_newer do
-    version "1.87.684086"
+    version "1.88.697541"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
@@ -54,6 +54,7 @@ cask "logi-options+" do
               "com.logi.cp-dev-mgr",
               "com.logi.optionsplus",
               "com.logi.optionsplus.updater",
+              "com.logitech.LogiRightSight",
             ],
             quit:      [
               "com.logi.cp-dev-mgr",
@@ -63,6 +64,7 @@ cask "logi-options+" do
               "com.logitech.FirmwareUpdateTool",
               "com.logitech.logiaipromptbuilder",
             ],
+            pkgutil:   "com.logitech.LogiRightSightForWebcams.pkg",
             delete:    [
               "/Applications/logioptionsplus.app",
               "/Applications/Utilities/Logi Options+ Driver Installer.bundle",
