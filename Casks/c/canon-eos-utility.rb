@@ -1,12 +1,12 @@
 cask "canon-eos-utility" do
-  version "3.18.41.0,0200007212,2"
-  sha256 "fff7e826c51712e81d37ff52c25209676be46937901b040272da8ff9832e3f2d"
+  version "3.19.0.12,0200007310,0"
+  sha256 "c13cf1f3de7fd85ed506cd41e67b57a680c07b944d310c82b8e0b17d97e16f92"
 
   url "https://gdlp01.c-wss.com/gds/#{version.csv.third}/#{version.csv.second}/01/EU-Installset-M#{version.csv.first}.dmg.zip",
       verified: "gdlp01.c-wss.com/"
   name "Canon EOS Utility"
   desc "Communication with Canon EOS cameras"
-  homepage "https://my.canon/en/support/0200653802/1"
+  homepage "https://app.ssw.imaging-saas.canon/app/en/eu.html"
 
   # Upstream provides an in-app update mechanism. To use this for livecheck we must access
   # the appcast feed that provides download links, and then use the links provided with
