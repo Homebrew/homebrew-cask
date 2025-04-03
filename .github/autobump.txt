@@ -1565,6 +1565,7 @@ vienna
 vienna-assistant
 vimcal
 vimr
+virtual-desktop-streamer
 virtualbox
 virtualbox@beta
 virtualbuddy
