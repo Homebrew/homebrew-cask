@@ -7,10 +7,7 @@ cask "abscissa" do
   desc "Plotting software"
   homepage "http://rbruehl.macbay.de/Abscissa/"
 
-  livecheck do
-    url "http://rbruehl.macbay.de/Abscissa/Downloads/"
-    regex(/href=.*?Abscissa-(\d+(?:\.\d+)+)\.zip/i)
-  end
+  disable! date: "2025-04-03", because: :no_longer_available
 
   depends_on macos: ">= :sierra"
 
