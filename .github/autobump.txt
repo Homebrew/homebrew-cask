@@ -1378,6 +1378,7 @@ sqlitestudio
 sqlpro-for-sqlite
 squash
 standard-notes
+starsector
 startupfolder
 staruml
 stash
