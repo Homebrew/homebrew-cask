@@ -7,9 +7,15 @@ cask "qlmarkdown" do
   desc "Quick Look generator for Markdown files"
   homepage "https://github.com/sbarex/QLMarkdown"
 
+  # The Sparkle feed contains `pubDate` values that are in Italian (e.g.
+  # mar, 31 dic 2024 18:36:00 +0100), so the `Sparkle` strategy doesn't
+  # accurately sort the items by date. We have to work with all the feed items
+  # in the `strategy` block, as a way of avoiding the sorting issues.
   livecheck do
     url "https://sbarex.github.io/QLMarkdown/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true
