@@ -9,19 +9,31 @@ cask "santa" do
 
   pkg "santa-#{version}.pkg"
 
-  uninstall launchctl: [
+  uninstall early_script: {
+              executable:   "/Applications/Santa.app/Contents/MacOS/Santa",
+              args:         ["--unload-system-extension"],
+              sudo:         true,
+              must_succeed: false,
+            },
+            launchctl:    [
               "com.northpolesec.santa",
               "com.northpolesec.santa.bundleservice",
               "com.northpolesec.santa.metricservice",
               "com.northpolesec.santa.syncservice",
               "com.northpolesec.santad",
             ],
-            kext:      "com.northpolesec.santa-driver",
-            pkgutil:   "com.northpolesec.santa",
-            delete:    [
+            pkgutil:      "com.northpolesec.santa",
+            delete:       [
               "/Applications/Santa.app",
               "/usr/local/bin/santactl",
             ]
 
-  # No zap stanza required
+  zap delete: [
+        "/var/db/santa",
+        "/var/log/santa*",
+      ],
+      trash:  [
+        "/private/etc/asl/com.northpolesec.santa.asl.conf",
+        "/private/etc/newsyslog.d/com.northpolesec.santa.newsyslog.conf",
+      ]
 end
