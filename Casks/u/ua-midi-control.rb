@@ -1,6 +1,6 @@
 cask "ua-midi-control" do
-  version "5.11.1"
-  sha256 "ced41730d57ebd60b2a5d11426645f7fdadbc218161527c091671e567ce2df56"
+  version "5.11.2"
+  sha256 "49aeaec28a54d363e0d6193c71748daa4ad3edfc0788fc1a5e29e31e80db504c"
 
   url "https://objects-us-east-1.dream.io/ua-midi-control/builds/UA%20Midi%20Control%20#{version}.zip",
       verified: "dream.io/ua-midi-control/"
