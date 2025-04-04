@@ -1,6 +1,6 @@
 cask "dosbox-staging" do
-  version "0.82.0"
-  sha256 "ff77f0647d2431f010c6d9dcc29bcf3ab1177cb40fef1009d9bafd1475180b5b"
+  version "0.82.1"
+  sha256 "8e2e7b68bdac71c1ae5258e0f24fd06c0778ce62c80042d604d141a0b5c1878a"
 
   url "https://github.com/dosbox-staging/dosbox-staging/releases/download/v#{version}/dosbox-staging-macOS-v#{version}.dmg"
   name "DOSBox Staging"
