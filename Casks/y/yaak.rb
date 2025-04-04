@@ -19,6 +19,7 @@ cask "yaak" do
   end
 
   auto_updates true
+  conflicts_with cask: "yaak@beta"
   depends_on macos: ">= :ventura"
 
   app "yaak.app"
