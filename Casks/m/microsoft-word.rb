@@ -56,8 +56,8 @@ cask "microsoft-word" do
     end
   end
   on_ventura :or_newer do
-    version "16.95.25032931"
-    sha256 "e12f4249ab0581b550ba0d1b480232b532539e132c5f31d3afd9903cdab7b6c6"
+    version "16.95.25040241"
+    sha256 "efb1fdd356bae6efffa7ee3fd8e4c767be418223d338d4bb5071c3216f1f2026"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525134"
