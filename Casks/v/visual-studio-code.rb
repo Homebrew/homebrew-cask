@@ -11,9 +11,9 @@ cask "visual-studio-code" do
     end
   end
   on_big_sur :or_newer do
-    version "1.98.2"
-    sha256 arm:   "ac89add013db53126c99387a9178781b8d67a69d4defad871d297cc7c4cfc603",
-           intel: "dbb2de3b0fc513871826c6efe9552084e409b7249f3b4e0c85ac6a95eed762f8"
+    version "1.99.0"
+    sha256 arm:   "ed3abb9daa5f693f865b4a6846fadca138ccffa1c39e667591e47144d93a6383",
+           intel: "ae2fffaf66ad2c105373a9c895556d74f65739dcea6533c703ad802fd350adde"
 
     livecheck do
       url "https://update.code.visualstudio.com/api/update/#{arch}/stable/latest"
