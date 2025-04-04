@@ -49,19 +49,19 @@ cask "cocktail" do
   end
   on_ventura :or_newer do
     on_ventura do
-      version "16.6"
+      version "16.7"
       sha256 :no_check
 
       url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
     end
     on_sonoma do
-      version "17.9.1"
+      version "17.10"
       sha256 :no_check
 
       url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
     end
     on_sequoia :or_newer do
-      version "18.3.2"
+      version "18.4"
       sha256 :no_check
 
       url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
