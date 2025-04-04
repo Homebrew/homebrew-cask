@@ -1,7 +1,7 @@
 cask "splice" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.2.9"
+  version "5.3.1"
   sha256 :no_check
 
   url "https://desktop.splice.com/darwin/stable/#{arch}/Splice.app.zip"
