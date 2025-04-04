@@ -5,11 +5,10 @@ cask "miniconda" do
   sha256 arm:   "16e7eea739d470d0c3451e9bb779bbfa169b98cfb283d2d6508945e0c6b36ada",
          intel: "0df9f4b7d063a78d18fd02af2b0a97121879af00b535ea79ee23d68d1005e6f8"
 
-  url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh",
-      verified: "repo.anaconda.com/miniconda/"
+  url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh"
   name "Miniconda"
   desc "Minimal installer for conda"
-  homepage "https://docs.conda.io/en/latest/miniconda.html"
+  homepage "https://www.anaconda.com/docs/getting-started/miniconda/main"
 
   livecheck do
     url "https://repo.anaconda.com/miniconda/"
