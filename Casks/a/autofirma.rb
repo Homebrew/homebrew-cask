@@ -10,13 +10,16 @@ cask "autofirma" do
       verified: "estaticos.redsara.es/comunes/autofirma/"
   name "AutoFirma"
   desc "Digital signature editor and validator"
-  homepage "https://firmaelectronica.gob.es/Home/Descargas.htm"
+  homepage "https://firmaelectronica.gob.es/ciudadanos/descargas"
 
   livecheck do
     url :homepage
-    regex(%r{autofirma/(\d+)/(\d+)/(\d+)/AutoFirma[._-]Mac[._-]#{arch}\.zip}i)
+    regex(/Versión\s+v?(\d+(?:\.\d+)+)\s+para\s+MacOS\s+procesadores\s+#{arch}/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}.#{match[2]}" }
+      match = page.match(regex)
+      next if match.blank?
+
+      match[1]
     end
   end
 
