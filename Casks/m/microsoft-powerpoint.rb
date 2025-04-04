@@ -56,8 +56,8 @@ cask "microsoft-powerpoint" do
     end
   end
   on_ventura :or_newer do
-    version "16.95.25032931"
-    sha256 "fe9168bb6cdef4585024afa63331598d8032174e6501f7cf8547f6712a602071"
+    version "16.95.25040241"
+    sha256 "34c8c5d4a437754d31e8e2d4553ee3b9ae5671e91478ec8e9046b13573cad9ae"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
