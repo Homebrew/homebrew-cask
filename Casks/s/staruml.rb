@@ -1,9 +1,9 @@
 cask "staruml" do
   arch arm: "-arm64"
 
-  version "6.3.1"
-  sha256 arm:   "6e91fdafb42877f670af06d57b07e2efe2fb3f07185be3e247ea1e3fba81ed66",
-         intel: "613be3c55f6495e711e696284d1c1b44f8b012b9166e172ac5ef594128a8148d"
+  version "6.3.2"
+  sha256 arm:   "e0264fad5c88dddf4d3056cc3a2b710903d1a91f875f3a480917f76a8a3afa6a",
+         intel: "88c880ce5076ade219fae6f47893c16865d9e35a5628629740c3093214b9ad92"
 
   url "https://files.staruml.io/releases-v#{version.major}/StarUML-#{version}#{arch}.dmg"
   name "StarUML"
