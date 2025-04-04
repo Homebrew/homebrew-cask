@@ -7,7 +7,10 @@ cask "divvy" do
   desc "Application window manager focusing on simplicity"
   homepage "https://mizage.com/divvy/"
 
-  deprecate! date: "2025-03-30", because: :unmaintained
+  livecheck do
+    url "https://mizage.com/updates/profiles/divvy.php"
+    strategy :sparkle, &:short_version
+  end
 
   app "Divvy.app"
 
