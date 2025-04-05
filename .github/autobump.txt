@@ -1035,6 +1035,7 @@ openvanilla
 openvpn-connect
 openwebstart
 opera
+opera-air
 opera-gx
 opera@beta
 opera@developer
@@ -1665,6 +1666,7 @@ xnconvert
 xnviewmp
 xpra
 yaak
+yaak@beta
 yandex-cloud-cli
 yandex-music
 yealink-meeting
