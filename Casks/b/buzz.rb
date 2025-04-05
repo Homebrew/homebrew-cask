@@ -11,6 +11,7 @@ cask "buzz" do
   homepage "https://github.com/chidiwilliams/buzz"
 
   deprecate! date: "2024-04-03", because: :moved_to_mas
+  disable! date: "2025-04-05", because: :moved_to_mas
 
   app "Buzz.app"
 
