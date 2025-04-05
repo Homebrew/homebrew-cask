@@ -12,6 +12,7 @@ cask "scrolla" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "Scrolla.app"
@@ -23,6 +24,8 @@ cask "scrolla" do
     "~/Library/Caches/mo.com.sleeplessmind.Scrolla",
     "~/Library/Containers/mo.com.sleeplessmind.Scrolla",
     "~/Library/Containers/mo.com.sleeplessmind.Scrolla-LaunchAtLoginHelper",
+    "~/Library/HTTPStorages/mo.com.sleeplessmind.Scrolla",
+    "~/Library/HTTPStorages/mo.com.sleeplessmind.Scrolla.binarycookies",
     "~/Library/Preferences/mo.com.sleeplessmind.Scrolla.plist",
     "~/Library/Saved Application State/mo.com.sleeplessmind.Scrolla.savedState",
   ]
