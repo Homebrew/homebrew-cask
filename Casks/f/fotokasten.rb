@@ -13,6 +13,7 @@ cask "fotokasten" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Fotokasten.app"
@@ -20,8 +21,11 @@ cask "fotokasten" do
   zap trash: [
     "~/Library/Application Support/de.designer.fotokasten.osx",
     "~/Library/Caches/de.designer.fotokasten.osx",
+    "~/Library/HTTPStorages/de.designer.fotokasten.osx",
+    "~/Library/HTTPStorages/de.designer.fotokasten.osx.binarycookies",
     "~/Library/Logs/fotokasten",
     "~/Library/Preferences/de.designer.fotokasten.osx.plist",
+    "~/Library/Saved Application State/de.designer.fotokasten.osx.savedState",
     "~/Library/WebKit/de.designer.fotokasten.osx",
   ]
 
