@@ -12,6 +12,7 @@ cask "ditto" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Ditto.app"
@@ -22,7 +23,10 @@ cask "ditto" do
   ]
 
   zap trash: [
+    "~/Library/Application Support/Logs/Ditto.log*",
     "~/Library/Caches/com.squirrels.Ditto",
+    "~/Library/HTTPStorages/com.squirrels.Ditto",
     "~/Library/Preferences/com.squirrels.Ditto.plist",
+    "~/Library/Saved Application State/com.squirrels.Ditto.savedState",
   ]
 end
