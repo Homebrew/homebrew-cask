@@ -184,6 +184,7 @@ browser-deputy
 browserosaurus
 browserstacklocal
 bruno
+buckets@beta
 burp-suite
 burp-suite-professional
 busycal
