@@ -12,6 +12,9 @@ cask "disk-diet" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
+
   app "Disk Diet.app"
 
   zap trash: [
@@ -19,6 +22,9 @@ cask "disk-diet" do
     "/Library/PrivilegedHelperTools/com.tunabellysoftware.DiskDietHelper",
     "~/Library/Application Support/Disk Diet",
     "~/Library/Caches/com.tunabellysoftware.diskdiet",
+    "~/Library/HTTPStorages/com.tunabellysoftware.diskdiet",
+    "~/Library/HTTPStorages/com.tunabellysoftware.diskdiet.binarycookies",
     "~/Library/Preferences/com.tunabellysoftware.diskdiet.plist",
+    "~/Library/Saved Application State/com.tunabellysoftware.diskdiet.savedState",
   ]
 end
