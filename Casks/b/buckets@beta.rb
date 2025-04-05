@@ -1,9 +1,9 @@
 cask "buckets@beta" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.78.0"
-  sha256 arm:   "6635d9c6a2d46dfa5b92937460a71cf630a5b59a6fe07efa74a575f1b906c369",
-         intel: "0e7a3fad75d0fd6f74242a35688e359b5056766908a0e59ec30bc550831a9be2"
+  version "0.79.0"
+  sha256 arm:   "e06daa8ec0a3520864b51ab231615c8c42bb3c5d670c84deb5ef2093b7706ab7",
+         intel: "431ac6650475fa84eea1bd80b7c63e06122a915928bc1979c0a617cf7ffe9e69"
 
   url "https://github.com/buckets/desktop-beta/releases/download/v#{version}/Buckets-Beta-#{arch}-#{version}.dmg",
       verified: "github.com/buckets/desktop-beta/"
