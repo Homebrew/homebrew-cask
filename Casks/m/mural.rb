@@ -12,12 +12,16 @@ cask "mural" do
     strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "MURAL.app"
 
   zap trash: [
+    "~/Library/Application Support/Mural for macOS",
     "~/Library/Application Support/murally-electron",
+    "~/Library/Caches/mural-updater",
+    "~/Library/Logs/Mural for macOS",
     "~/Library/Logs/MURAL",
     "~/Library/Logs/murally-electron",
     "~/Library/Preferences/co.mural.macOS.plist",
