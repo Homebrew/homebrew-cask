@@ -2,9 +2,10 @@ cask "font-maple-mono-nf" do
   version "7.0"
   sha256 "e4fe360470e722fe19378ac3b4458509611cf8d7cf774a874f654e5b62619fe4"
 
-  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-NF-unhinted.zip"
+  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-NF-unhinted.zip",
+      verified: "github.com/subframe7536/Maple-font/"
   name "Maple Mono NF"
-  homepage "https://github.com/subframe7536/Maple-font"
+  homepage "https://font.subf.dev/en/"
 
   livecheck do
     cask "font-maple-mono"
