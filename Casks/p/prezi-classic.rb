@@ -7,12 +7,7 @@ cask "prezi-classic" do
   desc "Desktop client for the Prezi presentation SaaS"
   homepage "https://prezi.com/desktop"
 
-  livecheck do
-    url "https://prezidesktop.s3.amazonaws.com/assets/mac/pd6/updates/prezi-classic.xml"
-    strategy :sparkle do |items|
-      items.map(&:nice_version)
-    end
-  end
+  disable! date: "2025-04-05", because: :discontinued
 
   app "Prezi Classic.app"
 
