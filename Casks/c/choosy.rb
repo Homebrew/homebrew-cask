@@ -96,11 +96,39 @@ cask "choosy" do
   desc "Open links in any browser"
   homepage "https://choosy.app/"
 
+  auto_updates true
+
   uninstall quit:    "com.choosyosx.Choosy",
             pkgutil: "com.choosyosx.Choosy"
 
   zap trash: [
+    "~/Library/Application Scripts/*.com.choosyosx.Choosy",
+    "~/Library/Application Scripts/com.choosyosx.Choosy.Safari",
+    "~/Library/Application Scripts/com.choosyosx.Choosy.Share",
+    "~/Library/Application Support/BraveSoftware/Brave-Browser-Beta/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/BraveSoftware/Brave-Browser-Nightly/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/BraveSoftware/Brave-Browser/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
     "~/Library/Application Support/Choosy",
+    "~/Library/Application Support/com.operasoftware.Opera/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/com.operasoftware.OperaDeveloper/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/com.operasoftware.OperaNext/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Google/Chrome Beta/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Google/Chrome Canary/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Google/Chrome Dev/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Microsoft Edge Beta/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Microsoft Edge Canary/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Microsoft Edge Dev/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Microsoft Edge/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Mozilla/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Vivaldi Snapshot/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Application Support/Vivaldi/NativeMessagingHosts/com.choosyosx.choosy.nativemessaging.json",
+    "~/Library/Caches/com.apple.helpd/Generated/com.choosyosx.Choosy.help*",
+    "~/Library/Caches/com.choosyosx.Choosy",
+    "~/Library/Containers/com.choosyosx.Choosy.Safari",
+    "~/Library/Containers/com.choosyosx.Choosy.Share",
+    "~/Library/Group Containers/*.com.choosyosx.Choosy",
+    "~/Library/HTTPStorages/com.choosyosx.Choosy",
     "~/Library/Preferences/com.choosyosx.ChoosyPrefPane.plist",
   ]
 end
