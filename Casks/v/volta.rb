@@ -16,6 +16,7 @@ cask "volta" do
     strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Volta.app"
@@ -23,9 +24,12 @@ cask "volta" do
   uninstall quit: "com.volta.net"
 
   zap trash: [
+    "~/Library/Application Support/Caches/volta-app-updater",
     "~/Library/Application Support/volta-app",
     "~/Library/Caches/com.volta.net",
     "~/Library/Caches/com.volta.net.ShipIt",
+    "~/Library/HTTPStorages/com.volta.net",
+    "~/Library/Preferences/ByHost/com.volta.net.ShipIt.*.plist",
     "~/Library/Preferences/com.volta.net.plist",
     "~/Library/Saved Application State/com.volta.net.savedState",
   ]
