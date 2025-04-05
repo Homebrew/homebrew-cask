@@ -12,6 +12,7 @@ cask "transfer" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Transfer.app"
@@ -19,7 +20,12 @@ cask "transfer" do
   zap trash: [
     "~/Library/Application Support/Transfer",
     "~/Library/Caches/com.adriangranados.Transfer",
+    "~/Library/Caches/com.apple.helpd/Generated/com.intuitibits.transfer.help*",
+    "~/Library/HTTPStorages/com.adriangranados.Transfer",
+    "~/Library/HTTPStorages/com.adriangranados.Transfer.binarycookies",
     "~/Library/Preferences/com.adriangranados.Transfer.plist",
+    "~/Library/Saved Application State/com.adriangranados.Transfer.savedState",
+    "~/Library/WebKit/com.adriangranados.Transfer",
     "~/Transfer",
   ]
 end
