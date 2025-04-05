@@ -3,7 +3,8 @@ cask "mailmaster" do
   sha256 :no_check
 
   url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
-      verified: "res.126.net/dl/client/macmail/dashi/"
+      verified:   "res.126.net/dl/client/macmail/dashi/",
+      user_agent: :fake
   name "NetEase Mail Master"
   name "网易邮箱大师"
   desc "Email client"
