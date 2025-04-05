@@ -1,6 +1,6 @@
 cask "duo-connect" do
-  version "2.0.5"
-  sha256 "5b580fb2721212cab63479c53a3ecf56cee0339cb58aafcc899ceb502229989a"
+  version "2.0.6"
+  sha256 "980e8018aa5db260abbcbb50b87edf087e6307311362102d7d784e49e28f6e30"
 
   url "https://dl.duosecurity.com/DuoConnect-#{version}.pkg",
       verified: "dl.duosecurity.com/"
