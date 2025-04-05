@@ -12,6 +12,7 @@ cask "pagico" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Pagico.app"
@@ -24,6 +25,7 @@ cask "pagico" do
     "~/Library/HTTPStorages/com.pagico.mac",
     "~/Library/PagicoHelpers",
     "~/Library/Preferences/com.pagico.mac.plist",
+    "~/Library/Saved Application State/com.pagico.mac.savedState",
     "~/Library/WebKit/com.pagico.mac",
   ]
 end
