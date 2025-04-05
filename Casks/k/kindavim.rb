@@ -12,6 +12,7 @@ cask "kindavim" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "kindaVim.app"
@@ -27,5 +28,6 @@ cask "kindavim" do
     "~/Library/HTTPStorages/mo.com.sleeplessmind.kindaVim.binarycookies",
     "~/Library/Preferences/mo.com.sleeplessmind.kindaVim.plist",
     "~/Library/Saved Application State/mo.com.sleeplessmind.kindaVim.savedState",
+    "~/Library/WebKit/mo.com.sleeplessmind.kindaVim",
   ]
 end
