@@ -18,6 +18,7 @@ cask "elephas" do
     end
   end
 
+  auto_updates true
   conflicts_with cask: "elephas@beta"
   depends_on macos: ">= :monterey"
 
