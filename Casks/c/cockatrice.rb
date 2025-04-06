@@ -11,8 +11,8 @@ cask "cockatrice" do
     end
   end
   on_ventura do
-    version "2.10.1,2025-03-27,Omenpath,2.10.1"
-    sha256 "a342b4560cf69f9eccad5c3446ba74ed94068edbb3a8439210f6b4f0c777ffcd"
+    version "2.10.2,2025-04-03,Omenpath,2.10.2"
+    sha256 "c9e59ebe3eba15dd84d9a7bda73ab63866119aeec6d2740974e32c574fee25b1"
 
     url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS13_Intel.dmg",
         verified: "github.com/Cockatrice/Cockatrice/"
@@ -22,15 +22,15 @@ cask "cockatrice" do
     end
   end
   on_sonoma do
-    version "2.10.1,2025-03-27,Omenpath,2.10.1"
-    sha256 "2b104fb1c689264e8fdd727919fe4639e7e874de474acb9d546719e5c724b67d"
+    version "2.10.2,2025-04-03,Omenpath,2.10.2"
+    sha256 "05e9cb269d7cd406d4368a1f71e4fc46fcb2f5ee4966f53c4f51060ab2fda33e"
 
     url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS14_Apple.dmg",
         verified: "github.com/Cockatrice/Cockatrice/"
   end
   on_sequoia :or_newer do
-    version "2.10.1,2025-03-27,Omenpath,2.10.1"
-    sha256 "700abf83e88bf1f7f13c80bba9d70fd68b2a7c64b1d3ee63d5e2888cf7ff80f8"
+    version "2.10.2,2025-04-03,Omenpath,2.10.2"
+    sha256 "db074a25dc144aee8e665f7caeca7c8067cdf119e930dc4c98d9016c5e2034e2"
 
     url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS15_Apple.dmg",
         verified: "github.com/Cockatrice/Cockatrice/"
