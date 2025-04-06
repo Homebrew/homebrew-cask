@@ -1,17 +1,18 @@
 cask "vsdx-annotator" do
-  version "1.16.1"
-  sha256 :no_check
+  version "1.16.1,563"
+  sha256 "87c9b3428831a535a0f1ef5cdf05bed85172fea2daccc01b43d668ee121ecb87"
 
-  url "https://nektony.com/download/vsdxannotator.dmg"
+  url "https://download.nektony.com/promo/vsdx-annotator/update/update_v#{version.csv.first}b#{version.csv.second}.zip"
   name "Nektony VSDX Annotator"
   desc "Preview, edit and convert Visio drawings"
   homepage "https://nektony.com/products/vsdx-annotator-mac"
 
   livecheck do
     url "https://download.nektony.com/promo/vsdx-annotator/update/update.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "VSDX Annotator.app"
