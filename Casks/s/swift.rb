@@ -12,11 +12,14 @@ cask "swift" do
     strategy :sparkle, &:version
   end
 
+  auto_updates true
+
   app "Swift.app"
 
   zap trash: [
     "~/Library/Application Support/Swift",
     "~/Library/Caches/im.swift.Swift",
+    "~/Library/HTTPStorages/im.swift.Swift",
     "~/Library/Preferences/im.swift.Swift.plist",
     "~/Library/Saved Application State/im.swift.Swift.savedState",
   ]
