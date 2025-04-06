@@ -13,6 +13,7 @@ cask "command-tab-plus" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Command-Tab Plus #{version.major}.app"
@@ -20,6 +21,8 @@ cask "command-tab-plus" do
   zap trash: [
     "~/Library/Application Support/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}",
     "~/Library/Caches/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}",
+    "~/Library/HTTPStorages/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}",
+    "~/Library/HTTPStorages/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}.binarycookies",
     "~/Library/Preferences/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}.plist",
   ]
 end
