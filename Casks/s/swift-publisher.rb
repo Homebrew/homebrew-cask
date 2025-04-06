@@ -13,17 +13,21 @@ cask "swift-publisher" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Swift Publisher #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/7TJZ7EZWM6.com.belightsoft.PrintProducts",
-    "~/Library/Caches/com.belightsoft.SwiftPublisher5",
+    "~/Library/Application Scripts/com.belightsoft.SwiftPublisher#{version.major}.Thumbnail-Extension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.belightsoft.swiftpublisher#{version.major}.sfl*",
+    "~/Library/Caches/com.belightsoft.SwiftPublisher#{version.major}",
+    "~/Library/Containers/com.belightsoft.SwiftPublisher#{version.major}.Thumbnail-Extension",
     "~/Library/Group Containers/7TJZ7EZWM6.com.belightsoft.PrintProducts",
-    "~/Library/HTTPStorages/com.belightsoft.SwiftPublisher5",
-    "~/Library/Preferences/com.belightsoft.SwiftPublisher5.plist",
-    "~/Library/Saved Application State/com.belightsoft.SwiftPublisher5.savedState",
-    "~/Library/WebKit/Databases/___IndexedDB/com.belightsoft.SwiftPublisher5",
+    "~/Library/HTTPStorages/com.belightsoft.SwiftPublisher#{version.major}",
+    "~/Library/Preferences/com.belightsoft.SwiftPublisher#{version.major}.plist",
+    "~/Library/Saved Application State/com.belightsoft.SwiftPublisher#{version.major}.savedState",
+    "~/Library/WebKit/Databases/___IndexedDB/com.belightsoft.SwiftPublisher#{version.major}",
   ]
 end
