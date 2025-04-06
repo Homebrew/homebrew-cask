@@ -7,10 +7,7 @@ cask "trilium-notes" do
   desc "Personal knowledge base"
   homepage "https://github.com/zadam/trilium"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2025-04-05", because: :unmaintained, replacement: "triliumnext-notes"
 
   depends_on macos: ">= :high_sierra"
 
