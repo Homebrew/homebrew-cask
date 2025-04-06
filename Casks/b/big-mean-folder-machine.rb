@@ -12,6 +12,8 @@ cask "big-mean-folder-machine" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "Big Mean Folder Machine #{version.major}.app"
 
   zap trash: [
