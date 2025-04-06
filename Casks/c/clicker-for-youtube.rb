@@ -12,6 +12,7 @@ cask "clicker-for-youtube" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Clicker for YouTube.app"
@@ -21,6 +22,8 @@ cask "clicker-for-youtube" do
     "~/Library/Application Scripts/com.dbklabs.clicker-for-youtube.Open-in-Clicker-for-YouTube",
     "~/Library/Caches/com.dbklabs.clicker-for-youtube",
     "~/Library/Containers/com.dbklabs.clicker-for-youtube.Open-in-Clicker-for-YouTube",
+    "~/Library/HTTPStorages/com.dbklabs.clicker-for-youtube",
+    "~/Library/HTTPStorages/com.dbklabs.clicker-for-youtube.binarycookies",
     "~/Library/Preferences/com.dbklabs.clicker-for-youtube.plist",
     "~/Library/WebKit/com.dbklabs.clicker-for-youtube",
   ]
