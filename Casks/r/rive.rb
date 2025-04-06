@@ -12,12 +12,14 @@ cask "rive" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Rive.app"
 
   zap trash: [
     "~/Library/Application Scripts/app.rive.editor",
+    "~/Library/Caches/app.rive.editor",
     "~/Library/Containers/app.rive.editor",
   ]
 end
