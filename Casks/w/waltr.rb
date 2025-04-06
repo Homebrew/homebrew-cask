@@ -5,12 +5,14 @@ cask "waltr" do
   url "https://shining.softorino.com/shine_uploads/waltr#{version.major}mac_#{version}.dmg"
   name "WALTR"
   desc "Media direct transfer tool for Apple devices"
-  homepage "https://softorino.com/w#{version.major}/"
+  homepage "https://softorino.com/legacy/waltr"
 
   livecheck do
     url "https://shining.softorino.com/appcast.php?abbr=w#{version.major}m"
     strategy :sparkle
   end
+
+  auto_updates true
 
   app "Waltr #{version.major}.app"
 
@@ -19,7 +21,7 @@ cask "waltr" do
     "/Users/Shared/Waltr",
     "~/Library/Application Support/Waltr #{version.major}",
     "~/Library/Application Support/Waltr",
-    "~/Library/Preferences/com.softorino.waltr2.plist",
+    "~/Library/Preferences/com.softorino.waltr#{version.major}.plist",
   ]
 
   caveats do
