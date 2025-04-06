@@ -37,21 +37,21 @@ cask "firefox@developer-edition" do
     sha256 "a629e8f06d052e7bfa774ca3c3ceddba57d9a834bd699b8eb021b0b8295f39b6"
     "it"
   end
-  language "nl" do
-    sha256 "dbae91b1b840fa942d554a775ded793203367a32b8a68d5f90bc4e4a6f725376"
-    "nl"
-  end
   language "ja" do
     sha256 "f8c8fdc5eae9152b8499f404f77e2dee28f8c506640065a0f50c22343fd80675"
     "ja-JP-mac"
   end
-  language "pt-BR" do
-    sha256 "623d61f1425d297437ade216b755aa4dc557d8f50aed466bf2c2b5c574e14f8d"
-    "pt-BR"
-  end
   language "ko" do
     sha256 "7d11903cdabc48f72c7b0838c9be6164be4a55e261c7084edc89f02d6800b910"
     "ko"
+  end
+  language "nl" do
+    sha256 "dbae91b1b840fa942d554a775ded793203367a32b8a68d5f90bc4e4a6f725376"
+    "nl"
+  end
+  language "pt-BR" do
+    sha256 "623d61f1425d297437ade216b755aa4dc557d8f50aed466bf2c2b5c574e14f8d"
+    "pt-BR"
   end
   language "ru" do
     sha256 "66d4ae5b3dc7396e189621423bbe1f6086d1b4ba4392f069b892b3774ea5659d"
