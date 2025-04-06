@@ -12,6 +12,7 @@ cask "wifi-explorer-pro" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   pkg "WiFiExplorerPro_#{version}.pkg"
