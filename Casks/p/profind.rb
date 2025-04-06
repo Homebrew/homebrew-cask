@@ -12,6 +12,7 @@ cask "profind" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "ProFind.app"
@@ -20,6 +21,7 @@ cask "profind" do
     "~/Library/Application Scripts/com.zeroonetwenty.ProFind",
     "~/Library/Application Support/com.zeroonetwenty.ProFind",
     "~/Library/Caches/com.zeroonetwenty.ProFind",
+    "~/Library/HTTPStorages/com.zeroonetwenty.ProFind",
     "~/Library/Preferences/com.zeroonetwenty.ProFind.plist",
     "~/Library/Saved Application State/com.zeroonetwenty.ProFind.savedState",
   ]
