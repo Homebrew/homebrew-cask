@@ -8,16 +8,7 @@ cask "obsbot-center" do
   desc "Configuration and firmware update utility for OBSBOT Tiny and Meet series"
   homepage "https://www.obsbot.com/download"
 
-  livecheck do
-    url "https://www.obsbot.com/download/obsbot-tiny-series"
-    regex(/href=.*?Obsbot[._-]Center[._-]OA[._-]E[._-]MacOS[._-]v?(\d+(?:\.\d+)+)[._-]release\.dmg/i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
-  end
+  disable! date: "2025-04-07", because: "download artifact behind signed url"
 
   depends_on macos: ">= :big_sur"
 
