@@ -999,7 +999,6 @@ nwjs
 obs
 obs-advanced-scene-switcher
 obs@beta
-obsbot-center
 obscura-vpn
 obsidian
 ocenaudio
