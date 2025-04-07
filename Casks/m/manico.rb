@@ -12,9 +12,20 @@ cask "manico" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "Manico.app"
 
-  zap trash: "~/Library/Containers/im.manico.Manico"
+  uninstall login_item: "Manico"
+
+  zap trash: [
+    "~/Library/Application Support/im.manico.Manico",
+    "~/Library/Application Support/Manico",
+    "~/Library/Caches/im.manico.Manico",
+    "~/Library/Containers/im.manico.Manico",
+    "~/Library/HTTPStorages/im.manico.Manico",
+    "~/Library/Preferences/im.manico.Manico.plist",
+    "~/Library/WebKit/im.manico.Manico",
+  ]
 end

@@ -2,9 +2,9 @@ cask "simpletex" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x64"
 
-  version "0.2.10"
-  sha256 arm:   "57ba9b00bcc1aa89f8de78b2b775370f28bb4e3ca7cb1e839085e1f26355b64a",
-         intel: "95d60496b55b31233916d8f6ceac53fc885dbfb64de99ba04098f882dcea78cd"
+  version "0.2.11"
+  sha256 arm:   "e18dad77f1f7aff9a6d79832e1503468f0ff8948e22da91f8c41e17faa7163f7",
+         intel: "d6c3c579d5ed0d1b7b4660d3b0486313adca4e998c6931217dff06bc359adf69"
 
   url "https://update.simpletex.net/publish/electron/darwin/SimpleTex-#{version}#{arch}.dmg"
   name "SimpleTex"

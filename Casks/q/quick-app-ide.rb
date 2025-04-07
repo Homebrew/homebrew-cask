@@ -1,6 +1,6 @@
 cask "quick-app-ide" do
-  version "6.6.1"
-  sha256 "260be97a98b1b11aef430e82f0c35334b394953810a86f0988152fe21564dc17"
+  version "6.7.2"
+  sha256 "619cf8ba2ac75e66aedc43b433234b27fea0f53e11c6baec9ac3771c1f7824c5"
 
   url "https://statres.quickapp.cn/quickapp/show/ide/quickapp-ide-#{version}.pkg"
   name "Quick App IDE"
@@ -18,7 +18,10 @@ cask "quick-app-ide" do
   pkg "quickapp-ide-#{version}.pkg"
 
   uninstall quit:    "cn.quickapp.ide",
-            pkgutil: "com.mygreatcompany.pkg.quickAppIde"
+            pkgutil: [
+              "com.hapteam.app",
+              "com.mygreatcompany.pkg.quickAppIde",
+            ]
 
   zap trash: "~/.快应用开发工具"
 

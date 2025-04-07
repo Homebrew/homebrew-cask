@@ -17,6 +17,8 @@ cask "reunion" do
     end
   end
 
+  auto_updates true
+
   app "Reunion #{version.major}.app"
 
   zap trash: [

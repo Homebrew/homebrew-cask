@@ -13,13 +13,19 @@ cask "coherence-x" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Coherence X.app"
 
   zap trash: [
-    "~/Library/Application Support/ccom.BZG.CoherenceX*",
     "~/Library/Application Support/Coherence X",
-    "~/Library/Preferences/com.BZG.CoherenceX*",
+    "~/Library/Application Support/com.BZG.CoherenceX#{version.major}",
+    "~/Library/Caches/com.BZG.CoherenceX#{version.major}",
+    "~/Library/HTTPStorages/com.BZG.CoherenceX#{version.major}",
+    "~/Library/HTTPStorages/com.BZG.CoherenceX#{version.major}.binarycookies",
+    "~/Library/Preferences/com.BZG.CoherenceX#{version.major}.plist",
+    "~/Library/Saved Application State/com.BZG.CoherenceX#{version.major}.savedState",
+    "~/Library/WebKit/com.BZG.CoherenceX#{version.major}",
   ]
 end

@@ -184,6 +184,7 @@ browser-deputy
 browserosaurus
 browserstacklocal
 bruno
+buckets@beta
 burp-suite
 burp-suite-professional
 busycal
@@ -586,6 +587,7 @@ goland
 gologin
 goodsync
 google-chrome@beta
+google-chrome@canary
 google-chrome@dev
 google-cloud-sdk
 gpg-suite@nightly
@@ -998,7 +1000,6 @@ nwjs
 obs
 obs-advanced-scene-switcher
 obs@beta
-obsbot-center
 obscura-vpn
 obsidian
 ocenaudio

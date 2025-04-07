@@ -8,15 +8,7 @@ cask "xiami" do
   desc "Music content management and distribution"
   homepage "https://www.xiami.com/"
 
-  livecheck do
-    url "https://g.alicdn.com/music/desktop-app/XiamiMac.xml"
-    regex(%r{/([^/]+)/([^/]+)\.zip}i)
-    strategy :sparkle do |item, regex|
-      item.url.scan(regex).map do |match|
-        "#{item.short_version},#{item.version},#{match[0]},#{match[1]}"
-      end
-    end
-  end
+  disable! date: "2025-04-05", because: :discontinued
 
   app "虾米音乐.app"
 

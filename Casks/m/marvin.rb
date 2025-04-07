@@ -17,9 +17,12 @@ cask "marvin" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Marvin.app"
 
   zap trash: [
+    "~/Library/Application Support/Caches/marvin-updater",
     "~/Library/Application Support/Marvin",
     "~/Library/Logs/Marvin",
     "~/Library/Preferences/com.amazingmarvin.marvindesktop.plist",

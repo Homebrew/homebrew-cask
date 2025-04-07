@@ -14,6 +14,7 @@ cask "betterandbetter" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "BetterAndBetter.app"
@@ -22,5 +23,10 @@ cask "betterandbetter" do
     "~/Library/Application Support/BetterAndBetter",
     "~/Library/Application Support/cn.better365.BetterAndBetter",
     "~/Library/Caches/cn.better365.BetterAndBetter",
+    "~/Library/HTTPStorages/cn.better365.BetterAndBetter",
+    "~/Library/HTTPStorages/cn.better365.BetterAndBetter.binarycookies",
+    "~/Library/Preferences/cn.better365.BetterAndBetter.plist",
+    "~/Library/Preferences/com.better365.BetterAndBetterHelper.plist",
+    "~/Library/WebKit/com.better365.BetterAndBetter",
   ]
 end

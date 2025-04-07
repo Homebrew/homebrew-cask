@@ -12,6 +12,7 @@ cask "whatsize" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   pkg "whatsize_#{version}.pkg"
@@ -23,8 +24,9 @@ cask "whatsize" do
     "~/Library/Application Support/WhatSize",
     "~/Library/Caches/com.id-design.v#{version.major}.whatsize",
     "~/Library/HTTPStorages/com.id-design.v#{version.major}.whatsize",
-    "~/Library/Logs/WhatSize.log",
+    "~/Library/Logs/WhatSize",
     "~/Library/Preferences/com.id-design.v#{version.major}.whatsize.plist",
     "~/Library/Saved Application State/com.id-design.v#{version.major}.whatsize.savedState",
+    "~/Library/WebKit/com.id-design.v#{version.major}.whatsize",
   ]
 end

@@ -1,6 +1,6 @@
 cask "clearvpn" do
-  version "3.2.2,202503.28.1306,1743173886"
-  sha256 "f351696d66546d58ba2de572eacd30386e3f3a93a657423510b96255bf7d8f25"
+  version "3.2.3,202504.03.1536,1743695206"
+  sha256 "c67d7691ee716f63ce1c6dc3b655c957eac8ff7750a6dbc7b0edbdd45aa635ca"
 
   url "https://dl.devmate.com/com.macpaw.clearvpn.macos-site-ver/#{version.csv.second}/#{version.csv.third}/ClearVPN-#{version.csv.second}.zip",
       verified: "dl.devmate.com/com.macpaw.clearvpn.macos-site-ver/"

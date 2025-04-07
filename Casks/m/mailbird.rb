@@ -3,9 +3,9 @@ cask "mailbird" do
   url_folder = on_arch_conditional arm: "apple", intel: "intel"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
-  version "1.4.1"
-  sha256 arm:   "a07fc67050f1c87137282d954a9fae8525c877e585f831d7b2a89246b592c2ee",
-         intel: "b054c893dbf70bb23c49b5476d6e344eb508dff2c55d6ab78069a233e6c3afb8"
+  version "1.5.0"
+  sha256 arm:   "70bd15ec7568b180bc4deb9645f8b75502a356ec4afe2c6f0b67fed20c5619a5",
+         intel: "4b53473bdd0729606911d6b944052f8ed605b13b560669b0f78dd211c0339fa6"
 
   url "https://download.getmailbird.com/installers/mailbird_next/macos/#{url_folder}/Mailbird-for-Mac-with-#{arch}-version-#{version}.dmg"
   name "Mailbird"

@@ -18,15 +18,19 @@ cask "melodics" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Melodics.app"
 
   zap trash: [
     "~/Library/Application Support/Melodics",
+    "~/Library/Caches/com.melodics.melodics",
     "~/Library/Caches/Melodics",
+    "~/Library/HTTPStorages/com.melodics.melodics",
     "~/Library/Preferences/com.melodics.Melodics.plist",
     "~/Library/Preferences/com.melodics.Melodics.updates.plist",
     "~/Library/Saved Application State/com.melodics.melodics.savedState",
+    "~/Library/WebKit/com.melodics.melodics",
   ]
 end
