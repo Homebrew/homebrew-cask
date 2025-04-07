@@ -8,13 +8,16 @@ cask "devonthink" do
     end
   end
   on_big_sur :or_newer do
-    version "3.9.8"
-    sha256 "c56169fa98b72c2f043f6c2ca55c996a8fddc539e0df2b351ea45714e2427c1e"
+    version "3.9.9"
+    sha256 "718bb6dd403e93a77b5902f243da5f0103fbc5d7962949df3a8b6ba28cdf368e"
 
+    # The appcast may include unstable versions where upstream doesn't specify a
+    # separate channel, so we have to identify stable versions using a regex.
     livecheck do
       url "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000"
-      strategy :sparkle do |items|
-        items.map(&:version)
+      regex(/^v?(\d+(?:\.\d+)+)$/i)
+      strategy :sparkle do |items, regex|
+        items.map { |item| item.version[regex, 1] }
       end
     end
   end
