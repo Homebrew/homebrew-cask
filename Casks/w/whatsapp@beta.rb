@@ -20,7 +20,7 @@ cask "whatsapp@beta" do
     "whatsapp",
     "whatsapp@legacy",
   ]
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "WhatsApp.app"
 
