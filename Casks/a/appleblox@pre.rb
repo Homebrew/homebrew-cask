@@ -1,4 +1,4 @@
-cask "appleblox" do
+cask "appleblox@pre" do
   version "0.8.6"
   sha256 "d66bbf82752dd323ad542902f1f5315d82a3eac7d33cd5076d1ad988e0a61046"
 
