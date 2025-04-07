@@ -1,6 +1,6 @@
 cask "rectangle-pro" do
-  version "3.0.47"
-  sha256 "20411093e7dd589369b317cf2eb153763a6e70e982b77974adb5b81496c22c02"
+  version "3.0.48"
+  sha256 "855d92bf315148c1d3a2f37720e35ea59a2e3d073ff77202daa98d06cbaed2bf"
 
   url "https://rectangleapp.com/pro/downloads/Rectangle%20Pro%20#{version}.dmg"
   name "Rectangle Pro"
