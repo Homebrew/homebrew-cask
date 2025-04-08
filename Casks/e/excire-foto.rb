@@ -6,7 +6,7 @@ cask "excire-foto" do
          intel: "850f6cb96c66536bd33a7df10ae47cb4699d756aad01566456f3b956f58f6d71"
 
   url "https://www.excire.com/downloads/excire-foto/ExcireFoto-#{version}-#{arch}.dmg.zip"
-  name "excire-foto"
+  name "Excire Foto"
   desc "Photo library manager with object recognition, search, and culling tools"
   homepage "https://excire.com/en/excire-foto/"
 
