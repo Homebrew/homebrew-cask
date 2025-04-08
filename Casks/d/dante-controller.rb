@@ -6,7 +6,7 @@ cask "dante-controller" do
       verified: "audinate-software-updates.sgp1.cdn.digitaloceanspaces.com/DanteController/"
   name "Dante Controller"
   desc "Control inputs and outputs on a Dante network"
-  homepage "https://www.audinate.com/products/software/dante-controller"
+  homepage "https://www.getdante.com/products/software-essentials/dante-controller/"
 
   livecheck do
     url "https://audinate.jfrog.io/artifactory/ad8-software-updates-prod/DanteController/appcast/DanteController-OSX.xml"
