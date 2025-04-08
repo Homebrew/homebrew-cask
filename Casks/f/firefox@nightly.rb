@@ -1,87 +1,99 @@
 cask "firefox@nightly" do
-  version "139.0a1"
+  version "139.0a1,2025-04-07-21-29-17"
 
   language "ca" do
-    sha256 "a48eb857b71724abf9c047c14f4a2e8275a22ce684ec9f11cec1494c52afa7dc"
+    sha256 "9eca191f3f0ba029b9ddb9adb142078b949a17d9778be4c259fa5c542199c059"
     "ca"
   end
   language "cs" do
-    sha256 "8e8f7eef49a010f55771cbe20961419bbe4356eec84024d725286f3245207605"
+    sha256 "ec123979c6d2bd6f48ab66cc0bda34e6bb1846b71dd3fd57841043de2827e332"
     "cs"
   end
   language "de" do
-    sha256 "dda8b273ec0f39de6dda12d6d287048dd731799d938a9839f66ecfe53cd96868"
+    sha256 "745360e662ca46200420ea6f108d3773251d9001154705d74519837ecb6c6508"
     "de"
   end
   language "en-CA" do
-    sha256 "c2de152310cda7ad1abe6a4c01d4526dc8ad42cbbd7bd274416f2e5634878033"
+    sha256 "60b7ab8a5103b67f141f36c689d4603ad6a31e7855902d51bfa80a773a8f07bb"
     "en-CA"
   end
   language "en-GB" do
-    sha256 "b2e5f20d80100bcd4fa70098178ecb9e3b58d3e57aa389fd78b35a8a40fbf874"
+    sha256 "c51461fcbade70542fa7022ff8da91bc7f190894ec64d681a6a407e38073f73a"
     "en-GB"
   end
   language "en", default: true do
-    sha256 "26c15708a7ff163b0690557602a53a6f5fb556e1f77351ab9db17799099d2119"
+    sha256 "44f649f92c6e11e1086828f8a32264592464704ada6e5b745b416edfb5bb7b3b"
     "en-US"
   end
   language "es" do
-    sha256 "812e6e7906814fc07c171dab934bdcd561cfed13610af3965dc5dd8655fb5be8"
+    sha256 "89fdd2590356ed61f15ec32c8909a0187449f57a54e9965d2151cbfac3f4ae2e"
     "es-ES"
   end
   language "fr" do
-    sha256 "6ebf18babd80526eb41f14c671eb28169c13d31e7d69e4ad22e8f5a4108cae5c"
+    sha256 "d67dad0b466dab915300c6177f2b67fddaeac5cef328913cd53cc3fd2c7e3b76"
     "fr"
   end
   language "it" do
-    sha256 "b1b37c2ee7d4e284308424cc5c7c28946587f46077320ce0b4a4557321389ae1"
+    sha256 "29e8618df1afccfbb9b7e5b2756a8d42bf7c426f517926cedd358c0acf88f853"
     "it"
   end
   language "ja" do
-    sha256 "ed6d8a103fc088c5cea71a5a349cb15766aa57fd5b7f58f19cc97e9307202544"
+    sha256 "0f4aaf3e9f67d7674117a328aacc197c8a141eb255df2f6e506fcb209aa1f4a7"
     "ja-JP-mac"
   end
   language "ko" do
-    sha256 "9ae741d24e255b85e9775413a6129229c03141495b5216e6c3dc0aaabf360efe"
+    sha256 "3bd54ebe3d6b28e38cca278c5e8a9aea1c5823766f50ee03fc60f42ad750713b"
     "ko"
   end
   language "nl" do
-    sha256 "2d6a8825d4aacdb1cd8ab5f3bff44463004cf7a5b7c3c9a91206454b716c27de"
+    sha256 "366e3794d777bee5a16a8b08a2d93eee66a3d001867d488a257b6818b74a8075"
     "nl"
   end
   language "pt-BR" do
-    sha256 "deddf498227bdc08375333bf9fe1857cef47051256094fe591727780032e4053"
+    sha256 "7f8fd76bb95ad2c644c21a8029116fa5d11ab03fc0c009a29066084a6bf76660"
     "pt-BR"
   end
   language "ru" do
-    sha256 "02ae435f83f33ec1ad7388b704b18c3d313965fc2568f0a043941503f30f190b"
+    sha256 "9b8ff021802cf960bff83519c38004df0b5a5249204ce6089a8f31fd6267d058"
     "ru"
   end
   language "uk" do
-    sha256 "9784508f3197c49f871d5571a13c83d00aca55d107de48b49081d14afafa7008"
+    sha256 "38f35c8f7fe92f958fae2cf9fca90d2117d7a7f7178898a534796456efecfaf3"
     "uk"
   end
   language "zh-TW" do
-    sha256 "c09010ed0336c9d808d44e4e493a79e8b968ea8d22cd5d4c9e694576d8228939"
+    sha256 "04286d14f67337f876f6de32641f85f221d6a5b3e2b521e8ba1211cebd75c19f"
     "zh-TW"
   end
   language "zh" do
-    sha256 "7945c1b7dd2dfd6315d9625047302acff1817a9d8884694119c2319803a7ec2d"
+    sha256 "dde051c8bf2a1e214d79a296c06c18db43d0913f1995c01eaac5f1308b1b825c"
     "zh-CN"
   end
 
-  url "https://ftp.mozilla.org/pub/firefox/nightly/latest-mozilla-central-l10n/firefox-#{version}.#{language}.mac.dmg"
+  url "https://ftp.mozilla.org/pub/firefox/nightly/#{version.csv.second.split("-").first}/#{version.csv.second.split("-").second}/#{version.csv.second}-mozilla-central#{"-l10n" if language != "en-US"}/firefox-#{version.csv.first}.#{language}.mac.dmg"
   name "Mozilla Firefox Nightly"
   desc "Web browser"
   homepage "https://www.mozilla.org/firefox/channel/desktop/#nightly"
 
   livecheck do
     url "https://product-details.mozilla.org/1.0/firefox_versions.json"
-    strategy :json do |json|
-      json["FIREFOX_NIGHTLY"]
+    regex(%r{/(\d+(?:[._-]\d+)+)[^/]*/firefox}i)
+    strategy :json do |json, regex|
+      version = json["FIREFOX_NIGHTLY"]
+      next if version.blank?
+
+      content = Homebrew::Livecheck::Strategy.page_content("https://ftp.mozilla.org/pub/firefox/nightly/latest-mozilla-central/firefox-#{version}.en-US.mac.buildhub.json")
+      next if content[:content].blank?
+
+      build_json = Homebrew::Livecheck::Strategy::Json.parse_json(content[:content])
+      build = build_json.dig("download", "url")&.[](regex, 1)
+      next if build.blank?
+
+      "#{version},#{build}"
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Firefox Nightly.app"
