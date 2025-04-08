@@ -10,12 +10,12 @@ cask "spybuster" do
 
   livecheck do
     url "https://updateinfo.devmate.com/com.macpaw-labs.snitch/test/beta/updates.xml"
-    regex(%r{/(\d+)/SpyBuster\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
+    regex(%r{/(\d+)/SpyBuster}i)
     strategy :sparkle do |item, regex|
       match = item.url.match(regex)
       next if match.blank?
 
-      "#{item.short_version},#{match[2]},#{match[1]}"
+      "#{item.nice_version},#{match[1]}"
     end
   end
 
