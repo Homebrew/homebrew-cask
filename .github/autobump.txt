@@ -299,6 +299,7 @@ cyberduck
 cycling74-max
 daedalus-mainnet
 dangerzone
+dante-virtual-soundcard
 darktable
 dash-dash
 dashcam-viewer
