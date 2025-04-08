@@ -2,9 +2,9 @@ cask "ideamaker" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "apple_silicon", intel: "mac"
 
-  version "5.1.4.8480"
-  sha256 arm:   "209a3fa2282ae1f9f1f512c288634a23fa4aa41c4b06ab94ad85cb94ee6ac9ff",
-         intel: "d7e8a504ce9a3620b96173b0b76a73b7d1bac943ec2f010cc4339de703b3da1a"
+  version "5.2.2.8570"
+  sha256 arm:   "012ac416340d0e78bfb732cac0def2e9d8c1df7b4e056da165e35d20f3769d92",
+         intel: "7db657ef7c3d76a4a18c0c7f52d41d86832fe36cd0b39c90732efb739d26faa7"
 
   url "https://downcdn.raise3d.com/ideamaker/release/#{version.major_minor_patch}/install_ideaMaker_#{version}#{arch}.dmg"
   name "ideaMaker"
