@@ -301,6 +301,7 @@ cyberduck
 cycling74-max
 daedalus-mainnet
 dangerzone
+dante-controller
 dante-via
 darktable
 dash-dash
