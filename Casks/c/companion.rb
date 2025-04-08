@@ -1,5 +1,3 @@
-# typed: false
-
 cask "companion" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
