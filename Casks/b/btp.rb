@@ -18,7 +18,7 @@ cask "btp" do
 
   livecheck do
     url :homepage
-    regex(/btp[._-]cli[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.t/i)
+    regex(/btp[._-]cli[._-]#{os}[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   binary "#{os}-#{arch}/btp", target: "btp"
