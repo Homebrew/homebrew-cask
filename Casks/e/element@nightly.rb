@@ -1,17 +1,19 @@
 cask "element@nightly" do
-  version "2025031701"
-  sha256 "aa7fdc6e53bfab162f20f9b891fe1c90b5b5f51fa5be5353715cae925c831ccb"
+  version "2025040801"
+  sha256 "0171f723af5d6d8b38b8c48741bc52eda9cfc0d4311e883e38cbe8ca691f3d24"
 
   url "https://packages.element.io/nightly/update/macos/Element%20Nightly-#{version}-universal-mac.zip"
   name "Element Nightly"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
+  # The `releases.json` file is served with a `Content-Encoding: aws-chunked`
+  # header, which will cause curl to error if the `--compressed` option is used.
+  # This checks the version on the directory listing page until we can account
+  # for this situation in livecheck.
   livecheck do
-    url "https://packages.element.io/nightly/update/macos/releases.json"
-    strategy :json do |json|
-      json["currentRelease"]
-    end
+    url "https://packages.element.io/nightly/update/macos/index.html"
+    regex(/href=.*?Element\s+Nightly[._-]v?(\d+(?:\.\d+)*)[._-]universal[._-]mac\.zip/i)
   end
 
   auto_updates true
