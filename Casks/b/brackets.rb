@@ -9,6 +9,7 @@ cask "brackets" do
   homepage "https://brackets.io/"
 
   deprecate! date: "2024-04-06", because: :discontinued
+  disable! date: "2025-04-08", because: :discontinued
 
   app "Brackets.app"
 
