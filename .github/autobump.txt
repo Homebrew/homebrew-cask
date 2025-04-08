@@ -269,6 +269,7 @@ commander-one
 commandpost
 companion
 companion@beta
+companion-satellite
 compositor
 confluent-cli
 connect-fonts
