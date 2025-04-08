@@ -267,6 +267,7 @@ coin-wallet
 colorwell
 commander-one
 commandpost
+companion
 compositor
 confluent-cli
 connect-fonts
