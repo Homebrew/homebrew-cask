@@ -1,6 +1,6 @@
 cask "carbon-copy-cloner@6" do
-  version "6.1.12.7683"
-  sha256 "42b3d741f2a48222bef45d5862d9d2aceff27e14591bd63bfb5dfdc4d46549d4"
+  version "6.1.12.7685"
+  sha256 "8c2df3c01b3cb7c3088d07c5a7bb43ea3675c8db92ccfe57cd8be0db9a507616"
 
   url "https://bombich.scdn1.secure.raxcdn.com/software/files/ccc-#{version}.zip",
       verified: "bombich.scdn1.secure.raxcdn.com/software/files/"
