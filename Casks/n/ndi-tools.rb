@@ -6,7 +6,7 @@ cask "ndi-tools" do
       verified: "downloads.ndi.tv/Tools/"
   name "NDI Tools"
   desc "Tools & plugins for NDI"
-  homepage "https://ndi.video/tools/ndi-core-suite/"
+  homepage "https://ndi.video/tools/"
 
   livecheck do
     url "https://downloads.ndi.tv/Tools/ndi_tools_osx_current_version.json"
@@ -14,6 +14,8 @@ cask "ndi-tools" do
       json["version"]
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   pkg "NDIToolsInstaller.pkg"
 
