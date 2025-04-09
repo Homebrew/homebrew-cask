@@ -669,6 +669,7 @@ integrity
 intellij-idea
 intellij-idea-ce
 intellij-idea@eap
+internxt-drive
 intune-company-portal
 ipfs
 ipvanish-vpn
