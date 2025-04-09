@@ -24,7 +24,7 @@ cask "battle-net" do
     set_permissions "#{staged_path}/Battle.net-Setup.app", "a+x"
   end
 
-  uninstall delete: "/Applications/Battle.net.app"
+  uninstall delete: "#{appdir}/Battle.net.app"
 
   zap trash: [
         "/Users/Shared/Battle.net",
