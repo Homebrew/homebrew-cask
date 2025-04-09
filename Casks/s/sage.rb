@@ -1,9 +1,9 @@
 cask "sage" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "10.5,2.5.0"
-  sha256 arm:   "09d4723ca94f1ecf04ee648c47e06f4498135eb823cf5e3a38dea0aa5a205ef0",
-         intel: "38413c5e4aed7e46ed5cd95625bd94ddf646daf71b9768c88512e8546bbc2b4b"
+  version "10.6,2.6.0"
+  sha256 arm:   "bb6b23f91f805bd721de99e11e2f2d8acc4b8cc8a81051f0b17164fca29718ab",
+         intel: "7d8367d2cd34c8b94e25db7fe5447de137153799a9cc280708cf3fc9352fc800"
 
   url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}_#{arch}.dmg",
       verified: "github.com/3-manifolds/Sage_macOS/"
