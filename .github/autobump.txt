@@ -1559,6 +1559,7 @@ universal-media-server
 updf
 usmart-trade
 utm
+utm@beta
 utools
 uu-booster
 uvtools
