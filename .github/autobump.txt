@@ -707,6 +707,7 @@ jprofiler
 julia
 julia@lts
 jump-desktop-connect
+jumpcloud-password-manager
 jumpshare
 jupyterlab
 juxtacode
