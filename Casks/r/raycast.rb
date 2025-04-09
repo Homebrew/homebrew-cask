@@ -9,7 +9,22 @@ cask "raycast" do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
+  on_monterey do
+    arch arm: "arm", intel: "x86_64"
+
+    version "1.94.4"
+    sha256 arm:   "235082e306ed250026f8afb5f9240dfa3ebf2238cac33d15b18bf673c0a9e896",
+           intel: "cad71d7846c313b9b71ee3d33c547b3931fa0657109441c0c76e6a725c2bd270"
+
+    url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
+
+    livecheck do
+      url "https://releases.raycast.com/download"
+      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]universal\.dmg/i)
+      strategy :header_match
+    end
+  end
+  on_ventura :or_newer do
     arch arm: "arm", intel: "x86_64"
 
     version "1.95.0"
