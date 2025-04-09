@@ -25,7 +25,7 @@ cask "izotope-product-portal" do
     sudo:       true,
   }
 
-  uninstall delete: "/Applications/iZotope Product Portal.app"
+  uninstall delete: "#{appdir}/iZotope Product Portal.app"
 
   zap trash: [
     "~/Library/Application Support/iZotope",
