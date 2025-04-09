@@ -8,10 +8,10 @@ cask "whisky" do
   desc "Wine wrapper built with SwiftUI"
   homepage "https://getwhisky.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  # https://docs.getwhisky.app/maintenance-notice
+  # As the cask is reasonably popular, disabling could be delayed beyond 12 months
+  # from deprecation date, if it is still functional.
+  deprecate! date: "2025-04-09", because: :unmaintained
 
   auto_updates true
   depends_on macos: ">= :sonoma"
