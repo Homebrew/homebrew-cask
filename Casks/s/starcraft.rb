@@ -14,7 +14,7 @@ cask "starcraft" do
 
   installer manual: "StarCraft-Setup.app"
 
-  uninstall delete: "/Applications/StarCraft"
+  uninstall delete: "#{appdir}/StarCraft"
 
   zap trash: [
     "/Users/Shared/Battle.net",
