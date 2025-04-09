@@ -467,6 +467,7 @@ fishing-funds
 fixkey
 flashspace
 fleet
+flexoptix
 fliqlo
 flirc
 floorp
