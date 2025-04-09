@@ -1364,6 +1364,7 @@ sony-ps-remote-play
 soulver
 sound-control
 sound-siphon
+soundanchor
 soundsource
 soundsource@test
 sourcetree
