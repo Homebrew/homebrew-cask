@@ -13,7 +13,7 @@ cask "frhelper" do
     url :homepage
     regex(/应用版本：(\d+(\.\d+)+)/i)
   end
-  
+
   depends_on macos: ">= :high_sierra"
 
   app "Frhelper.app"
