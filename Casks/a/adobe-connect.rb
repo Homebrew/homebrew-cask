@@ -23,7 +23,7 @@ cask "adobe-connect" do
 
   installer manual: "AdobeConnectInstaller.app"
 
-  uninstall delete: "/Applications/Adobe Connect"
+  uninstall delete: "#{appdir}/Adobe Connect"
 
   zap trash: [
     "~/adobeconnectapp.log",
