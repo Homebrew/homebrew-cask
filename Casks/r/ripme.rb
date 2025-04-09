@@ -19,7 +19,7 @@ cask "ripme" do
 
   artifact "ripme-#{version}.jar", target: "#{appdir}/ripme.jar"
 
-  uninstall delete: "/Applications/rips"
+  uninstall delete: "#{appdir}/rips"
 
   zap trash: "~/Library/Application Support/ripme"
 
