@@ -1,6 +1,6 @@
 cask "lynkeos" do
-  version "3.7"
-  sha256 "e30ef976a84901fd1d55c0ea40c836b0735b2d02fbec684f54421f6f18149d6b"
+  version "3.8"
+  sha256 "b018e9812561cf1cc6a0dd0483c1770a4dcb4295c67cf43c17bea83e8449d40a"
 
   url "https://downloads.sourceforge.net/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.dots_to_hyphens}.zip",
       verified: "downloads.sourceforge.net/lynkeos/"
