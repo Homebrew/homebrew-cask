@@ -434,6 +434,7 @@ fantastical
 far2l
 fastrawviewer
 fathom
+favro
 fbreader
 fedistar
 fedora-media-writer
