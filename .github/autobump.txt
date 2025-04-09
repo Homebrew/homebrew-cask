@@ -614,6 +614,7 @@ gyazo
 gzdoom
 hackolade
 halloy
+hamrs-pro
 hancom-docs
 hancom-word
 handbrake
