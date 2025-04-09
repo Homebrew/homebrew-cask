@@ -1,9 +1,9 @@
 cask "dangerzone" do
   arch arm: "arm64", intel: "i686"
 
-  version "0.8.1"
-  sha256 arm:   "47369486aac1c6d11410a2d8cb4ec54167f1ecc3fa2b10812e14c3e3ecdcc888",
-         intel: "1a26e0a6488f0cfa0a2579b848b636a7ec30f55f7365f00969873db527a929b7"
+  version "0.9.0"
+  sha256 arm:   "0550878e8816f46e7dbc30014bc40b54bec5f0314b35c736d30fa5fe64c059e4",
+         intel: "3fcea95d10743ef2ed868aeb6e454eb4de5caa1fb430e6da194648dadbece5ea"
 
   url "https://github.com/freedomofpress/dangerzone/releases/download/v#{version}/Dangerzone-#{version}-#{arch}.dmg",
       verified: "github.com/freedomofpress/dangerzone/"
