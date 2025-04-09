@@ -1,6 +1,6 @@
 cask "idrive" do
-  version "4.0.0.25,040725"
-  sha256 "1b17e3e1c98b50be9226cbe25483293e1ff4764e3db9502bf00b8e4c8abd01f2"
+  version "4.0.0.26,040925"
+  sha256 "00a22363ac68120e8a795f97d591e00e06da9d88b759f4dcbd06037a807b7ba9"
 
   url "https://static.idriveonlinebackup.com/downloads/#{version.csv.second}/IDrive.dmg",
       verified: "static.idriveonlinebackup.com/downloads/"
@@ -28,6 +28,8 @@ cask "idrive" do
   uninstall launchctl: [
               "com.iDrive.FinderPluginApp",
               "com.prosoftnet.DaemonHelper",
+              "com.prosoftnet.idrivedaemon",
+              "com.prosoftnet.idsyncdaemon",
               "IDriveDaemon",
               "IDSyncDaemon",
               "IDWifiManager",
@@ -38,7 +40,10 @@ cask "idrive" do
               "com.prosoftnet.IDriveDaemon",
               "com.prosoftnet.IDriveMonitor",
             ],
-            pkgutil:   "com.profsoftnet.idrive.*"
+            pkgutil:   [
+              "com.idrive.IDrive",
+              "com.profsoftnet.idrive.*",
+            ]
 
   zap trash: [
     "/Library/Application Support/IDriveforMac",
