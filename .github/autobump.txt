@@ -412,6 +412,7 @@ elgato-control-center
 elgato-stream-deck
 elgato-wave-link
 eloston-chromium
+elpass
 emacs@nightly
 embyserver
 emclient
