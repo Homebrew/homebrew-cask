@@ -19,9 +19,7 @@ cask "raycast" do
     url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
 
     livecheck do
-      url "https://releases.raycast.com/download"
-      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]universal\.dmg/i)
-      strategy :header_match
+      skip "Legacy version"
     end
   end
   on_ventura :or_newer do
