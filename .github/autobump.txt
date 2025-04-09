@@ -1522,6 +1522,7 @@ tresorit
 trex
 trezor-suite
 tribler
+triliumnext-notes
 truhu
 trunk-io
 tuist
