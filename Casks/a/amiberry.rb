@@ -1,9 +1,9 @@
 cask "amiberry" do
   arch arm: "apple-silicon", intel: "x86_64"
 
-  version "7.0.7"
-  sha256 arm:   "99a7ee14debac79e6d7b28ca5ad3a1b1c8b92484851d34425880ca68fb798b59",
-         intel: "827cb9fdbb2ff3fca26ba07a9127b47c0fa5bd8ad2ac7892dfdfa891347b3e9d"
+  version "7.0.8"
+  sha256 arm:   "21c6b2bb20c12c6e427718a79f43339a6cdcd87823193a5091a02794b64c03c3",
+         intel: "085cd17638a9f8d6f347e5c6b10d316a6c9e907b999908cf8ac2f1bb2fa99876"
 
   url "https://github.com/BlitterStudio/amiberry/releases/download/v#{version}/Amiberry-v#{version}-macOS-#{arch}.zip",
       verified: "github.com/BlitterStudio/amiberry/"
