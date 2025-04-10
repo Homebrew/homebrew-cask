@@ -17,8 +17,8 @@ cask "iterm2" do
     end
   end
   on_catalina :or_newer do
-    version "3.5.12"
-    sha256 "87b297803b492a877d33f8961a77e85b2e4f1206ea604f8c51f5f9b08dec3af6"
+    version "3.5.13"
+    sha256 "87f8f6ca41a8af5fa9ea38bdea2e51881311e7fac241a2c79d7630bc509a374d"
 
     livecheck do
       # workaround for
