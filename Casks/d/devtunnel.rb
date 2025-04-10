@@ -1,9 +1,9 @@
 cask "devtunnel" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.1401+3d725ee539"
-  sha256 arm:   "c5cd38c29be84d2dbfac82280eb112d8b87f763e831eca308d1faf7ebb01413f",
-         intel: "0d9f43568cca2569d4a3c283e66325c491cc4a75e0cf08eb1e3ff9196dd3f61c"
+  version "1.0.1435+d49a94cc24"
+  sha256 arm:   "37bf953acad8a34f1387905765c6fa0625c68fe985bc1bb02ccd0b13f6ab8389",
+         intel: "6ea8d3ca2d8bba77f4946e6c9a680761b28a79db66439ef4336831bac736cb27"
 
   url "https://tunnelsassetsprod.blob.core.windows.net/cli/#{version}/osx-#{arch}-devtunnel-zip",
       verified: "tunnelsassetsprod.blob.core.windows.net/cli/"
