@@ -1,9 +1,9 @@
 cask "ghost-browser" do
   arch arm: "_arm64"
 
-  version "2.4.1.0"
-  sha256 arm:   "f7ff482faf3c77320ef2c0882aaec81cb6ea3bbcce6d0991a84a8d2ec1e67a17",
-         intel: "2f8ef7bc62428ce98e8b5a7b525ab2e9b93ee55e88a39d3e5f526a5340e54892"
+  version "2.4.1.1"
+  sha256 arm:   "56dd15df862e841b36247af04cd1e7a54a276075fb70a031002ef9d9e30b635a",
+         intel: "759e131ca75ca6f0143a49ab5bf121d5b6867595ecea1f5f37bc1160b1d28833"
 
   url "https://downloads.ghostbrowser.com/GhostBrowser-#{version}#{arch}.dmg"
   name "Ghost Browser"
