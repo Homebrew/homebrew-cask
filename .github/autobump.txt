@@ -476,6 +476,7 @@ floorp
 flox
 flutter
 flutterflow
+fly
 flyenv
 fmail2
 focus
