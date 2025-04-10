@@ -569,6 +569,7 @@ geogebra@5
 geotag
 geph
 get-api
+ghost-browser
 ghostty
 ghostty@tip
 gisto
