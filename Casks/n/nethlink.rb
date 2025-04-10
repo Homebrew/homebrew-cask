@@ -7,6 +7,12 @@ cask "nethlink" do
   desc "Link NethServer systems and provide remote access tools"
   homepage "https://github.com/NethServer/nethlink"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "NethLink.app"
