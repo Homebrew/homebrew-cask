@@ -1240,6 +1240,7 @@ replacicon
 replaywebpage
 replicator
 replit
+repo-prompt
 reqable
 requestly
 rescuetime
