@@ -1,6 +1,6 @@
 cask "j" do
-  version "9.6.2"
-  sha256 "1b78ff273337434cc4b52d44643c932274bc9761b39ccfc0465502723ca04f1a"
+  version "9.6.3"
+  sha256 "4a39e4f3f90382c04387bf46bcc7c2331461368dd08cc40cc647e05430572461"
 
   url "https://www.jsoftware.com/download/j#{version.major_minor}/install/j#{version}_mac64.zip"
   name "J"
