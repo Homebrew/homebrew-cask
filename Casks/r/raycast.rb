@@ -1,43 +1,38 @@
 cask "raycast" do
+  arch arm: "arm", intel: "x86_64"
+
   on_big_sur :or_older do
     version "1.50.0"
-    sha256 "f8bbd00d06636e3fe9f154ff69ff57c0a48a90a77ae58cdcc2b285f61a170a88"
-
-    url "https://releases.raycast.com/releases/#{version}/download?build=universal"
+    sha256 arm:   "a6fb8f2e097768b74b5ddf9e9f9c127b1fdfa980993a20c0d3b593a2e3fa0534",
+           intel: "b46f66225fdaed22b59d8c8d319a63961374c7fd47b7b8a40ef5573e6f36e888"
 
     livecheck do
       skip "Legacy version"
     end
   end
   on_monterey do
-    arch arm: "arm", intel: "x86_64"
-
     version "1.94.4"
     sha256 arm:   "235082e306ed250026f8afb5f9240dfa3ebf2238cac33d15b18bf673c0a9e896",
            intel: "cad71d7846c313b9b71ee3d33c547b3931fa0657109441c0c76e6a725c2bd270"
-
-    url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
 
     livecheck do
       skip "Legacy version"
     end
   end
   on_ventura :or_newer do
-    arch arm: "arm", intel: "x86_64"
-
     version "1.95.0"
     sha256 arm:   "161d15fe266aaf2baa2acf03d55f62b0724187e5851e272b4cc724282878a501",
            intel: "003e220816cd314d0fc7f362797be61bf43775e27a3ff75c560c05a34bcda0ea"
 
-    url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
-
     livecheck do
-      url "https://releases.raycast.com/download"
-      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]universal\.dmg/i)
-      strategy :header_match
+      url "https://releases.raycast.com/releases/latest?build=#{arch}"
+      strategy :json do |json|
+        json["version"]
+      end
     end
   end
 
+  url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
   name "Raycast"
   desc "Control your tools with a few keystrokes"
   homepage "https://raycast.com/"
