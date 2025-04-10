@@ -12,6 +12,7 @@ cask "pearcleaner" do
   depends_on macos: ">= :ventura"
 
   app "Pearcleaner.app"
+  binary "#{appdir}/Pearcleaner.app/Contents/MacOS/Pearcleaner"
 
   uninstall launchctl:  "com.alienator88.PearcleanerSentinel*",
             quit:       "com.alienator88.Pearcleaner",
