@@ -223,6 +223,7 @@ cherry-studio
 chia
 chipmunk
 chirp
+chordpotion
 chromedriver
 chromedriver@beta
 chromium-gost
