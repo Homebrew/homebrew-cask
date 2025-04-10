@@ -1,6 +1,6 @@
 cask "pinwheel" do
-  version "1.5.1"
-  sha256 "594c4e1306a88da29cb8e8ab613779e056e0d14678db7a7f986aa1b9994661f1"
+  version "1.5.2"
+  sha256 "cea18812005763a76e0e2a16e088ab09f6019aa5577ecb9278729a02de2ca6d3"
 
   url "https://cdn.skala.app/pinwheel/versions/Pinwheel_#{version.dots_to_underscores}.zip",
       verified: "cdn.skala.app/"
