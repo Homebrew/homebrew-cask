@@ -30,6 +30,6 @@ cask "herd" do
     "~/Library/HTTPStorages/de.beyondco.herd.binarycookies",
     "~/Library/Preferences/de.beyondco.herd.plist",
     "~/Library/Saved Application State/de.beyondco.herd.savedState",
-    "~/Library/WebKit/de.beyondco.herd/"
+    "~/Library/WebKit/de.beyondco.herd/",
   ]
 end
