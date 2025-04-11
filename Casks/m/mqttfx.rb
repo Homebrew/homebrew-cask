@@ -22,7 +22,7 @@ cask "mqttfx" do
     sudo:       true,
   }
 
-  uninstall delete: "/Applications/MQTT.fx.app"
+  uninstall delete: "#{appdir}/MQTT.fx.app"
 
   zap trash: [
     "~/Library/Application Support/MQTT-FX",

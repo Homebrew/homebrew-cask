@@ -15,7 +15,7 @@ cask "league-of-legends" do
 
   installer manual: "Install League of Legends na.app"
 
-  uninstall delete: "/Applications/League of Legends.app"
+  uninstall delete: "#{appdir}/League of Legends.app"
 
   zap trash: [
         "/Users/Shared/Riot Games/Metadata/league_of_legends.live",
