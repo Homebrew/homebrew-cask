@@ -1,17 +1,17 @@
 cask "popo" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
   on_arm do
-    version "4.18.0,1741272609925"
-    sha256 "2806322cc4ae19eb58d386f128ec899daeff7109ddbfa88ddac6132869211f29"
+    version "4.19.0,1744294468894"
+    sha256 "0b78f3d6de5f79da3357b81e9e08788acbc802c537be712229565def1b34b09d"
   end
   on_intel do
-    version "4.18.0,1741272502251"
-    sha256 "ee271d2345b8b276a393f53b538388e11651b3c85106bcf9dfd88bddb949efaa"
+    version "4.19.1,1744294384425"
+    sha256 "1799119e05e37f73d3dc94e3d68fee19a0d231f999f3f3e56b092b7b8f1f202d"
   end
 
-  url "https://popo.netease.com/file/popomac/POPO_Mac_#{arch}_prod_#{version.csv.second}.dmg"
+  url "https://popo.netease.com/file/popomac/#{version.csv.first}_#{arch}_prod_#{version.csv.second}.dmg"
   name "NetEase POPO"
   desc "Instant messaging platform"
   homepage "https://popo.netease.com/"
@@ -20,17 +20,16 @@ cask "popo" do
     url "https://popo.netease.com/api/open/jsonp/check_version?device=4&callback=callback"
     regex(/callback\((.+)\)/i)
     strategy :page_match do |page, regex|
-      build_regex = /^.*?(\d+)\.dmg$/
+      url_regex = /v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]prod[._-](\d+)\.dmg/i
 
       match = page.match(regex)
       next if match.blank?
 
       json = Homebrew::Livecheck::Strategy::Json.parse_json(match[1])
-      version = json.dig("data", "version")
-      build = json.dig("data", "#{livecheck_arch}Url")&.[](build_regex, 1)
-      next if version.blank? || build.blank?
+      match = json.dig("data", "#{livecheck_arch}Url")&.match(url_regex)
+      next if match.blank?
 
-      "#{version},#{build}"
+      "#{match[1]},#{match[2]}"
     end
   end
 
