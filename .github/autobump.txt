@@ -1041,6 +1041,7 @@ opencore-configurator
 opencore-patcher
 openlens
 openlp
+openphone
 openrct2
 openrefine
 openscad@snapshot
