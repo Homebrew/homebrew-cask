@@ -1689,6 +1689,7 @@ yaak
 yaak@beta
 yandex-cloud-cli
 yandex-music
+yate
 yealink-meeting
 yes24-ebook
 yinxiangbiji
