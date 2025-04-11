@@ -1,17 +1,19 @@
 cask "font-fira-mono" do
-  version :latest
-  sha256 :no_check
+  version "4.202"
+  sha256 "d86269657387f144d77ba12011124f30f423f70672e1576dc16f918bb16ddfe4"
 
-  url "https://github.com/google/fonts.git",
-      verified:  "github.com/google/fonts",
-      branch:    "main",
-      only_path: "ofl/firamono"
+  url "https://github.com/mozilla/Fira/archive/refs/tags/#{version}.tar.gz"
   name "Fira Mono"
-  homepage "https://fonts.google.com/specimen/Fira+Mono"
+  homepage "https://github.com/mozilla/Fira"
 
-  font "FiraMono-Bold.ttf"
-  font "FiraMono-Medium.ttf"
-  font "FiraMono-Regular.ttf"
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  font "ttf/FiraMono-Bold.ttf"
+  font "ttf/FiraMono-Medium.ttf"
+  font "ttf/FiraMono-Regular.ttf"
 
   # No zap stanza required
 end
