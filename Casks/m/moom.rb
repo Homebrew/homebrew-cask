@@ -14,7 +14,7 @@ cask "moom" do
     url "https://manytricks.com/moom/appcast/"
     regex(/moom[._-]?v?(\d+(?:\.\d+)*)\.dmg/i)
     strategy :sparkle do |item, regex|
-      dotless_short_version = DSL::Version.new(item.short_version).no_dots
+      dotless_short_version = item.short_version.tr(".", "")
       next if dotless_short_version.blank?
 
       file_version = item.url[regex, 1]&.tr(".", "")
