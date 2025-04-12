@@ -1,6 +1,6 @@
 cask "repo-prompt" do
-  version "1.1.6"
-  sha256 "807ceb5d09b0b5de9556eed1dfa70528f7575f7f336daedabd21b2bc6bcd12d6"
+  version "1.1.7"
+  sha256 "35fd1c331b4efe65aaa7dad900c6c2508ce091c72a6228bd85d18de8b8e6050b"
 
   url "https://repoprompt.s3.us-east-2.amazonaws.com/RepoPrompt-#{version}.dmg",
       verified: "repoprompt.s3.us-east-2.amazonaws.com/"
