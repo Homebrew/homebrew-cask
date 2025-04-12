@@ -31,6 +31,15 @@ cask "kate" do
   end
 
   app "Kate.app"
+  shimscript = "#{staged_path}/kate.wrapper.sh"
+  binary shimscript, target: "kate"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/bash
+      exec '#{appdir}/Kate.app/Contents/MacOS/kate' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/kate",
