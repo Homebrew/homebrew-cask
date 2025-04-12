@@ -1,6 +1,6 @@
 cask "mediamate" do
-  version "3.7.0,294"
-  sha256 "d3dfb9743754bc0ab5f03342e4fd5b1d5557d9fea2260d6bfc5ae33959bba85c"
+  version "3.7.1,300"
+  sha256 "874fd67c055d4da6e48d0e517e7d9cc7f2d9186f03c82b5e2917ffd8610c53b2"
 
   url "https://github.com/Wouter01/MediaMate-Releases/releases/download/v#{version.csv.first}_#{version.csv.second}/MediaMate_v#{version.csv.first}-#{version.csv.second}.zip",
       verified: "github.com/Wouter01/MediaMate-Releases/"
