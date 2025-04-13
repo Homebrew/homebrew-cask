@@ -1220,6 +1220,7 @@ rancher
 rapidapi
 rapidweaver
 rar
+rave
 razorsql
 reactotron
 readdle-spark
