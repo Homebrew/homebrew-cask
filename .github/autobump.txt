@@ -1642,7 +1642,6 @@ whatsapp
 whatsapp@beta
 whatsize
 whimsical
-whisky
 widelands
 wifi-explorer-pro
 wifispoof
