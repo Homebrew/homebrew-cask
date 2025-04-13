@@ -39,6 +39,8 @@ cask "docker" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker-compose"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/compose-bridge",
+         target: "/usr/local/bin/compose-bridge"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",
          target: "/usr/local/bin/docker"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-desktop",
