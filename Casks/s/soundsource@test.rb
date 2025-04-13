@@ -2,7 +2,7 @@ cask "soundsource@test" do
   version "5.8.2,1,20250407,1453,5827001"
   sha256 "5f6d186d9ec759f81a89ac656a7cf0bc106f3aada6b7479a606f002aafb131bd"
 
-  url "https://download.rogueamoeba.com/builds/SoundSource/SoundSource_#{version.csv.fifth}_#{version.csv.third}_#{version.csv.fourth}.zip"
+  url "https://download.rogueamoeba.com/builds/SoundSource/SoundSource_#{version.csv.fifth ? "#{version.csv.fifth}_#{version.csv.third}_#{version.csv.fourth}" : version}.zip"
   name "SoundSource"
   desc "Sound and audio controller"
   homepage "https://rogueamoeba.com/soundsource/"
@@ -13,7 +13,11 @@ cask "soundsource@test" do
     regex(/SoundSource[._-]v?(\h+)[._-](\d+)[._-](\d+)\.zip/i)
     strategy :sparkle do |item, regex|
       match = item.url&.match(regex)
-      next if match.blank?
+      next if match.blank? && item.version.blank?
+
+      # If the regex doesn't match, the update is likely returning a stable version
+      # which we can find from item.version
+      next item.version if match.blank?
 
       "#{item.version.sub("fc", ",")},#{match[2]},#{match[3]},#{match[1]}"
     end
