@@ -12,9 +12,11 @@ cask "ears" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Ears.app"
+  binary "#{appdir}/Ears.app/Contents/Resources/ears"
 
   uninstall launchctl: "com.clickontyler.Ears.Launcher"
 
