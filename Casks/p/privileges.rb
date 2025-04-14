@@ -1,6 +1,6 @@
 cask "privileges" do
-  version "2.2.0"
-  sha256 "3d02e9249124a0c727ec867595b8221da0464ebf2369091587519e67c3ee6cc7"
+  version "2.3.0"
+  sha256 "4d9e52989baddd378d54ebbdd35f6f63697655f55a5c0d463a800f77c7f219af"
 
   url "https://github.com/SAP/macOS-enterprise-privileges/releases/download/#{version}/Privileges_#{version}.pkg"
   name "Privileges"
@@ -15,6 +15,7 @@ cask "privileges" do
   uninstall launchctl: [
               "corp.sap.privileges.agent",
               "corp.sap.privileges.daemon",
+              "corp.sap.privileges.watcher",
             ],
             pkgutil:   "corp.sap.privileges.pkg"
 
