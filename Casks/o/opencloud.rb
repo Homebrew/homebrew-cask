@@ -23,6 +23,7 @@ cask "opencloud" do
 
   uninstall pkgutil: [
     "eu.opencloud.client",
+    "eu.opencloud.desktop",
     "eu.opencloud.finderPlugin",
   ]
 
