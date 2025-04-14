@@ -561,6 +561,7 @@ gather
 gb-studio
 gcs
 gdevelop
+gearboy
 gearsystem
 geekbench-ai
 geneious-prime
