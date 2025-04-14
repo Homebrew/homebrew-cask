@@ -5,7 +5,7 @@ cask "pixel-shift-combiner" do
   url "https://dl.fujifilm-x.com/support/software/pixel-shift-combiner-mac#{version.csv.second}-#{version.csv.third}/FUJIFILM_PixelShiftCombiner#{version.csv.second}.dmg"
   name "Fujifilm Pixel Shift Combiner"
   desc "Tool to tether and combine photos for Fujifilm cameras with IBIS function"
-  homepage "https://fujifilm-x.com/en-us/support/download/software/pixel-shift-combiner/"
+  homepage "https://www.fujifilm-x.com/en-us/support/download/software/pixel-shift-combiner/"
 
   livecheck do
     url :homepage
