@@ -17,7 +17,8 @@ cask "rectangle-pro" do
 
   app "Rectangle Pro.app"
 
-  uninstall quit: "com.knollsoft.Hookshot"
+  uninstall quit:       "com.knollsoft.Hookshot",
+            login_item: "Rectangle Pro"
 
   zap trash: [
     "~/Library/Application Support/Rectangle Pro",
