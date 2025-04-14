@@ -1,6 +1,6 @@
 cask "itunes-volume-control" do
-  version "1.7.6"
-  sha256 "0234cda125630eb63e2677ca168d9198998ddae958d0596d69a0166f72a5c155"
+  version "1.7.7"
+  sha256 "e2699f2cc1fc4578fa0fb59294d208030ad5a48fd457713df9fae95077df2707"
 
   url "https://raw.githubusercontent.com/alberti42/Volume-Control/main/Releases/VolumeControl-v#{version}.zip",
       verified: "raw.githubusercontent.com/alberti42/Volume-Control/main/Releases/"
