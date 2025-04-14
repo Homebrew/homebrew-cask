@@ -29,8 +29,8 @@ cask "deepl" do
     end
   end
   on_monterey :or_newer do
-    version "25.4.11913674"
-    sha256 "141fd99424de7b99fcfe7f454816a5bb9eb74b0418c5b70b0894b90d810bf52e"
+    version "25.4.11926442"
+    sha256 "44658d0c809911ba11643fb7131bca2dc07ae3f48fe55357a4a994fb9609e11f"
 
     url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.tar.gz"
 
