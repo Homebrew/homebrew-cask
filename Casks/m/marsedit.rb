@@ -1,6 +1,6 @@
 cask "marsedit" do
-  version "5.3.3"
-  sha256 "0fb42882bed81520b77d0304ccd718f404ad4973553ac8122bdd10f48c4478c2"
+  version "5.3.4"
+  sha256 "36f737fd0c69454efd6b90574b54cb92d8e8910c7025dceea5a1e1a3b9c773b2"
 
   url "https://redsweater.com/marsedit/MarsEdit#{version}.zip"
   name "MarsEdit"
