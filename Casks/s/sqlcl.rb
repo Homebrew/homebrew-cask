@@ -1,6 +1,6 @@
 cask "sqlcl" do
-  version "24.4.4.086.1931"
-  sha256 "21a9cb33008c2d3343084750cdd5014db07c0d8be78e63a45376c82b47f89f8e"
+  version "25.1.0.101.2353"
+  sha256 "8128ca8092fb0df123f636eba99200fdd679c356dd0ecdc1615016882c282775"
 
   url "https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-#{version}.zip"
   name "sqlcl"
