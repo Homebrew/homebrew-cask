@@ -4,7 +4,7 @@ cask "equinox" do
 
   url "https://github.com/rlxone/Equinox/releases/download/v#{version}/Equinox.dmg",
       verified: "github.com/rlxone/Equinox/"
-  name "equinox"
+  name "Equinox"
   desc "Create dynamic wallpapers"
   homepage "https://equinoxmac.com/"
 
