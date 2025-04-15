@@ -1498,6 +1498,7 @@ ths
 thunder
 thunderbird
 thunderbird@beta
+thunderbird@daily
 thunderbird@esr
 ti-connect-ce
 ticktick
