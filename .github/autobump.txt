@@ -344,6 +344,7 @@ defold@beta
 dehesselle-meld
 deltachat
 descript
+desktime
 desktoppr
 devpod
 devtunnel
