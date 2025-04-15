@@ -1318,6 +1318,7 @@ semeru-jdk-open@11
 semeru-jdk-open@17
 semeru-jdk-open@21
 semeru-jdk-open@8
+senadevicemanager
 sentinel
 sequel-ace
 servo
