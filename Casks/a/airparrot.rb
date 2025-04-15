@@ -8,9 +8,11 @@ cask "airparrot" do
   homepage "https://www.airsquirrels.com/airparrot/"
 
   livecheck do
-    url "https://www.airsquirrels.com/airparrot/download"
-    regex(%r{href=.*?/AirParrot-(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://updates-prod.airsquirrels.com/AirParrot#{version.major}/Mac/updateCheck/"
+    strategy :sparkle, &:short_version
   end
+
+  auto_updates true
 
   app "AirParrot #{version.major}.app"
 
