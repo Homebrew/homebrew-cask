@@ -8,6 +8,12 @@ cask "autopkgr" do
   desc "Install and configure AutoPkg"
   homepage "https://www.lindegroup.com/autopkgr"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/lindegroup/autopkgr/appcast/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "AutoPkgr.app"
