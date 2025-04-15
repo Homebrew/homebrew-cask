@@ -1355,6 +1355,7 @@ sitesucker-pro
 siyuan
 sketch
 sketch@beta
+sketchup
 skim
 skype
 skype@preview
