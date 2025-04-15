@@ -1,6 +1,6 @@
 cask "bettermouse" do
-  version "1.6,6880"
-  sha256 "ec66bb72c71568e84bfe7ef94865200bf918a50f3390c1103428c7a5a06dcd4a"
+  version "1.6,7465"
+  sha256 "6eb1f722f48f9a9412ff8f9cf5b8333234388a7dc4c56996412f143c2cac3bd8"
 
   url "https://better-mouse.com/wp-content/uploads/BetterMouse.#{version.csv.first}.#{version.csv.second}.zip"
   name "BetterMouse"
@@ -8,7 +8,7 @@ cask "bettermouse" do
   homepage "https://better-mouse.com/"
 
   livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/7079cb7c-52de-42cf-ac1f-a0d99cdd12f2"
+    url "https://better-mouse.com/wp-content/uploads/appcast.xml"
     strategy :sparkle
   end
 
