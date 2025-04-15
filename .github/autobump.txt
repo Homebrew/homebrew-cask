@@ -1315,6 +1315,7 @@ securesafe
 securityspy
 segger-jlink
 segger-ozone
+sejda-pdf
 semeru-jdk-open
 semeru-jdk-open@11
 semeru-jdk-open@17
