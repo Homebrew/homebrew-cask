@@ -1,6 +1,6 @@
 cask "crashplan" do
-  version "11.5.0,445"
-  sha256 "1400e756c677612dfd8e92ee02775f4f4eab56dbc7ee95b484b8943c13e38659"
+  version "11.6.0,758"
+  sha256 "870ce116cc6ccb54a331d25a6f41c1ded3ca46f90f5240d69034aa757c474ddf"
 
   url "https://download.crashplan.com/installs/agent/cloud/#{version.csv.first}/#{version.csv.second}/install/CrashPlan_#{version.csv.first}_#{version.csv.second}_Mac.dmg"
   name "CrashPlan"
