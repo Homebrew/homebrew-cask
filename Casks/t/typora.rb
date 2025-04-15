@@ -8,7 +8,7 @@ cask "typora" do
   homepage "https://typora.io/"
 
   livecheck do
-    url "https://www.typora.io/download/dev_update.xml"
+    url "https://typora.io/releases/macos.xml"
     strategy :sparkle, &:short_version
   end
 
