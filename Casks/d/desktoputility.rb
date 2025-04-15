@@ -8,10 +8,11 @@ cask "desktoputility" do
   homepage "https://sweetpproductions.com/"
 
   livecheck do
-    url "https://sweetpproductions.com/products/desktoputility/updates.htm"
-    regex(/<h\d+>\s*(\d+(?:\.\d+)+)\s*</i)
+    url "https://sweetpproductions.com/products/desktoputility/appcast.xml"
+    strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "DesktopUtility.app"
