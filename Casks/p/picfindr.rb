@@ -3,7 +3,7 @@ cask "picfindr" do
   sha256 "99df21332869539dc965fd3ca34b58d10f99e38dc963547689c1a353046bcee4"
 
   url "https://ushining.softorino.com/shine_uploads/picfindr_#{version}.dmg"
-  name "picfindr"
+  name "PicFindr"
   desc "Search engine & manager for free stock images"
   homepage "https://softorino.com/picfindr/"
 
@@ -12,6 +12,7 @@ cask "picfindr" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "PicFindr.app"
