@@ -529,6 +529,7 @@ font-sn-pro
 font-stix
 font-sudo
 fontcreator
+fontgoggles
 foobar2000
 fork
 forkgram-telegram
