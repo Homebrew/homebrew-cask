@@ -9,8 +9,8 @@ cask "hex-fiend" do
   homepage "https://ridiculousfish.com/hexfiend/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/ridiculousfish/HexFiend/master/app/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
