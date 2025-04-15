@@ -8,7 +8,7 @@ cask "second-life-viewer" do
   homepage "https://secondlife.com/"
 
   livecheck do
-    url "https://secondlife.com/support/downloads/"
+    url "https://secondlife.com/downloads"
     regex(/href=.*?Second[._-]Life[._-]v?(\d+(?:[._]\d+)+)(?:[._-]x86_64)?\.dmg/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
