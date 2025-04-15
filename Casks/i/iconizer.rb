@@ -8,6 +8,11 @@ cask "iconizer" do
   desc "Xcode asset catalog creator"
   homepage "https://raphaelhanneken.com/iconizer/"
 
+  livecheck do
+    url "https://raphaelhanneken.github.io/iconizer/sparkle/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
 
   app "Iconizer.app"
