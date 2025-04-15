@@ -25,6 +25,10 @@
     "https://dev.mysql.com/downloads/shell/",
     "https://dev.mysql.com/downloads/shell/?tpl=platform&os=33"
   ],
+  "mysqlworkbench": [
+    "https://dev.mysql.com/downloads/workbench/",
+    "https://www.mysql.com/products/workbench/"
+  ],
   "native-access": "https://www.native-instruments.com/en/specials/native-access-2/",
   "tableau": [
     "https://www.tableau.com/products/desktop",
