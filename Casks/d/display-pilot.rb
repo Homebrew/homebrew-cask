@@ -1,6 +1,6 @@
 cask "display-pilot" do
-  version "1.6.0.0"
-  sha256 "5628549a4fadbfa7309ad78ee0be16ccaaead087aabe135550763352f0a7d502"
+  version "1.6.2.0"
+  sha256 "d337333dc6f6df3bf7448c71a2eb493650c4cd844ebde2e6ad5a541712452d2a"
 
   url "https://qspublic.s3.ap-southeast-1.amazonaws.com/qspublic/qs_app/1001/Display%20Pilot%202Setup-#{version}-release.dmg",
       verified: "qspublic.s3.ap-southeast-1.amazonaws.com/qspublic/"
