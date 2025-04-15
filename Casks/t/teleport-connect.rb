@@ -1,6 +1,6 @@
 cask "teleport-connect" do
-  version "17.4.3"
-  sha256 "b54a26269662a225695aeb2949cb92c2729c6cfb1b8c3fd961232e07f55cadb0"
+  version "17.4.4"
+  sha256 "5c00f53b61c550a0b37ddfabc910ded1ed6be9837ba2287e116378d47a43cb32"
 
   url "https://cdn.teleport.dev/Teleport%20Connect-#{version}.dmg",
       verified: "cdn.teleport.dev/"
