@@ -64,9 +64,9 @@ cask "mysql-shell" do
     end
   end
   on_ventura :or_newer do
-    version "9.2.0,15"
-    sha256 arm:   "bb887018744ba6865efedd8f89bebc4c665fb8ad74cfa8a85fe4690791008faa",
-           intel: "5abc9c25fe04df8622365705e5181cc3054fe7d1824e00116a8c06f11a217aea"
+    version "9.3.0,15"
+    sha256 arm:   "b29997e07d592e8c71a3ee9f5eddad8dcf19dbd204a35206ed448390c18002a8",
+           intel: "3bcb91f5a963b46f508e83c202d3103d7967764ab7407cd1c773f380d8235f51"
 
     url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg", user_agent: "curl/8.7.1"
 
