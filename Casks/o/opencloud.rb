@@ -1,9 +1,9 @@
 cask "opencloud" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.0.0-rc.1"
-  sha256 arm:   "9b97142b7fa207cbb68e5a1926d9dafbd1375e06a5f2336b197f3fdb774a2626",
-         intel: "95443b0ea69d40d5916965aa7e3155bd10d048598a942fd9e78c519c1e1cdb7d"
+  version "1.0.0-rc.3"
+  sha256 arm:   "d4706f83df677267218978acf434eb359f7a775552f27b54cf51e8f7b3e0a253",
+         intel: "ce65d35cd860e5ae2412d589f3f78060b3a0bef383bb9fad0da7866b14691ebc"
 
   url "https://github.com/opencloud-eu/desktop/releases/download/v#{version}/OpenCloud_Desktop-v#{version}-macos-clang-#{arch}.pkg"
   name "OpenCloud Desktop"
