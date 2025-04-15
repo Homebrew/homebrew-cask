@@ -1,6 +1,6 @@
 cask "senadevicemanager" do
-  version "4.4.14"
-  sha256 "4143cc5351ac1d99192b4635485c68a0144a5e168681727c75966caecbbfb6f1"
+  version "4.4.15"
+  sha256 "9023630b3a19bc15267ee6091301d1bcc396db26a79b67b3b7f1b49bb53a6490"
 
   url "https://firmware.sena.com/senabluetoothmanager/SENADeviceManagerForMAC-v#{version}.pkg"
   name "Sena Bluetooth Device Manager"
