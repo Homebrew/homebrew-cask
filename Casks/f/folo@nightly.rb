@@ -11,10 +11,7 @@ cask "folo@nightly" do
   desc "Information browser"
   homepage "https://follow.is/"
 
-  livecheck do
-    url :url
-    regex(/^(?:nightly[._-])?v?(\d+(?:\.\d+)+(?:[._-]nightly[._-]?\d+)?)$/i)
-  end
+  disable! date: "2025-04-15", because: :discontinued
 
   conflicts_with cask: [
     "follow@alpha",
