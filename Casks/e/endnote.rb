@@ -8,9 +8,15 @@ cask "endnote" do
   homepage "https://endnote.com/"
 
   livecheck do
-    url "https://download.endnote.com/updates/21.0/EN21MacUpdates.xml"
-    strategy :xml do |xml|
-      xml.get_elements("//updateTo").map { |item| item.text&.strip }
+    url "https://download.endnote.com/updates/#{version.major}.0/EN#{version.major}MacUpdates.xml"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :xml do |xml, regex|
+      xml.get_elements("//updateTo").map do |item|
+        match = item.text&.strip&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
     end
   end
 
