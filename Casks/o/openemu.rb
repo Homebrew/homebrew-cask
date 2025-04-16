@@ -10,6 +10,11 @@ cask "openemu" do
   on_mojave :or_newer do
     version "2.4.1"
     sha256 "521ca1305c012d38f6f907f50399fefbf4e45a9bb8d9d4063157ffca78b217d4"
+
+    livecheck do
+      url "https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast.xml"
+      strategy :sparkle
+    end
   end
 
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip",
