@@ -9,8 +9,10 @@ cask "packetsender" do
   homepage "https://packetsender.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://packetsender.com/update"
+    strategy :json do |json|
+      json["macversion"]&.tr("v", "")
+    end
   end
 
   auto_updates true
