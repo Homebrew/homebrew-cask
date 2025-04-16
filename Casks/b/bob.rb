@@ -7,6 +7,8 @@ cask "bob" do
   desc "Translation application for text, pictures, and manual input"
   homepage "https://github.com/ripperhe/Bob"
 
+  deprecate! date: "2025-04-15", because: :moved_to_mas
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
