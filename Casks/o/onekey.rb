@@ -12,8 +12,10 @@ cask "onekey" do
   homepage "https://onekey.so/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://data.onekey.so/config.json"
+    strategy :json do |json|
+      json.dig("desktop", "version")&.join(".")
+    end
   end
 
   auto_updates true
