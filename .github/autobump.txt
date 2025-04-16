@@ -535,7 +535,7 @@ fork
 forkgram-telegram
 forklift
 fossa
-foxglove-studio
+foxglove
 foxit-pdf-editor
 framer
 frappe-books

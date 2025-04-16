@@ -1,9 +1,9 @@
-cask "foxglove-studio" do
-  version "2.24.0"
-  sha256 "e26923f2ee33b6be2cd0121b391f847a7203cf6631e93ee8de16b1dbf856e79b"
+cask "foxglove" do
+  version "2.25.0"
+  sha256 "7a5b6a0cdf3299c1e7ea8a87adbc6962f4b5f044384d2d746a9fa0a381ec1f0b"
 
-  url "https://get.foxglove.dev/desktop/latest/foxglove-studio-#{version}-mac-universal.dmg"
-  name "Foxglove Studio"
+  url "https://get.foxglove.dev/desktop/latest/foxglove-#{version}-mac-universal.dmg"
+  name "Foxglove"
   desc "Visualisation and debugging tool for robotics"
   homepage "https://foxglove.dev/"
 
@@ -15,7 +15,7 @@ cask "foxglove-studio" do
   auto_updates true
   depends_on macos: ">= :big_sur"
 
-  app "Foxglove Studio.app"
+  app "Foxglove.app"
 
   zap trash: [
     "~/Library/Application Scripts/dev.foxglove.studio.quicklook",
