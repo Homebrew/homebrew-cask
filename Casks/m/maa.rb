@@ -8,8 +8,10 @@ cask "maa" do
   homepage "https://github.com/MaaAssistantArknights/MaaAssistantArknights"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://maa-release.hguandl.com/macos/appcast.xml"
+    strategy :sparkle do |item|
+      item.short_version.delete_prefix("v")
+    end
   end
 
   auto_updates true
