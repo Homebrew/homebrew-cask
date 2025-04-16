@@ -12,8 +12,10 @@ cask "radarr" do
   homepage "https://radarr.video/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://radarr.servarr.com/v1/update/master/changes?os=osx&arch=#{arch}"
+    strategy :json do |json|
+      json.map { |item| item["version"] }
+    end
   end
 
   auto_updates true
