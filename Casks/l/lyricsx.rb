@@ -8,16 +8,8 @@ cask "lyricsx" do
   homepage "https://github.com/ddddxxx/LyricsX"
 
   livecheck do
-    url :url
-    regex(/^LyricsX[._-]v?(\d+(?:\.\d+)+)\+(\d+)\.zip$/i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
+    url "https://ddddxxx.github.io/LyricsX/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
