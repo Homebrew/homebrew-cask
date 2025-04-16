@@ -12,8 +12,8 @@ cask "openemu@experimental" do
     sha256 "57b6f2b6005119efecb566e8cf611e12f1d0171dcd1f96797a0e9b4c33d3cdb4"
 
     livecheck do
-      url :url
-      strategy :github_latest
+      url "https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast-experimental.xml"
+      strategy :sparkle
     end
   end
 
