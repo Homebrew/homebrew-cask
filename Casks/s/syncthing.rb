@@ -9,9 +9,10 @@ cask "syncthing" do
   homepage "https://syncthing.net/"
 
   livecheck do
-    url :url
-    regex(/v?(\d+(?:[\.\-]\d+)+)/i)
-    strategy :github_latest
+    url "https://upgrades.syncthing.net/syncthing-macos/appcast.xml"
+    strategy :sparkle do |item|
+      item.short_version.delete_prefix("v")
+    end
   end
 
   auto_updates true
