@@ -1009,6 +1009,7 @@ notebooks
 notesnook
 notion
 notion-calendar
+notion-mail
 nova
 novabench
 nozbe
