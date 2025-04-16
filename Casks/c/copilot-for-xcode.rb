@@ -8,8 +8,8 @@ cask "copilot-for-xcode" do
   homepage "https://github.com/intitni/CopilotForXcode"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://copilotforxcode.intii.com/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
