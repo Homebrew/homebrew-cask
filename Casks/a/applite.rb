@@ -9,8 +9,8 @@ cask "applite" do
   homepage "https://aerolite.dev/applite"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://milanvarady.github.io/Applite/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
