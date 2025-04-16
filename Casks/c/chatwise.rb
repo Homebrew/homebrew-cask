@@ -12,8 +12,10 @@ cask "chatwise" do
   homepage "https://chatwise.app/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://chatwise.app/api/trpc/getReleases"
+    strategy :json do |json|
+      json.dig("result", "data")&.map { |item| item["tag"]&.tr("v", "") }
+    end
   end
 
   auto_updates true
