@@ -1671,6 +1671,7 @@ wirecast
 wireframe-sketcher
 wireshark
 wireshark-chmodbpf
+wiso-steuer-2022
 wiso-steuer-2023
 wiso-steuer-2024
 wiso-steuer-2025
