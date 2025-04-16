@@ -3,8 +3,8 @@ cask "vscodium" do
 
   on_catalina :or_older do
     version "1.97.2.25045"
-    sha256 arm:   "48d01a0663b7a6396f41ddc11296eb812d58e9fe3b671b9d33e6b21621e40f21",
-           intel: "af8fe5721ef431ab59fe05a06a3a462c40884229f61cc2962ea01d3e66997243"
+    sha256 arm:   "c47c8e1df67fdbcbb8318cdccaf8fa4f7716cb2ed5e8359c09319d9a99a1a4b6",
+           intel: "1a733b8c254fa63663101c52568b0528085baabe184aae3d34c64ee8ef0142d5"
 
     livecheck do
       skip "Legacy version"
@@ -12,16 +12,18 @@ cask "vscodium" do
   end
   on_big_sur :or_newer do
     version "1.99.22418"
-    sha256 arm:   "2cebecb9f7a728f2485cb2457730591ed4490ab2db07a89cc55dc583daa99716",
-           intel: "f31876f8cf6795e17cfc7b5dccb9ccb53b31d87260c50514be31b76eaee32073"
+    sha256 arm:   "cd8f9d1eead75aa636df2abab9c5cfb496715f4b77d0abc5e42ddeabf0413241",
+           intel: "9000da2c469af951c995c602b943ae743b24801e2c1140cd4212818c0104e4ed"
 
     livecheck do
-      url :url
-      strategy :github_latest
+      url "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master/stable/darwin/#{arch}/latest.json"
+      strategy :json do |json|
+        json["name"]
+      end
     end
   end
 
-  url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{arch}.#{version}.dmg"
+  url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium-darwin-#{arch}-#{version}.zip"
   name "VSCodium"
   desc "Binary releases of VS Code without MS branding/telemetry/licensing"
   homepage "https://github.com/VSCodium/vscodium"
@@ -38,6 +40,7 @@ cask "vscodium" do
     "~/Library/Application Support/VSCodium",
     "~/Library/Caches/com.vscodium",
     "~/Library/Caches/com.vscodium.ShipIt",
+    "~/Library/Caches/VSCodium",
     "~/Library/HTTPStorages/com.vscodium",
     "~/Library/Preferences/com.vscodium*.plist",
     "~/Library/Saved Application State/com.vscodium.savedState",
