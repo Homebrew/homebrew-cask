@@ -12,8 +12,10 @@ cask "mockoon" do
   homepage "https://mockoon.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://api.mockoon.com/releases/desktop/stable.json"
+    strategy :json do |json|
+      json["tag"]
+    end
   end
 
   auto_updates true
