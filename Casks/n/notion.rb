@@ -10,7 +10,7 @@ cask "notion" do
       verified: "desktop-release.notion-static.com/"
   name "Notion"
   desc "App to write, plan, collaborate, and get organised"
-  homepage "https://www.notion.so/"
+  homepage "https://www.notion.com/"
 
   livecheck do
     url "https://desktop-release.notion-static.com/#{livecheck_folder}-mac.yml"
