@@ -1,8 +1,8 @@
 cask "silo" do
-  version "2025.0.1"
-  sha256 "6a8204f6b1292e90c1e116477d1fc0292beb04056711389335ec7848deab5924"
+  version "2025.1.0"
+  sha256 "713beb356a1ad96cdd248e039331b4fa7d7253461d956ad6df1c1a8c5a7ff64d"
 
-  url "https://nevercenter.com/silo/download/filearchive/Install_Silo_#{version.major}_#{version.minor}#{version.patch.presence || "0"}_mac.dmg"
+  url "https://nevercenter.com/silo/download/filearchive/Install_Silo_#{version.major}_#{version.minor}_#{version.patch.presence || "0"}_mac.dmg"
   name "Silo"
   desc "3D polygonal modeller and UV mapper"
   homepage "https://nevercenter.com/silo/"
