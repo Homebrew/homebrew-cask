@@ -8,8 +8,8 @@ cask "easydict" do
   homepage "https://github.com/tisfeng/Easydict/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/tisfeng/Easydict/main/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
