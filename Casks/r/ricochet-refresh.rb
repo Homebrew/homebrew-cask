@@ -1,9 +1,9 @@
 cask "ricochet-refresh" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "3.0.32"
-  sha256 arm:   "356a069c8803ff578b68a88985a7eee7215f7a0d1fa46e2c29363e94de077979",
-         intel: "7c7f2fd72daebb54b2d0a3d78eb6fa7fa1a906cb91ced8f03165a1cbcdb7eaf4"
+  version "3.0.33"
+  sha256 arm:   "06b68cce37cce318492ba4c39db65b6190cc7748f9ad68b28d2eee69bbd7cde4",
+         intel: "7878c40463a94943c162a5c9f20a7bc7783eda0146d2983e036fc3c489fa0979"
 
   url "https://github.com/blueprint-freespeech/ricochet-refresh/releases/download/v#{version}-release/ricochet-refresh-#{version}-macos-#{arch}.dmg",
       verified: "github.com/blueprint-freespeech/ricochet-refresh/"
