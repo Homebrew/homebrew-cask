@@ -13,6 +13,7 @@ cask "domzilla-caffeine" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   conflicts_with cask: "caffeine"
   depends_on macos: ">= :big_sur"
 
