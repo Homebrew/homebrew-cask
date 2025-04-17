@@ -1,30 +1,34 @@
 cask "anki" do
   arch arm: "apple", intel: "intel"
 
-  version "25.02"
-
   on_catalina :or_older do
+    version "24.11"
     sha256 "4d44b763ea114e2aae61aaaa8171fd54a9095a06cd8e84a863675b1bbc75a24a"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt5.dmg",
         verified: "github.com/ankitects/anki/"
+
+    livecheck do
+      skip "Legacy version"
+    end
   end
   on_big_sur :or_newer do
-    sha256 arm:   "e0deae9133b1276169ae6b52c540b199ab6129fe49ea85cd089caa2d9dfdcac9",
-           intel: "e6ca04f4966e830b8421477353e922ecfa1796ebe61bd6e795a5791009a520eb"
+    version "25.02.1"
+    sha256 arm:   "f9a29231d69afacfa4a3bcc8fdafbc3e42a4073198a7750522d2052dedc65f7e",
+           intel: "5178c46594cc1c00f43e02038d1692cbe915986389be2c4272bee4a591a74f21"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt6.dmg",
         verified: "github.com/ankitects/anki/"
+
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
   end
 
   name "Anki"
   desc "Memory training application"
   homepage "https://apps.ankiweb.net/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   depends_on macos: ">= :high_sierra"
 
