@@ -1,14 +1,22 @@
 cask "weasis" do
   arch arm: "aarch64", intel: "x86-64"
 
-  version "4.5.1"
-  sha256 arm:   "c9248037c6fd15af73227c80f97ef855f218a958aeec70379e606c82cb8b8257",
-         intel: "b6fcda972e5caf6865fedc3f4f9898e13a04257a6891afa06623d8390bf55422"
+  version "4.6.0"
+  sha256 arm:   "4b78262ef96c791ad5d8da5471beff2443013c6a4ff90d8f0bc0c658253f402c",
+         intel: "e9f89769ae960a43e9deaae2cbfccb47cc355b188a5c38d406dd4550648e9b9e"
 
-  url "https://github.com/nroduit/Weasis/releases/download/v#{version}/Weasis-#{version}-#{arch}.pkg"
+  url "https://github.com/nroduit/Weasis/releases/download/v#{version}/Weasis-#{version}-#{arch}.pkg",
+      verified: "github.com/nroduit/Weasis/"
   name "Weasis"
   desc "Free DICOM viewer for displaying and analyzing medical images"
-  homepage "https://github.com/nroduit/Weasis"
+  homepage "https://weasis.org/en/index.html"
+
+  livecheck do
+    url "https://nroduit.github.io/en/api/release/api.json"
+    strategy :json do |json|
+      json["version"]&.tr("v", "")
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
