@@ -9,7 +9,9 @@ cask "tella" do
 
   livecheck do
     url "https://mac.tella.tv/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
