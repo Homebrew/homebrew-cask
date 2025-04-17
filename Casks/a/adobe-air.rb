@@ -1,6 +1,6 @@
 cask "adobe-air" do
-  version "51.1.3.4"
-  sha256 "e00d01abdec2fc64025c3f1dcd3c8b2cde76a6276da241ed77ee2010e78c37ae"
+  version "51.2.1.1"
+  sha256 "b7575ed786154a3277b1cf6eaf1fcf023c9376e8a9aea7b0b4b0e7389a4ec4cb"
 
   url "https://airsdk.harman.com/assets/downloads/#{version}/AdobeAIR.dmg"
   name "Adobe AIR"
