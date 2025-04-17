@@ -1,6 +1,6 @@
 cask "enfusegui" do
-  version "3.24.1"
-  sha256 "8cb4d1abbf38f20ed0d750921237279bd3478ea3702bfe24fc2f864b2ce07896"
+  version "3.25.0"
+  sha256 "d07a51c10b285bdbe5b6cd92b3e7c37eaa7b9ac6873a41c6f89f8194df1d82f4"
 
   url "https://swipeware.com/apps/enfusegui/v#{version.major}/EnfuseGUI-#{version}.dmg"
   name "EnfuseGUI"
@@ -8,19 +8,15 @@ cask "enfusegui" do
   homepage "https://swipeware.com/applications/enfusegui/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?enfusegui[._-]?v?(\d+(?:_\d+)+)-mac/i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      match[1].tr("_", ".")
-    end
+    url "https://bit.ly/enfusegui3-mac"
+    strategy :header_match
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
-  app "EnfuseGUI.app"
+  pkg "EnfuseGUI #{version}.pkg"
+
+  uninstall pkgutil: "com.swipeware.enfusegui-installer.bjkzvwjjss"
 
   zap trash: [
     "~/Library/Application Scripts/com.swipeware.enfusegui",
