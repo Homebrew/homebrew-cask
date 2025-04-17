@@ -12,7 +12,7 @@ cask "akuity" do
 
   livecheck do
     url "https://dl.akuity.io/akuity-cli/stable.txt"
-    regex(/v?(\d+(?:\.\d+)+(?:-\d+\.\d+-[a-f0-9]+))/i)
+    regex(/v?(\d+(?:\.\d+)+(?:[_-]\d+(?:\.\d+)*)?(?:[_-]\h+)?)/i)
   end
 
   binary "akuity"
