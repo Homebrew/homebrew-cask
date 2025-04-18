@@ -12,7 +12,13 @@ cask "futubull" do
 
   livecheck do
     url "https://www.futunn.com/download/history?client=11"
-    regex(/FTNNForMac[._-]v?(\d+(?:\.\d+)+)[._-]Website\.dmg/i)
+    strategy :json do |json|
+      json["data"]&.map do |item|
+        next if item["is_beta"] == 1
+
+        item["version"]
+      end
+    end
   end
 
   depends_on macos: ">= :high_sierra"
