@@ -1735,3 +1735,4 @@ zotero
 zotero@beta
 zspace
 zulu
+zulufx
