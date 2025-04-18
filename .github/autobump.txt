@@ -267,6 +267,7 @@ codux
 cog
 coin-wallet
 colorwell
+comfyui
 commander-one
 commandpost
 companion
