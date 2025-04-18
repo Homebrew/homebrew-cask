@@ -1,6 +1,6 @@
 cask "opencat" do
-  version "2.51.0,1332"
-  sha256 "22706928566b11670f162fd94c4ac98fcb061cf3945c9c2a797cabe9ad1f6ae5"
+  version "2.51.2,1359"
+  sha256 "70cd1908ad5d431162c5c8c3ec659ca00a53c176c5e4535076a392d107e22390"
 
   url "https://opencat.app/releases/OpenCat-#{version.csv.first}.#{version.csv.second}.dmg"
   name "OpenCat"
