@@ -8,7 +8,7 @@ cask "deepchat" do
   url "https://github.com/ThinkInAIXYZ/deepchat/releases/download/v#{version}/DeepChat-#{version}-mac-#{arch}.dmg",
       verified: "github.com/ThinkInAIXYZ/deepchat/"
   name "DeepChat"
-  desc "Smart assistant that connects powerful AI to your personal world"
+  desc "AI assistant"
   homepage "https://deepchat.thinkinai.xyz/"
 
   auto_updates true
