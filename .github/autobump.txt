@@ -1622,6 +1622,7 @@ viz
 vk-calls
 vlc@nightly
 vnc-viewer
+vnote
 voiceink
 volanta
 vpn-tracker-365
