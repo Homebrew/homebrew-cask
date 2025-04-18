@@ -11,11 +11,6 @@ cask "deepchat" do
   desc "Smart assistant that connects powerful AI to your personal world"
   homepage "https://deepchat.thinkinai.xyz/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :big_sur"
 
