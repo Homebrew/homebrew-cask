@@ -7,6 +7,13 @@ cask "electorrent" do
   desc "Desktop remote torrenting application"
   homepage "https://github.com/tympanix/Electorrent"
 
+  livecheck do
+    url "https://electorrent.vercel.app/update/dmg/0.0.0"
+    strategy :json do |json|
+      json["name"]&.tr("v", "")
+    end
+  end
+
   auto_updates true
 
   app "Electorrent.app"
