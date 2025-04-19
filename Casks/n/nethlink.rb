@@ -1,8 +1,11 @@
 cask "nethlink" do
-  version "1.1.1"
-  sha256 "c3fc2f4589d15b5be3854e62f918c4ce34a65ececd53da8e237ebacb97fcc144"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/NethServer/nethlink/releases/download/v#{version}/nethlink-#{version}.dmg"
+  version "1.2.0"
+  sha256 arm:   "d77b993c07b33a388e835bf47deb20f4c86d7a21a214fc54842b76cbdc4c8512",
+         intel: "f7b2de1d620c914487d86c58a2a5f03566856f86832bae3119a8ddadc4e0627e"
+
+  url "https://github.com/NethServer/nethlink/releases/download/v#{version}/nethlink-#{version}-#{arch}.dmg"
   name "NethLink"
   desc "Link NethServer systems and provide remote access tools"
   homepage "https://github.com/NethServer/nethlink"
@@ -18,8 +21,4 @@ cask "nethlink" do
   app "NethLink.app"
 
   zap trash: "~/Library/Application Support/nethlink"
-
-  caveats do
-    requires_rosetta
-  end
 end
