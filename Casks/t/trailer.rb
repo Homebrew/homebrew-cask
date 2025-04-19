@@ -8,6 +8,12 @@ cask "trailer" do
   desc "Managing Pull Requests and Issues For GitHub & GitHub Enterprise"
   homepage "https://ptsochantaris.github.io/trailer/"
 
+  livecheck do
+    url "https://ptsochantaris.github.io/trailer/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Trailer.app"
