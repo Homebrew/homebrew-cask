@@ -7,7 +7,7 @@ cask "hex" do
   url "https://hex-updates.s3.us-east-1.amazonaws.com/hex-latest.dmg",
       verified: "hex-updates.s3.us-east-1.amazonaws.com/"
   name "Hex"
-  desc "Hex — Voice → Text"
+  desc "Voice → Text"
   homepage "https://hex.kitlangton.com/"
 
   app "Hex.app"
