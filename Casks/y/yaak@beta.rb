@@ -11,9 +11,24 @@ cask "yaak@beta" do
   desc "REST, GraphQL and gRPC client"
   homepage "https://yaak.app/"
 
+  # Beta releases of the app use the same update URL as stable releases but an
+  # `x-update-mode: beta` request header is used to retrieve beta updates
+  # instead. livecheck doesn't support setting arbitrary headers in `livecheck`
+  # blocks yet, so we check GitHub for now. It's necessary to check releases
+  # instead of Git tags, as there can be a notable gap between tag and release.
   livecheck do
     url :url
     regex(/^v?(\d+(?:\.\d+)+(?:[._-](?:beta|rc)[._-]\d+)?)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        match = release["tag_name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   auto_updates true
