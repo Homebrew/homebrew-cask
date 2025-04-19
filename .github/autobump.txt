@@ -271,8 +271,8 @@ comfyui
 commander-one
 commandpost
 companion
-companion@beta
 companion-satellite
+companion@beta
 compositor
 confluent-cli
 connect-fonts
@@ -336,6 +336,7 @@ ddpm
 deadbolt
 decentr
 deckset
+deepchat
 deeper
 deepl
 deezer
@@ -1473,9 +1474,9 @@ teleport
 teleport-connect
 tella
 temurin
-temurin@8
 temurin@17
 temurin@21
+temurin@8
 tenable-nessus-agent
 tencent-docs
 tencent-lemon
