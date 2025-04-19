@@ -1,21 +1,25 @@
 cask "ibm-aspera-connect" do
-  arch arm: "arm64", intel: "x86_64"
+  version "4.2.14.855"
+  sha256 "3b1d2fefe897e4e04b2ff68f26220e2e75c93cf566b8504048f72076b42da23d"
 
-  version "4.2.13.820"
-  sha256 arm:   "58b42f814c95168e149491d330acb286920fcc19c581e958168305b78c8aa478",
-         intel: "7dd745e07145a39cfae516b797745541fb3774050e567f98adbe191651b10d1f"
-
-  url "https://download4.boulder.ibm.com/sar/CMA/OSA/0csnb/0/ibm-aspera-connect_#{version}_macOS_#{arch}.pkg"
+  url "https://d3gcli72yxqn2z.cloudfront.net/downloads/connect/latest/bin/ibm-aspera-connect_#{version}-HEAD_macOS_x86_64.pkg",
+      verified: "d3gcli72yxqn2z.cloudfront.net/"
   name "IBM Aspera Connect"
   desc "Facilitate uploads and downloads with an Aspera transfer server"
   homepage "https://www.ibm.com/aspera/connect/"
 
   livecheck do
-    url "https://d3gcli72yxqn2z.cloudfront.net/downloads/connect/latest/versions.js"
-    regex(/ibm-aspera-connect[._-]v?(\d+(?:\.\d+)+)_macOS_x86_64\.pkg/i)
+    url "https://d3gcli72yxqn2z.cloudfront.net/downloads/connect/latest/references.json"
+    strategy :json do |json|
+      json["entries"]&.map do |entry|
+        next unless entry.dig("platform", "os")&.match?(/^mac(?:OS)?$/i)
+
+        entry["version"]
+      end
+    end
   end
 
-  pkg "ibm-aspera-connect_#{version}_macOS_#{arch}.pkg"
+  pkg "ibm-aspera-connect_#{version}-HEAD_macOS_x86_64.pkg"
 
   uninstall pkgutil: [
     "com.ibm.software.aspera.connect",
