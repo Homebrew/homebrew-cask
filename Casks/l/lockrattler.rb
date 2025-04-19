@@ -2,8 +2,7 @@ cask "lockrattler" do
   version "4.37,2023.05"
   sha256 "e0313e7116136d98201c01b09eefe3a221889579debe68457e88488bfa60b78e"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/lockrattler#{version.csv.first.no_dots}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/lockrattler#{version.csv.first.no_dots}.zip"
   name "Lock Rattler"
   desc "Checks security systems and reports issues"
   homepage "https://eclecticlight.co/lockrattler-systhist/"

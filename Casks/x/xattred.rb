@@ -2,8 +2,7 @@ cask "xattred" do
   version "1.5,2023.05"
   sha256 "044fdd02921e867a4dd78b3979c55d8efacbd526ea4fcc5bc560523d58bc66b6"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/xattred#{version.csv.first.no_dots}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/xattred#{version.csv.first.no_dots}.zip"
   name "xattred"
   desc "Extended attribute editor"
   homepage "https://eclecticlight.co/xattred-sandstrip-xattr-tools/"

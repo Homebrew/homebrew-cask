@@ -2,8 +2,7 @@ cask "metamer" do
   version "1.5,2023.11"
   sha256 "bd158fd3afe0837a5a312858be50ec285f417945c04131d8570fe55cf22112f6"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/metamer#{version.csv.first.no_dots}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/metamer#{version.csv.first.no_dots}.zip"
   name "Metamer"
   desc "Accessible metadata editor for 16 Spotlight extended attributes"
   homepage "https://eclecticlight.co/xattred-sandstrip-xattr-tools/"
