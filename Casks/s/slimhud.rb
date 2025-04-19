@@ -7,6 +7,12 @@ cask "slimhud" do
   desc "Replacement for the volume, brightness and keyboard backlight HUDs"
   homepage "https://github.com/AlexPerathoner/SlimHUD/"
 
+  livecheck do
+    url "https://alexperathoner.github.io/SlimHUD/Support/appcast.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "SlimHUD.app"
