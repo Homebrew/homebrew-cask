@@ -8,6 +8,11 @@ cask "shifty" do
   desc "Menu bar app that provides more control over Night Shift"
   homepage "https://shifty.natethompson.io/"
 
+  livecheck do
+    url "https://shifty.natethompson.io/ShiftyAppcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
