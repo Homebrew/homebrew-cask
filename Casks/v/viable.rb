@@ -18,6 +18,7 @@ cask "viable" do
     end
   end
 
+  depends_on arch: :arm64
   depends_on macos: ">= :monterey"
 
   app "viable#{version.csv.first}/Viable.app"
