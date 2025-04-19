@@ -2,8 +2,7 @@ cask "silnite" do
   version "10,2023.07"
   sha256 "2cf56007a9e0f4d420cc137afeb6811ded0918d74d49552e684218b7127cc976"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/silnite#{version.csv.first}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/silnite#{version.csv.first}.zip"
   name "silnite"
   desc "Checks EFI firmware and security data file updates"
   homepage "https://eclecticlight.co/lockrattler-systhist/"

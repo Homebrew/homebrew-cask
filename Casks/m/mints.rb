@@ -2,8 +2,7 @@ cask "mints" do
   version "1.20,2024.11"
   sha256 "244671bda59a5ae3d8f232e6dfb093c81aa70caa3efd20b2928124a3015835d1"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/mints#{version.csv.first.no_dots}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/mints#{version.csv.first.no_dots}.zip"
   name "Mints"
   desc "Logging tool suite"
   homepage "https://eclecticlight.co/mints-a-multifunction-utility/"
