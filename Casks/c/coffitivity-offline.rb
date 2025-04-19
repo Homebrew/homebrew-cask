@@ -8,6 +8,8 @@ cask "coffitivity-offline" do
   desc "Ambient sound generator"
   homepage "https://coffitivity-offline.siwalik.in/"
 
+  deprecate! date: "2025-04-17", because: :unmaintained
+
   app "Coffitivity Offline.app"
 
   zap trash: [
