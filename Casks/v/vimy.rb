@@ -19,7 +19,7 @@ cask "vimy" do
 
   depends_on arch: :arm64
   depends_on macos: ">= :monterey"
-  depends_on cask: "viable@1b9"
+  depends_on cask: "viable"
 
   app "vimy#{version.csv.first}/Vimy.app"
 
