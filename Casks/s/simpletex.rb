@@ -1,6 +1,5 @@
 cask "simpletex" do
   arch arm: "-arm64"
-  livecheck_arch = on_arch_conditional arm: "arm", intel: "x64"
 
   version "0.2.11"
   sha256 arm:   "e18dad77f1f7aff9a6d79832e1503468f0ff8948e22da91f8c41e17faa7163f7",
@@ -12,13 +11,9 @@ cask "simpletex" do
   homepage "https://simpletex.net/"
 
   livecheck do
-    url "https://simpletex.cn/download_mac_#{livecheck_arch}_url"
-    regex(/SimpleTex[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next if match.blank?
-
-      match[1]
+    url "https://server.simpletex.cn/misc/check/force_update_version/"
+    strategy :json do |json|
+      json.dig("res", "macos_latest_version")
     end
   end
 
