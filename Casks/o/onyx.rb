@@ -28,7 +28,7 @@ cask "onyx" do
   on_sonoma do
     version "4.6.2"
   end
-  on_sequoia :or_newer do
+  on_sequoia do
     version "4.7.7"
   end
 
