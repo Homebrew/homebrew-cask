@@ -8,6 +8,11 @@ cask "menumeters" do
   desc "Set of CPU, memory, disk, and network monitoring tools"
   homepage "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/"
 
+  livecheck do
+    url "https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/MenuMeters-Update.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
