@@ -129,6 +129,7 @@ bananas
 banking-4
 banktivity
 basecamp
+batfi
 batteries
 bazecor
 bbedit
