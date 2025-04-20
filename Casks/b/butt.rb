@@ -1,6 +1,6 @@
 cask "butt" do
-  version "1.44.0"
-  sha256 "8511e32aab5ed97473961a3f7d6b5c8d487db85d310ad029ce6895cfb6229104"
+  version "1.45.0"
+  sha256 "bfc56ff9592829d66edcdbf8ff88cca8cd39b08c39af904b9b852c6d657c21ed"
 
   url "https://danielnoethen.de/butt/release/#{version}/butt-#{version}.dmg"
   name "Broadcast Using This Tool"
