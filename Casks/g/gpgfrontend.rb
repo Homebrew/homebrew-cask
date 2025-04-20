@@ -15,8 +15,8 @@ cask "gpgfrontend" do
     end
   end
   on_ventura do
-    version "2.1.7"
-    sha256 "e7492fcaf2522992f1a4a2f62656f22b64403f56325f11a975c5d875c54c3558"
+    version "2.1.8"
+    sha256 "6a115d7201f59d00a550428fd3f1ebbb2917f59eab85a60aa19e9d3bd371b9e0"
 
     url "https://github.com/saturneric/GpgFrontend/releases/download/v#{version}/GpgFrontend-#{version}-macos-13.dmg",
         verified: "github.com/saturneric/GpgFrontend/"
@@ -26,15 +26,15 @@ cask "gpgfrontend" do
     end
   end
   on_sonoma do
-    version "2.1.7"
-    sha256 "943131ceb28696764d4dc215f5b841fe340b9071857afa06503630199eec01e3"
+    version "2.1.8"
+    sha256 "5d1c2f1e9b2a4157d13be4ab6afb3e95a0d8eae20ce8c3942090d4acc622bb10"
 
     url "https://github.com/saturneric/GpgFrontend/releases/download/v#{version}/GpgFrontend-#{version}-macos-14.dmg",
         verified: "github.com/saturneric/GpgFrontend/"
   end
   on_sequoia :or_newer do
-    version "2.1.7"
-    sha256 "ca5f7e885b8e214aa9c325e07654fe0cc281744ff587f21227caa9eda8196c00"
+    version "2.1.8"
+    sha256 "691e220a0bf6a5af95dc476ef41c81dc73b59430d7b9940d42b7750af0943f66"
 
     url "https://github.com/saturneric/GpgFrontend/releases/download/v#{version}/GpgFrontend-#{version}-macos-15.dmg",
         verified: "github.com/saturneric/GpgFrontend/"
