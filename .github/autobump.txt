@@ -613,6 +613,7 @@ gpxsee
 gqrx
 graalvm-jdk@21
 grammarly-desktop
+gramps
 grandtotal
 granola
 graphicconverter
