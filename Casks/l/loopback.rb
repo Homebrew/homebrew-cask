@@ -6,12 +6,24 @@ cask "loopback" do
 
     url "https://cdn.rogueamoeba.com/loopback/download/Loopback-ACE.zip"
 
+    # The ACE release supports macOS 11 to 14.4.1, so we use the highest
+    # supported macOS version in the URL.
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1441&bundleid=com.rogueamoeba.Loopback&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
+
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "2.4.5"
 
     url "https://cdn.rogueamoeba.com/loopback/download/Loopback.zip"
+
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=999&bundleid=com.rogueamoeba.Loopback&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
 
     depends_on macos: ">= :sonoma"
 
@@ -22,11 +34,6 @@ cask "loopback" do
   name "Loopback"
   desc "Cable-free audio router"
   homepage "https://rogueamoeba.com/loopback/"
-
-  livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=#{MacOS.full_version.to_s.delete(".")}&bundleid=com.rogueamoeba.Loopback&platform=osx&version=#{version.no_dots}8000"
-    strategy :sparkle
-  end
 
   auto_updates true
 

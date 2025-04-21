@@ -6,12 +6,24 @@ cask "airfoil" do
 
     url "https://cdn.rogueamoeba.com/airfoil/mac/download/Airfoil-ACE.zip"
 
+    # The ACE release supports macOS 11 to 14.3.1, so we use the highest
+    # supported macOS version in the URL.
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1431&bundleid=com.rogueamoeba.airfoil&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
+
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "5.12.4"
 
     url "https://cdn.rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
+
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=999&bundleid=com.rogueamoeba.airfoil&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
 
     depends_on macos: ">= :sonoma"
 
@@ -22,11 +34,6 @@ cask "airfoil" do
   name "Airfoil"
   desc "Sends audio from computer to outputs"
   homepage "https://rogueamoeba.com/airfoil/mac/"
-
-  livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=#{MacOS.full_version.to_s.delete(".")}&bundleid=com.rogueamoeba.airfoil&platform=osx&version=#{version.no_dots}8000"
-    strategy :sparkle
-  end
 
   auto_updates true
 

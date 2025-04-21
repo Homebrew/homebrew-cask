@@ -6,12 +6,24 @@ cask "soundsource" do
 
     url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource-ACE.zip"
 
+    # The ACE release supports macOS 11 to 14.4.1, so we use the highest
+    # supported macOS version in the URL.
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1441&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
+
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "5.8.2"
 
     url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource.zip"
+
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=999&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
 
     depends_on macos: ">= :sonoma"
 
@@ -22,11 +34,6 @@ cask "soundsource" do
   name "SoundSource"
   desc "Sound and audio controller"
   homepage "https://rogueamoeba.com/soundsource/"
-
-  livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=#{MacOS.full_version.to_s.delete(".")}&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
-    strategy :sparkle
-  end
 
   auto_updates true
   conflicts_with cask: "soundsource@test"
