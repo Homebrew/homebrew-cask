@@ -36,7 +36,7 @@ cask "jump-desktop-connect" do
             delete:    "/Library/Application Support/Jump Desktop/Connect/sharedconfig.plist",
             rmdir:     [
               "/Library/Application Support/Jump Desktop",
-              "/Library/Application Support/Jump Desktop/Connect/",
+              "/Library/Application Support/Jump Desktop/Connect",
             ]
 
   zap trash: [
