@@ -16,7 +16,7 @@ cask "poi" do
   app "poi.app"
 
   zap trash: [
-    "~/Library/Application Support/poi/",
+    "~/Library/Application Support/poi",
     "~/Library/Preferences/org.poooi.poi.helper.plist",
   ]
 end
