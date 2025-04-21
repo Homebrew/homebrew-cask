@@ -23,7 +23,7 @@ cask "millie" do
   app "Millie.app"
 
   zap trash: [
-    "~/Library/Application Support/kr.co.millie.MillieShelf/",
+    "~/Library/Application Support/kr.co.millie.MillieShelf",
     "~/Library/Caches/kr.co.millie.MillieShelf",
     "~/Library/HTTPStorages/kr.co.millie.MillieShelf.binarycookies",
     "~/Library/Saved Application State/kr.co.millie.MillieShelf.savedState",
