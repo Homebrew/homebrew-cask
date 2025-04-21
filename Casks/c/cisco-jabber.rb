@@ -25,8 +25,8 @@ cask "cisco-jabber" do
             ],
             delete:  [
               "/Applications/Cisco Jabber.app",
-              "/Library/Application Support/Cisco/Unified Communications/Jabber/",
-              "/Library/Logs/Jabber/",
+              "/Library/Application Support/Cisco/Unified Communications/Jabber",
+              "/Library/Logs/Jabber",
             ]
 
   zap trash: [
