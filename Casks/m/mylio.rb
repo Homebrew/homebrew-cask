@@ -23,7 +23,7 @@ cask "mylio" do
     "~/Library/Caches/mylollc.Mylio",
     "~/Library/HTTPStorages/mylollc.Mylio",
     "~/Library/Preferences/mylollc.Mylio.plist",
-    "~/Library/WebKit/mylollc.Mylio/",
+    "~/Library/WebKit/mylollc.Mylio",
     "~/Mylio",
   ]
 end
