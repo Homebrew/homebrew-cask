@@ -6,12 +6,24 @@ cask "piezo" do
 
     url "https://cdn.rogueamoeba.com/piezo/download/Piezo-ACE.zip"
 
+    # The ACE release supports macOS 11 to 14.3.1, so we use the highest
+    # supported macOS version in the URL.
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1431&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
+
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "1.9.5"
 
     url "https://cdn.rogueamoeba.com/piezo/download/Piezo.zip"
+
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=999&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
 
     depends_on macos: ">= :sonoma"
 
@@ -22,11 +34,6 @@ cask "piezo" do
   name "Piezo"
   desc "Audio recording application"
   homepage "https://rogueamoeba.com/piezo/"
-
-  livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=#{MacOS.full_version.to_s.delete(".")}&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
-    strategy :sparkle
-  end
 
   auto_updates true
 
