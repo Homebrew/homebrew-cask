@@ -26,7 +26,7 @@ cask "sublime-merge@dev" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimemerge.sfl*",
     "~/Library/Application Support/Sublime Merge",
-    "~/Library/Caches/com.sublimemerge/",
+    "~/Library/Caches/com.sublimemerge",
     "~/Library/Preferences/com.sublimemerge.plist",
     "~/Library/Saved Application State/com.sublimemerge.savedState",
   ]
