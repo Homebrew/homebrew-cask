@@ -47,29 +47,37 @@ cask "cocktail" do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
-    on_ventura do
-      version "16.7"
-      sha256 :no_check
+  on_ventura do
+    version "16.7"
+    sha256 :no_check
 
-      url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
-    end
-    on_sonoma do
-      version "17.10"
-      sha256 :no_check
-
-      url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
-    end
-    on_sequoia :or_newer do
-      version "18.4.1"
-      sha256 :no_check
-
-      url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
-    end
+    url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
 
     livecheck do
       url :homepage
-      regex(/macOS\s+#{MacOS.version}.*?v?(\d+(?:\.\d+)+)/i)
+      regex(/macOS\s+13.*?v?(\d+(?:\.\d+)+)/i)
+    end
+  end
+  on_sonoma do
+    version "17.10.1"
+    sha256 :no_check
+
+    url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
+
+    livecheck do
+      url :homepage
+      regex(/macOS\s+14.*?v?(\d+(?:\.\d+)+)/i)
+    end
+  end
+  on_sequoia :or_newer do
+    version "18.4.1"
+    sha256 :no_check
+
+    url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
+
+    livecheck do
+      url :homepage
+      regex(/macOS\s+15.*?v?(\d+(?:\.\d+)+)/i)
     end
   end
 
