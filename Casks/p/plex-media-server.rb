@@ -24,9 +24,9 @@ cask "plex-media-server" do
             quit:      "com.plexapp.plexmediaserver"
 
   zap trash: [
-    "~/Library/Application Support/Plex Media Server/",
-    "~/Library/Caches/PlexMediaServer/",
-    "~/Library/Logs/Plex Media Server/",
+    "~/Library/Application Support/Plex Media Server",
+    "~/Library/Caches/PlexMediaServer",
+    "~/Library/Logs/Plex Media Server",
     "~/Library/Preferences/com.plexapp.plexmediaserver.plist",
   ]
 end
