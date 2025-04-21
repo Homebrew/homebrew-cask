@@ -17,7 +17,7 @@ cask "pecunia" do
   app "Pecunia.app"
 
   zap trash: [
-    "~/Library/Application Scripts/de.pecuniabanking.pecunia/",
-    "~/Library/Containers/de.pecuniabanking.pecunia/",
+    "~/Library/Application Scripts/de.pecuniabanking.pecunia",
+    "~/Library/Containers/de.pecuniabanking.pecunia",
   ]
 end
