@@ -9,10 +9,7 @@ cask "around" do
   desc "Video calls designed for energy, ideas and action"
   homepage "https://www.around.co/"
 
-  livecheck do
-    url "https://downloads.around.co/latest-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2025-04-20", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :catalina"
