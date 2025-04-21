@@ -1,6 +1,6 @@
 cask "focu" do
-  version "0.12.0"
-  sha256 "887d8f30c7c416092fac5572c645cdf40a0bbe0d1e0edf7fbee738eb190da354"
+  version "0.12.2"
+  sha256 "190b6f61158d3c35a60df4847c9f6f43dfa60c3c67e5fb3947170a67d006d6da"
 
   url "https://github.com/focu-app/focu-app/releases/download/v#{version}/Focu_#{version}_aarch64.dmg",
       verified: "github.com/focu-app/focu-app/"
