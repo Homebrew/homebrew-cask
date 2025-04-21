@@ -33,6 +33,6 @@ cask "meld" do
     "~/Library/Application Support/org.gnome.Meld",
     "~/Library/Caches/org.gnome.Meld",
     "~/Library/Preferences/org.gnome.Meld.plist",
-    "~/Library/Saved Application State/org.gnome.Meld.savedState/",
+    "~/Library/Saved Application State/org.gnome.Meld.savedState",
   ]
 end
