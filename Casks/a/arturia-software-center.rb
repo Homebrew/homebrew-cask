@@ -31,7 +31,7 @@ cask "arturia-software-center" do
 
   zap delete: [
         "/Library/Arturia/Arturia Software Center",
-        "/Library/ArturiaSC/",
+        "/Library/ArturiaSC",
       ],
       trash:  [
         "~/Library/Caches/com.Arturia.ArturiaSoftwareCenter",
