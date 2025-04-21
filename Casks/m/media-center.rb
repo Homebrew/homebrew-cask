@@ -23,7 +23,7 @@ cask "media-center" do
 
   zap trash: [
     "~/Documents/JRiver/",
-    "~/Library/Application Support/J River/",
+    "~/Library/Application Support/J River",
     "~/Library/Caches/com.jriver.MediaCenter#{version.major}",
     "~/Library/Cookies/com.jriver.MediaCenter#{version.major}*",
     "~/Library/Preferences/com.jriver.MediaCenter#{version.major}.plist",
