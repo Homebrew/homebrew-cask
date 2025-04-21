@@ -44,5 +44,5 @@ cask "adobe-air" do
         "~/Library/Application Support/Adobe/AIR",
         "~/Library/Caches/com.adobe.air.ApplicationInstaller",
       ],
-      rmdir: "~/Library/Application Support/Adobe/"
+      rmdir: "~/Library/Application Support/Adobe"
 end
