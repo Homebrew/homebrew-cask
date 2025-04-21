@@ -18,7 +18,7 @@ cask "mutesync" do
   app "mutesync.app"
 
   zap trash: [
-    "~/Library/Application Support/mutesync/",
+    "~/Library/Application Support/mutesync",
     "~/Library/Preferences/com.mutesync.electron.plist",
   ]
 end
