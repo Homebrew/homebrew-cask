@@ -12,5 +12,5 @@ cask "phantomjs" do
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
 
-  zap trash: "~/Library/Application Support/Ofi Labs/PhantomJS/"
+  zap trash: "~/Library/Application Support/Ofi Labs/PhantomJS"
 end
