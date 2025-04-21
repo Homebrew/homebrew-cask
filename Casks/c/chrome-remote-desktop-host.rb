@@ -29,7 +29,7 @@ cask "chrome-remote-desktop-host" do
               "com.google.pkg.ChromeRemoteDesktopHostUninstaller",
             ]
 
-  zap trash: "~/Library/Saved Application State/com.google.chromeremotedesktop.me2me-host-uninstaller.savedState/"
+  zap trash: "~/Library/Saved Application State/com.google.chromeremotedesktop.me2me-host-uninstaller.savedState"
 
   caveats do
     logout
