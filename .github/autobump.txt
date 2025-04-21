@@ -1710,6 +1710,7 @@ xnviewmp
 xpra
 yaak
 yaak@beta
+yandex
 yandex-cloud-cli
 yandex-music
 yate
