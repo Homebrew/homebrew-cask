@@ -20,7 +20,7 @@ cask "touchdesigner" do
   app "TouchDesigner.app"
 
   zap trash: [
-    "~/Library/Application Support/Derivative/TouchDesigner099/",
-    "~/Library/Saved Application State/ca.derivative.TouchDesigner.savedState/",
+    "~/Library/Application Support/Derivative/TouchDesigner099",
+    "~/Library/Saved Application State/ca.derivative.TouchDesigner.savedState",
   ]
 end
