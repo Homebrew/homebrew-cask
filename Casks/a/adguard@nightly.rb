@@ -1,6 +1,6 @@
 cask "adguard@nightly" do
-  version "2.17.0.1955"
-  sha256 "c673a6af794493f1eab68fb2378585d880538d1ad0f73146d23c75dc0a96056f"
+  version "2.17.0.1958"
+  sha256 "1078b8490a8a1421cc64fc5e20ae89958b0ed0e8edd7a4fb18672a05e217c709"
 
   url "https://static.adguard.com/mac/nightly/AdGuard-#{version}.dmg"
   name "Adguard"
