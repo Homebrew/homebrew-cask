@@ -1,16 +1,19 @@
 cask "meld" do
-  version "3.21.0-r3,19"
-  sha256 "50a4a45b3b7f44910c1a4c782c044579bc9dd09432c5e0a965dbeb973bbc767e"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://github.com/yousseb/meld/releases/download/osx-#{version.csv.second}/meldmerge.dmg",
-      verified: "github.com/yousseb/meld/"
-  name "Meld for OSX"
+  version "3.22.3+105"
+  sha256 arm:   "aea65bbe21842e9c2e72c547df996858abbe05b2610c583f5121215556009527",
+         intel: "db6be60ccf93f173851da8912b8b5cbf4a2aa6cdf419db4970c573f7fe0f7693"
+
+  url "https://gitlab.com/api/v4/projects/51547804/packages/generic/meld_macos/#{version}/Meld-#{version}_#{arch}.dmg"
+  name "Meld for macOS"
   desc "Visual diff and merge tool"
-  homepage "https://yousseb.github.io/meld/"
+  homepage "https://gitlab.com/dehesselle/meld_macos"
 
-  disable! date: "2024-12-16", because: :discontinued
+  livecheck do
+    url "https://gitlab.com/dehesselle/meld_macos.git"
+  end
 
-  conflicts_with cask: "dehesselle-meld"
   depends_on macos: ">= :high_sierra"
 
   app "Meld.app"
@@ -27,11 +30,9 @@ cask "meld" do
 
   zap trash: [
     "~/.local/share/meld",
-    "~/Library/Preferences/org.gnome.meld.plist",
-    "~/Library/Saved Application State/org.gnome.meld.savedState/",
+    "~/Library/Application Support/org.gnome.Meld",
+    "~/Library/Caches/org.gnome.Meld",
+    "~/Library/Preferences/org.gnome.Meld.plist",
+    "~/Library/Saved Application State/org.gnome.Meld.savedState/",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

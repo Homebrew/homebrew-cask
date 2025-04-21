@@ -345,7 +345,6 @@ default-folder-x
 defold
 defold@alpha
 defold@beta
-dehesselle-meld
 deltachat
 descript
 desktime
@@ -867,6 +866,7 @@ mega
 megacmd
 megasync
 megazeux
+meld
 mellel
 melodics
 memory-cleaner
