@@ -25,11 +25,11 @@ cask "herd" do
     "~/Herd",
     "~/Library/Application Support/Herd",
     "~/Library/Caches/de.beyondco.herd",
-    "~/Library/Caches/SentryCrash/Herd/",
+    "~/Library/Caches/SentryCrash/Herd",
     "~/Library/HTTPStorages/de.beyondco.herd",
     "~/Library/HTTPStorages/de.beyondco.herd.binarycookies",
     "~/Library/Preferences/de.beyondco.herd.plist",
     "~/Library/Saved Application State/de.beyondco.herd.savedState",
-    "~/Library/WebKit/de.beyondco.herd/",
+    "~/Library/WebKit/de.beyondco.herd",
   ]
 end
