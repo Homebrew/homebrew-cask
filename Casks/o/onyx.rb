@@ -51,7 +51,7 @@ cask "onyx" do
   on_sequoia :or_newer do
     version "4.7.7"
 
-    url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
+    url "https://www.titanium-software.fr/download/15/OnyX.dmg"
   end
 
   name "OnyX"
