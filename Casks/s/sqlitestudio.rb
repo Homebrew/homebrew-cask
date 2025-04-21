@@ -13,7 +13,7 @@ cask "sqlitestudio" do
   zap trash: [
     "~/.config/sqlitestudio",
     "~/Library/Preferences/pl.com.salsoft.SQLiteStudio.plist",
-    "~/Library/Preferences/SalSoft/SQLiteStudio/",
+    "~/Library/Preferences/SalSoft/SQLiteStudio",
     "~/Library/Saved Application State/com.yourcompany.SQLiteStudio.savedState",
     "~/Library/Saved Application State/pl.com.salsoft.SQLiteStudio.savedState",
   ]
