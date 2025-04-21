@@ -19,7 +19,7 @@ cask "blockstream-green" do
   app "Blockstream Green.app"
 
   zap trash: [
-    "~/Library/Application Support/Blockstream/Green/",
+    "~/Library/Application Support/Blockstream/Green",
     "~/Library/Caches/Blockstream/Green",
   ]
 end

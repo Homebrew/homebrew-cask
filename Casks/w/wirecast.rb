@@ -23,7 +23,7 @@ cask "wirecast" do
   ]
 
   zap trash: [
-    "~/Library/Caches/net.telestream.wirecast/",
+    "~/Library/Caches/net.telestream.wirecast",
     "~/Library/HTTPStorages/net.telestream.wirecast",
     "~/Library/Logs/Wirecast",
     "~/Library/Preferences/net.telestream.wirecast.plist",

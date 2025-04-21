@@ -15,7 +15,7 @@ cask "winx-hd-video-converter" do
   app "Winx HD Video Converter for Mac.app"
 
   zap trash: [
-    "~/Library/Caches/com.winxdvd.hdvideoconverterformac/",
+    "~/Library/Caches/com.winxdvd.hdvideoconverterformac",
     "~/Library/Preferences/com.winxdvd.hdvideoconverterformac.plist",
   ]
 

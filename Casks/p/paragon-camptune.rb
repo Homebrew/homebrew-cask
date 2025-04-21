@@ -24,7 +24,7 @@ cask "paragon-camptune" do
               "/Library/Application Support/Paragon Software/com.paragon-software.camptunex.helper-data",
               "/Library/Application Support/Paragon Software/uc.camptunex",
             ],
-            rmdir:  "/Library/Application Support/Paragon Software/"
+            rmdir:  "/Library/Application Support/Paragon Software"
 
   zap trash: [
     "~/Library/Application Support/com.paragon-software.camptunex",

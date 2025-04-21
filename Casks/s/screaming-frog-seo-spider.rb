@@ -21,6 +21,6 @@ cask "screaming-frog-seo-spider" do
 
   zap trash: [
     "~/.ScreamingFrogSEOSpider",
-    "~/Library/Application Support/uk.co.screamingfrog.seospider.ui.b/",
+    "~/Library/Application Support/uk.co.screamingfrog.seospider.ui.b",
   ]
 end

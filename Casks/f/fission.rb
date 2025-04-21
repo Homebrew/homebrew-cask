@@ -21,7 +21,7 @@ cask "fission" do
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rogueamoeba.fission.sfl*",
-    "~/Library/Application Support/Fission/",
+    "~/Library/Application Support/Fission",
     "~/Library/Caches/com.rogueamoeba.Fission",
     "~/Library/HTTPStorages/com.rogueamoeba.Fission",
     "~/Library/Preferences/com.rogueamoeba.Fission.plist",

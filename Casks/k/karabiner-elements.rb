@@ -31,7 +31,7 @@ cask "karabiner-elements" do
                 sudo:       true,
               },
               pkgutil:   "org.pqrs.Karabiner-Elements",
-              delete:    "/Library/Application Support/org.pqrs/"
+              delete:    "/Library/Application Support/org.pqrs"
   end
   on_catalina :or_newer do
     on_catalina do
@@ -95,7 +95,7 @@ cask "karabiner-elements" do
                 "org.pqrs.Karabiner-DriverKit-VirtualHIDDevice",
                 "org.pqrs.Karabiner-Elements",
               ],
-              delete:       "/Library/Application Support/org.pqrs/"
+              delete:       "/Library/Application Support/org.pqrs"
     # The system extension 'org.pqrs.Karabiner-DriverKit-VirtualHIDDevice*' should not be uninstalled by Cask
   end
 

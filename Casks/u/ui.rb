@@ -35,10 +35,10 @@ cask "ui" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/com.ui.uid.desktop/",
-    "~/Library/Caches/com.ui.uid.desktop/",
+    "~/Library/Application Support/com.ui.uid.desktop",
+    "~/Library/Caches/com.ui.uid.desktop",
     "~/Library/Logs/UI",
     "~/Library/Preferences/com.ui.uid.desktop.plist",
-    "~/Library/Saved Application State/com.ui.uid.desktop.savedState/",
+    "~/Library/Saved Application State/com.ui.uid.desktop.savedState",
   ]
 end

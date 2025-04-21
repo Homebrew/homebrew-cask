@@ -43,9 +43,9 @@ cask "audio-hijack" do
 
   zap trash: [
     "~/Library/Application Support/Audio Hijack #{version.major}",
-    "~/Library/Caches/com.rogueamoeba.audiohijack/",
-    "~/Library/HTTPStorages/com.rogueamoeba.audiohijack/",
+    "~/Library/Caches/com.rogueamoeba.audiohijack",
+    "~/Library/HTTPStorages/com.rogueamoeba.audiohijack",
     "~/Library/Preferences/com.rogueamoeba.audiohijack.plist",
-    "~/Library/WebKit/com.rogueamoeba.audiohijack/",
+    "~/Library/WebKit/com.rogueamoeba.audiohijack",
   ]
 end

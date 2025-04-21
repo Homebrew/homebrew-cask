@@ -12,7 +12,7 @@ cask "eloquent" do
   app "Eloquent.app"
 
   zap trash: [
-    "~/Library/Application Support/Eloquent/",
+    "~/Library/Application Support/Eloquent",
     "~/Library/Logs/Eloquent.log",
     "~/Library/Preferences/org.crosswire.Eloquent.plist",
     "~/Library/Preferences/org.crosswire.Eloquent.plist.lockfile",

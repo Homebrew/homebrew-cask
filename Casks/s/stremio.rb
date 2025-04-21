@@ -15,9 +15,9 @@ cask "stremio" do
   app "Stremio.app"
 
   zap trash: [
-    "~/Library/Application Support/Smart Code ltd/",
+    "~/Library/Application Support/Smart Code ltd",
     "~/Library/Application Support/stremio-server",
-    "~/Library/Caches/Smart Code ltd/",
+    "~/Library/Caches/Smart Code ltd",
     "~/Library/Preferences/com.smartcodeltd.stremio.plist",
     "~/Library/Preferences/com.stremio.Stremio.plist",
     "~/Library/Saved Application State/com.smartcodeltd.stremio.savedState",

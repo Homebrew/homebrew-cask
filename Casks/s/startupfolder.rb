@@ -22,7 +22,7 @@ cask "startupfolder" do
             login_item: ["com.lowtechguys.StartupFolder", "StartupFolder.app"]
 
   zap trash: [
-        "~/Library/Caches/startup-folder-favicons/",
+        "~/Library/Caches/startup-folder-favicons",
         "~/Library/HTTPStorages/com.lowtechguys.StartupFolder",
         "~/Library/Preferences/com.lowtechguys.StartupFolder.plist",
         "~/Library/Saved Application State/com.lowtechguys.StartupFolder.savedState",
