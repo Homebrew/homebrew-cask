@@ -19,8 +19,8 @@ cask "focus" do
   uninstall quit: "BradJasper.focus"
 
   zap trash: [
-    "~/Library/Application Support/Focus/",
-    "~/Library/Caches/BradJasper.focus/",
+    "~/Library/Application Support/Focus",
+    "~/Library/Caches/BradJasper.focus",
     "~/Library/Preferences/BradJasper.focus.plist",
   ]
 end
