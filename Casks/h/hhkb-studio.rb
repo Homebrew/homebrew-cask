@@ -30,5 +30,5 @@ cask "hhkb-studio" do
         "~/Library/Application Support/hhkb-keymap-tool/Studio/*.log",
         "~/Library/Preferences/jp.co.pfu.hhkb-studio-keymap-tool.plist",
       ],
-      rmdir: "~/Library/Application Support/hhkb-keymap-tool/Studio/"
+      rmdir: "~/Library/Application Support/hhkb-keymap-tool/Studio"
 end
