@@ -1310,6 +1310,7 @@ schism-tracker
 screaming-frog-log-file-analyser
 screaming-frog-seo-spider
 screen-studio
+screenflick
 screenmemory
 screens-assist
 screens-connect
