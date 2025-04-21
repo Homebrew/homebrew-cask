@@ -18,9 +18,9 @@ cask "softraid" do
   app "SoftRAID.app"
 
   zap trash: [
-    "~/Library/Caches/com.apple.helpd/Generated/com.softraid.SoftRAID.help*#{version}/",
+    "~/Library/Caches/com.apple.helpd/Generated/com.softraid.SoftRAID.help*#{version}",
     "~/Library/Caches/com.softraid.SoftRAID_AM_#{version.major}",
-    "~/Library/HTTPStorages/com.softraid.SoftRAIDMonitor/",
+    "~/Library/HTTPStorages/com.softraid.SoftRAIDMonitor",
     "~/Library/LaunchAgents/com.softraid.SoftRAIDMonitor.plist",
     "~/Library/LaunchDaemons/com.OWC.HelperTool.RepairSRTool.plist",
     "~/Library/LaunchDaemons/com.softraid.softtraidd.plist",
