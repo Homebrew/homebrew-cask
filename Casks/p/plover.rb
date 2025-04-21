@@ -16,7 +16,7 @@ cask "plover" do
 
   app "Plover.app"
 
-  zap trash: "~/Library/Application Support/plover/"
+  zap trash: "~/Library/Application Support/plover"
 
   caveats do
     requires_rosetta
