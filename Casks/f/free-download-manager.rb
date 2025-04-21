@@ -37,7 +37,7 @@ cask "free-download-manager" do
       ],
       rmdir: [
         "~/Library/Application Support/Softdeluxe",
-        "~/Library/Caches/Softdeluxe/",
+        "~/Library/Caches/Softdeluxe",
       ]
 
   caveats do
