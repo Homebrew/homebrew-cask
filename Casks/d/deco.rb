@@ -8,6 +8,8 @@ cask "deco" do
   desc "IDE for building React Native applications"
   homepage "https://www.decosoftware.com/"
 
+  deprecate! date: "2025-04-21", because: :unmaintained
+
   # pkg cannot be installed automatically and the .zip of the `app` has errors
   installer manual: "Deco-#{version}.pkg"
 
