@@ -635,6 +635,7 @@ hapigo
 hashbackup
 hazel
 hbuilderx
+helio
 heptabase
 herd
 heroic
