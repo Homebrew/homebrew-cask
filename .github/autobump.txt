@@ -541,6 +541,7 @@ forklift
 fossa
 foxglove
 foxit-pdf-editor
+foxitreader
 framer
 frappe-books
 free-download-manager
