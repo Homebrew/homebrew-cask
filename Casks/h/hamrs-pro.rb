@@ -1,9 +1,9 @@
 cask "hamrs-pro" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.35.1"
-  sha256 arm:   "22540be42e9cd1f69ae9ee85d8a3d3bdbfa74d2c7737199c9fa7f1bf96ae250f",
-         intel: "e90924d9bfec531dbb88faf00af9e21b8deaff4a118bd737038ba40d2d292186"
+  version "2.36.0"
+  sha256 arm:   "a4eb5d84dec0de5b68fe3d2f49eba4aeab496a77ceaee79162d9923e7051138f",
+         intel: "d9b8217a81b7b3bf9f5bb6ebd29a97c63ad25599c81331b7d70be7fd74e4e023"
 
   url "https://hamrs-dist.s3.amazonaws.com/hamrs-pro-#{version}-mac-#{arch}.dmg",
       verified: "hamrs-dist.s3.amazonaws.com/"
