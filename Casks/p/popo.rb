@@ -3,12 +3,12 @@ cask "popo" do
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
   on_arm do
-    version "4.19.0,1744294468894"
-    sha256 "0b78f3d6de5f79da3357b81e9e08788acbc802c537be712229565def1b34b09d"
+    version "4.19.1,1745241468198"
+    sha256 "11df34a7f3ed887f8fbebd68e57784b9b636a55faf9c6ce25d8528784fa4debf"
   end
   on_intel do
-    version "4.19.1,1744294384425"
-    sha256 "1799119e05e37f73d3dc94e3d68fee19a0d231f999f3f3e56b092b7b8f1f202d"
+    version "4.19.1,1745242226534"
+    sha256 "cd5069c930879ddb7b79fada7efcd49b03b8466acd636b76646ba6373de968dd"
   end
 
   url "https://popo.netease.com/file/popomac/#{version.csv.first}_#{arch}_prod_#{version.csv.second}.dmg"
