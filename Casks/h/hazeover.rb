@@ -17,11 +17,13 @@ cask "hazeover" do
 
   app "HazeOver.app"
 
-  uninstall launchctl: "com.pointum.hazeover.launcher",
-            quit:      "com.pointum.hazeover"
+  uninstall launchctl:  "com.pointum.hazeover.launcher",
+            quit:       "com.pointum.hazeover",
+            login_item: "HazeOver"
 
   zap trash: [
     "~/Library/Caches/com.pointum.hazeover",
+    "~/Library/HTTPStorages/com.pointum.hazeover",
     "~/Library/Preferences/com.pointum.hazeover.plist",
   ]
 end
