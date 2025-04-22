@@ -28,7 +28,16 @@ cask "intellij-idea" do
   depends_on macos: ">= :high_sierra"
 
   app "IntelliJ IDEA.app"
-  binary "#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/idea.wrapper.sh"
+  binary shimscript, target: "idea"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/IntelliJIdea#{version.major_minor}",
