@@ -7,7 +7,7 @@ cask "puzzles" do
   desc "Collection of small computer programmes which implement one-player puzzle games"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
 
-  deprecate! date: "2024-11-18", because: :discontinued, replacement: "puzzles"
+  deprecate! date: "2024-11-18", because: :discontinued, replacement_formula: "puzzles"
 
   app "Puzzles.app"
 
