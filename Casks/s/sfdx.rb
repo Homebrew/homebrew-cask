@@ -9,7 +9,7 @@ cask "sfdx" do
   desc "SalesForce CLI tools"
   homepage "https://developer.salesforce.com/tools/sfdxcli"
 
-  disable! date: "2024-12-16", because: :discontinued, replacement: "sf"
+  disable! date: "2024-12-16", because: :discontinued, replacement_cask: "sf"
 
   pkg "sfdx-#{arch}.pkg"
 
