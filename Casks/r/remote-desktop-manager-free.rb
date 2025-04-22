@@ -8,7 +8,7 @@ cask "remote-desktop-manager-free" do
   desc "Centralises all remote connections on a single platform"
   homepage "https://mac.remotedesktopmanager.com/"
 
-  disable! date: "2024-12-16", because: :discontinued, replacement: "remote-desktop-manager"
+  disable! date: "2024-12-16", because: :discontinued, replacement_cask: "remote-desktop-manager"
 
   depends_on macos: ">= :sierra"
 
