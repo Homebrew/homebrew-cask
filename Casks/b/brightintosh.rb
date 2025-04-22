@@ -8,6 +8,7 @@ cask "brightintosh" do
   homepage "https://www.brightintosh.de/"
 
   deprecate! date: "2024-04-11", because: :moved_to_mas
+  disable! date: "2025-04-22", because: :moved_to_mas
 
   depends_on macos: ">= :monterey"
   depends_on arch: :arm64
