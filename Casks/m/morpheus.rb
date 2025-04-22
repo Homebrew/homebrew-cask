@@ -9,6 +9,7 @@ cask "morpheus" do
   homepage "https://morpheus.gitlab.io/"
 
   deprecate! date: "2024-04-15", because: :discontinued
+  disable! date: "2025-04-22", because: :discontinued
 
   app "Morpheus.app"
 
