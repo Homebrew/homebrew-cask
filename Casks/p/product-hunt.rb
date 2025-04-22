@@ -7,6 +7,7 @@ cask "product-hunt" do
   homepage "https://www.producthunt.com/apps/mac"
 
   deprecate! date: "2024-04-16", because: :moved_to_mas
+  disable! date: "2025-04-22", because: :moved_to_mas
 
   app "Product Hunt.app"
 end
