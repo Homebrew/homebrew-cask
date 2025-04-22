@@ -8,6 +8,7 @@ cask "astropad" do
   homepage "https://astropad.com/"
 
   deprecate! date: "2024-04-11", because: :discontinued
+  disable! date: "2025-04-22", because: :discontinued
 
   app "Astropad.app"
 

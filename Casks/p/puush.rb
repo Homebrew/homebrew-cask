@@ -8,6 +8,7 @@ cask "puush" do
   homepage "https://puush.me/"
 
   deprecate! date: "2024-04-11", because: :unmaintained
+  disable! date: "2025-04-22", because: :unmaintained
 
   app "puush.app"
 end

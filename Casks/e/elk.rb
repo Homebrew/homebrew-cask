@@ -11,6 +11,7 @@ cask "elk" do
   homepage "https://github.com/elk-zone/elk-native"
 
   deprecate! date: "2024-04-11", because: :unmaintained
+  disable! date: "2025-04-22", because: :unmaintained
 
   app "Elk.app"
 

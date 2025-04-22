@@ -8,6 +8,7 @@ cask "moneywiz" do
   homepage "https://wiz.money/"
 
   deprecate! date: "2024-04-15", because: :moved_to_mas
+  disable! date: "2025-04-22", because: :moved_to_mas
 
   depends_on macos: ">= :high_sierra"
 
