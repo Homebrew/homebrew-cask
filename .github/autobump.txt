@@ -644,6 +644,7 @@ heroic
 heynote
 hhkb-studio
 hides
+highlight
 hightop
 holavpn
 home-assistant
