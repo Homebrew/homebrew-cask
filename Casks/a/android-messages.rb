@@ -7,7 +7,7 @@ cask "android-messages" do
   desc "Desktop client for Android Messages"
   homepage "https://github.com/chrisknepper/android-messages-desktop"
 
-  disable! date: "2024-12-16", because: :discontinued, replacement: "orangedrangon-android-messages"
+  disable! date: "2024-12-16", because: :discontinued, replacement_cask: "orangedrangon-android-messages"
 
   conflicts_with cask: "orangedrangon-android-messages"
 

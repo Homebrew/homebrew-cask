@@ -8,7 +8,7 @@ cask "tsh" do
   desc "SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
 
-  deprecate! date: "2024-11-18", because: :unmaintained, replacement: "teleport"
+  deprecate! date: "2024-11-18", because: :unmaintained, replacement_cask: "teleport"
 
   conflicts_with cask:    [
                    "teleport",
