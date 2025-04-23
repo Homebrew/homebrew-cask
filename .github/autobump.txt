@@ -1482,6 +1482,7 @@ teleport
 teleport-connect
 tella
 temurin
+temurin@11
 temurin@17
 temurin@21
 temurin@8
