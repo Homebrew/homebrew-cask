@@ -157,6 +157,7 @@ bitwig-studio
 black-ink
 blender
 blender@lts
+blip
 blitz-gg
 block-goose
 blockbench
