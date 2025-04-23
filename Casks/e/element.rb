@@ -1,6 +1,6 @@
 cask "element" do
-  version "1.11.98"
-  sha256 "555c017313d1f3007841cbf8b39c8f5743e3f9f88799948b04fda932fc84f65e"
+  version "1.11.99"
+  sha256 "ac7f915f692893acfa0553df16cb878f8668e955d1ed0fe75cd879939381447f"
 
   url "https://packages.element.io/desktop/update/macos/Element-#{version}-universal-mac.zip"
   name "Element"
