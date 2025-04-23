@@ -152,6 +152,7 @@ bing-wallpaper
 bisq
 bit-slicer
 bitbox
+bitrix24
 bitwarden
 bitwig-studio
 black-ink
