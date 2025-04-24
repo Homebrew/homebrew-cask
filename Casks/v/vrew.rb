@@ -1,6 +1,6 @@
 cask "vrew" do
-  version "2.12.5"
-  sha256 "7145516075d84edbd8c69bd4055e437ac0c7602c8d655b2957035b50c9eda488"
+  version "2.12.6"
+  sha256 "b2f849e6464bf095e1f50b969afc0c497a019368b50f13840ab9afdfb5495e1d"
 
   url "https://vrew-files.voyagerx.com/Vrew-#{version}.dmg"
   name "Vrew"
