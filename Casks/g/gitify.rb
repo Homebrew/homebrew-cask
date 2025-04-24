@@ -1,6 +1,6 @@
 cask "gitify" do
-  version "6.2.0"
-  sha256 "aaa3b1f374465f3c4e2c24537b1477872aa39caefc933850fc0911d15e6d52dd"
+  version "6.3.0"
+  sha256 "940c31e08683f4e08895108bd6f968693f7839695728785a007fd3d6e64fc535"
 
   url "https://github.com/gitify-app/gitify/releases/download/v#{version}/Gitify-#{version}-universal-mac.zip"
   name "Gitify"
