@@ -7,7 +7,7 @@ cask "rsyncosx" do
   desc "GUI for rsync"
   homepage "https://github.com/rsyncOSX/RsyncOSX_archived"
 
-  deprecate! date: "2024-08-25", because: :discontinued
+  deprecate! date: "2024-08-25", because: :discontinued, replacement_cask: "rsyncui"
 
   depends_on macos: ">= :big_sur"
 
