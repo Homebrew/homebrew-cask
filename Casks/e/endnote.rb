@@ -11,8 +11,11 @@ cask "endnote" do
     url "https://download.endnote.com/updates/#{version.major}.0/EN#{version.major}MacUpdates.xml"
     regex(/^v?(\d+(?:\.\d+)+)$/i)
     strategy :xml do |xml, regex|
-      xml.get_elements("//updateTo").map do |item|
-        match = item.text&.strip&.match(regex)
+      xml.get_elements("//updates/build").map do |item|
+        next if item.elements["type"]&.text&.include?("html")
+
+        version = item.elements["updateTo"].text&.strip
+        match = version.match(regex) if version
         next if match.blank?
 
         match[1]
