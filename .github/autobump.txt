@@ -1102,6 +1102,7 @@ paletro
 panoply
 parallels
 parallels-virtualization-sdk
+pareto-security
 parsehub
 pastenow
 path-finder
