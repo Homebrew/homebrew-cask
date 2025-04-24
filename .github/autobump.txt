@@ -439,6 +439,7 @@ expressvpn
 fantastical
 far2l
 fastrawviewer
+fastscripts
 fathom
 favro
 fbreader
