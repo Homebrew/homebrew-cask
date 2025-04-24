@@ -1,6 +1,6 @@
 cask "font-geist-mono-nerd-font" do
-  version "3.3.0"
-  sha256 "98dd8013eb8d108ba80fd4ff606902916665c51854d0c231748f9af214419e7c"
+  version "3.4.0"
+  sha256 "a9f61b7b7f0429db4fa9a526940f71190127ed95dbe3533163d80d7cafdb3ec9"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/GeistMono.zip"
   name "GeistMono Nerd Font (Geist Mono)"

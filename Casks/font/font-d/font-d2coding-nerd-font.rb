@@ -1,6 +1,6 @@
 cask "font-d2coding-nerd-font" do
-  version "3.3.0"
-  sha256 "48c4270ffe60e86b236cfa3e7a03facea67f67d0b30440980f0e2be2e6a5c0f4"
+  version "3.4.0"
+  sha256 "dd9aaf8c3b01a16e4e454e3dbc0542a8679c80c53299ea5a23f0ce7f53561345"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/D2Coding.zip"
   name "D2CodingLigature Nerd Font (D2Coding)"
