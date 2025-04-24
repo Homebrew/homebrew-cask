@@ -1,6 +1,6 @@
 cask "font-ubuntu-sans-nerd-font" do
-  version "3.3.0"
-  sha256 "65d74bd6d3b5d4447fb6abe8da009fcc133a888a29b27be46baec98872f5dee9"
+  version "3.4.0"
+  sha256 "1166e2666da3ee4f044e32dd1dfc08da7f9ddaa6989fc1b0cbc18a78479434d7"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/UbuntuSans.zip"
   name "UbuntuSans Nerd Font families (Ubuntu Sans)"

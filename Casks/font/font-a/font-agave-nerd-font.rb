@@ -1,6 +1,6 @@
 cask "font-agave-nerd-font" do
-  version "3.3.0"
-  sha256 "42ec90ea46d0ffdae4051d42638f0bffaf4a75b4ab82a55b4484db48cd7dd85b"
+  version "3.4.0"
+  sha256 "cdd66f1719da8e22f9dcec0981a226bb23b7bf1c93a836f40118665b70982c8d"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Agave.zip"
   name "Agave Nerd Font (Agave)"

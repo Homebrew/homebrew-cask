@@ -1,6 +1,6 @@
 cask "font-sauce-code-pro-nerd-font" do
-  version "3.3.0"
-  sha256 "51bed1bda04bc557f7d7cb762daa9cdacccc0b6f0681f53933464dd7cbf90ac6"
+  version "3.4.0"
+  sha256 "f8abc5576d1761b8c2a7c03aaff54a692af109f12f2cde641320c8d2f4c5ad53"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/SourceCodePro.zip"
   name "SauceCodePro Nerd Font (Source Code Pro)"
