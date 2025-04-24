@@ -2,7 +2,7 @@ cask "wechat" do
   version "4.0.3"
   sha256 :no_check
 
-  url "https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"
+  url "https://dldir1.qq.com/weixin/Universal/Mac/WeChatMac.dmg"
   name "WeChat for Mac"
   name "微信 Mac 版"
   desc "Free messaging and calling application"
