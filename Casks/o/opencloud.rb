@@ -10,21 +10,9 @@ cask "opencloud" do
   desc "Desktop syncing client for OpenCloud"
   homepage "https://github.com/opencloud-eu/desktop"
 
-  # TODO: Update this to use the `GithubLatest` strategy (without a regex or
-  # `strategy` block) when a stable version becomes available.
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+.+)$/i)
-    strategy :github_releases do |json, regex|
-      json.filter_map do |release|
-        next if release["draft"]
-
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
+    strategy :github_latest
   end
 
   auto_updates true
