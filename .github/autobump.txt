@@ -198,6 +198,7 @@ cables
 cacher
 cahier
 caido
+calhash
 calibre
 calmly-writer
 camerabag-photo
@@ -344,6 +345,7 @@ deadbolt
 decentr
 deckset
 deepchat
+deeper
 deepl
 deezer
 default-folder-x
@@ -849,6 +851,7 @@ macwhisper
 maestral
 mailbird
 mailbutler
+maintenance
 maltego
 malwarebytes
 manico
@@ -1052,6 +1055,7 @@ omnioutliner
 onecast
 onedrive
 onekey
+onyx
 onlyoffice
 ontime
 opal-composer
