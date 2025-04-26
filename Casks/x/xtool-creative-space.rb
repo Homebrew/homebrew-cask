@@ -2,12 +2,12 @@ cask "xtool-creative-space" do
   arch arm: "arm64", intel: "amd64"
 
   on_arm do
-    version "2.5.20,28,e9ad8acb-9485-464f-8721-2249c0a57316,2025-03-11-11-28-37"
-    sha256  "e363dd535e2fb91da57dd3c95c24f2d62eae9fb0ed4eba91ab1a6b09ed91cd5c"
+    version "2.6.38,28,48e5cd2f-2ea0-4982-a16e-640e07bebacc,2025-04-21-18-35-07"
+    sha256  "709637ed2a9ed363192381061e29edbd0bb3c007a3245dc125ee69e4673009bf"
   end
   on_intel do
-    version "2.5.20,16,ce209f24-c42b-4402-98f2-5445fc5a265b,2025-03-11-11-26-08"
-    sha256 "93092cfcfb922d55e2ac31ace7900125d1d6e0fd0bc7a9e92a0088b1c1916894"
+    version "2.6.38,16,6f11195b-cb92-488a-ab3e-635aa873ff1a,2025-04-21-18-37-40"
+    sha256 "b07dbc81406d5284d69d6dd728c7192dc7c31b7ec46e21651362615e46a9af25"
   end
 
   url "https://storage-us.xtool.com/resource/efficacy/xcs/prod-us/packages/#{version.csv.second}/#{version.csv.third}/xTool-Creative-Space-#{version.csv.first}-#{version.csv.fourth}-#{arch}.dmg"
