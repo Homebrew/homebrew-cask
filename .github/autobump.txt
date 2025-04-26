@@ -284,6 +284,11 @@ copilot
 copilot-for-xcode
 copyq
 core-tunnel
+corretto
+corretto@11
+corretto@17
+corretto@21
+corretto@8
 cork
 coscreen
 coteditor
