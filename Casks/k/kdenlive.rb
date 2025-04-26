@@ -12,7 +12,7 @@ cask "kdenlive" do
   homepage "https://kdenlive.org/"
 
   livecheck do
-    url "https://kdenlive.org/en/download/"
+    url "https://kdenlive.org/download/"
     regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)-#{arch}\.dmg/i)
   end
 
