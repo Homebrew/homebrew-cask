@@ -1646,6 +1646,7 @@ wacom-tablet
 wakatime
 warcraft-logs-uploader
 warp
+warp@preview
 warzone-2100
 wasabi-wallet
 watchfacestudio
