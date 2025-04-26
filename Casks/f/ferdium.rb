@@ -12,8 +12,8 @@ cask "ferdium" do
   homepage "https://ferdium.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/ferdium/ferdium-app/releases/latest/download/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
