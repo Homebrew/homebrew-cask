@@ -21,7 +21,7 @@ cask "btp" do
     regex(/btp[._-]cli[._-]#{os}[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  binary "#{os}-#{arch}/btp", target: "btp"
+  binary "#{os}-#{arch}/btp"
 
   # No zap stanza required
 
