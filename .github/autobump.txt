@@ -1464,6 +1464,10 @@ syncthing
 synology-drive
 syntax-highlight
 tabby
+tableau
+tableau-prep
+tableau-public
+tableau-reader
 tableflip
 tableplus
 tabtab
