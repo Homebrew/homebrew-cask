@@ -3,10 +3,11 @@ cask "font-kanchenjunga" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
+      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/kanchenjunga"
   name "Kanchenjunga"
-  homepage "https://github.com/silnrsi/font-kanchenjunga/"
+  homepage "https://fonts.google.com/specimen/Kanchenjunga"
 
   font "Kanchenjunga-Bold.ttf"
   font "Kanchenjunga-Medium.ttf"
