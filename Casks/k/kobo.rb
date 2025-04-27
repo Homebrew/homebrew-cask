@@ -1,5 +1,5 @@
 cask "kobo" do
-  version :latest
+  version "4.38.23130"
   sha256 :no_check
 
   url "https://cdn.kobo.com/downloads/desktop/kobodesktop/kobosetup.dmg"
