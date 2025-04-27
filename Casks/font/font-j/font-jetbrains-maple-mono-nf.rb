@@ -11,6 +11,8 @@ cask "font-jetbrains-maple-mono-nf" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "font-jetbrains-maple-mono"
+
   font "JetBrainsMapleMono-Bold.ttf"
   font "JetBrainsMapleMono-BoldItalic.ttf"
   font "JetBrainsMapleMono-ExtraBold.ttf"
