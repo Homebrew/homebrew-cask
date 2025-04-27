@@ -1,15 +1,14 @@
 cask "input-source-pro" do
-  # NOTE: Beta is the only stable version available for this application.
-  version "2.5.0-beta"
-  sha256 "a2df04833ada50cb4beb7c9361cf84126186e9a82602ca7c840c8a803abd2cf4"
+  version "2.6.1"
+  sha256 "99b1f5e357a30ecdf581a4181a056cb34b2cbca4c84f2265ce51917dcdbb278f"
 
-  url "https://inputsource.pro/beta/Input%20Source%20Pro%20#{version}.dmg"
+  url "https://inputsource.pro/stable/Input%20Source%20Pro%20#{version}.dmg"
   name "Input Source Pro"
   desc "Tool for multi-language users"
   homepage "https://inputsource.pro/"
 
   livecheck do
-    url "https://inputsource.pro/beta/appcast.xml"
+    url "https://inputsource.pro/stable/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
