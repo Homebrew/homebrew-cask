@@ -64,8 +64,8 @@ cask "coteditor" do
     end
   end
   on_sonoma :or_newer do
-    version "5.1.5"
-    sha256 "ec337514cc9d0e631098ebb6eb6f9548eaf0731e5e0b0bd46c4f89b6a98c855c"
+    version "5.1.6"
+    sha256 "58dc96c7c44ca4d292649686d77f1d74e812ba6beff70a76041a32d400b7e42e"
 
     livecheck do
       url "https://coteditor.com/appcast.xml"
