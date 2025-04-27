@@ -686,6 +686,7 @@ imhex
 inav-configurator
 inkdown
 inkdrop
+input-source-pro
 inso
 inso@beta
 insomnia
