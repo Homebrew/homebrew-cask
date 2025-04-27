@@ -580,6 +580,7 @@ gearsystem
 geekbench-ai
 geneious-prime
 genesys-cloud
+goneovim
 geoda
 geogebra
 geogebra@5
