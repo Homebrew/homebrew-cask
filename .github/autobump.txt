@@ -1356,6 +1356,7 @@ shadow
 shadow@beta
 shadowsocksx-ng
 shapr3d
+sharemouse
 shattered-pixel-dungeon
 shearwater-cloud
 sherlock
