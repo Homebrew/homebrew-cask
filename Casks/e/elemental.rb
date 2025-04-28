@@ -8,6 +8,11 @@ cask "elemental" do
   desc "Native XML Database with XQuery and XSLT"
   homepage "https://www.elemental.xyz/"
 
+  livecheck do
+    url :url
+    regex(/^elemental-(.+)$/i)
+  end
+
   app "Elemental.app"
 
   zap trash: "~/Library/Application Support/xyz.elemental"
