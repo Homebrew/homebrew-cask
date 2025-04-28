@@ -13,6 +13,6 @@ cask "elemental" do
   zap trash: "~/Library/Application Support/xyz.elemental"
 
   caveats do
-    depends_on_java "8"
+    depends_on_java "21"
   end
 end
