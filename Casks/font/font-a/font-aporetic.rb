@@ -1,6 +1,6 @@
 cask "font-aporetic" do
-  version "1.1.0"
-  sha256 "17e394ea286c2ecf6b7abbe25fc869f233796aa71678a9ef682df57164384f93"
+  version "1.2.0"
+  sha256 "76ffe7644729f001583594def5c904ba1aa80b69373b355a3ce196519a13af9c"
 
   url "https://github.com/protesilaos/aporetic/archive/refs/tags/#{version}.tar.gz"
   name "Aporetic"
