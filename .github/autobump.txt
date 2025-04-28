@@ -368,6 +368,7 @@ discord@ptb
 disk-drill
 diskcatalogmaker
 display-pilot
+displaybuddy
 distroav
 djstudio
 dockdoor
