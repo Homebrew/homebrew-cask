@@ -1489,6 +1489,7 @@ tageditor
 tagspaces
 tailscale
 taskade
+taskbar
 tastytrade
 teamviewer
 teamviewermeeting
