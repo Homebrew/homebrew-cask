@@ -1,6 +1,6 @@
 cask "dintch" do
-  version "1.6,2023.05"
-  sha256 "61444cc980f6c6f9dc11bf222e60d04d479b96d3c3d5f8cbbae3675809a9292a"
+  version "1.7,2025.04"
+  sha256 "728960d47779e23f5ba3ffdda7184c074e06837a320aa38b536d32071c35e3b3"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/dintch#{version.csv.first.no_dots}.zip"
   name "Dintch"
