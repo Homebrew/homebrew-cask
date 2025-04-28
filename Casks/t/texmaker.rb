@@ -1,7 +1,7 @@
 cask "texmaker" do
   on_arm do
-    version "6.0.0"
-    sha256 "8b67e6248a5e55c03790cb4854cc2c475bd35d29ae1a5526ee33956b9b1832df"
+    version "6.0.1"
+    sha256 "2bed3912c84749ea5ac646e5df99d6f5e5270e00f8377ae15a562a47c50d622e"
 
     livecheck do
       url "https://www.xm1math.net/texmaker/download.html"
