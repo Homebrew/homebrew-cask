@@ -1,6 +1,6 @@
 cask "jumpcloud-password-manager" do
-  version "3.1.212"
-  sha256 "48c9369e6388e35920095137c653faa59be1d6ebb72eadd2f006ac9719e7699e"
+  version "3.2.2"
+  sha256 "fc7debbdc60f75e5a16070c5ad24c5bbcb3c9b334a10705e70a6f285369cb2ee"
 
   url "https://cdn.pwm.jumpcloud.com/DA/release/JumpCloud-Password-Manager-#{version}.dmg"
   name "JumpCloud Password Manager"
