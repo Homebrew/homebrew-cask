@@ -1,6 +1,6 @@
 cask "cloudnet" do
-  version "1.36.2.21"
-  sha256 "ffe1c7d97b75f0704cf7966010cad426739d481cb74a8115482a016080c22c8f"
+  version "1.36.2.22"
+  sha256 "c8f685ff4414c9660068da2b060041ab929e7459a48992db1f8327f1f64fa332"
 
   url "https://pkgs.cloudnet.world/stable/macos/CloudNet_v#{version}.dmg"
   name "CloudNet for Mac client"
