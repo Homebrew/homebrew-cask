@@ -1,6 +1,6 @@
 cask "displaybuddy" do
-  version "2.30"
-  sha256 "6cfc147bd32d4320875d245e5a7a43df78bb20a6112e413d085af04e111bdf32"
+  version "2.31"
+  sha256 "802c074db5df84ea377306bc70b31fd6b0298184b9035aa32c0353e82a92bec1"
 
   url "https://displaybuddy.app/public/DisplayBuddy_#{version}.dmg"
   name "DisplayBuddy"
