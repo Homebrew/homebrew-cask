@@ -747,6 +747,7 @@ k6-studio
 kaleidoscope
 kando
 katalon-studio
+kate
 kdenlive
 kdiff3
 kdrive
