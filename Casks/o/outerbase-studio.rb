@@ -1,6 +1,6 @@
 cask "outerbase-studio" do
-  version "0.1.27"
-  sha256 "acd1362aa75deb4039fddc69ed4dd685692bf37502f008ac6864c40388b2d4b1"
+  version "0.1.29"
+  sha256 "0d1345573e15296285f8fb3fb0c8bb3b617afe55e2beaef73c87f1f338f976a3"
 
   url "https://github.com/outerbase/studio-desktop/releases/download/v#{version}/outerbase-mac-#{version}.dmg"
   name "Outerbase Studio Desktop"
