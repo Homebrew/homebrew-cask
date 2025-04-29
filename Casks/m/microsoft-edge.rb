@@ -28,6 +28,7 @@ cask "microsoft-edge" do
   zap trash: [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
         "~/Library/Application Support/Microsoft Edge",
+        "~/Library/Application Support/Microsoft/EdgeUpdater",
         "~/Library/Caches/com.microsoft.edgemac",
         "~/Library/Caches/com.microsoft.EdgeUpdater",
         "~/Library/Caches/Microsoft Edge",
@@ -41,7 +42,7 @@ cask "microsoft-edge" do
         "~/Library/WebKit/com.microsoft.edgemac",
       ],
       rmdir: [
-        "/Library/Application Support/Microsoft",
+        "~/Library/Application Support/Microsoft",
         "~/Library/Microsoft",
       ]
 end
