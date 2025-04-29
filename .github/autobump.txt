@@ -647,6 +647,7 @@ hashbackup
 hazel
 hbuilderx
 helio
+helpwire-operator
 heptabase
 herd
 heroic
