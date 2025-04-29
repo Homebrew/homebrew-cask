@@ -1,6 +1,6 @@
 cask "tortoisehg" do
-  version "6.9"
-  sha256 "7197d6758042d27642f0a262866b4529e52e17838915609f2c180756d0eca719"
+  version "7.0.1"
+  sha256 "3d182c25ae5873d4f3886839e0768eb4dc84588f3a0f89bc5d61890b5e7a01b1"
 
   url "https://www.mercurial-scm.org/release/tortoisehg/macos/TortoiseHg-#{version}-mac-x64-qt5.dmg",
       verified: "mercurial-scm.org/release/tortoisehg/"
