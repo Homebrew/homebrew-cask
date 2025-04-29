@@ -1,6 +1,6 @@
 cask "shearwater-cloud" do
-  version "2.12.3"
-  sha256 "aa4004b2d5f48fc0e31f3a0465a13ee16914c06e7d4e4e4d51c6a78d3feb30db"
+  version "2.12.4"
+  sha256 "0c69c01498f65e5220d05017bba2dcd31e607b65d2d6ca8d871267c980262dd2"
 
   url "https://downloads.shearwater.com/livedownloads/ShearwaterCloudInstaller_#{version}.dmg"
   name "Shearwater Cloud"
