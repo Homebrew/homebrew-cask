@@ -1,5 +1,5 @@
 cask "helpwire-operator" do
-  version "2.1"
+  version "2.2"
   sha256 :no_check
 
   url "https://get.helpwire.app/downloads/operator/mac/helpwire.dmg"
