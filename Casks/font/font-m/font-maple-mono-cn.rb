@@ -1,6 +1,6 @@
 cask "font-maple-mono-cn" do
-  version "7.1"
-  sha256 "0f807e2809326ef7d54be1f3b68613085f90b3d971ae1d5d7b66c13d405d3baf"
+  version "7.2"
+  sha256 "f8e0699316e80efbe33f9461f31a05507efa6b6dfb9e2946d0aa3531efd8830e"
 
   url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-CN-unhinted.zip",
       verified: "github.com/subframe7536/Maple-font/"
