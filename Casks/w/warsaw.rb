@@ -10,9 +10,9 @@ cask "warsaw" do
 
   pkg "warsaw_setup.pkg"
 
-  uninstall script:  {
-              executable: "/usr/local/bin/warsaw/uninstall.sh",
-              sudo:       true,
-            },
-            pkgutil: "com.gastecnologia.warsaw"
+  uninstall launchctl: [
+              "com.topazofd.warsaw",
+              "com.topazofd.warsaw.user",
+            ],
+            pkgutil:   "com.topazofd.warsaw"
 end
