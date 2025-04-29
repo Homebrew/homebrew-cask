@@ -1,6 +1,6 @@
 cask "sqlpro-for-postgres" do
-  version "2024.21"
-  sha256 "93ebee3997fe8b93c7485025508bd1ab3c576f4b194373325382ec1072c94f25"
+  version "2025.06"
+  sha256 "f9082998ba9f41f67e8a8ddedea64c254158f10dcf87e9814c1023bfdb22f2c3"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/postgres/"
