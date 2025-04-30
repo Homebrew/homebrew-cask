@@ -1070,6 +1070,7 @@ olympus
 omnifocus
 omnigraffle
 omnioutliner
+omniplan
 onecast
 onedrive
 onekey
