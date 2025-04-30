@@ -1328,6 +1328,7 @@ royal-tsx@beta
 rstudio
 rstudio@daily
 rubymine
+runjs
 rustdesk
 rustrover
 sabnzbd
