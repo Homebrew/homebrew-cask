@@ -9,8 +9,8 @@ cask "maa" do
 
   livecheck do
     url "https://maa-release.hguandl.com/macos/appcast.xml"
-    strategy :sparkle do |item|
-      item.short_version.delete_prefix("v")
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version&.delete_prefix("v")
     end
   end
 
