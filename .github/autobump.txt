@@ -856,6 +856,7 @@ maccy
 macdroid
 macfuse
 macfuse@dev
+macgamestore
 macloggerdx
 macloggerdx@beta
 macpilot
