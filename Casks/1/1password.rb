@@ -3,7 +3,7 @@ cask "1password" do
 
   version "8.10.74"
   sha256 arm:   "96323a92e9162e1f3aec197479802c9bfe9fec9e4c34d8a6c2e7f6f1a6f9f6d2",
-         intel: "62238cb4b62137530b987450eca659dea90eb05f30655ee826674d3c6e5a636b"
+         intel: "863913199234f877ffd2ec4310b97d7e0689a7204e84bfcea6f2073f5572a619"
 
   url "https://downloads.1password.com/mac/1Password-#{version}-#{arch}.zip"
   name "1Password"
