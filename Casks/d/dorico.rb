@@ -18,6 +18,7 @@ cask "dorico" do
     end
   end
 
+  auto_updates true
   depends_on cask: [
     "steinberg-activation-manager",
     "steinberg-library-manager",
