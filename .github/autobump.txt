@@ -784,6 +784,7 @@ knime
 kodelife
 kopiaui
 kotlin-native
+kreya
 krisp
 kunkun
 label-live
