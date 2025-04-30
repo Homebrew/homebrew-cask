@@ -500,6 +500,7 @@ focusrite-control-2
 folding-at-home@beta
 foldit
 folo
+font-0xproto
 font-chiron-hei-hk
 font-chiron-sung-hk
 font-elstobd
