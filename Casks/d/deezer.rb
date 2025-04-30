@@ -19,6 +19,7 @@ cask "deezer" do
 
   zap trash: [
     "~/Library/Application Support/Caches/deezer-desktop-updater",
+    "~/Library/Application Support/Deezer",
     "~/Library/Application Support/deezer-desktop",
     "~/Library/Caches/com.deezer.deezer*",
     "~/Library/Logs/Deezer",
