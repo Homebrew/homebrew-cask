@@ -178,10 +178,8 @@ Style/MutableConstant:
 Style/NumericLiteralPrefix:
   EnforcedOctalStyle: zero_only
 Style/NumericLiterals:
-  MinDigits: 7
+  MinDigits: 11
   Strict: true
-  Exclude:
-  - "**/Brewfile"
 Style/OpenStructUse:
   Exclude:
   - Taps/**/*
