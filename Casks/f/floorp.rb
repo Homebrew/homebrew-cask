@@ -9,7 +9,7 @@ cask "floorp" do
   homepage "https://floorp.app/"
 
   livecheck do
-    url "https://floorp.app/en/download"
+    url "https://floorp.app/en-US/download"
     regex(%r{/v?(\d+(?:\.\d+)+)/floorp[._-]macOS[._-]universal\.dmg}i)
   end
 
