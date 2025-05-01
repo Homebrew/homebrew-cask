@@ -1583,6 +1583,7 @@ touch-portal
 touchdesigner
 touchosc
 tower
+tqsl
 trader-workstation
 tradingview
 trae
