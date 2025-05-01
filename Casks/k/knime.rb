@@ -17,6 +17,7 @@ cask "knime" do
     strategy :header_match
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "KNIME #{version}.app"
