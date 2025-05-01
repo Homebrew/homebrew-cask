@@ -24,8 +24,8 @@ cask "araxis-merge" do
     end
   end
   on_monterey :or_newer do
-    version "2024.6001"
-    sha256 "d6db320ebf11b4a1219c5f848589dea0ee2fdf1aae96195bd71517cdd63148ba"
+    version "2025.0"
+    sha256 "ee5acb1b7fdce128b2c267b9b9cc3318f324b1dc63685163135b7d4e523d8810"
 
     livecheck do
       url "https://www.araxis.com/merge/download.en"
