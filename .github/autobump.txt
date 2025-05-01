@@ -749,6 +749,7 @@ jottacloud
 jprofiler
 julia
 julia@lts
+jump
 jump-desktop-connect
 jumpcloud-password-manager
 jumpshare
