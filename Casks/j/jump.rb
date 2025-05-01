@@ -1,6 +1,6 @@
 cask "jump" do
-  version "9.0.99,90099"
-  sha256 "7f72eb23568791ca1a83d1f384aea9af78b9c656d34796dad0170b698d4c5c48"
+  version "9.1.9,90109"
+  sha256 "9ed0cf53d0e2a61ca741c2ba999f91e0ca13473b4ca59692a59c67d05c8cc199"
 
   url "https://mirror.jumpdesktop.com/downloads/jdm/JumpDesktopMac-#{version.csv.second}.zip",
       user_agent: :fake
