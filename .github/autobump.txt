@@ -534,6 +534,7 @@ font-iosevka-ss17
 font-iosevka-ss18
 font-jetbrains-maple-mono
 font-jetbrains-maple-mono-nf
+font-juliamono
 font-lxgw-neoxihei
 font-lxgw-neozhisong
 font-lxgw-simxihei
