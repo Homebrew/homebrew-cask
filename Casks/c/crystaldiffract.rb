@@ -1,5 +1,5 @@
 cask "crystaldiffract" do
-  version "7.1.1"
+  version "7.1.2"
   sha256 :no_check
 
   url "https://crystalmaker.com/downloads/crystaldiffract#{version.major}_mac.zip"
