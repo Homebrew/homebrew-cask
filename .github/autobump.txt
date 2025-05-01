@@ -1312,6 +1312,7 @@ rio
 ripme
 rippling
 rive
+reverso
 rivet
 rize
 roam
