@@ -48,14 +48,8 @@ cask "wezterm@nightly" do
   binary "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/wezterm.fish"
 
-  preflight do
-    # Move "WezTerm-macos-#{version}/WezTerm.app" out of the subfolder
-    staged_subfolder = staged_path.glob(["WezTerm-*", "wezterm-*"]).first
-    if staged_subfolder
-      FileUtils.mv(staged_subfolder/"WezTerm.app", staged_path)
-      FileUtils.rm_r(staged_subfolder)
-    end
-  end
-
-  zap trash: "~/Library/Saved Application State/com.github.wez.wezterm.savedState"
+  zap trash: [
+    "~/.local/share/wezterm",
+    "~/Library/Saved Application State/com.github.wez.wezterm.savedState",
+  ]
 end
