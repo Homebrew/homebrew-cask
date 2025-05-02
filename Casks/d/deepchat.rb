@@ -1,9 +1,9 @@
 cask "deepchat" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.16"
-  sha256  arm:   "f1f689ca921803dade5a4e96a5ab7109b70f07387c1a423ff4d116e788f30725",
-          intel: "293a2ec6d460144ca5ea81be3add3581c87c8dc3148719bab8746c8226afbeb1"
+  version "0.1.0"
+  sha256  arm:   "dcb4cf1f9b0867355735c552eb87c6db6196f35190b397fd838750f317b9fff7",
+          intel: "2ca9636be84a74c1d0a3ccc1110bcb1b8209ed5b7a49b482823508f226e525f7"
 
   url "https://github.com/ThinkInAIXYZ/deepchat/releases/download/v#{version}/DeepChat-#{version}-mac-#{arch}.dmg",
       verified: "github.com/ThinkInAIXYZ/deepchat/"
