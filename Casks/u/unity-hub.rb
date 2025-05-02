@@ -1,8 +1,10 @@
 cask "unity-hub" do
+  arch arm: "arm64", intel: "x64"
+
   version "3.12.1"
   sha256 :no_check
 
-  url "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg"
+  url "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup-#{arch}.dmg"
   name "Unity Hub"
   desc "Management tool for Unity"
   homepage "https://unity3d.com/get-unity/download"
@@ -25,8 +27,4 @@ cask "unity-hub" do
         "~/Library/Preferences/com.unity3d.unityhub.plist",
       ],
       rmdir: "/Applications/Unity/Hub"
-
-  caveats do
-    requires_rosetta
-  end
 end
