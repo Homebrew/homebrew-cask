@@ -8,7 +8,7 @@ cask "meru" do
   url "https://github.com/zoidsh/meru/releases/download/v#{version}/Meru-#{version}#{arch}.dmg",
       verified: "github.com/zoidsh/meru/"
   name "Meru"
-  desc "Gmail experience you deserve"
+  desc "Gmail desktop app"
   homepage "https://meru.so/"
 
   depends_on macos: ">= :big_sur"
