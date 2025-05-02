@@ -1,6 +1,6 @@
-cask "elemental" do
-  version "7.0.0"
-  sha256 "fea71251b2b9859923a1ba4f9509c0f0b104b4265e8ba7fcb33828b110b399cf"
+cask "elemental@6" do
+  version "6.4.0"
+  sha256 "637d1e6fb8de2c36582229cac5b5c6a2ab8b0f735f84ba256efa556f6ecec5fc"
 
   url "https://github.com/evolvedbinary/elemental/releases/download/elemental-#{version}/elemental-#{version}.dmg",
       verified: "github.com/evolvedbinary/elemental/"
@@ -10,7 +10,7 @@ cask "elemental" do
 
   livecheck do
     url :url
-    regex(/^elemental[._-]v?(\d+(?:\.\d+)+)$/i)
+    regex(/^elemental[._-]v?(6(?:\.\d+)+)$/i)
   end
 
   app "Elemental.app"
@@ -18,6 +18,6 @@ cask "elemental" do
   zap trash: "~/Library/Application Support/xyz.elemental"
 
   caveats do
-    depends_on_java "21"
+    depends_on_java "8"
   end
 end
