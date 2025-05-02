@@ -10,7 +10,7 @@ cask "elemental@6" do
 
   livecheck do
     url :url
-    regex(/^elemental-(6\..+)$/i)
+    regex(/^elemental[._-]v?(6(?:\.\d+)+)$/i)
   end
 
   app "Elemental.app"
