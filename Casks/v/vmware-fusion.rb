@@ -2,13 +2,24 @@ cask "vmware-fusion" do
   version "13.6.3,24585314"
   sha256 "0415fc9c995ef959f3905bbd97d4560e6701856d2293b44aed1d9aa23a3b7c41"
 
-  url "https://softwareupdate-dev.broadcom.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/universal/core/com.vmware.fusion.zip.tar",
-      verified: "softwareupdate-dev.broadcom.com/"
+  url "https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/universal/core/com.vmware.fusion.zip.tar",
+      verified: "softwareupdate-prod.broadcom.com/"
   name "VMware Fusion"
   desc "Create, manage, and run virtual machines"
   homepage "https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion"
 
-  disable! date: "2025-04-25", because: "download requires a Broadcom Profile"
+  livecheck do
+    url "https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/fusion-universal.xml"
+    regex(%r{fusion/(\d+(?:\.\d+)+/\d+)}i)
+    strategy :xml do |xml, regex|
+      xml.get_elements("//url").map do |item|
+        match = item.text&.strip&.match(regex)
+        next if match.blank?
+
+        match[1].tr("/", ",")
+      end
+    end
+  end
 
   auto_updates true
   conflicts_with cask: "vmware-fusion@preview"
