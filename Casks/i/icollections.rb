@@ -1,5 +1,5 @@
 cask "icollections" do
-  version "8.8.4"
+  version "8.8.5"
   sha256 :no_check
 
   url "https://naarakstudio.com/download/iCollections.dmg"
