@@ -68,14 +68,14 @@ cask "docker" do
     # Only link if `kubernetes-cli` is not installed.
     next if kubectl_target.exist?
 
-    system_command "/bin/ln", args: ["-sfn", staged_path/"Docker.app/Contents/Resources/bin/kubectl", kubectl_target],
+    system_command "/bin/ln", args: ["-sfn", appdir/"Docker.app/Contents/Resources/bin/kubectl", kubectl_target],
                               sudo: !kubectl_target.dirname.writable?
   end
 
   uninstall_postflight do
     kubectl_target = Pathname("/usr/local/bin/kubectl")
 
-    if kubectl_target.symlink? && kubectl_target.readlink == staged_path/"Docker.app/Contents/Resources/bin/kubectl"
+    if kubectl_target.symlink? && kubectl_target.readlink == appdir/"Docker.app/Contents/Resources/bin/kubectl"
       system_command "/bin/rm", args: [kubectl_target],
                                 sudo: !kubectl_target.dirname.writable?
     end
