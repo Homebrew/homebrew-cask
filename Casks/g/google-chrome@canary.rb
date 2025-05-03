@@ -1,5 +1,5 @@
 cask "google-chrome@canary" do
-  version "138.0.7157.2"
+  version "138.0.7158.0"
   sha256 :no_check
 
   url "https://dl.google.com/chrome/mac/universal/canary/googlechromecanary.dmg"
