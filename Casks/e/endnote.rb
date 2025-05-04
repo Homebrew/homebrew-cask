@@ -24,7 +24,7 @@ cask "endnote" do
       current_product_version = version.csv.second
 
       xml.get_elements("//updates/build").map do |item|
-        update_to = item.elements["updateTo"].text&.strip
+        update_to = item.elements["updateTo"]&.text&.strip
         match = update_to.match(regex) if update_to
         next if match.blank?
 
