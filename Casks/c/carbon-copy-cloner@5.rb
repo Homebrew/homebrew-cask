@@ -9,6 +9,7 @@ cask "carbon-copy-cloner@5" do
   homepage "https://bombich.com/"
 
   deprecate! date: "2024-05-01", because: :discontinued
+  disable! date: "2025-05-04", because: :discontinued
 
   auto_updates true
   conflicts_with cask: [
