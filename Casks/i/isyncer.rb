@@ -1,6 +1,6 @@
 cask "isyncer" do
-  version "4.1.0"
-  sha256 "70a9b492a99749ca739faf38485195ea3d19070f41f329abe2bc7dbc6b34a886"
+  version "4.2.0"
+  sha256 "9179d36369778c4dab6a323e8504703db378dc06f80d5ef9259d2ebe4c4d4a24"
 
   url "https://www.isyncer.de/system/iSyncerV#{version}mac-installer.tgz"
   name "iSyncer"
