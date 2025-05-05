@@ -12,7 +12,7 @@ cask "qfinder-pro" do
     strategy :xml do |xml|
       item = xml.elements[
         "//application[productName[text()='Qfinder']]" \
-        "/platform[platformName[text()='Mac_for_QT']]/software"
+        "/platform[platformName[text()='Mac_for_QT']]/software",
       ]
       next if item.blank?
 
