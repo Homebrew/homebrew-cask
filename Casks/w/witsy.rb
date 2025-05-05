@@ -8,7 +8,7 @@ cask "witsy" do
   url "https://github.com/nbonamy/witsy/releases/download/v#{version}/Witsy-#{version}-darwin-#{arch}.dmg",
       verified: "github.com/nbonamy/witsy/"
   name "Witsy"
-  desc ": desktop AI assistant / universal MCP client"
+  desc "BYOK (Bring Your Own Keys) AI assistant"
   homepage "https://witsyai.com/"
 
   auto_updates true
