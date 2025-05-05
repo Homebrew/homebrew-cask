@@ -11,7 +11,7 @@ cask "output-factory" do
     url "https://zevrix.com/zsversioncontrol/ZSVersionControl.xml"
     strategy :xml do |xml|
       xml.elements[
-        "//dict/key[text()='Output Factory']/following-sibling::dict[1]/key[text()='version']"
+        "//dict/key[text()='Output Factory']/following-sibling::dict[1]/key[text()='version']",
       ]&.next_element&.text
     end
   end
