@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 cask "witsy" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "arm64", intel: "x64"
 
   version "2.5.0"
   sha256 arm:   "792e221ff74d8b9d76ca8a44cdd943aea1d8717811aa63b2396d647ab1d97f8b",
