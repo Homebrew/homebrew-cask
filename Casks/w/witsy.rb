@@ -1,6 +1,3 @@
-# typed: strict
-# frozen_string_literal: true
-
 cask "witsy" do
   arch arm: "arm64", intel: "x64"
 
