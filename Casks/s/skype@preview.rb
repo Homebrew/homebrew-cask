@@ -5,7 +5,7 @@ cask "skype@preview" do
   url "https://download.skype.com/s4l/download/mac/Skype-#{version}.dmg"
   name "Skype Preview"
   desc "Video chat, voice call and instant messaging application"
-  homepage "https://www.skype.com"
+  homepage "https://www.skype.com/"
 
   deprecate! date: "2025-05-05", because: :discontinued
 
