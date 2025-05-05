@@ -8,8 +8,8 @@ cask "discord" do
     end
   end
   on_big_sur :or_newer do
-    version "0.0.344"
-    sha256 "b8a3fb5d294390af3c98151f23a3aaecf6255aa8bddf703df5cd55a877ffaee1"
+    version "0.0.345"
+    sha256 "bb231c1d5f1d6c2c0a1505b2fecefb29f10729cf8d880ab55fd4348a1d442cb9"
 
     livecheck do
       url "https://discord.com/api/download/stable?platform=osx"
