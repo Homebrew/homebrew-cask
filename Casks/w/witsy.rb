@@ -14,13 +14,6 @@ cask "witsy" do
   desc ": desktop AI assistant / universal MCP client"
   homepage "https://witsyai.com/"
 
-  livecheck do
-    url "https://witsyai.com/update/darwin"
-    strategy :json do |json|
-      json["name"]
-    end
-  end
-
   auto_updates true
 
   app "Witsy.app"
