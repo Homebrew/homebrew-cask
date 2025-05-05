@@ -1,8 +1,8 @@
 cask "jottacloud" do
-  version "25.03.25.132613,762a71b29db6fbcf9a669580e4dd63b83289f74af89a44c03b5c767c630736c2"
-  sha256 "762a71b29db6fbcf9a669580e4dd63b83289f74af89a44c03b5c767c630736c2"
+  version "25.04.28.135128,9a2964b65e21c157fe767e0cd4cb342a94b6c9c679531f330d9ff4fc21c04b96"
+  sha256 "9a2964b65e21c157fe767e0cd4cb342a94b6c9c679531f330d9ff4fc21c04b96"
 
-  url "https://sw.jotta.cloud/desktop/download/data/#{version.csv.second}/Jottacloud%20Installer.dmg",
+  url "https://sw.jotta.cloud/desktop/download/data/#{version.csv.second}/Jottacloud.dmg",
       verified: "sw.jotta.cloud/"
   name "Jottacloud"
   desc "Client for the Jottacloud cloud storage service"
@@ -10,7 +10,7 @@ cask "jottacloud" do
 
   livecheck do
     url "https://sw.jotta.cloud/desktop/appcast/CUST/release"
-    regex(%r{/([^/]+)/Jottacloud\sInstaller\.dmg})
+    regex(%r{/([^/]+)/Jottacloud(?:\s*Installer)?\.dmg})
     strategy :sparkle do |item, regex|
       id = item.url[regex, 1]
       next if id.blank?
