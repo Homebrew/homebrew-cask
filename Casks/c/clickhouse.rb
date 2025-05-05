@@ -18,5 +18,10 @@ cask "clickhouse" do
 
   binary "clickhouse-macos#{arch}", target: "clickhouse"
 
+  caveats <<~EOS
+    The #{token} binary is not signed. It will display an error stating it is damaged and can't be opened. Please see
+    https://clickhouse.com/docs/knowledgebase/fix-developer-verification-error-in-macos for details and workarounds.
+  EOS
+
   # No zap stanza required
 end

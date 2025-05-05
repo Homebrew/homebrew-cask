@@ -33,6 +33,6 @@ cask "textsniper" do
 
   caveats <<~EOS
     Older licence keys (those issued through Paddle) won't work with this version
-    of #{token}. Download #{token} from #{homepage}/download instead.
+    of #{token}. Download #{token} from #{homepage}download instead.
   EOS
 end
