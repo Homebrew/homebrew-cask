@@ -31,6 +31,7 @@ cask "bluestacks" do
             delete:    "/Applications/BlueStacksMIM.app"
 
   zap trash: [
+        "/Users/Shared/Library/Application Support/BlueStacks",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
         "~/Library/BlueStacks",
