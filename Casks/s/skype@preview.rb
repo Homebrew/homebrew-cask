@@ -5,12 +5,9 @@ cask "skype@preview" do
   url "https://download.skype.com/s4l/download/mac/Skype-#{version}.dmg"
   name "Skype Preview"
   desc "Video chat, voice call and instant messaging application"
-  homepage "https://www.skype.com/en/insider/"
+  homepage "https://www.skype.com"
 
-  livecheck do
-    url "https://get.skype.com/go/getskype-skypeformacinsider"
-    strategy :header_match
-  end
+  deprecate! date: "2025-05-05", because: :discontinued
 
   auto_updates true
   conflicts_with cask: "skype"
