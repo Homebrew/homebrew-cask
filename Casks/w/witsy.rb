@@ -15,6 +15,7 @@ cask "witsy" do
   homepage "https://witsyai.com/"
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Witsy.app"
 
