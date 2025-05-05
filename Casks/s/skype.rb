@@ -7,10 +7,7 @@ cask "skype" do
   desc "Video chat, voice call and instant messaging application"
   homepage "https://www.skype.com/"
 
-  livecheck do
-    url "https://get.skype.com/go/getskype-skypeformac"
-    strategy :header_match
-  end
+  deprecate! date: "2025-05-05", because: :discontinued
 
   auto_updates true
   conflicts_with cask: "skype@preview"
