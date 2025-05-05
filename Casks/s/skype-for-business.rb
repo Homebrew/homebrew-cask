@@ -7,10 +7,7 @@ cask "skype-for-business" do
   desc "Microsofts instant messaging enterprise software"
   homepage "https://www.microsoft.com/en-us/download/details.aspx?id=54108"
 
-  livecheck do
-    url :homepage
-    regex(/SkypeForBusinessInstaller[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
-  end
+  deprecate! date: "2025-05-05", because: :discontinued
 
   auto_updates true
   depends_on cask: "microsoft-auto-update"
