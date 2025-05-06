@@ -12,10 +12,13 @@ cask "aqua-voice" do
   homepage "https://withaqua.com/"
 
   livecheck do
-    url "https://withaqua.com/download/"
-    regex(/href=.*?Aqua\+Voice-(\d+(?:\.\d+)+)-#{arch}\.dmg/i)
+    url "https://aqua-desktop-builds.s3.amazonaws.com/aqua-voice-updates/darwin/#{arch}/RELEASES.json"
+    strategy :json do |json|
+      json["currentRelease"]
+    end
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Aqua Voice.app"
