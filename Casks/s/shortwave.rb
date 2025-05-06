@@ -1,6 +1,6 @@
 cask "shortwave" do
-  version "2025.4.2"
-  sha256 "f59a2ff496464628ee18c35c973c720b72c34b16a20bc2a8c151417a61c61900"
+  version "2025.5.1"
+  sha256 "7c380da4fe13aa98cbdee86855368eb0c47fe3ca4a2c540e8a4880928908b497"
 
   url "https://storage.googleapis.com/shortwave-downloads/desktop_app/darwin/universal/Shortwave-darwin-universal-#{version}.zip",
       verified: "storage.googleapis.com/shortwave-downloads/"
