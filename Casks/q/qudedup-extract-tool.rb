@@ -12,7 +12,7 @@ cask "qudedup-extract-tool" do
     strategy :xml do |xml|
       item = xml.elements[
         "//application[productName[text()='QuDedup Extract Tool']]" \
-        "/platform[platformName[text()='Mac']]/software"
+        "/platform[platformName[text()='Mac']]/software",
       ]
       next if item.blank?
 
