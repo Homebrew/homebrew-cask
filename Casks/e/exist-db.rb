@@ -1,6 +1,6 @@
 cask "exist-db" do
-  version "6.3.0"
-  sha256 "4cb5858e2f1f0e5b8e74217c9cea7d85c31292120883e672d87e636374b46412"
+  version "6.4.0"
+  sha256 "96eb36111abc43786536a26de6437b2e675bf7ae4780633d37d832b0fe6c28c2"
 
   url "https://github.com/eXist-db/exist/releases/download/eXist-#{version}/eXist-db-#{version}.dmg",
       verified: "github.com/eXist-db/exist/"
@@ -14,6 +14,5 @@ cask "exist-db" do
 
   caveats do
     depends_on_java "8"
-    requires_rosetta
   end
 end
