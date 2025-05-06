@@ -1404,8 +1404,6 @@ sketch
 sketch@beta
 sketchup
 skim
-skype
-skype@preview
 slab
 slack
 slack-cli
