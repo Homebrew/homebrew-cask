@@ -17,7 +17,6 @@ cask "foks" do
 
   livecheck do
     url "https://pkgs.foks.pub/stable/changelog.yml"
-
     strategy :yaml do |yaml|
       yaml["changelog"].map { |r| r["version"] }
     end
