@@ -1,6 +1,6 @@
 cask "session" do
-  version "1.15.2"
-  sha256 "1472c3a5be3b559eed16c1db18ec0139babcbac3621ac40bc88b64f97384a994"
+  version "1.16.0"
+  sha256 "12fad84567dff4b4ae799508d0aa9606777cc969d8c864105c2cd83c3bd49e93"
 
   url "https://github.com/session-foundation/session-desktop/releases/download/v#{version}/session-desktop-mac-x64-#{version}.dmg",
       verified: "github.com/session-foundation/session-desktop/"
