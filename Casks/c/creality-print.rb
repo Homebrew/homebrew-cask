@@ -1,9 +1,9 @@
 cask "creality-print" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.1.0.2041"
-  sha256 arm:   "6370ad30a08a81998e4e2bed0cfbce0da20163ba5b7c5acb5cca4843f0b258eb",
-         intel: "e78e6da2c1e2502c9c3275ba207ac6ce8b34b17cb87b48303453641bbbecc618"
+  version "6.1.1.2274"
+  sha256 arm:   "bb064847f8c408fa8d90045b4ffc6ee82c0775320a72da2c31b932ecab782761",
+         intel: "1445bd5f962c0d46c4193f2b5a9fb2b42369ef018ec8f2fccb781b94c3609555"
 
   url "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v#{version.major_minor_patch}/CrealityPrint-#{version}-macx-#{arch}-Release.dmg",
       verified: "github.com/CrealityOfficial/CrealityPrint/"
