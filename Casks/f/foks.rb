@@ -1,14 +1,9 @@
 cask "foks" do
   arch arm: "arm64", intel: "amd64"
 
-  on_arm do
-    version "0.0.18"
-    sha256 "10193423d970987070c2015ad395982c7f6c7bb0f73ab291064b81c4ffaeae11"
-  end
-  on_intel do
-    version "0.0.18"
-    sha256 "38759527f276fbc4d7b0663476e1e50d6fa5ade325c50b9be48853f07f106ec5"
-  end
+  version "0.0.18"
+  sha256 arm:   "10193423d970987070c2015ad395982c7f6c7bb0f73ab291064b81c4ffaeae11",
+         intel: "38759527f276fbc4d7b0663476e1e50d6fa5ade325c50b9be48853f07f106ec5"
 
   url "https://pkgs.foks.pub/stable/darwin/foks-v#{version}-darwin-#{arch}.zip"
   name "FOKS"
