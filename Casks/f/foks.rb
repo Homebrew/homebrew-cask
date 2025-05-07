@@ -11,7 +11,7 @@ cask "foks" do
   end
 
   url "https://pkgs.foks.pub/stable/darwin/foks-v#{version}-darwin-#{arch}.zip"
-  name "foks"
+  name "FOKS"
   desc "Federated Open Key Service; E2EE KV-store and Git hosting"
   homepage "https://foks.pub/"
 
