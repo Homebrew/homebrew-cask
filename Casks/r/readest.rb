@@ -8,6 +8,11 @@ cask "readest" do
   desc "Ebook reader"
   homepage "https://readest.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :monterey"
 
   app "Readest.app"
