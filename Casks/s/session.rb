@@ -1,8 +1,12 @@
 cask "session" do
-  version "1.15.2"
-  sha256 "1472c3a5be3b559eed16c1db18ec0139babcbac3621ac40bc88b64f97384a994"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/session-foundation/session-desktop/releases/download/v#{version}/session-desktop-mac-x64-#{version}.dmg",
+  version "1.16.0"
+  sha256 arm:
+                "29f767b92aeaca116e0680b1cbb8950f68bd8a6b0682d807435a5859085c06ea",
+         intel: "12fad84567dff4b4ae799508d0aa9606777cc969d8c864105c2cd83c3bd49e93"
+
+  url "https://github.com/session-foundation/session-desktop/releases/download/v#{version}/session-desktop-mac-#{arch}-#{version}.dmg",
       verified: "github.com/session-foundation/session-desktop/"
   name "Session"
   desc "Onion routing based messenger"
@@ -13,6 +17,7 @@ cask "session" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "Session.app"
@@ -23,8 +28,4 @@ cask "session" do
     "~/Library/Preferences/com.loki-project.messenger-desktop.plist",
     "~/Library/Saved Application State/com.loki-project.messenger-desktop.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
