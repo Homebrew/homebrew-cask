@@ -1,5 +1,5 @@
 cask "to-audio-converter" do
-  version "1.0.23,1297"
+  version "2.0.0,1310"
   sha256 :no_check
 
   url "https://amvidia.com/downloads/to-audio-converter-mac.dmg"
@@ -17,7 +17,7 @@ cask "to-audio-converter" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "To Audio Converter.app"
+  app "To Audio Converter #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.amvidia.To-Audio-Converter-FS",
