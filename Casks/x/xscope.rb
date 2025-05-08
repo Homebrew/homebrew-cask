@@ -1,6 +1,6 @@
 cask "xscope" do
-  version "4.7.1,141"
-  sha256 "45fc050375ca39e747f5603fc37d9b22b8769a29d31491de557ed1f79c271397"
+  version "4.7.2,144"
+  sha256 "5f2552030ea8ff74db1b9bea05fbf3ea7328fb1b780b216eec9e47ad80c24649"
 
   url "https://downloads.iconfactory.com/xscope/xScope-#{version.csv.first}+#{version.csv.second}.zip",
       verified: "downloads.iconfactory.com/"
