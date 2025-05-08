@@ -72,5 +72,6 @@
   "vmware-fusion-tech@preview": "vmware-fusion@preview",
   "vmware-horizon-client": "omnissa-horizon-client",
   "xournal-plus-plus": "xournal++",
-  "zen-browser": "zen"
+  "zen-browser": "zen",
+  "zen-browser@twilight": "zen@twilight"
 }
