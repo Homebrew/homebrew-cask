@@ -2,8 +2,8 @@ cask "stolendata-mpv" do
   arch arm: "-arm64"
 
   on_arm do
-    version "0.39.0"
-    sha256 "9c81c5cf2e756cf9c2fef97a00627140ea7c6b46079469ce3b1a13b4cd4f5b2b"
+    version "0.40.0"
+    sha256 "3170fb709defebaba33e9755297d70dc3562220541de54fc3d494a8309ef1260"
 
     livecheck do
       url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
@@ -40,9 +40,15 @@ cask "stolendata-mpv" do
 
   conflicts_with formula: "mpv"
 
-  app "mpv.app"
+  xtar_root = if version >= "0.40.0"
+    "mpv#{arch}-#{version}/"
+  else
+    ""
+  end
+
+  app "#{xtar_root}mpv.app"
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
-  manpage "documentation/man/mpv.1"
+  manpage "#{xtar_root}documentation/man/mpv.1"
 
   zap trash: [
     "~/.config/mpv",
