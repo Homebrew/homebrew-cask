@@ -1241,6 +1241,7 @@ qlab
 qlc+
 qlmarkdown
 qlvideo
+qobuz
 qownnotes
 qq
 qqlive
