@@ -15,4 +15,6 @@ cask "virtualgl" do
               sudo:       true,
             },
             pkgutil: "com.virtualgl.vglclient"
+
+  # No zap stanza required
 end
