@@ -1,5 +1,5 @@
 cask "rode-central" do
-  version "2.0.65"
+  version "2.0.94"
   sha256 :no_check
 
   url "https://update.rode.com/central/RODE_Central_MACOS.zip"
@@ -16,7 +16,11 @@ cask "rode-central" do
 
   depends_on macos: ">= :catalina"
 
-  pkg "RØDE Central Installer (#{version}).pkg"
+  pkg "RØDE Central.pkg"
+
+  preflight do
+    staged_path.glob("RØDE Central*.pkg")&.first&.rename(staged_path/"RØDE Central.pkg")
+  end
 
   uninstall pkgutil: "com.rodecentral.installer"
 
