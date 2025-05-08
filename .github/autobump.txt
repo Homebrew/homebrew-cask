@@ -909,6 +909,7 @@ mendeley-reference-manager
 menubarx
 meridiem
 merlin-project
+meru
 messenger
 meta-quest-developer-hub
 metashape
