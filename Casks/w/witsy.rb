@@ -11,6 +11,13 @@ cask "witsy" do
   desc "BYOK (Bring Your Own Keys) AI assistant"
   homepage "https://witsyai.com/"
 
+  livecheck do
+    url "https://update.electronjs.org/nbonamy/witsy/darwin-arm64/1.0.0"
+    strategy :json do |json|
+      json["name"]
+    end
+  end
+
   auto_updates true
   depends_on macos: ">= :catalina"
 
