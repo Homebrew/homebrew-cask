@@ -11,6 +11,9 @@ cask "stolendata-mpv" do
     end
 
     depends_on macos: ">= :sonoma"
+
+    app "mpv#{arch}-#{version}/mpv.app"
+    manpage "mpv#{arch}-#{version}/documentation/man/mpv.1"
   end
   on_intel do
     on_catalina :or_older do
@@ -30,6 +33,9 @@ cask "stolendata-mpv" do
         regex(/mpv-(\d+(?:\.\d+)+)\.t/i)
       end
     end
+
+    app "mpv.app"
+    manpage "documentation/man/mpv.1"
   end
 
   url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv#{arch}-#{version}.tar.gz",
@@ -40,15 +46,7 @@ cask "stolendata-mpv" do
 
   conflicts_with formula: "mpv"
 
-  xtar_root = if version >= "0.40.0"
-    "mpv#{arch}-#{version}/"
-  else
-    ""
-  end
-
-  app "#{xtar_root}mpv.app"
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
-  manpage "#{xtar_root}documentation/man/mpv.1"
 
   zap trash: [
     "~/.config/mpv",
