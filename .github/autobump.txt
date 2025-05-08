@@ -884,6 +884,7 @@ marginnote
 marked
 markedit
 marsedit
+marvin
 mathpix-snipping-tool
 mattermost
 mcbopomofo
