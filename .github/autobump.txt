@@ -1779,8 +1779,8 @@ zap
 zappy
 zed
 zed@preview
-zen-browser
-zen-browser@twilight
+zen
+zen@twilight
 zeplin
 zettlr
 zight
