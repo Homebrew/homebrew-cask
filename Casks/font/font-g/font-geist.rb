@@ -1,8 +1,8 @@
 cask "font-geist" do
-  version "1.4.01"
-  sha256 "d12b5e123bdd5a9facbd52ab6a24756587b086d6a76fc629a28456675bfad4e3"
+  version "1.4.2"
+  sha256 "e94caf733a6b019a0d4d97da9548c2ca8cbe4b2703ef1d07113a82d9e774cfe5"
 
-  url "https://github.com/vercel/geist-font/releases/download/#{version}/Geist-v#{version}.zip",
+  url "https://github.com/vercel/geist-font/releases/download/#{version}/geist-font-#{version}.zip",
       verified: "github.com/vercel/geist-font/"
   name "Geist"
   homepage "https://vercel.com/font/sans"
@@ -12,16 +12,16 @@ cask "font-geist" do
     strategy :github_latest
   end
 
-  font "Geist-v#{version}/otf/Geist-Black.otf"
-  font "Geist-v#{version}/otf/Geist-Bold.otf"
-  font "Geist-v#{version}/otf/Geist-ExtraBold.otf"
-  font "Geist-v#{version}/otf/Geist-ExtraLight.otf"
-  font "Geist-v#{version}/otf/Geist-Light.otf"
-  font "Geist-v#{version}/otf/Geist-Medium.otf"
-  font "Geist-v#{version}/otf/Geist-Regular.otf"
-  font "Geist-v#{version}/otf/Geist-SemiBold.otf"
-  font "Geist-v#{version}/otf/Geist-Thin.otf"
-  font "Geist-v#{version}/variable/Geist[wght].ttf"
+  font "geist-font-#{version}/fonts/Geist/otf/Geist-Black.otf"
+  font "geist-font-#{version}/fonts/Geist/otf/Geist-Bold.otf"
+  font "geist-font-#{version}/fonts/Geist/otf/Geist-ExtraBold.otf"
+  font "geist-font-#{version}/fonts/Geist/otf/Geist-ExtraLight.otf"
+  font "geist-font-#{version}/fonts/Geist/otf/Geist-Light.otf"
+  font "geist-font-#{version}/fonts/Geist/otf/Geist-Medium.otf"
+  font "geist-font-#{version}/fonts/Geist/otf/Geist-Regular.otf"
+  font "geist-font-#{version}/fonts/Geist/otf/Geist-SemiBold.otf"
+  font "geist-font-#{version}/fonts/Geist/otf/Geist-Thin.otf"
+  font "geist-font-#{version}/fonts/Geist/variable/Geist[wght].ttf"
 
   # No zap stanza required
 end
