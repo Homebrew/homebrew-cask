@@ -19,6 +19,7 @@ cask "zen-browser" do
   depends_on macos: ">= :catalina"
 
   app "Zen.app"
+  binary "#{appdir}/Zen.app/Contents/MacOS/zen"
 
   zap trash: [
         "~/Library/Application Support/Zen",
