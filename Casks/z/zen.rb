@@ -1,4 +1,4 @@
-cask "zen-browser" do
+cask "zen" do
   version "1.12.3b"
   sha256 "2d85375888827aa09eccb9844b9a8f1d60f6d1d910941bf35d28bcd1115680f5"
 
