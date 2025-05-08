@@ -12,7 +12,7 @@ cask "witsy" do
   homepage "https://witsyai.com/"
 
   livecheck do
-    url "https://update.electronjs.org/nbonamy/witsy/darwin-arm64/1.0.0"
+    url "https://update.electronjs.org/nbonamy/witsy/darwin-#{arch}/0.0.0"
     strategy :json do |json|
       json["name"]
     end
