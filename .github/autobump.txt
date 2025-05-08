@@ -279,6 +279,7 @@ companion@beta
 compositor
 confluent-cli
 connect-fonts
+consul
 contour
 cookie
 copilot
