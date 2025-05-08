@@ -184,6 +184,7 @@ bricklink-studio
 brickstore
 bridge
 brightvpn
+browser-actions
 browser-deputy
 browserosaurus
 browserstacklocal
