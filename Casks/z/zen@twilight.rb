@@ -1,4 +1,4 @@
-cask "zen-browser@twilight" do
+cask "zen@twilight" do
   version "1.12.3t"
   sha256 :no_check
 
