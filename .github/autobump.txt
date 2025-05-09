@@ -1626,6 +1626,7 @@ ueli
 uhk-agent
 ui
 ui-tars
+ukelele
 ultimaker-cura
 ultimate
 ultrastardeluxe
