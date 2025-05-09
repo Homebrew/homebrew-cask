@@ -62,5 +62,5 @@
   "wezterm@nightly": "all",
   "xit": "all",
   "yaak@beta": "any",
-  "zen-browser@twilight": "all"
+  "zen@twilight": "all"
 }
