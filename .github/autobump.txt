@@ -1513,6 +1513,7 @@ tabtab
 tageditor
 tagspaces
 tailscale
+tandem
 taskade
 taskbar
 tastytrade
