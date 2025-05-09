@@ -8,6 +8,7 @@ cask "topaz-sharpen-ai" do
   homepage "https://www.topazlabs.com/sharpen-ai"
 
   deprecate! date: "2024-05-07", because: :discontinued
+  disable! date: "2025-05-07", because: :discontinued
 
   app "Topaz Sharpen AI.app"
 
