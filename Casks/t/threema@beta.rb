@@ -11,8 +11,10 @@ cask "threema@beta" do
   homepage "https://threema.ch/download-md"
 
   livecheck do
-    url "https://threema.ch/en/download-md"
-    regex(/href=.*?threema[._-]desktop[._-]v?(\d+(?:(?:[.-]|(beta))+\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
+    url "https://releases.threema.ch/desktop/latest-version-consumer-macos.json"
+    strategy :json do |json|
+      json.dig("latestVersion", "version")
+    end
   end
 
   depends_on macos: ">= :catalina"
