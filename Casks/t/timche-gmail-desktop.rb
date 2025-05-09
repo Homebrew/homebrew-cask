@@ -9,6 +9,8 @@ cask "timche-gmail-desktop" do
 
   app "Gmail Desktop.app"
 
+  disable! date: "2025-05-09", because: :discontinued, replacement_cask: "meru"
+
   zap trash: [
     "~/Library/Application Support/Gmail Desktop",
     "~/Library/Caches/io.cheung.gmail-desktop",
