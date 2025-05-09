@@ -7,6 +7,8 @@ cask "timche-gmail-desktop" do
   desc "Unofficial Gmail desktop app"
   homepage "https://github.com/timche/gmail-desktop"
 
+  deprecate! date: "2025-05-09", because: :discontinued, replacement_cask: "meru"
+
   app "Gmail Desktop.app"
 
   zap trash: [
