@@ -1181,6 +1181,7 @@ plus42-decimal
 pocket-casts
 podpisuj
 poe
+poedit
 pokemon-tcg-live
 poker-copilot
 polymail
