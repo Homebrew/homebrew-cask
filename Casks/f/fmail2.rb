@@ -1,16 +1,16 @@
 cask "fmail2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.8.3"
-  sha256 "92c33507afd1be0f679095131401369200e94a3851c1f9c20537043e61c49a4d"
+  version "2.8.4"
+  sha256 "d96fbbeabc1a8a0d9eb098b2dab9a305081a947c532791d3ba70b68f248c0e39"
 
-  url "https://arievanboxel.fr/fmail2/sparkle/FMail2_#{version.no_dots}.zip",
-      verified: "arievanboxel.fr/fmail2/sparkle/"
+  url "https://fmail.appmac.fr/update/sparkle/FMail2_#{version.no_dots}.zip",
+      verified: "fmail.appmac.fr/update/sparkle/"
   name "FMail2"
   desc "Unofficial native application for Fastmail"
-  homepage "https://fmail-app.fr/"
+  homepage "https://fmail.arievanboxel.fr/"
 
   livecheck do
-    url "https://arievanboxel.fr/fmail2/sparkle/appcast.xml"
+    url "https://fmail.appmac.fr/update/sparkle/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
