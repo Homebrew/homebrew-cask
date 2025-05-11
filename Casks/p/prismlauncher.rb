@@ -22,7 +22,7 @@ cask "prismlauncher" do
   depends_on macos: ">= :high_sierra"
 
   app "Prism Launcher.app"
-  binary "#{appdir}/Prism Launcher.app/Contents/MacOS/prismlauncher", target: "prismlauncher"
+  binary "#{appdir}/Prism Launcher.app/Contents/MacOS/prismlauncher"
 
   zap trash: [
     "~/Library/Application Support/PrismLauncher/metacache",
