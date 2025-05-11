@@ -41,6 +41,7 @@ affinity-photo
 affinity-publisher
 agent-tars
 aide-app
+aifun
 airdroid
 airflow
 airtame
