@@ -1,6 +1,6 @@
 cask "flying-carpet" do
-  version "9.0.0"
-  sha256 "aa05edc1553b88c9662997e0d76d1d8e46f9a97b55ef02cb2491dfb3268f4a46"
+  version "9.0.4"
+  sha256 "686dfec58bbd3cbfd495c74dd5c8c7c7d5fd18b5b0b108e6e44b69d6433ac80a"
 
   url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version}/macOS_FlyingCarpet_#{version}.zip"
   name "Flying Carpet"
