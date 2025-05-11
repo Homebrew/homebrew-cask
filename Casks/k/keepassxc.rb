@@ -16,7 +16,10 @@ cask "keepassxc" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "keepassxc@beta"
+  conflicts_with cask: [
+    "keepassxc@beta",
+    "keepassxc@snapshot",
+  ]
   depends_on macos: ">= :high_sierra"
 
   app "KeePassXC.app"
