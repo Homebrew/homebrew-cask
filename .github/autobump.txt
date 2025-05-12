@@ -450,6 +450,7 @@ evernote
 excalidrawz
 expo-orbit
 expressvpn
+extraterm
 fantastical
 far2l
 fastrawviewer
