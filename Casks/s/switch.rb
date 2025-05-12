@@ -1,5 +1,5 @@
 cask "switch" do
-  version "13.06"
+  version "13.07"
   sha256 :no_check
 
   url "https://www.nch.com.au/components/switchmaci.zip"
