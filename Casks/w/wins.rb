@@ -1,16 +1,16 @@
 cask "wins" do
-  version "2.6.1"
-  sha256 "dc19854ff982c1238615a6aa5776cf0770ae75aa68ea950a4ff2bb365ef8b15a"
+  version "2.6.1,42"
+  sha256 "8a20b3ff14fbbb13a5f79d76c933b9376e9c4ea70192e2a2b8a463698286e14a"
 
-  url "https://f005.backblazeb2.com/file/winsWebsite/Wins_#{version}.zip",
-      verified: "f005.backblazeb2.com/file/winsWebsite/"
+  url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins_#{version.csv.first}_#{version.csv.second}.zip",
+      verified: "winswebsite.s3.us-east-005.backblazeb2.com/"
   name "Wins"
   desc "Window manager"
   homepage "https://wins.cool/"
 
   livecheck do
     url "https://wins.cool/update/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true
