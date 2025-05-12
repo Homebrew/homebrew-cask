@@ -607,6 +607,7 @@ geogebra@5
 geotag
 geph
 get-api
+get-iplayer-automator
 ghost-browser
 ghostty
 ghostty@tip
