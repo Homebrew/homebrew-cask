@@ -498,6 +498,7 @@ flox
 flutter
 flutterflow
 fly
+flycast
 flyenv
 fmail2
 focu
