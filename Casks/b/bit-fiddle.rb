@@ -7,13 +7,7 @@ cask "bit-fiddle" do
   desc "Converts decimal, hexadecimal, binary numbers and ASCII characters"
   homepage "https://manderc.com/apps/bitfiddle/index_eng.php"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?Bit[._-]Fiddle[._-]v?(\d+(?:[._-]\d+)+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex)&.map { |match| match[0].tr("_", ".") }
-    end
-  end
+  deprecate! date: "2025-05-12", because: :moved_to_mas
 
   app "Bit Fiddle.app"
 
