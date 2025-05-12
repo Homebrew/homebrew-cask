@@ -313,6 +313,7 @@ crystalviewer
 cura-lulzbot
 curseforge
 cursor
+cutter
 cyberduck
 cycling74-max
 daedalus-mainnet
