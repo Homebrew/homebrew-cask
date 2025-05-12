@@ -7,7 +7,8 @@ cask "corelocationcli" do
   desc "Prints location information from CoreLocation"
   homepage "https://github.com/fulldecent/corelocationcli"
 
-  binary "CoreLocationCLI"
+  app "CoreLocationCLI.app"
+  binary "#{appdir}/CoreLocationCLI.app/Contents/MacOS/CoreLocationCLI"
 
   # no zap stanza required
 end
