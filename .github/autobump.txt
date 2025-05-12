@@ -90,6 +90,7 @@ app-cleaner
 apparency
 appcleaner
 appflowy
+applite
 aptakube
 aptible
 aqua
