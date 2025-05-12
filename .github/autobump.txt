@@ -240,6 +240,7 @@ cinderella
 cisco-jabber
 cisdem-data-recovery
 cisdem-pdf-converter-ocr
+citrix-workspace
 cityofzion-neon
 clash-verge-rev
 claude
