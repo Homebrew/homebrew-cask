@@ -12,14 +12,17 @@ cask "concept2-utility" do
     pkg "Concept2 Utility #{version}.pkg"
   end
   on_mojave :or_newer do
-    version "7.15.00"
-    sha256 "49970f8773ed253ce3db4cc922e05528bfc43ffd3c3bd67d3889a8710589b21f"
+    version "7.17.00"
+    sha256 "2796b6275e9d1ab08051b94e5c33e89a5b14d31020132324f9948f8aa754cae3"
 
     url "https://software.concept2.com/utility/Concept2Utility#{version.no_dots}.pkg"
 
+    # We are using a regional URL as a workaround because checking the main
+    # releases page (https://www.concept2.com/support/software/utility) is
+    # failing in our CI environment.
     livecheck do
-      url :homepage
-      regex(/Concept2\s+Utility\s+(\d+(?:\.\d+)+)/i)
+      url "https://www.concept2.de/service/software/concept2-utility"
+      regex(/Concept2\s+Utility\s+v?(\d+(?:\.\d+)+)/i)
     end
   end
 
