@@ -46,6 +46,7 @@ airdroid
 airflow
 airtame
 akiflow
+akuity
 alcom
 alcove
 aldente
