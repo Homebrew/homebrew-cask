@@ -1,5 +1,5 @@
 cask "northern-softworks-cache-cleaner" do
-  version "20.4"
+  version "20.5"
   sha256 :no_check
 
   # Homepage, livecheck regex, and app change with major macOS releases
