@@ -8,14 +8,14 @@ cask "dolphin" do
   homepage "https://dolphin-emu.org/"
 
   livecheck do
-    url "https://dolphin-emu.org/download/"
-    regex(/href=.*?dolphin[._-]v?(\d+(?:\.\d+)*[a-z]?)(?:[._-]universal)?\.dmg/i)
+    url "https://dolphin-emu.org/update/latest/beta/"
+    strategy :json do |json|
+      json["shortrev"]
+    end
   end
 
-  conflicts_with cask: [
-    "dolphin@beta",
-    "dolphin@dev",
-  ]
+  auto_updates true
+  conflicts_with cask: "dolphin@dev"
   depends_on macos: ">= :catalina"
 
   app "Dolphin.app"
@@ -23,5 +23,6 @@ cask "dolphin" do
   zap trash: [
     "~/Library/Application Support/Dolphin",
     "~/Library/Preferences/org.dolphin-emu.dolphin.plist",
+    "~/Library/Saved Application State/org.dolphin-emu.dolphin.savedState",
   ]
 end
