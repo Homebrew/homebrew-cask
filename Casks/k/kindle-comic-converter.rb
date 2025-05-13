@@ -16,7 +16,7 @@ cask "kindle-comic-converter" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Kindle Comic Converter.app"
 
