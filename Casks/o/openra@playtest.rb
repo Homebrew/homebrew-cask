@@ -1,4 +1,4 @@
-cask "openra-playtest" do
+cask "openra@playtest" do
   version "20250220"
   sha256 "d855c90cb7e27e6d8c6fa6bb42211c0a572c3c57a541623c844d0b41de12eaff"
 
