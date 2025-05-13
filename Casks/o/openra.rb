@@ -13,7 +13,7 @@ cask "openra" do
     regex(/^release[._-]v?(\d+(?:[.-]\d+)*)$/i)
   end
 
-  conflicts_with cask: "openra-playtest"
+  conflicts_with cask: "openra@playtest"
 
   app "OpenRA - Dune 2000.app"
   app "OpenRA - Red Alert.app"
