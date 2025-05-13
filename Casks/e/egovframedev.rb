@@ -1,9 +1,9 @@
 cask "egovframedev" do
   arch arm: "AArch64", intel: "x86_64"
 
-  version "4.3.0"
-  sha256 arm:   "5bade24bb6dde7d4f48da064aa19474c544a77895d60e1db586c6abad013d8bf",
-         intel: "60d6ed38eb503e88c8377777bbe5fb8043890f9711b25b5c59807b39d071aee2"
+  version "4.3.1"
+  sha256 arm:   "f7a13637be51c750093b98763df20210131c6041a6fcba8237c352eb1f335a5d",
+         intel: "f0149077a39664654842b8ee6b2a0084fd0bd17b726d078fe3b1de2eeec64bdb"
 
   url "https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-#{version}-Mac-#{arch}.dmg"
   name "eGovFrameDev"
