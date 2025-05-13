@@ -1,9 +1,9 @@
 cask "structuredlogviewer" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.489"
-  sha256 arm:   "c15674c5345ae32a3b54cfcc9cc61c7273b64176f7e42fc15baa45e6d9a5edc0",
-         intel: "6f836ae7b6cc6a1a42c08c3e6b9130faace126b5d889a127917a06e4cc1042cc"
+  version "2.2.490"
+  sha256 arm:   "d1b93d3b201ac5c5ffd5fb527c859ee156a3f9dc2541b2b624c34a2426fcd024",
+         intel: "a023f444ad2e85cdc774558c60929c4e14cd29aecbcc9132c1657ee3cb755d12"
 
   url "https://github.com/KirillOsenkov/MSBuildStructuredLog/releases/download/v#{version}/StructuredLogViewer-#{arch}.dmg",
       verified: "github.com/KirillOsenkov/MSBuildStructuredLog/"
