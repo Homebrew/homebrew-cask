@@ -1,6 +1,6 @@
 cask "webcatalog" do
-  version "66.2.0"
-  sha256 "e53cf4ca695870aa90bd9b51f4e4a4a07306be0016af6630903a71dad38571a4"
+  version "66.3.0"
+  sha256 "6b62080279a88ace56e2ffbcf5331e4bebd7173ca52646bf73d8ed5f59f12c1c"
 
   url "https://cdn-2.webcatalog.io/webcatalog/WebCatalog-#{version}-universal.dmg"
   name "WebCatalog"
