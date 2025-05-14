@@ -1,6 +1,6 @@
 cask "affinity-photo" do
-  version "2.6.2,3228"
-  sha256 "fba973e4a7580808a404be97979846d5264506aab771f9dc60566de628cf0a4e"
+  version "2.6.3,3322"
+  sha256 "b8a76da2d09147e82b272f0024636655563f17f7f0bd9352e0d0cc8cacb92e59"
 
   url "https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Photo%20#{version.csv.first.major}%20Affinity%20Store%20#{version.csv.second}.zip",
       verified: "affinity-update.s3.amazonaws.com/"
