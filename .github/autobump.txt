@@ -443,11 +443,11 @@ engine-dj
 enpass
 ente
 ente-auth
-etrecheckpro
 entry
 epic-games
 eset-cyber-security
 espanso
+etrecheckpro
 evernote
 excalidrawz
 expo-orbit
@@ -1320,6 +1320,7 @@ restic-browser
 retcon
 retrobatch
 reveal
+reverso
 rhino
 ricochet-refresh
 rider
@@ -1329,7 +1330,6 @@ rio
 ripme
 rippling
 rive
-reverso
 rivet
 rize
 roam
@@ -1505,6 +1505,7 @@ supremo
 surfshark
 surge
 sweet-home3d
+swift-shift
 swiftformat-for-xcode
 swish
 sync
