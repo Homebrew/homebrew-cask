@@ -1,9 +1,9 @@
 cask "mps" do
   arch arm: "macos-aarch64", intel: "macos"
 
-  version "2024.3.2,243.24978.603"
-  sha256 arm:   "9e6b8fb53418cef55bdbc690cc1c817f39b12b81cc3985522c24ee7f6fa5c364",
-         intel: "09b69187d9feb5e17865fcdec88ce8a95c4933a8176e37a224c251b60d5aed01"
+  version "2025.1,251.23774.423"
+  sha256 arm:   "cb2aaa6311252a655ef55f813d3dff78890c2a10cf0aeff885018c316390486b",
+         intel: "1ddae8569c8a96beeb5e85d20f1eed9115ace532a1154b5624f526cb49ddeaa8"
 
   url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.csv.first}-#{arch}.dmg"
   name "JetBrains MPS"
@@ -26,7 +26,7 @@ cask "mps" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "MPS #{version.major_minor}.app", target: "MPS.app"
+  app "MPS.app"
   binary "#{appdir}/MPS.app/Contents/MacOS/mps"
 
   zap trash: [
