@@ -712,6 +712,7 @@ imhex
 inav-configurator
 inkdown
 inkdrop
+inmusic-software-center
 input-source-pro
 inso
 inso@beta
