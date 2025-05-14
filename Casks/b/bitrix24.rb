@@ -2,7 +2,7 @@ cask "bitrix24" do
   arch arm: "macos_arm", intel: "desktop"
 
   # NOTE: "24" is not a version number, but an intrinsic part of the product name
-  version "16.0.37.83"
+  version "17.0.17.84"
   sha256 :no_check
 
   url "https://dl.bitrix24.com/b24/bitrix24_#{arch}.dmg"
