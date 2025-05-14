@@ -1137,6 +1137,7 @@ outline
 outline-manager
 output-factory
 overlayed
+ovice
 ovito
 ovito-pro
 oxygen-xml-developer
