@@ -1,6 +1,6 @@
 cask "mumuplayer" do
-  version "1.6.6"
-  sha256 "0e483a778539adc1538f22411a65ec4eaa224dbc7a61f69e35859a2854e742e2"
+  version "1.6.7"
+  sha256 "2c6f230186349333e61f5aee2307bbb28f466b899f89ed79d2f911ec8556b978"
 
   url "https://a11.gdl.netease.com/MuMuPlayerPro-v#{version}.dmg",
       verified: "a11.gdl.netease.com/"
