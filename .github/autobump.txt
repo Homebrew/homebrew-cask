@@ -1731,6 +1731,7 @@ whatsapp
 whatsapp@beta
 whatsize
 whimsical
+whoozle-android-file-transfer
 widelands
 wifi-explorer-pro
 wifispoof
