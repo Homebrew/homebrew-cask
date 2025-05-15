@@ -23,6 +23,7 @@ cask "touch-bar-simulator" do
   homepage "https://github.com/sindresorhus/touch-bar-simulator"
 
   deprecate! date: "2024-05-14", because: :discontinued
+  disable! date: "2025-05-15", because: :discontinued
 
   depends_on macos: ">= :sierra"
 
