@@ -12,8 +12,10 @@ cask "feather" do
   homepage "https://featherwallet.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://featherwallet.org/updates.json"
+    strategy :json do |json|
+      json.dig("platform", arch, "version")
+    end
   end
 
   depends_on macos: ">= :monterey"
