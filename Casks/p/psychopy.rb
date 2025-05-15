@@ -1,8 +1,8 @@
 cask "psychopy" do
-  version "2025.1.1,2025-05-09_11-38"
+  version "2025.1.1"
   sha256 "9e791fb5323b2ae56f470a37f2a47738282bf2e853b653f44ff793094f3402fc"
 
-  url "https://github.com/psychopy/psychopy/releases/download/#{version.csv.first.major_minor_patch}/StandalonePsychoPy-#{version.csv.first}-macOS#{"_#{version.csv.second}" if version.csv.second}_3.10.dmg",
+  url "https://github.com/psychopy/psychopy/releases/download/#{version.csv.first.major_minor_patch}/StandalonePsychoPy-#{version.csv.first}-macOS#{"_#{version.csv.second}" if version.csv.second}-py3.10.dmg",
       verified: "github.com/psychopy/psychopy/"
   name "PsychoPy"
   desc "Create experiments in behavioral science"
