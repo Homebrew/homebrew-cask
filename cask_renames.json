@@ -12,7 +12,6 @@
   "coqide": "coq-platform",
   "cron": "notion-calendar",
   "dehesselle-meld": "meld",
-  "dolphin@beta": "dolphin",
   "dymo-label": "dymo-connect",
   "easy-move-plus-resize": "easy-move+resize",
   "emby-server": "embyserver",
@@ -47,7 +46,6 @@
   "obs-ndi": "distroav",
   "obsbot-webcam": "obsbot-center",
   "opal": "opal-composer",
-  "openra-playtest": "openra@playtest",
   "opera-developer": "opera@developer",
   "owasp-zap": "zap",
   "paw": "rapidapi",
@@ -73,7 +71,5 @@
   "tutanota": "tuta-mail",
   "vmware-fusion-tech@preview": "vmware-fusion@preview",
   "vmware-horizon-client": "omnissa-horizon-client",
-  "xournal-plus-plus": "xournal++",
-  "zen-browser": "zen",
-  "zen-browser@twilight": "zen@twilight"
+  "xournal-plus-plus": "xournal++"
 }

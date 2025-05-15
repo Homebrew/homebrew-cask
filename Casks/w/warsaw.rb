@@ -15,21 +15,21 @@ cask "warsaw" do
               "com.topazofd.warsaw.user",
             ],
             pkgutil:   "com.topazofd.warsaw"
- 
+
   zap trash: [
-    "~/Library/LaunchDaemons/com.topazofd.warsaw.plist",
-    "~/Library/LaunchAgents/com.topazofd.warsaw.user.plist",
     "~/Library/Fonts/dbldwrsw.ttf",
+    "~/Library/LaunchAgents/com.topazofd.warsaw.user.plist",
+    "~/Library/LaunchDaemons/com.topazofd.warsaw.plist",
+    "~/private/tmp/boost_interprocess",
+    "~/private/tmp/wi*",
+    "~/tmp/boost_interprocess",
+    "~/tmp/dbd",
+    "~/tmp/upd",
+    "~/tmp/wi*",
+    "~/usr/local/bin/warsaw",
     "~/usr/local/etc/warsaw",
     "~/usr/local/lib/warsaw",
-    "~/usr/local/bin/warsaw",
-    "~/tmp/wi*",
-    "~/tmp/boost_interprocess",
-    "~/tmp/upd",
-    "~/tmp/dbd",
-    "~/private/tmp/wi*",
-    "~/private/tmp/boost_interprocess",
-    "~/WS_*"
+    "~/WS_*",
   ]
 
 end
