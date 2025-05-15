@@ -11,20 +11,25 @@ cask "warsaw" do
   pkg "warsaw_setup.pkg"
 
   uninstall launchctl: [
-<<<<<<< HEAD
               "com.topazofd.warsaw",
               "com.topazofd.warsaw.user",
             ],
             pkgutil:   "com.topazofd.warsaw"
-=======
-                "com.topazofd.warsaw",
-                "com.topazofd.warsaw.user",
-              ],
-              script:    {
-                executable: "/usr/local/bin/warsaw/uninstall.sh",
-                sudo:       true,
-              },
-              pkgutil:   "com.topazofd.warsaw"
-                     
->>>>>>> 2f10d2cc1db (Fix uninstall)
+ 
+  zap trash: [
+    "~/Library/LaunchDaemons/com.topazofd.warsaw.plist",
+    "~/Library/LaunchAgents/com.topazofd.warsaw.user.plist",
+    "~/Library/Fonts/dbldwrsw.ttf",
+    "~/usr/local/etc/warsaw",
+    "~/usr/local/lib/warsaw",
+    "~/usr/local/bin/warsaw",
+    "~/tmp/wi*",
+    "~/tmp/boost_interprocess",
+    "~/tmp/upd",
+    "~/tmp/dbd",
+    "~/private/tmp/wi*",
+    "~/private/tmp/boost_interprocess",
+    "~/WS_*"
+  ]
+
 end
