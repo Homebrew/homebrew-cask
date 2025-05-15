@@ -1684,6 +1684,7 @@ virtualc64
 virtualdj
 virtualhere
 virtualhereserver
+viscosity
 visual-paradigm
 visual-paradigm-ce
 visual-studio-code
