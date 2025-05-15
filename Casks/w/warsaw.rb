@@ -11,8 +11,20 @@ cask "warsaw" do
   pkg "warsaw_setup.pkg"
 
   uninstall launchctl: [
+<<<<<<< HEAD
               "com.topazofd.warsaw",
               "com.topazofd.warsaw.user",
             ],
             pkgutil:   "com.topazofd.warsaw"
+=======
+                "com.topazofd.warsaw",
+                "com.topazofd.warsaw.user",
+              ],
+              script:    {
+                executable: "/usr/local/bin/warsaw/uninstall.sh",
+                sudo:       true,
+              },
+              pkgutil:   "com.topazofd.warsaw"
+                     
+>>>>>>> 2f10d2cc1db (Fix uninstall)
 end
