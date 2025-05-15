@@ -1,9 +1,9 @@
 cask "localcan" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.4.1"
-  sha256 intel: "92e1b87c36483fce22a39eb638baf5cc7d158618befa15152c936bba4a2db64f",
-         arm:   "cf762c2a950b1ec599dcf170f97fb48359884830c84616f26e75f77bcfdc4e56"
+  version "2.4.2"
+  sha256 intel: "e19936e945728ebf28b4279f1f53482aba162bb214797ea9e49587c6a3a3bdb5",
+         arm:   "6d892b7a9e9886998365a13c458975ba4ae67e0a7377cd08f68dd99ade8a7060"
 
   url "https://assets.localcan.com/download/LocalCan-#{version}-#{arch}.dmg"
   name "LocalCan"
