@@ -1190,6 +1190,7 @@ plover
 plus42-binary
 plus42-decimal
 pocket-casts
+podman-desktop
 podpisuj
 poe
 poedit
