@@ -1,6 +1,6 @@
 cask "website-audit" do
-  version "1.2.5"
-  sha256 "6246295baf27c8dbb3f7dc873d7de6068917c8dabd487e4c31b4332e600179ee"
+  version "1.3.0a"
+  sha256 "5f6f4ecd9355a5cba1cd7acb9aa680cb9e6acf3797e6a8ee0c2255ac515e408b"
 
   url "https://code.europa.eu/api/v4/projects/615/packages/generic/wat/#{version}/website-audit-#{version}-universal.dmg"
   name "Website Audit"
