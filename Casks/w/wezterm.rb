@@ -2,11 +2,11 @@ cask "wezterm" do
   version "20240203-110809,5046fc22"
   sha256 "e77388cad55f2e9da95a220a89206a6c58f865874a629b7c3ea3c162f5692224"
 
-  url "https://github.com/wez/wezterm/releases/download/#{version.csv.first}-#{version.csv.second}/WezTerm-macos-#{version.csv.first}-#{version.csv.second}.zip",
-      verified: "github.com/wez/wezterm/"
+  url "https://github.com/wezterm/wezterm/releases/download/#{version.csv.first}-#{version.csv.second}/WezTerm-macos-#{version.csv.first}-#{version.csv.second}.zip",
+      verified: "github.com/wezterm/wezterm/"
   name "WezTerm"
   desc "GPU-accelerated cross-platform terminal emulator and multiplexer"
-  homepage "https://wezfurlong.org/wezterm/"
+  homepage "https://wezterm.org/"
 
   livecheck do
     url :url
