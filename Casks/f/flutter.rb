@@ -23,6 +23,7 @@ cask "flutter" do
   end
 
   auto_updates true
+  conflicts_with formula: "dart-sdk"
 
   binary "flutter/bin/dart"
   binary "flutter/bin/flutter"
