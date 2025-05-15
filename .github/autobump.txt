@@ -95,6 +95,7 @@ applite
 aptakube
 aptible
 aqua
+aqua-voice
 arc
 archipelago
 archivewebpage
