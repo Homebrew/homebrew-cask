@@ -31,5 +31,4 @@ cask "warsaw" do
     "~/usr/local/lib/warsaw",
     "~/WS_*",
   ]
-
 end
