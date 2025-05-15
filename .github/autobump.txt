@@ -770,6 +770,7 @@ jupyterlab
 juxtacode
 jyutping
 k6-studio
+k8studio
 kaleidoscope
 kando
 katalon-studio
