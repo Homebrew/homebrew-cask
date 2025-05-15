@@ -1,6 +1,6 @@
 cask "acronis-true-image" do
-  version "29.2,41725"
-  sha256 "c9ceaac10458342db211f91a18c776f9cba24f75a6828c72e425f0afecf632c2"
+  version "29.2,42065"
+  sha256 "0bee00e25cf777d2ff059fadae300699dc062adbc0b995819da17897104afffa"
 
   url "https://dl.acronis.com/u/AcronisTrueImage_#{version.csv.second}.dmg"
   name "Acronis True Image"
