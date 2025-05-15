@@ -9,6 +9,7 @@ cask "opera-crypto@developer" do
 
   # https://blogs.opera.com/desktop/2024/02/opera-delists-the-experimental-crypto-browser/
   deprecate! date: "2024-05-15", because: :discontinued
+  disable! date: "2025-05-15", because: :discontinued
 
   auto_updates true
 
