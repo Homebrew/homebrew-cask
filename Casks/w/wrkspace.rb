@@ -1,6 +1,3 @@
-# Documentation: https://docs.brew.sh/Cask-Cookbook
-#                https://docs.brew.sh/Adding-Software-to-Homebrew#cask-stanzas
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 cask "wrkspace" do
   arch arm: "arm64", intel: "amd64"
 
@@ -12,7 +9,6 @@ cask "wrkspace" do
   desc "All-in-one dev bootstrapper: one-click startup Docker, scripts, editor, and URLs"
   homepage "https://wrkspace.co/"
 
-  # Documentation: https://docs.brew.sh/Brew-Livecheck
   livecheck do
     url :url
     regex(/Wrkspace[._-]v?(\d+(?:\.\d+)+)(?:-arm64)?\.dmg/i)
@@ -23,6 +19,8 @@ cask "wrkspace" do
 
   app "Wrkspace.app"
 
-  # Documentation: https://docs.brew.sh/Cask-Cookbook#stanza-zap
-  zap trash: "~/Library/Application Support/wrkspace"
+  zap trash: [
+    "~/Library/Application Support/Wrkspace",
+    "~/Documents/Wrkspace",
+  ]
 end
