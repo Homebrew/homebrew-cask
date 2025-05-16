@@ -19,9 +19,13 @@ cask "sketch" do
     version "101.9,182113"
     sha256 "e6de9d00399f4511711f895c74b909496f690d4f0f4ba66340b158106262e873"
 
+    # Older versions may have a more recent `pubDate` than newer versions, so
+    # we have to check all of the items in the appcast.
     livecheck do
       url "https://download.sketch.com/sketch-versions.xml"
-      strategy :sparkle
+      strategy :sparkle do |items|
+        items.map(&:nice_version)
+      end
     end
   end
 
