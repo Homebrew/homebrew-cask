@@ -1039,6 +1039,7 @@ navicat-for-sqlite
 navicat-premium
 navicat-premium-lite
 navigraph-charts
+neo-network-utility
 neofinder
 neohtop
 neovide
