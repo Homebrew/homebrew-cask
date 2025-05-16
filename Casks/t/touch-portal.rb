@@ -1,7 +1,7 @@
 cask "touch-portal" do
   arch arm: "M1"
 
-  version "4.4,3"
+  version "4.4,4"
   sha256 :no_check
 
   url "https://www.touch-portal.com/downloads/releases/mac/TouchPortalMacRelease#{arch}.dmg"
