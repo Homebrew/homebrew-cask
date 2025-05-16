@@ -128,6 +128,7 @@ badgeify
 badlion-client
 baidunetdisk
 balenaetcher
+bambu-connect
 banana-cake-pop
 bananas
 banking-4
