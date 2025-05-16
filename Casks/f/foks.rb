@@ -17,7 +17,7 @@ cask "foks" do
     end
   end
 
-  binary "foks", target: "foks"
+  binary "foks"
   binary "foks", target: "git-remote-foks"
 
   postflight do
