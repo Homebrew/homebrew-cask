@@ -8,8 +8,8 @@ cask "iqmol" do
   homepage "http://iqmol.org/"
 
   livecheck do
-    url "http://iqmol.org/downloads.html"
-    regex(/href=.*?=IQmol[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
+    url "https://iqmol.org/downloads.html"
+    regex(/href=.*?IQmol[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   app "IQmol.app"
