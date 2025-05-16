@@ -1,16 +1,16 @@
 cask "softube-central" do
-  version "1.11.21"
-  sha256 "7d9c0a177b188b44c91fe27bab3a167ebe2f0210c68533cf6f4d1183c03c3581"
+  version "2.0.0"
+  sha256 "aadc2107e4f529ab2a5768c0b965a2a8a3e4c9ef35cd6480971ddf834c9045b1"
 
   url "https://softubestorage.b-cdn.net/softubecentraldata/softubecentral/Softube%20Central-#{version}-universal.pkg",
       verified: "softubestorage.b-cdn.net/"
   name "Softube Central"
   desc "Installer for installation and license activation of Softube products"
-  homepage "https://www.softube.com/softube-central/"
+  homepage "https://www.softube.com/"
 
   livecheck do
-    url "https://www.softube.com/installers"
-    regex(/Softube%20Central[._-]v?(\d+(?:\.\d+)+)[._-]universal\.pkg/i)
+    url "https://softubestorage.b-cdn.net/softubecentraldata/softubecentral/latest-mac.yml?noCache=#{Time.now.to_i}"
+    strategy :electron_builder
   end
 
   auto_updates true
@@ -36,7 +36,11 @@ cask "softube-central" do
 
   zap trash: [
     "/Library/Application Support/Softube",
-    "~/Library/Application Support/Softube",
-    "~/Library/Application Support/softubecentral",
+    "/Library/LaunchDaemons/com.softube.installerdaemon.helper.plist",
+    "/Library/Preferences/com.softube.settings.plist",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.softube.com.softubecentral.sfl*",
+    "~/Library/Application Support/Softube*",
+    "~/Library/Logs/Softube Central",
+    "~/Library/Preferences/org.softube.com.softubecentral.plist",
   ]
 end
