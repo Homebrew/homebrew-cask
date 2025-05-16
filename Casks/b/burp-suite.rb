@@ -28,6 +28,8 @@ cask "burp-suite" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Burp Suite Community Edition.app"
 
   zap trash: "~/.BurpSuite"
