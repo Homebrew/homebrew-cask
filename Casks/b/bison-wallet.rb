@@ -7,7 +7,7 @@ cask "bison-wallet" do
 
   url "https://github.com/decred/dcrdex/releases/download/v#{version}/bisonw-desktop-darwin-#{arch}-v#{version}.dmg"
   name "Bison Wallet"
-  desc "A multi-coin wallet with feeless DEX, atomic swaps, and arbitrage tools"
+  desc "Multi-coin wallet with feeless DEX, atomic swaps, and arbitrage tools"
   homepage "https://github.com/decred/dcrdex"
 
   depends_on macos: ">= :sierra"
