@@ -2,8 +2,8 @@ cask "void" do
   arch arm: "arm64", intel: "x64"
 
   version "1.99.30033"
-  sha256 arm:   "cdf28a11fca4542fb9031c4d4874ac7de7b42d9ad2e2a2739b63742cff3b8521",
-         intel: "6f5328a42ee5833af6496001e58f5c49d2bcd2facf3fdee775b2e5734eadacbf"
+  sha256 arm:   "9f61dbe001e561447c1666a4f7008cbe3d6f27e94017f45eda69db971ac71d68",
+         intel: "67044af2ec463cef2c63429feefb08e4cb154e47614c08699de0b5f96e5c6402"
 
   url "https://github.com/voideditor/binaries/releases/download/#{version}/Void.#{arch}.#{version}.dmg",
       verified: "github.com/voideditor/"
@@ -20,6 +20,7 @@ cask "void" do
   depends_on macos: ">= :big_sur"
 
   app "Void.app"
+  binary "#{appdir}/Void.app/Contents/Resources/app/bin/void"
 
   zap trash: [
     "~/Library/Application Support/Void",
