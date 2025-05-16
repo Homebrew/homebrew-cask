@@ -2,7 +2,7 @@ cask "p4" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
   arch arm: "12arm64", intel: "1015x86_64"
 
-  version "2024.2,2726408"
+  version "2025.1,2761706"
   sha256 :no_check
 
   url "https://filehost.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx#{arch}/p4"
