@@ -8,6 +8,7 @@ cask "soundflowerbed" do
   homepage "https://github.com/mLupine/SoundflowerBed"
 
   deprecate! date: "2024-05-16", because: :discontinued
+  disable! date: "2025-05-16", because: :discontinued
 
   app "SoundflowerBed.app"
 end

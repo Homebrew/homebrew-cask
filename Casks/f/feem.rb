@@ -9,6 +9,7 @@ cask "feem" do
   homepage "https://feem.io/"
 
   deprecate! date: "2024-05-17", because: :moved_to_mas
+  disable! date: "2025-05-17", because: :moved_to_mas
 
   pkg "Feem_Mac_#{version}_beta_Installer.pkg"
 

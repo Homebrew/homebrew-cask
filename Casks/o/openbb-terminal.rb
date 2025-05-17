@@ -12,6 +12,7 @@ cask "openbb-terminal" do
   homepage "https://openbb.co/"
 
   deprecate! date: "2024-05-16", because: :discontinued
+  disable! date: "2025-05-16", because: :discontinued
 
   depends_on macos: ">= :monterey"
 
