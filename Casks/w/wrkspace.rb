@@ -1,7 +1,7 @@
 cask "wrkspace" do
-  arch arm: "arm64", intel: "amd64"
+  arch arm: "arm64", intel: "x64"
 
-  version "2.0.9"
+  version "2.0.10"
   sha256 :no_check
 
   url "https://updater.wrkspace.co/download/darwin-#{arch}"
@@ -11,7 +11,7 @@ cask "wrkspace" do
 
   livecheck do
     url :url
-    regex(/Wrkspace[._-]v?(\d+(?:\.\d+)+)(?:-arm64)?\.dmg/i)
+    regex(/Wrkspace[._-]v?(\d+(?:\.\d+)+)(?:-(?:arm64|x64|universal))?\.dmg/i)
     strategy :header_match
   end
 
@@ -19,8 +19,6 @@ cask "wrkspace" do
 
   app "Wrkspace.app"
 
-  zap trash: [
-    "~/Library/Application Support/Wrkspace",
-    "~/Documents/Wrkspace",
-  ]
+  zap trash: "~/Library/Application Support/Wrkspace",
+      rmdir: "~/Documents/Wrkspace"
 end
