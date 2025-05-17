@@ -31,18 +31,12 @@ cask "warsaw" do
             pkgutil:   "com.topazofd.warsaw"
 
   zap trash: [
-    "~/Library/Fonts/dbldwrsw.ttf",
-    "~/Library/LaunchAgents/com.topazofd.warsaw.user.plist",
-    "~/Library/LaunchDaemons/com.topazofd.warsaw.plist",
-    "~/private/tmp/boost_interprocess",
-    "~/private/tmp/wi*",
-    "~/tmp/boost_interprocess",
-    "~/tmp/dbd",
-    "~/tmp/upd",
-    "~/tmp/wi*",
-    "~/usr/local/bin/warsaw",
-    "~/usr/local/etc/warsaw",
-    "~/usr/local/lib/warsaw",
-    "~/WS_*",
+    "/Library/Fonts/dbldwrsw.ttf",
+    "/Library/LaunchAgents/com.topazofd.warsaw.user.plist",
+    "/Library/LaunchDaemons/com.topazofd.warsaw.plist",
+    "/usr/local/bin/warsaw",
+    "/usr/local/etc/warsaw",
+    "/usr/local/lib/warsaw",
+    "/WS_*",
   ]
 end
