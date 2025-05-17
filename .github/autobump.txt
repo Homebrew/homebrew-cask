@@ -783,6 +783,7 @@ kdrive
 keepassxc
 keepassxc@snapshot
 keeper-password-manager
+keet
 keka
 keka@beta
 keyboard-cowboy
