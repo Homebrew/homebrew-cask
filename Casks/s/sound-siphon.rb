@@ -1,5 +1,5 @@
 cask "sound-siphon" do
-  version "3.8.2"
+  version "3.8.3"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://staticz.com/download/1837/"
