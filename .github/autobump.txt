@@ -1529,7 +1529,6 @@ tableau-reader
 tableflip
 tableplus
 tabtab
-tageditor
 tagspaces
 tailscale
 tandem
