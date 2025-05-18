@@ -5,10 +5,6 @@ cask "reaper" do
     sha256 "c32f1336b5c60840e198a2f4d239355f5be43f07c5cb0b64ec2b55612d9b689c"
 
     url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64.dmg"
-
-    caveats do
-      requires_rosetta
-    end
   end
   on_catalina :or_newer do
     sha256 "5df6a5a3c7e334e74e06bbc01e767b36aba40c728334060ac45c104a4db1440a"
