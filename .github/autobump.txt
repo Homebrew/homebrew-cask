@@ -615,6 +615,7 @@ get-iplayer-automator
 ghost-browser
 ghostty
 ghostty@tip
+gimp
 gisto
 git-credential-manager
 gitbutler
