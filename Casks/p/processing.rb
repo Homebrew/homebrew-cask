@@ -12,10 +12,15 @@ cask "processing" do
   homepage "https://processing.org/"
 
   livecheck do
-    url :url
+    url "https://processing.org/page-data/download/page-data.json"
     regex(/^processing[._-](\d+(?:\.\d+)*)[@_-](\d+(?:\.\d+)+)$/i)
-    strategy :github_latest do |json, regex|
-      json["tag_name"]&.scan(regex)&.map { |match| "#{match[1]},#{match[0]}" }
+    strategy :json do |json, regex|
+      json.dig("result", "data", "releases", "nodes")&.map do |node|
+        match = node.dig("childJson", "tagName")&.match(regex)
+        next if match.blank?
+
+        "#{match[2]},#{match[1]}"
+      end
     end
   end
 
