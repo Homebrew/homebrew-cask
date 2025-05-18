@@ -8,7 +8,7 @@ cask "tastytrade" do
   url "https://download.tastytrade.com/desktop-#{version.major}.x.x/#{version}/tastytrade-#{version}#{arch}.dmg"
   name "tastytrade"
   desc "Desktop trading platform"
-  homepage "https://tastytrade.com/technology/"
+  homepage "https://tastytrade.com/desktop-platform/"
 
   # The version information is found in a random JSON file, which is referenced
   # from another JSON file. We can't tell which file will contain the version
@@ -18,7 +18,7 @@ cask "tastytrade" do
   # structure of the target JSON file changes. The latter would cause the check
   # to fetch all the JSON files before failing, which isn't ideal.
   livecheck do
-    url "https://tastytrade.com/page-data/technology/page-data.json"
+    url "https://tastytrade.com/page-data/desktop-platform/page-data.json"
     strategy :json do |json|
       requests = 0
       version = json["staticQueryHashes"]&.each do |static_hash|
