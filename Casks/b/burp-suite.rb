@@ -28,6 +28,7 @@ cask "burp-suite" do
     end
   end
 
+  conflicts_with cask: "burp-suite@early-adopter"
   depends_on macos: ">= :catalina"
 
   app "Burp Suite Community Edition.app"
