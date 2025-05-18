@@ -3,10 +3,11 @@ cask "font-ancizar-sans" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
+      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/ancizarsans"
   name "Ancizar Sans"
-  homepage "https://github.com/UNAL-OMD/UNAL-Ancizar"
+  homepage "https://fonts.google.com/specimen/Ancizar+Sans"
 
   font "AncizarSans-Italic[wght].ttf"
   font "AncizarSans[wght].ttf"
