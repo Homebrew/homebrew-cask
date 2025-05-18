@@ -1,11 +1,8 @@
 cask "stratoshark@dev" do
-  arch arm: "Arm", intel: "Intel"
+  version "0.9.2rc0,637,5a92bb620c7f"
+  sha256 "e09c30516a11d8b8bf99a4f45ae0ae4f892554372598a500882d37b742b1b408"
 
-  version "0.9.2rc0,559,8c708992e782"
-  sha256 arm:   "ae9e436a3ab86d06995c0223ad2470ed74e5631086ca1c814769199d74f0f0e5",
-         intel: "36507c45310a07811c51c0d4fe39185f6583fd02b87f64fb16297222d9981e01"
-
-  url "https://www.wireshark.org/download/automated/osx/Stratoshark%20#{version.csv.first}-#{version.csv.second}-g#{version.csv.third}%20#{arch}%2064.dmg",
+  url "https://www.wireshark.org/download/automated/osx/Stratoshark%20#{version.csv.first}-#{version.csv.second}-g#{version.csv.third}.dmg",
       verified: "wireshark.org/download/"
   name "Stratoshark"
   desc "System calls and log messages analyzer"
@@ -13,7 +10,7 @@ cask "stratoshark@dev" do
 
   livecheck do
     url "https://www.wireshark.org/download/automated/osx/"
-    regex(/href=.*?Stratoshark\s+v?(\d+(?:\.\d+)+(?:rc\d+)?)[._-](\d+)[._-]g(\h+)\s+#{arch}\s+64\.dmg/i)
+    regex(/href=.*?Stratoshark\s+v?(\d+(?:\.\d+)+(?:rc\d+)?)[._-](\d+)[._-]g(\h+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
     end
