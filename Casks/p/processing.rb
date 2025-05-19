@@ -11,11 +11,14 @@ cask "processing" do
   desc "Flexible software sketchbook and a language for learning how to code"
   homepage "https://processing.org/"
 
+  # GitHub releases may not always provide macOS files at the time the release
+  # is created. The first-party download page links to GitHub release assets,
+  # so we can use that to identify the latest stable release with a macOS file.
   livecheck do
     url "https://processing.org/page-data/download/page-data.json"
     regex(/^processing[._-](\d+(?:\.\d+)*)[@_-](\d+(?:\.\d+)+)$/i)
     strategy :json do |json, regex|
-      json.dig("result", "data", "releases", "nodes")&.map do |node|
+      json.dig("result", "data", "releases", "nodes")&.filter_map do |node|
         match = node.dig("childJson", "tagName")&.match(regex)
         next if match.blank?
 
