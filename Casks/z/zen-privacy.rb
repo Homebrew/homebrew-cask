@@ -22,6 +22,12 @@ cask "zen-privacy" do
   conflicts_with cask: "zen"
   depends_on macos: ">= :catalina"
 
+  uninstall script: {
+    executable: "/Applications/Zen.app/Contents/MacOS/Zen",
+    args: ["--uninstall-can"],
+    must_succeed: false,
+  }
+
   livecheck do
     url :url
     strategy :github_latest
@@ -33,6 +39,7 @@ cask "zen-privacy" do
     "~/Library/Caches/Zen",
     "~/Library/Saved Application State/net.zenprivacy.zen.savedState",
     "~/Library/Preferences/net.zenprivacy.zen.plist",
-    "~/Library/LaunchAgents/net.zenprivacy.zen.plist"
+    "~/Library/LaunchAgents/net.zenprivacy.zen.plist",
+    "~/Library/WebKit/net.zenprivacy.zen"
   ]
 end
