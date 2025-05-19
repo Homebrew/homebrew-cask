@@ -24,7 +24,7 @@ cask "zen-privacy" do
 
   uninstall script: {
     executable: "/Applications/Zen.app/Contents/MacOS/Zen",
-    args: ["--uninstall-can"],
+    args: ["--uninstall-ca"],
     must_succeed: false,
   }
 
