@@ -40,6 +40,8 @@ cask "raycast" do
   auto_updates true
   depends_on macos: ">= :big_sur"
 
+  no_autobump! because: :bumped_by_upstream
+
   app "Raycast.app"
 
   uninstall quit:       "com.raycast.macos",
