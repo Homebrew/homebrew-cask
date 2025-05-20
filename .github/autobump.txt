@@ -1670,6 +1670,7 @@ uvtools
 valentina-studio
 vallum
 vamiga
+vapor
 vassal
 vbrokers
 vcam
