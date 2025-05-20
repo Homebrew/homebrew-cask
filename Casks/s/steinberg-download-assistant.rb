@@ -1,6 +1,6 @@
 cask "steinberg-download-assistant" do
-  version "1.37.4,b595-2bf52c3b-96f9-4694-bf6e-3224fb0e3e58"
-  sha256 "72d80573dc0f0f1fd0b6db629ba9e209d3b2cb14eec67fa818eefb842106eeba"
+  version "1.38.1,b648-7cf9f7b9-ccb0-44e1-b16e-1f1c53be881b"
+  sha256 "173a87efac3b0268a6e690bc2fd73cd9b04df1635831b3c1e39de372a0575953"
 
   url "https://download.steinberg.net/automated_updates/sda-selfupdate/releases/absolute-downloader-#{version.csv.first}-#{version.csv.second}/mac/Steinberg_Download_Assistant_#{version.csv.first}_Installer_mac.dmg"
   name "Steinberg Download Assistant"

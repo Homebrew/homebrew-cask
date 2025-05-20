@@ -1492,6 +1492,7 @@ steamcmd
 steelseries-gg
 steermouse
 steinberg-activation-manager
+steinberg-download-assistant
 steinberg-mediabay
 stratoshark
 stratoshark@dev
