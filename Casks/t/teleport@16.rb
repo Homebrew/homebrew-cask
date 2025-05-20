@@ -13,6 +13,8 @@ cask "teleport@16" do
     regex(/teleport[._-]v?(16(?:\.\d+)+)\.pkg/i)
   end
 
+  disable! date: "2025-10-01", because: :discontinued
+
   conflicts_with cask:    [
                    "teleport",
                    "tsh",
