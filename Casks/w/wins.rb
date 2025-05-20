@@ -1,8 +1,8 @@
 cask "wins" do
-  version "2.6.1,42"
-  sha256 "8a20b3ff14fbbb13a5f79d76c933b9376e9c4ea70192e2a2b8a463698286e14a"
+  version "2.6.2,43"
+  sha256 :no_check
 
-  url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins_#{version.csv.first}_#{version.csv.second}.zip",
+  url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins.zip",
       verified: "winswebsite.s3.us-east-005.backblazeb2.com/"
   name "Wins"
   desc "Window manager"
@@ -19,11 +19,17 @@ cask "wins" do
   app "Wins.app"
 
   zap trash: [
+    "~/Library/Application Scripts/cool.wins.WinsHelper",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cool.wins.*.sfl*",
     "~/Library/Application Support/cools.wins.main",
     "~/Library/Application Support/Wins",
     "~/Library/Caches/cools.wins.main",
+    "~/Library/Containers/cool.wins.WinsHelper",
     "~/Library/Containers/WinsHelper",
-    "~/Library/HTTPStorages/cools.wins.main",
+    "~/Library/HTTPStorages/cools.wins.main*",
+    "~/Library/PreferencePanes/Wins.prefPane",
     "~/Library/Preferences/com.tinynudge.pomello.plist",
+    "~/Library/Preferences/cools.wins.main.plist",
+    "~/Library/WebKit/cools.wins.main",
   ]
 end
