@@ -20,8 +20,4 @@ cask "ipartition" do
   app "iPartition.app"
 
   zap trash: "~/Library/Preferences/com.coriolis-systems.iPartition.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end
