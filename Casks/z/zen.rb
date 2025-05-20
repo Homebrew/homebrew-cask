@@ -16,6 +16,7 @@ cask "zen" do
   end
 
   auto_updates true
+  conflicts_with cask: "zen-privacy"
   depends_on macos: ">= :catalina"
 
   app "Zen.app"
