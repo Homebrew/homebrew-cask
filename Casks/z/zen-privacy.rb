@@ -1,27 +1,15 @@
 cask "zen-privacy" do
+  arch arm: "arm64", intel: "amd64"
+
   version "0.10.0"
+  sha256 arm:   "cd594e8e89fca50e6a49df0618baa7497440495fd7ef032620225db7a79f496e",
+         intel: "7fb84580ed8424db4dde5c85d752c61bafa2a17d1c453569bdd94dde557e9e11"
 
-  on_arm do
-    sha256 "cd594e8e89fca50e6a49df0618baa7497440495fd7ef032620225db7a79f496e"
-
-    url "https://github.com/ZenPrivacy/zen-desktop/releases/download/v#{version}/Zen_darwin_arm64_noselfupdate.tar.gz",
-        verified: "github.com/ZenPrivacy/zen-desktop/"
-  end
-  on_intel do
-    sha256 "7fb84580ed8424db4dde5c85d752c61bafa2a17d1c453569bdd94dde557e9e11"
-
-    url "https://github.com/ZenPrivacy/zen-desktop/releases/download/v#{version}/Zen_darwin_amd64_noselfupdate.tar.gz",
-        verified: "github.com/ZenPrivacy/zen-desktop/"
-  end
-
+  url "https://github.com/ZenPrivacy/zen-desktop/releases/download/v#{version}/Zen_darwin_#{arch}_noselfupdate.tar.gz",
+      verified: "github.com/ZenPrivacy/zen-desktop/"
   name "Zen"
-  desc "Simple, free and efficient ad-blocker and privacy guard"
+  desc "Ad-blocker and privacy guard"
   homepage "https://zenprivacy.net/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   auto_updates true
   conflicts_with cask: "zen"
