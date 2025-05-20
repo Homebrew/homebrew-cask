@@ -1302,6 +1302,7 @@ readest
 readmoreading
 readyapi
 realforce
+realvnc-connect
 reaper
 receipts
 rectangle
