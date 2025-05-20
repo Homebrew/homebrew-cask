@@ -852,6 +852,7 @@ logitech-g-hub
 logitune
 logos
 logseq
+longplay
 lookaway
 loom
 losslesscut
