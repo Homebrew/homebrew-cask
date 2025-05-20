@@ -1761,6 +1761,7 @@ wiso-steuer-2022
 wiso-steuer-2023
 wiso-steuer-2024
 wiso-steuer-2025
+witsy
 wizcli
 wljs-notebook
 wondershare-uniconverter
