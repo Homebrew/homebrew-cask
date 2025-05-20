@@ -1,6 +1,6 @@
 cask "realvnc-connect" do
-  version "8.0.0"
-  sha256 "7bdab2dd010d240d394ee018b705d83b39cde4524628b58efee231ed0c5e00b4"
+  version "8.0.1"
+  sha256 "ae611e4f062d3e19ae3558e544bce520c1ee7603ef42565df928736ff3987c60"
 
   url "https://downloads.realvnc.com/download/file/realvnc-connect/RealVNC-Connect-#{version}-MacOSX-universal.pkg"
   name "RealVNC Connect"
