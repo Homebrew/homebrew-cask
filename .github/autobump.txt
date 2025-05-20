@@ -671,6 +671,7 @@ hapigo
 hashbackup
 hazel
 hbuilderx
+hedy
 helio
 helpwire-operator
 heptabase
