@@ -1470,7 +1470,7 @@ spike
 splashtop-business
 splashtop-streamer
 splice
-springtoolsuite
+springtoolsforeclipse
 spybuster
 spyder
 sqlcl
