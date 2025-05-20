@@ -1,6 +1,6 @@
 cask "sloth" do
-  version "3.3"
-  sha256 "2c668befe36aa0fa9765d616abdc7ec8d1191656599ac670faa7042c2e2b7636"
+  version "3.4"
+  sha256 "2bc0f078114020b110caaae2e8d3bea79a916a6f811e3224d6d978de072c78db"
 
   url "https://sveinbjorn.org/files/software/sloth/sloth-#{version}.zip"
   name "Sloth"
