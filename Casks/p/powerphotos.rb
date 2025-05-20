@@ -60,7 +60,7 @@ cask "powerphotos" do
     end
   end
   on_monterey :or_newer do
-    version "3.0.5"
+    version "3.0.6"
     sha256 :no_check
 
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
