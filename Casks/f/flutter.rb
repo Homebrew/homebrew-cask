@@ -1,9 +1,9 @@
 cask "flutter" do
   arch arm: "_arm64"
 
-  version "3.29.3"
-  sha256 arm:   "bc3ae28ac1ba131787f99dc40d3bf9362f43e411ce8aab48c7443bacdf03c4b4",
-         intel: "d9626a2920a6d6c08b02dbc362ad6dc20eabe477f06e8683242ba2e5b6a1ae72"
+  version "3.32.0"
+  sha256 arm:   "8bef93541b609731f28c68e9d21affb90bb185df47b434c6ecae66ec1567b713",
+         intel: "a51b56ab54c880a5a9a675481db5ab0faa5043780c242163695e39ec566d9a17"
 
   url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos#{arch}_#{version}-stable.zip",
       verified: "storage.googleapis.com/flutter_infra_release/releases/stable/macos/"
