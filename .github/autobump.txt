@@ -1732,6 +1732,7 @@ webex
 webstorm
 webull
 wechat
+wechatwebdevtools
 wechatwork
 wetype
 whalebird
