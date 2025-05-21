@@ -14,6 +14,7 @@ cask "teleport" do
   end
 
   conflicts_with cask:    [
+                   "teleport@16",
                    "tsh",
                    "tsh@13",
                  ],
