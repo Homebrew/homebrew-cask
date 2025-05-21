@@ -7,11 +7,11 @@ cask "yuanbao" do
   desc "Tencent AI Assistant with Hunyuan and DeepSeek LLMs"
   homepage "https://yuanbao.tencent.com/"
 
-  depends_on macos: ">= :big_sur"
-
-  app "腾讯元宝.app"
-
   livecheck do
     skip "No reliable version information available"
   end
+
+  depends_on macos: ">= :big_sur"
+
+  app "腾讯元宝.app"
 end
