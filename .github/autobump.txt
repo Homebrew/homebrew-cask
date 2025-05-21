@@ -1483,6 +1483,7 @@ squash
 stability-matrix
 standard-notes
 starsector
+start
 startupfolder
 staruml
 stash
