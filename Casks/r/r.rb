@@ -1,58 +1,25 @@
 cask "r" do
   arch arm: "arm64", intel: "x86_64"
-  folder = on_arch_conditional arm: "big-sur-arm64/"
-  arch_legacy = on_arch_conditional arm: "-arm64"
 
-  on_sierra :or_older do
-    version "3.6.3.nn"
-    sha256 "f2b771e94915af0fe0a6f042bc7a04ebc84fb80cb01aad5b7b0341c4636336dd"
+  on_catalina :or_older do
+    on_sierra :or_older do
+      version "3.6.3.nn"
+      sha256 "f2b771e94915af0fe0a6f042bc7a04ebc84fb80cb01aad5b7b0341c4636336dd"
 
-    url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
+      url "https://cran-archive.r-project.org/bin/macosx/base/R-#{version}.pkg"
+    end
+    on_high_sierra :or_newer do
+      version "4.2.3"
+      sha256 "dd96e8dcae20cf3c9cde429dd29f252b87af69028a6a403ec867eb92bb8eb659"
+
+      url "https://cloud.r-project.org/bin/macosx/base/R-#{version}.pkg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
 
     pkg "R-#{version}.pkg"
-  end
-  on_high_sierra do
-    version "4.2.3"
-    sha256 arm:   "e61f25b529940e229b69c19e01428505d7f59cc1e1209ed41dca39452b56fb98",
-           intel: "dd96e8dcae20cf3c9cde429dd29f252b87af69028a6a403ec867eb92bb8eb659"
-
-    url "https://cloud.r-project.org/bin/macosx/#{folder}base/R-#{version}#{arch_legacy}.pkg"
-
-    livecheck do
-      skip "Legacy version"
-    end
-
-    pkg "R-#{version}#{arch_legacy}.pkg"
-  end
-  on_mojave do
-    version "4.2.3"
-    sha256 arm:   "e61f25b529940e229b69c19e01428505d7f59cc1e1209ed41dca39452b56fb98",
-           intel: "dd96e8dcae20cf3c9cde429dd29f252b87af69028a6a403ec867eb92bb8eb659"
-
-    url "https://cloud.r-project.org/bin/macosx/#{folder}base/R-#{version}#{arch_legacy}.pkg"
-
-    livecheck do
-      skip "Legacy version"
-    end
-
-    pkg "R-#{version}#{arch_legacy}.pkg"
-  end
-  on_catalina do
-    version "4.2.3"
-    sha256 arm:   "e61f25b529940e229b69c19e01428505d7f59cc1e1209ed41dca39452b56fb98",
-           intel: "dd96e8dcae20cf3c9cde429dd29f252b87af69028a6a403ec867eb92bb8eb659"
-
-    url "https://cloud.r-project.org/bin/macosx/#{folder}base/R-#{version}#{arch_legacy}.pkg"
-
-    livecheck do
-      skip "Legacy version"
-    end
-
-    pkg "R-#{version}#{arch_legacy}.pkg"
   end
   on_big_sur :or_newer do
     version "4.5.0"
