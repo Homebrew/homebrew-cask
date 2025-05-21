@@ -3,82 +3,52 @@ cask "onyx" do
 
   # NOTE: We use separate `url` values in each of the macOS on_system blocks
   # so that the API data correctly includes URL variants for each.
-  on_el_capitan :or_older do
-    version "3.1.9"
+  on_sonoma :or_older do
+    on_el_capitan :or_older do
+      version "3.1.9"
 
-    url "https://www.titanium-software.fr/download/1011/OnyX.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1011/OnyX.dmg"
     end
-  end
-  on_sierra do
-    version "3.3.1"
+    on_sierra do
+      version "3.3.1"
 
-    url "https://www.titanium-software.fr/download/1012/OnyX.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1012/OnyX.dmg"
     end
-  end
-  on_high_sierra do
-    version "3.4.9"
+    on_high_sierra do
+      version "3.4.9"
 
-    url "https://www.titanium-software.fr/download/1013/OnyX.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1013/OnyX.dmg"
     end
-  end
-  on_mojave do
-    version "3.6.8"
+    on_mojave do
+      version "3.6.8"
 
-    url "https://www.titanium-software.fr/download/1014/OnyX.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1014/OnyX.dmg"
     end
-  end
-  on_catalina do
-    version "3.8.7"
+    on_catalina do
+      version "3.8.7"
 
-    url "https://www.titanium-software.fr/download/1015/OnyX.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1015/OnyX.dmg"
     end
-  end
-  on_big_sur do
-    version "4.0.2"
+    on_big_sur do
+      version "4.0.2"
 
-    url "https://www.titanium-software.fr/download/11/OnyX.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/11/OnyX.dmg"
     end
-  end
-  on_monterey do
-    version "4.2.7"
+    on_monterey do
+      version "4.2.7"
 
-    url "https://www.titanium-software.fr/download/12/OnyX.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/12/OnyX.dmg"
     end
-  end
-  on_ventura do
-    version "4.4.7"
+    on_ventura do
+      version "4.4.7"
 
-    url "https://www.titanium-software.fr/download/13/OnyX.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/13/OnyX.dmg"
     end
-  end
-  on_sonoma do
-    version "4.6.2"
+    on_sonoma do
+      version "4.6.2"
 
-    url "https://www.titanium-software.fr/download/14/OnyX.dmg"
+      url "https://www.titanium-software.fr/download/14/OnyX.dmg"
+    end
 
     livecheck do
       skip "Legacy version"

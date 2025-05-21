@@ -1,23 +1,17 @@
 cask "araxis-merge" do
-  on_mojave :or_older do
-    version "2021.5602"
-    sha256 "06c56e6d08057090f3718b6db560e2a79551f953d4c83c0fad8b60f415c59347"
-
-    livecheck do
-      skip "Legacy version"
+  on_big_sur :or_older do
+    on_mojave :or_older do
+      version "2021.5602"
+      sha256 "06c56e6d08057090f3718b6db560e2a79551f953d4c83c0fad8b60f415c59347"
     end
-  end
-  on_catalina do
-    version "2022.5786"
-    sha256 "a8a65089d7965a3ecdf3b65dbeaed54f4f31d0bc7b85c9d970aa999ab5cfa4df"
-
-    livecheck do
-      skip "Legacy version"
+    on_catalina do
+      version "2022.5786"
+      sha256 "a8a65089d7965a3ecdf3b65dbeaed54f4f31d0bc7b85c9d970aa999ab5cfa4df"
     end
-  end
-  on_big_sur do
-    version "2023.5915"
-    sha256 "8e9372f56a3597bdea49caadab1f11e998d8686c5e2d19472ec9470db643032e"
+    on_big_sur do
+      version "2023.5915"
+      sha256 "8e9372f56a3597bdea49caadab1f11e998d8686c5e2d19472ec9470db643032e"
+    end
 
     livecheck do
       skip "Legacy version"

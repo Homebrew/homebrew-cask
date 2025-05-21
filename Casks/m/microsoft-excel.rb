@@ -1,55 +1,33 @@
 cask "microsoft-excel" do
-  on_el_capitan :or_older do
-    version "16.16.20101200"
-    sha256 "bdd23b696d54e5ffeb40f30a9bd7f968d2936380ab78a6eaf29d05f5fc8eb78e"
-
-    livecheck do
-      skip "Legacy version"
+  on_monterey :or_older do
+    on_el_capitan :or_older do
+      version "16.16.20101200"
+      sha256 "bdd23b696d54e5ffeb40f30a9bd7f968d2936380ab78a6eaf29d05f5fc8eb78e"
     end
-  end
-  on_sierra do
-    version "16.30.19101301"
-    sha256 "9886b661067f4a99de544d140980fb0f8ef2f4871baa519024781fb814a02fe5"
-
-    livecheck do
-      skip "Legacy version"
+    on_sierra do
+      version "16.30.19101301"
+      sha256 "9886b661067f4a99de544d140980fb0f8ef2f4871baa519024781fb814a02fe5"
     end
-  end
-  on_high_sierra do
-    version "16.43.20110804"
-    sha256 "2711a1b8864f7474458086b4b0a56673fee0097d2049f276788c50e004c47d72"
-
-    livecheck do
-      skip "Legacy version"
+    on_high_sierra do
+      version "16.43.20110804"
+      sha256 "2711a1b8864f7474458086b4b0a56673fee0097d2049f276788c50e004c47d72"
     end
-  end
-  on_mojave do
-    version "16.54.21101001"
-    sha256 "e09fe9f49a36b37af3745673a385be4de9ae8ec774965fd1753f8479a775fc54"
-
-    livecheck do
-      skip "Legacy version"
+    on_mojave do
+      version "16.54.21101001"
+      sha256 "e09fe9f49a36b37af3745673a385be4de9ae8ec774965fd1753f8479a775fc54"
     end
-  end
-  on_catalina do
-    version "16.66.22101101"
-    sha256 "94148628c6f143f07555b3d2a70cea61cef817d963539d281b092834496f8f16"
-
-    livecheck do
-      skip "Legacy version"
+    on_catalina do
+      version "16.66.22101101"
+      sha256 "94148628c6f143f07555b3d2a70cea61cef817d963539d281b092834496f8f16"
     end
-  end
-  on_big_sur do
-    version "16.77.23091703"
-    sha256 "582fca32104e828e01c0928e674122f2d8044d84fd2dc1d7964e0a807e2f4695"
-
-    livecheck do
-      skip "Legacy version"
+    on_big_sur do
+      version "16.77.23091703"
+      sha256 "582fca32104e828e01c0928e674122f2d8044d84fd2dc1d7964e0a807e2f4695"
     end
-  end
-  on_monterey do
-    version "16.89.24091630"
-    sha256 "81e02698c209b0681999737d9be8f685e12e43c8ceaf7ee2c7a08ad61adc99f7"
+    on_monterey do
+      version "16.89.24091630"
+      sha256 "81e02698c209b0681999737d9be8f685e12e43c8ceaf7ee2c7a08ad61adc99f7"
+    end
 
     livecheck do
       skip "Legacy version"

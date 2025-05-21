@@ -1,32 +1,26 @@
 cask "klayout" do
-  on_catalina :or_older do
-    version "0.28.12"
-    sha256 "b2bca1ad625f84be8d6eeba7cc4864c83dd09d01d4e413059c8cff130c825b3e"
+  on_monterey :or_older do
+    on_catalina :or_older do
+      version "0.28.12"
+      sha256 "b2bca1ad625f84be8d6eeba7cc4864c83dd09d01d4e413059c8cff130c825b3e"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb39.dmg",
-        verified: "klayout.org/downloads/MacOS/"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb39.dmg",
+          verified: "klayout.org/downloads/MacOS/"
     end
-  end
-  on_big_sur do
-    version "0.28.12"
-    sha256 "1c7b6e12ac722d718dfc1711dd4d05cfa0a7b97d60ad02f98cd15cbae22d7fb0"
+    on_big_sur do
+      version "0.28.12"
+      sha256 "1c7b6e12ac722d718dfc1711dd4d05cfa0a7b97d60ad02f98cd15cbae22d7fb0"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb39.dmg",
-        verified: "klayout.org/downloads/MacOS/"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb39.dmg",
+          verified: "klayout.org/downloads/MacOS/"
     end
-  end
-  on_monterey do
-    version "0.29.6"
-    sha256 "2c324dc95d77a0167d6c56608d2beca5f78b5190259480d97ef1500b19bc7389"
+    on_monterey do
+      version "0.29.6"
+      sha256 "2c324dc95d77a0167d6c56608d2beca5f78b5190259480d97ef1500b19bc7389"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5MP-RsysPhb311.dmg",
-        verified: "klayout.org/downloads/MacOS/"
+      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5MP-RsysPhb311.dmg",
+          verified: "klayout.org/downloads/MacOS/"
+    end
 
     livecheck do
       skip "Legacy version"
