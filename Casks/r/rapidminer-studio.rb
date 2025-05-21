@@ -1,6 +1,6 @@
 cask "rapidminer-studio" do
-  version "2025.0.1"
-  sha256 "abc0d19a433d6c736bbb9981435bd95aadc3ceb5f7483e6f25f0ee3837e25775"
+  version "2025.1.0"
+  sha256 "c18722aba4bdd0a1e89c4a35834b5e40c0b2f83135789e443f9074d846561ef6"
 
   url "https://releases.rapidminer.com/archive/rapidminer-studio/#{version}/ai-studio-osx-#{version}.dmg"
   name "RapidMiner Studio"
