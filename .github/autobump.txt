@@ -1448,6 +1448,7 @@ snagit
 snapmaker-luban
 snowflake-snowsql
 softmaker-freeoffice
+sokim
 sol
 solar2d
 sonarr
