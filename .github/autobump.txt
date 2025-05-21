@@ -118,6 +118,7 @@ automattic-texts
 avast-secure-browser
 aws-vpn-client
 axure-rp
+ayugram
 azure-data-studio
 ba-connected
 babeledit
