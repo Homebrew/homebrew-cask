@@ -264,6 +264,7 @@ clipbook
 clock-signal
 clockify
 clop
+cloud-pbx
 cloudflare-warp
 cloudflare-warp@beta
 cloudmounter
