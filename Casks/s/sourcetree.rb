@@ -1,32 +1,26 @@
 cask "sourcetree" do
-  on_sierra :or_older do
-    version "2.7.6a"
-    sha256 "d60614e9ab603e0ed158b6473c36e7944b2908d9943e332c505eba03dc1d829e"
+  on_mojave :or_older do
+    on_sierra :or_older do
+      version "2.7.6a"
+      sha256 "d60614e9ab603e0ed158b6473c36e7944b2908d9943e332c505eba03dc1d829e"
 
-    url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip",
-        verified: "downloads.atlassian.com/software/sourcetree/"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip",
+          verified: "downloads.atlassian.com/software/sourcetree/"
     end
-  end
-  on_high_sierra do
-    version "3.2.1,225"
-    sha256 "4bd82affa3402814c3d07ff613fbc8f45da8b0cda294d498ffbb0667bf729c9f"
+    on_high_sierra do
+      version "3.2.1,225"
+      sha256 "4bd82affa3402814c3d07ff613fbc8f45da8b0cda294d498ffbb0667bf729c9f"
 
-    url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
-        verified: "product-downloads.atlassian.com/software/sourcetree/ga/"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
+          verified: "product-downloads.atlassian.com/software/sourcetree/ga/"
     end
-  end
-  on_mojave do
-    version "4.2.1,248"
-    sha256 "3dac6ab514c7debe960339e2aee99f018342a41baf743dbb59524728b373561f"
+    on_mojave do
+      version "4.2.1,248"
+      sha256 "3dac6ab514c7debe960339e2aee99f018342a41baf743dbb59524728b373561f"
 
-    url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
-        verified: "product-downloads.atlassian.com/software/sourcetree/ga/"
+      url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
+          verified: "product-downloads.atlassian.com/software/sourcetree/ga/"
+    end
 
     livecheck do
       skip "Legacy version"

@@ -1,29 +1,23 @@
 cask "evernote" do
-  on_el_capitan :or_older do
-    version "7.2.3_456885"
-    sha256 "eb9a92d57ceb54570c009e37fa7657a0fa3ab927a445eef382487a3fdde6bb97"
+  on_high_sierra :or_older do
+    on_el_capitan :or_older do
+      version "7.2.3_456885"
+      sha256 "eb9a92d57ceb54570c009e37fa7657a0fa3ab927a445eef382487a3fdde6bb97"
 
-    url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
     end
-  end
-  on_sierra do
-    version "7.14_458244"
-    sha256 "1049a40b8497c0e37d7fed8828552dba89fa52c826134e05b0d56e431e5033ad"
+    on_sierra do
+      version "7.14_458244"
+      sha256 "1049a40b8497c0e37d7fed8828552dba89fa52c826134e05b0d56e431e5033ad"
 
-    url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
     end
-  end
-  on_high_sierra do
-    version "7.14_458244"
-    sha256 "1049a40b8497c0e37d7fed8828552dba89fa52c826134e05b0d56e431e5033ad"
+    on_high_sierra do
+      version "7.14_458244"
+      sha256 "1049a40b8497c0e37d7fed8828552dba89fa52c826134e05b0d56e431e5033ad"
 
-    url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
+      url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
+    end
 
     livecheck do
       skip "Legacy version"

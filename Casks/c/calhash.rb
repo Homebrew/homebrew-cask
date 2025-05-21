@@ -1,46 +1,32 @@
 cask "calhash" do
   sha256 :no_check
 
-  on_catalina do
-    version "1.0.5"
+  on_sonoma :or_older do
+    on_catalina do
+      version "1.0.5"
 
-    url "https://www.titanium-software.fr/download/1015/CalHash.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1015/CalHash.dmg"
     end
-  end
-  on_big_sur do
-    version "1.1.1"
+    on_big_sur do
+      version "1.1.1"
 
-    url "https://www.titanium-software.fr/download/11/CalHash.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/11/CalHash.dmg"
     end
-  end
-  on_monterey do
-    version "1.1.9"
+    on_monterey do
+      version "1.1.9"
 
-    url "https://www.titanium-software.fr/download/12/CalHash.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/12/CalHash.dmg"
     end
-  end
-  on_ventura do
-    version "1.2.1"
+    on_ventura do
+      version "1.2.1"
 
-    url "https://www.titanium-software.fr/download/13/CalHash.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/13/CalHash.dmg"
     end
-  end
-  on_sonoma do
-    version "1.3.4"
+    on_sonoma do
+      version "1.3.4"
 
-    url "https://www.titanium-software.fr/download/14/CalHash.dmg"
+      url "https://www.titanium-software.fr/download/14/CalHash.dmg"
+    end
 
     livecheck do
       skip "Legacy version"

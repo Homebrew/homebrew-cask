@@ -3,82 +3,52 @@ cask "deeper" do
 
   # NOTE: We use separate `url` values in each of the macOS on_system blocks
   # so that the API data correctly includes URL variants for each.
-  on_el_capitan :or_older do
-    version "2.1.4"
+  on_sonoma :or_older do
+    on_el_capitan :or_older do
+      version "2.1.4"
 
-    url "https://www.titanium-software.fr/download/1011/Deeper.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1011/Deeper.dmg"
     end
-  end
-  on_sierra do
-    version "2.2.3"
+    on_sierra do
+      version "2.2.3"
 
-    url "https://www.titanium-software.fr/download/1012/Deeper.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1012/Deeper.dmg"
     end
-  end
-  on_high_sierra do
-    version "2.3.3"
+    on_high_sierra do
+      version "2.3.3"
 
-    url "https://www.titanium-software.fr/download/1013/Deeper.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1013/Deeper.dmg"
     end
-  end
-  on_mojave do
-    version "2.4.8"
+    on_mojave do
+      version "2.4.8"
 
-    url "https://www.titanium-software.fr/download/1014/Deeper.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1014/Deeper.dmg"
     end
-  end
-  on_catalina do
-    version "2.6.0"
+    on_catalina do
+      version "2.6.0"
 
-    url "https://www.titanium-software.fr/download/1015/Deeper.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/1015/Deeper.dmg"
     end
-  end
-  on_big_sur do
-    version "2.7.1"
+    on_big_sur do
+      version "2.7.1"
 
-    url "https://www.titanium-software.fr/download/11/Deeper.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/11/Deeper.dmg"
     end
-  end
-  on_monterey do
-    version "2.8.0"
+    on_monterey do
+      version "2.8.0"
 
-    url "https://www.titanium-software.fr/download/12/Deeper.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/12/Deeper.dmg"
     end
-  end
-  on_ventura do
-    version "2.9.2"
+    on_ventura do
+      version "2.9.2"
 
-    url "https://www.titanium-software.fr/download/13/Deeper.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.titanium-software.fr/download/13/Deeper.dmg"
     end
-  end
-  on_sonoma do
-    version "3.0.9"
+    on_sonoma do
+      version "3.0.9"
 
-    url "https://www.titanium-software.fr/download/14/Deeper.dmg"
+      url "https://www.titanium-software.fr/download/14/Deeper.dmg"
+    end
 
     livecheck do
       skip "Legacy version"

@@ -1,29 +1,23 @@
 cask "apparency" do
-  on_mojave do
-    version "1.3"
-    sha256 "31704bc2d9594bf185bd6dfa6541c986749d524ecdab11cff18c5a5c095e0157"
+  on_big_sur :or_older do
+    on_mojave do
+      version "1.3"
+      sha256 "31704bc2d9594bf185bd6dfa6541c986749d524ecdab11cff18c5a5c095e0157"
 
-    url "https://www.mothersruin.com/software/downloads/Apparency-#{version}.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.mothersruin.com/software/downloads/Apparency-#{version}.dmg"
     end
-  end
-  on_catalina do
-    version "1.4.1"
-    sha256 "850d19c6d6a86380211d9acdb3d8b0ee3b2a4c8af833126c28141f105823c59a"
+    on_catalina do
+      version "1.4.1"
+      sha256 "850d19c6d6a86380211d9acdb3d8b0ee3b2a4c8af833126c28141f105823c59a"
 
-    url "https://www.mothersruin.com/software/downloads/Apparency-#{version}.dmg"
-
-    livecheck do
-      skip "Legacy version"
+      url "https://www.mothersruin.com/software/downloads/Apparency-#{version}.dmg"
     end
-  end
-  on_big_sur do
-    version "1.6.1"
-    sha256 "cadd8894ec15b664fd60a141f82136cbe139af0b13000851497d880235abe8b2"
+    on_big_sur do
+      version "1.6.1"
+      sha256 "cadd8894ec15b664fd60a141f82136cbe139af0b13000851497d880235abe8b2"
 
-    url "https://www.mothersruin.com/software/downloads/Apparency-#{version}.dmg"
+      url "https://www.mothersruin.com/software/downloads/Apparency-#{version}.dmg"
+    end
 
     livecheck do
       skip "Legacy version"

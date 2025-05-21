@@ -1,23 +1,17 @@
 cask "qbittorrent" do
-  on_high_sierra :or_older do
-    version "4.3.2"
-    sha256 "dd38e80710978430694c430276a6b7749ef3533cbd0271075bc9eada484ea36b"
-
-    livecheck do
-      skip "Legacy version"
+  on_catalina :or_older do
+    on_high_sierra :or_older do
+      version "4.3.2"
+      sha256 "dd38e80710978430694c430276a6b7749ef3533cbd0271075bc9eada484ea36b"
     end
-  end
-  on_mojave do
-    version "4.3.9"
-    sha256 "c43323a625a937383da68e50a99d823d56e6843580dc8550dd4942683467c3ed"
-
-    livecheck do
-      skip "Legacy version"
+    on_mojave do
+      version "4.3.9"
+      sha256 "c43323a625a937383da68e50a99d823d56e6843580dc8550dd4942683467c3ed"
     end
-  end
-  on_catalina do
-    version "4.6.7"
-    sha256 "0b1051af73562fc3f7c0c71abd27c3433ad238fbca0c4612f554db35be3eba6e"
+    on_catalina do
+      version "4.6.7"
+      sha256 "0b1051af73562fc3f7c0c71abd27c3433ad238fbca0c4612f554db35be3eba6e"
+    end
 
     livecheck do
       skip "Legacy version"
