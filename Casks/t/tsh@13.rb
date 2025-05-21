@@ -12,6 +12,7 @@ cask "tsh@13" do
 
   conflicts_with cask:    [
                    "teleport",
+                   "teleport@16",
                    "tsh",
                  ],
                  formula: "teleport"
