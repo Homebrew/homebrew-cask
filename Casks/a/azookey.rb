@@ -9,10 +9,8 @@ cask "azookey" do
 
   livecheck do
     url :url
-    regex(/(\d+(?:\.\d+)+(?:[._-]alpha[._-]?\d+)?)/)
-    strategy :github_latest do |json, regex|
-      json["tag_name"]&.scan(regex)&.map { |match| match[0] }
-    end
+    regex(/^v?(\d+(?:\.\d+)+(?:[._-]alpha[._-]?\d+)?)$/i)
+    strategy :github_latest
   end
 
   depends_on macos: ">= :ventura"
