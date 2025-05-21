@@ -18,9 +18,9 @@ cask "textsniper" do
 
   app "TextSniper.app"
 
-  uninstall  launchctl: "com.valerijs.boguckis.gumroad.TextSniper-LaunchAtLoginHelper",
-             quit:      "com.valerijs.boguckis.gumroad.TextSniper",
-             delete:    "/Applications/TextSniper.app"
+  uninstall launchctl: "com.valerijs.boguckis.gumroad.TextSniper-LaunchAtLoginHelper",
+            quit:      "com.valerijs.boguckis.gumroad.TextSniper",
+            delete:    "/Applications/TextSniper.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.valerijs.boguckis.gumroad.TextSniper-LaunchAtLoginHelper",

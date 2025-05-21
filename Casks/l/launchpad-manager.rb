@@ -15,8 +15,6 @@ cask "launchpad-manager" do
       url "https://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg"
       strategy :extract_plist
     end
-
-    depends_on macos: ">= :big_sur"
   end
 
   url "https://launchpadmanager.com/appyos/#{version}/LaunchpadManager.dmg"

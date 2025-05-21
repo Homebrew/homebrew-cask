@@ -7,10 +7,6 @@ cask "birdfont" do
       url "https://birdfont.org/purchase.php"
       regex(%r{Mac\s*OS\s*10\.12.*?/birdfont[._-]v?(\d+(?:\.\d+)+)[._-]free\.dmg}i)
     end
-
-    caveats do
-      requires_rosetta
-    end
   end
   on_catalina :or_newer do
     on_ventura :or_older do

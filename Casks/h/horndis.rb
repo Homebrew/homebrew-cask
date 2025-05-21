@@ -20,8 +20,4 @@ cask "horndis" do
 
   uninstall kext:    "com.joshuawise.kexts.HoRNDIS",
             pkgutil: "com.joshuawise.*"
-
-  caveats do
-    requires_rosetta
-  end
 end

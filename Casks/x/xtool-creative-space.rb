@@ -3,7 +3,7 @@ cask "xtool-creative-space" do
 
   on_arm do
     version "2.6.38,28,48e5cd2f-2ea0-4982-a16e-640e07bebacc,2025-04-21-18-35-07"
-    sha256  "709637ed2a9ed363192381061e29edbd0bb3c007a3245dc125ee69e4673009bf"
+    sha256 "709637ed2a9ed363192381061e29edbd0bb3c007a3245dc125ee69e4673009bf"
   end
   on_intel do
     version "2.6.38,16,6f11195b-cb92-488a-ab3e-635aa873ff1a,2025-04-21-18-37-40"
