@@ -15,8 +15,5 @@ cask "haveno" do
   postflight do
     system_command "/usr/bin/xattr", args: ["-d", "-r", "com.apple.quarantine", "#{appdir}/Haveno.app"]
   end
-
-  zap trash: [
-    "~/.haveno",
-  ]
+  
 end
