@@ -1238,6 +1238,7 @@ progressive-downloader
 pronotes
 propresenter
 propresenter@beta
+protokol
 proton-drive
 proton-mail
 proton-mail-bridge
