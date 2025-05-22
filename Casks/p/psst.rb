@@ -1,5 +1,5 @@
 cask "psst" do
-  version "0.1.0,20250506.120019"
+  version "0.1.0,20250519.152837"
   sha256 :no_check
 
   url "https://nightly.link/jpochyla/psst/workflows/build/main/Psst.dmg.zip",
