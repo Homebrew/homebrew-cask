@@ -1,9 +1,9 @@
 cask "signal@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.56.0-beta.1"
-  sha256 arm:   "daf491795129cbde13a2773d6cb7eda71450873999f487825f50caf15a221c74",
-         intel: "97e0d36f072b380e65c2d0d5404df28888cc79277705f346952a914e57396d12"
+  version "7.56.0-beta.2"
+  sha256 arm:   "c8260dac209fe56194c589a6c6349c99bcb2083f8a144e018834f0bd8c67e9cd",
+         intel: "b410e30523bb9c54218a141978cc2a3e54aecedf643978b0507fc3bfead76377"
 
   url "https://updates.signal.org/desktop/signal-desktop-beta-mac-#{arch}-#{version}.zip"
   name "Signal Beta"
