@@ -197,6 +197,7 @@ browserstacklocal
 bruno
 buckets@beta
 burp-suite
+burp-suite@early-adopter
 burp-suite-professional
 busycal
 buttercup
