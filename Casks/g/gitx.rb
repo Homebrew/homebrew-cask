@@ -11,10 +11,11 @@ cask "gitx" do
   homepage "https://github.com/gitx/gitx"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://gitx.github.io/gitx/appcast.xml"
+    strategy :sparkle
   end
 
+  auto_updates true
   conflicts_with cask: "rowanj-gitx"
 
   app "GitX.app"
