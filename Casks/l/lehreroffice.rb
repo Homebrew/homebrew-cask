@@ -1,5 +1,5 @@
 cask "lehreroffice" do
-  version "2025.1"
+  version "2025.2"
   sha256 :no_check
 
   url "https://www.cmi-bildung.ch/lo/dateien/easy/lo_desktop_macos.dmg"
