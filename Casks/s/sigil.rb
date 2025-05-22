@@ -11,6 +11,14 @@ cask "sigil" do
   desc "EPUB ebook editor"
   homepage "https://sigil-ebook.com/"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/Sigil-Ebook/Sigil/master/version.xml"
+    strategy :xml do |xml|
+      xml.elements["//current-version"]&.text&.strip
+    end
+  end
+
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Sigil.app"
