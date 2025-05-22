@@ -58,6 +58,7 @@ aliworkbench
 almighty
 alt-tab
 altair-graphql-client
+altserver
 amadine
 amazon-chime
 amazon-q
