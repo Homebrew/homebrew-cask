@@ -199,6 +199,7 @@ bruno
 buckets@beta
 burp-suite
 burp-suite-professional
+burp-suite-professional@early-adopter
 busycal
 buttercup
 c0re100-qbittorrent
