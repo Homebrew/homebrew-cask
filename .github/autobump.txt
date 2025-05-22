@@ -114,6 +114,7 @@ atomic-wallet
 audacity
 audio-hijack
 audius
+autogram
 automattic-texts
 avast-secure-browser
 aws-vpn-client
