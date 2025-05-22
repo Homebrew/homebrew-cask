@@ -12,8 +12,6 @@ cask "airfoil" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1431&bundleid=com.rogueamoeba.airfoil&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "5.12.4"
@@ -25,8 +23,6 @@ cask "airfoil" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :sonoma"
-
     # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=Airfoil+for+Mac
     caveats "Airfoil #{version} requires macOS 14.4 or higher."
   end
@@ -36,6 +32,7 @@ cask "airfoil" do
   homepage "https://rogueamoeba.com/airfoil/mac/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Airfoil/Airfoil Satellite.app"
   app "Airfoil/Airfoil.app"
