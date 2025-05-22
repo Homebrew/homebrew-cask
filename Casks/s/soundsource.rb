@@ -12,8 +12,6 @@ cask "soundsource" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1441&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "5.8.2"
@@ -25,8 +23,6 @@ cask "soundsource" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :sonoma"
-
     # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=SoundSource
     caveats "SoundSource #{version} requires macOS 14.5 or higher."
   end
@@ -37,6 +33,7 @@ cask "soundsource" do
 
   auto_updates true
   conflicts_with cask: "soundsource@test"
+  depends_on macos: ">= :big_sur"
 
   app "SoundSource.app"
 
