@@ -1,11 +1,11 @@
 cask "tablecruncher" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.7.0"
-  sha256 arm:   "11dfed89498a9f30ce323ce16159aa9a24b4665634f4bea293682f40eb07cdab",
-         intel: "316ae70fd1b34f9ab59c1bfcde7b0ae3c1a6000c3b0a433ca3b7963d28b1a080"
+  version "1.8"
+  sha256 arm:   "9980f46fea21e30491a6aa74bfa8d2787b3377eefe61a546ed92cd26c22fe619",
+         intel: "2d304a086cb2d5eb746fabff846e34ef07d2d3d5ff45e829809cda97770436bc"
 
-  url "https://tablecruncher.com/download/Tablecruncher-#{version}-#{arch}.zip"
+  url "https://tablecruncher.com/download/v#{version.major_minor}/Tablecruncher-#{version}-#{arch}.zip"
   name "Tablecruncher"
   desc "Lightweight CSV editor"
   homepage "https://tablecruncher.com/"
