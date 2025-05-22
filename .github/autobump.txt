@@ -911,6 +911,7 @@ marsedit
 marvin
 mathpix-snipping-tool
 mattermost
+maxon
 mcbopomofo
 mcreator
 mdrp
