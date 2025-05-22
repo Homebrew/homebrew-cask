@@ -1382,6 +1382,7 @@ screenmemory
 screens-assist
 screens-connect
 scrivener
+scroll
 scrolla
 sdm
 seadrive
