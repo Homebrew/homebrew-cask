@@ -1680,6 +1680,7 @@ utm@beta
 utools
 uu-booster
 uvtools
+vagrant
 valentina-studio
 vallum
 vamiga
