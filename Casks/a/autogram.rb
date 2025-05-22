@@ -1,6 +1,6 @@
 cask "autogram" do
-  version "2.3.1"
-  sha256 "c2e444180ef3e38bfab79e97c3f578c867d09189de0ef867a42b0e9d25ade3c0"
+  version "2.3.4"
+  sha256 "dc35e8fa78df6a2768e3406c8d6f75e1076def6f0f0e2e85408ddc04ee3f7afe"
 
   url "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/Autogram-#{version}-MacOs.pkg",
       verified: "github.com/slovensko-digital/autogram/"
