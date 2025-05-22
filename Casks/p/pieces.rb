@@ -2,7 +2,7 @@ cask "pieces" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "_arm64"
 
-  version "4.1.2"
+  version "4.1.3"
   sha256 :no_check
 
   url "https://builds.pieces.app/stages/production/pieces_for_x/macos#{arch}/download"
