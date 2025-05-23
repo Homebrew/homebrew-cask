@@ -2,22 +2,23 @@ cask "sunloginclient" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_id = on_arch_conditional arm: "187", intel: "89"
 
-  version "15.6.2.13600"
-  sha256 arm:   "484f998abe98b704508e16a664118271432246e2983194b61b10604511016302",
-         intel: "e8414b31c0e16026bdf6ea36175f1dd2dd883d3cdcde0c793a17dd1306a76380"
+  version "16.0.0.21158"
+  sha256 arm:   "1f3a065a9c42602fcd9f9f063fc37e58788ea1857101be894ede69b35135fd1b",
+         intel: "add0498df28f284e0803f819969ae6d610700da0ccb272c52312074b39e7e8d9"
 
-  url "https://down.oray.com/sunlogin/mac/SunloginClient_#{version}_#{arch}.dmg"
+  url "https://dl.oray.com/sunlogin/mac/SunloginClient_#{arch}_#{version}.dmg"
   name "Sunlogin Client"
-  name "向日葵个人版"
+  name "贝锐向日葵个人版"
   desc "Remote desktop control and monitoring tool"
   homepage "https://sunlogin.oray.com/"
 
   livecheck do
-    url "https://sunlogin.oray.com/zh_CN/download/download?id=#{livecheck_id}"
-    regex(/SunloginClient[._-]?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+    url "https://client-api.oray.com/softwares/#{livecheck_id}/download"
+    regex(/SunloginClient[._-]#{arch}[._-]?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :header_match
   end
 
+  depends_on macos: ">= :mojave"
   pkg "SunloginClient.pkg"
 
   postflight do
@@ -43,9 +44,11 @@ cask "sunloginclient" do
   zap delete: "/private/var/log/sunlogin/",
       trash:  [
         "~/Library/Caches/com.oray.sunlogin.macclient",
-        "~/Library/Preferences/com.oray.sunlogin.macclient.plist",
         "~/Library/Saved Application State/com.oray.sunlogin.macclient.savedState",
         "~/Library/WebKit/com.oray.sunlogin.macclient",
+        "/private/var/db/receipts/com.oray.sunlogin.macclient.plist",
+        "/private/var/db/receipts/com.oray.sunlogin.macclient.bom",
         "~/Sunlogin Files",
+        "~/protocol_config.conf",
       ]
 end
