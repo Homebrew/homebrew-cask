@@ -1426,6 +1426,7 @@ shift
 shortwave
 shutter-encoder
 sidenotes
+sigil
 sigmaos
 signal
 signal@beta
