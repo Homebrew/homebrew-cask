@@ -23,8 +23,8 @@ cask "tencent-ima" do
 
   zap trash: [
     "~/Library/Application Scripts/com.tencent.ima.copilot",
-    "~/Library/Application Support/Tencent/ima.copilot",
     "~/Library/Application Support/ima.copilot",
+    "~/Library/Application Support/Tencent/ima.copilot",
     "~/Library/Caches/com.tencent.ima.copilot",
     "~/Library/Caches/ima.copilot",
     "~/Library/Containers/com.tencent.ima.copilot",
