@@ -18,6 +18,9 @@ cask "pieces-cli" do
     end
   end
 
+  # Warning: pieces-cli has been deprecated because it is now maintained as a formula
+  deprecate! date: "2025-05-22", because: :discontinued, replacement_formula: "pieces-cli"
+
   binary "pieces"
 
   zap trash: "~/Library/Application Support/cli-agent"
