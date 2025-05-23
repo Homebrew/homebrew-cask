@@ -1368,6 +1368,7 @@ royal-tsx@beta
 rstudio
 rstudio@daily
 rubymine
+runelite
 runjs
 rustdesk
 rustrover
