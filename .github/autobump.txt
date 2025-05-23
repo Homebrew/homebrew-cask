@@ -200,9 +200,9 @@ browserstacklocal
 bruno
 buckets@beta
 burp-suite
-burp-suite@early-adopter
 burp-suite-professional
 burp-suite-professional@early-adopter
+burp-suite@early-adopter
 busycal
 buttercup
 c0re100-qbittorrent
@@ -1184,7 +1184,6 @@ phoenix-slides
 phpstorm
 piclist
 pieces
-pieces-cli
 pieces-os
 pika
 pile
