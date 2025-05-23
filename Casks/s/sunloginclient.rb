@@ -2,21 +2,22 @@ cask "sunloginclient" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_id = on_arch_conditional arm: "187", intel: "89"
 
-  version "15.6.2.13600"
-  sha256 arm:   "484f998abe98b704508e16a664118271432246e2983194b61b10604511016302",
-         intel: "e8414b31c0e16026bdf6ea36175f1dd2dd883d3cdcde0c793a17dd1306a76380"
+  version "16.0.0.21158"
+  sha256 arm:   "1f3a065a9c42602fcd9f9f063fc37e58788ea1857101be894ede69b35135fd1b",
+         intel: "add0498df28f284e0803f819969ae6d610700da0ccb272c52312074b39e7e8d9"
 
-  url "https://down.oray.com/sunlogin/mac/SunloginClient_#{version}_#{arch}.dmg"
+  url "https://dl.oray.com/sunlogin/mac/SunloginClient_#{arch}_#{version}.dmg"
   name "Sunlogin Client"
   name "向日葵个人版"
   desc "Remote desktop control and monitoring tool"
   homepage "https://sunlogin.oray.com/"
 
   livecheck do
-    url "https://sunlogin.oray.com/zh_CN/download/download?id=#{livecheck_id}"
-    regex(/SunloginClient[._-]?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+    url "https://client-api.oray.com/softwares/#{livecheck_id}/download"
     strategy :header_match
   end
+
+  depends_on macos: ">= :mojave"
 
   pkg "SunloginClient.pkg"
 
@@ -38,7 +39,11 @@ cask "sunloginclient" do
               "com.oray.sunlogin.startup",
             ],
             quit:      "com.oray.sunlogin.macclient",
-            pkgutil:   "com.oray.sunlogin.macclient"
+            pkgutil:   [
+              "com.oray.sunlogin.macclient",
+              "com.oray.sunlogin.MacVirtualAudioDevice",
+            ],
+            delete:    "/Applications/SunloginClient.app"
 
   zap delete: "/private/var/log/sunlogin/",
       trash:  [
@@ -46,6 +51,7 @@ cask "sunloginclient" do
         "~/Library/Preferences/com.oray.sunlogin.macclient.plist",
         "~/Library/Saved Application State/com.oray.sunlogin.macclient.savedState",
         "~/Library/WebKit/com.oray.sunlogin.macclient",
+        "~/protocol_config.conf",
         "~/Sunlogin Files",
       ]
 end
