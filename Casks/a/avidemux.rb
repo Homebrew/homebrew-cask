@@ -7,7 +7,7 @@ cask "avidemux" do
         verified: "sourceforge.net/avidemux/"
 
     livecheck do
-      skip "Legacy version for Big Sur and earlier"
+      skip "Legacy version"
     end
   end
   on_monterey :or_newer do
