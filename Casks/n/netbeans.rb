@@ -10,8 +10,8 @@ cask "netbeans" do
   # Major releases sometimes only use the major version (13) instead of
   # major/minor (13.0).
   livecheck do
-    url "https://netbeans.apache.org/front/main/download/"
-    regex(/>\s*Apache\s*NetBeans\s*v?(\d+(?:\.\d+)*)\s*</im)
+    url "https://dlcdn.apache.org/netbeans/netbeans-installers/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)*)/?["' >]}i)
   end
 
   depends_on macos: ">= :big_sur"
