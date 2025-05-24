@@ -1,9 +1,9 @@
 cask "sigil" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.4.2"
-  sha256 arm:   "5e03c9ad00b40cca2aadac88adb957a24a57be4c0ef088fea50c097e00f88d42",
-         intel: "f1dc45ae6de8788d9fc9e9172020a3851d3185179588daf9b05322b8ab89ecb2"
+  version "2.5.0"
+  sha256 arm:   "92a65ba45a76dd0f468609b57d4f8983dcb169951bb97f0e9d0278d33e82b9f6",
+         intel: "ea1011a4c2a3b1df7a8a208906530f482d09cf0bcba120e580531eeacaac53b6"
 
   url "https://github.com/Sigil-Ebook/Sigil/releases/download/#{version}/Sigil.app-#{version}-Mac-#{arch}.txz",
       verified: "github.com/Sigil-Ebook/Sigil/"
