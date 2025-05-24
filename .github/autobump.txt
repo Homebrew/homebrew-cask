@@ -157,6 +157,7 @@ biglybt
 bike
 bilibili
 binance
+binary-ninja-free
 bing-wallpaper
 bisq
 bit-slicer
