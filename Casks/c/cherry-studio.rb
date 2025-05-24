@@ -3,7 +3,7 @@ cask "cherry-studio" do
 
   version "1.3.11"
   sha256 arm:   "dd33f119d9401ae19456b279affb6b30fd42e830f2e0a95bcb37c0fa8d38935a",
-         intel: "65423e37c814485fc4f212f190f3b9e9f2e31a7febc35bef6995ec4d8f3a30d4"
+         intel: "850e647302ac122818bf6429fccac939a1b1b912527ab7a66d9470763366d7ab"
 
   url "https://github.com/CherryHQ/cherry-studio/releases/download/v#{version}/Cherry-Studio-#{version}-#{arch}.zip",
       verified: "github.com/CherryHQ/cherry-studio/"
