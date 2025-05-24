@@ -2,12 +2,12 @@ cask "yealink-meeting" do
   arch arm: "arm", intel: "X86"
 
   on_arm do
-    version "4.7.18,f6b034fd6912a167c1a8bc8c0c593a73"
-    sha256 "10ffd60bad6e46c6f1a90c99f171ea383ffa8ed3f169db04a1ab8f58a5dbbd8a"
+    version "4.7.28,7a3208b1c44ff3d8ea7cf1264f1a655c"
+    sha256 "0e501c1995fa5e6160f957322a19aad6b31bcc53108ba3121963854acbccf844"
   end
   on_intel do
-    version "4.7.19,642938644c5acf392ba1606e9f85fa10"
-    sha256 "af2e62d486558c1f1ba9631e70e3dfcdfd04abf593d27c152a7f2e4414a3c967"
+    version "4.7.27,820c32760cc80d14d9e5fcc4526a622a"
+    sha256 "68f7d612209b4738680bd5469003328663044462ce491d4627fd8b628b3102cd"
   end
 
   url "https://download.ylyun.com/yealink-meeting/mac-#{arch}/latest/Yealink-Meeting-#{arch}.dmg?v=#{version.csv.second}"
