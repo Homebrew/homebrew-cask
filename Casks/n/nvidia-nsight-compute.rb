@@ -31,5 +31,8 @@ cask "nvidia-nsight-compute" do
 
   app "NVIDIA Nsight Compute.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/NVIDIA Corporation/NVIDIA Nsight Compute",
+    "~/Library/Preferences/com.nvidia.devtools.Rebel.plist",
+  ]
 end
