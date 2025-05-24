@@ -34,6 +34,8 @@ cask "stolendata-mpv" do
       end
     end
 
+    depends_on macos: ">= :mojave"
+
     app "mpv.app"
     manpage "documentation/man/mpv.1"
   end
