@@ -1,6 +1,6 @@
 cask "recents" do
-  version "2.3.2"
-  sha256 "eb27a28081d6a5d66c839480f59556aecf69fda280cbeba6c03238b9586e91c2"
+  version "2.4.2"
+  sha256 "d8ff2d951d3ed003be07b95b018af3ec51c608edd3b8cc0691579f1b5d93441f"
 
   url "https://recentsapp.com/releases/Recents_#{version}.dmg"
   name "Recents"
@@ -8,11 +8,11 @@ cask "recents" do
   homepage "https://recentsapp.com/"
 
   livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/74f5ee9e-bf2d-4be3-b92a-3e8766433b8b"
+    url "https://recentsapp.com/releases/recents-appcast.xml"
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Recents.app"
 
