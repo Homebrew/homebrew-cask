@@ -2,14 +2,14 @@ cask "ua-midi-control" do
   version "5.11.2"
   sha256 "49aeaec28a54d363e0d6193c71748daa4ad3edfc0788fc1a5e29e31e80db504c"
 
-  url "https://objects-us-east-1.dream.io/ua-midi-control/builds/UA%20Midi%20Control%20#{version}.zip",
+  url "https://s3.us-east-005.dream.io/ua-midi-control/builds/UA%20Midi%20Control%20#{version}.zip",
       verified: "dream.io/ua-midi-control/"
   name "UA Midi Control"
   desc "Control-mapping tool for Universal Audio's UAD Console"
   homepage "https://fonoflow.com/products/ua-midi-control"
 
   livecheck do
-    url "https://objects-us-east-1.dream.io/ua-midi-control/appcast.xml"
+    url "https://s3.us-east-005.dream.io/ua-midi-control/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
