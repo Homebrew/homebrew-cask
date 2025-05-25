@@ -1,6 +1,6 @@
 cask "keymanager" do
-  version "4.4.19"
-  sha256 "fd41152f8897bfce5e6e95fc74c7aa3044a60266726d7b2dee0896901b02359b"
+  version "4.5.5"
+  sha256 "873dac496d9dfdc07ed1bd3ef12bb87d15f7cbf6c5996f9c53f096c660cb920c"
 
   url "https://keymanager.trustasia.com/release/KeyManager-#{version}.dmg",
       verified: "keymanager.trustasia.com/"
