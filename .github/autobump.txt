@@ -407,6 +407,7 @@ douyin
 douyin-chat
 downie
 doxie
+doxygen
 drata-agent
 draw-things
 drawio
