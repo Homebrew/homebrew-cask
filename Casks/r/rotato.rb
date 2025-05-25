@@ -1,6 +1,6 @@
 cask "rotato" do
-  version "147"
-  sha256 "df06ea5961c8f764133286abf0d4133b619c9918fa794663879e54c5a314eb5c"
+  version "151"
+  sha256 "e6e15031ff155dd72005861e36267256cad77797dd78e3164e4f7f41add3501a"
 
   url "https://download.rota.to/Rotato-#{version}.dmg",
       verified: "download.rota.to/"
@@ -9,7 +9,7 @@ cask "rotato" do
   homepage "https://rotato.app/"
 
   livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/a62ce1b5-fb95-4615-a1b0-fd246b7ce1ed"
+    url "https://download.rota.to/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
