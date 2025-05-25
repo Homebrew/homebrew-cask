@@ -7,6 +7,8 @@ cask "sekey" do
   desc "Use Touch ID or Secure Enclave for SSH authentication"
   homepage "https://github.com/sekey/sekey/"
 
+  deprecate! date: "2025-05-25", because: :unmaintained
+
   pkg "SeKey-#{version}.pkg"
   binary "/Applications/SeKey.app/Contents/MacOS/sekey"
 
