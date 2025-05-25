@@ -6,8 +6,8 @@ cask "keybase" do
     sha256 "085fa763b6b6648218274c7a0080b0a810ec750578d0c432f0b682ad5cd0c370"
   end
   on_intel do
-    version "6.5.1,20250422135509,19f9cfeddb"
-    sha256 "49125bca184069a5c7ffe096d69fd946256de1a21590a46a269b2e75bb132f81"
+    version "6.5.2,20250428134940,6652519c3d"
+    sha256 "e790bbebc4c83ccd26c84e58e9a2f8faca0518c9a81846a3149f08b3ae9ffa09"
   end
 
   url "https://prerelease.keybase.io/darwin-#{arch}updates/Keybase-#{version.csv.first}-#{version.csv.second}%2B#{version.csv.third}.zip"
