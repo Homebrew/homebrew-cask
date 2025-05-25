@@ -11,9 +11,23 @@ cask "october" do
   desc "GUI for retrieving Kobo highlights and syncing them with Readwise"
   homepage "https://october.utf9k.net/"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^october[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]#{arch}\.zip$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   depends_on macos: ">= :high_sierra"
