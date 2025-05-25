@@ -1,7 +1,7 @@
 cask "choice-financial-terminal" do
   arch arm: "arm", intel: "x86"
 
-  version "8.8.0.2"
+  version "8.9.0.0"
   sha256 :no_check
 
   url "https://choice-app.eastmoney.com/choice/OfflinePackage/ChoiceSetup_mac_#{arch}.dmg"
