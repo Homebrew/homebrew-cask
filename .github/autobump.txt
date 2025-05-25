@@ -869,6 +869,7 @@ loom
 losslesscut
 loupedeck
 low-profile
+luanti
 lulu
 lunacy
 lunar
