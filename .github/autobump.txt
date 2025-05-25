@@ -1826,6 +1826,7 @@ zappy
 zed
 zed@preview
 zen
+zen-privacy
 zen@twilight
 zeplin
 zettlr
