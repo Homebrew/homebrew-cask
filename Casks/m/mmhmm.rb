@@ -7,10 +7,7 @@ cask "mmhmm" do
   desc "Virtual video presentation software"
   homepage "https://www.mmhmm.app/product"
 
-  livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/265ddc8d-5266-478a-af9f-3798b1aab2ac"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2025-05-25", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :ventura"
