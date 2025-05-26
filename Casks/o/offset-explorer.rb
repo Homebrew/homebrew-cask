@@ -1,5 +1,5 @@
 cask "offset-explorer" do
-  version "3.0.2"
+  version "3.0.3"
   sha256 :no_check
 
   url "https://www.kafkatool.com/download#{version.major}/offsetexplorer.dmg"
