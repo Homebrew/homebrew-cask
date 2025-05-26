@@ -9,11 +9,8 @@ cask "sound-control" do
   homepage "https://staticz.com/soundcontrol/"
 
   livecheck do
-    url :homepage
-    regex(/Sound\s+Control\s+v?(\d+(?:\.\d+)+)\s+Release\s+Notes/im)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0] }
-    end
+    url "http://staticz.net/updates/soundcontrol#{version.major}.rss"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
