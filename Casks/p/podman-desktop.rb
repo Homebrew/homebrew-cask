@@ -1,9 +1,9 @@
 cask "podman-desktop" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.18.1"
-  sha256 arm:   "2dd88c6aa47e00b35421404d1e7c0ea2ae8e74579f47bd1a0792e52e3c0b6e19",
-         intel: "b7a1d3aa2c780ffae833fcecc94ad6bf026f6413ff567c9ef1f8456853dadbb1"
+  version "1.19.1"
+  sha256 arm:   "6e749797141dceb22c86a3c5786aaa062ec4dc4bf7076fdeaf9d32047687a645",
+         intel: "8d0dddd2273dda71a4f0e33e4ccf576e26c86cd024fe483a3f08058513bdb03e"
 
   url "https://github.com/containers/podman-desktop/releases/download/v#{version}/podman-desktop-#{version}-#{arch}.dmg",
       verified: "github.com/containers/podman-desktop/"
