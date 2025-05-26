@@ -4,8 +4,8 @@ cask "eufymake-studio" do
 
   url "https://github.com/eufymake/eufyMake-PrusaSlicer-Release/releases/download/v#{version.csv.first.major_minor_patch}/eufyMake_Studio_V#{version.csv.first}_E#{version.csv.second}.dmg",
       verified: "github.com/eufymake/eufyMake-PrusaSlicer-Release/"
-  name "EufyMake Studio"
-  desc "Slicer for EufyMake 3D printers"
+  name "eufyMake Studio"
+  desc "Slicer for eufyMake 3D printers"
   homepage "https://www.eufymake.com/eufymake-studio"
 
   livecheck do
