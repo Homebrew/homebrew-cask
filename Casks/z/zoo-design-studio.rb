@@ -10,14 +10,13 @@ cask "zoo-design-studio" do
   desc "Professional CAD platform enhanced with ML through Text-to-CAD"
   homepage "https://zoo.dev/design-studio"
 
-  depends_on macos: ">= :big_sur"
-
   livecheck do
     url "https://dl.zoo.dev/releases/modeling-app/latest-mac.yml"
     strategy :electron_builder
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Zoo Design Studio.app"
 
