@@ -1,25 +1,21 @@
 cask "foxitreader" do
-  version "2025.1"
+  version "2025.1.0.66692"
   sha256 "88fe620d85c044b9e0d556588e72beee563ce8b43a884aac58573ccb5f2b9a34"
 
-  url "https://cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/#{version.major}.x/#{version}/FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg",
+  url "https://cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/#{version.major}.x/#{version.major_minor}/FoxitPDFReader#{version.major_minor.no_dots}.L10N.Setup.pkg",
       verified: "cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/"
   name "Foxit Reader"
   desc "PDF reader"
   homepage "https://www.foxit.com/pdf-reader/"
 
   livecheck do
-    url "https://www.foxit.com/downloads/latest.html?product=Foxit-Reader&platform=Mac-OS-X&language=English"
-    regex(%r{/(\d+\.\d)/FoxitPDFReader(\d+)\.L10N\.Setup\.pkg}i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next if match.blank?
-
-      match[1]
+    url "https://www.foxit.com/portal/download/getdownloadform.html?formId=download-reader&retJson=1&platform=Mac-OS-X"
+    strategy :json do |json|
+      json.dig("package_info", "version")
     end
   end
 
-  pkg "FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg"
+  pkg "FoxitPDFReader#{version.major_minor.no_dots}.L10N.Setup.pkg"
 
   uninstall launchctl: "com.foxit.PDFReaderUpdateService",
             pkgutil:   "com.foxit.pkg.pdfreader",
