@@ -2,9 +2,9 @@ cask "font-bukyvede-italic" do
   version :latest
   sha256 :no_check
 
-  url "https://kodeks.uni-bamberg.de/aksl/media/BukyVede-Italic.ttf"
+  url "https://kodeks.de/AKSL/media/BukyVede-Italic.ttf"
   name "BukyVede Italic"
-  homepage "https://kodeks.uni-bamberg.de/aksl/Schrift/BukyVede.htm"
+  homepage "https://kodeks.de/AKSL/Schrift/BukyVede.htm"
 
   font "BukyVede-Italic.ttf"
 
