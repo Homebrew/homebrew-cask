@@ -17,6 +17,8 @@ cask "vagrant" do
   end
 
   pkg "vagrant.pkg"
+  bash_completion "/opt/vagrant/embedded/gems/gems/vagrant-#{version}/contrib/bash/completion.sh", target: "vagrant"
+  zsh_completion "/opt/vagrant/embedded/gems/gems/vagrant-#{version}/contrib/zsh/_vagrant"
 
   uninstall script:  {
               executable: "uninstall.tool",
