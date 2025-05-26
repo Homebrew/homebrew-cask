@@ -9,6 +9,7 @@ cask "wezterm@nightly" do
   homepage "https://wezterm.org/"
 
   conflicts_with cask: "wezterm"
+  depends_on macos: ">= :sierra"
 
   app "WezTerm.app"
   %w[
@@ -20,12 +21,9 @@ cask "wezterm@nightly" do
     binary "#{appdir}/WezTerm.app/Contents/MacOS/#{tool}"
   end
 
-  binary "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/zsh",
-         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_wezterm"
-  binary "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/bash",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/wezterm"
-  binary "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/fish",
-         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/wezterm.fish"
+  bash_completion "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/bash", target: "wezterm"
+  fish_completion "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/fish", target: "wezterm.fish"
+  zsh_completion "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/zsh", target: "_wezterm"
 
   preflight do
     # Move "WezTerm-macos-#{version}/WezTerm.app" out of the subfolder

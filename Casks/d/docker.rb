@@ -6,7 +6,7 @@ cask "docker" do
          intel: "7d6077cd24aa11127b5d01a857f08f0af4378d9983212b73d8c6f29cd04cfb66"
 
   on_intel do
-    binary "Docker.app/Contents/Resources/bin/com.docker.hyperkit",
+    binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.hyperkit",
            target: "/usr/local/bin/hyperkit"
   end
 
@@ -33,12 +33,6 @@ cask "docker" do
   depends_on macos: ">= :ventura"
 
   app "Docker.app"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
-         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker-compose"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
-         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/compose-bridge",
          target: "/usr/local/bin/compose-bridge"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",
@@ -55,12 +49,12 @@ cask "docker" do
          target: "/usr/local/bin/kubectl.docker"
   binary "#{appdir}/Docker.app/Contents/Resources/cli-plugins/docker-compose",
          target: "/usr/local/cli-plugins/docker-compose"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.zsh-completion",
-         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion",
-         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish"
+  bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion"
+  bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion"
+  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion"
+  fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion"
+  zsh_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion"
+  zsh_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.zsh-completion"
 
   postflight do
     kubectl_target = Pathname("/usr/local/bin/kubectl")

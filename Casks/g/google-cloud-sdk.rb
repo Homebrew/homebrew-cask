@@ -36,10 +36,8 @@ cask "google-cloud-sdk" do
   binary "google-cloud-sdk/bin/gcloud"
   binary "google-cloud-sdk/bin/git-credential-gcloud.sh", target: "git-credential-gcloud"
   binary "google-cloud-sdk/bin/gsutil"
-  binary "google-cloud-sdk/completion.bash.inc",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/google-cloud-sdk"
-  binary "google-cloud-sdk/completion.zsh.inc",
-         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_google_cloud_sdk"
+  bash_completion "google-cloud-sdk/completion.bash.inc", target: "google-cloud-sdk"
+  zsh_completion "google-cloud-sdk/completion.zsh.inc", target: "_google_cloud_sdk"
 
   preflight do
     FileUtils.cp_r staged_path/"google-cloud-sdk/.", google_cloud_sdk_root, remove_destination: true
