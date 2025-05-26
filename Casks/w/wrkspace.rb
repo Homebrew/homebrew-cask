@@ -1,7 +1,7 @@
 cask "wrkspace" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.10"
+  version "2.0.11"
   sha256 :no_check
 
   url "https://updater.wrkspace.co/download/darwin-#{arch}"
