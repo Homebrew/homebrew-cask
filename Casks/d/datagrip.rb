@@ -27,7 +27,16 @@ cask "datagrip" do
   depends_on macos: ">= :high_sierra"
 
   app "DataGrip.app"
-  binary "#{appdir}/DataGrip.app/Contents/MacOS/datagrip"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/datagrip.wrapper.sh"
+  binary shimscript, target: "datagrip"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/DataGrip.app/Contents/MacOS/datagrip' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/DataGrip*",
