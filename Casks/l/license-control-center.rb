@@ -13,6 +13,8 @@ cask "license-control-center" do
     strategy :header_match
   end
 
+  deprecate! date: "2025-05-27", because: :discontinued
+
   installer manual: "eLicenserControlSetup.app"
 
   uninstall delete: [
