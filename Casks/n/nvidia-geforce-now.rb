@@ -20,6 +20,9 @@ cask "nvidia-geforce-now" do
 
   zap trash: [
     "~/Library/Application Support/NVIDIA/GeForceNOW",
+    "~/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf",
+    "~/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall",
+    "~/Library/Caches/NVIDIA/GeForceNOW",
     "~/Library/HTTPStorages/com.nvidia.gfnpc.mall",
     "~/Library/Preferences/com.nvidia.gfnpc.mall.helper.plist",
     "~/Library/Preferences/com.nvidia.gfnpc.mall.helper.renderer.plist",
