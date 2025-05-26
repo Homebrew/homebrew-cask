@@ -1,24 +1,20 @@
 cask "lyrics-master" do
-  version "2.5.5.2"
-  sha256 "8672ba9f1980fe7fbe8f9ad2a5d5cdeb516d922ef445bd2a36bb9cc5cbeeb4f4"
+  version "2.5.5.4"
+  sha256 "99743770dbc45f465a00610f6f00206be1648e4ea15c1c68a43a14a895fae97a"
 
-  url "http://www.kenichimaehashi.com/lyricsmaster/download/LyricsMaster#{version.no_dots}.dmg"
+  url "https://github.com/LyricsMaster/releases/releases/download/v#{version}/LyricsMaster#{version.no_dots}-macos.dmg",
+      verified: "github.com/LyricsMaster/releases/"
   name "Lyrics Master"
   desc "Find and download lyrics"
-  homepage "http://www.kenichimaehashi.com/lyricsmaster/"
+  homepage "https://lyricsmaster.app/desktop/"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?LyricsMaster[._-]?v?(\d+(?:\.\d+)*)\.dmg/i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      match[1].chars.join(".")
-    end
-  end
+  depends_on macos: ">= :mojave"
 
   app "Lyrics Master.app"
 
-  zap trash: "~/Library/Preferences/preferences.lyricsmaster"
+  zap trash: [
+    "~/Library/Caches/com.kenichimaehashi.lyricsmaster",
+    "~/Library/Preferences/preferences.lyricsmaster",
+    "~/Library/WebKit/com.kenichimaehashi.lyricsmaster",
+  ]
 end
