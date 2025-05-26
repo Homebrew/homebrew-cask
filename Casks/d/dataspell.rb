@@ -27,7 +27,16 @@ cask "dataspell" do
   depends_on macos: ">= :high_sierra"
 
   app "DataSpell.app"
-  binary "#{appdir}/DataSpell.app/Contents/MacOS/dataspell"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/dataspell.wrapper.sh"
+  binary shimscript, target: "dataspell"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/DataSpell.app/Contents/MacOS/dataspell' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/DataSpell*",
