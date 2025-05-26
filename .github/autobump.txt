@@ -397,6 +397,7 @@ dockx
 dogecoin
 dolphin
 dolphin@dev
+domzilla-caffeine
 dosbox-staging
 dosbox-x
 dotnet
