@@ -4,9 +4,9 @@ cask "langflow" do
 
   url "https://github.com/langflow-ai/langflow/releases/download/#{version}/Langflow_#{version}_aarch64.dmg",
       verified: "github.com/langflow-ai/langflow/"
-  name "Langflow"
+  name "Langflow Desktop"
   desc "Low-code AI-workflow building tool"
-  homepage "https://www.langflow.org/"
+  homepage "https://www.langflow.org/desktop"
 
   livecheck do
     url :url
