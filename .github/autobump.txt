@@ -993,7 +993,6 @@ mixxx
 mixxx@snapshot
 mkvtoolnix
 mmex
-mmhmm
 mmhmm-studio
 mochi
 mochi-diffusion
