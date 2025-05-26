@@ -6,7 +6,7 @@ cask "lyrics-master" do
       verified: "github.com/LyricsMaster/releases/"
   name "Lyrics Master"
   desc "Find and download lyrics"
-  homepage "http://www.kenichimaehashi.com/lyricsmaster/"
+  homepage "https://lyricsmaster.app/desktop/"
 
   depends_on macos: ">= :mojave"
 
