@@ -854,6 +854,7 @@ little-snitch
 live-home-3d
 livebook
 lm-studio
+lobehub
 local
 local@beta
 localcan
