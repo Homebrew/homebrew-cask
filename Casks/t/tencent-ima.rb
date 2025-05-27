@@ -1,17 +1,15 @@
 cask "tencent-ima" do
-  version "1.3.1_1919"
-  sha256 "dd859b18ad187681f68ba0295157dbc400e7c520b643018964c955ee497c4016"
+  version "1.7.2_2662"
+  sha256 "5a4507fb60fcd43df4d821f2752e2fb32938602b711745e88d08b5674b31b511"
 
-  url "https://ima-app.image.myqcloud.com/app/ima.copilot_universal_#{version}.dmg",
+  url "https://ima-app.image.myqcloud.com/app/ima.copilot_universal_1018_1.7.2_2662.dmg",
       verified: "ima-app.image.myqcloud.com"
   name "Tencent IMA"
   desc "Knowledge base application by Tencent"
   homepage "https://ima.qq.com/"
 
   livecheck do
-    url "https://qbtool.static.qq.com/ima/assets/official-website/assets/index-BKuCC9QK.js"
-    regex(/ima\.copilot_universal_(\d+(?:[._]\d+)+)\.dmg/i)
-    strategy :page_match
+    skip "No reliable automated version detection available"
   end
 
   auto_updates true
