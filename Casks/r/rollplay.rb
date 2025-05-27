@@ -2,7 +2,7 @@ cask "rollplay" do
   version "1.2.4"
   sha256 :no_check
 
-  url "https://github.com/thusvill/LiveWallpaperMacOS/releases/download/v#{version}/RollPlay-Silicon.dmg"
+  url "https://github.com/thusvill/LiveWallpaperMacOS/releases/download/V#{version}/RollPlay-Silicon.dmg"
   name "RollPlay"
   desc "Open-source live wallpaper application for macOS 15+"
   homepage "https://github.com/thusvill/LiveWallpaperMacOS"
