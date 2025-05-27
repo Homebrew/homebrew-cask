@@ -5,14 +5,14 @@ cask "zoho-cliq" do
   sha256 arm:   "4117fdd548aa703cebcac06ce07b3ea6e1e7b7fc230e428a7fa35c2d1f5aed70",
          intel: "82289c02ff3812e90b1873896b2e3ce332355c2d92802d5211218aed4ec70936"
 
-  url "https://downloads.zohocdn.com/cliq-desktop/mac/Cliq-#{arch}#{version}.pkg",
-      verified: "downloads.zohocdn.com/cliq-desktop/mac/"
+  url "https://downloads.zohocdn.com/chat-desktop/mac/Cliq-#{arch}#{version}.pkg",
+      verified: "downloads.zohocdn.com/chat-desktop/mac/"
   name "Zoho Cliq"
   desc "Team communication and collaboration platform"
   homepage "https://www.zoho.com/cliq/desktop/osx.html"
 
   livecheck do
-    url "https://downloads.zohocdn.com/cliq-desktop/artifacts.json"
+    url "https://downloads.zohocdn.com/chat-desktop/artifacts.json"
     regex(/Cliq[._-](?:arm64|x64)[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     strategy :json do |json, regex|
       json["mac"]&.map do |_, item|
