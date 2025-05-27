@@ -1,6 +1,6 @@
 cask "cork" do
-  version "1.5.4"
-  sha256 "33b210ee19fdb31194d9c0edf35841927bdc51c7cba867eda36badd8a17c06f8"
+  version "1.5.5"
+  sha256 "89762307939bbb92ed0c43a3e5db9e0de6e7c5fca0b7be1a0c9fada44673051d"
 
   url "https://corkmac.app/RLS/#{version}/Cork.zip"
   name "Cork"
