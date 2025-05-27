@@ -16,11 +16,12 @@ cask "zoho-cliq" do
     regex(/Cliq[._-](?:arm64|x64)[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     strategy :json do |json, regex|
       json["mac"]&.map do |_, item|
-        match = item[on_arch_conditional(arm: "arm64", intel: "x64")]&.match(regex)
+        next if item.blank?
+        match = item[Hardware::CPU.arm? ? "arm64" : "x64"]&.match(regex)
         next if match.blank?
 
         match[1]
-      end
+      end.compact
     end
   end
 
