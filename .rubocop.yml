@@ -7,7 +7,7 @@ AllCops:
   Include:
   - "**/*.rbi"
   Exclude:
-  - Homebrew/sorbet/rbi/{dsl,gems}/**/*.rbi
+  - Homebrew/sorbet/rbi/{annotations,dsl,gems}/**/*.rbi
   - Homebrew/sorbet/rbi/parser*.rbi
   - Homebrew/bin/*
   - Homebrew/vendor/**/*
