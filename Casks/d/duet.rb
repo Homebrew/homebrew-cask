@@ -18,14 +18,8 @@ cask "duet" do
         verified: "duetdownload.com/Mac/"
 
     livecheck do
-      url "https://updates.duetdisplay.com/AppleSilicon"
-      regex(/duet[._-]dd[._-]v?(\d+(?:-\d+)+)\.dmg/i)
-      strategy :header_match do |headers, regex|
-        match = headers["location"]&.match(regex)
-        next if match.blank?
-
-        match[1].tr("-", ".")
-      end
+      url "https://updater.duetdownload.com/dd/sparkle.xml"
+      strategy :sparkle
     end
   end
 
