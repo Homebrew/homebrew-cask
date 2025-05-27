@@ -4,7 +4,7 @@ cask "moves" do
 
   url "https://github.com/mikker/Moves.app/releases/download/v#{version}/Moves.app.zip"
   name "Moves"
-  desc "Moves makes it easier than ever to position your windows juuust right"
+  desc "Makes it easier than ever to position your windows juuust right"
   homepage "https://github.com/mikker/Moves.app"
 
   livecheck do
