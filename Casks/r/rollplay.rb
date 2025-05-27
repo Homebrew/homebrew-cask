@@ -12,16 +12,12 @@ cask "rollplay" do
   app "RollPlay.app"
 
   postflight do
-    if MacOS.version >= :sequoia
-      system_command "/usr/bin/xattr",
-        args: ["-d", "com.apple.quarantine", "/Applications/RollPlay.app"],
-        sudo: false,
-        print_stderr: false,
-        fail_if_error: false
-    end
+    system_command "/usr/bin/xattr",
+                   args:          ["-d", "com.apple.quarantine", "/Applications/RollPlay.app"],
+                   sudo:          false,
+                   print_stderr:  false,
+                   fail_if_error: false
   end
 
-  zap trash: [
-    "/Applications/RollPlay.app",
-  ]
+  zap trash: "/Applications/RollPlay.app"
 end
