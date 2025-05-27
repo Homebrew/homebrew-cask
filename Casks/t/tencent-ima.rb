@@ -1,8 +1,8 @@
 cask "tencent-ima" do
-  version "1.7.2_2662"
+  version "1018_1.7.2_2662"
   sha256 "5a4507fb60fcd43df4d821f2752e2fb32938602b711745e88d08b5674b31b511"
 
-  url "https://ima-app.image.myqcloud.com/app/ima.copilot_universal_1018_1.7.2_2662.dmg",
+  url "https://ima-app.image.myqcloud.com/app/ima.copilot_universal_#{version}.dmg",
       verified: "ima-app.image.myqcloud.com"
   name "Tencent IMA"
   desc "Knowledge base application by Tencent"
