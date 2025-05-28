@@ -23,7 +23,7 @@ cask "chef-workstation" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   pkg "chef-workstation-#{version.csv.first}-1.#{arch}.pkg"
 
