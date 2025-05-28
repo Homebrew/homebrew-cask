@@ -1,10 +1,10 @@
 cask "gqrx" do
-  version "2.17.6"
+  version "2.17.7"
 
   on_ventura :or_older do
     arch arm: "x86_64", intel: "x86_64"
 
-    sha256 "88c22615b1b75d159b8900dd0c0921bc019d78197ff9da11be36c75b460ab764"
+    sha256 "f3743ac9ba3176f38522d90a7aa9cdab26f1c1d374217fe147c43363a1ced63d"
 
     caveats do
       requires_rosetta
@@ -13,8 +13,8 @@ cask "gqrx" do
   on_sonoma :or_newer do
     arch arm: "arm64", intel: "x86_64"
 
-    sha256 arm:   "4f907f27d1eccdb9747ff6a349494eac90946900d87ee53f5bc9f6841f295f48",
-           intel: "88c22615b1b75d159b8900dd0c0921bc019d78197ff9da11be36c75b460ab764"
+    sha256 arm:   "772a826fd47f4deb099be8fe9204ab76ba7d234293a4bb8fb93003c55d4f4976",
+           intel: "f3743ac9ba3176f38522d90a7aa9cdab26f1c1d374217fe147c43363a1ced63d"
   end
 
   url "https://github.com/gqrx-sdr/gqrx/releases/download/v#{version}/Gqrx-#{version}-#{arch}.dmg",
