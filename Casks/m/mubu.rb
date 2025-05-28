@@ -1,9 +1,9 @@
 cask "mubu" do
   arch arm: "-arm64"
 
-  version "5.0.1"
-  sha256 arm:   "9cc8edbe10c35667debc164e27067f08a86206aa682feb5eb83a8389ed715e46",
-         intel: "45fe9692d8e5914989f038334237334f69cf43395e8af444de043ab0e122a71c"
+  version "5.0.2"
+  sha256 arm:   "ebb2a182568fbfd0a78d969c5fe8ff64489474d284637a1d1ede93ded43f3084",
+         intel: "a8b97fb90de16b091e2644cd002f4d866035496d1407084731eee7815fc98eba"
 
   url "https://mubu-assets.tos-cn-shanghai.volces.com/client/Mubu-#{version}#{arch}.dmg",
       verified: "mubu-assets.tos-cn-shanghai.volces.com/client/"
