@@ -15,7 +15,12 @@ cask "zoho-cliq" do
     url "https://downloads.zohocdn.com/chat-desktop/artifacts.json"
     regex(/Cliq[._-](?:arm64|x64)[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     strategy :json do |json, regex|
-      url = json.dig("mac", Hardware::CPU.arm? ? "arm64" : "x64")
+      url = on_arm do
+        json.dig("mac", "arm64")
+      end
+      url ||= on_intel do
+        json.dig("mac", "x64")
+      end
       next if url.blank?
 
       match = url.match(regex)
