@@ -1,8 +1,11 @@
 cask "qgroundcontrol" do
-  version "4.4.4"
-  sha256 "f12f64be5b54abe4753f53d4773aebb3cd9aee6f0d1dcbe471f68e6eacd2f464"
+  arch arm: "silicon", intel: "x86_64"
 
-  url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl.dmg",
+  version "4.4.5"
+  sha256 arm:   "d6a114173110701395f3289a2c42ef74f25e9d2ade226936dbd27bfd8bbb969b",
+         intel: "e6be1ef02653db7810f06dffc24303953b64483def8ec853a2e4da11510fe3a4"
+
+  url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl-#{arch}.dmg",
       verified: "github.com/mavlink/qgroundcontrol/"
   name "QGroundControl"
   desc "Ground control station for drones"
@@ -13,7 +16,7 @@ cask "qgroundcontrol" do
     strategy :github_latest
   end
 
-  app "qgroundcontrol.app"
+  app "QGroundControl.app"
 
   zap trash: [
     "~/Documents/QGroundControl",
