@@ -63,6 +63,7 @@ cask "parallels" do
               "/usr/local/bin/prl_convert",
               "/usr/local/bin/prl_disk_tool",
               "/usr/local/bin/prl_perf_ctl",
+              "/usr/local/bin/prlcopy",
               "/usr/local/bin/prlcore2dmp",
               "/usr/local/bin/prlctl",
               "/usr/local/bin/prlexec",
