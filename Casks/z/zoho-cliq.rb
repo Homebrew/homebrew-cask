@@ -27,12 +27,12 @@ cask "zoho-cliq" do
 
   pkg "Cliq-arm64-#{version}.pkg"
 
-  uninstall pkgutil: "com.zoho.cliq.desktop"
+  uninstall pkgutil: "com.zoho.cliq"
 
   zap trash: [
     "~/Library/Application Support/Zoho Cliq",
     "~/Library/Logs/Zoho Cliq",
-    "~/Library/Preferences/com.zoho.cliq.desktop.plist",
-    "~/Library/Saved Application State/com.zoho.cliq.desktop.savedState",
+    "~/Library/Preferences/com.zoho.cliq.plist",
+    "~/Library/Saved Application State/com.zoho.cliq.savedState",
   ]
 end
