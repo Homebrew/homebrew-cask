@@ -1,8 +1,11 @@
 cask "zoho-cliq" do
-  version "1.7.5"
-  sha256 "4117fdd548aa703cebcac06ce07b3ea6e1e7b7fc230e428a7fa35c2d1f5aed70"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://downloads.zohocdn.com/chat-desktop/mac/Cliq-arm64-#{version}.pkg",
+  version "1.7.5"
+  sha256 arm:   "4117fdd548aa703cebcac06ce07b3ea6e1e7b7fc230e428a7fa35c2d1f5aed70",
+         intel: "82289c02ff3812e90b1873896b2e3ce332355c2d92802d5211218aed4ec70936"
+
+  url "https://downloads.zohocdn.com/chat-desktop/mac/Cliq-#{arch}-#{version}.pkg",
       verified: "downloads.zohocdn.com/chat-desktop/mac/"
   name "Zoho Cliq"
   desc "Team communication and collaboration platform"
@@ -10,22 +13,17 @@ cask "zoho-cliq" do
 
   livecheck do
     url "https://downloads.zohocdn.com/chat-desktop/artifacts.json"
-    regex(/Cliq[._-]arm64[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
-
+    regex(/Cliq[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     strategy :json do |json, regex|
-      url = json.dig("mac", "arm64")
-      next if url.blank?
-
-      match = url.match(regex)
+      match = json.dig("mac", arch)&.match(regex)
       next if match.blank?
-
       match[1]
     end
   end
 
   depends_on macos: ">= :catalina"
 
-  pkg "Cliq-arm64-#{version}.pkg"
+  pkg "Cliq-#{arch}-#{version}.pkg"
 
   uninstall pkgutil: "com.zoho.cliq"
 
