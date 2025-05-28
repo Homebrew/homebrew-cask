@@ -17,6 +17,7 @@ cask "zoho-cliq" do
     strategy :json do |json, regex|
       match = json.dig("mac", arch)&.match(regex)
       next if match.blank?
+
       match[1]
     end
   end
