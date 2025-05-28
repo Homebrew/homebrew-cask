@@ -1,5 +1,5 @@
 cask "vuescan" do
-  version "9.8.45"
+  version "9.8.46"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.hamrick.com/files/vuea64#{version.major_minor.no_dots}.dmg"
