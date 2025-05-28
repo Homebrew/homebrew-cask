@@ -1,6 +1,6 @@
 cask "expandrive" do
-  version "7,2025-05-27,2025-05-27_at_14_49_21"
-  sha256 "2912ea060dc278b76c7d1bf74b27fb20a376691db7b02ddc6c1d2d84ff2ec49e"
+  version "7,2025-2-28,2025-02-28_at_18_09_55"
+  sha256 "e01325e9c14386473931b4d7b3400451acc08bb9ff25f7999bb01912d692fd7d"
 
   url "https://s3.amazonaws.com/expandrive/expandrive#{version.csv.first}/v#{version.csv.second}_published_#{version.csv.third}/ExpanDrive.dmg",
       verified: "s3.amazonaws.com/expandrive/"

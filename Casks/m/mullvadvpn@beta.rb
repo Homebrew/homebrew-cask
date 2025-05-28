@@ -1,17 +1,16 @@
 cask "mullvadvpn@beta" do
-  version "2025.6"
-  sha256 "c2f5899b53f8385d86e0fe6facd3cf3572db71635120e216d3e8ddaf0999b991"
+  version "2025.6-beta2"
+  sha256 "526309f858287e6bb704812f03a0ce78b1d4ffb30c0991fe5ad47d5480f411bf"
 
-  url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg",
-      verified: "github.com/mullvad/mullvadvpn-app/"
+  url "https://cdn.mullvad.net/app/desktop/releases/#{version}/MullvadVPN-#{version}.pkg"
   name "Mullvad VPN"
   desc "VPN client"
   homepage "https://mullvad.net/"
 
   livecheck do
-    url "https://api.mullvad.net/app/releases/macos.json"
+    url "https://api.mullvad.net/app/v1/releases/macos/#{version}"
     strategy :json do |json|
-      json.dig("signed", "releases")&.map { |release| release["version"] }
+      json["latest_beta"]
     end
   end
 
