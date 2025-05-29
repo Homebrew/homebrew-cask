@@ -1,11 +1,8 @@
 cask "qgroundcontrol" do
-  arch arm: "silicon", intel: "x86_64"
+  version "5.0.2"
+  sha256 "415215c261695e67a797c717ac7bb5efd289009ef6b63244d75a012dab9a0fc7"
 
-  version "4.4.5"
-  sha256 arm:   "d6a114173110701395f3289a2c42ef74f25e9d2ade226936dbd27bfd8bbb969b",
-         intel: "e6be1ef02653db7810f06dffc24303953b64483def8ec853a2e4da11510fe3a4"
-
-  url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl-#{arch}.dmg",
+  url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl.dmg",
       verified: "github.com/mavlink/qgroundcontrol/"
   name "QGroundControl"
   desc "Ground control station for drones"
@@ -16,6 +13,8 @@ cask "qgroundcontrol" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :monterey"
+
   app "QGroundControl.app"
 
   zap trash: [
@@ -23,8 +22,4 @@ cask "qgroundcontrol" do
     "~/Library/Caches/QGroundControl.org",
     "~/Library/Saved Application State/org.qgroundcontrol.QGroundControl.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
