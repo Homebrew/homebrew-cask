@@ -4,7 +4,7 @@ cask "tourbox-console" do
 
   url "https://tourbox-web-files.s3.us-west-2.amazonaws.com/prod/console/TourBoxInstall#{version}.zip",
       verified: "tourbox-web-files.s3.us-west-2.amazonaws.com/prod/console/"
-  name "tourbox-console"
+  name "TourBox Console"
   desc "Configuration app for TourBox devices"
   homepage "https://www.tourboxtech.com/"
 
@@ -21,8 +21,8 @@ cask "tourbox-console" do
 
   pkg "TourBoxInstall#{version}/TourBoxInstall#{version}.pkg"
 
-  uninstall quit: "com.tourbox.ui.launch"
-  uninstall pkgutil: "com.tourbox.ui.launch"
+  uninstall quit:    "com.tourbox.ui.launch",
+            pkgutil: "com.tourbox.ui.launch"
 
   zap trash: [
     "~/Library/Application Support/TourBox Console BAK",
