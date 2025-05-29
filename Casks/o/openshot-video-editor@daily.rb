@@ -1,6 +1,6 @@
 cask "openshot-video-editor@daily" do
-  version "3.3.0,13731-6cc627bf-3f12f483"
-  sha256 "69578f9feb7d6bde744835f9259742cdffaa34b191dfbda99c3ee413c04f6e11"
+  version "3.3.0,13734-6cc627bf-3f12f483"
+  sha256 "94c1fbc78935346322141ccf2141f661126dc7f3650ed4b4d07411984c1c9cf4"
 
   url "https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-daily-#{version.csv.second}-x86_64.dmg",
       verified: "github.com/OpenShot/openshot-qt/"
