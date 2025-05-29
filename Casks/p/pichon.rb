@@ -1,5 +1,5 @@
 cask "pichon" do
-  version "1.9.2"
+  version "1.10.0"
   sha256 :no_check
 
   url "https://desktop.icons8.com/updates/pichon/Pichon.dmg"
