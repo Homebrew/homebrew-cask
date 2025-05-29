@@ -1,6 +1,6 @@
 cask "copilot" do
-  version "6.0.1,294-69e71542"
-  sha256 "69e715428cd445a62aa7859771f8bb0cd72649a7726b4f7205b3785c48553955"
+  version "6.0.2,295-3db3cb65"
+  sha256 "3db3cb65431120034c68a350f564ab6d0344b147c9ff9ce3e1da584ad43d6b1e"
 
   url "https://storage.googleapis.com/copilot-mac-releases/images/Copilot-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "storage.googleapis.com/copilot-mac-releases/"
