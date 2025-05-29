@@ -1028,8 +1028,8 @@ mubu
 mucommander
 mudlet
 mullvad-browser
-mullvadvpn
-mullvadvpn@beta
+mullvad-vpn
+mullvad-vpn@beta
 multiapp
 multitouch
 multiviewer-for-f1
