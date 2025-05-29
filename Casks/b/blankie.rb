@@ -1,6 +1,6 @@
 cask "blankie" do
-  version "1.0.9"
-  sha256 "242aafb010792282ee6c8e08ac3e276b94d8b805d1a8e2f4173e064fe5b89303"
+  version "1.0.10"
+  sha256 "d575e3ce13c9f4ecf6fb36aec3793481695ab2aa8100f6d481f96d6d8f8e942c"
 
   url "https://github.com/codybrom/blankie/releases/download/v#{version}/Blankie.zip",
       verified: "github.com/codybrom/blankie/"
