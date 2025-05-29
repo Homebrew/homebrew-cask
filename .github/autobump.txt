@@ -1837,6 +1837,7 @@ zight
 zipic
 znote
 zoc
+zoho-cliq
 zoho-mail
 zoom
 zoom-for-it-admins
