@@ -9,13 +9,9 @@ cask "sketchup" do
 
   livecheck do
     url "https://www.sketchup.com/download/all"
-    strategy :page_match
-    regex(/SketchUp-(\d+(?:-\d+)+)\.dmg/i)
+    regex(/href=.*?SketchUp[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
-      match = page.scan(regex).map { |v| v.first.tr("-", ".") }
-      next if match.blank?
-
-      match
+      page.scan(regex).map { |match| match[0].tr("-", ".") }
     end
   end
 
