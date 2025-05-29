@@ -14,7 +14,7 @@ cask "soundsource" do
     end
   end
   on_sonoma :or_newer do
-    version "5.8.2"
+    version "5.8.3"
 
     url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource.zip"
 
