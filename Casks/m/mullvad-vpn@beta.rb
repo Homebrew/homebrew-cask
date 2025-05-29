@@ -15,7 +15,7 @@ cask "mullvad-vpn@beta" do
     end
   end
 
-  conflicts_with cask: "mullvadvpn"
+  conflicts_with cask: "mullvad-vpn"
   depends_on macos: ">= :ventura"
 
   pkg "MullvadVPN-#{version}.pkg"
