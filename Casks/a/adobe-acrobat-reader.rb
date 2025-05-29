@@ -39,6 +39,8 @@ cask "adobe-acrobat-reader" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/Adobe/Acrobat",
+    "~/Library/Application Support/Adobe/AcroCef",
     "~/Library/Caches/com.adobe.Reader",
     "~/Library/HTTPStorages/com.adobe.Reader",
     "~/Library/HTTPStorages/com.adobe.Reader.binarycookies",
