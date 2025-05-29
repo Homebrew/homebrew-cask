@@ -12,6 +12,8 @@ cask "servo" do
 
   app "Servo.app"
 
+  zap trash: "~/Library/Application Support/Servo"
+
   caveats do
     requires_rosetta
   end
