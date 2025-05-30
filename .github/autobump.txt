@@ -1241,6 +1241,7 @@ praat
 preform
 prepros
 prezi-video
+prism
 pritunl
 private-internet-access
 privileges
