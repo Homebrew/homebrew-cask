@@ -1841,6 +1841,7 @@ znote
 zoc
 zoho-cliq
 zoho-mail
+zoo-design-studio
 zoom
 zoom-for-it-admins
 zotero
