@@ -1,8 +1,8 @@
 cask "finicky" do
-  version "3.4.0"
-  sha256 "da572a168b670d3271e449ac83d55f1d642aa73695ef50da0c022c0f19da925c"
+  version "4.1.0"
+  sha256 "a142dfd14f81ce506f2f56fb4be9d44ba2ec7b8db5a969af0b7b640753c63186"
 
-  url "https://github.com/johnste/finicky/releases/download/v#{version}/Finicky.zip"
+  url "https://github.com/johnste/finicky/releases/download/v#{version}/Finicky.dmg"
   name "Finicky"
   desc "Utility for customizing which browser to start"
   homepage "https://github.com/johnste/finicky"
@@ -12,7 +12,7 @@ cask "finicky" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Finicky.app"
 
