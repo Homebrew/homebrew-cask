@@ -14,9 +14,9 @@ cask "cinc-workstation" do
     end
   end
   on_monterey do
-    version "25.2.1075"
-    sha256 arm:   "84d1031f63a731354d69582eabfb9a28ad74f494b70cf98750291ab86026ef8d",
-           intel: "cbe69e880188313fcd85d96aee79c44fc8b25f565b3924505668262a067aaf60"
+    version "25.5.1084"
+    sha256 arm:   "293e5ed243565122b61a901938a707f77db11d7db5163fc5a66916cee40b7d4c",
+           intel: "029ab14f4158261c38e156d484f13c03079190309984cd3b170019f10720442c"
 
     url "https://downloads.cinc.sh/files/stable/cinc-workstation/#{version}/mac_os_x/12/cinc-workstation-#{version}-1.#{arch}.dmg"
 
@@ -26,9 +26,9 @@ cask "cinc-workstation" do
     end
   end
   on_ventura :or_newer do
-    version "25.2.1075"
-    sha256 arm:   "2f96fa400838d5740fdd442c2924e4dd1e12a4604b3aab6779bd50de90806bff",
-           intel: "8b7bf4af18ddcfb10565a7cdf65ec005c530107b59321e1b32e6f2d96fcdad2f"
+    version "25.5.1084"
+    sha256 arm:   "1a0df462bd52bd6c0872a2a06eb0165195cd922a6880c2383d4d33138ad395a1",
+           intel: "6193859c8bfda0e1332ec98fc47996cb424154f3f2c8a6535cdd3323a8e6c9e0"
 
     url "https://downloads.cinc.sh/files/stable/cinc-workstation/#{version}/mac_os_x/13/cinc-workstation-#{version}-1.#{arch}.dmg"
 
