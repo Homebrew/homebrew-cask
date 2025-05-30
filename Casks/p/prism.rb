@@ -1,6 +1,6 @@
 cask "prism" do
-  version "10.4.2"
-  sha256 "497f0f653674f6e1cd2f54618d13fe7ef515b71b1c8c43689e7188768367494d"
+  version "10.5.0"
+  sha256 "bfa70793968cc2ea63c2ac75791d0483bf39a73272dbe79df1a94ba9aab8ab5a"
 
   url "https://cdn.graphpad.com/downloads/prism/#{version.major}/#{version}/InstallPrism#{version.major}.dmg"
   name "GraphPad Prism"
