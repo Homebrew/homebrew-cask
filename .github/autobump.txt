@@ -192,6 +192,7 @@ brave-browser@beta
 brave-browser@nightly
 breitbandmessung
 brewtarget
+bria
 bricklink-studio
 brickstore
 bridge
