@@ -46,10 +46,10 @@ cask "displaylink" do
     end
   end
   on_monterey :or_newer do
-    version "1.12.2,2025-05"
-    sha256 "f1a034dc11431266f2fdd06e658d21af4f80267d8b9c0bfa44a3b19bd484210b"
+    version "1.12.3,2025-05"
+    sha256 "022c3a023890ca98cdf0d80328fbd14d3d46c8939eacd520c62b958ad8ac082a"
 
-    url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.pkg"
+    url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.zip"
 
     livecheck do
       url "https://www.synaptics.com/products/displaylink-graphics/downloads/macos"
@@ -59,7 +59,11 @@ cask "displaylink" do
       end
     end
 
-    pkg "DisplayLink Manager Graphics Connectivity#{version.csv.first}-EXE.pkg"
+    pkg "DisplayLinkManager.pkg"
+
+    preflight do
+      staged_path.glob("DisplayLinkManager-*.pkg").first.rename("#{staged_path}/DisplayLinkManager.pkg")
+    end
   end
 
   name "DisplayLink USB Graphics Software"
