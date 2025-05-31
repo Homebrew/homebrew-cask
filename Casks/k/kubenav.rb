@@ -9,6 +9,7 @@ cask "kubenav" do
   homepage "https://kubenav.io/"
 
   deprecate! date: "2024-05-31", because: :discontinued
+  disable! date: "2025-05-31", because: :discontinued
 
   depends_on macos: ">= :monterey"
 
