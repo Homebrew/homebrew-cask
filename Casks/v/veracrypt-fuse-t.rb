@@ -1,6 +1,6 @@
 cask "veracrypt-fuse-t" do
-  version "1.26.20"
-  sha256 "25d94e9e145c48a16762d226e3a0117b66aa29adf16b5336658b8c02941a0e42"
+  version "1.26.24"
+  sha256 "500d6994c6125590d508046766adeecccd1bf9aac856f60cf2f1869abe4d1ae4"
 
   url "https://launchpad.net/veracrypt/trunk/#{version}/+download/VeraCrypt_FUSE-T_#{version}.dmg",
       verified: "launchpad.net/veracrypt/trunk/"
