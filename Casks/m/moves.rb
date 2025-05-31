@@ -2,7 +2,8 @@ cask "moves" do
   version "1.8.0"
   sha256 "c1476ffc9835468ed7b4a214521fa046a1be3b7724eaab6085c49f7d6589d376"
 
-  url "https://github.com/mikker/Moves.app/releases/download/v#{version}/Moves.app.zip"
+  url "https://github.com/mikker/Moves.app/releases/download/v#{version}/Moves.app.zip",
+      verified: "github.com/mikker/Moves.app/"
   name "Moves"
   desc "Makes it easier than ever to position your windows juuust right"
   homepage "https://mikkelmalmberg.com/moves"
