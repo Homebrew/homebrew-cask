@@ -16,5 +16,5 @@ cask "finicky" do
 
   app "Finicky.app"
 
-  zap trash: "~/Library/Preferences/net.kassett.finicky.plist"
+  zap trash: "~/Library/Preferences/se.johnste.finicky.plist"
 end
