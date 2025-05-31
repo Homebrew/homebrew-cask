@@ -1702,6 +1702,7 @@ vcam
 vcv-rack
 vellum
 veracrypt
+veracrypt-fuse-t
 vesktop
 vial
 videofusion
