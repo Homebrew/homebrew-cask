@@ -5,7 +5,7 @@ cask "mullvad-browser" do
   url "https://cdn.mullvad.net/browser/#{version}/mullvad-browser-macos-#{version}.dmg"
   name "Mullvad Browser"
   desc "Web browser focused on privacy and on minimizing tracking and fingerprinting"
-  homepage "https://mullvad.net/en/browser"
+  homepage "https://mullvad.net/browser"
 
   livecheck do
     url "https://mullvad.net/en/download/browser/macos/latest"
