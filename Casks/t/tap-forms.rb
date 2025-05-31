@@ -10,7 +10,7 @@ cask "tap-forms" do
 
   livecheck do
     url "https://vendors.paddle.com/download/product/503174"
-    regex(/([A-z0-9]+)[._-]Tap%20Forms%20Install%20v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/([a-z0-9]+)[._-]Tap%20Forms%20Install%20v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
       next if match.blank?

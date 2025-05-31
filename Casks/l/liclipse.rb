@@ -18,7 +18,7 @@ cask "liclipse" do
 
   livecheck do
     url "https://www.liclipse.com/download.html"
-    regex(%r{href=.*?/([0-9a-z]+)/liclipse[._-]v?(\d+(?:\.\d+)+)_macosx\.cocoa\.#{arch.downcase}\.t}i)
+    regex(%r{href=.*?/([a-z0-9]+)/liclipse[._-]v?(\d+(?:\.\d+)+)_macosx\.cocoa\.#{arch.downcase}\.t}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
