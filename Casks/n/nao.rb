@@ -2,8 +2,8 @@ cask "nao" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "0.1.37"
-    sha256 "0fbb5e012b778c2b29e97a2d5b71d9352077f6ea86def48225ae2badcfe22803"
+    version "0.1.40"
+    sha256 "91c27a0de220aa780e9042d8250008670bd0d5221ff88dfc9010d897c4f6c2d9"
   end
   on_intel do
     version "0.1.32"
