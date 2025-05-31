@@ -1700,6 +1700,7 @@ vbrokers
 vcam
 vcv-rack
 vellum
+veracrypt
 vesktop
 vial
 videofusion
