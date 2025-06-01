@@ -1,8 +1,11 @@
 cask "veusz" do
-  version "3.6.2.1"
-  sha256 "ca76ed46546b4ad9656da2dd93621e65904134755c272a4f21fb561668a3a09d"
+  arch arm: "arm", intel: "x86_64"
 
-  url "https://github.com/veusz/veusz/releases/download/veusz-#{version.major_minor_patch}/veusz-#{version}-AppleOSX.dmg",
+  version "4.0,4.0-fix"
+  sha256 arm:   "7d80bd5e780d2101d904152a6b8337d7c2c7953d8aa24c3af76e98692549a6c7",
+         intel: "092179e5d35b1e8ca663014d4d93de40ef2e4edae542c3cad98fccbda2ebf8e2"
+
+  url "https://github.com/veusz/veusz/releases/download/veusz-#{version.csv.second || version.csv.first}/veusz-#{version.csv.first}-AppleOSX-#{arch}.dmg",
       verified: "github.com/veusz/veusz/"
   name "Veusz"
   desc "Scientific plotting application"
@@ -12,11 +15,14 @@ cask "veusz" do
     url :url
     regex(/^veusz[._-]v?(\d+(?:\.\d+)+)(?:[._-].+)?\.dmg$/i)
     strategy :github_latest do |json, regex|
+      tag_version = json["tag_name"]&.[](/^veusz[._-]v?(\d+(?:\.\d+)+(?:-fix)?)$/i, 1)
+      next if tag_version.blank?
+
       json["assets"]&.map do |asset|
         match = asset["name"]&.match(regex)
         next if match.blank?
 
-        match[1]
+        (match[1] == tag_version) ? tag_version : "#{match[1]},#{tag_version}"
       end
     end
   end
@@ -24,8 +30,4 @@ cask "veusz" do
   app "Veusz.app"
 
   zap trash: "~/Library/Preferences/org.veusz.veusz*.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end
