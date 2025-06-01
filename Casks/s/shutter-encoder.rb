@@ -1,7 +1,7 @@
 cask "shutter-encoder" do
   arch arm: "Apple Silicon", intel: "Mac 64bits"
 
-  version "19.0"
+  version "19.1"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.shutterencoder.com/Shutter%20Encoder%20#{version}%20#{arch.gsub(" ", "%20")}.pkg"
