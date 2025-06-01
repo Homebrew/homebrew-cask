@@ -123,6 +123,7 @@ avast-secure-browser
 aws-vpn-client
 axure-rp
 ayugram
+azookey
 azure-data-studio
 ba-connected
 babeledit
