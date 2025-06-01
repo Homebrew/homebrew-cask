@@ -14,6 +14,8 @@ cask "meetingbar" do
 
   depends_on macos: ">= :catalina"
 
+  no_autobump! because: :bumped_by_upstream
+
   app "MeetingBar.app"
 
   zap trash: [
