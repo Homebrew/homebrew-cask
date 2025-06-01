@@ -21,6 +21,8 @@ cask "openchrom" do
     end
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   app "OpenChrom.app"
 
   zap trash: [

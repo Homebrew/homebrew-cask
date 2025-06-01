@@ -10,6 +10,8 @@ cask "blankie" do
 
   depends_on macos: ">= :sonoma"
 
+  no_autobump! because: :bumped_by_upstream
+
   app "Blankie.app"
 
   zap trash: [

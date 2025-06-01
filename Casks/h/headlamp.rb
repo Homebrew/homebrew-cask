@@ -26,6 +26,8 @@ cask "headlamp" do
 
   depends_on macos: ">= :catalina"
 
+  no_autobump! because: :bumped_by_upstream
+
   app "Headlamp.app"
 
   uninstall quit: "com.kinvolk.headlamp"
