@@ -1,8 +1,8 @@
 cask "emacs@nightly" do
   arch arm: "arm64-11", intel: "x86_64-10_12"
 
-  version "2025-05-30_00-09-07,f0bec20ac58ab84895b832fc545ea14c442d8332"
-  sha256 "e5b3cc06f00234f55df9f904d34769e362fc1ee231e43328d6b38c63c946c0ab"
+  version "2025-06-01_00-09-10,c3d9581f84107c2e137c71bb8fbf386bc20c944c"
+  sha256 "5798e02a49e56020f2ff39d413c47c57fccbac9020d45f0992024596b39cecd5"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version.csv.first}-#{version.csv.second}-universal.dmg"
   name "Emacs"
