@@ -12,7 +12,7 @@ cask "mozilla-vpn" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   pkg "MozillaVPN.pkg"
 
