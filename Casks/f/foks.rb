@@ -17,6 +17,8 @@ cask "foks" do
     end
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   binary "foks"
   binary "foks", target: "git-remote-foks"
 
