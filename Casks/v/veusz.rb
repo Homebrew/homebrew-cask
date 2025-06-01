@@ -15,14 +15,14 @@ cask "veusz" do
     url :url
     regex(/^veusz[._-]v?(\d+(?:\.\d+)+)(?:[._-].+)?\.dmg$/i)
     strategy :github_latest do |json, regex|
-      tag_version = json["tag_name"]&.gsub("veusz-", "")
+      tag_version = json["tag_name"]&.[](/^veusz[._-]v?(\d+(?:\.\d+)+(?:-fix)?)$/i, 1)
+      next if tag_version.blank?
+
       json["assets"]&.map do |asset|
         match = asset["name"]&.match(regex)
         next if match.blank?
 
-        next "#{match[1]},#{tag_version}" if match[1] != tag_version
-
-        match[1]
+        (match[1] == tag_version) ? tag_version : "#{match[1]},#{tag_version}"
       end
     end
   end
