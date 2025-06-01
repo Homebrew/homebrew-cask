@@ -573,6 +573,7 @@ font-maple-mono-normal
 font-maple-mono-normal-cn
 font-maple-mono-normal-nf
 font-maple-mono-normal-nf-cn
+font-mynaui-icons
 font-new-computer-modern
 font-sarasa-gothic
 font-sketchybar-app-font
