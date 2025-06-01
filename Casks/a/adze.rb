@@ -7,10 +7,7 @@ cask "adze" do
   desc "Edit GPX documents"
   homepage "https://getadze.com/"
 
-  livecheck do
-    url "https://getadze.com/static/main/updates/adze.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2025-06-01", because: :no_longer_available
 
   auto_updates true
   depends_on macos: ">= :sierra"
