@@ -531,6 +531,7 @@ font-chiron-hei-hk
 font-chiron-sung-hk
 font-elstobd
 font-fontawesome
+font-gnu-unifont
 font-iansui
 font-inconsolata-lgc
 font-inter
