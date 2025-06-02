@@ -1,6 +1,6 @@
 cask "agent-tars" do
-  version "1.0.0-alpha.8"
-  sha256 "4e2c8c30740c32196955874b3357a06994863abc33330898e214690a61529132"
+  version "1.0.0-alpha.9"
+  sha256 "3e104fcf21a52025c024aa674b5d2931454f884d710bcfb3d393fddd7a7c815c"
 
   url "https://github.com/bytedance/UI-TARS-desktop/releases/download/Agent-TARS-v#{version}/Agent.TARS-#{version}-universal.dmg"
   name "Agent TARS"
