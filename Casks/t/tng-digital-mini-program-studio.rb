@@ -12,7 +12,7 @@ cask "tng-digital-mini-program-studio" do
 
   url "https://ide-release.marmot-cloud.com/storage/miniprogram-studio/common/#{version.major_minor}/MiniProgramStudio-#{version}#{arch}.dmg",
       verified: "ide-release.marmot-cloud.com/storage/miniprogram-studio/common/"
-  name "Mini Program Studio"
+  name "TnG Digital Mini Program Studio"
   desc "One-stop development tool to quickly build mini programs"
   homepage "https://miniprogram.tngdigital.com.my/index"
 
