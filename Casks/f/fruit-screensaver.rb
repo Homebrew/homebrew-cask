@@ -9,5 +9,5 @@ cask "fruit-screensaver" do
 
   screen_saver "Fruit.saver"
 
-  zap trash: "~/Library/Screen Savers/Fruit.saver"
+  # No zap stanza required
 end
