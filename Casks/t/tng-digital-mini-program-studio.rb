@@ -20,7 +20,7 @@ cask "tng-digital-mini-program-studio" do
     skip "No reliable automated version detection available"
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :high_sierra"
 
   app "MiniProgramStudio.app"
 
