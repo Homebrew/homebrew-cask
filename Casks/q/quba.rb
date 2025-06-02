@@ -1,6 +1,6 @@
 cask "quba" do
-  version "1.4.2"
-  sha256 "abbbdad83f404f40683e17e4b9bfd1150c46c85d76b856820e9498231b25a8c7"
+  version "1.5.0"
+  sha256 "9e2b94d73931351982631ceda3783a8ba67793928202054855032038b6499d21"
 
   url "https://github.com/ZUGFeRD/quba-viewer/releases/download/v#{version}/Quba-#{version}-universal.dmg",
       verified: "github.com/ZUGFeRD/quba-viewer/"
