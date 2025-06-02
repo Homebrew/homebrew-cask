@@ -14,9 +14,9 @@ cask "slack" do
     end
   end
   on_big_sur :or_newer do
-    version "4.44.60"
-    sha256 arm:   "1316ace105ddbdaec929d9368d793fc2e9ad4120527d63ec861a8146de2f0cc2",
-           intel: "481eb2a078eb065c2e9a77cd08f878a24cd6d940f5a42fad0f28e2312bcfdc88"
+    version "4.44.63"
+    sha256 arm:   "d80764f3714bc2c6fce733c3e5c52954a4aac938321c7d2628304794c48e75d7",
+           intel: "ea2595a1c93b86006e199fd24938defb06b8bb0d10a574ebb3536ea7df66dbf8"
 
     url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg",
         verified: "downloads.slack-edge.com/"
