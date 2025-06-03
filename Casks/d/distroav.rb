@@ -1,6 +1,6 @@
 cask "distroav" do
-  version "6.0.0"
-  sha256 "2ac8d78d3aa2914ba11270c02edbbb06924d7a6b0dddb34c407b4ec852b681f5"
+  version "6.1.0"
+  sha256 "6229c333f216624a1dd251f314dbf74b1b7b8b452c35f837a97407e1c938d1ef"
 
   url "https://github.com/DistroAV/DistroAV/releases/download/#{version}/distroav-#{version}-macos-universal.pkg",
       verified: "github.com/DistroAV/DistroAV/"
@@ -39,7 +39,10 @@ cask "distroav" do
     end
   end
 
-  uninstall pkgutil: "org.distroav.distroav"
+  uninstall pkgutil: [
+    "'org.distroav.distroav'",
+    "org.distroav.distroav",
+  ]
 
   # No zap stanza required
 end
