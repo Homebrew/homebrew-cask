@@ -1,6 +1,3 @@
-# typed: strict
-# frozen_string_literal: true
-
 cask "visual-studio-code" do
   arch arm: "darwin-arm64", intel: "darwin"
 
