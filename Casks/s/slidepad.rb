@@ -1,6 +1,6 @@
 cask "slidepad" do
-  version "1.5.7"
-  sha256 "01c803234d436b87ff64e2234df54d43f7bc191eca111195b11eb97907f134e4"
+  version "1.5.8"
+  sha256 "2483bde6f0c4cfbae5518f61fb11e9338215bb9ad7e67613d483cbf9186f7dc7"
 
   url "https://f002.backblazeb2.com/file/Slidepad/Slidepad_#{version.dots_to_underscores}.zip",
       verified: "f002.backblazeb2.com/file/Slidepad/"
