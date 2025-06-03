@@ -6,14 +6,13 @@ updates:
   directory: "/"
   schedule:
     interval: weekly
-    day: monday
+    day: friday
     time: '08:00'
+    timezone: Etc/UTC
   allow:
   - dependency-type: all
-  ignore:
-  - dependency-name: actions/stale
   groups:
-    artifacts:
+    github-actions:
       patterns:
-      - actions/*-artifact
+      - "*"
 
