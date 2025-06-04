@@ -283,6 +283,7 @@ cloudmounter
 cloudnet
 cmake
 coconutbattery
+code-composer-studio
 codeedit
 codekit
 codeql
