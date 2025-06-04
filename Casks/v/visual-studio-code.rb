@@ -35,6 +35,7 @@ cask "visual-studio-code" do
 
   app "Visual Studio Code.app"
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"
+  binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code-tunnel"
 
   uninstall launchctl: "com.microsoft.VSCode.ShipIt",
             quit:      "com.microsoft.VSCode"
