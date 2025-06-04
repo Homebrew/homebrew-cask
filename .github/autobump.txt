@@ -177,6 +177,7 @@ blockbench
 blockstream-green
 blocs
 blood-on-the-clocktower-online
+bluej
 bluestacks
 bluewallet
 boinc
