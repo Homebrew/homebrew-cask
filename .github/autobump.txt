@@ -395,6 +395,7 @@ display-pilot
 displaybuddy
 distroav
 djstudio
+djuced
 dockdoor
 dockfix
 dockside

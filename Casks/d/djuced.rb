@@ -1,6 +1,6 @@
 cask "djuced" do
-  version "6.2.4"
-  sha256 "7448b7821969bfb1a07cc09203304774ab48b3a5d2ec3e9f078e58b782ddbd95"
+  version "6.2.5"
+  sha256 "2d764eb605e1cd6ee176327ac2b847a6df7c9a6c5bb86a4b317f51edf90bdd11"
 
   url "https://ts.hercules.com/download/djuced/#{version.major_minor}/DJUCED_#{version}.dmg",
       verified: "hercules.com/download/djuced/"
