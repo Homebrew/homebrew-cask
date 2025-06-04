@@ -1,9 +1,9 @@
 cask "bluej" do
   arch arm: "aarch64", intel: "x64"
 
-  version "5.4.2"
-  sha256 arm:   "6fbd02badb9185880542596bdb9c24803323a5b435db259f07a29bc45f8a3463",
-         intel: "ce174a12ada0436bacfcf794e598df7464a54b93764ea935bc444c95c4794acf"
+  version "5.5.0"
+  sha256 arm:   "206c4b329f8b47e84b547a4f8fa5afdc9e143a803717cd47f2a1a2cacf183546",
+         intel: "1e34bad46a6bb9f6ab12fde6a138e222aba769f803dcd968c3bd278523837de4"
 
   url "https://github.com/k-pet-group/BlueJ-Greenfoot/releases/download/BLUEJ-RELEASE-#{version}/BlueJ-mac-#{arch}-#{version}.dmg",
       verified: "github.com/k-pet-group/BlueJ-Greenfoot/"
