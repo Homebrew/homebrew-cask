@@ -1,5 +1,5 @@
 cask "kstars" do
-  version "3.7.6"
+  version "3.7.7"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg",
