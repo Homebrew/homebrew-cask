@@ -828,6 +828,7 @@ kopiaui
 kotlin-native
 kreya
 krisp
+kstars
 kunkun
 label-live
 lagrange
