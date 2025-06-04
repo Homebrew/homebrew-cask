@@ -282,6 +282,7 @@ cloudflare-warp
 cloudflare-warp@beta
 cloudmounter
 cloudnet
+cloudpouch
 cmake
 coconutbattery
 codeedit
