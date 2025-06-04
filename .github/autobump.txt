@@ -1763,6 +1763,7 @@ wave
 wavebox
 waves-central
 wealthfolio
+weasis
 webcatalog
 webex
 webstorm
