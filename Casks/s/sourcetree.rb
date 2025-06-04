@@ -27,8 +27,8 @@ cask "sourcetree" do
     end
   end
   on_catalina :or_newer do
-    version "4.2.12,275"
-    sha256 "8e3099ee7f907667d8502835ce27a96856c915c9d78f139277ab42238169c57f"
+    version "4.2.12,288"
+    sha256 "ba93dbb08e12d15592195e676e8f9ba85a3302fd0310a6d88e6be8afb613ab41"
 
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
         verified: "product-downloads.atlassian.com/software/sourcetree/ga/"
