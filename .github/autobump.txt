@@ -398,6 +398,7 @@ distroav
 djstudio
 djuced
 dockdoor
+docker
 dockfix
 dockside
 dockx
