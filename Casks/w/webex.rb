@@ -1,7 +1,7 @@
 cask "webex" do
   arch arm: "apple-silicon", intel: "intel"
 
-  version "45.5.0.32411"
+  version "45.6.0.32536"
   sha256 :no_check
 
   url "https://binaries.webex.com/webex-macos-#{arch}/Webex.dmg"
