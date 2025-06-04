@@ -504,6 +504,7 @@ firefox@beta
 firefox@developer-edition
 firefox@esr
 firefox@nightly
+firezone
 fishing-funds
 fixkey
 flashspace
