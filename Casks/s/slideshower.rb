@@ -4,12 +4,12 @@ cask "slideshower" do
 
   url "https://slideshower.com/slideshower_#{version.dots_to_underscores}.dmg"
   name "Slideshower for macOS"
-  desc "Simplest app to run photo slideshows"
+  desc "Slideshow application"
   homepage "https://slideshower.com/"
 
   livecheck do
-    url :homepage
-    regex(/Release Notes[\s\S]*?v(\d+(?:\.\d+)+)/i)
+    url "https://slideshower.com/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :monterey"
