@@ -1,6 +1,6 @@
 cask "stratoshark@dev" do
-  version "0.9.2rc0,801,b47744ac1893"
-  sha256 "5a322879339c9b7e6b2c978906134f38d1c59c34b54bb06b99121792a71365aa"
+  version "0.9.2rc0,803,7358ce773956"
+  sha256 "cc9d6a5e2f832511853fff8a67ea62447c0be9ceba8471054a9d5870ac81a26f"
 
   url "https://www.wireshark.org/download/automated/osx/Stratoshark%20#{version.csv.first}-#{version.csv.second}-g#{version.csv.third}.dmg",
       verified: "wireshark.org/download/"
@@ -21,10 +21,10 @@ cask "stratoshark@dev" do
   depends_on macos: ">= :big_sur"
 
   app "Stratoshark.app"
-  binary "#{appdir}/Stratoshark.app/Contents/MacOS/extcap/falcodump"
+  binary "#{appdir}/Stratoshark.app/Contents/MacOS/dumpcap"
   binary "#{appdir}/Stratoshark.app/Contents/MacOS/extcap/sshdig"
   binary "#{appdir}/Stratoshark.app/Contents/MacOS/Stratoshark", target: "stratoshark"
-  manpage "#{appdir}/Stratoshark.app/Contents/Resources/share/man/man1/falcodump.1"
+  manpage "#{appdir}/Stratoshark.app/Contents/Resources/share/man/man1/dumpcap.1"
   manpage "#{appdir}/Stratoshark.app/Contents/Resources/share/man/man1/sshdig.1"
   manpage "#{appdir}/Stratoshark.app/Contents/Resources/share/man/man1/stratoshark.1"
 
