@@ -1513,6 +1513,7 @@ sqlcl
 sqlitestudio
 sqlpro-for-sqlite
 squash
+ssh-config-editor
 stability-matrix
 standard-notes
 starsector
