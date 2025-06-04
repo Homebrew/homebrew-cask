@@ -1,5 +1,5 @@
 cask "mindmaster-cn" do
-  version "12.2.18,5379"
+  version "12.3.4,5379"
   sha256 "020bbdf064b5bf5c42d2778cb9b6984643e45e7fcf2c656be4e2e3fb61435cbd"
 
   url "https://cc-download.edrawsoft.cn/mindmaster_cn_full#{version.csv.second}.dmg"
