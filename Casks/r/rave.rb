@@ -1,6 +1,6 @@
 cask "rave" do
-  version "1.16.7"
-  sha256 "3d7421f50fc69b8e1f93ac75eef21cbb2a3cd6e5dd063da7cbba11e6cfe805fe"
+  version "1.16.8"
+  sha256 "c0513c79b8e0fc85c16e48b701d021e56206efd6d90f7d320d116709fa4f9d2f"
 
   url "https://static.rave-web.com/rave-desktop/mac/x64/Rave-#{version}.dmg",
       verified: "static.rave-web.com/rave-desktop/mac/"
