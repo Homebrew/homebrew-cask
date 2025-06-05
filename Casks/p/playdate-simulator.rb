@@ -1,6 +1,6 @@
 cask "playdate-simulator" do
-  version "2.7.3"
-  sha256 "5b0d744f72b0473be5f934759cee3e482016102066686699f27b13ccd4de0507"
+  version "2.7.4"
+  sha256 "65835e1c2a2457072c6158480537887b09b8d8f2775497e874e4182eede98f77"
 
   url "https://download-cdn.panic.com/playdate_sdk/PlaydateSDK-#{version}.zip",
       verified: "download-cdn.panic.com/playdate_sdk/"
