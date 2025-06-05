@@ -799,6 +799,7 @@ k6-studio
 k8studio
 kaleidoscope
 kando
+karafun
 katalon-studio
 kate
 kdenlive
