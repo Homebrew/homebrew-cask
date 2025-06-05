@@ -7,11 +7,13 @@ cask "freewhisper" do
     desc "Open-source speech recognition app powered by OpenAI's Whisper"
     homepage "https://github.com/furkanksl/FreeWhisper"
   
+    depends_on macos: ">= :sonoma"
+  
     app "FreeWhisper.app"
   
     zap trash: [
       "~/Library/Application Support/FreeWhisper",
-      "~/Library/Caches/com.furkanksl.FreeWhisper",
       "~/Library/Preferences/com.furkanksl.FreeWhisper.plist",
+      "~/Library/Caches/com.furkanksl.FreeWhisper",
     ]
-  end  
+  end
