@@ -2,7 +2,7 @@ cask "agent-tars" do
   version "1.0.0-alpha.9"
   sha256 "3e104fcf21a52025c024aa674b5d2931454f884d710bcfb3d393fddd7a7c815c"
 
-  url "https://github.com/bytedance/UI-TARS-desktop/releases/download/Agent-TARS-v#{version}/Agent.TARS-#{version}-universal.dmg"
+  url "https://github.com/bytedance/UI-TARS-desktop/releases/download/Agent-TARS-v#{version}/Agent-TARS-#{version}-universal.dmg"
   name "Agent TARS"
   desc "Multimodal AI agent for GUI interaction"
   homepage "https://github.com/bytedance/UI-TARS-desktop"
