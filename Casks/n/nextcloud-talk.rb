@@ -1,6 +1,6 @@
 cask "nextcloud-talk" do
-  version "1.1.9"
-  sha256 "72dd275f600939d31e5556e59e7118b89c55884f7590d471005ebb68baa97b93"
+  version "1.2.3"
+  sha256 "c32d474a86163098efe08506e54da90b4d5f1bf2ea926239ebac771b720aad42"
 
   url "https://github.com/nextcloud-releases/talk-desktop/releases/download/v#{version}/Nextcloud.Talk-macos-universal.dmg",
       verified: "github.com/nextcloud-releases/talk-desktop/releases/download/"
