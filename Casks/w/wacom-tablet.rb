@@ -25,6 +25,7 @@ cask "wacom-tablet" do
               "com.wacom.WacomCenter*",
               "com.wacom.WacomExperienceProgram*",
               "com.wacom.wacomtablet",
+              "Wacom_IOManager",
             ],
             quit:      [
               "com.wacom.wacomtablet",
