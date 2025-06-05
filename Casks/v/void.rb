@@ -1,9 +1,9 @@
 cask "void" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.99.30036"
-  sha256 arm:   "52c098c1ea9a1fe827724a542c2a01a1f46c4f6957e65840b3a27372bcfb55d2",
-         intel: "0122fc7261f8380058754ad035748e8a9ae1dde801035d877ee97f9f8184864a"
+  version "1.99.30037"
+  sha256 arm:   "d3edf0c8598b1c8ddd8189211ca45ba5659886154d65c8f80c4a84379d14fff6",
+         intel: "8788b56a1877a62971c8b446539edb127a1d2259a01b79b37f1e76cbfd046deb"
 
   url "https://github.com/voideditor/binaries/releases/download/#{version}/Void.#{arch}.#{version}.dmg",
       verified: "github.com/voideditor/"
