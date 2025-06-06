@@ -1,6 +1,6 @@
 cask "texturepacker" do
-  version "7.7.0"
-  sha256 "aa37c49efd0e22f214a0ce2bbb6e796b6caa47d9e0f8faff30c3f4540eb912a1"
+  version "7.7.1"
+  sha256 "c61e44e617f068c16be7c3dae303c0446c282d7dd4b77ab04eec7324a42d7dbb"
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}.dmg"
   name "TexturePacker"
