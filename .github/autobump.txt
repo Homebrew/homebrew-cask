@@ -1584,6 +1584,7 @@ telegram-desktop
 telegram-desktop@beta
 teleport
 teleport-connect
+teleport@16
 tella
 temurin
 temurin@11
