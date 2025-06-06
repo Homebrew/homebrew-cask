@@ -1,6 +1,6 @@
 cask "teleport@16" do
-  version "16.5.10"
-  sha256 "c6aaa51dc5dfafd02dd3fd2a15c19395aacf5dfa047673c4b6b35ff1e2dc6a91"
+  version "16.5.11"
+  sha256 "1a87d35a07a1df3d7ce912ae38e44d55ab10eaf22838509548e40eb9ffd9e2c9"
 
   url "https://cdn.teleport.dev/teleport-#{version}.pkg",
       verified: "cdn.teleport.dev/"
