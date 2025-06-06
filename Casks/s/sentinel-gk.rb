@@ -5,7 +5,7 @@ cask "sentinel-gk" do
   url "https://github.com/alienator88/Sentinel/releases/download/#{version}/Sentinel.zip",
       verified: "github.com/alienator88/Sentinel/"
   name "Sentinel"
-  desc "Utility for configuring Gatekeeper, removing apps from quarantine and self-signing apps"
+  desc "Configure Gatekeeper, unquarantine and self-sign apps"
   homepage "https://itsalin.com/appInfo/?id=sentinel"
 
   livecheck do
