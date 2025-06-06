@@ -1,9 +1,9 @@
 cask "bricklink-partdesigner" do
   version "2.25.3_1"
-  sha256 :no_check
+  sha256 "78ab640c2f0a298ad24a69989edbc7e8bec8eb8118d1a337d8d7d9e43504adbe"
 
-  url "https://dzncyaxjqx7p3.cloudfront.net/PartDesigner/PartDesigner.pkg",
-      verified: "dzncyaxjqx7p3.cloudfront.net/PartDesigner/"
+  url "https://studio.download.bricklink.info/PartDesigner/Archive/#{version}/PartDesigner.pkg",
+      verified: "studio.download.bricklink.info/PartDesigner/"
   name "PartDesigner"
   desc "Design your own LEGO parts"
   homepage "https://www.bricklink.com/v3/studio/partdesigner.page"
