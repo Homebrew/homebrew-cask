@@ -186,6 +186,7 @@ bookends
 bookmacster
 bookmacster@beta
 boosteroid
+bootstrap-studio
 box-drive
 box-tools
 brainfm
