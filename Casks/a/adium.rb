@@ -8,10 +8,7 @@ cask "adium" do
   desc "Instant messaging application"
   homepage "https://www.adium.im/"
 
-  livecheck do
-    url "https://sparkle.adium.im/appcast-release.xml"
-    strategy :sparkle
-  end
+  deprecate! date: "2025-06-05", because: :no_longer_available
 
   auto_updates true
 
