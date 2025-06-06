@@ -1106,6 +1106,7 @@ nucleo
 nudge
 nutstore
 nvidia-geforce-now
+nvidia-nsight-compute
 nwjs
 obs
 obs-advanced-scene-switcher
