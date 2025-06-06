@@ -21,8 +21,8 @@ cask "lightkey" do
     end
   end
   on_ventura do
-    version "5.3.2"
-    sha256 "05a1c84d2414bd033891d4aa80416386255a528de0936937e6addeae963f6e5c"
+    version "5.3.3"
+    sha256 "656cd6fdbd9ec27c46f6862d483265b5240f5ce107bb6a660b23b6a7c8473d8b"
 
     # This check should only return legacy versions and the conditions may need
     # to be updated as the minimum system version of releases changes. If/when
@@ -41,8 +41,8 @@ cask "lightkey" do
     end
   end
   on_sonoma do
-    version "5.3.2"
-    sha256 "05a1c84d2414bd033891d4aa80416386255a528de0936937e6addeae963f6e5c"
+    version "5.3.3"
+    sha256 "656cd6fdbd9ec27c46f6862d483265b5240f5ce107bb6a660b23b6a7c8473d8b"
 
     # This check should only return legacy versions and the conditions may need
     # to be updated as the minimum system version of releases changes. If/when
@@ -61,8 +61,8 @@ cask "lightkey" do
     end
   end
   on_sequoia :or_newer do
-    version "5.4"
-    sha256 "6a95dab0d047abb30bcf19c22ac6f72b2df0b6634e7a018df0b7f4bd6ca5f3c5"
+    version "5.5"
+    sha256 "962cc58a05d2e2f062ca011bcac6740b92c96b522ff7b71debff8e68af7e476a"
 
     # Upstream also publishes legacy versions (with a lower minor version) in
     # the appcast, so the first `item` after sorting by `pubDate`/`version` may
