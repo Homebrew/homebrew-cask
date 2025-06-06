@@ -1,9 +1,9 @@
 cask "qutebrowser" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.5.0"
-  sha256 arm:   "89bede17bb26cd0e72cd4f2d8a55b42109133c8ad358a358e8bd1816489f05cd",
-         intel: "f2405d1c672b02dfdbdfc754dae9bdd1c14bc1e97602e7a339d35378eb63d816"
+  version "3.5.1"
+  sha256 arm:   "b14078102a0c9fa8d21490f8f902d8ee486b9fb3e038c52b50f42f71af3c1b1a",
+         intel: "fd98de89d57d4edc269df66d9770c54594d048d802dee1521818765e1c61dc65"
 
   url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}-#{arch}.dmg",
       verified: "github.com/qutebrowser/qutebrowser/"
