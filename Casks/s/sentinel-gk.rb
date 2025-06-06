@@ -18,7 +18,7 @@ cask "sentinel-gk" do
 
   app "Sentinel.app"
 
-  uninstall quit:       "com.alienator88.Sentinel"
+  uninstall quit: "com.alienator88.Sentinel"
 
   zap trash: [
     "~/Library/Application Support/com.alienator88.sentinel",
