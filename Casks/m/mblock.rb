@@ -8,7 +8,7 @@ cask "mblock" do
   desc "Coding tool designed for teaching STEAM"
   homepage "https://www.mblock.cc/"
 
-  disable! date: "2024-06-12", because: "download artifact behind signed url"
+  disable! date: "2024-06-12", because: "now has the download artifact behind a signed URL"
 
   depends_on macos: ">= :sierra"
 

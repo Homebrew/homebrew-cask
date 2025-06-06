@@ -11,7 +11,7 @@ cask "shadow-bot" do
   desc "Application for robotic process automation"
   homepage "https://www.yingdao.com/"
 
-  disable! date: "2024-12-30", because: "download artifact behind signed url"
+  disable! date: "2024-12-30", because: "now has the download artifact behind a signed URL"
 
   depends_on macos: ">= :high_sierra"
 
