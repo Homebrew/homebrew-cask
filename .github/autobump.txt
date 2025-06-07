@@ -431,6 +431,7 @@ dropzone
 duckduckgo
 duet
 dungeon-crawl-stone-soup-console
+dungeon-crawl-stone-soup-tiles
 duplicati
 ea
 eaglefiler
