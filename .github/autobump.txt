@@ -430,6 +430,7 @@ dropshare
 dropzone
 duckduckgo
 duet
+dungeon-crawl-stone-soup-console
 duplicati
 ea
 eaglefiler
