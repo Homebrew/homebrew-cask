@@ -7,10 +7,7 @@ cask "multiapp" do
   desc "Multiplayer Collaboration"
   homepage "https://www.multi.app/"
 
-  livecheck do
-    url "https://updates.multi.app/installers/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2025-06-06", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :monterey"

@@ -1045,7 +1045,6 @@ mudlet
 mullvad-browser
 mullvad-vpn
 mullvad-vpn@beta
-multiapp
 multitouch
 multiviewer-for-f1
 mumuplayer
