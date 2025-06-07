@@ -1,9 +1,9 @@
 cask "ui-tars" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.2"
-  sha256 arm:   "8e38c2eb1f988c2142115b0a75306245efe2d0a6880abbfb5517b25e85dafb5f",
-         intel: "1f721e45558cf55f50b48beeeaace1e301d265426f08ae4fcd8873abe62080d0"
+  version "0.1.3"
+  sha256 arm:   "f4aba76ff9a2e2e276a0069a4ff10958ebfd252123bb8cab2c7bc1029a9e7b0f",
+         intel: "5b1612bf7a352778bd4da974fcbe9fbd866c33d09d1626fcdbce201cb2bfa521"
 
   url "https://github.com/bytedance/UI-TARS-desktop/releases/download/v#{version}/UI-TARS-#{version}-#{arch}.dmg"
   name "UI-TARS Desktop"
