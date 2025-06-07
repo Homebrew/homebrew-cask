@@ -9,7 +9,7 @@ cask "datadog-agent" do
   homepage "https://www.datadoghq.com/"
 
   livecheck do
-    url "https://dd-agent.s3.amazonaws.com/"
+    url "https://dd-agent.s3.amazonaws.com/?prefix=datadog-agent"
     regex(/datadog-agent[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
     strategy :xml do |xml, regex|
       xml.get_elements("//Contents/Key").map do |item|
