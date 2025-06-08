@@ -1,19 +1,23 @@
 cask "inkstitch" do
-  version "3.1.0"
+  version "3.2.1"
 
-  on_big_sur :or_older do
-    sha256 "e7b789873d828bac53a632a3acee59791bb971a31e4ec57ae5f49a272c8ccbe9"
+  on_monterey :or_older do
+    sha256 "19887ee1ec0265f52d81b39e58dce6ba0067c0977c4c234aa1b0c4095f6fbc2d"
 
-    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-high-sierra-catalina-osx-x86_64.pkg",
+    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-#{version}-old-osx-x86_64.pkg",
         verified: "github.com/inkstitch/inkstitch/"
 
-    pkg "inkstitch-v#{version}-high-sierra-catalina-osx-x86_64.pkg"
+    pkg "inkstitch-v#{version}-old-osx-x86_64.pkg"
+
+    caveats do
+      requires_rosetta
+    end
   end
-  on_monterey :or_newer do
+  on_ventura :or_newer do
     arch arm: "arm64", intel: "x86_64"
 
-    sha256 arm:   "2c8c85285373245dca11fb1d2e516839b3c5ef0a795bbf93a79f01e4d37e5ef3",
-           intel: "08f8d593e0776860cb6721d235a3da3e2cb4559dab0c300964705d66cf26c9a8"
+    sha256 arm:   "93403b7aa4ac5e96d3f28c9f4e437f3bdd0f389c3a34ad23d197a1ccc18dd8e4",
+           intel: "f7bfcc30cd61beb146f0bb91d6536c973cd7717f2e665ba0a5019a7a46f5a4f7"
 
     url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx-#{arch}.pkg",
         verified: "github.com/inkstitch/inkstitch/"
