@@ -12,12 +12,14 @@ cask "soqlxplorer" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "SoqlXplorer.app"
 
   zap trash: [
     "~/Library/Caches/com.pocketsoap.osx.SoqlXplorer",
+    "~/Library/HTTPStorages/com.pocketsoap.osx.SoqlXplorer",
     "~/Library/Preferences/com.pocketsoap.osx.SoqlXplorer.plist",
   ]
 end
