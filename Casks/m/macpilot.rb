@@ -35,6 +35,7 @@ cask "macpilot" do
   desc "Graphical user interface for the command terminal"
   homepage "https://www.koingosw.com/products/macpilot/"
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "MacPilot.app"
@@ -42,7 +43,9 @@ cask "macpilot" do
   zap trash: [
     "~/Library/Application Support/com.koingosw.MacPilot",
     "~/Library/Caches/com.koingosw.MacPilot",
+    "~/Library/HTTPStorages/com.koingosw.MacPilot",
     "~/Library/Preferences/com.koingosw.MacPilot.plist",
     "~/Library/Saved Application State/com.koingosw.MacPilot.savedState",
+    "~/Library/WebKit/com.koingosw.MacPilot",
   ]
 end
