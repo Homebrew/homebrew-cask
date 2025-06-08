@@ -1,6 +1,6 @@
 cask "smplayer" do
-  version "24.5.0"
-  sha256 "747cbe26b49b87b3c115405670ea128ae673631a478fa104f28033a0b8f5ab40"
+  version "25.6.0"
+  sha256 "e3176fb0bf73e6ccb4080781d8ef17090d5d36abdd563547856fff0355f0f428"
 
   url "https://github.com/smplayer-dev/smplayer/releases/download/v#{version}/smplayer-#{version}.dmg",
       verified: "github.com/smplayer-dev/smplayer/"
