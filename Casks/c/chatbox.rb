@@ -1,9 +1,9 @@
 cask "chatbox" do
   arch arm: "-arm64"
 
-  version "1.13.2"
-  sha256 arm:   "806325668df787e59e7fba2c73678fe1a9ac6bfc6ded02f4bf24beee588f4f8c",
-         intel: "7ff6e9c6a860c23e3f4ceccc904666bdced8764f6cc10afed323a886c53e081a"
+  version "1.13.3"
+  sha256 arm:   "d2b710e62ef22327429c1fa6c9075f3b53212a39c8ba6040135f977a0a36700f",
+         intel: "2606184b74ba54f8d8375c892ea6c151121f0ab66ec41c668960292e73b93285"
 
   url "https://download.chatboxai.app/releases/Chatbox-#{version}#{arch}.dmg"
   name "Chatbox"
