@@ -1,6 +1,6 @@
 cask "font-junicode" do
-  version "2.211"
-  sha256 "986b164c5b15e157728d5f86ee93c452f8d3ff345c5ab3b0d146cb842bbbce46"
+  version "2.213"
+  sha256 "1af18ec100a8c603a8943fe1cfbb5d457a6147da5d2435ffebb96e400d626661"
 
   url "https://github.com/psb1558/Junicode-font/releases/download/v#{version}/Junicode_#{version}.zip"
   name "Junicode"
