@@ -8,7 +8,7 @@ cask "lockdown" do
   desc "Audits and remediates security configuration settings"
   homepage "https://objective-see.org/products/lockdown.html"
 
-  deprecate! date: "2025-03-02", because: :unmaintained
+  disable! date: "2025-06-09", because: :no_longer_available
 
   app "Lockdown.app"
 
