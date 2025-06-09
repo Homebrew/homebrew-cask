@@ -7,12 +7,10 @@ cask "to-audio-converter" do
   desc "Audio converter"
   homepage "https://amvidia.com/to-audio-converter"
 
+  # The upstream website no longer provides meaningful version information.
   livecheck do
-    url "https://amvidia.com/to-audio-converter/support"
-    regex(/Version:.*?v?(\d+(?:\.\d+)+)\s+\((\d+)\)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
+    url :url
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :high_sierra"
