@@ -13,9 +13,9 @@ cask "sauce-connect" do
   end
 
   binary "sc"
-  binary "completions/sc.bash", target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/sc"
-  binary "completions/sc.fish", target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/sc.fish"
-  binary "completions/sc.zsh", target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_sc"
+  bash_completion "completions/sc.bash"
+  fish_completion "completions/sc.fish"
+  zsh_completion "completions/sc.zsh"
 
   # No zap stanza required
 end
