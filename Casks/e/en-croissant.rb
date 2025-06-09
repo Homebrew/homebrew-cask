@@ -14,7 +14,13 @@ cask "en-croissant" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "en-croissant.app"
+
+  caveats do
+    requires_rosetta
+  end
 
   zap trash: [
     "~/Library/Application Support/org.encroissant.app",
