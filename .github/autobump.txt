@@ -1732,6 +1732,7 @@ virtual-desktop-streamer
 virtualbox
 virtualbox@beta
 virtualbuddy
+virtualbuddy@beta
 virtualc64
 virtualdj
 virtualhere
