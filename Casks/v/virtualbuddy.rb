@@ -19,6 +19,7 @@ cask "virtualbuddy" do
   depends_on macos: ">= :ventura"
 
   app "VirtualBuddy.app"
+  binary "#{appdir}/VirtualBuddy.app/Contents/MacOS/vctool", target: "vctool"
 
   zap trash: [
     "~/Library/Application Support/VirtualBuddy",
