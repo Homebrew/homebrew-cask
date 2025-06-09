@@ -1,6 +1,6 @@
 cask "catlight" do
-  version "3.7.3"
-  sha256 "d0e279f07136d0665b5188386d2a3a59a8ad9a456c968fca196a5d260569f098"
+  version "3.8.1"
+  sha256 "8d60ff54837c0157755868bb8bba11132979ee690c68418813ef035e9abfb8b3"
 
   url "https://download.catlight.io/rel/mac/release/CatLightSetup-#{version}.zip"
   name "CatLight"
