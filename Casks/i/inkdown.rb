@@ -1,9 +1,9 @@
 cask "inkdown" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.0"
-  sha256 arm:   "fe485ae322989f402df67a7b8e5fd7b2a85c055e41b3b72fd5c0b70fae247f4b",
-         intel: "ebeb3cd6e0e95cff89185cce41d5eca8b57064909305d500bbd26ba5b1528cd5"
+  version "2.0.1"
+  sha256 arm:   "b77ba6b7baf13b356e65362dca24a05ae91dcb8350e289b983bad2e56bd23c55",
+         intel: "0f66f9c716bd7f5bc2fe11514a6e363f5c9dbf43faec3b9c33b1015739d8e1b0"
 
   url "https://assets.inkdown.me/release/v#{version}/darwin/#{arch}/Inkdown-mac-#{arch}.dmg"
   name "Inkdown"
