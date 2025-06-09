@@ -30,7 +30,7 @@ cask "docker" do
                    docker-compose
                    docker-credential-helper-ecr
                  ]
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
