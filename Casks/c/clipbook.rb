@@ -1,9 +1,9 @@
 cask "clipbook" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.28.0"
-  sha256 arm:   "42d9afd44dc338a2df40609c5adf29bde331c0e58c589b92cccbebf6139d2ced",
-         intel: "5decc80dea7c9dd782af83314d231ac76ffeb53fdc55a7daf77027d178354f4b"
+  version "1.28.1"
+  sha256 arm:   "493edcae7ca6771c63447f93f9c04abc689f669007728a657045d7915ba7f31e",
+         intel: "083f42f45f6461a111d0f603ee15ce62f92d28db6190707c0b76c6dfa98bcf9e"
 
   url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}-#{arch}.dmg",
       verified: "f005.backblazeb2.com/file/clipbook/"
