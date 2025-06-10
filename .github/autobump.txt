@@ -1684,6 +1684,7 @@ twine
 twingate
 tyme
 typeface
+typinator
 typora
 typora@dev
 ubiquiti-unifi-controller
