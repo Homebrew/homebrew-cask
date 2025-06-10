@@ -8,12 +8,7 @@ cask "1password-cli@1" do
   desc "Command-line helper for the 1Password password manager"
   homepage "https://developer.1password.com/docs/cli/v1/usage/"
 
-  livecheck do
-    url "https://app-updates.agilebits.com/check/1/0/CLI/en/0/N"
-    strategy :json do |json|
-      json["version"]
-    end
-  end
+  deprecate! date: "2025-06-11", because: :unmaintained
 
   conflicts_with cask: [
     "1password-cli",
