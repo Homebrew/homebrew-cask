@@ -638,6 +638,7 @@ geotag
 geph
 get-api
 get-iplayer-automator
+gg
 ghost-browser
 ghostty
 ghostty@tip
