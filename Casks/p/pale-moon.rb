@@ -4,7 +4,7 @@ cask "pale-moon" do
 
   url "https://rm-us.palemoon.org/release/palemoon-#{version}.arm64.dmg"
   name "Pale Moon"
-  desc "Open Source, Goanna-based web browser"
+  desc "Web browser"
   homepage "https://www.palemoon.org/"
 
   livecheck do
