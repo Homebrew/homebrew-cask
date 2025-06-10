@@ -1,5 +1,5 @@
 cask "megazeux" do
-  version "2.93c"
+  version "2.93d"
   sha256 :no_check
 
   url "https://www.digitalmzx.com/download.php?latest=osx"
