@@ -10,6 +10,8 @@
   "comma-chameleon": "all",
   "creality-print": "any",
   "crypter": "all",
+  "db-browser-for-sqlcipher@nightly": "any",
+  "db-browser-for-sqlite@nightly": "any",
   "defold@alpha": "any",
   "defold@beta": "any",
   "devtoys": "all",
