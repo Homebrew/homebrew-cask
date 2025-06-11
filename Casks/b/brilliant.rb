@@ -1,6 +1,6 @@
 cask "brilliant" do
-  version "1.7.3"
-  sha256 "ed603442eb2170e8005acffcb35ac3a4d08c7c3ebc7529cc4e260fb39bdb3bd1"
+  version "1.7.4"
+  sha256 "493fedc1e31a33b1cc53be0fdfce7e897c7c5d838e7566ac3f8df4ff438606a5"
 
   url "https://s3.eu-north-1.amazonaws.com/brilliant.design/Brilliant.Design-#{version}-Installer.dmg",
       verified: "s3.eu-north-1.amazonaws.com/brilliant.design/"
