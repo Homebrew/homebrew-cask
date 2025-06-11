@@ -18,6 +18,7 @@ cask "liteicon" do
   homepage "https://freemacsoft.net/liteicon/"
 
   deprecate! date: "2024-06-11", because: :discontinued
+  disable! date: "2025-06-11", because: :discontinued
 
   auto_updates true
 
