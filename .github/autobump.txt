@@ -1479,6 +1479,7 @@ slack@beta
 sleek
 slicer
 slidepad
+slideshower
 slippi-dolphin
 smartgit
 smartsvn
