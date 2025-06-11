@@ -1311,6 +1311,7 @@ qqmusic
 qspace-pro
 qt-creator
 qt-creator@dev
+qt-design-studio
 quarto
 quba
 querious
