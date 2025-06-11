@@ -1510,6 +1510,7 @@ spark-ar-studio
 sparkle
 sparrow
 spatterlight
+spectrolite
 spike
 splashtop-business
 splashtop-streamer
