@@ -1,9 +1,9 @@
 cask "eclipse-modeling" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.35.0,2025-03"
-  sha256 arm:   "33fdf585e9e870b8c44367e173eb9f741878fcd177a0ea59584951a32354561d",
-         intel: "1274175cb21df56b5bda469cb3e4686e7a2d26e3c38cd725b28d26b6c707c557"
+  version "4.36.0,2025-06"
+  sha256 arm:   "1e9a131356c918315c32dc1faec0065c9032742772570208158bb6fc7197671c",
+         intel: "12e88d8e3fce342d47d4b0a9d04eb47544bfb5ca4446044361dafb78ec7366e1"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-modeling-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&mirror_id=1"
   name "Eclipse Modeling Tools"
