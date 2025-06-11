@@ -2,9 +2,9 @@ cask "pdf-over" do
   arch arm: "aarch64", intel: "x86_64"
   folder = on_arch_conditional arm: "pdf-over-for-macos-aarch64/", intel: "pdf-over-mac/"
 
-  version "4.4.5"
-  sha256 arm:   "80c8fcd36373ce49b20e750250cac3cfd6c330cab7eb929f0636ca0ee5270a9f",
-         intel: "e3e1bae9017e8a6677d3666cbc4c236a133a063f9360c809a4182185634283cd"
+  version "4.4.6"
+  sha256 arm:   "f79ee468b6947fe42a83ed7c0523355a229cef3c6d41ba1215c25584dbb0fbbc",
+         intel: "b12ec8f66b477958602b477e0ca3b20f792655e1178cdd97cab1742afc40b156"
 
   url "https://technology.a-sit.at/download/#{folder}?version=#{version.dots_to_hyphens}"
   name "PDF-Over"
