@@ -16,6 +16,11 @@ cask "little-snitch@nightly" do
   end
 
   auto_updates true
+  conflicts_with cask: [
+    "little-snitch",
+    "little-snitch@4",
+    "little-snitch@5",
+  ]
   depends_on macos: ">= :sonoma"
 
   app "Little Snitch.app"
