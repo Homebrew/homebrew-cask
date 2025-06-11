@@ -24,6 +24,7 @@ cask "little-snitch" do
   conflicts_with cask: [
     "little-snitch@4",
     "little-snitch@5",
+    "little-snitch@nightly",
   ]
   depends_on macos: ">= :sonoma"
 
