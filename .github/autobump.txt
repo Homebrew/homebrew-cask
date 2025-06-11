@@ -870,6 +870,7 @@ lingon-x
 litecoin
 little-navmap
 little-snitch
+little-snitch@nightly
 live-home-3d
 livebook
 lm-studio
