@@ -891,6 +891,7 @@ loom
 losslesscut
 loupedeck
 low-profile
+lrtimelapse
 luanti
 lulu
 lunacy
