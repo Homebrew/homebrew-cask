@@ -1436,6 +1436,7 @@ semeru-jdk-open@8
 senadevicemanager
 sentinel
 sequel-ace
+serial-studio
 servo
 session
 sessionrestore
