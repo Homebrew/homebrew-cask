@@ -14,8 +14,7 @@ cask "dmidiplayer" do
   end
 
   depends_on formula: "fluid-synth"
-  depends_on macos: ">= :sierra"
-  depends_on arch: :x86_64
+  depends_on macos: ">= :catalina"
 
   app "dmidiplayer.app"
 
