@@ -23,6 +23,11 @@ cask "little-snitch@4" do
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
 
   auto_updates true
+  conflicts_with cask: [
+    "little-snitch",
+    "little-snitch@5",
+    "little-snitch@nightly",
+  ]
   depends_on macos: [
     :el_capitan,
     :sierra,
