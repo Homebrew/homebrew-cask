@@ -438,6 +438,9 @@ ea
 eaglefiler
 easydict
 ecamm-live
+eclipse-php
+eclipse-platform
+eclipse-rcp
 edrawmind
 egnyte
 electerm
