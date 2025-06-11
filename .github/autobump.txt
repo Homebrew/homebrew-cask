@@ -1616,6 +1616,7 @@ tg-pro
 thangs-sync
 the-battle-for-wesnoth
 the-clock
+the-unofficial-homestuck-collection
 thebrain
 theiaide
 thorium
