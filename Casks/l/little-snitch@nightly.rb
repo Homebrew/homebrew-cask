@@ -9,7 +9,7 @@ cask "little-snitch@nightly" do
 
   livecheck do
     url :homepage
-    regex(/LittleSnitch[._-]v?(\d+(?:\.\d+)+)[._-]nightly[._-]\((\d+(?:\d+))\)\.dmg/i)
+    regex(/href=.*?LittleSnitch[._-]v?(\d+(?:\.\d+)+)[._-]nightly[._-]\((\d+(?:\.\d+)*)\)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
