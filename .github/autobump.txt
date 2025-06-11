@@ -1654,6 +1654,7 @@ tor-browser@alpha
 touch-portal
 touchdesigner
 touchosc
+tourbox-console
 tower
 tqsl
 trader-workstation
