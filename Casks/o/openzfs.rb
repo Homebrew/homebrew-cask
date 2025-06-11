@@ -1,65 +1,46 @@
 cask "openzfs" do
-  version "2.2.3"
+  version "2.3.0"
 
-  on_arm do
-    on_monterey :or_older do
-      arch arm: "Monterey-12-arm64"
-      sha256 "a48db951f53660115eac6dba3ed44cd895eab83dfad7e558de1679f3adb96fbd"
-    end
-    on_ventura do
-      arch arm: "Ventura-13-arm64"
-      sha256 "572e56f8acdd1954f14ac8d49b2141a591872ac6337c2e7912e533e5cf04ff3c"
-    end
-    on_sonoma do
-      arch arm: "Sonoma-14-arm64"
-      sha256 "675a682b2bb0128772de9732331fbd45550163835059b9252721ce00d1ce3b54"
-    end
-    on_sequoia :or_newer do
-      arch arm: "Sequoia-15-arm64"
-      sha256 "6e78efa1c466e4aeaff26698c097cad4f3fb7e918bdda0502be932360ab3051f"
-    end
+  on_mojave :or_older do
+    arch intel: "MAVERICKS-10.9"
+
+    sha256 "d45facdaaa80d2b79df309598027f0b48df65c560daf88f0883cebfe9fd9ea6c"
   end
-  on_intel do
-    on_el_capitan :or_older do
-      arch intel: "EL.CAPITAN-10.11"
-      sha256 "116fdd786d0e13f75baf0edbca7caa4fe44100ca42a79c694e991f499e1d81e8"
-    end
-    on_sierra do
-      arch intel: "Sierra-10.12"
-      sha256 "926d6ddc08e2ffdd3cda09ceca2f369f600b5a6dd0b185f818782680ae105a00"
-    end
-    on_high_sierra do
-      arch intel: "High.Sierra-10.13"
-      sha256 "8d6a43553cf2ca825aad49b23a3d768c491d7ec8762ebb9f91c8ec4cd8148ca8"
-    end
-    on_mojave do
-      arch intel: "Mojave-10.14"
-      sha256 "c8218f12b82f3fc716f77724bf7d2d874016529d4f07058c9cebef5cf7d11c75"
-    end
-    on_catalina do
-      arch intel: "Catalina-10.15"
-      sha256 "1edb9039f420cc7cd07fc23b6aceb35dd554e7d8ec6e77dac0b5b19c837e7b07"
-    end
-    on_big_sur do
-      arch intel: "Big.Sur-11"
-      sha256 "78dfde1c85e771d04511399e5ffb42a9f51a5725ae322bb5a51d078f9e900743"
-    end
-    on_monterey do
-      arch intel: "Monterey-12"
-      sha256 "092622af78a32e44f606cae01b5984af99eb8f91b9780054709ac78acd6b8778"
-    end
-    on_ventura do
-      arch intel: "Ventura-13"
-      sha256 "f413daf347e2a1ba98b5ca9ba08bba988106f446200dd498364df3afc36bf18e"
-    end
-    on_sonoma do
-      arch intel: "Sonoma-14"
-      sha256 "a742b587085f0d547b4cab404f3df197f32ef5089b606bd36f9a076e8fa46897"
-    end
-    on_sequoia :or_newer do
-      arch intel: "Sequoia-15"
-      sha256 "2cec90b23e7aa88385b5ef762229689a891f40c55c63cd64c4eefe24b286e880"
-    end
+  on_catalina do
+    arch intel: "Catalina-10.15"
+
+    sha256 "517f8348b7fedc45191c792bb67c6c07dca2ab1aeababa124ddea15b4600d7d7"
+  end
+  on_big_sur do
+    arch intel: "Big.Sur-11"
+
+    sha256 "95b507418394db9979f8214112f40308fc8244fa1808aea7a26b523da96aa1b9"
+
+    depends_on arch: :x86_64
+  end
+  on_monterey do
+    arch arm: "Monterey-12-arm64", intel: "Monterey-12"
+
+    sha256 arm:   "80d3b2280feecb56692630866d278201180cb0ec2544afb8f5149d1b8c137727",
+           intel: "cdf9533881bdd2da36966387cdb9ee0aada8fcca4dd3d89d8f4a313e4e5f184a"
+  end
+  on_ventura do
+    arch arm: "Ventura-13-arm64", intel: "Ventura-13"
+
+    sha256 arm:   "0f30a430636d73ea8e403dfa06fcf5fc58453076f390fec8d6f53fbc8c99c3cb",
+           intel: "452ee298a821a377cf2d8af01a3b446ba39afab2ec05c5f27c286ad8d9e1c6ab"
+  end
+  on_sonoma do
+    arch arm: "Sonoma-14-arm64", intel: "Sonoma-14"
+
+    sha256 arm:   "01b762d369bdc26ad1e5d2b4c398acf82eefee153b611e5ab9f7686389d11d4b",
+           intel: "eeb480aa4f05908aa150a759554da1de118e709faf117448bcc310a6f34defc5"
+  end
+  on_sequoia :or_newer do
+    arch arm: "Sequoia-15-arm64", intel: "Sequoia-15"
+
+    sha256 arm:   "4d634c845e5b469f0dee4186e89e40dc659f14daa46c493323b46f78ab45d78b",
+           intel: "0de75e00932199d04187dc4e09d3b84218c957974dd3ecb837f7967340f4c90d"
   end
 
   url "https://github.com/openzfsonosx/openzfs-fork/releases/download/zfs-macOS-#{version}/OpenZFSonOsX-#{version}-#{arch}.pkg",
@@ -74,6 +55,8 @@ cask "openzfs" do
   end
 
   pkg "OpenZFSonOsX-#{version}-#{arch}.pkg"
+  bash_completion "/etc/bash_completion.d/zfs"
+  bash_completion "/etc/bash_completion.d/zpool"
 
   postflight do
     set_ownership "/usr/local/zfs"
