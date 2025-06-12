@@ -7,6 +7,8 @@ cask "nimbus" do
   desc "Standalone IRCCloud desktop client"
   homepage "https://github.com/jnordberg/irccloudapp"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :unmaintained
 
   app "Nimbus.app"
