@@ -7,6 +7,8 @@ cask "bingpaper" do
   desc "Use the Bing daily photo as your wallpaper"
   homepage "https://github.com/pengsrc/BingPaper"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :catalina"
