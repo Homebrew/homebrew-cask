@@ -12,6 +12,8 @@ cask "cardo-update" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Cardo Update.app"
 
   zap trash: [
