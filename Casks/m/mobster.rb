@@ -7,6 +7,8 @@ cask "mobster" do
   desc "Pair and mob programming timer"
   homepage "https://github.com/dillonkearns/mobster/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :unmaintained
 
   app "Mobster.app"
