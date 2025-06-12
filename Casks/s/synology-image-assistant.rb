@@ -15,6 +15,8 @@ cask "synology-image-assistant" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "SynologyImageAssistant-#{version}-#{arch}.pkg"
 
   uninstall launchctl: "com.synology.Photos",
