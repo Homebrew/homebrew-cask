@@ -30,6 +30,8 @@ cask "concept2-utility" do
   desc "Utilities for the Concept2 Performance Monitor"
   homepage "https://www.concept2.com/support/software/utility"
 
+  no_autobump! because: :requires_manual_review
+
   uninstall pkgutil: "com.concept2.pkg.Concept2Utility"
 
   zap trash: [
