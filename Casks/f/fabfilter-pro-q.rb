@@ -12,6 +12,8 @@ cask "fabfilter-pro-q" do
     regex(/FabFilter\s+Pro-Q.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   pkg "FabFilter Pro-Q #{version} Installer.pkg"
