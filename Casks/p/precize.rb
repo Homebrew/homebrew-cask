@@ -23,6 +23,8 @@ cask "precize" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "precize#{version.csv.first.no_dots}/Precize.app"
