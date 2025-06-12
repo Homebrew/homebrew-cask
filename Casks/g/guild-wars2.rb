@@ -9,6 +9,8 @@ cask "guild-wars2" do
   desc "Online roleplaying game"
   homepage "https://www.guildwars2.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-06", because: :discontinued
 
   app "Guild Wars 2 64-bit.app"
