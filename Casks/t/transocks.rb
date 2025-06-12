@@ -13,6 +13,8 @@ cask "transocks" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   app "穿梭Transocks.app"
