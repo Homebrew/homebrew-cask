@@ -10,6 +10,8 @@ cask "devtoys" do
   desc "Utilities designed to make common development tasks easier"
   homepage "https://github.com/DevToys-app/DevToys"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :monterey"
 
   app "DevToys.app"
