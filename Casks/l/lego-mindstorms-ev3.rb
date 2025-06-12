@@ -14,6 +14,8 @@ cask "lego-mindstorms-ev3" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "LEGO MINDSTORMS EV3 Home Edition.pkg"
 
   uninstall pkgutil: [
