@@ -12,6 +12,8 @@ cask "pd" do
     regex(/pd[._-]v?(\d+(?:\.\d+)+-\d+)\.macos\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Pd-#{version}.app"
 
   postflight do
