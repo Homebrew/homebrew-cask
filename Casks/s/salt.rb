@@ -16,6 +16,8 @@ cask "salt" do
     regex(/salt[._-]v?(\d+(?:\.\d+)+)-py3-#{arch}\.pkg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "salt-#{version}-py3-#{arch}.pkg"
 
   uninstall launchctl: [
