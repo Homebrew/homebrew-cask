@@ -13,6 +13,8 @@ cask "textadept" do
     regex(/^textadept[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Textadept.app"
   binary "ta"
 
