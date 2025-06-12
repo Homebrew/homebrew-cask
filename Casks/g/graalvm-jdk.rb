@@ -29,6 +29,8 @@ cask "graalvm-jdk" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   artifact "graalvm-jdk-#{version.csv.first}+#{version.csv.second}.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
   # No zap stanza required
