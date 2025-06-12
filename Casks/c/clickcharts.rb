@@ -13,6 +13,8 @@ cask "clickcharts" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "ClickCharts.app"
 
   zap trash: [
