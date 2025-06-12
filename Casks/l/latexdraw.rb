@@ -12,6 +12,8 @@ cask "latexdraw" do
     regex(%r{url=.*?/LaTeXDraw[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "LaTeXDraw.app"
 
   zap trash: [
