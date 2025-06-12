@@ -12,6 +12,8 @@ cask "scenica-player" do
     regex(/href=.*?scenica[._-]player[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Scenica Player.app"
