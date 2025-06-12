@@ -13,6 +13,8 @@ cask "android-commandlinetools" do
     regex(%r{href=.*?/commandlinetools[._-]mac[._-](\d+)[._-]latest\.zip}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask:    "android-sdk",
                  formula: "proguard"
 
