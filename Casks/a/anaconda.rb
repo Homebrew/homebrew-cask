@@ -15,6 +15,8 @@ cask "anaconda" do
     regex(/Anaconda3-(\d+(?:\.\d+)+[._-]*\d+)-MacOSX-#{arch}\.sh/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   container type: :naked
 
