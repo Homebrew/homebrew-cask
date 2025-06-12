@@ -7,6 +7,8 @@ cask "doubletwist" do
   desc "Sync your music, videos and pictures over USB or WiFi"
   homepage "https://www.doubletwist.com/desktop"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-10", because: "is 32-bit only"
 
   app "doubleTwist.app"
