@@ -30,6 +30,8 @@ cask "magicavoxel" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   suite staged_path, target: "MagicaVoxel"
 
   zap trash: [
