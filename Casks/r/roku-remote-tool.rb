@@ -14,6 +14,8 @@ cask "roku-remote-tool" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :el_capitan"
 
   app "roku_remote_tool.app"
