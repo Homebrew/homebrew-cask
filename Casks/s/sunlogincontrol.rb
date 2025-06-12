@@ -18,6 +18,8 @@ cask "sunlogincontrol" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "SunloginRemote.pkg"
 
   uninstall quit:    "com.oray.remote",
