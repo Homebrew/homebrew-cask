@@ -16,6 +16,8 @@ cask "anka-build-cloud-registry" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "anka-registry-#{arch}-#{version}.pkg"
 
   uninstall script: {
