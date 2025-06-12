@@ -7,6 +7,8 @@ cask "swiftdefaultappsprefpane" do
   desc "Replacement for RCDefaultApps, written in Swift"
   homepage "https://github.com/Lord-Kamina/SwiftDefaultApps"
 
+  no_autobump! because: :requires_manual_review
+
   binary "swda"
   prefpane "SwiftDefaultApps.prefpane"
 
