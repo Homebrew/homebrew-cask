@@ -12,6 +12,8 @@ cask "photosync" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "PhotoSync.app"
 
   zap trash: [
