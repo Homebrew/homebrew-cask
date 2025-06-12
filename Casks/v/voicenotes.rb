@@ -8,7 +8,7 @@ cask "voicenotes" do
   url "https://github.com/brewdotcom/vn-apps-release/releases/download/#{version}/Voicenotes-#{version}#{arch}.dmg",
       verified: "github.com/brewdotcom/vn-apps-release/"
   name "Voicenotes"
-  desc "AI-powered app for recording, transcribing, and summarizing voice notes"
+  desc "AI-powered app for recording, transcribing and summarising voice notes"
   homepage "https://voicenotes.com/"
 
   livecheck do
