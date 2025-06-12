@@ -17,6 +17,8 @@ cask "gplates" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "GPlates_#{version}/gplates.app"
 
   zap trash: [
