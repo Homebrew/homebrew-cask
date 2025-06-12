@@ -10,5 +10,7 @@ cask "invesalius" do
   desc "3D medical imaging reconstruction software"
   homepage "https://github.com/invesalius/invesalius3/"
 
+  no_autobump! because: :requires_manual_review
+
   app "InVesalius.app"
 end
