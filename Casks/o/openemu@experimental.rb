@@ -23,6 +23,8 @@ cask "openemu@experimental" do
   desc "Retro video game emulation"
   homepage "https://openemu.org/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-05-01", because: :unsigned
 
   auto_updates true
