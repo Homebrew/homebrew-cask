@@ -7,6 +7,8 @@ cask "cord" do
   desc "Remote desktop client"
   homepage "https://cord.sourceforge.net/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-17", because: :discontinued
 
   app "CoRD.app"
