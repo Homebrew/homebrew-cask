@@ -12,6 +12,8 @@ cask "brave-browser@dev" do
   desc "Web browser focusing on privacy"
   homepage "https://brave.com/download-dev/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-12-07", because: :discontinued
 
   auto_updates true
