@@ -1,6 +1,6 @@
 cask "distroav" do
-  version "6.1.0"
-  sha256 "6229c333f216624a1dd251f314dbf74b1b7b8b452c35f837a97407e1c938d1ef"
+  version "6.1.1"
+  sha256 "119e88377a3920216ac2f9e29b174d45c43f855baed14c7b282e35378c0e06d3"
 
   url "https://github.com/DistroAV/DistroAV/releases/download/#{version}/distroav-#{version}-macos-universal.pkg",
       verified: "github.com/DistroAV/DistroAV/"
