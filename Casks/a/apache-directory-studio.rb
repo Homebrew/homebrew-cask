@@ -12,6 +12,8 @@ cask "apache-directory-studio" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+[^/]*?)/?["' >]}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "ApacheDirectoryStudio.app"
 
   zap trash: "~/.ApacheDirectoryStudio"
