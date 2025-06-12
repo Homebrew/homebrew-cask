@@ -13,6 +13,8 @@ cask "itch" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   installer script: "Install itch.app/Contents/MacOS/itch-setup"
