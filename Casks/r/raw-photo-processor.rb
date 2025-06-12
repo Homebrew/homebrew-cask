@@ -15,6 +15,8 @@ cask "raw-photo-processor" do
     skip "No version information available"
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Raw Photo Processor 64.app"
 
   zap trash: [
