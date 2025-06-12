@@ -22,6 +22,8 @@ cask "cd-to" do
   desc "Finder Toolbar app to open the current directory in the Terminal"
   homepage "https://github.com/jbtule/cdto"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "cd to.app"
