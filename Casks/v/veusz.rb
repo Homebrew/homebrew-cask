@@ -27,6 +27,8 @@ cask "veusz" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Veusz.app"
 
   zap trash: "~/Library/Preferences/org.veusz.veusz*.plist"
