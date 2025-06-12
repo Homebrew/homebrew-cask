@@ -19,6 +19,8 @@ cask "opencpn" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "OpenCPN_#{version.csv.first}#{version.csv.second}.pkg"
 
   uninstall pkgutil: [
