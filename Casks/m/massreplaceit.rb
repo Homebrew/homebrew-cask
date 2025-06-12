@@ -12,6 +12,8 @@ cask "massreplaceit" do
     regex(/MassReplaceIt\s+(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "MassReplaceIt.app"
 
   zap trash: [
