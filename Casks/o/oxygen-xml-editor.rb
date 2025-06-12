@@ -27,6 +27,8 @@ cask "oxygen-xml-editor" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   suite "Oxygen XML Editor"
