@@ -8,6 +8,8 @@ cask "nightingale" do
   desc "Working tree for the community fork of Songbird"
   homepage "https://getnightingale.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "Nightingale.app"
