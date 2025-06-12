@@ -16,6 +16,8 @@ cask "ganttproject" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "GanttProject.app"
 
   zap trash: [
