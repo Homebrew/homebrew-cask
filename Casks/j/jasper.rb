@@ -34,6 +34,8 @@ cask "jasper" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Jasper.app"
 
   zap trash: [
