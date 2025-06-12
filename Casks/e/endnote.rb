@@ -46,6 +46,8 @@ cask "endnote" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   container nested: "Install EndNote #{version.csv.second}.app/Contents/Resources/EndNote.zip"
 
   suite "EndNote"
