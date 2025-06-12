@@ -11,6 +11,8 @@ cask "procexp" do
     regex(/v(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   binary "procexp.universal", target: "procexp"
   manpage "procexp.1"
 
