@@ -12,6 +12,8 @@ cask "bili-downloader" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "biliDownloader_GUI.app"
 
   zap trash: "~/Library/Saved Application State/biliDownloader_GUI.savedState"
