@@ -11,6 +11,8 @@ cask "toinane-colorpicker" do
   desc "Get and save colour codes"
   homepage "https://colorpicker.fr/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Colorpicker.app"
 
   zap trash: "~/Library/Application Support/Colorpicker"
