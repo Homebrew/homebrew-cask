@@ -13,6 +13,8 @@ cask "evkey" do
     regex(/EVKeyMac\.zip.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "EVKey.app"
 
   zap trash: [
