@@ -16,6 +16,8 @@ cask "jabref" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "JabRef.app"
 
   zap trash: [
