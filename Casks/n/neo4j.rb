@@ -14,7 +14,7 @@ cask "neo4j" do
     regex(%r{href=.*?/neo4j-desktop/.*?flavour=osx.*?release=(\d+(?:\.\d+)+)}i)
   end
 
-  app "Neo4j Desktop 2.app"
+  app "Neo4j Desktop #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Support/com.Neo4j.Relate",
