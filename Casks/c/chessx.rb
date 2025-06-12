@@ -19,6 +19,8 @@ cask "chessx" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "chessx-installer.mpkg"
 
   uninstall pkgutil: "net.sourceforge.chessx"
