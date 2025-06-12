@@ -12,6 +12,8 @@ cask "sofa-server" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Sofa Server.app"
