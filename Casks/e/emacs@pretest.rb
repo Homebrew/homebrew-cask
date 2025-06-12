@@ -14,6 +14,8 @@ cask "emacs@pretest" do
     regex(/Emacs[._-]pretest[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask:    [
                    "emacs",
                    "emacs@nightly",
