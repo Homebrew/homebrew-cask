@@ -21,6 +21,8 @@ cask "dynamodb-local" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/dynamodb-local.wrapper.sh"
   binary shimscript, target: "dynamodb-local"
