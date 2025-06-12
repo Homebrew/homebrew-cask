@@ -1,14 +1,6 @@
 cask "safari-technology-preview" do
   # when adjusting the on_{os} scoping, also update the livecheck regex
-  on_sonoma :or_older do
-    version "220,082-52326-20250527-b0e23436-403d-4cfb-91d3-080dbe12c97a"
-    sha256 "c227157938e17963d128f851dc5d72bfa49307ee550f17f0e5ab7e7f210d34e5"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_sequoia :or_newer do
+  on_sequoia :or_older do
     version "221,082-55173-20250611-f7ac187a-3730-4fc1-b55d-a7bad97afecb"
     sha256 "3c0ab9a873bf4812df1236e2160763ddf5abcbe622bb9fdbd4b561653581780e"
 
@@ -25,6 +17,23 @@ cask "safari-technology-preview" do
       end
     end
   end
+  on_tahoe :or_newer do
+    version "221,082-56687-20250611-a060da5e-e093-4f59-b823-cb80c269000c"
+    sha256 "56ded30774906440523644873f89f89bfc7bae270bbdf9065832cdd97bdde67d"
+
+    livecheck do
+      url :homepage
+      regex(%r{
+        href=.*?/([^/]+)/Safari(?:%20|\+)?Technology(?:%20|\+)?Preview\.dmg
+        .*?macOS(?:\s|&nbsp;)*26[\s.<]
+      }ix)
+      strategy :page_match do |page, regex|
+        release = page[%r{>\s*Release\s*</p>\s*<p[^>]*>\s*(\d+)[^<]*<}i, 1]
+        id = page[regex, 1]
+        "#{release},#{id}"
+      end
+    end
+  end
 
   url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
   name "Safari Technology Preview"
@@ -32,7 +41,7 @@ cask "safari-technology-preview" do
   homepage "https://developer.apple.com/safari/resources/"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
 
   pkg "Safari Technology Preview.pkg"
 
