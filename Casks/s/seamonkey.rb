@@ -104,6 +104,8 @@ cask "seamonkey" do
     regex(%r{href=.*?/seamonkey-(\d+(?:\.\d+)+)\.en-US\.mac\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "SeaMonkey.app"
