@@ -16,6 +16,8 @@ cask "bookwright" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "BookWright.app"
