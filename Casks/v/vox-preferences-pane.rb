@@ -13,6 +13,8 @@ cask "vox-preferences-pane" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   prefpane "Vox Preferences.prefPane"
 
   zap trash: "~/Library/Preferences/com.coppertino.VoxPrefs.plist"
