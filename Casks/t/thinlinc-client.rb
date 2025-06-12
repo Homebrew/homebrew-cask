@@ -12,6 +12,8 @@ cask "thinlinc-client" do
     regex(/tl[._-]v?(\d+(?:[._]\d+)+)[._-]client[._-]macos\.iso/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "ThinLinc Client.app"
 
   zap trash: "~/.thinlinc"
