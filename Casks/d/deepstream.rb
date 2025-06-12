@@ -8,6 +8,8 @@ cask "deepstream" do
   desc "Data-sync realtime server"
   homepage "https://deepstream.io/"
 
+  no_autobump! because: :requires_manual_review
+
   pkg "deepstream.io-mac-#{version}.pkg"
 
   uninstall pkgutil: "deepstream.io"
