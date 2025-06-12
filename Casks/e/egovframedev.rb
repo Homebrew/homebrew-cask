@@ -15,6 +15,8 @@ cask "egovframedev" do
     regex(/개발자용\s+개발환경\s+v?(\d+(?:\.\d+)+)\s+(?!Beta)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   app "eGovFrameDev-#{version}-Mac-#{arch}.app"
