@@ -12,6 +12,8 @@ cask "softorino-youtube-converter" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Softorino YouTube Converter 2.app"
