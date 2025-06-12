@@ -13,6 +13,8 @@ cask "energia" do
     regex(/file=energia[._-]?v?(\d+(?:\.[\dE]+)+)[._-]macosx[._-]signed\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Energia.app"
 
   zap trash: [
