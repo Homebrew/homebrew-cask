@@ -7,6 +7,8 @@ cask "pdfshaver" do
   desc "Shrink PDF files to make them smaller"
   homepage "https://github.com/tparry/PDFShaver.app"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-28", because: :unmaintained
 
   app "PDFShaver.app"
