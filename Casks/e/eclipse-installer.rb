@@ -15,6 +15,8 @@ cask "eclipse-installer" do
     cask "eclipse-ide"
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Eclipse Installer.app"
 
   zap trash: [
