@@ -14,6 +14,8 @@ cask "lunasea" do
   desc "Self-hosted controller built using the Flutter framework"
   homepage "https://www.lunasea.app/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-04-02", because: :discontinued
 
   app "LunaSea.app"
