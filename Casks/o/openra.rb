@@ -13,6 +13,8 @@ cask "openra" do
     regex(/^release[._-]v?(\d+(?:[.-]\d+)*)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "openra@playtest"
 
   app "OpenRA - Dune 2000.app"
