@@ -12,6 +12,8 @@ cask "assinador-serpro" do
     regex(/Assinador\sSerpro\s(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   pkg "AssinadorSerpro-#{version}.mpkg/Contents/Packages/AssinadorSerpro.pkg"
