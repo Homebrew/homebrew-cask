@@ -17,6 +17,8 @@ cask "bbedit@14" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   conflicts_with cask: "bbedit"
   depends_on macos: ">= :catalina"
