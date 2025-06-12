@@ -17,6 +17,8 @@ cask "pdf-over" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "PDF-Over.app"
 
   zap trash: [
