@@ -7,6 +7,8 @@ cask "regexhibit" do
   desc "Perl regex assistant"
   homepage "https://roger-jolly.nl/software/#regexhibit"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "RegExhibit.app"
