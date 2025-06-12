@@ -7,6 +7,8 @@ cask "insomnium" do
   desc "HTTP and GraphQL Client"
   homepage "https://github.com/ArchGPT/insomnium"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-28", because: :discontinued
 
   depends_on macos: ">= :high_sierra"
