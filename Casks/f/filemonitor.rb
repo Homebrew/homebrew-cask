@@ -6,7 +6,9 @@ cask "filemonitor" do
       verified: "bitbucket.org/objective-see/deploy/downloads/"
   name "FileMonitor"
   desc "Monitor filesystem activity"
-  homepage "https://objective-see.org/products/utilities.html"
+  homepage "https://objective-see.org/products/utilities.html#FileMonitor"
+
+  disable! date: "2025-06-12", because: :no_longer_available
 
   depends_on macos: ">= :catalina"
 

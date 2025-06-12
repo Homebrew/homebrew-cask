@@ -6,7 +6,9 @@ cask "processmonitor" do
       verified: "bitbucket.org/objective-see/deploy/downloads/"
   name "ProcessMonitor"
   desc "Monitor process activity"
-  homepage "https://objective-see.org/products/utilities.html"
+  homepage "https://objective-see.org/products/utilities.html#ProcessMonitor"
+
+  disable! date: "2025-06-12", because: :no_longer_available
 
   depends_on macos: ">= :catalina"
 
