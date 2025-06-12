@@ -7,6 +7,8 @@ cask "threads" do
   desc "Communication tool for focused discussions and decision taking"
   homepage "https://threads.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-20", because: :no_longer_available
 
   auto_updates true
