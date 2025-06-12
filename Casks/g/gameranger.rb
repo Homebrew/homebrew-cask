@@ -6,6 +6,8 @@ cask "gameranger" do
   name "GameRanger"
   homepage "https://gameranger.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-05", because: "is 32-bit only"
 
   app "GameRanger.app"
