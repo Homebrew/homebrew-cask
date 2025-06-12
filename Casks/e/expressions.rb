@@ -12,6 +12,8 @@ cask "expressions" do
     regex(%r{href=.*?/Expressions-(\d+(?:\.\d+)*)\.zip}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :el_capitan"
 
   app "Expressions.app"
