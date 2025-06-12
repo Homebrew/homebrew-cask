@@ -7,6 +7,8 @@ cask "dynalist" do
   desc "Outlining app for your work"
   homepage "https://dynalist.io/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-29", because: :unmaintained
 
   app "Dynalist.app"
