@@ -12,6 +12,8 @@ cask "shop-different" do
     regex(%r{href=.*?/Shop\+Different\+(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Shop Different.app"
