@@ -12,6 +12,8 @@ cask "reflector@2" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-05-01", because: :unsigned
 
   app "Reflector #{version.major}.app"
