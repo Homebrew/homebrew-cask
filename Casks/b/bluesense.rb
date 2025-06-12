@@ -7,6 +7,8 @@ cask "bluesense" do
   desc "Detect the presence of your Bluetooth device"
   homepage "https://apps.inspira.io/bluesense/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-03-30", because: :unmaintained
 
   app "BlueSense.app"
