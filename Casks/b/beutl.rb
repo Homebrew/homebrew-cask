@@ -11,6 +11,8 @@ cask "beutl" do
   desc "Video editor"
   homepage "https://beutl.beditor.net/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :monterey"
   depends_on formula: "ffmpeg@6"
 
