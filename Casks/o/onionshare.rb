@@ -12,6 +12,8 @@ cask "onionshare" do
     regex(/href=.*?OnionShare[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "OnionShare.app"
 
   zap trash: [
