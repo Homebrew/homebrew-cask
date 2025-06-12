@@ -3,8 +3,8 @@ cask "neo4j" do
   version "2.0.1"
   sha256 "2c25729896d1e326d64e46ca3d52c656ec68b7b784358e1e5bd673233ea73add"
 
-  url "https://dist.neo4j.org/neo4j-desktop-2/mac/neo4j-desktop-#{version}-universal.dmg",
-      verified: "dist.neo4j.org/neo4j-desktop-2/mac/"
+  url "https://dist.neo4j.org/neo4j-desktop-#{version.major}/mac/neo4j-desktop-#{version}-universal.dmg",
+      verified: "dist.neo4j.org/"
   name "Neo4j Desktop"
   desc "Developer IDE or Management Environment for Neo4j instances"
   homepage "https://neo4j.com/download/"
