@@ -45,6 +45,8 @@ cask "omnipresence" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "OmniPresence.app"
 
   zap trash: [
