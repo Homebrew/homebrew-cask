@@ -19,6 +19,8 @@ cask "expandrive" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "ExpanDrive.app"
