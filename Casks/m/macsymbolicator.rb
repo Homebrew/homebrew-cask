@@ -7,6 +7,8 @@ cask "macsymbolicator" do
   desc "Symbolicate Apple related crash reports"
   homepage "https://github.com/inket/MacSymbolicator/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "MacSymbolicator.app"
