@@ -12,6 +12,8 @@ cask "zenmap" do
     regex(/href=.*?nmap[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with formula: "nmap"
 
   pkg "nmap-#{version}.mpkg"
