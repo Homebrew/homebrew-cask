@@ -15,6 +15,8 @@ cask "macx-video-converter-pro" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "MacX Video Converter Pro.app"
 
   zap trash: "~/Library/Preferences/com.macxdvd.macxvdoconverterpro.plist"
