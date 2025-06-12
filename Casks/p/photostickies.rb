@@ -17,6 +17,8 @@ cask "photostickies" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "PhotoStickies.app"
 
   zap trash: [
