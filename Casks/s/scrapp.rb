@@ -13,6 +13,8 @@ cask "scrapp" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Scrapp.app"
 
   zap trash: [
