@@ -12,6 +12,8 @@ cask "zerotier-one" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   pkg "ZeroTier One.pkg"
