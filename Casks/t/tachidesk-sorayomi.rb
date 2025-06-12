@@ -7,6 +7,8 @@ cask "tachidesk-sorayomi" do
   desc "Manga reader"
   homepage "https://github.com/Suwayomi/Tachidesk-Sorayomi/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "Sorayomi.app"
