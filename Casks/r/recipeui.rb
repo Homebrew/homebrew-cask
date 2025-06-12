@@ -11,6 +11,8 @@ cask "recipeui" do
   desc "API discovery, testing and sharing tool"
   homepage "https://recipeui.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-06-23", because: :discontinued
 
   auto_updates true
