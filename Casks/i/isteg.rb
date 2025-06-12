@@ -7,6 +7,8 @@ cask "isteg" do
   desc "Encryption tool"
   homepage "https://www.hanynet.com/isteg/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "iSteg.app"
