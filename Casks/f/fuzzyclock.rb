@@ -7,6 +7,8 @@ cask "fuzzyclock" do
   desc "Displays the time in your menubar"
   homepage "https://mschmidt.me/macos.html"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-20", because: :no_longer_available
 
   app "FuzzyClock.app"
