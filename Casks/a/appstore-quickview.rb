@@ -7,6 +7,8 @@ cask "appstore-quickview" do
   desc "Quickview for the App Store"
   homepage "https://www.marcmoini.com/aq_en.html"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-05", because: :unmaintained
 
   app "App...Store Quickview.app"
