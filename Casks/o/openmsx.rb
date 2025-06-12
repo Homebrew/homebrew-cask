@@ -19,6 +19,8 @@ cask "openmsx" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "openMSX.app"
 
   zap trash: "~/.openMSX"
