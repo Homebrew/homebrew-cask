@@ -14,6 +14,8 @@ cask "skychart" do
     regex(%r{url=.*?/skychart[._-]v?(\d+(?:[.-]\d+)+[a-z]?)[^"' >]*?\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "Install Skychart.pkg"
 
   uninstall pkgutil: "net.ap-i.pkg.skychart"
