@@ -7,6 +7,8 @@ cask "icefloor" do
   desc "Firewall tool"
   homepage "https://www.hanynet.com/icefloor/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "IceFloor.app"
