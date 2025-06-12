@@ -7,6 +7,8 @@ cask "kaku" do
   name "Kaku"
   homepage "https://kaku.rocks/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-17", because: :unmaintained
 
   app "Kaku.app"
