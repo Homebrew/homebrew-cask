@@ -13,6 +13,8 @@ cask "bluefish" do
     regex(/href=.*?Bluefish[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Bluefish.app"
 
   zap trash: [
