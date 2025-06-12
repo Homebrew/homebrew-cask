@@ -10,6 +10,8 @@ cask "tiddly" do
   desc "Browser for TiddlyWiki"
   homepage "https://github.com/Jermolene/TiddlyDesktop"
 
+  no_autobump! because: :requires_manual_review
+
   app "TiddlyDesktop-mac#{arch}-v#{version}/TiddlyDesktop.app"
 
   zap trash: [
