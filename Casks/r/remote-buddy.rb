@@ -12,6 +12,8 @@ cask "remote-buddy" do
     regex(/Changes\s+in\s+version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Remote Buddy.app"
