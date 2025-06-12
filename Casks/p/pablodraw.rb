@@ -7,6 +7,8 @@ cask "pablodraw" do
   desc "Ansi/Ascii text and RIPscrip editor/viewer"
   homepage "https://github.com/cwensley/pablodraw/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "PabloDraw.app"
