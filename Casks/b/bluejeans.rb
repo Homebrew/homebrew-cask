@@ -7,6 +7,8 @@ cask "bluejeans" do
   desc "Video conferencing for the digital workplace"
   homepage "https://www.bluejeans.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-22", because: :no_longer_available
 
   depends_on macos: ">= :catalina"
