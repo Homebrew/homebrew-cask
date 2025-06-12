@@ -7,6 +7,8 @@ cask "shortcutdetective" do
   desc "Detects which app receives a keyboard shortcut (hotkey)"
   homepage "https://www.irradiatedsoftware.com/labs/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-15", because: :unmaintained
 
   app "ShortcutDetective.app"
