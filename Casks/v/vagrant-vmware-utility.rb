@@ -12,6 +12,8 @@ cask "vagrant-vmware-utility" do
     regex(%r{href=["']?/?vagrant-vmware-utility/v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "VagrantVMwareUtility.pkg"
 
   uninstall script:  {
