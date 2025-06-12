@@ -13,6 +13,8 @@ cask "dmidiplayer" do
     regex(%r{url=.*?/dmidiplayer[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on formula: "fluid-synth"
   depends_on macos: ">= :catalina"
 
