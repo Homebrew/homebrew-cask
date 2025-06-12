@@ -7,6 +7,8 @@ cask "loop" do
   desc "Window manager"
   homepage "https://github.com/MrKai77/Loop"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :ventura"
 
