@@ -26,6 +26,8 @@ cask "secure-pipes" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Secure Pipes.app"
 
   caveats do
