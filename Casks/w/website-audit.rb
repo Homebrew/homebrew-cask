@@ -11,6 +11,8 @@ cask "website-audit" do
     url "https://code.europa.eu/edpb/website-auditing-tool.git"
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "website-audit.app"
