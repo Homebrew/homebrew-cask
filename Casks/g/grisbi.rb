@@ -13,6 +13,8 @@ cask "grisbi" do
     regex(%r{url=.*?/Grisbi[^"' >]*?[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Grisbi.app"
 
   zap trash: [
