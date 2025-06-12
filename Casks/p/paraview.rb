@@ -26,6 +26,8 @@ cask "paraview" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   app "ParaView-#{version.csv.first}.app"
