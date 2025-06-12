@@ -12,6 +12,8 @@ cask "cursorsense" do
     regex(%r{href=.*?/CursorSensev?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "CursorSense.app"
