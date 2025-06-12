@@ -12,6 +12,8 @@ cask "todour" do
     regex(/href=.*?Todour[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Todour.app"
