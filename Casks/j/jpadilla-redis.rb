@@ -8,6 +8,8 @@ cask "jpadilla-redis" do
   desc "App wrapper for Redis"
   homepage "https://jpadilla.github.io/redisapp/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-04-15", because: :unmaintained
 
   app "Redis.app"
