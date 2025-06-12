@@ -26,6 +26,8 @@ cask "db-browser-for-sqlite@nightly" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "DB Browser for SQLite Nightly.app"
 
   zap trash: [
