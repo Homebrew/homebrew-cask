@@ -22,6 +22,8 @@ cask "playonmac" do
   desc "Allows installation and use of software designed for Windows"
   homepage "https://www.playonmac.com/"
 
+  no_autobump! because: :requires_manual_review
+
   app "PlayOnMac.app"
 
   zap trash: [
