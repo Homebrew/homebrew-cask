@@ -8,6 +8,8 @@ cask "magiccap" do
   desc "Image/GIF capture suite"
   homepage "https://magiccap.me/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :unmaintained
 
   app "MagicCap.app"
