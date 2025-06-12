@@ -7,6 +7,8 @@ cask "trilium-notes" do
   desc "Personal knowledge base"
   homepage "https://github.com/zadam/trilium"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-04-05", because: :unmaintained, replacement_cask: "triliumnext-notes"
 
   depends_on macos: ">= :high_sierra"
