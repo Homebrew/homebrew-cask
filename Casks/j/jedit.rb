@@ -8,6 +8,8 @@ cask "jedit" do
   desc "Text editor"
   homepage "https://www.jedit.org/"
 
+  no_autobump! because: :requires_manual_review
+
   app "jEdit.app"
 
   zap trash: [
