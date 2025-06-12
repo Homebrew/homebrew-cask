@@ -8,6 +8,8 @@ cask "swiftybeaver" do
   desc "Swift logging"
   homepage "https://swiftybeaver.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "SwiftyBeaver.app"
