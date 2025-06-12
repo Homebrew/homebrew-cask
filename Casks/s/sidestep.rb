@@ -7,6 +7,8 @@ cask "sidestep" do
   name "Sidestep"
   homepage "https://chetansurpur.com/projects/sidestep/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-09-08", because: :unmaintained
 
   app "Sidestep.app"
