@@ -9,6 +9,8 @@ cask "around" do
   desc "Video calls designed for energy, ideas and action"
   homepage "https://www.around.co/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2025-04-20", because: :discontinued
 
   auto_updates true
