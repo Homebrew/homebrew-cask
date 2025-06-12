@@ -8,6 +8,8 @@ cask "kitematic" do
   desc "Visual user interface for Docker Container management"
   homepage "https://kitematic.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-12-16", because: :discontinued
 
   app "Kitematic.app"
