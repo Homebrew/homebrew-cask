@@ -8,6 +8,8 @@ cask "cumulus" do
   desc "SoundCloud player that lives in the menu bar"
   homepage "https://gillesdemey.github.io/Cumulus/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-04-21", because: :unmaintained
 
   app "Cumulus.app"
