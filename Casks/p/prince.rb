@@ -12,6 +12,8 @@ cask "prince" do
     regex(/>\s*Prince\s+v?(\d+(?:\.\d+)*)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/prince-#{version}-macos/prince.wrapper.sh"
   binary shimscript, target: "prince"
