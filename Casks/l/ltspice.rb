@@ -12,6 +12,8 @@ cask "ltspice" do
     regex(/for\s+MacOS[\s\S]*Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "LTspice.pkg"
 
   uninstall pkgutil: [
