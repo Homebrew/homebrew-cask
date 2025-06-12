@@ -20,6 +20,8 @@ cask "mfiles" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "爱传送.app"
 
   uninstall quit: "com.windtune.itransfer"
