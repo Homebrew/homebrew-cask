@@ -70,6 +70,8 @@ cask "displaylink" do
   desc "Drivers for DisplayLink docks, adapters and monitors"
   homepage "https://www.synaptics.com/products/displaylink-graphics"
 
+  no_autobump! because: :requires_manual_review
+
   uninstall launchctl: [
               "73YQY62QM3.com.displaylink.DisplayLinkAPServer",
               "com.displaylink.displaylinkmanager",
