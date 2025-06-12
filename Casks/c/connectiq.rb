@@ -20,6 +20,8 @@ cask "connectiq" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/ConnectIQ.app"
   app "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/MonkeyMotion.app"
   binary "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/monkeybrains.jar"
