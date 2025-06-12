@@ -17,6 +17,8 @@ cask "liviable" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on arch: :arm64
   depends_on macos: ">= :ventura"
 
