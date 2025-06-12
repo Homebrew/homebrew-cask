@@ -13,6 +13,8 @@ cask "android-ndk" do
     regex(/Latest\b(?!\s+Beta|\s+Pre-Release).*?r(\d+[a-z]?)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
   preflight do
