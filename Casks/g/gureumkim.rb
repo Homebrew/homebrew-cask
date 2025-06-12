@@ -13,6 +13,8 @@ cask "gureumkim" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "Gureum-#{version}.pkg"
 
   uninstall pkgutil: "org.youknowone.inputmethod.Gureum"
