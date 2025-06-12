@@ -13,6 +13,8 @@ cask "dd-utility" do
     strategy :page_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "dd Utility.app"
 
   zap trash: "~/Library/Saved Application State/co.za.thefanclub.ddUtility.savedState"
