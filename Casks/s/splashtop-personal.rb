@@ -13,6 +13,8 @@ cask "splashtop-personal" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "Splashtop Personal.pkg"
 
   uninstall launchctl: "com.splashtop.stp.macosx.helper.autoupdate",
