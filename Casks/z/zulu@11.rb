@@ -24,6 +24,8 @@ cask "zulu@11" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "Double-Click to Install Azul Zulu JDK #{version.major}.pkg"
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
