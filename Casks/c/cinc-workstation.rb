@@ -42,6 +42,8 @@ cask "cinc-workstation" do
   desc "Installer for Chef infrastructure management tools"
   homepage "https://cinc.sh/start/workstation/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   pkg "cinc-workstation-#{version}-1.#{arch}.pkg"
