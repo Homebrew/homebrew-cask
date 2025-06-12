@@ -8,6 +8,8 @@ cask "jubler" do
   desc "Subtitle editor"
   homepage "https://www.jubler.org/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Jubler.app"
 
   zap trash: [
