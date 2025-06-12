@@ -12,6 +12,8 @@ cask "eiskaltdcpp" do
     regex(%r{url=.*?/EiskaltDC%2B%2B[._-]v?(\d+(?:\.\d+)+)(?:-[^"']+?)?\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "EiskaltDC++.app"
 
   zap trash: [
