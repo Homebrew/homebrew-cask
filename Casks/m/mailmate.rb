@@ -13,6 +13,8 @@ cask "mailmate" do
     regex(/Revision\s(\d+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   conflicts_with cask: "mailmate@beta"
 
