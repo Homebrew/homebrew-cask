@@ -23,6 +23,8 @@ cask "signet" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "#{token}#{version.csv.first.no_dots}/Signet.app"
