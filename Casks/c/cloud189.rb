@@ -19,6 +19,8 @@ cask "cloud189" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "天翼云盘.app"
 
   uninstall quit: "com.cnki.cnkiexpress"
