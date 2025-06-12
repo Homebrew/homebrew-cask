@@ -13,6 +13,8 @@ cask "godot@3" do
     regex(/^v?(3(?:\.\d+)+)[._-]stable$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "godot"
   depends_on macos: ">= :sierra"
 
