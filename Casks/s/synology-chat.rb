@@ -14,6 +14,8 @@ cask "synology-chat" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Synology Chat.app"
 
   zap trash: "~/Library/Application Support/Synology Chat"
