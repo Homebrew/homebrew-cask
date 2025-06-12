@@ -10,6 +10,8 @@ cask "matterhorn" do
   desc "Unix terminal client for Mattermost"
   homepage "https://github.com/matterhorn-chat/matterhorn"
 
+  no_autobump! because: :requires_manual_review
+
   binary "matterhorn-#{version}-Darwin-#{arch}/matterhorn"
 
   # No zap stanza required
