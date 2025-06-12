@@ -13,6 +13,8 @@ cask "db-browser-for-sqlite" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "DB Browser for SQLite.app"
 
   zap trash: [
