@@ -11,6 +11,8 @@ cask "nomad" do
     regex(/NoMAD\s+Downloads[^<]*Current\s+Version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "NoMAD.pkg"
 
   uninstall pkgutil: "com.trusourcelabs.NoMAD"
