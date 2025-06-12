@@ -18,6 +18,8 @@ cask "devolo-cockpit" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   installer manual: "#{staged_path}/devolo Cockpit Installation.app"
 
   uninstall script: {
