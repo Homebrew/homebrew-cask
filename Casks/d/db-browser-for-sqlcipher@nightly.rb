@@ -13,6 +13,8 @@ cask "db-browser-for-sqlcipher@nightly" do
     regex(/^DB[._-]Browser[._-]for[._-]SQLCipher[._-]universal[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "DB Browser for SQLCipher Nightly.app"
 
   zap trash: [
