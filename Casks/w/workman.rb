@@ -8,6 +8,8 @@ cask "workman" do
   desc "Alternative English keyboard layout"
   homepage "https://workmanlayout.org/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-06-21", because: :unmaintained
 
   keyboard_layout "Workman-master/mac/Workman.bundle"
