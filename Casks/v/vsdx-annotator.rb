@@ -12,6 +12,8 @@ cask "vsdx-annotator" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
