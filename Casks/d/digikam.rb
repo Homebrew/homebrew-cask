@@ -16,6 +16,8 @@ cask "digikam" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "digiKam-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: [
