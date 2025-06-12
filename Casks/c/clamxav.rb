@@ -12,6 +12,8 @@ cask "clamxav" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   pkg "ClamXAV_#{version.csv.first}_#{version.csv.second}_Installer.pkg"
