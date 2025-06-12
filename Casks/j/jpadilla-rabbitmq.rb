@@ -8,6 +8,8 @@ cask "jpadilla-rabbitmq" do
   desc "App wrapper for RabbitMQ"
   homepage "https://jpadilla.github.io/rabbitmqapp/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-04-15", because: :unmaintained
 
   app "RabbitMQ.app"
