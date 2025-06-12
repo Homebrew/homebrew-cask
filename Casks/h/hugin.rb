@@ -8,6 +8,8 @@ cask "hugin" do
   desc "Panorama photo stitcher"
   homepage "https://hugin.sourceforge.io/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-11-10", because: :unmaintained
 
   suite "Hugin"
