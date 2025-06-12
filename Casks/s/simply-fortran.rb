@@ -38,6 +38,8 @@ cask "simply-fortran" do
     regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Simply Fortran.app"
 
   zap trash: [
