@@ -7,6 +7,8 @@ cask "play" do
   name "Play"
   homepage "https://pmsaue0.github.io/play/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-28", because: :discontinued
 
   app "Play.app"
