@@ -18,6 +18,8 @@ cask "dorico" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on cask: [
     "steinberg-activation-manager",
