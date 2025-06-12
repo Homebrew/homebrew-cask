@@ -13,6 +13,8 @@ cask "krita" do
     regex(/href=.*?krita[._-]v?(\d+(?:\.\d+)+)(?:-signed|-release)?\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "krita.app"
