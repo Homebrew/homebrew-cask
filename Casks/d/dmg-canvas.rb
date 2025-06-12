@@ -13,6 +13,8 @@ cask "dmg-canvas" do
     regex(/href=.*?DMGCanvas[._-]?v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   app "DMG Canvas.app"
