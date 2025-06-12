@@ -7,6 +7,8 @@ cask "nanostudio" do
   desc "Music production for 32 bit iOS devices"
   homepage "https://www.blipinteractive.co.uk/nanostudio1/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "NanoStudio.app"
