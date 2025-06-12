@@ -7,6 +7,8 @@ cask "ejector" do
   desc "Adds an Eject icon to the menu bar"
   homepage "https://www.jeb.com.fr/en/ejector.shtml"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-10", because: "is 32-bit only"
 
   app "Ejector.app"
