@@ -2,7 +2,7 @@ cask "messenger" do
   version "510.0.0.1.116"
   sha256 :no_check
 
-  url "https://www.messenger.com/messenger/desktop/downloadV2/?platform=mac"
+  url "https://www.messenger.com/messenger/desktop/downloadV2/?platform=mac&variant=catalyst"
   name "Facebook Messenger"
   desc "Native desktop app for Messenger (formerly Facebook Messenger)"
   homepage "https://www.messenger.com/desktop"
@@ -13,7 +13,7 @@ cask "messenger" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Messenger.app"
 
