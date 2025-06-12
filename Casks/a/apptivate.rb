@@ -12,6 +12,8 @@ cask "apptivate" do
     regex(/Apptivate\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Apptivate.app"
 
   zap trash: [
