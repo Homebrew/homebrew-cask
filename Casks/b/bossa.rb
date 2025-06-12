@@ -7,6 +7,8 @@ cask "bossa" do
   name "bossa"
   homepage "https://www.shumatech.com/web/products/bossa"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-11-03", because: :unmaintained
 
   app "BOSSA.app"
