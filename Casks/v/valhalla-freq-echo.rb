@@ -16,6 +16,8 @@ cask "valhalla-freq-echo" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "ValhallaFreqEchoOSX.pkg"
 
   uninstall pkgutil: "com.valhalladsp.FreqEcho.pkg.*"
