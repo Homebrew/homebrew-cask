@@ -8,6 +8,8 @@ cask "vu" do
   desc "Instagram client"
   homepage "https://datastills.com/vu/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-11-01", because: :unmaintained
 
   depends_on macos: ">= :sierra"
