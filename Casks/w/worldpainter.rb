@@ -12,6 +12,8 @@ cask "worldpainter" do
     regex(%r{href=.*?/files/worldpainter[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :el_capitan"
 
   app "WorldPainter.app"
