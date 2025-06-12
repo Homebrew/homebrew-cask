@@ -7,6 +7,8 @@ cask "sqlexplorer" do
   desc "SQL Client for JDBC compliant databases"
   homepage "https://eclipsesql.sourceforge.net/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-17", because: "is 32-bit only"
 
   app "SQLExplorer/sqlexplorer.app"
