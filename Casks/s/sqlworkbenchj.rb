@@ -14,6 +14,8 @@ cask "sqlworkbenchj" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "SQLWorkbenchJ.app"
 
   # No zap stanza required
