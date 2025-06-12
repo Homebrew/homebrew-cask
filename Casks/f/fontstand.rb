@@ -18,6 +18,8 @@ cask "fontstand" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Fontstand.app"
 
   zap trash: [
