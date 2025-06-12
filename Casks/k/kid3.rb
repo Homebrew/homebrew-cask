@@ -22,6 +22,8 @@ cask "kid3" do
   desc "Audio tagger focusing on efficiency"
   homepage "https://kid3.kde.org/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "kid3.app"
