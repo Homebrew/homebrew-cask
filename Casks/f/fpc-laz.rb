@@ -16,6 +16,8 @@ cask "fpc-laz" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with formula: "fpc"
 
   pkg "fpc-#{version.csv.first}-intelarm64-macosx.mpkg/Contents/Packages/fpc-#{version.csv.first}-intelarm64-macosx.pkg"
