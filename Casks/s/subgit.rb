@@ -12,6 +12,8 @@ cask "subgit" do
     regex(%r{/subgit[._-]?v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   binary "subgit-#{version}/bin/subgit"
 
   zap trash: "~/.subgit"
