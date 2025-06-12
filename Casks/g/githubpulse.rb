@@ -8,6 +8,11 @@ cask "githubpulse" do
   homepage "https://github.com/tadeuzagallo/GithubPulse"
 
   deprecate! date: "2024-06-12", because: :unmaintained
+  disable! date: "2025-06-12", because: :unmaintained
 
   app "GithubPulse.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
