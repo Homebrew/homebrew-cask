@@ -12,6 +12,8 @@ cask "netlogo" do
     regex(/NetLogo\s*(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   suite "NetLogo #{version}"
 
   zap trash: [
