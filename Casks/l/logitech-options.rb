@@ -78,6 +78,8 @@ cask "logitech-options" do
   desc "Software for Logitech devices"
   homepage "https://support.logitech.com/software/options"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
