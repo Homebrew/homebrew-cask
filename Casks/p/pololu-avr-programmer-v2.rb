@@ -15,6 +15,8 @@ cask "pololu-avr-programmer-v2" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :el_capitan"
 
   pkg "pololu-usb-avr-programmer-v2-#{version.csv.second}-macos.pkg"
