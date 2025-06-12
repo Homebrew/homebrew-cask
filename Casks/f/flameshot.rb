@@ -8,6 +8,8 @@ cask "flameshot" do
   desc "Screenshot software"
   homepage "https://flameshot.org/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "flameshot.app"
