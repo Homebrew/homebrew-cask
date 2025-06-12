@@ -8,6 +8,8 @@ cask "mos" do
   desc "Smooths scrolling and set mouse scroll directions independently"
   homepage "https://mos.caldis.me/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Mos.app"
 
   zap trash: "~/Library/Preferences/com.caldis.Mos.plist"
