@@ -7,6 +7,8 @@ cask "nocturne" do
   desc "Adjust display colours to suit low light conditions"
   homepage "https://github.com/Daij-Djan/nocturne"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-27", because: :unmaintained
 
   app "Nocturne.app"
