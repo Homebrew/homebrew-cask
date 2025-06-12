@@ -12,6 +12,8 @@ cask "bepo" do
     regex(/href=.*?fr[._-]dvorak[._-]bepo[._-]macosx[._-]v?(\d+(?:\.\d+)+(?:rc\d+)?)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   keyboard_layout "bepo #{version.gsub(/rc\d+/i, "")}.bundle"
 
   # No zap stanza required
