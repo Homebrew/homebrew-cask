@@ -11,6 +11,8 @@ cask "stretchly" do
   desc "Break time reminder app"
   homepage "https://hovancik.net/stretchly/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   app "Stretchly.app"
