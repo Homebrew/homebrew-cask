@@ -66,6 +66,8 @@ cask "mysql-shell" do
   desc "Interactive JavaScript, Python or SQL interface"
   homepage "https://dev.mysql.com/downloads/shell/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   pkg "mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.pkg"
