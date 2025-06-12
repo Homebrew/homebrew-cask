@@ -19,6 +19,8 @@ cask "my-image-garden" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "My Image Garden V#{version.csv.first.no_dots}.pkg"
 
   uninstall quit:    "jp.co.canon.MyImageGarden",
