@@ -13,6 +13,8 @@ cask "mac-mouse-fix" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   conflicts_with cask: "mac-mouse-fix@2"
   depends_on macos: ">= :mojave"
