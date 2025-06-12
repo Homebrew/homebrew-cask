@@ -23,6 +23,8 @@ cask "autofirma" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   # See https://github.com/Homebrew/homebrew-cask/pull/116137#issuecomment-998220031
   installer manual: "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
 
