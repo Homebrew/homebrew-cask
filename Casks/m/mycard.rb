@@ -13,6 +13,8 @@ cask "mycard" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "MyCard.app"
 
   zap trash: [
