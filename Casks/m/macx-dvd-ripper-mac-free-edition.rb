@@ -7,6 +7,8 @@ cask "macx-dvd-ripper-mac-free-edition" do
   desc "DVD ripping application"
   homepage "https://www.macxdvd.com/dvd-ripper-mac-free/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-15", because: "is 32-bit only"
 
   app "MacX DVD Ripper Mac Free Edition.app"
