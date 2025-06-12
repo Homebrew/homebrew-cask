@@ -8,6 +8,8 @@ cask "microsoft-teams@classic" do
   desc "Meet, chat, call, and collaborate in just one place"
   homepage "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-03", because: :discontinued
 
   auto_updates true
