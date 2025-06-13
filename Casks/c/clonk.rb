@@ -8,6 +8,8 @@ cask "clonk" do
   desc "Single player and multiplayer action game"
   homepage "http://www.clonk.de/cr.php"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-05", because: "is 32-bit only"
 
   app "Clonk.app"

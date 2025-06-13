@@ -13,6 +13,8 @@ cask "cinco" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "Install Cinco.pkg"
 
   uninstall quit:    "de.jabc.cinco.meta.product.product",

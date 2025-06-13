@@ -13,6 +13,8 @@ cask "chime@alpha" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   conflicts_with cask: "chime"
   depends_on macos: ">= :sonoma"

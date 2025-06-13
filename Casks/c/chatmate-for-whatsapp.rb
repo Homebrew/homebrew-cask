@@ -8,6 +8,8 @@ cask "chatmate-for-whatsapp" do
   desc "Extension app WhatsApp"
   homepage "https://chatmate.io/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-03-30", because: :unmaintained
 
   depends_on macos: ">= :sierra"

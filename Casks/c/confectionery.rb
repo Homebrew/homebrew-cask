@@ -15,6 +15,8 @@ cask "confectionery" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Confectionery.app"
 
   zap trash: [

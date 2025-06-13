@@ -12,6 +12,8 @@ cask "charles" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "charles@4"
 
   app "Charles.app"

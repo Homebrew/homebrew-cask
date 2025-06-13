@@ -12,6 +12,8 @@ cask "cheetah3d" do
     regex(%r{Download\s<br/>Cheetah3D\s(\d+(?:\.\d+)+)}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "Cheetah3D.app"

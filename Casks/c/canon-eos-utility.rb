@@ -28,6 +28,8 @@ cask "canon-eos-utility" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   installer manual: "eum#{version.csv.first.major_minor_patch}-installer.app"

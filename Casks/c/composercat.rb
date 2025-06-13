@@ -7,6 +7,8 @@ cask "composercat" do
   desc "Graphical interface for Composer (PHP)"
   homepage "https://getcomposercat.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "Composercat.app"

@@ -8,6 +8,8 @@ cask "code-notes" do
   desc "Code snippet manager"
   homepage "https://lauthieb.github.io/code-notes/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-12-16", because: :discontinued
 
   app "Code Notes.app"

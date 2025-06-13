@@ -12,6 +12,8 @@ cask "coolterm" do
     regex(/^\s*v?(\d+(?:\.\d+)+)\s*$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "CoolTerm.app"

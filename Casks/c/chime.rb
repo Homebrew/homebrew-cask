@@ -12,6 +12,8 @@ cask "chime" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   conflicts_with cask: "chime@alpha"
   depends_on macos: ">= :monterey"

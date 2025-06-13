@@ -85,6 +85,8 @@ cask "cocktail" do
   desc "Cleans, repairs and optimises computer systems"
   homepage "https://www.maintain.se/cocktail/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Cocktail.app"
 
   zap trash: [

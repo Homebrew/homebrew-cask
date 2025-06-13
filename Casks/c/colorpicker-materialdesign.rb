@@ -7,6 +7,8 @@ cask "colorpicker-materialdesign" do
   desc "Colour picker"
   homepage "https://github.com/CodeCatalyst/MaterialDesignColorPicker"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :el_capitan"
 
   colorpicker "MaterialDesignColorPicker.colorPicker"
