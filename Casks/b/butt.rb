@@ -12,6 +12,8 @@ cask "butt" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "butt.app"
 
   zap trash: "~/.buttrc"

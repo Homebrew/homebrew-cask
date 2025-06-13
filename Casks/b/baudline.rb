@@ -7,6 +7,8 @@ cask "baudline" do
   desc "Time-frequency browser"
   homepage "https://www.baudline.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-09", because: :no_longer_meets_criteria
 
   app "baudline.app"

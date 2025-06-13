@@ -7,6 +7,8 @@ cask "bit-fiddle" do
   desc "Converts decimal, hexadecimal, binary numbers and ASCII characters"
   homepage "https://manderc.com/apps/bitfiddle/index_eng.php"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-05-12", because: :moved_to_mas
 
   app "Bit Fiddle.app"

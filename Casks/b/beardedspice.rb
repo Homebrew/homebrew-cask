@@ -7,6 +7,8 @@ cask "beardedspice" do
   desc "Control web-based media players with media keys"
   homepage "https://github.com/beardedspice/beardedspice/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-09", because: :unmaintained
 
   auto_updates true

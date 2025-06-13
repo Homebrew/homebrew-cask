@@ -21,6 +21,8 @@ cask "btp" do
     regex(/btp[._-]cli[._-]#{os}[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   binary "#{os}-#{arch}/btp"
 
   # No zap stanza required

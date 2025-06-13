@@ -8,6 +8,8 @@ cask "brl-cad-mged" do
   desc "Solid modelling system"
   homepage "https://brlcad.org/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-09", because: :discontinued
 
   depends_on cask: "xquartz"

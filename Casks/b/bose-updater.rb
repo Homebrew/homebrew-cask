@@ -14,6 +14,8 @@ cask "bose-updater" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Bose Updater.app"
 
   uninstall quit: [

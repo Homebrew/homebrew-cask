@@ -8,6 +8,8 @@ cask "box-sync" do
   desc "Cloud based collaboration and management platform focusing on security"
   homepage "https://www.box.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-26", because: :discontinued
 
   conflicts_with cask: "box-drive"

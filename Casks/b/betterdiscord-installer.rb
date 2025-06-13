@@ -8,6 +8,8 @@ cask "betterdiscord-installer" do
   desc "Installer for BetterDiscord"
   homepage "https://betterdiscord.app/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on cask: "discord"
 
   app "BetterDiscord.app"

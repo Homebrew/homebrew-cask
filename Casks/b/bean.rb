@@ -14,6 +14,8 @@ cask "bean" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Bean-Install-#{version.dots_to_hyphens}/Bean.app"

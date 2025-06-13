@@ -12,6 +12,8 @@ cask "blink1control" do
   desc "Utility to control blink(1) USB RGB LED devices"
   homepage "https://blink1.thingm.com/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :el_capitan"
 
   app "Blink1Control#{version.major}.app"

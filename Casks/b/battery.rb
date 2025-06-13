@@ -7,6 +7,8 @@ cask "battery" do
   desc "App for managing battery charging. (Also installs a CLI on first use.)"
   homepage "https://github.com/actuallymentor/battery/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :catalina"
   depends_on arch: :arm64
