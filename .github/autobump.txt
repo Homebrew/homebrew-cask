@@ -1587,6 +1587,7 @@ tabtab
 tagspaces
 tailscale
 tandem
+tartelet
 taskade
 taskbar
 tastytrade
