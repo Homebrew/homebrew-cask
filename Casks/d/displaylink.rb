@@ -46,8 +46,8 @@ cask "displaylink" do
     end
   end
   on_monterey :or_newer do
-    version "1.12.3,2025-05"
-    sha256 "022c3a023890ca98cdf0d80328fbd14d3d46c8939eacd520c62b958ad8ac082a"
+    version "1.12.4,2025-06"
+    sha256 "8244e87e44b9797f4c5c454646ae696da06f1bee585306072b2b61fc55c37a7b"
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.zip"
 
