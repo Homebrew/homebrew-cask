@@ -13,6 +13,7 @@ cask "find-any-file" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Find Any File.app"
