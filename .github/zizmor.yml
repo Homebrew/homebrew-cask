@@ -4,4 +4,3 @@ rules:
     config:
       policies:
         Homebrew/actions/*: ref-pin
-

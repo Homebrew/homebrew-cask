@@ -5,4 +5,3 @@ extensions:
       extensible: trustedActionsOwnerDataModel
     data:
       - ["Homebrew"]
-
