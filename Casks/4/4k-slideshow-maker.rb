@@ -12,6 +12,8 @@ cask "4k-slideshow-maker" do
     regex(/href=.*?4kslideshowmaker[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "4K Slideshow Maker.app"

@@ -12,6 +12,8 @@ cask "1kc-razer" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Razer macOS.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "7777" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   binary "7777"
 
   # No zap stanza required
