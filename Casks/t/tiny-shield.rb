@@ -19,6 +19,7 @@ cask "tiny-shield" do
   app "Tiny Shield.app"
 
   zap trash: [
+    "/Library/Application Support/com.proxyman.ProxymanGuard",
     "~/Library/Application Support/com.proxyman.ProxymanGuard",
     "~/Library/Caches/com.proxyman.ProxymanGuard",
     "~/Library/HTTPStorages/com.proxyman.ProxymanGuard",
