@@ -1,25 +1,19 @@
 cask "flrig" do
-  version "2.0.05"
+  version "2.0.06"
+  sha256 "e7f1cc6e6e97ce1fe4818896eb67544678d18220fdac0111dc69e399e66efd12"
 
-  on_sierra :or_older do
-    sha256 "5c8bcb3c3d0c33183fad9a86a894f66a226e8614659b020f49b4b28f34551a5f"
-
-    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_LI.dmg"
-  end
-  on_high_sierra :or_newer do
-    sha256 "71469b06d3d941985465857257dadd94ae880a526c8973874324b9362d73a1a0"
-
-    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_VN.dmg"
-  end
-
+  url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}.dmg",
+      verified: "sourceforge.net/fldigi/"
   name "flrig"
   desc "Ham radio rig control"
-  homepage "https://sourceforge.net/projects/fldigi/files/flrig/"
+  homepage "https://www.w1hkj.org/"
 
   livecheck do
     url "https://sourceforge.net/projects/fldigi/rss?path=/flrig"
     regex(%r{url=.*?/flrig[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "flrig-#{version}.app"
 
