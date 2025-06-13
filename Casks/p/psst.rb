@@ -2,7 +2,7 @@ cask "psst" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/jpochyla/psst/releases/download/rolling/Psst.dmg"
+  url "https://github.com/jpochyla/psst/releases/latest/download/Psst.dmg"
   name "Psst"
   desc "Spotify client"
   homepage "https://github.com/jpochyla/psst/"
