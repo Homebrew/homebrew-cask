@@ -80,4 +80,3 @@ jobs:
           exempt-pr-labels: "help wanted,in progress"
           any-of-labels: "bump-formula-pr,bump-cask-pr"
           delete-branch: true
-
