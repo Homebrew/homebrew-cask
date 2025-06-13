@@ -1,6 +1,6 @@
 cask "keymanager" do
-  version "4.5.5"
-  sha256 "873dac496d9dfdc07ed1bd3ef12bb87d15f7cbf6c5996f9c53f096c660cb920c"
+  version "4.5.9"
+  sha256 "a91b7fa1a4774d089f2918cacb95a94adbecf0c6f30aa1ba4211f58662139e54"
 
   url "https://keymanager.trustasia.com/release/KeyManager-#{version}.dmg",
       verified: "keymanager.trustasia.com/"
@@ -9,7 +9,7 @@ cask "keymanager" do
   homepage "https://keymanager.org/"
 
   livecheck do
-    url "https://keymanager.org/release/latest.yml"
+    url "https://keymanager.trustasia.com/release/latest-mac.yml"
     strategy :electron_builder
   end
 
