@@ -13,6 +13,8 @@ cask "affinity-designer@1" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Affinity Designer.app"

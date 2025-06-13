@@ -19,6 +19,8 @@ cask "aw-edid-editor" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "AW EDID Editor.app"

@@ -6,6 +6,8 @@ cask "apptrap" do
   name "AppTrap"
   homepage "http://onnati.net/apptrap/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-11-02", because: :unmaintained
 
   prefpane "AppTrap.prefPane"

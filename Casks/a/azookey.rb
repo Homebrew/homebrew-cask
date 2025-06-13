@@ -13,6 +13,8 @@ cask "azookey" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :ventura"
 
   pkg "azooKey-release-signed.pkg"

@@ -12,6 +12,8 @@ cask "audiogridder-plugin" do
     regex(/(\d+(?:[._]\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "AudioGridderPlugin_#{version}_macOS-universal.pkg"
 
   uninstall pkgutil: [

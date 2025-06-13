@@ -13,6 +13,8 @@ cask "activitywatch" do
     regex(/href=.*?activitywatch[._-]v?(\d+(?:\.\d+)+)-macos-x86_64\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "ActivityWatch.app"
 
   zap trash: [

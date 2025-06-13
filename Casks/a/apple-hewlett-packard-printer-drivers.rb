@@ -19,6 +19,8 @@ cask "apple-hewlett-packard-printer-drivers" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "HewlettPackardPrinterDrivers.pkg"
 
   uninstall quit:    [

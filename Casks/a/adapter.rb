@@ -12,6 +12,8 @@ cask "adapter" do
     regex(%r{href=.*?/Adapter[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Adapter.app"
 
   zap trash: [

@@ -16,6 +16,8 @@ cask "anka-build-cloud-controller" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "anka-controller-#{arch}-#{version}.pkg"
 
   uninstall script: {

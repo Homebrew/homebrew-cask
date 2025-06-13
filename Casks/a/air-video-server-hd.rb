@@ -13,6 +13,8 @@ cask "air-video-server-hd" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Air Video Server HD.app"

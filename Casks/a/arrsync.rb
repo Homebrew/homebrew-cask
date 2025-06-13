@@ -7,6 +7,8 @@ cask "arrsync" do
   desc "Graphical front end for the utility rsync"
   homepage "https://arrsync.sourceforge.net/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-09", because: "is 32-bit only"
 
   app "arRsync.app"

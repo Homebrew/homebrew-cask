@@ -7,6 +7,8 @@ cask "aether" do
   desc "Peer-to-peer ephemeral public communities"
   homepage "https://getaether.net/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-10", because: :no_longer_available
 
   app "Aether.app"

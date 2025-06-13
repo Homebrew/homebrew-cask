@@ -13,6 +13,8 @@ cask "aqua-data-studio" do
     regex(/>\s*Version\s?v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Aqua Data Studio.app"
 
   zap trash: [

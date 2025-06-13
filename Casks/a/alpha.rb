@@ -8,6 +8,8 @@ cask "alpha" do
   desc "Text editor based on Apple's Cocoa framework"
   homepage "https://alphacocoa.sourceforge.io/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Alpha.app"
 
   zap trash: [
