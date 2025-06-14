@@ -12,6 +12,8 @@ cask "fastdmg" do
     regex(/href=.*?FastDMG[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :el_capitan"
 
   app "FastDMG.app"

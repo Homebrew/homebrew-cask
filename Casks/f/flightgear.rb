@@ -19,6 +19,8 @@ cask "flightgear" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "FlightGear.app"
 
   zap trash: "~/Library/Application Support/FlightGear"

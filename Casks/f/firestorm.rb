@@ -11,6 +11,8 @@ cask "firestorm" do
     skip "No version information available"
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "Firestorm-Releasex64.app"

@@ -12,6 +12,8 @@ cask "fabfilter-volcano" do
     regex(/FabFilter\s+Volcano.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   pkg "FabFilter Volcano #{version} Installer.pkg"

@@ -7,6 +7,8 @@ cask "fontplop" do
   desc "Open Source Webfont Converter"
   homepage "https://github.com/matthewgonzalez/fontplop"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-10", because: :unmaintained
 
   app "fontplop.app"

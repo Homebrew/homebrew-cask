@@ -19,6 +19,8 @@ cask "flame" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   app "Flame.app"
