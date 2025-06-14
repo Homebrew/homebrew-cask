@@ -6,6 +6,8 @@ cask "font-mona-sans" do
   name "Mona Sans"
   homepage "https://github.com/mona-sans"
 
+  no_autobump! because: :requires_manual_review
+
   font "MonaSans/OTF/MonaSans-Black.otf"
   font "MonaSans/OTF/MonaSans-BlackItalic.otf"
   font "MonaSans/OTF/MonaSans-Bold.otf"
