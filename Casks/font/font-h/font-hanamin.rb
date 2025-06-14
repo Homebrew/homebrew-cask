@@ -6,6 +6,8 @@ cask "font-hanamin" do
   name "HanaMin"
   homepage "https://glyphwiki.org/hanazono/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/href=.*hanazono[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
