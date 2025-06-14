@@ -6,6 +6,8 @@ cask "font-african-serif" do
   name "African Serif"
   homepage "https://www.languagegeek.com/font/fontdownload.html"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/African\s+Serif.*?\(\s*v?(\d+(?:\.\d+)+)[^)]*\)/i)
