@@ -6,6 +6,8 @@ cask "font-ark-pixel-16px-monospaced" do
   name "Ark Pixel 16px Monospaced"
   homepage "https://github.com/TakWolf/ark-pixel-font"
 
+  no_autobump! because: :requires_manual_review
+
   font "ark-pixel-16px-monospaced-ja.otf"
   font "ark-pixel-16px-monospaced-ko.otf"
   font "ark-pixel-16px-monospaced-latin.otf"
