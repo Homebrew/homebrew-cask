@@ -36,7 +36,7 @@ cask "konica-minolta-bizhub-c759-c658-c368-c287-c3851-driver" do
     pkg "C759_C658_C368_C287_C3851_#{version.major}.pkg"
   end
 
-  url "https://dl.konicaminolta.eu/en?tx_kmdownloadcentersite_downloadproxy[fileId]=#{version.csv.second}&tx_kmdownloadcentersite_downloadproxy[documentId]=#{version.csv.third}&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685"
+  url "https://dl.konicaminolta.eu/en?tx_kmdownloadproxy_downloadproxy[fileId]=#{version.csv.second}&tx_kmdownloadproxy_downloadproxy[documentId]=#{version.csv.third}&tx_kmdownloadproxy_downloadproxy[system]=KonicaMinolta&tx_kmdownloadproxy_downloadproxy[language]=EN&type=1558521685"
   name "Konica Minolta Bizhub C759/C658/C368/C287/C3851 Series Printer"
   desc "Drivers for Konica Monolta Bizhub printers"
   homepage "https://www.konicaminolta.eu/eu-en/support/download-centre"
