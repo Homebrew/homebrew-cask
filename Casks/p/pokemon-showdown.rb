@@ -6,6 +6,8 @@ cask "pokemon-showdown" do
   name "Pokémon Showdown"
   homepage "https://pokemonshowdown.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-06-07", because: :discontinued
 
   app "Pokemon Showdown.app"

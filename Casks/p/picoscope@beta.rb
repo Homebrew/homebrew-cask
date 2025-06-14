@@ -12,6 +12,8 @@ cask "picoscope@beta" do
     regex(/href=.*?PicoScope[._-]#{version.major}.*?Access[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "picoscope"
 
   pkg "PicoScope_#{version.major}_TandM_Early_Access_#{version}.pkg"

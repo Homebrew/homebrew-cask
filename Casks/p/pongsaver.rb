@@ -12,5 +12,7 @@ cask "pongsaver" do
     regex(/PongSaver\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   screen_saver "PongSaver.saver"
 end

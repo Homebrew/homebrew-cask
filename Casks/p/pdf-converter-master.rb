@@ -12,6 +12,8 @@ cask "pdf-converter-master" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "PDF Converter Master.app"
 
   zap trash: [

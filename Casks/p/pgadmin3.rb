@@ -9,6 +9,8 @@ cask "pgadmin3" do
   desc "Administration and development platform for PostgreSQL"
   homepage "https://www.pgadmin.org/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-06", because: "is 32-bit only"
 
   app "pgAdmin3.app"

@@ -12,6 +12,8 @@ cask "ppduck" do
     regex(/PPDuck.[._-]?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "PPDuck#{version.major}.app"
 
   zap trash: [

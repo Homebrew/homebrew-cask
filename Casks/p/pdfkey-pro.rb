@@ -12,6 +12,8 @@ cask "pdfkey-pro" do
     regex(/Version\s+(\d+(?:\.\d+)*)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "PDFKey Pro.app"
 
   zap trash: [

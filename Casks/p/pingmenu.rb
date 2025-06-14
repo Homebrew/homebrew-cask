@@ -7,6 +7,8 @@ cask "pingmenu" do
   desc "Utility that shows the current network latency in the menu bar"
   homepage "https://github.com/kalleboo/PingMenu"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-14", because: :unmaintained
 
   app "PingMenu.app"

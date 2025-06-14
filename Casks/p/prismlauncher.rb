@@ -18,6 +18,8 @@ cask "prismlauncher" do
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 

@@ -12,6 +12,8 @@ cask "pokemon-reborn" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Reborn.app"

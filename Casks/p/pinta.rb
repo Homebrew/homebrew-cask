@@ -11,6 +11,8 @@ cask "pinta" do
   desc "Simple Gtk# Paint Program"
   homepage "https://www.pinta-project.com/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Pinta.app"
 
   zap trash: [

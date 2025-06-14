@@ -12,6 +12,8 @@ cask "playcover-community@beta" do
     regex(/(\d+(?:\.\d+)+[._-]beta(\.\d+)?)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-05-01", because: :unsigned
 
   auto_updates true

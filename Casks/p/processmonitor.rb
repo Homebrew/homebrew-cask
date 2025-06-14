@@ -10,6 +10,8 @@ cask "processmonitor" do
 
   disable! date: "2025-06-12", because: :no_longer_available
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "ProcessMonitor.app"

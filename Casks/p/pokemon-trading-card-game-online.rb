@@ -8,6 +8,8 @@ cask "pokemon-trading-card-game-online" do
   desc "Play the Pokemon TCG online"
   homepage "https://www.pokemon.com/us/pokemon-tcg/play-online/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-07", because: :no_longer_available
 
   app "Pokemon Trading Card Game Online.app"

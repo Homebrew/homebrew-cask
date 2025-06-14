@@ -18,6 +18,8 @@ cask "presonus-universal-control" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   pkg "PreSonus Universal Control.pkg"

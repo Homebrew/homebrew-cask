@@ -12,6 +12,8 @@ cask "picoscope" do
     regex(%r{href=.*?/PicoScope[._-]#{version.major}[._-]T(?:and|n)M[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "picoscope@beta"
   depends_on macos: ">= :high_sierra"
 

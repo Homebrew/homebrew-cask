@@ -20,6 +20,8 @@ cask "post-haste" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Post Haste.app"
 
   zap trash: [

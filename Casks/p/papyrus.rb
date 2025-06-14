@@ -15,6 +15,8 @@ cask "papyrus" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "morkro-papyrus"
 
   app "Papyrus.app"

@@ -13,6 +13,8 @@ cask "powerpanel" do
     regex(/href=.*?PPP[._-]Mac[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   pkg "PPP_Mac_v#{version}.pkg"

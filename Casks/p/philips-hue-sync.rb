@@ -19,6 +19,8 @@ cask "philips-hue-sync" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "HueSyncInstaller_#{version.csv.first}.pkg"
 
   uninstall quit:    [
