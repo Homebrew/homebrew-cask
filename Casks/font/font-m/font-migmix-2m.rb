@@ -7,6 +7,8 @@ cask "font-migmix-2m" do
   name "MigMix 2M"
   homepage "https://itouhiro.github.io/mixfont-mplus-ipa/migmix/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(%r{href=.*?/download/v?(\d+(?:\.\d+)+)/migmix-2m[._-]}i)

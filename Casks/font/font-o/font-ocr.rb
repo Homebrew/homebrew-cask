@@ -6,6 +6,8 @@ cask "font-ocr" do
   name "OCR"
   homepage "https://tsukurimashou.org/ocr.php.en"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/href=.*ocr[._-]v?(\d+(?:\.\d+)*)\.zip/i)

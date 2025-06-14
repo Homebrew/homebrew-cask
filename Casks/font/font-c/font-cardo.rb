@@ -6,6 +6,8 @@ cask "font-cardo" do
   name "Cardo"
   homepage "https://scholarsfonts.net/cardofnt.html"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/Cardo\s+v?(\d+(?:\.\d+)+)/i)

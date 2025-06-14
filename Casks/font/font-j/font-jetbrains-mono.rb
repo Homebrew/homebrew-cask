@@ -7,6 +7,8 @@ cask "font-jetbrains-mono" do
   name "JetBrains Mono"
   homepage "https://www.jetbrains.com/lp/mono"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     strategy :gitHub_latest

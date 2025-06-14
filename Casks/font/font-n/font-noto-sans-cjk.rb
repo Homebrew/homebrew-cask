@@ -6,6 +6,8 @@ cask "font-noto-sans-cjk" do
   name "Noto Sans CJK"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Sans"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     regex(/^(?:Noto)?Sans[._-]?v?(\d+(?:\.\d+)+)$/i)

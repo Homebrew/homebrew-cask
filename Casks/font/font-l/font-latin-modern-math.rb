@@ -6,6 +6,8 @@ cask "font-latin-modern-math" do
   name "Latin Modern Math"
   homepage "https://www.gust.org.pl/projects/e-foundry/lm-math"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/lm-math/download"
     regex(/version\s+v?(\d+(?:\.\d+)+)/i)

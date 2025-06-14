@@ -7,6 +7,8 @@ cask "font-pixel-code" do
   name "Pixel Code"
   homepage "https://qwerasd205.github.io/PixelCode/"
 
+  no_autobump! because: :requires_manual_review
+
   font "otf/PixelCode.otf"
   font "otf/PixelCode-Black-Italic.otf"
   font "otf/PixelCode-Black.otf"

@@ -6,6 +6,8 @@ cask "font-liberation-nerd-font" do
   name "Literation Nerd Font families (Liberation Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     strategy :github_latest

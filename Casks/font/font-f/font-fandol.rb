@@ -6,6 +6,8 @@ cask "font-fandol" do
   name "Fandol"
   homepage "https://ctan.org/pkg/fandol"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/Version.*?>\s*v?(\d+(?:\.\d+)+)\s*</i)

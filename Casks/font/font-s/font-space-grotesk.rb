@@ -6,6 +6,8 @@ cask "font-space-grotesk" do
   name "Space Grotesk"
   homepage "https://github.com/floriankarsten/space-grotesk"
 
+  no_autobump! because: :requires_manual_review
+
   font "SpaceGrotesk-#{version}/otf/SpaceGrotesk-Bold.otf"
   font "SpaceGrotesk-#{version}/otf/SpaceGrotesk-Light.otf"
   font "SpaceGrotesk-#{version}/otf/SpaceGrotesk-Medium.otf"

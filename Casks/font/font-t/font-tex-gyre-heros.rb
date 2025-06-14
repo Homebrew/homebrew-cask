@@ -6,6 +6,8 @@ cask "font-tex-gyre-heros" do
   name "TeX Gyre Heros"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/heros"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole"
     regex(%r{Heros</a>,\sver\.\s(\d+(?:\.\d+)+)}i)

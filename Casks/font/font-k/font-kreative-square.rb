@@ -7,6 +7,8 @@ cask "font-kreative-square" do
   name "Kreative Square"
   homepage "https://www.kreativekorp.com/software/fonts/ksquare/"
 
+  no_autobump! because: :requires_manual_review
+
   font "KreativeSquare.ttf"
   font "KreativeSquareSM.ttf"
 

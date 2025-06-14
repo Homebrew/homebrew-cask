@@ -6,6 +6,8 @@ cask "font-noto-serif-cjk" do
   name "Noto Serif CJK"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Serif"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     regex(/^Serif[._-]?v?(\d+(?:\.\d+)+)$/i)

@@ -6,6 +6,8 @@ cask "font-ibm-plex-sans-thai-looped" do
   name "IBM Plex Sans Thai Looped"
   homepage "https://github.com/IBM/plex"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     regex(%r{^@ibm/plex-sans-thai-looped@?(\d+(?:\.\d+)+)$}i)

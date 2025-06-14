@@ -6,6 +6,8 @@ cask "font-doulos-sil" do
   name "Doulos SIL"
   homepage "https://software.sil.org/doulos/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://software.sil.org/doulos/download/"
     regex(/href=.*DoulosSIL[._-]v?(\d+(?:\.\d+)+)\.zip/i)

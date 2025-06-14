@@ -6,6 +6,8 @@ cask "font-iosevka-nerd-font" do
   name "Iosevka Nerd Font (Iosevka)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     strategy :github_latest

@@ -6,6 +6,8 @@ cask "font-inconsolata-lgc-nerd-font" do
   name "Inconsolata LGC Nerd Font (Inconsolata LGC)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     strategy :github_latest

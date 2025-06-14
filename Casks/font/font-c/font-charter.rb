@@ -6,6 +6,8 @@ cask "font-charter" do
   name "Charter"
   homepage "https://practicaltypography.com/charter.html"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/href=.*?Charter[\s._-]?v?(\d+(?:\.\d+)*)\.zip/i)
