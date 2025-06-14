@@ -8,6 +8,8 @@ cask "journey" do
   desc "Diary app"
   homepage "https://2appstudio.com/journey/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Journey.app"

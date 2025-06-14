@@ -7,6 +7,8 @@ cask "joinme" do
   desc "Online conferencing software"
   homepage "https://www.join.me/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-16", because: :discontinued
 
   app "join.me.app"

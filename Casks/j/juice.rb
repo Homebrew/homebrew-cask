@@ -7,6 +7,8 @@ cask "juice" do
   desc "Make your battery information a bit more interesting"
   homepage "https://github.com/brianmichel/Juice"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   app "Juice.app"

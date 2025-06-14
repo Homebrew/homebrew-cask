@@ -13,6 +13,8 @@ cask "jet" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   binary "jet"
 
   # No zap stanza required

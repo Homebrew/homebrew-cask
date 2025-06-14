@@ -20,6 +20,8 @@ cask "jandi" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "JANDI.app"
 
   uninstall quit: "com.jandi.osx.JANDI"

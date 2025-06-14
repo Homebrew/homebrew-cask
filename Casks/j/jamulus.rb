@@ -22,6 +22,8 @@ cask "jamulus" do
     url "https://sourceforge.net/projects/llcon/rss?path=/Jamulus"
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Jamulus.app"
   app "JamulusServer.app"
 
