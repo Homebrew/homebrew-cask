@@ -17,6 +17,8 @@ cask "easyeda" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "EasyEDA.app"
 
   zap trash: [

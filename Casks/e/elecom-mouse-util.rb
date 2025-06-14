@@ -12,6 +12,8 @@ cask "elecom-mouse-util" do
     regex(/ELECOM[._-]MA[._-]Setup[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :ventura"
 
   pkg "ELECOM_MA_Setup_#{version}.pkg"

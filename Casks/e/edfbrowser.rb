@@ -8,6 +8,8 @@ cask "edfbrowser" do
   desc "EDF+ and BDF+ viewer and toolbox"
   homepage "https://www.teuniz.net/edfbrowser"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-17", because: :unmaintained
 
   app "EDFbrowser.app"

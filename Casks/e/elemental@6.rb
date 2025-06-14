@@ -13,6 +13,8 @@ cask "elemental@6" do
     regex(/^elemental[._-]v?(6(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Elemental.app"
 
   zap trash: "~/Library/Application Support/xyz.elemental"

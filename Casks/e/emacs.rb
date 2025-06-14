@@ -14,6 +14,8 @@ cask "emacs" do
     regex(%r{href=.*?/Emacs[._-]v?(\d+(?:\.\d+)*(?:-\d+)?)[._-]universal\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask:    [
                    "emacs@nightly",
                    "emacs@pretest",

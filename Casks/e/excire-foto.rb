@@ -17,6 +17,8 @@ cask "excire-foto" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   pkg "Install.pkg"

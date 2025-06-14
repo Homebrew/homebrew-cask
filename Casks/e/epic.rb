@@ -20,6 +20,8 @@ cask "epic" do
     regex(%r{href=.*?/mac#{arch}\d+/epic[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "Epic.app"
