@@ -14,6 +14,8 @@ cask "mobirise" do
     regex(/>\s*Mobirise\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Mobirise.app"
 
   zap trash: [

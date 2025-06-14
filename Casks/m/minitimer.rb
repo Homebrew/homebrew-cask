@@ -7,6 +7,8 @@ cask "minitimer" do
   desc "Unobtrusive, lightweight timer"
   homepage "https://kevingessner.com/software/minitimer/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "miniTimer.app"

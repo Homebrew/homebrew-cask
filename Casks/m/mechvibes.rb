@@ -21,6 +21,8 @@ cask "mechvibes" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Mechvibes.app"
 
   zap trash: [

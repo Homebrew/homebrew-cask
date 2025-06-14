@@ -13,6 +13,8 @@ cask "mumble" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "mumble@snapshot"
   depends_on macos: ">= :high_sierra"
 

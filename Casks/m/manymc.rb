@@ -7,6 +7,8 @@ cask "manymc" do
   desc "Minecraft launcher with native arm64 support"
   homepage "https://github.com/MinecraftMachina/ManyMC"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-01-07", because: :discontinued
   disable! date: "2025-01-07", because: :discontinued
 

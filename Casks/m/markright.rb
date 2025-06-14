@@ -7,6 +7,8 @@ cask "markright" do
   desc "Electron-powered markdown editor with live preview"
   homepage "https://github.com/dvcrn/markright"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :unmaintained
 
   app "MarkRight.app"

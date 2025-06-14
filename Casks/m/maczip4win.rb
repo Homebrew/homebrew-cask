@@ -7,6 +7,8 @@ cask "maczip4win" do
   desc "Create zip files for use on Windows"
   homepage "https://ynomura.com/wp/?page_id=116"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "MacZip4win #{version}/MacZip4Win.app"

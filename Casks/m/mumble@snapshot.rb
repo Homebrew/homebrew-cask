@@ -12,6 +12,8 @@ cask "mumble@snapshot" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-05-01", because: :unsigned
 
   conflicts_with cask: "mumble"
