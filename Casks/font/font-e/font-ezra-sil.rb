@@ -6,6 +6,8 @@ cask "font-ezra-sil" do
   name "Ezra SIL"
   homepage "https://software.sil.org/ezra/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/href=.*?EzraSIL[._-]v?(\d+(?:\.\d+)+)\.zip/i)
