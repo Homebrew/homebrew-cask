@@ -14,8 +14,6 @@ cask "ssh-config-editor" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :big_sur"
 
