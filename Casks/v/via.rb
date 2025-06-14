@@ -8,6 +8,8 @@ cask "via" do
   desc "Keyboard configurator"
   homepage "https://caniusevia.com/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "VIA.app"

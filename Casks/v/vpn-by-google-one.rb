@@ -7,6 +7,8 @@ cask "vpn-by-google-one" do
   desc "VPN provided by Google One"
   homepage "https://one.google.com/about/vpn"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-20", because: :discontinued
 
   auto_updates true

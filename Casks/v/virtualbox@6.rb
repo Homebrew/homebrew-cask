@@ -7,6 +7,8 @@ cask "virtualbox@6" do
   desc "Virtualizer for x86 hardware"
   homepage "https://www.virtualbox.org/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-11-15", because: :discontinued
 
   conflicts_with cask: [

@@ -16,6 +16,8 @@ cask "valhalla-supermassive" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "ValhallaSupermassiveOSX.pkg"
 
   uninstall pkgutil: "com.valhalladsp.supermassive.pkg.*"
