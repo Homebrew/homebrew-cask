@@ -8,6 +8,8 @@ cask "wkhtmltopdf" do
   desc "HTML to PDF renderer"
   homepage "https://wkhtmltopdf.org/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "wkhtmltox-#{version}.macos-cocoa.pkg"

@@ -12,6 +12,8 @@ cask "wch-ch34x-usb-serial-driver" do
     regex(%r{<td>(\d+(?:\.\d+)+)</td>}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "CH341SER_MAC/CH34xVCPDriver.pkg"
 
   uninstall quit:    "cn.wch.CH34xVCPDriver",
