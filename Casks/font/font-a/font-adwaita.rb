@@ -6,6 +6,8 @@ cask "font-adwaita" do
   name "Adwaita"
   homepage "https://gitlab.gnome.org/GNOME/adwaita-fonts"
 
+  no_autobump! because: :requires_manual_review
+
   font "adwaita-fonts-#{version}/mono/AdwaitaMono-Bold.ttf"
   font "adwaita-fonts-#{version}/mono/AdwaitaMono-BoldItalic.ttf"
   font "adwaita-fonts-#{version}/mono/AdwaitaMono-Italic.ttf"
