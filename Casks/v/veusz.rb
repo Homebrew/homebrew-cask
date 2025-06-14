@@ -1,9 +1,9 @@
 cask "veusz" do
   arch arm: "arm", intel: "x86_64"
 
-  version "4.0,4.0-fix"
-  sha256 arm:   "7d80bd5e780d2101d904152a6b8337d7c2c7953d8aa24c3af76e98692549a6c7",
-         intel: "092179e5d35b1e8ca663014d4d93de40ef2e4edae542c3cad98fccbda2ebf8e2"
+  version "4.1"
+  sha256 arm:   "7c77b07cc3534d109b8cc467b58fa8e054c4d75d391d745c0e0b394bd7feb0ec",
+         intel: "1748f3c3f8cb70b04586d645c20950f317ad967cff9e5fcf7931b8d2a0164cf6"
 
   url "https://github.com/veusz/veusz/releases/download/veusz-#{version.csv.second || version.csv.first}/veusz-#{version.csv.first}-AppleOSX-#{arch}.dmg",
       verified: "github.com/veusz/veusz/"
