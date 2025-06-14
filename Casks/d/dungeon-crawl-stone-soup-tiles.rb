@@ -13,6 +13,8 @@ cask "dungeon-crawl-stone-soup-tiles" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Dungeon Crawl Stone Soup - Tiles.app"
 
   zap trash: [

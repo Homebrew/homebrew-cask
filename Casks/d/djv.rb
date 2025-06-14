@@ -8,6 +8,8 @@ cask "djv" do
   desc "Review software for VFX, animation, and film production"
   homepage "https://darbyjohnston.github.io/DJV/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-11-17", because: :unmaintained
 
   app "DJV#{version.major}.app"

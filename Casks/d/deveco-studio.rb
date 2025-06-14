@@ -21,6 +21,8 @@ cask "deveco-studio" do
   desc "Development platform for HarmonyOS and OpenHarmony"
   homepage "https://developer.huawei.com/consumer/cn/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2025-03-17", because: :no_longer_available
 
   depends_on macos: ">= :catalina"

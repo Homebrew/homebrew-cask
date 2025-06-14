@@ -8,6 +8,8 @@ cask "do-not-disturb" do
   desc "Open-source physical access (aka 'evil maid') attack detector"
   homepage "https://objective-see.org/products/dnd.html"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-11-16", because: :unmaintained
 
   depends_on arch: :x86_64

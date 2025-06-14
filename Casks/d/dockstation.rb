@@ -7,6 +7,8 @@ cask "dockstation" do
   name "DockStation"
   homepage "https://dockstation.io/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-10", because: :unmaintained
 
   depends_on macos: ">= :el_capitan"

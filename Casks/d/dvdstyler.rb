@@ -13,6 +13,8 @@ cask "dvdstyler" do
     regex(/DVDStyler[._-]?(\d+(?:[._]\d+)+)[._-]?MacOSX\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "DVDStyler.app"
 
   zap trash: [

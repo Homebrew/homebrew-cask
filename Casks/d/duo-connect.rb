@@ -13,6 +13,8 @@ cask "duo-connect" do
     regex(%r{href=.*?/DuoConnect[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "DuoConnect-#{version}.pkg"
 
   uninstall launchctl: [

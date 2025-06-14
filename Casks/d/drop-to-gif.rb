@@ -8,6 +8,8 @@ cask "drop-to-gif" do
   desc "Zero-click animated Gifs"
   homepage "https://mortenjust.github.io/droptogif/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-10", because: :unmaintained
 
   zap trash: [

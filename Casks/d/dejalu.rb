@@ -6,6 +6,8 @@ cask "dejalu" do
   name "DejaLu"
   homepage "https://dejalu.me/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-10", because: :unmaintained
 
   app "DejaLu.app"

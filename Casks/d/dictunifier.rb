@@ -7,6 +7,8 @@ cask "dictunifier" do
   desc "Dictionary conversion tool"
   homepage "https://github.com/jjgod/mac-dictionary-kit/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-10", because: :unmaintained
 
   app "DictUnifier.app"

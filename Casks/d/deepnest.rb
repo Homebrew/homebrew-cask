@@ -7,6 +7,8 @@ cask "deepnest" do
   desc "Nesting application for CNC machines"
   homepage "https://deepnest.io/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-09", because: :unmaintained
 
   app "Deepnest-#{version}-mac/Deepnest-mac-#{version}.app", target: "Deepnest.app"
