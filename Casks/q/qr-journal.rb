@@ -12,6 +12,8 @@ cask "qr-journal" do
     regex(%r{href=.*?/QRJournal(\d+(?:\.\d+)*)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "QR Journal.app"

@@ -13,6 +13,8 @@ cask "quassel-client" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Quassel Client.app"

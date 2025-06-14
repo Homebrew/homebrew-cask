@@ -13,6 +13,8 @@ cask "qxmledit" do
     regex(%r{url=.*?/QXmlEdit[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "QXmlEdit.app"
 
   zap trash: [

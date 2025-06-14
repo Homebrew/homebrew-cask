@@ -7,6 +7,8 @@ cask "qth" do
   desc "APRS client application"
   homepage "https://www.w8wjb.com/wp/qth/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2025-02-24", because: :moved_to_mas
 
   depends_on macos: ">= :high_sierra"
