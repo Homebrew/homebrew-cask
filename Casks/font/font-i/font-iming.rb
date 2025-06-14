@@ -9,6 +9,8 @@ cask "font-iming" do
   name "一点明体"
   homepage "https://github.com/ichitenfont/I.Ming"
 
+  no_autobump! because: :requires_manual_review
+
   font "I.Ming-#{version}/#{version}/I.Ming-#{version}.ttf"
   font "I.Ming-#{version}/#{version}/I.MingCP-#{version}.ttf"
   font "I.Ming-#{version}/#{version}/I.MingVar-#{version}.ttf"
