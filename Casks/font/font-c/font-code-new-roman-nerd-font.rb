@@ -6,6 +6,8 @@ cask "font-code-new-roman-nerd-font" do
   name "CodeNewRoman Nerd Font (Code New Roman)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest
