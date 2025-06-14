@@ -6,6 +6,8 @@ cask "font-bitstream-vera-sans-mono-nerd-font" do
   name "BitstromWera Nerd Font (Bitstream Vera Sans Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     strategy :github_latest
