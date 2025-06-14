@@ -6,6 +6,8 @@ cask "font-ibm-plex-sans-condensed" do
   name "IBM Plex Sans Condensed"
   homepage "https://github.com/IBM/plex"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     regex(%r{^@ibm/plex-sans-condensed@?(\d+(?:\.\d+)+)$}i)
