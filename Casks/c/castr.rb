@@ -1,9 +1,9 @@
 cask "castr" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.7.0"
-  sha256 arm:   "814c5c080818554b23400e85f53258a52c102b16def62ed72b87d332cc009107",
-         intel: "3eb46e778d9cf476ac0cc61dbb37c45f9b50125ac0f21f13fb05415e9f5078d1"
+  version "3.0.0"
+  sha256 arm:   "9d09511986d76f8ae19e9dfe62244b3cf47956d05ef947e1550293853b6c2b6e",
+         intel: "24ca7a44cc0d730d5d222ac2bc73bcb9abae43d6798d34725c1c3fc132b36948"
 
   url "https://download.todesktop.com/210610elr9v3cm6/Castr%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/210610elr9v3cm6/"
