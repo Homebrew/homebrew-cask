@@ -6,6 +6,8 @@ cask "font-andron-scriptor-web" do
   name "Andron Scriptor Web"
   homepage "https://folk.uib.no/hnooh/mufi/fonts/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/AND[._-]SCR[._-]WEB[._-]v?(\d+(?:\.\d+)+)\.zip/i)
