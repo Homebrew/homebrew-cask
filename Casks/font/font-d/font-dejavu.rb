@@ -6,6 +6,8 @@ cask "font-dejavu" do
   name "DejaVu"
   homepage "https://sourceforge.net/projects/dejavu/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://sourceforge.net/projects/dejavu/rss?path=/dejavu"
   end
