@@ -6,6 +6,8 @@ cask "font-fira-code-nerd-font" do
   name "FiraCode Nerd Font (Fira Code)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest
