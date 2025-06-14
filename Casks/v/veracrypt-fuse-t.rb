@@ -13,8 +13,6 @@ cask "veracrypt-fuse-t" do
     regex(/href=.*?VeraCrypt[._-]FUSE[._-]T[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "veracrypt"
   depends_on cask: "fuse-t"
 
