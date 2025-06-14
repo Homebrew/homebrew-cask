@@ -13,6 +13,8 @@ cask "kstars" do
     regex(/href=.*?kstars[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "kstars.app"

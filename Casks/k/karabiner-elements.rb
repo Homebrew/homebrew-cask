@@ -105,6 +105,8 @@ cask "karabiner-elements" do
   desc "Keyboard customiser"
   homepage "https://karabiner-elements.pqrs.org/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   binary "/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli"

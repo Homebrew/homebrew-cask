@@ -7,6 +7,8 @@ cask "kakapo" do
   desc "Open-source ambient sound mixer"
   homepage "https://github.com/bluedaniel/Kakapo-app"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-17", because: :unmaintained
 
   app "Kakapo.app"
