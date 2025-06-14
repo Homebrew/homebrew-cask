@@ -6,6 +6,8 @@ cask "font-d2coding" do
   name "D2 Coding"
   homepage "https://github.com/naver/d2codingfont"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     regex(/D2Coding[._-](?:Ver|v)?v?(\d+(?:\.\d+)+)(?:-(v?(\d+(?:\.\d+)*)))?\.zip/i)
