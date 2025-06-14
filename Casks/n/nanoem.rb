@@ -7,6 +7,8 @@ cask "nanoem" do
   desc "Cross-platform MMD (MikuMikuDance) compatible implementation"
   homepage "https://github.com/hkrn/nanoem"
 
+  no_autobump! because: :requires_manual_review
+
   container nested: "nanoem-v#{version}-Darwin.dmg"
 
   app "nanoem.app"

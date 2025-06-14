@@ -8,6 +8,8 @@ cask "notedup" do
   desc "Transfer data from Evernote International to Evernote"
   homepage "https://appcenter.yinxiang.com/app/notedup/mac/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-27", because: :unmaintained
 
   app "NoteDup.app"

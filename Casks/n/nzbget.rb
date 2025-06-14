@@ -8,6 +8,8 @@ cask "nzbget" do
   desc "Usenet downloader focusing on efficiency"
   homepage "https://nzbget.net/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-02-19", because: :discontinued
   disable! date: "2025-02-19", because: :discontinued
 

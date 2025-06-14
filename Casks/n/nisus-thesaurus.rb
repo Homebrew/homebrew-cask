@@ -12,6 +12,8 @@ cask "nisus-thesaurus" do
     regex(/Version\s*(\d+(?:\.\d+)*)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "Nisus Thesaurus.app"

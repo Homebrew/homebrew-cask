@@ -18,6 +18,8 @@ cask "noxappplayer" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
   container nested: "NoxAppPlayerInstaller.app/Contents/MacOS/NoxAppPlayer.zip"
 

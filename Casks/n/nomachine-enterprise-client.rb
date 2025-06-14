@@ -12,6 +12,8 @@ cask "nomachine-enterprise-client" do
     regex(/nomachine-enterprise-client[._-]v?(\d+(?:\.\d+)*_\d+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "NoMachine.pkg"
 
   # A launchctl job ordinarily manages uninstall once the app bundle is removed

@@ -12,6 +12,8 @@ cask "nomachine" do
     regex(/nomachine[._-]v?(\d+(?:\.\d+)+_\d+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   pkg "NoMachine.pkg"

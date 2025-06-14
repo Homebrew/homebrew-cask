@@ -12,6 +12,8 @@ cask "nessus" do
     regex(/Nessus[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg ".Nessus.pkg"
   binary "/Library/Nessus/run/bin/nasl"
   binary "/Library/Nessus/run/bin/ndbg"

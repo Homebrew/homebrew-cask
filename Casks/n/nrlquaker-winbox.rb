@@ -12,6 +12,8 @@ cask "nrlquaker-winbox" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Winbox-mac.app"
 
   zap trash: "~/Library/Application Support/com.mikrotik.winbox"
