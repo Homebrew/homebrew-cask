@@ -6,6 +6,8 @@ cask "font-goorm-sans" do
   name "goorm Sans"
   homepage "https://goorm-sans.goorm.io/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/href=.*?goorm[._-]sans[._-]v?(\d+(?:\.\d+)+)\.zip/i)
