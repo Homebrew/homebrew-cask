@@ -6,6 +6,8 @@ cask "font-tex-gyre-schola-math" do
   name "Schola Math"
   homepage "https://www.gust.org.pl/projects/e-foundry/tg-math"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/tg-math/download"
     regex(/Schola\sMath\s\(OTF\),\sversion\s(\d+(?:\.\d+)+)/i)
