@@ -6,6 +6,8 @@ cask "font-3270-nerd-font" do
   name "3270 Nerd Font (IBM 3270)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest
