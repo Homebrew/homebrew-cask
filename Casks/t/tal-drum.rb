@@ -12,6 +12,8 @@ cask "tal-drum" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :el_capitan"
 
   pkg "TAL-Drum-installer.pkg"

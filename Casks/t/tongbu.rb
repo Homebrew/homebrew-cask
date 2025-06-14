@@ -12,6 +12,8 @@ cask "tongbu" do
     regex(%r{href=.*?zsmac[._-]v?(\d+(?:\.\d+)+)/}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Tongbu.app"
 
   zap trash: [

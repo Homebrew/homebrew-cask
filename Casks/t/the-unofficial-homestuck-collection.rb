@@ -13,6 +13,8 @@ cask "the-unofficial-homestuck-collection" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "The Unofficial Homestuck Collection.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "tdr-molotok" do
     regex(%r{href=.*?Molotok/v?(\d+(?:\.\d+)+)/TDR(%20|\s)Molotok\.zip}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "TDR Molotok.pkg"
 
   uninstall pkgutil: [

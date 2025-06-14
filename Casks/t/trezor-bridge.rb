@@ -12,6 +12,8 @@ cask "trezor-bridge" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "trezor-bridge-#{version}.pkg"
 
   uninstall launchctl: "com.bitcointrezor.trezorBridge.trezord",

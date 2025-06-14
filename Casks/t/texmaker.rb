@@ -23,6 +23,8 @@ cask "texmaker" do
   desc "LaTeX editor"
   homepage "https://www.xm1math.net/texmaker/"
 
+  no_autobump! because: :requires_manual_review
+
   app "texmaker.app"
 
   zap trash: [

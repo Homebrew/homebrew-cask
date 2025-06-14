@@ -14,6 +14,8 @@ cask "tau" do
     regex(/version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   suite "TAU"
 
   uninstall delete: "#{staged_path}/TAU/tau/"

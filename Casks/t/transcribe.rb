@@ -37,6 +37,8 @@ cask "transcribe" do
   desc "Transcribes recorded music"
   homepage "https://www.seventhstring.com/xscribe/overview.html"
 
+  no_autobump! because: :requires_manual_review
+
   app "Transcribe!.app"
 
   uninstall quit: "com.seventhstring.transcribe"

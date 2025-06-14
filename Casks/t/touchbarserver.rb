@@ -6,6 +6,8 @@ cask "touchbarserver" do
   name "TouchBarServer"
   homepage "https://github.com/bikkelbroeders/TouchBarDemoApp"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "TouchBarServer.app"

@@ -12,6 +12,8 @@ cask "thingsmacsandboxhelper" do
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/ThingsHelper\.zip}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "ThingsMacSandboxHelper.app"

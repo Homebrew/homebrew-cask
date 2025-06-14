@@ -16,6 +16,8 @@ cask "timescribe" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :catalina"
 

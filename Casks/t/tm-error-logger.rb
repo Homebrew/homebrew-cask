@@ -12,6 +12,8 @@ cask "tm-error-logger" do
     regex(/<p>v?(\d+(?:\.\d+)+)[ "<]/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "TM Error Logger.app"

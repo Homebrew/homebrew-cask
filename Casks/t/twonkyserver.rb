@@ -12,6 +12,8 @@ cask "twonkyserver" do
     regex(%r{href=.*?/TwonkyServerInstaller[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "TwonkyServerInstaller-#{version}.pkg"
 
   uninstall launchctl: [

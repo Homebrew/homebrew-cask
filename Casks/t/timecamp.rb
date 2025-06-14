@@ -13,6 +13,8 @@ cask "timecamp" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "TimeCamp.app"
 
   zap rmdir: "~/Library/Application Support/TimeCamp"

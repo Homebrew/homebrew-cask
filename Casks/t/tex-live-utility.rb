@@ -12,6 +12,8 @@ cask "tex-live-utility" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "TeX Live Utility.app"

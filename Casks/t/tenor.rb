@@ -7,6 +7,8 @@ cask "tenor" do
   desc "Send, share and save gifs from the menu bar"
   homepage "https://tenor.com/mac"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-20", because: :moved_to_mas
 
   depends_on macos: ">= :el_capitan"
