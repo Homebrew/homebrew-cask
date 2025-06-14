@@ -6,6 +6,8 @@ cask "font-im-writing-nerd-font" do
   name "IMWriting Nerd Font families (iA Writer)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     strategy :github_latest
