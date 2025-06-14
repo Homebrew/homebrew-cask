@@ -12,6 +12,8 @@ cask "ijhttp" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   binary "ijhttp/ijhttp"
 
   # No zap stanza required

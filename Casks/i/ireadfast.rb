@@ -7,6 +7,8 @@ cask "ireadfast" do
   desc "Speed reading program"
   homepage "https://www.gengis.net/prodotti/iReadFast_Mac/en/index.php"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-14", because: "is 32-bit only"
 
   depends_on macos: "<= :mojave"

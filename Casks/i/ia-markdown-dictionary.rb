@@ -11,6 +11,8 @@ cask "ia-markdown-dictionary" do
     skip "No version information available"
   end
 
+  no_autobump! because: :requires_manual_review
+
   dictionary "iA Markdown.dictionary"
 
   # No zap stanza required

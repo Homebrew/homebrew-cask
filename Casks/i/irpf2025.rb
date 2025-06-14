@@ -14,6 +14,8 @@ cask "irpf2025" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   installer manual: "IRPF2025.app"

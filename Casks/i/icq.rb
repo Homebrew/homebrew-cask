@@ -8,6 +8,8 @@ cask "icq" do
   desc "Messenger application"
   homepage "https://icq.com/desktop"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-26", because: :no_longer_available
 
   auto_updates true

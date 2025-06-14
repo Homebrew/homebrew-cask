@@ -8,6 +8,8 @@ cask "icc" do
   desc "Chess club client"
   homepage "https://www.chessclub.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-09-11", because: :discontinued
 
   pkg "ICCforMac.r#{version.csv.second}.pkg"

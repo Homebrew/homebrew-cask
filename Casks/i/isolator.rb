@@ -7,6 +7,8 @@ cask "isolator" do
   desc "Menu bar app that hides desktop, inactive windows, etc."
   homepage "https://www.willmore.eu/software/isolator/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "Isolator.app"

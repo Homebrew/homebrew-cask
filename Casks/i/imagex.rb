@@ -12,6 +12,8 @@ cask "imagex" do
     regex(/href=.*?ImageX[._-]v?(\d+(?:\.\d+)+)[._-]macos\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "ImageX.app"

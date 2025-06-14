@@ -12,6 +12,8 @@ cask "itermai" do
     regex(%r{href=.*?/iTermAI[._-](\d+(?:\.\d+)*)\.zip}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "iTermAI.app"

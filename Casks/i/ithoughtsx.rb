@@ -9,6 +9,8 @@ cask "ithoughtsx" do
   desc "Mind mapping tool"
   homepage "https://www.toketaware.com/ithoughts-osx"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-11", because: :unmaintained
 
   auto_updates true

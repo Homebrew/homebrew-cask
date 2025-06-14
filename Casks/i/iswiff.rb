@@ -7,6 +7,8 @@ cask "iswiff" do
   desc "Full screen Flash outside the browser"
   homepage "https://echoone.com/iswiff/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: "<= :big_sur"
