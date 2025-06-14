@@ -7,6 +7,8 @@ cask "font-myrica" do
   name "Myrica"
   homepage "https://myrica.estable.jp/"
 
+  no_autobump! because: :requires_manual_review
+
   font "Myrica-#{version}/Myrica.TTC"
 
   # No zap stanza required
