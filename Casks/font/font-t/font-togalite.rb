@@ -7,6 +7,8 @@ cask "font-togalite" do
   name "トガリテ"
   homepage "https://moji-waku.com/togalite/index.html"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/トガリテ\s+VER\s+v?(\d+(?:\.\d+)+)/i)
