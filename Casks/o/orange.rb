@@ -27,6 +27,8 @@ cask "orange" do
     regex(/Orange#{version.major}[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   zap trash: [
     "~/Library/Application Support/Orange",
     "~/Library/Caches/Orange",

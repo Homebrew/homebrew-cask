@@ -15,6 +15,8 @@ cask "oracle-jdk@21" do
     regex(/<li>\s*JDK\s*v?(\d+(?:\.\d+)*)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   pkg "JDK #{version}.pkg"

@@ -12,6 +12,8 @@ cask "opendnsupdater" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "OpenDNSUpdater.app"
 
   caveats do

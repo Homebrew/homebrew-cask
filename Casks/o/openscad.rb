@@ -12,6 +12,8 @@ cask "openscad" do
     regex(/href=.*?OpenSCAD[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "openscad@snapshot"
 
   app "OpenSCAD-#{version}.app"
