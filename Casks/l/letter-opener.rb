@@ -13,6 +13,8 @@ cask "letter-opener" do
     regex(%r{Version:\s*<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   pkg "Install Letter Opener.pkg"

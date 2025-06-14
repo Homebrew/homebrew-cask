@@ -10,6 +10,8 @@ cask "lemonlime" do
   desc "Tiny judging environment for OI contest based on Lemon + LemonPlus"
   homepage "https://github.com/Project-LemonLime/Project_LemonLime"
 
+  no_autobump! because: :requires_manual_review
+
   app "lemon.app"
 
   zap trash: [

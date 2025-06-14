@@ -13,6 +13,8 @@ cask "lyx" do
     regex(/LyX[._-]v?(\d+(?:\.\d+)+)\+qt5/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "LyX.app"

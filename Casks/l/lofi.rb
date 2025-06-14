@@ -8,6 +8,8 @@ cask "lofi" do
   desc "Spotify player with WebGL visualisations"
   homepage "https://www.lofi.rocks/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "lofi.app"

@@ -16,6 +16,8 @@ cask "luniistore" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   pkg "Lunii-#{version}-#{arch}.pkg"
