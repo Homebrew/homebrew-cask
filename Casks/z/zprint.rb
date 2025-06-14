@@ -10,6 +10,8 @@ cask "zprint" do
   desc "Library to reformat Clojure and Clojurescript source code and s-expressions"
   homepage "https://github.com/kkinnear/zprint"
 
+  no_autobump! because: :requires_manual_review
+
   binary "zprintm#{arch}-#{version}", target: "zprint"
 
   # No zap stanza required

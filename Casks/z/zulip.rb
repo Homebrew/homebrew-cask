@@ -11,6 +11,8 @@ cask "zulip" do
   desc "Desktop client for the Zulip team chat platform"
   homepage "https://zulipchat.com/apps/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :big_sur"
 

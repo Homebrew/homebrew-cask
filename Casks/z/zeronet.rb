@@ -8,6 +8,8 @@ cask "zeronet" do
   desc "Decentralised websites using Bitcoin crypto and BitTorrent network"
   homepage "https://zeronet.io/"
 
+  no_autobump! because: :requires_manual_review
+
   # see https://github.com/HelloZeroNet/ZeroNet/issues/2847
   deprecate! date: "2024-06-17", because: :unmaintained
 
