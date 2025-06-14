@@ -13,6 +13,8 @@ cask "utc-menu-clock" do
     strategy :page_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "UTCMenuClock.app"
 
   zap trash: "~/Library/Preferences/net.retina.UTCMenuClock.plist"

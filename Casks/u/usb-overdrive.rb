@@ -12,6 +12,8 @@ cask "usb-overdrive" do
     regex(/>USB\s+Overdrive\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :monterey"
 
   app "USB Overdrive.app"

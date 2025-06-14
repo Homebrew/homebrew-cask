@@ -16,6 +16,8 @@ cask "usbimager" do
     regex(%r{/usbimager[._-]v?(\d+(?:\.\d+)+)[._-][^"' >]*?macosx?[^"' >]*?\.zip}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "USBImager.app"
 
   zap trash: "~/Library/Preferences/usbimager.plist"
