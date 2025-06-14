@@ -6,6 +6,8 @@ cask "font-kanjistrokeorders" do
   name "KanjiStrokeOrders"
   homepage "https://sites.google.com/site/nihilistorguk/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(%r{
