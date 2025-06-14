@@ -6,6 +6,8 @@ cask "font-liberation" do
   name "Liberation"
   homepage "https://github.com/liberationfonts/liberation-fonts"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     regex(%r{files/(\d+)/liberation[._-]fonts[._-]ttf[._-]v?(\d+(?:\.\d+)+)\.t}i)
