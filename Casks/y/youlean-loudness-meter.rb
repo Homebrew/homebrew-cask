@@ -15,6 +15,8 @@ cask "youlean-loudness-meter" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   pkg "Youlean Loudness Meter #{version.major} - Installer.pkg"
