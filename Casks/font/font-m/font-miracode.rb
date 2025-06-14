@@ -6,6 +6,8 @@ cask "font-miracode" do
   name "Miracode"
   homepage "https://github.com/IdreesInc/Miracode"
 
+  no_autobump! because: :requires_manual_review
+
   font "Miracode.ttf"
 
   # No zap stanza required
