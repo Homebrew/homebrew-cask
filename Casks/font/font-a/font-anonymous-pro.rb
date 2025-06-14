@@ -6,6 +6,8 @@ cask "font-anonymous-pro" do
   name "Anonymous Pro"
   homepage "https://www.marksimonson.com/fonts/view/anonymous-pro/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/href=.*?AnonymousPro[._-]v?(\d+(?:[._]\d+)+)\.zip/i)
