@@ -12,6 +12,8 @@ cask "pale-moon" do
     regex(/^v?(\d+(?:\.\d+)+)[._-]Release$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
   depends_on arch: :arm64
 

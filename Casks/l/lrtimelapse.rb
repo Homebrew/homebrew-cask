@@ -12,8 +12,6 @@ cask "lrtimelapse" do
     regex(/LRTimelapse[._-]?v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "LRTimelapse #{version} Installer.pkg"
 
   uninstall script:  {

@@ -12,6 +12,8 @@ cask "peninsula" do
     regex(/^v?(\d+(?:\.\d+)+(?:[._-]post[._-]?\d+)?)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sonoma"
 
   app "Peninsula.app"

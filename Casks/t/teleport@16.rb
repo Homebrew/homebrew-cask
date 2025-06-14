@@ -13,8 +13,6 @@ cask "teleport@16" do
     regex(/teleport[._-]v?(16(?:\.\d+)+)\.pkg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-10-01", because: :discontinued
 
   conflicts_with cask:    [

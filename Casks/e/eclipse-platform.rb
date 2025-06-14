@@ -18,8 +18,6 @@ cask "eclipse-platform" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Platform.app"
 
