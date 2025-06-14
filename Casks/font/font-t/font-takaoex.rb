@@ -6,6 +6,8 @@ cask "font-takaoex" do
   name "TakaoEx"
   homepage "https://launchpad.net/takao-fonts"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/href=.*?TakaoExFonts[._-]v?(\d+(?:\.\d+)+)\.zip/i)
