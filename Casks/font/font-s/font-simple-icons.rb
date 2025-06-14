@@ -7,6 +7,8 @@ cask "font-simple-icons" do
   name "Simple Icons"
   homepage "https://simpleicons.org/"
 
+  no_autobump! because: :requires_manual_review
+
   font "font/SimpleIcons-Fit.otf"
   font "font/SimpleIcons.otf"
 
