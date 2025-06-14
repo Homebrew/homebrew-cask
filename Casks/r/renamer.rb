@@ -13,6 +13,8 @@ cask "renamer" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :monterey"
 
   app "Renamer.app"

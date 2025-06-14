@@ -8,6 +8,8 @@ cask "rambox" do
   desc "Workspace simplifier - to organize your workspace and boost your productivity"
   homepage "https://rambox.app/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :catalina"
 

@@ -13,6 +13,8 @@ cask "raspberry-pi-imager" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Raspberry Pi Imager.app"
 
   zap trash: [
