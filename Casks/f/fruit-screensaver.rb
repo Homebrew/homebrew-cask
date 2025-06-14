@@ -7,6 +7,8 @@ cask "fruit-screensaver" do
   desc "Screensaver of the vintage Apple logo"
   homepage "https://github.com/Corkscrews/fruit"
 
+  no_autobump! because: :requires_manual_review
+
   screen_saver "Fruit.saver"
 
   # No zap stanza required
