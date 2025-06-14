@@ -6,6 +6,8 @@ cask "font-gensekigothic" do
   name "GenSekiGothic"
   homepage "https://github.com/ButTaiwan/genseki-font"
 
+  no_autobump! because: :requires_manual_review
+
   font "GenSekiGothic#{version.major}-B.ttc"
   font "GenSekiGothic#{version.major}-H.ttc"
   font "GenSekiGothic#{version.major}-L.ttc"
