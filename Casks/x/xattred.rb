@@ -23,6 +23,8 @@ cask "xattred" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "xattred#{version.csv.first.major}#{version.csv.first.minor}/xattred.app"

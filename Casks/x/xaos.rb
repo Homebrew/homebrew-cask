@@ -13,6 +13,8 @@ cask "xaos" do
     regex(/^release[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   app "XaoS.app"

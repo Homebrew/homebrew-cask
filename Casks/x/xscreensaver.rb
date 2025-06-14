@@ -12,6 +12,8 @@ cask "xscreensaver" do
     regex(/href=.*?xscreensaver[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "Install Everything.pkg"
 
   # There is no uninstall script for this Cask, so a manual uninstall is performed

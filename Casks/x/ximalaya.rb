@@ -20,6 +20,8 @@ cask "ximalaya" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "喜马拉雅.app"
 
   zap trash: [

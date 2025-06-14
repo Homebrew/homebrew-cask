@@ -7,6 +7,8 @@ cask "x-swiftformat" do
   desc "Xcode extension to format Swift code"
   homepage "https://github.com/ruiaureliano/X-SwiftFormat"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :ventura"
 
   app "X-SwiftFormat.app"
