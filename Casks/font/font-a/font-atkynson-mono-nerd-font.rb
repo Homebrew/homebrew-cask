@@ -6,6 +6,8 @@ cask "font-atkynson-mono-nerd-font" do
   name "AtkynsonMono Nerd Font (Atkinson Hyperlegible Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest
