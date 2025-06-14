@@ -22,6 +22,8 @@ cask "shimonote" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "石墨文档.app"
 
   zap trash: [

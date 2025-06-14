@@ -7,6 +7,8 @@ cask "sketch-toolbox" do
   desc "Plugin manager for Sketch"
   homepage "http://sketchtoolbox.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-10-12", because: :discontinued
 
   app "Sketch Toolbox.app"

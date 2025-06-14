@@ -13,6 +13,8 @@ cask "serene" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Serene.app"
 
   zap trash: [

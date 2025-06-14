@@ -7,6 +7,8 @@ cask "subtitle-master" do
   desc "Search for subtitles"
   homepage "https://github.com/subtitle-master/subtitlemaster"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-17", because: "is 32-bit only"
 
   app "Subtitle Master.app"

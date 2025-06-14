@@ -24,6 +24,8 @@ cask "status" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Status.app"
 
   zap trash: [

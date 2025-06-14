@@ -16,6 +16,8 @@ cask "satdump" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "SatDump.app"
   binary "#{appdir}/SatDump.app/Contents/MacOS/satdump"
 

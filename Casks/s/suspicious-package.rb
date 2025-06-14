@@ -49,6 +49,8 @@ cask "suspicious-package" do
   desc "Application for inspecting installer packages"
   homepage "https://www.mothersruin.com/software/SuspiciousPackage/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Suspicious Package.app"
   binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"
 

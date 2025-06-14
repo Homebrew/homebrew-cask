@@ -63,6 +63,8 @@ cask "stellarium" do
   desc "Tool to render realistic skies in real time on the screen"
   homepage "https://stellarium.org/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   app "Stellarium.app"

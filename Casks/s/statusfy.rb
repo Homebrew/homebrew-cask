@@ -7,6 +7,8 @@ cask "statusfy" do
   desc "Spotify in the status bar"
   homepage "https://github.com/paulyoung/Statusfy"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-08-25", because: :unmaintained
 
   app "Statusfy.app"

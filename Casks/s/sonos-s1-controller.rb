@@ -18,6 +18,8 @@ cask "sonos-s1-controller" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Sonos S1 Controller.app"

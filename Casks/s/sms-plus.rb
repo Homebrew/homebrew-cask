@@ -12,6 +12,8 @@ cask "sms-plus" do
     regex(/<h2>SMS\s+Plus\s+v?(\d+(?:\.\d+)+)[" <]/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "SMS Plus v#{version}/SMS Plus.app"

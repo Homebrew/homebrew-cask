@@ -13,6 +13,8 @@ cask "softube-central" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on cask: "ilok-license-manager"
 

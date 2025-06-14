@@ -12,6 +12,8 @@ cask "sdformatter" do
     regex(/SD Memory Card Formatter (\d+(?:\.\d+)*)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   pkg "Install SD Card Formatter.mpkg"

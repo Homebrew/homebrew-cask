@@ -51,6 +51,8 @@ cask "sonic-pi" do
   desc "Code-based music creation and performance tool"
   homepage "https://sonic-pi.net/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Sonic Pi.app"

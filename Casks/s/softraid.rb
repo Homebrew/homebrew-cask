@@ -13,6 +13,8 @@ cask "softraid" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "SoftRAID.app"

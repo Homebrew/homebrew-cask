@@ -15,6 +15,8 @@ cask "starnet2" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on arch: :arm64
 
   bin_path = "#{staged_path}/StarNet2T_MacOS"

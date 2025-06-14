@@ -12,6 +12,8 @@ cask "sitala" do
     regex(/Sitala-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Sitala.app"
   pkg "Install Plug-ins.pkg"
 
