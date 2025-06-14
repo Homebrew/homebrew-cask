@@ -6,6 +6,8 @@ cask "font-satoshi" do
   name "Satoshi"
   homepage "https://www.fontshare.com/fonts/satoshi"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://api.fontshare.com/v2/fonts/slug/satoshi"
     strategy :json do |json|
