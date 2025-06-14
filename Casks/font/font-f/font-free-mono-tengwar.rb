@@ -6,6 +6,8 @@ cask "font-free-mono-tengwar" do
   name "FreeMonoTengwar"
   homepage "https://freetengwar.sourceforge.net/freemonotengwar.html"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://sourceforge.net/projects/freetengwar/rss?path=/TengwarFont"
     regex(/FreeMonoTengwar\.(\d+(?:-\d+)*)/i)
