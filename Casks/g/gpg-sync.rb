@@ -6,6 +6,8 @@ cask "gpg-sync" do
   name "GPG Sync"
   homepage "https://github.com/firstlookmedia/gpgsync/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "GPGSync-#{version}.pkg"

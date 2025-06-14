@@ -19,6 +19,8 @@ cask "gcc-aarch64-embedded" do
     regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-aarch64-none-elf\.pkg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-addr2line"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-ar"

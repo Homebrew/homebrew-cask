@@ -56,6 +56,8 @@ cask "gpgfrontend" do
   desc "OpenPGP/GnuPG crypto, sign and key management tool"
   homepage "https://gpgfrontend.bktus.com/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on formula: "gnupg"
   depends_on macos: ">= :monterey"
 

@@ -12,6 +12,8 @@ cask "gitblade" do
     regex(%r{href=.*?/gitblade[._-]v?(\d+(?:\.\d+)*)[._-]darwin[._-]x64\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "GitBlade.app"
 
   zap trash: [

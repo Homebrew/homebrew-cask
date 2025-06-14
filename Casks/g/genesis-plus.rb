@@ -12,6 +12,8 @@ cask "genesis-plus" do
     regex(/<h2>Genesis\s+Plus\s+v?(\d+(?:\.\d+)+)[" <]/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Genesis Plus v#{version}/Genesis Plus.app"

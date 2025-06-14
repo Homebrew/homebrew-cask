@@ -15,6 +15,8 @@ cask "greenfoot" do
     regex(/Version:\s*(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   app "Greenfoot.app"

@@ -15,6 +15,8 @@ cask "grayjay" do
     strategy :json, &:to_s
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Grayjay.app"
 
   zap trash: "~/Library/Application Support/Grayjay"

@@ -30,6 +30,8 @@ cask "geekbench" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Geekbench #{version.major}.app"

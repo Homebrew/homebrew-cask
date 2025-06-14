@@ -6,6 +6,8 @@ cask "gifcapture" do
   name "GifCapture"
   homepage "https://github.com/onmyway133/GifCapture"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-11", because: :unmaintained
 
   app "GifCapture.app"
