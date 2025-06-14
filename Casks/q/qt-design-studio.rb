@@ -14,8 +14,6 @@ cask "qt-design-studio" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   app "Qt Design Studio.app"
