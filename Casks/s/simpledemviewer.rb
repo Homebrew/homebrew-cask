@@ -12,6 +12,8 @@ cask "simpledemviewer" do
     regex(/SimpleDEMViewer\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :monterey"
 
   app "SimpleDEMViewer #{version}/SimpleDEMViewer.app"
