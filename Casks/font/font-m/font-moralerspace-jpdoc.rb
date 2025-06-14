@@ -6,6 +6,8 @@ cask "font-moralerspace-jpdoc" do
   name "Moralerspace JPDOC"
   homepage "https://github.com/yuru7/moralerspace"
 
+  no_autobump! because: :requires_manual_review
+
   font "MoralerspaceJPDOC_v#{version}/MoralerspaceArgonJPDOC-Bold.ttf"
   font "MoralerspaceJPDOC_v#{version}/MoralerspaceArgonJPDOC-BoldItalic.ttf"
   font "MoralerspaceJPDOC_v#{version}/MoralerspaceArgonJPDOC-Italic.ttf"
