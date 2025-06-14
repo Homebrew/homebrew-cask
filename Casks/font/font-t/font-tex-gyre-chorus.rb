@@ -6,6 +6,8 @@ cask "font-tex-gyre-chorus" do
   name "TeX Gyre Chorus"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/chorus"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole"
     regex(%r{Chorus</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
