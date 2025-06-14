@@ -6,6 +6,8 @@ cask "font-noto-sans-mono-cjk-hk" do
   name "Noto Sans Mono CJK HK"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Sans"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     cask "font-noto-sans-cjk"
   end
