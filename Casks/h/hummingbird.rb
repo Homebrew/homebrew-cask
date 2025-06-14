@@ -16,6 +16,8 @@ cask "hummingbird" do
     regex(/href=.*?hummingbird[._-]macos[._-]#{arch}[._-]notarized[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   binary "hummingbird-macos-#{arch}-#{version}/hummingbird"

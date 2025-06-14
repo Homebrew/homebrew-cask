@@ -24,6 +24,8 @@ cask "hy-rpe2" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   pkg "HY-RPE2.pkg"

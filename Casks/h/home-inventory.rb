@@ -7,6 +7,8 @@ cask "home-inventory" do
   desc "Documentation application for home and belongings"
   homepage "https://binaryformations.com/products/home-inventory/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-04", because: :discontinued
 
   depends_on macos: ">= :sierra"
