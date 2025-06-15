@@ -1,8 +1,8 @@
 cask "medis" do
-  version "2.15.1"
-  sha256 "70e0cab62c3306aa097c5d5000a0d14e555019f17dc2f1743c0a158f035ba7e9"
+  version "2.16.1"
+  sha256 "f9cef8fb4637d9a0f5a101246a20830c081452f49dfc7006b992bb6b4c561943"
 
-  url "https://api.getmedis.com/medis-#{version}.zip"
+  url "https://api.getmedis.com/medis/medis-#{version}.zip"
   name "Medis"
   desc "Modern GUI for Redis"
   homepage "https://getmedis.com/"
