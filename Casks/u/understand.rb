@@ -13,6 +13,7 @@ cask "understand" do
   end
 
   app "Understand.app"
+  binary "#{appdir}/Understand.app/Contents/MacOS/userver"
 
   zap trash: [
     "~/Library/Application Support/SciTools",
