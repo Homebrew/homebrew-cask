@@ -1,6 +1,6 @@
 cask "ppsspp" do
-  version "1.19.1"
-  sha256 "19747f0420f573e124cc64e0f91f23118d8751e22b4d079294fe540281cbc91c"
+  version "1.19.2"
+  sha256 "3859b6c3f77efa6beac0b8677929584cbbbc81a90e3a6c7bb6d6fc9b70f89c1f"
 
   url "https://www.ppsspp.org/files/#{version.dots_to_underscores}/PPSSPP_macOS.dmg"
   name "PPSSPP"
