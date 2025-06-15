@@ -6,6 +6,8 @@ cask "font-profont-nerd-font" do
   name "ProFont Nerd Font families (ProFont)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest

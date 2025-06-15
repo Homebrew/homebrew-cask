@@ -6,6 +6,8 @@ cask "font-rajdhani" do
   name "Rajdhani"
   homepage "https://github.com/itfoundry/rajdhani"
 
+  no_autobump! because: :requires_manual_review
+
   font "Rajdhani-Bold.otf"
   font "Rajdhani-Light.otf"
   font "Rajdhani-Medium.otf"

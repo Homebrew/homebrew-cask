@@ -6,6 +6,8 @@ cask "font-aurulent-sans-mono-nerd-font" do
   name "AurulentSansM Nerd Font (Aurulent Sans Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest

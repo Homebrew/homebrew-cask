@@ -6,6 +6,8 @@ cask "font-noto-nerd-font" do
   name "Noto Nerd Font families (Noto)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest

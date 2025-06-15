@@ -6,6 +6,8 @@ cask "font-codicon" do
   name "Codicon"
   homepage "https://github.com/microsoft/vscode-codicons"
 
+  no_autobump! because: :requires_manual_review
+
   font "codicon.ttf"
 
   # No zap stanza required

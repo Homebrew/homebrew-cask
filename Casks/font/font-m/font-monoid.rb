@@ -7,6 +7,8 @@ cask "font-monoid" do
   name "Monoid"
   homepage "https://larsenwork.com/monoid/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
   end

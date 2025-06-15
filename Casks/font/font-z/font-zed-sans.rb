@@ -6,6 +6,8 @@ cask "font-zed-sans" do
   name "Zed Sans"
   homepage "https://github.com/zed-industries/zed-fonts"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     strategy :github_latest

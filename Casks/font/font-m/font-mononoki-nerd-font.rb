@@ -6,6 +6,8 @@ cask "font-mononoki-nerd-font" do
   name "Mononoki Nerd Font (Mononoki)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest

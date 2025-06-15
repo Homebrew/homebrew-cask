@@ -7,6 +7,8 @@ cask "font-kawkab-mono" do
   name "Kawkab Mono"
   homepage "https://makkuk.com/kawkab-mono"
 
+  no_autobump! because: :requires_manual_review
+
   font "kawkab-mono-#{version}/KawkabMono-Bold.otf"
   font "kawkab-mono-#{version}/KawkabMono-Light.otf"
   font "kawkab-mono-#{version}/KawkabMono-Regular.otf"

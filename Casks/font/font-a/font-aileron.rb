@@ -6,6 +6,8 @@ cask "font-aileron" do
   name "Aileron"
   homepage "https://dotcolon.net/fonts/aileron/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/Version.*?(\d+(?:\.\d+)*)/i)

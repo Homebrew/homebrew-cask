@@ -6,6 +6,8 @@ cask "font-ibm-plex-serif" do
   name "IBM Plex Serif"
   homepage "https://github.com/IBM/plex"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     regex(%r{^@ibm/plex-serif@?(\d+(?:\.\d+)+)$}i)

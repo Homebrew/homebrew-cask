@@ -6,6 +6,8 @@ cask "font-ark-pixel-10px-proportional" do
   name "Ark Pixel 10px Proportional"
   homepage "https://github.com/TakWolf/ark-pixel-font"
 
+  no_autobump! because: :requires_manual_review
+
   font "ark-pixel-10px-proportional-ja.otf"
   font "ark-pixel-10px-proportional-ko.otf"
   font "ark-pixel-10px-proportional-latin.otf"

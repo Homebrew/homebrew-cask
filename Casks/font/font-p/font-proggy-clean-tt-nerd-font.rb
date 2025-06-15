@@ -6,6 +6,8 @@ cask "font-proggy-clean-tt-nerd-font" do
   name "ProggyClean Nerd Font families (ProggyCleanTT)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest

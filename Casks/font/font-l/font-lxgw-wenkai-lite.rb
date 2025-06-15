@@ -7,6 +7,8 @@ cask "font-lxgw-wenkai-lite" do
   name "霞鹜文楷 轻便版"
   homepage "https://github.com/lxgw/LxgwWenKai-Lite"
 
+  no_autobump! because: :requires_manual_review
+
   font "lxgw-wenkai-lite-v#{version}/LXGWWenKaiLite-Light.ttf"
   font "lxgw-wenkai-lite-v#{version}/LXGWWenKaiLite-Medium.ttf"
   font "lxgw-wenkai-lite-v#{version}/LXGWWenKaiLite-Regular.ttf"

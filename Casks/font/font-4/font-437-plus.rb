@@ -12,6 +12,8 @@ cask "font-437-plus" do
   name "Ultimate Oldschool PC Font Pack"
   homepage "https://int10h.org/oldschool-pc-fonts/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://int10h.org/oldschool-pc-fonts/download/"
     regex(/href=.*?oldschool[._-]pc[._-]font[._-]pack[._-]v?(\d+(?:\.\d+)+)[._-]win\.zip/i)

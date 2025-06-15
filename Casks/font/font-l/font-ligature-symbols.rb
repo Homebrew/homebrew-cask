@@ -6,6 +6,8 @@ cask "font-ligature-symbols" do
   name "Ligature Symbols"
   homepage "https://kudakurage.com/ligature_symbols/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :homepage
     regex(/ver\.\s*v?(\d+(?:\.\d+)+)/i)

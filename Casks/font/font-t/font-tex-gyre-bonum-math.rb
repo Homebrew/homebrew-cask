@@ -6,6 +6,8 @@ cask "font-tex-gyre-bonum-math" do
   name "Bonum Math"
   homepage "https://www.gust.org.pl/projects/e-foundry/tg-math"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/tg-math/download"
     regex(/Bonum\sMath\s\(OTF\),\sversion\s(\d+(?:\.\d+)+)/i)

@@ -8,6 +8,8 @@ cask "font-input" do
   name "Input"
   homepage "https://input.djr.com/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://input.djr.com/changelog/"
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)

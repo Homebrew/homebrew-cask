@@ -7,6 +7,8 @@ cask "font-fairfax-hd" do
   name "Fairfax HD"
   homepage "https://www.kreativekorp.com/software/fonts/fairfaxhd/"
 
+  no_autobump! because: :requires_manual_review
+
   font "FairfaxHaxHD.ttf"
   font "FairfaxHD.ttf"
   font "FairfaxPonaHD.ttf"

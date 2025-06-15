@@ -7,6 +7,8 @@ cask "font-noto-serif" do
   name "Noto Serif"
   homepage "https://notofonts.github.io/"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url :url
     regex(/^NotoSerif-v?(\d+(?:\.\d+)+)$/i)

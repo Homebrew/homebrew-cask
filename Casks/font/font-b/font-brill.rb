@@ -6,6 +6,8 @@ cask "font-brill" do
   name "Brill"
   homepage "https://brill.com/page/resources_brilltypeface"
 
+  no_autobump! because: :requires_manual_review
+
   livecheck do
     url "https://brill.com/page/resources_fontsdownloads"
     regex(/href=.*?The[._-]Brill[._-]Typeface[._-]Package[._-]v?[._-]?(\d+(?:[._]\d+)+)\.zip/i)

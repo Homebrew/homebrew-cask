@@ -6,6 +6,8 @@ cask "font-shure-tech-mono-nerd-font" do
   name "ShureTechMono Nerd Font (Share Tech Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest

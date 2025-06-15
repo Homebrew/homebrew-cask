@@ -6,6 +6,8 @@ cask "font-monocraft-nerd-font" do
   name "Monocraft with Nerd glyphs"
   homepage "https://github.com/IdreesInc/Monocraft"
 
+  no_autobump! because: :requires_manual_review
+
   font "Monocraft-nerd-fonts-patched.ttc"
 
   # No zap stanza required

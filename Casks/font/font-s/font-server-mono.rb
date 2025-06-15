@@ -7,6 +7,8 @@ cask "font-server-mono" do
   name "Server Mono"
   homepage "https://servermono.com/"
 
+  no_autobump! because: :requires_manual_review
+
   font "public/fonts/ServerMono-Regular.otf"
   font "public/fonts/ServerMono-RegularSlanted.otf"
 

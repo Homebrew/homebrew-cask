@@ -6,6 +6,8 @@ cask "font-dejavu-sans-mono-nerd-font" do
   name "DejaVuSansM Nerd Font (DejaVu Sans Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest

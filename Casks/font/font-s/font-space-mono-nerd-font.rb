@@ -6,6 +6,8 @@ cask "font-space-mono-nerd-font" do
   name "SpaceMono Nerd Font (Space Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
+  no_autobump! because: :bumped_by_upstream
+
   livecheck do
     url :url
     strategy :github_latest
