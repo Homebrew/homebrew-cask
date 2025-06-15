@@ -2,9 +2,10 @@ cask "font-huninn" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/huninn/Huninn-Regular.ttf"
+  url "https://github.com/google/fonts/raw/main/ofl/huninn/Huninn-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Huninn"
-  homepage "https://github.com/justfont/Huninn"
+  homepage "https://fonts.google.com/specimen/Huninn"
 
   font "Huninn-Regular.ttf"
 
