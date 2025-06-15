@@ -15,8 +15,6 @@ cask "prism" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :mojave"
 

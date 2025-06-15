@@ -13,8 +13,6 @@ cask "serial-studio" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Serial Studio.app"
 
   zap trash: [

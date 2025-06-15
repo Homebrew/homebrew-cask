@@ -13,8 +13,6 @@ cask "dungeon-crawl-stone-soup-console" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Dungeon Crawl Stone Soup - Console.app"
 
   zap trash: "~/Library/Application Support/Dungeon Crawl Stone Soup"

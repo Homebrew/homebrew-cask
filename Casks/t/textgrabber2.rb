@@ -13,6 +13,8 @@ cask "textgrabber2" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sonoma"
 
   app "TextGrabber2.app"
