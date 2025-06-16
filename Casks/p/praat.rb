@@ -1,12 +1,12 @@
 cask "praat" do
-  version "6.4.34,6434"
-  sha256 "dec4a63a53e6f245c279d82cec29e58d2f50f9bbb30a4b82e3948761895a409d"
+  version "6.4.35,6435"
+  sha256 "bfb057777761d4d0a61df8fa6d294eaf72f7ab70cee8130f1af81c5db374cbac"
 
   url "https://github.com/praat/praat/releases/download/v#{version.csv.first}/praat#{version.csv.second}_mac.dmg",
       verified: "github.com/praat/praat/"
   name "Praat"
   desc "Doing phonetics by computer"
-  homepage "https://www.fon.hum.uva.nl/praat/"
+  homepage "https://praat.org/"
 
   livecheck do
     url :url
