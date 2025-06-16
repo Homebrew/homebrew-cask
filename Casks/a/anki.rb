@@ -13,9 +13,9 @@ cask "anki" do
     end
   end
   on_big_sur :or_newer do
-    version "25.02.6"
-    sha256 arm:   "15e5a025cfebe7901054956e0411c0599630965b2e06eb3acd94e10507b2a343",
-           intel: "ab09d18e2c316993d3bf488f0b8c7a0428e4cb5350c42de7daf52f51ea20bf5d"
+    version "25.02.7"
+    sha256 arm:   "b2df44bf951404e1d5d56150ee50e158ca5dfd77416b442ed02218348bf1a43b",
+           intel: "0d7eb9781596e44c0a833df71c6948706b97c4e89e8bdb315707de33c33c6052"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt6.dmg",
         verified: "github.com/ankitects/anki/"
