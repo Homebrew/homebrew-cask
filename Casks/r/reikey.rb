@@ -8,7 +8,10 @@ cask "reikey" do
   desc "Scans, detects, and monitors keyboard taps"
   homepage "https://objective-see.org/products/reikey.html"
 
-  disable! date: "2025-06-12", because: :no_longer_available
+  livecheck do
+    url :homepage
+    regex(/href=.*?ReiKey[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
 
   depends_on macos: ">= :high_sierra"
 

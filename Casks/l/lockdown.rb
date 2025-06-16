@@ -10,7 +10,7 @@ cask "lockdown" do
 
   no_autobump! because: :requires_manual_review
 
-  disable! date: "2025-06-09", because: :no_longer_available
+  deprecate! date: "2025-03-02", because: :unmaintained
 
   app "Lockdown.app"
 

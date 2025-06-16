@@ -8,7 +8,10 @@ cask "ransomwhere" do
   desc "Protect your personal files"
   homepage "https://objective-see.org/products/ransomwhere.html"
 
-  disable! date: "2025-06-12", because: :no_longer_available
+  livecheck do
+    url :homepage
+    regex(/href=.*?RansomWhere[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
 
   installer script: {
     executable: "#{staged_path}/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
