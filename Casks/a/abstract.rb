@@ -1,12 +1,11 @@
 cask "abstract" do
-  version "98.6.1"
-  sha256 "227ed1f8ac93ec8f6a3dfcf5c7d076a728df105ab5ac5a0ed50fb5152134b4f1"
+  version "98.6.2"
+  sha256 "744dd1dfcafaf43d7c1216e10f38bb6888d91ddfec207852652158bc78636bc3"
 
-  url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip",
-      verified: "downloads.goabstract.com/"
+  url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip"
   name "Abstract"
   desc "Collaborative design tool with support for Sketch files"
-  homepage "https://www.abstract.com/"
+  homepage "https://www.goabstract.com/"
 
   livecheck do
     url "https://api.goabstract.com/releases/latest"
