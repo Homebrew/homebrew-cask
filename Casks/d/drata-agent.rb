@@ -1,6 +1,6 @@
 cask "drata-agent" do
-  version "3.7.0"
-  sha256 "5284e3c6f95cc701a484c23284dede4831a8deca8949e1bc09d9147bc4626afb"
+  version "3.8.0"
+  sha256 "486a1da234d0059ada0c2947c041e95120f89534e070b1d73ce4503d2adf622d"
 
   url "https://github.com/drata/agent-releases/releases/download/v#{version}/Drata-Agent-mac.dmg",
       verified: "github.com/drata/agent-releases/"
