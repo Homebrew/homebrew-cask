@@ -1,6 +1,6 @@
 cask "ba-connected" do
-  version "1.59.0"
-  sha256 "73d759d8ce3e966ae7f4245898edd70833e9192d3a894e45efca3d722deac3ea"
+  version "1.63.2"
+  sha256 "fc0b5acf0b20e34c98168c0dc1a6b993e6c584796687432af3787e54f4c6431a"
 
   url "https://downloads.bsn.cloud/BA%20connected-#{version}.dmg",
       verified: "downloads.bsn.cloud/"
