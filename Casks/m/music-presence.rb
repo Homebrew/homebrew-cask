@@ -24,7 +24,6 @@ cask "music-presence" do
   end
 
   depends_on macos: ">= :big_sur"
-  depends_on arch: [:arm64, :x86_64]
 
   app "Music Presence.app"
 
