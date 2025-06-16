@@ -8,7 +8,10 @@ cask "filemonitor" do
   desc "Monitor filesystem activity"
   homepage "https://objective-see.org/products/utilities.html#FileMonitor"
 
-  disable! date: "2025-06-12", because: :no_longer_available
+  livecheck do
+    url :homepage
+    regex(/href=.*?FileMonitor[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
 
   no_autobump! because: :requires_manual_review
 

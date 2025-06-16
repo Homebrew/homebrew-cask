@@ -8,7 +8,10 @@ cask "processmonitor" do
   desc "Monitor process activity"
   homepage "https://objective-see.org/products/utilities.html#ProcessMonitor"
 
-  disable! date: "2025-06-12", because: :no_longer_available
+  livecheck do
+    url :homepage
+    regex(/href=.*?ProcessMonitor[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
 
   no_autobump! because: :requires_manual_review
 
