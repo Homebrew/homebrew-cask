@@ -14,13 +14,7 @@ cask "music-presence" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
+    strategy :github_latest
   end
 
   depends_on macos: ">= :big_sur"
