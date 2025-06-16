@@ -1,6 +1,6 @@
 cask "virtualdj" do
-  version "2025,8615,ACF9C6EC"
-  sha256 "a1a26eb200ef19b669e328af6678b14be0255b7787557662729eb5044ffbb6a5"
+  version "2025,8630,F6A84003"
+  sha256 "31b1070a571bbb55fa49c241773771c89ce5fb903e81c9f71d8b79ee6be99e6b"
 
   url "https://download.virtualdj.com/b#{version.csv.second}/#{version.csv.third}/install_virtualdj_#{version.csv.first}_b#{version.csv.second}_mac.pkg"
   name "VirtualDJ"
