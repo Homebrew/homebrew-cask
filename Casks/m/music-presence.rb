@@ -1,7 +1,3 @@
-# Music Presence
-# Latest release: https://github.com/ungive/discord-music-presence/releases/latest
-# SHAs: https://github.com/ungive/discord-music-presence/releases/download/v2.3.0/sha256sum.txt
-
 cask "music-presence" do
   arch arm: "arm64", intel: "x86_64"
 
