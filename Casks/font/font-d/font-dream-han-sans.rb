@@ -6,8 +6,6 @@ cask "font-dream-han-sans" do
   name "Dream Han Sans"
   homepage "https://github.com/Pal3love/dream-han-cjk/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :url
     regex(/^dream[._-]v?(\d+(?:\.\d+)+)[._-]sans[._-]v?(\d+(?:\.\d+)+)[._-]serif[._-]v?(\d+(?:\.\d+)+)$/i)
@@ -18,6 +16,8 @@ cask "font-dream-han-sans" do
       "#{match[1]},#{match[2]},#{match[3]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "DreamHanSans-W1.ttc"
   font "DreamHanSans-W2.ttc"
