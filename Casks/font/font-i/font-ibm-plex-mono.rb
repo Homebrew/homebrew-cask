@@ -6,12 +6,12 @@ cask "font-ibm-plex-mono" do
   name "IBM Plex Mono"
   homepage "https://github.com/IBM/plex"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :url
     regex(%r{^@ibm/plex-mono@?(\d+(?:\.\d+)+)$}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "ibm-plex-mono/fonts/complete/otf/IBMPlexMono-Bold.otf"
   font "ibm-plex-mono/fonts/complete/otf/IBMPlexMono-BoldItalic.otf"
