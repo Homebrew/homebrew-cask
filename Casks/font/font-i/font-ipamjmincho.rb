@@ -8,12 +8,12 @@ cask "font-ipamjmincho" do
   name "IPAmj明朝"
   homepage "https://moji.or.jp/mojikiban/font/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/Ver\.v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "ipamjm.ttf"
 
