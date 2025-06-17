@@ -6,12 +6,12 @@ cask "font-iosevka-term-nerd-font" do
   name "IosevkaTerm Nerd Font (Iosevka Term)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "IosevkaTermNerdFont-Bold.ttf"
   font "IosevkaTermNerdFont-BoldItalic.ttf"
