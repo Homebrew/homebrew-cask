@@ -6,8 +6,6 @@ cask "font-meltho" do
   name "Meltho Fonts"
   homepage "https://bethmardutho.org/meltho/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(%r{href=.*?uploads/(\d+)/(\d+)/.*?melthofonts[._-]v?(\d+(?:\.\d+)+)}i)
@@ -15,6 +13,8 @@ cask "font-meltho" do
       page&.scan(regex)&.map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "melthofonts-#{version.csv.first.major}/melthofonts-#{version.csv.first}/SyrCOMAdiabene.otf"
   font "melthofonts-#{version.csv.first.major}/melthofonts-#{version.csv.first}/SyrCOMAntioch.otf"

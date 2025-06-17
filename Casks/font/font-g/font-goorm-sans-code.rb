@@ -6,12 +6,12 @@ cask "font-goorm-sans-code" do
   name "goorm Sans Code"
   homepage "https://goorm-sans.goorm.io/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/href=.*?goorm[._-]sans[._-]code[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "goorm sans code 2/Public/goorm_Sans_Code_400.ttf"
 

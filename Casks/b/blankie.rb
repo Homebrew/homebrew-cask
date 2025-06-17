@@ -8,9 +8,9 @@ cask "blankie" do
   desc "Ambient sound mixer for creating custom soundscapes"
   homepage "https://blankie.rest/"
 
-  depends_on macos: ">= :sonoma"
-
   no_autobump! because: :bumped_by_upstream
+
+  depends_on macos: ">= :sonoma"
 
   app "Blankie.app"
 

@@ -6,12 +6,12 @@ cask "font-scheherazade" do
   name "Scheherazade"
   homepage "https://software.sil.org/scheherazade/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://software.sil.org/scheherazade/download/previous-versions/"
     regex(/href=.*?Scheherazade[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "Scheherazade-#{version}/Scheherazade-Bold.ttf"
   font "Scheherazade-#{version}/Scheherazade-Regular.ttf"

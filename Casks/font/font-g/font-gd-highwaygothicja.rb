@@ -7,12 +7,12 @@ cask "font-gd-highwaygothicja" do
   name "GD-高速道路ゴシックJA"
   homepage "https://542.jp/font/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/GDHighwayGoJA[._-]Rev(\d+(?:\.\d+)*(?:b\d+)?)[._-]OTF\.zip/)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "GDHighwayGoJA-Rev#{version}-OTF/GDhwGoJA-OTF#{version}.otf"
 

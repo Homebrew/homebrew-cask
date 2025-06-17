@@ -6,11 +6,11 @@ cask "font-victor-mono" do
   name "Victor Mono"
   homepage "https://rubjo.github.io/victor-mono/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://github.com/rubjo/victor-mono/releases"
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "OTF/VictorMono-Thin.otf"
   font "OTF/VictorMono-ExtraLight.otf"

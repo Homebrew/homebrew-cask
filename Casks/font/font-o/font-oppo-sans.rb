@@ -6,8 +6,6 @@ cask "font-oppo-sans" do
   name "OPPO Sans"
   homepage "https://open.oppomobile.com/new/developmentDoc/info?id=13223"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://open.oppomobile.com/wiki/new-doc/detail.json?doc_id=13223"
     regex(/Oppo\s+Sans\s+v?(\d+(?:\.\d+)+)/i)
@@ -23,6 +21,8 @@ cask "font-oppo-sans" do
       "#{version_match[1]},#{url_match[1]},#{url_match[2]},#{url_match[3]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "OPPO_Sans_#{version.csv.first}/OPPO Sans #{version.csv.first}.ttf"
 

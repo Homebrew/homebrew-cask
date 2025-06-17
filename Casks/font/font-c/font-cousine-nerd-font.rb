@@ -6,12 +6,12 @@ cask "font-cousine-nerd-font" do
   name "Cousine Nerd Font (Cousine)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "CousineNerdFont-Bold.ttf"
   font "CousineNerdFont-BoldItalic.ttf"

@@ -6,12 +6,12 @@ cask "font-cochineal" do
   name "Cochineal"
   homepage "https://ctan.org/pkg/cochineal"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/Version.*?v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "cochineal/opentype/Cochineal-Bold.otf"
   font "cochineal/opentype/Cochineal-BoldItalic.otf"

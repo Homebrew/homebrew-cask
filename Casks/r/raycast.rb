@@ -37,10 +37,10 @@ cask "raycast" do
   desc "Control your tools with a few keystrokes"
   homepage "https://raycast.com/"
 
+  no_autobump! because: :bumped_by_upstream
+
   auto_updates true
   depends_on macos: ">= :big_sur"
-
-  no_autobump! because: :bumped_by_upstream
 
   app "Raycast.app"
 

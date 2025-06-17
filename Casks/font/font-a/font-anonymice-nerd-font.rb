@@ -6,12 +6,12 @@ cask "font-anonymice-nerd-font" do
   name "AnonymicePro Nerd Font (Anonymous Pro)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "AnonymiceProNerdFont-Bold.ttf"
   font "AnonymiceProNerdFont-BoldItalic.ttf"

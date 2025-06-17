@@ -7,12 +7,12 @@ cask "font-genshingothic" do
   name "Gen Shin Gothic"
   homepage "http://jikasei.me/font/genshin/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/href=.*genshingothic[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "GenShinGothic-Bold.ttf"
   font "GenShinGothic-ExtraLight.ttf"

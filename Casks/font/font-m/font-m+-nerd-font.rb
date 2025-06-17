@@ -6,12 +6,12 @@ cask "font-m+-nerd-font" do
   name "M+ Nerd Font families (MPlus)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "M+1CodeNerdFont-Bold.ttf"
   font "M+1CodeNerdFont-ExtraLight.ttf"

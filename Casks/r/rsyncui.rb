@@ -12,9 +12,9 @@ cask "rsyncui" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
-
   no_autobump! because: :bumped_by_upstream
+
+  depends_on macos: ">= :sonoma"
 
   app "RsyncUI.app"
 

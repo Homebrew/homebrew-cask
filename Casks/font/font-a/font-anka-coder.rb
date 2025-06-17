@@ -7,8 +7,6 @@ cask "font-anka-coder" do
   name "Anka/Coder"
   homepage "https://code.google.com/p/anka-coder-fonts/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://storage.googleapis.com/storage/v1/b/google-code-archive/o/v2%2Fcode.google.com%2Fanka-coder-fonts%2Fdownloads-page-1.json?alt=media"
     regex(/^AnkaCoder[._-]v?(\d+(?:\.\d+)+)\.zip$/i)
@@ -21,6 +19,8 @@ cask "font-anka-coder" do
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "AnkaCoder-b.ttf"
   font "AnkaCoder-bi.ttf"

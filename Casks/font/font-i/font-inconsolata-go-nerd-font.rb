@@ -6,12 +6,12 @@ cask "font-inconsolata-go-nerd-font" do
   name "InconsolataGo Nerd Font (InconsolataGo)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "InconsolataGoNerdFont-Bold.ttf"
   font "InconsolataGoNerdFont-Regular.ttf"

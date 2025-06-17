@@ -6,12 +6,12 @@ cask "font-junicode" do
   name "Junicode"
   homepage "https://github.com/psb1558/Junicode-font"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "Junicode/OTF/Junicode-Bold.otf"
   font "Junicode/OTF/Junicode-BoldItalic.otf"

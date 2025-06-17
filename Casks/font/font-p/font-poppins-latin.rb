@@ -6,13 +6,13 @@ cask "font-poppins-latin" do
   name "PoppinsLatin"
   homepage "https://github.com/itfoundry/poppins"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://github.com/itfoundry/Poppins/tree/master/products"
     regex(/PoppinsLatin[._-]v?(\d+(?:\.\d+)+)(?:[._-]Latin)?[._-]OTF\.zip/i)
     strategy :page_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "PoppinsLatin-Black.otf"
   font "PoppinsLatin-BlackItalic.otf"

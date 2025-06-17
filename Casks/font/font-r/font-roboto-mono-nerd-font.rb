@@ -6,12 +6,12 @@ cask "font-roboto-mono-nerd-font" do
   name "RobotoMono Nerd Font (Roboto Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "RobotoMonoNerdFont-Bold.ttf"
   font "RobotoMonoNerdFont-BoldItalic.ttf"

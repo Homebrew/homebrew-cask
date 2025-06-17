@@ -6,12 +6,12 @@ cask "font-envy-code-r" do
   name "Envy Code R"
   homepage "https://damieng.com/blog/2008/05/26/envy-code-r-preview-7-coding-font-released"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(%r{href=.*?original/EnvyCodeR[._-](.*)\.zip}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "Envy Code R #{version}/Envy Code R Bold.ttf"
   font "Envy Code R #{version}/Envy Code R Italic.ttf"

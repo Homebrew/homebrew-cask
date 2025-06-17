@@ -6,12 +6,12 @@ cask "font-bigblue-terminal-nerd-font" do
   name "BigBlueTerm Nerd Font families (BigBlue Terminal)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "BigBlueTerm437NerdFont-Regular.ttf"
   font "BigBlueTerm437NerdFontMono-Regular.ttf"

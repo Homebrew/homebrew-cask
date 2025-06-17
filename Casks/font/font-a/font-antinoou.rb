@@ -6,12 +6,12 @@ cask "font-antinoou" do
   name "Antinoou"
   homepage "https://www.evertype.com/fonts/coptic/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/Antinoou\s+is\s+v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "AntinoouFont-#{version}/Antinoou.ttf"
   font "AntinoouFont-#{version}/AntinoouItalic.ttf"

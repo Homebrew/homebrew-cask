@@ -6,12 +6,12 @@ cask "font-han-nom-a" do
   name "HAN NOM A"
   homepage "https://sourceforge.net/projects/vietunicode/files/hannom/hannom%20v2005/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://sourceforge.net/projects/vietunicode/rss?path=/hannom"
     regex(%r{url=.*?/hannom(?:\s|%20)*v?(\d+(?:\.\d+)*)/}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "HAN NOM A.ttf"
   font "HAN NOM B.ttf"

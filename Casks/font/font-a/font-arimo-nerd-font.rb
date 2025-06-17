@@ -6,12 +6,12 @@ cask "font-arimo-nerd-font" do
   name "Arimo Nerd Font (Arimo)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "ArimoNerdFont-Bold.ttf"
   font "ArimoNerdFont-BoldItalic.ttf"

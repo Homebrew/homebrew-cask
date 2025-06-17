@@ -6,12 +6,12 @@ cask "font-latin-modern" do
   name "Latin Modern"
   homepage "https://www.gust.org.pl/projects/e-foundry/latin-modern"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/latin-modern/download"
     regex(/lm(\d+(?:\.\d+)+)otf\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "lmmono10-italic.otf"
   font "lmmono10-regular.otf"

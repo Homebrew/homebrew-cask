@@ -6,8 +6,6 @@ cask "font-gilbert" do
   name "Gilbert"
   homepage "https://github.com/Fontself/TypeWithPride"
 
-  no_autobump! because: :requires_manual_review
-
   # This uses the `GithubReleases` strategy because all releases are marked as
   # pre-release on GitHub. We should be able to switch to the `GithubLatest`
   # strategy if/when there's a "latest" release in the future.
@@ -27,6 +25,8 @@ cask "font-gilbert" do
       end.flatten
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "Gilbert-Bold Preview#{version.before_comma.minor.tr("00", "")}.otf"
   font "Gilbert-Color Bold Preview#{version.before_comma.minor.tr("00", "")}.otf"

@@ -6,12 +6,12 @@ cask "font-tex-gyre-termes" do
   name "TeX Gyre Termes"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/termes"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole"
     regex(%r{Termes</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "texgyretermes-bold.otf"
   font "texgyretermes-bolditalic.otf"

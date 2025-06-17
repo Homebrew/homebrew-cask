@@ -7,12 +7,12 @@ cask "font-rounded-mplus" do
   name "Rounded M+"
   homepage "http://jikasei.me/font/rounded-mplus/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "http://jikasei.me/font/rounded-mplus/about.html"
     regex(/href=.*?rounded[._-]mplus[._-]v?(\d+(?:\.\d+)*)\.7z/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "rounded-mplus-1c-black.ttf"
   font "rounded-mplus-1c-bold.ttf"

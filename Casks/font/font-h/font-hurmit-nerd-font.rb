@@ -6,12 +6,12 @@ cask "font-hurmit-nerd-font" do
   name "Hurmit Nerd Font (Hermit)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "HurmitNerdFont-Bold.otf"
   font "HurmitNerdFont-BoldItalic.otf"

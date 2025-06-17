@@ -6,11 +6,11 @@ cask "font-noto-serif-cjk-kr" do
   name "Noto Serif CJK KR"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Serif"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     cask "font-noto-serif-cjk"
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "OTF/Korean/NotoSerifCJKkr-Black.otf"
   font "OTF/Korean/NotoSerifCJKkr-Bold.otf"

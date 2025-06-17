@@ -6,12 +6,12 @@ cask "font-tengwar-formal-csur" do
   name "Tengwar Formal CSUR"
   homepage "https://freetengwar.sourceforge.net/formal.html"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://sourceforge.net/projects/freetengwar/rss?path=/TengwarFont"
     regex(%r{url=.*?/TengwarFormalCSUR[._-]?v?(\d+(?:\.\d+)*)\.zip}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "TengwarFormalCSUR#{version}/TengwarFormalCSUR.ttf"
 

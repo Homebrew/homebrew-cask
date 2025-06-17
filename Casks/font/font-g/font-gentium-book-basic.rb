@@ -6,12 +6,12 @@ cask "font-gentium-book-basic" do
   name "Gentium Book Basic"
   homepage "https://software.sil.org/gentium/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://software.sil.org/gentium/download/"
     regex(/Gentium\s+Basic\s+v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "GentiumBasic_#{version.no_dots}/GenBkBasB.ttf"
   font "GentiumBasic_#{version.no_dots}/GenBkBasBI.ttf"

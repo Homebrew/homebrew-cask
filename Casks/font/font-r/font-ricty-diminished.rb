@@ -6,12 +6,12 @@ cask "font-ricty-diminished" do
   name "Ricty Diminished"
   homepage "https://rictyfonts.github.io/diminished"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(%r{/ricty_diminished-(\d+(?:\.\d+)*)\.t}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "RictyDiminished-Bold.ttf"
   font "RictyDiminished-BoldOblique.ttf"

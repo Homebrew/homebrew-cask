@@ -6,12 +6,12 @@ cask "font-terminus" do
   name "Terminus TTF"
   homepage "https://files.ax86.net/terminus-ttf/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://files.ax86.net/terminus-ttf/files/latest/"
     regex(/href=.*?terminus[._-]ttf[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "terminus-ttf-#{version}/TerminusTTF-#{version}.ttf"
   font "terminus-ttf-#{version}/TerminusTTF-Bold-#{version}.ttf"
