@@ -6,12 +6,12 @@ cask "font-palemonasmufi-italic" do
   name "PalemonasMUFI Italic"
   homepage "https://mufi.info/q.php?p=mufi/fonts/fontfamily/6"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://mufi.info/q.php?p=mufi/fonts"
     regex(/PalemonasMUFI-Italic\s+v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "PalemMUFI-it.ttf"
 
