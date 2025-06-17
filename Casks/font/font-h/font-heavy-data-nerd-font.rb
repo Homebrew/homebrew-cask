@@ -6,12 +6,12 @@ cask "font-heavy-data-nerd-font" do
   name "HeavyData Nerd Font (Heavy Data)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "HeavyDataNerdFont-Regular.ttf"
   font "HeavyDataNerdFontPropo-Regular.ttf"
