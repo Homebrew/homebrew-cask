@@ -7,8 +7,6 @@ cask "font-linux-biolinum" do
   name "Linux Biolinum"
   homepage "https://libertine-fonts.org/"
 
-  no_autobump! because: :requires_manual_review
-
   # The regex below specifically matches filenames with a version and optional
   # date. One release (5.0.0) only used a date, so that will be treated as the
   # newest version until it's no longer in the RSS feed.
@@ -21,6 +19,8 @@ cask "font-linux-biolinum" do
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "LinBiolinum_Kah.ttf"
   font "LinBiolinum_RBah.ttf"
