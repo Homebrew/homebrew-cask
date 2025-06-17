@@ -6,12 +6,12 @@ cask "font-freefont" do
   name "FreeFont"
   homepage "https://www.gnu.org/software/freefont/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :url
     regex(/href=.*?freefont[._-]otf[._-]v?(\d+(?:\.\d+)*)\.t/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "freefont-#{version}/FreeMono.otf"
   font "freefont-#{version}/FreeMonoBold.otf"
