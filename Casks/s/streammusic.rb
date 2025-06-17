@@ -1,6 +1,6 @@
 cask "streammusic" do
-  version "1.3.7"
-  sha256 "3ce0573b78fedd36a37ba0a1175efee9aedccb033a6ad2f299c428e8a4c4dd8d"
+  version "1.3.8"
+  sha256 "faaebf6df791d774db74fe8bb9f7a44d91f331068a1fe46e2c0621321b523f46"
 
   url "https://github.com/gitbobobo/StreamMusic/releases/download/v#{version}/StreamMusic_#{version}.dmg",
       verified: "github.com/gitbobobo/StreamMusic/"
