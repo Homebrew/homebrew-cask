@@ -6,8 +6,6 @@ cask "font-3270" do
   name "IBM 3270"
   homepage "https://github.com/rbanffy/3270font"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :url
     regex(%r{v?(\d+(?:\.\d+)+)/3270[._-]fonts[._-](\h+)\.zip}i)
@@ -24,6 +22,8 @@ cask "font-3270" do
       end.flatten
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "3270-Regular.otf"
   font "3270Condensed-Regular.otf"
