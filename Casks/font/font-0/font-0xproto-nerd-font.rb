@@ -6,12 +6,12 @@ cask "font-0xproto-nerd-font" do
   name "0xProto Nerd Font (0xProto)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "0xProtoNerdFont-Bold.ttf"
   font "0xProtoNerdFont-Italic.ttf"
