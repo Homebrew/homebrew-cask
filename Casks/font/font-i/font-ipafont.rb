@@ -6,12 +6,12 @@ cask "font-ipafont" do
   name "IPA Fonts"
   homepage "https://moji.or.jp/ipafont/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/IPAフォント\(\s*Ver[._-](\d+(?:\.\d+)+)\s*\)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "IPAfont#{version.no_dots}/ipag.ttf"
   font "IPAfont#{version.no_dots}/ipagp.ttf"
