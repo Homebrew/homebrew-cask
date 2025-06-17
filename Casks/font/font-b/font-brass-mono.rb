@@ -6,12 +6,12 @@ cask "font-brass-mono" do
   name "Brass Mono"
   homepage "https://github.com/fonsecapeter/brass_mono"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "BrassMono-Bold.ttf"
   font "BrassMono-BoldItalic.ttf"
