@@ -6,12 +6,12 @@ cask "font-daddy-time-mono-nerd-font" do
   name "DaddyTimeMono Nerd Font (DaddyTimeMono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "DaddyTimeMonoNerdFont-Regular.ttf"
   font "DaddyTimeMonoNerdFontMono-Regular.ttf"
