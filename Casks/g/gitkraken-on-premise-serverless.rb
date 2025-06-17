@@ -1,9 +1,9 @@
 cask "gitkraken-on-premise-serverless" do
   arch arm: "arm64", intel: "x64"
 
-  version "11.1.1"
-  sha256 arm:   "e56f196fca86c101d9238ad4661376c2d27c7b7f484ff060f2f91012df0e58e8",
-         intel: "da56a573d8085ddafc2182f19ba6db9225fab337a7d38249ef4bed9bb462d0c1"
+  version "11.2.0"
+  sha256 arm:   "ea921d294924aa0ec22671e383add626a127caa4771c293be8acf5aeb6bcb36a",
+         intel: "3564027b3ed8cd3465231a3cc5fd801282f79cb515bb452ac70b0411ccd23b5e"
 
   url "https://api.gitkraken.dev/releases/standalone/production/darwin/#{arch}/#{version}/GitKraken-v#{version}.zip",
       verified: "api.gitkraken.dev/releases/standalone/production/"
