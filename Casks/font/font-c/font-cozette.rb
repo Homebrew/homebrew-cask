@@ -6,12 +6,12 @@ cask "font-cozette" do
   name "Cozette"
   homepage "https://github.com/slavfox/Cozette"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "CozetteFonts/cozette.dfont"
   font "CozetteFonts/cozette_hidpi.dfont"
