@@ -6,12 +6,12 @@ cask "font-everson-mono" do
   name "Everson Mono"
   homepage "https://www.evertype.com/emono/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/current\s+version.*?v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "evermono-#{version}/Everson Mono.ttf"
   font "evermono-#{version}/Everson Mono Bold.ttf"
