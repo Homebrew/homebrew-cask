@@ -1,6 +1,6 @@
 cask "mints" do
-  version "1.20,2024.11"
-  sha256 "244671bda59a5ae3d8f232e6dfb093c81aa70caa3efd20b2928124a3015835d1"
+  version "1.21,2025.06"
+  sha256 "4d876ca29f21db23f89ecff1e0d72c849f2697b99ebb665b3d7a0e4803efa03c"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/mints#{version.csv.first.no_dots}.zip"
   name "Mints"
