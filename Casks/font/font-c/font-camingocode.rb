@@ -6,12 +6,12 @@ cask "font-camingocode" do
   name "CamingoCode"
   homepage "https://www.janfromm.de/typefaces/camingomono/camingocode/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :url
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "TTF/CamingoCode-Bold.ttf"
   font "TTF/CamingoCode-BoldItalic.ttf"
