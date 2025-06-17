@@ -12,9 +12,9 @@ cask "meetingbar" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   no_autobump! because: :bumped_by_upstream
+
+  depends_on macos: ">= :catalina"
 
   app "MeetingBar.app"
 
