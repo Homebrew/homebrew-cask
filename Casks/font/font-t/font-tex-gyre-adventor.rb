@@ -6,12 +6,12 @@ cask "font-tex-gyre-adventor" do
   name "TeX Gyre Adventor"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/adventor"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole"
     regex(%r{Adventor</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "qag#{version.dots_to_underscores}otf/texgyreadventor-bold.otf"
   font "qag#{version.dots_to_underscores}otf/texgyreadventor-bolditalic.otf"
