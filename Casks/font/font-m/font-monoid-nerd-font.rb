@@ -6,12 +6,12 @@ cask "font-monoid-nerd-font" do
   name "Monoid Nerd Font (Monoid)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "MonoidNerdFont-Bold.ttf"
   font "MonoidNerdFont-Italic.ttf"
