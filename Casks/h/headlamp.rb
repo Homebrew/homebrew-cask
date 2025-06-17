@@ -24,9 +24,9 @@ cask "headlamp" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   no_autobump! because: :bumped_by_upstream
+
+  depends_on macos: ">= :catalina"
 
   app "Headlamp.app"
 
