@@ -6,8 +6,6 @@ cask "font-anonymous-pro" do
   name "Anonymous Pro"
   homepage "https://www.marksimonson.com/fonts/view/anonymous-pro/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/href=.*?AnonymousPro[._-]v?(\d+(?:[._]\d+)+)\.zip/i)
@@ -15,6 +13,8 @@ cask "font-anonymous-pro" do
       page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "AnonymousPro-#{version}.001/Anonymous Pro B.ttf"
   font "AnonymousPro-#{version}.001/Anonymous Pro BI.ttf"
