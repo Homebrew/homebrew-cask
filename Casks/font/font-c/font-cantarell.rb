@@ -6,11 +6,11 @@ cask "font-cantarell" do
   name "Cantarell"
   homepage "https://cantarell.gnome.org/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://gitlab.gnome.org/GNOME/cantarell-fonts.git"
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "cantarell-fonts-#{version}/prebuilt/Cantarell-VF.otf"
 
