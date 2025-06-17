@@ -1,9 +1,9 @@
 cask "shadow" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.9.10208"
-  sha256 arm:   "1c1013e8759b72ee515d6a3175e86f71fca258b1d231a84ba28c1d4e4010e7ce",
-         intel: "bef455cafb72129319d3221aea8d081386957ea9ff7366b7f8a6bb2514484740"
+  version "9.9.10241"
+  sha256 arm:   "31d1ecb94c275c321187e59b9a7e8a1192b9ef5dfb32db1344cd7b4647750407",
+         intel: "2d1dcbe50390cd940c55f742fdc046f0bca7735de62769b3e90cde1f9d0203a6"
 
   url "https://update.shadow.tech/launcher/prod/mac/#{arch}/ShadowPC-#{version}.dmg"
   name "Shadow"
