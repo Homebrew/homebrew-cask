@@ -13,15 +13,19 @@ cask "longbridge-pro" do
 
   livecheck do
     url "https://download.wbrks.com/longbridge-desktop/prod/latest-mac.yml"
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :yaml do |yaml|
-      yaml["version"]
-    end
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :big_sur"
 
   app "Longbridge Pro.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/Longbridge Pro",
+    "~/Library/Caches/global.longbridge.app.desktop",
+    "~/Library/Caches/global.longbridge.app.desktop.ShipIt",
+    "~/Library/HTTPStorages/global.longbridge.app.desktop",
+    "~/Library/Logs/Longbridge Pro",
+    "~/Library/Preferences/global.longbridge.app.desktop.plist",
+  ]
 end
