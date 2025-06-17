@@ -6,12 +6,12 @@ cask "font-aboriginal-serif" do
   name "Aboriginal Serif"
   homepage "https://www.languagegeek.com/font/fontdownload.html"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :homepage
     regex(/Aboriginal\s+Serif.*?\(\s*v?(\d+(?:\.\d+)*)[^)]*\)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "AboriginalSerifREGULAR.ttf"
   font "AboriginalSerifBOLD.ttf"
