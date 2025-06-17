@@ -6,12 +6,12 @@ cask "font-ibm-plex-sans-devanagari" do
   name "IBM Plex Sans Devanagari"
   homepage "https://github.com/IBM/plex"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url :url
     regex(%r{^@ibm/plex-sans-devanagari@?(\d+(?:\.\d+)+)$}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Bold.otf"
   font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-ExtraLight.otf"
