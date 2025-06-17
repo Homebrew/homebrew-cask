@@ -6,12 +6,12 @@ cask "font-tex-gyre-pagella" do
   name "TeX Gyre Pagella"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/pagella"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole"
     regex(%r{Pagella</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "qpl#{version.dots_to_underscores}otf/texgyrepagella-bold.otf"
   font "qpl#{version.dots_to_underscores}otf/texgyrepagella-bolditalic.otf"
