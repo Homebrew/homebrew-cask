@@ -6,12 +6,12 @@ cask "font-coelacanth" do
   name "Coelacanth"
   homepage "https://gitlab.com/Fuzzypeg/coelacanth"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://gitlab.com/Fuzzypeg/coelacanth/-/releases/permalink/latest"
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "Coelacanth.otf"
   font "CoelacanthBold.otf"
