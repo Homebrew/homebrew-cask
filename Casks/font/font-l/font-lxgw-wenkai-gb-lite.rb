@@ -1,6 +1,6 @@
 cask "font-lxgw-wenkai-gb-lite" do
-  version "1.511"
-  sha256 "7593950dcb0e75741b9bed81e93791bca3495277dbb06bc23eef1f4e0935bd40"
+  version "1.520"
+  sha256 "f8ffa21276a909d9033a24fcbd478cfcbd5fe6400329952298f55ef213c44f6e"
 
   url "https://github.com/lxgw/LxgwWenkaiGB-Lite/releases/download/v#{version}/lxgw-wenkai-gb-lite-v#{version}.zip"
   name "LXGW WenKai GB Lite"
