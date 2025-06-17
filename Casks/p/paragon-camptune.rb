@@ -14,8 +14,8 @@ cask "paragon-camptune" do
     end
   end
 
-  depends_on macos: ">= :sierra"
   depends_on arch: :x86_64
+  depends_on macos: ">= :sierra"
 
   app "Paragon CampTune.app"
 
@@ -32,8 +32,4 @@ cask "paragon-camptune" do
     "~/Library/Preferences/com.paragon-software.camptunex.plist",
     "~/Library/Saved Application State/com.paragon-software.camptunex.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
