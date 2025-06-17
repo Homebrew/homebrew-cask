@@ -6,12 +6,12 @@ cask "font-andika" do
   name "Andika"
   homepage "https://software.sil.org/andika/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://software.sil.org/andika/download/"
     regex(/href=.*Andika[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "Andika-#{version}/Andika-Bold.ttf"
   font "Andika-#{version}/Andika-BoldItalic.ttf"
