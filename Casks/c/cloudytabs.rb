@@ -10,6 +10,7 @@ cask "cloudytabs" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-06-16", because: :discontinued
+  disable! date: "2025-06-16", because: :discontinued
 
   depends_on macos: ">= :high_sierra"
 
