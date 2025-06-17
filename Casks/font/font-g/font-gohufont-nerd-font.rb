@@ -6,12 +6,12 @@ cask "font-gohufont-nerd-font" do
   name "GohuFont  Nerd Font families (Gohu)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
-  no_autobump! because: :bumped_by_upstream
-
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "GohuFont11NerdFont-Regular.ttf"
   font "GohuFont11NerdFontMono-Regular.ttf"
