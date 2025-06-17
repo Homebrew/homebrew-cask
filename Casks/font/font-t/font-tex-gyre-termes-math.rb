@@ -6,12 +6,12 @@ cask "font-tex-gyre-termes-math" do
   name "Termes Math"
   homepage "https://www.gust.org.pl/projects/e-foundry/tg-math"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://www.gust.org.pl/projects/e-foundry/tg-math/download"
     regex(/Termes\sMath\s\(OTF\),\sversion\s(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "texgyretermes-math-#{version.no_dots}/opentype/texgyretermes-math.otf"
 
