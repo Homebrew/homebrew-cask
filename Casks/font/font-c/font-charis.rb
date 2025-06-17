@@ -6,12 +6,12 @@ cask "font-charis" do
   name "Charis"
   homepage "https://software.sil.org/charis/"
 
-  no_autobump! because: :requires_manual_review
-
   livecheck do
     url "https://software.sil.org/charis/download/"
     regex(/href=.*Charis[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "Charis-#{version}/Charis-Bold.ttf"
   font "Charis-#{version}/Charis-BoldItalic.ttf"
