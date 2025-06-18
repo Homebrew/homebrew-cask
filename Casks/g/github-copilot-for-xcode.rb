@@ -1,6 +1,6 @@
 cask "github-copilot-for-xcode" do
-  version "0.36.0"
-  sha256 "d402e8a43f81f94cf487b5edcdfecb013caa49edd3e1951b16df24d86fe97077"
+  version "0.37.0"
+  sha256 "3790f7db13fbe020d017707914b69697300f10eb94368e73e3e98fa5d970a092"
 
   url "https://githubcopilotide.z13.web.core.windows.net/#{version}/GitHubCopilotForXcode.dmg",
       verified: "githubcopilotide.z13.web.core.windows.net/"
