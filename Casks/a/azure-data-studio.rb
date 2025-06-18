@@ -1,9 +1,9 @@
 cask "azure-data-studio" do
   arch arm: "darwin-arm64", intel: "darwin"
 
-  version "1.51.1"
-  sha256 arm:   "652a5c1159c4210848658648b86afaa9266a4171486575a734472e2c02b01f80",
-         intel: "152198560aae7ddac39348b3894a1ab24fcd11132dc2d0790a8fab9fefb80b40"
+  version "1.52.0"
+  sha256 arm:   "7087ae733c556e10ddacb14b550c1e86fea8784c11006df2f4dbd3766c8739de",
+         intel: "ca3951d85525775b242bec253fec1e97f384b2af2468a0429feccf04f5adbb93"
 
   url "https://azuredatastudio-update.azurewebsites.net/#{version}/#{arch}/stable",
       verified: "azuredatastudio-update.azurewebsites.net/"
