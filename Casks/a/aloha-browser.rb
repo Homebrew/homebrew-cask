@@ -1,16 +1,12 @@
 cask "aloha-browser" do
+  arch arm: "setupArm64", intel: "setup64"
+
   version :latest
   sha256 :no_check
 
-  on_arm do
-    url "https://alohabrowser.com/pc/download/aloha_setupArm64.dmg"
-  end
-  on_intel do
-    url "https://alohabrowser.com/pc/download/aloha_setup64.dmg"
-  end
-
+  url "https://alohabrowser.com/pc/download/aloha_#{arch}.dmg"
   name "Aloha Browser"
-  desc "Fast, free, and full-featured web browser focused on privacy"
+  desc "Web browser focused on privacy"
   homepage "https://alohabrowser.com/"
 
   depends_on macos: ">= :big_sur"
