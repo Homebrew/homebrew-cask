@@ -1,6 +1,6 @@
 cask "maxon" do
-  version "2025.4.0"
-  sha256 "699102191be91cf2446e445334565cfd200e889391104b64e406fe0630c5f378"
+  version "2025.4.1"
+  sha256 "379ebe12c01ffc43ebfbace93ae2147fac264b0c724c93c059acfd1c74027b3d"
 
   url "https://mx-app-blob-prod.maxon.net/mx-package-production/installer/macos/maxon/maxonapp/releases/#{version}/Maxon_App_#{version}_Mac.zip"
   name "Maxon App"
