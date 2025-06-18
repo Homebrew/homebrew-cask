@@ -4,10 +4,10 @@ cask "aloha-browser" do
   version :latest
   sha256 :no_check
 
-  url "https://alohabrowser.com/pc/download/aloha_#{arch}.dmg"
+  url "https://alohabrowser.app/pc/download/aloha_#{arch}.dmg"
   name "Aloha Browser"
   desc "Web browser focused on privacy"
-  homepage "https://alohabrowser.com/"
+  homepage "https://alohabrowser.app/"
 
   depends_on macos: ">= :big_sur"
 
