@@ -1,6 +1,6 @@
 cask "recents" do
-  version "2.4.2"
-  sha256 "d8ff2d951d3ed003be07b95b018af3ec51c608edd3b8cc0691579f1b5d93441f"
+  version "2.5.0"
+  sha256 "ff0bd3695129aa664fb7db546d2e1965ce28c4a805c80c2cc059effc5a323bec"
 
   url "https://recentsapp.com/releases/Recents_#{version}.dmg"
   name "Recents"
