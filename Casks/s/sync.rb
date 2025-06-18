@@ -1,6 +1,6 @@
 cask "sync" do
-  version "2.2.50"
-  sha256 "a5ba6ef815c580899a1da934c78f7cff0b0893ef397b8247bee515787535f5cd"
+  version "2.2.48"
+  sha256 "9fec22de7091b64186cefac6f99c312df213fcc46034ae6e4c1631184cd97063"
 
   url "https://www10.sync.com/download/apple/Sync-#{version}.dmg"
   name "Sync"
