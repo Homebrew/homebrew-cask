@@ -5,7 +5,7 @@ cask "macsyzones" do
   url "https://github.com/rohanrhu/MacsyZones/releases/download/v#{version}/MacsyZones.zip",
       verified: "github.com/rohanrhu/MacsyZones/"
   name "MacsyZones"
-  desc "Window tiling tool, similar to FancyZones"
+  desc "Window management utility"
   homepage "https://macsyzones.com/"
 
   livecheck do
