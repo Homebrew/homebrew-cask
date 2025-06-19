@@ -1,21 +1,26 @@
 cask "macsyzones" do
-  version "1.7.0"
-  sha256 :no_check
+  version "1.7"
+  sha256 "db99b31f46748a71c5c23c072ae7155e4814e391f31beb18373be7f5150fe322"
 
-  url "https://macsyzones.com/download/MacsyZones.zip"
+  url "https://github.com/rohanrhu/MacsyZones/releases/download/v#{version}/MacsyZones.zip",
+      verified: "github.com/rohanrhu/MacsyZones/"
   name "MacsyZones"
-  desc "Window tiling tool for macOS, similar to FancyZones on Windows"
+  desc "Window tiling tool, similar to FancyZones"
   homepage "https://macsyzones.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "MacsyZones.app"
 
-  depends_on macos: ">= :big_sur"
-
-  auto_updates true
-
   zap trash: [
     "~/Library/Application Support/MacsyZones",
-    "~/Library/Preferences/com.macsyzones.MacsyZones.plist",
     "~/Library/Logs/MacsyZones",
+    "~/Library/Preferences/com.macsyzones.MacsyZones.plist",
   ]
 end
