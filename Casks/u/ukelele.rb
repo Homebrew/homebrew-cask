@@ -1,6 +1,6 @@
 cask "ukelele" do
-  version "3.6b4"
-  sha256 "a7e794063b3cf2d7506769bbc7c79d5b409c8a75b4f9032071c798d4061f60ef"
+  version "3.6b5"
+  sha256 "bd1a8fe9aa6b0cc46d7ed187736f61cc520a9c507bc573ab75c74490ac36631b"
 
   url "https://software.sil.org/downloads/r/ukelele/Ukelele_#{version}.dmg"
   name "Ukelele"
