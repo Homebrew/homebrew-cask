@@ -97,7 +97,7 @@ appflowy
 applite
 aptakube
 aptible
-aqua
+aqua-app
 aqua-voice
 arc
 archipelago
@@ -105,7 +105,7 @@ archivewebpage
 archy
 arctic
 arduino-ide
-ares
+ares-emulator
 ariang
 arq
 artisan
@@ -284,14 +284,14 @@ cloudflare-warp@beta
 cloudmounter
 cloudnet
 cloudpouch
-cmake
+cmake-app
 coconutbattery
 code-composer-studio
 codeedit
 codekit
 codeql
 codux
-cog
+cog-app
 coin-wallet
 colorwell
 comfyui
@@ -307,8 +307,8 @@ consul
 container
 contour
 cookie
-copilot
 copilot-for-xcode
+copilot-money
 copyq
 core-tunnel
 cork
@@ -350,7 +350,7 @@ dataflare
 datagrip
 dataspell
 datovka
-davmail
+davmail-app
 dbeaver-community
 dbgate
 dbngin
@@ -400,7 +400,7 @@ distroav
 djstudio
 djuced
 dockdoor
-docker
+docker-desktop
 dockfix
 dockside
 dockx
@@ -408,18 +408,18 @@ dogecoin
 dolphin
 dolphin@dev
 domzilla-caffeine
-dosbox-staging
-dosbox-x
-dotnet
+dosbox-staging-app
+dosbox-x-app
+dotnet-runtime
+dotnet-runtime@preview
 dotnet-sdk
 dotnet-sdk@preview
-dotnet@preview
 double-commander
 douyin
 douyin-chat
 downie
 doxie
-doxygen
+doxygen-app
 drata-agent
 draw-things
 drawio
@@ -461,7 +461,7 @@ elgato-stream-deck
 elgato-wave-link
 eloston-chromium
 elpass
-emacs@nightly
+emacs-app@nightly
 embyserver
 emclient
 endless-sky
@@ -509,7 +509,7 @@ finch
 find-any-file
 fing
 firealpaca
-firefly
+firefly-iota-desktop
 firefly-shimmer
 firefox
 firefox@beta
@@ -697,7 +697,7 @@ halloy
 hamrs-pro
 hancom-docs
 hancom-word
-handbrake
+handbrake-app
 hapigo
 hashbackup
 hazel
@@ -711,7 +711,7 @@ heroic
 heynote
 hhkb-studio
 hides
-highlight
+highlight-ai
 hightop
 holavpn
 home-assistant
@@ -721,7 +721,7 @@ hoppscotch
 houdahspot
 hstracker
 http-toolkit
-httpie
+httpie-desktop
 hubstaff
 huggingchat
 huly
@@ -759,7 +759,7 @@ intellij-idea-ce
 intellij-idea@eap
 internxt-drive
 intune-company-portal
-ipfs
+ipfs-desktop
 ipremoteutility
 ipvanish-vpn
 ireal-pro
@@ -794,13 +794,13 @@ jordanbaird-ice
 josm
 jottacloud
 jprofiler
-julia
-julia@lts
-jump
+julia-app
+julia-app@lts
+jump-desktop
 jump-desktop-connect
 jumpcloud-password-manager
 jumpshare
-jupyterlab
+jupyterlab-app
 juxtacode
 jyutping
 k6-studio
@@ -843,9 +843,9 @@ kunkun
 label-live
 lagrange
 langgraph-studio
-languagetool
+languagetool-desktop
 lark
-lasso
+lasso-app
 launchbar
 launchcontrol
 lazycat
@@ -905,7 +905,7 @@ lw-scanner
 lx-music
 lycheeslicer
 lyn
-lynx
+lynx-whiteboard
 lyricsfinder
 maa
 macai
@@ -921,7 +921,7 @@ macrorecorder
 macskk
 mactracker
 macupdater
-macvim
+macvim-app
 macwhisper
 maestral
 mailbird
@@ -935,7 +935,7 @@ marathon
 marathon-2
 marathon-infinity
 marginnote
-marked
+marked-app
 markedit
 marsedit
 marvel
@@ -952,7 +952,7 @@ mediainfo
 mediamate
 mediathekview
 mega
-megacmd
+megacmd-app
 megasync
 megazeux
 meld
@@ -970,7 +970,7 @@ metashape
 metashapepro
 metasploit
 meteorologist
-mgba
+mgba-app
 mi
 mi@beta
 microblog
@@ -1017,7 +1017,7 @@ mixin
 mixing-station
 mixxx
 mixxx@snapshot
-mkvtoolnix
+mkvtoolnix-app
 mmex
 mochi
 mochi-diffusion
@@ -1081,7 +1081,7 @@ navigraph-charts
 neo-network-utility
 neofinder
 neohtop
-neovide
+neovide-app
 netbeans
 neteasemusic
 netnewswire
@@ -1127,7 +1127,7 @@ odrive
 ogdesign-eagle
 ok-json
 okta-advanced-server-access
-ollama
+ollama-app
 ollamac
 olympus
 omnifocus
@@ -1260,7 +1260,7 @@ power-manager
 powerphotos
 powershell
 powershell@preview
-ppsspp
+ppsspp-emulator
 praat
 preform
 prepros
@@ -1325,7 +1325,7 @@ quicktune
 quickwhisper
 quiet
 quip
-r
+r-app
 racket
 radarr
 radiola
@@ -1372,7 +1372,7 @@ retcon
 retrobatch
 reveal
 reverso
-rhino
+rhino-app
 ricochet-refresh
 rider
 rightfont
@@ -1407,6 +1407,7 @@ rustrover
 sabnzbd
 safe-exam-browser
 saleae-logic
+salesforce-cli
 sanctum
 santa
 sapmachine-jdk
@@ -1445,7 +1446,6 @@ servo
 session
 sessionrestore
 setapp
-sf
 sfm
 shadow
 shadow@beta
@@ -1454,7 +1454,7 @@ shapr3d
 sharemouse
 shattered-pixel-dungeon
 shearwater-cloud
-sherlock
+sherlock-app
 shift
 shortwave
 shutter-encoder
@@ -1468,7 +1468,7 @@ simplenote
 simplex
 singlebox
 singlecrystal
-sip
+sip-app
 sipgate
 sitesucker-pro
 siyuan
@@ -1480,7 +1480,7 @@ slab
 slack
 slack-cli
 slack@beta
-sleek
+sleek-app
 slicer
 slidepad
 slideshower
@@ -1573,7 +1573,7 @@ swish
 sync
 syncovery
 syncterm
-syncthing
+syncthing-app
 synology-drive
 syntax-highlight
 tabby
@@ -1585,7 +1585,7 @@ tableflip
 tableplus
 tabtab
 tagspaces
-tailscale
+tailscale-app
 tandem
 tartelet
 taskade
@@ -1597,9 +1597,9 @@ telegram
 telegram-a
 telegram-desktop
 telegram-desktop@beta
-teleport
 teleport-connect
-teleport@16
+teleport-suite
+teleport-suite@16
 tella
 temurin
 temurin@11
@@ -1654,7 +1654,7 @@ tinkerwell
 tiny-shield
 tinymediamanager
 tmpdisk
-todoist
+todoist-app
 topaz-gigapixel-ai
 topaz-photo-ai
 topaz-video-ai
@@ -1693,7 +1693,7 @@ turbotax-2024
 turbovnc-viewer
 tuta-mail
 tuxera-ntfs
-twine
+twine-app
 twingate
 tyme
 typeface
@@ -1728,7 +1728,7 @@ vagrant
 valentina-studio
 vallum
 vamiga
-vapor
+vapor-app
 vassal
 vbrokers
 vcam
@@ -1804,7 +1804,7 @@ whatsapp@beta
 whatsize
 whimsical
 whoozle-android-file-transfer
-widelands
+widelands-app
 wifi-explorer-pro
 wifispoof
 winbox
@@ -1820,7 +1820,7 @@ wins
 wire
 wirecast
 wireframe-sketcher
-wireshark
+wireshark-app
 wireshark-chmodbpf
 wiso-steuer-2022
 wiso-steuer-2023
