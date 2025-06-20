@@ -1,6 +1,6 @@
 cask "virtualbuddy@beta" do
-  version "2.1,293"
-  sha256 "366df2a1c9f8165b12dcb63ca287e62f0f7d73169965ab09c2b9b6283d8c647f"
+  version "2.1,304"
+  sha256 "725bbead5cccc18a18ca9d89e2650650dfe31b9a935d9f878616ee330bf8f591"
 
   url "https://su.virtualbuddy.app/beta/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "su.virtualbuddy.app/"
