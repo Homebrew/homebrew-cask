@@ -22,10 +22,7 @@ cask "eloston-chromium" do
     end
   end
 
-  conflicts_with cask: [
-    "chromium",
-    "freesmug-chromium",
-  ]
+  conflicts_with cask: "chromium"
   depends_on macos: ">= :big_sur"
 
   app "Chromium.app"
