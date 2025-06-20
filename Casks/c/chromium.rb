@@ -10,10 +10,7 @@ cask "chromium" do
   desc "Free and open-source web browser"
   homepage "https://www.chromium.org/Home"
 
-  conflicts_with cask: [
-    "eloston-chromium",
-    "freesmug-chromium",
-  ]
+  conflicts_with cask: "eloston-chromium"
   depends_on macos: ">= :big_sur"
 
   app "chrome-mac/Chromium.app"
