@@ -6,7 +6,7 @@ cask "webrecorder-player" do
   name "Webrecorder Player"
   homepage "https://github.com/webrecorder/webrecorder-player/"
 
-  deprecate! date: "2023-12-17", because: :discontinued, replacement_formula: "replaywebpage"
+  deprecate! date: "2023-12-17", because: :discontinued, replacement_cask: "replaywebpage"
 
   app "Webrecorder Player.app"
 
