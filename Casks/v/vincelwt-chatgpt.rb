@@ -12,6 +12,8 @@ cask "vincelwt-chatgpt" do
 
   no_autobump! because: :requires_manual_review
 
+  deprecate! date: "2025-06-21", because: :unmaintained
+
   depends_on macos: ">= :high_sierra"
 
   app "Chatgpt.app"
