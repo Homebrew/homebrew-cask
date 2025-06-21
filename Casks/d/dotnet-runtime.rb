@@ -1,12 +1,12 @@
-cask "dotnet-sdk" do
+cask "dotnet-runtime" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.0.301"
-  sha256 arm:   "d19e341938cf17c2194bdb6d9f5131b8265f47c810226a5668ff7ebac20ab0c3",
-         intel: "404e52b7837df74eae8d51a3b10fefc8a7efe25f3a711584b52b1a86c61a24fc"
+  version "9.0.6"
+  sha256 arm:   "8a8e3885ba045dcbd2bf2f8885c66755aa9562585f3c051cc84b5609b5d4018f",
+         intel: "43f81b70c7c4394f0de0f78e307e4a36e95918b856620ab32be23ff0ef1ac1ac"
 
-  url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
-  name ".NET SDK"
+  url "https://builds.dotnet.microsoft.com/dotnet/Runtime/#{version}/dotnet-runtime-#{version}-osx-#{arch}.pkg"
+  name ".Net Runtime"
   desc "Developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
 
@@ -18,7 +18,7 @@ cask "dotnet-sdk" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
     strategy :json do |json, regex|
       json["releases"]&.map do |release|
-        version = release.dig("sdk", "version")
+        version = release.dig("runtime", "version")
         next unless version&.match(regex)
 
         version
@@ -27,28 +27,17 @@ cask "dotnet-sdk" do
   end
 
   conflicts_with cask: [
-    "dotnet-runtime",
     "dotnet-runtime@preview",
+    "dotnet-sdk",
     "dotnet-sdk@preview",
   ], formula: "dotnet"
   depends_on macos: ">= :mojave"
 
-  pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
+  pkg "dotnet-runtime-#{version.csv.first}-osx-#{arch}.pkg"
   binary "/usr/local/share/dotnet/dotnet"
 
-  uninstall pkgutil: [
-    "com.microsoft.dotnet.*#{version.major_minor}*#{arch}",
-    "com.microsoft.dotnet.sharedhost*#{arch}",
-    "com.microsoft.netstandard.pack.targeting.*",
-  ]
+  uninstall pkgutil: "com.microsoft.dotnet.*",
+            delete:  "/etc/paths.d/dotnet"
 
-  zap pkgutil: "com.microsoft.dotnet.*",
-      delete:  [
-        "/etc/paths.d/dotnet",
-        "/etc/paths.d/dotnet-cli-tools",
-      ],
-      trash:   [
-        "~/.dotnet",
-        "~/.nuget",
-      ]
+  zap trash: "~/.nuget"
 end

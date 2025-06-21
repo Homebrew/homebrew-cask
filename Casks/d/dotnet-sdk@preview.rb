@@ -20,9 +20,9 @@ cask "dotnet-sdk@preview" do
   end
 
   conflicts_with cask: [
-    "dotnet",
+    "dotnet-runtime",
+    "dotnet-runtime@preview",
     "dotnet-sdk",
-    "dotnet@preview",
   ], formula: "dotnet"
   depends_on macos: ">= :mojave"
 
