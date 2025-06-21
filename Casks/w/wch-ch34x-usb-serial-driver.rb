@@ -7,11 +7,6 @@ cask "wch-ch34x-usb-serial-driver" do
   desc "USB serial driver"
   homepage "https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html"
 
-  livecheck do
-    url :homepage
-    regex(%r{<td>(\d+(?:\.\d+)+)</td>}i)
-  end
-
   no_autobump! because: :requires_manual_review
 
   pkg "CH341SER_MAC/CH34xVCPDriver.pkg"
