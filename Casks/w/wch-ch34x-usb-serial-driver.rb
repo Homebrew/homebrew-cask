@@ -5,7 +5,7 @@ cask "wch-ch34x-usb-serial-driver" do
   url "https://www.wch.cn/download/file?id=369"
   name "WCH USB serial driver for CH340/CH341/CH342/CH343/CH344/CH9101/CH9102/CH9103/CH9143"
   desc "USB serial driver"
-  homepage "https://www.wch.cn/download/CH34XSER_MAC_ZIP.html"
+  homepage "https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html"
 
   livecheck do
     url :homepage
