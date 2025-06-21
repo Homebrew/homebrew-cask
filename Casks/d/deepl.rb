@@ -6,16 +6,7 @@ cask "deepl" do
     url "https://www.deepl.com/macos/download/old/#{version.major_minor}/#{version.patch}/DeepL.zip"
 
     livecheck do
-      url "https://appdownload.deepl.com/macos/"
-      regex(%r{^old/v?(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)/DeepL\.(?:zip|t)}i)
-      strategy :xml do |xml, regex|
-        xml.get_elements("//Contents/Key").map do |item|
-          match = item.text&.strip&.match(regex)
-          next if match.blank?
-
-          "#{match[1]}.#{match[2]}"
-        end
-      end
+      skip "Legacy version"
     end
   end
   on_big_sur do
@@ -28,28 +19,30 @@ cask "deepl" do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
+  on_monterey do
+    version "24.11.31463097"
+    sha256 "8e02db7b5f85d4020419a5bf7a44a39b7d1f321acabb9b8011407b3b462c0218"
+
+    url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.tar.gz"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_ventura :or_newer do
     version "25.6.12145056"
     sha256 "bbe9d2e5969d62aa98068508dc2dfe5bbb637acb4d71927baa91dc5af63e0f45"
 
     url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.tar.gz"
 
     livecheck do
-      url "https://appdownload.deepl.com/macos/"
-      regex(%r{^v?(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)/DeepL\.t}i)
-      strategy :xml do |xml, regex|
-        xml.get_elements("//Contents/Key").map do |item|
-          match = item.text&.strip&.match(regex)
-          next if match.blank?
-
-          "#{match[1]}.#{match[2]}"
-        end
-      end
+      url "https://appdownload.deepl.com/macos/appcast.xml"
+      strategy :sparkle
     end
   end
 
   name "DeepL"
-  desc "Trains AIs to understand and translate texts"
+  desc "AI-powered translator"
   homepage "https://www.deepl.com/"
 
   auto_updates true
