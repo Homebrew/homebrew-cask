@@ -7,7 +7,7 @@ cask "avidemux" do
         verified: "sourceforge.net/avidemux/"
 
     livecheck do
-      skip "Legacy version for Big Sur and earlier"
+      skip "Legacy version"
     end
   end
   on_monterey :or_newer do
@@ -21,6 +21,8 @@ cask "avidemux" do
   name "Avidemux"
   desc "Video editor"
   homepage "https://www.avidemux.org/"
+
+  no_autobump! because: :requires_manual_review
 
   app "Avidemux_#{version}.app"
   binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_cli", target: "avidemux"

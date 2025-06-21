@@ -1,15 +1,15 @@
 cask "nuclear" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.6.39"
-  sha256 arm:   "cc0655135b3def7b63b29f5bf7ea86ece40fb29c6a3338a68b54c3d5d07c10fe",
-         intel: "641b7abc1f3017c6fabe23efce29be5dbc055830d7a56400623746741b490061"
+  version "0.6.48"
+  sha256 arm:   "9749225105d3c4c8000ac4060a1a68f25be64999c54c2d786bd5faa1c0a3a619",
+         intel: "6c62adae6e054f2103b5697bdb4510ff4739fee84a9de8b8645df62bde74bbb3"
 
   url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}-#{arch}.dmg",
       verified: "github.com/nukeop/nuclear/"
   name "Nuclear"
   desc "Streaming music player"
-  homepage "https://nuclear.js.org/"
+  homepage "https://nuclearplayer.com/"
 
   livecheck do
     url :url

@@ -1,6 +1,6 @@
 cask "melodics" do
-  version "4.0.2051,E280AFBB-FF38-452A-A05D-4DCF7024B963"
-  sha256 "35b605dd1c204ace70ef58f54ebb8581be918f89a2403fd6a5d9772089b1ede0"
+  version "4.1.1301,A4DD62E1-75FE-450C-951D-295073EEE6B5"
+  sha256 "a2189338db399fe9e84142e201fc98fe1cbd52cae48497be599e631a493bbe3d"
 
   url "https://web-cdn.melodics.com/download/#{version.csv.second}.zip"
   name "Melodics"
@@ -9,20 +9,28 @@ cask "melodics" do
 
   livecheck do
     url "https://web-cdn.melodics.com/download/osxupdatescastv2.xml"
-    strategy :sparkle do |item|
-      "#{item.version},#{item.url[%r{/(\h+(?:-\h+)+)\.zip}i, 1]}"
+    regex(%r{/(\h+(?:-\h+)+)\.zip}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.version},#{match[1]}"
     end
   end
 
-  depends_on macos: ">= :mojave"
+  auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Melodics.app"
 
   zap trash: [
     "~/Library/Application Support/Melodics",
+    "~/Library/Caches/com.melodics.melodics",
     "~/Library/Caches/Melodics",
+    "~/Library/HTTPStorages/com.melodics.melodics",
     "~/Library/Preferences/com.melodics.Melodics.plist",
     "~/Library/Preferences/com.melodics.Melodics.updates.plist",
     "~/Library/Saved Application State/com.melodics.melodics.savedState",
+    "~/Library/WebKit/com.melodics.melodics",
   ]
 end

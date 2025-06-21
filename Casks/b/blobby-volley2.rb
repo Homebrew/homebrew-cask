@@ -9,7 +9,11 @@ cask "blobby-volley2" do
   desc "Head-to-head multiplayer ball game"
   homepage "https://blobbyvolley.de/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :ventura"
 
   app "blobby.app"
+
+  zap trash: "~/Library/Application Support/blobby"
 end

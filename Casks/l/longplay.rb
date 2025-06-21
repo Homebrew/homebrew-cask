@@ -1,6 +1,6 @@
 cask "longplay" do
-  version "0.5.3,458"
-  sha256 "9257519386ff255b5a0146c7f74714558e642c7d8b8bc41189797afee4999f9e"
+  version "0.9.2,471"
+  sha256 "cd6c75c2b85938415760fba0fca2d0824839f013f36de8318a74c8c710969c79"
 
   url "https://download.longplay.app/mac/longplay-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "download.longplay.app/"
@@ -13,7 +13,8 @@ cask "longplay" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :ventura"
+  auto_updates true
+  depends_on macos: ">= :sequoia"
 
   app "Longplay.app"
 

@@ -1,9 +1,9 @@
 cask "embyserver" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.8.8.0"
-  sha256 arm:   "0f4cb2a08d7f8c9010ce9f4cba335d6cff1a6efe0cf4a03dc0d19c53fa8f93d3",
-         intel: "15d6c4a0797c805cf9b8edffc9c062abb33c01710faa2749755052c15fcc6a39"
+  version "4.8.11.0"
+  sha256 arm:   "753343c90c95eda6550637a4ff7029f5be1de40cd900dabc27bf259a389db9d0",
+         intel: "7b6dd08a69631394f43d8f8ab209887747b2854247b803ab3e17bd56620dc85e"
 
   url "https://github.com/MediaBrowser/Emby.Releases/releases/download/#{version}/embyserver-osx-#{arch}-#{version}.zip",
       verified: "github.com/MediaBrowser/Emby.Releases/"

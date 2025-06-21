@@ -1,9 +1,9 @@
 cask "orange" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.37.0"
-  sha256 arm:   "df30efed58362e5c4b7a6e49fb03ee4527188ac4b6644aa6fe46484880bf9b13",
-         intel: "0b6197229b884ca4ed3ec19f9aecca35acd204ef96183d020e18bc1c27ed0027"
+  version "3.39.0"
+  sha256 arm:   "ca30cc7e05ca0f17df009485d6b377bcad2f6310c4c1cb887f58450278aeeb46",
+         intel: "8ec402992039d97683a44a37d7bd1b9fd508122404e497889861445d919d1582"
 
   on_arm do
     url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.11.8-#{arch}.dmg",
@@ -26,6 +26,8 @@ cask "orange" do
     url "https://orangedatamining.com/download/#macos"
     regex(/Orange#{version.major}[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   zap trash: [
     "~/Library/Application Support/Orange",

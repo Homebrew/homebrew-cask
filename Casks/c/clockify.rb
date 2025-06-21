@@ -1,5 +1,5 @@
 cask "clockify" do
-  version "2.10.10"
+  version "2.11.2"
   sha256 :no_check
 
   url "https://clockify.me/downloads/ClockifyDesktop.zip"
@@ -13,7 +13,7 @@ cask "clockify" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   app "Clockify Desktop.app"
 

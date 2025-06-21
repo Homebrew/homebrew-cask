@@ -19,6 +19,8 @@ cask "trim-enabler" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Trim Enabler.app"
 
   uninstall launchctl: "org.cindori.TEHelper",

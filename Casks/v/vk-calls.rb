@@ -1,6 +1,6 @@
 cask "vk-calls" do
-  version "1.36.23357"
-  sha256 "68115603f5799edaf34652b6f4c58e43d47edbcdf6b8fb99c7d072189fd47cfe"
+  version "1.41.32145"
+  sha256 "8f2f6a36e97b75f01e1c4608c54173a8c3e430c6b33f1e6cd2a4f59f9cfb70ab"
 
   url "https://vkcalls-native-ac.vk-apps.com/#{version}/vk-calls.dmg",
       verified: "vkcalls-native-ac.vk-apps.com/"
@@ -9,12 +9,12 @@ cask "vk-calls" do
   homepage "https://calls.vk.com/"
 
   livecheck do
-    url "https://vkcalls-native-ac.vk-apps.com/latest/vk-calls.dmg"
-    strategy :extract_plist
+    url "https://vkcalls-native-ac.vk-apps.com/latest/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "VK Calls.app"
 

@@ -1,8 +1,8 @@
 cask "doxygen" do
-  version "1.12.0"
-  sha256 "6ace7dde967d41f4e293d034a67eb2c7edd61318491ee3131112173a77344001"
+  version "1.14.0"
+  sha256 "ad2c71cb286100d4eaccd0b9d92751c88c4bd0501990f7eccc50aa946f827dc7"
 
-  url "https://doxygen.nl/files/Doxygen-#{version}.dmg"
+  url "https://www.doxygen.nl/files/Doxygen-#{version}.dmg"
   name "Doxygen"
   desc "Generate documentation from source code"
   homepage "https://www.doxygen.nl/"

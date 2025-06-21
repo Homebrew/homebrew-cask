@@ -12,7 +12,16 @@ cask "gopanda" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "GoPanda#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/GoPanda#{version.major}",
+    "~/Library/Logs/GoPanda#{version.major}",
+    "~/Library/Preferences/pandanet.gopanda.plist",
+    "~/Library/Saved Application State/pandanet.gopanda.savedState",
+  ]
 
   caveats do
     requires_rosetta

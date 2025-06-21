@@ -1,6 +1,6 @@
 cask "tdr-nova" do
-  version "2.1.6"
-  sha256 "97baf64955b46c5729c11abf4651910343e9b2aba658f54946fa2d0c574eb4e7"
+  version "2.2.1"
+  sha256 "3f52e024b3aa49c75ce55c2c0fc18363ef4caac0dca0df60277372f66de9297b"
 
   url "https://www.tokyodawn.net/labs/Nova/#{version}/TDR%20Nova.zip?x24775"
   name "TDR Nova"
@@ -11,6 +11,8 @@ cask "tdr-nova" do
     url :homepage
     regex(%r{latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "TDR Nova.pkg"
 

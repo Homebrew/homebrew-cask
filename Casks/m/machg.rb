@@ -6,10 +6,9 @@ cask "machg" do
   name "MacHg"
   homepage "http://jasonfharris.com/machg/"
 
-  livecheck do
-    url "http://jasonfharris.com/machg/machg_appcast.xml"
-    strategy :sparkle
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-12", because: :unmaintained
 
   app "MacHg.app"
 

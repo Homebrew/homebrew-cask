@@ -13,6 +13,8 @@ cask "colorchecker-camera-calibration" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "ColorCheckerCameraCalibration.pkg"
 
   uninstall \
@@ -22,4 +24,8 @@ cask "colorchecker-camera-calibration" do
       "com.xrite.colorcheckercameracalibration.colorcheckercameracalibration.XRiteColorCheckerCameraCalibration.pkg",
     ],
     delete:  "/System/Applications/ColorChecker Camera Calibration.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -13,16 +13,56 @@ cask "lightkey" do
         items.map do |item|
           next unless item.minimum_system_version
           next if item.minimum_system_version < :big_sur ||
-                  item.minimum_system_version >= :ventura
+                  item.minimum_system_version > :monterey
 
           item.version
         end
       end
     end
   end
-  on_ventura :or_newer do
-    version "5.0.2"
-    sha256 "d40a2b0760077c187bafa1417565acedda6fd6707a56b02953c31aba97669b2e"
+  on_ventura do
+    version "5.3.3"
+    sha256 "656cd6fdbd9ec27c46f6862d483265b5240f5ce107bb6a660b23b6a7c8473d8b"
+
+    # This check should only return legacy versions and the conditions may need
+    # to be updated as the minimum system version of releases changes. If/when
+    # upstream stops publishing new legacy versions, this should be updated to
+    # use `skip` instead.
+    livecheck do
+      url "https://lightkeyapp.com/en/update"
+      strategy :sparkle do |items|
+        items.map do |item|
+          next unless item.minimum_system_version
+          next if item.minimum_system_version > :ventura
+
+          item.version
+        end
+      end
+    end
+  end
+  on_sonoma do
+    version "5.3.3"
+    sha256 "656cd6fdbd9ec27c46f6862d483265b5240f5ce107bb6a660b23b6a7c8473d8b"
+
+    # This check should only return legacy versions and the conditions may need
+    # to be updated as the minimum system version of releases changes. If/when
+    # upstream stops publishing new legacy versions, this should be updated to
+    # use `skip` instead.
+    livecheck do
+      url "https://lightkeyapp.com/en/update"
+      strategy :sparkle do |items|
+        items.map do |item|
+          next unless item.minimum_system_version
+          next if item.minimum_system_version > :sonoma
+
+          item.version
+        end
+      end
+    end
+  end
+  on_sequoia :or_newer do
+    version "5.5"
+    sha256 "962cc58a05d2e2f062ca011bcac6740b92c96b522ff7b71debff8e68af7e476a"
 
     # Upstream also publishes legacy versions (with a lower minor version) in
     # the appcast, so the first `item` after sorting by `pubDate`/`version` may

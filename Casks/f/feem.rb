@@ -8,7 +8,10 @@ cask "feem" do
   desc "Local file transfer"
   homepage "https://feem.io/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-05-17", because: :moved_to_mas
+  disable! date: "2025-05-17", because: :moved_to_mas
 
   pkg "Feem_Mac_#{version}_beta_Installer.pkg"
 

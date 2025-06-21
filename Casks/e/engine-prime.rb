@@ -8,20 +8,15 @@ cask "engine-prime" do
   desc "Music Management Software for Denon's Engine OS Hardware"
   homepage "https://web.archive.org/web/20170602015353/http://denondj.com/engineprime"
 
+  no_autobump! because: :requires_manual_review
+
   # https://community.enginedj.com/t/engine-prime-vs-engine-dj/40181
   deprecate! date: "2024-01-15", because: :unmaintained
+  disable! date: "2025-01-15", because: :unmaintained, replacement_cask: "engine-dj"
 
   pkg "Engine Prime_#{version.csv.first}_Setup.pkg"
 
   uninstall pkgutil: "com.airmusictechnology.engineprime.application"
 
   zap trash: "~/Music/Engine Library"
-
-  caveats do
-    <<~EOS
-      engine-dj is the official successor to this software:
-
-        brew install --cask engine-dj
-    EOS
-  end
 end

@@ -7,6 +7,8 @@ cask "pitchperfect" do
   desc "Guitar tuning software"
   homepage "https://www.nch.com.au/tuner/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-06", because: "is 32-bit only"
 
   app "PitchPerfect.app"

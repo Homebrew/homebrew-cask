@@ -1,6 +1,6 @@
 cask "replacicon" do
-  version "1.6.3,35"
-  sha256 "e78cffbcde0fa9321e58f45c16d8178699a601ac3938acb1c3bedf77418f9acf"
+  version "2.0.1,45"
+  sha256 "6b499d48a5dafcfef0ff9f502d2a0ae72aae0389ef43c801ad06c8bc91626501"
 
   url "https://replacicon.app/builds/Replacicon_#{version.csv.second}.zip"
   name "Replacicon"
@@ -13,6 +13,7 @@ cask "replacicon" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "Replacicon.app"
 

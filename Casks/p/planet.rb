@@ -1,6 +1,6 @@
 cask "planet" do
-  version "0.19.0"
-  sha256 "074939a5db98efb7c3496d5046c14e2649bf0b837c835e548eca6b88b4b9fdb1"
+  version "0.21.1"
+  sha256 "91261bf4b17d40d040485ad804d9096db22edd6c2462a072d53e4eabcd2356e2"
 
   url "https://github.com/Planetable/Planet/releases/download/release-#{version}/Planet.zip",
       verified: "github.com/Planetable/Planet/"
@@ -10,10 +10,11 @@ cask "planet" do
 
   livecheck do
     url :url
-    regex(/^release-(\d+(?:[.-]\d+)+)$/i)
+    regex(/^release[._-](\d+(?:[.-]\d+)+)$/i)
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Planet.app"
 

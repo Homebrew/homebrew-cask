@@ -1,6 +1,6 @@
 cask "beatunes" do
-  version "5.2.34"
-  sha256 "797051f6795e010364d97b8d0eee1af58ea613d0cfefd398673c111182fc514c"
+  version "5.2.35"
+  sha256 "0fda038e3987cbd2570fd7b1f85e086ea79a3dc3d3729224a384aa62da288d1a"
 
   url "https://coxy.beatunes.com/download/beaTunes-#{version.dots_to_hyphens}.dmg"
   name "beaTunes"
@@ -14,6 +14,8 @@ cask "beatunes" do
       page.scan(regex)&.map { |match| match[0].tr("-", ".") }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :el_capitan"
 

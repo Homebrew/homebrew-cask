@@ -1,10 +1,12 @@
 cask "font-udev-gothic-nf" do
-  version "2.0.0"
-  sha256 "551f1e89861f71cdf0c714cea42e503dbec5a6064f07af1711f1731003433039"
+  version "2.1.0"
+  sha256 "2d3ea89a7dfbf5ad07893fa1a39894f5860a146fd2633311176c61dcca6120e7"
 
   url "https://github.com/yuru7/udev-gothic/releases/download/v#{version}/UDEVGothic_NF_v#{version}.zip"
   name "UDEV Gothic NF"
   homepage "https://github.com/yuru7/udev-gothic"
+
+  no_autobump! because: :requires_manual_review
 
   font "UDEVGothic_NF_v#{version}/UDEVGothic35NF-Bold.ttf"
   font "UDEVGothic_NF_v#{version}/UDEVGothic35NF-BoldItalic.ttf"

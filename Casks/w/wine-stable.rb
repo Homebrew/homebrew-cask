@@ -1,6 +1,6 @@
 cask "wine-stable" do
-  version "9.0_3"
-  sha256 "e352befbd159225d4ef7c45ad90ccc4efb9797bd4e842f99036a32e850d1b3de"
+  version "10.0_2"
+  sha256 "465330eaced42d033fc24bfb9bc684c179442f8f7359f24c7dc114c375453e55"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
@@ -23,13 +23,15 @@ cask "wine-stable" do
         next if release["draft"] || release["prerelease"]
         next unless release["assets"]&.any? { |asset| asset["name"]&.match?(file_regex) }
 
-        match = release["tag_name"].match(regex)
+        match = release["tag_name"]&.match(regex)
         next if match.blank?
 
         match[1]
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   conflicts_with cask: [
     "wine@devel",
@@ -41,12 +43,12 @@ cask "wine-stable" do
   app "Wine Stable.app"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/appdb"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/winehelp"
+  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/msidb"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/msiexec"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/notepad"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/regedit"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/regsvr32"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wine"
-  binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wine64"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineboot"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winecfg"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineconsole"

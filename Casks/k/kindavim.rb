@@ -1,5 +1,5 @@
 cask "kindavim" do
-  version "2828.66.0"
+  version "71"
   sha256 :no_check
 
   url "https://kindavim.app/releases/kindaVim.zip"
@@ -9,12 +9,11 @@ cask "kindavim" do
 
   livecheck do
     url "https://kindavim.app/releases/appcast.xml"
-    strategy :sparkle do |item|
-      item.version.to_s
-    end
+    strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :monterey"
+  auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "kindaVim.app"
 
@@ -29,5 +28,6 @@ cask "kindavim" do
     "~/Library/HTTPStorages/mo.com.sleeplessmind.kindaVim.binarycookies",
     "~/Library/Preferences/mo.com.sleeplessmind.kindaVim.plist",
     "~/Library/Saved Application State/mo.com.sleeplessmind.kindaVim.savedState",
+    "~/Library/WebKit/mo.com.sleeplessmind.kindaVim",
   ]
 end

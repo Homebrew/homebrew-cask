@@ -1,9 +1,12 @@
 cask "xiaomi-cloud" do
-  version "2.6.2"
-  sha256 "c39fc8b50e8a581e7c6fe7168651a50f6728aff82eb6bb3a997b9d5dd13b8085"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://cdn.cnbj1.fds.api.mi-img.com/archive/update-server/public/darwin/x64/XiaomiCloud-#{version}.dmg",
-      verified: "cdn.cnbj1.fds.api.mi-img.com/archive/update-server/public/darwin/x64/"
+  version "3.0.2"
+  sha256 arm:   "805dba3c4713d77e32b464b463a6277898b5af2db9f92ad3673ad89ac6ade339",
+         intel: "ff4b2b1d620e335d9d7a2f747d2e3147bc565465ec602e4c234c93fc45e39d20"
+
+  url "https://cdn.cnbj1.fds.api.mi-img.com/archive/update-server/public/darwin/#{arch}/XiaomiCloud-#{version}.dmg",
+      verified: "cdn.cnbj1.fds.api.mi-img.com/archive/update-server/public/darwin/"
   name "Xiaomi Cloud"
   name "小米云服务"
   desc "Sync photos, contacts, messages and devices"
@@ -17,6 +20,7 @@ cask "xiaomi-cloud" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "小米云服务.app"
 
@@ -25,8 +29,4 @@ cask "xiaomi-cloud" do
     "~/Library/Preferences/micloud.pc.xiaomi.helper.plist",
     "~/Library/Preferences/micloud.pc.xiaomi.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

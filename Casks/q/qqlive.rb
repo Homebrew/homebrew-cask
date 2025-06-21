@@ -1,6 +1,6 @@
 cask "qqlive" do
-  version "2.103.0.54670"
-  sha256 "7b99c2967ef979ab517c0b30b2dc0193cdfd7091aff32645d7a1d6936e6169a1"
+  version "2.125.0.55130"
+  sha256 "e55cfc654b2944713bddf0c57efcc81eef157c33bbd306e2be306935839a2305"
 
   url "https://dldir1.qq.com/qqtv/mac/TencentVideo#{version}.dmg"
   name "QQLive"
@@ -15,7 +15,7 @@ cask "qqlive" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "QQLive.app"
 

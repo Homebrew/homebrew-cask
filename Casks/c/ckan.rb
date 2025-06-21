@@ -1,6 +1,6 @@
 cask "ckan" do
-  version "1.34.4"
-  sha256 "5f146dee7e008f1add5f4a7d9500e911849e53fcfe65c51e56a2a2555603cbe3"
+  version "1.36.0"
+  sha256 "ce6f648e2b94792e08633c20d9635142c3751bc7c459ba7b769c0fb6b971f4b8"
 
   url "https://github.com/KSP-CKAN/CKAN/releases/download/v#{version}/CKAN.dmg"
   name "Comprehensive Kerbal Archive Network"
@@ -11,6 +11,8 @@ cask "ckan" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on cask: "mono-mdk"
 

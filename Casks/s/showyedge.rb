@@ -1,6 +1,6 @@
 cask "showyedge" do
-  version "5.7.0"
-  sha256 "4c91af1254a3e08608d65932ff24bca9983e799c71287a2e3d14b799588f9dc0"
+  version "6.1.0"
+  sha256 "59b7571eddca8fd8e619afd8c002be280fbbdcf2a2830de311c8951fca56d435"
 
   url "https://github.com/pqrs-org/ShowyEdge/releases/download/v#{version}/ShowyEdge-#{version}.dmg",
       verified: "github.com/pqrs-org/ShowyEdge/"
@@ -13,7 +13,9 @@ cask "showyedge" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :big_sur"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :ventura"
 
   app "ShowyEdge.app"
 

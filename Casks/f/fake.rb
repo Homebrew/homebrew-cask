@@ -7,10 +7,9 @@ cask "fake" do
   desc "Browser for web automation and testing"
   homepage "https://fakeapp.com/"
 
-  livecheck do
-    url "https://fakeapp.com/appcast/fake.rss"
-    strategy :sparkle, &:short_version
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-10", because: :unmaintained
 
   app "Fake.app"
 

@@ -7,6 +7,8 @@ cask "gitscout" do
   desc "GitHub issues and notifications"
   homepage "https://gitscout.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-12", because: :unmaintained
 
   app "Gitscout.app"

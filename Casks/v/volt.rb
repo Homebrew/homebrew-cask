@@ -16,6 +16,8 @@ cask "volt" do
   desc "Client for Slack, Discord, Skype, Gmail, Twitter, Facebook, and more"
   homepage "https://volt-app.com/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Volt.app"
 
   zap trash: [

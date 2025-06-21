@@ -1,5 +1,5 @@
 cask "cheetah3d" do
-  version "8.1.1"
+  version "8.1.3"
   sha256 :no_check
 
   url "https://www.cheetah3d.com/download/Cheetah3D.dmg"
@@ -11,6 +11,8 @@ cask "cheetah3d" do
     url "https://www.cheetah3d.com/download.php"
     regex(%r{Download\s<br/>Cheetah3D\s(\d+(?:\.\d+)+)}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 

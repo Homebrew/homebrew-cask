@@ -1,15 +1,14 @@
 cask "unison" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.53.5"
-  sha256 arm:   "545b3b0818e671b7f966cd2f8d61df71b79f07a6cf7f180b969ddf26d50a0931",
-         intel: "ff2ab52930f6642a8ca4c903a75ec6341ca8e886701819a1c39c678dfd492228"
+  version "2.53.7"
+  sha256 arm:   "3dbb8257209ede50989a4442e863ad7b801a9a1ae04903dbb64c2d9b4a7be9e0",
+         intel: "a64996878c94c8432cf1ef898cae389b8f75c3846834af95cb21dd399854a654"
 
-  url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}-macos-#{arch}.app.tar.gz",
-      verified: "github.com/bcpierce00/unison/"
+  url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}-macos-#{arch}.app.tar.gz"
   name "Unison"
   desc "File synchroniser"
-  homepage "https://www.cis.upenn.edu/~bcpierce/unison/"
+  homepage "https://github.com/bcpierce00/unison/"
 
   livecheck do
     url :url
@@ -23,6 +22,8 @@ cask "unison" do
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   conflicts_with formula: "unison"
 

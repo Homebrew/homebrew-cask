@@ -8,6 +8,8 @@ cask "skala-preview" do
   desc "Design preview tool"
   homepage "https://bjango.com/mac/skalapreview/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-06-25", because: :unmaintained
 
   app "Skala Preview.app"

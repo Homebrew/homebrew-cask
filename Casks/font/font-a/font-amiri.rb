@@ -1,13 +1,13 @@
 cask "font-amiri" do
-  version "1.000"
-  sha256 "926fe1bd7dfde8e55178281f645258bfced6420c951c6f2fd532fd21691bca30"
+  version "1.003"
+  sha256 "81af0aff7d2086d8af24cea7202f7546130997982534691373485cd96744d05e"
 
   url "https://github.com/alif-type/amiri/releases/download/#{version}/Amiri-#{version}.zip",
       verified: "github.com/alif-type/amiri/"
   name "Amiri"
   homepage "https://www.amirifont.org/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
 
   font "Amiri-#{version}/Amiri-Bold.ttf"
   font "Amiri-#{version}/Amiri-BoldItalic.ttf"

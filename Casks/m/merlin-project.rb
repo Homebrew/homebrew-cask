@@ -1,5 +1,5 @@
 cask "merlin-project" do
-  version "8.3.3"
+  version "9.0.3"
   sha256 :no_check
 
   url "https://www.projectwizards.net/downloads/MerlinProject.zip"
@@ -12,7 +12,7 @@ cask "merlin-project" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Merlin Project.app"
 

@@ -13,6 +13,8 @@ cask "lookingglassstudio" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "LookingGlassStudio.app"

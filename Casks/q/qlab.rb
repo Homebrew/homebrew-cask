@@ -1,6 +1,6 @@
 cask "qlab" do
-  version "5.4.6"
-  sha256 "4d031ba99c1e8718e6d5877179d2b095e5bf463bcd52380245f7fced018f056e"
+  version "5.4.11"
+  sha256 "ceb42b50cc5f59a316384e461a78147b5b80242f59762a2d711c4860fa5bf942"
 
   url "https://qlab.app/downloads/archive/QLab-#{version}.zip"
   name "QLab"

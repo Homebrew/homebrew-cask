@@ -1,6 +1,6 @@
 cask "smlnj" do
-  version "110.99.5"
-  sha256 "fd72dff27137b93ec3243cd8d7f85db493ea316af28c185ae648b80fa5f95f8b"
+  version "110.99.8"
+  sha256 "3c8244ae96dde9b4089faa9073c6dd3f1f1cb50b73143d6e20a711ecda286e79"
 
   url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-amd64-#{version}.pkg",
       verified: "smlnj.cs.uchicago.edu/"
@@ -12,6 +12,8 @@ cask "smlnj" do
     url :homepage
     regex(%r{href=.*?/smlnj-amd64-(\d+(?:\.\d+)*)\.pkg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "smlnj-amd64-#{version}.pkg"
 

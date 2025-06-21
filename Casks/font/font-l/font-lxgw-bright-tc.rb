@@ -1,17 +1,19 @@
 cask "font-lxgw-bright-tc" do
-  version "5.330"
-  sha256 "5a01c41e45b43fc3ca5eb49b147a1103199002895906b8d6436b65226b5257fe"
+  version "5.526"
+  sha256 "3028306493e0fd310fa6883b1977ac081ebf69b6ac54bb9e6e88de9308fa6109"
 
   url "https://github.com/lxgw/LxgwBright/releases/download/v#{version}/LXGWBrightTC.7z"
   name "LXGW Bright TC"
   homepage "https://github.com/lxgw/LxgwBright"
 
+  no_autobump! because: :requires_manual_review
+
+  font "LXGWBrightTC/LXGWBrightTC-Italic.ttf"
+  font "LXGWBrightTC/LXGWBrightTC-Light.ttf"
+  font "LXGWBrightTC/LXGWBrightTC-LightItalic.ttf"
   font "LXGWBrightTC/LXGWBrightTC-Medium.ttf"
   font "LXGWBrightTC/LXGWBrightTC-MediumItalic.ttf"
   font "LXGWBrightTC/LXGWBrightTC-Regular.ttf"
-  font "LXGWBrightTC/LXGWBrightTC-Italic.ttf"
-  font "LXGWBrightTC/LXGWBrightTC-SemiLight.ttf"
-  font "LXGWBrightTC/LXGWBrightTC-SemiLightItalic.ttf"
 
   # No zap stanza required
 end

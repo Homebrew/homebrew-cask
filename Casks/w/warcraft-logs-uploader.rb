@@ -1,6 +1,6 @@
 cask "warcraft-logs-uploader" do
-  version "8.13.18"
-  sha256 "97759fc9f69b3cd6e5177f4896f3f6a794b7432136368ee14398836179ddff6d"
+  version "8.17.18"
+  sha256 "b67a0410c34d7d94da5fed40f84e5fbffd8a851ee49880e4ed7c8f2f5413239e"
 
   url "https://github.com/RPGLogs/Uploaders-warcraftlogs/releases/download/v#{version}/warcraftlogs-v#{version}.dmg",
       verified: "github.com/RPGLogs/Uploaders-warcraftlogs/"
@@ -14,7 +14,7 @@ cask "warcraft-logs-uploader" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Warcraft Logs Uploader.app"
 

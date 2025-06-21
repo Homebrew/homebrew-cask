@@ -11,6 +11,8 @@ cask "font-palemonasmufi-bold" do
     regex(/PalemonasMUFI-Bold\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "PalemMUFI-bd.ttf"
 
   # No zap stanza required

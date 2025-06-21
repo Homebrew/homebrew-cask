@@ -1,13 +1,13 @@
 cask "crosspaste" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "1.0.9.974"
-  sha256 arm:   "d6310ee849737f306e23170288b3fdf33e3505e4c513f692f70aa187b35ca56e",
-         intel: "d9c893a944d3ce35c1aaddf0713f7d54a5806de818a3f1a9f01ab3472e10ef77"
+  version "1.2.0.1444"
+  sha256 arm:   "2a323b87a6bd52157d1501b80cd549ba4e4639ff7491243d7a9357d5fe26b05e",
+         intel: "10f349c4172b6cb90929d571cc43087568834aaf73ff95e1805f2babaf7aaaee"
 
   url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-mac-#{arch}.zip",
       verified: "github.com/CrossPaste/crosspaste-desktop/"
-  name "crosspaste"
+  name "CrossPaste"
   desc "Universal Pasteboard Across Devices"
   homepage "https://crosspaste.com/en/"
 

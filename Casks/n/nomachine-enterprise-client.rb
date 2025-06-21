@@ -1,6 +1,6 @@
 cask "nomachine-enterprise-client" do
-  version "8.13.1_4"
-  sha256 "d8dfdd746a6600cbb34e2d0a750e9e1bf03b5a69d34564d27463195f799419e0"
+  version "8.16.1_2"
+  sha256 "44afd719f4f130e692e5f48149e10b66f596036efff5e7727683db475b0c5c80"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine-enterprise-client_#{version}.dmg"
   name "NoMachine Enterprise Client"
@@ -11,6 +11,8 @@ cask "nomachine-enterprise-client" do
     url "https://www.nomachine.com/support&destination=downloads&callback=L2Rvd25sb2FkLz9pZD0xNi"
     regex(/nomachine-enterprise-client[._-]v?(\d+(?:\.\d+)*_\d+)\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "NoMachine.pkg"
 

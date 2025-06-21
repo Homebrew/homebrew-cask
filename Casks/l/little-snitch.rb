@@ -1,6 +1,6 @@
 cask "little-snitch" do
-  version "6.1.1"
-  sha256 "9e2cf3c267c62df60190fe18ae35815ef690e2e2a6ced38193748522686ddb8c"
+  version "6.2.3"
+  sha256 "4368de875082fb9bfa626cf8c9232505d22d6d2ea7da937c09ccf66635824950"
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   name "Little Snitch"
@@ -9,7 +9,7 @@ cask "little-snitch" do
 
   livecheck do
     url "https://sw-update.obdev.at/update-feeds/littlesnitch#{version.major}.plist"
-    regex(/LittleSnitch[._-]v?(\d+(?:\.\d+)+)\.dmg/)
+    regex(/LittleSnitch[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :xml do |xml, regex|
       xml.get_elements("//key[text()='DownloadURL']").map do |item|
         match = item.next_element&.text&.match(regex)
@@ -24,6 +24,7 @@ cask "little-snitch" do
   conflicts_with cask: [
     "little-snitch@4",
     "little-snitch@5",
+    "little-snitch@nightly",
   ]
   depends_on macos: ">= :sonoma"
 

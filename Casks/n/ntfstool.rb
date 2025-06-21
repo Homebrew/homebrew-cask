@@ -7,7 +7,10 @@ cask "ntfstool" do
   desc "Utility that provides NTFS read and write support"
   homepage "https://github.com/ntfstool/ntfstool"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Ntfstool.app"
 

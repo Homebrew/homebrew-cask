@@ -11,6 +11,8 @@ cask "font-camingocode" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "TTF/CamingoCode-Bold.ttf"
   font "TTF/CamingoCode-BoldItalic.ttf"
   font "TTF/CamingoCode-Italic.ttf"

@@ -1,5 +1,5 @@
 cask "pdfelement" do
-  version "11.1.1"
+  version "11.4.19"
   sha256 :no_check
 
   url "https://download.wondershare.com/cbs_down/mac-pdfelement_full5237.dmg"
@@ -9,7 +9,9 @@ cask "pdfelement" do
 
   livecheck do
     url "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=5237&version=latest"
-    regex(%r{<Version>(\d+(?:\.\d+)+)</Version>}i)
+    strategy :xml do |xml|
+      xml.get_elements("//Version").map { |item| item.text&.strip }
+    end
   end
 
   depends_on macos: ">= :catalina"

@@ -1,9 +1,9 @@
 cask "8x8-work" do
   arch arm: "-arm64"
 
-  version "8.16.3-2"
-  sha256 arm:   "44d3d51fcad3d31b0c293b98497d8d6707cbd8702a40e8dc5f9addbcf142e2f4",
-         intel: "08a210ae82e4e17b301135052bb2ca96ab87963c779345d24c733f79bcc638f2"
+  version "8.23.2-2"
+  sha256 arm:   "ce4cbdbea67e3dafd97f605073871091e35b68cce5cbf77c7831845a28bb33d4",
+         intel: "081621b3d12b34f75d3b221ca16b9fa5d6447c3084bfb8a2b0e1f481dc8292b5"
 
   url "https://work-desktop-assets.8x8.com/prod-publish/ga/work#{arch}-dmg-v#{version}.dmg"
   name "8x8_work"

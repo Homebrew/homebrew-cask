@@ -1,11 +1,13 @@
 cask "cilicon" do
-  version "2.2.2"
-  sha256 "4978b91aa189b0ed43c020495894a61a15d039b6106c6559796afb2f99c04723"
+  version "2.2.3"
+  sha256 "5e9f4524e77688105432217c167c49edd8c8629c05e73379701c2974aceb3a7c"
 
   url "https://github.com/traderepublic/Cilicon/releases/download/v#{version}/Cilicon.zip"
   name "Cilicon"
   desc "Self-Hosted ephemeral CI on Apple Silicon"
   homepage "https://github.com/traderepublic/Cilicon"
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :ventura"
   depends_on arch: :arm64

@@ -7,10 +7,9 @@ cask "stringsfile" do
   desc "Quick Look plugin to preview .strings files"
   homepage "https://blog.timac.org/?p=933"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-11-15", because: :unmaintained
 
   qlplugin "StringsFile.qlgenerator"
 

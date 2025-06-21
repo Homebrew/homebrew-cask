@@ -1,6 +1,6 @@
 cask "blu-ray-player" do
-  version "3.3.22,231010_0359"
-  sha256 "881881dbc991260a4590968af43a3444693d93f3c4d97cd445e1886748d2b2dc"
+  version "3.3.23,250315_0521"
+  sha256 "ffac1323400359c074332611d1d8697b24ad417206c8a846236ca6588147c47d"
 
   url "https://cdn.macblurayplayer.com/mac-bluray-player-#{version.major}/Blu-ray_Player_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Macgo Mac Blu-ray Player"
@@ -9,13 +9,16 @@ cask "blu-ray-player" do
 
   livecheck do
     url "https://cdn.macblurayplayer.com/mac-bluray-player-pro#{version.major}/appcast/Appcast.xml"
-    strategy :sparkle do |item|
-      match = item.url.match(/_(\d(?:\.\d+)*)_(.*?)\.dmg/)
+    regex(/_(\d(?:\.\d+)*)_(.*?)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

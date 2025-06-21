@@ -7,6 +7,8 @@ cask "pref-setter" do
   desc "Edit plist files"
   homepage "http://www.nightproductions.net/prefsetter.html"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-16", because: "is 32-bit only"
 
   depends_on macos: "<= :mojave"

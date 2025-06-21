@@ -1,5 +1,5 @@
 cask "sound-siphon" do
-  version "3.6.9"
+  version "3.8.3"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://staticz.com/download/1837/"
@@ -12,7 +12,7 @@ cask "sound-siphon" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Sound Siphon.app"
 

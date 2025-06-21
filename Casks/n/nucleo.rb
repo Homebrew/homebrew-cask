@@ -1,9 +1,9 @@
 cask "nucleo" do
   arch arm: "-silicon"
 
-  version "4.1.4"
-  sha256 arm:   "624133d70caa43292b7dbb67f8d3a29ed3eb8d1db1921bd19bec5efd61ef7b07",
-         intel: "77e898fe09a14dbd350f248e8cf65e629d34279df5ba7850a64cd5251fdb8493"
+  version "4.1.6"
+  sha256 arm:   "c1a44d0ebfcb74cb6a4ef925d3d639efbb2d7cd4491c12f994da9287d98d90da",
+         intel: "46b392aa93e1a1098764fe8487d41d79ab234f5c1c3999a83cb9f02abadb7830"
 
   url "https://nucleo-app-releases.s3.amazonaws.com/mac#{arch}/Nucleo_#{version}.zip",
       verified: "nucleo-app-releases.s3.amazonaws.com/"
@@ -16,7 +16,7 @@ cask "nucleo" do
     regex(/href=.*?Nucleo[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Nucleo.app"
 

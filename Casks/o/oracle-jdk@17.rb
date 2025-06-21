@@ -10,10 +10,9 @@ cask "oracle-jdk@17" do
   desc "JDK from Oracle"
   homepage "https://www.oracle.com/java/technologies/downloads/"
 
-  livecheck do
-    url "https://www.oracle.com/java/technologies/javase/#{version.major}u-relnotes.html"
-    regex(/<li>\s*JDK\s*v?(\d+(?:\.\d+)*)/i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-28", because: :no_longer_meets_criteria
 
   depends_on macos: ">= :mojave"
 

@@ -1,6 +1,6 @@
 cask "sonos-s1-controller" do
-  version "57.21-50280,LGeb8h0Gma"
-  sha256 "e65db06684aab6cd70d1b638ebcc28ba04dedd24e63802775543ed680377da19"
+  version "57.22-59130,72ynP0v9lu"
+  sha256 "18d8e7f79db9ab0951846d8f1c94d4a92cf3e6426f94dc7ee40a552a349f8443"
 
   url "https://update-software.sonos.com/software/#{version.csv.second}/Sonos_#{version.csv.first}.dmg"
   name "Sonos S1"
@@ -9,11 +9,16 @@ cask "sonos-s1-controller" do
 
   livecheck do
     url "https://www.sonos.com/en/redir/controller_software_mac"
-    regex(%r{software/(\w+)/Sonos[._-]v?(\d+(?:.\d+)+)\.dmg}i)
+    regex(%r{software/(\w+)/Sonos[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
     strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

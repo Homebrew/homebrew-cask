@@ -4,12 +4,14 @@ cask "font-hermit" do
 
   url "https://pcaro.es/d/otf-hermit-#{version}.tar.gz"
   name "Hermit"
-  homepage "https://pcaro.es/p/hermit/"
+  homepage "https://pcaro.es/hermit/"
 
   livecheck do
     url :homepage
     regex(/href=.*?hermit[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "Hermit-Bold.otf"
   font "Hermit-RegularItalic.otf"

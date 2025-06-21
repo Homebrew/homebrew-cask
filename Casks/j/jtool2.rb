@@ -8,6 +8,8 @@ cask "jtool2" do
   desc "Tool to help out reverse engineering, security researchers, and tweak developers"
   homepage "https://newosxbook.com/tools/jtool.html"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-06-27", because: :discontinued
 
   binary "jtool2"

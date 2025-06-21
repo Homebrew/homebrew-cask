@@ -1,6 +1,6 @@
 cask "tuple" do
-  version "0.119.8,2024-09-16,5414126eb"
-  sha256 "53798f8f01f11fe3b603e5a3cabec7b88b87df9fd14aac0de381aa6a9ce41089"
+  version "1.123.7,2025-06-19,7c1ea0d64"
+  sha256 "39d6ef67453d249b8be7f554e3612e6171ad478792337cc1a84bee232920d415"
 
   url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/tuple-#{version.tr(",", "-")}.zip",
       verified: "d32ifkf9k9ezcg.cloudfront.net/"
@@ -10,8 +10,9 @@ cask "tuple" do
 
   livecheck do
     url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/appcast.xml"
-    strategy :sparkle do |item|
-      match = item.version.match(/^v?(\d+(?:\.\d+)+)[._-](\d+(?:-\d+)+)[._-](\h+)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)[._-](\d+(?:-\d+)+)[._-](\h+)$/i)
+    strategy :sparkle do |item, regex|
+      match = item.version.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]},#{match[3]}"
@@ -19,7 +20,7 @@ cask "tuple" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :ventura"
 
   app "Tuple.app"
 

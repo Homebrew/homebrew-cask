@@ -7,10 +7,9 @@ cask "save-hollywood" do
   desc "Screen saver for custom video files"
   homepage "http://s.sudre.free.fr/Software/SaveHollywood/about.html"
 
-  livecheck do
-    url "http://s.sudre.free.fr/Software/SaveHollywood/release_notes.html"
-    regex(/Release_notes_Version.*?(\d+(?:\.\d+)*)/i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-11-03", because: :unmaintained
 
   screen_saver "SaveHollywood.saver"
 end

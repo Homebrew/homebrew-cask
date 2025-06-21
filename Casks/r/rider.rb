@@ -1,9 +1,9 @@
 cask "rider" do
   arch arm: "-aarch64"
 
-  version "2024.2.4,242.21829.210"
-  sha256 arm:   "d240c6e018c63f154e7575ca759ce338995068696bfb20d70b46860acbb8edab",
-         intel: "cb15c63682da744c78d65584c74817487c9b6d0e20311715392460263ff51f8b"
+  version "2025.1.3,251.26094.147"
+  sha256 arm:   "04b5d3cd99bb3f04fb75ba115d7523db283a70a0410c9274a88ec888a62d8ca3",
+         intel: "9b645982d017d896c46f9cd794807355c1fce90702ed561c121428edc1ec9e09"
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
   name "JetBrains Rider"
@@ -13,8 +13,12 @@ cask "rider" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&type=release"
     strategy :json do |json|
-      json["RD"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["RD"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end
@@ -23,7 +27,16 @@ cask "rider" do
   depends_on macos: ">= :high_sierra"
 
   app "Rider.app"
-  binary "#{appdir}/Rider.app/Contents/MacOS/rider"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/rider.wrapper.sh"
+  binary shimscript, target: "rider"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/Rider.app/Contents/MacOS/rider' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/Rider#{version.major_minor}",

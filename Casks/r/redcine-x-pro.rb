@@ -1,6 +1,6 @@
 cask "redcine-x-pro" do
-  version "62.0.29"
-  sha256 "dce0998c5fec5b836855f985ec31784c2ea9c03934ffb75fdb7a1750c8197326"
+  version "64.0.25"
+  sha256 "415e7bf3a8b6694c22f0f6a40e15a51dcf72a2291e15ff61a605aaa5f9ffb8c0"
 
   url "https://downloads.red.com/software/rcx/mac/release/#{version}/REDCINE-X_PRO_Build_#{version}.pkg"
   name "REDCINE-X PRO"
@@ -21,6 +21,8 @@ cask "redcine-x-pro" do
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "REDCINE-X_PRO_Build_#{version}.pkg"
 

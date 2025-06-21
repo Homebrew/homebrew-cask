@@ -1,5 +1,5 @@
 cask "actual-odbc-pack" do
-  version "1.0.23"
+  version "1.0.24"
   sha256 :no_check
 
   url "https://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg",
@@ -11,7 +11,7 @@ cask "actual-odbc-pack" do
   livecheck do
     url :url
     strategy :extract_plist do |items|
-      items["com.actualtechnologies.odbcmanager"].short_version
+      items["com.actualtechnologies.odbcmanager"]&.short_version
     end
   end
 

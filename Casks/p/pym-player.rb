@@ -1,6 +1,6 @@
 cask "pym-player" do
-  version "8.2.3,8C135"
-  sha256 "b52abb17b2ccb98df986b6e820bbb5672691b5f802e0a166d28e705eac543d33"
+  version "8.2.4,8C148"
+  sha256 "9e3b380b4f3e736c9043203c7f6d99b34031aa6abadb90738519cb1200c4ffd9"
 
   url "https://pym.uce.pl/download/pliki/PYMPlayer#{version.csv.second}.dmg"
   name "PYM Player"
@@ -11,9 +11,11 @@ cask "pym-player" do
     url "https://pym.uce.pl/downloads/"
     regex(/href=.*?PYMPlayer[._-]?v?([^.]+)\.dmg.*v[^\d]*(\d+(?:\.\d+)+)["< ]/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.second},#{match.first}" }
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :big_sur"
 

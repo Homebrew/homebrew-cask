@@ -14,13 +14,15 @@ cask "qingg" do
   livecheck do
     url "https://qingg.im/sparkle/appcast.php"
     regex(/Qingg[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)/i)
-    strategy :sparkle do |item|
+    strategy :sparkle do |item, regex|
       match = item&.url&.match(regex)
       next if match.blank?
 
       match[1]
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

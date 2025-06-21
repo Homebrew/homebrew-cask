@@ -12,7 +12,16 @@ cask "tongbu" do
     regex(%r{href=.*?zsmac[._-]v?(\d+(?:\.\d+)+)/}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Tongbu.app"
+
+  zap trash: [
+        "~/Library/Caches/com.tongbu.assistant2",
+        "~/Library/HTTPStorages/com.tongbu.assistant2",
+        "~/Library/WebKit/com.tongbu.assistant2",
+      ],
+      rmdir: "~/Music/Tongbu"
 
   caveats do
     requires_rosetta

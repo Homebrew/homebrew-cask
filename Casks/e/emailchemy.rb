@@ -13,7 +13,11 @@ cask "emailchemy" do
     regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Emailchemy.app"
+
+  zap trash: "~/Library/Preferences/com.weirdkid.es.plist"
 
   caveats do
     requires_rosetta

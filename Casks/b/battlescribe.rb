@@ -7,10 +7,9 @@ cask "battlescribe" do
   desc "Army list creator for tabletop wargamers"
   homepage "https://battlescribe.net/"
 
-  livecheck do
-    url "https://battlescribe.net/?tab=downloads"
-    regex(/"desktop"\s*:\s*"(\d+(?:\.\d+)+)"/i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-11-16", because: :unmaintained
 
   pkg "BattleScribe_#{version}_Installer.pkg"
 
@@ -24,4 +23,8 @@ cask "battlescribe" do
               "/Applications/BattleScribe Tools/",
               "/Applications/BattleScribe.app",
             ]
+
+  caveats do
+    requires_rosetta
+  end
 end

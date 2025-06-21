@@ -1,6 +1,6 @@
 cask "vamiga" do
-  version "2.6.2"
-  sha256 "f680dfe726484ec3817ac482357c508316db351c0fe65b5ac5593ddf7d01fb8d"
+  version "4.2"
+  sha256 "d6893a0821c6ce0ae8a6a0dd20fbe6aaa561e938999700de1e7b7840e188e4b1"
 
   url "https://github.com/dirkwhoffmann/vAmiga/releases/download/v#{version}/vAmiga.app.zip",
       verified: "github.com/dirkwhoffmann/vAmiga/"
@@ -13,7 +13,7 @@ cask "vamiga" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "vAmiga.app"
 

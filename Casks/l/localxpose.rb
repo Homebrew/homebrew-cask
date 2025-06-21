@@ -1,7 +1,7 @@
 cask "localxpose" do
   arch arm: "arm64", intel: "amd64"
 
-  version "24.9.1"
+  version "24.9.2"
   sha256 :no_check
 
   url "https://api.localxpose.io/api/v2/downloads/loclx-darwin-#{arch}.zip"
@@ -15,6 +15,8 @@ cask "localxpose" do
       json["Version"]
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

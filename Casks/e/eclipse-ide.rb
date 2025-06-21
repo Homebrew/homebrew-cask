@@ -1,9 +1,9 @@
 cask "eclipse-ide" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.33.0,2024-09"
-  sha256 arm:   "209c4673298c5ede9c6f08295ce5d7db14dcbaee64e9781e1c95c295e5c21ae5",
-         intel: "0abbd3d1eb4919fad418049673ab20abe3477ccbf6203e4805b24a779b8c5e23"
+  version "4.36.0,2025-06"
+  sha256 arm:   "1b83a3688eca42e15ee4e42c99746c1a544ae8d83858669e295b7705e8062476",
+         intel: "4c76404e6dcde0ef33910598a2f4edffd24583856017df7a3538972087b8d3c9"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-committers-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Eclipse Committers"
@@ -26,6 +26,8 @@ cask "eclipse-ide" do
       "#{version},#{date}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Eclipse.app"
 

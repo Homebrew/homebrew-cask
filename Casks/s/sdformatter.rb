@@ -1,8 +1,8 @@
 cask "sdformatter" do
-  version "5.0.2"
-  sha256 "158d32d88376d46baef22de2c57ca78ca894a210e97612596562b59391cb5f7f"
+  version "5.0.3"
+  sha256 :no_check
 
-  url "https://www.sdcard.org/downloads/formatter/eula_mac/SDCardFormatterv#{version.major}_Mac.zip"
+  url "https://www.sdcard.org/downloads/formatter/eula_mac/Install%20SD%20Card%20Formatter.mpkg"
   name "SD Formatter"
   desc "Tool to format memory cards complying with the SD File System spec"
   homepage "https://www.sdcard.org/downloads/formatter/"
@@ -12,9 +12,18 @@ cask "sdformatter" do
     regex(/SD Memory Card Formatter (\d+(?:\.\d+)*)/i)
   end
 
-  pkg "SDCardFormatterv#{version.major}_Mac/Install SD Card Formatter #{version}.mpkg"
+  no_autobump! because: :requires_manual_review
 
-  uninstall pkgutil: "com.tuxera.pkg.SD_Card_Formatter"
+  depends_on macos: ">= :big_sur"
 
-  zap trash: "~/Library/Caches/com.tuxera.SDCardFormatter"
+  pkg "Install SD Card Formatter.mpkg"
+
+  uninstall quit:    "com.tuxera.SDCardFormatter",
+            pkgutil: "com.tuxera.pkg.SD_Card_Formatter",
+            delete:  "/Applications/SD Card Formatter.app"
+
+  zap trash: [
+    "~/Library/Caches/com.tuxera.SDCardFormatter",
+    "~/Library/HTTPStorages/com.tuxera.SDCardFormatter",
+  ]
 end

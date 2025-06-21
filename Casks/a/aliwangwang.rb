@@ -1,6 +1,6 @@
 cask "aliwangwang" do
   version "10.01.06M"
-  sha256 "9b23e1a1cd067893fef407b3037ce6c4072182a9a8a3294d236e0a3a26d020a2"
+  sha256 "9957c3b7bdd031868af0187c0cb912f4c926f82221bbe34fb05f6eb1396fa5b0"
 
   url "https://download.alicdn.com/wangwang/AliWangWang_(#{version}).dmg",
       verified: "download.alicdn.com/wangwang/"
@@ -13,6 +13,8 @@ cask "aliwangwang" do
     url "https://g.alicdn.com/im/ww-home/0.0.10/detail.min.js"
     regex(/AliWangWang[._-]v?\((\d+(?:\.\d+)+\w+)\)\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
@@ -28,4 +30,8 @@ cask "aliwangwang" do
     "~/Library/Saved Application State/com.taobao.Aliwangwang.savedState",
     "~/Library/WebKit/com.taobao.Aliwangwang",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

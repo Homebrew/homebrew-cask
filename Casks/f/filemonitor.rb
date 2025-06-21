@@ -6,7 +6,14 @@ cask "filemonitor" do
       verified: "bitbucket.org/objective-see/deploy/downloads/"
   name "FileMonitor"
   desc "Monitor filesystem activity"
-  homepage "https://objective-see.org/products/utilities.html"
+  homepage "https://objective-see.org/products/utilities.html#FileMonitor"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?FileMonitor[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 

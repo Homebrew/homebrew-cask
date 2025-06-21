@@ -5,12 +5,12 @@ cask "starcraft" do
   url "https://www.battle.net/download/getInstallerForGame?os=MAC&version=LIVE&gameProgram=STARCRAFT",
       verified: "battle.net/"
   name "Starcraft"
+  desc "RTS game"
   homepage "https://starcraft.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2025-03-06", because: :no_longer_available
 
   depends_on macos: ">= :el_capitan"
 

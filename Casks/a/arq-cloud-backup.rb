@@ -12,9 +12,23 @@ cask "arq-cloud-backup" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "Install Arq Cloud Backup.pkg"
 
   uninstall launchctl: "com.haystacksoftware.arqcloudagent",
             quit:      "com.haystacksoftware.ArqCloudBackup",
             pkgutil:   "com.haystacksoftware.ArqCloudBackup"
+
+  zap trash: [
+    "~/Library/Application Support/ArqCloudBackup",
+    "~/Library/HTTPStorages/com.haystacksoftware.ArqCloudBackup",
+    "~/Library/Logs/Arq Cloud Backup",
+    "~/Library/Preferences/com.haystacksoftware.ArqCloudBackup.plist",
+    "~/Library/Saved Application State/com.haystacksoftware.ArqCloudBackup.savedState",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -1,24 +1,38 @@
 cask "effect-house" do
-  arch arm: "_M1_101", intel: "_Intel_101"
+  arch arm: "Applesilicon", intel: "Intel"
+  livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "4.4.1,1705,08142024"
-    sha256 "0c43a941bb891a95dddb8884e2822bbb0c25ae9c033ae85febc093138c0c4365"
+    version "4.14.3,0718,05272025,104"
+    sha256 "95cef9a262c7fc1fc5e2f8e58f2f0f528f436a745185407a8a12564201ccb6aa"
   end
   on_intel do
-    version "4.4.1,1709,08142024"
-    sha256 "7fac73e618cbe46969437ab3390e881f441c780a4dd3846ac8e3d518a45f4eb1"
+    version "4.14.3,0723,05272025,104"
+    sha256 "cff0eb414f82f626878bc9c9e6f7aa620ff4b6605a08a6fabc4fa034e830e2be"
   end
 
-  url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_Builds_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}#{arch}.dmg",
+  url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_Builds_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}_#{arch}_#{version.csv.fourth}.dmg",
       verified: "sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/"
   name "TikTok Effect House"
   desc "Create vibrant AR effects for TikTok"
   homepage "https://effecthouse.tiktok.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://effecthouse.tiktok.com/api/web/download", post_form: {
+      osType:     "macOS",
+      arch:       livecheck_arch,
+      entryPoint: version.csv.fourth,
+    }
+    regex(%r{(\d+)/Effect[._-]House[._-]v?(\d+(?:\.\d+)+)(?:\.(\d+))(?:[._-]#{arch})?[._-](\d+)\.dmg}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[3]},#{match[1]},#{match[4]}"
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 

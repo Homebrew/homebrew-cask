@@ -1,6 +1,6 @@
 cask "tinderbox" do
-  version "10.0.1"
-  sha256 "2fa08f4ed74f8553b2c8a7a476b5242124ee8663dad46a52ebca33bfd50df4b8"
+  version "10.2.0"
+  sha256 "98092b23951a105a225745c2aebe9ef7d779caad06ad7cbea8d7a4965ad400b7"
 
   url "https://www.eastgate.com/download/tbx#{version.no_dots}.dmg"
   name "Tinderbox"
@@ -12,7 +12,7 @@ cask "tinderbox" do
     regex(/>Download.*?Tinderbox\s+v?(\d+(?:\.\d+)+)[<\s]/im)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Tinderbox #{version.major}.app"
 

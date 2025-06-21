@@ -1,6 +1,6 @@
 cask "openboard" do
-  version "1.7.1"
-  sha256 "d892ffd42d028b447b0bbf0cd955ec4beb32159e42168d01c4cc246b9cc2397a"
+  version "1.7.3"
+  sha256 "a380cc4b762929f14e71f580b5c6261c5179b770218d0500a64327dc5610e5de"
 
   url "https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}.dmg",
       verified: "github.com/OpenBoard-org/OpenBoard/"
@@ -12,6 +12,8 @@ cask "openboard" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "OpenBoard.app"
 

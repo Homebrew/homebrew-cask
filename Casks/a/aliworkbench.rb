@@ -1,6 +1,6 @@
 cask "aliworkbench" do
-  version "9.57.02QNM"
-  sha256 "c520c911cfbd99da753c97cfd67a7c7fcc8aaf62235601ae22c0fd16a2896829"
+  version "9.77.01QNM"
+  sha256 "52153f0bb0d322b8afa40aa5ed9d47cd1aa766785f362446478edffa979db2f9"
 
   url "https://download.alicdn.com/wangwang/AliworkbenchQN_(#{version}).dmg",
       verified: "download.alicdn.com/wangwang/"
@@ -13,10 +13,10 @@ cask "aliworkbench" do
   livecheck do
     url "https://pc.work.taobao.com/version/getOfficialVersion"
     strategy :json do |json|
-      json["model"].map do |item|
+      json["model"]&.map do |item|
         next if item["platform"] != "mac"
 
-        item["version"]
+        item["version"]&.strip
       end
     end
   end

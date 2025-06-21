@@ -1,6 +1,6 @@
 cask "connectiq" do
-  version "7.3.0,2024-08-27,36488f6f5"
-  sha256 "443bdec91f59ab441b0e1af83765c2d4b1b2901137c22fca781c64927520aa2e"
+  version "8.2.1,2025-06-19,f69b94140"
+  sha256 "cb2ecefac09de671fdc9787faea776629b442f61253ae01fdf83576b1ad8fb59"
 
   url "https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-mac-#{version.tr(",", "-")}.dmg"
   name "Garmin Connect IQ SDK"
@@ -10,10 +10,17 @@ cask "connectiq" do
   livecheck do
     url "https://developer.garmin.com/downloads/connect-iq/sdks/sdks.json"
     regex(/connectiq-sdk-mac[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:-\d+)+)[._-](\h+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
+    strategy :json do |json, regex|
+      json.map do |item|
+        match = item["mac"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]},#{match[3]}"
+      end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/ConnectIQ.app"
   app "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/MonkeyMotion.app"

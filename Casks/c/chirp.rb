@@ -1,9 +1,10 @@
 cask "chirp" do
-  version "20240919"
-  sha256 "0822febc9e0d6d8a2fddf4a5137b40e6c1ed8c9e98a35e2b1c6aec6e179612b9"
+  version "20250620"
+  sha256 "27539d80966549aa7b04b59f56d706a37d3d9034ab3c5895cf906429ca2c68e9"
 
   url "https://archive.chirpmyradio.com/chirp_next/next-#{version}/chirp-next-#{version}.app.zip",
-      verified: "archive.chirpmyradio.com/"
+      verified: "archive.chirpmyradio.com/",
+      referer:  "https://archive.chirpmyradio.com/chirp_next/next-#{version}/"
   name "CHIRP"
   desc "Tool for programming amateur radio"
   homepage "https://chirp.danplanet.com/projects/chirp/wiki/Home"

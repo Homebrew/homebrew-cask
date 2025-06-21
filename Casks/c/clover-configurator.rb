@@ -1,5 +1,5 @@
 cask "clover-configurator" do
-  version "5.28.0.0"
+  version "5.28.0.1"
   sha256 :no_check
 
   url "https://mackie100projects.altervista.org/apps/cloverconf/download-new-build.php?version=global",
@@ -9,9 +9,11 @@ cask "clover-configurator" do
   homepage "https://mackie100projects.altervista.org/clover-configurator/"
 
   livecheck do
-    url "https://mackie100projects.altervista.org/download-clover-configurator/"
-    regex(/Version:\s+(\d+(?:\.\d+)*)/i)
+    url "https://mackie100projects.altervista.org/apps/cloverconf/CCG/update-data-builds.xml"
+    strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

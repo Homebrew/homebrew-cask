@@ -7,6 +7,8 @@ cask "nightfall" do
   desc "Menu bar utility for toggling dark mode"
   homepage "https://github.com/r-thomson/Nightfall/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "Nightfall.app"

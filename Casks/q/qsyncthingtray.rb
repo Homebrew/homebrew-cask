@@ -7,6 +7,8 @@ cask "qsyncthingtray" do
   desc "Tray app for Syncthing"
   homepage "https://github.com/sieren/QSyncthingTray"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-28", because: :unmaintained
 
   app "QSyncthingTray.app"

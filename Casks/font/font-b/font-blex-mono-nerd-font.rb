@@ -1,6 +1,6 @@
 cask "font-blex-mono-nerd-font" do
-  version "3.2.1"
-  sha256 "0d6c232bcb6acaf4505fc2fd0588f06a4ecd4ca8e9b0b566ab1b6ed48254461a"
+  version "3.4.0"
+  sha256 "d6e9dc83650d8bd51d99d7c6848f507ac50be3729df8d24d9e5b0530044b1847"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/IBMPlexMono.zip"
   name "BlexMono Nerd Font (IBM Plex Mono)"
@@ -10,6 +10,8 @@ cask "font-blex-mono-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "BlexMonoNerdFont-Bold.ttf"
   font "BlexMonoNerdFont-BoldItalic.ttf"

@@ -7,6 +7,8 @@ cask "mellow" do
   desc "Rule-based global transparent proxy client"
   homepage "https://github.com/mellow-io/mellow"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :unmaintained
 
   app "Mellow.app"

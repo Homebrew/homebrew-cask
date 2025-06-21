@@ -1,20 +1,25 @@
 cask "alfaview" do
-  version "9.17.0"
-  sha256 "9d5dc9743a5304e7e616c67fd8205c061cbd25296b83bb9fc2fa303ac00d5cd3"
+  version "9.22.3"
+  sha256 "7b81e29c43e8f3b630baa783f0816de9a59ee8e7cfd8b01a9967d11c758bc94e"
 
-  url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.dmg"
+  url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.pkg"
   name "Alfaview"
   desc "Audio video conferencing"
   homepage "https://alfaview.com/"
 
   livecheck do
     url "https://production-alfaview-assets.alfaview.com/stable/mac/version.info"
-    regex(/alfaview[._-]mac[._-]production[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :json do |json|
+      json["versions"]&.first&.[]("version")
+    end
   end
 
   depends_on macos: ">= :high_sierra"
 
-  app "alfaview.app"
+  pkg "alfaview-mac-production-#{version}.pkg"
+
+  uninstall quit:    "com.alfaview.desktop",
+            pkgutil: "com.alfaview.desktop"
 
   zap trash: "~/Library/Application Support/alfaview"
 end

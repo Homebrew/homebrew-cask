@@ -1,6 +1,6 @@
 cask "quicksilver" do
-  version "2.4.2"
-  sha256 "b2fd0ad9a8d1edf25ab75bf231c8f7c481bd72ba9d565342714d9dc90e7766d3"
+  version "2.5.2"
+  sha256 "bdc0c6e89cd9913b4e36b8a91ad170c257e99d82858574292a4df9af62c4324b"
 
   url "https://github.com/quicksilver/Quicksilver/releases/download/v#{version}/Quicksilver.#{version}.dmg",
       verified: "github.com/quicksilver/Quicksilver/"
@@ -14,6 +14,7 @@ cask "quicksilver" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Quicksilver.app"
 

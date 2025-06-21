@@ -1,11 +1,13 @@
 cask "font-constructium" do
-  version :latest
-  sha256 :no_check
+  version "2025-03-20"
+  sha256 "2ffa30cae61bac79a03827a12e48db8f88691f2c0655f1ef376b8ec9cdf788c2"
 
-  url "https://www.kreativekorp.com/swdownload/fonts/xlang/constructium.zip",
-      user_agent: :fake
+  url "https://github.com/kreativekorp/open-relay/releases/download/#{version}/Constructium.zip",
+      verified: "github.com/kreativekorp/open-relay/"
   name "Constructium"
-  homepage "https://www.kreativekorp.com/software/fonts/constructium.shtml"
+  homepage "https://www.kreativekorp.com/software/fonts/constructium/"
+
+  no_autobump! because: :requires_manual_review
 
   font "Constructium.ttf"
 

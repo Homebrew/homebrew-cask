@@ -8,6 +8,8 @@ cask "moebius" do
   desc "ANSI editor"
   homepage "https://blocktronics.github.io/moebius/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Moebius.app"
 
   zap trash: [

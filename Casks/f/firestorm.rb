@@ -1,8 +1,8 @@
 cask "firestorm" do
-  version "7.1.9.74745"
-  sha256 "d888c9c2b9170ece9060fc500b70d3008609f43b72e50709d86c66e22cdf3432"
+  version "7.1.11.76496"
+  sha256 "73ca55288db2fbb28b91167a58044b61938473c11091f6e877c9a9358c42672e"
 
-  url "https://downloads.firestormviewer.org/release/mac/Phoenix-Firestorm-Releasex64-#{version.dots_to_hyphens}.dmg"
+  url "https://downloads.firestormviewer.org/release/mac/Phoenix-Firestorm-Releasex64_AVX2-#{version.dots_to_hyphens}.dmg"
   name "Phoenix Firestorm viewer for Second Life"
   desc "Viewer for accessing Virtual Worlds"
   homepage "https://www.firestormviewer.org/"
@@ -10,6 +10,10 @@ cask "firestorm" do
   livecheck do
     skip "No version information available"
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
 
   app "Firestorm-Releasex64.app"
 

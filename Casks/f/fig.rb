@@ -7,6 +7,8 @@ cask "fig" do
   desc "Reimagine your terminal"
   homepage "https://fig.io/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-08-03", because: :discontinued
 
   auto_updates true

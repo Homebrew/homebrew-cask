@@ -1,7 +1,7 @@
 cask "sublime-text" do
   # NOTE: The first digit of the build number is the major version.
-  version "4180"
-  sha256 "4ad971b932849ec5e40740e5052ee5108b0ed30867cbe68024d2e436a19e60d0"
+  version "4200"
+  sha256 "4835eb2a5d3f2b223ce93a27149f360ef158af9f8dd708b6f501d708c081d319"
 
   url "https://download.sublimetext.com/sublime_text_build_#{version}_mac.zip"
   name "Sublime Text"
@@ -9,9 +9,13 @@ cask "sublime-text" do
   homepage "https://www.sublimetext.com/"
 
   livecheck do
-    url "https://www.sublimetext.com/download_thanks?target=mac"
-    regex(/href=.*?v?(\d+)_mac\.zip/i)
+    url "https://www.sublimetext.com/updates/#{version[0]}/stable_update_check"
+    strategy :json do |json|
+      json["latest_version"]&.to_s
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   conflicts_with cask: "sublime-text@dev"

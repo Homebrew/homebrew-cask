@@ -1,6 +1,6 @@
 cask "j" do
-  version "9.5.2"
-  sha256 "78efb1db5423939e776f0053ff074a5c641b376e0517ded04773e38c001609c5"
+  version "9.6.3"
+  sha256 "4a39e4f3f90382c04387bf46bcc7c2331461368dd08cc40cc647e05430572461"
 
   url "https://www.jsoftware.com/download/j#{version.major_minor}/install/j#{version}_mac64.zip"
   name "J"
@@ -28,6 +28,8 @@ cask "j" do
                             &.map { |match| match[0] }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   installer script: "j#{version.major_minor}/macos-fix.command"
   installer script: {
@@ -60,4 +62,13 @@ cask "j" do
   # Not actually necessary, since it would be deleted anyway.
   # It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
   uninstall delete: "#{staged_path}/#{token}"
+
+  zap trash: [
+    "~/Library/Application Support/j",
+    "~/Library/Caches/com.jsoftware.jqt",
+    "~/Library/Caches/j",
+    "~/Library/Preferences/com.jsoftware.jqt.plist",
+    "~/Library/Preferences/jqt.ini",
+    "~/Library/Saved Application State/com.jsoftware.jqt.savedState",
+  ]
 end

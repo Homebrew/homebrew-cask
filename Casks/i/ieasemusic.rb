@@ -7,6 +7,8 @@ cask "ieasemusic" do
   desc "Third-party NetEase cloud music player"
   homepage "https://github.com/trazyn/ieaseMusic"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-15", because: :discontinued
 
   auto_updates true

@@ -9,8 +9,10 @@ cask "json-viewer" do
 
   livecheck do
     url :homepage
-    regex(/JSON[._-]Viewer[._-]v?(\d+(\.\d+)+)\.dmg/i)
+    regex(/JSON[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 
@@ -21,4 +23,8 @@ cask "json-viewer" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pascalgiguere.json-viewer.sfl*",
     "~/Library/Containers/com.pascalgiguere.JSON-Viewer",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

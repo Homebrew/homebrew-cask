@@ -1,8 +1,11 @@
 cask "goneovim" do
-  version "0.6.8"
-  sha256 "f2bcb700d525a3a03af0c7d65f7c2a978e37ce695631846668fbf3a771e73761"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos.tar.bz2"
+  version "0.6.14"
+  sha256 arm:   "2b76a7b40c7c915d40b2ac5520fa68849484ab45e322f654f3f4b032214cff44",
+         intel: "a5a0d15399db2ea6fdfb264e21e2e863777edf4d8bc7793fe22f7795e3ff5a99"
+
+  url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos-#{arch}.tar.bz2"
   name "Goneovim"
   desc "Neovim GUI written in Golang, using a Golang qt backend"
   homepage "https://github.com/akiyosi/goneovim"
@@ -14,7 +17,7 @@ cask "goneovim" do
 
   depends_on formula: "neovim"
 
-  app "goneovim-v#{version}-macos/goneovim.app"
+  app "goneovim-v#{version}-macos-#{arch}/goneovim.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/goneovim.wrapper.sh"
   binary shimscript, target: "goneovim"
@@ -30,8 +33,4 @@ cask "goneovim" do
     "~/.goneovim",
     "~/Library/Saved Application State/com.ident.goneovim.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

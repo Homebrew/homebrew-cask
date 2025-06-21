@@ -12,7 +12,15 @@ cask "comictagger" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "ComicTagger.app"
+
+  zap trash: [
+    "~/.ComicTagger",
+    "~/Library/Preferences/ComicTagger.plist",
+    "~/Library/Saved Application State/ComicTagger.savedState",
+  ]
 
   caveats do
     requires_rosetta

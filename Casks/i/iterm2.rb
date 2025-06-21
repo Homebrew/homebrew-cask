@@ -17,8 +17,8 @@ cask "iterm2" do
     end
   end
   on_catalina :or_newer do
-    version "3.5.4"
-    sha256 "acfb8f93550277c231c572a488cd0290e74bce538354a5f5515a889ea4b44bd5"
+    version "3.5.14"
+    sha256 "585bd119e4cf3a5e6bfa6f3b6afecf416f02e28f8d81a3a1e949855da058cbdd"
 
     livecheck do
       # workaround for
@@ -45,14 +45,20 @@ cask "iterm2" do
   app "iTerm.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.googlecode.iterm2.iTermFileProvider",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.iterm2.itermai.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.iterm2.sfl*",
     "~/Library/Application Support/iTerm",
     "~/Library/Application Support/iTerm2",
     "~/Library/Caches/com.googlecode.iterm2",
+    "~/Library/Containers/com.googlecode.iterm2.iTermFileProvider",
     "~/Library/Containers/iTermAI",
     "~/Library/Cookies/com.googlecode.iterm2.binarycookies",
+    "~/Library/HTTPStorages/com.googlecode.iterm2",
+    "~/Library/HTTPStorages/com.googlecode.iterm2.binarycookies",
     "~/Library/Preferences/com.googlecode.iterm2.plist",
+    "~/Library/Preferences/com.googlecode.iterm2.private.plist",
     "~/Library/Saved Application State/com.googlecode.iterm2*.savedState",
+    "~/Library/WebKit/com.googlecode.iterm2",
   ]
 end

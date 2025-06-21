@@ -7,7 +7,9 @@ cask "battery-report" do
   desc "Creates technical summaries of power supplies"
   homepage "https://www.dssw.co.uk/batteryreport/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Battery Report.app"
 end

@@ -6,5 +6,9 @@ cask "grid-clock" do
   name "Grid Clock Screensaver"
   homepage "https://github.com/chrstphrknwtn/grid-clock-screensaver"
 
+  no_autobump! because: :requires_manual_review
+
   screen_saver "Grid Clock.saver"
+
+  # No zap stanza required
 end

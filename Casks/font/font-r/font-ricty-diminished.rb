@@ -8,8 +8,10 @@ cask "font-ricty-diminished" do
 
   livecheck do
     url :homepage
-    regex(%r{/ricty_diminished-(\d+(?:\.\d+)*)\.t})
+    regex(%r{/ricty_diminished-(\d+(?:\.\d+)*)\.t}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "RictyDiminished-Bold.ttf"
   font "RictyDiminished-BoldOblique.ttf"

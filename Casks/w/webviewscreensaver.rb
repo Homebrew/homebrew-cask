@@ -12,6 +12,8 @@ cask "webviewscreensaver" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   screen_saver "WebViewScreenSaver.saver"
 
   zap trash: [

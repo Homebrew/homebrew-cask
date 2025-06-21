@@ -8,9 +8,15 @@ cask "logisim" do
   desc "Tool for designing and simulating digital logic circuits"
   homepage "http://www.cburch.com/logisim/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued, replacement_cask: "logisim-evolution"
 
   app "Logisim.app"
 
   zap trash: "~/Library/Preferences/com.cburch.logisim.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

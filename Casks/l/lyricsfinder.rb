@@ -1,11 +1,11 @@
 cask "lyricsfinder" do
-  version "1.5.6"
+  version "1.6.1"
   sha256 :no_check
 
   url "https://www.mediahuman.com/download/LyricsFinder.dmg"
   name "Lyrics Finder"
   desc "Find and download song lyrics"
-  homepage "https://www.mediahuman.com/lyrics-finder"
+  homepage "https://www.mediahuman.com/lyrics-finder/"
 
   livecheck do
     url :homepage

@@ -1,7 +1,7 @@
 cask "mplab-xc32" do
   # NOTE: "32" is not a version number, but an intrinsic part of the product name
-  version "4.45"
-  sha256 "d39a0c746e4959a26e85c22d43e2dd8cd9ec4cee6a0fb7b2cd03ccdaed7a0658"
+  version "4.60"
+  sha256 "d87b13aedec1afa874a6888372cb4928aa6d6d2abca439afbcd93d0c10c912ca"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc32-v#{version}-full-install-osx-installer.dmg"
   name "MPLab XC32 Compiler"

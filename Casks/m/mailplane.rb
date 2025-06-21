@@ -1,6 +1,6 @@
 cask "mailplane" do
-  version "4.3.11,4951"
-  sha256 "20a9e6c759c472a0678841b3ddf9c29bcd4bd74d53a254336013e0111973d5a4"
+  version "4.3.12,4954"
+  sha256 "dcd7243a0ea909b838d92664ea8e85dcb9f3e0648da713568b4856384a7b924b"
 
   url "https://builds.mailplaneapp.com/Mailplane_#{version.major}_#{version.csv.second}.tbz"
   name "Mailplane"
@@ -11,6 +11,8 @@ cask "mailplane" do
     url "https://update.mailplaneapp.com/appcast.php?rqsr=1&osVersion=10.14.1&appVersion=#{version.csv.second}&shortVersionString=#{version.csv.first}"
     strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :sierra"

@@ -11,6 +11,8 @@ cask "font-monoisome" do
     url :url
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "Monoisome-Regular.ttf"
 
   # No zap stanza required

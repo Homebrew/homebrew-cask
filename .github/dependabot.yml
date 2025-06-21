@@ -5,13 +5,14 @@ updates:
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
+    day: friday
+    time: '08:00'
+    timezone: Etc/UTC
   allow:
   - dependency-type: all
-  ignore:
-  - dependency-name: actions/stale
   groups:
-    artifacts:
+    github-actions:
       patterns:
-      - actions/*-artifact
+      - "*"
 

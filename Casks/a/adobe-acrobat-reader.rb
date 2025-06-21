@@ -1,6 +1,6 @@
 cask "adobe-acrobat-reader" do
-  version "24.003.20112"
-  sha256 "ea2befd73cea5500d1441317144e99a2da6ea6748f3a66a27db437afbdd59cd4"
+  version "25.001.20529"
+  sha256 "3ccb062c081bd7ac5b8a9183ebb6a52cfd6046411e6d51a89f12e132b6672f63"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   name "Adobe Acrobat Reader"
@@ -8,7 +8,7 @@ cask "adobe-acrobat-reader" do
   homepage "https://www.adobe.com/acrobat/pdf-reader.html"
 
   livecheck do
-    url "https://rdc.adobe.io/reader/products?lang=en&site=landing&os=Mac%20OS%2010.15&api_key=dc-get-adobereader-cdn"
+    url "https://rdc.adobe.io/reader/products?lang=en&site=landing&os=Mac%20OS%2012.0&api_key=dc-get-adobereader-cdn"
     strategy :json do |json|
       json.dig("products", "reader").map { |product| product["version"] }
     end
@@ -39,10 +39,15 @@ cask "adobe-acrobat-reader" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/Adobe/Acrobat",
+    "~/Library/Application Support/Adobe/AcroCef",
     "~/Library/Caches/com.adobe.Reader",
+    "~/Library/HTTPStorages/com.adobe.Reader",
     "~/Library/HTTPStorages/com.adobe.Reader.binarycookies",
     "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
     "~/Library/Preferences/com.adobe.crashreporter.plist",
+    "~/Library/Preferences/com.adobe.Install.Reader.plist",
     "~/Library/Preferences/com.adobe.Reader.plist",
+    "~/Library/Saved Application State/com.adobe.Reader.savedState",
   ]
 end

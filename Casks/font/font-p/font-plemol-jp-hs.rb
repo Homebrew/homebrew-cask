@@ -1,10 +1,12 @@
 cask "font-plemol-jp-hs" do
-  version "1.7.1"
-  sha256 "2d88d578f6ea814ec5f5806219f5589cb7daa3608daef255ad8a54ae8f106583"
+  version "2.0.4"
+  sha256 "df082e9274b7ce87d4db8d98c9dae0de4c92cfa84e8b795fc1a98a2e5b88333d"
 
   url "https://github.com/yuru7/PlemolJP/releases/download/v#{version}/PlemolJP_HS_v#{version}.zip"
   name "PlemolJP HS"
   homepage "https://github.com/yuru7/PlemolJP"
+
+  no_autobump! because: :requires_manual_review
 
   font "PlemolJP_HS_v#{version}/PlemolJP_HS/PlemolJPHS-Bold.ttf"
   font "PlemolJP_HS_v#{version}/PlemolJP_HS/PlemolJPHS-BoldItalic.ttf"

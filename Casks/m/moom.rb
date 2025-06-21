@@ -1,6 +1,6 @@
 cask "moom" do
-  version "4.1.2"
-  sha256 "729ff4bdb38ee891bcaf336110762dac70aef69b8b4c55e725115339dadcb0c0"
+  version "4.2.0"
+  sha256 "55e4e0663222c18f915678c82e173137ca83c8c2738654f61cb58ffbd498bf7b"
 
   url "https://manytricks.com/download/_do_not_hotlink_/moom#{version.no_dots}.dmg"
   name "Moom"
@@ -14,7 +14,7 @@ cask "moom" do
     url "https://manytricks.com/moom/appcast/"
     regex(/moom[._-]?v?(\d+(?:\.\d+)*)\.dmg/i)
     strategy :sparkle do |item, regex|
-      dotless_short_version = DSL::Version.new(item.short_version).no_dots
+      dotless_short_version = item.short_version.tr(".", "")
       next if dotless_short_version.blank?
 
       file_version = item.url[regex, 1]&.tr(".", "")

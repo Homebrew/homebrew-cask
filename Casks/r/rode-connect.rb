@@ -1,5 +1,5 @@
 cask "rode-connect" do
-  version "1.3.42"
+  version "1.3.43"
   sha256 :no_check
 
   url "https://update.rode.com/connect/RODE_Connect_MACOS.zip"
@@ -13,6 +13,8 @@ cask "rode-connect" do
       json.dig("rode-connect-manifest", "macos", "main-version", "update-version")
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "RØDE Connect (#{version}).pkg"
 

@@ -1,6 +1,6 @@
 cask "ammonite" do
-  version "1.27.1"
-  sha256 "ab7e4fc99784d0a63beb7d140d470168e03b452f3ae59493ff0b0c91507d81c3"
+  version "1.30"
+  sha256 "0d5bc4d5042b240640331047a24dfeeb139adc4b89ba0e8f7601cd95ffaf65f7"
 
   url "https://www.soma-zone.com/download/files/Ammonite-#{version}.tar.xz"
   name "Ammonite"
@@ -11,6 +11,9 @@ cask "ammonite" do
     url "https://www.soma-zone.com/Ammonite/a/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Ammonite.app"
 

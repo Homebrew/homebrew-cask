@@ -8,8 +8,8 @@ cask "jump-desktop-connect" do
     end
   end
   on_high_sierra :or_newer do
-    version "6.10.28"
-    sha256 "94a3f4c2100335fef6c254fe0bd565d4a59af1b78564f026ac7cbec940c423df"
+    version "7.1.48"
+    sha256 "6e8c0420b4ab36181cc59df74c3184e96e01559dd4ad2470441575f566f2693b"
 
     livecheck do
       url "https://mirror.jumpdesktop.com/downloads/connect/connect-mac.xml"
@@ -17,7 +17,7 @@ cask "jump-desktop-connect" do
     end
   end
 
-  url "https://jumpdesktop.com/downloads/connect/JumpDesktopConnect-#{version}.dmg"
+  url "https://mirror.jumpdesktop.com/downloads/connect/JumpDesktopConnect-#{version}.dmg"
   name "Jump Desktop Connect"
   desc "Remote desktop app"
   homepage "https://jumpdesktop.com/connect/"
@@ -36,7 +36,7 @@ cask "jump-desktop-connect" do
             delete:    "/Library/Application Support/Jump Desktop/Connect/sharedconfig.plist",
             rmdir:     [
               "/Library/Application Support/Jump Desktop",
-              "/Library/Application Support/Jump Desktop/Connect/",
+              "/Library/Application Support/Jump Desktop/Connect",
             ]
 
   zap trash: [

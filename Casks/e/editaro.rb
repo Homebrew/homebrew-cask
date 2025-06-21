@@ -8,6 +8,17 @@ cask "editaro" do
   desc "Text editor"
   homepage "https://editaro.com/"
 
+  livecheck do
+    url "https://hazel.editaro.com/update/mac/0.0.0"
+    strategy :json do |json|
+      json["name"]
+    end
+  end
+
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+
   app "Editaro.app"
 
   zap trash: [

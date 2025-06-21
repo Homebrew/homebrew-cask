@@ -7,7 +7,15 @@ cask "container-ps" do
   desc "App to show all docker images"
   homepage "https://github.com/Toinane/container-ps"
 
+  no_autobump! because: :requires_manual_review
+
   app "Container PS.app"
+
+  zap trash: [
+    "~/Library/Application Support/container-ps",
+    "~/Library/Preferences/com.electron.container-ps.plist",
+    "~/Library/Saved Application State/com.electron.container-ps.savedState",
+  ]
 
   caveats do
     requires_rosetta

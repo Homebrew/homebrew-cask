@@ -1,11 +1,11 @@
 cask "dash-dash" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "21.1.0"
-  sha256 arm:   "fb94a9213a8763ad2d290b8ddc63be5d63d94124c324387e3228b033dc368890",
-         intel: "ee72b4004186e00ce0ee5fca2c299842cb64a8622e4c09e0356fd75c60ffcf7e"
+  version "22.1.2"
+  sha256 arm:   "64c544150e4e296f77dcea9c628a244e784d4f8f1c2ffe38fdabeb40d4499d8b",
+         intel: "e53adf31ab8701b0c5f866cc86e9a102a8717497939e2c0d3b98d5035f018469"
 
-  url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-#{arch}-apple-darwin.dmg",
+  url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-#{arch}-apple-darwin.zip",
       verified: "github.com/dashpay/dash/"
   name "Dash"
   desc "Dash - Reinventing Cryptocurrency"
@@ -16,7 +16,7 @@ cask "dash-dash" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Dash-Qt.app"
 

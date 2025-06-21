@@ -6,10 +6,9 @@ cask "backlog" do
   name "Backlog"
   homepage "https://github.com/czytelny/backlog"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-30", because: :unmaintained
 
   app "Backlog-darwin-x64/Backlog.app"
 

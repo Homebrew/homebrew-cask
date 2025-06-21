@@ -16,10 +16,9 @@ cask "stack-stack" do
   desc "Workspace to manage all your productivity apps from one place"
   homepage "https://getstack.app/"
 
-  livecheck do
-    url "https://binaries.getstack.app/builds/prod/latest-mac.yml"
-    strategy :electron_builder
-  end
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-09-30", because: :no_longer_available
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

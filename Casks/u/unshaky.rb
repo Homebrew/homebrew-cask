@@ -8,9 +8,11 @@ cask "unshaky" do
   homepage "https://github.com/aahung/Unshaky"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/aahung/Unshaky/master/appcast.xml"
+    strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :sierra"

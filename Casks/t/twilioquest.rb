@@ -8,7 +8,9 @@ cask "twilioquest" do
   desc "Learn to code and lead your crew on a mission to save The Cloud in a 16bit game"
   homepage "https://www.twilio.com/quest"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   app "TwilioQuest.app"
 

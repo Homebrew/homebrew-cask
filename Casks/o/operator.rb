@@ -8,6 +8,8 @@ cask "operator" do
   desc "Prelude Operator is a desktop adversary emulation platform"
   homepage "https://www.prelude.org/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-23", because: :no_longer_available
 
   app "Operator.app"

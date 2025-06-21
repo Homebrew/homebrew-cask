@@ -2,8 +2,7 @@ cask "istat-server" do
   version "3.03"
   sha256 "0d6df9abe88aa7b29f53abb63413ede2853823cf6fd75b75818ef0190a07e8c7"
 
-  url "https://bjango.s3.amazonaws.com/files/istatserver#{version.major}/istatserver#{version}.zip",
-      verified: "bjango.s3.amazonaws.com/"
+  url "https://files.bjango.com/istatserver#{version.major}/istatserver#{version}.zip"
   name "iStat Server"
   desc "Transmits computer or server’s vital statistics"
   homepage "https://bjango.com/istatserver/"
@@ -13,7 +12,17 @@ cask "istat-server" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "iStat Server.app"
+
+  zap trash: [
+    "~/Library/Caches/com.bjango.iStatServer",
+    "~/Library/HTTPStorages/com.bjango.iStatServer",
+    "~/Library/Logs/iStat Server",
+    "~/Library/Preferences/com.bjango.iStatServer.plist",
+    "~/Library/Saved Application State/com.bjango.iStatServer.savedState",
+  ]
 
   caveats do
     requires_rosetta

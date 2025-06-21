@@ -1,6 +1,6 @@
 cask "dashcam-viewer" do
-  version "4.0.0"
-  sha256 "84e380b879c3783fa31fb4cfe972b5c19e3a1b6f70c981842df632598c69fad6"
+  version "4.0.6"
+  sha256 "326b93c27a8af8c082d1b66ad39e7655ae436371719129ad51e4a495ea1d39d9"
 
   url "https://filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/Dashcam_Viewer_v#{version}.dmg",
       verified: "filedn.com/l2s8TAtm4VASBX72ds0zYD8/dcv/"
@@ -14,7 +14,7 @@ cask "dashcam-viewer" do
     regex(%r{href=.*?/Dashcam[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Dashcam Viewer.app"
 

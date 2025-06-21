@@ -1,10 +1,12 @@
 cask "font-hackgen" do
-  version "2.9.0"
-  sha256 "123b2179866f5a291c15cf34a83fdce6ac202e2fe6ad27fbd9ddd4f5bff23c65"
+  version "2.10.0"
+  sha256 "ed182e2a4b95792d94dea7932f6b45280b5ae353651be249d5f6b7867b788db7"
 
   url "https://github.com/yuru7/HackGen/releases/download/v#{version}/HackGen_v#{version}.zip"
   name "HackGen"
   homepage "https://github.com/yuru7/HackGen"
+
+  no_autobump! because: :requires_manual_review
 
   font "HackGen_v#{version}/HackGen-Bold.ttf"
   font "HackGen_v#{version}/HackGen-Regular.ttf"

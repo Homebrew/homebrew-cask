@@ -12,6 +12,10 @@ cask "google-web-designer" do
     regex(/Shell\s+Build\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
+
   app "Google Web Designer.app"
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask "iriunwebcam" do
-  version "2.8.10"
-  sha256 "cc7fd9b3733f11a6cfb4419b20e4440151688dc773559079c8de4c0b3fb9bc6b"
+  version "2.8.12"
+  sha256 "754d393f5761f1a61f2a8b01e023c4eb92d2df5d6c0adaf15aa28ecf9b5859cc"
 
   url "https://1758658189.rsc.cdn77.org/IriunWebcam-#{version}.pkg",
       verified: "1758658189.rsc.cdn77.org/"
@@ -12,6 +12,8 @@ cask "iriunwebcam" do
     url :homepage
     regex(%r{href=.*?/IriunWebcam[._-]?v?(\d+(?:\.\d+)+)\.pkg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :monterey"
 

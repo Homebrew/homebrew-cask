@@ -11,8 +11,8 @@ cask "tripmode" do
     end
   end
   on_big_sur :or_newer do
-    version "3.2.3,1384,1834"
-    sha256 "a5a50fdfe81e78033b16974456fc53434e4c1237ad40f5b881c368e32c6aacdd"
+    version "3.2.4,1385"
+    sha256 "2a5a21ac4c13b5a1a5d43e6aeb2b7588ea9af0116e41829fca19cf9752265410"
 
     url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.third || version.csv.second}.zip",
         verified: "tripmode-updates.ch/app/"
@@ -23,9 +23,9 @@ cask "tripmode" do
       strategy :sparkle do |item, regex|
         item.url.scan(regex).map do |match|
           if match[1] == item.version
-            "#{item.short_version},#{item.version}"
+            item.nice_version
           else
-            "#{item.short_version},#{item.version},#{match[1]}"
+            "#{item.nice_version},#{match[1]}"
           end
         end
       end
@@ -35,6 +35,8 @@ cask "tripmode" do
   name "TripMode"
   desc "Control your data usage on slow or expensive networks"
   homepage "https://www.tripmode.ch/"
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

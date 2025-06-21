@@ -8,6 +8,8 @@ cask "ultracopier" do
   desc "Replacement for files copy dialogs"
   homepage "https://ultracopier.herman-brule.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-08-04", because: :discontinued
 
   depends_on macos: ">= :high_sierra"

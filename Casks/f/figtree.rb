@@ -7,10 +7,9 @@ cask "figtree" do
   desc "Phylogenetic tree viewer"
   homepage "https://github.com/rambaut/figtree/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-03-02", because: :unmaintained
 
   app "FigTree v#{version}.app"
   qlplugin "QuickLook Plugin/FigTreeQuickLookPlugin.qlgenerator"

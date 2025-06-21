@@ -1,5 +1,5 @@
 cask "ilok-license-manager" do
-  version "5.9.0"
+  version "5.10.1"
   sha256 :no_check
 
   url "https://installers.ilok.com/iloklicensemanager/LicenseSupportInstallerMac.zip"
@@ -10,9 +10,11 @@ cask "ilok-license-manager" do
   livecheck do
     url "https://updates.ilok.com/iloklicensemanager/LicenseSupportInstallerMacAppcast.xml"
     strategy :sparkle do |item|
-      item.short_version.split.first.to_s
+      item.short_version.split.first
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 

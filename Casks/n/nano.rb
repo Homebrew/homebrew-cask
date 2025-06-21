@@ -1,6 +1,6 @@
 cask "nano" do
-  version "27.1"
-  sha256 "9c0ef9d3f33c8bdae157332d3d0028e608d722f1ad141a952a504398b8e972ba"
+  version "28.1"
+  sha256 "be38f79e05daa5830d596d194c1472a93674d6afec3b2c525a5f98bb4a859e0c"
 
   url "https://github.com/nanocurrency/nano-node/releases/download/V#{version}/nano-node-V#{version}-Darwin.dmg",
       verified: "github.com/nanocurrency/nano-node/"
@@ -12,6 +12,8 @@ cask "nano" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 

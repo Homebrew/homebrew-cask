@@ -1,15 +1,15 @@
 cask "funter" do
-  version "6.2.6"
-  sha256 :no_check
+  version "7.0,361"
+  sha256 "4843b560c9cdf1950a0a78f5e7c737df35a1bf213f723a88b10955ef1f2636d6"
 
-  url "https://download.nektony.com/download/funter/Funter.dmg"
+  url "https://download.nektony.com/download/funter/Funter.dmg?build=#{version.csv.second}"
   name "Funter"
   desc "Shows hidden files and folders and switches their visibility in Finder"
   homepage "https://nektony.com/products/funter"
 
   livecheck do
     url "https://download.nektony.com/pro-support/v3/funter/update/update.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   depends_on macos: ">= :high_sierra"

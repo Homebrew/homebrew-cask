@@ -8,10 +8,9 @@ cask "handshaker" do
   desc "App for managing Android devices"
   homepage "https://www.smartisan.com/apps/"
 
-  livecheck do
-    url "https://sf.smartisan.com/update.plist"
-    strategy :sparkle, &:short_version
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-03-01", because: :unmaintained
 
   app "HandShaker.app"
 

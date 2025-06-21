@@ -1,6 +1,6 @@
 cask "gitup" do
-  version "1.4.2"
-  sha256 "67b2612ef7aac75194b4fb77a27b2a06b031fccac56db71d9e358d362c2e3b25"
+  version "1.4.3"
+  sha256 "f0f1896dae7a17e3f51f6872cc57a79061ab3f47692d64b5a8216cfb6dddb4dc"
 
   url "https://github.com/git-up/GitUp/releases/download/v#{version}/GitUp.zip",
       verified: "github.com/git-up/GitUp/"
@@ -9,11 +9,14 @@ cask "gitup" do
   homepage "https://gitup.co/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/git-up/GitUp/master/appcasts/stable/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "GitUp.app"
   binary "#{appdir}/GitUp.app/Contents/SharedSupport/gitup"

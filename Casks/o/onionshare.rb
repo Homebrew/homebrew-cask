@@ -1,6 +1,6 @@
 cask "onionshare" do
-  version "2.6.2"
-  sha256 "9588e045b794f15c23f57f584942fb6692d84ab07f2bbcdbb38a65b39befebd5"
+  version "2.6.3"
+  sha256 "ba0d7c7a79cc4d9253f9591db9872f45ebdf2e9ca751f873af1a4ffcef9d1a05"
 
   url "https://onionshare.org/dist/#{version}/OnionShare-#{version}.dmg"
   name "OnionShare"
@@ -11,6 +11,8 @@ cask "onionshare" do
     url :homepage
     regex(/href=.*?OnionShare[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "OnionShare.app"
 

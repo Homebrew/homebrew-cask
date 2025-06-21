@@ -1,15 +1,17 @@
 cask "polypane" do
   arch arm: "-arm64"
 
-  version "21.1.0"
-  sha256 arm:   "68ea77eddc9aacffd801c629d86ac4de480e19c9b18ee33d583ae02010900c17",
-         intel: "85c8c7f0a81f7931a16b7bd1fecfde500be5a4499fcfee07bbf2c0d29815ac69"
+  version "24.1.2"
+  sha256 arm:   "0b6fcf00a9f26821275e0b224ade70333613e0efcbd0886f44c296f1c5f45de3",
+         intel: "5de2eb6ea7b775fda65ede8fbc4db7cb26e95cc51449c0e19b953734b5cf75b1"
 
   url "https://github.com/firstversionist/polypane/releases/download/v#{version}/Polypane-#{version}#{arch}.dmg",
       verified: "github.com/firstversionist/polypane/"
   name "Polypane"
   desc "Browser for ambitious developers"
   homepage "https://polypane.app/"
+
+  depends_on macos: ">= :big_sur"
 
   app "Polypane.app"
 

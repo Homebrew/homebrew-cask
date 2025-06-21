@@ -1,6 +1,6 @@
 cask "yuque" do
-  version "3.4.5.1213,BJ9fec021fee4c44d3b96fa62a5a82bc5d"
-  sha256 "b664667b5d8a800fe22fdc4629efea556eea1131bc2d1023c0c452fb219da2c7"
+  version "4.1.7.1320,BJ81aea026e2d548498ddec10819512902"
+  sha256 "9d311dfaf0d1522bc2ea583bbdd959b86031bb41912263ed75e2a04011874af8"
 
   url "https://app.nlark.com/yuque-desktop/#{version.csv.first}/#{version.csv.second}/Yuque-#{version.csv.first}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
@@ -9,17 +9,17 @@ cask "yuque" do
   desc "Cloud knowledge base"
   homepage "https://www.yuque.com/"
 
-  # The stable version is that listed on the download page. See:
-  #   https://github.com/Homebrew/homebrew-cask/pull/111472
+  # The version on the download page is the stable version (see:
+  # https://github.com/Homebrew/homebrew-cask/pull/111472)
   livecheck do
     url "https://www.yuque.com/download/"
-    regex(/yuque-desktop%2F(\d+(?:\.\d+)+)%2F([A-Za-z0-9]+).*?\.dmg/i)
+    regex(/%2F([a-z0-9]+)%2FYuque[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "语雀.app"
 

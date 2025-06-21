@@ -1,42 +1,41 @@
 cask "softube-central" do
-  version "1.11.1"
-  sha256 "0aaeb48c3e66e8e7ec614e06cada783433f0669e607b5b59a626dfe56457a3e4"
+  version "2.0.0"
+  sha256 "aadc2107e4f529ab2a5768c0b965a2a8a3e4c9ef35cd6480971ddf834c9045b1"
 
   url "https://softubestorage.b-cdn.net/softubecentraldata/softubecentral/Softube%20Central-#{version}-universal.pkg",
       verified: "softubestorage.b-cdn.net/"
   name "Softube Central"
   desc "Installer for installation and license activation of Softube products"
-  homepage "https://www.softube.com/softube-central/"
+  homepage "https://www.softube.com/"
 
   livecheck do
-    url "https://www.softube.com/installers"
-    regex(/Softube%20Central[._-]v?(\d+(?:\.\d+)+)[._-]universal\.pkg/i)
+    url "https://softubestorage.b-cdn.net/softubecentraldata/softubecentral/latest-mac.yml?noCache=#{Time.now.to_i}"
+    strategy :electron_builder
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on cask: "ilok-license-manager"
 
   pkg "Softube Central-#{version}-universal.pkg"
 
-  uninstall launchctl: [
-              "com.paceap.eden.licensed",
-              "com.paceap.eden.licensed.agent",
-            ],
-            quit:      [
+  uninstall quit:    [
               "com.softube.Console1OSD_Release",
               "org.softube.com.softubecentral",
             ],
-            pkgutil:   [
-              "com.paceap.pkg.eden.activationexperience",
-              "com.paceap.pkg.eden.iLokLicenseManager",
-              "com.paceap.pkg.eden.licensed",
+            pkgutil: [
               "com.softube.installerdaemon.helper",
               "org.softube.com.softubecentral",
             ]
 
   zap trash: [
     "/Library/Application Support/Softube",
-    "~/Library/Application Support/Softube",
-    "~/Library/Application Support/softubecentral",
+    "/Library/LaunchDaemons/com.softube.installerdaemon.helper.plist",
+    "/Library/Preferences/com.softube.settings.plist",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.softube.com.softubecentral.sfl*",
+    "~/Library/Application Support/Softube*",
+    "~/Library/Logs/Softube Central",
+    "~/Library/Preferences/org.softube.com.softubecentral.plist",
   ]
 end

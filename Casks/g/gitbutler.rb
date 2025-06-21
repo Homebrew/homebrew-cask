@@ -1,22 +1,20 @@
 cask "gitbutler" do
   arch arm: "aarch64", intel: "x86_64"
-  arch_suffix = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  version "0.12.25,1269"
-  sha256 arm:   "75add1cd2aa7c8b2ae199b986cdcfb4ddf5ba51aba775ff8880f9c6cb4af2b4b",
-         intel: "5e88ad06200528e61c2d932f9460e84d3e79d0608ab586a0472a2fb0a6071079"
+  version "0.14.35,2122"
+  sha256 arm:   "7863d4201841c06100449e802ffcc40021e6966628ad7e1846a49afe1522d393",
+         intel: "8e871e65cbd8acbf602c5debfbe0d566b6133bfd91ce408cbd3eaf596d53b1fb"
 
-  url "https://releases.gitbutler.com/releases/release/#{version.csv.first}-#{version.csv.second}/macos/#{arch}/GitButler_#{version.csv.first}_#{arch_suffix}.dmg"
+  url "https://releases.gitbutler.com/releases/release/#{version.csv.first}-#{version.csv.second}/macos/#{arch}/GitButler.app.tar.gz"
   name "GitButler"
   desc "Git client for simultaneous branches on top of your existing workflow"
   homepage "https://gitbutler.com/"
 
   livecheck do
-    url "https://app.gitbutler.com/downloads/release/darwin/#{arch}/dmg"
-    regex(%r{/releases/release/(\d+(?:\.\d+)+)[._-](\d+)/macos}i)
-    strategy :header_match do |headers|
-      match = headers["location"]&.match(regex)
-
+    url "https://app.gitbutler.com/releases/release/darwin-#{arch}/0.0.0"
+    regex(%r{/release/v?(\d+(?:\.\d+)+)[._-](\d+)/macos}i)
+    strategy :json do |json, regex|
+      match = json["url"]&.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"

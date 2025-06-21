@@ -1,8 +1,11 @@
 cask "greenfoot" do
-  version "3.8.2"
-  sha256 "5938f08627794f570c01299cc9cb9153e141a3264545e9a0d875d0cbbb9fb091"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://www.greenfoot.org/download/files/Greenfoot-mac-#{version.no_dots}.dmg"
+  version "3.9.0"
+  sha256 arm:   "410c7e749a41e55a56bb455cd36314da7192381be061dcb00b6467de037f40f3",
+         intel: "18d4c1815c664f49b8760d7b38f15f8e7cfe22cae7fd78f46028f55acaf61281"
+
+  url "https://www.greenfoot.org/download/files/Greenfoot-mac-#{arch}-#{version.no_dots}.dmg"
   name "Greenfoot"
   desc "Teach object orientation with Java"
   homepage "https://www.greenfoot.org/home"
@@ -11,6 +14,10 @@ cask "greenfoot" do
     url "https://www.greenfoot.org/download"
     regex(/Version:\s*(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :sierra"
 
   app "Greenfoot.app"
 

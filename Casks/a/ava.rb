@@ -8,10 +8,7 @@ cask "ava" do
   desc "Run language models locally on your computer"
   homepage "https://avapls.com/"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?Ava[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
-  end
+  disable! date: "2024-12-25", because: :no_longer_available
 
   app "Ava.app"
 

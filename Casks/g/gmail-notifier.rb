@@ -7,7 +7,9 @@ cask "gmail-notifier" do
   desc "Minimalist Gmail inbox notifications app"
   homepage "https://github.com/jashephe/Gmail-Notifier"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Gmail Notifier.app"
 end

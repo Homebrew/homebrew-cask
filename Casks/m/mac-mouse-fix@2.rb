@@ -13,6 +13,8 @@ cask "mac-mouse-fix@2" do
     regex(/^v?(2(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "mac-mouse-fix"
   depends_on macos: ">= :high_sierra"
 

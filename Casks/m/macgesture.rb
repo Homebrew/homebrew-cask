@@ -7,7 +7,10 @@ cask "macgesture" do
   desc "Utility to set up global mouse gestures"
   homepage "https://github.com/MacGesture/MacGesture"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "MacGesture.app"
 

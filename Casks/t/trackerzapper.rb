@@ -4,9 +4,11 @@ cask "trackerzapper" do
 
   url "https://github.com/rknightuk/TrackerZapper/releases/download/#{version}/TrackerZapper.app.zip",
       verified: "github.com/rknightuk/TrackerZapper/"
-  name "trackerzapper"
+  name "TrackerZapper"
   desc "Menubar app to remove link tracking parameters automatically"
   homepage "https://rknight.me/apps/tracker-zapper"
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :big_sur"
 

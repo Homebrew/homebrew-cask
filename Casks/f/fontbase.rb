@@ -1,6 +1,6 @@
 cask "fontbase" do
-  version "2.20.7"
-  sha256 "19c79d751c502fc4c4c7d235dec1efecd60ea80da2a491549e71c9e16aadc4bb"
+  version "2.22.4"
+  sha256 "4959cea3fc6f0096162921382682aa58fadf855c46b318d6a7edf97bfad190df"
 
   url "https://releases.fontba.se/mac/FontBase-#{version}.dmg"
   name "FontBase"
@@ -12,7 +12,10 @@ cask "fontbase" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "FontBase.app"
 

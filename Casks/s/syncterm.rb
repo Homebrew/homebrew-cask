@@ -1,8 +1,8 @@
 cask "syncterm" do
-  version "1.1"
-  sha256 "24d7d0167a187336701fa1730fb4e04ed0d166204de73bb2d5cc2dd388a54308"
+  version "1.6"
+  sha256 "38a60952feeb32465a5aafa38bc8e0a9f8e9a27f2e75f62424781fa2c12eb6cd"
 
-  url "https://downloads.sourceforge.net/syncterm/syncterm/syncterm-#{version}/syncterm-#{version}-osx.zip",
+  url "https://downloads.sourceforge.net/syncterm/syncterm/syncterm-#{version}/syncterm-#{version}-macos.zip",
       verified: "sourceforge.net/syncterm/"
   name "SyncTERM"
   desc "BBS terminal program"
@@ -14,8 +14,4 @@ cask "syncterm" do
     "~/Library/Preferences/SyncTERM",
     "~/Library/Preferences/syncterm.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

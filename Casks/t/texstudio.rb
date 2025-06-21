@@ -1,26 +1,29 @@
 cask "texstudio" do
-  arch arm: "-m1.zip", intel: ".dmg"
+  version "4.8.7"
 
-  version "4.8.2"
-  sha256 arm:   "87d2ed04324825bb5b89d33043f80ca28fbf818d93415d08ce2a48199133812e",
-         intel: "30413d952411cd42a68e8766901908dab61f5f4215d6c441b6d57305de6d5ee5"
+  on_ventura :or_older do
+    sha256 "4f325c3bf10e0f63e8b4fb46d5c2a7362060dbfbae63148af49ae337b780f752"
 
-  on_arm do
-    depends_on macos: ">= :sonoma"
-
-    app "texstudio-#{version}-osx-m1.app"
+    caveats do
+      requires_rosetta
+    end
   end
-  on_intel do
-    depends_on macos: ">= :big_sur"
+  on_sonoma :or_newer do
+    arch arm: "-m1"
 
-    app "texstudio.app"
+    sha256 arm:   "73c7195d4ae56bf1b5757012cff3b87ccce885c427c1233c2d584b641172a023",
+           intel: "4f325c3bf10e0f63e8b4fb46d5c2a7362060dbfbae63148af49ae337b780f752"
   end
 
-  url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx#{arch}",
+  url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx#{arch}.zip",
       verified: "github.com/texstudio-org/texstudio/"
   name "TeXstudio"
   desc "LaTeX editor"
   homepage "https://texstudio.org/"
+
+  depends_on macos: ">= :big_sur"
+
+  app "texstudio-#{version}-osx#{arch}.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texstudio.sfl*",

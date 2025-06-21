@@ -11,6 +11,8 @@ cask "font-african-sans" do
     regex(/African\s+Sans\s+Serif.*?\(\s*v?(\d+(?:\.\d+)+)[^)]*\)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "African Sans REGULAR #{version.no_dots}.ttf"
   font "African Sans BOLD #{version.no_dots}.ttf"
   font "African Sans BOLD ITALIC #{version.no_dots}.ttf"

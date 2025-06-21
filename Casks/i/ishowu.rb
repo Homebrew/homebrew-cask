@@ -7,6 +7,8 @@ cask "ishowu" do
   desc "Screen recorder"
   homepage "https://www.shinywhitebox.com/ishowu"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "iShowU.app"

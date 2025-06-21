@@ -1,6 +1,6 @@
 cask "wetype" do
-  version "1.2.4,398"
-  sha256 "98e1829ddf927aabb3524dd8a8fa7da411d760baee4702edb21714d487840f17"
+  version "1.4.0,503"
+  sha256 "843af117d30d0665c62660cd383e601733f3a28993f9adac1f6c6dea0eff504b"
 
   url "https://download.z.weixin.qq.com/app/mac/#{version.csv.first}/WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
@@ -10,9 +10,11 @@ cask "wetype" do
 
   livecheck do
     url "https://z.weixin.qq.com/web/api/app_info"
-    regex(/WeTypeInstaller[._-]v?(\d+(?:.\d+)+)[._-](\d+).zip/i)
+    regex(/WeTypeInstaller[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.zip/i)
     strategy :json do |json, regex|
       match = json.dig("data", "mac", "download_link")&.match(regex)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

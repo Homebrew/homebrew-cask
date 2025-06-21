@@ -1,9 +1,9 @@
 cask "tableau-public" do
   arch arm: "-arm64"
 
-  version "2024.2.2"
-  sha256 arm:   "9cad1cc57f5e07483dee7f1c20d452b4802bb5ca9dae666eec28d385fd06e7ed",
-         intel: "0787b816f5ab6fe4c9ecc58cee0d519a6b7daf573ff1bc90ee16c8c6f5335add"
+  version "2025.2.0"
+  sha256 arm:   "82f67014252c3114ba794a4b9048d55cc0edcd98a3d6d37748bda06896a553d0",
+         intel: "01f1be7da7ac9c28f73ac1099a27a1608c190c3ee30068c0cafce9789a557162"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauPublic-#{version.dots_to_hyphens}#{arch}.pkg",
       user_agent: "curl/8.7.1"
@@ -12,10 +12,7 @@ cask "tableau-public" do
   homepage "https://public.tableau.com/s/"
 
   livecheck do
-    url "https://downloads.tableau.com/TableauAutoUpdate.xml"
-    strategy :xml do |xml|
-      xml.get_elements("//version").map { |item| item.attributes["releaseNotesVersion"] }
-    end
+    cask "tableau"
   end
 
   pkg "TableauPublic-#{version.dots_to_hyphens}#{arch}.pkg"

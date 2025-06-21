@@ -10,11 +10,13 @@ cask "final-fantasy-xiv-online" do
 
   livecheck do
     url "https://na.finalfantasyxiv.com/mac/download/"
-    regex(%r{href="https://download.finalfantasyxiv.com/inst/([^/]*)/FINAL[._-]FANTASY[._-]XIV[._-]ONLINE[._-]x64.dmg"}i)
+    regex(%r{href=.*?inst/([^/]*)/FINAL[._-]FANTASY[._-]XIV[._-]ONLINE[._-]x64\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :sierra"
 
   app "FINAL FANTASY XIV ONLINE.app"
 

@@ -11,6 +11,8 @@ cask "font-ezra-sil" do
     regex(/href=.*?EzraSIL[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "EzraSIL#{version}/SILEOT.ttf"
   font "EzraSIL#{version}/SILEOTSR.ttf"
 

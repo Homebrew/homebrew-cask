@@ -9,13 +9,12 @@ cask "around" do
   desc "Video calls designed for energy, ideas and action"
   homepage "https://www.around.co/"
 
-  livecheck do
-    url "https://downloads.around.co/latest.yml"
-    regex(/version: (\d+(?:\.\d+)+)/i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2025-04-20", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Around.app"
 

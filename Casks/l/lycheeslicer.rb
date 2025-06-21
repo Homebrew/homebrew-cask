@@ -1,6 +1,6 @@
 cask "lycheeslicer" do
-  version "7.0.0"
-  sha256 "748d6da8bcdf88b2268390da51eb41313315532b88a8dfdec3ef7d2f04f7f87c"
+  version "7.3.2"
+  sha256 "ee4b3b4447265ca5392210b8cf409117a1e589f0b13f2971000753a086f90f4c"
 
   url "https://mango-lychee.nyc3.cdn.digitaloceanspaces.com/LycheeSlicer-#{version}.dmg",
       verified: "mango-lychee.nyc3.cdn.digitaloceanspaces.com/"
@@ -9,7 +9,7 @@ cask "lycheeslicer" do
   homepage "https://mango3d.io/"
 
   livecheck do
-    url "https://mango-lychee.nyc3.digitaloceanspaces.com/latest.yml"
+    url "https://mango-lychee.nyc3.digitaloceanspaces.com/latest-mac.yml"
     strategy :electron_builder
   end
 

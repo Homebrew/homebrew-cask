@@ -1,5 +1,5 @@
 cask "mylio" do
-  version "24.4.7777"
+  version "24.5.7799"
   sha256 :no_check
 
   url "https://myliodownloads.com/Mylio.dmg",
@@ -23,7 +23,7 @@ cask "mylio" do
     "~/Library/Caches/mylollc.Mylio",
     "~/Library/HTTPStorages/mylollc.Mylio",
     "~/Library/Preferences/mylollc.Mylio.plist",
-    "~/Library/WebKit/mylollc.Mylio/",
+    "~/Library/WebKit/mylollc.Mylio",
     "~/Mylio",
   ]
 end

@@ -10,7 +10,7 @@ cask "find-my-ports" do
 
   livecheck do
     url "https://www.findmyports.com/download"
-    regex(%r{href=.*?/Find%20My%20Ports%20v?(\d+(?:\.\d+)*)[_-]([a-zA-Z0-9]+)\.dmg}i)
+    regex(%r{href=.*?/Find%20My%20Ports%20v?(\d+(?:\.\d+)*)[_-]([a-z0-9]+)\.dmg}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
@@ -18,6 +18,8 @@ cask "find-my-ports" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sonoma"
 

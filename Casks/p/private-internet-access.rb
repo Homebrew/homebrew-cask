@@ -9,7 +9,7 @@ cask "private-internet-access" do
 
   livecheck do
     url "https://www.privateinternetaccess.com/installer/x/download_installer_osx"
-    regex(/pia-macos-(\d+(?:.\d+)*)\.zip/i)
+    regex(/pia-macos-(\d+(?:[.-]\d+)*)\.zip/i)
   end
 
   auto_updates true

@@ -8,6 +8,8 @@ cask "yuna" do
   desc "Anime player and list manager"
   homepage "https://yuna.moe/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-24", because: :no_longer_available
 
   app "Yuna.app"

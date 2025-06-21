@@ -1,15 +1,25 @@
 cask "gogs" do
-  arch arm: "arm64", intel: "amd64"
+  on_linux do
+    arch arm: "armv8", intel: "amd64"
+  end
+  on_macos do
+    arch arm: "arm64", intel: "amd64"
+  end
+  os macos: ".darwin", linux: "linux"
 
-  version "0.13.0"
-  sha256 arm:   "f279ff28c951f084c6c0e05e1c602edb5e6d959007b52cb3826b281815f703a2",
-         intel: "185fe50d2feb3fd84e470aa65011e7e2506da4ea8a0ce938b0b61ee4bf809509"
+  version "0.13.3"
+  sha256 arm:          "23804e5e246f054f53c2dce1d735f73710d348adc91cd461631a922351097cea",
+         intel:        "98e5728e9a18aeef1d182492a3cba9d78d7a17df5d7c54a34db93082970f2fb1",
+         arm64_linux:  "c78c0d2a751cb956081bc0f06ed7df4e02f8417a765df90da25a21639c74c607",
+         x86_64_linux: "cb146291e29bbf1e7a8dc13e71a23eb47b5ec55eec44680e8bd8777aa0bdaeb4"
 
-  url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_darwin_#{arch}.zip",
+  url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_#{os}_#{arch}.zip",
       verified: "github.com/gogs/gogs/"
   name "Go Git Service"
   desc "Self-hosted Git service"
   homepage "https://gogs.io/"
+
+  no_autobump! because: :requires_manual_review
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/gogs.wrapper.sh"
@@ -22,4 +32,6 @@ cask "gogs" do
       cd '#{staged_path}/gogs' && ./gogs "$@"
     EOS
   end
+
+  # No zap stanza required
 end

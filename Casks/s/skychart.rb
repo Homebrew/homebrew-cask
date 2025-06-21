@@ -10,10 +10,11 @@ cask "skychart" do
   homepage "https://www.ap-i.net/skychart/"
 
   livecheck do
-    url "https://sourceforge.net/projects/skychart/rss?path=/1-software/"
-    regex(/skychart[._-]v?(\d+(?:.\d+)+)[._-]x86[._-]64[._-]macosx\.dmg/i)
-    strategy :page_match
+    url "https://sourceforge.net/projects/skychart/rss?path=/1-software"
+    regex(%r{url=.*?/skychart[._-]v?(\d+(?:[.-]\d+)+[a-z]?)[^"' >]*?\.dmg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "Install Skychart.pkg"
 

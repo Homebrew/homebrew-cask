@@ -7,10 +7,9 @@ cask "cryptr" do
   desc "GUI for Hashicorp's Vault"
   homepage "https://github.com/adobe/cryptr"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-04", because: :unmaintained
 
   app "Cryptr.app"
 

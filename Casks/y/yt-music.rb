@@ -7,6 +7,16 @@ cask "yt-music" do
   desc "App wrapper for music.youtube.com"
   homepage "https://github.com/steve228uk/YouTube-Music"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/steve228uk/YouTube-Music/master/Appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
+
   app "YT Music.app"
 
   zap trash: [

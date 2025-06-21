@@ -9,8 +9,10 @@ cask "font-computer-modern" do
 
   livecheck do
     url "https://sourceforge.net/projects/cm-unicode/rss?path=/cm-unicode"
-    regex(%r{url=.*?/cm-unicode/v?(\d+(?:\.\d+)+[a-z]?)/})
+    regex(%r{url=.*?/cm-unicode/v?(\d+(?:\.\d+)+[a-z]?)/}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "cm-unicode-#{version}/cmunbbx.ttf"
   font "cm-unicode-#{version}/cmunbi.ttf"

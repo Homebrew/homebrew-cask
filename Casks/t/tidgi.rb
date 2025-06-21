@@ -1,19 +1,22 @@
 cask "tidgi" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.10.3"
-  sha256 arm:   "dbc86b6ef8c131ed5bfa1259ca95e8b7a2659f6f3bb25b836342ef84f5d9c444",
-         intel: "b70e57d328b925ed2393e68fe9e1a890eb4ffec194999531a7c299daf32d66b5"
+  version "0.12.1-update"
+  sha256 arm:   "fdf70c092ee4d8b4f410b72b14fa6243f58d26dc5a26860e2cb8513874e021d6",
+         intel: "5d9adaa2d7fa7b0b2b6f62c16d94d344cad3f81e7634d5ac658fd0c63bbc84dc"
 
-  url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TidGi-darwin-#{arch}-#{version}.zip"
+  url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TidGi-darwin-#{arch}-#{version.split("-").first}.zip"
   name "TidGi"
   desc "Personal knowledge-base app"
   homepage "https://github.com/tiddly-gittly/TidGi-Desktop"
 
   livecheck do
     url :url
+    regex(/^\D*?(\d+(?:\.\d+)+.*)$/i)
     strategy :github_latest
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "TidGi.app"
 

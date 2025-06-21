@@ -1,5 +1,5 @@
 cask "hp-easy-start" do
-  version "2.14.0,231016"
+  version "2.15.0,240923"
   sha256 :no_check
 
   url "https://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/HP_Easy_Start.app.zip"

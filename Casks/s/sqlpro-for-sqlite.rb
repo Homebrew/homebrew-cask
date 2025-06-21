@@ -1,6 +1,6 @@
 cask "sqlpro-for-sqlite" do
-  version "2024.30"
-  sha256 "5e7ed1bc6d5cac38ca6d318bb4db347acec99e2983092f17337363113dc635ed"
+  version "2025.07"
+  sha256 "300bf8ca2bb5a93429905ed4089cde4c477c577034b55f8d6f4f3e0b1fcd9734"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/sqlite/"
@@ -12,6 +12,8 @@ cask "sqlpro-for-sqlite" do
     url "https://www.sqlitepro.com/download.php"
     strategy :header_match
   end
+
+  depends_on macos: ">= :ventura"
 
   app "SQLPro for SQLite.app"
 

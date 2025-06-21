@@ -1,9 +1,9 @@
 cask "intellij-idea@eap" do
   arch arm: "-aarch64"
 
-  version "2024.3,243.15521.24"
-  sha256 arm:   "9d69e5ed5acc589f869822bae9fe07ffcc87e40b8e8faf71b862da5a9334eb85",
-         intel: "e3e76791d9e67026f7d63366ae1cb6fe34809bbc9668fe5db1ca4bb2e7863059"
+  version "2025.2,252.23309.22"
+  sha256 arm:   "360b33ad4ce30c2c095b2bd6d47f2a3df8b297faabf91c9fe12b4f453a9a1206",
+         intel: "ef08e9772a76c30c4591253cacc7174ceb0f914476e35d429a9e67f75c19cb19"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.second}#{arch}.dmg"
   name "IntelliJ IDEA EAP"
@@ -13,8 +13,12 @@ cask "intellij-idea@eap" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=IIU&release.type=eap"
     strategy :json do |json|
-      json["IIU"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["IIU"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end

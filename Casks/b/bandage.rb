@@ -11,6 +11,8 @@ cask "bandage" do
   desc "Bioinformatics app for navigating de novo assembly graphs"
   homepage "https://rrwick.github.io/Bandage/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   app "Bandage.app"
@@ -24,4 +26,9 @@ cask "bandage" do
       exec '#{appdir}/Bandage.app/Contents/MacOS/Bandage' "$@"
     EOS
   end
+
+  zap trash: [
+    "~/Library/Preferences/com.rrwick.Bandage.plist",
+    "~/Library/Saved Application State/com.rrwick.Bandage.savedState",
+  ]
 end

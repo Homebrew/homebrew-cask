@@ -1,5 +1,5 @@
 cask "megacmd" do
-  version "1.7.0"
+  version "2.1.1"
   sha256 :no_check
 
   url "https://mega.nz/MEGAcmdSetup.dmg"
@@ -14,6 +14,8 @@ cask "megacmd" do
     url "https://github.com/meganz/MEGAcmd"
     regex(/^v?(\d+(?:\.\d+)+)[._-]macOS$/i)
   end
+
+  depends_on macos: ">= :catalina"
 
   app "MEGAcmd.app"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdShell", target: "megacmd"

@@ -9,9 +9,13 @@ cask "quodlibet" do
   homepage "https://quodlibet.readthedocs.io/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://quodlibet.github.io/appcast/osx-quodlibet.rss"
+    strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
 
   app "QuodLibet.app"
 

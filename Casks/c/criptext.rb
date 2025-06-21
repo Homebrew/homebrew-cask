@@ -7,6 +7,8 @@ cask "criptext" do
   desc "Email service that's built around privacy"
   homepage "https://criptext.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :unmaintained
 
   app "Criptext.app"

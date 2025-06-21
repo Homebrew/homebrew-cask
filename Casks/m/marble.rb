@@ -6,12 +6,15 @@ cask "marble" do
   name "Marble"
   homepage "https://marble.kde.org/"
 
-  livecheck do
-    url "https://marble.kde.org/install.php"
-    regex(%r{href=.*?/Marble-(\d+(?:\.\d+)*)\.pkg}i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-27", because: :unmaintained
 
   pkg "Marble-#{version}.pkg"
 
   uninstall pkgutil: "org.kde.marbleV220.Marble.pkg"
+
+  caveats do
+    requires_rosetta
+  end
 end

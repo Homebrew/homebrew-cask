@@ -8,7 +8,15 @@ cask "moscow-ml" do
   desc "Light-weight implementation of Standard ML"
   homepage "https://mosml.org/"
 
+  no_autobump! because: :requires_manual_review
+
   pkg "mosml-#{version}.pkg"
 
   uninstall pkgutil: "org.mosml"
+
+  # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end

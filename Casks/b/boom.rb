@@ -1,5 +1,5 @@
 cask "boom" do
-  version "1.7.14"
+  version "1.7.15"
   sha256 :no_check
 
   url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg",
@@ -14,6 +14,8 @@ cask "boom" do
       json.dig("data", 0, "attributes", "versions")&.map { |version| version["version"] }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 

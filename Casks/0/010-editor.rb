@@ -1,6 +1,6 @@
 cask "010-editor" do
-  version "15.0"
-  sha256 "e03bd3b50bb58c773b5cac02592bd24648adbc46c64f09695660f552f846d0d4"
+  version "15.0.2"
+  sha256 "459b4557701b13929fcd6d7cbac5b4152fc09d7f147adb3f46455ac8100e0d0e"
 
   url "https://download.sweetscape.com/010EditorMac64Installer#{version}.dmg"
   name "010 Editor"
@@ -11,6 +11,8 @@ cask "010-editor" do
     url "https://www.sweetscape.com/download/010editor/"
     regex(/Version:?\s*(\d+(?:\.\d+)+),\s*macOS/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "010 Editor.app"
 

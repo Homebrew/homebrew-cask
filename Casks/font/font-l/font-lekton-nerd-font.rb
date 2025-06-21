@@ -1,6 +1,6 @@
 cask "font-lekton-nerd-font" do
-  version "3.2.1"
-  sha256 "76685975a18c6047e391141ca4a49d8e0ff549b02f69aa77dd3afc1e1e98cc4e"
+  version "3.4.0"
+  sha256 "b76368a4d080b2b4021d241467898bc2fe0afd447159d65c01b74d9c1bc59ec0"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Lekton.zip"
   name "Lekton Nerd Font (Lekton)"
@@ -10,6 +10,8 @@ cask "font-lekton-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "LektonNerdFont-Bold.ttf"
   font "LektonNerdFont-Italic.ttf"

@@ -9,11 +9,16 @@ cask "programmer-dvorak" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      v = page[/href=.*?ProgrammerDvorak-(\d+(?:_\d+)*)\.pkg\.zip/i, 1]
-      v.tr("_", ".")
+    regex(/href=.*?ProgrammerDvorak[._-]v?(\d+(?:[._]\d+)+)\.pkg\.zip/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      match[1].tr("_", ".")
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   container nested: "Programmer Dvorak v#{version.major_minor}.pkg/Contents/Archive.pax.gz"
 

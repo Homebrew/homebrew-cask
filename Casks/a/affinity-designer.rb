@@ -1,6 +1,6 @@
 cask "affinity-designer" do
-  version "2.5.5,2636"
-  sha256 "2e4e5a660dfed290b6d1fbd14a5b73f67123b49e9e551258a9cd69d64ee16e49"
+  version "2.6.3,3322"
+  sha256 "872b8d6cd2e475a11b5fade0c8f4a50982594be6c169a618d15ff1cdeef1e75d"
 
   url "https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Designer%20#{version.csv.first.major}%20Affinity%20Store%20#{version.csv.second}.zip",
       verified: "affinity-update.s3.amazonaws.com/"
@@ -10,9 +10,7 @@ cask "affinity-designer" do
 
   livecheck do
     url "https://go.seriflabs.com/affinity-update-mac-retail-designer#{version.csv.first.major}"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}"
-    end
+    strategy :sparkle
   end
 
   auto_updates true

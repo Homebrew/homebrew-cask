@@ -8,6 +8,8 @@ cask "oolite" do
   desc "Space trading and combat simulator"
   homepage "https://www.oolite.space/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :discontinued
 
   app "Oolite.app"

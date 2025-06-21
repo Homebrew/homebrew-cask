@@ -1,5 +1,5 @@
 cask "archaeology" do
-  version "1.2,155"
+  version "1.3,181"
   sha256 :no_check
 
   url "https://www.mothersruin.com/software/downloads/Archaeology.dmg"
@@ -10,13 +10,15 @@ cask "archaeology" do
   livecheck do
     url "https://www.mothersruin.com/software/Archaeology/data/ArchaeologyVersionInfo.plist"
     strategy :xml do |xml|
-      short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text&.strip
-      version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text&.strip
+      short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text
+      version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text
       next if short_version.blank? || version.blank?
 
-      "#{short_version},#{version}"
+      "#{short_version.strip},#{version.strip}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :monterey"
 

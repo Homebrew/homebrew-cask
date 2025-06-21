@@ -16,7 +16,7 @@ permissions:
 jobs:
   autobump:
     if: github.repository == 'Homebrew/homebrew-cask'
-    runs-on: macos-latest
+    runs-on: macos-15
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -26,28 +26,29 @@ jobs:
           cask: true
           test-bot: false
 
-      - name: Clean up CI Xcode Versions
-        run: |
-          df -hI /dev/disk3s1s1
-          sudo rm -rf /Applications/Xcode_15.1.app
-          sudo rm -rf /Applications/Xcode_15.2.app
-          sudo rm -rf /Applications/Xcode_15.3.app
-          df -hI /dev/disk3s1s1
-
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@master
         with:
           username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
 
-      - name: Get list of autobump casks
-        id: autobump
-        run: echo "autobump_list=$(xargs < "$(brew --repo homebrew/cask)"/.github/autobump.txt)" >> "$GITHUB_OUTPUT"
+      - name: Set up commit signing
+        uses: Homebrew/actions/setup-commit-signing@master
+        with:
+          signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
       - name: Bump casks
-        uses: Homebrew/actions/bump-packages@master
-        continue-on-error: true
-        with:
-          token: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
-          casks: ${{ github.event.inputs.casks || steps.autobump.outputs.autobump_list }}
+        id: autobump
         env:
           HOMEBREW_TEST_BOT_AUTOBUMP: 1
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
+          HOMEBREW_GIT_COMMITTER_NAME: BrewTestBot
+          HOMEBREW_GIT_COMMITTER_EMAIL: 1589480+BrewTestBot@users.noreply.github.com
+          CASKS: ${{ inputs.casks }}
+        continue-on-error: true
+        run: |
+          BREW_BUMP=(brew bump --no-fork --open-pr --casks --bump-synced)
+          if [[ -n "${CASKS-}" ]]; then
+            xargs "${BREW_BUMP[@]}" <<<"${CASKS}"
+          else
+            "${BREW_BUMP[@]}" --auto --tap=Homebrew/cask
+          fi

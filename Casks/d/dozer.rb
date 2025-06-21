@@ -7,8 +7,10 @@ cask "dozer" do
   desc "Tool to hide status bar icons"
   homepage "https://github.com/Mortennn/Dozer"
 
+  no_autobump! because: :requires_manual_review
+
   # upstream discussion, https://github.com/Mortennn/Dozer/issues/178
-  deprecate! date: "2023-11-26", because: :discontinued
+  disable! date: "2024-12-01", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

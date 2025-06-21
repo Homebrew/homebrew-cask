@@ -1,6 +1,6 @@
 cask "winzip" do
-  version "11.0.6675"
-  sha256 "d243eac05a338f9a9e680a16d272a4382dfd3f331b36ed3c97d48520670bea47"
+  version "12.0.7282"
+  sha256 "ac69719cdadcefcb75729831983d884f44e9e57e5cc608672b3d4a1c87963c0e"
 
   url "https://download.winzip.com/winzipmacedition#{version.major}.dmg"
   name "WinZip"
@@ -20,7 +20,9 @@ cask "winzip" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
 
   app "WinZip.app"
 

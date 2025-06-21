@@ -8,6 +8,13 @@ cask "material-maker" do
   desc "Procedural material authoring and 3D painting tool based on the Godot Engine"
   homepage "https://rodzilla.itch.io/material-maker"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   app "material_maker.app"

@@ -9,8 +9,8 @@ cask "font-inclusive-sans" do
   name "Inclusive Sans"
   homepage "https://fonts.google.com/specimen/Inclusive+Sans"
 
-  font "InclusiveSans-Italic.ttf"
-  font "InclusiveSans-Regular.ttf"
+  font "InclusiveSans-Italic[wght].ttf"
+  font "InclusiveSans[wght].ttf"
 
   # No zap stanza required
 end

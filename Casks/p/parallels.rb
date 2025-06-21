@@ -1,6 +1,6 @@
 cask "parallels" do
-  version "20.0.1-55659"
-  sha256 "e61f16641ecbe83f4a3a020f4acb4dd6c35c7f7159422390141e4c502e18cef0"
+  version "20.3.2-55975"
+  sha256 "79acc347e79251ca7cd577517d844722dec4e05342123b21d0cd3061041898c4"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
@@ -8,10 +8,14 @@ cask "parallels" do
   homepage "https://www.parallels.com/products/desktop/"
 
   livecheck do
-    url "https://kb.parallels.com/130212"
-    regex(/<p[^>]*?>[^<]*?(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}-#{match[1]}" }
+    url "https://update.parallels.com/desktop/v#{version.major}/parallels/parallels_updates.xml"
+    regex(/ParallelsDesktop[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    strategy :xml do |xml, regex|
+      url = xml.elements["//FilePath"]&.text&.strip
+      match = url.match(regex) if url
+      next if match.blank?
+
+      match[1]
     end
   end
 
@@ -48,6 +52,13 @@ cask "parallels" do
   end
 
   uninstall signal: ["TERM", "com.parallels.desktop.console"],
+            # This will stop parallels desktop if running in background.
+            # 'TERM' signal and 'quit:' does not work if parallels desktop is running in background.
+            script: {
+              executable:   "/usr/bin/pkill",
+              args:         ["-TERM", "prl_client_app"],
+              must_succeed: false,
+            },
             delete: [
               "/Library/Preferences/Parallels",
               "/usr/local/bin/prl_convert",

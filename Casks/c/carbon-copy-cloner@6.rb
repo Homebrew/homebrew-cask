@@ -1,6 +1,6 @@
 cask "carbon-copy-cloner@6" do
-  version "6.1.11.7673"
-  sha256 "4b6763f6417b3b9c012539f0ce73cb674723e96e1d5b1d818dfc0173974472ed"
+  version "6.1.12.7685"
+  sha256 "8c2df3c01b3cb7c3088d07c5a7bb43ea3675c8db92ccfe57cd8be0db9a507616"
 
   url "https://bombich.scdn1.secure.raxcdn.com/software/files/ccc-#{version}.zip",
       verified: "bombich.scdn1.secure.raxcdn.com/software/files/"
@@ -12,6 +12,8 @@ cask "carbon-copy-cloner@6" do
     url "https://api.bombich.com/download/ccc?v=ccc6&l=alternate"
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   conflicts_with cask: [

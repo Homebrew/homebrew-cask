@@ -1,6 +1,6 @@
 cask "typora" do
-  version "1.9.4"
-  sha256 "ffcbf15e22828f8b2263bcefd587736a23be8e3f3743d4a5c533aec1ef24657a"
+  version "1.10.10"
+  sha256 "e4995e36e215cb3a0e487371a3ff9a2417362afc78cc4bc67e9115726187a7ea"
 
   url "https://download.typora.io/mac/Typora-#{version}.dmg"
   name "Typora"
@@ -8,13 +8,13 @@ cask "typora" do
   homepage "https://typora.io/"
 
   livecheck do
-    url "https://www.typora.io/download/dev_update.xml"
+    url "https://typora.io/releases/macos.xml"
     strategy :sparkle, &:short_version
   end
 
   auto_updates true
   conflicts_with cask: "typora@dev"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Typora.app"
 

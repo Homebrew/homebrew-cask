@@ -7,6 +7,8 @@ cask "launchy" do
   desc "Utility desktop shortcut utility"
   homepage "https://www.launchy.net/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "Launchy.app"

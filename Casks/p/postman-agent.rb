@@ -1,9 +1,9 @@
 cask "postman-agent" do
   arch arm: "osx_arm64", intel: "osx_64"
 
-  version "0.4.32"
-  sha256 arm:   "ca5017bd2884a71d5137c5b8349d04734270f89da37d836d2ff46c8b4950739c",
-         intel: "48016a671cb3a78d2f4b8d0a716439c8177798915b9b2debebe3d98c15692dd6"
+  version "0.4.48"
+  sha256 arm:   "c6d1c35434e30175e34c6ce1db6195a97b3436d1a2292d66efaa34b856d21433",
+         intel: "91c74d5deff8100da18bed0302b67dfa745dc321c5f5f36894237870ed35355f"
 
   url "https://dl-agent.pstmn.io/download/version/#{version}/#{arch}",
       verified: "dl-agent.pstmn.io/download/version/"
@@ -17,6 +17,7 @@ cask "postman-agent" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Postman Agent.app"
 

@@ -1,6 +1,6 @@
 cask "bria" do
-  version "6.7.2.1,124831"
-  sha256 "88ab5b345e06293d7d23b114da154f089c984659328ee353207b8d1d3f21dc85"
+  version "6.8.2,127248"
+  sha256 "6ea83545d2413df430715a54eb0d8a73d98283633122083840d3104cfb02eec8"
 
   url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "counterpath.s3.amazonaws.com/"
@@ -12,7 +12,7 @@ cask "bria" do
     url "https://www.counterpath.com/downloads/Bria6ForMac.php"
     regex(/Bria_(\d+(?:\.\d+)+)_(\d+)\.dmg/i)
     strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"

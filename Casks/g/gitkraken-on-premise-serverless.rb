@@ -1,12 +1,12 @@
 cask "gitkraken-on-premise-serverless" do
-  arch arm: "darwin-arm64", intel: "darwin"
+  arch arm: "arm64", intel: "x64"
 
-  version "10.3.0"
-  sha256 arm:   "0a57ef96b9ff0ac87e7ca8344485a94847517d4886114c8d4e4dd9c27caca070",
-         intel: "ff051a710fa142422a03cbcd60cad29bf939b54668d3f5b37033c538833ddf7d"
+  version "11.2.0"
+  sha256 arm:   "ea921d294924aa0ec22671e383add626a127caa4771c293be8acf5aeb6bcb36a",
+         intel: "3564027b3ed8cd3465231a3cc5fd801282f79cb515bb452ac70b0411ccd23b5e"
 
-  url "https://release.axocdn.com/#{arch}-standalone/GitKraken-v#{version}.zip",
-      verified: "release.axocdn.com/"
+  url "https://api.gitkraken.dev/releases/standalone/production/darwin/#{arch}/#{version}/GitKraken-v#{version}.zip",
+      verified: "api.gitkraken.dev/releases/standalone/production/"
   name "GitKraken Serverless"
   desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/git-client/on-premise"

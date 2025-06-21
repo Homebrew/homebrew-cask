@@ -7,6 +7,8 @@ cask "macx-video" do
   desc "4K video processing software"
   homepage "https://www.videoproc.com/macxvideo/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-15", because: :discontinued
 
   app "macXvideo.app"

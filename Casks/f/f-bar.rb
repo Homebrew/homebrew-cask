@@ -8,12 +8,12 @@ cask "f-bar" do
     end
   end
   on_sierra :or_newer do
-    version "5.0.5"
-    sha256 "2fb891afa0086310fa180d3b40585e1c9763b392f06ad5237995ea7d02aaf8af"
+    version "5.1"
+    sha256 "82d6a186209c2b70317b444eea278b570843b09db2373ebefa1c025a73a937e6"
 
     livecheck do
-      url "https://eastwest.se/apps/fbar/download"
-      strategy :header_match
+      url "https://apps.eastwest.se/fbar/updates/FBarAppcast.xml"
+      strategy :sparkle, &:short_version
     end
   end
 
@@ -22,6 +22,8 @@ cask "f-bar" do
   name "F-Bar"
   desc "Manage Laravel Forge servers from the menubar"
   homepage "https://laravel-forge-menubar.com/"
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

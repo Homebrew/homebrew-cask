@@ -1,6 +1,6 @@
 cask "subler" do
-  version "1.8.5"
-  sha256 "ddf0c13044da6a090c6db1b5f5ca7332880c1312a31004416b63b20d22b7d175"
+  version "1.8.8"
+  sha256 "1f98ba2a31514d8eca319a0b3bb319827eea17facfd17e755fc6c1481da82d1f"
 
   url "https://github.com/SublerApp/Subler/releases/download/#{version}/Subler-#{version}.zip",
       verified: "github.com/SublerApp/Subler/"
@@ -13,7 +13,10 @@ cask "subler" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Subler.app"
 

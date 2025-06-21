@@ -10,13 +10,15 @@ cask "alfred@4" do
   livecheck do
     url "https://www.alfredapp.com/app/update#{version.major}/general.xml"
     strategy :xml do |xml|
-      version = xml.elements["//key[text()='version']"]&.next_element&.text&.strip
-      build = xml.elements["//key[text()='build']"]&.next_element&.text&.strip
+      version = xml.elements["//key[text()='version']"]&.next_element&.text
+      build = xml.elements["//key[text()='build']"]&.next_element&.text
       next if version.blank? || build.blank?
 
-      "#{version},#{build}"
+      "#{version.strip},#{build.strip}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

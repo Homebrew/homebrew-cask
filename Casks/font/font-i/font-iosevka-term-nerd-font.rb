@@ -1,6 +1,6 @@
 cask "font-iosevka-term-nerd-font" do
-  version "3.2.1"
-  sha256 "4d2c7fc44f215cd762ceab5167aa13285f179e83f36d56a1129c2871b9552080"
+  version "3.4.0"
+  sha256 "d4010247459253898a160fc494c6671f523788f8562f23f599cf881b2e3ac241"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/IosevkaTerm.zip"
   name "IosevkaTerm Nerd Font (Iosevka Term)"
@@ -10,6 +10,8 @@ cask "font-iosevka-term-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "IosevkaTermNerdFont-Bold.ttf"
   font "IosevkaTermNerdFont-BoldItalic.ttf"

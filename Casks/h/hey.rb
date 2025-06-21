@@ -1,9 +1,9 @@
 cask "hey" do
   arch arm: "-arm64"
 
-  version "1.2.14"
-  sha256 arm:   "ffe8da4959aa02c654704b150078b5dfbdfd0bc04778aa813c3c5fd072298d6e",
-         intel: "ec7be5edda258f044c6bd6d1862fb6e0dd317e3ee18d5bc3d0b3c649a3d8607d"
+  version "1.2.17"
+  sha256 arm:   "f901b52916f5c9a33d12a4e9f73ceacc85f652e76b7cb61767507186d270859e",
+         intel: "e7b260f4faa8fe0c3783c2b31a6e4410103b273c0302dd275b0da26b0f06d59d"
 
   url "https://hey-desktop.s3.amazonaws.com/HEY-#{version}#{arch}-mac.zip",
       verified: "hey-desktop.s3.amazonaws.com/"
@@ -16,7 +16,10 @@ cask "hey" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "HEY.app"
 

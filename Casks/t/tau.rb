@@ -1,7 +1,7 @@
 cask "tau" do
   arch arm: "_arm64"
 
-  version "2.33.2"
+  version "2.34.1"
   sha256 :no_check
 
   url "http://tau.uoregon.edu/tau#{arch}.dmg"
@@ -13,6 +13,8 @@ cask "tau" do
     url "https://www.cs.uoregon.edu/research/tau/downloads.php"
     regex(/version\s+(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   suite "TAU"
 

@@ -1,9 +1,9 @@
 cask "arduino-ide" do
   arch arm: "ARM64", intel: "64bit"
 
-  version "2.3.2"
-  sha256 arm:   "e682a29610569e421fc8d8276ff3c785347ca8521bfe4817baefa7f542237a1d",
-         intel: "6e78e3830798388ee77429fac1ba7b5eb0643a57e51b44a9b10ffe221f054839"
+  version "2.3.6"
+  sha256 arm:   "18dbf23f7f87133a8c139b14df8a647f12fd97b5f612344688f7150255a9391f",
+         intel: "ddbab78ebad1f617c0d8a05efed83b4da2ff208534031e125824ff924df1e189"
 
   url "https://github.com/arduino/arduino-ide/releases/download/#{version}/arduino-ide_#{version}_macOS_#{arch}.dmg",
       verified: "github.com/arduino/arduino-ide/"
@@ -17,7 +17,7 @@ cask "arduino-ide" do
   end
 
   conflicts_with cask: "arduino-ide@nightly"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Arduino IDE.app"
 

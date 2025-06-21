@@ -12,6 +12,8 @@ cask "syncroom" do
     regex(%r{href=.*?/SYNCROOM-MULTI-mac-(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   pkg "SYNCROOM.pkg"

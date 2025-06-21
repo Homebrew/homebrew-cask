@@ -1,6 +1,6 @@
 cask "font-victor-mono-nerd-font" do
-  version "3.2.1"
-  sha256 "987c8697510a9819db98b828da599eeedf3e00242d4a8cc8d762b19fab227183"
+  version "3.4.0"
+  sha256 "9b4bd827fc59f60c5bd3306a31c148208522d5d6801b9fb5233c39c503013f2f"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/VictorMono.zip"
   name "VictorMono Nerd Font (Victor Mono)"
@@ -10,6 +10,8 @@ cask "font-victor-mono-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "VictorMonoNerdFont-Bold.ttf"
   font "VictorMonoNerdFont-BoldItalic.ttf"

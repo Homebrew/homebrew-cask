@@ -11,18 +11,16 @@ cask "kaleidoscope@3" do
   # have to omit items with a different major version.
   livecheck do
     url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
-    regex(/Kaleidoscope[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.app\.zip/i)
-    strategy :sparkle do |items, regex|
+    strategy :sparkle do |items|
       items.map do |item|
         next if item.short_version&.split(".")&.first != version.major
 
-        match = item.url.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
+        item.nice_version
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   conflicts_with cask: %w[

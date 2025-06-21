@@ -1,19 +1,22 @@
 cask "gitkraken" do
-  arch arm: "darwin-arm64", intel: "darwin"
+  arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "10.3.0"
-  sha256 arm:   "fc02c551f263b9eefaba1b053d067412a3f63aeab35e0cf657e8479b147a76d2",
-         intel: "292aeb60e82aab06592b5ac80a8584741ad4f34d4f0944a322b4ad4e923c74ff"
+  version "11.2.0"
+  sha256 arm:   "add4af83396f8bda083f93797384897ae19015f80c91fc4b0d866ec85397f50d",
+         intel: "00a9f4ac53a4fa40fea55f4299d0871d10f9e7bb39da64349779b7cb8d4f001c"
 
-  url "https://release.axocdn.com/#{arch}/GitKraken-v#{version}.zip",
-      verified: "release.axocdn.com/"
+  url "https://api.gitkraken.dev/releases/production/darwin/#{arch}/#{version}/GitKraken-v#{version}.zip",
+      verified: "api.gitkraken.dev/releases/production/"
   name "GitKraken"
   desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/"
 
   livecheck do
-    url "https://help.gitkraken.com/gitkraken-client/current/"
-    regex(/Version\s(\d+(?:\.\d+)+)/i)
+    url "https://release.gitkraken.com/darwin#{livecheck_arch}/RELEASES?v=0.0.0&darwin=999"
+    strategy :json do |json|
+      json["name"]
+    end
   end
 
   auto_updates true

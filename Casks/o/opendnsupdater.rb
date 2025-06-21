@@ -8,9 +8,11 @@ cask "opendnsupdater" do
   homepage "https://support.opendns.com/hc/en-us/articles/227987867"
 
   livecheck do
-    url "https://www.opendns.com/download/mac/"
+    url :url
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "OpenDNSUpdater.app"
 

@@ -1,6 +1,6 @@
 cask "imazing-profile-editor" do
-  version "1.9.1,304001"
-  sha256 "ba1414257c21615e6b8c04a4d98d5ab963bfd1eb52b67f248991dbe79c1bf2ed"
+  version "2.0.0,364301"
+  sha256 "b35686da3edda25273069d370996caa611012ed8f1f3f5bf18128ca9fa130310"
 
   url "https://downloads.imazing.com/mac/iMazing-Profile-Editor/#{version.csv.first}.#{version.csv.second}/iMazing_Profile_Editor_#{version.csv.first}.#{version.csv.second}.dmg"
   name "iMazing Profile Editor"
@@ -11,6 +11,8 @@ cask "imazing-profile-editor" do
     url "https://downloads.imazing.com/com.DigiDNA.iMazingProfileEditorMac.xml"
     strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

@@ -1,6 +1,6 @@
 cask "popchar" do
-  version "10.2"
-  sha256 "fdacb546b07e558b4e1b7dd69d728a608b12f50ccc8dc1713b5606837fc9ac95"
+  version "10.4"
+  sha256 "084c995b640636fcda912107157b6f455857e52ecd94539ede5670896e9606ff"
 
   url "https://www.ergonis.com/downloads/products/popcharx/PopCharX#{version.no_dots}-Install.dmg",
       user_agent: :fake
@@ -10,10 +10,12 @@ cask "popchar" do
 
   livecheck do
     url "https://update.ergonis.com/vck/popcharx.xml"
-    regex(/<Program_Version>(\d+(?:\.\d+)+)</i)
+    strategy :xml do |xml|
+      xml.elements["//Program_Info/Program_Version"]&.text&.strip
+    end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   app "PopChar.app"
 

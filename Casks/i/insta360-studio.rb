@@ -1,8 +1,8 @@
 cask "insta360-studio" do
-  version "5.3.3,fcfbe0044c5f5be1eee297336f54e766,insta360_beta1,RC_build1,_20240913_173732_signed"
-  sha256 "8fa5e8e76f7d176f8486450d890977f7a25df3bb26abfda501ccdcab057053fd"
+  version "5.6.2,release_insta360,RC_build79,_20250612_124903_signed_1749703849040,43d4f953e0ed5b30d3bdd31062fc339f"
+  sha256 "6137814dc8d105480fb38b7cfc869bb44a3684635523f3128d56b37eb1045d1d"
 
-  url "https://file.insta360.com/static/#{version.csv.second}/Insta360%20Studio_#{version.csv.first}_#{version.csv.third}(#{version.csv.fourth})#{version.csv.fifth}.pkg"
+  url "https://file.insta360.com/static/#{version.csv.fifth}/Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.pkg"
   name "Insta360 Studio"
   desc "Video and photo editor"
   homepage "https://www.insta360.com/"
@@ -36,16 +36,16 @@ cask "insta360-studio" do
       match = channel["download_url"]&.match(regex)
       next if version.blank? || match.blank?
 
-      "#{version},#{match[1]},#{match[2].split(/[()]/).join(",")}"
+      "#{version},#{match[2].tr("()", ",")},#{match[1]}"
     end
   end
 
-  pkg "Insta360 Studio_#{version.csv.first}_#{version.csv.third}(#{version.csv.fourth})#{version.csv.fifth}.pkg"
+  pkg "Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.pkg"
 
   uninstall quit:    "com.insta360.studio",
             pkgutil: [
               "com.insta360.insta360Studio",
-              "com.insta360.PremierePlugin",
+              "com.insta360.PremierePluginV2",
               "com.insta360.ThumbnailPlugin",
             ]
 

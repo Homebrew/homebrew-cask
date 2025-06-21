@@ -6,6 +6,13 @@ cask "font-zed-sans" do
   name "Zed Sans"
   homepage "https://github.com/zed-industries/zed-fonts"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  no_autobump! because: :requires_manual_review
+
   font "zed-sans-bold.ttf"
   font "zed-sans-bolditalic.ttf"
   font "zed-sans-boldoblique.ttf"

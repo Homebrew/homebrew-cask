@@ -13,7 +13,14 @@ cask "bino" do
     regex(/href=.*?Bino[._-](\d+(?:\.\d+)+)[._-]OSX[._-]Mavericks[._-]GPL\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Bino.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.bino3d.Bino.plist",
+    "~/Library/Saved Application State/org.bino3d.savedState",
+  ]
 
   caveats do
     requires_rosetta

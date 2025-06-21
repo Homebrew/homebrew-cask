@@ -1,20 +1,32 @@
 cask "netbeans" do
-  version "23"
-  sha256 "dcb68a32f0a8cd4796bfd00177b26ed665b6d41e6adb1bf6d03587426fcaf01b"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://dlcdn.apache.org/netbeans/netbeans-installers/#{version}/Apache-NetBeans-#{version}.pkg"
+  version "26,26-build1"
+  sha256 arm:   "174943c8f822ad08621075b3c20f97ba2fb27e91f6ef5961ccd92228a088607d",
+         intel: "99285de7707eecbe49ffd60bf01fd30441ebad4027faaf503ca323097396787f"
+
+  url "https://github.com/Friends-of-Apache-NetBeans/netbeans-installers/releases/download/v#{version.csv.second || version.csv.first}/Apache-NetBeans-#{version.csv.first}-#{arch}.pkg",
+      verified: "github.com/Friends-of-Apache-NetBeans/netbeans-installers/"
   name "NetBeans IDE"
   desc "Development environment, tooling platform and application framework"
   homepage "https://netbeans.apache.org/"
 
-  # Major releases sometimes only use the major version (13) instead of
-  # major/minor (13.0).
   livecheck do
-    url "https://netbeans.apache.org/front/main/download/"
-    regex(/>\s*Apache\s*NetBeans\s*v?(\d+(?:\.\d+)*)\s*</im)
+    url :url
+    regex(%r{/v?(\d+(?:\.\d+)*(?:[._-]build\d+)?)/Apache[._-]NetBeans[._-]v?(\d+(?:\.\d+)*)[._-]#{arch}\.pkg}i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["browser_download_url"]&.match(regex)
+        next if match.blank?
+
+        (match[2] == match[1]) ? match[1] : "#{match[2]},#{match[1]}"
+      end
+    end
   end
 
-  pkg "Apache-NetBeans-#{version}.pkg"
+  depends_on macos: ">= :big_sur"
+
+  pkg "Apache-NetBeans-#{version.csv.first}-#{arch}.pkg"
 
   uninstall pkgutil: [
               "org.apache.netbeans",

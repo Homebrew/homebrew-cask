@@ -8,9 +8,11 @@ cask "bome-network" do
   homepage "https://www.bome.com/products/bomenet"
 
   livecheck do
-    url "https://www.bome.com/products/bomenet#downloads"
+    url :homepage
     regex(%r{href=.*?/BomeNet(\d+(?:\.\d+)+)[._-]macOS\.dmg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Bome Network.app"
 

@@ -1,5 +1,5 @@
 cask "music-miniplayer" do
-  version "1.12"
+  version "1.13"
   sha256 :no_check
 
   url "https://marioaguzman.github.io/musicminiplayer/updater/Music%20MiniPlayer.dmg"
@@ -11,6 +11,8 @@ cask "music-miniplayer" do
     url "https://marioaguzman.github.io/musicminiplayer/updater/musicminiplayerappcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :monterey"

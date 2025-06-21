@@ -7,7 +7,10 @@ cask "vv" do
   desc "Neovim client"
   homepage "https://github.com/vv-vim/vv"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on formula: "neovim"
+  depends_on macos: ">= :catalina"
 
   app "VV.app"
   binary "#{appdir}/VV.app/Contents/Resources/bin/vv"

@@ -7,10 +7,15 @@ cask "beyond-compare@beta" do
   desc "Compare files and folders"
   homepage "https://www.scootersoftware.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-10", because: :discontinued
 
   auto_updates true
-  conflicts_with cask: "beyond-compare"
+  conflicts_with cask: [
+    "beyond-compare",
+    "beyond-compare@4",
+  ]
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"

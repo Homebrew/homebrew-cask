@@ -9,12 +9,13 @@ cask "podolski" do
 
   livecheck do
     url "https://u-he.com/products/podolski/releasenotes.html"
-    strategy :page_match do |page|
-      page.scan(/Podolski\s*v?(\d+(?:\.\d+)+)\s*\(revision\s*(\d+)\)/i).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+    regex(/Podolski\s*v?(\d+(?:\.\d+)+)\s*\(revision\s*(\d+)\)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "Podolski_#{version.csv.second}_Mac/Podolski #{version.csv.first} Installer.pkg"
 

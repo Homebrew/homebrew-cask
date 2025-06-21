@@ -1,6 +1,6 @@
 cask "quiet" do
-  version "2.3.1"
-  sha256 "6f87e4bcb8e80258bb11944d025308524f948b5b0b8d6a63092f493646f9251c"
+  version "5.1.2"
+  sha256 "50553db02525d72fd5451de32bd0ebfd8792465a07e0d9c3de1ca4941f2d987b"
 
   url "https://github.com/TryQuiet/quiet/releases/download/@quiet/desktop@#{version}/Quiet-#{version}.dmg",
       verified: "github.com/TryQuiet/quiet/"
@@ -8,29 +8,16 @@ cask "quiet" do
   desc "Private, p2p alternative to Slack and Discord built on Tor & IPFS"
   homepage "https://tryquiet.org/"
 
-  # Upstream creates GitHub releases for both stable and alpha versions for
-  # both desktop and mobile versions, so it is necessary to check recent
-  # releases to match the latest stable desktop version.
   livecheck do
-    url :url
-    regex(%r{^@quiet/desktop@(\d+(?:\.\d+)+)$}i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
+    url :homepage
+    regex(/href=.*?Quiet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
 
   app "Quiet.app"
 
-  zap trash: "~/Library/Application Support/Quiet2"
+  zap trash: "~/Library/Application Support/Quiet*"
 
   caveats do
     requires_rosetta

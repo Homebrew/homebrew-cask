@@ -1,5 +1,5 @@
 cask "rocket-typist" do
-  version "3.1.2"
+  version "3.2.2"
   sha256 :no_check
 
   url "https://witt-software.com/downloads/rockettypist/Rocket%20Typist.dmg"
@@ -13,7 +13,7 @@ cask "rocket-typist" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Rocket Typist.app"
 

@@ -8,10 +8,7 @@ cask "1password-cli@1" do
   desc "Command-line helper for the 1Password password manager"
   homepage "https://developer.1password.com/docs/cli/v1/usage/"
 
-  livecheck do
-    url "https://app-updates.agilebits.com/product_history/CLI"
-    regex(%r{href=.*?/op_apple_universal[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
-  end
+  deprecate! date: "2025-06-11", because: :unmaintained
 
   conflicts_with cask: [
     "1password-cli",

@@ -1,6 +1,6 @@
 cask "multipass" do
-  version "1.14.0"
-  sha256 "eb3f864071782e99c5368b5714626bc9247addf8ef3b609a92840e6cdd0ca2bc"
+  version "1.15.1"
+  sha256 "9d28152cef3d5dbb02f44355d01b45678a290be0bd66e9151fa7873594e1c94e"
 
   on_arm do
     postflight do
@@ -18,6 +18,8 @@ cask "multipass" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 

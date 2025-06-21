@@ -6,6 +6,10 @@ cask "font-foundry-sterling" do
   name "Foundry Sterling"
   homepage "https://fontlot.com/7134/foundry-sterling/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "FoundrySterling-Book.otf"
   font "FoundrySterling-BookItalic.otf"
   font "FoundrySterling-Demi.otf"

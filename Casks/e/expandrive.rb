@@ -1,19 +1,25 @@
 cask "expandrive" do
-  version "7,2023.4.1"
-  sha256 "360ae7ed44fe1374073af3682e69fe5e83193f5546712b3ce62a0c460f41b8eb"
+  version "7,2025-05-27,2025-05-27_at_14_49_21"
+  sha256 "2912ea060dc278b76c7d1bf74b27fb20a376691db7b02ddc6c1d2d84ff2ec49e"
 
-  url "https://updates.expandrive.com/apps/expandrive#{version.csv.first}/v/#{version.csv.second.dots_to_hyphens}/update_download"
+  url "https://s3.amazonaws.com/expandrive/expandrive#{version.csv.first}/v#{version.csv.second}_published_#{version.csv.third}/ExpanDrive.dmg",
+      verified: "s3.amazonaws.com/expandrive/"
   name "ExpanDrive"
   desc "Network drive and browser for cloud storage"
   homepage "https://www.expandrive.com/apps/expandrive/"
 
   livecheck do
     url "https://updates.expandrive.com/apps/expandrive#{version.csv.first}/download_latest"
-    strategy :header_match do |headers|
-      matches = headers["location"].scan(/expandrive(\d+).*ExpanDrive[._-](\d+\.\d+\.\d+)\.dmg/).flatten
-      "#{matches[0]},#{matches[1]}"
+    regex(%r{expandrive(\d+)/v?(\d+(?:[.-]\d+)+)[._-]published[._-]([^/]+)/ExpanDrive\.dmg}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]},#{match[3]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 
@@ -25,8 +31,4 @@ cask "expandrive" do
     "~/Library/Preferences/com.expandrive.ExpanDrive*.plist",
     "~/Library/Preferences/com.expandrive.ExpanDrive.helper.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -1,9 +1,9 @@
 cask "biglybt" do
   arch arm: "Silicon", intel: "Intel"
 
-  version "3.6.0.0"
-  sha256 arm:   "f8fabd919e5cd4911849e9d0a94ccd9cd286785639b99b41d3f2d56a0113d7dc",
-         intel: "a7285e541bd81854795090565c2bd7327cd063c1100a94913e06d0063fdc84dc"
+  version "3.8.0.2"
+  sha256 arm:   "37a4acf81be017786685a6007424a9f4b63c72910b0e2ae74f3f3741051eafe4",
+         intel: "6eb4b47cf9bb114da257c4e9be8cca87a95afb63e5268822f2977cbdf2d3b636"
 
   url "https://github.com/BiglySoftware/BiglyBT/releases/download/v#{version}/GitHub_BiglyBT_Mac_#{arch}_Installer.dmg",
       verified: "github.com/BiglySoftware/BiglyBT/"
@@ -14,19 +14,19 @@ cask "biglybt" do
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
-  preflight do
-    system_command "#{staged_path}/BiglyBT Installer.app/Contents/MacOS/JavaApplicationStub",
-                   args:         [
-                     "-dir", "#{appdir}/BiglyBT",
-                     "-q",
-                     "-Dinstall4j.suppressStdout=true",
-                     "-Dinstall4j.debug=false",
-                     "-VcreateDesktopLinkAction$Boolean=false",
-                     "-VaddToDockAction$Boolean=false"
-                   ],
-                   print_stderr: false,
-                   sudo:         true
-  end
+  installer script: {
+    executable:   "BiglyBT Installer.app/Contents/MacOS/JavaApplicationStub",
+    args:         [
+      "-dir", "#{appdir}/BiglyBT",
+      "-q",
+      "-Dinstall4j.suppressStdout=true",
+      "-Dinstall4j.debug=false",
+      "-VcreateDesktopLinkAction$Boolean=false",
+      "-VaddToDockAction$Boolean=false"
+    ],
+    print_stderr: false,
+    sudo:         true,
+  }
 
   uninstall delete: "#{appdir}/BiglyBT"
 

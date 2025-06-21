@@ -12,12 +12,16 @@ cask "balance-lock" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Balance Lock.app"
 
   zap trash: [
     "~/Library/Application Support/Balance Lock",
+    "~/Library/HTTPStorages/com.tunabelly.balancelock",
     "~/Library/Preferences/com.tunabelly.balancelock.plist",
   ]
 end

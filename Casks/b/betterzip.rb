@@ -13,6 +13,8 @@ cask "betterzip" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
@@ -24,7 +26,9 @@ cask "betterzip" do
     "~/Library/Application Support/com.macitbetter.betterzip",
     "~/Library/Caches/com.apple.helpd/Generated/com.macitbetter.betterzip.help*",
     "~/Library/Caches/com.macitbetter.betterzip",
+    "~/Library/Containers/com.macitbetter.betterzip.Compress-with-BetterZip",
     "~/Library/Containers/com.macitbetter.betterzip.findersyncextension",
+    "~/Library/Containers/com.macitbetter.betterzip.Quick-Look-Extension",
     "~/Library/Group Containers/79RR9LPM2N.group.com.macitbetter.betterzip",
     "~/Library/Group Containers/79RR9LPM2N.group.com.macitbetter.betterzip-setapp",
     "~/Library/Preferences/com.macitbetter.betterzip.plist",

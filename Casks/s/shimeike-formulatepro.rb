@@ -7,6 +7,8 @@ cask "shimeike-formulatepro" do
   desc "Overlays text and graphics on PDF documents"
   homepage "https://github.com/shimeike/formulatepro/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-17", because: "is 32-bit only"
 
   app "FormulatePro.app"

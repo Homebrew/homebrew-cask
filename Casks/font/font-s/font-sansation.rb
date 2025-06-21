@@ -7,7 +7,7 @@ cask "font-sansation" do
       branch:    "main",
       only_path: "ofl/sansation"
   name "Sansation"
-  homepage "https://www.fontspace.com/sansation-font-f20328"
+  homepage "https://fonts.google.com/specimen/Sansation"
 
   font "Sansation-Bold.ttf"
   font "Sansation-BoldItalic.ttf"

@@ -12,6 +12,8 @@ cask "rockboxutility" do
     regex(/RockboxUtility[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "RockboxUtility.app"
 
   zap trash: [

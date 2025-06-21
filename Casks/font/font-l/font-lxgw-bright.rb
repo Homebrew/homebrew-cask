@@ -1,17 +1,19 @@
 cask "font-lxgw-bright" do
-  version "5.330"
-  sha256 "3cdd310f625bb1016b3aea59207a22ea39350950e267627b28f7756d25a27dd1"
+  version "5.526"
+  sha256 "e5502c2ad8142d496650d188a0645ec15ee6605c60ccdb21945f6bd6cd266e21"
 
   url "https://github.com/lxgw/LxgwBright/releases/download/v#{version}/LXGWBright.7z"
   name "LXGW Bright"
   homepage "https://github.com/lxgw/LxgwBright"
 
+  no_autobump! because: :requires_manual_review
+
   font "LXGWBright/LXGWBright-Italic.ttf"
+  font "LXGWBright/LXGWBright-Light.ttf"
+  font "LXGWBright/LXGWBright-LightItalic.ttf"
   font "LXGWBright/LXGWBright-Medium.ttf"
   font "LXGWBright/LXGWBright-MediumItalic.ttf"
   font "LXGWBright/LXGWBright-Regular.ttf"
-  font "LXGWBright/LXGWBright-SemiLight.ttf"
-  font "LXGWBright/LXGWBright-SemiLightItalic.ttf"
 
   # No zap stanza required
 end

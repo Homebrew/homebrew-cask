@@ -13,6 +13,8 @@ cask "xampp" do
     regex(%r{href=.*?/xampp[._-]osx[._-]v?(\d+(?:\.\d+)+-\d+)[._-]installer\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   conflicts_with cask: "xampp@7"
 
   installer script: {

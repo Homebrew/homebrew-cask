@@ -8,11 +8,15 @@ cask "pock" do
   homepage "https://pock.app/"
 
   livecheck do
-    url :homepage
-    regex(/Latest version: (\d+(?:\.\d+)*(?:-\d+)?)/i)
+    url "https://pock.app/api/latestVersions.json"
+    strategy :json do |json|
+      json.dig("core", "name")
+    end
   end
 
-  depends_on macos: ">= :high_sierra"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
 
   app "Pock.app"
 

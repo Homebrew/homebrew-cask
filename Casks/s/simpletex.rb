@@ -1,12 +1,11 @@
 cask "simpletex" do
   arch arm: "-arm64"
 
-  version "0.2.6,0.2.5"
-  sha256 arm:   "70402676f668ffb0f7b08b06062d0216241f61f6126ab10774fc2f44b20db7bc",
-         intel: "a8b37d4e880f2340296f21d5debab47ad0c062c2839ef7ef22f7a5e9e1d7551c"
+  version "0.2.11"
+  sha256 arm:   "e18dad77f1f7aff9a6d79832e1503468f0ff8948e22da91f8c41e17faa7163f7",
+         intel: "d6c3c579d5ed0d1b7b4660d3b0486313adca4e998c6931217dff06bc359adf69"
 
-  url "https://gitee.com/simpletex/simple-tex-download/releases/download/v#{version.csv.second || version.csv.first}/SimpleTex-#{version.csv.first}#{arch}.dmg",
-      verified: "gitee.com/simpletex/simple-tex-download/releases/download/"
+  url "https://update.simpletex.net/publish/electron/darwin/SimpleTex-#{version}#{arch}.dmg"
   name "SimpleTex"
   desc "Formula snipping and recognition app"
   homepage "https://simpletex.net/"
@@ -14,19 +13,14 @@ cask "simpletex" do
   livecheck do
     url "https://server.simpletex.cn/misc/check/force_update_version/"
     strategy :json do |json|
-      macos_version = json.dig("res", "macos_version")
-      macos_latest_version = json.dig("res", "macos_latest_version")
-
-      if macos_latest_version == macos_version
-        macos_latest_version
-      else
-        "#{macos_latest_version},#{macos_version}"
-      end
+      json.dig("res", "macos_latest_version")
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "SimpleTex.app"
 

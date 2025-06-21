@@ -1,6 +1,6 @@
 cask "worldpainter" do
-  version "2.22.1"
-  sha256 "ff39256a2f248df09ec4a0bfffd5cd90ed5678d325de57df83f33f4a89a28467"
+  version "2.24.2"
+  sha256 "73ade2776e403fe62c5407effbbaadd1caa7fd8c46c1c0444a8d73bc390e7b34"
 
   url "https://www.worldpainter.net/files/worldpainter_#{version}.tgz"
   name "WorldPainter"
@@ -9,8 +9,10 @@ cask "worldpainter" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/files/worldpainter[._-]v?(\d+(?:\.\d+)+)\.tgz}i)
+    regex(%r{href=.*?/files/worldpainter[._-]v?(\d+(?:\.\d+)+)\.t}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :el_capitan"
 

@@ -1,22 +1,25 @@
 cask "graalvm-jdk@21" do
   arch arm: "aarch64", intel: "x64"
 
-  version "21.0.4"
-  sha256 arm:   "1a38609765bb7f985783b438c0488dca1a03ee2d418c2d94a1aaabd6ea9960be",
-         intel: "4cfe4037fbb4190c27899e13ebdee8a034309f7a96e9e20f73fc94b28783a98d"
+  version "21.0.7,8"
+  sha256 arm:   "5c665f8c4a9c10352023fdbee367784cd8dfc22ffda0e625cd8c823c83b4345d",
+         intel: "24094515078a83158bc7b76f73497d52127fdfe32a96665803a52285edd2c08c"
 
-  url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version}_macos-#{arch}_bin.tar.gz",
+  url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version.csv.first}_macos-#{arch}_bin.tar.gz",
       verified: "download.oracle.com/"
   name "GraalVM Java Development Kit"
   desc "GraalVM from Oracle"
   homepage "https://www.graalvm.org/"
 
   livecheck do
-    url "https://www.oracle.com/java/technologies/downloads/"
-    regex(/graalvm\s+for\s+jdk\s+(21(?:\.\d+)+)/i)
+    url "https://docs.oracle.com/en/graalvm/jdk/21/docs/release-notes/"
+    regex(/<strong>v?(\d+(?:\.\d+)+)\+(\d+)[ "<]/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
-  artifact "graalvm-jdk-#{version}+8.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
+  artifact "graalvm-jdk-#{version.csv.first}+#{version.csv.second}.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
   # No zap stanza required
 

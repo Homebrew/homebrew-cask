@@ -3,24 +3,33 @@ cask "sketch" do
     version "96.3,167315"
     sha256 "3ba2c147aab6b2fcb4b5cc3e3ee7fce3f63551e6ef743a7afe459bd0a87bb4a6"
 
-    url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey do
+    version "100.3,180165"
+    sha256 "e51efde061eb3d5b9b999f7821d0d547114ce5b3ed06c0ca3278d60fb4d92678"
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
-    version "101,181930"
-    sha256 "c11fd850f32b53ed5ae90863429f249e31b98f8656b8938d87b85cd08277339c"
+  on_ventura :or_newer do
+    version "2025.1.3,203472"
+    sha256 "25b8afdfabb0ed401d12340fcee3ab23eca26967046c4ef779a59e419d9b6130"
 
-    url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
-
+    # Older versions may have a more recent `pubDate` than newer versions, so
+    # we have to check all of the items in the appcast.
     livecheck do
       url "https://download.sketch.com/sketch-versions.xml"
-      strategy :sparkle
+      strategy :sparkle do |items|
+        items.map(&:nice_version)
+      end
     end
   end
 
+  url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
   name "Sketch"
   desc "Digital design and prototyping platform"
   homepage "https://www.sketch.com/"

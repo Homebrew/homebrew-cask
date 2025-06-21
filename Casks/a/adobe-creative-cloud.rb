@@ -1,9 +1,9 @@
 cask "adobe-creative-cloud" do
   arch arm: "macarm64", intel: "osx10"
 
-  version "6.4.0.361"
-  sha256 arm:   "356cc46fb85e40405701a06acc42364395eb536dca3f49d7a6af1233f41ed4e5",
-         intel: "9fba05132eb535897fc36ad7e8612c5d9d178c7bbe0832fe7d2916567bfb88ce"
+  version "6.7.0.278"
+  sha256 arm:   "d533b2e0ae3ea1d0e017c07ed75a7352d2108fe8a8c54479effab8c1909a35c1",
+         intel: "811bb12371d4ce4b129d422c13841be205a426941b9ce439e2b8a5c8f83da9ea"
 
   # If url breaks you can find the latest static urls - https://helpx.adobe.com/download-install/kb/creative-cloud-desktop-app-download.html
   url "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/#{version.major_minor_patch}/#{version.split(".").fourth}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
@@ -13,8 +13,16 @@ cask "adobe-creative-cloud" do
 
   livecheck do
     url "https://ffc-static-cdn.oobesaas.adobe.com/features/v3/#{arch}/ccdConfig.xml"
-    regex(/ccd\.fw\.update\.greenline\.latest.*?"version".*?"(\d+(?:\.\d+)+)"/i)
+    strategy :xml do |xml|
+      item = xml.elements["//feature-entry[@id='ccd.fw.update.greenline.latest']/data"]&.text&.strip
+      next if item.blank?
+
+      json = Homebrew::Livecheck::Strategy::Json.parse_json(item)
+      json["version"]
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 
@@ -130,8 +138,4 @@ cask "adobe-creative-cloud" do
         "~/Library/Application Support/Adobe",
         "~/Library/Logs/Adobe",
       ]
-
-  caveats do
-    requires_rosetta
-  end
 end

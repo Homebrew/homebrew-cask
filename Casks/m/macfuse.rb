@@ -1,15 +1,15 @@
 cask "macfuse" do
-  version "4.8.0"
-  sha256 "b9c4f33b6a9d378424a30315bc2dfee298c45636f032c074c4593e6ef431c2d4"
+  version "4.10.2"
+  sha256 "fcca8ec48742288dccdd36db65bb92c4fe4bc23c2c7c5b76aa0ac68e06aebe88"
 
-  url "https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
-      verified: "github.com/osxfuse/osxfuse/"
+  url "https://github.com/macfuse/macfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
+      verified: "github.com/macfuse/macfuse/"
   name "macFUSE"
   desc "File system integration"
-  homepage "https://osxfuse.github.io/"
+  homepage "https://macfuse.github.io/"
 
   livecheck do
-    url "https://osxfuse.github.io/releases/CurrentRelease.plist"
+    url "https://macfuse.github.io/releases/CurrentRelease.plist"
     strategy :xml do |xml|
       xml.get_elements("//key[text()='Version']").map { |item| item.next_element&.text&.strip }
     end
@@ -30,7 +30,11 @@ cask "macfuse" do
     "io.macfuse.installer.components.preferencepane",
   ]
 
-  zap trash: "/Library/PreferencePanes/macFUSE.prefPane"
+  zap trash: [
+    "/Library/PreferencePanes/macFUSE.prefPane",
+    "~/Library/Caches/io.macfuse.preferencepanes.macfuse",
+    "~/Library/HTTPStorages/io.macfuse.preferencepanes.macfuse",
+  ]
 
   caveats do
     kext

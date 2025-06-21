@@ -1,6 +1,6 @@
 cask "pearcleaner" do
-  version "3.8.6"
-  sha256 "e938caf468da84affa8bd9fe7af22863c6cbbc946846b0a3a33777f407a17bad"
+  version "4.4.5"
+  sha256 "075462670fb23e0a7ec4510b24d5f7afb75bf999369c2a5748664984418f0a91"
 
   url "https://github.com/alienator88/Pearcleaner/releases/download/#{version}/Pearcleaner.zip",
       verified: "github.com/alienator88/Pearcleaner/"
@@ -8,9 +8,11 @@ cask "pearcleaner" do
   desc "Utility to uninstall apps and remove leftover files from old/uninstalled apps"
   homepage "https://itsalin.com/appInfo/?id=pearcleaner"
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "Pearcleaner.app"
+  binary "#{appdir}/Pearcleaner.app/Contents/MacOS/Pearcleaner", target: "pearcleaner"
 
   uninstall launchctl:  "com.alienator88.PearcleanerSentinel*",
             quit:       "com.alienator88.Pearcleaner",

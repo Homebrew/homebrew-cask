@@ -1,9 +1,9 @@
 cask "reflect" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.9"
-  sha256 arm:   "ff8efff8e0973aa92c2ffec347ae64ac8374314aba19d168af206f5c5637ed07",
-         intel: "9d64e50cafb41f73cdec62856bcf12d74c389da0218fea8c5eb99b7710217927"
+  version "3.0.5"
+  sha256 arm:   "d02271319d42de1d567bca2bc9197cd84f25ef0c7bdb5a4ae213fa35f74ff8d2",
+         intel: "9ab9d0e83ec2cdd0b7e7b8107c1e5285351dd6dbb0790e31b2ab4b6cc8b1ca4e"
 
   url "https://github.com/team-reflect/reflect-electron-updates/releases/download/v#{version}/Reflect-darwin-#{arch}-#{version}.zip",
       verified: "github.com/team-reflect/reflect-electron-updates/"
@@ -12,6 +12,7 @@ cask "reflect" do
   homepage "https://reflect.app/"
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Reflect.app"
 

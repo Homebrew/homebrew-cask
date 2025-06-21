@@ -1,12 +1,18 @@
 cask "butt" do
-  version "0.1.39"
-  sha256 "aa5787a30859e8cd6c95a791584f6925fafc6596bd1fb865472a7293ae6653fb"
+  version "1.45.0"
+  sha256 "bfc56ff9592829d66edcdbf8ff88cca8cd39b08c39af904b9b852c6d657c21ed"
 
-  url "https://downloads.sourceforge.net/butt/butt-#{version}.dmg",
-      verified: "sourceforge.net/butt/"
+  url "https://danielnoethen.de/butt/release/#{version}/butt-#{version}.dmg"
   name "Broadcast Using This Tool"
   desc "Shoutcast and Icecast streaming client"
   homepage "https://danielnoethen.de/butt/"
+
+  livecheck do
+    url "https://danielnoethen.de/butt/release/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+  end
+
+  no_autobump! because: :requires_manual_review
 
   app "butt.app"
 

@@ -11,9 +11,11 @@ cask "banksiagui" do
   homepage "https://banksiagui.com/"
 
   livecheck do
-    url "https://banksiagui.com/download/"
-    regex(/banksiagui[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.zip/i)
+    url "https://banksiagui.com/forums/viewforum.php?f=3"
+    regex(/Version v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "banksiagui-#{version}/banksiagui.app"
 

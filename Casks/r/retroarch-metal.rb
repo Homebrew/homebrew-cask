@@ -1,5 +1,5 @@
 cask "retroarch-metal" do
-  version "1.19.1"
+  version "1.21.0"
   sha256 :no_check # required as upstream package is often updated in place
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/universal/RetroArch_Metal.dmg",
@@ -11,6 +11,8 @@ cask "retroarch-metal" do
   livecheck do
     cask "retroarch"
   end
+
+  no_autobump! because: :requires_manual_review
 
   conflicts_with cask: "retroarch"
   depends_on macos: ">= :high_sierra"

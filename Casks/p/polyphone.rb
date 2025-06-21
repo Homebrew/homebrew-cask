@@ -1,22 +1,35 @@
 cask "polyphone" do
-  version "2.4,95"
-  sha256 "d2791bba43fdefdc8c3c7fce5bf11d6ff9eb267495f78315931e9ac2251d082f"
+  macos_version = "-MacOS_12"
 
-  url "https://www.polyphone.io/download/0/v#{version.csv.second}/Polyphone-macOS_11-15.dmg"
+  on_big_sur :or_older do
+    version "2.5.1,130"
+    sha256 "03b3509f8a6af45a7de6b93aeaf62bf5fae552aba7806b0ac46cf24ba57f37e3"
+
+    macos_version = "_MacOS_10.13"
+  end
+  on_monterey :or_newer do
+    version "2.5.1,129"
+    sha256 "89a60fc2444a4502719d23f2d5404a1fa9677db64ef09267ebced0eddf77a0dc"
+  end
+
+  url "https://www.polyphone.io/download/0/v#{version.csv.second}/Polyphone#{macos_version}-#{version.csv.first}.dmg",
+      user_agent: :browser
   name "Polyphone"
   desc "Soundfont editor for quickly designing musical instruments"
   homepage "https://www.polyphone.io/en"
 
   livecheck do
     url "https://www.polyphone.io/en/software"
-    regex(/Polyphone\s+(\d+(?:\.\d+)+).*download\?file_id=(\d+).*Mac OS \(/im)
+    regex(/href=.*?file_id=(\d+).*?Polyphone#{macos_version}[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      "#{match[2]},#{match[1]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "polyphone.app"
 

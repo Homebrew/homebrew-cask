@@ -1,6 +1,6 @@
 cask "runjs" do
-  version "2.12.1"
-  sha256 "7d182e0431a32ecc9e6ebc515ec4982666479b5ae2bff760f580ee88a5447e19"
+  version "3.1.2"
+  sha256 "39a1cf53d29d6c13ee798064671d64896834a7ee8f4e5d3e7f9d769080545763"
 
   url "https://github.com/lukehaas/RunJS/releases/download/v#{version}/RunJS-#{version}-universal.dmg",
       verified: "github.com/lukehaas/RunJS/"
@@ -14,11 +14,12 @@ cask "runjs" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "RunJS.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.lukehaas.runjs.sfl*",
     "~/Library/Application Support/runjs",
     "~/Library/Logs/RunJS",
     "~/Library/Preferences/me.lukehaas.runjs.plist",

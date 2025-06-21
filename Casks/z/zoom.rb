@@ -2,9 +2,9 @@ cask "zoom" do
   arch arm: "arm64/"
   livecheck_folder = on_arch_conditional arm: "?archType=arm64"
 
-  version "6.2.0.40111"
-  sha256 arm:   "fe88b5d298bd5f29267e8d140357033f3941e31510c40afcae4128529a757d03",
-         intel: "0999b496b05818790fa5d2eed2c13f57e003c20964fdbb5236f7733d169ecac2"
+  version "6.5.0.57940"
+  sha256 arm:   "003879768d13f7725d6b5387f67d6f058fbf991b86b279b8a85e59ac1ba4f8d5",
+         intel: "74d0b14cc39258ce527e13806cb0e3ddbb65b888935adf8148e751382b621e4c"
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}zoomusInstallerFull.pkg"
   name "Zoom"
@@ -35,7 +35,11 @@ cask "zoom" do
     opoo "Unable to forcibly close zoom.us.app"
   end
 
-  uninstall launchctl: "us.zoom.ZoomDaemon",
+  uninstall launchctl: [
+              "us.zoom.updater",
+              "us.zoom.updater.login.check",
+              "us.zoom.ZoomDaemon",
+            ],
             signal:    ["KILL", "us.zoom.xos"],
             pkgutil:   "us.zoom.pkg.videomeeting",
             delete:    [
@@ -55,6 +59,7 @@ cask "zoom" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/us.zoom*.sfl*",
     "~/Library/Application Support/CrashReporter/zoom.us*",
     "~/Library/Application Support/zoom.us",
+    "~/Library/Application Support/ZoomUpdater",
     "~/Library/Caches/us.zoom.xos",
     "~/Library/Cookies/us.zoom.xos.binarycookies",
     "~/Library/Group Containers/*.ZoomClient3rd",
@@ -64,13 +69,7 @@ cask "zoom" do
     "~/Library/Logs/zoom.us",
     "~/Library/Logs/zoominstall.log",
     "~/Library/Logs/ZoomPhone",
-    "~/Library/Preferences/us.zoom.airhost.plist",
-    "~/Library/Preferences/us.zoom.caphost.plist",
-    "~/Library/Preferences/us.zoom.Transcode.plist",
-    "~/Library/Preferences/us.zoom.xos.Hotkey.plist",
-    "~/Library/Preferences/us.zoom.xos.plist",
-    "~/Library/Preferences/us.zoom.ZoomAutoUpdater.plist",
-    "~/Library/Preferences/us.zoom.ZoomClips.plist",
+    "~/Library/Preferences/us.zoom.*.plist",
     "~/Library/Preferences/ZoomChat.plist",
     "~/Library/Saved Application State/us.zoom.xos.savedState",
     "~/Library/WebKit/us.zoom.xos",

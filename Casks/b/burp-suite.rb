@@ -1,9 +1,9 @@
 cask "burp-suite" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2024.7.6"
-  sha256 arm:   "3da60946d76291daaac781c54656573cdc301865bb69d1326b8857e4dedff4f8",
-         intel: "72ca962c75f79d16848ed95c6ab46e082e6acbc4af6d1e82ea40d6015b18e00b"
+  version "2025.5.4"
+  sha256 arm:   "70ed8e585e08a9e41a8cf3f43908c48cf8f84e47918846d4589dd1e49cee2678",
+         intel: "312a1aed05518e89d552b611fefb9f4e1d4368e2425b688ab51cc9f4b2ccca4c"
 
   url "https://portswigger-cdn.net/burp/releases/download?product=community&version=#{version}&type=#{arch}",
       verified: "portswigger-cdn.net/burp/releases/"
@@ -19,14 +19,17 @@ cask "burp-suite" do
 
       all_versions.filter_map do |item|
         item["version"] if
-              item["releaseChannels"].include?("Stable") &&
-              item["categories"].include?("Community") &&
-              item["builds"].any? do |build|
+              item["releaseChannels"]&.include?("Stable") &&
+              item["categories"]&.include?("Community") &&
+              item["builds"]&.any? do |build|
                 build["ProductPlatform"] == arch.to_s
               end
       end
     end
   end
+
+  conflicts_with cask: "burp-suite@early-adopter"
+  depends_on macos: ">= :catalina"
 
   app "Burp Suite Community Edition.app"
 

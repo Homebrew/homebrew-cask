@@ -7,6 +7,10 @@ cask "multi" do
   desc "Create apps from groups of websites"
   homepage "https://github.com/hkgumbs/multi"
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :ventura"
+
   app "Multi.app"
 
   zap trash: [

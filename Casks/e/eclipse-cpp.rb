@@ -1,9 +1,9 @@
 cask "eclipse-cpp" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.33.0,2024-09"
-  sha256 arm:   "d094bc3c1e4264bd97b1c833e21fe7f78d7e752b913f4bb28d48e53ce3003d66",
-         intel: "ea74555920375328f02c9e8830240e16b51863b8d90c9c8b990cf65cca2729d5"
+  version "4.36.0,2025-06"
+  sha256 arm:   "a055c7ccacb226a502be4ab5bbec408f50ad7f1dcfcd4fcab251c42488cbffba",
+         intel: "37828ba84430b2ed7c58b4608e15e9a80e6c00c899e6ceff275f62ec72502367"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-cpp-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for C/C++ Developers"
@@ -13,6 +13,8 @@ cask "eclipse-cpp" do
   livecheck do
     cask "eclipse-ide"
   end
+
+  no_autobump! because: :requires_manual_review
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse CPP.app"

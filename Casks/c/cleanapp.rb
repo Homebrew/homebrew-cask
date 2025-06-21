@@ -11,6 +11,8 @@ cask "cleanapp" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "CleanApp.app"
 
   zap trash: [

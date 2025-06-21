@@ -1,6 +1,6 @@
 cask "xaos" do
-  version "4.3.2"
-  sha256 "4ab541bef66ab5d8d1a1ddc0cec41cedf5d09064e8f0ec4c6afcd2650956fbf0"
+  version "4.3.4"
+  sha256 "016e34f6b8dc42498acaa90bf92ce3dce5fc9ae2963e01c8ce459f57f6b1bb94"
 
   url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg",
       verified: "github.com/xaos-project/XaoS/"
@@ -13,9 +13,13 @@ cask "xaos" do
     regex(/^release[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   app "XaoS.app"
+
+  zap trash: "~/Library/Preferences/net.sourceforge.xaos.XaoS.plist"
 
   caveats do
     requires_rosetta

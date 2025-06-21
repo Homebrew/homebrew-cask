@@ -1,6 +1,6 @@
 cask "font-cousine-nerd-font" do
-  version "3.2.1"
-  sha256 "4ebb4fe2dd2b70f9f6d8035226d15f4af61ec90f0b7f179272b3e9be12a4e3dc"
+  version "3.4.0"
+  sha256 "a62e0defe6c648d9063e49ae46a4e7d01c71fe154206dc0aeeaa2a9b7f7cfa82"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Cousine.zip"
   name "Cousine Nerd Font (Cousine)"
@@ -10,6 +10,8 @@ cask "font-cousine-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "CousineNerdFont-Bold.ttf"
   font "CousineNerdFont-BoldItalic.ttf"

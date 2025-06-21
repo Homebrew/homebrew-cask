@@ -1,9 +1,9 @@
 cask "kdenlive" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "24.08.1"
-  sha256 arm:   "8a65821b31bda8854bfcea2238984a268919399131b21dd831bd0dc5325e72e9",
-         intel: "ff9dcdbfea95fb85d93e41da5e548d68face9150521095d5d9d0b1b34fe7f350"
+  version "25.04.2"
+  sha256 arm:   "f960eadbdc48bfb9e73bba6025feec5b3ad7f22b874ab3787418f63082b39605",
+         intel: "dcdc1922f51e638bed499fa1855ebee7e85b71cfa85898f50d200cc9e50a068b"
 
   url "https://cdn.download.kde.org/stable/kdenlive/#{version.major_minor}/macOS/kdenlive-#{version}-#{arch}.dmg",
       verified: "cdn.download.kde.org/stable/kdenlive/"
@@ -12,8 +12,8 @@ cask "kdenlive" do
   homepage "https://kdenlive.org/"
 
   livecheck do
-    url "https://kdenlive.org/en/download/"
-    regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)-#{arch}.dmg/i)
+    url "https://kdenlive.org/download/"
+    regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)-#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :big_sur"
@@ -25,5 +25,6 @@ cask "kdenlive" do
     "~/Library/Caches/kdenlive",
     "~/Library/Preferences/kdenlive-layoutsrc",
     "~/Library/Preferences/kdenliverc",
+    "~/Library/Preferences/org.kde.Kdenlive.plist",
   ]
 end

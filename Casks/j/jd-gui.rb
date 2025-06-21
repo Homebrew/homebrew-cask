@@ -6,7 +6,9 @@ cask "jd-gui" do
       verified: "github.com/java-decompiler/jd-gui/"
   name "JD-GUI"
   desc "Standalone Java Decompiler GUI"
-  homepage "http://jd.benow.ca/"
+  homepage "https://java-decompiler.github.io/"
+
+  no_autobump! because: :requires_manual_review
 
   app "jd-gui-osx-#{version}/JD-GUI.app"
 

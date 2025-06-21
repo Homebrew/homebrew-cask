@@ -12,9 +12,19 @@ cask "tuneinstructor" do
     regex(/href=.*?TuneInstructor[._-]?v?(\d+(?:[.v]\d+)+)\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "Tune•Instructor.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/*.de.tune-instructor.Tune-Instructor",
+    "~/Library/Caches/de.tune-instructor.Tune-Instructor",
+    "~/Library/Group Containers/*.de.tune-instructor.Tune-Instructor",
+    "~/Library/HTTPStorages/de.tune-instructor.Tune-Instructor",
+    "~/Library/HTTPStorages/de.tune-instructor.Tune-Instructor.binarycookies",
+  ]
 
   caveats do
     requires_rosetta

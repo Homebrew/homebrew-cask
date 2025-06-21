@@ -7,10 +7,10 @@ cask "deepl" do
 
     livecheck do
       url "https://appdownload.deepl.com/macos/"
-      regex(%r{^old/v?(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)/DeepL\.(?:zip|tar\.gz)$}i)
-      strategy :xml do |xml|
+      regex(%r{^old/v?(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)/DeepL\.(?:zip|t)}i)
+      strategy :xml do |xml, regex|
         xml.get_elements("//Contents/Key").map do |item|
-          match = item.text&.match(regex)
+          match = item.text&.strip&.match(regex)
           next if match.blank?
 
           "#{match[1]}.#{match[2]}"
@@ -29,17 +29,17 @@ cask "deepl" do
     end
   end
   on_monterey :or_newer do
-    version "24.9.11263999"
-    sha256 "2e32c52fce2d3f9a3afda9974307ebdb1c81bc358a81fdbbadef283ceffd5a52"
+    version "25.6.12145056"
+    sha256 "bbe9d2e5969d62aa98068508dc2dfe5bbb637acb4d71927baa91dc5af63e0f45"
 
     url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.tar.gz"
 
     livecheck do
       url "https://appdownload.deepl.com/macos/"
-      regex(%r{^v?(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)/DeepL\.tar\.gz$}i)
-      strategy :xml do |xml|
-        xml.get_elements("//ListBucketResult//Contents//Key").map do |item|
-          match = item.text.match(regex)
+      regex(%r{^v?(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)/DeepL\.t}i)
+      strategy :xml do |xml, regex|
+        xml.get_elements("//Contents/Key").map do |item|
+          match = item.text&.strip&.match(regex)
           next if match.blank?
 
           "#{match[1]}.#{match[2]}"

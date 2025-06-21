@@ -1,5 +1,5 @@
 cask "live-home-3d" do
-  version "4.9.5"
+  version "4.9.9"
   sha256 :no_check
 
   url "https://belightsoft.s3.amazonaws.com/LiveHome3DStd.dmg",
@@ -13,7 +13,7 @@ cask "live-home-3d" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Live Home 3D.app"
 

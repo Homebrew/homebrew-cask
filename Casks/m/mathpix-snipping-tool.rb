@@ -1,6 +1,6 @@
 cask "mathpix-snipping-tool" do
-  version "3.4.8.6"
-  sha256 "7a0d389efb79bb48abbe6a81c8de361bea50acb30221177be14ea614f53f5a30"
+  version "3.4.13.1"
+  sha256 "2c43dd518f6fd37351192e7b1f2de5e65e204e039d6473f1513ab94d9cb49f56"
 
   url "https://mathpix.com/dmg/SnippingTool-v#{version}.dmg"
   name "Mathpix Snipping Tool"
@@ -9,8 +9,9 @@ cask "mathpix-snipping-tool" do
 
   livecheck do
     url "https://mathpix.com/appcast.xml"
-    strategy :sparkle do |item|
-      item.url[/SnippingTool[._-]v?(\d+(?:\.\d+)+)\.dmg/i, 1]
+    regex(/SnippingTool[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      item.url[regex, 1]
     end
   end
 

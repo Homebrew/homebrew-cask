@@ -6,6 +6,8 @@ cask "gulp" do
   name "gulp-app"
   homepage "https://github.com/sindresorhus/gulp-app"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-11", because: "is 32-bit only"
 
   app "gulp.app"

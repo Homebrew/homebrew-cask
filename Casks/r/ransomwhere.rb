@@ -6,7 +6,12 @@ cask "ransomwhere" do
       verified: "bitbucket.org/objective-see/"
   name "RansomWhere"
   desc "Protect your personal files"
-  homepage "https://objective-see.com/products/ransomwhere.html"
+  homepage "https://objective-see.org/products/ransomwhere.html"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?RansomWhere[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
 
   installer script: {
     executable: "#{staged_path}/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
@@ -19,4 +24,10 @@ cask "ransomwhere" do
     args:       ["-uninstall"],
     sudo:       true,
   }
+
+  # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end

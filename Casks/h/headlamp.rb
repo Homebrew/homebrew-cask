@@ -1,9 +1,9 @@
 cask "headlamp" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.25.1"
-  sha256 arm:   "3292bd47a9e880753d9550520ff153bfdcdd17e4444f2ff6f1af6b02846e372a",
-         intel: "d840939f86a325779df22b8e00e9d8b108fe80bd603ef5433b4dbcef9073b1ea"
+  version "0.31.1"
+  sha256 arm:   "dd1e534b0d47d0f91320ea2503f2e03f9718de91887d7f1ce8028ec523eeed54",
+         intel: "ac146f950b4842154ec6bbc10feaac9c60a14b2d834abe3bb027e7d92d8eead3"
 
   url "https://github.com/headlamp-k8s/headlamp/releases/download/v#{version.sub(/-\d+/, "")}/Headlamp-#{version}-mac-#{arch}.dmg",
       verified: "github.com/headlamp-k8s/headlamp/"
@@ -23,6 +23,8 @@ cask "headlamp" do
       end
     end
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   depends_on macos: ">= :catalina"
 

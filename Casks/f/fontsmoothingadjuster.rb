@@ -10,8 +10,12 @@ cask "fontsmoothingadjuster" do
 
   livecheck do
     url "https://font-smoothing-adjuster-updates.s3.amazonaws.com/appcast.xml"
-    regex(/Font%20Smoothing%20Adjuster%20v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :big_sur"
 
   app "Font Smoothing Adjuster.app"
 

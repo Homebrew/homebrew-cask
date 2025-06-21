@@ -7,6 +7,8 @@ cask "graphql-playground" do
   desc "GraphQL IDE for better development workflows"
   homepage "https://github.com/prisma/graphql-playground"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-11", because: :unmaintained
 
   app "GraphQL Playground.app"

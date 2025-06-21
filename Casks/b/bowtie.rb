@@ -7,10 +7,9 @@ cask "bowtie" do
   desc "Control your music with customisable shortcuts"
   homepage "http://bowtieapp.com/"
 
-  livecheck do
-    url "http://updates.13bold.com/appcasts/bowtie"
-    strategy :sparkle, &:short_version
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-11-10", because: :unmaintained
 
   app "Bowtie #{version}/Bowtie.app"
 

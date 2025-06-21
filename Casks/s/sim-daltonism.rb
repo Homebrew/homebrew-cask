@@ -12,6 +12,8 @@ cask "sim-daltonism" do
     regex(/href=.*?sim-daltonism-(\d+(?:\.\d+)*)\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Sim Daltonism.app"
 
   zap trash: [

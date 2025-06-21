@@ -1,5 +1,5 @@
 cask "mixed-in-key-live" do
-  version "10.1.1.343"
+  version "11.0.1.550"
   sha256 :no_check
 
   url "https://builds.mixedinkey.com/download/55/release/latest?key=public"
@@ -11,6 +11,8 @@ cask "mixed-in-key-live" do
     url :url
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

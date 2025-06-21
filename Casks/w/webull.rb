@@ -1,6 +1,6 @@
 cask "webull" do
-  version "8.3.4,80003032"
-  sha256 "3d7f31db97109621dbcedd4b6033507e694b6c7422aec78ee26e3a6d812da3fe"
+  version "8.15.6,8000150012"
+  sha256 "25f96447843c8b0e4ba03a75aa25f70b78cf027a1a4529f6ad8099abdd1d9075"
 
   url "https://u1sweb.webullfintech.com/us/Webull%20Desktop_#{version.csv.first}_#{version.csv.second}_global_universalsigned.dmg",
       verified: "u1sweb.webullfintech.com/us/"
@@ -9,7 +9,7 @@ cask "webull" do
   homepage "https://www.webull.com/"
 
   livecheck do
-    url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global&osv=14"
+    url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global"
     regex(/Webull%20Desktop[._-]v?(\d+(?:[._]\d+)+).*?\.dmg/i)
     strategy :json do |json, regex|
       json["upgradeUrl"]&.scan(regex)&.map { |match| match[0].tr("_", ",") }

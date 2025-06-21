@@ -10,33 +10,37 @@ cask "autofirma" do
       verified: "estaticos.redsara.es/comunes/autofirma/"
   name "AutoFirma"
   desc "Digital signature editor and validator"
-  homepage "https://firmaelectronica.gob.es/Home/Descargas.htm"
+  homepage "https://firmaelectronica.gob.es/ciudadanos/descargas"
 
   livecheck do
     url :homepage
-    regex(%r{autofirma/(\d+)/(\d+)/(\d+)/AutoFirma[._-]Mac[._-]#{arch}\.zip}i)
+    regex(/Versión\s+v?(\d+(?:\.\d+)+)\s+para\s+MacOS\s+procesadores\s+#{arch}/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}.#{match[2]}" }
+      match = page.match(regex)
+      next if match.blank?
+
+      match[1]
     end
   end
 
-  pkg "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
+  no_autobump! because: :requires_manual_review
+
+  # See https://github.com/Homebrew/homebrew-cask/pull/116137#issuecomment-998220031
+  installer manual: "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
 
   # remove 'Autofirma ROOT' and '127.0.0.1' certificates from keychain (these were installed by pkg)
   uninstall_postflight do
-    system_command "/usr/bin/security",
-                   args: [
-                     "delete-certificate",
-                     "-c", "AutoFirma ROOT"
-                   ],
-                   sudo: true
-
-    system_command "/usr/bin/security",
-                   args: [
-                     "delete-certificate",
-                     "-c", "127.0.0.1"
-                   ],
-                   sudo: true
+    ["AutoFirma ROOT", "127.0.0.1"].each do |cert_name|
+      stdout, * = system_command "/usr/bin/security",
+                                 args: ["find-certificate", "-a", "-c", cert_name, "-Z"],
+                                 sudo: true
+      hashes = stdout.lines.grep(/^SHA-256 hash:/) { |l| l.split(":").second.strip }
+      hashes.each do |h|
+        system_command "/usr/bin/security",
+                       args: ["delete-certificate", "-Z", h],
+                       sudo: true
+      end
+    end
   end
 
   uninstall quit:    "es.gob.afirma",

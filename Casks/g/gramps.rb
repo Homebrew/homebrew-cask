@@ -1,9 +1,9 @@
 cask "gramps" do
   arch arm: "Arm", intel: "Intel"
 
-  version "5.2.3,1"
-  sha256 arm:   "05b9fb71ccff93dec27d8dd3e73551b4b235f3b8e36abe520ca7c1da5ee9aabe",
-         intel: "43e7e4da029942eb78cc6b8cb8a2f1905fa13a68c6e8870feacc3498baf10e38"
+  version "6.0.3,1"
+  sha256 arm:   "cf7b1ed3e1958f3bdf49bb7e1cab65cc33cf9dd808000c85e5d6b3afe01ab327",
+         intel: "ec8e14ba1c36510bf05b25e2055921316eccc18faaa1e325e9f74ea08b7e03e0"
 
   url "https://github.com/gramps-project/gramps/releases/download/v#{version.csv.first}/Gramps-#{arch}-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/gramps-project/gramps/"
@@ -13,7 +13,7 @@ cask "gramps" do
 
   livecheck do
     url :url
-    regex(/^Gramps[._-]#{arch}[._-]v?(\d+(?:.\d+)+)[._-](\d+)\.dmg$/i)
+    regex(/^Gramps[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
@@ -27,6 +27,8 @@ cask "gramps" do
       end.flatten
     end
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Gramps.app"
 

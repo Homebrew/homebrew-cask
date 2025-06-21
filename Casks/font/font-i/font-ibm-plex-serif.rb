@@ -1,6 +1,6 @@
 cask "font-ibm-plex-serif" do
-  version "1.0.0"
-  sha256 "bb11f1cfe119d93e4a8d915d2d27e98c57a18f538e6fa88c5e31ea852a41233f"
+  version "1.1.0"
+  sha256 "76f1a272b084d2beedcd22aaaa653bc6f92b71b5689081aef9c5b05d0a470e1b"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-serif%40#{version}/ibm-plex-serif.zip"
   name "IBM Plex Serif"
@@ -10,6 +10,8 @@ cask "font-ibm-plex-serif" do
     url :url
     regex(%r{^@ibm/plex-serif@?(\d+(?:\.\d+)+)$}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "ibm-plex-serif/fonts/complete/otf/IBMPlexSerif-Bold.otf"
   font "ibm-plex-serif/fonts/complete/otf/IBMPlexSerif-BoldItalic.otf"

@@ -13,6 +13,8 @@ cask "pencil" do
     regex(/href=.*?Pencil[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Pencil.app"
 
   zap trash: [

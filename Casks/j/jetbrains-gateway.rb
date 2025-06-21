@@ -1,11 +1,11 @@
 cask "jetbrains-gateway" do
   arch arm: "-aarch64"
 
-  version "2024.2.1"
-  sha256 arm:   "8a8242c53ddc85304922552fdf424fbe31b729f549feda30b8e6a982c5447f4d",
-         intel: "4fabb5e9ea13fc1380779502915f0d6741ee75742a535ced679f68d72d40a41c"
+  version "2025.1.2,251.26094.128"
+  sha256 arm:   "1cf7dcdbb5408c9c7711a436e4c763df147ce332ce2e1f260fa246af87b0a58e",
+         intel: "b4e45266159352598d0cbd7b03283cb53260d20866ca77d57a43150e81cf3d09"
 
-  url "https://download.jetbrains.com/idea/gateway/JetBrainsGateway-#{version}#{arch}.dmg"
+  url "https://download.jetbrains.com/idea/gateway/JetBrainsGateway-#{version.csv.first}#{arch}.dmg"
   name "jetbrains-gateway"
   desc "Remote development gateway by Jetbrains"
   homepage "https://www.jetbrains.com/remote-development/gateway/"
@@ -13,7 +13,13 @@ cask "jetbrains-gateway" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=GW&latest=true&type=release"
     strategy :json do |json|
-      json["GW"].map { |release| release["version"] }
+      json["GW"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
+      end
     end
   end
 

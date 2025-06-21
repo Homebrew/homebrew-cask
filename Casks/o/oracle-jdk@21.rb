@@ -1,9 +1,9 @@
 cask "oracle-jdk@21" do
   arch arm: "aarch64", intel: "x64"
 
-  version "21.0.4"
-  sha256 arm:   "a722a8eb23b8db2b2468e86bf1ad2e9df63d974161b80fa2004bd386df87c20d",
-         intel: "bdb2156542a30147c94a9a26fc199ed24bb76d8dba49e0de7799c1ca6566c3e8"
+  version "21.0.7"
+  sha256 arm:   "e463e3900f357f4f50604c7d4bcffb31d33886ce1c8a3f170ebcd5221e573fc6",
+         intel: "dc34b13e959ee652dbb4a32353b03fc886a001bd6adab90a539089adce3fffb1"
 
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
   name "Oracle Java Standard Edition Development Kit"
@@ -14,6 +14,8 @@ cask "oracle-jdk@21" do
     url "https://www.oracle.com/java/technologies/javase/#{version.major}u-relnotes.html"
     regex(/<li>\s*JDK\s*v?(\d+(?:\.\d+)*)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 

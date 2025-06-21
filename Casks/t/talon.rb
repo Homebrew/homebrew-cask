@@ -12,9 +12,17 @@ cask "talon" do
     regex(/<h\d>\s*(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Talon.app"
+
+  zap trash: [
+    "~/.talon",
+    "~/Library/HTTPStorages/com.talonvoice.Talon",
+    "~/Library/Preferences/com.talonvoice.Talon.plist",
+  ]
 
   caveats do
     license "https://talonvoice.com/EULA.txt"

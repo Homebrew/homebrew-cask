@@ -10,12 +10,15 @@ cask "midiview" do
   livecheck do
     url "https://hautetechnique.com/apps/backend/v1/apps/midiview/cast"
     regex(%r{/installers/(.+)$}i)
-    strategy :sparkle do |item|
+    strategy :sparkle do |item, regex|
       "#{item.short_version},#{item.url[regex, 1]}"
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "MidiView.app"
 

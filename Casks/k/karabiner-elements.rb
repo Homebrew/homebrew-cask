@@ -31,7 +31,7 @@ cask "karabiner-elements" do
                 sudo:       true,
               },
               pkgutil:   "org.pqrs.Karabiner-Elements",
-              delete:    "/Library/Application Support/org.pqrs/"
+              delete:    "/Library/Application Support/org.pqrs"
   end
   on_catalina :or_newer do
     on_catalina do
@@ -59,8 +59,8 @@ cask "karabiner-elements" do
       end
     end
     on_ventura :or_newer do
-      version "15.0.0"
-      sha256 "c560ac6e43fd7159c38d61538169792ab47bc04a5c41833831df7da5323f975e"
+      version "15.3.0"
+      sha256 "4b37f69810bc738240dcacb840f4ef4b8189d0f5c56cdd18ed1a6e9bd9510011"
 
       livecheck do
         url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
@@ -95,7 +95,7 @@ cask "karabiner-elements" do
                 "org.pqrs.Karabiner-DriverKit-VirtualHIDDevice",
                 "org.pqrs.Karabiner-Elements",
               ],
-              delete:       "/Library/Application Support/org.pqrs/"
+              delete:       "/Library/Application Support/org.pqrs"
     # The system extension 'org.pqrs.Karabiner-DriverKit-VirtualHIDDevice*' should not be uninstalled by Cask
   end
 
@@ -104,6 +104,8 @@ cask "karabiner-elements" do
   name "Karabiner Elements"
   desc "Keyboard customiser"
   homepage "https://karabiner-elements.pqrs.org/"
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

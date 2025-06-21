@@ -12,7 +12,15 @@ cask "pdfkey-pro" do
     regex(/Version\s+(\d+(?:\.\d+)*)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "PDFKey Pro.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.bitgamma.pdfkeypro.plist",
+    "~/Library/Preferences/com.pdfkey.pdfkeypro.plist",
+    "~/Library/Saved Application State/com.pdfkey.pdfkeypro.savedState",
+  ]
 
   caveats do
     requires_rosetta

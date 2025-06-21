@@ -7,6 +7,10 @@ cask "yippy" do
   desc "Open source clipboard manager"
   homepage "https://github.com/mattDavo/Yippy"
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :high_sierra"
+
   app "Yippy.app"
 
   zap trash: "~/Library/Application Support/MatthewDavidson.Yippy"

@@ -1,6 +1,6 @@
 cask "mactex" do
-  version "2024.0312"
-  sha256 "c1793a3ceca2c4317ca22536c887e18b3c17be0f4baaa199735e9d6a692e57dc"
+  version "2025.0308"
+  sha256 "be084f849e545d9e9511b791da07ca4f9f33d85d42bb69dade636e345421ab7c"
 
   url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
@@ -10,13 +10,16 @@ cask "mactex" do
 
   livecheck do
     url "https://ctan.org/texarchive/systems/mac/mactex/"
-    strategy :page_match do |page|
-      match = page.match(/href=.*?mactex-(\d{4})(\d{2})(\d{2})\.pkg/)
+    regex(/href=.*?mactex[._-](\d{4})(\d{2})(\d{2})\.pkg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}#{match[3]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   conflicts_with cask: [
     "basictex",
@@ -29,19 +32,19 @@ cask "mactex" do
       choices: [
         {
           # Ghostscript
-          "choiceIdentifier" => "org.tug.mactex.ghostscript10.03.0",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.04.0",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # Ghostscript Dynamic Library
-          "choiceIdentifier" => "org.tug.mactex.ghostscript10.03.0-libgs",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.04.0-libgs",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # Ghostscript Mutool
-          "choiceIdentifier" => "org.tug.mactex.ghostscript10.03.0-mutool",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.04.0-mutool",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },

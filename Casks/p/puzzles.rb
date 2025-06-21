@@ -1,5 +1,5 @@
 cask "puzzles" do
-  version "20240911"
+  version "20241108"
   sha256 :no_check
 
   url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/Puzzles.dmg"
@@ -7,16 +7,9 @@ cask "puzzles" do
   desc "Collection of small computer programmes which implement one-player puzzle games"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
 
-  livecheck do
-    url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/devel/"
-    regex(/collection,\s+version\s+(\d+)\.\w+/i)
-    strategy :page_match do |page, regex|
-      # Throttle updates to one every 2 days.
-      next version if Date.parse(version) + 2 > Date.today
+  no_autobump! because: :requires_manual_review
 
-      page[regex, 1]
-    end
-  end
+  deprecate! date: "2024-11-18", because: :discontinued, replacement_formula: "puzzles"
 
   app "Puzzles.app"
 

@@ -1,9 +1,9 @@
 cask "go-server" do
   arch arm: "-aarch64"
 
-  version "24.3.0,19261"
-  sha256 arm:   "2be45a716287f65ac23e17681c095faa2414ab8b64eb6144a5f625681836a648",
-         intel: "95c7e3561f8175d80d8517e764f5d4e9dc75796309368a68298b7bfedc4b1716"
+  version "25.2.0,20485"
+  sha256 arm:   "2294864255da7c14344c0a181a4cea7daff5712defa21a584bc5caf801bcea2b",
+         intel: "5850c8de4361e4bfb1f7ed3796789c3e4f509f930c4b42a4c55cae55887d48f0"
 
   url "https://download.gocd.org/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-server-#{version.csv.first}-#{version.csv.second}-osx#{arch}.zip"
   name "Go Server"
@@ -13,9 +13,16 @@ cask "go-server" do
 
   livecheck do
     url "https://download.gocd.org/releases.json"
-    regex(/go[._-]server[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]osx\.zip/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    strategy :json do |json|
+      json.map do |item|
+        next if item.dig("osx", "server").blank?
+
+        version = item["go_version"]
+        build = item["go_build_number"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
+      end
     end
   end
 

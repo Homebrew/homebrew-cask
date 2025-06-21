@@ -1,6 +1,6 @@
 cask "ghidra" do
-  version "11.1.2,20240709"
-  sha256 "219ec130b901645779948feeb7cc86f131dd2da6c36284cf538c3a7f3d44b588"
+  version "11.3.2,20250415"
+  sha256 "99d45035bdcc3d6627e7b1232b7b379905a9fad76c772c920602e2b5d8b2dac2"
 
   url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.csv.first}_build/ghidra_#{version.csv.first}_PUBLIC_#{version.csv.second}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
@@ -21,15 +21,19 @@ cask "ghidra" do
     end
   end
 
-  binary "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
+  no_autobump! because: :requires_manual_review
+
+  new_staged_path = "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}"
+
+  binary "#{new_staged_path}/ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
 
   preflight do
     # Log4j misinterprets comma in staged_path as alternative delimiter
-    FileUtils.mv(staged_path, "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}")
+    FileUtils.mv(staged_path, new_staged_path)
   end
 
   uninstall_preflight do
-    FileUtils.mv("#{caskroom_path}/#{version.csv.first}-#{version.csv.second}", staged_path)
+    FileUtils.mv(new_staged_path, staged_path) if File.exist? new_staged_path
   end
 
   zap trash: "~/.ghidra"

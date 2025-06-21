@@ -1,6 +1,6 @@
 cask "quaternion" do
-  version "0.0.96.1"
-  sha256 "6e1fd02dd85d4b4b0bdd69717a88cc471e7b8cbfdea61334bc27fc7ff86f3400"
+  version "0.0.97.1"
+  sha256 "17b695d7f3c6e2850638d2789497b9d193919ca10e11cbe381839016c933d940"
 
   url "https://github.com/quotient-im/Quaternion/releases/download/#{version}/quaternion-#{version}.dmg"
   name "Quaternion"
@@ -20,6 +20,8 @@ cask "quaternion" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "quaternion.app"
@@ -32,8 +34,4 @@ cask "quaternion" do
     "~/Library/Preferences/com.quotient.quaternion.plist",
     "~/Library/Saved Application State/com.github.quaternion.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

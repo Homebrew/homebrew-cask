@@ -1,8 +1,11 @@
 cask "bluebubbles" do
-  version "1.9.7"
-  sha256 "ee41ab7a18a9b18c8bf4b3660f80d9f93e65fb48b9f2b33bf13e4afce7eddcac"
+  arch arm: "-arm64"
 
-  url "https://github.com/BlueBubblesApp/bluebubbles-server/releases/download/v#{version}/BlueBubbles-#{version}.dmg",
+  version "1.9.9"
+  sha256 arm:   "fafd650c883f52e7494a6625e45249f2144d197378a4d57143ccf6198bb2e862",
+         intel: "9681e65f60214a6a95f3bd12b57bd4cc8ad6d8f58cd9c1d8811b2a4606ad7c04"
+
+  url "https://github.com/BlueBubblesApp/bluebubbles-server/releases/download/v#{version}/BlueBubbles-#{version}#{arch}.dmg",
       verified: "github.com/BlueBubblesApp/bluebubbles-server/"
   name "BlueBubbles"
   desc "Server for forwarding iMessages"
@@ -12,6 +15,8 @@ cask "bluebubbles" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 
@@ -36,8 +41,4 @@ cask "bluebubbles" do
     "~/Library/Preferences/com.BlueBubbles.BlueBubbles-Server.plist",
     "~/Library/Saved Application State/com.BlueBubbles.BlueBubbles-Server.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

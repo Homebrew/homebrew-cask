@@ -8,9 +8,11 @@ cask "phantomjs" do
   desc "Headless web browser"
   homepage "https://phantomjs.org/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
 
-  zap trash: "~/Library/Application Support/Ofi Labs/PhantomJS/"
+  zap trash: "~/Library/Application Support/Ofi Labs/PhantomJS"
 end

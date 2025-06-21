@@ -8,6 +8,8 @@ cask "namebench" do
   desc "DNS server finder"
   homepage "https://code.google.com/archive/p/namebench/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-16", because: "is 32-bit only"
 
   app "namebench.app"

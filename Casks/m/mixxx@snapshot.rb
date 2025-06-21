@@ -1,14 +1,9 @@
 cask "mixxx@snapshot" do
   arch arm: "arm", intel: "intel"
 
-  on_arm do
-    version "2.6-alpha-88-g6b4a6f9bfd"
-    sha256 "144efa9d88cbc381ddde06cfa5d638556e20614597eb3747563bc49e1cd16ca5"
-  end
-  on_intel do
-    version "2.6-alpha-88-g6b4a6f9bfd"
-    sha256 "e16a8732a017e931e03c5bf0a6cd4bd666a08ace3b0f675d645a74fc1444ecdc"
-  end
+  version "2.7-alpha-16-gffe31e36d3"
+  sha256 arm:   "c3cbf7ad4fdf6eab6aeafb9e687ae2530587bb37216fb6d7ccbf55d5fc61e921",
+         intel: "c346e5625066d8197168ae141afbadde3ae93721837609ac0946ea0438bb43fa"
 
   url "https://downloads.mixxx.org/snapshots/main/mixxx-#{version}-macos#{arch}.dmg"
   name "Mixxx"
@@ -16,8 +11,10 @@ cask "mixxx@snapshot" do
   homepage "https://www.mixxx.org/"
 
   livecheck do
-    url "https://mixxx.org/download/"
-    regex(%r{href=.*?/snapshots/main/mixxx[._-]v?(.+)[._-]macos#{arch}\.dmg}i)
+    url "https://downloads.mixxx.org/snapshots/main/manifest.json"
+    strategy :json do |json|
+      json.dig("macos-macos#{arch}", "git_describe")
+    end
   end
 
   conflicts_with cask: "mixxx"

@@ -1,6 +1,6 @@
 cask "wacom-tablet" do
-  version "6.4.7-2"
-  sha256 "e05ae0ea053df02f980f165695c6bf98107a50f6e95b4c5783d7673a98946fac"
+  version "6.4.10-3"
+  sha256 "9f740930f3ccefb453d80a4eb7d78acba5f6373f9dd4310bf859e59df2bf5106"
 
   url "https://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
   name "Wacom Tablet"
@@ -9,10 +9,10 @@ cask "wacom-tablet" do
 
   livecheck do
     url :homepage
-    regex(%r{/WacomTablet[._-]?v?(\d+(?:\.\d+)+(?:[_-]\d+)?)\.dmg}i)
+    regex(%r{/WacomTablet[._-]?v?(\d+(?:\.\d+)+(?:[_-]\d+[a-z]?)?)\.dmg}i)
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   pkg "Install Wacom Tablet.pkg"
 
@@ -25,6 +25,7 @@ cask "wacom-tablet" do
               "com.wacom.WacomCenter*",
               "com.wacom.WacomExperienceProgram*",
               "com.wacom.wacomtablet",
+              "Wacom_IOManager",
             ],
             quit:      [
               "com.wacom.wacomtablet",

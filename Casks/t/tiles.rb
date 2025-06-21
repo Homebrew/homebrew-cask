@@ -9,11 +9,16 @@ cask "tiles" do
 
   livecheck do
     url "https://updates.sempliva.com/tiles/updates.xml"
-    strategy :sparkle do |item|
-      id = item.url[/Tiles[._-](\h+)\.dmg/i, 1]
+    regex(/Tiles[._-](\h+)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      id = item.url[regex, 1]
+      next if id.blank?
+
       "#{item.short_version},#{id}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :mojave"

@@ -1,6 +1,6 @@
 cask "virtual-desktop-streamer" do
-  version "1.32.9"
-  sha256 "67e2b7706697e1023d7e69c34ed78aa594296a9b9f8e645833bdd810b14889c5"
+  version "1.33.4"
+  sha256 "e868c1514d741de0f391e85cc95cd8fc0ae1a407cdde53fd88821c845ce9c6f3"
 
   url "https://github.com/guygodin/VirtualDesktop/releases/download/v#{version}/VirtualDesktop.Streamer.Setup.dmg",
       verified: "github.com/guygodin/VirtualDesktop/"

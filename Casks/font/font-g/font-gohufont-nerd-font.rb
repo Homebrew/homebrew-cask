@@ -1,6 +1,6 @@
 cask "font-gohufont-nerd-font" do
-  version "3.2.1"
-  sha256 "c223119a6ff3e222f266c2c977b3bf22ad27cf55c9d088b21305edfd0aaa0430"
+  version "3.4.0"
+  sha256 "2619b1989c2c472333d8897866d2c1b9fdb6aec7dcc2d658a9baef0ff2cb7959"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Gohu.zip"
   name "GohuFont  Nerd Font families (Gohu)"
@@ -10,6 +10,8 @@ cask "font-gohufont-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "GohuFont11NerdFont-Regular.ttf"
   font "GohuFont11NerdFontMono-Regular.ttf"

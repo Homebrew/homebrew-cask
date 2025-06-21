@@ -1,6 +1,6 @@
 cask "vivaldi" do
-  version "6.9.3447.46"
-  sha256 "77659263df97436119d3848949ef8278f1b36923336c4c06accc20b017f743f6"
+  version "7.4.3684.55"
+  sha256 "6664821e1ce8c3b083fd535a7ab2df1beff61e4b8eb7d9e426d7d58707b554fb"
 
   url "https://downloads.vivaldi.com/stable-auto/Vivaldi.#{version}.universal.tar.xz"
   name "Vivaldi"
@@ -13,13 +13,16 @@ cask "vivaldi" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Vivaldi.app"
 
   uninstall quit: "com.vivaldi.Vivaldi"
 
   zap trash: [
+    "/Library/Logs/DiagnosticReports/Vivaldi Helper (Renderer)_*.diag",
+    "/Library/Logs/DiagnosticReports/Vivaldi_*.diag",
+    "~/Library/Application Support/CrashReporter/Vivaldi_*.plist",
     "~/Library/Application Support/Vivaldi",
     "~/Library/Caches/com.vivaldi.Vivaldi",
     "~/Library/Caches/Vivaldi",

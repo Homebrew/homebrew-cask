@@ -8,11 +8,18 @@ cask "scidavis" do
   homepage "https://scidavis.sourceforge.net/"
 
   livecheck do
-    url "https://sourceforge.net/projects/scidavis/rss.xml"
-    regex(%r{/scidavis[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]dist\.dmg}i)
+    url "https://sourceforge.net/projects/scidavis/rss?path=/SciDAVis"
+    regex(%r{url=.*?/scidavis[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]dist\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "scidavis.app"
+
+  zap trash: [
+    "~/.config/SciDAVis",
+    "~/Library/Saved Application State/net.sourceforge.scidavis.savedState",
+  ]
 
   caveats do
     requires_rosetta

@@ -1,6 +1,6 @@
 cask "openscad@snapshot" do
-  version "2024.09.16"
-  sha256 "7a61deedf46cc7c6b9b5685d6b4b144929013ffca122cb5aa70de3bb87878505"
+  version "2025.06.20"
+  sha256 "f3f378236ad34d13f28adc030457be002841e5eb83448d7ac292a1f4221aae55"
 
   url "https://files.openscad.org/snapshots/OpenSCAD-#{version}.dmg"
   name "OpenSCAD"
@@ -11,8 +11,6 @@ cask "openscad@snapshot" do
     url "https://files.openscad.org/snapshots/.snapshot_macos.js"
     regex(/OpenSCAD[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
-
-  deprecate! date: "2025-05-01", because: :unsigned
 
   conflicts_with cask: "openscad"
 

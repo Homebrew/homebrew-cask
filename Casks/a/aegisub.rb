@@ -1,14 +1,19 @@
 cask "aegisub" do
-  version "3.2.2"
-  sha256 "d71fa46f074a2d5a252f30779e0b8d913d5157258f5d9fc333411f8c9493f42b"
+  version "3.4.2"
+  sha256 "cbbfd3276e0414b540f6b1bc12a69abd6b8a96b0a452de3b08c290d553754ad3"
 
-  url "https://github.com/Aegisub/Aegisub/releases/download/v#{version}/Aegisub-#{version}.dmg"
+  url "https://github.com/TypesettingTools/Aegisub/releases/download/v#{version}/Aegisub-#{version}.dmg",
+      verified: "github.com/TypesettingTools/Aegisub/"
   name "Aegisub"
   desc "Create and modify subtitles"
-  homepage "https://github.com/Aegisub/Aegisub"
+  homepage "https://aegisub.org/"
 
-  # https://github.com/Aegisub/Aegisub/issues/336
-  deprecate! date: "2024-09-06", because: :unmaintained
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  no_autobump! because: :requires_manual_review
 
   app "Aegisub.app"
 

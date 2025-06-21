@@ -12,5 +12,13 @@ cask "mp3gain-express" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "MP3Gain Express.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.sappharad.MP3Gain-Express",
+    "~/Library/Preferences/com.sappharad.MP3Gain-Express.plist",
+    "~/Library/Saved Application State/com.sappharad.MP3Gain-Express.savedState",
+  ]
 end

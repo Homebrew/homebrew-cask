@@ -1,6 +1,6 @@
 cask "lightworks" do
-  version "2023.2,146471"
-  sha256 "663a74cb22a4b6bbd6e5543881d573de1b94630cb48e2ee797b47a848487d6f2"
+  version "2025.1,151564"
+  sha256 "609bdacc925ec8d51c99dfa82244ea05869e48bfa9a78dd112e282c967ec48df"
 
   url "https://cdn.lwks.com/releases/#{version.csv.first}/lightworks_#{version.csv.first.major_minor}_r#{version.csv.second}.dmg"
   name "Lightworks"
@@ -8,10 +8,22 @@ cask "lightworks" do
   homepage "https://www.lwks.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://forum.lwks.com/forums/product-releases.19/index.rss"
+    regex(/v?(\d+(?:\.\d+)+).*?revision\s+(\d+)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :big_sur"
 
   app "Lightworks.app"
 
   zap trash: "~/Library/Saved Application State/com.editshare.lightworks.savedState"
+
+  caveats do
+    requires_rosetta
+  end
 end

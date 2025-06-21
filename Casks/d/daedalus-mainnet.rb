@@ -1,6 +1,6 @@
 cask "daedalus-mainnet" do
-  version "6.0.1,69332,9d752528f"
-  sha256 "6d1228b8dcdc76d88b3087d85c4997b055ce0fdb0d819715f2014db82378a48e"
+  version "7.1.0,72909,5472147d9"
+  sha256 "c87f3768cd493d382c5e1d035386c280017f566574329afe4f67c92188e969e5"
 
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.csv.first}-#{version.csv.second}-mainnet-#{version.csv.third}-x86_64-darwin.pkg",
       verified: "update-cardano-mainnet.iohk.io/"
@@ -10,9 +10,12 @@ cask "daedalus-mainnet" do
 
   livecheck do
     url "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
-    regex(%r{/daedalus[._-](\d+(?:\.\d+)+)[._-](\d+)[._-]mainnet[._-](\h+)[._-]x86_64[._-]darwin\.pkg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
+    regex(/daedalus[._-]v?(\d+(?:\.\d+)+)[._-](\d+)(?:[._-]mainnet)?[._-](\h+)/i)
+    strategy :json do |json, regex|
+      match = json.dig("platforms", "darwin", "URL")&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]},#{match[3]}"
     end
   end
 

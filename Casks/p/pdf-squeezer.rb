@@ -1,5 +1,5 @@
 cask "pdf-squeezer" do
-  version "4.5.3"
+  version "4.5.4"
   sha256 :no_check
 
   url "https://www.witt-software.com/downloads/pdfsqueezer/PDF%20Squeezer.dmg"
@@ -9,12 +9,10 @@ cask "pdf-squeezer" do
 
   livecheck do
     url "https://www.witt-software.com/downloads/pdfsqueezer/pdfsq#{version.major}-appcast.xml"
-    regex(/^(\d+(?:\.\d+)+)$/i)
-    strategy :sparkle do |items, regex|
-      items.select { |item| item.short_version.match(regex) }
-           .map(&:short_version)
-    end
+    strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :big_sur"
 

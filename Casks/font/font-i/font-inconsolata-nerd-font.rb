@@ -1,6 +1,6 @@
 cask "font-inconsolata-nerd-font" do
-  version "3.2.1"
-  sha256 "012aa0cac12137786832362022318556a155d2008bbfd198f72944b49cb8a6f8"
+  version "3.4.0"
+  sha256 "ec3600e99b9c46814e838817506632dde652c1c2f6e70b5debd4aa81c0b1db6b"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Inconsolata.zip"
   name "Inconsolata Nerd Font (Inconsolata)"
@@ -10,6 +10,8 @@ cask "font-inconsolata-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "InconsolataNerdFont-Bold.ttf"
   font "InconsolataNerdFont-Regular.ttf"

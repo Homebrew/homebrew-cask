@@ -1,8 +1,8 @@
 cask "whatroute" do
-  version "2.6.9"
-  sha256 "0ca4f63a6d937b51f8b0198ee22ad541b78d405198126f43084091071cca1371"
+  version "2.7.1"
+  sha256 "cc43b0ffca316e25878d83e9bf1f117ff4ccf6b1cc0126c93c79990d75de20c7"
 
-  url "https://downloads.whatroute.net/software/whatroute-#{version}.zip"
+  url "https://www.whatroute.net/software/whatroute-#{version}.zip"
   name "WhatRoute"
   desc "Network diagnostic utility"
   homepage "https://www.whatroute.net/"

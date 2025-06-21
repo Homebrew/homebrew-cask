@@ -12,6 +12,8 @@ cask "textbar" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "TextBar.app"
 
   zap trash: [

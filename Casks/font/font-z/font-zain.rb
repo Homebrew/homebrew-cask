@@ -13,7 +13,9 @@ cask "font-zain" do
   font "Zain-Bold.ttf"
   font "Zain-ExtraBold.ttf"
   font "Zain-ExtraLight.ttf"
+  font "Zain-Italic.ttf"
   font "Zain-Light.ttf"
+  font "Zain-LightItalic.ttf"
   font "Zain-Regular.ttf"
 
   # No zap stanza required

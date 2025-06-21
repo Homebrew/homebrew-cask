@@ -4,8 +4,8 @@ cask "vitamin-r" do
     sha256 "6c5ce3926060b7e3616527fc3c1f0d2a5cd8a0be4d9f5496c099a33be993312b"
   end
   on_mojave :or_newer do
-    version "4.18"
-    sha256 "3ad3a2ccb1402b6f4870154653df42110ac1b5b9954a9f28cd45b503992402b1"
+    version "4.19"
+    sha256 "ef93e7ccececdde434f313f1fdc43ecc6d0e3b34df17d7c4c944ec3f58d80167"
   end
 
   url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"

@@ -5,7 +5,14 @@ cask "redeclipse" do
   url "https://github.com/redeclipse/base/releases/download/v#{version}/redeclipse_#{version}_mac.tar.bz2",
       verified: "github.com/redeclipse/base/"
   name "Red Eclipse"
+  desc "Multiplayer & singleplayer first person shooter"
   homepage "https://www.redeclipse.net/"
 
+  no_autobump! because: :requires_manual_review
+
   app "redeclipse.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

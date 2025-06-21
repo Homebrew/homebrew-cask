@@ -7,10 +7,9 @@ cask "sketch-toolbox" do
   desc "Plugin manager for Sketch"
   homepage "http://sketchtoolbox.com/"
 
-  livecheck do
-    url "http://sketchtoolbox.com/updates/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-12", because: :discontinued
 
   app "Sketch Toolbox.app"
 

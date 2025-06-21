@@ -1,6 +1,6 @@
 cask "tigervnc-viewer" do
-  version "1.14.0"
-  sha256 "87c734f5bf68a2f50047d5efc0c6e5ecbe8213fa81b1453f3b932be3f434df51"
+  version "1.15.0"
+  sha256 "e43877091f694558f003c2b0e686585c80ed19dd8c8280f0e9817a48b269176c"
 
   url "https://downloads.sourceforge.net/tigervnc/TigerVNC-#{version}.dmg",
       verified: "downloads.sourceforge.net/tigervnc/"
@@ -12,6 +12,8 @@ cask "tigervnc-viewer" do
     url "https://sourceforge.net/projects/tigervnc/rss?path=/stable"
     regex(%r{url=.*?/TigerVNC[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "TigerVNC Viewer #{version}.app"
 

@@ -8,11 +8,9 @@ cask "waterfox-classic" do
   desc "Web browser"
   homepage "https://classic.waterfox.net/"
 
-  livecheck do
-    url :url
-    regex(/v?(\d+(?:\.\d+)+)-classic/i)
-    strategy :github_latest
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-11-09", because: :unmaintained
 
   app "Waterfox Classic.app"
 

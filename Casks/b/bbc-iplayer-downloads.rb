@@ -7,6 +7,8 @@ cask "bbc-iplayer-downloads" do
   desc "Download programmes from the BBC iPlayer website"
   homepage "https://www.bbc.co.uk/iplayer/install"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-21", because: :no_longer_available
 
   depends_on macos: ">= :el_capitan"

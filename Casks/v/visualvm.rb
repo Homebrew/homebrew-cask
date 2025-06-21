@@ -1,12 +1,14 @@
 cask "visualvm" do
-  version "2.1.10"
-  sha256 "0130d95ba96e1b3f4a5d58fb9b1e95e8a247a45165af727c0e23354dc0a35b22"
+  version "2.2"
+  sha256 "5d429cdd74d40b78d5472c0563932268162832ea09ac77a303ca80e3e2aa1df6"
 
   url "https://github.com/oracle/visualvm/releases/download/#{version}/VisualVM_#{version.no_dots}.dmg",
       verified: "github.com/oracle/visualvm/"
   name "VisualVM"
   desc "All-in-One Java Troubleshooting Tool"
   homepage "https://visualvm.github.io/"
+
+  no_autobump! because: :requires_manual_review
 
   app "VisualVM.app"
 

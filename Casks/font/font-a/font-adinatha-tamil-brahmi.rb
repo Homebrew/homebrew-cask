@@ -2,9 +2,9 @@ cask "font-adinatha-tamil-brahmi" do
   version :latest
   sha256 :no_check
 
-  url "http://www.virtualvinodh.com/download/Adinatha-Tamil-Brahmi.zip"
+  url "https://www.virtualvinodh.com/downloads/Adinatha-Tamil-Brahmi.zip"
   name "Adinatha Tamil Brahmi"
-  homepage "http://www.virtualvinodh.com/wp/tamil-brahmi-font/"
+  homepage "https://virtualvinodh.com/projects/adinatha"
 
   font "Adinatha-Tamil-Brahmi/Adinatha-Tamil-Brahmi.otf"
 

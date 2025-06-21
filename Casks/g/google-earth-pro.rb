@@ -1,5 +1,5 @@
 cask "google-earth-pro" do
-  version "7.3.6.9796"
+  version "7.3.6.10201"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dl.google.com/dl/earth/client/advanced/current/googleearthpromac-intel-#{version.major_minor_patch}.dmg"
@@ -9,7 +9,9 @@ cask "google-earth-pro" do
 
   livecheck do
     url "https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg"
-    strategy :extract_plist
+    strategy :extract_plist do |items|
+      items["com.Google.GoogleEarthPro"]&.version
+    end
   end
 
   pkg "Install Google Earth Pro #{version}.pkg"

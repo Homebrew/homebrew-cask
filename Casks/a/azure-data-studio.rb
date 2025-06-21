@@ -1,9 +1,9 @@
 cask "azure-data-studio" do
   arch arm: "darwin-arm64", intel: "darwin"
 
-  version "1.49.1"
-  sha256 arm:   "bd79b82d0a000a53a0e52156763fef1cb76dfe9513862b1d3ac359d926d03954",
-         intel: "14473b4614f796ce5f0f54b67beed3e798cbd55dc1cd4d6e3cec746da974eab0"
+  version "1.52.0"
+  sha256 arm:   "7087ae733c556e10ddacb14b550c1e86fea8784c11006df2f4dbd3766c8739de",
+         intel: "ca3951d85525775b242bec253fec1e97f384b2af2468a0429feccf04f5adbb93"
 
   url "https://azuredatastudio-update.azurewebsites.net/#{version}/#{arch}/stable",
       verified: "azuredatastudio-update.azurewebsites.net/"
@@ -13,11 +13,13 @@ cask "azure-data-studio" do
 
   livecheck do
     url "https://azuredatastudio-update.azurewebsites.net/api/update/#{arch}/stable/VERSION"
-    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
+    strategy :json do |json|
+      json["productVersion"]
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Azure Data Studio.app"
   binary "#{appdir}/Azure Data Studio.app/Contents/Resources/app/bin/code", target: "azuredatastudio"

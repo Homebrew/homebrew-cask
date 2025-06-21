@@ -38,6 +38,8 @@ cask "freac" do
   desc "Audio converter and CD ripper"
   homepage "https://www.freac.org/"
 
+  no_autobump! because: :requires_manual_review
+
   app "freac.app"
 
   zap trash: [

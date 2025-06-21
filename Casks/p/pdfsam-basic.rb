@@ -1,8 +1,11 @@
 cask "pdfsam-basic" do
-  version "5.2.6"
-  sha256 "8fc5d1ec50db9f1776d1c1b91cd2c5c4d644979e43b0ced462440bfa9a5143e1"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg",
+  version "5.3.1"
+  sha256 arm:   "a5dcf235d83bebc9d3247de2ff38156e02ccce10bb5cc1490c95dddec4f09fe9",
+         intel: "7db089f0001a1312aeb2199e1d3cb783d664ba4ea68ec5749c5b97f7953a9504"
+
+  url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/pdfsam-basic-#{version}-macos-#{arch}.dmg",
       verified: "github.com/torakiki/pdfsam/"
   name "PDFsam Basic"
   desc "Extracts pages, splits, merges, mixes and rotates PDF files"
@@ -21,8 +24,4 @@ cask "pdfsam-basic" do
     "~/Library/Preferences/org.pdfsam.user.plist",
     "~/Library/Saved Application State/org.pdfsam.basic.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

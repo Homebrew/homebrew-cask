@@ -9,18 +9,15 @@ cask "starnet++" do
 
   livecheck do
     url "https://www.starnetastro.com/download/"
-    regex(%r{uploads/(\d+)/(\d+)/StarNetv?(\d+(?:\.\d+)*)CLI[._-]MacOS.zip}i)
+    regex(%r{uploads/(\d+)/(\d+)/StarNetv?(\d+(?:\.\d+)*)CLI[._-]MacOS\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   bin_path = "#{staged_path}/StarNetv#{version.csv.first}CLI_MacOS"
-  bins = [
-    "starnet++",
-    "libtensorflow.2.dylib",
-    "libtensorflow_framework.2.dylib",
-  ]
 
   shimscript = "#{staged_path}/starnet_wrapper.sh"
   binary shimscript, target: "starnet++"
@@ -45,10 +42,9 @@ cask "starnet++" do
 
   postflight do
     set_permissions "#{bin_path}/starnet++", "0755"
-    bins.each do |bin|
-      system_command "xattr", args: ["-c", "#{bin_path}/#{bin}"]
-    end
   end
+
+  # No zap stanza required
 
   caveats do
     requires_rosetta

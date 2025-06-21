@@ -1,5 +1,5 @@
 cask "google-chrome" do
-  version "129.0.6668.59"
+  version "137.0.7151.120"
   sha256 :no_check
 
   url "https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg"
@@ -15,7 +15,7 @@ cask "google-chrome" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Google Chrome.app"
 

@@ -2,11 +2,11 @@ cask "krisp" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "64"
 
-  version "2.44.5"
-  sha256 arm:   "f06f0d7fc68259df04c569859f7091d00f38e800de1325b7972ebee2982787e0",
-         intel: "18097ba4ddcbf136807e9f13721654abd128cd9d895de33c481a52bce17203f3"
+  version "3.3.5"
+  sha256 arm:   "839d6b0e444c17fe7c9ba8efad714b0c9a7b49ac8f71fc52f7beb74a600cc91d",
+         intel: "d545c14725d74e6c5d8e8703b1bbcf55c774e6f08b2c3cc948bb27eba81d08c8"
 
-  url "https://cdn.krisp.ai/mp/#{version.major_minor}/mac/Krisp_#{version}_#{arch}.pkg"
+  url "https://cdn.krisp.ai/mp/mn/#{version.major_minor}/mac/Krisp_#{version}_#{arch}.pkg"
   name "Krisp"
   desc "Noise cancelling application"
   homepage "https://krisp.ai/"

@@ -12,9 +12,17 @@ cask "contraste" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Contraste.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.13bold.contraste.sfl*",
+    "~/Library/HTTPStorages/com.13bold.Contraste",
+    "~/Library/Preferences/com.13bold.contraste.plist",
+  ]
 
   caveats do
     requires_rosetta

@@ -1,6 +1,6 @@
 cask "obsidian" do
-  version "1.6.7"
-  sha256 "ac55e6865c57955cf99c2ad73267d819ac5ee3fc27051745c6c7e2c222031e0c"
+  version "1.8.10"
+  sha256 "dc188f6d3d4c13be56a51fe64c397cfd323ecaaebe58c53e45a657ca4506f321"
 
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}.dmg",
       verified: "github.com/obsidianmd/"
@@ -9,8 +9,10 @@ cask "obsidian" do
   homepage "https://obsidian.md/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master/desktop-releases.json"
+    strategy :json do |json|
+      json["latestVersion"]
+    end
   end
 
   auto_updates true

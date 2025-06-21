@@ -7,6 +7,16 @@ cask "doughnut" do
   desc "Podcast client"
   homepage "https://github.com/dyerc/Doughnut/"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/dyerc/Doughnut/master/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+  depends_on macos: ">= :catalina"
+
   app "Doughnut.app"
 
   zap trash: [

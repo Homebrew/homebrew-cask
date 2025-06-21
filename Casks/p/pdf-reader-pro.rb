@@ -1,8 +1,8 @@
 cask "pdf-reader-pro" do
-  version "4.6.1"
-  sha256 "4dba9a1bdb80f98f5a405cfe66c3e0e28c44641763f5aa5f874cbe11a5abe1fc"
+  version "5.1.1"
+  sha256 "34f83f89f75188b96a41ba318dae0c9ca242c391f266affab90d864a00bfc29f"
 
-  url "https://www.pdfreaderpro.com/downloads/PDFReaderPro_v#{version.major_minor_patch}.dmg"
+  url "https://file.pdfreaderpro.com/download/PDFReaderPro_v#{version.major_minor_patch}.dmg"
   name "PDF Reader Pro"
   desc "Read, annotate, edit, convert, create, OCR, fill forms and sign PDFs"
   homepage "https://www.pdfreaderpro.com/"
@@ -15,7 +15,8 @@ cask "pdf-reader-pro" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "PDF Reader Pro.app"
 

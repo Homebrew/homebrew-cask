@@ -8,7 +8,16 @@ cask "prudent" do
   desc "Integrated environment for your personal and family ledger"
   homepage "https://prudent.me/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Prudent.app"
+
+  zap trash: [
+    "~/Library/Application Support/Prudent",
+    "~/Library/Caches/Pruent",
+    "~/Library/Preferences/com.runningroot.prudent.plist",
+    "~/Library/Saved Application State/com.runningroot.prudent.savedState",
+  ]
 
   caveats do
     requires_rosetta

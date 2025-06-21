@@ -15,6 +15,8 @@ cask "dust3d" do
     regex(/^v?(\d+(?:\.\d+)+(?:-rc\.?\d*)?)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "dust3d-#{version}.app"

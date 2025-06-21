@@ -8,10 +8,11 @@ cask "camed" do
   homepage "https://sourceforge.net/projects/camprocessor/"
 
   livecheck do
-    url "https://sourceforge.net/projects/camprocessor/files/CAM%20Editor/Releases/"
-    regex(%r{CAM%20Editor/Releases/(\d+(?:\.\d+)+)}i)
-    strategy :page_match
+    url "https://sourceforge.net/projects/camprocessor/rss?path=/CAM%20Editor/Releases"
+    regex(%r{url=.*?/CAM%20Editor/Releases/v?(\d+(?:\.\d+)+)/}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "CAMEd-#{version}/CAMed.app"
 

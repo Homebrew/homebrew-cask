@@ -1,6 +1,6 @@
 cask "scidvsmac" do
-  version "4.25"
-  sha256 "821f251f60798a9d31cc83a72119b012c27b06b76c533fd36636f3f917a106b5"
+  version "4.26"
+  sha256 "f9f52ac36ecba8495e0fbd8cade2aec9bc5c1d991857469f53061ac828ec6965"
 
   url "https://downloads.sourceforge.net/scidvspc/ScidvsMac-#{version}.x64.dmg"
   name "Scid vs. Mac"
@@ -11,6 +11,8 @@ cask "scidvsmac" do
     url :homepage
     regex(/ScidvsMac-(\d+(?:\.\d+)*)\.x64\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "ScidvsMac.app"
 

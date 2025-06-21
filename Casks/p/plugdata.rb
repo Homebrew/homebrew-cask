@@ -2,15 +2,18 @@ cask "plugdata" do
   version "0.9.1"
   sha256 "ae45c3a214e56035b6aa663a92919de4d2f5b4b316778194436749a5fdbbc1b6"
 
-  url "https://github.com/timothyschoen/PlugData/releases/download/v#{version}/plugdata-macOS-Universal.pkg"
+  url "https://github.com/plugdata-team/plugdata/releases/download/v#{version}/plugdata-macOS-Universal.pkg",
+      verified: "github.com/plugdata-team/plugdata/"
   name "PlugData"
   desc "Plugin wrapper for PureData"
-  homepage "https://github.com/timothyschoen/PlugData"
+  homepage "https://plugdata.org/"
 
   livecheck do
     url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   conflicts_with cask: "plugdata@nightly"

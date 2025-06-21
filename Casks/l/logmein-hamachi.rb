@@ -8,6 +8,8 @@ cask "logmein-hamachi" do
   desc "Hosted VPN service that lets you securely extend LAN-like networks"
   homepage "https://vpn.net/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-07", because: :unmaintained
 
   installer manual: "LogMeInHamachiInstaller.app"

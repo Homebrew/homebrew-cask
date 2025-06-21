@@ -1,6 +1,6 @@
 cask "cozy-drive" do
-  version "3.39.0"
-  sha256 "8e6a36525aa9423d8269177aa8221d6e2e5b0f1ae05837880823999397810a97"
+  version "3.42.0"
+  sha256 "f69f9575a842f473d22a3669ff418f729a2ca092c109983ba084dddad1d4648b"
 
   url "https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Cozy-Drive-#{version}.dmg",
       verified: "github.com/cozy-labs/cozy-desktop/"
@@ -13,7 +13,7 @@ cask "cozy-drive" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "Cozy Drive.app"
 

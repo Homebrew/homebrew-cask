@@ -1,36 +1,17 @@
 cask "fl-studio" do
-  version "24.1.1.3936"
-  sha256 "2c417716d7009270386e85c459c138b14377210a56a6b63eab5ab79c53162bc0"
+  version "24.1.2.4074"
+  sha256 "9171e4d1d11311744ab84e96a591d474a80d9fe83e3054682acfdafc21bba36a"
 
-  url "https://install.image-line.com/flstudio/flstudio_mac_#{version}.dmg",
+  url "https://demodownload.image-line.com/flstudio/flstudio_mac_#{version}.dmg",
       referer:    "https://www.image-line.com/fl-studio-download/",
       user_agent: :browser
   name "FL Studio"
   desc "Digital audio production application"
   homepage "https://www.image-line.com/flstudio/"
 
-  # The macOS link on the download page redirects to the latest dmg file but
-  # livecheck is blocked by Cloudflare unless we use a `:browser` user agent
-  # and set the download page as the referer. We can't set the referer in
-  # livecheck yet, so this works around the issue by parsing the version from
-  # the URL that the download page uses to fetch version information.
-  livecheck do
-    url "https://support.image-line.com/api.php?call=get_version_info&callback=il_get_version_info_cb"
-    strategy :page_match do |page|
-      # Extract the JSON text from the JavaScript
-      match = page.match(/il_get_version_info_cb\("(.+?)"\);/i)
-      next if match.blank?
+  no_autobump! because: :requires_manual_review
 
-      # Unescape the JSON text and parse it
-      json = Homebrew::Livecheck::Strategy::Json.parse_json(match[1].gsub(/\\+"/, '"'))
-      json["prod"]&.filter_map do |_id, prod|
-        next unless (prod_mac = prod["mac"])
-        next unless prod_mac["name"]&.include?("FL Studio")
-
-        prod_mac["version"]
-      end
-    end
-  end
+  disable! date: "2024-12-16", because: "cannot be reliably fetched due to Clouflare protections"
 
   pkg "Install FL Studio.pkg"
 

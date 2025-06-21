@@ -1,6 +1,6 @@
 cask "ved" do
-  version "1.11.1"
-  sha256 "0bad1827dca22e9a59c22b7b9be7fdb2f9aa18294071021b064e29700ff9c0f6"
+  version "1.12.1"
+  sha256 "e7ca8026595d3d4310337372aec10afa13783491e64665431e569757b171b784"
 
   url "https://tolp.nl/ved/files/download/mac/ved_#{version}_mac.dmg"
   name "ved"
@@ -11,6 +11,8 @@ cask "ved" do
     url "https://tolp.nl/ved/files/download/mac/"
     regex(/href=.*?ved[ ._-]v?(\d+(?:\.\d+)+)[ ._-]mac\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Ved.app"
 

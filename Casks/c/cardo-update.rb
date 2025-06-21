@@ -1,6 +1,6 @@
 cask "cardo-update" do
-  version "4.2.0"
-  sha256 "4e8698968179412beae7caeb08b5c70190ba912e994d3ce42b5e1c18d67cbca3"
+  version "4.6.0"
+  sha256 "40c60004d3c322d264a11ff0ff881aeddfbbf5dd44b98b0b28cf14d3432436c1"
 
   url "https://update.cardosystems.com/cardo-app/Cardo%20Update-#{version}-mac.zip"
   name "Cardo Update"
@@ -11,6 +11,8 @@ cask "cardo-update" do
     url "https://update.cardosystems.com/cardo-app/latest-mac.yml"
     strategy :electron_builder
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Cardo Update.app"
 

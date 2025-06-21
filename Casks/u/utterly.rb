@@ -1,5 +1,5 @@
 cask "utterly" do
-  version "1.5.0-SNAPSHOT-c43cb8d"
+  version "1.5.0"
   sha256 :no_check
 
   url "https://www.utterly.app/Utterly-Elevate.pkg"
@@ -8,8 +8,13 @@ cask "utterly" do
   homepage "https://www.utterly.app/"
 
   livecheck do
-    skip "No version information available"
+    url "https://www.utterly.app/full_minimum_version.json"
+    strategy :json do |json|
+      json["latest_version"]
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 

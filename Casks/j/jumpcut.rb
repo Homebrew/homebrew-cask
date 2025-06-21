@@ -8,7 +8,9 @@ cask "jumpcut" do
   desc "Clipboard manager"
   homepage "https://snark.github.io/jumpcut/"
 
-  depends_on macos: ">= :el_capitan"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :sierra"
 
   app "Jumpcut.app"
 

@@ -1,6 +1,6 @@
 cask "ubiquiti-unifi-controller" do
-  version "8.4.62"
-  sha256 "ad0f71bae848e946f0b5e0d12c271aca2c9bc86eb85aef2b2d3995b15107fee4"
+  version "9.2.87"
+  sha256 "38625794369a3176cc7f518536c3a0bfc8d2363f691a3a629f8e245748507181"
 
   url "https://dl.ubnt.com/unifi/#{version}/UniFi-Network-Server.dmg",
       verified: "dl.ubnt.com/"
@@ -10,7 +10,12 @@ cask "ubiquiti-unifi-controller" do
 
   livecheck do
     url "https://fw-update.ubnt.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~channel~~release&filter=eq~~platform~~macos"
-    regex(/"version"\s*:\s*"v?(\d+(?:\.\d+)+)/i)
+    regex(/^\D*?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      json.dig("_embedded", "firmware")&.filter_map do |item|
+        item["version"]&.[](regex, 1)
+      end
+    end
   end
 
   app "UniFi.app"

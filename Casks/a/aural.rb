@@ -7,6 +7,8 @@ cask "aural" do
   desc "Audio player inspired by Winamp"
   homepage "https://github.com/maculateConception/aural-player"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Aural.app"

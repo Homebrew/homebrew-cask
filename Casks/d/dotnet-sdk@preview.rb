@@ -1,26 +1,20 @@
 cask "dotnet-sdk@preview" do
   arch arm: "arm64", intel: "x64"
 
-  on_arm do
-    version "9.0.100-rc.1.24452.12,556d3bd1-88f9-4193-899e-3253b3f1cb6e,81869aaa34551cd754dce5d2b7907a7f"
-    sha256 "bba065df3b51fe8522e147231620c902f17c661e1f9dd22319ea8daaef4720fe"
-  end
-  on_intel do
-    version "9.0.100-rc.1.24452.12,66064632-b4da-426d-8c92-964ef60a1705,d89d50709014f11cd6dd6118d0fe653f"
-    sha256 "78c4b615758a1ea8c7e92d97af107c8835afaf3bb2ee6beeff47bf7c0608cced"
-  end
+  version "9.0.301"
+  sha256 arm:   "d19e341938cf17c2194bdb6d9f5131b8265f47c810226a5668ff7ebac20ab0c3",
+         intel: "404e52b7837df74eae8d51a3b10fefc8a7efe25f3a711584b52b1a86c61a24fc"
 
-  url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
+  url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
   name ".NET SDK"
   desc "Developer platform"
   homepage "https://dotnet.microsoft.com/en-us/"
 
   livecheck do
-    url "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/#{version.major_minor}/releases.json"
-    regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-sdk-v?(.+)-osx-#{arch}\.pkg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[2]},#{match[0]},#{match[1]}"
+    url "https://builds.dotnet.microsoft.com/dotnet/release-metadata/#{version.major_minor}/releases.json"
+    strategy :json do |json|
+      json["releases"]&.map do |release|
+        release.dig("sdk", "version")
       end
     end
   end
@@ -36,16 +30,18 @@ cask "dotnet-sdk@preview" do
   binary "/usr/local/share/dotnet/dotnet"
 
   uninstall pkgutil: [
-              "com.microsoft.dotnet.*",
-              "com.microsoft.netstandard.pack.targeting.*",
-            ],
-            delete:  [
-              "/etc/paths.d/dotnet",
-              "/etc/paths.d/dotnet-cli-tools",
-            ]
-
-  zap trash: [
-    "~/.dotnet",
-    "~/.nuget",
+    "com.microsoft.dotnet.*#{version.major_minor}*#{arch}",
+    "com.microsoft.dotnet.sharedhost*#{arch}",
+    "com.microsoft.netstandard.pack.targeting.*",
   ]
+
+  zap pkgutil: "com.microsoft.dotnet.*",
+      delete:  [
+        "/etc/paths.d/dotnet",
+        "/etc/paths.d/dotnet-cli-tools",
+      ],
+      trash:   [
+        "~/.dotnet",
+        "~/.nuget",
+      ]
 end

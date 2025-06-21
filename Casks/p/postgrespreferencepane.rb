@@ -7,5 +7,13 @@ cask "postgrespreferencepane" do
   desc "Preference Pane for controlling PostgreSQL database servers"
   homepage "https://github.com/MaccaTech/PostgresPrefs"
 
+  no_autobump! because: :requires_manual_review
+
   prefpane "PostgreSQL.prefPane"
+
+  zap trash: [
+    "~/Library/LaunchAgents/org.postgresql.preferences.*.plist",
+    "~/Library/Logs/PostgreSQL",
+    "~/Library/Preferences/org.postgresql.preferences.servers.plist",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "teamspeak-client@beta" do
-  version "5.0.0-beta77"
-  sha256 "ab8f4b0f04a514f60a32dc48339aa4608460696f58f3e29ecfcc6f2e16bab86b"
+  version "6.0.0-beta2"
+  sha256 "7fe0109391515076c97f48503aabbae4032cf0877648aa19ddd81688ac6dff0d"
 
   url "https://files.teamspeak-services.com/pre_releases/client/#{version}/teamspeak-client.dmg",
       verified: "files.teamspeak-services.com/"
@@ -9,9 +9,11 @@ cask "teamspeak-client@beta" do
   homepage "https://www.teamspeak.com/"
 
   livecheck do
-    url "https://teamspeak.com/en/downloads"
+    url "https://teamspeak.com/en/downloads/"
     regex(%r{href=.*?/(\d+(?:\.\d+)+[^/]*)/teamspeak[._-]client\.dmg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :sierra"

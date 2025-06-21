@@ -9,7 +9,9 @@ cask "todesk" do
   desc "Remote control software"
   homepage "https://www.todesk.com/"
 
-  disable! date: "2024-08-01", because: "download artifact behind CAPTCHA-verified url"
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-08-01", because: "now has the download artifact behind a CAPTCHA-verified URL"
 
   auto_updates true
 

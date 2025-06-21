@@ -16,12 +16,14 @@ cask "betterdisplay" do
     end
   end
   on_ventura :or_newer do
-    version "3.0.5"
-    sha256 "2e0639c9bbbe75f377f129f1bf9b1399931ee0f8bcdc363a22bac7b2bf342f28"
+    version "3.5.6"
+    sha256 "fbfdaac8699245db60260ecd4dc0d0644e3639774c20e45e2f548bd6a751f2bb"
 
     livecheck do
-      url :url
-      strategy :github_latest
+      url "https://betterdisplay.pro/betterdisplay/sparkle/appcast.xml"
+      strategy :sparkle do |items|
+        items.find { |item| item.channel.nil? }&.short_version
+      end
     end
   end
 
@@ -36,12 +38,14 @@ cask "betterdisplay" do
 
   app "BetterDisplay.app"
 
-  uninstall quit: "pro.betterdisplay.BetterDisplay"
+  uninstall quit:       "pro.betterdisplay.BetterDisplay",
+            login_item: "BetterDisplay"
 
   zap trash: [
     "~/Library/Application Support/BetterDisplay",
     "~/Library/Application Support/BetterDummy",
     "~/Library/Caches/pro.betterdisplay.BetterDisplay",
+    "~/Library/Caches/SentryCrash/BetterDisplay",
     "~/Library/HTTPStorages/pro.betterdisplay.BetterDisplay",
     "~/Library/HTTPStorages/pro.betterdisplay.BetterDisplay.binarycookies",
     "~/Library/Preferences/pro.betterdisplay.BetterDisplay.plist",

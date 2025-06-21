@@ -1,6 +1,6 @@
 cask "astah-professional" do
-  version "9.2.0,0248cd"
-  sha256 "66e06055a0104eab6d9cbdf48a9952acdd32e018f3a72375fac432c40749b0d0"
+  version "10.1.0,9ceee1"
+  sha256 "4d9c28800d6ccf6c7ff10488e1cc6e856392347a7191feeda7ccf0e305aeb0e0"
 
   url "https://cdn.change-vision.com/files/astah-professional-#{version.csv.first.dots_to_underscores}-#{version.csv.second}-MacOs.dmg",
       verified: "cdn.change-vision.com/files/"
@@ -12,7 +12,7 @@ cask "astah-professional" do
     url "https://members.change-vision.com/download/files/astah_professional/latest/mac_pkg"
     regex(/astah[._-]professional[._-]v?(\d+(?:[._]\d+)+)[._-](\h+)[._-]MacOs\.dmg/i)
     strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[1].tr("_", ".")},#{match[2]}"

@@ -13,8 +13,10 @@ cask "hummingbird" do
 
   livecheck do
     url "https://airvpn.org/macos/hummingbird/"
-    regex(/eddie[._-]selected[._-]version">v?(\d+(?:\.\d+)+)</i)
+    regex(/href=.*?hummingbird[._-]macos[._-]#{arch}[._-]notarized[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

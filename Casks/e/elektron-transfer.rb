@@ -1,20 +1,17 @@
 cask "elektron-transfer" do
-  version "1.8.11,a8c32131-0878-5e92-bb50-0caee13885a7"
-  sha256 "2141bf49898f3704c016326dee4bed4efbd88adc8cede80d2e3627324fe382cf"
+  version "1.9.5,10,2024"
+  sha256 "ff023c8bb6f51d41f09846a40794d666850b2e69dc7a9599c0b27720ec37ce45"
 
-  url "https://se-elektron-devops.s3.amazonaws.com/release/#{version.csv.second}/Elektron_Transfer_#{version.csv.first}.dmg",
-      verified: "se-elektron-devops.s3.amazonaws.com/"
+  url "https://elektron.se/wp-content/uploads/#{version.csv.third}/#{version.csv.second}/Elektron_Transfer_#{version.csv.first}.dmg"
   name "Elektron Transfer"
   desc "Transfer samples, presets, sounds, projects and firmware to Elektron devices"
-  homepage "https://www.elektron.se/en/download-support-transfer"
+  homepage "https://elektron.se/support-downloads/transfer"
 
   livecheck do
     url :homepage
-    regex(%r{([a-zA-Z0-9_-]+)/Elektron[._-]Transfer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{uploads/(\d+)/(\d+)/Elektron[._-]Transfer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[1]},#{match[0]}"
-      end
+      page.scan(regex).map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
     end
   end
 

@@ -1,5 +1,5 @@
 cask "vox" do
-  version "3.6.1"
+  version "3.7"
   sha256 :no_check
 
   url "https://vox.rocks/app-download?app=vox"
@@ -12,7 +12,10 @@ cask "vox" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "VOX.app"
 

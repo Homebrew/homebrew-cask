@@ -1,6 +1,6 @@
 cask "neofinder" do
-  version "8.7"
-  sha256 "e2da1aaea9160a654dbdc3e051d2c963ccbc98357813ad74c0cd9c8948b9ad55"
+  version "8.9"
+  sha256 "9bc6c20b77db6cf63d35e9aecdd9d35e1114bdb39a957d4e245df4d556c359ba"
 
   url "https://www.wfs-apps.de/updates/neofinder-mac.#{version}.zip",
       verified: "wfs-apps.de/"
@@ -14,7 +14,7 @@ cask "neofinder" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "NeoFinder.app"
 

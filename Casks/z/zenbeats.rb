@@ -1,5 +1,5 @@
 cask "zenbeats" do
-  version "3.1.7"
+  version "3.1.12"
   sha256 :no_check
 
   url "https://static.roland.com/assets/media/pkg/Zenbeats_Installer.pkg"
@@ -11,6 +11,8 @@ cask "zenbeats" do
     url "https://www.rolandcloud.com/news"
     regex(/Zenbeats\s+v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "Zenbeats_Installer.pkg"
 

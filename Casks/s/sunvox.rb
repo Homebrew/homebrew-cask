@@ -1,6 +1,6 @@
 cask "sunvox" do
-  version "2.1.1c"
-  sha256 "2df050fdfd97ef96dca8ba77f5cdad75a4a50e6f84ef7194bc1ebc5c5aa289cc"
+  version "2.1.2b"
+  sha256 "281e98e6e2855ed06b98965c18b3f174b9425e77bf8b06c5c17f5aa64f2c9f6f"
 
   url "https://www.warmplace.ru/soft/sunvox/sunvox-#{version}.zip"
   name "SunVox"
@@ -8,9 +8,11 @@ cask "sunvox" do
   homepage "https://www.warmplace.ru/soft/sunvox/"
 
   livecheck do
-    url "https://www.warmplace.ru/soft/sunvox/changelog.txt"
-    regex(/^v(\d+(?:\.\d+)*[a-z]?)\s*\(\d+/i)
+    url :homepage
+    regex(/href=.*?sunvox[._-]v?(\d+(?:\.\d+)+[a-z]?)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

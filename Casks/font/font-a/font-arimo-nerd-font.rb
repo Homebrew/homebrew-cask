@@ -1,6 +1,6 @@
 cask "font-arimo-nerd-font" do
-  version "3.2.1"
-  sha256 "1a7a66238590e8edf86aa749527859604639bca467e4ae9bcd290ae5365360e4"
+  version "3.4.0"
+  sha256 "ed6f9667a581d3406063110a330a98cf5b9f618031cce606db798944056604c4"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Arimo.zip"
   name "Arimo Nerd Font (Arimo)"
@@ -10,6 +10,8 @@ cask "font-arimo-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "ArimoNerdFont-Bold.ttf"
   font "ArimoNerdFont-BoldItalic.ttf"

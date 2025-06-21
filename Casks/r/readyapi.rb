@@ -1,9 +1,9 @@
 cask "readyapi" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.54.0"
-  sha256 arm:   "b555d187039b4a812493fd9472660c8bb43f8eddf5f6fdd336f9a9cb8e042001",
-         intel: "adb2e6bea19a121ee789aaddc5811ccfb675ce001f8aa393fabbcf289fcf0ad6"
+  version "3.60.0"
+  sha256 arm:   "576064c6d0a2cbed133538fbfba359db49367268c8a2322cc21f129cb621d8d2",
+         intel: "9c0a7cabb8232d3b509ea31fc6f9471d025db2b57393ac368de72789cd6eb7ff"
 
   url "https://dl.eviware.com/ready-api/#{version}/ReadyAPI-#{arch}-#{version}.dmg",
       verified: "dl.eviware.com/ready-api/"
@@ -12,8 +12,8 @@ cask "readyapi" do
   homepage "https://smartbear.com/product/ready-api/overview/"
 
   livecheck do
-    url "https://support.smartbear.com/readyapi/docs/general-info/whats-new.html"
-    regex(/(\d+(?:\.\d+)+)\s\(latest\sversion\)/i)
+    url "https://support.smartbear.com/readyapi/docs/en/what-s-new/version-history.html"
+    regex(/>\s*Ready(?:!\s+)?API\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   installer script: {

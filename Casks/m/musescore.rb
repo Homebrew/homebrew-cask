@@ -1,8 +1,8 @@
 cask "musescore" do
-  version "4.4.2.242570931"
-  sha256 "9c72c4d5d3a8bc6edcf02d3c4d682b571f11e411a712dbfd082d7c9e95b5f199"
+  version "4.5.2.251141402,4.5.2"
+  sha256 "cd607c4d08c37cc428ce759ad8687fdf2aa4507c96a71f60d96a01ca9af012b1"
 
-  url "https://github.com/musescore/MuseScore/releases/download/v#{version.major_minor_patch}/MuseScore-Studio-#{version}.dmg",
+  url "https://github.com/musescore/MuseScore/releases/download/v#{version.csv.second}/MuseScore-Studio-#{version.csv.first}.dmg",
       verified: "github.com/musescore/MuseScore/"
   name "MuseScore"
   desc "Open-source music notation software"
@@ -10,16 +10,18 @@ cask "musescore" do
 
   livecheck do
     url :url
-    regex(/^MuseScore[._-]Studio[._-]v?(\d+(?:\.\d+)+)\.dmg$/i)
+    regex(%r{/v?(\d+(?:\.\d+)+)/MuseScore[._-]Studio[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
+        match = asset["browser_download_url"]&.match(regex)
         next if match.blank?
 
-        match[1]
+        "#{match[2]},#{match[1]}"
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :mojave"

@@ -9,6 +9,8 @@ cask "ithoughtsx" do
   desc "Mind mapping tool"
   homepage "https://www.toketaware.com/ithoughts-osx"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-11", because: :unmaintained
 
   auto_updates true
@@ -17,11 +19,11 @@ cask "ithoughtsx" do
   app "iThoughtsX.app"
 
   zap trash: [
-    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.toketaware.ios.ithoughts/",
-    "~/Library/Application Support/com.toketaware.ithoughtsx/",
-    "~/Library/Caches/CloudKit/com.apple.bird/iCloud.com.toketaware.ios.ithoughts/",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.toketaware.ithoughtsx/",
-    "~/Library/Caches/com.toketaware.ithoughtsx/",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.toketaware.ios.ithoughts",
+    "~/Library/Application Support/com.toketaware.ithoughtsx",
+    "~/Library/Caches/CloudKit/com.apple.bird/iCloud.com.toketaware.ios.ithoughts",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.toketaware.ithoughtsx",
+    "~/Library/Caches/com.toketaware.ithoughtsx",
     "~/Library/Preferences/com.toketaware.ithoughtsx.plist",
   ]
 end

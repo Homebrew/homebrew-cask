@@ -1,6 +1,6 @@
 cask "pdf-pals" do
-  version "1.8.1"
-  sha256 "3eadbcc357f6a220523a4f3d9d12b836b67b0b1056dbb55388805d7a92e5d8ee"
+  version "1.9.0"
+  sha256 "fe9bbb8521f21e4d1ae161b58aa7707d1b9001bbbf2ed0c890f84a00d905a91c"
 
   url "https://download.pdfpals.com/releases/PDFPals-#{version}.dmg"
   name "PDF Pals"
@@ -11,6 +11,8 @@ cask "pdf-pals" do
     url "https://pdfpals.com/sparkle/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :ventura"

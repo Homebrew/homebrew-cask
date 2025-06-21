@@ -1,6 +1,6 @@
 cask "font-code-new-roman-nerd-font" do
-  version "3.2.1"
-  sha256 "859a283172d71538634104b87b48cea4e36f1bb0824defe7d99a0092d6f5e52d"
+  version "3.4.0"
+  sha256 "4a3de867f398ab32d5e1a750e0149d57413952e318d0cf41d33dac57e8dabe2a"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/CodeNewRoman.zip"
   name "CodeNewRoman Nerd Font (Code New Roman)"
@@ -10,6 +10,8 @@ cask "font-code-new-roman-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "CodeNewRomanNerdFont-Bold.otf"
   font "CodeNewRomanNerdFont-Italic.otf"

@@ -13,6 +13,8 @@ cask "affinity-publisher@1" do
     strategy :sparkle, &:version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Affinity Publisher.app"

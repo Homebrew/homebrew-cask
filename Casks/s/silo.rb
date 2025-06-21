@@ -1,18 +1,20 @@
 cask "silo" do
-  version "2024.2.0"
-  sha256 "851cf624b9349711f96d2f2805b8e4382f40fca85e49dfd0b0f9bc35ae7c6222"
+  version "2025.1.0"
+  sha256 "713beb356a1ad96cdd248e039331b4fa7d7253461d956ad6df1c1a8c5a7ff64d"
 
-  url "https://nevercenter.com/silo/download/filearchive/Install_Silo_#{version.major}_#{version.minor}#{version.patch}_mac.dmg"
+  url "https://nevercenter.com/silo/download/filearchive/Install_Silo_#{version.major}_#{version.minor}_#{version.patch.presence || "0"}_mac.dmg"
   name "Silo"
   desc "3D polygonal modeller and UV mapper"
   homepage "https://nevercenter.com/silo/"
 
   livecheck do
     url "https://nevercenter.com/silo/download/"
-    regex(/Silo\s*(\d+(?:\.\d+)+)\s*/i)
+    regex(/Silo\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :mojave"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
 
   app "Silo.app"
 

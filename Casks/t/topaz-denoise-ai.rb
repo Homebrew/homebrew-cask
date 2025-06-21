@@ -7,7 +7,10 @@ cask "topaz-denoise-ai" do
   desc "Eliminate noise in your images"
   homepage "https://www.topazlabs.com/denoise-ai"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-05-07", because: :discontinued
+  disable! date: "2025-05-07", because: :discontinued
 
   app "Topaz DeNoise AI.app"
 

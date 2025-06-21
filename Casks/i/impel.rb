@@ -8,10 +8,9 @@ cask "impel" do
   desc "AI Companion"
   homepage "https://www.tryimpel.com/"
 
-  livecheck do
-    url "https://impel-sparkle-updater.fly.dev/appcast.xml"
-    strategy :sparkle, &:version
-  end
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-09-22", because: :no_longer_available
 
   auto_updates true
   depends_on macos: ">= :sonoma"

@@ -7,6 +7,8 @@ cask "pomotroid" do
   desc "Timer application"
   homepage "https://github.com/Splode/pomotroid"
 
+  no_autobump! because: :requires_manual_review
+
   app "Pomotroid.app"
 
   zap trash: [

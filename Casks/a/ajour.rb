@@ -7,10 +7,9 @@ cask "ajour" do
   desc "World of Warcraft addon manager"
   homepage "https://github.com/casperstorm/ajour"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-04", because: :unmaintained
 
   app "Ajour.app"
 

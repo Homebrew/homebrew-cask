@@ -1,9 +1,9 @@
 cask "eclipse-dsl" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.33.0,2024-09"
-  sha256 arm:   "024fb687104ee9ead1ff3f769376cd95aeec5d39bb279a4dd615a301feedee66",
-         intel: "9278f9be407b81d9bc4cba84f5895915c17395bf9d6d9058cd503aaf13d502c1"
+  version "4.36.0,2025-06"
+  sha256 arm:   "367b187be7a951421697012de7de9cfe515eebda727fed744842a77f60ab938a",
+         intel: "d07f56191a70c8f599fd3baac9750bb7a9c19f977696871a6fff5acdf5e8136c"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-dsl-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Java and DSL Developers"
@@ -13,6 +13,8 @@ cask "eclipse-dsl" do
   livecheck do
     cask "eclipse-ide"
   end
+
+  no_autobump! because: :requires_manual_review
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse DSL.app"

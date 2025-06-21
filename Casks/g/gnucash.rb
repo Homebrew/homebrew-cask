@@ -1,9 +1,9 @@
 cask "gnucash" do
   arch arm: "Arm", intel: "Intel"
 
-  version "5.8-2"
-  sha256 arm:   "d3f24a955547d30fa4116252d1bc35247117b6449cdedf51236b502f294cb436",
-         intel: "ddfbbecc87db276dc30a164a90b51189702215d4326160346824cb69d7f0ffe9"
+  version "5.11-2"
+  sha256 arm:   "5e05eeb1f6cf36a90d7309429361a420976fc61e92c7dc983b41662d6a2791b1",
+         intel: "f138b2d5f9f8646ad774457988ea0c0cbcb7a81c779c59e06282c03f6c283741"
 
   url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-#{arch}-#{version}.dmg",
       verified: "github.com/Gnucash/gnucash/"
@@ -13,7 +13,7 @@ cask "gnucash" do
 
   livecheck do
     url :url
-    regex(/^Gnucash-Intel[._-]v?(\d+(?:[.-]\d+)+)\.dmg$/i)
+    regex(/^Gnucash-#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg$/i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["name"]&.match(regex)
@@ -23,6 +23,8 @@ cask "gnucash" do
       end
     end
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Gnucash.app"
 

@@ -11,7 +11,9 @@ cask "lando" do
   desc "Local development environment and DevOps tool built on Docker"
   homepage "https://lando.dev/"
 
-  deprecate! date: "2024-09-07", because: "no longer distributing an install package"
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-09-07", because: "no longer distributes an install package"
 
   conflicts_with cask: "lando@edge"
   depends_on cask: "docker"

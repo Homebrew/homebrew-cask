@@ -7,6 +7,8 @@ cask "jad" do
   desc "Java decompiler"
   homepage "https://varaneckas.com/jad/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-14", because: "is 32-bit only"
 
   depends_on macos: "<= :mojave"

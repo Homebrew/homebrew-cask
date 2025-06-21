@@ -1,6 +1,6 @@
 cask "minecraft-education" do
-  version "1.21.05.0"
-  sha256 "16f26ab8ad0394816df028ee8f3d803b1c5c25482e7ad1db1773df7baf61f31b"
+  version "1.21.10.0"
+  sha256 "08cacdc36846a5b238a503d754799e55cc05dc7022ea034dcd26182c30070edf"
 
   url "https://downloads.minecrafteduservices.com/retailbuilds/MacOS/Minecraft_Education_#{version}.dmg",
       verified: "downloads.minecrafteduservices.com/"
@@ -14,7 +14,7 @@ cask "minecraft-education" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "minecraft-edu.app", target: "Minecraft Education.app"

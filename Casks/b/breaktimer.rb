@@ -1,6 +1,6 @@
 cask "breaktimer" do
-  version "1.2.0"
-  sha256 "feebd9f838df0892664a1377f4e2cd568ffe823132390b82f6592da17d164566"
+  version "1.3.2"
+  sha256 "d6e46421ec302431132040cbdd148e3ba634b609c42a152ad85c27f00ea440b0"
 
   url "https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.dmg",
       verified: "github.com/tom-james-watson/breaktimer-app/"
@@ -8,7 +8,10 @@ cask "breaktimer" do
   desc "Tool to manage periodic breaks"
   homepage "https://breaktimer.app/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "BreakTimer.app"
   binary "#{appdir}/BreakTimer.app/Contents/MacOS/BreakTimer", target: "breaktimer"
@@ -25,8 +28,4 @@ cask "breaktimer" do
     "~/Library/Preferences/com.tomjwatson.breaktimer.plist",
     "~/Library/Saved Application State/com.tomjwatson.breaktimer.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

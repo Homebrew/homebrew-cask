@@ -12,5 +12,17 @@ cask "big-mean-folder-machine" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+
   app "Big Mean Folder Machine #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Big Mean Folder Machine*",
+    "~/Library/HTTPStorages/net.publicspace.dist.bmfm*",
+    "~/Library/HTTPStorages/net.publicspace.dist.bmfm*.binarycookies",
+    "~/Library/Preferences/net.publicspace.dist.bmfm*.plist",
+    "~/Library/Saved Application State/net.publicspace.dist.bmfm*.savedState",
+  ]
 end

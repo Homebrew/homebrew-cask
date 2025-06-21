@@ -1,18 +1,19 @@
 cask "outline" do
-  version "4.2408.2"
-  sha256 "5686d4c6384afae4d1b92acbf124e0cc0fd3b346b2be52aa4ff504372ed41b59"
+  version "5.2503.1"
+  sha256 "f7ba87cb6ca188f05bc1cc157b63f83af4a92dcbddb9ed199d08201a4a78ebf2"
 
-  url "https://static.outline.app/v#{version.major}/Outline_#{version}.zip"
+  url "https://static.outline.app/direct/main/Outline_#{version}.zip"
   name "Outline"
   desc "Note taking app"
   homepage "https://www.outline.app/"
 
   livecheck do
-    url "https://gorillized.s3.amazonaws.com/v#{version.major}/update_channel.xml"
+    url "https://static.outline.app/direct/main/update_channel.xml"
     strategy :sparkle, &:short_version
   end
 
   auto_updates true
+  depends_on macos: ">= :sonoma"
 
   app "Outline.app"
 

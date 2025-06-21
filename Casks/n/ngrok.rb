@@ -2,15 +2,15 @@ cask "ngrok" do
   arch arm: "arm64", intel: "amd64"
 
   on_arm do
-    version "3.16.0,m7a8FVY63,a"
-    sha256 "46f66ff2d30a775520da120e7b0d22439d26327693f483cfd155744b0cd0544f"
+    version "3.23.2,gob3LpgzZmp,a"
+    sha256 "5fed5207e60a68e79d8d3883b93e0585eb8febda839ac21390841c5846520e00"
   end
   on_intel do
-    version "3.16.0,8Aktob6EVAZ,a"
-    sha256 "d8c0f0616442d30d62917b3a8e4ffdb32e0d9d3a1533209c237aa48efa7cb8c6"
+    version "3.23.2,k4g8LKkRwA3,a"
+    sha256 "a330cf7070a655fa4d2f109dfc3e119cbacd0a98c456bcddb579d249e3e7cb2f"
   end
 
-  url "https://bin.equinox.io/#{version.csv.third}/#{version.csv.second}/ngrok-v#{version.major}-#{version.csv.first}-stable-darwin-#{arch}.zip",
+  url "https://bin.equinox.io/#{version.csv.third}/#{version.csv.second}/ngrok-v#{version.major}-#{version.csv.first}-darwin-#{arch}.zip",
       verified: "bin.equinox.io/"
   name "ngrok"
   desc "Reverse proxy, secure introspectable tunnels to localhost"
@@ -19,7 +19,7 @@ cask "ngrok" do
   livecheck do
     url "https://dl.equinox.io/ngrok/ngrok-v#{version.major}/stable/archive"
     regex(%r{href=.*?/([^/]+)/([^/]+)/ngrok[._-]v#{version.major}[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]#{arch}\.zip}i)
-    strategy :page_match do |page|
+    strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
     end
   end

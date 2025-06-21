@@ -8,8 +8,8 @@ cask "jedit-omega" do
     sha256 "fbcebb742f060e4941d901d2e6b9fcd79e575828cafc38f7808ead048a3451ce"
   end
   on_high_sierra :or_newer do
-    version "3.07"
-    sha256 "6a8bbfc1c97f1378fe7274508953cd8ee9d221090d45e616656de60ffbb348b7"
+    version "3.10"
+    sha256 "8a1116ba3d700fb2351216d962f30c25695102a8d22247c0a8911730a8483187"
   end
 
   url "https://artman21.site/JeditOmega#{version.no_dots}.pkg",
@@ -22,6 +22,8 @@ cask "jedit-omega" do
     url "https://www.artman21.com/en/sparkle/jedit-download.html"
     regex(/Rev[._-](\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "JeditOmega#{version.no_dots}.pkg"
 

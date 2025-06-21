@@ -8,6 +8,8 @@ cask "nosleep" do
   desc "Kernel extension that prevents sleep when the lid is closed"
   homepage "https://integralpro.github.io/nosleep/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-27", because: :no_longer_available
 
   depends_on macos: ">= :high_sierra"

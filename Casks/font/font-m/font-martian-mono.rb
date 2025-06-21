@@ -1,10 +1,12 @@
 cask "font-martian-mono" do
-  version "1.0.0"
-  sha256 "82683f519651fb05e29d47d075f10e8db40ff5328a50e641e5c30f5fa94297b6"
+  version "1.1.0"
+  sha256 "2570b4fd6da9d641a6385f092167a21707448274d5b87cd85244411d868d3a80"
 
   url "https://github.com/evilmartians/mono/releases/download/v#{version}/martian-mono-#{version}-otf.zip"
   name "Martian Mono"
   homepage "https://github.com/evilmartians/mono"
+
+  no_autobump! because: :requires_manual_review
 
   font "MartianMono-CnBd.otf"
   font "MartianMono-CnLt.otf"

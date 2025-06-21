@@ -1,8 +1,10 @@
 cask "wpsoffice" do
-  version "3.2.0,6370"
-  sha256 "042636b16099802cd8e9145b2c5db3901c418bc744fee0f58ce032bda0952a95"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version.csv.first}.#{version.csv.second}/WPSOffice_#{version.csv.first}(#{version.csv.second}).dmg",
+  version "6.12.2,0024.21300060"
+  sha256 :no_check
+
+  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/installer/WPSOffice_#{arch}_#{version.csv.second}.dmg",
       verified: "wdl1.pcfg.cache.wpscdn.com/"
   name "WPS Office"
   desc "All-in-one office suite"
@@ -11,6 +13,8 @@ cask "wpsoffice" do
   livecheck do
     skip "No version information available"
   end
+
+  no_autobump! because: :requires_manual_review
 
   conflicts_with cask: "wpsoffice-cn"
   depends_on macos: ">= :sierra"

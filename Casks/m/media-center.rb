@@ -1,6 +1,6 @@
 cask "media-center" do
-  version "33.00.13"
-  sha256 "84a7dd21985b69d2a9e0bbd7004a226f43911ec25595a79f56f0a3d77d05b16e"
+  version "34.00.19"
+  sha256 "1bc4f387cdae792227c5c89a4261d040c75d8a44c8204a6ab832d9d35693b71d"
 
   url "https://files.jriver-cdn.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}-Universal.dmg",
       verified: "files.jriver-cdn.com/mediacenter/"
@@ -17,12 +17,13 @@ cask "media-center" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Media Center #{version.major}.app"
 
   zap trash: [
     "~/Documents/JRiver/",
-    "~/Library/Application Support/J River/",
+    "~/Library/Application Support/J River",
     "~/Library/Caches/com.jriver.MediaCenter#{version.major}",
     "~/Library/Cookies/com.jriver.MediaCenter#{version.major}*",
     "~/Library/Preferences/com.jriver.MediaCenter#{version.major}.plist",

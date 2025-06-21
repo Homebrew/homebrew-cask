@@ -8,16 +8,9 @@ cask "haptic-touch-bar" do
   desc "Add haptic feedback to Touch Bar buttons"
   homepage "https://www.haptictouchbar.com/"
 
-  livecheck do
-    url "https://updates.devmate.com/com.bopsoft.HapticTouchBar.xml"
-    regex(%r{/(\d+)/HapticTouchBar\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
+  no_autobump! because: :requires_manual_review
 
-      "#{item.short_version},#{match[2]},#{match[1]}"
-    end
-  end
+  deprecate! date: "2025-03-30", because: :unmaintained
 
   depends_on macos: ">= :sierra"
 

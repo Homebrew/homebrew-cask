@@ -1,6 +1,6 @@
 cask "axure-rp" do
-  version "10.0.0.3924"
-  sha256 "987c5339ac9b058727cdf96e886ee1ffb1473ecffb0c00ca62bfe997ed4e8f4f"
+  version "11.0.0.4131"
+  sha256 "a77e96ad7a0eb01347ca4e744c4f7415488639505f2a7b139bba2e8cc396b681"
 
   url "https://axure.cachefly.net/versions/#{version.csv.first.major_minor.dots_to_hyphens}/AxureRP-Setup-#{version.split(".")[3]}.dmg",
       verified: "axure.cachefly.net/"

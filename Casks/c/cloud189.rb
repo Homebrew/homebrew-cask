@@ -11,13 +11,15 @@ cask "cloud189" do
   livecheck do
     url "https://cloud.189.cn/api/portal/listClients.action"
     strategy :json do |json|
-      json["clientList"].map do |item|
+      json["clientList"]&.map do |item|
         next if item["clientType"] != "TELEMAC"
 
         item["clientVersion"]
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "天翼云盘.app"
 

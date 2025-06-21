@@ -1,12 +1,12 @@
 cask "yaak" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2024.9.1"
-  sha256 arm:   "1a128f8188dfad93d39adcbbf6c29f24108812eae49b6b43bd8a718d015b91c4",
-         intel: "dd4a1c0c4ae29b3769742f2c486611aa2c5aa472aa30d339acce5944da4e2708"
+  version "2025.4.0"
+  sha256 arm:   "02f4c23e1988704401c8df867dd7eb197ef40fb013107e63001295c04f621b16",
+         intel: "993549a739beaf463c9a9902d157a45162aebcc6df7728ec92405a83bb0dfd7b"
 
-  url "https://github.com/yaakapp/app/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
-      verified: "github.com/yaakapp/app/"
+  url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
+      verified: "github.com/mountain-loop/yaak/"
   name "Yaak"
   desc "REST, GraphQL and gRPC client"
   homepage "https://yaak.app/"
@@ -18,7 +18,9 @@ cask "yaak" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  auto_updates true
+  conflicts_with cask: "yaak@beta"
+  depends_on macos: ">= :ventura"
 
   app "yaak.app"
 

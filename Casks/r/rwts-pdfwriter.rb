@@ -7,10 +7,14 @@ cask "rwts-pdfwriter" do
   desc "Print driver for printing documents directly to a pdf file"
   homepage "https://github.com/rodyager/RWTS-PDFwriter"
 
+  no_autobump! because: :requires_manual_review
+
   pkg "RWTS-PDFwriter.pkg"
 
   uninstall script: {
     executable: "/Library/Printers/RWTS/PDFwriter/uninstall",
     sudo:       true,
   }
+
+  # No zap stanza required
 end

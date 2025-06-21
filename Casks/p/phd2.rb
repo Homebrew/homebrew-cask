@@ -26,6 +26,8 @@ cask "phd2" do
   desc "Telescope guiding software"
   homepage "https://openphdguiding.org/"
 
+  no_autobump! because: :requires_manual_review
+
   app "PHD2.app"
 
   zap trash: [

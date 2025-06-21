@@ -1,6 +1,6 @@
 cask "atomic-wallet" do
-  version "2.89.8"
-  sha256 "c08c449d1144dfdd995b441119b03bb55ba52ba79f437b61e89026a4566037b4"
+  version "2.91.9"
+  sha256 "5fe4982b9eb68d6bf9fe931e9ae6b961ea106da9b5bf3a6eed9c662a4310b336"
 
   url "https://releases.atomicwallet.io/AtomicWallet-#{version}.dmg"
   name "Atomic Wallet"
@@ -8,17 +8,18 @@ cask "atomic-wallet" do
   homepage "https://atomicwallet.io/"
 
   livecheck do
-    url "https://releases.atomicwallet.io/latest-mac.yml"
-    strategy :electron_builder
+    url "https://releases.atomicwallet.io/download/latest-mac.txt"
+    regex(/v?(\d+(?:[.-]\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
 
   app "Atomic Wallet.app"
 
-  zap trash: "~/Library/Application Support/atomic"
-
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+    "~/Library/Application Support/atomic",
+    "~/Library/Logs/atomic",
+    "~/Library/Preferences/io.atomicwallet.plist",
+    "~/Library/Saved Application State/io.atomicwallet.savedState",
+  ]
 end

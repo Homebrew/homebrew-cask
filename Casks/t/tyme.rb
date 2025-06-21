@@ -1,9 +1,9 @@
 cask "tyme" do
-  version "2024.16"
+  version "2025.4"
   sha256 :no_check
 
-  url "https://www.tyme-app.com/app/Tyme3.zip"
-  name "Tyme 3"
+  url "https://www.tyme-app.com/app/Tyme.dmg"
+  name "Tyme"
   desc "Time tracking app"
   homepage "https://www.tyme-app.com/"
 
@@ -12,7 +12,8 @@ cask "tyme" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Tyme.app"
 

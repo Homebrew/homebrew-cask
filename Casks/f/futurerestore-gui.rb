@@ -12,6 +12,8 @@ cask "futurerestore-gui" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "FutureRestore GUI.app"
 
   zap trash: "~/FutureRestoreGUI"

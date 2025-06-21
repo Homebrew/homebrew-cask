@@ -6,10 +6,13 @@ cask "quickboot" do
   name "QuickBoot"
   homepage "https://buttered-cat.com/product/quickboot/"
 
+  no_autobump! because: :requires_manual_review
+
   # no release in the past 10 years
   # user has reported it stopped working in catalina
   # https://github.com/jfro/QuickBoot/issues/5
   deprecate! date: "2024-01-01", because: :unmaintained
+  disable! date: "2025-01-04", because: :unmaintained
 
   app "QuickBoot.app"
 end

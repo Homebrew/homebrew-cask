@@ -1,6 +1,6 @@
 cask "banktivity" do
-  version "9.2.12,282"
-  sha256 "d0e792b176dbf605e929c662ce5011ad578cc1c728699fc1f403ab3f1751b541"
+  version "9.6.1,318"
+  sha256 "268569a52114675a830da0c6e54d8b9971513f768439617cbdfed78c1b36149c"
 
   url "https://www.iggsoft.com/banktivity/Banktivity#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "iggsoft.com/banktivity/"
@@ -11,7 +11,7 @@ cask "banktivity" do
   livecheck do
     url "https://www.iggsoft.com/banktivity/banktivity#{version.major}-versions-feed.json"
     strategy :json do |json|
-      json["Banktivity"].map do |release|
+      json["Banktivity"]&.map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

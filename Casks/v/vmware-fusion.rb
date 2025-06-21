@@ -1,19 +1,27 @@
 cask "vmware-fusion" do
-  version "13.6.0,24238079"
-  sha256 "035314f22a825f0fb92627fac286ed3b3485fab2c80df946ab0443344e829d60"
+  version "13.6.3,24585314"
+  sha256 "0415fc9c995ef959f3905bbd97d4560e6701856d2293b44aed1d9aa23a3b7c41"
 
-  url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/universal/core/com.vmware.fusion.zip.tar"
+  url "https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/universal/core/com.vmware.fusion.zip.tar",
+      verified: "softwareupdate-prod.broadcom.com/"
   name "VMware Fusion"
   desc "Create, manage, and run virtual machines"
-  homepage "https://www.vmware.com/products/fusion.html"
+  homepage "https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion"
 
   livecheck do
-    url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion-universal.xml"
+    url "https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/fusion-universal.xml"
     regex(%r{fusion/(\d+(?:\.\d+)+/\d+)}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match&.first&.tr("/", ",") }
+    strategy :xml do |xml, regex|
+      xml.get_elements("//url").map do |item|
+        match = item.text&.strip&.match(regex)
+        next if match.blank?
+
+        match[1].tr("/", ",")
+      end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   conflicts_with cask: "vmware-fusion@preview"
@@ -51,8 +59,9 @@ cask "vmware-fusion" do
 
   postflight do
     system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
-                   args: ["set"],
-                   sudo: true
+                   args:         ["set"],
+                   sudo:         true,
+                   sudo_as_root: true
   end
 
   uninstall_preflight do

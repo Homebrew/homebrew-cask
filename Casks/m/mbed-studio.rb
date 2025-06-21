@@ -1,5 +1,5 @@
 cask "mbed-studio" do
-  version "1.4.6"
+  version "1.5.0"
   sha256 :no_check
 
   url "https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg"
@@ -11,6 +11,8 @@ cask "mbed-studio" do
     url :url
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "MbedStudio.pkg"
 

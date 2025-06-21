@@ -12,6 +12,8 @@ cask "skyfonts" do
     regex(%r{href=.*?/Monotype_SkyFonts_Mac64_(\d+(?:\.\d+)*)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   installer manual: "Install SkyFonts.app"
 
   uninstall launchctl: "com.mti.Monotype-SkyFontsHelper",
@@ -19,5 +21,17 @@ cask "skyfonts" do
               "com.mti.Monotype-SkyFonts",
               "com.mti.Monotype-SkyFontsHelper",
             ],
-            delete:    "/Applications/Skyfonts"
+            delete:    [
+              "/Applications/Skyfonts",
+              "~/Library/Fonts/skyfonts-google",
+            ]
+
+  zap trash: [
+    "~/Library/Application Support/com.mti.Monotype-SkyFonts",
+    "~/Library/Application Support/sf",
+    "~/Library/Caches/com.mti.Monotype-SkyFonts",
+    "~/Library/HTTPStorages/com.mti.Monotype-SkyFonts.binarycookies",
+    "~/Library/HTTPStorages/com.mti.Monotype-SkyFonts.plist",
+    "~/Library/Preferences/com.mti.Monotype-SkyFonts.plist",
+  ]
 end

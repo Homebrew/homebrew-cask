@@ -7,7 +7,17 @@ cask "morkro-papyrus" do
   desc "Unofficial Dropbox Paper desktop app"
   homepage "https://github.com/morkro/papyrus"
 
+  no_autobump! because: :requires_manual_review
+
+  conflicts_with cask: "papyrus"
+
   app "Papyrus.app"
+
+  zap trash: [
+    "~/Library/Application Support/Papyrus",
+    "~/Library/Preferences/com.electron.papyrus.plist",
+    "~/Library/Saved Application State/com.electron.papyrus.savedState",
+  ]
 
   caveats do
     requires_rosetta

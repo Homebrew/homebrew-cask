@@ -1,6 +1,6 @@
 cask "bbedit" do
-  version "15.1.2"
-  sha256 "f796e47cd147fa41cfeeeb8ebb2865923b5d7c8c9f52c0974cc7b8361e1897b8"
+  version "15.5.1"
+  sha256 "8cab378bb8ee177103e4eba1b79b6aad405715ebae09af055148410dad00788d"
 
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
       verified: "s3.amazonaws.com/BBSW-download/"
@@ -10,7 +10,9 @@ cask "bbedit" do
 
   livecheck do
     url "https://versioncheck.barebones.com/BBEdit.xml"
-    regex(/BBEdit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :xml do |xml|
+      xml.get_elements("//key[text()='SUFeedEntryShortVersionString']").map { |item| item.next_element&.text&.strip }
+    end
   end
 
   auto_updates true

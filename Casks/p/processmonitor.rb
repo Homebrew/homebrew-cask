@@ -6,7 +6,14 @@ cask "processmonitor" do
       verified: "bitbucket.org/objective-see/deploy/downloads/"
   name "ProcessMonitor"
   desc "Monitor process activity"
-  homepage "https://objective-see.org/products/utilities.html"
+  homepage "https://objective-see.org/products/utilities.html#ProcessMonitor"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?ProcessMonitor[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 

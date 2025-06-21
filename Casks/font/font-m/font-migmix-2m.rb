@@ -9,11 +9,10 @@ cask "font-migmix-2m" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      page.scan(/href=.*migmix-2m[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
-          .map { |match| match[0].insert(4, ".") }
-    end
+    regex(%r{href=.*?/download/v?(\d+(?:\.\d+)+)/migmix-2m[._-]}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "migmix-2m-#{version.no_dots}/migmix-2m-bold.ttf"
   font "migmix-2m-#{version.no_dots}/migmix-2m-regular.ttf"

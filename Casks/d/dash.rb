@@ -1,6 +1,6 @@
 cask "dash" do
-  version "7.3.1"
-  sha256 "c28f2835acadcf4edfd39699656d97edc926541883735b0cd242fa75f2d96c76"
+  version "7.3.5"
+  sha256 "881d3210ff71cc0ba03fabdf04d84defeb77d7edc688045d29312e59c82f649d"
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
   name "Dash"
@@ -12,9 +12,11 @@ cask "dash" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   conflicts_with cask: "dash@6"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   app "Dash.app"
 

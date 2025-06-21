@@ -1,6 +1,6 @@
 cask "aircall" do
-  version "3.1.18"
-  sha256 "b8f5804987d04c1450adb5441c1764ac1e2f8108150520002bc8ace03145ec4e"
+  version "3.1.66"
+  sha256 "d61c50d9f3466fe3751abe4945bc45d68cc9f6b71865b8ffa2a9bfd616fdb35b"
 
   url "https://download-electron.aircall.io/Aircall-#{version}.dmg"
   name "Aircall"
@@ -13,6 +13,8 @@ cask "aircall" do
       json["name"]
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :sierra"

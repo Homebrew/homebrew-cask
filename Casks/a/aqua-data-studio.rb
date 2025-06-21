@@ -1,16 +1,19 @@
 cask "aqua-data-studio" do
-  version "24.0.0"
-  sha256 "f78902367761ce90fcde968d09d38d9d324a166ca9a4e6912753c02896a6f182"
+  version "25.0.1"
+  sha256 "b6429745cbe17f7017aa052e2ea155d8ea88ef53723fe64705d9b4c4117f8409"
 
-  url "https://downloads.aquafold.com/v#{version}/osx/ads-osx-#{version}.tar.gz"
+  url "https://downloads.aquafold.com/v#{version}/osx/ads-osx-#{version}.tar.gz",
+      verified: "downloads.aquafold.com/"
   name "Aquafold Aqua Data Studio"
   desc "Database IDE with data management and visual analytics"
-  homepage "https://www.aquafold.com/aquadatastudio"
+  homepage "https://aquadatastudio.com/"
 
   livecheck do
-    url "https://www.aquafold.com/support-update/"
-    regex(/href=["'].*?["']>Version\s?(\d+(?:\.\d+)+)/i)
+    url "https://aquadatastudio.com/support-update/"
+    regex(/>\s*Version\s?v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Aqua Data Studio.app"
 

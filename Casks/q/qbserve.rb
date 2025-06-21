@@ -1,6 +1,6 @@
 cask "qbserve" do
-  version "1.89"
-  sha256 "517a975eb915c90df9ac9a49c0e009e0926008890b747ceba20a1476c80e58b1"
+  version "1.9"
+  sha256 "f21cd5eda08757e9e94ca18cc36af634e0f42dae4f99dfb4f426623b0c4579b4"
 
   url "https://qotoqot.com/qbserve/app/Qbserve-#{version}.zip"
   name "Qbserve"
@@ -8,11 +8,14 @@ cask "qbserve" do
   homepage "https://qotoqot.com/qbserve/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/Qbserve[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    url "https://qotoqot.com/qbserve/app/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Qbserve.app"
 

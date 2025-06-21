@@ -1,6 +1,6 @@
 cask "drawbot" do
-  version "3.130"
-  sha256 "9cb6bd3cb0061ad6e3e2cc3b78e58fddaa4d5a00dc6c3ab7a3fa08cb1ebebe97"
+  version "3.132"
+  sha256 "e7e39a6b4d2345ed7e81d84914c7681bcc7ee9601a5f4d09e6f3dfce64d1903d"
 
   url "https://github.com/typemytype/drawbot/releases/download/#{version}/DrawBot.dmg",
       verified: "github.com/typemytype/drawbot/"
@@ -8,9 +8,13 @@ cask "drawbot" do
   desc "Write Python scripts to generate two-dimensional graphics"
   homepage "https://www.drawbot.com/"
 
+  no_autobump! because: :requires_manual_review
+
   app "DrawBot.app"
 
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.drawbot.sfl*",
+    "~/Library/Preferences/com.drawbot.plist",
+    "~/Library/Saved Application State/com.drawbot.savedState",
+  ]
 end

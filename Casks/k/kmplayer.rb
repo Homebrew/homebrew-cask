@@ -7,7 +7,9 @@ cask "kmplayer" do
   desc "Video player"
   homepage "https://www.kmplayer.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "KMPlayer-#{version}.pkg"
 

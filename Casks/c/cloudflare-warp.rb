@@ -1,22 +1,20 @@
 cask "cloudflare-warp" do
-  version "2024.6.474.0"
-  sha256 "2a07e1c509fc3d95f7fe9b90362b4d853fcc0433808a1d68aaabf10406145be0"
+  version "2025.4.943.0"
+  sha256 "0f221edabd2eb9ff173380d7d9b26b9eb941b680a9d2ce3b1295a633243227d1"
 
-  url "https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP_#{version}.pkg",
-      verified: "1111-releases.cloudflareclient.com/mac/"
+  url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}",
+      verified: "downloads.cloudflareclient.com/v1/download/macos/"
   name "Cloudflare WARP"
   desc "Free app that makes your Internet safer"
   homepage "https://cloudflarewarp.com/"
 
   livecheck do
-    # :sparkle strategy using appcenter url cannot be used - see below link
-    # https://github.com/Homebrew/homebrew-cask/pull/109118#issuecomment-887184248
-    url "https://1111-releases.cloudflareclient.com/mac/latest"
-    regex(/Cloudflare[._-]WARP[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
-    strategy :header_match
+    url "https://downloads.cloudflareclient.com/v1/update/sparkle/macos/ga"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
+  conflicts_with cask: "cloudflare-warp@beta"
   depends_on macos: ">= :catalina"
 
   pkg "Cloudflare_WARP_#{version}.pkg"
@@ -26,9 +24,19 @@ cask "cloudflare-warp" do
               "com.cloudflare.1dot1dot1dot1.macos.warp.daemon",
             ],
             quit:      "com.cloudflare.1dot1dot1dot1.macos",
-            pkgutil:   "com.cloudflare.1dot1dot1dot1.macos"
+            script:    {
+              executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
+              sudo:       true,
+            },
+            pkgutil:   "com.cloudflare.1dot1dot1dot1.macos",
+            delete:    [
+              "/usr/local/bin/warp-cli",
+              "/usr/local/bin/warp-dex",
+              "/usr/local/bin/warp-diag",
+            ]
 
   zap trash: [
+    "/Library/LaunchDaemons/com.cloudflare.1dot1dot1dot1.macos.warp.daemon.plist",
     "~/Library/Application Scripts/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
     "~/Library/Application Support/com.cloudflare.1dot1dot1dot1.macos",
     "~/Library/Caches/com.cloudflare.1dot1dot1dot1.macos",
@@ -37,5 +45,6 @@ cask "cloudflare-warp" do
     "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos",
     "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos.binarycookies",
     "~/Library/Preferences/com.cloudflare.1dot1dot1dot1.macos.plist",
+    "~/Library/WebKit/com.cloudflare.1dot1dot1dot1.macos",
   ]
 end

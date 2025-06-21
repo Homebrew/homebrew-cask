@@ -7,7 +7,11 @@ cask "qmoji" do
   desc "Like mojibar, but written in reasonml"
   homepage "https://github.com/jaredly/qmoji"
 
+  no_autobump! because: :requires_manual_review
+
   app "qmoji.app"
+
+  zap trash: "~/Library/Preferences/com.jaredforsyth.qmoji.json"
 
   caveats do
     requires_rosetta

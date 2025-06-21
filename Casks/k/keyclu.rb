@@ -1,6 +1,6 @@
 cask "keyclu" do
-  version "0.27"
-  sha256 "139e9dd1d6d08032fd128f8e4638758c166fff3bf4513d72b34ce0b6e87f8b20"
+  version "0.30.1"
+  sha256 "9f079b5cda93d2f1b7dc33fe163e722f694458d9ad6fd9d6bfdd8aed4b24ecda"
 
   url "https://github.com/Anze/KeyCluCask/releases/download/v#{version}/KeyClu.zip",
       verified: "github.com/Anze/KeyCluCask/"
@@ -12,6 +12,8 @@ cask "keyclu" do
     url "https://sergii.tatarenkov.name/keyclu/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :big_sur"

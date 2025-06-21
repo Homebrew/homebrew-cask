@@ -1,9 +1,9 @@
 cask "orka3" do
   arch arm: "arm64", intel: "amd64"
 
-  version "3.1.0"
-  sha256 arm:   "5b489bcbfe108a9720dc5eb68cbd8b47e239575515286b64c1f80b6529b3eb96",
-         intel: "2507649ad61b33b03a805bf11018b97a484aac18db4c614586ba18727b739c80"
+  version "3.3.0"
+  sha256 arm:   "ee4eb5c5a13e27abca91f37d67407dfea77aa3ab75e137cf3efab7ddec8c9ff5",
+         intel: "baf6c048e964b7bebc1d282ce1e6d6778b5f5fd87d385e4e747496e65292c891"
 
   url "https://cli-builds-public.s3.amazonaws.com/official/#{version}/orka3/macos/#{arch}/orka3.pkg",
       verified: "cli-builds-public.s3.amazonaws.com/official/"
@@ -17,6 +17,8 @@ cask "orka3" do
       json["version"]
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "orka3.pkg"
 

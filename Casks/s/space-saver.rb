@@ -12,6 +12,8 @@ cask "space-saver" do
     regex(/Download Space Saver \(ver (\d+(?:\.\d+)*)\)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :high_sierra"
 
   app "Space Saver.app"

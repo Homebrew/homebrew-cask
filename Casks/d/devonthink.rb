@@ -1,18 +1,33 @@
 cask "devonthink" do
-  version "3.9.7"
-  sha256 "70f9c06eeb316bea36fd15900cec96a2ff84224760b11ae1ac13d415b8354c5d"
+  on_catalina :or_older do
+    version "3.9.6"
+    sha256 "e272af94a61619adaf729de336e1ef24465a5e6ff27ed6ae8cb11d28ca35638a"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur :or_newer do
+    version "3.9.11"
+    sha256 "502bab23b869709edfa6a975d87b4094d9e43a9571945a76b31d20a6fa906b93"
+
+    # The appcast may include unstable versions where upstream doesn't specify a
+    # separate channel, so we have to identify stable versions using a regex.
+    livecheck do
+      url "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000"
+      regex(/^v?(\d+(?:\.\d+)+)$/i)
+      strategy :sparkle do |items, regex|
+        items.map { |item| item.version[regex, 1] }
+      end
+    end
+  end
 
   url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
   name "DEVONthink"
   desc "Collect, organise, edit and annotate documents"
-  homepage "https://www.devontechnologies.com/apps/devonthink/"
+  homepage "https://www.devontechnologies.com/apps/devonthink"
 
-  livecheck do
-    url "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000"
-    strategy :sparkle do |items|
-      items.map(&:version)
-    end
-  end
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :mojave"

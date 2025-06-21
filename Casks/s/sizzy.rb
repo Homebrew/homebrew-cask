@@ -1,7 +1,7 @@
 cask "sizzy" do
   arch arm: "arm64", intel: "intel"
 
-  version "72.2.0"
+  version "73.1.0"
   sha256 :no_check
 
   url "https://proxy.sizzy.co/updates/download/mac?arch=#{arch}"
@@ -14,6 +14,8 @@ cask "sizzy" do
     regex(/Sizzy[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg/i)
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

@@ -1,6 +1,6 @@
 cask "firefly" do
-  version "2.0.12"
-  sha256 "2f93d313a27ceea7604b5da7769fcee6a378a592f1b37a760fc4d8a4d5bb6e7c"
+  version "2.1.2"
+  sha256 "261da02d338d2a904c1119eb0d808b40a698f81b1614f9727187619d31c26a63"
 
   url "https://dl.firefly.iota.org/firefly-iota-desktop-#{version}.dmg"
   name "Firefly"
@@ -9,14 +9,11 @@ cask "firefly" do
 
   livecheck do
     url "https://dl.firefly.iota.org/latest-mac.yml"
-    regex(/firefly[._-]desktop[._-]v?(\d+(?:\.\d+)+)/i)
-    strategy :yaml do |yaml|
-      yaml["version"]
-    end
+    strategy :electron_builder
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "Firefly.app"
 

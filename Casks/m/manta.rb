@@ -8,6 +8,8 @@ cask "manta" do
   desc "Invoicing desktop app with customizable templates"
   homepage "https://getmanta.app/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :unmaintained
 
   app "Manta.app"

@@ -22,11 +22,14 @@ cask "playonmac" do
   desc "Allows installation and use of software designed for Windows"
   homepage "https://www.playonmac.com/"
 
+  no_autobump! because: :requires_manual_review
+
   app "PlayOnMac.app"
 
   zap trash: [
     "~/Library/PlayOnMac",
     "~/Library/Preferences/org.playonmac.playonmac.plist",
     "~/Library/Saved Application State/org.playonmac.playonmac.savedState",
+    "~/PlayOnMac's virtual drives",
   ]
 end

@@ -7,14 +7,19 @@ cask "couleurs" do
   desc "Grab and tweak the colours you see on your screen"
   homepage "https://couleursapp.com/"
 
-  livecheck do
-    url "https://couleursapp.com/updates/releases.xml"
-    strategy :sparkle, &:short_version
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-03-31", because: :unmaintained
 
   depends_on macos: ">= :sierra"
 
   app "Couleurs.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.13bold.Couleurs",
+    "~/Library/Preferences/com.13bold.Couleurs.plist",
+    "~/Library/Saved Application State/com.13bold.Couleurs.savedState",
+  ]
 
   caveats do
     requires_rosetta

@@ -12,6 +12,8 @@ cask "stationtv-link" do
     regex(/\[Ver\.(\d+(?:\.\d+)+)\]/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "StationTV Link.app"
 
   caveats do

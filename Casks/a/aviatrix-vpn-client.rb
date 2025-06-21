@@ -12,9 +12,11 @@ cask "aviatrix-vpn-client" do
     url "https://docs.aviatrix.com/documentation/latest/release-notes/vpn-client/vpn-release-notes.html"
     regex(/href=.*?aviatrix[._-]vpn[._-]client[._-]v?(\d+(?:[.-]\d+)+)[ "<]/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match&.first&.tr("-", ".") }
+      page.scan(regex).map { |match| match[0].tr("-", ".") }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "AVPNC_mac.pkg"
 

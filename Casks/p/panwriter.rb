@@ -1,9 +1,9 @@
 cask "panwriter" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.8.6"
-  sha256 arm:   "11095d2dd24c661b069b732017893880a65ad5c3ad7707abe93d22b74f1cc105",
-         intel: "3169bea7447ec001e17b458df4f7fec340be8ab7205720782be0243c28bb8448"
+  version "0.8.9"
+  sha256 arm:   "d37d73a101079410fcad54ac6b8a071c226614c9e548e28a0aeaec4f4aecc1c7",
+         intel: "82861d4945b3f54c568cea08aaeac5d98f55b2e03917489ddc7ab06b02c3cfc9"
 
   url "https://github.com/mb21/panwriter/releases/download/v#{version}/PanWriter-#{version}-#{arch}.dmg",
       verified: "github.com/mb21/panwriter/"
@@ -11,7 +11,10 @@ cask "panwriter" do
   desc "Markdown editor with pandoc integration and paginated preview"
   homepage "https://panwriter.com/"
 
+  no_autobump! because: :requires_manual_review
+
   depends_on formula: "pandoc"
+  depends_on macos: ">= :high_sierra"
 
   app "PanWriter.app"
 

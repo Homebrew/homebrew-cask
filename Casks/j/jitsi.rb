@@ -10,10 +10,13 @@ cask "jitsi" do
 
   livecheck do
     url "https://download.jitsi.org/jitsi/macosx/sparkle/updates.xml"
-    strategy :sparkle do |item|
-      item.url[/-(\d+(?:\.\d+)*)\.dmg/i, 1]
+    regex(/-(\d+(?:\.\d+)*)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      item.url[regex, 1]
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Jitsi.app"
 

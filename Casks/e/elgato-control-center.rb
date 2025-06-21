@@ -1,8 +1,8 @@
 cask "elgato-control-center" do
-  version "1.7.1,20508"
-  sha256 "8adc110411e409df00f99bfa4cbe67784793544c5d52cc4ca1886a5b0ffca1f3"
+  version "1.8.1,20582"
+  sha256 "19000d486080d9caead1d53c9782598bebf61d4aee1fb20ffa75fd84ba55eab0"
 
-  url "https://edge.elgato.com/egc/macos/eccm/#{version.csv.first}/ElgatoControlCenter-#{version.csv.first}.#{version.csv.second}.app.zip"
+  url "https://edge.elgato.com/egc/macos/eccm/#{version.csv.first}/ElgatoControlCenter-#{version.csv.first}.#{version.csv.second}.zip"
   name "Elgato Control Center"
   desc "Control your Elgato key lights"
   homepage "https://www.elgato.com/ww/en/s/downloads"

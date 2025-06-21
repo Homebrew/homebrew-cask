@@ -15,6 +15,8 @@ cask "creality-slicer" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Creality Slicer.app"
 
   zap trash: [

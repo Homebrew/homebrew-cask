@@ -7,6 +7,8 @@ cask "quicknfo" do
   desc "Quick Look plugin for viewing NFO files"
   homepage "https://github.com/planbnet/QuickNFO"
 
+  no_autobump! because: :requires_manual_review
+
   qlplugin "QuickNFO.qlgenerator"
 
   # No zap stanza required

@@ -13,6 +13,8 @@ cask "meshlab" do
     regex(/^Meshlab[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "MeshLab#{version}.app"
 
   postflight do

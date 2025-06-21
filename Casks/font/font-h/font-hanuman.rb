@@ -2,18 +2,12 @@ cask "font-hanuman" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts.git",
-      verified:  "github.com/google/fonts",
-      branch:    "main",
-      only_path: "ofl/hanuman"
+  url "https://github.com/google/fonts/raw/main/ofl/hanuman/Hanuman%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Hanuman"
   homepage "https://fonts.google.com/specimen/Hanuman"
 
-  font "Hanuman-Black.ttf"
-  font "Hanuman-Bold.ttf"
-  font "Hanuman-Light.ttf"
-  font "Hanuman-Regular.ttf"
-  font "Hanuman-Thin.ttf"
+  font "Hanuman[wght].ttf"
 
   # No zap stanza required
 end

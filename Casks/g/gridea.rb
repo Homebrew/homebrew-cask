@@ -8,9 +8,19 @@ cask "gridea" do
   desc "Static blog writing client"
   homepage "https://gridea.dev/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Gridea.app"
+
+  zap trash: [
+        "~/.gridea",
+        "~/Library/Application Support/gridea",
+        "~/Library/Preferences/com.electron.gridea.plist",
+        "~/Library/Saved Application State/com.electron.gridea.savedState",
+      ],
+      rmdir: "~/Documents/Gridea"
 
   caveats do
     requires_rosetta

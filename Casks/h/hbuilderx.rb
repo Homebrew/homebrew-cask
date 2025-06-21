@@ -1,8 +1,11 @@
 cask "hbuilderx" do
-  version "4.24.2024072208"
-  sha256 "5d9df23cdfdf51b239f55a43bfb2bbf977f8ee5aafdcd96ab07c6c85c55fd4a6"
+  arch arm: ".arm64"
 
-  url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}.dmg",
+  version "4.66.2025051912"
+  sha256 arm:   "5bbee3a496f770c846ea7dc1bd6014acb1d1a55c5b278d07ee916bb216d07f5f",
+         intel: "ad5e42d34356cea237d516ae8861e86578488ba38bb45251a0badc5ff6905d71"
+
+  url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}#{arch}.dmg",
       verified: "download1.dcloud.net.cn/download/"
   name "HBuilderX"
   desc "HTML editor"
@@ -18,8 +21,4 @@ cask "hbuilderx" do
   app "HBuilderX.app"
 
   zap trash: "~/Library/Application Support/HBuilder X"
-
-  caveats do
-    requires_rosetta
-  end
 end

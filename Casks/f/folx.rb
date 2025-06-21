@@ -1,5 +1,5 @@
 cask "folx" do
-  version "5.27"
+  version "5.29"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg",
@@ -12,6 +12,8 @@ cask "folx" do
     url "https://cdn.electronic.us/products/folx/mac/update/settings.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :sierra"

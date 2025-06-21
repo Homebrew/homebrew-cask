@@ -1,8 +1,11 @@
 cask "persepolis-download-manager" do
-  version "5.0.0"
-  sha256 "b1009cf8308dccd29ae79e37582ff0c78adf632ac43f9479c9c23b9dcd2500af"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version}_macos.dmg",
+  version "5.1.1"
+  sha256 arm:   "7983546e40b8e17e4d4b5bc10630a77d145bc8aa21c523f972e1ca46bffe9925",
+         intel: "8c7eb9934f81160b6d11f4979d417bebab5bbd1b4fd63f97f96d729879f0c7fb"
+
+  url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version}_macos_#{arch}.dmg",
       verified: "github.com/persepolisdm/persepolis/"
   name "Persepolis"
   desc "Download manager"
@@ -13,14 +16,12 @@ cask "persepolis-download-manager" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Persepolis Download Manager.app"
 
   zap trash: [
     "~/.persepolis",
     "~/Library/Application Support/persepolis_download_manager",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

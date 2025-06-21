@@ -1,6 +1,6 @@
 cask "font-overpass-nerd-font" do
-  version "3.2.1"
-  sha256 "809c5a1e25b3a6633a07a50d59c7de7faca4b5d6df5696bf4d470bb8d3dc1244"
+  version "3.4.0"
+  sha256 "39e5a4c1ce400486ab6c11724a0997de6257231283923079134272ed4beeb843"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Overpass.zip"
   name "Overpass Nerd Font families (Overpass)"
@@ -10,6 +10,8 @@ cask "font-overpass-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "OverpassMNerdFont-Bold.otf"
   font "OverpassMNerdFont-Light.otf"

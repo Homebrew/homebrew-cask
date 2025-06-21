@@ -1,6 +1,6 @@
 cask "dockx" do
-  version "1.1.11"
-  sha256 "d2ed54c5216488a1471731411f378ff4653c17629efffb037af775d547046861"
+  version "1.1.17"
+  sha256 "76ec0e5187e8bc69784311c1c861ec4697747ac5820d284ea0319ce33cb4337d"
 
   url "https://d-1251679148.file.myqcloud.com/download/DockX-#{version.csv.first}.dmg",
       verified: "d-1251679148.file.myqcloud.com/download/"
@@ -14,7 +14,7 @@ cask "dockx" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "DockX.app"
 

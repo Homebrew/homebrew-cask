@@ -14,11 +14,14 @@ cask "jalview" do
     url "https://www.jalview.org/downloads/installers/release/Jalview-latest-macos-x64-java_8.dmg"
     regex(/Jalview-(\d(?:_\d+)*)-macos-x64-java_8\.dmg/i)
     strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map do |match|
-        match[0].tr("_", ".").to_s
-      end
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      match[1].tr("_", ".")
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Jalview.app"
   binary "#{appdir}/Jalview.app/Contents/MacOS/jalview"

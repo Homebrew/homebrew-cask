@@ -19,14 +19,16 @@ cask "hammerspoon" do
         verified: "github.com/Hammerspoon/hammerspoon/"
 
     livecheck do
-      url :url
-      strategy :github_latest
+      url "https://raw.githubusercontent.com/Hammerspoon/hammerspoon/master/appcast.xml"
+      strategy :sparkle, &:short_version
     end
   end
 
   name "Hammerspoon"
   desc "Desktop automation application"
   homepage "https://www.hammerspoon.org/"
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :mojave"

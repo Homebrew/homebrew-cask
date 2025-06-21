@@ -12,7 +12,10 @@ cask "typeit4me" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "TypeIt4Me.app"
 

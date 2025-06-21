@@ -12,6 +12,8 @@ cask "font-simple-line-icons" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "simple-line-icons-#{version}/fonts/Simple-Line-Icons.ttf"
 
   # No zap stanza required

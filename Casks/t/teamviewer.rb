@@ -42,8 +42,8 @@ cask "teamviewer" do
     EOS
   end
   on_big_sur do
-    version "15.57.5"
-    sha256 "5f53e81921bf7b15e8605ad3cfa39c4769303bbb06d57dc50a683be0d5889e1f"
+    version "15.66.6"
+    sha256 "b70c30c2491094702c2cd3f432781884868d1078b02dfa423e19c3c958271638"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
@@ -53,8 +53,8 @@ cask "teamviewer" do
     pkg "TeamViewer.pkg"
   end
   on_monterey :or_newer do
-    version "15.57.5"
-    sha256 "5f53e81921bf7b15e8605ad3cfa39c4769303bbb06d57dc50a683be0d5889e1f"
+    version "15.66.6"
+    sha256 "b70c30c2491094702c2cd3f432781884868d1078b02dfa423e19c3c958271638"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=12.7&type=1&channel=1"
@@ -101,6 +101,7 @@ cask "teamviewer" do
             ],
             pkgutil:   [
               "com.teamviewer.AuthorizationPlugin",
+              "com.teamviewer.AuthorizationResources",
               "com.teamviewer.remoteaudiodriver",
               "com.teamviewer.teamviewer.*",
               "TeamViewerUninstaller",

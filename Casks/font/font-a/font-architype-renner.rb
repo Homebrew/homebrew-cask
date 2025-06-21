@@ -6,6 +6,10 @@ cask "font-architype-renner" do
   name "Architype Renner"
   homepage "https://fontlot.com/4598/architype-renner/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "ArchitypeRenner-Bold.otf"
   font "ArchitypeRenner-Demi.otf"
   font "ArchitypeRenner-Medium.otf"

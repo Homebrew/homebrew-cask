@@ -7,6 +7,10 @@ cask "notunes" do
   desc "Simple application that will prevent iTunes or Apple Music from launching"
   homepage "https://github.com/tombonez/noTunes"
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :mojave"
+
   app "noTunes.app"
 
   zap trash: "~/Library/Preferences/digital.twisted.noTunes.plist"

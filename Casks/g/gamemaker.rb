@@ -1,6 +1,6 @@
 cask "gamemaker" do
-  version "2024.8.1.171"
-  sha256 "1cba0f594bcfd292e9add8a7b6b8d4c8f3b84f9b6d98e3bbd9679e79cab07c7b"
+  version "2024.13.0.190"
+  sha256 "ecaaa253dd5eb24b2ff1ac6e2cb415c7bdfabfa368fc37a94597ec06a8454d76"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
       verified: "gms.yoyogames.com/"
@@ -9,9 +9,11 @@ cask "gamemaker" do
   homepage "https://gamemaker.io/"
 
   livecheck do
-    url "https://gamemaker.io/en/download/mac/monthly/GameMaker.pkg"
-    strategy :header_match
+    url "https://gms.yoyogames.com/update-mac.rss"
+    strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "GameMaker-#{version}.pkg"
 

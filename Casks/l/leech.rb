@@ -1,6 +1,6 @@
 cask "leech" do
-  version "3.2"
-  sha256 "333b57aae1a7406a7b44f6d57765ffd0b85df2a7283ea5936c2b09ec5c2c0339"
+  version "3.2.1"
+  sha256 "91616cf08e302e2c5226f15dede92e2f308aac57a575ef9fbe719ed49a883e99"
 
   url "https://manytricks.com/download/_do_not_hotlink_/leech#{version.no_dots.ljust(3, "0")}.dmg"
   name "Leech"
@@ -11,6 +11,8 @@ cask "leech" do
     url "https://manytricks.com/leech/appcast/"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

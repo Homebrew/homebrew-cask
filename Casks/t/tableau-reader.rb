@@ -1,9 +1,9 @@
 cask "tableau-reader" do
   arch arm: "-arm64"
 
-  version "2024.2.2"
-  sha256 arm:   "72952d202ee37d1e369da509e372a93ed1d07b78717f54e19a5d21b730b444dc",
-         intel: "40d6cd867b2b2eca6de40d9924f3c7386e054b166f9b84c7cd002bd8b90fac8a"
+  version "2025.2.0"
+  sha256 arm:   "5eb73c110a850cb1d9a72ba1c1dcd36e6255d4b118ee55c865fec141e2f14d08",
+         intel: "6b7ad38f17501dc0e2c017f834606bc0ebe3d5f522e4fdb097daaccd4b63b50d"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauReader-#{version.dots_to_hyphens}#{arch}.pkg",
       user_agent: "curl/8.7.1"
@@ -12,10 +12,7 @@ cask "tableau-reader" do
   homepage "https://www.tableau.com/products/reader"
 
   livecheck do
-    url "https://downloads.tableau.com/TableauAutoUpdate.xml"
-    strategy :xml do |xml|
-      xml.get_elements("//version").map { |item| item.attributes["releaseNotesVersion"] }
-    end
+    cask "tableau"
   end
 
   pkg "TableauReader-#{version.dots_to_hyphens}#{arch}.pkg"

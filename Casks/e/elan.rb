@@ -1,9 +1,9 @@
 cask "elan" do
   arch arm: "_M1"
 
-  version "6.8"
-  sha256 arm:   "428e89317fdaf48b181922a3d9572552e4c9ea01cf548836a4273075f2570037",
-         intel: "ef487113e6498f20def9c1feea78b64c4611066b7cce3a12772324c39e7f8b87"
+  version "6.9"
+  sha256 arm:   "3fb29d26db2627d4a326570603f785f472dcd7f9b810203e68b7dbf3d17e38f7",
+         intel: "26d60d433f802927494e7fbd78a16dc0a7b8302577c5965ff59beae25f0953d2"
 
   url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}#{arch}_mac.zip"
   name "ELAN"
@@ -12,13 +12,16 @@ cask "elan" do
 
   livecheck do
     url "https://archive.mpi.nl/tla/elan/download"
-    strategy :page_match do |page|
-      v = page[/href=.*?ELAN[._-]v?(\d+(?:-\d+)+)#{arch}[._-]mac\.zip/i, 1]
-      next if v.blank?
+    regex(/href=.*?ELAN[._-]v?(\d+(?:-\d+)+)#{arch}[._-]mac\.zip/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
 
-      v.tr("-", ".")
+      match[1].tr("-", ".")
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

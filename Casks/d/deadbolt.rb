@@ -1,8 +1,11 @@
 cask "deadbolt" do
-  version "1.0.0"
-  sha256 "df5b9b0988f168946809f1db17711f589f62bc211a6dad724eac9b0844285370"
+  arch arm: "-arm64"
 
-  url "https://github.com/alichtman/deadbolt/releases/download/#{version}/Deadbolt-#{version}-mac.zip"
+  version "2.0.2"
+  sha256 arm:   "d5ede4239f0474124bfa11310938d5657d1fc6d550b32fabe1672506ca6e60a7",
+         intel: "7ef2584d67b102944da8ec823811488b6a4137f83a4ff8c30d50685e996385f7"
+
+  url "https://github.com/alichtman/deadbolt/releases/download/v#{version}/Deadbolt-#{version}#{arch}.dmg"
   name "Deadbolt"
   desc "File encryption tool"
   homepage "https://github.com/alichtman/deadbolt"
@@ -12,6 +15,8 @@ cask "deadbolt" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Deadbolt.app"
 
   zap trash: [
@@ -19,8 +24,4 @@ cask "deadbolt" do
     "~/Library/Preferences/org.alichtman.deadbolt.plist",
     "~/Library/Saved Application State/org.alichtman.deadbolt.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

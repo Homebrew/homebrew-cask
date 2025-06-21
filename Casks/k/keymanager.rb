@@ -1,6 +1,6 @@
 cask "keymanager" do
-  version "4.4.19"
-  sha256 "fd41152f8897bfce5e6e95fc74c7aa3044a60266726d7b2dee0896901b02359b"
+  version "4.5.9"
+  sha256 "a91b7fa1a4774d089f2918cacb95a94adbecf0c6f30aa1ba4211f58662139e54"
 
   url "https://keymanager.trustasia.com/release/KeyManager-#{version}.dmg",
       verified: "keymanager.trustasia.com/"
@@ -9,11 +9,21 @@ cask "keymanager" do
   homepage "https://keymanager.org/"
 
   livecheck do
-    url "https://keymanager.org/release/latest.yml"
+    url "https://keymanager.trustasia.com/release/latest-mac.yml"
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "KeyManager.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/keymanager.sfl*",
+    "~/Library/Application Support/keymanager",
+    "~/Library/Logs/keymanager",
+    "~/Library/Preferences/keymanager.plist",
+    "~/Library/Saved Application State/keymanager.savedState",
+  ]
 
   caveats do
     requires_rosetta

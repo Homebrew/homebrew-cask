@@ -1,9 +1,9 @@
 cask "inkdrop" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.8.1"
-  sha256 arm:   "356ff049b3c0eb0686d54ee1e15cb345cafe69777f74f0cd7d9c08f97f9d39bd",
-         intel: "89ed1418a1881404c90af5016720c5424f1531994109c7ce4c819968a3e7d1bb"
+  version "5.11.4"
+  sha256 arm:   "4832b3f88f5296efb274930d8ac39637feca1a55ae2dd6f63a8bfcd75cbe2425",
+         intel: "9369924eb94ca57cf437e51e1e09a4e19eeced04a1332e6c19e7b13f183e82a9"
 
   url "https://d3ip0rje8grhnl.cloudfront.net/v#{version}/Inkdrop-#{version}-#{arch}-Mac.zip",
       verified: "d3ip0rje8grhnl.cloudfront.net/"
@@ -18,7 +18,7 @@ cask "inkdrop" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Inkdrop.app"
 

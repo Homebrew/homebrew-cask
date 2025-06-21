@@ -1,6 +1,6 @@
 cask "flycast" do
-  version "2.3"
-  sha256 "abf46c3ec2cf7059f765d23fe8bd7b9febac652f4b943188048f0c327aa06f0c"
+  version "2.5"
+  sha256 "8be072b2c3902ddb90ad16daff5b0a5bc149b26b0c21eb0ded05a888e4178c2e"
 
   url "https://github.com/flyinghead/flycast/releases/download/v#{version}/flycast-macOS-#{version}.zip"
   name "Flycast"
@@ -12,10 +12,12 @@ cask "flycast" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Flycast.app"
 
   zap rmdir: [
-    "/Library/Application Support/Flycast/",
+    "/Library/Application Support/Flycast",
     "~/.flycast",
     "~/.reicast",
   ]

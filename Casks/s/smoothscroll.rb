@@ -1,5 +1,5 @@
 cask "smoothscroll" do
-  version "1.7.3"
+  version "1.7.6"
   sha256 :no_check
 
   url "https://www.smoothscroll.net/mac/download/SmoothScroll.app.zip"
@@ -11,6 +11,8 @@ cask "smoothscroll" do
     url "https://updater.smoothscroll.net/mac/updater.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

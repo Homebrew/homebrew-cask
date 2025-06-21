@@ -6,10 +6,9 @@ cask "aexol-remote-mouse" do
   name "Aexol Remote Mouse"
   homepage "https://remotemouse.aexol.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-11-15", because: :unmaintained
 
   app "Remote Mouse for Mac.app"
 

@@ -1,5 +1,5 @@
 cask "xnviewmp" do
-  version "1.8.0"
+  version "1.9.2"
   sha256 :no_check
 
   url "https://download.xnview.com/XnViewMP-mac.dmg"
@@ -8,12 +8,12 @@ cask "xnviewmp" do
   homepage "https://www.xnview.com/en/xnviewmp/"
 
   livecheck do
-    url :homepage
-    regex(/>XnView\sMP\sv?(\d+(?:\.\d+)+)[\s<]/i)
+    url "http://www.xnview.com/update.txt"
+    regex(/\[XnViewMP\].*?v?(\d+(?:\.\d+)+)/im)
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :sierra"
 
   app "XnViewMP.app"
 

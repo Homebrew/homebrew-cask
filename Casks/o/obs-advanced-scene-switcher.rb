@@ -1,12 +1,17 @@
 cask "obs-advanced-scene-switcher" do
-  version "1.27.2"
-  sha256 "f7abd9e7cec887a015adee85aa85060e652e0af02826037ef91f78f932b7e769"
+  version "1.30.2"
+  sha256 "985587d8f7a17e8a43c8dad03b8683bbc90db6d30d7323ea12457e1e7fb7278a"
 
   url "https://github.com/WarmUpTill/SceneSwitcher/releases/download/#{version}/advanced-scene-switcher-#{version}-macos-universal.pkg",
       verified: "github.com/WarmUpTill/SceneSwitcher/"
   name "OBS Advanced Scene Switcher"
   desc "Automated scene switcher for OBS Studio"
   homepage "https://obsproject.com/forum/resources/advanced-scene-switcher.395"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on cask: "obs"
 

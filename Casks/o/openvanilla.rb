@@ -1,6 +1,6 @@
 cask "openvanilla" do
-  version "1.6.4,3310"
-  sha256 "06e5cf778bd19ea05d85d037d472dffd8ffad6cc1dfb51814435db14f1eb139e"
+  version "1.8.2,3442"
+  sha256 "19309af5740d750dd36fe99d2ab7a9019983c9d0fe41fa0d8ec9c34dccc453b5"
 
   url "https://github.com/openvanilla/openvanilla/releases/download/#{version.csv.first}/OpenVanilla-Installer-Mac-#{version.csv.first}.zip",
       verified: "github.com/openvanilla/openvanilla/"
@@ -11,17 +11,23 @@ cask "openvanilla" do
   livecheck do
     url "https://raw.githubusercontent.com/openvanilla/openvanilla/master/Source/Mac/OpenVanilla-Info.plist"
     strategy :xml do |xml|
-      short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text&.strip
-      version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text&.strip
+      short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text
+      version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text
       next if short_version.blank? || version.blank?
 
-      "#{short_version},#{version}"
+      "#{short_version.strip},#{version.strip}"
     end
   end
 
   container nested: "OpenVanillaInstaller.app/Contents/Resources/NotarizedArchives/OpenVanilla-r#{version.csv.second}.zip"
 
   input_method "OpenVanilla.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.openvanilla.*.sfl*",
+    "~/Library/Application Support/OpenVanilla",
+    "~/Library/Preferences/org.openvanilla.*",
+  ]
 
   caveats do
     logout

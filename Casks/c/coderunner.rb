@@ -1,6 +1,6 @@
 cask "coderunner" do
-  version "4.3"
-  sha256 "9cbf8fe44f38d67b63518728842804fe970db4ce69a2cb005826bae96f5d28d0"
+  version "4.4.1"
+  sha256 "588435c4e46bc0cc7423d3127b0dd8777e04b62cd7563af6fea185d456e1e33b"
 
   url "https://coderunnerapp.com/download/update/CodeRunner-#{version}.zip"
   name "CodeRunner"
@@ -12,13 +12,15 @@ cask "coderunner" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "CodeRunner.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs/",
+    "~/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs",
     "~/Library/Application Support/CodeRunner",
     "~/Library/Autosave Information/com.krill.CodeRunner.plist",
     "~/Library/Caches/com.krill.CodeRunner",

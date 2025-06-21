@@ -13,7 +13,14 @@ cask "bricksmith" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+
   app "Bricksmith/Bricksmith.app"
 
-  zap trash: "~/Library/Preferences/com.AllenSmith.Bricksmith.plist"
+  zap trash: [
+    "~/Library/HTTPStorages/com.AllenSmith.Bricksmith",
+    "~/Library/Preferences/com.AllenSmith.Bricksmith.plist",
+  ]
 end

@@ -1,13 +1,21 @@
 cask "keycastr" do
-  version "0.10.1"
-  sha256 "11afd0b5888cec9d867394fc33e5a2cd206b826849f8d5b87ab9f6039f209549"
+  version "0.10.3"
+  sha256 "e3384bb08686d2b2bba509d0d119a1c2b714046b5407871adfc1a51574298a25"
 
   url "https://github.com/keycastr/keycastr/releases/download/v#{version}/KeyCastr.app.zip"
   name "KeyCastr"
   desc "Open-source keystroke visualiser"
   homepage "https://github.com/keycastr/keycastr"
 
+  livecheck do
+    url "https://keycastr.github.io/appcast.xml"
+    strategy :sparkle
+  end
+
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "KeyCastr.app"
 

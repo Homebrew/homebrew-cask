@@ -11,6 +11,8 @@ cask "quakespasm" do
     url "https://sourceforge.net/projects/quakespasm/rss?path=/Mac"
   end
 
+  no_autobump! because: :requires_manual_review
+
   suite "QuakeSpasm"
 
   preflight do

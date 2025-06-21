@@ -13,7 +13,18 @@ cask "bathyscaphe" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "BathyScaphe.app"
+
+  zap trash: [
+    "~/Library/Application Support/BathyScaphe",
+    "~/Library/Caches/jp.tsawada2.BathyScaphe",
+    "~/Library/HTTPStorages/jp.tsawada2.BathyScaphe",
+    "~/Library/Preferences/jp.tsawada2.BathyScaphe.plist",
+    "~/Library/Saved Application State/jp.tsawada2.BathyScaphe.savedState",
+  ]
 end

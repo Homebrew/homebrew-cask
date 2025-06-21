@@ -13,6 +13,8 @@ cask "font-ipamjmincho" do
     regex(/Ver\.v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "ipamjm.ttf"
 
   # No zap stanza required

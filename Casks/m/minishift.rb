@@ -6,6 +6,11 @@ cask "minishift" do
   name "Minishift"
   homepage "https://github.com/minishift/minishift"
 
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2020-09-26", because: :unmaintained
+  disable! date: "2025-06-26", because: :unmaintained
+
   binary "minishift-#{version}-darwin-amd64/minishift"
 
   zap trash: "~/.minishift"

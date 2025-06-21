@@ -7,7 +7,9 @@ cask "keycast" do
   desc "Record keystroke for screencast"
   homepage "https://github.com/cho45/KeyCast"
 
-  deprecate! date: "2024-01-05", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   app "KeyCast.app"
 end

@@ -1,8 +1,8 @@
 cask "sync" do
-  version "2.2.45"
-  sha256 "7cd7e39b8a57a018f19e670c01241fca16f412d71267f132165aa85334f1f81d"
+  version "2.2.48"
+  sha256 "9fec22de7091b64186cefac6f99c312df213fcc46034ae6e4c1631184cd97063"
 
-  url "https://www.sync.com/download/apple/Sync-#{version}.dmg"
+  url "https://www10.sync.com/download/apple/Sync-#{version}.dmg"
   name "Sync"
   desc "Store, share and access files from anywhere"
   homepage "https://www.sync.com/"

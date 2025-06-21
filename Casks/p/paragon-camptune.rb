@@ -1,8 +1,8 @@
 cask "paragon-camptune" do
-  version "11.1.26"
+  version "12.0.37"
   sha256 :no_check
 
-  url "https://dl.paragon-software.com/demo/camptune_demo_11.dmg"
+  url "https://dl.paragon-software.com/demo/camptune_demo_#{version.major}.dmg"
   name "Paragon CampTune"
   desc "Manage disk space on Macs with Boot Camp"
   homepage "https://www.paragon-software.com/home/camptune/"
@@ -14,8 +14,8 @@ cask "paragon-camptune" do
     end
   end
 
-  depends_on macos: ">= :sierra"
   depends_on arch: :x86_64
+  depends_on macos: ">= :sierra"
 
   app "Paragon CampTune.app"
 
@@ -24,7 +24,7 @@ cask "paragon-camptune" do
               "/Library/Application Support/Paragon Software/com.paragon-software.camptunex.helper-data",
               "/Library/Application Support/Paragon Software/uc.camptunex",
             ],
-            rmdir:  "/Library/Application Support/Paragon Software/"
+            rmdir:  "/Library/Application Support/Paragon Software"
 
   zap trash: [
     "~/Library/Application Support/com.paragon-software.camptunex",

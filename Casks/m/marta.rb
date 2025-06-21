@@ -12,13 +12,17 @@ cask "marta" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Marta.app"
 
   zap trash: [
     "~/Library/Application Support/org.yanex.marta",
     "~/Library/Caches/org.yanex.marta",
+    "~/Library/HTTPStorages/org.yanex.marta",
     "~/Library/Preferences/org.yanex.marta.plist",
     "~/Library/Saved Application State/org.yanex.marta.savedState",
   ]

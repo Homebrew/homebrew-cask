@@ -1,6 +1,6 @@
 cask "gpg-suite@nightly" do
-  version "3539n"
-  sha256 "d4af4d14e1fdaa527e9189e65f222fd087d781fc43236eb3b41e45343bf0dc8b"
+  version "3592n"
+  sha256 "8e4957a11f8dff1399a5d54f166e03e7fe909fb45aba0533649fe4e37789040a"
 
   url "https://releases.gpgtools.org/nightlies/GPG_Suite-#{version}.dmg"
   name "GPG Suite Nightly"
@@ -9,7 +9,7 @@ cask "gpg-suite@nightly" do
 
   livecheck do
     url "https://releases.gpgtools.org/nightlies/"
-    regex(/href=.*?GPG_Suite-([0-9a-z]+)\.dmg/i)
+    regex(/href=.*?GPG[._-]Suite[._-]v?(\d+(?:\.\d+)*(?:[a-z]\d*)?)\.dmg/i)
   end
 
   auto_updates true
@@ -68,9 +68,9 @@ cask "gpg-suite@nightly" do
             ]
 
   zap trash: [
-    "~/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework",
     "~/Library/Application Support/GPGTools",
     "~/Library/Caches/org.gpgtools.gpg*",
+    "~/Library/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework",
     "~/Library/Containers/com.apple.mail/Data/Library/Preferences/org.gpgtools.*",
     "~/Library/Frameworks/Libmacgpg.framework",
     "~/Library/HTTPStorages/org.gpgtools.*",

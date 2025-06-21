@@ -1,6 +1,6 @@
 cask "retro-virtual-machine" do
-  version "2.1.17"
-  sha256 "da2bcf0b6ef9ff84dcb587a443f4925592d24900fbe958f90a04ea5b7067ce40"
+  version "2.1.20"
+  sha256 "01d3d60e419c1dcbaf7185aa465ea60dd072c0d3205792f0ea6adb97d4d78301"
 
   url "https://static.retrovm.org/release/#{version}/RetroVirtualMachine.#{version}.dmg",
       verified: "static.retrovm.org/release/"
@@ -12,6 +12,10 @@ cask "retro-virtual-machine" do
     url "https://www.retrovirtualmachine.org/download/"
     regex(/RetroVirtualMachine[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :high_sierra"
 
   app "Retro Virtual Machine #{version.major_minor}.app"
 

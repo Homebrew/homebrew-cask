@@ -1,5 +1,5 @@
 cask "clickcharts" do
-  version "9.45"
+  version "9.50"
   sha256 :no_check
 
   url "https://www.nchsoftware.com/chart/clickchartspmaci.zip",
@@ -12,6 +12,8 @@ cask "clickcharts" do
     url "https://www.nchsoftware.com/chart/versions.html"
     regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "ClickCharts.app"
 

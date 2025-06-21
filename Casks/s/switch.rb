@@ -1,5 +1,5 @@
 cask "switch" do
-  version "12.04"
+  version "13.07"
   sha256 :no_check
 
   url "https://www.nch.com.au/components/switchmaci.zip"
@@ -9,8 +9,10 @@ cask "switch" do
 
   livecheck do
     url "https://www.nch.com.au/switch/versions.html"
-    regex(%r{Version\s+v?(\d+(?:\.\d+)+)\s*</h\d>\s*macOS\s+Release}im)
+    regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Switch.app"
 

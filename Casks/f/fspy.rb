@@ -8,6 +8,8 @@ cask "fspy" do
   desc "Still image camera matching"
   homepage "https://fspy.io/"
 
+  no_autobump! because: :requires_manual_review
+
   app "fSpy.app"
 
   zap trash: "~/Library/Application Support/fspy"

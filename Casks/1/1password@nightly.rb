@@ -13,7 +13,7 @@ cask "1password@nightly" do
     "1password",
     "1password@beta",
   ]
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "1Password.app"
 

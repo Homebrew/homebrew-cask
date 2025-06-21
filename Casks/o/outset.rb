@@ -12,6 +12,8 @@ cask "outset" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "outset-#{version}.pkg"
 
   uninstall launchctl: [

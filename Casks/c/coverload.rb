@@ -1,6 +1,6 @@
 cask "coverload" do
-  version "2.4.0-800"
-  sha256 "83de72b91cd9d04047533cbd27e93de18685b26a0d054cad53b80c56ad3647d4"
+  version "2.4.2-802"
+  sha256 "71fe1ff60856b2f1f978006246fc3873824b5215b7a15b9abf51ad8799014321"
 
   url "https://s3-us-west-2.amazonaws.com/coverloadapp.com/Uploads/CoverLoad-#{version}.zip",
       verified: "s3-us-west-2.amazonaws.com/coverloadapp.com/Uploads/"
@@ -12,6 +12,10 @@ cask "coverload" do
     url :homepage
     regex(%r{href=.*?/CoverLoad[._-]v?(\d+(?:\.\d+)+-\d+)\.zip}i)
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :high_sierra"
 
   app "CoverLoad.app"
 

@@ -12,6 +12,8 @@ cask "gotiengviet" do
     regex(/macOS.*?>\s*v?(\d+(?:\.\d+)+)[^<]*</im)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "GoTiengViet.app"
 
   zap trash: [

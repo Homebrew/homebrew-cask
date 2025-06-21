@@ -1,9 +1,9 @@
 cask "microsoft-openjdk@21" do
   arch arm: "aarch64", intel: "x64"
 
-  version "21.0.4"
-  sha256 arm:   "147f73d0f97a7ce885ae0e582f7afe38b5af817ddb62a84584d9636024b17e90",
-         intel: "18306c3e485c31f513b15bcdfb76840f9bdf008d264dd8a7f13633b4e6b22bf6"
+  version "21.0.7"
+  sha256 arm:   "f75d70a4a37caefaaf5f3cbba76e57bfd73c1b11c25f394bd5d4fc6cc4c5cb2c",
+         intel: "496f139106a431a1efcf3b5b08a0c871b94069186656fea41e91fad4c8a40265"
 
   url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg",
       verified: "aka.ms/download-jdk/"
@@ -15,6 +15,8 @@ cask "microsoft-openjdk@21" do
     url "https://docs.microsoft.com/java/openjdk/download"
     regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(21(?:\.\d+)+)[._-]macOS[._-]#{arch}\.pkg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "microsoft-jdk-#{version}-macOS-#{arch}.pkg"
 

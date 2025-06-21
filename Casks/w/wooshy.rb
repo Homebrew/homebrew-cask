@@ -1,5 +1,5 @@
 cask "wooshy" do
-  version "27"
+  version "32"
   sha256 :no_check
 
   url "https://wooshy.app/releases/Wooshy.zip"
@@ -12,7 +12,8 @@ cask "wooshy" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :monterey"
+  auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "Wooshy.app"
 

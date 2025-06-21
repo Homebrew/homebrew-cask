@@ -10,6 +10,8 @@ cask "yakyak" do
   desc "Desktop chat client for Google Hangouts"
   homepage "https://github.com/yakyak/yakyak"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-27", because: :unmaintained
 
   app "YakYak-darwin-#{arch}/YakYak.app"

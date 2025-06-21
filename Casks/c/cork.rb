@@ -1,12 +1,16 @@
 cask "cork" do
-  version "1.4.5"
-  sha256 "f4d51f0afc50406f9b9eb55bd777dbb0235f6f0fe507ed5f27cd71b8e10e79ca"
+  version "1.5.5"
+  sha256 "89762307939bbb92ed0c43a3e5db9e0de6e7c5fca0b7be1a0c9fada44673051d"
 
-  url "https://github.com/buresdv/Cork/releases/download/v#{version}/Cork.zip",
-      verified: "github.com/buresdv/Cork/"
+  url "https://corkmac.app/RLS/#{version}/Cork.zip"
   name "Cork"
   desc "GUI companion app for Homebrew"
   homepage "https://www.corkmac.app/"
+
+  livecheck do
+    url "https://corkmac.app/RLS/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+  end
 
   depends_on macos: ">= :ventura"
 

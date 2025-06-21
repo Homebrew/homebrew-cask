@@ -8,32 +8,16 @@ cask "nextcloud" do
     end
   end
   on_monterey :or_newer do
-    version "3.14.0"
-    sha256 "b173b2b8cca1e4a11378d70b8cb46bbe67aa244f3e23b215a0c87c50e8cb4fe9"
+    version "3.16.6"
+    sha256 "3e5a1e2f83286f442b2f6c138faa27272ee5cf4831708d295b9bca70326961c8"
 
-    # Upstream publishes releases for multiple different minor versions and the
-    # "latest" release is sometimes a lower version. Until the "latest" release
-    # is reliably the highest version, we have to check multiple releases.
     livecheck do
-      url :url
-      regex(/^Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg$/i)
-      strategy :github_releases do |json, regex|
-        json.map do |release|
-          next if release["draft"] || release["prerelease"]
-
-          release["assets"]&.map do |asset|
-            match = asset["name"]&.match(regex)
-            next if match.blank?
-
-            match[1]
-          end
-        end.flatten
-      end
+      url "https://download.nextcloud.com/desktop/releases/Mac/Installer/"
+      regex(/href=.*?Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     end
   end
 
-  url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
-      verified: "github.com/nextcloud-releases/desktop/"
+  url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
   name "Nextcloud"
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"

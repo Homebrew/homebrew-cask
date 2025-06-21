@@ -1,28 +1,36 @@
 cask "concept2-utility" do
-  on_sierra :or_older do
+  on_high_sierra :or_older do
     version "7.09.02"
     sha256 "e4ebee8cde57c7ef63c3903285c3fc0ee8f87221e7c5529b9dcf97b3f9ebb57e"
+
+    url "https://software.concept2.com/utility/Concept2Utility#{version.no_dots}.dmg"
 
     livecheck do
       skip "Legacy version"
     end
-  end
-  on_high_sierra :or_newer do
-    version "7.14.00"
-    sha256 "389c5f77f290e2d60bb5dc8ddeae108e14df8b444265865ffb8f9ee75985aecd"
 
+    pkg "Concept2 Utility #{version}.pkg"
+  end
+  on_mojave :or_newer do
+    version "7.17.00"
+    sha256 "2796b6275e9d1ab08051b94e5c33e89a5b14d31020132324f9948f8aa754cae3"
+
+    url "https://software.concept2.com/utility/Concept2Utility#{version.no_dots}.pkg"
+
+    # We are using a regional URL as a workaround because checking the main
+    # releases page (https://www.concept2.com/support/software/utility) is
+    # failing in our CI environment.
     livecheck do
-      url :homepage
-      regex(/Concept2\s+Utility\s+(\d+(?:\.\d+)+)/i)
+      url "https://www.concept2.de/service/software/concept2-utility"
+      regex(/Concept2\s+Utility\s+v?(\d+(?:\.\d+)+)/i)
     end
   end
 
-  url "https://software.concept2.com/utility/Concept2Utility0#{version.no_dots}.dmg"
   name "Concept2 Utility"
   desc "Utilities for the Concept2 Performance Monitor"
-  homepage "https://www.concept2.com/service/software/concept2-utility"
+  homepage "https://www.concept2.com/support/software/utility"
 
-  pkg "Concept2 Utility #{version}.pkg"
+  no_autobump! because: :requires_manual_review
 
   uninstall pkgutil: "com.concept2.pkg.Concept2Utility"
 

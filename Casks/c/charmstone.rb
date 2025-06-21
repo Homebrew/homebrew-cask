@@ -1,6 +1,6 @@
 cask "charmstone" do
-  version "1.31"
-  sha256 "7fd362a8c482ae4c28c570ba03f99c6f8293f242bf3137f73d9c2f0e3746ac85"
+  version "1.39"
+  sha256 "112de0f49bd5b8442583910649e22950da6b88303d89c1f1a1401f3a3ab8c2cb"
 
   url "https://charmstone.app/downloads/Charmstone#{version}.dmg"
   name "Charmstone"
@@ -13,7 +13,7 @@ cask "charmstone" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Charmstone.app"
 

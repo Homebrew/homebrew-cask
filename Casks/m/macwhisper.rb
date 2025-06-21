@@ -1,9 +1,9 @@
 cask "macwhisper" do
-  version "9.13,875"
-  sha256 "6cff8f741d7eef37411277cdc69c8b75c16faa28337d55be432ffe183857f548"
+  version "12.11,1262"
+  sha256 "5e1a30d802daf274dbe797c999736d9e74adfc8ad270c3e8b4d422ce109f4ff9"
 
-  url "https://stickytimers.app/macwhisper/MacWhisper-#{version.csv.second}.zip",
-      verified: "stickytimers.app/macwhisper/"
+  url "https://cdn.macwhisper.com/macwhisper/MacWhisper-#{version.csv.second}.zip",
+      verified: "cdn.macwhisper.com/"
   name "MacWhisper"
   desc "Speech recognition tool"
   homepage "https://goodsnooze.gumroad.com/l/macwhisper"
@@ -13,12 +13,12 @@ cask "macwhisper" do
   livecheck do
     url "https://macwhisper-site.vercel.app/appcast.xml"
     strategy :sparkle do |items|
-      items.map { |item| "#{item.short_version},#{item.version}" }
+      items.map(&:nice_version)
     end
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "MacWhisper.app"
 

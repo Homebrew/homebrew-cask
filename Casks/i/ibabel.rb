@@ -5,13 +5,14 @@ cask "ibabel" do
   url "https://macinchem.org/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/iBabel.zip"
   name "iBabel"
   desc "GUI for the cheminformatics toolkit OpenBabel"
-  homepage "https://www.macinchem.org/ibabel/"
+  homepage "https://macinchem.org/ibabel/"
 
   livecheck do
     url :homepage
     regex(%r{href=.*?/uploads/(\d+)/(\d+)/iBabel\.zip}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
+      next if match.blank?
 
       cask = CaskLoader.load(__FILE__)
       download_url = "https://macinchem.org/wp-content/uploads/#{match[1]}/#{match[2]}/iBabel.zip"
@@ -22,6 +23,8 @@ cask "ibabel" do
       "#{app_version.to_s.split(",").first},#{match[1]},#{match[2]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on formula: "open-babel"
   depends_on macos: ">= :monterey"

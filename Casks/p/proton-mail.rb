@@ -1,8 +1,8 @@
 cask "proton-mail" do
-  version "1.1.0"
-  sha256 :no_check
+  version "1.8.0"
+  sha256 "2048152e4774b4e60156514955e9e309e6169684331fe2a3a451e03f74184801"
 
-  url "https://proton.me/download/mail/macos/ProtonMail-desktop.dmg"
+  url "https://proton.me/download/mail/macos/#{version}/ProtonMail-desktop.dmg"
   name "Proton Mail"
   desc "Client for Proton Mail and Proton Calendar"
   homepage "https://proton.me/mail"

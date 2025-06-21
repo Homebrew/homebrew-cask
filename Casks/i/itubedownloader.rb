@@ -8,6 +8,8 @@ cask "itubedownloader" do
   desc "Download YouTube videos, channels, or playlists"
   homepage "https://alphasoftware.co/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-06-22", because: :no_longer_available
 
   app "iTubeDownloader.app"

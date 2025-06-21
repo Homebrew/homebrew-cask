@@ -14,6 +14,8 @@ cask "pop" do
     skip "Version information not available in a checkable format"
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Pop.app"

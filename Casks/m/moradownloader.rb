@@ -1,5 +1,5 @@
 cask "moradownloader" do
-  version "2.0.0.6"
+  version "2.0.0.8"
   sha256 :no_check
 
   url "https://downloader.mora.jp/mac/MoraDownloader.pkg"
@@ -8,16 +8,27 @@ cask "moradownloader" do
   homepage "https://mora.jp/"
 
   livecheck do
-    url "https://mora.jp/contents/data/system/noticeTouch.json"
-    regex(/Mac.*?v?[._-](\d+(?:\.\d+)+)/i)
+    url "https://downloader.mora.jp/mac/moradownloader.json"
+    regex(/(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      match = json.dig("versionInfo", "latestVersionName")&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "MoraDownloader.pkg"
 
   uninstall pkgutil: "jp.co.sonymusicsolutions.moradownloader"
 
   zap trash: [
-    "~/Library/Application Support/moraDownloader",
-    "~/Library/Preferences/jp.co.sonymusicsolutions.moradownloader.plist",
-  ]
+        "~/Library/Application Support/moraDownloader",
+        "~/Library/Caches/jp.co.sonymusicsolutions.moradownloader",
+        "~/Library/HTTPStorages/jp.co.sonymusicsolutions.moradownloader",
+        "~/Library/Preferences/jp.co.sonymusicsolutions.moradownloader.plist",
+      ],
+      rmdir: "~/Music/mora"
 end

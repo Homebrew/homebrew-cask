@@ -1,28 +1,36 @@
 cask "blueharvest" do
-  version "8.3"
-  sha256 "170bd1af5f9e8fe89e81fdf86e22c17854a355296d3bee018967ae896112fd92"
+  version "8.4,840"
+  sha256 "010c6d7f102caa533c28564cbcd1fa8952f4df283a450cc233b835e5995cffa6"
 
-  url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.no_dots}0.dmg"
+  url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.csv.second}.dmg"
   name "BlueHarvest"
   desc "Remove metadata files from external drives"
   homepage "https://zeroonetwenty.com/blueharvest/"
 
   livecheck do
-    url "https://zeroonetwenty.com/blueharvest/release-notes.html"
-    regex(/>\s*Version\s+(\d+(?:\.\d+)+)/i)
+    url "https://www.zeroonetwenty.com/blueharvest/downloads/blueharvest6.xml"
+    regex(/BlueHarvest[._-]?v?(\d+(?:\.\d+)*)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.short_version},#{match[1]}"
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :catalina"
 
   app "BlueHarvest.app"
 
-  uninstall launchctl: "com.zeroonetwenty.BlueHarvestHelper#{version.major}",
+  uninstall launchctl: "com.zeroonetwenty.BlueHarvestHelper#{version.csv.first.major}",
             quit:      "com.zeroonetwenty.BlueHarvest5",
-            delete:    "/Library/PrivilegedHelperTools/com.zeroonetwenty.BlueHarvestHelper#{version.major}"
+            delete:    "/Library/PrivilegedHelperTools/com.zeroonetwenty.BlueHarvestHelper#{version.csv.first.major}"
 
   zap trash: [
-    "~/Library/Caches/com.zeroonetwenty.BlueHarvest5",
-    "~/Library/Preferences/com.zeroonetwenty.BlueHarvest5.plist",
+    "~/Library/Caches/com.zeroonetwenty.BlueHarvest*",
+    "~/Library/Preferences/com.zeroonetwenty.BlueHarvest*.plist",
   ]
 end

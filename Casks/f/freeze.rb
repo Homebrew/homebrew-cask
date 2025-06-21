@@ -12,7 +12,9 @@ cask "freeze" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :mojave"
 
   app "Freeze.app"
 

@@ -1,9 +1,9 @@
 cask "tinymediamanager" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "5.0.11"
-  sha256 arm:   "da28a2b9d6a5d88e0851b451abecbe88b118b88c648f4a92abc334f470ec0f85",
-         intel: "4e31ed57e0e7cf362c6e642d6561d41cd378fa7942cff217ec98ebf43f9728c1"
+  version "5.1.7"
+  sha256 arm:   "8dd8fc1b5b1a0af4edc23cdc2c12a93e15dba638f07dfe0bd10f40850bc2225d",
+         intel: "6b4ce90bf4aaf17175c8793d868ae453001d243996d267d66a434f9bb1bdb128"
 
   url "https://release.tinymediamanager.org/v#{version.major}/dist/tinyMediaManager-#{version}-macos-#{arch}.dmg"
   name "tinyMediaManager"

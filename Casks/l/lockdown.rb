@@ -6,7 +6,11 @@ cask "lockdown" do
       verified: "bitbucket.org/objective-see/"
   name "Lockdown"
   desc "Audits and remediates security configuration settings"
-  homepage "https://objective-see.com/products/lockdown.html"
+  homepage "https://objective-see.org/products/lockdown.html"
+
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-03-02", because: :unmaintained
 
   app "Lockdown.app"
 

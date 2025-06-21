@@ -1,9 +1,9 @@
 cask "browserosaurus" do
   arch arm: "arm64", intel: "x64"
 
-  version "20.9.1"
-  sha256 arm:   "8b0192609e43a3038610ae75bc001a3c46bbf3df6805c97d0368c80e528a5054",
-         intel: "56cfa0a35795232cce6f11bd5c88333d3f48a89fc334b67b33825d0f959f25f4"
+  version "20.11.0"
+  sha256 arm:   "67fa9134c46e42a8d7b289399a269b3b449a98c5c139cd95ac2e7b91e50c3fd2",
+         intel: "236143df9933c8548dee01638437d99fa591154114d8ed58ed671ee1c6ded087"
 
   url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-#{arch}-#{version}.zip"
   name "Browserosaurus"
@@ -11,7 +11,7 @@ cask "browserosaurus" do
   homepage "https://github.com/will-stone/browserosaurus"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Browserosaurus.app"
 

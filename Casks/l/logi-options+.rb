@@ -22,15 +22,17 @@ cask "logi-options+" do
     end
   end
   on_monterey :or_newer do
-    version "1.82.618412"
+    version "1.92.731496"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
         verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
 
     livecheck do
-      url "https://support.logi.com/hc/en-gb/articles/1500005516462"
-      regex(/version\D*?(\d+(?:\.\d+)+)/i)
+      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus3/osx/public/update.json"
+      strategy :json do |json|
+        json["version"]
+      end
     end
   end
 
@@ -52,6 +54,7 @@ cask "logi-options+" do
               "com.logi.cp-dev-mgr",
               "com.logi.optionsplus",
               "com.logi.optionsplus.updater",
+              "com.logitech.LogiRightSight",
             ],
             quit:      [
               "com.logi.cp-dev-mgr",
@@ -61,6 +64,7 @@ cask "logi-options+" do
               "com.logitech.FirmwareUpdateTool",
               "com.logitech.logiaipromptbuilder",
             ],
+            pkgutil:   "com.logitech.LogiRightSightForWebcams.pkg",
             delete:    [
               "/Applications/logioptionsplus.app",
               "/Applications/Utilities/Logi Options+ Driver Installer.bundle",

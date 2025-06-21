@@ -7,6 +7,8 @@ cask "deviceinfo" do
   desc "Display device information"
   homepage "https://github.com/CoreNion/DeviceInfo/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-10", because: :unmaintained
 
   depends_on macos: ">= :sierra"

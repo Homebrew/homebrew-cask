@@ -1,16 +1,25 @@
 cask "electerm" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.40.6"
-  sha256 arm:   "f5851fe377ea4dc08a39b5efbad89d8a293a7947926f22388411bee9eee6cf13",
-         intel: "98be090de76496d6c9f49b7ec9805a57222c9872bfc890a0d8272ec983d1c06d"
+  version "1.91.16"
+  sha256 arm:   "bbaa7c8ebc3de4211014850a76d5bd84c72d90589c44b0555c765168a1d1c2e7",
+         intel: "5d61da3fbbcfa6932c1aadbe5f88a23cb12fbf7967f1abf4bc9673f21428d7ba"
 
-  url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
+  url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg",
+      verified: "github.com/electerm/electerm/"
   name "electerm"
   desc "Terminal/ssh/sftp client"
-  homepage "https://github.com/electerm/electerm/"
+  homepage "https://electerm.html5beta.com/"
+
+  livecheck do
+    url "https://electerm.html5beta.com/data/electerm-github-release.json"
+    strategy :json do |json|
+      json.dig("release", "tag_name")&.sub("v", "")
+    end
+  end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "electerm.app"
   binary "#{appdir}/electerm.app/Contents/MacOS/electerm"

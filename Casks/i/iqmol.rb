@@ -1,16 +1,19 @@
 cask "iqmol" do
-  version "3.1.4"
-  sha256 "e0f11b539b17ff7e0575b5e02c54f31b54c6eaa2b9e2578f168671392d33daa9"
+  version "3.1.5"
+  sha256 "0747e25fc21b2134eb63e744be58c2f2faeac3650edf5ff9760b79dfe1318350"
 
-  url "http://iqmol.org/downloads/IQmol-#{version}.dmg"
+  url "https://downloads.q-chem.com/iqmol/IQmol-#{version}.dmg",
+      verified: "downloads.q-chem.com/iqmol/"
   name "IQmol"
   desc "Free open-source molecular editor and visualization package"
   homepage "http://iqmol.org/"
 
   livecheck do
-    url "http://iqmol.org/downloads.html"
-    regex(/href=.*?=IQmol[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
+    url "https://iqmol.org/downloads.html"
+    regex(/href=.*?IQmol[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "IQmol.app"
 

@@ -1,9 +1,8 @@
 cask "snipaste" do
-  version "2.10.1"
-  sha256 "6939cb0b71d0e98b57c43eb2f56bb5446fe27fff3c680928dbd650ab4f68bb64"
+  version "2.10.8"
+  sha256 "7038e75db8df481a34f77630244247306d9e603009dc5a02b88ae1d8ea9c5ac9"
 
-  url "https://bitbucket.org/liule/snipaste/downloads/Snipaste-#{version}.dmg",
-      verified: "bitbucket.org/liule/snipaste/"
+  url "https://download.snipaste.com/archives/Snipaste-#{version}.dmg"
   name "Snipaste"
   desc "Snip or pin screenshots"
   homepage "https://www.snipaste.com/"
@@ -15,6 +14,7 @@ cask "snipaste" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Snipaste.app"
 

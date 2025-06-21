@@ -1,6 +1,6 @@
 cask "parsehub" do
-  version "2.4.36"
-  sha256 "b3ed41917ba231a6388e5571710aa6d8d89945c95a25ef6cedea168b590363d6"
+  version "2.4.43"
+  sha256 "0e300808d6523b0fdeb62afadd5eefd0767b4a7bddae47955ff00f8128881f83"
 
   url "https://parsehub.com/static/client/ParseHub-#{version}-mac.zip"
   name "ParseHub"
@@ -13,6 +13,7 @@ cask "parsehub" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "ParseHub.app"
 

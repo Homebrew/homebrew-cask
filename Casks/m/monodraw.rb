@@ -1,6 +1,6 @@
 cask "monodraw" do
-  version "1.6.1,111"
-  sha256 "8cdd852f3185ffb4c0ac374b23a49e6471b8cd061fe39088572f4ff7d58f4976"
+  version "1.7.1,118"
+  sha256 "eed8bf157a3134c852615ed359378ff2602709daae908d12803756e91450b057"
 
   url "https://updates.helftone.com/monodraw/downloads/Monodraw-b#{version.csv.second}.zip"
   name "Monodraw"
@@ -12,8 +12,10 @@ cask "monodraw" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Monodraw.app"
   binary "#{appdir}/Monodraw.app/Contents/Resources/monodraw"

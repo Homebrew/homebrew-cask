@@ -1,5 +1,5 @@
 cask "izip" do
-  version "4.9.51"
+  version "5.0.53"
   sha256 :no_check
 
   url "https://www.izip.com/izip.dmg"
@@ -8,11 +8,18 @@ cask "izip" do
   homepage "https://www.izip.com/"
 
   livecheck do
-    url "https://www.izip.com/download"
-    regex(%r{<li>Version:?\s*(\d+(?:\.\d+)+)</li>}i)
+    url "https://www.izip.com/updates"
+    strategy :sparkle
   end
+
+  auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "iZip.app"
 
-  zap trash: "~/Library/Preferences/com.codeius.izip.plist"
+  zap trash: [
+    "~/Library/HTTPStorages/com.codeius.izip",
+    "~/Library/Preferences/com.codeius.izip.plist",
+    "~/Library/Saved Application State/com.codeius.izip.savedState",
+  ]
 end

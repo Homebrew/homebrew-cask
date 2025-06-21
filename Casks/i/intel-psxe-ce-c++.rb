@@ -7,7 +7,9 @@ cask "intel-psxe-ce-c++" do
   desc "Software development tools"
   homepage "https://software.intel.com/en-us/parallel-studio-xe"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   installer manual: "m_ccompxe_#{version.csv.first}.app"
 

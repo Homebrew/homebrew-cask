@@ -1,9 +1,9 @@
 cask "aqua" do
   arch arm: "-aarch64"
 
-  version "2024.2,242.20224.331"
-  sha256 arm:   "2da73b2896cf8c7114291f7ab64730d494ed1adca83542b56702a6fb2fcaa92d",
-         intel: "0ea9875335a53d60722f91a7059847d1da857788fe3362685bf1e66dfe9aafed"
+  version "2024.3.2,243.23654.154"
+  sha256 arm:   "43974cdbbb71aaf5bfcfaf2cfd0e69e9920dda3973e64671936c1d52b267494d",
+         intel: "423d492e9849beb7edbbd1771650a04e8df9f469bf1789b41bc5878c84cee393"
 
   url "https://download.jetbrains.com/aqua/aqua-#{version.csv.first}#{arch}.dmg"
   name "Aqua"
@@ -13,8 +13,12 @@ cask "aqua" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=QA&latest=true&type=release"
     strategy :json do |json|
-      json["QA"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["QA"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end

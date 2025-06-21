@@ -5,7 +5,7 @@ cask "font-linux-libertine" do
   url "https://downloads.sourceforge.net/linuxlibertine/LinLibertineTTF_#{version.tr(",", "_")}.tgz",
       verified: "downloads.sourceforge.net/linuxlibertine/"
   name "Linux Libertine"
-  homepage "http://linuxlibertine.org/"
+  homepage "https://libertine-fonts.org/"
 
   # The regex below specifically matches filenames with a version and optional
   # date. One release (5.0.0) only used a date, so that will be treated as the
@@ -19,6 +19,8 @@ cask "font-linux-libertine" do
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "LinLibertine_DRah.ttf"
   font "LinLibertine_I.ttf"

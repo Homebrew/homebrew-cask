@@ -9,11 +9,13 @@ cask "starnet2" do
 
   livecheck do
     url "https://www.starnetastro.com/experimental/"
-    regex(%r{uploads/(\d+)/(\d+)/StarNet2T_MacOS.zip}i)
+    regex(%r{uploads/(\d+)/(\d+)/StarNet2T_MacOS\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on arch: :arm64
 
@@ -53,7 +55,10 @@ cask "starnet2" do
 
   uninstaller = "#{bin_path}/uninstaller.sh"
   uninstall_preflight do
-    libs = Dir.children("#{caskroom_path}/#{version}/StarNet2T_MacOS/lib").map { |lib| "/usr/local/lib/#{lib}" }
+    script_dir = "#{caskroom_path}/#{version}/StarNet2T_MacOS/lib"
+    next unless Dir.exist?(script_dir)
+
+    libs = Dir.children(script_dir).map { |lib| "/usr/local/lib/#{lib}" }
     File.write uninstaller, <<~EOS
       rm #{libs.join(" ")}
     EOS

@@ -1,6 +1,6 @@
 cask "kern" do
-  version "1.1.5"
-  sha256 "3b0420f5673227f20a16973208a434ab7c6faa7ec26161dc1c7d6f36dcc86ad7"
+  version "1.2.0"
+  sha256 "16b5cc1a323d8d089e97c58246d68558a66f986a9576d528e8621ebd2cf37816"
 
   url "https://www.fullbucket.de/music/dl/kern_#{version.dots_to_underscores}_mac.pkg"
   name "Kern"
@@ -12,12 +12,17 @@ cask "kern" do
     regex(/v(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   pkg "kern_#{version.dots_to_underscores}_mac.pkg"
 
   uninstall pkgutil: [
-    "com.fullbucket.audiounit.pkg.Kern",
-    "com.fullbucket.vst.pkg.Kern",
+    "de.fullbucket.audiounit.pkg.Kern",
+    "de.fullbucket.vst.pkg.Kern",
+    "de.fullbucket.vst3.pkg.Kern",
   ]
+
+  zap trash: "~/Music/FullBucketMusic/kern.ini"
 
   caveats do
     reboot

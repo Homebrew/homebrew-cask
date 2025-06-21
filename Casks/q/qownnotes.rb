@@ -1,6 +1,6 @@
 cask "qownnotes" do
-  version "24.9.6"
-  sha256 "9aedab5077f0c35cb47828a80e0b48e61147b1d4759ad2a6216e2b2f1c063ece"
+  version "25.6.2"
+  sha256 "4ac510fd72406afb3ad9cc386861bbe6f264542a80f989453d77df384c86b847"
 
   url "https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
       verified: "github.com/pbek/QOwnNotes/"
@@ -14,7 +14,7 @@ cask "qownnotes" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "QOwnNotes.app"
 

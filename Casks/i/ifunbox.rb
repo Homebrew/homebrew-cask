@@ -7,10 +7,9 @@ cask "ifunbox" do
   desc "File management software for iPhone and other Apple products"
   homepage "https://www.i-funbox.com/"
 
-  livecheck do
-    url "http://dl.i-funbox.com/updates/ifunbox.mac/update.xml"
-    strategy :sparkle
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-03-31", because: :unmaintained
 
   app "iFunBox.app"
 

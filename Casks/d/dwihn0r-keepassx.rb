@@ -6,6 +6,8 @@ cask "dwihn0r-keepassx" do
   name "KeePassX"
   homepage "https://github.com/dwihn0r/keepassx/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-10", because: :unmaintained
 
   app "KeePassX.app"

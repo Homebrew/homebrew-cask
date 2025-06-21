@@ -10,6 +10,8 @@ cask "oryoki" do
   desc "Experimental web browser with a thin interface"
   homepage "http://oryoki.io/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :unmaintained
 
   depends_on macos: ">= :el_capitan"

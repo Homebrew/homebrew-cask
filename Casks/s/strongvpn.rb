@@ -1,6 +1,6 @@
 cask "strongvpn" do
-  version "2.4.2,113487"
-  sha256 "8c7d83d60fb35642db8bc717f0cf518580f22b622db99441fadcf8b6c76bea84"
+  version "2.4.4,126629"
+  sha256 "46176e645baa0b56a8920fc53e02ba9485353d6755365ff0085229a01504033b"
 
   url "https://static.colomovers.com/mac/StrongVPN_v#{version.csv.first}_b#{version.csv.second}.zip",
       verified: "static.colomovers.com/mac/"

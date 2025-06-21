@@ -1,9 +1,10 @@
 cask "ideamaker" do
   arch arm: "-arm64"
+  livecheck_arch = on_arch_conditional arm: "apple_silicon", intel: "mac"
 
-  version "5.0.6.8380"
-  sha256 arm:   "11d2f2a8af237e047cdd1c28875dc59f5643d41d8314dda27d34185fe6a8eb7a",
-         intel: "06e9d37f1a2b7d24da7652bd21f41170c44ba73ce73e79d724aa5b85acc5d9cb"
+  version "5.2.2.8570"
+  sha256 arm:   "012ac416340d0e78bfb732cac0def2e9d8c1df7b4e056da165e35d20f3769d92",
+         intel: "7db657ef7c3d76a4a18c0c7f52d41d86832fe36cd0b39c90732efb739d26faa7"
 
   url "https://downcdn.raise3d.com/ideamaker/release/#{version.major_minor_patch}/install_ideaMaker_#{version}#{arch}.dmg"
   name "ideaMaker"
@@ -11,8 +12,14 @@ cask "ideamaker" do
   homepage "https://www.raise3d.com/ideamaker/"
 
   livecheck do
-    url "https://www.raise3d.com/download/"
-    regex(%r{href=.*?/install[._-]ideaMaker[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://api.raise3d.com/ideamakerio-v1.1/hq/ofpVersionControl/find", post_json: {}
+    regex(/install[._-]ideaMaker[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
+    strategy :json do |json, regex|
+      match = json.dig("data", "release_version", "#{livecheck_arch}_url")&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   depends_on macos: ">= :catalina"

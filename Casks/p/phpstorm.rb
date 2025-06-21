@@ -1,9 +1,9 @@
 cask "phpstorm" do
   arch arm: "-aarch64"
 
-  version "2024.2.1,242.21829.154"
-  sha256 arm:   "84ce46f11f5748dac2fe2a209d3b97984546e38cc39799838eeab681301306cc",
-         intel: "19c03065045eb8acfd1a2aad24de23a057f630e75761edf71927a31c0c942873"
+  version "2025.1.2,251.26094.133"
+  sha256 arm:   "0437ba56e1b12b1781ba132d10f9f66c6375cb0609b4755982c7edd1778a3a3b",
+         intel: "18b63995efa4e5ef555f08089c998694b4e3fcda84013155e970524f92c1b90e"
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.csv.first}#{arch}.dmg"
   name "JetBrains PhpStorm"
@@ -13,8 +13,12 @@ cask "phpstorm" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=PS&latest=true&type=release"
     strategy :json do |json|
-      json["PS"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["PS"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end
@@ -23,7 +27,16 @@ cask "phpstorm" do
   depends_on macos: ">= :high_sierra"
 
   app "PhpStorm.app"
-  binary "#{appdir}/PhpStorm.app/Contents/MacOS/phpstorm"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/phpstorm.wrapper.sh"
+  binary shimscript, target: "phpstorm"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/PhpStorm.app/Contents/MacOS/phpstorm' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/consentOptions",

@@ -1,6 +1,6 @@
 cask "playdate-mirror" do
-  version "1.2.0"
-  sha256 "fe4f6ee254ed54974a358540d5af1afeb38f7d8d0a1c8df21aef3215239d4e54"
+  version "1.3.0"
+  sha256 "2a8207105378d7517948b3c2030b66014dcd0ccce257916ab65576bfd7250eff"
 
   url "https://download-cdn.panic.com/mirror/Mirror-#{version}.zip",
       verified: "download-cdn.panic.com/mirror/"
@@ -13,8 +13,10 @@ cask "playdate-mirror" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Mirror.app"
 

@@ -1,11 +1,13 @@
 cask "opensc" do
-  version "0.25.1"
-  sha256 "9679d70db011a68e99360fcd4c5538b0481bd036fb058fc309b999837e63e063"
+  version "0.26.1"
+  sha256 "7b66e256cefc7fdf6d9267383ac9e4763e299339aa52c99973f414b8a6a2ee05"
 
   url "https://github.com/OpenSC/OpenSC/releases/download/#{version}/OpenSC-#{version}.dmg"
   name "OpenSC"
   desc "Smart card libraries and utilities"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
+
+  no_autobump! because: :requires_manual_review
 
   pkg "OpenSC #{version}.pkg"
 

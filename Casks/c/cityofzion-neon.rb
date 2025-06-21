@@ -1,9 +1,9 @@
 cask "cityofzion-neon" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.24.1"
-  sha256 arm:   "c91a9dea23889bc62513fb947fb31e6ff15b7e9d26e053dce117012791bfa684",
-         intel: "16cc311213328d38512031a436fb1c1a20172482bfe514d5986fd50b999101c5"
+  version "2.25.1"
+  sha256 arm:   "6b4b6008d2984484e2848d352616ef3263529ca5d0f0738ebf04300e6e6beb02",
+         intel: "224141c65c163a6c8aa721a9e03064a7dbaeb63aa199e08d1c4230b53ac5f117"
 
   url "https://github.com/CityOfZion/neon-wallet/releases/download/v#{version}/Neon.#{version}.#{arch}.dmg"
   name "Neon Wallet"

@@ -1,5 +1,5 @@
 cask "desktoputility" do
-  version "5.2"
+  version "5.3.6"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/desktoputility/DesktopUtility.dmg"
@@ -8,11 +8,14 @@ cask "desktoputility" do
   homepage "https://sweetpproductions.com/"
 
   livecheck do
-    url "https://sweetpproductions.com/products/desktoputility/updates.htm"
-    regex(/<h\d+>\s*(\d+(?:\.\d+)+)\s*</i)
+    url "https://sweetpproductions.com/products/desktoputility/appcast.xml"
+    strategy :sparkle
   end
 
-  depends_on macos: ">= :el_capitan"
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "DesktopUtility.app"
 

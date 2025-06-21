@@ -1,19 +1,25 @@
 cask "wordpresscom-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.2"
-  sha256 arm:   "9375f10567476a70d7087a00d3a4aeab36c79f9f88aad1ffc8d2cc1ae3b87891",
-         intel: "79340ec2ced14a83928d5da046d8bbb663d327ca892a54a87546b5d054a78b11"
+  version "1.5.3"
+  sha256 arm:   "e76c9bb9670e8872679071fc3db6f344bfe5478946fe41f37da8acf04a9e3c2d",
+         intel: "d5e3e0f50a473a11c173930abfb10ebf24e47dc911ed0add765767ae2804a64c"
 
-  url "https://cdn.a8c-ci.services/studio/studio-darwin-#{arch}-v#{version}.dmg",
+  url "https://cdn.a8c-ci.services/studio/studio-darwin-#{arch}-v#{version}.app.zip",
       verified: "cdn.a8c-ci.services/studio/"
   name "Wordpress Studio"
   desc "WordPress local development environment"
   homepage "https://developer.wordpress.com/studio/"
 
   livecheck do
-    url :homepage
-    regex(/studio[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://public-api.wordpress.com/wpcom/v2/studio-app/updates?platform=darwin&arch=#{arch}&version=0.0.0"
+    regex(/studio[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.app\.zip/i)
+    strategy :json do |json, regex|
+      match = json["url"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   auto_updates true

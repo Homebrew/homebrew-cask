@@ -7,6 +7,8 @@ cask "pngyu" do
   desc "Front-end GUI application for pngquant"
   homepage "https://nukesaq88.github.io/Pngyu/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-28", because: :unmaintained
 
   app "Pngyu.app"

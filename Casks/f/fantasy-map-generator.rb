@@ -22,6 +22,8 @@ cask "fantasy-map-generator" do
   desc "Generate interactive and highly customizable maps"
   homepage "https://azgaar.github.io/Fantasy-Map-Generator"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-03", because: :no_longer_available
 
   zap trash: [

@@ -1,9 +1,8 @@
 cask "cirrus" do
-  version "1.14,2024.02"
-  sha256 "9a0169344c6c37ed7907eb1d8f32c4e1f3b02907fd33b5e991bb8d2ebba906ee"
+  version "1.15,2024.09"
+  sha256 "0c62650f938de2fd626f692d0746291ac3876b1a4485546991fb4351efb0c860"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/cirrus#{version.csv.first.no_dots}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/cirrus#{version.csv.first.no_dots}.zip"
   name "Cirrus"
   desc "Inspector for iCloud Drive folders"
   homepage "https://eclecticlight.co/cirrus-bailiff/"
@@ -15,15 +14,18 @@ cask "cirrus" do
       item = xml.elements["//dict[key[text()='AppName']/following-sibling::*[1][text()='Cirrus']]"]
       next unless item
 
-      version = item.elements["key[text()='Version']"]&.next_element&.text&.strip
-      match = item.elements["key[text()='URL']"]&.next_element&.text&.strip&.match(regex)
+      version = item.elements["key[text()='Version']"]&.next_element&.text
+      url = item.elements["key[text()='URL']"]&.next_element&.text
+      match = url.strip.match(regex) if url
       next if version.blank? || match.blank?
 
-      "#{version},#{match[1]}.#{match[2]}"
+      "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :big_sur"
 
   app "cirrus#{version.csv.first.major}#{version.csv.first.minor}/Cirrus.app"
 

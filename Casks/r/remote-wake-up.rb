@@ -12,12 +12,14 @@ cask "remote-wake-up" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Remote Wake Up.app"
 
   zap trash: [
     "~/Library/Application Support/com.mac-attender.Remote-Wake-Up",
     "~/Library/Application Support/com.mac-attender.Remote_Wake_Up",
-    "~/Library/Containers/com.mac-attender.Remote-Wake-Up/",
+    "~/Library/Containers/com.mac-attender.Remote-Wake-Up",
     "~/Library/Preferences/com.mac-attender.Remote-Wake-Up.plist",
     "~/Library/Saved Application State/com.mac-attender.Remote-Wake-Up.savedState",
   ]

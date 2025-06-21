@@ -1,6 +1,6 @@
 cask "babeledit" do
-  version "5.2.1"
-  sha256 "1ffbf7fcc89744d9b061f0a4339f8d775e626fadc0b371dc456cbe0ff4ebaf43"
+  version "5.4.1"
+  sha256 "7369ef5ac7a82cafe290d2c5cbc7b7afa5517164056a8cc9e644076d493f1683"
 
   url "https://www.codeandweb.com/download/babeledit/#{version}/BabelEdit-#{version}.dmg"
   name "BabelEdit"
@@ -8,8 +8,8 @@ cask "babeledit" do
   homepage "https://www.codeandweb.com/babeledit"
 
   livecheck do
-    url "https://www.codeandweb.com/babeledit/download"
-    regex(%r{babeledit/download/v?(\d+(?:\.\d+)+)/mac-64}i)
+    url "https://www.codeandweb.com/releases/babeledit/updatecheck.php?b=no&o=mac"
+    strategy :sparkle
   end
 
   auto_updates true

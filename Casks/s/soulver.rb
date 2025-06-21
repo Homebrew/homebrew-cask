@@ -1,6 +1,6 @@
 cask "soulver" do
-  version "3.12,452"
-  sha256 "9a7af88e6541bab697342c4115d81d677b1ec40af20134607bb420ce9980b17d"
+  version "3.14.3,483"
+  sha256 "66a8e78e10c07d437115bc97c6c45bd7b3e1013ba2ecdfad16f05c1ae32b52fd"
 
   url "https://soulver.app/mac/sparkle/soulver-#{version.csv.first}-#{version.csv.second}.zip"
   name "Soulver"
@@ -13,7 +13,7 @@ cask "soulver" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Soulver #{version.major}.app"
 

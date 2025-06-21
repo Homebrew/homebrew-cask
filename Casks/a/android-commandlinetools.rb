@@ -1,6 +1,6 @@
 cask "android-commandlinetools" do
-  version "11076708"
-  sha256 "7bc5c72ba0275c80a8f19684fb92793b83a6b5c94d4d179fc5988930282d7e64"
+  version "13114758"
+  sha256 "5673201e6f3869f418eeed3b5cb6c4be7401502bd0aae1b12a29d164d647a54e"
 
   url "https://dl.google.com/android/repository/commandlinetools-mac-#{version}_latest.zip",
       verified: "dl.google.com/android/repository/"
@@ -12,6 +12,8 @@ cask "android-commandlinetools" do
     url :homepage
     regex(%r{href=.*?/commandlinetools[._-]mac[._-](\d+)[._-]latest\.zip}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   conflicts_with cask:    "android-sdk",
                  formula: "proguard"

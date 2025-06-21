@@ -1,10 +1,12 @@
 cask "font-libertinus" do
-  version "7.040"
-  sha256 "7fe9f022722d1c1cc67dc2c28a110b3bb55bae3575196160d2422c89333b3850"
+  version "7.051"
+  sha256 "250677c929d3775a30913643594379af264ac2ef2801035aa1dcbe30b9be23a6"
 
-  url "https://github.com/alerque/libertinus/releases/download/v#{version}/Libertinus-#{version}.tar.xz"
+  url "https://github.com/alerque/libertinus/releases/download/v#{version}/Libertinus-#{version}.tar.zst"
   name "Libertinus"
   homepage "https://github.com/alerque/libertinus"
+
+  no_autobump! because: :requires_manual_review
 
   font "Libertinus-#{version}/static/OTF/LibertinusKeyboard-Regular.otf"
   font "Libertinus-#{version}/static/OTF/LibertinusMath-Regular.otf"

@@ -1,20 +1,21 @@
 cask "utools" do
   arch arm: "-arm64"
 
-  version "5.2.1"
-  sha256 arm:   "a880b39399265383f034dde1ea580baee0ab40f16e2d237c59a484ae8894e38c",
-         intel: "5f5e7ed00f664ad37adf34d2b9ffe08e4616dcccd53e0622faa2c574b14d7baa"
+  version "7.1.1"
+  sha256 arm:   "3c8646f5cc962a733892b695dc4fca061a3b8a01d4b6372b877a7548f0083621",
+         intel: "2411cdecc070106cee488dd3c4bfe9eb9c372747f44b3b6d45a5772a9bf15017"
 
-  url "https://publish.u-tools.cn/version2/uTools-#{version}#{arch}.dmg",
-      verified: "publish.u-tools.cn/"
+  url "https://open.u-tools.cn/download/uTools-#{version}#{arch}.dmg"
   name "uTools"
   desc "Plug-in productivity tool set"
-  homepage "https://u.tools/index.html"
+  homepage "https://www.u-tools.cn/"
 
   livecheck do
-    url "https://u.tools/download/"
+    url "https://www.u-tools.cn/download/"
     regex(/uTools[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "uTools.app"
 

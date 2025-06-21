@@ -1,9 +1,8 @@
 cask "loupedeck" do
-  version "5.9.1.19365"
-  sha256 "cf0357880332e537827b328716345b9c6dff0537a189f3181f6ff8565aef2db7"
+  version "6.1.2.22511"
+  sha256 "b7b0a301cbddf0d579e9d1eacae29ffd2ec0273b11a943c02ca707f946e879ea"
 
-  url "https://5145542.fs1.hubspotusercontent-na1.net/hubfs/5145542/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor_patch.chomp(".0")}/LoupedeckInstaller_#{version}.dmg",
-      verified: "5145542.fs1.hubspotusercontent-na1.net/hubfs/5145542/"
+  url "https://support.loupedeck.com/hubfs/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor_patch.chomp(".0")}/LoupedeckInstaller_#{version}.dmg"
   name "Loupdeck"
   desc "Software for Loupedeck consoles"
   homepage "https://loupedeck.com/"
@@ -15,7 +14,8 @@ cask "loupedeck" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "LoupedeckInstaller.pkg"
+  # pkg cannot be installed automatically
+  installer manual: "LoupedeckInstaller.pkg"
 
   uninstall launchctl: "com.loupedeck.loupedeck2.launch",
             quit:      [

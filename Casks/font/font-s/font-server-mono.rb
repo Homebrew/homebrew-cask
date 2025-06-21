@@ -1,15 +1,16 @@
 cask "font-server-mono" do
-  version "0.0.4"
-  sha256 "677169c9ed971ccafea0d55f4f34f3784e61a3b848784e12247608b344f477c4"
+  version "0.0.8"
+  sha256 "2f8f9cd371ba908dabce464960ab310a8522fdd99670c6c9fbd2f3988a378f9b"
 
-  url "https://github.com/internet-development/www-server-mono/archive/refs/tags/#{version}.tar.gz",
+  url "https://github.com/internet-development/www-server-mono/releases/download/v#{version}/ServerMono-fonts.zip",
       verified: "github.com/internet-development/www-server-mono/"
   name "Server Mono"
-  desc "Programming font designed for ASCII art and CLI tools"
   homepage "https://servermono.com/"
 
-  font "www-server-mono-#{version}/fonts/ServerMono-Regular.otf"
-  font "www-server-mono-#{version}/fonts/ServerMono-Regular-Italic.otf"
+  no_autobump! because: :requires_manual_review
+
+  font "public/fonts/ServerMono-Regular.otf"
+  font "public/fonts/ServerMono-RegularSlanted.otf"
 
   # No zap stanza required
 end

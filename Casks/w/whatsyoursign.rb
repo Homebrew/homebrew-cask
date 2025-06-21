@@ -1,12 +1,14 @@
 cask "whatsyoursign" do
-  version "2.2.2"
-  sha256 "0359af12087997ce205d86c5ffe752084502c5896b474d4ae556da8e7147468e"
+  version "3.0.2"
+  sha256 "4c18b33892e29002dd693e897753e6aacbdd3ad7dca2708ea592b5af1b7aab66"
 
   url "https://github.com/objective-see/WhatsYourSign/releases/download/v#{version}/WhatsYourSign_#{version}.zip",
       verified: "github.com/objective-see/"
   name "What's Your Sign?"
   desc "Shows a files cryptographic signing information"
-  homepage "https://objective-see.com/products/whatsyoursign.html"
+  homepage "https://objective-see.org/products/whatsyoursign.html"
+
+  no_autobump! because: :requires_manual_review
 
   installer manual: "WhatsYourSign Installer.app"
 

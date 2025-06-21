@@ -8,6 +8,8 @@ cask "roundpie" do
   desc "Pomodoro time tracker"
   homepage "https://theroundpie.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-29", because: :discontinued
 
   app "RoundPie.app"

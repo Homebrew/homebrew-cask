@@ -10,7 +10,7 @@ cask "dosbox" do
 
   livecheck do
     url "https://sourceforge.net/projects/dosbox/rss?path=/dosbox"
-    regex(%r{<link>.*/DOSBox-(\d+(?:[.-]\d+)*).dmg}i)
+    regex(%r{<link>.*/DOSBox-(\d+(?:[.-]\d+)*)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |matches|
         versions = matches[0].split("-")
@@ -20,6 +20,8 @@ cask "dosbox" do
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "dosbox.app"
 

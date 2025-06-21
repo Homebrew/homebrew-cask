@@ -1,6 +1,6 @@
 cask "fastrawviewer" do
-  version "2.0.8.2011"
-  sha256 "dddd5b171817c5c467462f82956a4ade4d2366d4645f07882c9648a5fa073481"
+  version "2.0.10.2058"
+  sha256 "5784f817a4ef56084871674b86b8a1a506606fdace3bd31dbb9d554b85c0f1fb"
 
   url "https://updates.fastrawviewer.com/data/FastRawViewer-#{version}.dmg"
   name "FastRawViewer"
@@ -12,7 +12,7 @@ cask "fastrawviewer" do
     regex(/FastRawViewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "FastRawViewer.app"
 

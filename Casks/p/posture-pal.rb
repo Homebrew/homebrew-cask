@@ -13,9 +13,11 @@ cask "posture-pal" do
   livecheck do
     url "https://macwhisper-site.vercel.app/posturepal/appcast.xml"
     strategy :sparkle do |items|
-      items.map { |item| "#{item.short_version},#{item.version}" }
+      items.map(&:nice_version)
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :sonoma"

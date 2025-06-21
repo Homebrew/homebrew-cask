@@ -1,5 +1,5 @@
 cask "the-clock" do
-  version "4.9"
+  version "4.9.7"
   sha256 :no_check
 
   url "https://seense.com/the_clock/updateapp/the_clock.zip"
@@ -13,7 +13,7 @@ cask "the-clock" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :big_sur"
 
   app "The Clock.app"
 

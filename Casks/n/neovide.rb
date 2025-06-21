@@ -1,9 +1,9 @@
 cask "neovide" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.13.3"
-  sha256 arm:   "d17883a1ab1694c24d670986cd4f5856dfede9134cbb4904260e7e76e614dea0",
-         intel: "ce540bc21760972e336b92950e32ad42d579c8db5763ce33c515f877f42ce0b4"
+  version "0.15.0"
+  sha256 arm:   "2bec0ef972304a44971ad6e5525d597c2b8c1137426514a090ce67f926835458",
+         intel: "e5137a7290dade9a1426f9f02875393433ac0c0c2aa0775ede112c3578a1082c"
 
   url "https://github.com/neovide/neovide/releases/download/#{version}/Neovide-#{arch}-apple-darwin.dmg"
   name "Neovide"
@@ -15,5 +15,8 @@ cask "neovide" do
   app "Neovide.app"
   binary "#{appdir}/Neovide.app/Contents/MacOS/neovide"
 
-  zap trash: "~/Library/Saved Application State/com.neovide.neovide"
+  zap trash: [
+    "~/Library/Application Support/neovide",
+    "~/Library/Saved Application State/com.neovide.neovide.savedState",
+  ]
 end

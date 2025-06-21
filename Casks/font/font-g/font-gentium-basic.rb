@@ -11,6 +11,8 @@ cask "font-gentium-basic" do
     regex(/Gentium\s+Basic\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "GentiumBasic_#{version.no_dots}/GenBasB.ttf"
   font "GentiumBasic_#{version.no_dots}/GenBasBI.ttf"
   font "GentiumBasic_#{version.no_dots}/GenBasI.ttf"

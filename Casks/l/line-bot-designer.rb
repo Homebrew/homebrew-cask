@@ -8,7 +8,9 @@ cask "line-bot-designer" do
   desc "Prototype LINE bots"
   homepage "https://developers.line.biz/en/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   app "LINE Bot Designer.app"
 end

@@ -10,8 +10,14 @@ cask "yojimbo" do
 
   livecheck do
     url "https://versioncheck.barebones.com/Yojimbo.xml"
-    regex(/Yojimbo[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :xml do |xml|
+      xml.get_elements("//key[text()='SUFeedEntryShortVersionString']").map { |item| item.next_element&.text&.strip }
+    end
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :high_sierra"
 
   app "Yojimbo.app"
 

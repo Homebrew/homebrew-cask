@@ -1,5 +1,5 @@
 cask "macx-video-converter-pro" do
-  version "6.8.2"
+  version "6.9.0"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-video-converter-pro.dmg"
@@ -9,9 +9,13 @@ cask "macx-video-converter-pro" do
 
   livecheck do
     url "https://www.macxdvd.com/mac-video-converter-pro/upgrade/video-converter-pro.xml"
-    # `LastestVersion` is an upstream typo of `LatestVersion`
-    regex(%r{LastestVersion</key>\s*<string>(\d+(?:\.\d+)+)<}i)
+    strategy :xml do |xml|
+      # `LastestVersion` is an upstream typo of `LatestVersion`
+      xml.get_elements("//key[text()='LastestVersion']").map { |item| item.next_element&.text&.strip }
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "MacX Video Converter Pro.app"
 

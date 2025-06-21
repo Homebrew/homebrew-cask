@@ -1,6 +1,6 @@
 cask "pacifist" do
-  version "4.1.0"
-  sha256 "ffc16f316034ab9e7ea986fb1e24c0f200f5d95fccbd355652d7be578ef7f7ef"
+  version "4.1.3"
+  sha256 "4b299bbb4724fe541a5597f30932463101409b0218641b72a5194ee5d5885a41"
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
   name "Pacifist"
@@ -11,6 +11,8 @@ cask "pacifist" do
     url "https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :mojave"

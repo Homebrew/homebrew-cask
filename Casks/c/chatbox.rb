@@ -1,15 +1,19 @@
 cask "chatbox" do
   arch arm: "-arm64"
 
-  version "1.3.10"
-  sha256 arm:   "deeb54bf37d7451c3796dbcac5cbb0f834fe54d5d0f652aa5b4f274abf6bf5c6",
-         intel: "8cf9a89e225d88dc18a1a5daebb7226503528ab3904a5912ee117d5d2ca1534e"
+  version "1.14.1"
+  sha256 arm:   "1291f5441c75cd16614646444b91ae1cb4404266e258085e5fba5b6387f64840",
+         intel: "5e593bdda916a01773cdc2332015f30bc206de3d5050ef4f42ddb158f7865989"
 
-  url "https://github.com/Bin-Huang/chatbox/releases/download/v#{version}/Chatbox-#{version}#{arch}.dmg",
-      verified: "github.com/Bin-Huang/chatbox/"
-  name "chatbox"
+  url "https://download.chatboxai.app/releases/Chatbox-#{version}#{arch}.dmg"
+  name "Chatbox"
   desc "Desktop app for GPT-4 / GPT-3.5 (OpenAI API)"
-  homepage "https://chatboxapp.xyz/"
+  homepage "https://chatboxai.app/en"
+
+  livecheck do
+    url "https://download.chatboxai.app/releases/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

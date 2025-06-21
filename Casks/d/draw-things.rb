@@ -1,6 +1,6 @@
 cask "draw-things" do
-  version "1.20240918.0-2b7fb71c"
-  sha256 "2b7fb71c5e46ed67c3116f0080098917545c192bb4839c81b561b2547ad5ec4f"
+  version "1.20250618.2-407a88d1"
+  sha256 "407a88d18201b2530cf43731b2467b877db19632693bcc4909ec1623decce687"
 
   url "https://static.drawthings.ai/DrawThings-#{version}.zip"
   name "Draw Things"
@@ -9,7 +9,7 @@ cask "draw-things" do
 
   livecheck do
     url "https://drawthings.ai/releases/"
-    regex(/href=.*?DrawThings[._-]v?(\d+(?:\.\d+)+(?:-[\da-f]*)?)\.zip/i)
+    regex(/href=.*?DrawThings[._-]v?(\d+(?:\.\d+)+(?:-\h+)?)\.zip/i)
   end
 
   app "Draw Things.app"

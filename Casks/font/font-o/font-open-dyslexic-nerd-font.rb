@@ -1,6 +1,6 @@
 cask "font-open-dyslexic-nerd-font" do
-  version "3.2.1"
-  sha256 "19d58fb14718a4ee59fba2b013a9b7acbb83d68fded55f1847f277468f71fecf"
+  version "3.4.0"
+  sha256 "d864d31b449a005ef187296b3caed675ab6e7077ea756fba105eda543ed1c895"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/OpenDyslexic.zip"
   name "OpenDyslexic Nerd Font families (OpenDyslexic)"
@@ -10,6 +10,8 @@ cask "font-open-dyslexic-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "OpenDyslexicAltNerdFont-Bold.otf"
   font "OpenDyslexicAltNerdFont-BoldItalic.otf"

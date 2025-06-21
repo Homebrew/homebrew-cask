@@ -1,6 +1,6 @@
 cask "ripx" do
-  version "7.1.0"
-  sha256 "67584bcf35e6230633946d683ce1e661026afd04e26430dbf79b215473ce163e"
+  version "7.5.1"
+  sha256 "d50916d2a066cffcbfb640fa1e6e9e7e4a364ec1f5fcaa9bad400f580ded7442"
 
   url "https://s3.us-east-2.amazonaws.com/downloads.hitnmix.com/RipXDAW_#{version.no_dots}.dmg",
       verified: "s3.us-east-2.amazonaws.com/downloads.hitnmix.com/"
@@ -10,8 +10,19 @@ cask "ripx" do
 
   livecheck do
     url "https://hitnmix.com/changes/"
-    regex(/v?(\d+(?:\.\d+)+)\s*changes/i)
+    regex(/^\s*v?(\d+(?:\.\d+)+)\s+changes(?:\s+\([^)]+?\))?(?:\s*(?:&[^;]+?;|.)?\s*mac(?:OS)?\s+Only)?\s*$/i)
+    strategy :page_match do |page, regex|
+      page.scan(%r{<h3[^>]*?>.+?</h3>}i).map do |match|
+        # Remove HTML tags from text to simplify matching
+        match = match.gsub(/<[^>]+?>/, "").match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 

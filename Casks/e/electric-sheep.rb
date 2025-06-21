@@ -8,12 +8,15 @@ cask "electric-sheep" do
   desc "Collaborative abstract artwork software"
   homepage "https://gold.electricsheep.org/"
 
-  livecheck do
-    url "https://electricsheep.org/#/download"
-    regex(%r{href=.*?/electricsheep[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-03-02", because: :unmaintained
 
   pkg "Electric Sheep.pkg"
 
   uninstall pkgutil: "org.electricsheep.electricSheep.*"
+
+  caveats do
+    requires_rosetta
+  end
 end

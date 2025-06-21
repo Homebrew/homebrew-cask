@@ -1,17 +1,21 @@
 cask "keycue" do
-  version "10.2"
-  sha256 "a17a6920f25bf77b5f1e6d83379c845b51ad9a0d0774ef7cf2733e8de4cd667d"
+  version "11.1.1"
+  sha256 "cd5da2bada2130ee09a2b36b20bc52e3c49ebb90122b38aedb2f36087bd0908f"
 
   url "https://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
       user_agent: :fake
   name "KeyCue"
   desc "Finds, learns and remembers keyboard shortcuts"
-  homepage "https://www.ergonis.com/products/keycue/"
+  homepage "https://ergonis.com/keycue"
 
   livecheck do
-    url "https://www.ergonis.com/products/keycue/history.html"
+    url "https://ergonis.com/keycue/download"
     regex(/<h\d.*?KeyCue\sv?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :monterey"
 
   app "KeyCue.app"
 

@@ -12,6 +12,8 @@ cask "factor" do
     regex(%r{href=.*?(\d+(?:\.\d+)+)/}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   suite "factor"
 
   caveats do

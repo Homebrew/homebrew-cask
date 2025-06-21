@@ -12,9 +12,14 @@ cask "mumu" do
     url "https://vendors.paddle.com/download/product/597910"
     regex(%r{/([^/]+)_Mumu%20(\d+(?:\.\d+)*)\.dmg}i)
     strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

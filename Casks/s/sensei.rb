@@ -1,20 +1,21 @@
 cask "sensei" do
-  version "1.5.10"
-  sha256 :no_check
+  version "1.6.2,121"
+  sha256 "af510d149aabebb8331827cfc33472a639cbac0f1db2c66644ba257d7cba86a1"
 
-  url "https://cindori.s3.amazonaws.com/Sensei.dmg",
-      verified: "cindori.s3.amazonaws.com/"
+  url "https://cdn.cindori.com/apps/sensei/updates/#{version.csv.first}-#{version.csv.second}/Sensei.dmg"
   name "Sensei"
   desc "Monitors the computer system and optimises its performance"
-  homepage "https://sensei.app/"
+  homepage "https://cindori.com/sensei"
 
   livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/51fc066a-f4b4-49ec-b966-b2f476d2eede"
-    strategy :sparkle, &:short_version
+    url "https://cdn.cindori.com/apps/sensei/updates/update.xml"
+    strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :ventura"
 
   app "Sensei.app"
 

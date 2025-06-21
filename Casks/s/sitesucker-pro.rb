@@ -16,13 +16,16 @@ cask "sitesucker-pro" do
     end
   end
   on_monterey :or_newer do
-    version "5.4.6"
-    sha256 "1c86e00a25a760bb82144388026a346b9073f1fd11326165409025a19b412641"
+    version "5.7.1"
+    sha256 "f7343642765292b4308756aaab137b9e8a1778b4f5aab11ba3d8dfab05d33b62"
 
     livecheck do
       url "https://ricks-apps.com/osx/sitesucker/pro-versions.plist"
       strategy :xml do |xml|
-        xml.elements["//dict/key[text()='App Version']"]&.next_element&.text&.strip
+        version = xml.elements["//dict/key[text()='App Version']"]&.next_element&.text
+        next if version.blank?
+
+        version.strip
       end
     end
   end

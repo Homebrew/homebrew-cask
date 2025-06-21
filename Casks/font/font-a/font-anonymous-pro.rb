@@ -4,15 +4,17 @@ cask "font-anonymous-pro" do
 
   url "https://www.marksimonson.com/assets/content/fonts/AnonymousPro-#{version.dots_to_underscores}.zip"
   name "Anonymous Pro"
-  homepage "https://www.marksimonson.com/fonts/view/anonymous-pro"
+  homepage "https://www.marksimonson.com/fonts/view/anonymous-pro/"
 
   livecheck do
     url :homepage
     regex(/href=.*?AnonymousPro[._-]v?(\d+(?:[._]\d+)+)\.zip/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match.first.tr("_", ".") }
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "AnonymousPro-#{version}.001/Anonymous Pro B.ttf"
   font "AnonymousPro-#{version}.001/Anonymous Pro BI.ttf"

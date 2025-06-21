@@ -1,9 +1,9 @@
 cask "ganttproject" do
   arch arm: "silicon", intel: "intel"
 
-  version "3.3.3309"
-  sha256 arm:   "85537f33dca107607a516e227bc0ed6a58479a4648632c7f270193b457163f43",
-         intel: "52a767a34ada9683e42fcca72c5e940f9a1092c401a47e367a4c29464484990c"
+  version "3.3.3316"
+  sha256 arm:   "fd5f8941b73bec53f1f08ef5696480a22f872fc2a098b6aef2defa99817bce25",
+         intel: "0bb0e3af5b1e3627ea8cc5f4c33ec84d6829aa682b118369039fbaf95ab4f096"
 
   url "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version}/ganttproject-#{version}-#{arch}.dmg",
       verified: "github.com/bardsoftware/ganttproject/"
@@ -15,6 +15,8 @@ cask "ganttproject" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "GanttProject.app"
 

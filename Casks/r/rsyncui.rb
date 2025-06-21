@@ -1,6 +1,6 @@
 cask "rsyncui" do
-  version "2.1.3"
-  sha256 "35c652653a32d0b46089daa146ff9395a9f31bd946beeaa1bc61a168443ccc1d"
+  version "2.5.9"
+  sha256 "82fad53751ca51fe4a7a98378e70d4c13c91cebdff6b3f511614e839a3e29df9"
 
   url "https://github.com/rsyncOSX/RsyncUI/releases/download/v#{version}/RsyncUI.#{version}.dmg"
   name "RsyncUI"
@@ -11,6 +11,8 @@ cask "rsyncui" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   depends_on macos: ">= :sonoma"
 

@@ -1,9 +1,9 @@
 cask "jetbrains-toolbox" do
   arch arm: "-arm64"
 
-  version "2.4.2,2.4.2.32922"
-  sha256 arm:   "658203e6d77905d42977944fe2cbde3bf3ad2a47b690703182ed4e504860134b",
-         intel: "797e538e5426f2461afce56ded7abefac351443195f37decd0b9a7b4a1c6e7cd"
+  version "2.6.3,2.6.3.43718"
+  sha256 arm:   "038b2658899e1f08106bda1a469b7f58f4711be0d609d43b66b8cd34ac15d3a2",
+         intel: "dc2cd4280a7e63fb029c6808ed490cba7e179cd11448883d75616295ed4c2e4e"
 
   url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version.csv.second}#{arch}.dmg"
   name "JetBrains Toolbox"
@@ -13,8 +13,12 @@ cask "jetbrains-toolbox" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"
     strategy :json do |json|
-      json["TBA"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["TBA"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end

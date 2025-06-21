@@ -11,6 +11,8 @@ cask "font-hanamin" do
     regex(/href=.*hanazono[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "HanaMinA.ttf"
   font "HanaMinB.ttf"
 

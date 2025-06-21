@@ -8,6 +8,8 @@ cask "pokerth" do
   desc "Free Texas hold'em poker"
   homepage "https://www.pokerth.net/"
 
+  no_autobump! because: :requires_manual_review
+
   app "pokerth.app"
 
   caveats do

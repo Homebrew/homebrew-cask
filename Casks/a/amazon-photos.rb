@@ -1,5 +1,5 @@
 cask "amazon-photos" do
-  version "10.5.0,413"
+  version "10.11.0,443"
   sha256 :no_check
 
   url "https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosApp.zip",
@@ -14,7 +14,7 @@ cask "amazon-photos" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :sierra"
 
   app "Amazon Photos.app"
 

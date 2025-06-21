@@ -1,24 +1,40 @@
 cask "ibm-aspera-connect" do
-  version "4.1.3.93"
-  sha256 "502fe4644ed79d214a9acc33922e55de88c50ddd37dd4072515a1a51c287d617"
+  arch arm: "arm64", intel: "x86_64"
+  folder = on_arch_conditional arm: "0csnb", intel: "0cz9h"
+  livecheck_arch = on_arch_conditional arm: "_arm64"
 
-  url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/bin/ibm-aspera-connect_#{version}_macOS_x86_64.dmg",
-      verified: "d3gcli72yxqn2z.cloudfront.net/"
+  on_arm do
+    version "4.2.13.820"
+    sha256 "58b42f814c95168e149491d330acb286920fcc19c581e958168305b78c8aa478"
+  end
+  on_intel do
+    version "4.2.14.855-HEAD"
+    sha256 "3b1d2fefe897e4e04b2ff68f26220e2e75c93cf566b8504048f72076b42da23d"
+  end
+
+  url "https://delivery04-mul.dhe.ibm.com/sar/CMA/OSA/#{folder}/0/ibm-aspera-connect_#{version}_macOS_#{arch}.pkg"
   name "IBM Aspera Connect"
   desc "Facilitate uploads and downloads with an Aspera transfer server"
   homepage "https://www.ibm.com/aspera/connect/"
 
   livecheck do
-    url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/connectversions.min.js"
-    regex(/ibm-aspera-connect[._-]v?(\d+(?:\.\d+)+)_macOS_x86_64\.dmg/i)
+    url "https://www.ibm.com/support/fixcentral/swg/selectFixes", post_form: {
+      product:    "ibm/Other software/IBM Aspera Connect",
+      platform:   "macOS",
+      showStatus: "false",
+    }
+    regex(/ibm[._-]aspera[._-]connect[._-]v?(\d+(?:\.\d+)+(?:[._-]HEAD)?)[._-]macOS#{livecheck_arch}/i)
   end
 
-  installer manual: "IBM Aspera Connect Installer.app"
+  no_autobump! because: :requires_manual_review
 
-  uninstall script: {
-    executable: "~/Library/Application Support/Aspera/Aspera Connect/uninstall_connect.sh",
-    args:       ["-f"],
-  }
+  pkg "ibm-aspera-connect_#{version}_macOS_#{arch}.pkg"
+
+  uninstall pkgutil: [
+    "com.ibm.software.aspera.connect",
+    "com.ibm.software.aspera.crypt",
+    "com.ibm.software.aspera.launcher",
+  ]
 
   zap trash: [
     "~/Library/Application Scripts/com.aspera.connect.SafariExtension",
@@ -30,8 +46,4 @@ cask "ibm-aspera-connect" do
     "~/Library/Preferences/com.aspera.connect.plist",
     "~/Library/Saved Application State/com.aspera.connect.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

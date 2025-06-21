@@ -1,6 +1,6 @@
 cask "protopie" do
-  version "8.3.1"
-  sha256 "618d95f005259cf52a36c0086dbe7e35070c9cde2b39480c20ef8ed01a5d5c14"
+  version "9.0.0"
+  sha256 "f0324271712b257563b45c45f5cd7f4b2dfae30721f330c75a5f5c697f78c902"
 
   url "https://release.protopie.io/ProtoPie-#{version}-universal.dmg"
   name "ProtoPie"
@@ -13,6 +13,7 @@ cask "protopie" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "ProtoPie.app"
 

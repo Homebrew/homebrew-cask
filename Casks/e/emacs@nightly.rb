@@ -1,8 +1,8 @@
 cask "emacs@nightly" do
   arch arm: "arm64-11", intel: "x86_64-10_12"
 
-  version "2024-09-19_00-09-10,8816b4f342983468d49f93decf216151e9c6ffbc"
-  sha256 "0223a90eb652f429ea60f8c5a0e5c7bb853813a4c3f9c977706b2006dbf18553"
+  version "2025-06-16_00-09-08,a4ca0cd7f03c1cf0e7b1f3e0d49c4cf42fcacc90"
+  sha256 "de57a674c094059acfabdf2e3b99659811fcd301a895a72ac60853db87a0982e"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version.csv.first}-#{version.csv.second}-universal.dmg"
   name "Emacs"
@@ -11,8 +11,8 @@ cask "emacs@nightly" do
 
   livecheck do
     url "https://emacsformacosx.com/atom/daily"
-    regex(/href=.*?Emacs[._-](\d+-\d+-\d+_\d+-\d+-\d+)[._-]([a-f0-9]+)[._-]universal\.dmg/i)
-    strategy :page_match do |page|
+    regex(/href=.*?Emacs[._-]v?(\d+-\d+-\d+_\d+-\d+-\d+)[._-](\h+)[._-]universal\.dmg/i)
+    strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
 
@@ -28,11 +28,9 @@ cask "emacs@nightly" do
 
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"
-  binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/ctags"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/ebrowse"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/emacsclient"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/etags"
-  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/ctags.1.gz"
   manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/ebrowse.1.gz"
   manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacs.1.gz"
   manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacsclient.1.gz"

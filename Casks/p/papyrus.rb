@@ -9,13 +9,22 @@ cask "papyrus" do
 
   livecheck do
     url "https://eclipse.dev/papyrus/download.html"
-    regex(%r{href=.*?/papyrus-(\d+(?:-\d+)*)-(\d+(?:\.\d+)*)-macosx64\.tar\.gz}i)
+    regex(%r{href=.*?/papyrus-(\d+(?:-\d+)*)-(\d+(?:\.\d+)*)-macosx64\.t}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
+  conflicts_with cask: "morkro-papyrus"
+
   app "Papyrus.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.eclipse.papyrus.rcp.product.plist",
+    "~/Library/Saved Application State/org.eclipse.papyrus.rcp.product.savedState",
+  ]
 
   caveats do
     depends_on_java "11+"

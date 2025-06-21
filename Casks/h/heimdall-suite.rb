@@ -9,9 +9,11 @@ cask "heimdall-suite" do
   homepage "https://glassechidna.com.au/heimdall/"
 
   livecheck do
-    url "https://glassechidna.com.au/heimdall/#downloads"
+    url :homepage
     regex(%r{href=.*?/heimdall[._-]suite[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "Heimdall Suite #{version}.pkg"
 

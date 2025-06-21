@@ -1,6 +1,6 @@
 cask "paintcode" do
-  version "3.5.4"
-  sha256 "7e8598e9d0f4c8d84207a02a9deecf126c116e0ab158c35a54b9bb1f17da46fc"
+  version "3.5.9"
+  sha256 "9ed3602e6b6269165c92d184d6f24f06a1a5471209a6b9df403aa167f4133ce7"
 
   url "https://www.pixelcut.com/paintcode#{version.major}/paintcode_#{version}.zip",
       verified: "pixelcut.com/"
@@ -12,6 +12,8 @@ cask "paintcode" do
     url "https://www.pixelcut.com/paintcode#{version.major}/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "PaintCode.app"
 

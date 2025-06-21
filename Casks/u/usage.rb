@@ -9,10 +9,13 @@ cask "usage" do
 
   livecheck do
     url "https://www.mediaatelier.com/Usage/feed.php"
-    strategy :sparkle do |item|
-      item.url[/Usage[._-]?(\d+(?:\.\d+)*)\.dmg/i, 1]
+    regex(/Usage[._-]?(\d+(?:\.\d+)*)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      item.url[regex, 1]
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

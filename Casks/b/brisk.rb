@@ -7,6 +7,15 @@ cask "brisk" do
   desc "App for submitting radars"
   homepage "https://github.com/br1sk/brisk"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/br1sk/brisk/master/appcast.xml"
+    strategy :sparkle
+  end
+
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+
   app "Brisk.app"
 
   zap trash: [

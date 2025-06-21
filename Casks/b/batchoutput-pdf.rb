@@ -1,5 +1,5 @@
 cask "batchoutput-pdf" do
-  version "3.1.3"
+  version "3.1.4"
   sha256 :no_check
 
   url "https://zevrix.com/downloads/BatchOutputPDF.dmg"
@@ -11,6 +11,8 @@ cask "batchoutput-pdf" do
     url "https://zevrix.com/download/"
     regex(/BatchOutput\s*PDF\s*(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

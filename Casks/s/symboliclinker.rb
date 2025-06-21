@@ -7,5 +7,9 @@ cask "symboliclinker" do
   desc "Service that allows users to make symbolic links in the Finder"
   homepage "https://github.com/nickzman/symboliclinker"
 
+  no_autobump! because: :requires_manual_review
+
   service "SymbolicLinker.service"
+
+  # No zap stanza required
 end

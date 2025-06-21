@@ -7,7 +7,9 @@ cask "apple-events" do
   desc "Unofficial Apple Events app"
   homepage "https://github.com/insidegui/AppleEvents"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
 

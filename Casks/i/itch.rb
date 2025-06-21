@@ -13,6 +13,8 @@ cask "itch" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   installer script: "Install itch.app/Contents/MacOS/itch-setup"
@@ -20,11 +22,11 @@ cask "itch" do
   uninstall quit:   "io.itch.mac",
             delete: [
               "~/Applications/itch.app",
-              "~/Library/Application Support/itch-setup/",
+              "~/Library/Application Support/itch-setup",
             ]
 
   zap trash: [
-    "~/Library/Application Support/itch/",
+    "~/Library/Application Support/itch",
     "~/Library/Preferences/io.itch.mac.helper.plist",
     "~/Library/Preferences/io.itch.mac.plist",
   ]

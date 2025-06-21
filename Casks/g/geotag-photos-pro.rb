@@ -13,7 +13,17 @@ cask "geotag-photos-pro" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Geotag Photos Pro 2.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tappytaps.geotagphotosdesktop.sfl*",
+    "~/Library/Application Support/Geotag Photos Pro*",
+    "~/Library/Logs/Geotag Photos Pro*",
+    "~/Library/Preferences/com.tappytaps.geotagphotosdesktop.plist",
+    "~/Library/Saved Application State/com.tappytaps.geotagphotosdesktop.savedState",
+  ]
 
   caveats do
     requires_rosetta

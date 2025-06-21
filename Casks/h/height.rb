@@ -1,6 +1,6 @@
 cask "height" do
-  version "0.27.0"
-  sha256 "894535e76792c5570b9455361bbda979b3a6610e6328303620d38af7f763a0d7"
+  version "0.28.2"
+  sha256 "d1bc02ef43598842d0a96533127ce0f2d38a56397e43ab1df31f2c02662ef17d"
 
   url "https://storage.googleapis.com/height-statics/_app/Height-#{version}-universal.dmg",
       verified: "storage.googleapis.com/height-statics/_app/"
@@ -13,7 +13,10 @@ cask "height" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Height.app"
 

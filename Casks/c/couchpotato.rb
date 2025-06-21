@@ -8,7 +8,9 @@ cask "couchpotato" do
   desc "Automatic Movie Downloading via NZBs & Torrents"
   homepage "https://couchpota.to/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   app "CouchPotato.app"
 

@@ -1,6 +1,6 @@
 cask "proton-pass" do
-  version "1.22.3"
-  sha256 "1926d9f8f75009abf0456a33fb87c253ca6e6d01a90bad5b5914576c2461cbc8"
+  version "1.31.5"
+  sha256 "f952fd307a7f67efd2a1588ae8fad53ae859464dfde885f6d0c4cc00f056034b"
 
   url "https://proton.me/download/PassDesktop/darwin/universal/ProtonPass_#{version}.dmg"
   name "Proton Pass"
@@ -19,7 +19,7 @@ cask "proton-pass" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Proton Pass.app"
 

@@ -9,11 +9,10 @@ cask "font-migu-1c" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      page.scan(/href=.*migu-1c[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
-          .map { |match| match[0].insert(4, ".") }
-    end
+    regex(%r{href=.*?/download/v?(\d+(?:\.\d+)+)/migu-1c[._-]}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "migu-1c-#{version.no_dots}/migu-1c-bold.ttf"
   font "migu-1c-#{version.no_dots}/migu-1c-regular.ttf"

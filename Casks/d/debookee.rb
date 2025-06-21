@@ -1,5 +1,5 @@
 cask "debookee" do
-  version "8.1.6"
+  version "8.2.0"
   sha256 :no_check
 
   url "https://www.iwaxx.com/debookee/debookee.zip",
@@ -12,6 +12,8 @@ cask "debookee" do
     url "https://www.iwaxx.com/debookee/appcast.php"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :mojave"

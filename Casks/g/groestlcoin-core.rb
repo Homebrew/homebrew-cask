@@ -1,9 +1,9 @@
 cask "groestlcoin-core" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "27.0"
-  sha256 arm:   "3a16747d8db9fa0d60f3f60156fd264d4e4e338159de8371171de3db7225656a",
-         intel: "8993244279176f52a3c7ddd40cd059c456d95440c5c091d639057acc5cc62a03"
+  version "29.0"
+  sha256 arm:   "381446d49527fe2291498a01773ab44615bb970e0e7ea3bd8e14e0458f02e072",
+         intel: "2195198790178321d3f0233e4ad7439c6f387f0e5d5f6e6c80ed338a54df2014"
 
   url "https://github.com/groestlcoin/groestlcoin/releases/download/v#{version}/groestlcoin-#{version}-#{arch}-apple-darwin.zip",
       verified: "github.com/groestlcoin/groestlcoin/"

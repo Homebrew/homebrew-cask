@@ -1,25 +1,17 @@
 cask "ibm-cloud-cli" do
   arch arm: "_arm64"
 
-  version "2.28.0"
-  sha256 arm:   "b42c8bdc1c6b8edf937acb549e7743cbd855dc3f4c3b7d735db8fa939aa660bc",
-         intel: "6bf9ceddf8897857a1f959a330818fd8bd41b23ebbee166b5b86ae0126b81d34"
+  version "2.34.2"
+  sha256 arm:   "0140666421cf522c4633c187cdcdfee0af9753910f5b39e422c58e298bc388ab",
+         intel: "9dca15184e0a06cd2f27c3f37d565719a78923a181582a52e6beb59498e5cd84"
 
   url "https://download.clis.cloud.ibm.com/ibm-cloud-cli/#{version}/IBM_Cloud_CLI_#{version}#{arch}.pkg"
   name "IBM Cloud CLI"
   desc "Command-line API client"
   homepage "https://cloud.ibm.com/docs/cli/index.html"
 
-  # Upstream publishes file links in the description of GitHub releases.
   livecheck do
     url "https://github.com/IBM-Cloud/ibm-cloud-cli-release"
-    regex(/IBM[._-]Cloud[._-]CLI[._-]v?(\d+(?:\.\d+)+)#{arch}\.(?:dmg|pkg)/i)
-    strategy :github_latest do |json, regex|
-      match = json["body"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
   end
 
   pkg "IBM_Cloud_CLI_#{version}#{arch}.pkg"

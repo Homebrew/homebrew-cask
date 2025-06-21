@@ -1,9 +1,9 @@
 cask "blockstream-green" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.0.10"
-  sha256 arm:   "cd58bd45217f1585484c90063355a018753f9dd57f75111735823072e206fc4d",
-         intel: "8899bafd23cbd397406946ee0499b2031bc1ff46a8bd005f161e25e3499b0269"
+  version "2.0.25"
+  sha256 arm:   "d0d659da3e6db7486b7e737c1e19b2931c6518903a6bc0e329ff557d1d9651e6",
+         intel: "ef0d0e4baec3af3e80a044d17c9d7d7c6e66851bdbe57492b853d3b73d19588c"
 
   url "https://github.com/Blockstream/green_qt/releases/download/release_#{version}/BlockstreamGreen-#{arch}.dmg",
       verified: "github.com/Blockstream/green_qt/"
@@ -19,7 +19,7 @@ cask "blockstream-green" do
   app "Blockstream Green.app"
 
   zap trash: [
-    "~/Library/Application Support/Blockstream/Green/",
+    "~/Library/Application Support/Blockstream/Green",
     "~/Library/Caches/Blockstream/Green",
   ]
 end

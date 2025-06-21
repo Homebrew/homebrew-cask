@@ -7,6 +7,8 @@ cask "gactions" do
   desc "CLI tool for Google Actions SDK"
   homepage "https://developers.google.com/assistant/conversational"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-17", because: :no_longer_available
 
   binary "gactions-sdk/gactions"

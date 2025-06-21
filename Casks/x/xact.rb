@@ -1,6 +1,6 @@
 cask "xact" do
-  version "2.55"
-  sha256 "95c577637d7b263d3b6d5ce847134ba0ffe42f4c885ee2ae8354b051b8e00882"
+  version "2.57"
+  sha256 "b6835feaa5a1676ac9630606ce340ba728b2a682372034f06d64eaa349c116e8"
 
   url "http://xact.scottcbrown.org/xACT#{version}.zip"
   name "xACT"
@@ -11,6 +11,8 @@ cask "xact" do
     url :homepage
     regex(/href=.*?xACTv?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

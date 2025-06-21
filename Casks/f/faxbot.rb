@@ -9,10 +9,13 @@ cask "faxbot" do
 
   livecheck do
     url "https://www.hosy.de/faxer/version.xml"
-    strategy :sparkle do |item|
-      item.title[/Version (\d+(?:\.\d+)*)/i, 1].to_s
+    regex(/Version\s+(\d+(?:\.\d+)*)/i)
+    strategy :sparkle do |item, regex|
+      item.title[regex, 1]
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 

@@ -1,6 +1,6 @@
 cask "macwinzipper" do
-  version "2.7.1"
-  sha256 "b17b6d8338fe6658aa2f9db5566ed8cbc15a936e0e8f883b22cc7c3e561bb18b"
+  version "2.7.2"
+  sha256 "c033ac0ccc79babfada6ea2902e5181d339c3bb793bc98e3203f90e626b62d38"
 
   url "https://tida.co.jp/files/MacWinZipper-#{version}.dmg"
   name "MacWinZipper"
@@ -11,6 +11,8 @@ cask "macwinzipper" do
     url :homepage
     regex(%r{href=.*?/MacWinZipper[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 

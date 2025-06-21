@@ -12,7 +12,16 @@ cask "hedgewars" do
     regex(%r{href=.*?/Hedgewars[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Hedgewars.app"
+
+  zap trash: [
+    "~/Library/Application Support/Hedgewars",
+    "~/Library/HTTPStorages/org.hedgewars.desktop",
+    "~/Library/Preferences/org.hedgewars.desktop.plist",
+    "~/Library/Saved Application State/org.hedgewars.desktop.savedState",
+  ]
 
   caveats do
     requires_rosetta

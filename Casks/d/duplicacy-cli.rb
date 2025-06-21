@@ -1,15 +1,17 @@
 cask "duplicacy-cli" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.2.3"
-  sha256 arm:   "efaadc14cfb07e305ec00a95b2fcdc4f28db5ae5bedda0d5b4cbfb24386d53fc",
-         intel: "49c6f617ef9fc954865d54b5445eaf37ee7afb0f0dd72ec993cf21ec6cd710f1"
+  version "3.2.5"
+  sha256 arm:   "717ef792f38c3ead9f068e8b9f32e1d67641a974bd46ee29416d27afda8fbe7f",
+         intel: "3621e3fc9ecafe37f500fe0effeaf1b0a79cfe26ea7135fe3bf34ddb8e787bdd"
 
   url "https://github.com/gilbertchen/duplicacy/releases/download/v#{version}/duplicacy_osx_#{arch}_#{version}",
       verified: "github.com/gilbertchen/duplicacy/"
   name "Duplicacy Command Line Version"
   desc "Cloud backup tool"
   homepage "https://duplicacy.com/"
+
+  no_autobump! because: :requires_manual_review
 
   conflicts_with cask: "duplicacy"
 

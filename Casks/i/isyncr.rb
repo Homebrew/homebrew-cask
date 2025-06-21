@@ -13,21 +13,22 @@ cask "isyncr" do
   desc "Syncs iTunes to Android over a USB or WiFi connection"
   homepage "https://www.jrtstudio.com/iSyncr-iTunes-for-Android"
 
-  # The download page is rendered using JavaScript with the download links
-  # obtained from https://www.jrtstudio.com/files/SlashiSyncr<number>.js
-  # Since the <number> is not fixed in the filename, the current JavaScript
-  # file needs to be extracted from the download page.
-  livecheck do
-    url "https://www.jrtstudio.com/iSyncr-Desktop-Download"
-    strategy :page_match do |page|
-      js_file = page[%r{src=["']?/(files/SlashiSyncr\d+\.js)\??["' >]}i, 1]
-      version_page = Homebrew::Livecheck::Strategy.page_content("https://www.jrtstudio.com/#{js_file}")
-      version_page[:content].scan(/iSyncr\s*Desktop\s*(\d+(?:\.\d+)+)\.pkg/i).flatten
-    end
-  end
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2025-03-15", because: :no_longer_available
 
   pkg "iSyncr Desktop #{version}.pkg"
 
   uninstall quit:    "com.JRTStudio.iSyncrWiFi",
             pkgutil: "com.jrtstudio.iSyncrDesktop"
+
+  zap trash: [
+    "~/Library/Caches/com.JRTStudio.iSyncrWiFi",
+    "~/Library/HTTPStorages/com.JRTStudio.iSyncrWiFi",
+    "~/Library/Preferences/com.JRTStudio.iSyncrWiFi.plist",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
 end

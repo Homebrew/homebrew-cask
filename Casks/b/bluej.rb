@@ -1,11 +1,12 @@
 cask "bluej" do
   arch arm: "aarch64", intel: "x64"
 
-  version "5.4.1"
-  sha256 arm:   "6f872911314bae55dd0a1a9251b4adcd4b45a1b98db80e820dca7f086823048c",
-         intel: "3de98acc9862578e9ad892237ef42714546ec661b29f8a6dc8a5b25ed01163d6"
+  version "5.5.0"
+  sha256 arm:   "206c4b329f8b47e84b547a4f8fa5afdc9e143a803717cd47f2a1a2cacf183546",
+         intel: "1e34bad46a6bb9f6ab12fde6a138e222aba769f803dcd968c3bd278523837de4"
 
-  url "https://www.bluej.org/download/files/BlueJ-mac-#{arch}-#{version.no_dots}.dmg"
+  url "https://github.com/k-pet-group/BlueJ-Greenfoot/releases/download/BLUEJ-RELEASE-#{version}/BlueJ-mac-#{arch}-#{version}.dmg",
+      verified: "github.com/k-pet-group/BlueJ-Greenfoot/"
   name "BlueJ"
   desc "Java Development Environment designed for beginners"
   homepage "https://www.bluej.org/"

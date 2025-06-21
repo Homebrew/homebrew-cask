@@ -1,22 +1,25 @@
 cask "adobe-connect" do
-  version "11,2024.4.729"
-  sha256 "2a40d19250cb924c42f39a6ad4c2467d297f2ff164ebaab520646408fa3fd834"
+  version "2024.11.64,11"
+  sha256 "0b5481409f831934885ea5e51403aec89467829076257625cc86a28f9dd07cf7"
 
-  url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.csv.first.dots_to_underscores}/AdobeConnect_#{version.csv.second.dots_to_underscores}.dmg"
+  url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.csv.second}/AdobeConnect_#{version.csv.first.dots_to_underscores}.dmg"
   name "Adobe Connect"
   desc "Virtual meeting client"
   homepage "https://www.adobe.com/products/adobeconnect.html"
 
   livecheck do
-    url "https://www.adobe.com/go/ConnectMac11Plus"
-    regex(%r{/(\d+(?:[._]\d+)*)/AdobeConnect[._-]?(\d+(?:[._]\d+)+)\.dmg}i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next if match.blank?
+    url "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html"
+    regex(/macOS.*?v?(\d+(?:\.\d+)+)[< "]/im)
+    strategy :page_match do |page, regex|
+      version = page.scan(regex)&.flatten&.first
+      directory = page.scan(/href=.*ConnectMac(\d+)Plus/i)&.flatten&.first
+      next if version.blank? || directory.blank?
 
-      "#{match[1].tr("_", ".")},#{match[2].tr("_", ".")}"
+      "#{version},#{directory}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

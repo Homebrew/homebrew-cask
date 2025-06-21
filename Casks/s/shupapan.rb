@@ -6,6 +6,8 @@ cask "shupapan" do
   name "Shupapan"
   homepage "http://sunsky3s.s41.xrea.com/shupapan/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-17", because: "is 32-bit only"
 
   app "Shupapan.app"

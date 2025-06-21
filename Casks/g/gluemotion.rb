@@ -1,6 +1,6 @@
 cask "gluemotion" do
-  version "2.2.2"
-  sha256 "cd9fe2194cef815948d3fabfcb27a6a8e532b8658eeadc820a76ae137c16b873"
+  version "2.2.3"
+  sha256 "65936632228f78e3227903eb6f1e72a634137e18568af5e4319207b62ce3b607"
 
   url "https://neededapps.com/appcasts/gluemotion/versions/#{version}"
   name "GlueMotion"
@@ -11,6 +11,8 @@ cask "gluemotion" do
     url "https://neededapps.com/appcasts/gluemotion/changelog.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :big_sur"

@@ -7,6 +7,8 @@ cask "sia-ui" do
   desc "Graphical frontend for Sia"
   homepage "https://sia.tech/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-06-26", because: :discontinued
 
   app "Sia-UI.app"

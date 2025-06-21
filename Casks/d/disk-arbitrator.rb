@@ -6,6 +6,8 @@ cask "disk-arbitrator" do
   name "Disk Arbitrator"
   homepage "https://github.com/aburgh/Disk-Arbitrator"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-09", because: :unmaintained
 
   app "Disk Arbitrator.app"

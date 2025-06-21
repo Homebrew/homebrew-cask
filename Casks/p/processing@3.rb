@@ -8,6 +8,8 @@ cask "processing@3" do
   desc "Flexible software sketchbook and a language for learning how to code"
   homepage "https://processing.org/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-28", because: :unmaintained
 
   conflicts_with cask: "processing"

@@ -1,6 +1,6 @@
 cask "tor-browser@alpha" do
-  version "14.0a5"
-  sha256 "205e7afc2c8c6f2126ff52582a341702cb889f62361508c226ecd80660ff965f"
+  version "14.5a6"
+  sha256 "3697fb9f050ba2fc3d5633c87181a19be6170f450823004147820609db562106"
 
   url "https://dist.torproject.org/torbrowser/#{version}/tor-browser-macos-#{version}.dmg"
   name "Tor Browser"
@@ -8,8 +8,10 @@ cask "tor-browser@alpha" do
   homepage "https://www.torproject.org/"
 
   livecheck do
-    url "https://www.torproject.org/download/alpha/"
-    regex(%r{href=.*?/tor[._-]browser[._-]macos[._-]v?(\d+(?:.\d+)*)\.dmg}i)
+    url "https://aus1.torproject.org/torbrowser/update_3/alpha/downloads.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true

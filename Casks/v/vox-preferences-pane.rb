@@ -9,9 +9,11 @@ cask "vox-preferences-pane" do
   homepage "https://vox.rocks/mac-music-player/control-extension-download"
 
   livecheck do
-    url "http://updateinfo.devmate.com/com.coppertino.VoxPrefs/updates.xml"
+    url "https://updateinfo.devmate.com/com.coppertino.VoxPrefs/updates.xml"
     strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   prefpane "Vox Preferences.prefPane"
 

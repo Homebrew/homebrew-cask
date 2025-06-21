@@ -13,7 +13,11 @@ cask "crushftp" do
     regex(/href=.*?CrushFTP(\d+)\.zip/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   suite "CrushFTP#{version}"
+
+  # No zap stanza required
 
   caveats do
     depends_on_java

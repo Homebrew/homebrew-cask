@@ -1,5 +1,5 @@
 cask "scapple" do
-  version "1.4.2"
+  version "1.5.1"
   sha256 :no_check
 
   url "https://scrivener.s3.amazonaws.com/Scapple.dmg",
@@ -12,6 +12,8 @@ cask "scapple" do
     url "https://www.literatureandlatte.com/downloads/scapple/scapple.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 

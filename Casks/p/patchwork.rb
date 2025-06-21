@@ -7,7 +7,9 @@ cask "patchwork" do
   desc "Decentralised messaging and sharing app using Secure Scuttlebutt"
   homepage "https://github.com/ssbc/patchwork"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   app "Patchwork.app"
 end

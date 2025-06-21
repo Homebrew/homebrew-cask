@@ -1,6 +1,6 @@
 cask "markedit" do
-  version "1.19.0"
-  sha256 "607f69bf59eb9286cb176a47c32ef6b3f2ad358361ce2684d98d3e8d8ee83104"
+  version "1.24.0"
+  sha256 "2ec760cd0d9b3b21114284b1d8a80c50c450c7be9b83f0dec9cd366235a00ac6"
 
   url "https://github.com/MarkEdit-app/MarkEdit/releases/download/v#{version}/MarkEdit-#{version}.dmg"
   name "MarkEdit"
@@ -12,7 +12,7 @@ cask "markedit" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "MarkEdit.app"
 

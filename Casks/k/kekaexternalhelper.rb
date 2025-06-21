@@ -14,8 +14,23 @@ cask "kekaexternalhelper" do
   # through the headers for all responses (not the hash of merged headers,
   # where only the last `location` header is available).
   livecheck do
-    skip "Cannot identify version without access to all headers"
+    url :url
+    regex(%r{/v?(\d+(?:\.\d+)+)/KekaExternalHelper[._-]v?(\d+(?:\.\d+)+)\.zip$}i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          "#{match[2]},#{match[1]}"
+        end
+      end.flatten
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "KekaExternalHelper.app"
 

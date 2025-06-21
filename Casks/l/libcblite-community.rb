@@ -1,6 +1,6 @@
 cask "libcblite-community" do
-  version "3.2.0"
-  sha256 "f299c190eb26a1fd5c15361c17e11907172d563e82d133e33a9696fb0ba8563f"
+  version "3.2.1"
+  sha256 "a20fcc780b90414796c26b4514373822d075bbdb9c5ad7e1e6f5a8364ca3c035"
 
   url "https://packages.couchbase.com/releases/couchbase-lite-c/#{version}/couchbase-lite-c-community-#{version}-macos.zip"
   name "Couchbase Lite (Community Edition)"
@@ -26,8 +26,10 @@ cask "libcblite-community" do
   end
 
   uninstall_postflight do
-    puts "Removing library symlinks in #{HOMEBREW_PREFIX}/lib"
-    File.unlink("#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib", "#{HOMEBREW_PREFIX}/lib/libcblite.dylib")
+    if File.symlink?("#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib")
+      puts "Removing library symlinks in #{HOMEBREW_PREFIX}/lib"
+      File.unlink("#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib", "#{HOMEBREW_PREFIX}/lib/libcblite.dylib")
+    end
   end
 
   # No zap stanza required

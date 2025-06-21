@@ -1,30 +1,21 @@
 cask "vorta" do
-  version "0.9.1"
-  sha256 "ea9c0086c034e95161f52e7a76f3c3230b688ff067615e32229d0b16cde20ac8"
+  arch arm: "arm", intel: "intel"
 
-  url "https://github.com/borgbase/vorta/releases/download/v#{version}/vorta-#{version}.dmg"
+  version "0.10.3"
+  sha256 arm:   "78960fd229074fc0d76c4d8d22b078e6b8b6d947a00491ec9880f9abc8f17bb7",
+         intel: "b903ea4f122aa04d62c5e6185c4a1f8a414b6c6e97296843bcdeeee6274d04f0"
+
+  url "https://github.com/borgbase/vorta/releases/download/v#{version}/Vorta-v#{version}-#{arch}.dmg"
   name "Vorta"
   desc "Desktop Backup Client for Borg"
   homepage "https://github.com/borgbase/vorta"
 
-  # Not every GitHub release provides a file for macOS, so we check multiple
-  # recent releases instead of only the "latest" release.
   livecheck do
-    url :url
-    regex(/^vorta[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
+    url "https://borgbase.github.io/vorta/appcast.xml"
+    strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :mojave"

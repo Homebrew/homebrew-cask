@@ -1,9 +1,9 @@
 cask "caido" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.41.0"
-  sha256 arm:   "eb2e9b61635231bab9f2829d4df70db00a5071c0469b08db1a3dd9e007d09737",
-         intel: "a57f6aa21cff95853697f20e29d2dfbbedb56bacd14ba177930b17ca92a6e093"
+  version "0.48.1"
+  sha256 arm:   "4a96fd62ddd429f0afea3342d7c1186469c26655d64f89a91f5a6cd8846b09af",
+         intel: "6acd49fff14b20dcbaa0bbdcb5a781fe1453c087d1ba318ad8cdbc1f312123c4"
 
   url "https://caido.download/releases/v#{version}/caido-desktop-v#{version}-mac-#{arch}.dmg",
       verified: "caido.download/"
@@ -12,10 +12,13 @@ cask "caido" do
   homepage "https://caido.io/"
 
   livecheck do
-    url "https://github.com/caido/caido/"
+    url "https://api.caido.io/releases/latest"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Caido.app"
   binary "#{appdir}/Caido.app/Contents/Resources/bin/caido-cli"

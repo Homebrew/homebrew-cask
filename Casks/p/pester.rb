@@ -7,10 +7,9 @@ cask "pester" do
   desc "Set, dismiss or snooze an alarm or timer"
   homepage "https://sabi.net/nriley/software/index.html#pester"
 
-  livecheck do
-    url "https://sabi.net/nriley/software/Pester/updates.xml"
-    strategy :sparkle, &:short_version
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-10", because: :unmaintained
 
   depends_on macos: ">= :sierra"
 

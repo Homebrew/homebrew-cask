@@ -1,11 +1,16 @@
 cask "xournal++" do
-  version "1.2.3"
-  sha256 "3fdd861352c1663c43d7a4cd30f0c2297f9d593acac23d311ecd63ec9a7cd231"
+  arch arm: "ARM64", intel: "X64"
 
-  url "https://github.com/xournalpp/xournalpp/releases/download/v#{version}/xournalpp-#{version}-macos.zip"
+  version "1.2.7"
+  sha256 arm:   "8c5775dc04d21cfb968f3e52bf7043806e362d4a4828e36a902be3914f5c2c9b",
+         intel: "9a6b7dcf1aa79fdbb6cf3ac8c44a2f8cb056be92fb368f123c181c6605607e3f"
+
+  url "https://github.com/xournalpp/xournalpp/releases/download/v#{version}/xournalpp-#{version}-macOS-#{arch}.dmg"
   name "Xournal++"
   desc "Handwriting notetaking software"
   homepage "https://github.com/xournalpp/xournalpp"
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 
@@ -15,8 +20,4 @@ cask "xournal++" do
     "~/.xournalpp",
     "~/Library/Saved Application State/com.github.xournalpp.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

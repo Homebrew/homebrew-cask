@@ -8,15 +8,9 @@ cask "remotix-agent" do
   desc "Remote desktop and monitoring solution"
   homepage "https://remotixcloud.com/"
 
-  livecheck do
-    url "https://remotix.com/downloads-mac/"
-    strategy :page_match do |page|
-      match = page.match(/Remotix\sAgent.*Current\sversion:\s<b>(\d+(?:\.\d+)+)\s\((\d+)\)/i)
-      next if match.blank?
+  no_autobump! because: :requires_manual_review
 
-      "#{match[1]},#{match[2]}"
-    end
-  end
+  deprecate! date: "2024-11-01", because: :discontinued
 
   auto_updates true
 
@@ -42,4 +36,8 @@ cask "remotix-agent" do
               "/Library/LaunchAgents/com.nulana.rxagentmac.user.plist",
               "/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist",
             ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -1,6 +1,6 @@
 cask "tuxguitar" do
-  version "1.6.4"
-  sha256 "1d16a97b313f7968773b3f677a8ce086f6cc78ac8999bc68f02e4e53f03a2ef6"
+  version "1.6.6"
+  sha256 "87304ed1608495652645ec29d86bad56946618545575a25d87299bca39c9bead"
 
   url "https://github.com/helge17/tuxguitar/releases/download/#{version}/tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app.tar.gz",
       verified: "github.com/helge17/tuxguitar/"
@@ -12,6 +12,8 @@ cask "tuxguitar" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app"
 

@@ -11,6 +11,8 @@ cask "devbook" do
   desc "Search engine for developers"
   homepage "https://usedevbook.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-10", because: :discontinued
 
   auto_updates true

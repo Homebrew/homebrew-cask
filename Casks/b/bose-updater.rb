@@ -1,6 +1,6 @@
 cask "bose-updater" do
-  version "7.1.13.5238"
-  sha256 "8a2190385a37973b623f8bd52551ea8da8bb382ae01fe6a110e66f37a29ea8df"
+  version "7.1.13.5369"
+  sha256 "bbcdae427c0bd94f94395a3e31acd2cb757fd967928a951f3d5e68171dda1a0c"
 
   url "https://downloads.bose.com/ced/boseupdater/mac/BoseUpdater_#{version}.dmg"
   name "Bose Device Updater"
@@ -9,8 +9,12 @@ cask "bose-updater" do
 
   livecheck do
     url "https://btu.bose.com/data/MUV.xml"
-    regex(/ROOT\sMUV="(\d+(?:.\d+)*)"/i)
+    strategy :xml do |xml|
+      xml.elements["//ROOT"]&.attributes&.[]("MUV")
+    end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Bose Updater.app"
 

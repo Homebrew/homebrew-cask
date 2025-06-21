@@ -7,6 +7,8 @@ cask "sql-tabs" do
   name "SQL Tabs"
   homepage "https://www.sqltabs.com/"
 
+  no_autobump! because: :requires_manual_review
+
   app "SQL Tabs.app"
 
   zap trash: "~/.sqltabs"

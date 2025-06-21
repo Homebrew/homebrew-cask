@@ -1,20 +1,27 @@
 cask "writemapper" do
-  version "2.10.0"
-  sha256 "faa919450d0f92d1f6a93d94f51e3ff45a1c92b70c2a408773f299d6e15624a1"
+  version "4.4.3"
+  sha256 "f53683ec73ebe37c56cdc58d29056cd167ee73a2ae8746b058b91164712e04fe"
 
-  url "https://writemapper.com/static/app/mac/WriteMapper-#{version}.dmg"
+  url "https://writemapper.sfo3.cdn.digitaloceanspaces.com/writemapper-#{version.major}/mac/WriteMapper-#{version}-universal.dmg",
+      verified: "writemapper.sfo3.cdn.digitaloceanspaces.com/"
   name "WriteMapper"
   desc "Writing tool that helps produce text documents using mind maps"
   homepage "https://writemapper.com/"
 
   livecheck do
-    url "https://writemapper.com/static/app/mac/latest-mac.yml"
+    url "https://writemapper.sfo3.digitaloceanspaces.com/writemapper-#{version.major}/mac/latest-mac.yml"
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
+
   app "WriteMapper.app"
 
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+    "~/Library/Application Support/WriteMapper",
+    "~/Library/Preferences/com.gx.writemapper*.plist",
+    "~/Library/Saved Application State/com.gx.writemapper*.savedState",
+  ]
 end

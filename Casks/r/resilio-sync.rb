@@ -1,5 +1,5 @@
 cask "resilio-sync" do
-  version "3.0.0.1409"
+  version "3.0.3.1065"
   sha256 :no_check
 
   url "https://download-cdn.resilio.com/stable/mac/osx/0/Resilio-Sync.dmg"
@@ -11,6 +11,8 @@ cask "resilio-sync" do
     url "https://syncapp.zendesk.com/api/v2/help_center/en-us/articles/31386579044755"
     regex(/u003ev?(\d+(?:\.\d+)+)[\\ "<]/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

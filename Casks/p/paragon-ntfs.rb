@@ -1,14 +1,17 @@
 cask "paragon-ntfs" do
-  version "16"
+  version "17.0.243"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://dl.paragon-software.com/demo/ntfsmac#{version}_trial.dmg"
+  url "https://dl.paragon-software.com/demo/ntfsmac#{version.major}_trial.dmg"
   name "Microsoft NTFS for Mac by Paragon Software"
   desc "Read/write support for NTFS formatted volumes"
   homepage "https://www.paragon-software.com/home/ntfs-mac/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist do |items|
+      items["com.paragon-software.filesystems.ntfs"]&.short_version
+    end
   end
 
   auto_updates true

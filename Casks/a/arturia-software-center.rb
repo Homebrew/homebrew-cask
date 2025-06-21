@@ -1,6 +1,6 @@
 cask "arturia-software-center" do
-  version "2.8.0.2710"
-  sha256 "b34ed44927068d7ec0964b9e08208d12d32696ec6186b5a1bc7802be3a82350f"
+  version "2.10.0.2970"
+  sha256 "ebf561dee23eb580ca5784388d284c58a3c5d5c149048aac4505a488b6a590ca"
 
   url "https://dl.arturia.net/products/asc/soft/Arturia_Software_Center__#{version.dots_to_underscores}.pkg",
       verified: "dl.arturia.net/"
@@ -31,7 +31,7 @@ cask "arturia-software-center" do
 
   zap delete: [
         "/Library/Arturia/Arturia Software Center",
-        "/Library/ArturiaSC/",
+        "/Library/ArturiaSC",
       ],
       trash:  [
         "~/Library/Caches/com.Arturia.ArturiaSoftwareCenter",

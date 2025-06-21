@@ -1,6 +1,6 @@
 cask "font-3270-nerd-font" do
-  version "3.2.1"
-  sha256 "0e7cffe10575de3d80df920065ea6f320e86cd515ddd16beed817d284ba44afc"
+  version "3.4.0"
+  sha256 "455574baeafb90558302c798198c34a7c91e70f2d9e88664df7738b1a310b22e"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/3270.zip"
   name "3270 Nerd Font (IBM 3270)"
@@ -10,6 +10,8 @@ cask "font-3270-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "3270NerdFont-Condensed.ttf"
   font "3270NerdFont-Regular.ttf"

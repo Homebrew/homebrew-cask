@@ -1,9 +1,9 @@
 cask "google-cloud-sdk" do
   arch arm: "arm", intel: "x86_64"
 
-  version "493.0.0"
-  sha256 arm:   "b9714393358488c90b91c2461b1478f56069c206daf77bac19789ae10f54bea7",
-         intel: "0ea3645b1ffdcd5989716275efa18ddb95d40ed87a1ef081e1caab8ceed7288b"
+  version "527.0.0"
+  sha256 arm:   "e3b689e8a0827cd4ab82a6634a9e2cb09e4466eb1482b1902f83b30bbd5010b4",
+         intel: "9430addc32a7b51064ffe2f7ab69f31d86a38f147914218926425b14e1b174e8"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-darwin-#{arch}.tar.gz"
   name "Google Cloud SDK"
@@ -36,10 +36,8 @@ cask "google-cloud-sdk" do
   binary "google-cloud-sdk/bin/gcloud"
   binary "google-cloud-sdk/bin/git-credential-gcloud.sh", target: "git-credential-gcloud"
   binary "google-cloud-sdk/bin/gsutil"
-  binary "google-cloud-sdk/completion.bash.inc",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/google-cloud-sdk"
-  binary "google-cloud-sdk/completion.zsh.inc",
-         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_google_cloud_sdk"
+  bash_completion "google-cloud-sdk/completion.bash.inc", target: "google-cloud-sdk"
+  zsh_completion "google-cloud-sdk/completion.zsh.inc", target: "_google_cloud_sdk"
 
   preflight do
     FileUtils.cp_r staged_path/"google-cloud-sdk/.", google_cloud_sdk_root, remove_destination: true
@@ -54,7 +52,7 @@ cask "google-cloud-sdk" do
     end
   end
 
-  uninstall delete: staged_path.dirname/"latest"
+  uninstall trash: staged_path.dirname/"latest"
 
   zap trash: [
     "#{google_cloud_sdk_root}.staging",

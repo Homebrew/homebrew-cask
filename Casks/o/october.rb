@@ -1,9 +1,9 @@
 cask "october" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.10.0"
-  sha256 arm:   "a457775cbe48ff05a455af5635931722caa94f460798fa935e54a8bf8e13b67e",
-         intel: "fd7f577f8cb7d5ebaf9fddfb1f6b5529ee386360d14093edc0683d6150277918"
+  version "1.12.1"
+  sha256 arm:   "a707d55c19053aba93625a83d90ba21bac794a597283f8d106c76f2d074fdd71",
+         intel: "9e330bd225eb85e0b220e0c9bfc208eac777f65703aa09cdb6cc34f519530f15"
 
   url "https://github.com/marcus-crane/october/releases/download/v#{version}/october_#{version}_darwin_#{arch}.zip",
       verified: "github.com/marcus-crane/october/"
@@ -15,6 +15,8 @@ cask "october" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

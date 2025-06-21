@@ -1,6 +1,6 @@
 cask "progressive-downloader" do
-  version "7.4"
-  sha256 "a92e24b84f2203cff2bcaa2e7ff718914ff841a6c2d98202952b8904fb08ce03"
+  version "7.7"
+  sha256 "0d573ea2bb497975b69215b5ceaad7a21c353c155c973409d6e098dec1b9597c"
 
   url "https://www.macpsd.net/update/#{version}/PSD.dmg"
   name "Progressive Downloader"
@@ -12,7 +12,7 @@ cask "progressive-downloader" do
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/PSD[^"' >]*?\.dmg}i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Progressive Downloader.app"
 

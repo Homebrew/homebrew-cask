@@ -6,7 +6,10 @@ cask "openbazaar" do
   name "OpenBazaar"
   homepage "https://github.com/OpenBazaar/openbazaar-desktop/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-01-14", because: :discontinued
+  disable! date: "2025-01-14", because: :discontinued
 
   app "OpenBazaar#{version.major}.app"
 

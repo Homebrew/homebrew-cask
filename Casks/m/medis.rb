@@ -1,18 +1,21 @@
 cask "medis" do
-  version "2.15.1"
-  sha256 "70e0cab62c3306aa097c5d5000a0d14e555019f17dc2f1743c0a158f035ba7e9"
+  version "2.16.1"
+  sha256 "f9cef8fb4637d9a0f5a101246a20830c081452f49dfc7006b992bb6b4c561943"
 
-  url "https://api.getmedis.com/medis-#{version}.zip"
+  url "https://api.getmedis.com/medis/medis-#{version}.zip"
   name "Medis"
   desc "Modern GUI for Redis"
   homepage "https://getmedis.com/"
 
   livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/d33d1248-5582-4304-b45c-cb40d51da2ab"
+    url "https://api.getmedis.com/medis/sparkle"
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :big_sur"
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Medis.app"
 

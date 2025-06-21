@@ -7,7 +7,10 @@ cask "authy" do
   desc "Two-factor authentication software"
   homepage "https://authy.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-03-19", because: :discontinued
+  disable! date: "2025-03-20", because: :discontinued
 
   auto_updates true
 

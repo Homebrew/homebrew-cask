@@ -1,6 +1,6 @@
 cask "irpf2023" do
-  version "1.6"
-  sha256 "cdddc7adf807f8d731d1b71047efd91c2e8a782acb9f3109cedd1ce1b3a2ff93"
+  version "1.8"
+  sha256 "2cd503c2cbaeb680b4d46d3adb01341cace375839537387df1e50949cd5b229f"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2023/irpf/arquivos/IRPF2023-v#{version}.dmg"
   name "IRPF 2023"
@@ -9,7 +9,9 @@ cask "irpf2023" do
 
   livecheck do
     url "https://downloadirpf.receita.fazenda.gov.br/irpf/2023/irpf/update/latest.xml"
-    regex(%r{<pkgver>(\d+(\.\d+)+)</pkgver>}i)
+    strategy :xml do |xml|
+      xml.elements["//pkgver"]&.text&.strip
+    end
   end
 
   depends_on macos: ">= :sierra"

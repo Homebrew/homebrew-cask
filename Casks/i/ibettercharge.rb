@@ -19,7 +19,15 @@ cask "ibettercharge" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "iBetterCharge.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.softorino.iBetterCharge",
+    "~/Library/HTTPStorages/com.softorino.iBetterCharge.binarycookies",
+    "~/Library/Preferences/com.softorino.iBetterCharge.plist",
+  ]
 
   caveats do
     requires_rosetta

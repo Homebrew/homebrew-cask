@@ -11,6 +11,8 @@ cask "font-everson-mono" do
     regex(/current\s+version.*?v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "evermono-#{version}/Everson Mono.ttf"
   font "evermono-#{version}/Everson Mono Bold.ttf"
   font "evermono-#{version}/Everson Mono Bold Oblique.ttf"

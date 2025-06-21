@@ -8,7 +8,14 @@ cask "rolisteam" do
   desc "Virtual tabletop software"
   homepage "https://rolisteam.org/"
 
+  no_autobump! because: :requires_manual_review
+
   app "rolisteam.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.rolisteam.rolisteam*",
+    "~/Library/Saved Application State/com.yourcompany.rolisteam.savedState",
+  ]
 
   caveats do
     requires_rosetta

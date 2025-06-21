@@ -1,10 +1,18 @@
 cask "font-togalite" do
-  version :latest
+  version "2.0"
   sha256 :no_check
 
   url "https://moji-waku.com/download/togalite.zip"
   name "Togalite"
+  name "トガリテ"
   homepage "https://moji-waku.com/togalite/index.html"
+
+  livecheck do
+    url :homepage
+    regex(/トガリテ\s+VER\s+v?(\d+(?:\.\d+)+)/i)
+  end
+
+  no_autobump! because: :requires_manual_review
 
   font "togalite/togalite-black.otf"
   font "togalite/togalite-bold.otf"

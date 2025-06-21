@@ -1,9 +1,9 @@
 cask "ueli" do
   arch arm: "-arm64"
 
-  version "9.5.1"
-  sha256 intel: "d09f9a8364194b486bb93ddb6fae0df9f55712d038e9b6f20c071ecb5f40b074",
-         arm:   "fbb30b0e7a37d676e6c2d3b170a2750a0289aad85ee02526c6ea97d3a9c82746"
+  version "9.24.0"
+  sha256 arm:   "de33fc534be8b59d7b5a37293df21b58ec8816ee29dfcab3a0ebf4c1a0d4414f",
+         intel: "f76c44b7bdf82b3adde142e49ff641c59959ffe85d838bc1134172c945afdea2"
 
   url "https://github.com/oliverschwendener/ueli/releases/download/v#{version}/Ueli-#{version}#{arch}.dmg",
       verified: "github.com/oliverschwendener/ueli/"
@@ -15,6 +15,8 @@ cask "ueli" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "ueli.app"
 

@@ -12,6 +12,8 @@ cask "keycombiner" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "KeyCombiner.app"
 
   zap trash: [

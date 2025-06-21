@@ -1,30 +1,44 @@
 cask "wifiman" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "arm64", intel: "amd64"
 
-  version "0.3.0"
-  sha256 arm:   "47c1794e20d8a728f790beb26e8bdbd5a30a251fd421419d2589fb40ca3faf7a",
-         intel: "be1e7bb2123a94ecb624ebc26ad3b83d075193aa0d70b06b05bd0f0fb2f70da9"
+  version "1.1.3"
+  sha256 arm:   "cedb1e12544422f2a1f26f96af0fad11b360658295182b4023f1b28ac5297a46",
+         intel: "ca075d6ab6e8e5331247c0b60c4295456a394fecfc6bc29c23571386194bf60e"
 
-  url "https://desktop.wifiman.com/wifiman-desktop-#{version}-mac-#{arch}.pkg"
+  url "https://desktop.wifiman.com/wifiman-desktop-#{version}-#{arch}.pkg"
   name "WiFiman Desktop"
   desc "Network monitoring and troubleshooting tool"
   homepage "https://wifiman.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://community.svc.ui.com/", post_json: {
+      query: "query { releases(tags: [\"wifiman\"]) { items { title version } } }",
+    }
+    strategy :json do |json|
+      json.dig("data", "releases", "items")&.map do |item|
+        next unless item["title"]&.include?("Desktop")
+
+        item["version"]
+      end
+    end
   end
 
-  pkg "wifiman-desktop-#{version}-mac-#{arch}.pkg"
+  no_autobump! because: :requires_manual_review
+
+  pkg "wifiman-desktop-#{version}-#{arch}.pkg"
 
   uninstall launchctl: "wifiman-desktop",
-            pkgutil:   "com.ui.wifiman-desktop",
+            pkgutil:   [
+              "ui.wifiman.com",
+              "ui.wifiman.network.helper.WiFimanNetworkHelper",
+            ],
             delete:    "/Applications/WiFiman Desktop.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ui.wifiman-desktop.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ui.wifiman-desktop.sfl*",
     "~/Library/Application Support/wifiman-desktop",
     "~/Library/Logs/wifiman-desktop",
-    "~/Library/Preferences/com.ui.wifiman-desktop.plist",
-    "~/Library/Saved Application State/com.ui.wifiman-desktop.savedState",
+    "~/Library/Preferences/ui.wifiman-desktop.plist",
+    "~/Library/Saved Application State/ui.wifiman-desktop.savedState",
   ]
 end

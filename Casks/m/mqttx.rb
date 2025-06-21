@@ -1,9 +1,9 @@
 cask "mqttx" do
   arch arm: "-arm64"
 
-  version "1.10.1"
-  sha256 arm:   "195c0837f544c553f2335dfc59e0f6a9f65343020d7320327703e6d51ca467b3",
-         intel: "74dc05a90fbf1cf801452df95012cec0698e99afac7978aef5ed2b2fb445883d"
+  version "1.11.1"
+  sha256 arm:   "6fef6a1b31108262e141d86912880ae4c64d1ec4bad02c006b812aeeccd8636f",
+         intel: "d76528e96a1e85a6ab611e47aad4f07dc0ccb9e950824295b280ec1dbf90a01c"
 
   url "https://github.com/emqx/MQTTX/releases/download/v#{version}/MQTTX-#{version}#{arch}.dmg",
       verified: "github.com/emqx/MQTTX/"

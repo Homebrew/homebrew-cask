@@ -18,7 +18,9 @@ cask "controllermate" do
   desc "Create virtual mouse, tablet, and joystick devices"
   homepage "https://www.orderedbytes.com/controllermate/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "#temp#/ControllerMate.sparkle_interactive.pkg"
 
@@ -36,14 +38,14 @@ cask "controllermate" do
             ],
             delete:    [
               "/Applications/ControllerMate.app",
-              "/Library/Extensions/ControllerMate.kext,/Library/Application Support/ControllerMate/",
+              "/Library/Extensions/ControllerMate.kext,/Library/Application Support/ControllerMate",
               "/Library/LaunchAgents/com.orderedbytes.ControllerMateHelper.plist",
               "/private/var/db/receipts/com.orderedbytes.controllermate.*",
             ]
 
   zap trash: [
     "~/Library/Application Support/ControllerMate",
-    "~/Library/Caches/com.orderedbytes.ControllerMate4",
+    "~/Library/Caches/com.orderedbytes.ControllerMate*",
     "~/Library/Logs/ControllerMate MIDI",
     "~/Library/Logs/ControllerMate",
   ]

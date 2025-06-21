@@ -7,6 +7,14 @@ cask "cameracontroller" do
   desc "Control USB Cameras from an app"
   homepage "https://github.com/Itaybre/CameraController/"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/Itaybre/CameraController/master/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "CameraController.app"

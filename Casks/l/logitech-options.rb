@@ -56,7 +56,7 @@ cask "logitech-options" do
     pkg "LogiMgr Installer #{version}.app/Contents/Resources/LogiMgr.pkg"
   end
   on_big_sur :or_newer do
-    version "10.20.4"
+    version "10.24.3"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.zip",
@@ -66,8 +66,8 @@ cask "logitech-options" do
       url "https://support.logi.com/api/v2/help_center/en-us/articles.json?label_names=webcontent=productdownload,webos=mac-macos-x-11.0"
       regex(/Software Version: .*?v?(\d+(?:\.\d+)+)/i)
       strategy :json do |json, regex|
-        json["articles"].select { |item| item["name"] == "Logitech Options" }
-                        .map { |item| item["body"][regex, 1] }
+        json["articles"]&.select { |item| item["name"] == "Logitech Options" }
+                        &.map { |item| item["body"]&.[](regex, 1) }
       end
     end
 
@@ -77,6 +77,8 @@ cask "logitech-options" do
   name "Logitech Options"
   desc "Software for Logitech devices"
   homepage "https://support.logitech.com/software/options"
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :sierra"

@@ -8,7 +8,10 @@ cask "final-cut-library-manager" do
   desc "Displays Final Cut Pro X libraries"
   homepage "https://www.arcticwhiteness.com/finalcutlibrarymanager/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-04-03", because: :discontinued
+  disable! date: "2025-04-03", because: :discontinued
 
   depends_on macos: ">= :sierra"
 

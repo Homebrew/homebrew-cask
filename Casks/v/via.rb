@@ -8,10 +8,15 @@ cask "via" do
   desc "Keyboard configurator"
   homepage "https://caniusevia.com/"
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :high_sierra"
+
   app "VIA.app"
 
   zap trash: [
     "~/Library/Application Support/VIA",
+    "~/Library/Application Support/via-nativia",
     "~/Library/Logs/VIA",
     "~/Library/Preferences/org.via.configurator.plist",
   ]

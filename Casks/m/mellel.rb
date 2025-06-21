@@ -1,6 +1,6 @@
 cask "mellel" do
-  version "6.0.6,60607"
-  sha256 "21950b38035c94703dbe00968440162845225ec6c36471c7f04e2ade0073175c"
+  version "6.3.3,63306"
+  sha256 "93e3ba4b2513f526ca4ee89bb371979c40f1f75648e74ce09b550347fe462f55"
 
   url "https://d1riogbqt3a9uw.cloudfront.net/mellel_#{version.csv.second}.dmg",
       verified: "d1riogbqt3a9uw.cloudfront.net/"
@@ -10,15 +10,19 @@ cask "mellel" do
 
   livecheck do
     url "http://www.mellelupdate.com/mellelupdate/latest_update.xml"
-    regex(%r{<full-version>v?(\d+(?:\.\d{1,2})+)(?:\.(\d{3,}))?</full-version>}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+    regex(/^v?(\d+(?:\.\d{1,2})+)(?:\.(\d{3,}))?$/i)
+    strategy :xml do |xml, regex|
+      xml.get_elements("//full-version").map do |item|
+        match = item.text&.strip&.match(regex)
+        next if match.blank?
+
+        match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
       end
     end
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Mellel #{version.major}.app"
 

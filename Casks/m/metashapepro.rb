@@ -1,6 +1,6 @@
 cask "metashapepro" do
-  version "2.1.3"
-  sha256 "9b36cbd7e37177af7b91cf2e3dddd2c3a5d73263b6f7ed5c678ac63f9bff590d"
+  version "2.2.1"
+  sha256 "a798e7146047df229a7987cdafaa7890e0d725856e8586d2a1db021f21913d17"
 
   url "https://download.agisoft.com/metashape-pro_#{version.dots_to_underscores}.dmg"
   name "Agisoft Metashape Professional Edition"

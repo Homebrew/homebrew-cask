@@ -1,17 +1,29 @@
 cask "wacom-inkspace" do
-  version "2.7.4"
-  sha256 "f405de898bb43622b07a86c42a244cc27c462eaca0d85deae76e4271adebc4cc"
+  version "3.0.8"
+  sha256 "03e4e283538481ebbb27a7c961c9f49c7f57ab4c1594aa910fa6d38c1f5976d6"
 
-  url "https://cdn.wacom.com/i/m/mac/WacomInkspaceApp_#{version}.zip"
+  url "https://cdn.wacom.com/i/m/mac/wacominkspaceappsetup-#{version}.dmg"
   name "Wacom Inkspace"
-  homepage "https://www.wacom.com/en-us/products/apps-services/inkspace"
+  homepage "https://www.wacom.com/en-us/products/inkspace"
 
   livecheck do
-    url "https://link.wacom.com/i/m?os=mac"
-    strategy :header_match
+    url "https://www.wacom.com/en-us/overlays/products/wacom-inkspace-2019"
+    regex(/href=.*?wacominkspaceappsetup[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Wacom Inkspace App.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.wacom-inkspace-app.sfl*",
+    "~/Library/Application Support/Wacom InkSpace App",
+    "~/Library/Caches/com.electron.wacom-inkspace-app",
+    "~/Library/Caches/com.electron.wacom-inkspace-app.ShipIt",
+    "~/Library/HTTPStorages/com.electron.wacom-inkspace-app",
+    "~/Library/Preferences/com.electron.wacom-inkspace-app.plist",
+    "~/Library/Saved Application State/com.electron.wacom-inkspace-app.savedState",
+  ]
 
   caveats do
     requires_rosetta

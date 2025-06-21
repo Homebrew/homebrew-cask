@@ -8,10 +8,17 @@ cask "hugin" do
   desc "Panorama photo stitcher"
   homepage "https://hugin.sourceforge.io/"
 
-  livecheck do
-    url "https://hugin.sourceforge.io/download/"
-    regex(/Hugin-(\d+(?:\.\d+)*)\.dmg/i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-11-10", because: :unmaintained
 
   suite "Hugin"
+
+  zap trash: [
+        "~/Library/Preferences/hugin Preferences",
+        "~/Library/Preferences/net.sourceforge.Hugin.plist",
+        "~/Library/Preferences/net.sourceforge.hugin.PTBatcherGUI.plist",
+        "~/Library/Preferences/net.sourceforge.HuginStitchProject.plist",
+      ],
+      rmdir: "~/.hugindata"
 end

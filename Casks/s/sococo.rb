@@ -17,9 +17,14 @@ cask "sococo" do
   app "Sococo.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.sococo.sfl*",
     "~/Library/Application Support/Sococo_RS",
     "~/Library/Caches/*sococo",
+    "~/Library/Caches/com.electron.sococo.ShipIt",
     "~/Library/Caches/Support/Sococo_R",
+    "~/Library/HTTPStorages/com.electron.sococo",
+    "~/Library/Preferences/com.electron.sococo.plist",
+    "~/Library/Saved Application State/com.electron.sococo.savedState",
   ]
 
   caveats do

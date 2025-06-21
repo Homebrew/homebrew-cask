@@ -13,14 +13,16 @@ cask "textsniper" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :catalina"
 
   app "TextSniper.app"
 
-  uninstall  launchctl: "com.valerijs.boguckis.gumroad.TextSniper-LaunchAtLoginHelper",
-             quit:      "com.valerijs.boguckis.gumroad.TextSniper",
-             delete:    "/Applications/TextSniper.app"
+  uninstall launchctl: "com.valerijs.boguckis.gumroad.TextSniper-LaunchAtLoginHelper",
+            quit:      "com.valerijs.boguckis.gumroad.TextSniper",
+            delete:    "/Applications/TextSniper.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.valerijs.boguckis.gumroad.TextSniper-LaunchAtLoginHelper",

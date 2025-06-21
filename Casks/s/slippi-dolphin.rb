@@ -1,6 +1,6 @@
 cask "slippi-dolphin" do
-  version "3.4.2"
-  sha256 "2e696cc442a25f01d9567433d31cda8f99bbafc4dddb1ee80fc160657fabe5a8"
+  version "3.4.6"
+  sha256 "2364311bd761b78acb2d5c26c35a9081aca27a3fe3b313e8765340124c189835"
 
   url "https://github.com/project-slippi/Ishiiruka/releases/download/v#{version}/FM-Slippi-#{version}-Mac.dmg",
       verified: "github.com/project-slippi/Ishiiruka/"
@@ -12,6 +12,8 @@ cask "slippi-dolphin" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :catalina"
 
   app "Slippi Dolphin.app"
 

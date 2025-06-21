@@ -1,16 +1,16 @@
 cask "font-juliamono" do
-  version "0.057"
-  sha256 "e397ca1c6b84e6140d2e025fdc310544a519775b98d8f756ef0f5c42aefd4cc0"
+  version "0.060"
+  sha256 "46d969568608f8d00d107c1cfe313264803046044ce7405153564f6d6616cc83"
 
-  url "https://github.com/cormullion/juliamono/releases/download/v#{version}/JuliaMono-ttf.tar.gz"
+  url "https://github.com/cormullion/juliamono/releases/download/v#{version}/JuliaMono-ttf.tar.gz",
+      verified: "github.com/cormullion/juliamono/"
   name "JuliaMono"
-  homepage "https://github.com/cormullion/juliamono"
+  homepage "https://juliamono.netlify.app/"
 
   font "JuliaMono-Black.ttf"
   font "JuliaMono-BlackItalic.ttf"
   font "JuliaMono-Bold.ttf"
   font "JuliaMono-BoldItalic.ttf"
-  font "JuliaMono-BoldLatin.ttf"
   font "JuliaMono-ExtraBold.ttf"
   font "JuliaMono-ExtraBoldItalic.ttf"
   font "JuliaMono-Light.ttf"
@@ -19,7 +19,6 @@ cask "font-juliamono" do
   font "JuliaMono-MediumItalic.ttf"
   font "JuliaMono-Regular.ttf"
   font "JuliaMono-RegularItalic.ttf"
-  font "JuliaMono-RegularLatin.ttf"
   font "JuliaMono-SemiBold.ttf"
   font "JuliaMono-SemiBoldItalic.ttf"
 

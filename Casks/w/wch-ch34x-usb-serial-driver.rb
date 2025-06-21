@@ -1,5 +1,5 @@
 cask "wch-ch34x-usb-serial-driver" do
-  version "1.8"
+  version "1.9"
   sha256 :no_check
 
   url "https://www.wch.cn/downloads/file/369.html"
@@ -11,6 +11,8 @@ cask "wch-ch34x-usb-serial-driver" do
     url :homepage
     regex(%r{<td>(\d+(?:\.\d+)+)</td>}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "CH341SER_MAC/CH34xVCPDriver.pkg"
 

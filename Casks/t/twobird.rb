@@ -14,6 +14,8 @@ cask "twobird" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Twobird.app"

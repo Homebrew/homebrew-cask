@@ -1,5 +1,5 @@
 cask "dadroit-json-viewer" do
-  version "3.0.0,961"
+  version "3.1.0,533"
   sha256 :no_check
 
   url "https://dadroit.com/releases/mac/DadroitJSONViewer.zip"
@@ -14,6 +14,8 @@ cask "dadroit-json-viewer" do
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Dadroit JSON Viewer.app"
 

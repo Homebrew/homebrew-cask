@@ -1,6 +1,6 @@
 cask "setapp" do
-  version "3.39.0,87,1726136238"
-  sha256 "391793e29fa2a836e6fcee2c9f1b5ba28e93e7e6ca72f0facce99d1ffce168c2"
+  version "3.45.2,118,1749566312"
+  sha256 "9b9fbaeb1300b0eba32e45413aff51fed1aca82c2c092ef6782c373c0b25d192"
 
   url "https://dl.devmate.com/com.setapp.DesktopClient/#{version.csv.second}/#{version.csv.third}/Setapp-#{version.csv.second}.zip",
       verified: "devmate.com/com.setapp.DesktopClient/"
@@ -10,8 +10,12 @@ cask "setapp" do
 
   livecheck do
     url "https://s3-us-west-2.amazonaws.com/updateinfo.devmate.com/com.setapp.DesktopClient/updates.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version},#{item.url[%r{/(\d+)/Setapp-(?:\d+(?:\.\d+)*)\.zip}i, 1]}"
+    regex(%r{/(\d+)/Setapp[._-]v?(?:\d+(?:\.\d+)*)\.zip}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.short_version},#{item.version},#{match[1]}"
     end
   end
 

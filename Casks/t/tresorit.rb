@@ -1,5 +1,5 @@
 cask "tresorit" do
-  version "3.5.3101.4340"
+  version "3.5.3310.4580"
   sha256 :no_check
 
   url "https://installer.tresorit.com/Tresorit.dmg"
@@ -15,6 +15,7 @@ cask "tresorit" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Tresorit.app"
 

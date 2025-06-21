@@ -1,6 +1,6 @@
 cask "font-monofur-nerd-font" do
-  version "3.2.1"
-  sha256 "c63786a1ef1a5b2b0bd5cdd80722d9c8ebe81f3830a5a492b54c07db9022fec6"
+  version "3.4.0"
+  sha256 "3a1e6a3b85821a61c8d42d98bc42f181cf1fa7994cdba7068bcf3f6dec249995"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Monofur.zip"
   name "Monofur Nerd Font (Monofur)"
@@ -10,6 +10,8 @@ cask "font-monofur-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "MonofurNerdFont-Bold.ttf"
   font "MonofurNerdFont-Italic.ttf"

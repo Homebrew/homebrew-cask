@@ -1,6 +1,6 @@
 cask "nomachine" do
-  version "8.13.1_4"
-  sha256 "14ef0fc50a1058c356b0fb293ce17b734cd8b6f88627acb6a7dd930288a12608"
+  version "8.16.1_2"
+  sha256 "622e12ab5397b74bfcae3c4de5a91c018ed222244d4e09804af0fc03e9e8e04e"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   name "NoMachine"
@@ -11,6 +11,8 @@ cask "nomachine" do
     url "https://www.nomachine.com/support&destination=downloads&callback=L2Rvd25sb2FkLz9pZD03"
     regex(/nomachine[._-]v?(\d+(?:\.\d+)+_\d+)\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

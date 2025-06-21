@@ -13,7 +13,19 @@ cask "synalyze-it-pro" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Synalyze It! Pro.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.synalyze-it.SynalyzeItPro",
+    "~/Library/Caches/com.synalyze-it.SynalyzeItPro",
+    "~/Library/HTTPStorages/com.synalyze-it.SynalyzeItPro",
+    "~/Library/Preferences/com.synalyze-it.SynalyzeItPro.plist",
+    "~/Library/Saved Application State/com.synalyze-it.SynalyzeItPro.savedState",
+    "~/Library/WebKit/com.synalyze-it.SynalyzeItPro",
+  ]
 end

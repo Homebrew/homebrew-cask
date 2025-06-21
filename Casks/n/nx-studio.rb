@@ -1,8 +1,8 @@
 cask "nx-studio" do
-  version "1.7.0"
-  sha256 "26b7c182e9616bfe2fa040caed4a368a7ef400563ed4dc6634ed8d37557740aa"
+  version "1.9.0"
+  sha256 "dc0d2baa5df422ea62861e66021d4a93c7c31e11b936b9fe4dffe783f82257d9"
 
-  url "https://download.nikonimglib.com/archive6/YpxKh00fsUc706q0WSc56VsvZm75/S-NXSTDO-#{version.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg",
+  url "https://download.nikonimglib.com/archive7/QpVAD00Oxh3607X3Qk818ZDICP43/S-NXSTDO-#{version.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg",
       verified: "download.nikonimglib.com/"
   name "NX Studio"
   desc "Nikon suite for viewing, processing, and editing photos and videos"
@@ -13,8 +13,10 @@ cask "nx-studio" do
     regex(/Ver\.\s+(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   pkg "Installer/NikonInstaller.pkg"
 

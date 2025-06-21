@@ -7,7 +7,9 @@ cask "machoexplorer" do
   desc "Mach-O Executable File Explorer"
   homepage "https://github.com/everettjf/MachOExplorer"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   app "MachOExplorer.app"
 end

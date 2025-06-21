@@ -1,12 +1,14 @@
 cask "oversight" do
-  version "2.3.0"
-  sha256 "a78a997427ba29a01285cb0bdd84a88c600c6cb3855017f9f31a47ad350dd94c"
+  version "2.4.0"
+  sha256 "2352214830d0c6c827b8e010d8dea59351dcba15019683a6e4686119174b99b9"
 
   url "https://github.com/objective-see/OverSight/releases/download/v#{version}/OverSight_#{version}.zip",
       verified: "github.com/objective-see/OverSight/"
   name "OverSight"
   desc "Monitors computer mic and webcam"
-  homepage "https://objective-see.com/products/oversight.html"
+  homepage "https://objective-see.org/products/oversight.html"
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :monterey"
 

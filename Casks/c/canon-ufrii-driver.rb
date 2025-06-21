@@ -1,8 +1,8 @@
 cask "canon-ufrii-driver" do
-  version "10.19.17"
-  sha256 "2a88985f07ad8de870b750c13826c480c0ded9e982c1678eff43152cc279fab7"
+  version "10.19.21"
+  sha256 "610d6d42f403268b53417b8bab8397ed04596713fef77c33b46d38f397a71ff7"
 
-  url "https://downloads.canon.com/bicg2024/drivers/UFRII_v#{version}_mac.zip",
+  url "https://downloads.canon.com/sss2025/drivers/UFRII_v#{version}_mac.zip",
       verified: "downloads.canon.com/"
   name "Canon UFR II/UFRII LT/LIPSLX/CARPS2 Printer Driver"
   desc "Printer driver for Canon imageRUNNER office printers"
@@ -10,7 +10,15 @@ cask "canon-ufrii-driver" do
 
   livecheck do
     url "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json"
-    regex(/UFRII[._-]v?(\d+(?:\.\d+)+)[._-]Mac/i)
+    regex(/UFRII[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
+    strategy :json do |json, regex|
+      json.map do |item|
+        match = item["fileUrl"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   depends_on macos: ">= :catalina"

@@ -8,10 +8,9 @@ cask "knock" do
   desc "Unlock with AppleWatch"
   homepage "http://www.knocktounlock.com/"
 
-  livecheck do
-    url "https://knock-updates.s3.amazonaws.com/Knock.xml"
-    strategy :sparkle, &:short_version
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-03-31", because: :unmaintained
 
   app "Knock.app"
 

@@ -2,12 +2,17 @@ cask "do-not-disturb" do
   version "1.3.0"
   sha256 "000e3ce8f5abd1313bbb603c401a1be0b5cf4f11644d36f1d5d382745079fdc3"
 
-  url "https://bitbucket.org/objective-see/deploy/downloads/DoNotDisturb_#{version}.zip",
-      verified: "bitbucket.org/objective-see/"
+  url "https://github.com/objective-see/DoNotDisturb/releases/download/#{version}/DoNotDisturb_#{version}.zip",
+      verified: "github.com/objective-see/DoNotDisturb/"
   name "Do Not Disturb"
   desc "Open-source physical access (aka 'evil maid') attack detector"
-  homepage "https://objective-see.com/products/dnd.html"
+  homepage "https://objective-see.org/products/dnd.html"
 
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-11-16", because: :unmaintained
+
+  depends_on arch: :x86_64
   depends_on macos: ">= :sierra"
 
   installer script: {
@@ -21,4 +26,6 @@ cask "do-not-disturb" do
     args:       ["-uninstall"],
     sudo:       true,
   }
+
+  # No zap stanza required
 end

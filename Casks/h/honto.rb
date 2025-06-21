@@ -1,5 +1,5 @@
 cask "honto" do
-  version "6.62.0"
+  version "6.70.0"
   sha256 :no_check
 
   url "https://dl.honto.jp/macapp/honto.dmg"
@@ -13,9 +13,16 @@ cask "honto" do
     regex(%r{Mac\s*<br\s*/?>\s*Ver[._-]v?(\d+(?:\.\d+)+)}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :mojave"
 
   app "honto.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/jp.co.dnp.hontoformac",
+    "~/Library/Containers/jp.co.dnp.hontoformac",
+  ]
 
   caveats do
     requires_rosetta

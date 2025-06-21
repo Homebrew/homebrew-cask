@@ -4,6 +4,7 @@ cask "pdf-toolbox" do
 
   url "https://www.lightenpdf.com/upload/download/PDF-Toolbox-Mac-#{version.no_dots}.dmg"
   name "PDF Toolbox"
+  desc "Utilities for working with PDF files"
   homepage "https://www.lightenpdf.com/pdf-toolbox-mac.html"
 
   livecheck do
@@ -11,7 +12,14 @@ cask "pdf-toolbox" do
     regex(/Version\s*(\d+(?:\.\d+)*)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "PDF Toolbox.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.lightenpdf.pdftoolboxweb.plist",
+    "~/Library/Saved Application State/com.lightenpdf.pdftoolboxweb.savedState",
+  ]
 
   caveats do
     requires_rosetta

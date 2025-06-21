@@ -1,9 +1,9 @@
 cask "mongodb-compass" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.44.4"
-  sha256 arm:   "986caf360b6b47bae17118872ebe0df294f052c6524c2e8246219d2c75a73ff1",
-         intel: "e42b0c44a08e4c67c24583b6e39e876c8e5080896d7c473ce3d4a62f1d6e30cf"
+  version "1.46.3"
+  sha256 arm:   "50ee96e2d91feab083737163d63b417d6ddf199143b7c5671dc1b7e5ff8f1672",
+         intel: "da99e79ac8498fd97bff27ad045039a6418c9c04fc6180b754a3eda471263e6b"
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-#{version}-darwin-#{arch}.dmg"
   name "MongoDB Compass"
@@ -12,7 +12,15 @@ cask "mongodb-compass" do
 
   livecheck do
     url "https://info-mongodb-com.s3.amazonaws.com/com-download-center/compass.json"
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)\s*\(Stable/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :json do |json, regex|
+      json["versions"]&.map do |item|
+        match = item["_id"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   auto_updates true
@@ -23,7 +31,7 @@ cask "mongodb-compass" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.sfl*",
     "~/Library/Application Support/MongoDB Compass",
-    "~/Library/Caches/MongoDB Compass/",
+    "~/Library/Caches/MongoDB Compass",
     "~/Library/Preferences/com.mongodb.compass.plist",
     "~/Library/Saved Application State/com.mongodb.compass.savedState",
   ]

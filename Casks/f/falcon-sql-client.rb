@@ -8,7 +8,10 @@ cask "falcon-sql-client" do
   desc "Free, open-source SQL client"
   homepage "https://plot.ly/free-sql-client-download/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-06-17", because: :discontinued
+  disable! date: "2025-06-17", because: :discontinued
 
   app "Falcon SQL Client.app"
 

@@ -9,8 +9,12 @@ cask "jiggler" do
 
   livecheck do
     url :homepage
-    regex(/<h1>.+(\d+(?:\.\d+))\s/i)
+    regex(/<h1>.+(\d+(?:\.\d+)+)\s/i)
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
 
   app "Jiggler.app"
 

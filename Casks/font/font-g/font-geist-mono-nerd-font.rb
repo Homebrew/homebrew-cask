@@ -1,6 +1,6 @@
 cask "font-geist-mono-nerd-font" do
-  version "3.2.1"
-  sha256 "87f9a0a7a585ffcf29a881002b1b5fc5ea091d5bc175b130154dc10a59fb3c76"
+  version "3.4.0"
+  sha256 "a9f61b7b7f0429db4fa9a526940f71190127ed95dbe3533163d80d7cafdb3ec9"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/GeistMono.zip"
   name "GeistMono Nerd Font (Geist Mono)"
@@ -10,6 +10,8 @@ cask "font-geist-mono-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "GeistMonoNerdFont-Black.otf"
   font "GeistMonoNerdFont-Bold.otf"

@@ -9,9 +9,11 @@ cask "paper" do
   homepage "https://paper.photos/"
 
   livecheck do
-    url :homepage
-    regex(/paper[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/e28a791f-99d8-40f9-b36b-034730d1707a"
+    strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :big_sur"

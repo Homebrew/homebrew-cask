@@ -1,6 +1,6 @@
 cask "font-doulos-sil" do
-  version "6.200"
-  sha256 "a7ad76326c126b2748297b987a634a56f7e42cd45bc3ff2c90a7909cbb164223"
+  version "7.000"
+  sha256 "3d63296575f1f834f785f4a9426a9da6bc3b9083fcc304a5490704f4398bf639"
 
   url "https://software.sil.org/downloads/r/doulos/DoulosSIL-#{version}.zip"
   name "Doulos SIL"
@@ -10,6 +10,8 @@ cask "font-doulos-sil" do
     url "https://software.sil.org/doulos/download/"
     regex(/href=.*DoulosSIL[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "DoulosSIL-#{version}/DoulosSIL-Regular.ttf"
 

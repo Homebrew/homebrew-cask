@@ -1,6 +1,6 @@
 cask "coolterm" do
-  version "2.2.0.3.0.1327"
-  sha256 "000bbb5d82edafd26d6778a0a1b893a2b3a527d7ecfc3e7bc00bf14c66840d47"
+  version "2.4.0.3.0.1425"
+  sha256 "b1abf1567a8024197e9d8d4d421e80c128f967faec9efa8a14223dd29f079715"
 
   url "https://freeware.the-meiers.org/previous/CoolTermMac#{version.major_minor_patch.no_dots}.dmg"
   name "CoolTerm"
@@ -11,6 +11,8 @@ cask "coolterm" do
     url "https://freeware.the-meiers.org/version/CoolTerm.ver"
     regex(/^\s*v?(\d+(?:\.\d+)+)\s*$/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 

@@ -1,10 +1,12 @@
 cask "font-plemol-jp-nf" do
-  version "1.7.1"
-  sha256 "c81a4c6121afa5d2af4bf22a04feab5c531d4f4011ae1adc9d4243e77a0cccbb"
+  version "2.0.4"
+  sha256 "54fe7f4d2e857f43a13914ae38638a4205913b19feb3d2f80144c510f4a6a087"
 
   url "https://github.com/yuru7/PlemolJP/releases/download/v#{version}/PlemolJP_NF_v#{version}.zip"
   name "PlemolJP NF"
   homepage "https://github.com/yuru7/PlemolJP"
+
+  no_autobump! because: :requires_manual_review
 
   font "PlemolJP_NF_v#{version}/PlemolJPConsole_NF/PlemolJPConsoleNF-Bold.ttf"
   font "PlemolJP_NF_v#{version}/PlemolJPConsole_NF/PlemolJPConsoleNF-BoldItalic.ttf"

@@ -1,9 +1,9 @@
 cask "pycharm-ce" do
   arch arm: "-aarch64"
 
-  version "2024.2.1,242.21829.153"
-  sha256 arm:   "479cfd05514df177bca56cf3406a944ef6bbdbdffb78adddec024e7209a7452f",
-         intel: "bfc1f6d282ef67b62385f48cc119743de15e2776ec8cbe0cfe938a51b89e54b4"
+  version "2025.1.2,251.26094.141"
+  sha256 arm:   "cdcdea2e167c3621f5b5ea8e0150c62d24495192edd2282616676d3f53b06063",
+         intel: "38283e62677079d7d830217087c563ac6daf5e71422c03e56082bde9572e3908"
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
   name "Jetbrains PyCharm Community Edition"
@@ -14,8 +14,12 @@ cask "pycharm-ce" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
     strategy :json do |json|
-      json["PCC"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["PCC"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end
@@ -24,7 +28,16 @@ cask "pycharm-ce" do
   depends_on macos: ">= :high_sierra"
 
   app "PyCharm CE.app"
-  binary "#{appdir}/PyCharm CE.app/Contents/MacOS/pycharm", target: "pycharm-ce"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/pycharm.wrapper.sh"
+  binary shimscript, target: "pycharm-ce"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/PyCharm CE.app/Contents/MacOS/pycharm' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/PyCharmCE#{version.major_minor}",

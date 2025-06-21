@@ -1,6 +1,6 @@
 cask "neo-network-utility" do
-  version "1.1.1"
-  sha256 "fbfe0984b7751b647d3f433b64412a50d989d7abdcb5fbeead2392428370dfcf"
+  version "1.1.4"
+  sha256 "582f300ac54d4769a0f536fa44ef19fc310810d623cd7677b4cce0d8e7b5adc9"
 
   url "https://download.devontechnologies.com/download/freeware/networkutility/#{version}/Neo_Network_Utility.dmg.zip"
   name "Neo Network Utility"

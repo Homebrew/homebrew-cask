@@ -1,28 +1,35 @@
 cask "wins" do
-  version "2.3"
-  sha256 "907059e8656d29aa0935a044767b4cd1bef14e4d21470fe5b3d4965ae38331d3"
+  version "2.6.2,43"
+  sha256 :no_check
 
-  url "https://f005.backblazeb2.com/file/winsWebsite/Wins-latest-#{version}.dmg",
-      verified: "f005.backblazeb2.com/file/winsWebsite/"
+  url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins.zip",
+      verified: "winswebsite.s3.us-east-005.backblazeb2.com/"
   name "Wins"
   desc "Window manager"
   homepage "https://wins.cool/"
 
   livecheck do
-    url "https://wins.cool/"
-    regex(/href=.*?Wins[._-]latest[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://wins.cool/update/appcast.xml"
+    strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
+  auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Wins.app"
 
   zap trash: [
+    "~/Library/Application Scripts/cool.wins.WinsHelper",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cool.wins.*.sfl*",
     "~/Library/Application Support/cools.wins.main",
     "~/Library/Application Support/Wins",
     "~/Library/Caches/cools.wins.main",
+    "~/Library/Containers/cool.wins.WinsHelper",
     "~/Library/Containers/WinsHelper",
-    "~/Library/HTTPStorages/cools.wins.main",
+    "~/Library/HTTPStorages/cools.wins.main*",
+    "~/Library/PreferencePanes/Wins.prefPane",
     "~/Library/Preferences/com.tinynudge.pomello.plist",
+    "~/Library/Preferences/cools.wins.main.plist",
+    "~/Library/WebKit/cools.wins.main",
   ]
 end

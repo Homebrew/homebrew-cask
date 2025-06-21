@@ -1,5 +1,5 @@
 cask "sessionrestore" do
-  version "2.8"
+  version "2.8.2"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/sessionrestore/SessionRestore.dmg"
@@ -13,7 +13,7 @@ cask "sessionrestore" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "SessionRestore.app"
 

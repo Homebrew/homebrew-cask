@@ -1,6 +1,6 @@
 cask "coconutbattery" do
-  version "3.9.17,C29E0D4F"
-  sha256 "d3716279aa8fa684ff49633cd3a287c6118c0bd661de85e67fc02d8855e4922c"
+  version "4.0.3,163"
+  sha256 "68a92c7b9797a78af9e7efdcfab242835da0855100b1526cfd8fd2ec40e33cd0"
 
   url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.csv.first.no_dots}_#{version.csv.second}.zip"
   name "coconutBattery"
@@ -9,13 +9,11 @@ cask "coconutbattery" do
 
   livecheck do
     url "https://coconut-flavour.com/updates/coconutBattery.xml"
-    strategy :sparkle do |item|
-      "#{item.version},#{item.url[/_\d+_(.*?)\./i, 1]}"
-    end
+    strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :monterey"
 
   app "coconutBattery.app"
 

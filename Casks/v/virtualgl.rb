@@ -1,12 +1,14 @@
 cask "virtualgl" do
-  version "3.1"
-  sha256 "febcae980befdea6ea674e7fe8366cf6d36e603850565231fcfacd9560c995f1"
+  version "3.1.3"
+  sha256 "458590566803806e39b9044e4f74cbde7efc0aa712d0598c9a258496914ecec2"
 
-  url "https://downloads.sourceforge.net/virtualgl/VirtualGL-#{version}.dmg",
-      verified: "downloads.sourceforge.net/virtualgl/"
+  url "https://github.com/VirtualGL/virtualgl/releases/download/#{version}/VirtualGL-#{version}.dmg",
+      verified: "github.com/VirtualGL/virtualgl/"
   name "VirtualGL"
   desc "3D without boundaries"
   homepage "https://www.virtualgl.org/"
+
+  no_autobump! because: :requires_manual_review
 
   pkg "VirtualGL.pkg"
 
@@ -15,4 +17,6 @@ cask "virtualgl" do
               sudo:       true,
             },
             pkgutil: "com.virtualgl.vglclient"
+
+  # No zap stanza required
 end

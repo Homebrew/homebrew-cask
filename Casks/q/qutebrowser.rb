@@ -1,15 +1,17 @@
 cask "qutebrowser" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.2.1"
-  sha256 arm:   "1cd1172d7cb5ae01e20fdec9c8e12e06e6407868e07b5c2f1e0a3d7ac6592826",
-         intel: "98eb70379e37e4ee5e664e7c99f1dad1e5b618d00cd50595b46a17cfd29a071a"
+  version "3.5.1"
+  sha256 arm:   "b14078102a0c9fa8d21490f8f902d8ee486b9fb3e038c52b50f42f71af3c1b1a",
+         intel: "fd98de89d57d4edc269df66d9770c54594d048d802dee1521818765e1c61dc65"
 
   url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}-#{arch}.dmg",
       verified: "github.com/qutebrowser/qutebrowser/"
   name "qutebrowser"
   desc "Keyboard-driven, vim-like browser based on PyQt5"
   homepage "https://www.qutebrowser.org/"
+
+  no_autobump! because: :requires_manual_review
 
   app "qutebrowser.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

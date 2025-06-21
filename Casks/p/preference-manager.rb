@@ -2,7 +2,7 @@ cask "preference-manager" do
   version "4.5.4,4540"
   sha256 "dcaa511f529cf5e659e86f0e6ae49f4bbcd63669a4e66ebf6ccfee4a9a9b7295"
 
-  url "https://www.digitalrebellion.com/download/prefman?version=#{version.csv.second}",
+  url "https://download.digitalrebellion.com/prefman/Preference_Manager_#{version.csv.second}.dmg",
       user_agent: :fake
   name "Preference Manager"
   desc "Trash, backup, lock and restore video editor preferences"
@@ -12,6 +12,8 @@ cask "preference-manager" do
     url "https://www.digitalrebellion.com/rss/appcast?app=prefman"
     strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

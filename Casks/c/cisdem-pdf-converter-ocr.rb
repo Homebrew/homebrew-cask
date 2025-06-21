@@ -1,8 +1,9 @@
 cask "cisdem-pdf-converter-ocr" do
-  version "9.3.0"
+  version "9.5.2"
   sha256 :no_check
 
-  url "https://download.cisdem.com/cisdem-pdfconverterocr.dmg"
+  url "https://download.cisdem.com/cisdem-pdfconverterocr.dmg",
+      user_agent: :fake
   name "Cisdem PDF Converter OCR"
   desc "PDF Converter with OCR capability"
   homepage "https://www.cisdem.com/pdf-converter-ocr-mac.html"

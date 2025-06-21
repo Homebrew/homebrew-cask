@@ -7,6 +7,8 @@ cask "silicon" do
   desc "Identify Intel-only apps"
   homepage "https://github.com/DigiDNA/Silicon"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 

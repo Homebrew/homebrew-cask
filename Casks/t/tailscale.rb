@@ -1,6 +1,6 @@
 cask "tailscale" do
-  version "1.74.0"
-  sha256 "ee16cb40bd412c7a56413961b9ca787cda39546d31e70f63544b4a69a79ddcc2"
+  version "1.84.1"
+  sha256 "c5e0994680ca65dd797148acfc55931ad3b683f9af92e4ab75860cb37af9cfc3"
 
   url "https://pkgs.tailscale.com/stable/Tailscale-#{version}-macos.pkg"
   name "Tailscale"
@@ -14,7 +14,7 @@ cask "tailscale" do
 
   auto_updates true
   conflicts_with formula: "tailscale"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   pkg "Tailscale-#{version}-macos.pkg"
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
@@ -33,6 +33,7 @@ cask "tailscale" do
             pkgutil:    "com.tailscale.ipn.macsys"
 
   zap trash: [
+    "/Library/Tailscale",
     "~/Library/Application Scripts/*.io.tailscale.ipn.macsys",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys.login-item-helper",
@@ -45,8 +46,8 @@ cask "tailscale" do
     "~/Library/Containers/Tailscale",
     "~/Library/Group Containers/*.io.tailscale.ipn.macsys",
     "~/Library/HTTPStorages/io.tailscale.ipn.macsys",
+    "~/Library/HTTPStorages/io.tailscale.ipn.macsys.binarycookies",
     "~/Library/Preferences/io.tailscale.ipn.macsys.plist",
-    "~/Library/Tailscale",
   ]
 
   caveats do

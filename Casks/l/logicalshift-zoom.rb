@@ -7,6 +7,8 @@ cask "logicalshift-zoom" do
   desc "Player for Z-Code, TADS, and HUGO stories or games"
   homepage "https://www.logicalshift.co.uk/unix/zoom/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-14", because: "is 32-bit only"
 
   app "Zoom.app"

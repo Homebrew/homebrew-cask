@@ -1,5 +1,5 @@
 cask "navicat-premium" do
-  version "17.1.3"
+  version "17.2.8"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicat#{version.major}_premium_en.dmg"
@@ -13,7 +13,7 @@ cask "navicat-premium" do
   end
 
   conflicts_with cask: "navicat-premium@15"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Navicat Premium.app"
 

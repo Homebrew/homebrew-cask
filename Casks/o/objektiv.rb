@@ -4,9 +4,14 @@ cask "objektiv" do
 
   url "https://github.com/nthloop/Objektiv/releases/download/v#{version}/Objektiv.zip"
   name "Objektiv"
+  desc "Browser switcher utility"
   homepage "https://github.com/nthloop/Objektiv"
 
+  no_autobump! because: :requires_manual_review
+
   app "Objektiv.app"
+
+  zap trash: "~/Library/Preferences/com.nthloop.Objektiv.plist"
 
   caveats do
     requires_rosetta

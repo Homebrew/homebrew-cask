@@ -1,6 +1,6 @@
 cask "thangs-sync" do
-  version "1.8.3"
-  sha256 "55d386a03ac37e83fd672b95d895058051c9f59ca4551c6ac878032795fb84ce"
+  version "1.9.1"
+  sha256 "da4cc7959f46b07780cfbf2c97f364a2096828465e874f24df4499037672d498"
 
   url "https://storage.googleapis.com/production-thangs-public/sync/darwin/latest/Thangs%20Sync-#{version}-mac.zip",
       verified: "storage.googleapis.com/production-thangs-public/"
@@ -13,7 +13,7 @@ cask "thangs-sync" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Thangs Sync.app"
 

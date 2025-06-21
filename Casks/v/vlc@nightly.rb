@@ -1,21 +1,43 @@
 cask "vlc@nightly" do
   arch arm: "arm64", intel: "x86_64"
+  livecheck_arch = on_arch_conditional arm: "arm64", intel: "intel64"
 
-  version :latest
-  sha256 :no_check
-
-  url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/" do |page|
-    folder_path = page[%r{\d+-\d+/}]
-    url URI.join(page.url, folder_path) do |version_page|
-      file_path = version_page[/href="([^"]+.dmg)"/, 1]
-      URI.join(version_page.url, file_path)
-    end
+  on_arm do
+    version "4.0.0,20250621-0413,a091acfd"
+    sha256 "14dcb06f19f688e3ded52fe833df3df14828e29d5af7b93993d859ec30d8caa6"
   end
+  on_intel do
+    version "4.0.0,20250621-0411,a091acfd"
+    sha256 "232b50e2b5018cf1cdd447792cf4e24fed5f47bc3e16f8147ef7f2e81aae7fc1"
+  end
+
+  url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{version.csv.second}/vlc-#{version.csv.first}-dev-#{livecheck_arch}-#{version.csv.third}.dmg"
   name "VLC media player"
   desc "Open-source cross-platform multimedia player"
   homepage "https://www.videolan.org/vlc/"
 
-  deprecate! date: "2025-05-01", because: :unsigned
+  livecheck do
+    url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/"
+    regex(/href=.*?vlc[._-]v?(\d+(?:\.\d+)+)[._-]dev[._-]#{livecheck_arch}[._-](\h+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      directory = page.scan(%r{href=["']?v?(\d+(?:[.-]\d+)+)/?["' >]}i)
+                      .flatten
+                      .uniq
+                      .max
+      next if directory.blank?
+
+      # Fetch the directory listing page for newest build
+      build_response = Homebrew::Livecheck::Strategy.page_content(
+        "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{directory}/",
+      )
+      next if (build_page = build_response[:content]).blank?
+
+      match = build_page.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{directory},#{match[2]}"
+    end
+  end
 
   conflicts_with cask: "vlc"
 

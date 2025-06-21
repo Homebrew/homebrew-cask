@@ -1,5 +1,5 @@
 cask "logitech-g-hub" do
-  version "2024.7.621167"
+  version "2025.4.719084"
   sha256 :no_check
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.zip",
@@ -10,7 +10,15 @@ cask "logitech-g-hub" do
 
   livecheck do
     url "https://support.logi.com/api/v2/help_center/en-us/articles.json?label_names=webcontent=productdownload,websoftware=eee3033c-8e0b-11e9-8db1-d7e925481d4d"
-    regex(/Software\sVersion:.+?(\d+(?:\.\d+)+)\\u/i)
+    regex(/Software\s+Version:.*?(\d+(?:\.\d+)+)/i)
+    strategy :json do |json, regex|
+      json["articles"]&.map do |article|
+        match = article["body"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   auto_updates true
@@ -22,17 +30,23 @@ cask "logitech-g-hub" do
   }
 
   postflight do
-    set_ownership   ["#{appdir}/lghub.app", "/Users/Shared/LGHUB"]
+    set_ownership "#{appdir}/lghub.app"
+    set_ownership "/Users/Shared/LGHUB"
     set_permissions "#{appdir}/lghub.app", "0755"
   end
 
-  uninstall script: {
-              executable: "/Applications/lghub.app/Contents/MacOS/lghub_updater.app/Contents/MacOS/lghub_updater",
-              args:       ["--uninstall"],
-              sudo:       true,
-            },
-            delete: "/Applications/lghub.app",
-            trash:  "/Users/Shared/LGHUB"
+  uninstall launchctl: [
+              "com.logi.ghub",
+              "com.logi.ghub.agent",
+              "com.logi.ghub.updater",
+            ],
+            quit:      [
+              "com.logi.ghub",
+              "com.logi.ghub.agent",
+              "com.logi.ghub.updater",
+            ],
+            delete:    "/Applications/lghub.app",
+            trash:     "/Users/Shared/LGHUB"
 
   zap trash: [
     "~/Library/Application Support/lghub",
@@ -40,4 +54,8 @@ cask "logitech-g-hub" do
     "~/Library/Preferences/com.logi.ghub.plist",
     "~/Library/Saved Application State/com.logi.ghub.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

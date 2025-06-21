@@ -12,14 +12,16 @@ cask "imagej" do
 
   livecheck do
     url "https://imagej.net/ij/download.html"
-    regex(%r{href=.*?/ij(\d+(?:\.\d+)*)[._-]osx[._-]java\d+\.zip}i)
+    regex(%r{href=.*?/ij[._-]?v?(\d+(?:\.\d+)*)[._-]osx[._-]java\d+\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        text = match.first
-        text.include?(".") ? text : text.sub(/(\d)(\d+)/, '\1.\2')
+        version = match[0]
+        version.include?(".") ? version : version.sub(/(\d)(\d+)/, '\1.\2')
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "ImageJ.app"
 

@@ -1,10 +1,10 @@
 cask "dockview" do
-  version "1.5.3"
+  version "1.6.5"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/DockViewStandard.zip",
       verified: "macplus-software.com/downloads/"
-  name "dockview"
+  name "DockView"
   desc "Utility to preview application windows in the dock"
   homepage "https://noteifyapp.com/dockview/"
 
@@ -12,6 +12,8 @@ cask "dockview" do
     url "https://macplus-software.com/downloads/DockViewStandard.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

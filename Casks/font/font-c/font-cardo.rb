@@ -11,6 +11,8 @@ cask "font-cardo" do
     regex(/Cardo\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "Cardo104s.ttf"
   font "Cardoi99.ttf"
   font "Cardob101.ttf"

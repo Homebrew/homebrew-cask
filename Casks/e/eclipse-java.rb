@@ -1,9 +1,9 @@
 cask "eclipse-java" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.33.0,2024-09"
-  sha256 arm:   "468a06c7d87cdce674b14bf34f11c98d27d73d43d3ef4f5cbe153033d204535e",
-         intel: "3ec4d2a7c869e8cc15f88d55e048df0083305f37956c7fc9d53e65373cfbe087"
+  version "4.36.0,2025-06"
+  sha256 arm:   "104aba52f8f4702ffdd46637339b05d2bfe5d14a81446eb515395a4b6f2a8d78",
+         intel: "4f6a2241f4b5d6d3cd93c29dd92a671510980f79e7de894c2b95a0a1eaad7ba5"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-java-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Java Developers"
@@ -13,6 +13,8 @@ cask "eclipse-java" do
   livecheck do
     cask "eclipse-ide"
   end
+
+  no_autobump! because: :requires_manual_review
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Java.app"

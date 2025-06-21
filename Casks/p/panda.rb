@@ -7,6 +7,8 @@ cask "panda" do
   desc "Utility to switch from light to dark mode"
   homepage "https://github.com/pablosproject/Panda-Mac-app"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-28", because: :unmaintained
 
   auto_updates true

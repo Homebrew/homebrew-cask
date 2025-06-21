@@ -3,12 +3,12 @@ cask "wechatwork" do
   livecheck_folder = on_arch_conditional arm: "_arm64"
 
   on_arm do
-    version "4.1.28.99511"
-    sha256 "70cffcff5a9f73d920c6ba79b1c203751921c2964a7538a5632403eb18af6bfd"
+    version "4.1.38.99668"
+    sha256 "9565d3508adca2d954a91930dc3e5b4c2d1ef01ec764a6038ee4b1464b2d7ff3"
   end
   on_intel do
-    version "4.1.28.90967"
-    sha256 "582983679a63039f9f3645e18f7cd28bb0f168e96c4dc6d7b9b8c2283061a465"
+    version "4.1.38.91072"
+    sha256 "20ad27f7898373ac68115c3fcb917639d9d0f19db8e80bb50f5a72d03b332a33"
   end
 
   url "https://dldir1.qq.com/foxmail/wecom-mac/updatebzl/WeCom_#{version}_#{arch}.dmg"
@@ -23,6 +23,7 @@ cask "wechatwork" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "企业微信.app"
 

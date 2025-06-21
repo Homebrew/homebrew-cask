@@ -8,6 +8,8 @@ cask "impactor" do
   desc "GUI tool for working with mobile devices"
   homepage "http://www.cydiaimpactor.com/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-03", because: :no_longer_available
 
   app "Impactor.app"

@@ -1,6 +1,6 @@
 cask "steam-plus-plus" do
-  version "3.0.0-rc.10"
-  sha256 "12beb2bb8b221c2cc8b860ab1a974900a06083b94336a7fe798b19e524185c99"
+  version "3.0.0-rc.16"
+  sha256 "fb25c8923c2f60b55ef680a7909de75841fdd2c525b0cd19f49d64121997df61"
 
   url "https://github.com/BeyondDimension/SteamTools/releases/download/#{version}/Steam++_v#{version}_macos.dmg",
       verified: "github.com/BeyondDimension/SteamTools/"
@@ -14,7 +14,7 @@ cask "steam-plus-plus" do
     regex(/v?(\d+(?:\.\d+)+(?:-rc\.(\d+)?))/i)
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Steam++.app"
 

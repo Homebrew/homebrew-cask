@@ -17,7 +17,7 @@ cask "unity" do
     strategy :json do |json, regex|
       json["official"]&.map do |release|
         # Only use 202X.X.XfX versions until Unity 6 (6000) is a full release
-        next unless release["version"].start_with?("202")
+        next unless release["version"]&.start_with?("202")
 
         match = release["downloadUrl"]&.match(regex)
         next if match.blank?
@@ -40,7 +40,10 @@ cask "unity" do
     "~/Library/Application Support/Unity*",
     "~/Library/Caches/com.unity3d.UnityEditor",
     "~/Library/Logs/Unity",
+    "~/Library/Preferences/com.unity.BugReporterV2.plist",
+    "~/Library/Preferences/com.unity3d.UnityEditor5.x.plist",
     "~/Library/Preferences/com.unity3d.unityhub.plist",
+    "~/Library/Preferences/unity.DefaultCompany.*",
     "~/Library/Saved Application State/com.unity3d.unityhub.savedState",
     "~/Library/Unity",
   ]

@@ -1,24 +1,23 @@
 cask "cursor" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.40.4,2409052yfcjagw2"
-  sha256 arm:   "a2dfd755e57e29398d532f28fe48327c74dbd52aa4fc4ad7546c0b178ee30e96",
-         intel: "afffbd35b745bef0345c1030f1d1c04205cbe6d5aa22f9258b8f2078791ce41b"
+  version "1.1.4,e86fcc937643bc6385aebd982c1c66012c98caec"
+  sha256 arm:   "be4a5869eb7d32eee23939a4d96e5f382b2296cce0459409798d2e0f01951630",
+         intel: "bab816ad57ea5f779cc64c3f40592b9a2423b88a38b46392a86723b3f67b3b8e"
 
-  url "https://download.todesktop.com/230313mzl4w4u92/Cursor%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
-      verified: "download.todesktop.com/230313mzl4w4u92/"
+  url "https://downloads.cursor.com/production/#{version.csv.second}/darwin/#{arch}/Cursor-darwin-#{arch}.zip"
   name "Cursor"
   desc "Write, edit, and chat about your code with AI"
-  homepage "https://cursor.sh/"
+  homepage "https://www.cursor.com/"
 
   livecheck do
-    url "https://download.todesktop.com/230313mzl4w4u92/latest-mac.yml"
-    regex(/Build[ ._-]([^-]+)[._-]/i)
-    strategy :electron_builder do |item, regex|
-      build = item["files"].first["url"][regex, 1]
-      next if build.blank?
+    url "https://api2.cursor.sh/updates/api/update/darwin-#{arch}/cursor/0.0.0/"
+    regex(%r{/production/(\h+)/darwin/#{arch}/Cursor[._-]darwin[._-]#{arch}\.zip}i)
+    strategy :json do |json, regex|
+      match = json["url"]&.match(regex)
+      next if match.blank?
 
-      "#{item["version"]},#{build}"
+      "#{json["name"]},#{match[1]}"
     end
   end
 

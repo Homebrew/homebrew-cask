@@ -1,9 +1,9 @@
 cask "burp-suite-professional" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2024.7.6"
-  sha256 arm:   "3ba35586dcea8ce7cb5b52261f755ebb4a20c497b60b65089bdc045b5b295597",
-         intel: "b9a7d43a3b7c539bf94352d53afcde996befe34c6045ed0b6dc69a98970d80b4"
+  version "2025.5.4"
+  sha256 arm:   "750e6651670c415bf62d32b36b5adc75c9b770dad7818a55219f411168a9a7b6",
+         intel: "a77fada70fa4db1776d4bfea11b8460f6af97fe2e7ca25e54f0b598db68515e6"
 
   url "https://portswigger-cdn.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}",
       verified: "portswigger-cdn.net/burp/releases/"
@@ -19,14 +19,17 @@ cask "burp-suite-professional" do
 
       all_versions.filter_map do |item|
         item["version"] if
-              item["releaseChannels"].include?("Stable") &&
-              item["categories"].include?("Professional") &&
-              item["builds"].any? do |build|
+              item["releaseChannels"]&.include?("Stable") &&
+              item["categories"]&.include?("Professional") &&
+              item["builds"]&.any? do |build|
                 build["ProductPlatform"] == arch.to_s
               end
       end
     end
   end
+
+  conflicts_with cask: "burp-suite-professional@early-adopter"
+  depends_on macos: ">= :catalina"
 
   app "Burp Suite Professional.app"
 

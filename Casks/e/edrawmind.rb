@@ -1,17 +1,20 @@
 cask "edrawmind" do
-  version "11.0.5,5378"
-  sha256 "eadd4e013bd0267597810d0564ae72f776b0ceb8a26869554050695f9c1949b5"
+  version "12.2.2,5378"
+  sha256 "11f2bfb3f01274077641c577b6d23ffd8d04cc5fceca15d28468903a497f03ef"
 
-  url "https://download.edrawsoft.com/cbs_down/edrawmind_full#{version.csv.second}.zip"
+  url "https://download.edrawsoft.com/cbs_down/edrawmind_#{version.csv.first}_full#{version.csv.second}.zip"
   name "EdrawMind"
   desc "Mind mapping software"
   homepage "https://www.edrawsoft.com/edrawmind/"
 
   livecheck do
     url "https://www.edrawsoft.com/download-edrawmind.html"
-    strategy :page_match do |page|
-      match = page.match(/for\s+Mac.*?(\d+(?:\.\d+)+).*?edrawmind[._-]full(\d+)\./m)
-      "#{match[1]},#{match[2]}" if match
+    regex(/for\s+Mac.*?v?(\d+(?:\.\d+)+).*?edrawmind[._-]full(\d+)\./im)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 

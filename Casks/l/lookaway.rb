@@ -1,6 +1,6 @@
 cask "lookaway" do
-  version "1.7.5"
-  sha256 "e471605edb7e819d2684638a4c183cc4a4d9f9436fede37f12786ca2a911b53c"
+  version "1.13.2"
+  sha256 "b5d05f640927a6405cc636e86dcff1a07afb2055313145847bacdaaea9d9f8c5"
 
   url "https://github.com/mysticalbits/lookaway-releases/releases/download/#{version}/LookAway.dmg",
       verified: "github.com/mysticalbits/lookaway-releases/"
@@ -9,7 +9,7 @@ cask "lookaway" do
   homepage "https://lookaway.app/"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "LookAway.app"
 

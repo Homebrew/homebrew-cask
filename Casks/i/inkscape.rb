@@ -1,9 +1,9 @@
 cask "inkscape" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.3.2"
-  sha256 arm:   "d3b182d1f6804f01eb13195325c5376ee7147561f2cfd59c3920c34f0e0858d8",
-         intel: "7c3347c274a5f8c9fb8c076b3d745e509b400e21127067edfa77adf4ca40834e"
+  version "1.4.230579"
+  sha256 arm:   "118e9e23190eea1265592a8b2053f5fb67e13a55b9311b2ab284df7008a896b4",
+         intel: "f0b05d5195e3aa0ba9d6d6a972f1d7f57abd876532b4d6eb02ecc98c0dcdfdbf"
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}_#{arch}.dmg"
   name "Inkscape"
@@ -14,6 +14,8 @@ cask "inkscape" do
     url "https://inkscape.org/release/all/mac-os-x/"
     regex(/Inkscape[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

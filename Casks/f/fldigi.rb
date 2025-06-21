@@ -1,34 +1,23 @@
 cask "fldigi" do
-  version "4.2.05"
+  version "4.2.07"
+  sha256 "3141b1afcfba5da27f9e8d3e34253b0f90fc8c73cf8766d0189d59b2753c2844"
 
-  on_sierra :or_older do
-    sha256 "d9ca65970968d415bf56d783b4383188297f735c53fc8d379cfb735b3e062974"
-
-    url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}_LI.dmg"
-  end
-  on_high_sierra :or_newer do
-    sha256 "88f2c5b018a1aceb2f64f05470e711f98f412ffef221c5276543d0c20303e60c"
-
-    url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}_VN.dmg"
-  end
-
+  url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}.dmg",
+      verified: "sourceforge.net/fldigi/"
   name "fldigi"
   desc "Ham radio digital modem application"
-  homepage "https://sourceforge.net/projects/fldigi/files/fldigi/"
+  homepage "https://www.w1hkj.org/"
 
   livecheck do
     url "https://sourceforge.net/projects/fldigi/rss?path=/fldigi"
-    regex(/fldigi[._-]v?(\d+(?:\.\d+)+)[._-].+\.dmg/i)
-    strategy :page_match
+    regex(%r{url=.*?/fldigi[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
-  app "fldigi.app"
-  app "flarq.app"
+  no_autobump! because: :requires_manual_review
 
-  preflight do
-    staged_path.glob("fldigi-*.app").first.rename(staged_path/"fldigi.app")
-    staged_path.glob("flarq-*.app").first.rename(staged_path/"flarq.app")
-  end
+  depends_on macos: ">= :high_sierra"
+
+  app "fldigi-#{version}.app"
 
   zap trash: "~/.fldigi"
 end

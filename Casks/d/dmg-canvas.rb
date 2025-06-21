@@ -1,6 +1,6 @@
 cask "dmg-canvas" do
-  version "4.0.9"
-  sha256 "8669199eaea768cf8c71a6fe6939a8508d45d8040566e220a6a79055396288ca"
+  version "4.1.2"
+  sha256 "dad5a96236246398a52a15b46776863cfb9b9c238755d07f6079a99ceba4e70c"
 
   url "https://arweb-assets.s3.amazonaws.com/downloads/dmgcanvas/versions/DMGCanvas#{version}.zip",
       verified: "arweb-assets.s3.amazonaws.com/downloads/dmgcanvas/"
@@ -12,6 +12,8 @@ cask "dmg-canvas" do
     url "https://www.araelium.com/support/dmgcanvas/download-previous-versions"
     regex(/href=.*?DMGCanvas[._-]?v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :big_sur"
 

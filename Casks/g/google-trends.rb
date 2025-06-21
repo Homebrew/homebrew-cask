@@ -12,4 +12,6 @@ cask "google-trends" do
   end
 
   screen_saver "Google Trends.saver"
+
+  # No zap stanza required
 end

@@ -9,7 +9,7 @@ cask "switchhosts" do
       verified: "github.com/oldj/SwitchHosts/"
   name "SwitchHosts"
   desc "App to switch hosts"
-  homepage "https://oldj.github.io/SwitchHosts/"
+  homepage "https://switchhosts.vercel.app/"
 
   livecheck do
     url :url
@@ -23,6 +23,10 @@ cask "switchhosts" do
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
 
   app "SwitchHosts.app"
 

@@ -7,6 +7,8 @@ cask "showhiddenfiles" do
   desc "Reveals hidden files in Finder"
   homepage "https://gotoes.org/sales/ShowHiddenFilesMacOSX/How_To_Show_Hidden_Files.php"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-06", because: :unmaintained
 
   app "ShowHiddenFiles.app"

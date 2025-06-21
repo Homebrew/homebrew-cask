@@ -11,6 +11,8 @@ cask "sabaki" do
   desc "Go board and SGF editor"
   homepage "https://sabaki.yichuanshen.de/"
 
+  no_autobump! because: :requires_manual_review
+
   app "Sabaki.app"
 
   zap trash: [

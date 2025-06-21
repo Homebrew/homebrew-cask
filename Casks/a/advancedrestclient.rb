@@ -12,6 +12,8 @@ cask "advancedrestclient" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "AdvancedRestClient.app"
 
   zap trash: [

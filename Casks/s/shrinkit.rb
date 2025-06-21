@@ -6,10 +6,9 @@ cask "shrinkit" do
   name "ShrinkIt"
   homepage "https://panic.com/blog/shrinkit-1-2/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/ShrinkIt%20(\d+(?:\.\d+)*)\.zip}i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-10", because: :unmaintained
 
   app "ShrinkIt.app"
 

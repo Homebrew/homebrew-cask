@@ -1,13 +1,15 @@
 cask "mediainfoex" do
-  version "1.7.2"
-  sha256 "50d15c662c9c2ab630bde927d956b026182a42b0ca51a080d3eca10006705f86"
+  version "1.7.4"
+  sha256 "7f2cbb113f6bfff49541487d73ce8b6dc3e4b28a7d2832afbcd45dca6b891481"
 
-  url "https://github.com/sbarex/MediaInfo/releases/download/#{version}/MediaInfo.zip"
+  url "https://github.com/sbarex/MediaInfo/releases/download/#{version}/MediaInfoEx.zip"
   name "MediaInfo"
   desc "Display file information in Finder contextual menu"
   homepage "https://github.com/sbarex/MediaInfo"
 
-  depends_on macos: ">= :catalina"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :big_sur"
 
   app "MediaInfoEx.app"
 

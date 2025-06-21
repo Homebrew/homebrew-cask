@@ -1,6 +1,6 @@
 cask "pallotron-yubiswitch" do
-  version "0.16"
-  sha256 "4ef75931712d44f3ae8f4038f7e59d4f3493b83990a8b3c828858ea3e3ec2a07"
+  version "0.17"
+  sha256 "da18d8059e42dfe71abaa7211d7da80f4b5f7f0c1c18bad104bd11a0885b633f"
 
   url "https://github.com/pallotron/yubiswitch/releases/download/v#{version}/yubiswitch_#{version}.dmg"
   name "Yubiswitch"
@@ -12,5 +12,15 @@ cask "pallotron-yubiswitch" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :high_sierra"
+
   app "yubiswitch.app"
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.pallotron.yubiswitch.helper.plist",
+    "/Library/PrivilegedHelperTools/com.pallotron.yubiswitch.helper",
+    "~/Library/Preferences/com.pallotron.yubiswitch.plist",
+  ]
 end

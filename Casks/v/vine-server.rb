@@ -15,7 +15,9 @@ cask "vine-server" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :mojave"
 
   app "Vine Server.app"
   binary "#{appdir}/Vine Server.app/Contents/MacOS/OSXvnc-server"

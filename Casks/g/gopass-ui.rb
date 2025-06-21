@@ -7,6 +7,8 @@ cask "gopass-ui" do
   desc "Password manager for teams"
   homepage "https://github.com/codecentric/gopass-ui"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-11", because: :unmaintained
 
   app "Gopass UI.app"

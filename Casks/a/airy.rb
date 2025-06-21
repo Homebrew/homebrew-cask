@@ -12,9 +12,17 @@ cask "airy" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+
   app "Airy.app"
 
   uninstall quit: "com.eltima.Airy"
 
   zap trash: "~/Library/Preferences/com.eltima.Airy.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -12,6 +12,8 @@ cask "tex-live-utility" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "TeX Live Utility.app"
@@ -20,6 +22,8 @@ cask "tex-live-utility" do
     "~/Library/Application Support/TeX Live Utility",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*",
     "~/Library/Caches/com.googlecode.mactlmgr.tlu",
+    "~/Library/HTTPStorages/com.googlecode.mactlmgr.tlu",
+    "~/Library/HTTPStorages/com.googlecode.mactlmgr.tlu.binarycookies",
     "~/Library/Preferences/com.googlecode.mactlmgr.tlu.plist",
     "~/Library/Saved Application State/com.googlecode.mactlmgr.tlu.savedState",
   ]

@@ -9,8 +9,8 @@ cask "font-baskervville" do
   name "Baskervville"
   homepage "https://fonts.google.com/specimen/Baskervville"
 
-  font "Baskervville-Italic.ttf"
-  font "Baskervville-Regular.ttf"
+  font "Baskervville-Italic[wght].ttf"
+  font "Baskervville[wght].ttf"
 
   # No zap stanza required
 end

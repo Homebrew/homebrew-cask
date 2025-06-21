@@ -12,6 +12,8 @@ cask "vym" do
     regex(%r{url=.*?/vym[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg)}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "vym.app"
 
   zap trash: "~/Library/Preferences/com.insilmaril.vym.plist"

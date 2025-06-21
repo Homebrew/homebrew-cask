@@ -1,13 +1,13 @@
 cask "choice-financial-terminal" do
   arch arm: "arm", intel: "x86"
 
-  version "8.2.0.1"
+  version "8.9.0.0"
   sha256 :no_check
 
   url "https://choice-app.eastmoney.com/choice/OfflinePackage/ChoiceSetup_mac_#{arch}.dmg"
   name "Choice Financial Terminal"
   name "Choice金融终端"
-  desc "Financial Information Acquisition Platform"
+  desc "Financial information acquisition platform"
   homepage "https://choice.eastmoney.com/"
 
   livecheck do

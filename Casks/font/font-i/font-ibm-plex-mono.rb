@@ -1,6 +1,6 @@
 cask "font-ibm-plex-mono" do
-  version "1.0.0"
-  sha256 "06ef4a7638fe20e96fe8fbea55f6f54a297352298e5cb74479cb1ceb7339fc1a"
+  version "1.1.0"
+  sha256 "4bfc936d0e1fd19db6327a3786eabdbc3dc0d464500576f6458f6706df68d26c"
 
   url "https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-mono%40#{version}/ibm-plex-mono.zip"
   name "IBM Plex Mono"
@@ -10,6 +10,8 @@ cask "font-ibm-plex-mono" do
     url :url
     regex(%r{^@ibm/plex-mono@?(\d+(?:\.\d+)+)$}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "ibm-plex-mono/fonts/complete/otf/IBMPlexMono-Bold.otf"
   font "ibm-plex-mono/fonts/complete/otf/IBMPlexMono-BoldItalic.otf"

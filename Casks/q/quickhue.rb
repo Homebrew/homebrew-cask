@@ -7,6 +7,8 @@ cask "quickhue" do
   desc "Menu bar utility for controlling the Philips Hue lighting system"
   homepage "https://github.com/danparsons/QuickHue"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-04", because: :discontinued
 
   app "QuickHue.app"

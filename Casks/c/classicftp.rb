@@ -1,5 +1,5 @@
 cask "classicftp" do
-  version "4.03"
+  version "5.00"
   sha256 :no_check
 
   url "https://www.nchsoftware.com/classic/classicmaci.zip"
@@ -8,9 +8,11 @@ cask "classicftp" do
   homepage "https://www.nchsoftware.com/classic/index.html"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.nchsoftware.com/classic/versions.html"
+    regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "ClassicFTP.app"
 

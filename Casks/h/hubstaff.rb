@@ -1,6 +1,6 @@
 cask "hubstaff" do
-  version "1.6.26,8098"
-  sha256 "5b869d979dd66008843d0c0ea94637f4eaff7119cb3253a2ae7333842be74466"
+  version "1.6.31,9351"
+  sha256 "f8aa5791a084ae347d8e73497e22d9c3c9ecbda3736142dcb60ba9c53d6ada86"
 
   url "https://app.hubstaff.com/download/#{version.csv.second}-standard-mac-os-x-#{version.csv.first.dots_to_hyphens}-release"
   name "Hubstaff"
@@ -9,8 +9,12 @@ cask "hubstaff" do
 
   livecheck do
     url "https://app.hubstaff.com/appcast.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version.split("-").first},#{item.url[%r{/(\d+)(?:-standard)?-mac.*?-release}i, 1]}"
+    regex(%r{/(\d+)(?:-standard)?-mac.*?-release}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.short_version.split("-").first},#{match[1]}"
     end
   end
 

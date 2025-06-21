@@ -7,6 +7,8 @@ cask "nullpomino" do
   desc "Action puzzle game"
   homepage "https://github.com/nullpomino/nullpomino"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-27", because: :unmaintained
 
   app "NullpoMino_#{version}.app"

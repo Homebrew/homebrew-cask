@@ -1,6 +1,6 @@
 cask "jettison" do
-  version "1.8.8"
-  sha256 "e8306aeb0fe3942c8b0ab4527682406f9ccb7c5605bf9b8004dee8ab255e4139"
+  version "1.9.2"
+  sha256 "45b6a90a902cfd5a0ade56a3ef2a13df47bf5d53b9b9a0e47d8895e570c3baf6"
 
   url "https://stclairsoft.com/download/Jettison-#{version}.dmg"
   name "Jettison"
@@ -12,6 +12,8 @@ cask "jettison" do
     url "https://stclairsoft.com/cgi-bin/sparkle.cgi?JT"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

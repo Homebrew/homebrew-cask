@@ -1,5 +1,5 @@
 cask "google-chrome@dev" do
-  version "130.0.6710.0"
+  version "139.0.7246.2"
   sha256 :no_check
 
   url "https://dl.google.com/chrome/mac/universal/dev/googlechromedev.dmg"
@@ -9,11 +9,15 @@ cask "google-chrome@dev" do
 
   livecheck do
     url "https://chromiumdash.appspot.com/fetch_releases?channel=Dev&platform=Mac"
-    regex(/"version":\s*"v?(\d+(?:\.\d+)+)"/i)
+    strategy :json do |json|
+      json.map do |item|
+        item["version"]
+      end
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Google Chrome Dev.app"
 

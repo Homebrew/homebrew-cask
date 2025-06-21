@@ -7,6 +7,8 @@ cask "iphoto-library-manager" do
   desc "App for organising photos among multiple iPhoto libraries"
   homepage "https://www.fatcatsoftware.com/iplm/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-17", because: :discontinued
 
   app "iPhoto Library Manager.app"

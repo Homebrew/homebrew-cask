@@ -1,6 +1,6 @@
 cask "bambu-studio" do
-  version "01.09.07.50,20240918180232,01.09.07.50"
-  sha256 "7953e0d3e2d3ff9342634aab85d453f4294a406c8b35e3278e709fce68a82533"
+  version "02.01.01.52,20250616155614"
+  sha256 "c60c57fb743de63ce3b8bd7ab2a78642d9ae61dc319db6e442c077093711e4b4"
 
   url "https://github.com/bambulab/BambuStudio/releases/download/v#{version.csv.third || version.csv.first}/Bambu_Studio_mac-v#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/bambulab/BambuStudio/"
@@ -9,18 +9,19 @@ cask "bambu-studio" do
   homepage "https://bambulab.com/en/download/studio"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*/v?(\d+(?:\.\d+)+)/Bambu[._-]Studio[._-]mac[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        if match[2] == match[0]
-          "#{match[1]},#{match[2]}"
-        else
-          "#{match[1]},#{match[2]},#{match[0]}"
-        end
+    url :url
+    regex(%r{/\D*(\d+(?:\.\d+)+[^/]*?)/Bambu[._-]Studio(?:[._-]mac)?[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg}i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["browser_download_url"]&.match(regex)
+        next if match.blank?
+
+        (match[2] == match[1]) ? "#{match[2]},#{match[3]}" : "#{match[2]},#{match[3]},#{match[1]}"
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 

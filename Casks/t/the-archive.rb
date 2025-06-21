@@ -1,6 +1,6 @@
 cask "the-archive" do
-  version "1.7.14"
-  sha256 "401cd08d322d6c72ae0f5b104bf55f811178c3f83743f95fbfacdcda5fbe15a7"
+  version "1.9.1"
+  sha256 "ff9149e3c68b017829fb95ee9f4cac816184464c4afa7826be0eca0107ae9c45"
 
   url "https://dlyfuw95744jo.cloudfront.net/TheArchive-v#{version}.dmg",
       verified: "dlyfuw95744jo.cloudfront.net/"
@@ -13,8 +13,10 @@ cask "the-archive" do
     strategy :header_match
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "The Archive.app"
 

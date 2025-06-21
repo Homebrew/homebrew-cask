@@ -12,7 +12,15 @@ cask "macbreakz" do
     strategy :sparkle
   end
 
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+
   app "MacBreakZ #{version.major}.app"
 
-  zap trash: "~/Library/Caches/com.apple.helpd/Generated/MacBreakZ Help*#{version}"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.publicspace.mb#{version.major}.sfl*",
+    "~/Library/Caches/com.apple.helpd/Generated/MacBreakZ Help*#{version}",
+    "~/Library/Preferences/net.publicspace.mb#{version.major}.plist",
+  ]
 end

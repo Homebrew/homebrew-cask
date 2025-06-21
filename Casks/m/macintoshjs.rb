@@ -10,6 +10,10 @@ cask "macintoshjs" do
   desc "Virtual Apple Macintosh with System 8, running in Electron"
   homepage "https://github.com/felixrieseberg/macintosh.js"
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :high_sierra"
+
   app "macintosh.js.app"
 
   zap trash: [

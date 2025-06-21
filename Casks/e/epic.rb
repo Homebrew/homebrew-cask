@@ -1,21 +1,28 @@
 cask "epic" do
-  arch arm: "arm", intel: "intel"
+  arch arm: "arm"
 
-  version "120.0.6099.71"
-  sha256 arm:   "f4c018f7c7bed4400eaa23ca14128c51d6a477250d5b453b8a00d01af83fe473",
-         intel: "0be47399f764d59ed14614b689bee5f8b8c31e2a425cd0baf02e322656698702"
+  on_arm do
+    version "133.0.6943.142"
+    sha256 "57ebb377d26a7e53658cd4b0474a96eeac05a2be35921452ad4981a269291707"
+  end
+  on_intel do
+    version "133.0.6943.127"
+    sha256 "1c939b65201febf3a3fe1d5d95d58a7f9c630f681635d5254bf5511ebd1a4237"
+  end
 
-  url "https://cdn.epicbrowser.com/v#{version.major}#{arch}/epic_#{version}.dmg"
+  url "https://cdn.epicbrowser.com/mac#{arch}#{version.major}/epic_#{version}.dmg"
   name "Epic Privacy Browser"
   desc "Private, secure web browser"
   homepage "https://epicbrowser.com/"
 
   livecheck do
     url "https://epicbrowser.com/thank-you"
-    regex(%r{href=.*?/epic[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/mac#{arch}\d+/epic[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
 
   app "Epic.app"
 

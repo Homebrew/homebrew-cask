@@ -1,6 +1,6 @@
 cask "upscayl" do
-  version "2.11.5"
-  sha256 "abf7b625641560cfa180dd1b2b0864138559d29f2a3d0f9951e5034496ce8dac"
+  version "2.15.0"
+  sha256 "0e53c9ee8c1800cb3e2ce0f574e4e1a35a51945e19ff2b93f33928bbd7fd4c5a"
 
   url "https://github.com/upscayl/upscayl/releases/download/v#{version}/upscayl-#{version}-mac.dmg",
       verified: "github.com/upscayl/upscayl/"
@@ -12,6 +12,8 @@ cask "upscayl" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :monterey"
 

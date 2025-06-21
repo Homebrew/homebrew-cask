@@ -1,9 +1,8 @@
 cask "mints" do
-  version "1.19,2024.02"
-  sha256 "349666ccb8ec9e5a2016f29dd6fc4ab36a92d3714fea66c196037956a49f06f0"
+  version "1.21,2025.06"
+  sha256 "4d876ca29f21db23f89ecff1e0d72c849f2697b99ebb665b3d7a0e4803efa03c"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/mints#{version.csv.first.no_dots}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/mints#{version.csv.first.no_dots}.zip"
   name "Mints"
   desc "Logging tool suite"
   homepage "https://eclecticlight.co/mints-a-multifunction-utility/"
@@ -15,15 +14,16 @@ cask "mints" do
       item = xml.elements["//dict[key[text()='AppName']/following-sibling::*[1][text()='Mints']]"]
       next unless item
 
-      version = item.elements["key[text()='Version']"]&.next_element&.text&.strip
-      match = item.elements["key[text()='URL']"]&.next_element&.text&.strip&.match(regex)
+      version = item.elements["key[text()='Version']"]&.next_element&.text
+      url = item.elements["key[text()='URL']"]&.next_element&.text
+      match = url.strip.match(regex) if url
       next if version.blank? || match.blank?
 
-      "#{version},#{match[1]}.#{match[2]}"
+      "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "mints#{version.csv.first.no_dots}/Mints.app"
 

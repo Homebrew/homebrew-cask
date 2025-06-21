@@ -1,6 +1,6 @@
 cask "xmind@beta" do
-  version "24.07.03011,202403312339"
-  sha256 "abd4e869d377087cd7ba273e764740bfdb48ee55dc0bab38f089abdcd59efeab"
+  version "25.07.01031,202505062326"
+  sha256 "1433401734ebfdf73b9ade181b09369d07db83645e90a5fae66d193cefc33aed"
 
   url "https://dl3.xmind.net/Xmind-for-macOS-#{version.csv.first}-beta-#{version.csv.second}.dmg"
   name "XMind"
@@ -11,7 +11,10 @@ cask "xmind@beta" do
     url "https://xmind.app/desktop-beta/download/mac/"
     regex(/Xmind[._-]for[._-]macOS[._-](\d+(?:\.\d+)+)-beta-(\d*)\.dmg/i)
     strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 

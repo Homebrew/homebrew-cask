@@ -7,10 +7,9 @@ cask "spillo" do
   name "Spillo"
   homepage "https://bananafishsoftware.com/products/spillo/"
 
-  livecheck do
-    url "https://bananafishsoftware.com/feeds/spillo.xml"
-    strategy :sparkle
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2024-10-14", because: :unmaintained
 
   app "Spillo.app"
 

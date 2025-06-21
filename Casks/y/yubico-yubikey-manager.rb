@@ -12,6 +12,8 @@ cask "yubico-yubikey-manager" do
     regex(/href=.*?yubikey[._-]manager[._-]qt[._-]v?(\d+(?:\.\d+)+[a-z]?)[._-]mac\.pkg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :sierra"
 
   pkg "yubikey-manager-qt-#{version}-mac.pkg"

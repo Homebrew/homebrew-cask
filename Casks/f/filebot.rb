@@ -1,9 +1,9 @@
 cask "filebot" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.1.5"
-  sha256 arm:   "de401df6ef11432ae95a836d5ac210935a438673964416caf7881552f666dc3f",
-         intel: "7a6cb81d7d549723a241c40b48f3f53acb30732783abadfe2480516f3f2c013f"
+  version "5.1.7"
+  sha256 arm:   "29cca94a795ec621842e984ff56d66c289874342eaddb813af0964446e8f5404",
+         intel: "d8e28e64db826311523e8bbd1a4951937a5da1b6910827e940c9eeb0a38ff30d"
 
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}_#{arch}.app.tar.xz"
   name "FileBot"
@@ -15,10 +15,13 @@ cask "filebot" do
     regex(/href=.*?FileBot[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.pkg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
+
   app "FileBot.app"
   binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: "filebot"
-  binary "#{appdir}/FileBot.app/Contents/Resources/bash_completion.d/filebot_completion",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/filebot"
+  bash_completion "#{appdir}/FileBot.app/Contents/Resources/bash_completion.d/filebot_completion", target: "filebot"
 
   zap trash: [
     "~/Library/Application Scripts/net.filebot.FileBot",

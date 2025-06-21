@@ -7,7 +7,9 @@ cask "omnidazzle" do
   desc "Set of plug-ins to highlight areas of your screen and your mouse pointer"
   homepage "https://support.omnigroup.com/omnidazzle-troubleshooting/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   app "OmniDazzle.app"
 end

@@ -1,6 +1,6 @@
 cask "low-profile" do
-  version "4.0.2"
-  sha256 "185885cadd98405c7ba4c6b4e7342a4ea629bf3a27dd0684f01d5fce3c8e4fe6"
+  version "4.0.3"
+  sha256 "9d27e90ddb3c2c35863cd31cfe58cedd2fda43aeb76cfa9fea02ca60132d4f5f"
 
   url "https://github.com/ninxsoft/LowProfile/releases/download/v#{version}/Low.Profile.#{version}.pkg"
   name "Low Profile"

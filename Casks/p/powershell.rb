@@ -1,9 +1,9 @@
 cask "powershell" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.4.5"
-  sha256 arm:   "2ac31bae7373354b4e54ece8bbc09c7b823b2f17be593241ab8faa972001a189",
-         intel: "cdffc02150ebe9c0c4ede68fb9016a62f08e46d38427d4b5c80cdba60c0f0c16"
+  version "7.5.1"
+  sha256 arm:   "7ec04275031ee924dd2ce41f9d3ca044359b92389614a3393ac3b91477426bf8",
+         intel: "9bec03204cafe95708377898d234ed4d8c2a73ea5c996d7ba42c041d130b8dfc"
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
   name "PowerShell"
@@ -15,7 +15,6 @@ cask "powershell" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on formula: "openssl"
   depends_on macos: ">= :mojave"
 
   pkg "powershell-#{version}-osx-#{arch}.pkg"

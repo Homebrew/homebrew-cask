@@ -8,10 +8,11 @@ cask "xstation5" do
   desc "Desktop trading platform"
   homepage "https://www.xtb.com/"
 
-  livecheck do
-    url "https://desktopxstation5.xtb.com/prod/update/mac/latest-mac.yml"
-    strategy :electron_builder
-  end
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2025-03-17", because: :no_longer_available
+
+  depends_on macos: ">= :high_sierra"
 
   app "xStation5.app"
 

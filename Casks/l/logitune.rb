@@ -1,5 +1,5 @@
 cask "logitune" do
-  version "3.6.373"
+  version "3.10.120"
   sha256 :no_check
 
   url "https://software.vc.logitech.com/downloads/tune/LogiTuneInstaller.dmg"
@@ -8,10 +8,15 @@ cask "logitune" do
   homepage "https://www.logitech.com/en-us/video-collaboration/software/logi-tune-software.html"
 
   livecheck do
-    url "https://prosupport.logi.com/api/v2/help_center/de/articles.json?label_names=webcontent=productdownload,webproduct=bad331b5-1feb-11ea-ae1b-a561623ae541"
+    url "https://support.logi.com/api/v2/help_center/en-us/articles.json?label_names=webcontent=productdownload,websoftware=ef17cf4f-8e0b-11e9-9708-775e53090089"
     regex(/Software[\s-]Version:.*?v?(\d+(?:\.\d+)+)/i)
     strategy :json do |json, regex|
-      json["articles"]&.map { |item| item["body"][regex, 1] }
+      json["articles"]&.map do |item|
+        match = item["body"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
     end
   end
 

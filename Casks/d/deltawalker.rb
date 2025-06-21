@@ -1,9 +1,9 @@
 cask "deltawalker" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.6.4"
-  sha256 arm:   "f92abbf7b971a7e1d986fe0991e26daa3121449f428f380af89fe06eaa7cccea",
-         intel: "8d508521c98c4dec3a7affe1190e4911818032ffc82a17a7fb4a64b0a097246f"
+  version "2.7.0"
+  sha256 arm:   "804c509f0813e28c3b960a24ab57f200331ba2333ed9ef9dee479f29ac3bf554",
+         intel: "e1000806db159cd760fd4d812f475581851d5c02a6f4f7bc1040835bcc6668ad"
 
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg",
       verified: "deltawalker.s3.amazonaws.com/"
@@ -16,10 +16,12 @@ cask "deltawalker" do
     regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)_#{arch}\.dmg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "DeltaWalker.app"
 
   uninstall script: {
-    executable:   "#{staged_path}/run-me-first",
+    executable:   "#{staged_path}/run-me-first.command",
     sudo:         false,
     must_succeed: false,
   }

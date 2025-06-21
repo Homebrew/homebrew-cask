@@ -1,11 +1,11 @@
 cask "universal-media-server" do
-  arch arm: "-arm"
+  arch arm: "arm", intel: "x86_64"
 
-  version "14.4.0"
-  sha256 arm:   "882351ed62c0c774041ab1954704aa86335503f8fb5ee508f77a966421761262",
-         intel: "f018f2e68173c2562d97dac66373a75ed2e073ded3e3af7454b1cc10f9050b44"
+  version "14.12.1"
+  sha256 arm:   "556d6b95538bf82e6319fc51736bb8e0d086d6ca7bb75ca129fa11dcde13527b",
+         intel: "e451a6a00f6d86439baf9a3882835c70f7ab7c58002e52c3a9488b271ded976a"
 
-  url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-#{version}#{arch}.dmg",
+  url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-macOS-#{version}-#{arch}.dmg",
       verified: "github.com/UniversalMediaServer/UniversalMediaServer/"
   name "Universal Media Server"
   desc "Media server supporting DLNA, UPnP and HTTP(S)"

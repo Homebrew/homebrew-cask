@@ -15,12 +15,14 @@ cask "antconc" do
     strategy :json do |json|
       json["official_releases"]&.filter_map do |item|
         release = item["release"]
-        next unless release["type"].match?(/MacOS/i)
+        next unless release["type"]&.match?(/MacOS/i)
 
         release["version"]
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "AntConc.app"
 

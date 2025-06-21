@@ -1,10 +1,12 @@
 cask "font-ark-pixel-12px-monospaced" do
-  version "2024.05.12"
-  sha256 "2780a0c1ebf0c9bad784d4452b61e00aa262d7429d6eed21c0f944e040409c93"
+  version "2025.03.14"
+  sha256 "d8d2da69d5a6642c1d84e24325f3694308b86f0be5ea6a81be3cd73b8c44706e"
 
   url "https://github.com/TakWolf/ark-pixel-font/releases/download/#{version}/ark-pixel-font-12px-monospaced-otf-v#{version}.zip"
   name "Ark Pixel 12px Monospaced"
   homepage "https://github.com/TakWolf/ark-pixel-font"
+
+  no_autobump! because: :requires_manual_review
 
   font "ark-pixel-12px-monospaced-ja.otf"
   font "ark-pixel-12px-monospaced-ko.otf"

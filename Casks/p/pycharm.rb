@@ -1,9 +1,9 @@
 cask "pycharm" do
   arch arm: "-aarch64"
 
-  version "2024.2.1,242.21829.153"
-  sha256 arm:   "0f50296747f198383154747da4dae6f2a6cd6cc51dba077ee5dbceac062e197b",
-         intel: "d20348dfa6393719fc193c6f1fae96be3e52cd795f65eda021501267027e6c1d"
+  version "2025.1.2,251.26094.141"
+  sha256 arm:   "89a463c896e4e7f6cf6a624b78305d881756b2a350780bfcecd15d6cb766e54b",
+         intel: "41c6187f4f044522d02749f979cef8f127337b2945772070a0ba44c53a6ebf0c"
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
   name "PyCharm"
@@ -14,8 +14,12 @@ cask "pycharm" do
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release"
     strategy :json do |json|
-      json["PCP"].map do |release|
-        "#{release["version"]},#{release["build"]}"
+      json["PCP"]&.map do |release|
+        version = release["version"]
+        build = release["build"]
+        next if version.blank? || build.blank?
+
+        "#{version},#{build}"
       end
     end
   end
@@ -24,7 +28,16 @@ cask "pycharm" do
   depends_on macos: ">= :high_sierra"
 
   app "PyCharm.app"
-  binary "#{appdir}/PyCharm.app/Contents/MacOS/pycharm"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/pycharm.wrapper.sh"
+  binary shimscript, target: "pycharm"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/PyCharm.app/Contents/MacOS/pycharm' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/PyCharm#{version.major_minor}",

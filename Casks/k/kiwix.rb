@@ -1,6 +1,6 @@
 cask "kiwix" do
-  version "3.5.2"
-  sha256 "77b97ac91570d0df69b588cc014c71b69478b1a8bdc1c150abd20a612ca1b3f7"
+  version "3.9.0"
+  sha256 "ff2416e7600d6db0e8ff0925fb4fe879fe57959e9c3aabf94fbecff6024ac706"
 
   url "https://download.kiwix.org/release/kiwix-macos/kiwix-macos_#{version}.dmg"
   name "Kiwix"
@@ -8,9 +8,11 @@ cask "kiwix" do
   homepage "https://www.kiwix.org/"
 
   livecheck do
-    url "https://download.kiwix.org/release/kiwix-macos/kiwix-macos.dmg"
+    url "https://download.kiwix.org/release/kiwix-desktop-macos/kiwix-desktop-macos.dmg"
     strategy :header_match
   end
+
+  depends_on macos: ">= :ventura"
 
   app "Kiwix.app"
 

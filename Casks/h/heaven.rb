@@ -12,6 +12,8 @@ cask "heaven" do
     regex(%r{href=.*?/Unigine[._-]Heaven[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "Heaven.app"
 
   zap trash: [

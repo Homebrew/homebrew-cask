@@ -1,14 +1,14 @@
 cask "prismlauncher" do
-  version "8.4"
+  version "9.4"
 
   on_mojave :or_older do
-    sha256 "f18a940c49d5109fb67f9e46e0aa6b045aedb7528797211307f68b1672a4b90d"
+    sha256 "ad5e4d12d91631e4aeec69499e244b0c6fc255d9abe3e26f4f45571a6736206c"
 
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-Legacy-#{version}.zip",
         verified: "github.com/PrismLauncher/PrismLauncher/"
   end
   on_catalina :or_newer do
-    sha256 "29e0f534e58c9e379ba331499cf7e04e9917f20eb0c794c085b258a28d8c7930"
+    sha256 "5cc0148e427d28c632978a9e83e2da3fc02f5072990d9e7732dff3fdb1912ae4"
 
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip",
         verified: "github.com/PrismLauncher/PrismLauncher/"
@@ -18,10 +18,13 @@ cask "prismlauncher" do
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Prism Launcher.app"
+  binary "#{appdir}/Prism Launcher.app/Contents/MacOS/prismlauncher"
 
   zap trash: [
     "~/Library/Application Support/PrismLauncher/metacache",

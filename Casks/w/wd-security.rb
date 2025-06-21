@@ -1,5 +1,5 @@
 cask "wd-security" do
-  version "2.1.2.144"
+  version "2.1.4.174"
   sha256 :no_check
 
   url "https://downloads.wdc.com/wdapp/WD_Security_MACOS.zip",
@@ -12,6 +12,8 @@ cask "wd-security" do
     url "https://support-en.wd.com/app/answers/detailweb/a_id/29490"
     regex(/Version:?\s*(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   container nested: "WD Security Installer.dmg"
 

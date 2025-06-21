@@ -1,21 +1,57 @@
 cask "keepassxc@snapshot" do
-  version :latest
-  sha256 :no_check
+  version "2.8.0,265054"
+  sha256 "2d15ac2c4681c3a0494fc3443381a9edb7a9afd6a4b7d61be81d4249e7503694"
 
-  url "https://snapshot.keepassxc.org/latest/" do |page|
-    file_path = page[/href="([^"]+-snapshot\.dmg)"/, 1]
-    URI.join(page.url, file_path)
-  end
+  url "https://snapshot.keepassxc.org/build-#{version.csv.second}/KeePassXC-#{version.csv.first}-snapshot.dmg"
   name "KeePassXC"
   desc "Password manager app"
   homepage "https://keepassxc.org/"
 
-  deprecate! date: "2025-05-01", because: :unsigned
+  livecheck do
+    url "https://snapshot.keepassxc.org/"
+    regex(/href=.*?KeePassXC[._-]v?(\d+(?:\.\d+)+)-snapshot\.dmg/i)
+    strategy :page_match do |page, regex|
+      # Identify build numbers from directories like `build-123456`
+      newest_build = page.scan(%r{href=["']?build[._-]v?(\d+(?:\.\d+)*)/?["' >]}i)
+                         .flatten
+                         .uniq
+                         .max
+      next if newest_build.blank?
+
+      # Fetch the directory listing page for newest build
+      build_response = Homebrew::Livecheck::Strategy.page_content("https://snapshot.keepassxc.org/build-#{newest_build}/")
+      next if (build_page = build_response[:content]).blank?
+
+      match = build_page.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{newest_build}"
+    end
+  end
+
+  conflicts_with cask: [
+    "keepassxc",
+    "keepassxc@beta",
+  ]
+  depends_on macos: ">= :high_sierra"
 
   app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
+  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc.1"
+  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc-cli.1"
 
-  zap trash: "~/.keepassxc"
+  uninstall quit: "org.keepassxc.keepassxc"
+
+  zap trash: [
+    "~/.keepassxc",
+    "~/Library/Application Support/CrashReporter/KeePassXC_*.plist",
+    "~/Library/Application Support/keepassxc",
+    "~/Library/Caches/org.keepassx.keepassxc",
+    "~/Library/Logs/DiagnosticReports/KeePassXC_*.crash",
+    "~/Library/Preferences/keepassxc.keepassxc.plist",
+    "~/Library/Preferences/org.keepassx.keepassxc.plist",
+    "~/Library/Saved Application State/org.keepassx.keepassxc.savedState",
+  ]
 
   caveats do
     requires_rosetta

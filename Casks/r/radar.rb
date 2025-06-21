@@ -1,6 +1,6 @@
 cask "radar" do
-  version "2.6.7"
-  sha256 "bc4e5c5b7d2a331610bf0dd8aa96efd88fa439173004f573117b4375954dcfa0"
+  version "2.6.9"
+  sha256 "e2ede0c7caa27cfb39598e3f22e5acfa494f2356131198b839ff4f74798232dd"
 
   url "https://getradar.co/download/v#{version}.dmg"
   name "Radar"
@@ -12,7 +12,10 @@ cask "radar" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Radar.app"
 

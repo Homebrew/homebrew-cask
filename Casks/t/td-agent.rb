@@ -11,10 +11,9 @@ cask "td-agent" do
   desc "Fluentd distribution package"
   homepage "https://www.fluentd.org/"
 
-  livecheck do
-    url "https://td-agent-package-browser.herokuapp.com/#{version.major}/macosx"
-    regex(/href=.*?td-agent[._-]?v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-03-01", because: :discontinued
 
   pkg "td-agent-#{version}.pkg"
 

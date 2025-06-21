@@ -8,9 +8,11 @@ cask "ibored" do
   homepage "https://apps.tempel.org/iBored/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/iBored[._-]Mac[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    url "https://apps.tempel.org/iBored/appcast.xml"
+    strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "iBored.app"
 

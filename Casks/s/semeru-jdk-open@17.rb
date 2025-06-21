@@ -1,9 +1,9 @@
 cask "semeru-jdk-open@17" do
   arch arm: "aarch64", intel: "x64"
 
-  version "17.0.12+7,openj9-0.46.1"
-  sha256 arm:   "e3f37dd89b26204ad0fac8f8b52ff949cc38a963e7e6f246d74a1d20bd219c62",
-         intel: "4c5dc40a4ecdb4c26d6d77cf74416bd970b1b9a33c75759010d74eac344d143b"
+  version "17.0.15+6,openj9-0.51.0"
+  sha256 arm:   "05fe1b0843b0075847439caea05bd18ce3d2ada6742f46687d5cd40dd7bd4c68",
+         intel: "1e27dfd000b7d0c4abb3c958002344251b57ac1d107d563f5ac629d25dc64223"
 
   url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version.csv.first}_#{version.csv.second}/ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first.tr("+", "_")}_#{version.csv.second}.pkg",
       verified: "github.com/ibmruntimes/semeru#{version.major}-binaries/"
@@ -12,7 +12,7 @@ cask "semeru-jdk-open@17" do
   homepage "https://developer.ibm.com/languages/java/semeru-runtimes"
 
   livecheck do
-    url :stable
+    url :url
     regex(/^jdk[._-](\d+(?:[.+]\d+)*)[._-](.+?)$/i)
     strategy :github_latest do |json, regex|
       json["tag_name"]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }

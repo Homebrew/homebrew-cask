@@ -1,9 +1,9 @@
 cask "raindropio" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.6.50"
-  sha256 arm:   "cf642d412122da770bab682b3921929258aac26ade3f94b6879fe630b14cbff9",
-         intel: "e2523cd8fbb7b9723dfafd255f0822b1c176dfaf1a79de22e848bc0edb574e50"
+  version "5.6.76"
+  sha256 arm:   "7d95f686cb79d239645b88d6a90d5040c93ca537919a1f3bd2a7f85aabbdba0c",
+         intel: "8e6b074324ed7e91e7530e434f9f3c73634a5d2b818b06881a14d3a8825c2ed3"
 
   url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-#{arch}.dmg",
       verified: "github.com/raindropio/desktop/"
@@ -18,6 +18,7 @@ cask "raindropio" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Raindrop.io.app"
 

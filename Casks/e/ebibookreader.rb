@@ -7,7 +7,9 @@ cask "ebibookreader" do
   desc "Ebook reader"
   homepage "https://www.ebookjapan.jp/ebj/reader/mac/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued
 
   pkg "ebibookreader.pkg"
 

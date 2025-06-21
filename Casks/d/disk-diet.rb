@@ -1,6 +1,6 @@
 cask "disk-diet" do
-  version "5.5.1"
-  sha256 "e4ab5d2e9d5935fdc85af9421ce805fa336291d4c83b748b62928699d852a3a7"
+  version "5.6.2"
+  sha256 "f5adbe02a706459967dfd387ffa29012305db9c19591fa66c3c974dca6442a4f"
 
   url "https://www.tunabellysoftware.com/resources/Disk%20Diet%20#{version}.dmg"
   name "Disk Diet"
@@ -12,6 +12,11 @@ cask "disk-diet" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
+
   app "Disk Diet.app"
 
   zap trash: [
@@ -19,6 +24,9 @@ cask "disk-diet" do
     "/Library/PrivilegedHelperTools/com.tunabellysoftware.DiskDietHelper",
     "~/Library/Application Support/Disk Diet",
     "~/Library/Caches/com.tunabellysoftware.diskdiet",
+    "~/Library/HTTPStorages/com.tunabellysoftware.diskdiet",
+    "~/Library/HTTPStorages/com.tunabellysoftware.diskdiet.binarycookies",
     "~/Library/Preferences/com.tunabellysoftware.diskdiet.plist",
+    "~/Library/Saved Application State/com.tunabellysoftware.diskdiet.savedState",
   ]
 end

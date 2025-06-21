@@ -1,6 +1,6 @@
 cask "wine@staging" do
-  version "9.17"
-  sha256 "aff0725f799ee1fdfce0b55abcadf765d2b45db9f4c1fdd019d51530773a5876"
+  version "10.6"
+  sha256 "4721403f7c9c225175c7e40034f63858d13ec77ed072d7500d819b902bd6e41b"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
@@ -23,7 +23,7 @@ cask "wine@staging" do
         next if release["draft"] || release["prerelease"]
         next unless release["assets"]&.any? { |asset| asset["name"]&.match?(file_regex) }
 
-        match = release["tag_name"].match(regex)
+        match = release["tag_name"]&.match(regex)
         next if match.blank?
 
         match[1]

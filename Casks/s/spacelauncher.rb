@@ -12,10 +12,17 @@ cask "spacelauncher" do
     strategy :sparkle, &:short_version
   end
 
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
+  depends_on macos: ">= :monterey"
+
   app "SpaceLauncher.app"
 
   zap trash: [
     "~/Library/Application Support/name.guoc.SpaceLauncher",
-    "~/Library/Preferences/name.guoc.SpaceLauncher.plist",
+    "~/Library/Caches/name.guoc.SpaceLauncher",
+    "~/Library/HTTPStorages/name.guoc.SpaceLauncher",
+    "~/Library/Preferences/name.guoc.SpaceLauncher.*plist",
   ]
 end

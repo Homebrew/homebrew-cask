@@ -1,9 +1,9 @@
 cask "loom" do
   arch arm: "-arm64"
 
-  version "0.253.6"
-  sha256 arm:   "5cddb0ef6b3b42419c0079eac3ba3d82e0c23977fc68d5e1c3e8a14d6af37747",
-         intel: "204ff842480ae4b56c61ff0dac4c2827680761b225c1e81127e903cc4cf82b96"
+  version "0.296.8"
+  sha256 arm:   "b235329ea76c42a7c1b42e4977af8f7a0665444b12fdb193803028a7fe611514",
+         intel: "18487139f74ec12e2baa5b45c3aa8938d7d867f932a39d168e1c8093e5332811"
 
   url "https://packages.loom.com/desktop-packages/Loom-#{version}#{arch}.dmg"
   name "Loom"
@@ -16,6 +16,7 @@ cask "loom" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Loom.app"
 

@@ -1,12 +1,14 @@
 cask "murus" do
-  version "2.5"
-  sha256 "a626a58ddb9b918fefad08a482e0691bd78f1b32c3c0bafb9a3fb404b21c32d2"
+  version "2.6"
+  sha256 "36e4be4435c2c0f358a5aade9d0934d330054354621ce243f3f0bab52d371121"
 
-  url "https://github.com/TheMurusTeam/Murus/releases/download/v#{version}/Murus.#{version}.zip",
+  url "https://github.com/TheMurusTeam/Murus/releases/download/v#{version}/murus-#{version}.zip",
       verified: "github.com/TheMurusTeam/Murus/"
   name "Murus Firewall"
   desc "Firewall app"
   homepage "https://www.murusfirewall.com/"
+
+  depends_on macos: ">= :sierra"
 
   app "Murus.app"
 

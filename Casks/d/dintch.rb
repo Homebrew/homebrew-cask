@@ -1,9 +1,8 @@
 cask "dintch" do
-  version "1.6,2023.05"
-  sha256 "61444cc980f6c6f9dc11bf222e60d04d479b96d3c3d5f8cbbae3675809a9292a"
+  version "1.7,2025.04"
+  sha256 "728960d47779e23f5ba3ffdda7184c074e06837a320aa38b536d32071c35e3b3"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/dintch#{version.csv.first.no_dots}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/dintch#{version.csv.first.no_dots}.zip"
   name "Dintch"
   desc "Check the integrity of your files"
   homepage "https://eclecticlight.co/dintch"
@@ -15,13 +14,16 @@ cask "dintch" do
       item = xml.elements["//dict[key[text()='AppName']/following-sibling::*[1][text()='Dintch']]"]
       next unless item
 
-      version = item.elements["key[text()='Version']"]&.next_element&.text&.strip
-      match = item.elements["key[text()='URL']"]&.next_element&.text&.strip&.match(regex)
+      version = item.elements["key[text()='Version']"]&.next_element&.text
+      url = item.elements["key[text()='URL']"]&.next_element&.text
+      match = url.strip.match(regex) if url
       next if version.blank? || match.blank?
 
-      "#{version},#{match[1]}.#{match[2]}"
+      "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

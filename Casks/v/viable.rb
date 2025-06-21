@@ -2,8 +2,7 @@ cask "viable" do
   version "1b12,2023.11"
   sha256 "6613cf7f0ae9a6737eeec8a15f3110e53cb6986b51f3a236913046e8d3769d00"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/viable#{version.csv.first}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com/"
+  url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/viable#{version.csv.first}.zip"
   name "Viable"
   desc "Create and run macOS virtual machines on Apple silicon Macs"
   homepage "https://eclecticlight.co/virtualisation-on-apple-silicon/"
@@ -18,6 +17,9 @@ cask "viable" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on arch: :arm64
   depends_on macos: ">= :monterey"
 
   app "viable#{version.csv.first}/Viable.app"

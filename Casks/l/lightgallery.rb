@@ -7,6 +7,8 @@ cask "lightgallery" do
   name "lightgallery"
   homepage "https://sachinchoolur.github.io/lightgallery-desktop/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-18", because: :unmaintained
 
   app "lightgallery.app"

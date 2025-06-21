@@ -7,7 +7,10 @@ cask "soundflowerbed" do
   desc "Taps into Soundflower channels and route them to an audio device"
   homepage "https://github.com/mLupine/SoundflowerBed"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-05-16", because: :discontinued
+  disable! date: "2025-05-16", because: :discontinued
 
   app "SoundflowerBed.app"
 end

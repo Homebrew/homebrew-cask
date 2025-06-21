@@ -1,9 +1,9 @@
 cask "reqable" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.23.1"
-  sha256 arm:   "bd9cd20daff8c97de10cfb6f4cc1d9cca720ed3f4cead5b0402a05b8d3f64ee5",
-         intel: "a3da21d3662029c337185f51230ed37c93c652db8292743b17db3468c63b546f"
+  version "2.33.12"
+  sha256 arm:   "96907f5524f0a80d60729816f4027d1f90cebbd4179a1dc9914d8a67e72ace64",
+         intel: "a5b51cbea36141e4d0bd55b37d1c3198d6665787d311e3afe073938b1f3c826c"
 
   url "https://github.com/reqable/reqable-app/releases/download/#{version}/reqable-app-macos-#{arch}.dmg",
       verified: "github.com/reqable/reqable-app/"
@@ -12,6 +12,7 @@ cask "reqable" do
   homepage "https://reqable.com/"
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Reqable.app"
 

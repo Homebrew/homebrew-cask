@@ -1,13 +1,15 @@
 cask "cardinal" do
-  version "24.05"
-  sha256 "55fa3abff973ad62cdaf3514030d74b2c8a4110404ed488a9c190ace2ec386fc"
+  version "24.12"
+  sha256 "ee4cb6c3d94056e72c8249a9bd061722704689eb98f8db3e1d910ad51ec87255"
 
-  url "https://github.com/DISTRHO/Cardinal/releases/download/#{version}/Cardinal-macOS-universal-10.15-#{version}.pkg"
+  url "https://github.com/DISTRHO/Cardinal/releases/download/#{version}/Cardinal-macOS-universal-#{version}.pkg"
   name "Cardinal"
   desc "Virtual modular synthesiser plugin"
   homepage "https://github.com/DISTRHO/Cardinal"
 
-  pkg "Cardinal-macOS-universal-10.15-#{version}.pkg"
+  no_autobump! because: :requires_manual_review
+
+  pkg "Cardinal-macOS-universal-#{version}.pkg"
 
   uninstall pkgutil: [
     "studio.kx.distrho.cardinal.resources",
@@ -19,4 +21,6 @@ cask "cardinal" do
     "studio.kx.distrho.plugins.cardinal.vst2bundles",
     "studio.kx.distrho.plugins.cardinal.vst3bundles",
   ]
+
+  # No zap stanza required
 end

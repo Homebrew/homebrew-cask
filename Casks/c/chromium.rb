@@ -10,11 +10,8 @@ cask "chromium" do
   desc "Free and open-source web browser"
   homepage "https://www.chromium.org/Home"
 
-  conflicts_with cask: [
-    "eloston-chromium",
-    "freesmug-chromium",
-  ]
-  depends_on macos: ">= :catalina"
+  conflicts_with cask: "eloston-chromium"
+  depends_on macos: ">= :big_sur"
 
   app "chrome-mac/Chromium.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

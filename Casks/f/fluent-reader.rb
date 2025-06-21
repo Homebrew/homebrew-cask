@@ -13,6 +13,10 @@ cask "fluent-reader" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
+
   app "Fluent Reader.app"
 
   zap trash: [

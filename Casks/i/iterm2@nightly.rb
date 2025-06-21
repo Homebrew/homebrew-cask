@@ -1,9 +1,9 @@
 cask "iterm2@nightly" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "3_5_20240919"
-  sha256 "e744868b70231396957795e86f5e565d74508d2dcab1885c677ca7778fa407bb"
+  version "3_5_20250618"
+  sha256 "352d9bbbafc6053150830827c7fe9e38d7c83afa7487a0e72020c2d240eaee4d"
 
-  url "https://iterm2.com/nightly/iTerm2-#{version}-nightly.zip"
+  url "https://iterm2.com/downloads/nightly/iTerm2-#{version}-nightly.zip"
   name "iTerm2"
   desc "Terminal emulator as alternative to Apple's Terminal app"
   homepage "https://iterm2.com/"

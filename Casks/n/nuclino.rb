@@ -1,8 +1,8 @@
 cask "nuclino" do
-  version "1.6.4"
-  sha256 "74c351a3e3b4e3c37e1fa9ef0cd9a8af13a36ea3e75daf3f397002bd52d68f60"
+  version "1.6.8"
+  sha256 "dcebeef913bdb8b7f1b3badd418b3599069aac9cceb9b31916f88999d814b927"
 
-  url "https://s3-eu-central-1.amazonaws.com/repository.nuclino.com/mac/Nuclino-#{version}-x64.dmg",
+  url "https://s3-eu-central-1.amazonaws.com/repository.nuclino.com/mac/Nuclino-#{version}-universal.dmg",
       verified: "s3-eu-central-1.amazonaws.com/repository.nuclino.com/"
   name "Nuclino"
   desc "Collaborative wiki and knowledgebase"
@@ -13,6 +13,10 @@ cask "nuclino" do
     strategy :electron_builder
   end
 
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :catalina"
+
   app "Nuclino.app"
 
   zap trash: [
@@ -21,8 +25,4 @@ cask "nuclino" do
     "~/Library/Logs/Nuclino",
     "~/Library/Preferences/com.nuclino.desktop.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -7,6 +7,8 @@ cask "machacha" do
   desc "Split archives into smaller parts and join them when requested"
   homepage "http://www.julifos.com/soft/machacha/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-05", because: :unmaintained
 
   app "MacHacha.app"

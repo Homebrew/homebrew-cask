@@ -1,9 +1,9 @@
 cask "virtualbox" do
   arch arm: "macOSArm64", intel: "OSX"
 
-  version "7.1.0,164728"
-  sha256 arm:   "5ba5d31f379aa6d35d578f67f29c175db7356b1939d7a2a478b7e9de487c33ba",
-         intel: "8ce622e23913cab562b404df7c588cea6ec3205f9063437e6f97fab2982ddae0"
+  version "7.1.10,169112"
+  sha256 arm:   "15ff0ae76005a2a77e8f40ea2a87095a645899fadaf798aabbe8dafd130de5d6",
+         intel: "cd63aa9d056b15589152b0304368dfae6930b47ebb465873d0c33fd648cd64c5"
 
   url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg"
   name "Oracle VirtualBox"
@@ -12,8 +12,9 @@ cask "virtualbox" do
 
   livecheck do
     url "https://www.virtualbox.org/wiki/Downloads"
-    strategy :page_match do |page|
-      match = page.match(/href=.*?VirtualBox[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]OSX.dmg/)
+    regex(/href=.*?VirtualBox[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]OSX\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"

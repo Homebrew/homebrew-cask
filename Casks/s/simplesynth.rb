@@ -8,6 +8,8 @@ cask "simplesynth" do
   desc "Small and fast synth"
   homepage "https://github.com/notahat/simplesynth"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-07-17", because: "is 32-bit only"
 
   app "SimpleSynth.app"

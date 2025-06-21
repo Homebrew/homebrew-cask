@@ -8,10 +8,28 @@ cask "font-jetbrains-mono" do
   homepage "https://www.jetbrains.com/lp/mono"
 
   livecheck do
-    url "https://github.com/JetBrains/JetBrainsMono"
+    url :url
     strategy :gitHub_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
+  font "fonts/ttf/JetBrainsMono-Bold.ttf"
+  font "fonts/ttf/JetBrainsMono-BoldItalic.ttf"
+  font "fonts/ttf/JetBrainsMono-ExtraBold.ttf"
+  font "fonts/ttf/JetBrainsMono-ExtraBoldItalic.ttf"
+  font "fonts/ttf/JetBrainsMono-ExtraLight.ttf"
+  font "fonts/ttf/JetBrainsMono-ExtraLightItalic.ttf"
+  font "fonts/ttf/JetBrainsMono-Italic.ttf"
+  font "fonts/ttf/JetBrainsMono-Light.ttf"
+  font "fonts/ttf/JetBrainsMono-LightItalic.ttf"
+  font "fonts/ttf/JetBrainsMono-Medium.ttf"
+  font "fonts/ttf/JetBrainsMono-MediumItalic.ttf"
+  font "fonts/ttf/JetBrainsMono-Regular.ttf"
+  font "fonts/ttf/JetBrainsMono-SemiBold.ttf"
+  font "fonts/ttf/JetBrainsMono-SemiBoldItalic.ttf"
+  font "fonts/ttf/JetBrainsMono-Thin.ttf"
+  font "fonts/ttf/JetBrainsMono-ThinItalic.ttf"
   font "fonts/ttf/JetBrainsMonoNL-Bold.ttf"
   font "fonts/ttf/JetBrainsMonoNL-BoldItalic.ttf"
   font "fonts/ttf/JetBrainsMonoNL-ExtraBold.ttf"

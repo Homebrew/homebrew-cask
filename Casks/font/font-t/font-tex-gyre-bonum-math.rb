@@ -11,6 +11,8 @@ cask "font-tex-gyre-bonum-math" do
     regex(/Bonum\sMath\s\(OTF\),\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "texgyrebonum-math-#{version.no_dots}/opentype/texgyrebonum-math.otf"
 
   # No zap stanza required

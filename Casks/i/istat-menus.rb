@@ -1,5 +1,5 @@
 cask "istat-menus" do
-  version "7.02.3"
+  version "7.10.2"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://cdn.istatmenus.app/files/istatmenus#{version.major}/versions/iStatMenus#{version}.zip",
@@ -36,6 +36,7 @@ cask "istat-menus" do
               "/Library/Application Support/iStat Menus #{version.major}",
               "/Library/LaunchDaemons/com.bjango.istatmenus.fans.plist",
               "/Library/Logs/iStat Menus",
+              "/Library/PrivilegedHelperTools/com.bjango.istatmenus.installer",
               "/Library/PrivilegedHelperTools/com.bjango.istatmenus.installerhelper",
             ]
 

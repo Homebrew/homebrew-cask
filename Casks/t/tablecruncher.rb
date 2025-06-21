@@ -1,16 +1,21 @@
 cask "tablecruncher" do
-  version "1.6.0.1"
-  sha256 "897f9fabcabdd902343dad66e67ea2c68b911cf44d383e32adb94ea2908c87de"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://tablecruncher.com/download/Tablecruncher-#{version}.zip"
+  version "1.8"
+  sha256 arm:   "9980f46fea21e30491a6aa74bfa8d2787b3377eefe61a546ed92cd26c22fe619",
+         intel: "2d304a086cb2d5eb746fabff846e34ef07d2d3d5ff45e829809cda97770436bc"
+
+  url "https://tablecruncher.com/download/v#{version.major_minor}/Tablecruncher-#{version}-#{arch}.zip"
   name "Tablecruncher"
   desc "Lightweight CSV editor"
   homepage "https://tablecruncher.com/"
 
   livecheck do
     url "https://tablecruncher.com/download/"
-    regex(/Tablecruncher-(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?Tablecruncher[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.zip/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Tablecruncher.app"
 

@@ -14,6 +14,8 @@ cask "infra" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
 
   app "Infra.app"

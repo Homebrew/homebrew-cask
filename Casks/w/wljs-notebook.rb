@@ -1,21 +1,22 @@
 cask "wljs-notebook" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.5.6,2.5.6FIX"
-  sha256 arm:   "0aefd5dfe2f518c3a22e357193f196774e48232a4b7ac8bdeb58c48bcee25d33",
-         intel: "21f2e42bc6fff7b70e751dc6221a09bd7d613bedccb91b04a69e13ecc78e9377"
+  version "2.7.8"
+  sha256 arm:   "3a2811d7567452077bae392ed03b719eb6fcbe40fd653a7cae72e1ea6c741efc",
+         intel: "a6a1a4ea3821b7ba941d687bf35baeb1dffb63b77758d7edf403842810e2fc94"
 
-  url "https://github.com/JerryI/wolfram-js-frontend/releases/download/#{version.csv.second || version.csv.first}/wljs-notebook-#{version.csv.first}-#{arch}.dmg"
+  url "https://github.com/JerryI/wolfram-js-frontend/releases/download/v#{version.csv.second || version.csv.first}/wljs-notebook-#{version.csv.first}-#{arch}-macos.dmg",
+      verified: "github.com/JerryI/wolfram-js-frontend/"
   name "WLJS Notebook"
   desc "Javascript frontend for Wolfram Engine"
-  homepage "https://github.com/JerryI/wolfram-js-frontend"
+  homepage "https://jerryi.github.io/wljs-docs/"
 
   # The upstream release tag can sometimes differ from the version in the
   # filename (e.g. 2.5.6FIX vs. 2.5.6), so we include the tag in the cask
   # `version` when this happens.
   livecheck do
     url :url
-    regex(/wljs[._-]notebook[._-]v?(\d+(?:\.\d+)+)/i)
+    regex(/wljs[._-]notebook[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}(?:[._-]macos)?\.dmg/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]

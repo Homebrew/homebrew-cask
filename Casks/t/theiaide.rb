@@ -1,16 +1,19 @@
 cask "theiaide" do
-  version "1.53.200"
-  sha256 "f888b79481ed84a2e1f2be172275f23632077fa878dceb4c4da7c428d2fdb223"
+  arch arm: "-arm"
 
-  url "https://download.eclipse.org/theia/ide/#{version}/macos/TheiaIDE.dmg",
+  version "1.62.200"
+  sha256 arm:   "663bd4721e019fd61adfa6594b8c1ec7c74896b5fc0d39e2624c1cb9668ec70a",
+         intel: "00bf0c7eb44102345762f2d08b4c4df74a2a55d3843592ce4e5fa054cd0cc1c7"
+
+  url "https://download.eclipse.org/theia/ide/#{version}/macos#{arch}/TheiaIDE.dmg",
       verified: "download.eclipse.org/theia/ide/"
   name "TheiaIDE"
   desc "IDE framework"
   homepage "https://theia-ide.org/"
 
   livecheck do
-    url "https://download.eclipse.org/theia/ide/latest/macos/"
-    regex(/href=.*?TheiaIDE[._-]v?(\d+(?:\.\d+)+)(?:-mac)?\.zip/i)
+    url "https://download.eclipse.org/theia/ide/latest/macos#{arch}/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
@@ -26,8 +29,4 @@ cask "theiaide" do
     "~/Library/Preferences/eclipse.theia.plist",
     "~/Library/Saved Application State/eclipse.theia.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

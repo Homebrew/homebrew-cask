@@ -15,6 +15,8 @@ cask "fs-uae-launcher" do
     regex(/href=.*?FS[._-]UAE[._-]Launcher[._-](\d+(?:\.\d+)+)[._-]macOS[._-]/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   app "FS-UAE-Launcher/macOS/#{arch}/FS-UAE Launcher.app"
 
   zap trash: [

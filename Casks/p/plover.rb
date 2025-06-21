@@ -1,6 +1,6 @@
 cask "plover" do
-  version "4.0.0rc2"
-  sha256 "46659da04b7fe04b9b21bda469e292ac53ec005713e5d2d970a90e99e9c2014f"
+  version "4.0.2"
+  sha256 "710900e00781e19463a12a9d5d0082b282ce8eb9e93c4c5f5d6fad5aecf0d360"
 
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-macosx_10_13_x86_64.dmg",
       verified: "github.com/openstenoproject/plover/"
@@ -16,7 +16,7 @@ cask "plover" do
 
   app "Plover.app"
 
-  zap trash: "~/Library/Application Support/plover/"
+  zap trash: "~/Library/Application Support/plover"
 
   caveats do
     requires_rosetta

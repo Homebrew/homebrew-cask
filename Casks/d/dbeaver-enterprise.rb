@@ -1,9 +1,9 @@
 cask "dbeaver-enterprise" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "24.2.0"
-  sha256 arm:   "a94350123bd6bb8419ac7ed4c15474e00bffddeccb9ab3778d87df12e5846e06",
-         intel: "3c2b40a1ad76b62e8551c691b13d8491268b3fe8fc47f39d633f0871559aa63e"
+  version "25.1.0"
+  sha256 arm:   "f187881d66c9f7de46b1195ee9fb9aa5e0f63c71ede1908432a2d4863c10898c",
+         intel: "354daaa9b40d80f43f2a2f2bf697470f2cf239d72e418a958c713ddc5f759633"
 
   url "https://dbeaver.com/files/#{version}/dbeaver-ee-#{version}-macos-#{arch}.dmg"
   name "DBeaver Enterprise Edition"
@@ -16,6 +16,8 @@ cask "dbeaver-enterprise" do
       xml.elements["//version/number"]&.text&.strip
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "DBeaverEE.app"
 

@@ -1,6 +1,6 @@
 cask "hhkb-studio" do
-  version "1.0.4"
-  sha256 "29bd562e6ec1f116d2da0ac8f4fe6d0cdce95ad8f4dc62e0d9778b0814b90b4a"
+  version "1.1.1"
+  sha256 "2938653604517bf664e51a5ae071e14d37dc46c7f368c8427b1f76d01b5e0413"
 
   url "https://origin.pfultd.com/downloads/hhkbstudio/mac/HHKBStudiokeymapTool_#{version.no_dots}ma.dmg",
       verified: "origin.pfultd.com/downloads/hhkbstudio/mac/"
@@ -30,5 +30,5 @@ cask "hhkb-studio" do
         "~/Library/Application Support/hhkb-keymap-tool/Studio/*.log",
         "~/Library/Preferences/jp.co.pfu.hhkb-studio-keymap-tool.plist",
       ],
-      rmdir: "~/Library/Application Support/hhkb-keymap-tool/Studio/"
+      rmdir: "~/Library/Application Support/hhkb-keymap-tool/Studio"
 end

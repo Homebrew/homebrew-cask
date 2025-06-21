@@ -7,10 +7,9 @@ cask "decloner" do
   desc "Duplicate files finder"
   homepage "https://www.pixelespressoapps.com/decloner/"
 
-  livecheck do
-    url "https://www.pixelespressoapps.com/decloner/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-03-31", because: :unmaintained
 
   app "Decloner.app"
 

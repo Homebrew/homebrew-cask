@@ -1,13 +1,14 @@
 # This file is synced from `Homebrew/brew` by the `.github` repository, do not modify it directly.
 ---
 AllCops:
+  ParserEngine: parser_prism
   TargetRubyVersion: 3.3
   NewCops: enable
   Include:
   - "**/*.rbi"
   Exclude:
-  - Homebrew/sorbet/rbi/{dsl,gems}/**/*.rbi
-  - Homebrew/sorbet/rbi/parlour.rbi
+  - Homebrew/sorbet/rbi/{annotations,dsl,gems}/**/*.rbi
+  - Homebrew/sorbet/rbi/parser*.rbi
   - Homebrew/bin/*
   - Homebrew/vendor/**/*
   - Taps/*/*/vendor/**/*
@@ -170,26 +171,24 @@ Style/InvertibleUnlessCondition:
   Enabled: true
   InverseMethods:
     :==: :!=
-    :zero?: 
+    :zero?:
     :blank?: :present?
 Style/MutableConstant:
   EnforcedStyle: strict
 Style/NumericLiteralPrefix:
   EnforcedOctalStyle: zero_only
 Style/NumericLiterals:
-  MinDigits: 7
+  MinDigits: 11
   Strict: true
-  Exclude:
-  - "**/Brewfile"
 Style/OpenStructUse:
   Exclude:
   - Taps/**/*
-  - Homebrew/cli/args.rb
-  - Homebrew/cli/args.rbi
 Style/OptionalBooleanParameter:
   AllowedMethods:
   - respond_to?
   - respond_to_missing?
+Style/RedundantLineContinuation:
+  Enabled: false
 Style/RescueStandardError:
   EnforcedStyle: implicit
 Style/ReturnNil:

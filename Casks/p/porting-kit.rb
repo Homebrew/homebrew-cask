@@ -1,12 +1,14 @@
 cask "porting-kit" do
-  version "6.3.2"
-  sha256 "0fea1bbd36bea3c115bc8a94a0ae9afe982a44d824c09cb0d940603f2e0e1a04"
+  version "6.5.0"
+  sha256 "e3c7fc05e865669671d2d99c4da932ffafad4b7a1835130a3bdb753647259e5d"
 
   url "https://github.com/vitor251093/porting-kit-releases/releases/download/v#{version}/Porting-Kit-#{version}.dmg",
       verified: "github.com/vitor251093/porting-kit-releases/"
   name "Porting Kit"
   desc "Install games and apps compiled for Microsoft Windows"
   homepage "https://portingkit.com/"
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

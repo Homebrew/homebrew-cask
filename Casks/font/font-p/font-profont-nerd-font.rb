@@ -1,6 +1,6 @@
 cask "font-profont-nerd-font" do
-  version "3.2.1"
-  sha256 "ae5898e790662f261471f3dd263f4357981b23bff68ee2ed1290a64901fa1d87"
+  version "3.4.0"
+  sha256 "8c6a220533cf398ccb1e42735bcfa546d72f7854cf4d2ed3baa94d21e4200413"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/ProFont.zip"
   name "ProFont Nerd Font families (ProFont)"
@@ -10,6 +10,8 @@ cask "font-profont-nerd-font" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   font "ProFontIIxNerdFont-Regular.ttf"
   font "ProFontIIxNerdFontMono-Regular.ttf"
