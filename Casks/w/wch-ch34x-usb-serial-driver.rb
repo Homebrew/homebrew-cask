@@ -2,15 +2,10 @@ cask "wch-ch34x-usb-serial-driver" do
   version "1.9"
   sha256 :no_check
 
-  url "https://www.wch.cn/downloads/file/369.html"
+  url "https://www.wch.cn/download/file?id=369"
   name "WCH USB serial driver for CH340/CH341/CH342/CH343/CH344/CH9101/CH9102/CH9103/CH9143"
   desc "USB serial driver"
-  homepage "https://www.wch.cn/download/CH34XSER_MAC_ZIP.html"
-
-  livecheck do
-    url :homepage
-    regex(%r{<td>(\d+(?:\.\d+)+)</td>}i)
-  end
+  homepage "https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html"
 
   no_autobump! because: :requires_manual_review
 
@@ -22,6 +17,11 @@ cask "wch-ch34x-usb-serial-driver" do
               "cn.wch.CH34xVCPDriver",
             ],
             pkgutil: "cn.wch.pkg.CH34xVCPDriver"
+
+  zap trash: [
+    "~/Library/Application Scripts/cn.wch.CH34xVCPDriver",
+    "~/Library/Containers/cn.wch.CH34xVCPDriver",
+  ]
 
   caveats do
     reboot
