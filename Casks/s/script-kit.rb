@@ -1,9 +1,9 @@
 cask "script-kit" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.33.0"
-  sha256 arm:   "38472da6be808f2692d7569af03abaca920467369c041d4636b86e1da0b2d947",
-         intel: "a7d36d1c26ee395b0da0298051bc93cff2c9487ff38ce742210f7cf4ae39d089"
+  version "3.45.1"
+  sha256 arm:   "b6bf54b40525e70f90a01b84653c808b1fd8ca4eb2eeedd7097c060ccc3aaf2b",
+         intel: "65d652534e69b49cb795c0ccceb97952ab54121cc98e6c1d1c3acdc833e6b84d"
 
   url "https://github.com/johnlindquist/kitapp/releases/download/v#{version}/Script-Kit-macOS-#{version}-#{arch}.dmg",
       verified: "github.com/johnlindquist/kitapp/"
