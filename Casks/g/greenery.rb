@@ -13,7 +13,7 @@ cask "greenery" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
+  no_autobump! because: :bumped_by_upstream
 
   depends_on macos: ">= :catalina"
 
