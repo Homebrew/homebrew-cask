@@ -1,6 +1,6 @@
 cask "font-server-mono" do
-  version "0.0.7"
-  sha256 "695f201ee89614f5aa95ef37d0958fbcee877b7782fb1877717b164228eddf58"
+  version "0.0.8"
+  sha256 "2f8f9cd371ba908dabce464960ab310a8522fdd99670c6c9fbd2f3988a378f9b"
 
   url "https://github.com/internet-development/www-server-mono/releases/download/v#{version}/ServerMono-fonts.zip",
       verified: "github.com/internet-development/www-server-mono/"
