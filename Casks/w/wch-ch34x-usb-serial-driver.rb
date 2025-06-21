@@ -23,6 +23,11 @@ cask "wch-ch34x-usb-serial-driver" do
             ],
             pkgutil: "cn.wch.pkg.CH34xVCPDriver"
 
+  zap trash: [
+    "~/Library/Application Scripts/cn.wch.CH34xVCPDriver",
+    "~/Library/Containers/cn.wch.CH34xVCPDriver",
+  ]
+
   caveats do
     reboot
   end
