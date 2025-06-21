@@ -1,10 +1,12 @@
 cask "aigcpanel" do
-  arch arm: "arm64"
+  arch arm: "arm64", intel: "x86"
 
   version "0.11.0"
   sha256 :no_check
+
   url "https://github.com/modstart-lib/aigcpanel/releases/download/v#{version}/AigcPanelPro-#{version}-mac-#{arch}.dmg",
-    verified: "github.com/modstart-lib/aigcpanel/"
+      verified: "github.com/modstart-lib/aigcpanel/"
+  
   name "AigcPanel"
   desc "OpenSource Digital Human"
   homepage "https://aigcpanel.com/"
@@ -19,8 +21,5 @@ cask "aigcpanel" do
 
   app "AigcPanel.app"
 
-  zap trash: [
-    "~/Library/Application Support/aigcpanel",
-  ]
+  zap trash: "~/Library/Application Support/AigcPanel"
 end
-  
