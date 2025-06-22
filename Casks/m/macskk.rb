@@ -7,7 +7,6 @@ cask "macskk" do
   desc "SKK Input Method"
   homepage "https://github.com/mtgto/macSKK"
 
-  auto_updates true
   depends_on macos: ">= :ventura"
 
   pkg "macSKK-#{version}.pkg"
