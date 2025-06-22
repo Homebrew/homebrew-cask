@@ -19,6 +19,8 @@ cask "apple-hewlett-packard-printer-drivers" do
     end
   end
 
+  depends_on macos: "<= sequoia"
+
   no_autobump! because: :requires_manual_review
 
   pkg "HewlettPackardPrinterDrivers.pkg"
