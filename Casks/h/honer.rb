@@ -10,6 +10,11 @@ cask "honer" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-06-22", because: :discontinued
+  disable! date: "2025-06-22", because: :discontinued
 
   app "Honer.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
