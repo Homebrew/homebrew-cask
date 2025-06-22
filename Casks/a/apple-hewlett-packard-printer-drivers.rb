@@ -19,7 +19,7 @@ cask "apple-hewlett-packard-printer-drivers" do
     end
   end
 
-  depends_on macos: "<= sequoia"
+  depends_on macos: "<= 15.0.0"
 
   no_autobump! because: :requires_manual_review
 
