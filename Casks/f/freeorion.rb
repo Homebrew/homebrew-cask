@@ -1,8 +1,8 @@
 cask "freeorion" do
-  version "0.5.1"
-  sha256 "74a1245eb6eca926d296a9cfc8d42ffdc7719db3aa796702c265d7be3cccf5c3"
+  version "0.5.1.1"
+  sha256 "1bd19baeeb8c74da8510d078623a4689fecbc91de780809e838563900fab29c8"
 
-  url "https://github.com/freeorion/freeorion/releases/download/v#{version}/FreeOrion_v#{version}_macOS_10.15.dmg",
+  url "https://github.com/freeorion/freeorion/releases/download/v#{version}/FreeOrion_v#{version}_MacOSX_10.15.dmg",
       verified: "github.com/freeorion/"
   name "FreeOrion"
   desc "Turn-based space empire and galactic conquest game"
