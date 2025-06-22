@@ -6,10 +6,10 @@ cask "veracrypt" do
       verified: "launchpad.net/veracrypt/trunk/"
   name "VeraCrypt"
   desc "Disk encryption software focusing on security based on TrueCrypt"
-  homepage "https://www.veracrypt.fr/"
+  homepage "https://veracrypt.io/"
 
   livecheck do
-    url "https://www.veracrypt.fr/en/Downloads.html"
+    url "https://veracrypt.io/en/Downloads.html"
     regex(/href=.*?VeraCrypt[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
