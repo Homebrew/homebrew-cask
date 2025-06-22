@@ -5,9 +5,13 @@ cask "typora@dev" do
   language "zh-Hans-CN" do # use official Chinese mirror
     url "https://download2.typoraio.cn/mac/Typora-#{version}.dmg",
         verified: "typoraio.cn/"
+
+    "zh-Hans-CN"
   end
   language "en", default: true do
     url "https://download.typora.io/mac/Typora-#{version}.dmg"
+
+    "en-US"
   end
 
   name "Typora"
