@@ -1,11 +1,11 @@
 cask "foks" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.0.20"
-  sha256 arm:   "c3a8b69dac7b41191ce1f1ce9a94dbbe7f843fd238bda21f29ad5f4c4b4a3b1a",
-         intel: "e559dc23f2ed4601ff407221276ba7c922ced794f9b1bcb1f006656cd3eeac07"
+  version "0.0.21"
+  sha256 arm:   "38687405b4f57059e3dd29338ea3fdf8d3e15b0809d620d6f60a1bcac9143f2d",
+         intel: "09902f01acafc4b5c8a9e7a1e7691d308860ecf4da38ebd8d4da66a9b812507c"
 
-  url "https://pkgs.foks.pub/stable/darwin/foks-v#{version}-darwin-#{arch}.zip"
+  url "https://pkgs.foks.pub/stable/darwin/foks-v#{version}-darwin-brew-#{arch}.zip"
   name "FOKS"
   desc "Federated Open Key Service; E2EE KV-store and Git hosting"
   homepage "https://foks.pub/"
