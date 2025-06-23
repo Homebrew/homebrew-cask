@@ -8,20 +8,7 @@ cask "vmware-fusion" do
   desc "Create, manage, and run virtual machines"
   homepage "https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion"
 
-  livecheck do
-    url "https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/fusion-universal.xml"
-    regex(%r{fusion/(\d+(?:\.\d+)+/\d+)}i)
-    strategy :xml do |xml, regex|
-      xml.get_elements("//url").map do |item|
-        match = item.text&.strip&.match(regex)
-        next if match.blank?
-
-        match[1].tr("/", ",")
-      end
-    end
-  end
-
-  no_autobump! because: :requires_manual_review
+  disable! date: "2025-06-23", because: "requires authentication to download"
 
   auto_updates true
   conflicts_with cask: "vmware-fusion@preview"
