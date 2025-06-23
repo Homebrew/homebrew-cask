@@ -1,14 +1,9 @@
 cask "qlc+" do
   arch arm: "arm64", intel: "x86_64"
 
-  on_arm do
-    version "4.14.1-1"
-    sha256 "b78c6beea9bdafa347b6cdd1e1a5f2fdff7ec9f2304ef960a875cb200ea65995"
-  end
-  on_intel do
-    version "4.14.1"
-    sha256 "81c77696afba5e3a803ee0e16be02595bd6a2ba628d3240ebd30654936003801"
-  end
+  version "4.14.2"
+  sha256 arm:   "17c6c595f661ec0ddd0184f6470a881e2fc1e47626bf3dd281b1359f61ae1552",
+         intel: "246591c974a6965df6205c30195b5968f19bb5e9bf123e207d8efac4b1a8cdcc"
 
   url "https://qlcplus.org/downloads/#{version.split("-").first}/QLC+_#{version}_#{arch}.dmg"
   name "Q Light Controller+"
