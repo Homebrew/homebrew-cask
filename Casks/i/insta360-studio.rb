@@ -50,9 +50,9 @@ cask "insta360-studio" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/Insta360",
+    "~/Library/Application Support/Insta360/Insta360 Studio",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.insta360.studio",
-    "~/Library/Caches/Insta360",
+    "~/Library/Caches/Insta360/Insta360 Studio",
     "~/Library/Saved Application State/com.insta360.studio.savedState",
   ]
 end
