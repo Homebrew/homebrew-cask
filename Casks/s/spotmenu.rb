@@ -1,30 +1,31 @@
 cask "spotmenu" do
-  version "1.9"
-  sha256 "306fc07e2fa2987bd46eae15012808ab2341e47bc56c7b0ebef151752155fd6f"
+  version "2.0.2"
+  sha256 "499855efbc834ab99fc429a8355c4bc5da301c7a9116470bf39fa7e81d33ac95"
 
-  url "https://github.com/kmikiy/SpotMenu/releases/download/v#{version}/SpotMenu.zip"
+  url "https://github.com/kmikiy/SpotMenu/releases/download/v#{version}/SpotMenu.app.zip"
   name "SpotMenu"
   desc "Spotify and iTunes in the menu bar"
   homepage "https://github.com/kmikiy/SpotMenu"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   no_autobump! because: :requires_manual_review
 
   auto_updates true
+  depends_on macos: ">= :sonoma"
 
   app "SpotMenu.app"
 
-  uninstall quit:       "com.KMikiy.SpotMenu",
+  uninstall quit:       "com.github.kmikiy.SpotMenu",
             login_item: "SpotMenu"
 
   zap trash: [
-    "~/Library/Application Scripts/com.KMikiy.SpotMenu.SpotMenuToday",
-    "~/Library/Application Support/com.KMikiy.SpotMenu",
-    "~/Library/Containers/com.KMikiy.SpotMenu.SpotMenuToday",
-    "~/Library/Group Containers/group.KMikiy.SpotMenu",
-    "~/Library/Preferences/com.KMikiy.SpotMenu.plist",
+    "~/Library/Application Scripts/com.github.kmikiy.SpotMenu",
+    "~/Library/Application Support/com.github.kmikiy.SpotMenu",
+    "~/Library/Group Containers/com.github.kmikiy.SpotMenu",
+    "~/Library/Preferences/com.github.kmikiy.SpotMenu.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
