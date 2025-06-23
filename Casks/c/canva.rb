@@ -1,6 +1,6 @@
 cask "canva" do
-  version "1.110.0"
-  sha256 "e795cd80460d7b839fbcb5ce46331135451a56f29c68a491ce6ffccbbe0ed94d"
+  version "1.111.0"
+  sha256 "5ab9a2c493870b62685b9ed05474bd0ea0ca2e28cd50a86ff13ce68fd9b87888"
 
   url "https://desktop-release.canva.com/Canva-#{version}-universal.dmg"
   name "Canva"
