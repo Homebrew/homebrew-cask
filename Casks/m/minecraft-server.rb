@@ -1,6 +1,6 @@
 cask "minecraft-server" do
-  version "1.21.5,e6ec2f64e6080b9b5d9b471b291c33cc7f509733"
-  sha256 "ae7681dadce21b6b4017d28e7eb567d86b6c100a6969994f540b9e54f812dc29"
+  version "1.21.6,6e64dcabba3c01a7271b4fa6bd898483b794c59b"
+  sha256 "08abf384c48afb9e822144ad8a99166482857994389269e26c6a04c6c91d9171"
 
   url "https://launcher.mojang.com/v#{version.major}/objects/#{version.csv.second}/server.jar",
       verified: "launcher.mojang.com/"
@@ -8,11 +8,38 @@ cask "minecraft-server" do
   desc "Run a Minecraft multiplayer server"
   homepage "https://www.minecraft.net/en-us/"
 
+  # The server download page (https://www.minecraft.net/en-us/download/server)
+  # HTML does not contain version information or a download link, as they are
+  # fetched using separate JavaScript requests.
   livecheck do
-    url "https://www.minecraft.net/en-us/download/server"
-    regex(%r{href=.*?/objects/(\h+)/server\.jar[^>]*>minecraft[_-]server[._-]v?(\d+(?:\.\d+)*)\.jar}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+    url "https://net-secondary.web.minecraft-services.net/api/v1.0/download/latest"
+    regex(%r{/objects/(\h+)/server\.jar}i)
+    strategy :json do |json, regex|
+      latest_version = json["result"]
+      next unless latest_version
+
+      # Only fetch the download links JSON if the upstream version is newer than
+      # the current cask version
+      next version if latest_version == version.csv.first
+
+      links_content = Homebrew::Livecheck::Strategy.page_content(
+        "https://net-secondary.web.minecraft-services.net/api/v1.0/download/links",
+      )[:content]
+      next latest_version if links_content.blank?
+
+      links_json = Homebrew::Livecheck::Strategy::Json.parse_json(links_content)
+      link_hash = nil
+      links_json.dig("result", "links")&.each do |link|
+        next if link["downloadType"] != "serverJar"
+
+        match = link["downloadUrl"]&.match(regex)
+        next if match.blank?
+
+        link_hash = match[1]
+        break
+      end
+
+      link_hash ? "#{latest_version},#{link_hash}" : latest_version
     end
   end
 
