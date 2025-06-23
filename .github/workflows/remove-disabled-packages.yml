@@ -29,7 +29,7 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@main
         with:
           core: false
           cask: true
@@ -37,12 +37,12 @@ jobs:
 
       - name: Configure Git user
         id: git-user-config
-        uses: Homebrew/actions/git-user-config@master
+        uses: Homebrew/actions/git-user-config@main
         with:
           username: BrewTestBot
 
       - name: Set up commit signing
-        uses: Homebrew/actions/setup-commit-signing@master
+        uses: Homebrew/actions/setup-commit-signing@main
         with:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
@@ -52,14 +52,14 @@ jobs:
 
       - name: Remove disabled packages
         id: remove_disabled
-        uses: Homebrew/actions/remove-disabled-packages@master
+        uses: Homebrew/actions/remove-disabled-packages@main
         env:
           HOMEBREW_EVAL_ALL: 1
           HOMEBREW_NO_INSTALL_FROM_API: 1
 
       - name: Push commits
         if: fromJson(steps.remove_disabled.outputs.packages-removed)
-        uses: Homebrew/actions/git-try-push@master
+        uses: Homebrew/actions/git-try-push@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
