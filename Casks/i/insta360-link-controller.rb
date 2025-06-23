@@ -1,10 +1,10 @@
-cask "insta360-link" do
+cask "insta360-link-controller" do
   version "2.0.4,build23,55054d6cc0e511fe07c9cee905827809"
   sha256 "f7eac64f16fe4a5a65a5b454fd61cacc8675465e8824b53e17dbf02159c93ae7"
 
   url "https://file.insta360.com/static/#{version.csv.third}/Insta360LinkController_#{version.csv.first}(#{version.csv.second}).pkg"
   name "Insta360 Link Controller"
-  desc "Controller for Insta360 Link, Link 2, and Link 2C wecams"
+  desc "Controller for Insta360 webcams"
   homepage "https://www.insta360.com/"
 
   livecheck do
@@ -12,7 +12,7 @@ cask "insta360-link" do
     regex(%r{/(\h+)/Insta360LinkController_\d+\.\d+\.\d+\((build\d+)\)\.pkg}i)
 
     strategy :json do |json, regex|
-      # Find the Insta360 Studio app
+      # Find the Insta360 Link Controller app
       app = json.dig("data", "apps")&.find { |item| item["app_id"] == 100 }
       next if app.blank?
 
