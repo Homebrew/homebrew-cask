@@ -4,9 +4,13 @@ cask "clibor" do
 
   language "en", default: true do
     url "https://chigusa-web.com/clibor-for-mac-en/dl/clibor-for-mac/"
+
+    "en-US"
   end
   language "ja" do
     url "https://chigusa-web.com/clibor-for-mac/dl/clibor-for-mac/"
+
+    "ja-JP-mac"
   end
 
   name "Clibor for Mac"

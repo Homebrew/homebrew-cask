@@ -6,11 +6,15 @@ cask "wondershare-edrawmax" do
     url "https://cc-download.edrawsoft.cn/cbs_down/edraw-max_cn_full5381.zip"
     homepage "https://www.edrawsoft.cn/"
     app "亿图图示.app"
+
+    "zh-CN"
   end
   language "en", default: true do
     url "https://download.edrawsoft.com/cbs_down/edraw-max_full5380.zip"
     homepage "https://www.edrawsoft.com/"
     app "Wondershare EdrawMax.app"
+
+    "en-US"
   end
 
   name "EdrawMax"
