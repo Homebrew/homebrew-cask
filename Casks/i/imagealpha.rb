@@ -10,6 +10,7 @@ cask "imagealpha" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-06-22", because: :discontinued
+  disable! date: "2025-06-23", because: :discontinued
 
   app "ImageAlpha.app"
 end
