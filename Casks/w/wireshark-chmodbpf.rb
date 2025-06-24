@@ -11,10 +11,10 @@ cask "wireshark-chmodbpf" do
   homepage "https://www.wireshark.org/"
 
   livecheck do
-    cask "wireshark"
+    cask "wireshark-app"
   end
 
-  conflicts_with cask: "wireshark"
+  conflicts_with cask: "wireshark-app"
   depends_on macos: ">= :sierra"
 
   pkg "Install ChmodBPF.pkg"
