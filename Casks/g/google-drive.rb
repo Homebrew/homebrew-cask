@@ -1,5 +1,5 @@
 cask "google-drive" do
-  version "110.0.1"
+  version "110.0.2"
   sha256 :no_check
 
   # "5-percent" is included in the url to ensure that `brew upgrade` does not update to an older version as the
@@ -20,6 +20,18 @@ cask "google-drive" do
   depends_on macos: ">= :el_capitan"
 
   pkg "GoogleDrive.pkg"
+
+  # Remove the GSuite shortcuts
+  postflight do
+    system_command "/bin/rm",
+                   args: [
+                     "-rf",
+                     "/Applications/Google Docs.app",
+                     "/Applications/Google Sheets.app",
+                     "/Applications/Google Slides.app",
+                   ],
+                   sudo: true
+  end
 
   # Some launchctl and pkgutil items are shared with other Google apps, they should only be removed in the zap stanza
   # See: https://github.com/Homebrew/homebrew-cask/pull/92704#issuecomment-727163169
