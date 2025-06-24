@@ -58,7 +58,7 @@ jobs:
 
       - name: Push target branch
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-        run: git push origin "${TARGET_SHA}:refs/heads/${TARGET_BRANCH}" --force-with-lease
+        run: git push origin "${TARGET_SHA}:refs/heads/${TARGET_BRANCH}" --force
         env:
           TARGET_SHA: ${{ steps.sha.outputs.target }}
           TARGET_BRANCH: ${{ steps.branches.outputs.target }}
