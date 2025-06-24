@@ -2,8 +2,8 @@ cask "android-platform-tools" do
   os macos: "darwin", linux: "linux"
 
   version "36.0.0"
-  sha256 arm:          "b241878e6ec20650b041bf715ea05f7d5dc73bd24529464bd9cf68946e3132bd",
-         x86_64:       "b241878e6ec20650b041bf715ea05f7d5dc73bd24529464bd9cf68946e3132bd",
+  sha256 arm:          "d3e9fa1df3345cf728586908426615a60863d2632f73f1ce14f0f1349ef000fd",
+         x86_64:       "d3e9fa1df3345cf728586908426615a60863d2632f73f1ce14f0f1349ef000fd",
          x86_64_linux: "0ead642c943ffe79701fccca8f5f1c69c4ce4f43df2eefee553f6ccb27cbfbe8",
          arm64_linux:  "0ead642c943ffe79701fccca8f5f1c69c4ce4f43df2eefee553f6ccb27cbfbe8"
 
