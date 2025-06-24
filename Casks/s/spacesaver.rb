@@ -13,7 +13,7 @@ cask "spacesaver" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: ">= :monterey"
 
   app "SpaceSaver.app"
 
