@@ -1,9 +1,9 @@
 cask "anaconda" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2024.10-1"
-  sha256 arm:   "f64ed797ce23ae1d07ead949bfb6ff630b9fa8269ca8aef8ea2efa82172ece47",
-         intel: "ad3eea1cc969e9dfd4d571fc266aae06ec119f651d7cb19c0dc187b73e2bfab1"
+  version "2025.06-0"
+  sha256 arm:   "195f234204e2f18803cea38bbebefcaac5a3d8d95e2e4ee106d1b87b23b9fc4a",
+         intel: "8625a155ff1d2848afa360e70357e14c25f0ac7ac21e4e4bf15015bc58b08d06"
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-#{arch}.sh"
   name "Anaconda Distribution"
@@ -14,8 +14,6 @@ cask "anaconda" do
     url "https://repo.anaconda.com/archive/"
     regex(/Anaconda3-(\d+(?:\.\d+)+[._-]*\d+)-MacOSX-#{arch}\.sh/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   container type: :naked
