@@ -14,7 +14,7 @@ cask "kdeconnect" do
     skip "No version information available"
   end
 
-  app "kdeconnect-indicator.app"
+  app "KDE Connect.app"
 
   zap trash: [
     "~/Library/Application Support/kdenconnect.sms",
