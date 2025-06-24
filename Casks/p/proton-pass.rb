@@ -1,6 +1,6 @@
 cask "proton-pass" do
-  version "1.31.5"
-  sha256 "f952fd307a7f67efd2a1588ae8fad53ae859464dfde885f6d0c4cc00f056034b"
+  version "1.32.0"
+  sha256 "b3ca8d82007681fe66a6679132d5f9d7a9e91a10184857cd1257b2b9ba380254"
 
   url "https://proton.me/download/PassDesktop/darwin/universal/ProtonPass_#{version}.dmg"
   name "Proton Pass"
