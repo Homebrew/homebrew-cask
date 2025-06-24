@@ -1,6 +1,6 @@
 cask "gifox" do
-  version "2.7.0+0,020700.00"
-  sha256 "7991f3718e482a72bb6f9c03f281e2df3ea9203c80eb5eea409e71a9490afebb"
+  version "2.7.2+0,020702.00"
+  sha256 "468a344f5585941914d1a048cab96b02b6caf9846716f0c0b825744357a6df8b"
 
   url "https://d1fqctmfkpkkcg.cloudfront.net/gifox/#{version.csv.second}.dmg",
       verified: "d1fqctmfkpkkcg.cloudfront.net/gifox/"
@@ -12,8 +12,6 @@ cask "gifox" do
     url "https://d1fqctmfkpkkcg.cloudfront.net/gifox/appcast.xml"
     strategy :sparkle
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
