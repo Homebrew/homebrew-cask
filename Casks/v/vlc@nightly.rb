@@ -3,8 +3,8 @@ cask "vlc@nightly" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "intel64"
 
   on_arm do
-    version "4.0.0,20250623-0413,1fc476ad"
-    sha256 "637fa8e86a8a3d768102e93302ac33e07c06874e8f7f0087935e2f1df090ffc2"
+    version "4.0.0,20250624-0415,f6db0ac6"
+    sha256 "dd78cbeae97c673ec24040ba3b52f04cd0315a2f5f5510e90b50f0f5e5e89e49"
   end
   on_intel do
     version "4.0.0,20250623-0411,1fc476ad"
