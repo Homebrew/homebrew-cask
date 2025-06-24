@@ -1,6 +1,6 @@
 cask "coconutbattery" do
-  version "4.0.3,163"
-  sha256 "68a92c7b9797a78af9e7efdcfab242835da0855100b1526cfd8fd2ec40e33cd0"
+  version "4.0.4,166"
+  sha256 "089c13e7e149a0a79ac6de3924f94f6a18fe827f4e0cdba70142451898b02d5f"
 
   url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.csv.first.no_dots}_#{version.csv.second}.zip"
   name "coconutBattery"
@@ -8,7 +8,7 @@ cask "coconutbattery" do
   homepage "https://www.coconut-flavour.com/coconutbattery/"
 
   livecheck do
-    url "https://coconut-flavour.com/updates/coconutBattery.xml"
+    url "https://coconut-flavour.com/updates/coconutBattery_#{version.csv.first.major}.xml"
     strategy :sparkle
   end
 
