@@ -8,11 +8,6 @@ cask "spacesaver" do
   desc "Application designed to help you manage and optimize your workspace"
   homepage "https://spacesaver.congdev.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :monterey"
 
   app "SpaceSaver.app"
