@@ -19,7 +19,7 @@ cask "kdeconnect" do
   app "KDE Connect.app"
 
   zap trash: [
-    "~/Library/Application Support/kdenconnect.sms",
+    "~/Library/Application Support/kdeconnect.sms",
     "~/Library/Caches/kdeconnect-indicator",
     "~/Library/Caches/kdeconnect.daemon",
     "~/Library/Caches/kdeconnect.sms",
