@@ -1,6 +1,6 @@
 cask "hdhomerun" do
-  version "20250506"
-  sha256 "f9e014570206c3b9250b7fd09dfca74d0228b5605e1c7a7f6a5e51992bb9f976"
+  version "20250623"
+  sha256 "eb03a672da71d99e3541d1b9a4ab5f87559af38135eef9c0f1630f8568cacd9c"
 
   url "https://download.silicondust.com/hdhomerun/hdhomerun_mac_#{version}.dmg"
   name "HDHomeRun"
