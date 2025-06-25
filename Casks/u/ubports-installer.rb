@@ -1,9 +1,9 @@
 cask "ubports-installer" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.11.0"
-  sha256 arm:   "6823f1d3725fab683ba398f862d01ce4b4f3d01faf2797e78e325c0671ec3c6d",
-         intel: "4c07e1840a2e0a6854095fc5326d33538374bf63626a95c177e3aba66e4fd3cb"
+  version "0.11.1"
+  sha256 arm:   "18f9bdfe73a56f37cd90a43c0978ab98840ae0f2e5f27d8bbaa396d037fc63fe",
+         intel: "2cce8bc79dca041b2d6f404c9ed1e257222f1cf9249c612e78eec7e903929b8c"
 
   url "https://github.com/ubports/ubports-installer/releases/download/#{version}/ubports-installer_#{version}_mac_#{arch}.dmg",
       verified: "github.com/ubports/ubports-installer/"
