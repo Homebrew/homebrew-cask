@@ -1,5 +1,5 @@
 cask "google-chrome@beta" do
-  version "138.0.7204.35"
+  version "139.0.7258.5"
   sha256 :no_check
 
   url "https://dl.google.com/chrome/mac/universal/beta/googlechromebeta.dmg"
