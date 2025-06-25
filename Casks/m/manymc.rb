@@ -10,7 +10,7 @@ cask "manymc" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-01-07", because: :discontinued
-  disable! date: "2025-01-07", because: :discontinued
+  disable! date: "2025-01-07", because: :discontinued, replacement_cask: "prismlauncher"
 
   depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
