@@ -10,6 +10,7 @@ cask "sia-ui" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-06-26", because: :discontinued
+  disable! date: "2025-06-26", because: :discontinued
 
   app "Sia-UI.app"
 end
