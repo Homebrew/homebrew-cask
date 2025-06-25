@@ -10,8 +10,8 @@ cask "kdeconnect" do
   homepage "https://kdeconnect.kde.org/"
 
   livecheck do
-    url "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/master/macos-arm64/"
-    regex(/href=.*?kdeconnect-kde-master-(\d+)-macos-clang-\w+\.dmg/i)
+    url "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/master/macos-#{arch}/"
+    regex(/href=.*?kdeconnect[._-]kde[._-]master[._-]v?(\d+(?:\.\d+)*)[._-]macos[._-]clang[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: :monterey
