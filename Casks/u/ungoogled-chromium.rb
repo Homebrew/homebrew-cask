@@ -1,4 +1,4 @@
-cask "eloston-chromium" do
+cask "ungoogled-chromium" do
   arch arm: "arm64", intel: "x86_64"
 
   version "137.0.7151.119-1.1"

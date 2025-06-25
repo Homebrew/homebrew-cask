@@ -39,6 +39,7 @@
   "doxygen": "doxygen-app",
   "dymo-label": "dymo-connect",
   "easy-move-plus-resize": "easy-move+resize",
+  "eloston-chromium": "ungoogled-chromium",
   "emacs": "emacs-app",
   "emacs@nightly": "emacs-app@nightly",
   "emacs@pretest": "emacs-app@pretest",
