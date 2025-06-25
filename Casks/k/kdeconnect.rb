@@ -1,17 +1,17 @@
 cask "kdeconnect" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "25.04,4996"
-  sha256 arm:   "f75de03ef019f31849695ce787920b64a7e69c64c26725c7b827051a2c2a0476",
-         intel: "a05bc5eb2fea06199eac3e3b7a1e283407b4c26fa463bcc4fb120bf24a2f274e"
+  version "5140"
+  sha256 :no_check
 
-  url "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/release-#{version.major_minor}/macos-#{arch}/kdeconnect-kde-release_#{version.major_minor}-#{version.csv.second}-macos-clang-#{arch}.dmg"
+  url "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/master/macos-#{arch}/kdeconnect-kde-master-#{version}-macos-clang-#{arch}.dmg"
   name "KDE Connect"
   desc "Enabling communication between all your devices"
   homepage "https://kdeconnect.kde.org/"
 
   livecheck do
-    skip "No version information available"
+    url "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/master/macos-arm64/"
+    regex(/href=.*?kdeconnect-kde-master-(\d+)-macos-clang-\w+\.dmg/i)
   end
 
   app "KDE Connect.app"
