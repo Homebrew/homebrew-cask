@@ -1,6 +1,6 @@
 cask "windowkeys" do
-  version "3.0"
-  sha256 "62d69cf688a98b30f9d342102bf7b618c79d50400d1150ec537d6db115378713"
+  version "3.0.1"
+  sha256 "38600e9ffc6488ec08a703bfeaa0f760efb4a26d6d1152e87e5f4f01355af8eb"
 
   url "https://www.apptorium.com/public/products/windowkeys/releases/WindowKeys-#{version}.zip"
   name "WindowKeys"
@@ -11,8 +11,6 @@ cask "windowkeys" do
     url "https://www.apptorium.com/updates/windowkeys"
     strategy :sparkle, &:short_version
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sequoia"
 
