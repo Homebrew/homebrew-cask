@@ -459,7 +459,6 @@ elgato-camera-hub
 elgato-control-center
 elgato-stream-deck
 elgato-wave-link
-eloston-chromium
 elpass
 emacs-app@nightly
 embyserver
@@ -1710,6 +1709,7 @@ ultimaker-cura
 ultimate
 ultrastardeluxe
 understand
+ungoogled-chromium
 uninstallpkg
 unite
 unite-phone
