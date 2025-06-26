@@ -11,6 +11,7 @@ cask "skala-preview" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-06-25", because: :unmaintained
+  disable! date: "2025-06-25", because: :unmaintained
 
   app "Skala Preview.app"
 end
