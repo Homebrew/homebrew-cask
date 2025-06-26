@@ -7,7 +7,7 @@ body:
       label: Verification
       description: Please verify that you’ve followed these steps
       options:
-        - label: I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
+        - label: I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/HEAD/doc/faq/closing_issues_without_review.md).
           required: true
         - label: I have retried my command with `--force`.
           required: false

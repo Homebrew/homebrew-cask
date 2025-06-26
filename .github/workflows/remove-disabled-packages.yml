@@ -3,6 +3,7 @@ name: Remove disabled packages
 on:
   push:
     branches:
+      - main
       - master
     paths:
       - .github/workflows/remove-disabled-packages.yml
@@ -47,7 +48,7 @@ jobs:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
       - name: Checkout removal branch
-        run: git checkout -b "$REMOVAL_BRANCH" origin/master
+        run: git checkout -b "$REMOVAL_BRANCH" origin/HEAD
         working-directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
 
       - name: Remove disabled packages
@@ -80,7 +81,6 @@ jobs:
             workflow.
         run: |
           gh pr create \
-            --base master \
             --body "$PR_BODY" \
             --head "$REMOVAL_BRANCH" \
             --title 'Remove disabled packages'
