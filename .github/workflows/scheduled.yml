@@ -3,6 +3,7 @@ name: Scheduled online check
 on:
   push:
     branches:
+      - main
       - master
     paths:
       - .github/workflows/scheduled.yml

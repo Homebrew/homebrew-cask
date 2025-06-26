@@ -43,7 +43,7 @@ def cask_url(tap_dir, cask_path)
   tap_base = tap_dir.dirname.basename.to_path
   cask_base = cask_path.relative_path_from(tap_dir).to_path
 
-  "https://github.com/Homebrew/#{tap_base}/blob/master/Casks/#{cask_base}"
+  "https://github.com/Homebrew/#{tap_base}/blob/HEAD/Casks/#{cask_base}"
 end
 
 def find_count(cask_name, data)
