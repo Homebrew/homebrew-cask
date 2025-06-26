@@ -12,7 +12,6 @@ cask "do-not-disturb" do
 
   deprecate! date: "2024-11-16", because: :unmaintained
 
-  depends_on arch: :x86_64
   depends_on macos: ">= :sierra"
 
   installer script: {
@@ -28,4 +27,8 @@ cask "do-not-disturb" do
   }
 
   # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end
