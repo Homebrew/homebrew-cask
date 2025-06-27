@@ -16,8 +16,8 @@ cask "rio" do
   depends_on macos: ">= :catalina"
 
   app "rio.app"
-  binary "rio.app/Contents/MacOS/rio"
-  binary "rio.app/Contents/Resources/72/rio",
+  binary "#{appdir}/rio.app/Contents/MacOS/rio"
+  binary "#{appdir}/rio.app/Contents/Resources/72/rio",
          target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/72/rio"
 
   zap trash: "~/Library/Saved Application State/com.raphaelamorim.rio.savedState"
