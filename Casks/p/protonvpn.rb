@@ -11,7 +11,7 @@ cask "protonvpn" do
   # The Sparkle feed can contain items on the "beta" channel, so we restrict
   # matching to the default channel.
   livecheck do
-    url "https://protonvpn.com/download/macos-update#{version.major}.xml"
+    url "https://protonvpn.com/download/macos/updates/v4/sparkle.xml"
     strategy :sparkle do |items|
       items.find { |item| item.channel.nil? }&.short_version
     end
