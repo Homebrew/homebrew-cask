@@ -11,6 +11,7 @@ cask "jtool2" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-06-27", because: :discontinued
+  disable! date: "2025-06-27", because: :discontinued
 
   binary "jtool2"
 end
