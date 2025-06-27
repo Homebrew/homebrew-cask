@@ -1,6 +1,6 @@
 cask "revisionist" do
-  version "1.9,2023.06"
-  sha256 "b63dbefe2587abe471ec08361d2f828040e2e654027982cfa3b42f632fc89b97"
+  version "1.10,2025.06"
+  sha256 "e01335c4fb1fa61b03f8d4714e758d206aa439ff260ae2cd1c0c84e307b63c0f"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/#{token}#{version.csv.first.no_dots}.zip"
   name "Revisionist"
@@ -22,8 +22,6 @@ cask "revisionist" do
       "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 
