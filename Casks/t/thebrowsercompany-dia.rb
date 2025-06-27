@@ -1,6 +1,6 @@
 cask "thebrowsercompany-dia" do
-  version "0.34.0,64517"
-  sha256 "4ccddc76fdb19a24a9a07ada69487e7e99fb805128c46bf0f20bb4afbae57932"
+  version "0.35.2,64884"
+  sha256 "61fbdac35d561bca30b5ec92f0cf34ab040ae0af9ca5664c650c998b5012d9f5"
 
   url "https://releases.diabrowser.com/release/Dia-#{version.tr(",", "-")}.zip"
   name "Dia"
@@ -11,8 +11,6 @@ cask "thebrowsercompany-dia" do
     url "https://releases.diabrowser.com/BoostBrowser-updates.xml"
     strategy :sparkle
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on arch: :arm64
