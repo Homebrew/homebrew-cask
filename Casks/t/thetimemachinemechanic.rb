@@ -1,6 +1,6 @@
 cask "thetimemachinemechanic" do
-  version "2.02,2024.01"
-  sha256 "0efd7eb447224cf84af514ce677de5139b2f71ac78f642f1a6cfca4ac89e8ce9"
+  version "2.03,2025.06"
+  sha256 "d1eafe2bb10465822d24b15ed42a5c618364cb2a36816326a63b0babceaa6247"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/t2m2#{version.csv.first.no_dots}.zip"
   name "The Time Machine Mechanic"
