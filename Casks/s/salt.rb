@@ -1,9 +1,9 @@
 cask "salt" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3007.4"
-  sha256 arm:   "88e8d237e84dee0e05418e1f01e4125b44c408fd9ac49e90ff8d6928c3c53183",
-         intel: "7f625c72c994e576a4624616f98bb5e33b99b305de9ecadf29c6866a8627ce4a"
+  version "3007.5"
+  sha256 arm:   "f5b958a9eaabbd95f8ba37fe61775acf044f6ef32e9233435dbd87365e8920f5",
+         intel: "05ff574289981fb9388e054f70704c8d96668e1ac9704cd965bb9ae3069a7ffb"
 
   url "https://packages.broadcom.com/artifactory/saltproject-generic/macos/#{version}/salt-#{version}-py3-#{arch}.pkg",
       verified: "packages.broadcom.com/artifactory/saltproject-generic/"
@@ -15,8 +15,6 @@ cask "salt" do
     url "https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/macos.html"
     regex(/salt[._-]v?(\d+(?:\.\d+)+)-py3-#{arch}\.pkg/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   pkg "salt-#{version}-py3-#{arch}.pkg"
 
