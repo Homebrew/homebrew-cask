@@ -1,9 +1,9 @@
 cask "gimp@dev" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.0.0-RC3"
-  sha256 arm:   "eb55392e09c4ce6c46eb43f401b59997670b4e99c859b4a73c56db15b3ba7fad",
-         intel: "bfa713b6f1aef0fea6243f47bede2552b58c9b0417ace3597f1e3c4763b39aab"
+  version "3.1.2"
+  sha256 arm:   "9bea79707c158a6f831dd54e954e463317b5a998d5979410a3fb0276536b0187",
+         intel: "1ad39cc39f5cb31dbec63f181126c464aca7560a1807c569f31af6511176d020"
 
   url "https://download.gimp.org/gimp/v#{version.major_minor}/macos/gimp-#{version.csv.first}-#{arch}#{"-#{version.csv.second}" if version.csv.second}.dmg"
   name "GIMP development version"
@@ -23,8 +23,6 @@ cask "gimp@dev" do
       end&.flatten
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   conflicts_with cask: "gimp"
   depends_on macos: ">= :big_sur"
