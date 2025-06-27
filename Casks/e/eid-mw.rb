@@ -8,7 +8,15 @@ cask "eid-mw" do
   homepage "https://eid.belgium.be/"
 
   livecheck do
-    skip "No version info available"
+    url "https://eid.belgium.be/en"
+    regex(/href=.*?eID-Quickinstaller-[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match do |page|
+      download_id = page[%r{element_os-mac-os.*/en/download/(\d+)/license}imx, 1]
+      next if download_id.blank?
+
+      version_page = Homebrew::Livecheck::Strategy.page_content("https://eid.belgium.be/en/download/#{download_id}/license")
+      version_page[:content]&.scan(regex)&.map { |match| match[0] }
+    end
   end
 
   depends_on macos: ">= :sierra"
