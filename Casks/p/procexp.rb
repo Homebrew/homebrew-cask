@@ -13,7 +13,7 @@ cask "procexp" do
 
   no_autobump! because: :requires_manual_review
 
-  binary "procexp", target: "procexp"
+  binary "procexp"
 
   # No zap stanza required
 end
