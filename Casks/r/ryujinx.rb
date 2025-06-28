@@ -5,13 +5,9 @@ cask "ryujinx" do
   url "https://git.ryujinx.app/api/v4/projects/1/packages/generic/Ryubing/#{version}/ryujinx-#{version}-macos_universal.app.tar.gz"
   name "Ryujinx"
   desc "Nintendo Switch emulator"
-  homepage "https://ryujinx.org/"
-
-  # Extrai o .app do tar.gz e instala na /Applications
+  homepage "https://ryujinx.app/"
   app "Ryujinx.app"
-
-  # Dependências opcionais, se precisar
-  # depends_on macos: ">= :mojave"
-
-  # Você pode definir um uninstall zap, se quiser remover arquivos extras
+  
+  depends_on macos: ">= :big_sur"
+  depends_on arch: :arm64
 end
