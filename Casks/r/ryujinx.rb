@@ -6,8 +6,29 @@ cask "ryujinx" do
   name "Ryujinx"
   desc "Nintendo Switch emulator"
   homepage "https://ryujinx.app/"
+
+  livecheck do
+    url "https://git.ryujinx.app/api/v4/projects/ryubing%2Fryujinx/repository/tags"
+    regex(/^(\d+(?:\.\d+)+)$/i)
+    strategy :json do |json|
+      json.map { |t| t["name"] }
+    end
+  end
+
+  no_autobump! because: :requires_manual_review
+
   app "Ryujinx.app"
-  
+
   depends_on macos: ">= :big_sur"
   depends_on arch: :arm64
+
+  uninstall quit: "org.ryujinx.Ryujinx"
+
+  zap trash: [
+    "~/Library/Application Support/Ryujinx",
+    "~/Library/Preferences/org.ryujinx.Ryujinx.plist",
+    "~/Library/Preferences/org.ryujinx.Ryujinx.helper.plist",
+    "~/Library/Saved Application State/org.ryujinx.Ryujinx.savedState",
+    "~/Library/Logs/Ryujinx/"
+  ]
 end
