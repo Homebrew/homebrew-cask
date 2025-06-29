@@ -59,8 +59,8 @@ cask "karabiner-elements" do
       end
     end
     on_ventura :or_newer do
-      version "15.3.0"
-      sha256 "4b37f69810bc738240dcacb840f4ef4b8189d0f5c56cdd18ed1a6e9bd9510011"
+      version "15.4.0"
+      sha256 "54e222e533cea7bd68e7dbd2c4dced89982c78003d0ea77c6c2ffc521a45cca1"
 
       livecheck do
         url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
@@ -104,8 +104,6 @@ cask "karabiner-elements" do
   name "Karabiner Elements"
   desc "Keyboard customiser"
   homepage "https://karabiner-elements.pqrs.org/"
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

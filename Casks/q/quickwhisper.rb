@@ -1,6 +1,6 @@
 cask "quickwhisper" do
-  version "1.10.78"
-  sha256 "36ad5057703e4bc0282b355a387b53097c8ded9157a4883bd786724a2c3a6b2f"
+  version "1.11.103"
+  sha256 "ba6c18e269739f4494a41216edc145d18899b6e8f94c2f387e36d5dae7637491"
 
   url "https://quickwhisperapp.s3.us-west-002.backblazeb2.com/QuickWhisper_#{version}.zip",
       verified: "quickwhisperapp.s3.us-west-002.backblazeb2.com/"
