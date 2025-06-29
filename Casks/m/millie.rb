@@ -1,6 +1,6 @@
 cask "millie" do
-  version "2.4.1"
-  sha256 "8bec024cc26fe2709444e9b156ea6778e5b229fb3058c4cecbdf2caf6f5db3b0"
+  version "2.5.3"
+  sha256 "0ed59cf448a82d9e566548cc2ade4530e436cd7064119b6839cb36b24ac797cd"
 
   url "https://install.millie.co.kr/flutter/#{version}/millie.dmg"
   name "Millie"
