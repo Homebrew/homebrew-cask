@@ -1,6 +1,6 @@
 cask "bluestacks" do
-  version "5.21.720.7530,bd0101c4e81149f3950cc3dc1efd233b"
-  sha256 "83f2e02014cefc820537a52b66f3bc3576659bed065f0e56d4155d602f6f6d9d"
+  version "5.21.725.7518,d0b44477d68443e6a604c8e55ac1ee20"
+  sha256 "84d6504742508892aeb002c48cefb1061b47d33b756c1476570800c3d8b6c487"
 
   url "https://ak-build.bluestacks.com/public/app-player/mac/nxt_mac2/#{version.csv.first}/#{version.csv.second}/BlueStacksInstaller_#{version.csv.first}.pkg"
   name "BlueStacks"
