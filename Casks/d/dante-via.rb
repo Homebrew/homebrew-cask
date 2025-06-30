@@ -1,6 +1,6 @@
 cask "dante-via" do
-  version "1.3.1.3"
-  sha256 "9fee1a9241a9a3a502e41b0f2f89a3046ed009a3831a63eb91efa1144d2a434c"
+  version "1.4.0.5"
+  sha256 "80f32cdd0dfa4bff6cf2d560ba4ed529c357173d2f190b804e5b618db4e39e09"
 
   url "https://audinate-software-updates.sgp1.cdn.digitaloceanspaces.com/DanteVia/#{version.major}/#{version.major_minor}/DanteVia-#{version}_macos.dmg",
       verified: "audinate-software-updates.sgp1.cdn.digitaloceanspaces.com/DanteVia/"
@@ -14,6 +14,12 @@ cask "dante-via" do
   end
 
   pkg "Dante Via.pkg"
+
+  # The installer looks for a file at /tmp/.DanteVia_silent_install
+  # to determine if it should run in silent mode.
+  preflight do
+    FileUtils.touch "/tmp/.DanteVia_silent_install"
+  end
 
   uninstall launchctl: [
               "com.audinate.dante.ConMon",
