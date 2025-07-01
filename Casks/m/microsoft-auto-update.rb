@@ -54,6 +54,7 @@ cask "microsoft-auto-update" do
             ]
 
   zap trash: [
+        "~/Library/Application Scripts/UBF8T346G9.com.microsoft.oneauth",
         "~/Library/Application Support/Microsoft AutoUpdate",
         "~/Library/Caches/com.microsoft.autoupdate.fba",
         "~/Library/Caches/com.microsoft.autoupdate2",
@@ -61,10 +62,13 @@ cask "microsoft-auto-update" do
         "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
         "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
         "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
+        "~/Library/Group Containers/UBF8T346G9.com.microsoft.oneauth",
+        "~/Library/Group Containers/UBF8T346G9.ms",
         "~/Library/HTTPStorages/com.microsoft.autoupdate.fba",
         "~/Library/HTTPStorages/com.microsoft.autoupdate2",
         "~/Library/Preferences/com.microsoft.autoupdate.fba.plist",
         "~/Library/Preferences/com.microsoft.autoupdate2.plist",
+        "~/Library/Preferences/com.microsoft.shared.plist",
         "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",
       ],
       rmdir: [
