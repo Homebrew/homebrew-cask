@@ -1,6 +1,6 @@
 cask "vcam" do
-  version "2.0.257"
-  sha256 "b9b36104ccb24b51adbf3d348e29232590bead31921438f3b22d1af3483eb8fc"
+  version "2.0.258"
+  sha256 "9fb9d5ba02d54288c5292c1cd46b806f13165c635e1f31fc3cfb202887a41660"
 
   url "https://installers.vcam.ai/VCam_#{version}.pkg"
   name "VCam"
