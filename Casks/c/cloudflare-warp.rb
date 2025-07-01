@@ -24,10 +24,6 @@ cask "cloudflare-warp" do
               "com.cloudflare.1dot1dot1dot1.macos.warp.daemon",
             ],
             quit:      "com.cloudflare.1dot1dot1dot1.macos",
-            script:    {
-              executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
-              sudo:       true,
-            },
             pkgutil:   "com.cloudflare.1dot1dot1dot1.macos",
             delete:    [
               "/usr/local/bin/warp-cli",
