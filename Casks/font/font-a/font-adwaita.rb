@@ -1,12 +1,10 @@
 cask "font-adwaita" do
-  version "48.2"
-  sha256 "156f7e92f2f82e527fc73c309dbb237c0a4a5c3a95bc5ee94a5efb6947c553e0"
+  version "49.0"
+  sha256 "3157c620eb5b72b25ab156d194aa4eb223f9870d547fe83fdbdf06d3e7becb37"
 
   url "https://download.gnome.org/sources/adwaita-fonts/#{version.major}/adwaita-fonts-#{version}.tar.xz"
   name "Adwaita"
   homepage "https://gitlab.gnome.org/GNOME/adwaita-fonts"
-
-  no_autobump! because: :requires_manual_review
 
   font "adwaita-fonts-#{version}/mono/AdwaitaMono-Bold.ttf"
   font "adwaita-fonts-#{version}/mono/AdwaitaMono-BoldItalic.ttf"
