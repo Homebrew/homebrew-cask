@@ -8,20 +8,21 @@ cask "canon-eos-utility" do
   desc "Communication with Canon EOS cameras"
   homepage "https://app.ssw.imaging-saas.canon/app/en/eu.html"
 
-  # Upstream provides an in-app update mechanism. To use this for livecheck we must access
-  # the appcast feed that provides download links, and then use the links provided with
-  # the HeaderMatch strategy to find the latest full version.
+  # The upstream data for the in-app updater uses redirecting URLs, so we have
+  # to find and fetch the URL for macOS to be able to match the cask `version`
+  # parts from the file URL in the `location` header of the response.
   livecheck do
     url "https://gdlp01.c-wss.com/rmds/ic/autoupdate/common/tls_eu_updater_url.xml"
-    regex(%r{http.*?/(\d+)/(\d+)/\d+/EU[._-]Installset[._-]v?M?(\d+(?:\.\d+)+)\.dmg\.zip}i)
+    regex(%r{/(\d+)/(\d+)/\d+/EU[._-]Installset[._-]v?M?(\d+(?:\.\d+)+)\.dmg\.zip}i)
     strategy :xml do |xml, regex|
-      url = xml.elements["//Component[contains(@ID,'mac_14')]"]&.text&.strip
+      # NOTE: The macOS identifier will need to be manually updated when
+      # releases become available for newer macOS versions.
+      url = xml.elements["//Component[contains(@ID,'mac_15')]"]&.text&.strip
       next if url.blank?
 
-      headers = Homebrew::Livecheck::Strategy.page_headers(url)
-      next if headers.blank?
+      merged_headers = Homebrew::Livecheck::Strategy.page_headers(url).reduce(&:merge)
 
-      match = headers[0]["location"]&.match(regex)
+      match = merged_headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[3]},#{match[2]},#{match[1]}"
