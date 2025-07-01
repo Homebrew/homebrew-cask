@@ -1,14 +1,12 @@
 cask "deepstream" do
-  version "9.1.1"
-  sha256 "7d9730bb5e8f0d0315aec78149adab0337835cffe3d9469b4552ac239b67c536"
+  version "9.1.2"
+  sha256 "b4adbeb06855cc2aae8a182f96816d8fc8b367835f6affd9ced736d6ea3f5f3e"
 
   url "https://github.com/deepstreamIO/deepstream.io/releases/download/v#{version}/deepstream.io-mac-#{version}.pkg",
       verified: "github.com/deepstreamIO/deepstream.io/"
   name "deepstream"
   desc "Data-sync realtime server"
   homepage "https://deepstream.io/"
-
-  no_autobump! because: :requires_manual_review
 
   pkg "deepstream.io-mac-#{version}.pkg"
 
