@@ -11,7 +11,7 @@ cask "xppen-pentablet" do
     url "https://www.xp-pen.com/download/star-g640.html"
     regex(/XPPenMac[._-]v?(\d+(?:\.\d+)+)[._-](\d+)/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).max_by { |match| match[1] }&.then { |match| "#{match[0]},#{match[1]}" }
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
