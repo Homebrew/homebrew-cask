@@ -1,6 +1,6 @@
 cask "versatility" do
-  version "1.0,2024.03"
-  sha256 "fa92b1681fea7119f33ae5d67f6315a9675eba1e8e1e702ae669c70e4e13c167"
+  version "1.1,2025.06"
+  sha256 "b18a71ad83a9ff24e8accdc8b96dbf180fd3e658e8868a9c4ec46468d599f130"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/#{token}#{version.csv.first.no_dots}.zip"
   name "Versatility"
@@ -22,8 +22,6 @@ cask "versatility" do
       "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :big_sur"
 
