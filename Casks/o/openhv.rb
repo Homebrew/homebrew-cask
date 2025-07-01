@@ -1,6 +1,6 @@
 cask "openhv" do
-  version "20250413"
-  sha256 "dd8a68a2a76a1caf7678dbbfd24a182cd481fb9b3712759f71f4c769b564a05c"
+  version "20250628"
+  sha256 "74ab06b509e3a5cfc149d034b53d366ab631d2b5ed767ad3b8b25cb9215545c4"
 
   url "https://github.com/OpenHV/OpenHV/releases/download/#{version}/OpenHV-#{version}.dmg",
       verified: "github.com/OpenHV/OpenHV/"
@@ -13,8 +13,6 @@ cask "openhv" do
     regex(/v?(\d+(?:\.\d+)*)/i)
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "OpenHV.app"
 
