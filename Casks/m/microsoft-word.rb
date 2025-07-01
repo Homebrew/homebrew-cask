@@ -72,10 +72,12 @@ cask "microsoft-word" do
             ]
 
   zap trash: [
-    "~/Library/Application Scripts/com.microsoft.Word",
+    "~/Library/Application Scripts/com.microsoft.Word*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*",
     "~/Library/Application Support/CrashReporter/Microsoft Word_*.plist",
-    "~/Library/Containers/com.microsoft.Word",
+    "~/Library/Application Support/Microsoft",
+    "~/Library/Containers/com.microsoft.Word*",
+    "~/Library/Group Containers/UBF8T346G9.ms/Microsoft Word.MERP.params.txt",
     "~/Library/Preferences/com.microsoft.Word.plist",
     "~/Library/Saved Application State/com.microsoft.Word.savedState",
   ]
