@@ -1,6 +1,6 @@
 cask "packetsender" do
-  version "8.8.9"
-  sha256 "3a18d640b1ed985e3a0b1414f615b615780982cc600e91a81b6dbb577d18f567"
+  version "8.9.1"
+  sha256 "ffbdbbb7f335fb44788b351f3cf8344b42c0ad8b7dbe5349325fd61e2efa5de9"
 
   url "https://github.com/dannagle/PacketSender/releases/download/v#{version}/PacketSender_v#{version}.dmg",
       verified: "github.com/dannagle/PacketSender/"
@@ -14,8 +14,6 @@ cask "packetsender" do
       json["macversion"]&.tr("v", "")
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :sierra"
