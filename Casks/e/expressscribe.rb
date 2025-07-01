@@ -1,5 +1,5 @@
 cask "expressscribe" do
-  version "14.10"
+  version "14.12"
   sha256 :no_check
 
   url "https://www.nch.com.au/scribe/scribemaci.zip"
@@ -11,8 +11,6 @@ cask "expressscribe" do
     url "https://www.nch.com.au/scribe/versions.html"
     regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "ExpressScribe.app"
 
