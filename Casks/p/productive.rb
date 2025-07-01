@@ -1,9 +1,9 @@
 cask "productive" do
   arch arm: "-arm64"
 
-  version "1.13.0"
-  sha256 arm:   "428b737d972ac5ae651633aec99f2b44dc2ab924052e8d180beec97ede5f90f6",
-         intel: "845638bbfeb39d3fcd7eb0e85390b87b4e4704ee214fe4cf719f9dcc4ef7b475"
+  version "1.14.0"
+  sha256 arm:   "4652015b30ade1f08edc1cfdee95f9777e92bc8642da7245ef17d1680ad25c00",
+         intel: "5d1455410c76d3fac39bb26c5dd818907279061142f2fb59922a3d30456a2984"
 
   url "https://download.productive.io/desktop/electron/Productive-#{version}#{arch}.dmg"
   name "Productive"
@@ -14,8 +14,6 @@ cask "productive" do
     url "https://download.productive.io/desktop/electron/latest-mac.yml"
     strategy :electron_builder
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :catalina"
