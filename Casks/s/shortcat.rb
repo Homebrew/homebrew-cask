@@ -1,6 +1,6 @@
 cask "shortcat" do
-  version "0.12.0"
-  sha256 "944726bea5844e83eea1516c1f27857e343322ae0c8523503241bd416bdb1d00"
+  version "0.12.1"
+  sha256 "a54465e2ef79eac87edf654856325576ec933e8d5fc246063fe3075de99e58cf"
 
   url "https://files.shortcat.app/releases/v#{version}/Shortcat.zip"
   name "Sproutcube Shortcat"
@@ -11,8 +11,6 @@ cask "shortcat" do
     url "https://updates.shortcat.app/appcast.xml"
     strategy :sparkle, &:short_version
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :big_sur"
