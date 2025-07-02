@@ -26,7 +26,7 @@ cask "betterzip" do
     "~/Library/Application Scripts/com.macitbetter.betterzip.Compress-with-BetterZip",
     "~/Library/Application Scripts/com.macitbetter.betterzip.findersyncextension",
     "~/Library/Application Scripts/com.macitbetter.betterzip.Quick-Look-Extension",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macitbetter.betterzip.sfl3",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macitbetter.betterzip.sfl*",
     "~/Library/Containers/com.macitbetter.betterzip.Compress-with-BetterZip",
     "~/Library/Containers/com.macitbetter.betterzip.findersyncextension",
     "~/Library/Containers/com.macitbetter.betterzip.Quick-Look-Extension",
