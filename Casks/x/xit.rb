@@ -10,6 +10,10 @@ cask "xit" do
     end
 
     app "Xit.app"
+
+    caveats do
+      requires_rosetta
+    end
   end
   on_monterey :or_newer do
     arch arm: "-arm"
@@ -34,7 +38,7 @@ cask "xit" do
 
   no_autobump! because: :requires_manual_review
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uncommonplace.xit.sfl*",
