@@ -28,6 +28,8 @@ cask "phd2" do
 
   no_autobump! because: :requires_manual_review
 
+  depends_on macos: ">= :mojave"
+
   app "PHD2.app"
 
   zap trash: [
@@ -35,4 +37,8 @@ cask "phd2" do
     "~/Library/Preferences/org.openphdguiding.phd2.plist",
     "~/Library/Saved Application State/org.openphdguiding.phd2.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
