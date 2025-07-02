@@ -10,6 +10,8 @@ cask "contour" do
   desc "Terminal emulator"
   homepage "https://github.com/contour-terminal/contour/"
 
+  depends_on macos: ">= :sonoma"
+
   app "contour.app"
   binary "#{appdir}/contour.app/Contents/MacOS/contour"
   binary "#{appdir}/contour.app/Contents/Resources/terminfo/63/contour",
@@ -21,5 +23,8 @@ cask "contour" do
   zsh_completion "#{appdir}/contour.app/Contents/Resources/shell-integration/shell-integration.zsh",
                  target: "_contour"
 
-  zap trash: "~/.config/contour"
+  zap trash: [
+    "~/.config/contour",
+    "~/Library/Caches/contour",
+  ]
 end
