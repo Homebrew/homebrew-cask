@@ -1,6 +1,6 @@
 cask "finicky" do
-  version "4.1.3"
-  sha256 "17501b900f45544a55ab8abab62a9e6757c931a59aa935a61ae18250d8d5d520"
+  version "4.1.4"
+  sha256 "2b20d949faf47db259a2b4a94b4986e2010e479ec2aba096c2ad6faa259a5e8d"
 
   url "https://github.com/johnste/finicky/releases/download/v#{version}/Finicky.dmg"
   name "Finicky"
@@ -11,8 +11,6 @@ cask "finicky" do
     url :url
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :monterey"
 
