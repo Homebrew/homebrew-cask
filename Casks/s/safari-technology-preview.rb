@@ -1,8 +1,8 @@
 cask "safari-technology-preview" do
   # when adjusting the on_{os} scoping, also update the livecheck regex
   on_sequoia :or_older do
-    version "221,082-55173-20250611-f7ac187a-3730-4fc1-b55d-a7bad97afecb"
-    sha256 "3c0ab9a873bf4812df1236e2160763ddf5abcbe622bb9fdbd4b561653581780e"
+    version "222,082-69205-20250701-d22e01d0-0f1f-4ba3-9348-2061de8fe6aa"
+    sha256 "a3750400f10f0c59dff1d4d36a879e1d72bb6f7bc964e6698a39bc4390fb1be5"
 
     livecheck do
       url :homepage
@@ -18,8 +18,8 @@ cask "safari-technology-preview" do
     end
   end
   on_tahoe :or_newer do
-    version "221,082-56687-20250611-a060da5e-e093-4f59-b823-cb80c269000c"
-    sha256 "56ded30774906440523644873f89f89bfc7bae270bbdf9065832cdd97bdde67d"
+    version "222,082-69202-20250701-64842b57-3d1c-4f0e-b3da-56ec3b453bf9"
+    sha256 "26b7d874e2622147702798b1550b590821357b71a260fa424fa0e9892881198c"
 
     livecheck do
       url :homepage
