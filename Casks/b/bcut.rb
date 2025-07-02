@@ -14,7 +14,7 @@ cask "bcut" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :mojave"
 
   app "BCUT.app"
 
@@ -26,4 +26,8 @@ cask "bcut" do
     "~/Library/Preferences/cn.bilibili.bcut.plist",
     "~/Library/Saved Application State/cn.bilibili.bcut.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
