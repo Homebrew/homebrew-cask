@@ -11,14 +11,8 @@ cask "futubull" do
   homepage "https://www.futunn.com/"
 
   livecheck do
-    url "https://www.futunn.com/download/history?client=11"
-    strategy :json do |json|
-      json["data"]&.map do |item|
-        next if item["is_beta"] == 1
-
-        item["version"]
-      end
-    end
+    url "https://www.futunn.com/api/futunn/download/fetch-lasted-link?clientType=11&isNext=1"
+    regex(/FTNN_desktop[._-]v?(\d+(?:\.\d+)+)[._-]Website\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
@@ -26,7 +20,10 @@ cask "futubull" do
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "富途牛牛.app", target: "Futubull.app"
 
+  uninstall quit: "cn.futu.niuniu.nx"
+
   zap trash: [
+    "~/Library/Containers/cn.futu.niuniu.nx",
     "~/Library/Application Scripts/cn.futu.Niuniu",
     "~/Library/Containers/cn.futu.Niuniu",
   ]
