@@ -23,8 +23,8 @@ cask "futubull" do
   uninstall quit: "cn.futu.niuniu.nx"
 
   zap trash: [
-    "~/Library/Containers/cn.futu.niuniu.nx",
     "~/Library/Application Scripts/cn.futu.Niuniu",
     "~/Library/Containers/cn.futu.Niuniu",
+    "~/Library/Containers/cn.futu.niuniu.nx",
   ]
 end
