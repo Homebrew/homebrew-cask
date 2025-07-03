@@ -1,15 +1,19 @@
 cask "macvim-app" do
-  version "181"
+  version "181,9.1.1128"
   sha256 "ebcab36471c0ddfb91630eae285f57ac9a9a7cb4b233413128aba9039e6a467f"
 
-  url "https://github.com/macvim-dev/macvim/releases/download/release-#{version}/MacVim.dmg"
+  url "https://github.com/macvim-dev/macvim/releases/download/release-#{version.csv.first}/MacVim.dmg"
   name "MacVim"
   desc "Text editor"
   homepage "https://github.com/macvim-dev/macvim"
 
   livecheck do
-    url :url
-    regex(/^release[._-]v?(\d+(?:\.\d+)*)$/i)
+    url "https://macvim.org/appcast/latest.xml"
+    strategy :sparkle do |items|
+      item = items.find { |item| item.channel.nil? }
+
+      "#{item.version},#{item.short_version}"
+    end
   end
 
   auto_updates true
