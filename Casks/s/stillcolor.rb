@@ -5,16 +5,15 @@ cask "stillcolor" do
 
   url "https://github.com/aiaf/Stillcolor/releases/download/v#{version}/Stillcolor-v#{version}.zip"
   name "Stillcolor"
-  desc "Tool to disable temporal dithering on Apple Silicon Macs" # Corrected: Removed "A"
+  desc "Tool to disable temporal dithering on Apple Silicon Macs"
   homepage "https://github.com/aiaf/Stillcolor"
 
-  # Add the macOS dependency here
   depends_on macos: ">= :ventura"
 
   app "Stillcolor.app"
 
   zap trash: [
-    "~/Library/Application Support/Stillcolor",
-    "~/Library/Preferences/com.aiaf.Stillcolor.plist",
+    "~/Library/Application Scripts/com.makkuk.Stillcolor",
+    "~/Library/Containers/com.makkuk.Stillcolor",
   ]
 end
