@@ -1,6 +1,6 @@
 cask "ths" do
-  version "5.1.1"
-  sha256 "64a8d01c354c5eb76f84e859e48e34a36ead1c48e2aca9bddcea5a95ba9a3c33"
+  version "5.2.0"
+  sha256 "986dad379f2cbc2fc54478179c5f1c25a23881a248e7dbe3ef35cef08becc7a8"
 
   url "https://sp.thsi.cn/staticS3/mobileweb-upload-static-server.file/app_6/downloadcenter/ThsMac#{version}.dmg",
       verified: "sp.thsi.cn/staticS3/mobileweb-upload-static-server.file/app_6/downloadcenter/"
