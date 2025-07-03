@@ -6,11 +6,18 @@ cask "hdfview" do
       verified: "github.com/HDFGroup/hdfview/"
   name "HDFView"
   desc "Tool for browsing and editing HDF files"
-  homepage "https://www.hdfgroup.org/downloads/hdfview/"
+  homepage "https://www.hdfgroup.org/download-hdfview/"
 
+  # The "latest" release on GitHub is set to the `snapshot` release instead of
+  # the latest stable version. This checks the version from the filename text
+  # on the homepage, so we don't have to use the `GithubReleases` strategy. If
+  # we used `GithubReleases`, we would have to create a somewhat involved
+  # `strategy` block to avoid releases where part of the version is 99, as
+  # upstream doesn't always reliably mark those versions as "pre-release" (e.g.
+  # `HDFView-3.3.99` isn't marked as pre-release).
   livecheck do
-    url :url
-    strategy :github_latest
+    url :homepage
+    regex(/HDFView[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   no_autobump! because: :requires_manual_review
