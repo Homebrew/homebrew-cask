@@ -1,6 +1,6 @@
 cask "spotmenu" do
-  version "2.0.5"
-  sha256 "2aab71ab15f60079b31705b6a493c3062e8c754c3f6d756abc3720fcf4fade49"
+  version "2.1.0"
+  sha256 "0b7b5727fa7ff9cceb6363f145cf16f3d09b38d2a1482c8745724c4b52e0ac99"
 
   url "https://github.com/kmikiy/SpotMenu/releases/download/v#{version}/SpotMenu.app.zip"
   name "SpotMenu"
