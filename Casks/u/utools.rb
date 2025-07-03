@@ -1,9 +1,9 @@
 cask "utools" do
   arch arm: "-arm64"
 
-  version "7.2.0"
-  sha256 arm:   "7996495a4401e2a95feb94ccfc5bd86a3b2aadc51f48e239a0d69303c2e4b69f",
-         intel: "5372067ae7c486a6b1bf9f416987fdb1a76328d33f065c1eb324f4e077ff06bc"
+  version "7.2.1"
+  sha256 arm:   "68b48a4e1e7aca447d29872613bca41e7274c1e34466c26570ee16125f9f3380",
+         intel: "b60eead00a1c71c881e6d786999c0006bce0b8be4e9430e399560d7da1d1a4c3"
 
   url "https://open.u-tools.cn/download/uTools-#{version}#{arch}.dmg"
   name "uTools"
