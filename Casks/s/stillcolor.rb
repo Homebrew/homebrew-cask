@@ -9,7 +9,7 @@ cask "stillcolor" do
   homepage "https://github.com/aiaf/Stillcolor"
 
   # Add the macOS dependency here
-  depends_on macos: :ventura
+  depends_on macos: ">= :ventura"
 
   app "Stillcolor.app"
 
