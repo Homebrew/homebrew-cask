@@ -29,6 +29,6 @@ cask "gama-platform" do
   ]
 
   caveats do
-    depends_on_java "17"
+    depends_on_java "21"
   end
 end
