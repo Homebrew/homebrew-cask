@@ -501,6 +501,7 @@ figma-agent
 figma@beta
 fiji
 file-juicer
+filefillet
 filen
 finalshell
 finbar
