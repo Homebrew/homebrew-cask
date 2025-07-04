@@ -5,9 +5,15 @@ cask "virtualbox@beta" do
   sha256 arm:   "8cdd12cc1aaffae0c12826589ce930354ced310216c03365248be7a5eb119fc6",
          intel: "ed93cc560fa465f0780570ec3002bcdd1e25d418f309ffc19d2f09b0da48597a"
 
+  on_arm do
+    desc "Virtualiser for arm64 hardware"
+  end
+  on_intel do
+    desc "Virtualiser for x86 hardware"
+  end
+
   url "https://www.virtualbox.org/download/testcase/VirtualBox-#{version}-#{arch}.dmg"
   name "Oracle VirtualBox"
-  desc "Virtualizer for x86 and arm64 hardware"
   homepage "https://www.virtualbox.org/wiki/Testbuilds"
 
   livecheck do
@@ -62,17 +68,10 @@ cask "virtualbox@beta" do
 
   zap trash: [
         "/Library/Application Support/VirtualBox",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl*",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl*",
-        "~/Library/Preferences/org.virtualbox.app.VirtualBox.plist",
-        "~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist",
-        "~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState",
-        "~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
+        "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
+        "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
         "~/Library/VirtualBox",
       ],
       rmdir: "~/VirtualBox VMs"
-
-  caveats do
-    kext
-  end
 end
