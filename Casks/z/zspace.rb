@@ -3,8 +3,8 @@ cask "zspace" do
   folder = on_arch_conditional arm: "ARM"
 
   on_arm do
-    version "2.24.2025070301,1751545478,070319"
-    sha256 "0788c830a1e88800022e8b5dd2c97bfa26f15a2d48115e9a41f1d7781953af71"
+    version "2.24.2025070301,1751621368,070417"
+    sha256 "e088105c1377fad52ebec050477231678d3d1938b62de8af098e3df9026c3969"
   end
   on_intel do
     version "2.24.2025070301,1751545323,070319"
