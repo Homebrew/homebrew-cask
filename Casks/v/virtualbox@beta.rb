@@ -62,8 +62,7 @@ cask "virtualbox@beta" do
 
   zap trash: [
         "/Library/Application Support/VirtualBox",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl*",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
         "~/Library/Preferences/org.virtualbox.app.VirtualBox.plist",
         "~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist",
         "~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState",
@@ -71,8 +70,4 @@ cask "virtualbox@beta" do
         "~/Library/VirtualBox",
       ],
       rmdir: "~/VirtualBox VMs"
-
-  caveats do
-    kext
-  end
 end
