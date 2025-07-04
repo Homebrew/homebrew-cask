@@ -1,9 +1,9 @@
 cask "openmw" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.48.0"
-  sha256 arm:   "72fdb7bc24d55685dfcd2973555e7a41bf7b7aabba0515c02904a48f48be6b05",
-         intel: "b3fa91fe8055690cc0b3b5518e6cbbdd31825b5b3c937a748843c95400336ccf"
+  version "0.49.0"
+  sha256 arm:   "7fb223cebd53d2dbbae57dcd5a0d71ffcfd45281ae58da3a74e4f21d3b3d1454",
+         intel: "46ec036e40bcc6dbdd0c3bd1fefc9ed096e6cd2f68d1622c160d2fe79f63bd67"
 
   url "https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}-macos-#{arch}.dmg",
       verified: "github.com/OpenMW/openmw/"
