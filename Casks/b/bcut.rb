@@ -10,7 +10,10 @@ cask "bcut" do
   homepage "https://bcut.bilibili.cn/"
 
   livecheck do
-    skip "No reliable version detection"
+    url "https://member.bilibili.com/x/bcut/pc/upgrade/v2?version=0&client_type=1"
+    strategy :json do |json|
+      json.dig("data", "version")
+    end
   end
 
   auto_updates true
