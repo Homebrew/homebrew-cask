@@ -7,7 +7,7 @@ cask "virtualbox" do
 
   url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg"
   name "Oracle VirtualBox"
-  desc "Virtualiser for x86 hardware"
+  desc "Virtualizer for x86 and arm64 hardware"
   homepage "https://www.virtualbox.org/"
 
   livecheck do
@@ -52,8 +52,8 @@ cask "virtualbox" do
       ]
 
   postflight do
-    # If VirtualBox is installed before `/usr/local/lib/pkgconfig` is created by Homebrew, it creates it itself
-    # with incorrect permissions that break other packages
+    # If VirtualBox is installed before `/usr/local/lib/pkgconfig` is created by Homebrew,
+    # it creates it itself with incorrect permissions that break other packages.
     # See https://github.com/Homebrew/homebrew-cask/issues/68730#issuecomment-534363026
     set_ownership "/usr/local/lib/pkgconfig"
   end
@@ -69,8 +69,10 @@ cask "virtualbox" do
   zap trash: [
         "/Library/Application Support/VirtualBox",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
-        "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
-        "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
+        "~/Library/Preferences/org.virtualbox.app.VirtualBox.plist",
+        "~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist",
+        "~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState",
+        "~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState",
         "~/Library/VirtualBox",
       ],
       rmdir: "~/VirtualBox VMs"
