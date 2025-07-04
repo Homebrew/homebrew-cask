@@ -1,14 +1,17 @@
 cask "positron" do
-  version "2025.07.0-204"
-  sha256 "7f5110c3a7ca1f8a60546efe61c2cfbfa15ac09d93379d3b8582c3d299fe3e53"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://cdn.posit.co/positron/releases/mac/universal/Positron-#{version}-universal.dmg"
+  version "2025.07.0-204"
+  sha256 arm:   "cb6638d0640e47df38b725acf2bb42ad5b4a0f0207ac5734a422ccab9527b9f0",
+         intel: "414ed38f88f66c26fed5cb1f32a4b719449f6b4b29a5001c22916286e72dc68e"
+
+  url "https://cdn.posit.co/positron/releases/mac/#{arch}/Positron-darwin-#{version}-#{arch}.zip"
   name "Positron"
   desc "Data science IDE"
   homepage "https://positron.posit.co/"
 
   livecheck do
-    url "https://cdn.posit.co/positron/releases/mac/universal/releases.json"
+    url "https://cdn.posit.co/positron/releases/mac/#{arch}/releases.json"
     strategy :json do |json|
       json["version"]
     end
