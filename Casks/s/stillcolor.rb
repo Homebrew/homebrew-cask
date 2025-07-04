@@ -1,5 +1,4 @@
 cask "stillcolor" do
-  # Update these on new version releases
   version "1.1"
   sha256 "dfa8c046540764df4bc462479190aafc60ecc6b25d43c54feeab65b2c29ee0f6"
 
