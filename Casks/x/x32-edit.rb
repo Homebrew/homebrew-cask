@@ -1,6 +1,6 @@
 cask "x32-edit" do
-  version "4.4,JPHHRu2rXU2ZE4CkKSvUYw,my76TnWGkEuitQykoSs5mA"
-  sha256 "d6054bc6f09230429b926d0cfcdcdb8da085d4e28469034716a01785323efc8d"
+  version "4.4.1,YSCXK_yETESoGXDjR7eEMA,8XnUpbE1hEqmH3z3FzdNAw"
+  sha256 "65ad5512474beb5c54da421185d9a7e9479c95237fd6ca6c6f914c30b3dcd5ef"
 
   url "https://cdn.mediavalet.com/aunsw/musictribe/#{version.csv.second}/#{version.csv.third}/Original/X32-Edit_MAC_#{version.csv.first}.zip",
       verified: "mediavalet.com/aunsw/musictribe/"
