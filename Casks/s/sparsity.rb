@@ -1,6 +1,6 @@
 cask "sparsity" do
-  version "1.3,2023.04"
-  sha256 "9eb8360df38c0017b86b8113db3ec15e1a3e48f5af7ca77d692278d5b5ecb967"
+  version "1.4,2025.07"
+  sha256 "cd214e08c569ebe324e7fa6e972d63587cfa2ec62224e174ba100e0f0b301762"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/#{token}#{version.csv.first.no_dots}.zip"
   name "Sparsity"
