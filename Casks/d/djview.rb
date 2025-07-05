@@ -1,8 +1,8 @@
 cask "djview" do
-  version "4.12,3.5.28,2"
-  sha256 "c65460282d7d43c239d262551d415e0cf5873d4b8cbd845e434f2134cdd0a859"
+  version "4.12,3.5.29"
+  sha256 "eebe6373c896a02d102607566dfa0626ab8541b7816779c3bce5524bf10e65fb"
 
-  url "https://downloads.sourceforge.net/djvu/DjVuLibre-#{version.csv.second}%2BDjView-#{version.csv.first}-universal-#{version.csv.third}.dmg"
+  url "https://downloads.sourceforge.net/djvu/DjVuLibre-#{version.csv.second}%2BDjView-#{version.csv.first}-universal.dmg"
   name "DjView"
   desc "DjVu viewer and browser plugin"
   homepage "https://djvu.sourceforge.net/"
