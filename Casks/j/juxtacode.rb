@@ -1,6 +1,6 @@
 cask "juxtacode" do
-  version "1.1.8"
-  sha256 "7c121ee62229daa9383ee6a513c0028bf247ec2758340f9769ad9cc9c5e4518a"
+  version "1.1.9"
+  sha256 "fa9bdc55b3ef0f2ef6eb937d969ddf19f4e7cb62fa4d0ab0684865cf7f56ab6b"
 
   url "https://appcast.juxtacode.app/juxtacode-#{version}.zip"
   name "JuxtaCode"
