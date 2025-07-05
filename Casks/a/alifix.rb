@@ -1,6 +1,6 @@
 cask "alifix" do
-  version "1.3,2023.06"
-  sha256 "62f09a6bdb991c6cc472067b7cdaa1f4b8e9e530de74e75e446bf3e3293fee9d"
+  version "1.4,2025.07"
+  sha256 "8bce6e676c5e50aa0644c5794112ca45e14dd4f38af460417ce83f1a32f8cb34"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/#{token}#{version.csv.first.no_dots}.zip"
   name "Alifix"
@@ -14,8 +14,6 @@ cask "alifix" do
       page.scan(regex).map { |match| "#{match[2]},#{match[0]}.#{match[1]}" }
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 
