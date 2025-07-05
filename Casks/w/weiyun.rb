@@ -1,6 +1,6 @@
 cask "weiyun" do
-  version "5.2.1505"
-  sha256 "14a5a67604cd64fd0d5ef1bb3dff0252cbbccb4ae10957efcafcf705c9304b27"
+  version "5.2.1523"
+  sha256 "c4998ff4264705efeae6c8d49c650b9fd29c9fb83d70dc12ed4247d6ba4462c5"
 
   url "https://dldir1.qq.com/weiyun/electron-update/release/#{version}/Weiyun-mac-x64-#{version}.dmg",
       verified: "dldir1.qq.com/weiyun/"
