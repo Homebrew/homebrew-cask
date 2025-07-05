@@ -1,5 +1,5 @@
 cask "captainplugins" do
-  version "7.3.6.10032"
+  version "7.4.0.10090"
   sha256 :no_check
 
   url "https://builds.mixedinkey.com/download/53/release/latest?key=dh-708a5f510d404bca9c44e2cecf5ced03"
