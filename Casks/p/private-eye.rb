@@ -10,6 +10,7 @@ cask "private-eye" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-06", because: :unmaintained
+  disable! date: "2025-07-06", because: :unmaintained
 
   pkg "Private_Eye_for_OS_X_10.9_and_later.pkg"
 
