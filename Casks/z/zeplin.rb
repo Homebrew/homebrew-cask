@@ -1,15 +1,17 @@
 cask "zeplin" do
-  version "10.14.0"
+  version "10.25.0"
   sha256 :no_check
 
-  url "https://api.zeplin.io/urls/download-mac"
+  url "https://pkg.zeplin.io/macos/latest/zeplin-darwin-universal.zip"
   name "Zeplin"
   desc "Share, organise and collaborate on designs"
   homepage "https://zeplin.io/"
 
   livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/8926efff-e734-b6d3-03d0-9f41d90c34fc"
-    strategy :sparkle, &:short_version
+    url "https://eo2g77bw567gdu7qmz2g4ezsyi0ybgpa.lambda-url.us-west-2.on.aws/?version=0.0.0"
+    strategy :json do |json|
+      json["name"]
+    end
   end
 
   auto_updates true
@@ -18,7 +20,10 @@ cask "zeplin" do
   app "Zeplin.app"
 
   zap trash: [
+    "~/Library/Application Support/Zeplin",
     "~/Library/Caches/io.zeplin.osx",
+    "~/Library/Caches/io.zeplin.osx.ShipIt",
+    "~/Library/HTTPStorages/io.zeplin.osx",
     "~/Library/Logs/Zeplin",
     "~/Library/Preferences/io.zeplin.osx.plist",
   ]
