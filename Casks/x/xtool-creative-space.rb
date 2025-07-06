@@ -1,16 +1,17 @@
 cask "xtool-creative-space" do
-  arch arm: "arm64", intel: "amd64"
+  arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "2.6.38,28,48e5cd2f-2ea0-4982-a16e-640e07bebacc,2025-04-21-18-35-07"
-    sha256 "709637ed2a9ed363192381061e29edbd0bb3c007a3245dc125ee69e4673009bf"
+    version "2.7.22,28,6bc0e646-afc8-4fe0-9331-c744b6e80b44,2025-06-19-11-05-09"
+    sha256 "997fd3eb4e509de9433bc852ffa059d3df0f0115e25d91a1a7cbd363df42b389"
   end
   on_intel do
-    version "2.6.38,16,6f11195b-cb92-488a-ab3e-635aa873ff1a,2025-04-21-18-37-40"
-    sha256 "b07dbc81406d5284d69d6dd728c7192dc7c31b7ec46e21651362615e46a9af25"
+    version "2.7.22,16,fc7c076a-2790-4f90-aec2-871f55bf1745,2025-06-19-11-08-16"
+    sha256 "d124e5d64e7b2364458fdc1f5df88cc303aa62a20ae74cf0d3d8136347c7de38"
   end
 
-  url "https://storage-us.xtool.com/resource/efficacy/xcs/prod-us/packages/#{version.csv.second}/#{version.csv.third}/xTool-Creative-Space-#{version.csv.first}-#{version.csv.fourth}-#{arch}.dmg"
+  url "https://storage-us.atomm.com/resource/efficacy/xcs/prod-us/packages/#{version.csv.second}/#{version.csv.third}/xTool-Creative-Space-#{version.csv.first}-#{version.csv.fourth}-#{arch}.dmg",
+      verified: "storage-us.atomm.com/resource/efficacy/xcs/"
   name "xTool Creative Space"
   desc "Design and control software for xTool laser machines"
   homepage "https://www.xtool.com/pages/software"
