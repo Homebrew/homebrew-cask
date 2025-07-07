@@ -1,6 +1,6 @@
 cask "the-unofficial-homestuck-collection" do
-  version "2.6.7"
-  sha256 "c0fbf73b03c6e4c9fd8c0e3bc0f6bc3d6ddb9729c53f04c9c9a5921c88ee3ac5"
+  version "2.7.0"
+  sha256 "6ab7030ee74e561d0a1f03f081d38689392b77d239ed354aea3cf47c83d29205"
 
   url "https://github.com/Bambosh/unofficial-homestuck-collection/releases/download/v#{version}/The-Unofficial-Homestuck-Collection-#{version}.dmg",
       verified: "github.com/Bambosh/unofficial-homestuck-collection/"
