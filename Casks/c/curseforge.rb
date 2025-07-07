@@ -1,6 +1,6 @@
 cask "curseforge" do
-  version "1.281.2-1"
-  sha256 "fee366332ace3b2908e71fbc4036fa10819f7fb855e5de919ae5c4ca0fe56933"
+  version "1.282.1-0"
+  sha256 "c47738df43c181a74c1467679e0033744505d11a026e3392b81b73cf44fe4f8c"
 
   url "https://curseforge.overwolf.com/electron/mac/CurseForge-#{version}-universal-mac.zip"
   name "CurseForge"
