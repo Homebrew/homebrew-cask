@@ -1,9 +1,9 @@
 cask "geany" do
   arch arm: "_arm64"
 
-  version "2.0"
-  sha256 arm:   "1d383519d5ef7d3a2d17483a816250776158bfc26590aa4914f8634d81f112d7",
-         intel: "c42991517d1a94920c8f39f159d6707ee093347321e5acb8ef6a11fd094adf4e"
+  version "2.1"
+  sha256 arm:   "13d6f0977c784193ffc1bad05e1a8b77f14f2a71f37ab158c788d33cb6203f80",
+         intel: "9034a1bf89b83e6e0184dc2c6484133b128f0935905f08ec85464a58e43c46ba"
 
   url "https://download.geany.org/geany-#{version}_osx#{arch}.dmg"
   name "Geany"
