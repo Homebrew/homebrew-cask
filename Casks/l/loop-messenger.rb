@@ -15,6 +15,8 @@ cask "loop-messenger" do
     skip "No version information available"
   end
 
+  depends_on macos: ">= :catalina"
+
   app "LOOP.app"
 
   zap trash: [
