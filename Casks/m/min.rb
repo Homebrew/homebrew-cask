@@ -1,9 +1,9 @@
 cask "min" do
   arch arm: "arm64", intel: "x86"
 
-  version "1.35.0"
-  sha256 arm:   "18cc5299be51b4038f1969a09a2bb1a4aaf7ac4868c5439835a6ff6563f7fb0f",
-         intel: "25316857990ca26b1b2701fd26a0774e5160cd47731b4a8314dda4f46b80fd7f"
+  version "1.35.1"
+  sha256 arm:   "d64e47df59ba031b637aed273b37e4e1c9454078fa833ea9535b86705237e9cd",
+         intel: "6106b822470cbb33464fd47c3396cef808f32e2e40d4dbd0dcecd2c63372a0ad"
 
   url "https://github.com/minbrowser/min/releases/download/v#{version}/min-v#{version}-mac-#{arch}.zip",
       verified: "github.com/minbrowser/min/"
@@ -17,8 +17,6 @@ cask "min" do
       json["version"]
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :catalina"
