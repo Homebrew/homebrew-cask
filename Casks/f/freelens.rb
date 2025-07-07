@@ -11,9 +11,7 @@ cask "freelens" do
   desc "Kubernetes IDE"
   homepage "https://freelens.app/"
 
-  conflicts_with cask: [
-    "freelens@nightly",
-  ]
+  conflicts_with cask: "freelens@nightly"
   depends_on macos: ">= :high_sierra"
 
   app "Freelens.app"
