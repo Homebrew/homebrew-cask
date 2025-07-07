@@ -1,6 +1,6 @@
 cask "gauntlet" do
-  version "19"
-  sha256 "9f2eb33db77bfa9d8885b2f6a0a7fd89463bdadffa9f0a7b75f39357a5a556dd"
+  version "20"
+  sha256 "86bfad8a08ce24651cbc551ddd2d877d7917e622611b5d62bcc4d16b21c9fa9d"
 
   url "https://github.com/project-gauntlet/gauntlet/releases/download/v#{version}/gauntlet-universal-macos.dmg"
   name "Gauntlet"
