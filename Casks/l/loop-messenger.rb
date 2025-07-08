@@ -12,7 +12,8 @@ cask "loop-messenger" do
   homepage "https://loop.ru/"
 
   livecheck do
-    skip "No version information available"
+    url "https://loop.ru/download/"
+    regex(/loop-desktop-(\d+(?:\.\d+)+)-mac-/i)
   end
 
   depends_on macos: ">= :catalina"
