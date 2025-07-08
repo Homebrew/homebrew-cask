@@ -1,5 +1,5 @@
 cask "zeplin" do
-  version "10.25.0"
+  version "10.26.0"
   sha256 :no_check
 
   url "https://pkg.zeplin.io/macos/latest/zeplin-darwin-universal.zip"
