@@ -17,8 +17,7 @@ cask "lulu" do
 
   app "LuLu.app"
 
-  # Lulu's uninstaller removes all preference files breaking brew upgrade
-
+  # Lulu's uninstaller removes all preference files which breaks `brew upgrade`
   zap trash: [
     "~/Library/Caches/com.objective-see.lulu",
     "~/Library/Caches/com.objective-see.lulu.helper",

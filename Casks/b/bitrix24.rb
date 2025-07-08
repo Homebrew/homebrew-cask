@@ -1,7 +1,7 @@
 cask "bitrix24" do
+  # NOTE: "24" is not a version number, but an intrinsic part of the product name
   arch arm: "macos_arm", intel: "desktop"
 
-  # NOTE: "24" is not a version number, but an intrinsic part of the product name
   version "17.1.10.86"
   sha256 :no_check
 

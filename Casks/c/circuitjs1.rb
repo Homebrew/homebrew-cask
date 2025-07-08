@@ -1,7 +1,7 @@
 cask "circuitjs1" do
+  # NOTE: "1" is not a version number, but an intrinsic part of the product name
   arch arm: "arm"
 
-  # NOTE: "1" is not a version number, but an intrinsic part of the product name
   version "3.1.3js"
   sha256 :no_check
 
