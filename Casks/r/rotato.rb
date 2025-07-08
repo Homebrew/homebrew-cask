@@ -10,7 +10,9 @@ cask "rotato" do
 
   livecheck do
     url "https://download.rota.to/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   no_autobump! because: :requires_manual_review
