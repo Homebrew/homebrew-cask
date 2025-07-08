@@ -12,8 +12,8 @@ cask "devonthink" do
     app "DEVONthink #{version.major}.app"
   end
   on_big_sur :or_newer do
-    version "4.0.1"
-    sha256 "c1924a5777c34fa3ae08bae0f14fecfbdbe2c236c72edce18936b18034df17fb"
+    version "4.0.2"
+    sha256 "918cf167d8cf7533c657b019f886fa3d55a46632da1a57ab75f9c28d749427ce"
 
     url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink.app.zip"
 
