@@ -1,6 +1,6 @@
 cask "epilogue-playback" do
-  version "1.7.1"
-  sha256 "2bc66da715d1ecc777d7a922e90562fd82c4aba3b57133c7ee73d7e2008ca2a3"
+  version "1.8.0"
+  sha256 "a8ad7eacbbecad9159af0c9f76d0cbaae839e633e395efa4bebc7ed08c50bcd9"
 
   url "https://epilogue.nyc3.digitaloceanspaces.com/releases/software/Playback/version/#{version}/release/mac/Playback.dmg",
       verified: "epilogue.nyc3.digitaloceanspaces.com/releases/software/Playback/version/"
@@ -12,8 +12,6 @@ cask "epilogue-playback" do
     url "https://www.epilogue.co/downloads"
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/release/mac}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :big_sur"
 
