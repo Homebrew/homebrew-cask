@@ -1,7 +1,6 @@
 cask "saoimageds9" do
-  arch arm: "arm64", intel: "x86"
-
   # NOTE: "9" is not a version number, but an intrinsic part of the product name
+  arch arm: "arm64", intel: "x86"
 
   on_big_sur do
     version "8.5"
