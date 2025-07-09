@@ -1,6 +1,6 @@
 cask "voiden" do
-  version "0.10.6"
-  sha256 "0142a5d47fcbcce99d8fdb5a13bddc5da89fb6e7cf924ae3e9640a2a2b62f60f"
+  version "0.10.7"
+  sha256 "87fbabc4122868ed0cc93bd84e18cb2877dab3a2c6442ebe41772d9a17285a57"
 
   url "https://voiden-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/arm64/Voiden-darwin-arm64-#{version}.zip",
       verified: "voiden-releases.s3.eu-west-1.amazonaws.com/"
