@@ -1,6 +1,6 @@
 cask "codeedit" do
-  version "0.3.4"
-  sha256 "9604bca5194f7ee01706b997eaedd783245fc741549035870a5532e181452bce"
+  version "0.3.5"
+  sha256 "bd143db6a4d3e85b6e9cd0126dbfa8e3186f57904e893d144acc3cf2b3c065f2"
 
   url "https://github.com/CodeEditApp/CodeEdit/releases/download/v#{version}/CodeEdit.dmg",
       verified: "github.com/CodeEditApp/CodeEdit/"
