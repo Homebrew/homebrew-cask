@@ -12,6 +12,8 @@ cask "sync" do
     regex(/href=.*?Sync[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  auto_updates true
+
   app "Sync.app"
 
   uninstall quit: "com.sync.desktop"
