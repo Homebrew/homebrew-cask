@@ -1,9 +1,9 @@
 cask "cozy-drive" do
   arch arm: "-arm64"
 
-  version "3.42.0"
-  sha256 arm:   "7815a2757937ac904b4d854996ed815affab62d474a69df3940e1c6a0502a7d8",
-         intel: "f69f9575a842f473d22a3669ff418f729a2ca092c109983ba084dddad1d4648b"
+  version "3.43.1"
+  sha256 arm:   "dea105d92a5d1316006499c78a92592b51fe16d5656ce01e77b7d0f6688146c8",
+         intel: "f9fef95f8a6a0e1f40038d11b1e52d2467aac107ab8d735e3f45ca8e6ccef49a"
 
   url "https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Cozy-Drive-#{version}#{arch}.dmg",
       verified: "github.com/cozy-labs/cozy-desktop/"
