@@ -5,9 +5,15 @@ cask "virtualbox" do
   sha256 arm:   "15ff0ae76005a2a77e8f40ea2a87095a645899fadaf798aabbe8dafd130de5d6",
          intel: "cd63aa9d056b15589152b0304368dfae6930b47ebb465873d0c33fd648cd64c5"
 
+  on_arm do
+    desc "Virtualiser for arm64 hardware"
+  end
+  on_intel do
+    desc "Virtualiser for x86 hardware"
+  end
+
   url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg"
   name "Oracle VirtualBox"
-  desc "Virtualiser for x86 hardware"
   homepage "https://www.virtualbox.org/"
 
   livecheck do
@@ -52,8 +58,8 @@ cask "virtualbox" do
       ]
 
   postflight do
-    # If VirtualBox is installed before `/usr/local/lib/pkgconfig` is created by Homebrew, it creates it itself
-    # with incorrect permissions that break other packages
+    # If VirtualBox is installed before `/usr/local/lib/pkgconfig` is created by Homebrew,
+    # it creates it itself with incorrect permissions that break other packages.
     # See https://github.com/Homebrew/homebrew-cask/issues/68730#issuecomment-534363026
     set_ownership "/usr/local/lib/pkgconfig"
   end

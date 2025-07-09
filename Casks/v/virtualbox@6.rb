@@ -4,7 +4,7 @@ cask "virtualbox@6" do
 
   url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-OSX.dmg"
   name "Oracle VirtualBox"
-  desc "Virtualizer for x86 hardware"
+  desc "Virtualiser for x86 hardware"
   homepage "https://www.virtualbox.org/"
 
   no_autobump! because: :requires_manual_review
@@ -43,8 +43,8 @@ cask "virtualbox@6" do
       ]
 
   postflight do
-    # If VirtualBox is installed before `/usr/local/lib/pkgconfig` is created by Homebrew, it creates it itself
-    # with incorrect permissions that break other packages
+    # If VirtualBox is installed before `/usr/local/lib/pkgconfig` is created by Homebrew,
+    # it creates it itself with incorrect permissions that break other packages.
     # See https://github.com/Homebrew/homebrew-cask/issues/68730#issuecomment-534363026
     set_ownership "/usr/local/lib/pkgconfig"
   end
