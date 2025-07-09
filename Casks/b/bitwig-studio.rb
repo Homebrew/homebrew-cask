@@ -1,6 +1,6 @@
 cask "bitwig-studio" do
-  version "5.3.8"
-  sha256 "e04d40fbbc0040a73211a6ee3d5fdbb6d4fe9fa24ca553edc0fd6d46c2e95a96"
+  version "5.3.12"
+  sha256 "7de7dc7ec7e3888044a36f274c8760a0ce23891a242fd7f9bf7da3b5cb316df8"
 
   url "https://www.bitwig.com/dl/Bitwig%20Studio/#{version}/installer_mac"
   name "Bitwig Studio"
