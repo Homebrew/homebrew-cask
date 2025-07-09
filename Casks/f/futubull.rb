@@ -11,8 +11,14 @@ cask "futubull" do
   homepage "https://www.futunn.com/"
 
   livecheck do
-    url "https://www.futunn.com/api/futunn/download/fetch-lasted-link?clientType=11&isNext=1"
-    regex(/FTNN_desktop[._-]v?(\d+(?:\.\d+)+)[._-]Website\.dmg/i)
+    url "https://www.futunn.com/download/history?client=11"
+    strategy :json do |json|
+      json["data"]&.map do |item|
+        next if item["is_beta"] == 1
+
+        item["version"]
+      end
+    end
   end
 
   depends_on macos: ">= :high_sierra"
