@@ -26,8 +26,11 @@ cask "futubull" do
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "富途牛牛.app", target: "Futubull.app"
 
+  uninstall quit: "cn.futu.niuniu.nx"
+
   zap trash: [
     "~/Library/Application Scripts/cn.futu.Niuniu",
     "~/Library/Containers/cn.futu.Niuniu",
+    "~/Library/Containers/cn.futu.niuniu.nx",
   ]
 end
