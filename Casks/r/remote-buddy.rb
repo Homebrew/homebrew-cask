@@ -1,5 +1,5 @@
 cask "remote-buddy" do
-  version "2.7"
+  version "2.7.1"
   sha256 :no_check
 
   url "https://www.iospirit.com/products/remotebuddy/download/RemoteBuddy.zip"
@@ -11,8 +11,6 @@ cask "remote-buddy" do
     url "https://www.iospirit.com/products/remotebuddy/releasenotes/"
     regex(/Changes\s+in\s+version\s+(\d+(?:\.\d+)+)/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 
