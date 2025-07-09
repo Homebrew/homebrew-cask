@@ -11,7 +11,7 @@ cask "freelens" do
   desc "Kubernetes IDE"
   homepage "https://freelens.app/"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Freelens.app"
 
