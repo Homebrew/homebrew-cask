@@ -5,7 +5,7 @@ cask "racket" do
   sha256 arm:   "3eff55f4c8467f95b75f52d18502499dd6f7dde8f625d2413e3f87d7dad66f25",
          intel: "478f899b209d0566b86ffd81540cc89583a672ece924cd722e61cd859171abfc"
 
-  url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
+  url "https://download.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
   name "Racket"
   desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
