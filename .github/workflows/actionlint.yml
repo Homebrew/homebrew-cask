@@ -36,6 +36,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    container:
+      image: ghcr.io/homebrew/ubuntu22.04:main
     steps:
       - name: Set up Homebrew
         id: setup-homebrew
@@ -53,6 +55,8 @@ jobs:
           persist-credentials: false
 
       - run: zizmor --format sarif . > results.sarif
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload SARIF file
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
