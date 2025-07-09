@@ -1,8 +1,8 @@
 cask "melonds" do
-  version "0.9.5"
-  sha256 "649f9926894faf0776524a0885ecbe10eb9c5bd8b53ed1b33207ac464bd5a2f1"
+  version "1.0"
+  sha256 "f89c7083646a29d2b878b98ed4e842779705d5be00a3fffe23fca091657f21ab"
 
-  url "https://github.com/melonDS-emu/melonDS/releases/download/#{version}/melonDS_#{version}_mac_UB2.dmg",
+  url "https://github.com/melonDS-emu/melonDS/releases/download/#{version}/macOS-universal.zip",
       verified: "github.com/melonDS-emu/melonDS/"
   name "melonDS"
   desc "Nintendo DS and DSi emulator"
