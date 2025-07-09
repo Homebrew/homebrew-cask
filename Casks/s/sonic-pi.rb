@@ -1,5 +1,5 @@
 cask "sonic-pi" do
-  arch arm: "Mac-arm64", intel: "Intel-Mac-x64"
+  arch arm: "Mac-arm64", intel: "Mac-x64"
 
   on_monterey :or_older do
     on_mojave :or_older do
@@ -15,14 +15,14 @@ cask "sonic-pi" do
       url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-x64-v#{version.dots_to_hyphens}.dmg"
     end
     on_big_sur do
-      version "4.5.1"
-      sha256 "15d589a27636edc4a4b9e9685950d857c7dd076d310497d650f90a387645456a"
+      version "4.6.0"
+      sha256 "c19b132a9426b9c44b22aaea10fa63b56b21a708e042f99496758d0076d61b23"
 
       url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Intel-Mac-x64-v#{version.dots_to_hyphens}.dmg"
     end
     on_monterey do
-      version "4.5.1"
-      sha256 "15d589a27636edc4a4b9e9685950d857c7dd076d310497d650f90a387645456a"
+      version "4.6.0"
+      sha256 "c19b132a9426b9c44b22aaea10fa63b56b21a708e042f99496758d0076d61b23"
 
       url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Intel-Mac-x64-v#{version.dots_to_hyphens}.dmg"
     end
@@ -32,9 +32,9 @@ cask "sonic-pi" do
     end
   end
   on_ventura :or_newer do
-    version "4.5.1"
-    sha256 arm:   "58c72fca0b42588060c21d4d677cc8ffe377ef82409e7f2a73fff0fc2163d278",
-           intel: "15d589a27636edc4a4b9e9685950d857c7dd076d310497d650f90a387645456a"
+    version "4.6.0"
+    sha256 arm:   "47025f6c2c0047855fc0bc4b6953064a59fb7de1bfb7b8004b94ee18550b475f",
+           intel: "c19b132a9426b9c44b22aaea10fa63b56b21a708e042f99496758d0076d61b23"
 
     url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-#{arch}-v#{version.dots_to_hyphens}.dmg"
 
@@ -50,8 +50,6 @@ cask "sonic-pi" do
   name "Sonic Pi"
   desc "Code-based music creation and performance tool"
   homepage "https://sonic-pi.net/"
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 
