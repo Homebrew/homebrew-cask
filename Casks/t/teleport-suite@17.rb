@@ -13,6 +13,7 @@ cask "teleport-suite@17" do
     regex(/teleport[._-]v?(17(?:\.\d+)+)\.pkg/i)
   end
 
+  # Support window taken from https://goteleport.com/docs/upcoming-releases/
   disable! date: "2026-02-28", because: :discontinued
 
   conflicts_with cask:    [
