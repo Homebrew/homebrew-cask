@@ -13,7 +13,7 @@ cask "loop-messenger" do
 
   livecheck do
     url "https://loop.ru/download/"
-    regex(/loop-desktop-(\d+(?:\.\d+)+)-mac-/i)
+    regex(/loop[._-]desktop[._-]v?(\d+(?:\.\d+)+).+?\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
