@@ -11,6 +11,7 @@ cask "caption" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-09", because: :unmaintained
+  disable! date: "2025-07-09", because: :unmaintained
 
   app "Caption.app"
 
