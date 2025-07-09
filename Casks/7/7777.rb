@@ -1,6 +1,6 @@
 cask "7777" do
-  version "1.1.27"
-  sha256 "c069657b7a664ae20baf79206bb39ac6876bcf27af953700d7c6af04aa958cbc"
+  version "1.1.28"
+  sha256 "f0c34a086870fdff66da53e3cc19a031e010e6e7ee5ec1a18480c18fa9f35186"
 
   url "https://releases.port7777.com/#{version}/macos/7777"
   name "7777"
@@ -11,8 +11,6 @@ cask "7777" do
     url "https://releases.port7777.com/latest/version.txt"
     regex(/(\d+(?:\.\d+)+)/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   binary "7777"
 
