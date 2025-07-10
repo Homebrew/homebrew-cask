@@ -1,6 +1,6 @@
 cask "prince" do
-  version "16"
-  sha256 "26411806cd8ef0e45a3b26a20edca5e8a1b4b86ab2defbfcd0e472e77737b4aa"
+  version "16.1"
+  sha256 "e31ed3377a5cc91cd7fdd35d13be09c98c6ac5fd4ed4c5eade575b3dff2db4e0"
 
   url "https://www.princexml.com/download/prince-#{version}-macos.zip"
   name "Prince"
@@ -11,8 +11,6 @@ cask "prince" do
     url "https://www.princexml.com/download/"
     regex(/>\s*Prince\s+v?(\d+(?:\.\d+)*)/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/prince-#{version}-macos/prince.wrapper.sh"
