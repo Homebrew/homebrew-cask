@@ -1,8 +1,8 @@
 cask "qudedup-extract-tool" do
-  version "1.1.5,21201"
-  sha256 "c156a73debb8f1250f761fd0380a94fbaa7643ddf3c00dda8a362c58e1708547"
+  version "1.1.6,25140"
+  sha256 "683b4a2d40a80139dc4dc71d879b0898fc48d800ffb8144ed953bfe903fde0ea"
 
-  url "https://download.qnap.com/Storage/Utility/QudedupExToolMac-#{version.csv.first}.#{version.csv.second}.dmg"
+  url "https://download.qnap.com/Storage/Utility/QNAPQuDedupExToolMac-#{version.csv.first}.#{version.csv.second}.dmg"
   name "Qnap QuDedup Extract Tool"
   desc "Restoring deduplicated .qdff files to their normal status"
   homepage "https://www.qnap.com/en/utilities#utliity_18"
