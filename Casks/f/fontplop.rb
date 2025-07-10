@@ -10,6 +10,7 @@ cask "fontplop" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-10", because: :unmaintained
+  disable! date: "2025-07-10", because: :unmaintained
 
   app "fontplop.app"
 
