@@ -1,6 +1,6 @@
 cask "dorico" do
-  version "6.0.20,2dc3a738-84a7-4ebf-b473-b45b889a7648"
-  sha256 "8a7f1979fc588c306179bb74a29906b5d09f636da9922f73358f0fa2dbc6aa4c"
+  version "6.0.22,8b36e0c8-85a8-43ed-811a-d2647770079c"
+  sha256 "75031d9795c6e2ed170c640d0de41487cf996ab95e28cc78a448cf1a88054a79"
 
   url "https://download.steinberg.net/automated_updates/sda_downloads/#{version.csv.second}/Dorico_#{version.csv.first}_Installer_mac.dmg"
   name "Dorico"
@@ -18,15 +18,13 @@ cask "dorico" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on cask: [
     "steinberg-activation-manager",
     "steinberg-library-manager",
     "steinberg-mediabay",
   ]
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   pkg "Dorico #{version.csv.first.major}.pkg"
 
