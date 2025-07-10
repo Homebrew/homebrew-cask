@@ -1,6 +1,6 @@
 cask "thingsmacsandboxhelper" do
-  version "3.42"
-  sha256 "cab6e0761cf465e14117d57140d02dc4eb2cc2c1b30126e300794dfe40e4ed33"
+  version "3.43"
+  sha256 "62174ecc0b71b8a209a4e498765cd7238a73c024a58d5b5d080694e56a6eaa51"
 
   url "https://static.culturedcode.com/things/thingssandboxhelper/#{version}/ThingsHelper.zip"
   name "Things Helper"
@@ -11,8 +11,6 @@ cask "thingsmacsandboxhelper" do
     url :homepage
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/ThingsHelper\.zip}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 
