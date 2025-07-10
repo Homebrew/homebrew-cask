@@ -1,9 +1,9 @@
 cask "elan" do
   arch arm: "_M1"
 
-  version "6.9"
-  sha256 arm:   "3fb29d26db2627d4a326570603f785f472dcd7f9b810203e68b7dbf3d17e38f7",
-         intel: "26d60d433f802927494e7fbd78a16dc0a7b8302577c5965ff59beae25f0953d2"
+  version "7.0"
+  sha256 arm:   "ee067b519482f64dda66f082b0e6ad38315bca0c47d0f5166ced9ca5cd999be6",
+         intel: "ec2661cc727e7857150b1fb159338711e0b4addfd133a75e6d0dc69b8e643543"
 
   url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}#{arch}_mac.zip"
   name "ELAN"
@@ -25,7 +25,7 @@ cask "elan" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "ELAN_#{version}.app"
+  app "ELAN_#{version.dots_to_hyphens}#{arch}_mac/ELAN_#{version}.app"
 
   zap trash: [
     "~/Library/Preferences/ELAN",
