@@ -1,8 +1,11 @@
 cask "visualboyadvance-m" do
-  version "2.1.11"
-  sha256 "fbb90afdb6aae1f67ea1aab1e5eca2e0098a76d2f9cb8127b1263555e8d6523b"
+  arch arm: "ARM64", intel: "x86_64"
 
-  url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac-x86_64.zip",
+  version "2.2.0"
+  sha256 arm:   "3b8e586d433fa7c7ae6e5b3b979a9ad09a1e948ae102fac897ac92cf8f92390d",
+         intel: "cdfde0dfc234976c1bf432701217eb519604fff60817f9e81f1b7b0f698a72c0"
+
+  url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac-#{arch}.zip",
       verified: "github.com/visualboyadvance-m/visualboyadvance-m/"
   name "Visual Boy Advance - M"
   desc "Game Boy Advance emulator"
@@ -13,16 +16,10 @@ cask "visualboyadvance-m" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "visualboyadvance-m.app"
 
   zap trash: [
     "~/Library/Application Support/visualboyadvance-m",
     "~/Library/Preferences/visualboyadvance-m.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
