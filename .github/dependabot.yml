@@ -1,6 +1,10 @@
 # This file is synced from the `.github` repository, do not modify it directly.
 ---
 version: 2
+groups:
+  dependabot:
+    patterns:
+    - "*"
 updates:
 - package-ecosystem: github-actions
   directory: "/"
@@ -11,8 +15,8 @@ updates:
     timezone: Etc/UTC
   allow:
   - dependency-type: all
-  groups:
-    github-actions:
-      patterns:
-      - "*"
+  cooldown:
+    semver-major-days: 14
+    semver-minor-days: 7
+    semver-patch-days: 1
 
