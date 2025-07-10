@@ -4,7 +4,7 @@ cask "open-data-editor" do
 
   url "https://github.com/okfn/opendataeditor/releases/download/v#{version}/opendataeditor-macos-#{version}.dmg"
   name "Open Data Editor"
-  desc "A no-code application to explore, validate and publish data in a simple way"
+  desc "No-code application to explore, validate and publish data in a simple way"
   homepage "https://github.com/okfn/opendataeditor"
 
   livecheck do
@@ -19,5 +19,4 @@ cask "open-data-editor" do
   caveats do
     requires_rosetta
   end
-
 end
