@@ -1,6 +1,6 @@
 cask "surge" do
-  version "5.10.3,3272,5cf851de0c9af2bf96ab410244010f9a"
-  sha256 "3d10b83ed65448797d57a238729063abc6b704c183cffd51408ce54e87066079"
+  version "6.0.0,7210,3c89094d79d9dcff8b276e7b55ecf004"
+  sha256 "014c6a15bf4b83e8146419c74f006cbc4ab31c2af6f73d75b0c46e06875cbcbf"
 
   url "https://dl.nssurge.com/mac/v#{version.major}/Surge-#{version.tr(",", "-")}.zip"
   name "Surge"
@@ -8,7 +8,8 @@ cask "surge" do
   homepage "https://nssurge.com/"
 
   livecheck do
-    url "https://www.nssurge.com/mac/v#{version.major}/appcast-signed.xml"
+    # The SPUFeedURL from Info.plist is https://nssurge.com/mac/latest/appcast-signed.xml
+    url "https://nssurge.com/mac/latest/appcast-signed.xml"
     regex(/[._-](\d+(?:\.\d+)+)[._-](\d+)[._-](\h+)\.zip/i)
     strategy :sparkle do |item, regex|
       match = item.url.match(regex)
@@ -20,7 +21,7 @@ cask "surge" do
 
   auto_updates true
   conflicts_with cask: "surge@4"
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :monterey" # Confirmed by LSMinimumSystemVersion "12.0"
 
   app "Surge.app"
 
