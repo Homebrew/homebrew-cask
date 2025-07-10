@@ -1,6 +1,6 @@
 cask "igv-desktop" do
-  version "2.19.4"
-  sha256 "0a9243afdba18510cefda421d82a0dbb84f9b03c19b3b40aadbff0374af047d4"
+  version "2.19.5"
+  sha256 "e969925218831002c2d61779c14a2673a9a674a49b7f4f988bdea21bf47e4c6d"
 
   url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_MacApp_#{version}.zip",
       verified: "data.broadinstitute.org/"
