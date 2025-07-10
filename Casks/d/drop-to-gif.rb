@@ -11,6 +11,7 @@ cask "drop-to-gif" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-10", because: :unmaintained
+  disable! date: "2025-07-10", because: :unmaintained
 
   zap trash: [
     "~/Library/Preferences/com.mortenjust.Drop-to-GIF.plist",
