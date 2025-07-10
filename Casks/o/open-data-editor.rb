@@ -1,0 +1,23 @@
+cask "open-data-editor" do
+  version "1.5.1"
+  sha256 "d211779d1bda0836fb5325e6c81a119d404c9b6e266ebfe62ccdf68c27ff54b5"
+
+  url "https://github.com/okfn/opendataeditor/releases/download/v#{version}/opendataeditor-macos-#{version}.dmg"
+  name "Open Data Editor"
+  desc "A no-code application to explore, validate and publish data in a simple way"
+  homepage "https://github.com/okfn/opendataeditor"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on macos: ">= :high_sierra"
+
+  app "Open Data Editor.app"
+
+  caveats do
+    requires_rosetta
+  end
+
+end
