@@ -10,7 +10,7 @@ cask "container" do
   depends_on arch: :arm64
   depends_on macos: ">= :sequoia"
 
-  pkg "container-installer-signed.pkg"
+  pkg "container-#{version}-installer-signed.pkg"
 
   uninstall pkgutil: "com.apple.container-installer"
 
