@@ -1,6 +1,6 @@
 cask "safe-exam-browser" do
-  version "3.5.3"
-  sha256 "b6fa376e306c4046746f91b9ff5bb2eaa36126ababb12a780c74192d2a43e28f"
+  version "3.5.4"
+  sha256 "bed48e0dc8b5373fa181f7b6d93e0462dbfa4bf464771341dfae209ef276a49b"
 
   url "https://github.com/SafeExamBrowser/seb-mac/releases/download/#{version}/SafeExamBrowser-#{version}.dmg",
       verified: "github.com/SafeExamBrowser/seb-mac/"
