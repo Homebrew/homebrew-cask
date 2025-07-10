@@ -2,11 +2,11 @@ cask "btp" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "2.83.0"
-  sha256 arm:          "4bdd685a85b0aad8d52f7e9f9a6685dea688730b2b8ac0b546cc0434513ad37f",
-         intel:        "2277b0d9753faf35e6c4911dc53cd4eb225fdf16d7edff0a51a3c0740afa0468",
-         arm64_linux:  "2c8431a6432082e1f46b11ce1b317c5ee09382bab3f1e970debcf58ab1f62faf",
-         x86_64_linux: "bdf3d3256061c0230cd60e6c0d62d7020b9d503090cc19d2007fadb1cb4ee45f"
+  version "2.90.2"
+  sha256 arm:          "6183680711945bbf4b6fd3e5cd9cb852a95d2f0292416ad586c6dd37cac50ddf",
+         intel:        "5d7ab7e4625797a7d036e0844948efae54b7dfcddee1fc7fe54efc5d8a075dc5",
+         arm64_linux:  "386d0c0feef3396235d25378ca63cefadd19b14d49317e2e8fff6555abf54347",
+         x86_64_linux: "aeec6dacad62a6c9d80f864144eafb9e74f6ed9f524af5407c47b02f9133541e"
 
   url "https://tools.hana.ondemand.com/additional/btp-cli-#{os}-#{arch}-#{version}.tar.gz",
       cookies: {
@@ -20,8 +20,6 @@ cask "btp" do
     url :homepage
     regex(/btp[._-]cli[._-]#{os}[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   binary "#{os}-#{arch}/btp"
 
