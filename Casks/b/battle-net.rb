@@ -22,6 +22,8 @@ cask "battle-net" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   installer manual: "Battle.net-Setup.app"
 
   preflight do
