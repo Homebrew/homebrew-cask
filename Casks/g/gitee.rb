@@ -10,6 +10,7 @@ cask "gitee" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-11", because: :unmaintained
+  disable! date: "2025-07-11", because: :unmaintained
 
   app "Gitee.app"
 
