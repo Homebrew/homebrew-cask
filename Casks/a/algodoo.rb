@@ -1,6 +1,6 @@
 cask "algodoo" do
-  version "2.2.3"
-  sha256 "96b37af5144aa50d1ea2e5e3b584e8cb43c8a6dcec887588a9a1d0ad4acc5b56"
+  version "2.2.4"
+  sha256 "02bb64abdff9cfd486bdc970fab692a8dd6312dbea78e3b6d31933b5c473916b"
 
   url "https://www.algodoo.com/download/Algodoo_#{version.dots_to_underscores}-macOS.dmg"
   name "Algodoo"
@@ -14,8 +14,6 @@ cask "algodoo" do
       page.scan(regex)&.map { |match| match[0].tr("_", ".") }
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 
