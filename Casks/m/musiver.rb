@@ -1,16 +1,16 @@
-cask "streammusic" do
-  version "1.3.8"
-  sha256 "faaebf6df791d774db74fe8bb9f7a44d91f331068a1fe46e2c0621321b523f46"
+cask "musiver" do
+  version "1.3.9"
+  sha256 "02aaa916d89180c85929bbee713586fa953a9e46d41b7aefc1a894eaf289b6d2"
 
-  url "https://github.com/gitbobobo/StreamMusic/releases/download/v#{version}/StreamMusic_#{version}.dmg",
+  url "https://github.com/gitbobobo/StreamMusic/releases/download/v#{version}/Musiver_#{version}.dmg",
       verified: "github.com/gitbobobo/StreamMusic/"
   name "StreamMusic"
   desc "Music client compatible with self-hosted music services"
-  homepage "https://www.aqzscn.cn/"
+  homepage "https://music.aqzscn.cn/"
 
   depends_on macos: ">= :catalina"
 
-  app "StreamMusic.app"
+  app "Musiver.app"
 
   zap trash: [
     "~/Library/Application Scripts/cn.aqzscn.streamMusic",
