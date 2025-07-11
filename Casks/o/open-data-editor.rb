@@ -5,7 +5,7 @@ cask "open-data-editor" do
   url "https://github.com/okfn/opendataeditor/releases/download/v#{version}/opendataeditor-macos-#{version}.dmg"
   name "Open Data Editor"
   desc "No-code application to explore, validate and publish data in a simple way"
-  homepage "https://github.com/okfn/opendataeditor"
+  homepage "https://okfn.org/en/projects/open-data-editor/"
 
   livecheck do
     url :url
