@@ -11,6 +11,11 @@ cask "zen-privacy" do
   desc "Ad-blocker and privacy guard"
   homepage "https://zenprivacy.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   conflicts_with cask: "zen"
   depends_on macos: ">= :high_sierra"
