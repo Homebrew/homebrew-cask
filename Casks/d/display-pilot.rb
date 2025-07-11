@@ -8,9 +8,11 @@ cask "display-pilot" do
   desc "Display control utility"
   homepage "https://www.benq.com/en-ap/monitor/software/display-pilot-2.html"
 
+  # The only checkable source of version information requires a referer to work,
+  # so we're skipping this for now.
+  # See: https://github.com/Homebrew/homebrew-cask/pull/219373#issuecomment-3054380576
   livecheck do
-    url "https://www.benq.com/en-ap/monitor/software/display-pilot-2/spec.html"
-    regex(/macOS\s*<.*?>\s*v?(\d+(?:\.\d+)+)/im)
+    skip "Requires referer for request to work"
   end
 
   depends_on macos: ">= :big_sur"
