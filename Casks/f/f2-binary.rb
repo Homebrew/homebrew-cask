@@ -10,10 +10,8 @@ cask "f2-binary" do
   desc "Command-line batch renaming tool"
   homepage "https://github.com/ayoisaiah/f2"
 
-  # Upstream may add/remove tags before releasing a version, so we check
-  # GitHub releases instead of the Git tags.
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 
