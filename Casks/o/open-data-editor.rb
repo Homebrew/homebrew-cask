@@ -2,7 +2,8 @@ cask "open-data-editor" do
   version "1.5.1"
   sha256 "d211779d1bda0836fb5325e6c81a119d404c9b6e266ebfe62ccdf68c27ff54b5"
 
-  url "https://github.com/okfn/opendataeditor/releases/download/v#{version}/opendataeditor-macos-#{version}.dmg"
+  url "https://github.com/okfn/opendataeditor/releases/download/v#{version}/opendataeditor-macos-#{version}.dmg",
+      verified: "github.com/okfn/opendataeditor/"
   name "Open Data Editor"
   desc "No-code application to explore, validate and publish data in a simple way"
   homepage "https://okfn.org/en/projects/open-data-editor/"
