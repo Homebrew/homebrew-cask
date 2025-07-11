@@ -17,6 +17,8 @@ cask "open-data-editor" do
 
   app "Open Data Editor.app"
 
+  # No zap stanza required
+
   caveats do
     requires_rosetta
   end
