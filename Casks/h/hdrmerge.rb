@@ -11,6 +11,7 @@ cask "hdrmerge" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-12", because: :unmaintained
+  disable! date: "2025-07-12", because: :unmaintained
 
   app "HDRMerge.app"
   binary "#{appdir}/HDRMerge.app/Contents/MacOS/hdrmerge"
