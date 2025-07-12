@@ -1,4 +1,4 @@
-cask "google-cloud-sdk" do
+cask "gcloud-cli" do
   arch arm: "arm", intel: "x86_64"
 
   version "529.0.0"
@@ -6,9 +6,9 @@ cask "google-cloud-sdk" do
          intel: "d81c1740edd039004839e6eae4921c4fec0b5ff5fa104959c50e667c76a1a4b6"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-darwin-#{arch}.tar.gz"
-  name "Google Cloud SDK"
+  name "Google Cloud CLI"
   desc "Set of tools to manage resources and applications hosted on Google Cloud"
-  homepage "https://cloud.google.com/sdk/"
+  homepage "https://cloud.google.com/cli/"
 
   livecheck do
     url "https://cloud.google.com/sdk/docs/install-sdk"
