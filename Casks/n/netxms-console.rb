@@ -1,9 +1,9 @@
 cask "netxms-console" do
   arch arm: "-aarch64"
 
-  version "5.2.3"
-  sha256 arm:   "9c5870a00b0b49e3d00184c06e65525592c5ebf3af008c11678d7992cf430a4b",
-         intel: "e7a8cf7f808f90c4fcf1fee61d5822abd65f51ab8215e1f6fcc3f329e007aa9c"
+  version "5.2.4"
+  sha256 arm:   "a5a43d25fa444fa3275119ba28e35dd81740c6245a63a50e5c02e3b5b5006f57",
+         intel: "b6488ed77a552d9b712ea5b7d00fbd3e9b31a8d79293e16ff8fc78cb2cb1d0ce"
 
   url "https://netxms.com/download/releases/#{version.major_minor}/nxmc-#{version}#{arch}.dmg"
   name "NetXMS Management Console"
