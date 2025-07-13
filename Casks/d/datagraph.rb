@@ -1,5 +1,5 @@
 cask "datagraph" do
-  version "5.4"
+  version "5.5"
   sha256 :no_check
 
   url "https://www.visualdatatools.com/DataGraph/DataGraph.dmg"
@@ -11,8 +11,6 @@ cask "datagraph" do
     url "https://www.visualdatatools.com/DataGraph/Download/"
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 
