@@ -1,6 +1,6 @@
 cask "dintch" do
-  version "1.7,2025.04"
-  sha256 "728960d47779e23f5ba3ffdda7184c074e06837a320aa38b536d32071c35e3b3"
+  version "1.8,2025.07"
+  sha256 "4f336dcfc77fcc2c253a1d3b0684a47a1281f6e9fb9bb1b70040b6d27f5edd41"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/dintch#{version.csv.first.no_dots}.zip"
   name "Dintch"
@@ -22,8 +22,6 @@ cask "dintch" do
       "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 
