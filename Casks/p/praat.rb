@@ -1,6 +1,6 @@
 cask "praat" do
-  version "6.4.38,6438"
-  sha256 "09e99548b29d674524637afce5c6beb67e676e5516e1ff95ba9d328ae193d48f"
+  version "6.4.39,6439"
+  sha256 "7e45a81b74d562f331898fb60e925b6979b795ad766a78cb7ffaffa3f7b4cda0"
 
   url "https://github.com/praat/praat/releases/download/v#{version.csv.first}/praat#{version.csv.second}_mac.dmg",
       verified: "github.com/praat/praat/"
