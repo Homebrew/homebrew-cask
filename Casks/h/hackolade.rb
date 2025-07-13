@@ -12,8 +12,16 @@ cask "hackolade" do
   homepage "https://hackolade.com/"
 
   livecheck do
-    url "https://hackolade.com/download.html"
-    regex(/Current\sversion:\sv?(\d+(?:\.\d+)+)/i)
+    url "https://hackolade.s3.amazonaws.com/?prefix=previous/&marker=previous/v#{version.major}"
+    regex(%r{previous/v?(\d+(?:\.\d+)+)/Hackolade[._-]mac#{arch}[._-]setup[._-]signed\.pkg}i)
+    strategy :xml do |xml, regex|
+      xml.get_elements("//Contents/Key").map do |item|
+        match = item.text&.strip&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   pkg "Hackolade-mac#{arch}-setup-signed.pkg"
