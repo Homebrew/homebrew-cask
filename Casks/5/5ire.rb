@@ -11,6 +11,13 @@ cask "5ire" do
   desc "AI assistant and MCP client"
   homepage "https://5ire.app/"
 
+  # Not every GitHub release provides a file for macOS, so we check the
+  # homepage, which links to the dmg files on GitHub.
+  livecheck do
+    url :homepage
+    regex(/5ire[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
+  end
+
   depends_on macos: ">= :catalina"
 
   app "5ire.app"
