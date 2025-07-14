@@ -1,25 +1,35 @@
 cask "langflow" do
-  version "1.4.2"
-  sha256 "07da16749c0fe42c5d85bcf75dc7117d7d4b03c2de0acd414bcff643e568baa8"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://github.com/langflow-ai/langflow/releases/download/#{version}/Langflow_aarch64.dmg",
+  version "1.5.1,1.5.0.post1"
+  sha256 arm:   "fdfe5cb466976ce1c00ddda6d00d3489e5774ad3d801dd4b8df56ae1800bcb6e",
+         intel: "fdfe5cb466976ce1c00ddda6d00d3489e5774ad3d801dd4b8df56ae1800bcb6e"
+
+  url "https://github.com/langflow-ai/langflow/releases/download/#{version.csv.second || version}/Langflow_#{version.csv.first}_aarch64.dmg",
       verified: "github.com/langflow-ai/langflow/"
   name "Langflow Desktop"
   desc "Low-code AI-workflow building tool"
   homepage "https://www.langflow.org/desktop"
 
-  # GitHub releases may not always provide a file for macOS. We check the
-  # first-party download page, as it links directly to the latest macOS file
-  # (i.e., we don't have to check recent GitHub releases to find the newest
-  # version with a macOS file).
   livecheck do
-    url "https://www.langflow.org/desktop-form-complete"
-    regex(%r{href=.*?/download/v?(\d+(?:\.\d+)+[^/]*?)/Langflow[^"' >]*?\.dmg}i)
+    url :url
+    regex(/^Langflow[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]  || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          next match[1] if match[1] == release["tag_name"]
+
+          "#{match[1]},#{release["tag_name"]}"
+        end
+      end.flatten
+    end
   end
 
-  no_autobump! because: :requires_manual_review
-
-  depends_on arch: :arm64
   depends_on macos: ">= :ventura"
 
   app "Langflow.app"
