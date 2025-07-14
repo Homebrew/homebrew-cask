@@ -1,5 +1,5 @@
 cask "wondershare-edrawmax" do
-  version "14.5.1"
+  version "14.5.2"
   sha256 :no_check
 
   language "zh", "CN" do
@@ -22,7 +22,7 @@ cask "wondershare-edrawmax" do
 
   livecheck do
     url "https://www.edrawsoft.com/whats-new/edrawmax.html"
-    regex(/EdrawMax\s*V?(\d+(?:\.\d+)+)/i)
+    regex(/ma(?:c|xOS)\s*V?(\d+(?:\.\d+)+)/i)
   end
 
   no_autobump! because: :requires_manual_review
