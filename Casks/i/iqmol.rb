@@ -6,10 +6,10 @@ cask "iqmol" do
       verified: "downloads.q-chem.com/iqmol/"
   name "IQmol"
   desc "Free open-source molecular editor and visualization package"
-  homepage "http://iqmol.org/"
+  homepage "http://www.iqmol.org/"
 
   livecheck do
-    url "https://iqmol.org/downloads.html"
+    url "https://www.iqmol.org/downloads.html"
     regex(/href=.*?IQmol[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
