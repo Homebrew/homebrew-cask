@@ -1,25 +1,16 @@
 cask "react-studio" do
-  version "1.8.14,426"
+  version "1814,426"
   sha256 "88e4874ca5f14a6fb442b0aeb371e48d5c8e1ced24099cf5c021771482a44423"
 
-  url "https://s3.amazonaws.com/sc.neonto.com/ReactStudio_v#{version.csv.first.no_dots}_build#{version.csv.second}.zip",
+  url "https://s3.amazonaws.com/sc.neonto.com/ReactStudio_v#{version.csv.first}_build#{version.csv.second}.zip",
       verified: "s3.amazonaws.com/sc.neonto.com/"
   name "ReactStudio"
   desc "App design environment"
   homepage "https://reactstudio.com/"
 
-  livecheck do
-    url "https://c1.neonto.com/studio/verinfo_reactstudio"
-    strategy :json do |json|
-      version = json["latestVersionDescription"]
-      build = json["latestVersion"]&.to_i
-      next if version.blank? || build.blank?
-
-      "#{version},#{build}"
-    end
-  end
-
   no_autobump! because: :requires_manual_review
+
+  deprecate! date: "2025-07-24", because: :unmaintained
 
   depends_on macos: ">= :sierra"
 
