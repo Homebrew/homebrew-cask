@@ -1,6 +1,6 @@
 cask "quick-app-ide" do
   version "6.7.2"
-  sha256 "619cf8ba2ac75e66aedc43b433234b27fea0f53e11c6baec9ac3771c1f7824c5"
+  sha256 "b60a47690b8c4e5aaa687301edcad476a1a0b0790e46cb10162a6437dbe77fd0"
 
   url "https://statres.quickapp.cn/quickapp/show/ide/quickapp-ide-#{version}.pkg"
   name "Quick App IDE"
@@ -10,7 +10,7 @@ cask "quick-app-ide" do
 
   livecheck do
     url "https://www.quickapp.cn/api/ide/rpk/getPackage"
-    regex(/quickapp[._-]ide[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+    regex(/quickapp[._-]ide[._-]*?v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   no_autobump! because: :requires_manual_review
