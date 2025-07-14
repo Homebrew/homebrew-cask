@@ -27,15 +27,4 @@ cask "salt" do
             pkgutil:   "com.saltstack.salt"
 
   zap trash: "/etc/salt"
-
-  def caveats
-    <<~CAVEATS
-      Included services:
-
-      sudo launchctl load -w /Library/LaunchDaemons/com.saltstack.salt.api.plist
-      sudo launchctl load -w /Library/LaunchDaemons/com.saltstack.salt.master.plist
-      sudo launchctl load -w /Library/LaunchDaemons/com.saltstack.salt.minion.plist
-      sudo launchctl load -w /Library/LaunchDaemons/com.saltstack.salt.syndic.plist
-    CAVEATS
-  end
 end
