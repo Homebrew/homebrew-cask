@@ -1,8 +1,8 @@
 cask "bluos-controller" do
-  version "4.8.0,2025,01"
-  sha256 "4dacd98aefa1c8e834732c02d27c9f3a01484ced509223f9bf298fcb2155d262"
+  version "4.10.0"
+  sha256 "563c025852c24cec684b9962fba83086d4baa25977a7741bd51aea04ee3c5af4"
 
-  url "https://content-bluesound-com.s3.amazonaws.com/uploads/#{version.csv.second}/#{version.csv.third}/BluOS-Controller-#{version.csv.first}-MacOS.zip",
+  url "https://content-bluesound-com.s3.amazonaws.com/uploads/BluOS-Controller-#{version}-MacOS.zip",
       verified: "content-bluesound-com.s3.amazonaws.com/uploads/"
   name "BluOS Controller"
   desc "Manage audio systems"
@@ -10,10 +10,7 @@ cask "bluos-controller" do
 
   livecheck do
     url "https://www.bluesound.com/downloads/"
-    regex(%r{uploads/(\d+)/(\d+)/BluOS[._-]Controller[._-]v?(\d+(?:\.\d+)+)[._-]MacOS\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
-    end
+    regex(%r{uploads/BluOS[._-]Controller[._-]v?(\d+(?:\.\d+)+)[._-]MacOS\.zip}i)
   end
 
   no_autobump! because: :requires_manual_review
@@ -28,8 +25,4 @@ cask "bluos-controller" do
     "~/Library/Preferences/com.bluesound.bluos.plist",
     "~/Library/Saved Application State/com.bluesound.bluos.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
