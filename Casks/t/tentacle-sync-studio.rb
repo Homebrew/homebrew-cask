@@ -8,7 +8,7 @@ cask "tentacle-sync-studio" do
   homepage "https://tentaclesync.com/"
 
   livecheck do
-    url "https://tentaclesync.com/api/collections/downloads/entries"
+    url "https://tentaclesync.com/downloads/tentacle-sync-studio-macos"
     regex(/ttsyncstudio[._-]v?(\d+(?:[._-]\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match[0].tr("_", ".") }
