@@ -1,6 +1,6 @@
 cask "bose-updater" do
-  version "7.1.13.5369"
-  sha256 "bbcdae427c0bd94f94395a3e31acd2cb757fd967928a951f3d5e68171dda1a0c"
+  version "7.1.13.5370"
+  sha256 "e09bb696fc3223121322f9e76b8894636ab8142b126c1cd606412a2d2e7c0504"
 
   url "https://downloads.bose.com/ced/boseupdater/mac/BoseUpdater_#{version}.dmg"
   name "Bose Device Updater"
@@ -8,13 +8,11 @@ cask "bose-updater" do
   homepage "https://btu.bose.com/"
 
   livecheck do
-    url "https://btu.bose.com/data/MUV.xml"
-    strategy :xml do |xml|
-      xml.elements["//ROOT"]&.attributes&.[]("MUV")
+    url "https://btu.bose.com/prod/iot-btu-fe-core/muv.json"
+    strategy :json do |json|
+      json["MUV"]
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "Bose Updater.app"
 
