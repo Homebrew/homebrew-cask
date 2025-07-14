@@ -1,4 +1,6 @@
 cask "gcc-aarch64-embedded" do
+  # Exists as a cask because it is impractical as a formula:
+  # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
   version "14.3.rel1"
   sha256 "82a4987c670f589d3c5b97bc579561365116670ff3c1c67a07fc29fa23aef3b2"
 
@@ -16,8 +18,6 @@ cask "gcc-aarch64-embedded" do
 
   no_autobump! because: :requires_manual_review
 
-  # Exists as a cask because it is impractical as a formula:
-  # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
   depends_on arch: :arm64
 
   pkg "arm-gnu-toolchain-#{version}-darwin-arm64-aarch64-none-elf.pkg"
