@@ -1,15 +1,10 @@
 cask "gcc-aarch64-embedded" do
-  # Exists as a cask because it is impractical as a formula:
-  # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
-  arch arm: "arm64", intel: "x86_64"
+  version "14.3.rel1"
+  sha256 "82a4987c670f589d3c5b97bc579561365116670ff3c1c67a07fc29fa23aef3b2"
 
-  version "14.2.rel1"
-  pkg_version = "14.2.rel1"
-  gcc_version = "14.2.1"
-  sha256 arm:   "20d81586e22fa811b7052520e98fe0db44294b038d70c41693808db7818325fe",
-         intel: "4e0da7bc82d316deb7f385d249bf7f87ce06d31b9d6f8b63f9b981a2203cf2ce"
-
-  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg"
+  pkg_version = "14.3.rel1"
+  gcc_version = "14.3.1"
+  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-arm64-aarch64-none-elf.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 64-bit Arm processors"
   homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
@@ -21,7 +16,11 @@ cask "gcc-aarch64-embedded" do
 
   no_autobump! because: :requires_manual_review
 
-  pkg "arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg"
+  # Exists as a cask because it is impractical as a formula:
+  # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
+  depends_on arch: :arm64
+
+  pkg "arm-gnu-toolchain-#{version}-darwin-arm64-aarch64-none-elf.pkg"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-addr2line"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-ar"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-as"
@@ -54,7 +53,7 @@ cask "gcc-aarch64-embedded" do
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-strings"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-strip"
 
-  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-#{arch}-aarch64-none-elf",
+  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-arm64-aarch64-none-elf",
             delete:  "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf",
             rmdir:   [
               "/Applications/ArmGNUToolchain",
