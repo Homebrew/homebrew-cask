@@ -1,13 +1,11 @@
 cask "gcc-arm-embedded" do
   # Exists as a cask because it is impractical as a formula:
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
-  depends_on arch: :arm64
-
   version "14.3.rel1"
-  pkg_version = "14.3.rel1"
-  gcc_version = "14.3.1"
   sha256 "b93712026cec9f98a5d98dfec84e8096d32be3759642381e1982c4a5d2aa020b"
 
+  pkg_version = "14.3.rel1"
+  gcc_version = "14.3.1"
   url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-arm64-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
@@ -19,6 +17,8 @@ cask "gcc-arm-embedded" do
   end
 
   no_autobump! because: :requires_manual_review
+
+  depends_on arch: :arm64
 
   pkg "arm-gnu-toolchain-#{version}-darwin-arm64-arm-none-eabi.pkg"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-addr2line"
