@@ -1,15 +1,14 @@
 cask "gcc-arm-embedded" do
   # Exists as a cask because it is impractical as a formula:
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
-  arch arm: "arm64", intel: "x86_64"
+  depends_on arch: :arm64
 
-  version "14.2.rel1"
-  pkg_version = "14.2.rel1"
-  gcc_version = "14.2.1"
-  sha256 arm:   "b62ea28a6ba69b9c34031595ed0b9ed4846d230dbe8ff0fbe182bb55d1d779f6",
-         intel: "5d2e9ee4e73350bda79accc69fcd5ee59ccb902804a3f81a01d4c543b1ad7de7"
+  version "14.3.rel1"
+  pkg_version = "14.3.rel1"
+  gcc_version = "14.3.1"
+  sha256 "b93712026cec9f98a5d98dfec84e8096d32be3759642381e1982c4a5d2aa020b"
 
-  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
+  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-arm64-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
   homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
@@ -21,7 +20,7 @@ cask "gcc-arm-embedded" do
 
   no_autobump! because: :requires_manual_review
 
-  pkg "arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
+  pkg "arm-gnu-toolchain-#{version}-darwin-arm64-arm-none-eabi.pkg"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-addr2line"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-ar"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-as"
@@ -54,7 +53,7 @@ cask "gcc-arm-embedded" do
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-strings"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-strip"
 
-  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-#{arch}-arm-none-eabi",
+  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-arm64-arm-none-eabi",
             delete:  "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi",
             rmdir:   [
               "/Applications/ArmGNUToolchain",
