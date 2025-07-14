@@ -1,5 +1,3 @@
-# typed: false
-
 cask "wondershare-edrawmax" do
   version "14.5.2"
   sha256 :no_check
