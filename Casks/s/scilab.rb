@@ -1,23 +1,30 @@
 cask "scilab" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2025.0.0"
-  sha256 arm:   "8501444f342282eaa254a06e22b71eeb6798109d3ae81d651cdd087a335468f4",
-         intel: "d02ae625f8d3b7b1a4a3a7ad0671fd6142edab0c01ee90d81c3c04fda92e5ae0"
+  on_arm do
+    version "2025.1.0"
+    sha256 "506d698fe7c16d6645b981100c5a95bb6dc03606b15ad01e1798add2e87c05b3"
+    livecheck do
+      url "https://www.scilab.org/download/latest/"
+      regex(/scilab[._-]v?(\d+(?:\.\d+)+)/i)
+    end
+  end
+  on_intel do
+    version "2025.0.0"
+    sha256 "d02ae625f8d3b7b1a4a3a7ad0671fd6142edab0c01ee90d81c3c04fda92e5ae0"
+    livecheck do
+      skip "Legacy version"
+    end
+  end
 
   url "https://www.scilab.org/download/#{version}/scilab-#{version}-#{arch}.dmg"
   name "Scilab"
   desc "Software for numerical computation"
   homepage "https://www.scilab.org/"
 
-  livecheck do
-    url "https://www.scilab.org/download/latest/"
-    regex(/scilab[._-]v?(\d+(?:\.\d+)+)/i)
-  end
-
   no_autobump! because: :requires_manual_review
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   app "scilab-#{version}.app"
   binary "#{appdir}/scilab-#{version}.app/Contents/bin/scilab"
