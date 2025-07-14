@@ -1,20 +1,21 @@
 # This file is synced from the `.github` repository, do not modify it directly.
 ---
 version: 2
+multi-ecosystem-groups:
+  all:
+    schedule:
+      interval: weekly
+      day: friday
+      time: '08:00'
+      timezone: Etc/UTC
 updates:
 - package-ecosystem: github-actions
   directory: "/"
-  schedule:
-    interval: weekly
-    day: friday
-    time: '08:00'
-    timezone: Etc/UTC
+  multi-ecosystem-group: all
+  patterns:
+  - "*"
   allow:
   - dependency-type: all
-  groups:
-    dependabot:
-      patterns:
-      - "*"
   cooldown:
     default-days: 1
     include:
