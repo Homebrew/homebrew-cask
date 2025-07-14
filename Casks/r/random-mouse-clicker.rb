@@ -15,7 +15,7 @@ cask "random-mouse-clicker" do
   auto_updates true
   depends_on macos: ">= :big_sur"
 
-  app "Random Mouse Clicker by MurGaa.com.app"
+  app "MurGaa Random Mouse Clicker.app"
 
   zap trash: [
     "~/Library/Caches/com.murgaa.Random-Mouse-Clicker-by-MurGaa-com",
