@@ -6,6 +6,8 @@ cask "font-fzfangsong-z02" do
   name "Fangzheng Fangsong GBK"
   homepage "https://www.foundertype.com/index.php/FontInfo/index.html?id=128"
 
+  disable! date: "2025-07-14", because: :no_longer_meets_criteria
+
   font "FZFSK.ttf"
 
   # No zap stanza required
