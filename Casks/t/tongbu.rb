@@ -7,12 +7,7 @@ cask "tongbu" do
   desc "Mobile phone management tool"
   homepage "https://zs.tongbu.com/mac/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?zsmac[._-]v?(\d+(?:\.\d+)+)/}i)
-  end
-
-  no_autobump! because: :requires_manual_review
+  disable! date: "2025-07-14", because: :no_longer_available
 
   app "Tongbu.app"
 
