@@ -1,5 +1,5 @@
 cask "dadroit-json-viewer" do
-  version "3.1.0,533"
+  version "3.3.0,604"
   sha256 :no_check
 
   url "https://dadroit.com/releases/mac/DadroitJSONViewer.zip"
