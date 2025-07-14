@@ -1,6 +1,6 @@
 cask "librecad" do
-  version "2.2.1.1"
-  sha256 "76f8adbb4dbac5312e0c645f7127c3081ce3959b482488352a176a35f9154c0f"
+  version "2.2.1.2"
+  sha256 "c3ec3ddcea1c8c432c8e7e9fc5fbd40474c0e35c1febbf0a203fc355c583f262"
 
   url "https://github.com/LibreCAD/LibreCAD/releases/download/v#{version}/LibreCAD-v#{version}.dmg",
       verified: "github.com/LibreCAD/LibreCAD/"
@@ -12,8 +12,6 @@ cask "librecad" do
     url :url
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "LibreCAD.app"
 
