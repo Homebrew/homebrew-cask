@@ -10,6 +10,7 @@ cask "macx-video" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-15", because: :discontinued
+  disable! date: "2025-07-15", because: :discontinued
 
   app "macXvideo.app"
 
