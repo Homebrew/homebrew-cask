@@ -2,12 +2,12 @@ cask "es-de" do
   arch arm: "macOSApple", intel: "macOSIntel"
 
   on_arm do
-    version "3.2.0,184126565"
-    sha256 "9893c0aa15947c7d2e29ab177c561d5f968056194e1ba280a024291ae3574ae1"
+    version "3.3.0,210210122"
+    sha256 "1d3c9a03b1062167458d246ea2553a0d4de9baae63b1ed336f15816a3b73bd36"
   end
   on_intel do
-    version "3.2.0,184126636"
-    sha256 "21b9659e833b8895f143de8e16f2fdda671c32fa2ea1185a7e9301741318c5fc"
+    version "3.3.0,210210161"
+    sha256 "7144d669a9600350ba6290ec0d24021716371ee031d448579be8cc7b2559383b"
   end
 
   url "https://gitlab.com/es-de/emulationstation-de/-/package_files/#{version.csv.second}/download",
