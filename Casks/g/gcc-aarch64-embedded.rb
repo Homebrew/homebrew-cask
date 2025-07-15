@@ -16,7 +16,7 @@ cask "gcc-aarch64-embedded" do
     end
   end
   on_intel do
-    version "14.2rel1"
+    version "14.2.rel1"
     sha256 "4e0da7bc82d316deb7f385d249bf7f87ce06d31b9d6f8b63f9b981a2203cf2ce"
     pkg_version = "14.2.rel1"
     gcc_version = "14.2.1"
