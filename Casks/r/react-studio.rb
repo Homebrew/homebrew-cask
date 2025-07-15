@@ -13,7 +13,7 @@ cask "react-studio" do
         post_json: {
           "Sec-Ch-Ua-Platform": "macOS",
         }
-    regex(/ReactStudio[._-]v?(\d+)[._-]build(\d+)/i)
+    regex(/ReactStudio[._-]v?(\d+(?:\.\d+)*)[._-]build(\d+)/i)
     strategy :json do |json|
       match = json["downloadUrl"]&.match(regex)
       next if match.blank?
