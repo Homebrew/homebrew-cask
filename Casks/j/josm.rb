@@ -1,6 +1,5 @@
 cask "josm" do
   arch arm: "-aarch64"
-  app_arch = on_arch_conditional arm: "_24_arm64"
 
   on_arm do
     version "19423"
@@ -42,7 +41,7 @@ cask "josm" do
   desc "Extensible editor for OpenStreetMap"
   homepage "https://josm.openstreetmap.de/"
 
-  app "JOSM#{app_arch}.app"
+  app "JOSM.app"
 
   zap trash: [
     "~/Library/Caches/JOSM",
