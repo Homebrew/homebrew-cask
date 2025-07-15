@@ -20,7 +20,7 @@ cask "swiftformat-for-xcode" do
           match = asset["name"]&.match(regex)
           next if match.blank?
 
-          release["tag_name"]
+          release["tag_name"]&.[](/^v?(\d+(?:\.\d+)+)$/i, 1)
         end
       end.flatten
     end
