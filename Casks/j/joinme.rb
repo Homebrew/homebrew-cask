@@ -10,6 +10,7 @@ cask "joinme" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-16", because: :discontinued
+  disable! date: "2025-07-16", because: :discontinued
 
   app "join.me.app"
 
