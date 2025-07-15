@@ -14,7 +14,7 @@ cask "react-studio" do
           "Sec-Ch-Ua-Platform": "macOS",
         }
     regex(/ReactStudio[._-]v?(\d+(?:\.\d+)*)[._-]build(\d+)/i)
-    strategy :json do |json|
+    strategy :json do |json, regex|
       match = json["downloadUrl"]&.match(regex)
       next if match.blank?
 
