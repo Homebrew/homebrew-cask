@@ -30,11 +30,6 @@ cask "virtualbox@beta" do
   pkg "VirtualBox.pkg",
       choices: [
         {
-          "choiceIdentifier" => "choiceVBoxKEXTs",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 1,
-        },
-        {
           "choiceIdentifier" => "choiceVBox",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
@@ -43,11 +38,6 @@ cask "virtualbox@beta" do
           "choiceIdentifier" => "choiceVBoxCLI",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
-        },
-        {
-          "choiceIdentifier" => "choiceOSXFuseCore",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
         },
       ]
 
