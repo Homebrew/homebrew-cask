@@ -97,7 +97,7 @@ jobs:
         if: steps.base.outputs.branch == 'master'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh pr edit "${PR}" --base main
+        run: gh pr edit "${PR}" --base main --repo "${GITHUB_REPOSITORY}"
 
       - name: Post comment
         if: steps.base.outputs.branch == 'master'
