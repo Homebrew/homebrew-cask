@@ -1,26 +1,38 @@
 cask "gcc-arm-embedded" do
   # Exists as a cask because it is impractical as a formula:
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
-  version "14.3.rel1"
-  sha256 "b93712026cec9f98a5d98dfec84e8096d32be3759642381e1982c4a5d2aa020b"
+  arch arm: "arm64", intel: "x86_64"
 
-  pkg_version = "14.3.rel1"
-  gcc_version = "14.3.1"
-  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-arm64-arm-none-eabi.pkg"
+  pkg_version = nil
+  gcc_version = nil
+  on_intel do
+    version "14.2.rel1"
+    sha256 "5d2e9ee4e73350bda79accc69fcd5ee59ccb902804a3f81a01d4c543b1ad7de7"
+    pkg_version = "14.2.rel1"
+    gcc_version = "14.2.1"
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_arm do
+    version "14.3.rel1"
+    sha256 "b93712026cec9f98a5d98dfec84e8096d32be3759642381e1982c4a5d2aa020b"
+    pkg_version = "14.3.rel1"
+    gcc_version = "14.3.1"
+    livecheck do
+      url "https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads"
+      regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-arm-none-eabi\.pkg/i)
+    end
+  end
+
+  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{version}-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
   homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
 
-  livecheck do
-    url "https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads"
-    regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-arm-none-eabi\.pkg/i)
-  end
-
   no_autobump! because: :requires_manual_review
 
-  depends_on arch: :arm64
-
-  pkg "arm-gnu-toolchain-#{version}-darwin-arm64-arm-none-eabi.pkg"
+  pkg "arm-gnu-toolchain-#{version}-darwin-#{version}-arm-none-eabi.pkg"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-addr2line"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-ar"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-as"
@@ -53,7 +65,7 @@ cask "gcc-arm-embedded" do
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-strings"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-strip"
 
-  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-arm64-arm-none-eabi",
+  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-#{version}-arm-none-eabi",
             delete:  "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi",
             rmdir:   [
               "/Applications/ArmGNUToolchain",
