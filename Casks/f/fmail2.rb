@@ -1,7 +1,7 @@
 cask "fmail2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.8.8"
-  sha256 "a3c7ea7515c574b91ba1ad3c8588040ba9a99c6bed22b5605b704b2aed26ba8c"
+  version "2.8.9"
+  sha256 "646f7e7aeb319692a636a1d484bf8f350dba0a256d01c3e8948afba97f10a401"
 
   url "https://fmail.appmac.fr/update/sparkle/FMail2_#{version.no_dots}.zip",
       verified: "fmail.appmac.fr/update/sparkle/"
