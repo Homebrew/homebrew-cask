@@ -1,8 +1,8 @@
 cask "focusrite-control" do
-  version "3.20.0"
-  sha256 "5f4c7eb36e1b62437f5b8c7a33fe82ebea5807095cd77df5d155090a4a0f1714"
+  version "3.22.0"
+  sha256 "1a4252611f72cf55a37a0df916079072775717ce6b6793099cc4b50584b6861f"
 
-  url "https://fael-downloads-prod.focusrite.com/customer/prod/downloads/focusrite_control_#{version}.dmg"
+  url "https://fael-downloads-prod.focusrite.com/customer/prod/downloads/focusrite_control_#{version}.dmg.zip"
   name "Focusrite Control"
   desc "Focusrite interface controller"
   homepage "https://focusrite.com/en"
