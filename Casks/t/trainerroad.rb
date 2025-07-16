@@ -1,6 +1,6 @@
 cask "trainerroad" do
-  version "2025.27.1.394"
-  sha256 "cc04632b29ebdf94435d827e706353bc5be4607e8f1c00690f7367412088c5aa"
+  version "2025.27.2.395"
+  sha256 "0910028b4afda62f4acd1afb636c5918ef4ce23b3aa3e4c72c71e7d03a718e92"
 
   url "https://trainrdtrcmn01un1softw01.blob.core.windows.net/installers/mac/v001/Production/TrainerRoad-#{version}.dmg",
       verified: "trainrdtrcmn01un1softw01.blob.core.windows.net/"
