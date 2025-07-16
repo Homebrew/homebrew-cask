@@ -32,7 +32,7 @@ cask "dotnet-sdk@8" do
     "dotnet-sdk",
     "dotnet-sdk@preview",
   ], formula: "dotnet"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :ventura"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
   binary "/usr/local/share/dotnet/dotnet"
