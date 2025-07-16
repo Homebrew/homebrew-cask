@@ -9,8 +9,6 @@ cask "djv" do
   homepage "https://darbyjohnston.github.io/DJV/"
   depends_on arch: :arm64
 
-  no_autobump! because: :requires_manual_review
-
   app "DJV.app"
 
   zap trash: [
