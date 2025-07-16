@@ -1,6 +1,6 @@
 cask "youlean-loudness-meter" do
-  version "2.5.10,2025,02"
-  sha256 "bc0dd968f5572cca5428cf8643867b84561b01b805724d1d0619bc0fa22b6e41"
+  version "2.5.11,2025,07"
+  sha256 "f360b6b5a7859504cb9358ae5d93715982b96a1a43e3526c26b03c19c575c894"
 
   url "https://cdn.youlean.co/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/Youlean-Loudness-Meter-#{version.major}-V#{version.csv.first}-macOS.dmg"
   name "Youlean Loudness Meter"
