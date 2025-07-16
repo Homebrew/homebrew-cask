@@ -1,6 +1,6 @@
 cask "opencpn" do
-  version "5.10.2,-universal+11049.12e5712b6-14"
-  sha256 "680a79637b33799fec579d61546ac51b5533d7bcaf147466eed3e8327cc2cd82"
+  version "5.12.0,-universal+14328.6f287fa60-14"
+  sha256 "bf9dc7fca738d134b7ccab12d30f70c7304e66ebc0c5d85d05a7a503db10b50b"
 
   url "https://github.com/OpenCPN/OpenCPN/releases/download/Release_#{version.csv.first}/OpenCPN_#{version.csv.first}#{version.csv.second}.pkg",
       verified: "github.com/OpenCPN/OpenCPN/"
@@ -18,8 +18,6 @@ cask "opencpn" do
       match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   pkg "OpenCPN_#{version.csv.first}#{version.csv.second}.pkg"
 
