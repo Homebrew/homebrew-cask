@@ -7,12 +7,13 @@ cask "djv" do
   name "DJV"
   desc "Review software for VFX, animation, and film production"
   homepage "https://darbyjohnston.github.io/DJV/"
-  depends_on arch: :arm64
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  depends_on arch: :arm64
 
   app "DJV.app"
 
