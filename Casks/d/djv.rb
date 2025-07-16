@@ -9,6 +9,11 @@ cask "djv" do
   homepage "https://darbyjohnston.github.io/DJV/"
   depends_on arch: :arm64
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "DJV.app"
 
   zap trash: [
