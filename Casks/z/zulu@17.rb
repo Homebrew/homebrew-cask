@@ -1,9 +1,9 @@
 cask "zulu@17" do
   arch arm: "aarch64", intel: "x64"
 
-  version "17.0.15,17.58.21"
-  sha256 arm:   "6b40a904234c20f7854e92a117685134bc56b78a84ec794dfbdf7b9398dab77e",
-         intel: "cdd51438325cbb0a6d894260864944f90abd8299a45f01f241a31f3ed5c50fe4"
+  version "17.0.16,17.60.17"
+  sha256 arm:   "cc24aaa933ad1fda35944c2a902a52e0f1e46aca4e46ed9bcd9b1035a831618d",
+         intel: "5a3783762e1de27ff350039108953745c84fad51d6d92a28c3d6316e2096d596"
 
   url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-ca-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/"
@@ -23,8 +23,6 @@ cask "zulu@17" do
       end
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 
