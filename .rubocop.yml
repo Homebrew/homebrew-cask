@@ -107,6 +107,8 @@ Naming/MethodParameterName:
   inherit_mode:
     merge:
     - AllowedNames
+Naming/PredicateMethod:
+  AllowBangMethods: true
 Naming/VariableNumber:
   Enabled: false
 Style/AndOr:

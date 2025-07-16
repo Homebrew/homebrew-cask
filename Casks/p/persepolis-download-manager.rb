@@ -1,9 +1,9 @@
 cask "persepolis-download-manager" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.1.1"
-  sha256 arm:   "7983546e40b8e17e4d4b5bc10630a77d145bc8aa21c523f972e1ca46bffe9925",
-         intel: "8c7eb9934f81160b6d11f4979d417bebab5bbd1b4fd63f97f96d729879f0c7fb"
+  version "5.2.0"
+  sha256 arm:   "092f7975e97ac73aff29d3b0fb084ba6ab4cb5529d6a7a6c8385676ec3468669",
+         intel: "ce91acdba96448d00c7e712960a2670c0e9173a6fc9c382dbeca9ac258f9e319"
 
   url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version}_macos_#{arch}.dmg",
       verified: "github.com/persepolisdm/persepolis/"

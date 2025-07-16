@@ -67,3 +67,52 @@ jobs:
             - label: linux cask
               path: Casks/.+
               content: (x86_64|arm64)_linux
+
+  check-base-branch:
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    if: always() && github.repository_owner == 'Homebrew' && github.actor != 'BrewTestBot'
+    runs-on: ubuntu-latest
+    env:
+      PR: ${{ github.event.number }}
+    steps:
+      - name: Check pull request base branch
+        id: base
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          branch="$(
+            gh api \
+              --header 'Accept: application/vnd.github+json' \
+              --header 'X-GitHub-Api-Version: 2022-11-28' \
+              "repos/$GITHUB_REPOSITORY/pulls/$PR" \
+              --jq '.base.ref'
+          )"
+          echo "branch=${branch}" >>"${GITHUB_OUTPUT}"
+
+      - name: Change base branch to `main`
+        id: change
+        if: steps.base.outputs.branch == 'master'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr edit "${PR}" --base main --repo "${GITHUB_REPOSITORY}"
+
+      - name: Post comment
+        if: steps.base.outputs.branch == 'master'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: |-
+            > [!TIP]
+            > This pull request targets the `master` branch. For future pull requests, please target the `main` branch instead.
+        run: gh pr comment "${PR}" --body "${BODY}" --repo "${GITHUB_REPOSITORY}"
+
+      - name: Post failure comment
+        if: failure() && steps.change.conclusion == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: |-
+            > [!CAUTION]
+            > Failed to change base branch to `main`. Please edit your pull request manually to target the `main` branch instead of the `master` branch.
+        run: gh pr comment "${PR}" --body "${BODY}" --repo "${GITHUB_REPOSITORY}"

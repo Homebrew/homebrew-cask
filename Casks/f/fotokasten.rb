@@ -1,6 +1,6 @@
 cask "fotokasten" do
-  version "4.33.3,250210.1048"
-  sha256 "bb6908fbdd44fbf14728ce028efceb91ff7db162d9b2930a0c6932f7af199158"
+  version "4.43.1,250711.1719"
+  sha256 "b222c474572684a6f25b8526a1cdfabf84b0d0fe1e0c20a0e97f534f96c43e3d"
 
   url "https://downloads.poi.de/fotokasten/pgx-mac/de_DE/fotokasten_22153088_de_DE_#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "downloads.poi.de/fotokasten/"
@@ -12,8 +12,6 @@ cask "fotokasten" do
     url "https://downloads.poi.de/fotokasten/pgx-mac/de_DE/appcast.xml"
     strategy :sparkle
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :mojave"

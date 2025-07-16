@@ -1,6 +1,6 @@
 cask "linearmouse@beta" do
-  version "0.10.1-beta.3"
-  sha256 "6541c84d04f6970f19e9c4021f735a9b9a9a0106da2f549316543ad6c1843f96"
+  version "0.10.1-beta.4"
+  sha256 "551f67883ac0efba753af95c05a6093bf038e6e59d3c99cce39c8d8c2edbea17"
 
   url "https://dl.linearmouse.org/v#{version}/LinearMouse.dmg"
   name "LinearMouse"
@@ -11,8 +11,6 @@ cask "linearmouse@beta" do
     url "https://linearmouse.app/appcast.xml"
     strategy :sparkle, &:version
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   conflicts_with cask: "linearmouse"

@@ -1,9 +1,9 @@
 cask "virtualbox" do
   arch arm: "macOSArm64", intel: "OSX"
 
-  version "7.1.10,169112"
-  sha256 arm:   "15ff0ae76005a2a77e8f40ea2a87095a645899fadaf798aabbe8dafd130de5d6",
-         intel: "cd63aa9d056b15589152b0304368dfae6930b47ebb465873d0c33fd648cd64c5"
+  version "7.1.12,169651"
+  sha256 arm:   "ed202a87de528ace090c1f0d531e8dd4c85da064f3404909e6ff5fe79942e547",
+         intel: "2f7e39bd91819afdaa7a9cbc7e831597237664495b28d2c643ea97ee36834ebe"
 
   on_arm do
     desc "Virtualiser for arm64 hardware"
@@ -36,11 +36,6 @@ cask "virtualbox" do
   pkg "VirtualBox.pkg",
       choices: [
         {
-          "choiceIdentifier" => "choiceVBoxKEXTs",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 1,
-        },
-        {
           "choiceIdentifier" => "choiceVBox",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
@@ -49,11 +44,6 @@ cask "virtualbox" do
           "choiceIdentifier" => "choiceVBoxCLI",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
-        },
-        {
-          "choiceIdentifier" => "choiceOSXFuseCore",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
         },
       ]
 
