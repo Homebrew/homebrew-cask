@@ -1,6 +1,6 @@
 cask "picoscope@beta" do
-  version "7.1.56.6040"
-  sha256 "2c9dd4d351f2e8e91970c5f03d52edd108a42436ed81bb74bf405b51d4be3997"
+  version "7.1.58.6335"
+  sha256 "4039275fc877e258bfc50f3dee577a709a11da87432d8bf8a6b91f032e76c281"
 
   url "https://www.picotech.com/download/software/beta/PicoScope_#{version.major}_TandM_Early_Access_#{version}.pkg"
   name "PicoScope beta"
@@ -11,8 +11,6 @@ cask "picoscope@beta" do
     url "https://www.picotech.com/downloads/picoscope#{version.major}-early-access"
     regex(/href=.*?PicoScope[._-]#{version.major}.*?Access[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   conflicts_with cask: "picoscope"
 
