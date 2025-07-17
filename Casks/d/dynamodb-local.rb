@@ -1,6 +1,6 @@
 cask "dynamodb-local" do
-  version "2025-04-14"
-  sha256 "9a8e6c1b1d4f5c1030c00a5a7eaee1a9ab2b8f1bbde7b700d5505898a3948fff"
+  version "2025-07-15"
+  sha256 "1125086301253b89539fa3bdbf1ded0656c596a2d34e0ca3c10af83373e7fd88"
 
   url "https://d1ni2b6xgvw0s0.cloudfront.net/v2.x/dynamodb_local_#{version}.tar.gz",
       verified: "d1ni2b6xgvw0s0.cloudfront.net/"
@@ -20,8 +20,6 @@ cask "dynamodb-local" do
       end
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/dynamodb-local.wrapper.sh"
