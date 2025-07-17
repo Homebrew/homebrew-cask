@@ -1,4 +1,4 @@
-cask "eid-mw" do
+cask "beid-token" do
   version "5.0.26"
   sha256 "61312109f3e9525f95f47cf171eeec84c08472b7d898e71ee20737202c3ad592"
 
