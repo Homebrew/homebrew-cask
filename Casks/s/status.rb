@@ -2,8 +2,8 @@ cask "status" do
   arch arm: "aarch64", intel: "x86_64"
 
   on_arm do
-    version "2.34.2,03f75f"
-    sha256 "ba0235f5368d580a63efa9ff3bec2eab1ffc7d0deebe009bf5835337e92a4f8d"
+    version "2.34.3,c562f2"
+    sha256 "590c06302535d362b51a614444a2141d9e447bf838a728d1235ac2d20ef8f81f"
 
     url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg",
         verified: "github.com/status-im/status-desktop/releases/download/"
@@ -38,8 +38,6 @@ cask "status" do
       end.flatten
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :monterey"
 
