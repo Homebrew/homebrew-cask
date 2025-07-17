@@ -1,9 +1,9 @@
 cask "jamovi" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.6.44.0"
-  sha256 arm:   "30ac4a36515b937d1c83eb5034d51a06695c079799364b341340c5c51e83ce2f",
-         intel: "9301617a03a0e0edcb9a5113649820ff04161cd367ff6c5135af75ae3fa3964b"
+  version "2.6.45.0"
+  sha256 arm:   "497dfa01cd7f53289a86074cbbc8cc7d049ef17fe45b234f10d0eefb289d3a51",
+         intel: "451368489841e00c28a43d7289043100f120cd9f8288761ee5a1118e2b968c13"
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos-#{arch}.dmg"
   name "jamovi"
@@ -14,8 +14,6 @@ cask "jamovi" do
     url "https://www.jamovi.org/download.html"
     regex(/href=.*?jamovi[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
