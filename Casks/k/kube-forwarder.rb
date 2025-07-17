@@ -11,6 +11,7 @@ cask "kube-forwarder" do
 
   # https://github.com/pixel-point/kube-forwarder/issues/100#issuecomment-1065111816
   deprecate! date: "2024-07-17", because: :unmaintained
+  disable! date: "2025-07-17", because: :unmaintained
 
   app "Kube Forwarder.app"
 

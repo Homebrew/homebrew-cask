@@ -10,6 +10,7 @@ cask "iphoto-library-manager" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-17", because: :discontinued
+  disable! date: "2025-07-17", because: :discontinued
 
   app "iPhoto Library Manager.app"
 
