@@ -1,5 +1,5 @@
 cask "hazeover" do
-  version "1.9.4"
+  version "1.9.6"
   sha256 :no_check
 
   url "https://hazeover.com/HazeOver.dmg"
@@ -11,8 +11,6 @@ cask "hazeover" do
     url "https://hazeover.com/updates.xml"
     strategy :sparkle, &:short_version
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :catalina"
