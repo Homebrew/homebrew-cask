@@ -1,12 +1,10 @@
 cask "font-ark-pixel-10px-proportional" do
-  version "2025.03.14"
-  sha256 "b1bea9912401562b2bd97ccf13c0d5cc250b73e3341de988039c19076e97bb0f"
+  version "2025.07.17"
+  sha256 "33364b885d65f68f62a8fd2839a31df8b305ec4718c155c0a5a7303e69f8f234"
 
   url "https://github.com/TakWolf/ark-pixel-font/releases/download/#{version}/ark-pixel-font-10px-proportional-otf-v#{version}.zip"
   name "Ark Pixel 10px Proportional"
   homepage "https://github.com/TakWolf/ark-pixel-font"
-
-  no_autobump! because: :requires_manual_review
 
   font "ark-pixel-10px-proportional-ja.otf"
   font "ark-pixel-10px-proportional-ko.otf"
