@@ -1,6 +1,6 @@
 cask "splashtop-personal" do
-  version "3.6.6.1"
-  sha256 "e3793df7281f0fac5dfb1111d4de7bd3a5dea3149588a42175aba9dc45c36988"
+  version "3.7.6.0"
+  sha256 "87c46e7918f21af36c0ac7483f7b399fded50fca79ed438c565ce8306e8f7bf4"
 
   url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STP/Splashtop_Personal_Mac_v#{version}.dmg",
       verified: "d17kmd0va0f0mp.cloudfront.net/"
@@ -12,8 +12,6 @@ cask "splashtop-personal" do
     url "https://redirect.splashtop.com/stp-src/mac"
     strategy :header_match
   end
-
-  no_autobump! because: :requires_manual_review
 
   pkg "Splashtop Personal.pkg"
 
