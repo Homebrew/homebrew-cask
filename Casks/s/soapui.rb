@@ -1,9 +1,9 @@
 cask "soapui" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.8.0"
-  sha256 arm:   "2119fe26d55a4b7e1380b2caadbe301e489e8475a45429d47fb1409712edc6fd",
-         intel: "076a5322d5a8f56d814b55d51115b1520221e8206b5f54beb1e0338230a48b22"
+  version "5.9.0"
+  sha256 arm:   "34952cac4d5068cb9b3990b6c4a345740a6bf827e75d0c433fee0fcc760d7630",
+         intel: "66781b74b8d679f1b9ce9d9afd33319080af7964c1c99248361378d58f6544d3"
 
   url "https://dl.eviware.com/soapuios/#{version}/SoapUI-#{arch}-#{version}.dmg",
       verified: "dl.eviware.com/soapuios/"
