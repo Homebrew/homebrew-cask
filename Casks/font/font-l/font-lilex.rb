@@ -1,12 +1,10 @@
 cask "font-lilex" do
-  version "2.600"
-  sha256 "1bcce6df9692897ae71a061e3d2c0b301cf04a777d99f0a29c76521b5a811f4c"
+  version "2.601"
+  sha256 "aa581a14dc581317ab2cfb43098256d7ba61f7b11670084808de859e97e58e58"
 
   url "https://github.com/mishamyrt/Lilex/releases/download/#{version}/Lilex.zip"
   name "Lilex"
   homepage "https://github.com/mishamyrt/Lilex"
-
-  no_autobump! because: :requires_manual_review
 
   font "ttf/Lilex-Bold.ttf"
   font "ttf/Lilex-BoldItalic.ttf"
