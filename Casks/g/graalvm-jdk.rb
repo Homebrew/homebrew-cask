@@ -12,20 +12,15 @@ cask "graalvm-jdk" do
   homepage "https://www.graalvm.org/"
 
   livecheck do
-    url "https://www.oracle.com/java/technologies/downloads/"
-    regex(%r{/otn_software/java/jdk/(\d+(?:\.\d+)*)\+(\d+)/}i)
-    strategy :page_match do |page, regex|
-      major = page.scan(%r{href=.*?/technologies/javase-jdk(\d+)-doc-downloads\.html}i)
-                  .max_by { |match| Version.new(match[0]) }
-                  &.first
-      next if major.blank?
+    url "https://java.oraclecloud.com/currentJavaReleases"
+    regex(/(?:jdk[._-])?(\d+(?:\.\d+)*)(?:-\d+)?\+(\d+)/i)
+    strategy :json do |json, regex|
+      json["items"]&.map do |item|
+        match = item["releaseFullVersion"]&.match(regex)
+        next if match.blank?
 
-      download_page = Homebrew::Livecheck::Strategy.page_content(
-        "https://www.oracle.com/java/technologies/javase-jdk#{major}-doc-downloads.html",
-      )
-      next if (download_page_content = download_page[:content]).blank?
-
-      download_page_content.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+        "#{match[1]},#{match[2]}"
+      end
     end
   end
 
