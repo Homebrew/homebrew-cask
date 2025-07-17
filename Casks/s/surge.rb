@@ -29,10 +29,14 @@ cask "surge" do
             delete:    "/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper"
 
   zap delete: [
+    "~/Library/Application Support/bugsnag-shared-com.nssurge.surge-mac",
+    "~/Library/Application Support/com.bugsnag.Bugsnag/com.nssurge.surge-mac",
     "~/Library/Application Support/com.nssurge.surge-mac",
     "~/Library/Application Support/Surge",
+    "~/Library/Caches/bugsnag-shared-com.nssurge.surge-mac",
     "~/Library/Caches/com.nssurge.surge-mac*",
     "~/Library/HTTPStorages/com.nssurge.surge-mac",
+    "~/Library/HTTPStorages/com.nssurge.surge-mac.binarycookies",
     "~/Library/Logs/Surge",
     "~/Library/Preferences/com.nssurge.surge*",
     "~/Library/Saved Application State/com.nssurge.surge*",
