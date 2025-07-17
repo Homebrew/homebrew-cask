@@ -12,10 +12,13 @@ cask "graalvm-jdk@21" do
   homepage "https://www.graalvm.org/"
 
   livecheck do
-    url "https://docs.oracle.com/en/graalvm/jdk/21/docs/release-notes/"
-    regex(/<strong>v?(\d+(?:\.\d+)+)\+(\d+)[ "<]/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    url "https://java.oraclecloud.com/currentJavaReleases/#{version.major}"
+    regex(/(?:jdk[._-])?(\d+(?:\.\d+)*)(?:-\d+)?\+(\d+)/i)
+    strategy :json do |json, regex|
+      match = json["releaseFullVersion"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
