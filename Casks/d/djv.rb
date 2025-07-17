@@ -16,7 +16,7 @@ cask "djv" do
   depends_on arch: :arm64
 
   app "DJV.app"
-  binary "#{appdir}/Contents/Resources/bin/djv"
+  binary "#{appdir}/DJV.app/Contents/Resources/bin/djv"
 
   zap trash: [
         "~/Documents/DJV/djv.log",
