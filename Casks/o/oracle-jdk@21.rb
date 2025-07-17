@@ -11,8 +11,10 @@ cask "oracle-jdk@21" do
   homepage "https://www.oracle.com/java/technologies/downloads/"
 
   livecheck do
-    url "https://www.oracle.com/java/technologies/javase/#{version.major}u-relnotes.html"
-    regex(/<li>\s*JDK\s*v?(\d+(?:\.\d+)*)/i)
+    url "https://java.oraclecloud.com/currentJavaReleases/#{version.major}"
+    strategy :json do |json|
+      json["releaseVersion"]
+    end
   end
 
   depends_on macos: ">= :mojave"
