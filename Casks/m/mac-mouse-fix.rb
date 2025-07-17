@@ -1,6 +1,6 @@
 cask "mac-mouse-fix" do
-  version "3.0.4"
-  sha256 "c9a8020cf7bfd1e319e1223590650dc65d9f1b4799f669e45c71ac556f21b741"
+  version "3.0.5"
+  sha256 "0defbd9dd452680fc275d2b20fa58c0ba09a7db4e8eea9874ffe98ed8aed0f3f"
 
   url "https://github.com/noah-nuebling/mac-mouse-fix/releases/download/#{version}/MacMouseFixApp.zip",
       verified: "github.com/noah-nuebling/mac-mouse-fix/"
@@ -12,8 +12,6 @@ cask "mac-mouse-fix" do
     url "https://raw.githubusercontent.com/noah-nuebling/mac-mouse-fix/update-feed/appcast.xml"
     strategy :sparkle, &:short_version
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   conflicts_with cask: "mac-mouse-fix@2"
