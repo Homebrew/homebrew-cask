@@ -1,6 +1,6 @@
 cask "surge" do
-  version "6.0.1,7400,cb59cf65ab136785580975a82cc49dbd"
-  sha256 "f316854ddab8575aca759a7d41360b23ead73374aa7ec0777f0efb687acef1ad"
+  version "6.0.2,7400,7560-e67bf53126620427b01e574242e88dc0"
+  sha256 "0be89d7463057f7cb69af1855feb6c5118e3698208483fc1c4791e31158a4cc5"
 
   url "https://dl.nssurge.com/mac/v#{version.major}/Surge-#{version.tr(",", "-")}.zip"
   name "Surge"
@@ -29,10 +29,14 @@ cask "surge" do
             delete:    "/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper"
 
   zap delete: [
+    "~/Library/Application Support/bugsnag-shared-com.nssurge.surge-mac",
+    "~/Library/Application Support/com.bugsnag.Bugsnag/com.nssurge.surge-mac",
     "~/Library/Application Support/com.nssurge.surge-mac",
     "~/Library/Application Support/Surge",
     "~/Library/Caches/com.nssurge.surge-mac*",
+    "~/Library/Caches/bugsnag-shared-com.nssurge.surge-mac",
     "~/Library/HTTPStorages/com.nssurge.surge-mac",
+    "~/Library/HTTPStorages/com.nssurge.surge-mac.binarycookies",
     "~/Library/Logs/Surge",
     "~/Library/Preferences/com.nssurge.surge*",
     "~/Library/Saved Application State/com.nssurge.surge*",
