@@ -1,6 +1,6 @@
 cask "gstreamer-development" do
-  version "1.26.3"
-  sha256 "cdf41d112b93efa42ef21baf0aafbf86572eef38a0eba4c5d5e94140da4bf834"
+  version "1.26.4"
+  sha256 "60688636c121fe051cf2a4419f5644dcb7d0353b452da5fec4597ec5a724e3f2"
 
   url "https://gstreamer.freedesktop.org/data/pkg/osx/#{version}/gstreamer-1.0-devel-#{version}-universal.pkg"
   name "GStreamer development package"
