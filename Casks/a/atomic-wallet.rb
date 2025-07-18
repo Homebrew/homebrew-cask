@@ -1,6 +1,6 @@
 cask "atomic-wallet" do
-  version "2.91.13"
-  sha256 "caa776554a33c82f0dec203a0c535bafc52ce9f66fd771742b157cc1947a487c"
+  version "2.91.14"
+  sha256 "08889d348c33b9f24c8390d38d52f04f219e98ca047109c5f8f90e1f601001cd"
 
   url "https://releases.atomicwallet.io/AtomicWallet-#{version}.dmg"
   name "Atomic Wallet"
