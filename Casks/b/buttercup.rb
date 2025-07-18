@@ -9,7 +9,7 @@ cask "buttercup" do
   homepage "https://buttercup.pw/"
 
   # https://gist.github.com/perry-mitchell/43ebfcec4d874b77a704be1d4f2262e6
-  deprecate! date: "2024-07-17", because: :discontinued
+  deprecate! date: "2025-07-17", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
