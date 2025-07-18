@@ -10,6 +10,7 @@ cask "lightgallery" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-18", because: :unmaintained
+  disable! date: "2025-07-18", because: :unmaintained
 
   app "lightgallery.app"
 
