@@ -1,9 +1,9 @@
 cask "intellij-idea@eap" do
   arch arm: "-aarch64"
 
-  version "2025.2,252.23591.19"
-  sha256 arm:   "cc316053493d8cd31a3cf7bf87de8898075979845461579457ffd8d80f0d5590",
-         intel: "8b8ef2c149e72e7349fc278cd874b1aa7fb886119b455a09060c1f62a6a5158d"
+  version "2025.2,252.23892.248"
+  sha256 arm:   "706d08c58991d16053cd5f51a8898dbcae13666c2dac11ca36cd3b95efec570e",
+         intel: "d571afb1044a2401734be39aca18b93fe48b7cc8f386f7f54bcde5e728b47a46"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.second}#{arch}.dmg"
   name "IntelliJ IDEA EAP"
