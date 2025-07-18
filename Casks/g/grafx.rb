@@ -40,6 +40,8 @@ cask "grafx" do
 
   app "Grafx#{version.major}.app"
 
+  zap trash: "~/Library/Preferences/com.googlecode.grafx2"
+
   caveats do
     requires_rosetta
   end
