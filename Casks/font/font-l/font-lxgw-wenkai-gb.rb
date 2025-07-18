@@ -7,7 +7,10 @@ cask "font-lxgw-wenkai-gb" do
   name "霞鹜文楷 GB"
   homepage "https://github.com/lxgw/LxgwWenkaiGB"
 
-  no_autobump! because: :requires_manual_review
+  livecheck do
+    url :url
+    strategy :github_releases
+  end
 
   font "lxgw-wenkai-gb-v#{version}/LXGWWenKaiGB-Light.ttf"
   font "lxgw-wenkai-gb-v#{version}/LXGWWenKaiGB-Medium.ttf"
