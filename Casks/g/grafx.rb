@@ -24,11 +24,11 @@ cask "grafx" do
       next unless download_id
 
       # Fetch the headers for the download URL
-      download_headers = Homebrew::Livecheck::Strategy.page_headers("https://pulkomandy.tk/projects/GrafX#{version.major}/downloads/#{download_id}")
-      next if download_headers.blank?
+      merged_headers = Homebrew::Livecheck::Strategy.page_headers(
+        "https://pulkomandy.tk/projects/GrafX#{version.major}/downloads/#{download_id}",
+      ).reduce(&:merge)
 
       # Match the version from the filename in the `Content-Disposition` header
-      merged_headers = download_headers.reduce(&:merge)
       version = merged_headers["content-disposition"]&.[](/Grafx\d+\.app.*?v?(\d+(?:\.\d+)+)/i, 1)
       next unless version
 
@@ -39,6 +39,8 @@ cask "grafx" do
   no_autobump! because: :requires_manual_review
 
   app "Grafx#{version.major}.app"
+
+  zap trash: "~/Library/Preferences/com.googlecode.grafx2"
 
   caveats do
     requires_rosetta
