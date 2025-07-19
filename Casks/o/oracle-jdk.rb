@@ -11,20 +11,9 @@ cask "oracle-jdk" do
   homepage "https://www.oracle.com/java/technologies/downloads/"
 
   livecheck do
-    url :homepage
-    regex(/<li>\s*JDK\s*v?(\d+(?:\.\d+)*)/i)
-    strategy :page_match do |page, regex|
-      major = page.scan(%r{href=.*?/javase/(\d+)u-relnotes\.html}i)
-                  .max_by { |match| Version.new(match[0]) }
-                  &.first
-      next if major.blank?
-
-      release_page = Homebrew::Livecheck::Strategy.page_content(
-        "https://www.oracle.com/java/technologies/javase/#{major}u-relnotes.html",
-      )
-      next if (release_page_content = release_page[:content]).blank?
-
-      release_page_content.scan(regex).map { |match| match[0] }
+    url "https://java.oraclecloud.com/currentJavaReleases"
+    strategy :json do |json|
+      json["items"]&.filter_map { |item| item["releaseVersion"] }
     end
   end
 
