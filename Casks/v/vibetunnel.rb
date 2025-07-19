@@ -1,6 +1,6 @@
 cask "vibetunnel" do
-  version "1.0.0-beta.12"
-  sha256 "4af1e2b7d976be3ba3597a0233768bbc2a8b853bc6f62aeca31f8a21673cbe0e"
+  version "1.0.0-beta.13"
+  sha256 "b4eecb85a2b07fc080f923d3b1aec6e76729bb65364d93084c028a244c296df4"
 
   url "https://github.com/amantus-ai/vibetunnel/releases/download/v#{version}/VibeTunnel-#{version}.dmg",
       verified: "github.com/amantus-ai/vibetunnel/"
