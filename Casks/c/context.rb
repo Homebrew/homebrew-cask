@@ -1,6 +1,6 @@
 cask "context" do
-  version "1.0.9"
-  sha256 "fcef0dcfd26efce4da7046844186070a75b634d773217d5f6c098a3dc36d9e04"
+  version "1.0.10"
+  sha256 "40279911df2fd5177c5c85f9fe2a0d7bc2b0ab4b0fab36f07b477e82f0eb751a"
 
   url "https://github.com/indragiek/Context/releases/download/v#{version}/Context_v#{version}.dmg",
       verified: "github.com/indragiek/Context/"
