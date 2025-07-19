@@ -16,8 +16,8 @@ cask "sf-symbols" do
     end
   end
   on_ventura :or_newer do
-    version "6"
-    sha256 "846e90ca274d56d234a573baf7ca0656c1b86b0cbc5d6af6ee713261250c84fa"
+    version "7"
+    sha256 "8507bf849a87e204fda33c7e9ca7eb84b96e04a618de443dfdc321e5b97974ad"
 
     livecheck do
       url "https://developer.apple.com/sf-symbols/"
