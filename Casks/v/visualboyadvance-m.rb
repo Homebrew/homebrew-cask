@@ -1,9 +1,9 @@
 cask "visualboyadvance-m" do
   arch arm: "ARM64", intel: "x86_64"
 
-  version "2.2.0"
-  sha256 arm:   "3b8e586d433fa7c7ae6e5b3b979a9ad09a1e948ae102fac897ac92cf8f92390d",
-         intel: "cdfde0dfc234976c1bf432701217eb519604fff60817f9e81f1b7b0f698a72c0"
+  version "2.2.1"
+  sha256 arm:   "c4486e7cf7daf5fa40babf44f369c350cc6cc9945703615b5a2d68aff5db46cc",
+         intel: "5078da6545c660ed8c7b2d22598120677e0b227ec1eb4407f07fa10525c3fd1c"
 
   url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac-#{arch}.zip",
       verified: "github.com/visualboyadvance-m/visualboyadvance-m/"
