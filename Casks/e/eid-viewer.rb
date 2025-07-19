@@ -20,6 +20,7 @@ cask "eid-viewer" do
   end
 
   depends_on macos: ">= :high_sierra"
+  depends_on cask: "beid-token"
 
   app "eID Viewer.app"
   # No zap stanza required
