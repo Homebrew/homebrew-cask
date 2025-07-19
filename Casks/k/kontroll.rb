@@ -6,7 +6,6 @@ cask "kontroll" do
   name "Kontroll"
   desc "Keyboard layout switcher for ZSA keyboards"
   homepage "https://github.com/zsa/kontroll"
-  license "MIT"
 
   binary "kontroll"
 end
