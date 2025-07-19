@@ -9,7 +9,7 @@ cask "privatevpn" do
 
   livecheck do
     url "https://privatevpn.com/why-privatevpn/view-our-software/"
-    regex(/Mac\s*OS(?:\s+X)?\s+VPN\s+App\s+(?:Version\s+)?v?(\d+(?:\.\d+)+)/i)
+    regex(/\\"macVersion\\"\s*:\s*\\"(\d+(?:\.\d+)+)\\"/i)
   end
 
   no_autobump! because: :requires_manual_review
