@@ -37,4 +37,17 @@ cask "headlamp" do
     "~/Library/Logs/Headlamp",
     "~/Library/Preferences/com.kinvolk.headlamp.plist",
   ]
+
+  caveats <<~EOS
+    ⚠️  MacOS may report Headlamp as being 'damaged' or 'corrupt'.
+
+    Code signing under Kubernetes/CNCF is still being finalized, after the
+    project's move under the Kubernetes SIG UI.
+
+    In the meantime, you may need to run:
+      xattr -dr com.apple.quarantine /Applications/Headlamp.app
+
+    For updates and full instructions, visit:
+      https://headlamp.dev/docs/latest/installation/desktop/
+  EOS
 end
