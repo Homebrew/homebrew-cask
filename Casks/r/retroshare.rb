@@ -12,7 +12,7 @@ cask "retroshare" do
   # the `version` when necessary.
   livecheck do
     url "https://retroshare.cc/downloads.html"
-    regex(%r{/v?(\d+(?:\.\d+)+)/Retroshare[._-]v?(\d+(?:\.\d+)+[a-z]?)+(?:[._-]([^"' >]*?))?\.dmg}i)
+    regex(%r{/v?(\d+(?:\.\d+)+)/Retroshare[._-]v?(\d+(?:\.\d+)+[a-z]?)(?:[._-]([^"' >]*?))?\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         if match[2] && (match[0] != match[1])
