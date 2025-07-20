@@ -9,7 +9,7 @@ cask "creative" do
 
   livecheck do
     url "https://support.creative.com/Products/ProductDetails.aspx?catID=1&subCatID=1258&prodID=23677"
-    regex(/Creative\s(\d+(?:[._]\d)+)\sbuild\s(\d+(?:\d)+)+\.zip/i)
+    regex(/Creative\s+v?(\d+(?:[._]\d)+)\s+build\s+(\d+(?:\.\d+)*)\.zip/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
