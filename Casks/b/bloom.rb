@@ -7,12 +7,17 @@ cask "bloom" do
   desc "File manager"
   homepage "https://bloomapp.club/"
 
-  depends_on macos: ">= :sonoma"
-
   livecheck do
     url "https://bloomapp.club/downloads/bloom/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :sonoma"
+
   app "Bloom.app"
+
+  zap trash: [
+    "~/Library/Containers/com.asiafu.Bloom",
+    "~/Library/Preferences/com.asiafu.Bloom.plist",
+  ]
 end
