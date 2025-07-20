@@ -55,7 +55,7 @@ cask "onyx" do
     end
   end
   on_sequoia :or_newer do
-    version "4.8.1"
+    version "4.8.2"
 
     url "https://www.titanium-software.fr/download/15/OnyX.dmg"
 
