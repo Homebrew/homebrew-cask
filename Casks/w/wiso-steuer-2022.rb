@@ -24,7 +24,7 @@ cask "wiso-steuer-2022" do
   depends_on macos: ">= :mojave"
 
   # Renamed for consistency: app name differs in Finder to shell
-  app "SteuerMac 2022.app", target: "WISO Steuer-Mac 2022.app"
+  app "SteuerMac 2022.app", target: "WISO Steuer 2022.app"
 
   zap trash: [
     "~/Library/Application Support/BuhlData.com/WISOsteuerMac2022",
