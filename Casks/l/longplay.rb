@@ -1,6 +1,6 @@
 cask "longplay" do
-  version "1.0.2,479"
-  sha256 "87fc2b682a427ae32c8e9043ab25f4dc90ea5cc4ff80f9d69003b81a6786249d"
+  version "1.0.3,481"
+  sha256 "35ed29273a289af201339d794f9eefc7e66410dc7e1a0a6cfcd15dca26a59270"
 
   url "https://download.longplay.app/mac/longplay-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "download.longplay.app/"
