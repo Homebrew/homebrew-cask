@@ -13,10 +13,10 @@ cask "microsoft-openjdk" do
 
   livecheck do
     url "https://docs.microsoft.com/java/openjdk/download"
-    regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.pkg}i)
+    regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.pkg}i)
   end
 
-  pkg "microsoft-jdk-#{version}-macOS-#{arch}.pkg"
+  pkg "microsoft-jdk-#{version}-macos-#{arch}.pkg"
 
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"
 
