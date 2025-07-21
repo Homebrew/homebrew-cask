@@ -8,11 +8,11 @@ cask "copyclip" do
   homepage "https://fiplab.com/apps/copyclip-for-mac"
 
   livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/ffb43606-0eb3-79c0-cb23-097402e92379"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :extract_plist do |item|
+      item["com.fiplab.copyclip#{version.major}"]&.short_version
+    end
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
