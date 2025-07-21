@@ -9,9 +9,15 @@ cask "conductor" do
   homepage "https://conductor.build/"
 
   livecheck do
-    url :url
-    regex(/Conductor[._-](\d+(?:\.\d+)+)/i)
-    strategy :header_match
+    url "https://cdn.crabnebula.app/update/melty/conductor/darwin-aarch64/latest"
+    regex(%r{cdn.crabnebula.app/asset/(.+)}i)
+    strategy :json do |json, regex|
+      asset_id = json["url"]&.[](regex, 1)
+      version = json["version"]
+      next if asset_id.blank? || version.blank?
+
+      "#{version},#{asset_id}"
+    end
   end
 
   depends_on arch: :arm64
