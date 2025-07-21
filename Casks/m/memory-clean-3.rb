@@ -9,11 +9,11 @@ cask "memory-clean-3" do
   homepage "https://fiplab.com/apps/memory-clean-3-for-mac"
 
   livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/386e625b-eaba-4248-8398-1802cf24cbb2"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :extract_plist do |item|
+      item["com.fiplab.memoryclean3"]&.short_version
+    end
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
 
