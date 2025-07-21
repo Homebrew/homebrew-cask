@@ -1,6 +1,6 @@
 cask "youlean-loudness-meter" do
-  version "2.5.11,2025,07"
-  sha256 "f360b6b5a7859504cb9358ae5d93715982b96a1a43e3526c26b03c19c575c894"
+  version "2.5.12,2025,07"
+  sha256 "484f6024d3bcc61b3ca0ce057829fd75e6718e02ad2047a8df7d2ebdfd21ccb7"
 
   url "https://cdn.youlean.co/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/Youlean-Loudness-Meter-#{version.major}-V#{version.csv.first}-macOS.dmg"
   name "Youlean Loudness Meter"
@@ -14,8 +14,6 @@ cask "youlean-loudness-meter" do
       page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
 
