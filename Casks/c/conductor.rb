@@ -1,9 +1,9 @@
 cask "conductor" do
-  version "0.0.18"
-  sha256 :no_check
+  version "0.0.18,01K0HGTBY3RKRN45NSK8PCNEP4"
+  sha256 "5cbf3d2ca0897e0a6a6b0e8565d896c612efc9c7e98c40e935c25416c6d9269e"
 
-  url "https://cdn.crabnebula.app/download/melty/conductor/latest/platform/dmg-aarch64",
-      verified: "cdn.crabnebula.app/download/melty/conductor/"
+  url "https://cdn.crabnebula.app/asset/#{version.csv.second}",
+      verified: "cdn.crabnebula.app/asset/"
   name "Conductor"
   desc "Claude code parallelisation"
   homepage "https://conductor.build/"
