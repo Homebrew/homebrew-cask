@@ -1,6 +1,6 @@
 cask "elemental@6" do
-  version "6.5.0"
-  sha256 "765b80d11bcdf6b558526ab9f7dc4811e0183917447b5c19a722da84ee969b54"
+  version "6.6.0"
+  sha256 "04f897ab56f9070e45d52b32c2bec930f9aea7e0a870dc2f041a4f4bdee6ccb9"
 
   url "https://github.com/evolvedbinary/elemental/releases/download/elemental-#{version}/elemental-#{version}.dmg",
       verified: "github.com/evolvedbinary/elemental/"
@@ -12,8 +12,6 @@ cask "elemental@6" do
     url :url
     regex(/^elemental[._-]v?(6(?:\.\d+)+)$/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "Elemental.app"
 
