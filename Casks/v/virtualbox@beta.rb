@@ -1,9 +1,9 @@
 cask "virtualbox@beta" do
   arch arm: "macOSArm64", intel: "OSX"
 
-  version "7.1.13-169671"
-  sha256 arm:   "b52b3d71c23b4b06a601713ff94f493814f7aa29281135166992e680bcd88cc4",
-         intel: "faf84474833908b830e426515f04c1c78cdfc88c048cd16fa4d114e1e06da519"
+  version "7.1.13-169791"
+  sha256 arm:   "0274a27d0446d6cff3d480bc23b78d5053c063bd26c9d2b7fd730749c59d06ef",
+         intel: "a56b5c51228f88aff7258bbb84652c94a22624969c083727b57f7e2c223460cb"
 
   on_arm do
     desc "Virtualiser for arm64 hardware"
