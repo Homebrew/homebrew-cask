@@ -1,6 +1,6 @@
 cask "minecraft-education" do
-  version "1.21.10.0"
-  sha256 "08cacdc36846a5b238a503d754799e55cc05dc7022ea034dcd26182c30070edf"
+  version "1.21.91.1"
+  sha256 "c327fed9cdf3803d598453861009e6244a33d9fef2ea8ccf0a33a44c2d1da5cc"
 
   url "https://downloads.minecrafteduservices.com/retailbuilds/MacOS/Minecraft_Education_#{version}.dmg",
       verified: "downloads.minecrafteduservices.com/"
