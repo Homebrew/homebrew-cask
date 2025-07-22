@@ -8,11 +8,11 @@ cask "vox" do
   homepage "https://vox.rocks/mac-music-player"
 
   livecheck do
-    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/bcf930e2-32da-0f52-2b12-6c3557ba50d7"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :extract_plist do |item|
+      item["com.coppertino.Vox"]&.short_version
+    end
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :catalina"

@@ -1,6 +1,6 @@
 cask "raspberry-pi-imager" do
-  version "1.9.5"
-  sha256 "0164576f0803cbd48f00757c8496ab81a204dfc6151fad0b8b286232633c4b9b"
+  version "1.9.6"
+  sha256 "951e0443cddf3553219d53408ac4ec2d205911c9dfed5e5496862a0fd3296a2f"
 
   url "https://github.com/raspberrypi/rpi-imager/releases/download/v#{version}/rpi-imager-#{version}.dmg",
       verified: "github.com/raspberrypi/rpi-imager/"
@@ -12,8 +12,6 @@ cask "raspberry-pi-imager" do
     url :url
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "Raspberry Pi Imager.app"
 

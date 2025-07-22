@@ -11,9 +11,9 @@ cask "github" do
     end
   end
   on_catalina :or_newer do
-    version "3.5.1-42a2e52a"
-    sha256 arm:   "e74f7d8f57e9d9baef5a5614016d4e331a6d7f209f2bb97db79b8d369bfe5944",
-           intel: "98befee119b412abbef4402c1945c2060439d6088f78425d9e7b1fd19d4c782e"
+    version "3.5.2-14087268"
+    sha256 arm:   "c44c80c8197ae11a3e6029232a28aaa9f3a1f8c1cafde238681fdae97b944c5e",
+           intel: "26ab82296b66aff53aecc7baa71d423364edbcb98d675059a28260e97e55e444"
 
     livecheck do
       url "https://central.github.com/deployments/desktop/desktop/latest/#{platform}"

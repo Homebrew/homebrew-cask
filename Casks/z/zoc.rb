@@ -1,6 +1,6 @@
 cask "zoc" do
-  version "9.01.2"
-  sha256 "2accec46ce2dddb6e0cddf424c92c46b18cd040f777c4e9f5b3a79302766e23d"
+  version "9.01.3"
+  sha256 "51585f8fbea1b4b5f663556b1bbc04b372632dd8d1531a50f0764fe64ffa4583"
 
   url "https://www.emtec.com/downloads/zoc/zoc#{version.no_dots}.dmg"
   name "ZOC"

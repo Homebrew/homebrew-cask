@@ -1,9 +1,9 @@
 cask "microsoft-openjdk@17" do
   arch arm: "aarch64", intel: "x64"
 
-  version "17.0.15"
-  sha256 arm:   "e3ab4454de65c94399e8e8d1e05c1a5f9b271b36d045f0fd2d96252d95fe0f15",
-         intel: "90f6fe9464b9c383af3249807e41f8a72dca1edd4d60d1837d40ac4ac880ff11"
+  version "17.0.16"
+  sha256 arm:   "7a23c079c6d7f5ea5847254abebe7d51014f3052bfb9dbc8d8a5ba12e489d610",
+         intel: "38f119a5f23299b07aad73c9cbb6580fb800ee7f03e60f1827fd1e43e3294358"
 
   url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg",
       verified: "aka.ms/download-jdk/"
@@ -13,12 +13,12 @@ cask "microsoft-openjdk@17" do
 
   livecheck do
     url "https://docs.microsoft.com/java/openjdk/download"
-    regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(17(?:\.\d+)+)[._-]macOS[._-]#{arch}\.pkg}i)
+    regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(17(?:\.\d+)+)[._-]macos[._-]#{arch}\.pkg}i)
   end
 
   no_autobump! because: :requires_manual_review
 
-  pkg "microsoft-jdk-#{version}-macOS-#{arch}.pkg"
+  pkg "microsoft-jdk-#{version}-macos-#{arch}.pkg"
 
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"
 
