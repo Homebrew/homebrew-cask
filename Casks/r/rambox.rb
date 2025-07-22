@@ -1,14 +1,12 @@
 cask "rambox" do
-  version "2.4.1"
-  sha256 "b54c7a650e94eb80961bf1b1f476a12e0519f037a3181f73a6a7c4227751ff90"
+  version "2.5.0"
+  sha256 "68a21d55d7d8251ef87e6b1de18743b7e4d5a3faf078415d7c0faf326df2f7c9"
 
   url "https://github.com/ramboxapp/download/releases/download/v#{version}/Rambox-#{version}-mac.zip",
       verified: "github.com/ramboxapp/download/"
   name "Rambox"
   desc "Workspace simplifier - to organize your workspace and boost your productivity"
   homepage "https://rambox.app/"
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :catalina"
