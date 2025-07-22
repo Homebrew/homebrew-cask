@@ -1,8 +1,8 @@
 cask "catlight" do
-  version "3.8.3"
-  sha256 "57cecfff32cbc12e9c7a2c761306e34895909d2474bff3d1affc6e8827e94908"
+  version "3.8.4"
+  sha256 "866c6e3f72ccbb81b9af1ac6864e22ff5773991002d391c78e20fcaf8a05d10e"
 
-  url "https://download.catlight.io/rel/mac/release/CatLightSetup-#{version}.zip",
+  url "https://download.catlight.io/rel/mac/release/CatLightSetup-#{version}.dmg",
       user_agent: :fake
   name "CatLight"
   desc "Action center for developers"
