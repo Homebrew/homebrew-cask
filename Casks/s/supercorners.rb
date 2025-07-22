@@ -14,8 +14,7 @@ cask "supercorners" do
 
   auto_updates true
   depends_on macos: ">= :ventura"
-
-  license "GPL-3.0-or-later"
+  
   app "SuperCorners.app"
 
 uninstall quit: "daniyalmaster.SuperCorners"
