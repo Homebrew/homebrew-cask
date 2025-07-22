@@ -12,15 +12,15 @@ cask "open-tv" do
     strategy :github_latest
   end
 
-  app "Open TV.app"
-
   depends_on formula: "mpv"
   depends_on formula: "ffmpeg"
   depends_on formula: "yt-dlp"
   depends_on macos: ">= :high_sierra"
 
+  app "Open TV.app"
+
   zap trash: [
     "~/Library/Application Support/dev.fredol.open-tv",
-    "~/Library/Caches/dev.fredol.open-tv",pp
+    "~/Library/Caches/dev.fredol.open-tv", pp
   ]
 end
