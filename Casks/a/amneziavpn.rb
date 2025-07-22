@@ -28,7 +28,7 @@ cask "amneziavpn" do
 
   pkg "AmneziaVPN_#{version}_macos.pkg"
 
-  uninstall launchctl: ["AmneziaVPN-service", "AmneziaVPN (AmneziaVPN-service)"],
+  uninstall launchctl: ["AmneziaVPN-service", "AmneziaVPN"],
             quit:      "AmneziaVPN",
             pkgutil:   "org.amneziavpn.package"
 
