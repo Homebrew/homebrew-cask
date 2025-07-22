@@ -50,6 +50,20 @@ cask "gcloud-cli" do
     unless (latest_path = staged_path.dirname/"latest").directory?
       FileUtils.ln_s staged_path, latest_path, force: true
     end
+    # Install required external dependencies via virtualenv
+    if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
+      puts "deleting existing virtual env before enabling virtual env with current Python version"
+      system_command "#{google_cloud_sdk_root}/bin/gcloud",
+                     args: ["config", "virtualenv", "delete", "-q"]
+    end
+    system_command  "#{google_cloud_sdk_root}/bin/gcloud",
+                    args: ["config", "virtualenv", "create", "--python-to-use",
+                           "#{HOMEBREW_PREFIX}/opt/python@3.12/libexec/bin/python3"]
+    system_command  "#{google_cloud_sdk_root}/bin/gcloud",
+                    args: ["config", "virtualenv", "enable"]
+
+    system_command  "#{google_cloud_sdk_root}/bin/gcloud",
+                    args: ["version"]
   end
 
   uninstall trash: staged_path.dirname/"latest"
