@@ -1,6 +1,6 @@
 cask "soundtoys" do
-  version "5.4.3.17500"
-  sha256 "0c1427c2a4172cd943f37e5a1753dd87023d620a75aecb2c0107f63a9f1ad5dc"
+  version "5.5.2.18740"
+  sha256 "d06bbe5fb012be144a9f2a180c56dcb606c8be6b4ea4b1d63569d24ae933635c"
 
   url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/SoundtoysV#{version.major_minor.no_dots}Bundle_#{version}.dmg",
       verified: "storage.googleapis.com/soundtoys-download/versions/"
@@ -18,8 +18,6 @@ cask "soundtoys" do
       end
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 
