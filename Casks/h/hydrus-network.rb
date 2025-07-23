@@ -1,6 +1,6 @@
 cask "hydrus-network" do
-  version "630"
-  sha256 "f700a5782e4edb3d0753159f90ec7e1755057a4415b6b42edb803d5691956649"
+  version "631"
+  sha256 "fabdb7b36f018da0f4afc71fa833eff1a6cd4980be590f750ecd15b47f86390c"
 
   url "https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.-.App.zip",
       verified: "github.com/hydrusnetwork/hydrus/"
@@ -13,6 +13,8 @@ cask "hydrus-network" do
     regex(/v?(\d+(?:\.\d+)*[a-z]?)/i)
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Hydrus Network.app"
 
