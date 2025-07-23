@@ -1,9 +1,9 @@
 cask "5ire" do
   arch arm: "-arm64"
 
-  version "0.13.0"
-  sha256 arm:   "672fd0f84098c9ccaeb5edaad371d6ee23757b9f1de2d6851d9de99ce7a00cae",
-         intel: "6270d3be08036973053a8a0680a7e40a88b4b6fd172b1241db0adfffc8226608"
+  version "0.13.2"
+  sha256 arm:   "7601234c03027f654747d4ba9e05217aea59b7a68a17a0ab9c691f90956a6ed3",
+         intel: "563b2a915138db57e40278d279edc361087bb231629a3cc8819f899e5e32448e"
 
   url "https://github.com/nanbingxyz/5ire/releases/download/v#{version}/5ire-#{version}#{arch}.dmg",
       verified: "github.com/nanbingxyz/5ire/"
