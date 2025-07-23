@@ -1,9 +1,9 @@
 cask "electron" do
   arch arm: "arm64", intel: "x64"
 
-  version "37.2.3"
-  sha256 arm:   "134e2ec499d5b1e7c63c0b3c8a1389555a4384f6efc7a3749daebff8d4c634ba",
-         intel: "bed936d54fb1eb31712ed34c22e772392bcaf85f1d41f12653a027822c305383"
+  version "37.2.4"
+  sha256 arm:   "9afb0df95873270ab62865302cdae252dcdb1c4d785735c17361885c5ca3189f",
+         intel: "d0382b5f309ca5693c84d0870dd856b0113d504c17cbf0a2cf5718749d1e8873"
 
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
       verified: "github.com/electron/electron/"
@@ -15,6 +15,8 @@ cask "electron" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :big_sur"
 
