@@ -28,6 +28,7 @@ cask "zed@preview" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zed.zed-preview.sfl*",
     "~/Library/Application Support/Zed",
     "~/Library/Caches/dev.zed.Zed-Preview",
+    "~/Library/Caches/Zed",
     "~/Library/HTTPStorages/dev.zed.Zed-Preview",
     "~/Library/Logs/Zed",
     "~/Library/Preferences/dev.zed.Zed-Preview.plist",
