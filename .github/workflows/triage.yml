@@ -31,6 +31,10 @@ jobs:
               path: Casks/.+
               content: \n  disable!.*\n
 
+            - label: unsigned
+              path: Casks/.+
+              content: \n  (deprecate|disable)!.*:unsigned\n
+
             - label: new cask
               status: added
               path: Casks/.+
