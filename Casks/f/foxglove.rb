@@ -1,6 +1,6 @@
 cask "foxglove" do
-  version "2.31.2"
-  sha256 "5ebc58b4b0bb97b0cd5c298618666e0fe16ba613d5f9c1ecb9c33e30dd5cfacc"
+  version "2.32.0"
+  sha256 "9c69b457cc9d2d7e64d6f763987c5388ca7bfdb35b100ae3530d579e385d8f42"
 
   url "https://get.foxglove.dev/desktop/latest/foxglove-#{version}-mac-universal.dmg"
   name "Foxglove"
