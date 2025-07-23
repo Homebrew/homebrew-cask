@@ -1,6 +1,6 @@
 cask "vezer" do
-  version "1.9.6,776v2"
-  sha256 "8e2f656f527d1ff410d0f7f594c3922e14105b5eda3f184e8e5e2f02f175b431"
+  version "1.9.7,783"
+  sha256 "f4b6ab08384a25492b71b1efa52a9e1599dfd8c8cc11802e3ba11e0b2cc96436"
 
   url "https://dl.imimot.com/Vezer#{version.csv.first}_#{version.csv.second}.zip"
   name "Vezér"
@@ -17,8 +17,6 @@ cask "vezer" do
       "#{item.short_version},#{match[1]}"
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
