@@ -1,6 +1,6 @@
 cask "linearmouse" do
-  version "0.10.0"
-  sha256 "21cd1d11010dd5eefc1ff3368ce8366c4114f99b59ea737aca4309f9d6fb69f1"
+  version "0.10.1"
+  sha256 "94f8318c693898afd6ac8c471e08b40d76c9b1c3191fc995fa8159c25b2f25fb"
 
   url "https://dl.linearmouse.org/v#{version}/LinearMouse.dmg"
   name "LinearMouse"
@@ -13,8 +13,6 @@ cask "linearmouse" do
       items.find { |item| item.channel.nil? }&.nice_version
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   conflicts_with cask: "linearmouse@beta"
