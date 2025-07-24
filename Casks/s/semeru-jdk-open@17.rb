@@ -1,9 +1,9 @@
 cask "semeru-jdk-open@17" do
   arch arm: "aarch64", intel: "x64"
 
-  version "17.0.15+6,openj9-0.51.0"
-  sha256 arm:   "05fe1b0843b0075847439caea05bd18ce3d2ada6742f46687d5cd40dd7bd4c68",
-         intel: "1e27dfd000b7d0c4abb3c958002344251b57ac1d107d563f5ac629d25dc64223"
+  version "17.0.16+8,openj9-0.53.0"
+  sha256 arm:   "a1743905e136545fddd9fa72950faa729986be5bb20256397e3c78364781e6d9",
+         intel: "75871f58d87de53a03f63fec9ce570c40fc2c7d359b8cf24d71a7f608a976813"
 
   url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version.csv.first}_#{version.csv.second}/ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first.tr("+", "_")}_#{version.csv.second}.pkg",
       verified: "github.com/ibmruntimes/semeru#{version.major}-binaries/"
