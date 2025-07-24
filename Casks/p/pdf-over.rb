@@ -2,9 +2,9 @@ cask "pdf-over" do
   arch arm: "aarch64", intel: "x86_64"
   folder = on_arch_conditional arm: "pdf-over-for-macos-aarch64/", intel: "pdf-over-mac/"
 
-  version "4.4.6"
-  sha256 arm:   "f79ee468b6947fe42a83ed7c0523355a229cef3c6d41ba1215c25584dbb0fbbc",
-         intel: "b12ec8f66b477958602b477e0ca3b20f792655e1178cdd97cab1742afc40b156"
+  version "4.4.6.1"
+  sha256 arm:   "0e3d3faee6fdabcd1ea2e863eb66dd247f7a7d952497f1bd0c746cf5b78f35ec",
+         intel: "6c1f2424ed851343dd9a7c336f84731faac503b14ab6203dd66fa41a1bb027e7"
 
   url "https://technology.a-sit.at/download/#{folder}?version=#{version.dots_to_hyphens}"
   name "PDF-Over"
@@ -16,8 +16,6 @@ cask "pdf-over" do
     regex(/PDF[._-]Over[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
     strategy :header_match
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "PDF-Over.app"
 
