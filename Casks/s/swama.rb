@@ -1,6 +1,6 @@
 cask "swama" do
-  version "1.4.1"
-  sha256 "7a2d7c56d923d72060d243b0199a5a6a2713bc32af6e1d5373c439a234662539"
+  version "1.4.2"
+  sha256 "a7525c2a432d8bb81bc6c94939940e38b78b84c7d72ec0842e08e64c70b8c53d"
 
   url "https://github.com/Trans-N-ai/swama/releases/download/v#{version}/Swama.dmg"
   name "Swama"
