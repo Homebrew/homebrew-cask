@@ -10,6 +10,7 @@ cask "replay" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-24", because: :discontinued
+  disable! date: "2025-07-24", because: :discontinued
 
   depends_on macos: ">= :sierra"
 
