@@ -1,6 +1,6 @@
 cask "mycard" do
-  version "3.0.72"
-  sha256 "9b1cca6457ceaacfb8462a3d74139d88b7837accbe66b779a4e5ba4bfe4a5698"
+  version "3.0.73"
+  sha256 "39e0d1cd67e359311bd1c3c407cd4de0871ba1342f982a36e72efc24d66b4d50"
 
   url "https://cdn02.moecube.com:444/downloads/MyCard-#{version}.dmg",
       verified: "cdn02.moecube.com:444/downloads/"
@@ -12,8 +12,6 @@ cask "mycard" do
     url "https://cdn02.moecube.com:444/downloads/latest-mac.yml"
     strategy :electron_builder
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "MyCard.app"
 
