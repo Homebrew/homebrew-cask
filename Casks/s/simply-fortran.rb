@@ -13,8 +13,8 @@ cask "simply-fortran" do
     on_ventura :or_older do
       arch arm: "x86_64", intel: "x86_64"
 
-      version "3.40.4427"
-      sha256 "d03a9976cbf63f3fe313e372272bb512e6b6cbef7432e43cfa66034a522909fd"
+      version "3.41.4435"
+      sha256 "21d49f3bfbaa2d525c7f8e09f11b6d72d06ffb5fab1094b11d47492a8bb25f65"
 
       caveats do
         requires_rosetta
@@ -24,9 +24,9 @@ cask "simply-fortran" do
   on_sonoma :or_newer do
     arch arm: "arm64", intel: "x86_64"
 
-    version "3.40.4427"
-    sha256 arm:   "f0b099c692601e35213cf8604eaf303e9d10bc21ef097e491e9e2eb7a9e76a89",
-           intel: "d03a9976cbf63f3fe313e372272bb512e6b6cbef7432e43cfa66034a522909fd"
+    version "3.41.4435"
+    sha256 arm:   "0c5fc357519220b745c078bba688fecedb5f21f97cce328c7105d5f5ba0cbd2f",
+           intel: "21d49f3bfbaa2d525c7f8e09f11b6d72d06ffb5fab1094b11d47492a8bb25f65"
   end
 
   url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}-#{arch}.dmg"
@@ -39,7 +39,7 @@ cask "simply-fortran" do
     regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Simply Fortran.app"
 
