@@ -1,6 +1,6 @@
 cask "sonos-s1-controller" do
-  version "57.22-59130,72ynP0v9lu"
-  sha256 "18d8e7f79db9ab0951846d8f1c94d4a92cf3e6426f94dc7ee40a552a349f8443"
+  version "57.22-67080,yNhAXS5QQR"
+  sha256 "7bbcb1bb2c6f6b147e916c72858955c3b055595dc81b02b05d8ede9c1a47cf21"
 
   url "https://update-software.sonos.com/software/#{version.csv.second}/Sonos_#{version.csv.first}.dmg"
   name "Sonos S1"
@@ -17,8 +17,6 @@ cask "sonos-s1-controller" do
       "#{match[2]},#{match[1]}"
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
 
