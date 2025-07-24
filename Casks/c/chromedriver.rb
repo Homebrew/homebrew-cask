@@ -1,9 +1,13 @@
 cask "chromedriver" do
   arch arm: "arm64", intel: "x64"
 
-  version "138.0.7204.157"
-  sha256 arm:   "97ea371992949bf03eadacc8c4361524bb2d5ee1a247118632681ec003ff1621",
-         intel: "64a34403c35d0b7fe10207ff25b37b9abea8044bc2d603fbc1c8c99b8ac257a4"
+  version "138.0.7204.168"
+  sha256 arm:   "c64e1ad395a310c8db4926b335618ef32a03acdc6c69a29d61f0146486b6dc13",
+         intel: "26fc85d280f5563a08e736e99fcdbd98f817ac80d6c032c4afdf89f32257ce75"
+
+  on_intel do
+    disable! date: "2026-09-01", because: :unsigned
+  end
 
   url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip",
       verified: "storage.googleapis.com/chrome-for-testing-public/"
