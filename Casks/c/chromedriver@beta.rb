@@ -5,6 +5,10 @@ cask "chromedriver@beta" do
   sha256 arm:   "4374f53a4eb2f6164edb500077c5ba66784a46197fc874f8ad5c0d91afad09dd",
          intel: "c25afc33fbb50d8809a85e157105a79c8bac8994a472d3c040639b5baf8fd913"
 
+  on_intel do
+    disable! date: "2026-09-01", because: :unsigned
+  end
+
   url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip",
       verified: "storage.googleapis.com/chrome-for-testing-public/"
   name "ChromeDriver"
