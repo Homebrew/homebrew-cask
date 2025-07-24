@@ -46,9 +46,9 @@ cask "mysql-shell" do
     end
   end
   on_ventura :or_newer do
-    version "9.3.0,15"
-    sha256 arm:   "b29997e07d592e8c71a3ee9f5eddad8dcf19dbd204a35206ed448390c18002a8",
-           intel: "3bcb91f5a963b46f508e83c202d3103d7967764ab7407cd1c773f380d8235f51"
+    version "9.4.0,15"
+    sha256 arm:   "dfa62764f15057c082954252407b1a07379a64fbebdcb90b5cd7ca115dcb1082",
+           intel: "6289abc130bd9830f05cb97d134a1a0a68d01e81a0daa17d09d48306b50b0e30"
 
     url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg",
         user_agent: "curl/8.7.1"
@@ -65,8 +65,6 @@ cask "mysql-shell" do
   name "MySQL Shell"
   desc "Interactive JavaScript, Python or SQL interface"
   homepage "https://dev.mysql.com/downloads/shell/"
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 
