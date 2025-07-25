@@ -4,7 +4,7 @@ cask "audio-modeling-software-center" do
 
   url "https://static.audiomodeling.com/software_center/AudioModelingSoftwareCenter-#{version}-osx-installer.dmg"
   name "Audio Modeling Software Center"
-  desc "Application for downloading, installing and updating Audio Modeling desktop products"
+  desc "Application for downloading, installing and updating Audio Modeling software"
   homepage "https://audiomodeling.com/"
 
   livecheck do
@@ -12,14 +12,17 @@ cask "audio-modeling-software-center" do
     regex(/AudioModelingSoftwareCenter[._-](\d+(?:\.\d+)+-\d+)-osx-installer\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   installer script: {
     executable: "AudioModelingSoftwareCenter-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
-    args: ["--mode", "unattended"],
+    args:       ["--mode", "unattended"],
     sudo:       true,
   }
 
   uninstall script: {
     executable: "/Applications/Audio Modeling/Software Center/uninstall.app/Contents/MacOS/installbuilder.sh",
+    args:       ["--mode", "unattended"],
     sudo:       true,
   }
 
