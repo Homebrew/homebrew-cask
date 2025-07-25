@@ -21,6 +21,8 @@ cask "86box" do
     end
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   depends_on macos: ">= :mojave"
 
   app "86Box.app", target: "86Box/86Box.app"
