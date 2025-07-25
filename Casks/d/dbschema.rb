@@ -1,8 +1,8 @@
 cask "dbschema" do
-  version "9.8.0"
+  version "9.8.1"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://dbschema.com/download/dbschema_macos_#{version.dots_to_underscores}.tgz"
+  url "https://dbschema.com/download/dbschema_macos_#{version.dots_to_underscores}.dmg"
   name "DbSchema"
   desc "Design, document and deploy databases"
   homepage "https://dbschema.com/"
@@ -15,7 +15,15 @@ cask "dbschema" do
     end
   end
 
-  app "DbSchema.app"
+  installer script: {
+    executable: "#{staged_path}/DbSchema Installer.app/Contents/MacOS/JavaApplicationStub",
+    args:       ["-q"],
+  }
 
-  # No zap stanza required
+  uninstall script: {
+    executable: "/Applications/DbSchema/DbSchema Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+    args:       ["-q"],
+  }
+
+  zap trash: "~/Library/Preferences/com.dbschema.dbschema.plist"
 end
