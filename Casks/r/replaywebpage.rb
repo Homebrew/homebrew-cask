@@ -1,6 +1,6 @@
 cask "replaywebpage" do
-  version "2.3.15"
-  sha256 "384c1bc0e375fb0c46d9cfb7d9943bb694201f3e62993d0757c08851e43f16aa"
+  version "2.3.16"
+  sha256 "d2fba19b3d177ab06f09bedfdf7dfec40a39070cc213ddb5657bd12a0663fde1"
 
   url "https://github.com/webrecorder/replayweb.page/releases/download/v#{version}/ReplayWeb.page-#{version}.dmg",
       verified: "github.com/webrecorder/replayweb.page/"
