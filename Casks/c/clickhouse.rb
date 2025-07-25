@@ -1,9 +1,9 @@
 cask "clickhouse" do
   arch arm: "-aarch64"
 
-  version "25.6.4.12-stable"
-  sha256 arm:   "e579fe3ed90c302ae0a7816b20bd0daebfd9b28ed898127345e8efc07468265f",
-         intel: "e4b850ae58e3660309958f33d34b2957e3b178a31c1b56315172a4024a297e33"
+  version "25.6.5.41-stable"
+  sha256 arm:   "b9cfdf877e6d31a74bf7974ac152544a41b7377c2946c55acbbdf4408015eb92",
+         intel: "31032723938597922ef2df4e9530d8257d61135ca345b582a19d1c147d1618b1"
 
   url "https://github.com/ClickHouse/ClickHouse/releases/download/v#{version}/clickhouse-macos#{arch}",
       verified: "github.com/ClickHouse/ClickHouse/"
@@ -15,6 +15,8 @@ cask "clickhouse" do
     url :url
     regex(/^v?(\d+(?:\.\d+)+[._-](lts|stable))$/i)
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   binary "clickhouse-macos#{arch}", target: "clickhouse"
 
