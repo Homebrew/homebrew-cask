@@ -2,12 +2,12 @@ cask "yandex" do
   arch arm: "Arm64"
 
   on_arm do
-    version "25.6.0.2391,84025"
-    sha256 "19e2a687160aa693bf07d62ce3d66e0e4251eaf347b31d449cfcb37fc9716b06"
+    version "25.6.3.347,84411"
+    sha256 "0f3e2dbc603531d25d89d167bc94c7b9a66c15fd89d85ccbfd4168ef1c0861e8"
   end
   on_intel do
-    version "25.6.0.2388,84064"
-    sha256 "0cee7c98f41b308d86d821d215a791aaf445c7aed82a28d259b1f94ba01f01cd"
+    version "25.6.3.348,84405"
+    sha256 "0da59d1f6d8257b851d0c0017b3d273529f310024c717d76c47764a3c66a3563"
   end
 
   url "https://download.cdn.yandex.net/browser/update/#{version.csv.first.dots_to_underscores}_#{version.csv.second}_m_s_r/yandex.dmg",
