@@ -1,9 +1,9 @@
 cask "kid3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
-  version "3.9.6"
+  version "3.9.7"
 
   on_high_sierra :or_older do
-    sha256 "34ef3f1f157be232f7c4c59468081266f9cd3c99be499d82c1d32e858a7bb0e4"
+    sha256 "ed6bab51f97583a6b967ed9bf9cff7ab3bbce9d3b9e22260f77593cf499b9804"
 
     url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-Qt5.dmg",
         verified: "downloads.sourceforge.net/kid3/"
@@ -11,8 +11,8 @@ cask "kid3" do
   on_mojave :or_newer do
     arch arm: "arm64", intel: "amd64"
 
-    sha256 arm:   "f16a4bc4d8351270b70de0e0e9016f3654ad7eb5af51974b1874a7b1a7269e6e",
-           intel: "34ef3f1f157be232f7c4c59468081266f9cd3c99be499d82c1d32e858a7bb0e4"
+    sha256 arm:   "f43e10d44fd2d4b33328f7e4db6d25e33a39716500bc9f1a7a3340e5b564b070",
+           intel: "11d9f03e34c40434972a5073f7e385931a41513345cb032d212c4a1372caf4f8"
 
     url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-#{arch}.dmg",
         verified: "downloads.sourceforge.net/kid3/"
