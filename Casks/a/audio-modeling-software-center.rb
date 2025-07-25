@@ -24,6 +24,8 @@ cask "audio-modeling-software-center" do
     executable: "/Applications/Audio Modeling/Software Center/uninstall.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended"],
     sudo:       true,
+    input:      "",
+    env:        { "DISPLAY" => "", "CI" => "1" },
   }
 
   zap trash: [
