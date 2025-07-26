@@ -14,12 +14,21 @@ cask "xld" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   auto_updates true
 
   app "XLD.app"
-  binary "CLI/xld"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/xld.wrapper.sh"
+  binary shimscript, target: "xld"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/XLD.app/Contents/MacOS/XLD' "--cmdline" "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.tmkk.xld.sfl*",
