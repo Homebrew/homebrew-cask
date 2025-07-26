@@ -1,15 +1,24 @@
 cask "fishing-funds" do
   arch arm: "-arm64"
 
-  version "8.5.0"
-  sha256 arm:   "f21e6b0a15de1d125cff9b0c8baef16b9a7d265e8ea5741e238543ef1a5f2097",
-         intel: "95268a284a78ce712a31e2adbf3f972e782121b4597ee8a3b02f6f33690ef9d3"
+  version "8.5.1"
+  sha256 arm:   "68bee90bb42c0982be326b7b13405cdbfe1cc818d25e9ad988b906b7d2701c08",
+         intel: "96ba3224e68622ad5285ca071a208a7f54542e66b3f3f5f2de55e7dfe785b4f7"
 
   url "https://github.com/1zilc/fishing-funds/releases/download/v#{version}/Fishing-Funds-#{version}#{arch}.dmg",
       verified: "github.com/1zilc/fishing-funds/"
   name "Fishing Funds"
   desc "Display real-time trends of Chinese funds in the menubar"
   homepage "https://ff.1zilc.top/"
+
+  # This is the default strategy, but we need to explicitly
+  # specify it to continue checking it while it is deprecated
+  livecheck do
+    url :url
+    strategy :git
+  end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :big_sur"
 
