@@ -14,7 +14,7 @@ cask "xld" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   auto_updates true
 
