@@ -11,7 +11,7 @@ cask "chromium" do
   homepage "https://www.chromium.org/Home"
 
   conflicts_with cask: "ungoogled-chromium"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "chrome-mac/Chromium.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
