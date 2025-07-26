@@ -17,7 +17,7 @@ cask "google-chrome@beta" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Google Chrome Beta.app"
 
