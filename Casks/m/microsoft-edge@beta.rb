@@ -19,7 +19,7 @@ cask "microsoft-edge@beta" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Microsoft Edge Beta.app"
 
