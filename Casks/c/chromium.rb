@@ -10,6 +10,8 @@ cask "chromium" do
   desc "Free and open-source web browser"
   homepage "https://www.chromium.org/Home"
 
+  disable! date: "2026-09-01", because: :unsigned
+
   conflicts_with cask: "ungoogled-chromium"
   depends_on macos: ">= :monterey"
 
