@@ -14,7 +14,8 @@ cask "quakenotch" do
   app "QuakeNotch.app"
 
   zap trash: [
+    "~/Library/Application Support/MeowingCat.QuakeNotch",
     "~/Library/Caches/MeowingCat.QuakeNotch",
-    "~/Library/HTTPStorages/MeowingCat.QuakeNotch/",
+    "~/Library/HTTPStorages/MeowingCat.QuakeNotch",
   ]
 end
