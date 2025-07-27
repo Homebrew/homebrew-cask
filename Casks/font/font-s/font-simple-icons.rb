@@ -1,6 +1,6 @@
 cask "font-simple-icons" do
-  version "15.7.0"
-  sha256 "591fc2f6a8b9b5a6a1e472c7c7e1c3c8520a1b1747945eafbc26acb3c1983b10"
+  version "15.8.0"
+  sha256 "1463a7e005328d3e21e11cafa2f7249fe8299a7d9ab492944cfa3a4e71b76d53"
 
   url "https://github.com/simple-icons/simple-icons-font/releases/download/#{version}/simple-icons-font-#{version}.zip",
       verified: "github.com/simple-icons/simple-icons-font/"
