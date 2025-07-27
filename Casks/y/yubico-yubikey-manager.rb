@@ -14,6 +14,8 @@ cask "yubico-yubikey-manager" do
 
   no_autobump! because: :requires_manual_review
 
+  disable! date: "2025-07-27", because: :discontinued, replacement_cask: "yubico-authenticator"
+
   depends_on macos: ">= :sierra"
 
   pkg "yubikey-manager-qt-#{version}-mac.pkg"
