@@ -9,6 +9,7 @@ cask "nativedisplaybrightness" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-27", because: :unmaintained
+  disable! date: "2025-07-27", because: :unmaintained
 
   app "NativeDisplayBrightness.app"
 
