@@ -1,6 +1,6 @@
 cask "supercollider" do
-  version "3.13.0"
-  sha256 "fae71509475d66d47bb7b8d204a57a0d6cd4bcb3d9e77c5f2670b916b7160868"
+  version "3.14.0"
+  sha256 "14142ca569ac0c7b1a2f4bc4c1d578ea1c441a33211846cdf3b74b78ee838258"
 
   url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS-universal.dmg",
       verified: "github.com/supercollider/supercollider/"
@@ -24,8 +24,6 @@ cask "supercollider" do
       end.flatten
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 
