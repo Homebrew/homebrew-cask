@@ -1,8 +1,8 @@
 cask "dockdoor" do
-  version "1.18.3"
-  sha256 "c94e7499a901ef730ba23fc7c0f2c23e4df446f1ca14d9ddca39fb3523dddb17"
+  version "1.18.5"
+  sha256 "06c61d1a0683cd7bfced7ba7f12bfc8846fdffb61c7e82b33e4db2b7721cef14"
 
-  url "https://github.com/ejbills/DockDoor/releases/download/v#{version}/DockDoor.dmg",
+  url "https://github.com/ejbills/DockDoor/releases/download/#{version}/DockDoor.dmg",
       verified: "github.com/ejbills/DockDoor/"
   name "DockDoor"
   desc "Window peeking utility app"
