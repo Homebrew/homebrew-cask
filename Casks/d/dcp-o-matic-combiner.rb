@@ -7,9 +7,7 @@ cask "dcp-o-matic-combiner" do
   desc "Convert video, audio and subtitles into DCP (Digital Cinema Package)"
   homepage "https://dcpomatic.com/"
 
-  livecheck do
-    cask "dcp-o-matic"
-  end
+  disable! date: "2025-07-28", because: "cannot be reliably fetched due to Cloudflare protections"
 
   app "DCP-o-matic #{version.major} Combiner.app"
 
