@@ -23,6 +23,8 @@ cask "nwjs" do
     end
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   depends_on macos: ">= :big_sur"
 
   app "nwjs-sdk-v#{version}-osx-#{arch}/nwjs.app"
