@@ -11,7 +11,7 @@ cask "fl-studio" do
 
   no_autobump! because: :requires_manual_review
 
-  disable! date: "2024-12-16", because: "cannot be reliably fetched due to Clouflare protections"
+  disable! date: "2024-12-16", because: "cannot be reliably fetched due to Cloudflare protections"
 
   pkg "Install FL Studio.pkg"
 
