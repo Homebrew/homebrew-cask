@@ -1,6 +1,6 @@
 cask "shotcut" do
-  version "25.05.11"
-  sha256 "97be8cd8652f46c4d33ca15e9ecb2746af70929f24fe76ca883f0e2357da44ad"
+  version "25.07.26"
+  sha256 "8f367996654f7fc17abeb5123c82be458a75d77577a15c3d9b801b8759c42e63"
 
   url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.first}/shotcut-macos-#{version.csv.second || version.csv.first.no_dots}.dmg",
       verified: "github.com/mltframework/shotcut/"
@@ -24,8 +24,6 @@ cask "shotcut" do
       end
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :big_sur"
 
