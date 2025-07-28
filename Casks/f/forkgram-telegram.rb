@@ -1,9 +1,9 @@
 cask "forkgram-telegram" do
   arch arm: "arm64", intel: "x86"
 
-  version "5.16.4"
-  sha256 arm:   "e02fa3dc0a0cba115c9496c16f2bae3ba066b5933fe672602d854afea30e6fa7",
-         intel: "37d9ee34a329dcdf9c789bc4c43bd5bc48b740abfbae0960e75e388c4ad419d6"
+  version "5.16.6"
+  sha256 arm:   "06dfd44d0b53942be892711ac5c7b57f57df5599ab674ac825cd040d0bde220b",
+         intel: "7afeba55074a9b01945f7efcaca001899572fab91fa4ae1eaa53dc40e14a3715"
 
   url "https://github.com/Forkgram/tdesktop/releases/download/v#{version}/Forkgram.macOS.no.auto-update_#{arch}.zip"
   name "Forkgram"
@@ -29,6 +29,8 @@ cask "forkgram-telegram" do
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :high_sierra"
 
