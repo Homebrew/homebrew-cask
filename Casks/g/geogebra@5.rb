@@ -1,6 +1,6 @@
 cask "geogebra@5" do
-  version "5.2.893.2"
-  sha256 "0942b08de850c4cf9bdeaeb4da5d7c2fab3f1892a7b6ed59f8f2ab6e3a2a5909"
+  version "5.2.894.2"
+  sha256 "79caffb618dd3eea11421107fa1611ab7451b4b14e0425aab3abfb0b7eb044dc"
 
   url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-MacOS-Installer-withJava-#{version.dots_to_hyphens}.zip"
   name "GeoGebra"
@@ -17,6 +17,8 @@ cask "geogebra@5" do
       match[1].tr("-", ".")
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Geogebra.app"
 
