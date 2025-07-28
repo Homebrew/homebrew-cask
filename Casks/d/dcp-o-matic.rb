@@ -7,10 +7,7 @@ cask "dcp-o-matic" do
   desc "Convert video, audio and subtitles into DCP (Digital Cinema Package)"
   homepage "https://dcpomatic.com/"
 
-  livecheck do
-    url "https://dcpomatic.com/download"
-    regex(/stable\s*release:\s*(\d+(?:\.\d+)+)/i)
-  end
+  disable! date: "2025-07-28", because: "cannot be reliably fetched due to Cloudflare protections"
 
   app "DCP-o-matic #{version.major}.app"
 
