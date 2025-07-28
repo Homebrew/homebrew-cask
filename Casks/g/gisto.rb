@@ -11,6 +11,15 @@ cask "gisto" do
   desc "Snippets management desktop application"
   homepage "https://www.gisto.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  disable! date: "2026-09-01", because: :unsigned
+
+  depends_on macos: ">= :high_sierra"
+
   app "Gisto.app"
 
   zap trash: [
