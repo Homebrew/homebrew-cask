@@ -1,6 +1,6 @@
 cask "catlight" do
-  version "3.8.4"
-  sha256 "866c6e3f72ccbb81b9af1ac6864e22ff5773991002d391c78e20fcaf8a05d10e"
+  version "3.9.1"
+  sha256 "1bee5f064841fe331e7acac4be2c78f7d114ff161a2eaa2b3d8ce27b379d88fc"
 
   url "https://download.catlight.io/rel/mac/release/CatLightSetup-#{version}.dmg",
       user_agent: :fake
