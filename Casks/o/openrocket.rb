@@ -1,11 +1,11 @@
 cask "openrocket" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  version "23.09"
-  sha256 arm:   "4eca72cf41e46e75414ef7eb8c5ca697a6b39a6907df7b149610458e8bf936e9",
-         intel: "bb2ca248b34e847fe0b45135edb93362b25fc4cce457828b8f9245384864d397"
+  version "24.12"
+  sha256 arm:   "4f82e5a6b008232d6164d5cdca6c94e41c2b20a5d9ccec6d7891d19c99eb2357",
+         intel: "f4aacf2e821b23dcd2dfabe46fc5c2a23ad956f16c216d96b5ee026274f82bcc"
 
-  url "https://github.com/openrocket/openrocket/releases/download/release-#{version}/OpenRocket-#{version}-macOS-#{arch}.dmg",
+  url "https://github.com/openrocket/openrocket/releases/download/release-#{version}/OpenRocket-#{version}-installer-macOS-#{arch}.dmg",
       verified: "github.com/openrocket/openrocket/"
   name "OpenRocket"
   desc "Model rocket simulator"
@@ -16,8 +16,6 @@ cask "openrocket" do
     regex(/v?(?:release)?[._-]?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "OpenRocket.app"
 
