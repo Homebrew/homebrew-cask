@@ -1,6 +1,6 @@
 cask "kameleo" do
-  version "4.1.0"
-  sha256 "33c13e894e1425823ebf1754efbc548a2f0ecce9e6dff4ad97d34cb347e65e8e"
+  version "4.1.1"
+  sha256 "810ff5d64b70b695e6d3c2ca492916dc96a8e9ce9b7c919ded1d5e222dffbd18"
 
   url "https://github.com/kameleo-io/releases/releases/download/#{version}/kameleo-#{version}-osx-arm64.dmg",
       verified: "github.com/kameleo-io/releases/"
