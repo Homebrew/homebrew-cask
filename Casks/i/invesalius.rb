@@ -10,6 +10,13 @@ cask "invesalius" do
   desc "3D medical imaging reconstruction software"
   homepage "https://github.com/invesalius/invesalius3/"
 
+  # Upstream marks some versions with a seemingly stable version format as
+  # pre-release on GitHub, so it's necessary to check releases instead of tags.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   disable! date: "2026-09-01", because: :unsigned
 
   app "InVesalius.app"
