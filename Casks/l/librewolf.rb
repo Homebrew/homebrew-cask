@@ -1,9 +1,9 @@
 cask "librewolf" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "140.0.4,1"
-  sha256 arm:   "7eb3c6f4be8e0f96cdd0164e81164aa0090ed9dde7ea7d4e71619b5aa595aba0",
-         intel: "765c6aae1c5533f0cf5abc0dd026915f9f72435db62537a1797394f0eef69f85"
+  version "141.0,1"
+  sha256 arm:   "5a21d931f9b63c9c38747fe977a86e6ead91f75854fdb5e5f459842d8f621add",
+         intel: "115903176c36c971bda9902fe88f718f7b894a40d885edc6f3ffbeba070e7981"
 
   url "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-macos-#{arch}-package.dmg",
       verified: "gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/"
@@ -18,6 +18,8 @@ cask "librewolf" do
       tags.map { |tag| tag[regex, 1]&.tr("-", ",") }
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :catalina"
 
