@@ -7,9 +7,14 @@ cask "nanoem" do
   desc "Cross-platform MMD (MikuMikuDance) compatible implementation"
   homepage "https://github.com/hkrn/nanoem"
 
-  no_autobump! because: :requires_manual_review
+  # This is the default strategy, but we need to explicitly
+  # specify it to continue checking it while it is deprecated
+  livecheck do
+    url :url
+    strategy :git
+  end
 
-  container nested: "nanoem-v#{version}-Darwin.dmg"
+  disable! date: "2026-09-01", because: :unsigned
 
   app "nanoem.app"
 
