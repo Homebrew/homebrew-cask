@@ -15,6 +15,8 @@ cask "inav-configurator" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   depends_on macos: ">= :catalina"
 
   app "INAV Configurator.app"
