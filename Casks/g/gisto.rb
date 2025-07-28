@@ -11,6 +11,11 @@ cask "gisto" do
   desc "Snippets management desktop application"
   homepage "https://www.gisto.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Gisto.app"
 
   zap trash: [
