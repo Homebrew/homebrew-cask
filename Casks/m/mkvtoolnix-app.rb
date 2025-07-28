@@ -16,8 +16,8 @@ cask "mkvtoolnix-app" do
     sha256 "bb6d0ba4e0052b2831de0ae29ef3d0d4c7b4d0933b258455c248c1a1c5f913a0"
   end
   on_catalina :or_newer do
-    version "93.0"
-    sha256 "4e98448e9e2bbe8bf5cb370ff922b75ceba15740b00815c2c17ef6caafd5aa04"
+    version "94.0"
+    sha256 "a3092ddfc240693b69aea5198196fd5c4115b4834ebb8bceebd01b8119d98cc2"
   end
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
@@ -29,6 +29,8 @@ cask "mkvtoolnix-app" do
     url "https://mkvtoolnix.download/macos/"
     regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   conflicts_with formula: "mkvtoolnix"
 
