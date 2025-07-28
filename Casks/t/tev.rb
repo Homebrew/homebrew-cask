@@ -18,6 +18,7 @@ cask "tev" do
   depends_on macos: ">= :catalina"
 
   app "tev.app"
+  binary "#{appdir}/tev.app/Contents/MacOS/tev"
 
   zap trash: "~/Library/Preferences/org.tom94.tev.plist"
 end
