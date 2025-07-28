@@ -1,6 +1,6 @@
 cask "thunder" do
-  version "5.70.2.66481"
-  sha256 "1bf6c0b6ab39234d62656e327bb17059f48a6e35746056f5240bfd697e97baa4"
+  version "5.80.0.66529"
+  sha256 "7b4cfb1e90becf100001562772892949d5a4634f18c612c981d7877f8c1ac174"
 
   url "https://down.sandai.net/mac/thunder_#{version}.dmg",
       verified: "down.sandai.net/mac/"
@@ -11,11 +11,11 @@ cask "thunder" do
 
   livecheck do
     url "https://dl.xunlei.com"
-    regex(/thunder[._-](\d+(?:\.\d+)+)\.dmg/i)
+    regex(/thunder[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Thunder.app"
 
@@ -31,4 +31,8 @@ cask "thunder" do
     "~/Library/Saved Application State/com.xunlei.XLPlayer.savedState",
     "~/Library/WebKit/com.xunlei.Thunder",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
