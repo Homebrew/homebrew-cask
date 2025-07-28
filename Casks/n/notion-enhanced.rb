@@ -8,7 +8,7 @@ cask "notion-enhanced" do
   desc "Enhancer/customiser for the all-in-one productivity workspace notion.so"
   homepage "https://notion-enhancer.github.io/"
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Notion Enhanced.app"
 
@@ -17,4 +17,8 @@ cask "notion-enhanced" do
     "~/Library/Preferences/com.github.notion-repackaged.plist",
     "~/Library/Saved Application State/com.github.notion-repackaged.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
