@@ -1,6 +1,6 @@
 cask "geogebra" do
-  version "6.0.893.2"
-  sha256 "db622331fb2196736b40d8ee15678c542a3b9663ac47221b256e656051fd7828"
+  version "6.0.894.2"
+  sha256 "ba2a245dbd4ce323be47ad4dca477bcb7fa755fd674517befcc30e66cd6aaee6"
 
   url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-Classic-#{version.major}-MacOS-Portable-#{version.dots_to_hyphens}.zip"
   name "GeoGebra"
@@ -17,6 +17,8 @@ cask "geogebra" do
       match[1].tr("-", ".")
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :catalina"
 
