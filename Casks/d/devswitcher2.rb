@@ -15,18 +15,6 @@ cask "devswitcher2" do
   # Cleanup operations during uninstall
   uninstall quit: "com.rivermao.DevSwitcher2"
 
-  # Related file cleanup
-  zap trash: [
-    "~/Library/Application Support/DevSwitcher2",
-    "~/Library/Caches/com.rivermao.DevSwitcher2",
-    "~/Library/Preferences/com.rivermao.DevSwitcher2.plist",
-    "~/Library/Saved Application State/com.rivermao.DevSwitcher2.savedState",
-    "~/Library/WebKit/com.rivermao.DevSwitcher2",
-  ]
-
-  # Software conflict declaration (if there are other similar tools)
-  conflicts_with cask: ["alt-tab"]
-
   # User notices
   caveats <<~EOS
     DevSwitcher2 requires Accessibility permissions to function properly.
