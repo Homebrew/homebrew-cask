@@ -1,9 +1,9 @@
 cask "appium-inspector" do
   arch arm: "arm64", intel: "x64"
 
-  version "2025.7.1"
-  sha256 arm:   "198929ef4b6d546e026bdd33b9dbc9bb20e6dff12aa558eb5137ce76651508e9",
-         intel: "cb1a055874683af6d3ceb7fb32977cb8be5b09cb62da6a317d887eada1aa202b"
+  version "2025.7.2"
+  sha256 arm:   "7c33554aedbb4ff05c70064740046d2a6b31147531161299cfab2f47551fd1a4",
+         intel: "93e414d2916685b8810a719e968def43c6ee1a63a5bba7e8bb31146299c03bd8"
 
   url "https://github.com/appium/appium-inspector/releases/download/v#{version}/Appium-Inspector-#{version}-mac-#{arch}.zip"
   name "Appium Inspector GUI"
@@ -29,7 +29,7 @@ cask "appium-inspector" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :big_sur"
 
