@@ -11,6 +11,7 @@ cask "processing@3" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-28", because: :unmaintained
+  disable! date: "2025-07-28", because: :unmaintained
 
   conflicts_with cask: "processing"
 

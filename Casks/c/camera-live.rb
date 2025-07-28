@@ -10,6 +10,7 @@ cask "camera-live" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-07-28", because: :discontinued
+  disable! date: "2025-07-28", because: :discontinued
 
   app "Camera Live.app"
 
