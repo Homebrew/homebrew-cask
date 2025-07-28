@@ -16,6 +16,8 @@ cask "nuclear" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   app "nuclear.app"
 
   zap trash: [
