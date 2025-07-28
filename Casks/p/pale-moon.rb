@@ -8,8 +8,9 @@ cask "pale-moon" do
   homepage "https://www.palemoon.org/"
 
   livecheck do
-    url "https://repo.palemoon.org/MoonchildProductions/Pale-Moon.git"
-    regex(/^v?(\d+(?:\.\d+)+)[._-]Release$/i)
+    url "https://www.palemoon.org/download.php?mirror=us&bits=64&type=macarm"
+    regex(/palemoon[._-]v?(\d+(?:\.\d+)+)/i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :big_sur"
