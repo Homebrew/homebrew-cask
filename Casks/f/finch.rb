@@ -15,8 +15,6 @@ cask "finch" do
     strategy :git
   end
 
-  disable! date: "2026-09-01", because: :unsigned
-
   pkg "Finch-v#{version}-#{arch}.pkg"
 
   uninstall script: {
