@@ -1,6 +1,6 @@
 cask "font-kanjistrokeorders" do
-  version "4.004,1snpD-IQmT6fGGQjEePHdDzE2aiwuKrz4"
-  sha256 "53061d36e2c7400b2b941bd6328c40d386586d5c5a3f89c43825a2d6979d5eee"
+  version "4.005,1TELymEhF0YMK0Ma-fQlpHNmZLg9Xw3zx"
+  sha256 "15525b225e9a9f08445eabdb5cac5c145431ac845107e3109b3fdcbfb77ac733"
 
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}"
   name "KanjiStrokeOrders"
@@ -16,8 +16,6 @@ cask "font-kanjistrokeorders" do
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   font "KanjiStrokeOrders_v#{version.before_comma}.ttf"
 
