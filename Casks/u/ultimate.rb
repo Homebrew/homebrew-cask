@@ -1,5 +1,5 @@
 cask "ultimate" do
-  version "3.0.16.371"
+  version "3.0.16.397"
   sha256 :no_check
 
   url "https://download.epubor.com/epubor_ultimate.zip"
@@ -11,6 +11,8 @@ cask "ultimate" do
     url "https://www.epubor.com/ultimate.html"
     regex(/Version:\s*(\d+(?:\.\d+)+)/i)
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   pkg "Ultimate.pkg"
 
