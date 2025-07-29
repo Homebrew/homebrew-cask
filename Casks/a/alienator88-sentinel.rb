@@ -1,6 +1,6 @@
 cask "alienator88-sentinel" do
-  version "3.0.0"
-  sha256 "82d0a8f1b431ff3c75fecd33e3254f9060cf02aa87343e0060fe48fd1fbb8289"
+  version "3.1.0"
+  sha256 "f44884710598829eb9ccec7dc24f14e35e884c2377a6019a928186f74db2a922"
 
   url "https://github.com/alienator88/Sentinel/releases/download/#{version}/Sentinel.zip",
       verified: "github.com/alienator88/Sentinel/"
