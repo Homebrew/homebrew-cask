@@ -11,7 +11,7 @@ cask "visual-studio-code" do
     end
   end
   on_big_sur :or_newer do
-    version "1.102.2"
+    version "1.102.3"
     sha256 arm:   "73ae20079b7453482581c7cc942bd5069850debb17ef9f2f09414f54d5aa4c96",
            intel: "74fb52b4b726166f597f7811633ff7eea1ef5778447d5de75bf37b4d58c8f01f"
 
