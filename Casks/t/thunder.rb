@@ -1,6 +1,6 @@
 cask "thunder" do
-  version "5.80.0.66529"
-  sha256 "7b4cfb1e90becf100001562772892949d5a4634f18c612c981d7877f8c1ac174"
+  version "5.80.0.66533"
+  sha256 "cfc7a9166283121569c867529bcbc6e78d8e4131ea02e36f5d9e321a89a57335"
 
   url "https://down.sandai.net/mac/thunder_#{version}.dmg",
       verified: "down.sandai.net/mac/"
@@ -31,8 +31,4 @@ cask "thunder" do
     "~/Library/Saved Application State/com.xunlei.XLPlayer.savedState",
     "~/Library/WebKit/com.xunlei.Thunder",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
