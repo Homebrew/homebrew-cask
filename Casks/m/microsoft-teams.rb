@@ -43,7 +43,6 @@ cask "microsoft-teams" do
             quit:      "com.microsoft.autoupdate2",
             pkgutil:   [
               "com.microsoft.MSTeamsAudioDevice",
-              "com.microsoft.package.Microsoft_AutoUpdate.app",
               "com.microsoft.teams2",
             ],
             delete:    [
