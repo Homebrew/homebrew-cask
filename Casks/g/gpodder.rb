@@ -13,7 +13,7 @@ cask "gpodder" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   app "gPodder.app"
 
