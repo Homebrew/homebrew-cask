@@ -1,6 +1,6 @@
 cask "semeru-jdk-open@8" do
-  version "8u452-b09,openj9-0.51.0"
-  sha256 "76a647efee5c0d38ba0a4b928a4e7390968b1472c77306c01b91f46f748ca09e"
+  version "8u462-b08,openj9-0.53.0"
+  sha256 "5316e041f6e803d8231e9418bee799cb95ed29d6a2466a4ada11fa47eec9cb33"
 
   url "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk#{version.csv.first}_#{version.csv.second}/ibm-semeru-open-jdk_x64_mac_#{version.csv.first.tr("-", "")}_#{version.csv.second}.pkg",
       verified: "github.com/ibmruntimes/semeru8-binaries/"
@@ -15,6 +15,8 @@ cask "semeru-jdk-open@8" do
       json["tag_name"]&.scan(regex)&.map { |match| "#{match[0]}-#{match[1]},#{match[2]}" }
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   pkg "ibm-semeru-open-jdk_x64_mac_#{version.csv.first.tr("-", "")}_#{version.csv.second}.pkg"
 
