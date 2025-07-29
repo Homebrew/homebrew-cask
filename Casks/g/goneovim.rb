@@ -15,6 +15,8 @@ cask "goneovim" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   depends_on formula: "neovim"
 
   app "goneovim-v#{version}-macos-#{arch}/goneovim.app"
