@@ -1,6 +1,6 @@
 cask "keyboardholder" do
-  version "1.13.8"
-  sha256 "9233f4fe0b3293b681566ce88fa62b1979d5a234367a96f2bb1c9ebe2d939933"
+  version "1.14.0"
+  sha256 "5f0517e7af4b96dcc49bdedbea5254f54ee04680ade063e4ae2c8d705e239574"
 
   url "https://github.com/leaves615/KeyboardHolder/releases/download/v#{version}/KeyboardHolder-#{version}.zip",
       verified: "github.com/leaves615/KeyboardHolder/"
@@ -8,7 +8,7 @@ cask "keyboardholder" do
   desc "Switch input method per application"
   homepage "https://keyboardholder.leavesc.com/"
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :big_sur"
 
