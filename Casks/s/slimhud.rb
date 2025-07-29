@@ -1,6 +1,6 @@
 cask "slimhud" do
-  version "1.5.2"
-  sha256 "c811e08478f33c09dad290fc070a849159f6ddc57f003034f442b524bedca3c2"
+  version "1.5.3"
+  sha256 "41c8101d5c29c0e89fd9a0fc1501f42711e3f45f09fdade1b755e1541aa761e5"
 
   url "https://github.com/AlexPerathoner/SlimHUD/releases/download/v#{version}/SlimHUD.zip"
   name "SlimHUD"
@@ -12,7 +12,7 @@ cask "slimhud" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
