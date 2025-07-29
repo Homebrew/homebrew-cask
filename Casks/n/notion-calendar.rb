@@ -1,9 +1,9 @@
 cask "notion-calendar" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.130.0"
-  sha256 arm:   "0381e2227a9046b1cde05f9b864b9704ace8b3081c3a08b588b3403f3a49a64b",
-         intel: "5e7a1188943611801a402b0114f971b399215813ec554acfdb5db82796f30265"
+  version "1.131.0"
+  sha256 arm:   "0f5801fa1e64f634a9245835f8f3545c312feb72a268b12b0c6a5c7e2dceb53c",
+         intel: "6f9cce5dd0ca4ffa87a68c8d044dd3558e9ab172deb5b0a4961fc65ed32937a7"
 
   url "https://calendar-desktop-release.notion-static.com/Notion%20Calendar-darwin-#{arch}-#{version}.zip",
       verified: "calendar-desktop-release.notion-static.com/"
