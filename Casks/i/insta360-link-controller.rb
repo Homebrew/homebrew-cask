@@ -1,6 +1,6 @@
 cask "insta360-link-controller" do
-  version "2.0.4,build23,55054d6cc0e511fe07c9cee905827809"
-  sha256 "f7eac64f16fe4a5a65a5b454fd61cacc8675465e8824b53e17dbf02159c93ae7"
+  version "2.0.5,build9,b5ebf27ff81b175d598f71fd68bb88cc"
+  sha256 "e923357846ce059b3d58c9d853ba40e8ddfac4cbc753afe06483207110616eab"
 
   url "https://file.insta360.com/static/#{version.csv.third}/Insta360LinkController_#{version.csv.first}(#{version.csv.second}).pkg"
   name "Insta360 Link Controller"
