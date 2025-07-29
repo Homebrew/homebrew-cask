@@ -11,7 +11,14 @@ cask "toinane-colorpicker" do
   desc "Get and save colour codes"
   homepage "https://colorpicker.fr/"
 
-  no_autobump! because: :requires_manual_review
+  # This is the default strategy, but we need to explicitly
+  # specify it to continue checking it while it is deprecated
+  livecheck do
+    url :url
+    strategy :git
+  end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Colorpicker.app"
 
