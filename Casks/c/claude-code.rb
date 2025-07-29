@@ -32,6 +32,7 @@ cask "claude-code" do
     "~/.local/bin/claude",
     "~/.local/share/claude",
     "~/.local/state/claude",
+    "~/Library/Caches/claude-cli-nodejs",
   ]
 
   caveats <<~EOS
