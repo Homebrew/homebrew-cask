@@ -1,6 +1,6 @@
 cask "font-cozette" do
-  version "1.29.0"
-  sha256 "1c7eb7c0117b6ac4955e1a2465bb6f94e08445509f4f595b2651ebdabca0c778"
+  version "1.30.0"
+  sha256 "c1515e63ba969d6099168c7a57b68c642025a73cd5112c39f62112d2dd16b709"
 
   url "https://github.com/slavfox/Cozette/releases/download/v.#{version}/CozetteFonts-v-#{version.dots_to_hyphens}.zip"
   name "Cozette"
@@ -10,8 +10,6 @@ cask "font-cozette" do
     url :url
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   font "CozetteFonts/cozette.dfont"
   font "CozetteFonts/cozette_hidpi.dfont"
