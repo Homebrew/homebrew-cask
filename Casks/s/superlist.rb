@@ -1,6 +1,6 @@
 cask "superlist" do
-  version "1.36.2"
-  sha256 "8a2824b9583c1a9dbfec64825628b3a804ca3f7ac892c5efb1fbceb5827b9c67"
+  version "1.37.0"
+  sha256 "62fccee7c2f91b924097d3dda34ab0ce6e2e71a55abcd57c7bf247009a899ac6"
 
   url "https://storage.googleapis.com/superlist-appcast/beta/updates/Superlist-#{version}.zip",
       verified: "storage.googleapis.com/superlist-appcast/beta/updates/"
