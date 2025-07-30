@@ -20,6 +20,10 @@ cask "grammarly-desktop" do
   zap trash: [
     "~/Library/Application Support/com.grammarly.ProjectLlama",
     "~/Library/Caches/com.grammarly.ProjectLlama",
+    "~/Library/HTTPStorages/com.grammarly.ProjectLlama",
+    "~/Library/HTTPStorages/com.grammarly.ProjectLlama.binarycookies",
+    "~/Library/LaunchAgents/com.grammarly.ProjectLlama.Shepherd.plist",
     "~/Library/Preferences/com.grammarly.ProjectLlama.plist",
+    "~/Library/WebKit/com.grammarly.ProjectLlama",
   ]
 end
