@@ -16,8 +16,6 @@ cask "aptible" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
-
   depends_on formula: "libfido2"
 
   pkg "aptible-toolbelt-#{version.csv.first}+#{version.csv.second}-mac-os-x.10.15.7-1.pkg"
