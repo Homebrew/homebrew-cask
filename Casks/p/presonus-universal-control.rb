@@ -1,6 +1,6 @@
 cask "presonus-universal-control" do
-  version "4.6.1.104762,10091"
-  sha256 "ccc0464bbb57874219c2c385b16f6d9dd4ddb7f7d239f4f100d8128360f31ea1"
+  version "4.7.0.106978,10111"
+  sha256 "e5f4f23df6442d2531268a3560d0a91333f38c6d9b75a3791c8ab4392a3bc8f0"
 
   url "https://www.fmicassets.com/Damroot/Original/#{version.csv.second}/PreSonus_Universal_Control_v#{version.csv.first.dots_to_underscores}.dmg",
       verified: "fmicassets.com/Damroot/Original/"
@@ -17,8 +17,6 @@ cask "presonus-universal-control" do
       page.scan(regex).map { |match| "#{match[1].tr("_", ".")},#{match[0]}" }
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 
