@@ -1,12 +1,12 @@
 cask "triliumnext-notes" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.95.0"
-  sha256 arm:   "4b1d7e166c61fe6604374ea8eb105a0c257c861a7124d1c2d5195f8ed1aaf205",
-         intel: "1521606e94ad11eb642cd04d49c5baccd7ed09fd1468e7fb7def14e08f20629f"
+  version "0.97.1"
+  sha256 arm:   "43c6f46b9a55ac5e9b03629d63e0eb16b98d11ff68d3b6bf6687e4a47e1c8ac7",
+         intel: "58bd0c91815d2d3992122ace93eb72d099744c72e52092bf771878885728cee5"
 
-  url "https://github.com/TriliumNext/Notes/releases/download/v#{version}/TriliumNextNotes-v#{version}-macos-#{arch}.dmg",
-      verified: "github.com/TriliumNext/Notes/"
+  url "https://github.com/TriliumNext/Trilium/releases/download/v#{version}/TriliumNotes-v#{version}-macos-#{arch}.dmg",
+      verified: "github.com/TriliumNext/Trilium/"
   name "TriliumNext Notes"
   desc "Hierarchical note taking application"
   homepage "https://triliumnext.github.io/Docs/"
@@ -18,7 +18,7 @@ cask "triliumnext-notes" do
 
   depends_on macos: ">= :big_sur"
 
-  app "TriliumNext Notes.app"
+  app "Trilium Notes.app"
 
   zap trash: [
     "~/Library/Application Support/trilium-data",
