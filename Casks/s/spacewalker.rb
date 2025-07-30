@@ -5,7 +5,7 @@ cask "spacewalker" do
   url "https://static.viture.dev/external-file/macOS/SpaceWalker-Installer_v#{version}.dmg",
       verified: "static.viture.dev/external-file/macOS/"
   name "SpaceWalker"
-  desc "Gives virtual monitors for use with viture brand xr glasses"
+  desc "Use virtual monitors with Viture XR glasses"
   homepage "https://academy.viture.com/xr_glasses/spacewalker_mac"
 
   livecheck do
