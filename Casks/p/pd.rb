@@ -1,6 +1,6 @@
 cask "pd" do
-  version "0.55-2"
-  sha256 "7656edc222cdfabff2354d427f89e9e60ab1367a28785a21a411718fd2be1e6b"
+  version "0.56-0"
+  sha256 "8a0d1ea0cefbe598c886856a98d519d755125e349b20d33c173512b18283d209"
 
   url "https://msp.ucsd.edu/Software/pd-#{version}.macos.zip"
   name "Pd"
@@ -11,8 +11,6 @@ cask "pd" do
     url :homepage
     regex(/pd[._-]v?(\d+(?:\.\d+)+-\d+)\.macos\.zip/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   app "Pd-#{version}.app"
 
