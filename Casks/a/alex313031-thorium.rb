@@ -18,7 +18,7 @@ cask "alex313031-thorium" do
   end
 
   conflicts_with cask: "thorium"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Thorium.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
