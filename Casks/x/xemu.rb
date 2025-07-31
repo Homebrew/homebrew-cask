@@ -1,6 +1,6 @@
 cask "xemu" do
-  version "0.8.95"
-  sha256 "ac60955a5d53653e6f4b85429c06ba476b2c2d2af67c9b89c4b0e5e21199944a"
+  version "0.8.96"
+  sha256 "5269affa4e9b9cf97b5d1da6dfd22820c5b228cc81aec9935d6bb598c865bd4e"
 
   url "https://github.com/xemu-project/xemu/releases/download/v#{version}/xemu-macos-universal-release.zip",
       verified: "github.com/xemu-project/xemu/"
@@ -12,6 +12,8 @@ cask "xemu" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Xemu.app"
 
