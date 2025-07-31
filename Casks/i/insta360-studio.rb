@@ -37,9 +37,8 @@ cask "insta360-studio" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
-
-  pkg "Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.pkg"
+  # FIXME: Change _20250715_131847_signed_1752556803354 back to #{version.csv.fourth} on the next release
+  pkg "Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})_20250715_131847_signed_1752556803354.pkg"
 
   uninstall quit:    "com.insta360.studio",
             pkgutil: [
