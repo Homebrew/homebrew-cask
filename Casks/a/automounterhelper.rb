@@ -1,5 +1,5 @@
 cask "automounterhelper" do
-  version "1.6.0"
+  version "1.7.0"
   sha256 :no_check
 
   url "https://pixeleyes.co.nz/automounter/helper/AutoMounterHelper.dmg"
