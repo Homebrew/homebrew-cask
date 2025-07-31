@@ -17,6 +17,8 @@ cask "alex313031-thorium" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   conflicts_with cask: "thorium"
   depends_on macos: ">= :big_sur"
 
