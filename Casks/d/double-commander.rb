@@ -1,9 +1,9 @@
 cask "double-commander" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.1.26"
-  sha256 arm:   "47bf0d7b1ac49d0df0396dc08f63037ebd69cf089cae9475446462e7558949e1",
-         intel: "b0f82a479c15bc8f2c7485b9147f6f11d86ebfe6128587f837ed455dba67a3ed"
+  version "1.1.27"
+  sha256 arm:   "445ee2752d2f0e4f398d362aea52efe569731c5abdacb3126c2ff125bdc21642",
+         intel: "d927a96d478c89536febeb5fe182a3bf1ad5445b316a81c0d551c24e5196d3a6"
 
   url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version.tr(",", "-")}.cocoa.#{arch}.dmg",
       verified: "downloads.sourceforge.net/doublecmd/"
@@ -18,6 +18,8 @@ cask "double-commander" do
       page.scan(regex).map { |match| match[0].tr("-", ",") }
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Double Commander.app"
 
