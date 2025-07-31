@@ -1,9 +1,9 @@
 cask "k6-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.0"
-  sha256 arm:   "2eafcff3bf934b834a6abf552799f56e9baa775145776e0295e3819ceaf3ab64",
-         intel: "1400b84b554898888ba702ec87fe7da51b274d6af9767001daced38d081e0d1d"
+  version "1.6.0"
+  sha256 arm:   "64de20e08ed83f641f9b596cd73adb5a7e310432c4445fd9d939e9a0f0b7af9f",
+         intel: "a8f3823d6506715dc9d1acca7426bbfabfc0232937ef4448e3cc0557aaa20ba3"
 
   url "https://github.com/grafana/k6-studio/releases/download/v#{version}/k6.Studio-#{version}-#{arch}.dmg",
       verified: "github.com/grafana/k6-studio/"
