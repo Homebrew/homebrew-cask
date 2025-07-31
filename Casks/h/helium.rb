@@ -6,7 +6,7 @@ cask "helium" do
   name "Helium"
   homepage "https://github.com/koush/support-wiki/wiki/Helium-Desktop-Installer-and-Android-App"
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Helium.app"
 
