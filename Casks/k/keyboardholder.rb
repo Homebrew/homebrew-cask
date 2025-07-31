@@ -8,6 +8,11 @@ cask "keyboardholder" do
   desc "Switch input method per application"
   homepage "https://keyboardholder.leavesc.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :big_sur"
