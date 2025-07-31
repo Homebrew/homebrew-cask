@@ -1,9 +1,9 @@
 cask "ultimaker-cura" do
   arch arm: "ARM64", intel: "X64"
 
-  version "5.10.1"
-  sha256 arm:   "6fdcbec9a6803a419abd89171a3740debb90dc0133a60e36f41850e6891d0060",
-         intel: "6ce363910529160f4cb68a58b529d62b5f66bed164fba5f91a4111095e48ba56"
+  version "5.10.2"
+  sha256 arm:   "276ab80e9301b12638da04771d08dde5a5dfefff950524171274cb2223a984c1",
+         intel: "adee116986bc44f81f822dec7bc13de901c187a47af1ae8c72f5bbfb4a27cb93"
 
   url "https://github.com/Ultimaker/Cura/releases/download/#{version.csv.second || version.csv.first}/UltiMaker-Cura-#{version.csv.first}-macos-#{arch}.dmg",
       verified: "github.com/Ultimaker/Cura/"
