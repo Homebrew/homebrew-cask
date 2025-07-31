@@ -1,13 +1,9 @@
 cask "chromedriver@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "139.0.7258.52"
-  sha256 arm:   "4374f53a4eb2f6164edb500077c5ba66784a46197fc874f8ad5c0d91afad09dd",
-         intel: "c25afc33fbb50d8809a85e157105a79c8bac8994a472d3c040639b5baf8fd913"
-
-  on_intel do
-    disable! date: "2026-09-01", because: :unsigned
-  end
+  version "139.0.7258.66"
+  sha256 arm:   "94fa1e4fb01e3355f23e427f59d49629df1cbd38e41347faf0738687d71b8c9f",
+         intel: "12ed690058dbffa45e0239675a7b70bf232de14f8c95c9a717ca33482cdd52b6"
 
   url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip",
       verified: "storage.googleapis.com/chrome-for-testing-public/"
@@ -21,6 +17,8 @@ cask "chromedriver@beta" do
       json.dig("channels", "Beta", "version")
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   conflicts_with cask: "chromedriver"
 
