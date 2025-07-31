@@ -13,14 +13,13 @@ cask "dda" do
   desc "Tool for developing on the Datadog Agent platform"
   homepage "https://github.com/DataDog/datadog-agent"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  auto_updates true
-
   binary "dda"
+
+  uninstall_preflight do
+    system_command "#{bin}/dda",
+                   args: ["self", "remove"],
+                   sudo: false
+  end
 
   caveats <<~EOS
     The `dda self update` command updates to an internal location
