@@ -1,5 +1,5 @@
 cask "yate" do
-  version "8.2.2"
+  version "8.2.3"
   sha256 :no_check
 
   on_sierra :or_older do
