@@ -16,7 +16,10 @@ cask "automounterhelper" do
 
   depends_on macos: ">= :monterey"
 
-  app "AutoMounterHelper.app"
+  installer manual: "AutoMounterHelper.app"
+
+  uninstall launchctl: "nz.co.pixeleyes.AutoMounterHelper",
+            trash:     "~/Library/AutoMounterHelper"
 
   # No zap stanza required
 end
