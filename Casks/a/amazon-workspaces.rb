@@ -18,7 +18,8 @@ cask "amazon-workspaces" do
 
   pkg "WorkSpaces.pkg"
 
-  uninstall pkgutil: "com.amazon.workspaces"
+  uninstall launchctl: "com.amazon.workspaces.updater",
+            pkgutil:   "com.amazon.workspaces"
 
   zap trash: [
     "~/Library/Application Support/Amazon Web Services/Amazon WorkSpaces",
