@@ -16,7 +16,7 @@ cask "dda" do
   binary "dda"
 
   uninstall_preflight do
-    system_command "#{bin}/dda",
+    system_command "dda",
                    args: ["self", "remove"],
                    sudo: false
   end
