@@ -14,7 +14,7 @@ cask "mumble@snapshot" do
 
   no_autobump! because: :requires_manual_review
 
-  deprecate! date: "2025-05-01", because: :unsigned
+  disable! date: "2026-09-01", because: :unsigned
 
   conflicts_with cask: "mumble"
   depends_on macos: ">= :high_sierra"
