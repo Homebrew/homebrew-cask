@@ -21,7 +21,7 @@ cask "bcut" do
 
   livecheck do
     url "https://member.bilibili.com/x/bcut/pc/upgrade/v2?version=0&client_type=1"
-    regex(%r{/static/([^/]+)/BCUT[._-](\d+(?:\.\d+)+)[._-](\d+)[._-]#{arch}\.dmg})
+    regex(%r{/static/([^/]+)/BCUT[._-](\d+(?:\.\d+)+)[._-](\d+)[._-]#{arch}\.dmg}i)
     strategy :json do |json|
       match = json.dig("data", pkg_key)&.match(regex)
       next if match.blank? || version.blank?
