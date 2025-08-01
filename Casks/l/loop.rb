@@ -1,13 +1,11 @@
 cask "loop" do
-  version "1.2.0"
-  sha256 "3287c5b9ca7f194aae53b071e2078f216492ac0a8551fd2ae7d20cf0c80920fb"
+  version "1.3.0"
+  sha256 "5221147512902c974e8fe7c8e1f9938bbd53ade3f580cfa3afee77761b444911"
 
   url "https://github.com/MrKai77/Loop/releases/download/#{version}/Loop.zip"
   name "Loop"
   desc "Window manager"
   homepage "https://github.com/MrKai77/Loop"
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :ventura"
