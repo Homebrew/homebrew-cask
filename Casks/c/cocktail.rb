@@ -79,7 +79,7 @@ cask "cocktail" do
     version "19.0"
     sha256 :no_check
 
-    url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
+    url "https://www.maintain.se/downloads/Cocktail#{version.major}TE.dmg"
 
     livecheck do
       url :homepage
