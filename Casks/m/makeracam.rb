@@ -8,21 +8,6 @@ cask "makeracam" do
   desc "CAM software for Makera CNCs"
   homepage "https://www.makera.com/pages/software"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
-  end
-
   depends_on macos: ">= :catalina"
 
   app "MakeraCAM.app"
