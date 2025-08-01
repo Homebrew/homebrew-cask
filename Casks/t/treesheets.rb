@@ -1,8 +1,8 @@
 cask "treesheets" do
-  version "250711.2029,16229165273"
-  sha256 "5b263621c9c5a7a69de183cfed46dfc1c8e03ae6d89a1d80843417c8d5b4c0ad"
+  version "2298"
+  sha256 "1323dac5bb48d111375bfea83f5be186124a9d658ac7a3d7109df6c9635fff75"
 
-  url "https://github.com/aardappel/treesheets/releases/download/#{version.csv.second}/TreeSheets-#{version.csv.first}-Darwin.dmg",
+  url "https://github.com/aardappel/treesheets/releases/download/#{version.csv.second || version.csv.first}/TreeSheets-#{version.csv.first}-Darwin.dmg",
       verified: "github.com/aardappel/treesheets/"
   name "TreeSheets"
   desc "Hierarchical spreadsheet and outline application"
@@ -10,16 +10,18 @@ cask "treesheets" do
 
   livecheck do
     url :url
-    regex(%r{/v?(\d+(?:\.\d+)*)/TreeSheets[._-]v?(\d+(?:\.\d+)+)(?:[._-]Darwin)?\.dmg$}i)
+    regex(%r{/v?(\d+(?:\.\d+)*)/TreeSheets[._-]v?(\d+(?:\.\d+)*)(?:[._-]Darwin)?\.dmg$}i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["browser_download_url"]&.match(regex)
         next if match.blank?
 
-        "#{match[2]},#{match[1]}"
+        (match[2] == match[1]) ? match[1] : "#{match[2]},#{match[1]}"
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :catalina"
 
