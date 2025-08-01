@@ -1,5 +1,5 @@
 cask "dfcf" do
-  version "3.8.0"
+  version "3.8.2"
   sha256 :no_check
 
   url "https://swdlcdn.eastmoney.com/Mac/Macdownload/dfcf.dmg"
