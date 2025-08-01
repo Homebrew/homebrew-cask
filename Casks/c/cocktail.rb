@@ -1,5 +1,5 @@
 cask "cocktail" do
-  on_monterey :or_older do
+  on_ventura :or_older do
     on_el_capitan :or_older do
       version "9.7"
       sha256 "ca6b4a264ca60a08ff45761f82b0b6161cbe3412bd6cbeedd5dbecebc8d26712"
@@ -42,16 +42,16 @@ cask "cocktail" do
 
       url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
     end
+    on_ventura do
+      version "16.7"
+      sha256 :no_check
+
+      url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
-  end
-  on_ventura do
-    version "16.7"
-    sha256 :no_check
-
-    url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
   end
   on_sonoma do
     version "17.11"
