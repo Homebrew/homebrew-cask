@@ -12,7 +12,7 @@ cask "lg-onscreen-control" do
   # so we return the downloads from one of the popular products
   livecheck do
     url "https://www.lg.com/us/support/product/lg-27GN950-B.AUS"
-    regex(/Mac[._-]OSC[._-]v?(\d+(?:\.\d+)+)\.zip/)
+    regex(/Mac[._-]OSC[._-]v?(\d+(?:\.\d+)+)\.zip/i)
     strategy :page_match do |page, regex|
       json_string = page[/NEXT[._-]DATA[^>]*>\s*([^<]+)\s*</i, 1]
       next if json_string.blank?

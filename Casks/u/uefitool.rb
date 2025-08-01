@@ -9,7 +9,7 @@ cask "uefitool" do
 
   livecheck do
     url :url
-    regex(/^(A\d+)$/)
+    regex(/^(A\d+)$/i)
     strategy :github_latest
   end
 

@@ -8,7 +8,7 @@ cask "open-eid" do
   homepage "https://www.id.ee/en/article/install-id-software/"
 
   livecheck do
-    url "https://www.id.ee/en/article/install-id-software/"
+    url :homepage
     regex(/href=.*?Open[._-]EID[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
