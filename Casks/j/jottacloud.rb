@@ -10,7 +10,7 @@ cask "jottacloud" do
 
   livecheck do
     url "https://sw.jotta.cloud/desktop/appcast/CUST/release"
-    regex(%r{/([^/]+)/Jottacloud(?:\s*Installer)?\.dmg})
+    regex(%r{/([^/]+)/Jottacloud(?:\s*Installer)?\.dmg}i)
     strategy :sparkle do |item, regex|
       id = item.url[regex, 1]
       next if id.blank?
