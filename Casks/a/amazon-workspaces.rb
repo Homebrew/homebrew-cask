@@ -1,6 +1,6 @@
 cask "amazon-workspaces" do
-  version "5.28.1.5887"
-  sha256 "38348e6fdd9b1eba7078c8f8fdba58309a91d74f7db552d1182cb83f593cff57"
+  version "5.29.0.5946"
+  sha256 "8287445f309a805e07e27d18acdca55f51be1db2789e9ac43c3c1b419a5cab36"
 
   url "https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces_AllProducts_#{version.split(".").last}.zip",
       verified: "d2td7dqidlhjx7.cloudfront.net/prod/global/osx/"
@@ -18,7 +18,8 @@ cask "amazon-workspaces" do
 
   pkg "WorkSpaces.pkg"
 
-  uninstall pkgutil: "com.amazon.workspaces"
+  uninstall launchctl: "com.amazon.workspaces.updater",
+            pkgutil:   "com.amazon.workspaces"
 
   zap trash: [
     "~/Library/Application Support/Amazon Web Services/Amazon WorkSpaces",
