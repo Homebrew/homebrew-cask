@@ -37,6 +37,16 @@ cask "betterdisplay" do
   depends_on macos: ">= :mojave"
 
   app "BetterDisplay.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/betterdisplay.wrapper.sh"
+  binary shimscript, target: "betterdisplaycli"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/bash
+      exec '#{appdir}/BetterDisplay.app/Contents/MacOS/BetterDisplay' "$@"
+    EOS
+  end
 
   uninstall quit:       "pro.betterdisplay.BetterDisplay",
             login_item: "BetterDisplay"
