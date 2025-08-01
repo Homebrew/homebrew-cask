@@ -1,9 +1,9 @@
 cask "slite" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.25,250505lp32pn3cs"
-  sha256 arm:   "adcff692843bcb9003447649e48178186d8285735e1482425a6ae7207a136f80",
-         intel: "3c20cfeeb817d0b9f65377c2d05c0e166884b64f408a4bde37187726fc8370ca"
+  version "1.3.0,250731antv74pv7"
+  sha256 arm:   "25d954582c379d2d62b966de40c1c5fcec60d1d0eabab75d2432bca5fb78cac0",
+         intel: "c64a214d2f39de9102df1c7f28dfb39a201b4827a5c24eddc506f4ade83a1fa4"
 
   url "https://download.todesktop.com/20062929x31pwfi/Slite%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/20062929x31pwfi/"
@@ -23,8 +23,6 @@ cask "slite" do
       end
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :catalina"
 
