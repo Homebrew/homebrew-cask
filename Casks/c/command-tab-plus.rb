@@ -1,5 +1,5 @@
 cask "command-tab-plus" do
-  version "2.8.1"
+  version "2.8.5"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/Command-Tab%20Plus%20#{version.major}.zip",
@@ -12,8 +12,6 @@ cask "command-tab-plus" do
     url "https://macplus-software.com/downloads/CommandTabPlus#{version.major}.xml"
     strategy :sparkle, &:short_version
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
