@@ -1,6 +1,6 @@
 cask "sameboy" do
-  version "1.0.1"
-  sha256 "da84c0fb573f4c89d1adb8f712e0b27c27f66d1f706a8c1674b0984aba4be5fd"
+  version "1.0.2"
+  sha256 "9fb1fd71efbc74e1946b463d582f7237458c29c2c714ec8806e27f3546e0fbd0"
 
   url "https://github.com/LIJI32/SameBoy/releases/download/v#{version}/sameboy_cocoa_v#{version}.zip",
       verified: "github.com/LIJI32/SameBoy/"
@@ -12,8 +12,6 @@ cask "sameboy" do
     url :url
     strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 
