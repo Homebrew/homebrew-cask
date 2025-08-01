@@ -1,6 +1,6 @@
 cask "time-to-leave" do
-  version "3.0.0"
-  sha256 "25fef73ac373e37ba8c0363e25e7e0996afb048466698777e9f0a0e5bb8876a0"
+  version "4.0.0"
+  sha256 "c9550185217167a9257d05b550ff48780058d6c031a99660302528af205d2068"
 
   url "https://github.com/TTLApp/time-to-leave/releases/download/#{version}/time-to-leave-#{version}.dmg"
   name "Time To Leave"
