@@ -1,9 +1,9 @@
 cask "ovice" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.15.0"
-  sha256 arm:   "a493b712966cab7e416cb328b3ca34cb1f21eaa6eba697e744e8987483d388d6",
-         intel: "2aa90e81308f28dac80773ef3cfded1756025202a329d5aae4d45af8bf8d2056"
+  version "1.15.1"
+  sha256 arm:   "153020d355fa968df639418500fd05a6e3096619f31d229efbf4a521ddbbdb8b",
+         intel: "3f6c53bcdd8a9a18bcaf37d661f6c3f568d95d962aefd57c12e5e2ba09838009"
 
   url "https://assets.ovice.io/desktop-apps/staging/darwin/#{arch}/ovice-darwin-#{arch}-#{version}.zip",
       verified: "assets.ovice.io/desktop-apps/"
