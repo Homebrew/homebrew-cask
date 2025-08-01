@@ -1,9 +1,9 @@
 cask "geoda" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.22.0.18,1.22.0"
-  sha256 arm:   "9383fdf36749cbabd492f6f2bca39dedb1518f284cd54a7320c888f8c2de52d6",
-         intel: "16474a2a10d08b4bb05f49162bbffb3e2f193272cc16312a020858c43789fdac"
+  version "1.22.0.20,1.22.0"
+  sha256 arm:   "0db259e253d18ef4fca65fdaa3c9ad3fa66e90f33b57e6ca6accf07c0abb235d",
+         intel: "08bd3333ac410a34f1f7089f669c8994236781579099be01945003e4d2bd3c5b"
 
   url "https://github.com/GeoDaCenter/geoda/releases/download/v#{version.csv.first}/GeoDa#{version.csv.second || version.csv.first}-#{arch}-Installer.dmg",
       verified: "github.com/GeoDaCenter/geoda/"
