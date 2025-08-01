@@ -14,8 +14,6 @@ cask "smcfancontrol@beta" do
 
   no_autobump! because: :requires_manual_review
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   conflicts_with cask: "smcfancontrol"
 
   app "smcFanControl.app"
@@ -25,4 +23,8 @@ cask "smcfancontrol@beta" do
     "~/Library/Application Support/smcFanControl",
     "~/Library/Caches/com.eidac.smcFanControl#{version.major}",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
