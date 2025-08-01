@@ -1,17 +1,15 @@
 cask "pinta" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.0.2"
-  sha256 arm:   "a5f3b6472deacd8b6ad7ddb52841c092ae5f5ee2308da02cba902b5306b9e59e",
-         intel: "f9952ea89e865f805cf8f2f5e7c4db64bfe074090f5a9a809c679ec5ba7191fd"
+  version "3.0.3"
+  sha256 arm:   "2aa1c525e0e10dbd507a62f1f69e9c3f9b5c727a27f3d8454edb731ae787b34d",
+         intel: "e26690f50f47e819c53b275f91849a05d88f2cf82d70818e7b24886de77acb40"
 
   url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta-macos-#{arch}.dmg",
       verified: "github.com/PintaProject/Pinta/"
   name "Pinta"
   desc "Simple Gtk# Paint Program"
   homepage "https://www.pinta-project.com/"
-
-  no_autobump! because: :requires_manual_review
 
   app "Pinta.app"
 
