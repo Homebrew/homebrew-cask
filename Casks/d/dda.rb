@@ -15,11 +15,10 @@ cask "dda" do
 
   binary "dda"
 
-  uninstall_preflight do
-    system_command "dda",
-                   args: ["self", "remove"],
-                   sudo: false
-  end
+  uninstall script: {
+    executable: "dda",
+    args:       ["self", "remove"],
+  }
 
   caveats <<~EOS
     The `dda self update` command updates to an internal location
