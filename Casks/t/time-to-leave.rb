@@ -15,7 +15,7 @@ cask "time-to-leave" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Time To Leave.app"
 
