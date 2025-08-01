@@ -9,8 +9,8 @@ cask "paper" do
   homepage "https://paper.photos/"
 
   livecheck do
-    url "https://paper.photos"
-    regex(/paper[._-]v?(\d+(?:\.\d+)+)\.dmg/)
+    url :homepage
+    regex(/paper[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   no_autobump! because: :requires_manual_review
