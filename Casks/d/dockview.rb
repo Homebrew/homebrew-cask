@@ -1,5 +1,5 @@
 cask "dockview" do
-  version "1.6.5"
+  version "1.6.7"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/DockViewStandard.zip",
@@ -12,8 +12,6 @@ cask "dockview" do
     url "https://macplus-software.com/downloads/DockViewStandard.xml"
     strategy :sparkle, &:short_version
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
