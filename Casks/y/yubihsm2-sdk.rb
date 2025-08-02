@@ -12,7 +12,7 @@ cask "yubihsm2-sdk" do
 
   livecheck do
     url "https://developers.yubico.com/YubiHSM2/Releases/"
-    regex(%r{href=.*?/yubihsm2-sdk[._-]v?(\d+(?:[.-](\d|\w)+)+)-darwin-#{arch}\.pkg}i)
+    regex(/href=.*?yubihsm2-sdk[._-]v?(\d+(?:[.-]\d+)+[a-z]?)[._-]darwin[._-]#{arch}\.pkg/i)
   end
 
   no_autobump! because: :requires_manual_review
