@@ -11,7 +11,14 @@ cask "stretchly" do
   desc "Break time reminder app"
   homepage "https://hovancik.net/stretchly/"
 
-  no_autobump! because: :requires_manual_review
+  # This is the default strategy, but we need to explicitly
+  # specify it to continue checking it while it is deprecated
+  livecheck do
+    url :url
+    strategy :git
+  end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :big_sur"
 
@@ -24,10 +31,4 @@ cask "stretchly" do
     "~/Library/Logs/Stretchly",
     "~/Library/Preferences/net.hovancik.stretchly.plist",
   ]
-
-  caveats <<~EOS
-    This application is not signed. For details see:
-
-    https://github.com/hovancik/stretchly#application-signing
-  EOS
 end
