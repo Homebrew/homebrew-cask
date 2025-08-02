@@ -1,6 +1,6 @@
 cask "kvirc" do
-  version "5.2.6,Quasar"
-  sha256 "2aeb70d17289a6921018aa696c9ecb529d6c77c3cb98e1599098d8fc62106f9f"
+  version "5.2.8,Quasar"
+  sha256 "649292862994dbba4637b047c4701034b0412b6a919caf483f739eb0c2b4179b"
 
   url "https://github.com/kvirc/KVIrc/releases/download/#{version.csv.first}/KVIrc-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/kvirc/KVIrc/"
@@ -25,7 +25,7 @@ cask "kvirc" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :high_sierra"
 
