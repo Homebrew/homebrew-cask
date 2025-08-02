@@ -1,6 +1,6 @@
 cask "tdr-molotok" do
   version "1.0.6"
-  sha256 "4a6ce0f037b1fb6b6e6ee4786a502ac838c01c16d738ef46bd8bd810b6a81de6"
+  sha256 "1941adfb18bef4859fc76d499321fb87334b7996c3e24c1be1cc32f881518151"
 
   url "https://www.tokyodawn.net/labs/Molotok/#{version}/TDR%20Molotok.zip"
   name "TDR Molotok"
@@ -11,8 +11,6 @@ cask "tdr-molotok" do
     url :homepage
     regex(%r{href=.*?Molotok/v?(\d+(?:\.\d+)+)/TDR(%20|\s)Molotok\.zip}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   pkg "TDR Molotok.pkg"
 
