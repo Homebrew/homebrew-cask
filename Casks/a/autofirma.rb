@@ -2,12 +2,11 @@ cask "autofirma" do
   arch arm: "M1", intel: "x64"
   pkg_arch = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  version "1.8.4"
-  sha256 arm:   "2ffbf235fe0ff77c72707c674a67d4ffb924c05eca5910c7478dc96069c900a9",
-         intel: "a14b6203d597cd113a2f53d587d657320632011b29cea1fbeadfd663140bcbed"
+  version "1.9"
+  sha256 arm:   "8684c89024711d3a29745738f2e67e85f3d7d22fd3d80ddfb1acf4137f97d455",
+         intel: "06bd9980f86c0e45a54474c827e87747d4a84f9b4df608460b10bfa0eee524ff"
 
-  url "https://estaticos.redsara.es/comunes/autofirma/#{version.major}/#{version.minor}/#{version.patch}/AutoFirma_Mac_#{arch}.zip",
-      verified: "estaticos.redsara.es/comunes/autofirma/"
+  url "https://firmaelectronica.gob.es/content/dam/firmaelectronica/descargas-software/autofirma#{version.no_dots}/Autofirma_Mac_#{arch}.zip"
   name "AutoFirma"
   desc "Digital signature editor and validator"
   homepage "https://firmaelectronica.gob.es/ciudadanos/descargas"
@@ -22,8 +21,6 @@ cask "autofirma" do
       match[1]
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   # See https://github.com/Homebrew/homebrew-cask/pull/116137#issuecomment-998220031
   installer manual: "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
