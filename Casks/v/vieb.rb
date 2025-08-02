@@ -1,9 +1,9 @@
 cask "vieb" do
   arch arm: "arm64-"
 
-  version "12.3.0"
-  sha256 arm:   "2340ff380609be0a856194fbe260e7e566f47437b7703f3030a24254cd878c7f",
-         intel: "1a65188281e564217467446fc7fb9a5b86ac1803e7fba56c69434edaed5d127d"
+  version "12.4.0"
+  sha256 arm:   "237af29f4c0cb276b771b12eaa420a37414e66da868992e44ddbb25050a6ab2c",
+         intel: "2ae21bc6763ee57e2761878de1d4c823bcbc1a093a70d9bcf14629f191ffd39f"
 
   url "https://github.com/Jelmerro/Vieb/releases/download/#{version}/Vieb-#{version}-#{arch}mac.zip",
       verified: "github.com/Jelmerro/Vieb/"
@@ -11,7 +11,14 @@ cask "vieb" do
   desc "Vim Inspired Electron Browser"
   homepage "https://vieb.dev/"
 
-  no_autobump! because: :requires_manual_review
+  # This is the default strategy, but we need to explicitly
+  # specify it to continue checking it while it is deprecated
+  livecheck do
+    url :url
+    strategy :git
+  end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :big_sur"
 
