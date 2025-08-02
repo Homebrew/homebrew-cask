@@ -1,6 +1,6 @@
 cask "textadept" do
-  version "12.7"
-  sha256 "20e310e3c7fafcee04db1f252c9fc4ffe23fecc9dbdb2a94ff520ba0ff5b5256"
+  version "12.8"
+  sha256 "85072473600e4d8b3cb325461e833240478df2bb5e2907bfb89ae6186d45ad04"
 
   url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip",
       verified: "github.com/orbitalquark/textadept/"
@@ -13,7 +13,7 @@ cask "textadept" do
     regex(/^textadept[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Textadept.app"
   binary "ta"
