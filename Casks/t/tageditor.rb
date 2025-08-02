@@ -1,5 +1,5 @@
 cask "tageditor" do
-  version "1.0.16,1297"
+  version "2.0.1,1330"
   sha256 :no_check
 
   url "https://amvidia.com/downloads/tag-editor-mac.dmg"
@@ -14,10 +14,11 @@ cask "tageditor" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "Tag Editor.app"
+  app "Tag Editor #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.amvidia.Tag-Editor-FS",
+    "~/Library/Containers/com.amvidia.Tag-Editor-FS",
     "~/Library/Containers/Tag Editor",
     "~/Library/Saved Application State/com.amvidia.Tag-Editor-FS.savedState",
   ]
