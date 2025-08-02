@@ -2,7 +2,7 @@ cask "antconc" do
   arch arm: "silicon", intel: "intel"
 
   version "4.3.1"
-  sha256 arm:   "2379a52937c02203289e83d6cb73dca9680d0e86251c78c4ed23aaa3d4eaed02",
+  sha256 arm:   "a5dd12a9c2fbac75ae48449f097fbb0966e0fa6fc14c539eff098e6ab2b5b3e5",
          intel: "e6be15d1a53d49ab90ae8cbbb9b674257cd26eec2fd0a1dd592f20a0c5f153c4"
 
   url "https://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/apple-#{arch}/AntConc.dmg"
@@ -22,7 +22,7 @@ cask "antconc" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  depends_on macos: ">= :high_sierra"
 
   app "AntConc.app"
 
