@@ -13,7 +13,7 @@ cask "serene" do
     strategy :electron_builder
   end
 
-  no_autobump! because: :requires_manual_review
+  deprecate! date: "2025-08-02", because: :unmaintained
 
   app "Serene.app"
 
