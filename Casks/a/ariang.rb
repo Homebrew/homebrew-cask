@@ -10,6 +10,15 @@ cask "ariang" do
   desc "Better aria2 desktop frontend than AriaNg"
   homepage "https://github.com/mayswind/AriaNg-Native"
 
+  # This is the default strategy, but we need to explicitly
+  # specify it to continue checking it while it is deprecated
+  livecheck do
+    url :url
+    strategy :git
+  end
+
+  disable! date: "2026-09-01", because: :unsigned
+
   depends_on macos: ">= :high_sierra"
 
   app "AriaNg Native.app"
