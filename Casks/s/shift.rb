@@ -12,8 +12,11 @@ cask "shift" do
   homepage "https://shift.com/"
 
   livecheck do
-    url "https://shift.com/download/?platform=mac"
-    regex(/href=.*?(\d+(?:[._-]\d+)+)[._-]stable.*?\.dmg/i)
+    url "https://updates.tryshift.com/appcast/stable/mac-#{arch}.xml"
+    regex(/shift[._-]v?(\d+(?:\.\d+)+)[._-]stable[._-]#{arch}\.dmg/i)
+    strategy :sparkle do |item, regex|
+      item.url[regex, 1]
+    end
   end
 
   depends_on macos: ">= :catalina"
