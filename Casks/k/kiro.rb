@@ -2,12 +2,12 @@ cask "kiro" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "0.1.25,202507232015"
-    sha256  "190e34662ac3f8c107712e81ee2ef1974c1808fb29be8911accb83ddea9940ce"
+    version "0.1.42,202508020230"
+    sha256  "6011e7166a157eb9787211248fd6013f669467883d518f408b180214a5791555"
   end
   on_intel do
-    version "0.1.25,202507232041"
-    sha256  "747f9a43c20aa860b44cb325390164ed46212f9fdd5923b02d70f8d7b6c1a569"
+    version "0.1.42,202508020251"
+    sha256  "f0fe7ad8de9be0fc8d6203480b2ae5571a619108d776ff345445ed93bd6269b1"
   end
 
   url "https://prod.download.desktop.kiro.dev/releases/#{version.csv.second}-Kiro-dmg-darwin-#{arch}.dmg"
