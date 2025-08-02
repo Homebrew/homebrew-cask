@@ -1,6 +1,6 @@
 cask "omnissa-horizon-client" do
-  version "2503-8.15.0-14236092062,CART26FQ1_MAC_2503"
-  sha256 "a3d5169fb8383aff63c0f19628ea889b3be965734556870b3cf9845fb0d3d5c5"
+  version "2506-8.16.0-16536825094,CART26FQ2_MAC_2506"
+  sha256 "45bb7a2ec1b309e9bf93ccda155ab78890c12eabe52cff3e57cd900662a100c0"
 
   url "https://download3.omnissa.com/software/#{version.csv.second}/Omnissa-Horizon-Client-#{version.csv.first}.dmg"
   name "Omnissa Horizon Client"
@@ -33,8 +33,6 @@ cask "omnissa-horizon-client" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :big_sur"
 
@@ -53,7 +51,8 @@ cask "omnissa-horizon-client" do
               "com.ws1.Deem",
               "com.ws1.Deem.InstallerHelper",
               "com.ws1.EndpointTelemetryService",
-            ]
+            ],
+            trash:     "/Applications/Omnissa Horizon Client.app"
 
   zap trash: [
     "/Library/Application Support/Omnissa",
