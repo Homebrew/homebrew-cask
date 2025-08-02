@@ -1,6 +1,6 @@
 cask "assinador-serpro" do
-  version "4.2.2"
-  sha256 "8be514e7088e83e1de4f1ba02b40f273f61205e5396bcc60b09b4305e815742b"
+  version "4.3.1"
+  sha256 "03fdabc58c04e7956310899e83f7960e93da2708a929263223d545185898c127"
 
   url "https://assinadorserpro.estaleiro.serpro.gov.br/downloads/#{version}/AssinadorSerpro-#{version}.mpkg.zip"
   name "Assinador Serpro"
@@ -12,7 +12,7 @@ cask "assinador-serpro" do
     regex(/Assinador\sSerpro\s(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :sierra"
 
