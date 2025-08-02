@@ -1,6 +1,6 @@
 cask "taskade" do
   version "4.4.5"
-  sha256 "932aa0942fe803adbc6541c2aa87ac4a0bbdf84bafe3095199a791547180f225"
+  sha256 "a6d48ddd501b6e24dd65ac25404a4850913c2214d3640689ef78cfa6fdfded8c"
 
   url "https://apps.taskade.com/updates/Taskade-#{version}-universal.dmg"
   name "Taskade"
@@ -12,7 +12,7 @@ cask "taskade" do
     regex(%r{href=.*?/Taskade[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg}i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Taskade.app"
 
