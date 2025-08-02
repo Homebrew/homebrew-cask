@@ -12,7 +12,7 @@ cask "sengi" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :high_sierra"
 
@@ -23,4 +23,8 @@ cask "sengi" do
     "~/Library/Preferences/org.sengi.desktop.plist",
     "~/Library/Saved Application State/org.sengi.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
