@@ -20,6 +20,16 @@ cask "drawio" do
   depends_on macos: ">= :big_sur"
 
   app "draw.io.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/drawio.wrapper.sh"
+  binary shimscript, target: "drawio"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/bash
+      exec '#{appdir}/draw.io.app/Contents/MacOS/draw.io' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/draw.io",
