@@ -46,8 +46,8 @@ cask "displaylink" do
     end
   end
   on_monterey :or_newer do
-    version "1.12.4,2025-06"
-    sha256 "8244e87e44b9797f4c5c454646ae696da06f1bee585306072b2b61fc55c37a7b"
+    version "13.0,2025-07"
+    sha256 "815edc7333de2f0476ac95def33421e90a2c06c5fd7266d9d6379d542d72a5f5"
 
     url "https://www.synaptics.com/sites/default/files/exe_files/#{version.csv.second}/DisplayLink%20Manager%20Graphics%20Connectivity#{version.csv.first}-EXE.zip"
 
@@ -70,7 +70,7 @@ cask "displaylink" do
   desc "Drivers for DisplayLink docks, adapters and monitors"
   homepage "https://www.synaptics.com/products/displaylink-graphics"
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   uninstall launchctl: [
               "73YQY62QM3.com.displaylink.DisplayLinkAPServer",
