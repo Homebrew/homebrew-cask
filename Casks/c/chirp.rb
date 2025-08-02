@@ -1,6 +1,6 @@
 cask "chirp" do
-  version "20250718"
-  sha256 "de657f92563b61116982f23954e7015da1f94779f9e38e2909c2b190dddd35a5"
+  version "20250801"
+  sha256 "07809e2558bfd248e65c69f4b56a7c9a08b5d262730900b5f5020912ed282868"
 
   url "https://archive.chirpmyradio.com/chirp_next/next-#{version}/chirp-next-#{version}.app.zip",
       verified: "archive.chirpmyradio.com/",
@@ -14,7 +14,7 @@ cask "chirp" do
     regex(/next[._-]v?(\d+(?:\.\d+)*)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :high_sierra"
 
   app "CHIRP.app"
 
