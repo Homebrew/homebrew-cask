@@ -1,6 +1,6 @@
 cask "hydrogen" do
-  version "1.2.5"
-  sha256 "556759b691e5590d3803ba5c052a97102fd96a553d9f8a14d1e720f2e327dc80"
+  version "1.2.6"
+  sha256 "05ba60a4c71745c591b22f472b80c79fdcdd0ef38bb3ef0b08b313d722e76811"
 
   url "https://github.com/hydrogen-music/hydrogen/releases/download/#{version}/Hydrogen-#{version}.dmg",
       verified: "github.com/hydrogen-music/hydrogen/"
@@ -13,7 +13,7 @@ cask "hydrogen" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :mojave"
 
