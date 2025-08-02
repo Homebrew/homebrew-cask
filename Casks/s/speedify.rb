@@ -1,6 +1,6 @@
 cask "speedify" do
-  version "15.6.4,3623"
-  sha256 "14f5510d8a1e9e6646c74ffb305891446be51916fe47e7e2b54e46418a039531"
+  version "15.7.2,3691"
+  sha256 "7ffaae6fda913f6f0857f4d7e3215ce4fe1ef6d256b6f276847f8c3973e0829a"
 
   url "https://downloads.speedify.com/Speedify-#{version.csv.first}.#{version.csv.second}.dmg"
   name "Speedify"
@@ -12,7 +12,7 @@ cask "speedify" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Speedify.app"
 
