@@ -6,7 +6,7 @@ cask "ollama-app" do
       verified: "github.com/ollama/ollama/"
   name "Ollama"
   desc "Get up and running with large language models locally"
-  homepage "https://ollama.ai/"
+  homepage "https://ollama.com/"
 
   livecheck do
     url :url
