@@ -7,8 +7,11 @@ cask "firestorm" do
   desc "Viewer for accessing Virtual Worlds"
   homepage "https://www.firestormviewer.org/"
 
+  # The upstream download page links to the latest dmg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://www.firestormviewer.org/mac/
   livecheck do
-    skip "No version information available"
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
   no_autobump! because: :requires_manual_review
