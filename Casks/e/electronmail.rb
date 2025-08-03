@@ -1,9 +1,9 @@
 cask "electronmail" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.3.1"
-  sha256 arm:   "c9a5bb0a56c8cc54f54ca21cfdd686922f7e85a5847cac5ead2bd741b2d4803a",
-         intel: "820daebdedeb507adcc7888bb79232ab60b843302ed07361aadb8c3dace78c72"
+  version "5.3.2"
+  sha256 arm:   "ae36440fa666e49f26a87ffc40415103a180c4aa35861ba795d9e8489d9907a2",
+         intel: "fba2eb8270d4994c49305ef8727d454dc0e6b76da2d7776126800576275c2383"
 
   url "https://github.com/vladimiry/ElectronMail/releases/download/v#{version}/electron-mail-#{version}-mac-#{arch}.dmg"
   name "ElectronMail"
@@ -21,7 +21,7 @@ cask "electronmail" do
 
   depends_on macos: ">= :big_sur"
 
-  app "ElectronMail.app"
+  app "electron-mail.app"
 
   zap trash: [
     "~/Library/Logs/ElectronMail",
