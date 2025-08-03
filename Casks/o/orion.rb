@@ -1,8 +1,7 @@
 cask "orion" do
-  version "0.99,134"
-
   on_mojave :or_older do
-    sha256 "97fc6544a0a8f4f3f84bb2443758177b50b8faa0a33dbfc57c4717f81a6b9812"
+    version "0.99,135"
+    sha256 "56dfb5d128cfd105a073813389f120383bd0168908c08ffa9376f0788a0c42cb"
 
     url "https://cdn.kagi.com/updates/10_14/#{version.csv.second}.zip"
 
@@ -12,7 +11,8 @@ cask "orion" do
     end
   end
   on_catalina do
-    sha256 "6433ad84a75a73ae83267695c9cc5eb6e8068f28034d1fce9e76429c55230b10"
+    version "0.99,135"
+    sha256 "f459d0c2229e3a2f8af4699576941b472882fad958029d1c45c27317bae9fa8a"
 
     url "https://cdn.kagi.com/updates/10_15/#{version.csv.second}.zip"
 
@@ -22,7 +22,8 @@ cask "orion" do
     end
   end
   on_big_sur do
-    sha256 "4dfa80b65ca1006be575fe4e5577c4c4898a909aab1ca2749009edb0fa26ab2f"
+    version "0.99,135.0.1"
+    sha256 "7a38688fb13770da76b4f9345c3747b1b8db147909d350d0985e44c96ace1f90"
 
     url "https://cdn.kagi.com/updates/11_0/#{version.csv.second}.zip"
 
@@ -32,7 +33,8 @@ cask "orion" do
     end
   end
   on_monterey do
-    sha256 "6c19b6b90eed4210db20a95193e30709a797199091f0f95919e79e478f617da4"
+    version "0.99,135.0.1"
+    sha256 "0a10adb8524b0132307512ea95a9c66909c50f1ca35016a206963a05dc007299"
 
     url "https://cdn.kagi.com/updates/12_0/#{version.csv.second}.zip"
 
@@ -42,7 +44,8 @@ cask "orion" do
     end
   end
   on_ventura do
-    sha256 "f06459a3200043f4e38ec8af2489ffeddc11bfb093f2985eadeb171be4eeec4e"
+    version "0.99,135.0.1"
+    sha256 "a557ee2a1f92801d0f4de4ea905e15adc03fc626826c8ea15d5f6da3f170e4c6"
 
     url "https://cdn.kagi.com/updates/13_0/#{version.csv.second}.zip"
 
@@ -52,7 +55,8 @@ cask "orion" do
     end
   end
   on_sonoma do
-    sha256 "4f0ba72398a599f44e9d5fafc2f667a279b65cfdd38e5c11b692e531f4d2cefe"
+    version "0.99,135.0.1"
+    sha256 "c238c123a3541935369964479c8b5ee83f1105105550d73d2300b105eac41c65"
 
     url "https://cdn.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
@@ -61,13 +65,25 @@ cask "orion" do
       strategy :sparkle
     end
   end
-  on_sequoia :or_newer do
-    sha256 "91f0261e8b662da378b1c8fb3fd42529afe64af9b049f5c32c9c5bc7baa23428"
+  on_sequoia do
+    version "0.99,135.0.1"
+    sha256 "b603930100f8351e1dad4a4ab2aa34fafaa7c0ade28aae3c8188e153548abbf6"
 
     url "https://cdn.kagi.com/updates/15_0/#{version.csv.second}.zip"
 
     livecheck do
       url "https://cdn.kagi.com/updates/15_0/appcast.xml"
+      strategy :sparkle
+    end
+  end
+  on_tahoe :or_newer do
+    version "0.99,134"
+    sha256 "91f0261e8b662da378b1c8fb3fd42529afe64af9b049f5c32c9c5bc7baa23428"
+
+    url "https://cdn.kagi.com/updates/26_0/#{version.csv.second}.zip"
+
+    livecheck do
+      url "https://cdn.kagi.com/updates/26_0/appcast.xml"
       strategy :sparkle
     end
   end
