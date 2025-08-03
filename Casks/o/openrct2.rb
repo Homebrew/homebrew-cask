@@ -23,8 +23,8 @@ cask "openrct2" do
     end
   end
   on_mojave :or_newer do
-    version "0.4.24"
-    sha256 "27855060cdd38d2269a3dd5f79384b0b573642111b9571a4d5c7965cb6dd7f8a"
+    version "0.4.25"
+    sha256 "40400126c95e7eec263b71e843d1b8043fd2071a82172ae2ba424bf3d01e0557"
 
     url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-v#{version}-macos-universal.zip",
         verified: "github.com/OpenRCT2/OpenRCT2/"
@@ -33,6 +33,8 @@ cask "openrct2" do
   name "OpenRCT2"
   desc "Open-source re-implementation of RollerCoaster Tycoon 2"
   homepage "https://openrct2.io/"
+
+  disable! date: "2026-09-01", because: :unsigned
 
   app "OpenRCT2.app"
 
