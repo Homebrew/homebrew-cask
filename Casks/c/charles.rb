@@ -8,11 +8,9 @@ cask "charles" do
   homepage "https://www.charlesproxy.com/"
 
   livecheck do
-    url "https://www.charlesproxy.com/latest.do"
+    url "https://www.charlesproxy.com/latest.do", post_json: {}
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   conflicts_with cask: "charles@4"
 
