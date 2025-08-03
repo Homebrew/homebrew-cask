@@ -1,6 +1,6 @@
 cask "textual" do
-  version "7.2.5,fb98cbbfd"
-  sha256 "76f52934b6db4847cc9976f3ed2d0f4d026c53487fb09cb8b73bdbc26d8ef374"
+  version "7.2.6,65222a260"
+  sha256 "fc4217076a74e0f92f67ec4ccde6b9e59509a3df167b1d039a5b65a3b4ad8daa"
 
   url "https://cached.codeux.com/textual/downloads/builds/stable/Textual-#{version.csv.second}/universal/Textual.zip"
   name "Textual"
