@@ -10,14 +10,14 @@ cask "kodi" do
   desc "Free and open-source media player"
   homepage "https://kodi.tv/"
 
-  # The regex below assumes that the release name will always be one word
-  # (e.g., Leia, Matrix, Nexus, Omega, etc.).
+  # The upstream website is protected by Cloudflare, which prevents us from
+  # fetching the download page. The GitHub releases link to Kodi releases, so
+  # we check the latest GitHub release as a workaround.
   livecheck do
-    url "https://kodi.tv/download/macos/"
-    regex(/href=.*?kodi[._-]v?(\d+(?:\.\d+)+[._-][^-]+?)[._-][^-]+?\.dmg/i)
+    url "https://github.com/xbmc/xbmc/"
+    regex(/^v?(\d+(?:\.\d+)+(?:-\w+))$/i)
+    strategy :github_latest
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 
