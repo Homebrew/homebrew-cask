@@ -10,12 +10,6 @@ cask "uvtools" do
   desc "MSLA/DLP, file analysis, calibration, repair, conversion and manipulation"
   homepage "https://github.com/sn4k3/UVtools"
 
-  # This simply ensures that the cask continues to be checkable despite the
-  # implicit deprecation from the `disable!` call.
-  livecheck do
-    url :url
-  end
-
   disable! date: "2026-09-01", because: :unsigned
 
   auto_updates true
