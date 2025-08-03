@@ -10,13 +10,6 @@ cask "tiddly" do
   desc "Browser for TiddlyWiki"
   homepage "https://github.com/Jermolene/TiddlyDesktop"
 
-  # This is the default strategy, but we need to explicitly
-  # specify it to continue checking it while it is deprecated
-  livecheck do
-    url :url
-    strategy :git
-  end
-
   disable! date: "2026-09-01", because: :unsigned
 
   app "TiddlyDesktop-mac#{arch}-v#{version}/TiddlyDesktop.app"
