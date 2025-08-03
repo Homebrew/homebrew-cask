@@ -11,13 +11,6 @@ cask "ultrastardeluxe" do
   desc "Karaoke game"
   homepage "https://usdx.eu/"
 
-  # This is the default strategy, but we need to explicitly
-  # specify it to continue checking it while it is deprecated
-  livecheck do
-    url :url
-    strategy :git
-  end
-
   disable! date: "2026-09-01", because: :unsigned
 
   app "UltraStarDeluxe.app"
