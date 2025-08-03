@@ -10,13 +10,11 @@ cask "valhalla-supermassive" do
 
   livecheck do
     url "https://valhalladsp.com/demos-downloads/"
-    regex(/href=.*?ValhallaSupermassiveOSX[._-]v?(\d+(?:[._]\d+)+)v?\d+\.dmg/i)
+    regex(/ValhallaSupermassiveOSX[._-]v?(\d+(?:[._]\d+)+)v?\d+\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match&.first&.tr("_", ".") }
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   pkg "ValhallaSupermassiveOSX.pkg"
 
