@@ -13,7 +13,7 @@ cask "kodi" do
   # The upstream website is protected by Cloudflare, which prevents
   # us from fetching the download page. So we check the GitHub repository.
   livecheck do
-    url "https://github.com/xbmc/xbmc/releases"
+    url "https://github.com/xbmc/xbmc/"
     regex(/^v?(\d+(?:\.\d+)+(?:-\w+))$/i)
     strategy :github_latest
   end
