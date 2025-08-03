@@ -8,7 +8,12 @@ cask "flameshot" do
   desc "Screenshot software"
   homepage "https://flameshot.org/"
 
-  no_autobump! because: :requires_manual_review
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :catalina"
 
