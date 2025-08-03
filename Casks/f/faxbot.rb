@@ -7,15 +7,7 @@ cask "faxbot" do
   desc "Send Faxes via FRITZ!Box"
   homepage "https://www.hosy.de/faxer/"
 
-  livecheck do
-    url "https://www.hosy.de/faxer/version.xml"
-    regex(/Version\s+(\d+(?:\.\d+)*)/i)
-    strategy :sparkle do |item, regex|
-      item.title[regex, 1]
-    end
-  end
-
-  no_autobump! because: :requires_manual_review
+  disable! date: "2025-08-03", because: :no_longer_available
 
   depends_on macos: ">= :sierra"
 
