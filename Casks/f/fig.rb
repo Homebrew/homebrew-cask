@@ -10,6 +10,7 @@ cask "fig" do
   no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-08-03", because: :discontinued
+  disable! date: "2025-08-03", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
@@ -42,8 +43,4 @@ cask "fig" do
     "~/Library/Preferences/com.mschrage.fig.*",
     "~/Library/WebKit/com.mschrage.fig",
   ]
-
-  caveats <<~EOS
-    Please launch the Fig application to finish setup.
-  EOS
 end
