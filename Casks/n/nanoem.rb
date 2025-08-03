@@ -7,13 +7,6 @@ cask "nanoem" do
   desc "Cross-platform MMD (MikuMikuDance) compatible implementation"
   homepage "https://github.com/hkrn/nanoem"
 
-  # This is the default strategy, but we need to explicitly
-  # specify it to continue checking it while it is deprecated
-  livecheck do
-    url :url
-    strategy :git
-  end
-
   disable! date: "2026-09-01", because: :unsigned
 
   app "nanoem.app"

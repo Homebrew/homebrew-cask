@@ -11,13 +11,6 @@ cask "fishing-funds" do
   desc "Display real-time trends of Chinese funds in the menubar"
   homepage "https://ff.1zilc.top/"
 
-  # This is the default strategy, but we need to explicitly
-  # specify it to continue checking it while it is deprecated
-  livecheck do
-    url :url
-    strategy :git
-  end
-
   disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :big_sur"
