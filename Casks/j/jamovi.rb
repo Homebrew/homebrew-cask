@@ -1,9 +1,9 @@
 cask "jamovi" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.7.3.0"
-  sha256 arm:   "5dde8a64058cd1a9f8f0f8ce6ed16e9bc99a1c4c62a7498858fdb06f64a605d8",
-         intel: "2133fc79b476a0a928fb49b4915b1a0d453068fdcb5fb3a94eedb0fc540cd1b8"
+  version "2.7.4.0"
+  sha256 arm:   "67d83d46a837c9aedf3090e654bc7991056e155e6027e5e512d2bb11c9c66cb1",
+         intel: "e5c2b2fe962a825bb888e94c970b199d461f8589f136b41b4e23c41534447833"
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos-#{arch}.dmg"
   name "jamovi"
