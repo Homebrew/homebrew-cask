@@ -30,6 +30,8 @@ cask "freetube" do
   desc "YouTube player focusing on privacy"
   homepage "https://freetubeapp.io/"
 
+  disable! date: "2026-09-01", because: :unsigned
+
   depends_on macos: ">= :catalina"
 
   app "FreeTube.app"
