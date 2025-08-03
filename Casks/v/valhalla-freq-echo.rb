@@ -10,13 +10,11 @@ cask "valhalla-freq-echo" do
 
   livecheck do
     url "https://valhalladsp.com/demos-downloads/"
-    regex(/href=.*?ValhallaFreqEchoOSX[._-]v?(\d+(?:[._]\d+)+)v?\d?\.dmg/i)
+    regex(/ValhallaFreqEchoOSX[._-]v?(\d+(?:[._]\d+)+)v?\d?\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match&.first&.tr("_", ".") }
     end
   end
-
-  no_autobump! because: :requires_manual_review
 
   pkg "ValhallaFreqEchoOSX.pkg"
 
