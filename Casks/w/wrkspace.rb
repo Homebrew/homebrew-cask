@@ -1,9 +1,9 @@
 cask "wrkspace" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.0"
-  sha256 arm:   "61249755619ed86102fd7a51b2598bf8df057f39e2f5d9e30f4443b7d8623136",
-         intel: "491173b55dcc5778d44ff11ee94d809d8131f49f7a9a30d33c12008c73924a8a"
+  version "2.1.1"
+  sha256 arm:   "8c8646bc61c855adc27dbdfe6a94223954be904bee961cdc3545000a6c4053ff",
+         intel: "31518a410aa9bcb69f23fd8fcd6ee7a8fb2f47ac45ba94e3474a73f73bcdac56"
 
   url "https://updater.wrkspace.co/download/version/#{version}/darwin-#{arch}"
   name "Wrkspace"
