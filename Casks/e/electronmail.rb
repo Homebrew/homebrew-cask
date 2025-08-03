@@ -10,13 +10,6 @@ cask "electronmail" do
   desc "Unofficial ProtonMail Desktop App"
   homepage "https://github.com/vladimiry/ElectronMail"
 
-  # This is the default strategy, but we need to explicitly
-  # specify it to continue checking it while it is deprecated
-  livecheck do
-    url :url
-    strategy :git
-  end
-
   disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :big_sur"
