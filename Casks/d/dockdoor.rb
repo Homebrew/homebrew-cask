@@ -8,13 +8,9 @@ cask "dockdoor" do
   desc "Window peeking utility app"
   homepage "https://dockdoor.net/"
 
-  # The Sparkle feed can contain items on the "beta" channel, so we restrict
-  # matching to the default channel.
   livecheck do
-    url "https://dockdoor.net/appcast.xml"
-    strategy :sparkle do |items|
-      items.find { |item| item.channel.nil? }&.short_version
-    end
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
