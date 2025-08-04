@@ -1,9 +1,9 @@
 cask "webstorm" do
   arch arm: "-aarch64"
 
-  version "2025.1.4.1,251.27812.50"
-  sha256 arm:   "6840c346c133f3d1ed0eb41ba2f0195b32a70eb69884c66af408c51ebdb6825a",
-         intel: "d77d8a8547cd0ca8a97dc8e4164f169e470d26bfe51274d0a4456ed4d856d226"
+  version "2025.2,252.23892.411"
+  sha256 arm:   "5f29ca9472c068f8086cb05c4ef3b0fb2b88d4888ef1c5430a0e1f2c771ccbce",
+         intel: "c748bf829295f1d431c032ccbe88d3bcaf771699c8e654ea4bc9f419fb87b576"
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version.csv.first}#{arch}.dmg"
   name "WebStorm"
