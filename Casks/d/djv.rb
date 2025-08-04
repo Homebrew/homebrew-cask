@@ -1,6 +1,6 @@
 cask "djv" do
-  version "3.1.0"
-  sha256 "6edfff1b34fbc4ed9d9ec6d0e7a820d2add99fc06c3cf9e6c934ef840e4ec9eb"
+  version "3.1.1"
+  sha256 "17205f31597c7ba7fb749685c53ed411afee448f48af5f0fdab46dc2511dd6fe"
 
   url "https://github.com/darbyjohnston/DJV/releases/download/#{version}/DJV-#{version}-Darwin-arm64.dmg",
       verified: "github.com/darbyjohnston/DJV/"
