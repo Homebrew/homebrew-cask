@@ -15,6 +15,8 @@ cask "openlp" do
     regex(%r{href=['"]?(\d+(?:\.\d+)+)(?!rc\d+)/['"]?}i)
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   app "OpenLP.app"
 
   zap trash: [
