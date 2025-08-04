@@ -2,7 +2,7 @@ cask "libreoffice-still-language-pack" do
   arch arm: "aarch64", intel: "x86-64"
   folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
-  version "25.2.5.2"
+  version "25.2.5"
 
   language "af" do
     sha256 arm:   "4c67b7fc61118e2e54c52247c3f8dc8f3cf6dd22931df8f66acaea0d653bac83",
@@ -495,7 +495,7 @@ cask "libreoffice-still-language-pack" do
     "zu"
   end
 
-  url "https://download.documentfoundation.org/libreoffice/stable/#{version.major_minor_patch}/mac/#{folder}/LibreOffice_#{version.major_minor_patch}_MacOS_#{arch}_langpack_#{language}.dmg",
+  url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}_langpack_#{language}.dmg",
       verified: "download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice Language Pack"
   desc "Collection of alternate languages for LibreOffice"
