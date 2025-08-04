@@ -8,7 +8,7 @@ cask "armory" do
   desc "Python-Based Bitcoin Software"
   homepage "https://btcarmory.com/"
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Armory.app"
 
