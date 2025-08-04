@@ -1,6 +1,5 @@
 cask "dropbox-capture" do
   arch arm: "arm64", intel: "x86_64"
-  livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
   version "116.3.0"
   sha256 arm:   "3ef49cad0ade501f75bea5ff3fc260d55f59664c2db93d48974279779c35f0d3",
