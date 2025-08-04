@@ -32,6 +32,7 @@ def parse_metadata(filename):
 class FontCask:
     ENVIRONMENT = jinja2.Environment(
         keep_trailing_newline=True, trim_blocks=True, undefined=jinja2.StrictUndefined,
+        autoescape=jinja2.select_autoescape(['html', 'xml']),
     )
     TEMPLATE = ENVIRONMENT.from_string(
         """cask "{{token}}" do
