@@ -1,12 +1,14 @@
 cask "vial" do
-  version "0.7.4"
-  sha256 "3e8ca8c3658e197d04a51260d881d59a1829a6b0a0c0b2a7980aaeb6c61805ad"
+  version "0.7.5"
+  sha256 "b628db11f8df012faafcceef7deb36b54821b507d4c970336f85a56c800e8876"
 
   url "https://github.com/vial-kb/vial-gui/releases/download/v#{version}/Vial-v#{version}.dmg",
       verified: "github.com/vial-kb/vial-gui/"
   name "Vial"
   desc "Configurator of compatible keyboards in real time"
   homepage "https://get.vial.today/"
+
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Vial.app"
 
