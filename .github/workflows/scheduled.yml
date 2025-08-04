@@ -1,4 +1,6 @@
 name: Scheduled online check
+permissions:
+  contents: read
 
 on:
   push:
