@@ -11,11 +11,6 @@ cask "advantagescope" do
   desc "FRC log analysis tool"
   homepage "https://docs.advantagescope.org/"
 
-  livecheck do
-    url "https://github.com/Mechanical-Advantage/AdvantageScope.git"
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   depends_on macos: ">= :catalina"
 
   app "AdvantageScope.app"
