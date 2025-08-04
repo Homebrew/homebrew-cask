@@ -12,13 +12,6 @@ cask "dropbox-capture" do
   desc "Share your work and ideas with video messages and screenshots"
   homepage "https://dropbox.com/capture/"
 
-  livecheck do
-    url "https://client.dropbox.com/squirrel/dropbox-capture/update_check/stable?localversion=0&arch=#{livecheck_arch}"
-    strategy :json do |json|
-      json["version"]
-    end
-  end
-
   no_autobump! because: :requires_manual_review
 
   disable! date: "2025-03-24", because: :discontinued
