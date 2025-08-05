@@ -8,8 +8,6 @@ cask "mars" do
   desc "Mips Assembly and Runtime Simulator"
   homepage "https://computerscience.missouristate.edu/mars-mips-simulator.htm"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-15", because: :unmaintained
 
   container type: :naked
