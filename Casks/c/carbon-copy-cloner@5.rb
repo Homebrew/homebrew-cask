@@ -8,8 +8,6 @@ cask "carbon-copy-cloner@5" do
   desc "Hard disk backup and cloning utility"
   homepage "https://bombich.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-05-01", because: :discontinued
   disable! date: "2025-05-04", because: :discontinued
 
