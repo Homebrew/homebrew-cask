@@ -15,8 +15,6 @@ cask "pastebot" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Pastebot.app"
