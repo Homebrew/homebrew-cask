@@ -8,8 +8,6 @@ cask "android-sdk" do
   desc "Tools for the Android SDK"
   homepage "https://developer.android.com/studio/releases/sdk-tools"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   binary "#{staged_path}/tools/android"
