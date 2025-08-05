@@ -8,8 +8,6 @@ cask "growlnotify" do
   desc "Notification system"
   homepage "https://growl.github.io/growl/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "GrowlNotify.pkg"
