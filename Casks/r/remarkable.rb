@@ -8,7 +8,7 @@ cask "remarkable" do
   desc "View, Screen Share, organise, import, and download files to a reMarkable device"
   homepage "https://remarkable.com/"
 
-  no_autobump! because: :requires_manual_review
+
 
   deprecate! date: "2024-01-17", because: :moved_to_mas
   disable! date: "2025-01-22", because: :moved_to_mas
