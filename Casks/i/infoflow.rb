@@ -11,8 +11,6 @@ cask "infoflow" do
   desc "AI office platform"
   homepage "https://infoflow.baidu.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-01-04", because: :no_longer_meets_criteria
 
   app "如流.app"
