@@ -7,8 +7,6 @@ cask "locationsimulator" do
   desc "Application to spoof your iOS, iPadOS or iPhoneSimulator device location"
   homepage "https://github.com/Schlaubischlump/LocationSimulator"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "LocationSimulator.app"
