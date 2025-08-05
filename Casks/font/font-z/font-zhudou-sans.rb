@@ -7,8 +7,6 @@ cask "font-zhudou-sans" do
   name "煮豆黑体"
   homepage "https://github.com/Buernia/Zhudou-Sans"
 
-  no_autobump! because: :requires_manual_review
-
   font "otf/ZhudouSans-Bold.otf"
   font "otf/ZhudouSans-ExtraLight.otf"
   font "otf/ZhudouSans-Heavy.otf"
