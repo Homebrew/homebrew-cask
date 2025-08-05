@@ -7,8 +7,6 @@ cask "plain-clip" do
   desc "Removes formatting from copied text"
   homepage "https://www.bluem.net/en/mac/plain-clip/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-06", because: :discontinued
   disable! date: "2025-07-06", because: :discontinued
 
