@@ -7,7 +7,7 @@ cask "replay" do
   desc "Time travel debugging"
   homepage "https://replay.io/"
 
-  no_autobump! because: :requires_manual_review
+
 
   deprecate! date: "2024-07-24", because: :discontinued
   disable! date: "2025-07-24", because: :discontinued
