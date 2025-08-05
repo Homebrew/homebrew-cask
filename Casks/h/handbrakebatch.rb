@@ -6,8 +6,6 @@ cask "handbrakebatch" do
   name "HandBrakeBatch"
   homepage "https://osomac.com/apps/osx/handbrake-batch/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "HandBrakeBatch.app"
