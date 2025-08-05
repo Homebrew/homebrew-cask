@@ -12,8 +12,6 @@ cask "font-migu-1c" do
     regex(%r{href=.*?/download/v?(\d+(?:\.\d+)+)/migu-1c[._-]}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "migu-1c-#{version.no_dots}/migu-1c-bold.ttf"
   font "migu-1c-#{version.no_dots}/migu-1c-regular.ttf"
 
