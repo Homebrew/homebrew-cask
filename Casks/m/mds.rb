@@ -19,8 +19,6 @@ cask "mds" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "MDS.pkg"
 
   uninstall launchctl: "com.mds-micromdm",
