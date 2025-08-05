@@ -14,8 +14,6 @@ cask "ik-product-manager" do
     regex(/href=.*?ik[._-]product[._-]manager[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Install IK Product Manager (v#{version}).pkg"
 
   uninstall pkgutil: "com.ikmultimedia.productmanager",

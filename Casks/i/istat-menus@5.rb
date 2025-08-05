@@ -12,8 +12,6 @@ cask "istat-menus@5" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "iStat Menus.app"

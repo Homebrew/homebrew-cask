@@ -19,8 +19,6 @@ cask "izotope-product-portal" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "#{staged_path}/Install Product Portal.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended", "--disable-components", "launch_after_install"],

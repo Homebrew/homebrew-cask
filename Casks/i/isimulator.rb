@@ -7,8 +7,6 @@ cask "isimulator" do
   desc "Utility to control and manage the Simulator"
   homepage "https://github.com/wigl/iSimulator"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "iSimulator.app"

@@ -12,8 +12,6 @@ cask "istat-server" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "iStat Server.app"
 
   zap trash: [

@@ -12,8 +12,6 @@ cask "id3-editor" do
     regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "ID3 Editor.app"

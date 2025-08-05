@@ -7,8 +7,6 @@ cask "imagemin" do
   desc "Desktop image minifier"
   homepage "https://github.com/imagemin/imagemin-app"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   # Renamed for clarity: app name is inconsistent with its branding.

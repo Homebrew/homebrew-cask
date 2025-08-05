@@ -12,8 +12,6 @@ cask "intellidock" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "IntelliDock.app"
 
   zap trash: "~/Library/Preferences/app.mightymac.IntelliDock.plist"

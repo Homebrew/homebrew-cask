@@ -7,8 +7,6 @@ cask "imagealpha" do
   desc "Utility to reduce the size of 24-bit PNG files"
   homepage "https://pngmini.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-06-22", because: :discontinued
   disable! date: "2025-06-23", because: :discontinued
 

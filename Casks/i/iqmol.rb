@@ -13,8 +13,6 @@ cask "iqmol" do
     regex(/href=.*?IQmol[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "IQmol.app"
 
   zap trash: [

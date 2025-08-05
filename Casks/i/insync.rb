@@ -12,8 +12,6 @@ cask "insync" do
     regex(/Insync[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "Insync.app"

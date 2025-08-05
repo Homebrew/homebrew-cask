@@ -10,8 +10,6 @@ cask "idafree" do
   desc "Binary code analysis tool"
   homepage "https://hex-rays.com/ida-free/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-30", because: "requires authentication to download"
 
   depends_on macos: ">= :catalina"

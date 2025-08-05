@@ -13,8 +13,6 @@ cask "iriunwebcam" do
     regex(%r{href=.*?/IriunWebcam[._-]?v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   pkg "IriunWebcam-#{version}.pkg"

@@ -12,8 +12,6 @@ cask "ipynb-quicklook" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "ipynb-quicklook.qlgenerator"
 
   # No zap stanza required

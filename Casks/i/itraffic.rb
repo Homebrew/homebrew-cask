@@ -7,8 +7,6 @@ cask "itraffic" do
   desc "Monitor for displaying process traffic on status bar"
   homepage "https://github.com/foamzou/ITraffic-monitor-for-mac"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "ITraffic.app"

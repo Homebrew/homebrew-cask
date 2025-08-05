@@ -8,8 +8,6 @@ cask "imo" do
   desc "Video calls and chat"
   homepage "https://imo.im/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :moved_to_mas
 
   app "Imo.app"

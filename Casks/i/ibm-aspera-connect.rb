@@ -26,8 +26,6 @@ cask "ibm-aspera-connect" do
     regex(/ibm[._-]aspera[._-]connect[._-]v?(\d+(?:\.\d+)+(?:[._-]HEAD)?)[._-]macOS#{livecheck_arch}/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "ibm-aspera-connect_#{version}_macOS_#{arch}.pkg"
 
   uninstall pkgutil: [

@@ -12,8 +12,6 @@ cask "iconscout" do
     regex(/Iconscout[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Iconscout.app"
 
   zap trash: [

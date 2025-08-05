@@ -12,8 +12,6 @@ cask "ishare" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sequoia"
 
   app "ishare.app"

@@ -13,8 +13,6 @@ cask "ios-app-signer" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "iOS App Signer.app"
 
   zap trash: [

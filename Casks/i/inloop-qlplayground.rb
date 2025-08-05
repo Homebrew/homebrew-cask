@@ -7,8 +7,6 @@ cask "inloop-qlplayground" do
   desc "Quick Look generator for Xcode Playgrounds"
   homepage "https://github.com/inloop/qlplayground"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "inloop-qlplayground.qlgenerator"
 
   # No zap stanza required

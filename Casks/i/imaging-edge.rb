@@ -18,8 +18,6 @@ cask "imaging-edge" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   pkg "ied_#{version.csv.first.major_minor_patch.dots_to_underscores}.pkg"

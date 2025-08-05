@@ -20,8 +20,6 @@ cask "iconchanger" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   app "IconChanger #{version.csv.second} #{version.csv.third}/IconChanger.app"
