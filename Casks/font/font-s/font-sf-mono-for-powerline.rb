@@ -6,8 +6,6 @@ cask "font-sf-mono-for-powerline" do
   name "SF Mono for Powerline"
   homepage "https://github.com/Twixes/SF-Mono-Powerline"
 
-  no_autobump! because: :requires_manual_review
-
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Bold.otf"
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Bold-Italic.otf"
   font "SF-Mono-Powerline-#{version}/SF-Mono-Powerline-Heavy.otf"
