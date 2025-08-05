@@ -7,8 +7,6 @@ cask "harmony" do
   desc "Music player"
   homepage "https://github.com/vincelwt/harmony"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-01-03", because: :discontinued
   disable! date: "2025-01-04", because: :discontinued
 
