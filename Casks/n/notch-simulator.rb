@@ -7,8 +7,6 @@ cask "notch-simulator" do
   desc "Simulate the notch on the MacBook Pro"
   homepage "https://github.com/megabitsenmzq/Notch-Simulator"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-01-12", because: :discontinued
   disable! date: "2025-01-12", because: :discontinued
 
