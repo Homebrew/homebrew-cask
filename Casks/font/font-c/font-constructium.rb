@@ -7,8 +7,6 @@ cask "font-constructium" do
   name "Constructium"
   homepage "https://www.kreativekorp.com/software/fonts/constructium/"
 
-  no_autobump! because: :requires_manual_review
-
   font "Constructium.ttf"
 
   # No zap stanza required
