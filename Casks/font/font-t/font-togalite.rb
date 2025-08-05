@@ -12,8 +12,6 @@ cask "font-togalite" do
     regex(/トガリテ\s+VER\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "togalite/togalite-black.otf"
   font "togalite/togalite-bold.otf"
   font "togalite/togalite-heavy.otf"
