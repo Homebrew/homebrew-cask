@@ -11,8 +11,6 @@ cask "font-ricty-diminished" do
     regex(%r{/ricty_diminished-(\d+(?:\.\d+)*)\.t}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "RictyDiminished-Bold.ttf"
   font "RictyDiminished-BoldOblique.ttf"
   font "RictyDiminished-Oblique.ttf"
