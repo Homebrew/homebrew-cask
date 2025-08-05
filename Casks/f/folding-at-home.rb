@@ -12,8 +12,6 @@ cask "folding-at-home" do
     regex(/href=.*?fah[._-]?client[._-]v?(\d+(?:\.\d+)*)(_universal)?\.pkg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "folding-at-home@beta"
   depends_on macos: ">= :high_sierra"
 
