@@ -7,8 +7,6 @@ cask "pixel-check" do
   desc "Check your monitor for dead pixels"
   homepage "http://macguitar.me/apps/pixelcheck/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-01", because: :unmaintained
 
   app "PiXel Check #{version}/PiXel Check.app"
