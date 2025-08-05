@@ -12,8 +12,6 @@ cask "magicplot" do
     regex(/href=.*?MagicPlot(\d+(?:\.\d+)*)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MagicPlot#{version}.app"
 
   zap trash: [
