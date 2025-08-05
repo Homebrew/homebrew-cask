@@ -7,8 +7,6 @@ cask "font-commit-mono" do
   name "Commit Mono"
   homepage "https://commitmono.com/"
 
-  no_autobump! because: :requires_manual_review
-
   font "CommitMono-#{version}/CommitMono-400-Italic.otf"
   font "CommitMono-#{version}/CommitMono-400-Regular.otf"
   font "CommitMono-#{version}/CommitMono-700-Italic.otf"
