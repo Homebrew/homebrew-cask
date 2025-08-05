@@ -54,8 +54,6 @@ cask "openzfs" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "OpenZFSonOsX-#{version}-#{arch}.pkg"
   bash_completion "/etc/bash_completion.d/zfs"
   bash_completion "/etc/bash_completion.d/zpool"
