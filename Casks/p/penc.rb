@@ -8,8 +8,6 @@ cask "penc" do
   desc "Trackpad-oriented window manager"
   homepage "https://deniz.co/penc/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Penc.app"
