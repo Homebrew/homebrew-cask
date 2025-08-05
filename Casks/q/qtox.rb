@@ -8,8 +8,6 @@ cask "qtox" do
   desc "Instant messaging and video conferencing app"
   homepage "https://qtox.github.io/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-02-13", because: :discontinued
   disable! date: "2025-02-13", because: :discontinued
 
