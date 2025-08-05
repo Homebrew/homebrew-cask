@@ -24,8 +24,6 @@ cask "liclipse" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "LiClipse_#{arch}/LiClipse.app"
   artifact "LiClipse_#{arch}/LiClipseJre19.app", target: "#{appdir}/LiClipseJre19.app"
 

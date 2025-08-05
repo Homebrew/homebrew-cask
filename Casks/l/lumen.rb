@@ -7,8 +7,6 @@ cask "lumen" do
   desc "Magic auto brightness based on screen contents"
   homepage "https://github.com/anishathalye/lumen"
 
-  no_autobump! because: :requires_manual_review
-
   app "Lumen.app"
 
   zap trash: [

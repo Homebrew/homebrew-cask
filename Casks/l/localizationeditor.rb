@@ -7,8 +7,6 @@ cask "localizationeditor" do
   desc "iOS app localization manager"
   homepage "https://github.com/igorkulman/iOSLocalizationEditor/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "LocalizationEditor.app"

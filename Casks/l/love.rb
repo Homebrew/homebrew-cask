@@ -8,8 +8,6 @@ cask "love" do
   desc "2D game framework for Lua"
   homepage "https://love2d.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "love.app"
   binary "#{appdir}/love.app/Contents/MacOS/love"
 

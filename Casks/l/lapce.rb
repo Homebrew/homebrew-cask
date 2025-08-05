@@ -8,8 +8,6 @@ cask "lapce" do
   desc "Open source code editor written in Rust"
   homepage "https://lapce.dev/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Lapce.app"
   binary "#{appdir}/Lapce.app/Contents/MacOS/lapce"
 

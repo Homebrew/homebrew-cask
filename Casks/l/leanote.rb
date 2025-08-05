@@ -8,8 +8,6 @@ cask "leanote" do
   desc "Open source cloud notepad"
   homepage "https://leanote.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Leanote.app"
 
   zap trash: [

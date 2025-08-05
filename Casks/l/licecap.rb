@@ -12,8 +12,6 @@ cask "licecap" do
     regex(/v?(\d+(?:\.\d+)*)\s*for\s*macOS/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "LICEcap.app"
 
   zap trash: [

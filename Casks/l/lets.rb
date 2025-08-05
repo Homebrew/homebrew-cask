@@ -14,8 +14,6 @@ cask "lets" do
     regex(/class="c-download__txt"[^>]*?>macOS[^<]*?(\d+(?:\.\d+)+)</i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   installer manual: "LETS-Installer.app/Contents/MacOS/LETS-Installer"

@@ -8,8 +8,6 @@ cask "logisim" do
   desc "Tool for designing and simulating digital logic circuits"
   homepage "http://www.cburch.com/logisim/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued, replacement_cask: "logisim-evolution"
 
   app "Logisim.app"

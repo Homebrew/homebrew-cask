@@ -8,8 +8,6 @@ cask "lepton" do
   desc "Snippet management app"
   homepage "https://hackjutsu.com/Lepton/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Lepton.app"
 
   zap trash: [

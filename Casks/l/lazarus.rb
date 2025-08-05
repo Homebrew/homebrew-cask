@@ -8,8 +8,6 @@ cask "lazarus" do
   desc "IDE for rapid application development"
   homepage "https://www.lazarus-ide.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-01-26", because: :no_longer_meets_criteria
 
   depends_on cask: "fpc-laz"

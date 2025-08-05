@@ -12,8 +12,6 @@ cask "lastfm" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Last.fm.app"
 
   zap trash: [

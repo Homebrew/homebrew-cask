@@ -29,8 +29,6 @@ cask "lg-onscreen-control" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   pkg "OSC_V#{version.csv.first}_signed.pkg"

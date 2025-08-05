@@ -8,8 +8,6 @@ cask "lyrics-master" do
   desc "Find and download lyrics"
   homepage "https://lyricsmaster.app/desktop/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Lyrics Master.app"

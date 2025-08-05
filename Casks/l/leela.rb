@@ -7,8 +7,6 @@ cask "leela" do
   desc "Go playing program with easy to use graphical interface"
   homepage "https://sjeng.org/leela.html"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-04", because: :discontinued
 
   depends_on macos: ">= :sierra"

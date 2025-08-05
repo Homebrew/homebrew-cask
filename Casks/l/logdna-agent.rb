@@ -8,8 +8,6 @@ cask "logdna-agent" do
   desc "Agent streams from log files to your LogDNA account"
   homepage "https://logdna.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "logdna-agent-#{version}.pkg"

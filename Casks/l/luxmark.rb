@@ -7,8 +7,6 @@ cask "luxmark" do
   desc "OpenCL benchmark"
   homepage "https://github.com/LuxCoreRender/LuxMark/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "LuxMark.app"

@@ -8,8 +8,6 @@ cask "lightproxy" do
   desc "Proxy & Debug tools based on whistle with Chrome Devtools UI"
   homepage "https://alibaba.github.io/lightproxy/"
 
-  no_autobump! because: :requires_manual_review
-
   app "LightProxy.app"
 
   uninstall_postflight do

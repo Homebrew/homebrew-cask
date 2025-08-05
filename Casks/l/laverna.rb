@@ -8,8 +8,6 @@ cask "laverna" do
   desc "Encryption-focused open source note taking application"
   homepage "https://laverna.cc/"
 
-  no_autobump! because: :requires_manual_review
-
   # laverna is unmaintained, see https://github.com/Laverna/laverna/issues/998
   deprecate! date: "2024-01-01", because: :unmaintained
   disable! date: "2025-01-04", because: :unmaintained

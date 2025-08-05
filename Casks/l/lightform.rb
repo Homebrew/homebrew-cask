@@ -8,8 +8,6 @@ cask "lightform" do
   desc "AR projection and audio reactivity software for Lightform devices"
   homepage "https://lightform.com/creator"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :mojave"
