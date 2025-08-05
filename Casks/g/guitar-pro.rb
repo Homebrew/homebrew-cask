@@ -12,8 +12,6 @@ cask "guitar-pro" do
     strategy :sparkle, &:version
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   pkg "GuitarPro#{version.major}.pkg"
