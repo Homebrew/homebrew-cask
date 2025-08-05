@@ -12,8 +12,6 @@ cask "ilya-birman-typography-layout" do
     regex(/href=.*?ilya[._-]birman[._-]typolayout[._-]v?(\d+(?:\.\d+)+)[._-]mac\.(?:dmg|zip)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   keyboard_layout "Ilya Birman Typography Layout.bundle"
 
   # No zap stanza required
