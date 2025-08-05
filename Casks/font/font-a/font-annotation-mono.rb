@@ -7,8 +7,6 @@ cask "font-annotation-mono" do
   name "Annotation Mono"
   homepage "https://qwerasd205.github.io/AnnotationMono/"
 
-  no_autobump! because: :requires_manual_review
-
   font "dist/otf/Black_Oblique.otf"
   font "dist/otf/Black.otf"
   font "dist/otf/Bold_Oblique.otf"
