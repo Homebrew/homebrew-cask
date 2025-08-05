@@ -11,8 +11,6 @@ cask "biscuit" do
   desc "Browser to organise apps"
   homepage "https://eatbiscuit.com/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :catalina"
 
