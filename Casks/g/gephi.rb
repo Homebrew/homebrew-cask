@@ -11,8 +11,6 @@ cask "gephi" do
   desc "Open-source platform for visualizing and manipulating large graphs"
   homepage "https://gephi.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Gephi.app"
 
   zap trash: [

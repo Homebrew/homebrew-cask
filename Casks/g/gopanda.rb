@@ -12,8 +12,6 @@ cask "gopanda" do
     strategy :electron_builder
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "GoPanda#{version.major}.app"
 
   zap trash: [

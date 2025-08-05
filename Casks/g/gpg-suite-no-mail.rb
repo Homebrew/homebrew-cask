@@ -11,8 +11,6 @@ cask "gpg-suite-no-mail" do
     cask "gpg-suite"
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   conflicts_with cask: [
     "gpg-suite",

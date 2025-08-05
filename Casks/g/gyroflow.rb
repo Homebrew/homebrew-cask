@@ -8,8 +8,6 @@ cask "gyroflow" do
   desc "Video stabilization using gyroscope data"
   homepage "https://gyroflow.xyz/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Gyroflow.app"

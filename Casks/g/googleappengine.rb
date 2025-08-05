@@ -8,8 +8,6 @@ cask "googleappengine" do
   desc "Cloud computing platform"
   homepage "https://cloud.google.com/appengine/docs/standard/python/download#appengine_sdk/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "GoogleAppEngineLauncher.app"

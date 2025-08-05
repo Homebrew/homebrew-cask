@@ -27,8 +27,6 @@ cask "grandperspective" do
   desc "Graphically shows disk usage within a file system"
   homepage "https://grandperspectiv.sourceforge.net/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :el_capitan"
 
   app "GrandPerspective.app"

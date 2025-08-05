@@ -9,8 +9,6 @@ cask "ghosttile" do
   desc "Hide your running applications from Dock"
   homepage "https://ghosttile.kernelpanic.im/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-14", because: :unmaintained
 
   app "GhostTile.app"

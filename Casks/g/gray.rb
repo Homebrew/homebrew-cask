@@ -7,8 +7,6 @@ cask "gray" do
   desc "Tool to set light or dark appearance on a per-app basis"
   homepage "https://github.com/zenangst/Gray"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Gray.app"

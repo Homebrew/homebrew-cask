@@ -8,8 +8,6 @@ cask "grs-bluewallet" do
   desc "Groestlcoin wallet and Lightning wallet"
   homepage "https://www.groestlcoin.org/grs-bluewallet/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "GRS BlueWallet.app"

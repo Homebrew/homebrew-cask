@@ -11,8 +11,6 @@ cask "google-analytics-opt-out" do
     skip "No version information available"
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Google Analytics Opt Out.app"

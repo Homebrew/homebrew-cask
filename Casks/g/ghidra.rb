@@ -21,8 +21,6 @@ cask "ghidra" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   new_staged_path = "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}"
 
   binary "#{new_staged_path}/ghidra_#{version.csv.first}_PUBLIC/ghidraRun"

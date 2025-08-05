@@ -13,8 +13,6 @@ cask "get-backup-pro" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "Get Backup Pro #{version.major}.app"

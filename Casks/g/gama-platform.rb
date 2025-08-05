@@ -17,8 +17,6 @@ cask "gama-platform" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "gama-jdk"
 
   app "Gama.app"

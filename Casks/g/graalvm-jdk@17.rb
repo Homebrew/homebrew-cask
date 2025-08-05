@@ -11,8 +11,6 @@ cask "graalvm-jdk@17" do
   desc "GraalVM from Oracle"
   homepage "https://www.graalvm.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-20", because: :no_longer_meets_criteria
 
   artifact "graalvm-jdk-#{version}+8.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"

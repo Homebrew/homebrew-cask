@@ -7,8 +7,6 @@ cask "gauntlet" do
   desc "Open-source cross-platform application launcher"
   homepage "https://github.com/project-gauntlet/gauntlet"
 
-  no_autobump! because: :requires_manual_review
-
   app "Gauntlet.app"
 
   uninstall quit: "dev.project-gauntlet.Gauntlet"

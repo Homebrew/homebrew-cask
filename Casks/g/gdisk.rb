@@ -7,8 +7,6 @@ cask "gdisk" do
   desc "Disk partitioning tool"
   homepage "https://sourceforge.net/projects/gptfdisk/"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "gdisk-#{version}.pkg"
 
   uninstall pkgutil: "com.rodsbooks.pkg.gdisk"

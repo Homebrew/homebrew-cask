@@ -7,8 +7,6 @@ cask "glance-chamburr" do
   desc "Utility to provide quick look previews for files that aren't natively supported"
   homepage "https://github.com/chamburr/glance"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "Glance.app"

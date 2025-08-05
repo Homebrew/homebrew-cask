@@ -8,8 +8,6 @@ cask "golly" do
   desc "Explore Conway's Game of Life and other types of cellular automata"
   homepage "https://golly.sourceforge.io/"
 
-  no_autobump! because: :requires_manual_review
-
   suite "golly-#{version}-mac"
   binary "#{appdir}/golly-#{version}-mac/bgolly"
 

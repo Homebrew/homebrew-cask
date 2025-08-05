@@ -7,8 +7,6 @@ cask "gmvault" do
   name "Gmvault"
   homepage "http://gmvault.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-02", because: :unmaintained
 
   binary "gmvault-v#{version}/gmvault"

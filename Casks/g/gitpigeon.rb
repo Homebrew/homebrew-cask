@@ -6,8 +6,6 @@ cask "gitpigeon" do
   name "GitPigeon"
   homepage "https://www.gitpigeon.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-04-10", because: :unmaintained
   disable! date: "2025-04-22", because: :unmaintained
 

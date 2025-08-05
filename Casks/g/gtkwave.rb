@@ -7,8 +7,6 @@ cask "gtkwave" do
   desc "GTK+ based wave viewer"
   homepage "https://gtkwave.sourceforge.net/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-29", because: :discontinued
 
   app "gtkwave.app"

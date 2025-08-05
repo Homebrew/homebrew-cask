@@ -11,8 +11,6 @@ cask "gaphor" do
   desc "UML/SysML modelling tool"
   homepage "https://gaphor.org/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Gaphor.app"

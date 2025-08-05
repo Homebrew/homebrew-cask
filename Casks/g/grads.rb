@@ -13,8 +13,6 @@ cask "grads" do
     regex(/href=.*?grads[._-]?v?(\d+(?:\.\d+)+)-bin-darwin.*?\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   binary "grads-#{version}/bin/bufrscan"

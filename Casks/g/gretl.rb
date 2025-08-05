@@ -15,8 +15,6 @@ cask "gretl" do
     regex(%r{url=.*?/gretl[._-]v?(\d+(?:\.\d+)*[a-z]?)[._-]macos[._-]#{arch}\.pkg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "gretl-#{version}-macos-#{arch}.pkg"
 
   uninstall pkgutil: "net.sourceforge.gretl.base.pkg"

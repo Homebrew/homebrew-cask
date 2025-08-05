@@ -10,8 +10,6 @@ cask "google-chat-electron" do
   desc "Standalone app for Google Chat"
   homepage "https://github.com/ankurk91/google-chat-electron"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :catalina"
