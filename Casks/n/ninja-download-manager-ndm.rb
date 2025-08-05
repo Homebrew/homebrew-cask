@@ -12,8 +12,6 @@ cask "ninja-download-manager-ndm" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "ndm_#{version}.pkg"
 
   uninstall pkgutil: "com.knockoutsoft.pkg.ndm"
