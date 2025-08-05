@@ -8,8 +8,6 @@ cask "gridea" do
   desc "Static blog writing client"
   homepage "https://gridea.dev/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "Gridea.app"
