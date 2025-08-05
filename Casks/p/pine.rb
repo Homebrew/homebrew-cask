@@ -7,8 +7,6 @@ cask "pine" do
   desc "Native markdown editor"
   homepage "https://github.com/lukakerr/pine"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "Pine.app"
