@@ -12,8 +12,6 @@ cask "qtspim" do
     regex(%r{url=.*?/QtSpim[._-]v?(\d+(?:\.\d+)+)[._-]mac\.(?:m?pkg(?:\.zip)?|dmg)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "QtSpim.mpkg/Contents/Packages/QtSpim.pkg"
 
   uninstall pkgutil: "org.larusstone.pkg.QtSpim"
