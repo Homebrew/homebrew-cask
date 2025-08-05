@@ -7,8 +7,6 @@ cask "alchemy" do
   desc "Open drawing project"
   homepage "https://al.chemy.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-06-10", because: :discontinued
   disable! date: "2025-06-11", because: :discontinued
 
