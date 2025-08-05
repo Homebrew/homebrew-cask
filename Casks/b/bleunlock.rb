@@ -7,8 +7,6 @@ cask "bleunlock" do
   desc "Lock/unlock Apple computers using the proximity of a bluetooth low energy device"
   homepage "https://github.com/ts1/BLEUnlock"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "BLEUnlock.app"
