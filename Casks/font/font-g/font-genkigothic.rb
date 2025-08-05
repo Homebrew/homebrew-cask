@@ -7,8 +7,6 @@ cask "font-genkigothic" do
   name "源起黑體"
   homepage "https://github.com/ButTaiwan/genyog-font"
 
-  no_autobump! because: :requires_manual_review
-
   font "GenKiGothic#{version.major}-B.ttc"
   font "GenKiGothic#{version.major}-EL.ttc"
   font "GenKiGothic#{version.major}-H.ttc"
