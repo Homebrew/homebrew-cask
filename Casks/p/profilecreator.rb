@@ -7,8 +7,6 @@ cask "profilecreator" do
   desc "Create standard or customised configuration profiles"
   homepage "https://github.com/ProfileCreator/ProfileCreator"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "ProfileCreator.app"
