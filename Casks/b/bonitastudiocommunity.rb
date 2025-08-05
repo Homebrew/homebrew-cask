@@ -8,8 +8,6 @@ cask "bonitastudiocommunity" do
   desc "Business process automation and optimisation"
   homepage "https://www.bonitasoft.com/downloads"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-04-03", because: :discontinued
 
   installer script: {
