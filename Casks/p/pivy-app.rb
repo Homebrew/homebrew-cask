@@ -7,8 +7,6 @@ cask "pivy-app" do
   desc "Client for PIV cards"
   homepage "https://github.com/joyent/pivy"
 
-  no_autobump! because: :requires_manual_review
-
   # pkg cannot be installed automatically
   installer manual: "pivy-#{version}-macos12.pkg"
 
