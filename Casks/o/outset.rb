@@ -1,6 +1,6 @@
 cask "outset" do
-  version "4.1.2.21936"
-  sha256 "da11b2f8f82fc708381e573b4023a60b4d661f3de94748b8526a0c5b3aad2c3b"
+  version "4.2.0.21973"
+  sha256 "f6e39f905b2877ccb5d7a2578e404282d76e7f228a4f8c17260a0ee88fb497c3"
 
   url "https://github.com/macadmins/outset/releases/download/v#{version}/Outset-#{version}.pkg"
   name "outset"
@@ -12,8 +12,6 @@ cask "outset" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "outset-#{version}.pkg"
 
   uninstall launchctl: [
@@ -23,6 +21,7 @@ cask "outset" do
               "io.macadmins.Outset.login-privileged",
               "io.macadmins.Outset.login-window",
               "io.macadmins.Outset.on-demand",
+              "io.macadmins.Outset.on-demand-privileged",
             ],
             pkgutil:   "io.macadmins.Outset",
             delete:    "/usr/local/outset"
