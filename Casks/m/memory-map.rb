@@ -7,8 +7,6 @@ cask "memory-map" do
   desc "GPS navigation software"
   homepage "https://memory-map.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-14", because: :discontinued
 
   depends_on macos: ">= :mojave"
