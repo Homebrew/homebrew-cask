@@ -11,8 +11,6 @@ cask "font-zed-sans" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "zed-sans-bold.ttf"
   font "zed-sans-bolditalic.ttf"
   font "zed-sans-boldoblique.ttf"
