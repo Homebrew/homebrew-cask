@@ -12,8 +12,6 @@ cask "cornerstone" do
     regex(/href=.*?Cornerstone[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Cornerstone.app"
