@@ -7,8 +7,6 @@ cask "harbor" do
   desc "Tool to monitor Codeship builds from the status bar"
   homepage "https://github.com/madeintandem/harbor"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-03-05", because: :unmaintained
   disable! date: "2025-03-05", because: :unmaintained
 
