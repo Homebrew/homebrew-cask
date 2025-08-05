@@ -7,8 +7,6 @@ cask "dupscanub" do
   desc "Searches for duplicated files in specified folders"
   homepage "http://www5.wind.ne.jp/miko/mac_soft/dup_scan/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-08-19", because: "is 32-bit only"
 
   app "DupScan(UB).app"
