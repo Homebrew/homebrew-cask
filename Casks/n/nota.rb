@@ -11,8 +11,6 @@ cask "nota" do
   desc "Markdown files editor"
   homepage "https://nota.md/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :catalina"
 
