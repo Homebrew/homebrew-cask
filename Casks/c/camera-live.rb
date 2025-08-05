@@ -7,8 +7,6 @@ cask "camera-live" do
   desc "Syphon server for connected Canon DSLR cameras"
   homepage "https://github.com/v002/v002-Camera-Live"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-28", because: :discontinued
   disable! date: "2025-07-28", because: :discontinued
 
