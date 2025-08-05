@@ -8,8 +8,6 @@ cask "powder-player" do
   desc "Torrent client and streaming media player"
   homepage "https://powder.media/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Powder Player.app"
 
   zap trash: [
