@@ -11,8 +11,6 @@ cask "font-free-mono-tengwar" do
     regex(/FreeMonoTengwar\.(\d+(?:-\d+)*)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "FreeMonoTengwar.#{version}/FreeMonoTengwar-embedding.ttf"
   font "FreeMonoTengwar.#{version}/FreeMonoTengwar.ttf"
 
