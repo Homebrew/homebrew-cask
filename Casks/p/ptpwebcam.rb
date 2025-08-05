@@ -13,8 +13,6 @@ cask "ptpwebcam" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "PTP_Webcam-v#{version}.pkg"
 
   uninstall launchctl: [
