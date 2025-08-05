@@ -6,8 +6,6 @@ cask "provisioning" do
   name "Provisioning"
   homepage "https://github.com/chockenberry/Provisioning"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-13", because: :unmaintained
 
   qlplugin "Provisioning-#{version}/Provisioning.qlgenerator"
