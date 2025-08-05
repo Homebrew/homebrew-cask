@@ -31,8 +31,6 @@ cask "katrain" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "KaTrain.app"
 
   zap trash: "~/.katrain"

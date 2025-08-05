@@ -24,8 +24,6 @@ cask "kaleidoscope@2" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   conflicts_with cask: %w[
     kaleidoscope

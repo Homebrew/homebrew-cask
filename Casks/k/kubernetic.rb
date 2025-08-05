@@ -13,8 +13,6 @@ cask "kubernetic" do
     strategy :electron_builder
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Kubernetic.app"
 
   uninstall signal: [

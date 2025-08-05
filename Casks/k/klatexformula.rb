@@ -8,8 +8,6 @@ cask "klatexformula" do
   desc "Generate images from LaTeX equations"
   homepage "https://klatexformula.sourceforge.io/"
 
-  no_autobump! because: :requires_manual_review
-
   app "klatexformula.app"
 
   zap trash: [

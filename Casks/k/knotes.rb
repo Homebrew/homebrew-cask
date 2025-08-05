@@ -8,8 +8,6 @@ cask "knotes" do
   desc "Reading notes management tool"
   homepage "https://knotesapp.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-01-05", because: :unmaintained
   disable! date: "2025-01-06", because: :unmaintained
 

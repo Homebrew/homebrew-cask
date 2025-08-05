@@ -7,8 +7,6 @@ cask "ksdiff" do
   desc "Command-line tool for the App Store version of Kaleidoscope"
   homepage "https://kaleidoscope.app/ksdiff#{version.major}"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   conflicts_with cask: [

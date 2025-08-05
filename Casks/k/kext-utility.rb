@@ -7,8 +7,6 @@ cask "kext-utility" do
   desc "Kext repair tool"
   homepage "https://cvad-mac.narod.ru/index/0-4"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-11-16", because: :unmaintained
 
   app "Kext Utility.app"

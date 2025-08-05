@@ -8,8 +8,6 @@ cask "knock-app" do
   desc "Unlock with AppleWatch"
   homepage "http://www.knocktounlock.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-31", because: :unmaintained
 
   app "Knock.app"

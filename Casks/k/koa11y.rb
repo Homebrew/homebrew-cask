@@ -8,8 +8,6 @@ cask "koa11y" do
   desc "Easily check for website accessibility issues"
   homepage "https://open-indy.github.io/Koa11y/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-21", because: :unmaintained
   disable! date: "2025-07-21", because: :unmaintained
 

@@ -8,8 +8,6 @@ cask "kiibohd-configurator" do
   desc "Modular community keyboard firmware"
   homepage "https://kiibohd.com/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on formula: "dfu-util"
 
   app "Kiibohd Configurator.app"
