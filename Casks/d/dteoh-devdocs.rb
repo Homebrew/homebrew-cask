@@ -7,8 +7,6 @@ cask "dteoh-devdocs" do
   desc "API documentation viewer"
   homepage "https://github.com/dteoh/devdocs-macos/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "DevDocs.app"
