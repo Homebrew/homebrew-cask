@@ -7,8 +7,6 @@ cask "anybar" do
   desc "Menu bar status indicator"
   homepage "https://github.com/tonsky/AnyBar"
 
-  no_autobump! because: :requires_manual_review
-
   app "AnyBar.app"
 
   # No zap stanza required
