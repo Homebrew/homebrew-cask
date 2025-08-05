@@ -12,8 +12,6 @@ cask "font-migmix-2p" do
     regex(%r{href=.*?/download/v?(\d+(?:\.\d+)+)/migmix-2p[._-]}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "migmix-2p-#{version.no_dots}/migmix-2p-bold.ttf"
   font "migmix-2p-#{version.no_dots}/migmix-2p-regular.ttf"
 
