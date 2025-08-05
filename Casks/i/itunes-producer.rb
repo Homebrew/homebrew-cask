@@ -18,8 +18,6 @@ cask "itunes-producer" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "iTunesProducer.pkg"
 
   uninstall pkgutil: "com.apple.pkg.iTunesProducer"
