@@ -8,8 +8,6 @@ cask "bunqcommunity-bunq" do
   desc "Unofficial desktop application for the bunq API"
   homepage "https://bunqdesk.top/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "bunqDesktop.app"
