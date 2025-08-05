@@ -14,8 +14,6 @@ cask "blackhole-2ch" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "BlackHole2ch-#{version}.pkg"
 
   uninstall quit:    "com.apple.audio.AudioMIDISetup",
