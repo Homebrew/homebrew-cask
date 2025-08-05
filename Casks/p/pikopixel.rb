@@ -13,8 +13,6 @@ cask "pikopixel" do
     regex(/PikoPixel[._-]?(\d+(?:\.\d+)*(?:-b\d+)?)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "PikoPixel.app"
 
   zap trash: [
