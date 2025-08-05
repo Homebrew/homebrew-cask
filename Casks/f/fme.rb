@@ -24,8 +24,6 @@ cask "fme" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "fme-form-#{version.csv.first}-b#{version.csv.second}-macosx-#{arch}.pkg"
 
   uninstall pkgutil: [
