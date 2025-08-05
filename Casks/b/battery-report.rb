@@ -7,8 +7,6 @@ cask "battery-report" do
   desc "Creates technical summaries of power supplies"
   homepage "https://www.dssw.co.uk/batteryreport/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Battery Report.app"
