@@ -37,8 +37,6 @@ cask "openttd" do
   desc "Open-source transport simulation game"
   homepage "https://www.openttd.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "OpenTTD.app"
 
   zap trash: [
