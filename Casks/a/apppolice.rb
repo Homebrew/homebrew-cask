@@ -7,8 +7,6 @@ cask "apppolice" do
   desc "App for quickly limiting CPU usage of any running process"
   homepage "https://github.com/fuyu/apppolice"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-08", because: :unmaintained
 
   app "AppPolice.app"
