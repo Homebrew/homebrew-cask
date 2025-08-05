@@ -21,8 +21,6 @@ cask "prosys-opc-ua-browser" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "Prosys OPC UA Browser Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
