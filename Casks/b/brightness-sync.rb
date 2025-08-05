@@ -7,8 +7,6 @@ cask "brightness-sync" do
   desc "Utility to synchronise the brightness of LG UltraFine display(s)"
   homepage "https://github.com/OCJvanDijk/Brightness-Sync"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "Brightness Sync.app"
