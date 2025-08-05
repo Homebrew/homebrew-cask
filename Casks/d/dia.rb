@@ -8,8 +8,6 @@ cask "dia" do
   desc "Draw structured diagrams"
   homepage "http://dia-installer.de/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on cask: "xquartz"

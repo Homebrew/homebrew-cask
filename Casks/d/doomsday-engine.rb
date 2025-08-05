@@ -12,8 +12,6 @@ cask "doomsday-engine" do
     regex(/doomsday_(\d+(?:\.\d+)+)_x86_64\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Doomsday.app"
   app "Doomsday Shell.app"
 

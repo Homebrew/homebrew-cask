@@ -8,8 +8,6 @@ cask "dropbox-passwords" do
   desc "Password manager that syncs across devices"
   homepage "https://www.dropbox.com/features/security/passwords"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-01", because: :discontinued
 
   depends_on macos: ">= :sierra"

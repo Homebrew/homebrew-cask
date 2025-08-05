@@ -7,8 +7,6 @@ cask "dynamic-dark-mode" do
   desc "Automatic Dark Mode toggle"
   homepage "https://github.com/ApolloZhu/Dynamic-Dark-Mode"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true

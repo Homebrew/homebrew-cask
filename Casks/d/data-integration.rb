@@ -21,8 +21,6 @@ cask "data-integration" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "data-integration/Data Integration.app"
 
   caveats do

@@ -7,8 +7,6 @@ cask "discretescroll" do
   desc "Utility to fix a common scroll wheel problem"
   homepage "https://github.com/emreyolcu/discrete-scroll"
 
-  no_autobump! because: :requires_manual_review
-
   app "DiscreteScroll.app"
 
   zap trash: "~/Library/Preferences/com.emreyolcu.DiscreteScroll.plist"

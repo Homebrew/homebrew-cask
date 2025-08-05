@@ -7,8 +7,6 @@ cask "dwarf-fortress" do
   desc "Single-player fantasy game"
   homepage "https://www.bay12games.com/dwarves/"
 
-  no_autobump! because: :requires_manual_review
-
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/df_osx/df.wrapper.sh"
   disable! date: "2024-12-16", because: :discontinued

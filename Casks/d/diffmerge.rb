@@ -12,8 +12,6 @@ cask "diffmerge" do
     regex(/href=.*?DiffMerge[._-]v?(\d+(?:\.\d+)+)\.intel\.stable\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "DiffMerge.app"
   binary "Extras/diffmerge.sh", target: "diffmerge"
   manpage "Extras/diffmerge.1"

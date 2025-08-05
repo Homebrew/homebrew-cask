@@ -7,8 +7,6 @@ cask "dictater" do
   name "Dictater"
   homepage "https://nosrac.github.io/Dictater/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-10", because: :unmaintained
   disable! date: "2025-07-10", because: :unmaintained
 

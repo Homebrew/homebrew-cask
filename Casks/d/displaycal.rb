@@ -12,8 +12,6 @@ cask "displaycal" do
     url "https://sourceforge.net/projects/dispcalgui/rss?path=/release"
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on formula: "argyll-cms"
 

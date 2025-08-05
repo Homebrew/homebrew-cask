@@ -8,8 +8,6 @@ cask "drawbot" do
   desc "Write Python scripts to generate two-dimensional graphics"
   homepage "https://www.drawbot.com/"
 
-  no_autobump! because: :requires_manual_review
-
   app "DrawBot.app"
 
   zap trash: [

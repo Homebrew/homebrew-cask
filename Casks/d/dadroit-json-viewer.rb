@@ -15,8 +15,6 @@ cask "dadroit-json-viewer" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Dadroit JSON Viewer.app"
 
   zap trash: [

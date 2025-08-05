@@ -13,8 +13,6 @@ cask "dexed" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "dexed-macOS-#{version}.pkg"
 
   uninstall pkgutil: [

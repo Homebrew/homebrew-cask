@@ -8,8 +8,6 @@ cask "duplicacy" do
   desc "Cloud backup tool"
   homepage "https://duplicacy.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   conflicts_with cask: "duplicacy-cli"

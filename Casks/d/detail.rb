@@ -8,8 +8,6 @@ cask "detail" do
   desc "Pro camera for video calls"
   homepage "https://detail.co/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-03-28", because: :moved_to_mas
   disable! date: "2025-03-30", because: :moved_to_mas
 

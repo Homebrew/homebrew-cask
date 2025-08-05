@@ -34,8 +34,6 @@ cask "drawpile" do
   desc "Collaborative drawing app"
   homepage "https://drawpile.net/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Drawpile.app"

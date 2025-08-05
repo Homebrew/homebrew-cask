@@ -8,8 +8,6 @@ cask "dbkoda" do
   desc "Open-source, next generation IDE for MongoDB"
   homepage "https://www.dbkoda.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-04", because: :discontinued
   disable! date: "2025-02-24", because: :discontinued
 

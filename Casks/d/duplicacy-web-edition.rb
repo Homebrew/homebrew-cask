@@ -16,8 +16,6 @@ cask "duplicacy-web-edition" do
     regex(%r{href=.*?/duplicacy[._-]web[._-]osx[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Duplicacy Web Edition.app"
 
   zap trash: "~/.duplicacy-web"

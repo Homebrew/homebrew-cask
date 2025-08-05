@@ -27,8 +27,6 @@ cask "duckietv" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "DuckieTV-#{version}-OSX-x64.pkg"
 
   uninstall pkgutil: "tv.duckie.base.pkg",
