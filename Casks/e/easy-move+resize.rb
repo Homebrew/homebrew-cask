@@ -7,8 +7,6 @@ cask "easy-move+resize" do
   desc "Utility to support moving and resizing using a modifier key and mouse drag"
   homepage "https://github.com/dmarcotte/easy-move-resize"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Easy Move+Resize.app"
