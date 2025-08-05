@@ -8,8 +8,6 @@ cask "caffeine" do
   desc "Utility that prevents the system from going to sleep"
   homepage "https://intelliscapesolutions.com/apps/caffeine"
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "domzilla-caffeine"
 
   app "Caffeine.app"
