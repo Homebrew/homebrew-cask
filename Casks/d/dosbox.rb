@@ -21,8 +21,6 @@ cask "dosbox" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "dosbox.app"
 
   zap trash: "~/Library/Preferences/DOSBox*"
