@@ -12,8 +12,6 @@ cask "ivolume" do
     regex(/iVolume\s+(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "iVolume.app"
 
   zap trash: [
