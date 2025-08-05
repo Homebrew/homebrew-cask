@@ -12,8 +12,6 @@ cask "beyond-compare@4" do
     regex(/BCompareOSX[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   conflicts_with cask: [
     "beyond-compare",
