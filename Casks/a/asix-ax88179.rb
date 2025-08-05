@@ -17,8 +17,6 @@ cask "asix-ax88179" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
   container nested: "ASIX_USB_Device_Installer_v#{version.csv.first}.dmg"
 
