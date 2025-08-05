@@ -8,8 +8,6 @@ cask "code42-crashplan" do
   desc "Endpoint backup and recovery"
   homepage "https://www.crashplan.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
