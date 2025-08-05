@@ -11,8 +11,6 @@ cask "font-latin-modern" do
     regex(/lm(\d+(?:\.\d+)+)otf\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "lmmono10-italic.otf"
   font "lmmono10-regular.otf"
   font "lmmono12-regular.otf"
