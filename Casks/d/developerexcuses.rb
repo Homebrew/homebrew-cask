@@ -7,8 +7,6 @@ cask "developerexcuses" do
   desc "Screensaver showing quotes from developerexcuses.com"
   homepage "https://github.com/kimar/DeveloperExcuses"
 
-  no_autobump! because: :requires_manual_review
-
   screen_saver "DeveloperExcuses.saver"
 
   # No zap stanza required
