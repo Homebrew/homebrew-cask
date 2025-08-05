@@ -8,8 +8,6 @@ cask "difffork" do
   desc "Compare both folders and files, present the differences in a visual format"
   homepage "https://dotfork.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "DiffFork.app"
