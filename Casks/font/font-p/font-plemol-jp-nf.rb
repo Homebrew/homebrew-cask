@@ -6,8 +6,6 @@ cask "font-plemol-jp-nf" do
   name "PlemolJP NF"
   homepage "https://github.com/yuru7/PlemolJP"
 
-  no_autobump! because: :requires_manual_review
-
   font "PlemolJP_NF_v#{version}/PlemolJPConsole_NF/PlemolJPConsoleNF-Bold.ttf"
   font "PlemolJP_NF_v#{version}/PlemolJPConsole_NF/PlemolJPConsoleNF-BoldItalic.ttf"
   font "PlemolJP_NF_v#{version}/PlemolJPConsole_NF/PlemolJPConsoleNF-ExtraLight.ttf"
