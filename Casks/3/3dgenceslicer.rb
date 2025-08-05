@@ -17,7 +17,7 @@ cask "3dgenceslicer" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   app "3DGence Slicer #{version.csv.second}.app"
 

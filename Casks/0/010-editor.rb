@@ -15,8 +15,6 @@ cask "010-editor" do
     regex(/Version:?\s*(\d+(?:\.\d+)+),\s*macOS/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "010 Editor.app"
 
   zap trash: [

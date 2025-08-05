@@ -12,8 +12,6 @@ cask "4peaks" do
     regex(/"product-version">v?\s+?(\d+(?:\.\d+)+)[\s<]/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "4Peaks.app"
 
   zap trash: [
