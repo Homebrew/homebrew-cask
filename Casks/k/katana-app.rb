@@ -7,8 +7,6 @@ cask "katana-app" do
   desc "Open-source screenshot utility"
   homepage "https://github.com/bluegill/katana/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Katana.app"
 
   zap trash: [
