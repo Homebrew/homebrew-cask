@@ -8,8 +8,6 @@ cask "atom" do
   desc "Text editor"
   homepage "https://atom.io/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2023-12-17", because: :discontinued
   disable! date: "2024-12-21", because: :discontinued
 
