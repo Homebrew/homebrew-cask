@@ -20,5 +20,4 @@ cask "flameshot" do
   app "flameshot.app"
 
   zap trash: "~/.config/flameshot/flameshot.ini"
-
 end
