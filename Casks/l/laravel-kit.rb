@@ -11,8 +11,6 @@ cask "laravel-kit" do
   desc "Desktop Laravel admin panel app"
   homepage "https://tmdh.github.io/laravel-kit"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Laravel Kit.app"
