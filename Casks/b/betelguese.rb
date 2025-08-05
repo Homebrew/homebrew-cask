@@ -7,8 +7,6 @@ cask "betelguese" do
   desc "Odysseyra1n installer GUI for jailbroken devices"
   homepage "https://github.com/23Aaron/Betelguese"
 
-  no_autobump! because: :requires_manual_review
-
   app "Betelguese.app"
 
   zap trash: "~/Library/Saved Application State/com.23aaron.Betelgeuse.savedState"
