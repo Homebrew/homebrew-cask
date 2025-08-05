@@ -12,8 +12,6 @@ cask "macx-dvd-ripper-pro" do
     regex(/Version:\s+(\d+(?:\.\d+)*)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MacX DVD Ripper Pro.app"
 
   zap trash: [
