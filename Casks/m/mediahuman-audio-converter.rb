@@ -14,8 +14,6 @@ cask "mediahuman-audio-converter" do
     regex(/"softwareVersion">\s*(\d+(?:\.\d+)+)[\s<]/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MediaHuman Audio Converter.app"
 
   zap trash: [
