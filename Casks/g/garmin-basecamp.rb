@@ -12,8 +12,6 @@ cask "garmin-basecamp" do
     regex(/name=["']?software_version["']?\s*content=["']?(\d+(?:\.\d+)+)["' >]/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   pkg "Install BaseCamp.pkg"
