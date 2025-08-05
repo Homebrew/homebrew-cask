@@ -12,8 +12,6 @@ cask "mousepose" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
