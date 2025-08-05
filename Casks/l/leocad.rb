@@ -7,8 +7,6 @@ cask "leocad" do
   desc "CAD program for creating virtual LEGO models"
   homepage "https://github.com/leozide/leocad"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "LeoCAD.app"
