@@ -16,8 +16,6 @@ cask "monero-wallet" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "monero-wallet-gui.app"
 
   zap trash: [
