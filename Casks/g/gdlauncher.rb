@@ -8,8 +8,6 @@ cask "gdlauncher" do
   desc "Custom Minecraft Launcher"
   homepage "https://gdevs.io/"
 
-  no_autobump! because: :requires_manual_review
-
   app "GDLauncher.app"
 
   zap trash: [
