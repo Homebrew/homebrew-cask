@@ -11,8 +11,6 @@ cask "font-terminus" do
     regex(/href=.*?terminus[._-]ttf[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "terminus-ttf-#{version}/TerminusTTF-#{version}.ttf"
   font "terminus-ttf-#{version}/TerminusTTF-Bold-#{version}.ttf"
   font "terminus-ttf-#{version}/TerminusTTF-Bold-Italic-#{version}.ttf"
