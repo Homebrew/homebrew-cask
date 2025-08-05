@@ -17,8 +17,6 @@ cask "openmw" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "OpenMW.app"
   app "OpenMW-CS.app"
 
