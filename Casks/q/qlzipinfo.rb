@@ -7,8 +7,6 @@ cask "qlzipinfo" do
   desc "List out the contents of a zip file in the QuickLook preview"
   homepage "https://github.com/srirangav/qlZipInfo"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   qlplugin "qlZipInfo.qlgenerator"

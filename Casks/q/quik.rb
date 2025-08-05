@@ -7,8 +7,6 @@ cask "quik" do
   desc "Access and edit GoPro photos and videos"
   homepage "https://community.gopro.com/t5/en/GoPro-Quik-for-desktop/ta-p/394305?profile.language=en"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "GoPro Quik.pkg"

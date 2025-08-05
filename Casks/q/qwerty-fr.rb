@@ -8,8 +8,6 @@ cask "qwerty-fr" do
   desc "QWERTY-based layout. Type EU languages, greek, math, currencies, & more!"
   homepage "https://qwerty-fr.org/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   keyboard_layout "qwerty-fr.bundle"

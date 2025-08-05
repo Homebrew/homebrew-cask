@@ -7,8 +7,6 @@ cask "quail" do
   desc "Unofficial but officially accepted esa app"
   homepage "https://github.com/1000ch/quail"
 
-  no_autobump! because: :requires_manual_review
-
   app "Quail.app"
 
   zap trash: [

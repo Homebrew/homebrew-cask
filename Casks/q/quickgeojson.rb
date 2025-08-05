@@ -7,8 +7,6 @@ cask "quickgeojson" do
   desc "Quick Look plugin for GeoJSON and TopoJSON"
   homepage "https://github.com/irees/quickgeojson"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "quickgeojson.qlgenerator"
 
   # No zap stanza required

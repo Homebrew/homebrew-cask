@@ -7,8 +7,6 @@ cask "quicklookase" do
   desc "Quick Look generator for Adobe Swatch Exchange files"
   homepage "https://github.com/rsodre/QuickLookASE"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "QuickLookASE.qlgenerator"
 
   # No zap stanza required

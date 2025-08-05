@@ -7,8 +7,6 @@ cask "qlnetcdf" do
   desc "Quick Look plugin for viewing NetCDF files"
   homepage "https://github.com/tobeycarman/QLNetcdf/"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "QLNetcdf.qlgenerator"
 
   # No zap stanza required

@@ -21,8 +21,6 @@ cask "qsync-client" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer manual: "Qsync Client.pkg"
 
   uninstall quit:    [

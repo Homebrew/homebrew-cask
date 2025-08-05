@@ -8,8 +8,6 @@ cask "qtpass" do
   desc "Multi-platform GUI for pass, the standard unix password manager"
   homepage "https://qtpass.org/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "QtPass.app"

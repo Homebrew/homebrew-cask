@@ -7,8 +7,6 @@ cask "qldds" do
   desc "Quick Look plugin for DirectDraw Surface (DDS) texture files"
   homepage "https://github.com/Marginal/QLdds"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-17", because: :unmaintained
 
   pkg "QLdds_#{version.no_dots}.pkg"

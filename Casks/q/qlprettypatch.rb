@@ -7,8 +7,6 @@ cask "qlprettypatch" do
   desc "Quick Look plugin to view patch files"
   homepage "https://github.com/atnan/QLPrettyPatch"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "QLPrettyPatch.qlgenerator"
 
   # No zap stanza required

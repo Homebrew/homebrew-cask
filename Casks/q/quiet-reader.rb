@@ -7,8 +7,6 @@ cask "quiet-reader" do
   desc "Read articles or text highlights distraction free"
   homepage "https://quietreader.app/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-01-04", because: :no_longer_available
 
   app "Quiet Reader.app"
