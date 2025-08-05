@@ -11,8 +11,6 @@ cask "pycharm-edu" do
   desc "Professional IDE for scientific and web Python development"
   homepage "https://www.jetbrains.com/pycharm-edu/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-02-10", because: :discontinued
 
   auto_updates true
