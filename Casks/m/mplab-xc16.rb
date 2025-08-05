@@ -12,8 +12,6 @@ cask "mplab-xc16" do
     regex(%r{href=.*?ProductDocuments/SoftwareTools/xc16[._-]v?(\d+(?:\.\d+)+)-full-install-osx64-installer\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on arch: :x86_64
 
   installer script: {
