@@ -9,10 +9,7 @@ cask "chirp" do
   desc "Tool for programming amateur radio"
   homepage "https://chirp.danplanet.com/projects/chirp/wiki/Home"
 
-  livecheck do
-    url "https://archive.chirpmyradio.com/chirp_next/"
-    regex(/next[._-]v?(\d+(?:\.\d+)*)/i)
-  end
+  disable! date: "2025-08-05", because: "cannot be reliably fetched due to Cloudflare protections"
 
   depends_on macos: ">= :high_sierra"
 
