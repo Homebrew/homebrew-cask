@@ -6,7 +6,7 @@ cask "rember" do
   name "Rember"
   homepage "https://www.kelleycomputing.net/rember/"
 
-  no_autobump! because: :requires_manual_review
+
 
   deprecate! date: "2024-08-25", because: :unmaintained
 
