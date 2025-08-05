@@ -10,8 +10,6 @@ cask "aws-vault-binary" do
   desc "Securely stores and accesses AWS credentials in a development environment"
   homepage "https://github.com/99designs/aws-vault"
 
-  no_autobump! because: :requires_manual_review
-
   binary "aws-vault"
 
   # No zap stanza required
