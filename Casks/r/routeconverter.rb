@@ -12,8 +12,6 @@ cask "routeconverter" do
     regex(/href=.*?v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "RouteConverter.app"
