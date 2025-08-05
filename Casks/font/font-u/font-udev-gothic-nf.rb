@@ -6,8 +6,6 @@ cask "font-udev-gothic-nf" do
   name "UDEV Gothic NF"
   homepage "https://github.com/yuru7/udev-gothic"
 
-  no_autobump! because: :requires_manual_review
-
   font "UDEVGothic_NF_v#{version}/UDEVGothic35NF-Bold.ttf"
   font "UDEVGothic_NF_v#{version}/UDEVGothic35NF-BoldItalic.ttf"
   font "UDEVGothic_NF_v#{version}/UDEVGothic35NF-Italic.ttf"
