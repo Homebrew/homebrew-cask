@@ -7,8 +7,6 @@ cask "postbird" do
   desc "Open-source PostgreSQL GUI client"
   homepage "https://github.com/Paxa/postbird"
 
-  no_autobump! because: :requires_manual_review
-
   app "Postbird.app"
 
   zap trash: [
