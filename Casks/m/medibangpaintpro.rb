@@ -12,8 +12,6 @@ cask "medibangpaintpro" do
     regex(%r{href=.*?/MediBangPaintPro-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MediBangPaintPro.app"
 
   zap trash: [
