@@ -6,8 +6,6 @@ cask "font-hackgen-nerd" do
   name "HackGenNerd"
   homepage "https://github.com/yuru7/HackGen"
 
-  no_autobump! because: :requires_manual_review
-
   font "HackGen_NF_v#{version}/HackGen35ConsoleNF-Bold.ttf"
   font "HackGen_NF_v#{version}/HackGen35ConsoleNF-Regular.ttf"
   font "HackGen_NF_v#{version}/HackGenConsoleNF-Bold.ttf"
