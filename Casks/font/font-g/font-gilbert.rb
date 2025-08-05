@@ -26,8 +26,6 @@ cask "font-gilbert" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Gilbert-Bold Preview#{version.before_comma.minor.tr("00", "")}.otf"
   font "Gilbert-Color Bold Preview#{version.before_comma.minor.tr("00", "")}.otf"
 
