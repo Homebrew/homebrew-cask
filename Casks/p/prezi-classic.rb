@@ -7,8 +7,6 @@ cask "prezi-classic" do
   desc "Desktop client for the Prezi presentation SaaS"
   homepage "https://prezi.com/desktop"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-04-05", because: :discontinued
 
   app "Prezi Classic.app"
