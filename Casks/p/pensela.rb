@@ -7,8 +7,6 @@ cask "pensela" do
   desc "Screen Annotation Tool"
   homepage "https://github.com/weiameili/Pensela"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-02-11", because: :discontinued
   disable! date: "2025-02-11", because: :discontinued
 
