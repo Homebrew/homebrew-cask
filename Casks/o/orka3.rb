@@ -18,8 +18,6 @@ cask "orka3" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "orka3.pkg"
 
   uninstall pkgutil: "com.macstadium.orka3.pkg"
