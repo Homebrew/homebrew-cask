@@ -11,8 +11,6 @@ cask "font-tex-gyre-schola" do
     regex(%r{Schola</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "texgyreschola-bold.otf"
   font "texgyreschola-bolditalic.otf"
   font "texgyreschola-italic.otf"
