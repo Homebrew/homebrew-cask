@@ -7,8 +7,6 @@ cask "colorpicker-skalacolor" do
   desc "Colour picker"
   homepage "https://bjango.com/help/skalacolor/gettingstarted/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-30", because: :unmaintained
 
   colorpicker "Skala Color Installer.app/Contents/Resources/SkalaColor.colorPicker"
