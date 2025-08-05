@@ -12,8 +12,6 @@ cask "kigb" do
     regex(/>\s*?KiGB\s+?v?(\d+(?:\.\d+)+)\s*?</i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "KiGB v#{version}/KiGB.app"
