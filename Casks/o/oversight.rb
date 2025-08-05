@@ -8,8 +8,6 @@ cask "oversight" do
   desc "Monitors computer mic and webcam"
   homepage "https://objective-see.org/products/oversight.html"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   installer script: {
