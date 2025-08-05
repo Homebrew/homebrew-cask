@@ -7,8 +7,6 @@ cask "private-eye" do
   desc "Network monitor"
   homepage "https://radiosilenceapp.com/private-eye"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-06", because: :unmaintained
   disable! date: "2025-07-06", because: :unmaintained
 
