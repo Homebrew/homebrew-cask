@@ -19,8 +19,6 @@ cask "imaging-edge-webcam" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :ventura"
 
   pkg "IEW_INST.pkg"
