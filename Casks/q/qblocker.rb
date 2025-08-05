@@ -8,8 +8,6 @@ cask "qblocker" do
   desc "Stops you from accidentally quitting an app"
   homepage "https://qblocker.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-31", because: :unmaintained
 
   app "QBlocker.app"
