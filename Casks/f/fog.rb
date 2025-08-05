@@ -7,8 +7,6 @@ cask "fog" do
   desc "Unofficial overcast.fm podcast app"
   homepage "https://github.com/vitorgalvao/fog"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Fog.app"
