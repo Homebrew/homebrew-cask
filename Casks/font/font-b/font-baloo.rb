@@ -6,8 +6,6 @@ cask "font-baloo" do
   name "Baloo"
   homepage "https://github.com/EkType/Baloo"
 
-  no_autobump! because: :requires_manual_review
-
   font "Fonts/Baloo-Regular.ttf"
   font "Fonts/BalooBhai-Regular.ttf"
   font "Fonts/BalooBhaijaan-Regular.ttf"
