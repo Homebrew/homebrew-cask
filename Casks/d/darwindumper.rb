@@ -14,8 +14,6 @@ cask "darwindumper" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "DarwinDumper.app"
 
   zap trash: [
