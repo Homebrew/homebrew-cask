@@ -19,8 +19,6 @@ cask "find-my-ports" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sonoma"
 
   app "Find My Ports.app"
