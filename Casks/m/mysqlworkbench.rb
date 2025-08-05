@@ -55,8 +55,6 @@ cask "mysqlworkbench" do
   desc "Visual tool to design, develop and administer MySQL servers"
   homepage "https://www.mysql.com/products/workbench/"
 
-  no_autobump! because: :requires_manual_review
-
   app "MySQLWorkbench.app"
 
   zap trash: [
