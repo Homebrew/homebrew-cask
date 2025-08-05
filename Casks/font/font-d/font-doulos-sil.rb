@@ -11,8 +11,6 @@ cask "font-doulos-sil" do
     regex(/href=.*DoulosSIL[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "DoulosSIL-#{version}/DoulosSIL-Regular.ttf"
 
   # No zap stanza required
