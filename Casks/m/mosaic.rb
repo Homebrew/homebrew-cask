@@ -12,8 +12,6 @@ cask "mosaic" do
     regex(/>\s*Version\s*(\d+(?:\.\d+)+)\s*</i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :el_capitan"
 
   pkg "Mosaic_#{version.dots_to_underscores}.pkg"
