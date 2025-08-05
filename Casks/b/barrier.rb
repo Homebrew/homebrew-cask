@@ -7,8 +7,6 @@ cask "barrier" do
   desc "Open-source KVM software"
   homepage "https://github.com/debauchee/barrier/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-05-13", because: :unmaintained
 
   depends_on macos: ">= :sierra"
