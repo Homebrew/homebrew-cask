@@ -22,7 +22,7 @@ cask "redcine-x-pro" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
+
 
   pkg "REDCINE-X_PRO_Build_#{version}.pkg"
 
