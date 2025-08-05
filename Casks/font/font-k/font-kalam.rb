@@ -6,8 +6,6 @@ cask "font-kalam" do
   name "Kalam"
   homepage "https://github.com/itfoundry/kalam"
 
-  no_autobump! because: :requires_manual_review
-
   font "Kalam-Bold.otf"
   font "Kalam-Light.otf"
   font "Kalam-Regular.otf"
