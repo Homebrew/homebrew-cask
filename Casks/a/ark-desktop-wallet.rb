@@ -8,8 +8,6 @@ cask "ark-desktop-wallet" do
   desc "Multi Platform ARK Desktop Wallet"
   homepage "https://ark.io/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Ark Desktop Wallet.app"
