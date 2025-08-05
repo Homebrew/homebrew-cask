@@ -8,7 +8,7 @@ cask "redeclipse" do
   desc "Multiplayer & singleplayer first person shooter"
   homepage "https://www.redeclipse.net/"
 
-  no_autobump! because: :requires_manual_review
+
 
   app "redeclipse.app"
 
