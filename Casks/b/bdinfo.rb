@@ -13,8 +13,6 @@ cask "bdinfo" do
     regex(/BDInfo\s+(\d+(?:\.\d+)+)\s+Mac/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "BDInfo OSX.app"
 
   zap trash: [
