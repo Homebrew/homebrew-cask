@@ -17,6 +17,8 @@ cask "3dgenceslicer" do
     end
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   app "3DGence Slicer #{version.csv.second}.app"
 
   zap trash: [
