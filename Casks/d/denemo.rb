@@ -7,8 +7,6 @@ cask "denemo" do
   desc "Music notation program"
   homepage "https://denemo.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-16", because: :discontinued
 
   app "Denemo.app"
