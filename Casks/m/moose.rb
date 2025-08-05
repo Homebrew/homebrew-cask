@@ -7,8 +7,6 @@ cask "moose" do
   name "moose"
   homepage "https://getmoose.in/"
 
-  no_autobump! because: :requires_manual_review
-
   app "moose.app"
 
   zap trash: [
