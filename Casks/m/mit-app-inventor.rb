@@ -8,8 +8,6 @@ cask "mit-app-inventor" do
   desc "Android emulator"
   homepage "https://appinventor.mit.edu/explore/ai2/mac"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-27", because: :unmaintained
 
   depends_on arch: :x86_64
