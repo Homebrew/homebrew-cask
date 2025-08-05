@@ -6,8 +6,6 @@ cask "mysides" do
   name "mysides"
   homepage "https://github.com/mosen/mysides"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-13", because: :unmaintained
 
   pkg "mysides-#{version}.pkg"
