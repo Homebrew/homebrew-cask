@@ -12,8 +12,6 @@ cask "enclave" do
     regex(/(\d+(?:\.\d+)+(?:\.hotfix\d+)?)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "enclave_osx-installer-x64-stable-#{version}.pkg"
   binary "/Applications/enclave/enclave"
 

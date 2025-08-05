@@ -8,8 +8,6 @@ cask "engine-prime" do
   desc "Music Management Software for Denon's Engine OS Hardware"
   homepage "https://web.archive.org/web/20170602015353/http://denondj.com/engineprime"
 
-  no_autobump! because: :requires_manual_review
-
   # https://community.enginedj.com/t/engine-prime-vs-engine-dj/40181
   deprecate! date: "2024-01-15", because: :unmaintained
   disable! date: "2025-01-15", because: :unmaintained, replacement_cask: "engine-dj"

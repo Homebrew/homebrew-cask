@@ -12,8 +12,6 @@ cask "eagle" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
 
   uninstall pkgutil: "com.Autodesk.eagle"

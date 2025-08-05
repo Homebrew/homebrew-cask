@@ -18,8 +18,6 @@ cask "epoccam" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "EpocCam_Installer_#{version.dots_to_underscores}.pkg"
 
   uninstall_preflight do

@@ -8,8 +8,6 @@ cask "encryptr" do
   desc "Zero-knowledge cloud-based password manager"
   homepage "https://spideroak.support/hc/en-us/categories/115000424503-Encryptr-Password-Manager"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Encryptr.app"

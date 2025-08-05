@@ -13,8 +13,6 @@ cask "envkey" do
     regex(/^darwin-x64-prod[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "EnvKey.app"
 
   zap trash: [

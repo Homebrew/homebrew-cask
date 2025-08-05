@@ -13,8 +13,6 @@ cask "ev3-classroom" do
     regex(/EV3[._-]v?(\d+(?:\.\d+)+)[._-]Global\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "EV3Classroom.app"

@@ -12,8 +12,6 @@ cask "eobcanka" do
     regex(%r{<h3>Verze\s(\d+(?:\.\d+)+)</h3>}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   pkg "eObcanka.pkg"

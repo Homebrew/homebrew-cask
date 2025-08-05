@@ -25,8 +25,6 @@ cask "elgato-game-capture-hd" do
   desc "Elgato video capture and streaming app"
   homepage "https://www.elgato.com/ww/en/s/downloads"
 
-  no_autobump! because: :requires_manual_review
-
   app "Game Capture HD.app"
 
   zap trash: [

@@ -8,8 +8,6 @@ cask "enigma-game" do
   desc "Puzzle game inspired by Oxyd and Rock'n'Roll"
   homepage "https://www.nongnu.org/enigma/"
 
-  no_autobump! because: :requires_manual_review
-
   suite "Enigma"
 
   zap trash: [

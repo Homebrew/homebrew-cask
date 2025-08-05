@@ -8,8 +8,6 @@ cask "electric-sheep" do
   desc "Collaborative abstract artwork software"
   homepage "https://gold.electricsheep.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-02", because: :unmaintained
 
   pkg "Electric Sheep.pkg"

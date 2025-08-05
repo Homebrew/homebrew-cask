@@ -7,8 +7,6 @@ cask "ealeksandrov-cd-to" do
   desc "Finder Toolbar app to open the current directory in the Terminal"
   homepage "https://github.com/ealeksandrov/cdto"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-14", because: :unmaintained
 
   app "cd_to_#{version.major_minor.dots_to_underscores}/terminal/cd_to.app"

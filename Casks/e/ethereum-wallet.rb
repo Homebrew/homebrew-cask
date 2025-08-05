@@ -8,8 +8,6 @@ cask "ethereum-wallet" do
   desc "Browser for Ðapps on the Ethereum network"
   homepage "https://github.com/ethereum/mist"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Ethereum Wallet.app"

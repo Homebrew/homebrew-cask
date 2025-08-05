@@ -7,8 +7,6 @@ cask "explorer" do
   desc "Data Explorer"
   homepage "https://github.com/jfbouzereau/explorer"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-04-20", because: :unmaintained
 
   app "Explorer-darwin-x64.app"

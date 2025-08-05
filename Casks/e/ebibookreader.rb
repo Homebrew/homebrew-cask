@@ -7,8 +7,6 @@ cask "ebibookreader" do
   desc "Ebook reader"
   homepage "https://www.ebookjapan.jp/ebj/reader/mac/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "ebibookreader.pkg"

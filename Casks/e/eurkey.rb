@@ -13,8 +13,6 @@ cask "eurkey" do
     regex(/EurKEY\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   keyboard_layout "EurKEY-Mac-master/EurKEY.icns"
   keyboard_layout "EurKEY-Mac-master/EurKEY.keylayout"
 

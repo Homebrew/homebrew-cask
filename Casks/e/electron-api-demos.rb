@@ -7,8 +7,6 @@ cask "electron-api-demos" do
   desc "Explore the Electron APIs"
   homepage "https://github.com/electron/electron-api-demos"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Electron API Demos.app"

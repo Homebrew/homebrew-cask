@@ -13,8 +13,6 @@ cask "exfalso" do
     regex(%r{href=.*?/ExFalso[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "ExFalso.app"
 
   zap trash: "~/.quodlibet"
