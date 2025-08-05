@@ -18,8 +18,6 @@ cask "flickr-uploadr" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Flickr Uploadr.app"
 
   zap trash: [
