@@ -1,6 +1,6 @@
 cask "teleport-suite" do
-  version "18.1.1"
-  sha256 "a369bb840aad8ff12584861d49bd557ff4ba68353b05ef3ba1eb7c7e03434033"
+  version "18.1.2"
+  sha256 "8200abb03c3254be9bb70a71d4a846afdb439a03e923ec60609760a42db3707b"
 
   url "https://cdn.teleport.dev/teleport-#{version}.pkg",
       verified: "cdn.teleport.dev/"
