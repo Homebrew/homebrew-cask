@@ -7,8 +7,6 @@ cask "mari0" do
   desc "Recreation of Super Mario Bros"
   homepage "https://stabyourself.net/mari0/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-10-15", because: :unmaintained
 
   app "Mari0.app"
