@@ -6,8 +6,6 @@ cask "fiscript" do
   name "FiScript"
   homepage "https://github.com/Mortennn/FiScript"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-10", because: :unmaintained
   disable! date: "2025-07-10", because: :unmaintained
 
