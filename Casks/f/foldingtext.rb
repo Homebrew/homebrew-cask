@@ -8,8 +8,6 @@ cask "foldingtext" do
   desc "Markdown text editor with productivity features"
   homepage "https://www.foldingtext.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-01", because: :unmaintained
 
   app "FoldingText.app"
