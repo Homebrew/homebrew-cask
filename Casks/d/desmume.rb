@@ -16,8 +16,6 @@ cask "desmume" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "DeSmuME.app"
 
   zap trash: [
