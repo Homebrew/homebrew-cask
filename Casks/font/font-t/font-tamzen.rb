@@ -6,8 +6,6 @@ cask "font-tamzen" do
   name "Tamzen"
   homepage "https://github.com/sunaku/tamzen-font"
 
-  no_autobump! because: :requires_manual_review
-
   font "tamzen-font-Tamzen-#{version}/ttf/Tamzen10x20b.ttf"
   font "tamzen-font-Tamzen-#{version}/ttf/Tamzen10x20r.ttf"
   font "tamzen-font-Tamzen-#{version}/ttf/Tamzen5x9b.ttf"
