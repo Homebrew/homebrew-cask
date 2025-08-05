@@ -14,8 +14,6 @@ cask "aladin" do
     regex(%r{<h1>\s*Official\s+version\s*(?:<[^/>]*>\s*)?v?(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "Aladin Sky Atlas Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
