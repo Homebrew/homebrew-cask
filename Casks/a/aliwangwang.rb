@@ -14,8 +14,6 @@ cask "aliwangwang" do
     regex(/AliWangWang[._-]v?\((\d+(?:\.\d+)+\w+)\)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
