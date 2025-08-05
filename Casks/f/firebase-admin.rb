@@ -7,8 +7,6 @@ cask "firebase-admin" do
   desc "Admin user interface for Firebase"
   homepage "https://firebaseadmin.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-06-01", because: :unmaintained
 
   app "firebase-admin.app"
