@@ -22,8 +22,6 @@ cask "avidemux" do
   desc "Video editor"
   homepage "https://www.avidemux.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Avidemux_#{version}.app"
   binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_cli", target: "avidemux"
   binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_jobs"
