@@ -7,8 +7,6 @@ cask "font-mengshen-regular" do
   name "萌神拼音"
   homepage "https://github.com/MaruTama/Mengshen-pinyin-font"
 
-  no_autobump! because: :requires_manual_review
-
   font "Mengshen-HanSerif.ttf"
   font "Mengshen-Handwritten.ttf"
 
