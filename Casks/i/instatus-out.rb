@@ -8,8 +8,6 @@ cask "instatus-out" do
   desc "Monitor services in your menu bar"
   homepage "https://instatus.com/out"
 
-  no_autobump! because: :requires_manual_review
-
   app "Instatus Out.app"
 
   zap trash: [
