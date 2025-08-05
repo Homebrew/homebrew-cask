@@ -7,8 +7,6 @@ cask "coccinellida" do
   desc "Simple SSH tunnel manager"
   homepage "https://coccinellida.sourceforge.net/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-01", because: :unmaintained
 
   app "Coccinellida.app"
