@@ -11,8 +11,6 @@ cask "kap" do
   desc "Open-source screen recorder built with web technology"
   homepage "https://getkap.co/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :sierra"
 
