@@ -8,8 +8,6 @@ cask "command-x" do
   desc "Cut and paste files in Finder"
   homepage "https://sindresorhus.com/command-x"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-09", because: :moved_to_mas
   disable! date: "2025-07-09", because: :moved_to_mas
 
