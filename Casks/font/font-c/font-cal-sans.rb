@@ -6,8 +6,6 @@ cask "font-cal-sans" do
   name "Cal Sans"
   homepage "https://github.com/calcom/font"
 
-  no_autobump! because: :requires_manual_review
-
   font "fonts/otf/CalSans-SemiBold.otf"
 
   # No zap stanza required
