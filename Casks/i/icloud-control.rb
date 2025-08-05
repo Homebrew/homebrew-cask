@@ -7,8 +7,6 @@ cask "icloud-control" do
   desc "User-controlled selective sync for iCloud Drive"
   homepage "https://github.com/Obbut/iCloud-Control"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-17", because: :discontinued
   disable! date: "2025-07-17", because: :discontinued
 
