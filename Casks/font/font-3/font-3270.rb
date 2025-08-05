@@ -23,8 +23,6 @@ cask "font-3270" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "3270-Regular.otf"
   font "3270Condensed-Regular.otf"
   font "3270SemiCondensed-Regular.otf"
