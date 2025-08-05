@@ -11,8 +11,6 @@ cask "aquaskk" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "AquaSKK-#{version}.pkg"
 
   uninstall pkgutil: "org.codefirst.aquaskk.pkg"
