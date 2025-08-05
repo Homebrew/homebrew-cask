@@ -12,8 +12,6 @@ cask "cinder" do
     regex(/href=.*?cinder[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   suite "cinder_#{version}_mac"
 
   zap trash: "~/Library/Preferences/org.libcinder.TinderBox.plist"
