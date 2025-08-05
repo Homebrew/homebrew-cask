@@ -7,8 +7,6 @@ cask "morkro-papyrus" do
   desc "Unofficial Dropbox Paper desktop app"
   homepage "https://github.com/morkro/papyrus"
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "papyrus"
 
   app "Papyrus.app"
