@@ -6,8 +6,6 @@ cask "force-paste" do
   name "Force Paste"
   homepage "https://github.com/EugeneDae/Force-Paste"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-10", because: :unmaintained
   disable! date: "2025-07-10", because: :unmaintained
 
