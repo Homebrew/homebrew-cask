@@ -16,8 +16,6 @@ cask "0-ad" do
     regex(/href=.*?0ad[._-]v?(.*?)[._-]macos[._-]#{arch}\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "0 A.D..app"
