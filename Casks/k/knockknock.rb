@@ -8,8 +8,6 @@ cask "knockknock" do
   desc "Tool to show what is persistently installed on the computer"
   homepage "https://objective-see.org/products/knockknock.html"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "KnockKnock.app"
