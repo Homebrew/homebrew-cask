@@ -7,8 +7,6 @@ cask "no-ip-duc" do
   desc "Keeps current IP address in sync"
   homepage "https://www.noip.com/download?page=mac"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-31", because: :unmaintained
 
   app "No-IP DUC.app"
