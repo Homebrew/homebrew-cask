@@ -12,8 +12,6 @@ cask "electricbinary" do
     regex(/href=.*?electricBinary[._-]v?(\d+(?:\.\d+)+)\.jar/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   container type: :naked
 
   artifact "electricBinary-#{version}.jar", target: "#{appdir}/electricBinary-#{version}.jar"
