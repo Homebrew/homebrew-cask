@@ -6,8 +6,6 @@ cask "font-spleen" do
   name "Spleen"
   homepage "https://github.com/fcambus/spleen"
 
-  no_autobump! because: :requires_manual_review
-
   font "spleen-#{version}/spleen-6x12.otf"
   font "spleen-#{version}/spleen-8x16.otf"
   font "spleen-#{version}/spleen-12x24.otf"
