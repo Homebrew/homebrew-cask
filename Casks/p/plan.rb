@@ -7,8 +7,6 @@ cask "plan" do
   desc "Calendar and project manager"
   homepage "https://getplan.co/login"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-22", because: :unmaintained
 
   app "Plan.app"
