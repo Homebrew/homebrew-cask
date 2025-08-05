@@ -12,8 +12,6 @@ cask "camed" do
     regex(%r{url=.*?/CAM%20Editor/Releases/v?(\d+(?:\.\d+)+)/}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "CAMEd-#{version}/CAMed.app"
 
   caveats do
