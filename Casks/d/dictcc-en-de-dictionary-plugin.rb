@@ -6,8 +6,6 @@ cask "dictcc-en-de-dictionary-plugin" do
   name "dict.cc English-German dictionary plugin"
   homepage "https://www.dict.cc/?s=about%3Awordlist"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-10", because: :unmaintained
   disable! date: "2025-07-10", because: :unmaintained
 
