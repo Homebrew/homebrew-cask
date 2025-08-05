@@ -13,8 +13,6 @@ cask "osp-tracker" do
     regex(/href=.*?Tracker[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]installer\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "Tracker-#{version}-osx-installer.app/Contents/MacOS/osx-x86_64",
     args:       ["--mode", "unattended"],
