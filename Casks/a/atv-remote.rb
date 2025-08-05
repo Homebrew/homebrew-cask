@@ -10,8 +10,6 @@ cask "atv-remote" do
   desc "Control Apple TV from your desktop"
   homepage "https://github.com/bsharper/atv-desktop-remote"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "ATV Remote.app"
