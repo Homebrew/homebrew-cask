@@ -8,8 +8,6 @@ cask "ankermake" do
   desc "Slicer for AnkerMake 3D printers"
   homepage "https://www.ankermake.com/software"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-05-26", because: :discontinued, replacement_cask: "eufymake-studio"
 
   depends_on macos: ">= :big_sur"
