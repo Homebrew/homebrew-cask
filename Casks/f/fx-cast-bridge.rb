@@ -24,8 +24,6 @@ cask "fx-cast-bridge" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "fx_cast_bridge-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: "tf.matt.fx_cast_bridge"
