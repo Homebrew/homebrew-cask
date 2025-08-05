@@ -13,8 +13,6 @@ cask "obs-backgroundremoval" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   pkg "obs-backgroundremoval-#{version}-macos-universal.pkg"
