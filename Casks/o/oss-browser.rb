@@ -12,8 +12,6 @@ cask "oss-browser" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "oss-browser-darwin-x64/oss-browser.app"
 
   zap trash: [
