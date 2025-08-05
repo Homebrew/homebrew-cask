@@ -7,8 +7,6 @@ cask "cr" do
   desc "XML/CSS based eBook reader"
   homepage "https://sourceforge.net/projects/crengine/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-01", because: :unmaintained
 
   app "cr#{version.major}.app"
