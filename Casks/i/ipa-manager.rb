@@ -7,8 +7,6 @@ cask "ipa-manager" do
   desc "International Phonetic Alphabet input method"
   homepage "https://www.blugs.com/IPA/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-17", because: :discontinued
   disable! date: "2025-07-17", because: :discontinued
 
