@@ -8,8 +8,6 @@ cask "freemind" do
   desc "Mind-mapping software written in Java"
   homepage "https://freemind.sourceforge.io/wiki/index.php/Main_Page"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-01", because: :unmaintained
 
   app "FreeMind.app"
