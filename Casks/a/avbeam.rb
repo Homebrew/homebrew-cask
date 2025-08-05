@@ -12,8 +12,6 @@ cask "avbeam" do
     regex(/AVbeam\s+version\s+(\d+(?:\.\d+)+)\s+release/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "avbeam.app"
