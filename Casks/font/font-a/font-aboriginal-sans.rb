@@ -11,8 +11,6 @@ cask "font-aboriginal-sans" do
     regex(/Aboriginal\s+Sans\s+Serif.*?\(\s*v?(\d+(?:\.\d+)*)[^)]*\)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "AboriginalSansREGULAR.ttf"
   font "AboriginalSansBOLD.ttf"
   font "AboriginalSansBOLDITALIC.ttf"
