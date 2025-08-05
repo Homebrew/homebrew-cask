@@ -7,7 +7,7 @@ cask "retroactive" do
   desc "Run Apple apps on incompatible OS versions"
   homepage "https://github.com/cormiertyshawn895/Retroactive"
 
-  no_autobump! because: :requires_manual_review
+
 
   deprecate! date: "2024-08-21", because: :discontinued
 
