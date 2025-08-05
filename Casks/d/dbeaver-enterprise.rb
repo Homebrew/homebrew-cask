@@ -17,8 +17,6 @@ cask "dbeaver-enterprise" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "DBeaverEE.app"
 
   uninstall signal: ["TERM", "com.dbeaver.product.enterprise"]
