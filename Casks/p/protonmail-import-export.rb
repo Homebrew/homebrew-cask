@@ -7,8 +7,6 @@ cask "protonmail-import-export" do
   desc "Import emails to your secure ProtonMail inbox or make offline backups"
   homepage "https://proton.me/support/export-emails-import-export-app"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
