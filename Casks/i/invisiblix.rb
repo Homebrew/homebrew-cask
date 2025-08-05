@@ -8,8 +8,6 @@ cask "invisiblix" do
   desc "Allows viewing and manipulation of hidden files in Finder"
   homepage "https://invisiblix.read-write.fr/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-17", because: :unmaintained
   disable! date: "2025-07-17", because: :unmaintained
 
