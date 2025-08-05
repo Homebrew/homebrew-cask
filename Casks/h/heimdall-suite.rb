@@ -13,8 +13,6 @@ cask "heimdall-suite" do
     regex(%r{href=.*?/heimdall[._-]suite[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Heimdall Suite #{version}.pkg"
 
   uninstall kext:    "au.com.glassechidna.heimdall_usb_shield",
