@@ -14,8 +14,6 @@ cask "earnapp" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "EarnApp.app"
