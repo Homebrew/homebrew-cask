@@ -54,8 +54,6 @@ cask "codelite" do
   desc "IDE for C, C++, PHP and Node.js"
   homepage "https://codelite.org/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   app "codelite.app"
