@@ -8,8 +8,6 @@ cask "projectlibre" do
   desc "Microsoft Project in your browser"
   homepage "https://www.projectlibre.com/"
 
-  no_autobump! because: :requires_manual_review
-
   app "ProjectLibre.app"
 
   zap trash: "~/Library/Preferences/com.projectlibre#{version.major}.*"
