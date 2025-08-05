@@ -12,8 +12,6 @@ cask "presentation" do
     regex(/^(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "osx-presentation-#{version}.pkg"
 
   uninstall pkgutil: "fr.imag.iihm.blanch.osx-presentation"
