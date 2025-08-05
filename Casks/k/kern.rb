@@ -12,8 +12,6 @@ cask "kern" do
     regex(/v(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "kern_#{version.dots_to_underscores}_mac.pkg"
 
   uninstall pkgutil: [
