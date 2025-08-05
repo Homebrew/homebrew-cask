@@ -8,8 +8,6 @@ cask "makehuman" do
   desc "Open Source tool for making 3D characters"
   homepage "https://static.makehumancommunity.org/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-01-04", because: :no_longer_available
 
   depends_on macos: ">= :sierra"
