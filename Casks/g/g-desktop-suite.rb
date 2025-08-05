@@ -6,8 +6,6 @@ cask "g-desktop-suite" do
   name "G Desktop Suite"
   homepage "https://github.com/alexkim205/g-desktop-suite"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-11", because: :unmaintained
   disable! date: "2025-07-11", because: :unmaintained
 
