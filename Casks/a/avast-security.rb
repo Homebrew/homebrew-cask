@@ -13,8 +13,6 @@ cask "avast-security" do
     regex(%r{<h2>(\d+(?:\.\d+)+).*</h2>}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   # pkg cannot be installed automatically
   installer manual: "Install Avast Security.pkg"
 
