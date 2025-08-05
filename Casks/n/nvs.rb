@@ -7,8 +7,6 @@ cask "nvs" do
   desc "Cross-platform tool for switching between versions and forks of Node.js"
   homepage "https://github.com/jasongin/nvs"
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "nvs-#{version}/homebrew/install.sh",
     args:       ["#{caskroom_path}/latest"],
