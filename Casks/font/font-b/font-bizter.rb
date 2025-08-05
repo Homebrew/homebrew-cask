@@ -6,8 +6,6 @@ cask "font-bizter" do
   name "BIZTER"
   homepage "https://github.com/yuru7/BIZTER"
 
-  no_autobump! because: :requires_manual_review
-
   font "BIZTER_v#{version}/BIZTER-Bold.ttf"
   font "BIZTER_v#{version}/BIZTER-Regular.ttf"
 
