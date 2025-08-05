@@ -7,8 +7,6 @@ cask "container-ps" do
   desc "App to show all docker images"
   homepage "https://github.com/Toinane/container-ps"
 
-  no_autobump! because: :requires_manual_review
-
   app "Container PS.app"
 
   zap trash: [
