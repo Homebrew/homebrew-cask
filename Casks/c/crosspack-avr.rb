@@ -7,8 +7,6 @@ cask "crosspack-avr" do
   desc "Development environment for Atmel’s AVR microcontrollers"
   homepage "https://www.obdev.at/products/crosspack/index.html"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-10-29", because: "is 32-bit only"
 
   pkg "CrossPack-AVR.pkg"
