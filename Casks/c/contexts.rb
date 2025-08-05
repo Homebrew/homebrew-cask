@@ -24,8 +24,6 @@ cask "contexts" do
   desc "Allows switching between application windows"
   homepage "https://contexts.co/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "Contexts.app"
