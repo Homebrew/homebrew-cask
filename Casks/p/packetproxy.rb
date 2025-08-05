@@ -7,8 +7,6 @@ cask "packetproxy" do
   desc "Local proxy written in Java"
   homepage "https://github.com/DeNA/PacketProxy"
 
-  no_autobump! because: :requires_manual_review
-
   app "PacketProxy.app"
 
   zap trash: [
