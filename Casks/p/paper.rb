@@ -13,8 +13,6 @@ cask "paper" do
     regex(/paper[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :big_sur"
 
