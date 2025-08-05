@@ -22,8 +22,6 @@ cask "genymotion" do
   desc "Android emulator"
   homepage "https://www.genymotion.com/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Genymotion.app"
   app "Genymotion Shell.app"
   binary "#{appdir}/Genymotion Shell.app/Contents/MacOS/genyshell"
