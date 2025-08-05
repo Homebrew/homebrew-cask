@@ -7,8 +7,6 @@ cask "agenda" do
   desc "Note taking application focusing on dates"
   homepage "https://agenda.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :moved_to_mas
 
   depends_on macos: ">= :mojave"
