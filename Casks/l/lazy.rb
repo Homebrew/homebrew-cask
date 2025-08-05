@@ -7,8 +7,6 @@ cask "lazy" do
   desc "Control your environment from your keyboard"
   homepage "https://www.lazy-app.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-08-05", because: :no_longer_available
 
   pkg "lazy.pkg"
