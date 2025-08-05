@@ -7,8 +7,6 @@ cask "mac2imgur" do
   desc "Upload images and screenshots to Imgur"
   homepage "https://github.com/mileswd/mac2imgur"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-27", because: :unmaintained
   disable! date: "2025-07-27", because: :unmaintained
 
