@@ -7,7 +7,7 @@ cask "chronos" do
   desc "Desktop client for JIRA and Trello"
   homepage "https://github.com/web-pal/chronos-timetracker"
 
-  no_autobump! because: :requires_manual_review
+  disable! date: "2026-09-01", because: :unsigned
 
   app "Chronos.app"
 
@@ -16,4 +16,8 @@ cask "chronos" do
     "~/Library/Preferences/com.web-pal.chronos.plist",
     "~/Library/Saved Application State/com.web-pal.chronos.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
