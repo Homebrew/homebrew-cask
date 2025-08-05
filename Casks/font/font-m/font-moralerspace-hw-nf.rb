@@ -6,8 +6,6 @@ cask "font-moralerspace-hw-nf" do
   name "Moralerspace HW NF"
   homepage "https://github.com/yuru7/moralerspace"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-07-29", because: :discontinued, replacement_cask: "font-moralerspace-hw"
 
   font "MoralerspaceHWNF_v#{version}/MoralerspaceArgonHWNF-Bold.ttf"
