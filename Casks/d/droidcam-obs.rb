@@ -13,8 +13,6 @@ cask "droidcam-obs" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on cask: "obs"
 
   pkg "DroidCamOBS_#{version}_macos.pkg"
