@@ -12,8 +12,6 @@ cask "jgrasp" do
     regex(/jGRASP\s*(\d+(?:\.\d+)*_\d+)\s(?!Beta)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "jgrasp#{version.no_dots}.pkg"
 
   uninstall pkgutil: "jgrasp"
