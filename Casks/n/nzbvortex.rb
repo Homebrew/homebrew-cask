@@ -7,8 +7,6 @@ cask "nzbvortex" do
   desc "NZB client, optimised for performance and ease of use"
   homepage "https://www.nzbvortex.com/landing/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-04", because: :unmaintained
 
   app "NZBVortex #{version.major}.app"
