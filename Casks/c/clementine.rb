@@ -8,8 +8,6 @@ cask "clementine" do
   desc "Music player and library organiser"
   homepage "https://www.clementine-player.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-30", because: :discontinued
 
   app "clementine.app"
