@@ -8,7 +8,7 @@ cask "rclone-browser" do
   desc "GUI for rclone"
   homepage "https://martins.ninja/RcloneBrowser/"
 
-  no_autobump! because: :requires_manual_review
+
 
   disable! date: "2024-12-16", because: :discontinued
 
