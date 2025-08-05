@@ -12,8 +12,6 @@ cask "chronoagent" do
     regex(/>\s*ChronoAgent.*?Version\s+(\d+(?:\.\d+)+)[\s<]+/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   pkg "Install.pkg"
