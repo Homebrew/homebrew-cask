@@ -11,8 +11,6 @@ cask "alipay-key-tool" do
     skip "version is shown in screenshot on homepage"
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "支付宝开放平台密钥工具.app"
 
   zap trash: [
