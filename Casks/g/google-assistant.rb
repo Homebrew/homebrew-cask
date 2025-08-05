@@ -7,8 +7,6 @@ cask "google-assistant" do
   desc "Cross-platform unofficial Google Assistant Client for Desktop"
   homepage "https://github.com/Melvin-Abraham/Google-Assistant-Unofficial-Desktop-Client"
 
-  no_autobump! because: :requires_manual_review
-
   app "Google Assistant.app"
 
   zap trash: [
