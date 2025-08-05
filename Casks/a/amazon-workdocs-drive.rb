@@ -16,8 +16,6 @@ cask "amazon-workdocs-drive" do
   desc "Fully managed, secure enterprise storage and sharing service"
   homepage "https://aws.amazon.com/workdocs/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-04-25", because: :discontinued
 
   depends_on macos: ">= :el_capitan"
