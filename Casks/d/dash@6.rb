@@ -12,8 +12,6 @@ cask "dash@6" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   conflicts_with cask: "dash"
   depends_on macos: ">= :high_sierra"
