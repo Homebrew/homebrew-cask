@@ -7,8 +7,6 @@ cask "hackintool" do
   desc "Hackintosh patching tool"
   homepage "https://github.com/headkaze/Hackintool"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
