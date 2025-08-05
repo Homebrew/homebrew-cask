@@ -13,8 +13,6 @@ cask "cisdem-duplicate-finder" do
     regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :el_capitan"
 
   app "Cisdem Duplicate Finder.app"
