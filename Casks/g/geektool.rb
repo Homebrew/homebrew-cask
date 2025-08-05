@@ -8,8 +8,6 @@ cask "geektool" do
   desc "Desktop customization tool"
   homepage "https://www.tynsoe.org/geektool/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-31", because: :unmaintained
 
   app "GeekTool.app"
