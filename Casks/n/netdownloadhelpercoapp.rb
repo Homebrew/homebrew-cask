@@ -30,8 +30,6 @@ cask "netdownloadhelpercoapp" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "vdhcoapp-mac-#{arch}-installer.pkg"
 
   uninstall pkgutil: "net.downloadhelper.coapp"
