@@ -12,8 +12,6 @@ cask "nrfutil" do
     regex(/nrfutil-launcher-universal-apple-darwin[._-]v?(\d+(?:\.\d+)+(?:[._-]\h+)?)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   binary "nrfutil-launcher-universal-apple-darwin-#{version}", target: "nrfutil"
   # No zap stanza required
 end
