@@ -13,8 +13,6 @@ cask "font-bravura" do
     regex(%r{href=.*?/bravura/releases/tag/bravura[._-]v?(\d+(?:\.\d+)+)"}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "bravura-bravura-#{version}/redist/otf/Bravura.otf"
   font "bravura-bravura-#{version}/redist/otf/BravuraText.otf"
 
