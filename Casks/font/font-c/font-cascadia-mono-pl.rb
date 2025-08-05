@@ -11,8 +11,6 @@ cask "font-cascadia-mono-pl" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "ttf/CascadiaMonoPL.ttf"
   font "ttf/CascadiaMonoPLItalic.ttf"
 
