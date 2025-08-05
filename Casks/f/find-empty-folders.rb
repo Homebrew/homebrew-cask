@@ -12,8 +12,6 @@ cask "find-empty-folders" do
     regex(/href=.*?FindEmptyFolders[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Find Empty Folders.app"
 
   zap trash: "~/Library/Saved Application State/org.tempel.findemptyfolders.savedState"
