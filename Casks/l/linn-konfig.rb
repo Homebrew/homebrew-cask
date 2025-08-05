@@ -7,8 +7,6 @@ cask "linn-konfig" do
   desc "Control software for audio equipment"
   homepage "https://www.linn.co.uk/software"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "konfig_latest_osx.pkg"
