@@ -11,8 +11,6 @@ cask "gitdock" do
     url "https://gitlab.com/mvanremmerden/gitdock.git"
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "GitDock.app"
