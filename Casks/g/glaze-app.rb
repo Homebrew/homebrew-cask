@@ -15,8 +15,6 @@ cask "glaze-app" do
     regex(/href=.*?Glaze[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :ventura"
 
   app "Glaze.app"
