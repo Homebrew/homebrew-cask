@@ -7,8 +7,6 @@ cask "qv2ray" do
   desc "V2Ray GUI client with extensive protocol support"
   homepage "https://github.com/Qv2ray/Qv2ray"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on formula: "v2ray"
