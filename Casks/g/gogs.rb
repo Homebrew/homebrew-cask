@@ -19,8 +19,6 @@ cask "gogs" do
   desc "Self-hosted Git service"
   homepage "https://gogs.io/"
 
-  no_autobump! because: :requires_manual_review
-
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/gogs.wrapper.sh"
 
