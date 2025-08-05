@@ -6,8 +6,6 @@ cask "noisebuddy" do
   name "NoiseBuddy"
   homepage "https://github.com/insidegui/NoiseBuddy"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-08", because: :unmaintained
 
   depends_on macos: ">= :catalina"
