@@ -8,8 +8,6 @@ cask "polypad" do
   desc "Scriptable Textpad for Developers"
   homepage "https://polypad.io/"
 
-  no_autobump! because: :requires_manual_review
-
   # Downloads are no longer available, have been missing since April 2024
   # https://github.com/mattebot/Polypad/issues/7
   disable! date: "2024-09-07", because: :no_longer_available
