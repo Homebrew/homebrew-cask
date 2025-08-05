@@ -11,8 +11,6 @@ cask "font-antinoou" do
     regex(/Antinoou\s+is\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "AntinoouFont-#{version}/Antinoou.ttf"
   font "AntinoouFont-#{version}/AntinoouItalic.ttf"
 
