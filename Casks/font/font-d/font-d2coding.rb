@@ -19,8 +19,6 @@ cask "font-d2coding" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "D2Coding/D2Coding-Ver#{version.before_comma}-#{version.after_comma}.ttc"
 
   # No zap stanza required
