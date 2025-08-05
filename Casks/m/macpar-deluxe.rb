@@ -17,8 +17,6 @@ cask "macpar-deluxe" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MacPAR deLuxe.app"
 
   zap trash: [
