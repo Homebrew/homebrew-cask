@@ -15,8 +15,6 @@ cask "podolski" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Podolski_#{version.csv.second}_Mac/Podolski #{version.csv.first} Installer.pkg"
 
   uninstall pkgutil: [
