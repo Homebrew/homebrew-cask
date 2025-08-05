@@ -1,9 +1,9 @@
 cask "hey-desktop" do
   arch arm: "-arm64"
 
-  version "1.2.17"
-  sha256 arm:   "f901b52916f5c9a33d12a4e9f73ceacc85f652e76b7cb61767507186d270859e",
-         intel: "e7b260f4faa8fe0c3783c2b31a6e4410103b273c0302dd275b0da26b0f06d59d"
+  version "1.2.18"
+  sha256 arm:   "36e747be2cd253cff7c3008ab7dee6bdb18b57df6e8b790945a06f1138daaf88",
+         intel: "7f9b3444e544ac33060a97c9a963ab56050387209fafb1692df530db2fa6d41e"
 
   url "https://hey-desktop.s3.amazonaws.com/HEY-#{version}#{arch}-mac.zip",
       verified: "hey-desktop.s3.amazonaws.com/"
@@ -15,8 +15,6 @@ cask "hey-desktop" do
     url "https://hey-desktop.s3.amazonaws.com/latest-mac.yml"
     strategy :electron_builder
   end
-
-  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :catalina"
