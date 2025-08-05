@@ -7,8 +7,6 @@ cask "eclipse-testing" do
   desc "Eclipse IDE for testing purposes"
   homepage "https://eclipse.org/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   # Renamed to avoid conflict with other Eclipse.
