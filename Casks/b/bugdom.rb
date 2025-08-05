@@ -8,8 +8,6 @@ cask "bugdom" do
   desc "Bug-themed 3D action/adventure game from Pangea Software"
   homepage "https://jorio.itch.io/bugdom"
 
-  no_autobump! because: :requires_manual_review
-
   app "Bugdom.app"
   artifact "Documentation", target: "~/Library/Application Support/Bugdom"
 
