@@ -13,8 +13,6 @@ cask "hhkb" do
     regex(%r{macOS\s*</td>.*?HHKBkeymapTool[._-]v?\d+(?:\.\d+)*[^.]*?\.dmg.*?>\s*v?(\d+(?:\.\d+)+)\s*<}im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   pkg "HHKBkeymapTool_#{version.no_dots}ma.pkg"
