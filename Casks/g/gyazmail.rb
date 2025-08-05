@@ -12,8 +12,6 @@ cask "gyazmail" do
     regex(/Download\s*GyazMail\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "GyazMail.app"
 
   zap trash: [
