@@ -6,8 +6,6 @@ cask "machg" do
   name "MacHg"
   homepage "http://jasonfharris.com/machg/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "MacHg.app"
