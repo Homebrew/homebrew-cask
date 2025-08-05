@@ -13,8 +13,6 @@ cask "isyncr" do
   desc "Syncs iTunes to Android over a USB or WiFi connection"
   homepage "https://www.jrtstudio.com/iSyncr-iTunes-for-Android"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-03-15", because: :no_longer_available
 
   pkg "iSyncr Desktop #{version}.pkg"
