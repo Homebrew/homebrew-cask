@@ -6,8 +6,6 @@ cask "font-delugia-complete" do
   name "Delugia Code"
   homepage "https://github.com/adam7/delugia-code"
 
-  no_autobump! because: :requires_manual_review
-
   font "delugia-complete/DelugiaComplete-Bold.ttf"
   font "delugia-complete/DelugiaComplete-BoldItalic.ttf"
   font "delugia-complete/DelugiaComplete-Italic.ttf"
