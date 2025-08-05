@@ -13,8 +13,6 @@ cask "perimeter81" do
     regex(/href=.*?Harmony[._-]SASE[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   pkg "Harmony_SASE_#{version}.pkg"
