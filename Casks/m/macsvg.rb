@@ -8,8 +8,6 @@ cask "macsvg" do
   desc "App for designing HTML5 Scalable Vector Graphics"
   homepage "https://macsvg.org/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "macSVG_v#{version.chomp(".0").dots_to_underscores}/macSVG.app"
