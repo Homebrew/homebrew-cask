@@ -10,8 +10,6 @@ cask "logisim-evolution" do
   desc "Digital logic designer and simulator"
   homepage "https://github.com/logisim-evolution/logisim-evolution"
 
-  no_autobump! because: :requires_manual_review
-
   app "Logisim-evolution.app"
 
   zap trash: "~/Library/Preferences/com.cburch.logisim.plist"
