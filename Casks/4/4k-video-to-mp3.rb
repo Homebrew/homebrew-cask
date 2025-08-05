@@ -12,8 +12,6 @@ cask "4k-video-to-mp3" do
     regex(%r{href=.*?/4kvideotomp3_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "4K Video to MP3.app"
