@@ -8,8 +8,6 @@ cask "journey" do
   desc "Diary app"
   homepage "https://2appstudio.com/journey/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "Journey.app"
@@ -20,4 +18,8 @@ cask "journey" do
     "~/Library/Preferences/com.journey.mac#{version.major}.plist",
     "~/Library/Saved Application State/com.journey.mac#{version.major}.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
