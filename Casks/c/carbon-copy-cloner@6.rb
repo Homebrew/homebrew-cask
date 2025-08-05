@@ -13,8 +13,6 @@ cask "carbon-copy-cloner@6" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   conflicts_with cask: [
     "carbon-copy-cloner",
