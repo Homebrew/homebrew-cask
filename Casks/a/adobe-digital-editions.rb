@@ -12,8 +12,6 @@ cask "adobe-digital-editions" do
     regex(/Adobe\s*Digital\s*Editions\s*(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Digital Editions #{version.major_minor} Installer.pkg"
 
   uninstall quit:    "com.adobe.adobedigitaleditions.app",
