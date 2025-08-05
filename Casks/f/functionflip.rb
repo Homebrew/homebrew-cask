@@ -7,8 +7,6 @@ cask "functionflip" do
   desc "Function key control"
   homepage "https://kevingessner.com/software/functionflip/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-14", because: :unmaintained
 
   prefpane "FunctionFlip.prefPane"
