@@ -1,8 +1,8 @@
 cask "flameshot" do
-  version "12.1.0"
-  sha256 "70fa1cb9990093b00d184eace8e6c5f1cfefe33decb8ab051141a3847439ff14"
+  version "13.0.0"
+  sha256 "08dea7dca72520181ae622061d40177172716890bf6154b040a67eb8ec8c698c"
 
-  url "https://github.com/flameshot-org/flameshot/releases/download/v#{version}/flameshot.dmg",
+  url "https://github.com/flameshot-org/flameshot/releases/download/v#{version}/Flameshot-#{version}.dmg",
       verified: "github.com/flameshot-org/flameshot/"
   name "Flameshot"
   desc "Screenshot software"
@@ -20,8 +20,4 @@ cask "flameshot" do
   app "flameshot.app"
 
   zap trash: "~/.config/flameshot/flameshot.ini"
-
-  caveats do
-    requires_rosetta
-  end
 end
