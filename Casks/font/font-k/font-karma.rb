@@ -6,8 +6,6 @@ cask "font-karma" do
   name "Karma"
   homepage "https://github.com/itfoundry/karma"
 
-  no_autobump! because: :requires_manual_review
-
   font "Karma-Bold.otf"
   font "Karma-Light.otf"
   font "Karma-Medium.otf"
