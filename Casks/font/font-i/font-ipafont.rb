@@ -11,8 +11,6 @@ cask "font-ipafont" do
     regex(/IPAフォント\(\s*Ver[._-](\d+(?:\.\d+)+)\s*\)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "IPAfont#{version.no_dots}/ipag.ttf"
   font "IPAfont#{version.no_dots}/ipagp.ttf"
   font "IPAfont#{version.no_dots}/ipam.ttf"
