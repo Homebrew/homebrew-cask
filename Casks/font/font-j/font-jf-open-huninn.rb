@@ -8,8 +8,6 @@ cask "font-jf-open-huninn" do
   name "jf open 粉圓"
   homepage "https://justfont.com/huninn/"
 
-  no_autobump! because: :requires_manual_review
-
   font "jf-openhuninn-#{version}.ttf"
 
   # No zap stanza required
