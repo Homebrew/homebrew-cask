@@ -12,8 +12,6 @@ cask "fabfilter-saturn" do
     regex(/FabFilter\s+Saturn.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   pkg "FabFilter Saturn #{version} Installer.pkg"
