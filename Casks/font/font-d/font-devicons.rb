@@ -7,8 +7,6 @@ cask "font-devicons" do
   name "Devicons"
   homepage "https://vorillaz.github.io/devicons/"
 
-  no_autobump! because: :requires_manual_review
-
   font "devicons-#{version}/fonts/devicons.ttf"
 
   # No zap stanza required
