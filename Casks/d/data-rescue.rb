@@ -12,8 +12,6 @@ cask "data-rescue" do
     regex(/>\s*Data\s+Rescue(?:\s+\d+)?\s+\(Mac\)\s*<.+?v?(\d+(?:\.\d+)+)/im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "Data Rescue.app"
