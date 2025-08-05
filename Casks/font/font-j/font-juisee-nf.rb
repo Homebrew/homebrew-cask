@@ -6,8 +6,6 @@ cask "font-juisee-nf" do
   name "Juisee NF"
   homepage "https://github.com/yuru7/juisee"
 
-  no_autobump! because: :requires_manual_review
-
   font "Juisee_NF_v#{version}/JuiseeNF-Bold.ttf"
   font "Juisee_NF_v#{version}/JuiseeNF-BoldItalic.ttf"
   font "Juisee_NF_v#{version}/JuiseeNF-Regular.ttf"
