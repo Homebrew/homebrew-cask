@@ -41,8 +41,6 @@ cask "konica-minolta-bizhub-c750i-driver" do
   desc "PostScript printer driver"
   homepage "https://www.konicaminolta.eu/eu-en/support/download-centre"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   uninstall_preflight do
