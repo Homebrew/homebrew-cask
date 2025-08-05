@@ -10,8 +10,6 @@ cask "fuse" do
   desc "Visual desktop tool suite for working with the Fuse framework"
   homepage "https://fuse-open.github.io/"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "fuse_osx_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.fusetools.fuse"
