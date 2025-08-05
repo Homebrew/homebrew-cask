@@ -12,7 +12,7 @@ cask "remote-wake-up" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
+
 
   app "Remote Wake Up.app"
 
