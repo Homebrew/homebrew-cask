@@ -7,8 +7,6 @@ cask "chrome-devtools" do
   desc "Standalone Chrome development tools"
   homepage "https://github.com/auchenberg/chrome-devtools-app"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Chrome DevTools App.app"
