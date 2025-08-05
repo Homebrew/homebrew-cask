@@ -12,8 +12,6 @@ cask "hedgewars" do
     regex(%r{href=.*?/Hedgewars[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Hedgewars.app"
 
   zap trash: [
