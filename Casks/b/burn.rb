@@ -8,8 +8,6 @@ cask "burn" do
   desc "CD burning application"
   homepage "https://burn-osx.sourceforge.io/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Burn.localized/Burn.app"
 
   zap trash: "~/Library/Preferences/com.kiwifruitware.Burn.plist"
