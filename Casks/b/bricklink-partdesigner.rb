@@ -13,8 +13,6 @@ cask "bricklink-partdesigner" do
     regex(/"strVersion"\s*:\s*"([^"]+)"/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on cask: "bricklink-studio"
 
