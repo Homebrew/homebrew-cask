@@ -7,8 +7,6 @@ cask "quicklook-csv" do
   desc "Quick Look plugin for CSV files"
   homepage "https://github.com/p2/quicklook-csv"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "QuickLookCSV.qlgenerator"
 
   # No zap stanza required
