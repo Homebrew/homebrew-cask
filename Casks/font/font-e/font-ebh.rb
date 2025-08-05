@@ -8,8 +8,6 @@ cask "font-ebh" do
   name "Exeter Book Hand"
   homepage "https://exeterbookhand.com/"
 
-  no_autobump! because: :requires_manual_review
-
   font "EBH-v#{version}/EBH Alternates.otf"
   font "EBH-v#{version}/EBH Facsimile.otf"
   font "EBH-v#{version}/EBH Initials.otf"
