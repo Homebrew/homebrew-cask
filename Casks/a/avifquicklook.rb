@@ -7,8 +7,6 @@ cask "avifquicklook" do
   desc "Quick Look Plugin for AVIF images"
   homepage "https://github.com/dreampiggy/AVIFQuickLook"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "AVIFQuickLook.qlgenerator"
 
   # No zap stanza required
