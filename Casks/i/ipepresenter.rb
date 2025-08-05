@@ -16,8 +16,6 @@ cask "ipepresenter" do
     regex(/href=.*?ipepresenter[._-](\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "IpePresenter.app"
 
   zap trash: [
