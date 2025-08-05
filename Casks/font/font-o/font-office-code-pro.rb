@@ -6,8 +6,6 @@ cask "font-office-code-pro" do
   name "Office Code Pro"
   homepage "https://github.com/nathco/Office-Code-Pro"
 
-  no_autobump! because: :requires_manual_review
-
   font "Office-Code-Pro-#{version}/Fonts/Office Code Pro D/OTF/OfficeCodeProD-Bold.otf"
   font "Office-Code-Pro-#{version}/Fonts/Office Code Pro D/OTF/OfficeCodeProD-BoldItalic.otf"
   font "Office-Code-Pro-#{version}/Fonts/Office Code Pro D/OTF/OfficeCodeProD-Light.otf"
