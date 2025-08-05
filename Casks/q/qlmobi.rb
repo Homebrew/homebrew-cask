@@ -7,8 +7,6 @@ cask "qlmobi" do
   desc "Quick Look plugin for Kindle ebook formats"
   homepage "https://github.com/bfabiszewski/QLMobi"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "QLMobi.qlgenerator"
 
   # No zap stanza required
