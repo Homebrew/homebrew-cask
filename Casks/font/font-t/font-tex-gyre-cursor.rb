@@ -11,8 +11,6 @@ cask "font-tex-gyre-cursor" do
     regex(%r{Cursor</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "texgyrecursor-bold.otf"
   font "texgyrecursor-bolditalic.otf"
   font "texgyrecursor-italic.otf"
