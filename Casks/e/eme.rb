@@ -7,8 +7,6 @@ cask "eme" do
   desc "Markdown editor"
   homepage "https://github.com/egoist/eme"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-14", because: :unmaintained
 
   auto_updates true
