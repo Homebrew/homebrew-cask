@@ -11,8 +11,6 @@ cask "font-charis" do
     regex(/href=.*Charis[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Charis-#{version}/Charis-Bold.ttf"
   font "Charis-#{version}/Charis-BoldItalic.ttf"
   font "Charis-#{version}/Charis-Italic.ttf"
