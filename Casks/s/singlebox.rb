@@ -1,6 +1,6 @@
 cask "singlebox" do
-  version "60.11.1"
-  sha256 "13e79c1ecd854405dfd9f54be79b85329efb69b4456fc120e083321df68ca813"
+  version "60.12.0"
+  sha256 "7f4ea3fbc557a3774b31afb3f4c135d43595f8a8eb4c2a60ce68585c24c81401"
 
   url "https://cdn-2.webcatalog.io/singlebox2/Singlebox-#{version}-universal.dmg",
       verified: "cdn-2.webcatalog.io/singlebox2/"
