@@ -7,8 +7,6 @@ cask "font-mononoki" do
   name "Mononoki"
   homepage "https://madmalik.github.io/mononoki/"
 
-  no_autobump! because: :requires_manual_review
-
   font "mononoki-Bold.otf"
   font "mononoki-Bold.ttf"
   font "mononoki-BoldItalic.otf"
