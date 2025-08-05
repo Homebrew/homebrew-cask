@@ -13,8 +13,6 @@ cask "amadeus-pro" do
     regex(/Download\s*Amadeus\s*Pro\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Amadeus Pro.app"
 
   zap trash: [
