@@ -7,8 +7,6 @@ cask "font-recursive-code" do
   name "Recursive Code"
   homepage "https://www.recursive.design/"
 
-  no_autobump! because: :requires_manual_review
-
   font "ArrowType-Recursive-#{version}/Recursive_Code/RecMonoSemicasual/RecMonoSemicasual-BoldItalic-#{version}.ttf"
   font "ArrowType-Recursive-#{version}/Recursive_Code/RecMonoSemicasual/RecMonoSemicasual-Bold-#{version}.ttf"
   font "ArrowType-Recursive-#{version}/Recursive_Code/RecMonoSemicasual/RecMonoSemicasual-Italic-#{version}.ttf"
