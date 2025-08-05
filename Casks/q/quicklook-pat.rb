@@ -7,8 +7,6 @@ cask "quicklook-pat" do
   desc "Quick Look plugin for Adobe Photoshop pattern files"
   homepage "https://github.com/pixelrowdies/quicklook-pat"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-15", because: :unmaintained
 
   pkg "PatternQuickLook.pkg"
