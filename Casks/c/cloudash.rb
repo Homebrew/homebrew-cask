@@ -11,8 +11,6 @@ cask "cloudash" do
   desc "Monitoring and troubleshooting for serverless architectures"
   homepage "https://cloudash.dev/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Cloudash.app"
