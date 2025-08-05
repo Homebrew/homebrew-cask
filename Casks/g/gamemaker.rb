@@ -13,8 +13,6 @@ cask "gamemaker" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "GameMaker-#{version}.pkg"
 
   postflight do
