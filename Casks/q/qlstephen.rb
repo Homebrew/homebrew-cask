@@ -8,8 +8,6 @@ cask "qlstephen" do
   desc "Quick Look plugin for plaintext files without an extension"
   homepage "https://whomwah.github.io/qlstephen/"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "QLStephen.qlgenerator"
 
   # No zap stanza required
