@@ -11,8 +11,6 @@ cask "font-han-nom-a" do
     regex(%r{url=.*?/hannom(?:\s|%20)*v?(\d+(?:\.\d+)*)/}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "HAN NOM A.ttf"
   font "HAN NOM B.ttf"
 
