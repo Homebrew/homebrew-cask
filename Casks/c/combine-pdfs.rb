@@ -12,8 +12,6 @@ cask "combine-pdfs" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Combine PDFs.app"
 
   zap trash: [
