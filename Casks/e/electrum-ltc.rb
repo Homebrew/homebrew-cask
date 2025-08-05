@@ -12,8 +12,6 @@ cask "electrum-ltc" do
     regex(%r{href=.*?/electrum[._-]ltc[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Electrum-LTC.app"
 
   zap trash: "~/.electrum-ltc"
