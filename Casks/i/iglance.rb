@@ -7,8 +7,6 @@ cask "iglance" do
   desc "System monitor for the status bar"
   homepage "https://github.com/iglance/iGlance"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-17", because: :unmaintained
   disable! date: "2025-07-17", because: :unmaintained
 
