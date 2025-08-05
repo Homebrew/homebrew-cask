@@ -12,8 +12,6 @@ cask "isabelle" do
     regex(%r{href=.*?/Isabelle(\d+(?:\.\d+)*)_macos\.t}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   binary "#{appdir}/Isabelle#{version}.app/bin/isabelle"
   artifact "Isabelle#{version}.app", target: "#{appdir}/Isabelle#{version}.app"
 
