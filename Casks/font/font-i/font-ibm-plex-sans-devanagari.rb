@@ -11,8 +11,6 @@ cask "font-ibm-plex-sans-devanagari" do
     regex(%r{^@ibm/plex-sans-devanagari@?(\d+(?:\.\d+)+)$}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Bold.otf"
   font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-ExtraLight.otf"
   font "ibm-plex-sans-devanagari/fonts/complete/otf/IBMPlexSansDevanagari-Light.otf"
