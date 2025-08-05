@@ -27,8 +27,6 @@ cask "openinterminal-lite" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "OpenInTerminal-Lite.app"
