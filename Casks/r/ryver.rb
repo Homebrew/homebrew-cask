@@ -12,8 +12,6 @@ cask "ryver" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   container nested: "Ryver-#{version}.dmg"
 
   app "Ryver.app"
