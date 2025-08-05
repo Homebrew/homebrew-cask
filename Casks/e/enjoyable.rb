@@ -7,8 +7,6 @@ cask "enjoyable" do
   desc "Use your gamepad or joystick like a mouse and keyboard"
   homepage "https://yukkurigames.com/enjoyable/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-31", because: :unmaintained
 
   app "Enjoyable.app"
