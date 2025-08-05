@@ -7,8 +7,6 @@ cask "peakhour" do
   desc "Network bandwidth and network quality visualiser"
   homepage "https://old.peakhourapp.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-21", because: :moved_to_mas
 
   auto_updates true

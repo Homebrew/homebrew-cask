@@ -7,8 +7,6 @@ cask "parallels@15" do
   desc "Desktop virtualization software"
   homepage "https://www.parallels.com/products/desktop/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-11", because: :discontinued
 
   auto_updates true

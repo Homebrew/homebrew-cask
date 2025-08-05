@@ -8,8 +8,6 @@ cask "puppetry" do
   desc "Web testing solution for non-developers on top of Puppeteer and Jest"
   homepage "https://puppetry.app/"
 
-  no_autobump! because: :requires_manual_review
-
   app "puppetry.app"
 
   zap trash: [

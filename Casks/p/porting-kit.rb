@@ -8,8 +8,6 @@ cask "porting-kit" do
   desc "Install games and apps compiled for Microsoft Windows"
   homepage "https://portingkit.com/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 

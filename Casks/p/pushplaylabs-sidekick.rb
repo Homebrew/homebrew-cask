@@ -27,8 +27,6 @@ cask "pushplaylabs-sidekick" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "Sidekick.app"

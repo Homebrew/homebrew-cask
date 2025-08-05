@@ -7,8 +7,6 @@ cask "prezi-next" do
   desc "Presentation software"
   homepage "https://prezi.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-04-05", because: :discontinued
 
   depends_on macos: ">= :high_sierra"

@@ -11,8 +11,6 @@ cask "piphero" do
   desc "Menu bar app to picture-in-picture any window"
   homepage "https://piphero.app/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "PiPHero.app"

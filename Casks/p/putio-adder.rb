@@ -6,8 +6,6 @@ cask "putio-adder" do
   name "Put.IO Adder"
   homepage "https://github.com/nicoSWD/put.io-adder"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-06-03", because: :unmaintained
   disable! date: "2025-06-03", because: :unmaintained
 

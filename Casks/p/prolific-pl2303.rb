@@ -15,8 +15,6 @@ cask "prolific-pl2303" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "PL2303HXD_G_Mac Driver_v#{version.csv.first}_#{version.csv.second}.pkg"
 
   uninstall quit:    [

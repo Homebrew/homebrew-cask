@@ -13,8 +13,6 @@ cask "photoninja" do
     regex(/PhotoNinja[._-]v?(\d+(?:\.\d+)+\w?)[._-]sse42\.pkg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "PhotoNinja_#{version}_sse42.pkg"
 
   uninstall pkgutil: "PhotoNinja.#{version}.sse42"

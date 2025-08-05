@@ -8,8 +8,6 @@ cask "particle-dev" do
   desc "IDE for programming Particle devices"
   homepage "https://www.particle.io/products/development-tools/particle-desktop-ide"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Particle Dev.app"

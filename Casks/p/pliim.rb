@@ -8,8 +8,6 @@ cask "pliim" do
   desc "One click and be ready to go up on stage and shine!"
   homepage "https://zehfernandes.github.io/pliim/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Pliim.app"
 
   zap trash: [

@@ -7,8 +7,6 @@ cask "pashua" do
   desc "Native dialogs for scripting languages"
   homepage "https://www.bluem.net/en/mac/pashua/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-05", because: :unmaintained
   disable! date: "2025-07-05", because: :unmaintained
 

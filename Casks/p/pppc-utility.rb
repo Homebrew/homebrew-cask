@@ -8,8 +8,6 @@ cask "pppc-utility" do
   desc "Create configuration profiles containing a PPPC payload"
   homepage "https://github.com/jamf/PPPC-Utility"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "PPPC Utility.app"

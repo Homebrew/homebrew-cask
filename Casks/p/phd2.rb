@@ -26,8 +26,6 @@ cask "phd2" do
   desc "Telescope guiding software"
   homepage "https://openphdguiding.org/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "PHD2.app"

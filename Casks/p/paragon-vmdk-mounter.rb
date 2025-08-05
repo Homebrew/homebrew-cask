@@ -7,8 +7,6 @@ cask "paragon-vmdk-mounter" do
   desc "Mounts a virtual container by double click"
   homepage "https://www.paragon-software.com/home/vd-mounter-mac-free/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "Paragon VMDK Mounter.pkg"

@@ -11,8 +11,6 @@ cask "parsify" do
   desc "Extensible calculator with unit and currency conversions"
   homepage "https://parsify.app/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Parsify.app"

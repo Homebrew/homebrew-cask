@@ -12,8 +12,6 @@ cask "privatevpn" do
     regex(/\\"macVersion\\"\s*:\s*\\"(\d+(?:\.\d+)+)\\"/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "PrivateVPN.app"

@@ -12,8 +12,6 @@ cask "pingid" do
     regex(/Desktop\s+app\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "PingID.pkg"
 
   uninstall pkgutil: "com.pingidentity.pingid.pcclient"

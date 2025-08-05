@@ -11,8 +11,6 @@ cask "panwriter" do
   desc "Markdown editor with pandoc integration and paginated preview"
   homepage "https://panwriter.com/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on formula: "pandoc"
   depends_on macos: ">= :high_sierra"
 

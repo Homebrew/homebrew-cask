@@ -18,8 +18,6 @@ cask "programmer-dvorak" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   container nested: "Programmer Dvorak v#{version.major_minor}.pkg/Contents/Archive.pax.gz"
 
   keyboard_layout "Library/Keyboard Layouts/Programmer Dvorak.bundle"

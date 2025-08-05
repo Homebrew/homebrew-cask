@@ -8,8 +8,6 @@ cask "protege" do
   desc "Ontology editor"
   homepage "https://protege.stanford.edu/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Protege-#{version}/Protégé.app"
 
   zap trash: [

@@ -7,8 +7,6 @@ cask "provisionql" do
   desc "Quick Look plugin for mobile apps and provisioning profiles"
   homepage "https://github.com/ealeksandrov/ProvisionQL"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "ProvisionQL.qlgenerator"
 
   # No zap stanza required

@@ -21,8 +21,6 @@ cask "pure-writer" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Pure Writer-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.drakeet.purewriter"

@@ -12,8 +12,6 @@ cask "projector" do
   desc "Common and client-related code for running Swing applications remotely"
   homepage "https://lp.jetbrains.com/projector/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :high_sierra"
