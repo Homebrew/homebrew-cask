@@ -7,8 +7,6 @@ cask "quickjson" do
   desc "Quick Look plugin to pretty-print JSON"
   homepage "https://github.com/johan/QuickJSON"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "QuickJSON.qlgenerator"
 
   # No zap stanza required
