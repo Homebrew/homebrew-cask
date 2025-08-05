@@ -8,8 +8,6 @@ cask "icons8" do
   desc "App for browsing icon, photo and music packages"
   homepage "https://icons8.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-17", because: :discontinued
   disable! date: "2025-07-17", because: :discontinued
 
