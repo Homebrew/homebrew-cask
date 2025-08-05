@@ -8,8 +8,6 @@ cask "ananas-analytics-desktop-edition" do
   desc "Hackable data integration & analysis tool"
   homepage "https://ananasanalytics.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-02-22", because: :unmaintained
 
   app "Ananas Analytics Desktop Edition.app"
