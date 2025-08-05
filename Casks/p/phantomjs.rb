@@ -8,8 +8,6 @@ cask "phantomjs" do
   desc "Headless web browser"
   homepage "https://phantomjs.org/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
