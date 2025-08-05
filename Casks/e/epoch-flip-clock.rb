@@ -7,8 +7,6 @@ cask "epoch-flip-clock" do
   desc "Flip clock screensaver"
   homepage "https://github.com/chrstphrknwtn/epoch-flip-clock-screensaver/"
 
-  no_autobump! because: :requires_manual_review
-
   screen_saver "Epoch Flip Clock.saver"
 
   # No zap stanza required
