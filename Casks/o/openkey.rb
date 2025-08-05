@@ -7,8 +7,6 @@ cask "openkey" do
   desc "Vietnamese input system"
   homepage "https://github.com/tuyenvm/OpenKey/"
 
-  no_autobump! because: :requires_manual_review
-
   app "OpenKey.app"
 
   zap trash: [

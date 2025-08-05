@@ -13,8 +13,6 @@ cask "orka-vm-tools" do
     regex(%r{href=.*?/official/(\d+(?:\.\d+)+)/orka-vm-tools\.pkg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "orka-vm-tools.pkg"
 
   uninstall pkgutil: "com.macstadium.orka-vm-tools.pkg"

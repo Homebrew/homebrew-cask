@@ -7,8 +7,6 @@ cask "opensc-app" do
   desc "Smart card libraries and utilities"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "OpenSC #{version}.pkg"
 
   uninstall launchctl: [

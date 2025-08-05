@@ -12,8 +12,6 @@ cask "oscilloscope" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Oscilloscope.app"
 
   zap trash: [

@@ -7,8 +7,6 @@ cask "osirix-quicklook" do
   desc "Quick Look plugin for OsiriX DICOM files"
   homepage "https://www.osirix-viewer.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-15", because: :unmaintained
 
   pkg "OsiriXQuickLookInstaller.pkg"

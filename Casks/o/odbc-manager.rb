@@ -12,8 +12,6 @@ cask "odbc-manager" do
     regex(/Download\s*ODBC\s*Manager\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "actual-odbc-pack"
 
   pkg "ODBC Manager.pkg"

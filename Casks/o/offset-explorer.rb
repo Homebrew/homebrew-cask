@@ -13,8 +13,6 @@ cask "offset-explorer" do
     regex(/Offset\s*Explorer\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Offset Explorer #{version.major}.app"
 
   zap trash: "~/.kafkatool#{version.major}"

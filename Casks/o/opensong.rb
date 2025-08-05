@@ -15,8 +15,6 @@ cask "opensong" do
     regex(/OpenSong[\s._-]*?v?(\d+(?:[._]\d+)+(?:[\s._-]?(?:B(?:eta)?|RC)\d*)?)(?:[._-][^"']+?)?\.(?:dmg|pkg)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "OpenSong%20#{version}.pkg"
 
   uninstall pkgutil: "org.opensong.opensong"

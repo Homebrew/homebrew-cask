@@ -6,8 +6,6 @@ cask "obs-virtualcam" do
   name "OBS Virtual Camera"
   homepage "https://github.com/johnboiles/obs-mac-virtualcam"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :high_sierra"

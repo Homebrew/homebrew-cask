@@ -7,8 +7,6 @@ cask "opera-neon" do
   desc "Web browser"
   homepage "https://www.opera.com/computer/neon"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-29", because: :unmaintained
   disable! date: "2025-07-29", because: :unmaintained
 

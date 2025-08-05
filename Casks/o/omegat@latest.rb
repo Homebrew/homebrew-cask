@@ -12,8 +12,6 @@ cask "omegat@latest" do
     url "https://sourceforge.net/projects/omegat/rss?path=/OmegaT%20-%20Latest"
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "omegat"
 
   app "OmegaT_#{version}_Beta_Mac_Notarized//OmegaT.app"

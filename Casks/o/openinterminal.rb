@@ -7,8 +7,6 @@ cask "openinterminal" do
   desc "Finder Toolbar app to open the current directory in Terminal or Editor"
   homepage "https://github.com/Ji4n1ng/OpenInTerminal"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "OpenInTerminal.app"

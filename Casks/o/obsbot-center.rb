@@ -8,8 +8,6 @@ cask "obsbot-center" do
   desc "Configuration and firmware update utility for OBSBOT Tiny and Meet series"
   homepage "https://www.obsbot.com/download"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-04-07", because: "now has the download artifact behind a signed URL"
 
   depends_on macos: ">= :big_sur"

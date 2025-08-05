@@ -40,8 +40,6 @@ cask "openoffice" do
   desc "Free and open-source productivity suite"
   homepage "https://www.openoffice.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "OpenOffice.app"
 
   zap trash: "~/Library/Application Support/OpenOffice"

@@ -7,8 +7,6 @@ cask "opera-mobile-emulator" do
   desc "Browser emulator"
   homepage "https://www.opera.com/developer/mobile-emulator"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Opera Mobile Emulator.app"

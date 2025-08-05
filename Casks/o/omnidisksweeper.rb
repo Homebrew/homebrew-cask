@@ -48,8 +48,6 @@ cask "omnidisksweeper" do
   desc "Finds large, unwanted files and deletes them"
   homepage "https://www.omnigroup.com/more/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :sierra"
 

@@ -13,8 +13,6 @@ cask "openvisualtraceroute" do
     regex(%r{url=.*?/OpenVisualTraceRoute[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "OpenVisualTraceroute.app"
 
   zap trash: "~/ovtr"
