@@ -7,8 +7,6 @@ cask "moneywiz" do
   desc "Finance management application"
   homepage "https://wiz.money/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-04-15", because: :moved_to_mas
   disable! date: "2025-04-22", because: :moved_to_mas
 
