@@ -7,8 +7,6 @@ cask "brightintosh" do
   desc "Utility that allows increased screen brightness"
   homepage "https://www.brightintosh.de/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-04-11", because: :moved_to_mas
   disable! date: "2025-04-22", because: :moved_to_mas
 
