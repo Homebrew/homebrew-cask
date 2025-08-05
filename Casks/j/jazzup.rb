@@ -12,12 +12,14 @@ cask "jazzup" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "JazzUp.app"
 
   zap trash: [
     "~/Library/Caches/com.irradiatedsoftware.JazzUp",
     "~/Library/Preferences/com.irradiatedsoftware.JazzUp.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
