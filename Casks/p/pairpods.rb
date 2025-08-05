@@ -8,8 +8,6 @@ cask "pairpods" do
   desc "Share audio between two Bluetooth devices"
   homepage "https://pairpods.app/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :ventura"
 
