@@ -10,8 +10,6 @@ cask "font-cantarell" do
     url "https://gitlab.gnome.org/GNOME/cantarell-fonts.git"
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "cantarell-fonts-#{version}/prebuilt/Cantarell-VF.otf"
 
   # No zap stanza required
