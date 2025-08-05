@@ -6,8 +6,6 @@ cask "colorpicker-developer" do
   name "Developer Color Picker"
   homepage "https://download.panic.com/picker/index.html"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   colorpicker "Developer Color Picker/DeveloperColorPicker.colorPicker"
