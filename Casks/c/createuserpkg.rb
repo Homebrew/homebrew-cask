@@ -7,8 +7,6 @@ cask "createuserpkg" do
   desc "Create packages to deploy user accounts"
   homepage "https://magervalp.github.io/CreateUserPkg/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "CreateUserPkg.app"
