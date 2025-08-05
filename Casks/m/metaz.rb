@@ -13,8 +13,6 @@ cask "metaz" do
     regex(/href=.*?MetaZ[._-]v?(.+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MetaZ.app"
 
   zap trash: [
