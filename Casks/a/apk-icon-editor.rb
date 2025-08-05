@@ -8,8 +8,6 @@ cask "apk-icon-editor" do
   desc "Editor for changing APK icons, name, version and other data"
   homepage "https://kefir500.github.io/apk-icon-editor/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-10-14", because: "is 32-bit only"
 
   app "APK Icon Editor.app"
