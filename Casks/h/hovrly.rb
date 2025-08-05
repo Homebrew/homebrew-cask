@@ -8,8 +8,6 @@ cask "hovrly" do
   desc "Display and convert timezones time in different cities"
   homepage "https://hovrly.com/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Hovrly.app"
 
   zap trash: [
