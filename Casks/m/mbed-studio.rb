@@ -12,8 +12,6 @@ cask "mbed-studio" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "MbedStudio.pkg"
 
   preflight do
