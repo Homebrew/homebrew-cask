@@ -8,8 +8,6 @@ cask "alva" do
   desc "Create living prototypes with code components"
   homepage "https://meetalva.io/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Alva.app"
