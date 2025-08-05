@@ -6,8 +6,6 @@ cask "font-last-resort" do
   name "Last Resort"
   homepage "https://github.com/unicode-org/last-resort-font"
 
-  no_autobump! because: :requires_manual_review
-
   font "LastResort-Regular.ttf"
 
   # No zap stanza required
