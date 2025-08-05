@@ -8,8 +8,6 @@ cask "cabal" do
   desc "Desktop client for the chat platform Cabal"
   homepage "https://cabal.chat/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Cabal.app"
 
   zap trash: [
