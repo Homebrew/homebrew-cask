@@ -11,8 +11,6 @@ cask "font-cascadia-code" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "ttf/CascadiaCode.ttf"
   font "ttf/CascadiaCodeItalic.ttf"
 
