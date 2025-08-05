@@ -13,8 +13,6 @@ cask "keycue" do
     regex(/<h\d.*?KeyCue\sv?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   app "KeyCue.app"
