@@ -8,8 +8,6 @@ cask "fromscratch" do
   desc "Autosaving Scratchpad. A simple but smart note-taking app"
   homepage "https://fromscratch.rocks/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-10", because: :unmaintained
   disable! date: "2025-07-10", because: :unmaintained
 
