@@ -8,8 +8,6 @@ cask "docker-toolbox" do
   desc "Install Docker, Docker Machine, Docker Compose, and Kitematic"
   homepage "https://www.docker.com/products/docker-toolbox"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on cask: "virtualbox"
