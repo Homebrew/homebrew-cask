@@ -8,8 +8,6 @@ cask "jubler" do
   desc "Subtitle editor"
   homepage "https://www.jubler.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Jubler.app"
 
   zap trash: [
@@ -18,4 +16,8 @@ cask "jubler" do
     "~/Library/Preferences/com.panayotis.jubler.config.old",
     "~/Library/Preferences/com.panayotis.jubler.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
