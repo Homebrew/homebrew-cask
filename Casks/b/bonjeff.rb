@@ -7,8 +7,6 @@ cask "bonjeff" do
   desc "Shows a live display of the Bonjour services published on your network"
   homepage "https://github.com/lapcat/Bonjeff"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Bonjeff.app"
