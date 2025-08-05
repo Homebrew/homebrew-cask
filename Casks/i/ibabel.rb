@@ -24,8 +24,6 @@ cask "ibabel" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on formula: "open-babel"
   depends_on macos: ">= :monterey"
 
