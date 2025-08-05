@@ -11,8 +11,6 @@ cask "font-cochineal" do
     regex(/Version.*?v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "cochineal/opentype/Cochineal-Bold.otf"
   font "cochineal/opentype/Cochineal-BoldItalic.otf"
   font "cochineal/opentype/Cochineal-Italic.otf"
