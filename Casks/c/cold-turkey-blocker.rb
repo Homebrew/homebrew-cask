@@ -12,8 +12,6 @@ cask "cold-turkey-blocker" do
     regex(/Blocker\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Cold_Turkey_Mac_Installer.pkg"
 
   uninstall launchctl: [
