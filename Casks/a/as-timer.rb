@@ -12,8 +12,6 @@ cask "as-timer" do
     regex(/AS\s+Timer\s+V?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "AS Timer.app"
