@@ -11,8 +11,6 @@ cask "mutesync" do
   desc "Companion app to the mütesync physical button"
   homepage "https://mutesync.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-01-26", because: :discontinued, replacement_cask: "muteme"
 
   auto_updates true
