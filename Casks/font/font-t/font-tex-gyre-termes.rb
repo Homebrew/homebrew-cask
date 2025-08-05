@@ -11,8 +11,6 @@ cask "font-tex-gyre-termes" do
     regex(%r{Termes</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "texgyretermes-bold.otf"
   font "texgyretermes-bolditalic.otf"
   font "texgyretermes-italic.otf"
