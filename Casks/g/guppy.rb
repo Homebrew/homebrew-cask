@@ -7,8 +7,6 @@ cask "guppy" do
   desc "Friendly application manager and task runner for React.js"
   homepage "https://github.com/joshwcomeau/guppy"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Guppy.app"
