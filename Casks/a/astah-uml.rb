@@ -19,8 +19,6 @@ cask "astah-uml" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "astah uml ver #{version.csv.first.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.change-vision.astah.uml"

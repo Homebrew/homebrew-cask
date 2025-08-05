@@ -11,8 +11,6 @@ cask "asciidocfx" do
   desc "Asciidoc editor and toolchain to build books, documents and slides"
   homepage "https://www.asciidocfx.com/"
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "AsciidocFX Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],

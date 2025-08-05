@@ -7,8 +7,6 @@ cask "amazon-luna" do
   desc "Play your favorite games straight from the cloud"
   homepage "https://www.amazon.com/luna/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-23", because: :discontinued
   disable! date: "2025-07-23", because: :discontinued
 

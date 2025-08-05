@@ -11,8 +11,6 @@ cask "athens" do
   desc "Self-hosted knowledge graph"
   homepage "https://web.archive.org/web/20230709013630/https://www.athensresearch.org/"
 
-  no_autobump! because: :requires_manual_review
-
   # https://github.com/athensresearch/athens/commit/73ccd7b4b65f5dca8e842153bb9e39efd0d371be
   deprecate! date: "2024-01-15", because: :unmaintained
   disable! date: "2025-01-15", because: :unmaintained

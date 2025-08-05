@@ -7,8 +7,6 @@ cask "augur" do
   desc "App that bundles Augur UI and Augur Node together and deploys them locally"
   homepage "https://github.com/AugurProject/augur-app/"
 
-  no_autobump! because: :requires_manual_review
-
   app "augur.app"
 
   zap trash: [

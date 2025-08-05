@@ -14,8 +14,6 @@ cask "amazon-music" do
     skip "No version information available"
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   installer script: {

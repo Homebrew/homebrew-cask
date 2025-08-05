@@ -32,8 +32,6 @@ cask "araxis-merge" do
   desc "Two and three-way file comparison, merging and folder synchronisation"
   homepage "https://www.araxis.com/merge/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Araxis Merge.app"

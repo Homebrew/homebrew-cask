@@ -18,8 +18,6 @@ cask "android-platform-tools" do
     regex(/data-text=["']?[^"' >]*?v?(\d+(?:\.\d+)+)["'> (]/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   binary "#{staged_path}/platform-tools/adb"
   binary "#{staged_path}/platform-tools/etc1tool"
   binary "#{staged_path}/platform-tools/fastboot"

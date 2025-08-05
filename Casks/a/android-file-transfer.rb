@@ -14,8 +14,6 @@ cask "android-file-transfer" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Android File Transfer.app"
 
   zap trash: [

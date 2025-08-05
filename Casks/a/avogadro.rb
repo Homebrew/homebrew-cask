@@ -11,8 +11,6 @@ cask "avogadro" do
   desc "Molecule editor and visualiser"
   homepage "https://avogadro.cc/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Avogadro2.app"
 
   zap trash: [

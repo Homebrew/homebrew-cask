@@ -16,8 +16,6 @@ cask "aviatrix-vpn-client" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "AVPNC_mac.pkg"
 
   uninstall launchctl: "aviatrix.vpn.client.rp.plist",

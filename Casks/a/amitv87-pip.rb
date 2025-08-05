@@ -7,8 +7,6 @@ cask "amitv87-pip" do
   desc "Always on top window preview"
   homepage "https://github.com/amitv87/PiP"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "PiP.app"

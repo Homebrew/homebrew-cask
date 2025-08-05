@@ -49,8 +49,6 @@ cask "appgate-sdp-client" do
   desc "Software-defined perimeter for secure network access"
   homepage "https://www.appgate.com/support/software-defined-perimeter-support"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   pkg "AppGate SDP Installer.pkg"

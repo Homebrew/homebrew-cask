@@ -7,8 +7,6 @@ cask "approf" do
   desc "Native app for pprof"
   homepage "https://github.com/moderato-app/approf"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :sonoma"
 

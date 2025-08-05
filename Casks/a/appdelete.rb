@@ -7,8 +7,6 @@ cask "appdelete" do
   desc "App uninstaller"
   homepage "http://www.reggieashworth.com/appdelete.html"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true

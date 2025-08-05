@@ -7,8 +7,6 @@ cask "astropad" do
   desc "Utility to turn an iPad into a drawing tablet"
   homepage "https://astropad.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-04-11", because: :discontinued
   disable! date: "2025-04-22", because: :discontinued
 

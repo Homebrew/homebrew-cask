@@ -7,8 +7,6 @@ cask "androidtool" do
   desc "App for recording the screen and installing apps in iOS and Android"
   homepage "https://github.com/mortenjust/androidtool-mac"
 
-  no_autobump! because: :requires_manual_review
-
   app "AndroidTool.app"
 
   zap trash: [

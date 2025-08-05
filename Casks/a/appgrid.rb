@@ -13,8 +13,6 @@ cask "appgrid" do
     strategy :page_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "AppGrid.app"
 
   uninstall quit: "com.sdegutis.AppGrid"

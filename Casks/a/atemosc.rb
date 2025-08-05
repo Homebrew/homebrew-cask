@@ -15,8 +15,6 @@ cask "atemosc" do
     strategy :electron_builder
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true # Requires a license key to enable
   depends_on macos: ">= :high_sierra"
 

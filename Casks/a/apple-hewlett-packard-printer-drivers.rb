@@ -19,8 +19,6 @@ cask "apple-hewlett-packard-printer-drivers" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: "<= :sonoma"
 
   pkg "HewlettPackardPrinterDrivers.pkg"

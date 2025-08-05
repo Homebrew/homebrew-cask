@@ -8,8 +8,6 @@ cask "ansible-dk" do
   desc "Omnibus-based toolkit for working on Ansible-based infrastructure code"
   homepage "https://github.com/omniti-labs/ansible-dk"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "ansible-dk-#{version.major_minor_patch}-1.pkg"

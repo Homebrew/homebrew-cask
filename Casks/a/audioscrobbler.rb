@@ -7,8 +7,6 @@ cask "audioscrobbler" do
   desc "Minimal, robust iTunes scrobbling"
   homepage "https://github.com/mxcl/Audioscrobbler.app"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-08", because: :unmaintained
 
   app "Audioscrobbler.app"

@@ -11,8 +11,6 @@ cask "angry-ip-scanner" do
   desc "Network scanner"
   homepage "https://angryip.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Angry IP Scanner.app"
 
   # No zap stanza required

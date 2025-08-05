@@ -13,8 +13,6 @@ cask "aquamacs" do
     regex(/^Aquamacs[._-](\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Aquamacs.app"
 
   zap trash: "~/Library/Caches/Aquamacs Emacs"

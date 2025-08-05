@@ -12,8 +12,6 @@ cask "after-dark-classic" do
     regex(/After\sDark\sClassic\sSet\s(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "AfterDark.pkg"
 
   uninstall pkgutil: [
