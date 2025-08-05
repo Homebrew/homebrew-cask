@@ -7,8 +7,6 @@ cask "hacker-menu" do
   desc "Hacker News Delivered to Desktop"
   homepage "https://github.com/owenthereal/hacker-menu"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-06-12", because: :unmaintained
   disable! date: "2025-06-12", because: :unmaintained
 
