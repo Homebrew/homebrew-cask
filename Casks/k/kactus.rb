@@ -8,8 +8,6 @@ cask "kactus" do
   desc "True version control tool for designers"
   homepage "https://kactus.io/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on cask: "sketch"
 
   app "Kactus.app"
