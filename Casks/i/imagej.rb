@@ -21,8 +21,6 @@ cask "imagej" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "ImageJ.app"
 
   zap trash: "~/Library/Saved Application State/ImageJ.savedState"
