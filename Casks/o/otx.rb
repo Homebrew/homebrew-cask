@@ -7,8 +7,6 @@ cask "otx" do
   desc "Mach-O disassembler"
   homepage "https://github.com/x43x61x69/otx"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-27", because: :unmaintained
   disable! date: "2025-07-27", because: :unmaintained
 
