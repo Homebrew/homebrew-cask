@@ -10,8 +10,6 @@ cask "decrediton" do
   desc "GUI for the Decred wallet"
   homepage "https://github.com/decred/decrediton"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "decrediton.app"
