@@ -12,8 +12,6 @@ cask "font-humor-sans" do
     regex(/href=.*Humor[._-]Sans[._-]v?(\d+(?:\.\d+)+)\.ttf/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Humor-Sans-#{version}.ttf"
 
   # No zap stanza required
