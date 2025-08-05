@@ -7,8 +7,6 @@ cask "font-raleway" do
   name "Raleway"
   homepage "https://www.theleagueofmoveabletype.com/raleway"
 
-  no_autobump! because: :requires_manual_review
-
   font "Raleway-#{version}/static/OTF/Raleway-Thin.otf"
   font "Raleway-#{version}/static/OTF/Raleway-ExtraLight.otf"
   font "Raleway-#{version}/static/OTF/Raleway-Light.otf"
