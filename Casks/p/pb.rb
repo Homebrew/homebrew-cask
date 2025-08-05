@@ -8,8 +8,6 @@ cask "pb" do
   desc "Unofficial Pushbullet desktop app to get push notifications"
   homepage "https://sidneys.github.io/pb-for-desktop"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "PB for Desktop.app"
