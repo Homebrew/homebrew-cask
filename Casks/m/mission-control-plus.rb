@@ -8,8 +8,6 @@ cask "mission-control-plus" do
   desc "Manage your windows in Mission Control"
   homepage "https://fadel.io/MissionControlPlus"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Mission Control Plus.app"
