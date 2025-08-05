@@ -7,8 +7,6 @@ cask "qlgradle" do
   desc "Quick Look plugin for viewing gradle files"
   homepage "https://github.com/Urucas/QLGradle"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "QLGradle.qlgenerator"
 
   # No zap stanza required
