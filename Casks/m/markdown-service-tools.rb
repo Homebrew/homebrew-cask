@@ -12,8 +12,6 @@ cask "markdown-service-tools" do
     regex(%r{href=.*?/MarkdownServiceTools(\d+(?:\.\d+)*)\.zip}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on formula: "multimarkdown"
 
   service "MarkdownServiceTools#{version}/md - Convert - MultiMarkdown to RTF.workflow"
