@@ -7,8 +7,6 @@ cask "mbcord" do
   desc "Discord rich presence client for Jellyfin and Emby"
   homepage "https://github.com/oonqt/MBCord"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-09", because: :unmaintained
 
   app "MBCord.app"
