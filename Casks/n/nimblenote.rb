@@ -8,8 +8,6 @@ cask "nimblenote" do
   desc "Keyboard-driven note taking"
   homepage "https://nimblenote.app/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "nimblenote.app"
