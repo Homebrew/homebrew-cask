@@ -8,8 +8,6 @@ cask "igdm" do
   desc "Desktop application for Instagram DMs"
   homepage "https://igdm.me/"
 
-  no_autobump! because: :requires_manual_review
-
   app "IGdm.app"
 
   uninstall quit: "com.ifedapoolarewaju.desktop.igdm"
