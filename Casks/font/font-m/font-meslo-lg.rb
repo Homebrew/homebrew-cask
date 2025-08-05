@@ -6,8 +6,6 @@ cask "font-meslo-lg" do
   name "Meslo LG"
   homepage "https://github.com/andreberg/Meslo-Font"
 
-  no_autobump! because: :requires_manual_review
-
   font "Meslo LG v#{version}/MesloLGL-Bold.ttf"
   font "Meslo LG v#{version}/MesloLGL-BoldItalic.ttf"
   font "Meslo LG v#{version}/MesloLGL-Italic.ttf"
