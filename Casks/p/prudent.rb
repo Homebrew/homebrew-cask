@@ -8,8 +8,6 @@ cask "prudent" do
   desc "Integrated environment for your personal and family ledger"
   homepage "https://prudent.me/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Prudent.app"
 
   zap trash: [
