@@ -19,8 +19,6 @@ cask "hyper" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   conflicts_with cask: "hyper@canary"
   depends_on macos: ">= :high_sierra"
