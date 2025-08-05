@@ -7,8 +7,6 @@ cask "mmhmm" do
   desc "Virtual video presentation software"
   homepage "https://www.mmhmm.app/product"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-05-25", because: :discontinued
 
   auto_updates true
