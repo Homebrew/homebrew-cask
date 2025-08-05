@@ -11,8 +11,6 @@ cask "icon-shelf" do
   desc "Icon manager for web developers"
   homepage "https://icon-shelf.github.io/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :catalina"
 
