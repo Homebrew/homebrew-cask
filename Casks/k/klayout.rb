@@ -67,8 +67,6 @@ cask "klayout" do
   desc "IC design layout viewer and editor"
   homepage "https://www.klayout.de/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   suite "KLayout"
