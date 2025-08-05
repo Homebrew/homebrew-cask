@@ -7,8 +7,6 @@ cask "mono-mdk-for-visual-studio" do
   desc "Open source implementation of Microsoft's .NET Framework"
   homepage "https://www.mono-project.com/"
 
-  no_autobump! because: :requires_manual_review
-
   # https://learn.microsoft.com/en-us/visualstudio/releases/2022/what-happened-to-vs-for-mac
   deprecate! date: "2024-09-01", because: :discontinued
 
