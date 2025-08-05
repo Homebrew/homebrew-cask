@@ -7,8 +7,6 @@ cask "aquaterm" do
   desc "Graphics renderer"
   homepage "https://sourceforge.net/projects/aquaterm/"
 
-  no_autobump! because: :requires_manual_review
-
   # No releases since 2013
   deprecate! date: "2024-01-04", because: :unmaintained
   disable! date: "2025-01-06", because: :unmaintained
