@@ -7,8 +7,6 @@ cask "font-b612" do
   name "B612"
   homepage "https://b612-font.com/"
 
-  no_autobump! because: :requires_manual_review
-
   font "b612-#{version}/fonts/ttf/B612-Bold.ttf"
   font "b612-#{version}/fonts/ttf/B612-BoldItalic.ttf"
   font "b612-#{version}/fonts/ttf/B612-Italic.ttf"
