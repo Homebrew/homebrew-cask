@@ -7,8 +7,6 @@ cask "font-amiri" do
   name "Amiri"
   homepage "https://www.amirifont.org/"
 
-  no_autobump! because: :requires_manual_review
-
   font "Amiri-#{version}/Amiri-Bold.ttf"
   font "Amiri-#{version}/Amiri-BoldItalic.ttf"
   font "Amiri-#{version}/Amiri-Italic.ttf"
