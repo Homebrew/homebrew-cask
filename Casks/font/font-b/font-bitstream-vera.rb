@@ -7,8 +7,6 @@ cask "font-bitstream-vera" do
   name "Bitstream Vera"
   homepage "https://web.archive.org/web/20210314185159/https://www.gnome.org/fonts/"
 
-  no_autobump! because: :requires_manual_review
-
   font "ttf-bitstream-vera-#{version}/Vera.ttf"
   font "ttf-bitstream-vera-#{version}/VeraBI.ttf"
   font "ttf-bitstream-vera-#{version}/VeraBd.ttf"
