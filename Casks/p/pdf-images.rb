@@ -6,8 +6,6 @@ cask "pdf-images" do
   name "PDF-Images"
   homepage "https://sourceforge.net/projects/pdf-images/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-01", because: :unmaintained
 
   app "PDF-Images.app"
