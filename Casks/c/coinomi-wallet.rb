@@ -8,8 +8,6 @@ cask "coinomi-wallet" do
   desc "Securely store, manage and exchange many blockchain assets"
   homepage "https://www.coinomi.com/en/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-05-25", because: :moved_to_mas
 
   depends_on macos: ">= :sierra"
