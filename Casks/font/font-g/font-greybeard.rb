@@ -6,8 +6,6 @@ cask "font-greybeard" do
   name "Greybeard"
   homepage "https://github.com/flowchartsman/greybeard"
 
-  no_autobump! because: :requires_manual_review
-
   font "Greybeard-11px-Bold.ttf"
   font "Greybeard-11px.ttf"
   font "Greybeard-12px-Bold.ttf"
