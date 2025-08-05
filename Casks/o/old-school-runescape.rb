@@ -7,8 +7,6 @@ cask "old-school-runescape" do
   desc "Game client for Old School RuneScape"
   homepage "https://oldschool.runescape.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-12-25", because: :discontinued
 
   app "Old School RuneScape.app"
