@@ -17,8 +17,6 @@ cask "coterm" do
     skip "No version information available programmatically"
   end
 
-  no_autobump! because: :requires_manual_review
-
   binary "ddcoterm"
 
   zap trash: "~/.ddcoterm"
