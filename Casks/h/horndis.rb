@@ -7,8 +7,6 @@ cask "horndis" do
   desc "Android USB tethering driver"
   homepage "https://github.com/jwise/HoRNDIS"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-08", because: :unmaintained
 
   depends_on macos: [
