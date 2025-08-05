@@ -8,7 +8,6 @@ cask "pixieditor" do
   desc "Open Source Universal 2D Graphics Editor"
   homepage "https://pixieditor.net/"
 
-
   depends_on macos: ">= :catalina"
 
   app "PixiEditor.app"
