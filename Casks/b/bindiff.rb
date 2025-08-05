@@ -8,8 +8,6 @@ cask "bindiff" do
   desc "Binary diffing tool"
   homepage "https://zynamics.com/bindiff.html"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Install BinDiff.pkg"
 
   uninstall pkgutil: "com.google.security.zynamics.bindiff"
