@@ -7,8 +7,6 @@ cask "macstroke" do
   desc "Configurable global mouse gestures"
   homepage "https://github.com/mtjo/MacStroke/"
 
-  no_autobump! because: :requires_manual_review
-
   app "MacStroke.app"
 
   zap trash: [
