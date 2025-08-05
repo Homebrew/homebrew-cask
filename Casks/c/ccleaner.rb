@@ -12,8 +12,6 @@ cask "ccleaner" do
     regex(/CCleaner\s*for\s*Mac\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   pkg "Install CCleaner.pkg"
