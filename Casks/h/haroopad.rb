@@ -8,8 +8,6 @@ cask "haroopad" do
   desc "Markdown editor"
   homepage "http://pad.haroopress.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-01-05", because: :unmaintained
 
   app "Haroopad.app"
