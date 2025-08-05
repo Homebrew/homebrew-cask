@@ -7,8 +7,6 @@ cask "obs-websocket" do
   desc "Remote-control OBS Studio through WebSockets"
   homepage "https://github.com/obsproject/obs-websocket"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-27", because: :discontinued
 
   pkg "obs-websocket-#{version}-macOS.pkg"
