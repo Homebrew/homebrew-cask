@@ -7,8 +7,6 @@ cask "font-gentium-book" do
   name "Gentium Book"
   homepage "https://software.sil.org/gentium/"
 
-  no_autobump! because: :requires_manual_review
-
   font "GentiumBook-#{version}/GentiumBook-Bold.ttf"
   font "GentiumBook-#{version}/GentiumBook-BoldItalic.ttf"
   font "GentiumBook-#{version}/GentiumBook-Italic.ttf"
