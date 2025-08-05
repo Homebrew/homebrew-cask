@@ -20,8 +20,6 @@ cask "font-anka-coder" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "AnkaCoder-b.ttf"
   font "AnkaCoder-bi.ttf"
   font "AnkaCoder-i.ttf"
