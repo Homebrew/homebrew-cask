@@ -12,8 +12,6 @@ cask "dyalog" do
     regex(%r{href=.*?/mac_64_(\d+(?:\.\d+)+)_unicode\.pkg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "mac_64_#{version}_unicode.pkg"
 
   uninstall pkgutil: "com.dyalog.pkg.dyalog#{version.major_minor.no_dots}"
