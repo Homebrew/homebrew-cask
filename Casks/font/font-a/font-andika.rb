@@ -11,8 +11,6 @@ cask "font-andika" do
     regex(/href=.*Andika[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Andika-#{version}/Andika-Bold.ttf"
   font "Andika-#{version}/Andika-BoldItalic.ttf"
   font "Andika-#{version}/Andika-Italic.ttf"
