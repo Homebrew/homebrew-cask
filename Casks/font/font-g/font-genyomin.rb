@@ -6,8 +6,6 @@ cask "font-genyomin" do
   name "GenYoMin"
   homepage "https://github.com/ButTaiwan/genyo-font"
 
-  no_autobump! because: :requires_manual_review
-
   font "GenYoMin#{version.major}-B.ttc"
   font "GenYoMin#{version.major}-EL.ttc"
   font "GenYoMin#{version.major}-H.ttc"
