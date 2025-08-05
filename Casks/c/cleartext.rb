@@ -7,8 +7,6 @@ cask "cleartext" do
   desc "Text editor"
   homepage "https://github.com/mortenjust/cleartext-mac"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-12", because: :discontinued
 
   app "Cleartext.app"
