@@ -7,8 +7,6 @@ cask "hot" do
   desc "Menu bar application that displays the CPU speed limit due to thermal issues"
   homepage "https://github.com/macmade/Hot"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
