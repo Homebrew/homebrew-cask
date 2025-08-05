@@ -8,8 +8,6 @@ cask "dat" do
   desc "Peer to peer data sharing app built for humans"
   homepage "https://dat-ecosystem.org/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Dat Desktop.app"
