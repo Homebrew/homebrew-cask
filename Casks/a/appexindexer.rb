@@ -16,8 +16,6 @@ cask "appexindexer" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sonoma"
 
   app "appexindexer#{version.csv.first.no_dots}/AppexIndexer.app"
