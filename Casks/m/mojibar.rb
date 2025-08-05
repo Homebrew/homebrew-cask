@@ -7,8 +7,6 @@ cask "mojibar" do
   desc "Emoji searcher as a menu bar app"
   homepage "https://github.com/muan/mojibar"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Mojibar-darwin-x64/Mojibar.app"
