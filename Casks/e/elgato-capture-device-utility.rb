@@ -12,8 +12,6 @@ cask "elgato-capture-device-utility" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   app "Elgato Capture Device Utility.app"
