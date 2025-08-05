@@ -8,8 +8,6 @@ cask "batteryboi" do
   desc "Battery indicator for the menu bar"
   homepage "https://batteryboi.ovatar.io/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-04", because: :unmaintained
 
   depends_on macos: ">= :big_sur"
