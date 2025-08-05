@@ -8,8 +8,6 @@ cask "gswitch" do
   desc "Set which graphics card to use"
   homepage "https://codyschrank.github.io/gSwitch/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "gSwitch.app"
