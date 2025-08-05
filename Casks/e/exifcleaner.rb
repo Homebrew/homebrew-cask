@@ -8,8 +8,6 @@ cask "exifcleaner" do
   desc "Metadata cleaner"
   homepage "https://exifcleaner.com/"
 
-  no_autobump! because: :requires_manual_review
-
   app "ExifCleaner.app"
 
   zap trash: [
