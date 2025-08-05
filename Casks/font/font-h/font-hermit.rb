@@ -11,8 +11,6 @@ cask "font-hermit" do
     regex(/href=.*?hermit[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Hermit-Bold.otf"
   font "Hermit-RegularItalic.otf"
   font "Hermit-LightItalic.otf"
