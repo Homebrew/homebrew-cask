@@ -7,8 +7,6 @@ cask "navicat-premium-essentials" do
   desc "Database administration and development tool"
   homepage "https://www.navicat.com/products/navicat-premium"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-05-14", because: :discontinued
   disable! date: "2025-05-15", because: :discontinued
 

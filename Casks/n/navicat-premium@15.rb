@@ -12,8 +12,6 @@ cask "navicat-premium@15" do
     regex(/Navicat\sPremium\s\(macOS\)\sversion\s(15\.\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "navicat-premium"
   depends_on macos: ">= :mojave"
 

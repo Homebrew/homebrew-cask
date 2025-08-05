@@ -12,8 +12,6 @@ cask "nightshade" do
     regex(/Nightshade[._-]v?(\d+(?:\.\d+)+)[._-]m1\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on arch: :arm64
 
   app "Nightshade.app"

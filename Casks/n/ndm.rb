@@ -8,8 +8,6 @@ cask "ndm" do
   desc "Desktop manager for the Node.js Package Manager (NPM)"
   homepage "https://720kb.github.io/ndm/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "ndm.app"

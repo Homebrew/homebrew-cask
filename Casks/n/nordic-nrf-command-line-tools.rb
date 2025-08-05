@@ -16,8 +16,6 @@ cask "nordic-nrf-command-line-tools" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on cask: "segger-jlink"
 
   pkg ".nRF-Command-Line-Tools-#{version}-Darwin.pkg"

@@ -24,8 +24,6 @@ cask "ncar-ncl" do
     regex(/>Current\s*Version.*?v?(\d+(?:\.\d+)+)\s*?</i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on cask: "xquartz"
   depends_on formula: "gcc"
   depends_on macos: ">= :high_sierra"

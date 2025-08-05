@@ -7,8 +7,6 @@ cask "nocturn" do
   desc "Multi-platform Twitter client"
   homepage "https://github.com/k0kubun/Nocturn"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-01-11", because: :discontinued
   disable! date: "2025-01-11", because: :discontinued
 

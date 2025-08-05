@@ -6,8 +6,6 @@ cask "not-pacman" do
   name "Not Pacman"
   homepage "https://stabyourself.net/notpacman/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-10-15", because: :unmaintained
 
   app "Not Pacman.app"

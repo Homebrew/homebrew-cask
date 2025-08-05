@@ -12,8 +12,6 @@ cask "nestopia" do
     regex(/>\s*?Nestopia\s+?v?(\d+(?:\.\d+)+)\s*?</i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Nestopia v#{version}/Nestopia.app"

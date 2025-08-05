@@ -14,8 +14,6 @@ cask "neo4j-desktop" do
     regex(%r{href=.*?/neo4j-desktop/.*?flavour=osx.*?release=(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Neo4j Desktop #{version.major}.app"
 
   zap trash: [

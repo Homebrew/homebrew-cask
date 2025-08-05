@@ -13,8 +13,6 @@ cask "n1ghtshade" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on formula: %w[
     libimobiledevice
     libirecovery

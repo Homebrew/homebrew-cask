@@ -12,8 +12,6 @@ cask "notesollama" do
     regex(/NotesOllama-(\d+(?:\.\d+)*)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :ventura"
 
   app "NotesOllama.app"

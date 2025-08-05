@@ -11,8 +11,6 @@ cask "navicat-data-modeler-essentials" do
     cask "navicat-data-modeler"
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Navicat Data Modeler Essentials.app"
