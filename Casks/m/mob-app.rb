@@ -6,8 +6,6 @@ cask "mob-app" do
   name "Mob"
   homepage "https://github.com/zenghongtu/Mob"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Mob.app"
