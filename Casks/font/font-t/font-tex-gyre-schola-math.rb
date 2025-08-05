@@ -11,8 +11,6 @@ cask "font-tex-gyre-schola-math" do
     regex(/Schola\sMath\s\(OTF\),\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "texgyreschola-math-#{version.no_dots}/opentype/texgyreschola-math.otf"
 
   # No zap stanza required
