@@ -8,8 +8,6 @@ cask "mu-editor" do
   desc "Small, simple editor for beginner Python programmers"
   homepage "https://codewith.mu/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Mu Editor.app"
 
   zap trash: [
