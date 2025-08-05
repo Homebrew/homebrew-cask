@@ -14,8 +14,6 @@ cask "rode-connect" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "RØDE Connect (#{version}).pkg"
 
   uninstall pkgutil: "com.rodeconnect.installer"
