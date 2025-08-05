@@ -12,8 +12,6 @@ cask "fabfilter-simplon" do
     regex(/FabFilter\s+Simplon.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   pkg "FabFilter Simplon #{version} Installer.pkg"
