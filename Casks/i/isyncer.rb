@@ -12,8 +12,6 @@ cask "isyncer" do
     regex(/href=.*?iSyncer[._-]?v?(\d+(?:\.\d+)+)[._-]?mac[._-]installer\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "iSyncer-installer-#{version}.pkg"
 
   uninstall pkgutil: "main.ISyncer.*"
