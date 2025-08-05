@@ -7,8 +7,6 @@ cask "jandi-statusbar" do
   desc "GitHub contributions in your status bar"
   homepage "https://github.com/techinpark/Jandi"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :ventura"
 
   app "jandi.app"
