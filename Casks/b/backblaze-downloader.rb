@@ -12,8 +12,6 @@ cask "backblaze-downloader" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "BackblazeDownloader.app"
 
   uninstall quit: "com.backblaze.BackblazeDownloader"
