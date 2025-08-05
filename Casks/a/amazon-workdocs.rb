@@ -8,8 +8,6 @@ cask "amazon-workdocs" do
   desc "Fully managed, secure content creation, storage, and collaboration service"
   homepage "https://aws.amazon.com/workdocs/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-04-25", because: :discontinued
 
   app "Amazon WorkDocs.app"
