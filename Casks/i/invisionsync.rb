@@ -6,8 +6,6 @@ cask "invisionsync" do
   name "InVision Sync"
   homepage "https://www.invisionapp.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-31", because: :no_longer_available
 
   app "InVisionSync.app"
