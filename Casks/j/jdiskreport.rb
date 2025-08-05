@@ -7,8 +7,6 @@ cask "jdiskreport" do
   desc "Disk usage utility"
   homepage "https://www.jgoodies.com/freeware/jdiskreport/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-01", because: :unmaintained
 
   app "JDiskReport #{version}/JDiskReport.app"
