@@ -7,8 +7,6 @@ cask "maciasl" do
   desc "ACPI Machine Language (AML) compiler and IDE"
   homepage "https://github.com/acidanthera/MaciASL"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "MaciASL.app"

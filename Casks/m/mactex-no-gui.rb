@@ -12,8 +12,6 @@ cask "mactex-no-gui" do
     cask "mactex"
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: [
     "basictex",
     "mactex",

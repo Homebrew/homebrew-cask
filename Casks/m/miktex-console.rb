@@ -12,8 +12,6 @@ cask "miktex-console" do
     regex(%r{href=.*?/miktex[._-](\d+(?:\.\d+)+)[._-]darwin[._-]x86_64\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MiKTeX Console.app"
 
   zap trash: [

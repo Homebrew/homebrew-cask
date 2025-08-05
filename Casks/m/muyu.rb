@@ -7,8 +7,6 @@ cask "muyu" do
   desc "Combination of work efficiency and health"
   homepage "https://breakit.thriller.fun/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-01-04", because: :no_longer_available
 
   auto_updates true

@@ -12,8 +12,6 @@ cask "mixed-in-key-live" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   pkg "Mixed In Key Live.pkg"

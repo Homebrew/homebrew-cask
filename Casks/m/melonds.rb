@@ -8,8 +8,6 @@ cask "melonds" do
   desc "Nintendo DS and DSi emulator"
   homepage "https://melonds.kuribo64.net/"
 
-  no_autobump! because: :requires_manual_review
-
   app "melonDS.app"
 
   zap trash: "~/Library/Preferences/melonDS/melonDS.ini"

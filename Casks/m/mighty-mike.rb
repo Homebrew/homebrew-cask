@@ -8,8 +8,6 @@ cask "mighty-mike" do
   desc "Top-down action game from Pangea Software (a.k.a. Power Pete)"
   homepage "https://jorio.itch.io/mightymike"
 
-  no_autobump! because: :requires_manual_review
-
   app "Mighty Mike.app"
   artifact "Documentation", target: "~/Library/Application Support/MightyMike"
 

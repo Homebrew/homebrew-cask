@@ -13,8 +13,6 @@ cask "mplabx-ide" do
     regex(/href=.*?MPLABX[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "MPLABX-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
     args:       [

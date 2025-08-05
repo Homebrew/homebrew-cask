@@ -16,8 +16,6 @@ cask "mqttfx" do
     regex(/href=.*?mqttfx[._-]v?(\d+(?:\.\d+)+)-macos/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "MQTT.fx Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],

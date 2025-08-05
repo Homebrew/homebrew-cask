@@ -7,8 +7,6 @@ cask "macterm" do
   desc "Terminal emulator"
   homepage "https://www.macterm.net/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-27", because: :unmaintained
 
   depends_on macos: "<= :mojave"

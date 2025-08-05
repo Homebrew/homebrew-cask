@@ -6,8 +6,6 @@ cask "mdimagesizemdimporter" do
   name "mdImageSize"
   homepage "https://github.com/Nyx0uf/qlImageSize"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-11-11", because: :discontinued
 
   depends_on macos: ">= :high_sierra"

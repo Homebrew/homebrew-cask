@@ -8,8 +8,6 @@ cask "media-converter" do
   desc "Convert avi, wmv, mkv, rm, mov and more to other formats"
   homepage "https://media-converter.sourceforge.io/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Media Converter.localized/Media Converter.app"
 
   zap trash: "~/Library/Preferences/com.kiwifruitware.Media-Converter.plist"

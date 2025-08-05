@@ -8,8 +8,6 @@ cask "microsoft-remote-desktop" do
   desc "Remote desktop client"
   homepage "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-30", because: :discontinued, replacement_cask: "windows-app"
 
   auto_updates true

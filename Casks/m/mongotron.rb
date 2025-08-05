@@ -7,8 +7,6 @@ cask "mongotron" do
   desc "Mongo DB management"
   homepage "https://github.com/officert/mongotron"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-12-30", because: :unmaintained
 
   app "Mongotron-darwin-x64/Mongotron.app"

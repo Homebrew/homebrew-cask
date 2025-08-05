@@ -7,8 +7,6 @@ cask "mauve" do
   desc "System for constructing multiple genome alignments"
   homepage "https://darlinglab.org/mauve/mauve.html"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Mauve.app"

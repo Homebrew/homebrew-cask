@@ -6,8 +6,6 @@ cask "multibit-hd" do
   name "MultiBit HD"
   homepage "https://github.com/Multibit-Legacy/multibit-hd"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "MultiBit HD.app"

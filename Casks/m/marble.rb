@@ -6,8 +6,6 @@ cask "marble" do
   name "Marble"
   homepage "https://marble.kde.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-27", because: :unmaintained
 
   pkg "Marble-#{version}.pkg"

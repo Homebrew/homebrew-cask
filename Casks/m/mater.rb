@@ -7,8 +7,6 @@ cask "mater" do
   desc "Menubar pomodoro app"
   homepage "https://github.com/jasonlong/mater"
 
-  no_autobump! because: :requires_manual_review
-
   app "Mater-darwin-x64/Mater.app"
 
   zap trash: [

@@ -13,8 +13,6 @@ cask "milkytracker" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MilkyTracker.app"
 
   zap trash: "~/Library/Preferences/com.Titan.MilkyTracker.plist"

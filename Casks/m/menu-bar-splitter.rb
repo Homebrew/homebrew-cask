@@ -7,8 +7,6 @@ cask "menu-bar-splitter" do
   desc "Utility that adds dividers to your menu bar"
   homepage "https://github.com/jwhamilton99/menu-bar-splitter"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "Menu Bar Splitter.app"

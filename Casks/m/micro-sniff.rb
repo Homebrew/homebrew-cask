@@ -7,8 +7,6 @@ cask "micro-sniff" do
   desc "Monitor microphone activity"
   homepage "https://github.com/dwarvesf/micro-sniff"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "Micro Sniff.app"

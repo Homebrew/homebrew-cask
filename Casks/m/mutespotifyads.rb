@@ -6,8 +6,6 @@ cask "mutespotifyads" do
   name "MuteSpotifyAds"
   homepage "https://github.com/simonmeusel/MuteSpotifyAds"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :sierra"

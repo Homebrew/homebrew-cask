@@ -7,8 +7,6 @@ cask "messenger-native" do
   desc "Facebook's Messenger Native"
   homepage "https://github.com/gastonmorixe/MessengerNative"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-14", because: :unmaintained
 
   app "osx64/Messenger Native.app"

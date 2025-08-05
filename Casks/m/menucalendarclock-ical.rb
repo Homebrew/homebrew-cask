@@ -6,8 +6,6 @@ cask "menucalendarclock-ical" do
   name "MenuCalendarClock"
   homepage "http://www.objectpark.net/en/mcc.html"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "MenuCalendarClock iCal.app"

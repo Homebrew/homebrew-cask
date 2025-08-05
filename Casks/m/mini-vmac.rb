@@ -12,8 +12,6 @@ cask "mini-vmac" do
     regex(/minivmac[._-]v?(\d+(?:\.\d+)+)[._-]mc64[._-]bin\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Mini vMac.app"
 
   caveats do

@@ -16,8 +16,6 @@ cask "memoryanalyzer" do
     regex(/href=.*?MemoryAnalyzer-(\d+(?:\.\d+)*).*?\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MemoryAnalyzer.app"
 
   zap trash: "~/Library/Preferences/org.eclipse.mat.ui.rcp.MemoryAnalyzer.plist"

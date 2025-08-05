@@ -22,8 +22,6 @@ cask "mounty" do
   desc "Re-mounts write-protected NTFS volumes"
   homepage "https://mounty.app/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Mounty.app"
 
   zap trash: "~/Library/Preferences/com.cu4uc.mounty.plist"

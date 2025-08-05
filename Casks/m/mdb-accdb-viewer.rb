@@ -12,8 +12,6 @@ cask "mdb-accdb-viewer" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "MDB ACCDB Viewer.app"
 
   zap trash: [

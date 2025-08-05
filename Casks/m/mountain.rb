@@ -7,8 +7,6 @@ cask "mountain" do
   desc "Display notifications when mounting/unmounting volumes"
   homepage "https://appgineers.de/mountain/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-31", because: :unmaintained
 
   app "Mountain.app"

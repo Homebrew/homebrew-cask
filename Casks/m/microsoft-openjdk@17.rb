@@ -16,8 +16,6 @@ cask "microsoft-openjdk@17" do
     regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(17(?:\.\d+)+)[._-]macos[._-]#{arch}\.pkg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "microsoft-jdk-#{version}-macos-#{arch}.pkg"
 
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"

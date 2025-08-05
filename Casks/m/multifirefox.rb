@@ -8,8 +8,6 @@ cask "multifirefox" do
   desc "Launcher utility to run multiple versions of Firefox side-by-side"
   homepage "https://davemartorana.com/multifirefox/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "MultiFirefox.app"
