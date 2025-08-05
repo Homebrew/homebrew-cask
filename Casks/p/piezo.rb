@@ -31,8 +31,6 @@ cask "piezo" do
   desc "Audio recording application"
   homepage "https://rogueamoeba.com/piezo/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :big_sur"
 
