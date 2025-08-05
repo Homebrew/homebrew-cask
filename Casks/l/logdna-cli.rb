@@ -8,8 +8,6 @@ cask "logdna-cli" do
   desc "Command-line interface for LogDNA"
   homepage "https://www.mezmo.com/"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "logdna-cli.pkg"
 
   uninstall pkgutil: "com.logdna.logdna-cli"
