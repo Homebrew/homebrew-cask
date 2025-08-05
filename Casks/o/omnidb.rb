@@ -7,8 +7,6 @@ cask "omnidb" do
   desc "Web tool for database management"
   homepage "https://github.com/OmniDB/OmniDB/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-15", because: :unmaintained
 
   app "OmniDB.app"
