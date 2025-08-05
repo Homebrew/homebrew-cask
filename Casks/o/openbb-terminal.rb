@@ -11,8 +11,6 @@ cask "openbb-terminal" do
   desc "Open-source investment research terminal"
   homepage "https://openbb.co/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-05-16", because: :discontinued
   disable! date: "2025-05-16", because: :discontinued
 
