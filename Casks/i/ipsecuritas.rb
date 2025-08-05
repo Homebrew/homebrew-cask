@@ -27,8 +27,6 @@ cask "ipsecuritas" do
     regex(%r{href=.*?/ipSecuritas[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "IPSecuritas.app"
 
   zap trash: [
