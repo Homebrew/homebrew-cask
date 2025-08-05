@@ -7,8 +7,6 @@ cask "abscissa" do
   desc "Plotting software"
   homepage "http://rbruehl.macbay.de/Abscissa/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-04-03", because: :no_longer_available
 
   depends_on macos: ">= :sierra"
