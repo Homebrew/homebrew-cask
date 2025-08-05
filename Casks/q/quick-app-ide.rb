@@ -13,8 +13,6 @@ cask "quick-app-ide" do
     regex(/quickapp[._-]ide[._-]*?v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :el_capitan"
 
   pkg "quickapp-ide-#{version}.pkg"
