@@ -8,7 +8,7 @@ cask "remote-desktop-manager-free" do
   desc "Centralises all remote connections on a single platform"
   homepage "https://mac.remotedesktopmanager.com/"
 
-  no_autobump! because: :requires_manual_review
+
 
   disable! date: "2024-12-16", because: :discontinued, replacement_cask: "remote-desktop-manager"
 
