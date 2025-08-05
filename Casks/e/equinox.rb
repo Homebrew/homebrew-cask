@@ -8,8 +8,6 @@ cask "equinox" do
   desc "Create dynamic wallpapers"
   homepage "https://equinoxmac.com/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Equinox.app"
