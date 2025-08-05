@@ -7,8 +7,6 @@ cask "qlcommonmark" do
   desc "Quick Look plugin for CommonMark and Markdown"
   homepage "https://github.com/digitalmoksha/QLCommonMark/"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "QLCommonMark.qlgenerator"
 
   # No zap stanza required
