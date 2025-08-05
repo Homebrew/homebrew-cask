@@ -8,8 +8,6 @@ cask "clocker" do
   desc "Menu bar timezone tracker and compact calendar"
   homepage "https://abhishekbanthia.com/clocker"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Clocker.app"

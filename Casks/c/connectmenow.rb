@@ -15,8 +15,6 @@ cask "connectmenow" do
     regex(%r{href=.*?/ConnectMeNow#{version.major}[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "ConnectMeNow#{version.major}.app"
 
   zap trash: "~/Library/Preferences/com.Tweaking4All.ConnectMeNow#{version.major}.*"

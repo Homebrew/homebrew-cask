@@ -8,8 +8,6 @@ cask "controlplane" do
   desc "Context-sensitive application launcher"
   homepage "https://www.controlplaneapp.com/"
 
-  no_autobump! because: :requires_manual_review
-
   # app crash and homepage is gone
   deprecate! date: "2023-12-29", because: :discontinued
   disable! date: "2024-12-30", because: :discontinued

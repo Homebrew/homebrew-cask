@@ -7,8 +7,6 @@ cask "convert3dgui" do
   desc "Command-line tool for converting 3D images between common file formats"
   homepage "https://sourceforge.net/projects/c3d"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-02", because: :unmaintained
 
   app "Convert3DGUI.app"

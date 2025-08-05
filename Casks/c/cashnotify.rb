@@ -8,8 +8,6 @@ cask "cashnotify" do
   desc "Monitor your Stripe and Paypal accounts from your menubar"
   homepage "https://cashnotify.com/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "CashNotify.app"

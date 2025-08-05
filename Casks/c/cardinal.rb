@@ -7,8 +7,6 @@ cask "cardinal" do
   desc "Virtual modular synthesiser plugin"
   homepage "https://github.com/DISTRHO/Cardinal"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Cardinal-macOS-universal-#{version}.pkg"
 
   uninstall pkgutil: [

@@ -7,8 +7,6 @@ cask "command-pad" do
   desc "Start and stop command-line tools and monitor the output"
   homepage "https://github.com/supnate/command-pad"
 
-  no_autobump! because: :requires_manual_review
-
   app "Command Pad.app"
 
   zap trash: [

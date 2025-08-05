@@ -7,8 +7,6 @@ cask "continuity-activation-tool" do
   desc "Enable continuity features on compatible hardware"
   homepage "https://github.com/dokterdok/Continuity-Activation-Tool/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-06", because: :unmaintained
   disable! date: "2025-07-06", because: :unmaintained
 

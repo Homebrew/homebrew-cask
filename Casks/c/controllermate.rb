@@ -18,8 +18,6 @@ cask "controllermate" do
   desc "Create virtual mouse, tablet, and joystick devices"
   homepage "https://www.orderedbytes.com/controllermate/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "#temp#/ControllerMate.sparkle_interactive.pkg"

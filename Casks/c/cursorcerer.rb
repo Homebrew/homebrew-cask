@@ -12,8 +12,6 @@ cask "cursorcerer" do
     regex(/Cursorcerer\s+(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   prefpane "Cursorcerer.prefPane"
 
   zap trash: "~/Library/Preferences/com.doomlaser.cursorcerer.plist"

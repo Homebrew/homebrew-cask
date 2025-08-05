@@ -8,8 +8,6 @@ cask "comma-chameleon" do
   desc "CSV editor"
   homepage "https://comma-chameleon.io/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-19", because: :discontinued
 
   app "Comma Chameleon-darwin-x64/Comma Chameleon.app"

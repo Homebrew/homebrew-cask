@@ -12,8 +12,6 @@ cask "charles@4" do
     regex(/Version (4(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "charles"
 
   app "Charles.app"

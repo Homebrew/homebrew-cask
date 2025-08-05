@@ -11,8 +11,6 @@ cask "color-oracle" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Color Oracle.app"
 
   uninstall login_item: "Color Oracle"

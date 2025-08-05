@@ -7,8 +7,6 @@ cask "cutesdr" do
   desc "Demodulation and spectrum display program"
   homepage "https://sourceforge.net/projects/cutesdr/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-01", because: :unmaintained
 
   app "cutesdr.app"

@@ -6,8 +6,6 @@ cask "charlessoft-timetracker" do
   name "TimeTracker"
   homepage "https://charlessoft.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "TimeTracker.app"

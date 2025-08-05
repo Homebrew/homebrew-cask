@@ -11,8 +11,6 @@ cask "chiaki" do
     url :homepage
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Chiaki.app"
 
   zap trash: [

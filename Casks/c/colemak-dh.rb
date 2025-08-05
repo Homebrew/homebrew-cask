@@ -18,8 +18,6 @@ cask "colemak-dh" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   keyboard_layout "mod-dh-master/macOS/Colemak DH.bundle"
 
   # No zap stanza required

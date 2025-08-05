@@ -12,8 +12,6 @@ cask "cakebrewjs" do
     regex(%r{url=.*?/cakebrewjs[._-]v?(\d+(?:\.\d+)+)(?:[._-]Darwin)?\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "cakebrewjs.app"
 
   zap trash: [

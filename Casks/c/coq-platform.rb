@@ -35,8 +35,6 @@ cask "coq-platform" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "Coq-Platform~#{version.csv.second.major_minor}~#{version.csv.first.major_minor}.app"

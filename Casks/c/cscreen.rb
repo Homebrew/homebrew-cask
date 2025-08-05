@@ -7,8 +7,6 @@ cask "cscreen" do
   desc "Command-line display management utility"
   homepage "https://www.pyehouse.com/cscreen/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-11-10", because: :no_longer_available
 
   binary "cscreen"

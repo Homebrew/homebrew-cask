@@ -12,8 +12,6 @@ cask "checkra1n" do
     regex(%r{href=.*?/checkra1n%20beta%20(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "checkra1n.app"
   binary "#{appdir}/checkra1n.app/Contents/MacOS/checkra1n"
 

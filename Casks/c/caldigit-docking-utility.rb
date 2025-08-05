@@ -13,8 +13,6 @@ cask "caldigit-docking-utility" do
     skip "No version information available"
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "CalDigit Docking Station Utility v#{version}.pkg"
 
   uninstall signal:  ["TERM", "CalDigit.CalDigit-Docking-Station-Utility"],

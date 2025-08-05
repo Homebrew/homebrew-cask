@@ -17,8 +17,6 @@ cask "cloudcompare" do
     regex(/href=.*CloudCompare[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "CloudCompare.app"

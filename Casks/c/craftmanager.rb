@@ -7,8 +7,6 @@ cask "craftmanager" do
   desc "Helps keep your Craft tools up to date"
   homepage "https://www.invisionapp.com/craft"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-01-09", because: :no_longer_available
 
   auto_updates true

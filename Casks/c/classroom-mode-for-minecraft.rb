@@ -13,8 +13,6 @@ cask "classroom-mode-for-minecraft" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Classroom Mode for Minecraft.app"
 
   zap trash: [

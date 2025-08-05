@@ -13,8 +13,6 @@ cask "ccstudio" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/mac/ccStudio\.zip}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   pkg "ccStudio.pkg"

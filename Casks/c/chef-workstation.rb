@@ -23,8 +23,6 @@ cask "chef-workstation" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   pkg "chef-workstation-#{version.csv.first}-1.#{arch}.pkg"

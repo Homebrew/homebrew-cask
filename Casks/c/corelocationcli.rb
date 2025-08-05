@@ -7,8 +7,6 @@ cask "corelocationcli" do
   desc "Prints location information from CoreLocation"
   homepage "https://github.com/fulldecent/corelocationcli"
 
-  no_autobump! because: :requires_manual_review
-
   app "CoreLocationCLI.app"
   binary "#{appdir}/CoreLocationCLI.app/Contents/MacOS/CoreLocationCLI"
 

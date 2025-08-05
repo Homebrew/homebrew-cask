@@ -32,8 +32,6 @@ cask "cemu" do
   desc "TI-84 Plus CE and TI-83 Premium CE calculator emulator"
   homepage "https://ce-programming.github.io/CEmu/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "CEmu.app"
