@@ -29,8 +29,6 @@ cask "j" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: "j#{version.major_minor}/macos-fix.command"
   installer script: {
     executable: "j#{version.major_minor}/bin/jconsole",

@@ -8,8 +8,6 @@ cask "jd-gui" do
   desc "Standalone Java Decompiler GUI"
   homepage "https://java-decompiler.github.io/"
 
-  no_autobump! because: :requires_manual_review
-
   app "jd-gui-osx-#{version}/JD-GUI.app"
 
   zap trash: "~/Library/Saved Application State/jd.jd-gui.savedState"

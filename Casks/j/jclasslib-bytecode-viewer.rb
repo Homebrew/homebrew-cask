@@ -7,8 +7,6 @@ cask "jclasslib-bytecode-viewer" do
   desc "Visualise all aspects of compiled Java class files and the contained bytecode"
   homepage "https://github.com/ingokegel/jclasslib"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "jclasslib bytecode viewer.app"

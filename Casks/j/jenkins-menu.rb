@@ -7,8 +7,6 @@ cask "jenkins-menu" do
   desc "Menu item which shows the status of a Jenkins CI server"
   homepage "https://github.com/qvacua/jenkins-menu/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Jenkins Menu.app"

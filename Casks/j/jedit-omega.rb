@@ -23,8 +23,6 @@ cask "jedit-omega" do
     regex(/Rev[._-](\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "JeditOmega#{version.no_dots}.pkg"
 
   uninstall quit:    "jp.co.artman21.JeditOmega",

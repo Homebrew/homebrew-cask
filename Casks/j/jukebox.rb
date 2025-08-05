@@ -8,8 +8,6 @@ cask "jukebox" do
   desc "Menu bar song viewer"
   homepage "https://www.jaysce.dev/projects/jukebox"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "Jukebox.app"
