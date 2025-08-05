@@ -7,8 +7,6 @@ cask "packet-peeper" do
   desc "Network protocol analyzer"
   homepage "https://github.com/choll/packetpeeper"
 
-  no_autobump! because: :requires_manual_review
-
   app "Packet Peeper.app"
 
   zap trash: [
