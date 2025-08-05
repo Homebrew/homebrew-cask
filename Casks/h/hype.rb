@@ -12,8 +12,6 @@ cask "hype" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   # Renamed for consistency: app name is different in the Finder and in a shell

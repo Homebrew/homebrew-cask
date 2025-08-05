@@ -11,8 +11,6 @@ cask "headset" do
   desc "Music player powered by YouTube and Reddit"
   homepage "https://headsetapp.co/"
 
-  no_autobump! because: :requires_manual_review
-
   app "build/headset-darwin-#{arch}/Headset.app"
 
   zap trash: [

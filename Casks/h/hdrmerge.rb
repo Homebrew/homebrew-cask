@@ -8,8 +8,6 @@ cask "hdrmerge" do
   desc "Creates raw images with extended dynamic range"
   homepage "https://jcelaya.github.io/hdrmerge/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-12", because: :unmaintained
   disable! date: "2025-07-12", because: :unmaintained
 

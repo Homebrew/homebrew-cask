@@ -7,8 +7,6 @@ cask "hackmd" do
   desc "Desktop Software for HackMD Note-Taking and Collaboration"
   homepage "https://github.com/hackmdio/hackmd-desktop"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-17", because: :unmaintained
   disable! date: "2025-07-17", because: :unmaintained
 

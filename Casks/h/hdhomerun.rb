@@ -12,8 +12,6 @@ cask "hdhomerun" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "HDHomeRun Installer.pkg"
 
   uninstall pkgutil: "com.silicondust.*hdhomerun"

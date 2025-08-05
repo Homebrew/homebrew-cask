@@ -7,8 +7,6 @@ cask "hotswitch" do
   desc "Fast window switcher using a 2-stroke hotkey"
   homepage "https://oniatsu.github.io/HotSwitch/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "HotSwitch.app"

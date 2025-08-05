@@ -8,8 +8,6 @@ cask "haptic-touch-bar" do
   desc "Add haptic feedback to Touch Bar buttons"
   homepage "https://www.haptictouchbar.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-30", because: :unmaintained
 
   depends_on macos: ">= :sierra"

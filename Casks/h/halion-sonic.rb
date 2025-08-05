@@ -18,8 +18,6 @@ cask "halion-sonic" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on cask: [
     "steinberg-activation-manager",
     "steinberg-library-manager",

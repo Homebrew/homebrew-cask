@@ -7,8 +7,6 @@ cask "hp-eprint" do
   desc "Mobile printing solution"
   homepage "https://h20331.www2.hp.com/hpsub/us/en/eprint/overview.html"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "HP ePrint Installer.pkg"

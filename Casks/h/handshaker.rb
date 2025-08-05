@@ -8,8 +8,6 @@ cask "handshaker" do
   desc "App for managing Android devices"
   homepage "https://www.smartisan.com/apps/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-01", because: :unmaintained
 
   app "HandShaker.app"
