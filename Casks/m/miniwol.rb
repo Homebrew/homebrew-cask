@@ -20,8 +20,6 @@ cask "miniwol" do
     regex(/href=.*?miniWOL[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "miniWOL.app"
