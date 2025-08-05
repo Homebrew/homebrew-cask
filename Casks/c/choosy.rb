@@ -70,8 +70,6 @@ cask "choosy" do
   desc "Open links in any browser"
   homepage "https://choosy.app/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   uninstall quit:    "com.choosyosx.Choosy",
