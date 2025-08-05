@@ -7,8 +7,6 @@ cask "amm" do
   desc "Aria2 Menubar Monitor"
   homepage "https://github.com/15cm/AMM"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "AMM.app"
