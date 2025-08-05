@@ -7,8 +7,6 @@ cask "get-lyrical" do
   desc "Automatically add lyrics to songs in iTunes"
   homepage "https://shullian.com/get_lyrical.php"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-01", because: :unmaintained
 
   app "Get Lyrical/Get Lyrical.app"
