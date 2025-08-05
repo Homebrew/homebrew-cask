@@ -6,8 +6,6 @@ cask "font-edwin" do
   name "Text font for musical scores"
   homepage "https://github.com/MuseScoreFonts/Edwin"
 
-  no_autobump! because: :requires_manual_review
-
   font "Edwin-#{version}/Edwin-BdIta.otf"
   font "Edwin-#{version}/Edwin-Bold.otf"
   font "Edwin-#{version}/Edwin-Italic.otf"
