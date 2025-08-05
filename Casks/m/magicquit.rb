@@ -12,8 +12,6 @@ cask "magicquit" do
     regex(/href=.*?MagicQuit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :ventura"
 
   app "MagicQuit.app"
