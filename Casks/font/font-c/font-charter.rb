@@ -11,8 +11,6 @@ cask "font-charter" do
     regex(/href=.*?Charter[\s._-]?v?(\d+(?:\.\d+)*)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Charter #{version}/OTF format (best for Mac OS)/Charter/Charter Bold Italic.otf"
   font "Charter #{version}/OTF format (best for Mac OS)/Charter/Charter Bold.otf"
   font "Charter #{version}/OTF format (best for Mac OS)/Charter/Charter Italic.otf"

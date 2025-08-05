@@ -11,8 +11,6 @@ cask "font-tex-gyre-heros" do
     regex(%r{Heros</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "texgyreheros-bold.otf"
   font "texgyreheros-bolditalic.otf"
   font "texgyreheros-italic.otf"

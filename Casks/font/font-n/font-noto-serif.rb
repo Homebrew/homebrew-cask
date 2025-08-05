@@ -12,8 +12,6 @@ cask "font-noto-serif" do
     regex(/^NotoSerif-v?(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "NotoSerif/unhinted/variable-ttf/NotoSerif-Italic[wdth,wght].ttf"
   font "NotoSerif/unhinted/variable-ttf/NotoSerif[wdth,wght].ttf"
 

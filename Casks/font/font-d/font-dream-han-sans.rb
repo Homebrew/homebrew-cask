@@ -17,8 +17,6 @@ cask "font-dream-han-sans" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "DreamHanSans-W1.ttc"
   font "DreamHanSans-W2.ttc"
   font "DreamHanSans-W3.ttc"

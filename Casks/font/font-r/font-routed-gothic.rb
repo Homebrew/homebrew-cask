@@ -7,8 +7,6 @@ cask "font-routed-gothic" do
   name "Routed Gothic"
   homepage "https://webonastick.com/fonts/routed-gothic/"
 
-  no_autobump! because: :requires_manual_review
-
   font "routed-gothic-#{version}/dist/ttf/routed-gothic-half-italic.ttf"
   font "routed-gothic-#{version}/dist/ttf/routed-gothic-italic.ttf"
   font "routed-gothic-#{version}/dist/ttf/routed-gothic-narrow-half-italic.ttf"

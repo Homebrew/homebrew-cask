@@ -6,8 +6,6 @@ cask "font-cica" do
   name "Cica"
   homepage "https://github.com/miiton/Cica"
 
-  no_autobump! because: :requires_manual_review
-
   font "Cica-Bold.ttf"
   font "Cica-BoldItalic.ttf"
   font "Cica-Regular.ttf"

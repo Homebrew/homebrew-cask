@@ -6,8 +6,6 @@ cask "font-cormorant" do
   name "Cormorant"
   homepage "https://github.com/CatharsisFonts/Cormorant/"
 
-  no_autobump! because: :requires_manual_review
-
   font "Cormorant_Install_v#{version}/Cormorant-Bold.otf"
   font "Cormorant_Install_v#{version}/Cormorant-BoldItalic.otf"
   font "Cormorant_Install_v#{version}/Cormorant-Italic.otf"

@@ -6,8 +6,6 @@ cask "font-martian-mono" do
   name "Martian Mono"
   homepage "https://github.com/evilmartians/mono"
 
-  no_autobump! because: :requires_manual_review
-
   font "MartianMono-CnBd.otf"
   font "MartianMono-CnLt.otf"
   font "MartianMono-CnMd.otf"

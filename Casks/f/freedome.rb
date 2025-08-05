@@ -7,8 +7,6 @@ cask "freedome" do
   desc "VPN client"
   homepage "https://www.f-secure.com/en_US/web/home_us/freedome"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-15", because: :discontinued
   disable! date: "2025-07-15", because: :discontinued
 

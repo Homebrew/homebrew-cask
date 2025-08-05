@@ -11,8 +11,6 @@ cask "font-andron-scriptor-web" do
     regex(/AND[._-]SCR[._-]WEB[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "AND_SCR_WEB_#{version}/Andron Scriptor Web.ttf"
 
   # No zap stanza required

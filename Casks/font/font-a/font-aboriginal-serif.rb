@@ -11,8 +11,6 @@ cask "font-aboriginal-serif" do
     regex(/Aboriginal\s+Serif.*?\(\s*v?(\d+(?:\.\d+)*)[^)]*\)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "AboriginalSerifREGULAR.ttf"
   font "AboriginalSerifBOLD.ttf"
   font "AboriginalSerifBOLDITALIC.ttf"

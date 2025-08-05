@@ -20,8 +20,6 @@ cask "font-linux-biolinum" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "LinBiolinum_Kah.ttf"
   font "LinBiolinum_RBah.ttf"
   font "LinBiolinum_RIah.ttf"

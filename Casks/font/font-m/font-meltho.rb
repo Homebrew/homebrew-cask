@@ -14,8 +14,6 @@ cask "font-meltho" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "melthofonts-#{version.csv.first.major}/melthofonts-#{version.csv.first}/SyrCOMAdiabene.otf"
   font "melthofonts-#{version.csv.first.major}/melthofonts-#{version.csv.first}/SyrCOMAntioch.otf"
   font "melthofonts-#{version.csv.first.major}/melthofonts-#{version.csv.first}/SyrCOMBatnan.otf"

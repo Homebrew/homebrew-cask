@@ -11,8 +11,6 @@ cask "font-scheherazade" do
     regex(/href=.*?Scheherazade[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Scheherazade-#{version}/Scheherazade-Bold.ttf"
   font "Scheherazade-#{version}/Scheherazade-Regular.ttf"
 

@@ -6,8 +6,6 @@ cask "font-moralerspace" do
   name "Moralerspace"
   homepage "https://github.com/yuru7/moralerspace"
 
-  no_autobump! because: :requires_manual_review
-
   font "Moralerspace_v#{version}/MoralerspaceArgon-Bold.ttf"
   font "Moralerspace_v#{version}/MoralerspaceArgon-BoldItalic.ttf"
   font "Moralerspace_v#{version}/MoralerspaceArgon-Italic.ttf"

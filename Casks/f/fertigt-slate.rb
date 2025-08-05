@@ -7,8 +7,6 @@ cask "fertigt-slate" do
   desc "Window management application"
   homepage "https://github.com/fertigt/slate_arm64"
 
-  no_autobump! because: :requires_manual_review
-
   app "Slate.app"
 
   zap trash: [

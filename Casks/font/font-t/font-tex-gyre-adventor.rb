@@ -11,8 +11,6 @@ cask "font-tex-gyre-adventor" do
     regex(%r{Adventor</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "qag#{version.dots_to_underscores}otf/texgyreadventor-bold.otf"
   font "qag#{version.dots_to_underscores}otf/texgyreadventor-bolditalic.otf"
   font "qag#{version.dots_to_underscores}otf/texgyreadventor-italic.otf"

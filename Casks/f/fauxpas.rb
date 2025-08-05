@@ -6,8 +6,6 @@ cask "fauxpas" do
   name "Faux Pas"
   homepage "http://fauxpasapp.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "FauxPas.app"

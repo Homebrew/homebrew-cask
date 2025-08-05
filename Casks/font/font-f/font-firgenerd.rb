@@ -6,8 +6,6 @@ cask "font-firgenerd" do
   name "FirgeNerd"
   homepage "https://github.com/yuru7/Firge"
 
-  no_autobump! because: :requires_manual_review
-
   font "FirgeNerd_v#{version}/Firge35NerdConsole-Bold.ttf"
   font "FirgeNerd_v#{version}/Firge35NerdConsole-Regular.ttf"
   font "FirgeNerd_v#{version}/FirgeNerdConsole-Bold.ttf"

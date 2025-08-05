@@ -23,8 +23,6 @@ cask "f-bar" do
   desc "Manage Laravel Forge servers from the menubar"
   homepage "https://laravel-forge-menubar.com/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "F-Bar.app"

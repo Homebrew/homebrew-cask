@@ -6,8 +6,6 @@ cask "font-aporetic" do
   name "Aporetic"
   homepage "https://github.com/protesilaos/aporetic"
 
-  no_autobump! because: :requires_manual_review
-
   font "aporetic-#{version}/aporetic-sans/TTF/aporetic-sans-normalbolditalic.ttf"
   font "aporetic-#{version}/aporetic-sans/TTF/aporetic-sans-normalboldupright.ttf"
   font "aporetic-#{version}/aporetic-sans/TTF/aporetic-sans-normalregularitalic.ttf"

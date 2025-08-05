@@ -11,8 +11,6 @@ cask "font-ibm-plex-math" do
     regex(%r{^@ibm/plex-math@?(\d+(?:\.\d+)+)$}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "ibm-plex-math/fonts/complete/otf/IBMPlexMath-Regular.otf"
 
   # No zap stanza required

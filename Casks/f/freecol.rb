@@ -11,8 +11,6 @@ cask "freecol" do
   desc "Turn-based strategy game"
   homepage "https://www.freecol.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "FreeCol.app"
 
   zap trash: [

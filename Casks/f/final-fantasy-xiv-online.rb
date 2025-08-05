@@ -13,8 +13,6 @@ cask "final-fantasy-xiv-online" do
     regex(%r{href=.*?inst/([^/]*)/FINAL[._-]FANTASY[._-]XIV[._-]ONLINE[._-]x64\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :sierra"
 

@@ -7,8 +7,6 @@ cask "flycut" do
   desc "Clipboard manager for developers"
   homepage "https://github.com/TermiT/Flycut"
 
-  no_autobump! because: :requires_manual_review
-
   app "Flycut.app"
 
   zap trash: "~/Library/Preferences/com.generalarcade.flycut.plist"

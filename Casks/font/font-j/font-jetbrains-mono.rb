@@ -12,8 +12,6 @@ cask "font-jetbrains-mono" do
     strategy :gitHub_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "fonts/ttf/JetBrainsMono-Bold.ttf"
   font "fonts/ttf/JetBrainsMono-BoldItalic.ttf"
   font "fonts/ttf/JetBrainsMono-ExtraBold.ttf"

@@ -11,8 +11,6 @@ cask "font-tex-gyre-pagella-math" do
     regex(/Pagella\sMath\s\(OTF\),\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "texgyrepagella-math-#{version.no_dots}/opentype/texgyrepagella-math.otf"
 
   # No zap stanza required

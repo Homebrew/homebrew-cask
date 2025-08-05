@@ -7,8 +7,6 @@ cask "font-zhuque-fangsong" do
   name "朱雀仿宋"
   homepage "https://github.com/TrionesType/zhuque"
 
-  no_autobump! because: :requires_manual_review
-
   font "ZhuqueFangsong-Regular.ttf"
 
   # No zap stanza required

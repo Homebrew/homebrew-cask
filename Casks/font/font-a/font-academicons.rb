@@ -6,8 +6,6 @@ cask "font-academicons" do
   name "Academicons"
   homepage "https://github.com/jpswalsh/academicons"
 
-  no_autobump! because: :requires_manual_review
-
   font "academicons-#{version}/fonts/academicons.ttf"
 
   # No zap stanza required

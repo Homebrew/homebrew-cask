@@ -6,8 +6,6 @@ cask "font-alegreya-sans" do
   name "Alegreya-Sans"
   homepage "https://github.com/huertatipografica/Alegreya-Sans"
 
-  no_autobump! because: :requires_manual_review
-
   font "Alegreya-Sans-#{version}/fonts/otf/AlegreyaSans-Black.otf"
   font "Alegreya-Sans-#{version}/fonts/otf/AlegreyaSans-BlackItalic.otf"
   font "Alegreya-Sans-#{version}/fonts/otf/AlegreyaSans-Bold.otf"

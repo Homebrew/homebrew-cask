@@ -14,8 +14,6 @@ cask "font-liberation" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "liberation-fonts-ttf-#{version.before_comma}/LiberationMono-Bold.ttf"
   font "liberation-fonts-ttf-#{version.before_comma}/LiberationMono-BoldItalic.ttf"
   font "liberation-fonts-ttf-#{version.before_comma}/LiberationMono-Italic.ttf"

@@ -13,8 +13,6 @@ cask "font-satoshi" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Satoshi_Complete/Fonts/OTF/Satoshi-Black.otf"
   font "Satoshi_Complete/Fonts/OTF/Satoshi-BlackItalic.otf"
   font "Satoshi_Complete/Fonts/OTF/Satoshi-Bold.otf"

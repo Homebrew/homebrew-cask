@@ -7,8 +7,6 @@ cask "font-harano-aji" do
   name "原ノ味"
   homepage "https://github.com/trueroad/HaranoAjiFonts"
 
-  no_autobump! because: :requires_manual_review
-
   font "HaranoAjiFonts-#{version}/HaranoAjiGothic-Bold.otf"
   font "HaranoAjiFonts-#{version}/HaranoAjiGothic-ExtraLight.otf"
   font "HaranoAjiFonts-#{version}/HaranoAjiGothic-Heavy.otf"

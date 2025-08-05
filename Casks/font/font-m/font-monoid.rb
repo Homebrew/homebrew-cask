@@ -11,8 +11,6 @@ cask "font-monoid" do
     url :url
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Monoid-Bold.ttf"
   font "Monoid-Italic.ttf"
   font "Monoid-Regular.ttf"

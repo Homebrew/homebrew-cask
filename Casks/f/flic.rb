@@ -13,8 +13,6 @@ cask "flic" do
     regex(/Flic\.(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "Flic.app"

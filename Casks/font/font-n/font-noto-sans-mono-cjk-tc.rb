@@ -10,8 +10,6 @@ cask "font-noto-sans-mono-cjk-tc" do
     cask "font-noto-sans-cjk"
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "NotoSansMonoCJKtc-Bold.otf"
   font "NotoSansMonoCJKtc-Regular.otf"
 

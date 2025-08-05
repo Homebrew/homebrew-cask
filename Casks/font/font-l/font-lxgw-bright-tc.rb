@@ -6,8 +6,6 @@ cask "font-lxgw-bright-tc" do
   name "LXGW Bright TC"
   homepage "https://github.com/lxgw/LxgwBright"
 
-  no_autobump! because: :requires_manual_review
-
   font "LXGWBrightTC/LXGWBrightTC-Italic.ttf"
   font "LXGWBrightTC/LXGWBrightTC-Light.ttf"
   font "LXGWBrightTC/LXGWBrightTC-LightItalic.ttf"

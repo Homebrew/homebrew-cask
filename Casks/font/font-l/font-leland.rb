@@ -6,8 +6,6 @@ cask "font-leland" do
   name "Leland"
   homepage "https://github.com/MuseScoreFonts/Leland"
 
-  no_autobump! because: :requires_manual_review
-
   font "Leland-#{version}/Leland.otf"
   font "Leland-#{version}/LelandText.otf"
   artifact "Leland-#{version}/leland_metadata.json", target: "/Library/Application Support/SMuFL/Fonts/Leland/Leland.json"

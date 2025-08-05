@@ -6,8 +6,6 @@ cask "font-twitter-color-emoji" do
   name "Twitter Color Emoji"
   homepage "https://github.com/eosrei/twemoji-color-font/"
 
-  no_autobump! because: :requires_manual_review
-
   font "TwitterColorEmoji-SVGinOT-#{version}/TwitterColorEmoji-SVGinOT.ttf"
 
   # No zap stanza required

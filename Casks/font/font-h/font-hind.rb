@@ -6,8 +6,6 @@ cask "font-hind" do
   name "Hind"
   homepage "https://github.com/itfoundry/hind"
 
-  no_autobump! because: :requires_manual_review
-
   font "Hind-Bold.otf"
   font "Hind-Light.otf"
   font "Hind-Medium.otf"

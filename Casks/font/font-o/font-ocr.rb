@@ -11,8 +11,6 @@ cask "font-ocr" do
     regex(/href=.*ocr[._-]v?(\d+(?:\.\d+)*)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "ocr-#{version}/OCRA.otf"
   font "ocr-#{version}/OCRB.otf"
   font "ocr-#{version}/OCRBE.otf"

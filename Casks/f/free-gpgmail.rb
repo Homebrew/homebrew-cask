@@ -45,8 +45,6 @@ cask "free-gpgmail" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on cask: "gpg-suite-no-mail"
   depends_on macos: ">= :mojave"
 

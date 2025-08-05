@@ -11,8 +11,6 @@ cask "font-tex-gyre-pagella" do
     regex(%r{Pagella</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "qpl#{version.dots_to_underscores}otf/texgyrepagella-bold.otf"
   font "qpl#{version.dots_to_underscores}otf/texgyrepagella-bolditalic.otf"
   font "qpl#{version.dots_to_underscores}otf/texgyrepagella-italic.otf"

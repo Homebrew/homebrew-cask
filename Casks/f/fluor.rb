@@ -22,8 +22,6 @@ cask "fluor" do
   desc "Change the behavior of the fn keys depending on the active application"
   homepage "https://github.com/Pyroh/Fluor"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :sierra"
 

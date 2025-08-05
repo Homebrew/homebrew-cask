@@ -12,8 +12,6 @@ cask "fabfilter-timeless" do
     regex(/FabFilter\s+Timeless.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   pkg "FabFilter Timeless #{version} Installer.pkg"

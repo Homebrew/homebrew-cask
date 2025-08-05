@@ -7,8 +7,6 @@ cask "font-public-sans" do
   name "Public Sans"
   homepage "https://public-sans.digital.gov/"
 
-  no_autobump! because: :requires_manual_review
-
   font "fonts/otf/PublicSans-Black.otf"
   font "fonts/otf/PublicSans-BlackItalic.otf"
   font "fonts/otf/PublicSans-Bold.otf"

@@ -6,8 +6,6 @@ cask "font-urbanist" do
   name "Urbanist"
   homepage "https://github.com/coreyhu/Urbanist"
 
-  no_autobump! because: :requires_manual_review
-
   font "Urbanist-fonts/fonts/otf/Urbanist-Black.otf"
   font "Urbanist-fonts/fonts/otf/Urbanist-BlackItalic.otf"
   font "Urbanist-fonts/fonts/otf/Urbanist-Bold.otf"

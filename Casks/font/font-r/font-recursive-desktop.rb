@@ -7,8 +7,6 @@ cask "font-recursive-desktop" do
   name "Recursive Desktop"
   homepage "https://www.recursive.design/"
 
-  no_autobump! because: :requires_manual_review
-
   font "ArrowType-Recursive-#{version}/Recursive_Desktop/Recursive_VF_#{version}.ttf"
   font "ArrowType-Recursive-#{version}/Recursive_Desktop/separate_statics/OTF/RecursiveMonoCslSt-BdItalic.otf"
   font "ArrowType-Recursive-#{version}/Recursive_Desktop/separate_statics/OTF/RecursiveMonoCslSt-Black.otf"

@@ -6,8 +6,6 @@ cask "font-photonico-code" do
   name "Photonico Code"
   homepage "https://github.com/Photonico/Photonico_Code"
 
-  no_autobump! because: :requires_manual_review
-
   font "Photonico.#{version}.Regular.ttf"
 
   # No zap stanza required

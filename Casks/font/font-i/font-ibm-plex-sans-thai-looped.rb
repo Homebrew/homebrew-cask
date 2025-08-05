@@ -11,8 +11,6 @@ cask "font-ibm-plex-sans-thai-looped" do
     regex(%r{^@ibm/plex-sans-thai-looped@?(\d+(?:\.\d+)+)$}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "ibm-plex-sans-thai-looped/fonts/complete/otf/IBMPlexSansThaiLooped-Bold.otf"
   font "ibm-plex-sans-thai-looped/fonts/complete/otf/IBMPlexSansThaiLooped-ExtraLight.otf"
   font "ibm-plex-sans-thai-looped/fonts/complete/otf/IBMPlexSansThaiLooped-Light.otf"

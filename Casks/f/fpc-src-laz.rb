@@ -16,8 +16,6 @@ cask "fpc-src-laz" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "fpcsrc-#{version.csv.first}.pkg"
 
   uninstall pkgutil: [

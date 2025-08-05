@@ -12,8 +12,6 @@ cask "font-noto-sans-cjk" do
     strategy :github_releases
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "NotoSansCJK.ttc"
 
   # No zap stanza required

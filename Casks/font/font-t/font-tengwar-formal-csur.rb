@@ -11,8 +11,6 @@ cask "font-tengwar-formal-csur" do
     regex(%r{url=.*?/TengwarFormalCSUR[._-]?v?(\d+(?:\.\d+)*)\.zip}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "TengwarFormalCSUR#{version}/TengwarFormalCSUR.ttf"
 
   # No zap stanza required

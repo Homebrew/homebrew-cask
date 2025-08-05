@@ -11,8 +11,6 @@ cask "font-hasklig" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "OTF/Hasklig-Black.otf"
   font "OTF/Hasklig-BlackIt.otf"
   font "OTF/Hasklig-Bold.otf"

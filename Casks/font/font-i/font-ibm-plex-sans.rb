@@ -11,8 +11,6 @@ cask "font-ibm-plex-sans" do
     regex(%r{^@ibm/plex-sans@?(\d+(?:\.\d+)+)$}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "ibm-plex-sans/fonts/complete/otf/IBMPlexSans-Bold.otf"
   font "ibm-plex-sans/fonts/complete/otf/IBMPlexSans-BoldItalic.otf"
   font "ibm-plex-sans/fonts/complete/otf/IBMPlexSans-ExtraLight.otf"

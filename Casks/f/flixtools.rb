@@ -21,8 +21,6 @@ cask "flixtools" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "FlixTools.app"
 
   zap trash: [

@@ -12,8 +12,6 @@ cask "font-computer-modern" do
     regex(%r{url=.*?/cm-unicode/v?(\d+(?:\.\d+)+[a-z]?)/}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "cm-unicode-#{version}/cmunbbx.ttf"
   font "cm-unicode-#{version}/cmunbi.ttf"
   font "cm-unicode-#{version}/cmunbl.ttf"

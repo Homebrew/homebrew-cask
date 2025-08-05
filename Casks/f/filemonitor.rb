@@ -13,8 +13,6 @@ cask "filemonitor" do
     regex(/href=.*?FileMonitor[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "FileMonitor.app"

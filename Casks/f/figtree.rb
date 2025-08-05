@@ -7,8 +7,6 @@ cask "figtree" do
   desc "Phylogenetic tree viewer"
   homepage "https://github.com/rambaut/figtree/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-02", because: :unmaintained
 
   app "FigTree v#{version}.app"

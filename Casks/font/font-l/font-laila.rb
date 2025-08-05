@@ -6,8 +6,6 @@ cask "font-laila" do
   name "Laila"
   homepage "https://github.com/itfoundry/laila"
 
-  no_autobump! because: :requires_manual_review
-
   font "Laila-Bold.otf"
   font "Laila-Light.otf"
   font "Laila-Medium.otf"

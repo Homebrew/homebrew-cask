@@ -11,8 +11,6 @@ cask "flipper" do
   desc "Desktop debugging platform for mobile developers"
   homepage "https://fbflipper.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-12-01", because: :discontinued
 
   app "Flipper.app"

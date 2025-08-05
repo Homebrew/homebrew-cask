@@ -12,8 +12,6 @@ cask "fabfilter-micro" do
     regex(/FabFilter\s+Micro.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   pkg "FabFilter Micro #{version} Installer.pkg"

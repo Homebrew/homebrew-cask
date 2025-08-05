@@ -12,8 +12,6 @@ cask "font-genjyuugothic-l" do
     regex(/href=.*genjyuugothic-l[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "GenJyuuGothicL-Bold.ttf"
   font "GenJyuuGothicL-ExtraLight.ttf"
   font "GenJyuuGothicL-Heavy.ttf"

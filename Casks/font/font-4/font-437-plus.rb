@@ -17,8 +17,6 @@ cask "font-437-plus" do
     regex(/href=.*?oldschool[._-]pc[._-]font[._-]pack[._-]v?(\d+(?:\.\d+)+)[._-]win\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "ttf - Px (pixel outline)/PxPlus_AST_PremiumExec.ttf"
   font "ttf - Px (pixel outline)/Px437_IBM_Model30r0.ttf"
   font "ttf - Px (pixel outline)/Px437_IBM_CGAthin.ttf"

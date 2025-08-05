@@ -6,8 +6,6 @@ cask "font-scientifica" do
   name "Scientifica"
   homepage "https://github.com/oppiliappan/scientifica"
 
-  no_autobump! because: :requires_manual_review
-
   font "scientifica/ttf/scientifica.ttf"
   font "scientifica/ttf/scientificaBold.ttf"
   font "scientifica/ttf/scientificaItalic.ttf"

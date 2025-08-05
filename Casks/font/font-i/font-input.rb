@@ -13,8 +13,6 @@ cask "font-input" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "Input_Fonts/InputMono/InputMono/InputMono-Black.ttf"
   font "Input_Fonts/InputMono/InputMono/InputMono-BlackItalic.ttf"
   font "Input_Fonts/InputMono/InputMono/InputMono-Bold.ttf"

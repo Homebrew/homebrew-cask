@@ -7,8 +7,6 @@ cask "font-bungee" do
   name "Bungee"
   homepage "https://djr.com/bungee/"
 
-  no_autobump! because: :requires_manual_review
-
   font "Bungee-fonts/Bungee_Basic/Bungee-Regular.ttf"
   font "Bungee-fonts/Bungee_Basic/BungeeHairline-Regular.ttf"
   font "Bungee-fonts/Bungee_Basic/BungeeInline-Regular.ttf"

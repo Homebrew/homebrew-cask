@@ -12,8 +12,6 @@ cask "fabfilter-twin" do
     regex(/FabFilter\s+Twin.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   pkg "FabFilter Twin #{version} Installer.pkg"

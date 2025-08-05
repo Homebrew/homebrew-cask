@@ -11,8 +11,6 @@ cask "font-freefont" do
     regex(/href=.*?freefont[._-]otf[._-]v?(\d+(?:\.\d+)*)\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "freefont-#{version}/FreeMono.otf"
   font "freefont-#{version}/FreeMonoBold.otf"
   font "freefont-#{version}/FreeMonoBoldOblique.otf"

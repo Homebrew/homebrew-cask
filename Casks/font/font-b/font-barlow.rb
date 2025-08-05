@@ -7,8 +7,6 @@ cask "font-barlow" do
   name "Barlow"
   homepage "https://tribby.com/fonts/barlow"
 
-  no_autobump! because: :requires_manual_review
-
   font "barlow-#{version}/fonts/otf/Barlow-Black.otf"
   font "barlow-#{version}/fonts/otf/Barlow-BlackItalic.otf"
   font "barlow-#{version}/fonts/otf/Barlow-Bold.otf"

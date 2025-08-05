@@ -9,8 +9,6 @@ cask "fl-studio" do
   desc "Digital audio production application"
   homepage "https://www.image-line.com/flstudio/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: "cannot be reliably fetched due to Cloudflare protections"
 
   pkg "Install FL Studio.pkg"

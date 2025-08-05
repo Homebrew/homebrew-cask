@@ -87,6 +87,4 @@ cask "ftdi-vcp-driver" do
   name "FTDI VCP Driver"
   desc "Virtual COM port driver"
   homepage "https://www.ftdichip.com/Drivers/VCP.htm"
-
-  no_autobump! because: :requires_manual_review
 end

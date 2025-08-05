@@ -12,8 +12,6 @@ cask "fabfilter-one" do
     regex(/FabFilter\s+One.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   pkg "FabFilter One #{version} Installer.pkg"

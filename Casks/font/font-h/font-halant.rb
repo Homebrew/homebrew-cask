@@ -6,8 +6,6 @@ cask "font-halant" do
   name "Halant"
   homepage "https://github.com/itfoundry/halant"
 
-  no_autobump! because: :requires_manual_review
-
   font "Halant-Bold.otf"
   font "Halant-Light.otf"
   font "Halant-Medium.otf"

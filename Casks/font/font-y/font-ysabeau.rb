@@ -6,8 +6,6 @@ cask "font-ysabeau" do
   name "Ysabeau"
   homepage "https://github.com/CatharsisFonts/Ysabeau/"
 
-  no_autobump! because: :requires_manual_review
-
   font "Ysabeau_Install_v#{version}/Ysabeau-Black.otf"
   font "Ysabeau_Install_v#{version}/Ysabeau-BlackItalic.otf"
   font "Ysabeau_Install_v#{version}/Ysabeau-Bold.otf"

@@ -6,8 +6,6 @@ cask "font-meslo-for-powerlevel10k" do
   name "Meslo Nerd Font for Powerlevel10k"
   homepage "https://github.com/romkatv/powerlevel10k-media"
 
-  no_autobump! because: :requires_manual_review
-
   font "MesloLGS NF Bold Italic.ttf"
   font "MesloLGS NF Bold.ttf"
   font "MesloLGS NF Italic.ttf"

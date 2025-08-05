@@ -12,8 +12,6 @@ cask "font-geist" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "geist-font-#{version}/fonts/Geist/otf/Geist-Black.otf"
   font "geist-font-#{version}/fonts/Geist/otf/Geist-BlackItalic.otf"
   font "geist-font-#{version}/fonts/Geist/otf/Geist-Bold.otf"

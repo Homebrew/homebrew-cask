@@ -12,8 +12,6 @@ cask "filemon" do
     regex(/File\s*Monitor\s+(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   binary "filemon"
 
   # No zap stanza required
