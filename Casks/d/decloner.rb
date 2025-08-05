@@ -7,8 +7,6 @@ cask "decloner" do
   desc "Duplicate files finder"
   homepage "https://www.pixelespressoapps.com/decloner/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-31", because: :unmaintained
 
   app "Decloner.app"
