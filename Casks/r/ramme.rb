@@ -7,7 +7,7 @@ cask "ramme" do
   desc "Unofficial Instagram Desktop App"
   homepage "https://github.com/terkelg/ramme/"
 
-  no_autobump! because: :requires_manual_review
+
 
   disable! date: "2024-12-16", because: :discontinued
 
