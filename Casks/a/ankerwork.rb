@@ -15,8 +15,6 @@ cask "ankerwork" do
     regex(/For\s+Mac.*?>\s*V?(\d+(?:\.\d+)+)\s*</im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "AnkerWork.app"
