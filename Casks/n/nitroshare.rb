@@ -7,8 +7,6 @@ cask "nitroshare" do
   desc "Network file transfer application"
   homepage "https://launchpad.net/nitroshare"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-27", because: :unmaintained
   disable! date: "2025-07-27", because: :unmaintained
 
