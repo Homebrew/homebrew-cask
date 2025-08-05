@@ -7,8 +7,6 @@ cask "cmdtap" do
   desc "Adds other functions to Task Switcher"
   homepage "https://www.yingdev.com/projects/cmdtap"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-14", because: :unmaintained
 
   app "CmdTap.app"
