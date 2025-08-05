@@ -8,8 +8,6 @@ cask "pulse-sms" do
   desc "Desktop client for Pulse SMS"
   homepage "https://home.pulsesms.app/overview/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Pulse SMS.app"
 
   zap trash: [
