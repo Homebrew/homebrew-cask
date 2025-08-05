@@ -1,6 +1,6 @@
 cask "cursorsense" do
-  version "2.4.1"
-  sha256 "7e48bb55ce5b486d0927b05a0596d86e026ffa57c6bd73111566c5ed28035fa3"
+  version "2.4.2"
+  sha256 "41aa38fb99cc677351924cbf2725cf27567916d1c9568ae77f81fdb5fc0423ae"
 
   url "https://plentycom.jp/ctrl/files_cs/CursorSense#{version}.dmg"
   name "CursorSense"
@@ -11,8 +11,6 @@ cask "cursorsense" do
     url "https://plentycom.jp/en/cursorsense/download.php"
     regex(%r{href=.*?/CursorSensev?(\d+(?:\.\d+)+)\.dmg}i)
   end
-
-  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 
