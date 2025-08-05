@@ -8,8 +8,6 @@ cask "osculator" do
   desc "Connect MIDI and OSC Controllers"
   homepage "https://osculator.net/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-31", because: :discontinued
 
   app "Osculator.app"
