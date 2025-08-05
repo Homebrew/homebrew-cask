@@ -7,8 +7,6 @@ cask "brooklyn" do
   desc "Screen saver based on animations presented during Apple Special Event Brooklyn"
   homepage "https://github.com/pedrommcarrasco/Brooklyn"
 
-  no_autobump! because: :requires_manual_review
-
   screen_saver "Brooklyn.saver"
 
   zap trash: "~/Library/Screen Savers/Brooklyn.saver"
