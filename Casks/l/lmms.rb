@@ -18,8 +18,6 @@ cask "lmms" do
   desc "Music production software"
   homepage "https://lmms.io/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "LMMS.app"
