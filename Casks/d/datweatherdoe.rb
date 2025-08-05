@@ -28,8 +28,6 @@ cask "datweatherdoe" do
   desc "Menu bar weather app"
   homepage "https://github.com/inderdhir/DatWeatherDoe"
 
-  no_autobump! because: :requires_manual_review
-
   app "DatWeatherDoe.app"
 
   zap trash: "~/Library/Preferences/com.inderdhir.DatWeatherDoe.plist"
