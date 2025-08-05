@@ -30,8 +30,6 @@ cask "hiarcs-chess-explorer" do
   desc "Chess database, analysis and game playing program"
   homepage "https://www.hiarcs.com/mac-chess-explorer.html"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
 
   uninstall signal:  ["TERM", "com.hiarcs.chessexplorer"],
