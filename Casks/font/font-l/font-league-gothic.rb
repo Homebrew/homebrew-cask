@@ -7,8 +7,6 @@ cask "font-league-gothic" do
   name "League Gothic"
   homepage "https://www.theleagueofmoveabletype.com/league-gothic"
 
-  no_autobump! because: :requires_manual_review
-
   font "LeagueGothic-#{version}/static/OTF/LeagueGothic-Regular.otf"
   font "LeagueGothic-#{version}/static/OTF/LeagueGothic-Italic.otf"
   font "LeagueGothic-#{version}/static/OTF/LeagueGothic-Condensed.otf"
