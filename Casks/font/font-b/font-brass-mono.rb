@@ -11,8 +11,6 @@ cask "font-brass-mono" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "BrassMono-Bold.ttf"
   font "BrassMono-BoldItalic.ttf"
   font "BrassMono-Italic.ttf"
