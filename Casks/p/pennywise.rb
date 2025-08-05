@@ -6,8 +6,6 @@ cask "pennywise" do
   name "Pennywise"
   homepage "https://github.com/kamranahmedse/pennywise"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-28", because: :unmaintained
   disable! date: "2025-07-28", because: :unmaintained
 
