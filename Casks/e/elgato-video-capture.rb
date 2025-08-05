@@ -12,8 +12,6 @@ cask "elgato-video-capture" do
     regex(/Video[._-]Capture[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :el_capitan"
 
   app "Elgato Video Capture.app"
