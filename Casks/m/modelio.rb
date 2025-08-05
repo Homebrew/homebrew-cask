@@ -8,8 +8,6 @@ cask "modelio" do
   desc "Extensible modelling environment"
   homepage "https://www.modelio.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Modelio #{version.major_minor}.app"
 
   zap trash: "~/.modelio"
