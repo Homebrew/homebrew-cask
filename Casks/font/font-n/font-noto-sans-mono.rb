@@ -12,8 +12,6 @@ cask "font-noto-sans-mono" do
     regex(/^NotoSansMono-v?(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "NotoSansMono/unhinted/variable/NotoSansMono[wdth,wght].ttf"
 
   # No zap stanza required
