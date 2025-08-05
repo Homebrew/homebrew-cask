@@ -8,8 +8,6 @@ cask "dbglass" do
   desc "PostgreSQL client built with Electron"
   homepage "http://dbglass.web-pal.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "DBGlass-darwin-x64/DBGlass.app"
