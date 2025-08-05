@@ -11,8 +11,6 @@ cask "font-tex-gyre-bonum" do
     regex(%r{Bonum</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "texgyrebonum-bold.otf"
   font "texgyrebonum-bolditalic.otf"
   font "texgyrebonum-italic.otf"
