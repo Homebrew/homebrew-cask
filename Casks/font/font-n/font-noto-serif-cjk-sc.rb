@@ -10,8 +10,6 @@ cask "font-noto-serif-cjk-sc" do
     cask "font-noto-serif-cjk"
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "OTF/SimplifiedChinese/NotoSerifCJKsc-Black.otf"
   font "OTF/SimplifiedChinese/NotoSerifCJKsc-Bold.otf"
   font "OTF/SimplifiedChinese/NotoSerifCJKsc-ExtraLight.otf"
