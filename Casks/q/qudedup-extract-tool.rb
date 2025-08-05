@@ -24,8 +24,6 @@ cask "qudedup-extract-tool" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "QudedupExTool.pkg"
 
   uninstall pkgutil: "com.qnap.pkg.QuDedupExTool"
