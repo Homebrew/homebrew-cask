@@ -10,8 +10,6 @@ cask "mambaforge" do
   desc "Minimal installer for conda with preinstalled support for Mamba"
   homepage "https://github.com/conda-forge/miniforge"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-30", because: :discontinued
   disable! date: "2025-01-06", because: :discontinued
 
