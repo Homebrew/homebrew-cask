@@ -7,8 +7,6 @@ cask "machoview" do
   desc "Visual Mach-O file browser"
   homepage "https://sourceforge.net/projects/machoview/"
 
-  no_autobump! because: :requires_manual_review
-
   app "MachOView.app"
 
   zap trash: [
