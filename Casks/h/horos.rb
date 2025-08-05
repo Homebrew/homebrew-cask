@@ -29,8 +29,6 @@ cask "horos" do
     regex(/href=.*?Horos[._-]?v?(\d+(?:\.\d+)+)[._-]?#{arch}\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Horos.app"
 
   zap trash: [
