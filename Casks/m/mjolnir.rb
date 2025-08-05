@@ -8,8 +8,6 @@ cask "mjolnir" do
   desc "Lightweight automation and productivity app"
   homepage "https://mjolnir.rocks/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "Mjolnir.app"
