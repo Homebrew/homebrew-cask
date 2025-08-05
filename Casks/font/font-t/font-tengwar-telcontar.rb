@@ -11,8 +11,6 @@ cask "font-tengwar-telcontar" do
     regex(%r{url=.*?/TengwarTelcontar[._-]?v?(\d+(?:\.\d+)*)\.zip}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "tengtelc.ttf"
   font "tengtelcb.ttf"
 
