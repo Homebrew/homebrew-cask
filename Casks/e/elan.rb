@@ -21,8 +21,6 @@ cask "elan" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "ELAN_#{version.dots_to_hyphens}#{arch}_mac/ELAN_#{version}.app"
