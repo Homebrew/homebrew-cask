@@ -8,8 +8,6 @@ cask "loaf" do
   desc "Animated icon library"
   homepage "https://getloaf.io/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Loaf.app"
 
   zap trash: [
