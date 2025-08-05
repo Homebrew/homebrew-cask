@@ -12,8 +12,6 @@ cask "json-viewer" do
     regex(/JSON[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "JSON Viewer.app"
