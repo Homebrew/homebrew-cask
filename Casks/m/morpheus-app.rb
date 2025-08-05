@@ -8,8 +8,6 @@ cask "morpheus-app" do
   desc "Modelling environment for multi-cellular systems biology"
   homepage "https://morpheus.gitlab.io/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-04-15", because: :discontinued
   disable! date: "2025-04-22", because: :discontinued
 
