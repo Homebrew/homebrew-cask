@@ -7,8 +7,6 @@ cask "font-gensenrounded" do
   name "GenSenRounded"
   homepage "https://github.com/ButTaiwan/gensen-font"
 
-  no_autobump! because: :requires_manual_review
-
   font "GenSenRounded#{version.major}-B.ttc"
   font "GenSenRounded#{version.major}-EL.ttc"
   font "GenSenRounded#{version.major}-H.ttc"
