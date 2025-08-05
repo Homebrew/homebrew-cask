@@ -11,8 +11,6 @@ cask "font-tex-gyre-chorus" do
     regex(%r{Chorus</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "texgyrechorus-mediumitalic.otf"
 
   # No zap stanza required
