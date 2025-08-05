@@ -8,8 +8,6 @@ cask "fredm-fuse" do
   desc "Port of the UNIX ZX Spectrum emulator Fuse"
   homepage "https://fuse-for-macosx.sourceforge.io/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-01", because: :unmaintained
 
   app "Fuse for MacOS/Fuse.app"
