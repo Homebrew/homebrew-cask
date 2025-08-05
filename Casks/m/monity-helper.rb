@@ -7,8 +7,6 @@ cask "monity-helper" do
   desc "Helper app for Monity to provide system stats"
   homepage "https://monityapp.com/helper/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-01-04", because: :no_longer_available
 
   pkg "MonityHelper.pkg"
