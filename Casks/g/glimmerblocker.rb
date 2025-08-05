@@ -7,8 +7,6 @@ cask "glimmerblocker" do
   desc "HTTP based ad blocker"
   homepage "https://glimmerblocker.org/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "GlimmerBlocker.pkg"
