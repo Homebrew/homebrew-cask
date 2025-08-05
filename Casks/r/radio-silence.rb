@@ -12,7 +12,7 @@ cask "radio-silence" do
     regex(%r{href=.*?/Radio_Silence_(\d+(?:\.\d+)*)\.pkg}i)
   end
 
-  no_autobump! because: :requires_manual_review
+
 
   pkg "Radio_Silence_#{version}.pkg"
 
