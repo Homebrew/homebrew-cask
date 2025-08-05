@@ -11,8 +11,6 @@ cask "font-goorm-sans-code" do
     regex(/href=.*?goorm[._-]sans[._-]code[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   font "goorm sans code 2/Public/goorm_Sans_Code_400.ttf"
 
   # No zap stanza required
