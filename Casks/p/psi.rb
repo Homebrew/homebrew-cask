@@ -13,8 +13,6 @@ cask "psi" do
     regex(/psi[._-]?(\d+(?:\.\d+)*)[._-]?mac\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Psi.app"
 
   uninstall quit: "org.psi-im"
