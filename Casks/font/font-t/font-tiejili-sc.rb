@@ -7,8 +7,6 @@ cask "font-tiejili-sc" do
   name "铁蒺藜体 简"
   homepage "https://github.com/Buernia/Tiejili"
 
-  no_autobump! because: :requires_manual_review
-
   font "TiejiliSC-Regular.otf"
 
   # No zap stanza required
