@@ -12,8 +12,6 @@ cask "rocks-n-diamonds" do
     regex(/href=.*?rocksndiamonds[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Rocks'n'Diamonds.app"
 
   zap trash: [
