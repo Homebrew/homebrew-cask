@@ -6,8 +6,6 @@ cask "blheli-configurator" do
   name "BLHeli Configurator"
   homepage "https://github.com/blheli-configurator/blheli-configurator"
 
-  no_autobump! because: :requires_manual_review
-
   app "BLHeli Configurator.app"
 
   caveats do

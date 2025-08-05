@@ -7,8 +7,6 @@ cask "bloomrpc" do
   desc "GUI Client for GRPC Services"
   homepage "https://github.com/uw-labs/bloomrpc"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "BloomRPC.app"

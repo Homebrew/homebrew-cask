@@ -14,8 +14,6 @@ cask "beast2" do
     regex(/location=.*?BEAST[._-]v?(\d+(?:\.\d+)+)\.Mac\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   suite "BEAST #{version}"
 
   zap trash: [

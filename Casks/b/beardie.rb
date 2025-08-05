@@ -7,8 +7,6 @@ cask "beardie" do
   desc "Control various media players with your keyboard"
   homepage "https://github.com/Stillness-2/beardie"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :catalina"
 

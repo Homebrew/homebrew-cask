@@ -6,8 +6,6 @@ cask "backlog" do
   name "Backlog"
   homepage "https://github.com/czytelny/backlog"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-30", because: :unmaintained
 
   app "Backlog-darwin-x64/Backlog.app"

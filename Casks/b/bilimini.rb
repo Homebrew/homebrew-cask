@@ -7,8 +7,6 @@ cask "bilimini" do
   desc "Small window bilibili client"
   homepage "https://github.com/chitosai/bilimini"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "bilimini.app"

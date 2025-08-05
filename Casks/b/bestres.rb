@@ -8,8 +8,6 @@ cask "bestres" do
   desc "Quickly change your screen resolution from the menubar"
   homepage "https://bestres.wojtek.im/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-07", because: :unmaintained
 
   app "BestRes.app"

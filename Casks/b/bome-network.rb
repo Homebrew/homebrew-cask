@@ -12,8 +12,6 @@ cask "bome-network" do
     regex(%r{href=.*?/BomeNet(\d+(?:\.\d+)+)[._-]macOS\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Bome Network.app"
 
   zap trash: "~/Library/Preferences/com.bome.mt.player.plist"

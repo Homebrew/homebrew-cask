@@ -15,8 +15,6 @@ cask "banksiagui" do
     regex(/Version v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "banksiagui-#{version}/banksiagui.app"
 
   zap trash: [

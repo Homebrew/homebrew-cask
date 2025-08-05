@@ -8,8 +8,6 @@ cask "blockstack" do
   desc "Explore the Blockstack internet"
   homepage "https://blockstack.org/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :sierra"

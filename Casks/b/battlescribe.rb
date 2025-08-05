@@ -7,8 +7,6 @@ cask "battlescribe" do
   desc "Army list creator for tabletop wargamers"
   homepage "https://battlescribe.net/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-16", because: :unmaintained
 
   pkg "BattleScribe_#{version}_Installer.pkg"

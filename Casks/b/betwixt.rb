@@ -7,8 +7,6 @@ cask "betwixt" do
   desc "Web Debugging Proxy based on Chrome DevTools Network panel"
   homepage "https://github.com/kdzwinel/betwixt"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-04-21", because: :unmaintained
 
   app "Betwixt-darwin-x64/Betwixt.app"

@@ -8,8 +8,6 @@ cask "bitmessage" do
   desc "P2P communications protocol"
   homepage "https://bitmessage.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-02-22", because: :unmaintained
 
   app "Bitmessage.app"

@@ -11,8 +11,6 @@ cask "bwana" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Bwana.app"
 
   zap trash: [

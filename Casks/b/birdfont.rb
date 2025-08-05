@@ -38,8 +38,6 @@ cask "birdfont" do
   desc "Font editor"
   homepage "https://birdfont.org/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "BirdFontNonCommercial.app"

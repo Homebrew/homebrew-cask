@@ -18,8 +18,6 @@ cask "blu-ray-player-pro" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "Blu-ray Player Pro.app"

@@ -9,8 +9,6 @@ cask "beaker-browser" do
   desc "Experimental peer-to-peer web browser"
   homepage "https://beakerbrowser.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true

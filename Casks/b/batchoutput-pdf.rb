@@ -12,8 +12,6 @@ cask "batchoutput-pdf" do
     regex(/BatchOutput\s*PDF\s*(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "BatchOutput PDF.app"

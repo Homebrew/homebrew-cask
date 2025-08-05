@@ -8,8 +8,6 @@ cask "bespoke" do
   desc "Software modular synth"
   homepage "https://www.bespokesynth.com/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "BespokeSynth.app"

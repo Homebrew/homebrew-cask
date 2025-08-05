@@ -10,8 +10,6 @@ cask "buzz" do
   desc "Transcribes and translates audio"
   homepage "https://github.com/chidiwilliams/buzz"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-04-03", because: :moved_to_mas
   disable! date: "2025-04-05", because: :moved_to_mas
 

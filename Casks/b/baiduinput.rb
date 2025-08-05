@@ -15,8 +15,6 @@ cask "baiduinput" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer manual: "安装百度输入法.app"
 
   uninstall pkgutil: "com.baidu.inputmethod.*",

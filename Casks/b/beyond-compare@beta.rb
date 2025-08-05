@@ -7,8 +7,6 @@ cask "beyond-compare@beta" do
   desc "Compare files and folders"
   homepage "https://www.scootersoftware.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-10", because: :discontinued
   disable! date: "2025-07-10", because: :discontinued
 
