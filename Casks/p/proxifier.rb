@@ -35,8 +35,6 @@ cask "proxifier" do
   desc "Proxy client"
   homepage "https://www.proxifier.com/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Proxifier.app"
 
   zap trash: [
