@@ -8,8 +8,6 @@ cask "rolisteam" do
   desc "Virtual tabletop software"
   homepage "https://rolisteam.org/"
 
-  no_autobump! because: :requires_manual_review
-
   app "rolisteam.app"
 
   zap trash: [
