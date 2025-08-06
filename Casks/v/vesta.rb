@@ -12,8 +12,6 @@ cask "vesta" do
     regex(/>\s*ver\.\s+v?(\d+(?:\.\d+)+)[<\s]/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "VESTA/VESTA.app"
 
   zap trash: [
