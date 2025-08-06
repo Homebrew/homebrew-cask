@@ -7,8 +7,6 @@ cask "splitshow" do
   desc "Dual-head presentation of PDF slides"
   homepage "https://github.com/mpflanzer/splitshow"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-16", because: :unmaintained
 
   app "SplitShow.app"
