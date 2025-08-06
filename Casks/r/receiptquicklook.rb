@@ -7,8 +7,6 @@ cask "receiptquicklook" do
   desc "Quick Look plugin to visualise App Store cryptographic receipts"
   homepage "https://github.com/letiemble/ReceiptQuickLook"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "ReceiptQuickLook.qlgenerator"
 
   # No zap stanza required
