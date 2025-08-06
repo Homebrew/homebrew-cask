@@ -11,8 +11,6 @@ cask "simple-web-server" do
   desc "Create local web servers"
   homepage "https://simplewebserver.org/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "Simple Web Server.app"
