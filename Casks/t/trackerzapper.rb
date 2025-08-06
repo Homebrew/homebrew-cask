@@ -8,8 +8,6 @@ cask "trackerzapper" do
   desc "Menubar app to remove link tracking parameters automatically"
   homepage "https://rknight.me/apps/tracker-zapper"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "TrackerZapper.app"
