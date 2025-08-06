@@ -7,8 +7,6 @@ cask "tyke" do
   desc "Scratch paper that lives on your menu bar"
   homepage "https://tyke.app/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-27", because: :unmaintained
 
   app "tyke.app"
