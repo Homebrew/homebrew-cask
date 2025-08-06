@@ -8,8 +8,6 @@ cask "surge-xt" do
   desc "Hybrid synthesiser"
   homepage "https://surge-synthesizer.github.io/"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "surge-xt-macOS-#{version}.pkg"
 
   uninstall pkgutil: [
