@@ -14,8 +14,6 @@ cask "ti-smartview-ce-for-the-ti-84-plus-family" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "TI-SmartView-CE-84-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.ti.et.smartview.TI-SmartViewCE84"
