@@ -7,8 +7,6 @@ cask "rewind" do
   desc "Record and search your screen and audio"
   homepage "https://www.rewind.ai/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-12-31", because: :unmaintained
 
   auto_updates true
