@@ -8,8 +8,6 @@ cask "tempbox" do
   desc "Disposable email client"
   homepage "https://tempbox.waseem.works/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "TempBox.app"

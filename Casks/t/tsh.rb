@@ -8,8 +8,6 @@ cask "tsh" do
   desc "SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-18", because: :unmaintained, replacement_cask: "teleport"
 
   conflicts_with cask:    [

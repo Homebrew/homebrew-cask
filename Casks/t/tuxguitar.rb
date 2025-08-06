@@ -13,8 +13,6 @@ cask "tuxguitar" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app"
 
   zap trash: "~/Library/Application Support/tuxguitar"

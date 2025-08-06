@@ -14,8 +14,6 @@ cask "teamviewer-quicksupport" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.

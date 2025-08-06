@@ -7,8 +7,6 @@ cask "tnefs-enough" do
   desc "Read and extract files from Microsoft TNEF files"
   homepage "https://www.joshjacob.com/mac-development/tnef.php"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-02", because: :unmaintained
 
   app "TNEF's Enough.app"

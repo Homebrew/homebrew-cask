@@ -8,8 +8,6 @@ cask "todometer" do
   desc "Meter-based to-do list"
   homepage "https://cassidoo.github.io/todometer/"
 
-  no_autobump! because: :requires_manual_review
-
   app "mac/todometer.app"
 
   zap trash: [

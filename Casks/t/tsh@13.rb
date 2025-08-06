@@ -8,8 +8,6 @@ cask "tsh@13" do
   desc "SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-11-18", because: :discontinued
 
   conflicts_with cask:    [

@@ -7,8 +7,6 @@ cask "thumbhost3mf" do
   desc "Finder thumbnail provider for some .gcode, .bgcode and .3mf files"
   homepage "https://github.com/DavidPhillipOster/ThumbHost3mf/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "ThumbHost3mf.app"

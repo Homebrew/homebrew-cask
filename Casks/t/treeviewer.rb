@@ -10,8 +10,6 @@ cask "treeviewer" do
   desc "Phylogenetic tree viewer"
   homepage "https://github.com/arklumpus/TreeViewer"
 
-  no_autobump! because: :requires_manual_review
-
   app "TreeViewer.app"
 
   zap trash: [

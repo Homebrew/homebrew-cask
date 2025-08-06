@@ -22,8 +22,6 @@ cask "touch-bar-simulator" do
   desc "Touch Bar as a standalone app"
   homepage "https://github.com/sindresorhus/touch-bar-simulator"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-05-14", because: :discontinued
   disable! date: "2025-05-15", because: :discontinued
 

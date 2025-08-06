@@ -9,8 +9,6 @@ cask "tic80" do
   desc "Fantasy computer for making, playing and sharing tiny games"
   homepage "https://tic80.com/"
 
-  no_autobump! because: :requires_manual_review
-
   app "tic80.app"
 
   uninstall quit: "com.nesbox.tic"

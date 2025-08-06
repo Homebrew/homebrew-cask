@@ -7,8 +7,6 @@ cask "timings" do
   desc "Time tracking"
   homepage "https://www.mediaatelier.com/Timings3/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Timings.app"

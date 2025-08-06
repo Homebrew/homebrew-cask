@@ -12,8 +12,6 @@ cask "teambition" do
     regex(/Teambition[._-](\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Teambition.app"

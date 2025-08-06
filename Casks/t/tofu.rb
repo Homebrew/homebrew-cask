@@ -13,8 +13,6 @@ cask "tofu" do
     skip "Upstream website uses a CAPTCHA"
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Tofu.app"

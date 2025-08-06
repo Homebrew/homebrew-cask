@@ -12,8 +12,6 @@ cask "timemachineeditor" do
     regex(/href=.*TimeMachineEditor\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   pkg "TimeMachineEditor.pkg"

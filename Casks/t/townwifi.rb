@@ -7,8 +7,6 @@ cask "townwifi" do
   name "TownWiFi"
   homepage "https://townwifi.jp/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-03", because: :unmaintained
 
   auto_updates true

@@ -22,8 +22,6 @@ cask "toshiba-color-mfp" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "TOSHIBA ColorMFP.pkg"
 
   uninstall pkgutil: "com.toshiba.pde.x7.colormfp",

@@ -7,8 +7,6 @@ cask "ttscoff-mmd-quicklook" do
   desc "Quick Look plugin for viewing MultiMarkdown"
   homepage "https://github.com/ttscoff/mmd-quicklook"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "MultiMarkdown QuickLook.qlgenerator"
 
   # No zap stanza required

@@ -12,8 +12,6 @@ cask "touchosc-editor" do
     regex(%r{href=.*?/touchosc-editor-(\d+(?:\.\d+)*)-macos\.zip}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "touchosc-editor-#{version}-macos/TouchOSC Editor.app"
   artifact "touchosc-editor-#{version}-macos/layouts",
            target: Pathname.new(File.expand_path("~")).join("Library/Application Support/TouchOSCEditor/layouts")

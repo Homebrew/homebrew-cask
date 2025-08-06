@@ -13,8 +13,6 @@ cask "tigervnc-viewer" do
     regex(%r{url=.*?/TigerVNC[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "TigerVNC Viewer #{version}.app"
 
   zap trash: "~/Library/Saved Application State/com.tigervnc.tigervnc.savedState"

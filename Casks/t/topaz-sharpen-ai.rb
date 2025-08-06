@@ -7,8 +7,6 @@ cask "topaz-sharpen-ai" do
   desc "AI-powered image sharpener that produces natural results"
   homepage "https://www.topazlabs.com/sharpen-ai"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-05-07", because: :discontinued
   disable! date: "2025-05-07", because: :discontinued
 

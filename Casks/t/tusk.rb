@@ -7,8 +7,6 @@ cask "tusk" do
   desc "Refined Evernote desktop app"
   homepage "https://github.com/klaudiosinani/tusk"
 
-  no_autobump! because: :requires_manual_review
-
   # https://github.com/klaudiosinani/tusk/issues/381
   disable! date: "2024-09-30", because: :unmaintained
 

@@ -11,8 +11,6 @@ cask "teeworlds" do
     regex(%r{href=.*?/teeworlds[._-](\d+(?:\.\d+)*)[._-]osx\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Teeworlds.app"
   app "Teeworlds Server.app"
 

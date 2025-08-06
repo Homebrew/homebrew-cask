@@ -8,8 +8,6 @@ cask "timestamp" do
   desc "Improved clock for the menu bar"
   homepage "https://mzdr.github.io/timestamp/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-02-14", because: :discontinued
   disable! date: "2025-02-15", because: :discontinued
 

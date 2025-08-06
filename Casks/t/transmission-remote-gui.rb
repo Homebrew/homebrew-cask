@@ -6,8 +6,6 @@ cask "transmission-remote-gui" do
   name "Transmission Remote GUI"
   homepage "https://github.com/transmission-remote-gui/transgui"
 
-  no_autobump! because: :requires_manual_review
-
   app "Transmission Remote GUI.app"
 
   uninstall quit: "com.transgui"

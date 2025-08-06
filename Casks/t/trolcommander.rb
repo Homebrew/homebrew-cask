@@ -8,8 +8,6 @@ cask "trolcommander" do
   desc "Fork of the muCommander file manager"
   homepage "https://trolsoft.ru/en/soft/trolcommander"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-27", because: :unmaintained
 
   app "trolCommander.app"

@@ -8,8 +8,6 @@ cask "tikzit" do
   desc "PGF/TikZ diagram editor"
   homepage "https://tikzit.github.io/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "TikZiT.app"

@@ -12,8 +12,6 @@ cask "talon" do
     regex(/<h\d>\s*(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Talon.app"

@@ -8,8 +8,6 @@ cask "twitch-studio" do
   desc "Free streaming software designed for new streamers"
   homepage "https://www.twitch.tv/broadcast/studio/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-03-31", because: :discontinued
   disable! date: "2025-03-31", because: :discontinued
 

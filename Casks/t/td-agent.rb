@@ -11,8 +11,6 @@ cask "td-agent" do
   desc "Fluentd distribution package"
   homepage "https://www.fluentd.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-01", because: :discontinued
 
   pkg "td-agent-#{version}.pkg"
