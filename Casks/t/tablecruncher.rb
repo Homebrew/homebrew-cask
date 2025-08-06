@@ -15,8 +15,6 @@ cask "tablecruncher" do
     regex(/href=.*?Tablecruncher[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Tablecruncher.app"
 
   zap trash: [
