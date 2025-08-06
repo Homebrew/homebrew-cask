@@ -7,8 +7,6 @@ cask "yoda" do
   desc "App to browse and download YouTube videos"
   homepage "https://github.com/whoisandy/yoda"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-01", because: :unmaintained
 
   app "Yoda.app"
