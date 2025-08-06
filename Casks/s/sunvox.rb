@@ -12,8 +12,6 @@ cask "sunvox" do
     regex(/href=.*?sunvox[._-]v?(\d+(?:\.\d+)+[a-z]?)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "sunvox/sunvox/macos/SunVox.app"
