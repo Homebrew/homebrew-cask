@@ -7,8 +7,6 @@ cask "swiftplantumlapp" do
   desc "Generate and view a class diagram for Swift code in Xcode"
   homepage "https://github.com/MarcoEidinger/SwiftPlantUML-Xcode-Extension"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "SwiftPlantUMLApp.app"
