@@ -12,8 +12,6 @@ cask "spaceradar" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "SpaceRadar.app"
 
   uninstall quit: "com.electron.spaceradar"
