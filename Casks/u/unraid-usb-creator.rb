@@ -7,8 +7,6 @@ cask "unraid-usb-creator" do
   desc "Utility for installing Unraid on a USB drive"
   homepage "https://unraid.net/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-14", because: :discontinued
   disable! date: "2025-07-14", because: :discontinued
 
