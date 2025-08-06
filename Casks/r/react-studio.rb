@@ -8,8 +8,6 @@ cask "react-studio" do
   desc "App design environment"
   homepage "https://reactstudio.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-07-24", because: :unmaintained
 
   depends_on macos: ">= :sierra"
