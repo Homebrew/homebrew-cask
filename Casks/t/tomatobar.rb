@@ -7,8 +7,6 @@ cask "tomatobar" do
   desc "Menu bar pomodoro timer"
   homepage "https://github.com/ivoronin/TomatoBar"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "TomatoBar.app"
