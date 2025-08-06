@@ -12,8 +12,6 @@ cask "tdr-prism" do
     regex(%r{href=.*?Prism/v?(\d+(?:\.\d+)+)/TDR(%20|\s)Prism\.zip}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "TDR Prism.pkg"
 
   uninstall pkgutil: [
