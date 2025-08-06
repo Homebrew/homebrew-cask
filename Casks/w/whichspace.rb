@@ -7,8 +7,6 @@ cask "whichspace" do
   desc "Active space menu bar icon"
   homepage "https://github.com/gechr/WhichSpace"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
