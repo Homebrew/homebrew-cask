@@ -12,8 +12,6 @@ cask "scidavis" do
     regex(%r{url=.*?/scidavis[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]dist\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "scidavis.app"
 
   zap trash: [
