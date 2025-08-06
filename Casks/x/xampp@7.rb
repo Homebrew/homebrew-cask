@@ -13,8 +13,6 @@ cask "xampp@7" do
     regex(/xampp[._-]osx[._-]v?(7(?:\.\d+)*-\d+)[._-]installer\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "xampp"
 
   installer script: {
