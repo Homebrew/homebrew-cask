@@ -7,8 +7,6 @@ cask "tysimulator" do
   desc "Utility for fast access to your iPhone Simulator apps"
   homepage "https://github.com/ty0x2333/TySimulator"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-08", because: :discontinued
 
   depends_on macos: ">= :sierra"
