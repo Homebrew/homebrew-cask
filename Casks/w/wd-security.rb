@@ -13,8 +13,6 @@ cask "wd-security" do
     regex(/Version:?\s*(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   container nested: "WD Security Installer.dmg"
 
   installer script: {
