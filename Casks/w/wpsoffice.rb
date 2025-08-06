@@ -14,8 +14,6 @@ cask "wpsoffice" do
     skip "No version information available"
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "wpsoffice-cn"
   depends_on macos: ">= :sierra"
 
