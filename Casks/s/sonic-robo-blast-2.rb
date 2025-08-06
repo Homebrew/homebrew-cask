@@ -14,8 +14,6 @@ cask "sonic-robo-blast-2" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Sonic Robo Blast 2.app"
 
   zap trash: "~/srb2"
