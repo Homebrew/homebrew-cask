@@ -8,8 +8,6 @@ cask "virtualgl" do
   desc "3D without boundaries"
   homepage "https://www.virtualgl.org/"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "VirtualGL.pkg"
 
   uninstall script:  {
