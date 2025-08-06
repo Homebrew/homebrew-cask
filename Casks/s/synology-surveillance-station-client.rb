@@ -14,8 +14,6 @@ cask "synology-surveillance-station-client" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Install Synology Surveillance Station Client.pkg"
 
   uninstall launchctl: "com.synology.svsclient-SurveillanceStationClient",
