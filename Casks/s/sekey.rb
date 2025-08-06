@@ -7,8 +7,6 @@ cask "sekey" do
   desc "Use Touch ID or Secure Enclave for SSH authentication"
   homepage "https://github.com/sekey/sekey/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-05-25", because: :unmaintained
 
   pkg "SeKey-#{version}.pkg"
