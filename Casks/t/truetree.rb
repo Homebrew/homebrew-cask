@@ -8,8 +8,6 @@ cask "truetree" do
   desc "Command-line tool for pstree-like output"
   homepage "https://themittenmac.com/the-truetree-concept/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   binary "TrueTree"
