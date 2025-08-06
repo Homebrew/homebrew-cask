@@ -7,8 +7,6 @@ cask "widgettoggler" do
   desc "Tool to toggle the visibility of homescreen widgets"
   homepage "https://github.com/sieren/WidgetToggler"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sonoma"
 
   app "WidgetToggler.app"
