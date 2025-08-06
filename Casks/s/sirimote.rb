@@ -12,8 +12,6 @@ cask "sirimote" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "SiriMote.app"
