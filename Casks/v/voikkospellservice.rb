@@ -8,8 +8,6 @@ cask "voikkospellservice" do
   desc "Spell-checking service for Finnish"
   homepage "https://verteksi.net/lab/osxspell/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   service "VoikkoSpellService.app"
