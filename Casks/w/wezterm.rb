@@ -16,8 +16,6 @@ cask "wezterm" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "wezterm@nightly"
 
   app "WezTerm-macos-#{version.csv.first}-#{version.csv.second}/WezTerm.app"
