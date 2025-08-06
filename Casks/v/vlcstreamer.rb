@@ -12,8 +12,6 @@ cask "vlcstreamer" do
     regex(%r{href=.*?/VLCStreamer_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "VLCStreamer.app"
 
   zap trash: [
