@@ -8,8 +8,6 @@ cask "squirrelsql" do
   desc "Graphical Java program for viewing the structure of a JDBC compliant database"
   homepage "https://squirrel-sql.sourceforge.io/"
 
-  no_autobump! because: :requires_manual_review
-
   container type: :naked
 
   installoptions = "#{staged_path}/install-options.xml"
