@@ -7,8 +7,6 @@ cask "xamarin-android" do
   desc "Gives .NET developers complete access to Android SDK's"
   homepage "https://dotnet.microsoft.com/en-us/apps/xamarin"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-20", because: :discontinued
 
   pkg "xamarin.android-#{version.csv.first}.pkg"
