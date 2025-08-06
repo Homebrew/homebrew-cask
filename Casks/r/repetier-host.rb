@@ -12,8 +12,6 @@ cask "repetier-host" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Repetier-Host Mac.app"
 
   zap trash: [
