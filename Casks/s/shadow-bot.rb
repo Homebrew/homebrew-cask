@@ -11,8 +11,6 @@ cask "shadow-bot" do
   desc "Application for robotic process automation"
   homepage "https://www.yingdao.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-30", because: "now has the download artifact behind a signed URL"
 
   depends_on macos: ">= :high_sierra"

@@ -12,8 +12,6 @@ cask "scidvsmac" do
     regex(/ScidvsMac-(\d+(?:\.\d+)*)\.x64\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "ScidvsMac.app"
 
   zap trash: [

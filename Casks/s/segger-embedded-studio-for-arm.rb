@@ -15,8 +15,6 @@ cask "segger-embedded-studio-for-arm" do
     regex(/<h2[^>]*>\s*Version\s*(\d+(?:\.\d+)+[a-z]?)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Install SEGGER Embedded Studio for ARM #{version}.pkg"
 
   uninstall pkgutil: [

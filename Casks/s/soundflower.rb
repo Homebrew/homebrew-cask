@@ -6,8 +6,6 @@ cask "soundflower" do
   name "Soundflower"
   homepage "https://github.com/mattingalls/Soundflower"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-16", because: :unmaintained
 
   depends_on arch: :x86_64

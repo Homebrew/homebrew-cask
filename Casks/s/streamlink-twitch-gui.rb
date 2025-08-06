@@ -7,8 +7,6 @@ cask "streamlink-twitch-gui" do
   desc "Multi platform Twitch.tv browser for Streamlink"
   homepage "https://github.com/streamlink/streamlink-twitch-gui/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on formula: "streamlink"
   depends_on macos: ">= :catalina"
 

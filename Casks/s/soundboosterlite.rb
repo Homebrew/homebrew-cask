@@ -7,8 +7,6 @@ cask "soundboosterlite" do
   desc "App for an enhanced audio experience"
   homepage "https://froyosoft.com/soundbooster.php"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-11", because: :unmaintained
 
   pkg "SoundBoosterLite.pkg"

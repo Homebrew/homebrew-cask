@@ -30,8 +30,6 @@ cask "sf-symbols" do
   desc "Tool that provides consistent, highly configurable symbols for apps"
   homepage "https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :big_sur"
 

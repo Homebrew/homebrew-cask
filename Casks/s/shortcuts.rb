@@ -6,8 +6,6 @@ cask "shortcuts" do
   name "Restart/Sleep/Logout/Shutdown/Lock Shortcuts"
   homepage "https://github.com/siong1987/shortcuts/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-08", because: :unmaintained
 
   suite "system", target: "Shortcuts"

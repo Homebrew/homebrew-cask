@@ -7,8 +7,6 @@ cask "swiftcord" do
   desc "Native Discord client built in Swift"
   homepage "https://github.com/SwiftcordApp/Swiftcord"
 
-  no_autobump! because: :requires_manual_review
-
   # https://github.com/SwiftcordApp/Swiftcord/discussions/189
   disable! date: "2024-11-23", because: :unmaintained
 

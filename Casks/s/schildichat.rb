@@ -8,8 +8,6 @@ cask "schildichat" do
   desc "Matrix client based on Element with a more traditional IM experience"
   homepage "https://schildi.chat/desktop/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-04-06", because: :discontinued
   disable! date: "2025-04-08", because: :discontinued
 

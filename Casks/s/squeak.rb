@@ -15,8 +15,6 @@ cask "squeak" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Squeak#{version.csv.first}-#{version.csv.second}-64bit-All-in-One.app"
 
   zap trash: "~/Library/Saved Application State/org.squeak.Squeak#{version.csv.first}.64.All-in-One.savedState"

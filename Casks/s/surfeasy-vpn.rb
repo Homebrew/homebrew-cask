@@ -7,8 +7,6 @@ cask "surfeasy-vpn" do
   desc "VPN client"
   homepage "https://www.surfeasy.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-12-30", because: :discontinued
 
   app "SurfEasy VPN.app"

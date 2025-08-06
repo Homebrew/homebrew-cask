@@ -8,8 +8,6 @@ cask "scout" do
   desc "Simple Sass processor"
   homepage "https://scout-app.io/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-11", because: :unmaintained
 
   app "Scout-App.app"

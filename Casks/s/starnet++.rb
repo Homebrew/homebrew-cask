@@ -15,8 +15,6 @@ cask "starnet++" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   bin_path = "#{staged_path}/StarNetv#{version.csv.first}CLI_MacOS"
 
   shimscript = "#{staged_path}/starnet_wrapper.sh"

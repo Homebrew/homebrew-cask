@@ -13,8 +13,6 @@ cask "synthesia" do
     regex(/synthesia\s(\d+(?:\.\d+)+)\sfor\smacOS/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Synthesia.app"
 
   zap trash: [

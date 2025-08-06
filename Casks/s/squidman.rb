@@ -12,8 +12,6 @@ cask "squidman" do
     regex(%r{href=.*?/resources/downloads/?[^>]+?>\s*version\s+v?(\d+(?:\.\d+)+)\s*<}im)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "SquidMan.app"
 
   zap trash: [

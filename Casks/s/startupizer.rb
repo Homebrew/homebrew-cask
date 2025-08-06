@@ -8,8 +8,6 @@ cask "startupizer" do
   desc "Login items handler"
   homepage "http://gentlebytes.com/startupizer/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-01-05", because: :discontinued
 
   app "Startupizer#{version.major}.app"

@@ -7,8 +7,6 @@ cask "scoot" do
   desc "Keyboard-driven cursor actuator"
   homepage "https://github.com/mjrusso/scoot"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "Scoot.app"

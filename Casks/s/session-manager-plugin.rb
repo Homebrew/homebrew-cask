@@ -16,8 +16,6 @@ cask "session-manager-plugin" do
     regex(%r{<td tabindex="-1">(\d+(?:\.\d+)+)</td>}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "session-manager-plugin.pkg"
   binary "/usr/local/sessionmanagerplugin/bin/session-manager-plugin"
 

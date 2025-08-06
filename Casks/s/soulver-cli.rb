@@ -7,8 +7,6 @@ cask "soulver-cli" do
   desc "Standalone cli for the Soulver calculation engine"
   homepage "https://github.com/soulverteam/Soulver-CLI"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   binary "soulver"

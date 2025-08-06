@@ -7,8 +7,6 @@ cask "semulov" do
   desc "Access mounted and unmounted volumes from the menubar"
   homepage "https://github.com/kainjow/Semulov"
 
-  no_autobump! because: :requires_manual_review
-
   app "Semulov.app"
 
   zap trash: "~/Library/Preferences/com.kainjow.Semulov.plist"

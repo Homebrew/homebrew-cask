@@ -7,8 +7,6 @@ cask "scriptql" do
   desc "AppleScript Quick Look plugin"
   homepage "https://kainjow.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-15", because: :unmaintained
 
   qlplugin "ScriptQL.qlgenerator"

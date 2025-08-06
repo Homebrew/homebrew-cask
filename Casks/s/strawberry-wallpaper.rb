@@ -13,8 +13,6 @@ cask "strawberry-wallpaper" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Strawberry Wallpaper.app"
 
   caveats do

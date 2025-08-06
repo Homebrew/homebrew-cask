@@ -8,8 +8,6 @@ cask "slic3r" do
   desc "3D printing toolbox"
   homepage "https://slic3r.org/"
 
-  no_autobump! because: :requires_manual_review
-
   # https://github.com/slic3r/Slic3r/issues/5187
   disable! date: "2024-09-08", because: :unmaintained
 

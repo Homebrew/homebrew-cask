@@ -23,8 +23,6 @@ cask "studiolinkstandalone" do
     regex(%r{href=.*?/releases/v?(\d+(?:\.\d+)+)-stable/macos}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "StudioLinkStandalone.app"
 
   zap trash: "~/Library/Saved Application State/link.studio.standalone.savedState"

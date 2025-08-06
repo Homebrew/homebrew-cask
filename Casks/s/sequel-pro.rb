@@ -8,8 +8,6 @@ cask "sequel-pro" do
   desc "MySQL/MariaDB database management platform"
   homepage "https://www.sequelpro.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued, replacement_cask: "sequel-ace"
 
   app "Sequel Pro.app"

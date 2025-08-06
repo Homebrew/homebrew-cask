@@ -13,8 +13,6 @@ cask "smlnj" do
     regex(%r{href=.*?/smlnj-amd64-(\d+(?:\.\d+)*)\.pkg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "smlnj-amd64-#{version}.pkg"
 
   uninstall pkgutil: "org.smlnj.amd64.pkg"

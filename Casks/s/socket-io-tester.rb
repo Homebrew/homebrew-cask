@@ -6,8 +6,6 @@ cask "socket-io-tester" do
   name "socket-io-tester.app"
   homepage "https://github.com/AppSaloon/socket.io-tester"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "socket-io-tester-darwin-x64/socket-io-tester.app"

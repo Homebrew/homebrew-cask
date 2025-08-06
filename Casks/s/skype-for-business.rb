@@ -7,8 +7,6 @@ cask "skype-for-business" do
   desc "Microsofts instant messaging enterprise software"
   homepage "https://www.microsoft.com/en-us/download/details.aspx?id=54108"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-05-05", because: :discontinued
 
   auto_updates true

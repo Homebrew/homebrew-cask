@@ -13,8 +13,6 @@ cask "script-debugger" do
     regex(/href=.*?ScriptDebugger[._-]?v?(\d+(?:\.\d+)+(?:-\d+A\d+)?)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Script Debugger.app"

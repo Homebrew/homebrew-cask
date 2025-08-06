@@ -7,8 +7,6 @@ cask "syncalicious" do
   desc "Backup and synchronise preferences across multiple machines"
   homepage "https://github.com/zenangst/Syncalicious"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-04-22", because: :unmaintained
 
   depends_on macos: ">= :mojave"

@@ -16,8 +16,6 @@ cask "soapui" do
     regex(%r{href=.*?/SoapUI[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
     # For future Cask maintainers, if any of these variables

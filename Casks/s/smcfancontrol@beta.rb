@@ -12,8 +12,6 @@ cask "smcfancontrol@beta" do
     regex(/^v?(\d+(?:\.\d+)+)[^ß]?/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "smcfancontrol"
 
   app "smcFanControl.app"

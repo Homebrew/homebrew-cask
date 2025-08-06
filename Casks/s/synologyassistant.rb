@@ -14,8 +14,6 @@ cask "synologyassistant" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "SynologyAssistant.app"
 
   zap trash: "~/Library/Preferences/com.synology.DSAssistant.plist"

@@ -6,8 +6,6 @@ cask "shades" do
   name "Shades"
   homepage "https://www.charcoaldesign.co.uk/shades"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-11-01", because: :unmaintained
 
   prefpane "Shades Preferences.prefPane"

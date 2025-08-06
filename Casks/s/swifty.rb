@@ -8,8 +8,6 @@ cask "swifty" do
   desc "Offline password manager tool"
   homepage "https://getswifty.pro/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 

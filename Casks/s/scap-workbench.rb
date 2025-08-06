@@ -8,8 +8,6 @@ cask "scap-workbench" do
   desc "SCAP Scanner And Tailoring Graphical User Interface"
   homepage "https://www.open-scap.org/tools/scap-workbench/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-04", because: :unmaintained
 
   depends_on macos: ">= :sierra"

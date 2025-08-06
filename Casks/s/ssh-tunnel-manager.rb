@@ -8,8 +8,6 @@ cask "ssh-tunnel-manager" do
   desc "Application for managing SSH tunnels"
   homepage "https://tynsoe.org/stm/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-06", because: :unmaintained
 
   app "SSH Tunnel Manager.app"

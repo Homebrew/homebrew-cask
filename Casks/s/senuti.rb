@@ -7,8 +7,6 @@ cask "senuti" do
   desc "Transfers songs, playlists, or videos from an iPod to a computer"
   homepage "https://fadingred.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Senuti.app"

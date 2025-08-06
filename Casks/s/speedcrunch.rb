@@ -7,8 +7,6 @@ cask "speedcrunch" do
   name "SpeedCrunch"
   homepage "https://heldercorreia.bitbucket.io/speedcrunch/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-29", because: :unmaintained
 
   app "SpeedCrunch.app"

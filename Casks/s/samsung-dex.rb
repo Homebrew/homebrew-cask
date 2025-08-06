@@ -7,8 +7,6 @@ cask "samsung-dex" do
   desc "Extend some Samsung devices into a desktop-like experience"
   homepage "https://www.samsung.com/us/explore/dex/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "Install Samsung DeX.pkg"

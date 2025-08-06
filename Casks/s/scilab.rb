@@ -22,8 +22,6 @@ cask "scilab" do
   desc "Software for numerical computation"
   homepage "https://www.scilab.org/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "scilab-#{version}.app"

@@ -16,8 +16,6 @@ cask "stack-stack" do
   desc "Workspace to manage all your productivity apps from one place"
   homepage "https://getstack.app/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-30", because: :no_longer_available
 
   auto_updates true

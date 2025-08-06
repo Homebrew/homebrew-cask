@@ -44,8 +44,6 @@ cask "stolendata-mpv" do
   desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io/"
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with formula: "mpv"
   depends_on macos: ">= :mojave"
 

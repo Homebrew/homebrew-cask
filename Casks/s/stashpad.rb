@@ -11,8 +11,6 @@ cask "stashpad" do
   desc "Notes app for collaborative work"
   homepage "https://www.stashpad.com/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Stashpad.app"

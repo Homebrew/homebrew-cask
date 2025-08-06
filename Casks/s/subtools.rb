@@ -12,8 +12,6 @@ cask "subtools" do
     regex(/href=.*?subtools[._-]?v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "subtools#{version}/SUBtools.app"
 
   zap trash: [

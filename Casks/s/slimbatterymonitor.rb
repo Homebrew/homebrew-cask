@@ -6,8 +6,6 @@ cask "slimbatterymonitor" do
   name "SlimBatteryMonitor"
   homepage "https://www.orange-carb.org/SBM/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-25", because: :unmaintained
 
   app "SlimBatteryMonitor.app"

@@ -7,8 +7,6 @@ cask "screencast" do
   desc "Simple screen video capture application"
   homepage "https://github.com/soh335/Screencast"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-08", because: :unmaintained
 
   app "Screencast.app"

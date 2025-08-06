@@ -8,8 +8,6 @@ cask "sensiblesidebuttons" do
   desc "Utilise mouse side navigation buttons"
   homepage "https://sensible-side-buttons.archagon.net/"
 
-  no_autobump! because: :requires_manual_review
-
   app "SensibleSideButtons.app"
 
   zap trash: "~/Library/Preferences/net.archagon.sensible-side-buttons.plist"

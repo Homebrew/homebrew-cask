@@ -13,8 +13,6 @@ cask "sqlpro-for-mssql" do
     strategy :header_match
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "SQLPro for MSSQL.app"

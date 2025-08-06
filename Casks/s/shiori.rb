@@ -7,8 +7,6 @@ cask "shiori" do
   desc "Pinboard and Delicious client that allows you to find and add bookmarks"
   homepage "https://aki-null.net/shiori/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "Shiori.app"

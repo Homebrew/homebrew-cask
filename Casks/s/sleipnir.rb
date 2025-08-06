@@ -12,8 +12,6 @@ cask "sleipnir" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Sleipnir.app"
 
   caveats do

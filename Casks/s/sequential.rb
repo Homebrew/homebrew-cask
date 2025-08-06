@@ -7,8 +7,6 @@ cask "sequential" do
   desc "Displays folders and archives of images and PDF files"
   homepage "http://sequentialx.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-11", because: :unmaintained
 
   app "Sequential.app"

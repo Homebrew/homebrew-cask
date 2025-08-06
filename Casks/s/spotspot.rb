@@ -8,8 +8,6 @@ cask "spotspot" do
   desc "Spotify mini-player"
   homepage "https://will-stone.github.io/SpotSpot/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "SpotSpot.app"

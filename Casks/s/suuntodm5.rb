@@ -13,8 +13,6 @@ cask "suuntodm5" do
     regex(/Suunto\s*DM5\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "SuuntoDM5.app"
