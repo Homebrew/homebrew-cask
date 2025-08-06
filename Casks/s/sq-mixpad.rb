@@ -19,8 +19,6 @@ cask "sq-mixpad" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "SQ MixPad #{version.csv.first}.app"
