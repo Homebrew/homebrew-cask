@@ -15,8 +15,6 @@ cask "zoom-m3-edit-and-play" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
   container nested: "M3_Edit_&_Play_Mac_v#{version.csv.first}_E/ZOOM M3 Edit & Play #{version.csv.first} Installer.dmg"
 
