@@ -7,8 +7,6 @@ cask "rightzoom" do
   desc "Changes the way the full screen button acts"
   homepage "https://blazingtools.com/right_zoom_mac.html"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-30", because: :no_longer_available
 
   app "RightZoom.app"
