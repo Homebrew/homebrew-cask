@@ -8,8 +8,6 @@ cask "taskexplorer" do
   desc "Tool to explore all the running tasks (processes)"
   homepage "https://objective-see.org/products/taskexplorer.html"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "TaskExplorer.app"
