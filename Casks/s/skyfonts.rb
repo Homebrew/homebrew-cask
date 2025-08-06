@@ -12,8 +12,6 @@ cask "skyfonts" do
     regex(%r{href=.*?/Monotype_SkyFonts_Mac64_(\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer manual: "Install SkyFonts.app"
 
   uninstall launchctl: "com.mti.Monotype-SkyFontsHelper",
