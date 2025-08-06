@@ -7,8 +7,6 @@ cask "welly" do
   desc "BBS client"
   homepage "https://github.com/clyang/welly"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "Welly.app"
