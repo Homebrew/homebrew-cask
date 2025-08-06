@@ -8,8 +8,6 @@ cask "universal-android-debloater" do
   desc "GUI which uses ADB to debloat non-rooted Android devices"
   homepage "https://github.com/0x192/universal-android-debloater"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on cask: "android-platform-tools"
 
