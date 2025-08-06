@@ -12,8 +12,6 @@ cask "shapes" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Shapes.app"
