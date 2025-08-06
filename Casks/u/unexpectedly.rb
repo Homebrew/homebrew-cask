@@ -12,8 +12,6 @@ cask "unexpectedly" do
     regex(%r{Version</b>:</td><td>(\d+(?:\.\d+)*\w)}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Unexpectedly.app"

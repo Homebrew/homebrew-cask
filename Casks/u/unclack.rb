@@ -12,8 +12,6 @@ cask "unclack" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/Unclack\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "Unclack.app"

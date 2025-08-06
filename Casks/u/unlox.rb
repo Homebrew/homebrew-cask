@@ -7,8 +7,6 @@ cask "unlox" do
   desc "Unlock your computer with your fingerprint"
   homepage "https://unlox.it/get"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-02", because: :unmaintained
 
   depends_on macos: ">= :high_sierra"

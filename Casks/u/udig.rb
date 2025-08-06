@@ -6,8 +6,6 @@ cask "udig" do
   name "uDig"
   homepage "http://udig.refractions.net/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-01", because: :unmaintained
 
   suite "udig"

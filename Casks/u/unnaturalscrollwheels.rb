@@ -7,8 +7,6 @@ cask "unnaturalscrollwheels" do
   desc "Tool to invert scroll direction for physical scroll wheels"
   homepage "https://github.com/ther0n/UnnaturalScrollWheels"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "UnnaturalScrollWheels.app"

@@ -7,8 +7,6 @@ cask "ukrainian-unicode-layout" do
   desc "Installer for Ukrainian Unicode layout"
   homepage "https://github.com/korzhyk/OSX-Ukrainian-Unicode-Layout"
 
-  no_autobump! because: :requires_manual_review
-
   keyboard_layout "macOS-Ukrainian-Unicode-Layout-#{version}"
 
   # No zap stanza required

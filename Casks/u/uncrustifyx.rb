@@ -7,8 +7,6 @@ cask "uncrustifyx" do
   desc "Uncrustify utility and documentation browser"
   homepage "https://github.com/ryanmaxwell/UncrustifyX"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-09", because: :unmaintained
 
   app "UncrustifyX.app"

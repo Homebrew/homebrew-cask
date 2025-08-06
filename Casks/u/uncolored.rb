@@ -8,8 +8,6 @@ cask "uncolored" do
   desc "Rich text (HTML & Markdown) editor that saves documents with themes"
   homepage "https://n457.github.io/Uncolored/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-12", because: :unmaintained
 
   app "Uncolored.app"

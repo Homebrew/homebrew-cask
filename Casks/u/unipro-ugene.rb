@@ -8,8 +8,6 @@ cask "unipro-ugene" do
   desc "Free open-source cross-platform bioinformatics software"
   homepage "https://ugene.net/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Unipro UGENE.app"

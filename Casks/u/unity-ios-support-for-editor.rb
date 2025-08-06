@@ -12,8 +12,6 @@ cask "unity-ios-support-for-editor" do
     cask "unity"
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on cask: "unity"
 
   pkg "UnitySetup-iOS-Support-for-Editor-#{version.csv.first}.pkg"
