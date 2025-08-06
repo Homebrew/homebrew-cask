@@ -8,8 +8,6 @@ cask "subsync" do
   desc "Subtitle speech synchroniser"
   homepage "https://subsync.online/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-04", because: :unmaintained
 
   app "subsync.app"
