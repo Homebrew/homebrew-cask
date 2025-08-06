@@ -6,8 +6,6 @@ cask "spotify-now-playing" do
   name "Spotify - now playing"
   homepage "https://github.com/davicorreiajr/spotify-now-playing"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-25", because: :unmaintained
 
   app "Spotify - now playing.app"
