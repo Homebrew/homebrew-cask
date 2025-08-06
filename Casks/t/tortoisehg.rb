@@ -13,8 +13,6 @@ cask "tortoisehg" do
     regex(/TortoiseHg-(\d+(?:\.\d+)*)-mac-x64-qt5\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "TortoiseHg.app"
 
   zap trash: "~/.config/tortoisehg.org"
