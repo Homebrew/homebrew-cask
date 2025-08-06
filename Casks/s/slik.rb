@@ -7,8 +7,6 @@ cask "slik" do
   desc "Apps and web apps launcher"
   homepage "https://apps.inspira.io/slik/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-06", because: :unmaintained
 
   auto_updates true
