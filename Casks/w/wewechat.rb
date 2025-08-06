@@ -7,8 +7,6 @@ cask "wewechat" do
   desc "Unofficial WeChat client"
   homepage "https://github.com/trazyn/weweChat"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-07", because: :discontinued
   disable! date: "2025-07-07", because: :discontinued
 
