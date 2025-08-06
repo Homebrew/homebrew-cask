@@ -7,8 +7,6 @@ cask "upm" do
   desc "Password manager"
   homepage "https://upm.sourceforge.net/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-30", because: :unmaintained
 
   app "upm-mac-#{version}/UPM.app"
