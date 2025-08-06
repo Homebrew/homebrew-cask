@@ -23,8 +23,6 @@ cask "sanesidebuttons" do
   desc "Menu bar app that enables system-wide navigation using side mouse buttons"
   homepage "https://janhuelsmann.com/sanesidebuttons"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :ventura"
 
   app "SaneSideButtons.app"
