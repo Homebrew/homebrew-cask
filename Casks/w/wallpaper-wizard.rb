@@ -13,8 +13,6 @@ cask "wallpaper-wizard" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "Wallpaper Wizard.app"
