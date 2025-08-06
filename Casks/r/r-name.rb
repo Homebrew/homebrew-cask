@@ -6,8 +6,6 @@ cask "r-name" do
   name "R-Name"
   homepage "https://www.jacek-dom.net/software/R-Name/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-25", because: :unmaintained
 
   app "R-Name.app"
