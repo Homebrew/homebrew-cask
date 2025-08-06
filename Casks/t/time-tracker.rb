@@ -7,8 +7,6 @@ cask "time-tracker" do
   desc "Time tracking app"
   homepage "https://github.com/rburgst/time-tracker-mac"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-14", because: :unmaintained
 
   app "Time Tracker.app"
