@@ -14,8 +14,6 @@ cask "synology-note-station-client" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Synology Note Station Client.app"
 
   zap trash: [
