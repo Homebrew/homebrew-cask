@@ -13,8 +13,6 @@ cask "redquits" do
     regex(/RedQuits\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "RedQuits_v#{version.major}.pkg"
 
   uninstall pkgutil: "com.carsten-mielke.RedQuits"
