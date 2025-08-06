@@ -6,8 +6,6 @@ cask "recovery-disk-assistant" do
   name "Recovery Disk Assistant"
   homepage "https://support.apple.com/kb/DL1433"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-03-20", because: :unmaintained
   disable! date: "2025-03-20", because: :unmaintained
 

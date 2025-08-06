@@ -7,8 +7,6 @@ cask "ringcentral-meetings" do
   desc "Video conferencing, screen sharing, and team messaging platform"
   homepage "https://www.ringcentral.com/online-meetings/overview.html"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-07-11", because: :discontinued
   disable! date: "2025-07-11", because: :discontinued
 

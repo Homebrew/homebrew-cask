@@ -8,8 +8,6 @@ cask "remotix-agent" do
   desc "Remote desktop and monitoring solution"
   homepage "https://remotixcloud.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-01", because: :discontinued
 
   auto_updates true

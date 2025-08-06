@@ -24,8 +24,6 @@ cask "retroshare" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "retroshare.app"
 
   zap trash: "~/.retroshare"

@@ -13,8 +13,6 @@ cask "raze" do
     regex(/href=.*?raze[._-]macos[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "Raze.app"

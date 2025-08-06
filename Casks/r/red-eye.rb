@@ -8,8 +8,6 @@ cask "red-eye" do
   desc "Tool to prevent the system from going into sleep mode"
   homepage "https://www.hexedbits.com/redeye/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-01-21", because: :no_longer_available
   disable! date: "2025-01-22", because: :no_longer_available
 

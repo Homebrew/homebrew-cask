@@ -14,8 +14,6 @@ cask "rode-unify" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "RØDE Unify (#{version}).pkg"
 
   uninstall pkgutil: "com.rodeunify.installer"

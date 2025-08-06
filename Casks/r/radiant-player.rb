@@ -8,8 +8,6 @@ cask "radiant-player" do
   desc "App wrapper for Google Play Music"
   homepage "https://radiant-player.github.io/radiant-player-mac/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Radiant Player.app"

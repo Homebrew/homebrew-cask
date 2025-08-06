@@ -12,8 +12,6 @@ cask "redream" do
     regex(/redream\.x86_64-mac-v(\d+(?:\.\d+)*)\.t/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "redream.app"
 
   zap trash: [

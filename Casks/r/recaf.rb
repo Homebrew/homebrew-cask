@@ -8,8 +8,6 @@ cask "recaf" do
   desc "Java bytecode editor"
   homepage "https://www.coley.software/Recaf"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   container type: :naked
 

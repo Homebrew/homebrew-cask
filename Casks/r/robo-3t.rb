@@ -8,8 +8,6 @@ cask "robo-3t" do
   desc "MongoDB management tool"
   homepage "https://robomongo.org/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Robo 3T.app"

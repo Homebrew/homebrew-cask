@@ -12,8 +12,6 @@ cask "rawtherapee" do
     regex(/href=.*?RawTherapee[._-]macOS.+(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
   container nested: "RawTherapee_macOS_15.4_Universal_#{version}_folder/RawTherapee_macOS_15.4_Universal_#{version}.dmg"
 
