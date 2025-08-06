@@ -7,8 +7,6 @@ cask "servpane" do
   desc "Launchd menu bar app"
   homepage "https://github.com/aderyabin/ServPane"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-12-30", because: :unmaintained
 
   app "ServPane.app"
