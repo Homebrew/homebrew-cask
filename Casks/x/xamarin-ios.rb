@@ -7,8 +7,6 @@ cask "xamarin-ios" do
   desc "Gives .NET developers complete access to iOS, watchOS, and tvOS SDK's"
   homepage "https://dotnet.microsoft.com/en-us/apps/xamarin"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-20", because: :discontinued
 
   pkg "xamarin.ios-#{version.csv.first}.pkg"
