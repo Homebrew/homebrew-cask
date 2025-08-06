@@ -7,8 +7,6 @@ cask "shiftit" do
   desc "Tool to manage the size and position of windows"
   homepage "https://github.com/fikovnik/ShiftIt/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
