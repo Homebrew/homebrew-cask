@@ -7,8 +7,6 @@ cask "taskwarrior-pomodoro" do
   desc "Pomodoro timer for Taskwarrior"
   homepage "https://github.com/coddingtonbear/taskwarrior-pomodoro"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-03-02", because: :unmaintained
 
   app "Taskwarrior Pomodoro.app"
