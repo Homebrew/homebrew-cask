@@ -10,8 +10,6 @@ cask "scihubeva" do
   desc "Cross-platform Sci-Hub GUI application powered by Python and Qt"
   homepage "https://github.com/leovan/SciHubEVA"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :big_sur"
 
