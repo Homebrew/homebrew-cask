@@ -8,8 +8,6 @@ cask "the-cheat" do
   desc "Game trainer"
   homepage "https://github.com/chazmcgarvey/thecheat"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-09", because: :unmaintained
 
   app "The Cheat.app"
