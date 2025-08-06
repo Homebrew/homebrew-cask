@@ -7,8 +7,6 @@ cask "tomighty" do
   desc "Pomodoro desktop timer"
   homepage "https://github.com/tomighty/tomighty-osx"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-08", because: :unmaintained
 
   app "Tomighty.app"
