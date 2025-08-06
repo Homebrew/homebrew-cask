@@ -12,8 +12,6 @@ cask "zerobranestudio" do
     regex(/href=.*?ZeroBraneStudioEduPack[._-]?v?(\d+(?:\.\d+)+)[._-]macos\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "ZeroBraneStudio.app"
 
   zap trash: "~/Library/Preferences/ZeroBraneStudio Preferences"
