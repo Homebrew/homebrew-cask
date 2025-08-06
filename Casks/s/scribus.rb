@@ -24,8 +24,6 @@ cask "scribus" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Scribus.app"
 
   zap trash: [
