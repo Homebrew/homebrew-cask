@@ -7,8 +7,6 @@ cask "react-native-debugger" do
   desc "Standalone app for debugging React Native apps"
   homepage "https://github.com/jhen0409/react-native-debugger"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
