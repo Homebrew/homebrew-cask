@@ -11,8 +11,6 @@ cask "storyboarder" do
   desc "Visualise a story as fast you can draw stick figures"
   homepage "https://wonderunit.com/storyboarder/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Storyboarder.app"
 
   zap trash: [
