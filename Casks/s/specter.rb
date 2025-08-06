@@ -16,8 +16,6 @@ cask "specter" do
     regex(/href=.*?Specter[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "Specter.app"
