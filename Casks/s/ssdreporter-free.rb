@@ -12,8 +12,6 @@ cask "ssdreporter-free" do
     strategy :sparkle, &:short_version
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "SSDReporter.app"
