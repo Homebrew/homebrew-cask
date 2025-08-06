@@ -1,6 +1,6 @@
 cask "surfshark" do
-  version "4.22.0,3048"
-  sha256 "dd41147023f37f202e45056cefa608e7f4e66305ad7ef48b2e193ce1351ce5d2"
+  version "4.22.1,3053"
+  sha256 "ce76e18a6cef1ddcdc8ccdba0f9beea3c6411f3e88f8d48eb66b5cc3b8dd95bd"
 
   url "https://downloads.surfshark.com/macOS/stable/#{version.csv.first}/#{version.csv.second}/Surfshark.dmg"
   name "Surfshark"
