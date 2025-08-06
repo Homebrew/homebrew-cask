@@ -11,8 +11,6 @@ cask "sencha" do
     skip "No reliable way to get version info"
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "SenchaCmd-#{version}-osx.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-Djava.awt.headless=true", "-q", "-dir", "/opt/Sencha/Cmd/#{version}"],
