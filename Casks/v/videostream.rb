@@ -7,8 +7,6 @@ cask "videostream" do
   desc "Stream media from your computer to Chromecast"
   homepage "https://getvideostream.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "Videostream.pkg"
