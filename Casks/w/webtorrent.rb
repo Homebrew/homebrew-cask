@@ -8,8 +8,6 @@ cask "webtorrent" do
   desc "Torrent streaming application"
   homepage "https://webtorrent.io/desktop/"
 
-  no_autobump! because: :requires_manual_review
-
   app "WebTorrent.app"
 
   zap trash: [
