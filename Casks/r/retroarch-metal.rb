@@ -12,8 +12,6 @@ cask "retroarch-metal" do
     cask "retroarch"
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: "retroarch"
   depends_on macos: ">= :high_sierra"
 
