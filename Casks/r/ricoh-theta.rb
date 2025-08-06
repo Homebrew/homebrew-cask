@@ -13,8 +13,6 @@ cask "ricoh-theta" do
     strategy :electron_builder
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "RICOH THETA.app"
 
   zap trash: [
