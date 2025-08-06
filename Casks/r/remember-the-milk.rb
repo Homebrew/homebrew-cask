@@ -21,8 +21,6 @@ cask "remember-the-milk" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Remember The Milk.app"
