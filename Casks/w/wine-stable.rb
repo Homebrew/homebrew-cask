@@ -31,8 +31,6 @@ cask "wine-stable" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   conflicts_with cask: [
     "wine@devel",
     "wine@staging",
