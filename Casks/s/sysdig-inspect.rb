@@ -12,8 +12,6 @@ cask "sysdig-inspect" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Sysdig Inspect-darwin-x64/Sysdig Inspect.app"
 
   zap trash: [
