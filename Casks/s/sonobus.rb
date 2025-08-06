@@ -12,8 +12,6 @@ cask "sonobus" do
     regex(%r{href=.*?/sonobus[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "SonoBus Installer.pkg"
 
   uninstall pkgutil: [
