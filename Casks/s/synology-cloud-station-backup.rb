@@ -7,8 +7,6 @@ cask "synology-cloud-station-backup" do
   desc "Back up files to a centralised Synology NAS"
   homepage "https://www.synology.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-08", because: :discontinued
 
   auto_updates true
