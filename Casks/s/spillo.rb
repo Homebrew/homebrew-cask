@@ -7,8 +7,6 @@ cask "spillo" do
   name "Spillo"
   homepage "https://bananafishsoftware.com/products/spillo/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-10-14", because: :unmaintained
 
   app "Spillo.app"
