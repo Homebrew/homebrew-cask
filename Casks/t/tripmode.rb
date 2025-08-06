@@ -36,8 +36,6 @@ cask "tripmode" do
   desc "Control your data usage on slow or expensive networks"
   homepage "https://www.tripmode.ch/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   app "TripMode.app"
