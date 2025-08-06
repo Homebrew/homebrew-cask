@@ -7,8 +7,6 @@ cask "scala-ide" do
   name "Scala IDE"
   homepage "https://scala-ide.org/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-01", because: :unmaintained
 
   # Renamed for clarity: app name is inconsistent with its branding.
