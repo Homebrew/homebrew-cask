@@ -7,8 +7,6 @@ cask "simsim" do
   desc "Tool to explore iOS application folders in Terminal or Finder"
   homepage "https://github.com/dsmelov/simsim/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "SimSim.app"
