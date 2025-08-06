@@ -7,8 +7,6 @@ cask "wonderfultools-screensaver" do
   desc "Screensaver based on opening video from Apple's September 2019 event"
   homepage "https://github.com/aidev1065/Wonderful-Tools-Screensaver/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   screen_saver "WonderfulTools.saver"
