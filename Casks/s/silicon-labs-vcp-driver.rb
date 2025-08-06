@@ -12,8 +12,6 @@ cask "silicon-labs-vcp-driver" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   container nested: "macOS_VCP_Driver/SiLabsUSBDriverDisk.dmg"
 
   installer manual: "Install CP210x VCP Driver.app"
