@@ -13,8 +13,6 @@ cask "wormhole" do
     regex(/<div[^>]*class=["']?version[^>]*>\s*<div[^>]*>\s*v?(\d+(?:\.\d+)+)\s*</i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Wormhole.app"
 
   zap trash: "~/Library/Saved Application State/er.Wormhole.savedState"
