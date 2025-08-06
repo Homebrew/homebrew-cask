@@ -7,8 +7,6 @@ cask "ultimate-control" do
   desc "Take control of your computer wirelessly"
   homepage "https://www.negusoft.com/ucontrol/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-01", because: :unmaintained
 
   app "Ultimate Control.app"
