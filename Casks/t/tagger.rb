@@ -8,8 +8,6 @@ cask "tagger" do
   desc "Music metadata editor supporting batch edits and importing VGMdb data"
   homepage "https://bilalh.github.io/projects/tagger/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Tagger.app"
