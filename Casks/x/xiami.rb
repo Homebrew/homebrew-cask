@@ -8,8 +8,6 @@ cask "xiami" do
   desc "Music content management and distribution"
   homepage "https://www.xiami.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-04-05", because: :discontinued
 
   app "虾米音乐.app"
