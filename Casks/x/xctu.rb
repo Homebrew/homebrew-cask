@@ -18,8 +18,6 @@ cask "xctu" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   installer script: {
     executable: "#{staged_path}/xctu_installer.app/Contents/MacOS/osx-x86_64",
     args:       ["--mode", "unattended"],
