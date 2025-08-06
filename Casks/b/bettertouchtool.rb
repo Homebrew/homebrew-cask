@@ -1,6 +1,6 @@
 cask "bettertouchtool" do
-  version "5.548,2025080602"
-  sha256 "836d801b55900e7080b01e82395c416551d1f55face27670df33b12f76a9ed07"
+  version "5.444,2025052805"
+  sha256 "3221ea74fa2ac66658755f3739ee241ede5237e63860b053d7ff78b785011434"
 
   url "https://folivora.ai/releases/btt#{version.csv.first}-#{version.csv.second}.zip"
   name "BetterTouchTool"
@@ -8,23 +8,12 @@ cask "bettertouchtool" do
   homepage "https://folivora.ai/"
 
   livecheck do
-    url "https://folivora.ai/releases/"
-    regex(/btt(\d+(?:[._-]\d+)*)\.zip.*?(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})/i)
-    strategy :page_match do |page, regex|
-      current_version, current_build = version.csv
-      version, build = page.scan(regex).max_by { |match| Time.parse(match[1]) }&.first&.split("-", 2)
-
-      # Throttle updates to every 5th release.
-      if build && current_build.to_i + 5 > build.to_i
-        version = current_version
-        build = current_build
-      end
-
-      "#{version},#{build}"
-    end
+    url "https://updates.folivora.ai/appcast_macupdater.xml"
+    strategy :sparkle
   end
 
   auto_updates true
+  conflicts_with cask: "bettertouchtool@alpha"
   depends_on macos: ">= :big_sur"
 
   app "BetterTouchTool.app"
