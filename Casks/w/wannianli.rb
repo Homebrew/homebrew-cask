@@ -7,8 +7,6 @@ cask "wannianli" do
   desc "Chinese lunar calendar on the menu bar"
   homepage "https://github.com/zfdang/chinese-lunar-calendar-for-mac/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :el_capitan"
 
   app "WanNianLi.app"
