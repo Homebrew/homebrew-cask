@@ -12,8 +12,6 @@ cask "vnc-server" do
     regex(%r{href=.*?/VNC[._-]Server[._-]v?(\d+(?:\.\d+)*)[._-]MacOSX[._-]universal\.pkg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "VNC-Server-#{version}-MacOSX-universal.pkg"
 
   uninstall_preflight do
