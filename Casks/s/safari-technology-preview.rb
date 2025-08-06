@@ -40,8 +40,6 @@ cask "safari-technology-preview" do
   desc "Web browser"
   homepage "https://developer.apple.com/safari/resources/"
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :sequoia"
 
