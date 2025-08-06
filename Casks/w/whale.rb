@@ -7,8 +7,6 @@ cask "whale" do
   desc "Unofficial Trello app"
   homepage "https://github.com/1000ch/whale"
 
-  no_autobump! because: :requires_manual_review
-
   app "Whale.app"
 
   zap trash: [
