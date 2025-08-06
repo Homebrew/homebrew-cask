@@ -12,8 +12,6 @@ cask "ripcord" do
     regex(%r{/Ripcord_Mac_(\d+(?:\.\d+)*)\.zip}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   app "Ripcord.app"
