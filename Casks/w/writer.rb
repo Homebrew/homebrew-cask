@@ -7,8 +7,6 @@ cask "writer" do
   desc "Screenwriting app based on the fountain language"
   homepage "https://github.com/HendrikNoeller/Writer"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-06", because: :unmaintained
 
   app "Writer.app"
