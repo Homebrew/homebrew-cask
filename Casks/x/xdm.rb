@@ -8,8 +8,6 @@ cask "xdm" do
   desc "Tool to increase download speed"
   homepage "https://xtremedownloadmanager.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-01-26", because: :unmaintained
   disable! date: "2025-01-30", because: :unmaintained
 

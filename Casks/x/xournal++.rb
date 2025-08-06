@@ -10,8 +10,6 @@ cask "xournal++" do
   desc "Handwriting notetaking software"
   homepage "https://github.com/xournalpp/xournalpp"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "Xournal++.app"

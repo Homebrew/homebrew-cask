@@ -12,8 +12,6 @@ cask "xonotic" do
     regex(%r{href=.*?/xonotic[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   suite "Xonotic"
 
   zap trash: "~/Library/Application Support/xonotic"

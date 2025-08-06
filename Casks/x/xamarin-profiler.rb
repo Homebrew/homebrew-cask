@@ -8,8 +8,6 @@ cask "xamarin-profiler" do
   desc "Mono log profiler graphical interface"
   homepage "https://learn.microsoft.com/en-us/xamarin/tools/profiler/?tabs=macos"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-08-26", because: :no_longer_available
 
   pkg "profiler-mac-#{version.csv.first}-#{version.csv.second}.pkg"

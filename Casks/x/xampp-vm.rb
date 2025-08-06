@@ -8,8 +8,6 @@ cask "xampp-vm" do
   desc "Virtual machine with apache distribution containing MySQL, PHP, and Perl"
   homepage "https://www.apachefriends.org/index.html"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "xampp-osx-#{version}-vm.app"
