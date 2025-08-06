@@ -6,8 +6,6 @@ cask "uxprotect" do
   name "UXProtect"
   homepage "https://digitasecurity.com/product/uxprotect/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-30", because: :unmaintained
 
   auto_updates true
