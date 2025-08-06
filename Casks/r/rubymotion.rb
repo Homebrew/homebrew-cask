@@ -7,8 +7,6 @@ cask "rubymotion" do
   desc "Write cross-platform native apps in Ruby"
   homepage "http://www.rubymotion.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-11", because: :unmaintained
 
   installer manual: "RubyMotion Installer.app"
