@@ -10,8 +10,6 @@ cask "ultimate-vocal-remover" do
   desc "Removes vocals from audio files"
   homepage "https://github.com/Anjok07/ultimatevocalremovergui/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :big_sur"
 
   app "Ultimate Vocal Remover.app"
