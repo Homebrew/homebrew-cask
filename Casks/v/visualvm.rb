@@ -8,8 +8,6 @@ cask "visualvm" do
   desc "All-in-One Java Troubleshooting Tool"
   homepage "https://visualvm.github.io/"
 
-  no_autobump! because: :requires_manual_review
-
   app "VisualVM.app"
 
   zap trash: [
