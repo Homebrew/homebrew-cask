@@ -12,8 +12,6 @@ cask "revolver-office" do
     regex(/>\s*Revolver\s+v?(\d+(?:\.\d+)+)\s*</i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :high_sierra"
 
   app "Revolver Office.app"
