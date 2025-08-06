@@ -8,8 +8,6 @@ cask "waterfox-classic" do
   desc "Web browser"
   homepage "https://classic.waterfox.net/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-09", because: :unmaintained
 
   app "Waterfox Classic.app"
