@@ -10,8 +10,6 @@ cask "sonixd" do
   desc "Desktop client for Subsonic-API and Jellyfin music servers"
   homepage "https://github.com/jeffvli/sonixd"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-30", because: :discontinued
 
   app "Sonixd.app"
