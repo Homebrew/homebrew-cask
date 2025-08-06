@@ -12,8 +12,6 @@ cask "warsow" do
     regex(%r{href=.*?/warsow-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Warsow.app"
 
   zap trash: [
