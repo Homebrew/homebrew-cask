@@ -8,8 +8,6 @@ cask "sourcetrail" do
   desc "Code source explorer"
   homepage "https://www.sourcetrail.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Sourcetrail.app"
