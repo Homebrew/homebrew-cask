@@ -7,8 +7,6 @@ cask "simple-comic" do
   desc "Comic viewer/reader"
   homepage "https://github.com/MaddTheSane/Simple-Comic"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :mojave"
 
   app "Simple Comic.app"
