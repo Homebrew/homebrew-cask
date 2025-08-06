@@ -12,8 +12,6 @@ cask "switchresx" do
     regex(/latest\s+version\s+\(v?(\d+(?:\.\d+)+)\)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
 
   prefpane "SwitchResX Installer.app/Contents/Plugins/SwitchResX.prefPane"
