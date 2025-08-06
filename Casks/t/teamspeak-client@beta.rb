@@ -13,8 +13,6 @@ cask "teamspeak-client@beta" do
     regex(%r{href=.*?/(\d+(?:\.\d+)+[^/]*)/teamspeak[._-]client\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   depends_on macos: ">= :sierra"
 
