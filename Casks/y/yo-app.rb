@@ -7,8 +7,6 @@ cask "yo-app" do
   desc "Utility to emit Notification Center messages from the command-line"
   homepage "https://github.com/sheagcraig/yo"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "yo-#{version}.pkg"
