@@ -7,8 +7,6 @@ cask "shiba" do
   desc "Rich markdown live preview app with linter"
   homepage "https://github.com/rhysd/Shiba/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-11-16", because: :unmaintained
 
   app "Shiba-darwin-x64/Shiba.app"
