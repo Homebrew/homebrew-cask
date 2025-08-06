@@ -27,8 +27,6 @@ cask "tla+-toolbox" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "TLA+ Toolbox.app"
 
   caveats do
