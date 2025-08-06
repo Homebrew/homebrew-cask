@@ -12,8 +12,6 @@ cask "tdr-vos-slickeq" do
     regex(%r{latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "TDR VOS SlickEQ.pkg"
 
   uninstall pkgutil: [
