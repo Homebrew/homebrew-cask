@@ -7,8 +7,6 @@ cask "spechtlite" do
   desc "Rule-based proxy"
   homepage "https://github.com/zhuhaow/SpechtLite"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "SpechtLite.app"
