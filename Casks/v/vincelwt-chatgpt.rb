@@ -10,8 +10,6 @@ cask "vincelwt-chatgpt" do
   desc "Menu bar application for ChatGPT"
   homepage "https://github.com/vincelwt/chatgpt-mac"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-06-21", because: :unmaintained
 
   depends_on macos: ">= :high_sierra"

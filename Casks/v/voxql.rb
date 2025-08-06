@@ -7,8 +7,6 @@ cask "voxql" do
   desc "Quick Look generator for MagicaVoxel files"
   homepage "https://github.com/heptal/VoxQL"
 
-  no_autobump! because: :requires_manual_review
-
   qlplugin "VoxQL.qlgenerator"
 
   # No zap stanza required

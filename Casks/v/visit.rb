@@ -34,8 +34,6 @@ cask "visit" do
   desc "Visualisation and data analysis for mesh-based scientific data"
   homepage "https://wci.llnl.gov/simulation/computer-codes/visit"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "VisIt.app"

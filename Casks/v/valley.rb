@@ -12,8 +12,6 @@ cask "valley" do
     regex(%r{href=.*?/Unigine_Valley-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Valley.app"
 
   zap trash: [

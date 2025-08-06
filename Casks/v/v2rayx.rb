@@ -8,8 +8,6 @@ cask "v2rayx" do
   desc "GUI for v2ray-core"
   homepage "https://github.com/Cenmrev/V2RayX"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-02-21", because: :discontinued
   disable! date: "2025-02-22", because: :discontinued
 

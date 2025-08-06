@@ -13,8 +13,6 @@ cask "vip-access" do
     regex(/VIP\s+Access\s+for\s+Mac\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :sierra"
 
   pkg "VIP Access.pkg"

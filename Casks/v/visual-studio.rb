@@ -15,8 +15,6 @@ cask "visual-studio" do
   desc "Integrated development environment"
   homepage "https://visualstudio.microsoft.com/vs/mac/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-31", because: :discontinued
 
   auto_updates true

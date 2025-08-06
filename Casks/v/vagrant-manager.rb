@@ -7,8 +7,6 @@ cask "vagrant-manager" do
   name "Vagrant Manager"
   homepage "https://www.vagrantmanager.com/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Vagrant Manager.app"
 
   uninstall quit: "lanayo.Vagrant-Manager"

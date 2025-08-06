@@ -12,8 +12,6 @@ cask "ved" do
     regex(/href=.*?ved[ ._-]v?(\d+(?:\.\d+)+)[ ._-]mac\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Ved.app"
 
   zap trash: [

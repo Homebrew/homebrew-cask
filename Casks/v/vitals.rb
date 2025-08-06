@@ -7,8 +7,6 @@ cask "vitals" do
   desc "Tiny process monitor"
   homepage "https://github.com/hmarr/vitals/"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "Vitals.app"

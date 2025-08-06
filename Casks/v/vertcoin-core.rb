@@ -16,8 +16,6 @@ cask "vertcoin-core" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.

@@ -12,8 +12,6 @@ cask "vb-cable" do
     regex(%r{href=.*?/VBCable_MACDriver_Pack(\d+)\.zip}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   container nested: "VBCable_MACDriver_Pack#{version}.dmg"
 
   pkg "vb-cable-installer.pkg"
