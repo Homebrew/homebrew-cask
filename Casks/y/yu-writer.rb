@@ -8,8 +8,6 @@ cask "yu-writer" do
   desc "Markdown editor"
   homepage "https://ivarptr.github.io/yu-writer.site/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   app "Yu Writer.app"

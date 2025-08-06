@@ -10,8 +10,6 @@ cask "yggdrasil" do
   desc "End-to-end encrypted IPv6 networking to connect worlds"
   homepage "https://github.com/yggdrasil-network/yggdrasil-go"
 
-  no_autobump! because: :requires_manual_review
-
   pkg "yggdrasil-#{version}-macos-#{arch}.pkg"
 
   uninstall launchctl: "yggdrasil",

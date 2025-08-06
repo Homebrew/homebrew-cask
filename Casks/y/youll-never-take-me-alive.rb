@@ -8,8 +8,6 @@ cask "youll-never-take-me-alive" do
   desc "Utility to enhance the protection of encrypted data"
   homepage "https://github.com/iSECPartners/yontma-mac"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-09-09", because: :unmaintained
 
   app "You'll Never Take Me Alive!.app"

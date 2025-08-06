@@ -12,8 +12,6 @@ cask "yam-display" do
     strategy :sparkle
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "Yam Display.app"
 
   zap trash: [
