@@ -12,8 +12,6 @@ cask "serviio" do
     regex(%r{href=.*?/serviio-(\d+(?:\.\d+)+)-osx\.t}i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Serviio-#{version}.pkg"
 
   uninstall launchctl: "org.serviio.server",
