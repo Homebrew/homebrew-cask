@@ -46,7 +46,7 @@ jobs:
           CASKS: ${{ inputs.casks }}
         continue-on-error: true
         run: |
-          BREW_BUMP=(brew bump --no-fork --open-pr --casks --bump-synced)
+          BREW_BUMP=(brew bump --no-fork --open-pr --casks)
           if [[ -n "${CASKS-}" ]]; then
             xargs "${BREW_BUMP[@]}" <<<"${CASKS}"
           else
