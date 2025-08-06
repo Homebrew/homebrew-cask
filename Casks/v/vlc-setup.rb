@@ -12,8 +12,6 @@ cask "vlc-setup" do
     regex(/VLCSetup[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "VLC Setup.app"
 
   zap trash: [
