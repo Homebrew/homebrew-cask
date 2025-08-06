@@ -41,8 +41,6 @@ cask "silentknight" do
   desc "Automatically checks computer's security"
   homepage "https://eclecticlight.co/lockrattler-systhist/"
 
-  no_autobump! because: :requires_manual_review
-
   app "silentknight#{no_dot_version}/SilentKnight.app"
 
   zap trash: [
