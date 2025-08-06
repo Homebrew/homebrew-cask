@@ -8,10 +8,7 @@ cask "origin" do
   desc "Play PC games and connect with your friends"
   homepage "https://www.origin.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2025-08-06", because: :no_longer_available, replacement_cask: "ea"
 
   auto_updates true
 
