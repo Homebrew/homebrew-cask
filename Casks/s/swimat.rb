@@ -7,8 +7,6 @@ cask "swimat" do
   desc "Xcode formatter plug-in for Swift code"
   homepage "https://github.com/Jintin/Swimat"
 
-  no_autobump! because: :requires_manual_review
-
   app "Swimat.app"
 
   zap trash: [
