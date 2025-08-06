@@ -7,8 +7,6 @@ cask "xcodeclangformat" do
   desc "Format code in Xcode with clang-format"
   homepage "https://github.com/mapbox/XcodeClangFormat"
 
-  no_autobump! because: :requires_manual_review
-
   app "XcodeClangFormat.app"
 
   zap trash: [
