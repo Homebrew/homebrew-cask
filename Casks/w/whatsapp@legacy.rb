@@ -7,8 +7,6 @@ cask "whatsapp@legacy" do
   desc "Legacy desktop client for WhatsApp"
   homepage "https://www.whatsapp.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2025-02-22", because: :no_longer_available
 
   auto_updates true

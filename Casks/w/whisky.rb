@@ -8,8 +8,6 @@ cask "whisky" do
   desc "Wine wrapper built with SwiftUI"
   homepage "https://getwhisky.app/"
 
-  no_autobump! because: :requires_manual_review
-
   # https://docs.getwhisky.app/maintenance-notice
   # As the cask is reasonably popular, disabling could be delayed beyond 12 months
   # from deprecation date, if it is still functional.

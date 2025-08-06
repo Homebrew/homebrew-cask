@@ -7,8 +7,6 @@ cask "wowmatrix" do
   desc "WoW AddOn Installer and Updater"
   homepage "https://www.wowmatrix.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2024-08-05", because: :unmaintained
   disable! date: "2025-08-05", because: :unmaintained
 

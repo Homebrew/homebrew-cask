@@ -12,8 +12,6 @@ cask "winx-hd-video-converter" do
     regex(/for\s*Mac\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   app "WinX HD Video Converter for Mac.app"
 
   zap trash: [

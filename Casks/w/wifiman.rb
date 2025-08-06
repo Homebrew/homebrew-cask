@@ -23,8 +23,6 @@ cask "wifiman" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "wifiman-desktop-#{version}-#{arch}.pkg"
 
   uninstall launchctl: "wifiman-desktop",

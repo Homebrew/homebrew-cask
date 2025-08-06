@@ -14,8 +14,6 @@ cask "wch-ch34x-usb-serial-driver" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "CH341SER_MAC/CH34xVCPDriver.pkg"
 
   uninstall quit:    "cn.wch.CH34xVCPDriver",

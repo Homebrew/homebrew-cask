@@ -13,8 +13,6 @@ cask "wolfram-engine" do
     regex(/^(\d+(?:\.\d+)+)$/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :monterey"
 
   app "Wolfram Engine.app"
