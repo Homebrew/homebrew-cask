@@ -8,8 +8,6 @@ cask "thyme" do
   desc "Task timer"
   homepage "https://joaomoreno.github.io/thyme/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Thyme.app"
 
   zap trash: [
