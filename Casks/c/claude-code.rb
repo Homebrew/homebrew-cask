@@ -19,7 +19,7 @@ cask "claude-code" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  auto_updates true
+  auto_updates false
   depends_on macos: ">= :catalina"
 
   binary "claude"
