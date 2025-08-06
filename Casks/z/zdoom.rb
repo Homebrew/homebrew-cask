@@ -7,8 +7,6 @@ cask "zdoom" do
   desc "Source port of Doom"
   homepage "https://zdoom.org/index"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-01", because: "is 32-bit only"
 
   app "ZDoom.app"

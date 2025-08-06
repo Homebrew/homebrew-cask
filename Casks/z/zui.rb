@@ -11,8 +11,6 @@ cask "zui" do
   desc "Graphical user interface for exploring data in Zed lakes"
   homepage "https://zui.brimdata.io/docs"
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "Zui.app"

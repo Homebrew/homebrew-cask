@@ -7,8 +7,6 @@ cask "zenmate-vpn" do
   desc "VPN client"
   homepage "https://zenmate.com/products/vpn-for-osx/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-09-07", because: :discontinued
 
   depends_on macos: ">= :sierra"

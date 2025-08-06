@@ -12,8 +12,6 @@ cask "zenbeats" do
     regex(/Zenbeats\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  no_autobump! because: :requires_manual_review
-
   pkg "Zenbeats_Installer.pkg"
 
   uninstall pkgutil: "jp.co.roland.zenbeats"
