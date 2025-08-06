@@ -22,8 +22,6 @@ cask "vpn-enabler" do
   desc "VPN settings utility"
   homepage "https://cutedgesystems.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: ">= :el_capitan"
