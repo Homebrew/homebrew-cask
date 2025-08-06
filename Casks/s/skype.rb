@@ -7,8 +7,6 @@ cask "skype" do
   desc "Video chat, voice call and instant messaging application"
   homepage "https://www.skype.com/"
 
-  no_autobump! because: :requires_manual_review
-
   deprecate! date: "2025-05-05", because: :discontinued
 
   auto_updates true
