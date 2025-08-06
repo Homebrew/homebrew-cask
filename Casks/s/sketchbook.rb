@@ -8,8 +8,6 @@ cask "sketchbook" do
   desc "Draw, paint, & sketch application"
   homepage "https://www.sketchbook.com/"
 
-  no_autobump! because: :requires_manual_review
-
   disable! date: "2024-12-16", because: :discontinued
 
   pkg "SketchBook_v#{version.csv.first}_mac.pkg"
