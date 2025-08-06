@@ -13,8 +13,6 @@ cask "transmission" do
     strategy :github_latest
   end
 
-  no_autobump! because: :requires_manual_review
-
   auto_updates true
   conflicts_with cask: "transmission@nightly"
   depends_on macos: ">= :high_sierra"
