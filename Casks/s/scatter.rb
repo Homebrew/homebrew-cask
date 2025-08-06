@@ -8,8 +8,6 @@ cask "scatter" do
   desc "Desktop wallet for EOS"
   homepage "https://get-scatter.com/"
 
-  no_autobump! because: :requires_manual_review
-
   app "Scatter.app"
 
   zap trash: [
