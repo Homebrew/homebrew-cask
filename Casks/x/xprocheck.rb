@@ -23,8 +23,6 @@ cask "xprocheck" do
     end
   end
 
-  no_autobump! because: :requires_manual_review
-
   depends_on macos: ">= :catalina"
 
   app "xprocheck#{version.csv.first.no_dots}/XProCheck.app"
