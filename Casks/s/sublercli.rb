@@ -7,8 +7,6 @@ cask "sublercli" do
   desc "Command-line version of Subler"
   homepage "https://bitbucket.org/galad87/sublercli/"
 
-  no_autobump! because: :requires_manual_review
-
   binary "SublerCLI"
 
   # No zap stanza required
