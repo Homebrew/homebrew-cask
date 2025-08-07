@@ -1,9 +1,9 @@
 cask "darktable" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.2.0"
-  sha256 arm:   "8dabf58b6d76c04800be8ab540d3c2f1e772123279e22629a7396fe3e26273de",
-         intel: "bdffebcf758cd1ec6d4ee26eb031d52b1d7e4fe8fe000e728edb14bec91f3a35"
+  version "5.2.1"
+  sha256 arm:   "b7d45bb3d2550695e4eba4d260580561b51c18d612d5e2b2c9e67a432ae2516c",
+         intel: "5060d73c03b3c7f4ca69a77039e69653fd2310df8cb649d66fc89f4c45289b0c"
 
   url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}-#{arch}.dmg",
       verified: "github.com/darktable-org/darktable/"
@@ -15,6 +15,8 @@ cask "darktable" do
     url "https://www.darktable.org/install/"
     regex(/href=.*?darktable[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :ventura"
 
