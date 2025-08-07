@@ -12,12 +12,18 @@ cask "ripx" do
     url "https://hitnmix.com/changes/"
     regex(/^\s*v?(\d+(?:\.\d+)+)\s+changes(?:\s+\([^)]+?\))?(?:\s*(?:&[^;]+?;|.)?\s*mac(?:OS)?\s+Only)?\s*$/i)
     strategy :page_match do |page, regex|
-      page.scan(%r{<h3[^>]*?>.+?</h3>}i).map do |match|
-        # Remove HTML tags from text to simplify matching
-        match = match.gsub(/<[^>]+?>/, "").match(regex)
-        next if match.blank?
+      page.scan(%r{<h3[^>]*?>(.+?)</h3>}i).map do |match|
+        # Remove HTML tags from text to simplify matching. This iterates a fixed
+        # number of times (more than we should ever need), so we don't have to
+        # worry about an endless loop.
+        text = match[0]
+        previous = nil
+        while text != previous
+          previous = text
+          text = text.gsub(/<[^>]+?>/, "")
+        end
 
-        match[1]
+        text[regex, 1]
       end
     end
   end
