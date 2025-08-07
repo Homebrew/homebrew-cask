@@ -28,7 +28,7 @@ cask "tailscale-app" do
     EOS
   end
 
-  def install
+  def postflight
     generate_completions_from_executable("#{appdir}/Tailscale.app/Contents/MacOS/Tailscale", "completion")
   end
 
