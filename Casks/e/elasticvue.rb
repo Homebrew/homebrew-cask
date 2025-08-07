@@ -14,5 +14,8 @@ cask "elasticvue" do
 
   app "elasticvue.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Caches/com.elasticvue.app",
+    "~/Library/WebKit/com.elasticvue.app",
+  ]
 end
