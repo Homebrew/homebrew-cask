@@ -1,6 +1,6 @@
 cask "firezone" do
-  version "1.5.6"
-  sha256 "57d9dedcc35f0795811f8b9cdf9113359146f3be11910b3e20798338a46b3239"
+  version "1.5.7"
+  sha256 "1c0bdca073a0d7afec8f489492cf084d007295ed6aa3b5c29e06e7e16f9cc029"
 
   url "https://github.com/firezone/firezone/releases/download/macos-client-#{version}/firezone-macos-client-#{version}.dmg",
       verified: "github.com/firezone/firezone/"
