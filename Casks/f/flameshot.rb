@@ -1,11 +1,14 @@
 cask "flameshot" do
-  version "13.0.0"
-  sha256 "08dea7dca72520181ae622061d40177172716890bf6154b040a67eb8ec8c698c"
+  arch arm: "arm64", intel: "intel"
 
-  url "https://github.com/flameshot-org/flameshot/releases/download/v#{version}/Flameshot-#{version}.dmg",
+  version "13.0.1"
+  sha256 arm:   "64f339b03f24b5a88eba8342ad6b888462d4f782940e0fb9be50bc0a3805189b",
+         intel: "24cf88770ad695f7f022b08c063b30b20cd0d378490b40b753404c48ebd2b626"
+
+  url "https://github.com/flameshot-org/flameshot/releases/download/v#{version}/Flameshot-#{version}-artifact-macos-#{arch}.dmg",
       verified: "github.com/flameshot-org/flameshot/"
   name "Flameshot"
-  desc "Screenshot software"
+  desc "Screenshot software with built-in annotation tools"
   homepage "https://flameshot.org/"
 
   livecheck do
@@ -18,6 +21,8 @@ cask "flameshot" do
   depends_on macos: ">= :catalina"
 
   app "flameshot.app"
+
+  uninstall quit: "org.flameshot.flameshot"
 
   zap trash: "~/.config/flameshot/flameshot.ini"
 end
