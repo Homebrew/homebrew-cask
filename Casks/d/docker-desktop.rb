@@ -33,8 +33,6 @@ cask "docker-desktop" do
   depends_on macos: ">= :ventura"
 
   app "Docker.app"
-  binary "#{appdir}/Docker.app/Contents/Resources/bin/compose-bridge",
-         target: "/usr/local/bin/compose-bridge"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",
          target: "/usr/local/bin/docker"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-desktop",
