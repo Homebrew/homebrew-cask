@@ -13,4 +13,6 @@ cask "elasticvue" do
   depends_on macos: ">= :high_sierra"
 
   app "elasticvue.app"
+
+  # No zap stanza required
 end
