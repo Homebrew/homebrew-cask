@@ -1,8 +1,8 @@
 cask "font-sarasa-gothic" do
   version "1.0.32"
-  sha256 "8258ee586f0e2a55ce03f006e0d4a3c473fb621bf026179facdb4a022af057b9"
+  sha256 "08ad8cd95656a18c36368f4ae32393874b6501d7253f8f9a6da8d5e3c5331d0c"
 
-  url "https://github.com/be5invis/Sarasa-Gothic/releases/download/v#{version}/Sarasa-TTC-#{version}.7z"
+  url "https://github.com/be5invis/Sarasa-Gothic/releases/download/v#{version}/Sarasa-SuperTTC-#{version}.7z"
   name "Sarasa Gothic"
   name "更纱黑体"
   name "更紗黑體"
@@ -10,16 +10,7 @@ cask "font-sarasa-gothic" do
   name "사라사고딕"
   homepage "https://github.com/be5invis/Sarasa-Gothic"
 
-  font "Sarasa-Bold.ttc"
-  font "Sarasa-BoldItalic.ttc"
-  font "Sarasa-ExtraLight.ttc"
-  font "Sarasa-ExtraLightItalic.ttc"
-  font "Sarasa-Italic.ttc"
-  font "Sarasa-Light.ttc"
-  font "Sarasa-LightItalic.ttc"
-  font "Sarasa-Regular.ttc"
-  font "Sarasa-SemiBold.ttc"
-  font "Sarasa-SemiBoldItalic.ttc"
+  font "Sarasa-SuperTTC.ttc"
 
   # No zap stanza required
 end
