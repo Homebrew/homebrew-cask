@@ -1,8 +1,8 @@
 cask "mailbird" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.8.0"
-  sha256 "274e6089584b9861b2e7fecaba76a4819dea98c05df11a8901b664f73ec2e932"
+  version "1.9.2"
+  sha256 "1b77fcd1c04de9be968930e778c93de37557db3c53839bf2e0e95cb045a7a47e"
 
   url "https://download.getmailbird.com/installers/mailbird_next/macos/Mailbird-for-Mac-#{version}.dmg"
   name "Mailbird"
