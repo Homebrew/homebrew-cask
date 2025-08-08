@@ -1,4 +1,4 @@
-cask "font-maple-mono-normal-nf-cn" do
+cask "font-maple-mono-normal-nl-nf-cn" do
   version "7.5"
   sha256 "034326fde392ab4a90001694fbf1eeef7656c2c96f7822fb833e3e54cfeffac5"
 
