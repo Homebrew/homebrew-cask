@@ -10,23 +10,27 @@ cask "nx-studio" do
 
   livecheck do
     url "https://downloadcenter.nikonimglib.com/en/products/564/NX_Studio.html"
-    regex(/Ver\.\s+(\d+(?:\.\d+)+)/i)
+    regex(%r{Ver\.\s+(\d+(?:\.\d+)+).+?/download/sw/(\d+)\.html?}im)
     strategy :page_match do |page, regex|
-      version = page.scan(regex).filter_map { |match| match.first.tr(" ", "") }&.first
+      # Identify the highest version and the ID of the download page link
+      version, html_id = page.scan(regex).uniq.max_by { |match| Version.new(match[0]) }
+      next if version.blank? || html_id.blank?
 
-      html_id = page.scan(%r{/download/sw/(\d+)\.html}i)&.first
-      next if html_id.blank?
+      # Fetch the download page for the highest version
+      version_page = Homebrew::Livecheck::Strategy.page_content("https://downloadcenter.nikonimglib.com/en/download/sw/#{html_id}.html")
 
-      version_page = Homebrew::Livecheck::Strategy.page_content("https://downloadcenter.nikonimglib.com/en/download/sw/#{html_id[0]}.html")
-      download_query = version_page[:content]&.match(/id="controllerMac".*redirect.do\?(.*?)[" <]/im)
-      next if download_query.blank?
+      # Match the redirecting URL for the macOS file
+      download_redirect_url = version_page[:content]&.[](
+        /controllerMac.*?href=["']?([^"' >]+?redirect\.do\?[^"' >]+?)["' >]/im, 1
+      )&.gsub("&amp;", "&")
+      next if download_redirect_url.blank?
 
-      redirect_url = "https://crossgate.nikonimglib.com/dsd_redirect/redirect.do?#{download_query[1].gsub("&amp;", "&")}"
-      merged_headers = Homebrew::Livecheck::Strategy.page_headers(redirect_url).reduce(&:merge)
-      directory = merged_headers["location"]&.match(%r{/archive7/([^/]+)/}i)
+      # Match the alphanumeric identifier from the download URL
+      merged_headers = Homebrew::Livecheck::Strategy.page_headers(download_redirect_url).reduce(&:merge)
+      directory = merged_headers["location"]&.[](%r{/archive\d*/([^/]+)/}i, 1)
       next if directory.blank?
 
-      "#{version},#{directory[1]},#{html_id[0]}"
+      "#{version},#{directory},#{html_id}"
     end
   end
 
