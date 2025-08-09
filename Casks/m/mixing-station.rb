@@ -1,7 +1,7 @@
 cask "mixing-station" do
   arch arm: "-aarch64"
 
-  version "2.4.0"
+  version "2.4.1"
   sha256 :no_check
 
   url "https://mixingstation.app/backend/api/web/download/attachment/mixing-station-pc/release/macos#{arch}"
