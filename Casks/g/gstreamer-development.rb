@@ -1,6 +1,6 @@
 cask "gstreamer-development" do
-  version "1.26.4"
-  sha256 "60688636c121fe051cf2a4419f5644dcb7d0353b452da5fec4597ec5a724e3f2"
+  version "1.26.5"
+  sha256 "f70a9f7abea47f1e8ab42100270bc0e7a5005fca668ada8d2816a15496fe8b71"
 
   url "https://gstreamer.freedesktop.org/data/pkg/osx/#{version}/gstreamer-1.0-devel-#{version}-universal.pkg"
   name "GStreamer development package"
@@ -11,6 +11,8 @@ cask "gstreamer-development" do
     url "https://gstreamer.freedesktop.org/download/"
     regex(/gstreamer[._-]1\.0[._-]devel[._-]v?(\d+(?:\.\d+)+)[._-]universal\.pkg/i)
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   depends_on cask: "gstreamer-runtime"
 
