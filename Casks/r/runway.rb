@@ -13,6 +13,8 @@ cask "runway" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Runway.app"
 
   zap trash: [
