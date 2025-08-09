@@ -1,8 +1,8 @@
 cask "nx-studio" do
-  version "1.9.0"
-  sha256 "dc0d2baa5df422ea62861e66021d4a93c7c31e11b936b9fe4dffe783f82257d9"
+  version "1.9.1,7UpYe00AzaxT07tkbSd28mJDk232"
+  sha256 "db36808c3ef7bda6adeb4a50ccfa8401b210be16061f76e80f7b8dcf9edb6cf5"
 
-  url "https://download.nikonimglib.com/archive7/QpVAD00Oxh3607X3Qk818ZDICP43/S-NXSTDO-#{version.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg",
+  url "https://download.nikonimglib.com/archive7/#{version.csv.second}/S-NXSTDO-#{version.csv.first.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg",
       verified: "download.nikonimglib.com/"
   name "NX Studio"
   desc "Nikon suite for viewing, processing, and editing photos and videos"
@@ -10,7 +10,28 @@ cask "nx-studio" do
 
   livecheck do
     url "https://downloadcenter.nikonimglib.com/en/products/564/NX_Studio.html"
-    regex(/Ver\.\s+(\d+(?:\.\d+)+)/i)
+    regex(%r{Ver\.\s+(\d+(?:\.\d+)+).+?/download/sw/(\d+)\.html?}im)
+    strategy :page_match do |page, regex|
+      # Identify the highest version and the ID of the download page link
+      version, html_id = page.scan(regex).uniq.max_by { |match| Version.new(match[0]) }
+      next if version.blank? || html_id.blank?
+
+      # Fetch the download page for the highest version
+      version_page = Homebrew::Livecheck::Strategy.page_content("https://downloadcenter.nikonimglib.com/en/download/sw/#{html_id}.html")
+
+      # Match the redirecting URL for the macOS file
+      download_redirect_url = version_page[:content]&.[](
+        /controllerMac.*?href=["']?([^"' >]+?redirect\.do\?[^"' >]+?)["' >]/im, 1
+      )&.gsub("&amp;", "&")
+      next if download_redirect_url.blank?
+
+      # Match the alphanumeric identifier from the download URL
+      merged_headers = Homebrew::Livecheck::Strategy.page_headers(download_redirect_url).reduce(&:merge)
+      directory = merged_headers["location"]&.[](%r{/archive\d*/([^/]+)/}i, 1)
+      next if directory.blank?
+
+      "#{version},#{directory}"
+    end
   end
 
   auto_updates true
