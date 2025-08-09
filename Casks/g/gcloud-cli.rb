@@ -28,7 +28,8 @@ cask "gcloud-cli" do
       "--bash-completion", "false",
       "--path-update", "false",
       "--rc-path", "false",
-      "--install-python", "false"
+      "--install-python", "false",
+      "--update-installed-components"
     ],
   }
   binary "google-cloud-sdk/bin/bq"
