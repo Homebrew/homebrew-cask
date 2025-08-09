@@ -45,6 +45,7 @@ cask "dropbox" do
     "~/Library/Application Support/FileProvider/com.getdropbox.dropbox.fileprovider",
     "~/Library/Caches/CloudKit/com.apple.bird/iCloud.com.getdropbox.Dropbox",
     "~/Library/Caches/com.dropbox.DropboxMacUpdate",
+    "~/Library/Caches/com.dropbox.DropboxUpdater",
     "~/Library/Caches/com.getdropbox.dropbox",
     "~/Library/Caches/com.getdropbox.DropboxMetaInstaller",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.dropbox.DropboxMacUpdate",
