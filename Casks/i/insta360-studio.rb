@@ -1,6 +1,6 @@
 cask "insta360-studio" do
-  version "5.7.0,release_insta360,RC_build17,_20250715_131847_signed_1752569382856,d5026524a1db23b06457626fc5549f86"
-  sha256 "098f962abe44ed4fc6cca66a35cd963c2743c8ac93e2585c84bf0cccfc70cc98"
+  version "5.7.1,release_insta360,RC_build31,_20250807_170314_signed_1754564948220,79f805f41332db5201ebcebb0fc12d4f"
+  sha256 "16953c8d7a8525cb19c3e899428ca14138615e053278dd23b4d7edd76a6c9b3f"
 
   url "https://file.insta360.com/static/#{version.csv.fifth}/Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.zip"
   name "Insta360 Studio"
@@ -37,8 +37,9 @@ cask "insta360-studio" do
     end
   end
 
-  # FIXME: Change _20250715_131847_signed_1752556803354 back to #{version.csv.fourth} on the next release
-  pkg "Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})_20250715_131847_signed_1752556803354.pkg"
+  # FIXME: Change pkg on next release to
+  # pkg "Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.pkg"
+  pkg "Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})_#{version.csv.fourth.split("_")[1..3].join("_")}_1754557465478.pkg"
 
   uninstall quit:    "com.insta360.studio",
             pkgutil: [
