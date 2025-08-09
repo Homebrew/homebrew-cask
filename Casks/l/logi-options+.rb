@@ -1,4 +1,6 @@
 cask "logi-options+" do
+  app_path = "logioptionsplus_installer.app"
+
   on_catalina do
     version "1.44.415778"
     sha256 "c38b38aada01a296d32dcebb61200b53977e876089b8502b7f8453d1efa3a3f6"
@@ -22,7 +24,8 @@ cask "logi-options+" do
     end
   end
   on_monterey :or_newer do
-    version "1.92.731496"
+    app_path = "Logi Options+ Installer.app"
+    version "1.93.755983"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
@@ -45,7 +48,7 @@ cask "logi-options+" do
 
   # see https://prosupport.logi.com/hc/en-us/articles/6046882446359
   installer script: {
-    executable: "logioptionsplus_installer.app/Contents/MacOS/logioptionsplus_installer",
+    executable: "#{app_path}/Contents/MacOS/logioptionsplus_installer",
     args:       ["--quiet"],
     sudo:       true,
   }
