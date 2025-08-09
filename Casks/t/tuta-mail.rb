@@ -1,5 +1,5 @@
 cask "tuta-mail" do
-  version "299.250725.1"
+  version "301.250806.1"
   sha256 :no_check
 
   url "https://app.tuta.com/desktop/tutanota-desktop-mac.dmg"
@@ -15,7 +15,7 @@ cask "tuta-mail" do
   auto_updates true
   depends_on macos: ">= :big_sur"
 
-  app "tutanota-desktop.app"
+  app "Tuta Mail.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.tutao.tutanota.sfl*",
