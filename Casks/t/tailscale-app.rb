@@ -28,6 +28,10 @@ cask "tailscale-app" do
     EOS
   end
 
+  install do
+    generate_completions_from_executable("#{appdir}/Tailscale.app/Contents/MacOS/Tailscale", "completion")
+  end
+
   uninstall quit:       "io.tailscale.ipn.macsys",
             login_item: "Tailscale",
             pkgutil:    "com.tailscale.ipn.macsys"
