@@ -1,7 +1,7 @@
 cask "viber" do
   arch arm: "_arm"
 
-  version "1.0.0.86,2154"
+  version "1.0.0.87,2154"
   sha256 :no_check
 
   url "https://download.viber.com/desktop/mac#{arch}/Viber.dmg"
