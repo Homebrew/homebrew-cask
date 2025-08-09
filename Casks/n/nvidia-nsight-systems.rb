@@ -27,6 +27,8 @@ cask "nvidia-nsight-systems" do
     end
   end
 
+  disable! date: "2025-08-09", because: "the download now requires a login"
+
   depends_on macos: ">= :high_sierra"
 
   app "NVIDIA Nsight Systems.app"
