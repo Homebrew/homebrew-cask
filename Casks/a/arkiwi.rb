@@ -12,6 +12,8 @@ cask "arkiwi" do
     strategy :sparkle, &:short_version
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   auto_updates true
 
   app "ArKiwi.app"
