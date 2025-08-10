@@ -1,8 +1,8 @@
 cask "handbrake-app" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
-  version "1.9.2"
-  sha256 "61a57c53311a0ca23e58367f512134af99428c14ac3a62665f245fc5e46c3791"
+  version "1.10.0"
+  sha256 "b74b347a97c8077eccc20182c5f910fe692a49765e2aadc3a5cdde262a2ea2c1"
 
   url "https://handbrake.fr/rotation.php?file=HandBrake-#{version}.dmg&update=true"
   name "HandBrake"
@@ -11,7 +11,9 @@ cask "handbrake-app" do
 
   livecheck do
     url "https://handbrake.fr/appcast.#{livecheck_arch}.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |item|
+      item.short_version.split.first
+    end
   end
 
   auto_updates true
