@@ -5,12 +5,16 @@ cask "textbar" do
   url "http://richsomerfield.com/apps/textbar/TextBar.app-#{version}.zip"
   name "TextBar"
   desc "Add any text to menu bar"
-  homepage "http://richsomerfield.com/apps/"
+  homepage "http://richsomerfield.com/apps/textbar/"
 
   livecheck do
     url "http://richsomerfield.com/apps/textbar/sparkle_textbar.xml"
     strategy :sparkle
   end
+
+  disable! date: "2026-09-01", because: :unsigned
+
+  auto_updates true
 
   app "TextBar.app"
 
