@@ -1,11 +1,11 @@
 cask "baidunetdisk" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "_arm64"
 
-  version "4.51.2"
-  sha256 arm:   "bbb337138666e07aeda2daae9ce3fb01fe3581a53a4f27253eeaa2d7f03f1f0a",
-         intel: "09012ce7cfbb64a5763ee91eac46a4027a2a2358e68c5314a70f6c2dc6b4ef08"
+  version "4.52.5"
+  sha256 arm:   "924c7eafce02ba73fec0e822d1090a6a8d5f5f7928c3512b96f77a70d44104fe",
+         intel: "95e4904f044cf73bbb4157c09e11038ede9c1558d359166ff5576b0c4974faff"
 
-  url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/#{version}/BaiduNetdisk_mac_#{version}_#{arch}.dmg",
+  url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/#{version}/BaiduNetdisk_mac_#{version}#{arch}.dmg",
       verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
   name "Baidu NetDisk"
   name "百度网盘"
@@ -14,7 +14,7 @@ cask "baidunetdisk" do
 
   livecheck do
     url "https://pan.baidu.com/disk/cmsdata?do=client"
-    regex(/BaiduNetdisk[._-]mac[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+    regex(/BaiduNetdisk[._-]mac[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
   end
 
   auto_updates true
