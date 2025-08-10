@@ -10,7 +10,7 @@ cask "hopper-disassembler" do
 
   livecheck do
     url "https://www.hopperapp.com/rss/changelog.xml"
-    regex(/<title>Version\s+v?(\d+(?:\.\d+)+)/i)
+    regex(/<title>\s*Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
