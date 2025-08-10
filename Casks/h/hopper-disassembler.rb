@@ -1,8 +1,8 @@
 cask "hopper-disassembler" do
-  version "5.19.5"
-  sha256 "1b319a69f02cd139ddb64667dcb172400efbda2e7b70c715348889c39a3c8ced"
+  version "5.19.6"
+  sha256 "fbf8e465487df69e62fde866d34c96dff8085e4d4bed1fb0d6513879d3cc5550"
 
-  url "https://www.hopperapp.com/downloader/hopperv4/Hopper-#{version}-demo.dmg",
+  url "https://www.hopperapp.com/downloader/public/Hopper-#{version}-demo.dmg",
       user_agent: :fake
   name "Hopper Disassembler"
   desc "Reverse engineering tool that lets you disassemble, decompile and debug your app"
@@ -10,7 +10,7 @@ cask "hopper-disassembler" do
 
   livecheck do
     url "https://www.hopperapp.com/rss/changelog.xml"
-    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
+    regex(/<title>\s*Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
