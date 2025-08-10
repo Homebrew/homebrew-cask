@@ -1,6 +1,6 @@
 cask "keepassxc@snapshot" do
-  version "2.8.0,266583"
-  sha256 "1e913d510eab4fadb0d620b7cf9f4e5b27270f36df6ca57b7c91f4b0c465010c"
+  version "2.8.0,266992"
+  sha256 "b5e9031fb9853de4a9bd5cd6b18fc642f2bdf09c9a5e96ee703ae51b4edc623d"
 
   url "https://snapshot.keepassxc.org/build-#{version.csv.second}/KeePassXC-#{version.csv.first}-snapshot.dmg"
   name "KeePassXC"
@@ -28,6 +28,8 @@ cask "keepassxc@snapshot" do
       "#{match[1]},#{newest_build}"
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   conflicts_with cask: [
     "keepassxc",
