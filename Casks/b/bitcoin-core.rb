@@ -11,8 +11,8 @@ cask "bitcoin-core" do
   homepage "https://bitcoincore.org/"
 
   livecheck do
-    url "https://bitcoincore.org/bin/"
-    regex(/href=.*?bitcoin[._-]core[._-]v?(\d+(?:\.\d+)+)/i)
+    url "https://bitcoincore.org/en/download/"
+    regex(/href=.*?bitcoin[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[^"' >]*?[._-]darwin\.zip/i)
   end
 
   depends_on macos: ">= :big_sur"
