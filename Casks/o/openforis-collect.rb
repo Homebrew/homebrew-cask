@@ -1,0 +1,34 @@
+cask "openforis-collect" do
+  arch arm: "osx-x86_64", intel: "osx-x86_64"
+
+  version "4.0.101"
+  sha256 "12a50bc37d0b8760175ac04c9b6a4d2cbefbe887405019d03598f40ab26121f3"
+
+  url "https://search.maven.org/remotecontent?filepath=org/openforis/collect/collect-installer/#{version}/collect-installer-#{version}-osx.dmg",
+      verified: "search.maven.org/"
+  name "Openforis Collect"
+  desc "Desktop solution for data collected in field-based inventories"
+  homepage "https://openforis.org/solutions/collect/"
+
+  livecheck do
+    url "https://github.com/openforis/collect"
+  end
+
+  installer script: {
+    executable: "#{staged_path}/OpenForisCollect-202506092345-osx-installer.app/Contents/MacOS/#{arch}",
+    args:       [
+      "--mode", "unattended"
+    ],
+  }
+
+  uninstall quit:   ["TERM", "OpenForisCollect-launcher.app"],
+            signal: [
+              ["TERM", "OpenForisCollect-launcher.app"],
+            ],
+            script: {
+              executable: "~/OpenForis/Collect/uninstall.app/Contents/MacOS/#{arch}",
+              args:       ["--mode", "unattended"],
+            }
+
+  zap trash: "~/OpenForis/Collect"
+end
