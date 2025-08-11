@@ -1,6 +1,6 @@
 cask "synologyassistant" do
-  version "7.0.5,50070"
-  sha256 "760e70deb917f580598eb83b2e3f8185cdd1b7591d70aca04c69e20f240fdf41"
+  version "7.0.6,50085"
+  sha256 "b2bf2d6f1cb711cb136d6aba7927cd4c4efd9ab312a8556017c63702f1f856ad"
 
   url "https://global.download.synology.com/download/Utility/Assistant/#{version.tr(",", "-")}/Mac/synology-assistant-#{version.tr(",", "-")}.dmg"
   name "Synology Assistant"
