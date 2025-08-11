@@ -14,8 +14,6 @@ cask "virtualc64" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
-
   depends_on macos: ">= :ventura"
 
   app "VirtualC64.app"
