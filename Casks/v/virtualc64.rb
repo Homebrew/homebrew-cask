@@ -1,7 +1,7 @@
 cask "virtualc64" do
   # NOTE: "64" is not a version number, but an intrinsic part of the product name
   version "5.3"
-  sha256 "27175f578c91faf61bec9d67da28d8f2d65bfe1784207efe32c309948512d7a0"
+  sha256 "f9a2ca99fddc64bfdda9a50c36b0e94a3f9dcb3c0e37419f63f2e8847106fb29"
 
   url "https://github.com/dirkwhoffmann/virtualc64/releases/download/v#{version}/VirtualC64.app.zip",
       verified: "github.com/dirkwhoffmann/virtualc64/"
@@ -13,8 +13,6 @@ cask "virtualc64" do
     url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
-
-  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :ventura"
 
