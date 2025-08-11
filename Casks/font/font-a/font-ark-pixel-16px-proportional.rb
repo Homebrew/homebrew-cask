@@ -1,6 +1,6 @@
 cask "font-ark-pixel-16px-proportional" do
-  version "2025.07.30"
-  sha256 "da5dddbeb4c26c57e37f8a19a2e8e37dc4b064d898952dd9761ce647f0e15db6"
+  version "2025.08.11"
+  sha256 "c6877abe2aa0f82f17d230a8ecefc6f3a6f11ec3cc9ed800f973dc6e1ea3d01f"
 
   url "https://github.com/TakWolf/ark-pixel-font/releases/download/#{version}/ark-pixel-font-16px-proportional-otf-v#{version}.zip"
   name "Ark Pixel 16px Proportional"
