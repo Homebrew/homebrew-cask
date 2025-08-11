@@ -1,6 +1,6 @@
 cask "stratoshark@dev" do
-  version "0.9.3rc0,513,d249a5457819"
-  sha256 "32a03cc619c32c2aa3567d3748f4eb0319752ebe6cff67674ffb611245217de9"
+  version "0.9.3rc0,576,e173a5f81902"
+  sha256 "2a78d8f730fd1dd9f1cb91197d3e72f6810d3a2ff9dcdefa8639e45d8dcce7e8"
 
   url "https://www.wireshark.org/download/automated/osx/Stratoshark%20#{version.csv.first}-#{version.csv.second}-g#{version.csv.third}.dmg",
       verified: "wireshark.org/download/"
@@ -18,7 +18,7 @@ cask "stratoshark@dev" do
 
   auto_updates true
   conflicts_with cask: "stratoshark"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Stratoshark.app"
   binary "#{appdir}/Stratoshark.app/Contents/MacOS/dumpcap"
