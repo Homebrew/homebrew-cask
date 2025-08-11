@@ -16,7 +16,7 @@ cask "katrain" do
 
   zap trash: [
     "~/.katrain",
-    "~/Library/Preferences/org.katrain.KaTrain.plist",
     "~/Library/Application Support/KaTrain",
+    "~/Library/Preferences/org.katrain.KaTrain.plist",
   ]
 end
