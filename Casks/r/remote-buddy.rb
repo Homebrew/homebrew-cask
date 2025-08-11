@@ -1,5 +1,5 @@
 cask "remote-buddy" do
-  version "2.7.1"
+  version "2.7.2"
   sha256 :no_check
 
   url "https://www.iospirit.com/products/remotebuddy/download/RemoteBuddy.zip"
