@@ -3,7 +3,7 @@ cask "nheko" do
 
   version "0.12.1"
   sha256 arm:   "07390b869a5cef5226281b215a06c7d5c87b20b7bdfec9882c71ee005b2ac949",
-         intel: "b0aea76c05876bddc7286ed717fd522e5ef24e076dc33b7b8149afb01bc1bd97"
+         intel: "891ca3001a6d495e1921ced6dacee5005a41e7dc38eeaea58c20128c453dfad9"
 
   url "https://github.com/Nheko-Reborn/nheko/releases/download/v#{version}/nheko-v#{version}-#{arch}.dmg",
       verified: "github.com/Nheko-Reborn/nheko/"
