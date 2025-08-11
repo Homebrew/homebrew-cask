@@ -8,6 +8,7 @@ cask "rubymotion" do
   homepage "http://www.rubymotion.com/"
 
   deprecate! date: "2024-08-11", because: :unmaintained
+  disable! date: "2025-08-11", because: :unmaintained
 
   installer manual: "RubyMotion Installer.app"
 

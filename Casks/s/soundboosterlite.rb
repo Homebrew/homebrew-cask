@@ -8,6 +8,7 @@ cask "soundboosterlite" do
   homepage "https://froyosoft.com/soundbooster.php"
 
   deprecate! date: "2024-08-11", because: :unmaintained
+  disable! date: "2025-08-11", because: :unmaintained
 
   pkg "SoundBoosterLite.pkg"
 
