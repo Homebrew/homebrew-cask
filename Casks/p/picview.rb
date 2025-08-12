@@ -8,7 +8,7 @@ cask "picview" do
   url "https://github.com/Ruben2776/PicView/releases/download/#{version}/PicView-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/Ruben2776/PicView/"
   name "PicView"
-  desc "Fast, customisable, and easy-to-use picture viewer"
+  desc "Picture viewer"
   homepage "https://picview.org/"
 
   livecheck do
