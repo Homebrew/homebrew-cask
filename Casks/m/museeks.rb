@@ -13,6 +13,7 @@ cask "museeks" do
   app "Museeks.app"
 
   zap trash: [
+    "~/.config/museeks",
     "~/Library/Application Support/museeks",
     "~/Library/Saved Application State/com.electron.museeks.savedState",
   ]
