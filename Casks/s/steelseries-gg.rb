@@ -1,6 +1,6 @@
 cask "steelseries-gg" do
-  version "91.0.0"
-  sha256 "f6b3c4dda4f049231fa0e8f952ea85bfd28a91ba89ff474ccdf91a36f2b5d8fd"
+  version "92.0.0"
+  sha256 "eea4c80d86fd8265c778c30431056c6b0bf61403203088f5135bd5165f632e7b"
 
   url "https://engine.steelseriescdn.com/SteelSeriesGG#{version}.pkg",
       verified: "engine.steelseriescdn.com/"
@@ -44,8 +44,4 @@ cask "steelseries-gg" do
     "~/Library/Saved Application State/com.steelseries.gg.client.savedState",
     "~/Library/Saved Application State/com.steelseries.gg.uninstaller.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
