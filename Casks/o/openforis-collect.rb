@@ -14,12 +14,11 @@ cask "openforis-collect" do
     url "https://github.com/openforis/collect"
   end
 
-  installer script: {
-    executable: "#{staged_path}/OpenForisCollect-202506092345-osx-installer.app/Contents/MacOS/#{arch}",
-    args:       [
-      "--mode", "unattended"
-    ],
-  }
+  postflight do
+    installer_path = Dir["#{staged_path}/OpenForisCollect-*-osx-installer.app/Contents/MacOS/#{arch}"].first
+    system_command installer_path,
+                   args: ["--mode", "unattended"]
+  end
 
   uninstall quit:   ["TERM", "OpenForisCollect-launcher.app"],
             signal: [
