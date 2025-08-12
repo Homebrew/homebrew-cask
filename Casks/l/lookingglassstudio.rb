@@ -3,8 +3,8 @@ cask "lookingglassstudio" do
   livecheck_arch = on_arch_conditional intel: "intel"
 
   on_arm do
-    version "1.7.0"
-    sha256 "cca1d5c710cb8c428e1aa4c893a3ac3d59758a5659c4ee690aa84fced13e3322"
+    version "1.7.1"
+    sha256 "94cadc89029cec59c4f2d3fec94fec505ca213e540a358a255f002b842c64825"
 
     url "https://dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/LookingGlassStudio-#{version}#{arch}.pkg",
         verified: "dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/"
