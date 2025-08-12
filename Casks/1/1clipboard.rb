@@ -8,6 +8,7 @@ cask "1clipboard" do
   homepage "https://1clipboard.io/"
 
   deprecate! date: "2024-08-05", because: :unmaintained
+  disable! date: "2025-08-12", because: :unmaintained
 
   app "1Clipboard.app"
 
