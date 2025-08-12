@@ -1,11 +1,13 @@
 cask "fly" do
-  version "7.13.2"
-  sha256 "01c071de4d22b421de8fcb10b6a47335264e7f106743e50c99e10d79fa3fab3a"
+  version "7.14.0"
+  sha256 "a6e48d39f4d1269926a16d67e89669278b48cd92beeef144d3419354e5b743c9"
 
   url "https://github.com/concourse/concourse/releases/download/v#{version}/fly-#{version}-darwin-amd64.tgz"
   name "fly"
   desc "Official CLI tool for Concourse CI"
   homepage "https://github.com/concourse/concourse"
+
+  disable! date: "2026-09-01", because: :unsigned
 
   binary "fly"
 
