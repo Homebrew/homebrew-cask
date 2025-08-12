@@ -2,10 +2,10 @@ cask "native-access" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "arm64/"
 
-  version "3.19.1"
+  version "3.20.0"
   sha256 :no_check
 
-  url "https://na-update.native-instruments.com/#{folder}Native-Access-#{arch}-mac.zip"
+  url "https://na-update.native-instruments.com/#{folder}Native-Access-#{arch}-mac-latest.zip"
   name "Native Access"
   desc "Administration tool for Native Instruments products"
   homepage "https://www.native-instruments.com/en/specials/native-access-2/"
