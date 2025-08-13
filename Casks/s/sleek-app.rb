@@ -1,9 +1,9 @@
 cask "sleek-app" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.19"
-  sha256 arm:   "cdb95e4916e9518eb25dccb25a567e9ed4006e2c5bb2ba29475071cc3944ba2e",
-         intel: "79173431999b4e8eb852403205f806c5b70364edf5b7bae27cb89485c0ea7c2d"
+  version "2.0.20"
+  sha256 arm:   "795a166a6e5b67ff052f4cbe9b25c61336d165e5c6f1789c4fe6db771c6b7db6",
+         intel: "ec0664a52cc455d196ed54ba5ba604fe51f385720349124ef4031496e106b32e"
 
   url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}-mac-#{arch}.dmg"
   name "sleek"
