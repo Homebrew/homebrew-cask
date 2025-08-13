@@ -1,6 +1,6 @@
 cask "rotato" do
-  version "151"
-  sha256 "e6e15031ff155dd72005861e36267256cad77797dd78e3164e4f7f41add3501a"
+  version "152"
+  sha256 "417dc73d5b048a37502c3822637aae12ff23a23c995221084f40ba8dba51fcad"
 
   url "https://download.rota.to/Rotato-#{version}.dmg",
       verified: "download.rota.to/"
