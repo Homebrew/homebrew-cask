@@ -2,7 +2,7 @@ cask "sleep-aid" do
   version "1.5"
   sha256 "3169a049a5571af432dcf41b8c1e678f8b06d37c1d3e0e937d5a6e4061c25f56"
 
-  url "https://ohanaware.com/sleepaid/release/Sleep_Aid_1_4_1_UB.dmg"
+  url "https://ohanaware.com/sleepaid/Sleep_Aid.dmg"
   name "Sleep Aid"
   desc "Monitor computer's sleeping habits"
   homepage "https://ohanaware.com/sleepaid/"
