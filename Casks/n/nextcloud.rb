@@ -8,8 +8,8 @@ cask "nextcloud" do
     end
   end
   on_monterey :or_newer do
-    version "3.16.6"
-    sha256 "3e5a1e2f83286f442b2f6c138faa27272ee5cf4831708d295b9bca70326961c8"
+    version "3.17.0"
+    sha256 "15c9b4d2158f2e9e178c7debf07fd2f2c96fb1813e034d47d1ec61032546adf8"
 
     livecheck do
       url "https://download.nextcloud.com/desktop/releases/Mac/Installer/"
