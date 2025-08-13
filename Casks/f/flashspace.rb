@@ -10,6 +10,7 @@ cask "flashspace" do
   depends_on macos: ">= :sonoma"
 
   app "FlashSpace.app"
+  binary "#{appdir}/FlashSpace.app/Contents/Resources/flashspace"
 
   uninstall quit: "pl.wojciechkulik.FlashSpace"
 
