@@ -1,4 +1,4 @@
-cask "iceberg" do
+cask "iceberg-app" do
   version "1.3.1"
   sha256 :no_check
 
