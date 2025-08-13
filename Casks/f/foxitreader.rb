@@ -1,6 +1,6 @@
 cask "foxitreader" do
-  version "2025.1.0.66692"
-  sha256 "88fe620d85c044b9e0d556588e72beee563ce8b43a884aac58573ccb5f2b9a34"
+  version "2025.2.0.33028"
+  sha256 "c0a5d5b54df3f27ac498fe2c2f3fff370dd173ae94a28dc50459f491991229d8"
 
   url "https://cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/#{version.major}.x/#{version.major_minor}/FoxitPDFReader#{version.major_minor.no_dots}.L10N.Setup.pkg",
       verified: "cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/"
