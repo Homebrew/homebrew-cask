@@ -16,6 +16,8 @@ permissions:
 jobs:
   autobump:
     if: github.repository == 'Homebrew/homebrew-cask'
+    env:
+      HOMEBREW_DEVELOPER: 1
     runs-on: macos-15
     steps:
       - name: Set up Homebrew
