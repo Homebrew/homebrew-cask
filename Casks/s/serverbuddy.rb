@@ -12,9 +12,15 @@ cask "serverbuddy" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sonoma"
 
   app "ServerBuddy.app"
 
-  zap trash: "~/Library/Preferences/com.prabusoftware.serverbuddy.plist"
+  zap trash: [
+    "~/Library/Caches/com.prabusoftware.serverbuddy",
+    "~/Library/HTTPStorages/com.prabusoftware.serverbuddy",
+    "~/Library/Preferences/com.prabusoftware.serverbuddy.plist",
+    "~/Library/WebKit/com.prabusoftware.serverbuddy",
+  ]
 end
