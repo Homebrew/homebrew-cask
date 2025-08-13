@@ -17,6 +17,7 @@ cask "osu" do
   end
 
   auto_updates true
+  conflicts_with cask: "osu@tachyon"
   depends_on macos: ">= :sierra"
 
   app "osu!.app"
