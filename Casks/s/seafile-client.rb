@@ -1,6 +1,6 @@
 cask "seafile-client" do
-  version "9.0.14"
-  sha256 "b1bd0c7f648c91e9eff10afeb76698632317a59abddfaf52b1d6eb4fea8c8773"
+  version "9.0.15"
+  sha256 "d899e827e68d77503ea204884276a8accfe565d7b012e31983ced6f449647eb6"
 
   url "https://s3.eu-central-1.amazonaws.com/download.seadrive.org/seafile-client-#{version}.dmg",
       verified: "s3.eu-central-1.amazonaws.com/download.seadrive.org/"
