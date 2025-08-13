@@ -10,7 +10,7 @@ cask "garmin-express" do
     end
   end
   on_big_sur :or_newer do
-    version "7.25.0"
+    version "7.26.0"
     sha256 :no_check
 
     url "https://download.garmin.com/omt/express/GarminExpress.dmg"
@@ -49,8 +49,4 @@ cask "garmin-express" do
     "~/Library/Caches/com.garmin.renu.service.crashreporter",
     "~/Library/Preferences/com.garmin.renu*",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
