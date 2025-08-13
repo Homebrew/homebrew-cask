@@ -1,8 +1,8 @@
 cask "miaoyan" do
-  version "1.18.1"
-  sha256 "f275efee7e5ec0757f4c7081798d2d4b565f195d797dee21184be2857be587ca"
+  version "1.18.3"
+  sha256 "04180678da7a6d1d737148b6675a59f251058855ce1ca728d4e69f584e5bb612"
 
-  url "https://gw.alipayobjects.com/os/k/app1/MiaoYan_V#{version}.zip",
+  url "https://gw.alipayobjects.com/os/k/app/MiaoYan_V#{version}.zip",
       verified: "gw.alipayobjects.com/"
   name "MiaoYan"
   desc "Markdown editor"
@@ -18,7 +18,7 @@ cask "miaoyan" do
   disable! date: "2026-09-01", because: :unsigned
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "MiaoYan.app"
 
