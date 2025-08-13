@@ -21,7 +21,7 @@ cask "sleep-aid" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  pkg "Sleep_Aid_1_5_#{arch}.pkg"
+  pkg "Sleep_Aid_#{version.dots_to_underscores}_#{arch}.pkg"
 
   uninstall quit:    [
               "com.ohanaware.sleepAid-Help",
