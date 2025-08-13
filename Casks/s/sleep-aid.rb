@@ -1,28 +1,33 @@
 cask "sleep-aid" do
-  version "1.5"
-  sha256 "3169a049a5571af432dcf41b8c1e678f8b06d37c1d3e0e937d5a6e4061c25f56"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://ohanaware.com/sleepaid/Sleep_Aid.dmg"
+  version "1.5"
+  sha256 arm:   "07565853c8c4695b5431ffcde576d0bb45df636a3c6041b1a7013cf0c245fe59",
+         intel: "f0c4fa86a8758844069970eed32a799280339f42f1d572a26aeca77f56900269"
+
+  url "https://ohanaware.com/sleepaid/release/Sleep_Aid_#{version.dots_to_underscores}_#{arch}.pkg"
   name "Sleep Aid"
   desc "Monitor computer's sleeping habits"
   homepage "https://ohanaware.com/sleepaid/"
 
   livecheck do
-    url "https://ohanaware.com/sleepaid/versionHistory.html"
+    url "https://ohanaware.com/sleepaid/sleepaid1x.oluf"
+    regex(/Sleep[.-_]Aid[._-]v?(\d+(?:[._]\d+)+)[._-]#{arch}\.pkg/i)
     strategy :page_match do |page|
-      match = page.scan(/Version (\d+(?:\.\d+)*),/i)
-      match.map(&:first).max_by { |v| Version.new(v) }
+      page.scan(regex).map { |match| match[0]&.tr("_", ".") }
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "Sleep Aid.app"
+  pkg "Sleep_Aid_1_5_#{arch}.pkg"
 
-  uninstall quit: [
-    "com.ohanaware.sleepAid-Help",
-    "com.ohanaware.sleepAidRG2",
-  ]
+  uninstall quit:    [
+              "com.ohanaware.sleepAid-Help",
+              "com.ohanaware.sleepAidRG2",
+            ],
+            pkgutil: "com.ohanaware.sleepAidRG2"
 
   zap trash: [
     "~/Library/Application Support/com.ohanaware.sleepAidRG2",
