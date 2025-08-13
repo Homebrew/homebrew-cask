@@ -12,7 +12,7 @@ cask "sleep-aid" do
 
   livecheck do
     url "https://ohanaware.com/sleepaid/sleepaid1x.oluf"
-    regex(/Sleep[.-_]Aid[._-]v?(\d+(?:[._]\d+)+)[._-]#{arch}\.pkg/i)
+    regex(/Sleep[._-]Aid[._-]v?(\d+(?:[._]\d+)+)[._-]#{arch}\.pkg/i)
     strategy :page_match do |page|
       page.scan(regex).map { |match| match[0]&.tr("_", ".") }
     end
