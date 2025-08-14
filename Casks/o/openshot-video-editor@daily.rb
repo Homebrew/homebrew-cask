@@ -1,6 +1,6 @@
 cask "openshot-video-editor@daily" do
-  version "3.4.0,14124-6cea273b-0b018e34,release-candidate"
-  sha256 "66e6826df26ab01d378eccc00eb7f71b213b3f314195f30286a1c0abaf028aa7"
+  version "3.4.0,14193-adff81fe-0b018e34,release-candidate"
+  sha256 "24a1fa9777418d7c355246aac36edb8ef1ee7bc5c16917059f8345232a789f5e"
 
   url "https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-#{version.csv.third || "daily"}-#{version.csv.second}-x86_64.dmg",
       verified: "github.com/OpenShot/openshot-qt/"
@@ -31,8 +31,4 @@ cask "openshot-video-editor@daily" do
     "~/Library/Application Support/openshot",
     "~/Library/Preferences/openshot-qt.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
