@@ -9,8 +9,8 @@ cask "tablift" do
   homepage "https://tablift.dev/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://tablift.dev/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
