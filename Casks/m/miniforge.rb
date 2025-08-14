@@ -11,12 +11,12 @@ cask "miniforge" do
   homepage "https://github.com/conda-forge/miniforge"
 
   livecheck do
-    url :homepage
-    regex(/v?(\d+(?:[.-]\d+)+)/i)
+    url :url
     strategy :github_latest
   end
 
   auto_updates true
+  
   conflicts_with cask: [
     "mambaforge",
     "miniconda",
@@ -30,7 +30,7 @@ cask "miniforge" do
   binary "#{caskroom_path}/base/condabin/conda"
   binary "#{caskroom_path}/base/condabin/mamba"
 
-  uninstall delete: "#{caskroom_path}/base"
+  uninstall rmdir: "#{caskroom_path}/base"
 
   zap trash: [
     "~/.conda",
@@ -38,7 +38,7 @@ cask "miniforge" do
   ]
 
   caveats <<~EOS
-    Please run the following to setup your shell:
+    To initialize your shell, run:
       conda init "$(basename "${SHELL}")"
   EOS
 end
