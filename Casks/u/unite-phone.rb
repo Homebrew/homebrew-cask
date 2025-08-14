@@ -1,8 +1,8 @@
 cask "unite-phone" do
-  version "2025.1.3"
-  sha256 "68ac9ce3255b4173ac78845aa8b06ce33552c853daa79eee503b8b75a893c4b2"
+  version "2025.8.1"
+  sha256 "f5ce0bdc6c0ef8b2411f20c050e6e862892875df0ff81fc14e83d1f346a5e5d6"
 
-  url "https://update.unitephone.nl/download/unite_phone-#{version}-universal.dmg",
+  url "https://update.unitephone.nl/download/unitephone-#{version}.dmg",
       user_agent: :fake
   name "Unite Phone"
   desc "Video and voice calling application"
@@ -12,6 +12,8 @@ cask "unite-phone" do
     url "https://unitephone.nl/unitephone-app/macos"
     strategy :header_match
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Unite Phone.app"
 
