@@ -1,6 +1,6 @@
 cask "font-latin-modern" do
-  version "2.004"
-  sha256 "5b0236051d3728be6616f1b274e3b910473875b5a3ef9382f0ef00384ddb161b"
+  version "2.006"
+  sha256 "608a6f3de9fbafd70f977fbf21ca32850178dd19b11530385358840c8f291f06"
 
   url "https://www.gust.org.pl/projects/e-foundry/latin-modern/download/lm#{version}otf.zip"
   name "Latin Modern"
@@ -38,6 +38,7 @@ cask "font-latin-modern" do
   font "lmroman12-bold.otf"
   font "lmroman12-italic.otf"
   font "lmroman12-regular.otf"
+  font "lmroman17-oblique.otf"
   font "lmroman17-regular.otf"
   font "lmroman5-bold.otf"
   font "lmroman5-regular.otf"
@@ -61,7 +62,6 @@ cask "font-latin-modern" do
   font "lmromanslant10-bold.otf"
   font "lmromanslant10-regular.otf"
   font "lmromanslant12-regular.otf"
-  font "lmromanslant17-regular.otf"
   font "lmromanslant8-regular.otf"
   font "lmromanslant9-regular.otf"
   font "lmromanunsl10-regular.otf"
