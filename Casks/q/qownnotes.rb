@@ -1,6 +1,6 @@
 cask "qownnotes" do
-  version "25.8.2"
-  sha256 "aa6ab9fc8d0b66ee13e007e52f62ce87edb9340f1e4e431e80d812722dc3e052"
+  version "25.8.3"
+  sha256 "b33f04aff7da20902d89ad0a423a60713c4e651b40e344c8dfaef61ca6943be7"
 
   url "https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
       verified: "github.com/pbek/QOwnNotes/"
@@ -12,8 +12,6 @@ cask "qownnotes" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :unsigned
 
   auto_updates true
   depends_on macos: ">= :monterey"
