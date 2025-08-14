@@ -13,6 +13,8 @@ cask "qownnotes" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   auto_updates true
   depends_on macos: ">= :monterey"
 
