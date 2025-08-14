@@ -4,8 +4,8 @@ cask "mihomo-party" do
   version "1.8.4"
 
   on_catalina :or_older do
-    sha256 arm:   "ff6951cfc7140e42162153df521bfd35a29f2c31292aea4f1c80bc595722996e",
-           intel: "7e9ac60dbafb8edac549ce342353148c529c4cb05022805488f5405eabfc3e55"
+    sha256 arm:   "2fe713eda313665cdcbb3cc3cb0770d3a78927bbbe25ab4139f42c1995fca029",
+           intel: "41fe40307a8e1a7b1315e8ad9000da7020cb7db16f1efe59cde1b3fd715e471d"
 
     url "https://github.com/mihomo-party-org/mihomo-party/releases/download/v#{version}/mihomo-party-catalina-#{version}-#{arch}.pkg",
         verified: "github.com/mihomo-party-org/mihomo-party/"
