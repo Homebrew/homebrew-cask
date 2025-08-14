@@ -7,7 +7,7 @@ cask "miniforge" do
 
   url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-#{arch}.sh"
   name "miniforge"
-  desc "Minimal installer for conda specific to conda-forge"
+  desc "Community-driven minimal conda installer"
   homepage "https://github.com/conda-forge/miniforge"
 
   livecheck do
