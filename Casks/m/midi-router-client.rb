@@ -7,6 +7,8 @@ cask "midi-router-client" do
   desc "Create routes from anywhere to anywhere"
   homepage "https://sourceforge.net/projects/midi-router-client/"
 
+  disable! date: "2026-09-01", because: :unsigned
+
   app "midi-router-client.app"
 
   zap trash: [
