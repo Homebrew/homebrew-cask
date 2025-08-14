@@ -18,7 +18,7 @@ cask "cyberghost-vpn" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "CyberGhost VPN.app"
+  app "CyberGhost.app"
 
   zap trash: [
     "~/Library/Caches/com.cyberghostsrl.cyberghostmac",
