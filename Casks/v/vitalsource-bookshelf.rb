@@ -1,6 +1,6 @@
 cask "vitalsource-bookshelf" do
-  version "11.1.0.3378"
-  sha256 "bcfe4951d809255cc09c89179f04db8668683018b19562b81a8e7aab8d058296"
+  version "11.2.0.3557"
+  sha256 "cefc5b8abfd77e2f7095c9cf3f5a096ae241c6b38c3bcc1aa2fb7c3d44fac20f"
 
   url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
       verified: "downloads.vitalbook.com/vsti/bookshelf/"
