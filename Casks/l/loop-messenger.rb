@@ -1,9 +1,9 @@
 cask "loop-messenger" do
   arch arm: "m1", intel: "x64"
 
-  version "5.10.0"
-  sha256 arm:   "7fdbf691a0a031299400a02e56636f145eb0f284e7e752e584eae2aa4d268717",
-         intel: "9a513c7904b370d0960a7f1ec7c5fe7f1097ac5f595cdf115d60b2f384ea1d82"
+  version "5.12.0"
+  sha256 arm:   "25f5181f34aed32aa06f85cfb32745af1cd092f70bee3233f2536b968bd39f9c",
+         intel: "a31409019f85a96191688efe3e032446b600e4b9db05c18bc2178ff38bee54ce"
 
   url "https://artifacts.wilix.dev/repository/loop-files/loop-#{version.major_minor}/loop-desktop-#{version}-mac-#{arch}.dmg",
       verified: "artifacts.wilix.dev/"
