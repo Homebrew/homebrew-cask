@@ -1,6 +1,6 @@
 cask "cleanmymac" do
-  version "5.2.1,50201.0.2507281530,1753718340"
-  sha256 "0b2e321654cb6f8a8698aa1194de41200ed69c11d021265d091134821d466c7b"
+  version "5.2.3,50203.0.2508121037,1755074990"
+  sha256 "e054b9a0039a38ca2588ba42e4c5a3cdf57964ae6f27d0ebbd336d46e700c483"
 
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.csv.second}/#{version.csv.third}/CleanMyMac#{version.major}-#{version.csv.second}.zip",
       verified: "dl.devmate.com/"
