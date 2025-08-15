@@ -30,8 +30,6 @@ cask "miniforge" do
     args:       ["-b", "-p", "#{caskroom_path}/base"],
     args:       ["-b", "-p", install_root],
   }
-  binary "#{caskroom_path}/base/condabin/conda"
-  binary "#{caskroom_path}/base/condabin/mamba"
 
    uninstall delete: "#{caskroom_path}/base"
   binary "#{install_root}/condabin/conda"
@@ -45,7 +43,7 @@ cask "miniforge" do
 
   preflight do
      if File.directory?("#{caskroom_path}/envs-backup")
-      FileUtils.mv("#{caskroom_path}/envs-backup", "#{install_root}/envs")
+       FileUtils.mv("#{caskroom_path}/envs-backup", "#{install_root}/envs")
     end
   end
 
