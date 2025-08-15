@@ -54,6 +54,7 @@ jobs:
     needs: create_matrix
     name: "Online check (${{ matrix.os }}): ${{ matrix.cask }}"
     env:
+      HOMEBREW_DEVELOPER: 1
       CASK: ${{ matrix.cask }}
       HOMEBREW_GITHUB_API_TOKEN: "${{ github.token }}"
       GH_TOKEN: "${{ github.token }}"
