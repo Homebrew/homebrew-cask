@@ -37,9 +37,10 @@ cask "insta360-studio" do
     end
   end
 
-  # FIXME: Change pkg on next release to
-  # pkg "Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.pkg"
-  pkg "Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})_#{version.csv.fourth.split("_")[1..3].join("_")}_1754557465478.pkg"
+  # The pkg is often inconsistently named comparatively to the url version
+  rename "Insta360Studio*.pkg", "Insta360Studio.pkg"
+
+  pkg "Insta360Studio.pkg"
 
   uninstall quit:    "com.insta360.studio",
             pkgutil: [
