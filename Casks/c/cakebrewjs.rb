@@ -1,8 +1,8 @@
 cask "cakebrewjs" do
-  version "2.79"
-  sha256 "a12fa3d8581f14226d2a8f9d265acaee67ebc0d614489ba7a921642cef809d26"
+  version "2.82"
+  sha256 "d1b3441c5e4528a1e4fca4a83a5d05c1551304c021a116e0b22a8250cc1ea46c"
 
-  url "https://downloads.sourceforge.net/cakebrewjs/cakebrewjs-#{version}-Darwin.dmg"
+  url "https://downloads.sourceforge.net/cakebrewjs/Cakebrewjs-#{version}-Darwin.dmg"
   name "cakebrewjs"
   desc "Homebrew GUI app"
   homepage "https://sourceforge.net/projects/cakebrewjs/"
@@ -11,6 +11,8 @@ cask "cakebrewjs" do
     url :url
     regex(%r{url=.*?/cakebrewjs[._-]v?(\d+(?:\.\d+)+)(?:[._-]Darwin)?\.dmg}i)
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   app "cakebrewjs.app"
 
