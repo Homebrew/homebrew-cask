@@ -23,22 +23,41 @@ cask "miniforge" do
   ]
   container type: :naked
 
+  install_root = ENV["MINIFORGE_ROOT"] || "#{caskroom_path}/base"
+
   installer script: {
     executable: "Miniforge3-#{version}-MacOSX-#{arch}.sh",
-    args:       ["-b", "-p", "#{caskroom_path}/base"],
+    args:       ["-b", "-p", install_root],
   }
-  binary "#{caskroom_path}/base/condabin/conda"
-  binary "#{caskroom_path}/base/condabin/mamba"
 
-  uninstall rmdir: "#{caskroom_path}/base"
+  binary "#{install_root}/condabin/conda"
+  binary "#{install_root}/condabin/mamba"
+
+  uninstall_preflight do
+    if File.directory?("#{install_root}/envs")
+      FileUtils.mv("#{install_root}/envs", "#{caskroom_path}/envs-backup")
+    end
+  end
+
+  preflight do
+    if File.directory?("#{caskroom_path}/envs-backup")
+      FileUtils.mv("#{caskroom_path}/envs-backup", "#{install_root}/envs")
+    end
+  end
+
+  uninstall rmdir: "#{caskroom_path}"
 
   zap trash: [
     "~/.conda",
     "~/.condarc",
+    "#{caskroom_path}/envs-backup",
   ]
 
   caveats <<~EOS
-    To initialize your shell, run:
-      conda init "$(basename "${SHELL}")"
+    To install into your home dir (and preserve envs across uninstall/reinstall), run:
+      export MINIFORGE_ROOT="${HOME}/miniforge3"
+    Then:
+      brew install --cask miniforge
+    Your conda envs will now be auto-saved on upgrade and safely restored.
   EOS
 end
