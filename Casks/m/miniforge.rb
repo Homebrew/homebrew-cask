@@ -15,7 +15,6 @@ cask "miniforge" do
     regex(/v?(\d+(?:[.-]\d+)+)/i)
     strategy :github_latest
   end
-
   auto_updates true
   conflicts_with cask: [
     "mambaforge",
@@ -27,9 +26,11 @@ cask "miniforge" do
 
   installer script: {
     executable: "Miniforge3-#{version}-MacOSX-#{arch}.sh",
+    args:       ["-b", "-p", "#{caskroom_path}/base"],
     args:       ["-b", "-p", install_root],
   }
 
+   uninstall delete: "#{caskroom_path}/base"
   binary "#{install_root}/condabin/conda"
   binary "#{install_root}/condabin/mamba"
 
@@ -48,12 +49,14 @@ cask "miniforge" do
   uninstall rmdir: "#{caskroom_path}"
 
   zap trash: [
-    "~/.conda",
+     "~/.conda",
     "~/.condarc",
     "#{caskroom_path}/envs-backup",
   ]
 
   caveats <<~EOS
+    Please run the following to set up your shell:
+      conda init "$(basename "${SHELL}")"
     To install into your home dir (and preserve envs across uninstall/reinstall), run:
       export MINIFORGE_ROOT="${HOME}/miniforge3"
     Then:
