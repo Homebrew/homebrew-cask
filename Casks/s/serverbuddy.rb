@@ -1,6 +1,6 @@
 cask "serverbuddy" do
-  version "1.5.0"
-  sha256 "4d8bdcd213cfca213602e207f5caa883e2007f8c76bdc55e7c32c8aa2f140737"
+  version "1.5.1"
+  sha256 "da89d0740e8371af00f20c059482aa4a9d1199ce37569944f7af2b4e173257df"
 
   url "https://updates.serverbuddy.app/download/#{version}/ServerBuddy-#{version}.dmg"
   name "ServerBuddy"
