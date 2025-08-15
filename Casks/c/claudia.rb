@@ -7,11 +7,6 @@ cask "claudia" do
   desc "GUI app and toolkit for Claude Code"
   homepage "https://github.com/getasterisk/claudia"
 
-  livecheck do
-    url :url
-    strategy :github_tags
-  end
-
   auto_updates true
   depends_on macos: ">= :catalina"
 
