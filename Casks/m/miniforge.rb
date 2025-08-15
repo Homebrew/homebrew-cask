@@ -8,6 +8,7 @@ cask "miniforge" do
   url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-#{arch}.sh"
   name "miniforge"
   desc "Minimal installer for conda specific to conda-forge"
+  desc "Community-driven minimal conda installer"
   homepage "https://github.com/conda-forge/miniforge"
 
   livecheck do
@@ -15,7 +16,6 @@ cask "miniforge" do
     regex(/v?(\d+(?:[.-]\d+)+)/i)
     strategy :github_latest
   end
-
   auto_updates true
   conflicts_with cask: [
     "mambaforge",
@@ -23,22 +23,47 @@ cask "miniforge" do
   ]
   container type: :naked
 
+  install_root = ENV["MINIFORGE_ROOT"] || "#{caskroom_path}/base"
+
   installer script: {
     executable: "Miniforge3-#{version}-MacOSX-#{arch}.sh",
     args:       ["-b", "-p", "#{caskroom_path}/base"],
+    args:       ["-b", "-p", install_root],
   }
   binary "#{caskroom_path}/base/condabin/conda"
   binary "#{caskroom_path}/base/condabin/mamba"
 
-  uninstall delete: "#{caskroom_path}/base"
+   uninstall delete: "#{caskroom_path}/base"
+  binary "#{install_root}/condabin/conda"
+  binary "#{install_root}/condabin/mamba"
+
+  uninstall_preflight do
+     if File.directory?("#{install_root}/envs")
+       FileUtils.mv("#{install_root}/envs", "#{caskroom_path}/envs-backup")
+    end
+  end
+
+  preflight do
+     if File.directory?("#{caskroom_path}/envs-backup")
+      FileUtils.mv("#{caskroom_path}/envs-backup", "#{install_root}/envs")
+    end
+  end
+
+  uninstall rmdir: "#{caskroom_path}"
 
   zap trash: [
-    "~/.conda",
+     "~/.conda",
     "~/.condarc",
+    "#{caskroom_path}/envs-backup",
   ]
 
   caveats <<~EOS
-    Please run the following to setup your shell:
+    Please run the following to set up your shell:
       conda init "$(basename "${SHELL}")"
+    To install into your home dir (and preserve envs across uninstall/reinstall), run:
+      export MINIFORGE_ROOT="${HOME}/miniforge3"
+    Then:
+      brew install --cask miniforge
+    Your conda envs will now be auto-saved on upgrade and safely restored.
   EOS
 end
