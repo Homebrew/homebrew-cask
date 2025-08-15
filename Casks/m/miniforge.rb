@@ -7,7 +7,6 @@ cask "miniforge" do
 
   url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-#{arch}.sh"
   name "miniforge"
-  desc "Minimal installer for conda specific to conda-forge"
   desc "Community-driven minimal conda installer"
   homepage "https://github.com/conda-forge/miniforge"
 
@@ -36,14 +35,14 @@ cask "miniforge" do
   binary "#{install_root}/condabin/mamba"
 
   uninstall_preflight do
-     if File.directory?("#{install_root}/envs")
-       FileUtils.mv("#{install_root}/envs", "#{caskroom_path}/envs-backup")
+    if File.directory?("#{install_root}/envs")
+      FileUtils.mv("#{install_root}/envs", "#{caskroom_path}/envs-backup")
     end
   end
 
   preflight do
-     if File.directory?("#{caskroom_path}/envs-backup")
-       FileUtils.mv("#{caskroom_path}/envs-backup", "#{install_root}/envs")
+    if File.directory?("#{caskroom_path}/envs-backup")
+      FileUtils.mv("#{caskroom_path}/envs-backup", "#{install_root}/envs")
     end
   end
 
