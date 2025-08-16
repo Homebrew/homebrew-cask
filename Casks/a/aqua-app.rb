@@ -10,18 +10,8 @@ cask "aqua-app" do
   desc "Tests writing environment"
   homepage "https://www.jetbrains.com/aqua/"
 
-  livecheck do
-    url "https://data.services.jetbrains.com/products/releases?code=QA&latest=true&type=release"
-    strategy :json do |json|
-      json["QA"]&.map do |release|
-        version = release["version"]
-        build = release["build"]
-        next if version.blank? || build.blank?
-
-        "#{version},#{build}"
-      end
-    end
-  end
+  # https://blog.jetbrains.com/qa/2025/04/aqua-sunset/
+  deprecate! date: "2025-08-16", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
