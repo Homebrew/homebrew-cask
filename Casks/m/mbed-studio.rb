@@ -12,11 +12,9 @@ cask "mbed-studio" do
     strategy :header_match
   end
 
-  pkg "MbedStudio.pkg"
+  rename "MbedStudio-*.pkg", "MbedStudio.pkg"
 
-  preflight do
-    staged_path.glob("MbedStudio-*.pkg").first.rename("#{staged_path}/MbedStudio.pkg")
-  end
+  pkg "MbedStudio.pkg"
 
   uninstall pkgutil: "com.arm.mbed.studio"
 
