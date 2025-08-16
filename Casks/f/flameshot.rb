@@ -1,9 +1,9 @@
 cask "flameshot" do
   arch arm: "arm64", intel: "intel"
 
-  version "13.0.1"
-  sha256 arm:   "64f339b03f24b5a88eba8342ad6b888462d4f782940e0fb9be50bc0a3805189b",
-         intel: "24cf88770ad695f7f022b08c063b30b20cd0d378490b40b753404c48ebd2b626"
+  version "13.1.0"
+  sha256 arm:   "1e6ec923b95d432ec8fb7222095c47be651adeeb282290ab3fed055c5d710586",
+         intel: "6a05c0f00cca3f92aedb4c76d5c191308c2f343e51e58067f9f09f35cf882d94"
 
   url "https://github.com/flameshot-org/flameshot/releases/download/v#{version}/Flameshot-#{version}-artifact-macos-#{arch}.dmg",
       verified: "github.com/flameshot-org/flameshot/"
