@@ -1,15 +1,16 @@
 cask "tuta-mail" do
   version "301.250806.1"
-  sha256 :no_check
+  sha256 "36b0b9ff7efa5b33f39bf4c426470b1bb523f8e32eaef146a5eca81715dc4c2c"
 
-  url "https://app.tuta.com/desktop/tutanota-desktop-mac.dmg"
+  url "https://github.com/tutao/tutanota/releases/download/tutanota-desktop-release-#{version}/tutanota-desktop-mac.dmg",
+      verified: "github.com/tutao/tutanota/releases/download/"
   name "Tuta Mail"
-  desc "Email client"
+  desc "Secure email client"
   homepage "https://tuta.com/"
 
   livecheck do
-    url "https://app.tuta.com/desktop/latest-mac.yml"
-    strategy :electron_builder
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
@@ -22,6 +23,8 @@ cask "tuta-mail" do
     "~/Library/Application Support/tutanota-desktop",
     "~/Library/Caches/de.tutao.tutanota",
     "~/Library/Caches/de.tutao.tutanota.ShipIt",
+    "~/Library/Caches/tutanota-desktop-updater",
+    "~/Library/HTTPStorages/de.tutao.tutanota",
     "~/Library/Preferences/de.tutao.tutanota.plist",
   ]
 end
