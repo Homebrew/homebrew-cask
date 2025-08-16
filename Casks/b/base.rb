@@ -1,8 +1,8 @@
 cask "base" do
-  version "2.5.2"
-  sha256 "84848093681459b039572a15a82e1cc60e4366ccf5fb69a4de5c90d240871d8c"
+  version "3.0.0"
+  sha256 "a92ecf421cc2422c01a83238e09b6e02ed35542c02000d60e2346ae79199858d"
 
-  url "https://files.menial.co.uk/base/base_#{version}.zip"
+  url "https://files.menial.co.uk/base/Base-#{version}.zip"
   name "Menial Base"
   desc "App to create, design, edit and browse SQLite 3 database files"
   homepage "https://menial.co.uk/base/"
@@ -24,8 +24,4 @@ cask "base" do
     "~/Library/Caches/uk.co.menial.Base",
     "~/Library/Preferences/uk.co.menial.Base.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
