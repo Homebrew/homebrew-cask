@@ -30,7 +30,7 @@ cask "mkvtoolnix-app" do
     regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with formula: "mkvtoolnix"
 

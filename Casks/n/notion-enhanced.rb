@@ -8,7 +8,7 @@ cask "notion-enhanced" do
   desc "Enhancer/customiser for the all-in-one productivity workspace notion.so"
   homepage "https://notion-enhancer.github.io/"
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Notion Enhanced.app"
 

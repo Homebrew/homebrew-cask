@@ -11,7 +11,7 @@ cask "ultrastardeluxe" do
   desc "Karaoke game"
   homepage "https://usdx.eu/"
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "UltraStarDeluxe.app"
 
