@@ -1,9 +1,10 @@
 cask "screen-studio" do
   arch arm: "-arm64"
+  livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.26.0-3206"
-  sha256 arm:   "550b7d20b41153e4d869ae086e459828a10c83f6935b9f226b4aaf682a60c417",
-         intel: "203d64cf3dd155d60f29f0600d3b28c63d1efcd2e52ebe828ea1f75b159f471c"
+  version "3.4.7-3863"
+  sha256 arm:   "eb7cfb6885373a8abdc1fe3145c515cb5191ddbbd264e2afd8de4c7404e71118",
+         intel: "326d86c5367c43ba47a41d750842656132561d9b8c818de8a2be9b049c191900"
 
   url "https://screenstudioassets.com/releases/#{version}/Screen%20Studio-#{version}#{arch}-mac.zip",
       verified: "screenstudioassets.com/"
@@ -12,7 +13,7 @@ cask "screen-studio" do
   homepage "https://screen.studio/"
 
   livecheck do
-    url "https://screen.studio/api/trpc/appInfo.latestVersionInfo?input=%7B%22isBeta%22%3Afalse%7D"
+    url "https://screen.studio/api/trpc/updates.checkForUpdates?input={\"architecture\":\"#{livecheck_arch}\",\"currentVersion\":\"0.0.0\",\"channel\":\"stable\"}"
     strategy :json do |json|
       json.dig("result", "data", "version")
     end
