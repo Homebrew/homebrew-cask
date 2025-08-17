@@ -1,4 +1,4 @@
-cask "crystal" do
+cask "stravu-crystal" do
   version "0.2.0"
   sha256 "224f396252b40128b266794b7435a155d2fc0e565a556e2e985caa933f923c80"
 
