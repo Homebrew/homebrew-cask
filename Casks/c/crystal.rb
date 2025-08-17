@@ -7,6 +7,8 @@ cask "crystal" do
   desc "Run multiple Claude Code instances simultaneously using git worktrees"
   homepage "https://github.com/stravu/crystal"
 
+  depends_on macos: ">= :big_sur"
+
   app "Crystal.app"
 
   zap trash: [
