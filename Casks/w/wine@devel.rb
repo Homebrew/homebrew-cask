@@ -1,6 +1,6 @@
 cask "wine@devel" do
-  version "10.12"
-  sha256 "4f3f28215363382dccb0b7681969a0aa4d3326e2cf682b5af524def245810811"
+  version "10.13"
+  sha256 "e95e45c9b67d478583c1745f5d822d36a0533d1dd29887844feed6cc8773a8b9"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
@@ -30,6 +30,8 @@ cask "wine@devel" do
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   conflicts_with cask: [
     "wine-stable",
