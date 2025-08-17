@@ -1,6 +1,6 @@
 cask "macskk" do
-  version "2.3.2"
-  sha256 "d51136eeb31ce721c3d3bfcf26f11ba0712c4cf8dc728fd7487a9ab3247a2127"
+  version "2.3.3"
+  sha256 "83efca6ca288c92954e80649fea5f28fcbc48e31ce61b654da6f5a934d34bfae"
 
   url "https://github.com/mtgto/macSKK/releases/download/#{version}/macSKK-#{version}.dmg"
   name "macSKK"
