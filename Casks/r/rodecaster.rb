@@ -14,15 +14,11 @@ cask "rodecaster" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
-
   depends_on macos: ">= :catalina"
 
-  pkg "RØDECaster App.pkg"
+  rename "RØDECaster App*.pkg", "RØDECaster App.pkg"
 
-  preflight do
-    staged_path.glob("RØDECaster App*.pkg")&.first&.rename(staged_path/"RØDECaster App.pkg")
-  end
+  pkg "RØDECaster App.pkg"
 
   uninstall quit:    "com.rode.rodecastercomp",
             pkgutil: "com.rodecastercomp.installer"
