@@ -15,15 +15,11 @@ cask "teleport-suite@16" do
 
   disable! date: "2025-10-01", because: :discontinued
 
-  conflicts_with cask:    [
-                   "teleport-suite",
-                   "tsh",
-                   "tsh@13",
-                 ],
-                 formula: [
-                   "etsh",
-                   "teleport",
-                 ]
+  conflicts_with cask: [
+    "teleport-suite",
+    "tsh",
+    "tsh@13",
+  ]
 
   pkg "teleport-#{version}.pkg"
 
