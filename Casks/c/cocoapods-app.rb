@@ -10,8 +10,6 @@ cask "cocoapods-app" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  conflicts_with formula: "cocoapods"
-
   app "CocoaPods.app"
   binary "#{appdir}/CocoaPods.app/Contents/Helpers/pod"
 

@@ -12,7 +12,6 @@ cask "rio" do
     strategy :github_latest
   end
 
-  conflicts_with formula: "rio"
   depends_on macos: ">= :catalina"
 
   app "rio.app"

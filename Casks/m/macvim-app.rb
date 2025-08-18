@@ -17,7 +17,6 @@ cask "macvim-app" do
   end
 
   auto_updates true
-  conflicts_with formula: "macvim"
   depends_on macos: ">= :high_sierra"
 
   app "MacVim.app"

@@ -9,8 +9,6 @@ cask "svgcleaner" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  conflicts_with formula: "svgcleaner"
-
   app "SVGCleaner.app"
   binary "#{appdir}/SVGCleaner.app/Contents/MacOS/svgcleaner-cli", target: "svgcleaner"
 

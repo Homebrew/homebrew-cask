@@ -14,7 +14,6 @@ cask "ollama-app" do
   end
 
   auto_updates true
-  conflicts_with formula: "ollama"
   depends_on macos: ">= :high_sierra"
 
   app "Ollama.app"
