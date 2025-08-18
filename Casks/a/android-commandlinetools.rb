@@ -13,8 +13,7 @@ cask "android-commandlinetools" do
     regex(%r{href=.*?/commandlinetools[._-]mac[._-](\d+)[._-]latest\.zip}i)
   end
 
-  conflicts_with cask:    "android-sdk",
-                 formula: "proguard"
+  conflicts_with cask: "android-sdk"
 
   android_sdk_root = "#{HOMEBREW_PREFIX}/share/android-commandlinetools"
   android_clt_dir = "#{android_sdk_root}/cmdline-tools/latest"
