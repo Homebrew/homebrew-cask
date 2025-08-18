@@ -23,13 +23,7 @@ cask "docker-desktop" do
   end
 
   auto_updates true
-  conflicts_with cask:    "rancher",
-                 formula: %w[
-                   docker
-                   docker-completion
-                   docker-compose
-                   docker-credential-helper-ecr
-                 ]
+  conflicts_with cask: "rancher"
   depends_on macos: ">= :ventura"
 
   app "Docker.app"
