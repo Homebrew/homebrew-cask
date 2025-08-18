@@ -20,11 +20,10 @@ cask "emacs-app@nightly" do
     end
   end
 
-  conflicts_with cask:    [
-                   "emacs",
-                   "emacs@pretest",
-                 ],
-                 formula: "emacs"
+  conflicts_with cask: [
+    "emacs",
+    "emacs@pretest",
+  ]
 
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"
