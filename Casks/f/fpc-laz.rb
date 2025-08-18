@@ -18,8 +18,6 @@ cask "fpc-laz" do
 
   disable! date: "2026-09-01", because: :unsigned
 
-  conflicts_with formula: "fpc"
-
   pkg "fpc-#{version.csv.first}-intelarm64-macosx.mpkg/Contents/Packages/fpc-#{version.csv.first}-intelarm64-macosx.pkg"
 
   uninstall pkgutil: [
