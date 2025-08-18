@@ -15,6 +15,8 @@ cask "suspicious-package@preview" do
     end
   end
 
+  disable! date: "2025-08-18", because: :discontinued, replacement_cask: "suspicious-package"
+
   conflicts_with cask: "suspicious-package"
   depends_on macos: ">= :monterey"
 
