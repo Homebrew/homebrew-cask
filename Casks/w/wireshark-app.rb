@@ -42,8 +42,7 @@ cask "wireshark-app" do
   homepage "https://www.wireshark.org/"
 
   auto_updates true
-  conflicts_with cask:    "wireshark-chmodbpf",
-                 formula: "wireshark"
+  conflicts_with cask: "wireshark-chmodbpf"
   depends_on macos: ">= :mojave"
 
   app "Wireshark.app"
