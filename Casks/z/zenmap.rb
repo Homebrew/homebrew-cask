@@ -12,8 +12,6 @@ cask "zenmap" do
     regex(/href=.*?nmap[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  conflicts_with formula: "nmap"
-
   pkg "nmap-#{version}.mpkg"
 
   uninstall pkgutil: [
