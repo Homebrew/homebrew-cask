@@ -1,8 +1,11 @@
 cask "vagrant-vmware-utility" do
-  version "1.0.24"
-  sha256 "5f42cb017dd07270409eaee7c3b4a164ffa7c0f21d85c65840c4f81aab21d457"
+  arch arm: "arm64", intel: "amd64"
 
-  url "https://releases.hashicorp.com/vagrant-vmware-utility/#{version}/vagrant-vmware-utility_#{version}_darwin_amd64.dmg"
+  version "1.0.24"
+  sha256 arm:   "5f42cb017dd07270409eaee7c3b4a164ffa7c0f21d85c65840c4f81aab21d457",
+         intel: "5f42cb017dd07270409eaee7c3b4a164ffa7c0f21d85c65840c4f81aab21d457"
+
+  url "https://releases.hashicorp.com/vagrant-vmware-utility/#{version}/vagrant-vmware-utility_#{version}_darwin_#{arch}.dmg"
   name "Vagrant VMware Utility"
   desc "Gives Vagrant VMware plugin access to various VMware functionalities"
   homepage "https://developer.hashicorp.com/vagrant/docs/providers/vmware"
