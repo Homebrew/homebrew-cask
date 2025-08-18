@@ -23,7 +23,6 @@ cask "flutter" do
   end
 
   auto_updates true
-  conflicts_with formula: "dart-sdk"
 
   suite "flutter", target: "#{HOMEBREW_PREFIX}/share/flutter"
   binary "flutter/bin/dart"
