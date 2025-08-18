@@ -6,19 +6,22 @@ cask "openforis-collect" do
 
   url "https://search.maven.org/remotecontent?filepath=org/openforis/collect/collect-installer/#{version}/collect-installer-#{version}-osx.dmg",
       verified: "search.maven.org/"
-  name "Openforis Collect"
-  desc "Desktop solution for data collected in field-based inventories"
+  name "Open Foris Collect"
+  desc "Data management for field-based inventories"
   homepage "https://openforis.org/solutions/collect/"
 
   livecheck do
     url "https://github.com/openforis/collect"
   end
 
-  postflight do
-    installer_path = Dir["#{staged_path}/OpenForisCollect-*-osx-installer.app/Contents/MacOS/#{arch}"].first
-    system_command installer_path,
-                   args: ["--mode", "unattended"]
-  end
+  rename "OpenForisCollect-*-osx-installer.app", "OpenForisCollect-osx-installer.app"
+
+  installer script: {
+    executable: "#{staged_path}/OpenForisCollect-osx-installer.app/Contents/MacOS/#{arch}",
+    args:       [
+      "--mode", "unattended"
+    ],
+  }
 
   uninstall quit:   ["TERM", "OpenForisCollect-launcher.app"],
             signal: [
