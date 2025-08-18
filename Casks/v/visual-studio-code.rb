@@ -30,7 +30,6 @@ cask "visual-studio-code" do
   homepage "https://code.visualstudio.com/"
 
   auto_updates true
-  conflicts_with formula: "code-cli"
   depends_on macos: ">= :catalina"
 
   app "Visual Studio Code.app"
