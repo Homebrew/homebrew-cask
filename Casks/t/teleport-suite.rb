@@ -13,12 +13,11 @@ cask "teleport-suite" do
     regex(/teleport[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  conflicts_with cask:    [
-                   "teleport-suite@16",
-                   "tsh",
-                   "tsh@13",
-                 ],
-                 formula: "teleport"
+  conflicts_with cask: [
+    "teleport-suite@16",
+    "tsh",
+    "tsh@13",
+  ]
 
   pkg "teleport-#{version}.pkg"
 
