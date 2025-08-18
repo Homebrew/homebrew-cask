@@ -16,16 +16,12 @@ cask "teleport-suite@17" do
   # Support window taken from https://goteleport.com/docs/upcoming-releases/
   disable! date: "2026-02-28", because: :discontinued
 
-  conflicts_with cask:    [
-                   "teleport-suite",
-                   "teleport-suite@16",
-                   "tsh",
-                   "tsh@13",
-                 ],
-                 formula: [
-                   "etsh",
-                   "teleport",
-                 ]
+  conflicts_with cask: [
+    "teleport-suite",
+    "teleport-suite@16",
+    "tsh",
+    "tsh@13",
+  ]
 
   pkg "teleport-#{version}.pkg"
 
