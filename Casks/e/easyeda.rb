@@ -1,9 +1,9 @@
 cask "easyeda" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.5.46"
-  sha256 arm:   "cdee0f5aabd57b5ec3a3f6c7b9e7896784709742c6f9bc758b89cc703e94c2df",
-         intel: "11272b280295c2eb9c7540d21cb83fcd8495941f386d09a60b0618981acdbfee"
+  version "6.5.51"
+  sha256 arm:   "c683c0a61825219bc84fe76e21433a481384177d2e33ddc209c172ae5b227033",
+         intel: "a4568fb7c27d5640994c8a52c75987a4e19d05adcdebec5b5eb7298788bfbe37"
 
   url "https://image.easyeda.com/files/easyeda-mac-#{arch}-#{version}.zip"
   name "EasyEDA"
@@ -16,6 +16,8 @@ cask "easyeda" do
       json["result"]
     end
   end
+
+  disable! date: "2026-09-01", because: :unsigned
 
   app "EasyEDA.app"
 
