@@ -23,7 +23,12 @@ cask "tabby" do
   app "Tabby.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.tabby.sfl*",
     "~/Library/Application Support/tabby",
+    "~/Library/Caches/org.tabby",
+    "~/Library/Caches/org.tabby.ShipIt",
+    "~/Library/HTTPStorages/org.tabby",
+    "~/Library/Preferences/ByHost/org.tabby.ShipIt.*.plist",
     "~/Library/Preferences/org.tabby.helper.plist",
     "~/Library/Preferences/org.tabby.plist",
     "~/Library/Saved Application State/org.tabby.savedState",
