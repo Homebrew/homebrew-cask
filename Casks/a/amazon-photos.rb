@@ -4,8 +4,8 @@ cask "amazon-photos" do
 
   url "https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosApp.zip",
       verified: "d29x207vrinatv.cloudfront.net/"
-  name "Amazon Drive"
   name "Amazon Photos"
+  name "Amazon Drive"
   desc "Photo storage and sharing service"
   homepage "https://www.amazon.com/Amazon-Photos/b?node=13234696011"
 
