@@ -2,9 +2,9 @@ cask "deepchat" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x64"
 
-  version "0.3.0"
-  sha256 arm:   "ea5dfd7a6138bff36aa5e28b1a4e0a2dd8c49fcccae1c7114d4a7b059361dbac",
-         intel: "4d65a8d264f767df3f47f645d56081859bce8898491a2bc6989052ddc2ae0e7d"
+  version "0.3.1"
+  sha256 arm:   "40ceef7ee0345849c1c711bae3d4adbbbacb28591a47969142a31123d96cc8c8",
+         intel: "d0eb40cbaf2ad1cbd161c58dd23bfd1d096b15a40637604c642e0c327d3f1ee7"
 
   url "https://github.com/ThinkInAIXYZ/deepchat/releases/download/v#{version}/DeepChat-#{version}-mac-#{arch}.dmg",
       verified: "github.com/ThinkInAIXYZ/deepchat/"
