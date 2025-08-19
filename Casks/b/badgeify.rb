@@ -1,9 +1,9 @@
 cask "badgeify" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.8.4"
-  sha256 arm:   "2f834c073ba973bb263728d06463ada16f2b899dec1ac805ca61e30b95af29d7",
-         intel: "c9d3004d8ca92a68b6de53bb7c7013a0a7eaf750ba10433456e0429f38c56a70"
+  version "1.8.6"
+  sha256 arm:   "5be6827c544b87460635546b0fc09c3d4f8ad626790e39f64f8d78806e49810c",
+         intel: "dc72d8bbc55961935d96dc1203718e3e2f8eb89a25c693e7090d9455698ee12d"
 
   url "https://api.badgeify.app/release/download/darwin/#{arch}/#{version}"
   name "Badgeify"
