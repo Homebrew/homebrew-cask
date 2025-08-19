@@ -9,6 +9,7 @@ cask "comma-chameleon" do
   homepage "https://comma-chameleon.io/"
 
   deprecate! date: "2024-08-19", because: :discontinued
+  disable! date: "2025-08-19", because: :discontinued
 
   app "Comma Chameleon-darwin-x64/Comma Chameleon.app"
 
