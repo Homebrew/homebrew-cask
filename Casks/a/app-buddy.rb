@@ -1,6 +1,6 @@
 cask "app-buddy" do
-  version "1.2.0"
-  sha256 "49b182822be95730c18eee211af91ff950637ebacd507c7cca2872f1c2819dd9"
+  version "1.2.1"
+  sha256 "0512265cde30dfb1057d1eb7db52738308435af6d8b8bed18abba72c04b22423"
 
   url "https://github.com/sindresorhus/app-buddy-meta/releases/download/v#{version}/App.Buddy.zip",
       verified: "github.com/sindresorhus/"
