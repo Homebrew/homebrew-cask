@@ -1,6 +1,6 @@
 cask "makeracam" do
-  version "0.2.1.5"
-  sha256 "e3dafbee2124819a6db9375f82cf1d15190b2b46a3f2684df90269e4bcc0a42a"
+  version "0.2.1.6"
+  sha256 "e30ab7da27a04027c873b6f27cf757e1dca10cc7a212fbd2c5d85caf88726f3c"
 
   url "https://github.com/MakeraInc/MakeraCAM/releases/download/v#{version}/MakeraCAM_Mac_v#{version}.dmg",
       verified: "github.com/MakeraInc/MakeraCAM/"
