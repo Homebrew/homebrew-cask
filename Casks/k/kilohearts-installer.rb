@@ -1,5 +1,5 @@
 cask "kilohearts-installer" do
-  version "2.4.1"
+  version "2.4.2"
   sha256 :no_check
 
   url "https://kilohearts.com/data/install/_/mac"
