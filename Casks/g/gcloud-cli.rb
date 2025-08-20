@@ -1,9 +1,9 @@
 cask "gcloud-cli" do
   arch arm: "arm", intel: "x86_64"
 
-  version "534.0.0"
-  sha256 arm:   "f7fb4b6b6a804625f25402ad2c025a3abf736a4e2fabef07c15c51e8fe8530ae",
-         intel: "d351111b47038c8de27ea3aaa90165445af46c429b881d29b70383928ca7632e"
+  version "535.0.0"
+  sha256 arm:   "00a083d358df92ec8094c32ee97c68b2674738f476bafbb7f6a4c27f01c091dc",
+         intel: "c2337efa7cbbc6bbe8175554410dbb69a1b30226fc64961221e082bfd97ad293"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-darwin-#{arch}.tar.gz"
   name "Google Cloud CLI"
