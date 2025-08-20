@@ -1,6 +1,6 @@
 cask "retrobatch" do
-  version "2.2.2"
-  sha256 "2740c26de5f958b69335a5ed8c217cf66d9261fb997cd859ed33ed84d76460dd"
+  version "2.3"
+  sha256 "33f40deeafe495d2000d4bdfc42498a655d9b91d783c7d875798b6eb9266b696"
 
   url "https://flyingmeat.com/download/Retrobatch-#{version}.zip"
   name "Retrobatch"
