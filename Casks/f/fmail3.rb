@@ -1,6 +1,6 @@
 cask "fmail3" do
-  version "1.1.7"
-  sha256 "7128b3f123efa5ae08b4c94b0943e9f587fc312fbff44fe2ebf7d9eb5aec51ff"
+  version "1.1.9"
+  sha256 "6e17139a7088c9323c8ac6df39a25bba60431192669621257093d78e68d772b2"
 
   url "https://fmail3.appmac.fr/update/sparkle/FMail3_#{version.no_dots}.zip"
   name "FMail3"
