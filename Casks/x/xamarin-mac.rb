@@ -8,6 +8,7 @@ cask "xamarin-mac" do
   homepage "https://dotnet.microsoft.com/en-us/apps/xamarin"
 
   deprecate! date: "2024-08-20", because: :discontinued
+  disable! date: "2025-08-20", because: :discontinued
 
   depends_on cask: "mono-mdk-for-visual-studio"
 
