@@ -1,8 +1,8 @@
 cask "openboardview" do
-  version "9.95.1"
-  sha256 "dcc5646053f2635ece1a88a8412c87aca738519d16becc38870520549b72db1a"
+  version "9.95.2"
+  sha256 "0d70f9a2c87ff40217385976d51795f21cb45476383c8b36f1e380e3cd2b6b40"
 
-  url "https://github.com/OpenBoardView/OpenBoardView/releases/download/#{version}/OpenBoardView-#{version}-Darwin.dmg",
+  url "https://github.com/OpenBoardView/OpenBoardView/releases/download/#{version}/OpenBoardView-#{version}-Darwin-x86_64.dmg",
       verified: "github.com/OpenBoardView/OpenBoardView/"
   name "OpenBoardView"
   desc "File viewer for .brd files"
@@ -13,7 +13,13 @@ cask "openboardview" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :unsigned
+
   app "openboardview.app"
 
   zap trash: "~/Library/Application Support/OpenBoardView"
+
+  caveats do
+    requires_rosetta
+  end
 end
