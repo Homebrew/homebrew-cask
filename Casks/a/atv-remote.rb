@@ -10,6 +10,13 @@ cask "atv-remote" do
   desc "Control Apple TV from your desktop"
   homepage "https://github.com/bsharper/atv-desktop-remote"
 
+  # Upstream marks some releases that use a stable version format (v1.2.3) as
+  # pre-release on GitHub.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "ATV Remote.app"
