@@ -3,10 +3,12 @@ cask "messauto" do
 
   on_arm do
     sha256 "b046cfa7fdb6556136ab696402275e54f8b9fe773feaee4b20267dcf19a3ca4e"
+
     url "https://github.com/LeeeSe/MessAuto/releases/download/v#{version}/MessAuto_#{version}_aarch64.app.tar.gz"
   end
   on_intel do
     sha256 "cc5e4f36d0fce57caccd639675dde1ca4e9b0fd93047f8eeda66c97d06c2e75e"
+
     url "https://github.com/LeeeSe/MessAuto/releases/download/v#{version}/MessAuto_#{version}_x64.app.tar.gz"
   end
 
