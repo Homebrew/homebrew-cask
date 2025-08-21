@@ -1,6 +1,6 @@
 cask "kaleidoscope" do
-  version "6.0.1,8139"
-  sha256 "f22ed20e263af90b13c7d53d28b2410f36e765643e4466093198035eedebe0f5"
+  version "6.2,8595"
+  sha256 "673eb8426088fcffa155c53fbbb8500e70b3bec9ec101d8d0072feb4644bf139"
 
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
@@ -8,7 +8,7 @@ cask "kaleidoscope" do
   homepage "https://kaleidoscope.app/"
 
   livecheck do
-    url "https://updates.kaleidoscope.app/v5/prod/appcast"
+    url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
     strategy :sparkle
   end
 
