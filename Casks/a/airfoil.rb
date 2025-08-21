@@ -2,7 +2,7 @@ cask "airfoil" do
   sha256 :no_check
 
   on_ventura :or_older do
-    version "5.11.8"
+    version "5.11.9"
 
     url "https://cdn.rogueamoeba.com/airfoil/mac/download/Airfoil-ACE.zip"
 
