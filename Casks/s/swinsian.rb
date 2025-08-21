@@ -1,6 +1,6 @@
 cask "swinsian" do
-  version "2.3.6"
-  sha256 "750efa71b9c806cdc2c572ebb5f16a25deb83033d9a8cb4dffe347da758bd1e3"
+  version "3.0.0"
+  sha256 "0d178cf77177e37c5bb46b924d9b9f41f9efaa2ffaa6d2844d2af714f3e4d2fc"
 
   url "https://www.swinsian.com/sparkle/Swinsian_#{version}.zip"
   name "Swinsian"
@@ -13,6 +13,7 @@ cask "swinsian" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Swinsian.app"
 
@@ -24,8 +25,4 @@ cask "swinsian" do
     "~/Library/Containers/com.swinsian.SwinsianChapterReader",
     "~/Library/Preferences/com.swinsian.Swinsian.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
