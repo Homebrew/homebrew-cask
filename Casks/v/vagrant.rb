@@ -1,8 +1,8 @@
 cask "vagrant" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.4.8"
-  sha256 "e9c42af33ddcec9adf1401b2fe44fd09c167e8d846b30f67a1a4185912f11a9e"
+  version "2.4.9"
+  sha256 "8de08bd435ef8ae0fc5fbd6acefa9c68e62fb898c5ae0fbdacd26853bea9d4d6"
 
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_darwin_#{arch}.dmg",
       verified: "hashicorp.com/vagrant/"
