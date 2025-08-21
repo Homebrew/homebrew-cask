@@ -8,7 +8,7 @@ cask "kaleidoscope" do
   homepage "https://kaleidoscope.app/"
 
   livecheck do
-    url "https://updates.kaleidoscope.app/v6/prod/appcast"
+    url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
     strategy :sparkle
   end
 
