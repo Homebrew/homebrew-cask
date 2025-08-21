@@ -3,12 +3,12 @@ cask "usmart-trade" do
   livecheck_arch = on_arch_conditional arm: "mac_arm", intel: "mac"
 
   on_arm do
-    version "4.2.2,c1daa11d-6480-4401-8562-113745fbc4ee,2025-08-07"
-    sha256 "d35f6157750d5085722c56e4fd438a87a69420e39885e64fec96ceee32b46d15"
+    version "4.2.3,c2d410a9-56c3-4787-b94b-9e40f693a10c,2025-08-21"
+    sha256 "cb922b9e1e5b0c7946b2c6effc2d0b5833cf8a32b2f6ef92ad4616cd44f5f5f5"
   end
   on_intel do
-    version "4.2.2,bde2741a-5f16-4dc3-b40b-cd3ff46eb20a,2025-08-07"
-    sha256 "52d539582baa90e9ae4e619a14eea1173fa66690fec5508beab7f3a733b00d12"
+    version "4.2.3,dfa931e6-d47a-436f-8f30-00cbbf7e3aa8,2025-08-21"
+    sha256 "a0cb4c03681f443cc5bf0889ededeb18d007e3b4916e63b9daa8258026f072f5"
   end
 
   url "https://jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/admin/app-version-file/#{version.csv.third}/#{version.csv.second}/uSMART%20Trade-#{version.csv.first}#{arch}.dmg",
