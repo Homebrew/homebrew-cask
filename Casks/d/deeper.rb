@@ -55,7 +55,7 @@ cask "deeper" do
     end
   end
   on_sequoia :or_newer do
-    version "3.1.5"
+    version "3.1.6"
 
     url "https://www.titanium-software.fr/download/15/Deeper.dmg"
 
