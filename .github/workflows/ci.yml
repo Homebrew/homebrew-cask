@@ -259,7 +259,6 @@ jobs:
             errors = Check.errors(before, after, cask: cask)
 
             errors.each do |error|
-              onoe error
               puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
             end
 
