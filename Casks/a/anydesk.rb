@@ -1,5 +1,5 @@
 cask "anydesk" do
-  version "9.1.1"
+  version "9.5.0"
   sha256 :no_check
 
   url "https://download.anydesk.com/anydesk.dmg"
