@@ -4,7 +4,7 @@ cask "ipaverse" do
 
   url "https://github.com/bahattinkoc/ipaverse/releases/download/v#{version}/ipaverse.dmg"
   name "ipaverse"
-  desc "Modern macOS app for downloading and managing iOS apps from the App Store"
+  desc "Tool for downloading and managing iOS apps from the App Store"
   homepage "https://github.com/bahattinkoc/ipaverse"
 
   depends_on macos: ">= :sonoma"
@@ -12,8 +12,8 @@ cask "ipaverse" do
   app "ipaverse.app"
 
   zap trash: [
-    "~/Library/Preferences/com.ipaverse.plist",
     "~/Library/Application Support/ipaverse",
-    "~/Library/Caches/ipaverse"
+    "~/Library/Caches/ipaverse",
+    "~/Library/Preferences/com.ipaverse.plist",
   ]
 end
