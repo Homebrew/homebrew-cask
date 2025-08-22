@@ -1,10 +1,10 @@
-cask "font-monaspace-nerd-font" do
+cask "font-monaspace-nf" do
   version "1.300"
   sha256 "a02bddd0c73682accf7eab90f242b693bdc3a8af42b7a79c43377bc5daa148ac"
 
   url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-nerdfonts-v#{version}.zip",
       verified: "github.com/githubnext/monaspace/"
-  name "Monaspace Nerd Font families"
+  name "Monaspace NF"
   homepage "https://monaspace.githubnext.com/"
 
   livecheck do
