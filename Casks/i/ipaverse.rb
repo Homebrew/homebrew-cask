@@ -6,7 +6,6 @@ cask "ipaverse" do
   name "ipaverse"
   desc "Modern macOS app for downloading and managing iOS apps from the App Store"
   homepage "https://github.com/bahattinkoc/ipaverse"
-  license "MIT"
 
   depends_on macos: ">= :sonoma"
 
