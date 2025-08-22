@@ -13,7 +13,7 @@ cask "semeru-jdk-open" do
 
   livecheck do
     url :url
-    regex(/^jdk[._-](\d+[\.\d+]*)[+](\d+)[._-](.+?)$/i)
+    regex(/^jdk[._-](\d+[.\d+]*)[+](\d+)[._-](.+?)$/i)
     strategy :github_latest do |json, regex|
       json["tag_name"]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
     end
