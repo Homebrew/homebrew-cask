@@ -13,7 +13,6 @@ cask "tailscale-app" do
   end
 
   auto_updates true
-  conflicts_with formula: "tailscale"
   depends_on macos: ">= :big_sur"
 
   pkg "Tailscale-#{version}-macos.pkg"

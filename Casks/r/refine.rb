@@ -1,6 +1,6 @@
 cask "refine" do
-  version "1.12"
-  sha256 "10a07e0bee91b1dbe9577015f80bbb5303390dfb2b0a780114fb91021638f428"
+  version "1.15"
+  sha256 "b786920bab66e08245947d677cf0c04b6c8761e54268eb30ab7b5fecabc44978"
 
   url "https://refine.sh/release/stable/Refine_#{version}.zip"
   name "Refine"
@@ -19,8 +19,10 @@ cask "refine" do
 
   zap trash: [
     "~/Library/Application Support/com.runjuu.refine",
+    "~/Library/Application Support/Refine",
     "~/Library/Caches/com.runjuu.refine",
     "~/Library/HTTPStorages/com.runjuu.refine",
     "~/Library/Preferences/com.runjuu.refine.plist",
+    "~/Library/WebKit/com.runjuu.refine",
   ]
 end

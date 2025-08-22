@@ -23,8 +23,6 @@ cask "unison-app" do
     end
   end
 
-  conflicts_with formula: "unison"
-
   app "Unison.app"
   binary "#{appdir}/Unison.app/Contents/MacOS/cltool", target: "unison"
 

@@ -8,6 +8,7 @@ cask "retroactive" do
   homepage "https://github.com/cormiertyshawn895/Retroactive"
 
   deprecate! date: "2024-08-21", because: :discontinued
+  disable! date: "2025-08-21", because: :discontinued
 
   depends_on macos: ">= :high_sierra"
 

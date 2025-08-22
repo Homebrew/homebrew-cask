@@ -10,7 +10,7 @@ cask "canon-mg2500-driver" do
 
   livecheck do
     url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAxMTUyNjA0&cmp=ABR&lang=EN"
-    regex(%r{(\d+)/(\d+)/(\d+)/mcpd-mac-mg2500-(\d+(?:[_]\d+)+)-ea21_3\.dmg}i)
+    regex(%r{(\d+)/(\d+)/(\d+)/mcpd-mac-mg2500-(\d+(?:_\d+)+)-ea21_3\.dmg}i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
       next if match.blank?

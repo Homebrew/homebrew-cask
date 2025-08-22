@@ -6,7 +6,7 @@ cask "lookaway" do
       verified: "github.com/mysticalbits/lookaway-releases/"
   name "LookAway"
   desc "Break time reminder app"
-  homepage "https://lookaway.app/"
+  homepage "https://lookaway.com/"
 
   auto_updates true
   depends_on macos: ">= :ventura"

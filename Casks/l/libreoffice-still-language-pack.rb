@@ -528,7 +528,6 @@ cask "libreoffice-still-language-pack" do
           /usr/bin/tar -C $pathOfApp -xjf "#{staged_path}/LibreOffice Language Pack.app/Contents/Resources/tarball.tar.bz2" && touch $pathOfApp
         else
           echo "You need to run $pathOfApp once before you can silently install language pack"
-          echo "or you can also reinstall libreoffice with --no-quarantine parameters"
         fi
       else
         echo 'Silent installation cannot match the prerequisite'

@@ -12,8 +12,6 @@ cask "cmake-app" do
     regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]universal\.dmg/i)
   end
 
-  conflicts_with formula: "cmake"
-
   app "CMake.app"
   binary "#{appdir}/CMake.app/Contents/bin/ccmake"
   binary "#{appdir}/CMake.app/Contents/bin/cmake"

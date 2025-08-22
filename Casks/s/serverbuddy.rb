@@ -1,6 +1,6 @@
 cask "serverbuddy" do
-  version "1.5.1"
-  sha256 "da89d0740e8371af00f20c059482aa4a9d1199ce37569944f7af2b4e173257df"
+  version "1.7.0"
+  sha256 "510db6a3355b24fbd5e120b92acb37a433fbe61e707f89c34e092a1078c8eee0"
 
   url "https://updates.serverbuddy.app/download/#{version}/ServerBuddy-#{version}.dmg"
   name "ServerBuddy"
@@ -14,6 +14,7 @@ cask "serverbuddy" do
 
   auto_updates true
   depends_on macos: ">= :sonoma"
+  depends_on arch: :arm64
 
   app "ServerBuddy.app"
 

@@ -10,8 +10,7 @@ cask "mono-mdk-for-visual-studio" do
   # https://learn.microsoft.com/en-us/visualstudio/releases/2022/what-happened-to-vs-for-mac
   deprecate! date: "2024-09-01", because: :discontinued
 
-  conflicts_with cask:    "mono-mdk",
-                 formula: "mono"
+  conflicts_with cask: "mono-mdk"
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 

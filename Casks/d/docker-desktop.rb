@@ -1,9 +1,9 @@
 cask "docker-desktop" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.44.1,201842"
-  sha256 arm:   "bb962186dada3d95a388e745a02fb3ccb7c1b6f5e4201dec33fd4df677110e81",
-         intel: "4cd8d0368cba4fdb3ba8c5bf8edde49d0994fcce03e3b8517422dbf48a5ea4f9"
+  version "4.44.3,202357"
+  sha256 arm:   "d5b87a11b74dd89a619ab3704504fe7df2e72018a49769651ebeffc44f8179c3",
+         intel: "00b3807c9092e8d8495009574faf1a0ef3bda4a954f9c042ecfd3e2021540b08"
 
   on_intel do
     binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.hyperkit",
@@ -23,13 +23,7 @@ cask "docker-desktop" do
   end
 
   auto_updates true
-  conflicts_with cask:    "rancher",
-                 formula: %w[
-                   docker
-                   docker-completion
-                   docker-compose
-                   docker-credential-helper-ecr
-                 ]
+  conflicts_with cask: "rancher"
   depends_on macos: ">= :ventura"
 
   app "Docker.app"

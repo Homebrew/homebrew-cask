@@ -10,12 +10,11 @@ cask "tsh" do
 
   deprecate! date: "2024-11-18", because: :unmaintained, replacement_cask: "teleport"
 
-  conflicts_with cask:    [
-                   "teleport",
-                   "teleport@16",
-                   "tsh@13",
-                 ],
-                 formula: "teleport"
+  conflicts_with cask: [
+    "teleport",
+    "teleport@16",
+    "tsh@13",
+  ]
 
   pkg "tsh-#{version}.pkg"
 

@@ -1,6 +1,6 @@
 cask "teleport-suite" do
-  version "18.1.4"
-  sha256 "063ed5e667e1eb410ba889116107d1984faff85d8865af85ddee7e027280a13a"
+  version "18.1.6"
+  sha256 "4032fdff34bfc90d6761fd997859adf3d81fcd77b40a32ade2597ddb8d4c0112"
 
   url "https://cdn.teleport.dev/teleport-#{version}.pkg",
       verified: "cdn.teleport.dev/"
@@ -13,12 +13,11 @@ cask "teleport-suite" do
     regex(/teleport[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  conflicts_with cask:    [
-                   "teleport-suite@16",
-                   "tsh",
-                   "tsh@13",
-                 ],
-                 formula: "teleport"
+  conflicts_with cask: [
+    "teleport-suite@16",
+    "tsh",
+    "tsh@13",
+  ]
 
   pkg "teleport-#{version}.pkg"
 

@@ -31,7 +31,7 @@ cask "dotnet-sdk@8" do
     "dotnet-runtime@preview",
     "dotnet-sdk",
     "dotnet-sdk@preview",
-  ], formula: "dotnet"
+  ]
   depends_on macos: ">= :ventura"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"

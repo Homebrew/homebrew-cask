@@ -32,8 +32,6 @@ cask "mkvtoolnix-app" do
 
   disable! date: "2026-09-01", because: :unsigned
 
-  conflicts_with formula: "mkvtoolnix"
-
   app "MKVToolNix-#{version}.app"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvinfo"

@@ -2,9 +2,9 @@ cask "feed-the-beast" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x64"
 
-  version "1.28.1"
-  sha256 arm:   "2161ea5f14d71562409a14b6d0fd8f3ff068b3ec963e5d67857cbd72f7e7c0a6",
-         intel: "f7f5b30f1cc7716ea4f36908754102878eb2401c8706e980a8b636adf1059287"
+  version "1.28.2"
+  sha256 arm:   "c8dda2ed8709db9c1bccd8f6cf63c6e0453aa15a79238dcc980ce5189582470b",
+         intel: "04a6a290ce1822dfe346ff63215d0309df8e2003f8d9c42a5a5fff23d14c2c11"
 
   url "https://piston.feed-the-beast.com/app/ftb-app-macos-#{version}-#{arch}.dmg"
   name "Feed the Beast"
@@ -12,7 +12,7 @@ cask "feed-the-beast" do
   homepage "https://www.feed-the-beast.com/"
 
   livecheck do
-    url "https://meta.feed-the-beast.com/v1/app/versions"
+    url "https://api.feed-the-beast.com/v1/meta/app/versions"
     regex(/ftb[._-]app[._-]macos[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
     strategy :json do |json, regex|
       match = json.dig("macos", livecheck_arch, "dmg", "url")&.match(regex)

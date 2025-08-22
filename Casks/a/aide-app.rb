@@ -19,7 +19,6 @@ cask "aide-app" do
   end
 
   auto_updates true
-  conflicts_with formula: "aide"
   depends_on macos: ">= :catalina"
 
   app "Aide.app"

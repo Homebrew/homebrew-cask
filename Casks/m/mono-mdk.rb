@@ -12,8 +12,7 @@ cask "mono-mdk" do
     regex(%r{href=.*?/MonoFramework-MDK-(\d+(?:\.\d+)+).macos10.xamarin.universal\.pkg}i)
   end
 
-  conflicts_with cask:    "mono-mdk-for-visual-studio",
-                 formula: "mono"
+  conflicts_with cask: "mono-mdk-for-visual-studio"
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 

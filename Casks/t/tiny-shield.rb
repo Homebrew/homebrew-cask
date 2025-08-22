@@ -1,6 +1,6 @@
 cask "tiny-shield" do
-  version "1.2.0,10200"
-  sha256 "eb8cae9f9a3b78946ab3fe63ce70ddc8b3db363b1e212f5c3da0cb95f8a28f20"
+  version "1.2.1,10201"
+  sha256 "b928abe2c3a447acabf7e1bfbd1a93e8c3231ff90f5e9d5320cab36d52bffb5b"
 
   url "https://download.proxyman.io/tinyshield/#{version.csv.second}/Tiny_Shield_#{version.csv.first}.dmg",
       verified: "download.proxyman.io/tinyshield/"

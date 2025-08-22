@@ -65,7 +65,7 @@ cask "cocktail" do
     end
   end
   on_sequoia do
-    version "18.6.7"
+    version "18.7"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
@@ -76,7 +76,7 @@ cask "cocktail" do
     end
   end
   on_tahoe :or_newer do
-    version "19.0"
+    version "19.0.2"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}TE.dmg"

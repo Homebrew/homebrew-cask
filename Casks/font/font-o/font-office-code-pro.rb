@@ -6,6 +6,8 @@ cask "font-office-code-pro" do
   name "Office Code Pro"
   homepage "https://github.com/nathco/Office-Code-Pro"
 
+  disable! date: "2025-08-18", because: :no_longer_available
+
   font "Office-Code-Pro-#{version}/Fonts/Office Code Pro D/OTF/OfficeCodeProD-Bold.otf"
   font "Office-Code-Pro-#{version}/Fonts/Office Code Pro D/OTF/OfficeCodeProD-BoldItalic.otf"
   font "Office-Code-Pro-#{version}/Fonts/Office Code Pro D/OTF/OfficeCodeProD-Light.otf"
