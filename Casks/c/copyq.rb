@@ -1,9 +1,9 @@
 cask "copyq" do
-  arch arm: "12-m1", intel: "10"
+  arch arm: "12-m1", intel: "13"
 
-  version "10.0.0"
-  sha256 arm:   "f535cc45a1df777643fe47200c206b3a9d461b7b58869b1783ab7de1c95eccdc",
-         intel: "5565ba19d59ab2bd4c54bb023dbf3fdf2b80b9706b25bc2021358f65c0cde5d4"
+  version "11.0.0"
+  sha256 arm:   "3471c6bbafaf08e720812dd20054c3b46b2f1b664a8ddeb87963157e64eeee26",
+         intel: "9f6749bab19540f2936a408d3c66dff6434409b8db067456ec229f8c8a260179"
 
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ-macos-#{arch}.dmg.zip",
       verified: "github.com/hluk/CopyQ/"
@@ -18,7 +18,7 @@ cask "copyq" do
 
   disable! date: "2026-09-01", because: :unsigned
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "CopyQ.app"
 
