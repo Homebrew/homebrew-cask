@@ -1,4 +1,4 @@
-cask "font-monaspace-nerd-font" do
+cask "font-monaspice-nerd-font" do
   version "3.4.0"
   sha256 "032c065c53fe08c633eefc7b866b32595316c3563626145480d612aceef93e62"
 
