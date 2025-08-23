@@ -1,6 +1,6 @@
 cask "vnc-server" do
-  version "7.13.1"
-  sha256 "c521436373e5dcc45a874c80e0eb72d45a9740f5d5f49552a53c1fd8474d4ef3"
+  version "7.15.0"
+  sha256 "6b3fa8c2c76cff04cbd4b29fefa2e3e2daa7bcca3aea917e2a13e3e83b5368dc"
 
   url "https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-universal.pkg"
   name "Real VNC Server"
@@ -20,10 +20,15 @@ cask "vnc-server" do
   end
 
   uninstall launchctl: [
+              "com.realvnc.vncagent.peruser",
+              "com.realvnc.vncagent.prelogin",
               "com.realvnc.vncserver",
               "com.realvnc.vncserver.peruser",
             ],
-            pkgutil:   "com.realvnc.vncserver.pkg"
+            pkgutil:   [
+              "com.realvnc.vncserver.1",
+              "com.realvnc.vncserver.pkg",
+            ]
 
   zap trash: [
     "/Library/Logs/vncserver.log.bak",
