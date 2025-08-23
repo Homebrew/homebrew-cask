@@ -33,7 +33,7 @@ jobs:
 
             - label: unsigned
               path: Casks/.+
-              content: \n  (deprecate|disable)!.*:unsigned\n
+              content: \n  (deprecate|disable)!.*:fails_gatekeeper_check\n
 
             - label: new cask
               status: added
