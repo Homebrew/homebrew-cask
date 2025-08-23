@@ -1,6 +1,6 @@
 cask "font-leland" do
-  version "0.78"
-  sha256 "7f213f57afb05fbd6d2fa5aa4a785782448ae560c11d79a0afdfb5e2784a0495"
+  version "0.79"
+  sha256 "fbfde20539a32c679057e99cdbf979ff35e050b893b0cb96058fcb1b48234b89"
 
   url "https://github.com/MuseScoreFonts/Leland/archive/refs/tags/v#{version}.tar.gz"
   name "Leland"
