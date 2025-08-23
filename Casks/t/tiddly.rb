@@ -10,7 +10,7 @@ cask "tiddly" do
   desc "Browser for TiddlyWiki"
   homepage "https://github.com/Jermolene/TiddlyDesktop"
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "TiddlyDesktop-mac#{arch}-v#{version}/TiddlyDesktop.app"
 
