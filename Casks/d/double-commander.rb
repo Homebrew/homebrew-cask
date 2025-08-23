@@ -19,7 +19,7 @@ cask "double-commander" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Double Commander.app"
 
