@@ -7,7 +7,7 @@ cask "fly" do
   desc "Official CLI tool for Concourse CI"
   homepage "https://github.com/concourse/concourse"
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "fly"
 
