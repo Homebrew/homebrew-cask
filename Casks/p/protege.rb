@@ -8,7 +8,7 @@ cask "protege" do
   desc "Ontology editor"
   homepage "https://protege.stanford.edu/"
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Protege-#{version}/Protégé.app"
 
