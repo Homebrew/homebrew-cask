@@ -1,6 +1,6 @@
 cask "lexa" do
   version "1.1.0"
-  sha256 "304f4648b40e7749e407bbe447e20df83bf141abad0436157cd6c8c25e1657f8"
+  sha256 "963799ef88d181ff3a1b16f6cef8934e1195bbdac99143d8b1dc3554a8ff3474"
 
   # You'll need to replace this URL with your actual DMG hosting URL
   url "https://apps.lexa.chat/download/lexa-desktop-#{version}.dmg"
@@ -10,7 +10,7 @@ cask "lexa" do
 
   livecheck do
     # Update this URL to point to your version checking endpoint
-    url "https://apps.lexa.chat/api/version"
+    url "https://apps.lexa.chat/api/version/version.json"
     strategy :json do |json|
       json["version"]
     end
