@@ -7,7 +7,7 @@ cask "iina+" do
   desc "Extra danmaku support for iina (iina 弹幕支持)"
   homepage "https://github.com/xjbeta/iina-plus"
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :big_sur"

@@ -23,7 +23,7 @@ cask "openemu@experimental" do
   desc "Retro video game emulation"
   homepage "https://openemu.org/"
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   conflicts_with cask: "openemu"

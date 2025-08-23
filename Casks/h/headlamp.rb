@@ -26,7 +26,7 @@ cask "headlamp" do
 
   no_autobump! because: :bumped_by_upstream
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :catalina"
 

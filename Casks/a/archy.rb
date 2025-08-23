@@ -15,7 +15,7 @@ cask "archy" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "archyBin/archy-macos-#{version}", target: "archy"
 
