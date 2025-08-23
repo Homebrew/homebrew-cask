@@ -16,7 +16,7 @@ cask "oso-cloud" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "oso_cli_mac_osx_#{arch}", target: "oso-cloud"
 
