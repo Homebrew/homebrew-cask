@@ -20,10 +20,15 @@ cask "vnc-server" do
   end
 
   uninstall launchctl: [
+              "com.realvnc.vncagent.peruser",
+              "com.realvnc.vncagent.prelogin",
               "com.realvnc.vncserver",
               "com.realvnc.vncserver.peruser",
             ],
-            pkgutil:   "com.realvnc.vncserver.pkg"
+            pkgutil:   [
+              "com.realvnc.vncserver.1",
+              "com.realvnc.vncserver.pkg",
+            ]
 
   zap trash: [
     "/Library/Logs/vncserver.log.bak",
