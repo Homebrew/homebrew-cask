@@ -16,7 +16,7 @@ cask "clickhouse" do
     regex(/^v?(\d+(?:\.\d+)+[._-](lts|stable))$/i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "clickhouse-macos#{arch}", target: "clickhouse"
 
