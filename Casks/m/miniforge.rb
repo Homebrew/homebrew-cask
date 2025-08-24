@@ -30,7 +30,7 @@ cask "miniforge" do
   installer script: {
     executable: "Miniforge3-#{version}-MacOSX-#{arch}.sh",
     args:       ["-b", "-p", install_root],
-  }
+    sudo:       true
 
   binary "#{install_root}/condabin/conda"
   binary "#{install_root}/condabin/mamba"
