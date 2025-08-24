@@ -59,18 +59,14 @@ cask "displaylink" do
       end
     end
 
-    pkg "DisplayLinkManager.pkg"
+    rename "DisplayLinkManager-#{version.csv.first}*pkg", "DisplayLinkManager-#{version.csv.first}.pkg"
 
-    preflight do
-      staged_path.glob("DisplayLinkManager-*.pkg").first.rename("#{staged_path}/DisplayLinkManager.pkg")
-    end
+    pkg "DisplayLinkManager-#{version.csv.first}.pkg"
   end
 
   name "DisplayLink USB Graphics Software"
   desc "Drivers for DisplayLink docks, adapters and monitors"
   homepage "https://www.synaptics.com/products/displaylink-graphics"
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   uninstall launchctl: [
               "73YQY62QM3.com.displaylink.DisplayLinkAPServer",
