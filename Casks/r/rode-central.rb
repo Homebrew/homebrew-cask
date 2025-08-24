@@ -16,11 +16,9 @@ cask "rode-central" do
 
   depends_on macos: ">= :catalina"
 
-  pkg "RØDE Central.pkg"
+  rename "RØDE Central*.pkg", "RØDE Central.pkg"
 
-  preflight do
-    staged_path.glob("RØDE Central*.pkg")&.first&.rename(staged_path/"RØDE Central.pkg")
-  end
+  pkg "RØDE Central.pkg"
 
   uninstall pkgutil: "com.rodecentral.installer"
 

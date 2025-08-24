@@ -17,14 +17,14 @@ cask "asix-ax88179" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :monterey"
   container nested: "ASIX_USB_Device_Installer_v#{version.csv.first}.dmg"
 
-  pkg "ASIX_USB_Device_Installer_v#{version.csv.first}.pkg"
+  rename "ASIX_USB_Device_Un*.pkg", "AX88179_178A_Uninstall.pkg"
 
-  preflight do
-    staged_path.glob("ASIX_USB_Device_Un*.pkg").first.rename(staged_path/"AX88179_178A_Uninstall.pkg")
-  end
+  pkg "ASIX_USB_Device_Installer_v#{version.csv.first}.pkg"
 
   uninstall early_script: {
               executable:   "/usr/sbin/installer",
