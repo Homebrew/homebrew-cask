@@ -1,6 +1,6 @@
 cask "font-chiron-hei-hk" do
-  version "2.530"
-  sha256 "38d10f161c63e30340d09f5b200ea6fdbb716162b881bc5c238168140c00fd96"
+  version "2.531"
+  sha256 "b519724d159ce4bb55f7ac69a07b299f7da61b9e9b8d64701147157571eab6fc"
 
   url "https://github.com/chiron-fonts/chiron-hei-hk/archive/refs/tags/v#{version}.tar.gz"
   name "Chiron Hei HK"
