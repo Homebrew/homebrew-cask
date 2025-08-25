@@ -7,6 +7,8 @@ cask "container-ps" do
   desc "App to show all docker images"
   homepage "https://github.com/Toinane/container-ps"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Container PS.app"
 
   zap trash: [
