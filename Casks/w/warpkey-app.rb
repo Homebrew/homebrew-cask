@@ -6,7 +6,7 @@ cask "warpkey-app" do
   name "WarpKey"
   desc "Keyboard-centric application and window switcher"
   homepage "https://github.com/musamatini/WarpKey/"
-
+  depends_on macos: ">= :ventura"
   auto_updates true
 
   app "WrapKey.app"
