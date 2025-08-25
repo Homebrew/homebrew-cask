@@ -16,6 +16,8 @@ cask "digikam" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   pkg "digiKam-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: [
