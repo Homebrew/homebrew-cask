@@ -8,6 +8,13 @@ cask "sokim" do
   desc "Korean-English Input Method Editor"
   homepage "https://github.com/kiding/SokIM"
 
+  # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
+  # labeled as "pre-release" on GitHub before the version is released.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :ventura"
 
   pkg "SokIM.pkg"
