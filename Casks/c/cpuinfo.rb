@@ -7,6 +7,8 @@ cask "cpuinfo" do
   desc "CPU meter menu bar app"
   homepage "https://github.com/yusukeshibata/cpuinfo/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "cpuinfo.app"
 
   zap trash: [
