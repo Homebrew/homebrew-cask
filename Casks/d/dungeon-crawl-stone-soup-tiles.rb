@@ -13,6 +13,8 @@ cask "dungeon-crawl-stone-soup-tiles" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Dungeon Crawl Stone Soup - Tiles.app"
 
   zap trash: [

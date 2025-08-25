@@ -18,8 +18,8 @@ cask "drawpile" do
   end
   on_monterey :or_newer do
     version "2.2.2"
-    sha256 arm:   "06c9a282761d79d0f41402fa56996388da3b861363a61d6213430238a2c068b4",
-           intel: "8dd6f517c9fbbe767570d4fc1a01bef3ddef03328606b517623c8eac4409cb8c"
+    sha256 arm:   "59b1ff5b42bb1ded49be5070f290429a37d0d7a723fed07a6ec51ec79cdea7a9",
+           intel: "56d484ea4ea32fccbc6015eedb5d80f1f4f77fa018b8724e2d9499368c70a922"
 
     url "https://github.com/drawpile/Drawpile/releases/download/#{version}/Drawpile-#{version}-#{arch}.dmg",
         verified: "github.com/drawpile/Drawpile"
@@ -33,6 +33,8 @@ cask "drawpile" do
   name "Drawpile"
   desc "Collaborative drawing app"
   homepage "https://drawpile.net/"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :high_sierra"
 
