@@ -13,6 +13,8 @@ cask "dvdstyler" do
     regex(/DVDStyler[._-]?(\d+(?:[._]\d+)+)[._-]?MacOSX\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "DVDStyler.app"
 
   zap trash: [
