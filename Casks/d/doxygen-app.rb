@@ -12,6 +12,8 @@ cask "doxygen-app" do
     regex(%r{href=.*?/Doxygen-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Doxygen.app"
 
   zap trash: [
