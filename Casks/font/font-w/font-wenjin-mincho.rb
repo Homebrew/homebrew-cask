@@ -1,6 +1,3 @@
-# Documentation: https://docs.brew.sh/Cask-Cookbook
-#                https://docs.brew.sh/Adding-Software-to-Homebrew#cask-stanzas
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 cask "font-wenjin-mincho" do
   version "1.100"
   sha256 "6f547297d89dce2ec1777228baa43a36b5f3a078611a12ac375da1db43f48c8c"
