@@ -1,8 +1,9 @@
 cask "install-disk-creator" do
-  version "1.8.5"
+  version "1.9.1"
   sha256 :no_check
 
-  url "https://macdaddy.io/InstallDiskCreator.zip"
+  url "https://macdaddy.io/InstallDiskCreator.zip",
+      referer: "https://macdaddy.io/install-disk-creator/"
   name "Install Disk Creator"
   desc "Utility to create bootable system install discs"
   homepage "https://macdaddy.io/install-disk-creator/"
