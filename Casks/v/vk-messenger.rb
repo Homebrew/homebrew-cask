@@ -8,16 +8,7 @@ cask "vk-messenger" do
   desc "Messenger app"
   homepage "https://vk.com/messenger"
 
-  livecheck do
-    url "https://desktop.userapi.com/mac/master/latest.json"
-    strategy :json do |json|
-      version = json["version"]
-      build = json["build"]
-      next if version.blank? || build.blank?
-
-      "#{version},#{build}"
-    end
-  end
+  disable! date: "2025-08-25", because: :no_longer_meets_criteria
 
   app "VK Messenger.app"
 
