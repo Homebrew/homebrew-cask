@@ -8,6 +8,8 @@ cask "cerebro" do
   desc "Open-source launcher"
   homepage "https://cerebroapp.vercel.app/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :high_sierra"
 
   app "Cerebro.app"
