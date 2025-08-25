@@ -15,6 +15,8 @@ cask "davmail-app" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "DavMail.app"
 
   zap trash: [
