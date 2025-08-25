@@ -116,8 +116,11 @@ cask "teamviewer" do
     "~/Library/Caches/com.teamviewer.TeamViewer",
     "~/Library/Caches/TeamViewer",
     "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
+    "~/Library/HTTPStorages/com.teamviewer.TeamViewer",
+    "~/Library/HTTPStorages/com.teamviewer.TeamViewer.binarycookies",
     "~/Library/Logs/TeamViewer",
     "~/Library/Preferences/com.teamviewer*",
     "~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState",
+    "~/Library/WebKit/com.teamviewer.TeamViewer",
   ]
 end
