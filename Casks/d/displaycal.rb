@@ -12,6 +12,8 @@ cask "displaycal" do
     url "https://sourceforge.net/projects/dispcalgui/rss?path=/release"
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   auto_updates true
   depends_on formula: "argyll-cms"
 
@@ -29,6 +31,7 @@ cask "displaycal" do
   ]
 
   caveats do
+    requires_rosetta
     <<~EOS
       If #{token} asks for argyll-cms, do not choose to download.
       Instead, select "Browse" and point #{token} to your #{HOMEBREW_PREFIX}/bin.
