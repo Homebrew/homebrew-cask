@@ -29,7 +29,9 @@ cask "chromium" do
 
   zap trash: [
     "~/Library/Application Support/Chromium",
+    "~/Library/Application Support/CrashReporter/Chromium_*.plist",
     "~/Library/Caches/Chromium",
+    "~/Library/Logs/DiagnosticReports/Chromium-*.ips",
     "~/Library/Preferences/org.chromium.Chromium.plist",
     "~/Library/Saved Application State/org.chromium.Chromium.savedState",
   ]
