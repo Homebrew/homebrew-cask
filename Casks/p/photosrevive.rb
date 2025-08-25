@@ -1,6 +1,6 @@
 cask "photosrevive" do
-  version "2.1.7"
-  sha256 "0e71fc71a2bf2b5f258742b58b812593b6eae3f3f086874ebfd65f793fab2207"
+  version "2.1.8"
+  sha256 "b35275ce609bf29cade334dab8e14eb6052d2f57629ae6c6b3e8914565f28ac3"
 
   url "https://neededapps.com/appcasts/photosrevive/versions/#{version}"
   name "PhotosRevive"
