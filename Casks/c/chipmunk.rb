@@ -1,9 +1,9 @@
 cask "chipmunk" do
   arch arm: "-arm64"
 
-  version "3.18.2"
-  sha256 arm:   "ee4652822bdd224656d3ba521fff1e9fb834beb56d9090c721f7aac53a9c5212",
-         intel: "58474426b89d220492d25f30d2d74ffda3f3fdf1057f8e2bb26ac091d017ed47"
+  version "3.18.3"
+  sha256 arm:   "03ff086c63b1364f99de9a257daa400942ff3dab28b5330c17b69652c07b7ed9",
+         intel: "a4cc0c829cfd7ec6ba46da452caa27095bca2acaa91a9382b941e8f9f38622f1"
 
   url "https://github.com/esrlabs/chipmunk/releases/download/#{version}/chipmunk@#{version}-darwin#{arch}-portable.tgz"
   name "Chipmunk Log Analyzer & Viewer"
