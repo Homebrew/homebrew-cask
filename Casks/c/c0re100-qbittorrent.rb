@@ -12,6 +12,8 @@ cask "c0re100-qbittorrent" do
     regex(/^release[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   conflicts_with cask: "qbittorrent"
   depends_on macos: ">= :monterey"
 
