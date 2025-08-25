@@ -15,6 +15,8 @@ cask "chatterino" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "chatterino.app"
 
   zap trash: "~/Library/Application Support/chatterino"
