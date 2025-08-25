@@ -10,6 +10,8 @@ cask "orcaslicer" do
   desc "G-code generator for 3D printers"
   homepage "https://github.com/SoftFever/OrcaSlicer"
 
+  conflicts_with cask: "orcaslicer@nightly"
+
   app "OrcaSlicer.app"
 
   zap trash: [
