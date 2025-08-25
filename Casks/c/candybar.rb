@@ -27,6 +27,8 @@ cask "candybar" do
   desc "Tool to manage file icons"
   homepage "https://blog.iconfactory.com/2022/04/candybar-sugar-free-edition/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "CandyBar.app"
 
   zap trash: [
