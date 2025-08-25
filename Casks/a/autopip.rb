@@ -7,7 +7,7 @@ cask "autopip" do
   desc "Picture-in-Picture mode when switching tab in Safari"
   homepage "https://github.com/vordenken/AutoPiP/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :ventura"
 
   app "AutoPiP.app"
 
