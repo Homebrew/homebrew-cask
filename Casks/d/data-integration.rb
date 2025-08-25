@@ -8,18 +8,7 @@ cask "data-integration" do
   desc "End to end data integration and analytics platform"
   homepage "https://pentaho.com/products/pentaho-data-integration/"
 
-  livecheck do
-    url "https://privatefilesbucket-community-edition.s3.amazonaws.com/"
-    regex(/pdi-ce[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
-    strategy :xml do |xml, regex|
-      xml.get_elements("//Contents/Key").map do |item|
-        match = item.text&.strip&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
-  end
+  disable! date: "2025-08-24", because: "the download now requires a login"
 
   app "data-integration/Data Integration.app"
 
