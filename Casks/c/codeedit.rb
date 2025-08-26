@@ -8,6 +8,14 @@ cask "codeedit" do
   desc "Code editor"
   homepage "https://www.codeedit.app/"
 
+  # There can be a notable gap between when a version is tagged and a
+  # corresponding release is created, so we check the "latest" release instead
+  # of the Git tags.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :ventura"
 
