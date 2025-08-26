@@ -14,7 +14,10 @@ cask "fanny" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "FannyWidget-v#{version.csv.first}/Fanny.app"
+  # The url is unversioned, but the download returns an app directory with a version number
+  rename "FannyWidget*", "FannyWidget"
+
+  app "FannyWidget/Fanny.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.fannywidget.today-extension",
