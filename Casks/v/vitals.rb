@@ -7,6 +7,8 @@ cask "vitals" do
   desc "Tiny process monitor"
   homepage "https://github.com/hmarr/vitals/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :catalina"
 
   app "Vitals.app"

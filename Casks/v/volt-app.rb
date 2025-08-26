@@ -18,6 +18,8 @@ cask "volt-app" do
   desc "Client for Slack, Discord, Skype, Gmail, Twitter, Facebook, and more"
   homepage "https://volt-app.com/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Volt.app"
 
   zap trash: [
