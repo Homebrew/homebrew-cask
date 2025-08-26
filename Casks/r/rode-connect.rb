@@ -14,7 +14,10 @@ cask "rode-connect" do
     end
   end
 
-  pkg "RØDE Connect (#{version}).pkg"
+  # The url is unversioned, but the download returns a pkg with a version number
+  rename "RØDE Connect*.pkg", "RØDE Connect.pkg"
+
+  pkg "RØDE Connect.pkg"
 
   uninstall pkgutil: "com.rodeconnect.installer"
 

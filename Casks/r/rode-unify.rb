@@ -14,7 +14,10 @@ cask "rode-unify" do
     end
   end
 
-  pkg "RØDE Unify (#{version}).pkg"
+  # The url is unversioned, but the download returns a pkg with a version number
+  rename "RØDE Unify*.pkg", "RØDE Unify.pkg"
+
+  pkg "RØDE Unify.pkg"
 
   uninstall pkgutil: "com.rodeunify.installer"
 
