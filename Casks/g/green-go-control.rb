@@ -1,6 +1,6 @@
 cask "green-go-control" do
-  version "5.1.3"
-  sha256 "51c46984a3f9e00b5eb61bbb6af9b53e8c0118dfd08afef66d6b2c60a42fbc89"
+  version "5.2.0"
+  sha256 "243b2efcfea697130e55c7b9694d0b77882af6b125de676ef78b55b48fbed475"
 
   url "https://downloads.greengoconnect.com/#{version}/macos/green-go-control.dmg",
       verified: "downloads.greengoconnect.com/"
@@ -23,8 +23,4 @@ cask "green-go-control" do
     "~/Library/Preferences/com.green-go.control.plist",
     "~/Library/Saved Application State/com.green-go.control.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
