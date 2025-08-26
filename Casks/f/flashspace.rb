@@ -7,6 +7,7 @@ cask "flashspace" do
   desc "Virtual workspace manager"
   homepage "https://github.com/wojciech-kulik/FlashSpace"
 
+  auto_updates true
   depends_on macos: ">= :sonoma"
 
   app "FlashSpace.app"
