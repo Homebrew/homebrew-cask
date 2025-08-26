@@ -2,8 +2,8 @@ cask "labplot" do
   arch arm: "arm64", intel: "x86_64"
 
   version "2.12.1"
-  sha256 arm:   "5bf80348d44a6d2921468a23f476a6c76fdbf47dc8199eac54db533ea6593de3",
-         intel: "886bcecff99e75d3930cf2449c341d8d8f2cd5b12f70002b372bad5ea78436f4"
+  sha256 arm:   "6f6f8675189059d08a6a6cfe33b14ff8b864ce18ea2987d412f120a31e32aa56",
+         intel: "61d1bca44121bfdf87252feb76673d8f7719b4597dc16a7434563550371b9711"
 
   url "https://download.kde.org/stable/labplot/labplot-#{version}-#{arch}.dmg"
   name "LabPlot"
