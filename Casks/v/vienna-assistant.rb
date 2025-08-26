@@ -17,7 +17,10 @@ cask "vienna-assistant" do
 
   depends_on macos: ">= :high_sierra"
 
-  pkg "Vienna Assistant #{version}.pkg"
+  # The url is unversioned, but the download returns a pkg with a version number
+  rename "Vienna Assistant*.pkg", "Vienna Assistant.pkg"
+
+  pkg "Vienna Assistant.pkg"
 
   uninstall pkgutil: "at.co.vsl.viassistant.*"
 
