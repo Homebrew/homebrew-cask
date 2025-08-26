@@ -7,6 +7,7 @@ cask "rember" do
   homepage "https://www.kelleycomputing.net/rember/"
 
   deprecate! date: "2024-08-25", because: :unmaintained
+  disable! date: "2025-08-26", because: :unmaintained
 
   app "Rember.app"
 
