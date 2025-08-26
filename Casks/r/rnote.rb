@@ -7,15 +7,12 @@ cask "rnote" do
 
   url "https://gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/#{version}/Rnote-#{version}_#{arch}.dmg",
       verified: "gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/"
-  name "rnote"
+  name "Rnote"
   desc "Sketch and take handwritten notes"
   homepage "https://rnote.flxzt.net/"
 
   livecheck do
-    url "https://gitlab.com/api/v4/projects/44053427/releases"
-    strategy :json do |json|
-      json[0]["tag_name"]&.delete_prefix("v")
-    end
+    url "https://gitlab.com/dehesselle/rnote_macos.git"
   end
 
   depends_on macos: ">= :catalina"
