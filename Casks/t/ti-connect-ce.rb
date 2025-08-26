@@ -1,6 +1,6 @@
 cask "ti-connect-ce" do
-  version "6.0.3.619,A638B349DE8A41B98983D04D6575316B"
-  sha256 "dbea817704bb154319f275fe4d3be79d9826f9570082ce3f959ec5d8d6e4c064"
+  version "6.0.3.619,8FBF9DDB6AF4466A9049339AFA889822"
+  sha256 "70e2c79e9a98f6e66500ce9ee58ba7269754455f0278c45ff5e50818d8da5f48"
 
   url "https://education.ti.com/download/en/ed-tech/68CEDD34FDC94622B4DBD173E6A0D8C3/#{version.csv.second}/TIConnectCE-#{version.csv.first}.dmg"
   name "TI Connect™ CE"
