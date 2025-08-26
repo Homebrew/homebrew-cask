@@ -12,6 +12,8 @@ cask "ved" do
     regex(/href=.*?ved[ ._-]v?(\d+(?:\.\d+)+)[ ._-]mac\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Ved.app"
 
   zap trash: [
