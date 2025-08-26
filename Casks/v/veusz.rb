@@ -27,6 +27,8 @@ cask "veusz" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Veusz.app"
 
   zap trash: "~/Library/Preferences/org.veusz.veusz*.plist"
