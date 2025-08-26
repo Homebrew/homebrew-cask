@@ -17,7 +17,10 @@ cask "gplates" do
     strategy :header_match
   end
 
-  app "GPlates_#{version}/gplates.app"
+  # The url is unversioned, but the download returns an app directory with a version number
+  rename "GPlates_*", "Gplates"
+
+  app "GPlates/gplates.app"
 
   zap trash: [
     "~/Library/Application Support/GPlates",
