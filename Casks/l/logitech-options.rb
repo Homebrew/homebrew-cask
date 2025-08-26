@@ -11,7 +11,10 @@ cask "logitech-options" do
       regex(%r{/Options[._-]?v?(\d+(?:\.\d+)+)\.zip}i)
     end
 
-    pkg "LogiMgr Installer #{version}.app/Contents/Resources/LogiMgr.mpkg"
+    # The url is unversioned, but the download returns an app with a version number
+    rename "LogiMgr Installer*.app", "LogiMgr Installer.app"
+
+    pkg "LogiMgr Installer.app/Contents/Resources/LogiMgr.mpkg"
   end
   on_high_sierra do
     version "8.30.293"
@@ -25,7 +28,10 @@ cask "logitech-options" do
       regex(%r{/Options[._-]?v?(\d+(?:\.\d+)+)\.zip}i)
     end
 
-    pkg "LogiMgr Installer #{version}.app/Contents/Resources/LogiMgr.mpkg"
+    # The url is unversioned, but the download returns an app with a version number
+    rename "LogiMgr Installer*.app", "LogiMgr Installer.app"
+
+    pkg "LogiMgr Installer.app/Contents/Resources/LogiMgr.mpkg"
   end
   on_mojave do
     version "8.54.147"
@@ -39,7 +45,10 @@ cask "logitech-options" do
       regex(%r{/Options[._-]?v?(\d+(?:\.\d+)+)\.zip}i)
     end
 
-    pkg "LogiMgr Installer #{version}.app/Contents/Resources/LogiMgr.pkg"
+    # The url is unversioned, but the download returns an app with a version number
+    rename "LogiMgr Installer*.app", "LogiMgr Installer.app"
+
+    pkg "LogiMgr Installer.app/Contents/Resources/LogiMgr.pkg"
   end
   on_catalina do
     version "8.54.147"
@@ -53,7 +62,10 @@ cask "logitech-options" do
       regex(%r{/Options[._-]?v?(\d+(?:\.\d+)+)\.zip}i)
     end
 
-    pkg "LogiMgr Installer #{version}.app/Contents/Resources/LogiMgr.pkg"
+    # The url is unversioned, but the download returns an app with a version number
+    rename "LogiMgr Installer*.app", "LogiMgr Installer.app"
+
+    pkg "LogiMgr Installer.app/Contents/Resources/LogiMgr.pkg"
   end
   on_big_sur :or_newer do
     version "10.26.49"
@@ -71,7 +83,10 @@ cask "logitech-options" do
       end
     end
 
-    pkg "LogiMgr Installer #{version}.app/Contents/Resources/LogiMgr.pkg"
+    # The url is unversioned, but the download returns an app with a version number
+    rename "LogiMgr Installer*.app", "LogiMgr Installer.app"
+
+    pkg "LogiMgr Installer.app/Contents/Resources/LogiMgr.pkg"
   end
 
   name "Logitech Options"
