@@ -4,7 +4,7 @@ cask "font-source-han-sans-sc-vf" do
 
   url "https://github.com/adobe-fonts/source-han-sans/raw/refs/tags/#{version}/Variable/OTF/SourceHanSansSC-VF.otf"
   name "Source Han Sans SC VF"
-  name "思源黑体 SC VF"
+  name "思源黑体 VF"
   homepage "https://github.com/adobe-fonts/source-han-sans"
 
   font "SourceHanSansSC-VF.otf"
