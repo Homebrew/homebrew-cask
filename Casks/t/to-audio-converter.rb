@@ -15,7 +15,10 @@ cask "to-audio-converter" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "To Audio Converter #{version.major}.app"
+  # The url is unversioned, but the download returns an app with a version number
+  rename "To Audio Converter*.app", "To Audio Converter.app"
+
+  app "To Audio Converter.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.amvidia.To-Audio-Converter-FS",

@@ -14,7 +14,10 @@ cask "ecodms-client" do
 
   depends_on macos: ">= :ventura"
 
-  pkg "ecoDMS-Clients-#{version}.pkg"
+  # The url is unversioned, but the download returns a pkg with a version number
+  rename "ecoDMS-Clients-*.pkg", "ecoDMS-Clients.pkg"
+
+  pkg "ecoDMS-Clients.pkg"
 
   uninstall quit:    [
               "de.applord.ecoDMS-Client",

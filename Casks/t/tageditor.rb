@@ -14,7 +14,10 @@ cask "tageditor" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "Tag Editor #{version.major}.app"
+  # The url is unversioned, but the download returns an app with a version number
+  rename "Tag Editor*.app", "Tag Editor.app"
+
+  app "Tag Editor.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.amvidia.Tag-Editor-FS",

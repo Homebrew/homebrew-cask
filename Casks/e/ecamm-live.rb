@@ -15,7 +15,10 @@ cask "ecamm-live" do
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  app "Ecamm Live v#{version}/Ecamm Live.app"
+  # The url is unversioned, but the download returns an app directory with a version number
+  rename "Ecamm Live v#{version}", "Ecamm Live"
+
+  app "Ecamm Live/Ecamm Live.app"
 
   uninstall delete: [
               "/Library/Application Support/EcammLive/EcammLiveAudioXPCHelper.xpc",

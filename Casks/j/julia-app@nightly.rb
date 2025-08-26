@@ -14,8 +14,11 @@ cask "julia-app@nightly" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
-  app "Julia-#{version.major_minor}.app"
-  binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia", target: "julia-nightly"
+  # The url is unversioned, but the download returns an app with a version number
+  rename "Julia-*.app", "Julia Nightly.app"
+
+  app "Julia Nightly.app"
+  binary "#{appdir}/Julia Nightly.app/Contents/Resources/julia/bin/julia", target: "julia-nightly"
 
   zap trash: "~/.julia"
 end
