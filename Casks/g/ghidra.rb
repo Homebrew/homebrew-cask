@@ -1,8 +1,10 @@
 cask "ghidra" do
-  version "11.4.1,20250731"
-  sha256 "59b657c39c2113d65e591c1087b77d85f6f7a11e97f2f4a0c9e7188510d07ea0"
+  # Use `-` instead of the usual `,` in the version, because a `,` causes issues
+  # with log4j finding ghidra due to misinterpreting the `,` in the path
+  version "11.4.2-20250826"
+  sha256 "795a02076af16257bd6f3f4736c4fc152ce9ff1f95df35cd47e2adc086e037a6"
 
-  url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.csv.first}_build/ghidra_#{version.csv.first}_PUBLIC_#{version.csv.second}.zip",
+  url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.split("-").first}_build/ghidra_#{version.split("-").first}_PUBLIC_#{version.split("-").second}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
   name "Ghidra"
   desc "Software reverse engineering (SRE) suite of tools"
@@ -16,28 +18,16 @@ cask "ghidra" do
         match = asset["name"]&.match(regex)
         next if match.blank?
 
-        "#{match[1]},#{match[2]}"
+        "#{match[1]}-#{match[2]}"
       end
     end
   end
 
-  new_staged_path = "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}"
-
-  binary "#{new_staged_path}/ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
-
-  preflight do
-    # Log4j misinterprets comma in staged_path as alternative delimiter
-    FileUtils.mv(staged_path, new_staged_path)
-  end
-
-  uninstall_preflight do
-    FileUtils.mv(new_staged_path, staged_path) if File.exist? new_staged_path
-  end
+  binary "ghidra_#{version.split("-").first}_PUBLIC/ghidraRun"
 
   zap trash: "~/.ghidra"
 
   caveats do
     depends_on_java "17+"
-    requires_rosetta
   end
 end
