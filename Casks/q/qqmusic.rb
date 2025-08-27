@@ -1,19 +1,20 @@
 cask "qqmusic" do
-  version "10.4.0,01"
-  sha256 "3a4df83492190f40e4dfe5a02fe5c929cf1e291870082df08312f594c09ab122"
+  version "10.7.1,00,1-0cb9ee4c40e7447e2113cfdee2dc11c88487b0e31fe37cfe1c59e12c20956dce-689e9373"
+  sha256 "6b1cf6a1d6c28b56fdb61b1b5d9f7d5880e66ad50c76c70e62afda96a8cfba0e"
 
-  url "https://dldir1.qq.com/music/clntupate/mac/QQMusicMac#{version.csv.first}Build#{version.csv.second}.dmg"
+  url "https://c.y.qq.com/cgi-bin/file_redirect.fcg?bid=dldir&file=ecosfile%2Fmusic_clntupate%2Fmac%2Fother%2FQQMusicMac#{version.csv.first}Build#{version.csv.second}.dmg&sign=#{version.csv.third}"
   name "QQ音乐"
   desc "Chinese music streaming application"
   homepage "https://y.qq.com/"
 
+  # NOTE: The download URL that we match redirects to another URL that includes
+  # a different `sign` query string parameter and that value can change across
+  # requests, so we have to use the redirecting URL.
   livecheck do
     url "https://y.qq.com/download/download.js"
-    regex(/QQMusicMac[._-]?v?(\d+(?:[._]\d+)+)[._-]?build[._-]?(\d+)\.dmg/i)
+    regex(/QQMusicMac[._-]?v?(\d+(?:[._]\d+)+)[._-]?build[._-]?(\d+)\.dmg[^"' ]*?[?&]sign=([^&"' ]+)/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
     end
   end
 
