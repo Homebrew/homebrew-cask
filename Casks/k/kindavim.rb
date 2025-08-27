@@ -2,7 +2,7 @@ cask "kindavim" do
   version "78"
   sha256 :no_check
 
-  url "http://releases.kindavim.app/kindaVim.zip"
+  url "https://releases.kindavim.app/kindaVim.zip"
   name "kindaVim"
   desc "Use Vim in input fields and non input fields"
   homepage "https://kindavim.app/"
