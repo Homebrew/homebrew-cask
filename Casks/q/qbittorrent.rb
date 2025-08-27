@@ -33,6 +33,8 @@ cask "qbittorrent" do
   desc "Peer to peer Bitorrent client"
   homepage "https://www.qbittorrent.org/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   conflicts_with cask: "qbittorrent@lt20"
   depends_on macos: ">= :high_sierra"
 
