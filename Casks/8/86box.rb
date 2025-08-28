@@ -21,11 +21,9 @@ cask "86box" do
     end
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   depends_on macos: ">= :mojave"
 
-  app "86Box.app", target: "86Box/86Box.app"
+  app "86Box.app"
 
   roms_dir = Pathname("~/Library/Application Support/net.86box.86Box/roms")
 
@@ -33,9 +31,13 @@ cask "86box" do
     roms_dir.expand_path.mkpath
   end
 
+  uninstall trash: "#{appdir}/86box"
+
   zap trash: [
-    "/Applications/86Box",
+    "~/Library/Application Support/86Box",
     "~/Library/Application Support/net.86box.86Box",
+    "~/Library/Preferences/86Box",
+    "~/Library/Preferences/net.86Box.86Box.plist",
     "~/Library/Saved Application State/net.86Box.86Box.savedState",
   ]
 
