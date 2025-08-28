@@ -25,17 +25,14 @@ cask "gcloud-cli" do
     args:       [
       "--quiet",
       "--usage-reporting", "false",
-      "--bash-completion", "false",
-      "--path-update", "false",
-      "--rc-path", "false",
+      "--bash-completion", "true",
+      "--path-update", "true",
       "--install-python", "false",
       "--update-installed-components"
     ],
   }
   binary "google-cloud-sdk/bin/bq"
-  binary "google-cloud-sdk/bin/docker-credential-gcloud"
   binary "google-cloud-sdk/bin/gcloud"
-  binary "google-cloud-sdk/bin/git-credential-gcloud.sh", target: "git-credential-gcloud"
   binary "google-cloud-sdk/bin/gsutil"
   bash_completion "google-cloud-sdk/completion.bash.inc", target: "google-cloud-sdk"
   zsh_completion "google-cloud-sdk/completion.zsh.inc", target: "_google_cloud_sdk"
@@ -47,7 +44,7 @@ cask "gcloud-cli" do
   end
 
   postflight do
-    # HACK: Allow existing shell profiles to work by linking the current version to the `latest` directory.
+    # Allow existing shell profiles to work by linking the current version to the `latest` directory.
     unless (latest_path = staged_path.dirname/"latest").directory?
       FileUtils.ln_s staged_path, latest_path, force: true
     end
