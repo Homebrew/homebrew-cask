@@ -1,9 +1,9 @@
 cask "passepartout" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.5.8"
-  sha256 arm:   "013c29cb7a3604416c1cddf7fc75f8fbbd52078aee578535aebe4d8b0bd0e471",
-         intel: "7c8b8908ae820fae3b8b2a2a2fe435295f98febf35bcc270c6bce5b7142f9958"
+  version "3.5.9"
+  sha256 arm:   "239d7a6c8774f19e77b08aae1b17ed770fd2a370a207a32b5d75aca83d6e5c5c",
+         intel: "fbcad01d47fda56e9b2dfa055882a7aad31148b51dd8e28e0695a832937b0fab"
 
   url "https://github.com/passepartoutvpn/passepartout/releases/download/v#{version}/Passepartout.#{arch}.dmg",
       verified: "github.com/passepartoutvpn/passepartout/"
