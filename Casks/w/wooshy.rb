@@ -1,14 +1,14 @@
 cask "wooshy" do
-  version "32"
+  version "37"
   sha256 :no_check
 
-  url "https://wooshy.app/releases/Wooshy.zip"
+  url "https://releases.wooshy.app/Wooshy.zip"
   name "Wooshy"
   desc "Click and more on UI Elements through typing"
   homepage "https://wooshy.app/"
 
   livecheck do
-    url "https://wooshy.app/releases/appcast.xml"
+    url "https://releases.wooshy.app/appcast.xml"
     strategy :sparkle, &:short_version
   end
 

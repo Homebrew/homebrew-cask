@@ -8,9 +8,18 @@ cask "gifox" do
   desc "GIF recording and sharing"
   homepage "https://gifox.io/"
 
+  # The Sparkle feed contains unstable versions that contain `beta` in the
+  # title and `shortVersionString`, so we only match stable versions.
   livecheck do
     url "https://d1fqctmfkpkkcg.cloudfront.net/gifox/appcast.xml"
-    strategy :sparkle
+    regex(/^v?(\d+(?:[.+]\d+)+)$/i)
+    strategy :sparkle do |items, regex|
+      items.filter_map do |item|
+        next unless item.short_version&.match?(regex)
+
+        item.nice_version
+      end
+    end
   end
 
   auto_updates true

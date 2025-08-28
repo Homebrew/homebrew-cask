@@ -1,6 +1,6 @@
 cask "munki" do
-  version "6.6.5.4711"
-  sha256 "8cf51c439401c72ae4a79919652b811559be27947015ff5c116fe2fb1c113697"
+  version "6.7.0.4731"
+  sha256 "1a80940c163f49321d2c05e65248d5c151dea707b55d95fd702d31a94cc6f4f5"
 
   url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
       verified: "github.com/munki/munki/"
@@ -20,6 +20,8 @@ cask "munki" do
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   pkg "munkitools-#{version}.pkg"
 

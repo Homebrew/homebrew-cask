@@ -7,6 +7,14 @@ cask "opensuperwhisper" do
   desc "Whisper dictation/transcription app"
   homepage "https://github.com/starmel/OpenSuperWhisper"
 
+  # There can be a notable gap between when a version is tagged and a
+  # corresponding release is created, so we check the "latest" release instead
+  # of the Git tags.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
 
