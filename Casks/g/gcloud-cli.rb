@@ -55,16 +55,20 @@ cask "gcloud-cli" do
     if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
       puts "deleting existing virtual env before enabling virtual env with current Python version"
       system_command "#{google_cloud_sdk_root}/bin/gcloud",
-                     args: ["config", "virtualenv", "delete", "-q"]
+                     args:      ["config", "virtualenv", "delete", "-q"],
+                     reset_uid: true
     end
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                    args: ["config", "virtualenv", "create", "--python-to-use",
-                           "#{HOMEBREW_PREFIX}/opt/python@3.12/libexec/bin/python3"]
+                    args:      ["config", "virtualenv", "create", "--python-to-use",
+                                "#{HOMEBREW_PREFIX}/opt/python@3.12/libexec/bin/python3"],
+                    reset_uid: true
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                    args: ["config", "virtualenv", "enable"]
+                    args:      ["config", "virtualenv", "enable"],
+                    reset_uid: true
 
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                    args: ["version"]
+                    args:      ["version"],
+                    reset_uid: true
   end
 
   uninstall trash: staged_path.dirname/"latest"
