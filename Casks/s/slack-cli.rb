@@ -1,6 +1,6 @@
 cask "slack-cli" do
-  version "3.6.0"
-  sha256 "a8842a36732a469e03e62d21e9f79ef68aad53a79eaf65679a569b248173815c"
+  version "3.6.1"
+  sha256 "638321246094989758394b150be5f24d7d1fcd2bdf0d3e33bfd47644454c9c40"
 
   url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_64-bit.tar.gz",
       verified: "downloads.slack-edge.com/slack-cli/"
@@ -14,8 +14,6 @@ cask "slack-cli" do
       json.dig("slack-cli", "releases")&.map { |release| release["version"] }
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on formula: "deno"
 
