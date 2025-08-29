@@ -21,9 +21,9 @@ cask "wireshark-app" do
     end
   end
   on_big_sur :or_newer do
-    version "4.4.8"
-    sha256 arm:   "7d14e092c177b2282a1b4bbc34fc720f21f0b967ee038dc7ca55f3885de04735",
-           intel: "293bd2888c37d7bab1936515e09660a4860f531de6990feb07287ba4b6b8f021"
+    version "4.4.9"
+    sha256 arm:   "6623f789646c6a64735d2179fd9333a05606f83f7946d897448eea2074e8654b",
+           intel: "f7e742a6cd42f13c81ad63a99764262c7e15bd66c8b48eb9bf879803150d5b7d"
 
     # This appcast sometimes uses a newer pubDate for an older version, so we
     # have to ignore the default `Sparkle` strategy sorting (which involves the
