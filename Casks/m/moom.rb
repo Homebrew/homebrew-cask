@@ -1,6 +1,6 @@
 cask "moom" do
-  version "4.2.0"
-  sha256 "55e4e0663222c18f915678c82e173137ca83c8c2738654f61cb58ffbd498bf7b"
+  version "4.3.0"
+  sha256 "d4175aa8969d729c9224afe2e688bbb68a1012917866d3e0259f45f548c310d1"
 
   url "https://manytricks.com/download/_do_not_hotlink_/moom#{version.no_dots}.dmg"
   name "Moom"
