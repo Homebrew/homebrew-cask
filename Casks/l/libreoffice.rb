@@ -2,9 +2,9 @@ cask "libreoffice" do
   arch arm: "aarch64", intel: "x86-64"
   folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
-  version "25.8.0"
-  sha256 arm:   "fd0b4f4cd0d0bfc6b6dc7f337540bdc3f57886b17a4ff55ae1db9a87703c97a0",
-         intel: "7ced9014448af5f1a463e14883242e140ab2abca9c1dcc07fefc37d3741e8c5f"
+  version "25.8.1"
+  sha256 arm:   "cf329fddff9e20846e4186f9a815a3746e880a76e9d5cdf634b0f3ea9ff0ad74",
+         intel: "681c769d0f6081d54244fb0235457f1922e22ce862f9d395a49fa47b881f1608"
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
       verified: "download.documentfoundation.org/libreoffice/stable/"
