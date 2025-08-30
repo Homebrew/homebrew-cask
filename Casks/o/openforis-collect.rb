@@ -15,7 +15,7 @@ cask "openforis-collect" do
   rename "OpenForisCollect-*-osx-installer.app", "OpenForisCollect-osx-installer.app"
 
   installer script: {
-    executable: "#{staged_path}/OpenForisCollect-osx-installer.app/Contents/MacOS/#{arch}",
+    executable: "#{staged_path}/OpenForisCollect-osx-installer.app/Contents/MacOS/osx-x86_64",
     args:       [
       "--mode", "unattended"
     ],
@@ -26,7 +26,7 @@ cask "openforis-collect" do
               ["TERM", "OpenForisCollect-launcher.app"],
             ],
             script: {
-              executable: "~/OpenForis/Collect/uninstall.app/Contents/MacOS/#{arch}",
+              executable: "~/OpenForis/Collect/uninstall.app/Contents/MacOS/osx-x86_64",
               args:       ["--mode", "unattended"],
             }
 
