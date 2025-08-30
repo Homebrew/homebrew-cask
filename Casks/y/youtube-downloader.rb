@@ -7,6 +7,8 @@ cask "youtube-downloader" do
   desc "Simple menu bar app to download YouTube movies"
   homepage "https://github.com/DenBeke/YouTube-Downloader-for-macOS"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :sierra"
 
   app "Youtube Downloader.app"
