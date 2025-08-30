@@ -8,6 +8,8 @@ cask "exist-db" do
   desc "Native XML database and application platform"
   homepage "https://exist-db.org/exist/apps/homepage/index.html"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "eXist-db.app"
 
   zap trash: "~/Library/Application Support/org.exist"
