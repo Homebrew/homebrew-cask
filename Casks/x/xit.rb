@@ -29,6 +29,8 @@ cask "xit" do
       regex(/^v?(\d+(?:\.\d+)+(?:b\d+)?)$/i)
     end
 
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
     app "Xit#{arch} #{version}/Xit.app"
   end
 

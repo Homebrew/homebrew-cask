@@ -10,6 +10,8 @@ cask "xournal++" do
   desc "Handwriting notetaking software"
   homepage "https://github.com/xournalpp/xournalpp"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :catalina"
 
   app "Xournal++.app"

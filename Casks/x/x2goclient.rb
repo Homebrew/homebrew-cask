@@ -18,6 +18,8 @@ cask "x2goclient" do
     regex(/x2goclient[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :el_capitan"
 
   app "x2goclient.app"
