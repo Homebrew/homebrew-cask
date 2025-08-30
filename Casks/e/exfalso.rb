@@ -13,6 +13,8 @@ cask "exfalso" do
     regex(%r{href=.*?/ExFalso[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "ExFalso.app"
 
   zap trash: "~/.quodlibet"
