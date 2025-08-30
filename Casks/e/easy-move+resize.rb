@@ -7,6 +7,8 @@ cask "easy-move+resize" do
   desc "Utility to support moving and resizing using a modifier key and mouse drag"
   homepage "https://github.com/dmarcotte/easy-move-resize"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :high_sierra"
 
   app "Easy Move+Resize.app"
