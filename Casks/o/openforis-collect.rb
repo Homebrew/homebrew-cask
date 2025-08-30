@@ -1,6 +1,4 @@
 cask "openforis-collect" do
-  arch arm: "osx-x86_64", intel: "osx-x86_64"
-
   version "4.0.101"
   sha256 "12a50bc37d0b8760175ac04c9b6a4d2cbefbe887405019d03598f40ab26121f3"
 
