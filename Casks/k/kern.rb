@@ -12,6 +12,8 @@ cask "kern" do
     regex(/v(\d+(?:\.\d+)+)/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   pkg "kern_#{version.dots_to_underscores}_mac.pkg"
 
   uninstall pkgutil: [
