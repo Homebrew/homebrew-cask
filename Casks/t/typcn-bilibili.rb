@@ -8,6 +8,7 @@ cask "typcn-bilibili" do
   homepage "https://github.com/typcn/bilibili-mac-client/"
 
   deprecate! date: "2024-08-30", because: :unmaintained
+  disable! date: "2025-08-30", because: :unmaintained
 
   auto_updates true
 
