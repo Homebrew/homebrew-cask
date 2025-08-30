@@ -8,6 +8,8 @@ cask "kiibohd-configurator" do
   desc "Modular community keyboard firmware"
   homepage "https://kiibohd.com/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on formula: "dfu-util"
 
   app "Kiibohd Configurator.app"
