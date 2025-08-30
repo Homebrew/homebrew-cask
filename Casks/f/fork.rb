@@ -7,9 +7,15 @@ cask "fork" do
   desc "GIT client"
   homepage "https://fork.dev/"
 
+  # The appcast `version` may omit a `0` patch for a new minor release (e.g.
+  # 1.23 for 1.23.0) but the filename in the `url` uses the full version, so we
+  # match the version from the filename.
   livecheck do
     url "https://fork.dev/update/feed.xml"
-    strategy :sparkle
+    regex(/v?(\d+(?:\.\d+)+)/i)
+    strategy :sparkle do |item, regex|
+      item.url&.[](regex, 1)
+    end
   end
 
   auto_updates true
