@@ -7,6 +7,8 @@ cask "katana-app" do
   desc "Open-source screenshot utility"
   homepage "https://github.com/bluegill/katana/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Katana.app"
 
   zap trash: [
