@@ -1,5 +1,5 @@
 cask "elephas@beta" do
-  version "11.3007"
+  version "11.3008"
   sha256 :no_check
 
   url "https://assets.elephas.app/Elephas_beta.dmg"
@@ -13,7 +13,7 @@ cask "elephas@beta" do
   end
 
   conflicts_with cask: "elephas"
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Elephas.app"
 
