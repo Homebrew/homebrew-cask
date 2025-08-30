@@ -10,6 +10,8 @@ cask "yggdrasil" do
   desc "End-to-end encrypted IPv6 networking to connect worlds"
   homepage "https://github.com/yggdrasil-network/yggdrasil-go"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   pkg "yggdrasil-#{version}-macos-#{arch}.pkg"
 
   uninstall launchctl: "yggdrasil",
