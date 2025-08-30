@@ -10,10 +10,7 @@ cask "kui" do
   desc "CLI graphics framework"
   homepage "https://github.com/kubernetes-sigs/kui"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2025-08-30", because: :discontinued
 
   depends_on macos: ">= :high_sierra"
 
