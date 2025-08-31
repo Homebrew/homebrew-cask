@@ -1,6 +1,6 @@
 cask "davmail-app" do
-  version "6.3.0,3627"
-  sha256 "cd38df6fcf4dd23da7879292fdd4a15d2845be1bd9f7a5060d5dd685aabb4c08"
+  version "6.4.0,3755"
+  sha256 "f8b549d7552fd4928b913a1f18e2401dfb4c9c8793b5a9de4247c99d216496e6"
 
   url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "DavMail"
