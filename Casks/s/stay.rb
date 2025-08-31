@@ -1,6 +1,6 @@
 cask "stay" do
-  version "1.5"
-  sha256 "24092fb468af2c89c1ae3a80ba4a09808f0bf98c648ddfbcbc93a0612f114562"
+  version "1.5.1"
+  sha256 "f6a1a3a935ac237381360f463080bf9043676907fc7ec835eb39914b4440582d"
 
   url "https://cordlessdog.com/stay/versions/Stay%20#{version}.dmg"
   name "Stay"
