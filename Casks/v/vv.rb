@@ -1,6 +1,6 @@
 cask "vv" do
-  version "2.6.1"
-  sha256 "2b0d435fa3d1781289c3a090c4af1d4d0fea82fd8cf4ddafa23eab1a3af07839"
+  version "2.6.2"
+  sha256 "87fcc6b32ba68675974dc5771c99d73f71be23db20b5e47ea830d6e414edbd91"
 
   url "https://github.com/vv-vim/vv/releases/download/v#{version}/VV-#{version}-universal.dmg"
   name "VV"
