@@ -1,6 +1,6 @@
 cask "open-data-editor" do
-  version "1.6.0"
-  sha256 "9ddf50bc9e2204bc38c393ce16a4160db8046d89f70834b3b07dbc6b6bdc224d"
+  version "1.6.1"
+  sha256 "9054bd13777b25b60102241e879a40d22c6fe3121fa2c56383bb24f1216b1e2a"
 
   url "https://github.com/okfn/opendataeditor/releases/download/v#{version}/opendataeditor-macos-#{version}.dmg",
       verified: "github.com/okfn/opendataeditor/"
