@@ -1,6 +1,6 @@
 cask "operadriver" do
-  version "135.0.7049.115"
-  sha256 "6a3062577fdb4e79137b4eeceda06025a9362bbc9e111b089e01dd75c8cdc4b1"
+  version "137.0.7151.122"
+  sha256 "acd171dc3b7d2a4816fb385f99ede0596d38485999f71d8c1f95734551daa139"
 
   url "https://github.com/operasoftware/operachromiumdriver/releases/download/v.#{version}/operadriver_mac64.zip"
   name "OperaChromiumDriver"
@@ -11,6 +11,8 @@ cask "operadriver" do
     url :url
     regex(/^v?\.?(\d+(?:\.\d+)+)$/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "operadriver_mac64/operadriver"
 
