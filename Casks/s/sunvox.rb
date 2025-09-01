@@ -1,6 +1,6 @@
 cask "sunvox" do
   version "2.1.2b"
-  sha256 "281e98e6e2855ed06b98965c18b3f174b9425e77bf8b06c5c17f5aa64f2c9f6f"
+  sha256 "52b49a29c547de7fc46f08e888f703e135035cc46e166b8816b9f20bfae4144e"
 
   url "https://www.warmplace.ru/soft/sunvox/sunvox-#{version}.zip"
   name "SunVox"
@@ -11,6 +11,8 @@ cask "sunvox" do
     url :homepage
     regex(/href=.*?sunvox[._-]v?(\d+(?:\.\d+)+[a-z]?)\.zip/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :high_sierra"
 
