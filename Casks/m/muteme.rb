@@ -12,10 +12,8 @@ cask "muteme" do
   homepage "https://muteme.com/"
 
   livecheck do
-    url "https://muteme.io/update/osx_#{arch}/0.0.0"
-    strategy :json do |json|
-      json["name"]
-    end
+    url "https://muteme.com/pages/downloads"
+    regex(/href=.*?MuteMe[._-]Client[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   auto_updates true
