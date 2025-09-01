@@ -1,6 +1,6 @@
 cask "macai" do
-  version "2.1.1"
-  sha256 "d477a2e5e1800feac0795176a381605c157b96f0a1ef17d48574ad4701b181f1"
+  version "2.2.0"
+  sha256 "2a9f04f6cc664805088e8e69926eccd23e2499ec687a879ee1a4685a3b75959f"
 
   url "https://github.com/Renset/macai/releases/download/v#{version}/macai.#{version}.Universal.zip"
   name "macai"
@@ -8,7 +8,7 @@ cask "macai" do
   homepage "https://github.com/Renset/macai"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "macai.app"
 
