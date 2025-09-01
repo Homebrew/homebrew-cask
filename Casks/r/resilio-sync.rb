@@ -1,5 +1,5 @@
 cask "resilio-sync" do
-  version "3.1.0.1073"
+  version "3.1.1.1075"
   sha256 :no_check
 
   url "https://download-cdn.resilio.com/stable/mac/osx/0/Resilio-Sync.dmg"
