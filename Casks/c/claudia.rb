@@ -7,6 +7,14 @@ cask "claudia" do
   desc "GUI app and toolkit for Claude Code"
   homepage "https://github.com/getasterisk/claudia"
 
+  # Upstream creates releases that use a stable tag (e.g., `v1.2.3`) but are
+  # labeled as "pre-release" on GitHub before the version is released, so it's
+  # necessary to use the `GithubLatest` strategy.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :catalina"
 
