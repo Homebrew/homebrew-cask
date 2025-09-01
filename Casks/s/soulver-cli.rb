@@ -7,6 +7,7 @@ cask "soulver-cli" do
   desc "Standalone cli for the Soulver calculation engine"
   homepage "https://github.com/soulverteam/Soulver-CLI"
 
+  conflicts_with cask: "soulver"
   depends_on macos: ">= :monterey"
 
   binary "soulver"

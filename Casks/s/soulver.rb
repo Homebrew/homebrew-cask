@@ -13,9 +13,11 @@ cask "soulver" do
   end
 
   auto_updates true
+  conflicts_with cask: "soulver-cli"
   depends_on macos: ">= :monterey"
 
   app "Soulver #{version.major}.app"
+  binary "#{appdir}/Soulver #{version.major}.app/Contents/MacOS/CLI/soulver"
 
   zap trash: [
     "~/Library/Application Scripts/app.soulver.mac.QuicklookInSpotlight",
