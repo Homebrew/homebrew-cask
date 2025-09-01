@@ -1,9 +1,9 @@
 cask "joplin" do
   arch arm: "-arm64"
 
-  version "3.3.13"
-  sha256 arm:   "070884eb242981626e6309e247d804ffdf9f1211b70ebc3a24bc6160c7c04ead",
-         intel: "c5198a23b605a155868c30aa748cb980d9d08ceea288ae06529e4a65718b6517"
+  version "3.4.10"
+  sha256 arm:   "85f62ab5a17c58a3dd2f4a86f0524e3750c772bcdb686aa9c344fb8e1dcaaa48",
+         intel: "a49caa022b23087fe8ecf3226f266184b1db2823741af9dfe78b9ee19a8f5677"
 
   url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}#{arch}.DMG",
       verified: "github.com/laurent22/joplin/"
@@ -11,12 +11,9 @@ cask "joplin" do
   desc "Note taking and to-do application with synchronisation capabilities"
   homepage "https://joplinapp.org/"
 
-  # Upstream has created seemingly stable releases on GitHub only to later mark
-  # them as pre-release. This checks the first-party download page, hoping
-  # that this will help to avoid this situation in the future.
   livecheck do
-    url "https://joplinapp.org/download/"
-    regex(/href=.*?Joplin[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
+    url :url
+    strategy :github_latest
   end
 
   depends_on macos: ">= :big_sur"
