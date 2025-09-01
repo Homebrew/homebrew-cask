@@ -1,9 +1,9 @@
 cask "witsy" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.13.2"
-  sha256 arm:   "777e0156534fa6f51e5a3bce3288f89ba80edd09438a628afc6ec4714b7d6b03",
-         intel: "d117eaf28887dd0bed8b25c2d83e34c1a1917bed0a53ad793ff89e4c93b21e6d"
+  version "2.14.0"
+  sha256 arm:   "5ce69b66025ea7464f6a16963eca1e65dbfe10b289030f66270da355e217d885",
+         intel: "24555774cac710e80f2a7a7b8b9afc58721d1d5d8307a3bbc90a2eab3a267f54"
 
   url "https://github.com/nbonamy/witsy/releases/download/v#{version}/Witsy-#{version}-darwin-#{arch}.dmg",
       verified: "github.com/nbonamy/witsy/"
