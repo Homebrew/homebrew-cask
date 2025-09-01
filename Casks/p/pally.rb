@@ -1,5 +1,5 @@
 cask "pally" do
-  version "1.99"
+  version "1.99.1"
   sha256 :no_check
 
   url "https://pally.com/sparkle/Pally-Installer-Latest.dmg"
