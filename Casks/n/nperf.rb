@@ -1,9 +1,9 @@
 cask "nperf" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.15.5"
-  sha256 arm:   "228834323346e58492a9a374bdd4203d966e70d338855780875c4cad8404ec65",
-         intel: "cf8d281ca1792fe64b1df2583c5866421c2a7c48ac395b19952f1783f24327d4"
+  version "2.15.6"
+  sha256 arm:   "c7a4a9816c1719dd3651a23622f31cbd6ce2271dc8928bcd409d9e3d6d0cfab5",
+         intel: "ac7e5019c42e7a7f0909f12d04ea9559753905feac62d559154e82d53d791c6b"
 
   url "https://repo.nperf.com/macos/nperf/nPerf-#{arch}-#{version}.pkg"
   name "nPerf"
