@@ -1,5 +1,5 @@
 cask "vienna-assistant" do
-  version "1.2.524"
+  version "1.2.530"
   sha256 :no_check
 
   url "https://www.vsl.co.at/service/vamac",
