@@ -1,5 +1,5 @@
 cask "onyx@beta" do
-  version "4.9.0,250813"
+  version "4.9.0,250902"
   sha256 :no_check
 
   url "https://www.titanium-software.fr/download/beta/OnyX.dmg"
