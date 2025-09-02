@@ -2,8 +2,8 @@ cask "nova" do
   version "13.2"
   sha256 "91290ff747afd61b9ccadb3d797569ed27503726ee84e25bc6986ed4eaf17c16"
 
-  url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip",
-      verified: "download-cdn.panic.com/nova/"
+  url "https://panic.com/download/nova/Nova%20#{version}.zip",
+      verified: "panic.com/download/nova/"
   name "Panic Nova"
   desc "Native code editor"
   homepage "https://nova.app/"
