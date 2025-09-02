@@ -9,6 +9,7 @@ cask "freemind" do
   homepage "https://freemind.sourceforge.io/wiki/index.php/Main_Page"
 
   deprecate! date: "2024-09-01", because: :unmaintained
+  disable! date: "2025-09-02", because: :unmaintained
 
   app "FreeMind.app"
 
