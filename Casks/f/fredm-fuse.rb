@@ -9,6 +9,7 @@ cask "fredm-fuse" do
   homepage "https://fuse-for-macosx.sourceforge.io/"
 
   deprecate! date: "2024-09-01", because: :unmaintained
+  disable! date: "2025-09-02", because: :unmaintained
 
   app "Fuse for MacOS/Fuse.app"
 
