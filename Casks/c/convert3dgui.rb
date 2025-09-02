@@ -8,6 +8,7 @@ cask "convert3dgui" do
   homepage "https://sourceforge.net/projects/c3d"
 
   deprecate! date: "2024-09-02", because: :unmaintained
+  disable! date: "2025-09-02", because: :unmaintained
 
   app "Convert3DGUI.app"
   binary "#{appdir}/Convert3DGUI.app/Contents/bin/c2d"
