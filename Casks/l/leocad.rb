@@ -1,11 +1,13 @@
 cask "leocad" do
-  version "23.03"
-  sha256 "7ee537139760b1938980435a3d32bd8068d5e7437e310a01a1f7fd8cf6565867"
+  version "25.09"
+  sha256 "6e4664f6d5a9c2ffe3855c2bfcdffc32f666efe759076d976818b28a911eb9d8"
 
   url "https://github.com/leozide/leocad/releases/download/v#{version}/LeoCAD-macOS-#{version}.dmg"
   name "LeoCAD"
   desc "CAD program for creating virtual LEGO models"
   homepage "https://github.com/leozide/leocad"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :sierra"
 
