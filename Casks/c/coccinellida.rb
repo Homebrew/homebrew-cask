@@ -8,6 +8,7 @@ cask "coccinellida" do
   homepage "https://coccinellida.sourceforge.net/"
 
   deprecate! date: "2024-09-01", because: :unmaintained
+  disable! date: "2025-09-02", because: :unmaintained
 
   app "Coccinellida.app"
 
