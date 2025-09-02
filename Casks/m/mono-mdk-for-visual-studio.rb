@@ -9,6 +9,7 @@ cask "mono-mdk-for-visual-studio" do
 
   # https://learn.microsoft.com/en-us/visualstudio/releases/2022/what-happened-to-vs-for-mac
   deprecate! date: "2024-09-01", because: :discontinued
+  disable! date: "2025-09-02", because: :discontinued
 
   conflicts_with cask: "mono-mdk"
 
