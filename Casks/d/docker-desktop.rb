@@ -41,6 +41,8 @@ cask "docker-desktop" do
          target: "/usr/local/bin/kubectl.docker"
   binary "#{appdir}/Docker.app/Contents/Resources/cli-plugins/docker-compose",
          target: "/usr/local/cli-plugins/docker-compose"
+  binary "#{appdir}/Docker.app/Contents/Resources/cli-plugins/docker-buildx",
+         target: "/usr/local/cli-plugins/docker-buildx"
   bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion"
   bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion"
   fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion"
