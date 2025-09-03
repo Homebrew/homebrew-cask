@@ -1,9 +1,9 @@
 cask "radarr" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.26.2.10099"
-  sha256 arm:   "55270df5fd11da251a8f6f2fed81a5225469aef016fe159ee7122bcd08a3d023",
-         intel: "21cdf83b5bace83bc69cd6919f2ca39270e8231ecfe3a351ba387fec4ae1eff0"
+  version "5.27.5.10198"
+  sha256 arm:   "8fb4a0977e22d2277227f5625be16a3ce30b6be81003d723f3c658f769d059ea",
+         intel: "d2f25ea29f9cd4b6dc08d1a0a87d91244d8c3358be1fecae601c5fbbdea25444"
 
   url "https://github.com/Radarr/Radarr/releases/download/v#{version}/Radarr.master.#{version}.osx-app-core-#{arch}.zip",
       verified: "github.com/Radarr/Radarr/"
@@ -17,6 +17,8 @@ cask "radarr" do
       json.map { |item| item["version"] }
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :catalina"
