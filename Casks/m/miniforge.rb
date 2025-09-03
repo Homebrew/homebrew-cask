@@ -30,9 +30,23 @@ cask "miniforge" do
   binary "#{caskroom_path}/base/condabin/conda"
   binary "#{caskroom_path}/base/condabin/mamba"
 
+  postflight do
+    if Dir.exist? "#{HOMEBREW_TEMP}/#{token}-envs"
+      FileUtils.rm_r "#{caskroom_path}/base/envs"
+      FileUtils.mv "#{HOMEBREW_TEMP}/#{token}-envs", "#{caskroom_path}/base/envs"
+    end
+  end
+
+  uninstall_preflight do
+    if Dir.exist? "#{caskroom_path}/base/envs"
+      FileUtils.mv "#{caskroom_path}/base/envs", "#{HOMEBREW_TEMP}/#{token}-envs"
+    end
+  end
+
   uninstall delete: "#{caskroom_path}/base"
 
   zap trash: [
+    "#{HOMEBREW_TEMP}/#{token}-envs",
     "~/.conda",
     "~/.condarc",
   ]
