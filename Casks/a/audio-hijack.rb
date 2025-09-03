@@ -2,7 +2,7 @@ cask "audio-hijack" do
   sha256 :no_check
 
   on_ventura :or_older do
-    version "4.3.4"
+    version "4.3.5"
 
     url "https://cdn.rogueamoeba.com/audiohijack/download/AudioHijack-ACE.zip"
 
@@ -14,7 +14,7 @@ cask "audio-hijack" do
     end
   end
   on_sonoma :or_newer do
-    version "4.5.2"
+    version "4.5.3"
 
     url "https://cdn.rogueamoeba.com/audiohijack/download/AudioHijack.zip"
 
