@@ -30,8 +30,8 @@ cask "deepl" do
     end
   end
   on_ventura :or_newer do
-    version "25.8.12525829"
-    sha256 "4e379c8686721ca8d6aa296837458c61f35dee5aac99e7697b059045f14bcfac"
+    version "25.9.12668968"
+    sha256 "94cbcea9bc59f5c2b65d72c0834b61bd9e7c2ed0841728d054507fe136ec3cbe"
 
     url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.dmg"
 
