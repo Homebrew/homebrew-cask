@@ -1,6 +1,6 @@
 cask "bettertouchtool" do
-  version "5.444,2025052805"
-  sha256 "3221ea74fa2ac66658755f3739ee241ede5237e63860b053d7ff78b785011434"
+  version "5.573,2025090203"
+  sha256 "4f4faa08e50806b4cfd85308657a4db82b9c304976bd349aa8fbbdb698f71bb9"
 
   url "https://folivora.ai/releases/btt#{version.csv.first}-#{version.csv.second}.zip"
   name "BetterTouchTool"
@@ -8,13 +8,13 @@ cask "bettertouchtool" do
   homepage "https://folivora.ai/"
 
   livecheck do
-    url "https://updates.folivora.ai/appcast_macupdater.xml"
+    url "https://updates.folivora.ai/appcast_manual.xml"
     strategy :sparkle
   end
 
   auto_updates true
   conflicts_with cask: "bettertouchtool@alpha"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "BetterTouchTool.app"
 
