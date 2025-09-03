@@ -12,6 +12,8 @@ cask "listen1" do
   desc "Search and play songs from a variety of online sources"
   homepage "https://listen1.github.io/listen1/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :el_capitan"
 
   app "Listen1.app"

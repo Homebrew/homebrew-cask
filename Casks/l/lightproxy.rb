@@ -8,6 +8,8 @@ cask "lightproxy" do
   desc "Proxy & Debug tools based on whistle with Chrome Devtools UI"
   homepage "https://alibaba.github.io/lightproxy/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "LightProxy.app"
 
   uninstall_postflight do

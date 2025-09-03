@@ -8,6 +8,8 @@ cask "leanote" do
   desc "Open source cloud notepad"
   homepage "https://leanote.org/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Leanote.app"
 
   zap trash: [

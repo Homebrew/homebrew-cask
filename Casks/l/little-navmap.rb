@@ -8,6 +8,8 @@ cask "little-navmap" do
   desc "Flight planning and navigation and airport search and information system"
   homepage "https://albar965.github.io/littlenavmap.html"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Little Navconnect.app"
   app "Little Navmap.app"
 
