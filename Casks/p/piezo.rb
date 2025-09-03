@@ -2,7 +2,7 @@ cask "piezo" do
   sha256 :no_check
 
   on_ventura :or_older do
-    version "1.8.2"
+    version "1.8.4"
 
     url "https://cdn.rogueamoeba.com/piezo/download/Piezo-ACE.zip"
 
@@ -14,7 +14,7 @@ cask "piezo" do
     end
   end
   on_sonoma :or_newer do
-    version "1.9.5"
+    version "1.9.6"
 
     url "https://cdn.rogueamoeba.com/piezo/download/Piezo.zip"
 
