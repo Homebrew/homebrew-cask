@@ -11,6 +11,8 @@ cask "lx-music" do
   desc "Music app base on Electron & Vue"
   homepage "https://github.com/lyswhut/lx-music-desktop/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :catalina"
 
   app "lx-music-desktop.app"
