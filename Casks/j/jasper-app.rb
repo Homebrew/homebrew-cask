@@ -2,8 +2,8 @@ cask "jasper-app" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "1.1.3"
-    sha256 "8c57a745201f138e0e717264025ae5fc20fc1c8c1087f4331ba751efc4903d20"
+    version "2.0.0"
+    sha256 "8abec3cc20eec28f55df7d886927d325dfd1f1bb4479e73c9f36ac11edeace32"
   end
   on_intel do
     version "1.1.2"
