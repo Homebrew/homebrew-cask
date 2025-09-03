@@ -14,7 +14,7 @@ cask "airfoil" do
     end
   end
   on_sonoma :or_newer do
-    version "5.12.5"
+    version "5.12.6"
 
     url "https://cdn.rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
 
