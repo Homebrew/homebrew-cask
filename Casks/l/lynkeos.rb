@@ -13,6 +13,8 @@ cask "lynkeos" do
     regex(%r{url=.*?/v?(\d+(?:\.\d+)+)/Lynkeos[._-]App[\d._-]*\.zip}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :high_sierra"
 
   app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
