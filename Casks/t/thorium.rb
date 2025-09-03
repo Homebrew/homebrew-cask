@@ -1,14 +1,9 @@
 cask "thorium" do
   arch arm: "-arm64"
 
-  on_arm do
-    version "3.1.1,3.1.0-1"
-    sha256 "f2785f6ac4dd11659ccaf38f453485f4d3449cfaf79ee17c6409ea45d41a43fc"
-  end
-  on_intel do
-    version "3.1.0"
-    sha256 "b718cd726188f7ec7b215e4c12297a992e5471b87211bce66a7c5493641aedac"
-  end
+  version "3.2.2"
+  sha256 arm:   "fdec758191cfa645c9d9e37711286d61702bc558e38bdbacef85278add64f62c",
+         intel: "ab7efae6affe8acd71a811a5356734319f82d4517ece8ff7c1cca1be4fa9b914"
 
   url "https://github.com/edrlab/thorium-reader/releases/download/v#{version.csv.first}/Thorium-#{version.csv.second || version.csv.first}#{arch}.dmg",
       verified: "github.com/edrlab/thorium-reader/"
