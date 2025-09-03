@@ -1,6 +1,6 @@
 cask "protege" do
-  version "5.6.7"
-  sha256 "5e40644d73469951189dbf78176b762a0c09443c64896f34339deb9764f02230"
+  version "5.6.8"
+  sha256 "e05bc5ac73511c7b7485762bbcd1221ff9187d9115ab4aedd8e43f46d948e2d0"
 
   url "https://github.com/protegeproject/protege-distribution/releases/download/protege-#{version}/Protege-#{version}-mac.zip",
       verified: "github.com/protegeproject/protege-distribution/"
