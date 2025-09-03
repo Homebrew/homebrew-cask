@@ -8,6 +8,8 @@ cask "lepton" do
   desc "Snippet management app"
   homepage "https://hackjutsu.com/Lepton/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Lepton.app"
 
   zap trash: [
