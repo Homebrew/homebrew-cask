@@ -10,6 +10,8 @@ cask "lemonlime" do
   desc "Tiny judging environment for OI contest based on Lemon + LemonPlus"
   homepage "https://github.com/Project-LemonLime/Project_LemonLime"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "lemon.app"
 
   zap trash: [
