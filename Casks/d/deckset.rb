@@ -1,6 +1,6 @@
 cask "deckset" do
-  version "2.0.42,2764"
-  sha256 "20a8d3815357adc32b626b0cef8051de0369aeaf9e4123a3d0937cfeb94b8b80"
+  version "2.0.43,2768"
+  sha256 "277c5fa46e902ced77a344b9717d5922e32d1051b22d929301a61738a6ce939d"
 
   url "https://dl.decksetapp.com/Deckset+#{version.csv.first}+(#{version.csv.second}).dmg"
   name "Deckset"
