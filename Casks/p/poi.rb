@@ -11,6 +11,8 @@ cask "poi" do
   desc "Scalable KanColle browser and tool"
   homepage "https://poi.moe/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :high_sierra"
 
   app "poi.app"
