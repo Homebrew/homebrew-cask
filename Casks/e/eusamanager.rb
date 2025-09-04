@@ -1,5 +1,5 @@
 cask "eusamanager" do
-  version "1.3.1,16"
+  version "1.3.1,17"
   sha256 :no_check
 
   url "https://iit.com.ua/download/productfiles/EUSignWebInstall.pkg"
