@@ -7,6 +7,8 @@ cask "welly" do
   desc "BBS client"
   homepage "https://github.com/clyang/welly"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   auto_updates true
 
   app "Welly.app"
