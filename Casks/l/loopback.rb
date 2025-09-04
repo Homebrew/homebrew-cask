@@ -14,7 +14,7 @@ cask "loopback" do
     end
   end
   on_sonoma :or_newer do
-    version "2.4.6"
+    version "2.4.7"
 
     url "https://cdn.rogueamoeba.com/loopback/download/Loopback.zip"
 
