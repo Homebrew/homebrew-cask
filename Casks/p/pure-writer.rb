@@ -21,6 +21,8 @@ cask "pure-writer" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   pkg "Pure Writer-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.drakeet.purewriter"
