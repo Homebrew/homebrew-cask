@@ -1,6 +1,6 @@
 cask "bettertouchtool" do
-  version "5.579,2025090305"
-  sha256 "985115f180a5237392abbb458c1f3d6f3bb4cf586b54574488acac4b10393369"
+  version "5.582,2025090308"
+  sha256 "acbc81d3e3ab9fa42e09a704b7f3e32238971e1c3884dee48a469962c14bb6c3"
 
   url "https://folivora.ai/releases/btt#{version.csv.first}-#{version.csv.second}.zip"
   name "BetterTouchTool"
