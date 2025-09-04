@@ -7,6 +7,8 @@ cask "wintertime" do
   desc "Utility to freeze apps running in the background to save battery"
   homepage "https://github.com/actuallymentor/wintertime-mac-background-freezer"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Wintertime.app"
 
   zap trash: [
