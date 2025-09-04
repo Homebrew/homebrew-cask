@@ -2,8 +2,8 @@ cask "status" do
   arch arm: "aarch64", intel: "x86_64"
 
   on_arm do
-    version "2.34.3,c562f2"
-    sha256 "590c06302535d362b51a614444a2141d9e447bf838a728d1235ac2d20ef8f81f"
+    version "2.35.0,d4e7d0"
+    sha256 "96229cfbe96804a43824aab88de7e2fe3b28318b35053a3392252bffba874830"
 
     url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg",
         verified: "github.com/status-im/status-desktop/releases/download/"
