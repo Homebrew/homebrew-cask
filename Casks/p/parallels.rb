@@ -29,6 +29,7 @@ cask "parallels" do
     "parallels@17",
     "parallels@18",
     "parallels@19",
+    "parallels@20",
   ]
   depends_on macos: ">= :ventura"
 
