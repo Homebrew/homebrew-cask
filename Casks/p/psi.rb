@@ -13,6 +13,8 @@ cask "psi" do
     regex(/psi[._-]?(\d+(?:\.\d+)*)[._-]?mac\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Psi.app"
 
   uninstall quit: "org.psi-im"
