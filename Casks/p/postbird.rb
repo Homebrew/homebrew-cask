@@ -7,6 +7,8 @@ cask "postbird" do
   desc "Open-source PostgreSQL GUI client"
   homepage "https://github.com/Paxa/postbird"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Postbird.app"
 
   zap trash: [
