@@ -26,6 +26,8 @@ cask "phd2" do
   desc "Telescope guiding software"
   homepage "https://openphdguiding.org/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :mojave"
 
   app "PHD2.app"
@@ -35,8 +37,4 @@ cask "phd2" do
     "~/Library/Preferences/org.openphdguiding.phd2.plist",
     "~/Library/Saved Application State/org.openphdguiding.phd2.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
