@@ -1,6 +1,6 @@
 cask "font-monaspace" do
-  version "1.300"
-  sha256 "b857609c97dcf8c55e3fc408c6bf3e62b50b53122d6b1cc6813554e39cbebccc"
+  version "1.301"
+  sha256 "e201697c8ef3cfd4559fbfb4b5f60bf7425113729bca28e33b0a9112db1ca579"
 
   url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-static-v#{version}.zip",
       verified: "github.com/githubnext/monaspace/"
