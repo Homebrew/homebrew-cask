@@ -21,6 +21,8 @@ cask "wings3d" do
     regex(/url=.*?wings[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Wings3D.app"
 
   zap trash: "~/Library/Caches/Wings3D"
