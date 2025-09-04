@@ -8,6 +8,8 @@ cask "pliim" do
   desc "One click and be ready to go up on stage and shine!"
   homepage "https://zehfernandes.github.io/pliim/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Pliim.app"
 
   zap trash: [
