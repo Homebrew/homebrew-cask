@@ -2,12 +2,12 @@ cask "swift-craft-launcher" do
   version "0.2.2-beta"
 
   on_arm do
-    sha256 :no_check
+    sha256 "22446f9c018a67b566e90ffe45a2b5541c1ce53416270ff3f3a5bdbc6bfd312c"
     url "https://github.com/suhang12332/Swift-Craft-Launcher/releases/download/#{version}/Swift_Craft_Launcher_arm64_#{version}.dmg"
   end
 
   on_intel do
-    sha256 :no_check
+    sha256 "1595496909251c159891e60caf4da29c91b697c2b2aeefef33505e7f0bf95acc"
     url "https://github.com/suhang12332/Swift-Craft-Launcher/releases/download/#{version}/Swift_Craft_Launcher_x86_64_#{version}.dmg"
   end
 
@@ -16,7 +16,7 @@ cask "swift-craft-launcher" do
   homepage "https://suhang12332.github.io/swift-craft-launcher-web.github.io/"
 
   livecheck do
-    url :url
+    url "https://github.com/suhang12332/Swift-Craft-Launcher/releases/latest"
     strategy :github_latest
   end
 
@@ -31,6 +31,6 @@ cask "swift-craft-launcher" do
     "~/Library/Caches/com.su.code.SwiftCraftLauncher",
     "~/Library/Logs/Swift Craft Launcher",
     "~/Library/Preferences/com.su.code.SwiftCraftLauncher.plist",
-    "~/Library/Saved Application State/com.su.code.SwiftCraftLauncher.savedState"
+    "~/Library/Saved Application State/com.su.code.SwiftCraftLauncher.savedState",
   ]
 end
