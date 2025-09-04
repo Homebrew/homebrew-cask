@@ -14,7 +14,7 @@ cask "font-mengshen-regular" do
       json.map do |release|
         next if release["draft"] || release["prerelease"]
 
-        version = release["name"][regex, 1]
+        version = release["name"]&.[](regex, 1)
         next if version.blank?
 
         "#{version},#{release["tag_name"]&.tr("v", "")}"
