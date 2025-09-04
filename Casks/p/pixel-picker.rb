@@ -7,6 +7,8 @@ cask "pixel-picker" do
   desc "Menu bar application to pick colours from your screen"
   homepage "https://github.com/acheronfail/pixel-picker"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :sierra"
 
   app "Pixel Picker.app"
