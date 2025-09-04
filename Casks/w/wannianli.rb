@@ -7,6 +7,8 @@ cask "wannianli" do
   desc "Chinese lunar calendar on the menu bar"
   homepage "https://github.com/zfdang/chinese-lunar-calendar-for-mac/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :el_capitan"
 
   app "WanNianLi.app"
