@@ -8,6 +8,8 @@ cask "powder-player" do
   desc "Torrent client and streaming media player"
   homepage "https://powder.media/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Powder Player.app"
 
   zap trash: [
