@@ -1,6 +1,6 @@
 cask "font-monaspace-nf" do
-  version "1.300"
-  sha256 "a02bddd0c73682accf7eab90f242b693bdc3a8af42b7a79c43377bc5daa148ac"
+  version "1.301"
+  sha256 "051e9c3665b395a9939545396fba80048eda3ab8a97f3a911fbbf42bd3217d60"
 
   url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-nerdfonts-v#{version}.zip",
       verified: "github.com/githubnext/monaspace/"
