@@ -15,6 +15,8 @@ cask "wireframe-sketcher" do
     regex(/Current\s+version\s+is\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "WireframeSketcher.app"
 
   zap trash: [
