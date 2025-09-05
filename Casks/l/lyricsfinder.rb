@@ -1,5 +1,5 @@
 cask "lyricsfinder" do
-  version "1.6.1"
+  version "1.6.3"
   sha256 :no_check
 
   url "https://www.mediahuman.com/download/LyricsFinder.dmg"
