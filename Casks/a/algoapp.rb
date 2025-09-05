@@ -1,9 +1,9 @@
-cask "ankiapp" do
-  version "10.8.1"
-  sha256 "f92ef0918f8b5b97ba40c2b3d0280e94ecf60b408c8882420f30a3f7afe2da16"
+cask "algoapp" do
+  version "11.0.2"
+  sha256 "cfd03b1ee9908c816b531a4074a39802e94d92f5eb37b24e376efcebcd8fa3f6"
 
-  url "https://updates.ankiapp.com/AnkiApp-#{version}-universal-mac.zip"
-  name "AnkiApp"
+  url "https://updates.ankiapp.com/AlgoApp-#{version}-universal.dmg"
+  name "AlgoApp"
   desc "Spaced Repetition Flashcard App"
   homepage "https://www.ankiapp.com/"
 
@@ -15,10 +15,13 @@ cask "ankiapp" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "AnkiApp.app"
+  app "AlgoApp.app"
 
   zap trash: [
+    "~/Library/Application Support/AlgoApp",
     "~/Library/Application Support/AnkiApp",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ankiapp.mac-client.sfl*",
+    "~/Library/Logs/AlgoApp",
     "~/Library/Logs/AnkiApp",
     "~/Library/Preferences/com.ankiapp.mac-client.plist",
     "~/Library/Preferences/com.electron.ankiapp.helper.plist",
