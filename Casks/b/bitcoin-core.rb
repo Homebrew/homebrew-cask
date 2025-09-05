@@ -10,9 +10,13 @@ cask "bitcoin-core" do
   desc "Bitcoin client and wallet"
   homepage "https://bitcoincore.org/"
 
+  # The first-party website can be slow to update when a new release is made.
+  # New versions appear to be announced in GitHub releases first and the
+  # release body contains a link to the download files on the first-party
+  # website, so we check the latest release on GitHub for now.
   livecheck do
-    url "https://bitcoincore.org/en/download/"
-    regex(/href=.*?bitcoin[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[^"' >]*?[._-]darwin\.zip/i)
+    url "https://github.com/bitcoin/bitcoin"
+    strategy :github_latest
   end
 
   depends_on macos: ">= :big_sur"
