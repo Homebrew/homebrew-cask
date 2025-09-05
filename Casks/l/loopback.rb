@@ -2,7 +2,7 @@ cask "loopback" do
   sha256 :no_check
 
   on_ventura :or_older do
-    version "2.3.3"
+    version "2.3.5"
 
     url "https://cdn.rogueamoeba.com/loopback/download/Loopback-ACE.zip"
 
