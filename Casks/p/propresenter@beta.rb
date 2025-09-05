@@ -3,6 +3,8 @@ cask "propresenter@beta" do
     version "7.14.1,118358275"
     sha256 "266bfffd2753f460f9a22e834aed502c73bed2bf51747238fe4831c9048993db"
 
+    url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
+
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=11.0&appVersion=0&buildNumber=0&includeNotes=0&channel=beta"
       strategy :json do |json|
@@ -15,8 +17,10 @@ cask "propresenter@beta" do
     end
   end
   on_monterey :or_newer do
-    version "20,335544349"
-    sha256 "18367c1dce7afaa9ea7b2a2453b029082278189fbed56db42e7e507194509ef2"
+    version "20,335544350"
+    sha256 "dc575043b913696fe8e35498e13571f7603e3c206a9414c3e311ee353a0145be"
+
+    url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
 
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=99&appVersion=0&buildNumber=0&includeNotes=0&channel=beta"
@@ -30,7 +34,6 @@ cask "propresenter@beta" do
     end
   end
 
-  url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
   name "ProPresenter"
   desc "Presentation and production application for live events"
   homepage "https://renewedvision.com/propresenter/"
