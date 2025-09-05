@@ -7,6 +7,7 @@ cask "font-ibm-plex" do
   homepage "https://github.com/IBM/plex"
 
   deprecate! date: "2024-09-01", because: "is now distributed with the font variants as individual packages"
+  disable! date: "2025-09-05", because: "is now distributed with the font variants as individual packages"
 
   font "plex-#{version}/IBM-Plex-Mono/fonts/complete/otf/IBMPlexMono-Bold.otf"
   font "plex-#{version}/IBM-Plex-Mono/fonts/complete/otf/IBMPlexMono-BoldItalic.otf"
