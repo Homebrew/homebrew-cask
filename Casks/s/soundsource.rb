@@ -2,7 +2,7 @@ cask "soundsource" do
   sha256 :no_check
 
   on_ventura :or_older do
-    version "5.6.5"
+    version "5.6.6"
 
     url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource-ACE.zip"
 
@@ -14,7 +14,7 @@ cask "soundsource" do
     end
   end
   on_sonoma :or_newer do
-    version "5.8.5"
+    version "5.8.6"
 
     url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource.zip"
 
