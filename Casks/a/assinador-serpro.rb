@@ -1,6 +1,6 @@
 cask "assinador-serpro" do
-  version "4.3.1"
-  sha256 "03fdabc58c04e7956310899e83f7960e93da2708a929263223d545185898c127"
+  version "4.3.2"
+  sha256 "6ca57788e88cefc6b098a4fd7f7088c27c3dfa226368da43689a7261ee81c2b2"
 
   url "https://assinadorserpro.estaleiro.serpro.gov.br/downloads/#{version}/AssinadorSerpro-#{version}.mpkg.zip"
   name "Assinador Serpro"
