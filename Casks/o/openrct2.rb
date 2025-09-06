@@ -23,8 +23,8 @@ cask "openrct2" do
     end
   end
   on_mojave :or_newer do
-    version "0.4.25"
-    sha256 "40400126c95e7eec263b71e843d1b8043fd2071a82172ae2ba424bf3d01e0557"
+    version "0.4.26"
+    sha256 "159c2005aa93d18fcf8955002f3908bbcbf123b9b3d6b5531d211dcd632fd71c"
 
     url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-v#{version}-macos-universal.zip",
         verified: "github.com/OpenRCT2/OpenRCT2/"
