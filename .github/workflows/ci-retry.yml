@@ -1,0 +1,80 @@
+name: CI Retry Failed Jobs
+
+on:
+  schedule:
+    - cron: "0 */1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+  actions: write
+
+concurrency:
+  group: ci-retry
+  cancel-in-progress: false
+
+jobs:
+  retry-failed:
+    name: Re-run failed jobs for labeled PRs
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Re-run failed jobs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          # Get PRs with ci-retry label and process them
+          prs_json="$(gh pr list --repo "$REPO" --label ci-retry --state open --json number,headRefName,headRefOid)" || {
+            echo "Failed to fetch PRs with ci-retry label" >&2; exit 1
+          }
+
+          if [[ "$(jq length <<< "$prs_json")" -eq 0 ]]; then
+            echo "No open PRs with label ci-retry."; exit 0
+          fi
+
+          # Process each PR
+          jq -r '.[] | "\(.number) \(.headRefName) \(.headRefOid)"' <<< "$prs_json" | while IFS=' ' read -r pr_number head_ref head_sha; do
+            echo "Processing PR #$pr_number (ref: $head_ref sha: $head_sha)"
+
+            # Get runs for this branch
+            runs_json="$(gh run list --repo "$REPO" --branch "$head_ref" --limit 20 \
+              --json databaseId,headSha,status,conclusion)" || {
+              echo "  Failed to fetch runs for PR #$pr_number" >&2; continue
+            }
+
+            # Filter runs by commit SHA
+            filtered_by_sha="$(jq '.[] | select(.headSha=="'"$head_sha"'")' <<< "$runs_json")"
+
+            # Check if there are any currently running or queued runs for this commit
+            running_runs="$(jq 'select(.status=="in_progress" or .status=="queued") | .databaseId' <<< "$filtered_by_sha")"
+
+            if [[ -n "$running_runs" ]]; then
+              echo "  Skipping rerun - found running/queued jobs for PR #$pr_number (commit: $head_sha)"
+              continue
+            fi
+
+            # Filter by completed status
+            filtered_by_status="$(jq 'select(.status=="completed")' <<< "$filtered_by_sha")"
+
+            # Filter by failed/cancelled/timed out conclusion and get latest run only
+            latest_failed_run="$(jq 'select(.conclusion=="failure" or .conclusion=="cancelled" or .conclusion=="timed_out") | .databaseId' <<< "$filtered_by_status" | head -n 1)"
+
+            if [[ -z "$latest_failed_run" ]]; then
+              echo "  No failed/cancelled runs to retry for PR #$pr_number."
+              continue
+            fi
+
+            # Retry the latest failed run only
+            echo "  Re-running failed jobs for latest run $latest_failed_run"
+            if gh run rerun --repo "$REPO" "$latest_failed_run" --failed >/dev/null 2>&1; then
+              echo "    Rerun requested."
+            else
+              echo "    Failed to request rerun for $latest_failed_run" >&2
+            fi
+          done
+
+          echo "Done."
