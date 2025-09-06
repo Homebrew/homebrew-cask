@@ -25,8 +25,8 @@ cask "anki" do
     end
   end
   on_monterey :or_newer do
-    version "25.07.5"
-    sha256 "2e8346c00f285e0f4ceabbba39a1c9c802a727c3376798b2968169c2db1847b7"
+    version "25.09"
+    sha256 "a20952ad45400db2522ff8e8c6e2303d8f5f3ba0fa0ca9e57a14a42912439e77"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-launcher-#{version}-mac.dmg",
         verified: "github.com/ankitects/anki/"
