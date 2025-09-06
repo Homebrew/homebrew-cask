@@ -1,6 +1,6 @@
 cask "readest" do
-  version "0.9.76"
-  sha256 "464e74e99223305015af1c096b89735a905fb7c6bb0973a5f3ed7dd955fdbac3"
+  version "0.9.78"
+  sha256 "cb2ba30aaf16043255a73e9ad32561b6eaa4374fb0f057e7051db371c9f305f0"
 
   url "https://github.com/readest/readest/releases/download/v#{version}/Readest_#{version}_universal.dmg",
       verified: "github.com/readest/readest/"
