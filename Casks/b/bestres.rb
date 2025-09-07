@@ -9,6 +9,7 @@ cask "bestres" do
   homepage "https://bestres.wojtek.im/"
 
   deprecate! date: "2024-09-07", because: :unmaintained
+  disable! date: "2025-09-07", because: :unmaintained
 
   app "BestRes.app"
 
