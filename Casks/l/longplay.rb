@@ -10,7 +10,9 @@ cask "longplay" do
 
   livecheck do
     url "https://download.longplay.app/mac/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   auto_updates true
