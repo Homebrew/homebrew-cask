@@ -1,6 +1,6 @@
 cask "mouseless" do
-  version "0.3.1"
-  sha256 "79845fb27a9748473e60e9f9bde8fd3b0a3d0dec7eea22c38b0cc49905dba779"
+  version "0.4.0"
+  sha256 "476ac7b728926c63d89b3235d9d2a8ae2ef0cecea7ed3465bdadd0f10a888cc8"
 
   url "https://mouseless.click/mouseless-installer_v#{version}.dmg"
   name "mouseless"
