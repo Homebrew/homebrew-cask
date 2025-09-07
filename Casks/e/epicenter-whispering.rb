@@ -16,6 +16,8 @@ cask "epicenter-whispering" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Whispering.app"
 
   zap trash: [
