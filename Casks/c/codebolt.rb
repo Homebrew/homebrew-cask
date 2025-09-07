@@ -11,7 +11,8 @@ cask "codebolt" do
   homepage "https://codebolt.ai/"
 
   livecheck do
-    url "https://github.com/codeboltai/codebolt/"
+    url "https://releasebuilds.codebolt.ai/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
