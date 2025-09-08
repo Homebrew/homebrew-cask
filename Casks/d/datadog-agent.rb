@@ -1,8 +1,11 @@
 cask "datadog-agent" do
-  version "7.69.4-1"
-  sha256 "403cfa2ab68022e79bc75214959fb963b154c70d5c94e940baab89bbd378b9a5"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.dmg",
+  version "7.70.0-1"
+  sha256 arm:   "57427dfd475940183cd7b847a2dd05e9ea2a40eb27eda4b86569820ef507c0be",
+         intel: "646443a01f56c3cdf31e5df495e2a646ab539e7a6651bf7cee9da8a37fa89ff5"
+
+  url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.#{arch}.dmg",
       verified: "dd-agent.s3.amazonaws.com/"
   name "Datadog Agent"
   desc "Monitoring and security across systems, apps, and services"
@@ -10,7 +13,7 @@ cask "datadog-agent" do
 
   livecheck do
     url "https://dd-agent.s3.amazonaws.com/?prefix=datadog-agent"
-    regex(/datadog-agent[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    regex(/datadog-agent[._-]v?(\d+(?:[.-]\d+)+)\.#{arch}\.dmg/i)
     strategy :xml do |xml, regex|
       xml.get_elements("//Contents/Key").map do |item|
         match = item.text&.strip&.match(regex)
