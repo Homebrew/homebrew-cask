@@ -11,20 +11,8 @@ cask "nvidia-nsight-systems" do
   homepage "https://developer.nvidia.com/nsight-systems"
 
   livecheck do
-    url "https://developer.nvidia.com/tools-downloads.json"
+    url "https://developer.nvidia.com/nsight-systems/get-started"
     regex(/NsightSystems[._-]macos#{arch}[._-]public[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
-    strategy :json do |json, regex|
-      json["downloads"]&.map do |download|
-        next unless download["development_platform"]&.include?("osx")
-
-        download["files"]&.map do |file|
-          match = file["url"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end&.flatten
-    end
   end
 
   depends_on macos: ">= :high_sierra"
