@@ -8,7 +8,7 @@ cask "epicenter-whispering" do
   url "https://github.com/epicenter-os/epicenter/releases/download/v#{version}/Whispering_#{version}_#{arch}.dmg",
       verified: "github.com/epicenter-os/epicenter/"
   name "Epicenter Whispering"
-  desc "Fast, minimal transcription that works with local and cloud models"
+  desc "Audio transcription that works with local and cloud models"
   homepage "https://whispering.epicenter.so/"
 
   livecheck do
