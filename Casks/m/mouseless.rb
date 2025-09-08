@@ -3,7 +3,7 @@ cask "mouseless" do
   sha256 "476ac7b728926c63d89b3235d9d2a8ae2ef0cecea7ed3465bdadd0f10a888cc8"
 
   url "https://mouseless.click/mouseless-installer_v#{version}.dmg"
-  name "mouseless"
+  name "Mouseless"
   desc "Mouse control with the keyboard"
   homepage "https://mouseless.click/"
 
@@ -15,8 +15,7 @@ cask "mouseless" do
   end
 
   conflicts_with cask: "mouseless@preview"
-  depends_on macos: ">= :sonoma"
-  depends_on arch: :arm64
+  depends_on macos: ">= :monterey"
 
   app "Mouseless.app"
 
