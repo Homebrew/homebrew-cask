@@ -1,6 +1,6 @@
 cask "font-lxgw-neoxihei" do
-  version "1.219"
-  sha256 "5849ce3a2f5ee9f4f51ca7a41bb9a50b063e4d2291f59f1644776e595bd80fa6"
+  version "1.220"
+  sha256 "acf66334bcac398ace706b43bd7177a24ddb8edb0ddbf1832d64517179aad33c"
 
   url "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v#{version}/LXGWNeoXiHei.ttf"
   name "LXGW NeoXiHei"
