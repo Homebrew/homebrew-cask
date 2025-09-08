@@ -1,6 +1,6 @@
 cask "fldigi" do
-  version "4.2.08"
-  sha256 "4e706a641089d05e0b12f7c9897d45ce3983a4a24e07a463f62c7d4fa3c0208a"
+  version "4.2.09"
+  sha256 "55d03018ad2868821e2c11efcaec964b1035b6a3904689c9ce6789e26211680a"
 
   url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}.dmg",
       verified: "sourceforge.net/fldigi/"
