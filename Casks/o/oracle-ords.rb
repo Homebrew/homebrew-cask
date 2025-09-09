@@ -1,4 +1,3 @@
-
 cask "oracle-ords" do
   version "25.2.3.224.1517"
   sha256 "3e30c548bdbe1d272ca755ec91726e6c0c79fd561ebef4eb58908a56e6c9373f"
@@ -13,13 +12,12 @@ cask "oracle-ords" do
     regex(/href=.*ords[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on cask: "oracle-jdk@21"
-
   zap delete: "#{HOMEBREW_PREFIX}/etc/ords/config",
       trash:  "~/.ords"
 
   caveats do
     path_environment_variable "#{staged_path}/bin"
     license "https://www.oracle.com/downloads/licenses/oracle-free-license.html"
+    "#{token} requires Java 17 - 21."
   end
 end
