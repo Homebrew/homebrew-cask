@@ -1,9 +1,9 @@
 cask "zoo-design-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.17"
-  sha256 arm:   "e8cbe11c0f0f76b95bb590f75bf116f8c8d2660f9478772cc708a1e643c84dd3",
-         intel: "08d39dacdfed1b00b67108ac1ab96e2f9126716750ac05c415099020cfa79d79"
+  version "1.0.18"
+  sha256 arm:   "fc49bc91bbbf2b8cf478f497c09b52502da58d8ffe467466eea20a442b160c45",
+         intel: "fc971e0194045006bdc1ecfe253351a61f3cf62ccbdf13159f9ff65f78a1cbe0"
 
   url "https://dl.zoo.dev/releases/modeling-app/Zoo%20Design%20Studio-#{version}-#{arch}-mac.zip"
   name "Zoo Design Studio"
