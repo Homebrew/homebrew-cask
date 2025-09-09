@@ -17,6 +17,13 @@ cask "catoclient" do
 
   pkg "CatoClient.pkg"
 
+  # See https://github.com/Homebrew/homebrew-cask/pull/227035/files#r2332239563
+  uninstall_postflight do
+    puts ""
+    puts "The system extension(CatoClientSysExtension) cannot be uninstalled automatically at this time."
+    puts "You can run `systemextensionsctl gc` to remove it manually"
+  end
+
   uninstall launchctl: [
               "com.catonetworks.mac.CatoClient.helper",
               "com.catonetworks.mac.UserAgent",
@@ -27,11 +34,6 @@ cask "catoclient" do
               "/Library/Application Support/CatoNetworks",
               "/Library/LaunchAgents/com.catonetworks.catoclient.UserAgent.plist",
             ]
-  uninstall script: {
-    executable:   "systemextensionsctl",
-    args:         ["gc"],
-    must_succeed: false,
-  }
 
   zap trash: "~/Library/Application Support/com.catonetworks.mac.CatoClient"
 end
