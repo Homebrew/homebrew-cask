@@ -9,6 +9,7 @@ cask "youll-never-take-me-alive" do
   homepage "https://github.com/iSECPartners/yontma-mac"
 
   deprecate! date: "2024-09-09", because: :unmaintained
+  disable! date: "2025-09-09", because: :unmaintained
 
   app "You'll Never Take Me Alive!.app"
 
