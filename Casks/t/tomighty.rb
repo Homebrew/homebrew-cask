@@ -8,6 +8,7 @@ cask "tomighty" do
   homepage "https://github.com/tomighty/tomighty-osx"
 
   deprecate! date: "2024-09-08", because: :unmaintained
+  disable! date: "2025-09-09", because: :unmaintained
 
   app "Tomighty.app"
 
