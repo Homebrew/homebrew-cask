@@ -7,6 +7,7 @@ cask "octomouse" do
   homepage "https://github.com/KonsomeJona/OctoMouse"
 
   deprecate! date: "2024-09-08", because: :unmaintained
+  disable! date: "2025-09-09", because: :unmaintained
 
   app "OctoMouse.app"
 
