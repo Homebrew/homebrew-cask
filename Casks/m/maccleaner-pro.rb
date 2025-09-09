@@ -1,6 +1,6 @@
 cask "maccleaner-pro" do
-  version "3.4.1,577"
-  sha256 "ca7317b8af5cd621445a6b00c65d39085f7ad213baa20987bce86735d310359d"
+  version "3.4.2,578"
+  sha256 "9fc6f3aca705726de5d83bcf0768bc182bd8ec83ca2eb5efda9d65feef1305a7"
 
   url "https://nektony.com/download/mac-cleaner-pro/dmg/mac-cleaner-pro.dmg?build=#{version.csv.second}"
   name "Nektony MacCleaner Pro"
