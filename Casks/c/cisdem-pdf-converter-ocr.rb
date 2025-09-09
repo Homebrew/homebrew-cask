@@ -1,5 +1,5 @@
 cask "cisdem-pdf-converter-ocr" do
-  version "9.5.2"
+  version "9.6.0"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-pdfconverterocr.dmg",
