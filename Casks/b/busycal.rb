@@ -1,6 +1,6 @@
 cask "busycal" do
-  version "2025.3.1,2025-09-08-21-41"
-  sha256 "6158a2cdc4d943f0ed381c3b3e42631a7205eb204504ea54df29a8058079e92f"
+  version "2025.3.1,2025-09-09-13-22"
+  sha256 "d3483bbe3f2f498a94cbacb29d5bfcbeae8dc9d56dfbd097ad342d60d4c0ca18"
 
   url "https://downloads.busymac.com/bcl-#{version.csv.first}-#{version.csv.second}.zip"
   name "BusyCal"
