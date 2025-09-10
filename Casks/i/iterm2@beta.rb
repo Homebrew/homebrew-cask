@@ -1,7 +1,7 @@
 cask "iterm2@beta" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "3.6.0beta3"
-  sha256 "22c85495a30206c1bdd07a26259c7c7eacfa723aea4faaa7567010d97a3819e6"
+  version "3.6.0beta4"
+  sha256 "e8258b35fd1c84f38b935275aa9b3b4e64e6ef6bbf5382cb2b3febcc9852746f"
 
   url "https://iterm2.com/downloads/beta/iTerm2-#{version.dots_to_underscores}.zip"
   name "iTerm2"
@@ -16,8 +16,6 @@ cask "iterm2@beta" do
     url "https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/appcasts/testing_modern.xml"
     strategy :sparkle, &:version
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   conflicts_with cask: [
