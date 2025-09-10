@@ -1,8 +1,11 @@
 cask "slack-cli" do
-  version "3.6.1"
-  sha256 "638321246094989758394b150be5f24d7d1fcd2bdf0d3e33bfd47644454c9c40"
+  arch arm: "arm64", intel: "amd64"
 
-  url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_64-bit.tar.gz",
+  version "3.6.1"
+  sha256 arm:   "5560042d7b7dd04d4988eacb3ab7b2120bb953ecb50f3515b0164aa2aa027f64",
+         intel: "a19b45752a8941a17b7addd4ecc3be790288cdace52ac18dfbd2e537b8ee4b74"
+
+  url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_#{arch}.tar.gz",
       verified: "downloads.slack-edge.com/slack-cli/"
   name "Slack CLI"
   desc "CLI to create, run, and deploy Slack apps"
