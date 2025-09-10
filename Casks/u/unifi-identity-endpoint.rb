@@ -25,6 +25,7 @@ cask "unifi-identity-endpoint" do
 
   uninstall launchctl: [
               "application.com.ui.uid.standard-desktop.93942643.93942648",
+              "com.ui.uid.standard-desktop.privilegedtool",
               "com.ui.uid.standard-desktop.startup",
             ],
             quit:      "com.ui.uid.standard-desktop",
