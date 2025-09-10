@@ -1,9 +1,9 @@
 cask "vscodium@insiders" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.104.06079-insider"
-  sha256 arm:   "407b5ebf1f00855b0a3d572fe989206d9043409ac2a772aa40031a4fb725e95b",
-         intel: "abc4d17c0441eb55f9712bf8c2f3d354bb2e3a945e111dadd8985ca9e0ae417f"
+  version "1.104.06089-insider"
+  sha256 arm:   "26f3d27c3b3577fec95a4a714a66d3100cac7cefcf0a399999c93a1c31a8bbf0",
+         intel: "272868b76d41d09ffc7d6afa08445f9decd9d5d1d0b1919db0c70075b94af762"
 
   url "https://github.com/VSCodium/vscodium-insiders/releases/download/#{version}/VSCodium-darwin-#{arch}-#{version}.zip",
       verified: "github.com/VSCodium/vscodium-insiders/"
