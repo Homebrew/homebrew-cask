@@ -9,7 +9,7 @@ cask "slack-cli" do
       verified: "downloads.slack-edge.com/slack-cli/"
   name "Slack CLI"
   desc "CLI to create, run, and deploy Slack apps"
-  homepage "https://tools.slack.dev/slack-cli/"
+  homepage "https://docs.slack.dev/tools/slack-cli/"
 
   livecheck do
     url "https://api.slack.com/slackcli/metadata.json"
