@@ -1,6 +1,6 @@
 cask "open-video-downloader" do
-  version "2.5.5"
-  sha256 "18ca0f13e42002983c11807b52aa55948f02ef876fb51c72b9893c774521974b"
+  version "2.5.6"
+  sha256 "4739a133136afc5386fd44b42f37810cea1df6ff332c033b04ae2f5846bfa09c"
 
   url "https://github.com/StefanLobbenmeier/youtube-dl-gui/releases/download/v#{version}/Open-Video-Downloader-#{version}-universal.dmg"
   name "Open Video Downloader"
@@ -11,6 +11,8 @@ cask "open-video-downloader" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
