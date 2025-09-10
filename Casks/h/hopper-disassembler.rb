@@ -1,6 +1,6 @@
 cask "hopper-disassembler" do
-  version "5.19.6"
-  sha256 "fbf8e465487df69e62fde866d34c96dff8085e4d4bed1fb0d6513879d3cc5550"
+  version "6.0.0"
+  sha256 "a90be2b9782263c1381667e1293acf2c7061febecafc19c8643d2f86b1816b86"
 
   url "https://www.hopperapp.com/downloader/public/Hopper-#{version}-demo.dmg",
       user_agent: :fake
@@ -15,7 +15,7 @@ cask "hopper-disassembler" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "Hopper Disassembler v4.app"
+  app "Hopper Disassembler.app"
 
   zap trash: [
     "~/Library/Application Support/Hopper Disassembler v4",
