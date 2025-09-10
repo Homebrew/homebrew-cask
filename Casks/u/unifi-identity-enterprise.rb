@@ -1,15 +1,15 @@
-cask "ui" do
+cask "unifi-identity-enterprise" do
   version "0.89.1,7ee8d102-d6c2-472d-9d0b-38b3627d11be,6ae9"
   sha256 "789da27b3ee0b02768317e5fee441a0cb28d3298ac9e2e792e62afd9a5e6ba17"
 
   url "https://fw-download.ubnt.com/data/uid-ui-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
       verified: "fw-download.ubnt.com/data/uid-ui-desktop-app/"
-  name "UI Desktop"
+  name "UniFi Identity Enterprise"
   desc "Corporate Wi-Fi, VPN, SSO, and HR Application"
-  homepage "https://www.ui.com/uid"
+  homepage "https://www.ui.com/identity"
 
   livecheck do
-    url "https://api-gw.uid.alpha.ui.com:443/location/api/v1/public/fw/download/latest/?app=UI-DESKTOP-MACOS"
+    url "https://download.uid.ui.com/?app=UI-DESKTOP-MACOS"
     regex(/(\w+)[._-]macOS[._-](\d+(?:\.\d+)+)[._-](\h{8}-\h{4}-\h{4}-\h{4}-\h{12})/i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
