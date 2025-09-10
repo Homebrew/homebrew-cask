@@ -19,7 +19,7 @@ cask "unifi-identity-enterprise" do
     end
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   pkg "#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
 
