@@ -6,8 +6,8 @@ cask "fathom" do
   sha256 arm:   "c63554be80133f348cce5540c61d2ee5e0dd57a8a602186dada7b9bc7a723f7b",
          intel: "16c6031d97a65dde55656910e3508a963f83b2928eed74be178f794804cae328"
 
-  url "https://storage.googleapis.com/electron_releases/v#{version}/Fathom-darwin-#{arch}-#{version}.dmg",
-      verified: "storage.googleapis.com/electron_releases/"
+  url "https://electron-update.fathom.video/download/file/Fathom-darwin-#{arch}-#{version}.dmg",
+      verified: "electron-update.fathom.video/"
   name "Fathom"
   desc "Record and transcribe video conferences"
   homepage "https://fathom.video/"
