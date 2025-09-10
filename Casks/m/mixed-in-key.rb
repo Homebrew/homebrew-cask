@@ -1,6 +1,6 @@
 cask "mixed-in-key" do
-  version "11.2.5.7410,67"
-  sha256 "b5a430a89e2b5b6807355aa06ad9fdfbf324568a15a16f1a6afe8e01beb3ff96"
+  version "11.2.5.7415,67"
+  sha256 "06274f7109154e73c595c2c6f3999117ab9c4b682e97512ec23474853c175f78"
 
   url "https://builds.mixedinkey.com/download/#{version.csv.second}/release/latest?key=public"
   name "Mixed In Key"
