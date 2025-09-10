@@ -1,6 +1,6 @@
 cask "aws-vpn-client" do
-  version "5.3.0"
-  sha256 "ec5b7c562b1e91d902168f32c426c0a074ee0fdbfc061ef862165d6a42d2cf79"
+  version "5.3.1"
+  sha256 "e71c70072c338bd41f3925a541f5d7a73d9e063a00786a603ea9043ced1baa16"
 
   url "https://d20adtppz83p9s.cloudfront.net/OSX/#{version}/AWS_VPN_Client.pkg",
       verified: "d20adtppz83p9s.cloudfront.net/"
