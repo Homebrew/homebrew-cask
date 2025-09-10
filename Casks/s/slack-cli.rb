@@ -18,8 +18,6 @@ cask "slack-cli" do
     end
   end
 
-  depends_on formula: "deno"
-
   binary "bin/slack"
 
   # No zap stanza required
