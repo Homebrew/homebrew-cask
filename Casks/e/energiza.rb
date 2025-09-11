@@ -1,5 +1,5 @@
 cask "energiza" do
-  version "1.3.3"
+  version "1.3.4"
   sha256 :no_check
 
   url "https://appgineers.de/energiza/files/Energiza.zip"
