@@ -8,10 +8,7 @@ cask "ccstudio" do
   desc "Color management tool for accurate monitor and printer calibration"
   homepage "https://calibrite.com/us/software-downloads/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/mac/ccStudio\.zip}i)
-  end
+  deprecate! date: "2025-09-09", because: :no_longer_available, replacement_cask: "calibrite-profiler"
 
   depends_on macos: ">= :catalina"
 
