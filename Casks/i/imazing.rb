@@ -1,6 +1,6 @@
 cask "imazing" do
-  version "3.4.0,23192"
-  sha256 "03c146928116a43cefa8414511e4b6f2013aeb04e597bd49b55836656dad39b8"
+  version "3.4.0,23197"
+  sha256 "d5837aba2bf22ed08eb049568b00dcc5a96e4c3b047d2d63e8b56b4d27ade665"
 
   url "https://downloads.imazing.com/mac/iMazing/#{version.csv.first}.#{version.csv.second}/iMazing_#{version.csv.first}.#{version.csv.second}.dmg"
   name "iMazing"
