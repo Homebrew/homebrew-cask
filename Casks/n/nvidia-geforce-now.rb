@@ -14,6 +14,7 @@ cask "nvidia-geforce-now" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "GeForceNOW.app"
