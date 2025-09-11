@@ -1,5 +1,5 @@
 cask "steamcmd" do
-  version "1751406682"
+  version "1757456916"
   sha256 :no_check
 
   url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz",
@@ -40,8 +40,4 @@ cask "steamcmd" do
         "~/Library/Application Support/Steam",
         "~/Library/Application Support/Steam/logs",
       ]
-
-  caveats do
-    requires_rosetta
-  end
 end
