@@ -1,6 +1,6 @@
 cask "realvnc-connect" do
-  version "8.1.0"
-  sha256 "769bf5eba7e0e39c35fde651e16e685e2cf0f7037527cf01d35990b3d394c483"
+  version "8.2.0"
+  sha256 "ca3206cc71bbf51808e22137dd1c603c520f33d33a6a60c4dbb8ad570560cea7"
 
   url "https://downloads.realvnc.com/download/file/realvnc-connect/RealVNC-Connect-#{version}-MacOSX-universal.pkg"
   name "RealVNC Connect"
@@ -19,8 +19,12 @@ cask "realvnc-connect" do
   uninstall launchctl: [
               "com.realvnc.rvncserver",
               "com.realvnc.rvncserver.peruser",
+              "com.realvnc.rvncserver.prelogin",
             ],
-            pkgutil:   "com.realvnc.rvncconnect.pkg"
+            pkgutil:   [
+              "com.realvnc.rvncconnect.1",
+              "com.realvnc.rvncconnect.pkg",
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.realvnc.rvncconnect",
