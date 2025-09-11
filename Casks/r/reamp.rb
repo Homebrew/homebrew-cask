@@ -16,5 +16,13 @@ cask "reamp" do
 
   app "reAMP.app"
 
-  zap trash: "~/Library/Application Support/REAmp"
+  zap trash: [
+    "~/Library/Application Scripts/ru.alexfreud.ReAmp.ReAmpQuickLook",
+    "~/Library/Application Support/REAmp",
+    "~/Library/Application Support/ru.alexfreud.ReAmp",
+    "~/Library/Caches/ru.alexfreud.ReAmp",
+    "~/Library/Containers/ru.alexfreud.ReAmp.ReAmpQuickLook",
+    "~/Library/HTTPStorages/ru.alexfreud.ReAmp",
+    "~/Library/Preferences/ru.alexfreud.ReAmp.plist",
+  ]
 end
