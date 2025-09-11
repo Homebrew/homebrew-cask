@@ -8,7 +8,7 @@ cask "qq" do
   homepage "https://im.qq.com/macqq/index.shtml"
 
   livecheck do
-    url "https://im.qq.com/rainbow/ntQQDownload/"
+    url "https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/macOSConfig.js"
     regex(/QQ[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
   end
 
