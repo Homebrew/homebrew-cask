@@ -1,6 +1,6 @@
 cask "lyric-fever" do
-  version "3.0,3"
-  sha256 "5669aa907934f3b565cfea310421802713e7d44c18a5b64dd545dae8ce900d44"
+  version "3.1"
+  sha256 "ae7b92eb9da299eb691b320c3d853d1ed3fe15fa778da3cbdf0624444cd157c2"
 
   url "https://github.com/aviwad/LyricFever/releases/download/v#{version.csv.second || version.csv.first}/Lyric.Fever.#{version.csv.first}.dmg",
       verified: "github.com/aviwad/LyricFever/releases/download/"
