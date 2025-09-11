@@ -8,6 +8,7 @@ cask "parallels@17" do
   homepage "https://www.parallels.com/products/desktop/"
 
   deprecate! date: "2024-09-11", because: :discontinued
+  disable! date: "2025-09-11", because: :discontinued
 
   auto_updates true
   conflicts_with cask: [
@@ -19,6 +20,7 @@ cask "parallels@17" do
     "parallels@16",
     "parallels@18",
     "parallels@19",
+    "parallels@20",
   ]
   depends_on macos: ">= :high_sierra"
 
