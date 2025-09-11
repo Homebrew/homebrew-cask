@@ -1,6 +1,6 @@
 cask "icc" do
   version "1.0,7648"
-  sha256 "d512be0aaa6e7189f863b0b80bb4e8cc0fdf86c42bbdec13b8cd3e09218931dd"
+  sha256 :no_check
 
   url "https://s3-us-west-2.amazonaws.com/download.chessclub.com/desktop/mac/ICCforMac.r#{version.csv.second}.pkg",
       verified: "s3-us-west-2.amazonaws.com/download.chessclub.com/"
@@ -9,6 +9,7 @@ cask "icc" do
   homepage "https://www.chessclub.com/"
 
   deprecate! date: "2024-09-11", because: :discontinued
+  disable! date: "2025-09-11", because: :discontinued
 
   pkg "ICCforMac.r#{version.csv.second}.pkg"
 
