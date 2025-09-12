@@ -47,7 +47,7 @@ jobs:
             }
 
             # Filter runs by commit SHA
-            filtered_by_sha="$(jq '.[] | select(.headSha=="'"$head_sha"'")' <<< "$runs_json")"
+            filtered_by_sha="$(jq --arg sha "$head_sha" '.[] | select(.headSha==$sha)' <<< "$runs_json")"
 
             # Check if there are any currently running or queued runs for this commit
             running_runs="$(jq 'select(.status=="in_progress" or .status=="queued") | .databaseId' <<< "$filtered_by_sha")"
