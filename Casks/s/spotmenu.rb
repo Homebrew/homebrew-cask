@@ -1,6 +1,6 @@
 cask "spotmenu" do
-  version "2.1.1"
-  sha256 "f6b395763f07324e3736f973515f66be1ab92048a0fadb6cf1c40b30eece3fa1"
+  version "2.1.2"
+  sha256 "9a5270c58c960e01df5c26a26ee17a83d724124c69e5d1954f2797312e92c327"
 
   url "https://github.com/kmikiy/SpotMenu/releases/download/v#{version}/SpotMenu.app.zip"
   name "SpotMenu"
@@ -11,6 +11,8 @@ cask "spotmenu" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :sonoma"
