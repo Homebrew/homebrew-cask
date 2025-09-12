@@ -1,9 +1,9 @@
 cask "appflowy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.9.8"
-  sha256 arm:   "2602517f56f98136904f341fb2a8b12f87bb680d5269767e991ababbdb127178",
-         intel: "34af6821dc68b686d4168f690c54ea68a5f9d12a45a212427eb890cd7b55da23"
+  version "0.9.9"
+  sha256 arm:   "11c8d7aa1a352a00ef7305cb9a69a905b0869c4f1ee87c9c494ebec48588c6b6",
+         intel: "765b98f58a985294491bff966f47a2b38f12cf6628e14a31c7dc10c8098342ee"
 
   url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/Appflowy-#{version}-macos-#{arch}.zip",
       verified: "github.com/AppFlowy-IO/AppFlowy/"
@@ -15,8 +15,6 @@ cask "appflowy" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :mojave"
 
