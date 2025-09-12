@@ -5,7 +5,7 @@ cask "unifi-identity-endpoint" do
   url "https://fw-download.ubnt.com/data/uid-identity-standard-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
       verified: "fw-download.ubnt.com/data/uid-identity-standard-desktop-app/"
   name "UniFi Identity Endpoint"
-  desc "License free Wi-Fi, VPN, and Access Application for Orgnizations"
+  desc "License free Wi-Fi, VPN, and Access Application for Organizations"
   homepage "https://www.ui.com/identity"
 
   livecheck do
