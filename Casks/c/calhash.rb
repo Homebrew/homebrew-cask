@@ -33,7 +33,7 @@ cask "calhash" do
     end
   end
   on_sequoia :or_newer do
-    version "1.4.5"
+    version "1.4.6"
 
     url "https://www.titanium-software.fr/download/15/CalHash.dmg"
 
