@@ -1,6 +1,6 @@
 cask "mac-mouse-fix" do
-  version "3.0.7"
-  sha256 "895b6a9ea2d4300cbc18cda4f6460e88a5781340a4251e186d9c706452f35d3d"
+  version "3.0.8"
+  sha256 "db164e45d30b2fd02ff12635ac17c5441ebfc542faefde6bb861596a798df8ae"
 
   url "https://github.com/noah-nuebling/mac-mouse-fix/releases/download/#{version}/MacMouseFixApp.zip",
       verified: "github.com/noah-nuebling/mac-mouse-fix/"
