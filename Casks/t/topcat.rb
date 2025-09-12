@@ -1,6 +1,6 @@
 cask "topcat" do
-  version "4.10-4"
-  sha256 "71a693a0d0fe751d17e78e805c29878b52c5823f1392772ebe663c570cd57f35"
+  version "4.10-5"
+  sha256 "b678b64cb2d8b0df0707d94ba1ddef9fd7fab734f55b940a82fc7167b8d52d1e"
 
   url "https://www.star.bristol.ac.uk/mbt/releases/topcat/v#{version}/topcat-all.dmg"
   name "TOPCAT"
