@@ -1,6 +1,6 @@
 cask "font-wenjin-mincho" do
-  version "1.100"
-  sha256 "6f547297d89dce2ec1777228baa43a36b5f3a078611a12ac375da1db43f48c8c"
+  version "2.000"
+  sha256 "8de7bfc1bb08c7bd4211723ef9946d8b4bbee4a1fc40b63e834d0c8125abe80d"
 
   url "https://github.com/takushun-wu/WenJinMincho/releases/download/v#{version}/WenJinMincho-OTC.7z"
   name "WenJin Mincho"
