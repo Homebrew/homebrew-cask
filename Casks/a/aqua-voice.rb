@@ -1,9 +1,9 @@
 cask "aqua-voice" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.8.1"
-  sha256 arm:   "57bb945daacce1cc199de89682f60a8b06847a364f19a0e4abe651633f8609fe",
-         intel: "df46901a8f4cbbe3b19580301bc40eed78e65b69e0c36d09af1402765d69ae17"
+  version "0.8.3"
+  sha256 arm:   "3286d8f1ff8ba085550b59a96efcee3037aaa655d9c5404f483931250dffe258",
+         intel: "9689cabf69cf10bec0a64a87f6e86d5000670ae7d72f6a072dbd041506801983"
 
   url "https://d1a1dx1sgvjqrz.cloudfront.net/aqua-voice-updates/darwin/#{arch}/Aqua+Voice-#{version}-#{arch}.dmg",
       verified: "d1a1dx1sgvjqrz.cloudfront.net/"
