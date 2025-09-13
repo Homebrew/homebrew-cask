@@ -1,9 +1,8 @@
 cask "betterzip" do
-  version "5.3.4"
-  sha256 "ba4b3e468d93299ffc71f86543071cc34ab7b5943c20789c43bc8c50b1472c9b"
+  version "5.4"
+  sha256 "70e4841dfe63c4fc3c109bd582bda608b727f207163916283879aed020ac1e2c"
 
-  url "https://macitbetter.s3.amazonaws.com/BetterZip-#{version}.zip",
-      verified: "macitbetter.s3.amazonaws.com/"
+  url "https://macitbetter.com/dl/BetterZip-#{version}.zip"
   name "BetterZip"
   desc "Utility to create and modify archives"
   homepage "https://macitbetter.com/"
