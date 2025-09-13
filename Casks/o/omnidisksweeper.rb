@@ -30,8 +30,8 @@ cask "omnidisksweeper" do
     end
   end
   on_big_sur :or_newer do
-    version "1.15.1b"
-    sha256 "e079d644e8c0d64a4926d4b426bb0e4932a1b25707901a07c3a227cfdf7574f0"
+    version "1.16"
+    sha256 "cea5153769290a17c11c58696ac9e32423e4128cec6565ef9a9b5f2c73b0df5c"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniDiskSweeper-#{version}.dmg"
 
