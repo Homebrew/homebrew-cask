@@ -1,9 +1,9 @@
 cask "powershell" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.5.2"
-  sha256 arm:   "84f095de7ddd62c0b2f1d6dc68efe0b35a0fb90c2fe5127de2b0dd15eab4d95c",
-         intel: "f1795c1cbd441944c05e4136b01b0274d0f080556cc72669a55e127eb429e2a2"
+  version "7.5.3"
+  sha256 arm:   "c8aae872368a6543ca527a0e2b47226dd722a5a7dc2d793831a059c0dd6afa26",
+         intel: "af7c9d4739326159830c56d6ab4b28da3c56e0bf50486ed5eb68eb438a12dd59"
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
   name "PowerShell"
@@ -14,6 +14,8 @@ cask "powershell" do
     url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :mojave"
 
