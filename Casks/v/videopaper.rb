@@ -4,12 +4,12 @@ cask "videopaper" do
 
   url "https://github.com/Mcrich-LLC/VideoPaper/releases/latest/download/VideoPaper.zip"
   name "VideoPaper"
-  desc "Set videos as your wallpaper"
+  desc "Set videos as your arial wallpaper"
   homepage "https://github.com/Mcrich-LLC/VideoPaper"
 
-  app "VideoPaper.app"
-
   depends_on macos: ">= :tahoe"
+
+  app "VideoPaper.app"
 
   zap trash: [
     "~/Library/Preferences/com.mcrich.VideoPaper.plist",
