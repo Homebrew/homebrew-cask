@@ -15,9 +15,17 @@ cask "sf-symbols" do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
+  on_ventura do
     version "6"
     sha256 "846e90ca274d56d234a573baf7ca0656c1b86b0cbc5d6af6ee713261250c84fa"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sonoma :or_newer do
+    version "7"
+    sha256 "6b7fd72dcec7dbc30a4f18a0cb734774fef725019b3e887a18313e42d1e38818"
 
     livecheck do
       url "https://developer.apple.com/sf-symbols/"
