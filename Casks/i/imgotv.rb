@@ -13,8 +13,6 @@ cask "imgotv" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :mojave"
-
   app "芒果TV.app"
 
   zap trash: [
