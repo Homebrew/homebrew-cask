@@ -11,7 +11,5 @@ cask "red-eye" do
   deprecate! date: "2024-01-21", because: :no_longer_available
   disable! date: "2025-01-22", because: :no_longer_available
 
-  depends_on macos: ">= :mojave"
-
   app "Red Eye.app"
 end
