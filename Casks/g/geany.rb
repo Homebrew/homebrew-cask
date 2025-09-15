@@ -15,8 +15,6 @@ cask "geany" do
     regex(/href=.*?geany[._-]v?(\d+(?:\.\d+)+)[._-]osx#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Geany.app"
 
   zap trash: [
