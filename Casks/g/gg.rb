@@ -7,8 +7,6 @@ cask "gg" do
   desc "GUI for Jujutsu"
   homepage "https://github.com/gulbanana/gg"
 
-  depends_on macos: ">= :high_sierra"
-
   app "gg.app"
 
   zap trash: [
