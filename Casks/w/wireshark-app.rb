@@ -12,8 +12,7 @@ cask "wireshark-app" do
       strategy :sparkle do |items|
         items.map do |item|
           next unless item.minimum_system_version
-          next if item.minimum_system_version < :high_sierra ||
-                  item.minimum_system_version >= :catalina
+          next if item.minimum_system_version >= :catalina
 
           item.version
         end
@@ -43,7 +42,6 @@ cask "wireshark-app" do
 
   auto_updates true
   conflicts_with cask: "wireshark-chmodbpf"
-  depends_on macos: ">= :mojave"
 
   app "Wireshark.app"
   pkg "Add Wireshark to the system path.pkg"
