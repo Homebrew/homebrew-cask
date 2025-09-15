@@ -17,8 +17,6 @@ cask "vine-server" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :mojave"
-
   app "Vine Server.app"
   binary "#{appdir}/Vine Server.app/Contents/MacOS/OSXvnc-server"
   binary "#{appdir}/Vine Server.app/Contents/MacOS/storepasswd"
