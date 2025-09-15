@@ -29,7 +29,6 @@ cask "netnewswire" do
 
   auto_updates true
   conflicts_with cask: "netnewswire@beta"
-  depends_on macos: ">= :catalina"
 
   app "NetNewsWire.app"
 
