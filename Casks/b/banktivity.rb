@@ -17,8 +17,6 @@ cask "banktivity" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Banktivity.app"
 
   zap trash: [
