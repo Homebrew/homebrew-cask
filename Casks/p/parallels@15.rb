@@ -13,8 +13,6 @@ cask "parallels@15" do
   auto_updates true
   conflicts_with cask: [
     "parallels",
-    "parallels@12",
-    "parallels@13",
     "parallels@14",
     "parallels@16",
     "parallels@17",
@@ -22,7 +20,6 @@ cask "parallels@15" do
     "parallels@19",
     "parallels@20",
   ]
-  depends_on macos: ">= :sierra"
 
   app "Parallels Desktop.app"
 
