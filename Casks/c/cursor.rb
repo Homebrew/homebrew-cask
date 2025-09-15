@@ -1,9 +1,9 @@
 cask "cursor" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.14,64b72c9cd7e38203078327f881d5fe74930b2602"
-  sha256 arm:   "af9ae7fae0c114d6d6f2c9c859806bdad5c15b740a2307ee93482e55ad005ffc",
-         intel: "a3ab0aa98c2773cd936a3c2842a5a5a601fdac65fce429c812bf054cc58ac4e9"
+  version "1.5.11,2f2737de9aa376933d975ae30290447c910fdf46"
+  sha256 arm:   "008e8280e642d1be9650d6d4ab6f013a83c5d6179aa428ff72a8d9fe66652bb4",
+         intel: "cf19ad6e5d44a7d0183cc62d925bdad8434a803425166898298e22c79e000e75"
 
   url "https://downloads.cursor.com/production/#{version.csv.second}/darwin/#{arch}/Cursor-darwin-#{arch}.zip"
   name "Cursor"
@@ -11,7 +11,7 @@ cask "cursor" do
   homepage "https://www.cursor.com/"
 
   livecheck do
-    url "https://api2.cursor.sh/updates/api/update/darwin-#{arch}/cursor/0.0.0/"
+    url "https://api2.cursor.sh/updates/api/update/darwin-#{arch}/cursor/0.0.0/stable"
     regex(%r{/production/(\h+)/darwin/#{arch}/Cursor[._-]darwin[._-]#{arch}\.zip}i)
     strategy :json do |json, regex|
       match = json["url"]&.match(regex)
