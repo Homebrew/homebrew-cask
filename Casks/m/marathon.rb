@@ -13,8 +13,6 @@ cask "marathon" do
     regex(%r{href=.*?/Marathon[._-]v?(\d+(?:\.\d+)*)[._-]Mac\.dmg}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Classic Marathon.app"
 
   zap trash: [
