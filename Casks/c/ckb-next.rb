@@ -9,8 +9,6 @@ cask "ckb-next" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :sierra"
-
   pkg "ckb-next.mpkg"
 
   uninstall launchctl: "org.ckb-next.daemon",
