@@ -12,8 +12,6 @@ cask "garagesale" do
     regex(/href=.*?GarageSale[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
-
   app "GarageSale.app"
 
   zap trash: [
