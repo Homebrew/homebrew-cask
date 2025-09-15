@@ -13,8 +13,6 @@ cask "live-home-3d" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Live Home 3D.app"
 
   zap trash: [
