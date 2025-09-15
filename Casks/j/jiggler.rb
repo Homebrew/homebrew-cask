@@ -12,8 +12,6 @@ cask "jiggler" do
     regex(/<h1>.+(\d+(?:\.\d+)+)\s/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Jiggler.app"
 
   zap trash: "~/Library/Preferences/com.stick.app.jiggler.plist"
