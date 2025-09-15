@@ -13,8 +13,6 @@ cask "music-decoy" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Music Decoy.app"
 
   # No zap stanza required
