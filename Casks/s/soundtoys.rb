@@ -19,8 +19,6 @@ cask "soundtoys" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "Install Soundtoys #{version.major_minor} Bundle.pkg"
 
   # The Soundtoys application bundles the install of the iLok License Manager
