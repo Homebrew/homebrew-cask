@@ -19,7 +19,6 @@ cask "aide-app" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Aide.app"
   binary "#{appdir}/Aide.app/Contents/Resources/app/bin/aide"
