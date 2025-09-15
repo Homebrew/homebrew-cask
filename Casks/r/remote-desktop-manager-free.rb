@@ -10,8 +10,6 @@ cask "remote-desktop-manager-free" do
 
   disable! date: "2024-12-16", because: :discontinued, replacement_cask: "remote-desktop-manager"
 
-  depends_on macos: ">= :sierra"
-
   app "Remote Desktop Manager Free.app"
 
   zap trash: [
