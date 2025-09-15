@@ -1,9 +1,9 @@
 cask "stretchly" do
   arch arm: "-arm64"
 
-  version "1.17.2"
-  sha256 arm:   "9e757eb1601c11a1b0540ad462ed8deef5a9959cc98975c4d3cf9b073a709207",
-         intel: "d40d6a5868965d6ba8d2c502c5f8370574f24c25609071fa2bfedce6687873d8"
+  version "1.18.0"
+  sha256 arm:   "269326ed0a4d59cd6981b13cf454949473a18fed6eef4dc322ae1365285b4457",
+         intel: "9c454764b19d0079c770ae894e88c4d0400f4a6573f74002ae2384144c4d1ec3"
 
   url "https://github.com/hovancik/stretchly/releases/download/v#{version}/stretchly-#{version}#{arch}.dmg",
       verified: "github.com/hovancik/stretchly/"
