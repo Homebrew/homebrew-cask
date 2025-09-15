@@ -21,8 +21,6 @@ cask "attachecase" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "AttacheCase.app"
 
   zap trash: [
