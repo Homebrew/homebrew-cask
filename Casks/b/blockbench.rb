@@ -16,8 +16,6 @@ cask "blockbench" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Blockbench.app"
 
   zap trash: [
