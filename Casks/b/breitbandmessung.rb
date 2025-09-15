@@ -12,8 +12,6 @@ cask "breitbandmessung" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Breitbandmessung.app"
 
   zap trash: "~/Library/Application Support/Breitbandmessung"
