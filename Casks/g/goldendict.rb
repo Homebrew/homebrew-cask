@@ -10,8 +10,6 @@ cask "goldendict" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :sierra"
-
   app "GoldenDict.app"
   binary "#{appdir}/GoldenDict.app/Contents/MacOS/GoldenDict"
 
