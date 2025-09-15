@@ -15,8 +15,6 @@ cask "realforce" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   pkg "REALFORCE CONNECT Software_#{version.dots_to_hyphens}.pkg"
 
   uninstall pkgutil: "com.topre.installpkg.realforce"
