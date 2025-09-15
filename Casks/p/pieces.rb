@@ -17,7 +17,6 @@ cask "pieces" do
 
   auto_updates true
   depends_on cask: "pieces-os"
-  depends_on macos: ">= :mojave"
 
   app "Pieces.app"
 
