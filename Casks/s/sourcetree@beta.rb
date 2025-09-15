@@ -13,8 +13,6 @@ cask "sourcetree@beta" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Sourcetree-Beta.app"
   binary "#{appdir}/Sourcetree-Beta.app/Contents/Resources/stree", target: "stree-beta"
 
