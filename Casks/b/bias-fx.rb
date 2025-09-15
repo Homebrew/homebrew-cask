@@ -15,7 +15,6 @@ cask "bias-fx" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   pkg "BIAS_FX_#{version.major}_App.pkg"
 
