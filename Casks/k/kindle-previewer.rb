@@ -13,8 +13,6 @@ cask "kindle-previewer" do
     regex(/Kindle\sPreviewer\sv?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   pkg "KindlePreviewerInstaller.pkg"
 
   uninstall launchctl: "com.amazon.KindlePreviewerUpdater",
