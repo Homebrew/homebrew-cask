@@ -11,8 +11,6 @@ cask "icons8" do
   deprecate! date: "2024-07-17", because: :discontinued
   disable! date: "2025-07-17", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   app "Icons8.app"
 
   zap trash: [
