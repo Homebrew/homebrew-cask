@@ -14,8 +14,6 @@ cask "aria2d" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Aria2D.app"
 
   zap trash: [
