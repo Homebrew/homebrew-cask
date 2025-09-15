@@ -19,8 +19,6 @@ cask "yuque" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "语雀.app"
 
   zap trash: [

@@ -15,8 +15,6 @@ cask "yojimbo" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Yojimbo.app"
 
   zap trash: [

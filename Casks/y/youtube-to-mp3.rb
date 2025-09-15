@@ -5,13 +5,7 @@ cask "youtube-to-mp3" do
   version "3.9.16"
   sha256 :no_check
 
-  on_sierra :or_older do
-    url "https://www.mediahuman.net/files/YouTubeToMP3-1012.dmg"
-  end
-  on_high_sierra :or_newer do
-    url "https://www.mediahuman.net/files/YouTubeToMP3#{arch}.dmg"
-  end
-
+  url "https://www.mediahuman.net/files/YouTubeToMP3#{arch}.dmg"
   name "MediaHuman YouTube to MP3 Converter"
   desc "Downloads music from playlists or channels"
   homepage "https://www.mediahuman.net/youtube-to-mp3/"
@@ -20,8 +14,6 @@ cask "youtube-to-mp3" do
     url :homepage
     regex(/>\s*Version:.*?(\d+(?:\.\d+)+)/i)
   end
-
-  depends_on macos: ">= :sierra"
 
   app "YouTube to MP3.app"
 
