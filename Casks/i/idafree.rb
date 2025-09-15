@@ -12,8 +12,6 @@ cask "idafree" do
 
   disable! date: "2024-09-30", because: "requires authentication to download"
 
-  depends_on macos: ">= :catalina"
-
   installer script: {
     executable: "#{arch}idafree#{version.major_minor.no_dots}_mac.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended", "--installpassword", ""],
