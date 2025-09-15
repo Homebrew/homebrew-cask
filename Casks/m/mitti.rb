@@ -13,7 +13,6 @@ cask "mitti" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Mitti.app"
 
