@@ -13,7 +13,6 @@ cask "optimage" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "Optimage.app"
   binary "#{appdir}/Optimage.app/Contents/MacOS/cli/optimage"
