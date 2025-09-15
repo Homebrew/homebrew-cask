@@ -14,8 +14,6 @@ cask "clips-ide" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :mojave"
-
   app "CLIPS IDE.app"
 
   zap trash: [
