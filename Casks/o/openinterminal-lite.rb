@@ -27,8 +27,6 @@ cask "openinterminal-lite" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "OpenInTerminal-Lite.app"
 
   zap trash: "~/Library/Preferences/wang.jianing.app.OpenInTerminal-Lite.plist"
