@@ -20,7 +20,6 @@ cask "github@beta" do
 
   auto_updates true
   conflicts_with cask: "github"
-  depends_on macos: ">= :catalina"
 
   app "GitHub Desktop.app"
   binary "#{appdir}/GitHub Desktop.app/Contents/Resources/app/static/github.sh", target: "github"
