@@ -25,8 +25,6 @@ cask "supercollider" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "SuperCollider.app"
 
   zap trash: [
