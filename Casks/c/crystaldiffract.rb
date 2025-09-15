@@ -14,8 +14,6 @@ cask "crystaldiffract" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "CrystalDiffract.app"
 
   zap trash: [
