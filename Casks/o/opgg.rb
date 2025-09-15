@@ -13,7 +13,6 @@ cask "opgg" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "OP.GG.app"
 
