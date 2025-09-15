@@ -28,8 +28,6 @@ cask "ossia-score" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "ossia score.app"
 
   zap trash: [
