@@ -26,8 +26,6 @@ cask "bitfocus-buttons" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "bitfocus-buttons-mac-#{arch}-#{version.csv.second}-#{version.csv.third}.pkg"
 
   uninstall pkgutil: "io.bitfocus.buttons.pkg"
