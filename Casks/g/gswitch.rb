@@ -8,8 +8,6 @@ cask "gswitch" do
   desc "Set which graphics card to use"
   homepage "https://codyschrank.github.io/gSwitch/"
 
-  depends_on macos: ">= :sierra"
-
   app "gSwitch.app"
 
   zap trash: [
