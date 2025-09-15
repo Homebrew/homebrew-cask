@@ -13,8 +13,6 @@ cask "playdate-simulator" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :catalina"
-
   pkg "PlaydateSDK.pkg"
 
   uninstall_preflight do
