@@ -8,8 +8,6 @@ cask "pibar" do
   desc "Pi-hole(s) management in the menu bar"
   homepage "https://github.com/amiantos/pibar"
 
-  depends_on macos: ">= :sierra"
-
   app "PiBar.app"
 
   zap trash: [
