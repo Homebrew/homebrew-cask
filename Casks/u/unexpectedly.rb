@@ -12,8 +12,6 @@ cask "unexpectedly" do
     regex(%r{Version</b>:</td><td>(\d+(?:\.\d+)*\w)}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Unexpectedly.app"
 
   zap trash: "~/Library/Preferences/fr.whitebox.unexpectedly.plist"
