@@ -14,8 +14,6 @@ cask "rode-central" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   rename "RØDE Central*.pkg", "RØDE Central.pkg"
 
   pkg "RØDE Central.pkg"
