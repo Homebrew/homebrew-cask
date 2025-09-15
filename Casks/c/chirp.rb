@@ -11,8 +11,6 @@ cask "chirp" do
 
   disable! date: "2025-08-05", because: "cannot be reliably fetched due to Cloudflare protections"
 
-  depends_on macos: ">= :high_sierra"
-
   app "CHIRP.app"
 
   zap trash: "~/.chirp"
