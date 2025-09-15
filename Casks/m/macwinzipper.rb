@@ -12,8 +12,6 @@ cask "macwinzipper" do
     regex(%r{href=.*?/MacWinZipper[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :sierra"
-
   app "MacWinZipper.app"
 
   zap trash: [
