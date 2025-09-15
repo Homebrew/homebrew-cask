@@ -94,7 +94,6 @@ cask "firefox@nightly" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Firefox Nightly.app"
 
