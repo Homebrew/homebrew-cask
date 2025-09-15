@@ -16,8 +16,6 @@ cask "profit" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Profit.app"
 
   zap trash: [
