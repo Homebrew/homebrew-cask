@@ -13,7 +13,6 @@ cask "gog-galaxy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   pkg "galaxy_client_#{version}.pkg"
 
