@@ -19,8 +19,6 @@ cask "expandrive" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "ExpanDrive.app"
 
   zap trash: [

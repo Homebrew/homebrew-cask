@@ -12,8 +12,6 @@ cask "enpass" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "Enpass.pkg"
 
   uninstall pkgutil: "in.sinew.Enpass-Desktop.App"

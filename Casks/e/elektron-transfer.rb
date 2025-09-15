@@ -15,8 +15,6 @@ cask "elektron-transfer" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Transfer.app"
 
   zap trash: [

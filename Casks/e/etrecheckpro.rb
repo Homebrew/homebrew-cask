@@ -17,8 +17,6 @@ cask "etrecheckpro" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "EtreCheckPro.app"
 
   zap trash: [

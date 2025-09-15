@@ -17,8 +17,6 @@ cask "epson-print-layout" do
     regex(/Epson(?:\s|&nbsp;)*Print(?:\s|&nbsp;)*Layout(?:\s|&nbsp;)*v?(\d+(?:\.\d+)+)/im)
   end
 
-  depends_on macos: ">= :el_capitan"
-
   pkg "Epson Print Layout.pkg"
 
   uninstall pkgutil: "com.epson.printlayout.pkg"

@@ -9,7 +9,5 @@ cask "energybar" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   app "EnergyBar.app"
 end

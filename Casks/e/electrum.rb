@@ -12,8 +12,6 @@ cask "electrum" do
     regex(/href=.*?electrum[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Electrum.app"
 
   zap trash: [

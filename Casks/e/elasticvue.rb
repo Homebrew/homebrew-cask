@@ -10,8 +10,6 @@ cask "elasticvue" do
   desc "Elasticsearch GUI"
   homepage "https://github.com/cars10/elasticvue"
 
-  depends_on macos: ">= :high_sierra"
-
   app "elasticvue.app"
 
   zap trash: [

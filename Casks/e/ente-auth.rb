@@ -14,8 +14,6 @@ cask "ente-auth" do
     strategy :github_releases
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Ente Auth.app"
 
   zap trash: [

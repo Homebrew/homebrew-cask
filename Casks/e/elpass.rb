@@ -12,8 +12,6 @@ cask "elpass" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Elpass.app"
 
   zap trash: [

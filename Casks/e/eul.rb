@@ -7,8 +7,6 @@ cask "eul" do
   desc "Status monitoring"
   homepage "https://github.com/gao-sun/eul"
 
-  depends_on macos: ">= :catalina"
-
   app "eul.app"
 
   zap trash: [

@@ -13,7 +13,6 @@ cask "elgato-control-center" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "Elgato Control Center.app"
 
