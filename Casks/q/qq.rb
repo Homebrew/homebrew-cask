@@ -2,13 +2,13 @@ cask "qq" do
   version "6.9.75_250626_01"
   sha256 "b564f447cf2d5f3d32a4f4130f3012ae1e339ef06fabfa21061a5e0efd8f9557"
 
-  url "https://dldir1.qq.com/qqfile/qq/QQNT/Mac/QQ_#{version}.dmg"
+  url "https://dldir1v6.qq.com/qqfile/qq/QQNT/Mac/QQ_#{version}.dmg"
   name "QQ"
   desc "Instant messaging tool"
   homepage "https://im.qq.com/macqq/index.shtml"
 
   livecheck do
-    url "https://im.qq.com/rainbow/ntQQDownload/"
+    url "https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/macOSConfig.js"
     regex(/QQ[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
   end
 
