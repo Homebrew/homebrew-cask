@@ -15,8 +15,6 @@ cask "touchdesigner" do
     regex(/Build\s+(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "TouchDesigner.app"
 
   zap trash: [

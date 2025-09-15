@@ -13,8 +13,6 @@ cask "thangs-sync" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Thangs Sync.app"
 
   zap trash: [

@@ -7,8 +7,6 @@ cask "thumbhost3mf" do
   desc "Finder thumbnail provider for some .gcode, .bgcode and .3mf files"
   homepage "https://github.com/DavidPhillipOster/ThumbHost3mf/"
 
-  depends_on macos: ">= :catalina"
-
   app "ThumbHost3mf.app"
 
   zap trash: "~/Library/Containers/com.turbozen.-mfQuickLook/Data/Library/Preferences/com.turbozen.-mfQuickLook.plist"

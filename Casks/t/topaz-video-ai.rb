@@ -13,7 +13,6 @@ cask "topaz-video-ai" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "Topaz Video AI.app"
 

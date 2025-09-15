@@ -13,7 +13,6 @@ cask "tiptoi-manager" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   pkg "tiptoi_Manager_Installer.pkg"
 

@@ -9,7 +9,5 @@ cask "tlv" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :mojave"
-
   app "tlv.app"
 end

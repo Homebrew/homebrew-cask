@@ -80,7 +80,6 @@ cask "thunderbird@beta" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Thunderbird Beta.app"
 

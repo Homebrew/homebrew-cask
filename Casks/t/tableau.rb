@@ -30,8 +30,6 @@ cask "tableau" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "Tableau Desktop.pkg"
 
   uninstall pkgutil: [

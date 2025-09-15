@@ -12,8 +12,6 @@ cask "todour" do
     regex(/href=.*?Todour[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Todour.app"
 
   zap trash: "~/Library/Preferences/com.nerdur.Todour.plist"

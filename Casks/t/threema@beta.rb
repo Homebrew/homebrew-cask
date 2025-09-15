@@ -17,8 +17,6 @@ cask "threema@beta" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Threema Beta.app"
 
   zap trash: [

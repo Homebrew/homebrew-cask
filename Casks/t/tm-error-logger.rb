@@ -12,8 +12,6 @@ cask "tm-error-logger" do
     regex(/<p>v?(\d+(?:\.\d+)+)[ "<]/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "TM Error Logger.app"
 
   zap trash: [

@@ -16,8 +16,6 @@ cask "tropy" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Tropy.app"
 
   zap trash: [

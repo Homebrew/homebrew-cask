@@ -15,8 +15,6 @@ cask "typinator" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Typinator.app"
 
   zap trash: [

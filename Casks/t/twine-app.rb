@@ -8,8 +8,6 @@ cask "twine-app" do
   desc "Tool for telling interactive, nonlinear stories"
   homepage "https://twinery.org/"
 
-  depends_on macos: ">= :high_sierra"
-
   app "Twine.app"
 
   zap trash: [

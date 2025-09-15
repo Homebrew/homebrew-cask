@@ -17,8 +17,6 @@ cask "tourbox-console" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "TourBoxInstall#{version}/TourBoxInstall#{version}.pkg"
 
   uninstall quit:    "com.tourbox.ui.launch",

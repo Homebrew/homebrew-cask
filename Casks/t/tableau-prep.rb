@@ -16,8 +16,6 @@ cask "tableau-prep" do
     cask "tableau"
   end
 
-  depends_on macos: ">= :el_capitan"
-
   pkg "Tableau Prep Builder.pkg"
 
   uninstall pkgutil: [
