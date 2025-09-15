@@ -11,8 +11,6 @@ cask "linkandroid" do
   desc "Open source android assistant"
   homepage "https://linkandroid.com/"
 
-  depends_on macos: ">= :catalina"
-
   app "LinkAndroid.app"
 
   zap trash: [
