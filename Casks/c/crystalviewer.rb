@@ -14,8 +14,6 @@ cask "crystalviewer" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "CrystalViewer.app"
 
   zap trash: [
