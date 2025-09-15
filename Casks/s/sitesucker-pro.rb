@@ -36,7 +36,6 @@ cask "sitesucker-pro" do
   homepage "https://ricks-apps.com/osx/sitesucker/index.html"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "SiteSucker Pro.app"
 
