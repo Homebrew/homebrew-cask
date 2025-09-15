@@ -36,7 +36,6 @@ cask "wljs-notebook" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "WLJS Notebook.app"
 
