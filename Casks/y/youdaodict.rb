@@ -13,8 +13,6 @@ cask "youdaodict" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :mojave"
-
   app "网易有道翻译.app"
 
   zap trash: [
