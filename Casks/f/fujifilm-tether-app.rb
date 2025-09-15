@@ -18,8 +18,6 @@ cask "fujifilm-tether-app" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   pkg "FUJIFILM_TetherApp_Mac#{version.csv.first.no_dots}.pkg"
 
   uninstall pkgutil: "com.fujifilm.FUJIFILM_TetherApp_Mac"
