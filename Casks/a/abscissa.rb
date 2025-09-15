@@ -9,8 +9,6 @@ cask "abscissa" do
 
   disable! date: "2025-04-03", because: :no_longer_available
 
-  depends_on macos: ">= :sierra"
-
   app "Abscissa.app"
 
   zap trash: [
