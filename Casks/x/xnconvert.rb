@@ -12,8 +12,6 @@ cask "xnconvert" do
     regex(/href=.*XnConvert[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
-
   app "XnConvert.app"
 
   zap trash: "~/Library/Preferences/com.xnview.XnConvert.plist"
