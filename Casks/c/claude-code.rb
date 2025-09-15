@@ -19,8 +19,6 @@ cask "claude-code" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   binary "claude"
 
   zap trash: [
