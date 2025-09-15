@@ -23,7 +23,6 @@ cask "devonsphere-express" do
   homepage "https://www.devontechnologies.com/apps/devonsphere"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "DEVONsphere Express.app"
 
