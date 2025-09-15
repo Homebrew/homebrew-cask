@@ -1,22 +1,6 @@
 cask "coteditor" do
   on_ventura :or_older do
-    on_el_capitan :or_older do
-      version "3.5.4"
-      sha256 "0b2cbf38cc531268e3691f307445e05ae5da64b48ceaf86c4d16b993c9be3e9f"
-    end
-    on_sierra do
-      version "3.7.8"
-      sha256 "c67a0b5049da7096228074d7b71e7678fcaaf795a5ae45bc593019662f0c6f09"
-    end
-    on_high_sierra do
-      version "3.9.7"
-      sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
-    end
-    on_mojave do
-      version "3.9.7"
-      sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
-    end
-    on_catalina do
+    on_catalina :or_older do
       version "4.0.9"
       sha256 "969e891f4a36146c317150806fee01559d177f956734595c73537affc8897e79"
     end
