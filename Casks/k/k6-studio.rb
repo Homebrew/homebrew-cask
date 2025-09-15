@@ -12,7 +12,6 @@ cask "k6-studio" do
   homepage "https://grafana.com/docs/k6-studio"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "k6 Studio.app"
 
