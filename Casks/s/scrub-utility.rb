@@ -17,8 +17,6 @@ cask "scrub-utility" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "scrub#{version.csv.first.no_dots}/Scrub.app"
 
   zap trash: [
