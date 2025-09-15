@@ -26,8 +26,6 @@ cask "swiftformat-for-xcode" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "SwiftFormat for Xcode.app"
 
   zap trash: [
