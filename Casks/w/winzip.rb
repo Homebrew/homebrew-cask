@@ -20,8 +20,6 @@ cask "winzip" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "WinZip.app"
 
   zap trash: [
