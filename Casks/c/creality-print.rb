@@ -16,8 +16,6 @@ cask "creality-print" do
     regex(/href=.*?Creality[._-]?Print[._-]v?(\d+(?:\.\d+)+)[._-]macx[._-]#{arch}[._-]Release\.dmg/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Creality Print.app"
 
   zap trash: [
