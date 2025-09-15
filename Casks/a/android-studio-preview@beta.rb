@@ -17,7 +17,6 @@ cask "android-studio-preview@beta" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Android Studio.app", target: "Android Studio Preview Beta.app"
   binary "#{appdir}/Android Studio Preview Beta.app/Contents/MacOS/studio", target: "studio-beta"
