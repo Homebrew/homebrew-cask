@@ -13,8 +13,6 @@ cask "ludwig" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Ludwig.app"
 
   zap trash: [
