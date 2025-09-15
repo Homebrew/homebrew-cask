@@ -13,7 +13,6 @@ cask "rowmote-helper" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "Rowmote Helper.app"
 
