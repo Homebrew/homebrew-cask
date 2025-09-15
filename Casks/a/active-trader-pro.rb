@@ -12,8 +12,6 @@ cask "active-trader-pro" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Active Trader Pro.app"
 
   uninstall quit: "com.fmr.activetrader"

@@ -13,8 +13,6 @@ cask "amneziavpn" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "AmneziaVPN.pkg"
 
   uninstall launchctl: ["AmneziaVPN-service", "AmneziaVPN"],

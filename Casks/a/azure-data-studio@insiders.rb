@@ -12,8 +12,6 @@ cask "azure-data-studio@insiders" do
 
   disable! date: "2024-12-22", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   app "Azure Data Studio - Insiders.app"
   binary "#{appdir}/Azure Data Studio - Insiders.app/Contents/Resources/app/bin/code",
          target: "azuredatastudio-insiders"

@@ -13,7 +13,6 @@ cask "airbuddy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "AirBuddy.app"
 

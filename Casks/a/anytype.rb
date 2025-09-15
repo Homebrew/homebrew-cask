@@ -21,7 +21,6 @@ cask "anytype" do
     "anytype@alpha",
     "anytype@beta",
   ]
-  depends_on macos: ">= :catalina"
 
   app "Anytype.app"
 

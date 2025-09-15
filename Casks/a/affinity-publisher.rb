@@ -14,7 +14,6 @@ cask "affinity-publisher" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Affinity Publisher #{version.csv.first.major}.app"
 

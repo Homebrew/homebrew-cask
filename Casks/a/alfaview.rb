@@ -14,8 +14,6 @@ cask "alfaview" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "alfaview-mac-production-#{version}.pkg"
 
   uninstall quit:    "com.alfaview.desktop",

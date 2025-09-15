@@ -13,7 +13,6 @@ cask "airtool" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   pkg "Airtool_#{version}.pkg"
 

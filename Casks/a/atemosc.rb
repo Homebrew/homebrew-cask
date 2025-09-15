@@ -16,7 +16,6 @@ cask "atemosc" do
   end
 
   auto_updates true # Requires a license key to enable
-  depends_on macos: ">= :high_sierra"
 
   app "atemOSC.app"
 

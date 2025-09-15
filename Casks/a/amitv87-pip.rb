@@ -7,8 +7,6 @@ cask "amitv87-pip" do
   desc "Always on top window preview"
   homepage "https://github.com/amitv87/PiP"
 
-  depends_on macos: ">= :sierra"
-
   app "PiP.app"
 
   zap trash: "~/Library/Saved Application State/com.boggyb.PiP.savedState"

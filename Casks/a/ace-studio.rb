@@ -24,8 +24,6 @@ cask "ace-studio" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "ACE Studio.app"
 
   zap trash: [

@@ -17,8 +17,6 @@ cask "atv-remote" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "ATV Remote.app"
 
   zap trash: [

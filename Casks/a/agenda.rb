@@ -9,8 +9,6 @@ cask "agenda" do
 
   disable! date: "2024-12-16", because: :moved_to_mas
 
-  depends_on macos: ">= :mojave"
-
   app "Agenda.app"
 
   zap trash: [

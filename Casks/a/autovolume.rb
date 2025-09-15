@@ -9,8 +9,6 @@ cask "autovolume" do
 
   deprecate! date: "2024-09-30", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "AutoVolume.app"
 
   caveats do

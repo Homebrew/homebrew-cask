@@ -15,8 +15,6 @@ cask "algodoo" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Algodoo.app"
 
   zap trash: [

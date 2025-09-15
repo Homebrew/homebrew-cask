@@ -17,7 +17,6 @@ cask "android-studio-preview@canary" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Android Studio Preview.app", target: "Android Studio Preview Canary.app"
   binary "#{appdir}/Android Studio Preview Canary.app/Contents/MacOS/studio", target: "studio-canary"

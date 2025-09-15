@@ -17,7 +17,6 @@ cask "android-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Android Studio.app"
   binary "#{appdir}/Android Studio.app/Contents/MacOS/studio"

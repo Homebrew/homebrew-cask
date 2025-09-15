@@ -9,8 +9,6 @@ cask "airdisplay" do
 
   disable! date: "2024-09-30", because: :no_longer_available
 
-  depends_on macos: ">= :mojave"
-
   pkg "Air Display Installer.pkg"
 
   uninstall pkgutil: [

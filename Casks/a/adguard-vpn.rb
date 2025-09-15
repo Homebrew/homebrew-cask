@@ -16,7 +16,6 @@ cask "adguard-vpn" do
 
   auto_updates true
   conflicts_with cask: "adguard-vpn@nightly"
-  depends_on macos: ">= :catalina"
 
   pkg "AdGuard VPN.pkg"
 

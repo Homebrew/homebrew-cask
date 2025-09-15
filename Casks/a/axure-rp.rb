@@ -13,8 +13,6 @@ cask "axure-rp" do
     regex(/>\s*(?:Version|Axure\s*RP)\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Axure RP #{version.major}.app"
 
   zap trash: [

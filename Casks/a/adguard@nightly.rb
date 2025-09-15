@@ -16,7 +16,6 @@ cask "adguard@nightly" do
 
   auto_updates true
   conflicts_with cask: "adguard"
-  depends_on macos: ">= :catalina"
 
   pkg "AdGuard.pkg"
 

@@ -11,8 +11,6 @@ cask "actual" do
   desc "Privacy-focused app for managing your finances"
   homepage "https://actualbudget.org/"
 
-  depends_on macos: ">= :catalina"
-
   app "Actual.app"
 
   zap trash: [

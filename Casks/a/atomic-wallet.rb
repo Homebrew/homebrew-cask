@@ -12,8 +12,6 @@ cask "atomic-wallet" do
     regex(/v?(\d+(?:[.-]\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Atomic Wallet.app"
 
   zap trash: [

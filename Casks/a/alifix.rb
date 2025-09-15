@@ -15,8 +15,6 @@ cask "alifix" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "alifix#{version.csv.first.no_dots}/Alifix.app"
 
   zap trash: [

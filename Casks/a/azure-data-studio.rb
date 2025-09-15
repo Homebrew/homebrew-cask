@@ -19,7 +19,6 @@ cask "azure-data-studio" do
   disable! date: "2026-02-28", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Azure Data Studio.app"
   binary "#{appdir}/Azure Data Studio.app/Contents/Resources/app/bin/code", target: "azuredatastudio"

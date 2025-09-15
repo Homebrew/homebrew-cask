@@ -13,8 +13,6 @@ cask "alcom" do
     regex(/^gui[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "ALCOM.app"
 
   zap trash: [

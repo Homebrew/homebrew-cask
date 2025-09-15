@@ -19,7 +19,6 @@ cask "adlock" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   pkg "AdLock-Installer.pkg"
 
