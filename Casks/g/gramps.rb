@@ -28,8 +28,6 @@ cask "gramps" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Gramps.app"
 
   zap trash: [

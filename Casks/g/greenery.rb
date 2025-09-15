@@ -15,8 +15,6 @@ cask "greenery" do
 
   no_autobump! because: :bumped_by_upstream
 
-  depends_on macos: ">= :catalina"
-
   app "Greenery.app"
 
   zap trash: [

@@ -9,8 +9,6 @@ cask "gitpigeon" do
   deprecate! date: "2024-04-10", because: :unmaintained
   disable! date: "2025-04-22", because: :unmaintained
 
-  depends_on macos: ">= :mojave"
-
   app "GitPigeon.app"
 
   zap trash: [

@@ -15,7 +15,6 @@ cask "godot-mono" do
   end
 
   depends_on cask: "dotnet-sdk"
-  depends_on macos: ">= :sierra"
 
   app "Godot_mono.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

@@ -13,8 +13,6 @@ cask "grads" do
     regex(/href=.*?grads[._-]?v?(\d+(?:\.\d+)+)-bin-darwin.*?\.t/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   binary "grads-#{version}/bin/bufrscan"
   binary "grads-#{version}/bin/grads"
   binary "grads-#{version}/bin/grib2scan"

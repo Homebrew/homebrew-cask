@@ -22,7 +22,6 @@ cask "gitbutler" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "GitButler.app"
   binary "#{appdir}/GitButler.app/Contents/MacOS/but", target: "but"

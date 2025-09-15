@@ -28,8 +28,6 @@ cask "geoda" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "GeoDa.app"
 
   # No zap stanza required
