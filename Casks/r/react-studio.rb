@@ -10,8 +10,6 @@ cask "react-studio" do
 
   deprecate! date: "2025-07-24", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "React Studio.app"
 
   zap trash: [
