@@ -20,8 +20,6 @@ cask "free-podcast-transcription" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Free Podcast Transcription.app"
 
   zap trash: [
