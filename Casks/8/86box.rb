@@ -21,8 +21,6 @@ cask "86box" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "86Box.app"
 
   roms_dir = Pathname("~/Library/Application Support/net.86box.86Box/roms")
