@@ -7,8 +7,6 @@ cask "micro-sniff" do
   desc "Monitor microphone activity"
   homepage "https://github.com/dwarvesf/micro-sniff"
 
-  depends_on macos: ">= :sierra"
-
   app "Micro Sniff.app"
 
   zap trash: [
