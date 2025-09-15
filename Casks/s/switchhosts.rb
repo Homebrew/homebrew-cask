@@ -24,8 +24,6 @@ cask "switchhosts" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "SwitchHosts.app"
 
   zap trash: [

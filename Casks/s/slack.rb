@@ -33,7 +33,6 @@ cask "slack" do
 
   auto_updates true
   conflicts_with cask: "slack@beta"
-  depends_on macos: ">= :catalina"
 
   app "Slack.app"
 

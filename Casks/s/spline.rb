@@ -15,8 +15,6 @@ cask "spline" do
     regex(/Spline[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]mac\.zip/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Spline.app"
 
   zap trash: "~/Library/Preferences/com.design.spline.plist"

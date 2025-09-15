@@ -12,8 +12,6 @@ cask "spike" do
     regex(/SPIKE[._-]APP[._-]\d+[._-]macOS[._-]+v?(\d+(?:\.\d+)+)[._-]Global\.dmg/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Spike.app"
 
   zap trash: [

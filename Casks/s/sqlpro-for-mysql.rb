@@ -13,8 +13,6 @@ cask "sqlpro-for-mysql" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "SQLPro for MySQL.app"
 
   zap trash: [

@@ -44,8 +44,6 @@ cask "stolendata-mpv" do
   desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io/"
 
-  depends_on macos: ">= :mojave"
-
   folder = label&.sub("VERSION", version)
 
   app "#{folder}mpv.app"

@@ -14,8 +14,6 @@ cask "singlecrystal" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "SingleCrystal.app"
 
   zap trash: [

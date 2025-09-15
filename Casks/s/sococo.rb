@@ -12,8 +12,6 @@ cask "sococo" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "Sococo.app"
 
   zap trash: [

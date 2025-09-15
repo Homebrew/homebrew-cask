@@ -12,8 +12,6 @@ cask "smartreporter-free" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
-
   app "SMARTReporter Free.app"
 
   zap trash: [

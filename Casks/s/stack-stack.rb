@@ -19,7 +19,6 @@ cask "stack-stack" do
   disable! date: "2024-09-30", because: :no_longer_available
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "Stack.app"
 

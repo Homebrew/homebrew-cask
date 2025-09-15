@@ -22,8 +22,6 @@ cask "salesforce-cli" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :el_capitan"
-
   pkg "sf-v#{version.csv.first}-#{version.csv.second}-#{arch}.pkg"
 
   uninstall pkgutil: "com.salesforce.cli",

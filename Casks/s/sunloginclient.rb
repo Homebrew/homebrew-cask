@@ -18,8 +18,6 @@ cask "sunloginclient" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "SunloginClient.pkg"
 
   postflight do

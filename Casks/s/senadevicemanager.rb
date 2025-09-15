@@ -12,8 +12,6 @@ cask "senadevicemanager" do
     regex(/SENADeviceManagerForMAC[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   pkg "SENADeviceManagerForMAC-v#{version}.pkg"
 
   uninstall quit:    [

@@ -16,8 +16,6 @@ cask "sejda-pdf" do
     regex(/mac\s*:\s*["']sejda[._-]desktop[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Sejda PDF Desktop.app"
 
   zap trash: [

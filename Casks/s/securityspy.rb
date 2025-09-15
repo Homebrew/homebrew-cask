@@ -12,8 +12,6 @@ cask "securityspy" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "SecuritySpy.app"
 
   zap trash: [

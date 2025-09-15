@@ -12,8 +12,6 @@ cask "sysex-librarian" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
-
   app "SysEx Librarian.app"
 
   uninstall quit: [

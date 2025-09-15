@@ -13,8 +13,6 @@ cask "scapple" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Scapple.app"
 
   zap trash: [

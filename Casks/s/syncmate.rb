@@ -13,8 +13,6 @@ cask "syncmate" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "SyncMate.app"
 
   zap trash: [

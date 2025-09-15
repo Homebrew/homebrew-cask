@@ -14,7 +14,6 @@ cask "satellite-eyes" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "Satellite Eyes.app"
 

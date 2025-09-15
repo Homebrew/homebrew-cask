@@ -12,8 +12,6 @@ cask "sirimote" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
-
   app "SiriMote.app"
 
   zap trash: "~/Library/Preferences/at.EternalStorms.SiriMote-nonappstore.plist"

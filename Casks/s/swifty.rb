@@ -9,7 +9,6 @@ cask "swifty" do
   homepage "https://getswifty.pro/"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Swifty.app"
 

@@ -12,8 +12,6 @@ cask "silo" do
     regex(/Silo\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Silo.app"
 
   zap trash: [

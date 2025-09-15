@@ -13,8 +13,6 @@ cask "safe-exam-browser" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Safe Exam Browser.app"
 
   zap trash: "~/Library/Preferences/org.safeexambrowser.SafeExamBrowser.plist"

@@ -12,8 +12,6 @@ cask "sharemouse" do
     regex(/Mac\s*Version:.*?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :mojave"
-
   app "ShareMouse.app"
 
   zap trash: [

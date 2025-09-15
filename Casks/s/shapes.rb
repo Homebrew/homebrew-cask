@@ -12,8 +12,6 @@ cask "shapes" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Shapes.app"
 
   zap trash: [
