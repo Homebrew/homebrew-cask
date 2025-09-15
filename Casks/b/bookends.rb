@@ -14,8 +14,6 @@ cask "bookends" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Bookends.app"
 
   zap trash: [
