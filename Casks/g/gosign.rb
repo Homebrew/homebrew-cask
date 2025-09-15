@@ -12,8 +12,6 @@ cask "gosign" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "GoSign-Desktop.app"
 
   zap trash: [
