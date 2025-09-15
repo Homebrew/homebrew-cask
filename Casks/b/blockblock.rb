@@ -8,8 +8,6 @@ cask "blockblock" do
   desc "Monitors common persistence locations"
   homepage "https://objective-see.org/products/blockblock.html"
 
-  depends_on macos: ">= :catalina"
-
   installer script: {
     executable: "#{staged_path}/BlockBlock Installer.app/Contents/MacOS/BlockBlock Installer",
     args:       ["-install"],
