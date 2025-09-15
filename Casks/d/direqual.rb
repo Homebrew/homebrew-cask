@@ -17,8 +17,6 @@ cask "direqual" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "DirEqual.app"
 
   zap trash: [
