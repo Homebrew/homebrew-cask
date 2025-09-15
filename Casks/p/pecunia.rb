@@ -12,8 +12,6 @@ cask "pecunia" do
     regex(%r{href=.*?downloads/v?(\d+(?:\.\d+)+)/Pecunia\.zip}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Pecunia.app"
 
   zap trash: [
