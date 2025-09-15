@@ -23,8 +23,6 @@ cask "keyguard" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "keyguard.app"
 
   zap trash: [
