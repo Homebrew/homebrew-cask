@@ -16,8 +16,6 @@ cask "balenaetcher" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "balenaEtcher.app"
 
   uninstall quit: "io.balena.etcher.*"
