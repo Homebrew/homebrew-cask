@@ -7,8 +7,6 @@ cask "nexonplug" do
   desc "Launcher for Nexon games"
   homepage "https://www.nexon.com/"
 
-  depends_on macos: ">= :catalina"
-
   pkg "Install_NexonPlug.pkg"
 
   uninstall pkgutil: "com.nexon.plug.pkg"
