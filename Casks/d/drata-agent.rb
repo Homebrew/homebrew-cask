@@ -13,8 +13,6 @@ cask "drata-agent" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Drata Agent.app"
 
   zap trash: [
