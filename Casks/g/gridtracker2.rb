@@ -12,8 +12,6 @@ cask "gridtracker2" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :catalina"
-
   app "GridTracker2.app"
 
   zap trash: [
