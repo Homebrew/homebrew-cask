@@ -18,8 +18,6 @@ cask "fleet" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Fleet.app"
   binary "#{appdir}/Fleet.app/Contents/app/bin/fleet"
 
