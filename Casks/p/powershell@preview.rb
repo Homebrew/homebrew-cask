@@ -29,8 +29,6 @@ cask "powershell@preview" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "powershell-#{version}-osx-#{arch}.pkg"
 
   uninstall pkgutil: "com.microsoft.powershell-preview"
