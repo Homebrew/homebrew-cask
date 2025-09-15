@@ -17,8 +17,6 @@ cask "positron" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Positron.app"
 
   zap trash: [
