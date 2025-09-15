@@ -9,8 +9,6 @@ cask "couleurs" do
 
   deprecate! date: "2025-03-31", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "Couleurs.app"
 
   zap trash: [
