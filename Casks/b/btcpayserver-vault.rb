@@ -13,8 +13,6 @@ cask "btcpayserver-vault" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "BTCPayServer Vault.app"
 
   zap trash: "~/Library/Saved Application State/com.btcpayserver.vault.savedState"
