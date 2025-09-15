@@ -9,8 +9,6 @@ cask "glance" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :catalina"
-
   app "Glance.app"
 
   zap trash: [
