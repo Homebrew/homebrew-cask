@@ -24,7 +24,6 @@ cask "clion@eap" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "CLion #{version.csv.first} EAP.app"
   binary "#{appdir}/CLion #{version.csv.first} EAP.app/Contents/MacOS/clion", target: "clion-eap"
