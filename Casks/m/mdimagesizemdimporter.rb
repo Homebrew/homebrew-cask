@@ -8,7 +8,5 @@ cask "mdimagesizemdimporter" do
 
   disable! date: "2024-11-11", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   mdimporter "mdImageSize.mdimporter"
 end
