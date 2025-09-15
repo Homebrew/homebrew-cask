@@ -12,8 +12,6 @@ cask "fabfilter-micro" do
     regex(/FabFilter\s+Micro.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "FabFilter Micro #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Micro.#{version.major}"
