@@ -14,8 +14,6 @@ cask "ampps" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :catalina"
-
   suite "AMPPS"
 
   uninstall_preflight do
