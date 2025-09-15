@@ -4,27 +4,7 @@ cask "onyx" do
   # NOTE: We use separate `url` values in each of the macOS on_system blocks
   # so that the API data correctly includes URL variants for each.
   on_sonoma :or_older do
-    on_el_capitan :or_older do
-      version "3.1.9"
-
-      url "https://www.titanium-software.fr/download/1011/OnyX.dmg"
-    end
-    on_sierra do
-      version "3.3.1"
-
-      url "https://www.titanium-software.fr/download/1012/OnyX.dmg"
-    end
-    on_high_sierra do
-      version "3.4.9"
-
-      url "https://www.titanium-software.fr/download/1013/OnyX.dmg"
-    end
-    on_mojave do
-      version "3.6.8"
-
-      url "https://www.titanium-software.fr/download/1014/OnyX.dmg"
-    end
-    on_catalina do
+    on_catalina :or_older do
       version "3.8.7"
 
       url "https://www.titanium-software.fr/download/1015/OnyX.dmg"
@@ -72,10 +52,6 @@ cask "onyx" do
   homepage "https://www.titanium-software.fr/en/onyx.html"
 
   depends_on macos: [
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
     :catalina,
     :big_sur,
     :monterey,
