@@ -24,7 +24,6 @@ cask "mactex" do
     "mactex-no-gui",
   ]
   depends_on formula: "ghostscript"
-  depends_on macos: ">= :mojave"
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
