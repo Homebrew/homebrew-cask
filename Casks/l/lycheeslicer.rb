@@ -13,8 +13,6 @@ cask "lycheeslicer" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "LycheeSlicer.app"
 
   zap trash: [
