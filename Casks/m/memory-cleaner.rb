@@ -13,7 +13,6 @@ cask "memory-cleaner" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Memory Cleaner #{version.major}.app"
 
