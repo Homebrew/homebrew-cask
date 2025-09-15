@@ -12,7 +12,6 @@ cask "hoppscotch" do
   homepage "https://hoppscotch.com/"
 
   conflicts_with cask: "hoppscotch-selfhost"
-  depends_on macos: ">= :high_sierra"
 
   app "Hoppscotch.app"
 
