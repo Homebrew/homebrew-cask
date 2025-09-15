@@ -20,8 +20,6 @@ cask "gzdoom" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "GZDoom.app"
 
   zap trash: "~/Library/Preferences/gzdoom.ini"
