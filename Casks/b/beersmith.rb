@@ -16,8 +16,6 @@ cask "beersmith" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "BeerSmith#{version.major}.app"
 
   zap trash: [
