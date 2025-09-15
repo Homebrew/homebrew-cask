@@ -21,8 +21,6 @@ cask "testfully" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Testfully.app"
 
   zap trash: [
