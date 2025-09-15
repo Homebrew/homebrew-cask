@@ -9,8 +9,6 @@ cask "qth" do
 
   deprecate! date: "2025-02-24", because: :moved_to_mas
 
-  depends_on macos: ">= :high_sierra"
-
   app "QTH.app"
 
   zap trash: [
