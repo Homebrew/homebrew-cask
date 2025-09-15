@@ -12,8 +12,6 @@ cask "flykey" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :catalina"
-
   app "FlyKey.app"
 
   zap trash: [
