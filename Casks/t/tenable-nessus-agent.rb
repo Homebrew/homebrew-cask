@@ -1,6 +1,6 @@
 cask "tenable-nessus-agent" do
-  version "10.9.0,25803"
-  sha256 "59c3761567508b7fb937d2578ff7541785cbd4b473d66b879f6d25026f54f6fa"
+  version "11.0.1,26418"
+  sha256 "6b16d55aa188c1fcabcd6aff145935663ec3a89bbd8e6caf6530c93ab9022551"
 
   url "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/#{version.csv.second}/download?i_agree_to_tenable_license_agreement=true"
   name "Tenable Nessus Agent"
