@@ -25,7 +25,6 @@ cask "audius" do
   homepage "https://audius.co/"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Audius.app"
 
