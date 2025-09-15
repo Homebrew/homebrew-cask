@@ -19,7 +19,6 @@ cask "fork" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Fork.app"
   binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: "fork"
