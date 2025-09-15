@@ -9,8 +9,6 @@ cask "unlox" do
 
   deprecate! date: "2025-03-02", because: :unmaintained
 
-  depends_on macos: ">= :high_sierra"
-
   app "Unlox.app"
 
   caveats do
