@@ -18,8 +18,6 @@ cask "pixel-shift-combiner" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Pixel Shift Combiner.app"
 
   zap trash: [
