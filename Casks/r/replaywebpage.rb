@@ -13,8 +13,6 @@ cask "replaywebpage" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "ReplayWeb.page.app"
 
   zap trash: [
