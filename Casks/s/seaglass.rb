@@ -10,7 +10,6 @@ cask "seaglass" do
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Seaglass.app"
 end
