@@ -15,8 +15,6 @@ cask "boom-3d" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Boom 3D.app"
 
   uninstall launchctl: [
