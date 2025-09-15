@@ -13,8 +13,6 @@ cask "marathon-infinity" do
     regex(%r{href=.*?/MarathonInfinity[._-]v?(\d+(?:\.\d+)*)[._-]Mac\.dmg}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Classic Marathon Infinity.app"
 
   zap trash: [
