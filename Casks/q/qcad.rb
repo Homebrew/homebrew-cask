@@ -30,8 +30,6 @@ cask "qcad" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "QCAD.app"
 
   zap trash: [
