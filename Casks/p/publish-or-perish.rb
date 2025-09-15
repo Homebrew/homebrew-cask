@@ -12,8 +12,6 @@ cask "publish-or-perish" do
     regex(/Version=(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "PoP#{version.major}Mac.pkg"
 
   uninstall pkgutil: [
