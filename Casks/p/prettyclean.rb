@@ -17,8 +17,6 @@ cask "prettyclean" do
     regex(/href=.*?PrettyClean[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "PrettyClean.app"
 
   zap trash: [
