@@ -30,8 +30,6 @@ cask "olive" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Olive.app"
 
   uninstall rmdir: "~/Library/Application Support/olivevideoeditor.org{/Olive,}"
