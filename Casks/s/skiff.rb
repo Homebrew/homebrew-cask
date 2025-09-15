@@ -11,7 +11,6 @@ cask "skiff" do
   disable! date: "2024-12-16", because: :moved_to_mas
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Skiff Desktop.app"
 
