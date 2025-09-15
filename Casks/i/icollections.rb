@@ -14,8 +14,6 @@ cask "icollections" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "iCollections.app"
 
   zap trash: [

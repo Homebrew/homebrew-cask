@@ -25,7 +25,6 @@ cask "intellij-idea@eap" do
 
   auto_updates true
   conflicts_with cask: "intellij-idea"
-  depends_on macos: ">= :high_sierra"
 
   # The application path is often inconsistent between version
   rename "IntelliJ IDEA*.app", "IntelliJ IDEA.app"

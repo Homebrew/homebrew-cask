@@ -13,7 +13,6 @@ cask "iina" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "IINA.app"
   binary "#{appdir}/IINA.app/Contents/MacOS/iina-cli", target: "iina"

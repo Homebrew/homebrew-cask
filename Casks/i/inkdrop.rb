@@ -18,8 +18,6 @@ cask "inkdrop" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Inkdrop.app"
 
   zap trash: [

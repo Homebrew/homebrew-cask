@@ -12,8 +12,6 @@ cask "iptvnator" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "iptvnator.app"
 
   zap trash: [
