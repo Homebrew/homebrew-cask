@@ -15,8 +15,6 @@ cask "ankerwork" do
     regex(/For\s+Mac.*?>\s*V?(\d+(?:\.\d+)+)\s*</im)
   end
 
-  depends_on macos: ">= :mojave"
-
   app "AnkerWork.app"
 
   zap trash: [
