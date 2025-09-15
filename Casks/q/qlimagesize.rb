@@ -9,8 +9,6 @@ cask "qlimagesize" do
 
   disable! date: "2024-11-11", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   qlplugin "qlImageSize.qlgenerator"
 
   # No zap stanza required
