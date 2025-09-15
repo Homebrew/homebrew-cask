@@ -14,7 +14,6 @@ cask "amazon-workspaces" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   pkg "WorkSpaces.pkg"
 
