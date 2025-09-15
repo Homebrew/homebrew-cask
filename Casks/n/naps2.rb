@@ -17,8 +17,6 @@ cask "naps2" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   pkg "naps2-#{version}-mac-#{arch}.pkg"
 
   uninstall pkgutil: "com.naps2.desktop"
