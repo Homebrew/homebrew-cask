@@ -16,8 +16,6 @@ cask "cyberghost-vpn" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "CyberGhost VPN.app"
 
   zap trash: [
