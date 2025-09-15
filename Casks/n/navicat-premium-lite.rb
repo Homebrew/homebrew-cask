@@ -1,5 +1,5 @@
 cask "navicat-premium-lite" do
-  version "17.3.3"
+  version "17.3.4"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicat#{version.major}_premium_lite_en.dmg"
