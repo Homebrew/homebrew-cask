@@ -9,8 +9,6 @@ cask "memory-map" do
 
   deprecate! date: "2024-10-14", because: :discontinued
 
-  depends_on macos: ">= :mojave"
-
   pkg "Memory-Map.#{version}.pkg"
 
   uninstall pkgutil: "com.memory-map.pkg.macapp"
