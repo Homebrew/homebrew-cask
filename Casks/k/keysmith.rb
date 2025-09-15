@@ -12,8 +12,6 @@ cask "keysmith" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Keysmith.app"
 
   zap trash: [
