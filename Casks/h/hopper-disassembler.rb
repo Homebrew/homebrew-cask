@@ -13,8 +13,6 @@ cask "hopper-disassembler" do
     regex(/<title>\s*Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Hopper Disassembler.app"
 
   zap trash: [

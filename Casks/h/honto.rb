@@ -13,8 +13,6 @@ cask "honto" do
     regex(%r{Mac\s*<br\s*/?>\s*Ver[._-]v?(\d+(?:\.\d+)+)}i)
   end
 
-  depends_on macos: ">= :mojave"
-
   app "honto.app"
 
   zap trash: [

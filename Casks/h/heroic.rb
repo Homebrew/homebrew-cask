@@ -16,7 +16,6 @@ cask "heroic" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Heroic.app"
 
