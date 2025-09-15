@@ -18,7 +18,6 @@ cask "krisp" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   pkg "krisp_#{version}_#{arch}.pkg"
 
