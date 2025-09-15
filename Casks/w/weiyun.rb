@@ -15,8 +15,6 @@ cask "weiyun" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Weiyun.app"
 
   uninstall quit: "com.tencent.MacWeiyun"
