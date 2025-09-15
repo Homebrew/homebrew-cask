@@ -14,7 +14,6 @@ cask "aerial@beta" do
   end
 
   conflicts_with cask: "aerial"
-  depends_on macos: ">= :sierra"
 
   screen_saver "Aerial.saver"
 
