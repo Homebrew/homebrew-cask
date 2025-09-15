@@ -13,8 +13,6 @@ cask "the-battle-for-wesnoth" do
     regex(/href=.*?Wesnoth[._-]v?(\d+\.\d*[02468](?:\.\d+)*[a-z]?)\.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
-
   app "The Battle for Wesnoth.app"
 
   zap trash: [
