@@ -24,8 +24,6 @@ cask "aigcpanel" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "AigcPanel.app"
 
   zap trash: [
