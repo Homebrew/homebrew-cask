@@ -13,8 +13,6 @@ cask "sim-genie" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Sim Genie.app"
 
   zap trash: [
