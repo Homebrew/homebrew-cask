@@ -14,8 +14,6 @@ cask "lets" do
     regex(/class="c-download__txt"[^>]*?>macOS[^<]*?(\d+(?:\.\d+)+)</i)
   end
 
-  depends_on macos: ">= :mojave"
-
   installer manual: "LETS-Installer.app/Contents/MacOS/LETS-Installer"
 
   uninstall launchctl: "LETS",
