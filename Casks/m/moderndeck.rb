@@ -12,7 +12,6 @@ cask "moderndeck" do
   disable! date: "2025-01-11", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "ModernDeck.app"
 
