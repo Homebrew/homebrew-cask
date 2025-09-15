@@ -16,8 +16,6 @@ cask "acreom" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "acreom.app"
 
   zap trash: [
