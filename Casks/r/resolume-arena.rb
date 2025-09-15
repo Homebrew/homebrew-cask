@@ -20,7 +20,6 @@ cask "resolume-arena" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   pkg "Resolume Arena Installer.pkg"
 
