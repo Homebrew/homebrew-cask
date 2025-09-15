@@ -20,7 +20,6 @@ cask "basictex" do
     "mactex-no-gui",
     "mactex",
   ]
-  depends_on macos: ">= :mojave"
 
   pkg "mactex-basictex-#{version.no_dots}.pkg"
 
