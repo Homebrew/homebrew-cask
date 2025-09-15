@@ -17,8 +17,6 @@ cask "rustdesk" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :mojave"
-
   app "RustDesk.app"
 
   uninstall quit: "com.carriez.rustdesk"
