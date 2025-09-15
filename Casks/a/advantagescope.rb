@@ -11,8 +11,6 @@ cask "advantagescope" do
   desc "FRC log analysis tool"
   homepage "https://docs.advantagescope.org/"
 
-  depends_on macos: ">= :catalina"
-
   app "AdvantageScope.app"
 
   zap trash: [
