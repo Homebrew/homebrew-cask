@@ -41,7 +41,6 @@ cask "logi-options+" do
   homepage "https://www.logitech.com/en-us/software/logi-options-plus.html"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   # The installer path can be inconsistent between versions/systems without notice
   rename "Logi Options+ Installer.app", "logioptionsplus_installer.app"
