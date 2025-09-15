@@ -11,7 +11,6 @@ cask "whoozle-android-file-transfer" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "whoozle-android-file-transfer@nightly"
-  depends_on macos: ">= :sierra"
 
   app "Android File Transfer for Linux.app"
   binary "#{appdir}/Android File Transfer for Linux.app/Contents/SharedSupport/bin/aft-mtp-cli"
