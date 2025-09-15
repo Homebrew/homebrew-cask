@@ -21,8 +21,6 @@ cask "aliworkbench" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "AliWorkBench.app"
 
   zap trash: [
