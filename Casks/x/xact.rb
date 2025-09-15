@@ -12,8 +12,6 @@ cask "xact" do
     regex(/href=.*?xACTv?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "xACT#{version}/xACT.app"
 
   zap trash: "~/Library/Preferences/org.scottcbrown.xact.plist"
