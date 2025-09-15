@@ -506,7 +506,6 @@ cask "libreoffice-language-pack" do
   end
 
   depends_on cask: "libreoffice"
-  depends_on macos: ">= :mojave"
 
   # Start the silent install
   installer script: {
