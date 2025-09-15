@@ -15,8 +15,6 @@ cask "mediathekview" do
     regex(%r{href=.*?/MediathekView-(\d+(?:\.\d+)+)-#{arch}\.dmg}i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "MediathekView.app"
 
   zap trash: "~/Library/Caches/MediathekView"
