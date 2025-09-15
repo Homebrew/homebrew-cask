@@ -1,16 +1,5 @@
 cask "orion" do
-  on_mojave :or_older do
-    version "0.99,136"
-    sha256 "bcc91462edcacf071e9a98d8d15960c9295c5622f45d600fafee546a4a87b97f"
-
-    url "https://cdn.kagi.com/updates/10_14/#{version.csv.second}.zip"
-
-    livecheck do
-      url "https://cdn.kagi.com/updates/10_14/appcast.xml"
-      strategy :sparkle
-    end
-  end
-  on_catalina do
+  on_catalina :or_older do
     version "0.99,136"
     sha256 "6f7906497cbac3e9f6356b1b8c451cc5acbaec1b92d8574dd738d3577c1eab20"
 
@@ -93,7 +82,6 @@ cask "orion" do
   homepage "https://browser.kagi.com/"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "Orion.app"
 
