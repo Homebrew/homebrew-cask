@@ -25,10 +25,14 @@ cask "macfuse" do
     set_ownership ["/usr/local/include", "/usr/local/lib"]
   end
 
-  uninstall pkgutil: [
-    "io.macfuse.installer.components.core",
-    "io.macfuse.installer.components.preferencepane",
-  ]
+  uninstall launchctl: [
+              "io.macfuse.app.launchservice.broker",
+              "io.macfuse.app.launchservice.daemon",
+            ],
+            pkgutil:   [
+              "io.macfuse.installer.components.core",
+              "io.macfuse.installer.components.preferencepane",
+            ]
 
   zap trash: [
     "/Library/PreferencePanes/macFUSE.prefPane",
