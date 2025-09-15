@@ -21,8 +21,6 @@ cask "remember-the-milk" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Remember The Milk.app"
 
   zap trash: [
