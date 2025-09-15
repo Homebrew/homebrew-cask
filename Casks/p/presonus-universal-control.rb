@@ -18,8 +18,6 @@ cask "presonus-universal-control" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "PreSonus Universal Control.pkg"
 
   uninstall launchctl: [
