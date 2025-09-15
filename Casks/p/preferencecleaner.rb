@@ -12,8 +12,6 @@ cask "preferencecleaner" do
     regex(%r{href=.*?/PreferenceCleaner[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "PreferenceCleaner #{version.major}.app"
 
   zap trash: "~/Library/Caches/uk.co.echomist.PreferenceCleaner#{version.major}"
