@@ -12,7 +12,6 @@ cask "agentkube" do
   homepage "https://agentkube.com/"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Agentkube.app"
 
