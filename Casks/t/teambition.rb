@@ -12,8 +12,6 @@ cask "teambition" do
     regex(/Teambition[._-](\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Teambition.app"
 
   zap trash: [
