@@ -1,18 +1,7 @@
 cask "cemu" do
   arch arm: "arm", intel: "intel"
 
-  on_mojave :or_older do
-    version "1.3"
-    sha256 "db28a0497ea944a6118f869b50268d5f8c3730c37367033eeebc7cdec08fd60c"
-
-    url "https://github.com/CE-Programming/CEmu/releases/download/v#{version}/macOS_CEmu.dmg",
-        verified: "github.com/CE-Programming/CEmu/"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_catalina do
+  on_catalina :or_older do
     version "2.0"
     sha256 "11b5ce8fea2c058dc5237756c092342afc618c3010c65694cdcf3b8c0f6b6664"
 
@@ -31,8 +20,6 @@ cask "cemu" do
   name "CEmu"
   desc "TI-84 Plus CE and TI-83 Premium CE calculator emulator"
   homepage "https://ce-programming.github.io/CEmu/"
-
-  depends_on macos: ">= :sierra"
 
   app "CEmu.app"
 
