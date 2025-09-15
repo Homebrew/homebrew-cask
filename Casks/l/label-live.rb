@@ -12,8 +12,6 @@ cask "label-live" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Label LIVE.app"
 
   zap trash: [
