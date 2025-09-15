@@ -15,8 +15,6 @@ cask "epic" do
     regex(%r{href=.*?/mac\d+#{arch}/epic[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Epic.app"
 
   zap trash: [
