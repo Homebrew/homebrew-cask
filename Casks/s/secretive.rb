@@ -16,8 +16,8 @@ cask "secretive" do
     end
   end
   on_monterey :or_newer do
-    version "2.4.1"
-    sha256 "00ddf651f1151f1e3888c51e58ce343f6888480db79771b6de7371db21bde4d8"
+    version "3.0.0"
+    sha256 "664734b2f0729cfc854892f36bcae338fd6d2d7ded9e72edd5dc35bd32443921"
 
     livecheck do
       url :url
