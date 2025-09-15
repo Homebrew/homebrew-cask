@@ -15,8 +15,6 @@ cask "carbide-create" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Carbide Create.app"
 
   zap trash: [
