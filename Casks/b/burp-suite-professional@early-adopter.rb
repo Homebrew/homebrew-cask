@@ -29,7 +29,6 @@ cask "burp-suite-professional@early-adopter" do
   end
 
   conflicts_with cask: "burp-suite-professional"
-  depends_on macos: ">= :catalina"
 
   app "Burp Suite Professional.app"
 
