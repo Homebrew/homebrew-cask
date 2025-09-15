@@ -13,8 +13,6 @@ cask "espresso" do
     regex(/data-title="(\d+(?:\.\d+)+)"/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Espresso.app"
 
   zap trash: [
