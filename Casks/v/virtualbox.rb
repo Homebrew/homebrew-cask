@@ -31,7 +31,6 @@ cask "virtualbox" do
     "virtualbox@6",
     "virtualbox@beta",
   ]
-  depends_on macos: ">= :catalina"
 
   pkg "VirtualBox.pkg",
       choices: [

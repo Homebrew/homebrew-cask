@@ -10,8 +10,6 @@ cask "vu" do
 
   deprecate! date: "2024-11-01", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "vu.app"
 
   caveats do

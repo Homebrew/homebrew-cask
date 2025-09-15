@@ -18,8 +18,6 @@ cask "voiden" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Voiden.app"
 
   zap trash: [

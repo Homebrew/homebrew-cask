@@ -20,8 +20,6 @@ cask "vpn-tracker-365" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "VPN Tracker 365.app"
 
   uninstall delete: [

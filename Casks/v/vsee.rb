@@ -13,8 +13,6 @@ cask "vsee" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :catalina"
-
   app "VSee.app"
 
   uninstall delete: "~/Library/Internet Plug-Ins/VSeeHelper.plugin"
