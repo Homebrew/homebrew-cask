@@ -23,8 +23,6 @@ cask "mongodb-compass@beta" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "MongoDB Compass Beta.app"
 
   zap trash: [
