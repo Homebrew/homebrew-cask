@@ -12,8 +12,6 @@ cask "usenapp" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Usenapp.app"
 
   zap trash: [
