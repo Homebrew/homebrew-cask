@@ -16,8 +16,6 @@ cask "universal-media-server" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Universal Media Server.app"
 
   zap trash: "~/Library/Application Support/UMS"

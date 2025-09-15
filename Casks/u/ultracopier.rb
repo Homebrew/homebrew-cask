@@ -11,8 +11,6 @@ cask "ultracopier" do
   deprecate! date: "2024-08-04", because: :discontinued
   disable! date: "2025-08-04", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   app "ultracopier.app"
 
   zap trash: [

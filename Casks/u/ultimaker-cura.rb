@@ -24,8 +24,6 @@ cask "ultimaker-cura" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "UltiMaker Cura.app"
 
   uninstall quit: "nl.ultimaker.cura.dmg"
