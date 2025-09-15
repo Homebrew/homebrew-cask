@@ -20,7 +20,6 @@ cask "wpsoffice-cn" do
   end
 
   conflicts_with cask: "wpsoffice"
-  depends_on macos: ">= :high_sierra"
 
   app "wpsoffice.app"
 
