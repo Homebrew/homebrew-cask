@@ -10,8 +10,6 @@ cask "chatmate-for-whatsapp" do
 
   deprecate! date: "2025-03-30", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "ChatMate for WhatsApp.app"
 
   zap trash: [
