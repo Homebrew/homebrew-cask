@@ -16,8 +16,6 @@ cask "bookwright" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "BookWright.app"
 
   zap trash: [
