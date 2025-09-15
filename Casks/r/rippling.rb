@@ -12,8 +12,6 @@ cask "rippling" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Rippling.app"
 
   zap trash: [

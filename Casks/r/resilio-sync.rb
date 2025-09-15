@@ -13,7 +13,6 @@ cask "resilio-sync" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Resilio Sync.app"
 

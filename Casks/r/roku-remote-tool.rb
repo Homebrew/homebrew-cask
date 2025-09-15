@@ -14,8 +14,6 @@ cask "roku-remote-tool" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "roku_remote_tool.app"
 
   zap trash: [

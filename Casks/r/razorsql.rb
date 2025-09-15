@@ -19,8 +19,6 @@ cask "razorsql" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "RazorSQL.app"
 
   zap trash: "~/.razorsql"

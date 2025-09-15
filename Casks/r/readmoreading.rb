@@ -16,8 +16,6 @@ cask "readmoreading" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Readmoo看書.app"
 
   zap trash: [

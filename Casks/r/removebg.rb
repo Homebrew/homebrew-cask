@@ -15,8 +15,6 @@ cask "removebg" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "remove.bg.app"
 
   zap trash: [

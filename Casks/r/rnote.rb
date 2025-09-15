@@ -15,8 +15,6 @@ cask "rnote" do
     url "https://gitlab.com/dehesselle/rnote_macos.git"
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Rnote.app"
 
   zap trash: "~/Library/Preferences/net.flxzt.Rnote.plist"

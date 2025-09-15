@@ -12,8 +12,6 @@ cask "rio" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "rio.app"
   binary "#{appdir}/rio.app/Contents/MacOS/rio"
   binary "#{appdir}/rio.app/Contents/Resources/72/rio",

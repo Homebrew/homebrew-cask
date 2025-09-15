@@ -13,8 +13,6 @@ cask "rapidweaver" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
-
   app "RapidWeaver.app"
 
   zap trash: [

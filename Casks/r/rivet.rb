@@ -23,8 +23,6 @@ cask "rivet" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Rivet.app"
 
   zap trash: [

@@ -12,8 +12,6 @@ cask "receipts" do
     regex(/href=.*?Receipts[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Receipts.app"
 
   zap trash: [

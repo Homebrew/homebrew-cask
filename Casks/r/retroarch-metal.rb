@@ -13,7 +13,6 @@ cask "retroarch-metal" do
   end
 
   conflicts_with cask: "retroarch"
-  depends_on macos: ">= :high_sierra"
 
   app "RetroArch.app"
 

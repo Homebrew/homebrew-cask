@@ -12,8 +12,6 @@ cask "reflex-app" do
     regex(/href=.*?reflex[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Reflex.app"
 
   zap trash: "~/Library/Preferences/com.stuntsoftware.Reflex.plist"

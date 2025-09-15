@@ -12,8 +12,6 @@ cask "revolver-office" do
     regex(/>\s*Revolver\s+v?(\d+(?:\.\d+)+)\s*</i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Revolver Office.app"
 
   zap trash: [
