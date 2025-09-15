@@ -35,8 +35,6 @@ cask "coq-platform" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Coq-Platform~#{version.csv.second.major_minor}~#{version.csv.first.major_minor}.app"
 
   zap trash: [
