@@ -1,16 +1,6 @@
 cask "stats" do
-  on_mojave :or_older do
-    version "2.8.26"
-    sha256 "1a4b44ba02520683b0a6c192388f593c36dde4d15c784a22dccf0caefe81e8b7"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_catalina :or_newer do
-    version "2.11.52"
-    sha256 "c3c55fb29c6dff15c95e5cc18425e8740130c35cb5822c09e0e28c48e8918ff2"
-  end
+  version "2.11.52"
+  sha256 "c3c55fb29c6dff15c95e5cc18425e8740130c35cb5822c09e0e28c48e8918ff2"
 
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
   name "Stats"
@@ -18,7 +8,6 @@ cask "stats" do
   homepage "https://github.com/exelban/stats"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "Stats.app"
 
