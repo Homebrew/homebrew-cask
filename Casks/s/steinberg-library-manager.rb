@@ -18,8 +18,6 @@ cask "steinberg-library-manager" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "Library Manager.pkg"
 
   uninstall launchctl: "com.steinberg.HALionLibraryInstallerHelper",
