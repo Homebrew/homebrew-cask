@@ -13,8 +13,6 @@ cask "fsnotes" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :mojave"
-
   app "FSNotes.app"
 
   zap trash: [
