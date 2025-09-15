@@ -13,8 +13,6 @@ cask "ridibooks" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Ridibooks.app"
 
   zap trash: [
