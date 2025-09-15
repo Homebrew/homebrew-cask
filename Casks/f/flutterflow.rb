@@ -13,8 +13,6 @@ cask "flutterflow" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :catalina"
-
   app "FlutterFlow.app"
 
   zap trash: [
