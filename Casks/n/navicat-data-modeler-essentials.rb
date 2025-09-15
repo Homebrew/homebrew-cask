@@ -11,8 +11,6 @@ cask "navicat-data-modeler-essentials" do
     cask "navicat-data-modeler"
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Navicat Data Modeler Essentials.app"
 
   zap trash: [

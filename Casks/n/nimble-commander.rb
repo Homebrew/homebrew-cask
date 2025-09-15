@@ -13,7 +13,6 @@ cask "nimble-commander" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Nimble Commander.app"
 

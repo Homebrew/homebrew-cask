@@ -8,8 +8,6 @@ cask "nagbar" do
   desc "Status bar monitor for Nagios, Icinga/2 and Thruk"
   homepage "https://sites.google.com/site/nagbarapp/home"
 
-  depends_on macos: ">= :mojave"
-
   app "NagBar.app"
 
   zap trash: [

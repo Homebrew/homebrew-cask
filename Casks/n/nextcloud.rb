@@ -24,7 +24,6 @@ cask "nextcloud" do
 
   auto_updates true
   conflicts_with cask: "nextcloud-vfs"
-  depends_on macos: ">= :mojave"
 
   pkg "Nextcloud-#{version}.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"

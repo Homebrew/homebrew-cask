@@ -15,8 +15,6 @@ cask "noun-project" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Noun Project.app"
 
   zap trash: [
