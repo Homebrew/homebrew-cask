@@ -15,8 +15,6 @@ cask "usage-app" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Usage.app"
 
   zap trash: [
