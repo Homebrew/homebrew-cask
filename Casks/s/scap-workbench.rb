@@ -10,8 +10,6 @@ cask "scap-workbench" do
 
   deprecate! date: "2024-10-04", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "scap-workbench.app"
 
   caveats do
