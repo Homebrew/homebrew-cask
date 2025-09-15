@@ -17,7 +17,6 @@ cask "arduino-ide" do
   end
 
   conflicts_with cask: "arduino-ide@nightly"
-  depends_on macos: ">= :catalina"
 
   app "Arduino IDE.app"
 
