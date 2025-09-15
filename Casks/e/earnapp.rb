@@ -14,8 +14,6 @@ cask "earnapp" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "EarnApp.app"
 
   uninstall quit: [
