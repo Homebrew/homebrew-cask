@@ -8,8 +8,6 @@ cask "museeks" do
   desc "Music player"
   homepage "https://museeks.io/"
 
-  depends_on macos: ">= :high_sierra"
-
   app "Museeks.app"
 
   zap trash: [
