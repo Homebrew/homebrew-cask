@@ -14,8 +14,6 @@ cask "sony-ps-remote-play" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "RemotePlayInstaller.pkg"
 
   uninstall pkgutil: "com.playstation.RemotePlay.pkg"
