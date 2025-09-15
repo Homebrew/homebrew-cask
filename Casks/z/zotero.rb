@@ -16,7 +16,6 @@ cask "zotero" do
 
   auto_updates true
   conflicts_with cask: "zotero@beta"
-  depends_on macos: ">= :sierra"
 
   app "Zotero.app"
 
