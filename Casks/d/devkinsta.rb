@@ -16,8 +16,6 @@ cask "devkinsta" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "DevKinsta.app"
 
   zap trash: [
