@@ -12,8 +12,6 @@ cask "motu-m-series" do
     regex(/<span[^>]*?>Mac\s*v?(\d+(?:\.\d+)*)</i)
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "MOTU M Series Installer (#{version}).pkg"
 
   uninstall launchctl: "com.motu.coreuac.reenumerator",
