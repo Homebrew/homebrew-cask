@@ -12,8 +12,6 @@ cask "kui" do
 
   deprecate! date: "2025-08-30", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   app "Kui-darwin-#{arch}/Kui.app"
   binary "#{appdir}/Kui.app/Contents/Resources/kubectl-kui"
 
