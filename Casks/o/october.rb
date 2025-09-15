@@ -16,8 +16,6 @@ cask "october" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "October.app"
 
   zap trash: "~/Library/Application Support/october"
