@@ -18,8 +18,6 @@ cask "box-tools" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
-
   apps = [
     "Device Trust",
     "Edit",
