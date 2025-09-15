@@ -37,7 +37,6 @@ cask "gimp" do
   homepage "https://www.gimp.org/"
 
   conflicts_with cask: "gimp@dev"
-  depends_on macos: ">= :high_sierra"
 
   app "GIMP.app"
   shimscript = "#{staged_path}/gimp.wrapper.sh"
