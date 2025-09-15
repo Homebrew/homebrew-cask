@@ -15,8 +15,6 @@ cask "swiftpm-catalog" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "SwiftPM Catalog.app"
 
   zap trash: [
