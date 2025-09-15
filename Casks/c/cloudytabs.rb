@@ -10,8 +10,6 @@ cask "cloudytabs" do
   deprecate! date: "2024-06-16", because: :discontinued
   disable! date: "2025-06-16", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   app "CloudyTabs.app"
 
   caveats do

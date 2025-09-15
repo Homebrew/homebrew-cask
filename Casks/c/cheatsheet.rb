@@ -10,7 +10,6 @@ cask "cheatsheet" do
   deprecate! date: "2024-11-09", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "CheatSheet.app"
 

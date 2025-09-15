@@ -11,8 +11,6 @@ cask "cloudash" do
   desc "Monitoring and troubleshooting for serverless architectures"
   homepage "https://cloudash.dev/"
 
-  depends_on macos: ">= :high_sierra"
-
   app "Cloudash.app"
 
   zap trash: [

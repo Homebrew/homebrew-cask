@@ -12,8 +12,6 @@ cask "contraste" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Contraste.app"
 
   zap trash: [

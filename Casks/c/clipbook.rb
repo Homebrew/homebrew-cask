@@ -16,8 +16,6 @@ cask "clipbook" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "ClipBook.app"
 
   zap trash: [

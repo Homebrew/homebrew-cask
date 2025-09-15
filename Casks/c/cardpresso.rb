@@ -13,7 +13,6 @@ cask "cardpresso" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "cardPresso.app"
 

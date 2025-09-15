@@ -12,8 +12,6 @@ cask "celestialteapot-runway" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Runway.app"
 
   zap trash: [

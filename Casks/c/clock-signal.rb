@@ -8,8 +8,6 @@ cask "clock-signal" do
   desc "Latency-hating emulator of 8- and 16-bit platforms"
   homepage "https://github.com/TomHarte/CLK"
 
-  depends_on macos: ">= :high_sierra"
-
   app "Clock Signal.app"
 
   uninstall quit: "TH.Clock-Signal"

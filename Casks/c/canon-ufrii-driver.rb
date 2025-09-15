@@ -21,8 +21,6 @@ cask "canon-ufrii-driver" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   pkg "UFRII_LT_LIPS_LX_Installer.pkg"
 
   uninstall pkgutil: "jp.co.canon.CUPSPrinter.*",

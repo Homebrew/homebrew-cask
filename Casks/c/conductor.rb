@@ -21,7 +21,6 @@ cask "conductor" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :high_sierra"
 
   app "Conductor.app"
 

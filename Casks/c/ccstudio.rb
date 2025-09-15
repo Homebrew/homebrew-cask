@@ -10,8 +10,6 @@ cask "ccstudio" do
 
   deprecate! date: "2025-09-09", because: :no_longer_available, replacement_cask: "calibrite-profiler"
 
-  depends_on macos: ">= :catalina"
-
   pkg "ccStudio.pkg"
 
   uninstall launchctl: "com.xrite.device.xrdd (com.xrite.device.xrdd.plist)",

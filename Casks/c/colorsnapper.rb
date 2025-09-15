@@ -18,8 +18,6 @@ cask "colorsnapper" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "ColorSnapper2.app"
 
   uninstall quit: "com.koolesache.ColorSnapper2"

@@ -8,8 +8,6 @@ cask "core-data-editor" do
 
   deprecate! date: "2024-10-10", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "Core Data Editor.app"
 
   caveats do

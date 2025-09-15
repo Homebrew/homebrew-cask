@@ -9,8 +9,6 @@ cask "capslocknodelay" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :catalina"
-
   app "CapsLockNoDelay.app"
 
   uninstall quit: "gkpln3.CapsLockNoDelay"

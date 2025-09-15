@@ -8,8 +8,6 @@ cask "corona-tracker" do
   desc "Coronavirus tracker app with maps and charts"
   homepage "https://coronatracker.samabox.com/"
 
-  depends_on macos: ">= :catalina"
-
   app "Corona Tracker.app"
 
   zap trash: [

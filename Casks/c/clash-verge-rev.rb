@@ -17,7 +17,6 @@ cask "clash-verge-rev" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Clash Verge.app"
 

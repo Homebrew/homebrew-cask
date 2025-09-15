@@ -16,7 +16,6 @@ cask "citrix-workspace" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   pkg "CitrixWorkspaceAppUniversal#{version}.pkg"
 

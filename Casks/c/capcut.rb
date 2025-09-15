@@ -22,8 +22,6 @@ cask "capcut" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "CapCut.app"
 
   zap trash: [

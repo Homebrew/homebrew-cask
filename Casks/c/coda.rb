@@ -10,7 +10,6 @@ cask "coda" do
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Coda #{version.major}.app"
 

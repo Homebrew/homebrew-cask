@@ -9,7 +9,5 @@ cask "cantata" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :sierra"
-
   app "Cantata.app"
 end

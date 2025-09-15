@@ -22,7 +22,6 @@ cask "cursor" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Cursor.app"
   binary "#{appdir}/Cursor.app/Contents/Resources/app/bin/code", target: "cursor"
