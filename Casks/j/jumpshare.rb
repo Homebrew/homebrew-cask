@@ -13,8 +13,6 @@ cask "jumpshare" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Jumpshare.app"
 
   zap trash: [
