@@ -16,8 +16,6 @@ cask "nucleo" do
     regex(/href=.*?Nucleo[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Nucleo.app"
 
   zap trash: [
