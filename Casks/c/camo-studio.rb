@@ -13,7 +13,6 @@ cask "camo-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Camo Studio.app"
 
