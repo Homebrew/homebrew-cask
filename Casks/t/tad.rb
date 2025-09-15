@@ -16,8 +16,6 @@ cask "tad" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Tad.app"
   binary "#{appdir}/Tad.app/Contents/Resources/tad.sh", target: "tad"
 
