@@ -13,7 +13,6 @@ cask "ecamm-live" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   # The url is unversioned, but the download returns an app directory with a version number
   rename "Ecamm Live v#{version}", "Ecamm Live"
