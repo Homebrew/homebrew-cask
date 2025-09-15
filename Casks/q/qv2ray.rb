@@ -10,7 +10,6 @@ cask "qv2ray" do
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on formula: "v2ray"
-  depends_on macos: ">= :mojave"
 
   app "qv2ray.app"
 
