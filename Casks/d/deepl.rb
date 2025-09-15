@@ -46,7 +46,6 @@ cask "deepl" do
   homepage "https://www.deepl.com/"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "DeepL.app"
 
