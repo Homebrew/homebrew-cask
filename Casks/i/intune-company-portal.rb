@@ -21,7 +21,6 @@ cask "intune-company-portal" do
 
   auto_updates true
   depends_on cask: "microsoft-auto-update"
-  depends_on macos: ">= :mojave"
 
   pkg "CompanyPortal_#{version}-Upgrade.pkg",
       choices: [
