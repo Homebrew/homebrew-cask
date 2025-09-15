@@ -2,25 +2,7 @@ cask "mysql-shell" do
   arch arm: "arm64", intel: "x86-64bit"
 
   on_monterey :or_older do
-    on_sierra :or_older do
-      version "8.0.12,10.13-x86-64bit"
-      sha256 "7e4f01f4f5c9f4567b2eafa6ffefe502096be89e4cdfb9952e6d379be8fffe7f"
-
-      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}.dmg"
-    end
-    on_high_sierra do
-      version "8.0.18,10.14-x86-64bit"
-      sha256 "23676e36670ae4753583344e012066782d09c7df3ed11d2611d604c85d91693d"
-
-      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}.dmg"
-    end
-    on_mojave do
-      version "8.0.23,10.15-x86-64bit"
-      sha256 "75ee22c5cf7fd4dda05c87ea5bfcbd46e76a589c2132de4f875cd8605514315b"
-
-      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}.dmg"
-    end
-    on_catalina do
+    on_catalina :or_older do
       version "8.0.27,11-x86-64bit"
       sha256 "3214e9d35b4950cd326b0bef3b9c582cf01957fbf64cebce4b7bb85b7e38add9"
 
@@ -65,8 +47,6 @@ cask "mysql-shell" do
   name "MySQL Shell"
   desc "Interactive JavaScript, Python or SQL interface"
   homepage "https://dev.mysql.com/downloads/shell/"
-
-  depends_on macos: ">= :sierra"
 
   pkg "mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.pkg"
 
