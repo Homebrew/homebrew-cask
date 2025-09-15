@@ -12,8 +12,6 @@ cask "pichon" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Pichon.app"
 
   zap trash: [
