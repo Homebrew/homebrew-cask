@@ -32,8 +32,6 @@ cask "forkgram-telegram" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :high_sierra"
-
   # Renamed to avoid conflict with telegram
   app "Telegram.app", target: "Forkgram.app"
 
