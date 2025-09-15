@@ -12,8 +12,6 @@ cask "speedify" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Speedify.app"
 
   uninstall launchctl: [
