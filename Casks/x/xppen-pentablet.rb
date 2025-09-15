@@ -1,17 +1,48 @@
 cask "xppen-pentablet" do
-  version "4.0.8,250414"
-  sha256 "c792fc0c5df8c38b75267d302d0c3ced49371ac7be73998875279bc627dad3ca"
+  version "4.0.10,250829,2025,09"
+  sha256 "60fbb808854210e1a12f7b26270792194fbde3daf2d5b863674e2b04edc7cb24"
 
-  url "https://download01.xp-pen.com/file/20#{version.csv.second[0, 2]}/#{version.csv.second[2, 2]}/XPPenMac_#{version.csv.first}_#{version.csv.second}.zip"
+  url "https://download01.xp-pen.com/file/#{version.csv.third}/#{version.csv.fourth}/XPPenMac_#{version.csv.first}_#{version.csv.second}.zip"
   name "XPPen PenTablet"
   desc "Universal driver for XPPen drawing tablets and pen displays"
   homepage "https://www.xp-pen.com/"
 
+  # The file used in the cask has a date-based suffix and this has historically
+  # aligned with the date in the URL path (e.g. _250102 in the file name and
+  # /2025/01/ in the path). Unfortunately, this isn't always the case, so we
+  # have to painstakingly recreate the upstream download page logic to generate
+  # the download URL for the newest version to be able to match all the version
+  # parts from the file URL.
   livecheck do
     url "https://www.xp-pen.com/download/star-g640.html"
     regex(/XPPenMac[._-]v?(\d+(?:\.\d+)+)[._-](\d+)/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+      redirection_regex = Regexp.new(
+        regex.source +
+          ".*?data-id=[\"']?(\\d+)[\"']?" \
+          "\\s+data-pid=[\"']?(\\d+)[\"']?" \
+          "\\s+data-ext=[\"']?([^\"' >]+)[\"']?",
+        "im",
+      )
+
+      # Find the newest XPPenMac version on the page and capture the `data`
+      # attributes from the Download link after it
+      match = page.scan(redirection_regex)
+                  .max_by { |match| Version.new("#{match[0]}_#{match[1]}") }
+      next if match.blank?
+
+      # Generate the URL that redirects to the file and fetch the headers
+      merged_headers = Homebrew::Livecheck::Strategy.page_headers(
+        "https://www.xp-pen.com/download/file.html?id=#{match[2]}&pid=#{match[3]}&ext=#{match[4]}",
+      ).reduce(&:merge)
+      next if merged_headers.blank?
+
+      # Collect the `version` parts from the file URL
+      file_url_regex = Regexp.new("/(\\d+)/(\\d+)/" + regex.source, "i")
+      match = merged_headers["location"]&.match(file_url_regex)
+      next if match.blank?
+
+      "#{match[3]},#{match[4]},#{match[1]},#{match[2]}"
     end
   end
 
