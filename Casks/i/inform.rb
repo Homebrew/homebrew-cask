@@ -21,8 +21,6 @@ cask "inform" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Inform.app"
 
   zap trash: [
