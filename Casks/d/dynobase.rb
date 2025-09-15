@@ -24,8 +24,6 @@ cask "dynobase" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Dynobase.app"
 
   zap trash: [
