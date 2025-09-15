@@ -9,8 +9,6 @@ cask "jmc" do
 
   deprecate! date: "2024-11-10", because: :unmaintained
 
-  depends_on macos: ">= :catalina"
-
   app "jmc.app"
 
   zap trash: [

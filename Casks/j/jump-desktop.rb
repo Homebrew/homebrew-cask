@@ -13,8 +13,6 @@ cask "jump-desktop" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Jump Desktop.app"
 
   zap trash: [

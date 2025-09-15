@@ -24,7 +24,6 @@ cask "jetbrains-gateway" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "JetBrains Gateway.app"
   binary "#{appdir}/JetBrains Gateway.app/Contents/MacOS/gateway"

@@ -20,8 +20,6 @@ cask "jquake" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :catalina"
-
   app "JQuake.app"
 
   zap trash: [

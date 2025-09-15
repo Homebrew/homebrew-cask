@@ -24,7 +24,6 @@ cask "jetbrains-toolbox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "JetBrains Toolbox.app"
 
