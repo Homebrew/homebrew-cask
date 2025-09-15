@@ -30,8 +30,6 @@ cask "boxcryptor" do
   desc "Tool to encrypt files and folders in various cloud storage services"
   homepage "https://www.boxcryptor.com/en/"
 
-  depends_on macos: ">= :catalina"
-
   app "Boxcryptor.app"
 
   uninstall delete: [
