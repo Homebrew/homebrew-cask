@@ -12,8 +12,6 @@ cask "fabfilter-twin" do
     regex(/FabFilter\s+Twin.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "FabFilter Twin #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Twin.#{version.major}"
