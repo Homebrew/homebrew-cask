@@ -16,8 +16,6 @@ cask "elektron-overbridge" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "Elektron Overbridge Installer #{version.csv.first}.pkg"
 
   uninstall launchctl: [
