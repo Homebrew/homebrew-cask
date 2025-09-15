@@ -7,8 +7,6 @@ cask "qlcolorcode" do
   desc "Quick Look plug-in that renders source code with syntax highlighting"
   homepage "https://github.com/anthonygelibert/QLColorCode"
 
-  depends_on macos: ">= :mojave"
-
   qlplugin "QLColorCode.qlgenerator"
 
   zap trash: "~/Library/Preferences/org.n8gray.QLColorCode.plist"
