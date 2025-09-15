@@ -12,8 +12,6 @@ cask "adobe-dng-converter" do
     regex(%r{Adobe\s+DNG\s+Converter\s+(?:is\s+)?(?:<[^>]+?>)?v?(\d+(?:\.\d+)+)(?:</[^>]+?>)?}im)
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "DNGConverter_#{version.dots_to_underscores}.pkg"
 
   uninstall quit:    "com.adobe.DNGConverter",
