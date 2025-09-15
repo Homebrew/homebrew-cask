@@ -19,8 +19,6 @@ cask "mumu" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Mumu.app"
 
   zap trash: [
