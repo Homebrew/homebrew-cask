@@ -23,7 +23,6 @@ cask "minstaller" do
   homepage "https://www.motionvfx.com/"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "mInstaller.app"
 
