@@ -11,8 +11,6 @@ cask "kando" do
   desc "Pie menu"
   homepage "https://kando.menu/"
 
-  depends_on macos: ">= :catalina"
-
   app "Kando.app"
 
   zap trash: [
