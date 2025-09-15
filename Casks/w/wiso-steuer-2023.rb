@@ -21,7 +21,6 @@ cask "wiso-steuer-2023" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   # Renamed for consistency: app name differs in Finder to shell
   app "SteuerMac 2023.app", target: "WISO Steuer 2023.app"
