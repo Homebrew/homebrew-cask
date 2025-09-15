@@ -41,8 +41,6 @@ cask "konica-minolta-bizhub-c750i-driver" do
   desc "PostScript printer driver"
   homepage "https://www.konicaminolta.eu/eu-en/support/download-centre"
 
-  depends_on macos: ">= :sierra"
-
   uninstall_preflight do
     set_ownership "/Library/Printers/KONICAMINOLTA/Preferences"
   end

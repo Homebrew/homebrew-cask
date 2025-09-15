@@ -16,8 +16,6 @@ cask "k8studio" do
     regex(/href=.*?k8studio[._-]v?(\d+(?:\.\d+)+(?:[._-]beta)?)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "K8Studio.app"
 
   zap trash: [

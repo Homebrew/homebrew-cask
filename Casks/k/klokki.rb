@@ -17,8 +17,6 @@ cask "klokki" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Klokki.app"
 
   uninstall launchctl: "com.klokki-launcher",

@@ -12,8 +12,6 @@ cask "keeper-password-manager" do
     regex(/Release\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Keeper Password Manager.app"
 
   zap trash: [

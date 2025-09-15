@@ -13,8 +13,6 @@ cask "krita" do
     regex(/href=.*?krita[._-]v?(\d+(?:\.\d+)+)(?:-signed|-release)?\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "krita.app"
 
   zap trash: [

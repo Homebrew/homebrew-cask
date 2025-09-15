@@ -24,8 +24,6 @@ cask "kiro" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Kiro.app"
 
   zap trash: [
