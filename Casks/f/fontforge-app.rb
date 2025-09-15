@@ -21,8 +21,6 @@ cask "fontforge-app" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "FontForge.app"
 
   zap trash: "~/.cache/fontforge"
