@@ -10,7 +10,6 @@ cask "avocode" do
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "Avocode.app"
 
