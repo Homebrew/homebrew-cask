@@ -10,8 +10,6 @@ cask "decrediton" do
   desc "GUI for the Decred wallet"
   homepage "https://github.com/decred/decrediton"
 
-  depends_on macos: ">= :high_sierra"
-
   app "decrediton.app"
 
   zap trash: [
