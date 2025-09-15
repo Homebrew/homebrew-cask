@@ -13,7 +13,6 @@ cask "macloggerdx" do
   end
 
   conflicts_with cask: "macloggerdx@beta"
-  depends_on macos: ">= :high_sierra"
 
   app "MacLoggerDX.app"
 
