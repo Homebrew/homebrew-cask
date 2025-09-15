@@ -16,8 +16,6 @@ cask "dana-dex" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Dex.app"
 
   zap trash: [
