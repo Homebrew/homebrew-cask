@@ -8,7 +8,6 @@ cask "beardie" do
   homepage "https://github.com/Stillness-2/beardie"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Beardie.app"
 
