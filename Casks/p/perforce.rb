@@ -23,7 +23,6 @@ cask "perforce" do
   end
 
   conflicts_with cask: "p4"
-  depends_on macos: ">= :sierra"
 
   binary "p4"
   binary "p4broker"
