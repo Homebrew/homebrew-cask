@@ -12,8 +12,6 @@ cask "tal-drum" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :el_capitan"
-
   pkg "TAL-Drum-installer.pkg"
 
   uninstall pkgutil: [
