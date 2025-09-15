@@ -27,8 +27,6 @@ cask "pushplaylabs-sidekick" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Sidekick.app"
 
   zap trash: [
