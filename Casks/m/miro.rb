@@ -16,7 +16,6 @@ cask "miro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Miro.app"
 
