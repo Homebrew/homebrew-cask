@@ -17,8 +17,6 @@ cask "filebot" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :catalina"
-
   app "FileBot.app"
   binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: "filebot"
   bash_completion "#{appdir}/FileBot.app/Contents/Resources/bash_completion.d/filebot_completion", target: "filebot"
