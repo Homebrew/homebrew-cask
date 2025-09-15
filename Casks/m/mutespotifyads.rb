@@ -8,8 +8,6 @@ cask "mutespotifyads" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :sierra"
-
   app "MuteSpotifyAds.app"
 
   zap trash: "~/Library/SyncedPreferences/de.simonmeusel.MuteSpotifyAds.plist"

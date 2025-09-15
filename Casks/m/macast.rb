@@ -12,8 +12,6 @@ cask "macast" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Macast.app"
 
   zap trash: [

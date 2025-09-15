@@ -13,7 +13,6 @@ cask "miln-movie-splitter" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Movie Splitter.app"
 

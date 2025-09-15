@@ -24,7 +24,6 @@ cask "mongodb-compass" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "MongoDB Compass.app"
 

@@ -23,8 +23,6 @@ cask "mongodb-compass-isolated-edition" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "MongoDB Compass Isolated Edition.app"
 
   zap trash: [

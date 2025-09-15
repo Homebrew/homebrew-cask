@@ -24,8 +24,6 @@ cask "morgen" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Morgen.app"
 
   zap trash: [

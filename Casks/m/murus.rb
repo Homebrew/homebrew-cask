@@ -8,8 +8,6 @@ cask "murus" do
   desc "Firewall app"
   homepage "https://www.murusfirewall.com/"
 
-  depends_on macos: ">= :sierra"
-
   app "Murus.app"
 
   uninstall launchctl: "it.murus.murusfirewallrules"

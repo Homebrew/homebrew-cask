@@ -11,7 +11,6 @@ cask "mic-drop" do
   deprecate! date: "2024-10-08", because: :moved_to_mas
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Mic Drop.app"
 

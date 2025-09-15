@@ -13,8 +13,6 @@ cask "material-maker" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sierra"
-
   app "material_maker.app"
 
   zap trash: [

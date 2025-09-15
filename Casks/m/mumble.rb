@@ -14,7 +14,6 @@ cask "mumble" do
   end
 
   conflicts_with cask: "mumble@snapshot"
-  depends_on macos: ">= :high_sierra"
 
   app "Mumble.app"
 

@@ -12,7 +12,6 @@ cask "microsoft-remote-desktop" do
 
   auto_updates true
   conflicts_with cask: "windows-app"
-  depends_on macos: ">= :high_sierra"
 
   pkg "Microsoft_Remote_Desktop_#{version}_installer.pkg"
 

@@ -1,20 +1,6 @@
 cask "microsoft-auto-update" do
-  on_el_capitan :or_older do
-    version "4.40.21101001"
-    sha256 "f638f7e0da9ee659c323f2ede0f176804bfe9a615a8f8b6320bd2e69d91ef2b2"
-  end
-  on_sierra do
-    version "4.51.22091101"
-    sha256 "ea9e59eb60604ad9785cb0c81bd490de5c7d32527f1da7064d4f77226e2dc907"
-  end
-  on_high_sierra do
-    version "4.63.23091003"
-    sha256 "abde56323f4753a90a99ca26a3c62060a498328bd90e0421395ec14a47d49101"
-  end
-  on_mojave :or_newer do
-    version "4.80.25073044"
-    sha256 "faea6b0b7ec5a16427387be1a4a08bb3915ffd7fba5ef5c49b94cb4e011d0dab"
-  end
+  version "4.80.25073044"
+  sha256 "faea6b0b7ec5a16427387be1a4a08bb3915ffd7fba5ef5c49b94cb4e011d0dab"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
   name "Microsoft Auto Update"

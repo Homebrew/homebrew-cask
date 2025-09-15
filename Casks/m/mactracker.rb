@@ -13,7 +13,6 @@ cask "mactracker" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "Mactracker.app"
 

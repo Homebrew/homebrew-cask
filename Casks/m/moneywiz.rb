@@ -10,8 +10,6 @@ cask "moneywiz" do
   deprecate! date: "2024-04-15", because: :moved_to_mas
   disable! date: "2025-04-22", because: :moved_to_mas
 
-  depends_on macos: ">= :high_sierra"
-
   app "MoneyWiz #{version.major}.app"
 
   zap trash: [

@@ -21,8 +21,6 @@ cask "mediaelch" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "MediaElch.app"
 
   zap trash: [

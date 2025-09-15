@@ -8,8 +8,6 @@ cask "mission-control-plus" do
   desc "Manage your windows in Mission Control"
   homepage "https://fadel.io/MissionControlPlus"
 
-  depends_on macos: ">= :high_sierra"
-
   app "Mission Control Plus.app"
 
   zap trash: "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.fadel.missioncontrolplus.sfl*"

@@ -15,8 +15,6 @@ cask "mweb-pro" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "MWeb Pro.app"
 
   zap trash: [

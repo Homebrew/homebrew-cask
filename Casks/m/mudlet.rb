@@ -12,8 +12,6 @@ cask "mudlet" do
     regex(/href=.*?Mudlet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Mudlet.app"
 
   zap trash: [

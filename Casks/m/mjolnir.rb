@@ -8,8 +8,6 @@ cask "mjolnir" do
   desc "Lightweight automation and productivity app"
   homepage "https://mjolnir.rocks/"
 
-  depends_on macos: ">= :sierra"
-
   app "Mjolnir.app"
 
   zap trash: [

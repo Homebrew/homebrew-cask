@@ -10,8 +10,6 @@ cask "makehuman" do
 
   disable! date: "2025-01-04", because: :no_longer_available
 
-  depends_on macos: ">= :sierra"
-
   app "MakeHuman.app"
 
   zap trash: [

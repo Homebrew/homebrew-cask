@@ -18,7 +18,6 @@ cask "mixxx@snapshot" do
   end
 
   conflicts_with cask: "mixxx"
-  depends_on macos: ">= :catalina"
 
   app "Mixxx.app"
 
