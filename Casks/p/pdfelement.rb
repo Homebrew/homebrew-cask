@@ -14,8 +14,6 @@ cask "pdfelement" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "PDFelement.app"
 
   uninstall quit: [
