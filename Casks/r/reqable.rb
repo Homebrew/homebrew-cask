@@ -12,7 +12,6 @@ cask "reqable" do
   homepage "https://reqable.com/"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Reqable.app"
 
