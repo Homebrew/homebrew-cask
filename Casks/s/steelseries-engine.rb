@@ -12,7 +12,6 @@ cask "steelseries-engine" do
 
   auto_updates true
   conflicts_with cask: "steelseries-gg"
-  depends_on macos: ">= :sierra"
 
   pkg "SteelSeriesEngine#{version}.pkg"
 
