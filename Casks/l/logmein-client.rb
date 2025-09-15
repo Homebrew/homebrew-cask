@@ -12,8 +12,6 @@ cask "logmein-client" do
     regex(/Version:\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "LogMeIn Client.app"
 
   zap trash: [

@@ -29,8 +29,6 @@ cask "lg-onscreen-control" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "OSC_V#{version.csv.first}_signed.pkg"
 
   postflight do

@@ -9,8 +9,6 @@ cask "leocad" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :sierra"
-
   app "LeoCAD.app"
 
   zap trash: [

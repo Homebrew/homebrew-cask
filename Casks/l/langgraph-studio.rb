@@ -10,8 +10,6 @@ cask "langgraph-studio" do
 
   deprecate! date: "2025-08-30", because: :discontinued
 
-  depends_on macos: ">= :catalina"
-
   app "LangGraph Studio.app"
 
   zap trash: [

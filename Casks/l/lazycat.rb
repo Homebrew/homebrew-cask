@@ -17,8 +17,6 @@ cask "lazycat" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "懒猫微服.app"
 
   zap trash: [

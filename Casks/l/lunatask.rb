@@ -8,8 +8,6 @@ cask "lunatask" do
   desc "Encrypted to-do list, habit tracker, journaling, life-tracking and notes app"
   homepage "https://lunatask.app/"
 
-  depends_on macos: ">= :catalina"
-
   app "Lunatask.app"
 
   zap trash: [

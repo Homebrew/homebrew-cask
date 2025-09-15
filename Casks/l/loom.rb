@@ -16,7 +16,6 @@ cask "loom" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Loom.app"
 

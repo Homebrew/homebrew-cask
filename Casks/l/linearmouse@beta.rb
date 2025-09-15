@@ -14,7 +14,6 @@ cask "linearmouse@beta" do
 
   auto_updates true
   conflicts_with cask: "linearmouse"
-  depends_on macos: ">= :catalina"
 
   app "LinearMouse.app"
 

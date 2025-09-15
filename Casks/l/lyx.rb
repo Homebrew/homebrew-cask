@@ -15,8 +15,6 @@ cask "lyx" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :mojave"
-
   app "LyX.app"
   binary "#{appdir}/LyX.app/Contents/MacOS/inkscape", target: "lyx-inkscape"
   binary "#{appdir}/LyX.app/Contents/MacOS/lyx"

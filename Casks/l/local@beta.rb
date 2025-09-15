@@ -21,8 +21,6 @@ cask "local@beta" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Local Beta.app"
 
   zap trash: [

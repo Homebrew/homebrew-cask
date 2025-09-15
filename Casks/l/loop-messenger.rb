@@ -16,8 +16,6 @@ cask "loop-messenger" do
     regex(/loop[._-]desktop[._-]v?(\d+(?:\.\d+)+).+?\.dmg/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "LOOP.app"
 
   zap trash: [

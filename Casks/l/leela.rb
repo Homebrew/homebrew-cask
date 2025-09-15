@@ -9,8 +9,6 @@ cask "leela" do
 
   deprecate! date: "2025-03-04", because: :discontinued
 
-  depends_on macos: ">= :sierra"
-
   app "Leela.app"
   app "Leela OpenCL.app"
 
