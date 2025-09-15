@@ -22,7 +22,6 @@ cask "iterm2@beta" do
     "iterm2",
     "iterm2@nightly",
   ]
-  depends_on macos: ">= :catalina"
 
   app "iTerm.app"
 
