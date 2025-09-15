@@ -12,8 +12,6 @@ cask "webkinz" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "Webkinz.app"
 
   zap trash: [
