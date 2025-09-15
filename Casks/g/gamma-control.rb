@@ -12,8 +12,6 @@ cask "gamma-control" do
     regex(/href=.*?gamma[._-]control[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Gamma Control.app"
 
   zap trash: [
