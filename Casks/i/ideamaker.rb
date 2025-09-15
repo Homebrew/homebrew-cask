@@ -22,8 +22,6 @@ cask "ideamaker" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "ideaMaker.app"
 
   zap trash: [
