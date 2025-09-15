@@ -18,7 +18,6 @@ cask "gitkraken-on-premise-serverless" do
 
   auto_updates true
   conflicts_with cask: "gitkraken"
-  depends_on macos: ">= :el_capitan"
 
   app "GitKraken.app"
 
