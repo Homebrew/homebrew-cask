@@ -12,8 +12,6 @@ cask "smoothscroll" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "SmoothScroll.app"
 
   uninstall login_item: "SmoothScroll"
