@@ -28,7 +28,6 @@ cask "tunnelbear" do
   homepage "https://www.tunnelbear.com/"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "TunnelBear.app"
 
