@@ -9,7 +9,6 @@ cask "intel-haxm" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :sierra"
   depends_on arch: :x86_64
 
   installer script: {
