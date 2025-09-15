@@ -22,15 +22,12 @@ cask "parallels@18" do
   auto_updates true
   conflicts_with cask: [
     "parallels",
-    "parallels@12",
-    "parallels@13",
     "parallels@14",
     "parallels@15",
     "parallels@16",
     "parallels@17",
     "parallels@19",
   ]
-  depends_on macos: ">= :mojave"
 
   app "Parallels Desktop.app"
 
