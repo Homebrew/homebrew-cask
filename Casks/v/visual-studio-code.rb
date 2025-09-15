@@ -61,7 +61,7 @@ cask "visual-studio-code" do
   auto_updates true
 
   app "Visual Studio Code.app" if os == "darwin"
-  binary "#{Utils.binary_path("", os, arch, version)}/code"
+  binary "#{Utils.binary_path(appdir, os, arch, version)}/code"
   binary "#{Utils.binary_path(appdir, os, arch, version)}/code-tunnel"
 
   if os == "linux"
