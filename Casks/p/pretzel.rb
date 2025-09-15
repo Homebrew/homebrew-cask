@@ -12,8 +12,6 @@ cask "pretzel" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Pretzel.app"
 
   zap trash: [

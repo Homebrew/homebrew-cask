@@ -15,7 +15,6 @@ cask "paragon-ntfs" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   installer manual: "FSInstaller.app"
 

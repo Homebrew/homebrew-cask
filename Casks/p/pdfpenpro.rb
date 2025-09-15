@@ -9,7 +9,5 @@ cask "pdfpenpro" do
 
   deprecate! date: "2024-09-30", because: :discontinued, replacement_cask: "nitro-pdf-pro"
 
-  depends_on macos: ">= :sierra"
-
   app "PDFpenPro.app"
 end

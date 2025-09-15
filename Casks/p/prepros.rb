@@ -17,8 +17,6 @@ cask "prepros" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Prepros.app"
 
   zap trash: [

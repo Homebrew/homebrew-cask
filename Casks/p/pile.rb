@@ -12,7 +12,6 @@ cask "pile" do
   homepage "https://udara.io/pile/"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Pile.app"
 

@@ -15,8 +15,6 @@ cask "pastebot" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Pastebot.app"
 
   zap delete: [

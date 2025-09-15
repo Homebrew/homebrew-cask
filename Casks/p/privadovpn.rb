@@ -12,8 +12,6 @@ cask "privadovpn" do
     regex(/macOS\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "PrivadoVPN.app"
 
   zap trash: [

@@ -13,7 +13,6 @@ cask "private-internet-access" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   installer script: {
     executable: "Private Internet Access Installer.app/Contents/Resources/vpn-installer.sh",

@@ -11,7 +11,6 @@ cask "podcastmenu" do
   disable! date: "2025-07-28", because: :unmaintained
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "PodcastMenu.app"
 

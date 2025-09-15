@@ -12,8 +12,6 @@ cask "prowritingaid" do
     regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "ProWritingAid.app"
 
   zap trash: [

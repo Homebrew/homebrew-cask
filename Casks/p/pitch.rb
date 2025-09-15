@@ -20,8 +20,6 @@ cask "pitch" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Pitch.app"
 
   zap trash: [

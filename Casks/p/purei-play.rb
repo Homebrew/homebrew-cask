@@ -12,8 +12,6 @@ cask "purei-play" do
     regex(/href=.*?v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Play.app"
 
   zap trash: [

@@ -9,8 +9,6 @@ cask "pester" do
 
   deprecate! date: "2024-10-10", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "Pester.app"
 
   caveats do

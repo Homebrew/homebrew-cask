@@ -13,8 +13,6 @@ cask "poi" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :high_sierra"
-
   app "poi.app"
 
   zap trash: [

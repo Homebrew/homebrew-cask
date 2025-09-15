@@ -15,8 +15,6 @@ cask "pinegrow" do
     regex(%r{href=.*?/PinegrowMac#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Pinegrow.app"
 
   zap trash: [

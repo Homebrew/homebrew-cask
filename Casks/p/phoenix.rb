@@ -8,7 +8,6 @@ cask "phoenix" do
   homepage "https://github.com/kasper/phoenix/"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "Phoenix.app"
 

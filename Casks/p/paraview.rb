@@ -26,8 +26,6 @@ cask "paraview" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "ParaView-#{version.csv.first}.app"
   binary "#{appdir}/ParaView-#{version.csv.first}.app/Contents/MacOS/paraview"
 

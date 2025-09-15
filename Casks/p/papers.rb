@@ -15,8 +15,6 @@ cask "papers" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Papers.app"
 
   zap trash: [

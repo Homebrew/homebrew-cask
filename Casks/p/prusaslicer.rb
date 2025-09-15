@@ -18,8 +18,6 @@ cask "prusaslicer" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Original Prusa Drivers/PrusaSlicer.app"
 
   zap trash: [

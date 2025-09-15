@@ -19,7 +19,6 @@ cask "prismlauncher" do
   homepage "https://prismlauncher.org/"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Prism Launcher.app"
   binary "#{appdir}/Prism Launcher.app/Contents/MacOS/prismlauncher"

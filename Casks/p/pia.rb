@@ -12,8 +12,6 @@ cask "pia" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "pia.app"
 
   zap trash: [

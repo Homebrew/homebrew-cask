@@ -13,7 +13,6 @@ cask "picoscope" do
   end
 
   conflicts_with cask: "picoscope@beta"
-  depends_on macos: ">= :high_sierra"
 
   pkg "PicoScope_#{version.major}_TandM_#{version}.pkg"
 

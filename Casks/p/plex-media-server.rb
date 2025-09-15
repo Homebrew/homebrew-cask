@@ -15,7 +15,6 @@ cask "plex-media-server" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Plex Media Server.app"
   binary "#{appdir}/Plex Media Server.app/Contents/MacOS/Plex Media Scanner", target: "plexms"
