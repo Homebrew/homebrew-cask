@@ -30,8 +30,6 @@ cask "voov-meeting" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "VooV Meeting.app"
 
   zap trash: [
