@@ -21,8 +21,6 @@ cask "bambu-studio" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "BambuStudio.app"
 
   zap trash: [
