@@ -19,6 +19,8 @@ cask "sq-mixpad" do
     end
   end
 
+  disable! date: "2025-09-15", because: :unreachable
+
   depends_on macos: ">= :sierra"
 
   app "SQ MixPad #{version.csv.first}.app"
