@@ -9,8 +9,6 @@ cask "bingpaper" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :catalina"
-
   app "BingPaper.app"
 
   uninstall launchctl: "io.pjw.mac.BingPaperLoginItem",

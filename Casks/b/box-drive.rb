@@ -17,7 +17,6 @@ cask "box-drive" do
 
   auto_updates true
   conflicts_with cask: "box-sync"
-  depends_on macos: ">= :el_capitan"
 
   pkg "BoxDrive-#{version}.pkg"
 

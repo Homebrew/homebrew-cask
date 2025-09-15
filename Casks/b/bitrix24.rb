@@ -15,8 +15,6 @@ cask "bitrix24" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Bitrix24.app"
 
   zap trash: [

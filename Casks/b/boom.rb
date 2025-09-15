@@ -15,8 +15,6 @@ cask "boom" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Boom 2.app"
 
   uninstall launchctl: "com.globaldelight.Boom2Daemon",

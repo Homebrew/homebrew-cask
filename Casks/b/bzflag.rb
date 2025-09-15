@@ -12,8 +12,6 @@ cask "bzflag" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "BZFlag-#{version}.app"
 
   zap trash: [

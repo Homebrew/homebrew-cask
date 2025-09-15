@@ -11,7 +11,5 @@ cask "bubo" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :sierra"
-
   app "bubo.app"
 end

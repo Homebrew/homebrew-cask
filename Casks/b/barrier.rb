@@ -9,8 +9,6 @@ cask "barrier" do
 
   deprecate! date: "2025-05-13", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "Barrier.app"
 
   zap trash: [

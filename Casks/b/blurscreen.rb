@@ -13,7 +13,6 @@ cask "blurscreen" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   pkg "BlurScreen-v2.pkg"
 

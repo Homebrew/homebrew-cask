@@ -12,8 +12,6 @@ cask "black-ink" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Black Ink.app"
 
   zap trash: [

@@ -15,7 +15,6 @@ cask "brave-browser@dev" do
   disable! date: "2024-12-07", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Brave Browser Dev.app"
 

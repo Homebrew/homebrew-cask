@@ -12,8 +12,6 @@ cask "batchoutput-pdf" do
     regex(/BatchOutput\s*PDF\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "BatchOutput PDF.app"
 
   zap trash: [

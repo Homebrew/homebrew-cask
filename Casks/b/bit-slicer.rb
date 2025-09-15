@@ -7,8 +7,6 @@ cask "bit-slicer" do
   desc "Universal game trainer"
   homepage "https://github.com/zorgiepoo/bit-slicer/"
 
-  depends_on macos: ">= :mojave"
-
   app "Bit Slicer.app"
 
   zap trash: [

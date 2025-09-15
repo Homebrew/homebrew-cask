@@ -12,7 +12,6 @@ cask "buttercup" do
   deprecate! date: "2025-07-17", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Buttercup.app"
 
