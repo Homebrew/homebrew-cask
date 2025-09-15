@@ -13,8 +13,6 @@ cask "angband-app" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Angband.app"
 
   zap trash: [
