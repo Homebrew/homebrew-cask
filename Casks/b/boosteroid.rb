@@ -16,8 +16,6 @@ cask "boosteroid" do
     regex(/\[\s*\v?(\d+(?:\.\d+)+)\s*\]/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Boosteroid.app"
 
   zap trash: [
