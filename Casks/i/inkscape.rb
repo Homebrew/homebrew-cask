@@ -15,8 +15,6 @@ cask "inkscape" do
     regex(/Inkscape[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Inkscape.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/inkscape.wrapper.sh"
