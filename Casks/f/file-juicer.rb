@@ -12,8 +12,6 @@ cask "file-juicer" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :catalina"
-
   app "File Juicer.app"
 
   zap trash: [
