@@ -13,20 +13,12 @@ cask "parallels@14" do
   auto_updates true
   conflicts_with cask: [
     "parallels",
-    "parallels@12",
-    "parallels@13",
     "parallels@15",
     "parallels@16",
     "parallels@17",
     "parallels@18",
     "parallels@19",
     "parallels@20",
-  ]
-  depends_on macos: [
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
   ]
   # This .dmg cannot be extracted normally
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/67202
