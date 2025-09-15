@@ -13,8 +13,6 @@ cask "oscar" do
     regex(%r{href=.*?/OSCAR[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "OSCAR.app"
 
   zap trash: [
