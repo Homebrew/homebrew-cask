@@ -13,8 +13,6 @@ cask "nano-node" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Nano.app"
 
   zap trash: [
