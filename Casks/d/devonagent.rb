@@ -25,7 +25,6 @@ cask "devonagent" do
   homepage "https://www.devontechnologies.com/apps/devonagent"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "DEVONagent.app"
 
