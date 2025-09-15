@@ -15,8 +15,6 @@ cask "nvidia-nsight-compute" do
     regex(/nsight[._-]compute[._-]mac[._-]#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "NVIDIA Nsight Compute.app"
 
   zap trash: [
