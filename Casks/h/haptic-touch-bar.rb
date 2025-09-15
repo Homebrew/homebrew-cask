@@ -10,8 +10,6 @@ cask "haptic-touch-bar" do
 
   deprecate! date: "2025-03-30", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "Haptic Touch Bar.app"
 
   uninstall quit: [
