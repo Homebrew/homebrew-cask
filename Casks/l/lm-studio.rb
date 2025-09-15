@@ -20,7 +20,6 @@ cask "lm-studio" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :catalina"
 
   app "LM Studio.app"
 
