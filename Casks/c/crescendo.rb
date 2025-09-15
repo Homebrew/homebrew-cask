@@ -12,8 +12,6 @@ cask "crescendo" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Crescendo.app"
 
   zap trash: "~/Library/Saved Application State/com.suprhackersteve.crescendo.savedState"
