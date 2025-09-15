@@ -19,7 +19,6 @@ cask "pokemon-tcg-live" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Pokemon TCG Live.app"
 
