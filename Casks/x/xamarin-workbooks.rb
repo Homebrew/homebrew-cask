@@ -10,8 +10,6 @@ cask "xamarin-workbooks" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :el_capitan"
-
   pkg "XamarinInteractive-#{version}.pkg"
 
   uninstall pkgutil: "com.xamarin.Inspector"

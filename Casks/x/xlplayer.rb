@@ -14,8 +14,6 @@ cask "xlplayer" do
     regex(/href=.*?player[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "XLPlayer.app"
 
   zap trash: [

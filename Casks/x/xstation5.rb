@@ -10,8 +10,6 @@ cask "xstation5" do
 
   disable! date: "2025-03-17", because: :no_longer_available
 
-  depends_on macos: ">= :high_sierra"
-
   app "xStation5.app"
 
   zap trash: [
