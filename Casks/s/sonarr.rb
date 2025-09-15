@@ -18,7 +18,6 @@ cask "sonarr" do
 
   auto_updates true
   conflicts_with cask: "sonarr@beta"
-  depends_on macos: ">= :catalina"
 
   app "Sonarr.app"
 
