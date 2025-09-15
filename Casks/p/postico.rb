@@ -14,7 +14,6 @@ cask "postico" do
 
   auto_updates true
   conflicts_with cask: "postico@1"
-  depends_on macos: ">= :catalina"
 
   app "Postico #{version.major}.app"
 
