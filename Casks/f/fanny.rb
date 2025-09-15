@@ -12,8 +12,6 @@ cask "fanny" do
     regex(%r{href=.*?FannyWidget\.zip["' >].*?v?(\d+(?:\.\d+)+).*?</a>}im)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   # The url is unversioned, but the download returns an app directory with a version number
   rename "FannyWidget*", "FannyWidget"
 
