@@ -13,8 +13,6 @@ cask "quarto" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :el_capitan"
-
   pkg "quarto-#{version}-macos.pkg"
 
   uninstall pkgutil: "org.rstudio.quarto"
