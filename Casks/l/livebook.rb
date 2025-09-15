@@ -8,8 +8,6 @@ cask "livebook" do
   desc "Code notebooks for Elixir developers"
   homepage "https://livebook.dev/"
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   conflicts_with cask: "livebook@nightly"
   depends_on macos: ">= :big_sur"
 
