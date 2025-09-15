@@ -19,7 +19,6 @@ cask "eid-viewer" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
   depends_on cask: "beid-token"
 
   app "eID Viewer.app"
