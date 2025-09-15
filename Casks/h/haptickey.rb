@@ -7,8 +7,6 @@ cask "haptickey" do
   desc "Trigger haptic feedback when tapping Touch Bar"
   homepage "https://github.com/niw/HapticKey"
 
-  depends_on macos: ">= :sierra"
-
   app "HapticKey.app"
 
   uninstall quit: "at.niw.HapticKey"
