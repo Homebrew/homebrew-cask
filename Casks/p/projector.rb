@@ -14,8 +14,6 @@ cask "projector" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   app "projector#{archapp}.app"
 
   zap trash: [
