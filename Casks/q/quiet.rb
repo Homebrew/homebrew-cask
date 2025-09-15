@@ -13,8 +13,6 @@ cask "quiet" do
     regex(/href=.*?Quiet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Quiet.app"
 
   zap trash: "~/Library/Application Support/Quiet*"

@@ -15,8 +15,6 @@ cask "quick-app-ide" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :el_capitan"
-
   pkg "quickapp-ide-#{version}.pkg"
 
   uninstall quit:    "cn.quickapp.ide",

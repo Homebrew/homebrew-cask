@@ -8,7 +8,6 @@ cask "qdirstat" do
   homepage "https://github.com/jesusha123/qdirstat-macos/"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "QDirStat.app"
 
