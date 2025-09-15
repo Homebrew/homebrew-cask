@@ -8,7 +8,5 @@ cask "altdeploy" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   app "AltDeploy.app"
 end
