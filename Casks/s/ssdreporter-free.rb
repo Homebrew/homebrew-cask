@@ -12,8 +12,6 @@ cask "ssdreporter-free" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
-
   app "SSDReporter.app"
 
   zap trash: [
