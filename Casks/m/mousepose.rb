@@ -12,8 +12,6 @@ cask "mousepose" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
-
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/15708
   app "Mousepose.app", target: "Mousepose\314\201.app"
