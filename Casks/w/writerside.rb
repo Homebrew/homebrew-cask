@@ -14,7 +14,6 @@ cask "writerside" do
   deprecate! date: "2025-08-16", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Writerside #{version.before_comma} EAP.app", target: "Writerside.app"
   binary "#{appdir}/Writerside.app/Contents/MacOS/writerside"
