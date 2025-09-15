@@ -1,13 +1,5 @@
 cask "appgate-sdp-client" do
-  on_mojave :or_older do
-    version "5.4.4"
-    sha256 "d9d0ffbaf628ee0b8e2d3457dc7b82d1a65ce34952d1f5edc4c4bf407a3d0f1b"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_catalina do
+  on_catalina :or_older do
     version "6.0.4"
     sha256 "bceed509db9fd8dab10f31686264ff7f073048d78470f85f06bbd6233eb9b111"
 
@@ -48,8 +40,6 @@ cask "appgate-sdp-client" do
   name "AppGate SDP Client for macOS"
   desc "Software-defined perimeter for secure network access"
   homepage "https://www.appgate.com/support/software-defined-perimeter-support"
-
-  depends_on macos: ">= :mojave"
 
   pkg "AppGate SDP Installer.pkg"
 
