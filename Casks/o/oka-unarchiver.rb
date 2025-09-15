@@ -16,7 +16,6 @@ cask "oka-unarchiver" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Oka Unarchiver #{version.major} Website.app", target: "Oka Unarchiver.app"
 

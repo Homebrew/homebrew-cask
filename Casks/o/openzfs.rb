@@ -1,12 +1,7 @@
 cask "openzfs" do
   version "2.3.0"
 
-  on_mojave :or_older do
-    arch intel: "MAVERICKS-10.9"
-
-    sha256 "d45facdaaa80d2b79df309598027f0b48df65c560daf88f0883cebfe9fd9ea6c"
-  end
-  on_catalina do
+  on_catalina :or_older do
     arch intel: "Catalina-10.15"
 
     sha256 "517f8348b7fedc45191c792bb67c6c07dca2ab1aeababa124ddea15b4600d7d7"

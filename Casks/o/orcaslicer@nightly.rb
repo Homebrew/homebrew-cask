@@ -10,7 +10,6 @@ cask "orcaslicer@nightly" do
   homepage "https://github.com/SoftFever/OrcaSlicer"
 
   conflicts_with cask: "orcaslicer"
-  depends_on macos: ">= :catalina"
 
   app "OrcaSlicer.app"
 

@@ -8,8 +8,6 @@ cask "obs-virtualcam" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "obs-mac-virtualcam-#{version.csv.second}-v#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.johnboiles.obs-mac-virtualcam"

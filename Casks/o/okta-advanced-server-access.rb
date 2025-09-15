@@ -15,7 +15,6 @@ cask "okta-advanced-server-access" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   pkg "ScaleFT-#{version}.pkg"
 

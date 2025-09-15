@@ -13,8 +13,6 @@ cask "openthesaurus-deutsch" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :el_capitan"
-
   dictionary "OpenThesaurus Deutsch.dictionary"
 
   # No zap stanza required

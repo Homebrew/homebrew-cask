@@ -17,8 +17,6 @@ cask "oracle-jdk@21" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "JDK #{version}.pkg"
 
   uninstall pkgutil: "com.oracle.jdk-#{version}"

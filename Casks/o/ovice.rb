@@ -18,8 +18,6 @@ cask "ovice" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "ovice.app"
 
   zap trash: [

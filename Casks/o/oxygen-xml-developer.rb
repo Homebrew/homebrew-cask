@@ -27,8 +27,6 @@ cask "oxygen-xml-developer" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   suite "Oxygen XML Developer"
 
   zap trash: "~/Library/Preferences/com.oxygenxml.developer"

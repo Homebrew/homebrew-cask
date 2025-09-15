@@ -28,8 +28,6 @@ cask "outfox" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   suite "OutFox"
 
   zap trash: [
