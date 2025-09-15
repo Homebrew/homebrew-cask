@@ -24,7 +24,6 @@ cask "datagrip" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "DataGrip.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
