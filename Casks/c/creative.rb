@@ -15,8 +15,6 @@ cask "creative" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Creative.app"
 
   uninstall launchctl: [
