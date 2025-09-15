@@ -13,8 +13,6 @@ cask "shadow-bot" do
 
   disable! date: "2024-12-30", because: "now has the download artifact behind a signed URL"
 
-  depends_on macos: ">= :high_sierra"
-
   app "影刀.app"
 
   zap trash: [
