@@ -23,8 +23,6 @@ cask "texmaker" do
   desc "LaTeX editor"
   homepage "https://www.xm1math.net/texmaker/"
 
-  depends_on macos: ">= :high_sierra"
-
   app "texmaker.app"
 
   zap trash: [
