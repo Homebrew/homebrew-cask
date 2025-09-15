@@ -1,8 +1,8 @@
 cask "zappy" do
-  version "4.8.8"
-  sha256 "d5b543fb8a77df06f42d1a9a904ec44378e306f982914accf610b9340a722da6"
+  version "4.8.9"
+  sha256 "7927aa6d595b5ed1d9efdbb87130d8ed562ee29a5d0d60a678b70c9135af2959"
 
-  url "https://zappy.zapier.com/releases/zappy-#{version}.dmg"
+  url "https://zappy.zapier.com/releases/zappy_#{version}.dmg"
   name "Zappy"
   desc "Screen capture tool for remote teams"
   homepage "https://zapier.com/zappy"
