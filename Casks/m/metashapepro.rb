@@ -12,8 +12,6 @@ cask "metashapepro" do
     regex(/Metashape\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "MetashapePro.app"
 
   zap trash: [
