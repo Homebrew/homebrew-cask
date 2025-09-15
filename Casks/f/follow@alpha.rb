@@ -14,7 +14,6 @@ cask "follow@alpha" do
     "follow",
     "follow@nightly",
   ]
-  depends_on macos: ">= :catalina"
 
   app "Follow.app"
 
