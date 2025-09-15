@@ -19,8 +19,6 @@ cask "shift" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Shift.app"
 
   zap trash: [
