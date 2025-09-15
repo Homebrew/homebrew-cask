@@ -21,8 +21,6 @@ cask "beid-token" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "eID-Quickinstaller-signed.pkg"
 
   postflight do
