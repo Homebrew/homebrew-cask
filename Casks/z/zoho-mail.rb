@@ -25,8 +25,6 @@ cask "zoho-mail" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Zoho Mail - Desktop.app"
 
   zap trash: [

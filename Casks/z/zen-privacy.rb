@@ -18,7 +18,6 @@ cask "zen-privacy" do
 
   auto_updates true
   conflicts_with cask: "zen"
-  depends_on macos: ">= :high_sierra"
 
   app "Zen.app"
 

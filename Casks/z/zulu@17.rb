@@ -24,8 +24,6 @@ cask "zulu@17" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "Double-Click to Install Azul Zulu JDK #{version.major}.pkg"
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
