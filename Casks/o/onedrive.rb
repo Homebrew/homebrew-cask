@@ -18,7 +18,6 @@ cask "onedrive" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on macos: ">= :mojave"
 
   pkg "OneDrive.pkg"
 
