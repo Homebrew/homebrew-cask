@@ -12,8 +12,6 @@ cask "calcservice" do
     regex(/calcservice.*?(\d+(?:\.\d+)+).*?app/i)
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "CalcService.app"
 
   zap trash: "~/Library/Preferences/org.grunenberg.CalcService.plist"
