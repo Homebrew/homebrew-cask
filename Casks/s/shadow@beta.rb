@@ -15,8 +15,6 @@ cask "shadow@beta" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Shadow PC Beta.app"
 
   zap trash: [
