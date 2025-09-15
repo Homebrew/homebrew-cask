@@ -20,8 +20,6 @@ cask "volanta" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Volanta.app"
 
   zap trash: [
