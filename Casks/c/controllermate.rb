@@ -1,16 +1,6 @@
 cask "controllermate" do
-  on_el_capitan :or_older do
-    version "4.9.10"
-    sha256 "4f24f5763e96b0b0e959197dba5cc064928b59b74d49210bf5a484f4f9766d38"
-  end
-  on_sierra do
-    version "4.10.4"
-    sha256 "fdeb37ca8df145d927b9daef6dfa22ef6d1535f9ad1459c4f4ffcb52fbc19c3b"
-  end
-  on_high_sierra :or_newer do
-    version "4.11.1"
-    sha256 "dd95d0b2abd6c23148092c96593fb303befc374c6a912afad57efb48b0a1e04b"
-  end
+  version "4.11.1"
+  sha256 "dd95d0b2abd6c23148092c96593fb303befc374c6a912afad57efb48b0a1e04b"
 
   url "https://orderedbytes.s3.amazonaws.com/ControllerMate#{version.no_dots}.zip",
       verified: "orderedbytes.s3.amazonaws.com/"
