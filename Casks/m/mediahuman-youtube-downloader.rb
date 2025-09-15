@@ -4,13 +4,7 @@ cask "mediahuman-youtube-downloader" do
   version "3.9.16"
   sha256 :no_check
 
-  on_sierra :or_older do
-    url "https://www.mediahuman.net/files/YouTubeDownloader-1012.dmg"
-  end
-  on_high_sierra :or_newer do
-    url "https://www.mediahuman.net/files/YouTubeDownloader#{arch}.dmg"
-  end
-
+  url "https://www.mediahuman.net/files/YouTubeDownloader#{arch}.dmg"
   name "MediaHuman YouTube Downloader"
   desc "YouTube videos downloader"
   homepage "https://www.mediahuman.net/youtube-video-downloader/"
@@ -21,7 +15,6 @@ cask "mediahuman-youtube-downloader" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "MediaHuman YouTube Downloader.app"
 
