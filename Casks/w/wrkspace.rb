@@ -17,8 +17,6 @@ cask "wrkspace" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Wrkspace.app"
 
   zap trash: "~/Library/Application Support/Wrkspace",

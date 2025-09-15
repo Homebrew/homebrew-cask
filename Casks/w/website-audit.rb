@@ -14,8 +14,6 @@ cask "website-audit" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "website-audit.app"
 
   zap trash: [

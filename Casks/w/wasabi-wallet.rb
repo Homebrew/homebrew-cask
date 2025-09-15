@@ -15,8 +15,6 @@ cask "wasabi-wallet" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Wasabi Wallet.app"
 
   zap trash:  "~/.walletwasabi"

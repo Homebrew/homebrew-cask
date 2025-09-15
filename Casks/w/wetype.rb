@@ -20,7 +20,6 @@ cask "wetype" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   installer manual: "WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.app"
 

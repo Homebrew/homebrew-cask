@@ -12,8 +12,6 @@ cask "wing-personal" do
     regex(%r{href=.*?/pub/wing-personal/v?(\d+(?:\.\d+)+)}i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Wing Personal.app"
 
   zap trash: [

@@ -9,7 +9,6 @@ cask "wezterm@nightly" do
   homepage "https://wezterm.org/"
 
   conflicts_with cask: "wezterm"
-  depends_on macos: ">= :sierra"
 
   app "WezTerm.app"
   %w[

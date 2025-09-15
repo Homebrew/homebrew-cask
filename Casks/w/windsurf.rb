@@ -23,7 +23,6 @@ cask "windsurf" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Windsurf.app"
   binary "#{appdir}/Windsurf.app/Contents/Resources/app/bin/windsurf"

@@ -38,7 +38,6 @@ cask "wine-stable" do
     "wine@staging",
   ]
   depends_on cask: "gstreamer-runtime"
-  depends_on macos: ">= :catalina"
 
   app "Wine Stable.app"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/appdb"

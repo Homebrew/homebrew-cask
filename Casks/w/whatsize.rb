@@ -13,7 +13,6 @@ cask "whatsize" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   pkg "whatsize_#{version}.pkg"
 

@@ -13,8 +13,6 @@ cask "writemapper" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :catalina"
-
   app "WriteMapper.app"
 
   zap trash: [

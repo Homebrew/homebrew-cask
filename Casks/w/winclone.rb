@@ -13,8 +13,6 @@ cask "winclone" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
-
   pkg "Winclone.pkg"
 
   uninstall signal:  ["TERM", "com.twocanoes.Winclone#{version.major}"],

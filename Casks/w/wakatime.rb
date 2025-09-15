@@ -8,8 +8,6 @@ cask "wakatime" do
   desc "System tray app for automatic time tracking"
   homepage "https://wakatime.com/mac"
 
-  depends_on macos: ">= :catalina"
-
   app "WakaTime.app"
 
   zap trash: [

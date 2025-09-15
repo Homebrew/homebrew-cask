@@ -15,7 +15,6 @@ cask "wireshark-chmodbpf" do
   end
 
   conflicts_with cask: "wireshark-app"
-  depends_on macos: ">= :sierra"
 
   pkg "Install ChmodBPF.pkg"
 

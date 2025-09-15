@@ -13,7 +13,6 @@ cask "waterfox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Waterfox.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
