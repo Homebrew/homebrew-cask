@@ -16,8 +16,6 @@ cask "http-toolkit" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "HTTP Toolkit.app"
 
   zap trash: [
