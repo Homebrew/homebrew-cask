@@ -18,8 +18,6 @@ cask "meta-quest-developer-hub" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Meta Quest Developer Hub.app"
 
   zap trash: [
