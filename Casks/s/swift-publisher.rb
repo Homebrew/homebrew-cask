@@ -14,7 +14,6 @@ cask "swift-publisher" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "Swift Publisher #{version.major}.app"
 
