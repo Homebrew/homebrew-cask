@@ -12,8 +12,6 @@ cask "privatevpn" do
     regex(/\\"macVersion\\"\s*:\s*\\"(\d+(?:\.\d+)+)\\"/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "PrivateVPN.app"
 
   zap trash: [
