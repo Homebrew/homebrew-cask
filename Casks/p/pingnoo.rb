@@ -14,8 +14,6 @@ cask "pingnoo" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Pingnoo.app"
 
   zap trash: [
