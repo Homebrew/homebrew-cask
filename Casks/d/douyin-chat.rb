@@ -21,7 +21,6 @@ cask "douyin-chat" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "抖音聊天.app"
 

@@ -13,8 +13,6 @@ cask "dropbox-dash" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Dropbox Dash.app"
 
   uninstall quit: "io.hypertools.Dropbox-Dash"

@@ -24,8 +24,6 @@ cask "devilutionx" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "devilutionX.app"
 
   zap trash: [

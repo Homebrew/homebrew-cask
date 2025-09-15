@@ -24,7 +24,6 @@ cask "discord" do
   homepage "https://discord.com/"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Discord.app"
 

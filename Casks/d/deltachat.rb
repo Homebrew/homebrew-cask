@@ -15,8 +15,6 @@ cask "deltachat" do
     regex(/href=.*?DeltaChat[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "DeltaChat.app"
 
   zap trash: [

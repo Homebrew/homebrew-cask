@@ -10,8 +10,6 @@ cask "dropbox-passwords" do
 
   deprecate! date: "2024-11-01", because: :discontinued
 
-  depends_on macos: ">= :sierra"
-
   app "Dropbox Passwords.app"
 
   caveats do

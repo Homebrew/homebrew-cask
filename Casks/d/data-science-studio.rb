@@ -12,8 +12,6 @@ cask "data-science-studio" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :catalina"
-
   app "DataScienceStudio.app"
 
   zap trash: [

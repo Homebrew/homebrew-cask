@@ -26,8 +26,6 @@ cask "db-browser-for-sqlite@nightly" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "DB Browser for SQLite Nightly.app"
 
   zap trash: [

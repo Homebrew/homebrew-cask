@@ -14,7 +14,6 @@ cask "discord@canary" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Discord Canary.app"
 

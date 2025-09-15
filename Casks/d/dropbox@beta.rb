@@ -18,7 +18,6 @@ cask "dropbox@beta" do
 
   auto_updates true
   conflicts_with cask: "dropbox"
-  depends_on macos: ">= :high_sierra"
 
   app "Dropbox.app"
 
