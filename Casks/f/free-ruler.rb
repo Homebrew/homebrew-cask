@@ -8,8 +8,6 @@ cask "free-ruler" do
   desc "Horizontal and vertical rulers"
   homepage "https://www.pascal.com/freeruler"
 
-  depends_on macos: ">= :mojave"
-
   app "Free Ruler.app"
 
   zap trash: "~/Library/Containers/com.pascal.freeruler"

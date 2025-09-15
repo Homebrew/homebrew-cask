@@ -18,8 +18,6 @@ cask "fathom" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Fathom.app"
 
   uninstall quit: [

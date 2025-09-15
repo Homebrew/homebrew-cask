@@ -9,8 +9,6 @@ cask "faxbot" do
 
   disable! date: "2025-08-03", because: :no_longer_available
 
-  depends_on macos: ">= :sierra"
-
   app "Faxbot.app"
 
   zap trash: [

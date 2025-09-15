@@ -18,7 +18,6 @@ cask "firefox@cn" do
     "firefox@beta",
     "firefox@esr",
   ]
-  depends_on macos: ">= :catalina"
 
   app "Firefox.app"
 

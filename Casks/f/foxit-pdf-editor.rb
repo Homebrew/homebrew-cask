@@ -15,8 +15,6 @@ cask "foxit-pdf-editor" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "FoxitPDFEditor#{version.major_minor_patch.no_dots}.L10N.Setup.pkg"
 
   uninstall launchctl: "com.foxit.PDFEditorUpdateService",

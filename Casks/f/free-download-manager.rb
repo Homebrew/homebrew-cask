@@ -13,7 +13,6 @@ cask "free-download-manager" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "Free Download Manager.app"
 

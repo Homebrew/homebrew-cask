@@ -16,8 +16,6 @@ cask "freeplane" do
     regex(%r{url=.*?/Freeplane[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "Freeplane.app"
 
   zap trash: "~/Library/Saved Application State/org.freeplane.launcher.savedState"

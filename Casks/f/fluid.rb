@@ -12,8 +12,6 @@ cask "fluid" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Fluid.app"
 
   zap trash: [

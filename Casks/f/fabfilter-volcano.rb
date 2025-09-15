@@ -12,8 +12,6 @@ cask "fabfilter-volcano" do
     regex(/FabFilter\s+Volcano.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "FabFilter Volcano #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Volcano.#{version.major}"

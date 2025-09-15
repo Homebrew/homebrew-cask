@@ -13,8 +13,6 @@ cask "flrig" do
     regex(%r{url=.*?/flrig[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "flrig-#{version}.app"
 
   zap trash: "~/.flrig"

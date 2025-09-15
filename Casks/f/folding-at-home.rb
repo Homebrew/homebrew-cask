@@ -13,7 +13,6 @@ cask "folding-at-home" do
   end
 
   conflicts_with cask: "folding-at-home@beta"
-  depends_on macos: ">= :high_sierra"
 
   pkg "fah-client_#{version}_universal.pkg"
 

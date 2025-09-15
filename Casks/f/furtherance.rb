@@ -13,8 +13,6 @@ cask "furtherance" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Furtherance.app"
 
   zap trash: "~/Library/Application Support/io.unobserved.furtherance"

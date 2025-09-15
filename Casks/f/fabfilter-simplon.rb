@@ -12,8 +12,6 @@ cask "fabfilter-simplon" do
     regex(/FabFilter\s+Simplon.*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "FabFilter Simplon #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Simplon.#{version.major}"
