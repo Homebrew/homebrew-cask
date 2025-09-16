@@ -18,8 +18,8 @@ cask "microsoft-outlook" do
     end
   end
   on_ventura :or_newer do
-    version "16.100.25090553"
-    sha256 "661d7aba706f5cf65036ee58d50b5292e4f3da938d58d70920e68b5b5c723c5e"
+    version "16.101.25091314"
+    sha256 "8df716d9d04dd031c44c916c0b0f0f93258a3193ef8145ef365507314296c863"
 
     livecheck do
       url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409OPIM2019.xml"
