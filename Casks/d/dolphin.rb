@@ -1,6 +1,6 @@
 cask "dolphin" do
-  version "2506a"
-  sha256 "0ea57eacd80ab51cbf17a0cd6309b5973155cc46c0fa90f5e8c6fb50ee9667cc"
+  version "2509"
+  sha256 "14b7bd96ead242db4020acd991aae84ee83c3df65de9b09f2e79c8d531bf9780"
 
   url "https://dl.dolphin-emu.org/releases/#{version}/dolphin-#{version}-universal.dmg"
   name "Dolphin"
