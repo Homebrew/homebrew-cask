@@ -1,5 +1,5 @@
 cask "sf-symbols" do
-  on_big_sur do
+  on_big_sur :or_older do
     version "4"
     sha256 "479b66ce7eb308ca0eff826675325e11e7932fcca407d065261822be5c2ec8cb"
 
