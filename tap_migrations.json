@@ -4,6 +4,7 @@
   "borgbackup": "homebrew/core",
   "chronograf": "homebrew/core",
   "consul-template": "homebrew/core",
+  "container": "homebrew/core",
   "cryptol": "homebrew/core",
   "cups-pdf": "homebrew/core",
   "dmd": "homebrew/core",
