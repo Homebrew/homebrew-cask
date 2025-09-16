@@ -1,9 +1,9 @@
 cask "graalvm-jdk" do
   arch arm: "aarch64", intel: "x64"
 
-  version "24.0.2,12"
-  sha256 arm:   "2dc7634ed939c725d41a353f73443ff32e70f2fb577367f12a6936107e3494dc",
-         intel: "df0f9e5d101201c50bfa6baa3c657a81a2883c5b5097a9f5ab93dab86f7e3ba2"
+  version "25,37"
+  sha256 arm:   "6e77f17b01089dfdb0c54cce8aa936847e2a019e0110418813b49b3bd974dc90",
+         intel: "f99e3eea4808a0b73b559e28c4646cf091df12d6a4c065fef34664ab17299137"
 
   url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version.csv.first}_macos-#{arch}_bin.tar.gz",
       verified: "download.oracle.com/"
@@ -25,7 +25,7 @@ cask "graalvm-jdk" do
   end
 
   # FIXME: Change 11 back to #{version.csv.second} on the next release
-  artifact "graalvm-jdk-#{version.csv.first}+11.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
+  artifact "graalvm-jdk-#{version.csv.first}+#{version.csv.second}.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
   # No zap stanza required
 
