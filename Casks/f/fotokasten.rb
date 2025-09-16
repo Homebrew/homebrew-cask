@@ -1,6 +1,6 @@
 cask "fotokasten" do
-  version "4.43.1,250711.1719"
-  sha256 "b222c474572684a6f25b8526a1cdfabf84b0d0fe1e0c20a0e97f534f96c43e3d"
+  version "4.47.0,250912.0941"
+  sha256 "e157ab1916baca1a1b491cad2867d80344e306bcca03a17f285b35f1e705026e"
 
   url "https://downloads.poi.de/fotokasten/pgx-mac/de_DE/fotokasten_22153088_de_DE_#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "downloads.poi.de/fotokasten/"
