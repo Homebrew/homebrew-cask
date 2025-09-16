@@ -24,16 +24,24 @@ cask "sf-symbols" do
     end
   end
   on_sonoma :or_newer do
-    version "7"
-    sha256 "6b7fd72dcec7dbc30a4f18a0cb734774fef725019b3e887a18313e42d1e38818"
+    version "7.0,115"
+    sha256 :no_check # required as upstream package is updated in-place
 
     livecheck do
       url "https://developer.apple.com/sf-symbols/"
-      regex(%r{href=.*?/SF-Symbols-(\d+(?:\.\d+)*)\.dmg}i)
+      regex(%r{href=.*?/SF[._-]Symbols[._-]v?(\d+(?:\.\d+)*)\.dmg}i)
+      strategy :page_match do |page, regex|
+        major_version = page[regex, 1]
+        next if major_version.blank?
+
+        cask = CaskLoader.load(__FILE__)
+        download_url = "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{major_version}.dmg"
+        Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask:, url: download_url)[:matches].values
+      end
     end
   end
 
-  url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version}.dmg"
+  url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version.major}.dmg"
   name "SF Symbols"
   desc "Tool that provides consistent, highly configurable symbols for apps"
   homepage "https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/"
