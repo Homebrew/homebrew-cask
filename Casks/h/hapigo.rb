@@ -1,6 +1,6 @@
 cask "hapigo" do
-  version "2.18.0"
-  sha256 "607ca40674a4d0df76e18c992a62d723cee272c175e0353d3f72f17b7c8b442e"
+  version "2.19.0"
+  sha256 "fa3856412992be74c36c966075dcc5249f9e86194e48958d7810aff74f9d2572"
 
   url "https://dl.hapigo.com/HapiGo_#{version}.dmg"
   name "HapiGo"
