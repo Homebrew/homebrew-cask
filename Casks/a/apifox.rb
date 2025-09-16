@@ -2,9 +2,9 @@ cask "apifox" do
   arch arm: "-macOS-arm64"
   livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "2.7.34"
-  sha256 arm:   "527e8e95797d2bb0ebccf2d20a6efc50dc72ea5b1cee2968d3bd132141708d7a",
-         intel: "3d6b0b86cfa993dea8e9b2fe4567be8de8003fadaae88ba138350b4bdae548c7"
+  version "2.7.35"
+  sha256 arm:   "77ebbac698581ea463a7719bde108c4418f3e3559865ca52e573d3bac27031c8",
+         intel: "cb0eb04d585b75dc6b2ba7bbae0838dc14eb268bdfb6d8150647077e2d3ef51f"
 
   url "https://file-assets.apifox.com/download/#{version}/Apifox#{arch}-#{version}.dmg"
   name "Apifox"
