@@ -2,13 +2,16 @@ cask "bartender" do
   on_ventura :or_older do
     version "4.2.25"
     sha256 "f1a2ecf300cf56aaf531324cba646442026cb0b63b4f90f46a1aee5b0804688a"
+
+    url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip"
   end
   on_sonoma :or_newer do
-    version "5.3.7"
-    sha256 "20f640c4f43397dd8f16fd829597e3c93f330c91fb29ccd207133b69d4aa0baa"
+    version "6.0.0"
+    sha256 "a0938682461158d34e10c67c8affa768f4d567121fde831bfcae167ef570b277"
+
+    url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.dmg"
   end
 
-  url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip"
   name "Bartender"
   desc "Menu bar icon organiser"
   homepage "https://www.macbartender.com/"
@@ -22,7 +25,7 @@ cask "bartender" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "Bartender #{version.major}.app"
 
