@@ -1,9 +1,9 @@
 cask "music-presence" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.3.2"
-  sha256 arm:   "2e0bb41d795006813403fbe77ab21ca1c4d2340e669a6103a4a1707fa07aa4b1",
-         intel: "0844267c664f968d993aaf16b58681e7a23ecd485e2d5f257d91a100bfc854dc"
+  version "2.3.3"
+  sha256 arm:   "e8587d35deb07442f0758765211878c236ce812b4e1c8d01fc6a200dc1e031d2",
+         intel: "c2daccbde9713c7fcaaf4e13ab457dd72ebe94cf3db81ab7e65a3afd9e3b0d99"
 
   url "https://github.com/ungive/discord-music-presence/releases/download/v#{version}/musicpresence-#{version}-mac-#{arch}.dmg",
       verified: "github.com/ungive/discord-music-presence/"
