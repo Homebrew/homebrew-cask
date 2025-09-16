@@ -9,7 +9,11 @@ cask "virtual-desktop-streamer" do
 
   pkg "VirtualDesktop.Streamer.Setup.pkg"
 
-  uninstall quit:    "com.virtualdesktop.streamer",
+  uninstall launchctl: [
+              "com.virtualdesktop.daemon",
+              "com.virtualdesktop.streamer"
+            ],
+            quit:    "com.virtualdesktop.streamer",
             pkgutil: [
               "com.VirtualDesktop.AudioDriver",
               "com.VirtualDesktop.MicDriver",
