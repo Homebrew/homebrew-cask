@@ -9,13 +9,20 @@ cask "pcsx2" do
   homepage "https://pcsx2.net/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://api.pcsx2.net/v1/stableReleases?pageSize=1"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :json do |json, regex|
+      json["data"]&.map do |release|
+        next unless release.dig("assets", "MacOS")
+
+        release["version"]&.[](regex, 1)
+      end
+    end
   end
 
   depends_on macos: ">= :big_sur"
 
-  app "PCSX2-v#{version}.app"
+  app "PCSX2-v#{version}.app", target: "PCSX2.app"
 
   zap trash: [
     "~/Library/Application Support/PCSX2",
