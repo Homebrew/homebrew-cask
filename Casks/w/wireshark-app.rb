@@ -3,9 +3,9 @@ cask "wireshark-app" do
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
   on_catalina :or_older do
-    version "4.2.12"
-    sha256 arm:   "3581038c7325b0f810d44b0598bbceab1832c28d8f40912e4e924ec61c79779b",
-           intel: "ac51f031d3b0b7e1a0f323c7356b8a0284ed1369b7435dd221cf29de768e5e4c"
+    version "4.2.13"
+    sha256 arm:   "0ec816487ff31a6477b7da55dc8e95b0dc0251afcbf07923b9828235b5a3dbe7",
+           intel: "b4d109a295d028180627aa529cd71e69cf799a6616456cc4deed074919346956"
 
     livecheck do
       url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/#{livecheck_arch}64/en-US/development.xml"
