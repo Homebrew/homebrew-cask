@@ -1,6 +1,6 @@
 cask "quit-all" do
-  version "1.3.3"
-  sha256 "abe4cb071b1bed88b83e1458f5307f7a9d680fe159ad2e52cfe01641fa3e3067"
+  version "1.3.4"
+  sha256 "e78d44bd312e6486f1989dda36b00bea652cce159483122243bc59dd10f70379"
 
   url "https://amicoapps.com/wp-content/updates/quitall-#{version}.zip"
   name "QuitAll"
