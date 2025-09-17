@@ -54,8 +54,4 @@ cask "logitech-g-hub" do
     "~/Library/Preferences/com.logi.ghub.plist",
     "~/Library/Saved Application State/com.logi.ghub.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
