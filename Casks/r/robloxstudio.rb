@@ -1,9 +1,9 @@
 cask "robloxstudio" do
   arch arm: "arm64/"
 
-  version "0.690.0.6900721,d5f92605bf764399"
-  sha256 arm:   "64b272f1ccaa71822a5ef6598129884a7ac7d2bf8bb15212b2d2d5884734ba96",
-         intel: "0d85a4c56ba2f665f07c3e0a08478752987525a1cf6bf2657359dc28d78c0b51"
+  version "0.691.0.6910867,798af769e407486b"
+  sha256 arm:   "969138397b1ea2d0748aa6d48e36c1665a197418718d844e999533d92da02693",
+         intel: "de65102a2156794102ec0af60c4fc131307b9068dfeed58ff6f1993b2bf7584e"
 
   url "https://setup.rbxcdn.com/mac/#{arch}version-#{version.csv.second}-RobloxStudioApp.zip",
       verified: "setup.rbxcdn.com/"
