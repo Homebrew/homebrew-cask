@@ -1,6 +1,6 @@
 cask "secretive" do
-  version "3.0.0"
-  sha256 "664734b2f0729cfc854892f36bcae338fd6d2d7ded9e72edd5dc35bd32443921"
+  version "3.0.2"
+  sha256 "03b2b7c81bfc3e061aa0542835f034ebd861d77f8f3298bcc1ac5dbd1ed2d4dd"
 
   url "https://github.com/maxgoedjen/secretive/releases/download/v#{version}/Secretive.zip"
   name "Secretive"
