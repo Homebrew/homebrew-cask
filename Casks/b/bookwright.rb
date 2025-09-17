@@ -1,6 +1,6 @@
 cask "bookwright" do
-  version "3.3.0"
-  sha256 "fecdcde26a29345a96663a36a519e6b5fd9421514d1a18326c249fbe861fd0ec"
+  version "3.4.0"
+  sha256 "54cb91fe7d7e09a23d17f12278c8134a823065621d77a561d1fb9e39e799213e"
 
   url "https://software.blurb.com/bookwright_v2/#{version}/BookWright.dmg"
   name "BookWright"
