@@ -1,18 +1,11 @@
 cask "vibemate" do
   version "2.2.9"
+  arch arm: "arm64", intel: "x64"
 
-#arch arm: "arm64", intel: "x64"
-  on_arm do
-    sha256 "fbc4b4d63b1f5f45bbda925e7a120482c9ba44d6ea0c11094f889229130d7747"
-    url "https://cdn.lovense.com/files/vibemate/VibeMate-#{version}-arm64.dmg",
-        verified: "cdn.lovense.com/files/vibemate/"
-  end
-
-  on_intel do
-  sha256 "ad6368cba70abb99425f692ffca57f341ced06c48a0ca97984d9b52060c651db"
-  url "https://cdn.lovense.com/files/vibemate/VibeMate-#{version}-x64.dmg",
-       verified: "cdn.lovense.com/files/vibemate/"
-  end 
+  url "https://cdn.lovense.com/files/vibemate/VibeMate-#{version}-#{arch}.dmg",
+      verified: "cdn.lovense.com/files/vibemate/"
+  sha256 arm:   "fbc4b4d63b1f5f45bbda925e7a120482c9ba44d6ea0c11094f889229130d7747",
+         intel: "ad6368cba70abb99425f692ffca57f341ced06c48a0ca97984d9b52060c651db"
 
   name "VibeMate"
   desc "Private AI-Powered Browser"
