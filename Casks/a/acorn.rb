@@ -1,6 +1,6 @@
 cask "acorn" do
-  version "8.2.1"
-  sha256 "74c5bd6f78949ce40bba39dae98c36d6cf730e0e8fc4fbd22e4fb0f41653838b"
+  version "8.2.2"
+  sha256 "29acfd9c23266f573ba6a13e09e5b02995411fc855728251995da6b9283f5255"
 
   url "https://flyingmeat.com/download/Acorn-#{version}.zip"
   name "Acorn"
