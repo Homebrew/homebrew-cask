@@ -14,5 +14,5 @@ cask "cadoodle" do
   end
 
   app "CaDoodle.app"
-
+  # No zap stanza required
 end
