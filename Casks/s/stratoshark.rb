@@ -1,8 +1,8 @@
 cask "stratoshark" do
   arch arm: "arm64", intel: "x86-64"
 
-  version "0.9.2"
-  sha256 "137577601c51b55f553c5d90cd5e53bf285ee5a71deeb20742baa9348d46c09b"
+  version "0.9.3"
+  sha256 "4a1080d20edb8ff06a44886e97e7854811ca09b5ec112b15f8dbbf6a497cefa0"
 
   url "https://2.na.dl.wireshark.org/osx/all-versions/Stratoshark%20#{version}.dmg",
       verified: "wireshark.org/osx/all-versions/"
@@ -17,7 +17,7 @@ cask "stratoshark" do
 
   auto_updates true
   conflicts_with cask: "stratoshark@dev"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Stratoshark.app"
   binary "#{appdir}/Stratoshark.app/Contents/MacOS/extcap/falcodump"
