@@ -16,9 +16,26 @@ cask "propresenter@beta" do
       end
     end
   end
-  on_monterey :or_newer do
-    version "20,335544353"
-    sha256 "fbc2701b77c2e532e5ed425d024375bdbc2c336c836e792d0be0a8937c9a70ee"
+  on_monterey do
+    version "20,335544354"
+    sha256 "4562cad514a97682774c5af2f10a9a4e963de666179d2dd69c5c15c8e0a826a3"
+
+    url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
+
+    livecheck do
+      url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=12.0&appVersion=0&buildNumber=0&includeNotes=0&channel=beta"
+      strategy :json do |json|
+        json["upgrades"]&.map do |item|
+          next if item["version"].blank? || item["buildNumber"].blank?
+
+          "#{item["version"]},#{item["buildNumber"]}"
+        end
+      end
+    end
+  end
+  on_ventura :or_newer do
+    version "20,335544354"
+    sha256 "4562cad514a97682774c5af2f10a9a4e963de666179d2dd69c5c15c8e0a826a3"
 
     url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
 
