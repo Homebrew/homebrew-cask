@@ -79,7 +79,8 @@ cask "squirrelsql" do
 
   uninstall_preflight do
     system_command "/usr/bin/java",
-                   args: ["-jar", "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", "-f", "-c"]
+                   args:         ["-jar", "#{appdir}/SQuirreLSQL.app/Uninstaller/uninstaller.jar", "-f", "-c"],
+                   must_succeed: false
   end
 
   uninstall delete: "#{appdir}/SQuirreLSQL.app"
