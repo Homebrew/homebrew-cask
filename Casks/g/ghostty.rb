@@ -17,7 +17,6 @@ cask "ghostty" do
   depends_on macos: ">= :ventura"
 
   app "Ghostty.app"
-  binary "#{appdir}/Ghostty.app/Contents/MacOS/ghostty"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man1/ghostty.1"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man5/ghostty.5"
   bash_completion "#{appdir}/Ghostty.app/Contents/Resources/bash-completion/completions/ghostty.bash"
