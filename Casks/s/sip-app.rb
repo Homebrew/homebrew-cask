@@ -1,11 +1,38 @@
 cask "sip-app" do
-  version "4.1"
-  sha256 "77fa8954b4e5e8bec5eba19484319eb2c7c3a59be7ac961de6044af7b04b282e"
+  on_monterey :or_older do
+    on_catalina :or_older do
+      version "2.8"
+      sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
+    end
+    on_big_sur do
+      version "2.8"
+      sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
+    end
+    on_monterey do
+      version "3.6.2"
+      sha256 "d8c43036940aefee8d9f632f2e5fd78939edebac0e658534729c226b7619af25"
+    end
 
-  livecheck do
-    url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip.xml"
-    strategy :sparkle do |items|
-      items.map(&:short_version)
+    on_ventura do
+      version "3.6.2"
+      sha256 "d8c43036940aefee8d9f632f2e5fd78939edebac0e658534729c226b7619af25"
+    end
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sonoma :or_newer do
+    version "4.1"
+    sha256 "899a94aa8c72bac236c35e89c8d32ea0e80ef29f645995f6aec7df263598ca38"
+
+    # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
+    # work with all of the items in the feed (not just the newest one).
+    livecheck do
+      url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip.xml"
+      strategy :sparkle do |items|
+        items.map(&:short_version)
+      end
     end
   end
 
@@ -17,22 +44,20 @@ cask "sip-app" do
 
   auto_updates true
 
-  depends_on macos: ">= :sonoma"
-
   app "Sip.app"
 
   uninstall quit: "io.sipapp.Sip-paddle"
 
   zap trash: [
     "~/.sip_v*",
-    "~/Library/Application Support/CrashReporter/Sip_*.plist",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.sipapp.sip-paddle.sfl*",
+    "~/Library/Application Support/CrashReporter/Sip_*.plist",
     "~/Library/Application Support/io.sipapp.Sip-paddle",
     "~/Library/Application Support/Sip",
     "~/Library/Caches/io.sipapp.Sip-paddle",
     "~/Library/Cookies/io.sipapp.Sip-paddle.binarycookies",
-    "~/Library/Logs/DiagnosticReports/Sip-*.ips",
     "~/Library/HTTPStorages/io.sipapp.Sip-paddle",
+    "~/Library/Logs/DiagnosticReports/Sip-*.ips",
     "~/Library/Preferences/io.sipapp.Sip-paddle.plist",
     "~/Library/Saved Application State/io.sipapp.Sip-paddle.savedState",
     "~/Library/WebKit/io.sipapp.Sip-paddle",
