@@ -1,9 +1,9 @@
 cask "rustrover" do
   arch arm: "-aarch64"
 
-  version "2025.2.1,252.25557.134"
-  sha256 arm:   "469b4b7c42aa808a5f9d94315f4cc412ad74ef76ff51654d441ef16c5063dc27",
-         intel: "9143fa9bfcab98ed2a5215c006bb6bf5521ee5c9a9f08f6f321d0a873cfb39cc"
+  version "2025.2.2,252.26199.159"
+  sha256 arm:   "a673c45f2183d28ac6ac37df9a8cd7084af432793f505589164096a425fa7801",
+         intel: "bcb442e4d22a71cd312cae2821187da82f9c58cdd03e5343a070b12af6a11f85"
 
   url "https://download.jetbrains.com/rustrover/RustRover-#{version.csv.first}#{arch}.dmg"
   name "RustRover"
