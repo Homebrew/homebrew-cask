@@ -1,6 +1,6 @@
 cask "meta" do
-  version "2.2"
-  sha256 "18429c0f6875719af17f5845b1799b85c4bea45e7d915c45463cfa14e545236d"
+  version "2.2.1"
+  sha256 "1a7c26c038f50f2652091e96510a8b6e8b42dcb9697f409245b9567c271c42f1"
 
   url "https://www.nightbirdsevolve.com/meta/updates/bin/Meta%20#{version}.zip"
   name "Meta"
