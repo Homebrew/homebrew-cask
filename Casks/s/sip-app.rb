@@ -1,33 +1,11 @@
 cask "sip-app" do
-  on_monterey :or_older do
-    on_catalina :or_older do
-      version "2.8"
-      sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
-    end
-    on_big_sur do
-      version "2.8"
-      sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
-    end
-    on_monterey do
-      version "3.5.1"
-      sha256 "8dd74db34c925c9712c5b383bae43dc9cb2339ed3af2ad0a8677e0a22815f35f"
-    end
+  version "4.1"
+  sha256 "77fa8954b4e5e8bec5eba19484319eb2c7c3a59be7ac961de6044af7b04b282e"
 
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_ventura :or_newer do
-    version "4.0.3"
-    sha256 "e4ab62cdfc19611aa341afe6e31f873fd63d572b44592ec58b44e3946cab50b4"
-
-    # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
-    # work with all of the items in the feed (not just the newest one).
-    livecheck do
-      url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip.xml"
-      strategy :sparkle do |items|
-        items.map(&:short_version)
-      end
+  livecheck do
+    url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip.xml"
+    strategy :sparkle do |items|
+      items.map(&:short_version)
     end
   end
 
@@ -39,6 +17,8 @@ cask "sip-app" do
 
   auto_updates true
 
+  depends_on macos: ">= :sonoma"
+
   app "Sip.app"
 
   uninstall quit: "io.sipapp.Sip-paddle"
@@ -46,11 +26,15 @@ cask "sip-app" do
   zap trash: [
     "~/.sip_v*",
     "~/Library/Application Support/CrashReporter/Sip_*.plist",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.sipapp.sip-paddle.sfl*",
     "~/Library/Application Support/io.sipapp.Sip-paddle",
     "~/Library/Application Support/Sip",
     "~/Library/Caches/io.sipapp.Sip-paddle",
     "~/Library/Cookies/io.sipapp.Sip-paddle.binarycookies",
+    "~/Library/Logs/DiagnosticReports/Sip-*.ips",
+    "~/Library/HTTPStorages/io.sipapp.Sip-paddle",
     "~/Library/Preferences/io.sipapp.Sip-paddle.plist",
     "~/Library/Saved Application State/io.sipapp.Sip-paddle.savedState",
+    "~/Library/WebKit/io.sipapp.Sip-paddle",
   ]
 end
