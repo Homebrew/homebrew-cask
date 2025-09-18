@@ -1,9 +1,9 @@
 cask "cloud-pbx" do
   arch arm: "arm", intel: "intel"
 
-  version "45.7.0"
-  sha256 arm:   "e2579eee0604be7f087dc251a2988baa4aef785629d4874bfbd55562d35f4bef",
-         intel: "064cc1d9a4dde74852ddebc9a3354794023e73eb23824dafa4bab88bc10c0d05"
+  version "45.8.0"
+  sha256 arm:   "ea2ba14fc4e2ce2202290168136112f975b4d1090ca910eaec2341e76aaed770",
+         intel: "02bbcb9da02291ee0b2221e4541d9dc4298a6b2086e97777b1bebbf7b78e3ecd"
 
   url "https://cpbx-hilfe.deutschland-lan.de/de/direkthilfe/hilfe-downloads/desktop-clients/cloud-pbx-2.0-#{arch}_v#{version}",
       verified: "cpbx-hilfe.deutschland-lan.de/de/direkthilfe/hilfe-downloads/desktop-clients/"
@@ -28,4 +28,8 @@ cask "cloud-pbx" do
     "~/Library/Saved Application State/Cisco-Systems.Spark.savedState",
     "~/Library/Saved Application State/com.broadsoft.communicator.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
