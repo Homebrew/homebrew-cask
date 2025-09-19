@@ -16,5 +16,5 @@ cask "magicquit" do
 
   app "MagicQuit.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.MagicQuit.plist"
 end
