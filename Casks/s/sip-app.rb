@@ -4,7 +4,11 @@ cask "sip-app" do
       version "2.8"
       sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
     end
-    on_monterey :or_newer do
+    on_monterey do
+      version "3.5.1"
+      sha256 "8dd74db34c925c9712c5b383bae43dc9cb2339ed3af2ad0a8677e0a22815f35f"
+    end
+    on_ventura do
       version "3.6.2"
       sha256 "d8c43036940aefee8d9f632f2e5fd78939edebac0e658534729c226b7619af25"
     end
