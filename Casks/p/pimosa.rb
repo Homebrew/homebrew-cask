@@ -13,6 +13,7 @@ cask "pimosa" do
     strategy :sparkle, &:short_version
   end
 
+  # Binary is universal but only functional on Apple Silicon
   depends_on arch: :arm64
 
   app "Pimosa.app"
