@@ -1,6 +1,6 @@
 cask "archiver-app" do
-  version "4.3.0"
-  sha256 "74aeec7e3e977252e3b7608efcf843597908a9d58ad3b7ed77af669daf3962fc"
+  version "4.3.1"
+  sha256 "f8e2f968aa750bdffce38d4d5a06232dc6ddd4f0ca456c6cb6c668e658d2737c"
 
   url "https://storage.googleapis.com/incrediblebee/apps/Archiver-#{version.major}/Archiver-#{version}.zip",
       verified: "storage.googleapis.com/incrediblebee/"
@@ -13,7 +13,7 @@ cask "archiver-app" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sequoia"
 
   app "Archiver.app"
 
