@@ -1,19 +1,10 @@
 cask "sip-app" do
-  on_monterey :or_older do
-    on_catalina :or_older do
+  on_ventura :or_older do
+    on_big_sur :or_older do
       version "2.8"
       sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
     end
-    on_big_sur do
-      version "2.8"
-      sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
-    end
-    on_monterey do
-      version "3.6.2"
-      sha256 "d8c43036940aefee8d9f632f2e5fd78939edebac0e658534729c226b7619af25"
-    end
-
-    on_ventura do
+    on_monterey :or_newer do
       version "3.6.2"
       sha256 "d8c43036940aefee8d9f632f2e5fd78939edebac0e658534729c226b7619af25"
     end
