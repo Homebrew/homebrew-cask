@@ -1,5 +1,5 @@
 cask "pdfelement" do
-  version "12.0.2"
+  version "12.0.4"
   sha256 :no_check
 
   url "https://download.wondershare.com/cbs_down/mac-pdfelement_full5237.dmg"
@@ -13,6 +13,8 @@ cask "pdfelement" do
       xml.get_elements("//Version").map { |item| item.text&.strip }
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "PDFelement.app"
 
