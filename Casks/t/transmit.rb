@@ -9,8 +9,8 @@ cask "transmit" do
   homepage "https://panic.com/transmit/"
 
   livecheck do
-    url "https://download.panic.com/transmit/Transmit-#{version.major}-Latest.zip"
-    strategy :header_match
+    url "https://www.panic.com/updates/update.php?appName=Transmit%20#{version.major}&appVersion=#{version.major}"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
