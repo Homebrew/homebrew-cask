@@ -20,17 +20,17 @@ cask "secretive" do
   on_sonoma :or_newer do
     version "3.0.2"
     sha256 "03b2b7c81bfc3e061aa0542835f034ebd861d77f8f3298bcc1ac5dbd1ed2d4dd"
+
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
   end
 
   url "https://github.com/maxgoedjen/secretive/releases/download/v#{version}/Secretive.zip"
   name "Secretive"
   desc "Store SSH keys in the Secure Enclave"
   homepage "https://github.com/maxgoedjen/secretive"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   app "Secretive.app"
 
