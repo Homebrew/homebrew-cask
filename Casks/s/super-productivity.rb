@@ -1,9 +1,9 @@
 cask "super-productivity" do
   arch arm: "arm64", intel: "x64"
 
-  version "15.0.1"
-  sha256 arm:   "d2eaf5eca96ffadcb9b9874ea2d25ebbe6b7267cbebdfcbd48c1ab3476b77e0f",
-         intel: "cc840fb022b9c1a8f29a8ee446965edbcb0ebec880e9116b8b65657359bd6f92"
+  version "15.0.3"
+  sha256 arm:   "46635ef88b7681b315b8450b5a9a472a74a1f45ab3f58e356c49c9b34c1bbbdf",
+         intel: "41197a48efe61b141622d422270279bdf9c1431e7a82f15ac47b21e939cfa402"
 
   url "https://github.com/johannesjo/super-productivity/releases/download/v#{version}/superProductivity-#{arch}.dmg",
       verified: "github.com/johannesjo/super-productivity/"
@@ -16,7 +16,7 @@ cask "super-productivity" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Super Productivity.app"
 
