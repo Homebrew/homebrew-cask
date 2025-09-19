@@ -1,12 +1,13 @@
 cask "banking-4" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
-  version "9.0.0,9384"
+  version "9.0.1,9392"
   sha256 :no_check
 
-  url "https://subsembly.com/download/MacBanking4.pkg"
+  url "https://subsembly.com/download/MacBanking4.pkg",
+      verified: "subsembly.com/"
   name "Banking 4"
   desc "German accounting software"
-  homepage "https://subsembly.com/banking4.html"
+  homepage "https://banking4.de/index.html"
 
   livecheck do
     url "https://subsembly.com/banking4-macos-updates.php"
