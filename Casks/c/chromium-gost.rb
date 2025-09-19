@@ -1,9 +1,9 @@
 cask "chromium-gost" do
   arch arm: "arm64", intel: "amd64"
 
-  version "140.0.7339.132"
-  sha256 arm:   "1d1ddb86f1c0dc43cbc437515c6e57362ae9a37b42c5f368201626606b997169",
-         intel: "d8574d485a90b62a554d95382e2c39a01b0e06045ec08ea2091d4c426e26b406"
+  version "140.0.7339.185"
+  sha256 arm:   "6971794b5e91e12fe2b9e78be688b7995087aab36a1e2ee15d23b22b97eecf56",
+         intel: "067668e9082ac19995e0dbd76e0fa3937653a9ca35689f9644ceeeba89a73f82"
 
   url "https://github.com/deemru/Chromium-Gost/releases/download/#{version}/chromium-gost-#{version}-macos-#{arch}.tar.bz2"
   name "Chromium-Gost"
@@ -12,7 +12,7 @@ cask "chromium-gost" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Chromium-Gost.app"
 
