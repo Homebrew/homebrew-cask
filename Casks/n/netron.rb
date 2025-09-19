@@ -1,6 +1,6 @@
 cask "netron" do
-  version "8.6.4"
-  sha256 "7aaeadcae137e34e95bd2d1e73f4b4836d66e2bbeae39d68270aa8857af98518"
+  version "8.6.5"
+  sha256 "efb24902a6603f9877d47a86cb5f5cdaf0084b5715f77fb1e18a0cd660ebff86"
 
   url "https://github.com/lutzroeder/netron/releases/download/v#{version}/Netron-#{version}-mac.zip"
   name "Netron"
@@ -8,7 +8,7 @@ cask "netron" do
   homepage "https://github.com/lutzroeder/netron"
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Netron.app"
 
