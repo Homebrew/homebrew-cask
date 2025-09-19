@@ -1,6 +1,6 @@
 cask "melodics" do
-  version "4.1.1895,B305428E-F5EC-42BA-AC00-587E998035ED"
-  sha256 "75f17378c25ed20ebe58f77052c86f091f759c1851400fced772700ebc4a04b2"
+  version "4.1.1943,5B3B3C5D-1D8B-409F-AFC7-8005ED9D7646"
+  sha256 "e919959b44b42b3c258d2baf0be49ab80dcd8d3b8e9c857466b89262b115fff1"
 
   url "https://web-cdn.melodics.com/download/#{version.csv.second}.zip"
   name "Melodics"
@@ -19,6 +19,7 @@ cask "melodics" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Melodics.app"
 
