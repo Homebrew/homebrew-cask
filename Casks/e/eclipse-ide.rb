@@ -27,6 +27,8 @@ cask "eclipse-ide" do
     end
   end
 
+  depends_on macos: ">= :ventura"
+
   app "Eclipse.app"
 
   zap trash: "~/Library/Preferences/epp.package.committers.plist"

@@ -14,6 +14,8 @@ cask "eclipse-modeling" do
     cask "eclipse-ide"
   end
 
+  depends_on macos: ">= :ventura"
+
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Modeling.app"
 

@@ -18,6 +18,8 @@ cask "eclipse-platform" do
     end
   end
 
+  depends_on macos: ">= :ventura"
+
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Platform.app"
 

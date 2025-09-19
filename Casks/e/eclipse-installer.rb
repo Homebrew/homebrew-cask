@@ -15,6 +15,8 @@ cask "eclipse-installer" do
     cask "eclipse-ide"
   end
 
+  depends_on macos: ">= :ventura"
+
   app "Eclipse Installer.app"
 
   zap trash: [
