@@ -1,6 +1,6 @@
 cask "ripme" do
-  version "2.1.18-16-1342b621"
-  sha256 "204ebb7fb4f822d503f9dd1350a5703eb1f62aaf4a280da37cf3310472170afc"
+  version "2.1.19-16-78ff73fb"
+  sha256 "f9d3a3f79b08aabcc3caba1423f8f57bc7c9d0952613e92b97f2e89b5dab51c6"
 
   url "https://github.com/RipMeApp/ripme/releases/download/#{version}/ripme-#{version}.jar"
   name "RipMe"
