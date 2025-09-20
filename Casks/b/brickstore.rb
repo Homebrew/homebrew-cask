@@ -8,6 +8,13 @@ cask "brickstore" do
   desc "BrickLink offline management tool"
   homepage "https://www.brickstore.dev/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on macos: ">= :monterey"
+
   app "BrickStore.app"
 
   zap trash: [
