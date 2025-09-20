@@ -5,7 +5,7 @@ cask "osaurus" do
   url "https://github.com/dinoki-ai/osaurus/releases/download/#{version}/Osaurus-#{version}.dmg",
       verified: "github.com/dinoki-ai/osaurus/"
   name "Osaurus"
-  desc "Native Apple Silicon LLM server"
+  desc "LLM server built on MLX"
   homepage "https://dinoki.ai/osaurus"
 
   depends_on macos: ">= :sequoia"
