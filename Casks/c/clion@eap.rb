@@ -1,9 +1,9 @@
 cask "clion@eap" do
   arch arm: "-aarch64"
 
-  version "2025.3,253.17525.83"
-  sha256 arm:   "82d2726aa66485cf3cdc485ff943a10c56b6b14902f32c23a0863b98658bfca7",
-         intel: "99f2f965088f386cd3a9d6d2901fd27e475e18ca0161d6a9c62e489a678e6ee8"
+  version "2025.3,253.20558.39"
+  sha256 arm:   "5a7a0538148d920eb861e4472daf7f85aafcc0bec35f9dff1986fa0c429cf3bb",
+         intel: "887a5f56fe57b3db4f64604ca8da8e48c8306f6c86fd2987c433322a486b68b8"
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.csv.second}#{arch}.dmg"
   name "CLion EAP"
@@ -24,6 +24,7 @@ cask "clion@eap" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "CLion #{version.csv.first} EAP.app"
   binary "#{appdir}/CLion #{version.csv.first} EAP.app/Contents/MacOS/clion", target: "clion-eap"
