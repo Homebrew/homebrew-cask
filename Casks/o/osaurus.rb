@@ -14,7 +14,10 @@ cask "osaurus" do
   app "osaurus.app"
 
   zap trash: [
+    "~/Library/Application Support/com.dinoki.osaurus",
     "~/Library/Application Support/Osaurus",
+    "~/Library/Caches/com.dinoki.osaurus",
+    "~/Library/HTTPStorages/com.dinoki.osaurus",
     "~/Library/Preferences/ai.dinoki.osaurus.plist",
     "~/Library/Saved Application State/ai.dinoki.osaurus.savedState",
     "~/MLXModels",
