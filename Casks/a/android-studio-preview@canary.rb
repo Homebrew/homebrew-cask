@@ -24,9 +24,9 @@ cask "android-studio-preview@canary" do
   zap trash: [
         "~/.android",
         "~/Library/Android/sdk",
-        "~/Library/Application Support/Google/AndroidStudioPreview#{version.major_minor}",
-        "~/Library/Caches/Google/AndroidStudioPreview#{version.major_minor}",
-        "~/Library/Logs/Google/AndroidStudioPreview#{version.major_minor}",
+        "~/Library/Application Support/Google/AndroidStudio#{version.major_minor_patch}",
+        "~/Library/Caches/Google/AndroidStudio#{version.major_minor_patch}",
+        "~/Library/Logs/Google/AndroidStudio#{version.major_minor_patch}",
         "~/Library/Preferences/com.android.Emulator.plist",
         "~/Library/Preferences/com.google.android.studio-EAP.plist",
         "~/Library/Saved Application State/com.google.android.studio-EAP.savedState",
