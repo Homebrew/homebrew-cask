@@ -2,11 +2,13 @@ cask "status" do
   arch arm: "aarch64", intel: "x86_64"
 
   on_arm do
-    version "2.35.0,d4e7d0"
-    sha256 "96229cfbe96804a43824aab88de7e2fe3b28318b35053a3392252bffba874830"
+    version "2.35.1,748cd6"
+    sha256 "f8c8fe80e16e28d21147295e0a39f3dbf4134a6ad74103bcf4da2e73549909f9"
 
     url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg",
         verified: "github.com/status-im/status-desktop/releases/download/"
+
+    depends_on macos: ">= :ventura"
   end
   on_intel do
     version "2.32.1,aab802"
@@ -14,6 +16,8 @@ cask "status" do
 
     url "https://github.com/status-im/status-desktop/releases/download/#{version.csv.first}/StatusIm-Desktop-v#{version.csv.first}-#{version.csv.second}-#{arch}.dmg",
         verified: "github.com/status-im/status-desktop/releases/download/"
+
+    depends_on macos: ">= :monterey"
   end
 
   name "Status"
@@ -38,8 +42,6 @@ cask "status" do
       end.flatten
     end
   end
-
-  depends_on macos: ">= :monterey"
 
   app "Status.app"
 
