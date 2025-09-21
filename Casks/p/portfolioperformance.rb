@@ -1,9 +1,9 @@
 cask "portfolioperformance" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.79.1"
-  sha256 arm:   "2d37ae15e19797d5751216f30cd745bc86ea20c1fc4b32b3fd6a3724f6fbc6ec",
-         intel: "c21105237f4e79cf9880263cd42f667ef68682f8bb01a446af719e0cf26eb498"
+  version "0.80.0"
+  sha256 arm:   "be7cbecff0bf160e678709371d63b0d085a2cda27aeb920dc8d340ab154f1077",
+         intel: "69912afd61e4380ba1aaf516f1432dc45fc6c8a05c2f4db8ce10057782f11819"
 
   url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}-#{arch}.dmg",
       verified: "github.com/buchen/portfolio/"
@@ -17,6 +17,7 @@ cask "portfolioperformance" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "PortfolioPerformance.app"
 
