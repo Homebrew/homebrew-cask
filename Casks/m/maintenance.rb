@@ -35,15 +35,15 @@ cask "maintenance" do
     end
   end
   on_sequoia :or_newer do
-    version "3.3.6"
+    version "3.4.0"
 
-    url "https://www.titanium-software.fr/download/15/Maintenance.dmg"
+    url "https://www.titanium-software.fr/download/26/Maintenance.dmg"
 
     # We check the version on the homepage, as the version in the related plist
     # file can be out of date.
     livecheck do
       url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*15\s*</i)
+      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*26\s*</i)
     end
   end
 
@@ -58,6 +58,7 @@ cask "maintenance" do
     :ventura,
     :sonoma,
     :sequoia,
+    :tahoe,
   ]
 
   app "Maintenance.app"
