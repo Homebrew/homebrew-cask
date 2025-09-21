@@ -7,6 +7,8 @@ cask "quicklook-csv" do
   desc "Quick Look plugin for CSV files"
   homepage "https://github.com/p2/quicklook-csv"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "QuickLookCSV.qlgenerator"
 
   # No zap stanza required

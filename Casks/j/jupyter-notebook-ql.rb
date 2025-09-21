@@ -7,6 +7,8 @@ cask "jupyter-notebook-ql" do
   desc "Quick Look plugin for Jupyter notebooks"
   homepage "https://github.com/jendas1/jupyter-notebook-quick-look"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "jupyter-notebook-quick-look.qlgenerator"
 
   # No zap stanza required

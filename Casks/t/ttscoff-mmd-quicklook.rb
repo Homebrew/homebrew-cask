@@ -7,6 +7,8 @@ cask "ttscoff-mmd-quicklook" do
   desc "Quick Look plugin for viewing MultiMarkdown"
   homepage "https://github.com/ttscoff/mmd-quicklook"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "MultiMarkdown QuickLook.qlgenerator"
 
   # No zap stanza required

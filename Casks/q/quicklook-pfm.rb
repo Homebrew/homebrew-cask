@@ -12,6 +12,8 @@ cask "quicklook-pfm" do
     strategy :github_latest
   end
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "Quicklook-PFM.qlgenerator"
 
   # No zap stanza required
