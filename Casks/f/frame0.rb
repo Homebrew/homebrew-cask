@@ -20,8 +20,6 @@ cask "frame0" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Frame0.app"
 
   uninstall quit: "com.electron.frame0"
