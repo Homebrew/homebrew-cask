@@ -18,6 +18,7 @@ cask "dbeaver-community" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "DBeaver.app"
   binary "#{appdir}/DBeaver.app/Contents/MacOS/dbeaver"
