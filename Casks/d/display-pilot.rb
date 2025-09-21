@@ -1,9 +1,8 @@
 cask "display-pilot" do
-  version "1.6.7.0"
-  sha256 "41d209f16f6c7f42f60d5d0496953ad0ac1d474f9d0d15ea6e2eceb249b0f5d9"
+  version "1.7.0.0,250820135838"
+  sha256 "fedd1a079fc0bca3736d12ffb44f465f7025e93e6f9787b7108364cb1861b92d"
 
-  url "https://qspublic.s3.ap-southeast-1.amazonaws.com/qspublic/qs_app/1001/Display%20Pilot%202Setup-#{version}-release.dmg",
-      verified: "qspublic.s3.ap-southeast-1.amazonaws.com/qspublic/"
+  url "https://esupportdownload.benq.com/esupport/VERTICAL%20&%20PROFESSIONAL%20DISPLAY/Software/Display%20Pilot%202/Display%20Pilot%202%20for%20Mac_V#{version.csv.first}_Mac_#{version.csv.second}.zip"
   name "Display Pilot 2"
   desc "Display control utility"
   homepage "https://www.benq.com/en-ap/monitor/software/display-pilot-2.html"
@@ -16,6 +15,7 @@ cask "display-pilot" do
   end
 
   depends_on macos: ">= :big_sur"
+  container nested: "DisplayPilot2-Setup-#{version.csv.first}/Display Pilot 2Setup-#{version.csv.first}-release.dmg"
 
   app "Display Pilot 2.app"
 
