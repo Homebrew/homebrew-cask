@@ -3,10 +3,11 @@ cask "font-zalando-sans" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
+      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/zalandosans"
   name "Zalando Sans"
-  homepage "https://github.com/zalando/sans"
+  homepage "https://fonts.google.com/specimen/Zalando+Sans"
 
   font "ZalandoSans-Italic[wdth,wght].ttf"
   font "ZalandoSans[wdth,wght].ttf"
