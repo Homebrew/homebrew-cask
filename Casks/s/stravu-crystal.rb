@@ -1,6 +1,6 @@
 cask "stravu-crystal" do
-  version "0.2.3"
-  sha256 "a65ba4719a9b58602bf041f38f02f268c300bb579d26a3202f5eb8b2a8744ded"
+  version "0.3.0"
+  sha256 "308c47a8687c4d2aedde0926f46bfbf5b2e3459de6aea06b07e5df1080c2ad7d"
 
   url "https://github.com/stravu/crystal/releases/download/v#{version}/Crystal-#{version}-macOS-universal.dmg"
   name "Crystal"
