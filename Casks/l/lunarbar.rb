@@ -1,6 +1,6 @@
 cask "lunarbar" do
-  version "1.7.1"
-  sha256 "b1cc5c0c7780ce0a76582a818e755fa9c84e2913d31d2585a1988d1583a61937"
+  version "1.8.0"
+  sha256 "670f69f313e0f5e5bd9cf080c2cb5c49aa2357803bb45d8c5fd40c9935bde92b"
 
   url "https://github.com/LunarBar-app/LunarBar/releases/download/v#{version}/LunarBar-#{version}.dmg"
   name "LunarBar"
@@ -12,7 +12,7 @@ cask "lunarbar" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
 
   app "LunarBar.app"
 
