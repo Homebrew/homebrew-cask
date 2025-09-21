@@ -33,15 +33,15 @@ cask "calhash" do
     end
   end
   on_sequoia :or_newer do
-    version "1.4.6"
+    version "1.5.0"
 
-    url "https://www.titanium-software.fr/download/15/CalHash.dmg"
+    url "https://www.titanium-software.fr/download/26/CalHash.dmg"
 
     # We check the version on the homepage, as the version in the related plist
     # file can be out of date.
     livecheck do
       url :homepage
-      regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*15\s*</i)
+      regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*26\s*</i)
     end
   end
 
@@ -56,6 +56,7 @@ cask "calhash" do
     :ventura,
     :sonoma,
     :sequoia,
+    :tahoe,
   ]
 
   app "CalHash.app"
