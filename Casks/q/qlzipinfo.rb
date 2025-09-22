@@ -7,6 +7,8 @@ cask "qlzipinfo" do
   desc "List out the contents of a zip file in the QuickLook preview"
   homepage "https://github.com/srirangav/qlZipInfo"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "qlZipInfo.qlgenerator"
 
   # No zap stanza required

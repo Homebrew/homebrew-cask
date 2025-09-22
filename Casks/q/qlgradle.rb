@@ -7,6 +7,8 @@ cask "qlgradle" do
   desc "Quick Look plugin for viewing gradle files"
   homepage "https://github.com/Urucas/QLGradle"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "QLGradle.qlgenerator"
 
   # No zap stanza required

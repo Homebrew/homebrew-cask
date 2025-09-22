@@ -13,6 +13,8 @@ cask "webpquicklook" do
     strategy :extract_plist
   end
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "WebpQuickLook.qlgenerator"
 
   # No zap stanza required
