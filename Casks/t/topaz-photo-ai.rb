@@ -16,9 +16,24 @@ cask "topaz-photo-ai" do
 
   pkg "TopazPhotoAI-#{version}.pkg"
 
-  uninstall pkgutil: "com.topazlabs.TopazPhotoAI"
+  uninstall pkgutil: "com.topazlabs.TopazPhotoAI",
+            delete:  [
+              "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhotoAI.plugin",
+              "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhotoAIApply.plugin",
+              "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhotoAIAutomate.plugin",
+              "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhotoAIGather.plugin",
+              "~/Library/Application Support/Adobe/Lightroom/External Editor Presets/TopazPhotoAI.lrtemplate",
+              "~/Library/Application Support/Adobe/Lightroom/Modules/Topaz Photo AI.lrplugin",
+              "~/Library/Application Support/Affinity Photo 2/Plugins/TopazPhotoAI.plugin",
+              "~/Library/Application Support/Capture One/Plug-ins/TopazPhotoAI.coplugin",
+            ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.topazlabs.TopazPhotoAIplugin",
+    "~/Library/Application Support/Topaz Labs LLC/Topaz Photo AI",
+    "~/Library/Caches/com.topazlabs.TopazPhotoAI",
+    "~/Library/Caches/Topaz Labs LLC/Topaz Photo AI",
+    "~/Library/Containers/com.topazlabs.TopazPhotoAIplugin",
     "~/Library/Preferences/com.topaz-labs-llc.Topaz Photo AI.plist",
     "~/Library/Preferences/com.topazlabs.Topaz Photo AI.plist",
     "~/Library/Preferences/com.topazlabs.TopazPhotoAI.plist",

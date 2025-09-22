@@ -16,9 +16,20 @@ cask "topaz-gigapixel-ai" do
 
   pkg "TopazGigapixelAI-#{version}.pkg"
 
-  uninstall pkgutil: "com.topazlabs.TopazGigapixelAI"
+  uninstall pkgutil: "com.topazlabs.TopazGigapixelAI",
+            delete:  [
+              "/Library/Application Support/Adobe/Plug-Ins/CC/TopazGigapixelAI.plugin",
+              "/Library/Application Support/Adobe/Plug-Ins/CC/TopazGigapixelAIApply.plugin",
+              "/Library/Application Support/Adobe/Plug-Ins/CC/TopazGigapixelAIAutomate.plugin",
+              "/Library/Application Support/Adobe/Plug-Ins/CC/TopazGigapixelAIGather.plugin",
+              "~/Library/Application Support/Adobe/Lightroom/External Editor Presets/TopazGigapixelAI.lrtemplate",
+              "~/Library/Application Support/Affinity Photo 2/Plugins/TopazGigapixelAI.plugin",
+              "~/Library/Application Support/Capture One/Plug-ins/TopazGigapixelAI.coplugin",
+              "~/Library/Application Support/Topaz Labs LLC/Topaz Gigapixel AI",
+            ]
 
   zap trash: [
+    "~/Library/Caches/Topaz Labs LLC/Topaz Gigapixel AI",
     "~/Library/Preferences/com.topaz-labs-llc.Topaz Gigapixel AI.plist",
     "~/Library/Preferences/com.topazlabs.Topaz Gigapixel AI.plist",
     "~/Library/Preferences/com.topazlabs.TopazGigapixelAI.plist",
