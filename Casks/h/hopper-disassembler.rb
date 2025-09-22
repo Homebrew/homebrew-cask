@@ -1,6 +1,6 @@
 cask "hopper-disassembler" do
-  version "6.0.2"
-  sha256 "f0ea4de51d8e7423bb19aacaffae4d093f6e1598acae401ffab60a9cf0c16123"
+  version "6.0.3"
+  sha256 "f48de70810ca658bc1777967ae00af7b9e5cd9274d244fb52996ec24248d1b10"
 
   url "https://www.hopperapp.com/downloader/public/Hopper-#{version}-demo.dmg",
       user_agent: :fake
@@ -12,6 +12,8 @@ cask "hopper-disassembler" do
     url "https://www.hopperapp.com/rss/changelog.xml"
     regex(/<title>\s*Version\s+v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Hopper Disassembler.app"
 
