@@ -1,6 +1,6 @@
 cask "tradingview" do
-  version "2.12.0"
-  sha256 "5b18a8a7c206034bbae5666ba1db876da08198fe2cdadf360aa43e9fc4097f47"
+  version "2.13.0"
+  sha256 "fda5827e669a6f26dab4f91b25a8f56bdc0f6d5bd82df044b538c925bbc3d9e1"
 
   url "https://tvd-packages.tradingview.com/stable/#{version}/darwin/TradingView.dmg"
   name "TradingView Desktop"
@@ -13,6 +13,7 @@ cask "tradingview" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "TradingView.app"
 
