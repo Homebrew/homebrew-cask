@@ -1,6 +1,6 @@
 cask "website-audit" do
-  version "1.3.0a2"
-  sha256 "b7f53aa3cef3cd73b22820dc4393da368a8934b608f22d78b70c8f8bdf2ce792"
+  version "2.0.0"
+  sha256 "c593410ba2b46c1948c446e281320812b237bd0b4afa197c9d310c0dbdf07152"
 
   url "https://code.europa.eu/api/v4/projects/615/packages/generic/wat/#{version}/website-audit-#{version}-universal.dmg"
   name "Website Audit"
@@ -13,6 +13,8 @@ cask "website-audit" do
       json.map { |item| item["version"] }
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   app "website-audit.app"
 
