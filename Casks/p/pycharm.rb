@@ -44,6 +44,7 @@ cask "pycharm" do
     "~/Library/Caches/JetBrains/PyCharm#{version.major_minor}",
     "~/Library/Logs/JetBrains/PyCharm#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.pycharm.plist",
+    "~/Library/Preferences/jetbrains.pc.*.plist",
     "~/Library/Preferences/jetbrains.py.*.plist",
     "~/Library/Preferences/jetbrains.pycharm.*.plist",
     "~/Library/Preferences/PyCharm#{version.major_minor}",
