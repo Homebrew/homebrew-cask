@@ -1,8 +1,8 @@
 cask "topaz-video-ai" do
   version "7.1.3"
-  sha256 "1f2e97ee89a53e04649e7c8d70596a63aee87a4448db5ab673beab72ff96cd86"
+  sha256 "7d3fd71d8d59066312bd87372362db87aa47646eb775e2a0b1e59d040db65bea"
 
-  url "https://downloads.topazlabs.com/deploy/TopazVideoAI/#{version}/TopazVideoAI-#{version}.dmg"
+  url "https://downloads.topazlabs.com/deploy/TopazVideoAI/#{version}/TopazVideoAI-#{version}.pkg"
   name "Topaz Video AI"
   desc "Video upscaler and quality enhancer"
   homepage "https://www.topazlabs.com/topaz-video-ai"
@@ -14,7 +14,7 @@ cask "topaz-video-ai" do
 
   auto_updates true
 
-  app "Topaz Video AI.app"
+  pkg "TopazVideoAI-#{version}.pkg"
 
   uninstall pkgutil: [
               "com.topazlabs.aeplugin",
