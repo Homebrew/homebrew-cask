@@ -13,6 +13,8 @@ cask "dropbox-dash" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Dropbox Dash.app"
 
   uninstall quit: "io.hypertools.Dropbox-Dash"
