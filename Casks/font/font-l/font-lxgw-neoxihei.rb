@@ -7,6 +7,11 @@ cask "font-lxgw-neoxihei" do
   name "霞鹜新晰黑"
   homepage "https://github.com/lxgw/LxgwNeoXiHei"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   font "LXGWNeoXiHei.ttf"
 
   # No zap stanza required
