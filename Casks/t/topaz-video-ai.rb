@@ -5,12 +5,14 @@ cask "topaz-video-ai" do
   url "https://downloads.topazlabs.com/deploy/TopazVideoAI/#{version}/TopazVideoAI-#{version}.pkg"
   name "Topaz Video AI"
   desc "Video upscaler and quality enhancer"
-  homepage "https://www.topazlabs.com/topaz-video-ai"
+  homepage "https://docs.topazlabs.com/other-apps/legacy"
 
   livecheck do
     url "https://topazlabs.com/d/tvai/latest/mac/full"
     strategy :header_match
   end
+
+  deprecate! date: "2025-09-16", because: :discontinued, replacement_cask: "topaz-video"
 
   auto_updates true
 

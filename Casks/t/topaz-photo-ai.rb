@@ -5,12 +5,14 @@ cask "topaz-photo-ai" do
   url "https://downloads.topazlabs.com/deploy/TopazPhotoAI/#{version}/TopazPhotoAI-#{version}.pkg"
   name "Topaz Photo AI"
   desc "AI image enhancer"
-  homepage "https://www.topazlabs.com/photo-ai"
+  homepage "https://docs.topazlabs.com/other-apps/legacy"
 
   livecheck do
     url "https://topazlabs.com/d/photo/latest/mac/full"
     strategy :header_match
   end
+
+  deprecate! date: "2025-09-16", because: :discontinued, replacement_cask: "topaz-photo"
 
   auto_updates true
 

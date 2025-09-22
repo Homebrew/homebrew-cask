@@ -5,12 +5,14 @@ cask "topaz-gigapixel-ai" do
   url "https://downloads.topazlabs.com/deploy/TopazGigapixelAI/#{version}/TopazGigapixelAI-#{version}.pkg"
   name "Topaz Gigapixel AI"
   desc "AI image upscaler"
-  homepage "https://www.topazlabs.com/gigapixel-ai"
+  homepage "https://docs.topazlabs.com/other-apps/legacy"
 
   livecheck do
     url "https://topazlabs.com/d/gigapixel/latest/mac/full"
     strategy :header_match
   end
+
+  deprecate! date: "2025-09-16", because: :discontinued, replacement_cask: "topaz-gigapixel"
 
   auto_updates true
 
