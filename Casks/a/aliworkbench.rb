@@ -1,6 +1,6 @@
 cask "aliworkbench" do
-  version "9.86.01QNM"
-  sha256 "2ac73caadd85639b653af12df9d82e4657a748756a494e9f94142e63d19d3e65"
+  version "9.88.01QNM"
+  sha256 "12091bf9021bad1306c5df1cf75f71745b0140869b4ada47f9b2a2994952fc76"
 
   url "https://download.alicdn.com/wangwang/AliworkbenchQN_(#{version}).dmg",
       verified: "download.alicdn.com/wangwang/"
