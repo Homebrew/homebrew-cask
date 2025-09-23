@@ -24,7 +24,7 @@ cask "datadog-agent" do
     end
   end
 
-  installer manual: "datadog-agent-#{version}.pkg"
+  installer manual: "datadog-agent-#{version}.#{arch}.pkg"
 
   uninstall launchctl: "com.datadoghq.agent",
             quit:      "com.datadoghq.agent",
