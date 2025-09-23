@@ -11,11 +11,11 @@ cask "cmd" do
   livecheck do
     url "https://raw.githubusercontent.com/getcmd-dev/cmd/main/app/fastlane/appcast.xml"
     strategy :sparkle do |items|
-      items.select { |item| item.channel == "stable" }
-           .map(&:short_version)
+      items.find { |item| item.channel == "stable" }&.nice_version
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :sequoia"
 
   app "cmd.app"
