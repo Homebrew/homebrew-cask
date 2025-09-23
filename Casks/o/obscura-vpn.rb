@@ -1,6 +1,6 @@
 cask "obscura-vpn" do
-  version "1.136"
-  sha256 "4828f98bf268f1db5e06a82d433e2f1261453faf310de7dced0d67e04ca49589"
+  version "1.138"
+  sha256 "25cb55863ccef108aa23907c202311c7183254f2d64896e40ccc34af95df6284"
 
   url "https://pkgs.obscura.net/macos/obscura-#{version}.dmg"
   name "Obscura VPN"
