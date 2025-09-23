@@ -1,6 +1,6 @@
 cask "espanso" do
-  version "2.2.5"
-  sha256 "96906a2987d77d5ce875078a307da7826626088b5c44741de1b99bc988753547"
+  version "2.2.7"
+  sha256 "1d671417f5a6b94a86b0ac575d8d8146e3a80b8c23275fd673640b8bc5028e6b"
 
   url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-Universal.zip",
       verified: "github.com/espanso/espanso/"
