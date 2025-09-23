@@ -1,6 +1,6 @@
 cask "leader-key" do
-  version "1.17.2"
-  sha256 "7660740ebce8d046867fd3464ebb8063eb6c4c5b566cf394662324bbe3fcdbb6"
+  version "1.17.3"
+  sha256 "07fabeef4a0704b7568f323389b509d3ff5f79df6f8b59f27abec1174886346f"
 
   url "https://github.com/mikker/LeaderKey.app/releases/download/v#{version}/Leader.Key.app.zip"
   name "Leader Key"
