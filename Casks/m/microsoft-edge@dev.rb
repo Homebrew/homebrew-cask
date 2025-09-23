@@ -1,6 +1,6 @@
 cask "microsoft-edge@dev" do
-  version "142.0.3558.0,f54b9f8f-e7a8-49b3-a4ef-9c3b6539f3e0"
-  sha256 "767ceb208c7df1d826d3cd20958fe480485c9d0c0dacf013e9e61546620ebc5d"
+  version "142.0.3568.0,2647513b-96ac-436e-8508-ce197b6ccd19"
+  sha256 "b5c3f1b7b7375291408bf4e28922db533e6d66d72599044d5e9bd66292ada9ad"
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdgeDev-#{version.csv.first}.dmg"
   name "Microsoft Edge Dev"
