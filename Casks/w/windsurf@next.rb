@@ -1,9 +1,9 @@
 cask "windsurf@next" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.12.113+next.5cb333db66,5cb333db6691494b7e6997f29b4420a4d04999aa"
-  sha256 arm:   "b3db8016803e2e0592320bd8dfc34aced88d3f9e7a36850bb8c17e55aa2b496b",
-         intel: "25f438824ef24a047cfc50b129c86f1e892abced1a08d2a8c9708dfc7662922b"
+  version "1.12.114+next.26a4bfabc5,26a4bfabc5205be08eb0410c376d62686d888b4c"
+  sha256 arm:   "c5101e80e007b9516bfd79b843c9cdc54fd9d9233dbd4175ae8bffebc7204dff",
+         intel: "01da1101b8df5501624811375ceaaa76faac6f20ce5bb1465f809e5288cdf74b"
 
   url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/next/#{version.csv.second}/Windsurf-darwin-#{arch}-#{version.csv.first}.dmg",
       verified: "windsurf-stable.codeiumdata.com/"
