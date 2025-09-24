@@ -1,5 +1,5 @@
 cask "pimosa" do
-  version "1.3.2"
+  version "1.3.3"
   sha256  :no_check
 
   url "https://pub-e98ac9d8ff7347b29207e39fd6b3cb89.r2.dev/Pimosa.zip",
