@@ -1,5 +1,5 @@
 cask "scrolla" do
-  version "26"
+  version "27"
   sha256 :no_check
 
   url "https://releases.scrolla.app/Scrolla.zip"
