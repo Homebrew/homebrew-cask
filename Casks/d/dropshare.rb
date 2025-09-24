@@ -16,6 +16,7 @@ cask "dropshare" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "Dropshare #{version.major}.app"
