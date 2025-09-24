@@ -1,6 +1,6 @@
 cask "outline" do
-  version "5.2507.0"
-  sha256 "120cdacadd4e195f8cc76a9ea3fb0ba82c0f08af7aa4939b3d940f34e8a7ddc0"
+  version "5.2509.0"
+  sha256 "28792acc290f2ddd8cbcec7e4e24ea5ec9208981373971519618bd659862eba7"
 
   url "https://static.outline.app/direct/main/Outline_#{version}.zip"
   name "Outline"
@@ -13,7 +13,7 @@ cask "outline" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :tahoe"
 
   app "Outline.app"
 
