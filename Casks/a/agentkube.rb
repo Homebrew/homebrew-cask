@@ -1,15 +1,22 @@
 cask "agentkube" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.0.4"
-  sha256 arm:   "8afb8b9aa6fa9d13cc7e8018c0ff836600f5b08e57fc50305a592ffc63098373",
-         intel: "8bd840ccfaaf884517bdf6c40b49bfd9263f5025d40787a3e78975607e2a2fd5"
+  version "0.0.6"
+  sha256 arm:   "b26159149837a0236e0951c28bebb1fd38fdd80c7540eea62b7b0401616a5527",
+         intel: "9fec8e8854b9512c9af621f6ccf858ad05da993bb5eac725414be5c7ed958fb8"
 
   url "https://github.com/agentkube/agentkube/releases/download/v#{version}/agentkube_#{version}_#{arch}-apple-darwin.tar.gz",
       verified: "github.com/agentkube/agentkube/"
   name "Agentkube"
   desc "AI-powered Kubernetes IDE"
   homepage "https://agentkube.com/"
+
+  # The upstream repository contains an old, one-off tag (1.0.4) that is
+  # higher than current versions, so we check the "latest" release instead.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
