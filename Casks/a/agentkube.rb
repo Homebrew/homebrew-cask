@@ -11,6 +11,8 @@ cask "agentkube" do
   desc "AI-powered Kubernetes IDE"
   homepage "https://agentkube.com/"
 
+  # The upstream repository contains an old, one-off tag (1.0.4) that is
+  # higher than current versions, so we check the "latest" release instead.
   livecheck do
     url :url
     strategy :github_latest
