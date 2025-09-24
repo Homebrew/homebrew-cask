@@ -17,7 +17,6 @@ cask "mullvad-vpn" do
     end
   end
 
-  auto_updates true
   conflicts_with cask: "mullvad-vpn@beta"
   depends_on macos: ">= :ventura"
 
