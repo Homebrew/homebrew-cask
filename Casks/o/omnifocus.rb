@@ -37,7 +37,6 @@ cask "omnifocus" do
 
     livecheck do
       url "https://www.omnigroup.com/download/latest/omnifocus/"
-      regex(/OmniFocus[._-]v?(\d+(?:\.\d+)+)\.dmg/)
       strategy :header_match
     end
   end
