@@ -1,6 +1,6 @@
 cask "voiceink" do
-  version "1.56"
-  sha256 "b342c65d1c2ee553c3260d9b252675b9ab30a0f3a1c36156809679d29c314c69"
+  version "1.57"
+  sha256 "158c16447a9c5479d72189d004c836d5ff492dc4550a83f07cc0a71d0e5a73cb"
 
   url "https://github.com/Beingpax/VoiceInk/releases/download/v#{version}/VoiceInk.dmg",
       verified: "github.com/Beingpax/VoiceInk/"
