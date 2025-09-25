@@ -10,6 +10,11 @@ cask "rclone-ui" do
   desc "GUI for Rclone"
   homepage "https://github.com/rclone-ui/rclone-ui"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :ventura"
 
