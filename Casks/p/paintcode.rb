@@ -1,6 +1,6 @@
 cask "paintcode" do
-  version "3.6.0"
-  sha256 "50f6caa0f29666332847858e192824a410d0bbd128c7d984e05aab835228f111"
+  version "3.6.1"
+  sha256 "5eb67e77fe5fa9361943d78394bc8447f8e3fd3adf29e7aa4393f7a8dcffe8d8"
 
   url "https://www.pixelcut.com/paintcode#{version.major}/paintcode_#{version}.zip",
       verified: "pixelcut.com/"
