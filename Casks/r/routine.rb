@@ -1,9 +1,9 @@
 cask "routine" do
   arch arm: "-arm64"
 
-  version "0.22.0"
-  sha256 arm:   "3221cc341b03744c9aae62bec359dc10a7aa211eed5f44399286c27e87502f86",
-         intel: "cdf9f7d96bb628edebdcfc839eee5cee1368a863b1d760f21f109a0572a485ae"
+  version "0.22.1"
+  sha256 arm:   "01c04ca5b89986f7e695239f14d85c3be808064fb66f59ad37e0fe8a21f989f7",
+         intel: "afabac872651c65bf02f07207c830ab9a83a0410bd2ad3da108160f3e24e079c"
 
   url "https://releases.routine.co/routine/osx#{arch}/Routine-#{version}.zip"
   name "Routine"
