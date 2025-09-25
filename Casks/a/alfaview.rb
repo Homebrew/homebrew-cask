@@ -1,6 +1,6 @@
 cask "alfaview" do
-  version "9.23.1"
-  sha256 "c9afd8fb0b0c6a741dfdd758eee1c73c43d3c92d5f86dba6034b93627e3a5c3f"
+  version "9.23.2"
+  sha256 "9cc49c49bf6f30ebdc2b4faf7f2d5380badc780876d1817c6a6f0e7ce23e2c6d"
 
   url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.pkg"
   name "Alfaview"
