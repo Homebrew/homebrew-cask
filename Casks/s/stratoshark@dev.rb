@@ -1,6 +1,6 @@
 cask "stratoshark@dev" do
-  version "0.9.4,46,b1d27758aab7"
-  sha256 "73b125c70d690e4ae2e3947b7000426025504044c04686c4901d74bf3e1c1733"
+  version "0.9.4,50,aadb09558d2c"
+  sha256 "0b8a973436aed8c4ee93c6e86f546a2c114802b277c4a8e17632f596b87042ae"
 
   url "https://www.wireshark.org/download/automated/osx/Stratoshark%20#{version.csv.first}-#{version.csv.second}-g#{version.csv.third}.dmg",
       verified: "wireshark.org/download/"
