@@ -1,11 +1,13 @@
 cask "midi-router-client" do
-  version "2.3.1"
-  sha256 "8b6a06a5ffdcc2c909d2952fe4adc1d570682d3e206eb4215204f302196f48dc"
+  version "2.3.3"
+  sha256 "d4b5a2d5eb21a3408f5bd9e61bfd361735a90f6fb51de20c485f911f8a756505"
 
   url "https://downloads.sourceforge.net/midi-router-client/midi-router-client-#{version}-Darwin.dmg"
   name "Midi Router Client"
   desc "Create routes from anywhere to anywhere"
   homepage "https://sourceforge.net/projects/midi-router-client/"
+
+  depends_on macos: ">= :tahoe"
 
   app "midi-router-client.app"
 
