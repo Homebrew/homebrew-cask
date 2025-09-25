@@ -1,6 +1,6 @@
 cask "rapidapi" do
-  version "4.4.0"
-  sha256 "7558effd408d310cfaf7ea6b39b36c6d4cef385dbd8da05f1977d0508e943718"
+  version "4.4.1"
+  sha256 "bdb34c0bdadc297ab6d4bd03b3390fe4f3c90f3f8fcdac16ceaa51ee55831840"
 
   url "https://cdn-builds.paw.cloud/paw/RapidAPI-#{version}.zip"
   name "RapidAPI"
