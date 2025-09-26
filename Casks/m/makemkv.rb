@@ -1,6 +1,6 @@
 cask "makemkv" do
-  version "1.18.1"
-  sha256 "83e696df93e9add8981d0a51f3b8f20804e6a1a3c4ce341705dcee64932c2a08"
+  version "1.18.2"
+  sha256 "aa0f3cdd936061846946b8e7ab3b735006287c27b8853b2b8b15d428789f981f"
 
   url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   name "MakeMKV"
@@ -11,6 +11,8 @@ cask "makemkv" do
     url "https://www.makemkv.com/download/"
     regex(%r{href=.*?/makemkv[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg}i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "MakeMKV.app"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
