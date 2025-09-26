@@ -33,7 +33,6 @@ jobs:
         with:
           core: false
           cask: false
-          test-bot: false
 
       - name: Cache Homebrew Gems
         id: cache
