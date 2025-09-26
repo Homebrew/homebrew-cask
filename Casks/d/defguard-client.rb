@@ -1,14 +1,19 @@
 cask "defguard-client" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.5.0"
-  sha256 arm:   "e957b4fa68dc46b97b1fe2a7fa77f00c774172fb95486e38190cde8a67975950",
-         intel: "b0d49b65dfc70b7b69fc018d400ab5b07461a7a3191de28e09947feaa4a61492"
+  version "1.5.1"
+  sha256 arm:   "93a9003db5c2d98252576a748c246ee57584e88e443c658ce0baa5f306d80987",
+         intel: "1e6f3672e274161cae01ee5cdf11ae8243f46e0590b532d8ca186eff57b82f46"
 
   url "https://github.com/DefGuard/client/releases/download/v#{version}/defguard-#{arch}-apple-darwin-#{version}.pkg"
   name "Defguard Client"
   desc "WireGuard VPN client which supports multi-factor authentication"
   homepage "https://github.com/defguard/client"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   pkg "defguard-#{arch}-apple-darwin-#{version}.pkg"
 
