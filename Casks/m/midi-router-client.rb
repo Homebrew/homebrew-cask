@@ -7,6 +7,11 @@ cask "midi-router-client" do
   desc "Create routes from anywhere to anywhere"
   homepage "https://sourceforge.net/projects/midi-router-client/"
 
+  livecheck do
+    url :url
+    regex(%r{url=.*?/midi-router-client[._-]v?(\d+(?:\.\d+)+)[._-]Darwin\.(?:dmg|zip)}i)
+  end
+
   depends_on macos: ">= :tahoe"
 
   app "midi-router-client.app"
