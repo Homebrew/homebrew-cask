@@ -12,8 +12,13 @@ cask "arduino-ide@nightly" do
   app "Arduino IDE.app"
 
   zap trash: [
+    "~/.arduino15",
     "~/.arduinoIDE",
     "~/Library/Application Support/arduino-ide",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cc.arduino.ide*.sfl*",
+    "~/Library/Arduino15",
+    "~/Library/Preferences/cc.arduino.IDE*.plist",
+    "~/Library/Saved Application State/cc.arduino.IDE#{version.major}.savedState",
   ]
 
   caveats do
