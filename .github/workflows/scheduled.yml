@@ -33,7 +33,6 @@ jobs:
         with:
           core: false
           cask: true
-          test-bot: false
 
       - run: brew install coreutils
 
@@ -73,7 +72,6 @@ jobs:
         with:
           core: false
           cask: true
-          test-bot: false
 
       - name: Check cask source is not archived.
         id: archived

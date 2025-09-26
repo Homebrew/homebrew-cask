@@ -48,7 +48,6 @@ jobs:
         with:
           core: false
           cask: true
-          test-bot: false
 
       - name: Check out Pull Request
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
@@ -88,7 +87,6 @@ jobs:
         with:
           core: true
           cask: true
-          test-bot: true
 
       - name: Enable debug mode
         run: |

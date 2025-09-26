@@ -26,7 +26,6 @@ jobs:
         with:
           core: false
           cask: true
-          test-bot: false
 
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@main
