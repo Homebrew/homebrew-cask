@@ -8,6 +8,11 @@ cask "jubler" do
   desc "Subtitle editor"
   homepage "https://www.jubler.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Jubler.app"
 
   zap trash: [
