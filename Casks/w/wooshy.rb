@@ -1,5 +1,3 @@
-# typed: false
-
 cask "wooshy" do
   version "40"
   sha256 :no_check
