@@ -6,7 +6,7 @@ cask "osaurus" do
       verified: "github.com/dinoki-ai/osaurus/"
   name "Osaurus"
   desc "LLM server built on MLX"
-  homepage "https://dinoki.ai/osaurus"
+  homepage "https://osaurus.ai/"
 
   depends_on macos: ">= :sequoia"
   depends_on arch: :arm64
