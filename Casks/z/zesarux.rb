@@ -1,6 +1,6 @@
 cask "zesarux" do
-  version "12.0"
-  sha256 "1abbb5e53f8557d07d1cc94b904eb07dcb79e064b7dff5c2253569f7c2f4a80c"
+  version "12.1"
+  sha256 "d841c237c59caf597dfc71f42ce9326bec3f419fc32f426b0350cd3b02a57e67"
 
   url "https://github.com/chernandezba/zesarux/releases/download/ZEsarUX-#{version}/ZEsarUX_macos-#{version}.dmg"
   name "ZEsarUX"
@@ -12,6 +12,8 @@ cask "zesarux" do
     regex(/ZEsarUX[._-]v?([\dX]+(?:\.\d+)*)/i)
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "ZEsarUX.app"
 
