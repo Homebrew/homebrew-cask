@@ -38,7 +38,6 @@ jobs:
         with:
           core: false
           cask: false
-          test-bot: false
 
       - name: Install tools
         run: brew install actionlint shellcheck zizmor
