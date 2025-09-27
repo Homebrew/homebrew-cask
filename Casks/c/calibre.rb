@@ -1,5 +1,5 @@
 cask "calibre" do
-  on_monterey :or_older do
+  on_ventura :or_older do
     on_catalina :or_older do
       version "6.11.0"
       sha256 "d7c40f3f35ba9043c13303632526f135b2c4086471a5c09ceb8b397c55c076fa"
@@ -12,12 +12,16 @@ cask "calibre" do
       version "6.29.0"
       sha256 "2f76428ae19617875c5725cd892751a80eb2acdda76e06cd19c2f21a63966998"
     end
+    on_ventura do
+      version "7.26"
+      sha256 "6c329e20bc575fb2445b2279f1c9df73efecfd371a3864a35f1b575b87332ee4"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
+  on_sonoma :or_newer do
     version "8.11.1"
     sha256 "e326be73e4b33a3104220bf45d58b6b9b634d07259ecc856ff8326688428c71a"
 
