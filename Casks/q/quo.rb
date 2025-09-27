@@ -1,18 +1,18 @@
-cask "openphone" do
-  version "4.1.10"
-  sha256 "af3b18d6ab98151c02d67a1066c71d88782dd68c660e256c867e5a51b6e9530e"
+cask "quo" do
+  version "4.1.12"
+  sha256 "c2938c18cd29259121d8cd3d9aa522c609727cd0a17fa627796798cd43fb3211"
 
-  url "https://download.openphone.co/OpenPhone-#{version}-universal.dmg"
-  name "OpenPhone"
+  url "https://download.quo.com/Quo-#{version}-universal.dmg"
+  name "Quo"
   desc "Business phone for professionals, teams, and companies"
-  homepage "https://www.openphone.co/"
+  homepage "https://www.quo.com/"
 
   livecheck do
     url "https://s3-us-west-2.amazonaws.com/download.openphone.co/latest-mac.yml"
     strategy :electron_builder
   end
 
-  app "OpenPhone.app"
+  app "Quo.app"
 
   zap trash: [
     "~/Library/Application Support/OpenPhone",

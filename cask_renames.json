@@ -136,6 +136,7 @@
   "ollama": "ollama-app",
   "opal": "opal-composer",
   "openmsx": "openmsx-emulator",
+  "openphone": "quo",
   "openra-playtest": "openra@playtest",
   "opensc": "opensc-app",
   "opera-developer": "opera@developer",
