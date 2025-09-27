@@ -17,5 +17,8 @@ cask "overview" do
 
   app "Overview.app"
 
-  zap trash: "~/Library/Preferences/io.williampierce.Overview.plist"
+  zap trash: [
+    "~/Library/HTTPStorages/io.williampierce.Overview",
+    "~/Library/Preferences/io.williampierce.Overview.plist",
+  ]
 end
