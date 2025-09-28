@@ -1,44 +1,38 @@
 cask "choosy" do
-  on_ventura :or_older do
+  on_sonoma :or_older do
     on_catalina :or_older do
       version "2.2.1"
       sha256 "71fe3c3c592d449063189a575a39b1f00735ee20cf1de94552896f5f8e93bf47"
-
-      pkg "Choosy.pkg"
     end
     on_big_sur do
       version "2.3.1"
       sha256 "8d6a44b78ed256d6f502872fd1f62cf1f7fea877906bedddc5bbf26f93b6ea57"
-
-      pkg "Choosy.pkg"
     end
     on_monterey do
       version "2.3.1"
       sha256 "8d6a44b78ed256d6f502872fd1f62cf1f7fea877906bedddc5bbf26f93b6ea57"
-
-      pkg "Choosy.pkg"
     end
     on_ventura do
       version "2.3.1"
       sha256 "8d6a44b78ed256d6f502872fd1f62cf1f7fea877906bedddc5bbf26f93b6ea57"
-
-      pkg "Choosy.pkg"
+    end
+    on_sonoma do
+      version "2.4.2"
+      sha256 "060092e497c34a1e1ea4226f54910ba283f004ea131946bd0d423e220227a2cc"
     end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
-    version "2.4.2"
-    sha256 "060092e497c34a1e1ea4226f54910ba283f004ea131946bd0d423e220227a2cc"
+  on_sequoia :or_newer do
+    version "2.5"
+    sha256 "7830e5720c30ba6b79692e24bba305616ce08afac844b6978d86d16f432d6f0f"
 
     livecheck do
       url "https://choosy.app/sparkle/feed"
       strategy :sparkle
     end
-
-    pkg "Choosy.pkg"
   end
 
   url "https://downloads.choosy.app/choosy_#{version}.zip"
@@ -47,6 +41,8 @@ cask "choosy" do
   homepage "https://choosy.app/"
 
   auto_updates true
+
+  pkg "Choosy.pkg"
 
   uninstall quit:    "com.choosyosx.Choosy",
             pkgutil: "com.choosyosx.Choosy"
