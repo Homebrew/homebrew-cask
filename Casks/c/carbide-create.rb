@@ -1,6 +1,6 @@
 cask "carbide-create" do
-  version "815"
-  sha256 "4bc73e167d44cfa5ff53bc52790678762911a1a9a9146581b36967183ee149d8"
+  version "831"
+  sha256 "527905322a201109d3e9363f311eced4e5b8e3d52e737d2e08fe1fe762ac0b0b"
 
   url "https://carbide-downloads.website-us-east-1.linodeobjects.com/cc/stable/#{version}/CarbideCreate-#{version}.dmg",
       verified: "carbide-downloads.website-us-east-1.linodeobjects.com/"
