@@ -24,8 +24,12 @@ cask "altserver" do
   uninstall quit: "com.rileytestut.AltServer"
 
   zap trash: [
+    "~/Library/Application Scripts/com.rileytestut.AltServer-LaunchAtLoginHelper",
+    "~/Library/Application Support/com.rileytestut.AltServer",
     "~/Library/Caches/com.rileytestut.AltServer",
+    "~/Library/Containers/com.rileytestut.AltServer-LaunchAtLoginHelper",
     "~/Library/Cookies/com.rileytestut.AltServer.binarycookies",
+    "~/Library/HTTPStorages/com.rileytestut.AltServer",
     "~/Library/Preferences/com.rileytestut.AltServer.plist",
   ]
 end
