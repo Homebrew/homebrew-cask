@@ -1,11 +1,10 @@
 cask "img2jpg-optimizer" do
   version "1.0.0"
-  sha256 "035151d675fb27b49d6e46ec5df63c3454ed1f09f4637bccb8924af20224d9e5"
+  sha256 "REPLACE_WITH_ACTUAL_SHA"
 
-  url "https://github.com/chupchupchup/IMG2JPG-Optimizer/releases/download/v#{version}/IMG2JPG-Optimizer-final.dmg",
-      verified: "github.com/chupchupchup/IMG2JPG-Optimizer/"
-  name "IMG2JPG Optimizer"
-  desc "MozJPEG-based JPEG optimizer (progressive + optimized Huffman)"
+  url "https://github.com/chupchupchup/IMG2JPG-Optimizer/releases/download/v#{version}/IMG2JPG-Optimizer-final.dmg"
+  name "IMG2JPG-Optimizer"
+  desc "Optimiseur JPEG/PNG basé sur MozJPEG (progressif, Huffman optimisé)"
   homepage "https://github.com/chupchupchup/IMG2JPG-Optimizer"
 
   depends_on arch: :arm64
