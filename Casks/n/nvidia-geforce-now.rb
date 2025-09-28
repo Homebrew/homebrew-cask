@@ -19,13 +19,15 @@ cask "nvidia-geforce-now" do
   app "GeForceNOW.app"
 
   zap trash: [
-    "~/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf",
-    "~/Library/Application Support/NVIDIA/GeForceNOW",
-    "~/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall",
-    "~/Library/Caches/NVIDIA/GeForceNOW",
-    "~/Library/HTTPStorages/com.nvidia.gfnpc.mall",
-    "~/Library/Preferences/com.nvidia.gfnpc.mall.helper.plist",
-    "~/Library/Preferences/com.nvidia.gfnpc.mall.helper.renderer.plist",
-    "~/Library/Saved Application State/com.nvidia.gfnpc.mall.savedState",
-  ]
+        "~/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf",
+        "~/Library/Application Support/NVIDIA/GeForceNOW",
+        "~/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall",
+        "~/Library/Caches/com.nvidia.nvcontainer",
+        "~/Library/Caches/NVIDIA/GeForceNOW",
+        "~/Library/HTTPStorages/com.nvidia.gfnpc.mall",
+        "~/Library/Preferences/com.nvidia.gfnpc.mall.helper.plist",
+        "~/Library/Preferences/com.nvidia.gfnpc.mall.helper.renderer.plist",
+        "~/Library/Saved Application State/com.nvidia.gfnpc.mall.savedState",
+      ],
+      rmdir: "~/Movies/NVIDIA"
 end
