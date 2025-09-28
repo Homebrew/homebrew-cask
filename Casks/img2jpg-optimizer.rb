@@ -4,7 +4,7 @@ cask "img2jpg-optimizer" do
 
   url "https://github.com/chupchupchup/IMG2JPG-Optimizer/releases/download/v#{version}/IMG2JPG-Optimizer-final.dmg"
   name "IMG2JPG Optimizer"
-  desc "Optimiseur d’images MozJPEG (JPEG progressif, Huffman optimisé) pour macOS Apple Silicon"
+  desc "Optimiseur d’images MozJPEG (progressif + Huffman optimisé)"
   homepage "https://github.com/chupchupchup/IMG2JPG-Optimizer"
 
   depends_on arch: :arm64
