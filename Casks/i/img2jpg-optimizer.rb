@@ -3,7 +3,7 @@ cask "img2jpg-optimizer" do
   sha256 "035151d675fb27b49d6e46ec5df63c3454ed1f09f4637bccb8924af20224d9e5"
 
   url "https://github.com/chupchupchup/IMG2JPG-Optimizer/releases/download/v#{version}/IMG2JPG-Optimizer-final.dmg"
-  name "IMG2JPG Optimizer"
+  name "IMG2JPG-Optimizer"
   desc "Optimiseur JPEG/PNG basé sur MozJPEG (progressif, Huffman optimisé)"
   homepage "https://github.com/chupchupchup/IMG2JPG-Optimizer"
 
