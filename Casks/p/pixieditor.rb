@@ -8,6 +8,11 @@ cask "pixieditor" do
   desc "Open Source Universal 2D Graphics Editor"
   homepage "https://pixieditor.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "PixiEditor.app"
 
   zap trash: [
