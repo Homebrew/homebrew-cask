@@ -1,6 +1,6 @@
 cask "typeface" do
-  version "4.2.0,4734"
-  sha256 "e0927f47e3d49b24d23eb9c835f9da37fadeb347025971c18d04a6e7d2de05b3"
+  version "4.2.1,4761"
+  sha256 "53861ccd67bb195deb6a1ea798fa528fc6ec06a654845f9cf61dd610a86a6822"
 
   url "https://dcdn.typefaceapp.com/Typeface-#{version.csv.first}-#{version.csv.second}/Typeface-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Typeface"
@@ -13,6 +13,7 @@ cask "typeface" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Typeface.app"
 
