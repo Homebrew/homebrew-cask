@@ -1,6 +1,6 @@
 cask "kimis" do
-  version "1.17"
-  sha256 "cfe11de54a57bee62c639d108c015bdc290c18b77ad6ab8043b1cce6010d0fae"
+  version "1.18.166"
+  sha256 "6e93e7780744660ed21b35693233300fe9b1b6bad562fa1c76738ca0b07db2ff"
 
   url "https://github.com/Lakr233/Kimis/releases/download/#{version}/Kimis.zip"
   name "Kimis"
