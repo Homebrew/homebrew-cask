@@ -1,23 +1,24 @@
 cask "sketch" do
-  on_big_sur :or_older do
-    version "96.3,167315"
-    sha256 "3ba2c147aab6b2fcb4b5cc3e3ee7fce3f63551e6ef743a7afe459bd0a87bb4a6"
-
+  on_ventura :or_older do
+    on_big_sur :or_older do
+      version "96.3,167315"
+      sha256 "3ba2c147aab6b2fcb4b5cc3e3ee7fce3f63551e6ef743a7afe459bd0a87bb4a6"
+    end
+    on_monterey do
+      version "100.3,180165"
+      sha256 "e51efde061eb3d5b9b999f7821d0d547114ce5b3ed06c0ca3278d60fb4d92678"
+    end
+    on_ventura do
+      version "101.9,182113"
+      sha256 "e6de9d00399f4511711f895c74b909496f690d4f0f4ba66340b158106262e873"
+    end
     livecheck do
       skip "Legacy version"
     end
   end
-  on_monterey do
-    version "100.3,180165"
-    sha256 "e51efde061eb3d5b9b999f7821d0d547114ce5b3ed06c0ca3278d60fb4d92678"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_ventura :or_newer do
-    version "2025.2.2,205349"
-    sha256 "20e45838c575725357ec859ee70840746b72998cb960a29a79b171f8060b74fa"
+  on_sonoma :or_newer do
+    version "2025.2.3,205383"
+    sha256 "51286670e1e2eb64cacbafe2fd312a8d59ae5afda5cb40c762895bf0766e2dda"
 
     # Older versions may have a more recent `pubDate` than newer versions, so
     # we have to check all of the items in the appcast.
