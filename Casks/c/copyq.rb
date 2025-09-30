@@ -1,9 +1,9 @@
 cask "copyq" do
   arch arm: "12-m1", intel: "13"
 
-  version "11.0.0"
-  sha256 arm:   "3471c6bbafaf08e720812dd20054c3b46b2f1b664a8ddeb87963157e64eeee26",
-         intel: "9f6749bab19540f2936a408d3c66dff6434409b8db067456ec229f8c8a260179"
+  version "12.0.1"
+  sha256 arm:   "0ca635cedd40e41dbf2869deaa16429a0abac2f616ce7950972c182012525aa1",
+         intel: "edf1bb6436fdfad222b182ec2433606c5a9e22d192c1c33821f966e7751c71a9"
 
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ-macos-#{arch}.dmg.zip",
       verified: "github.com/hluk/CopyQ/"
