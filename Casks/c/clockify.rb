@@ -1,5 +1,5 @@
 cask "clockify" do
-  version "2.11.7"
+  version "2.11.8"
   sha256 :no_check
 
   url "https://clockify.me/downloads/ClockifyDesktop.zip"
