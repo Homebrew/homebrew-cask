@@ -1,9 +1,9 @@
 cask "shift" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.5.10.1205"
-  sha256 arm:   "8033f7018669a1051afb58fb20abb0f66514dfe8c6af7fa420426645822c9f2f",
-         intel: "2a0e1afdbd6b6274b4afa40d0e81e3b1bd68e7e04e2935a8c9a786b33db863bc"
+  version "9.6.2.1222"
+  sha256 arm:   "ae7252fa229fbc9b0e50782d156e9b093fff241c0c5d5c0089516a72be457a54",
+         intel: "2e1ddd55317ab4016a27a7dafd91179e682db4e30b5e5284400ea1f0288355f0"
 
   url "https://updates.tryshift.com/v#{version.major_minor_patch}/stable/shift-v#{version}-stable-#{arch}.dmg",
       verified: "updates.tryshift.com/"
@@ -18,6 +18,8 @@ cask "shift" do
       item.url[regex, 1]
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Shift.app"
 
