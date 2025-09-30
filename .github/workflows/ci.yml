@@ -76,193 +76,197 @@ jobs:
     name: ${{ matrix.name }}
     needs: generate-matrix
     runs-on: ${{ matrix.runner }}
+    container:
+      image: ${{ contains(matrix.runner, 'ubuntu') && 'ghcr.io/homebrew/ubuntu24.04:main' || '' }}
+      options: ${{ contains(matrix.runner, 'ubuntu') && '--user=linuxbrew' || '' }}
     strategy:
-      fail-fast: false
-      matrix:
-        include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
+        fail-fast: false
+        matrix:
+          include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     steps:
-      - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@main
-        with:
-          core: true
-          cask: true
+        - name: Set up Homebrew
+          id: set-up-homebrew
+          uses: Homebrew/actions/setup-homebrew@main
+          with:
+            core: true
+            cask: true
 
-      - name: Enable debug mode
-        run: |
-          echo 'HOMEBREW_DEBUG=1' >> "${GITHUB_ENV}"
-          echo 'HOMEBREW_VERBOSE=1' >> "${GITHUB_ENV}"
-        if: runner.debug
+        - name: Enable debug mode
+          run: |
+            echo 'HOMEBREW_DEBUG=1' >> "${GITHUB_ENV}"
+            echo 'HOMEBREW_VERBOSE=1' >> "${GITHUB_ENV}"
+          if: runner.debug
 
-      - name: Check out Pull Request
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
-        with:
-          fetch-depth: 0
-          persist-credentials: false
+        - name: Check out Pull Request
+          uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+          with:
+            fetch-depth: 0
+            persist-credentials: false
 
-      - name: Clean up CI machine
-        if: runner.os == 'macOS'
-        run: brew test-bot --cleanup --only-cleanup-before
+        - name: Clean up CI machine
+          if: runner.os == 'macOS'
+          run: brew test-bot --cleanup --only-cleanup-before
 
-      - name: Cache Homebrew Gems
-        id: cache
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
-        with:
-          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ matrix.runner }}-rubygems-
+        - name: Cache Homebrew Gems
+          id: cache
+          uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+          with:
+            path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+            key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+            restore-keys: ${{ matrix.runner }}-rubygems-
 
-      - name: Cache style cache
-        if: runner.os == 'macOS'
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
-        with:
-          path: ~/Library/Caches/Homebrew/style
-          key: macos-style-cache-${{ github.sha }}
-          restore-keys: macos-style-cache-
+        - name: Cache style cache
+          if: runner.os == 'macOS'
+          uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+          with:
+            path: ~/Library/Caches/Homebrew/style
+            key: macos-style-cache-${{ github.sha }}
+            restore-keys: macos-style-cache-
 
-      - name: Run brew test-bot --only-tap-syntax
-        id: tap-syntax
-        run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax
-        if: always() && !matrix.cask
+        - name: Run brew test-bot --only-tap-syntax
+          id: tap-syntax
+          run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax
+          if: always() && !matrix.cask
 
-      - name: Run brew fetch --cask ${{ matrix.cask.token }}
-        id: fetch
-        run: |
-          brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} '${{ matrix.cask.path }}'
-        timeout-minutes: 30
-        if: >
-          always() &&
-          contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
-          matrix.cask
+        - name: Run brew fetch --cask ${{ matrix.cask.token }}
+          id: fetch
+          run: |
+            brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} '${{ matrix.cask.path }}'
+          timeout-minutes: 30
+          if: >
+            always() &&
+            contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
+            matrix.cask
 
-      - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
-        id: audit
-        run: |
-          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
-        timeout-minutes: 30
-        if: >
-          always() &&
-          contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
-          (!matrix.cask || steps.fetch.outcome == 'success') &&
-          !matrix.skip_audit
+        - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
+          id: audit
+          run: |
+            brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
+          timeout-minutes: 30
+          if: >
+            always() &&
+            contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
+            (!matrix.cask || steps.fetch.outcome == 'success') &&
+            !matrix.skip_audit
 
-      - name: Gather cask information
-        id: info
-        run: |
-          brew ruby <<'EOF'
-            require 'cask/cask_loader'
-            require 'cask/installer'
+        - name: Gather cask information
+          id: info
+          run: |
+            brew ruby <<'EOF'
+              require 'cask/cask_loader'
+              require 'cask/installer'
 
-            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+              cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
 
-            manual_installer = cask.artifacts.any? do |artifact|
-              if defined?(artifact.manual_install)
-                artifact.manual_install
+              manual_installer = cask.artifacts.any? do |artifact|
+                if defined?(artifact.manual_install)
+                  artifact.manual_install
+                end
               end
-            end
 
-            macos_requirement_satisfied = if macos_requirement = cask.depends_on.macos
-              macos_requirement.satisfied?
-            else
-              true
-            end
+              macos_requirement_satisfied = if macos_requirement = cask.depends_on.macos
+                macos_requirement.satisfied?
+              else
+                true
+              end
 
-            cask_conflicts = cask.conflicts_with&.dig(:cask).to_a.select { |c| Cask::CaskLoader.load(c).installed? }
-            formula_conflicts = cask.conflicts_with&.dig(:formula).to_a.select { |f| Formula[f].any_version_installed? }
+              cask_conflicts = cask.conflicts_with&.dig(:cask).to_a.select { |c| Cask::CaskLoader.load(c).installed? }
+              formula_conflicts = cask.conflicts_with&.dig(:formula).to_a.select { |f| Formula[f].any_version_installed? }
 
-            installer = Cask::Installer.new(cask)
-            cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
+              installer = Cask::Installer.new(cask)
+              cask_and_formula_dependencies = installer.missing_cask_and_formula_dependencies
 
-            cask_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Cask::Cask) }.map(&:full_name)
-            formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
+              cask_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Cask::Cask) }.map(&:full_name)
+              formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
 
-            File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
-              f.puts "manual_installer=#{JSON.generate(manual_installer)}"
-              f.puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
-              f.puts "formula_dependencies=#{JSON.generate(formula_dependencies)}"
-            end
+              File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
+                f.puts "manual_installer=#{JSON.generate(manual_installer)}"
+                f.puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
+                f.puts "formula_dependencies=#{JSON.generate(formula_dependencies)}"
+              end
 
-            File.open(ENV.fetch("GITHUB_ENV"), "a") do |f|
-              f.puts "CASK_CONFLICTS=#{cask_conflicts&.join(" ")}" if cask_conflicts.present?
-              f.puts "CASK_DEPENDENCIES=#{cask_dependencies&.join(" ")}" if cask_dependencies.present?
-              f.puts "FORMULA_CONFLICTS=#{formula_conflicts&.join(" ")}" if formula_conflicts.present?
-            end
-          EOF
-        if: always() && steps.fetch.outcome == 'success' && matrix.cask
+              File.open(ENV.fetch("GITHUB_ENV"), "a") do |f|
+                f.puts "CASK_CONFLICTS=#{cask_conflicts&.join(" ")}" if cask_conflicts.present?
+                f.puts "CASK_DEPENDENCIES=#{cask_dependencies&.join(" ")}" if cask_dependencies.present?
+                f.puts "FORMULA_CONFLICTS=#{formula_conflicts&.join(" ")}" if formula_conflicts.present?
+              end
+            EOF
+          if: always() && steps.fetch.outcome == 'success' && matrix.cask
 
-      - name: Uninstall conflicting formulae
-        run: |
-          read -r -a formula_conflicts_array <<< "$FORMULA_CONFLICTS"
-          brew uninstall --formula "${formula_conflicts_array[@]}"
-        if: ${{ always() && steps.info.outcome == 'success' && env.FORMULA_CONFLICTS != '' }}
-        timeout-minutes: 30
+        - name: Uninstall conflicting formulae
+          run: |
+            read -r -a formula_conflicts_array <<< "$FORMULA_CONFLICTS"
+            brew uninstall --formula "${formula_conflicts_array[@]}"
+          if: ${{ always() && steps.info.outcome == 'success' && env.FORMULA_CONFLICTS != '' }}
+          timeout-minutes: 30
 
-      - name: Uninstall conflicting casks
-        run: |
-          read -r -a cask_conflicts_array <<< "$CASK_CONFLICTS"
-          brew uninstall --cask "${cask_conflicts_array[@]}"
-        if: ${{ always() && steps.info.outcome == 'success' && env.CASK_CONFLICTS != '' }}
-        timeout-minutes: 30
+        - name: Uninstall conflicting casks
+          run: |
+            read -r -a cask_conflicts_array <<< "$CASK_CONFLICTS"
+            brew uninstall --cask "${cask_conflicts_array[@]}"
+          if: ${{ always() && steps.info.outcome == 'success' && env.CASK_CONFLICTS != '' }}
+          timeout-minutes: 30
 
-      - name: Run brew uninstall --cask --force --zap ${{ matrix.cask.token }}
-        run: |
-          brew uninstall --cask --force --zap '${{ matrix.cask.path }}'
-        if: always() && steps.info.outcome == 'success'
-        timeout-minutes: 30
+        - name: Run brew uninstall --cask --force --zap ${{ matrix.cask.token }}
+          run: |
+            brew uninstall --cask --force --zap '${{ matrix.cask.path }}'
+          if: always() && steps.info.outcome == 'success'
+          timeout-minutes: 30
 
-      - name: Take snapshot of installed and running apps and services
-        id: snapshot
-        run: |
-          brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
-            File.open(ENV.fetch("GITHUB_ENV"), "a") do |f|
-              # We have to use a `HOMEBREW_` prefix so it will survive the
-              # environment variable filtering in `brew`.
-              f.puts "HOMEBREW_SNAPSHOT_BEFORE=#{JSON.generate(Check.all)}"
-            end
-          EOF
-        if: always() && steps.info.outcome == 'success'
+        - name: Take snapshot of installed and running apps and services (macOS only)
+          id: snapshot
+          run: |
+            brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
+              File.open(ENV.fetch("GITHUB_ENV"), "a") do |f|
+                # We have to use a `HOMEBREW_` prefix so it will survive the
+                # environment variable filtering in `brew`.
+                f.puts "HOMEBREW_SNAPSHOT_BEFORE=#{JSON.generate(Check.all)}"
+              end
+            EOF
+          if: always() && steps.info.outcome == 'success' && runner.os == 'macOS'
 
-      - name: Run brew install --cask ${{ matrix.cask.token }}
-        id: install
-        run: brew install --cask '${{ matrix.cask.path }}'
-        if: >
-          always() && steps.info.outcome == 'success' &&
-          fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
-          !matrix.skip_install
-        timeout-minutes: 30
 
-      - name: Run brew uninstall --cask ${{ matrix.cask.token }}
-        run: brew uninstall --cask '${{ matrix.cask.path }}'
-        if: always() && steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
-        timeout-minutes: 30
+        - name: Run brew install --cask ${{ matrix.cask.token }}
+          id: install
+          run: brew install --cask '${{ matrix.cask.path }}'
+          if: >
+            always() && steps.info.outcome == 'success' &&
+            fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
+            !matrix.skip_install
+          timeout-minutes: 30
 
-      - name: Uninstall cask dependencies
-        run: |
-          read -r -a cask_dependencies_array <<< "$CASK_DEPENDENCIES"
-          brew uninstall --cask "${cask_dependencies_array[@]}"
-        if: ${{ always() && steps.install.outcome == 'success' && env.CASK_DEPENDENCIES != '' }}
-        timeout-minutes: 30
+        - name: Run brew uninstall --cask ${{ matrix.cask.token }}
+          run: brew uninstall --cask '${{ matrix.cask.path }}'
+          if: always() && steps.install.outcome == 'success' && !fromJSON(steps.info.outputs.manual_installer)
+          timeout-minutes: 30
 
-      - name: Compare installed and running apps and services with snapshot
-        run: |
-          brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
-            require "cask/cask_loader"
-            require "utils/github/actions"
+        - name: Uninstall cask dependencies
+          run: |
+            read -r -a cask_dependencies_array <<< "$CASK_DEPENDENCIES"
+            brew uninstall --cask "${cask_dependencies_array[@]}"
+          if: ${{ always() && steps.install.outcome == 'success' && env.CASK_DEPENDENCIES != '' }}
+          timeout-minutes: 30
 
-            before = JSON.parse(ENV.fetch("HOMEBREW_SNAPSHOT_BEFORE", "{}"))
-                         .transform_keys(&:to_sym)
-            after = Check.all
+        - name: Compare installed and running apps and services with snapshot (macOS only)
+          run: |
+            brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
+              require "cask/cask_loader"
+              require "utils/github/actions"
 
-            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
-            errors = Check.errors(before, after, cask: cask)
+              before = JSON.parse(ENV.fetch("HOMEBREW_SNAPSHOT_BEFORE", "{}"))
+                          .transform_keys(&:to_sym)
+              after = Check.all
 
-            errors.each do |error|
-              puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
-            end
+              cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+              errors = Check.errors(before, after, cask: cask)
 
-            exit 1 if errors.any?
-          EOF
-        if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success'
+              errors.each do |error|
+                puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
+              end
+
+              exit 1 if errors.any?
+            EOF
+          if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success' && runner.os == 'macOS'
 
   conclusion:
     name: conclusion
