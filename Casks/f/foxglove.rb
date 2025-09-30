@@ -1,6 +1,6 @@
 cask "foxglove" do
-  version "2.36.0"
-  sha256 "6ded0e45b453db8c35c72277097549042c06cbbd9dafdaa38f36f20574874714"
+  version "2.37.0"
+  sha256 "bc7d9e85a2f5cf883096db31084506bdcd37ebe531c38b8c224154bee8dd53d9"
 
   url "https://get.foxglove.dev/desktop/latest/foxglove-#{version}-mac-universal.dmg"
   name "Foxglove"
@@ -13,7 +13,7 @@ cask "foxglove" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Foxglove.app"
 
