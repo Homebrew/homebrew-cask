@@ -1,6 +1,6 @@
 cask "protonvpn" do
-  version "5.1.0"
-  sha256 "93310a95e01749e77ca224197341e63c057a56f46f5d4b102945fbcb17d5dd22"
+  version "6.0.0"
+  sha256 "12d0b4e36e8c8f60de91b303c8cee224aad02c8e2d434f3bde5a4902f0c7c69a"
 
   url "https://vpn.protondownload.com/download/macos/#{version}/ProtonVPN_mac_v#{version}.dmg",
       verified: "vpn.protondownload.com/"
@@ -18,7 +18,7 @@ cask "protonvpn" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "ProtonVPN.app"
 
