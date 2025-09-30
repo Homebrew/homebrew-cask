@@ -1,9 +1,9 @@
 cask "katalon-studio" do
   arch arm: "%20Arm64"
 
-  version "10.3.1"
-  sha256 arm:   "75d4046ae5f9b33a20aa47618a657f5efc4935cf4859a165004a770dd261d22f",
-         intel: "ce07fea346d3aadea883eacfa5f613531ef83495aed1939b048091bd97da0729"
+  version "10.3.2"
+  sha256 arm:   "bcf33c66a2048578af4c59525fd882c0e412e1ea5e00930bd313704c261fbe62",
+         intel: "fe15cb541f4cd2c25d4b867ae0026d19cd8bb07bfd2b4f56dd5071334d9b4b36"
 
   url "https://download.katalon.com/free/#{version}/release/Katalon%20Studio#{arch}.dmg"
   name "Katalon Studio"
@@ -14,6 +14,8 @@ cask "katalon-studio" do
     url "https://github.com/katalon-studio/katalon-studio/"
     regex(/^free[._-]v?(\d+(?:\.\d+)+)$/i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Katalon Studio.app"
 
