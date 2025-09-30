@@ -1,9 +1,9 @@
 cask "jdk-mission-control" do
   arch arm: "aarch64", intel: "x64"
 
-  version "9.1.0,07"
-  sha256 arm:   "6f3b581ff8afe0e919297d533fb3e646a687235ad591eabe2b7294a5007b3a45",
-         intel: "b860ff69e2c068bbbe28b53e949f3074151a6d0becb7cbe5b056d75111722ad3"
+  version "9.1.1,02"
+  sha256 arm:   "f5821aba0a913212e5d401ce9ead3810a411c4a3d20dd4a53bb8b4bc38960f16",
+         intel: "cffdcbf09f720139c0a799e4248a94b73401f66e8d824eb9b81f6e2988ed2cba"
 
   url "https://download.java.net/java/GA/jmc#{version.major}/#{version.csv.second}/binaries/jmc-#{version.csv.first}_macos-#{arch}.tar.gz"
   name "JDK Mission Control"
@@ -17,6 +17,8 @@ cask "jdk-mission-control" do
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "jmc-#{version.csv.first}_macos-#{arch}/JDK Mission Control.app"
 
