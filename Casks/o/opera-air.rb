@@ -1,6 +1,6 @@
 cask "opera-air" do
-  version "122.0.5643.63"
-  sha256 "42ac38571b28079f48cf121fbdf0009388a84272dcf6ac098e7bb9e03261d1b9"
+  version "122.0.5643.99"
+  sha256 "3ffd83ff80a1a5ef53239981115c2bd9b18181da106d7b6341426231a4bb2371"
 
   url "https://get.geo.opera.com/pub/opera_air/#{version}/mac/Opera_Air_#{version}_Setup.dmg"
   name "Opera Air"
