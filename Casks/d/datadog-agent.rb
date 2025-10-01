@@ -1,9 +1,9 @@
 cask "datadog-agent" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "7.70.2-1"
-  sha256 arm:   "20f20dde82b72b9b3eef1f895e487128208c17b00e8f2591b5a395575a2bd0e3",
-         intel: "7b79b889227f42e8c873e97db2762a483d4b1da533ee825bfdf4bc175771fbdc"
+  version "7.71.0-1"
+  sha256 arm:   "14bdc00b6ccc186c759776f69cd03737fa2a388f3d191847a588a2936137bf3a",
+         intel: "19f32bb418f0518b410b025975652eae34747a95a42e015ccfbf2b6a59e3fd0b"
 
   url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.#{arch}.dmg",
       verified: "dd-agent.s3.amazonaws.com/"
