@@ -1,6 +1,6 @@
 cask "textadept" do
-  version "12.8"
-  sha256 "85072473600e4d8b3cb325461e833240478df2bb5e2907bfb89ae6186d45ad04"
+  version "12.9"
+  sha256 "91a187250c3b7257ab234502150225408afe05a50cbdd29ae530f4b8b5e177fa"
 
   url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip",
       verified: "github.com/orbitalquark/textadept/"
@@ -22,8 +22,4 @@ cask "textadept" do
     "~/.textadept",
     "~/Library/Saved Application State/com.textadept.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
