@@ -1,14 +1,8 @@
 cask "ocenaudio" do
-  version "3.15.3"
+  version "3.16.0"
   sha256 :no_check
 
-  on_big_sur :or_older do
-    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal_legacy.dmg"
-  end
-  on_monterey :or_newer do
-    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg"
-  end
-
+  url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg"
   name "ocenaudio"
   desc "Audio editor"
   homepage "https://www.ocenaudio.com/en"
@@ -17,6 +11,8 @@ cask "ocenaudio" do
     url :url
     strategy :header_match
   end
+
+  depends_on macos: ">= :ventura"
 
   app "ocenaudio.app"
 
