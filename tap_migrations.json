@@ -30,7 +30,6 @@
   "nmap": "homebrew/core",
   "node": "homebrew/core",
   "otto": "homebrew/core",
-  "packer": "homebrew/core",
   "pandoc": "homebrew/core",
   "pgloader": "homebrew/core",
   "pgweb": "homebrew/core",
@@ -47,7 +46,6 @@
   "sslmate": "homebrew/core",
   "swi-prolog": "homebrew/core",
   "terraform": "homebrew/core",
-  "vault": "homebrew/core",
   "vfuse": "homebrew/core",
   "volatility": "homebrew/core"
 }
