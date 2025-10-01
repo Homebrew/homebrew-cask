@@ -15,6 +15,8 @@ cask "8x8-work" do
     regex(/work[._-]dmg[._-]v(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "8x8 Work.app"
 
   zap trash: "~/Library/Application Support/8x8 Work"
