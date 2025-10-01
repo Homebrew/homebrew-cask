@@ -152,6 +152,7 @@
   "puzzles": "puzzles-app",
   "qlc-plus": "qlc+",
   "r": "r-app",
+  "red-canary-mac-monitor": "mac-monitor",
   "redisinsight": "redis-insight",
   "reflex": "reflex-app",
   "remotion": "multiapp",
