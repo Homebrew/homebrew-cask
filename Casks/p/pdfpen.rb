@@ -8,6 +8,7 @@ cask "pdfpen" do
   homepage "https://smilesoftware.com/PDFpen"
 
   deprecate! date: "2024-09-30", because: :discontinued
+  disable! date: "2025-10-01", because: :discontinued
 
   app "PDFpen.app"
 
