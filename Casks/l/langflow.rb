@@ -1,9 +1,9 @@
 cask "langflow" do
-  arch arm: "aarch64", intel: "x86_64"
+  arch arm: "aarch64", intel: "x64"
 
-  version "1.5.1,1.5.0.post1"
-  sha256 arm:   "fdfe5cb466976ce1c00ddda6d00d3489e5774ad3d801dd4b8df56ae1800bcb6e",
-         intel: "5417b20859f337efe06dcbe537331c6e0b35e7ed1c468193338843cde2ef077b"
+  version "1.6.0"
+  sha256 arm:   "09a31e36a7eea095a154c5e0eb32be8e8c871c35e126e6e8480973e778b49cd8",
+         intel: "efe1db45fce4ce56e87b28fcec58664f414d60a7b13342be78f263a3ac5eaed8"
 
   url "https://github.com/langflow-ai/langflow/releases/download/#{version.csv.second || version}/Langflow_#{version.csv.first}_#{arch}.dmg",
       verified: "github.com/langflow-ai/langflow/"
@@ -32,7 +32,7 @@ cask "langflow" do
 
   depends_on macos: ">= :ventura"
 
-  app "Langflow.app"
+  app "Langflow .app"
 
   zap trash: [
     "~/.langflow",
