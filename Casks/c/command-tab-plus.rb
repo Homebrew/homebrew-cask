@@ -1,5 +1,5 @@
 cask "command-tab-plus" do
-  version "2.8.6"
+  version "2.9.2"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/Command-Tab%20Plus%20#{version.major}.zip",
@@ -14,6 +14,7 @@ cask "command-tab-plus" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Command-Tab Plus #{version.major}.app"
 
