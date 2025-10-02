@@ -9,7 +9,7 @@ cask "archiver-app" do
   homepage "https://archiverapp.com/"
 
   livecheck do
-    url "https://api.incrediblebee.com/appcasts/archiver-#{version.major}.xml"
+    url "https://api.incrediblebee.com/updates?app=Archiver&locale=en-US&mode=sparkle&short_version=#{version}"
     strategy :sparkle, &:short_version
   end
 
