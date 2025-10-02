@@ -2,9 +2,9 @@ cask "lagrange" do
   arch arm: "11.0-arm64", intel: "10.13-x86_64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
-  version "1.19.2"
-  sha256 arm:   "4e11dbc97e735c3d3a0dbecb95300193c40003bbdce7d66cc49f485c206184e3",
-         intel: "fa5e8c39499350d68c9a71416bfecf9b36c6677581ae8d4cca2afb749c35feaf"
+  version "1.19.3"
+  sha256 arm:   "2ea8dd6a00e374065c687247adbfdc02b3d69e02b623d4facb63c29658383235",
+         intel: "575ee824f2cfc812b81f8e40a1aab9a5b521231ba08b23dd67034d45d1c18499"
 
   url "https://git.skyjake.fi/gemini/lagrange/releases/download/v#{version}/lagrange_v#{version}_macos#{arch}.tbz"
   name "Lagrange"
