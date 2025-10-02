@@ -1,7 +1,7 @@
 cask "publii" do
   arch arm: "arm64", intel: "intel"
 
-  version "0.47.0,17290"
+  version "0.47.1,17302"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://getpublii.com/download/Publii-#{version.csv.first}-#{arch}.dmg"
