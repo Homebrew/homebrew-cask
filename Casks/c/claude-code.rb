@@ -36,7 +36,7 @@ cask "claude-code" do
     Claude Code's auto-updater installs updates to `~/.local/bin/claude` and
     not to Homebrew's location. It is recommended to disable the auto-updater
     with either `DISABLE_AUTOUPDATER=1` or
-    `claude config set -g autoUpdates false` and use
+    `claude config set autoUpdates false` and use
     `brew upgrade --cask #{token}`.
   EOS
 end
