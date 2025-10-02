@@ -8,14 +8,8 @@ cask "browseros" do
   url "https://github.com/browseros-ai/BrowserOS/releases/download/v#{version}/BrowserOS_v#{version}_#{arch}.dmg",
       verified: "github.com/browseros-ai/BrowserOS/"
   name "BrowserOS"
-  desc "Open-source Agentic browser"
+  desc "Open-source agentic browser"
   homepage "https://www.browseros.com/"
-
-  livecheck do
-    url :url
-    regex(/v?(\d+(?:\.\d+)+)/i)
-    strategy :github_latest
-  end
 
   depends_on macos: ">= :big_sur"
 
