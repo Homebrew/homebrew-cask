@@ -15,6 +15,8 @@ cask "nvidia-nsight-compute" do
     regex(/nsight[._-]compute[._-]mac[._-]#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
+  disable! date: "2025-10-02", because: "requires login to download"
+
   app "NVIDIA Nsight Compute.app"
 
   zap trash: [
