@@ -17,6 +17,8 @@ cask "threema@beta" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   app "Threema Beta.app"
 
   zap trash: [
