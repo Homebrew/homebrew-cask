@@ -7,6 +7,11 @@ cask "packetproxy" do
   desc "Local proxy written in Java"
   homepage "https://github.com/DeNA/PacketProxy"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "PacketProxy.app"
 
   zap trash: [
