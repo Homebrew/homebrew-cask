@@ -1,6 +1,6 @@
 cask "internxt-drive" do
-  version "2.5.9.78"
-  sha256 "f1c0a475101f21c56e7caaeaab7680d9fe6e9a24238604ea074965ae8f721b6f"
+  version "2.6.0.79"
+  sha256 "32f1e0c147b5b2e959d2bf686b2bd349d3be28fe5d6160cdadd8606a29e80f63"
 
   url "https://github.com/internxt/drive-desktop-macos/releases/download/v#{version}/Internxt_Drive_#{version}.dmg",
       verified: "github.com/internxt/drive-desktop-macos/"
@@ -14,7 +14,7 @@ cask "internxt-drive" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "Internxt Drive.app"
 
