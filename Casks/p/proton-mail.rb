@@ -1,6 +1,6 @@
 cask "proton-mail" do
-  version "1.9.0"
-  sha256 "9caf82d4a4606fbe618edc412f15ccea72de11220fabbe38e559abfc8e148306"
+  version "1.9.1"
+  sha256 "53e234b6d4e80e22cb8c468a96f75bec7844e1d32b2ebc9cdb9d465c156c4043"
 
   url "https://proton.me/download/mail/macos/#{version}/ProtonMail-desktop.dmg"
   name "Proton Mail"
@@ -19,6 +19,7 @@ cask "proton-mail" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Proton Mail.app"
 
