@@ -1,6 +1,6 @@
 cask "msgfiler" do
-  version "4.3.0.58,20251001,113245"
-  sha256 "800903b5a2b86f734e679e6a55d915abfe2d39ff599b37f0c2355cf87ff7e48c"
+  version "4.3.0.60,20251001,162152"
+  sha256 "8daff1fa166d76bd9f27fede3289ebab119d35def911ff89707a04fac78b077a"
 
   url "https://files.msgfiler.com/MsgFiler_#{version.csv.first}_#{version.csv.second}_#{version.csv.third}.dmg"
   name "MsgFiler"
