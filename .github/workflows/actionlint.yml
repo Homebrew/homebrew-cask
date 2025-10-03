@@ -92,7 +92,7 @@ jobs:
           path: results.sarif
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@303c0aef88fc2fe5ff6d63d3b1596bfd83dfa1f9 # v3.30.4
+        uses: github/codeql-action/upload-sarif@64d10c13136e1c5bce3e5fbde8d4906eeaafc885 # v3.30.6
         with:
           sarif_file: results.sarif
           category: zizmor
