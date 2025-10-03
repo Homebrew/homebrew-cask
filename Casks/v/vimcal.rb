@@ -2,9 +2,9 @@ cask "vimcal" do
   arch arm: "-arm64"
   host_suffix = on_arch_conditional arm: "m1", intel: "production"
 
-  version "1.0.39"
-  sha256 arm:   "734f0ebbdc8c198efbba166c5ed0b48cfc0ac938c32ab342edc297b40571fbaf",
-         intel: "3a79d5938c4500748f53bc027683e7983a6ef08ff41684ee219e2cd9ec832ecf"
+  version "1.0.40"
+  sha256 arm:   "016e364a763a25808ac74d16b878451005220a0b27389124d6f7deb24d3a55e8",
+         intel: "c3d12755f990b7aa6bedf55c94f2105138e9aa07ab01cb91e673d633f737083b"
 
   url "https://vimcal-#{host_suffix}.s3.amazonaws.com/Vimcal-#{version}#{arch}.dmg",
       verified: "vimcal-#{host_suffix}.s3.amazonaws.com/"
