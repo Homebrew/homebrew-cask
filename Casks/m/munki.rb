@@ -27,6 +27,8 @@ cask "munki" do
               "com.googlecode.munki.app_usage_monitor",
               "com.googlecode.munki.appusaged",
               "com.googlecode.munki.authrestartd",
+              "com.googlecode.munki.installhelper-appusage",
+              "com.googlecode.munki.installhelper-launchd",
               "com.googlecode.munki.logouthelper",
               "com.googlecode.munki.ManagedSoftwareCenter",
               "com.googlecode.munki.managedsoftwareupdate-check",
