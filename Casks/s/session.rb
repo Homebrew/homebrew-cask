@@ -1,9 +1,9 @@
 cask "session" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.16.10"
-  sha256 arm:   "44ce59bf43c53349b34ad80fff5a0920b7661fc7623accd896efbbe91285ba66",
-         intel: "a9bd41faf666301ac7554e388bdce166cf7d831e925b690f49d0cc9b1115724d"
+  version "1.17.0"
+  sha256 arm:   "d3d833d0ee347941f0fb40c22ed198130be10e26bd565e76e4cbe197b84779e2",
+         intel: "b1f25634d4246a61afabe0a4a9ac0ed398d0779594937cd341e204cf37d402df"
 
   url "https://github.com/session-foundation/session-desktop/releases/download/v#{version}/session-desktop-mac-#{arch}-#{version}.dmg",
       verified: "github.com/session-foundation/session-desktop/"
@@ -17,7 +17,7 @@ cask "session" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "Session.app"
 
