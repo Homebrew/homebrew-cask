@@ -1,6 +1,6 @@
 cask "querious" do
-  version "4.2.2"
-  sha256 "e0746dcdd9d2c2971c80b2304bf0ba00a517870f5b6c601ba5aac037b43c25de"
+  version "4.2.3"
+  sha256 "6bd981a01a471f196381e6463da12242830d78a3dc58e232a07aeba6fd1fe5bb"
 
   url "https://www.araelium.com/querious/downloads/versions/Querious#{version}.zip"
   name "Querious #{version.major}"
@@ -15,7 +15,7 @@ cask "querious" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Querious.app"
 
