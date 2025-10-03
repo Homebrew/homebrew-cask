@@ -7,6 +7,14 @@ cask "stravu-crystal" do
   desc "Run multiple Claude Code instances simultaneously using git worktrees"
   homepage "https://github.com/stravu/crystal"
 
+  # There can be a notable gap between when a version is tagged and a
+  # corresponding release is created, so we check the "latest" release instead
+  # of the Git tags.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :big_sur"
 
   app "Crystal.app"
