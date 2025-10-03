@@ -1,9 +1,9 @@
 cask "defguard-client" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.5.1"
-  sha256 arm:   "93a9003db5c2d98252576a748c246ee57584e88e443c658ce0baa5f306d80987",
-         intel: "1e6f3672e274161cae01ee5cdf11ae8243f46e0590b532d8ca186eff57b82f46"
+  version "1.5.2"
+  sha256 arm:   "f7b1abde61ad6a6f3923b09d25f0f81517400f1f602ab4f412b9e4b6aa4db379",
+         intel: "47cf03ccce8a9e35103a125fc0072eebd5284252a02b9d3b3523d7cc6dc22587"
 
   url "https://github.com/DefGuard/client/releases/download/v#{version}/defguard-#{arch}-apple-darwin-#{version}.pkg"
   name "Defguard Client"
