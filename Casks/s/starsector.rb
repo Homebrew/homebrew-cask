@@ -15,6 +15,8 @@ cask "starsector" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Starsector.app"
 
   # No zap stanza required
