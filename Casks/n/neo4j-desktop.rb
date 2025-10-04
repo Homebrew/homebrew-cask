@@ -1,7 +1,7 @@
 cask "neo4j-desktop" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
-  version "2.0.3"
-  sha256 "f32a6a0e6a3927a9e2e9abf70120c2bb4c7bfeaf6a512f172833edbd1f05cae1"
+  version "2.0.5"
+  sha256 "51248dbb193b615f64d8b6defbbada00ac3d458498fb7493ac28c4c864f39f60"
 
   url "https://dist.neo4j.org/neo4j-desktop-#{version.major}/mac/neo4j-desktop-#{version}-universal.dmg",
       verified: "dist.neo4j.org/"
@@ -13,6 +13,8 @@ cask "neo4j-desktop" do
     url "https://neo4j.com/deployment-center/"
     regex(%r{href=.*?/neo4j-desktop/.*?flavour=osx.*?release=(\d+(?:\.\d+)+)}i)
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Neo4j Desktop #{version.major}.app"
 
