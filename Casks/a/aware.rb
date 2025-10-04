@@ -9,6 +9,7 @@ cask "aware" do
   homepage "https://awaremac.com/"
 
   deprecate! date: "2024-10-04", because: :unmaintained
+  disable! date: "2025-10-04", because: :unmaintained
 
   depends_on macos: ">= :sonoma"
 
