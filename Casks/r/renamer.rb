@@ -1,19 +1,19 @@
 cask "renamer" do
-  version "6.2.0"
-  sha256 "0a3098b7555d0f3f96e2ac16fccabfe2811c722045e6b403f056700314314af6"
+  version "7.0.1"
+  sha256 "c8885c4767de9f32407ab721575eee0a1708cd7887ff4bb44ec988c771b3badb"
 
-  url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version.major}/Renamer-#{version}.zip",
+  url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version.major}/Renamer.zip",
       verified: "storage.googleapis.com/incrediblebee/"
   name "Renamer"
   desc "Batch file renamer application"
   homepage "https://renamer.com/"
 
   livecheck do
-    url "https://api.incrediblebee.com/appcasts/renamer-#{version.major}.xml"
-    strategy :sparkle, &:short_version
+    url "https://github.com/incbee/renamer-7-releases/releases/latest/download/latest-mac.yml"
+    strategy :electron_builder
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sequoia"
 
   app "Renamer.app"
 
