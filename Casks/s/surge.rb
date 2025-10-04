@@ -24,6 +24,9 @@ cask "surge" do
   depends_on macos: ">= :monterey" # Confirmed by LSMinimumSystemVersion "12.0"
 
   app "Surge.app"
+  binary "#{appdir}/Surge.app/Contents/Applications/Surge Dashboard.app", target: "#{appdir}/Surge Dashboard.app"
+  binary "#{appdir}/Surge.app/Contents/Applications/surge-cli"
+  binary "#{appdir}/Surge.app/Contents/Applications/surge-dhcpd", target: "#{HOMEBREW_PREFIX}/sbin/surge-dhcpd"
 
   uninstall launchctl: "com.nssurge.surge-mac.helper",
             delete:    "/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper"
