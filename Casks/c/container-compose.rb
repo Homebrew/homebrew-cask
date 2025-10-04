@@ -1,16 +1,16 @@
 cask "container-compose" do
-  version "0.4.1"
-  sha256 "4f5bcd3332c256a1c2a4c60e5f3c2fe6fb7cdbc48927eef6e21e0bffd37ba3dd"
+  version "0.5.0"
+  sha256 "7e87c5681cda02a957e049ca105ceea13789b8e1222e779231ebf8780c4d9106"
 
-  url "https://github.com/Mcrich23/container-compose/releases/download/#{version}/container-compose-macos-arm64"
+  url "https://github.com/Mcrich23/container-compose/releases/download/#{version}/container-compose.pkg"
   name "Container Compose"
   desc "Manage Apple Container with Docker Compose files"
   homepage "https://github.com/mcrich23/container-compose"
 
-  # Install the binary into /usr/local/bin (or /opt/homebrew/bin on ARM Macs)
-  binary "container-compose-macos-arm64", target: "container-compose"
+  pkg "container-compose.pkg"
 
-  # Livecheck block for version updates
+  uninstall pkgutil: "com.mcrich.pkg.container-compose"
+
   livecheck do
     url :url
     strategy :github_latest
