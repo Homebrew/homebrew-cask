@@ -13,11 +13,14 @@ cask "sidenotes" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "SideNotes.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.apptorium.SideNotes",
     "~/Library/Application Scripts/com.apptorium.SideNotes-paddle*.ShareExtension--Paddle-",
+    "~/Library/Application Scripts/com.apptorium.SideNotes.ShareExtension",
     "~/Library/Application Support/com.apptorium.SideNotes-paddle",
     "~/Library/Application Support/SideNotes",
     "~/Library/Caches/com.apptorium.SideNotes-paddle",
