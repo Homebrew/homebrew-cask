@@ -1,6 +1,6 @@
 cask "chirp" do
-  version "20250801"
-  sha256 "07809e2558bfd248e65c69f4b56a7c9a08b5d262730900b5f5020912ed282868"
+  version "20251003"
+  sha256 "dc29c1d59407be4b133bb745f976b1389736b6b276c089aa045951f53db93a6b"
 
   url "https://archive.chirpmyradio.com/chirp_next/next-#{version}/chirp-next-#{version}.app.zip",
       verified: "archive.chirpmyradio.com/",
