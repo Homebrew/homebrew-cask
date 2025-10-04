@@ -1,5 +1,5 @@
 cask "mate-translate" do
-  version "8.3.1"
+  version "8.3.3"
   sha256 :no_check
 
   url "https://gikken.co/mate/MateTranslate.dmg",
