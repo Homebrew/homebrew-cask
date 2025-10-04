@@ -17,6 +17,8 @@ cask "sidenotes" do
   app "SideNotes.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.apptorium.SideNotes",
+    "~/Library/Application Scripts/com.apptorium.SideNotes.ShareExtension",
     "~/Library/Application Scripts/com.apptorium.SideNotes-paddle*.ShareExtension--Paddle-",
     "~/Library/Application Support/com.apptorium.SideNotes-paddle",
     "~/Library/Application Support/SideNotes",
