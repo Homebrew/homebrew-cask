@@ -7,22 +7,11 @@ cask "postico@1" do
   desc "GUI client for PostgreSQL databases"
   homepage "https://eggerapps.at/postico/v1.php"
 
-  # The version number is only present on the homepage. The filename ID is
-  # matched from the `location` header of the download URL response.
   livecheck do
-    url :homepage
-    regex(/Version\s+(\d+(?:\.\d+)+)/i)
+    url "https://releases.eggerapps.at/postico2/downloads"
+    regex(/>\s*Postico\s+v?(1(?:\.\d+){2,})\s*<.*?href=["']?[^"' >]*?postico[._-]v?(\d+(?:\.\d+)*)\.zip/im)
     strategy :page_match do |page, regex|
-      v = page[regex, 1]
-      next if v.blank?
-
-      merged_headers = Homebrew::Livecheck::Strategy.page_headers(
-        "https://eggerapps.at/postico/download/",
-      ).reduce(&:merge)
-      match = merged_headers["location"]&.match(/postico[._-]v?(\d+(?:\.\d+)*)\.zip/i)
-      next if match.blank?
-
-      "#{v},#{match[1]}"
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
