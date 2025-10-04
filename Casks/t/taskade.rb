@@ -8,7 +8,7 @@ cask "taskade" do
   homepage "https://www.taskade.com/"
 
   livecheck do
-    url "https://www.taskade.com/downloads"
+    url :homepage
     regex(%r{href=.*?/Taskade[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg}i)
   end
 
