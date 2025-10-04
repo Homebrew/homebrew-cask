@@ -8,10 +8,14 @@ cask "starsector" do
   desc "Open-world single-player space combat and trading RPG"
   homepage "https://fractalsoftworks.com/"
 
+  # The upstream preorder page links to the latest dmg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://fractalsoftworks.com/preorder/
   livecheck do
-    url "https://fractalsoftworks.com/preorder/"
-    regex(/href=.*?starsector_mac[._-]v?(\d+(?:\.\d+)+[\w._-]+)\.zip/i)
+    skip "Cannot be fetched due to Cloudflare protections"
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Starsector.app"
 
