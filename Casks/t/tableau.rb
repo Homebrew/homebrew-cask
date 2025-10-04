@@ -1,9 +1,9 @@
 cask "tableau" do
   arch arm: "-arm64"
 
-  version "2025.2.1"
-  sha256 arm:   "e240e8f8872ad511a69f0a33264987fa2f0fa8d935b52aef9d6aa1e297fbbf4b",
-         intel: "af0bcbbbac972701642ef389f97373c53145c5ea84e004df0a594627fd0eb7e2"
+  version "2025.2.3"
+  sha256 arm:   "dc8d10f3340ece5eb10f61f51f8af3f70f08673c3c6c550fe3b2ef070c6dbbf9",
+         intel: "745e6f5cd9fea5c8ba2abead97d97d57f3b112c4ae14cc7651d3c34ad93d5592"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauDesktop-#{version.dots_to_hyphens}#{arch}.dmg",
       user_agent: "curl/8.7.1"
