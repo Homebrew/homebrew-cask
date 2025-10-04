@@ -1,16 +1,16 @@
 cask "praat" do
-  version "6.4.43,6443"
-  sha256 "59c8aeaf4c1c9d456da0ed848a0f3e71619faa3c151dbff2b4a0ca31a509e6f0"
+  version "6.4.44a,6444"
+  sha256 "7c1363cea0f845ba34aee1598050db1b410c4bd19215799fda941ba8938e3634"
 
-  url "https://github.com/praat/praat/releases/download/v#{version.csv.first}/praat#{version.csv.second}_mac.dmg",
-      verified: "github.com/praat/praat/"
+  url "https://github.com/praat/praat.github.io/releases/download/v#{version.csv.first}/praat#{version.csv.second}_mac.dmg",
+      verified: "github.com/praat/praat.github.io/"
   name "Praat"
   desc "Doing phonetics by computer"
   homepage "https://praat.org/"
 
   livecheck do
     url :url
-    regex(%r{/v?(\d+(?:\.\d+)+)/praat(\d+)[._-]mac\.dmg$}i)
+    regex(%r{/v?(\d+(?:\.\d+)+[a-z]?)/praat(\d+)[._-]mac\.dmg$}i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["browser_download_url"]&.match(regex)
