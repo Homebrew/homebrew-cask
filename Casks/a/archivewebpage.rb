@@ -1,6 +1,6 @@
 cask "archivewebpage" do
-  version "0.15.5"
-  sha256 "2c6679785c0b8bc37da6bc4f36e1fe891f226e416b01f6fa8be67c47314b0260"
+  version "0.15.6"
+  sha256 "003cb1cbec1fdfd4752727cd4d0f562ffced228e851e8751469850050547fcdb"
 
   url "https://github.com/webrecorder/archiveweb.page/releases/download/v#{version}/ArchiveWeb.page-#{version}.dmg",
       verified: "github.com/webrecorder/archiveweb.page/"
@@ -12,6 +12,8 @@ cask "archivewebpage" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :monterey"
 
   app "ArchiveWeb.page.app"
 
