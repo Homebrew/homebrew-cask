@@ -7,8 +7,6 @@ cask "container-compose" do
   desc "Manage Apple Container with Docker Compose files"
   homepage "https://github.com/mcrich23/container-compose"
 
-  license "MIT"
-
   # Install the binary into /usr/local/bin (or /opt/homebrew/bin on ARM Macs)
   binary "container-compose-macos-arm64", target: "container-compose"
 
