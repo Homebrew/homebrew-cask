@@ -26,8 +26,8 @@ cask "choosy" do
     end
   end
   on_sequoia :or_newer do
-    version "2.5"
-    sha256 "7830e5720c30ba6b79692e24bba305616ce08afac844b6978d86d16f432d6f0f"
+    version "2.5.1"
+    sha256 "3d7e9b608f8780c5539123bacd23d120ff21421d040609666ee08ff3e2c4d4b9"
 
     livecheck do
       url "https://choosy.app/sparkle/feed"
