@@ -32,8 +32,8 @@ cask "anki" do
         verified: "github.com/ankitects/anki/"
 
     livecheck do
-      url :url
-      strategy :github_latest
+      url :homepage
+      regex(/href=.*?anki[._-]launcher[._-]v?(\d+(?:\.\d+)+)(?:[._-]mac)?\.dmg/i)
     end
   end
 
