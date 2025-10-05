@@ -48,7 +48,7 @@
   "openra@playtest": "all",
   "openshot-video-editor@daily": "all",
   "orcaslicer@nightly": "all",
-  "osu@tachyon": "all",
+  "osu@tachyon": "any",
   "playcover-community@beta": "all",
   "positron": "all",
   "powershell@preview": "all",
