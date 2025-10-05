@@ -1,6 +1,6 @@
 cask "material-maker" do
-  version "1.3"
-  sha256 "0f88cf40438ac2cd8915cce1d0ae79991d3c8c804c53a8ce14e9ba4f21719edf"
+  version "1.4"
+  sha256 "653cde79a6e0d1e6f705720b43ed864af4ee03b414bbfe44ae04af41030e4ce8"
 
   url "https://github.com/RodZill4/material-maker/releases/download/#{version}/material_maker_#{version.dots_to_underscores}.dmg",
       verified: "github.com/RodZill4/material-maker/"
@@ -13,7 +13,7 @@ cask "material-maker" do
     strategy :github_latest
   end
 
-  app "material_maker.app"
+  app "Material Maker.app"
 
   zap trash: [
     "~/Library/Application Support/CrashReporter/material_maker*.plist",
