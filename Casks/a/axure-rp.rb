@@ -9,7 +9,7 @@ cask "axure-rp" do
   homepage "https://www.axure.com/"
 
   livecheck do
-    url "https://www.axure.com/release-history"
+    url "https://www.axure.com/changelog?filter=Axure+RP"
     regex(/>\s*(?:Version|Axure\s*RP)\s*v?(\d+(?:\.\d+)+)/i)
   end
 
