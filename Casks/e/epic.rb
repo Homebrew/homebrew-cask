@@ -6,8 +6,8 @@ cask "epic" do
     sha256 "4eb9346a5509bfba0cb94e6a72747afe98d90852f48d2dc4abb3a1120a09393a"
   end
   on_intel do
-    version "138.0.7204.50,139"
-    sha256 "b982ada33880e55010779f5f03dc8c4d0d661448767cc50d093ef5dee09a48fb"
+    version "140.0.7339.133,150"
+    sha256 "be025fb94485b1baacc82923ef451be5f08089a3d606bbf2cd1038530b21e8ac"
   end
 
   url "https://cdn.epicbrowser.com/mac#{version.csv.second || version.major}#{arch}/epic_#{version.csv.first}.dmg"
