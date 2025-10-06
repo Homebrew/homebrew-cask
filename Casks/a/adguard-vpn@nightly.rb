@@ -1,6 +1,6 @@
 cask "adguard-vpn@nightly" do
-  version "2.8.0.868"
-  sha256 "1f9c9d3d21521fc8f0bbce1a56261de2563c9b024aeabfa87452285375e4aa63"
+  version "2.8.0.874"
+  sha256 "9243f82781cbb29de4ed1d2b5587bab6c52c99a1bbcf6bed1cb058f7d33b0e97"
 
   url "https://static.adguard-vpn.com/mac/nightly/AdGuardVPN-#{version}.dmg"
   name "AdGuard VPN"
@@ -16,6 +16,7 @@ cask "adguard-vpn@nightly" do
 
   auto_updates true
   conflicts_with cask: "adguard-vpn"
+  depends_on macos: ">= :big_sur"
 
   pkg "AdGuard VPN.pkg"
 
