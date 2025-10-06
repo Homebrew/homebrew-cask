@@ -12,10 +12,9 @@ module Homebrew
       cmd_args do
         usage_banner <<~EOS
           Run `brew` `audit` and `style` checks locally, from a pull request URL.
-          Useful when online CI is broken.
 
           Usage:
-            #{File.basename($PROGRAM_NAME)} <pr url>
+            brew cask-pr-local-check <pr url>
 
           Options:
         EOS
@@ -52,7 +51,7 @@ module Homebrew
         local_file = File.join(Dir.mktmpdir, file_name)
 
         File.write(local_file, URI(file_raw_url).read)
-        abort "Audit failed" unless system("brew", "audit", "--new", local_file)
+        abort "Audit failed" unless system("brew", "audit", "--new", "--online", "--signing", local_file)
         abort "Style check failed" unless system("brew", "style", local_file)
       end
     end
