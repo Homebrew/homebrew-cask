@@ -13,8 +13,12 @@ cask "atuin-desktop" do
 
   app "Atuin.app"
 
+  uninstall quit: "sh.atuin.app"
+
   zap trash: [
+    "~/Library/Application Support/sh.atuin.app",
     "~/Library/Caches/sh.atuin.app",
     "~/Library/Preferences/sh.atuin.app.plist",
+    "~/Library/WebKit/sh.atuin.app",
   ]
 end
