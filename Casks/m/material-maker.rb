@@ -17,7 +17,7 @@ cask "material-maker" do
 
   zap trash: [
     "~/Library/Application Support/CrashReporter/material_maker*.plist",
-    "~/Library/Application Support/material_maker",
+    "~/Library/Application Support/material_maker*",
     "~/Library/Saved Application State/com.rodzlabs.materialmaker.savedState",
   ]
 end
