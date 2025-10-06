@@ -22,9 +22,11 @@ cask "boltai" do
   app "BoltAI.app"
 
   zap trash: [
+    "~/.boltai",
     "~/Library/Application Support/co.podzim.BoltGPT",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.podzim.BoltGPT.*",
     "~/Library/Caches/co.podzim.BoltGPT",
+    "~/Library/Caches/SentryCrash/BoltAI",
     "~/Library/HTTPStorages/co.podzim.BoltGPT",
     "~/Library/Preferences/co.podzim.BoltGPT.plist",
     "~/Library/Saved Application State/co.podzim.BoltGPT.savedState",
