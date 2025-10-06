@@ -1,6 +1,6 @@
 cask "ledger-live" do
-  version "2.128.1"
-  sha256 "dc5de07acfc7c2190cbbcc6f4b34a40a5f502c66b6c0a1bc3df57cc025ec563d"
+  version "2.130.1"
+  sha256 "c97475ab4d0639cbe34718cdc4f72937873e0b2da07b995202ffa948ab2db4b9"
 
   url "https://download.live.ledger.com/ledger-live-desktop-#{version}-mac.dmg"
   name "Ledger Live"
@@ -13,6 +13,7 @@ cask "ledger-live" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Ledger Live.app"
 
