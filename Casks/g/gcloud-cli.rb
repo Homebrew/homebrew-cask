@@ -77,4 +77,8 @@ cask "gcloud-cli" do
     "#{google_cloud_sdk_root}.staging",
     google_cloud_sdk_root,
   ]
+
+  caveats do
+    path_environment_variable "#{google_cloud_sdk_root}/bin"
+  end
 end
