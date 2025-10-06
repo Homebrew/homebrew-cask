@@ -13,8 +13,7 @@ cask "atuin-desktop" do
 
   app "Atuin.app"
 
-  uninstall launchctl: "homebrew.mxcl.atuin",
-            quit:      "sh.atuin.app"
+  uninstall quit: "sh.atuin.app"
 
   zap trash: [
     "~/Library/Application Support/sh.atuin.app",
