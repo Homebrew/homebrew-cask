@@ -1,6 +1,6 @@
 cask "mitti" do
-  version "2.8.14,1373"
-  sha256 "696222c0902119b97972020f44b64a7665cff812b23c0116e5be0c7db3be0fba"
+  version "2.8.15,1389"
+  sha256 "d459acff7fc98786a3290339170fd28a8d34232e788d89e1b9b4dfec0d1c5a1f"
 
   url "https://dl.imimot.com/Mitti#{version.csv.first}_#{version.csv.second}.dmg"
   name "Mitti"
