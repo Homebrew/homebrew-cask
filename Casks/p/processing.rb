@@ -1,9 +1,9 @@
 cask "processing" do
   arch arm: "aarch64", intel: "x64"
 
-  version "4.4.7,1307"
-  sha256 arm:   "7b2426f6115fd709340e4f3de14056fe615949fb6d1aece218f946d8bc2d6e44",
-         intel: "c269e365931e5808203dd9c2ecb095e849fb23bd0d612368b3d29798f14dee32"
+  version "4.4.8,1308"
+  sha256 arm:   "7ae6ac676cb8ab15ea1c29a59e749c24ec86ae0c33a47afb50c0c95cc3cbc391",
+         intel: "0989a3c609573f28ed84c99516939fe004a120f19e54fd36f3c12342984e1585"
 
   url "https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macos-#{arch}.dmg",
       verified: "github.com/processing/processing4/"
