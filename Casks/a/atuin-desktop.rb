@@ -11,6 +11,11 @@ cask "atuin-desktop" do
   desc "Runbook editor for terminal workflows"
   homepage "https://atuin.sh/"
 
+  livecheck do
+    url :url
+    regex(/v?(\d+(?:\.\d+)+)/i)
+  end
+
   app "Atuin.app"
 
   uninstall quit: "sh.atuin.app"
