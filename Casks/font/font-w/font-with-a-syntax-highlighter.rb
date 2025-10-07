@@ -5,7 +5,6 @@ cask "font-with-a-syntax-highlighter" do
   url "https://github.com/hlotvonen/FontWithASyntaxHighlighter/archive/refs/heads/main.tar.gz",
       verified: "github.com/hlotvonen/FontWithASyntaxHighlighter/"
   name "Font with a Syntax Highlighter"
-  desc "Font with built-in syntax highlighting"
   homepage "https://blog.glyphdrawing.club/font-with-built-in-syntax-highlighting/"
 
   font "FontWithASyntaxHighlighter-main/FontWithASyntaxHighlighterNightOwl-Regular.otf"
