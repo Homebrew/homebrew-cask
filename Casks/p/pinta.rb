@@ -1,9 +1,9 @@
 cask "pinta" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.0.3"
-  sha256 arm:   "2aa1c525e0e10dbd507a62f1f69e9c3f9b5c727a27f3d8454edb731ae787b34d",
-         intel: "e26690f50f47e819c53b275f91849a05d88f2cf82d70818e7b24886de77acb40"
+  version "3.0.4"
+  sha256 arm:   "162e1a5a874905377a4aaa728d29a11b751237d24230484d1662b7d9c5501d32",
+         intel: "461261e1fb96c23a913d57c5e0a18400a6418a6f415209fe6c69c8cb5e0b4464"
 
   url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta-macos-#{arch}.dmg",
       verified: "github.com/PintaProject/Pinta/"
