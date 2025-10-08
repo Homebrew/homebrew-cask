@@ -1,9 +1,9 @@
 cask "atuin-desktop" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.4"
-  sha256 arm:   "94abdebc96d462df7c0771c732d86e18a85c2c7de432a2d3e05cfb1fe2e27b5d",
-         intel: "1e921fc68e7565adf438e8b85e10bdd08e6f46ba6bbabfe6543a0bc7375e3b87"
+  version "0.1.5"
+  sha256 arm:   "942e8aa3e8c9c36568e586be40769abab483cde7f73a0078d4804344a98c986f",
+         intel: "785af5e6213e158b292b6304ad7d31e0c810786360ceb62adc22cea6354c145b"
 
   url "https://github.com/atuinsh/desktop/releases/download/v#{version}/Atuin_#{version}_#{arch}.dmg",
       verified: "github.com/atuinsh/desktop/"
@@ -13,7 +13,7 @@ cask "atuin-desktop" do
 
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+)/i)
+    strategy :github_latest
   end
 
   app "Atuin.app"
