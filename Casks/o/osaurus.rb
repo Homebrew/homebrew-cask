@@ -12,6 +12,7 @@ cask "osaurus" do
   depends_on arch: :arm64
 
   app "osaurus.app"
+  binary "#{appdir}/osaurus.app/Contents/MacOS/osaurus"
 
   zap trash: [
     "~/Library/Application Support/com.dinoki.osaurus",
