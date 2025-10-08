@@ -1,6 +1,6 @@
 cask "superwhisper" do
-  version "2.5.5"
-  sha256 "794afbdfd509ca817695a929b58ba6ebd38ef134fa139d44d96cbf2f21402f03"
+  version "2.5.6"
+  sha256 "0dc6950c4a16fc3445b2283e7075c1f9482ab6260ba4a90a01a8410f57006f03"
 
   url "https://builds.superwhisper.com/v#{version}/superwhisper.zip"
   name "superwhisper"
