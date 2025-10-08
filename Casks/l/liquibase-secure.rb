@@ -8,9 +8,9 @@ cask "liquibase-secure" do
   homepage "https://www.liquibase.com/"
 
   livecheck do
-    url "https://package.liquibase.com/downloads/secure/homebrew/"
+    url "https://repo.liquibase.com/releases/secure/"
     strategy :page_match
-    regex(/liquibase-secure-(\d+(?:\.\d+)+)\.tar\.gz/i)
+    regex(%r{href=["']?(\d+(?:\.\d+)+)/?["']?>}i)
   end
 
   depends_on formula: "openjdk"
