@@ -1,11 +1,11 @@
 cask "ovice" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.16.2"
-  sha256 arm:   "d4d3bef21bab78ec90a5ea1ec42c248f669977f36b5959e43bae87fbe14ead6c",
-         intel: "d0de26ef19fcaf1cbe6a6bd105cc3137a262a0cfc8f4dc970dc35a1c2ec50cc0"
+  version "1.16.3"
+  sha256 arm:   "6e9e34f5381c5ae3b2ef9a6a92f3a1e36e822ff17bd1ac103e29b0295fe33bdc",
+         intel: "747d6f6788bb5f7679164abef82a2206bd80ca010aa108e4718eb0d836cf9131"
 
-  url "https://assets.ovice.io/desktop-apps/staging/darwin/#{arch}/ovice-darwin-#{arch}-#{version}.zip",
+  url "https://assets.ovice.io/desktop-apps/stable/darwin/#{arch}/ovice-darwin-#{arch}-#{version}.zip",
       verified: "assets.ovice.io/desktop-apps/"
   name "ovice"
   desc "Virtual workplace for distributed teams"
@@ -17,6 +17,8 @@ cask "ovice" do
       json["currentRelease"]
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "ovice.app"
 
