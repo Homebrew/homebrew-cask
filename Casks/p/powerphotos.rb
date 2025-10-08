@@ -1,8 +1,8 @@
 cask "powerphotos" do
-  on_big_sur :or_older do
+  on_ventura :or_older do
     on_catalina :or_older do
-      version "1.9.12"
-      sha256 "cbb7cb47b20d947bc8bb30dc29e6eba88ba1e39d073bc304962e3f4759c8f0be"
+      version "1.9.14"
+      sha256 "760bfa114e0a6c807613c689c84ac5eceeae2763bcf246b104636d2d862676f1"
 
       url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
     end
@@ -12,13 +12,19 @@ cask "powerphotos" do
 
       url "https://www.fatcatsoftware.com/powerphotos/downloads/PowerPhotos_#{version.no_dots}.zip"
     end
+    on_monterey :or_newer do
+      version "2.7.8"
+      sha256 "3a1e2dca4adda2d976721178f5df5667fa0ada2923a74131f2f7fa5e767d4aae"
+
+      url "https://www.fatcatsoftware.com/powerphotos/downloads/PowerPhotos_#{version.no_dots}.zip"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
-    version "3.1"
+  on_sonoma :or_newer do
+    version "3.1.1"
     sha256 :no_check
 
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
