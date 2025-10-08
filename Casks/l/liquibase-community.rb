@@ -1,10 +1,10 @@
-cask "liquibase" do
+cask "liquibase-community" do
   version "5.0.1"
   sha256 "3ae11ccdcd4c080e421e5fd043bdbd624d56fcfc9b294d5d9d898cb8b074e449"
 
   url "https://package.liquibase.com/downloads/oss/homebrew/liquibase-#{version}.tar.gz",
       verified: "package.liquibase.com/downloads/oss/homebrew/"
-  name "Liquibase"
+  name "Liquibase Community"
   desc "Library for database change tracking"
   homepage "https://www.liquibase.org/"
 
