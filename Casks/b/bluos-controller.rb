@@ -1,6 +1,6 @@
 cask "bluos-controller" do
-  version "4.10.0"
-  sha256 "563c025852c24cec684b9962fba83086d4baa25977a7741bd51aea04ee3c5af4"
+  version "4.12.0"
+  sha256 "981ece99093fc9c6c61d44c577b8c2b8e5de8e5bcec3f4fda9cf106f80175b0e"
 
   url "https://content-bluesound-com.s3.amazonaws.com/uploads/BluOS-Controller-#{version}-MacOS.zip",
       verified: "content-bluesound-com.s3.amazonaws.com/uploads/"
@@ -12,6 +12,8 @@ cask "bluos-controller" do
     url "https://www.bluesound.com/downloads/"
     regex(%r{uploads/BluOS[._-]Controller[._-]v?(\d+(?:\.\d+)+)[._-]MacOS\.zip}i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "BluOS Controller.app"
 
