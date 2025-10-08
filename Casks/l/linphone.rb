@@ -1,6 +1,6 @@
 cask "linphone" do
-  version "5.3.0"
-  sha256 "cc4f7509755895d118188a7d65f5051d0cb815769beabab9edac74701528dbe4"
+  version "5.3.1"
+  sha256 "9f4f9884ebb8e0ff13c43b0e51ccca6a78c3ee5d73b86463c49d38d213584895"
 
   url "https://download.linphone.org/releases/macosx/app/Linphone-#{version}-mac.dmg"
   name "Linphone"
@@ -11,6 +11,8 @@ cask "linphone" do
     url "https://download.linphone.org/releases/macosx/app/"
     regex(/Linphone[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Linphone.app"
 
