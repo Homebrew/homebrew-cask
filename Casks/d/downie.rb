@@ -1,6 +1,6 @@
 cask "downie" do
-  version "4.11,5037"
-  sha256 "bfbc3ad76c2b9718c6e417016deb6d14db7875085df34cc958632cc9984e7f42"
+  version "4.11.1,5041"
+  sha256 "756f13ff4447a231c8121f0fe6ed596fb57798b3195d50242eee82d51c737b1e"
 
   url "https://software.charliemonroe.net/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.csv.second}.dmg"
   name "Downie"
