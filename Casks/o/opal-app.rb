@@ -1,6 +1,6 @@
 cask "opal-app" do
-  version "1.5.5"
-  sha256 "5fe3866b6fb842eeceb8ffa9a4fc74a3fef5ef560ad36374b28881b3659079ca"
+  version "1.5.6"
+  sha256 "c873cb488e386c0895b93a4bf8c64146ee7a74b2ea3ca6259d24b94c2776ce69"
 
   url "https://downloads.opal.so/mac/Opal%20#{version}.dmg"
   name "Opal"
