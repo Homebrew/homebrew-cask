@@ -12,8 +12,6 @@ cask "liquibase-community" do
     strategy :github_latest
   end
 
-  depends_on formula: "openjdk"
-
   binary "liquibase"
 
   caveats do
