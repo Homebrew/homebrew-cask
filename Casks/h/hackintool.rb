@@ -1,11 +1,13 @@
 cask "hackintool" do
-  version "4.0.3"
+  version "4.0.4"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://github.com/headkaze/Hackintool/releases/download/#{version}/Hackintool.zip"
   name "Hackintool"
   desc "Hackintosh patching tool"
   homepage "https://github.com/headkaze/Hackintool"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
 
