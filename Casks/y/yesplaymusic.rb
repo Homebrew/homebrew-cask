@@ -1,9 +1,9 @@
 cask "yesplaymusic" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.8-2"
-  sha256 arm:   "15a7ae98d9a43d0623f407b65f0fde294b9ecd1e1b11d9e2f258be35153d8b59",
-         intel: "5079c47685d3fef02b4912973e57c3614514303c85da69c3b262448c0096dafa"
+  version "0.4.10"
+  sha256 arm:   "bf7564f451f0e25217015c0f2a83e1385f7a407a42daf0be8d8d992c471160d8",
+         intel: "6e1d9a9dfe36bb9e27b408ee9574d8e7ec159dbcb5967a47a8d8ad55cb5f4c65"
 
   url "https://github.com/qier222/YesPlayMusic/releases/download/v#{version}/YesPlayMusic-mac-#{version.hyphens_to_dots.major_minor_patch}-#{arch}.dmg"
   name "YesPlayMusic"
