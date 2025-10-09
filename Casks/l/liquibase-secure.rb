@@ -13,8 +13,6 @@ cask "liquibase-secure" do
     regex(%r{href=["']?(\d+(?:\.\d+)+)/?["']?>}i)
   end
 
-  depends_on formula: "openjdk"
-
   binary "liquibase"
 
   caveats do
