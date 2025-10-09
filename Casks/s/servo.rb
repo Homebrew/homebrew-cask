@@ -1,6 +1,6 @@
 cask "servo" do
-  version "2025-10-08"
-  sha256 "e3b28971c1f152ddb20bcd092c737d64c30eafd8484c42d86c16015ba915cb87"
+  version "2025-10-09"
+  sha256 "bea35b71660a3e5dea67593850b4529ba9e43898aef0c7abd20bbcae14706479"
 
   url "https://github.com/servo/servo-nightly-builds/releases/download/#{version}/servo-latest.dmg",
       verified: "github.com/servo/servo-nightly-builds/"
