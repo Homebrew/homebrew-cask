@@ -1,6 +1,6 @@
 cask "progressive-downloader" do
-  version "8.2"
-  sha256 "a4a0d7571bfe5db156c617b822214e3f2f8f1fcb727fcace36b43af16d5d8ff0"
+  version "8.3"
+  sha256 "edf1a860b10feb79c5f8907d862b0eab4722d63630c53a0f9321b60a8557e9d7"
 
   url "https://www.macpsd.net/update/#{version}/PSD.dmg"
   name "Progressive Downloader"
@@ -11,6 +11,8 @@ cask "progressive-downloader" do
     url :homepage
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/PSD[^"' >]*?\.dmg}i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :big_sur"
 
