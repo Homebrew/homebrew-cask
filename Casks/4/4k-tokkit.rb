@@ -1,9 +1,9 @@
 cask "4k-tokkit" do
   arch arm: "arm64", intel: "x64"
 
-  version "25.3.0"
-  sha256 arm:   "1cf699912f16135f2e2a5ba146d9f1bc1c57e77930d5dd00e9ad452ffd63332b",
-         intel: "4b37578a218fecc90c546377e3b7be8b81c7cb463f2280b709876877928462c6"
+  version "25.4.0"
+  sha256 arm:   "92b8e5aaf1fb046eeb57a2554db1903e6b9402b11d032d3428c390cf48c3b461",
+         intel: "79ab0b1904b3a2d08b3ecb78ef51f90f0d9f001c606883e409ae0e2bc706f450"
 
   url "https://dl.4kdownload.com/app/4ktokkit_#{version}_#{arch}.dmg"
   name "4K Tokkit"
