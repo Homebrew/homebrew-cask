@@ -1,7 +1,13 @@
 cask "devonthink" do
-  on_catalina :or_older do
-    version "3.9.6"
-    sha256 "e272af94a61619adaf729de336e1ef24465a5e6ff27ed6ae8cb11d28ca35638a"
+  on_monterey :or_older do
+    on_catalina :or_older do
+      version "3.9.6"
+      sha256 "e272af94a61619adaf729de336e1ef24465a5e6ff27ed6ae8cb11d28ca35638a"
+    end
+    on_big_sur :or_newer do
+      version "3.9.16"
+      sha256 "a2f29f479900cd7fc56bd574d87a64f22089ab9b5cbc8cdeb1cebf33b9220fae"
+    end
 
     url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
 
@@ -11,9 +17,9 @@ cask "devonthink" do
 
     app "DEVONthink #{version.major}.app"
   end
-  on_big_sur :or_newer do
-    version "4.1"
-    sha256 "9f0a5d22905b251f4acf2a1ebffd3a58fb257f50b9e2233a330fa6a9fb1686ab"
+  on_ventura :or_newer do
+    version "4.1.1"
+    sha256 "a2f29f479900cd7fc56bd574d87a64f22089ab9b5cbc8cdeb1cebf33b9220fae"
 
     url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink.app.zip"
 
