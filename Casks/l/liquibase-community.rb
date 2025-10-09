@@ -15,10 +15,7 @@ cask "liquibase-community" do
   binary "liquibase"
 
   caveats do
-    <<~EOS
-      You should set the environment variable LIQUIBASE_HOME to
-        $(brew --prefix)/Caskroom/liquibase/#{version}
-    EOS
+    depends_on_java "17+"
   end
 
   # No zap stanza required
