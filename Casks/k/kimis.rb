@@ -1,8 +1,8 @@
 cask "kimis" do
-  version "1.20.180"
-  sha256 "c65971af9978af87864fe30a86d73187d4adee9453577cf5e13652f1fe5badc7"
+  version "1.21.183"
+  sha256 "7146826719ddb2a1142a9106205aaa50c31676db6214f0e90b4f4bfa7c59a512"
 
-  url "https://github.com/Lakr233/Kimis/releases/download/#{version}/Kimis-v#{version}.zip"
+  url "https://github.com/Lakr233/Kimis/releases/download/#{version}/Kimis-#{version}.zip"
   name "Kimis"
   desc "Desktop client for Misskey"
   homepage "https://github.com/Lakr233/Kimis"
