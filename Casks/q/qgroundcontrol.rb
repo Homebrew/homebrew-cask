@@ -1,6 +1,6 @@
 cask "qgroundcontrol" do
-  version "5.0.7"
-  sha256 "7c24d801e5374b71c634bd0966ec51f7dd6448ecff5108bfb35994a4715ef0b1"
+  version "5.0.8"
+  sha256 "1f5fc88f331302adcb4d00c3b92f05ef83bad748196a2646497c50800ab74822"
 
   url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl.dmg",
       verified: "github.com/mavlink/qgroundcontrol/"
@@ -12,8 +12,6 @@ cask "qgroundcontrol" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :monterey"
 
