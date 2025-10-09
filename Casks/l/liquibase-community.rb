@@ -5,7 +5,7 @@ cask "liquibase-community" do
   url "https://package.liquibase.com/downloads/oss/homebrew/liquibase-#{version}.tar.gz"
   name "Liquibase Community"
   desc "Library for database change tracking"
-  homepage "https://www.liquibase.org/"
+  homepage "https://www.liquibase.com/community"
 
   livecheck do
     url "https://github.com/liquibase/liquibase"
