@@ -1,6 +1,6 @@
 cask "musescore" do
-  version "4.6.1.252801513,4.6.1"
-  sha256 "23fd68d4e5098825ca1918b5a44a26edabd62a3a433ef6dbac18910ddb32c34a"
+  version "4.6.2.252830930,4.6.2"
+  sha256 "8b02093e33a8d863908aac3b84eb6f5feba7814dd525d43672d5e7f5f7a17230"
 
   url "https://github.com/musescore/MuseScore/releases/download/v#{version.csv.second}/MuseScore-Studio-#{version.csv.first}.dmg",
       verified: "github.com/musescore/MuseScore/"
