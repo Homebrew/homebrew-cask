@@ -1,9 +1,8 @@
 cask "gitfox" do
-  version "4.0.1,10423"
-  sha256 "5224b21d5e481e7439371c71ea64852d3ea1c60e669466909ea9df3e0d249d72"
+  version "4.0.2,10616"
+  sha256 "a0d3bc10740d48e6c5a3a0f3def578375825205463c96977cc5df96cf2d59493"
 
-  url "https://storage.googleapis.com/gitfox/builds/retail/#{version.csv.second}/Gitfox.#{version.csv.second}.zip",
-      verified: "storage.googleapis.com/gitfox/"
+  url "https://update.gitfox.app/builds/retail/#{version.csv.second}/Gitfox.#{version.csv.second}.zip"
   name "Gitfox"
   desc "Git client"
   homepage "https://www.gitfox.app/"
