@@ -1,6 +1,6 @@
 cask "jedit-omega" do
-  version "3.11"
-  sha256 "21ea1aec73ac72577b9100cc6be1b3597cd88c88db624fa498b55b66bcb2a7fb"
+  version "3.12"
+  sha256 "2dba43a17c33c58fec0a401ade3331cb9459fdafe2ba65a45f4afba3b2eefc4a"
 
   url "https://artman21.site/JeditOmega#{version.no_dots}.pkg",
       verified: "artman21.site/"
