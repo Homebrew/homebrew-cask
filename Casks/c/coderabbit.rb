@@ -1,9 +1,9 @@
 cask "coderabbit" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.3.3"
-  sha256 arm:   "d862c6eebdf548d641c24f504b528973b1832e235de4c86cb5c0b4a7ceead3db",
-         intel: "595ba747bc2cc4e941a20dbb77330001106981cb956eca52d4e4f36a38427723"
+  version "0.3.4"
+  sha256 arm:   "e83f0b87ebcbc47eaf2bd79b54c81a666ea201348edb755c75743fca27a85c4f",
+         intel: "8afc606d3017e91023be5dbbe5c5a083c72bc029195799228e576d1211f392ac"
 
   url "https://cli.coderabbit.ai/releases/#{version}/coderabbit-darwin-#{arch}.zip"
   name "CodeRabbit"
@@ -14,6 +14,8 @@ cask "coderabbit" do
     url "https://cli.coderabbit.ai/releases/latest/VERSION"
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "coderabbit"
 
