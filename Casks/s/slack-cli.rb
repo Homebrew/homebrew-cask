@@ -1,9 +1,9 @@
 cask "slack-cli" do
   arch arm: "arm64", intel: "amd64"
 
-  version "3.8.0"
-  sha256 arm:   "9ad2bbb5151a49070daf3d5a80d3cc93d4fc10a31c568899b0d5c8578689d2b9",
-         intel: "aae93c01ea9af5656772402823e91ce80e190060f521c8cded4b3750f7f8552e"
+  version "3.8.1"
+  sha256 arm:   "d897905cf3bc6f2c6c8c7e2ba0a8df84bb130c05493c6f9b4e7c905b1db51db7",
+         intel: "5e1e3725ded92e60e8ad4edd9dda9ab282127b3c0187f31653a0fab41537a2c8"
 
   url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_#{arch}.tar.gz",
       verified: "downloads.slack-edge.com/slack-cli/"
