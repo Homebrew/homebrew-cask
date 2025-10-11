@@ -1,4 +1,0 @@
-# TODO: remove this file when actionlint is updated
-# actionlint doesn't know about macos-26 yet
-self-hosted-runner:
-  labels: [macos-15-intel, macos-26]
