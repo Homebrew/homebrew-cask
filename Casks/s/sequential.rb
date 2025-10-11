@@ -8,6 +8,7 @@ cask "sequential" do
   homepage "http://sequentialx.com/"
 
   deprecate! date: "2024-10-11", because: :unmaintained
+  disable! date: "2025-10-11", because: :unmaintained
 
   app "Sequential.app"
 

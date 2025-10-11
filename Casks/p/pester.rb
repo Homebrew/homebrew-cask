@@ -8,6 +8,7 @@ cask "pester" do
   homepage "https://sabi.net/nriley/software/index.html#pester"
 
   deprecate! date: "2024-10-10", because: :unmaintained
+  disable! date: "2025-10-11", because: :unmaintained
 
   app "Pester.app"
 
