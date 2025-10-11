@@ -2,6 +2,7 @@
   "azure-cli": "homebrew/core",
   "basex": "homebrew/core",
   "borgbackup": "homebrew/core",
+  "container": "homebrew/core",
   "chronograf": "homebrew/core",
   "consul-template": "homebrew/core",
   "cryptol": "homebrew/core",
