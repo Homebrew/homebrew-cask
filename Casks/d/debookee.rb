@@ -8,10 +8,7 @@ cask "debookee" do
   desc "Network traffic analyser"
   homepage "https://debookee.com/"
 
-  livecheck do
-    url "https://www.iwaxx.com/debookee/appcast.php"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2025-10-12", because: :no_longer_available
 
   auto_updates true
 
