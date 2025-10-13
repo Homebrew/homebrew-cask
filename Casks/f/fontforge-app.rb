@@ -1,8 +1,8 @@
 cask "fontforge-app" do
-  version "2023-01-01,a1dad3e"
-  sha256 "b87479dbb8f8f9131ea37983aae63542f016aa182232be5c6a56976350b3ebfd"
+  version "2025-10-09"
+  sha256 "ba9f883389188d822a36cd447e9a9940a2bf4c4254f49f9fa3aa622a69b73110"
 
-  url "https://github.com/fontforge/fontforge/releases/download/#{version.csv.first.no_hyphens}/FontForge-#{version.csv.first}-#{version.csv.second}.app.dmg",
+  url "https://github.com/fontforge/fontforge/releases/download/#{version.csv.first.no_hyphens}/FontForge-#{version.csv.first}-MacOS.app.dmg",
       verified: "github.com/fontforge/fontforge/"
   name "FontForge"
   desc "Font editor and converter for outline and bitmap fonts"
@@ -10,16 +10,20 @@ cask "fontforge-app" do
 
   livecheck do
     url :url
-    regex(/^FontForge[._-]v?(\d+(?:-\d+)+)-(\h+)\.app\.dmg/i)
+    regex(/^FontForge[._-]v?(\d+(?:-\d+)+)(?:[._-]MacOS\.app)?\.dmg/i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["name"]&.match(regex)
         next if match.blank?
 
-        "#{match[1]},#{match[2]}"
+        match[1]
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :ventura"
 
   app "FontForge.app"
 
