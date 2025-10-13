@@ -13,7 +13,19 @@ cask "slack" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "4.45.69"
+    sha256 arm:   "31a3f08f49e27a1c0d6224a5f0677329217599eccab481620266730566f0abd0",
+           intel: "88ee611b36189ab1e84f39f0fbe0048468d32a24e783303dfe1a3ea0519755e2"
+
+    url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/#{arch}/Slack-#{version}-macOS.dmg",
+        verified: "downloads.slack-edge.com/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "4.46.101"
     sha256 arm:   "ad0dedf0dbf0af2fd836431f7048facf8e677f040ab580c9dbf84931d3f151a5",
            intel: "7cd360b25466a68af030ce34e7d65241c2775843e0fc1c194e5fa4642f3f6df4"
