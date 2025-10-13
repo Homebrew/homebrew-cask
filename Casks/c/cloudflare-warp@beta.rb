@@ -1,6 +1,9 @@
+# typed: strict
+# frozen_string_literal: true
+
 cask "cloudflare-warp@beta" do
-  version "2025.7.106.1"
-  sha256 "edbde232c65678e0f89e14342058e589b5c78ecfbf6eaf991c627527d6f85433"
+  version "2025.8.779.0"
+  sha256 "71dc277d596debfb52f3466babf0972fa0d205e50ee79fa42de513cc83f76f00"
 
   url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}",
       verified: "downloads.cloudflareclient.com/v1/download/macos/"
@@ -10,7 +13,17 @@ cask "cloudflare-warp@beta" do
 
   livecheck do
     url "https://downloads.cloudflareclient.com/v1/update/sparkle/macos/beta"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      # Also check stable channel and return all versions
+      stable_items = Homebrew::Livecheck::Strategy::Sparkle
+                     .find_versions(url: "https://downloads.cloudflareclient.com/v1/update/sparkle/macos/ga")
+
+      # Combine versions from both channels
+      all_versions = items.map(&:short_version) + stable_items[:matches].values.flatten
+
+      # Return all versions - Homebrew will automatically pick the latest
+      all_versions
+    end
   end
 
   auto_updates true
