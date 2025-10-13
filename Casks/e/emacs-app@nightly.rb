@@ -24,6 +24,7 @@ cask "emacs-app@nightly" do
     "emacs",
     "emacs@pretest",
   ]
+  depends_on macos: ">= :monterey"
 
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"
