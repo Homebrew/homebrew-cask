@@ -1,6 +1,6 @@
 cask "ddnet" do
-  version "19.4"
-  sha256 "66f0aa04d805645500c85b33ad3bef0e5d23753851eef3e08765a931a5d93f84"
+  version "19.5"
+  sha256 "e5ca740667f49a7fbe2cc91a017eaf5bcd74147a05e19d34bfd8004717931c40"
 
   url "https://ddnet.org/downloads/DDNet-#{version}-macos.dmg"
   name "DDNet"
@@ -15,6 +15,7 @@ cask "ddnet" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "DDNet.app"
   app "DDNet-Server.app"
