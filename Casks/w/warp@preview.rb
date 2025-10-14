@@ -1,6 +1,6 @@
 cask "warp@preview" do
-  version "0.2025.10.08.08.12.preview_03"
-  sha256 "352b05f2c613f82986519145e1ba223cceca64012656cf804961e5a7d589da02"
+  version "0.2025.10.08.08.12.preview_05"
+  sha256 "f56e576f40b8ce44f6830417bcdb7fff5f760009a0bf760c42ee98d50503cfeb"
 
   url "https://releases.warp.dev/preview/v#{version}/WarpPreview.dmg"
   name "Warp Preview"
@@ -15,6 +15,7 @@ cask "warp@preview" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "WarpPreview.app"
 
