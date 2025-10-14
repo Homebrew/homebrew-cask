@@ -1,9 +1,9 @@
 cask "atuin-desktop" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.6"
-  sha256 arm:   "33c291cf1c28d89828fb61b62db87a0a2e0d8acfb90c80bb063ff940acb65fff",
-         intel: "905711fe1d0103ca274c5d45cc6298897b40076bc403125ecef7ee290ff82b72"
+  version "0.1.7"
+  sha256 arm:   "4ac8986b72206e993ba3e77566f0136e08f9d3c8c24cff534e1dffac7d57498d",
+         intel: "914f8c131c1ac9b6204a6b0e0538f291e043e1df4ad11cab52830c750975cc7d"
 
   url "https://github.com/atuinsh/desktop/releases/download/v#{version}/Atuin_#{version}_#{arch}.dmg",
       verified: "github.com/atuinsh/desktop/"
