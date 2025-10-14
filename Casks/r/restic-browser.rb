@@ -1,6 +1,6 @@
 cask "restic-browser" do
-  version "0.3.2"
-  sha256 "8b2138661571a6f6f80210cffe5c4b03b4b7436c751a28941a77a113fded7a68"
+  version "0.3.3"
+  sha256 "d2e772dd19912f0eed3053ba654cdd14ca44ea5039164be548362a8b0ab57e18"
 
   url "https://github.com/emuell/restic-browser/releases/download/v#{version}/Restic-Browser-v#{version}-macOS.zip"
   name "Restic Browser"
