@@ -13,7 +13,7 @@ cask "wechatwebdevtools" do
 
   livecheck do
     url "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html"
-    regex(/Stable\s*Build\s*<\/a>\s*\(v?(\d+(?:\.\d+)+)[) ]/i)
+    regex(%r{Stable\s*Build\s*</a>\s*\(v?(\d+(?:\.\d+)+)[) ]}i)
   end
 
   auto_updates true
