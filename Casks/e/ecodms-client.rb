@@ -15,7 +15,7 @@ cask "ecodms-client" do
   depends_on macos: ">= :ventura"
 
   # The url is unversioned, but the download returns a pkg with a version number
-  rename "ecoDMS-Clients-*.pkg", "ecoDMS-Clients.pkg"
+  rename "ecoDMS*Clients*.pkg", "ecoDMS-Clients.pkg"
 
   pkg "ecoDMS-Clients.pkg"
 
