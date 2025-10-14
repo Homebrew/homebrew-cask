@@ -8,6 +8,7 @@ cask "cmdtap" do
   homepage "https://www.yingdev.com/projects/cmdtap"
 
   deprecate! date: "2024-10-14", because: :unmaintained
+  disable! date: "2025-10-14", because: :unmaintained
 
   app "CmdTap.app"
 

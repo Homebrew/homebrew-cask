@@ -9,6 +9,7 @@ cask "gutenprint" do
   homepage "https://gimp-print.sourceforge.io/"
 
   deprecate! date: "2024-10-14", because: :discontinued
+  disable! date: "2025-10-14", because: :discontinued
 
   pkg "gutenprint-#{version}.pkg"
 

@@ -8,6 +8,7 @@ cask "eme" do
   homepage "https://github.com/egoist/eme"
 
   deprecate! date: "2024-10-14", because: :unmaintained
+  disable! date: "2025-10-14", because: :unmaintained
 
   auto_updates true
 
