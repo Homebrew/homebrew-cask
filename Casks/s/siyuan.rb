@@ -10,6 +10,8 @@ cask "siyuan" do
   desc "Local-first personal knowledge management system"
   homepage "https://github.com/siyuan-note/siyuan"
 
+  depends_on macos: ">= :big_sur"
+
   app "SiYuan.app"
 
   zap trash: [
