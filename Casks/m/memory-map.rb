@@ -8,6 +8,7 @@ cask "memory-map" do
   homepage "https://memory-map.com/"
 
   deprecate! date: "2024-10-14", because: :discontinued
+  disable! date: "2025-10-14", because: :discontinued
 
   pkg "Memory-Map.#{version}.pkg"
 
