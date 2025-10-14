@@ -1,12 +1,11 @@
 cask "poe" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.34"
-  sha256 arm:   "cf56bbbb0a43ab316e80c815fa4a2b6d58110ccc8a164b1386c6397161407816",
-         intel: "99d5e77d88020b33ecddfe1cde5e80edea32b7f6b7a80085095273c0d778dfb7"
+  version "1.1.36"
+  sha256 :no_check
 
-  url "https://desktop-app.poecdn.net/updates/darwin_#{arch}/#{version}.zip",
-      verified: "desktop-app.poecdn.net/updates/"
+  url "https://desktop-app.poecdn.net/downloads/Poe.dmg",
+      verified: "desktop-app.poecdn.net/"
   name "Poe"
   desc "AI chat client"
   homepage "https://poe.com/"
@@ -22,6 +21,7 @@ cask "poe" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Poe.app"
