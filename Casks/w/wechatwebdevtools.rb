@@ -12,8 +12,8 @@ cask "wechatwebdevtools" do
   homepage "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html"
 
   livecheck do
-    url "https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html"
-    regex(/a>\s(\d(?:\.\d+)+)\s</i)
+    url "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html"
+    regex(/Stable\s*Build\s*<\/a>\s*\(v?(\d+(?:\.\d+)+)[) ]/i)
   end
 
   auto_updates true
