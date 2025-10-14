@@ -1,6 +1,6 @@
 cask "winbox" do
-  version "4.0beta33"
-  sha256 "20d3122981a95cc048175d576b3f8c2e60a4efcfab9fb8dfe41685b04ac81b51"
+  version "4.0beta35"
+  sha256 "15e504afd2a9bbdd8d0ceca9f229e94afc78db145ba076ff132dc1a384bdd52d"
 
   url "https://download.mikrotik.com/routeros/winbox/#{version}/WinBox.dmg"
   name "WinBox"
