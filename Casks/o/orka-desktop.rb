@@ -1,6 +1,6 @@
 cask "orka-desktop" do
-  version "3.0.0"
-  sha256 "c0b5c99a73f7b627d5091eea3fa6458115c48a0d3bb64b0d47d4543d4a2e4588"
+  version "3.1.0"
+  sha256 "9c3389511bc9fae3572a79c08f6a8dfaeb21f4b5ed79f7a0b428554659d44c51"
 
   url "https://github.com/macstadium/orka-desktop/releases/download/#{version}/OrkaDesktop-#{version}.dmg"
   name "Orka Desktop"
