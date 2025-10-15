@@ -9,6 +9,7 @@ cask "mars" do
   homepage "https://computerscience.missouristate.edu/mars-mips-simulator.htm"
 
   deprecate! date: "2024-10-15", because: :unmaintained
+  disable! date: "2025-10-15", because: :unmaintained
 
   container type: :naked
 
