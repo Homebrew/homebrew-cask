@@ -20,6 +20,6 @@ cask "meetings-notes" do
   zap trash: [
     "~/Library/Application Support/app.meetingsnotes.mac",
     "~/Library/Caches/app.meetingsnotes.mac",
-    "~/Library/Preferences/app.meetingsnotes.mac.plist"
+    "~/Library/Preferences/app.meetingsnotes.mac.plist",
   ]
 end
