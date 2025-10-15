@@ -8,6 +8,7 @@ cask "focusrite-saffire-mixcontrol" do
   homepage "https://focusrite.com/"
 
   deprecate! date: "2024-10-15", because: :discontinued
+  disable! date: "2025-10-15", because: :discontinued
 
   pkg "Saffire MixControl.pkg"
 
