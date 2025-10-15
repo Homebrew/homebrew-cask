@@ -1,6 +1,6 @@
 cask "steinberg-library-manager" do
-  version "3.2.50.300,99604c6c-120b-397a-822a-80ea66cfb62c"
-  sha256 "98dafe423066d9034ffa03262cae666dd6073ce34710ee541391c8461dcd5875"
+  version "3.2.60.317,04ca22c4-fd0d-3a09-8c57-572827f1dc12"
+  sha256 "b1edf51f28840d2f6dbd278c77521905717b68a00e6a22bf77bcfcc64d90dabf"
 
   url "https://download.steinberg.net/static_content/runtime-components/steinberg-library-manager/#{version.csv.first}-#{version.csv.second}/Steinberg_Library_Manager_mac.dmg"
   name "Steinberg Library Manager"
