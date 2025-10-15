@@ -1,8 +1,8 @@
 cask "trex" do
-  version "1.8.1"
-  sha256 "a7031d1c3cfe0af18afe21c9d69cd9dc5e60a864d25e36de3a8acb1b2fd4836f"
+  version "1.9.0"
+  sha256 "d8ff68dfee2f193ea253cd0bbaaefae958d9ddb64ebdc297002a4ac3e1373db7"
 
-  url "https://github.com/amebalabs/TRex/releases/download/v#{version}/TRex.zip",
+  url "https://github.com/amebalabs/TRex/releases/download/v#{version}/TRex-#{version}.zip",
       verified: "github.com/amebalabs/TRex/"
   name "TRex"
   desc "Easy to use text extraction tool"
