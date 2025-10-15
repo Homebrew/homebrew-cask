@@ -1,9 +1,9 @@
 cask "wordpresscom-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.0"
-  sha256 arm:   "b53aa65c0e6096480e75a5e6bfbd29ce383ad5b9c99622491145868ba0e22741",
-         intel: "4807ce1de2f1e7cedc6360953ba2be71eb3263fe04566126e8b65856f617d4c1"
+  version "1.6.1"
+  sha256 arm:   "33bca83a679ccb2be1c1bb28aafeb2cae73d7cc23e837141620a0e2d7c7ce944",
+         intel: "05629dba921a6d17b0aaa8797868b32fd0ce79029a8681e75a57215b424283bb"
 
   url "https://cdn.a8c-ci.services/studio/studio-darwin-#{arch}-v#{version}.app.zip",
       verified: "cdn.a8c-ci.services/studio/"
@@ -23,7 +23,7 @@ cask "wordpresscom-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Studio.app"
 
