@@ -1,11 +1,11 @@
 cask "ovice" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.16.3"
-  sha256 arm:   "6e9e34f5381c5ae3b2ef9a6a92f3a1e36e822ff17bd1ac103e29b0295fe33bdc",
-         intel: "747d6f6788bb5f7679164abef82a2206bd80ca010aa108e4718eb0d836cf9131"
+  version "1.17.3"
+  sha256 arm:   "c32362c5375484f16ebe507caee9d27c2792bbd4611ad2e89e8f28da04c0152e",
+         intel: "29c7b09a7b77ccde0704cf46b7a9f1c6e05b68df6f0e67ee8e5f960b65034e96"
 
-  url "https://assets.ovice.io/desktop-apps/stable/darwin/#{arch}/ovice-darwin-#{arch}-#{version}.zip",
+  url "https://assets.ovice.io/desktop-apps/staging/darwin/#{arch}/ovice-darwin-#{arch}-#{version}.zip",
       verified: "assets.ovice.io/desktop-apps/"
   name "ovice"
   desc "Virtual workplace for distributed teams"
