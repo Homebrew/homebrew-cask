@@ -1,9 +1,9 @@
 cask "wave" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.11.6"
-  sha256 arm:   "eb933eace464c34655a4de7faef62a98f457a64f9bbe8db68160dde8e08559f5",
-         intel: "9ef43a5345c33a4aae4605550b03663b01fd30239972a03a1c3ff218bb81af56"
+  version "0.12.0"
+  sha256 arm:   "0a69a32961c480b7e9516716c7d68adee3283e36c7e3a728fad53e1e89b097a6",
+         intel: "28021668e46ce378bd29009b0542b649f6a22b913c8e44b628a4c07b89fe51eb"
 
   url "https://dl.waveterm.dev/releases-w2/Wave-darwin-#{arch}-#{version}.dmg"
   name "Wave Terminal"
