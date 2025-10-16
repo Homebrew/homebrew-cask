@@ -1,6 +1,6 @@
 cask "opgg" do
-  version "2.0.6"
-  sha256 "ffe32e9b94769eabf3558259fe57ba2003f11fd61c0a90b7460b6feedd2cbfdf"
+  version "2.0.8"
+  sha256 "0dc3ca7255c8e677b45e4cfbb1eee00b4a90b13bbc33890c1e5650f0aa4e53c0"
 
   url "https://desktop-patch.op.gg/update/general/OP.GG-#{version}-universal.dmg"
   name "OP.GG Desktop"
