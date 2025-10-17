@@ -16,7 +16,7 @@ cask "gcloud-cli" do
   end
 
   auto_updates true
-  depends_on formula: "python@3.12"
+  depends_on formula: "python@3.14"
 
   google_cloud_sdk_root = "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
 
@@ -60,7 +60,7 @@ cask "gcloud-cli" do
     end
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
                     args:      ["config", "virtualenv", "create", "--python-to-use",
-                                "#{HOMEBREW_PREFIX}/opt/python@3.12/libexec/bin/python3"],
+                                "#{HOMEBREW_PREFIX}/opt/python@3.14/libexec/bin/python"],
                     reset_uid: true
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
                     args:      ["config", "virtualenv", "enable"],
