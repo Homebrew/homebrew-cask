@@ -17,8 +17,8 @@ cask "propresenter@beta" do
     end
   end
   on_monterey do
-    version "21,352321550"
-    sha256 "82538333fd9a4934f47183f072d631fa7abd4bbe44fc5cf88f84d234b2e80ccf"
+    version "21,352321552"
+    sha256 "9afbca66fb0b9d5b7dee50f3870a393c22d87bf9c05acf899682f5286cf21132"
 
     url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
 
@@ -34,8 +34,8 @@ cask "propresenter@beta" do
     end
   end
   on_ventura :or_newer do
-    version "21,352321550"
-    sha256 "82538333fd9a4934f47183f072d631fa7abd4bbe44fc5cf88f84d234b2e80ccf"
+    version "21,352321552"
+    sha256 "9afbca66fb0b9d5b7dee50f3870a393c22d87bf9c05acf899682f5286cf21132"
 
     url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
 
