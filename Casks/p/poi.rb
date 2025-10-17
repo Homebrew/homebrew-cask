@@ -1,9 +1,9 @@
 cask "poi" do
   arch arm: "-arm64"
 
-  version "10.9.2"
-  sha256 arm:   "217444a15bcfaae1dc75807fcf139c66d0b6295fa1f461a45f811bae09008a77",
-         intel: "eab57d10b4e8002231cbfb502589d97fcea9edce85c21850bdd5cbc574ccfa19"
+  version "11.0.0"
+  sha256 arm:   "3f831d65762f4dd61535289c2a9f52537e86017ed8bfcf72f6503007acaa7fb7",
+         intel: "19ce5500b4fefd684180db4090a0beb4648c3fe377854bb7856e11f2977164c9"
 
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}#{arch}.dmg",
       verified: "github.com/poooi/poi/"
@@ -12,6 +12,8 @@ cask "poi" do
   homepage "https://poi.moe/"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :monterey"
 
   app "poi.app"
 
