@@ -1,6 +1,6 @@
 cask "ipvanish-vpn" do
-  version "4.10.1,140746"
-  sha256 "b2b91832984368a99f4f2b9139be7bc7a2ede0bf712e413d48415bf33f4ece0a"
+  version "4.10.1,143840"
+  sha256 "76020c8938eef3d0df483064022e4c7f43a427ac75384858eb569d666ab9e60b"
 
   url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.csv.first}_#{version.csv.second}.zip"
   name "IPVanish"
@@ -9,7 +9,15 @@ cask "ipvanish-vpn" do
 
   livecheck do
     url "https://www.ipvanish.com/software/osx/updates_V#{version.major}.xml"
-    strategy :sparkle
+    regex(/IPVanish[._-]v?(\d+(?:\.\d+)+)[._-](\d+)/i)
+    strategy :sparkle do |items, regex|
+      items.map do |item|
+        match_data = item.url&.match(regex)
+        next if match_data.blank?
+
+        match_data.captures.join(",")
+      end
+    end
   end
 
   auto_updates true
