@@ -9,7 +9,8 @@ cask "launchos" do
   homepage "https://launchosapp.com/"
 
   livecheck do
-    url :homepage
+    url "https://static.remixdesign.app/launchos/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
