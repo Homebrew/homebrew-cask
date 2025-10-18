@@ -1,9 +1,9 @@
 cask "poi" do
   arch arm: "-arm64"
 
-  version "11.0.0"
-  sha256 arm:   "3f831d65762f4dd61535289c2a9f52537e86017ed8bfcf72f6503007acaa7fb7",
-         intel: "19ce5500b4fefd684180db4090a0beb4648c3fe377854bb7856e11f2977164c9"
+  version "11.0.0-win7"
+  sha256 arm:   "5568fe2bc4e5af03377e2db47e5efb46f038faf658af033919b68a4349163b8d",
+         intel: "52ee91db8b0d8a678be5c3bbbf025f73eb7ae415349d302378653cdb00eb9ac5"
 
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}#{arch}.dmg",
       verified: "github.com/poooi/poi/"
