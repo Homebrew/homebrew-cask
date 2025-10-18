@@ -1,6 +1,6 @@
 cask "rippling" do
-  version "3.6.44"
-  sha256 "93451ada32e1c71ab701b09acd07a7fa5dad2e70c5d8ed889aaf5731d0eefc21"
+  version "3.6.45"
+  sha256 "3e0410f52e9bb50a0ac3a62cb724d6d06103d831e300bb945bf94c349879001c"
 
   url "https://hardware-cdn.rippling.com/device_release/electron-installer/#{version}/macos/Rippling.dmg"
   name "Rippling"
@@ -11,6 +11,8 @@ cask "rippling" do
     url "https://app.rippling.com/api/hardware/general_installer/?os=mac"
     strategy :header_match
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Rippling.app"
 
