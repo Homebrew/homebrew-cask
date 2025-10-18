@@ -1,6 +1,6 @@
 cask "socialstream" do
-  version "0.3.56"
-  sha256 "8a9b86a9229401a6d9656afc9b6bc48fcb9c5b4bbc8b7e6bc664c25d5465c079"
+  version "0.3.58"
+  sha256 "90d4d1b2715aadcfe29f2e10e747dd7266ab00a6ae5cbda23507ea60ba048944"
 
   url "https://github.com/steveseguin/social_stream/releases/download/#{version}/socialstreamninja_mac_v#{version}.dmg",
       verified: "github.com/steveseguin/social_stream/"
