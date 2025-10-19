@@ -1,5 +1,5 @@
 cask "hackintool" do
-  version "4.1.2"
+  version "4.1.3"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://github.com/headkaze/Hackintool/releases/download/#{version}/Hackintool.zip"
