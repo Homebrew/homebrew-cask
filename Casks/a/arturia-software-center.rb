@@ -37,6 +37,5 @@ cask "arturia-software-center" do
         "~/Library/Caches/com.Arturia.ArturiaSoftwareCenter",
         "~/Library/Saved Application State/com.Arturia.ArturiaSoftwareCenter.savedState",
         "~/Library/WebKit/com.Arturia.ArturiaSoftwareCenter",
-      ],
-      rmdir:  "/Library/Arturia"
+      ]
 end
