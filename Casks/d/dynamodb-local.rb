@@ -29,7 +29,7 @@ cask "dynamodb-local" do
     File.write shimscript, <<~EOS
       #!/bin/sh
       cd "$(dirname "$(readlink -n "${0}")")" && \
-        java -Djava.library.path='./DynamoDBLocal_lib' -jar 'DynamoDBLocal.jar' "$@"
+        exec java -Djava.library.path='./DynamoDBLocal_lib' -jar 'DynamoDBLocal.jar' "$@"
     EOS
   end
 
