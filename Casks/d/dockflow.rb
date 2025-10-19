@@ -9,8 +9,8 @@ cask "dockflow" do
   homepage "https://dockflow.appitstudio.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/AppitStudio/dock-flow-updates/refs/heads/main/appcast.xml"
+    strategy :sparkle
   end
 
   depends_on macos: ">= :ventura"
