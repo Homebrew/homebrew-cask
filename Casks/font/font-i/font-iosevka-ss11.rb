@@ -1,6 +1,6 @@
 cask "font-iosevka-ss11" do
-  version "33.3.2"
-  sha256 "5b5110eb4341b2cff7802aad3cdca2c77765b8bb5c19ad72dc0f74a2c44557cf"
+  version "33.3.3"
+  sha256 "d1f4295eecee54549c731b48a216e13b694423ae3118fd3c50d0b1ebfa011e4c"
 
   url "https://github.com/be5invis/Iosevka/releases/download/v#{version}/SuperTTC-IosevkaSS11-#{version}.zip"
   name "Iosevka SS11"
