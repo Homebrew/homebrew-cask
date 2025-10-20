@@ -1,6 +1,6 @@
 cask "yuanbao" do
-  version "2.41.10.627,7c70406e8ccc7c8ca02a4667c4a3669e"
-  sha256 "26622b5eeb345487ed0b44e260475c033714d730427b6797e0cab580e965b64f"
+  version "2.42.0.625,2862ab2de6a3f25fe2e076fa91f92932"
+  sha256 "1f47d6bedf9f07857a22a6fa8a8e5d42d1d3939fbe7ab4521ff348093c5f919d"
 
   url "https://cdn-hybrid-prod.hunyuan.tencent.com/Desktop/official/#{version.csv.second}/yuanbao_#{version.csv.first}_universal.dmg"
   name "Yuanbao"
@@ -17,8 +17,6 @@ cask "yuanbao" do
       "#{match[2]},#{match[1]}"
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :big_sur"
 
