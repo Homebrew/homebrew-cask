@@ -1,9 +1,8 @@
 cask "ua-midi-control" do
-  version "5.11.2"
-  sha256 "49aeaec28a54d363e0d6193c71748daa4ad3edfc0788fc1a5e29e31e80db504c"
+  version "5.12.0"
+  sha256 :no_check
 
-  url "https://s3.us-east-005.dream.io/ua-midi-control/builds/UA%20Midi%20Control%20#{version}.zip",
-      verified: "dream.io/ua-midi-control/"
+  url "https://fonoflow.com/files/ua-midi-control/UA%20Midi%20Control.zip"
   name "UA Midi Control"
   desc "Control-mapping tool for Universal Audio's UAD Console"
   homepage "https://fonoflow.com/products/ua-midi-control"
