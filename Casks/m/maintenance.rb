@@ -34,8 +34,13 @@ cask "maintenance" do
       skip "Legacy version"
     end
   end
-  on_sequoia :or_newer do
-    version "3.4.0"
+  on_sequoia do
+    version "3.3.6"
+
+    url "https://www.titanium-software.fr/download/15/Maintenance.dmg"
+  end
+  on_tahoe :or_newer do
+    version "3.4.1"
 
     url "https://www.titanium-software.fr/download/26/Maintenance.dmg"
 

@@ -1,6 +1,6 @@
 cask "removebg" do
-  version "2.3.0"
-  sha256 "5b7295a409697ab8bfe7a7770db4b11cc4851abe6e9fe3f7b200dbc3aef9ebce"
+  version "2.4.1"
+  sha256 "dab0c5105d9980dbd5406890bc3f8bcf3065340a59be2404a217e5a1c9d40fbf"
 
   url "https://storage.googleapis.com/removebg-static/desktop/release/darwin/x64/remove.bg-darwin-x64-#{version}.zip",
       verified: "storage.googleapis.com/removebg-static/"

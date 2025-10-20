@@ -7,6 +7,7 @@ cask "mysides" do
   homepage "https://github.com/mosen/mysides"
 
   deprecate! date: "2024-10-13", because: :unmaintained
+  disable! date: "2025-10-13", because: :unmaintained
 
   pkg "mysides-#{version}.pkg"
 

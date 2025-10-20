@@ -1,9 +1,9 @@
 cask "block-goose" do
   arch intel: "_intel_mac"
 
-  version "1.9.3"
-  sha256 arm:   "b3d8f3ecdc96814d533fa465bd099900f4e1d54ee6ea4f87cb2fe2d8e0b43e6f",
-         intel: "996cdc54a59e062a39d87b4959c53adf3d53e2df60842623b8f75b333e169b5a"
+  version "1.11.0"
+  sha256 arm:   "5b8411bed27d963f4632b65d62074a83126fa29ebb4f7cde723f8b7b766285c6",
+         intel: "7fcb8690e11f705eb850a93983deaf7a2dad8be02da2cac1cde43cdbffc82427"
 
   url "https://github.com/block/goose/releases/download/v#{version}/Goose#{arch}.zip",
       verified: "github.com/block/goose/"
@@ -11,9 +11,23 @@ cask "block-goose" do
   desc "Open source, extensible AI agent that goes beyond code suggestions"
   homepage "https://block.github.io/goose/"
 
+  # Some releases don't provide assets for Goose Desktop, so we have to check
+  # multiple releases to identify the newest version for the desktop app.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(%r{/v?(\d+(?:\.\d+)+)/Goose#{arch}\.zip}i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   depends_on macos: ">= :monterey"

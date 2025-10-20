@@ -1,9 +1,9 @@
 cask "frappe-books" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.34.1"
-  sha256 arm:   "5104893fbef8f9fa105cc604d4994a7fde0853787444dd8531a0405517223210",
-         intel: "377d0ebfeff2a635869bd3bb0b3d2c759c62061e4064aba7a27e641aa3300dec"
+  version "0.35.0"
+  sha256 arm:   "b605368924b0817dcd6e8ead4c63177241035577ba9d1689d039513e22d2aaed",
+         intel: "31f5b1ede222764ddc89cb23e94350123eaee7a2d4fe96a3af089c2a91da857f"
 
   url "https://github.com/frappe/books/releases/download/v#{version}/Frappe-Books-v#{version}-mac-#{arch}.dmg",
       verified: "github.com/frappe/books/"

@@ -1,8 +1,8 @@
 cask "nx-studio" do
-  version "1.9.1,7UpYe00AzaxT07tkbSd28mJDk232"
-  sha256 "db36808c3ef7bda6adeb4a50ccfa8401b210be16061f76e80f7b8dcf9edb6cf5"
+  version "1.10.0,gZAdz00VTpv707GXMTw44oIOHF31,8"
+  sha256 "17d40f86a1ee5baecfb2775a8eb56e49532bc169fa35da9e6c752f8876874214"
 
-  url "https://download.nikonimglib.com/archive7/#{version.csv.second}/S-NXSTDO-#{version.csv.first.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg",
+  url "https://download.nikonimglib.com/archive#{version.csv.third}/#{version.csv.second}/S-NXSTDO-#{version.csv.first.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg",
       verified: "download.nikonimglib.com/"
   name "NX Studio"
   desc "Nikon suite for viewing, processing, and editing photos and videos"
@@ -27,10 +27,10 @@ cask "nx-studio" do
 
       # Match the alphanumeric identifier from the download URL
       merged_headers = Homebrew::Livecheck::Strategy.page_headers(download_redirect_url).reduce(&:merge)
-      directory = merged_headers["location"]&.[](%r{/archive\d*/([^/]+)/}i, 1)
-      next if directory.blank?
+      additional_parts = merged_headers["location"]&.match(%r{/archive(\d*)/([^/]+)/}i)
+      next if additional_parts.blank?
 
-      "#{version},#{directory}"
+      "#{version},#{additional_parts[2]},#{additional_parts[1]}"
     end
   end
 

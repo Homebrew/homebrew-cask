@@ -1,6 +1,6 @@
 cask "processspy" do
-  version "1.9.0"
-  sha256 "d9caf8d061822f76cdfd1e4e227bcb64d900c41afc6c8f49af66302dee413eb0"
+  version "1.9.1"
+  sha256 "24beff303d16d749293d76b9c37987ed59d2883dd4cd9d013cda7ddfba74bffc"
 
   url "https://process-spy.app/archive/ProcessSpy_#{version}.dmg"
   name "ProcessSpy"

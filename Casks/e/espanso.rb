@@ -1,6 +1,6 @@
 cask "espanso" do
-  version "2.2.7"
-  sha256 "1d671417f5a6b94a86b0ac575d8d8146e3a80b8c23275fd673640b8bc5028e6b"
+  version "2.3.0"
+  sha256 "e785543bc37e9860434e2e00ccc18a5df7409ab9b20d1f41bfc4801b5e543eae"
 
   url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-Universal.zip",
       verified: "github.com/espanso/espanso/"
@@ -12,6 +12,9 @@ cask "espanso" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :big_sur"
+  container nested: "espanso/Espanso.dmg"
 
   app "Espanso.app"
   binary "#{appdir}/Espanso.app/Contents/MacOS/espanso"

@@ -7,6 +7,7 @@ cask "menucalendarclock-ical" do
   homepage "http://www.objectpark.net/en/mcc.html"
 
   deprecate! date: "2024-10-12", because: :unmaintained
+  disable! date: "2025-10-12", because: :unmaintained
 
   app "MenuCalendarClock iCal.app"
 

@@ -9,6 +9,7 @@ cask "sparkleshare" do
   homepage "https://sparkleshare.org/"
 
   deprecate! date: "2024-10-14", because: :discontinued
+  disable! date: "2025-10-14", because: :discontinued
 
   app "SparkleShare.app"
 

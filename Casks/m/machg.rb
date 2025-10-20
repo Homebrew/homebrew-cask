@@ -7,6 +7,7 @@ cask "machg" do
   homepage "http://jasonfharris.com/machg/"
 
   deprecate! date: "2024-10-12", because: :unmaintained
+  disable! date: "2025-10-12", because: :unmaintained
 
   app "MacHg.app"
 

@@ -26,6 +26,7 @@ cask "spyder" do
               "/Applications/REQUIRED.app",
               "/Applications/Spyder #{version.major} Uninstaller.app",
               "/Applications/Spyder #{version.major}.app",
+              "/Library/spyder-#{version.major}",
             ]
 
   zap trash: [

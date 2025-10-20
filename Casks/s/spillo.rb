@@ -8,6 +8,7 @@ cask "spillo" do
   homepage "https://bananafishsoftware.com/products/spillo/"
 
   deprecate! date: "2024-10-14", because: :unmaintained
+  disable! date: "2025-10-14", because: :unmaintained
 
   app "Spillo.app"
 

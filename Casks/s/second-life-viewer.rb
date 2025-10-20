@@ -1,8 +1,8 @@
 cask "second-life-viewer" do
-  version "7.2.1.17108480561"
-  sha256 "180df93fad647f65a2b07ba36c46964349eb06769ad516ca2f0160b4b914c096"
+  version "7.2.2.18475198968"
+  sha256 "29e649f42cbe15ff5e91a2dff27cac5aebf63e13f1f991ba3de45f46a70b7507"
 
-  url "http://download.cloud.secondlife.com/Viewer_#{version.major}/Second_Life_#{version.dots_to_underscores}_x86_64.dmg"
+  url "https://viewer-download.secondlife.com/Viewer_#{version.major}/Second_Life_#{version.dots_to_underscores}_x86_64.dmg"
   name "Linden Lab Second Life Viewer"
   desc "3D browsing software for Second Life online virtual world"
   homepage "https://secondlife.com/"
@@ -26,8 +26,4 @@ cask "second-life-viewer" do
     "~/Library/Application Support/SecondLife",
     "~/Library/Caches/SecondLife",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

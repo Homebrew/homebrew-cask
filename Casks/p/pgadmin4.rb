@@ -1,9 +1,9 @@
 cask "pgadmin4" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "arm64", intel: "x64"
 
-  version "9.8"
-  sha256 arm:   "12c15a636b9284fa15cd4f3b0dfdeed66d519bda979801d292ee5135c6792907",
-         intel: "7508fd17cb3eb233cad3c610980aee2c8b8cc06ca591d55cf0afdf4e8512a786"
+  version "9.9"
+  sha256 arm:   "a42fb642ddecc8fa8366da96a8e8e9bc968c48762d950d6f6ea20044072146bb",
+         intel: "25198d7bebf8b2d2b626368ba6f1224d796d175db48316e72fb71589926ce15a"
 
   url "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v#{version}/macos/pgadmin4-#{version}-#{arch}.dmg",
       verified: "ftp.postgresql.org/pub/pgadmin/pgadmin4/"

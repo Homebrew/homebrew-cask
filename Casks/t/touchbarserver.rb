@@ -7,6 +7,7 @@ cask "touchbarserver" do
   homepage "https://github.com/bikkelbroeders/TouchBarDemoApp"
 
   deprecate! date: "2024-10-12", because: :unmaintained
+  disable! date: "2025-10-12", because: :unmaintained
 
   app "TouchBarServer.app"
 

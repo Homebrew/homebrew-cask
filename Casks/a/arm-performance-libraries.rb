@@ -1,9 +1,9 @@
 cask "arm-performance-libraries" do
-  version "25.07"
+  version "25.07.1"
   install_suffix="#{version}_flang-20"
-  sha256 "c153c5a75b0b8eba4a22b24a212b8223c89ce5b8f8efca457fbbcd78d040bf83"
+  sha256 "f6f69249933e78153bbe31ef9649c8c7cd003a1f4823c252634209f74f62a28c"
 
-  url "https://developer.arm.com/-/cdn-downloads/permalink/Arm-Performance-Libraries/Version_#{version}/arm-performance-libraries_#{version.major_minor}_macOS.tgz"
+  url "https://developer.arm.com/-/cdn-downloads/permalink/Arm-Performance-Libraries/Version_#{version}/arm-performance-libraries_#{version}_macOS.tgz"
   name "Arm Performance Libraries"
   desc "Optimized standard core math libraries for Arm processors"
   homepage "https://developer.arm.com/downloads/-/arm-performance-libraries"

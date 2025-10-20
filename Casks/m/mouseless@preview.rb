@@ -1,8 +1,9 @@
 cask "mouseless@preview" do
-  version "0.4.1"
-  sha256 "12cca19cefc7b107f1ac184b5871f601c6e3332d06331f06d962eda90340dcaf"
+  version "0.4.2"
+  sha256 "5e98fb5ff4e138104605ab4ce23884c1175f5db8f1733b5efeab2551b0f69681"
 
-  url "https://mouseless.click/mouseless-installer_v#{version}.dmg"
+  url "https://github.com/croian/mouseless/releases/download/v#{version}/mouseless-installer_v#{version}.dmg",
+      verified: "github.com/croian/mouseless/"
   name "Mouseless preview channel"
   desc "Mouse control with the keyboard"
   homepage "https://mouseless.click/"

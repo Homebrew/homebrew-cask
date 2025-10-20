@@ -9,6 +9,7 @@ cask "uncolored" do
   homepage "https://n457.github.io/Uncolored/"
 
   deprecate! date: "2024-10-12", because: :unmaintained
+  disable! date: "2025-10-12", because: :unmaintained
 
   app "Uncolored.app"
 

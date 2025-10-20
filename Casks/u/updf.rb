@@ -1,5 +1,5 @@
 cask "updf" do
-  version "2.0.8"
+  version "2.0.9"
   sha256 :no_check
 
   url "https://download.updf.com/updf/basic/mac/apple/updf-mac-full.dmg"
@@ -11,6 +11,8 @@ cask "updf" do
     url "https://download.updf.com/updf/update/mac/apple/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :big_sur"

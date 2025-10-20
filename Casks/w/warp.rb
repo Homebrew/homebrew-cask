@@ -1,6 +1,6 @@
 cask "warp" do
-  version "0.2025.10.08.08.12.stable_03"
-  sha256 "7da678fc2742c71a71da656d2ef32fce571da2493f6e468680bca7427aa20412"
+  version "0.2025.10.15.08.12.stable_01"
+  sha256 "91c4d04cec5edacc0af0db67da661eb202b5268f7ec65610b6ee8cb1956bfb29"
 
   url "https://app.warp.dev/download/brew?version=v#{version}"
   name "Warp"
@@ -15,6 +15,7 @@ cask "warp" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Warp.app"
 

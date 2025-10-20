@@ -1,6 +1,6 @@
 cask "alacritty" do
-  version "0.15.1"
-  sha256 "abaf240980cf3378031d1bfb3473d3b36abac15d679e2f780d5c0f09aa218459"
+  version "0.16.0"
+  sha256 "6808becde30befb447701715b1169e93f681d3c96980d9eb92413da2deb126a0"
 
   url "https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
   name "Alacritty"
@@ -11,6 +11,10 @@ cask "alacritty" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "Alacritty.app"
   binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"

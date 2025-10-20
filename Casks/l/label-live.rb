@@ -1,6 +1,6 @@
 cask "label-live" do
-  version "4.1.3"
-  sha256 "e4a9a4c34e815f52f59b64b0cf2c395d56678dbf80363e910190c027b627f92c"
+  version "4.1.6"
+  sha256 "3e7bc591132f7e6c59e02815dc9b6b33a074ac6484c94beb568afee57a9649b1"
 
   url "https://download.label.live/Label-LIVE-#{version}.dmg"
   name "Label LIVE"
@@ -11,6 +11,8 @@ cask "label-live" do
     url "https://s3.amazonaws.com/labellive.semireg.com/latest-mac.yml"
     strategy :electron_builder
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Label LIVE.app"
 

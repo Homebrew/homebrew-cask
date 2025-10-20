@@ -1,6 +1,6 @@
 cask "favro" do
-  version "1.0.167"
-  sha256 "909576b1332007fec3aa033af6ea6bea8a6b4f2825a38ddb2c72d37556b244fe"
+  version "1.0.185"
+  sha256 "73bbef57897f731042e660d88dc00bc0df7569fe06539f5aca083dcb401f90d5"
 
   url "https://download.favro.com/FavroDesktop/macOS/x64/Favro-#{version}.dmg"
   name "Favro"
@@ -13,6 +13,8 @@ cask "favro" do
       json["VersionString"]
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Favro.app"
 
