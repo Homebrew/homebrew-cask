@@ -1,5 +1,5 @@
 cask "ua-midi-control" do
-  version "5.12.0"
+  version "5.12.1"
   sha256 :no_check
 
   url "https://fonoflow.com/files/ua-midi-control/UA%20Midi%20Control.zip"
