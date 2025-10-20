@@ -33,5 +33,6 @@ cask "spyder" do
     "~/Library/Application Support/Spyder",
     "~/Library/Caches/Spyder",
     "~/Library/Saved Application State/org.spyder-ide.Spyder.savedState",
+    "/System/Volumes/Data/Library/spyder-6"
   ]
 end
