@@ -1,9 +1,9 @@
 cask "block-goose" do
   arch intel: "_intel_mac"
 
-  version "1.11.0"
-  sha256 arm:   "5b8411bed27d963f4632b65d62074a83126fa29ebb4f7cde723f8b7b766285c6",
-         intel: "7fcb8690e11f705eb850a93983deaf7a2dad8be02da2cac1cde43cdbffc82427"
+  version "1.11.1"
+  sha256 arm:   "153ab5ed47c48824629804f5100ec27aa25c961d874f05ec18eb82828fe340d0",
+         intel: "2988ca578f719d827d43a148f932974e15a25e27645def2b00529758834b3b2e"
 
   url "https://github.com/block/goose/releases/download/v#{version}/Goose#{arch}.zip",
       verified: "github.com/block/goose/"
