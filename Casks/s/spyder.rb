@@ -26,6 +26,7 @@ cask "spyder" do
               "/Applications/REQUIRED.app",
               "/Applications/Spyder #{version.major} Uninstaller.app",
               "/Applications/Spyder #{version.major}.app",
+              "/System/Volumes/Data/Library/spyder-6",
             ]
 
   zap trash: [
@@ -33,5 +34,6 @@ cask "spyder" do
     "~/Library/Application Support/Spyder",
     "~/Library/Caches/Spyder",
     "~/Library/Saved Application State/org.spyder-ide.Spyder.savedState",
+    "/System/Volumes/Data/Library/spyder-6",
   ]
 end
