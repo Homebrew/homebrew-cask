@@ -1,6 +1,6 @@
 cask "edrawmind" do
-  version "12.4.1"
-  sha256 "cc82d7a1f4373813576957415fa4619a0ccfd47940db989691514247781e7293"
+  version "12.4.2"
+  sha256 "b6978800c65a8591661bf53c8fdaf23e109a91a968e4c5b874586fe91e9eeef8"
 
   url "https://download.wondershare.com/cbs_down/edrawmind_#{version}_full5378.zip",
       verified: "download.wondershare.com/"
