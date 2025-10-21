@@ -1,9 +1,9 @@
 cask "cursor-cli" do
   arch arm: "arm64", intel: "x64"
 
-  version "2025.10.20-f1b214f"
-  sha256 arm:   "e12d4730f89e96b5303f9a7203fb69d45b81ca07bd75c471d979dd4c59c129b6",
-         intel: "291102512a98a21ac2885dd8c9265e27431a4616fb87e3be2b2a827e909b57cc"
+  version "2025.10.21-224d294"
+  sha256 arm:   "4ca5c2b4bb05170c15971f0357274d92424ad030cb295d64378fb7a144fdab05",
+         intel: "e774f12f94a0f14100735c90a78f24980e0b556e07ecbca532dc7017749a468d"
 
   url "https://downloads.cursor.com/lab/#{version}/darwin/#{arch}/agent-cli-package.tar.gz"
   name "Cursor CLI"
