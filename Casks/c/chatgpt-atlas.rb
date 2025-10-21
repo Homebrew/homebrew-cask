@@ -2,6 +2,7 @@ cask "chatgpt-atlas" do
   version "1.0.0"
   sha256 "c01cf975b0664567e420c593ee94dcbc9e2b7ee92ed96473be0c728d4a08c3ee"
 
+  # OpenAI does not provide versioned download URLs for ChatGPT Atlas; this is a rolling release pattern.
   url "https://persistent.oaistatic.com/atlas/public/ChatGPT_Atlas.dmg"
   name "ChatGPT Atlas"
   desc "A browser with ChatGPT built in."
