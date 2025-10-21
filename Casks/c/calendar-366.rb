@@ -13,6 +13,8 @@ cask "calendar-366" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "Calendar 366 II.app"
 
   zap trash: [
