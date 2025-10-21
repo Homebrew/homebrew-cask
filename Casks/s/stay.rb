@@ -12,6 +12,9 @@ cask "stay" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+  depends_on macos: ">= :sonoma"
+
   app "Stay.app"
 
   zap trash: [
