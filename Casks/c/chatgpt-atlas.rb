@@ -17,7 +17,7 @@ cask "chatgpt-atlas" do
     end
   end
 
-  auto_updates
+  auto_updates true
   depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
 
