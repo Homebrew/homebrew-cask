@@ -1,9 +1,9 @@
 cask "lobehub" do
   arch arm: "-arm64"
 
-  version "1.140.0"
-  sha256 arm:   "9dce6f1ef374e732f8ceac2304d98fcbd34cb9ea0e7f4e101d224297fe2f1a06",
-         intel: "36df2afe38b17d0b9d7971789b6c040d05f7f850bde3bc70ba823cb90bbe2063"
+  version "1.141.0"
+  sha256 arm:   "ea7261bdaee15f1ef549387bb858346d2df2ebcecf2e3dfa5f61f946a9624b51",
+         intel: "01a091431b4950d0d19549124009f20bce6bf48270656b568b57d7b103394a01"
 
   url "https://github.com/lobehub/lobe-chat/releases/download/v#{version}/LobeHub-Beta-#{version}#{arch}-mac.zip"
   name "LobeHub"
