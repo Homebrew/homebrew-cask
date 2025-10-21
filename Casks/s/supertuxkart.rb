@@ -1,8 +1,8 @@
 cask "supertuxkart" do
   version "1.5"
-  sha256 "3eaf9169f1b17e63f626a59d08407fbabb5f054767695ad190d9a083f9e2c98f"
+  sha256 "c266acdb8a63a3fe30f52652d9b749f5beba4abeb9e54382fbb934b00c53b303"
 
-  url "https://github.com/supertuxkart/stk-code/releases/download/#{version}/SuperTuxKart-#{version}-mac.zip",
+  url "https://github.com/supertuxkart/stk-code/releases/download/#{version}/SuperTuxKart-#{version}-mac-signed.zip",
       verified: "github.com/supertuxkart/stk-code/"
   name "SuperTuxKart"
   desc "Kart racing game"
@@ -12,8 +12,6 @@ cask "supertuxkart" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "SuperTuxKart.app"
 
