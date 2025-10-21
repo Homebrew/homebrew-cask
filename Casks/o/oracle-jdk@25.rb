@@ -1,9 +1,9 @@
 cask "oracle-jdk@25" do
   arch arm: "aarch64", intel: "x64"
 
-  version "25"
-  sha256 arm:   "a692c69118561bc0f2267ff8045cf5915b89aa7306272440155cb114f9014844",
-         intel: "a7799b05a0f378572fc617893b92db7cc823cb5ae71726b2d1db79e65094b431"
+  version "25.0.1"
+  sha256 arm:   "c2a946e168a1aef8be978fb955bfa1d589b387c29663d0fe14c3693e7841fa97",
+         intel: "eba1119067692a109737e7c3fff30c773204521e8e2d08b34fd211d642e30cdc"
 
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
   name "Oracle Java Standard Edition Development Kit"
