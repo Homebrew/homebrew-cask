@@ -1,6 +1,6 @@
 cask "transmission@nightly" do
-  version "9788,f0c8fd689a"
-  sha256 "a210d2ee25a1a22d88d893821857f83b17b36702075325c050e0392bc6557f6b"
+  version "9790,c4dc244212"
+  sha256 "f5a8936ae0faa7b31e8d362c8b460d2ab4f8a4983f9869b7742135e71b6c4aef"
 
   url "https://build.transmissionbt.com/job/trunk-mac/#{version.csv.first}/artifact/release/Transmission-#{version.csv.second}.dmg"
   name "Transmission"
@@ -14,6 +14,8 @@ cask "transmission@nightly" do
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "transmission"
   depends_on macos: ">= :big_sur"

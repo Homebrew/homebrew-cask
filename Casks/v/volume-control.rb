@@ -17,4 +17,9 @@ cask "volume-control" do
   depends_on macos: ">= :ventura"
 
   app "Volume Control.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/io.alberti42.VolumeControl",
+    "~/Library/Preferences/io.alberti42.VolumeControl.plist",
+  ]
 end

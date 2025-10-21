@@ -1,6 +1,6 @@
 cask "base" do
-  version "3.0.0"
-  sha256 "a92ecf421cc2422c01a83238e09b6e02ed35542c02000d60e2346ae79199858d"
+  version "3.1.0"
+  sha256 "f110a96e211449f0ef217472e7d444ca32888083e8bb0bca5ecf91f804e581bf"
 
   url "https://files.menial.co.uk/base/Base-#{version}.zip"
   name "Menial Base"
@@ -8,9 +8,12 @@ cask "base" do
   homepage "https://menial.co.uk/base/"
 
   livecheck do
-    url "https://update.menial.co.uk/software/base/"
+    url "https://update.menial.co.uk/software/base3/"
     strategy :sparkle, &:short_version
   end
+
+  auto_updates true
+  depends_on macos: ">= :sequoia"
 
   app "Base.app"
 

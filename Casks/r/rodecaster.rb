@@ -1,5 +1,5 @@
 cask "rodecaster" do
-  version "2.0.102"
+  version "2.0.104"
   sha256 :no_check
 
   url "https://update.rode.com/rc-app/RODECaster_App_MACOS.zip"
