@@ -4,7 +4,7 @@ cask "chatgpt-atlas" do
 
   url "https://persistent.oaistatic.com/atlas/public/ChatGPT_Atlas.dmg"
   name "ChatGPT Atlas"
-  desc "The browser with ChatGPT built in."
+  desc "A browser with ChatGPT built in."
   homepage "https://chatgpt.com/atlas"
 
   depends_on macos: ">= :sonoma"
