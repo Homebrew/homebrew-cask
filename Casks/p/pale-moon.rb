@@ -1,6 +1,6 @@
 cask "pale-moon" do
-  version "33.9.0.1"
-  sha256 "6ffcf5b47fd6147999e69d37f81f9b2836de0feb0bdd3a04ba0eb3ed2fd09e04"
+  version "33.9.1"
+  sha256 "401f48f2fc809436404ad5275d9a39f840bae26f269cd2150c5a7884aab9bda9"
 
   url "https://rm-us.palemoon.org/release/palemoon-#{version}.arm64.dmg"
   name "Pale Moon"
