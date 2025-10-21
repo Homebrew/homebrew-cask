@@ -1,6 +1,6 @@
 cask "supertuxkart" do
-  version "1.4"
-  sha256 "21a7fb34132036c5810a8b48527513981d98d09d27d33b15e2f428bdc492c89d"
+  version "1.5"
+  sha256 "3eaf9169f1b17e63f626a59d08407fbabb5f054767695ad190d9a083f9e2c98f"
 
   url "https://github.com/supertuxkart/stk-code/releases/download/#{version}/SuperTuxKart-#{version}-mac.zip",
       verified: "github.com/supertuxkart/stk-code/"
@@ -12,6 +12,8 @@ cask "supertuxkart" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "SuperTuxKart.app"
 
