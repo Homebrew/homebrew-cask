@@ -1,6 +1,6 @@
 cask "jubler" do
-  version "9.0.0"
-  sha256 "fc1e66d2b3c755e66608235f5043bef894cf37925b54afb96774da22f644bbc4"
+  version "9.0.1"
+  sha256 "20af1deb410e2d81f5612a33546375a4c6c3085072ea2ed01852b8ac018d0633"
 
   url "https://github.com/teras/Jubler/releases/download/v#{version}/Jubler-#{version}.dmg",
       verified: "github.com/teras/Jubler/"
