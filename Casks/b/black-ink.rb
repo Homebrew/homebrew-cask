@@ -12,6 +12,8 @@ cask "black-ink" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "Black Ink.app"
 
   zap trash: [
