@@ -35,6 +35,7 @@ cask "macupdater" do
     "~/Library/Caches/com.corecode.MacUpdater",
     "~/Library/Containers/com.corecode.MacUpdaterLaunchHelper",
     "~/Library/Cookies/com.corecode.MacUpdater.binarycookies",
+    "~/Library/Logs/Mac Updater Logs",
     "~/Library/Preferences/com.corecode.MacUpdater.plist",
   ]
 end
