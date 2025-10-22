@@ -1,6 +1,6 @@
 cask "concept2-utility" do
-  version "7.17.00"
-  sha256 "2796b6275e9d1ab08051b94e5c33e89a5b14d31020132324f9948f8aa754cae3"
+  version "7.18.00"
+  sha256 "7cddf14474f156a925026999b28657c0299b58c58221d798d53b266336cd08be"
 
   url "https://software.concept2.com/utility/Concept2Utility#{version.no_dots}.pkg"
   name "Concept2 Utility"
@@ -11,8 +11,13 @@ cask "concept2-utility" do
   # releases page (https://www.concept2.com/support/software/utility) is
   # failing in our CI environment.
   livecheck do
-    url "https://www.concept2.de/service/software/concept2-utility"
+    url "https://www.concept2.de/support/software/utility"
     regex(/Concept2\s+Utility\s+v?(\d+(?:\.\d+)+)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        (match[0].count(".") >= 2) ? match[0] : "#{match[0]}.00"
+      end
+    end
   end
 
   uninstall pkgutil: "com.concept2.pkg.Concept2Utility"
