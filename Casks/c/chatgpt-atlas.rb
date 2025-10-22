@@ -27,13 +27,13 @@ cask "chatgpt-atlas" do
 
   zap trash: [
     "~/Library/Application Support/com.openai.atlas",
+    "~/Library/Application Support/CrashReporter/ChatGPT Atlas (Service)_*.plist",
+    "~/Library/Application Support/OpenAI/ChatGPT Atlas",
     "~/Library/Caches/com.openai.atlas",
     "~/Library/HTTPStorages/com.openai.atlas",
     "~/Library/HTTPStorages/com.openai.atlas.binarycookies",
+    "~/Library/Logs/DiagnosticReports/ChatGPT Atlas (Service)*.ips",
     "~/Library/Preferences/com.openai.atlas.plist",
     "~/Library/Preferences/com.openai.atlas.web.plist",
-    "~/Library/Application Support/OpenAI/ChatGPT Atlas",
-    "~/Library/Logs/DiagnosticReports/ChatGPT Atlas (Service)*.ips",
-    "~/Library/Application Support/CrashReporter/ChatGPT Atlas (Service)_*.plist",
   ]
 end
