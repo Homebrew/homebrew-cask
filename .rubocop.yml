@@ -12,6 +12,7 @@ AllCops:
   - Homebrew/bin/*
   - Homebrew/vendor/**/*
   - Taps/*/*/vendor/**/*
+  - "**/.github/copilot-instructions.md"
   - "**/vendor/**/*"
   SuggestExtensions:
     rubocop-minitest: false
