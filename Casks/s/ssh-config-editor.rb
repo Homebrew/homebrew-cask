@@ -1,6 +1,6 @@
 cask "ssh-config-editor" do
-  version "2.6.8,109"
-  sha256 "fbb20002134664105b3925b6e10ddab85379d56dca8648bccfa8d9c6e22dc2f9"
+  version "2.6.9,110"
+  sha256 "f43b230d757379a786944162ff899a942bd22ad9fcd79386413ef078e2e0bd3e"
 
   url "https://hejki.org/download/ssheditor/SSHConfigEditor-#{version.csv.second}.dmg"
   name "SSH Config Editor"
@@ -15,7 +15,7 @@ cask "ssh-config-editor" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sonoma"
 
   app "SSH Config Editor.app"
 
