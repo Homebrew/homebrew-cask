@@ -32,5 +32,8 @@ cask "chatgpt-atlas" do
     "~/Library/HTTPStorages/com.openai.atlas.binarycookies",
     "~/Library/Preferences/com.openai.atlas.plist",
     "~/Library/Preferences/com.openai.atlas.web.plist",
+    "~/Library/Application Support/OpenAI/ChatGPT Atlas",
+    "~/Library/Logs/DiagnosticReports/ChatGPT Atlas (Service)*.ips",
+    "~/Library/Application Support/CrashReporter/ChatGPT Atlas (Service)_*.plist",
   ]
 end
