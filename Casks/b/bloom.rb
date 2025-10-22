@@ -1,6 +1,6 @@
 cask "bloom" do
-  version "1.4.10"
-  sha256 "9659e77e3e91ab4bd841459a3f24ddc6e64cf8010582519c3eb4bc5a8be92a4c"
+  version "1.5.0"
+  sha256 "346702899993e0537d4fd4dfce26999309c9c6e85a89a36445ea90d6d45b0326"
 
   url "https://bloomapp.club/downloads/bloom/Bloom%20-%20v#{version}.zip"
   name "Bloom"
