@@ -1,9 +1,9 @@
 cask "copyq" do
   arch arm: "12-m1", intel: "13"
 
-  version "12.0.1"
-  sha256 arm:   "0ca635cedd40e41dbf2869deaa16429a0abac2f616ce7950972c182012525aa1",
-         intel: "edf1bb6436fdfad222b182ec2433606c5a9e22d192c1c33821f966e7751c71a9"
+  version "13.0.0"
+  sha256 arm:   "2eb743cc57a97fde6c71d6ec0587408ae2beb41939699117d32b74e68882e77e",
+         intel: "12087e0b9788d8e2b8e055759444346ffbe8901189219c941a3e3d631784bf98"
 
   on_arm do
     depends_on macos: ">= :monterey"
