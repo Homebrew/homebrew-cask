@@ -1,6 +1,6 @@
 cask "opensuperwhisper" do
-  version "0.0.5"
-  sha256 "38d26be84b5e41345eee6676659aedc6783f9f4c18bc0c8b1cd539dcad6abed9"
+  version "0.0.6"
+  sha256 "76f83ee6c425ca406d0e777064606ca76ca1dba3fc1bebb2ed141173c20aa57b"
 
   url "https://github.com/starmel/OpenSuperWhisper/releases/download/#{version}/OpenSuperWhisper.dmg"
   name "OpenSuperWhisper"
