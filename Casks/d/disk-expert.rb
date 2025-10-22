@@ -1,6 +1,6 @@
 cask "disk-expert" do
-  version "5.2.1,538"
-  sha256 "f9707d340b9cdebe670294f05e7d1fb14d3232b25c36b141379fc24f479582c1"
+  version "6.0,541"
+  sha256 "3ebc062a942f2e7b703c2664b6491082b4cd407abfe325b9b55d7357819c3baf"
 
   url "https://download.nektony.com/download/diskexpert/disk-space-analyzer.dmg?build=#{version.csv.second}"
   name "Disk Expert"
