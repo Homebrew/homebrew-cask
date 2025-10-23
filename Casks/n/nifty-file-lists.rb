@@ -1,5 +1,5 @@
 cask "nifty-file-lists" do
-  version "1.23"
+  version "1.24"
   sha256 :no_check
 
   url "https://www.publicspace.net/download/NiftyFileLists.zip"
@@ -13,6 +13,7 @@ cask "nifty-file-lists" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "Nifty File Lists.app"
 
