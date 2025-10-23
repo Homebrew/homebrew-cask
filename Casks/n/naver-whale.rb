@@ -1,8 +1,15 @@
 cask "naver-whale" do
   arch arm: "ARM64"
 
-  version "4.33.325.17"
+  version "4.34.340.19"
   sha256 :no_check
+
+  on_arm do
+    depends_on macos: ">= :big_sur"
+  end
+  on_intel do
+    depends_on macos: ">= :monterey"
+  end
 
   url "http://update.whale.naver.net/downloads/installers/NaverWhale#{arch}.dmg",
       verified: "update.whale.naver.net/downloads/installers/"
@@ -18,7 +25,6 @@ cask "naver-whale" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
 
   app "Whale.app"
 
