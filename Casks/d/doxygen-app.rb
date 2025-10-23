@@ -1,6 +1,6 @@
 cask "doxygen-app" do
-  version "1.14.0"
-  sha256 "ad2c71cb286100d4eaccd0b9d92751c88c4bd0501990f7eccc50aa946f827dc7"
+  version "1.15.0"
+  sha256 "b7630eaa0d97bb50b0333929ef5dc1c18f9e38faf1e22dca3166189a9718faf0"
 
   url "https://www.doxygen.nl/files/Doxygen-#{version}.dmg"
   name "Doxygen"
@@ -13,6 +13,8 @@ cask "doxygen-app" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "Doxygen.app"
 
