@@ -1,5 +1,5 @@
 cask "proxygen-app" do
-  version "3.1.4"
+  version "3.1.6"
   sha256 :no_check
 
   url "https://download.proxygen.app/Proxygen.dmg"
@@ -13,6 +13,7 @@ cask "proxygen-app" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "Proxygen.app"
 
