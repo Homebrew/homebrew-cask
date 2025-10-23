@@ -1,6 +1,6 @@
 cask "godot@3" do
-  version "3.6.1"
-  sha256 "5f3744623f92205ae2cdd1df123bbfbb4dae864837ddfc2d04df7a3167b503fa"
+  version "3.6.2"
+  sha256 "1430f3fae6240795a0bc8c52043f0ed712ecf5867d0fddc9e3a2abcd37bea8db"
 
   url "https://github.com/godotengine/godot/releases/download/#{version}-stable/Godot_v#{version}-stable_osx.universal.zip",
       verified: "github.com/godotengine/godot/"
