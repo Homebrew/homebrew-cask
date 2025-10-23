@@ -1,9 +1,9 @@
 cask "avogadro" do
   arch arm: "-arm64"
 
-  version "1.101.0"
-  sha256 arm:   "df6f30b975d7a62ac7030a2bc06e636eba1cf76ba37ee88eae95f9c904a8e868",
-         intel: "5096684fd8c16b05190fe45b22a2b7f4d7e6ed19609c8af3f56e973266e71c90"
+  version "1.102.0"
+  sha256 arm:   "df634e86ac90555cc87caf0d6d78c60295b8b80eb3b2b5f143fb57593e4a6cd3",
+         intel: "7b57b6faba8560b40f7669fca2b8e25f7e77e82e7ab0dca79296a878db9b15e4"
 
   url "https://github.com/OpenChemistry/avogadrolibs/releases/download/#{version}/Avogadro2-#{version}-Darwin#{arch}.dmg",
       verified: "github.com/OpenChemistry/avogadrolibs/"
