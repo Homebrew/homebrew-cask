@@ -1,5 +1,5 @@
 cask "live-home-3d" do
-  version "4.10.3"
+  version "4.10.4"
   sha256 :no_check
 
   url "https://belightsoft.s3.amazonaws.com/updates/LiveHome3D.zip",
