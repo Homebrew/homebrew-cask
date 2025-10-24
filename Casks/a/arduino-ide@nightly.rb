@@ -1,8 +1,10 @@
 cask "arduino-ide@nightly" do
+  arch arm: "arm64", intel: "64bit"
+
   version :latest
   sha256 :no_check
 
-  url "https://downloads.arduino.cc/arduino-ide/nightly/arduino-ide_nightly-latest_macOS_64bit.dmg"
+  url "https://downloads.arduino.cc/arduino-ide/nightly/arduino-ide_nightly-latest_macOS_#{arch}.dmg"
   name "Arduino IDE"
   desc "Electronics prototyping platform"
   homepage "https://www.arduino.cc/en/software"
@@ -18,10 +20,6 @@ cask "arduino-ide@nightly" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cc.arduino.ide*.sfl*",
     "~/Library/Arduino15",
     "~/Library/Preferences/cc.arduino.IDE*.plist",
-    "~/Library/Saved Application State/cc.arduino.IDE#{version.major}.savedState",
+    "~/Library/Saved Application State/cc.arduino.IDE*.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
