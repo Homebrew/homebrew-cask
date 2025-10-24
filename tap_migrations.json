@@ -15,6 +15,7 @@
   "gedit": "homebrew/core",
   "gfortran": "homebrew/core",
   "ghc": "homebrew/core",
+  "ghidra": "homebrew/core",
   "go": "homebrew/core",
   "graphviz": "homebrew/core",
   "handbrakecli": "homebrew/core",
