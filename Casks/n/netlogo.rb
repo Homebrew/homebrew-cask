@@ -1,9 +1,9 @@
 cask "netlogo" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "7.0.1"
-  sha256 arm:   "4c1e7b4cbe4ce39b76e80d1e957550b3d0bf58fcab8328e892f2d66d76b3405d",
-         intel: "0efeea50b3893af6464fca4bb41391fbbc36a19da07533a6b352e2745e8fc43d"
+  version "7.0.2"
+  sha256 arm:   "3c14a641733bd7a17c1cb4273ec65bd6cf2986b02e623a38c9d9ba1eec575999",
+         intel: "4f9dd40700f8fe6d1a57d42eadc880ac8cb409b87606386888eedcd1ffde80af"
 
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version}-#{arch}.dmg"
   name "NetLogo"
