@@ -7,7 +7,7 @@ cask "atoll@beta" do
   desc "Atoll transforms the MacBook notch into an interactive command surface (Beta)"
   homepage "https://github.com/Ebullioscopic/Atoll"
 
-  # Ignore les erreurs de livecheck pour les pré-releases
+  # Ignore livecheck errors for pre-releases
   livecheck do
     skip "No version check for beta"
   end
