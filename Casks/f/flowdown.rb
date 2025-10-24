@@ -1,8 +1,8 @@
 cask "flowdown" do
-  version "3.5.407,3.5.408"
-  sha256 "98bfce47992ddfa5582ccd4bd06c4a06490633bdaa837ba57c79650f1e14a909"
+  version "3.8.433"
+  sha256 "dffa94ca15dd47973873b6f1ab2f9e3b285edaa5ebcdd0cc786199a8237934ee"
 
-  url "https://github.com/Lakr233/FlowDown/releases/download/#{version.csv.second || version.csv.first}/FlowDown-V#{version.csv.first}.zip",
+  url "https://github.com/Lakr233/FlowDown/releases/download/#{version.csv.second || version.csv.first}/FlowDown-#{version.csv.first}.zip",
       verified: "github.com/Lakr233/FlowDown/"
   name "FlowDown"
   desc "AI agent"
@@ -21,7 +21,7 @@ cask "flowdown" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "FlowDown.app"
 
