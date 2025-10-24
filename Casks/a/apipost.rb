@@ -1,9 +1,9 @@
 cask "apipost" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.2.4"
-  sha256 arm:   "1e350f13ab20a292261147ce451f4be4a7d6f669eccc22374859c374bea7540b",
-         intel: "9674aca15cdc008c9727c2b9fda0294073c011b6003a8377f0ebcc51c1c0d030"
+  version "8.2.5"
+  sha256 arm:   "afc6ac71f0814a8c11ebd03b69d5ea410ed28a43101a8789ce19ae9ec87a80fb",
+         intel: "ef9f4901680f28b197a77442fa859f32405aea85681dbbcae5cab46d914aca68"
 
   url "https://www.apipost.cn/dl.php?client=Mac&arch=#{arch}&version=#{version}"
   name "Apipost"
@@ -16,6 +16,7 @@ cask "apipost" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "ApiPost.app"
 
