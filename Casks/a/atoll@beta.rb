@@ -15,4 +15,11 @@ cask "atoll@beta" do
   depends_on macos: ">= :sequoia"
 
   app "DynamicIsland.app"
+
+  zap delete: [
+    "~/Library/Caches/com.karthikinformationtechnology.DynamicIsland",
+    "~/Library/HTTPStorages/com.karthikinformationtechnology.DynamicIsland",
+    "~/Library/Preferences/com.karthikinformationtechnology.DynamicIsland.plist",
+    "~/Library/Application Support/DynamicIsland"
+  ]
 end
