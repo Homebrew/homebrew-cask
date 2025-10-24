@@ -17,9 +17,9 @@ cask "atoll@beta" do
   app "DynamicIsland.app"
 
   zap delete: [
+    "~/Library/Application Support/DynamicIsland",
     "~/Library/Caches/com.karthikinformationtechnology.DynamicIsland",
     "~/Library/HTTPStorages/com.karthikinformationtechnology.DynamicIsland",
     "~/Library/Preferences/com.karthikinformationtechnology.DynamicIsland.plist",
-    "~/Library/Application Support/DynamicIsland"
   ]
 end
