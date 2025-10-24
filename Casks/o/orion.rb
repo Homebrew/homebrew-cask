@@ -54,7 +54,7 @@ cask "orion" do
       strategy :sparkle
     end
   end
-  on_sequoia do
+  on_sequoia :or_newer do
     version "0.99,136"
     sha256 "475d879b6ce14801f52e513738e7bea214d1a4499a9584d4ca52656ba54bc0e1"
 
@@ -62,17 +62,6 @@ cask "orion" do
 
     livecheck do
       url "https://cdn.kagi.com/updates/15_0/appcast.xml"
-      strategy :sparkle
-    end
-  end
-  on_tahoe :or_newer do
-    version "0.99,134"
-    sha256 "91f0261e8b662da378b1c8fb3fd42529afe64af9b049f5c32c9c5bc7baa23428"
-
-    url "https://cdn.kagi.com/updates/26_0/#{version.csv.second}.zip"
-
-    livecheck do
-      url "https://cdn.kagi.com/updates/26_0/appcast.xml"
       strategy :sparkle
     end
   end
