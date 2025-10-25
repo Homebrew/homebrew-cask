@@ -1,6 +1,6 @@
 cask "hedy" do
-  version "2.10.6"
-  sha256 "e178774dc67d9e35376b39e40c18ecd27fdb93f3aa1bdbc906e86584004c894b"
+  version "2.11.0"
+  sha256 "2fd9b4fa8253eb2ba266751797d8fc8190e463f1d8ddab4b4d81c6360d2555ef"
 
   url "https://dl.hedy.ai/Hedy-MacOS-#{version}.dmg"
   name "Hedy AI"
@@ -11,6 +11,8 @@ cask "hedy" do
     url "https://macos-update-xml.hedy.bot"
     strategy :sparkle, &:short_version
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :sonoma"
