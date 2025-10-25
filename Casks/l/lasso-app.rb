@@ -8,13 +8,17 @@ cask "lasso-app" do
   desc "Move and resize windows with mouse"
   homepage "https://thelasso.app/"
 
+  # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
+  # work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://f003.backblazeb2.com/file/lasso-app/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Lasso.app"
 
