@@ -1,11 +1,13 @@
 cask "bit-slicer" do
-  version "1.8.2"
-  sha256 "376e15d1c193e532ca5666a07dbc918eca1d549146397bc5e5278ec5db0a425f"
+  version "1.9.0"
+  sha256 "da1f6f9b33cbf86bda4b73d79826e2862234c7e658d442f67ae621aac0a95bdf"
 
   url "https://github.com/zorgiepoo/Bit-Slicer/releases/download/#{version}/Bit.Slicer.dmg"
   name "Bit Slicer"
   desc "Universal game trainer"
   homepage "https://github.com/zorgiepoo/bit-slicer/"
+
+  depends_on macos: ">= :big_sur"
 
   app "Bit Slicer.app"
 
