@@ -1,5 +1,5 @@
 cask "lasso-app" do
-  version "1.8.0"
+  version "1.8.2"
   sha256 :no_check
 
   url "https://f003.backblazeb2.com/file/lasso-app/Lasso.dmg",
@@ -24,6 +24,7 @@ cask "lasso-app" do
     "~/Library/Application Support/Lasso",
     "~/Library/Caches/com.heavylightapps.lasso",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.heavylightapps.lasso",
+    "~/Library/Caches/SentryCrash/Lasso",
     "~/Library/HTTPStorages/com.heavylightapps.lasso",
     "~/Library/HTTPStorages/com.heavylightapps.lasso.binarycookies",
     "~/Library/Preferences/com.heavylightapps.lasso.plist",
