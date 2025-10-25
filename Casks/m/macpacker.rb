@@ -1,6 +1,6 @@
 cask "macpacker" do
-  version "0.10"
-  sha256 "4f89a00a01cc177b78123f9d7efa451ccc02a0c7faca907b75198a414b23d7f0"
+  version "0.11"
+  sha256 "eeb63a8c1174b46bf3dafa8a093ce059eddde3d592b34a3648f5807cec0671da"
 
   url "https://macpacker-releases.s3.amazonaws.com/MacPacker_v#{version}.zip",
       verified: "macpacker-releases.s3.amazonaws.com/"
@@ -14,6 +14,7 @@ cask "macpacker" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "MacPacker.app"
 
