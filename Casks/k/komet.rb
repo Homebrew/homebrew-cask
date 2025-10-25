@@ -1,6 +1,6 @@
 cask "komet" do
-  version "1.1,36"
-  sha256 "e9ed4f6ebe0fba0bdf2a5b54b8279d3bdfe74eeeb2bfa32cc66267bedd6b41c0"
+  version "1.5,52"
+  sha256 "26f78ba3ead04ff7d5d678a2ae885af06cd41dd4a6fa5827e6afafe86eac428f"
 
   url "https://zgcoder.net/software/komet/Komet_#{version.csv.first}_#{version.csv.second}.tar.xz"
   name "Komet"
@@ -8,11 +8,12 @@ cask "komet" do
   homepage "https://zgcoder.net/#komet"
 
   livecheck do
-    url "https://zgcoder.net/software/komet/appcast.xml"
+    url "https://zgcoder.net/software/komet/appcast_v2.xml"
     strategy :sparkle
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Komet.app"
 
