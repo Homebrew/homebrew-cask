@@ -1,9 +1,9 @@
 cask "qutebrowser" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.5.1"
-  sha256 arm:   "b14078102a0c9fa8d21490f8f902d8ee486b9fb3e038c52b50f42f71af3c1b1a",
-         intel: "fd98de89d57d4edc269df66d9770c54594d048d802dee1521818765e1c61dc65"
+  version "3.6.0"
+  sha256 arm:   "9f81a9b99c19916dd493872443f94573238cd561b7cc6fffed65374e5ed49468",
+         intel: "474e26eb70e3b6fef2cf6434e57031020c7cbbce214ebdc589aa16be005c6fd9"
 
   url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}-#{arch}.dmg",
       verified: "github.com/qutebrowser/qutebrowser/"
@@ -13,9 +13,11 @@ cask "qutebrowser" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  app "qutebrowser.app"
+  depends_on macos: ">= :big_sur"
+
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/qutebrowser.wrapper.sh"
+  app "qutebrowser.app"
   binary shimscript, target: "qutebrowser"
 
   preflight do
