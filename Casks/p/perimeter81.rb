@@ -25,11 +25,7 @@ cask "perimeter81" do
               "system/com.perimeter81d",
             ],
             signal:    ["TERM", "com.safervpn.osx.smb"],
-            pkgutil:   "com.safervpn.osx.smb",
-            delete:    [
-              "/Library/PrivilegedHelperTools/com.perimeter81.osx.HelperTool",
-              "/Library/PrivilegedHelperTools/com.perimeter81d.app/Contents/MacOS/com.perimeter81d",
-            ]
+            pkgutil:   "com.safervpn.osx.smb"
 
   zap trash: [
     "~/Library/Application Support/com.safervpn.osx.smb",
