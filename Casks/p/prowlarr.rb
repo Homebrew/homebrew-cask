@@ -1,9 +1,9 @@
 cask "prowlarr" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.5.5160"
-  sha256 arm:   "28bf4cf0a0c01d74d09cbe35a3d6bedbc75a1ac87a23bfad2ee4023733c43381",
-         intel: "3b9972b8d270af07213dbfd4e7fc0e038c113d1582ef3c38787694fe59235bd2"
+  version "2.1.5.5216"
+  sha256 arm:   "7e59e54913e7b30d218fa8fdb14ac8c86ed6fecbcc5960925535b06e9e33905e",
+         intel: "2dcd8d2716369dd0e4a972d19a9c00a8bea0329201f24da0a88e57d9636bf85f"
 
   url "https://github.com/Prowlarr/Prowlarr/releases/download/v#{version}/Prowlarr.master.#{version}.osx-app-core-#{arch}.zip",
       verified: "github.com/Prowlarr/Prowlarr/"
@@ -21,6 +21,7 @@ cask "prowlarr" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Prowlarr.app"
 
