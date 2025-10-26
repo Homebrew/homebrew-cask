@@ -1,11 +1,11 @@
 cask "chatwise" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.9.41"
-  sha256 arm:   "2210a3af5765abcd806331fbccf786ee6fbd589d621171e44d8360baeddc3e48",
-         intel: "0445eeb9549b91a1f0eb00454ccfe15c73b7f87c141a59db5db67b8ab3faa56f"
+  version "0.9.42"
+  sha256 arm:   "e5b072b69014e4e67ab0bb642ad5878a9c0d0cbadc1291ac41e2952d218f4464",
+         intel: "89a9c3a3f264ad9ecbe861ee27d789b79b45e75973df7b9c300d8d4da62dc372"
 
-  url "https://github.com/egoist/chatwise-releases/releases/download/v#{version}/ChatWise_#{version}_#{arch}.dmg",
+  url "https://github.com/egoist/chatwise-releases/releases/download/v#{version}/ChatWise_#{version}_#{arch}_darwin.dmg",
       verified: "github.com/egoist/chatwise-releases/"
   name "ChatWise"
   desc "AI chatbot for many LLMs"
