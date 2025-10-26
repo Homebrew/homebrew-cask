@@ -3,7 +3,7 @@ cask "far2l" do
   version "2.7.0"
 
   on_catalina :or_older do
-    sha256 "10b1dd4f5302981b0de437c316d8396f75da0abb61c97a67d556e2fa068205f5"
+    sha256 "7b07de07561f4243f7dcf2975d2236c6a3101463d4c3cfcfa6a8a6ea9b624f40"
 
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.15-x64.dmg"
   end
