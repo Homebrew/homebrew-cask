@@ -2,16 +2,16 @@ cask "xtool-studio" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "1.0.17,28,06bd0f17-e880-4435-a5fa-5d59b27a9c2c"
-    sha256 "b3e54ac877117da89d519700a335f71941be90987fdc15786ba79e58cd7dde85"
+    version "1.1.10,121,43bc6fb6-d1c6-4b64-83c8-a06b2c214614"
+    sha256 "6be9c9f22e538a04ce54ddd1cc32e0fe7cc211d29fdfb625014aa9d26825ae75"
   end
   on_intel do
-    version "1.0.17,16,bbc5d7b6-b2fb-4ca2-87bf-64818321b92b"
-    sha256 "b7a31af49eb16dd0ff3eabc69a1972c0f8936fcc82c5d293e1f83e320bac3765"
+    version "1.1.10,110,4f6db9be-6a59-4505-9e95-c09f67dc0694"
+    sha256 "394dbd39296eb57265910f5a22c49652f1fcca57eb50a3f806c6ac19a8d35d1e"
   end
 
-  url "https://storage.atomm.com/efficacy/xcs-package/prod/packages/#{version.csv.second}/#{version.csv.third}/xTool-Studio-#{arch}-#{version.csv.first}.dmg",
-      verified: "storage.atomm.com/efficacy/xcs-package/"
+  url "https://storage.atomm.com/efficacy/atomm-package/prod/packages/#{version.csv.second}/#{version.csv.third}/xTool-Studio-#{arch}-#{version.csv.first}.dmg",
+      verified: "storage.atomm.com/efficacy/atomm-package/"
   name "xTool Studio"
   desc "Design and control software for xTool laser machines"
   homepage "https://www.xtool.com/pages/software"
