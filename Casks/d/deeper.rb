@@ -35,15 +35,15 @@ cask "deeper" do
     end
   end
   on_sequoia :or_newer do
-    version "3.1.7"
+    version "3.2.0"
 
-    url "https://www.titanium-software.fr/download/15/Deeper.dmg"
+    url "https://www.titanium-software.fr/download/26/Deeper.dmg"
 
     # We check the version on the homepage, as the version in the related plist
     # file can be out of date.
     livecheck do
       url :homepage
-      regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*15\s*</i)
+      regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*26\s*</i)
     end
   end
 
@@ -58,6 +58,7 @@ cask "deeper" do
     :ventura,
     :sonoma,
     :sequoia,
+    :tahoe,
   ]
 
   app "Deeper.app"
