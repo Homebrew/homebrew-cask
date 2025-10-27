@@ -7,6 +7,7 @@ cask "marble" do
   homepage "https://marble.kde.org/"
 
   deprecate! date: "2024-10-27", because: :unmaintained
+  disable! date: "2025-10-27", because: :unmaintained
 
   pkg "Marble-#{version}.pkg"
 
