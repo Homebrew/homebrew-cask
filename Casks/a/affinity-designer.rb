@@ -1,6 +1,6 @@
 cask "affinity-designer" do
-  version "2.6.4,3634"
-  sha256 "dcae9143d60c9cece6eca0b457e11fdea358fb373c879b2ef0d6fc92538ae6c9"
+  version "2.6.5,3782"
+  sha256 "b07e7237ced47fccabd07ed8d1c282c9918bbffbae23a7df5e1c55b2620834f9"
 
   url "https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Designer%20#{version.csv.first.major}%20Affinity%20Store%20#{version.csv.second}.zip",
       verified: "affinity-update.s3.amazonaws.com/"
