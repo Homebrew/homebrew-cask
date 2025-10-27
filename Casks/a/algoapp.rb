@@ -1,6 +1,6 @@
 cask "algoapp" do
-  version "11.1.0"
-  sha256 "c220173eb6751114268db3a38c1257a120f8722e233b7eefeea1be056340fd28"
+  version "11.1.1"
+  sha256 "cae8a164f21ae481046c20e55f745272d0d3dff7725460119a9e23537e586173"
 
   url "https://updates.ankiapp.com/AlgoApp-#{version}-universal.dmg"
   name "AlgoApp"
