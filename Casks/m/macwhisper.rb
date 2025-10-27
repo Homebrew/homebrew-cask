@@ -16,7 +16,7 @@ cask "macwhisper" do
     strategy :sparkle do |items, regex|
       items.map do |item|
         version_suffix = item.url.match(regex)
-        next item.nice_version if version_suffix.blank?
+        next item.nice_version if version_suffix.nil? || version_suffix[1].blank?
 
         "#{item.nice_version},#{version_suffix[1]}"
       end
