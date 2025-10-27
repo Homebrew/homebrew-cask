@@ -1,9 +1,9 @@
 cask "epicenter-whispering" do
   arch arm: "aarch64", intel: "x64"
 
-  version "7.5.4"
-  sha256 arm:   "11a5444b9c7e9979b41c253545aedbb9cb622a02b9b47f8185b24c0450bc800e",
-         intel: "550bdb9d813a9562895becad8903447f7573c10786a5e310ad70f363d2b07f62"
+  version "7.5.5"
+  sha256 arm:   "b2bb7c93f977c2848c27f19b9dc764dd24e6335260bb445a1aead5e16660ebee",
+         intel: "b194906a19cdd139ae774fe38dd5d68359060020c3e03ebfc59f5f13fca2594d"
 
   url "https://github.com/epicenter-os/epicenter/releases/download/v#{version}/Whispering_#{version}_#{arch}.dmg",
       verified: "github.com/epicenter-os/epicenter/"
