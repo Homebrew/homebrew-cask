@@ -3,7 +3,7 @@ cask "deeper" do
 
   # NOTE: We use separate `url` values in each of the macOS on_system blocks
   # so that the API data correctly includes URL variants for each.
-  on_sonoma :or_older do
+  on_sequoia :or_older do
     on_catalina :or_older do
       version "2.6.0"
 
@@ -29,13 +29,18 @@ cask "deeper" do
 
       url "https://www.titanium-software.fr/download/14/Deeper.dmg"
     end
+    on_sequoia do
+      version "3.1.7"
+
+      url "https://www.titanium-software.fr/download/15/Deeper.dmg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sequoia :or_newer do
-    version "3.2.0"
+  on_tahoe :or_newer do
+    version "3.2.1"
 
     url "https://www.titanium-software.fr/download/26/Deeper.dmg"
 
