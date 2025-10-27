@@ -1,8 +1,10 @@
 cask "calhash" do
   sha256 :no_check
 
-  on_sonoma :or_older do
-    on_catalina do
+  # NOTE: We use separate `url` values in each of the macOS on_system blocks
+  # so that the API data correctly includes URL variants for each.
+  on_sequoia :or_older do
+    on_catalina :or_older do
       version "1.0.5"
 
       url "https://www.titanium-software.fr/download/1015/CalHash.dmg"
@@ -27,13 +29,18 @@ cask "calhash" do
 
       url "https://www.titanium-software.fr/download/14/CalHash.dmg"
     end
+    on_sequoia do
+      version "1.4.6"
+
+      url "https://www.titanium-software.fr/download/15/CalHash.dmg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sequoia :or_newer do
-    version "1.5.0"
+  on_tahoe :or_newer do
+    version "1.5.1"
 
     url "https://www.titanium-software.fr/download/26/CalHash.dmg"
 
