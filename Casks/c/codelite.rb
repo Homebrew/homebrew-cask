@@ -20,15 +20,25 @@ cask "codelite" do
         skip "Legacy version"
       end
     end
-    on_sonoma :or_newer do
+    on_sonoma do
       arch arm: "macOS_14.7.2-arm64"
 
       version "18.1.0"
       sha256 "ba61b4a13cadc0eb4a4a220bbece25cbccd23e16c1f29c55337a00d6cadc092a"
 
       livecheck do
+        skip "Legacy version"
+      end
+    end
+    on_sequoia :or_newer do
+      arch arm: "macOS_15.6.1-arm64"
+
+      version "18.2.0"
+      sha256 "49f919ebed4cf42e49275dc89b5df12bc14cbd4b435f07dbcdaeddef4849a9df"
+
+      livecheck do
         url "https://downloads.codelite.org/"
-        regex(/CodeLite\s*(\d+\.\d+)((?:\.\d+)*)\s*-\s*Stable/i)
+        regex(/CodeLite\s*(\d+\.\d+)((?:\.\d+)*)\s*-\s*(?:Latest|Stable)/i)
         strategy :page_match do |page, regex|
           match = page.match(regex)
           next if match.blank?
