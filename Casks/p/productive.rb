@@ -1,9 +1,9 @@
 cask "productive" do
   arch arm: "-arm64"
 
-  version "1.16.0"
-  sha256 arm:   "09f9d3c6b18e79c5d43ee458c254d38a2d68da1ea2b2c95c58253a1cbd9f259c",
-         intel: "ad14a3e7a886cbdebff4d0b95a775c4fb263339d06d9d462c01662d1bdd3d6d9"
+  version "1.16.1"
+  sha256 arm:   "3bf5069779ca855f94b1754dac9c0c008b632d67e4fd3fdde448a0777891f852",
+         intel: "946c53bd9fe49d9f05120dc9c643f053df67f53595497a7aa3a1f48923d14a5b"
 
   url "https://download.productive.io/desktop/electron/Productive-#{version}#{arch}.dmg"
   name "Productive"
