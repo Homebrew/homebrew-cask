@@ -18,8 +18,8 @@ cask "microsoft-excel" do
     end
   end
   on_ventura :or_newer do
-    version "16.102.25101829"
-    sha256 "e1d637e6580c560034a7a6808f35c4133934f2e76d45a6461977df2e2512d104"
+    version "16.102.25102623"
+    sha256 "7e59a736f04a6d397299b5d65c770a02622d660de415b8d515b5994cbdb105c4"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525135"
