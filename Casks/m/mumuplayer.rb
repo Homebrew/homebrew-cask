@@ -1,6 +1,6 @@
 cask "mumuplayer" do
-  version "1.7.0"
-  sha256 "a6453cd4e82451c18499827939ab40dc7c500f7bc3718d28bfae766ead372ad2"
+  version "1.7.1"
+  sha256 "0e20196081d9524519e2a947414c9bbe1aef4573305578051c5c0c196970c0db"
 
   url "https://a11.gdl.netease.com/MuMuMacUpdater_#{version}.tar.gz",
       verified: "a11.gdl.netease.com/"
