@@ -1,8 +1,8 @@
 cask "readest" do
-  version "0.9.88"
-  sha256 "1d776c728015be107ca1c7690681acd5d00343f0813dca1030168f34083b77fe"
+  version "0.9.90"
+  sha256 "aeca3414aaa0860b6a8a1ac0dec57e9ec26310e47e2bfb54852498c88bf63a27"
 
-  url "https://github.com/readest/readest/releases/download/v#{version}/Readest_#{version}_universal.dmg",
+  url "https://github.com/readest/readest/releases/download/v#{version}/Readest_#{version}_universal_darwin.dmg",
       verified: "github.com/readest/readest/"
   name "Readest"
   desc "Ebook reader"
