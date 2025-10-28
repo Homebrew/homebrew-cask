@@ -20,8 +20,8 @@ cask "teamviewer" do
     EOS
   end
   on_big_sur do
-    version "15.70.6"
-    sha256 "a9e00079983d95300574004e3548aff0620dbe6bd143b6fd2f63c6d23066fc21"
+    version "15.71.4"
+    sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
@@ -31,8 +31,8 @@ cask "teamviewer" do
     pkg "TeamViewer.pkg"
   end
   on_monterey :or_newer do
-    version "15.70.6"
-    sha256 "a9e00079983d95300574004e3548aff0620dbe6bd143b6fd2f63c6d23066fc21"
+    version "15.71.4"
+    sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=12.7&type=1&channel=1"
