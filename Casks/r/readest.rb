@@ -1,6 +1,6 @@
 cask "readest" do
-  version "0.9.90"
-  sha256 "aeca3414aaa0860b6a8a1ac0dec57e9ec26310e47e2bfb54852498c88bf63a27"
+  version "0.9.91"
+  sha256 "bf3240a7ab7a85f3b6ff0fca47eca49d82441592a54f5604bc599909d8e85efb"
 
   url "https://github.com/readest/readest/releases/download/v#{version}/Readest_#{version}_universal_darwin.dmg",
       verified: "github.com/readest/readest/"
