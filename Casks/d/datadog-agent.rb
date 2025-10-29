@@ -24,6 +24,8 @@ cask "datadog-agent" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   installer manual: "datadog-agent-#{version}.#{arch}.pkg"
 
   uninstall launchctl: "com.datadoghq.agent",
