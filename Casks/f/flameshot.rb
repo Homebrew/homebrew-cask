@@ -1,9 +1,9 @@
 cask "flameshot" do
   arch arm: "arm64", intel: "intel"
 
-  version "13.2.0"
-  sha256 arm:   "25d9268efbb60013f3f3c4c67be4a3fee35055a1b2db5c86368ed79c44544ad9",
-         intel: "7e52f48f7771b0a358cada01c38fae1a9c34ae870eb4f6e44925852bb2094808"
+  version "13.3.0"
+  sha256 arm:   "ecf0d815b5b4c0a55f896d67c4cf74c49816ccb20acf9df715a3cd893e0184e7",
+         intel: "c549e5687ae32d3f6a48badbd1fedac6bbba659ec16f44a0f1bf56a8dec20fd2"
 
   on_arm do
     depends_on macos: ">= :sonoma"
