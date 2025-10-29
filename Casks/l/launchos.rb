@@ -1,6 +1,6 @@
 cask "launchos" do
-  version "0.9.4,44"
-  sha256 "9290673a2183af9829f4744d7ac94a22d8de3503427eca5b92237d759ee014ee"
+  version "0.9.5,51"
+  sha256 "f89fc9d1b23a5d9cdb50ce8213c66b9e142575d073313ff41ea090de646f5cb3"
 
   url "https://static.remixdesign.app/launchos/LaunchOS-Beta-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "static.remixdesign.app/launchos/"
@@ -14,7 +14,7 @@ cask "launchos" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: ">= :tahoe"
 
   app "LaunchOS.app"
 
