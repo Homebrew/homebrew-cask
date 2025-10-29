@@ -26,5 +26,6 @@ cask "llamabarn" do
     "~/Library/HTTPStorages/app.llamabarn.LlamaBarn.binarycookies",
     "~/Library/Preferences/app.llamabarn.LlamaBarn.plist",
     "~/Library/WebKit/app.llamabarn.LlamaBarn",
+    "~/Library/Application Support/LlamaBarn",
   ]
 end
