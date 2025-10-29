@@ -21,11 +21,11 @@ cask "llamabarn" do
   uninstall quit: "app.llamabarn.LlamaBarn"
 
   zap trash: [
+    "~/Library/Application Support/LlamaBarn",
     "~/Library/Caches/app.llamabarn.LlamaBarn",
     "~/Library/HTTPStorages/app.llamabarn.LlamaBarn",
     "~/Library/HTTPStorages/app.llamabarn.LlamaBarn.binarycookies",
     "~/Library/Preferences/app.llamabarn.LlamaBarn.plist",
     "~/Library/WebKit/app.llamabarn.LlamaBarn",
-    "~/Library/Application Support/LlamaBarn",
   ]
 end
