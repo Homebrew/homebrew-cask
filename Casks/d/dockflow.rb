@@ -1,6 +1,6 @@
 cask "dockflow" do
-  version "1.51"
-  sha256 "a8f552b0c36be59660a763a96f7a3aead538f3f8425fe6912039406b8ef9f411"
+  version "1.52"
+  sha256 "f90370414358a63a863c88bb140e050060ef6b287281a3a2fe5472c19bc8bda6"
 
   url "https://github.com/AppitStudio/dock-flow-updates/releases/download/v#{version}/DockFlow.dmg",
       verified: "github.com/AppitStudio/"
