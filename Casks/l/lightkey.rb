@@ -61,8 +61,8 @@ cask "lightkey" do
     end
   end
   on_sequoia :or_newer do
-    version "5.7"
-    sha256 "d7633f7ee04062766cabd0e493a27ee7e6c6d7fef9551d2ecc4c4fecd4f4afad"
+    version "5.7.1"
+    sha256 "f505b890ae569cf5faa469b90503a79242e90a89f42e05acce96924740eb6bd7"
 
     # Upstream also publishes legacy versions (with a lower minor version) in
     # the appcast, so the first `item` after sorting by `pubDate`/`version` may
