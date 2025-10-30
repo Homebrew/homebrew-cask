@@ -1,9 +1,9 @@
 cask "gitbutler" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.16.10,2482"
-  sha256 arm:   "651b542d8788f0308500246ac7b67b169752d1b24baf659aee5f27f09fe6ae6f",
-         intel: "dd5f6a8f4dc3b63d7492f2e1bb3e66a1bd12a10d97943a415f6c3b8d6c90995a"
+  version "0.17.0,2534"
+  sha256 arm:   "861b9023285764fe073ab69c0bf3fb0a393f0011913d1451a38b1ea319d008d0",
+         intel: "a94b8e5b9a3125611c52b1cbbc99b9b0c05bb206359c612c1d4b92eabc327d30"
 
   url "https://releases.gitbutler.com/releases/release/#{version.csv.first}-#{version.csv.second}/macos/#{arch}/GitButler.app.tar.gz"
   name "GitButler"
@@ -24,7 +24,6 @@ cask "gitbutler" do
   auto_updates true
 
   app "GitButler.app"
-  binary "#{appdir}/GitButler.app/Contents/MacOS/but", target: "but"
 
   zap trash: [
     "~/Library/Application Support/com.gitbutler.app",
