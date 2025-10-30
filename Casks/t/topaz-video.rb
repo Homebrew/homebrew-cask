@@ -28,7 +28,11 @@ cask "topaz-video" do
     system "sudo", "bash", "#{appdir}/Topaz Video.app/Contents/Resources/ofx_inst.sh"
   end
 
-  uninstall pkgutil: "com.topazlabs.VStudioPackage",
+  uninstall pkgutil: [
+              "com.topazlabs.aeplugin",
+              "com.topazlabs.ofxplugin",
+              "com.topazlabs.VStudioPackage",
+            ],
             delete:  [
               "/Applications/Adobe After Effects 2020/Plug-ins/Topaz Video AI Frame Interpolation.plugin",
               "/Applications/Adobe After Effects 2020/Plug-ins/Topaz Video AI.plugin",
