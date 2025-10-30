@@ -10,6 +10,8 @@ cask "bcut" do
   end
   on_intel do
     version "3.11.8,21332983,00884f028a18908793eef62b4fd7f17e"
+
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
   end
 
   url "https://boss.hdslb.com/bcut_pc_pkg/static/#{version.csv.third}/BCUT-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg",
