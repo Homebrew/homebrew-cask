@@ -1,5 +1,5 @@
 cask "riverside-studio" do
-  version "1.14.1"
+  version "1.16.0"
   sha256 :no_check
 
   url "https://assets.riverside.fm/mac-desktop-app/current-release/RiversideStudio.dmg"
@@ -13,7 +13,7 @@ cask "riverside-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Riverside Studio.app"
 
