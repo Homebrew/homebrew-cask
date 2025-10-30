@@ -1,6 +1,6 @@
 cask "topaz-video" do
-  version "1.0.1"
-  sha256 "11643bbe1df7aa89a0304157ea6700dcc6db1f233169ad1b068a549c8a82409e"
+  version "1.0.3"
+  sha256 "5bb1d2594605df2d5c27e34748d74f2f91f3795896c32118d5d8faa568e2d8fb"
 
   url "https://downloads.topazlabs.com/deploy/TopazVideoStudio/#{version}/TopazVideo-#{version}.pkg"
   name "Topaz Video"
@@ -28,7 +28,11 @@ cask "topaz-video" do
     system "sudo", "bash", "#{appdir}/Topaz Video.app/Contents/Resources/ofx_inst.sh"
   end
 
-  uninstall pkgutil: "com.topazlabs.VStudioPackage",
+  uninstall pkgutil: [
+              "com.topazlabs.aeplugin",
+              "com.topazlabs.ofxplugin",
+              "com.topazlabs.VStudioPackage",
+            ],
             delete:  [
               "/Applications/Adobe After Effects 2020/Plug-ins/Topaz Video AI Frame Interpolation.plugin",
               "/Applications/Adobe After Effects 2020/Plug-ins/Topaz Video AI.plugin",
