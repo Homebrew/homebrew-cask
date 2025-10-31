@@ -1,11 +1,11 @@
 cask "blood-on-the-clocktower-online" do
   arch arm: "aarch64", intel: "x64"
 
-  version "3.46.4"
-  sha256 arm:   "6294e5c9c89e5f1ad3c18147b9149dd5de3d44d66e89dba014aac11f68a6545f",
-         intel: "50ea9629d78c018ad08cece44ed5ec81b5db1877a8e6002bece48818e0ba5aa6"
+  version "3.47.0"
+  sha256 arm:   "27cbeec87df6d8c39e40748b82d603cc886113fd576f1eacbdf5ec131a01a1c4",
+         intel: "8c50159ec702a0c4384e8db95e862fe2e73ebf0eda0b30edb02855056ee88426"
 
-  url "https://github.com/ThePandemoniumInstitute/botc-release/releases/download/v#{version}/Blood.on.the.Clocktower.Online_#{version}_#{arch}.dmg",
+  url "https://github.com/ThePandemoniumInstitute/botc-release/releases/download/v#{version}/Blood.on.the.Clocktower.Online_#{version}_#{arch}_darwin.dmg",
       verified: "github.com/ThePandemoniumInstitute/botc-release/"
   name "Blood on the Clocktower Online"
   desc "Client for the game Blood on the Clocktower"
