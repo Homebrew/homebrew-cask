@@ -1,6 +1,6 @@
 cask "transmission@nightly" do
-  version "9810,bfb5e35021"
-  sha256 "9d54b9832c7f3f41c84be66c4cea0fc2f5278ae2016bc1949949fabc96656013"
+  version "9811,1d0db31ae7"
+  sha256 "f57ab7a842106a36106819b942da0911ed6bb71dcccd6bdf537dd84b5d30a175"
 
   url "https://build.transmissionbt.com/job/trunk-mac/#{version.csv.first}/artifact/release/Transmission-#{version.csv.second}.dmg"
   name "Transmission"
