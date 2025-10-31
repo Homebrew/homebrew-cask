@@ -12,6 +12,7 @@ cask "retrospective" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
 
   app "Retrospective.app"
