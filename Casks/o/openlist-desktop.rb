@@ -6,10 +6,9 @@ cask "openlist-desktop" do
          intel: "71d1972b097801296beadc58da5e2ac1245402a81d98e90c852c1ee00e130f10"
 
   url "https://github.com/OpenListTeam/OpenList-Desktop/releases/download/v#{version}/OpenList.Desktop_#{version}_#{arch}.dmg",
-      verified: "github.com/OpenListTeam/OpenList-Desktop/"
   name "OpenList Desktop"
   desc "Desktop application for OpenList"
-  homepage "https://oplist.org/"
+  homepage "https://github.com/OpenListTeam/OpenList-Desktop"
 
   auto_updates true
   depends_on macos: ">= :catalina"
