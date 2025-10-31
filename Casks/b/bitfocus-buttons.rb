@@ -2,11 +2,11 @@ cask "bitfocus-buttons" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
-  sha256 arm:   "b28c02b0ff9830862c2453f517de5ef98d24cd1816c625d3fc454ad7893fb52c",
+  sha256 arm:   "f0d7adf7040c052b1b53599aaac05a7c74c555f7e5ab805823be99161ea4d7fe",
          intel: "c6a628b36e9c7b0cede33dd7c41505510c0d97ed945e52cb309fcc425436fcd6"
 
   on_arm do
-    version "1.4.0,4766,cca8e4e7"
+    version "1.4.1,4769,492c32cc"
   end
   on_intel do
     version "1.2.2,4157,e14e47c7"
