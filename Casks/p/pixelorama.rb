@@ -1,6 +1,6 @@
 cask "pixelorama" do
-  version "1.1.5"
-  sha256 "68b5a97b7e35c19a26ba03df3669d763016af3c038f771de68bc2aff2fd80d49"
+  version "1.1.6"
+  sha256 "3c65565c7af491b71f6c8998d93a154b3e272127065efa29371e5e0001a26d48"
 
   url "https://github.com/Orama-Interactive/Pixelorama/releases/download/v#{version}/Pixelorama-Mac.dmg",
       verified: "github.com/Orama-Interactive/Pixelorama/"
@@ -9,6 +9,8 @@ cask "pixelorama" do
   homepage "https://orama-interactive.itch.io/pixelorama"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "Pixelorama.app"
 
