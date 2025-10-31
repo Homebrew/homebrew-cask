@@ -1,6 +1,6 @@
 cask "prizmo" do
-  version "4.7"
-  sha256 "4cf0533e516e711d187837a2ce14edec1025cc7af5b57cf2a68127cc1704c102"
+  version "4.7.1"
+  sha256 "71f085b54ec6dde38a25675a81a9e799661fcd82b27629b28bbf8e88907d6456"
 
   url "https://creaceed.s3.amazonaws.com/downloads/prizmo#{version.major}_#{version}.zip",
       verified: "creaceed.s3.amazonaws.com/downloads/"
@@ -14,6 +14,7 @@ cask "prizmo" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Prizmo.app"
 
