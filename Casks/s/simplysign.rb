@@ -2,17 +2,17 @@ cask "simplysign" do
   version "2.10.19-9.3.3.0,2.10.19-9.3.3"
   sha256 "1c6ccc48ecf5e57b0cd85771ac5209b8d91351268d5302accce034a6b1039cc8"
 
-  url "https://files.certum.eu/software/SimplySignDesktop/OSX/#{version.csv.first}/SimplySignDesktop-#{version.csv.second}_prod.dmg"
+  url "https://files.certum.eu/software/SimplySignDesktop/OSX/#{version.csv.first}/SimplySignDesktop-#{version.csv.second || version.csv.first}_prod.dmg"
   name "SimplySign Desktop"
   desc "Emulates a physical crypto card/reader for proCertum SmartSign"
   homepage "https://support.certum.eu/en/software/procertum-smartsign/"
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      # Scans for the href and captures both version parts
-      page.scan(%r{href=".*?/OSX/([^/]+)/SimplySignDesktop-([\d.-]+)_prod\.dmg"}i).map do |match|
-        "#{match[0]},#{match[1]}"
+    regex(%r{href=.*?/v?(\d+(?:[.-]\d+)+)/SimplySignDesktop[._-]v?(\d+(?:[.-]\d+)+)[._-]prod\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        (match[0] == match[1]) ? match[0] : "#{match[0]},#{match[1]}"
       end
     end
   end
