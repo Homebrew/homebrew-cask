@@ -1,6 +1,6 @@
 cask "devilutionx" do
-  version "1.5.4"
-  sha256 "d95c726023b625af6e918700dd3d19b1d4888eb829cd2640ca97de96e4564cf8"
+  version "1.5.5"
+  sha256 "ba8aba7ffdb528ff31f22073606c3041fe7c9bfc7dd418cbea2e6351ad4ca049"
 
   url "https://github.com/diasurgical/devilutionX/releases/download/#{version}/devilutionx-macos-universal.dmg"
   name "DevilutionX"
@@ -23,6 +23,8 @@ cask "devilutionx" do
       end.flatten
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "devilutionX.app"
 
