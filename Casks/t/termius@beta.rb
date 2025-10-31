@@ -1,7 +1,7 @@
 cask "termius@beta" do
   arch arm: "mac-beta-arm64", intel: "mac-beta"
 
-  version "9.32.3"
+  version "9.32.4"
   sha256 :no_check
 
   url "https://autoupdate.termius.com/#{arch}/Termius%20Beta.dmg"
