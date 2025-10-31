@@ -1,6 +1,6 @@
 cask "connect-fonts" do
-  version "27.0.5"
-  sha256 "874fa21d8dccdcc43a3d984ee08959a5c2664dd9482165b3657efc0e4d6b27b1"
+  version "28.0.0"
+  sha256 "bae8a1e428d86aaaa45dfe6ff03f14a0200d42bb9b65d5a24cf3397a6e8d9e37"
 
   url "https://bin.extensis.com/ConnectFonts-M-#{version.dots_to_hyphens}.dmg"
   name "Connect Fonts"
@@ -13,6 +13,7 @@ cask "connect-fonts" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "Connect Fonts.app"
 
