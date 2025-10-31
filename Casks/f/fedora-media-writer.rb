@@ -1,11 +1,11 @@
 cask "fedora-media-writer" do
   arch arm: "-arm64"
 
-  version "5.2.8"
-  sha256 arm:   "06e4762a52358c5e3f382539b1e29cc838381b3a4ad7ec8995f2cbba7cfbf396",
-         intel: "5bcfa5c302133aa97b941d1a7b569f321febc3af0693bbc2b8ee55c582f8a5e2"
+  version "5.2.9"
+  sha256 arm:   "b87ef52ffe7b41da43f60148223c410b268352688f07f0d35beed5b1f6c41b6e",
+         intel: "251d07b5c4e755b72e44edd60af11227cab864fb710bd29480756e90a2332a9f"
 
-  url "https://github.com/FedoraQt/MediaWriter/releases/download/#{version}/FedoraMediaWriter-osx#{arch}-#{version}.dmg",
+  url "https://github.com/FedoraQt/MediaWriter/releases/download/#{version}/FedoraMediaWriter-macos#{arch}-#{version}.dmg",
       verified: "github.com/FedoraQt/MediaWriter/"
   name "Fedora Media Writer"
   desc "Tool to write Fedora images to portable media files"
