@@ -1,20 +1,23 @@
 cask "djstudio" do
   arch arm: "-arm64"
+  livecheck_arch = on_arch_conditional arm: "-apple"
 
-  version "3.1.31"
-  sha256 arm:   "c2096c5b03ca1f86bc359b0c3d97404fe53527d5337854599fbeff9915db27e5",
-         intel: "4c35eb09cb8adc87dc3c084ba31cdefae4b75ebdcfd64617a13784cb3b9a13f7"
+  version "4.0.4"
+  sha256 arm:   "e41d89bbe83794b341a622cae58ed730c5c158b2c0747788b72ab6c034a40356",
+         intel: "e565a536e0470f87cb548b2cd16f50ccb7d0f17175bc32b4c27c0dd8495625ce"
 
-  url "https://github.com/AppMachine/dj-studio-app-updates/releases/download/v#{version}/DJ.Studio-#{version}#{arch}.dmg",
-      verified: "github.com/AppMachine/dj-studio-app-updates/"
+  url "https://download.dj.studio/DJ.Studio-#{version}#{arch}.dmg"
   name "DJ.Studio"
   desc "DAW for DJs"
   homepage "https://dj.studio/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://dj.studio/download/latest/mac#{livecheck_arch}"
+    regex(/DJ\.Studio[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
+    strategy :header_match
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "DJ.Studio.app"
 
