@@ -1,6 +1,6 @@
 cask "retrospective" do
-  version "6.4.0"
-  sha256 "bdb99fa304fc76f61084249b54f6f163cd02b348ebadcf9d8830aea92c001635"
+  version "7.0.0"
+  sha256 "fc4014f43189a1a63ab3b5201b2fad1190e0e304e3e47e22bf327face1c57288"
 
   url "https://resources.centeractive.com/software/#{version}/retrospective-#{version.dots_to_underscores}-macos-jre.dmg"
   name "Retrospective"
@@ -17,8 +17,4 @@ cask "retrospective" do
   app "Retrospective.app"
 
   zap trash: "~/.Retrospective"
-
-  caveats do
-    requires_rosetta
-  end
 end
