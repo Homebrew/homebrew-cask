@@ -6,13 +6,10 @@ cask "brilliant" do
       verified: "s3.eu-north-1.amazonaws.com/brilliant.design/"
   name "Brilliant"
   desc "Design and communication tool"
-  homepage "https://brilliant.design/"
+  homepage "https://try-brilliant.com/"
 
   livecheck do
-    url "https://brilliant.design/api/versions/info"
-    strategy :json do |json|
-      json.dig("latest", "version")
-    end
+    skip "No version information available"
   end
 
   auto_updates true
