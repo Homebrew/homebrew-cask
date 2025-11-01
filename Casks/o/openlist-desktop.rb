@@ -1,4 +1,4 @@
-cask "openlist-desktop" do
+cask "openlist-app" do
   arch arm: "aarch64", intel: "x64"
 
   version "0.7.0"
