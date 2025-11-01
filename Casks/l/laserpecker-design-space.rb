@@ -1,11 +1,11 @@
-# Documentation: https://docs.brew.sh/Cask-Cookbook
-#                https://docs.brew.sh/Adding-Software-to-Homebrew#cask-stanzas
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 cask "laserpecker-design-space" do
-  version "2.9.0"
-  sha256 "9ac1e62b487388a0b6bd3721b1e86202f555f69cfd2f5bd63ae37d670a5b41aa"
+  arch arm: "M1", intel: "Mac"
 
-  url "https://laserpecker-prod.oss-cn-hongkong.aliyuncs.com/apply/software/pc/LaserPecker-Design-Space-M1-#{version}.dmg",
+  version "2.9.0"
+  sha256 arm:   "9ac1e62b487388a0b6bd3721b1e86202f555f69cfd2f5bd63ae37d670a5b41aa",
+         intel: "c7f436ad205b3b1791b980dc99cfbdd3b80fb1504cb1d1a16aabd6567ea8a783"
+
+  url "https://laserpecker-prod.oss-cn-hongkong.aliyuncs.com/apply/software/pc/LaserPecker-Design-Space-#{arch}-#{version}.dmg",
       verified: "laserpecker-prod.oss-cn-hongkong.aliyuncs.com/"
   name "LaserPecker Design Space"
   desc "Laser engraving and cutting software"
@@ -13,13 +13,16 @@ cask "laserpecker-design-space" do
 
   livecheck do
     url "https://laserpecker.net/pages/software-download"
-    regex(/LaserPecker-Design-Space-M1-(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*LaserPecker[._-]Design[._-]Space[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  # depends_on macos: ""
+  depends_on macos: ">= :big_sur"
 
   app "LaserPecker Design Space.app"
 
-  # Documentation: https://docs.brew.sh/Cask-Cookbook#stanza-zap
-  zap trash: ""
+  zap trash: [
+    "~/Library/Application Support/laserpecker_design_spaces",
+    "~/Library/Logs/laserpecker_design_spaces",
+    "~/Library/Preferences/com.laserpecker.pc.plist",
+  ]
 end
