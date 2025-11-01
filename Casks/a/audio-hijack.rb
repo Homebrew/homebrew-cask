@@ -14,7 +14,7 @@ cask "audio-hijack" do
     end
   end
   on_sonoma :or_newer do
-    version "4.5.3"
+    version "4.5.4"
 
     url "https://cdn.rogueamoeba.com/audiohijack/download/AudioHijack.zip"
 
