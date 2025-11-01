@@ -9,7 +9,7 @@ cask "liquibase-secure" do
 
   livecheck do
     url "https://repo.liquibase.com/releases/secure/"
-    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+    regex(%r{href=["']?[^"' >]*?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   binary "liquibase"
