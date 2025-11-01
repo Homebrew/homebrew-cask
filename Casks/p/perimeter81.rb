@@ -15,9 +15,25 @@ cask "perimeter81" do
 
   depends_on macos: ">= :big_sur"
 
-  pkg "Harmony_SASE_#{version}.pkg"
+  # The pkg has detection for the `skip_autostart` flag to prevent launching after install
+  rename "Harmony_SASE_#{version}.pkg", "Harmony_SASE_#{version}_skip_autostart.pkg"
 
+  pkg "Harmony_SASE_#{version}_skip_autostart.pkg"
+
+  # Each uninstall declaration only allows a single script action,
+  # so multiple declarations are necessary here.
+  uninstall early_script: {
+    executable:   "/usr/bin/chflags",
+    args:         ["-RL", "noschg", "/Applications/Harmony SASE.app"],
+    must_succeed: false,
+  }
+  uninstall early_script: {
+    executable:   "/usr/bin/chflags",
+    args:         ["-RL", "noschg", "/Library/PrivilegedHelperTools/com.perimeter81.osx.HelperTool"],
+    must_succeed: false,
+  }
   uninstall launchctl: [
+              "com.harmonySASE.app",
               "com.perimeter81.osx.HelperTool",
               "com.perimeter81.Perimeter81",
               "com.perimeter81d",
@@ -25,7 +41,8 @@ cask "perimeter81" do
               "system/com.perimeter81d",
             ],
             signal:    ["TERM", "com.safervpn.osx.smb"],
-            pkgutil:   "com.safervpn.osx.smb"
+            pkgutil:   "com.safervpn.osx.smb",
+            delete:    "/Library/PrivilegedHelperTools/com.perimeter81.osx.HelperTool"
 
   zap trash: [
     "~/Library/Application Support/com.safervpn.osx.smb",
