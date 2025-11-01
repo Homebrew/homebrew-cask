@@ -1,8 +1,8 @@
 cask "flowdown" do
-  version "3.9.440"
-  sha256 "e53adccd2fa13ddae1070bd2f632c0a1ced0fefac64564d30d84bdcd75d6409c"
+  version "3.10.6"
+  sha256 "aa5878964c561ed1b191b4f097b6e739073d9abd06590712546c5b047c664da2"
 
-  url "https://github.com/Lakr233/FlowDown/releases/download/#{version.csv.second || version.csv.first}/FlowDown-#{version.csv.first}.zip",
+  url "https://github.com/Lakr233/FlowDown/releases/download/#{version}/FlowDown.app.zip",
       verified: "github.com/Lakr233/FlowDown/"
   name "FlowDown"
   desc "AI agent"
@@ -10,15 +10,7 @@ cask "flowdown" do
 
   livecheck do
     url :url
-    regex(%r{/v?(\d+(?:\.\d+)+)/FlowDown[._-]V?(\d+(?:\.\d+)+)\.zip}i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["browser_download_url"]&.match(regex)
-        next if match.blank?
-
-        (match[2] == match[1]) ? match[1] : "#{match[2]},#{match[1]}"
-      end
-    end
+    strategy :github_latest
   end
 
   depends_on macos: ">= :sonoma"
