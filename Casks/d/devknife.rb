@@ -1,6 +1,6 @@
 cask "devknife" do
-  version "1.3.0"
-  sha256 "a9ce4a1532033155f38e40b22299820a676169a511dfa75baf046549ab5181c2"
+  version "1.3.1"
+  sha256 "8adec70b899b31263cbd13bc3913e9588aeb318b298d93a5ce53a8bcb98a97c1"
 
   url "https://files.solotuna.com/devknife/DevKnife-#{version}.dmg",
       verified: "files.solotuna.com/devknife/"
@@ -12,8 +12,6 @@ cask "devknife" do
     url "http://files.solotuna.com/devknife/appcast.xml"
     strategy :sparkle, &:short_version
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :sonoma"
