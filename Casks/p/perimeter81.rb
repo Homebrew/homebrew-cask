@@ -17,13 +17,29 @@ cask "perimeter81" do
 
   pkg "Harmony_SASE_#{version}.pkg"
 
+  postflight do
+    # Description: Ensure console variant of postinstall is non-interactive.
+    # This is because `open "$APP_PATH"&` is called from the postinstall
+    # script of the package and we don't want any user intervention there.
+    retries ||= 3
+    ohai "The package postinstall script launches the app" if retries >= 3
+    ohai "Attempting to close com.safervpn.osx.smb to avoid unwanted user intervention" if retries >= 3
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Harmony SASE.app"]
+  rescue RuntimeError
+    sleep 1
+    retry unless (retries -= 1).zero?
+    opoo "Unable to forcibly close Harmony SASE.app"
+  end
+
   uninstall launchctl: [
+              "com.harmonySASE.app",
               "com.perimeter81.osx.HelperTool",
               "com.perimeter81.Perimeter81",
               "com.perimeter81d",
               "com.perimeter81d.app",
               "system/com.perimeter81d",
             ],
+            quit:      "com.harmonySASE.app",
             signal:    ["TERM", "com.safervpn.osx.smb"],
             pkgutil:   "com.safervpn.osx.smb"
 
