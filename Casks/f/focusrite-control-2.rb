@@ -1,7 +1,7 @@
 cask "focusrite-control-2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.670.0.0"
-  sha256 "514dfdaa0256f9c64163254dc4663adce5179eb9c3d8a89dc7e56532fdfb05b3"
+  version "1.703.0.0"
+  sha256 "6249aeb5f966a36882ae3163071c58a92dd5957b4f087f803af8c77f2b57db17"
 
   url "https://releases.focusrite.com/com.focusrite.focusrite-control/release/Focusrite-Control-2-#{version}.dmg"
   name "Focusrite Control 2"
@@ -14,7 +14,7 @@ cask "focusrite-control-2" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :big_sur"
 
   app "Focusrite Control 2.app"
 
