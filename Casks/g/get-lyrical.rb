@@ -8,6 +8,7 @@ cask "get-lyrical" do
   homepage "https://shullian.com/get_lyrical.php"
 
   deprecate! date: "2024-11-01", because: :unmaintained
+  disable! date: "2025-11-01", because: :unmaintained
 
   app "Get Lyrical/Get Lyrical.app"
 

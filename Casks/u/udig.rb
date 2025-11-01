@@ -7,6 +7,7 @@ cask "udig" do
   homepage "http://udig.refractions.net/"
 
   deprecate! date: "2024-11-01", because: :unmaintained
+  disable! date: "2025-11-01", because: :unmaintained
 
   suite "udig"
 

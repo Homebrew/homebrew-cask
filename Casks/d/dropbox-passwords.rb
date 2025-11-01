@@ -9,6 +9,7 @@ cask "dropbox-passwords" do
   homepage "https://www.dropbox.com/features/security/passwords"
 
   deprecate! date: "2024-11-01", because: :discontinued
+  disable! date: "2025-11-01", because: :discontinued
 
   app "Dropbox Passwords.app"
 

@@ -7,6 +7,7 @@ cask "backlog" do
   homepage "https://github.com/czytelny/backlog"
 
   deprecate! date: "2024-10-30", because: :unmaintained
+  disable! date: "2025-11-01", because: :unmaintained
 
   app "Backlog-darwin-x64/Backlog.app"
 
