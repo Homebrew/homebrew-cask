@@ -1,11 +1,11 @@
 cask "yaak@beta" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2025.7.3"
-  sha256 arm:   "eac242180a7dce3b685911ab21fcb83d689d89a8d98cdd7c9c8da5eddf29e862",
-         intel: "4646de6bee160c8c245cdcef40666c67221c3fc416a8ebde7c19334a14eb2f27"
+  version "2025.8.0-beta.1"
+  sha256 arm:   "fc7f6733803027b8e89bb8b2aacfeb84b53f0c614e156e89d8519c238f2edad9",
+         intel: "f21d5d1a13fb2c0575073b0167bb05d176bd6bd39c2f0697c8ec7753121a8fbf"
 
-  url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
+  url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/Yaak_#{version}_#{arch}_darwin.dmg",
       verified: "github.com/mountain-loop/yaak/"
   name "Yaak Beta"
   desc "REST, GraphQL and gRPC client"
