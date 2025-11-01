@@ -1,7 +1,7 @@
 cask "browseros" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.28.0"
+  version "0.28.1"
   sha256 arm:   "298cbb10f6f12e2398f73b14fe41515c0a9d4e2e0c9b49e4056f6e1aa4230afd",
          intel: "f21eceb19941df4baa204d8c6b8804d9bc31ce47b7bc0e3eb143fb81329e970f"
 
