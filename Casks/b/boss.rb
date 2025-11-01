@@ -1,6 +1,6 @@
 cask "boss" do
-  version "8.12.33"
-  sha256 "d7628592447083ee3da6e54ca2cb698138462f1d9a5c616ef9b5e835da1eebd9"
+  version "8.12.34"
+  sha256 "8656464a3ae7ef158a18eca4af99a9d7325df6e5429471ec172ccb4781f982d6"
 
   url "https://github.com/risa-labs-inc/BOSS-Releases/releases/download/v#{version}/BOSS-#{version}-Universal.dmg",
       verified: "github.com/risa-labs-inc/BOSS-Releases/"
