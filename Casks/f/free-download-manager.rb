@@ -1,5 +1,5 @@
 cask "free-download-manager" do
-  version "6.30.2"
+  version "6.30.3"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://files2.freedownloadmanager.org/#{version.major}/latest/fdm.dmg"
