@@ -2,11 +2,11 @@ cask "claude-code" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "2.0.30"
-  sha256 arm:          "3b5ba628b06f0a9c2ea30ad3a15291f3af2527bc479107bc8050e01417bdbdad",
-         x86_64:       "b4e65ef5c76dff1f8a001a1e1a967a6a3cf49d299c5174ea7c41b029172d84ca",
-         x86_64_linux: "fc542af9a724bff690fb5098ccf89b121da258e7645ac4008797313c7134a4c3",
-         arm64_linux:  "62286c9cf4aca63620116227c3c6c079c925828ccc55e829efb6c3d4ab2d7d28"
+  version "2.0.31"
+  sha256 arm:          "c2ae01a51296e5b221208f690e3d03e272698981d8a07221d0b78b273484f099",
+         x86_64:       "a105a2885a0c16198ceedcea92477e5e2e7b79e9a0ec66ba7feb341fcdee6d83",
+         x86_64_linux: "80e29bdceeaf20b60b2a2a04afcb0b27a292c7d60fc23ee05257898f47c0ed3f",
+         arm64_linux:  "92d541544361ad9a3abf506f527acf332b68a10ba1685b1e3b690e57224b2c1a"
 
   url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/#{version}/#{os}-#{arch}/claude",
       verified: "storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/"
