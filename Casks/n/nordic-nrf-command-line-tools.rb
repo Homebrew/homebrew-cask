@@ -8,12 +8,11 @@ cask "nordic-nrf-command-line-tools" do
   desc "Command-line tools for Nordic nRF Semiconductors"
   homepage "https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Command-Line-Tools"
 
+  # The upstream download page links to the latest dmg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download
   livecheck do
-    url "https://www.nordicsemi.com/Products/Development-tools/nRF-Command-Line-Tools/Download"
-    regex(/nRF[._-]Command[._-]Line[._-]Tools[._-]v?(\d+(?:[._]\d+)+)[._-]Darwin\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].tr("_", ".") }
-    end
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
   depends_on cask: "segger-jlink"

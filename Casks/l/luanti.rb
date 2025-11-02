@@ -12,7 +12,7 @@ cask "luanti" do
   homepage "https://www.luanti.org/"
 
   livecheck do
-    url "https://www.luanti.org/downloads/"
+    url "https://www.luanti.org/en/downloads/"
     regex(/href=.*?luanti[._-]v?(\d+(?:\.\d+)+)[._-]macos(\d+(?:\.\d+)+)[._-]#{arch}\.zip/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
