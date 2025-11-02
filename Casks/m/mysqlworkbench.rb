@@ -27,15 +27,15 @@ cask "mysqlworkbench" do
     end
   end
   on_ventura :or_newer do
-    version "8.0.43"
-    sha256 arm:   "bcf35a7c147e6ec2b55ca39e527df8f250f878330abf56488a05adfe0e20b0ea",
-           intel: "38b909950feebb3094663eaf4b6964ff7002901fc6559e0c1d91f49441a41c1e"
+    version "8.0.44"
+    sha256 arm:   "973b9eb96399b05efa2a6bc7d57c2679b6a18df5199faa73b0eede42ae21adce",
+           intel: "34b49d6f72a26e89770c2efaf3f29af403ca92f4f313f1ace2aad21a12129e55"
 
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-#{arch}.dmg"
 
     livecheck do
-      url "https://dev.mysql.com/downloads/workbench/"
-      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)+)/i)
+      url "https://dev.mysql.com/downloads/workbench/?tpl=platform&os=33"
+      regex(/mysql[._-]workbench[._-]community[._-]v?(\d+(?:\.\d+)+)(?:[._-]macos)?[._-]#{arch}\.dmg/i)
     end
   end
 
