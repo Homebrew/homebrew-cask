@@ -1,16 +1,24 @@
 cask "mythic" do
-  version "0.4.5"
-  sha256 "e232fbf075c8b6558bd857b9133a6a32ee82aa0377bf94bbed68152c9b65e8a0"
+  version "0.5.0,cfbc3111-f5b3-469d-823b-393f0793c550"
+  sha256 "782a07d9d83f686c351a3867661757447480e52fd65904816760a38b7775b30e"
 
-  url "https://dl.getmythic.app/sparkle-temp/Mythic-#{version}.zip"
+  url "https://dl.getmythic.app/updates/#{version.csv.second}/Mythic.zip"
   name "Mythic"
   desc "Game launcher with the ability to run Windows games"
   homepage "https://getmythic.app/"
 
   livecheck do
     url "https://getmythic.app/appcast.xml"
-    strategy :sparkle, &:short_version
+    regex(%r{/(\h+(?:-\h+)*)/Mythic\.zip}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next item.short_version if match.blank?
+
+      "#{item.short_version},#{match[1]}"
+    end
   end
+
+  no_autobump! because: "livecheck fails in CI environment"
 
   depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
