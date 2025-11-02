@@ -8,8 +8,14 @@ cask "adobe-dng-converter" do
   homepage "https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html"
 
   livecheck do
-    url "https://helpx.adobe.com/photoshop/kb/uptodate.html"
-    regex(%r{Adobe\s+DNG\s+Converter\s+(?:is\s+)?(?:<[^>]+?>)?v?(\d+(?:\.\d+)+)(?:</[^>]+?>)?}im)
+    url "https://www.adobe.com/go/dng_converter_mac"
+    regex(/DNGConverter[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      match[1].tr("_", ".")
+    end
   end
 
   pkg "DNGConverter_#{version.dots_to_underscores}.pkg"
