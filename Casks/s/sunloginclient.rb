@@ -1,6 +1,6 @@
 cask "sunloginclient" do
   arch arm: "arm64", intel: "x86_64"
-  livecheck_id = on_arch_conditional arm: "187", intel: "89"
+  livecheck_id = on_arch_conditional arm: "_ARM"
 
   version "16.0.0.22931"
   sha256 arm:   "dcca75965c295137cfb624bb02ca397f0859f3e2de912aadd9f2688441b3f593",
@@ -13,9 +13,10 @@ cask "sunloginclient" do
   homepage "https://sunlogin.oray.com/"
 
   livecheck do
-    url "https://client-api.oray.com/softwares/#{livecheck_id}/download"
-    regex(/SunloginClient[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
-    strategy :header_match
+    url "https://client-webapi.oray.com/softwares/SUNLOGIN_X_MAC#{livecheck_id}?versiontype=stable"
+    strategy :json do |json|
+      json["versionno"]
+    end
   end
 
   pkg "SunloginClient.pkg"
