@@ -4,7 +4,7 @@ cask "freetex" do
 
   url "https://github.com/zstar1003/FreeTex/releases/download/v#{version}/FreeTex-Installer-#{version}.dmg"
   name "FreeTex"
-  desc "A free intelligent formula recognition software."
+  desc "Free intelligent formula recognition software"
   homepage "https://xdxsb.top/FreeTex"
 
   livecheck do
