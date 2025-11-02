@@ -13,7 +13,7 @@ cask "soundsource@test" do
     regex(/SoundSource[._-]v?(\h+)[._-](\d+)[._-](\d+)\.zip/i)
     strategy :sparkle do |item, regex|
       match = item.url&.match(regex)
-      next if match.blank?
+      next item.version if match.blank?
 
       "#{item.version.sub("fc", ",")},#{match[2]},#{match[3]},#{match[1]}"
     end
