@@ -1,8 +1,8 @@
 cask "insta360-studio" do
-  version "5.7.6,release_insta360,RC_build45,_20250930_010756_signed_1759201794711,f7eaccbff9853965662670108f005b91"
-  sha256 "398933be10b52754785bf2e5996ba351680e5cebd240a2a8b47c8d7e8cbba0f6"
+  version "5.8.0,release_insta360,RC_build64,_20251027_150257_signed_1761552612745,662cbed4068f3563ed28ff6c3c251a42"
+  sha256 "30c4bc37b332ebf86b7e4ec4c2a00e28ae2b82aea23da762b71759ed905d5176"
 
-  url "https://file.insta360.com/static/#{version.csv.fifth}/Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.zip"
+  url "https://file.insta360.com/static/#{version.csv.fifth}/Insta360_Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.zip"
   name "Insta360 Studio"
   desc "Video and photo editor"
   homepage "https://www.insta360.com/"
@@ -15,7 +15,7 @@ cask "insta360-studio" do
   # that may be beta, RC, etc.
   livecheck do
     url "https://openapi.insta360.com/app/appDownload/getGroupApp?group=insta360-go2&X-Language=en-us"
-    regex(%r{/(\h+)/Insta360(?:%20)?Studio(?:[._-]|%20)v?(\d+(?:\.\d+)+)[._-](.+)\.(?:pkg|zip)}i)
+    regex(%r{/(\h+)/Insta360(?:[._-]|%20)?Studio(?:[._-]|%20)v?(\d+(?:\.\d+)+)[._-](.+)\.(?:pkg|zip)}i)
     strategy :json do |json, regex|
       # Find the Insta360 Studio app
       app = json.dig("data", "apps")&.find { |item| item["app_id"] == 38 }
@@ -38,9 +38,9 @@ cask "insta360-studio" do
   end
 
   # The pkg is often inconsistently named comparatively to the url version
-  rename "Insta360Studio*.pkg", "Insta360Studio.pkg"
+  rename "Insta360_Studio*.pkg", "Insta360_Studio.pkg"
 
-  pkg "Insta360Studio.pkg"
+  pkg "Insta360_Studio.pkg"
 
   uninstall quit:    "com.insta360.studio",
             pkgutil: [
