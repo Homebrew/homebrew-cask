@@ -8,6 +8,9 @@ cask "flowdown" do
   desc "AI agent"
   homepage "https://flowdown.ai/"
 
+  # Upstream sometimes creates GitHub releases for versions that are unstable
+  # without marking them as "pre-release", so it's necessary to check multiple
+  # releases to find the newest stable version until this is resolved.
   livecheck do
     url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
