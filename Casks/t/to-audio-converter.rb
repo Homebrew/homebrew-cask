@@ -1,5 +1,5 @@
 cask "to-audio-converter" do
-  version "2.0.1,1346"
+  version "2.0.2,1351"
   sha256 :no_check
 
   url "https://amvidia.com/downloads/to-audio-converter-mac.dmg"
