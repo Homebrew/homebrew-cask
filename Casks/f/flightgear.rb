@@ -1,6 +1,6 @@
 cask "flightgear" do
-  version "2024.1.2"
-  sha256 "3d5ee48e2d30be999e4c65e3aaeb7f1e28aef3de842625c170a261cfb830d131"
+  version "2024.1.3"
+  sha256 "48367db60f8e878ae4a3a94c62577445133974cc816be51558340b8e0a2b6aa6"
 
   url "https://mirrors.ibiblio.org/flightgear/ftp/release-#{version.major_minor}/flightgear-#{version}-macos-universal.dmg",
       verified: "mirrors.ibiblio.org/flightgear/"
