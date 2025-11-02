@@ -1,9 +1,9 @@
 cask "deskreen" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.5"
-  sha256 arm:   "d56f6fafc4795943530811f9bd6bb4139061b007004422d5ee11209a83da2ce8",
-         intel: "8ea303fcca771bbbca8c64c3504931330e6d72b9817908a100e390d6366a00b9"
+  version "3.0.8"
+  sha256 arm:   "84d99f524cd98fa751231cd0295ea7e55b27c826ff049ff317d2203fa1abfe1d",
+         intel: "b7b8c804e90bcda8a508b23640ec2ae5e5e055675933777258530bca50b07c21"
 
   url "https://github.com/pavlobu/deskreen/releases/download/v#{version}/Deskreen-ce-#{version}-#{arch}.dmg",
       verified: "github.com/pavlobu/deskreen/"
