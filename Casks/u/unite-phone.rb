@@ -1,6 +1,6 @@
 cask "unite-phone" do
-  version "2025.9.2"
-  sha256 "b79fc7a2977b72b69c8b238740c4d5c81073d0a94fcd3cb36b26d5d50e794b26"
+  version "2025.10.7"
+  sha256 "09ca6ee8263baf87e137e8129caf79e7e4496904c08c3e550f4ac795c2223b34"
 
   url "https://update.unitephone.nl/updates/unite_phone-#{version}-universal-mac.zip",
       user_agent: :fake
@@ -12,6 +12,8 @@ cask "unite-phone" do
     url "https://update.unitephone.nl/updates/latest-mac.yml"
     strategy :electron_builder
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :big_sur"
 
