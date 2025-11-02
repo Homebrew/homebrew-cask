@@ -1,6 +1,6 @@
 cask "libcblite" do
-  version "3.2.4"
-  sha256 "86b417b4ed16d9930e8b2603f543e05b5233d8e7ab0c0020a76257f0b7db3f31"
+  version "4.0.0"
+  sha256 "a2ca75240c482f312594bdcea07e2b3dd46fc794733af073714cf849c0b5701f"
 
   url "https://packages.couchbase.com/releases/couchbase-lite-c/#{version}/couchbase-lite-c-enterprise-#{version}-macos.zip"
   name "Couchbase Lite (Enterprise Edition)"
@@ -8,7 +8,7 @@ cask "libcblite" do
   homepage "https://www.couchbase.com/products/lite"
 
   livecheck do
-    url "https://docs.couchbase.com/couchbase-lite/current/c/gs-install.html"
+    url "https://docs.couchbase.com/couchbase-lite/current/c/gs-downloads.html"
     regex(/href=.*?couchbase[._-]lite[._-]c[._-]enterprise[._-]v?(\d+(?:\.\d+)+)[._-]macos\.zip/i)
   end
 
