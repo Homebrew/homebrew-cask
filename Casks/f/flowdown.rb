@@ -10,7 +10,8 @@ cask "flowdown" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases
   end
 
   depends_on macos: ">= :sonoma"
