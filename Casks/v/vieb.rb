@@ -1,9 +1,9 @@
 cask "vieb" do
   arch arm: "arm64-"
 
-  version "12.5.0"
-  sha256 arm:   "87e3702f059e6f2272b59d693da3e3265a912a47a3d1887d0791c6d25690701d",
-         intel: "8a2f3085ff68a691b284f25973af1893078bad02ab38b8389f599ad0fa90a322"
+  version "12.6.0"
+  sha256 arm:   "fd06688ba5e6f724a6a4fd6d5b3f55b93aada20755e84c8764acf0809771a4cc",
+         intel: "3f0a658ef47c8a10ab0a186f182291c004caf4652551848b6af112560ae50b15"
 
   url "https://github.com/Jelmerro/Vieb/releases/download/#{version}/Vieb-#{version}-#{arch}mac.zip",
       verified: "github.com/Jelmerro/Vieb/"
