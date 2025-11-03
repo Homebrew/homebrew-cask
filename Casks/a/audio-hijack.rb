@@ -26,4 +26,10 @@ cask "audio-hijack" do
     "~/Library/Preferences/com.rogueamoeba.audiohijack.plist",
     "~/Library/WebKit/com.rogueamoeba.audiohijack",
   ]
+
+  caveats <<~EOS
+    Audio Hijack #{version} requires macOS 14.4 or higher.
+    Older versions of macOS will download a compatible version after opening the app.
+    See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=Audio+Hijack for more details.
+  EOS
 end
