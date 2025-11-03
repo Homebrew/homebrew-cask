@@ -13,12 +13,9 @@ cask "sentinel" do
   desc "Language and framework for policy as code"
   homepage "https://docs.hashicorp.com/sentinel"
 
-  # The upstream download page links to the latest dmg files but the website
-  # has Vercel challenge mode enabled and this prevents us from fetching it,
-  # so it must be checked manually:
-  # https://developer.hashicorp.com/sentinel/install
   livecheck do
-    skip "Cannot be fetched due to Vercel challenge"
+    url "https://releases.hashicorp.com/sentinel/"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/}i)
   end
 
   binary "sentinel"
