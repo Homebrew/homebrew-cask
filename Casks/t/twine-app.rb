@@ -1,12 +1,14 @@
 cask "twine-app" do
-  version "2.10.0"
-  sha256 "91ab5271f094639727eab057ef41347866ecec1d3cf71bcfe7608bf4886bb2e6"
+  version "2.11.0"
+  sha256 "bcc405c2bac0f921d0603462f7ce6f714b07f9fad5feec672b1d7a4228fb83b5"
 
   url "https://github.com/klembot/twinejs/releases/download/#{version}/Twine-#{version}-macOS.dmg",
       verified: "github.com/klembot/twinejs/"
   name "Twine"
   desc "Tool for telling interactive, nonlinear stories"
   homepage "https://twinery.org/"
+
+  depends_on macos: ">= :monterey"
 
   app "Twine.app"
 
