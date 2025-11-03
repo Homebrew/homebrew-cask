@@ -22,14 +22,14 @@ cask "logi-options+" do
     end
   end
   on_monterey :or_newer do
-    version "1.93.755983"
+    version "1.97.791262"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
         verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
 
     livecheck do
-      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus3/osx/public/update.json"
+      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus4/osx/public/update.json"
       strategy :json do |json|
         json["version"]
       end
@@ -57,6 +57,7 @@ cask "logi-options+" do
               "com.logi.optionsplus",
               "com.logi.optionsplus.updater",
               "com.logitech.LogiRightSight",
+              "com.logitech.LogiRightSight.Agent",
             ],
             quit:      [
               "com.logi.cp-dev-mgr",
