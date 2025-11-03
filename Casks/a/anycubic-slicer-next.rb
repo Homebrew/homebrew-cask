@@ -11,12 +11,23 @@ cask "anycubic-slicer-next" do
 
   name "Anycubic Slicer Next"
   desc "Slicer for Anycubic 3D printers"
-  homepage "https://www.anycubic.com/"
+  homepage "https://www.anycubic.com/pages/anycubic-slicer"
 
   livecheck do
     url "https://wiki.anycubic.com/en/software-and-app/new-page-anycubic-slicer-beta(orca-version)/anycubic-slicer-next-(orca-version)-update-record"
     strategy :page_match do |page|
-      page.scan(/V(\d+(?:\.\d+)+)/i).flatten.first
+      latest_version_block = page.match(%r{<h3 class="toc-header"[^>]*>.*?V?(\d+(?:\.\d+)+)</h3>.*?<ul>(.*?)</ul>}m)
+      next if latest_version_block.blank?
+
+      version = latest_version_block.captures[0]
+      links_html = latest_version_block.captures[1]
+
+      arm_url_match = links_html.match(/href="([^"]*?arm64\.dmg)"/)
+      intel_url_match = links_html.match(/href="([^"]*?x86_64\.dmg)"/)
+
+      next if arm_url_match.blank? || intel_url_match.blank?
+
+      version
     end
   end
 
