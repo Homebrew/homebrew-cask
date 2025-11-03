@@ -2,14 +2,10 @@ cask "fellou" do
   version "2.5.16"
   sha256 :no_check
 
-  on_arm do
-    url "https://fellou.s3.us-west-1.amazonaws.com/FellouPC/Fellou-CE-1.0.16-2.5.16-2025-10-31-1859-arm64.dmg",
-        verified: "fellou.s3.us-west-1.amazonaws.com/FellouPC/"
-  end
-  on_intel do
-    url "https://fellou.s3.us-west-1.amazonaws.com/FellouPC/Fellou-CE-1.0.16-2.5.16-2025-10-31-1859-x64.dmg",
-        verified: "fellou.s3.us-west-1.amazonaws.com/FellouPC/"
-  end
+  arch arm: "arm64", intel: "x64"
+
+  url "https://fellou.s3.us-west-1.amazonaws.com/FellouPC/Fellou-CE-1.0.16-#{version}-2025-10-31-1859-#{arch}.dmg",
+      verified: "fellou.s3.us-west-1.amazonaws.com/FellouPC/"
 
   name "Fellou"
   desc "AI-native meeting co-pilot"
