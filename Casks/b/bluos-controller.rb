@@ -1,6 +1,6 @@
 cask "bluos-controller" do
-  version "4.12.0"
-  sha256 "981ece99093fc9c6c61d44c577b8c2b8e5de8e5bcec3f4fda9cf106f80175b0e"
+  version "4.12.1"
+  sha256 "362f4515e713150dde2eaf5830ba62161428f7b724610bfab845f743fbf52c4e"
 
   url "https://content-bluesound-com.s3.amazonaws.com/uploads/BluOS-Controller-#{version}-MacOS.zip",
       verified: "content-bluesound-com.s3.amazonaws.com/uploads/"
