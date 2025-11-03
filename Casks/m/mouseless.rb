@@ -1,6 +1,6 @@
 cask "mouseless" do
-  version "0.4.2"
-  sha256 "5e98fb5ff4e138104605ab4ce23884c1175f5db8f1733b5efeab2551b0f69681"
+  version "0.4.3"
+  sha256 "732aaff73f167971678f5fc7a752c7e7ae8ac1b45012a5dec0932af84ce5c149"
 
   url "https://github.com/croian/mouseless/releases/download/v#{version}/mouseless-installer_v#{version}.dmg",
       verified: "github.com/croian/mouseless/"
