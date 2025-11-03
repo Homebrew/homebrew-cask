@@ -1,9 +1,9 @@
 cask "hbuilderx" do
   arch arm: ".arm64"
 
-  version "4.76.2025082103"
-  sha256 arm:   "2f7e398e0c3b1d80afdbdc33b4eb00077db40301fa0de45afd7624612544f463",
-         intel: "e977e1a7c554c8575e7e765c944dedc28c760fd931f47f941dc9e4389e480fb8"
+  version "4.84.2025110307"
+  sha256 arm:   "345531f87732bb46b0f2e44064f8165fde94a896a08cbc1ae5b96fd6a0e09903",
+         intel: "d87b17b0693f185e6b6a7ee226e0ccce78eff096d53107a12ee4bbb238b154ad"
 
   url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}#{arch}.dmg",
       verified: "download1.dcloud.net.cn/download/"
@@ -17,6 +17,8 @@ cask "hbuilderx" do
       json["version"]
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "HBuilderX.app"
 
