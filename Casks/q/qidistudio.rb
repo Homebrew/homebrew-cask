@@ -9,7 +9,7 @@ cask "qidistudio" do
   homepage "https://us.qidi3d.com/pages/qidi-studio"
 
   livecheck do
-    url "https://github.com/QIDITECH/QIDIStudio/releases"
+    url :url
     strategy :github_latest
   end
 
