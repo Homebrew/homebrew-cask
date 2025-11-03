@@ -30,7 +30,7 @@ cask "simplysign" do
             delete:    [
               "/Applications/proCertumSmartSign.app",
               "/usr/local/lib/libSimplySignPKCS.dylib",
-              "/usr/local/lib/SimplySignPKCS", # Alphabetized
+              "/usr/local/lib/SimplySignPKCS",
             ]
 
   zap trash: [
