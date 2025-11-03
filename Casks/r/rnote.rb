@@ -12,7 +12,11 @@ cask "rnote" do
   homepage "https://rnote.flxzt.net/"
 
   livecheck do
-    url "https://gitlab.com/dehesselle/rnote_macos.git"
+    url "https://gitlab.com/api/v4/projects/44053427/releases"
+    regex(/^v?(\d+(?:\.\d+)+(?:\+\d+)?)$/i)
+    strategy :json do |json, regex|
+      json.filter_map { |item| item["tag_name"]&.[](regex, 1) }
+    end
   end
 
   app "Rnote.app"
