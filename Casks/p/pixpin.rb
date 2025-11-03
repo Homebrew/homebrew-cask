@@ -1,8 +1,8 @@
 cask "pixpin" do
-  version "2.0.0.3"
-  sha256 "34ddea7296dfb9ef6f71ec8203337948da12b1f112313fdb2c84b212be2485bd"
+  version "2.1.8.1"
+  sha256 "c933be267b30027603bf32e3de205ce0428711ac086fda19d48abd76a4bcd85f"
 
-  url "https://download.pixpin.cn/PixPin_#{version}_uni.dmg"
+  url "https://download.pixpin.cn/PixPin_cn_zh-cn_#{version}_uni.dmg"
   name "PixPin"
   desc "Screenshot tool"
   homepage "https://pixpin.cn/"
