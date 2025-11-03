@@ -7,10 +7,7 @@ cask "valentina-studio" do
   desc "Visual editors for data"
   homepage "https://valentina-db.com/en/valentina-studio-overview"
 
-  livecheck do
-    url "https://valentina-db.com/en/all-downloads/vstudio"
-    regex(%r{href=['"]?/en/all-downloads/vstudio/current['"]?>\s*(\d+(?:\.\d+)+)}i)
-  end
+  disable! date: "2025-11-02", because: :unreachable
 
   depends_on macos: ">= :monterey"
 
