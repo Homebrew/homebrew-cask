@@ -5,6 +5,13 @@ cask "rnote" do
   sha256 arm:   "c229895f1e844ce8e81e5fd7e34fbc3c9404cefe136cb66b9ca7601b86c098d7",
          intel: "75aa6d6df454e237db79b9f3d97baa923ab016f298141b01bea9468524bf9288"
 
+  on_arm do
+    depends_on macos: ">= :big_sur"
+  end
+  on_intel do
+    depends_on macos: ">= :catalina"
+  end
+
   url "https://gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/#{version}/Rnote-#{version}_#{arch}.dmg",
       verified: "gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/"
   name "Rnote"
@@ -12,7 +19,11 @@ cask "rnote" do
   homepage "https://rnote.flxzt.net/"
 
   livecheck do
-    url "https://gitlab.com/dehesselle/rnote_macos.git"
+    url "https://gitlab.com/api/v4/projects/44053427/releases"
+    regex(/^v?(\d+(?:\.\d+)+(?:\+\d+)?)$/i)
+    strategy :json do |json, regex|
+      json.filter_map { |item| item["tag_name"]&.[](regex, 1) }
+    end
   end
 
   app "Rnote.app"
