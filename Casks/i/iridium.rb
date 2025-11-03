@@ -8,6 +8,7 @@ cask "iridium" do
   homepage "https://iridiumbrowser.de/"
 
   deprecate! date: "2024-11-03", because: :discontinued
+  disable! date: "2025-11-03", because: :discontinued
 
   app "Iridium.app"
 
