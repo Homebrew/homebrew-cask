@@ -1,9 +1,9 @@
 cask "rnote" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.12.0+199"
-  sha256 arm:   "c229895f1e844ce8e81e5fd7e34fbc3c9404cefe136cb66b9ca7601b86c098d7",
-         intel: "75aa6d6df454e237db79b9f3d97baa923ab016f298141b01bea9468524bf9288"
+  version "0.13.1+209"
+  sha256 arm:   "c2572fa727cfa0a79e7f6dad2143fe75de44b7aa10d5da2732ad5ff0a8df3dc8",
+         intel: "67b26115f267dba7dc4980c7dd4e63d9270e15efcfb50f6d43d8633a0369a5a1"
 
   on_arm do
     depends_on macos: ">= :big_sur"
