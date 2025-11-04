@@ -1,5 +1,5 @@
 cask "expandrive" do
-  version "2025.10.31.775"
+  version "2025.10.31.778"
   sha256 "39e88b5a39c92ab7eb627567f11c8b0bf3a787e4c4699a3c115c88a910ebd9b8"
 
   url "https://corp.hosted-by-files.com/builds/ExpanDrive/#{version}/mac/ExpanDrive_#{version.major_minor_patch}.dmg",
