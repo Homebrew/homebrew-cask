@@ -25,6 +25,8 @@ cask "onlyoffice" do
 
   zap trash: [
     "~/Library/Application Support/asc.onlyoffice.ONLYOFFICE",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/asc.onlyoffice.onlyoffice.sfl*",
+    "~/Library/HTTPStorages/asc.onlyoffice.ONLYOFFICE",
     "~/Library/Preferences/asc.onlyoffice.editors-helper-renderer.plist",
     "~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist",
   ]
