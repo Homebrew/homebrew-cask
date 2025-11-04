@@ -1,9 +1,9 @@
 cask "actual" do
   arch arm: "arm64", intel: "x64"
 
-  version "25.10.0"
-  sha256 arm:   "a305e9e9c9e7349e8cc3b4710506e397755a8b90922ab55095badc01db0e9143",
-         intel: "6fe502b5d2c3d46c1bf76bcfbae19cf3d9168e93cf14632774175d032dccea80"
+  version "25.11.0"
+  sha256 arm:   "6f370c09728038297a88efc1629b745b17a53e77c2c1b79cb61607ce29d4d1ad",
+         intel: "7dab3f6efce9167bcff026a0d0e9ea29422dbdc8ce99060ac65d36e23b0dd9bd"
 
   url "https://github.com/actualbudget/actual/releases/download/v#{version}/Actual-mac-#{arch}.dmg",
       verified: "github.com/actualbudget/actual/"
