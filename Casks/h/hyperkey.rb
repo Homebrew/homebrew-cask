@@ -1,6 +1,6 @@
 cask "hyperkey" do
-  version "1.54"
-  sha256 "e04dd07510bcb1434db27bc5dfc52cfa872c67a225e8c2d61d505868d9d0538a"
+  version "1.55"
+  sha256 "833118e98b08c8b753728bc8200936d3be483afee0b5482d586d35ef014776b6"
 
   url "https://hyperkey.app/downloads/Hyperkey#{version}.dmg"
   name "Hyperkey"
