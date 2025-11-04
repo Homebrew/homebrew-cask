@@ -21,7 +21,18 @@ cask "logi-options+" do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
+  on_monterey do
+    version "1.93.755983"
+    sha256 "297ead81044da4876fe6b1830f39b38769d5f1bca8b7dae8c1768ea42909f482"
+
+    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip",
+        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_ventura :or_newer do
     version "1.97.791262"
     sha256 :no_check
 
