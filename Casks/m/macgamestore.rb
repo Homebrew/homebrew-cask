@@ -1,6 +1,6 @@
 cask "macgamestore" do
-  version "5.5.9,7029"
-  sha256 "3524d3cd76aa7c916ec9b2de6704fd78b00a73930ed2308833a71f314935d600"
+  version "5.6.0,7032"
+  sha256 "1ab8f9e9ea537eeafc70f0dd535d56fb2cc4d58394a9b7567efb6348bfbce11b"
 
   url "https://www.macgamestore.com/api_clientapp/clientupdates/public/core#{version.csv.second[0]}/MacGameStore_#{version.csv.first}_#{version.csv.second}.zip"
   name "MacGameStore"
