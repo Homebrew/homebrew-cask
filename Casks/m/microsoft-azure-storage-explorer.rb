@@ -16,7 +16,7 @@ cask "microsoft-azure-storage-explorer" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Microsoft Azure Storage Explorer.app"
 
