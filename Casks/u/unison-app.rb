@@ -1,9 +1,9 @@
 cask "unison-app" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "arm64", intel: "x86-64"
 
-  version "2.53.7"
-  sha256 arm:   "3dbb8257209ede50989a4442e863ad7b801a9a1ae04903dbb64c2d9b4a7be9e0",
-         intel: "a64996878c94c8432cf1ef898cae389b8f75c3846834af95cb21dd399854a654"
+  version "2.53.8"
+  sha256 arm:   "9ffaa166aff2bf7357d365a67dbd941a71534d5a7e65493920ebb1a804f38c89",
+         intel: "4f3d8d5c2098df220b3e45bd84c9842ebf7139a595243c9533ab953cff0e95d7"
 
   url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}-macos-#{arch}.app.tar.gz"
   name "Unison"
@@ -22,6 +22,8 @@ cask "unison-app" do
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Unison.app"
   binary "#{appdir}/Unison.app/Contents/MacOS/cltool", target: "unison"
