@@ -1,5 +1,5 @@
 cask "roboform" do
-  version "9.8.1"
+  version "9.8.2"
   sha256 :no_check
 
   url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
