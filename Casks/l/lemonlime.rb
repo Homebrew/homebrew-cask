@@ -1,11 +1,11 @@
 cask "lemonlime" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.3.5"
-  sha256 arm:   "ba44fd655b53a2827034e2ddefb60648adbe0cfe390a8163552140e74a2656b5",
-         intel: "500103bc88198b7ad875069d8030d30c5c677cd773196c237f2dc068cc6db038"
+  version "0.3.6"
+  sha256 arm:   "2d064df6c68de9b5dfd5a5fa56d21da94c631e294c3264ca1c21c4bf40a7fd04",
+         intel: "10465401db07944e154201c6125f5098dc6e8db8700c5cc74f27ad7ba29f90e7"
 
-  url "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/#{version}/lemon-Qt6.7.2-Release-#{arch}.dmg"
+  url "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/#{version}/lemon-Qt6.9.3-Release-#{arch}.dmg"
   name "lemonlime"
   desc "Tiny judging environment for OI contest based on Lemon + LemonPlus"
   homepage "https://github.com/Project-LemonLime/Project_LemonLime"
