@@ -1,6 +1,6 @@
 cask "twingate" do
-  version "2025.227.17625"
-  sha256 "f41f66a12c436d7b739eccf03638d9f7ae931b75b4fa7dcc495f46f177882fda"
+  version "2025.288.20108"
+  sha256 "22b5143a3eba41c5494c4ddd962aedd9591b4fe22b87124b6bcd94c3136b368d"
 
   url "https://binaries.twingate.com/client/macos/#{version}/Twingate.pkg"
   name "Twingate"
