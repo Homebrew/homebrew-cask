@@ -7,10 +7,7 @@ cask "flow-desktop" do
   desc "Task and project management software"
   homepage "https://www.getflow.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2025-11-05", because: :unreachable
 
   app "Flow.app"
 
