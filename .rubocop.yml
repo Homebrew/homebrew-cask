@@ -1,8 +1,7 @@
 # This file is synced from `Homebrew/brew` by the `.github` repository, do not modify it directly.
 ---
 AllCops:
-  ParserEngine: parser_prism
-  TargetRubyVersion: 3.3
+  TargetRubyVersion: 3.4
   NewCops: enable
   Include:
   - "**/*.rbi"
@@ -178,6 +177,8 @@ Style/InvertibleUnlessCondition:
     :==: :!=
     :zero?:
     :blank?: :present?
+Style/ItBlockParameter:
+  Enabled: false
 Style/MutableConstant:
   EnforcedStyle: strict
 Style/NumericLiteralPrefix:
@@ -192,8 +193,6 @@ Style/OptionalBooleanParameter:
   AllowedMethods:
   - respond_to?
   - respond_to_missing?
-Style/RedundantLineContinuation:
-  Enabled: false
 Style/RescueStandardError:
   EnforcedStyle: implicit
 Style/ReturnNil:
