@@ -1,11 +1,11 @@
-cask "ledger-live" do
-  version "2.131.1"
-  sha256 "41b8a5d85196a6aee871cf3ab97d49b42d4a4151c760338d85b8164f4b3e9a38"
+cask "ledger-wallet" do
+  version "2.132.0"
+  sha256 "af3442f8bac7a428ca3729508d53256386e0bec065518b42038387ca0a33e911"
 
   url "https://download.live.ledger.com/ledger-live-desktop-#{version}-mac.dmg"
-  name "Ledger Live"
+  name "Ledger Wallet"
   desc "Wallet desktop application to maintain multiple cryptocurrencies"
-  homepage "https://www.ledger.com/ledger-live"
+  homepage "https://shop.ledger.com/pages/ledger-wallet"
 
   livecheck do
     url "https://download.live.ledger.com/latest-mac.yml"
@@ -15,7 +15,7 @@ cask "ledger-live" do
   auto_updates true
   depends_on macos: ">= :monterey"
 
-  app "Ledger Live.app"
+  app "Ledger Wallet.app"
 
   uninstall quit: [
     "com.ledger.live",
@@ -23,7 +23,7 @@ cask "ledger-live" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/Ledger Live",
+    "~/Library/Application Support/Ledger Wallet",
     "~/Library/Preferences/com.ledger.live.plist",
     "~/Library/Saved Application State/com.ledger.live.savedState",
   ]
