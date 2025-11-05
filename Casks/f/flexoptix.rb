@@ -2,9 +2,9 @@ cask "flexoptix" do
   arch arm: "arm64", intel: "x64"
   arch_suffix = on_arch_conditional arm: "-arm64"
 
-  version "5.53.0-latest"
-  sha256 arm:   "41c9475c030753a11b6cb1e4a2cb9578bb7a6d655b60f0bd495a89a271b3d9c1",
-         intel: "1cf0c5333a3d8301fc7641f8cb634323983ff24b27f5beb22f294249b4d81ebb"
+  version "5.54.0-latest"
+  sha256 arm:   "3d5a8b189c11be695b4434f30fd462692c36287527c9145b7b0ca9205d5cb007",
+         intel: "85d9ebdabe5650c67ad01f4d8ee714a674afe55ea03b99421278a45429b221d6"
 
   url "https://flexbox.reconfigure.me/download/electron/mac/#{arch}/FLEXOPTIX%20App-#{version}#{arch_suffix}.dmg",
       verified: "flexbox.reconfigure.me/download/electron/mac/"
