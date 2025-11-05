@@ -1,7 +1,7 @@
 cask "whatsapp" do
   version "2.25.33.18"
-  sha256 :no_check
-  
+  sha256 "5f64c3f3de73fb195487ab3059995cfbe9f57edbeed98bd2b2eccf5776b5b615"
+
   url "https://web.whatsapp.com/desktop/mac_native/release/?version=#{version}&extension=zip&configuration=Release&branch=master&is_buck=true"
   name "WhatsApp"
   desc "Native desktop client for WhatsApp"
