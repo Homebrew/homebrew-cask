@@ -7,11 +7,6 @@ cask "freepdf" do
   desc "Reader that supports translating PDF documents"
   homepage "https://github.com/zstar1003/FreePDF"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :big_sur"
 
   app "FreePDF.app"
