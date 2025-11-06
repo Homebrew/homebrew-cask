@@ -1,6 +1,6 @@
 cask "bartender" do
-  version "6.1.2"
-  sha256 "af017103d5a4fba4de67e11505c1880baad0b85981608c8d608b980d24edb5d9"
+  version "6.1.3"
+  sha256 "66c98a6b522d04b41738f2f9ea7a3580f45c03b3225b1705e58862f194855611"
 
   url "https://www.macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.dmg"
   name "Bartender"
