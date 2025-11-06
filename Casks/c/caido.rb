@@ -18,7 +18,7 @@ cask "caido" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Caido.app"
   binary "#{appdir}/Caido.app/Contents/Resources/bin/caido-cli"
