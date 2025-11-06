@@ -37,7 +37,6 @@ cask "microsoft-excel" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_Excel_#{version}_Installer.pkg",
       choices: [

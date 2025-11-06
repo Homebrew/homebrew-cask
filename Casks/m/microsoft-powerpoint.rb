@@ -37,7 +37,6 @@ cask "microsoft-powerpoint" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_PowerPoint_#{version}_Installer.pkg",
       choices: [

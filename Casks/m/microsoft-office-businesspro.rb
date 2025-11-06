@@ -25,7 +25,6 @@ cask "microsoft-office-businesspro" do
     microsoft-word
     onedrive
   ]
-  depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :monterey"
 
   pkg "Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg",

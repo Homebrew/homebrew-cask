@@ -39,7 +39,6 @@ cask "microsoft-outlook" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_Outlook_#{version}_Installer.pkg",
       choices: [

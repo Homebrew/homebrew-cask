@@ -20,7 +20,6 @@ cask "intune-company-portal" do
   end
 
   auto_updates true
-  depends_on cask: "microsoft-auto-update"
 
   pkg "CompanyPortal_#{version}-Upgrade.pkg",
       choices: [
