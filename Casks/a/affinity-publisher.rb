@@ -8,10 +8,7 @@ cask "affinity-publisher" do
   desc "Professional desktop publishing software"
   homepage "https://affinity.serif.com/en-us/publisher/"
 
-  livecheck do
-    url "https://go.seriflabs.com/affinity-update-mac-retail-publisher#{version.csv.first.major}"
-    strategy :sparkle
-  end
+  deprecate! date: "2025-10-30", because: :discontinued
 
   auto_updates true
 
