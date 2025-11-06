@@ -37,7 +37,6 @@ cask "microsoft-word" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_Word_#{version}_Installer.pkg",
       choices: [

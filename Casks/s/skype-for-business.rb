@@ -10,7 +10,6 @@ cask "skype-for-business" do
   deprecate! date: "2025-05-05", because: :discontinued
 
   auto_updates true
-  depends_on cask: "microsoft-auto-update"
 
   pkg "SkypeForBusinessInstaller-#{version}.pkg",
       choices: [
