@@ -1,6 +1,6 @@
 cask "replicator" do
-  version "8.4.0"
-  sha256 "37124593b3dd29c9385a6bedb111dc0ccb49e3a56c00504ede547c5530d48271"
+  version "8.4.1"
+  sha256 "51a665b26aa695cd49077b7c75d34916e9514e9804dd01a198c0951e9c110072"
 
   url "https://github.com/jamf/Replicator/releases/download/v#{version}/Replicator.zip"
   name "Replicator"
@@ -11,8 +11,6 @@ cask "replicator" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :ventura"
 
