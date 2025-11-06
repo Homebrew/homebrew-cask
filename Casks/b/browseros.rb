@@ -1,11 +1,11 @@
 cask "browseros" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.28.1"
-  sha256 arm:   "298cbb10f6f12e2398f73b14fe41515c0a9d4e2e0c9b49e4056f6e1aa4230afd",
-         intel: "f21eceb19941df4baa204d8c6b8804d9bc31ce47b7bc0e3eb143fb81329e970f"
+  version "0.29.0"
+  sha256 arm:   "c4015f1b584f5a939d54079060243a5a4a0efcba87ac2769ebecd9fb80ca1aaa",
+         intel: "2bdaa7ab9f7f93068bf8e8f0de6cc1fba9ace02a0f127e9180c700bc7550c815"
 
-  url "https://github.com/browseros-ai/BrowserOS/releases/download/v#{version}/BrowserOS_v#{version}_#{arch}.dmg",
+  url "https://github.com/browseros-ai/BrowserOS/releases/download/#{version}/BrowserOS_v#{version}_#{arch}.dmg",
       verified: "github.com/browseros-ai/BrowserOS/"
   name "BrowserOS"
   desc "Open-source agentic browser"
