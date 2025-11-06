@@ -5,6 +5,10 @@ cask "ricochet-refresh" do
   sha256 arm:   "030c31c5cb19b87404bec50e3cb265d96b8b604f71233f73e5d0bb7157b4ad34",
          intel: "f0223feb08351792e9f4ccf779dfca0c58dc065cc46ae9623b424d0aea180f87"
 
+  on_arm do
+    depends_on macos: ">= :big_sur"
+  end
+
   url "https://github.com/blueprint-freespeech/ricochet-refresh/releases/download/v#{version}-release/ricochet-refresh-#{version}-macos-#{arch}.dmg",
       verified: "github.com/blueprint-freespeech/ricochet-refresh/"
   name "Ricochet Refresh"
