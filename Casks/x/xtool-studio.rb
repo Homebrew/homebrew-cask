@@ -18,7 +18,7 @@ cask "xtool-studio" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/([^/]+)/([^/]+)/xTool[._-]Studio(?:[._-]#{arch})?[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{/([^/\\]+)\\?/([^/\\]+)\\?/xTool[._-]Studio(?:[._-]#{arch})?[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
