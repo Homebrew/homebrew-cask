@@ -1,6 +1,6 @@
 cask "mediainfo" do
-  version "25.09"
-  sha256 "f016b2bb23b4b13c9028d1f0da9220963a4be8050a2d489ccfe503ec3346c060"
+  version "25.10"
+  sha256 "e486f52d4a5a33b131842c21d9e191b53a438f94f5efcefd3e334efe7e4393fe"
 
   url "https://mediaarea.net/download/binary/mediainfo-gui/#{version}/MediaInfo_GUI_#{version}_Mac.dmg"
   name "MediaInfo"
