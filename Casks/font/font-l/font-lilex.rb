@@ -1,6 +1,6 @@
 cask "font-lilex" do
-  version "2.620"
-  sha256 "8765edd4720e961e30c072b76e0e61c725b18bf5bc19632246469617b7e19e05"
+  version "2.621"
+  sha256 "4ec2c9f7a499a68916df7e78ff2b7445ee19b455ea60aff8ea2c995dd3ca8681"
 
   url "https://github.com/mishamyrt/Lilex/releases/download/#{version}/Lilex.zip"
   name "Lilex"
