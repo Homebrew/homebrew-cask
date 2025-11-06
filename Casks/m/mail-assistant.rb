@@ -1,5 +1,5 @@
 cask "mail-assistant" do
-  version "0.4"
+  version "0.5"
   sha256 :no_check
 
   url "https://s3-us-west-2.amazonaws.com/downloads.agiletortoise.com/Mail+Assistant.app.zip",
