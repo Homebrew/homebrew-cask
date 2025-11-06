@@ -1,9 +1,9 @@
 cask "sculptor" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.26"
-  sha256 arm:   "4894a2cb21097cbdc2dff98b663a9881024d4e55830ee0870d4802bec1751518",
-         intel: "2e029c8480dee36d0843bb62126fdff9addb886a8a5cfb70ea4cb72e34964bd8"
+  version "0.2.27"
+  sha256 arm:   "d816556a270006846e46e043b7246ef77777ba96a2490b6882bc27ecdbf0663e",
+         intel: "a8965c12e080ebd2f9f632b0bcf2a2c51479ae73abfd26b2a0ac8b1f4f6437bb"
 
   url "https://imbue-sculptor-releases.s3.us-west-2.amazonaws.com/sculptor/zip/darwin/#{arch}/Sculptor-darwin-#{arch}-#{version}.zip",
       verified: "imbue-sculptor-releases.s3.us-west-2.amazonaws.com/"
