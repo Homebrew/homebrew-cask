@@ -2,9 +2,9 @@ cask "muteme" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "_arm64", intel: "_64"
 
-  version "0.25.7"
-  sha256 arm:   "c36b6ca0db49047d41a22866a996a033a3874bb03d5722c3e9fc4198f542969d",
-         intel: "9d2985762f03ceed84164ef454e601993762c5b5deef924cc4316af8de18737d"
+  version "0.25.8"
+  sha256 arm:   "b31ea1510fb16ade1ed4f7b2b2475a0297096ac4080c06a5ff0bcc8073d57b15",
+         intel: "77b943ab03b5e824c3e6df2a90d0b995e9d823f1b7a4771181538beaf0498989"
 
   url "https://mutemedownloads.s3.us-east-2.amazonaws.com/main/#{version}/MuteMe-Client-#{version}-#{arch}.dmg",
       verified: "mutemedownloads.s3.us-east-2.amazonaws.com/"
