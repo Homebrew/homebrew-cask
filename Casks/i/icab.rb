@@ -1,6 +1,6 @@
 cask "icab" do
-  version "6.3.4"
-  sha256 "3371d18cca66027461237f8c7b81f16ce0dafbff6dea5d591c3d18e21e17c7ef"
+  version "6.3.5"
+  sha256 "b38b14279d6c97bf8406531ad1e763c7479ff52a1ae2e945be2d6dcc4c824499"
 
   url "https://icab.clauss-net.de/icab/iCab_#{version}.zip",
       verified: "icab.clauss-net.de/icab/"
