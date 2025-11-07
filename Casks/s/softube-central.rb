@@ -1,6 +1,6 @@
 cask "softube-central" do
-  version "2.1.2"
-  sha256 "a15f0b04c6b88adfaf23c1b8269ac39e8e46aded1f31b9ce9d6537763535da31"
+  version "2.1.3"
+  sha256 "aeb76b357c80415f1b3f3d3c233164bc7be0bbd791bc976fa4035d115d03c6dc"
 
   url "https://softubestorage.b-cdn.net/softubecentraldata/softubecentral/Softube%20Central-#{version}-universal.pkg",
       verified: "softubestorage.b-cdn.net/"
@@ -18,11 +18,12 @@ cask "softube-central" do
 
   pkg "Softube Central-#{version}-universal.pkg"
 
-  uninstall quit:    [
+  uninstall launchctl: "com.softube.installerdaemon.helper",
+            quit:      [
               "com.softube.Console1OSD_Release",
               "org.softube.com.softubecentral",
             ],
-            pkgutil: [
+            pkgutil:   [
               "com.softube.installerdaemon.helper",
               "org.softube.com.softubecentral",
             ]
