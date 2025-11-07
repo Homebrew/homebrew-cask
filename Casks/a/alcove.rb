@@ -1,6 +1,6 @@
 cask "alcove" do
-  version "1.4.0"
-  sha256 "d1914101085bdaefe7dd8ad9d97c29026fa3da443350b272c33228df4e742c0d"
+  version "1.4.1"
+  sha256 "f5262abc9a8b0b887801c2bf17ce92ec7d793e25beb5c99a17cdc82dd73f7a31"
 
   url "https://github.com/henrikruscon/alcove-releases/releases/download/#{version}/Alcove.zip",
       verified: "github.com/henrikruscon/alcove-releases/"
