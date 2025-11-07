@@ -8,6 +8,9 @@ cask "ricochet-refresh" do
   on_arm do
     depends_on macos: ">= :big_sur"
   end
+  on_intel do
+    depends_on macos: ">= :catalina"
+  end
 
   url "https://github.com/blueprint-freespeech/ricochet-refresh/releases/download/v#{version}-release/ricochet-refresh-#{version}-macos-#{arch}.dmg",
       verified: "github.com/blueprint-freespeech/ricochet-refresh/"
