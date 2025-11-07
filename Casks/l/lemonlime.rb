@@ -1,9 +1,9 @@
 cask "lemonlime" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.3.6,6.9.3"
-  sha256 arm:   "2d064df6c68de9b5dfd5a5fa56d21da94c631e294c3264ca1c21c4bf40a7fd04",
-         intel: "10465401db07944e154201c6125f5098dc6e8db8700c5cc74f27ad7ba29f90e7"
+  version "0.3.6.1,6.9.3"
+  sha256 arm:   "1fd8dacb6c15400edeba9f1f344f8d42bcb42faf5d27e82a2198c70cbe96aede",
+         intel: "233f167e68b80ced3552c3caaa2ede49f48a738158b1b51bdeb46af4e5d0e15d"
 
   on_arm do
     depends_on macos: ">= :big_sur"
