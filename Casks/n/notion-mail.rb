@@ -2,9 +2,9 @@ cask "notion-mail" do
   arch arm: "arm64", intel: "universal"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "latest"
 
-  version "0.0.41"
-  sha256 arm:   "a39695b2b252e62eb4429a4b7ef1b89efbec5a3927739867a58adcd8b1bad365",
-         intel: "1d2c9db7fb84d499c72e73a5b26a7d33931d2ac6bf65b41cb138107773a24b4e"
+  version "0.0.42"
+  sha256 arm:   "c46daed32c22fdf5b54892c8e5c0cb5cc2a00a6a60d0efdcda775207a591710c",
+         intel: "3fcfd00030c0f65b5a61e8408bda1a007abece3874f118ad3a12e3877746c5b1"
 
   url "https://mail-desktop-release.notion-static.com/Notion%20Mail-#{version}-#{arch}.zip",
       verified: "mail-desktop-release.notion-static.com/"
@@ -18,7 +18,7 @@ cask "notion-mail" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Notion Mail.app"
 
