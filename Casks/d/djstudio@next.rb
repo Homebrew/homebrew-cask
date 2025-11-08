@@ -29,11 +29,4 @@ cask "djstudio@next" do
     "~/Library/Saved Application State/dj.studio.app.savedState",
     "~/Music/DJ.Studio",
   ]
-
-  caveats <<~EOS
-    DJ.Studio Next uses the same default project and audio directory as the stable version:
-      ~/Music/DJ.Studio
-
-    This folder is intentionally not removed during `brew zap` to avoid data loss.
-  EOS
 end
