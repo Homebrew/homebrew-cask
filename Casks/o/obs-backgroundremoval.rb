@@ -1,6 +1,6 @@
 cask "obs-backgroundremoval" do
-  version "1.1.13"
-  sha256 "e032871f920f8518d4660089a045dce8bd682539182a9a0c4f027fe7767fb797"
+  version "1.3.0"
+  sha256 "3eac75f3944f0fefc10fea28e9ce75ff16a32966abf2d81f354a78a04cb427f7"
 
   url "https://github.com/occ-ai/obs-backgroundremoval/releases/download/#{version}/obs-backgroundremoval-#{version}-macos-universal.pkg",
       verified: "github.com/occ-ai/obs-backgroundremoval/"
