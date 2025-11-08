@@ -1,8 +1,11 @@
 cask "pearcleaner" do
-  version "5.3.8"
-  sha256 "5dad16e6cd558aab2351f454a2dcd3eb932b727d35b7a42554936fd43c054e2b"
+  arch arm: "-arm", intel: "-intel"
 
-  url "https://github.com/alienator88/Pearcleaner/releases/download/#{version}/Pearcleaner.zip",
+  version "5.3.8"
+  sha256 arm:   "2f640f4bd44b3f5b586f117b243cf19d45b506b9b86fa7cef4d742e12bc3906d",
+         intel: "0fdb289977f9ae58cb067dbdc2850217082ab05c7d417532b0a573d6c1f29f4f"
+
+  url "https://github.com/alienator88/Pearcleaner/releases/download/#{version}/Pearcleaner#{arch}.zip",
       verified: "github.com/alienator88/Pearcleaner/"
   name "Pearcleaner"
   desc "Utility to uninstall apps and remove leftover files from old/uninstalled apps"
