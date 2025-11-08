@@ -1,6 +1,6 @@
 cask "mkvtoolnix-app" do
-  version "95.0"
-  sha256 "b7cca270fcca6b3964db5433e33e0999687e2da15b8306b6c8b2afcf1e482e75"
+  version "96.0"
+  sha256 "4f748f580424e17e573c97b605dc0f9c706414a7c2f722319269a8484cc339b4"
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
   name "MKVToolNix"
@@ -13,6 +13,8 @@ cask "mkvtoolnix-app" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :ventura"
 
   app "MKVToolNix-#{version}.app"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"
