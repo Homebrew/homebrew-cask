@@ -27,6 +27,5 @@ cask "djstudio" do
     "~/Library/Application Support/dj.studio.app",
     "~/Library/Preferences/dj.studio.app.plist",
     "~/Library/Saved Application State/dj.studio.app.savedState",
-    "~/Music/DJ.Studio",
   ]
 end
