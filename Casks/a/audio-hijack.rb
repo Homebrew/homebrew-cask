@@ -1,5 +1,5 @@
 cask "audio-hijack" do
-  version "4.5.4"
+  version "4.5.5"
   sha256 :no_check
 
   url "https://cdn.rogueamoeba.com/audiohijack/download/AudioHijack.zip"
