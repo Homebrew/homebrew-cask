@@ -1,6 +1,6 @@
 cask "djstudio@next" do
-  arch arm: "-arm64", intel: ""
-  livecheck_arch = on_arch_conditional arm: "-apple", intel: ""
+  arch arm: "-arm64"
+  livecheck_arch = on_arch_conditional arm: "-apple"
 
   version "4.0.7-beta.0"
   sha256 arm:   "75e0f62d6719b6a4835a6f9c31f24f4c1aa6ea0d2e23e3922a238a277e5f355f",
@@ -8,7 +8,7 @@ cask "djstudio@next" do
 
   url "https://download.next.dj.studio/DJ.Studio%20Next-#{version}#{arch}.dmg"
   name "DJ.Studio Next"
-  desc "DAW for DJs (beta channel)"
+  desc "DAW for DJs"
   homepage "https://dj.studio/"
 
   livecheck do
