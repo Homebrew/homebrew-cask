@@ -28,6 +28,8 @@ cask "gramps" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Gramps.app"
 
   zap trash: [
