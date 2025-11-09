@@ -9,14 +9,7 @@ cask "sq-mixpad" do
   homepage "https://www.allen-heath.com/hardware/sq/sq-mixpad/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/(\d+)/(\d+)/SQ[._-]MixPad[._-]v?(\d+(?:\.\d+)+)[._-]Mac[^>]+SQ\s*MixPad\s*v?(\d+(?:\.\d+)+)}i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      "#{match[4]},#{match[3]},#{match[1]},#{match[2]}"
-    end
+    skip "No version information available"
   end
 
   disable! date: "2025-09-15", because: :unreachable
