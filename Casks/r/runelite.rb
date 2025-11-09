@@ -16,6 +16,8 @@ cask "runelite" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/RuneLite[._-]#{arch}\.dmg}i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "RuneLite.app"
 
   zap trash: [
