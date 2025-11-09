@@ -1,18 +1,15 @@
 cask "whatsapp" do
-  version "2.25.34.11"
+  version "25.34.11"
   sha256 "cc6e2ffe164a0e0e0ad49f45fbbb24e80dc3c0765a6a4cbe16e147e182283093"
 
-  url "https://web.whatsapp.com/desktop/mac_native/release/?version=#{version}&extension=zip&configuration=Release&branch=master&is_buck=true"
+  url "https://web.whatsapp.com/desktop/mac_native/release/?version=2.#{version}&extension=zip&configuration=Release&branch=master&is_buck=true"
   name "WhatsApp"
   desc "Native desktop client for WhatsApp"
   homepage "https://www.whatsapp.com/"
 
   livecheck do
     url "https://web.whatsapp.com/desktop/mac_native/updates/?branch=master&configuration=Release"
-    regex(/version=v?(\d+(?:\.\d+)+)/i)
-    strategy :sparkle do |item, regex|
-      item.url.scan(regex).map(&:first)
-    end
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
