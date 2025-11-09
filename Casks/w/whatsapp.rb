@@ -22,6 +22,7 @@ cask "whatsapp" do
   app "WhatsApp.app"
 
   zap trash: [
+    "~/Library/Application Scripts/group.com.facebook.family",
     "~/Library/Application Scripts/net.whatsapp.WhatsApp*",
     "~/Library/Caches/net.whatsapp.WhatsApp",
     "~/Library/Containers/net.whatsapp.WhatsApp*",
