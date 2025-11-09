@@ -1,6 +1,5 @@
 cask "companion@beta" do
   arch arm: "arm64", intel: "x64"
-  livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
   version "4.1.0+8404-main-624ad91b22"
   sha256 arm:   "94ad832fb7e16319d35cb41ce17eb5bb955c183932f66bf1f6f15052d7e00ff7",
@@ -10,14 +9,6 @@ cask "companion@beta" do
   name "Bitfocus Companion"
   desc "Streamdeck extension and emulation software"
   homepage "https://bitfocus.io/companion"
-
-  livecheck do
-    url "https://api.bitfocus.io/v1/product/companion/packages?branch=beta&limit=150"
-    strategy :json do |json|
-      json["packages"]&.select { |c| c["target"] == "mac-#{livecheck_arch}" }
-                      &.map { |c| c["version"] }
-    end
-  end
 
   disable! date: "2025-09-15", because: :unreachable
 
