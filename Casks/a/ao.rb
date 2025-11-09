@@ -8,6 +8,7 @@ cask "ao" do
   homepage "https://github.com/klaussinani/ao"
 
   deprecate! date: "2024-11-10", because: :unmaintained
+  disable! date: "2025-11-10", because: :unmaintained
 
   app "Ao.app"
 
