@@ -9,11 +9,7 @@ cask "allen-and-heath-midi-control" do
   homepage "https://www.allen-heath.com/midi-control/"
 
   livecheck do
-    url "https://www.allen-heath.com/hardware/controllers/midi-control/resources/"
-    regex(%r{href=.*?/([^/]+)/([^/]+)/Allen-and-Heath-MIDI-Control[._-]v?(\d+(?:\.\d+)+)(?:-Mac)?\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.third},#{match.first},#{match.second}" }
-    end
+    skip "No version information available"
   end
 
   disable! date: "2025-09-15", because: :unreachable
