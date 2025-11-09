@@ -4,7 +4,7 @@ cask "okta-verify" do
 
   url "https://okta.okta.com/artifacts/OKTA_VERIFY_MACOS/#{version.csv.first}/OktaVerify-#{version.csv.first}-#{version.csv.second}.pkg"
   name "Okta Verify"
-  desc "App to verify your identity when you sign into Okta protected resources"
+  desc "Identity verification provider"
   homepage "https://help.okta.com/eu/en-us/content/topics/end-user/ov-overview-macos.htm"
 
   livecheck do
