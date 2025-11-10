@@ -1,6 +1,6 @@
 cask "slicer" do
-  version "5.8.1,67c52e9629825655577d0353"
-  sha256 "1df727ddfffe216c69ed277f8f3e3d5081ac83d73aa22eeec6285b68aa1e2a4c"
+  version "5.10.0,6911c75fac7b1c95e7934d1b"
+  sha256 "91c80bfe50486dbd03e3c169d0f225d1b70329bc18067481cf32d238a44d51e2"
 
   url "https://slicer-packages.kitware.com/api/v1/item/#{version.csv.second}/download",
       verified: "slicer-packages.kitware.com/"
@@ -20,6 +20,7 @@ cask "slicer" do
   end
 
   conflicts_with cask: "slicer@preview"
+  depends_on macos: ">= :ventura"
 
   app "Slicer.app"
 
