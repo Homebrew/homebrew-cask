@@ -20,6 +20,7 @@ cask "slicer" do
   end
 
   conflicts_with cask: "slicer@preview"
+  depends_on macos: ">= :ventura"
 
   app "Slicer.app"
 
