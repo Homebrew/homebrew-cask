@@ -1,9 +1,9 @@
 cask "agentkube" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.0.8"
-  sha256 arm:   "82caaf4af5432734e6ba5d61b83a6ac4e25b5405ba65fce3b19a713ef2d64223",
-         intel: "c08b2c288ee9b7025774f78b0ef58d9ea7d4e25feb5bbe67eed6db97224563c4"
+  version "0.0.9"
+  sha256 arm:   "5cc9a31c8ae950cac0f287a93d11bb598c4662039babad7b6c67988b93308852",
+         intel: "70a68f24e1668b2cd2a9f2941d56299679c229f1008d921806c996ae2239a6df"
 
   url "https://github.com/agentkube/agentkube/releases/download/v#{version}/agentkube_#{version}_#{arch}-apple-darwin.tar.gz",
       verified: "github.com/agentkube/agentkube/"
