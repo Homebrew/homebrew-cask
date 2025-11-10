@@ -5,6 +5,13 @@ cask "double-commander" do
   sha256 arm:   "c635687167415f1c02cfb58472be682e30f2f33cb8d113a432cb82eeeded01b8",
          intel: "71e5634fb92813f2011ad1b0376e1f20a299fa854f3c205958c9c2e7ad8b5ed2"
 
+  on_arm do
+    depends_on macos: ">= :big_sur"
+  end
+  on_intel do
+    depends_on macos: ">= :catalina"
+  end
+
   url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version.tr(",", "-")}.cocoa.#{arch}.dmg",
       verified: "downloads.sourceforge.net/doublecmd/"
   name "Double Commander"
