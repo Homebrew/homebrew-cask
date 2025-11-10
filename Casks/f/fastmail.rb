@@ -1,6 +1,6 @@
 cask "fastmail" do
-  version "1.0.3"
-  sha256 "2b4eebdb467a70c38d5506734daebaae2986610e4f7b7f2de39e4da875f98231"
+  version "1.0.4"
+  sha256 "71308ffdc3e0cdaa954cb6b3c96f01d4b99c8e90796b037ea9cb792e7f715da7"
 
   url "https://dl.fastmailcdn.com/desktop/production/mac/arm64/Fastmail-#{version}-arm64-mac.zip",
       verified: "dl.fastmailcdn.com/"
