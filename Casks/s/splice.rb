@@ -1,9 +1,9 @@
 cask "splice" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "5.4.1"
-  sha256 arm:   "11ca18ed329b73c2834d4fdf4062591956f4e6125e87954a1add8b55899ffdec",
-         intel: "b7a187fe86b1832ee9db30ea50a77030b815b6f7ecd95c6c17c10e412026fdaa"
+  version "5.4.2"
+  sha256 arm:   "f39fa49a24340881bc54a5ec1cd130e952de434db0f467101ab054157a8000b2",
+         intel: "6d8a1f13c00ec04a02b6190ecefbab82389fa90d7ee10d02f49a2ffbfe874705"
 
   url "https://desktop.splice.com/conveyor/stable/splice-#{version}-mac-#{arch}.zip"
   name "Splice"
@@ -16,7 +16,7 @@ cask "splice" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Splice.app"
 
