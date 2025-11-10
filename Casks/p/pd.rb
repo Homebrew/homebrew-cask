@@ -1,6 +1,6 @@
 cask "pd" do
-  version "0.56-1"
-  sha256 "2e8f2068b83a83b483f0ffc3c48363df4deab9ee2263b94e18e1218df3151638"
+  version "0.56-2"
+  sha256 "6f88bf5186df7e24c23e9eca08c0fca34d906ba82614a0e321d26bcd999eaf90"
 
   url "https://msp.ucsd.edu/Software/pd-#{version}.macos.zip"
   name "Pd"
@@ -11,6 +11,8 @@ cask "pd" do
     url :homepage
     regex(/pd[._-]v?(\d+(?:\.\d+)+-\d+)\.macos\.zip/i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Pd-#{version}.app"
 
