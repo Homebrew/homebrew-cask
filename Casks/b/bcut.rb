@@ -10,6 +10,9 @@ cask "bcut" do
     version "3.11.10,21495890,0f6ae6a5aec6ed262bde1e01f0a4e635"
     sha256 "1c35f53059f6502865ca4a4e75beb75dde4f87f79b1504856f0aa8ee0367e468"
   end
+  on_intel do
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  end
 
   url "https://boss.hdslb.com/bcut_pc_pkg/static/#{version.csv.third}/BCUT-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg",
       verified: "boss.hdslb.com/"
