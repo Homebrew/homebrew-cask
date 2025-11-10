@@ -12,6 +12,8 @@ cask "pd" do
     regex(/pd[._-]v?(\d+(?:\.\d+)+-\d+)\.macos\.zip/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Pd-#{version}.app"
 
   postflight do
