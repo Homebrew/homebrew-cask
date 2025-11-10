@@ -3,9 +3,10 @@ cask "font-urw-core35" do
   sha256 "6cfedddd6733f99172778330b779d35e62360eebf6b7f36002ff65178ee21495"
 
   url "https://github.com/twardoch/urw-core35-fonts/archive/refs/tags/v#{version}.tar.gz"
-  name "font-urw-core35"
-  desc "Fork of URW ++ Type 1 fonts https://github.com/URWTypeFoundry/Core_35"
+  name "URW Core 35 Fonts"
   homepage "https://github.com/twardoch/urw-core35-fonts"
+
+  conflicts_with cask: "font-urw-base35"
 
   font "urw-core35-fonts-#{version}/C059-BdIta.otf"
   font "urw-core35-fonts-#{version}/C059-Bold.otf"
