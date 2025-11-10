@@ -1,6 +1,6 @@
 cask "whatsapp@beta" do
-  version "2.25.34.11"
-  sha256 "117f72a66de3dff236c61acc37e0df1bf3eb0146e93f64e9e00b8f9d603a4f07"
+  version "2.25.34.17"
+  sha256 "a050e44a8d7c3b807c889b4e2fb85d265b81a14e6805793e18b7f3efcb73ee13"
 
   url "https://web.whatsapp.com/desktop/mac_native/release/?version=#{version}&extension=zip&configuration=Beta&branch=master"
   name "WhatsApp Beta"
