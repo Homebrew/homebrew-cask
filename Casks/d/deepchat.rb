@@ -6,7 +6,7 @@ cask "deepchat" do
   sha256 arm:   "b2a05c56dab4923ec99ebfc9aa2c7775f7ec351237a17837dfeb01ed9a9021fe",
          intel: "3d2ab949cff2bf436bfd41d0f8b6785869940d0ea6d89f14095e6ebc3aaa4744"
 
-  url "https://github.com/ThinkInAIXYZ/deepchat/releases/download/workflow-19022687016/DeepChat-#{version}-mac-#{arch}.dmg",
+  url "https://github.com/ThinkInAIXYZ/deepchat/releases/download/v#{version}/DeepChat-#{version}-mac-#{arch}.dmg",
       verified: "github.com/ThinkInAIXYZ/deepchat/"
   name "DeepChat"
   desc "AI assistant"
