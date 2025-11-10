@@ -1,6 +1,6 @@
 cask "open-eid" do
-  version "25.5.0.1954"
-  sha256 "1ceef9fa6ae4146275578322e2244fdc745d917e9042a9f92bedb1e36fd9a9a5"
+  version "25.10.0.235"
+  sha256 "88727940d3e023b325359595c41bb3a6b03650b10eaf54c67edaf688b0bfebe3"
 
   url "https://installer.id.ee/media/osx/Open-EID_#{version}.dmg"
   name "Open-EID"
