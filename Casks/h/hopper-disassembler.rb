@@ -18,9 +18,12 @@ cask "hopper-disassembler" do
   app "Hopper Disassembler.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cryptic-apps.hopper-web-4.sfl*",
     "~/Library/Application Support/Hopper Disassembler v4",
     "~/Library/Application Support/Hopper",
+    "~/Library/Caches/com.apple.helpd/Generated/com.cryptic-apps.hopper-web-4.help*",
     "~/Library/Caches/com.cryptic-apps.hopper-web-4",
+    "~/Library/HTTPStorages/com.cryptic-apps.hopper-web-4",
     "~/Library/Preferences/com.cryptic-apps.hopper-web-4.plist",
     "~/Library/Saved Application State/com.cryptic-apps.hopper-web-4.savedState",
   ]
