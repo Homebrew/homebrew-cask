@@ -17,7 +17,7 @@ cask "apache-couchdb" do
   end
 
   # see https://neighbourhood.ie/download-apache-couchdb-mac/
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :big_sur"
 
   app "Apache CouchDB.app"
 
