@@ -14,19 +14,7 @@ cask "lobehub" do
   # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    regex(/^LobeHub(?:[._-]Beta)?[._-]v?(\d+(?:\.\d+)+)#{arch}[._-]mac\.zip$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
+    strategy :github_latest
   end
 
   auto_updates true
