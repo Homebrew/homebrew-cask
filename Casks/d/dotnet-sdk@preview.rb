@@ -24,6 +24,7 @@ cask "dotnet-sdk@preview" do
     "dotnet-runtime@preview",
     "dotnet-sdk",
     "dotnet-sdk@8",
+    "dotnet-sdk@9",
   ]
   depends_on macos: ">= :ventura"
 
