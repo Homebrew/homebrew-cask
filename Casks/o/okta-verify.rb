@@ -9,11 +9,14 @@ cask "okta-verify" do
 
   livecheck do
     url "https://okta.okta.com/api/v1/artifacts/OKTA_VERIFY_MACOS/latest?releasesChannel=GA"
-    strategy :json do |json|
-      version_part = json["version"]
-      href = json.dig("files", 0, "href")
-      build_part = href.match(/OktaVerify-.*?-(.*?).pkg/i)&.captures&.first
-      "#{version_part},#{build_part}"
+    regex(/OktaVerify[._-]v?(\d+(?:\.\d+)+)(?:[._-](.+))?\.pkg/i)
+    strategy :json do |json, regex|
+      json["files"]&.filter_map do |file|
+        match = file["href"]&.match(regex)
+        next unless match
+
+        match[2] ? "#{match[1]},#{match[2]}" : match[1]
+      end
     end
   end
 
