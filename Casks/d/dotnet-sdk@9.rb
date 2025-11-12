@@ -1,9 +1,9 @@
-cask "dotnet-sdk@8" do
+cask "dotnet-sdk@9" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.0.416"
-  sha256 arm:   "c53a29286990d8ad8444dd052cd0fb480983afb138a5fee0a06d427a3b5e4ee2",
-         intel: "515697ec0c1ad9dd65d35b0ceef1139e6c80d1c343be41b62e60204ec35552ee"
+  version "9.0.307"
+  sha256 arm:   "68d49cde9f8c9b6202056914356bc8396951af398a823ad53e96f6a13bda650b",
+         intel: "4191f95f9435a754435c8118f36b3947d98a737f1e563b8b4a98876d3cb900f4"
 
   url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
   name ".NET SDK"
@@ -30,7 +30,7 @@ cask "dotnet-sdk@8" do
     "dotnet-runtime",
     "dotnet-runtime@preview",
     "dotnet-sdk",
-    "dotnet-sdk@9",
+    "dotnet-sdk@8",
     "dotnet-sdk@preview",
   ]
   depends_on macos: ">= :ventura"
