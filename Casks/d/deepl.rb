@@ -29,8 +29,8 @@ cask "deepl" do
     end
   end
   on_sonoma :or_newer do
-    version "25.10.22981688"
-    sha256 "c59a45ba2c556650fe4de23414f1d71b65300ea5f8994509ceb93d22f5171ca5"
+    version "25.11.13142470"
+    sha256 "0301dce63fe168391bc537542cb25359a85b92b1139224e92c1119ae96e8e54c"
 
     url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL.dmg"
     livecheck do
