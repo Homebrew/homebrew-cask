@@ -2,10 +2,11 @@ cask "kimi" do
   version "2.0.4"
   sha256 "3de7ec7e0ee5848482b3655c4cf96e184cc0e6bcb4da9e1bcacf5201cf2a7709"
 
-  url "https://kimi-img.moonshot.cn/app/download/macos/kimi_#{version}.dmg"
+  url "https://kimi-img.moonshot.cn/app/download/macos/kimi_#{version}.dmg",
+      verified: "kimi-img.moonshot.cn/"
   name "kimi"
   desc "AI chat assistant from Moonshot"
-  homepage "https://www.moonshot.cn/"
+  homepage "https://www.moonshot.ai/"
 
   livecheck do
     skip "No version information available"
