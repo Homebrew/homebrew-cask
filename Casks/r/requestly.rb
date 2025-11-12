@@ -1,9 +1,9 @@
 cask "requestly" do
   arch arm: "-arm64"
 
-  version "25.10.29"
-  sha256 arm:   "f50339c9a9eb00cc644a89681fa6b4f600b1262ab88e400b06fddd9389f1546c",
-         intel: "fdadc1bb074e7f426dded978f51246f8af3c9fb20e9a51f28035c4919f3b9a8f"
+  version "25.11.12"
+  sha256 arm:   "f2a768432fba76b8b0317ad41508261e0001e058f54e30f850ce322c55db1279",
+         intel: "a9a5d52f096a2268ff1e65393a15cbe90c87c6124aeaf5982f2a29a55d0bbd2b"
 
   url "https://github.com/requestly/requestly-desktop-app/releases/download/v#{version}/Requestly-#{version}#{arch}.dmg",
       verified: "github.com/requestly/requestly-desktop-app/"
