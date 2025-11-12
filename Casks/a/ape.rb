@@ -7,7 +7,6 @@ cask "ape" do
   desc "Software for DNA sequence analysis and annotation"
   homepage "https://jorgensen.biology.utah.edu/wayned/ape/"
 
-
   livecheck do
     url :homepage
     regex(/latest\s*ApE\s*\(v?(\d+(?:\.\d+)+)[ ,<"]/i)
@@ -15,7 +14,5 @@ cask "ape" do
 
   app "ApE.app"
 
-  zap trash: [
-    "~/Library/Application Support/ApE",
-  ]
+  zap trash: "~/Library/Application Support/ApE"
 end
