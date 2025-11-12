@@ -10,8 +10,6 @@ cask "lobehub" do
   desc "AI chat framework"
   homepage "https://github.com/lobehub/lobe-chat"
 
-  # Not every GitHub release provides a file for macOS, so we check multiple
-  # recent releases instead of only the "latest" release.
   livecheck do
     url :url
     strategy :github_latest
