@@ -1,32 +1,18 @@
 cask "lobehub" do
   arch arm: "-arm64"
 
-  version "1.142.9"
-  sha256 arm:   "10691c93327e1695d8f329f0cec954e75f78a89b2910d24e1293f739b865078c",
-         intel: "066ba044d843d56829a732341e2a240107770dbc5e8a64ddce7ddde3c2020053"
+  version "1.142.8"
+  sha256 arm:   "46316e7481ce9fae27fb72e476dd5eae893fc701332a52398b7a64b56c6f13f0",
+         intel: "e9dec0f847831138e709583e784d4fc5fc08bb80bd7d3fab2dab67960629de5c"
 
   url "https://github.com/lobehub/lobe-chat/releases/download/v#{version}/LobeHub-Beta-#{version}#{arch}-mac.zip"
   name "LobeHub"
   desc "AI chat framework"
   homepage "https://github.com/lobehub/lobe-chat"
 
-  # Not every GitHub release provides a file for macOS, so we check multiple
-  # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    regex(/^LobeHub(?:[._-]Beta)?[._-]v?(\d+(?:\.\d+)+)#{arch}[._-]mac\.zip$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
+    strategy :github_latest
   end
 
   auto_updates true
