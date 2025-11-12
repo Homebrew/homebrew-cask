@@ -1,7 +1,7 @@
 cask "archi" do
   arch arm: "-Silicon"
 
-  version "5.7.0,57"
+  version "5.7.0,5.7"
   sha256 arm:   "dbfc38f9a29f8df4c62e38e5fe73a8b85b67bfbfe48e67dece4ae649ae1a6e57",
          intel: "c0896127a5e684be6b31be73c07258c1a982c15d773cae77c22f6e1172206b92"
 
