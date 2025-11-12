@@ -1,8 +1,8 @@
 cask "pdl" do
-  version "0.8.0"
-  sha256 "2269ed78188540aa9708f680b0df18a969f864c016c8d349622bfe20ef7f4afe"
+  version "0.9.0"
+  sha256 "4c3bbbb7504e9e4ee2e5e776017f6e0dbf70c7791cee34cdfd9ff20291ae37e6"
 
-  url "https://github.com/IBM/prompt-declaration-language/releases/download/v#{version}/PDL_#{version}_universal.dmg",
+  url "https://github.com/IBM/prompt-declaration-language/releases/download/v#{version}/PDL_#{version}_universal_darwin.dmg",
       verified: "github.com/IBM/prompt-declaration-language/"
   name "PDL"
   desc "Declarative language for creating reliable, composable LLM prompts"
