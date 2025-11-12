@@ -4,7 +4,7 @@ cask "bitfocus-buttons" do
 
   version "1.4.5,4775,74f9ad89"
   sha256 arm:   "fe532b006bc2c56522673a0a5ddb2e9079f9689a6d98cdc3483700621fd24a59",
-         intel: "0126270116f273db51f1b9454ea8013ee6f73269c3e621ad946d551f47321b64"
+         intel: "74c96cd035c8ff2c5d22de6834c519fe8000fe63a2b71aee67939c163789fcfc"
 
   url "https://s4.bitfocus.io/builds/buttons/bitfocus-buttons-mac-#{arch}-#{version.csv.second}-#{version.csv.third}.pkg"
   name "Bitfocus Buttons"
