@@ -5,7 +5,7 @@ cask "kimi" do
   url "https://kimi-img.moonshot.cn/app/download/macos/kimi_#{version}.dmg"
   name "kimi"
   desc "AI chat assistant from Moonshot"
-  homepage "https://www.moonshot.ai/"
+  homepage "https://www.moonshot.cn/"
 
   livecheck do
     skip "No version information available"
