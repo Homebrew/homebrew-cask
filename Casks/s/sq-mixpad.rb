@@ -8,10 +8,6 @@ cask "sq-mixpad" do
   desc "Remote control for Allen & Heath SQ audio consoles"
   homepage "https://www.allen-heath.com/hardware/sq/sq-mixpad/"
 
-  livecheck do
-    skip "No version information available"
-  end
-
   disable! date: "2025-09-15", because: :unreachable
 
   app "SQ MixPad #{version.csv.first}.app"
