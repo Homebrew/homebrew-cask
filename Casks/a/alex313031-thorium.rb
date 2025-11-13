@@ -8,7 +8,7 @@ cask "alex313031-thorium" do
   url "https://github.com/Alex313031/Thorium-MacOS/releases/download/#{version}/Thorium_MacOS_#{arch}.dmg",
       verified: "github.com/Alex313031/Thorium-MacOS/"
   name "Thorium"
-  desc "Fastest, privacy-focused Chromium-based browser"
+  desc "Chromium-based web browser"
   homepage "https://thorium.rocks/"
 
   livecheck do
