@@ -33,8 +33,6 @@ cask "mplab-xc32" do
   binary "#{staged_path}/bin/xc32-as"
   binary "#{staged_path}/bin/xc32-bin2hex"
   binary "#{staged_path}/bin/xc32-c++"
-  binary "#{staged_path}/bin/xc32-c++filt"
-  binary "#{staged_path}/bin/xc32-cpp"
   binary "#{staged_path}/bin/xc32-elfedit"
   binary "#{staged_path}/bin/xc32-g++"
   binary "#{staged_path}/bin/xc32-gcc"
