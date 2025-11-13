@@ -14,14 +14,13 @@ cask "whodb" do
 
   app "WhoDB.app"
 
-  caveats do
-    "WhoDB documentation is available at https://docs.whodb.com."
-  end
-
   zap trash: [
     "~/Library/Application Support/whodb",
     "~/Library/Preferences/com.clidey.whodb.plist",
-    "~/Library/Saved Application State/com.clidey.whodb.savedState"
+    "~/Library/Saved Application State/com.clidey.whodb.savedState",
   ]
-end
 
+  caveats do
+    "WhoDB documentation is available at https://docs.whodb.com."
+  end
+end
