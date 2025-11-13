@@ -7,11 +7,6 @@ cask "whodb" do
   desc "Database management tool with AI-powered features"
   homepage "https://github.com/clidey/whodb"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "WhoDB.app"
 
   zap trash: [
@@ -19,8 +14,4 @@ cask "whodb" do
     "~/Library/Preferences/com.clidey.whodb.plist",
     "~/Library/Saved Application State/com.clidey.whodb.savedState",
   ]
-
-  caveats do
-    "WhoDB documentation is available at https://docs.whodb.com."
-  end
 end
