@@ -9,7 +9,9 @@ cask "kimi" do
   homepage "https://www.moonshot.ai/"
 
   livecheck do
-    skip "No version information available"
+    url "https://appsupport.moonshot.cn/api/app/pkg/latest/macos/download"
+    regex(/(?:kimi|moonshot)[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)/i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :big_sur"
