@@ -8,10 +8,6 @@ cask "allen-and-heath-midi-control" do
   desc "Midi control software for Allen & Heath audio consoles"
   homepage "https://www.allen-heath.com/midi-control/"
 
-  livecheck do
-    skip "No version information available"
-  end
-
   disable! date: "2025-09-15", because: :unreachable
 
   container nested: "Allen and Heath MIDI Control #{version.csv.first}.dmg"
