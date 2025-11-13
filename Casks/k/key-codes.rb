@@ -1,6 +1,6 @@
 cask "key-codes" do
-  version "2.2.2"
-  sha256 "f8008cae815b8825563e05eddd513dc647c8fd1abebde81e298fde2c14db1911"
+  version "2.2.3"
+  sha256 "1228476da2fe3ad32fed885405c6b96dcdcdc3eea5dd77caf2337149b4895b87"
 
   url "https://manytricks.com/download/_do_not_hotlink_/keycodes#{version.no_dots}.dmg"
   name "Key Codes"
