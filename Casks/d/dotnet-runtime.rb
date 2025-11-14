@@ -29,8 +29,6 @@ cask "dotnet-runtime" do
   conflicts_with cask: [
     "dotnet-runtime@preview",
     "dotnet-sdk",
-    "dotnet-sdk@8",
-    "dotnet-sdk@9",
     "dotnet-sdk@preview",
   ]
   depends_on macos: ">= :ventura"
