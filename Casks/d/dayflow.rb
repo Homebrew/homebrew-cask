@@ -1,6 +1,6 @@
 cask "dayflow" do
-  version "1.1.21"
-  sha256 "1d0f41d232f101e3f2e8f674a4a37cae05fc0b8dc317287734288f76e9327ee2"
+  version "1.2.0"
+  sha256 "401824686f95c8d7bafd730e233da9a1e3c7455145c064af5731f20b57eaf8d5"
 
   url "https://github.com/JerryZLiu/Dayflow/releases/download/v#{version}/Dayflow.dmg"
   name "Dayflow"
