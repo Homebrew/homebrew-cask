@@ -1,8 +1,17 @@
 cask "android-commandlinetools" do
-  version "13114758"
-  sha256 "5673201e6f3869f418eeed3b5cb6c4be7401502bd0aae1b12a29d164d647a54e"
+  os macos: "mac", linux: "linux"
 
-  url "https://dl.google.com/android/repository/commandlinetools-mac-#{version}_latest.zip",
+  version "13114758"
+
+  on_macos do
+    sha256 "5673201e6f3869f418eeed3b5cb6c4be7401502bd0aae1b12a29d164d647a54e"
+  end
+
+  on_linux do
+    sha256 "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee"
+  end
+
+  url "https://dl.google.com/android/repository/commandlinetools-#{os}-#{version}_latest.zip",
       verified: "dl.google.com/android/repository/"
   name "Android SDK Command-line Tools"
   desc "Command-line tools for building and debugging Android apps"
@@ -10,7 +19,7 @@ cask "android-commandlinetools" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/commandlinetools[._-]mac[._-](\d+)[._-]latest\.zip}i)
+    regex(%r{href=.*?/commandlinetools[._-]#{os}[._-](\d+)[._-]latest\.zip}i)
   end
 
   conflicts_with cask: "android-sdk"
@@ -26,7 +35,10 @@ cask "android-commandlinetools" do
   binary "#{android_clt_dir}/bin/sdkmanager"
   artifact "cmdline-tools", target: android_clt_dir
 
-  zap trash: android_sdk_root
+  zap trash: [
+    "~/.android",
+    android_sdk_root,
+  ]
 
   caveats do
     depends_on_java
