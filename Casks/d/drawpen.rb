@@ -10,6 +10,11 @@ cask "drawpen" do
   desc "Screen annotation tool"
   homepage "https://github.com/DmytroVasin/DrawPen"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :monterey"
 
