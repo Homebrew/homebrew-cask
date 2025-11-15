@@ -10,7 +10,6 @@ cask "kimi" do
 
   livecheck do
     url "https://appsupport.moonshot.cn/api/app/pkg/latest/macos/download"
-    regex(/(?:kimi|moonshot)[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)/i)
     strategy :header_match
   end
 
