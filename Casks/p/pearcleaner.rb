@@ -1,9 +1,9 @@
 cask "pearcleaner" do
   arch arm: "-arm", intel: "-intel"
 
-  version "5.4.0"
-  sha256 arm:   "5b3d27ceebc666acc7e9a573d3e97347544d12021906d9b0f2c1c6ba69c189be",
-         intel: "61c40d7fe4a9f19c5690c9ca07bf58361df93fe6b4699e0a88da3c53b54061c2"
+  version "5.4.1"
+  sha256 arm:   "10764085e445dc9bb16b1b2747df0ffdca55b5acf3fcbd9384f7a6139e4a6dbb",
+         intel: "990ba4ff57ceb951c33fb3298fdbdba207f810ac821641fe06a4592777c4e388"
 
   url "https://github.com/alienator88/Pearcleaner/releases/download/#{version}/Pearcleaner#{arch}.zip",
       verified: "github.com/alienator88/Pearcleaner/"
