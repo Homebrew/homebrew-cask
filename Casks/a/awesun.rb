@@ -46,6 +46,7 @@ cask "awesun" do
 
   zap delete: "/private/var/log/AweSun/",
       trash:  [
+        "/Library/Application Support/Oray/AweSun",
         "/Library/LaunchDaemons/com.oray.awesun.helper.plist",
         "/Library/LaunchDaemons/com.oray.awesun.plist",
         "~/AweSun",
