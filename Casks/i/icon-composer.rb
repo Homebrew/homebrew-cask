@@ -1,17 +1,15 @@
 cask "icon-composer" do
-  version "1.0"
-  sha256 :no_check
+  version "1.1"
+  sha256 "7c60d4fdedc1e9c7af26f583a3a311bf9dba2ffbb9a2af957cbb6aff499164af"
 
-  url "https://devimages-cdn.apple.com/design/resources/download/Icon-Composer.dmg"
+  url "https://devimages-cdn.apple.com/design/resources/download/Icon-Composer-#{version}.dmg"
   name "Icon Composer"
   desc "Apple tool to create multi-platform icons"
   homepage "https://developer.apple.com/icon-composer/"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |items|
-      items["com.apple.IconComposer"]&.short_version
-    end
+    url :homepage
+    regex(/Icon[._-]Composer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :sequoia"
