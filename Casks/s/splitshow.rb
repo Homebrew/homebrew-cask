@@ -8,6 +8,7 @@ cask "splitshow" do
   homepage "https://github.com/mpflanzer/splitshow"
 
   deprecate! date: "2024-11-16", because: :unmaintained
+  disable! date: "2025-11-16", because: :unmaintained
 
   app "SplitShow.app"
 
