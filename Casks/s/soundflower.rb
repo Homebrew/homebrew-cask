@@ -7,6 +7,7 @@ cask "soundflower" do
   homepage "https://github.com/mattingalls/Soundflower"
 
   deprecate! date: "2024-11-16", because: :unmaintained
+  disable! date: "2025-11-16", because: :unmaintained
 
   depends_on arch: :x86_64
 
