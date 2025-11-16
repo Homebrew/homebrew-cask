@@ -29,7 +29,6 @@ cask "mullvad-vpn@beta" do
             },
             pkgutil:   "net.mullvad.vpn",
             delete:    [
-              "/etc/mullvad-vpn",
               "/Library/Caches/mullvad-vpn",
               "/opt/homebrew/share/fish/vendor_completions.d/mullvad.fish",
               "/opt/homebrew/share/zsh/site-functions/_mullvad",
@@ -41,6 +40,7 @@ cask "mullvad-vpn@beta" do
             ]
 
   zap trash: [
+    "/etc/mullvad-vpn",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mullvad.vpn.sfl*",
     "~/Library/Application Support/Mullvad VPN",
     "~/Library/Logs/Mullvad VPN",
