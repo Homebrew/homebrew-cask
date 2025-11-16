@@ -11,16 +11,18 @@ cask "osaurus" do
   depends_on macos: ">= :sequoia"
   depends_on arch: :arm64
 
-  app "osaurus.app"
-  binary "#{appdir}/osaurus.app/Contents/MacOS/osaurus"
+  app "Osaurus.app"
+  binary "#{appdir}/Osaurus.app/Contents/MacOS/Contents/Helpers/osaurus"
+
+  uninstall quit: "com.dinoki.osaurus"
 
   zap trash: [
     "~/Library/Application Support/com.dinoki.osaurus",
     "~/Library/Application Support/Osaurus",
     "~/Library/Caches/com.dinoki.osaurus",
     "~/Library/HTTPStorages/com.dinoki.osaurus",
-    "~/Library/Preferences/ai.dinoki.osaurus.plist",
-    "~/Library/Saved Application State/ai.dinoki.osaurus.savedState",
+    "~/Library/Preferences/com.dinoki.osaurus.plist",
+    "~/Library/Saved Application State/com.dinoki.osaurus.savedState",
     "~/MLXModels",
   ]
 end
