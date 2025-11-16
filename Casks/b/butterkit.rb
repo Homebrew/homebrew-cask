@@ -17,8 +17,6 @@ cask "butterkit" do
 
   app "ButterKit-Direct-#{version}-macOS.app", target: "ButterKit.app"
 
-  app "ButterKit.app"
-
   zap trash: [
     "~/Library/Application Scripts/app.butterkit.direct",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.butterkit.direct.sfl*",
