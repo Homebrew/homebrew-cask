@@ -1,6 +1,6 @@
 cask "petrichor" do
-  version "1.1.4"
-  sha256 "52edcb26219f4e8a8f6b4130f8bec2603797b1c517a97a42ad50f8d74d8655db"
+  version "1.2.0"
+  sha256 "802d4fa77794072ffacfcc4c8391821f6bb25f363f9a72d9b15805f868b424c4"
 
   url "https://github.com/kushalpandya/Petrichor/releases/download/v#{version}/Petrichor-#{version}-Universal.dmg"
   name "Petrichor"
