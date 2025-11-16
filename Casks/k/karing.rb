@@ -5,7 +5,7 @@ cask "karing" do
   url "https://github.com/KaringX/karing/releases/download/v#{version}/karing_#{version}_macos_universal.dmg",
       verified: "github.com/KaringX/karing/"
   name "Karing"
-  desc "Simple & Powerful proxy utility, Support routing rules for clash/sing-box"
+  desc "Proxy utility"
   homepage "https://karing.app/"
 
   livecheck do
