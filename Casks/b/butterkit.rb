@@ -15,7 +15,7 @@ cask "butterkit" do
   auto_updates true
   depends_on macos: ">= :sequoia"
 
-  rename "ButterKit-*.app", "ButterKit.app"
+  app "ButterKit-Direct-#{version}-macOS.app", target: "ButterKit.app"
 
   app "ButterKit.app"
 
