@@ -12,8 +12,9 @@ cask "mtxx" do
 
   livecheck do
     url "https://api-xiuxiupro.meitu.com/v2/version/check?client_id=1189857470&version=0.0.0"
-    regex(/"name":"([\d.]+)"/)
-    strategy :page_match
+    strategy :json do |json|
+      json.dig("data", "name")
+    end
   end
 
   auto_updates true
