@@ -78,7 +78,9 @@ cask "gcloud-cli" do
     google_cloud_sdk_root,
   ]
 
-  caveats do
-    path_environment_variable "#{google_cloud_sdk_root}/bin"
-  end
+  caveats <<~EOS
+    To use additional binary components installed via gcloud, add the "#{google_cloud_sdk_root}/bin"
+    directory to your PATH environment variable, e.g., (for Bash shell):
+       export PATH=#{google_cloud_sdk_root}/bin:"$PATH"
+  EOS
 end
