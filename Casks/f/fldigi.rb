@@ -1,6 +1,6 @@
 cask "fldigi" do
-  version "4.2.09"
-  sha256 "55d03018ad2868821e2c11efcaec964b1035b6a3904689c9ce6789e26211680a"
+  version "4.2.10"
+  sha256 "d6b6ba31252bdb0ac41cb3c5b2dfb886370749e404e5d9476906c67b53a46fa2"
 
   url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}.dmg",
       verified: "sourceforge.net/fldigi/"
@@ -12,6 +12,8 @@ cask "fldigi" do
     url "https://sourceforge.net/projects/fldigi/rss?path=/fldigi"
     regex(%r{url=.*?/fldigi[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "fldigi-#{version}.app"
 
