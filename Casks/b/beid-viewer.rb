@@ -8,15 +8,8 @@ cask "beid-viewer" do
   homepage "https://eid.belgium.be/"
 
   livecheck do
-    url "https://eid.belgium.be/en"
+    url "https://eid.belgium.be/en/download/22/license"
     regex(/href=.*?eID(?:(?:%20|\s)+|[._-])?Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      download_id = page[%r{element_os-mac-os.*/en/download/(\d+)/license.*?download\s+eID\s+viewer}im, 1]
-      next if download_id.blank?
-
-      version_page = Homebrew::Livecheck::Strategy.page_content("https://eid.belgium.be/en/download/#{download_id}/license")
-      version_page[:content]&.scan(regex)&.map { |match| match[0] }
-    end
   end
 
   depends_on cask: "beid-token"
