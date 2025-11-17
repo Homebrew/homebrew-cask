@@ -2,11 +2,11 @@ cask "dda" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-gnu"
 
-  version "0.30.1"
-  sha256 arm:          "229de3afa6d867940fc3fee97d4fdfcae69788870922ea091506e3100d7ab22d",
-         intel:        "cfd2cf8a7937b61a0507889aac5a64410409a14d937d2c535c745c04251143f7",
-         arm64_linux:  "3d6d11c6ddd735c6c01b51bcd5912b5d7425119b8466246f01ba697bc592e1dd",
-         x86_64_linux: "a43c14c652fc6dda4821ed7d69889afda1fd659759980fe32a9baa0508e7341b"
+  version "0.30.2"
+  sha256 arm:          "9e766fcf6688fb3d4e6bcf1ae2ff836f0b376221c16258cc1f28f63e0186e6ce",
+         intel:        "8fd87f97b3524cc035e84e685e1bf5079ade9134c9b80c162afc63655ea3f5bd",
+         arm64_linux:  "0c3a9c9bd2cf57bc1933c3fabb98cbd1be59fe9ad2ff8a8e0daa0a887ab6a8e6",
+         x86_64_linux: "33d263e40f08f05cb953e76c216cbbd7823b59cc4f9dea65bc2e8d78cae0f840"
 
   url "https://github.com/DataDog/datadog-agent-dev/releases/download/v#{version}/dda-#{arch}-#{os}.tar.gz"
   name "dda"
