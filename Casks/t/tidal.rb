@@ -1,9 +1,9 @@
 cask "tidal" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.38.5"
-  sha256 arm:   "46c5736e3f8503454d8738d004aa1ae5de5fbaffd78d0eee602e1b2b11f5eae0",
-         intel: "b5e3f7a354d21ddb92b78cee3b623b57f914a122b6e62d24ad9a824795aec683"
+  version "2.39.4"
+  sha256 arm:   "4b01c7e33c9230450d5f11837c45aefdf6aac94d4926bf3965f3710e4e1a430b",
+         intel: "a51db0c6f79837623ac87f37caebe1cf2f8be5903383aaddfcd6aa60c51750c1"
 
   url "https://download.tidal.com/desktop/mac/TIDAL.#{arch}.#{version}.zip"
   name "TIDAL"
@@ -18,6 +18,7 @@ cask "tidal" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "TIDAL.app"
 
