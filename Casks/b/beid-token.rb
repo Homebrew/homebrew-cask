@@ -8,17 +8,8 @@ cask "beid-token" do
   homepage "https://eid.belgium.be/"
 
   livecheck do
-    url "https://eid.belgium.be/en"
+    url "https://eid.belgium.be/en/download/16/license"
     regex(/href=.*?eID(?:(?:%20|\s)+|[._-])?Quickinstaller[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      # The first download button on the site is expected to correspond to the
-      # eID-Quickinstaller dmg used in this cask.
-      download_id = page[%r{element_os-mac-os.*?/download/(\d+)/license}im, 1]
-      next if download_id.blank?
-
-      version_page = Homebrew::Livecheck::Strategy.page_content("https://eid.belgium.be/en/download/#{download_id}/license")
-      version_page[:content]&.scan(regex)&.map { |match| match[0] }
-    end
   end
 
   pkg "eID-Quickinstaller-signed.pkg"
