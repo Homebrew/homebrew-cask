@@ -1,4 +1,4 @@
-cask "google-antigravity" do
+cask "antigravity" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "-arm64"
 
