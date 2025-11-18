@@ -1,9 +1,9 @@
 cask "kopiaui" do
   arch arm: "-arm64"
 
-  version "0.21.1"
-  sha256 arm:   "50222a8cf70bde831d756100a779259d8ef927064f9284e3afabd33c30bb157f",
-         intel: "aafe3306b2c6fe35a30f7709d2762c71c97a3c25c4a174111fd8621620dc6e4b"
+  version "0.22.0"
+  sha256 arm:   "fc45b827517b1e972fe772d113b8c812dad815dcd4d8e1f9b09ed3af412a948e",
+         intel: "9b5697bf92e3ccbc6a9d47877398d352ba22dd838d4b8e8e04c0543139216dc1"
 
   url "https://github.com/kopia/kopia/releases/download/v#{version}/KopiaUI-#{version}#{arch}.dmg",
       verified: "github.com/kopia/kopia/"
