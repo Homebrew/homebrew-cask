@@ -24,4 +24,10 @@ cask "google-antigravity" do
   depends_on macos: ">= :big_sur"
 
   app "Antigravity.app"
+
+  zap trash: [
+    "~/.antigravity/",
+    "~/Library/Application Support/Antigravity",
+    "~/Library/Preferences/com.google.antigravity.plist",
+  ]
 end
