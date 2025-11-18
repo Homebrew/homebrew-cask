@@ -1,14 +1,14 @@
 cask "taobao" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.1"
-  sha256 arm:   "a92c56fe614ad7fe0bacfceda8dde6d2dad11bcb0c4e13cd30728fee3fe16683",
-         intel: "cf8839156c8f23e37656e775a2f6630f170e43440c79cea575ab2fb1f15a1cec"
+  version "2.1.0"
+  sha256 arm:   "2200655677636c6d5ffd0cfd156ceda3fa49382b8fdbbba870236f5ddb7c1c81",
+         intel: "9422e959e40004fb0c89ea5093e0f27f0a934d53e7fff4e808587dd3ed3b1f03"
 
   url "https://tblifecdn.taobao.com/taobaopc/shop/taobao-setup-darwin-#{arch}-#{version}.dmg"
   name "taobao"
   name "淘宝桌面版"
-  desc "Shopping client"
+  desc "Online Shopping Client"
   homepage "https://pc.taobao.com/"
 
   livecheck do
