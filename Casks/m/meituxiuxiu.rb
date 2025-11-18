@@ -5,7 +5,7 @@ cask "meituxiuxiu" do
   url "https://xiuxiupc-dl.meitudata.com/xiuxiumac_setup.dmg",
       user_agent: :fake,
       verified:   "xiuxiupc-dl.meitudata.com/"
-  name "mtxx"
+  name "meituxiuxiu"
   name "美图秀秀"
   desc "Photo editing and beautification software"
   homepage "https://pc.meitu.com/"
