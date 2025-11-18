@@ -1,4 +1,4 @@
-cask "mtxx" do
+cask "meituxiuxiu" do
   version "2.1.70"
   sha256 :no_check
 
