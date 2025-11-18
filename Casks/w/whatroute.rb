@@ -12,6 +12,8 @@ cask "whatroute" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "WhatRoute.app"
 
   uninstall launchctl: [
