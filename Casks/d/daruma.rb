@@ -4,7 +4,7 @@ cask "daruma" do
 
   url "https://delivery.kadomaru.app/daruma/Daruma.dmg"
   name "daruma"
-  desc "Daruma is an app to track your goals using the Daruma Method."
+  desc "Track your goals using the Daruma Method"
   homepage "https://kadomaru.app/daruma/"
 
   livecheck do
