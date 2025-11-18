@@ -3,12 +3,12 @@ cask "wechatwork" do
   livecheck_folder = on_arch_conditional arm: "_arm64"
 
   on_arm do
-    version "5.0.0.99730"
-    sha256 "c82fec59348dae803673361a8ad32b660dd500619db64bcba4a8f1735d1510e1"
+    version "5.0.2.99762"
+    sha256 "8806d90a50785be5b7676f3edc6e592fdb786dbd808404d0e04423a1bac549fe"
   end
   on_intel do
-    version "5.0.0.91094"
-    sha256 "dba2f29946c371a0a326d152d7cb30fb7727624b1615baab2fdb0958dc0d8446"
+    version "5.0.2.91115"
+    sha256 "a7a120ef5c48f282e2b54bec1ba7f36f876419d23b372b4f505a546704fdfd6b"
   end
 
   url "https://dldir1.qq.com/foxmail/wecom-mac/updatebzl/WeCom_#{version}_#{arch}.dmg"
