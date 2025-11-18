@@ -17,7 +17,7 @@ cask "bbedit" do
 
   auto_updates true
   conflicts_with cask: "bbedit@14"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "BBEdit.app"
   binary "#{appdir}/BBEdit.app/Contents/Helpers/bbedit_tool", target: "bbedit"
