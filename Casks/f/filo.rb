@@ -1,4 +1,4 @@
-cask "filomail" do
+cask "filo" do
   arch arm: "arm64", intel: "x64"
 
   version "1.2.5"
