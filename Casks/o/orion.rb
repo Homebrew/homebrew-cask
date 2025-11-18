@@ -45,7 +45,7 @@ cask "orion" do
   end
   on_sonoma do
     version "0.99,138"
-    sha256 "8bf88d6a6348b0dc354a4244ec7bafedff4c1ba7723200c6f2ddf29d2723842b"
+    sha256 "97dc3ae233d38ece42644918ed2aa61234fdb874fe53dd9a0af55ea0fd91a315"
 
     url "https://cdn.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
@@ -56,7 +56,7 @@ cask "orion" do
   end
   on_sequoia do
     version "0.99,138"
-    sha256 "e1b7d59c55a256a648ac6b832b3faedc761e41281b48de439d5f67ef27ba7205"
+    sha256 "15393d092d5c0e589834a278e3bf265e2b40b5de02d82135e1c80c38b620789a"
 
     url "https://cdn.kagi.com/updates/15_0/#{version.csv.second}.zip"
 
