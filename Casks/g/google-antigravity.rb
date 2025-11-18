@@ -28,6 +28,8 @@ cask "google-antigravity" do
   zap trash: [
     "~/.antigravity/",
     "~/Library/Application Support/Antigravity",
+    "~/Library/Caches/com.google.antigravity",
+    "~/Library/HTTPStorages/com.google.antigravity",
     "~/Library/Preferences/com.google.antigravity.plist",
   ]
 end
