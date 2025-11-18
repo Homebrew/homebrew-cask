@@ -17,7 +17,8 @@ cask "archi" do
     strategy :page_match
   end
 
-  # Ref: https://github.com/archimatetool/archi/issues/1193#issuecomment-3547337245
+  # Upstream deletes any comments on their repo about downstream packaging
+  # Ref: https://github.com/Homebrew/homebrew-cask/issues/236819#issuecomment-3549051960
   disable! date:    "2025-11-18",
            because: "the developer intentionally makes distribution difficult for package managers"
 
