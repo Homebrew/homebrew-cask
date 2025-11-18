@@ -3,7 +3,7 @@ cask "daruma" do
   sha256 :no_check
 
   url "https://delivery.kadomaru.app/daruma/Daruma.dmg"
-  name "daruma"
+  name "Daruma"
   desc "Track your goals using the Daruma Method"
   homepage "https://kadomaru.app/daruma/"
 
@@ -12,6 +12,7 @@ cask "daruma" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sequoia"
 
   app "Daruma.app"
