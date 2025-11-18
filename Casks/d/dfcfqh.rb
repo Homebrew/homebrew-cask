@@ -12,7 +12,7 @@ cask "dfcfqh" do
   livecheck do
     url "https://qhclicfg.eastmoney.com/commonConfig/api/updateconfig/statusJsonMac"
     strategy :json do |json|
-      json.dig("officialVersion", "versionNum")
+      json.dig("officialVersion", "versionNum")
     end
   end
 
