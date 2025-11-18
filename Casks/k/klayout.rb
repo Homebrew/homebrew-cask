@@ -40,7 +40,7 @@ cask "klayout" do
   end
   on_sonoma do
     version "0.30.5"
-    sha256 "f5486a951a06290ba7a8154002aca1a996e7f91ab04b812cfbf694a4940e569b"
+    sha256 "8643b735bd9b8e1831ab33b8684d2cc9cd3a579b91e5bc1f65a8238074b69390"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sonoma-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
