@@ -4,7 +4,7 @@ cask "white-rabbit" do
 
   url "https://delivery.kadomaru.app/white-rabbit/White%20Rabbit.dmg"
   name "white-rabbit"
-  desc "White Rabbit optimizes SVG files in bulk and wraps them in HTML."
+  desc "Optimizes SVG files in bulk and wraps them in HTML"
   homepage "https://kadomaru.app/white-rabbit/"
 
   livecheck do
