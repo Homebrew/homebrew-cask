@@ -1,6 +1,6 @@
 cask "amazon-q" do
-  version "1.19.6"
-  sha256 "71698848d63f43e6f748e00bbd828e9d4647c6f58b8adcaa25210fb3297f97f9"
+  version "1.19.7"
+  sha256 "e506d851874a6e563ad0749c28831aa752b0e93ad94d16eeac04d44167c7476d"
 
   url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/Amazon%20Q.dmg",
       verified: "desktop-release.q.us-east-1.amazonaws.com/"
@@ -11,7 +11,13 @@ cask "amazon-q" do
   livecheck do
     url "https://desktop-release.q.us-east-1.amazonaws.com/index.json"
     strategy :json do |json|
-      json["versions"]&.map { |item| item["version"] }
+      json["versions"]&.map do |item|
+        # The JSON data contains versions of other software, so we have to
+        # specifically target Q versions
+        next unless item["packages"]&.find { |pkg| pkg["download"]&.match?(%r{/[^/]*?Q\.dmg$}i) }
+
+        item["version"]
+      end
     end
   end
 
