@@ -23,7 +23,7 @@ cask "monarch" do
         verified: "storage.googleapis.com/monarchlauncher/"
 
     livecheck do
-      url "https://storage.googleapis.com/monarchlauncher/#{arch}/latest.json"
+      url "https://storage.googleapis.com/monarchlauncher/#{arch}/latest.yml"
       strategy :electron_builder
     end
   end
