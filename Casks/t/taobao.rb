@@ -12,7 +12,7 @@ cask "taobao" do
   homepage "https://pc.taobao.com/"
 
   livecheck do
-    url "https://tblifecdn.taobao.com/taobaopc/updater/darwin/arm64/latest-mac.yml"
+    url "https://tblifecdn.taobao.com/taobaopc/updater/darwin/#{arch}/latest-mac.yml"
     strategy :electron_builder
   end
 
