@@ -17,6 +17,10 @@ cask "archi" do
     strategy :page_match
   end
 
+  # Ref: https://github.com/archimatetool/archi/issues/1193#issuecomment-3547337245
+  disable! date:    "2025-11-18",
+           because: "the developer intentionally makes distribution difficult for package managers"
+
   depends_on macos: ">= :big_sur"
 
   app "Archi.app"
