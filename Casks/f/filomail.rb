@@ -4,10 +4,10 @@ cask "filomail" do
   version "1.2.5"
   sha256 arm:   "d19dcf0031b52d5687570d9f569ea9e75b13d201a3bb65127fceec8f66ff1b07",
          intel: "cff6db5f649c61ab02798a5936acf7631f60bc45f38642583d96b40f4042fe15"
-         
+
   url "https://download.filomail.com/mac_upgrade/versions/latest/prod/#{arch}/Filo-#{arch}.dmg"
   name "FiloMail"
-  desc "An AI-powered email client designed for Gmail"
+  desc "AI-powered email client designed for Gmail"
   homepage "https://www.filomail.com/"
 
   livecheck do
