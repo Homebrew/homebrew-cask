@@ -3,8 +3,8 @@ cask "white-rabbit" do
   sha256 :no_check
 
   url "https://delivery.kadomaru.app/white-rabbit/White%20Rabbit.dmg"
-  name "white-rabbit"
-  desc "Optimizes SVG files in bulk and wraps them in HTML"
+  name "White Rabbit"
+  desc "SVG utility and optimiser"
   homepage "https://kadomaru.app/white-rabbit/"
 
   livecheck do
@@ -12,6 +12,7 @@ cask "white-rabbit" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sequoia"
 
   app "White Rabbit.app"
