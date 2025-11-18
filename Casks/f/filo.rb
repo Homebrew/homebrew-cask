@@ -10,7 +10,10 @@ cask "filo" do
   homepage "https://www.filomail.com/"
 
   livecheck do
-    skip "Release notes are not updated frequently enough"
+    url "https://download.filomail.com/mac_upgrade/versions/latest/prod/electronVersion.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
