@@ -2,7 +2,8 @@ cask "google-antigravity" do
   arch arm: "darwin-arm", intel: "darwin-x64"
 
   version "1.11.2,6251250307170304"
-  sha256 :no_check
+  sha256 arm:   "65894ed656464204ef6d780b4db1268780371ee08580a4e05897e430dca1e21c",
+         intel: "8eb01462dc4f26aba45be4992bda0b145d1ec210c63a6272578af27e59f23bef"
 
   url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/#{arch}/Antigravity.zip",
       verified: "edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/"
@@ -31,5 +32,6 @@ cask "google-antigravity" do
     "~/Library/Caches/com.google.antigravity",
     "~/Library/HTTPStorages/com.google.antigravity",
     "~/Library/Preferences/com.google.antigravity.plist",
+    "~/Library/Saved Application State/com.google.Antigravity.savedState",
   ]
 end
