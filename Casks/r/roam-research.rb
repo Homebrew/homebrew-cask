@@ -16,6 +16,8 @@ cask "roam-research" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :monterey"
+
   app "Roam Research.app"
 
   zap trash: [
