@@ -1,6 +1,6 @@
 cask "textadept" do
   version "12.9"
-  sha256 "91a187250c3b7257ab234502150225408afe05a50cbdd29ae530f4b8b5e177fa"
+  sha256 "91e96761f1982504473e9d9217eb9543472064be45ab42ad6653b4d597879a96"
 
   url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip",
       verified: "github.com/orbitalquark/textadept/"
