@@ -31,29 +31,16 @@ cask "canon-eos-utility" do
 
   auto_updates true
 
-  installer manual: "eum#{version.csv.first.major_minor_patch}-installer.app"
+  pkg "EU3Installer-M#{version.csv.first}.pkg"
 
-  uninstall delete: [
-              "/Applications/Canon Utilities/CameraSurveyProgram",
-              "/Applications/Canon Utilities/EOS Lens Registration Tool",
-              "/Applications/Canon Utilities/EOS Network Setting Tool",
-              "/Applications/Canon Utilities/EOS Utility",
-              "/Applications/Canon Utilities/EOS Web Service Registration Tool",
-              "/Library/Application Support/Canon_Inc_IC/ImageBrowser EX Shared/Camera/{A2E97706-9B71-482d-92F1-70B1D010B943}.plist",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/Auto Update Interface Library/Uninstall_for_EOS Utility.xml",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/Auto Update Interface Library/Uninstall_for_EOS Web Service Registration Tool.xml",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/CameraSurveyProgram",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Lens Registration Tool",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Utility 2",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Utility 3",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Utility Launcher",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Utility",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Web Service Registration Tool",
-            ],
-            rmdir:  [
-              "/Applications/Canon Utilities",
-              "/Library/Application Support/Canon_Inc_IC/ImageBrowser EX Shared",
-            ]
+  uninstall pkgutil: [
+    "com.canon.EOS-Lens-Registration-Tool",
+    "com.canon.EOS-Network-Setting-Tool",
+    "com.canon.EOS-Utility",
+    "com.canon.EOS-Utility-3",
+    "com.canon.EOS-Web-Service-Registration-Tool",
+    "jp.co.canon.ic.CameraSurveyProgram",
+  ]
 
   zap trash: [
     "~/Library/Caches/com.canon.EOS-Lens-Registration-Tool",
