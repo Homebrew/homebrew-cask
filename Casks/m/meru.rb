@@ -1,11 +1,11 @@
 cask "meru" do
   arch arm: "-arm64"
 
-  version "3.19.1"
-  sha256 arm:   "1d4a5ba8987b7bda832f41b4ffb854cbefed9f80c73c76125916081eecafa0af",
-         intel: "c477ff4047462dbe79d174af49d89b93c545fc804adfb5ffa7433a8d7b197ff2"
+  version "3.19.2"
+  sha256 arm:   "cd5822819bd1126de20833b30c7acdbdaf6acbfca3388455a06e431bfdddc352",
+         intel: "ec3de5c41d6776015b8dbb063cb159353804eb0966affb6239f6f666711aceb6"
 
-  url "https://github.com/zoidsh/meru/releases/download/#{version}/Meru-#{version}#{arch}.dmg",
+  url "https://github.com/zoidsh/meru/releases/download/v#{version}/Meru-#{version}#{arch}.dmg",
       verified: "github.com/zoidsh/meru/"
   name "Meru"
   desc "Gmail desktop app"
