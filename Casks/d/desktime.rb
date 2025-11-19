@@ -1,9 +1,9 @@
 cask "desktime" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.1.2"
-  sha256 arm:   "1731ed0dda0364bb601deeaa29db95de4c0b4beeaaebfd398d137bca013532ad",
-         intel: "a2c8b19952663a06b0971176d4130716f3ba7ff0c3708ddd439a1f8dbf337b87"
+  version "6.1.3"
+  sha256 arm:   "0a18b52931598f6bb18bc5ecd81bdaf6a1588117d068cb695f03dea14bba3520",
+         intel: "552ebf0718786a81e65eaa13361ce003d978a63e3b4099513fe444420ab6b599"
 
   url "https://desktime.com/storage/updates/electro-builder-auto-updater/stable/DeskTime-#{version}-#{arch}.dmg"
   name "DeskTime"
