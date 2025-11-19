@@ -1,6 +1,6 @@
 cask "qianwen" do
-  version "1.2.0,2511132025"
-  sha256 "d73aedf4688a2157aab086298775a4de882dccf3c32d911682fce479332f77bf"
+  version "1.2.0,2511182224"
+  sha256 "31a724dc3da342fe8ce725957153d31a9d9b1de0ce1372ff4a4d5507cdfd33ad"
 
   url "https://qianwen-portal-cdn.tongyi.com/native/app/#{version.csv.first}/darwin/universal/qwenclient_setup_#{version.csv.first}.#{version.csv.second}.dmg"
   name "qianwen"
