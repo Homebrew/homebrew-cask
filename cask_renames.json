@@ -1,6 +1,7 @@
 {
   "4k-video-downloaderplus": "4k-video-downloader+",
   "alinof-timer": "as-timer",
+  "amazon-q": "kiro-cli",
   "angband": "angband-app",
   "ankerslicer": "ankermake",
   "ankiapp": "algoapp",
@@ -23,7 +24,7 @@
   "cloudapp": "zight",
   "cmake": "cmake-app",
   "cocoapods": "cocoapods-app",
-  "codewhisperer": "amazon-q",
+  "codewhisperer": "kiro-cli",
   "cog": "cog-app",
   "copilot": "copilot-money",
   "coqide": "coq-platform",
