@@ -3,12 +3,12 @@ cask "bcut" do
   pkg_key = on_arch_conditional arm: "arm_pkg_url", intel: "package_download_url"
 
   on_arm do
-    version "3.11.12,21611757,ebe78361425681ac197a37e7ea87b2f9"
-    sha256 "3d0c401d887e846c8ff15a634b87f39870785e4ad557b10060cb5601c08d1155"
+    version "3.11.13,21669956,90c55123a1b1881b18375a302b20bd4d"
+    sha256 "3b53a44cc519c161fa3d70b5be927658dd157eb05824eb98d81dd91be1d33d99"
   end
   on_intel do
-    version "3.11.12,21606389,30b778fb88463be565349c103904bc83"
-    sha256 "5865cbd591ebcaf8a23cb88293b3569c99149f13c242082a3c94d96f9702e25c"
+    version "3.11.13,21669955,6208e9875f17706b8090b2ac034a908a"
+    sha256 "9054897275fde5b842ef3c075440d95f8ec1c5acc5ce34179ae8b182b88d307b"
   end
   on_intel do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
