@@ -3,7 +3,7 @@ cask "chatglm" do
   sha256 "af11fd807f05cb1fd4fdeeb52d4805248d3915308ec8a06fad8b565fc80f6c38"
 
   url "https://sfile.chatglm.cn/apk/xinyu/windows/chatglm_setup_darwin_universal_#{version}.dmg"
-  name "chatglm"
+  name "ChatGLM"
   name "智谱清言"
   desc "Desktop client for the ChatGLM AI chatbot"
   homepage "https://chatglm.cn/"
