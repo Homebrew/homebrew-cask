@@ -18,8 +18,8 @@ cask "wireshark-app" do
     end
   end
   on_monterey :or_newer do
-    version "4.6.0"
-    sha256 "79eda54875cb8f9a8e53e876574a9a2fccaba039c21c1a1e38971c398ca1e3f2"
+    version "4.6.1"
+    sha256 "bd0b7bd7778b7f8cd707c0acaa65ae58605546af44439843ebda1a4e3d595fab"
 
     url "https://www.wireshark.org/download/osx/all-versions/Wireshark%20#{version}.dmg"
 
