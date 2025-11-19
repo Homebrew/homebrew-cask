@@ -1,9 +1,9 @@
 cask "rustdesk" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.4.3"
-  sha256 arm:   "53160fa045d44c33b0fb6e78465dfc01b6190852c19944a37d582e295180d0a7",
-         intel: "bfd26a785058a6cbd2a39f093adab66c0bb487d4d0fe42151f3e31e93af96b41"
+  version "1.4.4"
+  sha256 arm:   "73fe42fb38235ec4d76d227bdc560192b4b68471562db366fb89c708cfb2799d",
+         intel: "d55ad47e41a7081dea8fdbf5a27c6375107adab57b977e44f388b281e75e37e3"
 
   url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-#{arch}.dmg",
       verified: "github.com/rustdesk/rustdesk/"
@@ -16,6 +16,8 @@ cask "rustdesk" do
     regex(/^v?(\d+(?:[.-]\d+)+)$/i)
     strategy :github_latest
   end
+
+  depends_on macos: ">= :monterey"
 
   app "RustDesk.app"
 
