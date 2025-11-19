@@ -12,7 +12,10 @@ cask "tencent-docs" do
     url "https://docs.qq.com/api/packageupgrade/update_manual"
     strategy :json do |json|
       update_info = json.dig("result", "update_info")
-      update_info&.match(/"version":\s*"([0-9.]+)"/)&.[](1)
+      next if update_info.blank?
+
+      update_json = Homebrew::Livecheck::Strategy::Json.parse_json(update_info)
+      update_json["version"]
     end
   end
 
