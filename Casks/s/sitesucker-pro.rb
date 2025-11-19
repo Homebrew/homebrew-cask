@@ -18,8 +18,8 @@ cask "sitesucker-pro" do
     end
   end
   on_tahoe :or_newer do
-    version "6.0.1"
-    sha256 "ebd4583f2196bcfa5fc14d46e247f39dfcb86e11d1c510105965cfa63efd54a6"
+    version "6.0.2"
+    sha256 "9a150328e81cb436cf52a9a34b1ace7c810f7e89dcf474c24cb6fc7da176c283"
 
     livecheck do
       url "https://ricks-apps.com/osx/sitesucker/pro-versions.plist"
