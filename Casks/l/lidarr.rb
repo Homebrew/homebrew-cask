@@ -1,9 +1,9 @@
 cask "lidarr" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.1.4866"
-  sha256 arm:   "5bc5c3b99e589501225dd006042776304b80fab7f7f50a0f79456f9bea638125",
-         intel: "9a392c255e25e5bff04c9c04f96141a43a7bcc46058032208e141660b07f6aa6"
+  version "3.1.0.4875"
+  sha256 arm:   "60236378eb5645fc217e2dfa6303558f1a2db8b5672c6332fd9ae30966ccbd26",
+         intel: "8450993360e485fc083204a84726fb002b6dfac54c29d583f8d4a22c3a59cf30"
 
   on_arm do
     depends_on macos: ">= :big_sur"
