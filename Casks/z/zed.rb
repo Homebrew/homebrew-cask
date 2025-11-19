@@ -1,9 +1,9 @@
 cask "zed" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.212.6"
-  sha256 arm:   "88bfce3ec217d2a3550f240473ccead70eb686fee1a77a5b50e727b736ee8dde",
-         intel: "50b69980e2f3028955ab7ab8e735a57a92e246a0bfda2a9e449d38418d42f972"
+  version "0.212.7"
+  sha256 arm:   "50012962070502a393b89d2e648b3d6548f8160a5f14bf4877c0865af67b27bb",
+         intel: "ad1d3e9f7f78931ff3b1c51d67c940bb59376212ab36330abc8791c1a6775b6c"
 
   url "https://zed.dev/api/releases/stable/#{version}/Zed-#{arch}.dmg"
   name "Zed"
