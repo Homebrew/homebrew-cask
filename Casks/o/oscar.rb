@@ -8,10 +8,7 @@ cask "oscar" do
   desc "CPAP Analysis Reporter"
   homepage "https://www.sleepfiles.com/OSCAR/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/OSCAR[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  disable! date: "2025-11-15", because: :unreachable
 
   app "OSCAR.app"
 

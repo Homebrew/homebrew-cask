@@ -8,6 +8,7 @@ cask "virtualbox@6" do
   homepage "https://www.virtualbox.org/"
 
   deprecate! date: "2024-11-15", because: :discontinued
+  disable! date: "2025-11-15", because: :discontinued
 
   conflicts_with cask: [
     "virtualbox",

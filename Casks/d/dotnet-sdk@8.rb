@@ -26,31 +26,11 @@ cask "dotnet-sdk@8" do
     end
   end
 
-  conflicts_with cask: [
-    "dotnet-runtime",
-    "dotnet-runtime@preview",
-    "dotnet-sdk",
-    "dotnet-sdk@9",
-    "dotnet-sdk@preview",
-  ]
-  depends_on macos: ">= :ventura"
+  depends_on cask: "dotnet-sdk"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
-  binary "/usr/local/share/dotnet/dotnet"
 
-  uninstall pkgutil: [
-    "com.microsoft.dotnet.*#{version.major_minor}*#{arch}",
-    "com.microsoft.dotnet.sharedhost*#{arch}",
-    "com.microsoft.netstandard.pack.targeting.*",
-  ]
+  uninstall pkgutil: "com.microsoft.dotnet.*#{version.major_minor}*#{arch}"
 
-  zap pkgutil: "com.microsoft.dotnet.*",
-      delete:  [
-        "/etc/paths.d/dotnet",
-        "/etc/paths.d/dotnet-cli-tools",
-      ],
-      trash:   [
-        "~/.dotnet",
-        "~/.nuget",
-      ]
+  # No zap stanza required
 end

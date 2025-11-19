@@ -1,6 +1,6 @@
 cask "pinwheel" do
-  version "1.8.0,101"
-  sha256 "cafb377e89d01980a78ef4cca8e5c606e41ea35843bd21cb298b7df7a6e99a02"
+  version "1.8.3,104"
+  sha256 "866dda45831e3133f8ee1f252cd27d970982cbfbd33b7cadab47ff934fc609d8"
 
   url "https://cdn2.bjango.com/pinwheel/versions/Pinwheel_#{version.csv.first.dots_to_underscores}-#{version.csv.second}.zip"
   name "Pinwheel"

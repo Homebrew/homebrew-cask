@@ -8,6 +8,7 @@ cask "qldds" do
   homepage "https://github.com/Marginal/QLdds"
 
   deprecate! date: "2024-11-17", because: :unmaintained
+  disable! date: "2025-11-17", because: :unmaintained
 
   pkg "QLdds_#{version.no_dots}.pkg"
 

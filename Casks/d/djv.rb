@@ -1,19 +1,17 @@
 cask "djv" do
-  version "3.1.1"
-  sha256 "17205f31597c7ba7fb749685c53ed411afee448f48af5f0fdab46dc2511dd6fe"
+  version "3.2.1"
+  sha256 "c3563bffe67aee6bf855b11bcf8af4d68bbe6682f746f4c7326ffdd9f9387c4f"
 
-  url "https://github.com/darbyjohnston/DJV/releases/download/#{version}/DJV-#{version}-Darwin-arm64.dmg",
-      verified: "github.com/darbyjohnston/DJV/"
+  url "https://github.com/grizzlypeak3d/DJV/releases/download/#{version}/DJV-#{version}-macOS-arm64.dmg",
+      verified: "github.com/grizzlypeak3d/DJV/"
   name "DJV"
   desc "Review software for VFX, animation, and film production"
-  homepage "https://darbyjohnston.github.io/DJV/"
+  homepage "https://grizzlypeak3d.github.io/DJV/"
 
   livecheck do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on arch: :arm64
 

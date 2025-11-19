@@ -1,6 +1,6 @@
 cask "futubull@legacy" do
-  version "15.35.13408"
-  sha256 "9df8524b2b4a000003937e0d467607a824c894b9c5987554cf57f7a106bb07ed"
+  version "15.39.13808"
+  sha256 "44fe8caac5267f23140f0e41b4e373e8d65c3cc21ee5e2143306071bfe7a5ac4"
 
   url "https://softwaredownload.futunn.com/FTNN_legacy_#{version}_Website.dmg",
       user_agent: :fake,

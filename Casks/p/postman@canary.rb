@@ -10,11 +10,7 @@ cask "postman@canary" do
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"
 
-  livecheck do
-    url "https://dl.pstmn.io/download/channel/canary/#{arch}"
-    regex(/PostmanCanary(?:%20|[._-])v?(\d+(?:\.\d+)+[._-]canary[._-]?(\d+(?:[.-]\d+)*))/i)
-    strategy :header_match
-  end
+  disable! date: "2025-11-15", because: :no_longer_available
 
   auto_updates true
 

@@ -1,9 +1,9 @@
 cask "kate" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "25.08,10550"
-  sha256 arm:   "084f1693ff3afd4fe16edcfd7e51766907dfff38349a1826722e7d657aebfacd",
-         intel: "bdca60c7a8d5b135bbf619de7785741f310a95e90bfdbffc3dd52ee9f93153c2"
+  version "25.12,10616"
+  sha256 arm:   "1a81ea696c38b5c890188d7f347adcbd55efdba5d1611cab3572792af06653a3",
+         intel: "8378cd8e4b664dc3920865eb3e0091cf992ce55a4f82791886482ee680bd4f58"
 
   url "https://cdn.kde.org/ci-builds/utilities/kate/release-#{version.csv.first}/macos-#{arch}/kate-release_#{version.csv.first}-#{version.csv.second}-macos-clang-#{arch}.dmg",
       verified: "cdn.kde.org/ci-builds/utilities/kate/"

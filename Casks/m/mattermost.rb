@@ -1,9 +1,9 @@
 cask "mattermost" do
   arch arm: "m1", intel: "x64"
 
-  version "5.13.2"
-  sha256 arm:   "1bc0ac5cbb8e70409f2572f9a2643a67822f85c1cc8f25c9850b80733170ecc0",
-         intel: "757742fc832dddb43aece57500019a40ba47c7e4f4be4037deb3bdcbd38db26d"
+  version "6.0.1"
+  sha256 arm:   "26781465df0a0b407832c4956471c32151973e433aadd8d517c3316b2907e876",
+         intel: "a646cf9922ea431b8152f86caf2576c495c1cc4b6d27318334226337d3ca80e9"
 
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac-#{arch}.zip"
   name "Mattermost"
@@ -15,7 +15,7 @@ cask "mattermost" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Mattermost.app"
 

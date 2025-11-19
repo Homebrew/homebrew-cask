@@ -1,6 +1,6 @@
 cask "webviewscreensaver" do
-  version "2.4"
-  sha256 "08467e5723b167c3f0ad93db9757048ccb3e9d5ef34f00fcfb9435360191c5b1"
+  version "2.5"
+  sha256 "6a78ae693ff7b166b6f8f8078b0037f0bf9c8020fe33a618e6db3efc26c88936"
 
   url "https://github.com/liquidx/webviewscreensaver/releases/download/v#{version}/WebViewScreenSaver-#{version}.zip"
   name "WebViewScreenSaver"

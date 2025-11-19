@@ -28,7 +28,6 @@ cask "thorium" do
     end
   end
 
-  conflicts_with cask: "alex313031-thorium"
   depends_on macos: ">= :big_sur"
 
   app "Thorium.app"

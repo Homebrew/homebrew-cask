@@ -1,11 +1,11 @@
 cask "handy" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.6.0"
-  sha256 arm:   "31488bfe2e91b4abcbdd5ad77180827b08660c5c005a297891983f1123df153c",
-         intel: "59636951f5811ea562197b65b260390caaaed194d695bafdab401d8608a3e458"
+  version "0.6.1"
+  sha256 arm:   "00e23cb7404ccc9f29e0c54da27e70c320938a06c312acf1d49083f9f89c20f2",
+         intel: "7467bf6b9523279ca04b1d1fe37276c4ee7cef4cc2e5bec142c8906d5b8f3c25"
 
-  url "https://github.com/cjpais/Handy/releases/download/v#{version}/Handy_#{version}_#{arch}_darwin.dmg",
+  url "https://github.com/cjpais/Handy/releases/download/v#{version}/Handy_#{version}_#{arch}.dmg",
       verified: "github.com/cjpais/Handy/"
   name "Handy"
   desc "Speech to text application"

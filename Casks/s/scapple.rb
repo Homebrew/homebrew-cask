@@ -1,5 +1,5 @@
 cask "scapple" do
-  version "1.5.3"
+  version "1.5.4"
   sha256 :no_check
 
   url "https://scrivener.s3.amazonaws.com/Scapple.dmg",

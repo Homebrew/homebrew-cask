@@ -9,6 +9,7 @@ cask "tsh" do
   homepage "https://goteleport.com/"
 
   deprecate! date: "2024-11-18", because: :unmaintained, replacement_cask: "teleport"
+  disable! date: "2025-11-18", because: :unmaintained, replacement_cask: "teleport"
 
   conflicts_with cask: [
     "teleport",

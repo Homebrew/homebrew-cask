@@ -1,9 +1,9 @@
 cask "dash-dash" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "22.1.3"
-  sha256 arm:   "c7b7842cce5d2dbef5fe339b5e96730dd2483716169db81e6045acc1cabed271",
-         intel: "f7e84707a6fce85176c5d613b391ec269657d9a3feed32f910da538c2251da3d"
+  version "23.0.0"
+  sha256 arm:   "dc9de512c2ce8c9aacd0288a17b8accc5dae37862254d8f29bd7dd24e962d4e4",
+         intel: "7d65a8ab83110e9bcb2626d26858096931a7b9d56a0302197f6749ec40465c89"
 
   url "https://github.com/dashpay/dash/releases/download/v#{version}/dashcore-#{version}-#{arch}-apple-darwin.zip",
       verified: "github.com/dashpay/dash/"
@@ -15,6 +15,8 @@ cask "dash-dash" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :big_sur"
 

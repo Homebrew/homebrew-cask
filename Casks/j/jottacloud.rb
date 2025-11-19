@@ -1,6 +1,6 @@
 cask "jottacloud" do
-  version "25.11.04.149375,0f590ffe625ba79771bf6ccffdc9e25884b51a01a38c139edd38537b158d8d30"
-  sha256 "0f590ffe625ba79771bf6ccffdc9e25884b51a01a38c139edd38537b158d8d30"
+  version "25.11.17.150528,22d63d95d5be86a50f0aa41c4762d0bb57e4f19f33d5ae303844e30d0268932c"
+  sha256 "22d63d95d5be86a50f0aa41c4762d0bb57e4f19f33d5ae303844e30d0268932c"
 
   url "https://sw.jotta.cloud/desktop/download/data/#{version.csv.second}/Jottacloud.dmg",
       verified: "sw.jotta.cloud/"

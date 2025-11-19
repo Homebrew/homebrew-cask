@@ -1,7 +1,7 @@
 cask "perimeter81" do
   # NOTE: "81" is not a version number, but an intrinsic part of the product name
-  version "12.1.0.6369"
-  sha256 "fcaec834d2a1cb45fdfefcc957718d7efd285b914e31992513ef52bcb94ff4c6"
+  version "12.2.0.6683"
+  sha256 "e29a9f40900d7ae88b228c412acf45c5eeb199f47de8928c2901db492eb58868"
 
   url "https://static.perimeter81.com/agents/mac/Harmony_SASE_#{version}.pkg"
   name "Perimeter 81"

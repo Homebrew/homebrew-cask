@@ -1,9 +1,9 @@
 cask "laserpecker-design-space" do
   arch arm: "M1", intel: "Mac"
 
-  version "2.9.0"
-  sha256 arm:   "9ac1e62b487388a0b6bd3721b1e86202f555f69cfd2f5bd63ae37d670a5b41aa",
-         intel: "c7f436ad205b3b1791b980dc99cfbdd3b80fb1504cb1d1a16aabd6567ea8a783"
+  version "2.10.0"
+  sha256 arm:   "8dc17a4b35038d00cd0c30efdaa9b1ca558654538d17527d6e73fd108c426a7d",
+         intel: "249058f8b1a57b3ba8e6df182a62518ff8ef4117098c5a50b89b478017643938"
 
   url "https://laserpecker-prod.oss-cn-hongkong.aliyuncs.com/apply/software/pc/LaserPecker-Design-Space-#{arch}-#{version}.dmg",
       verified: "laserpecker-prod.oss-cn-hongkong.aliyuncs.com/"

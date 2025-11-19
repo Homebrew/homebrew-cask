@@ -9,6 +9,7 @@ cask "do-not-disturb" do
   homepage "https://objective-see.org/products/dnd.html"
 
   deprecate! date: "2024-11-16", because: :unmaintained
+  disable! date: "2025-11-16", because: :unmaintained
 
   installer script: {
     executable: "#{staged_path}/Do Not Disturb Installer.app/Contents/MacOS/Do Not Disturb Installer",

@@ -8,10 +8,8 @@ cask "distroav" do
   desc "NDI integration for OBS Studio"
   homepage "https://distroav.org/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  # Reference: https://github.com/Homebrew/homebrew-cask/pull/235792
+  disable! date: "2026-11-14", because: "the package is not compatible with Homebrew's installation parameters"
 
   depends_on cask: "libndi"
 

@@ -1,6 +1,6 @@
 cask "screenmemory" do
-  version "2.2.9"
-  sha256 "3b29bb7eb1754636ab7cedae6cefe961bc2fd19cf0be6037e4b3d36bcb2476b7"
+  version "2.2.16"
+  sha256 "c8d06dfce586652a632dfeb25da013879c41c92ce9684c6ae5c0fb7c5095b688"
 
   url "https://f005.backblazeb2.com/file/screenmemory/ScreenMemory.#{version}.dmg",
       verified: "f005.backblazeb2.com/file/screenmemory/"

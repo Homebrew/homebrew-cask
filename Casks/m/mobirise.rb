@@ -10,7 +10,7 @@ cask "mobirise" do
   homepage "https://mobirise.com/"
 
   livecheck do
-    url "https://mobirise.com/history.html"
+    url "https://history.mobirisesite.com"
     regex(/>\s*Mobirise\s+v?(\d+(?:\.\d+)+)/i)
   end
 

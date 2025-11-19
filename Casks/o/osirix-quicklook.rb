@@ -8,6 +8,7 @@ cask "osirix-quicklook" do
   homepage "https://www.osirix-viewer.com/"
 
   deprecate! date: "2024-11-15", because: :unmaintained
+  disable! date: "2025-11-15", because: :unmaintained
 
   pkg "OsiriXQuickLookInstaller.pkg"
 

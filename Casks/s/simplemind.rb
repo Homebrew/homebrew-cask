@@ -1,6 +1,6 @@
 cask "simplemind" do
-  version "2.7.0,b3117"
-  sha256 "f64c35f92b0f40fc52ab96bc935d9172fcbcf99578f329c1a103e19d2e5cd777"
+  version "2.8.0,b3221"
+  sha256 "da5844c9cc8a675aae26e19731ed5662afe29de729216d5ed26fb5016264cf13"
 
   url "https://modelmakertools.com/simplemind/SM2Mac_G7Ynr4BfJYzhbHtCCTr/SimpleMindMacOS#{version.csv.first.no_dots}#{version.csv.second}.dmg",
       verified: "modelmakertools.com/simplemind/"
@@ -17,6 +17,7 @@ cask "simplemind" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "SimpleMind Pro.app"
 

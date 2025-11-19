@@ -8,6 +8,7 @@ cask "maelstrom" do
   homepage "https://www.libsdl.org/projects/Maelstrom/index.html"
 
   deprecate! date: "2024-11-16", because: :unmaintained
+  disable! date: "2025-11-16", because: :unmaintained
 
   app "Maelstrom.app"
 

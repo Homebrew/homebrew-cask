@@ -8,6 +8,7 @@ cask "denemo" do
   homepage "https://denemo.org/"
 
   deprecate! date: "2024-11-16", because: :discontinued
+  disable! date: "2025-11-16", because: :discontinued
 
   app "Denemo.app"
 
