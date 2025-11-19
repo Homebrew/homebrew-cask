@@ -1,6 +1,6 @@
 cask "cmake-app" do
-  version "4.1.3"
-  sha256 "c8a8bf120c438a8ace960d6caf22481f9432d23fb5176bef9fb9ab4dfeb5abe8"
+  version "4.2.0"
+  sha256 "03c2ed23db57bc69e881263bd3e85cac1b2b21e6408032856eefb210ba786934"
 
   on_arm do
     depends_on macos: ">= :big_sur"
