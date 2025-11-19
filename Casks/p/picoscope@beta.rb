@@ -1,6 +1,6 @@
 cask "picoscope@beta" do
-  version "7.2.10.7663"
-  sha256 "4b2f6a2338e82432210f1ecfad867a7199c35e060e52e152ea9d9ff53d962e92"
+  version "7.2.10.7737"
+  sha256 "28e3cc803a36c4c0ab109e8396dc0bd1a8988297471b7c1702f09936a875499b"
 
   url "https://www.picotech.com/download/software/beta/PicoScope_#{version.major}_TandM_Early_Access_#{version}.x64.pkg"
   name "PicoScope beta"
