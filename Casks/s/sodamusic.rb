@@ -4,9 +4,9 @@ cask "sodamusic" do
 
   url "https://lf-luna-release.qishui.com/obj/luna-release/#{version}/243782093/SodaMusic-v#{version}-official-darwin_universal.dmg",
       verified: "lf-luna-release.qishui.com/obj/luna-release/"
-  name "sodamusic"
+  name "SodaMusic"
   name "汽水音乐"
-  desc "Music app by Douyin with personalized recommendations and massive library"
+  desc "Music app"
   homepage "https://www.douyin.com/qishui"
 
   livecheck do
