@@ -1,6 +1,6 @@
 cask "liquibase-secure" do
-  version "5.0.1"
-  sha256 "5d5abaed04b8b1b413208413cfac5e36aaf009262159acfd7c2bf78baacd893d"
+  version "5.0.2"
+  sha256 "0330c556d8adf1fbc95fe4685043b98438b3d6e723e3c5c243066b1926bf10f2"
 
   url "https://package.liquibase.com/downloads/secure/homebrew/liquibase-secure-#{version}.tar.gz"
   name "Liquibase Secure"
