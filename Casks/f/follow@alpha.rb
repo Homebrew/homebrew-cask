@@ -11,8 +11,8 @@ cask "follow@alpha" do
   disable! date: "2025-01-10", because: :discontinued
 
   conflicts_with cask: [
-    "follow",
-    "follow@nightly",
+    "folo",
+    "folo@nightly",
   ]
 
   app "Follow.app"

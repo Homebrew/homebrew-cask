@@ -10,7 +10,5 @@ cask "xamarin-studio" do
 
   disable! date: "2024-12-16", because: :discontinued
 
-  conflicts_with cask: "xamarin"
-
   app "Xamarin Studio.app"
 end
