@@ -1,6 +1,6 @@
 cask "backdrop" do
-  version "2.0.2,67"
-  sha256 "492edb5e5de0fd67e263100b970045f0364d1c91053d78d567b78ad335875239"
+  version "2.1.0,68"
+  sha256 "87f58f471191e11f9b217ec5064aa85993cbbb3b5f5a61cbdc4add8ba14a5344"
 
   url "https://cdn.cindori.com/apps/backdrop/updates/#{version.csv.first}-#{version.csv.second}/Backdrop.dmg"
   name "Backdrop"
@@ -13,6 +13,7 @@ cask "backdrop" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sonoma"
 
   app "Backdrop.app"
 
