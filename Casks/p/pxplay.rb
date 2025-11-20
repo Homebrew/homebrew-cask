@@ -1,7 +1,7 @@
 cask "pxplay" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.5.0,7.0.0"
+  version "1.5.0,7.1.0"
   sha256 arm:   "6358c6f0615859456530d15806d61a4c2f59f658b1c18f9817a96b2706bc720d",
          intel: "28e4e25880d7adc5e19a4919817bc520c0c45f43fc3c61529432c6ec01192987"
 
