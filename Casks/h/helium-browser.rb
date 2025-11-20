@@ -1,9 +1,9 @@
 cask "helium-browser" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.6.5.1"
-  sha256 arm:   "6731bf4904f832e0087e034a1829c78654b45381350d25dd1fe63f048fde269c",
-         intel: "1fa35764584248c33231d3b9f3ac82315990b9bcf4870932e81ae295a2950845"
+  version "0.6.7.1"
+  sha256 arm:   "794f80f54f5e38dbac85a4757273ad1c6c3ba9e8ec3743acc09e6177b0886e8c",
+         intel: "f9f385a40f8fc180acf0c4cbeb78aae4489a91339d07576830ba501ee2ec4e90"
 
   url "https://github.com/imputnet/helium-macos/releases/download/#{version}/helium_#{version}_#{arch}-macos.dmg",
       verified: "github.com/imputnet/helium-macos/"
