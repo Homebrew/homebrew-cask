@@ -1,6 +1,6 @@
 cask "chronycontrol" do
-  version "1.6.1"
-  sha256 "dae3db713650c6e87b323dafc74994d60609c74502604b7c7aad1b0c61abac3e"
+  version "1.6.2"
+  sha256 "d7438f52247b2c9a64d12f9597f94fa0ba5b0a7b7830e0e7b3a9ef67a9f65a6b"
 
   url "https://www.whatroute.net/software/chronycontrol-#{version}.zip"
   name "ChronyControl"
@@ -31,8 +31,4 @@ cask "chronycontrol" do
     "/etc/chrony.d",
     "/var/log/chrony",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
