@@ -11,7 +11,7 @@ cask "nutstore" do
   livecheck do
     url "https://www.jianguoyun.com/static/exe/latestVersion"
     strategy :json do |json|
-      json.dig(7, "exVer")
+      json.find { |item| item["OS"] == "osx" }&.fetch("exVer", nil)
     end
   end
 
