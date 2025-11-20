@@ -9,17 +9,13 @@ cask "xunfeitingjian" do
   homepage "https://www.iflyrec.com/html/iflyrecAssistant.html"
 
   livecheck do
-    url "https://www.iflyrec.com/UpdateService/v1/updates/hardware/deltaPatch/check"
-    strategy :page_match do |_page|
-      json_data = "{\"clientVersion\":\"#{version}\",\"deviceType\":\"MacOSX\",\"platform\":\"63\"}"
-
-      cmd = "curl -s -X POST -H 'Content-Type: application/json' -d '#{json_data}' '#{url}'"
-      result = `#{cmd}`
-
-      require "json"
-      json_response = JSON.parse(result)
-
-      json_response["biz"]["latestVersion"] if json_response["code"] == "000000"
+    url "https://www.iflyrec.com/UpdateService/v1/updates/hardware/deltaPatch/check", post_json: {
+      clientVersion: version.to_s,
+      deviceType:    "MacOSX",
+      platform:      "63",
+    }
+    strategy :json do |json|
+      json.dig("biz", "latestVersion")
     end
   end
 
