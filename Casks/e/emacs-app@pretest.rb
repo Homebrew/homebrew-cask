@@ -15,8 +15,8 @@ cask "emacs-app@pretest" do
   end
 
   conflicts_with cask: [
-    "emacs",
-    "emacs@nightly",
+    "emacs-app",
+    "emacs-app@nightly",
   ]
 
   app "Emacs.app"
