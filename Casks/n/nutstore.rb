@@ -1,36 +1,33 @@
 cask "nutstore" do
   version "6.4.4"
-  sha256 :no_check
+  sha256 "c52b17bac3c039334d55275f87088c442861727c36264a6054c9d5436404eebb"
 
-  url "https://www.jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg"
+  url "https://dc-pkg-cdn.jianguoyun.com/static/exe/ex/#{version}/nutstore_client-#{version}-osx-app.zip"
   name "Nutstore"
+  name "坚果云"
   desc "Cloud storage service platform"
   homepage "https://www.jianguoyun.com/"
 
   livecheck do
-    url "https://help.jianguoyun.com/?p=1419"
-    regex(%r{Mac(?:/Linux)?\s+(\d+(?:\.\d+)+)}i)
+    url "https://www.jianguoyun.com/static/exe/latestVersion"
+    strategy :json do |json|
+      json.dig(7, "exVer")
+    end
   end
 
   auto_updates true
 
-  installer script: {
-    executable: "坚果云安装程序.app/Contents/MacOS/NutstoreOnlineInstaller",
-    args:       ["-q"],
-  }
-
-  uninstall launchctl:  "net.nutstore.agent",
-            quit:       [
-              "net.nutstore.NutstoreJavaBE",
-              "net.nutstore.osxapp",
-              "net.nutstore.osxapp.FinderSyncExtension",
-            ],
-            login_item: "Nutstore",
-            delete:     "/Applications/Nutstore.app"
+  app "Nutstore.app"
 
   zap trash: [
+    "~/.nutstore",
+    "~/Library/Application Scripts/net.nutstore.osxapp.FileProvider",
+    "~/Library/Application Scripts/net.nutstore.osxapp.FinderSyncExtension",
+    "~/Library/Application Support/Nutstore",
+    "~/Library/Containers/net.nutstore.osxapp.FileProvider",
+    "~/Library/Containers/net.nutstore.osxapp.FinderSyncExtension",
     "~/Library/Preferences/net.nutstore.NutstoreJavaBE.plist",
-    "~/Library/Preferences/net.nutstore.osxapp.plist",
-    "~/Library/Saved Application State/net.nutstore.osxapp.nutstoreInstaller.savedState",
+    "~/Nutstore Files",
+    "~/NutstoreCloudBridge",
   ]
 end
