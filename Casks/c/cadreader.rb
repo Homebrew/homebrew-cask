@@ -18,10 +18,7 @@ cask "cadreader" do
 
   app "CAD快速看图.app"
 
-  zap trash: [
-    "~/Documents/CADReader",
-    "~/Library/Preferences/com.glodonyuntu.cadreadermac.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.glodonyuntu.cadreadermac.plist"
 
   caveats do
     requires_rosetta
