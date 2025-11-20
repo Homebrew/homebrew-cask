@@ -12,7 +12,7 @@ cask "wiso-steuer-2026" do
     url :url
     strategy :extract_plist
   end
-  
+
   app "SteuerMac 2026.app", target: "WISO Steuer 2026.app"
 
   zap trash: [
