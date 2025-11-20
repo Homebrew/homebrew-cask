@@ -1,6 +1,6 @@
 cask "nutstore" do
-  version "6.4.4"
-  sha256 "c52b17bac3c039334d55275f87088c442861727c36264a6054c9d5436404eebb"
+  version "6.4.5"
+  sha256 "9531351e48371931a086ee589eabb27e426085b5b70186d1436e9c48d51e354f"
 
   url "https://dc-pkg-cdn.jianguoyun.com/static/exe/ex/#{version}/nutstore_client-#{version}-osx-app.zip"
   name "Nutstore"
@@ -11,7 +11,12 @@ cask "nutstore" do
   livecheck do
     url "https://www.jianguoyun.com/static/exe/latestVersion"
     strategy :json do |json|
-      json.find { |item| item["OS"] == "osx" }&.fetch("exVer", nil)
+      osx_entry = json.find { |item| item["OS"] == "osx" }
+
+      if osx_entry && (ex_url = osx_entry["exUrl"])
+        match = ex_url.match(/nutstore_client-(\d+\.\d+\.\d+)-osx-app\.zip/)
+        match[1] if match
+      end
     end
   end
 
