@@ -28,7 +28,8 @@ cask "xunfeitingjian" do
 
   pkg "iflyrec_meeting_v#{version}_JS10010016M.pkg"
 
-  uninstall pkgutil: "com.iflyrec.iflyrecClient"
+  uninstall quit:    "com.electron.iflyrecclient",
+            pkgutil: "com.iflyrec.iflyrecClient"
 
   zap trash: [
     "~/Library/Application Support/iflyrecAssistant",
