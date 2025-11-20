@@ -20,7 +20,6 @@ cask "teleport-suite@17" do
     "teleport-suite",
     "teleport-suite@16",
     "tsh",
-    "tsh@13",
   ]
 
   pkg "teleport-#{version}.pkg"

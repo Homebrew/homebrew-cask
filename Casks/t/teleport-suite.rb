@@ -16,7 +16,6 @@ cask "teleport-suite" do
   conflicts_with cask: [
     "teleport-suite@16",
     "tsh",
-    "tsh@13",
   ]
 
   pkg "teleport-#{version}.pkg"
