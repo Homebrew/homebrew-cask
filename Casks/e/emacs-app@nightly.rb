@@ -21,8 +21,8 @@ cask "emacs-app@nightly" do
   end
 
   conflicts_with cask: [
-    "emacs",
-    "emacs@pretest",
+    "emacs-app",
+    "emacs-app@pretest",
   ]
   depends_on macos: ">= :monterey"
 
