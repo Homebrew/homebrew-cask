@@ -1,6 +1,6 @@
 cask "opensesame" do
-  version "4.1.5,py313"
-  sha256 "7072758229d54fc6fbcb647ff64dc92574c5aa9a27021085cf2568501a415ff0"
+  version "4.1.6,py313"
+  sha256 "0950f23d88305c59e68b0a6d0be568791bd81d4bf7d329634eeb66a1010efcdf"
 
   url "https://github.com/open-cogsci/OpenSesame/releases/download/release%2F#{version.csv.first}/opensesame_#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-macos-x64-1.dmg",
       verified: "github.com/open-cogsci/OpenSesame/"
