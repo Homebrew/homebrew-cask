@@ -2,8 +2,8 @@ cask "wealthfolio" do
   arch arm: "aarch64", intel: "x64"
 
   version "2.0.0"
-  sha256 arm:   "d79dc8e07ecea76f78764e57f0a3cc8ce0a063d8364fa0461dfcc350eb701440",
-         intel: "8400c218cdd5229fe1f10cc3466a80fd2cfe3b627a2f679e4e2c9d18c1696965"
+  sha256 arm:   "2e1fc2420574324ec9b426d719005470a05e23cce5909378806b7a61a8d11dfe",
+         intel: "6f119288002653956783b5459a9a13b19bf9018a26acc204e35eeb56cfece620"
 
   url "https://github.com/afadil/wealthfolio/releases/download/v#{version}/Wealthfolio_#{version}_#{arch}.dmg",
       verified: "github.com/afadil/wealthfolio/"
