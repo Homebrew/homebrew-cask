@@ -5,7 +5,7 @@ cask "cc-mate" do
   url "https://github.com/djyde/ccmate-release/releases/download/app-v#{version}/CC.Mate_#{version}_universal.dmg"
   name "CC Mate"
   desc "Application for managing Claude Code configuration files"
-  homepage "https://github.com/djyde/ccmate-release"
+  homepage "https://randynamic.org/ccmate"
 
   livecheck do
     url "https://github.com/djyde/ccmate-release/releases.atom"
