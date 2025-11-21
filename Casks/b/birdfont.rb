@@ -13,8 +13,8 @@ cask "birdfont" do
     end
   end
   on_sonoma :or_newer do
-    version "6.13.2"
-    sha256 "77c7d7a3a978b0af57cc9dbb2593432d517b02159fdd7dec382390c11430c9ea"
+    version "6.14.11"
+    sha256 "14f854001bfbfe4372f32205e1dd5d49c4d6a6696f10cd07ef797d28b51f5d6b"
 
     livecheck do
       url "https://birdfont.org/purchase.php"
