@@ -1,8 +1,8 @@
 cask "flowdown" do
-  version "4.0.9"
-  sha256 "f9e3a8055c2c41c4f757a0d4528cfde74e0ec80bdf6eea160069191790779f45"
+  version "4.0.10"
+  sha256 "bb0ce191a63bfc29126327c8d3bc398a49163e32183a8b98244c928ab073c90d"
 
-  url "https://github.com/Lakr233/FlowDown/releases/download/#{version}/FlowDown.zip",
+  url "https://github.com/Lakr233/FlowDown/releases/download/#{version}/FlowDown.app.zip",
       verified: "github.com/Lakr233/FlowDown/"
   name "FlowDown"
   desc "AI agent"
