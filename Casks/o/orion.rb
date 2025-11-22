@@ -23,7 +23,7 @@ cask "orion" do
   end
   on_monterey do
     version "0.99,138"
-    sha256 "fe7f1bc428a05f10dd5679139483f4331266ca275b2fa3a93dafda0c1b5203e9"
+    sha256 "7d88853382772dabcc1af42bc6c5e0de07d8c35449014581a23c3928ba9c8cdf"
 
     url "https://cdn.kagi.com/updates/12_0/#{version.csv.second}.zip"
 
