@@ -1,6 +1,6 @@
 cask "timemator" do
-  version "3.1.2"
-  sha256 "de3f1ee44381385d15aef351558560e9892e3b885923c7f34b338fbfa5bb1c50"
+  version "3.2.0"
+  sha256 "b9b9f8a0b7aa792a372a5cad82b9319015e539cc1769a31797681b397e72c3da"
 
   url "https://catforce-timemator.s3.amazonaws.com/releases/Timemator_#{version}.dmg",
       verified: "catforce-timemator.s3.amazonaws.com/"
