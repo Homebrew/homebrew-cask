@@ -18,6 +18,8 @@ cask "abbyy-finereader-pdf" do
   depends_on macos: ">= :big_sur"
 
   app "ABBYY FineReader PDF.app"
+  binary "#{appdir}/ABBYY FineReader PDF.app/Contents/MacOS/ABBYY FineReader PDF Viewer.app",
+         target: "#{appdir}/ABBYY FineReader PDF Viewer.app"
 
   zap trash: [
     "~/Library/Application Support/ABBYY",
