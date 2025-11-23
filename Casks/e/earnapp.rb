@@ -16,11 +16,12 @@ cask "earnapp" do
 
   pkg "earnapp-macos-#{version}.pkg"
 
-  uninstall quit: [
-    "com.earnapp",
-    "io.luminati.sdk.net-updater",
-    "io.luminati.sdk.net-updater-launcher",
-  ]
+  uninstall quit:    [
+              "com.earnapp",
+              "io.luminati.sdk.net-updater",
+              "io.luminati.sdk.net-updater-launcher",
+            ],
+            pkgutil: "com.pkg.(null)"
 
   zap trash: [
     "~/Library/Caches/com.earnapp",
