@@ -27,6 +27,7 @@ cask "antigravity" do
   depends_on macos: ">= :big_sur"
 
   app "Antigravity.app"
+  binary "#{appdir}/Antigravity.app/Contents/Resources/app/bin/antigravity", target: "agy"
 
   zap trash: [
     "~/.antigravity/",
