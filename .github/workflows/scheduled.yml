@@ -1,0 +1,107 @@
+name: Scheduled online check
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - .github/workflows/scheduled.yml
+  schedule:
+    # Once every day at 1AM
+    - cron: "0 1 * * *"
+
+concurrency:
+  group: scheduled
+  cancel-in-progress: true
+
+jobs:
+  create_matrix:
+    if: startsWith( github.repository, 'Homebrew/' )
+    runs-on: macos-latest
+    outputs:
+      json: ${{ steps.matrix.outputs.json }}
+    env:
+      TEST_COUNT: 50
+      TAP: homebrew/cask
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: false
+          cask: true
+
+      - run: brew install coreutils
+
+      - name: Generate matrix
+        id: matrix
+        run: |
+          casks="$(find "$(brew --repo "${TAP}")/Casks" -type f | shuf -n "${TEST_COUNT}" | xargs -I{} basename {} .rb)"
+          # shellcheck disable=SC2086
+          json="$(
+            brew info --json=v2 --casks $casks |
+            jq --compact-output '[.casks[] | select(.deprecated == false and .disabled == false) | .full_token]'
+          )"
+          echo "json=${json}" >> "$GITHUB_OUTPUT"
+
+  audit_online:
+    if: startsWith( github.repository, 'Homebrew/' )
+    runs-on: ${{ matrix.os }}
+    needs: create_matrix
+    name: "Online check (${{ matrix.os }}): ${{ matrix.cask }}"
+    env:
+      HOMEBREW_DEVELOPER: 1
+      CASK: ${{ matrix.cask }}
+      HOMEBREW_GITHUB_API_TOKEN: "${{ github.token }}"
+      GH_TOKEN: "${{ github.token }}"
+      REPORTING_ISSUE: 172732
+    permissions:
+      issues: write # To create issues
+    strategy:
+      fail-fast: false
+      matrix:
+        cask: ${{ fromJson(needs.create_matrix.outputs.json) }}
+        os: [macos-latest]
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: false
+          cask: true
+
+      - name: Check cask source is not archived.
+        id: archived
+        run: brew audit --cask --online --skip-style --only github_repository_archived,gitlab_repository_archived "$CASK"
+
+      - name: Report online issues
+        if: ${{ failure() && steps.archived.conclusion == 'failure' }}
+        run: |
+          gh issue comment "$REPORTING_ISSUE" \
+                           --repo homebrew/homebrew-cask \
+                           --body "$CASK should be archived. Check $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
+      - name: Check cask for unavailable homepage.
+        id: homepage
+        run: brew audit --cask --online --skip-style --only homepage "$CASK"
+
+      - name: Report homepage issues
+        if: ${{ failure() && steps.homepage.conclusion == 'failure' }}
+        run:  |
+          gh issue comment "$REPORTING_ISSUE" \
+                           --repo homebrew/homebrew-cask \
+                           --body "$CASK has homepage issues. Check $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
+      - name: Check cask for missing sources.
+        id: fetch
+        run: brew fetch --cask "$CASK"
+
+      - name: Report fetch issues
+        if: ${{ failure() && steps.fetch.conclusion == 'failure' }}
+        run:  |
+          gh issue comment "$REPORTING_ISSUE" \
+                           --repo homebrew/homebrew-cask \
+                           --body "$CASK source has problems. Check $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

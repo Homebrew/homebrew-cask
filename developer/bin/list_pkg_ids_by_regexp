@@ -15,7 +15,7 @@ shopt -s nocasematch # case-insensitive regular expressions
 ### functions
 ###
 
-warn () {
+warn() {
     local message="$@"
     message="${message//\\t/$'\011'}"
     message="${message//\\n/$'\012'}"
@@ -23,12 +23,12 @@ warn () {
     printf "%s\n" "$message" 1>&2
 }
 
-die () {
+die() {
     warn "$@"
     exit 1
 }
 
-fail_informatively () {
+fail_informatively() {
     local message="No match."
     if ! [[ "$1" =~ '*' ]]; then
         message="$message  Suggestion: try '${1}.*'"
@@ -36,7 +36,7 @@ fail_informatively () {
     die "$message"
 }
 
-analyze_regexp () {
+analyze_regexp() {
     if [[ "$1" =~ ^\^ ]]; then
         warn "Note: pkgutil regular expressions are implicitly anchored with '^' at start"
     fi
@@ -49,7 +49,7 @@ analyze_regexp () {
 ### main
 ###
 
-_list_pkg_ids_by_regexp () {
+_list_pkg_ids_by_regexp() {
     analyze_regexp "$1"
     if ! /usr/sbin/pkgutil --pkgs="$1"; then
         fail_informatively "$1"
@@ -71,7 +71,7 @@ essential system files due to an exuberant regexp.
 
 For more information, see
 
-    https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/uninstall.md
+    https://github.com/Homebrew/homebrew-cask/blob/HEAD/doc/cask_language_reference/stanzas/uninstall.md
 
 "
     exit

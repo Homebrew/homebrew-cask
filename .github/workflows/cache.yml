@@ -1,0 +1,47 @@
+name: Cache
+
+on:
+  push:
+    paths:
+      - .github/workflows/cache.yml
+  schedule:
+    - cron: "0 */6 * * *" # every 6 hours
+
+concurrency:
+  group: cache
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    if: github.repository_owner == 'Homebrew'
+    strategy:
+      matrix:
+        runner:
+          - macos-14
+          - macos-15
+          - macos-15-intel
+          - macos-26
+          - ubuntu-latest
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: false
+          cask: false
+
+      - name: Cache Homebrew Gems
+        id: cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
+          key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ matrix.runner }}-rubygems-
+
+      - name: Install Homebrew Gems
+        id: gems
+        run: brew install-bundler-gems --groups=audit,style

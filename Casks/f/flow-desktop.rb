@@ -1,0 +1,25 @@
+cask "flow-desktop" do
+  version "6.2.0.2082"
+  sha256 :no_check
+
+  url "https://cdn.getflow.com/darwin_x64/Flow.zip"
+  name "Flow"
+  desc "Task and project management software"
+  homepage "https://www.getflow.com/"
+
+  disable! date: "2025-11-05", because: :unreachable
+
+  app "Flow.app"
+
+  zap trash: [
+    "~/.config/configstore/flow-desktop.json",
+    "~/Library/Application Support/Flow",
+    "~/Library/Caches/com.metalab.flow-mac",
+    "~/Library/HTTPStorages/com.metalab.flow-mac",
+    "~/Library/Preferences/com.metalab.flow-mac.plist",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
+end

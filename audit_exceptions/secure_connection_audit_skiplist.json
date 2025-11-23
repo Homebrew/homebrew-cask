@@ -1,0 +1,53 @@
+{
+  "adobe-acrobat-pro": "https://www.adobe.com/acrobat/pdf-reader.html",
+  "adobe-acrobat-reader": "https://www.adobe.com/acrobat/pdf-reader.html",
+  "adobe-connect": "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html",
+  "adobe-creative-cloud": "https://www.adobe.com/creativecloud.html",
+  "adobe-creative-cloud-cleaner-tool": "https://helpx.adobe.com/creative-cloud/kb/cc-cleaner-tool-installation-problems.html",
+  "adobe-digital-editions": [
+    "https://www.adobe.com/solutions/ebook/digital-editions.html",
+    "https://www.adobe.com/solutions/ebook/digital-editions/download.html"
+  ],
+  "adobe-dng-converter": [
+    "https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html",
+    "https://helpx.adobe.com/photoshop/kb/uptodate.html"
+  ],
+  "canon-ufrii-driver": "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json",
+  "elecom-mouse-util": "https://www.elecom.co.jp/global/download-list/utility/mouse_assistant/mac/",
+  "gotomeeting": "https://www.goto.com/meeting",
+  "itau": "https://www.itau.com.br/computador/",
+  "izotope-product-portal": [
+    "https://www.izotope.com/en/products/downloads.html",
+    "https://www.izotope.com/in-app/pp/download/mac"
+  ],
+  "logmein-client": "https://www.logmein.com/pro",
+  "mysql-shell": [
+    "https://dev.mysql.com/downloads/shell/",
+    "https://dev.mysql.com/downloads/shell/?tpl=platform&os=33"
+  ],
+  "mysqlworkbench": [
+    "https://dev.mysql.com/downloads/workbench/",
+    "https://www.mysql.com/products/workbench/"
+  ],
+  "native-access": "https://www.native-instruments.com/en/specials/native-access-2/",
+  "quickbooks": "https://quickbooks.intuit.com/desktop/",
+  "tableau": [
+    "https://www.tableau.com/products/desktop",
+    "https://www.tableau.com/support/releases",
+    "https://downloads.tableau.com/TableauAutoUpdate.xml"
+  ],
+  "tableau-prep": [
+    "https://www.tableau.com/products/prep",
+    "https://downloads.tableau.com/TableauAutoUpdate.xml"
+  ],
+  "tableau-public": [
+    "https://public.tableau.com/s",
+    "https://downloads.tableau.com/TableauAutoUpdate.xml"
+  ],
+  "tableau-reader": [
+    "https://www.tableau.com/products/reader",
+    "https://downloads.tableau.com/TableauAutoUpdate.xml"
+  ],
+  "vuze": "https://www.vuze.com/",
+  "xcodepilot": "https://xcodepilot.thriller.fun/docs/"
+}

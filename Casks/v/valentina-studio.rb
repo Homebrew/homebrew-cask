@@ -1,0 +1,23 @@
+cask "valentina-studio" do
+  version "16.2"
+  sha256 "68d991d489cb631a2aa949f4ec0c05ba406f5bea88849339956483693ca24751"
+
+  url "https://valentina-db.com/download/prev_releases/#{version}/mac_64/vstudio_x64_#{version.major}_mac.dmg"
+  name "Valentina Studio"
+  desc "Visual editors for data"
+  homepage "https://valentina-db.com/en/valentina-studio-overview"
+
+  disable! date: "2025-11-02", because: :unreachable
+
+  depends_on macos: ">= :monterey"
+
+  app "Valentina Studio.app"
+
+  zap trash: [
+    "~/Library/Logs/Valentina Studio",
+    "~/Library/Preferences/com.paradigma-software-inc.Valentina Studio_ling.plist",
+    "~/Library/Preferences/com.paradigmasoft.VStudio",
+    "~/Library/Preferences/com.paradigmasoft.vstudio.plist",
+    "~/Library/Saved Application State/com.paradigmasoft.vstudio.savedState",
+  ]
+end

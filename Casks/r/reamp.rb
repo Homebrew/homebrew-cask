@@ -1,0 +1,26 @@
+cask "reamp" do
+  version "1.6.3"
+  sha256 "f31f664d512fd248d479fc82e17670d1e99bd4f37174698b39faf74ab3b05460"
+
+  url "https://re-amp.ru/app/releases/reAMP-#{version}.zip"
+  name "re:AMP"
+  desc "WinAMP clone written in SwiftUI"
+  homepage "https://re-amp.ru/"
+
+  livecheck do
+    url "https://re-amp.ru/app/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  app "reAMP.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/ru.alexfreud.ReAmp.ReAmpQuickLook",
+    "~/Library/Application Support/REAmp",
+    "~/Library/Application Support/ru.alexfreud.ReAmp",
+    "~/Library/Caches/ru.alexfreud.ReAmp",
+    "~/Library/Containers/ru.alexfreud.ReAmp.ReAmpQuickLook",
+    "~/Library/HTTPStorages/ru.alexfreud.ReAmp",
+    "~/Library/Preferences/ru.alexfreud.ReAmp.plist",
+  ]
+end

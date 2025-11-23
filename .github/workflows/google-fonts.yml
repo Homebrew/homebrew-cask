@@ -1,0 +1,117 @@
+name: Google Fonts
+permissions:
+  contents: write
+  pull-requests: write
+
+on:
+  push:
+    branches:
+      - debug-google-fonts
+  schedule:
+    - cron: "0 0 * * 0" # weekly
+  workflow_dispatch:
+
+jobs:
+  google-fonts:
+    name: ${{ matrix.mode }}
+    if: github.repository == 'Homebrew/homebrew-cask'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - noun: addition
+            mode: add
+          - noun: update
+            mode: update
+          - noun: deletion
+            mode: delete
+    steps:
+      - name: Checkout homebrew/cask-fonts
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          persist-credentials: false
+
+      - name: Checkout google/fonts
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          repository: google/fonts
+          path: vendor/google-fonts
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c # v6.0.0
+        with:
+          python-version: '3.10'
+
+      - name: Install Python packages
+        run: pip3 install gftools html2text jinja2 protobuf
+
+      - name: Configure Git user
+        id: git-user-config
+        uses: Homebrew/actions/git-user-config@main
+        with:
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
+
+      - name: Set up commit signing
+        uses: Homebrew/actions/setup-commit-signing@main
+        with:
+          signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
+
+      - name: Import Google Fonts
+        run: ./developer/bin/import_google_fonts vendor/google-fonts ${{ matrix.mode }}
+
+      - name: Check for changes
+        id: changes-check
+        run: |
+          git add Casks
+          if git diff --cached --stat --exit-code
+          then
+            echo "changes=false" >> "$GITHUB_ENV"
+          else
+            echo "changes=true" >> "$GITHUB_ENV"
+          fi
+
+      - name: Checkout branch
+        if: env.changes == 'true'
+        run: git checkout -b "auto-${{ matrix.mode }}-google-fonts"
+
+      - name: Create commits
+        if: env.changes == 'true'
+        run: |
+            # Silence lint error to avoid excessive double quote escaping.
+            # shellcheck disable=SC2016
+            git diff --cached --name-only -z |  xargs -0 -I {} sh -c '
+              MESSAGE="$(basename "{}" .rb)"
+              git commit "{}" --message="$MESSAGE: $MODE" --message="$COMMIT_BODY"'
+        env:
+          COMMIT_BODY: >
+            This commit was created automatically by the
+            [\`google-fonts\`](https://github.com/Homebrew/homebrew-cask/blob/HEAD/.github/workflows/google-fonts.yml)
+            workflow.
+          GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
+          GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
+          MODE: ${{ matrix.mode }}
+
+      - name: Push commits
+        if: env.changes == 'true'
+        uses: Homebrew/actions/git-try-push@main
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          branch: "auto-${{ matrix.mode }}-google-fonts"
+          GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
+          GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
+
+
+      - name: Create pull request with updated files
+        if: env.changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          PR_BODY: >
+            This pull request was created automatically by the
+            [`google-fonts`](https://github.com/Homebrew/homebrew-cask/blob/HEAD/.github/workflows/google-fonts.yml)
+            workflow.
+        run: |
+          gh pr create \
+            --body "$PR_BODY" \
+            --head "auto-${{ matrix.mode }}-google-fonts" \
+            --title "${{matrix.mode}} Google Fonts"

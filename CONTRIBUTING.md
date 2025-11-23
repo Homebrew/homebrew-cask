@@ -5,61 +5,38 @@
 * [Updating a Cask](#updating-a-cask)
 * [Getting Set Up To Contribute](#getting-set-up-to-contribute)
 * [Adding a Cask](#adding-a-cask)
-* [Style guide](#style-guide)
+* [Style Guide](#style-guide)
 * [Reporting Bugs](README.md#reporting-bugs)
-
-
-## Updating a Cask
-
-Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a [script](https://github.com/vitorgalvao/tiny-scripts/blob/master/cask-repair) that will ask for the new version number, and take care of updating the Cask file and submitting a pull request to us:
-
-```bash
-# install and setup script - only needed once
-brew install vitorgalvao/tiny-scripts/cask-repair
-cask-repair --help
-
-# use to update <outdated_cask>
-cask-repair <outdated_cask>
-```
-
-If there is a more complicated change, or there is a case where `cask-repair` fails (for example, where a Cask uses a [`url do` block](https://github.com/Homebrew/homebrew-cask/blob/60531a2812005dd5f17dc92f3ce7419af3c5d019/Casks/audacity.rb#L5#L15) or the [`language` stanza](https://github.com/Homebrew/homebrew-cask/blob/306b8fbd9502036f1ca742f70c569d8677b62403/Casks/firefox.rb#L4L74)), you can also follow the steps in [Adding a Cask](doc/development/adding_a_cask.md) to do the same thing manually. Remember to update the `version` and `shasum` values.
-
 
 ## Getting Set Up To Contribute
 
-For manual updates, you'll need to fork the repository and add your copy as a remote (can also be done with `hub fork`).
+Follow the guide in [How to Open a Homebrew Pull Request](https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request#cask-related-pull-request).
 
-1: Fork the repository in GitHub with the `Fork` button.
+## Updating a Cask
 
-2: If you have not already done so, add your GitHub fork as a remote for your homebrew-cask Tap:
+Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a command that will take care of updating the cask file and submitting a pull request to us:
 
 ```bash
-$ github_user='<my-github-username>'
-$ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
-$ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-cask"
+brew bump --open-pr <outdated_cask>
 ```
 
-3: If you have already added your GitHub fork as a remote for your homebrew-cask Tap, ensure your fork is [up-to-date](https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/).
-
-4: Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`.
-
+You can also follow the steps in the documentation on [adding a cask](https://docs.brew.sh/Adding-Software-to-Homebrew#casks) for more complicated changes.
 
 ## Adding a Cask
 
-Notice an application that's not in Homebrew Cask yet? Make sure it's not yet in [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) or [Homebrew/core](https://github.com/Homebrew/homebrew-core) (can be searched with `brew search`). Mac App Store apps can't be installed via Homebrew Cask, but check out [mas](https://github.com/mas-cli/mas) for an alternative.
+Notice an application that's not in Homebrew Cask yet? Make sure it's also not in [homebrew/core](https://github.com/Homebrew/homebrew-core) (can be searched with `brew search`). Mac App Store apps can't be installed via Homebrew Cask, but check out [mas](https://github.com/mas-cli/mas) for an alternative.
 
-With a bit of work, you can create a Cask for it. The document [Adding A Cask](doc/development/adding_a_cask.md) will help you create, test, and submit a new Cask to us.
+With a bit of work, you can create a cask for it. The documentation on [adding a cask](https://docs.brew.sh/Adding-Software-to-Homebrew#casks) will help you create, test, and submit a new cask to us.
 
-
-## Style guide
+## Style Guide
 
 Some style guidelines:
 
-* All Casks and code should be indented using two spaces (never tabs). When `brew cask style` contradicts this, `style` must be followed.
-* There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Language Reference](doc/cask_language_reference).
-* The stanza order and position of newlines is important to make things easier (See [Stanza order](doc/cask_language_reference/#stanza-order)).
-* Use string manipulations to improve the maintainability of your Cask (See [`version` methods](doc/cask_language_reference/stanzas/version.md#version-methods)).
-* Test your cask using `brew cask audit/style` (See [testing](doc/development/adding_a_cask.md#testing-your-new-cask)).
-* Make one Pull Request per Cask change.
-* Do not squash commits after updating a Pull Request.
-* Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`).
+* All casks and code should be indented using two spaces (never tabs). When `brew style` contradicts this, `style` must be followed.
+* There should not be any extraneous comments - the only comments that should be used are the ones explicitly defined in the [Cask Cookbook](https://docs.brew.sh/Cask-Cookbook).
+* The stanza order and position of newlines is important to make things easier (see [Stanza order](https://docs.brew.sh/Cask-Cookbook#stanza-order)).
+* Use string manipulations to improve the maintainability of your cask (see [`version` methods](https://docs.brew.sh/Cask-Cookbook#version-methods)).
+* Test your cask using `brew audit` and `brew style` (see the documentation on [testing and auditing](https://docs.brew.sh/Adding-Software-to-Homebrew#testing-and-auditing-the-cask)).
+* Make one pull request per cask change.
+* Do not squash commits after updating a pull request.
+* Use descriptive commit messages - mention cask name and version/change (ie. `transmission 2.82`, `google-chrome: update zap`).
