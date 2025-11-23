@@ -6,9 +6,8 @@ cask "font-noto-sans-cjk-tc" do
   name "Noto Sans CJK TC"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Sans"
 
-  livecheck do
-    cask "font-noto-sans-cjk"
-  end
+  deprecate! date: "2025-11-22", because: :discontinued, replacement_cask: "font-noto-sans-tc"
+  disable! date: "2026-11-22", because: :discontinued, replacement_cask: "font-noto-sans-tc"
 
   font "NotoSansCJKtc-Black.otf"
   font "NotoSansCJKtc-Bold.otf"
