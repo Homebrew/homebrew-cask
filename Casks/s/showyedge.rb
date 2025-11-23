@@ -1,6 +1,6 @@
 cask "showyedge" do
-  version "6.1.0"
-  sha256 "59b7571eddca8fd8e619afd8c002be280fbbdcf2a2830de311c8951fca56d435"
+  version "6.2.0"
+  sha256 "61b16242a9ea82c3b893e701c1bac3ac1e10e2e2a98b7b7a21a2a3edc81201e5"
 
   url "https://github.com/pqrs-org/ShowyEdge/releases/download/v#{version}/ShowyEdge-#{version}.dmg",
       verified: "github.com/pqrs-org/ShowyEdge/"
