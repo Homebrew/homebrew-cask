@@ -6,9 +6,8 @@ cask "font-noto-serif-cjk-jp" do
   name "Noto Serif CJK JP"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Serif"
 
-  livecheck do
-    cask "font-noto-serif-cjk"
-  end
+  deprecate! date: "2025-11-22", because: :discontinued, replacement_cask: "font-noto-sans-jp"
+  disable! date: "2026-11-22", because: :discontinued, replacement_cask: "font-noto-sans-jp"
 
   font "OTF/Japanese/NotoSerifCJKjp-Black.otf"
   font "OTF/Japanese/NotoSerifCJKjp-Bold.otf"
