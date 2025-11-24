@@ -1,9 +1,9 @@
 cask "mitmproxy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "12.2.0"
-  sha256 arm:   "63370daeb0c18be1bd4aca868cfc3cbc119debb269c2a5d40e6b34a6167d1229",
-         intel: "7a6fdf65c8671a8f8ab0f19381a497e07596299840b7337f90d1fafe6569af37"
+  version "12.2.1"
+  sha256 arm:   "34d2719d91ff1b85ffa64acf20d3a56d6e3a98d308eb45a827ab4266bf68e179",
+         intel: "6cb7228747df7209bcd87b791233a7d61ea63de54b257fdab6e3e1f1795c9816"
 
   url "https://downloads.mitmproxy.org/#{version}/mitmproxy-#{version}-macos-#{arch}.tar.gz"
   name "mitmproxy"
