@@ -1,6 +1,6 @@
 cask "rhino-app" do
-  version "8.25.25314.11002"
-  sha256 "61bb323bd2df7fd7d81745dfa0f396e6c8d04b4b55e1261ce06c4b278e7c4091"
+  version "8.25.25328.11002"
+  sha256 "ed21f47e8a8cb63f50ec11a0b8efb8a526d48868243da7a25a71553857c58fc7"
 
   url "https://files.mcneel.com/rhino/#{version.major}/mac/releases/rhino_#{version}.dmg",
       verified: "mcneel.com/rhino/"
