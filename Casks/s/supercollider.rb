@@ -1,6 +1,6 @@
 cask "supercollider" do
-  version "3.14.0"
-  sha256 "14142ca569ac0c7b1a2f4bc4c1d578ea1c441a33211846cdf3b74b78ee838258"
+  version "3.14.1"
+  sha256 "ed264b32752d27fc86e506dd0a7eb36de7c19ebce73c3fdf2ed5514f8c73f02e"
 
   url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS-universal.dmg",
       verified: "github.com/supercollider/supercollider/"
