@@ -2,7 +2,6 @@ cask "klever" do
   version "2.0.0"
   sha256 "a4747261e99cb7629b811755100d50755af562a8f7c82c82dd254fd29ae88758"
 
-  # Desktop port of AppAgent (https://github.com/TencentQQGYLab/AppAgent, 6k+ stars)
   url "https://github.com/FigmaAI/KleverDesktop/releases/download/v#{version}/klever-desktop-#{version}.dmg"
   name "Klever Desktop"
   desc "GUI Wrapper for AppAgent"
