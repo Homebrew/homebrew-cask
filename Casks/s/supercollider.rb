@@ -25,6 +25,8 @@ cask "supercollider" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "SuperCollider.app"
 
   zap trash: [
