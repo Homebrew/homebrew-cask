@@ -1,8 +1,8 @@
 cask "mega" do
-  version "12.0.15"
-  sha256 "0ebd27e6078fefb59defc8bf62105f82e89d79f728890e62dee164152416c8c1"
+  version "12.1.1"
+  sha256 "59aa001b3a0a206f2134036dd1432d50759eb21cec2fcd7aaf3e9413d815e905"
 
-  url "https://megasoftware.net/do_force_download/MEGA_#{version}_installer.pkg"
+  url "https://megasoftware.net/releases/MEGA_#{version}_installer.pkg"
   name "MEGA"
   name "Molecular Evolutionary Genetics Analysis"
   desc "Molecular evolution statistical analysis and construction of phylogenetic trees"
