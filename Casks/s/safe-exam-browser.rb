@@ -9,8 +9,8 @@ cask "safe-exam-browser" do
   homepage "https://safeexambrowser.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://safeexambrowser.org/download_en.html"
+    regex(/href=.*?SafeExamBrowser[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Safe Exam Browser.app"
