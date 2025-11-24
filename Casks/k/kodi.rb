@@ -11,12 +11,11 @@ cask "kodi" do
   homepage "https://kodi.tv/"
 
   # The upstream website is protected by Cloudflare, which prevents us from
-  # fetching the download page. The GitHub releases link to Kodi releases, so
-  # we check the latest GitHub release as a workaround.
+  # fetching the download page (https://kodi.tv/download/macos/), so we check
+  # the directory listing page where the dmg files are found.
   livecheck do
-    url "https://github.com/xbmc/xbmc/"
-    regex(/^v?(\d+(?:\.\d+)+(?:-\w+))$/i)
-    strategy :github_latest
+    url "https://mirrors.kodi.tv/releases/osx/#{arch}/"
+    regex(/href=.*?kodi[._-]v?(\d+(?:\.\d+)+[._-][^_-]+?)[._-]#{arch}\.dmg/i)
   end
 
   app "Kodi.app"
