@@ -1,6 +1,6 @@
 cask "expandrive" do
-  version "2025.11.12.806"
-  sha256 "bb3f3f134bebe51dacc9d79b27fe163ea8e9755d0ac133a202ff36e60b654619"
+  version "2025.11.21.808"
+  sha256 "45f93bafa0c6506c37cf3b06980fef34f61f769cc275fea654a2169332b45595"
 
   url "https://corp.hosted-by-files.com/builds/ExpanDrive/#{version}/mac/ExpanDrive_#{version.major_minor_patch}.dmg",
       verified: "corp.hosted-by-files.com/builds/ExpanDrive/"
