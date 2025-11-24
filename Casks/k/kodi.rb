@@ -10,13 +10,9 @@ cask "kodi" do
   desc "Free and open-source media player"
   homepage "https://kodi.tv/"
 
-  # The upstream website is protected by Cloudflare, which prevents us from
-  # fetching the download page. The GitHub releases link to Kodi releases, so
-  # we check the latest GitHub release as a workaround.
   livecheck do
-    url "https://github.com/xbmc/xbmc/"
-    regex(/^v?(\d+(?:\.\d+)+(?:-\w+))$/i)
-    strategy :github_latest
+    url "https://mirrors.kodi.tv/releases/osx/arm64/"
+    regex(/kodi[._-]v?(\d+(?:\.\d+[.-]\w+)+)[._-]arm64\.dmg/i)
   end
 
   app "Kodi.app"
