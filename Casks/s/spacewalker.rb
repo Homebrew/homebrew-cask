@@ -1,6 +1,6 @@
 cask "spacewalker" do
-  version "1.7.3"
-  sha256 "9405d3683a57d8dd0182b844c3cea1441068978cf3fc170d6085c678a061f933"
+  version "1.7.4"
+  sha256 "a73960c024c1a6ec822982c15d500d069ce104737fc5e7696701c09c94ac0f27"
 
   url "https://static.viture.dev/external-file/macOS/SpaceWalker-Installer_v#{version}.dmg",
       verified: "static.viture.dev/external-file/macOS/"
