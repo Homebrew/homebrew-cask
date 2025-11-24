@@ -15,6 +15,8 @@ cask "dfcf" do
     end
   end
 
+  disable! date: "2025-11-24", because: :discontinued
+
   app "东方财富.app"
 
   caveats do
