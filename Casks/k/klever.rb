@@ -1,6 +1,6 @@
 cask "klever" do
   version "2.0.0"
-  sha256 "a4747261e99cb7629b811755100d50755af562a8f7c82c82dd254fd29ae88758"
+  sha256 "74b0ab11cc37c06dff3bba2828c874cb9c85f98ff0be19afafec0c092303ecea"
 
   url "https://github.com/FigmaAI/KleverDesktop/releases/download/v#{version}/klever-desktop-#{version}.dmg"
   name "Klever Desktop"
