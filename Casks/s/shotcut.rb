@@ -1,8 +1,12 @@
 cask "shotcut" do
-  version "25.08.16"
-  sha256 "f81f839a9c962ad08e301f5c66193349595c54f63a9845759919f72b75c4054b"
+  version "25.10.31"
+  sha256 "95ddf430893fbc45816482410ad9fc24ff627821d8d5b4fe0d97df533fecc438"
 
-  url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.first}/shotcut-macos-#{version.csv.second || version.csv.first.no_dots}.dmg",
+  on_sequoia do
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  end
+
+  url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.first}/shotcut-macos-#{version.csv.second || version.csv.first}.dmg",
       verified: "github.com/mltframework/shotcut/"
   name "Shotcut"
   desc "Video editor"
@@ -25,7 +29,7 @@ cask "shotcut" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Shotcut.app"
 
