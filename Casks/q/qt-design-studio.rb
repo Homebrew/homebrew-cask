@@ -1,6 +1,6 @@
 cask "qt-design-studio" do
-  version "4.8.0-0-202510131057"
-  sha256 "cd25b84ac326924bdcde6ca2e49c81664a63a5653c9898d3cbc484ee2e95e583"
+  version "4.8.1-0-202511211723"
+  sha256 "9939e03748468e2dd6a2b8ad334ebbbfe8b2f182c247d319821e5c6359ede46c"
 
   url "https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/tools_qtdesignstudio_generation2/qt.tools.qtdesignstudio/#{version}opensource.7z"
   name "Qt Design Studio"
