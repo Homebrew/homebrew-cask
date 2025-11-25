@@ -1,9 +1,9 @@
 cask "framer" do
   arch arm: "arm64", intel: "x64"
 
-  version "2025.43.5"
-  sha256 arm:   "a8faf92054710636be568096359fc839855b6f45ab6bf8f39847a78522777a2a",
-         intel: "2de7b8dc32cbc4232e07a107b401809914267827fb77becc5297ffe26c13f38a"
+  version "2025.46.3"
+  sha256 arm:   "cc5ff6ae5dc21d53014427115e0c280fb24f2f49a71d3704041d7c23b759723c",
+         intel: "191cdf5591eff7badbf7ba47f0ec6115af932c9207dc34c5fba775f84fc571ed"
 
   url "https://updates.framer.com/electron/darwin/#{arch}/Framer-#{version}.zip"
   name "Framer"
