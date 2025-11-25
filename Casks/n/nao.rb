@@ -1,9 +1,9 @@
 cask "nao" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.13.4"
-  sha256 arm:   "2ea1637b2f735e2eafeed3d5c7e3ce6cf530dc76ee8b37d40e395950d2abf738",
-         intel: "407641f0d0b0c0da021055f732862a2f6facbcba2d998edb8e148f214872c0c1"
+  version "0.13.5"
+  sha256 arm:   "1b22e28dbd7bcb6a2cb09f10775908f8f9f8895d0ec8dd690ae7a323055ce54a",
+         intel: "c9f79ac13174799c46bbbdff11be4df8836db84f5a5bb218cdca12b8419069a6"
 
   url "https://storage.googleapis.com/nao-releases/nao/darwin-#{arch}/#{version}/nao.#{arch}.#{version}.dmg",
       verified: "storage.googleapis.com/nao-releases/nao/"
