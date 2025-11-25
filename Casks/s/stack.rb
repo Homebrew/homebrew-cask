@@ -16,6 +16,8 @@ cask "stack" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :ventura"
+
   app "stack.app"
 
   uninstall signal:     ["TERM", "nl.transip.stack"],
