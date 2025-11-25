@@ -1,6 +1,6 @@
 cask "keepassxc@snapshot" do
-  version "2.8.0,272761"
-  sha256 "23477b7a3cfb208ec2697d5455129e82d79630a92b67e86713ae42b4d98c3c9c"
+  version "2.8.0,275994"
+  sha256 "81bb0211ae1edcf96b7cd7d41a2869f97bb75a84120a54293d3635ea4fa7dbd8"
 
   url "https://snapshot.keepassxc.org/build-#{version.csv.second}/KeePassXC-#{version.csv.first}-snapshot.dmg"
   name "KeePassXC"
@@ -35,11 +35,10 @@ cask "keepassxc@snapshot" do
     "keepassxc",
     "keepassxc@beta",
   ]
+  depends_on macos: ">= :monterey"
 
   app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
-  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc.1"
-  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc-cli.1"
 
   uninstall quit: "org.keepassxc.keepassxc"
 
