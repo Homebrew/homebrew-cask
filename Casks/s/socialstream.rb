@@ -1,6 +1,6 @@
 cask "socialstream" do
-  version "0.3.58"
-  sha256 "90d4d1b2715aadcfe29f2e10e747dd7266ab00a6ae5cbda23507ea60ba048944"
+  version "0.3.62"
+  sha256 "770206134f3949f5d024ddae6f0813c8721ceb79f3146059fd0447306ca7c193"
 
   url "https://github.com/steveseguin/social_stream/releases/download/#{version}/socialstreamninja_mac_v#{version}.dmg",
       verified: "github.com/steveseguin/social_stream/"
@@ -13,6 +13,8 @@ cask "socialstream" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :monterey"
 
