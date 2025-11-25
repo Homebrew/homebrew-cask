@@ -12,7 +12,7 @@ cask "osaurus" do
   depends_on arch: :arm64
 
   app "Osaurus.app"
-  binary "#{appdir}/Osaurus.app/Contents/MacOS/osaurus"
+  binary "#{appdir}/Osaurus.app/Contents/Helpers/osaurus"
 
   uninstall quit: "com.dinoki.osaurus"
 
