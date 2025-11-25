@@ -14,6 +14,8 @@ cask "firestorm" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Firestorm-Releasex64.app"
 
   zap trash: [
