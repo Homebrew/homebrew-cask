@@ -7,7 +7,7 @@ cask "blender@lts" do
 
   url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-#{arch}.dmg"
   name "Blender LTS"
-  desc "3D creation suite (Long Term Support)"
+  desc "3D creation suite"
   homepage "https://www.blender.org/"
 
   # The upstream LTS page (https://www.blender.org/download/lts/) cannot be
