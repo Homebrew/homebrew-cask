@@ -1,8 +1,8 @@
 cask "bartender" do
   version "6.2.1"
-  sha256 "db5a72dc1c1bf28ce14133d6ae782adb8adcb2e6b315036d841619a940c401c7"
+  sha256 "6fa4f9253f0f01266a91116badcf39b42009f08cb2e288aa17d669b19e3a5e6a"
 
-  url "https://www.macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.dmg"
+  url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip"
   name "Bartender"
   desc "Menu bar icon organiser"
   homepage "https://www.macbartender.com/"
