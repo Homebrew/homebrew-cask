@@ -9,7 +9,6 @@ cask "mattr-slate" do
   disable! date: "2024-12-16", because: :discontinued
 
   auto_updates true
-  conflicts_with cask: "slate"
 
   app "Slate.app"
 

@@ -16,6 +16,7 @@ cask "stash" do
   depends_on macos: ">= :monterey"
 
   app "Stash.app"
+  binary "#{appdir}/Stash.app/Contents/Applications/Stash Dashboard.app", target: "#{appdir}/Stash Dashboard.app"
 
   uninstall quit:   "ws.stash.app.mac",
             delete: [

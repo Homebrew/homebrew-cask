@@ -1,8 +1,8 @@
 cask "longplay" do
-  version "1.1.4"
-  sha256 "a6d6e1e673b93559a89993fa7d34548b5ed8be978a4b89ab13b8bcbb0d1272b8"
+  version "1.1.5"
+  sha256 "0535d51442d64dfeccaaf8081ce46f72475a06eabb040e442f8020374ffb0bd0"
 
-  url "https://download.longplay.app/mac/longplay-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}.dmg",
+  url "https://download.longplay.app/mac/Longplay-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}.dmg",
       verified: "download.longplay.app/"
   name "Longplay"
   desc "Album-focused music player"

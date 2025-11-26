@@ -8,6 +8,7 @@ cask "font-lxgw-heartserif" do
   homepage "https://github.com/lxgw/LxgwHeartSerif"
 
   deprecate! date: "2024-11-22", because: :discontinued
+  disable! date: "2025-11-24", because: :discontinued
 
   font "LXGWHeartSerif.ttf"
 

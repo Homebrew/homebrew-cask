@@ -1,6 +1,6 @@
 cask "filefillet" do
-  version "2.7.1"
-  sha256 "f4d2dd6cbc50197ca23b0b842d0d064cf2343c87d030a4bba5779af5be61672e"
+  version "2.8.0"
+  sha256 "5f75d37d89e52d5e4db9329664df85f362f112edb1b9ff9be1a426a18233d103"
 
   url "https://release.filefillet.com/FileFillet_v#{version}.zip"
   name "FileFillet"

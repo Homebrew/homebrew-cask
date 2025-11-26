@@ -1,6 +1,6 @@
 cask "filemaker-pro" do
-  version "22.0.3.300"
-  sha256 "3fcb398558e34afcfda9d070519636bc52a4b7721f0d62758625dbda565205f9"
+  version "22.0.4.406"
+  sha256 "6ab11d3331ac8ffe203280c509a1aa7ce68f251dc2bf01d2f4910af78bd691d2"
 
   url "https://downloads.claris.com/esd/fmp_#{version}.dmg"
   name "FileMaker Pro"
@@ -13,7 +13,7 @@ cask "filemaker-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "FileMaker Pro.app"
 

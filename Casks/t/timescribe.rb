@@ -1,9 +1,9 @@
 cask "timescribe" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.4.1"
-  sha256 arm:   "ccbdd4a32503b1afc138130455637a298b0ac9e78783be13c252ae25e4e7f790",
-         intel: "bd89f0eebdf00ea830144beeafbe4b0b63b78f5e34fb4988f627d43834713950"
+  version "1.5.1"
+  sha256 arm:   "45809e55d67ea2c27fa93bc4bfc038e81c8531800ec844ee5ff5a81a4d563c5b",
+         intel: "688c2e798dada1d683a6bc02d1ae19fe123c7e8a7b1b22cab70c3eaa4b6cae95"
 
   url "https://github.com/WINBIGFOX/TimeScribe/releases/download/v#{version}/TimeScribe-#{version}-#{arch}.zip",
       verified: "github.com/WINBIGFOX/TimeScribe/"
@@ -17,6 +17,7 @@ cask "timescribe" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "TimeScribe.app"
 

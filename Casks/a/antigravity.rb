@@ -2,9 +2,9 @@ cask "antigravity" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "1.11.3,6583016683339776"
-  sha256 arm:   "72314592fa73fd8058d9cefc44dd2461b84e00cd6ba0f8ee8c9edee75d641278",
-         intel: "78d97467ffba1ba07cbecc76e4a95a2291883e468e3a2b131fe936be20caa2a9"
+  version "1.11.9,4787439284912128"
+  sha256 arm:   "3536282e726713b1f0b0d4fc4f162c15e18584f73466b285c05550a895a21d76",
+         intel: "bdd0d0f239cf408ac21ff264785882285a4790758e48f407893ee035adbbe917"
 
   url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.zip",
       verified: "edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/"
@@ -27,6 +27,7 @@ cask "antigravity" do
   depends_on macos: ">= :big_sur"
 
   app "Antigravity.app"
+  binary "#{appdir}/Antigravity.app/Contents/Resources/app/bin/antigravity", target: "agy"
 
   zap trash: [
     "~/.antigravity/",

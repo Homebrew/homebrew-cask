@@ -1,9 +1,9 @@
 cask "freeyourmusic" do
   arch intel: "-x64"
 
-  version "9.19.0"
-  sha256 arm:   "574d3782ac9584495ae354b0e24d783808897fb5eea62d2b909089ae538981fc",
-         intel: "6a7ee767f43fe97cc7cbe08cc38ab201cefcfc18a0e7af8a71145ab4cfff6492"
+  version "9.20.0"
+  sha256 arm:   "bd7803ac81e68722d959b6b0f02045edf181171a6924308959819642494ba7af",
+         intel: "7681926104521a5f47d2c84ca933c80776363c1ac0a8b17af8d0c8c898bb9b60"
 
   url "https://fym-app-production.s3.nl-ams.scw.cloud/FreeYourMusic-#{version}#{arch}.dmg",
       verified: "fym-app-production.s3.nl-ams.scw.cloud/"
@@ -17,6 +17,7 @@ cask "freeyourmusic" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "FreeYourMusic.app"
 

@@ -1,12 +1,12 @@
 cask "blender@lts" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.5.4"
-  sha256 arm:   "7d6bd807563f0af65735cf9e21b788f6ac78bc5ceb87b96c424459785a13cd60",
-         intel: "9194d5cd6c8250e7f04591d430ec3f6da7bc57fc1fa5ae155736bf0f3013553e"
+  version "4.5.5"
+  sha256 arm:   "de1d239d1326378744326bdf1a55f935cdd3d7e808eadd0d601bba28e06e05f6",
+         intel: "f60c27f9a52ccde87e9e68ae8184e5c8c56f8b622d0657b345c64ad2b1232174"
 
   url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-#{arch}.dmg"
-  name "Blender"
+  name "Blender LTS"
   desc "3D creation suite"
   homepage "https://www.blender.org/"
 

@@ -11,9 +11,9 @@ cask "vscodium" do
     end
   end
   on_big_sur :or_newer do
-    version "1.105.17075"
-    sha256 arm:   "8c5d7cb3060b582b53d067ab48b913d35335b066669006fa6d166544be419dae",
-           intel: "03fe65dcb667ed260d2e48b13407dc6f41c995763d74df6d8c34ff289e1872a9"
+    version "1.106.37938"
+    sha256 arm:   "a2b1f3a8189cccb592b9eafb704a6fe44310d432d6b9ed902f12ca5f732114cc",
+           intel: "b43a34d0ffe1c18c538dcaa00b5b5d34ba7a2998394928b6f1dfbf0961e10e86"
 
     livecheck do
       url "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master/stable/darwin/#{arch}/latest.json"

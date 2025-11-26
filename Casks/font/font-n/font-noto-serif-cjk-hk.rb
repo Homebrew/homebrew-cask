@@ -6,9 +6,8 @@ cask "font-noto-serif-cjk-hk" do
   name "Noto Serif CJK HK"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Serif"
 
-  livecheck do
-    cask "font-noto-serif-cjk"
-  end
+  deprecate! date: "2025-11-22", because: :discontinued, replacement_cask: "font-noto-sans-hk"
+  disable! date: "2026-11-22", because: :discontinued, replacement_cask: "font-noto-sans-hk"
 
   font "OTF/TraditionalChineseHK/NotoSerifCJKhk-Bold.otf"
   font "OTF/TraditionalChineseHK/NotoSerifCJKhk-Black.otf"

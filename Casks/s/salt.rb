@@ -1,9 +1,9 @@
 cask "salt" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3007.8"
-  sha256 arm:   "0b1c9b04b347a992d67757c5625c16864d707357df206bf0532463925dd21720",
-         intel: "f135f070b68de1d013a3cf7bdb048973b77568f63e7e75c0dddfb0c68df08646"
+  version "3007.9"
+  sha256 arm:   "b9327739cc8a38139186d1615c4ce8a62075823e28bfb4cd097cd9f96ce7e00e",
+         intel: "7ea0efef5b2c8283ea6e97eff4b1eba0d0c8bf518ca749893bccfe4c803090ac"
 
   url "https://packages.broadcom.com/artifactory/saltproject-generic/macos/#{version}/salt-#{version}-py3-#{arch}.pkg",
       verified: "packages.broadcom.com/artifactory/saltproject-generic/"

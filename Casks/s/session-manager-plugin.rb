@@ -1,9 +1,9 @@
 cask "session-manager-plugin" do
   arch arm: "_arm64"
 
-  version "1.2.707.0"
-  sha256 arm:   "fd46436e52d2b2961a5e281148ce509aef3269d3b1c6a136285d1996ac6d3a22",
-         intel: "76796178d1358c699b109327d2f834980a9e57d5b5fe74a71c7ea58daa16798b"
+  version "1.2.764.0"
+  sha256 arm:   "a8d01a3fbd52b32ed45d1fb876844df8776010bc3d3f88178e2a31f540c987c9",
+         intel: "b086ebd702b1d29850a7fb6991c5249f5bcd98ad89c4598d31db280c629d021b"
 
   url "https://session-manager-downloads.s3.amazonaws.com/plugin/#{version}/mac#{arch}/session-manager-plugin.pkg",
       verified: "session-manager-downloads.s3.amazonaws.com/plugin/"
@@ -15,6 +15,8 @@ cask "session-manager-plugin" do
     url "https://docs.aws.amazon.com/systems-manager/latest/userguide/plugin-version-history.html"
     regex(%r{<td tabindex="-1">(\d+(?:\.\d+)+)</td>}i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   pkg "session-manager-plugin.pkg"
   binary "/usr/local/sessionmanagerplugin/bin/session-manager-plugin"

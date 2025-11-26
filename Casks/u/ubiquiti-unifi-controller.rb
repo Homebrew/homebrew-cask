@@ -1,6 +1,6 @@
 cask "ubiquiti-unifi-controller" do
-  version "9.5.21"
-  sha256 "75043e132fcc96f7e5d451f14c6aaba8d54b3651769b54fdd37d9d1d5fd66aca"
+  version "10.0.160"
+  sha256 "60cc69a41986004af9ef8fb5c4b6161f4dee41ba83931c7e13cfa71a0e45dcda"
 
   url "https://dl.ubnt.com/unifi/#{version}/UniFi-Network-Server.dmg",
       verified: "dl.ubnt.com/"
@@ -17,6 +17,8 @@ cask "ubiquiti-unifi-controller" do
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "UniFi.app"
 
