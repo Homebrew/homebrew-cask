@@ -1,9 +1,9 @@
 cask "spectrolite" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.2"
-  sha256 arm:   "abd6320274440f21b6941028c9c143d77daecf9f768da28f514ce5fa8569395d",
-         intel: "5d86094c7097946f1f59b9d817b22bdbb637e8aaf18c2a0335dc695d198238d8"
+  version "1.1.3"
+  sha256 arm:   "5cd5979c31f67c319dc4b056e3f55354c43b87cf54a2a9a3dcca1d25349ffa37",
+         intel: "167d2a2349541deca7c2298430e9c65c7073a37ac7fa56e567305e5b91c43288"
 
   url "https://spectrolite.app/downloads/Spectrolite-#{version}-#{arch}.dmg"
   name "Spectrolite"
