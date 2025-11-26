@@ -1,9 +1,9 @@
 cask "taobao" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.0"
-  sha256 arm:   "2200655677636c6d5ffd0cfd156ceda3fa49382b8fdbbba870236f5ddb7c1c81",
-         intel: "9422e959e40004fb0c89ea5093e0f27f0a934d53e7fff4e808587dd3ed3b1f03"
+  version "2.2.0"
+  sha256 arm:   "14c17c6f1b631de8b7afc87b9463c5e4e63fe822f87dbaf00b575812c2cbbdaf",
+         intel: "4986576b4a9536de6f0eecf6f40aa0bfef77014cdd391fb64c7cc68f9c569c29"
 
   url "https://tblifecdn.taobao.com/taobaopc/shop/taobao-setup-darwin-#{arch}-#{version}.dmg"
   name "taobao"
