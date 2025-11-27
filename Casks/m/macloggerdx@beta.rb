@@ -1,5 +1,5 @@
 cask "macloggerdx@beta" do
-  version "6.59b3"
+  version "6.59b4"
   sha256 :no_check
 
   url "https://www.dogparksoftware.com/files/MacLoggerDX.beta.dmg"
