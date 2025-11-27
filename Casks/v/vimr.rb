@@ -15,7 +15,7 @@ cask "vimr" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "VimR.app"
   binary "#{appdir}/VimR.app/Contents/Resources/vimr"
