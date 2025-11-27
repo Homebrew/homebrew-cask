@@ -2,12 +2,12 @@ cask "xtool-studio" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "1.1.10,121,43bc6fb6-d1c6-4b64-83c8-a06b2c214614"
-    sha256 "6be9c9f22e538a04ce54ddd1cc32e0fe7cc211d29fdfb625014aa9d26825ae75"
+    version "1.2.11,121,c518d71e-2d6a-4494-851f-8e61b8a76949"
+    sha256 "07222ff336d46b907958bb776ed23663f0bf27d8dd6bf7f176675b6ed9dd37ed"
   end
   on_intel do
-    version "1.1.10,110,4f6db9be-6a59-4505-9e95-c09f67dc0694"
-    sha256 "394dbd39296eb57265910f5a22c49652f1fcca57eb50a3f806c6ac19a8d35d1e"
+    version "1.2.11,110,86dfe506-dfa2-46d7-952f-126e743ab28b"
+    sha256 "79ac714c421359bbcbc90b5dca3a5bca1cbd4b5cfa794fa2d0fda1ab32e07526"
   end
 
   url "https://storage.atomm.com/efficacy/atomm-package/prod/packages/#{version.csv.second}/#{version.csv.third}/xTool-Studio-#{arch}-#{version.csv.first}.dmg",
