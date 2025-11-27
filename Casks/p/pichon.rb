@@ -1,5 +1,5 @@
 cask "pichon" do
-  version "1.10.0"
+  version "1.11.0"
   sha256 :no_check
 
   url "https://desktop.icons8.com/updates/pichon/Pichon.dmg"
@@ -11,6 +11,8 @@ cask "pichon" do
     url "https://desktop.icons8.com/updates/pichon/cast.xml"
     strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Pichon.app"
 
