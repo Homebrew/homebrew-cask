@@ -8,7 +8,7 @@ cask "julia-app@lts" do
   homepage "https://julialang.org/"
 
   livecheck do
-    url "https://julialang.org/downloads/"
+    url "https://julialang.org/downloads/manual-downloads/"
     regex(/\(LTS\)\s+release:\s+v?(\d+(?:\.\d+)+)/i)
   end
 
