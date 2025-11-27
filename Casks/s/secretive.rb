@@ -18,8 +18,8 @@ cask "secretive" do
     end
   end
   on_sonoma :or_newer do
-    version "3.0.3"
-    sha256 "ab8a7d6b590b3313f7bb383b881fb40ad1ffe4ab848580e9b08899b3e60c323d"
+    version "3.0.4"
+    sha256 "696d07812e4431075234a900a0136dbad3131a91086e535fc2b07d69a1d084ba"
 
     livecheck do
       url :url
