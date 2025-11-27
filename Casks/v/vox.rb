@@ -1,5 +1,5 @@
 cask "vox" do
-  version "3.7.4"
+  version "3.7.6"
   sha256 :no_check
 
   url "https://vox.rocks/app-download?app=vox"

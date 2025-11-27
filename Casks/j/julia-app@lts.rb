@@ -8,9 +8,11 @@ cask "julia-app@lts" do
   homepage "https://julialang.org/"
 
   livecheck do
-    url "https://julialang.org/downloads/"
+    url "https://julialang.org/downloads/manual-downloads/"
     regex(/\(LTS\)\s+release:\s+v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :sequoia"
 
   app "Julia-#{version.major_minor}.app"
   binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia", target: "julia-lts"
