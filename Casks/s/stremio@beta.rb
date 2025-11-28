@@ -15,6 +15,8 @@ cask "stremio@beta" do
     regex(/macos\/v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   conflicts_with cask: [
     "stremio",
   ]
