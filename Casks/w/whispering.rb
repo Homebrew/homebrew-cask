@@ -1,4 +1,4 @@
-cask "epicenter-whispering" do
+cask "whispering" do
   arch arm: "aarch64", intel: "x64"
 
   version "7.7.2"
@@ -7,6 +7,7 @@ cask "epicenter-whispering" do
 
   url "https://github.com/epicenter-os/epicenter/releases/download/v#{version}/Whispering_#{version}_#{arch}.dmg",
       verified: "github.com/epicenter-os/epicenter/"
+  name "Whispering"
   name "Epicenter Whispering"
   desc "Audio transcription that works with local and cloud models"
   homepage "https://whispering.epicenter.so/"
