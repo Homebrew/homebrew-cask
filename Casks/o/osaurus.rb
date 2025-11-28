@@ -1,6 +1,6 @@
 cask "osaurus" do
-  version "0.5.9"
-  sha256 "f125ba5d44291bbef564114bf31f0a78d809e48d1f5fe90f05400a76cbd3c64d"
+  version "0.5.10"
+  sha256 "b6f1fda52324c5eb53e49aaf735031508f09db58a6ea051c6022054955e97554"
 
   url "https://github.com/dinoki-ai/osaurus/releases/download/#{version}/Osaurus-#{version}.dmg",
       verified: "github.com/dinoki-ai/osaurus/"
