@@ -1,9 +1,9 @@
 cask "beutl" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.7"
-  sha256 arm:   "8b94d7574284ddaf8e37b51497a4721f8f6e475df3f4c2e3a2250a5dd49cdd1b",
-         intel: "8b0e11f9360dbdf825939593ed3e3e3beedab7bb583f179ed9d7cbdacaeb537c"
+  version "1.1.0"
+  sha256 arm:   "9c35670dd53ea49dd9757ad86994076773f5dd8cd832ced4cc1c36ced882dc8b",
+         intel: "c322e9f14c6e5bf2f65a7145748e10932e0eef30957f53fda973c4df6c473a61"
 
   url "https://github.com/b-editor/beutl/releases/download/v#{version}/Beutl.osx_#{arch}.app.zip",
       verified: "github.com/b-editor/beutl/"
