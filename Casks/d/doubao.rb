@@ -1,6 +1,6 @@
 cask "doubao" do
-  version "1.81.7"
-  sha256 "5cbc1c085014ce5941e6a61eaf52d4a063e5013111fd393affe359aea0862629"
+  version "1.82.5"
+  sha256 "3c8ca2e70e52a5019bcc4806dd80b9149e40492741574093740ded11ef80810e"
 
   url "https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao_pc/#{version}/Doubao_universal_#{version}.dmg"
   name "doubao"
