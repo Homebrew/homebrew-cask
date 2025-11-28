@@ -12,14 +12,13 @@ cask "stremio@beta" do
 
   livecheck do
     url "https://www.strem.io/downloads"
-    regex(/macos\/v?(\d+(?:\.\d+)+)/i)
+    regex %r{macos/v?(\d+(?:\.\d+)+)}i
   end
-
-  depends_on macos: ">= :big_sur"
 
   conflicts_with cask: [
     "stremio",
   ]
+  depends_on macos: ">= :big_sur"
 
   app "Stremio.app"
 
