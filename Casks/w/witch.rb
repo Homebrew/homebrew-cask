@@ -1,6 +1,6 @@
 cask "witch" do
   version "4.6.2"
-  sha256 "c9d54299613aefbf737e6d47bc9dfeac75a95172cf6350952986532fd55a3905"
+  sha256 "cb9d946400e00221c72706487ac7ba3760e75a8e0f0e46b26bf9a5da79784b25"
 
   url "https://manytricks.com/download/_do_not_hotlink_/witch#{version.no_dots}.dmg"
   name "Witch"

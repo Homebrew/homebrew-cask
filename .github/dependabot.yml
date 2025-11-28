@@ -16,4 +16,6 @@ updates:
   - "*"
   allow:
   - dependency-type: all
+  cooldown:
+    default-days: 7
 
