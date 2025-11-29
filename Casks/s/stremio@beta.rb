@@ -17,9 +17,7 @@ cask "stremio@beta" do
     end
   end
 
-  conflicts_with cask: [
-    "stremio",
-  ]
+  conflicts_with cask: "stremio"
   depends_on macos: ">= :big_sur"
 
   app "Stremio.app"
