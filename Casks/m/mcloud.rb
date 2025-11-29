@@ -1,6 +1,6 @@
 cask "mcloud" do
-  version "4.1.1,000"
-  sha256 "3640839b679f5bc8ecb46ba16dc6bfcc64bbed6241f3e0f55cff64c1960be78a"
+  version "4.1.2,000"
+  sha256 "8264af1af868c71310fd58f0a8c2618a69f5ff72b412fd3910e2e567e55362d7"
 
   url "https://yun.mcloud.139.com/mCloudPc/macV#{version.csv.first.no_dots}/mCloud-#{version.csv.first}-#{version.csv.second}.dmg"
   name "mcloud"
@@ -31,4 +31,8 @@ cask "mcloud" do
     "~/Library/Application Support/mCloud",
     "~/Library/Preferences/com.cmic.mcloudForMacOSV2.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
