@@ -11,8 +11,10 @@ cask "stremio@beta" do
   homepage "https://www.strem.io/"
 
   livecheck do
-    url "https://www.strem.io/downloads"
-    regex %r{macos/v?(\d+(?:\.\d+)+)}i
+    url "https://www.stremio.com/updater/check?product=stremio-shell-macos&arch=#{arch}"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   conflicts_with cask: [
