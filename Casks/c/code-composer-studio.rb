@@ -1,6 +1,6 @@
 cask "code-composer-studio" do
-  version "20.3.1.00005"
-  sha256 "f1fed8306470348ef8e16a963af259566d27ac1021f8a433a6dbfacb3e5e5ce3"
+  version "20.4.0.00013"
+  sha256 "78e26e8271c58ed60c16361a9a6397080cd34c936f9c6ce6f427b018fb4c204c"
 
   url "https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-J1VdearkvK/#{version.major_minor_patch}/CCS_#{version}_mac_x86.dmg"
   name "Code Composer Studio (CCS)"
