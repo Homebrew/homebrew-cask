@@ -9,7 +9,7 @@ cask "assinador-serpro" do
 
   livecheck do
     url :homepage
-    regex(/Assinador\sSerpro\s(\d+(?:\.\d+)+)/i)
+    regex(/instalação\s+Mac\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
