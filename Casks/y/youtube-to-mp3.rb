@@ -15,6 +15,8 @@ cask "youtube-to-mp3" do
     regex(/>\s*Version:.*?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "YouTube to MP3.app"
 
   zap trash: [
