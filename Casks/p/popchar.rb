@@ -22,6 +22,7 @@ cask "popchar" do
   zap trash: [
     "~/Library/Application Support/PopChar",
     "~/Library/Caches/com.macility.popchar3",
+    "~/Library/HTTPStorages/com.macility.popchar3",
     "~/Library/Preferences/com.macility.popchar3.plist",
   ]
 end
