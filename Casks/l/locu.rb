@@ -1,9 +1,9 @@
 cask "locu" do
   arch arm: "-arm64"
 
-  version "0.24.1"
-  sha256 arm:   "bf091c312ba95f0ad68890859e0ef536304dee00405fa0e0a235437200ff1e53",
-         intel: "de013a5c40960dbaf7d61360d2874c3cea87545c3c9ae2e2c879c791c1604187"
+  version "0.24.2"
+  sha256 arm:   "6695bbf879db8833d92a853cde825760310d0e07fe9fde3af3a84641b758a20c",
+         intel: "af33cc83a2da334f155cec85ee8cffdece9968a223173e0ff56ff2d812e891f0"
 
   url "https://locu.sfo2.digitaloceanspaces.com/Locu-#{version}#{arch}-mac.zip",
       verified: "locu.sfo2.digitaloceanspaces.com/"
