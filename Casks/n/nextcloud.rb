@@ -1,23 +1,29 @@
 cask "nextcloud" do
   on_big_sur :or_older do
-    version "3.8.1"
-    sha256 "448647db0068ff9a2b669ff2f9d715a36b4e5e1af82e9849e57d9f7078d1bd2e"
+    version "3.13.4"
+    sha256 "8c31281f2acecc2a4e384e01199767569a8f3aa2beedc8ae93513ba0c87062c6"
+
+    url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-legacy-#{version}.pkg",
+        verified: "github.com/nextcloud-releases/desktop/"
 
     livecheck do
-      skip "Legacy version"
+      url "https://nextcloud.com/install/#desktop-files"
+      regex(/href=.*?Nextcloud[._-]legacy[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     end
   end
   on_monterey :or_newer do
-    version "4.0.1"
-    sha256 "423f1556e512ca656789eaa4ab2fe2d427c4448c228624a9adb85e8a3c422eca"
+    version "4.0.2"
+    sha256 "981ad9fcf808a0e0c8644c4f0be9b92eedec98a6b38e7d41ef1b88ec2c2e81fa"
+
+    url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
+        verified: "github.com/nextcloud-releases/desktop/"
 
     livecheck do
-      url "https://download.nextcloud.com/desktop/releases/Mac/Installer/"
+      url "https://nextcloud.com/install/#desktop-files"
       regex(/href=.*?Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     end
   end
 
-  url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}.pkg"
   name "Nextcloud"
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"
