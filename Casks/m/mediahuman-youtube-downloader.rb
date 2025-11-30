@@ -4,6 +4,13 @@ cask "mediahuman-youtube-downloader" do
   version "3.9.18"
   sha256 :no_check
 
+  on_arm do
+    depends_on macos: ">= :big_sur"
+  end
+  on_intel do
+    depends_on macos: ">= :catalina"
+  end
+
   url "https://www.mediahuman.net/files/YouTubeDownloader#{arch}.dmg"
   name "MediaHuman YouTube Downloader"
   desc "YouTube videos downloader"
