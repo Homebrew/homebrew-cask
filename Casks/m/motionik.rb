@@ -20,9 +20,10 @@ cask "motionik" do
   app "Motionik.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.motionik.screenrecorder.sfl*",
-    "~/Library/Application Support/motionik",
-    "~/Library/Logs/motionik",
-    "~/Library/Preferences/com.motionik.screenrecorder.plist",
-  ], rmdir: "~/Motionik-Recordings"
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.motionik.screenrecorder.sfl*",
+        "~/Library/Application Support/motionik",
+        "~/Library/Logs/motionik",
+        "~/Library/Preferences/com.motionik.screenrecorder.plist",
+      ],
+      rmdir: "~/Motionik-Recordings"
 end
