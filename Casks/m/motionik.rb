@@ -3,7 +3,7 @@ cask "motionik" do
 
   version "1.10.0"
   sha256 arm:   "4733dec6d464c23163c46f21a41541f04fc6c9f4f037beb99bcf60781c8f9147",
-         intel: "1234"
+         intel: "f09aaab9d7a383eaee2d857f0d8742b8e1704cbb35838510a174ba233a42d7f8"
 
   url "https://assets.motionik.com/releases/Motionik-#{version}-#{arch}.dmg"
   name "Motionik"
