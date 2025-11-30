@@ -4,7 +4,7 @@ cask "airscroll" do
 
   url "https://airscroll.net/releases/AirScroll.app.zip"
   name "AirScroll"
-  desc "Smooth, customizable scrolling util for your mouse"
+  desc "Smooth mouse scrolling utility"
   homepage "https://airscroll.net/"
 
   livecheck do
