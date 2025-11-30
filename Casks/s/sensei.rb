@@ -13,7 +13,7 @@ cask "sensei" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Sensei.app"
 
@@ -26,10 +26,15 @@ cask "sensei" do
             ]
 
   zap trash: [
+    "/Library/Logs/DiagnosticReports/Sensei_*.cpu_resource.diag",
+    "/Library/Logs/DiagnosticReports/Sensei_*.hang",
+    "~/Library/Application Support/CrashReporter/Sensei_*.plist",
     "~/Library/Application Support/org.cindori.Sensei",
     "~/Library/Application Support/Sensei",
+    "~/Library/Caches/amplitude/org.cindori.Sensei",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/org.cindori.Sensei",
     "~/Library/Caches/org.cindori.Sensei",
+    "~/Library/Caches/SentryCrash/Sensei",
     "~/Library/Cookies/org.cindori.Sensei.binarycookies",
     "~/Library/HTTPStorages/org.cindori.Sensei",
     "~/Library/HTTPStorages/org.cindori.Sensei.binarycookies",
