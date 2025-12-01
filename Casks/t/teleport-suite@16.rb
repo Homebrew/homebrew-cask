@@ -8,11 +8,6 @@ cask "teleport-suite@16" do
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
 
-  livecheck do
-    url "https://goteleport.com/download/"
-    regex(/teleport[._-]v?(16(?:\.\d+)+)\.pkg/i)
-  end
-
   disable! date: "2025-10-01", because: :discontinued
 
   conflicts_with cask: [

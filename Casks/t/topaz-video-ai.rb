@@ -7,11 +7,6 @@ cask "topaz-video-ai" do
   desc "Video upscaler and quality enhancer"
   homepage "https://docs.topazlabs.com/other-apps/legacy"
 
-  livecheck do
-    url "https://topazlabs.com/d/tvai/latest/mac/full"
-    strategy :header_match
-  end
-
   deprecate! date: "2025-09-16", because: :discontinued, replacement_cask: "topaz-video"
 
   auto_updates true

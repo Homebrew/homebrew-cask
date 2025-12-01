@@ -8,11 +8,6 @@ cask "macupdater" do
   desc "Track and update to the latest versions of installed software"
   homepage "https://www.corecode.io/macupdater/index.html"
 
-  livecheck do
-    url "https://www.corecode.io/macupdater/macupdater#{version.major}.xml"
-    strategy :sparkle, &:short_version
-  end
-
   deprecate! date: "2026-01-01", because: :discontinued
 
   auto_updates true
