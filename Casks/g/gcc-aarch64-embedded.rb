@@ -25,7 +25,8 @@ cask "gcc-aarch64-embedded" do
     end
   end
 
-  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg"
+  url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg",
+      user_agent: "curl/8.7.1"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 64-bit Arm processors"
   homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
