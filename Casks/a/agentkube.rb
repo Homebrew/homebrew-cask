@@ -30,4 +30,3 @@ cask "agentkube" do
     "~/Library/Saved Application State/com.agentkube.app.savedState",
   ]
 end
-
