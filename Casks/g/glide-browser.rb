@@ -1,9 +1,9 @@
 cask "glide-browser" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.1.54a"
-  sha256 arm:   "98b72c6d4052edcbbb025ef2da244a816e4518c21c2807c77346b41f048401f4",
-         intel: "dac9d8810bbe09c3db0efa69db2ab2c3d486eb3dbc7b11333e569bc78e8874c7"
+  version "0.1.55a"
+  sha256 arm:   "220f666a977756165eefd0929e1be956602434c51a7d4596c6fbfa5009a6fd8f",
+         intel: "7a00795b5464ef14e9cac50c418c646976283f4b13bd25b2835d2422aa14bcc2"
 
   url "https://github.com/glide-browser/glide/releases/download/#{version}/glide.macos-#{arch}.dmg",
       verified: "github.com/glide-browser/glide/"
