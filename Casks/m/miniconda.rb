@@ -8,8 +8,10 @@ cask "miniconda" do
     livecheck do
       url "https://repo.anaconda.com/miniconda/"
       strategy :page_match do |page|
-        sha256 = page.scan(/>Miniconda3-latest-MacOSX-arm64\.sh<.{,99}>(\w{64})</im).first.first
-        page.scan(/>Miniconda3-(py\d+_[\d.-]+)-MacOSX-arm64\.sh<.{,99}>#{sha256}</im).first.first
+        checksum = page[/>\s*Miniconda\d+-latest-MacOSX?-#{arch}\.sh<.{,99}>(\w{64})</im, 1]
+        next unless checksum
+
+        page[/>\s*Miniconda3[._-](py\d+[._-]\d+(?:[.-]\d+)*)[._-]MacOSX?[._-]#{arch}\.sh<.{,99}>#{checksum}</im, 1]
       end
     end
   end
