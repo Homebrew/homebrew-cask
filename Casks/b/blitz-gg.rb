@@ -1,6 +1,6 @@
 cask "blitz-gg" do
-  version "2.1.451"
-  sha256 "3ed89985b32457f1d0bbee824bc393f631076caf34acef1f52779bb1a5a57aa8"
+  version "2.1.452"
+  sha256 "30a8c967818481ba497ba072438eb86d8af043ea17bc2caa863a3e6235ab4ec1"
 
   url "https://blitz-main.blitz.gg/Blitz-x64-#{version}.dmg"
   name "Blitz"
