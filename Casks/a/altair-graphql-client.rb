@@ -9,7 +9,7 @@ cask "altair-graphql-client" do
       verified: "github.com/imolorhe/altair/"
   name "Altair GraphQL Client"
   desc "GraphQL client"
-  homepage "https://altair.sirmuel.design/"
+  homepage "https://altairgraphql.dev/"
 
   livecheck do
     url :url
