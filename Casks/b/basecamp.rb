@@ -5,10 +5,11 @@ cask "basecamp" do
   sha256 arm:   "62debd6d6d07c3a32cbeca6748769ddf8b1d17802911f86eb402cec06f611175",
          intel: "2dff1f9a9abb16f1e17e40c83d8fca4381dbdabd8891ac32c04b7cd6717c37a6"
 
-  url "https://basecamp.com/desktop/mac#{arch}/basecamp#{version.major}-#{version.csv.second}.zip"
+  url "https://basecamp.com/desktop/mac#{arch}/basecamp#{version.major}-#{version.csv.second}.zip",
+      verified: "basecamp.com/desktop/"
   name "Basecamp"
   desc "All-In-One Toolkit for Working Remotely"
-  homepage "https://basecamp.com/help/#{version}/guides/apps/mac"
+  homepage "https://3.basecamp-help.com/"
 
   livecheck do
     url "https://basecamp.com/desktop/mac#{arch}/updates.json"
