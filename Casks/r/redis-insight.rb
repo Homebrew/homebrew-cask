@@ -8,7 +8,7 @@ cask "redis-insight" do
       verified: "s3.amazonaws.com/redisinsight.download/"
   name "Redis Insight"
   desc "GUI for streamlined Redis application development"
-  homepage "https://redis.com/redis-enterprise/redis-insight/"
+  homepage "https://redis.io/insight/"
 
   livecheck do
     url "https://s3.amazonaws.com/redisinsight.download/public/latest/latest-mac.yml"
