@@ -8,10 +8,9 @@ cask "arctype" do
   desc "SQL client and database management tool"
   homepage "https://arctype.com/"
 
-  livecheck do
-    url "https://arctype-downloads.s3.amazonaws.com/updates/latest-mac.yml"
-    strategy :electron_builder
-  end
+  # Arctype EOL on 12/06/2022, https://news.ycombinator.com/item?id=33114111
+  # arctype.com now redirects to clickhouse.com
+  disable! date: "2025-11-30", because: :discontinued
 
   auto_updates true
 
