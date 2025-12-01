@@ -8,7 +8,7 @@ cask "draw-things" do
   homepage "https://drawthings.ai/"
 
   livecheck do
-    url "https://drawthings.ai/releases/"
+    url "https://drawthings.ai/downloads/"
     regex(/href=.*?DrawThings[._-]v?(\d+(?:\.\d+)+(?:-\h+)?)\.zip/i)
   end
 
