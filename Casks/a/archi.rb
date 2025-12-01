@@ -11,12 +11,6 @@ cask "archi" do
   desc "Open-source ArchiMate modelling toolkit"
   homepage "https://www.archimatetool.com/"
 
-  livecheck do
-    url "https://www.archimatetool.com/download/"
-    regex(%r{href=.*?/Archi[._-]Mac#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-    strategy :page_match
-  end
-
   # Upstream deletes any comments on their repo about downstream packaging
   # Ref: https://github.com/Homebrew/homebrew-cask/issues/236819#issuecomment-3549051960
   disable! date:    "2025-11-18",
