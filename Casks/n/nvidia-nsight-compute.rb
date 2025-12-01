@@ -10,11 +10,6 @@ cask "nvidia-nsight-compute" do
   desc "Interactive profiler for CUDA and NVIDIA OptiX"
   homepage "https://developer.nvidia.com/nsight-compute"
 
-  livecheck do
-    url "https://developer.nvidia.com/tools-overview/nsight-compute/get-started"
-    regex(/nsight[._-]compute[._-]mac[._-]#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
-  end
-
   disable! date: "2025-10-02", because: "requires login to download"
 
   app "NVIDIA Nsight Compute.app"
