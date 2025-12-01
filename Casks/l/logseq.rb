@@ -1,9 +1,9 @@
 cask "logseq" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.10.14"
-  sha256 arm:   "9efbd89ff4bb7e4cca951d665be2c900d972cdc55a552570c88c6c866b2c1b9d",
-         intel: "c2bfaa7d41ead817f4ab8092557a5356ab88491c0218d9b4a9ba2e8624865fa5"
+  version "0.10.15"
+  sha256 arm:   "a0b83e5bdc2b8bb639cec5747cedcc0f0a8cd840ca6fa0d44242dc05312d27cb",
+         intel: "adad3a8d50692a79b2643b6c4d36d29ea0cc9d4123f3b48b5f72790a9ec5aca9"
 
   url "https://github.com/logseq/logseq/releases/download/#{version}/logseq-darwin-#{arch}-#{version}.dmg"
   name "Logseq"
@@ -16,7 +16,7 @@ cask "logseq" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Logseq.app"
 
