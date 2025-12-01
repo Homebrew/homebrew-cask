@@ -17,8 +17,8 @@ cask "basictex" do
   end
 
   conflicts_with cask: [
-    "mactex-no-gui",
     "mactex",
+    "mactex-no-gui",
   ]
 
   pkg "mactex-basictex-#{version.no_dots}.pkg"
