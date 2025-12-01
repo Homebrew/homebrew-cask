@@ -1,9 +1,9 @@
 cask "dosbox-x-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2025.10.07,20251007154914"
-  sha256 arm:   "54d12fbd025819712f78fa91724576b2fffdc1538aeb5b73087a1ca2d6ca0c49",
-         intel: "c172e955a5ef540693680f7cd422823e459ca5e5dc21599707fc700a8141ab9e"
+  version "2025.12.01,20251201165421"
+  sha256 arm:   "da21d5f33db50db88ae11fdd71d36b9755f923d2a33074e4900bec56d30fcaa4",
+         intel: "7946b304364920cacd4eb8c43f46c6bb9377038966b858277fe4d09357e0cd0e"
 
   url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
       verified: "github.com/joncampbell123/dosbox-x/"
