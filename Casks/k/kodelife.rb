@@ -5,7 +5,7 @@ cask "kodelife" do
   url "https://hexler.net/pub/kodelife/kodelife-#{version.csv.first}.#{version.csv.second}-macos.dmg"
   name "KodeLife"
   desc "Real-time GPU shader editor"
-  homepage "https://hexler.net/software/kodelife"
+  homepage "https://hexler.net/kodelife"
 
   livecheck do
     url "https://hexler.net/kodelife/appcast/macos"
