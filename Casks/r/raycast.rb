@@ -20,9 +20,9 @@ cask "raycast" do
     end
   end
   on_ventura :or_newer do
-    version "1.103.9"
-    sha256 arm:   "7f3c224dc234f130d270fe25220bba16ad712f9ac0648511817aa12614f602b5",
-           intel: "c36a5a60e8cf9a08fc03deb5cdb6d56f4173a30f21cdfc2e7ae9bd43f468f49a"
+    version "1.103.10"
+    sha256 arm:   "28eaee44cb1397fb4adce09a60d68f2380d9b2621c5dadbd5c28cf402eacee0c",
+           intel: "1cb89aa1bb28d1765611ba62b547975486ff6ad9a5d916fda50b0eb61ccf6ec3"
 
     livecheck do
       url "https://releases.raycast.com/releases/latest?build=#{arch}"
