@@ -6,7 +6,7 @@ cask "claude" do
       verified: "storage.googleapis.com/osprey-downloads-c02f6a0d-347c-492b-a752-3e0651722e97/nest/"
   name "Claude"
   desc "Anthropic's official Claude AI desktop app"
-  homepage "https://claude.ai/download"
+  homepage "https://claude.com/download"
 
   livecheck do
     url "https://storage.googleapis.com/osprey-downloads-c02f6a0d-347c-492b-a752-3e0651722e97/nest/update_manifest.json"
