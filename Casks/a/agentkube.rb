@@ -1,11 +1,11 @@
 cask "agentkube" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.0.9"
-  sha256 arm:   "5cc9a31c8ae950cac0f287a93d11bb598c4662039babad7b6c67988b93308852",
-         intel: "70a68f24e1668b2cd2a9f2941d56299679c229f1008d921806c996ae2239a6df"
+  version "0.0.10"
+  sha256 arm:   "09049b2bb54dbbda0c4b6f837501589d938ee43f4a994c9924bbcc589145085e",
+         intel: "48dd4ff1528797c0b2a7314ef79ab0b560a375df12a8ecc12c87a590ec637be2"
 
-  url "https://github.com/agentkube/agentkube/releases/download/v#{version}/agentkube_#{version}_#{arch}-apple-darwin.tar.gz",
+  url "https://github.com/agentkube/agentkube/releases/download/v#{version}/agentkube_#{version}_#{arch}.dmg",
       verified: "github.com/agentkube/agentkube/"
   name "Agentkube"
   desc "AI-powered Kubernetes IDE"
@@ -30,3 +30,4 @@ cask "agentkube" do
     "~/Library/Saved Application State/com.agentkube.app.savedState",
   ]
 end
+
