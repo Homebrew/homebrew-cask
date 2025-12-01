@@ -2,26 +2,30 @@ cask "miniconda" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "py313_25.9.1-1"
-    sha256 "491f35ab841c99225e5680209d5455a2f5278551378781c0dfeaf2586d7ae3df"
+    version "py313_25.9.1-3"
+    sha256 "751b360885e8de7a350e3484542ccbfe7ff3d55cce794255167991dfa7ed79e1"
+
+    livecheck do
+      url "https://repo.anaconda.com/miniconda/"
+      strategy :page_match do |page|
+        sha256 = page.scan(/>Miniconda3-latest-MacOSX-arm64\.sh<.{,99}>(\w{64})</im).first.first
+        page.scan(/>Miniconda3-(py\d+_[\d.-]+)-MacOSX-arm64\.sh<.{,99}>#{sha256}</im).first.first
+      end
+    end
   end
   on_intel do
     version "py313_25.7.0-2"
     sha256 "9c88674b1a839eeb4cff006df397a05ea7d896472318fd84b7070278f9653dc6"
+
+    livecheck do
+      skip "Legacy version"
+    end
   end
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh"
   name "Miniconda"
   desc "Minimal installer for conda"
   homepage "https://www.anaconda.com/docs/getting-started/miniconda/main"
-
-  livecheck do
-    url "https://repo.anaconda.com/miniconda/"
-    strategy :page_match do |page|
-      sha256 = page.scan(/>Miniconda3-latest-MacOSX-#{arch}\.sh<.{,99}>(\w{64})</im).first.first
-      page.scan(/>Miniconda3-(py\d+_[\d.-]+)-MacOSX-#{arch}\.sh<.{,99}>#{sha256}</im).first.first
-    end
-  end
 
   auto_updates true
   conflicts_with cask: [
