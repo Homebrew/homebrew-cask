@@ -7,11 +7,6 @@ cask "quicklook-pfm" do
   desc "Quick Look plugin for PPM, PGM, PFM and PBM files"
   homepage "https://github.com/lnxbil/quicklook-pfm"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
 
   qlplugin "Quicklook-PFM.qlgenerator"
