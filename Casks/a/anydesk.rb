@@ -7,9 +7,11 @@ cask "anydesk" do
   desc "Allows connection to a computer remotely"
   homepage "https://anydesk.com/"
 
+  # The upstream download page links to the unversioned dmg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://anydesk.com/en/downloads/mac-os
   livecheck do
-    url "https://anydesk.com/en/downloads/mac-os"
-    regex(/>v(\d+(?:\.\d+)+)[\s<]/i)
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
   app "AnyDesk.app"
