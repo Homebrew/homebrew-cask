@@ -1,6 +1,6 @@
 cask "accordance" do
-  version "14.1.0"
-  sha256 "d3f637f6742d9e16e8d307c45f103315726af84e2941df8fe348d2bd3b968630"
+  version "14.1.1"
+  sha256 "e78060966e3b04737aafe2db33467de1afd10bb4ec6ba6b737e3d5d452eca5fe"
 
   url "https://d366ra67x2bs56.cloudfront.net/mac/Acc_#{version}.zip",
       verified: "d366ra67x2bs56.cloudfront.net/"
