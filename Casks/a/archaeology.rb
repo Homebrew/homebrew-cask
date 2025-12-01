@@ -1,5 +1,5 @@
 cask "archaeology" do
-  version "1.4,209"
+  version "1.5,215"
   sha256 :no_check
 
   url "https://www.mothersruin.com/software/downloads/Archaeology.dmg"
@@ -18,7 +18,7 @@ cask "archaeology" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Archaeology.app"
   binary "#{appdir}/Archaeology.app/Contents/MacOS/trowel"
