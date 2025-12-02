@@ -1,9 +1,9 @@
 cask "tev" do
   arch intel: "-intel"
 
-  version "2.6.2"
-  sha256 arm:   "c8f8c84c8a02d151e232387e8d83acc58580ad7c408f7d55078891c436caf289",
-         intel: "7ff5bae47780c96b7314f9325fe26a3ee7d17db1ac4525bb7084201592594583"
+  version "2.6.3"
+  sha256 arm:   "9684883b661cce8b9723d757e056c6ad6b831d5fedc4c32cfbe2bebbee46274b",
+         intel: "a39483ed457a089cd8c7d2055776b1603d74cad78cff7ca43728a5b6e2c6e426"
 
   url "https://github.com/Tom94/tev/releases/download/v#{version}/tev#{arch}.dmg"
   name "tev"
