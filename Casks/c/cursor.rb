@@ -1,9 +1,9 @@
 cask "cursor" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.44,f6a8593b2b7c61c2063c79d5a8fcd248c9db458a"
-  sha256 arm:   "471bd87d7eec469609e791a9725242c9dbfb673f9289fac3ef8f31240c8fe9f6",
-         intel: "2b3ccd0e12c71820ce17dd0cc03a44ef049fd4361c96b8817a1a4c0884b351ab"
+  version "2.1.46,ab326d0767c02fb9847b342c43ea58275c4b1685"
+  sha256 arm:   "4db3cf975bc851d7c12d01d2ba5fe35dce4697320604a2fcb1d44dec01c2a07d",
+         intel: "5fb2f005d7049dd006af3ba90e61728e5d212b55ab04648ae6faf8f8d7f31483"
 
   url "https://downloads.cursor.com/production/#{version.csv.second}/darwin/#{arch}/Cursor-darwin-#{arch}.zip"
   name "Cursor"
