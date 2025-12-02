@@ -8,6 +8,7 @@ cask "gg" do
   homepage "https://github.com/gulbanana/gg"
 
   app "gg.app"
+  binary "#{appdir}/gg.app/Contents/MacOS/gg"
 
   zap trash: [
     "~/Library/Application Support/au.gulbanana.gg",
