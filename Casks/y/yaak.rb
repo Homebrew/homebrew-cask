@@ -5,7 +5,7 @@ cask "yaak" do
   sha256 arm:   "b674f4c426b1727d74b7ee60b4338732b215cdaa088cdbb9797bd73910ce44da",
          intel: "4433f4f25248eaa0a938babc4037b15ae8cf6c998f6c75f3ed6b681d787afe12"
 
-  url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/Yaak_#{version}_#{arch}_darwin.dmg",
+  url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
       verified: "github.com/mountain-loop/yaak/"
   name "Yaak"
   desc "REST, GraphQL and gRPC client"
