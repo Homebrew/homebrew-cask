@@ -1,4 +1,6 @@
 cask "nanoleaf" do
+  arch arm: "-arm64"
+
   version "2.3.4"
   sha256 arm:   "94f2e542141913b76232055f4d64d2f42917abba4cd580d8228233bbe19f38b2",
          intel: "7909d9c0fe901ca3cb62edc9a89424a8fd4319e1b5ad9f6488ba2fcbc1cabdcf"
