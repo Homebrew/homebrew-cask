@@ -42,8 +42,8 @@ cask "teamviewer" do
     pkg "TeamViewer.pkg"
   end
   on_ventura :or_newer do
-    version "15.72.3"
-    sha256 "3074cb05e0de129a2c9f87a235e8e17486ad4905a870851629d242247a34fb04"
+    version "15.72.6"
+    sha256 "f1974084844586a6873f0e777c038a98f83b2ede564382773e845c7b1c35489d"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=13.7&type=1&channel=1"
