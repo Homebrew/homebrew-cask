@@ -1,8 +1,8 @@
 cask "oxygen-xml-developer" do
-  version "28.0,2025032106"
+  version "28.0,2025112606"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://archives.oxygenxml.com/Oxygen/Developer/InstData#{version.csv.first}/MacOSX/VM/oxygenDeveloper-openjdk.dmg"
+  url "https://www.oxygenxml.com/InstData/Developer/MacOSX/VM/oxygenDeveloper-openjdk.dmg"
   name "oXygen XML Developer"
   desc "Tools for XML editing"
   homepage "https://www.oxygenxml.com/xml_developer.html"
