@@ -20,6 +20,7 @@ cask "refine" do
   zap trash: [
     "~/Library/Application Support/com.runjuu.refine",
     "~/Library/Application Support/Refine",
+    "~/Library/Caches/CloudKit/com.runjuu.refine",
     "~/Library/Caches/com.runjuu.refine",
     "~/Library/HTTPStorages/com.runjuu.refine",
     "~/Library/Preferences/com.runjuu.refine.plist",
