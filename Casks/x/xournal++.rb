@@ -10,6 +10,11 @@ cask "xournal++" do
   desc "Handwriting notetaking software"
   homepage "https://github.com/xournalpp/xournalpp"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Xournal++.app"
