@@ -1,6 +1,6 @@
 cask "imaging-edge" do
-  version "1.2.01.04030,glrfSDVSdu"
-  sha256 "c05d709fbd38ca02eeee13a2b33a0576a224100c1247208ac44c07330bf1eabf"
+  version "1.2.02.08050,Uxaf4233f5"
+  sha256 "6887ed04c4a676b833ac7c55bbd321bdd48fdf5f75d0155bce5fc403f8bebc54"
 
   url "https://di.update.sony.net/NEX/#{version.csv.second}/ied_#{version.csv.first.dots_to_underscores}.dmg"
   name "Sony Imaging Edge Desktop"
