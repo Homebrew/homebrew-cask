@@ -1,6 +1,6 @@
 cask "fork" do
-  version "2.60.3"
-  sha256 "f04062a4cd44b23f973398acbf84efc3e60e80f5b57668c2578d4d13cc0bee37"
+  version "2.60.4"
+  sha256 "5dbf9cfdef2d89de3251d6b2669ca77138e15be170a5ab7f43e76cfc9062ff5f"
 
   url "https://cdn.fork.dev/mac/Fork-#{version}.dmg"
   name "Fork"
