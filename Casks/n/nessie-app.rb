@@ -10,7 +10,7 @@ cask "nessie-app" do
 
   livecheck do
     url "https://nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
