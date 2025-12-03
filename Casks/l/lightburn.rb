@@ -1,6 +1,6 @@
 cask "lightburn" do
-  version "2.0.04"
-  sha256 "8fee374311ec53041dffb21939e34d5be2f056b9fc7b3faa68bcb7f72523f410"
+  version "2.0.05"
+  sha256 "913068b92c598c29f1b8784f7fef6f6120aa61a19f44ce1edc5bdb61fae3e09c"
 
   url "https://release.lightburnsoftware.com/LightBurn/Release/LightBurn-v#{version}/LightBurn.V#{version}.dmg"
   name "LightBurn"
