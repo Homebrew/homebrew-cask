@@ -1,6 +1,6 @@
 cask "psychopy" do
-  version "2025.2.1"
-  sha256 "74a3eead753b34319a6cfdeec736e263ddb07f06bf5c33498eb6696ee3a1a523"
+  version "2025.2.3"
+  sha256 "724a7a73fda5ad5bd02c22b2211eb8352d08544e40625caf917f6022f87bf0d3"
 
   url "https://github.com/psychopy/psychopy/releases/download/#{version.csv.first.major_minor_patch}/StandalonePsychoPy-#{version.csv.first}-macOS#{"_#{version.csv.second}" if version.csv.second}-3.10.dmg",
       verified: "github.com/psychopy/psychopy/"
