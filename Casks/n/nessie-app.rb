@@ -13,6 +13,7 @@ cask "nessie-app" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :sonoma"
 
   app "Nessie.app"
