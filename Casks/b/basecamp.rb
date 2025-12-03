@@ -1,9 +1,15 @@
 cask "basecamp" do
   arch arm: "_arm64"
 
-  version "3,2.5.1"
-  sha256 arm:   "62debd6d6d07c3a32cbeca6748769ddf8b1d17802911f86eb402cec06f611175",
+  sha256 arm:   "434e37465b4959f468f797fd9eaf3b493e8556763bfc7fb3a2c0ce15eed7b5cb",
          intel: "2dff1f9a9abb16f1e17e40c83d8fca4381dbdabd8891ac32c04b7cd6717c37a6"
+
+  on_arm do
+    version "3,2.5.2"
+  end
+  on_intel do
+    version "3,2.5.1"
+  end
 
   url "https://basecamp.com/desktop/mac#{arch}/basecamp#{version.major}-#{version.csv.second}.zip",
       verified: "basecamp.com/desktop/"
