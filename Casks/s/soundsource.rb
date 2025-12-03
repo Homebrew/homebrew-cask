@@ -1,5 +1,5 @@
 cask "soundsource" do
-  version "5.8.11"
+  version "6.0.0"
   sha256 :no_check
 
   url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource.zip"
@@ -14,7 +14,7 @@ cask "soundsource" do
 
   auto_updates true
   conflicts_with cask: "soundsource@test"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sequoia"
 
   app "SoundSource.app"
 
@@ -27,10 +27,4 @@ cask "soundsource" do
     "~/Library/Preferences/com.rogueamoeba.soundsource.plist",
     "~/Library/WebKit/com.rogueamoeba.soundsource",
   ]
-
-  caveats <<~EOS
-    SoundSource #{version} requires macOS 14.5 or higher.
-    Older versions of macOS will download a compatible version after opening the app.
-    See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=SoundSource for more details.
-  EOS
 end
