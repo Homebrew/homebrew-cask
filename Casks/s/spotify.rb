@@ -1,7 +1,7 @@
 cask "spotify" do
   arch arm: "ARM64"
 
-  version "1.2.77.358"
+  version "1.2.78.418"
   sha256 :no_check
 
   url "https://download.scdn.co/Spotify#{arch}.dmg",
