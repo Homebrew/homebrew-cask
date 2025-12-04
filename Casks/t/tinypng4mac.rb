@@ -12,10 +12,23 @@ cask "tinypng4mac" do
     app "TinyPNG4Mac.app"
   end
   on_ventura :or_newer do
-    version "2.2.0"
-    sha256 "6284d5678df78ab01d7a9b21cee76acd3753f95a1a2f7ecc999ad1ab0fa3a400"
+    version "2.2.1,20201"
+    sha256 "d1ce60d76bf178221f0ab81051886b8adcb0856e654a2335a514b8b68a0c5b9c"
 
-    url "https://github.com/kyleduo/TinyPNG4Mac/releases/download/v#{version}/Tiny-Image-Installer.dmg"
+    url "https://github.com/kyleduo/TinyPNG4Mac/releases/download/v#{version.csv.first}/Tiny-Image-Installer#{"-#{version.csv.second}" if version.csv.second}.dmg"
+
+    livecheck do
+      url :url
+      regex(%r{/v?(\d+(?:\.\d+)+)/Tiny-Image-Installer(?:[._-](v?(\d+(?:[._]\d+)*)))?\.dmg}i)
+      strategy :github_latest do |json, regex|
+        json["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+        end
+      end
+    end
 
     app "Tiny Image.app"
   end
