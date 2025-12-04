@@ -11,8 +11,8 @@ cask "netnewswire" do
     end
   end
   on_ventura :or_newer do
-    version "6.2"
-    sha256 "0d7a42d9b5e015129850b5e5ae40e4c31b54efb882861e522130081100b97b14"
+    version "6.2.1"
+    sha256 "16dd22ef68104ac4f885c61c0a6a944bc2cdce6c5b95cb8ab29ee1c894c86729"
 
     url "https://github.com/Ranchero-Software/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip",
         verified: "github.com/Ranchero-Software/NetNewsWire/"
