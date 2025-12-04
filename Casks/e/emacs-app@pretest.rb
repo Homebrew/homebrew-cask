@@ -14,11 +14,6 @@ cask "emacs-app@pretest" do
     regex(/Emacs[._-]pretest[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg/i)
   end
 
-  conflicts_with cask: [
-    "emacs-app",
-    "emacs-app@nightly",
-  ]
-
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/ctags"
