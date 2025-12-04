@@ -1,9 +1,9 @@
 cask "hoppscotch-selfhost" do
   arch arm: "aarch64", intel: "x64"
 
-  version "25.11.0-0"
-  sha256 arm:   "cffcd2166cea3cf6b58564eebf838c91796e52d0431c9d0e91d36c324a5ca93d",
-         intel: "6827ed9f6c28af6714588493591a9738739c5018983e0ba0117f6998384ae730"
+  version "25.11.1-0"
+  sha256 arm:   "a5445206467d04162766bb110c0b5d562cd61f7279ca0c204cb61e892b662be9",
+         intel: "51ac13f454979b2c1f160480ae86dcddf986cadd941252970d3b56f7225b882c"
 
   url "https://github.com/hoppscotch/releases/releases/download/v#{version}/Hoppscotch_SelfHost_mac_#{arch}.dmg",
       verified: "github.com/hoppscotch/releases/"
