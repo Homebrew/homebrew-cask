@@ -4,7 +4,7 @@ cask "font-bbh-bogle" do
 
   url "https://github.com/google/fonts/raw/main/ofl/bbhbogle/BBHBogle-Regular.ttf"
   name "BBH Bogle"
-  homepage "https://github.com/Studio-DRAMA/BBH"
+  homepage "https://github.com/Studio-DRAMA/BBHSans"
 
   font "BBHBogle-Regular.ttf"
 
