@@ -1,6 +1,6 @@
 cask "connectiq" do
-  version "8.3.0,2025-09-22,5813687a0"
-  sha256 "a063717a47c7d0887e91864724a1d6bc415ccfaeecb49f6e5fc0e53e46b871d8"
+  version "8.4.0,2025-12-03,5122605dc"
+  sha256 "d5f0c66bd124f93163830602d0a6d613c2aaf66371620ed8a720107e838c2a63"
 
   url "https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-mac-#{version.tr(",", "-")}.dmg"
   name "Garmin Connect IQ SDK"
@@ -19,6 +19,8 @@ cask "connectiq" do
       end
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/ConnectIQ.app"
   app "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/MonkeyMotion.app"
