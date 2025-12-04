@@ -33,7 +33,7 @@ cask "logi-options+" do
     end
   end
   on_ventura :or_newer do
-    version "1.97.791262"
+    version "1.98.809639"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
