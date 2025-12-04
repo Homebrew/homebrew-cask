@@ -4,7 +4,7 @@ cask "font-bbh-hegarty" do
 
   url "https://github.com/google/fonts/raw/main/ofl/bbhhegarty/BBHHegarty-Regular.ttf"
   name "BBH Hegarty"
-  homepage "https://github.com/Studio-DRAMA/BBH"
+  homepage "https://github.com/Studio-DRAMA/BBHSans"
 
   font "BBHHegarty-Regular.ttf"
 
