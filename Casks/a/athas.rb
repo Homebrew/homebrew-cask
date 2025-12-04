@@ -11,6 +11,11 @@ cask "athas" do
   desc "Lightweight code editor"
   homepage "https://athas.dev/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Athas.app"
 
   zap trash: [
