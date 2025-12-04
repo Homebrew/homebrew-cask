@@ -1,15 +1,21 @@
 cask "hyperwhisper" do
-  version "2.11.0"
-  sha256 "5281f94c01d7366e1eee50cb7ef0157a4e97ff5237c8d5d246358115fe94116f"
+  version "2.12.0"
+  sha256 "a0cb70758f8a2ed310fd2833eb916844aa6ea3ac2ae41a8ed44beb564a4c6341"
 
   url "https://builds.hyperwhisper.com/hyperwhisper-#{version}.dmg"
   name "HyperWhisper"
   desc "AI-powered speech-to-text transcription"
   homepage "https://hyperwhisper.com/"
 
+  # The Sparkle `shortVersionString` may not include the full version used in
+  # the filename (e.g. 2.12 instead of 2.12.0), so we match the version from the
+  # file name instead.
   livecheck do
     url "https://hyperwhisper.com/appcast.xml"
-    strategy :sparkle, &:short_version
+    regex(/hyperwhisper[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle do |item, regex|
+      item.url[regex, 1]
+    end
   end
 
   auto_updates true
