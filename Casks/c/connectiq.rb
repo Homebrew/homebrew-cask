@@ -20,6 +20,8 @@ cask "connectiq" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/ConnectIQ.app"
   app "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/MonkeyMotion.app"
   binary "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/monkeybrains.jar"
