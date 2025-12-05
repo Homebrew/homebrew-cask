@@ -4,8 +4,13 @@ cask "markright" do
 
   url "https://github.com/dvcrn/markright/releases/download/#{version}/MarkRight_#{version}.dmg"
   name "MarkRight"
-  desc "Electron-powered markdown editor with live preview"
+  desc "Markdown editor with live preview"
   homepage "https://github.com/dvcrn/markright"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "MarkRight.app"
 
