@@ -18,8 +18,8 @@ cask "calibre" do
     end
   end
   on_ventura :or_newer do
-    version "8.16.0"
-    sha256 "ec29efb3755969ad18c18932405a22a8732d8beaea8d4be3340e0e77983c74a0"
+    version "8.16.1"
+    sha256 "239a567d6c78f51fe80e602a5ffed62f7686a5c855957046e4d6680d069c0abb"
 
     livecheck do
       url "https://calibre-ebook.com/dist/osx"
