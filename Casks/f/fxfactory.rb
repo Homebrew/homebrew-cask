@@ -20,7 +20,7 @@ cask "fxfactory" do
 
   depends_on macos: ">= :monterey"
 
-  pkg "Install FxFactory #{version.csv.first}.pkg"
+  pkg "Install FxFactory #{version.csv.first.major_minor}.pkg"
 
   uninstall launchctl: "com.fxfactory.FxFactory.helper",
             quit:      "com.fxfactory.FxFactory",
