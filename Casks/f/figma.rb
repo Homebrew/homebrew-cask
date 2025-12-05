@@ -17,8 +17,6 @@ cask "figma" do
     end
   end
 
-  auto_updates true
-
   app "Figma.app"
 
   zap trash: [
