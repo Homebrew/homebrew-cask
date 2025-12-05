@@ -1,6 +1,6 @@
 cask "dockdoor" do
-  version "1.26"
-  sha256 "4dfa35251dda8a1bbff821495967146956145b5eb0aacc97ea617e91555a61f4"
+  version "1.27"
+  sha256 "b456e70077ca13dde314702e3845ea8cc5d9e13780094d3d95dea8abe94f5ef4"
 
   url "https://github.com/ejbills/DockDoor/releases/download/#{version}/DockDoor.dmg",
       verified: "github.com/ejbills/DockDoor/"
