@@ -3,7 +3,7 @@ cask "dnclient" do
   sha256 "c9f372af6741eaf9c53c1ab94e9829ddd1bdacfc8ed2fbae8024f76a1d638c31"
 
   url "https://dl.defined.net/c7546109/v#{version}/macos/DNClient-Desktop.dmg"
-  name "dnclient"
+  name "DNClient"
   desc "Peer-to-peer VPN client for managed nebula networks"
   homepage "https://www.defined.net/"
 
