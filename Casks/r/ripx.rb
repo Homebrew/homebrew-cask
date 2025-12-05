@@ -1,6 +1,6 @@
 cask "ripx" do
-  version "8.0.0"
-  sha256 "89644cd2daac1b73bfce33a269effe33c3352b9728e93718fb98653e14ec44b4"
+  version "8.0.1"
+  sha256 "3d6c4097b0f23f511ac4bbe240596e2cef5c6bbbf175a357d98de8e874d2c9fe"
 
   url "https://s3.us-east-2.amazonaws.com/downloads.hitnmix.com/RipXDAW_#{version.no_dots}.dmg",
       verified: "s3.us-east-2.amazonaws.com/downloads.hitnmix.com/"
