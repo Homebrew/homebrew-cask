@@ -1,8 +1,8 @@
 cask "dnclient" do
-  version "0.9.0"
+  version "0.9.0,c7546109"
   sha256 "c9f372af6741eaf9c53c1ab94e9829ddd1bdacfc8ed2fbae8024f76a1d638c31"
 
-  url "https://dl.defined.net/c7546109/v#{version}/macos/DNClient-Desktop.dmg"
+  url "https://dl.defined.net/#{version.csv.second}/v#{version.csv.first}/macos/DNClient-Desktop.dmg"
   name "DNClient"
   desc "Peer-to-peer VPN client for managed nebula networks"
   homepage "https://www.defined.net/"
@@ -16,7 +16,11 @@ cask "dnclient" do
         next unless downloads.key?("macos-universal-desktop")
         next unless version.match?(regex)
 
-        version[regex, 1]
+        download_url = downloads["macos-universal-desktop"]
+        git_sha = download_url[%r{/([a-f0-9]{8})/}, 1]
+        next unless git_sha
+
+        "#{version[regex, 1]},#{git_sha}"
       end
     end
   end
