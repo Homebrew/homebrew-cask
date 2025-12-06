@@ -9,8 +9,10 @@ updates:
     day: friday
     time: '08:00'
     timezone: Etc/UTC
-  patterns:
-  - "*"
+  groups:
+    github-actions:
+      patterns:
+      - "*"
   allow:
   - dependency-type: all
   cooldown:
