@@ -1,9 +1,9 @@
 cask "cardinal-search" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.14"
-  sha256 arm:   "0fd89c14f67da48106e0c10d98a40e6d34aef7b8aef24d915d0e68deab79a0fd",
-         intel: "d660870a24a52264dbe52e7dccfd9d1ea7259a7f3fed7f5c4526ef96cb2abeaa"
+  version "0.1.15"
+  sha256 arm:   "e037aa6d07fae3fcd9b5e5631da3fc49ecacf20b8302d442ccc2bcc3af699c72",
+         intel: "be8a048304ab0fec61f9542c819950255493d723f79a8f07efba602dab2b146d"
 
   url "https://github.com/cardisoft/cardinal/releases/download/v#{version}/Cardinal_#{version}_#{arch}.dmg"
   name "Cardinal Search"
