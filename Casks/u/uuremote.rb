@@ -1,16 +1,16 @@
 cask "uuremote" do
-  version "4.8.1" 
-  sha256 "0263a8010a3f9c22c620a6c29b766660f366a5bcd640ec477ee140913dba6f5e"     
+  version "4.8.1"
+  sha256 "0263a8010a3f9c22c620a6c29b766660f366a5bcd640ec477ee140913dba6f5e"
 
   url "https://api.nrd.nie.163.com/api/v1/release/dl/4?channel=gwqd"
   name "UU Remote"
   name "网易UU远程"
   desc "NetEase UU remote desktop access and control tool"
-  homepage "https://uuyc.163.com/" 
+  homepage "https://uuyc.163.com/"
 
   livecheck do
     url :url
-    regex(/uuyc[._-]v?(\d+(?:\.\d+)+)\.pkg/i) 
+    regex(/uuyc[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     strategy :header_match
   end
 
@@ -29,7 +29,7 @@ cask "uuremote" do
     opoo "Unable to forcibly close UU Remote"
   end
 
-  uninstall  launchctl: [
+  uninstall launchctl: [
               "com.netease.uuremote.agent",
               "com.netease.uuremote.daemon",
             ],
