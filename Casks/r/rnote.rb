@@ -1,16 +1,9 @@
 cask "rnote" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.13.1+212"
-  sha256 arm:   "2ccb46aeab91b09cfb4a7e3411aaae21939eb7391a1d2062e4cec9bba968808c",
-         intel: "adb37a8a84bf97394059647eab0cb3ba1cac77ac289fb26f88c81774276f5da6"
-
-  on_arm do
-    depends_on macos: ">= :big_sur"
-  end
-  on_intel do
-    depends_on macos: ">= :catalina"
-  end
+  version "0.13.1+215"
+  sha256 arm:   "940af287a78ee242b05b14f649b32e9cc297090e6d7d69759945f97fe49c55b0",
+         intel: "c985ea4757b9ac03cd7485ac824d3488a31b52b98fdb221a1d5ee062d58d7af8"
 
   url "https://gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/#{version}/Rnote-#{version}_#{arch}.dmg",
       verified: "gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/"
@@ -25,6 +18,8 @@ cask "rnote" do
       json.filter_map { |item| item["tag_name"]&.[](regex, 1) }
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Rnote.app"
 
