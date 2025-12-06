@@ -29,13 +29,13 @@ cask "uuremote" do
     opoo "Unable to forcibly close UU Remote"
   end
 
-  uninstall launchctl:  [
+  uninstall launchctl: [
               "com.netease.uuremote.agent",
               "com.netease.uuremote.daemon",
             ],
-            quit:       "com.netease.uuremote",
-            pkgutil:    "com.netease.uuremote",
-            delete:     [
+            quit:      "com.netease.uuremote",
+            pkgutil:   "com.netease.uuremote",
+            delete:    [
               "/Applications/UURemote.app",
               "/Library/Caches/UURemote",
               "/Library/LaunchAgents/com.netease.uuremote.agent.plist",
