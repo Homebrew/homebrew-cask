@@ -1,4 +1,4 @@
-cask "uuremote" dohttps://github.com/niu541412/homebrew-cask
+cask "uuremote" do
   version "4.8.1"
   sha256 :no_check
 
