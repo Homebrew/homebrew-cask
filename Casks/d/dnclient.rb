@@ -9,18 +9,13 @@ cask "dnclient" do
 
   livecheck do
     url "https://api.defined.net/v1/downloads"
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(%r{/(\h+)/v?(\d+(?:\.\d+)+)/macos/DNClient-Desktop\.dmg}i)
     strategy :json do |json, regex|
-      json.dig("data", "dnclient")&.filter_map do |version, downloads|
-        next if version == "latest"
-        next unless downloads.key?("macos-universal-desktop")
-        next unless version.match?(regex)
+      json.dig("data", "dnclient")&.map do |_, release|
+        match = release["macos-universal-desktop"]&.match(regex)
+        next if match.blank?
 
-        download_url = downloads["macos-universal-desktop"]
-        git_sha = download_url[%r{/([a-f0-9]{8})/}, 1]
-        next unless git_sha
-
-        "#{version[regex, 1]},#{git_sha}"
+        "#{match[2]},#{match[1]}"
       end
     end
   end
