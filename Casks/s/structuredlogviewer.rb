@@ -1,7 +1,7 @@
 cask "structuredlogviewer" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.117"
+  version "2.3.118"
   sha256 arm:   "f6e76a00e80c23ca6250ac5ce67c8542ce42fa79575701f183e8b22728900360",
          intel: "9d7794472e165abe413f659d8c1ccba06c01072f0548e485e79fc2146bc21d71"
 
