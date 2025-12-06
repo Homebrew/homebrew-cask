@@ -1,6 +1,6 @@
 cask "font-monocraft-nerd-font" do
-  version "4.2"
-  sha256 "1208252be677af800142ad553512cd8081c8245b11f89476519109ebb503c69e"
+  version "4.2.1"
+  sha256 "67f88ff9e7c6560f6cf60fb062fd353a72f62dc2654462950c65b63ed53d9754"
 
   url "https://github.com/IdreesInc/Monocraft/releases/download/v#{version}/Monocraft-nerd-fonts-patched.ttc"
   name "Monocraft with Nerd glyphs"
