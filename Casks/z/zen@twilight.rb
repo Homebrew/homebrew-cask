@@ -1,5 +1,5 @@
 cask "zen@twilight" do
-  version "1.18t,20251205110742"
+  version "1.18t,20251206113225"
   sha256 :no_check
 
   url "https://github.com/zen-browser/desktop/releases/download/twilight/zen.macos-universal.dmg",
