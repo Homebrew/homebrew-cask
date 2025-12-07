@@ -1,9 +1,9 @@
 cask "agentkube" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.0.10"
-  sha256 arm:   "09049b2bb54dbbda0c4b6f837501589d938ee43f4a994c9924bbcc589145085e",
-         intel: "48dd4ff1528797c0b2a7314ef79ab0b560a375df12a8ecc12c87a590ec637be2"
+  version "0.0.11"
+  sha256 arm:   "896a0690550fb1b4c2ad96c63019857631792e071df9d90c82d5d79cb6426bd2",
+         intel: "04fed50e59f3eb49a64f54234f7c1d2c1b14bd6832b8e0c4281588942417d0a1"
 
   url "https://github.com/agentkube/agentkube/releases/download/v#{version}/agentkube_#{version}_#{arch}.dmg",
       verified: "github.com/agentkube/agentkube/"
