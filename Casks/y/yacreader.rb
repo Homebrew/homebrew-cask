@@ -21,6 +21,8 @@ cask "yacreader" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   app "YACReader.app"
   app "YACReaderLibrary.app"
 
