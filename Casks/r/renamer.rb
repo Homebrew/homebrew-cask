@@ -1,9 +1,9 @@
 cask "renamer" do
-  version "7.0.1"
-  sha256 "c8885c4767de9f32407ab721575eee0a1708cd7887ff4bb44ec988c771b3badb"
+  version "7.1.4"
+  sha256 "26dd7262aa5db8e42cb002a65f0d0ae8f359c51a7d95d96caa490e9062b7a722"
 
-  url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version.major}/Renamer.zip",
-      verified: "storage.googleapis.com/incrediblebee/"
+  url "https://incredible-bee-honeycomb.fra1.digitaloceanspaces.com/apps/Renamer-#{version.major}/Renamer.zip",
+      verified: "incredible-bee-honeycomb.fra1.digitaloceanspaces.com/"
   name "Renamer"
   desc "Batch file renamer application"
   homepage "https://renamer.com/"
