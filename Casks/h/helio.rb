@@ -1,6 +1,6 @@
 cask "helio" do
-  version "3.16"
-  sha256 "87b8ae4c6394da1a3555de828361e5be33d4d2c491716a3eeb8c0aeb23c693b1"
+  version "3.17"
+  sha256 "11aec7e5bb4a234257eba6546223735c30bcb8b24b303797d2185bc1ef3a8381"
 
   url "https://ci.helio.fm/helio-#{version}.dmg"
   name "Helio"
