@@ -2,7 +2,7 @@ cask "uuremote" do
   version "4.8.1"
   sha256 :no_check
 
-  url "https://a56.gdl.netease.com/uuyc_#{version}.pkg"
+  url "https://a56.gdl.netease.com/uuyc_#{version}.pkg",
       verified: "a56.gdl.netease.com/"
   name "UU Remote"
   name "网易UU远程"
