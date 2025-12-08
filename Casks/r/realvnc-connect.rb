@@ -7,9 +7,11 @@ cask "realvnc-connect" do
   desc "Remote desktop client and server application"
   homepage "https://www.realvnc.com/"
 
+  # The upstream download page links to the latest pkg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://www.realvnc.com/en/connect/download/#moreInstall
   livecheck do
-    url "https://www.realvnc.com/en/connect/download"
-    regex(/RealVNC[._-]Connect[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]universal\.pkg/i)
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
   depends_on macos: ">= :sequoia"
