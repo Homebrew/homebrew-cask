@@ -7,9 +7,13 @@ cask "bike" do
   desc "Record and process your ideas"
   homepage "https://www.hogbaysoftware.com/bike/"
 
+  # The Sparkle feed can contain items on the "preview" channel, so we restrict
+  # matching to the default channel.
   livecheck do
     url "https://www.hogbaysoftware.com/bike/releases/index.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   auto_updates true
