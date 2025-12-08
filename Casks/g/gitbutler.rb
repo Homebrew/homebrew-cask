@@ -24,6 +24,7 @@ cask "gitbutler" do
   auto_updates true
 
   app "GitButler.app"
+  binary "#{appdir}/GitButler.app/Contents/MacOS/gitbutler-tauri", target: "but"
 
   zap trash: [
     "~/Library/Application Support/com.gitbutler.app",
