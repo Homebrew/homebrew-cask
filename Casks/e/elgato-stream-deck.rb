@@ -21,7 +21,11 @@ cask "elgato-stream-deck" do
   uninstall launchctl: "com.elgato.StreamDeck",
             quit:      "com.elgato.StreamDeck",
             pkgutil:   "com.elgato.StreamDeck",
-            delete:    "/Applications/Elgato Stream Deck.app"
+            delete:    [
+              "/Applications/Elgato Stream Deck.app",
+              "/Library/LaunchAgents/com.elgato.StreamDeck.plist",
+              "~/Library/LaunchAgents/com.elgato.StreamDeck.plist",
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.elgato.StreamDeck",
