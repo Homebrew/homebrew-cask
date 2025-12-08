@@ -1,6 +1,6 @@
 cask "steinberg-mediabay" do
-  version "1.3.30.49,8beebaf1-9501-37d0-954a-0dc6c7a1fcc1"
-  sha256 "245fa82e7beda70bff0dd7d20d0e2e73fb33bc3fd8814483163fda899491c4cf"
+  version "1.3.40.52,726be661-1aaf-3318-acc4-33a117719e67"
+  sha256 "51ab236695b69c8f67357a81c978aa115cf13a2ea49ca41a1f6dc2d160db4292"
 
   url "https://download.steinberg.net/static_content/runtime-components/steinberg-media-bay/#{version.csv.first}-#{version.csv.second}/MediaBay_Installer_mac.dmg"
   name "Steinberg MediaBay"
