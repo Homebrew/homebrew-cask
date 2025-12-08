@@ -3,7 +3,7 @@ cask "uuremote" do
   sha256 :no_check
 
   url "https://a56.gdl.netease.com/uuyc_#{version}.pkg"
-      verified: "a56.gdl.netease.com"
+      verified: "a56.gdl.netease.com/"
   name "UU Remote"
   name "网易UU远程"
   desc "NetEase UU remote desktop access and control tool"
