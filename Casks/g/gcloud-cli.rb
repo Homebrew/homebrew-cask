@@ -11,8 +11,8 @@ cask "gcloud-cli" do
   homepage "https://cloud.google.com/cli/"
 
   livecheck do
-    url "https://cloud.google.com/sdk/docs/install-sdk"
-    regex(/latest\s*gcloud\s*CLI\s*version\s*\(v?(\d+(?:\.\d+)+)\)/i)
+    url "https://docs.cloud.google.com/sdk/docs/install-sdk"
+    regex(/gcloud\s*CLI\s*version\s*\(?v?(\d+(?:\.\d+)+)\)?/i)
   end
 
   auto_updates true
