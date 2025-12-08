@@ -1,5 +1,5 @@
 cask "navicat-for-mysql" do
-  version "17.3.5"
+  version "17.3.6"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicat#{version.major}_mysql_en.dmg"
