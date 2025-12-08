@@ -7,9 +7,11 @@ cask "vnc-viewer" do
   desc "Remote desktop application focusing on security"
   homepage "https://www.realvnc.com/"
 
+  # The upstream download page links to the latest dmg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://www.realvnc.com/en/connect/download/viewer/macos/
   livecheck do
-    url "https://www.realvnc.com/en/connect/download/viewer/macos/"
-    regex(%r{href=.*?/VNC-Viewer-(\d+(?:\.\d+)+)-MacOSX-universal\.dmg}i)
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
   depends_on macos: ">= :big_sur"
