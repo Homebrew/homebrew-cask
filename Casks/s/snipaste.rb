@@ -1,6 +1,6 @@
 cask "snipaste" do
-  version "2.10.8"
-  sha256 "7038e75db8df481a34f77630244247306d9e603009dc5a02b88ae1d8ea9c5ac9"
+  version "2.11"
+  sha256 "bed8e19ac595144e34820499f96496caab9d593e7deda53ed5e47a98e6c42a8e"
 
   url "https://download.snipaste.com/archives/Snipaste-#{version}.dmg"
   name "Snipaste"
