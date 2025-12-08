@@ -12,19 +12,13 @@ cask "thorium" do
   homepage "https://www.edrlab.org/software/thorium-reader/"
 
   livecheck do
-    url :url
+    url "https://thorium.edrlab.org/en/"
     regex(%r{/v?(\d+(?:\.\d+)+)/Thorium[._-]v?(\d+(?:[.-]\d+)+)#{arch}\.dmg}i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next unless match
 
-        release["assets"]&.map do |asset|
-          match = asset["browser_download_url"]&.match(regex)
-          next if match.blank?
-
-          (match[2] == match[1]) ? match[1] : "#{match[1]},#{match[2]}"
-        end
-      end.flatten
+      (match[2] == match[1]) ? match[1] : "#{match[1]},#{match[2]}"
     end
   end
 
