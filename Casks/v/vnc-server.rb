@@ -7,9 +7,11 @@ cask "vnc-server" do
   desc "Remote desktop server application"
   homepage "https://www.realvnc.com/"
 
+  # The upstream download page links to the latest pkg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://www.realvnc.com/en/connect/download/vnc/macos/
   livecheck do
-    url "https://www.realvnc.com/en/connect/download/vnc/macos/"
-    regex(%r{href=.*?/VNC[._-]Server[._-]v?(\d+(?:\.\d+)*)[._-]MacOSX[._-]universal\.pkg}i)
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
   pkg "VNC-Server-#{version}-MacOSX-universal.pkg"
