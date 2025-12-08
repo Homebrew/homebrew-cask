@@ -2,7 +2,7 @@ cask "uuremote" do
   version "4.8.1"
   sha256 :no_check
 
-  url "https://api.nrd.nie.163.com/api/v1/release/dl/4?channel=gwqd"
+  url "https://a56.gdl.netease.com/uuyc_#{version}.pkg"
   name "UU Remote"
   name "网易UU远程"
   desc "NetEase UU remote desktop access and control tool"
