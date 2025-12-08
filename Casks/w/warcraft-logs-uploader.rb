@@ -1,6 +1,6 @@
 cask "warcraft-logs-uploader" do
-  version "8.17.115"
-  sha256 "624f1672cda011880dc08283031bbc726d64b2d279f25d2c563b52922a5a1a5b"
+  version "8.17.122"
+  sha256 "04d6e44c96a7e16fc9c82bc2fcca204351a6a93fe536ccd81d88008a1a6933c1"
 
   url "https://github.com/RPGLogs/Uploaders-warcraftlogs/releases/download/v#{version}/warcraftlogs-v#{version}.dmg",
       verified: "github.com/RPGLogs/Uploaders-warcraftlogs/"
@@ -8,9 +8,12 @@ cask "warcraft-logs-uploader" do
   desc "Client to upload warcraft logs"
   homepage "https://classic.warcraftlogs.com/"
 
+  # The download page (https://classic.warcraftlogs.com/client/download) is
+  # inaccessible due to Cloudflare protections, so we check GitHub releases
+  # directly.
   livecheck do
-    url "https://classic.warcraftlogs.com/client/download"
-    regex(%r{.*?/warcraftlogs[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
