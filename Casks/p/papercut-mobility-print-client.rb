@@ -8,11 +8,8 @@ cask "papercut-mobility-print-client" do
   homepage "https://www.papercut.com/products/free-software/mobility-print/"
 
   livecheck do
-    url "https://www.papercut.com/help/manuals/mobility-print/release-history/"
-    regex(/id=["']mobility-print-macos-client-cloud-print["'].*?Current\s+version.*?v?(\d+(?:\.\d+)+)/im)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0] }
-    end
+    url "https://www.papercut.com/api/product/mobility-print/latest/client/macos-cloud/"
+    strategy :header_match
   end
 
   depends_on macos: ">= :monterey"
