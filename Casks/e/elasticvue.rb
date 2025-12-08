@@ -1,9 +1,9 @@
 cask "elasticvue" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.11.0"
-  sha256 arm:   "45aac2de78086a8518bd3e6eaf8b1a2a15ba09819bd9acfe91238b6375bf1a8c",
-         intel: "52baaabdf9d193838f30e57be8d79c85c8192d1c3ed88167d5132f9fad35f9ee"
+  version "1.11.1"
+  sha256 arm:   "574fd0d6cec2e3e68f8619d05d1f86e9e4181d85d72bd8a5ee8a037986c029ff",
+         intel: "8fd57975ccae874e27c2a98d17eb8bb0dcd2d6f555ab3e74f6e8b9de150e6559"
 
   url "https://github.com/cars10/elasticvue/releases/download/v#{version}/elasticvue_#{version}_#{arch}.dmg"
   name "Elasticvue"
