@@ -11,12 +11,8 @@ cask "fleet" do
   desc "Hybrid IDE and text editor"
   homepage "https://www.jetbrains.com/fleet/"
 
-  livecheck do
-    url "https://data.services.jetbrains.com/products/releases?code=FL&latest=true&type=preview"
-    strategy :json do |json|
-      json["FL"]&.map { |release| release["version"] }
-    end
-  end
+  # https://blog.jetbrains.com/fleet/2025/12/the-future-of-fleet/
+  disable! date: "2025-12-22", because: :no_longer_available
 
   app "Fleet.app"
   binary "#{appdir}/Fleet.app/Contents/app/bin/fleet"
