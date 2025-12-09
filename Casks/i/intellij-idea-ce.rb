@@ -11,18 +11,8 @@ cask "intellij-idea-ce" do
   desc "IDE for Java development - community edition"
   homepage "https://www.jetbrains.com/idea/"
 
-  livecheck do
-    url "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
-    strategy :json do |json|
-      json["IIC"]&.map do |release|
-        version = release["version"]
-        build = release["build"]
-        next if version.blank? || build.blank?
-
-        "#{version},#{build}"
-      end
-    end
-  end
+  # https://blog.jetbrains.com/idea/2025/12/intellij-idea-unified-release/
+  deprecate! date: "2025-12-08", because: :discontinued, replacement_cask: "intellij-idea"
 
   auto_updates true
 
