@@ -3,7 +3,7 @@ cask "endnote" do
   # Until we can identify this using livecheck, we will need to manually find
   # the new product version on each major version update. See:
   # https://support.clarivate.com/Endnote/s/article/Download-EndNote
-  version "22.1.0.21828,2025"
+  version "22.2.0.22114,2025"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://download.endnote.com/downloads/#{version.csv.second}/EndNote#{version.csv.second}Installer.dmg"
