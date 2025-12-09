@@ -11,18 +11,8 @@ cask "pycharm-ce" do
   desc "IDE for Python programming - Community Edition"
   homepage "https://www.jetbrains.com/pycharm/"
 
-  livecheck do
-    url "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
-    strategy :json do |json|
-      json["PCC"]&.map do |release|
-        version = release["version"]
-        build = release["build"]
-        next if version.blank? || build.blank?
-
-        "#{version},#{build}"
-      end
-    end
-  end
+  # https://blog.jetbrains.com/pycharm/2025/12/pycharm-2025-3-unified-ide-jupyter-notebooks-in-remote-development-uv-as-default-and-more/
+  deprecate! date: "2025-12-08", because: :discontinued, replacement_cask: "pycharm"
 
   auto_updates true
 
