@@ -1,6 +1,6 @@
 cask "conductor" do
-  version "0.25.3,01KBRPK6KNW7NXCDPMN1AM0TGC"
-  sha256 "c6194330c0535c68b0f4a7f8135598fe27124f147826d1c6e8a95e3c6d365b15"
+  version "0.25.4,01KC04A1ANFAXNW028V0B8RHDA"
+  sha256 "afc5f9869b611c8ca6027b2fa1a07312ea1b786aacf0e67b92acbd08a535f060"
 
   url "https://cdn.crabnebula.app/asset/#{version.csv.second}",
       verified: "cdn.crabnebula.app/asset/"
