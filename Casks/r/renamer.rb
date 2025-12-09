@@ -8,9 +8,16 @@ cask "renamer" do
   desc "Batch file renamer application"
   homepage "https://renamer.com/"
 
+  # The app checks a `latest-mac.yml` file that was previously published as
+  # part of GitHub releases but the related repository has been removed. The
+  # first-party website doesn't provide any up to date version information (only
+  # older versions), so there doesn't appear to be any available version
+  # information unless/until upstream modifies the app to check a new location.
   livecheck do
-    url "https://github.com/incbee/renamer-7-releases/releases/latest/download/latest-mac.yml"
-    strategy :electron_builder
+    url :url
+    strategy :extract_plist do |items|
+      items["com.incrediblebee.Renamer"]&.short_version
+    end
   end
 
   depends_on macos: ">= :sequoia"
