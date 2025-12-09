@@ -1,7 +1,7 @@
 cask "unity-hub" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.15.2"
+  version "3.15.3"
   sha256 :no_check
 
   url "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup-#{arch}.dmg"
