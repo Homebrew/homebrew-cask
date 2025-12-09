@@ -7,11 +7,6 @@ cask "wailbrew" do
   desc "Manage Homebrew packages with a UI"
   homepage "https://github.com/wickenico/WailBrew"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :big_sur"
 
   app "WailBrew.app"
