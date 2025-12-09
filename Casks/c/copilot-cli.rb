@@ -13,6 +13,12 @@ cask "copilot-cli" do
   desc "Brings the power of Copilot coding agent directly to your terminal"
   homepage "https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli"
 
+  # Use GitHub "latest release" when checking for new versions so prereleases are ignored.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :ventura"
 
   binary "copilot"
