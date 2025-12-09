@@ -3,9 +3,9 @@ cask "dante-controller" do
   arch_folder = on_arch_conditional arm: "apple_silicon/"
   livecheck_arch = on_arch_conditional arm: "silicon", intel: "intel"
 
-  version "4.16.1.5"
-  sha256 arm:   "a38e25c8df58fb02dafc8e239f421fe92b879542004b20d909ee87b0beb7c582",
-         intel: "a5761dfce001645cc60411d3bff953f0829bcf62d1e4d294e86feb800f7f9df7"
+  version "4.17.0.15"
+  sha256 arm:   "fbacaf6791151dff666d90c0234e4dad2265bc7510de0e25191bf44fd0f37012",
+         intel: "6ad4a30091bb1b670ec076c6b06db7ecd13b1443aa6123db3cfe1953672b0226"
 
   url "https://audinate-software-updates.sgp1.cdn.digitaloceanspaces.com/DanteController/#{version.major}/#{version.major_minor}/#{arch_folder}DanteController-#{version}-macos-#{arch}.dmg",
       verified: "audinate-software-updates.sgp1.cdn.digitaloceanspaces.com/DanteController/"
