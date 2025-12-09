@@ -1,5 +1,5 @@
 cask "workspace-one-intelligent-hub" do
-  version "24.11.4"
+  version "25.11"
   sha256 :no_check
 
   url "https://packages.omnissa.com/wsone/WorkspaceONEIntelligentHub.pkg",
