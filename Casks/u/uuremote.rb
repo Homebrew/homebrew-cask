@@ -1,6 +1,6 @@
 cask "uuremote" do
-  version "4.8.1"
-  sha256 :no_check
+  version "4.9.0"
+  sha256 "acb5c2d35074ed4fd1dac75ed96a655803fa51ca5bc08ae2899cec39b5e59fa5"
 
   url "https://a56.gdl.netease.com/uuyc_#{version}.pkg",
       verified: "a56.gdl.netease.com/"
@@ -10,7 +10,7 @@ cask "uuremote" do
   homepage "https://uuyc.163.com/"
 
   livecheck do
-    url :url
+    url "https://api.nrd.nie.163.com/api/v1/release/dl/4?channel=gwqd"
     regex(/uuyc[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     strategy :header_match
   end
