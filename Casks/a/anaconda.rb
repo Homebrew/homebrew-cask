@@ -1,9 +1,18 @@
 cask "anaconda" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2025.06-1"
-  sha256 arm:   "f9366a024ac6f043dc224986c54f1b4e1226e6ccb6291d83bdadb489f159d847",
-         intel: "58139fe195337f3041259e3a611339ed3afa4d164cc9aa2a7e8e84c0673e3670"
+  on_arm do
+    version "2025.12-1"
+    sha256 "f998f0918b9f06e08c3444f2b2c897fd3036da6725441ca064aa71ad47c75481"
+  end
+  on_intel do
+    version "2025.06-1"
+    sha256 "58139fe195337f3041259e3a611339ed3afa4d164cc9aa2a7e8e84c0673e3670"
+
+    # https://www.anaconda.com/blog/intel-mac-package-support-deprecation
+    deprecate! date: "2025-12-10", because: :discontinued
+    disable! date: "2026-12-10", because: :discontinued
+  end
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-#{arch}.sh"
   name "Anaconda Distribution"
