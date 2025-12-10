@@ -22,6 +22,7 @@ cask "lm-studio" do
   depends_on arch: :arm64
 
   app "LM Studio.app"
+  binary "#{appdir}/LM Studio.app/Contents/Resources/app/.webpack/lms"
 
   uninstall quit: [
     "ai.elementlabs.lmstudio",
