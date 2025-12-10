@@ -10,6 +10,11 @@ cask "bison-wallet" do
   desc "Multi-coin wallet with feeless DEX, atomic swaps, and arbitrage tools"
   homepage "https://github.com/decred/dcrdex"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Bison Wallet.app"
