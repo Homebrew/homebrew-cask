@@ -9,7 +9,7 @@ cask "monocle-app" do
 
   livecheck do
     url "https://heyiam.dk/updates/monocle/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sonoma"
