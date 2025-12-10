@@ -1,6 +1,6 @@
 cask "xattred" do
-  version "1.6,2025.06"
-  sha256 "2347bc6a945f44c5c6da1857f334aa4e18943d83b1da8c41693756c2302b5c0e"
+  version "1.7,2025.12"
+  sha256 "74ef7894a18bd6ea828a300fb8b3ca583826ce99e3b54939ec87a3d56a5ba803"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/xattred#{version.csv.first.no_dots}.zip"
   name "xattred"
@@ -22,6 +22,8 @@ cask "xattred" do
       "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "xattred#{version.csv.first.major}#{version.csv.first.minor}/xattred.app"
 
