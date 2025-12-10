@@ -1,5 +1,5 @@
 cask "jiggler" do
-  version "1.9"
+  version "1.10"
   sha256 :no_check
 
   url "http://downloads.sticksoftware.com/Jiggler.dmg"
