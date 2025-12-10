@@ -1,6 +1,6 @@
 cask "green-go-control" do
-  version "5.2.0"
-  sha256 "243b2efcfea697130e55c7b9694d0b77882af6b125de676ef78b55b48fbed475"
+  version "5.2.1"
+  sha256 "47c370815e76bd504e975e1e09e692d960b64c4019bfceaedcbf334d48583bf9"
 
   url "https://downloads.greengoconnect.com/#{version}/macos/green-go-control.dmg",
       verified: "downloads.greengoconnect.com/"
