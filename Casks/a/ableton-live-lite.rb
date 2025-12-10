@@ -1,6 +1,6 @@
 cask "ableton-live-lite" do
-  version "12.3"
-  sha256 "623ef7f50796da479e5ae44ff9bbdb0f88a32822428df2c70d749384522d93d5"
+  version "12.3.1"
+  sha256 "76f821c6a93a4eaeebc1ffd6f60dde7be7f86658034b266b15e20a4ef618e145"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_universal.dmg"
   name "Ableton Live Lite"
