@@ -1,9 +1,9 @@
 cask "teamspeak-client@beta" do
   arch arm: "arm", intel: "intel"
 
-  version "6.0.0-beta3.3"
-  sha256 arm:   "4ff6bc17d82dcdf2a09f2191f1c35ec9c58857475902189a62ac17c7165aefe5",
-         intel: "4f339d8bf20b6339c8888676c04b11806d684015dd83c68f3c1531963ec28233"
+  version "6.0.0-beta3.4"
+  sha256 arm:   "367260a110642604f383a44dc2463ae33c6850777b7b7bad4c260dc839b6f800",
+         intel: "3074ca3783a80cd0f27ca790a5dc7c2dda22ab23e0f958d3915cad9106c9f2b2"
 
   url "https://files.teamspeak-services.com/pre_releases/client/#{version}/teamspeak-client-#{arch}.dmg",
       verified: "files.teamspeak-services.com/"
