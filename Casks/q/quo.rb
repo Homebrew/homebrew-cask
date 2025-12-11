@@ -1,6 +1,6 @@
 cask "quo" do
-  version "4.2.1"
-  sha256 "829cf77049aa782dc11cfc321c0cfd44c44a27bc68c91860a127ce773b5dc43e"
+  version "4.4.0"
+  sha256 "a5b55f870df3f8cb41512dd2d644c89d71783401701e49e3f92b53cd7178e243"
 
   url "https://download.quo.com/Quo%20(formerly%20OpenPhone)-#{version}-universal.dmg"
   name "Quo"
