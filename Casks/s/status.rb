@@ -22,7 +22,7 @@ cask "status" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Status.app"
 
