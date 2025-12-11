@@ -19,9 +19,11 @@ cask "notepadexe" do
   app "Notepad.exe.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/best.swift.notepad.sfl*",
     "~/Library/Application Support/Notepad.exe",
     "~/Library/Autosave Information/Notepad.exe",
     "~/Library/Caches/Notepad.exe",
+    "~/Library/Caches/SentryCrash/Notepad.exe",
     "~/Library/HTTPStorages/best.swift.Notepad",
     "~/Library/Notepad.exe",
     "~/Library/Preferences/best.swift.Notepad.plist",
