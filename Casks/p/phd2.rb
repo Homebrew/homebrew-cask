@@ -1,5 +1,5 @@
 cask "phd2" do
-  version "2.6.13"
+  version "2.6.14"
 
   on_ventura :or_older do
     sha256 "3d098cc6ccaa7ddf5040e51ca9f423647fe167948d7d92bece456fa207491b7f"
@@ -12,7 +12,7 @@ cask "phd2" do
     end
   end
   on_sonoma :or_newer do
-    sha256 "c8ea80bfaa57d7092e7b8ce67f6b905a768bf0b9e810f3c1faa065072feace2d"
+    sha256 "11f324ea4154508419f14215605972278c2adef6f91634f03e36aa8c2e92aa56"
 
     url "https://openphdguiding.org/PHD2-#{version}-OSX-64-sonoma+.zip"
 
