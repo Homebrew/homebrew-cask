@@ -41,10 +41,10 @@ cask "uuremote" do
               "/Library/Caches/UURemote",
               "/Library/LaunchAgents/com.netease.uuremote.agent.plist",
               "/Library/LaunchDaemons/com.netease.uuremote.daemon.plist",
-              "/Users/Shared/UURemote",
             ]
 
   zap trash: [
+    "/Users/Shared/UURemote",
     "~/Library/Application Support/com.netease.uuremote",
     "~/Library/Caches/com.netease.uuremote",
     "~/Library/Caches/com.netease.uuremote.server",
