@@ -12,9 +12,8 @@ cask "monocle-app" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sonoma"
-
   auto_updates true
+  depends_on macos: ">= :sonoma"
 
   app "Monocle.app"
 
