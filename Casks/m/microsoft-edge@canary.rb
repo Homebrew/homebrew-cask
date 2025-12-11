@@ -5,7 +5,7 @@ cask "microsoft-edge@canary" do
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdgeCanary-#{version.csv.first}.dmg"
   name "Microsoft Edge Canary"
   desc "Multi-platform web browser"
-  homepage "https://www.microsoft.com/en-us/edge/download/insider?form="
+  homepage "https://www.microsoft.com/en-us/edge/download/insider"
 
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=2124603"
