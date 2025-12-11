@@ -1,6 +1,6 @@
 cask "bria" do
-  version "6.8.4,128270"
-  sha256 "2ad8783760a007a6946f5128710b44ba7c6ba8b8886dbb6343407efcbfdd2ebe"
+  version "6.8.5,128857"
+  sha256 "2e9d6a544a03885eb8ab41d046e94bae7c6338b7ff9ca508e77f110fd028e8ac"
 
   url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "counterpath.s3.amazonaws.com/"
@@ -20,7 +20,7 @@ cask "bria" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sonoma"
 
   app "Bria.app"
 
