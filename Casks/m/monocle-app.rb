@@ -4,7 +4,7 @@ cask "monocle-app" do
 
   url "https://heyiam.dk/updates/monocle/Monocle-#{version.dots_to_hyphens}.zip"
   name "Monocle"
-  desc "Noise-cancelling for your screen. A modern take on window dimming"
+  desc "Window dimming utility"
   homepage "https://monocle.heyiam.dk/"
 
   livecheck do
@@ -13,6 +13,8 @@ cask "monocle-app" do
   end
 
   depends_on macos: ">= :sonoma"
+
+  auto_updates true
 
   app "Monocle.app"
 
