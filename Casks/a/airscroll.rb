@@ -1,5 +1,5 @@
 cask "airscroll" do
-  version "1.2.0"
+  version "1.2.1"
   sha256 :no_check
 
   url "https://airscroll.net/releases/AirScroll.app.zip"
