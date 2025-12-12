@@ -1,9 +1,9 @@
 cask "excire-foto" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.1.2"
-  sha256 arm:   "f3a00822fac68b1818e2fd66dd826fb761da26df469cd3923cb6e830a8287efe",
-         intel: "306f6af7b6e755724d3ba3bbdf85cb79b4b70b54b3d29ab91b261ea59b4ce7a2"
+  version "4.1.3"
+  sha256 arm:   "2abdd6352fd0ebbf14a25ac3cff23ac5b43ed2614678a770ff833fb7d8305612",
+         intel: "a530453b348a2790e12699d16f08b8636c806a9add709a3be3c3e6fac45c8624"
 
   url "https://www.excire.com/downloads/excire-foto/ExcireFoto-#{version}-#{arch}.dmg.zip"
   name "Excire Foto"
