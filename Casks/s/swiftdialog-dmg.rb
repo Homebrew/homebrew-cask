@@ -1,4 +1,4 @@
-cask "swiftdialog-app" do
+cask "swiftdialog-dmg" do
   version "2.5.6"
   sha256 "53f143b04de7333831a14f457161826e9f72571524329dadf5457ac2aa496bdd"
 
