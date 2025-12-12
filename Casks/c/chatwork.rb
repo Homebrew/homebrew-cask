@@ -1,7 +1,7 @@
 cask "chatwork" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.19.1"
+  version "2.19.2"
   sha256 :no_check
 
   url "https://desktop-app.chatwork.com/installer/ChatWork.dmg"
