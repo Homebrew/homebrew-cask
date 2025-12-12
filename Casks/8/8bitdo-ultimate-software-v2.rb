@@ -1,0 +1,23 @@
+cask "8bitdo-ultimate-software-v2" do
+  version "1.0.11"
+  sha256 "a06ed63f5d5917f884e72c41aefbacd829b1fb16646bdcbf448539bf2c185342"
+
+  url "https://download.8bitdo.com/Ultimate-Software/8BitDo_Ultimate_Software_V2_macOS_V#{version}.zip"
+  name "8bitdo-ultimate-software-v2"
+  desc "Control every piece of your controller"
+  homepage "https://app.8bitdo.com/Ultimate-Software-V2/"
+
+  livecheck do
+    url :url
+    regex(/^macOS[._-]V?(\d+(?:\.\d+)+)$/i)
+  end
+
+  depends_on macos: ">= :monterey"
+
+  app "8BitDo Ultimate Software V2.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.8BitDo.UltimateV2",
+    "~/Library/Caches/com.8BitDo.UltimateV2",
+  ]
+end
