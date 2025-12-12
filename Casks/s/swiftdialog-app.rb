@@ -5,8 +5,8 @@ cask "swiftdialog-app" do
   url "https://github.com/swiftDialog/swiftDialog/releases/download/v#{version}/swiftDialog.dmg",
       verified: "github.com/swiftDialog/swiftDialog/"
   name "swiftDialog App Bundle"
-  desc "Admin utility for macOS that presents custom dialogs or displays informative messages from shell scripts"
-  homepage "https://swiftdialog.app"
+  desc "Admin utility that presents custom dialogs or messages from shell scripts"
+  homepage "https://swiftdialog.app/"
 
   livecheck do
     url :url
@@ -17,7 +17,5 @@ cask "swiftdialog-app" do
 
   app "Dialog.app"
 
-  zap trash: [
-    "~/Library/Preferences/au.csiro.dialog.plist",
-  ]
+  zap trash: "~/Library/Preferences/au.csiro.dialog.plist"
 end
