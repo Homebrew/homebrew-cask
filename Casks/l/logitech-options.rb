@@ -42,6 +42,8 @@ cask "logitech-options" do
   desc "Software for Logitech devices"
   homepage "https://support.logitech.com/software/options"
 
+  deprecate! date: "2025-12-12", because: :discontinued, replacement_cask: "logi-options+"
+
   auto_updates true
 
   uninstall launchctl: [
