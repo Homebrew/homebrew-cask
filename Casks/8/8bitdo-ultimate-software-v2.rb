@@ -8,8 +8,8 @@ cask "8bitdo-ultimate-software-v2" do
   homepage "https://app.8bitdo.com/Ultimate-Software-V2/"
 
   livecheck do
-    url :url
-    regex(/^macOS[._-]V?(\d+(?:\.\d+)+)$/i)
+    url :homepage
+    regex(/href=.*?8BitDo[._-]Ultimate[._-]Software[._-]V2[._-]macOS[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :monterey"
