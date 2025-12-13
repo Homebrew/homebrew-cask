@@ -18,6 +18,7 @@ cask "copilot-cli" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "copilot-cli@prerelease"
   depends_on macos: ">= :ventura"
 
   binary "copilot"
