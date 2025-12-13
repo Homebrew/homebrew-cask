@@ -1,9 +1,9 @@
 cask "universal-media-server" do
   arch arm: "arm", intel: "x86_64"
 
-  version "15.1.0"
-  sha256 arm:   "dce7974825edd0b26378f61361a52c487d415a4bcee4783e74ca80776466389d",
-         intel: "08ac90d927df0827b8a1b32219d1be3c1e3fa20113aa28d651856d97b81d4de0"
+  version "15.2.0"
+  sha256 arm:   "0f6ff2a00649b8f048a8df8f0964b9932369de8609748a60aaf0818cce313eb5",
+         intel: "9090b7eeb0e908c3fcc8d9cb36da7351ba03cbb69ffc47dfcc53bd208d826bfd"
 
   url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-macOS-#{version}-#{arch}.dmg",
       verified: "github.com/UniversalMediaServer/UniversalMediaServer/"
