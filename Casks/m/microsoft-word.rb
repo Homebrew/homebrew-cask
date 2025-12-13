@@ -1,5 +1,5 @@
 cask "microsoft-word" do
-  on_monterey :or_older do
+  on_ventura :or_older do
     on_catalina :or_older do
       version "16.66.22101101"
       sha256 "5a6a75d9a5b46cceeff5a1b7925c0eab6e4976cba529149b7b291a0355e7a7c9"
@@ -12,12 +12,16 @@ cask "microsoft-word" do
       version "16.89.24091630"
       sha256 "e064013cf26dc3742f07436fae1bb1a37fdd21fc4fb09640c0de0fc977f4ffd3"
     end
+    on_ventura do
+      version "16.101.25100321"
+      sha256 "c76066232b3367ad37eb03ce108c3a6de73aeb7c17e9a0baa6962c6cb88a5d6f"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
+  on_sonoma :or_newer do
     version "16.103.25120717"
     sha256 "2e1d157cdde274924fbd66cbbdce01a38d04da86a4c4cb437f4d81aed4e0f3b8"
 
