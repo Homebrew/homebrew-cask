@@ -1,9 +1,9 @@
 cask "kodi" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "21.2-Omega"
-  sha256 arm:   "fef454cc79107fb7e600d81fd1ad173bb2f2481a3a32c78fe84f927b58446832",
-         intel: "3639fdb737e95fc2126b44e25cc4a88db6b857df7795f27ba8ed8d20eaa232f6"
+  version "21.3-Omega"
+  sha256 arm:   "4ae19c4d20f41e81c8889302874179c5b8bf1d86bbb3c61b6a7e0d0f2e6cbf22",
+         intel: "88f55cd3490f14a743fd5f2295242ff552b2491bc7ded9d5df6d30d585f8dfa4"
 
   url "https://mirrors.kodi.tv/releases/osx/#{arch}/kodi-#{version}-#{arch}.dmg"
   name "Kodi"
@@ -17,6 +17,8 @@ cask "kodi" do
     url "https://mirrors.kodi.tv/releases/osx/#{arch}/"
     regex(/href=.*?kodi[._-]v?(\d+(?:\.\d+)+[._-][^_-]+?)[._-]#{arch}\.dmg/i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Kodi.app"
 
