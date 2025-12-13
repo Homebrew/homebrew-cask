@@ -32,7 +32,9 @@ cask "basictex" do
             ]
 
   zap trash: [
+        "/private/var/db/receipts/org.tug.mactex.basictex2025.plist",
         "/usr/local/texlive/texmf-local",
+        "/var/db/receipts/org.tug.mactex.basictex2025.bom",
         "~/Library/texlive/#{version.major}basic",
       ],
       rmdir: [
