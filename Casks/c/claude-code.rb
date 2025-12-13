@@ -15,7 +15,7 @@ cask "claude-code" do
   homepage "https://www.anthropic.com/claude-code"
 
   livecheck do
-    url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/stable"
+    url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest"
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
