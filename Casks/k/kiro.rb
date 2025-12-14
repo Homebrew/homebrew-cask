@@ -19,9 +19,11 @@ cask "kiro" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Kiro.app"
+  binary "#{appdir}/Kiro.app/Contents/Resources/app/bin/code", target: "kiro"
 
   zap trash: [
     "~/Library/Application Support/Kiro",
