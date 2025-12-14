@@ -3,12 +3,10 @@ cask "comet" do
   sha256 :no_check
 
   on_arm do
-    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_arm64",
-        verified: "perplexity.ai/"
+    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_arm64"
   end
   on_intel do
-    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_x64",
-        verified: "perplexity.ai/"
+    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_x64"
   end
 
   name "Comet"
@@ -24,6 +22,7 @@ cask "comet" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Comet.app"
 
