@@ -3,7 +3,7 @@ cask "glkvm" do
   sha256 "0af45164cda49a10aea78556fd7b5c5655ec84b4d51e72eb177b6169600c877c"
 
   url "https://static.gl-inet.com/edge-app/kvm-mac/#{version}-release1/1765244166600/gl-kvm-#{version}.dmg"
-  name "glkvm"
+  name "GLKVM"
   desc "App for controlling GL.iNet KVM devices"
   homepage "https://www.gl-inet.com/"
 
