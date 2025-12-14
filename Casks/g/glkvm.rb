@@ -5,10 +5,10 @@ cask "glkvm" do
   url "https://static.gl-inet.com/edge-app/kvm-mac/#{version}-release1/1765244166600/gl-kvm-#{version}.dmg"
   name "GLKVM"
   desc "App for controlling GL.iNet KVM devices"
-  homepage "https://www.gl-inet.com/"
+  homepage "https://www.gl-inet.com/app-rm/"
 
   livecheck do
-    url "https://www.gl-inet.com/app-rm/"
+    url :homepage
     regex(%r{href=.*?/kvm-mac/v?(\d+(?:\.\d+)+)-release\d+/.*?\.dmg}i)
   end
 
