@@ -1,5 +1,5 @@
 cask "microsoft-outlook" do
-  on_monterey :or_older do
+  on_ventura :or_older do
     on_catalina :or_older do
       version "16.66.22102801"
       sha256 "bddede85956713be21fdb5ab72be07ecefd05552752e8e60c649e6a15fd0a2c2"
@@ -12,12 +12,16 @@ cask "microsoft-outlook" do
       version "16.89.24091630"
       sha256 "24731ffca0b78c02f2544b145b4a103bd11b724fef0dc938bf5899e156495a72"
     end
+    on_ventura do
+      version "16.101.25100321"
+      sha256 "db4ce5854bbcb60284041f7a04e2f37e317cff578857486af78069b3935c5e86"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
+  on_sonoma :or_newer do
     version "16.103.25120717"
     sha256 "84928f3d8df9a688f0e2302b3929a00e36673b04cff026cbc11c476199e71bd2"
 
