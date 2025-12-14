@@ -2,21 +2,18 @@ cask "comet" do
   version "143.0.7499.33687"
   sha256 :no_check
 
-  on_arm do
-    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_arm64"
-  end
-  on_intel do
-    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_x64"
-  end
+  arch arm: "arm64", intel: "x64"
+
+  url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_#{arch}"
 
   name "Comet"
   desc "Web browser with integrated AI assistant"
   homepage "https://www.perplexity.ai/comet"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |versions|
-      versions.values.filter_map(&:short_version).first
+    url "https://www.perplexity.ai/rest/browser/update?browser=143.0.7499.33686&channel=stable&platform=mac_#{arch}&machine=0000000000000000000000000000000000000000000000000000000000000000"
+    strategy :json do |json|
+      json.dig("body", "browser_version")
     end
   end
 
