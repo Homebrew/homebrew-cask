@@ -45,9 +45,7 @@ cask "intellij-idea@eap" do
     "~/Library/Application Support/JetBrains/IntelliJIdea#{version.csv.first}",
     "~/Library/Caches/JetBrains/IntelliJIdea#{version.csv.first}",
     "~/Library/Logs/JetBrains/IntelliJIdea#{version.csv.first}",
-    "~/Library/Preferences/com.jetbrains.intellij.plist",
-    "~/Library/Preferences/IntelliJIdea#{version.csv.first}",
-    "~/Library/Preferences/jetbrains.idea.*.plist",
-    "~/Library/Saved Application State/com.jetbrains.intellij.savedState",
+    "~/Library/Preferences/com.jetbrains.intellij-EAP.plist",
+    "~/Library/Preferences/jetbrains.iu.*.plist",
   ]
 end
