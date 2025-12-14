@@ -10,8 +10,10 @@ cask "comet" do
   desc "Web browser with integrated AI assistant"
   homepage "https://www.perplexity.ai/comet"
 
+  livecheck_browser = version.sub(/(\d+)$/) { |match| (match.to_i - 1).to_s }
+
   livecheck do
-    url "https://www.perplexity.ai/rest/browser/update?browser=143.0.7499.33686&channel=stable&platform=mac_#{arch}&machine=0000000000000000000000000000000000000000000000000000000000000000"
+    url "https://www.perplexity.ai/rest/browser/update?browser=#{livecheck_browser}&channel=stable&platform=mac_#{arch}&machine=0000000000000000000000000000000000000000000000000000000000000000"
     strategy :json do |json|
       json.dig("body", "browser_version")
     end
