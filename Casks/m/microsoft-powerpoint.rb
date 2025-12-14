@@ -1,5 +1,5 @@
 cask "microsoft-powerpoint" do
-  on_monterey :or_older do
+  on_ventura :or_older do
     on_catalina :or_older do
       version "16.66.22101101"
       sha256 "bea8c4790445f726debd0f64d24fbdac59e3a9b51e95c092fb31da3913164540"
@@ -12,12 +12,16 @@ cask "microsoft-powerpoint" do
       version "16.89.24091630"
       sha256 "44801ae2e12318f6f8982da6fabb1c7c1d79fb38cc464fecfd60189aa36e9555"
     end
+    on_ventura do
+      version "16.101.25100321"
+      sha256 "6256fbb45f2922fa60c9a0101da3b27f933fcf0ada6f530ef1aca235803a7782"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
+  on_sonoma :or_newer do
     version "16.103.25120717"
     sha256 "b196a1dc2c6e1c4eceba00a0042f77de5854d59afd40165494ace2ec3f04c204"
 
