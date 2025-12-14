@@ -1,19 +1,29 @@
 cask "comet" do
-  version :latest
+  version "143.0.7499.33687"
   sha256 :no_check
 
-  url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_arm64",
-      verified: "perplexity.ai/"
+  on_arm do
+    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_arm64",
+        verified: "perplexity.ai/"
+  end
+  on_intel do
+    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_x64",
+        verified: "perplexity.ai/"
+  end
+
   name "Comet"
   desc "Web browser with integrated AI assistant"
   homepage "https://www.perplexity.ai/comet"
 
   livecheck do
-    skip "Upstream provides no versioned download artifact"
+    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_arm64"
+    strategy :header_match do |headers|
+      match = headers["location"]&.match(%r{/(\d+(?:\.\d+)+)/comet_latest\.dmg}i)
+      match&.captures&.first
+    end
   end
 
   auto_updates true
-  depends_on arch: :arm64
 
   app "Comet.app"
 
