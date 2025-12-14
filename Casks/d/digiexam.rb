@@ -7,9 +7,25 @@ cask "digiexam" do
   desc "Academic testing platform with device lockdown"
   homepage "https://www.digiexam.com/"
 
+  # The Release Notes page uses JavaScript to render release information and the
+  # version data is stored in a JS file with a URL that changes between updates.
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.digiexam.com/release-notes"
+    regex(/mac:\s*\[.*?version:\s*["']v?(\d+(?:\.\d+)+)["']/i)
+    strategy :page_match do |page, regex|
+      # Find the current JS file URL on the page
+      js_url = page[/src=["']?([^"' >]*?module_?Release_?Notes_?Customized_?Module(?:\.min)?\.js)["']?/i, 1]
+      next unless js_url
+
+      # Fetch the JS file content
+      js_content = Homebrew::Livecheck::Strategy.page_content(URI.join(@url, js_url).to_s)[:content]
+      next if js_content.blank?
+
+      # NOTE: We can only reliably match the first Mac version (which should be
+      # newest), as matching additional versions could spill over into the data
+      # for another OS
+      js_content[regex, 1]
+    end
   end
 
   auto_updates true
