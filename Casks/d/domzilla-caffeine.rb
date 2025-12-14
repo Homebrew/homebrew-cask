@@ -1,6 +1,6 @@
 cask "domzilla-caffeine" do
-  version "1.6.1"
-  sha256 "d96e489390494988d2532e098904e78198bb9ca094056e59f2c768e5c62bc82e"
+  version "1.6.2"
+  sha256 "d3dbd8a32eac95e9c01c2ee1282f7c770dabf5726319212f248b7eaa9de173c1"
 
   url "https://dr-caffeine-mac.s3.amazonaws.com/Caffeine_#{version}.zip",
       verified: "dr-caffeine-mac.s3.amazonaws.com/"

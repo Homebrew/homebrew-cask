@@ -1,9 +1,9 @@
 cask "ariang" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.11"
-  sha256 arm:   "b5290e421d6529d0dd4e0b49259c4062290229718cc8483abf55f9344bcddb57",
-         intel: "68c3f3c1e8df4e7d8ecd617539a1a32635d6a750808b17f900a5fb4e0713c194"
+  version "1.3.12"
+  sha256 arm:   "a8c6b4e7c4bfabe9d24e1ffcf54b5d13a7d5124023b512cbcf3a4dd9770b7fdc",
+         intel: "dc8a00c9d49f5346a376dc833debc7673e914d86a822da4b00ab6d160b68f31b"
 
   url "https://github.com/mayswind/AriaNg-Native/releases/download/#{version}/AriaNg_Native-#{version}-macOS-#{arch}.dmg"
   name "AriaNg Native"
