@@ -15,9 +15,12 @@ cask "comet" do
 
   livecheck do
     url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_arm64"
-    strategy :header_match do |headers|
-      match = headers["location"]&.match(%r{/(\d+(?:\.\d+)+)/comet_latest\.dmg}i)
-      match&.captures&.first
+    regex(%r{/(\d+(?:\.\d+)+)/comet_latest\.dmg}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      match[1]
     end
   end
 
