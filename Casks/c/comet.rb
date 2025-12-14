@@ -14,13 +14,9 @@ cask "comet" do
   homepage "https://www.perplexity.ai/comet"
 
   livecheck do
-    url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_arm64"
-    regex(%r{/(\d+(?:\.\d+)+)/comet_latest\.dmg}i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next if match.blank?
-
-      match[1]
+    url :url
+    strategy :extract_plist do |versions|
+      versions.values.filter_map(&:short_version).first
     end
   end
 
