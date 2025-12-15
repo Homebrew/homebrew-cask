@@ -1,9 +1,9 @@
 cask "gimp@dev" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.2.0-RC1"
-  sha256 arm:   "7a9b232d62127e8250ca01ace66c54e95d9e34328a55a7c5ed9a18b2d54de474",
-         intel: "93dd67864e83372072dade12cffc3a0a0395c639d2fb9f4902f2b8dda59b656a"
+  version "3.2.0-RC2"
+  sha256 arm:   "dd44429067db3a7926a18bfc6b09f53d6896cac2c5792706721562b76649173f",
+         intel: "e51c791efce6982e2ac4b6d709f031b12d9df147515d788a15038b02f5cd59bb"
 
   url "https://download.gimp.org/gimp/v#{version.major_minor}/macos/gimp-#{version.csv.first}-#{arch}#{"-#{version.csv.second}" if version.csv.second}.dmg"
   name "GIMP development version"
