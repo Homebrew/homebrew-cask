@@ -13,4 +13,6 @@ cask "save-hollywood" do
   end
 
   screen_saver "SaveHollywood.saver"
+
+  # No zap stanza required
 end
