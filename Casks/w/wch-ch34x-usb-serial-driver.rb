@@ -1,5 +1,5 @@
 cask "wch-ch34x-usb-serial-driver" do
-  version "1.9"
+  version "2.0"
   sha256 :no_check
 
   url "https://www.wch.cn/download/file?id=369"
