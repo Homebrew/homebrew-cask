@@ -18,6 +18,7 @@ cask "swiftdialog" do
 
         "#{match[1]},#{match[2]}"
       end
+    end
   end
 
   depends_on macos: ">= :monterey"
