@@ -9,14 +9,15 @@ cask "swiftdialog" do
   homepage "https://swiftdialog.app/"
 
   livecheck do
-    url "https://api.github.com/repos/swiftDialog/swiftDialog/releases/latest"
+    url :url
     regex(/dialog[._-](\d+(?:\.\d+)+)[._-](\d+)\.pkg/i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["browser_download_url"]&.match(regex)
+        next if match.blank?
 
-      "#{match[1]},#{match[2]}"
-    end
+        "#{match[1]},#{match[2]}"
+      end
   end
 
   depends_on macos: ">= :monterey"
