@@ -1,5 +1,5 @@
 cask "securityspy" do
-  version "6.16"
+  version "6.17"
   sha256 :no_check
 
   url "https://www.bensoftware.com/securityspy/releases/SecuritySpy.dmg"
