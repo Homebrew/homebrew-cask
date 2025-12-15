@@ -1,4 +1,4 @@
-cask "support-app" do
+cask "support" do
   version "3.0"
   sha256 "fc90b88d20defc7a6d05c8ea9e1dee0313a585aa2be4418d1c2a75b83cafe0f1"
 
