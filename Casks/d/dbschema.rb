@@ -1,5 +1,5 @@
 cask "dbschema" do
-  version "10.0.1"
+  version "10.0.2"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dbschema.com/download/dbschema_macos_#{version.dots_to_underscores}.dmg"
