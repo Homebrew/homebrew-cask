@@ -1,6 +1,6 @@
 cask "vivid-app" do
-  version "2.13"
-  sha256 "b11a446c58947b1c5a40332d98fba0125bcc208484779ff6836ba852fd582c6b"
+  version "2.14"
+  sha256 "8980bbdc432d51042fe2996f0fd5f20433264b0d87b05feb9fa5d1f5273311c6"
 
   url "https://lumen-digital.com/apps/vivid/releases/Vivid#{version}.zip",
       verified: "lumen-digital.com/apps/vivid/releases/"
