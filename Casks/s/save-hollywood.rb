@@ -7,8 +7,12 @@ cask "save-hollywood" do
   desc "Screen saver for custom video files"
   homepage "http://s.sudre.free.fr/Software/SaveHollywood/about.html"
 
-  deprecate! date: "2024-11-03", because: :unmaintained
-  disable! date: "2025-11-03", because: :unmaintained
+  livecheck do
+    url :homepage
+    regex(/>Version.+(\d+(?:\.\d+)+)[ "<]/i)
+  end
 
   screen_saver "SaveHollywood.saver"
+
+  # No zap stanza required
 end
