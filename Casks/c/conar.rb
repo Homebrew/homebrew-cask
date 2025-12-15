@@ -1,9 +1,9 @@
 cask "conar" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.24.0"
-  sha256 arm:   "5f28685dcb64793848c730aaf835d6af3f142e53547078492f447860062ba921",
-         intel: "6dc0405fed39e6ad2c99fee6ab0ee1387b14a31aea128972618d3d85d3a8654c"
+  version "0.25.0"
+  sha256 arm:   "ea69b16ac16ea55dd85fe5aaf29d4872dbf84d42d69d15ea56d4270453fe2432",
+         intel: "4c6b98e0d09684eedd787fe09c41d1d713fffdfc1b2872873c73c3cd0a341af0"
 
   url "https://github.com/wannabespace/conar/releases/download/v#{version}/Conar-Mac-#{arch}-#{version}-Installer.dmg",
       verified: "github.com/wannabespace/conar/"
