@@ -1,8 +1,8 @@
 cask "wch-ch34x-usb-serial-driver" do
-  version "1.9"
+  version "2.0"
   sha256 :no_check
 
-  url "https://www.wch.cn/download/file?id=369"
+  url "https://file.wch.cn/download/file?id=369"
   name "WCH USB serial driver for CH340/CH341/CH342/CH343/CH344/CH9101/CH9102/CH9103/CH9143"
   desc "USB serial driver"
   homepage "https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html"
@@ -30,5 +30,6 @@ cask "wch-ch34x-usb-serial-driver" do
 
   caveats do
     reboot
+    requires_rosetta
   end
 end
