@@ -1,11 +1,11 @@
 cask "springtoolsforeclipse" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.32.2,4.37.0"
-  sha256 arm:   "ac9255bbbd4b7970190a7a6a95015f30bd889beca6f83484e384018328b5c490",
-         intel: "7b59c440c82251d0e4ec93d4df2faf2797c4a0f68ac327329af0d6ab8973799f"
+  version "5.0.0,4.38.0"
+  sha256 arm:   "fffc6f87665531da1c7f1f42de09899ac12067bc081a0ba43378336d09a2f131",
+         intel: "d709c2095260f999c17a376388574408f9ef2982b3ef970bb455d209693b09cc"
 
-  url "https://cdn.spring.io/spring-tools/release/STS#{version.major}/#{version.csv.first}.RELEASE/dist/e#{version.csv.second.major_minor}/spring-tools-for-eclipse-#{version.csv.first}.RELEASE-e#{version.csv.second}-macosx.cocoa.#{arch}.dmg"
+  url "https://cdn.spring.io/spring-tools/release/dist/#{version.csv.first}.RELEASE/e#{version.csv.second.major_minor}/spring-tools-for-eclipse-#{version.csv.first}.RELEASE-e#{version.csv.second}-macosx.cocoa.#{arch}.dmg"
   name "Spring Tools for Eclipse"
   desc "Next generation tooling for Spring Boot"
   homepage "https://spring.io/tools/"
