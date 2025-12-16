@@ -8,7 +8,8 @@ cask "elgato-studio" do
   homepage "https://www.elgato.com/ww/en/s/downloads"
 
   livecheck do
-    url "https://help.elgato.com/api/v2/help_center/en-us/sections/36773146296465/articles.json"
+    url "https://gc-updates.elgato.com/mac/estm-update/final/feed-manual.xml"
+    regex(/ElgatoStudio[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :json do |json|
       articles = json["articles"] || []
       body = articles.first&.dig("body")
