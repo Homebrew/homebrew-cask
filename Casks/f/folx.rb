@@ -1,5 +1,5 @@
 cask "folx" do
-  version "5.31"
+  version "5.32"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg",
