@@ -15,6 +15,7 @@ cask "privileges" do
   uninstall launchctl: [
               "corp.sap.privileges.agent",
               "corp.sap.privileges.daemon",
+              "corp.sap.privileges.helper",
               "corp.sap.privileges.watcher",
             ],
             pkgutil:   "corp.sap.privileges.pkg"
