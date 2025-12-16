@@ -18,7 +18,7 @@ cask "snagit" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
 
   app "Snagit.app"
 
