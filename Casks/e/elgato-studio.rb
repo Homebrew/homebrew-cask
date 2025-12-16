@@ -10,14 +10,6 @@ cask "elgato-studio" do
   livecheck do
     url "https://gc-updates.elgato.com/mac/estm-update/final/feed-manual.xml"
     regex(/ElgatoStudio[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :json do |json|
-      articles = json["articles"] || []
-      body = articles.first&.dig("body")
-      match = body&.match(/ElgatoStudio-(\d+(?:\.\d+)+)\.(\d+)\.dmg/i)
-      next unless match
-
-      "#{match[1]}.#{match[2]}"
-    end
   end
 
   auto_updates true
