@@ -1,6 +1,6 @@
 cask "audio-modeling-software-center" do
-  version "2.0.5-465"
-  sha256 "bac3d3d416ff6ce32da49996b1cf44a2d46cbf0a4b777304e4c5aff4fee32cbc"
+  version "2.1.0-555"
+  sha256 "e22b7e24985db4ab193e8ce627642f8501931763e242d444a51a0868ae6fedff"
 
   url "https://static.audiomodeling.com/software_center/AudioModelingSoftwareCenter-#{version}-osx-installer.dmg"
   name "Audio Modeling Software Center"
