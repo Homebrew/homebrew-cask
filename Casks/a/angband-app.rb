@@ -1,6 +1,6 @@
 cask "angband-app" do
-  version "4.2.5"
-  sha256 "ea04557f8ad46d7e446fd4e76324774743bb6b073f6fe9b803256776707bbc66"
+  version "4.2.6"
+  sha256 "f212c035b707db0d7e019030aff2cdbca5cc9108226567675e4ebe67c6412792"
 
   url "https://github.com/angband/angband/releases/download/#{version}/Angband-#{version}-osx.dmg",
       verified: "github.com/angband/angband/"
@@ -12,6 +12,8 @@ cask "angband-app" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Angband.app"
 
