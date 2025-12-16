@@ -1,6 +1,6 @@
 cask "topaz-gigapixel" do
-  version "1.0.5"
-  sha256 "664160484730dd931460520d185b3b1604a5c33eff18c87cfc0edfb4d063149e"
+  version "1.0.7"
+  sha256 "878921d02eeb094050aec588e1e422e9d9481099c0f241ad8630e7d6ceed2c3e"
 
   url "https://downloads.topazlabs.com/deploy/TopazGigapixel/#{version}/TopazGigapixel-#{version}.pkg"
   name "Topaz Gigapixel"
