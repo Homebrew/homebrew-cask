@@ -16,7 +16,6 @@ cask "kaleidoscope" do
   conflicts_with cask: %w[
     kaleidoscope@2
     kaleidoscope@3
-    ksdiff
   ]
   depends_on macos: ">= :ventura"
 
