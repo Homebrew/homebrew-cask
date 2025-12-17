@@ -12,7 +12,6 @@ cask "orangedrangon-android-messages" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "android-messages"
   depends_on macos: ">= :big_sur"
 
   app "Android Messages.app"
