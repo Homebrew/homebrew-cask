@@ -8,7 +8,7 @@ cask "snapmaker-orca" do
   url "https://github.com/snapmaker/orcaslicer/releases/download/v#{version}/Snapmaker_Orca_Mac_#{arch}_V#{version}.dmg",
       verified: "github.com/snapmaker/orcaslicer/"
   name "Snapmaker Orca"
-  desc "3D printing software"
+  desc "Slicing software for Snapmaker 3D printers, a fork of OrcaSlicer"
   homepage "https://www.snapmaker.com/snapmaker-orca"
 
   livecheck do
