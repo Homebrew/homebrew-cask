@@ -18,6 +18,7 @@ cask "zap" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "ZAP.app"
 
   zap trash: [
