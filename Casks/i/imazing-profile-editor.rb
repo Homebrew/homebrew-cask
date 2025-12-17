@@ -13,6 +13,7 @@ cask "imazing-profile-editor" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "iMazing Profile Editor.app"
 
