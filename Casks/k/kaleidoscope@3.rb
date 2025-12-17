@@ -24,7 +24,6 @@ cask "kaleidoscope@3" do
   conflicts_with cask: %w[
     kaleidoscope
     kaleidoscope@2
-    ksdiff
   ]
   depends_on macos: ">= :big_sur"
 

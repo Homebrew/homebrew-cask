@@ -14,7 +14,6 @@ cask "steelseries-gg" do
   end
 
   auto_updates true
-  conflicts_with cask: "steelseries-engine"
 
   pkg "SteelSeriesGG#{version}.pkg"
 

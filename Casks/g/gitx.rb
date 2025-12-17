@@ -16,7 +16,6 @@ cask "gitx" do
   end
 
   auto_updates true
-  conflicts_with cask: "rowanj-gitx"
 
   app "GitX.app"
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"
