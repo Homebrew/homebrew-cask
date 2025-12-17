@@ -10,6 +10,7 @@ cask "snapmaker-orca" do
   name "Snapmaker Orca"
   desc "3D printing software"
   homepage "https://www.snapmaker.com/snapmaker-orca"
+  depends_on macos: ">= :big_sur"
 
   livecheck do
     url :url
