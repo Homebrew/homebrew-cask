@@ -6,7 +6,7 @@ cask "tableau" do
          intel: "0e8be0b546ad246348956d7bc698c56d59eabd069e8bd7ecae648323bad69095"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauDesktop-#{version.dots_to_hyphens}#{arch}.dmg",
-      user_agent: :curl
+      user_agent: "curl/8.7.1"
   name "Tableau Desktop"
   desc "Data visualization software"
   homepage "https://www.tableau.com/products/desktop"
