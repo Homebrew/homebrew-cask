@@ -20,7 +20,7 @@ cask "vscodium@insiders" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "VSCodium - Insiders.app"
   binary "#{appdir}/VSCodium - Insiders.app/Contents/Resources/app/bin/codium-insiders"
