@@ -33,7 +33,7 @@ cask "mysql-shell" do
            intel: "25c7da7e1d314fb7aa6da410018d7b28d004ea8739bb8465f7e902c0726055c5"
 
     url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg",
-        user_agent: :curl
+        user_agent: "curl/8.7.1"
 
     livecheck do
       url "https://dev.mysql.com/downloads/shell/?tpl=platform&os=33"
