@@ -28,7 +28,6 @@ cask "kaleidoscope@2" do
   conflicts_with cask: %w[
     kaleidoscope
     kaleidoscope@3
-    ksdiff
   ]
 
   app "Kaleidoscope.app"
