@@ -8,7 +8,7 @@ cask "tor-browser@alpha" do
   homepage "https://www.torproject.org/"
 
   livecheck do
-    url "https://aus1.torproject.org/torbrowser/update_3/alpha/downloads.json"
+    url "https://aus1.torproject.org/torbrowser/update_3/alpha/download-macos.json"
     strategy :json do |json|
       json["version"]
     end
