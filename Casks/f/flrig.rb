@@ -1,6 +1,6 @@
 cask "flrig" do
-  version "2.0.09"
-  sha256 "1af38188ecd5d2bfeba92a98af83833a8e526563971b3dc45f0d60d495f0894f"
+  version "2.0.10"
+  sha256 "49f325db62c889dcabe537d2fcde9d6eb9325b7e69decd1a83f51ec39f8b0514"
 
   url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}.dmg",
       verified: "sourceforge.net/fldigi/"
