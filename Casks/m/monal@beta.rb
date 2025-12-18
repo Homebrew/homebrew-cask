@@ -1,6 +1,6 @@
 cask "monal@beta" do
-  version "1061"
-  sha256 "1aeae219cbf32f0d7feff631dd413e5640a1a75f2d83a30863343c9a576d8220"
+  version "1066"
+  sha256 "56a92c253db89614d9ebcea7f86a1dbc14fd69671b89d6229956fb34817b345d"
 
   url "https://downloads.monal-im.org/monal-im/beta/macOS/Monal-#{version}.zip"
   name "Monal"
