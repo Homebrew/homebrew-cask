@@ -1,9 +1,9 @@
 cask "whimsical" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.0,251005hjpxaj26h"
-  sha256 arm:   "dff8d174826927fa8c7a2188f9aa7ccb705efe73a3316ab6f70069e6587c6a79",
-         intel: "81e339c0dd87d40c2a42985d2259baf8699c335444ad56f39a8059e7b57d80ba"
+  version "0.4.1,2512178nypf97i9"
+  sha256 arm:   "5e2f38a435a87129838e9984a173eb25472ccd9b67039cc20aad5a7ec226644e",
+         intel: "704a6f843991839cd23a19cfad11deac3a0c68ac3c0639ecd13a6372ee93fccb"
 
   url "https://download.todesktop.com/2402209z4j37b73/Whimsical%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/2402209z4j37b73/"
