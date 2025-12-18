@@ -33,7 +33,8 @@ cask "powershell@preview" do
 
   pkg "powershell-#{version}-osx-#{arch}.pkg"
 
-  uninstall pkgutil: "com.microsoft.powershell-preview"
+  uninstall pkgutil: "com.microsoft.powershell-preview",
+            delete:  "/Applications/PowerShell-preview.app"
 
   zap trash: [
         "~/.cache/powershell",
