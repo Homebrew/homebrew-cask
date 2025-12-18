@@ -1,7 +1,7 @@
 cask "miro" do
   arch arm: "darwin-arm64", intel: "darwin"
 
-  version "0.11.124"
+  version "0.11.125"
   sha256 :no_check
 
   url "https://desktop.miro.com/platforms/#{arch}/Install-Miro.dmg"
