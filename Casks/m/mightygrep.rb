@@ -14,6 +14,7 @@ cask "mightygrep" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
   app "MightyGrep Demo.app"
 
   zap trash: [
