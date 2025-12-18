@@ -1,7 +1,7 @@
 cask "wiso-steuer-2026" do
   # NOTE: "2026" is not a version number, but an intrinsic part of the product name
-  version "33.01.2720-HF1,33.01.2720"
-  sha256 "8b527543c49efcda7cd36fc915206bd1506101643b3abbb468d6d9ee3c3fa5fc"
+  version "33.02.2760-RC1,33.02.2760"
+  sha256 "56148ef9c3f29edd6076352fef7c2e4354c9718da32c01308ce4f59e4f2958e9"
 
   url "https://update.buhl-data.com/Updates/Steuer/2026/Mac/Files/#{version.csv.first}/SteuerMac2026-#{version.csv.second || version.csv.first.split("-").first}.dmg",
       verified: "update.buhl-data.com/Updates/Steuer/"
