@@ -26,7 +26,17 @@ cask "elecom-mouse-util" do
               "jp.co.ELECOM.MouseAssistant",
             ]
 
-  # No zap stanza required
+  zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.co.elecom.mouseassistantui.sfl*",
+        "~/Library/Application Support/elecom_mouse_assistant_ui",
+        "~/Library/Application Support/jp.co.ELECOM/MouseAssistant",
+        "~/Library/Caches/jp.co.ELECOM/MouseAssistant",
+        "~/Library/Preferences/jp.co.elecom.MouseAssistantUi.plist",
+      ],
+      rmdir: [
+        "~/Library/Application Support/jp.co.ELECOM",
+        "~/Library/Caches/jp.co.ELECOM",
+      ]
 
   caveats do
     reboot
