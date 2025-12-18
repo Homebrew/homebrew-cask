@@ -1,5 +1,5 @@
 cask "paragon-ntfs" do
-  version "17.0.420"
+  version "17.0.455"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dl.paragon-software.com/demo/ntfsmac#{version.major}_trial.dmg"
