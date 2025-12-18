@@ -1,5 +1,5 @@
 cask "busycontacts" do
-  version "2025.4.3"
+  version "2025.4.4"
   # The `bct-2024.3.1.zip` URL redirects to a file with a date at the end
   # (e.g. `bct-2024.3.1-2024-09-19-12-11.zip`) and this changes over time.
   # Upstream appears to delete the previous file when switching to a file with
