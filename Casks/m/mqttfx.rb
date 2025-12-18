@@ -16,11 +16,7 @@ cask "mqttfx" do
     regex(/href=.*?mqttfx[._-]v?(\d+(?:\.\d+)+)-macos/i)
   end
 
-  installer script: {
-    executable: "MQTT.fx Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-    sudo:       true,
-  }
+  app "MQTT.fx.app"
 
   uninstall delete: "/Applications/MQTT.fx.app"
 
