@@ -1,5 +1,5 @@
 cask "ltspice" do
-  version "26.0.1"
+  version "17.2.4"
   sha256 :no_check
 
   url "https://ltspice.analog.com/software/LTspice.pkg"
