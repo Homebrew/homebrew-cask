@@ -12,7 +12,7 @@ cask "cursor-cli" do
 
   livecheck do
     url "https://cursor.com/install"
-    regex(%r{downloads\.cursor\.com/lab/v?(\d+(?:\.\d+)+(?:[._-]\h+)?)/})
+    regex(%r{downloads\.cursor\.com/lab/v?(\d+(?:\.\d+)+(?:[._-]\h+)?)/}i)
   end
 
   binary "#{staged_path}/dist-package/cursor-agent", target: "cursor-agent"
