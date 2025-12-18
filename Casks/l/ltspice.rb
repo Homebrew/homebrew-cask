@@ -9,7 +9,7 @@ cask "ltspice" do
 
   livecheck do
     url :homepage
-    regex(/for\s+MacOS[\s\S]*?Version\s+v?(\d+(?:\.\d+)+)/i)
+    regex(/for\s+MacOS.*?Version\s+v?(\d+(?:\.\d+)+)/im)
   end
 
   pkg "LTspice.pkg"
