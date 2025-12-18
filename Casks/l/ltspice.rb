@@ -1,5 +1,5 @@
 cask "ltspice" do
-  version "26.0.1"
+  version "17.2.4"
   sha256 :no_check
 
   url "https://ltspice.analog.com/software/LTspice.pkg"
@@ -9,7 +9,7 @@ cask "ltspice" do
 
   livecheck do
     url :homepage
-    regex(/for\s+MacOS[\s\S]*Version\s+v?(\d+(?:\.\d+)+)/i)
+    regex(/for\s+MacOS.*?Version\s+v?(\d+(?:\.\d+)+)/im)
   end
 
   pkg "LTspice.pkg"
