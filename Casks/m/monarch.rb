@@ -32,6 +32,7 @@ cask "monarch" do
   desc "Spotlight Search"
   homepage "https://monarchlauncher.com/"
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "Monarch.app"
