@@ -1,19 +1,27 @@
 cask "conar" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.25.0"
-  sha256 arm:   "ea69b16ac16ea55dd85fe5aaf29d4872dbf84d42d69d15ea56d4270453fe2432",
-         intel: "4c6b98e0d09684eedd787fe09c41d1d713fffdfc1b2872873c73c3cd0a341af0"
+  version "0.25.4,251215sjkp8bkh6"
+  sha256 arm:   "b7fd6c52780759d45ed2887087bc9489d1db30f46602e704f1190d0fd3c93d3d",
+         intel: "52b100d0066fdbb782a47a61972ec511519643be604b3dd09940918a1b275a91"
 
-  url "https://github.com/wannabespace/conar/releases/download/v#{version}/Conar-Mac-#{arch}-#{version}-Installer.dmg",
-      verified: "github.com/wannabespace/conar/"
+  url "https://download.todesktop.com/25112796k32u7/Conar%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
+      verified: "download.todesktop.com/25112796k32u7/"
   name "Conar"
   desc "AI-powered database and data management tool"
   homepage "https://conar.app/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://download.todesktop.com/25112796k32u7/latest-mac.yml"
+    regex(/Conar\s*v?(\d+(?:\.\d+)+)\s*-?\s*(?:Build\s*([a-z\d]+?)[._-])?#{arch}[._-]mac\.zip/i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+      end
+    end
   end
 
   auto_updates true
