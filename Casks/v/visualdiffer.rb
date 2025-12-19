@@ -5,7 +5,7 @@ cask "visualdiffer" do
   url "https://github.com/visualdiffer/visualdiffer/releases/download/v#{version}/VisualDiffer-#{version}.zip",
       verified: "github.com/visualdiffer/visualdiffer/"
   name "VisualDiffer"
-  desc "Application to visually compare folders and files"
+  desc "Visually compare folders and files"
   homepage "https://visualdiffer.com/"
 
   livecheck do
