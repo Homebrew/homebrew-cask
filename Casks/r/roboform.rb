@@ -13,6 +13,7 @@ cask "roboform" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "RoboForm.app"
 
