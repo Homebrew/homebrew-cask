@@ -1,6 +1,6 @@
 cask "chatty" do
-  version "0.27"
-  sha256 "392bdf38a9210c22755441efb0cb4ad4d4e20f081e38456ce47e461eac0941ff"
+  version "0.28"
+  sha256 "0a6def5121c07d10823969e3cb0d201d934de6a0bdecde7e068672705e5c7f7c"
 
   url "https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip",
       verified: "github.com/chatty/chatty/"
