@@ -2,11 +2,12 @@ cask "visualdiffer" do
   version "2.1.1"
   sha256 "814a72a1f8fc83c70216522af034cca464cb6e272e2a29860c700816e726dce7"
 
-  url "https://github.com/visualdiffer/visualdiffer/releases/download/v#{version}/VisualDiffer-#{version}.zip",
-      verified: "github.com/visualdiffer/visualdiffer/"
+  url "https://github.com/visualdiffer/visualdiffer/releases/download/v#{version}/VisualDiffer-#{version}.zip"
   name "VisualDiffer"
-  desc "Visual file and folder comparison tool for macOS"
+  desc "VisualDiffer is a macOS application designed to visually compare folders and files with clarity and speed. It lets you instantly see what has changed between two directories — new, modified, or missing files — through a clean side-by-side interface."
   homepage "https://github.com/visualdiffer/visualdiffer"
+
+  depends_on macos: ">= :ventura"
 
   app "VisualDiffer.app"
 
