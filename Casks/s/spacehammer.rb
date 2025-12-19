@@ -82,6 +82,8 @@ cask "spacehammer" do
   # NOTE: ~/.spacehammer is created automatically by Spacehammer on first launch
   # and is intentionally NOT touched by this cask (user customizations preserved)
 
+  zap trash: "~/.spacehammer"
+
   caveats <<~EOS
     Spacehammer has been installed to ~/.hammerspoon
 
@@ -91,6 +93,9 @@ cask "spacehammer" do
     To start using Spacehammer:
       1. Launch Hammerspoon (if not already running)
       2. Press Option+Space (default LEAD key) to open the modal menu
+
+    IMPORTANT: When uninstalling with --zap flag, ~/.spacehammer will be removed.
+    If you have a git repository there with uncommitted changes, back it up first!
 
     For more information, visit:
       https://github.com/agzam/spacehammer
