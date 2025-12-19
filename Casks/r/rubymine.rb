@@ -33,7 +33,7 @@ cask "rubymine" do
   preflight do
     File.write shimscript, <<~EOS
       #!/bin/sh
-      exec '#{appdir}/RubyMine.app/Contents/MacOS/rubymine' "$@"
+      open -na "RubyMine.app" --args "$@"
     EOS
   end
 
