@@ -9,34 +9,10 @@ cask "spacehammer" do
   desc "Spacemacs|Doom-inspired modal toolkit for Hammerspoon"
   homepage "https://github.com/agzam/spacehammer"
 
-  # Dependencies are automatically checked by Homebrew
   depends_on cask: "hammerspoon"
-  depends_on formula: "luarocks"
+  depends_on formula: "fennel"
 
   artifact "spacehammer-#{version}", target: "#{Dir.home}/.hammerspoon"
 
-  postflight do
-    system_command "#{HOMEBREW_PREFIX}/bin/luarocks",
-                   args:         ["install", "fennel"],
-                   must_succeed: false
-  end
-
   zap trash: "~/.spacehammer"
-
-  caveats <<~EOS
-    Spacehammer has been installed to ~/.hammerspoon
-
-    Spacehammer will automatically create ~/.spacehammer/config.fnl
-    for your custom configuration on first launch.
-
-    To start using Spacehammer:
-      1. Launch Hammerspoon (if not already running)
-      2. Press Option+Space (default LEAD key) to open the modal menu
-
-    Note: brew uninstall will back up your ~/.hammerspoon to the Caskroom.
-    Using --zap will also remove ~/.spacehammer (back up git repos first!).
-
-    For more information, visit:
-      https://github.com/agzam/spacehammer
-  EOS
 end
