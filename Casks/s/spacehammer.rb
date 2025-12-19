@@ -44,7 +44,7 @@ cask "spacehammer" do
     end
 
     # Check if Fennel is installed and verify version
-    fennel_check = system_command(luarocks_path, args: ["show", "fennel"], print_stderr: false)
+    fennel_check = system_command(luarocks_path, args: ["show", "fennel"], must_succeed: false, print_stderr: false)
 
     if fennel_check.success?
       # Extract version from output (format: "fennel 1.5.3-1 - ...")
@@ -64,7 +64,7 @@ cask "spacehammer" do
     else
       # Fennel not installed, install it
       ohai "Installing Fennel..."
-      result = system_command(luarocks_path, args: ["install", "fennel"])
+      result = system_command(luarocks_path, args: ["install", "fennel"], must_succeed: false)
       opoo "Failed to install Fennel. Please run manually: luarocks install fennel" unless result.success?
     end
   end
