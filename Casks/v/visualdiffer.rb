@@ -4,7 +4,7 @@ cask "visualdiffer" do
 
   url "https://github.com/visualdiffer/visualdiffer/releases/download/v#{version}/VisualDiffer-#{version}.zip"
   name "VisualDiffer"
-  desc "Application designed to visually compare folders & files with clarity and speed"
+  desc "Application to visually compare folders and files"
   homepage "https://github.com/visualdiffer/visualdiffer"
 
   depends_on macos: ">= :ventura"
