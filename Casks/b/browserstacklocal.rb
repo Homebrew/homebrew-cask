@@ -12,13 +12,19 @@ cask "browserstacklocal" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "BrowserStackLocal.app"
 
-  uninstall launchctl: "com.browserstack.local"
+  uninstall launchctl: "com.browserstack.local",
+            delete:    "~/Library/LaunchAgents/BrowserStackLocal.plist"
 
   zap trash: [
-    "~/.bstack",
+    "~/.browserstack",
     "~/Library/Caches/com.browserstack.Local",
+    "~/Library/HTTPStorages/com.browserstack.local",
+    "~/Library/HTTPStorages/com.browserstack.local.binarycookies",
+    "~/Library/Preferences/com.browserstack.local.plist",
   ]
 
   caveats do
