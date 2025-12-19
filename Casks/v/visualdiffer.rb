@@ -7,6 +7,12 @@ cask "visualdiffer" do
   desc "Application to visually compare folders and files"
   homepage "https://github.com/visualdiffer/visualdiffer"
 
+  livecheck do
+    url "https://app.visualdiffer.com/appcast.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "VisualDiffer.app"
