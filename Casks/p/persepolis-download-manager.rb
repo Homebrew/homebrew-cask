@@ -13,6 +13,8 @@ cask "persepolis-download-manager" do
     strategy :github_latest
   end
 
+  deprecate! date: "2025-12-20", because: :fails_gatekeeper_check
+
   app "Persepolis Download Manager.app"
 
   zap trash: [
