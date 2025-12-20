@@ -19,4 +19,8 @@ cask "persepolis-download-manager" do
     "~/.persepolis",
     "~/Library/Application Support/persepolis_download_manager",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
