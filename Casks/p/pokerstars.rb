@@ -1,5 +1,5 @@
 cask "pokerstars" do
-  version "79.925"
+  version "79.973"
   sha256 :no_check
 
   url "https://download.pokerstars.net/PokerStars.net.app.zip"
