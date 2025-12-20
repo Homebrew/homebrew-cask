@@ -12,6 +12,8 @@ cask "contraste" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "Contraste.app"
 
   zap trash: [
