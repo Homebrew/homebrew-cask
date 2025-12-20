@@ -84,7 +84,6 @@ end
         return self.desc
 
     def token(self):
-        # https://github.com/Homebrew/homebrew-cask-fonts/blob/HEAD/CONTRIBUTING.md#converting-the-canonical-name-to-a-token
         token = self.font_name().lower().replace(" ", "-")
         return f"font-{token}"
 
@@ -134,8 +133,7 @@ def should_skip(cask_path):
         # Cask already exists
         if is_other_foundry(cask_path):
             print("Other foundry:", cask_path)
-            # don't overwrite it, per
-            # https://github.com/Homebrew/homebrew-cask-fonts/blob/HEAD/CONTRIBUTING.md#google-web-font-directory
+            # don't overwrite it
             return True
 
     return False
