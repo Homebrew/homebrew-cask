@@ -5,10 +5,11 @@ cask "zettlr" do
   sha256 arm:   "ace941ab6763d92c1db3af28b94b552db7a59e693c4adb176616cccf3c6df333",
          intel: "a48edaa8947fb1f662e68f077012aa6d85f57af03a09914f16720ac5e0598077"
 
-  url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.dmg"
+  url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.dmg",
+      verified: "github.com/Zettlr/Zettlr/"
   name "Zettlr"
   desc "Open-source markdown editor"
-  homepage "https://github.com/Zettlr/Zettlr/"
+  homepage "https://www.zettlr.com/"
 
   depends_on macos: ">= :big_sur"
 
