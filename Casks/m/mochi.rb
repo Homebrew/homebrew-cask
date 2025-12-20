@@ -5,13 +5,13 @@ cask "mochi" do
   sha256 arm:   "2cab43dda28506f2deea8ad1a1b7afc646dd522983b8c461b222e0cdbbb133ee",
          intel: "f9f86c8ebe84934c3364b1c58b7a09119c578429621233bee7fe473787a1c35c"
 
-  url "https://mochi.cards/releases/Mochi-#{version}#{arch}.dmg"
+  url "https://download.mochi.cards/releases/Mochi-#{version}#{arch}.dmg"
   name "Mochi"
   desc "Study notes and flashcards using spaced repetition"
   homepage "https://mochi.cards/"
 
   livecheck do
-    url "https://mochi.cards/releases/latest-mac.yml"
+    url "https://download.mochi.cards/releases/latest-mac.yml"
     strategy :electron_builder
   end
 
