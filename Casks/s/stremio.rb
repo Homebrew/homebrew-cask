@@ -1,15 +1,20 @@
 cask "stremio" do
-  version "5.1.11"
-  sha256 "2293eb85b66fe81822904d864a609e3f97091f01759ab63f722397251c06dff8"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://dl.strem.io/shell-osx/v#{version}/Stremio+#{version}.dmg"
+  version "5.1.11"
+  sha256 arm:   "1c2e3b65957df75463ed52e41a1cf3d5f109933ff0d930dd16ae96543ac1ee2a",
+         intel: "999da6ddb6fce7403d6601fbc1e2eebce51ffe09f14187a1e2c7495fd352022e"
+
+  url "https://dl.strem.io/stremio-shell-macos/v#{version}/Stremio_#{arch}.dmg"
   name "Stremio"
   desc "Open-source media center"
   homepage "https://www.strem.io/"
 
   livecheck do
-    url "https://www.strem.io/download?platform=mac&four=true"
-    strategy :header_match
+    url "https://www.stremio.com/updater/check?product=stremio-shell-macos&arch=#{arch}"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   app "Stremio.app"
