@@ -11,7 +11,7 @@ cask "browseros" do
   desc "Open-source agentic browser"
   homepage "https://www.browseros.com/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "BrowserOS.app"
 
