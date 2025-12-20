@@ -7,10 +7,8 @@ cask "celestialteapot-runway" do
   desc "UML (Unified Modelling Language) design app"
   homepage "https://celestialteapot.com/runway/"
 
-  livecheck do
-    url "https://celestialteapot.com/runway/appcast/runway2.rss"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2025-12-20", because: :no_longer_meets_criteria
+  disable! date: "2026-12-20", because: :no_longer_meets_criteria
 
   app "Runway.app"
 
