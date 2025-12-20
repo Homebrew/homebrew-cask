@@ -1,5 +1,5 @@
 cask "hackintool" do
-  version "4.1.4"
+  version "4.1.5"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://github.com/headkaze/Hackintool/releases/download/#{version}/Hackintool.zip"
@@ -19,8 +19,4 @@ cask "hackintool" do
     "~/Library/Cookies/com.Headsoft.Hackintool.binarycookies",
     "~/Library/Preferences/com.Headsoft.Hackintool.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
