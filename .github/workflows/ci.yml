@@ -268,7 +268,7 @@ jobs:
   conclusion:
     name: conclusion
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     if: always()
     steps:
       - name: Result
