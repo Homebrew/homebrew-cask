@@ -10,7 +10,8 @@ cask "adobe-connect" do
   homepage "https://www.adobe.com/products/adobeconnect.html"
 
   livecheck do
-    url "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html"
+    url "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html",
+        user_agent: :browser
     regex(/macOS.*?v?(\d+(?:\.\d+)+)[< "]/im)
     strategy :page_match do |page, regex|
       version = page.scan(regex)&.flatten&.first
@@ -20,8 +21,6 @@ cask "adobe-connect" do
       "#{version},#{directory}"
     end
   end
-
-  no_autobump! because: "livecheck fails during CI workflow"
 
   auto_updates true
 
