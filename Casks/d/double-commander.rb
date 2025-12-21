@@ -1,16 +1,9 @@
 cask "double-commander" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.1.30"
-  sha256 arm:   "c635687167415f1c02cfb58472be682e30f2f33cb8d113a432cb82eeeded01b8",
-         intel: "71e5634fb92813f2011ad1b0376e1f20a299fa854f3c205958c9c2e7ad8b5ed2"
-
-  on_arm do
-    depends_on macos: ">= :big_sur"
-  end
-  on_intel do
-    depends_on macos: ">= :catalina"
-  end
+  version "1.1.31"
+  sha256 arm:   "606f3ea37cdbd053649b46e2dd693193582d7aaa74634785b4a5eb002698d919",
+         intel: "a88b191af96636dbc9f3fa9a575bf1c1542cdd2ff966bd77c64618a0f26ef602"
 
   url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version.tr(",", "-")}.cocoa.#{arch}.dmg",
       verified: "downloads.sourceforge.net/doublecmd/"
@@ -27,6 +20,8 @@ cask "double-commander" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "Double Commander.app"
 
