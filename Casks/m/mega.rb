@@ -9,7 +9,8 @@ cask "mega" do
   homepage "https://megasoftware.net/"
 
   livecheck do
-    url "https://www.megasoftware.net/current_release/"
+    url "https://www.megasoftware.net/current_release/",
+        user_agent: :browser
     strategy :json do |json|
       json.map do |item|
         next if item["operating_system"] != "mac" ||
