@@ -3,13 +3,14 @@ cask "jetdrive-toolbox" do
   sha256 "2a52a2d24d22a120c737e5d9a13eceadd7be59751185a0821ef84fdf6f5605f8"
 
   url "https://cdn.transcend-info.com/files/special/JetDriveToolbox_v#{version}.zip",
-      user_agent: :fake
+      user_agent: :browser
   name "JetDrive Toolbox"
   desc "Helper for Transcend SSDs and expansion cards"
   homepage "https://www.transcend-info.com/Support/Software-181/"
 
   livecheck do
-    url "https://www.transcend-info.com/Software/1151/"
+    url "https://www.transcend-info.com/Software/1151/",
+        user_agent: :browser
     strategy :header_match
   end
 
