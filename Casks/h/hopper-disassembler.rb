@@ -3,13 +3,14 @@ cask "hopper-disassembler" do
   sha256 "a7c57f9c6f63bef87dd90584a202db04aa7cd1f482a2323e31f299404095b8d2"
 
   url "https://www.hopperapp.com/downloader/public/Hopper-#{version}-demo.dmg",
-      user_agent: :fake
+      user_agent: :browser
   name "Hopper Disassembler"
   desc "Reverse engineering tool that lets you disassemble, decompile and debug your app"
   homepage "https://www.hopperapp.com/"
 
   livecheck do
-    url "https://www.hopperapp.com/rss/changelog.xml"
+    url "https://www.hopperapp.com/rss/changelog.xml",
+        user_agent: :browser
     regex(/<title>\s*Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
