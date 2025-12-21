@@ -8,6 +8,12 @@ cask "clock-signal" do
   desc "Latency-hating emulator of 8- and 16-bit platforms"
   homepage "https://github.com/TomHarte/CLK"
 
+  livecheck do
+    url :url
+    regex(/v?(\d+(?:[.-]\d+)+)/i)
+    strategy :github_latest
+  end
+
   app "Clock Signal.app"
 
   uninstall quit: "TH.Clock-Signal"
