@@ -1,6 +1,6 @@
 cask "copilot-money" do
-  version "6.0.11,305-e7d2f677"
-  sha256 "e7d2f6771e0d99d44c9ae1a7c813fa1d298ce34413568a5da352df4d1e9d6e55"
+  version "6.1.0,309-a5475f50"
+  sha256 "a5475f5079a1865c9f5680676f5f722a0c89c1635dab86689ccae862d4c0c4b7"
 
   url "https://storage.googleapis.com/copilot-mac-releases/images/Copilot-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "storage.googleapis.com/copilot-mac-releases/"
