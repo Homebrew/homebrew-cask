@@ -1,6 +1,6 @@
 cask "zen" do
-  version "1.17.14b"
-  sha256 "25c15df53b2edd691388c6152d0c8b5fe4426de0bf2cf4196118e0160cea036c"
+  version "1.17.15b"
+  sha256 "2efecae7bf36136722e6bb51037490a6467e91574e818843d8b73e2fe83216d0"
 
   url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen.macos-universal.dmg",
       verified: "github.com/zen-browser/desktop/"
