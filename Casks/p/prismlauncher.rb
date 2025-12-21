@@ -18,6 +18,11 @@ cask "prismlauncher" do
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
 
+  livecheck do
+    url "https://prismlauncher.org/feed/appcast.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
 
   app "Prism Launcher.app"
