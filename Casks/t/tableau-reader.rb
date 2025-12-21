@@ -6,7 +6,7 @@ cask "tableau-reader" do
          intel: "b19252c05a4087f502106a530d4bf112b2a2cdea598493671133dbac2bb0d878"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauReader-#{version.dots_to_hyphens}#{arch}.pkg",
-      user_agent: "curl/8.7.1"
+      user_agent: :curl
   name "Tableau Reader"
   desc "Open and interact with data visualisations built in Tableau Desktop"
   homepage "https://www.tableau.com/products/reader"

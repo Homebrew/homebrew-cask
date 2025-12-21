@@ -6,7 +6,7 @@ cask "tableau-prep" do
          intel: "465445bf3fcd866afca3470e2de8ff8d23b4a3a4b717c79b5c3e7dd03bd04c0d"
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}#{arch}.dmg",
-      user_agent: "curl/8.7.1"
+      user_agent: :curl
   name "Tableau Prep"
   name "Tableau Prep Builder"
   desc "Combine, shape, and clean your data for analysis"

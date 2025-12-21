@@ -6,7 +6,7 @@ cask "tableau-public" do
          intel: "4e4f3a0d2c9719ed37c8c32142358170870f0a58988bb18d098928f4f884884f"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauPublic-#{version.dots_to_hyphens}#{arch}.pkg",
-      user_agent: "curl/8.7.1"
+      user_agent: :curl
   name "Tableau Public"
   desc "Explore, create and publicly share data visualisations online"
   homepage "https://public.tableau.com/s/"
