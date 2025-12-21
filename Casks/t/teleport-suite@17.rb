@@ -9,7 +9,8 @@ cask "teleport-suite@17" do
   homepage "https://goteleport.com/"
 
   livecheck do
-    url "https://goteleport.com/download/"
+    url "https://goteleport.com/download/",
+        user_agent: :browser
     regex(/teleport[._-]v?(17(?:\.\d+)+)\.pkg/i)
   end
 
