@@ -1,9 +1,9 @@
 cask "langflow" do
   arch arm: "aarch64", intel: "universal"
 
-  version "1.6.2,1.6.9"
-  sha256 arm:   "f6d24bd964a117cd226bb8315e456a016d806afd7541808624a08675175d019d",
-         intel: "a120111c423db47237123c7b65b0db14a69be2b937da737c9ea79b548e8f5ce3"
+  version "1.7.1"
+  sha256 arm:   "fcc2d0294a2846525845b62ddda486ff6b71c062b7ef085b8334e0ccc2b5c8e1",
+         intel: "56bef66ed4bcfe66f8b032ed4bd4ed1cf174453af94122884a1b9b84da332cf5"
 
   url "https://github.com/langflow-ai/langflow/releases/download/#{version.csv.second || version}/Langflow_#{version.csv.first}_#{arch}.dmg",
       verified: "github.com/langflow-ai/langflow/"
