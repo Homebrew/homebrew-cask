@@ -9,7 +9,8 @@ cask "canon-ufrii-driver" do
   homepage "https://oip.manual.canon/USRMA-3844-zz-DR-enUV/"
 
   livecheck do
-    url "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json"
+    url "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json",
+        user_agent: :browser
     regex(/UFRII[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
     strategy :json do |json, regex|
       json.map do |item|
