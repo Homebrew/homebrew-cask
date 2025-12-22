@@ -19,6 +19,8 @@ cask "claude-code" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  auto_updates true
+
   binary "claude"
 
   zap trash: [
