@@ -16,6 +16,7 @@ cask "dolphin" do
 
   auto_updates true
   conflicts_with cask: "dolphin@dev"
+  depends_on macos: ">= :big_sur"
 
   app "Dolphin.app"
 
