@@ -5,12 +5,20 @@ cask "darktable" do
     version "5.4.0"
     sha256 "17e1eaf2bd7ab0ada2e93d4bba2ba6b81345e99eb338635682d08dae64d7a150"
 
+    livecheck do
+      url "https://www.darktable.org/install/"
+      regex(/href=.*?darktable[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+    end
+
     depends_on macos: ">= :sonoma"
   end
   on_intel do
     version "5.2.1"
     sha256 "5060d73c03b3c7f4ca69a77039e69653fd2310df8cb649d66fc89f4c45289b0c"
 
+    livecheck do
+      skip "darktable only supports x86_64 up to version 5.2.1"
+    end
     depends_on macos: ">= :ventura"
   end
 
@@ -19,11 +27,6 @@ cask "darktable" do
   name "darktable"
   desc "Photography workflow application and raw developer"
   homepage "https://www.darktable.org/"
-
-  livecheck do
-    url "https://www.darktable.org/install/"
-    regex(/href=.*?darktable[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
-  end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
