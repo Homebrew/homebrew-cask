@@ -11,7 +11,8 @@ cask "couchbase-server-enterprise" do
   homepage "https://www.couchbase.com/"
 
   livecheck do
-    url "https://www.couchbase.com/downloads/"
+    url "https://www.couchbase.com/downloads/",
+        user_agent: :browser
     regex(/couchbase[._-]server[._-]enterprise[._-]v?(\d+(:?\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
   end
 

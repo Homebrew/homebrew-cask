@@ -9,7 +9,8 @@ cask "izip" do
   homepage "https://www.izip.com/"
 
   livecheck do
-    url "https://www.izip.com/updates"
+    url "https://www.izip.com/updates",
+        user_agent: :browser
     strategy :sparkle, &:short_version
   end
 

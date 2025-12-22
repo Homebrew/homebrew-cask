@@ -17,7 +17,8 @@ cask "tableau" do
   # should return to checking the XML file if/when it starts being reliably
   # updated to include the newest releases again.
   livecheck do
-    url "https://www.tableau.com/support/releases"
+    url "https://www.tableau.com/support/releases",
+        user_agent: :browser
     regex(%r{href=.*?desktop/v?(\d+(?:\.\d+)+)[^"' >]*["' >]}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|

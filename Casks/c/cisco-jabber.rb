@@ -8,7 +8,7 @@ cask "cisco-jabber" do
   homepage "https://www.webex.com/downloads/jabber.html"
 
   livecheck do
-    url :homepage
+    url :homepage, user_agent: :browser
     regex(%r{jabberAppUrl =.*?(\d+)/Install[._-]Cisco[._-]Jabber[._-]Mac\.pkg}i)
   end
 

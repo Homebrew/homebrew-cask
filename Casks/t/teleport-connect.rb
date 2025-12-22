@@ -9,7 +9,8 @@ cask "teleport-connect" do
   homepage "https://goteleport.com/"
 
   livecheck do
-    url "https://goteleport.com/download/"
+    url "https://goteleport.com/download/",
+        user_agent: :browser
     regex(/href=.*?Teleport%20Connect[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
