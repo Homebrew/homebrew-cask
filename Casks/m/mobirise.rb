@@ -1,7 +1,7 @@
 cask "mobirise" do
   arch arm: "-m"
 
-  version "6.1.9"
+  version "6.1.12"
   sha256 :no_check
 
   url "https://download.mobirise.com/MobiriseSetup#{arch}.dmg"
