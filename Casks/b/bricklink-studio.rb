@@ -1,5 +1,5 @@
 cask "bricklink-studio" do
-  version "2.25.11_3"
+  version "2.25.12_1"
   sha256 "07a91b3c2f6bfa6e697ce03ae9729890e44012b3333fb76d8bb62b94d35531ba"
 
   url "https://studio.download.bricklink.info/Studio#{version.major}.0/Studio+#{version.major}.0.pkg",
