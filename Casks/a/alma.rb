@@ -1,9 +1,9 @@
 cask "alma" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.122"
-  sha256 arm:   "edd6a6c747115b054143104e1f85af50da5f8b7149470b888194630ef7bab26c",
-         intel: "7dbc5742f4be7b8520a53d456f17b89cd8dc21c71428ca126735a85beabee6ac"
+  version "0.0.125"
+  sha256 arm:   "7376aeffbe41c3bc3374ad09e065a5640d3a534e0555b930fc881b60f9154b1c",
+         intel: "d264e9f0ff49d3c0e40910fb1f91c2e92d8f202227f0f90b26febcd73a0159de"
 
   url "https://updates.alma.now/alma-#{version}-mac-#{arch}.dmg"
   name "Alma"
@@ -18,7 +18,7 @@ cask "alma" do
   end
 
   auto_updates true
-  depends_on macos: ">= :tahoe"
+  depends_on macos: ">= :monterey"
 
   app "Alma.app"
 
