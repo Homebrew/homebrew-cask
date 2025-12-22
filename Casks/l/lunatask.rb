@@ -1,6 +1,6 @@
 cask "lunatask" do
-  version "2.1.18"
-  sha256 "7daee0dd228175217dca25a19c17b24c2b92f8ab679fa0289ee1f3fcb7dd8aac"
+  version "2.1.19"
+  sha256 "9794020fc84f576fa3c13b899781ceb8d3d6e77f584820cbc9f0a7866db63363"
 
   url "https://github.com/lunatask/lunatask/releases/download/v#{version}/Lunatask-#{version}-universal.dmg",
       verified: "github.com/lunatask/lunatask/"
@@ -13,7 +13,7 @@ cask "lunatask" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :big_sur"
 
   app "Lunatask.app"
 
