@@ -1,6 +1,6 @@
 cask "espresso" do
-  version "25.10"
-  sha256 "f9002003d0ae046a42caeaf30681c977eb797d1917cd357517ed456d9312dcb0"
+  version "25.12"
+  sha256 "6a04895bb1e55d637e5e5e61934f017d2b10b32c96c57cecbca865cc4de8275b"
 
   url "https://get.espressoapp.com/Espresso_#{version}.zip"
   name "Espresso"
