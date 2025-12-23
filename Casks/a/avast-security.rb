@@ -9,7 +9,7 @@ cask "avast-security" do
   homepage "https://www.avast.com/"
 
   livecheck do
-    url "http://mac-av.u.avcdn.net/mac-av/10_11/AAFM/changelog.html"
+    url "https://mac-av.u.avcdn.net/mac-av/10_11/AAFM/changelog.html"
     regex(%r{<h2>(\d+(?:\.\d+)+).*</h2>}i)
   end
 
