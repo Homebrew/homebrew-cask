@@ -8,7 +8,8 @@ cask "adobe-dng-converter" do
   homepage "https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html"
 
   livecheck do
-    url "https://www.adobe.com/go/dng_converter_mac"
+    url "https://www.adobe.com/go/dng_converter_mac",
+        user_agent: :curl
     regex(/DNGConverter[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
