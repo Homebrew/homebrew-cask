@@ -7,15 +7,8 @@ cask "packages" do
   desc "Integrated packaging environment"
   homepage "http://s.sudre.free.fr/Software/Packages/about.html"
 
-  livecheck do
-    url "http://s.sudre.free.fr/Software/documentation/RemoteVersion.plist"
-    strategy :xml do |xml|
-      version = xml.elements["//key[text()='WBRemoteAvailableVersion']"]&.next_element&.text
-      next if version.blank?
-
-      version.strip
-    end
-  end
+  # Artifact not available over HTTPS
+  disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
   auto_updates true
 
