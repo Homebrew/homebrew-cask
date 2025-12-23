@@ -2,9 +2,9 @@ cask "font-luculent" do
   version :latest
   sha256 :no_check
 
-  url "http://eastfarthing.com/luculent/luculent.tar.xz"
+  url "https://fontlibrary.org/assets/downloads/luculent/2de871ff7494289a7c7ff160552158eb/luculent.zip"
   name "Luculent"
-  homepage "http://eastfarthing.com/luculent/"
+  homepage "https://fontlibrary.org/en/font/luculent"
 
   font "luculent/luculent.ttf"
   font "luculent/luculentb.ttf"
