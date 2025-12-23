@@ -7,12 +7,6 @@ cask "azookey" do
   desc "Japanese input method"
   homepage "https://github.com/azooKey/azooKey-Desktop"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+(?:[._-]alpha[._-]?\d+)?)$/i)
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :ventura"
 
   pkg "azooKey-release-signed.pkg"
