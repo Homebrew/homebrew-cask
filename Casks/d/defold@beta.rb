@@ -11,7 +11,7 @@ cask "defold@beta" do
   homepage "https://defold.com/"
 
   livecheck do
-    url "http://d.defold.com/beta/info.json"
+    url "https://d.defold.com/beta/info.json"
     strategy :json do |json|
       json["version"]
     end
