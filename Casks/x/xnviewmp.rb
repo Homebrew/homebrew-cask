@@ -8,7 +8,7 @@ cask "xnviewmp" do
   homepage "https://www.xnview.com/en/xnviewmp/"
 
   livecheck do
-    url "http://www.xnview.com/update.txt"
+    url "https://www.xnview.com/update.txt"
     regex(/\[XnViewMP\].*?v?(\d+(?:\.\d+)+)/im)
   end
 
