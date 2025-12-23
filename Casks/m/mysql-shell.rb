@@ -6,21 +6,24 @@ cask "mysql-shell" do
       version "8.0.27,11-x86-64bit"
       sha256 "3214e9d35b4950cd326b0bef3b9c582cf01957fbf64cebce4b7bb85b7e38add9"
 
-      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}.dmg"
+      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}.dmg",
+          user_agent: :curl
     end
     on_big_sur do
       version "8.0.29,12"
       sha256 arm:   "7095eaa8c67a8952101e0e6173645ac4377b1c06df5e8f87ceddea418d79b5a6",
              intel: "971e88d93f477437b7b6507408c0c31183f36af7922b7c2f6570ec314779ad20"
 
-      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg"
+      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg",
+          user_agent: :curl
     end
     on_monterey do
       version "8.0.34,13"
       sha256 arm:   "c67890eff6829afbc234260b3f54d34cb65b699e53ae59520b94feee8e337d71",
              intel: "6fd9e3855e70028b88a05ba6be76e9101a601f1416fd6c0eb2078169dbe8937d"
 
-      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg"
+      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg",
+          user_agent: :curl
     end
 
     livecheck do
@@ -36,7 +39,8 @@ cask "mysql-shell" do
         user_agent: :curl
 
     livecheck do
-      url "https://dev.mysql.com/downloads/shell/?tpl=platform&os=33"
+      url "https://dev.mysql.com/downloads/shell/?tpl=platform&os=33",
+          user_agent: :curl
       regex(/mysql[._-]shell[._-]v?(\d+(?:\.\d+)+)[._-]macos(\d+)[._-]#{arch}\.dmg/i)
       strategy :page_match do |page, regex|
         page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
