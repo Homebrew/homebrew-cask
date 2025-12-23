@@ -1,9 +1,9 @@
 cask "handy" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.6.8"
-  sha256 arm:   "8a69f5dd210cfb20ece9fc0a9c76d9448590f89969c31032a8d72dbf7b644e67",
-         intel: "121d550198b690e7e877400c2b32fe593877030e7631436f6c5a560db07d477d"
+  version "0.6.9"
+  sha256 arm:   "1e79e2059f6aed28529368edd147aaf755b7047da9fe6292c1bf97d25a3b55fc",
+         intel: "989ca20ea89c36bba4663c9693ecf26c271993c9605c7eef0ef6b733371470f3"
 
   url "https://github.com/cjpais/Handy/releases/download/v#{version}/Handy_#{version}_#{arch}.dmg",
       verified: "github.com/cjpais/Handy/"
