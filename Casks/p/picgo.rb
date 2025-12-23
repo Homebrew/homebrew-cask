@@ -1,9 +1,9 @@
 cask "picgo" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.4.0"
-  sha256 arm:   "640dd021a93ecbe782d3a16517aad7c32c03fbfa23b9725da7e27372d680cf06",
-         intel: "f7d065fbf762609a0d08681400011f4eb3521372c80db99b49c43e05b915f014"
+  version "2.4.1"
+  sha256 arm:   "7232d7c6d5ee8ee7291d1c17aa2c13e19e942186864a1f120305ef43a38f6e2f",
+         intel: "35f8ca140e791a9c7bb85319a8a906716cf842e78d1e3045caa267b0cba53c52"
 
   url "https://github.com/Molunerfinn/PicGo/releases/download/v#{version}/PicGo-#{version}-#{arch}.dmg"
   name "PicGo"
@@ -16,6 +16,8 @@ cask "picgo" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :monterey"
 
   app "PicGo.app"
 
