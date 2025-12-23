@@ -1,11 +1,9 @@
 cask "naver-whale" do
-  arch arm: "ARM64"
-
   version "4.35.351.13"
   sha256 :no_check
 
-  url "http://update.whale.naver.net/downloads/installers/NaverWhale#{arch}.dmg",
-      verified: "update.whale.naver.net/downloads/installers/"
+  url "https://installer-whale.pstatic.net/downloads/installers/NaverWhale.dmg",
+      verified: "installer-whale.pstatic.net/downloads/installers/"
   name "NAVER Whale"
   desc "Web browser"
   homepage "https://whale.naver.com/"
