@@ -22,6 +22,7 @@ cask "anydesk" do
             ],
             delete: [
               "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
+              "/Library/LaunchAgents/com.philandro.anydesk.Hub.plist",
               "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
               "/Library/LaunchDaemons/com.philandro.anydesk.service.plist",
               "/Library/PrivilegedHelperTools/com.philandro.anydesk.Helper",
