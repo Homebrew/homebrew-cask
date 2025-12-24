@@ -9,7 +9,7 @@ cask "devknife" do
   homepage "https://devknife.app/"
 
   livecheck do
-    url "http://files.solotuna.com/devknife/appcast.xml"
+    url "https://files.solotuna.com/devknife/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
