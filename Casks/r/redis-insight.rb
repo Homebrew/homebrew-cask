@@ -5,14 +5,14 @@ cask "redis-insight" do
   sha256 arm:   "2ef847845b5cc725050d4ab78992afb9afccd01ee8e84f49a77bfb6e1f9fcb34",
          intel: "c33dede2ae81cfaeba66cdf6d27084647fcc9f0fb8ea84a11b393420695dd0ba"
 
-  url "https://download.redisinsight.redis.com/releases/#{version}/Redis-Insight-mac-#{arch}.dmg",
-      verified: "download.redisinsight.redis.com/"
+  url "https://s3.amazonaws.com/redisinsight.download/public/releases/#{version}/Redis-Insight-mac-#{arch}.dmg",
+      verified: "s3.amazonaws.com/redisinsight.download/"
   name "Redis Insight"
   desc "GUI for streamlined Redis application development"
   homepage "https://redis.io/insight/"
 
   livecheck do
-    url "https://download.redisinsight.redis.com/latest/latest-mac.yml"
+    url "https://s3.amazonaws.com/redisinsight.download/public/latest/latest-mac.yml"
     strategy :electron_builder
   end
 
