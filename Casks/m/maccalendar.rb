@@ -9,4 +9,7 @@ cask "maccalendar" do
   homepage "https://github.com/bylinxx/MacCalendar"
 
   app "MacCalendar.app"
+
+  zap trash: [
+  ]
 end
