@@ -9,7 +9,7 @@ cask "itk-snap" do
       verified: "downloads.sourceforge.net/itk-snap/"
   name "ITK-SNAP"
   desc "Segment structures in 3D medical images"
-  homepage "http://www.itksnap.org/pmwiki/pmwiki.php"
+  homepage "https://www.itksnap.org/pmwiki/pmwiki.php"
 
   livecheck do
     url "https://sourceforge.net/projects/itk-snap/rss?path=/itk-snap"
