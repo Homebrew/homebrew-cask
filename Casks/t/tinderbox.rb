@@ -12,7 +12,7 @@ cask "tinderbox" do
     regex(/>Download\s+<a[^>]*>\s*Tinderbox\s+v?(\d+(?:\.\d+)+)\s*</im)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Tinderbox #{version.major}.app"
 
