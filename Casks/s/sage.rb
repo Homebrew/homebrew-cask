@@ -1,9 +1,9 @@
 cask "sage" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "10.7,2.7.0"
-  sha256 arm:   "e923da4a177ccc7a9ccdda9d11d47a0920e18e96d6a85690476e7c9b1f843ba7",
-         intel: "a5ad15ec7e7f08153f91e6abe1f82991d2ac10d37d7897bb24da1c9aa77905d8"
+  version "10.8,2.8.1"
+  sha256 arm:   "94443b205e8a293b74deecc397db33fb79396a5efa89dd746c03b4b5852826eb",
+         intel: "a410d4dea7ec4a63ae2feb50c62b8eb04edee9b8fb23a86dd759e2e603c419ac"
 
   url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}_#{arch}.dmg",
       verified: "github.com/3-manifolds/Sage_macOS/"
@@ -23,6 +23,8 @@ cask "sage" do
       end
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "SageMath-#{version.csv.first.dots_to_hyphens}.app"
   pkg "Recommended_#{version.csv.first.dots_to_underscores}.pkg"
