@@ -1,19 +1,17 @@
 cask "unite-phone" do
-  version "2025.10.7"
-  sha256 "09ca6ee8263baf87e137e8129caf79e7e4496904c08c3e550f4ac795c2223b34"
+  version "2025.12.4"
+  sha256 "070af9bec214f12d56d807585262aa0cac4e9ae99201d13529bdc779a72ed101"
 
   url "https://update.unitephone.nl/updates/unite_phone-#{version}-universal-mac.zip",
-      user_agent: :fake
+      referer: "https://unitephone.nl/unitephone-app/macos"
   name "Unite Phone"
   desc "Video and voice calling application"
   homepage "https://unitephone.nl/"
 
   livecheck do
-    url "https://update.unitephone.nl/updates/latest-mac.yml"
-    strategy :electron_builder
+    url "https://unitephone.nl/unitephone-app/macos"
+    strategy :header_match
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :big_sur"
 
