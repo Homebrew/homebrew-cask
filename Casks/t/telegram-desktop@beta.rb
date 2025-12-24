@@ -1,8 +1,8 @@
 cask "telegram-desktop@beta" do
-  version "6.3.9"
-  sha256 "b8fdc4459a4e941aa641ed009096f60cc188bf8ff9107a643d61199b0e9c6a7e"
+  version "6.3.10.beta"
+  sha256 "34354dc3cafb7e86fff92e6c1c769d83eedeca244903a64c1b69f21a638ffc38"
 
-  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version}/tsetup.#{version}.dmg",
+  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version.major_minor_patch}/tsetup.#{version}.dmg",
       verified: "github.com/telegramdesktop/tdesktop/"
   name "Telegram Desktop"
   desc "Desktop client for Telegram messenger"
