@@ -8,9 +8,8 @@ cask "wireless-workbench" do
   homepage "https://www.shure.com/en-US/products/software/wwb?variant=WWB"
 
   livecheck do
-    url "https://cloud.mc.shure.com/wwb-download-en"
-    regex(%r{<b>(\d+(?:\.\d+)+)</b>.*?href="[^"]*mac"}im)
-    strategy :page_match
+    url "https://www.shure.com/en-US/sw/wwb-mac"
+    strategy :header_match
   end
 
   depends_on macos: ">= :ventura"
