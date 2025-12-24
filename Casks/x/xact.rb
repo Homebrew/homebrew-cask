@@ -7,10 +7,8 @@ cask "xact" do
   desc "X Audio Compression Toolkit"
   homepage "http://xact.scottcbrown.org/"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?xACTv?(\d+(?:\.\d+)+)\.zip/i)
-  end
+  # Artifact not available over HTTPS
+  disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
   app "xACT#{version}/xACT.app"
 
