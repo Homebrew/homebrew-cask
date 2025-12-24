@@ -10,10 +10,19 @@ cask "vscodium" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
     version "1.106.37943"
     sha256 arm:   "e09c8fbf04c82d752ec0b4f5f4e93bab8644a06d2b9ad6c08e6b8eb6067b5f85",
            intel: "a946df0329f0e501db58793ef0c7101480972a25a4edd7ec3bd8cda6006f92e7"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
+    version "1.107.18605"
+    sha256 arm:   "6b22c3561f22efa2393e2f60b02c1de34374da7b0491131aacc621f35dd0e89e",
+           intel: "e115f0577825451a9f77b1fbfce2b1c808a1887fbdb47ef69a066f4e48af2fd2"
 
     livecheck do
       url "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master/stable/darwin/#{arch}/latest.json"
