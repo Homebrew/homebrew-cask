@@ -24,6 +24,8 @@ cask "sage" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "SageMath-#{version.csv.first.dots_to_hyphens}.app"
   pkg "Recommended_#{version.csv.first.dots_to_underscores}.pkg"
 
