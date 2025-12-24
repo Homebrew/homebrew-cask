@@ -6,7 +6,7 @@ cask "iqmol" do
       verified: "downloads.q-chem.com/iqmol/"
   name "IQmol"
   desc "Free open-source molecular editor and visualization package"
-  homepage "http://www.iqmol.org/"
+  homepage "https://www.iqmol.org/"
 
   livecheck do
     url "https://www.iqmol.org/downloads.html"
