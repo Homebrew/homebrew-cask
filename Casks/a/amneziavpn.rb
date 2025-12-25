@@ -15,7 +15,10 @@ cask "amneziavpn" do
 
   pkg "AmneziaVPN.pkg"
 
-  uninstall launchctl: ["AmneziaVPN-service", "AmneziaVPN"],
+  uninstall launchctl: [
+              "AmneziaVPN",
+              "AmneziaVPN-service",
+            ],
             quit:      "AmneziaVPN",
             pkgutil:   "org.amneziavpn.package"
 

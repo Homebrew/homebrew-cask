@@ -19,7 +19,10 @@ cask "startupfolder" do
 
   uninstall launchctl:  "com.lowtechguys.StartupFolder",
             quit:       "com.lowtechguys.StartupFolder",
-            login_item: ["com.lowtechguys.StartupFolder", "StartupFolder.app"]
+            login_item: [
+              "com.lowtechguys.StartupFolder",
+              "StartupFolder.app",
+            ]
 
   zap trash: [
         "~/Library/Caches/startup-folder-favicons",
