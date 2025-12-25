@@ -2,7 +2,8 @@ cask "unite-phone" do
   version "2025.12.4"
   sha256 :no_check
 
-  url "https://unitephone.nl/unitephone-app/macos"
+  url "https://unitephone.nl/unitephone-app/macos",
+      user_agent: :fake
   name "Unite Phone"
   desc "Video and voice calling application"
   homepage "https://unitephone.nl/"
