@@ -1,8 +1,6 @@
 cask "remnote" do
   arch arm: "-arm64"
 
-  depends_on macos: ">= :big_sur"
-
   version "1.22.49"
   sha256 arm:   "95907e59bf220f6855e3a8fc295589b4bb01375f60c8df031466e7e015161674",
          intel: "582900d98ee05245aa205fde4a6ba60e3f4476769eeec6fc66291044f77574dc"
@@ -19,6 +17,7 @@ cask "remnote" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "RemNote.app"
 
