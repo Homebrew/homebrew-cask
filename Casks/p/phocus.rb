@@ -1,6 +1,6 @@
 cask "phocus" do
-  version "4.0.1"
-  sha256 "e1c1c90eb89027f89a1b95887a764e3bad46908a9857913bcc12d6fbd28c0483"
+  version "4.1"
+  sha256 "0870e6a14daff886972e59eb0b81cf7770416ec0484508b451f096d56e1967b4"
 
   url "https://cdn.hasselblad.com/software/Phocus_for_Mac/#{version.csv.first}/Phocus_#{version.csv.second || version.csv.first}.dmg"
   name "Hasselblad Phocus"
