@@ -1,6 +1,6 @@
 cask "macai" do
-  version "2.3.0"
-  sha256 "077ebd9cb10c8ed110e32507f2f362bf7c31666c9b9e90f3071d1ac785922c77"
+  version "2.3.1"
+  sha256 "0480ca4fa8124518c4283d863fc3209b949f6047d310932bcbcb61ec8481a5c2"
 
   url "https://renset.dev/macai/macai%20#{version}%20Universal.zip",
       verified: "renset.dev/macai/"
