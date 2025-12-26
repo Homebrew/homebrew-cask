@@ -1,6 +1,6 @@
 cask "linqpad" do
-  version "9.4.6.1091978"
-  sha256 "2a3b34855a40aa0120cbca084f21be18e0c1bdb8a29f673e10c092bf25793419"
+  version "9.5.9.9190052"
+  sha256 "9a4a354c1096c8ee3c4b1187d1b2647de3713bbf34a83e29332d5813c10910e5"
 
   url "https://linqpad.azureedge.net/public/LINQPad#{version.major}.dmg?cache=#{version}",
       verified: "linqpad.azureedge.net/"
