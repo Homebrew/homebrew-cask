@@ -8,10 +8,7 @@ cask "kimi" do
   desc "AI chat assistant from Moonshot"
   homepage "https://www.moonshot.ai/"
 
-  livecheck do
-    url "https://appsupport.moonshot.cn/api/app/pkg/latest/macos/download"
-    strategy :header_match
-  end
+  disable! date: "2025-12-25", because: :no_longer_available
 
   depends_on macos: ">= :big_sur"
 
