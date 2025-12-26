@@ -16,7 +16,7 @@ cask "gcloud-cli" do
   end
 
   auto_updates true
-  depends_on formula: "python@3.13"
+  depends_on formula: "python@3.14"
 
   google_cloud_sdk_root = "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
 
