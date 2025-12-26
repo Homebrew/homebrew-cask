@@ -1,9 +1,9 @@
 cask "inkscape" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.4.230579"
-  sha256 arm:   "118e9e23190eea1265592a8b2053f5fb67e13a55b9311b2ab284df7008a896b4",
-         intel: "f0b05d5195e3aa0ba9d6d6a972f1d7f57abd876532b4d6eb02ecc98c0dcdfdbf"
+  version "1.4.333103"
+  sha256 arm:   "4fdf98784a4023faa3adcd65414891bcd4ca359feb2bf2e178d01dddf656f78a",
+         intel: "9521745442820d912ada41489e2b09a9a1850164781b9d2e566a0b41f4b15fef"
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}_#{arch}.dmg"
   name "Inkscape"
@@ -14,6 +14,10 @@ cask "inkscape" do
     url "https://inkscape.org/release/all/mac-os-x/"
     regex(/Inkscape[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "Inkscape.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
