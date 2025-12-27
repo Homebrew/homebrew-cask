@@ -36,7 +36,6 @@ cask "devonagent" do
     "~/Library/Caches/TemporaryItems/DEVONagent",
     "~/Library/Containers/com.devon-technologies.get",
     "~/Library/Group Containers/*.devon-technologies.*",
-    "~/Library/Group Containers/*.devon-technologies.*",
     "~/Library/HTTPStorages/com.devon-technologies.agent",
     "~/Library/Preferences/com.devon-technologies.agent.plist",
     "~/Library/Scripts/Applications/Safari/*DEVONagent*.scpt",
