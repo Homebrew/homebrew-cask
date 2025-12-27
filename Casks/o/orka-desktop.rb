@@ -17,5 +17,11 @@ cask "orka-desktop" do
 
   app "Orka Desktop.app"
 
-  zap trash: "~/orka-toolkit/"
+  zap trash: [
+    "~/.local/state/orka",
+    "~/Library/Caches/com.macstadium.OrkaDesktop/",
+    "~/Library/HTTPStorages/com.macstadium.OrkaDesktop",
+    "~/Library/Preferences/com.macstadium.OrkaDesktop.plist",
+    "~/orka-toolkit",
+  ]
 end
