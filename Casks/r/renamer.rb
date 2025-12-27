@@ -26,6 +26,7 @@ cask "renamer" do
 
   zap trash: [
     "~/Library/Application Support/Renamer",
+    "~/Library/HTTPStorages/com.incrediblebee.Renamer",
     "~/Library/Logs/Renamer.log",
     "~/Library/Preferences/com.incrediblebee.Renamer#{version.major}.plist",
   ]
