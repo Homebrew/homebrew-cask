@@ -12,12 +12,26 @@ cask "sqlcl" do
     regex(/href=.*?sqlcl[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on formula: "openjdk@11"
+
   stage_only true
+
+  postflight do
+    cask_dir   = Pathname("#{HOMEBREW_PREFIX}/Caskroom/sqlcl")
+    version_dir = cask_dir/version
+    latest_dir  = cask_dir/"latest"
+
+    latest_dir.delete if latest_dir.symlink?
+
+    latest_dir.make_symlink(version_dir)
+  end
 
   zap trash: "~/.sqlcl"
 
-  caveats do
-    depends_on_java "11+"
-    path_environment_variable "#{staged_path}/sqlcl/bin"
-  end
+  caveats <<~EOS
+    sqlcl requires Java 11+. The OpenJDK dependency will be installed automatically.
+    
+    To use sqlcl, add the following to your PATH:
+      #{staged_path}/sqlcl/bin
+  EOS
 end
