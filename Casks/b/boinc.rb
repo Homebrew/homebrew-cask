@@ -1,6 +1,6 @@
 cask "boinc" do
-  version "8.2.5"
-  sha256 "04a20e59c1b942858aa4bc13c6898ccdce0a0641fa5986c98d3b6ee9799090a4"
+  version "8.2.8"
+  sha256 "f82d01d8399a93d06f8d453c419f3cf7a2eba2400bf4def6d0fbed961be9dfd0"
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_universal.zip"
   name "Berkeley Open Infrastructure for Network Computing"
@@ -16,11 +16,13 @@ cask "boinc" do
   pkg "boinc_#{version}_macOSX_universal/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
   uninstall launchctl: [
+              "edu.berkeley.boinc",
               "edu.berkeley.boinc-sshelper",
               "edu.berkeley.launchBOINCManager",
             ],
             quit:      "edu.berkeley.boinc.finish-install",
-            pkgutil:   "edu.berkeley.boinc"
+            pkgutil:   "edu.berkeley.boinc",
+            delete:    "/Applications/BOINCManager.app"
 
   zap trash: [
     "/Library/Application Support/BOINC Data",
