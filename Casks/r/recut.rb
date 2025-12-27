@@ -1,24 +1,23 @@
 cask "recut" do
-  version "2.1.7"
-  sha256 "786c03f4a6396e04e4ee4f3e258ba420f78776114cacffa753ea67f518a7c7e7"
+  version "4.3.4"
+  sha256 "db979442ba85ac4eb9fe34fac1c7dbcadb579cf8c24bb4387287f3fce8496f0b"
 
-  url "https://updates.getrecut.com/Recut-#{version}.dmg"
+  url "https://updates.getrecut.com/universal/Recut_#{version}_universal.dmg"
   name "Recut"
   desc "Remove silence from videos and automatically generate a cut list"
   homepage "https://getrecut.com/"
 
   livecheck do
-    url "https://updates.getrecut.com/appcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://updates.getrecut.com/latest-mac"
+    strategy :header_match
   end
-
-  auto_updates true
 
   app "Recut.app"
 
   zap trash: [
-    "~/Library/Caches/co.tinywins.recut",
-    "~/Library/Preferences/co.tinywins.recut.plist",
-    "~/Library/Saved Application State/co.tinywins.recut.savedState",
+    "~/Library/Application Support/Recut",
+    "~/Library/Caches/com.tinywins.recut",
+    "~/Library/Preferences/com.tinywins.recut.plist",
+    "~/Library/Saved Application State/com.tinywins.recut.savedState",
   ]
 end
