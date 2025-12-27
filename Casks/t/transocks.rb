@@ -22,7 +22,6 @@ cask "transocks" do
 
   zap trash: [
     "~/Library/Application Support/CrashReporter/穿梭Transocks*",
-    "~/Library/Application Support/CrashReporter/穿梭Transocks*",
     "~/Library/Caches/com.transocks.mac.signed",
     "~/Library/Logs/DiagnosticReports/穿梭Transocks*",
     "~/Library/Preferences/com.transocks.mac.signed.plist",
