@@ -1,8 +1,9 @@
-cask "macdown3000" do
+cask "macdown-3000" do
   version "3000.0.1"
   sha256 "82965a72eed6d212a7cffebd711733178657cebae6b580ef6ef732acbd5b1f3a"
 
-  url "https://github.com/schuyler/macdown3000/releases/download/v#{version}/MacDown-#{version}.dmg"
+  url "https://github.com/schuyler/macdown3000/releases/download/v#{version}/MacDown-#{version}.dmg",
+      verified: "github.com/schuyler/macdown3000/"
   name "MacDown 3000"
   desc "Markdown editor with live preview and syntax highlighting"
   homepage "https://macdown.app/"
