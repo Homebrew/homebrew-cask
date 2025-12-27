@@ -1,5 +1,5 @@
 cask "sitesucker-pro" do
-  on_sequoia :or_older do
+  on_big_sur :or_older do
     on_catalina :or_older do
       version "3.2.7"
       sha256 "dd61a113ad86b580e0faf97b4aa86290e038bb3e098f2d19e67fc9e194ce1a3e"
@@ -8,18 +8,14 @@ cask "sitesucker-pro" do
       version "5.2"
       sha256 "244fa73a0aa73b3786ee6eb4e5d6f6438942853d6d58c5de38b92f11e8d44428"
     end
-    on_monterey :or_newer do
-      version "5.7.5"
-      sha256 "39c842ba52f830ab19c0640159d4f2afbf852f3591d912a04fdccf5d0307b026"
-    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_tahoe :or_newer do
-    version "6.1"
-    sha256 "2c65131c8015a6f4641c7738b25bbd1ec0e070b6169918915444aafa69b17c7e"
+  on_monterey :or_newer do
+    version "6.1.1"
+    sha256 "212b92cbf152466f26ac32f60ad0b3c72be2293e6653a07506dcd780858b96fb"
 
     livecheck do
       url "https://ricks-apps.com/osx/sitesucker/pro-versions.plist"
