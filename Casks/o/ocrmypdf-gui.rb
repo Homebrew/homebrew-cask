@@ -7,6 +7,7 @@ cask "ocrmypdf-gui" do
   desc "Modern GUI application for OCRMyPDF with drag-and-drop support"
   homepage "https://github.com/nexusparadise/ocrmypdf-gui"
 
+  depends_on macos: ">= :ventura"
   depends_on formula: [
     "ocrmypdf",
     "tesseract-lang",
