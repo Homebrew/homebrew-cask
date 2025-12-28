@@ -19,8 +19,8 @@ cask "eqmac" do
 
   uninstall delete: [
     "/Library/Audio/Plug-Ins/HAL/eqMac.driver",
-    "/Library/PrivilegedHelperTools/com.bitgapp.eqmac.helper",
     "/Library/LaunchDaemons/com.bitgapp.eqmac.helper.plist",
+    "/Library/PrivilegedHelperTools/com.bitgapp.eqmac.helper",
   ]
 
   zap trash: [
