@@ -1,4 +1,4 @@
-cask "msty-studio" do
+cask "mstystudio" do
   arch arm: "arm64", intel: "x64"
 
   version "2.2.1"
