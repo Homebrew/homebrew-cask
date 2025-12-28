@@ -7,7 +7,7 @@ cask "msty-studio" do
   url "https://next-assets.msty.studio/app/latest/mac/MstyStudio_#{arch}.dmg",
       verified: "msty.studio/"
   name "Msty Studio"
-  desc "Next-Generation Privacy-first AI platform with local and online models"
+  desc "AI platform with local and online models"
   homepage "https://msty.ai/"
 
   livecheck do
