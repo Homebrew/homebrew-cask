@@ -8,7 +8,7 @@ cask "mythic" do
   homepage "https://getmythic.app/"
 
   livecheck do
-    url "https://getmythic.app/appcast.xml"
+    url "https://dl.getmythic.app/updates/update.xml"
     regex(%r{/(\h+(?:-\h+)*)/Mythic\.zip}i)
     strategy :sparkle do |item, regex|
       match = item.url.match(regex)
