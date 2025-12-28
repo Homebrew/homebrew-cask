@@ -19,7 +19,7 @@ cask "macdown" do
     end
   end
 
-  deprecate! date: "2025-12-27", because: :unmaintained, replacement: "macdown-3000"
+  deprecate! date: "2025-12-27", because: :unmaintained, replacement_cask: "macdown-3000"
 
   auto_updates true
 
