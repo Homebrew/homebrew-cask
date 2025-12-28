@@ -18,8 +18,6 @@ cask "mythic" do
     end
   end
 
-  no_autobump! because: "livecheck fails in CI environment"
-
   depends_on macos: ">= :sonoma"
   depends_on arch: :arm64
 
