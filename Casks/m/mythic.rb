@@ -1,6 +1,6 @@
 cask "mythic" do
-  version "0.5.0,cfbc3111-f5b3-469d-823b-393f0793c550"
-  sha256 "782a07d9d83f686c351a3867661757447480e52fd65904816760a38b7775b30e"
+  version "0.6.0,92033dfd-7a35-4629-9ca5-60d66576fb65"
+  sha256 "bcdb543d56e71e6ae3e102ff5bebbbdecdb1066549228d4c5f1a3c5cfa82c816"
 
   url "https://dl.getmythic.app/updates/#{version.csv.second}/Mythic.zip"
   name "Mythic"
