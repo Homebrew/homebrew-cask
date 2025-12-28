@@ -1,7 +1,7 @@
 cask "msty-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version :2.2.1
+  version "2.2.1"
   sha256 :no_check
 
   url "https://next-assets.msty.studio/app/latest/mac/MstyStudio_#{arch}.dmg",
