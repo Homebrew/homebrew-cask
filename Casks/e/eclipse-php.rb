@@ -14,6 +14,8 @@ cask "eclipse-php" do
     cask "eclipse-ide"
   end
 
+  depends_on macos: ">= :big_sur"
+
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse PHP.app"
 
