@@ -1,8 +1,8 @@
 cask "taphouse" do
-  version "1.0.0"
-  sha256 "94e92577a26d636c67972acce8888c65c6bb9facf27e5dfdd366870bb674eb5a"
+  version "1.1.0"
+  sha256 :no_check
 
-  url "https://taphouse.multimodalsolutions.gr/downloads/Taphouse-#{version}.dmg"
+  url "https://taphouse.multimodalsolutions.gr/downloads/Taphouse.dmg"
   name "Taphouse"
   desc "Native GUI for Homebrew package management"
   homepage "https://taphouse.multimodalsolutions.gr/"
