@@ -9,20 +9,8 @@ cask "supercollider" do
   homepage "https://supercollider.github.io/"
 
   livecheck do
-    url :url
-    regex(/SuperCollider[._-]v?(\d+(?:\.\d+)+)[._-]macOS(?:[._-]universal)?\.dmg/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
+    url :homepage
+    regex(/href=.*?SuperCollider[._-]v?(\d+(?:\.\d+)+)[._-]macOS(?:[._-]universal)?\.dmg/i)
   end
 
   depends_on macos: ">= :big_sur"
