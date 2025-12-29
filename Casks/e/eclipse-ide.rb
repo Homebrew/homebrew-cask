@@ -12,13 +12,16 @@ cask "eclipse-ide" do
 
   livecheck do
     url "https://download.eclipse.org/eclipse/downloads/data.json"
-    regex(%r{drops4/R-v?(\d+(?:\.\d+)+)-(\d{4})(\d{2})}i)
+    regex(/^(\d{4}-\d{2})/i)
     strategy :json do |json, regex|
       json["releases"]&.map do |release|
-        match = release.dig("path")&.match(regex)
+        version = release["label"]
+        next if version.blank?
+
+        match = release["date"]&.match(regex)
         next if match.blank?
 
-        "#{match[1]},#{match[2]}-#{match[3]}"
+        "#{version},#{match[1]}"
       end
     end
   end
