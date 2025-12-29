@@ -1,6 +1,6 @@
 cask "kuaitie" do
-  version "5.0.6,1756434188"
-  sha256 "8e40bfdc37192eecfcc352e31e49da8e2fc18e5e5fd33d05548b9131f5440624"
+  version "6.0.0,1766990787"
+  sha256 "50f27ebfceaa3f93afbe512b89a381c0829288db9ace3c5c4f8ee0bcc16c2bda"
 
   url "https://clipweb.oss-cn-qingdao.aliyuncs.com/release/macos/packages/kuaitie-#{version.csv.first.no_dots}_#{version.csv.second}.zip",
       verified: "clipweb.oss-cn-qingdao.aliyuncs.com/release/macos/packages/"
