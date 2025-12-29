@@ -15,6 +15,8 @@ cask "eclipse-installer" do
     cask "eclipse-ide"
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Eclipse Installer.app"
 
   zap trash: [
