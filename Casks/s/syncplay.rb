@@ -9,21 +9,11 @@ cask "syncplay" do
   homepage "https://syncplay.pl/"
 
   livecheck do
-    url :url
-    regex(/Syncplay[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
+    url :homepage
+    regex(/href=.*?Syncplay[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Syncplay.app"
 
