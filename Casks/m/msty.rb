@@ -1,6 +1,5 @@
 cask "msty" do
   arch arm: "arm64", intel: "x64"
-
   version "1.9.2"
   sha256 :no_check
 
@@ -9,8 +8,9 @@ cask "msty" do
   desc "Run LLMs locally"
   homepage "https://msty.app/"
 
-  deprecate! date: "2025-11-14", because: "is being replaced by Msty Studio. Users are recommended to export their data and migrate to the new app", replacement_cask: "mstystudio"
-  
+  deprecate! date: "2025-11-14",
+             because: "is being replaced by Msty Studio. Users are recommended to export their data and migrate to the new app", replacement_cask: "mstystudio"
+
   auto_updates true
 
   app "Msty.app"
