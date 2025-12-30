@@ -3,7 +3,7 @@ cask "qlc+" do
 
   on_arm do
     version "5.0.1"
-    sha256 "00bab5cd80f3140cc981be72f3d0ad092f30436931e223955255d0a36205b254"
+    sha256 "f83ae54f05ececc67e47a2104cee4e602bf6826d1b594f68a5f90e93a4cf40e7"
 
     livecheck do
       url "https://www.qlcplus.org/download"
