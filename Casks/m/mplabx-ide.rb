@@ -9,7 +9,7 @@ cask "mplabx-ide" do
   homepage "https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide"
 
   livecheck do
-    url :homepage
+    url :homepage, user_agent: :browser
     regex(/href=.*?MPLABX[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
   end
 
