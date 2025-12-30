@@ -55,11 +55,11 @@ cask "termius" do
     artifact icon_file, target: "~/.local/share/icons/hicolor/512x512/apps/termius-app.png"
 
     preflight do
-      system_command "/usr/bin/ar",
+      system_command "ar",
                      args:  ["-x", "#{staged_path}/Termius.deb"],
                      chdir: staged_path
 
-      system_command "/usr/bin/tar",
+      system_command "tar",
                      args:  ["-xf", "#{staged_path}/data.tar.xz"],
                      chdir: staged_path
 
