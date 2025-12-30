@@ -1,18 +1,21 @@
 cask "inkscape" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.4.333103"
-  sha256 arm:   "4fdf98784a4023faa3adcd65414891bcd4ca359feb2bf2e178d01dddf656f78a",
-         intel: "9521745442820d912ada41489e2b09a9a1850164781b9d2e566a0b41f4b15fef"
+  version "1.4.3,"
+  sha256 arm:   "f4aa9c9b2e06db432c6f81a494ad9aa59b87cb7d9539cd7e6f6000002cb9edff",
+         intel: "c4e7056dee4faaa623730e93a94ad1bfa017643eb85a58f9d25419397ccc5073"
 
-  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}_#{arch}.dmg"
+  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version.csv.first}#{version.csv.second}_#{arch}.dmg"
   name "Inkscape"
   desc "Vector graphics editor"
   homepage "https://inkscape.org/"
 
   livecheck do
     url "https://inkscape.org/release/all/mac-os-x/"
-    regex(/Inkscape[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+    regex(/Inkscape[._-]v?(\d+(?:\.\d+)*\.\d)(\d*)[._-]#{arch}\.dmg">/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
