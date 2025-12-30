@@ -2,9 +2,9 @@ cask "libreoffice" do
   arch arm: "aarch64", intel: "x86-64"
   folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
-  version "25.8.3"
-  sha256 arm:   "10b5b3ca63a16f3ea5ebc4b8936d57daee49a9a9d88599d659a0c54e05a9ddb7",
-         intel: "5064ed461ff4e6bc4f5d482270424788ac6ce168259f7cbfd89fb952c741b620"
+  version "25.8.4"
+  sha256 arm:   "972bb495bd5e249257c53d4030c013f2a5706a6203d3669b8c410ceafe3d0426",
+         intel: "12ff8890c425758a4634a57572b361c8270098da6a25c7318459ab380b83e6bf"
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
       verified: "download.documentfoundation.org/libreoffice/stable/"
@@ -12,22 +12,21 @@ cask "libreoffice" do
   desc "Free cross-platform office suite, fresh version"
   homepage "https://www.libreoffice.org/"
 
-  # We check the wiki homepage for release versions because:
+  # We check the download page for release versions because:
   # * Upstream may upload a new version to the stable download directory
   #   (https://download.documentfoundation.org/libreoffice/stable/) before it's
   #   released.
-  # * The contents of the download page can change based on user agent(?),
-  #   sometimes in unpredictable ways that break the check, so it's not an
-  #   entirely dependable source for us to check.
   # * The libreoffice.org Release Notes page may not be updated in a timely
   #   manner after new releases are announced (whereas the wiki appears to be
   #   updated relatively soon after).
+  # * The Wiki server blocks requests based on IP address, which prevents us
+  #   from checking it in the autobump/CI environment, etc.
   #
   # NOTE: This needs to check a page that provides the latest versons for both
   # Fresh and Still, as this check is also used by the `libreoffice-still` cask.
   livecheck do
-    url "https://wiki.documentfoundation.org/Main_Page"
-    regex(/>\s*Download\s+LibreOffice\s+v?(\d+(?:\.\d+)+)\s*</im)
+    url "https://www.libreoffice.org/download/download-libreoffice/?type=mac-#{folder}"
+    regex(/href=.*?LibreOffice[._-]v?(\d+(?:\.\d+)+)(?:[._-]MacOS)?[._-]#{arch}\.dmg/i)
   end
 
   conflicts_with cask: "libreoffice-still"
