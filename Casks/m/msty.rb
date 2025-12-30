@@ -9,11 +9,8 @@ cask "msty" do
   desc "Run LLMs locally"
   homepage "https://msty.app/"
 
-  livecheck do
-    url "https://assets.msty.app/prod/latest/mac/latest-mac.yml"
-    strategy :electron_builder
-  end
-
+  deprecate! date: "2025-11-14", because: "is being replaced by Msty Studio. Users are recommended to export their data and migrate to the new app", replacement_cask: "mstystudio"
+  
   auto_updates true
 
   app "Msty.app"
