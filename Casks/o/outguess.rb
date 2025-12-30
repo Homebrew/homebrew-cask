@@ -3,12 +3,12 @@ cask "outguess" do
   sha256 :no_check
 
   url "https://www.rbcafe.com/download/outguess.zip",
-      user_agent: :fake
+      user_agent: :browser
   name "Outguess"
   homepage "https://www.rbcafe.com/software/outguess/"
 
   livecheck do
-    url :homepage
+    url :homepage, user_agent: :browser
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
