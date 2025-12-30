@@ -5,6 +5,7 @@ cask "outguess" do
   url "https://www.rbcafe.com/download/outguess.zip",
       user_agent: :browser
   name "Outguess"
+  desc "Steganography tool to hide a document in an image"
   homepage "https://www.rbcafe.com/software/outguess/"
 
   livecheck do
