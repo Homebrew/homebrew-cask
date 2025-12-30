@@ -60,7 +60,7 @@ cask "gcloud-cli" do
     end
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
                     args:      ["config", "virtualenv", "create", "--python-to-use",
-                                "#{HOMEBREW_PREFIX}/opt/python@3.13/bin/python3"],
+                                "#{HOMEBREW_PREFIX}/opt/python@3.13/bin/python3.13"],
                     reset_uid: true
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
                     args:      ["config", "virtualenv", "enable"],
