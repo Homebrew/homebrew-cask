@@ -12,25 +12,21 @@ cask "libreoffice" do
   desc "Free cross-platform office suite, fresh version"
   homepage "https://www.libreoffice.org/"
 
-  # We check the wiki homepage for release versions because:
+  # We check the download page for release versions because:
   # * Upstream may upload a new version to the stable download directory
   #   (https://download.documentfoundation.org/libreoffice/stable/) before it's
   #   released.
-  # * The contents of the download page can change based on user agent(?),
-  #   sometimes in unpredictable ways that break the check, so it's not an
-  #   entirely dependable source for us to check.
   # * The libreoffice.org Release Notes page may not be updated in a timely
   #   manner after new releases are announced (whereas the wiki appears to be
   #   updated relatively soon after).
+  # * The Wiki server blocks requests based on IP address, which prevents us
+  #   from checking it in the autobump/CI environment, etc.
   #
   # NOTE: This needs to check a page that provides the latest versons for both
   # Fresh and Still, as this check is also used by the `libreoffice-still` cask.
   livecheck do
-    url "http://update.libreoffice.org/check.php?pkgfmt=dmg",
-        user_agent: "LibreOffice 0 (b6c8ba5-8c0b455-0b5e650-d7f0dd3-b100c87; MacOSX; #{arch}; )"
-    strategy :xml do |xml|
-      xml.elements["//inst:version"]&.text&.strip
-    end
+    url "https://www.libreoffice.org/download/download-libreoffice/?type=mac-#{folder}"
+    regex(/href=.*?LibreOffice[._-]v?(\d+(?:\.\d+)+)(?:[._-]MacOS)?[._-]#{arch}\.dmg/i)
   end
 
   conflicts_with cask: "libreoffice-still"
