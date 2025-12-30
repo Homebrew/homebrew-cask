@@ -1,9 +1,9 @@
 cask "shadow@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.9.10339"
-  sha256 arm:   "cb1610de79a2a68b3c24ffcf30c799d53f8833e555f7a89683f7a26c27d0afe9",
-         intel: "1d115fabb3fb6404803cf64d8cbf25865c420fd4be8a448c750fb3c94a77a115"
+  version "9.9.10347"
+  sha256 arm:   "e44a7ef2e5d7884efe71dd8d51aa111ff00596219ebb32a939fa1f9914056bc3",
+         intel: "64fa3ecbce423e5238ee87c7c201a3ab61c59776cbfe8ea8de7f23e5226d169c"
 
   url "https://update.shadow.tech/launcher/preprod/mac/#{arch}/ShadowPCBeta-#{version}.dmg"
   name "Shadow PC Beta"
