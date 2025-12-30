@@ -26,8 +26,11 @@ cask "libreoffice" do
   # NOTE: This needs to check a page that provides the latest versons for both
   # Fresh and Still, as this check is also used by the `libreoffice-still` cask.
   livecheck do
-    url "https://wiki.documentfoundation.org/Main_Page"
-    regex(/>\s*Download\s+LibreOffice\s+v?(\d+(?:\.\d+)+)\s*</im)
+    url "http://update.libreoffice.org/check.php?pkgfmt=dmg",
+        user_agent: "LibreOffice 0 (b6c8ba5-8c0b455-0b5e650-d7f0dd3-b100c87; MacOSX; #{arch}; )"
+    strategy :xml do |xml|
+      xml.elements["//inst:version"]&.text&.strip
+    end
   end
 
   conflicts_with cask: "libreoffice-still"
