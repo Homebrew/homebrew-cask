@@ -48,9 +48,11 @@ cask "termius" do
     termius_dir = "#{staged_path}/opt/Termius"
     shimscript = "#{staged_path}/termius.wrapper.sh"
     desktop_file = "#{staged_path}/termius.desktop"
+    icon_file = "#{staged_path}/usr/share/icons/hicolor/512x512/apps/termius-app.png"
 
     binary shimscript, target: "termius"
-    artifact desktop_file, target: "#{Dir.home}/.local/share/applications/termius.desktop"
+    artifact desktop_file, target: "~/.local/share/applications/termius.desktop"
+    artifact icon_file, target: "~/.local/share/icons/hicolor/512x512/apps/termius-app.png"
 
     preflight do
       system_command "/usr/bin/ar",
@@ -73,7 +75,7 @@ cask "termius" do
         Exec=#{HOMEBREW_PREFIX}/bin/termius %U
         Terminal=false
         Type=Application
-        Icon=#{staged_path}/usr/share/icons/hicolor/512x512/apps/termius-app.png
+        Icon=#{Dir.home}/.local/share/icons/hicolor/512x512/apps/termius-app.png
         StartupWMClass=Termius
         Comment=SSH client
         MimeType=x-scheme-handler/termius;
