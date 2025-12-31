@@ -7,7 +7,7 @@ cask "swama" do
   desc "Machine-learning runtime"
   homepage "https://github.com/Trans-N-ai/swama"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
   depends_on arch: :arm64
 
   app "Swama.app"
