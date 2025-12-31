@@ -20,6 +20,7 @@ cask "conductor" do
     end
   end
 
+  auto_updates true
   depends_on arch: :arm64
 
   app "Conductor.app"
