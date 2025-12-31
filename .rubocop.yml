@@ -22,8 +22,6 @@ Layout/ArgumentAlignment:
   - "**/Formula/**/*.rb"
 Layout/CaseIndentation:
   EnforcedStyle: end
-Layout/EmptyLinesAfterModuleInclusion:
-  Enabled: false
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 Layout/FirstHashElementIndentation:
@@ -178,7 +176,7 @@ Style/InvertibleUnlessCondition:
     :zero?:
     :blank?: :present?
 Style/ItBlockParameter:
-  Enabled: false
+  EnforcedStyle: only_numbered_parameters
 Style/MutableConstant:
   EnforcedStyle: strict
 Style/NumericLiteralPrefix:
