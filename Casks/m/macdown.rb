@@ -20,6 +20,7 @@ cask "macdown" do
   end
 
   auto_updates true
+  conflicts_with cask: "macdown-3000"
 
   app "MacDown.app"
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"

@@ -8,9 +8,11 @@ cask "macdown-3000" do
   desc "Markdown editor with live preview and syntax highlighting"
   homepage "https://macdown.app/"
 
+  conflicts_with cask: "macdown"
   depends_on macos: ">= :big_sur"
 
   app "MacDown 3000.app"
+  binary "#{appdir}/MacDown 3000.app/Contents/SharedSupport/bin/macdown"
 
   zap trash: [
     "~/Library/Application Support/MacDown 3000",
