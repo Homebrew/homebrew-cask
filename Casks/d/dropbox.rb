@@ -2,9 +2,9 @@ cask "dropbox" do
   arch arm: ".arm64"
   livecheck_query = on_arch_conditional arm: "&arch=arm64"
 
-  version "238.4.6075"
-  sha256 arm:   "874f56c399655f500397a2ebc1378e91ff63305ecfc825cbe0344704b1b0219a",
-         intel: "e7395b0cc89c71efee0efaf7ffa167a453772b3f21e58a2594bc0800d4d29293"
+  version "238.4.6305"
+  sha256 arm:   "c12963bc63702eb5bf444e592c619f3481bf1cc38ca4e0754f84b5d5cc9389af",
+         intel: "ed4ac92ee39a20d2fc7ae0367097713487963af22ecbdb734141cda37a3e6c93"
 
   url "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}#{arch}.dmg",
       verified: "dropboxstatic.com/dbx-releng/client/"
