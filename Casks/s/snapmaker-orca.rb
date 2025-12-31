@@ -1,11 +1,8 @@
 cask "snapmaker-orca" do
-  arch arm: "arm64", intel: "x86_64"
+  version "2.2.1"
+  sha256 "c03700053d5cc2810395f006bd81a77f91aafb171157602002ea68a982be4881"
 
-  version "2.1.5"
-  sha256 arm:   "1380450f6f9db642f0553424be6a259a33e1c5cd6922972d6a615d54822d96c6",
-         intel: "5559ff5e212e9efd2ef3334a2fba4c79b61e0e6302a5f51768a891b5432ae2f7"
-
-  url "https://github.com/snapmaker/orcaslicer/releases/download/v#{version}/Snapmaker_Orca_Mac_#{arch}_V#{version}.dmg",
+  url "https://github.com/snapmaker/orcaslicer/releases/download/v#{version}/Snapmaker_Orca_Mac_universal_V#{version}.dmg",
       verified: "github.com/snapmaker/orcaslicer/"
   name "Snapmaker Orca"
   desc "Slicing software for Snapmaker 3D printers, a fork of OrcaSlicer"
