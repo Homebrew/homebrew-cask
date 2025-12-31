@@ -1,6 +1,6 @@
 cask "fontcreator" do
-  version "15.0.0.3039"
-  sha256 "2dc7d073e09f91eef77e8ca9c1a5f9fd9afde33a49583b2a40958f4c1518f827"
+  version "15.0.0.3040"
+  sha256 "63176da822088bf0d7f2ca43cd155ec91efbeb55f75ce680a1c4c06f18971a31"
 
   url "https://www.high-logic.com/previousrelease/FontCreator#{version}.dmg"
   name "FontCreator"
