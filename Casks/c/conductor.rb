@@ -1,6 +1,14 @@
 cask "conductor" do
-  version "0.28.5,01KDSC7V6RJBE61NDBQYYNYYMK"
-  sha256 "9080c06b1fd3748ca15361c6b5a8bcfc7d87e2f57cccf62d660fb6ee7be3ca1e"
+  arch arm: "aarch64", intel: "x86_64"
+
+  on_arm do
+    version "0.28.5,01KDSC7V6RJBE61NDBQYYNYYMK"
+    sha256 "9080c06b1fd3748ca15361c6b5a8bcfc7d87e2f57cccf62d660fb6ee7be3ca1e"
+  end
+  on_intel do
+    version "0.28.5,01KDSC8H1E2M6VMQ444AXMDJRB"
+    sha256 "1ad2d8d4d575ee87f5cb17887143b16a6c3c56dbbec3f475b730e85878afdab4"
+  end
 
   url "https://cdn.crabnebula.app/asset/#{version.csv.second}",
       verified: "cdn.crabnebula.app/asset/"
@@ -9,7 +17,7 @@ cask "conductor" do
   homepage "https://conductor.build/"
 
   livecheck do
-    url "https://cdn.crabnebula.app/update/melty/conductor/darwin-aarch64/latest"
+    url "https://cdn.crabnebula.app/update/melty/conductor/darwin-#{arch}/latest"
     regex(%r{cdn.crabnebula.app/asset/(.+)}i)
     strategy :json do |json, regex|
       asset_id = json["url"]&.[](regex, 1)
@@ -21,7 +29,6 @@ cask "conductor" do
   end
 
   auto_updates true
-  depends_on arch: :arm64
 
   app "Conductor.app"
 
