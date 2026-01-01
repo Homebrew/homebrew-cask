@@ -8,6 +8,11 @@ cask "osaurus" do
   desc "LLM server built on MLX"
   homepage "https://osaurus.ai/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :sequoia"
   depends_on arch: :arm64
 
