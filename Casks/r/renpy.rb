@@ -1,6 +1,6 @@
 cask "renpy" do
-  version "8.5.0"
-  sha256 "94832f50f1f54251772e71317b067f6ff342e7b9a93197dd5b9c75a0084af30d"
+  version "8.5.1"
+  sha256 "2a46584405fde8ffa9c1d1cac8623ba7b6193ebbf90f0cb8d4f586cfb74cfef7"
 
   url "https://www.renpy.org/dl/#{version}/renpy-#{version}-sdk.zip"
   name "Ren'Py"
