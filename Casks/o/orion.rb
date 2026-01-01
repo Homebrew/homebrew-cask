@@ -1,7 +1,7 @@
 cask "orion" do
   on_catalina :or_older do
-    version "1.0.1,140"
-    sha256 "4d790d8c4126f575aff9c3152c22ae2f389464e7fb29adca395d1b5638a08cda"
+    version "1.0.2,141"
+    sha256 "cf31de1b3bb5a25f0b548b6de33702d78899125478cdd892bf8af73371ac5051"
 
     url "https://cdn.kagi.com/updates/10_15/#{version.csv.second}.zip"
 
@@ -11,8 +11,8 @@ cask "orion" do
     end
   end
   on_big_sur do
-    version "1.0.1,140"
-    sha256 "f99779d34c552a5ca61cfb1b673b226a8ad946add7c159a27455b28877c7ad2a"
+    version "1.0.2,141"
+    sha256 "a3cc0440654e74f7f1adbc44742ce1d68cb4451a6bbbe4bc125b019881a34eff"
 
     url "https://cdn.kagi.com/updates/11_0/#{version.csv.second}.zip"
 
@@ -22,8 +22,8 @@ cask "orion" do
     end
   end
   on_monterey do
-    version "1.0.1,140"
-    sha256 "e56cb92b8bf6c19e8865999983c95f793359922d5c7cf0871277a2774b8b9453"
+    version "1.0.2,141"
+    sha256 "d17e9c5ff72ccd410ddffd61405dbf9342c9b2ba6d06df02369f373b76e2373a"
 
     url "https://cdn.kagi.com/updates/12_0/#{version.csv.second}.zip"
 
@@ -33,8 +33,8 @@ cask "orion" do
     end
   end
   on_ventura do
-    version "1.0.1,140"
-    sha256 "d01dba222279e63f36a8fab711b15c3b8d2cfc6ef9ee96d99f2ef0304dd43136"
+    version "1.0.2,141"
+    sha256 "b9f8e58f83ab46f9a6004d8e4d84b4598850b322965c2be10d3fd6ef495c1021"
 
     url "https://cdn.kagi.com/updates/13_0/#{version.csv.second}.zip"
 
@@ -44,8 +44,8 @@ cask "orion" do
     end
   end
   on_sonoma do
-    version "1.0.1,140"
-    sha256 "9e9665598b62b4ac8a1a7c7663f03b8f088dcfd8edef7bdbf0d486a95c84a6d9"
+    version "1.0.2,141"
+    sha256 "bf52f7abb4843755dda6333dc4e125a0924a2afc92594536c74699488b19f0aa"
 
     url "https://cdn.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
@@ -55,8 +55,8 @@ cask "orion" do
     end
   end
   on_sequoia do
-    version "1.0.1,140"
-    sha256 "59e3bee42502b43bc07a442fa83a88a99d9f1f511e27869d2b802660158a4e2e"
+    version "1.0.2,141"
+    sha256 "e5b77a73f632c4191452370aa161a90ff1ac0876e3aa42842d0c1074e15f65f0"
 
     url "https://cdn.kagi.com/updates/15_0/#{version.csv.second}.zip"
 
@@ -66,8 +66,8 @@ cask "orion" do
     end
   end
   on_tahoe :or_newer do
-    version "1.0.1,140"
-    sha256 "fbae1f0803c552bc6558b7afd289d65740e2731fde3a5c8a1864dd22f4906e8b"
+    version "1.0.2,141"
+    sha256 "6e555c53c3bbd8c5e39f54c10669847aee80cd89ab24ebded2194fab317d4654"
 
     url "https://cdn.kagi.com/updates/26_0/#{version.csv.second}.zip"
 
