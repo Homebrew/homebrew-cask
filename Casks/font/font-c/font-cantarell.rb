@@ -1,6 +1,6 @@
 cask "font-cantarell" do
-  version "0.303"
-  sha256 "54f644b5edf5da9a48a942452e38ff1bc2382aa25cabb8742222247944f1dc3a"
+  version "0.310"
+  sha256 "754d7003394b566acb5417505532aa84db942160e4f38bc73de3e2fa2ca58ce0"
 
   url "https://cantarell.gnome.org/releases/cantarell-fonts-#{version}.tar.xz"
   name "Cantarell"
