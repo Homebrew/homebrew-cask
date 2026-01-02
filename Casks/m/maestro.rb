@@ -1,9 +1,9 @@
 cask "maestro" do
   arch arm: "-arm64"
 
-  version "0.13.2"
-  sha256 arm:   "9c17bdad693e30f14df24c9a278f7a41ab077a71acf242da07f5e389a28f1e74",
-         intel: "f46ee87fbd0f3ccac7a081a8c3358193846bd0ebdfac42b4b1ab1191761acf86"
+  version "0.14.0"
+  sha256 arm:   "c28c2a0ee31c187b22cf0bd7e56beb025e98ad69c77494bca09bd1fde997df5f",
+         intel: "36edf6a9daa4e7a72fe26d1886dbddd9a4aa5485d154f4b3a859dd7af2e91c3d"
 
   url "https://github.com/pedramamini/Maestro/releases/download/v#{version}/Maestro-#{version}#{arch}.dmg",
       verified: "github.com/pedramamini/Maestro/"
