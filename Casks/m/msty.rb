@@ -3,13 +3,11 @@ cask "msty" do
   version "1.9.2"
   sha256 :no_check
 
-  url "https://assets.msty.app/prod/latest/mac/Msty_#{arch}.dmg"
   name "Msty"
   desc "Run LLMs locally"
   homepage "https://msty.app/"
 
   deprecate! date: "2026-01-02", because: :discontinued, replacement_cask: "mstystudio"
-             because: "is being replaced by Msty Studio. Users are recommended to export their data and migrate to the new app", replacement_cask: "mstystudio"
 
   auto_updates true
 
