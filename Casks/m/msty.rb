@@ -3,6 +3,7 @@ cask "msty" do
   version "1.9.2"
   sha256 :no_check
 
+  url "https://assets.msty.app/prod/latest/mac/Msty_#{arch}.dmg"
   name "Msty"
   desc "Run LLMs locally"
   homepage "https://msty.app/"
