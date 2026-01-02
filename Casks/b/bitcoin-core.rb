@@ -1,9 +1,9 @@
 cask "bitcoin-core" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "30.0"
-  sha256 arm:   "f6e2d885027e25500c8b16406c95b0fb7e536a4e2bbaae2cf8b48a476a60abe1",
-         intel: "0eb10b714a4f5a0f7c40a9533d0bda141c739e7930c814e392baa99b3bf24790"
+  version "30.1"
+  sha256 arm:   "8e47679f1ce7c906a4a0f25fa0a8420202c8b7a9c88eecb874913ad2aca21df6",
+         intel: "1b1a5d8e3e84e2a62954bf9c90987e2575f12e4a099528ab0c5e0d491f3378bf"
 
   url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-#{arch}-apple-darwin.zip"
   name "Bitcoin Core"
