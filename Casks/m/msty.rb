@@ -1,5 +1,6 @@
 cask "msty" do
   arch arm: "arm64", intel: "x64"
+
   version "1.9.2"
   sha256 :no_check
 
