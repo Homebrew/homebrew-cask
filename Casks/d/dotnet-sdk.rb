@@ -35,6 +35,7 @@ cask "dotnet-sdk" do
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
   binary "/usr/local/share/dotnet/dotnet"
+  binary "/usr/local/share/dotnet/dnx"
 
   uninstall pkgutil: [
     "com.microsoft.dotnet.*#{version.major_minor}*#{arch}",
