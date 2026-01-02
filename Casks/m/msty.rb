@@ -8,7 +8,7 @@ cask "msty" do
   desc "Run LLMs locally"
   homepage "https://msty.app/"
 
-  deprecate! date: "2025-11-14",
+  deprecate! date: "2026-01-02", because: :discontinued, replacement_cask: "mstystudio"
              because: "is being replaced by Msty Studio. Users are recommended to export their data and migrate to the new app", replacement_cask: "mstystudio"
 
   auto_updates true
