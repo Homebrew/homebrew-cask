@@ -23,5 +23,8 @@ cask "excire-foto" do
 
   uninstall pkgutil: "prc.excire.foto"
 
-  zap trash: "~/Library/Application Support/excire-foto"
+  zap trash: [
+    "~/Library/Application Support/excire-foto",
+    "~/Library/Preferences/prc.excire.foto.plist",
+  ]
 end
