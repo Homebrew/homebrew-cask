@@ -1,6 +1,6 @@
 cask "transnomino" do
-  version "9.5.1"
-  sha256 "3ae49199a9f841dba5ab73fdf6271f1d66e5f7fefcccb15ea0fb086438f7ad0a"
+  version "10.0.0"
+  sha256 "975176b53852bec8867ac4f061a4c416f128dfebf79d70ba055d90c303813c9c"
 
   url "https://www.transnomino.com/download/Transnomino-#{version}.dmg"
   name "Transnomino"
@@ -15,7 +15,7 @@ cask "transnomino" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Transnomino.app"
 
