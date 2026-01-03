@@ -1,9 +1,9 @@
 cask "keystore-explorer" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.6.0"
-  sha256 arm:   "3bc193e6f9f644ad9d81b1493d2250a190af6c83b3f11accbe05676d9e50fcf9",
-         intel: "adbc55d3b04f8987875c859a36d0190e4f779b2c58a23abed20143063c5accdc"
+  version "5.6.1"
+  sha256 arm:   "693e325e59173a14a1aedf4eb581ed24b6ddb0e8bb4037893312606eb23fab7b",
+         intel: "052dd5ada5a453082b08040b646a3c35d206b84afd3b8911084a796dc2555a54"
 
   url "https://github.com/kaikramer/keystore-explorer/releases/download/v#{version}/kse-#{version.no_dots}-#{arch}.dmg",
       verified: "github.com/kaikramer/keystore-explorer/"
