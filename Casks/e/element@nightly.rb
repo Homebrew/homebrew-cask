@@ -1,6 +1,6 @@
 cask "element@nightly" do
-  version "2026010201"
-  sha256 "0603cd5a33158917dc4a7373eeaf706eb83ce77a4dc61dcde40a25d9febcf788"
+  version "2026010301"
+  sha256 "13e0312e6b65f3d3891d1204592e5a1c651d5616230ba2a0daf4051de30a545e"
 
   url "https://packages.element.io/nightly/update/macos/Element%20Nightly-#{version}-universal-mac.zip"
   name "Element Nightly"
