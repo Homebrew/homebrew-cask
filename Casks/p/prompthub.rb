@@ -5,7 +5,8 @@ cask "prompthub" do
   sha256 arm:   "7300ba3206596c8b6674d97c3a19e9949c27d7cc4e4e0596eff58341de7b7d57",
          intel: "8544b39c132da322de96cb4b186760de2ec308c0c686c63a5899a36621896a5b"
 
-  url "https://github.com/legeling/PromptHub/releases/download/v#{version}/PromptHub-#{version}-#{arch}.dmg"
+  url "https://github.com/legeling/PromptHub/releases/download/v#{version}/PromptHub-#{version}-#{arch}.dmg",
+      verified: "github.com/legeling/PromptHub/"
   name "PromptHub"
   desc "Open-source, local-first AI prompt management tool"
   homepage "https://prompthub-app.vercel.app/"
@@ -16,7 +17,7 @@ cask "prompthub" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "PromptHub.app"
 
