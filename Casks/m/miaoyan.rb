@@ -1,6 +1,6 @@
 cask "miaoyan" do
-  version "2.4.1"
-  sha256 "0e1290af586bc0f236bdc676c8b12e10211ba740f75748798a1722c0bfe10dff"
+  version "2.4.2"
+  sha256 "88aa02638b2115653056a3a9d36b39066606f9e4b1107bf4144a178053d29719"
 
   url "https://gw.alipayobjects.com/os/k/app/MiaoYan_V#{version}.zip",
       verified: "gw.alipayobjects.com/"
