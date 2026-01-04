@@ -1,6 +1,6 @@
 cask "replicator" do
-  version "8.4.1"
-  sha256 "51a665b26aa695cd49077b7c75d34916e9514e9804dd01a198c0951e9c110072"
+  version "8.5.1"
+  sha256 "7ce31696c5cd3d9295beb06f4427e1081bee8c77319da8694c07b06cb57b1398"
 
   url "https://github.com/jamf/Replicator/releases/download/v#{version}/Replicator.zip"
   name "Replicator"
