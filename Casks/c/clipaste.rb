@@ -4,7 +4,7 @@ cask "clipaste" do
 
   url "https://www.ntwind.com/files/Clipaste_#{version}-mac.dmg"
   name "Clipaste"
-  desc "Privacy-first clipboard manager with searchable history and drag-n-drop"
+  desc "Clipboard manager"
   homepage "https://www.ntwind.com/cross-platform/clipaste.html"
 
   livecheck do
