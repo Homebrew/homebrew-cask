@@ -1,6 +1,6 @@
 cask "8bitdo-ultimate-software-v2" do
-  version "1.0.13"
-  sha256 "5e6b067f5d0c1730f390b8668c30f4f6d4d36ace511074edee3683b66151cefc"
+  version "1.0.14"
+  sha256 "1fd57bb75b84a32ebcac8d5d7cb0751fa3abdc7d9d1fe5aae4e2caee80e6b0e1"
 
   url "https://download.8bitdo.com/Ultimate-Software/8BitDo_Ultimate_Software_V2_macOS_V#{version}.zip"
   name "8BitDo Ultimate Software V2"
