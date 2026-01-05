@@ -24,6 +24,8 @@ cask "slite" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   app "Slite.app"
 
   zap trash: [
