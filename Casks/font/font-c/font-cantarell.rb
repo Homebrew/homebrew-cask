@@ -7,7 +7,8 @@ cask "font-cantarell" do
   homepage "https://cantarell.gnome.org/"
 
   livecheck do
-    url "https://gitlab.gnome.org/GNOME/cantarell-fonts.git"
+    url :homepage
+    regex(/href=.*?cantarell-fonts[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   font "cantarell-fonts-#{version}/prebuilt/Cantarell-VF.otf"
