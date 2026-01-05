@@ -10,7 +10,7 @@ cask "clipaste" do
   livecheck do
     url "https://www.ntwind.com/download/Clipaste_latest-mac.dmg"
     strategy :header_match
-    regex(/Clipaste_(\d+(?:\.\d+)*)-mac\.dmg/i)
+    regex(/Clipaste[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
   depends_on macos: ">= :big_sur"
