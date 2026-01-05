@@ -8,6 +8,7 @@ cask "rewind" do
   homepage "https://www.rewind.ai/"
 
   deprecate! date: "2024-12-31", because: :unmaintained
+  disable! date: "2026-01-05", because: :unmaintained
 
   auto_updates true
   depends_on macos: ">= :monterey"

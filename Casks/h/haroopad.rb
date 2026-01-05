@@ -9,6 +9,7 @@ cask "haroopad" do
   homepage "http://pad.haroopress.com/"
 
   deprecate! date: "2025-01-05", because: :unmaintained
+  disable! date: "2026-01-05", because: :unmaintained
 
   app "Haroopad.app"
 
