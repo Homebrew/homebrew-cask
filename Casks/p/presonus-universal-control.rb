@@ -1,6 +1,6 @@
 cask "presonus-universal-control" do
-  version "4.7.1.107907,10118"
-  sha256 "727b1140980b00f62ebfc4a2acebfa71053d6171cf3e3e1d0186df817520d4b0"
+  version "4.7.2-108537,10121"
+  sha256 "15db9f847dc3383a19d9348bb482b4fd73c63444a160b3ac34fe30d71f2ed199"
 
   url "https://www.fmicassets.com/Damroot/Original/#{version.csv.second}/PreSonus_Universal_Control_v#{version.csv.first.dots_to_underscores}.dmg",
       verified: "fmicassets.com/Damroot/Original/"
@@ -12,7 +12,7 @@ cask "presonus-universal-control" do
   # so we return the downloads from one of the popular products
   livecheck do
     url "https://www.presonus.com/products/audiobox-usb-96-studio"
-    regex(%r{href=.*?/(\d+)/PreSonus[._-]Universal[._-]Control[._-]v?(\d+(?:[._]\d+)+)\.dmg}i)
+    regex(%r{href=.*?/(\d+)/PreSonus[._-]Universal[._-]Control[._-]v?(\d+(?:[._-]\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1].tr("_", ".")},#{match[0]}" }
     end
