@@ -19,7 +19,7 @@ cask "macdown" do
     end
   end
 
-  deprecate! date: "2026-01-05", because: :unmaintained
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   conflicts_with cask: "macdown-3000"
