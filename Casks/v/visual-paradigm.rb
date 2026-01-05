@@ -1,9 +1,9 @@
 cask "visual-paradigm" do
   arch arm: "AArch64", intel: "WithJRE"
 
-  version "17.3,20251226"
-  sha256 arm:   "fb296ae548d4b4d33776d42ab0123e0090b98552663b97fda81585fe4503cca6",
-         intel: "fe0b63c288d1396693ff3c417669bf1772852f0d0d13041b5c39aec72d2790c6"
+  version "17.3,20260101"
+  sha256 arm:   "fb080dd4d6e86b349d9e14cc9875b083322da99bc12ddc80ea06875f3bcc27ec",
+         intel: "26cb3609d9127bbd172e796cdad77c26c40c9f3a7429eef8ebf00b03f6ba8baf"
 
   url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm"
@@ -20,6 +20,8 @@ cask "visual-paradigm" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Visual Paradigm.app"
 
