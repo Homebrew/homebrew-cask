@@ -19,7 +19,10 @@ cask "macdown" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   auto_updates true
+  conflicts_with cask: "macdown-3000"
 
   app "MacDown.app"
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"
