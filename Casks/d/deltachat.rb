@@ -7,7 +7,7 @@ cask "deltachat" do
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}-#{arch}.dmg"
   name "Delta Chat"
-  desc "A reliable decentralized chat messenger"
+  desc "Secure and reliable decentralized chat messenger"
   homepage "https://delta.chat/"
 
   livecheck do
