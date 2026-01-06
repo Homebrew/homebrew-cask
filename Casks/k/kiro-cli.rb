@@ -19,6 +19,7 @@ cask "kiro-cli" do
   depends_on macos: ">= :big_sur"
 
   app "Kiro CLI.app"
+  binary "#{appdir}/Kiro CLI.app/Contents/MacOS/kiro-cli"
 
   zap trash: [
     "~/.kiro",
