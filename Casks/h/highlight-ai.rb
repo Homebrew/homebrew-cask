@@ -2,9 +2,9 @@ cask "highlight-ai" do
   arch arm: "arm64", intel: "x64"
   arch_suffix = on_arch_conditional arm: "-arm64"
 
-  version "1.3.235"
-  sha256 arm:   "240d128744f9ea50d48103d73fb5c71a5849858655f50a45a6fef6e7970e171a",
-         intel: "00ea5f91ac245e61c376a2dc12870df49708435f1c3374c19d0b6062d698d7d1"
+  version "1.3.257"
+  sha256 arm:   "42f1bef00af4ebf599a297324b27538a706feda2936b022a28e1fe8edac5baf4",
+         intel: "1bc9a5de9f34c8f950f02ed0a1c9b103b7f34fd4a4e58b60742e97a7cf15c63c"
 
   url "https://cdn.highlightai.com/releases/darwin/#{arch}/Highlight-#{version}#{arch_suffix}.dmg"
   name "Highlight"
