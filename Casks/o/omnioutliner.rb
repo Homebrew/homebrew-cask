@@ -1,5 +1,5 @@
 cask "omnioutliner" do
-  on_monterey :or_older do
+  on_sonoma :or_older do
     on_catalina :or_older do
       version "5.8.5"
       sha256 "4439e6f700e71e3ec182fd16be9eca3de3afa3db4c4894c396297ba59b0f6b10"
