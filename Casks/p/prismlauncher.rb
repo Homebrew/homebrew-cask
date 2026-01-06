@@ -27,16 +27,16 @@ cask "prismlauncher" do
 
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip",
         verified: "github.com/PrismLauncher/PrismLauncher/"
+
+    livecheck do
+      url "https://prismlauncher.org/feed/appcast.xml"
+      strategy :sparkle
+    end
   end
 
   name "Prism Launcher"
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
-
-  livecheck do
-    url "https://prismlauncher.org/feed/appcast.xml"
-    strategy :sparkle
-  end
 
   auto_updates true
 
