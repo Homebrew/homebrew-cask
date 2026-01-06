@@ -2,8 +2,8 @@ cask "qlc+" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "5.0.1"
-    sha256 "f83ae54f05ececc67e47a2104cee4e602bf6826d1b594f68a5f90e93a4cf40e7"
+    version "5.1.0"
+    sha256 "10e373393fbebc159a217b9eaebee06286b679a060db41d21e72014f747622df"
 
     livecheck do
       url "https://www.qlcplus.org/download"
