@@ -6,8 +6,8 @@ cask "deltachat" do
          intel: "95f929e1a4c0e77057fc6c015774a7d612e7b8869f09af10b14e2bd7a24dde9d"
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}-#{arch}.dmg"
-  name "DeltaChat"
-  desc "Chat via the e-mail server network"
+  name "Delta Chat"
+  desc "Secure and reliable decentralised instant messenger"
   homepage "https://delta.chat/"
 
   livecheck do
