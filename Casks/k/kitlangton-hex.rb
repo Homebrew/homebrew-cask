@@ -13,4 +13,9 @@ cask "kitlangton-hex" do
   depends_on macos: ">= :sequoia"
 
   app "Hex.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.kitlangton.Hex",
+    "~/Library/Containers/com.kitlangton.Hex",
+  ]
 end
