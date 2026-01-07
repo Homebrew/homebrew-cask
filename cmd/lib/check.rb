@@ -8,7 +8,7 @@ APPLE_LAUNCHJOBS_REGEX =
   (AppStore|installer|Preview|Safari|systemevents|systempreferences|Terminal)
   (?:\.|$)/x
 
-GOOGLE_LAUNCHJOBS_REGEX = /^com\.google\.(keystone|GoogleUpdater)/
+GOOGLE_LAUNCHJOBS_REGEX = /com\.google\.(keystone|GoogleUpdater)/
 
 module Check
   # TODO: replace with public API like Utils.safe_popen_read that's less likely to be volatile to changes
@@ -53,6 +53,7 @@ module Check
       ].map { |p| Pathname(p).expand_path }
         .select(&:directory?)
         .flat_map(&:children)
+        .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
         .select { |child| child.extname == ".plist" }
         .select(&:exist?)
         .map(&format_launchjob)
@@ -70,6 +71,7 @@ module Check
         .flat_map(&launchctl)
         .map { |l| l.split(/\s+/)[2] }
         .grep_v(/^com\.apple\./)
+        .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
     },
   }.freeze
   private_constant :CHECKS
