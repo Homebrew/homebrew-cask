@@ -91,6 +91,7 @@ cask "orion" do
     "~/Library/Application Scripts/com.kagi.kagimacOS.ShareExtension",
     "~/Library/Application Support/Orion",
     "~/Library/Caches/com.kagi.kagimacOS",
+    "~/Library/Caches/com.kagi.kagimacOS.IconService",
     "~/Library/Containers/com.kagi.kagimacOS.ShareExtension",
     "~/Library/HTTPStorages/com.kagi.kagimacOS*",
     "~/Library/Preferences/com.kagi.kagimacOS.plist",
