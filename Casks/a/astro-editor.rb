@@ -8,6 +8,11 @@ cask "astro-editor" do
   desc "Markdown editor for Astro content collections"
   homepage "https://astroeditor.danny.is/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Astro Editor.app"
 
   zap trash: [
