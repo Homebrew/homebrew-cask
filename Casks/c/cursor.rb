@@ -11,7 +11,7 @@ cask "cursor" do
   homepage "https://www.cursor.com/"
 
   livecheck do
-    url "https://api2.cursor.sh/updates/api/update/darwin-#{arch}/cursor/0.0.0/stable"
+    url "https://api2.cursor.sh/updates/api/update/darwin-#{arch}/cursor/2.3.0/stable"
     regex(%r{/production/(\h+)/darwin/#{arch}/Cursor[._-]darwin[._-]#{arch}\.zip}i)
     strategy :json do |json, regex|
       match = json["url"]&.match(regex)
