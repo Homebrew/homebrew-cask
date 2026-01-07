@@ -1,6 +1,6 @@
 cask "logitech-g-hub" do
   version "2025.9.814157"
-  sha256 :no_check
+  sha256 "c9cd149fd18bafc7457030bf5358a2fe3a0a618f36c6552706301262f43ffef7"
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.zip",
       verified: "download01.logi.com/"
