@@ -68,6 +68,15 @@ jobs:
               path: Casks/.+
               content: (x86_64|arm64)_linux
 
+            - label: ci-skip-install
+              path: "Casks/.+/(\
+                chrome-remote-desktop-host|\
+                google-drive|\
+                google-japanese-ime|\
+                ).rb"
+              keep_if_no_match: true
+              allow_any_match: true
+
   check-base-branch:
     permissions:
       contents: read
