@@ -30,10 +30,7 @@ cask "miniconda" do
   homepage "https://www.anaconda.com/docs/getting-started/miniconda/main"
 
   auto_updates true
-  conflicts_with cask: [
-    "mambaforge",
-    "miniforge",
-  ]
+  conflicts_with cask: "miniforge"
   container type: :naked
 
   installer script: {
