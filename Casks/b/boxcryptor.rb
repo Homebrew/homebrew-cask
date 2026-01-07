@@ -30,6 +30,8 @@ cask "boxcryptor" do
   desc "Tool to encrypt files and folders in various cloud storage services"
   homepage "https://www.boxcryptor.com/en/"
 
+  disable! date: "2026-01-07", because: :discontinued
+
   app "Boxcryptor.app"
 
   uninstall delete: [
