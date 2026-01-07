@@ -47,7 +47,7 @@ cask "gcloud-cli" do
   end
 
   postflight do
-    # HACK: Allow existing shell profiles to work by linking the current version to the `latest` directory.
+    # Allow existing shell profiles to work by linking the current version to the `latest` directory.
     unless (latest_path = staged_path.dirname/"latest").directory?
       FileUtils.ln_s staged_path, latest_path, force: true
     end
@@ -69,6 +69,8 @@ cask "gcloud-cli" do
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
                     args:      ["version"],
                     reset_uid: true
+  rescue RuntimeError
+    # capture any runtime error to let installation succeed.
   end
 
   uninstall trash: staged_path.dirname/"latest"
