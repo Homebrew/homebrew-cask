@@ -1,6 +1,6 @@
 cask "gg" do
-  version "0.36.4"
-  sha256 "1602c025c5599a9ba64062bddf94d618ee52691fb7f0b04e6c3b80b9717ddb0c"
+  version "0.37.0"
+  sha256 "5a3951e0828432b477c75623c6e819e7b8415b2d88ead1a52f831c425b5d00a0"
 
   url "https://github.com/gulbanana/gg/releases/download/v#{version}/gg_#{version}_universal.dmg"
   name "GG"
