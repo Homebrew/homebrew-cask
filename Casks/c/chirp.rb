@@ -14,6 +14,8 @@ cask "chirp" do
     regex(/next[._-]v?(\d+(?:\.\d+)*)/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "CHIRP.app"
 
   zap trash: "~/.chirp"
