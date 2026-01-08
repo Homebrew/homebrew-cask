@@ -1,11 +1,11 @@
 cask "kdenlive" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "25.08.3"
-  sha256 arm:   "f732804355d11f7626ba0878bb0de9993f8aed7704f2fed5285246f7fb6e3e1d",
-         intel: "4b7bd952b6505f474147f30660a61795fe859b419e4742a391f88bfff8c1f7cc"
+  version "25.12.0,B"
+  sha256 arm:   "7405035f17de36e3d710684524466e90151f0016e49ca9a1e0c3344a41c2f982",
+         intel: "978db98669a6170ede39b3fa287050759d8f36949b479eded9afd4133856cbdd"
 
-  url "https://cdn.download.kde.org/stable/kdenlive/#{version.csv.first.major_minor}/macOS/kdenlive-#{version.csv.first}-#{arch}#{"_#{version.csv.second}" if version.csv.second}.dmg",
+  url "https://cdn.download.kde.org/stable/kdenlive/#{version.csv.first.major_minor}/macOS/kdenlive-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
       verified: "cdn.download.kde.org/stable/kdenlive/"
   name "Kdenlive"
   desc "Free and Open Source Video Editor"
@@ -13,7 +13,7 @@ cask "kdenlive" do
 
   livecheck do
     url "https://kdenlive.org/download/"
-    regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)-#{arch}(?:[._-]([A-Z]?))?\.dmg/i)
+    regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)(?:[._-]([A-Z]?))?[._-]#{arch}\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match[1] ? "#{match[0]},#{match[1]}" : match[0] }
     end
