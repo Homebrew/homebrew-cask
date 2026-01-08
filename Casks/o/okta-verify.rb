@@ -1,6 +1,6 @@
 cask "okta-verify" do
-  version "9.54.1,5838-ebd8af7"
-  sha256 "6a8d67df511e28d4d9d2fa93456b211e93b8f576bd2f3a953f5dce4d7318ba3c"
+  version "9.55.0,5890-a5cb8c9"
+  sha256 "35b8485b406eafc5332a37d9f37f30bd0d697b456209c687895b0f7425be8e48"
 
   url "https://okta.okta.com/artifacts/OKTA_VERIFY_MACOS/#{version.csv.first}/OktaVerify-#{version.csv.first}-#{version.csv.second}.pkg"
   name "Okta Verify"
