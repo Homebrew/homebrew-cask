@@ -1,6 +1,6 @@
 cask "granola" do
-  version "6.462.1"
-  sha256 "fa702f39fdfef776b0d4775c0daba58d467b331611317ef8d4b9b725ffb981c4"
+  version "6.479.0"
+  sha256 "f5dece59fcf58f48a064e19bd739b734e11742b3661de377cd704e86af8c77fa"
 
   url "https://dr2v7l5emb758.cloudfront.net/#{version}/Granola-#{version}-mac-universal.dmg",
       verified: "dr2v7l5emb758.cloudfront.net/"
@@ -14,7 +14,7 @@ cask "granola" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Granola.app"
 
