@@ -10,9 +10,10 @@ cask "screaming-frog-log-file-analyser" do
   desc "SEO log audit tool"
   homepage "https://www.screamingfrog.co.uk/log-file-analyser/"
 
+  # The homepage links to the latest dmg files but Cloudflare protections
+  # prevent us from fetching it, so it must be checked manually.
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/ScreamingFrogLogFileAnalyser[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
   depends_on macos: ">= :big_sur"
