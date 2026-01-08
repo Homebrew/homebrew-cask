@@ -1,6 +1,6 @@
 cask "thebrowsercompany-dia" do
-  version "1.10.4,73059"
-  sha256 "5af5c5f3d0ba07b0b63407169b65d19f4e8edfdcd0ecadc6813d95f4b247b7e0"
+  version "1.13.1,73101"
+  sha256 "2001dd4f3b1b5bff87bfac4a2ac560db9fdc8bd705067d3711211ea6b3ba5198"
 
   url "https://releases.diabrowser.com/release/Dia-#{version.tr(",", "-")}.zip"
   name "Dia"
