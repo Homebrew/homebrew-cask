@@ -26,8 +26,7 @@ cask "robloxstudio" do
 
   app "RobloxStudio.app"
 
-  uninstall quit:   "com.roblox.RobloxStudio",
-            delete: "/Applications/RobloxStudio.app"
+  uninstall quit: "com.roblox.RobloxStudio"
 
   zap trash: [
     "~/Library/Preferences/com.roblox.RobloxStudio.plist",
