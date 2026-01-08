@@ -1,20 +1,23 @@
 cask "doxygen-app" do
-  version "1.15.0"
-  sha256 "b7630eaa0d97bb50b0333929ef5dc1c18f9e38faf1e22dca3166189a9718faf0"
+  arch arm: "arm", intel: "intel"
 
-  url "https://www.doxygen.nl/files/Doxygen-#{version}.dmg"
+  version "1.16.0"
+  sha256 arm:   "25c612024d32105ad95307a7a3763715f2df2d58cb1ca64db286e7e23ba34752",
+         intel: "a98870e3bfe6856772eb85756ffb2017c723b7adc0b20d4e3ab51fef5c13eeff"
+
+  url "https://www.doxygen.nl/files/Doxygen-#{version}-#{arch}.dmg"
   name "Doxygen"
   desc "Generate documentation from source code"
   homepage "https://www.doxygen.nl/"
 
   livecheck do
     url "https://www.doxygen.nl/download.html"
-    regex(%r{href=.*?/Doxygen-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/href=.*?Doxygen[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sequoia"
 
   app "Doxygen.app"
 
@@ -23,8 +26,4 @@ cask "doxygen-app" do
     "~/Library/Preferences/org.doxygen.plist",
     "~/Library/Saved Application State/org.doxygen.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
