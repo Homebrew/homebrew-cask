@@ -9,7 +9,8 @@ cask "pocket-casts" do
   homepage "https://play.pocketcasts.com/"
 
   livecheck do
-    url "https://pocketcasts.com/get/mac"
+    url "https://pocketcasts.com/get/mac",
+        user_agent: :browser
     strategy :header_match
   end
 
