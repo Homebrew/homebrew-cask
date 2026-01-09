@@ -15,7 +15,7 @@ cask "ndi-tools" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   pkg "NDIToolsInstaller.pkg"
 
