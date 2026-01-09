@@ -14,6 +14,11 @@ cask "waveforms" do
 
   app "WaveForms.app"
 
+  zap trash: [
+    "~/Library/Application Support/WaveForms",
+    "~/Library/Saved Application State/com.digilent.waveforms.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
