@@ -1,9 +1,9 @@
 cask "seafile-client" do
-  version "9.0.15"
-  sha256 "d899e827e68d77503ea204884276a8accfe565d7b012e31983ced6f449647eb6"
+  version "9.0.16"
+  sha256 "131668cdb2b7e23936f3ca075c61eba92a39de7076fc09b62ecc0039d382a870"
 
-  url "https://s3.eu-central-1.amazonaws.com/download.seadrive.org/seafile-client-#{version}.dmg",
-      verified: "s3.eu-central-1.amazonaws.com/download.seadrive.org/"
+  url "https://sos-ch-dk-2.exo.io/seafile-downloads/seafile-client-#{version}.dmg",
+      verified: "sos-ch-dk-2.exo.io/seafile-downloads/"
   name "Seafile Client"
   desc "File syncing client"
   homepage "https://www.seafile.com/"
