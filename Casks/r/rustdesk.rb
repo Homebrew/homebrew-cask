@@ -1,9 +1,9 @@
 cask "rustdesk" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.4.4"
-  sha256 arm:   "a24e816d7752bb2b6afa8726993fc2f22319b1fe7d66d0ee283ae804f4b917fe",
-         intel: "08f3302615c2d10e0316e1a519642126647b4b4fb63ea53f3d87ada0ee966b32"
+  version "1.4.5"
+  sha256 arm:   "e548e194d80ad44f66f7ae33b3d2879a6300201adaa0dbdf6dd2bd3594e3e912",
+         intel: "91fe86bed9a0607906ead4d38bcf5297c83c404643342456738b036f9a6c58d4"
 
   url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-#{arch}.dmg",
       verified: "github.com/rustdesk/rustdesk/"
