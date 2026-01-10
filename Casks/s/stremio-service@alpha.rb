@@ -15,12 +15,14 @@ cask "stremio-service@alpha" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "StremioService.app"
 
   uninstall launchctl: "com.stremio.service"
 
   zap trash: [
     "~/Library/Application Support/stremio-server",
-    "~/Library/LaunchAgents/com.stremio.service.plist"
+    "~/Library/LaunchAgents/com.stremio.service.plist",
   ]
 end
