@@ -1,4 +1,4 @@
-cask "fork" do
+cask "fork@dev" do
   version "2.61.0"
   sha256 "8a80cebcb3dc415eb4bc083727110f2566394b3aa92312eb81507e6734f30c5f"
 
