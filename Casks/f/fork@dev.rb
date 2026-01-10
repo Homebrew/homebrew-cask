@@ -1,6 +1,6 @@
-cask "fork" do
-  version "2.60.4"
-  sha256 "5dbf9cfdef2d89de3251d6b2669ca77138e15be170a5ab7f43e76cfc9062ff5f"
+cask "fork@dev" do
+  version "2.61.0"
+  sha256 "8a80cebcb3dc415eb4bc083727110f2566394b3aa92312eb81507e6734f30c5f"
 
   url "https://cdn.fork.dev/mac/Fork-#{version}.dmg"
   name "Fork"
@@ -11,7 +11,7 @@ cask "fork" do
   # 1.23 for 1.23.0) but the filename in the `url` uses the full version, so we
   # match the version from the filename.
   livecheck do
-    url "https://fork.dev/update/feed-stable.xml"
+    url "https://fork.dev/update/feed.xml"
     regex(/v?(\d+(?:\.\d+)+)/i)
     strategy :sparkle do |item, regex|
       item.url&.[](regex, 1)
