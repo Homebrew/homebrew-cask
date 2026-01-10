@@ -20,7 +20,7 @@ cask "droid" do
   binary "droid"
 
   zap trash: [
+    "~/.factory",
     "~/.local/bin/droid",
-    "~/.factory"
   ]
 end
