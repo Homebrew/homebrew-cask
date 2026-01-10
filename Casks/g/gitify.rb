@@ -17,20 +17,10 @@ cask "gitify" do
 
   app "Gitify.app"
 
-  preflight do
-    retries ||= 3
-    ohai "Attempting to close Gitify.app to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Gitify.app"]
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to forcibly close Gitify.app"
-  end
-
   uninstall quit: [
     "com.electron.gitify",
     "com.electron.gitify.helper",
-  ]
+  ], on_upgrade: :quit
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.gitify.sfl*",
