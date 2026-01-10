@@ -9,7 +9,7 @@ cask "waveforms" do
 
   livecheck do
     url "https://digilent.com/reference/software/waveforms/waveforms-3/previous-versions"
-    regex(/Current Version\s+(\d+(?:\.\d+)+(?:[a-z])?)/i)
+    regex(/href=.*?digilent[._-]waveforms[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "WaveForms.app"
