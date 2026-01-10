@@ -1,9 +1,9 @@
 cask "rclone-ui" do
   arch arm: "aarch64", intel: "x64"
 
-  version "3.2.1"
-  sha256 arm:   "4667027ee74aed6b5d14f6d521e3ebe0c58f741922c1b7601921e25b66bdac97",
-         intel: "f6bb809ec762449c933c4fc27a646abd2be9f70e4752f27e12ee1c927c7f7701"
+  version "3.2.2"
+  sha256 arm:   "017d4cb0bc301880f286a695795a09b96af832315f5cae2bfa766f1394c022f1",
+         intel: "9c472126ec9630fe502a53c2c7b6cba14c10c18bb5ec6138e61f5d14c8e14542"
 
   url "https://github.com/rclone-ui/rclone-ui/releases/download/v#{version}/Rclone.UI_#{arch}.dmg"
   name "Rclone UI"
