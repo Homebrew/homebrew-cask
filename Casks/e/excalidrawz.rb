@@ -1,6 +1,6 @@
 cask "excalidrawz" do
-  version "1.6.1"
-  sha256 "753449c641929c632685bef396b4646bd2573c1c2184d4d657ecba67387851f6"
+  version "1.7.0"
+  sha256 "aa409616a1df3b534765933571f7a648c6202d34f4483ef36e6a9e971822d13c"
 
   url "https://github.com/chocoford/ExcalidrawZ/releases/download/v#{version}/ExcalidrawZ.#{version}.dmg",
       verified: "github.com/chocoford/ExcalidrawZ/releases/download/"
