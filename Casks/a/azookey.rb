@@ -1,6 +1,6 @@
 cask "azookey" do
-  version "0.1.2"
-  sha256 "eb8dfe0b47a2e2e76d4cae5be18a1b8810baf98b2b3ff3433540a85b16968d21"
+  version "0.1.3"
+  sha256 "791d3721e932eec6626f7072738d2462e0158d56ee3cd6eec5ed2f7663481bd2"
 
   url "https://github.com/azooKey/azooKey-Desktop/releases/download/v#{version}/azooKey-release-signed.pkg"
   name "azooKey"
