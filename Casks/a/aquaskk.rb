@@ -4,6 +4,7 @@ cask "aquaskk" do
 
   url "https://github.com/codefirst/aquaskk/releases/download/#{version}/AquaSKK-#{version}.pkg"
   name "AquaSKK"
+  desc "Input method without morphological analysis"
   homepage "https://github.com/codefirst/aquaskk"
 
   livecheck do
