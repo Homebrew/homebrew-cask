@@ -8,8 +8,8 @@ cask "waterfox" do
   homepage "https://www.waterfox.net/"
 
   livecheck do
-    url "https://cdn1.waterfox.net/waterfox/releases/latest/macos"
-    strategy :header_match
+    url "https://www.waterfox.com/download/"
+    regex(/href=.*?Waterfox(?:%20|[._-])v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
