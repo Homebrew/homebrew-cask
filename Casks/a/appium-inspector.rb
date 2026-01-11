@@ -1,9 +1,9 @@
 cask "appium-inspector" do
   arch arm: "arm64", intel: "x64"
 
-  version "2025.11.1"
-  sha256 arm:   "4a9726704641062cee4131e5d7200a46d6dd9f891e4396f50b71978361f2c4c4",
-         intel: "712f4dafec8729c3eb5df364965b76c93be924f1a71ef95cfafc2d2349285381"
+  version "2026.1.2"
+  sha256 arm:   "63bde33359c7ade71226169d76984231c4ed529d4f14f88ee5b612321245b66a",
+         intel: "1f112e8217e4de5d087b2a2b55829221ada9851a7fcf3a7cb14247ccd309d5ac"
 
   url "https://github.com/appium/appium-inspector/releases/download/v#{version}/Appium-Inspector-#{version}-mac-#{arch}.zip"
   name "Appium Inspector GUI"
