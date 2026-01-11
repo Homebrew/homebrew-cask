@@ -1,6 +1,6 @@
 cask "loop" do
-  version "1.3.0"
-  sha256 "5221147512902c974e8fe7c8e1f9938bbd53ade3f580cfa3afee77761b444911"
+  version "1.4.0"
+  sha256 "78406ace1935d727270ebae912cf16c49125cf17fb9aac5adf5004e8e90de0f7"
 
   url "https://github.com/MrKai77/Loop/releases/download/#{version}/Loop.zip"
   name "Loop"
