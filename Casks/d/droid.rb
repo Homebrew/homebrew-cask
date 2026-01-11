@@ -19,5 +19,8 @@ cask "droid" do
 
   binary "droid"
 
-  # No zap stanza required
+  zap trash: [
+    "~/.factory",
+    "~/.local/bin/droid",
+  ]
 end
