@@ -8,8 +8,8 @@ cask "switchresx" do
   homepage "https://www.madrau.com/"
 
   livecheck do
-    url "https://www.madrau.com/srx_download/download.html"
-    regex(/latest\s+version\s+\(v?(\d+(?:\.\d+)+)\)/i)
+    url "https://www.madrau.com/SRXCurrentVersion#{version.major}"
+    regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
