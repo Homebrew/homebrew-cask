@@ -8,7 +8,7 @@ cask "betaflight-configurator" do
   homepage "https://github.com/betaflight/betaflight-configurator"
 
   deprecate! date: "2025-12-26", because: :discontinued
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  disable! date: "2026-12-26", because: :discontinued
 
   app "Betaflight Configurator.app"
 
