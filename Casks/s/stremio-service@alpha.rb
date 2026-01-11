@@ -1,4 +1,4 @@
-cask "stremio-service@alpha" do
+cask "stremioservice" do
   version "0.1.15"
   sha256 "e5a79c36e17d6081aec0879e98de77ada0dd4576ed9e9645f748106f9ee0275f"
 
