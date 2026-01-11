@@ -19,6 +19,7 @@ cask "fork" do
   end
 
   auto_updates true
+  conflicts_with cask: "fork@dev"
 
   app "Fork.app"
   binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: "fork"
