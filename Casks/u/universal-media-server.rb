@@ -5,10 +5,6 @@ cask "universal-media-server" do
   sha256 arm:   "e811275a2ea1b5f9ba06ad9fedd27349df46f473b3e490cbb658da61b02bab62",
          intel: "c556caa8d539ff797b3f20d08e0934eb7b6d299228a7f065714035fab76e7025"
 
-  on_intel do
-    disable! date: "2026-09-01", because: :fails_gatekeeper_check
-  end
-
   url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-macOS-#{version}-#{arch}.dmg",
       verified: "github.com/UniversalMediaServer/UniversalMediaServer/"
   name "Universal Media Server"
