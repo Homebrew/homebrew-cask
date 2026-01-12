@@ -6,7 +6,9 @@ cask "libation" do
   sha256 arm:   "a5735cf8208ef186e797502de2972fe2b83a9bb62c85eed93eaf6a86bf76a8c1",
          intel: "cdfd9df87a383d8af7f1b9f5b4e3d7e089ae3909d458e2b9d8a90c8bb831f68f"
 
-  url "https://github.com/rmcrackan/Libation/releases/download/v#{version}/Libation.#{version}-macOS-chardonnay-#{arch}.dmg"
+  url "https://github.com/rmcrackan/Libation/releases/download/v#{version}/Libation.#{version}-macOS-chardonnay-#{arch}.dmg",
+      verified: "github.com/rmcrackan/Libation/"
+
   name "Libation"
   desc "Libation is a free, open-source application for downloading and managing your Audible audiobooks. It decrypts your library, removes DRM, and lets you own your audiobooks forever."
   homepage "https://getlibation.com"
