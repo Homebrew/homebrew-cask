@@ -1,6 +1,6 @@
 cask "pivy-app" do
-  version "0.12.0"
-  sha256 "2224fd902e2e2e16556e35028f91a5983545eb863afc61e7faa33a035e15e557"
+  version "0.12.1"
+  sha256 "78340ec28f4e7d6870ebb167059ac21beb00729d300a092f8f6774c2c6ae33fa"
 
   url "https://github.com/joyent/pivy/releases/download/v#{version}/pivy-#{version}-macos12.pkg"
   name "pivy"
