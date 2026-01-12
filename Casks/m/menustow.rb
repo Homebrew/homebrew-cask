@@ -1,6 +1,6 @@
 cask "menustow" do
   version "0.1.0"
-  sha256 "bd2a4ac89c87249673b188133c7b8f7af5d3ad611262ad596d7d7521f2839a38"
+  sha256 "b6dd649b34efe1c01f84b8778400d3de11d5456ae900db04c5cd806ef38a77c9"
 
   url "https://github.com/lswank/menustow/releases/download/v#{version}/menustow-#{version}.zip",
       verified: "github.com/lswank/menustow/"
