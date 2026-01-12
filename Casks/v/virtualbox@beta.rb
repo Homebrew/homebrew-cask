@@ -3,8 +3,8 @@ cask "virtualbox@beta" do
   desc_arch = on_arch_conditional arm: "arm64", intel: "x86"
 
   on_arm do
-    version "7.2.5-172113"
-    sha256 "364e441daa022be6d9a76b6f86dd2e0d5ad64ef2e2f7fa828a13d8d3d5e08c4b"
+    version "7.2.5-172122"
+    sha256 "dbdad4a10c1a7c0d0dd659dde8fa3ce6ddd3cdf3830e53f56842ddeea3f99918"
   end
   on_intel do
     version "7.2.5-171795"
