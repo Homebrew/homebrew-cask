@@ -1,6 +1,6 @@
 cask "cmd" do
-  version "0.2.0"
-  sha256 "4adf2ad7619fce2110b95543c8714235e3b6bf75e03d4181f3daa4737048c4c2"
+  version "0.2.1"
+  sha256 "9445b6b643da3e03f4674cfa631e8313813b71e082fd769954a221c444109b6d"
 
   url "https://github.com/getcmd-dev/cmd/releases/download/v#{version}/cmd.dmg",
       verified: "github.com/getcmd-dev/cmd/"
