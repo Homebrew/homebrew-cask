@@ -16,7 +16,7 @@ cask "libation" do
   app "Libation.app"
 
   zap trash: [
-    "~/Library/Application Support/Libation",,
+    "~/Library/Application Support/Libation",
     "~/Library/Preferences/org.libation.macos.plist",
   ]
 end
