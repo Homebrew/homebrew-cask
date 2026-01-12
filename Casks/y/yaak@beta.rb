@@ -1,9 +1,9 @@
 cask "yaak@beta" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2025.10.0-beta.11"
-  sha256 arm:   "04215e90350f5c5b5abf42e5dc449f4b9d0d82396f2758faa19fb01ee7cf9c41",
-         intel: "2f5451688bb0c312ae5f2e4084c0a543cd7ab9a0627180b3b71e3e2a458d7430"
+  version "2025.10.0-beta.13"
+  sha256 arm:   "5c131c87505133635cd73ceaceaa57aaff09938361d94d4562b4c7e36072afef",
+         intel: "8f21f20acfa04fe118be86d44e1f4aacce4f9535a233552656a729c527669281"
 
   url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
       verified: "github.com/mountain-loop/yaak/"
