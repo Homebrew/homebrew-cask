@@ -14,4 +14,9 @@ cask "libation" do
   auto_updates true
 
   app "Libation.app"
+
+  zap trash: [
+    "~/Library/Application Support/Libation",,
+    "~/Library/Preferences/org.libation.macos.plist",
+  ]
 end
