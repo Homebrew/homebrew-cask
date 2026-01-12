@@ -4,7 +4,7 @@ cask "fork@dev" do
 
   url "https://cdn.fork.dev/mac/Fork-#{version}.dmg"
   name "Fork"
-  desc "GIT client"
+  desc "Git client"
   homepage "https://fork.dev/"
 
   # The appcast `version` may omit a `0` patch for a new minor release (e.g.
