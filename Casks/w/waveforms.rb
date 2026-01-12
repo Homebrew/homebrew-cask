@@ -8,7 +8,7 @@ cask "waveforms" do
   homepage "https://digilent.com/reference/software/waveforms/waveforms-3/start"
 
   livecheck do
-    url "https://digilent.com/reference/software/waveforms/waveforms-3/previous-versions"
+    url "https://digilent.com/reference/software/waveforms/waveforms-#{version.major}/previous-versions"
     regex(/href=.*?digilent[._-]waveforms[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
