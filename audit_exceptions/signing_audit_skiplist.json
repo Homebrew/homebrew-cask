@@ -1,4 +1,4 @@
-[
-  "ai-studio",
-  "shotcut"
-]
+{
+  "ai-studio": "all",
+  "shotcut": "intel"
+}
