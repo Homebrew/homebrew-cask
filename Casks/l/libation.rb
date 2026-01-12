@@ -3,8 +3,8 @@ cask "libation" do
 
   version "13.1.2"
 
-  sha256 arm:   "b372cde029f1f81c6465b1920a7c5a392a7791243cd30ebf39dab172ec82cbf5",
-         intel: "sha256:cdfd9df87a383d8af7f1b9f5b4e3d7e089ae3909d458e2b9d8a90c8bb831f68f"
+  sha256 arm:   "a5735cf8208ef186e797502de2972fe2b83a9bb62c85eed93eaf6a86bf76a8c1",
+         intel: "cdfd9df87a383d8af7f1b9f5b4e3d7e089ae3909d458e2b9d8a90c8bb831f68f"
 
   url "https://github.com/rmcrackan/Libation/releases/download/v#{version}/Libation.#{version}-macOS-chardonnay-#{arch}.dmg"
   name "Libation"
