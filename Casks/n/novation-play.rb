@@ -8,15 +8,17 @@ cask "novation-play" do
   homepage "https://novationmusic.com/software/novation-play/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://klevgrand.com/api/play/version"
+    strategy :json do |json|
+      json ["version"]
+    end
   end
 
   depends_on macos: ">= :ventura"
 
   pkg "Play.pkg"
 
-  uninstall pkgutil: "^com.novation.pkg.play(?:..+)?$"
+  uninstall pkgutil: "com.novation.pkg.play*"
 
   zap trash: [
     "/Library/Application Support/Novation/Play",
