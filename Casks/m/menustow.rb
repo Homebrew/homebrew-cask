@@ -6,14 +6,14 @@ cask "menustow" do
       verified: "github.com/lswank/menustow/"
   name "menustow"
   desc "Menu bar management tool with notch-aware layout"
-  homepage "https://menustow.com"
-
-  depends_on macos: ">= :sonoma"
-
-  app "menustow.app"
+  homepage "https://menustow.com/"
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :sonoma"
+
+  app "menustow.app"
 end
