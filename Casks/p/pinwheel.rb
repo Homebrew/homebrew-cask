@@ -1,6 +1,6 @@
 cask "pinwheel" do
-  version "1.8.3,104"
-  sha256 "866dda45831e3133f8ee1f252cd27d970982cbfbd33b7cadab47ff934fc609d8"
+  version "1.8.4,105"
+  sha256 "1528604923065af240394a70023ec1056ae1c77ac152b695bee870bb02ab47f0"
 
   url "https://cdn2.bjango.com/pinwheel/versions/Pinwheel_#{version.csv.first.dots_to_underscores}-#{version.csv.second}.zip"
   name "Pinwheel"
@@ -13,7 +13,7 @@ cask "pinwheel" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
 
   app "Pinwheel.app"
 
