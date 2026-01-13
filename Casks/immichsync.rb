@@ -9,4 +9,11 @@ cask "immichsync" do
   homepage "https://github.com/bjoernch/Immichsync"
 
   app "ImmichSync.app"
+
+  zap trash: [
+    "~/Library/Application Support/ImmichSync",
+    "~/Library/Preferences/com.bjoernch.immichsync.plist",
+    "~/Library/Caches/com.bjoernch.immichsync",
+    "~/Library/Logs/ImmichSync",
+  ]
 end
