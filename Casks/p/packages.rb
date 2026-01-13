@@ -1,14 +1,12 @@
 cask "packages" do
   version "1.2.10"
-  sha256 :no_check
+  sha256 "9d9a73a64317ea6697a380014d2e5c8c8188b59d5fb8ce8872e56cec06cd78e8"
 
-  url "http://s.sudre.free.fr/Software/files/Packages.dmg"
+  url "https://github.com/packagesdev/packages/releases/download/v#{version}/Packages.dmg"
+      verified: "https://github.com/packagesdev/packages/"
   name "Packages"
   desc "Integrated packaging environment"
   homepage "http://s.sudre.free.fr/Software/Packages/about.html"
-
-  # Artifact not available over HTTPS
-  disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
   auto_updates true
 
