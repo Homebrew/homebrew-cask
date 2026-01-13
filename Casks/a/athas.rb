@@ -1,9 +1,9 @@
 cask "athas" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.3.1"
-  sha256 arm:   "71f2bdb4e29e04ba7627cc07bb71c1ea543998b02291c6168954131e95c16250",
-         intel: "efc78e0c9b93a09c43e52a5537e2ac373d0e840a6386330afb48b4cf8561d2e2"
+  version "0.3.2"
+  sha256 arm:   "a1db7cf1355534f2f282eb7a69872d2de026f1821f228bcdeaa7a75f2dac3bb2",
+         intel: "9c49d2c3e88a4363da1cff3a4ed566ee02f14a7629c8a55ac256b873f030a285"
 
   url "https://github.com/athasdev/athas/releases/download/v#{version}/Athas_#{version}_#{arch}.dmg",
       verified: "github.com/athasdev/athas/"
