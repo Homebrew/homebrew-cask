@@ -2,7 +2,7 @@ cask "packages" do
   version "1.2.10"
   sha256 "9d9a73a64317ea6697a380014d2e5c8c8188b59d5fb8ce8872e56cec06cd78e8"
 
-  url "https://github.com/packagesdev/packages/releases/download/v#{version}/Packages.dmg"
+  url "https://github.com/packagesdev/packages/releases/download/v#{version}/Packages.dmg",
       verified: "https://github.com/packagesdev/packages/"
   name "Packages"
   desc "Integrated packaging environment"
