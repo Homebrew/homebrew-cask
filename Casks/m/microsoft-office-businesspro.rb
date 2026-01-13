@@ -25,7 +25,7 @@ cask "microsoft-office-businesspro" do
     microsoft-word
     onedrive
   ]
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sonoma"
 
   pkg "Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg",
       choices: [
