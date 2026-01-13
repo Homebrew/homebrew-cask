@@ -33,6 +33,5 @@ cask "kogiqa" do
   zap trash: [
     "~/Library/Application Support/kogiQA",
   ]
-  end
 
 end
