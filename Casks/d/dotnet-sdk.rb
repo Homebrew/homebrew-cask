@@ -31,7 +31,7 @@ cask "dotnet-sdk" do
     "dotnet-runtime@preview",
     "dotnet-sdk@preview",
   ]
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :monterey"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
   binary "/usr/local/share/dotnet/dotnet"
