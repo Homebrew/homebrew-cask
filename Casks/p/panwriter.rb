@@ -11,9 +11,15 @@ cask "panwriter" do
   desc "Markdown editor with pandoc integration and paginated preview"
   homepage "https://panwriter.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on formula: "pandoc"
+  depends_on macos: ">= :big_sur"
 
   app "PanWriter.app"
 
