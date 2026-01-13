@@ -12,8 +12,13 @@ cask "wechatwebdevtools" do
   homepage "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html"
 
   livecheck do
-    url :homepage
-    regex(%r{Stable\s*Build\s*</a>\s*\(v?(\d+(?:\.\d+)+)[)\s]}i)
+    url "https://devtools.wxqcloud.qq.com.cn/WechatWebDev/nightly/versions/config.json"
+    strategy :json do |json|
+      stable = json["channels"]&.find { |channel| channel["id"] == "stable" }
+      next unless stable
+
+      stable["version"]
+    end
   end
 
   auto_updates true
