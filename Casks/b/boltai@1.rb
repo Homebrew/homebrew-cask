@@ -12,10 +12,10 @@ cask "boltai@1" do
     strategy :sparkle, &:short_version
   end
 
+  disable! date: "2026-06-01", because: :unmaintained
+
   auto_updates true
   depends_on macos: ">= :monterey"
-
-  disable! date: "2026-06-01", because: :unmaintained
 
   app "BoltAI.app"
 
