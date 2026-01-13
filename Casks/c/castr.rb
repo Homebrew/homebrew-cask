@@ -1,9 +1,9 @@
 cask "castr" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.0"
-  sha256 arm:   "9d09511986d76f8ae19e9dfe62244b3cf47956d05ef947e1550293853b6c2b6e",
-         intel: "24ca7a44cc0d730d5d222ac2bc73bcb9abae43d6798d34725c1c3fc132b36948"
+  version "3.1.0"
+  sha256 arm:   "bb1876f1ba051f08c7bf32e6681341bf03c8c410267294e4490c9e357fb16455",
+         intel: "c141e266d366217d02e9da46e3def66402da833a365437ad7372d7154d1cfc06"
 
   url "https://download.todesktop.com/210610elr9v3cm6/Castr%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/210610elr9v3cm6/"
@@ -17,6 +17,7 @@ cask "castr" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Castr.app"
 
