@@ -1,6 +1,6 @@
 cask "geogebra@5" do
-  version "5.2.909.9"
-  sha256 "0de9d96e10e20f2caf57cb6b3302858c188321471efcc5da87c5f5af30e871fa"
+  version "5.4.911.3"
+  sha256 "0e28d78b5efc587de6046db69fb86168043dfe9e3f21c3e8f871ee87f61ea897"
 
   url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-MacOS-Installer-withJava-#{version.dots_to_hyphens}.zip"
   name "GeoGebra"
