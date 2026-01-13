@@ -30,8 +30,5 @@ cask "kogiqa" do
                    print_stderr: false
   end
 
-  zap trash: [
-    "~/Library/Application Support/kogiQA",
-  ]
-
+  zap trash: "~/Library/Application Support/kogiQA"
 end
