@@ -1,6 +1,6 @@
 cask "drovio" do
-  version "3.5.2"
-  sha256 "4182975333ba7451bb144bc4c91321339f199e4bd329c8292fb41ffa3901b8a2"
+  version "3.5.3"
+  sha256 "0b94f917682dd3a9f60ba9506604c94fb9ce87f00470f915f13ca63bce2ee5c1"
 
   url "https://repository.drovio.com/stable/drovio/macos_universal/#{version.major}.x/#{version}/drovio.dmg"
   name "Drovio"
@@ -15,6 +15,7 @@ cask "drovio" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Drovio.app"
 
