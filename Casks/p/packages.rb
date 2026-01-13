@@ -3,10 +3,15 @@ cask "packages" do
   sha256 "9d9a73a64317ea6697a380014d2e5c8c8188b59d5fb8ce8872e56cec06cd78e8"
 
   url "https://github.com/packagesdev/packages/releases/download/v#{version}/Packages.dmg",
-      verified: "https://github.com/packagesdev/packages/"
+      verified: "github.com/packagesdev/packages/"
   name "Packages"
   desc "Integrated packaging environment"
   homepage "http://s.sudre.free.fr/Software/Packages/about.html"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
