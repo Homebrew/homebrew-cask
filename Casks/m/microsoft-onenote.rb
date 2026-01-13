@@ -16,7 +16,7 @@ cask "microsoft-onenote" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sonoma"
 
   pkg "Microsoft_OneNote_#{version}_Updater.pkg"
 
