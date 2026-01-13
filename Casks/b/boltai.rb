@@ -10,9 +10,7 @@ cask "boltai" do
 
   livecheck do
     url "https://updates.boltai.com/appcast.xml"
-    strategy :sparkle do |items|
-      items.map(&:short_version)
-    end
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

@@ -7,17 +7,15 @@ cask "boltai@1" do
   desc "AI chat client"
   homepage "https://boltai.com/"
 
-  # The Sparkle feed can contain items on the "beta" channel, so we restrict
-  # matching to the default channel.
   livecheck do
     url "https://boltai.com/sparkle/appcast.xml"
-    strategy :sparkle do |items|
-      items.find { |item| item.channel.nil? }&.short_version
-    end
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
   depends_on macos: ">= :monterey"
+
+  disable! date: "2026-06-01", because: :unmaintained
 
   app "BoltAI.app"
 
@@ -32,12 +30,4 @@ cask "boltai@1" do
     "~/Library/Saved Application State/co.podzim.BoltGPT.savedState",
     "~/Library/WebKit/co.podzim.BoltGPT",
   ]
-
-  caveats do
-    <<~EOS
-      BoltAI v1 is in maintenance mode.
-      For the actively developed v2 (incompatible), install:
-        brew install --cask boltai
-    EOS
-  end
 end
