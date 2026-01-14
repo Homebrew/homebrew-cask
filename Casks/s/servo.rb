@@ -1,9 +1,9 @@
 cask "servo" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2026-01-13"
-  sha256 arm:   "f72d9bbf7da69e7d64748eb7575a1eb2b83ac124ae7f066071b7ae0d14d8c0a6",
-         intel: "1a727758d3dc289a3615474b617f293ca7a0b44ad55ad57be6438bd53381d59e"
+  version "2026-01-14"
+  sha256 arm:   "e9d7da851f79d941afb4db03c0e155d64105d061282c94975ae2bb034424a011",
+         intel: "6a04be0f9950ff667ba4a268805e94b161f5193b4af50cc6bc2ffa0405d2e2c4"
 
   url "https://github.com/servo/servo-nightly-builds/releases/download/#{version}/servo-#{arch}-apple-darwin.dmg",
       verified: "github.com/servo/servo-nightly-builds/"
