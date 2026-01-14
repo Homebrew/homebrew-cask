@@ -17,6 +17,7 @@ cask "freeshow" do
   end
 
   auto_updates true
+  conflicts_with cask: "freeshow@beta"
   depends_on macos: ">= :big_sur"
 
   app "FreeShow.app"
