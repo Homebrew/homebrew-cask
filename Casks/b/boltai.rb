@@ -23,12 +23,4 @@ cask "boltai" do
     "~/Library/Containers/co.podzim.boltai-mobile",
     "~/Library/Saved Application State/co.podzim.boltai-mobile.savedState",
   ]
-
-  caveats do
-    <<~EOS
-      You installed BoltAI v2 (incompatible with v1).
-      If you need v1 (maintenance mode), install:
-        brew install --cask boltai@1
-    EOS
-  end
 end
