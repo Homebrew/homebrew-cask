@@ -2,8 +2,8 @@ cask "wispr-flow" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "1.4.171"
-    sha256 "e28caf551282cc1c53714d59e8db6f276df3b3bafcb475f3797eb975ef036632"
+    version "1.4.181"
+    sha256 "62829fb202840685ca8decf4b0cb396a37b3faf16302b606662c280879c6e987"
   end
   on_intel do
     version "1.4.154"
