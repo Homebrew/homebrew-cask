@@ -31,6 +31,8 @@ Layout/EndAlignment:
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
+Layout/IndentationWidth:
+  Enabled: false
 Layout/LeadingCommentSpace:
   Exclude:
   - Taps/*/*/cmd/*.rb
