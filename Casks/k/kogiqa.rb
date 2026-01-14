@@ -17,18 +17,5 @@ cask "kogiqa" do
 
   app "kogiQA.app"
 
-  # Verify the app is signed by the atagon GmbH team id
-  postflight do
-    system_command "/usr/bin/codesign",
-                   args:         [
-                     "--verify",
-                     "--verbose",
-                     "--requirements",
-                     '=anchor apple generic and certificate leaf[subject.OU] = "3B4YCYTQPH"',
-                     "#{appdir}/kogiQA.app",
-                   ],
-                   print_stderr: false
-  end
-
   zap trash: "~/Library/Application Support/kogiQA"
 end
