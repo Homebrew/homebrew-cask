@@ -10,6 +10,11 @@ cask "finch" do
   desc "Open source container development tool"
   homepage "https://github.com/runfinch/finch"
 
+  livecheck do
+      url :url
+      strategy :github_latest
+  end
+
   pkg "Finch-v#{version}-#{arch}.pkg"
 
   uninstall script: {
