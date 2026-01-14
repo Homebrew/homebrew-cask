@@ -11,11 +11,14 @@ cask "librewolf" do
   desc "Web browser"
   homepage "https://librewolf.net/"
 
+  # There can be a notable gap between when a version is tagged and a
+  # corresponding release is created, so we check the "latest" release instead
+  # of the Git tags.
   livecheck do
-    url "https://gitlab.com/librewolf-community/browser/bsys6.git"
+    url "https://gitlab.com/api/v4/projects/44042130/releases/permalink/latest"
     regex(/^v?(\d+(?:[.-]\d+)+)$/i)
-    strategy :git do |tags, regex|
-      tags.map { |tag| tag[regex, 1]&.tr("-", ",") }
+    strategy :json do |json, regex|
+      json["tag_name"]&.[](regex, 1)&.tr("-", ",")
     end
   end
 
