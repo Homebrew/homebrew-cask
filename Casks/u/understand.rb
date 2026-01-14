@@ -12,7 +12,7 @@ cask "understand" do
     regex(/Understand[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]Universal\.dmg/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Understand.app"
   binary "#{appdir}/Understand.app/Contents/MacOS/userver"
