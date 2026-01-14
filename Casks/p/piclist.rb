@@ -1,9 +1,9 @@
 cask "piclist" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.2.1"
-  sha256 arm:   "3057623f751050201b05829f59c16d6d588bbf38b7f27d35437c3bf340528e50",
-         intel: "f0a3dfbc71ee99ece785f5fd034934e4860d29ec4c4a67cef2183f3d7a41e57b"
+  version "3.2.2"
+  sha256 arm:   "abafe112000185332a5903995868e0a7c649a899e88e9c860098b084ba520cc7",
+         intel: "fe90315828828459687e2dfc12be277eed73f9bd3e5749c339dba2b99d4165db"
 
   url "https://github.com/Kuingsmile/PicList/releases/download/v#{version}/PicList-#{version}-#{arch}.dmg",
       verified: "github.com/Kuingsmile/PicList/"
