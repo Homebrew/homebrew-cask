@@ -7,7 +7,7 @@ cask "tiger-trade" do
   name "Tiger Trade"
   name "老虎证券"
   desc "Trading platform"
-  homepage "https://www.tigerbrokers.com.sg/download/"
+  homepage "https://www.itiger.com/sg/download/"
 
   livecheck do
     url "https://up.play-analytics.com/app/upgrade/latest?lang=zh_CN&platform=darwin&appVer=1"
