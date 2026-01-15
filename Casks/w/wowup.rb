@@ -12,6 +12,7 @@ cask "wowup" do
   homepage "https://wowup.io/"
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "WowUp.app"
 
