@@ -1,7 +1,7 @@
 cask "clash-party" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.9.0"
+  version "1.9.1"
 
   on_catalina :or_older do
     sha256 arm:   "f188e7d39b0d39a65a9d02e6ae4d5b4d4b11edab20c3cc29995ef0f8ee870edd",
@@ -13,8 +13,8 @@ cask "clash-party" do
     pkg "clash-party-catalina-#{version}-#{arch}.pkg"
   end
   on_big_sur :or_newer do
-    sha256 arm:   "358a07aa086228cf306e9fe9e4938b0a7f38d4f855a0815302ef708989431722",
-           intel: "b55039fd9a8b0fe9c58da0ff2edc678e7fc6fb44ee5653d11108074db1fb9d29"
+    sha256 arm:   "d9fa6567649430aba6ee837c1896690ea776d749566bcd1a449cae71d57da18c",
+           intel: "c1d875b12442fc56a75f15d2fe088bdf2ca78fd70ee5842115fdf02f136a03af"
 
     url "https://github.com/mihomo-party-org/clash-party/releases/download/v#{version}/clash-party-macos-#{version}-#{arch}.pkg",
         verified: "github.com/mihomo-party-org/clash-party/"
