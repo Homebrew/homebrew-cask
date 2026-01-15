@@ -22,7 +22,7 @@ cask "libreoffice" do
   # * The Wiki server blocks requests based on IP address, which prevents us
   #   from checking it in the autobump/CI environment, etc.
   #
-  # NOTE: This needs to check a page that provides the latest versons for both
+  # NOTE: This needs to check a page that provides the latest versions for both
   # Fresh and Still, as this check is also used by the `libreoffice-still` cask.
   livecheck do
     url "https://www.libreoffice.org/download/download-libreoffice/?type=mac-#{folder}"
