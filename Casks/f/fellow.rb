@@ -1,6 +1,6 @@
 cask "fellow" do
-  version "1.7.9"
-  sha256 "6721a784a4af76e401e9b4854de342ea26a93b0af38c6afb81f0bc1a91bfcef6"
+  version "5.0.0"
+  sha256 "b2658d8586df9dcea54aeb8d99c0fc1187edddeab89eacc4f16c039d9c69b59b"
 
   url "https://cdn.fellow.app/desktop/#{version}/darwin/stable/universal/Fellow-#{version}-universal.dmg"
   name "Fellow"
@@ -13,7 +13,7 @@ cask "fellow" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Fellow.app"
 
