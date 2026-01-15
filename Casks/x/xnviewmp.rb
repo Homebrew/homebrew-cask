@@ -1,5 +1,5 @@
 cask "xnviewmp" do
-  version "1.9.9"
+  version "1.9.10"
   sha256 :no_check
 
   url "https://download.xnview.com/XnViewMP-mac.dmg"
