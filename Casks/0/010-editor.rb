@@ -15,6 +15,8 @@ cask "010-editor" do
     regex(/Version:?\s*(\d+(?:\.\d+)+),\s*macOS/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "010 Editor.app"
 
   zap trash: [
