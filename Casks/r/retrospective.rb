@@ -1,6 +1,6 @@
 cask "retrospective" do
   version "7.1.0"
-  sha256 "26d9a99d38b513cad6ae774ed271793db54f379cdea17503ad5aed66666479e0"
+  sha256 "ca73643fb5ca3e426124c2cad47d67eae3b037d81ebfb0f801aee6603851d992"
 
   url "https://resources.centeractive.com/software/#{version}/retrospective-#{version.dots_to_underscores}-macos-jre.dmg"
   name "Retrospective"
