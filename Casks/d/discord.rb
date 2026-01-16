@@ -30,6 +30,7 @@ cask "discord" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hnc.discord.sfl*",
     "~/Library/Application Support/discord",
+    "~/Library/Application%20Support/discord",
     "~/Library/Caches/com.hnc.Discord",
     "~/Library/Caches/com.hnc.Discord.ShipIt",
     "~/Library/Cookies/com.hnc.Discord.binarycookies",
