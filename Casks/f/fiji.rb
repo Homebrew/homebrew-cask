@@ -1,28 +1,28 @@
 cask "fiji" do
-  version "20250514-1117"
-  sha256 "7e627789f1bcfc7df36d07795a9efd6e1de5123d8df94f4506ab5c20d68f95e4"
+  arch arm: "-arm64", intel: "64"
 
-  url "https://downloads.imagej.net/fiji/archive/#{version}/fiji-macosx.zip",
+  version "20260114-1317"
+  sha256 arm:   "feeaa85dc30bd45b4f07a35316c0bd75175e45d5851e2386251b37180c9bd57b",
+         intel: "bfc66fc07ce32f506191c926e68fcd564372ad438497d7906615c714e69ce219"
+
+  url "https://downloads.imagej.net/fiji/archive/latest/#{version}/fiji-latest-macos#{arch}-jdk.zip",
       verified: "downloads.imagej.net/fiji/archive/"
   name "Fiji"
   desc "Open-source image processing package"
   homepage "https://fiji.sc/"
 
   livecheck do
-    url "https://downloads.imagej.net/fiji/archive/"
+    url "https://downloads.imagej.net/fiji/archive/latest/"
     regex(/(\d{8}-\d{4})/i)
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
-  app "Fiji.app"
+  app "Fiji/Fiji.app"
 
   zap trash: [
     "~/Library/Preferences/sc.fiji.cellcounter.plist",
     "~/Library/Saved Application State/org.fiji.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
