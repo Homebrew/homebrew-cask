@@ -1,9 +1,9 @@
 cask "4k-video-downloader+" do
   arch arm: "arm64", intel: "x64"
 
-  version "25.4.3"
-  sha256 arm:   "13b34a56a70d70e7ef3585d1b090536f681e4db9c38ebeff0535c320d65536af",
-         intel: "41509aa4c249649aabc36ca76c592576d3cdd2ff6a8c4949c518817b7563846a"
+  version "26.0.0"
+  sha256 arm:   "ed2722bb6d4be78e79e6496f607907ec5a0563f25e73605ebb4e9199874865b0",
+         intel: "5130a1702cd653826fe06e728a27b1fa30d5fb7c149b2e5fdbca3db3a8866808"
 
   url "https://dl.4kdownload.com/app/4kvideodownloaderplus_#{version}_#{arch}.dmg"
   name "4K Video Downloader Plus"
@@ -14,6 +14,8 @@ cask "4k-video-downloader+" do
     url "https://www.4kdownload.com/downloads"
     regex(%r{href=.*?/4kvideodownloaderplus[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
+
+  depends_on macos: ">= :monterey"
 
   app "4K Video Downloader+.app"
 
