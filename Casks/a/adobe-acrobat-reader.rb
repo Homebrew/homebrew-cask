@@ -15,6 +15,7 @@ cask "adobe-acrobat-reader" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   pkg "AcroRdrDC_#{version.no_dots}_MUI.pkg"
 
