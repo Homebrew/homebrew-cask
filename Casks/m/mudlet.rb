@@ -1,16 +1,24 @@
 cask "mudlet" do
-  version "4.18.5"
-  sha256 "ccdabebadf309e5e7b1a87aa07734a9a374d8b431b1be55b61863ece3ac70eaa"
+  arch arm: "arm64", intel: "x86_64"
+  livecheck_arch = on_arch_conditional arm: "arm", intel: "x86_64"
 
-  url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}.dmg"
+  version "4.19.1"
+  sha256 arm:   "2717a3b61e2d3de5e58dd0d47b5a1a4c3c7b19aabc82c6871e9da8bce65c7339",
+         intel: "1c3565cc382b40447d9818914d0bd735401c80a6aacc66421f0429e5eb4604ef"
+
+  url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}-#{arch}.dmg"
   name "Mudlet"
   desc "Multi-User Dungeon client"
   homepage "https://www.mudlet.org/"
 
   livecheck do
-    url "https://www.mudlet.org/wp-content/files/"
-    regex(/href=.*?Mudlet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://feeds.dblsqd.com/MKMMR7HNSP65PquQQbiDIw/release/mac/#{livecheck_arch}"
+    strategy :json do |json|
+      json["releases"]&.map { |release| release["version"] }
+    end
   end
+
+  auto_updates true
 
   app "Mudlet.app"
 
@@ -19,8 +27,4 @@ cask "mudlet" do
     "~/Library/Saved Application State/org.mudlet.mudlet.savedState",
     "~/mudlet-data",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
