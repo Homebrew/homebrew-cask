@@ -1,6 +1,6 @@
 cask "soulseek" do
-  version "2024-6-30"
-  sha256 "43a788bf49e50f7a1d23bd4b9df89db5835edf431328b88f502619a7a5818cf1"
+  version "2025-10-11"
+  sha256 "2f3a36434d315440385e822b660ab36be127af556954af0a79e825cd872b5011"
 
   url "https://f004.backblazeb2.com/file/SoulseekQt/SoulseekQt-#{version}.dmg",
       verified: "f004.backblazeb2.com/file/SoulseekQt/"
@@ -13,7 +13,7 @@ cask "soulseek" do
     regex(/href=.*?SoulseekQt[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "SoulseekQt.app"
 
