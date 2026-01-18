@@ -9,25 +9,26 @@ cask "expressvpn" do
 
   livecheck do
     url "https://www.expressvpn.works/vpn-download/vpn-mac"
-    regex(/expressvpn-macos-universal-(\d+(?:\.\d+)+)_release\.zip/i)
+    regex(/href=.*?expressvpn[._-]macos[._-]universal[._-]v?(\d+(?:\.\d+)+)[._-]release\.zip/i)
   end
 
-  installer manual: "ExpressVPN Installer.app"
+  installer script: {
+    executable: "#{staged_path}/ExpressVPN Installer.app/Contents/MacOS/ExpressVPN",
+    sudo:       true,
+  }
 
-  uninstall do
-    quit      "com.expressvpn.ExpressVPN"
-    launchctl "com.expressvpn.ExpressVPN.helper"
-    kext      "com.expressvpn.tun"
-    pkgutil   "com.expressvpn.ExpressVPN"
-    delete    [
-      "/Library/Application Support/ExpressVPN",
-      "/Library/LaunchDaemons/com.expressvpn.ExpressVPN.helper.plist",
-    ]
-  end
+  uninstall launchctl: [
+              "com.express.vpn.daemon",
+              "com.express.vpn.installhelper",
+            ],
+            quit:      "com.express.vpn",
+            delete:    "/Applications/ExpressVPN.app"
 
   zap trash: [
-    "~/Library/Application Support/ExpressVPN",
-    "~/Library/Logs/ExpressVPN",
-    "~/Library/Preferences/com.expressvpn.ExpressVPN.plist",
+    "/Library/Application Support/com.express.vpn",
+    "/Library/Preferences/com.express.vpn",
+    "~/Library/Application Support/com.express.vpn",
+    "~/Library/Caches/com.express.vpn",
+    "~/Library/Preferences/com.express.vpn",
   ]
 end
