@@ -26,8 +26,8 @@ cask "karabiner-elements" do
     end
   end
   on_ventura :or_newer do
-    version "15.7.0"
-    sha256 "532d24e31c64af7de3f768f11210ffe8317486191d7fc69c53b96bde14da15ae"
+    version "15.8.0"
+    sha256 "2960a31f066f8e5bdac49a2de8abb58a8c3b91f8e55fdc224aa96461d9263463"
 
     livecheck do
       url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
