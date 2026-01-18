@@ -1,6 +1,6 @@
 cask "pecunia" do
-  version "2.2.0"
-  sha256 "233cd0c7cda54230e0bf7b45ca56553a70672ecd07e24754f559a0ff9eac62b6"
+  version "2.2.1"
+  sha256 "4164eb25c3e28e2abd4f4a13169afd767f528510fd7262ae0c7b4e05aadd1286"
 
   url "https://pecuniabanking.de/downloads/#{version}/Pecunia.zip"
   name "Pecunia"
