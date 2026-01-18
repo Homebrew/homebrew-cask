@@ -2,7 +2,7 @@ cask "airtime" do
   version :latest
   sha256 :no_check
 
-  url "https://updates.airtimetools.com/mac/hybrid/production/Airtime_#{version}.zip",
+  url "https://updates.airtimetools.com/mac/hybrid/AirtimeCamera.dmg",
       verified: "updates.airtimetools.com/"
   name "Airtime"
   desc "Application for video presentations & meetings"
