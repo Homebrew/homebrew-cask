@@ -1,17 +1,9 @@
-# typed: strict
-# frozen_string_literal: true
-
 cask "bettershot" do
   arch arm: "aarch64", intel: "x64"
 
-  on_arm do
-    version "0.2.4"
-    sha256 "c224c544f29d1dcf3d84f5ac930c54597c085102d5ce6ccbe13977eeff18d0eb"
-  end
-  on_intel do
-    version "0.2.4"
-    sha256 "c0c9f324e2df9f40999d810555a448bf1cc01ea99efaea63591ee65710f9b1e1"
-  end
+  version "0.2.4"
+  sha256 arm:   "c224c544f29d1dcf3d84f5ac930c54597c085102d5ce6ccbe13977eeff18d0eb",
+         intel: "c0c9f324e2df9f40999d810555a448bf1cc01ea99efaea63591ee65710f9b1e1"
 
   url "https://github.com/KartikLabhshetwar/better-shot/releases/download/v#{version}/bettershot_#{version}_#{arch}.dmg",
       verified: "github.com/KartikLabhshetwar/better-shot/"
