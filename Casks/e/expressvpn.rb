@@ -1,34 +1,32 @@
 cask "expressvpn" do
-  version "11.71.0.90727"
-  sha256 "4a13d83a20426d7dc96848ae33850d85820606440053325edf349597badd9b67"
+  version "12.0.2.11960"
+  sha256 "4fa346578f5819d908309d431cd9507063a7065ce42d37ea5e4048713f3057db"
 
-  url "https://www.expressvpn.works/clients/mac/expressvpn_mac_#{version}_release.pkg"
+  url "https://www.expressvpn.works/clients/mac/expressvpn-macos-universal-#{version}_release.zip"
   name "ExpressVPN"
-  desc "VPN client for secure internet access and private browsing"
+  desc "VPN client for secure and private internet access"
   homepage "https://www.expressvpn.works/"
 
   livecheck do
-    url "https://www.expressvpn.works/clients/latest/mac"
-    strategy :header_match
+    url "https://www.expressvpn.works/vpn-download/vpn-mac"
+    regex(/expressvpn-macos-universal-(\d+(?:\.\d+)+)_release\.zip/i)
   end
 
-  auto_updates true
+  installer manual: "ExpressVPN Installer.app"
 
-  pkg "expressvpn_mac_#{version}_release.pkg"
-
-  uninstall launchctl: "com.expressvpn.ExpressVPN.agent",
-            script:    {
-              executable: "/Applications/ExpressVPN.app/Contents/Resources/uninstall.tool",
-              input:      ["Yes"],
-              sudo:       true,
-            },
-            pkgutil:   "com.expressvpn.ExpressVPN"
+  uninstall do
+    quit      "com.expressvpn.ExpressVPN"
+    launchctl "com.expressvpn.ExpressVPN.helper"
+    kext      "com.expressvpn.tun"
+    pkgutil   "com.expressvpn.ExpressVPN"
+    delete    [
+      "/Library/Application Support/ExpressVPN",
+      "/Library/LaunchDaemons/com.expressvpn.ExpressVPN.helper.plist",
+    ]
+  end
 
   zap trash: [
-    "/Library/Application Support/com.expressvpn.ExpressVPN",
-    "/Library/LaunchDaemons/com.expressvpn.expressvpnd.plist",
-    "~/Library/Application Support/com.expressvpn.ExpressVPN",
-    "~/Library/HTTPStorages/com.expressvpn.ExpressVPN",
+    "~/Library/Application Support/ExpressVPN",
     "~/Library/Logs/ExpressVPN",
     "~/Library/Preferences/com.expressvpn.ExpressVPN.plist",
   ]
