@@ -5,7 +5,7 @@ cask "font-noto-sans-mongolian" do
   url "https://github.com/google/fonts/raw/main/ofl/notosansmongolian/NotoSansMongolian-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Noto Sans Mongolian"
-  homepage "https://fonts.google.com/noto#sans-mong"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Mongolian"
 
   font "NotoSansMongolian-Regular.ttf"
 
