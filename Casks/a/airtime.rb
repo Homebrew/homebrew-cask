@@ -3,12 +3,17 @@ cask "airtime" do
   sha256 :no_check
 
   url "https://updates.airtimetools.com/mac/hybrid/AirtimeCamera.dmg",
-      verified: "updates.airtimetools.com/"
+      verified: "updates.airtimetools.com"
   name "Airtime"
   desc "Application for video presentations & meetings"
   homepage "https://www.airtime.com/"
 
-  auto_updates false
+  livecheck do
+    url "https://updates.mmhmm.app/mac/hybrid/production/sparkle.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "Airtime.app"
