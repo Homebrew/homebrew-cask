@@ -126,6 +126,7 @@ jobs:
 
       - name: Run brew config
         run: brew config
+
       - name: Run brew test-bot --only-tap-syntax
         id: tap-syntax
         run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax
