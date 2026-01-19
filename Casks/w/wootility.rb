@@ -1,9 +1,9 @@
 cask "wootility" do
   arch arm: "-arm64"
 
-  version "5.2.2"
-  sha256 arm:   "3a5c8a8d3a86a5565f4e6b195af3dcfff099b4058777600c8673c6b8e1c7c847",
-         intel: "a86fb426c0544810d10a06f950fe2dbdb2b0ec30823884308d6f3a9eefee814c"
+  version "5.2.3"
+  sha256 arm:   "db6703066adcc55c6121ebbd37db0bda72e0e8eb2ac21ff995cf6a47d6e2f6f7",
+         intel: "7fa0608ef22a70ec29c30e21b1d00e761d03496353ab533d195accb836468f7e"
 
   url "https://wootility-updates.ams3.cdn.digitaloceanspaces.com/wootility-mac/Wootility-#{version}#{arch}.dmg",
       verified: "wootility-updates.ams3.cdn.digitaloceanspaces.com/wootility-mac/"
