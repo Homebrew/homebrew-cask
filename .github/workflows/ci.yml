@@ -55,6 +55,9 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Run brew config
+        run: brew config
+
       - name: Generate CI matrix
         id: generate-matrix
         env:
@@ -121,6 +124,8 @@ jobs:
           key: macos-style-cache-${{ github.sha }}
           restore-keys: macos-style-cache-
 
+      - name: Run brew config
+        run: brew config
       - name: Run brew test-bot --only-tap-syntax
         id: tap-syntax
         run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax
