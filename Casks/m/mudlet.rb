@@ -1,6 +1,5 @@
 cask "mudlet" do
   arch arm: "arm64", intel: "x86_64"
-  livecheck_arch = on_arch_conditional arm: "arm", intel: "x86_64"
 
   version "4.19.1"
   sha256 arm:   "2717a3b61e2d3de5e58dd0d47b5a1a4c3c7b19aabc82c6871e9da8bce65c7339",
@@ -11,12 +10,8 @@ cask "mudlet" do
   desc "Multi-User Dungeon client"
   homepage "https://www.mudlet.org/"
 
-  livecheck do
-    url "https://feeds.dblsqd.com/MKMMR7HNSP65PquQQbiDIw/release/mac/#{livecheck_arch}"
-    strategy :json do |json|
-      json["releases"]&.map { |release| release["version"] }
-    end
-  end
+  # Download url is unreachable due to Cloudflare protections
+  disable! date: "2026-01-19", because: :unreachable
 
   auto_updates true
 
