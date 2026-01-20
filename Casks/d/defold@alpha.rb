@@ -1,7 +1,7 @@
 cask "defold@alpha" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.12.1"
+  version "1.12.2"
   sha256 :no_check # required as upstream package is updated in-place
 
   on_arm do
