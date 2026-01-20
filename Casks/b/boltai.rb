@@ -16,7 +16,7 @@ cask "boltai" do
   auto_updates true
   depends_on macos: ">= :ventura"
 
-  app "BoltAI 2.app"
+  app "BoltAI #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/co.podzim.boltai-mobile",
