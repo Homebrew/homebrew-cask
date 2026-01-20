@@ -3,12 +3,12 @@ cask "effect-house" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "5.5.1,8348,12112025,104"
-    sha256 "09c813bcaca01b5ac7d9571427aecc0f9382886ea0bea7d96c6b4ec86ae19bb2"
+    version "5.6.1,2289,01142026,104"
+    sha256 "f6a683dd24a33b81e03ba286adc09074afbb06a24c4433a3e004e71aff8bdb98"
   end
   on_intel do
-    version "5.5.1,8349,12112025,104"
-    sha256 "bb54656ca2db99fe9b31cf572fea1cf8d194ed7257ef541db7f9623ad7f931e0"
+    version "5.6.1,2294,01142026,104"
+    sha256 "f1f9309954259d32796e2b21f94d25a2e4dabe35bf80dcdbff581e8f10e06fb9"
   end
 
   url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_Builds_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}_#{arch}_#{version.csv.fourth}.dmg",
