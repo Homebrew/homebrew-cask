@@ -7,6 +7,7 @@ After making any changes to a cask, existing or new, verify:
 - [ ] The submission is for [a stable version](https://docs.brew.sh/Acceptable-Casks#stable-versions) or [documented exception](https://docs.brew.sh/Acceptable-Casks#but-there-is-no-stable-version).
 - [ ] `brew audit --cask --online <cask>` is error-free.
 - [ ] `brew style --fix <cask>` reports no offenses.
+- [ ] AI was used to generate or assist with generating this PR. *Please specify below how you used AI to help you, and what steps you have taken to manually verify the changes*.
 
 Additionally, **if adding a new cask**:
 
