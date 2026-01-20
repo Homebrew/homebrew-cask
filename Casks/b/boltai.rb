@@ -1,9 +1,8 @@
 cask "boltai" do
-  version "2.5.1"
-  sha256 "17470b9455b4aed39e25b193353c530e558fa8548cd57526a8f8c24be31b6822"
+  version "2.6.0"
+  sha256 "0994524c2b5d85008130e0966cbfb9f0f2de25d711b71ef65116669cd09ded99"
 
   url "https://updates.boltai.com/dmg/BoltAI-#{version}.dmg"
-  name "BoltAI"
   name "BoltAI 2"
   desc "AI chat client"
   homepage "https://boltai.com/"
