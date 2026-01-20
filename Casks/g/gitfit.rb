@@ -8,7 +8,7 @@ cask "gitfit" do
   desc "Micro-workouts while waiting for AI code generation"
   homepage "https://git-fit.app/"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :tahoe"
 
   app "GitFit.app"
 
