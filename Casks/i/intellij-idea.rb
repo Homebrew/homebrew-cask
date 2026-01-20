@@ -34,7 +34,7 @@ cask "intellij-idea" do
   preflight do
     File.write shimscript, <<~EOS
       #!/bin/sh
-      exec '#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea' "$@"
+      open -na "IntelliJ IDEA.app" --args "$@"
     EOS
   end
 
