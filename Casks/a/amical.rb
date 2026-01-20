@@ -2,7 +2,7 @@ cask "amical" do
   arch arm: "arm64", intel: "x64"
 
   version "0.1.13"
-  sha256 arm:   "3b8d613c723709b1f0923053ef1f0c5f0f37119f18b3296155998a1a5b17ae95",
+  sha256 arm:   "f97bb3891fab66be1e706c85d16a6dc9cd1f04a1e17975fe3c42811ce0df3c9e",
          intel: "90b79998638148b8c2ee0b59b3c4c9255a4e76a6ceb3491950d85f81216b23d9"
 
   url "https://github.com/amicalhq/amical/releases/download/v#{version}/Amical-#{version}-#{arch}.dmg"
