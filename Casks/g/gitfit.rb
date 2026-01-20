@@ -12,9 +12,5 @@ cask "gitfit" do
 
   app "GitFit.app"
 
-  zap trash: [
-    "~/Library/Application Support/GitFit",
-    "~/Library/Caches/com.chrisbongers.GitFit",
-    "~/Library/Preferences/com.chrisbongers.GitFit.plist",
-  ]
+  zap trash: "~/Library/Containers/com.chrisbongers.GitFit"
 end
