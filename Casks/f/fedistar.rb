@@ -1,6 +1,6 @@
 cask "fedistar" do
-  version "1.12.0"
-  sha256 "ad7a53f8a10836b5f1b16ae221b88d115784cf47707b4b04e7ca2a7bd099a8e3"
+  version "1.12.1"
+  sha256 "f2629c8166b0c181a90d77fe2ec0ccc1f7b0a0481580844513651a0a1d79ddae"
 
   url "https://github.com/h3poteto/fedistar/releases/download/v#{version}/fedistar_#{version}_universal.dmg",
       verified: "github.com/h3poteto/fedistar/"
