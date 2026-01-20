@@ -1,8 +1,11 @@
 cask "librecad" do
-  version "2.2.1.3,2.2.1.3-2-g1598766fb"
-  sha256 "5253704089d7e505f770cf618bd4b9366d9fdfb98c8ad3d4fed02db7c09c082b"
+  arch arm: "-arm64"
 
-  url "https://github.com/LibreCAD/LibreCAD/releases/download/v#{version.csv.first}/LibreCAD-v#{version.csv.second || version.csv.first}.dmg",
+  version "2.2.1.3,2.2.1.3-2-g1598766fb"
+  sha256 arm:   "b1c7f4559bccc3dd21aff089eef5a72c7fd8cd807340ff81aa46c960ca2e7385",
+         intel: "5253704089d7e505f770cf618bd4b9366d9fdfb98c8ad3d4fed02db7c09c082b"
+
+  url "https://github.com/LibreCAD/LibreCAD/releases/download/v#{version.csv.first}/LibreCAD-v#{version.csv.second || version.csv.first}#{arch}.dmg",
       verified: "github.com/LibreCAD/LibreCAD/"
   name "LibreCAD"
   desc "CAD application"
@@ -10,7 +13,7 @@ cask "librecad" do
 
   livecheck do
     url :url
-    regex(/^LibreCAD[._-]v?(\d+(?:[.-]\d+)+(?:-\w+)?)\.dmg$/i)
+    regex(/^LibreCAD[._-]v?(\d+(?:[.-]\d+)+(?:-\w+)?)#{arch}\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
@@ -29,6 +32,8 @@ cask "librecad" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on macos: ">= :big_sur"
+
   app "LibreCAD.app"
 
   zap trash: [
@@ -36,8 +41,4 @@ cask "librecad" do
     "~/Library/Preferences/com.librecad.LibreCAD.plist",
     "~/Library/Saved Application State/com.yourcompany.LibreCAD.savedstate",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
