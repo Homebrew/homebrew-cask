@@ -1,6 +1,6 @@
 cask "dynamodb-local" do
-  version "2026-01-09"
-  sha256 "696818127956602af913216c4a17b68da801b9fa9eed2091bc447402b3b70d13"
+  version "2026-01-18"
+  sha256 "c05dc320f4f9a6f90c6597bc4dc7239ab8200a6df0f280d9cbe4d5775943f898"
 
   url "https://d1ni2b6xgvw0s0.cloudfront.net/v2.x/dynamodb_local_#{version}.tar.gz",
       verified: "d1ni2b6xgvw0s0.cloudfront.net/"
