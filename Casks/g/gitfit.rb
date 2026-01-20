@@ -1,12 +1,12 @@
 cask "gitfit" do
-  version "1.0.0"
-  sha256 "ace69bf2635e1684f584351245c97982b6a66e77cbb141cf67e74297ef8263f4"
+  version "1.1.0"
+  sha256 "a277bc997421fdf5a4da6ad228fe5fe472de9371c3115f9a3b62fad9aab34dcd"
 
   url "https://github.com/rebelchris/git-fit/releases/download/v#{version}/GitFit-#{version}.dmg",
       verified: "github.com/rebelchris/git-fit/"
   name "GitFit"
   desc "Micro-workouts while waiting for AI code generation"
-  homepage "https://git-fit.app"
+  homepage "https://git-fit.app/"
 
   depends_on macos: ">= :ventura"
 
