@@ -33,7 +33,7 @@ cask "goland" do
   preflight do
     File.write shimscript, <<~EOS
       #!/bin/sh
-      exec '#{appdir}/GoLand.app/Contents/MacOS/goland' "$@"
+      open -na "GoLand.app" --args "$@"
     EOS
   end
 
