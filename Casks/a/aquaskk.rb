@@ -15,4 +15,10 @@ cask "aquaskk" do
   pkg "AquaSKK-#{version}.pkg"
 
   uninstall pkgutil: "org.codefirst.aquaskk.pkg"
+
+  zap trash: [
+    "~/Library/Application Support/AquaSKK",
+    "~/Library/Preferences/jp.sourceforge.inputmethod.aquaskk.plist",
+    "~/Library/Preferences/jp.sourceforge.inputmethod.aquaskk.preferences.plist",
+  ]
 end
