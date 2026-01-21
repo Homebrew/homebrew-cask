@@ -1,6 +1,6 @@
 cask "firezone" do
-  version "1.5.11"
-  sha256 "0c28c8791ab4acf14d149ec045cb81696138cd1074f91e79c3a8bfe407ff3c3d"
+  version "1.5.12"
+  sha256 "f699ece714403231c48a4de45a6eb1978775a4261f565fa129f5625973460620"
 
   url "https://github.com/firezone/firezone/releases/download/macos-client-#{version}/firezone-macos-client-#{version}.dmg",
       verified: "github.com/firezone/firezone/"
@@ -13,7 +13,7 @@ cask "firezone" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Firezone.app"
 
