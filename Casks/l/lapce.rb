@@ -8,6 +8,8 @@ cask "lapce" do
   desc "Open source code editor written in Rust"
   homepage "https://lapce.dev/"
 
+  depends_on macos: ">= :big_sur"
+
   app "Lapce.app"
   binary "#{appdir}/Lapce.app/Contents/MacOS/lapce"
 
