@@ -8,6 +8,10 @@ cask "mos" do
   desc "Smooths scrolling and set mouse scroll directions independently"
   homepage "https://mos.caldis.me/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  conflicts_with cask: "mos@beta"
+
   app "Mos.app"
 
   zap trash: "~/Library/Preferences/com.caldis.Mos.plist"
