@@ -1,9 +1,9 @@
 cask "auto-claude" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.7.4"
-  sha256 arm:   "4a5c403b4700557608aafc30c32586acc5f6473bbb7d588c1c6933344a5e2aea",
-         intel: "31c8674ba9601d8a2633935381afda0fe965f13a78ad0b9b5bf075397a8794fe"
+  version "2.7.5"
+  sha256 arm:   "1e15d0188c9ceede80dd29273f4446087a22c56fe62e44f29113c20aba1cb403",
+         intel: "14ea50fa26823fc785b9f25ee96ffcbbc108dcc7e4fcb6418795aa09fb041c0b"
 
   url "https://github.com/AndyMik90/Auto-Claude/releases/download/v#{version}/Auto-Claude-#{version}-darwin-#{arch}.dmg"
   name "Auto Claude"
