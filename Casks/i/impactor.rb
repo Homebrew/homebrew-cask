@@ -7,6 +7,11 @@ cask "impactor" do
   desc "Sideloading application for iOS/tvOS"
   homepage "https://github.com/khcrysalis/Impactor/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Impactor.app"
 
   zap trash: "~/.config/PlumeImpactor"
