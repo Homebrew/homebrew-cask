@@ -8,8 +8,6 @@ cask "mos" do
   desc "Smooths scrolling and set mouse scroll directions independently"
   homepage "https://mos.caldis.me/"
 
-  conflicts_with cask: "mos@beta"
-
   app "Mos.app"
 
   zap trash: "~/Library/Preferences/com.caldis.Mos.plist"
