@@ -7,9 +7,8 @@ cask "qdirstat" do
   desc "Disk utilisation visualiser"
   homepage "https://github.com/jesusha123/qdirstat-macos/"
 
-  depends_on macos: ">= :ventura" # macOS 13
-
   auto_updates true
+  depends_on macos: ">= :ventura" # macOS 13
 
   app "QDirStat.app"
 
