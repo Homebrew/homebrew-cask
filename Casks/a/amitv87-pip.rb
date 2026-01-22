@@ -1,11 +1,15 @@
 cask "amitv87-pip" do
-  version "2.70"
-  sha256 "09c58ca3c51b4b447752a8a152b97cc1294d37238bca04d6411ed18fcbfeeff4"
+  version "3.01"
+  sha256 "3317ddd35ae36b16f06d501c6b870aeb0565548cc07165c0bd1df23ac1af8d83"
 
   url "https://github.com/amitv87/PiP/releases/download/v#{version}/PiP-#{version}.dmg"
   name "PiP"
   desc "Always on top window preview"
   homepage "https://github.com/amitv87/PiP"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "PiP.app"
 
