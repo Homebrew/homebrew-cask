@@ -12,6 +12,8 @@ cask "codekit" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :ventura"
+
   auto_updates true
 
   app "CodeKit.app"
