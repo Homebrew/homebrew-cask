@@ -2,12 +2,12 @@ cask "font-noto-sans-syriac-eastern" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/pkgs/NotoSansSyriacEastern-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanssyriaceastern/NotoSansSyriacEastern%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Syriac Eastern"
-  homepage "https://fonts.google.com/#sans-syrc-eastern"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Syriac+Eastern"
 
-  font "NotoSansSyriacEastern-Regular.ttf"
+  font "NotoSansSyriacEastern[wght].ttf"
 
   # No zap stanza required
 end
