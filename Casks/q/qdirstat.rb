@@ -8,7 +8,7 @@ cask "qdirstat" do
   homepage "https://github.com/jesusha123/qdirstat-macos/"
 
   auto_updates true
-  depends_on macos: ">= :ventura" # macOS 13
+  depends_on macos: ">= :ventura"
 
   app "QDirStat.app"
 
