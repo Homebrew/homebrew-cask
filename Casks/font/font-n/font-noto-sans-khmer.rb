@@ -2,10 +2,10 @@ cask "font-noto-sans-khmer" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansKhmer-unhinted.zip",
+  url "https://github.com/google/fonts/pkgs/NotoSansKhmer-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Khmer"
-  homepage "https://www.google.com/get/noto/#sans-khmr"
+  homepage "https://fonts.google.com/#sans-khmr"
 
   font "NotoSansKhmer-Black.ttf"
   font "NotoSansKhmer-Bold.ttf"

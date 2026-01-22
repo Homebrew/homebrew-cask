@@ -2,10 +2,10 @@ cask "font-noto-sans-tamil" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansTamil-unhinted.zip",
+  url "https://github.com/google/fonts/pkgs/NotoSansTamil-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Tamil"
-  homepage "https://www.google.com/get/noto/#sans-taml"
+  homepage "https://fonts.google.com/#sans-taml"
 
   font "NotoSansTamil-Black.ttf"
   font "NotoSansTamil-Bold.ttf"

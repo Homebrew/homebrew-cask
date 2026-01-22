@@ -2,10 +2,10 @@ cask "font-noto-sans-carian" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCarian-unhinted.zip",
+  url "https://github.com/google/fonts/pkgs/NotoSansCarian-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Carian"
-  homepage "https://www.google.com/get/noto/#sans-cari"
+  homepage "https://font.google.com"
 
   font "NotoSansCarian-Regular.ttf"
 

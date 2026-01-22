@@ -2,10 +2,10 @@ cask "font-noto-sans-armenian" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansArmenian-unhinted.zip",
+  url "https://github.com/google/fonts/pkgs/NotoSansArmenian-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Armenian"
-  homepage "https://www.google.com/get/noto/#sans-armn"
+  homepage "https://font.google.com"
 
   font "NotoSansArmenian-Black.ttf"
   font "NotoSansArmenian-Bold.ttf"

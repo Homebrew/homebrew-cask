@@ -2,10 +2,10 @@ cask "font-noto-sans-thai" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansThai-unhinted.zip",
+  url "https://github.com/google/fonts/pkgs/NotoSansThai-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Thai"
-  homepage "https://www.google.com/get/noto/#sans-thai"
+  homepage "https://fonts.google.com/#sans-thai"
 
   font "NotoSansThai-Black.ttf"
   font "NotoSansThai-Bold.ttf"

@@ -2,10 +2,10 @@ cask "font-noto-sans-cham" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCham-unhinted.zip",
+  url "https://github.com/google/fonts/pkgs/NotoSansCham-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Cham"
-  homepage "https://www.google.com/get/noto/#sans-cham"
+  homepage "https://fonts.google.com/#sans-cham"
 
   font "NotoSansCham-Black.ttf"
   font "NotoSansCham-Bold.ttf"

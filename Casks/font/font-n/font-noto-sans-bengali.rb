@@ -2,10 +2,10 @@ cask "font-noto-sans-bengali" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansBengali-unhinted.zip",
+  url "https://github.com/google/fonts/pkgs/NotoSansBengali-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Bengali"
-  homepage "https://www.google.com/get/noto/#sans-beng"
+  homepage "https://font.google.com"
 
   font "NotoSansBengali-Black.ttf"
   font "NotoSansBengali-Bold.ttf"

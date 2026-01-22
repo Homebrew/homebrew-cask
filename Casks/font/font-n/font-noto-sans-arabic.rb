@@ -2,10 +2,10 @@ cask "font-noto-sans-arabic" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansArabic-unhinted.zip",
+  url "https://github.com/google/fonts/pkgs/NotoSansArabic-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Arabic"
-  homepage "https://www.google.com/get/noto/#sans-arab"
+  homepage "https://font.google.com"
 
   font "NotoSansArabic-Black.ttf"
   font "NotoSansArabic-Bold.ttf"

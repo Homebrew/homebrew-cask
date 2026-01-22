@@ -2,10 +2,10 @@ cask "font-noto-sans-myanmar" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansMyanmar-unhinted.zip",
+  url "https://github.com/google/fonts/pkgs/NotoSansMyanmar-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Myanmar"
-  homepage "https://www.google.com/get/noto/#sans-mymr"
+  homepage "https://fonts.google.com/#sans-mymr"
 
   font "NotoSansMyanmar-Black.ttf"
   font "NotoSansMyanmar-Bold.ttf"
