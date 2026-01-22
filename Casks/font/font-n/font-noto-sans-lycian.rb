@@ -5,7 +5,7 @@ cask "font-noto-sans-lycian" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansLycian-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Lycian"
-  homepage "https://www.google.com/get/noto/#sans-lyci"
+  homepage "https://fonts.google.com/#sans-lyci"
 
   font "NotoSansLycian-Regular.ttf"
 

@@ -5,7 +5,7 @@ cask "font-noto-sans-buhid" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansBuhid-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Buhid"
-  homepage "https://www.google.com/get/noto/#sans-buhd"
+  homepage "https://font.google.com"
 
   font "NotoSansBuhid-Regular.ttf"
 

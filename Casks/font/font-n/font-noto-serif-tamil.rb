@@ -5,7 +5,7 @@ cask "font-noto-serif-tamil" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifTamil-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Serif Tamil"
-  homepage "https://www.google.com/get/noto/#serif-taml"
+  homepage "https://fonts.google.com/#serif-taml"
 
   font "NotoSerifTamil-Black.ttf"
   font "NotoSerifTamil-Bold.ttf"

@@ -5,7 +5,7 @@ cask "font-noto-sans-ol-chiki" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansOlChiki-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Ol Chiki"
-  homepage "https://www.google.com/get/noto/#sans-olck"
+  homepage "https://fonts.google.com/#sans-olck"
 
   font "NotoSansOlChiki-Regular.ttf"
 

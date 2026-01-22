@@ -5,7 +5,7 @@ cask "font-noto-sans-ugaritic" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansUgaritic-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Ugaritic"
-  homepage "https://www.google.com/get/noto/#sans-ugar"
+  homepage "https://fonts.google.com/#sans-ugar"
 
   font "NotoSansUgaritic-Regular.ttf"
 

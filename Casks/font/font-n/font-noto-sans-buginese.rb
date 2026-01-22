@@ -5,7 +5,7 @@ cask "font-noto-sans-buginese" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansBuginese-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Buginese"
-  homepage "https://www.google.com/get/noto/#sans-bugi"
+  homepage "https://font.google.com"
 
   font "NotoSansBuginese-Regular.ttf"
 

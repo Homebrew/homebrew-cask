@@ -5,7 +5,7 @@ cask "font-noto-sans-runic" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansRunic-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Runic"
-  homepage "https://www.google.com/get/noto/#sans-runr"
+  homepage "https://fonts.google.com/#sans-runr"
 
   font "NotoSansRunic-Regular.ttf"
 

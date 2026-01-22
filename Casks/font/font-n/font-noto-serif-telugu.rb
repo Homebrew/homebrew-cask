@@ -5,7 +5,7 @@ cask "font-noto-serif-telugu" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifTelugu-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Serif Telugu"
-  homepage "https://www.google.com/get/noto/#serif-telu"
+  homepage "https://fonts.google.com/#serif-telu"
 
   font "NotoSerifTelugu-Bold.ttf"
   font "NotoSerifTelugu-Regular.ttf"

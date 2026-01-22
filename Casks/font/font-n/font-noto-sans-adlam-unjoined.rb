@@ -5,7 +5,7 @@ cask "font-noto-sans-adlam-unjoined" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansAdlamUnjoined-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Adlam Unjoined"
-  homepage "https://www.google.com/get/noto/#sans-adlm-unjoined"
+  homepage "https://font.google.com"
 
   font "NotoSansAdlamUnjoined-Regular.ttf"
 

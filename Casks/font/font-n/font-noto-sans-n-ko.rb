@@ -5,7 +5,7 @@ cask "font-noto-sans-n-ko" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansNKo-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans NKo"
-  homepage "https://www.google.com/get/noto/#sans-nkoo"
+  homepage "https://fonts.google.com/#sans-nkoo"
 
   font "NotoSansNKo-Regular.ttf"
 

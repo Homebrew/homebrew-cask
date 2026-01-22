@@ -5,7 +5,7 @@ cask "font-noto-serif-thai" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifThai-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Serif Thai"
-  homepage "https://www.google.com/get/noto/#serif-thai"
+  homepage "https://fonts.google.com/#serif-thai"
 
   font "NotoSerifThai-Black.ttf"
   font "NotoSerifThai-Bold.ttf"

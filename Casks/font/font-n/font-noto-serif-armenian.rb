@@ -5,7 +5,7 @@ cask "font-noto-serif-armenian" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifArmenian-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Serif Armenian"
-  homepage "https://www.google.com/get/noto/#serif-armn"
+  homepage "https://fonts.google.com/#serif-armn"
 
   font "NotoSerifArmenian-Black.ttf"
   font "NotoSerifArmenian-Bold.ttf"

@@ -5,7 +5,7 @@ cask "font-noto-sans-display" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansDisplay-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Display"
-  homepage "https://www.google.com/get/noto/#sans-lgc-display"
+  homepage "https://fonts.google.com/#sans-lgc-display"
 
   font "NotoSansDisplay-Black.ttf"
   font "NotoSansDisplay-BlackItalic.ttf"

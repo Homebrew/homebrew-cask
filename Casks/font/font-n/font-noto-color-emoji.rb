@@ -5,7 +5,7 @@ cask "font-noto-color-emoji" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoColorEmoji-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Color Emoji"
-  homepage "https://www.google.com/get/noto/#emoji-zsye-color"
+  homepage "https://fonts.google.com/#emoji-zsye-color"
 
   font "NotoColorEmoji.ttf"
 

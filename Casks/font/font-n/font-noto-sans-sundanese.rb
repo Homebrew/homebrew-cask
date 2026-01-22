@@ -5,7 +5,7 @@ cask "font-noto-sans-sundanese" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSundanese-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Sundanese"
-  homepage "https://www.google.com/get/noto/#sans-sund"
+  homepage "https://fonts.google.com/#sans-sund"
 
   font "NotoSansSundanese-Regular.ttf"
 

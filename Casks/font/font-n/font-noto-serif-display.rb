@@ -5,7 +5,7 @@ cask "font-noto-serif-display" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifDisplay-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Serif Display"
-  homepage "https://www.google.com/get/noto/#serif-lgc-display"
+  homepage "https://fonts.google.com/#serif-lgc-display"
 
   font "NotoSerifDisplay-Black.ttf"
   font "NotoSerifDisplay-BlackItalic.ttf"

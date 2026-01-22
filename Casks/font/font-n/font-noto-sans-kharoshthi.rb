@@ -5,7 +5,7 @@ cask "font-noto-sans-kharoshthi" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansKharoshthi-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Kharoshthi"
-  homepage "https://www.google.com/get/noto/#sans-khar"
+  homepage "https://fonts.google.com/#sans-khar"
 
   font "NotoSansKharoshthi-Regular.ttf"
 

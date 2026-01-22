@@ -5,7 +5,7 @@ cask "font-noto-sans-tifinagh" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansTifinagh-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Tifinagh"
-  homepage "https://www.google.com/get/noto/#sans-tfng"
+  homepage "https://fonts.google.com/#sans-tfng"
 
   font "NotoSansTifinagh-Regular.ttf"
 

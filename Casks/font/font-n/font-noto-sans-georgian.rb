@@ -5,7 +5,7 @@ cask "font-noto-sans-georgian" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansGeorgian-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Georgian"
-  homepage "https://www.google.com/get/noto/#sans-geor"
+  homepage "https://fonts.google.com/#sans-geor"
 
   font "NotoSansGeorgian-Black.ttf"
   font "NotoSansGeorgian-Bold.ttf"

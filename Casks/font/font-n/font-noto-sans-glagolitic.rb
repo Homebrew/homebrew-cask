@@ -5,7 +5,7 @@ cask "font-noto-sans-glagolitic" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansGlagolitic-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Glagolitic"
-  homepage "https://www.google.com/get/noto/#sans-glag"
+  homepage "https://fonts.google.com/#sans-glag"
 
   font "NotoSansGlagolitic-Regular.ttf"
 

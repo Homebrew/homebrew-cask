@@ -5,7 +5,7 @@ cask "font-noto-sans-cuneiform" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCuneiform-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Cuneiform"
-  homepage "https://www.google.com/get/noto/#sans-xsux"
+  homepage "https://fonts.google.com/#sans-xsux"
 
   font "NotoSansCuneiform-Regular.ttf"
 

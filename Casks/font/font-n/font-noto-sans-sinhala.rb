@@ -5,7 +5,7 @@ cask "font-noto-sans-sinhala" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSinhala-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Sinhala"
-  homepage "https://www.google.com/get/noto/#sans-sinh"
+  homepage "https://fonts.google.com/#sans-sinh"
 
   font "NotoSansSinhala-Black.ttf"
   font "NotoSansSinhala-Bold.ttf"

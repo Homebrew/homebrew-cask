@@ -5,7 +5,7 @@ cask "font-noto-sans-hebrew" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansHebrew-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Hebrew"
-  homepage "https://www.google.com/get/noto/#sans-hebr"
+  homepage "https://fonts.google.com/#sans-hebr"
 
   font "NotoSansHebrew-Black.ttf"
   font "NotoSansHebrew-Bold.ttf"

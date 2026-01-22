@@ -5,7 +5,7 @@ cask "font-noto-sans-chakma" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansChakma-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Chakma"
-  homepage "https://www.google.com/get/noto/#sans-cakm"
+  homepage "https://font.google.com"
 
   font "NotoSansChakma-Regular.ttf"
 

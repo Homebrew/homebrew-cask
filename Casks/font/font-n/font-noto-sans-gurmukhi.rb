@@ -5,7 +5,7 @@ cask "font-noto-sans-gurmukhi" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansGurmukhi-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Gurmukhi"
-  homepage "https://www.google.com/get/noto/#sans-guru"
+  homepage "https://fonts.google.com/#sans-guru"
 
   font "NotoSansGurmukhi-Bold.ttf"
   font "NotoSansGurmukhi-Regular.ttf"

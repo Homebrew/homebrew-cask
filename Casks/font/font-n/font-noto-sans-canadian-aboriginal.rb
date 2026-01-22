@@ -5,7 +5,7 @@ cask "font-noto-sans-canadian-aboriginal" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCanadianAboriginal-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Canadian Aboriginal"
-  homepage "https://www.google.com/get/noto/#sans-cans"
+  homepage "https://font.google.com"
 
   font "NotoSansCanadianAboriginal-Regular.ttf"
 

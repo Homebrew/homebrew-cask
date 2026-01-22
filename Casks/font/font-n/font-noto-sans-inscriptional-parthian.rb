@@ -5,7 +5,7 @@ cask "font-noto-sans-inscriptional-parthian" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansInscriptionalParthian-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Inscriptional Parthian"
-  homepage "https://www.google.com/get/noto/#sans-prti"
+  homepage "https://fonts.google.com/#sans-prti"
 
   font "NotoSansInscriptionalParthian-Regular.ttf"
 

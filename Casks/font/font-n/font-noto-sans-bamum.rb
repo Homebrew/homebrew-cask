@@ -5,7 +5,7 @@ cask "font-noto-sans-bamum" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansBamum-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Bamum"
-  homepage "https://www.google.com/get/noto/#sans-bamu"
+  homepage "https://font.google.com"
 
   font "NotoSansBamum-Regular.ttf"
 

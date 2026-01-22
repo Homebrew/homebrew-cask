@@ -5,7 +5,7 @@ cask "font-noto-sans-deseret" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansDeseret-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Deseret"
-  homepage "https://www.google.com/get/noto/#sans-dsrt"
+  homepage "https://fonts.google.com/#sans-dsrt"
 
   font "NotoSansDeseret-Regular.ttf"
 

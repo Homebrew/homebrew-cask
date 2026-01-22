@@ -5,7 +5,7 @@ cask "font-noto-serif-khmer" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifKhmer-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Serif Khmer"
-  homepage "https://www.google.com/get/noto/#serif-khmr"
+  homepage "https://fonts.google.com/#serif-khmr"
 
   font "NotoSerifKhmer-Black.ttf"
   font "NotoSerifKhmer-Bold.ttf"

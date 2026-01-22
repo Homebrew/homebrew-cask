@@ -5,7 +5,7 @@ cask "font-noto-sans-cherokee" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCherokee-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Cherokee"
-  homepage "https://www.google.com/get/noto/#sans-cher"
+  homepage "https://fonts.google.com/#sans-cher"
 
   font "NotoSansCherokee-Black.ttf"
   font "NotoSansCherokee-Bold.ttf"

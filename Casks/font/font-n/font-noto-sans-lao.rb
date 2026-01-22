@@ -5,7 +5,7 @@ cask "font-noto-sans-lao" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansLao-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Lao"
-  homepage "https://www.google.com/get/noto/#sans-laoo"
+  homepage "https://fonts.google.com/#sans-laoo"
 
   font "NotoSansLao-Black.ttf"
   font "NotoSansLao-Bold.ttf"

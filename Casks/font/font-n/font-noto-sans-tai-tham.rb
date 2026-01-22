@@ -5,7 +5,7 @@ cask "font-noto-sans-tai-tham" do
   url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansTaiTham-unhinted.zip",
       verified: "noto-website-2.storage.googleapis.com/"
   name "Noto Sans Tai Tham"
-  homepage "https://www.google.com/get/noto/#sans-lana"
+  homepage "https://fonts.google.com/#sans-lana"
 
   font "NotoSansTaiTham-Regular.ttf"
 
