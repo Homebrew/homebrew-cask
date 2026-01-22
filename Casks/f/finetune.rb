@@ -18,6 +18,6 @@ cask "finetune" do
 
   zap trash: [
     "~/Library/Application Scripts/com.finetuneapp.FineTune",
-    "~/Library/Containers/com.finetuneapp.FineTune"
+    "~/Library/Containers/com.finetuneapp.FineTune",
   ]
 end
