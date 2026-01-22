@@ -2,10 +2,10 @@ cask "font-noto-sans-syloti-nagri" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/pkgs/NotoSansSylotiNagri-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanssylotinagri/NotoSansSylotiNagri-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Syloti Nagri"
-  homepage "https://fonts.google.com/#sans-sylo"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Syloti+Nagri"
 
   font "NotoSansSylotiNagri-Regular.ttf"
 
