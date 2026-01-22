@@ -2,12 +2,12 @@ cask "font-noto-sans-adlam" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansAdlam-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansadlam/NotoSansAdlam%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Adlam"
-  homepage "https://www.google.com/get/noto/#sans-adlm"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Adlam"
 
-  font "NotoSansAdlam-Regular.ttf"
+  font "NotoSansAdlam[wght].ttf"
 
   # No zap stanza required
 end

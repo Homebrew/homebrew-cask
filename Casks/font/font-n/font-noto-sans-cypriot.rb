@@ -2,10 +2,10 @@ cask "font-noto-sans-cypriot" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCypriot-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanscypriot/NotoSansCypriot-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Cypriot"
-  homepage "https://www.google.com/get/noto/#sans-cprt"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Cypriot"
 
   font "NotoSansCypriot-Regular.ttf"
 
