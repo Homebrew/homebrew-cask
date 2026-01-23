@@ -8,7 +8,7 @@ cask "minizincide" do
   desc "Open-source constraint modelling language and IDE"
   homepage "https://www.minizinc.org/index.html"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "MiniZincIDE.app"
   binary "#{appdir}/MiniZincIDE.app/Contents/Resources/minizinc"
