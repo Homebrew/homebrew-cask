@@ -33,6 +33,7 @@ cask "appvolume" do
   uninstall launchctl: "io.appvolume.daemon",
             quit:      "io.appvolume",
             pkgutil:   [
+              "io.appvolume.app",
               "io.appvolume.daemon",
               "io.appvolume.driver",
               "io.appvolume.ui",
