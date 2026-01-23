@@ -10,10 +10,8 @@ cask "ideamaker" do
   desc "FDM 3D Printing Slicer by Raise3D"
   homepage "https://www.raise3d.com/ideamaker/"
 
-  livecheck do
-    url "https://www.raise3d.com/download/"
-    regex(/href=.*?install[._-]ideaMaker[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
-  end
+  # Download url is unreachable due to Cloudflare protections
+  disable! date: "2026-01-23", because: :unreachable
 
   app "ideaMaker.app"
 
