@@ -3,9 +3,9 @@ cask "edfbrowser" do
   sha256 :no_check
 
   depends_on arch: :arm64
+  depends_on macos: ">= :sequoia"
 
-  url "https://gitlab.com/sjg2203/edfbrowser-silicon/-/jobs/artifacts/v#{version}/raw/build_output/EDFbrowser-v#{version}.dmg?job=package_dmg",
-      verified: "gitlab.com/sjg2203/edfbrowser-silicon/"
+  url "https://gitlab.com/sjg2203/edfbrowser-silicon/-/jobs/artifacts/v#{version}/raw/build_output/EDFbrowser-v#{version}.dmg?job=package_dmg"
 
   name "EDFbrowser"
   desc "EDF+ and BDF+ viewer and toolbox – Apple Silicon build"
