@@ -8,8 +8,13 @@ cask "edfbrowser" do
   homepage "https://gitlab.com/sjg2203/edfbrowser-silicon"
 
   livecheck do
-    url :homepage
-    strategy :git
+    url "https://gitlab.com/api/v4/projects/72163637/repository/tags"
+    strategy :json do |json|
+      json.map do |tag|
+        next unless tag["name"]
+        tag["name"][/^v?(\d+(?:\.\d+)+)$/i, 1]
+      end
+    end
   end
 
   depends_on arch: :arm64
