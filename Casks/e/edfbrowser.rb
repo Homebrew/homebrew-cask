@@ -9,7 +9,7 @@ cask "edfbrowser" do
 
   # Use the GitLab API to fetch tags
   livecheck do
-    url "https://gitlab.com/api/v4/projects/62827734/repository/tags"
+    url "https://gitlab.com/api/v4/projects/72163637/repository/tags"
     strategy :json do |json|
       json.map do |tag|
         next unless tag["name"]
