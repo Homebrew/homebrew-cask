@@ -1,7 +1,7 @@
 cask "filo" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.5"
+  version "1.3.6"
   sha256 :no_check
 
   url "https://download.filomail.com/mac_upgrade/versions/latest/prod/#{arch}/Filo-#{arch}.dmg"
