@@ -1,9 +1,7 @@
 cask "edfbrowser" do
   version "2.14"
   sha256 :no_check
-
   url "https://gitlab.com/sjg2203/edfbrowser-silicon/-/jobs/artifacts/v#{version}/raw/build_output/EDFbrowser-v#{version}.dmg?job=package_dmg"
-
   name "EDFbrowser"
   desc "EDF+ and BDF+ viewer and toolbox – Apple Silicon build"
   homepage "https://gitlab.com/sjg2203/edfbrowser-silicon"
