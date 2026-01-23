@@ -1,9 +1,9 @@
 cask "zedis" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.1.8"
-  sha256 arm:   "44eb9a2c7994a5c3a3df784e03687da59e026ce959ecd346014a51c25a7f9ad4",
-         intel: "758ed940c8fd1293e6fc3bb073a6133be484c1b94ad9d4a2f66503cf1f48282b"
+  version "0.1.9"
+  sha256 arm:   "255d207003aacb5ca4cc038099cab50c7acf88c0bfff080a6e6cde65a11a2b84",
+         intel: "14534a2b547ad9fc72e6f30fa03e1dca390734657c400972033f59e858c9708e"
 
   url "https://github.com/vicanso/zedis/releases/download/v#{version}/Zedis-#{arch}.dmg"
   name "Zedis"
