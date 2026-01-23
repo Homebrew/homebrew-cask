@@ -1,15 +1,21 @@
 cask "houdahspot" do
-  version "6.6.1"
-  sha256 "ee98ea919d312c2b007faa28e6e77e8dbe0101f8e3efa9180b647702abe45e52"
+  version "6.7.1,146cb2a9-cfb3-4b8c-838a-5348d747d7b9"
+  sha256 "672bfcc58f1744c061b3767711b128b99fda65a6c9f19223ff2e058624b4d158"
 
-  url "https://dl.houdah.com/houdahSpot/updates/cast#{version.major}_assets/HoudahSpot#{version}.zip"
+  url "https://dl.houdah.com/houdahSpot/updates/cast_assets/#{version.csv.second}/HoudahSpot_#{version.csv.first}.dmg"
   name "HoudahSpot"
   desc "File searching application"
   homepage "https://www.houdah.com/houdahSpot/"
 
   livecheck do
     url "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.php"
-    strategy :sparkle, &:short_version
+    regex(%r{/(\h+(?:-\h+)+)/HoudahSpot[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
+    end
   end
 
   auto_updates true
