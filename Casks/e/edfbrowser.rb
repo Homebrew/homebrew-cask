@@ -7,11 +7,13 @@ cask "edfbrowser" do
   desc "EDF+ and BDF+ viewer and toolbox – Apple Silicon build"
   homepage "https://gitlab.com/sjg2203/edfbrowser-silicon"
 
+  # Use the GitLab API to fetch tags
   livecheck do
-    url "https://gitlab.com/api/v4/projects/72163637/repository/tags"
+    url "https://gitlab.com/api/v4/projects/62827734/repository/tags"
     strategy :json do |json|
       json.map do |tag|
         next unless tag["name"]
+
         tag["name"][/^v?(\d+(?:\.\d+)+)$/i, 1]
       end
     end
