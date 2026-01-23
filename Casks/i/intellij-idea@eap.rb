@@ -11,7 +11,7 @@ cask "intellij-idea@eap" do
   homepage "https://www.jetbrains.com/idea/nextversion"
 
   livecheck do
-    url "https://data.services.jetbrains.com/products/releases?code=IIU&release.type=eap"
+    url "https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=eap"
     strategy :json do |json|
       json["IIU"]&.map do |release|
         version = release["version"]
