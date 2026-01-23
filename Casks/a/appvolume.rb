@@ -1,21 +1,11 @@
 cask "appvolume" do
+  arch arm: "arm64", intel: "x86_64"
+
   version "0.1.31"
+  sha256 arm:   "4e4a954ee72ad8a884526b3be509c3f397ca8a2054ebd852c01dfae9234c0693",
+         intel: "771d556061a30722598b95a7e4115593cd1386bc0d8d22edb4acf82c7c16be7e"
 
-  on_arm do
-    sha256 "4e4a954ee72ad8a884526b3be509c3f397ca8a2054ebd852c01dfae9234c0693"
-
-    url "https://releases.appvolume.app/AppVolume-#{version}-arm64.pkg"
-
-    pkg "AppVolume-#{version}-arm64.pkg"
-  end
-  on_intel do
-    sha256 "771d556061a30722598b95a7e4115593cd1386bc0d8d22edb4acf82c7c16be7e"
-
-    url "https://releases.appvolume.app/AppVolume-#{version}-x86_64.pkg"
-
-    pkg "AppVolume-#{version}-x86_64.pkg"
-  end
-
+  url "https://releases.appvolume.app/AppVolume-#{version}-#{arch}.pkg"
   name "AppVolume"
   desc "Per-application volume control"
   homepage "https://appvolume.app/"
@@ -29,6 +19,8 @@ cask "appvolume" do
 
   auto_updates true
   depends_on macos: ">= :sonoma"
+
+  pkg "AppVolume-#{version}-#{arch}.pkg"
 
   uninstall launchctl: "io.appvolume.daemon",
             quit:      "io.appvolume",
