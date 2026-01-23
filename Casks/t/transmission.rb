@@ -14,7 +14,10 @@ cask "transmission" do
   end
 
   auto_updates true
-  conflicts_with cask: "transmission@nightly"
+  conflicts_with cask: [
+    "transmission@beta",
+    "transmission@nightly",
+  ]
 
   app "Transmission.app"
 
