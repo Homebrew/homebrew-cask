@@ -1,6 +1,6 @@
 cask "halion-sonic" do
-  version "7.1.40,d088d1e6-5a2d-4a05-be91-e59860cf6f16"
-  sha256 "55e4a6ef615a385d2699f52cac0b83456bd681d9a24f8164b710f692f750b1ff"
+  version "7.1.50,2a4b745a-610c-407c-8193-9558236f6f71"
+  sha256 "ee5ea0fb88fe1fe03acd4601c6c31c5fb757e346e796307c22e29d81dcd63533"
 
   url "https://download.steinberg.net/automated_updates/sda_downloads/#{version.csv.second}/Halion_Sonic_#{version.csv.first}_Installer_mac.dmg"
   name "HALion Sonic"
