@@ -12,7 +12,7 @@ cask "transmission@beta" do
   # "pre-release", so this will use both unstable and stable releases.
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+.*)$/i)
+    regex(/^v?(\d+(?:\.\d+)+(?:-beta\.\d+)?)$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"]
