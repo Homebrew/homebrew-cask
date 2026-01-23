@@ -7,7 +7,6 @@ cask "edfbrowser" do
   desc "EDF+ and BDF+ viewer and toolbox – Apple Silicon build"
   homepage "https://gitlab.com/sjg2203/edfbrowser-silicon"
 
-  # Use the GitLab API to fetch tags
   livecheck do
     url "https://gitlab.com/api/v4/projects/72163637/repository/tags"
     strategy :json do |json|
