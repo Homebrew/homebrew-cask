@@ -12,7 +12,7 @@ cask "edfbrowser" do
   homepage "https://gitlab.com/sjg2203/edfbrowser-silicon"
 
   livecheck do
-    url :stable
+    url "https://gitlab.com/sjg2203/edfbrowser-silicon.git"
     strategy :git
   end
 
