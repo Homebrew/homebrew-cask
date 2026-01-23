@@ -1,6 +1,6 @@
 cask "gitfit" do
-  version "1.2.0"
-  sha256 "3ae76e4c475bf81c495d13ba19591f405a7c07c767364ce68022a04835cf8d26"
+  version "1.3.0"
+  sha256 "d5ccd1fa2f2c7506baa343accef09010de662815b41f769a940e6e5aa224fb64"
 
   url "https://github.com/rebelchris/git-fit/releases/download/v#{version}/GitFit-#{version}.dmg",
       verified: "github.com/rebelchris/git-fit/"
