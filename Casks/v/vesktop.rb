@@ -1,6 +1,6 @@
 cask "vesktop" do
-  version "1.6.3"
-  sha256 "6fb875834b230dc4ff413be054d74f32d3e9cb8d37597639d67943506fe5a62d"
+  version "1.6.4"
+  sha256 "2f15f50807608396f4b9480b8eab35be1c8b4f52764e08f83f3d2f10c145a7ba"
 
   url "https://github.com/Vencord/Vesktop/releases/download/v#{version}/Vesktop-#{version}-universal.dmg"
   name "Vesktop"
