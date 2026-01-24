@@ -1,5 +1,5 @@
 cask "google-drive" do
-  version "119.0.2"
+  version "120.0.1"
   sha256 :no_check
 
   # "5-percent" is included in the url to ensure that `brew upgrade` does not update to an older version as the
