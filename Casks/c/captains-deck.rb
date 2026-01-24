@@ -18,10 +18,10 @@ cask "captains-deck" do
   app "Captain's Deck.app"
 
   zap trash: [
-    "~/Library/Application Support/Captain's Deck",
+    "~/Library/Application Support/CaptainsDeck",
     "~/Library/Caches/com.captainsdeck.app",
     "~/Library/HTTPStorages/com.captainsdeck.app",
     "~/Library/Preferences/com.captainsdeck.app.plist",
-    "~/Library/Saved Application State/com.captainsdeck.app.savedState",
+    "~/Library/WebKit/com.captainsdeck.app",
   ]
 end
