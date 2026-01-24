@@ -8,7 +8,7 @@ cask "threema-work" do
   homepage "https://work.threema.ch/"
 
   livecheck do
-    url "https://threema.ch/en/work/changelog"
+    url "https://threema.com/en/changelog/desktop"
     regex(/>\s*Threema\s+Work\s+v?(\d+(?:\.\d+)+)\s+for\s+Desktop\s*</i)
   end
 
