@@ -1,8 +1,8 @@
 cask "phtv" do
-  version "2.0.8"
+  version "2.0.8,98"
   sha256 "2a8f1ea37fc85481e0838d150fa4913ed6690a01a92d30534980e01261721b55"
 
-  url "https://github.com/PhamHungTien/PHTV/releases/download/v#{version}/PHTV-#{version}.dmg",
+  url "https://github.com/PhamHungTien/PHTV/releases/download/v#{version.csv.first}/PHTV-#{version.csv.first}.dmg",
       verified: "github.com/PhamHungTien/"
   name "PHTV"
   desc "Vietnamese input method for macOS"
