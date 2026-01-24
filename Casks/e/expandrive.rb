@@ -1,9 +1,9 @@
 cask "expandrive" do
-  version "2025.11.21.808"
-  sha256 "45f93bafa0c6506c37cf3b06980fef34f61f769cc275fea654a2169332b45595"
+  version "2026.01.22.812"
+  sha256 "e5a4f6c834a671cb8ea4c2d4622fe9f851b6c849d7c5b8f74a6b8eee35fe013a"
 
-  url "https://corp.hosted-by-files.com/builds/ExpanDrive/#{version}/mac/ExpanDrive_#{version.major_minor_patch}.dmg",
-      verified: "corp.hosted-by-files.com/builds/ExpanDrive/"
+  url "https://files-com-public-builds.s3.us-east-1.amazonaws.com/builds/ExpanDrive/#{version}/mac/ExpanDrive_#{version.major_minor_patch}.dmg",
+      verified: "files-com-public-builds.s3.us-east-1.amazonaws.com/builds/ExpanDrive/"
   name "ExpanDrive"
   desc "Network drive and browser for cloud storage"
   homepage "https://www.expandrive.com/apps/expandrive/"
