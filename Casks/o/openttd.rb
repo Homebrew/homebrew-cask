@@ -1,6 +1,6 @@
 cask "openttd" do
-  version "15.0"
-  sha256 "484d01e673d0079337d0c378c10be01ef1c615db618573265dd73ec8bf9a9be2"
+  version "15.1"
+  sha256 "492508eb79e82a60f69f9bc0eac12793cf7ecd0ba8d53110cd953bb7a4e37fff"
 
   url "https://cdn.openttd.org/openttd-releases/#{version}/openttd-#{version}-macos-universal.zip"
   name "OpenTTD"
