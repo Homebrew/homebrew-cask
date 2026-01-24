@@ -9,7 +9,7 @@ cask "captains-deck" do
 
   livecheck do
     url "https://captains-deck.com/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
