@@ -17,7 +17,7 @@ cask "crypto-native-app-ng" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :monterey"
 
   pkg "Installer Crypto Native App NG.pkg"
 
