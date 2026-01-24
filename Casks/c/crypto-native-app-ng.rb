@@ -12,7 +12,7 @@ cask "crypto-native-app-ng" do
   livecheck do
     url "https://download.tescosw.cz/crypto/files/cryptong_updates.json"
     strategy :page_match do |page|
-      json = JSON.parse(page.delete_prefix("\xEF\xBB\xBF"))
+      json = Homebrew::Livecheck::Strategy::Json.parse_json(page.delete_prefix("\xEF\xBB\xBF"))
       json.select { |item| item["Platform"] == "Darwin" }.map { |item| item["Version"] }
     end
   end
