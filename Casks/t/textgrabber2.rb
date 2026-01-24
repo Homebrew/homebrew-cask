@@ -1,7 +1,7 @@
 cask "textgrabber2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.10.0"
-  sha256 "197bffdbc40e0d13b91c5e986d07f6f62fa788e136df6272ca2fe91a2c6ee183"
+  version "1.10.1"
+  sha256 "635099d513e8133cd83ed384af89c582a53b8fd69b788c02d9b1ec00b7250a85"
 
   url "https://github.com/TextGrabber2-app/TextGrabber2/releases/download/v#{version}/TextGrabber2-#{version}.dmg"
   name "TextGrabber2"
