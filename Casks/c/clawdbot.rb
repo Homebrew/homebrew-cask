@@ -1,6 +1,6 @@
 cask "clawdbot" do
-  version "2026.1.22"
-  sha256 "d0e2b270d897b399d316dd141d3beb00a3f09fbcf9c15199eee551daff13e957"
+  version "2026.1.23"
+  sha256 "9c613726df1a4e4fd81e2be80e03bf13bb601f32ce9142656f398a95491d929a"
 
   url "https://github.com/clawdbot/clawdbot/releases/download/v#{version}/Clawdbot-#{version}.dmg",
       verified: "github.com/clawdbot/clawdbot/"
