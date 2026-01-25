@@ -2,11 +2,11 @@ cask "antigravity" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "1.15.6,5250816192937984"
-  sha256 arm:   "85d62d8efc97777d77c176809025235d9138a7f3d1b3d6003526499b8e48ec3c",
-         intel: "d99b852cf831c4a1d3207a9cbef0b2cb92a68fdbb84f121d908d694617f0a8a4"
+  version "1.15.8,5724687216017408"
+  sha256 arm:   "20371f8253edda454fed0c5f68a1ef39b7605551625b56f65b58a1f35e0ff614",
+         intel: "0e2b46bcad70a46e1d3f3d48875e60a198e412fbb866b8080097db8a7271f919"
 
-  url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.zip",
+  url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg",
       verified: "edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/"
   name "Google Antigravity"
   desc "AI Coding Agent IDE"
