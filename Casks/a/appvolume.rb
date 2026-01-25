@@ -22,6 +22,12 @@ cask "appvolume" do
 
   pkg "AppVolume-#{version}-#{arch}.pkg"
 
+  uninstall_postflight do
+    system_command "/usr/bin/killall",
+                   args: ["coreaudiod"],
+                   sudo: true
+  end
+
   uninstall launchctl: "io.appvolume.daemon",
             quit:      "io.appvolume",
             pkgutil:   [
@@ -30,7 +36,10 @@ cask "appvolume" do
               "io.appvolume.driver",
               "io.appvolume.ui",
             ],
-            delete:    "/Library/Audio/Plug-Ins/HAL/AppVolumeAudioDevice.driver"
+            delete:    [
+              "/Library/Audio/Plug-Ins/HAL/AppVolumeAudioDevice.driver",
+              "~/Library/LaunchAgents/io.appvolume.daemon.plist",
+            ]
 
   zap trash: [
     "~/Library/Application Support/AppVolume",
