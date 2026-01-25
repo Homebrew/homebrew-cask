@@ -1,9 +1,9 @@
 cask "drawpen" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.37"
-  sha256 arm:   "60d43edf7bcc6b009ffb7e2d9a71891c53db571af71b815d4731f87286f4b5dd",
-         intel: "5281ca5ba5a0f27cbd683581dffae41717295e9557c7a0952797525351eb8c4b"
+  version "0.0.38"
+  sha256 arm:   "c606cd84cf8137fb43254980ddc8a342dcf36105dcf07dc2cbe24d833b5a6db8",
+         intel: "0bac945ddbc31b283682c966edad3edda8b6793978a3f4a514e1b34d9e6b6e8f"
 
   url "https://github.com/DmytroVasin/DrawPen/releases/download/v#{version}/DrawPen-#{version}-#{arch}.dmg"
   name "DrawPen"
