@@ -27,7 +27,16 @@ cask "antigravity" do
   depends_on macos: ">= :big_sur"
 
   app "Antigravity.app"
-  binary "#{appdir}/Antigravity.app/Contents/Resources/app/bin/antigravity", target: "agy"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  agy_shimscript = "#{staged_path}/agy.wrapper.sh"
+  binary agy_shimscript, target: "agy"
+
+  preflight do
+    File.write agy_shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/Antigravity.app/Contents/Resources/app/bin/antigravity' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/.antigravity/",
