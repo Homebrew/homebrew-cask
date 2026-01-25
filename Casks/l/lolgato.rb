@@ -7,11 +7,6 @@ cask "lolgato" do
   desc "Enhances control over Elgato lights"
   homepage "https://github.com/raine/Lolgato/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :sonoma"
 
   app "Lolgato.app"
