@@ -2,15 +2,9 @@ cask "bitfocus-buttons" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
-  sha256 arm:   "f0d7adf7040c052b1b53599aaac05a7c74c555f7e5ab805823be99161ea4d7fe",
-         intel: "c6a628b36e9c7b0cede33dd7c41505510c0d97ed945e52cb309fcc425436fcd6"
-
-  on_arm do
-    version "1.4.1,4769,492c32cc"
-  end
-  on_intel do
-    version "1.2.2,4157,e14e47c7"
-  end
+  version "1.4.13,4794,aef05447"
+  sha256 arm:   "706ac4814237a84df220edbafcce8566a729ab74d84f5b26a997d31bfa71e5c2",
+         intel: "951e4dac34c246989b746af00b83396d0f5985da10bc7c450159f5ff10820640"
 
   url "https://s4.bitfocus.io/builds/buttons/bitfocus-buttons-mac-#{arch}-#{version.csv.second}-#{version.csv.third}.pkg"
   name "Bitfocus Buttons"
