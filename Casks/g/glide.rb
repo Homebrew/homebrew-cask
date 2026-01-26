@@ -1,9 +1,9 @@
 cask "glide" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.7"
-  sha256 arm:   "5b472e51cf30a2479c837ebde8b18dd042cb2bfcc41352a889a1f2ce91f44151",
-         intel: "be352e5c343fb8262b8b3266980294cbc1ac5154e028ffe7bd37216b4c653409"
+  version "0.2.8"
+  sha256 arm:   "2607d4c53cef0364057a5bff383414be0d0e24102618c80e9d20764486c0ece7",
+         intel: "686d6a758c3126401291e96457c4c1cf692e4cd8e7bf2e41d769f3cc25b371b4"
 
   url "https://github.com/glide-wm/glide/releases/download/v#{version}/Glide_#{version}_#{arch}.dmg",
       verified: "github.com/glide-wm/glide/"
