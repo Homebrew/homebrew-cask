@@ -13,7 +13,7 @@ cask "kkbox" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "KKBOX.app"
 
