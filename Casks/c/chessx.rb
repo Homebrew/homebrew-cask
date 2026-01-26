@@ -1,6 +1,6 @@
 cask "chessx" do
-  version "1.6.4a,1.6.4"
-  sha256 "a452933f0862ecf7df29d3f5018ef0ac554de95eefd3c1114d7984a85c66b324"
+  version "1.6.6"
+  sha256 "536dd977aeaba8be924a3aaac92a82fbba7ca0ede9de0735222a4bf0e8248012"
 
   url "https://downloads.sourceforge.net/chessx/chessx/#{version.csv.second || version.csv.first}/chessx-#{version.csv.first}.dmg",
       verified: "downloads.sourceforge.net/chessx/"
@@ -21,9 +21,9 @@ cask "chessx" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  pkg "chessx-installer.mpkg"
+  depends_on macos: ">= :monterey"
 
-  uninstall pkgutil: "net.sourceforge.chessx"
+  app "ChessX.app"
 
   zap trash: [
     "~/.config/chessx",
@@ -31,4 +31,8 @@ cask "chessx" do
     "~/Library/Preferences/net.sourceforge.chessx.plist",
     "~/Library/Saved Application State/net.sourceforge.chessx.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
