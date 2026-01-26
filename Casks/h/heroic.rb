@@ -1,9 +1,9 @@
 cask "heroic" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.18.1"
-  sha256 arm:   "ae312bb7bac330e55f5f03eac2eb4ab6ca7be63a2d5e13cf93065f49d4d8df8e",
-         intel: "1048e5d8de837cf527821c0478bff2501383b9dedee3e8cf5dc0cd10e43c16ec"
+  version "2.19.0"
+  sha256 arm:   "1fb3c8eb2c7697a1a7094cdca25687eb0ec7c6d7458de99dbc1e3c7ff68b8d20",
+         intel: "b8919ecb151d3a828a82bb829f13c048b15e7b692abd8ed62d64bea7011530f2"
 
   url "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v#{version}/Heroic-#{version}-macOS-#{arch}.dmg"
   name "Heroic Games Launcher"
@@ -16,7 +16,7 @@ cask "heroic" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Heroic.app"
 
