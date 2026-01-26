@@ -16,16 +16,6 @@ cask "tailscale-app" do
   depends_on macos: ">= :monterey"
 
   pkg "Tailscale-#{version}-macos.pkg"
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/tailscale.wrapper.sh"
-  binary shimscript, target: "tailscale"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/Tailscale.app/Contents/MacOS/Tailscale' "$@"
-    EOS
-  end
 
   uninstall quit:       "io.tailscale.ipn.macsys",
             login_item: "Tailscale",
