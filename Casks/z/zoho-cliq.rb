@@ -22,6 +22,8 @@ cask "zoho-cliq" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   pkg "Cliq-#{arch}-#{version}.pkg"
 
   uninstall pkgutil: "com.zoho.cliq"
