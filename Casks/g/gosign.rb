@@ -1,5 +1,5 @@
 cask "gosign" do
-  version "2.3.9"
+  version "2.4.3"
   sha256 :no_check
 
   url "https://rinnovofirma.infocert.it/gosign/download/darwin/latest"
@@ -11,8 +11,6 @@ cask "gosign" do
     url :url
     strategy :extract_plist
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "GoSign-Desktop.app"
 

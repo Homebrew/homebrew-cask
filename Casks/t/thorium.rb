@@ -1,14 +1,9 @@
 cask "thorium" do
   arch arm: "-arm64"
 
-  on_arm do
-    version "3.1.1,3.1.0-1"
-    sha256 "f2785f6ac4dd11659ccaf38f453485f4d3449cfaf79ee17c6409ea45d41a43fc"
-  end
-  on_intel do
-    version "3.1.0"
-    sha256 "b718cd726188f7ec7b215e4c12297a992e5471b87211bce66a7c5493641aedac"
-  end
+  version "3.3.0"
+  sha256 arm:   "b19fe0b336f360137403c6050a6ba7288668fc2d0b7d0428bbac958689b21325",
+         intel: "aa7944f8c3a423982e1a25beb753b6982a08ac65b9c6671fb0bdd88350d8bb31"
 
   url "https://github.com/edrlab/thorium-reader/releases/download/v#{version.csv.first}/Thorium-#{version.csv.second || version.csv.first}#{arch}.dmg",
       verified: "github.com/edrlab/thorium-reader/"
@@ -17,24 +12,17 @@ cask "thorium" do
   homepage "https://www.edrlab.org/software/thorium-reader/"
 
   livecheck do
-    url :url
+    url "https://thorium.edrlab.org/en/"
     regex(%r{/v?(\d+(?:\.\d+)+)/Thorium[._-]v?(\d+(?:[.-]\d+)+)#{arch}\.dmg}i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next unless match
 
-        release["assets"]&.map do |asset|
-          match = asset["browser_download_url"]&.match(regex)
-          next if match.blank?
-
-          (match[2] == match[1]) ? match[1] : "#{match[1]},#{match[2]}"
-        end
-      end.flatten
+      (match[2] == match[1]) ? match[1] : "#{match[1]},#{match[2]}"
     end
   end
 
-  conflicts_with cask: "alex313031-thorium"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Thorium.app"
 

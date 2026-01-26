@@ -1,6 +1,6 @@
 cask "electrum" do
-  version "4.6.1"
-  sha256 "f4168cca2e017a3b9dd288c82f74d2f26e1bd6e4fff5e137e012842abc40fb26"
+  version "4.7.0"
+  sha256 "7f7923abf8cac06ee33bc6f5c7c8aa2593cf211f098243dbd680aab45064fdc9"
 
   url "https://download.electrum.org/#{version}/electrum-#{version}.dmg"
   name "Electrum"
@@ -12,7 +12,7 @@ cask "electrum" do
     regex(/href=.*?electrum[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Electrum.app"
 

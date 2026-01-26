@@ -8,9 +8,9 @@ cask "cheatsheet" do
   homepage "https://www.mediaatelier.com/CheatSheet/"
 
   deprecate! date: "2024-11-09", because: :discontinued
+  disable! date: "2025-11-09", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "CheatSheet.app"
 

@@ -1,6 +1,6 @@
 cask "astropad-studio" do
-  version "5.4.0,4871"
-  sha256 "848410ce10a2139466fe4ed19437a7f6d92b44733e50e4e681433dcadc3d9f80"
+  version "5.5.2,4987"
+  sha256 "d7e3c5ecbc1a59e5e62d6d649ab8e8416e522b5e92bf95293a4bbef7d51dc6cc"
 
   url "https://downloads.astropad.com/studio/mac/AstropadStudio-#{version.csv.first}.#{version.csv.second}.dmg"
   name "Astropad Studio"
@@ -13,7 +13,6 @@ cask "astropad-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Astropad Studio.app"
 

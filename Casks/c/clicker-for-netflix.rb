@@ -13,7 +13,6 @@ cask "clicker-for-netflix" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "Clicker for Netflix.app"
 

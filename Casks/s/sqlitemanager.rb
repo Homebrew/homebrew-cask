@@ -12,8 +12,6 @@ cask "sqlitemanager" do
     regex(/version\s+(\d+(?:\.\d+)*)/i)
   end
 
-  depends_on macos: ">= :mojave"
-
   app "SQLiteManager.app"
 
   zap trash: [

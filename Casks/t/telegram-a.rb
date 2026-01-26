@@ -11,8 +11,6 @@ cask "telegram-a" do
   desc "Web client for Telegram messenger"
   homepage "https://web.telegram.org/a/get"
 
-  depends_on macos: ">= :high_sierra"
-
   app "Telegram A.app"
 
   zap trash: [

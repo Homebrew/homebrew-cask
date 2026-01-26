@@ -7,6 +7,8 @@ cask "crunch-app" do
   desc "PNG image optimiser"
   homepage "https://github.com/chrissimpkins/Crunch"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Crunch.app"
 
   zap trash: [

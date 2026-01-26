@@ -1,5 +1,5 @@
 cask "waves-central" do
-  version "16.0.7"
+  version "16.1.6"
   sha256 :no_check
 
   url "https://cf-installers.waves.com/WavesCentral/Install_Waves_Central.dmg"
@@ -13,7 +13,6 @@ cask "waves-central" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Waves Central.app"
 

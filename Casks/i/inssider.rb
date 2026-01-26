@@ -10,8 +10,6 @@ cask "inssider" do
 
   deprecate! date: "2025-03-02", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "inSSIDer.app"
 
   caveats do

@@ -1,12 +1,6 @@
 cask "vitamin-r" do
-  on_high_sierra :or_older do
-    version "3.31"
-    sha256 "6c5ce3926060b7e3616527fc3c1f0d2a5cd8a0be4d9f5496c099a33be993312b"
-  end
-  on_mojave :or_newer do
-    version "4.19"
-    sha256 "ef93e7ccececdde434f313f1fdc43ecc6d0e3b34df17d7c4c944ec3f58d80167"
-  end
+  version "4.21"
+  sha256 "96904470a41e5fe61c267ea1e4feb9bedad22d836cdd0fdc41e10a78229821ca"
 
   url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"
   name "Vitamin-R"
@@ -19,6 +13,7 @@ cask "vitamin-r" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "Vitamin-R #{version.major}.app"
 

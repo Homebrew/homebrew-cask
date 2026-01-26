@@ -12,8 +12,6 @@ cask "infinity" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Infinity.app"
 
   uninstall quit: "com.electron.infinity"

@@ -1,9 +1,8 @@
 cask "gitfox" do
-  version "3.10.0,9921"
-  sha256 "513a9ccdf47569b77a55494f2c7b6c2a2df92640ec2f12d1ed0b617321f6e895"
+  version "4.1.0,10911"
+  sha256 "03788a6143c24a72fea01e1c1fdad9d0c703fc3c707398a336ea2196377b2516"
 
-  url "https://storage.googleapis.com/gitfox/builds/retail/#{version.csv.second}/Gitfox.#{version.csv.second}.zip",
-      verified: "storage.googleapis.com/gitfox/"
+  url "https://update.gitfox.app/builds/retail/#{version.csv.second}/Gitfox.#{version.csv.second}.zip"
   name "Gitfox"
   desc "Git client"
   homepage "https://www.gitfox.app/"
@@ -20,7 +19,7 @@ cask "gitfox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sequoia"
 
   app "Gitfox.app"
   binary "#{appdir}/Gitfox.app/Contents/SharedSupport/bin/gitfox-cli", target: "gitfox"

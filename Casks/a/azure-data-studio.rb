@@ -10,16 +10,10 @@ cask "azure-data-studio" do
   desc "Data management tool that enables working with SQL Server"
   homepage "https://docs.microsoft.com/en-us/sql/azure-data-studio/"
 
-  livecheck do
-    url "https://go.microsoft.com/fwlink/?linkid=2324524"
-    strategy :header_match
-  end
-
   # https://learn.microsoft.com/en-us/azure-data-studio/whats-happening-azure-data-studio
   disable! date: "2026-02-28", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Azure Data Studio.app"
   binary "#{appdir}/Azure Data Studio.app/Contents/Resources/app/bin/code", target: "azuredatastudio"

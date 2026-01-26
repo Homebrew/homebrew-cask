@@ -1,9 +1,9 @@
 cask "microsoft-openjdk" do
   arch arm: "aarch64", intel: "x64"
 
-  version "21.0.8"
-  sha256 arm:   "e347ef4a82cf2303f66f0e4074ab1c38beab0e6e2a450f0d6337caef0ab973cf",
-         intel: "ef5ff22e598298bc899cdae26882f3af467e632da8e1d0d41447db3b98604fb6"
+  version "25.0.1"
+  sha256 arm:   "9d348b3ed811423a4640ceffc0ba1b5aae1aed18a0be4f2eac3ff1230a2d51a7",
+         intel: "e1d3788145ce987a76a68fb00956dc99fea5a0f8a5e46542410bf8bc8ee4c43e"
 
   url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg",
       verified: "aka.ms/download-jdk/"

@@ -1,6 +1,6 @@
 cask "alt-tab" do
-  version "7.27.0"
-  sha256 "8e3b60a5f2b32e3d9c014be98e50bd4939a9f04377cbeadd415289bd31f3a173"
+  version "8.3.3"
+  sha256 "db5dc0945e25360e4ae32db9ad7081b55a1ce30ff79bb6fc8068b48c5833a91d"
 
   url "https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip",
       verified: "github.com/lwouis/alt-tab-macos/"
@@ -14,7 +14,6 @@ cask "alt-tab" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "AltTab.app"
 

@@ -1,6 +1,6 @@
 cask "testfully" do
-  version "1.177.0,461"
-  sha256 "f754d3a0338ea5336b4cacd798448b9de32fd2474bca885283df7315fae03e53"
+  version "1.182.0,487"
+  sha256 "eaf004b352a91af6c45b4ee86084a6366ad6ecc4fb6cb561edc5b004035bca57"
 
   url "https://releases.testfully.io/desktop/build-#{version.csv.second}/Testfully.app.zip"
   name "Testfully"
@@ -8,20 +8,19 @@ cask "testfully" do
   homepage "https://docs.testfully.io/"
 
   livecheck do
-    url "https://docs.testfully.io/docs/download/"
-    regex(%r{build[._-](\d+)/Testfully(\.app)?\.zip}i)
-    strategy :page_match do |page, regex|
-      version = page.match(/latest\s*version\s*\((\d+(?:\.\d+)+)\)/i)
+    url "https://releases.testfully.io/desktop/updater-prod.json"
+    regex(%r{build[._-](\d+)/Testfully(\.app)?\.(?:t|zip)}i)
+    strategy :json do |json, regex|
+      # This assumes that macOS ARM and Intel continue to use the same file
+      build = json.dig("platforms", "darwin-aarch64", "url")&.[](regex, 1)
+      next unless build
+
+      version = json["version"]&.[](/v?(\d+(?:\.\d+)+)/i, 1)
       next if version.blank?
 
-      build = page.match(regex)
-      next if build.blank?
-
-      "#{version[1]},#{build[1]}"
+      "#{version},#{build}"
     end
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Testfully.app"
 

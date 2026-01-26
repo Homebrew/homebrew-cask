@@ -1,9 +1,9 @@
 cask "nwjs" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.102.1"
-  sha256 arm:   "8b2a9cc6a2001bac57b6019f5bd4b3bb8d9359c2929c09212ec0a4a79f44a57a",
-         intel: "e30cfbe0f511d73b45466cfbbfdbe17f3a0eddd9246b913cf57315e9beee7b25"
+  version "0.107.0"
+  sha256 arm:   "14ebf17eb848befedf09d85ddd72c07616e5e339ce291eb6e1d0b49d07348ba8",
+         intel: "e1344a94d52cdc5bcba9344dae6c57e7032b926dd806694962dd1c6efa966e9b"
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-#{arch}.zip"
   name "NW.js"
@@ -23,9 +23,9 @@ cask "nwjs" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "nwjs-sdk-v#{version}-osx-#{arch}/nwjs.app"
   binary "nwjs-sdk-v#{version}-osx-#{arch}/nwjc"

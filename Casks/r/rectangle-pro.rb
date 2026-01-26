@@ -1,6 +1,6 @@
 cask "rectangle-pro" do
-  version "3.57"
-  sha256 "d4c9e316e86c2e97291dca850a33eb7c7a4dda8f406658e0c0d83c5b84878c5a"
+  version "3.68"
+  sha256 "f2d4bdbc7e7903887babe78c0c62a895c2baa3c1db8005dc3e62e5cdb2375bc1"
 
   url "https://rectangleapp.com/pro/downloads/Rectangle%20Pro%20#{version}.dmg"
   name "Rectangle Pro"
@@ -13,7 +13,7 @@ cask "rectangle-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Rectangle Pro.app"
 

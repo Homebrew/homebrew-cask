@@ -1,5 +1,5 @@
 cask "smooze-pro" do
-  version "2.2.6"
+  version "2.2.7"
   sha256 :no_check
 
   url "https://smooze.co/pro/updates/SmoozePro.dmg"
@@ -13,7 +13,6 @@ cask "smooze-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Smooze Pro.app"
 

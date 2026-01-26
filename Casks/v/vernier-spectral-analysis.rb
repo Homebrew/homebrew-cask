@@ -1,6 +1,6 @@
 cask "vernier-spectral-analysis" do
-  version "5.0.0-2559"
-  sha256 "c8359180d931fe36a993448768a4fbce6133d39d11ef9252f1228f526306d3fd"
+  version "5.1.0-2993"
+  sha256 "afd7f5c5b62b4c989b08c0166af2f652c2843592dbd2c48386bef317872da554"
 
   url "https://software-releases.graphicalanalysis.com/sa/mac/release/Vernier-Spectral-Analysis-#{version}.dmg",
       verified: "software-releases.graphicalanalysis.com/"
@@ -14,7 +14,7 @@ cask "vernier-spectral-analysis" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Vernier Spectral Analysis.app"
 

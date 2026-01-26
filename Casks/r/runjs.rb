@@ -1,6 +1,6 @@
 cask "runjs" do
-  version "3.1.2"
-  sha256 "39a1cf53d29d6c13ee798064671d64896834a7ee8f4e5d3e7f9d769080545763"
+  version "3.2.2"
+  sha256 "be3a69cb88fbbe3fd5f538a3c72a626585838b9d41bf14c2a3484f1adcf81436"
 
   url "https://github.com/lukehaas/RunJS/releases/download/v#{version}/RunJS-#{version}-universal.dmg",
       verified: "github.com/lukehaas/RunJS/"
@@ -14,7 +14,7 @@ cask "runjs" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "RunJS.app"
 

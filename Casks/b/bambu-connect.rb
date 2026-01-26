@@ -1,9 +1,9 @@
 cask "bambu-connect" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.0-beta.7"
-  sha256 arm:   "45290f374ff28729d2deb4c3e379266d553fb9005f178c9b4e940c813076e718",
-         intel: "7a4af9bd5570777fd8eb23c1dfd34c54857a8c50aa76a3b172bb8625df70b02d"
+  version "2.2.0-beta.1"
+  sha256 arm:   "fa9387817ea36be340d6258ca9f1e06af0fbb15ba0ff1ff027fcc7b7d305154a",
+         intel: "21bc467bf6af678f8d5c2f22d27d97d1053b17164f762ea056c62366665d60a1"
 
   url "https://public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/#{version}/bambu-connect-v#{version}-darwin-#{arch}.dmg",
       verified: "public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/"

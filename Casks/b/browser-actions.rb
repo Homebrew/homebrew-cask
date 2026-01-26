@@ -1,6 +1,6 @@
 cask "browser-actions" do
-  version "2025.1.3,4969"
-  sha256 "67d5ace8822653d164bff7552548361323e64091c5665ac37bb1170f3f46c372"
+  version "2025.2.0,5186"
+  sha256 "8475815e4c7f5df6891eb124eca74dd777ae7f9d4c7cbd42acc97377e3053752"
 
   url "https://downloads.actions.work/browser-actions/Browser_Actions_#{version.csv.first}_(#{version.csv.second}).dmg"
   name "Browser Actions"
@@ -13,7 +13,7 @@ cask "browser-actions" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Browser Actions.app"
 

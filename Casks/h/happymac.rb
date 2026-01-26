@@ -13,8 +13,6 @@ cask "happymac" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :sierra"
-
   app "happymac.app"
 
   zap trash: "~/HappyMacApp"

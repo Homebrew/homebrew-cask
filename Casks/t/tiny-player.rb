@@ -1,6 +1,6 @@
 cask "tiny-player" do
-  version "1.6.8"
-  sha256 "c32eb9be9c993bdbe437748e129a2d2080519f050958c6beea4a5ff2cb6f7729"
+  version "1.6.9"
+  sha256 "7beffb0a17b1dae7665dbb539f21ab4b4ccac481a726812b8eac3cec8ef16151"
 
   url "https://download.catnapgames.com/TinyPlayer-#{version}.zip"
   name "Tiny Player for Mac"
@@ -13,7 +13,6 @@ cask "tiny-player" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Tiny Player.app"
 

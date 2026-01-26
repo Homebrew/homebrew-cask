@@ -2,10 +2,10 @@ cask "font-noto-sans-tagalog" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansTagalog-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanstagalog/NotoSansTagalog-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Tagalog"
-  homepage "https://www.google.com/get/noto/#sans-tglg"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Tagalog"
 
   font "NotoSansTagalog-Regular.ttf"
 

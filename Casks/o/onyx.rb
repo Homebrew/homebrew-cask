@@ -3,28 +3,8 @@ cask "onyx" do
 
   # NOTE: We use separate `url` values in each of the macOS on_system blocks
   # so that the API data correctly includes URL variants for each.
-  on_sonoma :or_older do
-    on_el_capitan :or_older do
-      version "3.1.9"
-
-      url "https://www.titanium-software.fr/download/1011/OnyX.dmg"
-    end
-    on_sierra do
-      version "3.3.1"
-
-      url "https://www.titanium-software.fr/download/1012/OnyX.dmg"
-    end
-    on_high_sierra do
-      version "3.4.9"
-
-      url "https://www.titanium-software.fr/download/1013/OnyX.dmg"
-    end
-    on_mojave do
-      version "3.6.8"
-
-      url "https://www.titanium-software.fr/download/1014/OnyX.dmg"
-    end
-    on_catalina do
+  on_sequoia :or_older do
+    on_catalina :or_older do
       version "3.8.7"
 
       url "https://www.titanium-software.fr/download/1015/OnyX.dmg"
@@ -49,21 +29,26 @@ cask "onyx" do
 
       url "https://www.titanium-software.fr/download/14/OnyX.dmg"
     end
+    on_sequoia do
+      version "4.8.5"
+
+      url "https://www.titanium-software.fr/download/15/OnyX.dmg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sequoia :or_newer do
-    version "4.8.3"
+  on_tahoe :or_newer do
+    version "4.9.4"
 
-    url "https://www.titanium-software.fr/download/15/OnyX.dmg"
+    url "https://www.titanium-software.fr/download/26/OnyX.dmg"
 
     # We check the version on the homepage, as the version in the related plist
     # file can be out of date.
     livecheck do
       url :homepage
-      regex(/>\s*OnyX\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*15\s*</i)
+      regex(/>\s*OnyX\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*26\s*</i)
     end
   end
 
@@ -72,16 +57,13 @@ cask "onyx" do
   homepage "https://www.titanium-software.fr/en/onyx.html"
 
   depends_on macos: [
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
     :catalina,
     :big_sur,
     :monterey,
     :ventura,
     :sonoma,
     :sequoia,
+    :tahoe,
   ]
 
   app "OnyX.app"

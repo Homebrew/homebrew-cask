@@ -10,8 +10,6 @@ cask "replay" do
   deprecate! date: "2024-07-24", because: :discontinued
   disable! date: "2025-07-24", because: :discontinued
 
-  depends_on macos: ">= :sierra"
-
   app "Replay.app"
 
   zap trash: [

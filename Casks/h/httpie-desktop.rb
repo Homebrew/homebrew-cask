@@ -16,8 +16,6 @@ cask "httpie-desktop" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "HTTPie.app"
 
   zap trash: [

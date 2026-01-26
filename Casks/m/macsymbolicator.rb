@@ -7,8 +7,6 @@ cask "macsymbolicator" do
   desc "Symbolicate Apple related crash reports"
   homepage "https://github.com/inket/MacSymbolicator/"
 
-  depends_on macos: ">= :mojave"
-
   app "MacSymbolicator.app"
   binary "#{appdir}/MacSymbolicator.app/Contents/MacOS/MacSymbolicatorCLI", target: "mac-symbolicator-cli"
 

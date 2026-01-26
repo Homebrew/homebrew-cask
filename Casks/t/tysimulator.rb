@@ -8,8 +8,7 @@ cask "tysimulator" do
   homepage "https://github.com/ty0x2333/TySimulator"
 
   deprecate! date: "2024-09-08", because: :discontinued
-
-  depends_on macos: ">= :sierra"
+  disable! date: "2025-09-09", because: :discontinued
 
   app "TySimulator.app"
 

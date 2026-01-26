@@ -13,7 +13,7 @@ cask "lyx" do
     regex(/LyX[._-]v?(\d+(?:\.\d+)+)\+qt5/i)
   end
 
-  depends_on macos: ">= :mojave"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "LyX.app"
   binary "#{appdir}/LyX.app/Contents/MacOS/inkscape", target: "lyx-inkscape"

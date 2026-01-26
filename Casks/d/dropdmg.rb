@@ -1,6 +1,6 @@
 cask "dropdmg" do
-  version "3.6.9"
-  sha256 "065b89f0fae9c05d95a259ac7210e5632f2cf14745f8ca61351074b894e75075"
+  version "3.7.1"
+  sha256 "de2f4a0ea35a9efe054c810fa1326308a5ed93599f0a51d8e6a830c351ab5e8b"
 
   url "https://c-command.com/downloads/DropDMG-#{version}.dmg"
   name "DropDMG"
@@ -21,7 +21,6 @@ cask "dropdmg" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "DropDMG.app"
 

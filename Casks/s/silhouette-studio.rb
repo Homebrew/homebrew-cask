@@ -1,6 +1,6 @@
 cask "silhouette-studio" do
-  version "5.0.219.001_M6R"
-  sha256 "0b440fbfe9e7c9860f3edf3cf7866948d585aa6ced507a2cb0c234d925417af6"
+  version "5.0.414.001_M6R"
+  sha256 "6bbbf85143199dbd43a41263151b3258fbdef5f2dcb0c330f69ce10ee4c574cb"
 
   url "https://d62nvtdcnsm38.cloudfront.net/files/softwares/ss/SS_V#{version}.dmg",
       verified: "d62nvtdcnsm38.cloudfront.net/files/softwares/ss/"
@@ -9,7 +9,7 @@ cask "silhouette-studio" do
   homepage "https://www.silhouetteamerica.com/silhouette-studio"
 
   livecheck do
-    url :homepage
+    url :homepage, user_agent: :browser
     regex(/SS[._-]V?((?:\d+(?:\.\d+)+)[._-]M6R(?:[._-]\d+)?)\.dmg/i)
   end
 

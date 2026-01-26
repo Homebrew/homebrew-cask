@@ -1,9 +1,9 @@
 cask "wechatwebdevtools" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.06.2504020"
-  sha256 arm:   "306cf3db27706fdf819240340abaeb3469a5558000f842df4d446e03f31bfa55",
-         intel: "eddfa3491199b449e14113e9ed19f09cb8e74a5fdee7aac377cdb22d46d00fad"
+  version "2.01.2510270"
+  sha256 arm:   "6c09661a9073d3ccb0162892effe28f74280cb3528f7a2d37cda934fa52ff848",
+         intel: "266c68d3df2fa32e3af013ba5c2fcff215617ba39c0343efcd63c08fd9d08711"
 
   url "https://dldir1.qq.com/WechatWebDev/release/be1ec64cf6184b0fa64091919793f068/wechat_devtools_#{version}_darwin_#{arch}.dmg"
   name "Wechat DevTools"
@@ -12,8 +12,13 @@ cask "wechatwebdevtools" do
   homepage "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html"
 
   livecheck do
-    url "https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html"
-    regex(/a>\s(\d(?:\.\d+)+)\s</i)
+    url "https://devtools.wxqcloud.qq.com.cn/WechatWebDev/nightly/versions/config.json"
+    strategy :json do |json|
+      stable = json["channels"]&.find { |channel| channel["id"] == "stable" }
+      next unless stable
+
+      stable["version"]
+    end
   end
 
   auto_updates true

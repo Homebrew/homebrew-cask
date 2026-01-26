@@ -1,6 +1,6 @@
 cask "archy" do
-  version "2.35.3"
-  sha256 "3a69f156ea1efc0f9a88c1b0c1bf413e2b64c59a8a0d5c953eb1a4974920ce90"
+  version "2.36.1"
+  sha256 "02a1fdf1deb0e0b7c2aaf4f0a0a93f018f3b70cb4435d40938312df650a4636f"
 
   url "https://sdk-cdn.mypurecloud.com/archy/#{version}/archy-macos.zip",
       verified: "sdk-cdn.mypurecloud.com/archy/"
@@ -15,7 +15,7 @@ cask "archy" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "archyBin/archy-macos-#{version}", target: "archy"
 

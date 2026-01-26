@@ -1,6 +1,6 @@
 cask "gstreamer-development" do
-  version "1.26.5"
-  sha256 "f70a9f7abea47f1e8ab42100270bc0e7a5005fca668ada8d2816a15496fe8b71"
+  version "1.26.10"
+  sha256 "fee92b27b495b74117a215067cb4df8520fefd016acecaba305b548720f0837d"
 
   url "https://gstreamer.freedesktop.org/data/pkg/osx/#{version}/gstreamer-1.0-devel-#{version}-universal.pkg"
   name "GStreamer development package"
@@ -12,7 +12,7 @@ cask "gstreamer-development" do
     regex(/gstreamer[._-]1\.0[._-]devel[._-]v?(\d+(?:\.\d+)+)[._-]universal\.pkg/i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on cask: "gstreamer-runtime"
 
@@ -23,6 +23,8 @@ cask "gstreamer-development" do
     "org.freedesktop.gstreamer.universal.base-system-1.0-devel",
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-capture-devel",
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-codecs-devel",
+    "org.freedesktop.gstreamer.universal.gstreamer-1.0-codecs-gpl-devel",
+    "org.freedesktop.gstreamer.universal.gstreamer-1.0-codecs-gpl-restricted-devel",
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-codecs-restricted-devel",
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-core-devel",
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-devtools-devel",

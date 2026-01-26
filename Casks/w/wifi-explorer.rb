@@ -1,6 +1,6 @@
 cask "wifi-explorer" do
-  version "3.5.6"
-  sha256 "4f5c0d16d139f0ddb168cd48e4610ab2e1d64d0fd5f27c644ba1b574dbcb127c"
+  version "3.6.3"
+  sha256 "f300d81ec4addffa27d92632eab193deb33a25760c3bd9e6da6a53834f610806"
 
   url "https://www.intuitibits.com/downloads/WiFiExplorer_#{version}.dmg"
   name "WiFi Explorer"
@@ -13,7 +13,7 @@ cask "wifi-explorer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :ventura"
 
   app "WiFi Explorer.app"
 

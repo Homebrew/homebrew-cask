@@ -1,6 +1,6 @@
 cask "mia-for-gmail" do
-  version "2.7.4"
-  sha256 "9d0304868c8c31609d44abb68df44a8cda96dc965b4731015990578ab221c746"
+  version "2.8.1"
+  sha256 "c23e49232a47f877d582b10efd8f31cfc3832e52aba57316abc3cff11ab6d45a"
 
   url "https://www.sovapps.com/application/notifier-pro-for-gmail/mia.#{version}.zip",
       verified: "sovapps.com/application/notifier-pro-for-gmail/"
@@ -14,7 +14,6 @@ cask "mia-for-gmail" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Mia for Gmail.app"
 

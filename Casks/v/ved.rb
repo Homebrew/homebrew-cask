@@ -1,6 +1,6 @@
 cask "ved" do
-  version "1.12.1"
-  sha256 "e7ca8026595d3d4310337372aec10afa13783491e64665431e569757b171b784"
+  version "1.12.2"
+  sha256 "c5d413a1cb6ba45900e3e79f3789d9a0eb78bf18b90ea8d2b138bde35c98a00b"
 
   url "https://tolp.nl/ved/files/download/mac/ved_#{version}_mac.dmg"
   name "ved"
@@ -11,6 +11,8 @@ cask "ved" do
     url "https://tolp.nl/ved/files/download/mac/"
     regex(/href=.*?ved[ ._-]v?(\d+(?:\.\d+)+)[ ._-]mac\.dmg/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Ved.app"
 

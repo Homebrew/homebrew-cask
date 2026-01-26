@@ -13,8 +13,6 @@ cask "forecast" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Forecast.app"
 
   zap trash: [

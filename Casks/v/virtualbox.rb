@@ -1,9 +1,9 @@
 cask "virtualbox" do
   arch arm: "macOSArm64", intel: "OSX"
 
-  version "7.2.0,170228"
-  sha256 arm:   "d36e5adf32def56d51b3bffda3c40f03d4443f15c73c9783ff3e3158bb0faed3",
-         intel: "b11619ad3749e377ff7a31df4728579ec403801c3a98b9ecf7cb580b20d7af7b"
+  version "7.2.4,170995"
+  sha256 arm:   "cef88951ef9da5e609724dca5d50ca8cc898f5f9f29ace529ca9b95305006fdd",
+         intel: "f724ebec6ca738bf21cb55e8693092fce2bc0e63d9c2d81877d460bc84f66279"
 
   on_arm do
     desc "Virtualiser for arm64 hardware"
@@ -31,7 +31,6 @@ cask "virtualbox" do
     "virtualbox@6",
     "virtualbox@beta",
   ]
-  depends_on macos: ">= :catalina"
 
   pkg "VirtualBox.pkg",
       choices: [

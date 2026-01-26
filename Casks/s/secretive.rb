@@ -1,23 +1,25 @@
 cask "secretive" do
-  on_catalina :or_older do
-    version "1.0.3"
-    sha256 "d8522c153f20cd03513e6815bdb46be98eae0db2b2a45d30f60b25a6609d1657"
+  on_ventura :or_older do
+    on_catalina :or_older do
+      version "1.0.3"
+      sha256 "d8522c153f20cd03513e6815bdb46be98eae0db2b2a45d30f60b25a6609d1657"
+    end
+    on_big_sur do
+      version "2.3.1"
+      sha256 "493a72362898b4480baa70f115d9515b41b2af4a503caf00277e2bc3824b0bbd"
+    end
+    on_monterey :or_newer do
+      version "2.4.1"
+      sha256 "00ddf651f1151f1e3888c51e58ce343f6888480db79771b6de7371db21bde4d8"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_big_sur do
-    version "2.3.1"
-    sha256 "493a72362898b4480baa70f115d9515b41b2af4a503caf00277e2bc3824b0bbd"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_monterey :or_newer do
-    version "2.4.1"
-    sha256 "00ddf651f1151f1e3888c51e58ce343f6888480db79771b6de7371db21bde4d8"
+  on_sonoma :or_newer do
+    version "3.0.4"
+    sha256 "696d07812e4431075234a900a0136dbad3131a91086e535fc2b07d69a1d084ba"
 
     livecheck do
       url :url
@@ -29,8 +31,6 @@ cask "secretive" do
   name "Secretive"
   desc "Store SSH keys in the Secure Enclave"
   homepage "https://github.com/maxgoedjen/secretive"
-
-  depends_on macos: ">= :catalina"
 
   app "Secretive.app"
 

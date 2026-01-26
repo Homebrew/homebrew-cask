@@ -7,6 +7,8 @@ cask "qlmobi" do
   desc "Quick Look plugin for Kindle ebook formats"
   homepage "https://github.com/bfabiszewski/QLMobi"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "QLMobi.qlgenerator"
 
   # No zap stanza required

@@ -1,6 +1,6 @@
 cask "amazon-workspaces" do
-  version "5.29.1.5955"
-  sha256 "049c153b303dfbf329f69e484f6dd809710e148c663dcba862e5ac55845d09f9"
+  version "5.30.2.6010"
+  sha256 "78fddece030d4bba08ad7899e60c5f4f108a645320494d6349e837dd91243264"
 
   url "https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces_AllProducts_#{version.split(".").last}.zip",
       verified: "d2td7dqidlhjx7.cloudfront.net/prod/global/osx/"
@@ -14,7 +14,6 @@ cask "amazon-workspaces" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   pkg "WorkSpaces.pkg"
 

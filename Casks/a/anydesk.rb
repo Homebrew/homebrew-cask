@@ -1,5 +1,5 @@
 cask "anydesk" do
-  version "9.5.0"
+  version "9.6.1"
   sha256 :no_check
 
   url "https://download.anydesk.com/anydesk.dmg"
@@ -8,11 +8,9 @@ cask "anydesk" do
   homepage "https://anydesk.com/"
 
   livecheck do
-    url "https://anydesk.com/en/downloads/mac-os"
-    regex(/>v(\d+(?:\.\d+)+)[\s<]/i)
+    url "https://download.anydesk.com/changelog.txt"
+    regex(/v?(\d+(?:\.\d+)+)\s+\(macOS\)/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "AnyDesk.app"
 
@@ -24,6 +22,7 @@ cask "anydesk" do
             ],
             delete: [
               "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
+              "/Library/LaunchAgents/com.philandro.anydesk.Hub.plist",
               "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
               "/Library/LaunchDaemons/com.philandro.anydesk.service.plist",
               "/Library/PrivilegedHelperTools/com.philandro.anydesk.Helper",

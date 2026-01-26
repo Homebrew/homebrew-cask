@@ -1,6 +1,6 @@
 cask "kdrive" do
-  version "3.7.5.20250812"
-  sha256 "f5ce15b89ef54b3499c0d7910f1794715911efae367b4011236bc0ac52c38372"
+  version "3.8.1.4"
+  sha256 "ad7d188488f41d131de061f9fff9d79ea15d85dc83a47b9f1c218ab9b49bee97"
 
   url "https://download.storage.infomaniak.com/drive/desktopclient/kDrive-#{version}.pkg"
   name "kDrive"
@@ -15,7 +15,6 @@ cask "kdrive" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   pkg "kDrive-#{version}.pkg"
 

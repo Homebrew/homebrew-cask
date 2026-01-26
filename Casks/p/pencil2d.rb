@@ -9,7 +9,7 @@ cask "pencil2d" do
   desc "Open-source tool to make 2D hand-drawn animations"
   homepage "https://www.pencil2d.org/"
 
-  depends_on macos: ">= :high_sierra"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Pencil2D.app"
 

@@ -13,7 +13,6 @@ cask "yt-music" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "YT Music.app"
 

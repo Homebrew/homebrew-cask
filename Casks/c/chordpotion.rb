@@ -1,6 +1,6 @@
 cask "chordpotion" do
-  version "2.5.0"
-  sha256 "d33538ef56ec823722b4467e91c7e1f34770324014dbda59fa2e19b7156d43ab"
+  version "2.6.0"
+  sha256 "1704727fde929d06fa99aec83d6f3f57a27d5caff6b86eca758a410d49d45843"
 
   url "https://fys.ams3.cdn.digitaloceanspaces.com/data/ChordPotion_#{version}_mac.zip",
       verified: "fys.ams3.cdn.digitaloceanspaces.com/data/"
@@ -12,8 +12,6 @@ cask "chordpotion" do
     url "https://feelyoursound.com/download-chordpotion/"
     regex(/href=.*?ChordPotion[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   pkg "ChordPotion_#{version}.pkg"
 

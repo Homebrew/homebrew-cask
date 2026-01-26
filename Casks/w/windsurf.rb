@@ -1,9 +1,9 @@
 cask "windsurf" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.12.2,b8f002c02d165600299a109bf21d02d139c52644"
-  sha256 arm:   "9d66ea4eaf0fadb08b0d3e018ca02cf9c9075b64b0304d63dcd0ff717ea17f7f",
-         intel: "f1c344a67ba762494f6c861e1da4813d0bc7138b14bf60489fcf87791308a5aa"
+  version "1.13.12,aa644d109002a89ca18e1ba5fe9355859b4f0565"
+  sha256 arm:   "17013c28d15ad578926b0d8fa99ee07f5f1f17bdd3c223deb96974f62c2154a1",
+         intel: "2c9a4a9ee02891e3c7b40f930901e7ea09610cf509b4f9217905c6600abf2524"
 
   url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/stable/#{version.csv.second}/Windsurf-darwin-#{arch}-#{version.csv.first}.dmg",
       verified: "windsurf-stable.codeiumdata.com/"
@@ -23,7 +23,7 @@ cask "windsurf" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Windsurf.app"
   binary "#{appdir}/Windsurf.app/Contents/Resources/app/bin/windsurf"

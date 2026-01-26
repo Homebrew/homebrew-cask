@@ -1,6 +1,6 @@
 cask "audio-modeling-software-center" do
-  version "2.0.4-461"
-  sha256 "e7be33038773d645657c6d9e83e5cef5ea5ddac0446fc94e8b40492c0ef64562"
+  version "2.1.1-567"
+  sha256 "8030089e13948884bf29d59b05d8f8f8fc4fbe46de30590bfa984da4497165e3"
 
   url "https://static.audiomodeling.com/software_center/AudioModelingSoftwareCenter-#{version}-osx-installer.dmg"
   name "Audio Modeling Software Center"
@@ -11,8 +11,6 @@ cask "audio-modeling-software-center" do
     url "https://audiomodeling.com/support/install-and-update/"
     regex(/AudioModelingSoftwareCenter[._-](\d+(?:\.\d+)+-\d+)-osx-installer\.dmg/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   installer script: {
     executable: "AudioModelingSoftwareCenter-#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",

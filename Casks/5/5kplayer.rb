@@ -1,5 +1,5 @@
 cask "5kplayer" do
-  version "6.10.0"
+  version "6.11.0"
   sha256 :no_check
 
   url "https://www.5kplayer.com/download/5kplayer.dmg"
@@ -28,8 +28,4 @@ cask "5kplayer" do
     "~/Library/Preferences/com.digiarty.5kplayer.plist",
     "~/Library/Saved Application State/com.digiarty.5kplayer.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

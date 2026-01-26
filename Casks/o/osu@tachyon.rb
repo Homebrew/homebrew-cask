@@ -1,23 +1,35 @@
 cask "osu@tachyon" do
   arch arm: "Apple.Silicon", intel: "Intel"
 
-  version "2025.822.0-tachyon"
-  sha256 arm:   "b9ca31276cd1fc520d7c04af397180c6fc86d66ebd407851f908352566655d82",
-         intel: "be8693a0f9d4fd50e9229691b19cfa08c6de7e4f38bbd6be128addbce7b9ca89"
+  version "2026.124.0-tachyon"
+  sha256 arm:   "5af5e39d4dd78997d1d10649472ca695fd102fd7151a96eb3feb18f927080abe",
+         intel: "dc4059028249fb42724e49df66273610b1406fff9a18472e1255a55c0737e20c"
 
   url "https://github.com/ppy/osu/releases/download/#{version}/osu.app.#{arch}.zip"
   name "osu! (tachyon)"
   desc "Rhythm game"
   homepage "https://github.com/ppy/osu/"
 
+  # There can be a notable gap between tag and release, so it's necessary to
+  # check releases instead of Git tags. Tachyon releases are marked as
+  # "pre-release" on GitHub, so we have to use the `GithubReleases` strategy.
   livecheck do
     url :url
-    regex(/^v?((\d+(?:\.\d+)+)(?:-tachyon)?)$/i)
+    regex(/^v?((\d+(?:\.\d+)+)(?:-\w+)?)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        match = release["tag_name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   auto_updates true
   conflicts_with cask: "osu"
-  depends_on macos: ">= :sierra"
 
   app "osu!.app"
 

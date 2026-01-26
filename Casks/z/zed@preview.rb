@@ -1,9 +1,9 @@
 cask "zed@preview" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.201.2"
-  sha256 arm:   "a119f8cc09bf46982f69b2b0bb2ac8883cc8e994cc97bcf0a6ab9e56a63cc3e9",
-         intel: "e8b3ae0ced8b359716ac3873feacb0fa1e2cb0836cba40969f381fcad0796507"
+  version "0.221.3"
+  sha256 arm:   "05a54021bedbf5acb9c6167367b637fce07f5437358a6746271401df5aa190f3",
+         intel: "6a3f9b5abcf2f8072de9cca4e5c32103a61cdad4024e01fd6f9868f8dd9d5f80"
 
   url "https://zed.dev/api/releases/preview/#{version}/Zed-#{arch}.dmg"
   name "Zed Preview"
@@ -18,7 +18,6 @@ cask "zed@preview" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Zed Preview.app"
   binary "#{appdir}/Zed Preview.app/Contents/MacOS/cli", target: "zed-preview"

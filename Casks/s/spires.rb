@@ -1,6 +1,6 @@
 cask "spires" do
-  version "2.0.10"
-  sha256 "f811abfdc457c5537c7e520343f563c04673f578d047580de7b27356dc32455a"
+  version "2.0.12"
+  sha256 "21e1ce6de6605ad0b0ee6ec85e801fcd876428bfa10681baa4ccb138d0bd1d24"
 
   url "https://member.ipmu.jp/yuji.tachikawa/spires/zips/spires_#{version}.zip"
   name "spires"
@@ -13,7 +13,6 @@ cask "spires" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "spires.app"
 

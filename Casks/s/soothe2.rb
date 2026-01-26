@@ -14,8 +14,6 @@ cask "soothe2" do
     regex(/<h3>v?(\d+(?:\.\d+)+)[" <]/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "soothe2_v#{version.no_dots}_Mac.pkg"
 
   uninstall pkgutil: [

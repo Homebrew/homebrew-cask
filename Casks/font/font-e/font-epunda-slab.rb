@@ -3,10 +3,11 @@ cask "font-epunda-slab" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
+      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/epundaslab"
   name "Epunda Slab"
-  homepage "https://github.com/typofactur/epundaslab"
+  homepage "https://fonts.google.com/specimen/Epunda+Slab"
 
   font "EpundaSlab-Italic[wght].ttf"
   font "EpundaSlab[wght].ttf"

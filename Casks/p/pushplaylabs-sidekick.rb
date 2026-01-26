@@ -1,6 +1,5 @@
 cask "pushplaylabs-sidekick" do
   arch arm: "arm64", intel: "x64"
-  livecheck_folder = on_arch_conditional arm: "macm1", intel: "mac"
 
   on_arm do
     version "124.61.1.50292,e244ab6"
@@ -16,18 +15,7 @@ cask "pushplaylabs-sidekick" do
   desc "Browser designed for modern work"
   homepage "https://www.meetsidekick.com/"
 
-  livecheck do
-    url "https://api.meetsidekick.com/downloads/df/#{livecheck_folder}"
-    regex(/[_-](\d+(?:\.\d+)+)[_-](.+)[._-](?:default|df)\.dmg/i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
-  end
-
-  depends_on macos: ">= :catalina"
+  disable! date: "2025-10-05", because: :discontinued
 
   app "Sidekick.app"
 

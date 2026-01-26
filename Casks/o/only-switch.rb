@@ -1,6 +1,6 @@
 cask "only-switch" do
-  version "2.5.8"
-  sha256 "beefa4d8264b3b2327e1001a2d1da6b4a6f4c2b843f44510f736b0d1eb65ae6f"
+  version "2.6.4"
+  sha256 "5a7a121f38af499342d68050af094ebcd61e8aed944a53633d3985cdb33d56c4"
 
   url "https://github.com/jacklandrin/OnlySwitch/releases/download/release_#{version}/OnlySwitch.dmg"
   name "OnlySwitch"
@@ -13,7 +13,7 @@ cask "only-switch" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Only Switch.app"
 

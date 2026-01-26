@@ -11,7 +11,6 @@ cask "iglance" do
   disable! date: "2025-07-17", because: :unmaintained
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "iGlance.app"
 

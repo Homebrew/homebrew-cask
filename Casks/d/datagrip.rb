@@ -1,9 +1,9 @@
 cask "datagrip" do
   arch arm: "-aarch64"
 
-  version "2025.2.2,252.25557.34"
-  sha256 arm:   "eec04b3602062cf5dd6be20b0c77ce4a384c0727bd43403d1eb9646b268439f6",
-         intel: "7e3993f6fbf4254e81ce7b19fd173ac6a3f93a7d60b4d897f3fd73136ff7dc2e"
+  version "2025.3.4,253.30387.92"
+  sha256 arm:   "3a67c879527af4758176c7c8f6c5e75948032166e9f446dd3ac0d774bdffb5a3",
+         intel: "1378bb6f19ce7873f7f0b198f83c34ae5a4a9f8a6ce22c87636dcbfaacc22237"
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"
@@ -24,7 +24,6 @@ cask "datagrip" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "DataGrip.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

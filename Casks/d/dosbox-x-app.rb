@@ -1,9 +1,9 @@
 cask "dosbox-x-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2025.05.03,20250503164337"
-  sha256 arm:   "ffc21902349f8e12f6484786594c879c983f0e0e4c91ab96ba8f0112d42f92bf",
-         intel: "894ae6d3c01b66bdfa481a240ace526abcc96b3a49228393954a529bac95ebd7"
+  version "2026.01.02,20260102233440"
+  sha256 arm:   "5cd70957c63512e53fe7445c3d86b5cb6e6b842a9642c936cad27f41731fea8d",
+         intel: "33378197130c8823332da466bec320f126bc906db7d3d7e1db86aa25c0c85493"
 
   url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
       verified: "github.com/joncampbell123/dosbox-x/"
@@ -23,6 +23,8 @@ cask "dosbox-x-app" do
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "dosbox-x/dosbox-x.app"
 

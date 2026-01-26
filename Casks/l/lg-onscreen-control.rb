@@ -1,6 +1,6 @@
 cask "lg-onscreen-control" do
-  version "7.20,9mZ5Rk4cToGkdcOPTFIUgA"
-  sha256 "d2891a3b1b5413d1d55ecb9da6182f374e6d2fb2151d3c56a1efcb7d341e68c0"
+  version "7.29,G56e1FZdOUG7CHk5f6rKA"
+  sha256 "e55a752eca033b78892db543e3263a0236eabf16a03efc0748fedc3bea1a303e"
 
   url "https://gscs-b2c.lge.com/downloadFile?fileId=#{version.csv.second}",
       verified: "lge.com/"
@@ -28,8 +28,6 @@ cask "lg-onscreen-control" do
       end&.flatten
     end
   end
-
-  depends_on macos: ">= :mojave"
 
   pkg "OSC_V#{version.csv.first}_signed.pkg"
 

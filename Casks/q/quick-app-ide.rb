@@ -1,6 +1,6 @@
 cask "quick-app-ide" do
-  version "6.7.2"
-  sha256 "b60a47690b8c4e5aaa687301edcad476a1a0b0790e46cb10162a6437dbe77fd0"
+  version "6.7.3"
+  sha256 "ec7602a4ac4f4a7aea301cf20c3d9d54283241872de67fa7b0a866412f8230eb"
 
   url "https://statres.quickapp.cn/quickapp/show/ide/quickapp-ide-#{version}.pkg"
   name "Quick App IDE"
@@ -13,7 +13,7 @@ cask "quick-app-ide" do
     regex(/quickapp[._-]ide[._-]*?v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  depends_on macos: ">= :el_capitan"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   pkg "quickapp-ide-#{version}.pkg"
 

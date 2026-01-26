@@ -1,8 +1,8 @@
 cask "pixpin" do
-  version "2.0.0.3"
-  sha256 "34ddea7296dfb9ef6f71ec8203337948da12b1f112313fdb2c84b212be2485bd"
+  version "2.4.9.1"
+  sha256 "f25ea7195e3f469bb54d9f9ff83054ce9fdce8f31faced64b694cffa35d65cc5"
 
-  url "https://download.pixpin.cn/PixPin_#{version}_uni.dmg"
+  url "https://download.pixpin.cn/PixPin_cn_zh-cn_#{version}_uni.dmg"
   name "PixPin"
   desc "Screenshot tool"
   homepage "https://pixpin.cn/"
@@ -15,7 +15,6 @@ cask "pixpin" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "PixPin.app"
 

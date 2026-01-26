@@ -1,9 +1,9 @@
 cask "shift" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.5.10.1205"
-  sha256 arm:   "8033f7018669a1051afb58fb20abb0f66514dfe8c6af7fa420426645822c9f2f",
-         intel: "2a0e1afdbd6b6274b4afa40d0e81e3b1bd68e7e04e2935a8c9a786b33db863bc"
+  version "9.6.4.1231"
+  sha256 arm:   "51210315db71db2be06d95bacad1921c73011f0c62c239cd1cfa527189d255c5",
+         intel: "73e27d3d282406decde79c8204693ea3eb3eee2a2d0a89c3b83c0909b174baad"
 
   url "https://updates.tryshift.com/v#{version.major_minor_patch}/stable/shift-v#{version}-stable-#{arch}.dmg",
       verified: "updates.tryshift.com/"
@@ -19,7 +19,7 @@ cask "shift" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Shift.app"
 

@@ -7,7 +7,7 @@ cask "capslocknodelay" do
   desc "Removes delay when pressing the caps lock"
   homepage "https://github.com/gkpln3/CapsLockNoDelay"
 
-  depends_on macos: ">= :catalina"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "CapsLockNoDelay.app"
 

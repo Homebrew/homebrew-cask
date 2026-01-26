@@ -1,6 +1,6 @@
 cask "db-browser-for-sqlite@nightly" do
-  version "20250814"
-  sha256 "9073f1d4bf72c744cca688c4fb297057e516ee65454b41f5682a73330aa55ad2"
+  version "20260104"
+  sha256 "8f4404ab5354607ca055ec43c1e8ac5b6b33327750c035141748589d121e9cc2"
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-universal_#{version}.dmg",
       verified: "github.com/sqlitebrowser/sqlitebrowser/"
@@ -25,8 +25,6 @@ cask "db-browser-for-sqlite@nightly" do
       end.flatten
     end
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "DB Browser for SQLite Nightly.app"
 

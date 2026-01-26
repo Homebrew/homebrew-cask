@@ -7,8 +7,6 @@ cask "jupyter-notebook-viewer" do
   desc "Utility to render Jupyter notebooks"
   homepage "https://github.com/tuxu/nbviewer-app"
 
-  depends_on macos: ">= :catalina"
-
   app "Jupyter Notebook Viewer.app"
 
   zap trash: "~/Library/Saved Application State/com.tinowagner.nbviewer-app.savedState"

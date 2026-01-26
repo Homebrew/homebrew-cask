@@ -1,6 +1,6 @@
 cask "db-browser-for-sqlcipher@nightly" do
-  version "20250814"
-  sha256 "1d23012be24d35f5a4edce1c55c457af90516a665668a6cb7d4ad5e619f5462e"
+  version "20260104"
+  sha256 "fbb33dbe18ee4772cc27e1a6f99f13de8e5e210d0d64c761517f7d3d38c1af5b"
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLCipher-universal_#{version}.dmg",
       verified: "github.com/sqlitebrowser/sqlitebrowser/"
@@ -12,8 +12,6 @@ cask "db-browser-for-sqlcipher@nightly" do
     cask "db-browser-for-sqlite@nightly"
     regex(/^DB[._-]Browser[._-]for[._-]SQLCipher[._-]universal[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "DB Browser for SQLCipher Nightly.app"
 

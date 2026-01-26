@@ -8,15 +8,14 @@ cask "atemosc" do
   url "https://atemosc.com/download/atemOSC-#{version}#{arch}.dmg"
   name "atemOSC"
   desc "Control BMD ATEM video switchers with OSC"
-  homepage "https://www.atemosc.com/"
+  homepage "https://atemosc.com/"
 
   livecheck do
-    url "https://www.atemosc.com/download/latest-mac.yml"
+    url "https://atemosc.com/download/latest-mac.yml"
     strategy :electron_builder
   end
 
   auto_updates true # Requires a license key to enable
-  depends_on macos: ">= :high_sierra"
 
   app "atemOSC.app"
 

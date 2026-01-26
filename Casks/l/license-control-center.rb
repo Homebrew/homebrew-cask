@@ -8,11 +8,6 @@ cask "license-control-center" do
   desc "Music software license manager"
   homepage "https://helpcenter.steinberg.de/hc/en-us/articles/360008841379"
 
-  livecheck do
-    url "https://r.mb.steinberg.net/rc-elc-mac"
-    strategy :header_match
-  end
-
   deprecate! date: "2025-05-27", because: :discontinued
 
   installer manual: "eLicenserControlSetup.app"

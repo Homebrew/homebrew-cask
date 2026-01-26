@@ -1,27 +1,5 @@
 cask "teamviewer" do
-  on_high_sierra :or_older do
-    version "15.2.2756"
-    sha256 "fe7daf80f9aee056f97d11183941470fa1c5823101a0951990340b6264a2651a"
-
-    livecheck do
-      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.11.1&type=1&channel=1"
-      regex(%r{url=.*update/v?(\d+(?:\.\d+)+)/Teamviewer\.pkg}i)
-    end
-
-    pkg "TeamViewer.pkg"
-  end
-  on_mojave do
-    version "15.42.4"
-    sha256 "3357bc366cd0295dd100b790d6af6216d349d34451ea18ba08692a51eadd6cf7"
-
-    livecheck do
-      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.14.1&type=1&channel=1"
-      strategy :sparkle
-    end
-
-    pkg "TeamViewer.pkg"
-  end
-  on_catalina do
+  on_catalina :or_older do
     version "15.42.4"
     sha256 "3357bc366cd0295dd100b790d6af6216d349d34451ea18ba08692a51eadd6cf7"
 
@@ -42,8 +20,8 @@ cask "teamviewer" do
     EOS
   end
   on_big_sur do
-    version "15.68.6"
-    sha256 "1ae92da05ccd27d40743b493f13d6cbf33e8d8cfa4e9ba1e9e9864d67e7b37d8"
+    version "15.71.4"
+    sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
@@ -52,12 +30,23 @@ cask "teamviewer" do
 
     pkg "TeamViewer.pkg"
   end
-  on_monterey :or_newer do
-    version "15.68.6"
-    sha256 "1ae92da05ccd27d40743b493f13d6cbf33e8d8cfa4e9ba1e9e9864d67e7b37d8"
+  on_monterey do
+    version "15.71.4"
+    sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=12.7&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    pkg "TeamViewer.pkg"
+  end
+  on_ventura :or_newer do
+    version "15.73.5"
+    sha256 "a1d03ecf7abe1d96bbcc3876c376da7517823687e6d595acc321fdbdc3907759"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=13.7&type=1&channel=1"
       strategy :sparkle
     end
 
@@ -71,7 +60,6 @@ cask "teamviewer" do
 
   auto_updates true
   conflicts_with cask: "teamviewer-host"
-  depends_on macos: ">= :el_capitan"
 
   postflight do
     # postinstall launches the app
@@ -116,8 +104,11 @@ cask "teamviewer" do
     "~/Library/Caches/com.teamviewer.TeamViewer",
     "~/Library/Caches/TeamViewer",
     "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
+    "~/Library/HTTPStorages/com.teamviewer.TeamViewer",
+    "~/Library/HTTPStorages/com.teamviewer.TeamViewer.binarycookies",
     "~/Library/Logs/TeamViewer",
     "~/Library/Preferences/com.teamviewer*",
     "~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState",
+    "~/Library/WebKit/com.teamviewer.TeamViewer",
   ]
 end

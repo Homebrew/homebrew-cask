@@ -2,9 +2,9 @@ cask "github@beta" do
   arch arm: "arm64", intel: "x64"
   platform = on_arch_conditional arm: "darwin-arm64", intel: "darwin"
 
-  version "3.5.3-beta1-84277e15"
-  sha256 arm:   "51476ee8e610ec70ff81dd909404fa2651d81c78b4afd9eb63e47809daaafeb4",
-         intel: "0744a8010b2b95e4a2a2d1376b38122cb8b54bea8e8641fb826d17323539e71f"
+  version "3.5.5-beta2-a243456d"
+  sha256 arm:   "e93993f22437c9e05193ba0d853abfb9aff7758194f13c643c9556c7fad6c30c",
+         intel: "1102fac8b2699c62530ac2d5003845c26d4db2fd8579239de3b8773ada073611"
 
   url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-#{arch}.zip",
       verified: "desktop.githubusercontent.com/"
@@ -20,7 +20,7 @@ cask "github@beta" do
 
   auto_updates true
   conflicts_with cask: "github"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "GitHub Desktop.app"
   binary "#{appdir}/GitHub Desktop.app/Contents/Resources/app/static/github.sh", target: "github"

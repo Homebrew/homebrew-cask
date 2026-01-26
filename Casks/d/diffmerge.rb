@@ -12,6 +12,8 @@ cask "diffmerge" do
     regex(/href=.*?DiffMerge[._-]v?(\d+(?:\.\d+)+)\.intel\.stable\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "DiffMerge.app"
   binary "Extras/diffmerge.sh", target: "diffmerge"
   manpage "Extras/diffmerge.1"

@@ -1,9 +1,9 @@
 cask "electron" do
   arch arm: "arm64", intel: "x64"
 
-  version "37.3.1"
-  sha256 arm:   "7f390efeca2d2153e29c5ea13305915fb3f853b2a4e9a00be07183c6e09ac6de",
-         intel: "0a6a55de6c49d6eb929f01632701bd25f7e515d7b4042614dd5a1ec6c079f3f3"
+  version "40.0.0"
+  sha256 arm:   "bfa742c44b0053a9b6cf46a8124baff4a8a567feca2a5adbabf749075b298b69",
+         intel: "0120bcbd5cd063953b477fe8f950244b2f37770b9f85e60ca9b6bcaf85627b33"
 
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
       verified: "github.com/electron/electron/"
@@ -16,9 +16,9 @@ cask "electron" do
     strategy :github_latest
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Electron.app"
   binary "#{appdir}/Electron.app/Contents/MacOS/Electron", target: "electron"

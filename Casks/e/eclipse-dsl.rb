@@ -1,9 +1,9 @@
 cask "eclipse-dsl" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.36.0,2025-06"
-  sha256 arm:   "367b187be7a951421697012de7de9cfe515eebda727fed744842a77f60ab938a",
-         intel: "d07f56191a70c8f599fd3baac9750bb7a9c19f977696871a6fff5acdf5e8136c"
+  version "4.38,2025-12"
+  sha256 arm:   "28bb310bce54f0076d2862225b8704091c84c370ac3b125f0f0f444a3584ea1a",
+         intel: "6b3ef2888a468edef769dbf43f7050170a629ea4315d5e6a15f1ccb3afe43473"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-dsl-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Java and DSL Developers"
@@ -13,6 +13,8 @@ cask "eclipse-dsl" do
   livecheck do
     cask "eclipse-ide"
   end
+
+  depends_on macos: ">= :big_sur"
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse DSL.app"

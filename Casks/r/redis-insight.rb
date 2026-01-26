@@ -2,13 +2,14 @@ cask "redis-insight" do
   arch arm: "arm64", intel: "x64"
 
   version "2.70.1"
-  sha256 :no_check
+  sha256 arm:   "2ef847845b5cc725050d4ab78992afb9afccd01ee8e84f49a77bfb6e1f9fcb34",
+         intel: "c33dede2ae81cfaeba66cdf6d27084647fcc9f0fb8ea84a11b393420695dd0ba"
 
-  url "https://s3.amazonaws.com/redisinsight.download/public/latest/Redis-Insight-mac-#{arch}.dmg",
+  url "https://s3.amazonaws.com/redisinsight.download/public/releases/#{version}/Redis-Insight-mac-#{arch}.dmg",
       verified: "s3.amazonaws.com/redisinsight.download/"
   name "Redis Insight"
   desc "GUI for streamlined Redis application development"
-  homepage "https://redis.com/redis-enterprise/redis-insight/"
+  homepage "https://redis.io/insight/"
 
   livecheck do
     url "https://s3.amazonaws.com/redisinsight.download/public/latest/latest-mac.yml"

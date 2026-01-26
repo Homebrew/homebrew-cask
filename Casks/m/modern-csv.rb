@@ -1,6 +1,6 @@
 cask "modern-csv" do
-  version "2.2.3"
-  sha256 "740fc6004022fcff229ca2302ce965028847f45f59aa14c60bb33dcf9fa5a765"
+  version "2.3"
+  sha256 "b79e5144f65708d690b70c6f1fe3caf3c2e14cc1aae2fc85a21c49e23172fa92"
 
   url "https://www.moderncsv.com/release/ModernCSV-Mac-v#{version}.dmg"
   name "Modern CSV"
@@ -11,8 +11,6 @@ cask "modern-csv" do
     url "https://www.moderncsv.com/download-mac"
     strategy :header_match
   end
-
-  depends_on macos: ">= :mojave"
 
   app "Modern CSV.app"
 

@@ -12,7 +12,6 @@ cask "around" do
   disable! date: "2025-04-20", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Around.app"
 

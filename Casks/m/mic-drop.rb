@@ -9,9 +9,9 @@ cask "mic-drop" do
   homepage "https://getmicdrop.com/"
 
   deprecate! date: "2024-10-08", because: :moved_to_mas
+  disable! date: "2025-10-08", because: :moved_to_mas
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Mic Drop.app"
 

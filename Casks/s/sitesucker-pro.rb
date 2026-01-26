@@ -1,23 +1,21 @@
 cask "sitesucker-pro" do
-  on_catalina :or_older do
-    version "3.2.7"
-    sha256 "dd61a113ad86b580e0faf97b4aa86290e038bb3e098f2d19e67fc9e194ce1a3e"
-
-    livecheck do
-      skip "Legacy version"
+  on_big_sur :or_older do
+    on_catalina :or_older do
+      version "3.2.7"
+      sha256 "dd61a113ad86b580e0faf97b4aa86290e038bb3e098f2d19e67fc9e194ce1a3e"
     end
-  end
-  on_big_sur do
-    version "5.2"
-    sha256 "244fa73a0aa73b3786ee6eb4e5d6f6438942853d6d58c5de38b92f11e8d44428"
+    on_big_sur do
+      version "5.2"
+      sha256 "244fa73a0aa73b3786ee6eb4e5d6f6438942853d6d58c5de38b92f11e8d44428"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
   on_monterey :or_newer do
-    version "5.7.4"
-    sha256 "9461be7f4b15f8cff1ab773cdc4432d5ae199205d5091c9b522d78138f94fefe"
+    version "6.1.2"
+    sha256 "19bd5cc5dd5a05b470c030a5a93765906f7f0e6dc072f96904bf113934f43204"
 
     livecheck do
       url "https://ricks-apps.com/osx/sitesucker/pro-versions.plist"
@@ -36,7 +34,6 @@ cask "sitesucker-pro" do
   homepage "https://ricks-apps.com/osx/sitesucker/index.html"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "SiteSucker Pro.app"
 

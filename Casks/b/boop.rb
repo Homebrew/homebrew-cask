@@ -15,8 +15,6 @@ cask "boop" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Boop.app"
 
   zap trash: [

@@ -8,10 +8,7 @@ cask "affinity-photo@1" do
   desc "Professional image editing software"
   homepage "https://affinity.serif.com/en-us/photo/"
 
-  livecheck do
-    url "https://go.seriflabs.com/affinity-update-mac-retail-photo"
-    strategy :sparkle, &:version
-  end
+  deprecate! date: "2025-10-30", because: :discontinued
 
   auto_updates true
 

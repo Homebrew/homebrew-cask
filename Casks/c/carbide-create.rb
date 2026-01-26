@@ -1,6 +1,6 @@
 cask "carbide-create" do
-  version "815"
-  sha256 "4bc73e167d44cfa5ff53bc52790678762911a1a9a9146581b36967183ee149d8"
+  version "838"
+  sha256 "16e79236fc073450692bd96f0a7466f9ead564527f1ccd2433508a6d68e58e7d"
 
   url "https://carbide-downloads.website-us-east-1.linodeobjects.com/cc/stable/#{version}/CarbideCreate-#{version}.dmg",
       verified: "carbide-downloads.website-us-east-1.linodeobjects.com/"
@@ -14,8 +14,6 @@ cask "carbide-create" do
       json.dig("cc", "stable", "osx", "build")&.to_s
     end
   end
-
-  depends_on macos: ">= :mojave"
 
   app "Carbide Create.app"
 

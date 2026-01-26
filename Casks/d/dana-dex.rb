@@ -1,9 +1,9 @@
 cask "dana-dex" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.17.0"
-  sha256 arm:   "53469e28df5ef3670bd42019e5a97ec9af3518cdb2f15029e76dd75edea27c10",
-         intel: "182cf25a97dde4eb6b046e66369b33e15a761140d64de601a48303803fad00b3"
+  version "1.19.0"
+  sha256 arm:   "0408cb958bab2e4306bcfe81aa83a5e6bd871d31a685b225df0c6f1d2e74fcd2",
+         intel: "9d19121fc8382a3b4a544824e40192fdd1549a55490680ad53f87d3031c2a5a6"
 
   url "https://download.todesktop.com/201210b49whoa4k/Dex%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/201210b49whoa4k/"
@@ -16,7 +16,7 @@ cask "dana-dex" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   app "Dex.app"
 

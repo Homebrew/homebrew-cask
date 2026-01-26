@@ -1,6 +1,6 @@
 cask "kuaitie" do
-  version "5.0.3,1748345656"
-  sha256 "952527e021f777ac6b363450d8bf65e31b32b6dee99dc76a31eb4ae4bacf1707"
+  version "6.0.0,1766990787"
+  sha256 "50f27ebfceaa3f93afbe512b89a381c0829288db9ace3c5c4f8ee0bcc16c2bda"
 
   url "https://clipweb.oss-cn-qingdao.aliyuncs.com/release/macos/packages/kuaitie-#{version.csv.first.no_dots}_#{version.csv.second}.zip",
       verified: "clipweb.oss-cn-qingdao.aliyuncs.com/release/macos/packages/"
@@ -14,7 +14,6 @@ cask "kuaitie" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "kuaitie.app"
 

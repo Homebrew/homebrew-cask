@@ -1,7 +1,7 @@
 cask "wiso-steuer-2025" do
   # NOTE: "2025" is not a version number, but an intrinsic part of the product name
-  version "32.09.2670-HF1,32.09.2670"
-  sha256 "6ad1032b5a7c36d0d50b7e62dbb2be582f8afd7a7247eb0ee5a549539684017d"
+  version "32.10.2930-HF4,32.10.2930"
+  sha256 "a19c3440553671fc14ea391de7935e7dc69ffdbba7df9ed4b80ac088aa4e97b6"
 
   url "https://update.buhl-data.com/Updates/Steuer/2025/Mac/Files/#{version.csv.first}/SteuerMac2025-#{version.csv.second || version.csv.first.split("-").first}.dmg",
       verified: "update.buhl-data.com/Updates/Steuer/"
@@ -21,7 +21,6 @@ cask "wiso-steuer-2025" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   # Renamed for consistency: app name differs in Finder to shell
   app "SteuerMac 2025.app", target: "WISO Steuer 2025.app"

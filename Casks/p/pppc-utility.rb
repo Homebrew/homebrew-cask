@@ -8,8 +8,6 @@ cask "pppc-utility" do
   desc "Create configuration profiles containing a PPPC payload"
   homepage "https://github.com/jamf/PPPC-Utility"
 
-  depends_on macos: ">= :catalina"
-
   app "PPPC Utility.app"
 
   uninstall quit: "com.jamf.opensource.pppcutility"

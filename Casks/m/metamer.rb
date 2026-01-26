@@ -23,8 +23,6 @@ cask "metamer" do
     end
   end
 
-  depends_on macos: ">= :mojave"
-
   app "metamer#{version.csv.first.no_dots}/Metamer.app"
 
   zap trash: [

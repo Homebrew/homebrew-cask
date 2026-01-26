@@ -1,23 +1,23 @@
 cask "remnote" do
   arch arm: "-arm64"
 
-  version "1.16.17"
-  sha256 arm:   "21f0888ebfa835134713f852b78ee49465499bceb68d0b6099642c149f73e247",
-         intel: "8c46cda048beffb826d7c0368eb75671b1dd85d1eb5e50ce8e512b79b1083ac4"
+  version "1.22.68"
+  sha256 arm:   "2a2a2d8850c7e39be069dba7e40249740ab158484570d8d47e759c903dad1abb",
+         intel: "8dafe67e78f1b1486aceeb9d21079b3da65f79613a507b94f66bd8d3d184be6c"
 
-  url "https://download.remnote.io/remnote-desktop/RemNote-#{version}#{arch}-mac.zip",
-      verified: "download.remnote.io/"
+  url "https://download2.remnote.io/remnote-desktop2/RemNote-#{version}#{arch}-mac.zip",
+      verified: "download2.remnote.io/"
   name "RemNote"
   desc "Spaced-repetition powered note-taking tool"
   homepage "https://www.remnote.com/"
 
   livecheck do
-    url "https://download.remnote.io/remnote-desktop/latest-mac.yml"
+    url "https://download2.remnote.io/remnote-desktop2/latest-mac.yml"
     strategy :electron_builder
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "RemNote.app"
 

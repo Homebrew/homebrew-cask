@@ -14,6 +14,8 @@ cask "lego-mindstorms-ev3" do
     strategy :header_match
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   pkg "LEGO MINDSTORMS EV3 Home Edition.pkg"
 
   uninstall pkgutil: [

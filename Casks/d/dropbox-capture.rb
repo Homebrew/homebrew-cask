@@ -14,7 +14,6 @@ cask "dropbox-capture" do
   disable! date: "2025-03-24", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Dropbox Capture.app"
 

@@ -8,6 +8,7 @@ cask "rodeo" do
   homepage "https://github.com/yhat/rodeo"
 
   deprecate! date: "2024-09-08", because: :unmaintained
+  disable! date: "2025-09-09", because: :unmaintained
 
   app "Rodeo.app"
 

@@ -1,5 +1,5 @@
 cask "clibor" do
-  version "1.5"
+  version "1.6"
   sha256 :no_check
 
   language "en", default: true do

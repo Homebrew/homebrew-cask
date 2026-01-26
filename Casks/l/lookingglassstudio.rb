@@ -33,8 +33,6 @@ cask "lookingglassstudio" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :catalina"
-
   zap trash: [
     "~/Library/Application Support/LookingGlassStudio",
     "~/Library/Preferences/com.lookingglassfactory.studio.plist",

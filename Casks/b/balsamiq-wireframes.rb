@@ -1,6 +1,6 @@
 cask "balsamiq-wireframes" do
-  version "4.8.4"
-  sha256 "75c1698a333357fe582d3b8d7eb33b9bf34a31f6c2dbe372dbeea91de8c46dca"
+  version "4.8.6"
+  sha256 "3817553ac4801b3a245b55f1996870371cd3599a8c99f0054dd796bc09ceeca7"
 
   url "https://builds.balsamiq.com/bwd/Balsamiq%20Wireframes%20#{version}.dmg"
   name "Balsamiq Wireframes"
@@ -18,8 +18,6 @@ cask "balsamiq-wireframes" do
       json["version"]
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   app "Balsamiq Wireframes.app"
 

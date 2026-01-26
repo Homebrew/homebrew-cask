@@ -13,8 +13,6 @@ cask "xrg" do
     regex(%r{href=.*?/XRG[._-]release[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "XRG.app"
 
   zap trash: [

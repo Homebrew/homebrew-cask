@@ -1,5 +1,5 @@
 cask "securityspy" do
-  version "6.13"
+  version "6.17"
   sha256 :no_check
 
   url "https://www.bensoftware.com/securityspy/releases/SecuritySpy.dmg"
@@ -11,8 +11,6 @@ cask "securityspy" do
     url "https://www.bensoftware.com/securityspy/versionhistory.html"
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "SecuritySpy.app"
 

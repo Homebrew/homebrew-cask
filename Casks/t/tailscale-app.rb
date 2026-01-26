@@ -1,6 +1,6 @@
 cask "tailscale-app" do
-  version "1.86.4"
-  sha256 "0b13908ba8e6673fa08228c3fccb504337cca4a468395202f55526ad08a95a40"
+  version "1.92.3"
+  sha256 "2b9b491f2161aa7c55e0a1f3afb60e1d1a07df7be4f9dabe1155b2528f3c9ee2"
 
   url "https://pkgs.tailscale.com/stable/Tailscale-#{version}-macos.pkg"
   name "Tailscale"
@@ -13,7 +13,7 @@ cask "tailscale-app" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   pkg "Tailscale-#{version}-macos.pkg"
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)

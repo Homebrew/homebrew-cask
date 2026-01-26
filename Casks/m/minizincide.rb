@@ -1,6 +1,6 @@
 cask "minizincide" do
-  version "2.9.3"
-  sha256 "4cfcc624d5b8354edeea7f0e9837bb1c3703be7e1922fd25800e0b81fd9e57b8"
+  version "2.9.5"
+  sha256 "377e919a3b553ab2a059d0cf149c4e113dc5a587f594d88a90d5c22a23a3d769"
 
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg",
       verified: "github.com/MiniZinc/MiniZincIDE/"
@@ -8,7 +8,7 @@ cask "minizincide" do
   desc "Open-source constraint modelling language and IDE"
   homepage "https://www.minizinc.org/index.html"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :ventura"
 
   app "MiniZincIDE.app"
   binary "#{appdir}/MiniZincIDE.app/Contents/Resources/minizinc"

@@ -1,9 +1,9 @@
 cask "gcloud-cli" do
   arch arm: "arm", intel: "x86_64"
 
-  version "535.0.0"
-  sha256 arm:   "00a083d358df92ec8094c32ee97c68b2674738f476bafbb7f6a4c27f01c091dc",
-         intel: "c2337efa7cbbc6bbe8175554410dbb69a1b30226fc64961221e082bfd97ad293"
+  version "553.0.0"
+  sha256 arm:   "92aed81f1f79020d8a6c9328f0e6081ef017bc1cd23d8c8f4c900f583f0b95c1",
+         intel: "356dae8d0fb55d1003c300477d52b197263e60a020c778b43fa6f523192b99b6"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-darwin-#{arch}.tar.gz"
   name "Google Cloud CLI"
@@ -11,12 +11,12 @@ cask "gcloud-cli" do
   homepage "https://cloud.google.com/cli/"
 
   livecheck do
-    url "https://cloud.google.com/sdk/docs/install-sdk"
-    regex(/latest\s*gcloud\s*CLI\s*version\s*\(v?(\d+(?:\.\d+)+)\)/i)
+    url "https://docs.cloud.google.com/sdk/docs/install-sdk"
+    regex(/gcloud\s*CLI\s*version\s*\(?v?(\d+(?:\.\d+)+)\)?/i)
   end
 
   auto_updates true
-  depends_on formula: "python@3.12"
+  depends_on formula: "python@3.13"
 
   google_cloud_sdk_root = "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
 
@@ -55,16 +55,20 @@ cask "gcloud-cli" do
     if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
       puts "deleting existing virtual env before enabling virtual env with current Python version"
       system_command "#{google_cloud_sdk_root}/bin/gcloud",
-                     args: ["config", "virtualenv", "delete", "-q"]
+                     args:      ["config", "virtualenv", "delete", "-q"],
+                     reset_uid: true
     end
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                    args: ["config", "virtualenv", "create", "--python-to-use",
-                           "#{HOMEBREW_PREFIX}/opt/python@3.12/libexec/bin/python3"]
+                    args:      ["config", "virtualenv", "create", "--python-to-use",
+                                "#{HOMEBREW_PREFIX}/opt/python@3.13/libexec/bin/python3"],
+                    reset_uid: true
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                    args: ["config", "virtualenv", "enable"]
+                    args:      ["config", "virtualenv", "enable"],
+                    reset_uid: true
 
     system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                    args: ["version"]
+                    args:      ["version"],
+                    reset_uid: true
   end
 
   uninstall trash: staged_path.dirname/"latest"
@@ -73,4 +77,10 @@ cask "gcloud-cli" do
     "#{google_cloud_sdk_root}.staging",
     google_cloud_sdk_root,
   ]
+
+  caveats <<~EOS
+    To use additional binary components installed via gcloud, add the "#{google_cloud_sdk_root}/bin"
+    directory to your PATH environment variable, e.g., (for Bash shell):
+       export PATH=#{google_cloud_sdk_root}/bin:"$PATH"
+  EOS
 end

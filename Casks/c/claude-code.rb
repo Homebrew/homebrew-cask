@@ -2,11 +2,11 @@ cask "claude-code" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "1.0.88"
-  sha256 arm:          "3fb2473c8e5e4c08a582b163250256e71cabe8044d7611b7d4e93e64aa503638",
-         x86_64:       "cae354ad3c158427e9049e71e9d9da5de69e62b9ca97588f6989e2a6670503e2",
-         x86_64_linux: "c97268fe78d9c7b5798d6626e5092c181b97e21b54aaa1d6d4408dd64f545f71",
-         arm64_linux:  "f212d1688b48ce146dc6a5a73fe85f009e974e94e6b0346dc031cdb31cdc761d"
+  version "2.1.19"
+  sha256 arm:          "d386ac8f6d1479f85d31f369421c824135c10249c32087017d05a5f428852c41",
+         x86_64:       "be266b3a952f483d8358ad141e2afe661170386506f479ead992319e4fdc38ac",
+         x86_64_linux: "4e2a1c73871ecf3b133376b57ded03333a7a6387f2d2a3a6279bb90a07f7a944",
+         arm64_linux:  "8c4b61b24ca760d6f7aa2f19727163d122e9fd0c3ce91f106a21b6918a7b1bbb"
 
   url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/#{version}/#{os}-#{arch}/claude",
       verified: "storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/"
@@ -15,11 +15,9 @@ cask "claude-code" do
   homepage "https://www.anthropic.com/claude-code"
 
   livecheck do
-    url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/stable"
+    url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest"
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
-
-  depends_on macos: ">= :catalina"
 
   binary "claude"
 
@@ -33,12 +31,4 @@ cask "claude-code" do
     "~/.local/state/claude",
     "~/Library/Caches/claude-cli-nodejs",
   ]
-
-  caveats <<~EOS
-    Claude Code's auto-updater installs updates to `~/.local/bin/claude` and
-    not to Homebrew's location. It is recommended to disable the auto-updater
-    with either `DISABLE_AUTOUPDATER=1` or
-    `claude config set -g autoUpdates false` and use
-    `brew upgrade --cask #{token}`.
-  EOS
 end

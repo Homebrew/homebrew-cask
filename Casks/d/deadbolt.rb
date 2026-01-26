@@ -15,7 +15,7 @@ cask "deadbolt" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Deadbolt.app"
 

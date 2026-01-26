@@ -1,6 +1,6 @@
 cask "fujitsu-scansnap-home" do
-  version "3.1.0"
-  sha256 "1e577da44a142e6a0fae958ebf0db63cc491e1c6c2152966c0df159ab81f6ed8"
+  version "3.4.0"
+  sha256 "7a2519e26600b524b1c5242e73f618d0c52c730a9fc51ef60159f0c40f3cc23f"
 
   url "https://origin.pfultd.com/downloads/ss/sshinst/m-#{version.no_dots}/MacSSHOfflineInstaller_#{version.dots_to_underscores}.dmg",
       verified: "origin.pfultd.com/"
@@ -17,7 +17,6 @@ cask "fujitsu-scansnap-home" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
   container nested: "Download/MacSSHomeInstaller_#{version.dots_to_underscores}.dmg"
 
   pkg "ScanSnap Home.pkg"

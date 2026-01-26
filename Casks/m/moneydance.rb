@@ -15,8 +15,6 @@ cask "moneydance" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "Moneydance.app"
 
   zap trash: [

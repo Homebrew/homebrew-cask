@@ -8,10 +8,7 @@ cask "webpquicklook" do
   desc "Quick Look plugin for webp files"
   homepage "https://github.com/emin/WebPQuickLook"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
 
   qlplugin "WebpQuickLook.qlgenerator"
 

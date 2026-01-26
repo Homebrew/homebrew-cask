@@ -23,8 +23,6 @@ cask "xprocheck" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "xprocheck#{version.csv.first.no_dots}/XProCheck.app"
 
   zap trash: [

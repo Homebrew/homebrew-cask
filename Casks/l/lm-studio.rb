@@ -1,6 +1,6 @@
 cask "lm-studio" do
-  version "0.3.23,3"
-  sha256 "25fc78171f6696b74672413630bdde4d01df82094410b398258c626d188007b7"
+  version "0.3.39,2"
+  sha256 "f5c7202f43090f18695a0b2032793f74aefcdeb896f8541b98b6515a42c2874f"
 
   url "https://installers.lmstudio.ai/darwin/arm64/#{version.tr(",", "-")}/LM-Studio-#{version.tr(",", "-")}-arm64.dmg"
   name "LM Studio"
@@ -20,7 +20,6 @@ cask "lm-studio" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :catalina"
 
   app "LM Studio.app"
 

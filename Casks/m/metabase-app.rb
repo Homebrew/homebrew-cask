@@ -9,6 +9,7 @@ cask "metabase-app" do
   homepage "https://www.metabase.com/"
 
   deprecate! date: "2024-10-15", because: :discontinued
+  disable! date: "2025-10-15", because: :discontinued
 
   app "Metabase.app"
 

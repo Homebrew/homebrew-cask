@@ -2,13 +2,12 @@ cask "font-noto-serif-bengali" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifBengali-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notoserifbengali/NotoSerifBengali%5Bwdth%2Cwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Serif Bengali"
-  homepage "https://www.google.com/get/noto/#serif-beng"
+  homepage "https://fonts.google.com/specimen/Noto+Serif+Bengali"
 
-  font "NotoSerifBengali-Bold.ttf"
-  font "NotoSerifBengali-Regular.ttf"
+  font "NotoSerifBengali[wdth,wght].ttf"
 
   # No zap stanza required
 end

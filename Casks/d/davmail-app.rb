@@ -1,6 +1,6 @@
 cask "davmail-app" do
-  version "6.3.0,3627"
-  sha256 "cd38df6fcf4dd23da7879292fdd4a15d2845be1bd9f7a5060d5dd685aabb4c08"
+  version "6.5.1,3873"
+  sha256 "71306c5b60246cff1b4436791e6765b6da8066ad47039a3d6aa387f1f5e8e41b"
 
   url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "DavMail"
@@ -14,6 +14,8 @@ cask "davmail-app" do
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "DavMail.app"
 

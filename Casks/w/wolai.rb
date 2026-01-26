@@ -1,9 +1,9 @@
 cask "wolai" do
   arch arm: "-arm64"
 
-  version "1.2.10"
-  sha256 arm:   "0f6cf997a7bd82197ef58245f2099a6c3de3d5d695f51af306d6f1512f27a94e",
-         intel: "a946f416991fff1c502fb84d0a07fcaa7fb8ccc6e2879af3ab7187210619be6d"
+  version "1.2.12"
+  sha256 arm:   "7f2265c01389c70fe5b2127ec06b92630f766737da9723fedf83cd06d0507555",
+         intel: "d3fd126f2d8683822d513a03871b944ea5f5e8a810d69fc836f277f8343d6ea6"
 
   url "https://cdn.wostatic.cn/dist/installers/wolai-#{version}#{arch}.dmg",
       verified: "cdn.wostatic.cn/dist/installers/"
@@ -17,7 +17,6 @@ cask "wolai" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "wolai.app"
 

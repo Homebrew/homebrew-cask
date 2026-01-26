@@ -13,8 +13,6 @@ cask "catlight" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Catlight.app"
 
   zap trash: [

@@ -1,36 +1,23 @@
 cask "djstudio" do
-  on_mojave :or_older do
-    version "2.6.28"
-    sha256 "a24739ad73b5fbda7c64aaae320b1486622c669ba3dc414d692def6026d2639d"
+  arch arm: "-arm64"
+  livecheck_arch = on_arch_conditional arm: "-apple"
 
-    url "https://github.com/AppMachine/dj-studio-app-updates/releases/download/v#{version}/DJ.Studio-#{version}.dmg",
-        verified: "github.com/AppMachine/dj-studio-app-updates/"
+  version "4.0.16"
+  sha256 arm:   "5370a9455d65afb7bc2a5c4142b5b52bb58623e701cb670f17b34637b8e0d194",
+         intel: "a8604306cae2882a0cf84c6d6a82431a99b2c414173935947f5ffb4460ee5367"
 
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_catalina :or_newer do
-    arch arm: "-arm64"
-
-    version "3.1.31"
-    sha256 arm:   "c2096c5b03ca1f86bc359b0c3d97404fe53527d5337854599fbeff9915db27e5",
-           intel: "4c35eb09cb8adc87dc3c084ba31cdefae4b75ebdcfd64617a13784cb3b9a13f7"
-
-    url "https://github.com/AppMachine/dj-studio-app-updates/releases/download/v#{version}/DJ.Studio-#{version}#{arch}.dmg",
-        verified: "github.com/AppMachine/dj-studio-app-updates/"
-
-    livecheck do
-      url :url
-      strategy :github_latest
-    end
-  end
-
+  url "https://download.dj.studio/DJ.Studio-#{version}#{arch}.dmg"
   name "DJ.Studio"
   desc "DAW for DJs"
   homepage "https://dj.studio/"
 
-  depends_on macos: ">= :high_sierra"
+  livecheck do
+    url "https://dj.studio/download/latest/mac#{livecheck_arch}"
+    regex(/DJ\.Studio[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
+    strategy :header_match
+  end
+
+  depends_on macos: ">= :big_sur"
 
   app "DJ.Studio.app"
 
@@ -40,6 +27,5 @@ cask "djstudio" do
     "~/Library/Application Support/dj.studio.app",
     "~/Library/Preferences/dj.studio.app.plist",
     "~/Library/Saved Application State/dj.studio.app.savedState",
-    "~/Music/DJ.Studio",
   ]
 end

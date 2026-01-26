@@ -1,6 +1,6 @@
 cask "lulu" do
-  version "3.1.5"
-  sha256 "785ace66fe8a4999662edc8f391ac3d8ba30fdeee6ec753559eb93ff0f14b3b2"
+  version "4.2.0"
+  sha256 "92516f945f681b37600d2649e5296bc48e2babb8adf3b8cc6274e95b382c87fa"
 
   url "https://github.com/objective-see/LuLu/releases/download/v#{version}/LuLu_#{version}.dmg",
       verified: "github.com/objective-see/LuLu/"
@@ -12,8 +12,6 @@ cask "lulu" do
     url :url
     strategy :github_latest
   end
-
-  depends_on macos: ">= :catalina"
 
   app "LuLu.app"
 

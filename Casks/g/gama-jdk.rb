@@ -17,7 +17,7 @@ cask "gama-jdk" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "gama"
+  conflicts_with cask: "gama-platform"
 
   app "Gama.app"
 

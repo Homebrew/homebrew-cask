@@ -13,8 +13,6 @@ cask "coverload" do
     regex(%r{href=.*?/CoverLoad[._-]v?(\d+(?:\.\d+)+-\d+)\.zip}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "CoverLoad.app"
 
   zap trash: [

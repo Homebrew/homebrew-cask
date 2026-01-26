@@ -1,6 +1,6 @@
 cask "font-cubic-11" do
-  version "1.430"
-  sha256 "d4b71e5666cc6eef27a6e1b94db1378f4c5698f76711b508129dfbb8f8d1a61b"
+  version "1.451"
+  sha256 "dfd7ec42f0fd1ff5c3bd5093b58dfa3cc6779c18df1f855c02ebac7e79dc15fe"
 
   url "https://github.com/ACh-K/Cubic-11/archive/refs/tags/v#{version}.tar.gz"
   name "Cubic 11"

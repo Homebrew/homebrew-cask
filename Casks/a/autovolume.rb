@@ -8,8 +8,7 @@ cask "autovolume" do
   homepage "https://github.com/jesse-c/AutoVolume"
 
   deprecate! date: "2024-09-30", because: :unmaintained
-
-  depends_on macos: ">= :sierra"
+  disable! date: "2025-10-01", because: :unmaintained
 
   app "AutoVolume.app"
 

@@ -17,6 +17,8 @@ cask "djview" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "DjView.app"
 
   zap trash: [

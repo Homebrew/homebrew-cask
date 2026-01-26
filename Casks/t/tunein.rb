@@ -1,6 +1,6 @@
 cask "tunein" do
-  version "1.29.0"
-  sha256 "30a809e2c8eab1458a23a5283a7ffea5850c3a9641da0d21758f1cba99cd16b6"
+  version "1.30.0"
+  sha256 "86a28c77f82f26672aa444b8886cf6d182112f517e46636c414f9c466650a25c"
 
   url "https://cdn-desktop.tunein.com/release/TuneIn-#{version}-universal.dmg"
   name "TuneIn"
@@ -12,7 +12,7 @@ cask "tunein" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "TuneIn.app"
 

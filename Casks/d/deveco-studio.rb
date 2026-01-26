@@ -23,7 +23,6 @@ cask "deveco-studio" do
 
   disable! date: "2025-03-17", because: :no_longer_available
 
-  depends_on macos: ">= :catalina"
   container nested: "devecostudio-mac#{arch}-#{version}/deveco-studio-#{version}#{arch_suffix}.dmg"
 
   app "DevEco-Studio.app"

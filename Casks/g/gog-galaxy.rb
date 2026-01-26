@@ -1,6 +1,6 @@
 cask "gog-galaxy" do
-  version "2.0.86.13"
-  sha256 "a9ca3b63a060a44f36ad4838c3e74e21655480b2b3cf904d5a5b2883b08f3175"
+  version "2.0.93.53"
+  sha256 "2a6fe770a38fa695c62157314098d2331040a9dba5554cd4d41f894804bfd82f"
 
   url "https://gog-cdn-fastly.gog.com/open/galaxy/client/galaxy_client_#{version}.pkg"
   name "GOG Galaxy"
@@ -13,7 +13,6 @@ cask "gog-galaxy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   pkg "galaxy_client_#{version}.pkg"
 

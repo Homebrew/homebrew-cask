@@ -7,10 +7,8 @@ cask "quicklook-json" do
   desc "Quick Look plugin for JSON files"
   homepage "http://www.sagtau.com/quicklookjson.html"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  # Artifact not available over HTTPS
+  disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
   qlplugin "QuickLookJSON.qlgenerator"
 

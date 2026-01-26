@@ -1,5 +1,5 @@
 cask "folx" do
-  version "5.30"
+  version "5.32"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg",
@@ -14,7 +14,6 @@ cask "folx" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "Folx.app"
 

@@ -9,6 +9,7 @@ cask "foldingtext" do
   homepage "https://www.foldingtext.com/"
 
   deprecate! date: "2024-11-01", because: :unmaintained
+  disable! date: "2025-11-01", because: :unmaintained
 
   app "FoldingText.app"
 

@@ -7,7 +7,7 @@ cask "chai" do
   desc "Utility to prevent the system from going to sleep"
   homepage "https://github.com/lvillani/chai"
 
-  depends_on macos: ">= :mojave"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Chai.app"
 

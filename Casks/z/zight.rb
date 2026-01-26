@@ -1,6 +1,6 @@
 cask "zight" do
-  version "8.5.3,3538"
-  sha256 "ddf6f807fc1fcdf7d2473df9f1905f1c675537cc576f056c6e018a7a7bd0b213"
+  version "8.6.0,3589"
+  sha256 "9d55701b5c8f460c716b385469aac7f7cd017d13a2b9802fd9854e249266d14c"
 
   url "https://downloads.zight.com/mac/Zight-#{version.csv.first}.#{version.csv.second}.zip"
   name "Zight"
@@ -13,7 +13,7 @@ cask "zight" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Zight.app"
 

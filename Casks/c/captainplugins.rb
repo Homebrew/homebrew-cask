@@ -13,8 +13,6 @@ cask "captainplugins" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "CaptainPlugins.pkg"
 
   uninstall pkgutil: "com.mixedinkey.CaptainPlugins.Epic.pkg"

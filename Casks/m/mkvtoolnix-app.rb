@@ -1,24 +1,6 @@
 cask "mkvtoolnix-app" do
-  on_el_capitan :or_older do
-    version "29.0.0"
-    sha256 "209578d5d25adb37a2cf857139afb35a421a64b104c2d59af0476d609037244d"
-  end
-  on_sierra do
-    version "41.0.0"
-    sha256 "2eb34d57209f6dc4d8ec9809028affb0ce8a7edad8370b36abf8996edbb9ac86"
-  end
-  on_high_sierra do
-    version "41.0.0"
-    sha256 "2eb34d57209f6dc4d8ec9809028affb0ce8a7edad8370b36abf8996edbb9ac86"
-  end
-  on_mojave do
-    version "53.0.0"
-    sha256 "bb6d0ba4e0052b2831de0ae29ef3d0d4c7b4d0933b258455c248c1a1c5f913a0"
-  end
-  on_catalina :or_newer do
-    version "94.0"
-    sha256 "a3092ddfc240693b69aea5198196fd5c4115b4834ebb8bceebd01b8119d98cc2"
-  end
+  version "97.0"
+  sha256 "4cea68e2830e4262c5902056077f9d4d3c8c54a0e25e7d284907f926d47ff6ea"
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
   name "MKVToolNix"
@@ -30,7 +12,9 @@ cask "mkvtoolnix-app" do
     regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :ventura"
 
   app "MKVToolNix-#{version}.app"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"

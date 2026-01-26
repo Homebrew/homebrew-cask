@@ -1,15 +1,16 @@
 cask "transmit" do
-  version "5.10.9"
-  sha256 "3986ff26c049950550b5caf034d920cd201d7e4943ea6ff07c4f6c88485e96f8"
+  version "5.11.3"
+  sha256 "7a068b1489669e851a338de73e9d0645dac68715db379959023c10bed02306ce"
 
-  url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
+  url "https://download-cdn.panic.com/transmit/Transmit%20#{version}.zip",
+      user_agent: :browser
   name "Transmit"
   desc "File transfer application"
   homepage "https://panic.com/transmit/"
 
   livecheck do
-    url "https://download.panic.com/transmit/Transmit-#{version.major}-Latest.zip"
-    strategy :header_match
+    url "https://www.panic.com/updates/update.php?appName=Transmit%20#{version.major}&appVersion=#{version.major}"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

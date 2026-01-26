@@ -1,12 +1,6 @@
 cask "latest" do
-  on_mojave :or_older do
-    version "0.10.3"
-    sha256 "26e72a8a1555f1f352f4c09189d2feb7c8073f1a4a798fe4beb0e8fa86a7c649"
-  end
-  on_catalina :or_newer do
-    version "0.11"
-    sha256 "b372cde029f1f81c6465b1920a7c5a392a7791243cd30ebf39dab172ec82cbf5"
-  end
+  version "0.11"
+  sha256 "b372cde029f1f81c6465b1920a7c5a392a7791243cd30ebf39dab172ec82cbf5"
 
   url "https://max.codes/latest/#{version}.zip"
   name "Latest"
@@ -23,7 +17,6 @@ cask "latest" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Latest.app"
 

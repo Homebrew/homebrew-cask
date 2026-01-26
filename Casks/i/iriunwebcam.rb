@@ -1,8 +1,8 @@
 cask "iriunwebcam" do
-  version "2.8.12"
-  sha256 "754d393f5761f1a61f2a8b01e023c4eb92d2df5d6c0adaf15aa28ecf9b5859cc"
+  version "2.9"
+  sha256 "9c45d95b81c651e4827e98e24bebf603865680ab424dea462c2d53f504ffb82b"
 
-  url "https://1758658189.rsc.cdn77.org/IriunWebcam-#{version}.pkg",
+  url "https://1758658189.rsc.cdn77.org/dl/IriunWebcam-#{version}.pkg",
       verified: "1758658189.rsc.cdn77.org/"
   name "Iriun"
   desc "Use your phone's camera as a wireless webcam"

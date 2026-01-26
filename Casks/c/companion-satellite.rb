@@ -2,9 +2,9 @@ cask "companion-satellite" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
-  version "2.2.2,494,5cc11fe"
-  sha256 arm:   "f820c05680e20acc8f2019e79c02facc837e40ba4efd84f15641f6fbf5f3eee2",
-         intel: "f31b4594c0e0ee46efa7971f308fd2fe6e66412a4cda84e477a98856bee557cc"
+  version "2.6.0,559,eb78b78"
+  sha256 arm:   "74836b0dee3622b4797171e5aba7ca39a3e50b64e88b22bc9209a6e35461cfa1",
+         intel: "49d6f3d45cef677777f4f0d9a04ebd45ab8a34297d3b2c52f912760483d5899c"
 
   url "https://s4.bitfocus.io/builds/companion-satellite/companion-satellite-#{arch}-#{version.csv.second}-#{version.csv.third}.dmg"
   name "Bitfocus Satellite"

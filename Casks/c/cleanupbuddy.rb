@@ -1,6 +1,6 @@
 cask "cleanupbuddy" do
-  version "1.2,13"
-  sha256 "2ccce9488ab13bcebd494d7085546ff826739f86dd7183ce900b03ef92119570"
+  version "1.3.1,15"
+  sha256 "d64b1a2567612da30c8e6a902ae4ae215da7cfb4261f187f46957409429535ba"
 
   url "https://sparkle.cleanupbuddy.app/CleanupBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "CleanupBuddy"

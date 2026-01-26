@@ -13,7 +13,6 @@ cask "parallels-toolbox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   installer manual: "Install Parallels Toolbox.app"
 

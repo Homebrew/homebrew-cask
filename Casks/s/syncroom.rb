@@ -12,8 +12,6 @@ cask "syncroom" do
     regex(%r{href=.*?/SYNCROOM-MULTI-mac-(\d+(?:\.\d+)+)\.zip}i)
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "SYNCROOM.pkg"
 
   uninstall pkgutil: [

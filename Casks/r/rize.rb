@@ -1,9 +1,9 @@
 cask "rize" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.7"
-  sha256 arm:   "3fae085c6fca5c04c38afded50f7d43ac232d9df932c336f072616602fc6dd67",
-         intel: "176a19b5b6e12738b7ece389933d99731cd43dab7e4e1edfb164418bf7d62c3b"
+  version "2.3.6"
+  sha256 arm:   "d29a92a5405109ff2defe3cee25c0d5d5bcb94943d5d41753f1f1e3f29699e8c",
+         intel: "adc163d6e12756315e28a6d514114b7346eac34281415376b4668ef6a4aa5d2e"
 
   url "https://github.com/rize-io/lua/releases/download/v#{version}/Rize-#{version}-#{arch}.dmg",
       verified: "github.com/rize-io/lua/"
@@ -17,7 +17,7 @@ cask "rize" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Rize.app"
 

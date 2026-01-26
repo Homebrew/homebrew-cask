@@ -1,6 +1,6 @@
 cask "camtasia" do
-  version "25.2.1"
-  sha256 "d1b034c4c518398a7c5b4111076b3b5b5a7a630e3d13066c8dbe3677911d976a"
+  version "26.0.5"
+  sha256 "1dfbb490b64e27e2fce067b0e90da69870a61290ef1c1025a8034001ecf90508"
 
   url "https://download.techsmith.com/camtasiamac/releases/#{version.no_dots}/Camtasia.dmg"
   name "Camtasia"
@@ -17,7 +17,7 @@ cask "camtasia" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Camtasia.app"
 

@@ -1,34 +1,16 @@
 cask "appcleaner" do
-  on_sierra :or_older do
-    version "3.4"
-    sha256 "0c60d929478c1c91e0bad76d3c04795665c07a05e45e33321db845429c9aefa8"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_high_sierra do
-    version "3.6"
-    sha256 "812bcacd845fac07e073130d3fe4c5f037815d0774a9782e0e309fced1bded1c"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_mojave :or_newer do
-    version "3.6.8"
-    sha256 "e012f729442473c20e7cce334b00182521e4b6672ea681b34931b180feb3d6be"
-
-    livecheck do
-      url "https://freemacsoft.net/appcleaner/Updates.xml"
-      strategy :sparkle, &:short_version
-    end
-  end
+  version "3.6.8"
+  sha256 "e012f729442473c20e7cce334b00182521e4b6672ea681b34931b180feb3d6be"
 
   url "https://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
   name "FreeMacSoft AppCleaner"
   desc "Application uninstaller"
   homepage "https://freemacsoft.net/appcleaner/"
+
+  livecheck do
+    url "https://freemacsoft.net/appcleaner/Updates.xml"
+    strategy :sparkle, &:short_version
+  end
 
   auto_updates true
 

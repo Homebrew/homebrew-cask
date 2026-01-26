@@ -2,10 +2,10 @@ cask "font-noto-sans-tai-le" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansTaiLe-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanstaile/NotoSansTaiLe-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Tai Le"
-  homepage "https://www.google.com/get/noto/#sans-tale"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Tai+Le"
 
   font "NotoSansTaiLe-Regular.ttf"
 

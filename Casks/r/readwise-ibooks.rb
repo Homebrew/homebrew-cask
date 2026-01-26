@@ -12,8 +12,6 @@ cask "readwise-ibooks" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Readwise_iBooks.app"
 
   zap trash: [

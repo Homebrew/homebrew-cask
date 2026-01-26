@@ -12,8 +12,6 @@ cask "soduto" do
     regex(%r{href=.*?/Soduto_v?(\d+(?:\.\d+)*)\.dmg}i)
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Soduto.app"
 
   zap trash: [

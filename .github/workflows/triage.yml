@@ -8,7 +8,7 @@ concurrency:
 
 jobs:
   triage:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       contents: read
       pull-requests: write
@@ -33,7 +33,7 @@ jobs:
 
             - label: unsigned
               path: Casks/.+
-              content: \n  (deprecate|disable)!.*:unsigned\n
+              content: \n  (deprecate|disable)!.*:fails_gatekeeper_check\n
 
             - label: new cask
               status: added
@@ -74,7 +74,7 @@ jobs:
       issues: write
       pull-requests: write
     if: always() && github.repository_owner == 'Homebrew' && github.actor != 'BrewTestBot'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     env:
       PR: ${{ github.event.number }}
     steps:

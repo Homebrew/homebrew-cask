@@ -1,6 +1,6 @@
 cask "garagesale" do
-  version "9.9.2"
-  sha256 "732b801db784e7af64397e90f5e90de3ea25d05f964c05ffb433088a3746f13e"
+  version "9.9.4"
+  sha256 "fc660983367f6f15175e1ecefdb8f48cb8858f76afe9e6b36db5a377a890491e"
 
   url "https://downloads.iwascoding.com/downloads/GarageSale_#{version}.dmg"
   name "GarageSale"
@@ -11,8 +11,6 @@ cask "garagesale" do
     url "https://www.iwascoding.com/GarageSale/Downloads.html"
     regex(/href=.*?GarageSale[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
-
-  depends_on macos: ">= :sierra"
 
   app "GarageSale.app"
 

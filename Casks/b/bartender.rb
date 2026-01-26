@@ -1,12 +1,6 @@
 cask "bartender" do
-  on_ventura :or_older do
-    version "4.2.25"
-    sha256 "f1a2ecf300cf56aaf531324cba646442026cb0b63b4f90f46a1aee5b0804688a"
-  end
-  on_sonoma :or_newer do
-    version "5.3.7"
-    sha256 "20f640c4f43397dd8f16fd829597e3c93f330c91fb29ccd207133b69d4aa0baa"
-  end
+  version "6.2.1"
+  sha256 "6fa4f9253f0f01266a91116badcf39b42009f08cb2e288aa17d669b19e3a5e6a"
 
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip"
   name "Bartender"
@@ -22,7 +16,7 @@ cask "bartender" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sonoma"
 
   app "Bartender #{version.major}.app"
 

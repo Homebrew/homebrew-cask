@@ -1,6 +1,6 @@
 cask "kiwix" do
-  version "3.9.0"
-  sha256 "ff2416e7600d6db0e8ff0925fb4fe879fe57959e9c3aabf94fbecff6024ac706"
+  version "3.11.0"
+  sha256 "7e33be16d638a3f3cf14fe3ac32c27a2ba4e820ed0ca399639a800d7253e34a0"
 
   url "https://download.kiwix.org/release/kiwix-macos/kiwix-macos_#{version}.dmg"
   name "Kiwix"
@@ -12,7 +12,7 @@ cask "kiwix" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Kiwix.app"
 

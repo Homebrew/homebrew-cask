@@ -9,6 +9,7 @@ cask "pext" do
   homepage "https://pext.io/"
 
   deprecate! date: "2024-09-06", because: :discontinued
+  disable! date: "2025-09-06", because: :discontinued
 
   app "Pext.app"
 end

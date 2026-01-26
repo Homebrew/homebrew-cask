@@ -13,8 +13,6 @@ cask "transocks" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
-
   app "穿梭Transocks.app"
 
   uninstall trash: [
@@ -23,7 +21,6 @@ cask "transocks" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/CrashReporter/穿梭Transocks*",
     "~/Library/Application Support/CrashReporter/穿梭Transocks*",
     "~/Library/Caches/com.transocks.mac.signed",
     "~/Library/Logs/DiagnosticReports/穿梭Transocks*",

@@ -1,19 +1,21 @@
 cask "mochi" do
   arch arm: "-arm64"
 
-  version "1.19.3"
-  sha256 arm:   "79277fc237021aebc9b66cd8d4e2fadce6b5be60c20c2a929fc2a35698290501",
-         intel: "320ad4588d64cdc742aae2f09034312685622bb54e7f35649f9f84c6080e0a49"
+  version "1.20.7"
+  sha256 arm:   "f5b348917e2513abd4dbd5cc9e569fd483ca0fdbd8ab9de7e94226924a2cb1b1",
+         intel: "807ea585d9e8f60f11d38e2656fdda470d155988681c97c7920b34ba2df3c46d"
 
-  url "https://mochi.cards/releases/Mochi-#{version}#{arch}.dmg"
+  url "https://download.mochi.cards/releases/Mochi-#{version}#{arch}.dmg"
   name "Mochi"
   desc "Study notes and flashcards using spaced repetition"
   homepage "https://mochi.cards/"
 
   livecheck do
-    url "https://mochi.cards/releases/latest-mac.yml"
+    url "https://download.mochi.cards/releases/latest-mac.yml"
     strategy :electron_builder
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Mochi.app"
 

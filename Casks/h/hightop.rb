@@ -13,7 +13,6 @@ cask "hightop" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "HighTop.app"
 

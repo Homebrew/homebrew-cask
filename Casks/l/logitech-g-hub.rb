@@ -1,5 +1,5 @@
 cask "logitech-g-hub" do
-  version "2025.6.759533"
+  version "2025.9.824733"
   sha256 :no_check
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/gaming/lghub_installer.zip",
@@ -54,8 +54,4 @@ cask "logitech-g-hub" do
     "~/Library/Preferences/com.logi.ghub.plist",
     "~/Library/Saved Application State/com.logi.ghub.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

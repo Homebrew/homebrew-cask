@@ -1,6 +1,6 @@
 cask "flrig" do
-  version "2.0.08"
-  sha256 "2eaff6ae5b51b66d68f678be7999da8051c1c64bafdd8c033eb555458da45c48"
+  version "2.0.10"
+  sha256 "49f325db62c889dcabe537d2fcde9d6eb9325b7e69decd1a83f51ec39f8b0514"
 
   url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}.dmg",
       verified: "sourceforge.net/fldigi/"
@@ -13,7 +13,7 @@ cask "flrig" do
     regex(%r{url=.*?/flrig[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "flrig-#{version}.app"
 

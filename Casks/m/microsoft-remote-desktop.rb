@@ -9,10 +9,10 @@ cask "microsoft-remote-desktop" do
   homepage "https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-mac"
 
   deprecate! date: "2024-09-30", because: :discontinued, replacement_cask: "windows-app"
+  disable! date: "2025-10-01", because: :discontinued, replacement_cask: "windows-app"
 
   auto_updates true
   conflicts_with cask: "windows-app"
-  depends_on macos: ">= :high_sierra"
 
   pkg "Microsoft_Remote_Desktop_#{version}_installer.pkg"
 

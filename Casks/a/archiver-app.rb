@@ -1,19 +1,19 @@
 cask "archiver-app" do
-  version "4.2.0"
-  sha256 "06e77ae459ddecba822a33fdfb2ab8fefb873f072ec2140398a9f2f2c8212460"
+  version "5.0.1"
+  sha256 "ad069bf588ac8912bf8817f3c6bd13e2f238b98a6a6ed8c520c5ff16f5b96612"
 
-  url "https://storage.googleapis.com/incrediblebee/apps/Archiver-#{version.major}/Archiver-#{version}.zip",
-      verified: "storage.googleapis.com/incrediblebee/"
+  url "https://github.com/incbee/archiver-#{version.major}-releases/releases/download/v#{version}/Archiver-#{version}-universal-mac.zip",
+      verified: "github.com/incbee/archiver-#{version.major}-releases/"
   name "Archiver"
   desc "Open archives, compress files, as well as split and combine files"
   homepage "https://archiverapp.com/"
 
   livecheck do
-    url "https://api.incrediblebee.com/appcasts/archiver-#{version.major}.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :tahoe"
 
   app "Archiver.app"
 

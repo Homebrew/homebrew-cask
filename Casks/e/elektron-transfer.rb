@@ -7,15 +7,9 @@ cask "elektron-transfer" do
   desc "Transfer samples, presets, sounds, projects and firmware to Elektron devices"
   homepage "https://elektron.se/support-downloads/transfer"
 
-  livecheck do
-    url :homepage
-    regex(%r{uploads/(\d+)/(\d+)/Elektron[._-]Transfer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
-    end
-  end
-
-  depends_on macos: ">= :high_sierra"
+  # The upstream website uses Cloudflare protections and the dmg file is
+  # inaccessible outside of a browser, so this cask is effectively unusable.
+  disable! date: "2025-11-01", because: :unreachable
 
   app "Transfer.app"
 

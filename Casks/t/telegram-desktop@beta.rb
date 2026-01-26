@@ -1,16 +1,35 @@
 cask "telegram-desktop@beta" do
-  version "6.0.2"
-  sha256 "77e84644a25c396d2985246f9fcb0d3db3946ad4aa836502c772a5b5ff521e14"
+  version "6.4.2"
+  sha256 "a374d407380938a32d1072976ca2008c88d628de1b6d1e4c177a2e4a44ab8754"
 
-  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version}/tsetup.#{version}.dmg",
+  url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version.major_minor_patch}/tsetup.#{version}.dmg",
       verified: "github.com/telegramdesktop/tdesktop/"
   name "Telegram Desktop"
   desc "Desktop client for Telegram messenger"
   homepage "https://desktop.telegram.org/"
 
+  # This will fall back to a version in a tag name if the regex fails to match,
+  # otherwise this could get into a state where it returns versions but is
+  # omitting the newest release(s) due to a file name format change.
+  livecheck do
+    url :url
+    regex(/tsetup[._-]v?(\d+(?:\.\d+)+(?:[._-]beta)?)/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"]
+
+        release["assets"]&.filter_map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end.presence || release["tag_name"]&.[](/v?(\d+(?:\.\d+)+)/i, 1)
+      end.flatten
+    end
+  end
+
   auto_updates true
   conflicts_with cask: "telegram-desktop"
-  depends_on macos: ">= :high_sierra"
 
   # Renamed to avoid conflict with telegram
   app "Telegram.app", target: "Telegram Desktop.app"

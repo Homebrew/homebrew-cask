@@ -1,6 +1,6 @@
 cask "atomic-wallet" do
-  version "2.91.16"
-  sha256 "182823e3f0142575df5559123d2afe9da292a2a750d9985a32633dc3ac1a0a73"
+  version "2.97.8"
+  sha256 "ed8da921a18b4af683104ab184738e24fe493d153cb221cd9b2f24e947f8a6f9"
 
   url "https://releases.atomicwallet.io/AtomicWallet-#{version}.dmg"
   name "Atomic Wallet"
@@ -11,8 +11,6 @@ cask "atomic-wallet" do
     url "https://releases.atomicwallet.io/download/latest-mac.txt"
     regex(/v?(\d+(?:[.-]\d+)+)/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Atomic Wallet.app"
 

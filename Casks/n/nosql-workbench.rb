@@ -1,9 +1,9 @@
 cask "nosql-workbench" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.13.6"
-  sha256 arm:   "6d4eebd66a5bd5415f91ca982181355998b5208f36ffd86a8bf3ff4e91d1e23e",
-         intel: "e42df694a8921a882f441e0f8e5b28d6a9782ecbc7c3815cbfe737b2215a419d"
+  version "3.13.7"
+  sha256 arm:   "14ceb4a1e5c55f11afa7d8e623c58e6556992272c80738d67e029a1254663638",
+         intel: "739aa33548d9c21d8bb8f901a16702700c5f97f6e756ca55373193d31f5f5b3e"
 
   url "https://nosql-workbench.s3.amazonaws.com/NoSQL%20Workbench-mac-#{arch}-#{version}.dmg",
       verified: "nosql-workbench.s3.amazonaws.com/"
@@ -17,7 +17,6 @@ cask "nosql-workbench" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "NoSQL Workbench.app"
 

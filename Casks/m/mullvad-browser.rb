@@ -1,6 +1,6 @@
 cask "mullvad-browser" do
-  version "14.5.6"
-  sha256 "d8f43c36b67f4a67c3af1b7b3703140dd8c4613662f08e3a77c4630e5834c74b"
+  version "15.0.4"
+  sha256 "f0ac9ee1865f1c3c9e1fa950c17e371943f896b8adcc1affe13f1d102afcccce"
 
   url "https://cdn.mullvad.net/browser/#{version}/mullvad-browser-macos-#{version}.dmg"
   name "Mullvad Browser"
@@ -15,7 +15,6 @@ cask "mullvad-browser" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Mullvad Browser.app"
 

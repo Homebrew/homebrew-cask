@@ -3,12 +3,12 @@ cask "effect-house" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "5.1.1,0130,08142025,104"
-    sha256 "13aace842322827e12d6dbdb1f3c5b5800de5c3bdd7d2dd04b8d1eb587f90693"
+    version "5.6.1,2289,01142026,104"
+    sha256 "f6a683dd24a33b81e03ba286adc09074afbb06a24c4433a3e004e71aff8bdb98"
   end
   on_intel do
-    version "5.1.1,0135,08142025,104"
-    sha256 "a85d06a2f8c1164a494e6d4bb68f7db63ca9bc35fd26a8d2b3ee5756418560b0"
+    version "5.6.1,2294,01142026,104"
+    sha256 "f1f9309954259d32796e2b21f94d25a2e4dabe35bf80dcdbff581e8f10e06fb9"
   end
 
   url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_Builds_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}_#{arch}_#{version.csv.fourth}.dmg",
@@ -23,7 +23,7 @@ cask "effect-house" do
       arch:       livecheck_arch,
       entryPoint: version.csv.fourth,
     }
-    regex(%r{(\d+)/Effect[._-]House[._-]v?(\d+(?:\.\d+)+)(?:\.(\d+))(?:[._-]#{arch})?[._-](\d+)\.dmg}i)
+    regex(%r{(\d+(?:[._-]\d+)*)/Effect[._-]House[._-]v?(\d+(?:\.\d+)+)(?:\.(\d+))(?:[._-]#{arch})?[._-](\d+)\.dmg}i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
       next if match.blank?
@@ -31,8 +31,6 @@ cask "effect-house" do
       "#{match[2]},#{match[3]},#{match[1]},#{match[4]}"
     end
   end
-
-  depends_on macos: ">= :sierra"
 
   app "Effect House.app"
 

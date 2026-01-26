@@ -1,9 +1,9 @@
 cask "rancher" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.19.3"
-  sha256 arm:   "81a3eab66aaae66ff3acb7028291a2a5dc8eba8e2613953eec04a264dcb76e23",
-         intel: "0b0a706a47a7e0262c491b74a661c1fcc04b6df146cb5dc3da7c65a894642602"
+  version "1.22.0"
+  sha256 arm:   "474f2f625777f0a7e1bfea5f3b814fef664181a20450a85fbf0e0e92bd2b8323",
+         intel: "908bce3c47e725112c25bc816485c8b9e8665911f4f98dc4bd7427dab3f043fc"
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
       verified: "github.com/rancher-sandbox/rancher-desktop/"
@@ -17,8 +17,8 @@ cask "rancher" do
   end
 
   auto_updates true
-  conflicts_with cask: "docker"
-  depends_on macos: ">= :catalina"
+  conflicts_with cask: "docker-desktop"
+  depends_on macos: ">= :monterey"
 
   app "Rancher Desktop.app"
 

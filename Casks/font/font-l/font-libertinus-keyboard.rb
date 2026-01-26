@@ -2,9 +2,10 @@ cask "font-libertinus-keyboard" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/libertinuskeyboard/LibertinusKeyboard-Regular.ttf"
+  url "https://github.com/google/fonts/raw/main/ofl/libertinuskeyboard/LibertinusKeyboard-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Libertinus Keyboard"
-  homepage "https://github.com/googlefonts/libertinus"
+  homepage "https://fonts.google.com/specimen/Libertinus+Keyboard"
 
   font "LibertinusKeyboard-Regular.ttf"
 

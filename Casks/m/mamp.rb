@@ -1,9 +1,9 @@
 cask "mamp" do
   arch arm: "Apple-chip", intel: "Intel-x86"
 
-  version "7.2"
-  sha256 arm:   "0d29199aba83315dc4008dfbe88b59c8c046a95bb88f4d9b35037906c6ccc44a",
-         intel: "ab354660acdc3f24b1ddc49302a88fce9d9f8cd85fe534408df200b122c0fd14"
+  version "7.3"
+  sha256 arm:   "d9077a492c92c941d762977fadd9467ee4388b3a81fb9b8af1980425b9a14d99",
+         intel: "eac902dade24641a43990ae612ce4dcbdd0f4f8c608d2675bdd16d8551827ab1"
 
   url "https://downloads.mamp.info/MAMP-PRO/macOS/MAMP-PRO/MAMP-MAMP-PRO-#{version}-#{arch}.pkg"
   name "MAMP"
@@ -16,7 +16,6 @@ cask "mamp" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   pkg "MAMP-MAMP-PRO-#{version}-#{arch}.pkg"
 

@@ -1,40 +1,6 @@
 cask "karabiner-elements" do
-  on_mojave :or_older do
-    on_el_capitan :or_older do
-      version "11.6.0"
-      sha256 "c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d"
-    end
-    on_sierra :or_newer do
-      version "12.10.0"
-      sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
-    end
-
-    livecheck do
-      skip "Legacy version"
-    end
-
-    pkg "Karabiner-Elements.sparkle_guided.pkg"
-
-    uninstall launchctl: [
-                "org.pqrs.karabiner.agent.karabiner_grabber",
-                "org.pqrs.karabiner.agent.karabiner_observer",
-                "org.pqrs.karabiner.karabiner_console_user_server",
-                "org.pqrs.karabiner.karabiner_kextd",
-                "org.pqrs.karabiner.karabiner_session_monitor",
-              ],
-              signal:    [
-                ["TERM", "org.pqrs.Karabiner-Menu"],
-                ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
-              ],
-              script:    {
-                executable: "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
-                sudo:       true,
-              },
-              pkgutil:   "org.pqrs.Karabiner-Elements",
-              delete:    "/Library/Application Support/org.pqrs"
-  end
-  on_catalina :or_newer do
-    on_catalina do
+  on_monterey :or_older do
+    on_catalina :or_older do
       version "13.7.0"
       sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
 
@@ -58,16 +24,15 @@ cask "karabiner-elements" do
         skip "Legacy version"
       end
     end
-    on_ventura :or_newer do
-      version "15.5.0"
-      sha256 "f7a350c669d4d56fe0d8ed4b97baacb25725173b013e71c327e8663696945170"
+  end
+  on_ventura :or_newer do
+    version "15.9.0"
+    sha256 "c495f131165a4deefbe32e4a8ff5b3ffb000fcd5507140344899b8fee31574ee"
 
-      livecheck do
-        url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
-        strategy :sparkle
-      end
+    livecheck do
+      url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
+      strategy :sparkle
     end
-
     pkg "Karabiner-Elements.pkg"
 
     uninstall early_script: {

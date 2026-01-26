@@ -7,6 +7,13 @@ cask "font-eb-garamond" do
   name "EB Garamond"
   homepage "https://github.com/georgd/EB-Garamond"
 
+  # The Bitbucket downloads page no longer lists any files, so the `Bitbucket`
+  # strategy doesn't work, so this checks the Git tags instead.
+  livecheck do
+    url "https://bitbucket.org/georgd/eb-garamond.git"
+    regex(/^v?(\d+(?:\.\d+)+[a-z]?)$/i)
+  end
+
   font "EBGaramond-#{version}/otf/EBGaramond-Initials.otf"
   font "EBGaramond-#{version}/otf/EBGaramond-InitialsF1.otf"
   font "EBGaramond-#{version}/otf/EBGaramond-InitialsF2.otf"

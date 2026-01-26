@@ -12,9 +12,10 @@ cask "fanny" do
     regex(%r{href=.*?FannyWidget\.zip["' >].*?v?(\d+(?:\.\d+)+).*?</a>}im)
   end
 
-  depends_on macos: ">= :high_sierra"
+  # The url is unversioned, but the download returns an app directory with a version number
+  rename "FannyWidget*", "FannyWidget"
 
-  app "FannyWidget-v#{version.csv.first}/Fanny.app"
+  app "FannyWidget/Fanny.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.fannywidget.today-extension",

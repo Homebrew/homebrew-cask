@@ -1,6 +1,6 @@
 cask "kameleo" do
-  version "4.1.1"
-  sha256 "810ff5d64b70b695e6d3c2ca492916dc96a8e9ce9b7c919ded1d5e222dffbd18"
+  version "4.2.1"
+  sha256 "90d55a055fe4207ff47d464c76b0549e2c394bbb84737c692f5f461c4e7557d0"
 
   url "https://github.com/kameleo-io/releases/releases/download/#{version}/kameleo-#{version}-osx-arm64.dmg",
       verified: "github.com/kameleo-io/releases/"
@@ -10,7 +10,7 @@ cask "kameleo" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Kameleo.app"
 

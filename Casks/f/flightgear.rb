@@ -1,22 +1,16 @@
 cask "flightgear" do
-  version "2024.1.1,9261456144"
-  sha256 "def74a0db27616a0db193e38ca6d33eea6201453e8114cdf760fbe76d74d8451"
+  version "2024.1.4"
+  sha256 "e01179874fd90241dacd6c17ac13c07b523c4f85640443ecf264a2a598d69daa"
 
-  url "https://gitlab.com/flightgear/fgmeta/-/jobs/#{version.csv.second}/artifacts/raw/output/FlightGear-#{version.csv.first}.dmg",
-      verified: "gitlab.com/flightgear/"
+  url "https://mirrors.ibiblio.org/flightgear/ftp/release-#{version.major_minor}/flightgear-#{version}-macos-universal.dmg",
+      verified: "mirrors.ibiblio.org/flightgear/"
   name "FlightGear"
   desc "Flight simulator"
   homepage "https://www.flightgear.org/"
 
   livecheck do
     url "https://www.flightgear.org/download/"
-    regex(%r{href=.*?/jobs/(\d+)/artifacts/raw/output/FlightGear[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
+    regex(/href=.*?flightgear[._-]?v?(\d+(?:\.\d+)+)(?:[._-]macos)?(?:[._-]universal)?\.dmg/i)
   end
 
   app "FlightGear.app"

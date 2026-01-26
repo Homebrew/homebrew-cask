@@ -1,9 +1,9 @@
 cask "wealthfolio" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.1.6"
-  sha256 arm:   "7054d8655e73d6286bcf6d5fb9b05f790e5bfc3977397ef0d4ba4318760d2137",
-         intel: "6993ef42974be6f1faa5942cc82c67f2fe71c8373f8a2abe656a3a6fa9ac4a26"
+  version "2.1.0"
+  sha256 arm:   "1d267da755e260a0c98d9b38f7bdd5e8ce67f7508e2d89871eed18f9b2b6e0e0",
+         intel: "5d11ba2fcdff4979507c44e35dcfc20cbb597d5a91886950fea709b6ad38de9a"
 
   url "https://github.com/afadil/wealthfolio/releases/download/v#{version}/Wealthfolio_#{version}_#{arch}.dmg",
       verified: "github.com/afadil/wealthfolio/"
@@ -19,7 +19,6 @@ cask "wealthfolio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Wealthfolio.app"
 

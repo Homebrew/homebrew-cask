@@ -1,12 +1,6 @@
 cask "linkliar" do
-  on_el_capitan :or_older do
-    version "1.1.3"
-    sha256 "34c9baeaf1d6732c8ce9add689b281f9b71fddadd8f56cca614cba4f8c167962"
-  end
-  on_sierra :or_newer do
-    version "3.0.3"
-    sha256 "36e62eab4ef8d2b004c6886182fc49830afdf56f4f14f9be07adfe552d7140d2"
-  end
+  version "3.0.3"
+  sha256 "36e62eab4ef8d2b004c6886182fc49830afdf56f4f14f9be07adfe552d7140d2"
 
   url "https://github.com/halo/LinkLiar/releases/download/#{version}/LinkLiar.app.zip"
   name "LinkLiar"
@@ -17,6 +11,8 @@ cask "linkliar" do
     url :url
     strategy :github_latest
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "LinkLiar.app"
 

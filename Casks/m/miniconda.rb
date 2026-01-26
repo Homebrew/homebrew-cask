@@ -1,28 +1,36 @@
 cask "miniconda" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "py313_25.5.1-1"
-  sha256 arm:   "2ec6f7981770b3396a9ab426e07ac8ef5b12b4393aa2e4bcc984376fe3aa327e",
-         intel: "4152f260040d452bfe00c67ac6b429aec7ff3b98f62bab8abe4c468e98e51891"
+  on_arm do
+    version "py313_25.11.1-1"
+    sha256 "9f84ad10ea513fb59bb714933bc8dc092bd25fdb03c236868f5d5af3c26a1fd4"
+
+    livecheck do
+      url "https://repo.anaconda.com/miniconda/"
+      strategy :page_match do |page|
+        checksum = page[/>\s*Miniconda\d+-latest-MacOSX?-#{arch}\.sh<.{,99}>(\w{64})</im, 1]
+        next unless checksum
+
+        page[/>\s*Miniconda3[._-](py\d+[._-]\d+(?:[.-]\d+)*)[._-]MacOSX?[._-]#{arch}\.sh<.{,99}>#{checksum}</im, 1]
+      end
+    end
+  end
+  on_intel do
+    version "py313_25.7.0-2"
+    sha256 "9c88674b1a839eeb4cff006df397a05ea7d896472318fd84b7070278f9653dc6"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh"
   name "Miniconda"
   desc "Minimal installer for conda"
   homepage "https://www.anaconda.com/docs/getting-started/miniconda/main"
 
-  livecheck do
-    url "https://repo.anaconda.com/miniconda/"
-    strategy :page_match do |page|
-      sha256 = page.scan(/>Miniconda3-latest-MacOSX-#{arch}\.sh<.{,99}>(\w{64})</im).first.first
-      page.scan(/>Miniconda3-(py\d+_[\d.-]+)-MacOSX-#{arch}\.sh<.{,99}>#{sha256}</im).first.first
-    end
-  end
-
   auto_updates true
-  conflicts_with cask: [
-    "mambaforge",
-    "miniforge",
-  ]
+  conflicts_with cask: "miniforge"
   container type: :naked
 
   installer script: {
@@ -31,9 +39,23 @@ cask "miniconda" do
   }
   binary "#{caskroom_path}/base/condabin/conda"
 
+  postflight do
+    if Dir.exist? "#{HOMEBREW_TEMP}/#{token}-envs"
+      FileUtils.rm_r "#{caskroom_path}/base/envs"
+      FileUtils.mv "#{HOMEBREW_TEMP}/#{token}-envs", "#{caskroom_path}/base/envs"
+    end
+  end
+
+  uninstall_preflight do
+    if Dir.exist? "#{caskroom_path}/base/envs"
+      FileUtils.mv "#{caskroom_path}/base/envs", "#{HOMEBREW_TEMP}/#{token}-envs"
+    end
+  end
+
   uninstall delete: "#{caskroom_path}/base"
 
   zap trash: [
+    "#{HOMEBREW_TEMP}/#{token}-envs",
     "~/.conda",
     "~/.condarc",
     "~/.continuum",

@@ -1,6 +1,6 @@
 cask "eqmac" do
-  version "1.8.11"
-  sha256 "a9a845e31978dcd24fdd74e64b11bb820ea17fe3454283f1562d478039f87069"
+  version "1.8.12"
+  sha256 "ab75f4868390ae21e65d487cdbfe2be62acb3f2de4170bed4be16b3e059f1328"
 
   url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.dmg",
       verified: "github.com/bitgapp/eqMac/"
@@ -14,11 +14,14 @@ cask "eqmac" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "eqMac.app"
 
-  uninstall delete: "/Library/Audio/Plug-Ins/HAL/eqMac.driver"
+  uninstall delete: [
+    "/Library/Audio/Plug-Ins/HAL/eqMac.driver",
+    "/Library/LaunchDaemons/com.bitgapp.eqmac.helper.plist",
+    "/Library/PrivilegedHelperTools/com.bitgapp.eqmac.helper",
+  ]
 
   zap trash: [
     "~/Library/Caches/com.bitgapp.eqmac",

@@ -8,6 +8,7 @@ cask "speedcrunch" do
   homepage "https://heldercorreia.bitbucket.io/speedcrunch/"
 
   deprecate! date: "2024-10-29", because: :unmaintained
+  disable! date: "2025-10-29", because: :unmaintained
 
   app "SpeedCrunch.app"
 

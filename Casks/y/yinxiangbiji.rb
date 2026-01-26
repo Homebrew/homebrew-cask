@@ -1,6 +1,6 @@
 cask "yinxiangbiji" do
-  version "9.7.34_477537"
-  sha256 "631d28f9d85b28b5db5325dca16b8e8f4e3014f84b51552af7ae8e845f05c482"
+  version "9.8.3_478024"
+  sha256 "469644996d5c001c164f971b149115a0409dda7b9b04ed66b6e116802927fc86"
 
   url "https://cdn.yinxiang.com/mac-smd/public/YinxiangBiji_RELEASE_#{version}.zip"
   name "Evernote"
@@ -15,7 +15,7 @@ cask "yinxiangbiji" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "印象笔记.app"
 

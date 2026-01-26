@@ -1,5 +1,5 @@
 cask "tunetag" do
-  version "1.7.4"
+  version "1.8.4"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/tunetag/TuneTag.dmg"

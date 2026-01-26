@@ -1,9 +1,9 @@
 cask "jameica" do
   arch arm: "-aarch64", intel: "64"
 
-  version "2.10.5"
-  sha256 arm:   "10aa6e8fd375bba7e5e106bc4838472f97616ad3bbe27c05f284f9ce78309c9d",
-         intel: "cdcfacc7c925bdb5cf9f1db4f6b8efa457284a5df9dfb675abdebf3d3d353520"
+  version "2.12.0"
+  sha256 arm:   "0d01567ae868e3f4c73a03c809bf5f0379c37e1cd408563f5cab4b12c47feb20",
+         intel: "1d275e20a02876d3dbd6b042b4bfc2db1e98917854e50f3028c3189a14f8ec41"
 
   url "https://www.willuhn.de/products/jameica/releases/current/jameica/jameica-macos#{arch}-#{version}.zip"
   name "Jameica"

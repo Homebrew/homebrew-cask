@@ -1,39 +1,20 @@
 cask "soundsource" do
+  version "6.0.2"
   sha256 :no_check
 
-  on_ventura :or_older do
-    version "5.6.5"
-
-    url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource-ACE.zip"
-
-    # The ACE release supports macOS 11 to 14.4.1, so we use the highest
-    # supported macOS version in the URL.
-    livecheck do
-      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1441&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
-      strategy :sparkle
-    end
-  end
-  on_sonoma :or_newer do
-    version "5.8.5"
-
-    url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource.zip"
-
-    livecheck do
-      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=999&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
-      strategy :sparkle
-    end
-
-    # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=SoundSource
-    caveats "SoundSource #{version} requires macOS 14.5 or higher."
-  end
-
+  url "https://cdn.rogueamoeba.com/soundsource/download/SoundSource.zip"
   name "SoundSource"
   desc "Sound and audio controller"
   homepage "https://rogueamoeba.com/soundsource/"
 
+  livecheck do
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=999&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
+    strategy :sparkle
+  end
+
   auto_updates true
   conflicts_with cask: "soundsource@test"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sequoia"
 
   app "SoundSource.app"
 

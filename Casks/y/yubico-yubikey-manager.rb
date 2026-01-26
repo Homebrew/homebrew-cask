@@ -9,8 +9,6 @@ cask "yubico-yubikey-manager" do
 
   disable! date: "2025-07-27", because: :discontinued, replacement_cask: "yubico-authenticator"
 
-  depends_on macos: ">= :sierra"
-
   pkg "yubikey-manager-qt-#{version}-mac.pkg"
 
   uninstall quit:    "com.yubico.ykman",

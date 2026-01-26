@@ -1,6 +1,6 @@
 cask "flowdown" do
-  version "3.1.394"
-  sha256 "8a727ec0a147e40afffb61432f8235d7a4bf2132eb2610cfe22c94e8271fd11f"
+  version "4.5.3"
+  sha256 "a139eafbac57725fa1e594baad8c6da869868fa267b9d1097268e5a8aecd1520"
 
   url "https://github.com/Lakr233/FlowDown/releases/download/#{version}/FlowDown-#{version}.zip",
       verified: "github.com/Lakr233/FlowDown/"
@@ -10,10 +10,11 @@ cask "flowdown" do
 
   livecheck do
     url :url
+    regex(/^v?(\d+(?:\.\d+)+(?:[._-](?:patch|rev)[._-]\d+)?)$/i)
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "FlowDown.app"
 

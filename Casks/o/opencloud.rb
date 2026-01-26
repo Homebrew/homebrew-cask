@@ -1,9 +1,9 @@
 cask "opencloud" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.0.0"
-  sha256 arm:   "b26095f17c2c80babb2e9db2ed447c0d99521c0615e62a3062981aabcd9c3bba",
-         intel: "e12b48b2eb183defa33dbdba019de3eff73e8fecf08d5222723444a77252edeb"
+  version "3.0.3"
+  sha256 arm:   "4f1e4292b19c38cb346cbabacd22733a3ad4c37915fc0b6a1db7960a03687b00",
+         intel: "51c3c2f80e963213803e3070f6de4d198a5b98acaaecc9430588a9003ee4e3a4"
 
   url "https://github.com/opencloud-eu/desktop/releases/download/v#{version}/OpenCloud_Desktop-v#{version}-macos-clang-#{arch}.pkg"
   name "OpenCloud Desktop"
@@ -15,7 +15,6 @@ cask "opencloud" do
     strategy :github_latest
   end
 
-  auto_updates true
   depends_on macos: ">= :monterey"
 
   pkg "OpenCloud_Desktop-v#{version}-macos-clang-#{arch}.pkg"

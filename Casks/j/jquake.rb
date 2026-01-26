@@ -18,9 +18,7 @@ cask "jquake" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
-
-  depends_on macos: ">= :catalina"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "JQuake.app"
 

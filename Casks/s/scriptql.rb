@@ -8,6 +8,7 @@ cask "scriptql" do
   homepage "https://kainjow.com/"
 
   deprecate! date: "2024-11-15", because: :unmaintained
+  disable! date: "2025-11-15", because: :unmaintained
 
   qlplugin "ScriptQL.qlgenerator"
 

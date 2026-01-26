@@ -1,6 +1,6 @@
 cask "thebrain" do
-  version "14.0.110.0"
-  sha256 "04a42517a4eedc3da8c3ee833eea223bb903ea2d1592b3d399bf4866f528add1"
+  version "14.0.113.0"
+  sha256 "47e676dbf93d559cf16d9773854ce0d0bb31c038a36bb8186d3c86b2a1228be0"
 
   url "https://updater.thebrain.com/files/TheBrain#{version}.dmg"
   name "TheBrain"
@@ -11,8 +11,6 @@ cask "thebrain" do
     url "https://salesapi.thebrain.com/?a=doDirectDownload&id=#{version.major}000"
     strategy :header_match
   end
-
-  depends_on macos: ">= :mojave"
 
   app "TheBrain #{version.major}.app"
 

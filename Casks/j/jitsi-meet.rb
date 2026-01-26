@@ -1,6 +1,6 @@
 cask "jitsi-meet" do
-  version "2025.4.0"
-  sha256 "0c94688d1f110f9bf7c367b3d1c3e75105c29b098feafedf5a3422abd9001cea"
+  version "2025.10.0"
+  sha256 "713855b796c24d3ac768080544898ef91a709bacdf09586b5536b0bd00ec4745"
 
   url "https://github.com/jitsi/jitsi-meet-electron/releases/download/v#{version}/jitsi-meet.dmg"
   name "Jitsi Meet"
@@ -8,7 +8,7 @@ cask "jitsi-meet" do
   homepage "https://github.com/jitsi/jitsi-meet-electron/"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Jitsi Meet.app"
 

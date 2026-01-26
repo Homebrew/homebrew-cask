@@ -1,5 +1,5 @@
 cask "logmein-client" do
-  version "4.01.8031"
+  version "4.1.8058"
   sha256 :no_check
 
   url "https://secure.logmein.com/LogMeInClientMac.dmg"
@@ -11,8 +11,6 @@ cask "logmein-client" do
     url "https://secure.logmein.com/versioncheck_logmein_client.ashx?product=LogMeInClient&os=macosx&osversion=167776515"
     regex(/Version:\s+v?(\d+(?:\.\d+)+)/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "LogMeIn Client.app"
 

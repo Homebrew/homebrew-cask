@@ -12,8 +12,6 @@ cask "outguess" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "Outguess.app"
 
   zap trash: [

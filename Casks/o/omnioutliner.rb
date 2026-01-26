@@ -1,30 +1,6 @@
 cask "omnioutliner" do
-  on_big_sur :or_older do
-    on_el_capitan :or_older do
-      version "5.1.4"
-      sha256 "91817e87a29c6a86f64b22f36e292b354aab89f63a070eeab117f4fbb2704ff0"
-
-      url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniOutliner-#{version}.dmg"
-    end
-    on_sierra do
-      version "5.3.4"
-      sha256 "dd329a070980ae6fe1aa9c55d398a2ab5b6192082455e7eb3526a9fccb3eaf42"
-
-      url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniOutliner-#{version}.dmg"
-    end
-    on_high_sierra do
-      version "5.4.2"
-      sha256 "a9364dcf2ee97a871a881530785fa54d269f5e95298e2e4d2e979c70b6365395"
-
-      url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniOutliner-#{version}(n).dmg"
-    end
-    on_mojave do
-      version "5.8.5"
-      sha256 "4439e6f700e71e3ec182fd16be9eca3de3afa3db4c4894c396297ba59b0f6b10"
-
-      url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniOutliner-#{version}.dmg"
-    end
-    on_catalina do
+  on_sonoma :or_older do
+    on_catalina :or_older do
       version "5.8.5"
       sha256 "4439e6f700e71e3ec182fd16be9eca3de3afa3db4c4894c396297ba59b0f6b10"
 
@@ -36,16 +12,22 @@ cask "omnioutliner" do
 
       url "https://downloads.omnigroup.com/software/macOS/11/OmniOutliner-#{version}.dmg"
     end
+    on_monterey :or_newer do
+      version "5.15"
+      sha256 "264c43d26fd090dc46395a6e40d0f7be22503b8c3c91df8a4c5bcacc6ed22857"
+
+      url "https://downloads.omnigroup.com/software/macOS/12/OmniOutliner-#{version}.dmg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
-    version "5.14.3"
-    sha256 "130b8af327da7dc860b77ec779f88e5d739d6209de51e7fbccffdac8b853bf1c"
+  on_sequoia :or_newer do
+    version "6.0.1"
+    sha256 "47c888186688a4986dd344827b0a3bd9c8ce692e16a2faabbddadef3b0b5b050"
 
-    url "https://downloads.omnigroup.com/software/macOS/12/OmniOutliner-#{version}.dmg"
+    url "https://downloads.omnigroup.com/software/macOS/15/OmniOutliner-#{version}.dmg"
 
     livecheck do
       url "https://www.omnigroup.com/download/latest/omnioutliner/"

@@ -1,6 +1,6 @@
 cask "popclip" do
-  version "2024.12"
-  sha256 "22b223f1a6b3a3f63883e71af5e607e7ab4d80833d19d1bb9e0c049049863953"
+  version "2025.9.2"
+  sha256 "d04d7c15ac6a6e6719e3b93325ba6238787a532470a94e2724d783897b3b2d92"
 
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip",
       verified: "pilotmoon.com/downloads/"
@@ -18,7 +18,7 @@ cask "popclip" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "PopClip.app"
 

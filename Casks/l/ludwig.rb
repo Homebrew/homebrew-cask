@@ -3,17 +3,15 @@ cask "ludwig" do
   sha256 :no_check
 
   url "https://desktop.ludwig.guru/download/latest",
-      user_agent: :fake
+      user_agent: :browser
   name "ludwig"
   desc "Sentence search engine app that helps you write better English"
   homepage "https://ludwig.guru/"
 
   livecheck do
-    url :url
+    url :url, user_agent: :browser
     strategy :header_match
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Ludwig.app"
 

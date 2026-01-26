@@ -1,8 +1,8 @@
 cask "smlnj" do
-  version "110.99.8"
-  sha256 "3c8244ae96dde9b4089faa9073c6dd3f1f1cb50b73143d6e20a711ecda286e79"
+  version "110.99.9"
+  sha256 "41f011e2950935efb7336d4157acb76efa886cec6c14fb28df82ec0a5b4ac993"
 
-  url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-amd64-#{version}.pkg",
+  url "https://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-amd64-#{version}.pkg",
       verified: "smlnj.cs.uchicago.edu/"
   name "Standard ML of New Jersey"
   desc "Compiler for the Standard ML '97 programming language"
@@ -12,6 +12,8 @@ cask "smlnj" do
     url :homepage
     regex(%r{href=.*?/smlnj-amd64-(\d+(?:\.\d+)*)\.pkg}i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   pkg "smlnj-amd64-#{version}.pkg"
 

@@ -1,8 +1,11 @@
 cask "iptvnator" do
-  version "0.16.0"
-  sha256 "ccea0edb6237fc4e94be5119d111b2479774cc459fb758ab14f7abb7031180c5"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/4gray/iptvnator/releases/download/v#{version}/IPTVnator-#{version}-universal.dmg"
+  version "0.18.0"
+  sha256 arm:   "540d9fa8f1d0bcbafb1e9e6455756af8f058a1e3e3ad864a04ee501ac77704c0",
+         intel: "4482f67d2cc10d748e76e109c43aa447e7da4b6e0bc934f8aa1e8cbeec30001f"
+
+  url "https://github.com/4gray/iptvnator/releases/download/v#{version}/iptvnator-#{version}-mac-#{arch}.dmg"
   name "IPTVnator"
   desc "Open Source m3u, m3u8 player"
   homepage "https://github.com/4gray/iptvnator"
@@ -12,7 +15,9 @@ cask "iptvnator" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :monterey"
 
   app "iptvnator.app"
 

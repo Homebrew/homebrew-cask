@@ -2,36 +2,37 @@ cask "mysqlworkbench" do
   arch arm: "arm64", intel: "x86_64"
 
   on_monterey :or_older do
-    on_high_sierra :or_older do
-      version "8.0.18"
-      sha256 "965f85163d1723be26c1f0c74c5b1cd908fac79e02c00fa371c217c9a3bf09ae"
-
-      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
-    end
-    on_mojave do
-      version "8.0.21"
-      sha256 "7d812551cc1cc38e1d5f588e6c91b07f1778c78a04bfe94dafac3a23ea425e88"
-
-      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
-    end
-    on_catalina do
+    on_catalina :or_older do
       version "8.0.23"
       sha256 "4c8664f5686a449a9760bda9b85d7e8c6beb1367d35f668048ffe534652da7b3"
 
-      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg",
+          user_agent: :curl
+
+      disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+      caveats do
+        requires_rosetta
+      end
     end
     on_big_sur do
       version "8.0.31"
       sha256 "6807ac1138c424c57d7e912c08301a838a90935dd0fc7a5658d3ded23f98a865"
 
-      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg",
+          user_agent: :curl
+
+      caveats do
+        requires_rosetta
+      end
     end
     on_monterey do
       version "8.0.34"
       sha256 arm:   "aea67c39354d76c38f2e9aca4390dbe4f75ecc3f12110ff598bf2fc46f48bf8c",
              intel: "9fba65a06db4c67e353014b49c41d7cd0e915dd6584df43d6cb099f38cf841e2"
 
-      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-#{arch}.dmg"
+      url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-#{arch}.dmg",
+          user_agent: :curl
     end
 
     livecheck do
@@ -39,15 +40,16 @@ cask "mysqlworkbench" do
     end
   end
   on_ventura :or_newer do
-    version "8.0.43"
-    sha256 arm:   "bcf35a7c147e6ec2b55ca39e527df8f250f878330abf56488a05adfe0e20b0ea",
-           intel: "38b909950feebb3094663eaf4b6964ff7002901fc6559e0c1d91f49441a41c1e"
+    version "8.0.46"
+    sha256 arm:   "3e0d9fbad11f1496a8d27a80c0e64a07565fb8b8bc27cddfff9754686353d164",
+           intel: "ece7e95794507833e953b39d520d22e4b7561883630bbac3da671560eef3d892"
 
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-#{arch}.dmg"
 
     livecheck do
-      url "https://dev.mysql.com/downloads/workbench/"
-      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)+)/i)
+      url "https://dev.mysql.com/downloads/workbench/?tpl=platform&os=33",
+          user_agent: :curl
+      regex(/mysql[._-]workbench[._-]community[._-]v?(\d+(?:\.\d+)+)(?:[._-]macos)?[._-]#{arch}\.dmg/i)
     end
   end
 

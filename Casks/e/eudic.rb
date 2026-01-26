@@ -10,8 +10,6 @@ cask "eudic" do
   desc "English dictionary"
   homepage "https://www.eudic.net/v4/en/app/eudic"
 
-  depends_on macos: ">= :high_sierra"
-
   app "Eudic.app"
 
   uninstall quit: [

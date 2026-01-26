@@ -1,9 +1,9 @@
 cask "typefully" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.0"
-  sha256 arm:   "9c43bafcd93a806a281085a2d0b920da423b0b4297b4bd7716b0d547622e39b2",
-         intel: "b6f7e7f308314c9be605186a1ac390374118ec9147deef102a6f0f43b6424fbe"
+  version "1.3.1"
+  sha256 arm:   "607d2a6b83a052813776b47818441b34de1083ac2a2a9873e48a60c829bf8e8a",
+         intel: "e546dab98a27d33a1b3978f3f5ff843a5592d5e343ba3b50d855704fbfe68824"
 
   url "https://download.todesktop.com/2304250k2av6yux/Typefully%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/2304250k2av6yux/"
@@ -17,7 +17,7 @@ cask "typefully" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Typefully.app"
 

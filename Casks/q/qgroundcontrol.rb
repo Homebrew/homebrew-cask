@@ -1,6 +1,6 @@
 cask "qgroundcontrol" do
-  version "5.0.6"
-  sha256 "313728b0e8a182c8ca0e24e95b3dd019a91c0422aefaad906346d55e58b2eb7c"
+  version "5.0.8"
+  sha256 "1f5fc88f331302adcb4d00c3b92f05ef83bad748196a2646497c50800ab74822"
 
   url "https://github.com/mavlink/qgroundcontrol/releases/download/v#{version}/QGroundControl.dmg",
       verified: "github.com/mavlink/qgroundcontrol/"

@@ -9,8 +9,6 @@ cask "aural" do
 
   deprecate! date: "2025-06-22", because: :discontinued
 
-  depends_on macos: ">= :high_sierra"
-
   app "Aural.app"
 
   zap trash: "~/Library/Preferences/anon.Aural.plist"

@@ -13,8 +13,6 @@ cask "voicepeak" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :high_sierra"
-
   pkg "VOICEPEAK 邪神ちゃん 無料お試し版/Mac/Voicepeak.pkg"
 
   uninstall pkgutil: "com.dreamtonics.voicepeak.editor"

@@ -1,5 +1,5 @@
 cask "ff-works" do
-  version "4.6"
+  version "5.0"
   sha256 :no_check
 
   url "https://www.ffworks.net/ffWorks.dmg"
@@ -13,7 +13,7 @@ cask "ff-works" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :big_sur"
 
   app "ff·Works.app"
 

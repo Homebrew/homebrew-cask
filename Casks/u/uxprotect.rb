@@ -7,9 +7,9 @@ cask "uxprotect" do
   homepage "https://digitasecurity.com/product/uxprotect/"
 
   deprecate! date: "2024-08-30", because: :unmaintained
+  disable! date: "2025-08-30", because: :unmaintained
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "UXProtect.app"
 

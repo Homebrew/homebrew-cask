@@ -12,6 +12,7 @@ cask "graalvm-jdk@17" do
   homepage "https://www.graalvm.org/"
 
   deprecate! date: "2024-10-20", because: :no_longer_meets_criteria
+  disable! date: "2025-10-20", because: :no_longer_meets_criteria
 
   artifact "graalvm-jdk-#{version}+8.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 

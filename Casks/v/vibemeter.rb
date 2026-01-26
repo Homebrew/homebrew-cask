@@ -8,10 +8,7 @@ cask "vibemeter" do
   desc "Menu bar app to monitor AI spending"
   homepage "https://www.vibemeter.ai/"
 
-  livecheck do
-    url "https://raw.githubusercontent.com/steipete/VibeMeter/main/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2025-11-20", because: :unmaintained
 
   auto_updates true
   depends_on macos: ">= :sequoia"

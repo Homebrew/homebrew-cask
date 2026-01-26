@@ -1,6 +1,6 @@
 cask "pacifist" do
-  version "4.1.3"
-  sha256 "4b299bbb4724fe541a5597f30932463101409b0218641b72a5194ee5d5885a41"
+  version "4.1.4"
+  sha256 "d76e51f10a98460809c7f5711e7f44742a7cc7ed7372d7f1f4c14a8e41c249ea"
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
   name "Pacifist"
@@ -13,7 +13,6 @@ cask "pacifist" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "Pacifist.app"
   binary "#{appdir}/Pacifist.app/Contents/Resources/usr/bin/pacifist"

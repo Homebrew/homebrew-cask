@@ -15,7 +15,7 @@ cask "dust3d" do
     regex(/^v?(\d+(?:\.\d+)+(?:-rc\.?\d*)?)$/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "dust3d-#{version}.app"
 

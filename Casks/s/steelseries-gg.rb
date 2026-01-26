@@ -1,6 +1,6 @@
 cask "steelseries-gg" do
-  version "92.0.0"
-  sha256 "eea4c80d86fd8265c778c30431056c6b0bf61403203088f5135bd5165f632e7b"
+  version "103.0.0"
+  sha256 "89b42e895b08fe06bcfc86f0b82488b959506935ebf6a28a458902d26ca0433a"
 
   url "https://engine.steelseriescdn.com/SteelSeriesGG#{version}.pkg",
       verified: "engine.steelseriescdn.com/"
@@ -14,8 +14,6 @@ cask "steelseries-gg" do
   end
 
   auto_updates true
-  conflicts_with cask: "steelseries-engine"
-  depends_on macos: ">= :sierra"
 
   pkg "SteelSeriesGG#{version}.pkg"
 

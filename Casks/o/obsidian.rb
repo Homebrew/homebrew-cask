@@ -1,6 +1,6 @@
 cask "obsidian" do
-  version "1.9.10"
-  sha256 "b544f9d27185dabb9ae569b59eac0ee08f37bbca3e070c2b6a921bc606808b56"
+  version "1.11.5"
+  sha256 "e68af1e056dfeedf3b74f0b89473b6d39b672d9e7386da7128638802f6bd2bf4"
 
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}.dmg",
       verified: "github.com/obsidianmd/"
@@ -16,7 +16,7 @@ cask "obsidian" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Obsidian.app"
 

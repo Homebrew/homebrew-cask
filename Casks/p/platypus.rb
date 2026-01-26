@@ -1,6 +1,6 @@
 cask "platypus" do
-  version "5.4.1"
-  sha256 "7e52b3993e3edd8c2f9d783cec23e9fc9206f8ff62ae42fe1dabff481e3d4dd5"
+  version "5.5.0"
+  sha256 "2fad132e717e6543b41e5e7aeb357e8846baf8c9f3b3cb2919dc0f5eec3de415"
 
   url "https://sveinbjorn.org/files/software/platypus/platypus#{version}.zip"
   name "Platypus"
@@ -12,7 +12,10 @@ cask "platypus" do
     strategy :sparkle, &:short_version
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Platypus.app"
 

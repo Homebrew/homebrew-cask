@@ -8,6 +8,8 @@ cask "love" do
   desc "2D game framework for Lua"
   homepage "https://love2d.org/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "love.app"
   binary "#{appdir}/love.app/Contents/MacOS/love"
 

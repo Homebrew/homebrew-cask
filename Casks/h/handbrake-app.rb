@@ -1,8 +1,8 @@
 cask "handbrake-app" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
-  version "1.10.0"
-  sha256 "b74b347a97c8077eccc20182c5f910fe692a49765e2aadc3a5cdde262a2ea2c1"
+  version "1.10.2"
+  sha256 "32a7771d89f02d5d80d5a45711620fb206b22e7182acd8375d1d87afed7b4fd3"
 
   url "https://handbrake.fr/rotation.php?file=HandBrake-#{version}.dmg&update=true"
   name "HandBrake"
@@ -17,7 +17,6 @@ cask "handbrake-app" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "HandBrake.app"
 

@@ -12,7 +12,7 @@ cask "black-ink" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :catalina"
+  auto_updates true
 
   app "Black Ink.app"
 

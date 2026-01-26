@@ -17,10 +17,9 @@ cask "basictex" do
   end
 
   conflicts_with cask: [
-    "mactex-no-gui",
     "mactex",
+    "mactex-no-gui",
   ]
-  depends_on macos: ">= :mojave"
 
   pkg "mactex-basictex-#{version.no_dots}.pkg"
 

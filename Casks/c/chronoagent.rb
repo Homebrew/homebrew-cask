@@ -1,5 +1,5 @@
 cask "chronoagent" do
-  version "11.1.0"
+  version "12.0.0"
   sha256 :no_check
 
   url "https://downloads.econtechnologies.com/CA_Mac_Download.dmg"
@@ -11,8 +11,6 @@ cask "chronoagent" do
     url "https://www.econtechnologies.com/downloads/downloads.html"
     regex(/>\s*ChronoAgent.*?Version\s+(\d+(?:\.\d+)+)[\s<]+/i)
   end
-
-  depends_on macos: ">= :mojave"
 
   pkg "Install.pkg"
 

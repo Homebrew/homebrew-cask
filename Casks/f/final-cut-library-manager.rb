@@ -11,8 +11,6 @@ cask "final-cut-library-manager" do
   deprecate! date: "2024-04-03", because: :discontinued
   disable! date: "2025-04-03", because: :discontinued
 
-  depends_on macos: ">= :sierra"
-
   app "Final Cut Library Manager.app"
 
   zap trash: [

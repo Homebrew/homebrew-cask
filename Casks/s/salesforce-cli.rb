@@ -1,9 +1,9 @@
 cask "salesforce-cli" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.102.6,8c0d3cb"
-  sha256 arm:   "fdd87e3e35d47c762333e1e69062fe4bf7b769152622608d7aa52bcb430e4210",
-         intel: "fc80dbca82a19b3a77ac2d1c2f6b2b4c8365caf4873814c9381241d7e0c99353"
+  version "2.119.8,524defa"
+  sha256 arm:   "ffb6b0b61efcc8753f0fa1698a8148c2b61eeca59bb4e7dc401512fd639d6b7e",
+         intel: "864eecaa4209cb2918190207b5f050b7b5f6f8e465e5c6e462d9fe09250201d6"
 
   url "https://github.com/salesforcecli/cli/releases/download/#{version.csv.first}/sf-v#{version.csv.first}-#{version.csv.second}-#{arch}.pkg",
       verified: "github.com/salesforcecli/cli/"
@@ -20,9 +20,7 @@ cask "salesforce-cli" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
-
-  depends_on macos: ">= :el_capitan"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   pkg "sf-v#{version.csv.first}-#{version.csv.second}-#{arch}.pkg"
 

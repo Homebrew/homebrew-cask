@@ -14,9 +14,9 @@ cask "cinc-workstation" do
     end
   end
   on_monterey do
-    version "25.5.1084"
-    sha256 arm:   "293e5ed243565122b61a901938a707f77db11d7db5163fc5a66916cee40b7d4c",
-           intel: "029ab14f4158261c38e156d484f13c03079190309984cd3b170019f10720442c"
+    version "25.9.1094"
+    sha256 arm:   "9d8f3c9ea48aea18192d3356d655e92a6d822853239fe016436f7f17186284f1",
+           intel: "88e5c93fb060bb7574db4bd1c06763656b6a1b221ae194fae03e7d64ed75f010"
 
     url "https://downloads.cinc.sh/files/stable/cinc-workstation/#{version}/mac_os_x/12/cinc-workstation-#{version}-1.#{arch}.dmg"
 
@@ -26,9 +26,9 @@ cask "cinc-workstation" do
     end
   end
   on_ventura :or_newer do
-    version "25.5.1084"
-    sha256 arm:   "1a0df462bd52bd6c0872a2a06eb0165195cd922a6880c2383d4d33138ad395a1",
-           intel: "6193859c8bfda0e1332ec98fc47996cb424154f3f2c8a6535cdd3323a8e6c9e0"
+    version "25.9.1094"
+    sha256 arm:   "1a3d3183facaae8dd5e4e3970ba83ba5929a9212bd548cd7229401db8766802c",
+           intel: "e8ee8ea3fd5165d54132e788f26e9659b9b3e3e0b4241e45beff36bbaacadcd5"
 
     url "https://downloads.cinc.sh/files/stable/cinc-workstation/#{version}/mac_os_x/13/cinc-workstation-#{version}-1.#{arch}.dmg"
 
@@ -41,6 +41,8 @@ cask "cinc-workstation" do
   name "Cinc Workstation"
   desc "Installer for Chef infrastructure management tools"
   homepage "https://cinc.sh/start/workstation/"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :big_sur"
 

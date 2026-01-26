@@ -7,6 +7,8 @@ cask "provisionql" do
   desc "Quick Look plugin for mobile apps and provisioning profiles"
   homepage "https://github.com/ealeksandrov/ProvisionQL"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "ProvisionQL.qlgenerator"
 
   # No zap stanza required

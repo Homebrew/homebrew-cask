@@ -12,8 +12,6 @@ cask "cheetah3d" do
     regex(%r{Download\s<br/>Cheetah3D\s(\d+(?:\.\d+)+)}i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Cheetah3D.app"
 
   zap trash: [

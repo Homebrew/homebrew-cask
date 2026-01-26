@@ -48,13 +48,15 @@ jobs:
         with:
           core: false
           cask: true
-          test-bot: false
 
       - name: Check out Pull Request
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 0
           persist-credentials: false
+
+      - name: Run brew config
+        run: brew config
 
       - name: Generate CI matrix
         id: generate-matrix
@@ -77,6 +79,7 @@ jobs:
     name: ${{ matrix.name }}
     needs: generate-matrix
     runs-on: ${{ matrix.runner }}
+    container: ${{ matrix.container || null }}
     strategy:
       fail-fast: false
       matrix:
@@ -88,7 +91,6 @@ jobs:
         with:
           core: true
           cask: true
-          test-bot: true
 
       - name: Enable debug mode
         run: |
@@ -97,7 +99,7 @@ jobs:
         if: runner.debug
 
       - name: Check out Pull Request
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -108,7 +110,7 @@ jobs:
 
       - name: Cache Homebrew Gems
         id: cache
-        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809 # v4.2.4
+        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -116,11 +118,14 @@ jobs:
 
       - name: Cache style cache
         if: runner.os == 'macOS'
-        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809 # v4.2.4
+        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
         with:
           path: ~/Library/Caches/Homebrew/style
           key: macos-style-cache-${{ github.sha }}
           restore-keys: macos-style-cache-
+
+      - name: Run brew config
+        run: brew config
 
       - name: Run brew test-bot --only-tap-syntax
         id: tap-syntax
@@ -212,7 +217,7 @@ jobs:
         if: always() && steps.info.outcome == 'success'
         timeout-minutes: 30
 
-      - name: Take snapshot of installed and running apps and services
+      - name: Take snapshot of installed and running apps and services (macOS only)
         id: snapshot
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
@@ -222,7 +227,7 @@ jobs:
               f.puts "HOMEBREW_SNAPSHOT_BEFORE=#{JSON.generate(Check.all)}"
             end
           EOF
-        if: always() && steps.info.outcome == 'success'
+        if: always() && steps.info.outcome == 'success' && runner.os == 'macOS'
 
       - name: Run brew install --cask ${{ matrix.cask.token }}
         id: install
@@ -245,7 +250,7 @@ jobs:
         if: ${{ always() && steps.install.outcome == 'success' && env.CASK_DEPENDENCIES != '' }}
         timeout-minutes: 30
 
-      - name: Compare installed and running apps and services with snapshot
+      - name: Compare installed and running apps and services with snapshot (macOS only)
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
             require "cask/cask_loader"
@@ -259,18 +264,17 @@ jobs:
             errors = Check.errors(before, after, cask: cask)
 
             errors.each do |error|
-              onoe error
               puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
             end
 
             exit 1 if errors.any?
           EOF
-        if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success'
+        if: always() && steps.snapshot.outcome == 'success' && steps.install.outcome == 'success' && runner.os == 'macOS'
 
   conclusion:
     name: conclusion
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     if: always()
     steps:
       - name: Result

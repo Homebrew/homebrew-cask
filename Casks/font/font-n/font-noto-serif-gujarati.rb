@@ -2,13 +2,12 @@ cask "font-noto-serif-gujarati" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifGujarati-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notoserifgujarati/NotoSerifGujarati%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Serif Gujarati"
-  homepage "https://www.google.com/get/noto/#serif-gujr"
+  homepage "https://fonts.google.com/specimen/Noto+Serif+Gujarati"
 
-  font "NotoSerifGujarati-Bold.ttf"
-  font "NotoSerifGujarati-Regular.ttf"
+  font "NotoSerifGujarati[wght].ttf"
 
   # No zap stanza required
 end

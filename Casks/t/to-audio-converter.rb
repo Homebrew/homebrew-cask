@@ -1,5 +1,5 @@
 cask "to-audio-converter" do
-  version "2.0.0,1327"
+  version "2.0.2,1357"
   sha256 :no_check
 
   url "https://amvidia.com/downloads/to-audio-converter-mac.dmg"
@@ -13,9 +13,10 @@ cask "to-audio-converter" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :high_sierra"
+  # The url is unversioned, but the download returns an app with a version number
+  rename "To Audio Converter*.app", "To Audio Converter.app"
 
-  app "To Audio Converter #{version.major}.app"
+  app "To Audio Converter.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.amvidia.To-Audio-Converter-FS",

@@ -13,8 +13,6 @@ cask "zoho-workdrive" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Zoho WorkDrive.app"
 
   zap trash: [

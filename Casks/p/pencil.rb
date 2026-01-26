@@ -13,6 +13,8 @@ cask "pencil" do
     regex(/href=.*?Pencil[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
   end
 
+  disable! date: "2025-11-30", because: :discontinued
+
   app "Pencil.app"
 
   zap trash: [

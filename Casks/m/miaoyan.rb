@@ -1,6 +1,6 @@
 cask "miaoyan" do
-  version "1.18.3"
-  sha256 "04180678da7a6d1d737148b6675a59f251058855ce1ca728d4e69f584e5bb612"
+  version "2.4.5"
+  sha256 "bbd3e3e40a65e99de27e0e4249b732bcb44a3aa59475f0775377f24d43f4a23c"
 
   url "https://gw.alipayobjects.com/os/k/app/MiaoYan_V#{version}.zip",
       verified: "gw.alipayobjects.com/"
@@ -15,7 +15,7 @@ cask "miaoyan" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :big_sur"

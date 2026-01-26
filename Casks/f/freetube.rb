@@ -13,9 +13,9 @@ cask "freetube" do
     end
   end
   on_big_sur :or_newer do
-    version "0.23.7"
-    sha256 arm:   "70a8d24a15a1b4dc0c341b1c3687ccd6c8f53c22a94c63e26511596ecf66c6be",
-           intel: "060b5fcbcb6898491ba9897d0560d780113fc7c5f77c68470499a1224c805627"
+    version "0.23.13"
+    sha256 arm:   "aad0886f11381f35fc5802e9133fe9fd4e99d92da61d4f565b894f693bd14905",
+           intel: "0954bed77c8b940fbfe9a2736396847acb68ec417948f9089bd085464d062e79"
 
     url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-beta-mac-#{arch}.dmg",
         verified: "github.com/FreeTubeApp/FreeTube/"
@@ -30,9 +30,7 @@ cask "freetube" do
   desc "YouTube player focusing on privacy"
   homepage "https://freetubeapp.io/"
 
-  disable! date: "2026-09-01", because: :unsigned
-
-  depends_on macos: ">= :catalina"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "FreeTube.app"
 

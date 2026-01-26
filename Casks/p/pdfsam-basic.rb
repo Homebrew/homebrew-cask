@@ -1,9 +1,9 @@
 cask "pdfsam-basic" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.3.2"
-  sha256 arm:   "6887ead4da879be432b7521ce84f54d462010a06fa49b4c61d81a72d42efd22d",
-         intel: "384564d8a14aa765011761dcf401ea83044bb9304c599dc8b62c67357e6f634f"
+  version "5.4.1"
+  sha256 arm:   "728c728025413cb0d721b3f991f1997cf451e83d42a895931bed4eb0af024bb8",
+         intel: "4869f6662c557cc9f7fdfcc9d9ca92c1d54eeb50c95e5f660ba8c76a09bcd392"
 
   url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/pdfsam-basic-#{version}-macos-#{arch}.dmg",
       verified: "github.com/torakiki/pdfsam/"

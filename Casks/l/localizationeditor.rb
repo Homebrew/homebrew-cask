@@ -7,7 +7,7 @@ cask "localizationeditor" do
   desc "iOS app localization manager"
   homepage "https://github.com/igorkulman/iOSLocalizationEditor/"
 
-  depends_on macos: ">= :mojave"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "LocalizationEditor.app"
 

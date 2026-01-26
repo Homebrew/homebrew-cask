@@ -1,21 +1,27 @@
 cask "betterandbetter" do
-  version "2.7.1,2025081601"
-  sha256 "80745d4435ff189a015dbed478841d6ad6370eed1f69d5cac12b6b6b0e5a529e"
+  version "2.7.3,20251112801"
+  sha256 "5217d3d09b5a682effe712ff1a6cdf14dc224267fd568d7cf4aa2e4e281a5721"
 
   url "https://cdn.better365.cn/BetterAndBetter/#{version.csv.second[0, 4]}/BetterAndBetter_#{version.csv.first}_#{version.csv.second}.zip"
   name "Better And Better"
   desc "Keyboard, mouse and touchpad motion gestures"
   homepage "https://www.better365.cn/bab2.html"
 
+  # The Sparkle item version doesn't always strictly correspond to the number
+  # the file name (i.e. there can be typos), so this matches the version parts
+  # from the file name instead.
   livecheck do
     url "https://www.better365.cn/BetterAndBetterUpdate.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version.strip},#{item.version.strip}"
+    regex(/BetterAndBetter[._-]v?(\d+(?:[._]\d+)+)/i)
+    strategy :sparkle do |item, regex|
+      match = item.url&.match(regex)
+      next unless match
+
+      match[1].tr("_", ",")
     end
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "BetterAndBetter.app"
 

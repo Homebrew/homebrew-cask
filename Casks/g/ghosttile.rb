@@ -10,6 +10,7 @@ cask "ghosttile" do
   homepage "https://ghosttile.kernelpanic.im/"
 
   deprecate! date: "2024-10-14", because: :unmaintained
+  disable! date: "2025-10-14", because: :unmaintained
 
   app "GhostTile.app"
 

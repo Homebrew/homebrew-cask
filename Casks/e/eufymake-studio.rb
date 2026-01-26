@@ -21,8 +21,6 @@ cask "eufymake-studio" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "eufyMake Studio.app"
 
   zap trash: [

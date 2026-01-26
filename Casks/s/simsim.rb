@@ -7,8 +7,6 @@ cask "simsim" do
   desc "Tool to explore iOS application folders in Terminal or Finder"
   homepage "https://github.com/dsmelov/simsim/"
 
-  depends_on macos: ">= :high_sierra"
-
   app "SimSim.app"
 
   uninstall quit: "com.dsmelov.SimSim"

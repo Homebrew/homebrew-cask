@@ -5,21 +5,17 @@ cask "aide-app" do
   sha256 arm:   "987443a703edfa35ddacde38b454c60729dea6a64bdfdb94e7e5f2a3d2a27476",
          intel: "f1c00d17e32933c91bafaf8f795606461aec77b3ef3c976b40d4a8fe80f76a44"
 
-  url "https://github.com/codestoryai/binaries/releases/download/#{version}/Aide.#{arch}.#{version}.dmg",
-      verified: "github.com/codestoryai/binaries/"
+  url "https://github.com/codestoryai/binaries/releases/download/#{version}/Aide.#{arch}.#{version}.dmg"
   name "Aide"
   desc "Open-source AI-native IDE"
-  homepage "https://aide.dev/"
+  homepage "https://github.com/codestoryai/aide"
 
-  livecheck do
-    url "https://aide-updates.codestory.ai/api/update/darwin-#{arch}/stable/0"
-    strategy :json do |json|
-      json["productVersion"]
-    end
-  end
+  # `https://github.com/codestoryai/aide` repo got archived on 2025-02-25
+  # aide.dev is no longer accessible
+  deprecate! date: "2025-11-30", because: :discontinued
+  disable! date: "2026-11-30", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Aide.app"
   binary "#{appdir}/Aide.app/Contents/Resources/app/bin/aide"

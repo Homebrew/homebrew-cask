@@ -8,8 +8,8 @@ cask "discord" do
     end
   end
   on_big_sur :or_newer do
-    version "0.0.357"
-    sha256 "10d94b3c7d0cb354f6917d900b33dcc32ad251c153f7d019d82d2682c3c8d73c"
+    version "0.0.373"
+    sha256 "fc210debb55b451c0aeb8232ec6221b365c5c077b8ee78c8e57ea7e398f943f1"
 
     livecheck do
       url "https://discord.com/api/download/stable?platform=osx"
@@ -24,13 +24,13 @@ cask "discord" do
   homepage "https://discord.com/"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Discord.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hnc.discord.sfl*",
     "~/Library/Application Support/discord",
+    "~/Library/Application%20Support/discord",
     "~/Library/Caches/com.hnc.Discord",
     "~/Library/Caches/com.hnc.Discord.ShipIt",
     "~/Library/Cookies/com.hnc.Discord.binarycookies",

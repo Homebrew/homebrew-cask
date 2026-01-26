@@ -1,6 +1,6 @@
 cask "typora" do
-  version "1.10.10"
-  sha256 "e4995e36e215cb3a0e487371a3ff9a2417362afc78cc4bc67e9115726187a7ea"
+  version "1.12.6"
+  sha256 "249996e3941ac8c9626baae739e716f893df14f1228e13a4a9c8191736974b88"
 
   url "https://download.typora.io/mac/Typora-#{version}.dmg"
   name "Typora"
@@ -24,6 +24,7 @@ cask "typora" do
     "~/Library/Application Support/Typora",
     "~/Library/Caches/abnerworks.Typora",
     "~/Library/Cookies/abnerworks.Typora.binarycookies",
+    "~/Library/HTTPStorages/abnerworks.Typora",
     "~/Library/Preferences/abnerworks.Typora.plist",
     "~/Library/Saved Application State/abnerworks.Typora.savedState",
     "~/Library/WebKit/abnerworks.Typora",

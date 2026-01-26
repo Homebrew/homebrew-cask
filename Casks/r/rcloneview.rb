@@ -1,6 +1,6 @@
 cask "rcloneview" do
-  version "0.8.364"
-  sha256 "5c5f9575989d49eead0a19309bce93eb3f656ce4ea229d56ffa415b905d31c7a"
+  version "1.2.534"
+  sha256 "6342f31a5201142f3bacdaf7650033cee90bfb1932fa852e291074c02240beb5"
 
   url "https://downloads.bdrive.com/rclone_view/builds/RcloneView-#{version}.dmg",
       verified: "downloads.bdrive.com/rclone_view/"
@@ -8,9 +8,11 @@ cask "rcloneview" do
   desc "GUI for rclone"
   homepage "https://rcloneview.com/"
 
+  # A sparkle feed is present in the appcast, but is not currently functional
+  # https://rcloneview.com/appcast/appcast-mac.xml
   livecheck do
-    url "https://rcloneview.com/appcast/appcast-mac.xml"
-    strategy :sparkle
+    url "https://rcloneview.com/src/download"
+    regex(/href=.*RcloneView[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true

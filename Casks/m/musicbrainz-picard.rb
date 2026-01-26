@@ -12,8 +12,6 @@ cask "musicbrainz-picard" do
     regex(%r{href=.*?/MusicBrainz[._-]Picard[._-]v?(\d+(?:\.\d+)+)[._-]macOS}i)
   end
 
-  depends_on macos: ">= :mojave"
-
   app "MusicBrainz Picard.app"
 
   zap trash: [

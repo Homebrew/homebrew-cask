@@ -14,8 +14,6 @@ cask "irpf2024" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   installer manual: "IRPF2024.app"
 
   uninstall delete: "/Applications/IRPF2024"

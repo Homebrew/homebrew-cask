@@ -14,9 +14,24 @@ cask "propresenter" do
       end
     end
   end
-  on_monterey :or_newer do
+  on_monterey do
     version "19.0.1,318767361"
-    sha256 "e1077bcc00ed79ed8554607c8f5dc05f4a0b1f2a0df734868ebc167516f2c669"
+    sha256 "b9a72d0443382e2c645b2af2d1b59a28ffe5884b32d7fdc0e527c86a60b10f14"
+
+    livecheck do
+      url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=12.0&appVersion=0&buildNumber=0&includeNotes=0"
+      strategy :json do |json|
+        json["upgrades"]&.map do |item|
+          next if item["version"].blank? || item["buildNumber"].blank?
+
+          "#{item["version"]},#{item["buildNumber"]}"
+        end
+      end
+    end
+  end
+  on_ventura :or_newer do
+    version "21.1,352387082"
+    sha256 "b9a72d0443382e2c645b2af2d1b59a28ffe5884b32d7fdc0e527c86a60b10f14"
 
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=99&appVersion=0&buildNumber=0&includeNotes=0"

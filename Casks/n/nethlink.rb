@@ -1,9 +1,9 @@
 cask "nethlink" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.3"
-  sha256 arm:   "66a21ddd7a54c43dc5a7df41a6bf27ffb964ea05392506fe463bf8a02714ba66",
-         intel: "e5b299174ea6f6b44063a94bdcab01cbe59383f78caedd8637d0c21ee064b0f4"
+  version "1.4.1"
+  sha256 arm:   "693502b2479c1c5c8b81327aa8e0f8735f24dd316b5dee939c8fe3d31b4cbd81",
+         intel: "6d53c48efaca22bfc5d8a4216170bdd55ff0dc98b729bdb49166b785a5298ea7"
 
   url "https://github.com/NethServer/nethlink/releases/download/v#{version}/nethlink-#{version}-#{arch}.dmg"
   name "NethLink"
@@ -16,7 +16,6 @@ cask "nethlink" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "NethLink.app"
 

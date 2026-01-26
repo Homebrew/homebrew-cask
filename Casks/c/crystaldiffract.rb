@@ -1,5 +1,5 @@
 cask "crystaldiffract" do
-  version "7.1.2"
+  version "7.2.2"
   sha256 :no_check
 
   url "https://crystalmaker.com/downloads/crystaldiffract#{version.major}_mac.zip"
@@ -13,8 +13,6 @@ cask "crystaldiffract" do
       xml.get_elements("//version").map { |item| item.attributes["number"] }
     end
   end
-
-  depends_on macos: ">= :mojave"
 
   app "CrystalDiffract.app"
 

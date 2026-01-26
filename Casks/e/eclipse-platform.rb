@@ -1,9 +1,9 @@
 cask "eclipse-platform" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.36,202505281830"
-  sha256 arm:   "08c763e1dd06c3cac4a491398053b79438efaa7b9db9d625d1abbf3984cf32a6",
-         intel: "edb82321e88cf14dba15b8a9a17f1bf969a14751d6b1257a37ce3f635770c70f"
+  version "4.38,202512010920"
+  sha256 arm:   "50684021e9710821188849cd3b26d9a9675bf5327a5065147d547f92d3b1d1a7",
+         intel: "44887b264c8887ed01c4d3995c21d1d6a405c80b20005598ff4ea9cb348357fd"
 
   url "https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.major}/R-#{version.csv.first}-#{version.csv.second}/eclipse-SDK-#{version.csv.first}-macosx-cocoa-#{arch}.dmg&mirror_id=1"
   name "Eclipse SDK"
@@ -17,6 +17,8 @@ cask "eclipse-platform" do
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Platform.app"

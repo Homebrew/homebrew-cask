@@ -13,6 +13,8 @@ cask "cacher" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Cacher.app"
 
   zap trash: [

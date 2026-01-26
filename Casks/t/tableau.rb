@@ -1,12 +1,12 @@
 cask "tableau" do
   arch arm: "-arm64"
 
-  version "2025.2.1"
-  sha256 arm:   "e240e8f8872ad511a69f0a33264987fa2f0fa8d935b52aef9d6aa1e297fbbf4b",
-         intel: "af0bcbbbac972701642ef389f97373c53145c5ea84e004df0a594627fd0eb7e2"
+  version "2025.3.1"
+  sha256 arm:   "c6420f18cef7efc90aa806fc70f11dcd293e927e75625ed30c459181a32f023f",
+         intel: "f808f854520ad2d1a19fabbb58d5060ddfd1f9232d85745540e5af890c4769d1"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauDesktop-#{version.dots_to_hyphens}#{arch}.dmg",
-      user_agent: "curl/8.7.1"
+      user_agent: :curl
   name "Tableau Desktop"
   desc "Data visualization software"
   homepage "https://www.tableau.com/products/desktop"
@@ -17,7 +17,8 @@ cask "tableau" do
   # should return to checking the XML file if/when it starts being reliably
   # updated to include the newest releases again.
   livecheck do
-    url "https://www.tableau.com/support/releases"
+    url "https://www.tableau.com/support/releases",
+        user_agent: :browser
     regex(%r{href=.*?desktop/v?(\d+(?:\.\d+)+)[^"' >]*["' >]}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
@@ -29,8 +30,6 @@ cask "tableau" do
       end
     end
   end
-
-  depends_on macos: ">= :mojave"
 
   pkg "Tableau Desktop.pkg"
 

@@ -1,9 +1,9 @@
 cask "neovide-app" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.15.1"
-  sha256 arm:   "b1750f36b8bf5f7c123aaea753a5c4c4b44bc2cb89270eab5a304ba6aba95530",
-         intel: "62fb5547f7443b94ccf3cd1a7ae689053804973f15a7992a0b2dbeff7450e649"
+  version "0.15.2"
+  sha256 arm:   "8c672ce737796e648a706ee69191c557ebe56fe07f998904014fc05f19e53fad",
+         intel: "c7a8d29cc75d72a943c91d2519429b5dc5c55f9a50ea28bb80bb2272f60ddb13"
 
   url "https://github.com/neovide/neovide/releases/download/#{version}/Neovide-#{arch}-apple-darwin.dmg"
   name "Neovide"

@@ -11,8 +11,6 @@ cask "gb-studio" do
   desc "Drag and drop retro game creator"
   homepage "https://www.gbstudio.dev/"
 
-  depends_on macos: ">= :high_sierra"
-
   app "GB Studio.app"
 
   zap trash: [

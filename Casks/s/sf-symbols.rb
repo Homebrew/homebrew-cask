@@ -1,5 +1,5 @@
 cask "sf-symbols" do
-  on_big_sur do
+  on_big_sur :or_older do
     version "4"
     sha256 "479b66ce7eb308ca0eff826675325e11e7932fcca407d065261822be5c2ec8cb"
 
@@ -15,20 +15,36 @@ cask "sf-symbols" do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
+  on_ventura do
     version "6"
     sha256 "846e90ca274d56d234a573baf7ca0656c1b86b0cbc5d6af6ee713261250c84fa"
 
     livecheck do
-      url "https://developer.apple.com/sf-symbols/"
-      regex(%r{href=.*?/SF-Symbols-(\d+(?:\.\d+)*)\.dmg}i)
+      skip "Legacy version"
+    end
+  end
+  on_sonoma :or_newer do
+    version "7.1,116"
+    sha256 :no_check # required as upstream package is updated in-place
+
+    livecheck do
+      url :homepage
+      regex(%r{href=.*?/SF[._-]Symbols[._-]v?(\d+(?:\.\d+)*)\.dmg}i)
+      strategy :page_match do |page, regex|
+        major_version = page[regex, 1]
+        next if major_version.blank?
+
+        cask = CaskLoader.load(__FILE__)
+        download_url = "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{major_version}.dmg"
+        Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask:, url: download_url)[:matches].values
+      end
     end
   end
 
-  url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version}.dmg"
+  url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version.major}.dmg"
   name "SF Symbols"
   desc "Tool that provides consistent, highly configurable symbols for apps"
-  homepage "https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/"
+  homepage "https://developer.apple.com/sf-symbols/"
 
   auto_updates true
   depends_on macos: ">= :big_sur"

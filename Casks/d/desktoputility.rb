@@ -1,5 +1,5 @@
 cask "desktoputility" do
-  version "5.3.6"
+  version "6.1.3"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/desktoputility/DesktopUtility.dmg"
@@ -13,7 +13,7 @@ cask "desktoputility" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :tahoe"
 
   app "DesktopUtility.app"
 

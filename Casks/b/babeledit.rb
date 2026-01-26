@@ -1,6 +1,6 @@
 cask "babeledit" do
-  version "5.5.0"
-  sha256 "6c86c5fb7509ba386381bf2e2dba0f566d071baf2719764f11335fec0e88ea2b"
+  version "5.5.1"
+  sha256 "c5a5677633ae010c02965456c529493b5a39b302be82b268fefa894152fc2cd8"
 
   url "https://www.codeandweb.com/download/babeledit/#{version}/BabelEdit-#{version}.dmg"
   name "BabelEdit"
@@ -13,6 +13,7 @@ cask "babeledit" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "BabelEdit.app"
 

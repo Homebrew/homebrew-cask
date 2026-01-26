@@ -1,7 +1,7 @@
 cask "profit" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.35"
+  version "1.0.43"
   sha256 :no_check
 
   url "https://downloadserver-cdn.nelogica.com.br/content/mac/stable/#{arch}/profit.dmg"
@@ -15,8 +15,6 @@ cask "profit" do
       json["appVersion"]
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   app "Profit.app"
 

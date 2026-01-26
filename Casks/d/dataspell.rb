@@ -1,9 +1,9 @@
 cask "dataspell" do
   arch arm: "-aarch64"
 
-  version "2025.2,252.23892.514"
-  sha256 arm:   "484c6889a929c3ec572711164600ad93c927b57a3487636d672db77a1e9483f5",
-         intel: "36bd810a0ab4fab0edcc135ef472a731f55c25af80d40b1e6d36a833302d525c"
+  version "2025.3.1,253.29346.157"
+  sha256 arm:   "fe0d8ef15e6e36af0ea4361bd474f204ee5c307ef90af8ec833976a1dae5a5a3",
+         intel: "388d956dd6243697a162c062c76b2fee4098f4f3405badb07a69ce6df7de6017"
 
   url "https://download.jetbrains.com/python/dataspell-#{version.csv.first}#{arch}.dmg"
   name "DataSpell"
@@ -24,7 +24,6 @@ cask "dataspell" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "DataSpell.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

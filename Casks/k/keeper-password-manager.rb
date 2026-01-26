@@ -1,5 +1,5 @@
 cask "keeper-password-manager" do
-  version "17.3.3"
+  version "17.5.0"
   sha256 :no_check
 
   url "https://keepersecurity.com/desktop_electron/Darwin/KeeperSetup.dmg"
@@ -12,7 +12,7 @@ cask "keeper-password-manager" do
     regex(/Release\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Keeper Password Manager.app"
 

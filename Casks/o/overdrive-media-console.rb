@@ -11,11 +11,9 @@ cask "overdrive-media-console" do
   deprecate! date: "2024-07-04", because: :discontinued
   disable! date: "2025-07-04", because: :discontinued
 
-  pkg "OverDrive-Mac-Installer.pkg"
+  rename "OverDrive-Mac-Installer-Version-*.pkg", "OverDrive-Mac-Installer.pkg"
 
-  preflight do
-    staged_path.glob("OverDrive-Mac-Installer-Version-*.pkg").first.rename(staged_path/"OverDrive-Mac-Installer.pkg")
-  end
+  pkg "OverDrive-Mac-Installer.pkg"
 
   uninstall pkgutil: "com.overdrive.overdriveMediaConsole.*"
 

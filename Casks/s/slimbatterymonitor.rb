@@ -7,6 +7,7 @@ cask "slimbatterymonitor" do
   homepage "https://www.orange-carb.org/SBM/"
 
   deprecate! date: "2024-08-25", because: :unmaintained
+  disable! date: "2025-08-26", because: :unmaintained
 
   app "SlimBatteryMonitor.app"
 

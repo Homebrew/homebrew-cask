@@ -1,6 +1,6 @@
 cask "nextcloud-talk" do
-  version "1.2.5"
-  sha256 "ca38b5050bb36f0176038d6089933fcca56d1117530137457cc453801dc45a09"
+  version "2.0.5"
+  sha256 "3658b6cfc7b202ae56dc02f01e21faf88821b64dc97f481a5adc1a6ce252e20c"
 
   url "https://github.com/nextcloud-releases/talk-desktop/releases/download/v#{version}/Nextcloud.Talk-macos-universal.dmg",
       verified: "github.com/nextcloud-releases/talk-desktop/releases/download/"
@@ -13,7 +13,7 @@ cask "nextcloud-talk" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Nextcloud Talk.app"
 

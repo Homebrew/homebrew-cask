@@ -1,6 +1,6 @@
 cask "pdl" do
-  version "0.7.1"
-  sha256 "9e2f3c68a2960e7d3595ad26c5c383bf66bf20ca3d49b61d855503db50de00b5"
+  version "0.9.2"
+  sha256 "58d5c7cbc0220385b5635de0f660572e814ca4ce820ce2dcbd3be3e43c1f7c84"
 
   url "https://github.com/IBM/prompt-declaration-language/releases/download/v#{version}/PDL_#{version}_universal.dmg",
       verified: "github.com/IBM/prompt-declaration-language/"
@@ -12,8 +12,6 @@ cask "pdl" do
     url :url
     strategy :github_latest
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "PDL.app"
   binary "#{appdir}/PDL.app/Contents/MacOS/PDL", target: "pdl"

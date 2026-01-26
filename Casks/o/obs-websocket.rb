@@ -8,6 +8,7 @@ cask "obs-websocket" do
   homepage "https://github.com/obsproject/obs-websocket"
 
   deprecate! date: "2024-10-27", because: :discontinued
+  disable! date: "2025-10-27", because: :discontinued
 
   pkg "obs-websocket-#{version}-macOS.pkg"
 

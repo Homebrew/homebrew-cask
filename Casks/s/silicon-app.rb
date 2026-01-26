@@ -8,7 +8,6 @@ cask "silicon-app" do
   homepage "https://github.com/DigiDNA/Silicon"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Silicon.app"
 

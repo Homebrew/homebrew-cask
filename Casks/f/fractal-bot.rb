@@ -1,6 +1,6 @@
 cask "fractal-bot" do
-  version "3.00.21"
-  sha256 "351d996ab4872746e19d734cf7a524d56185e093b4b5fc28ba7a6f72c7f725fa"
+  version "3.00.24"
+  sha256 "9776c928ad66a9ff3bd62b0556b466458e450def8f6982b3a53e7cecf45e16f6"
 
   url "https://www.fractalaudio.com/downloads/fractal-bot/Fractal-Bot-OSX-v#{version.tr(".", "p")}.dmg"
   name "Fractal Bot"
@@ -11,8 +11,6 @@ cask "fractal-bot" do
     url :homepage
     regex(/Version\s*(\d+(?:\.\d+)+).*?\.dmg/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Fractal-Bot.app"
 

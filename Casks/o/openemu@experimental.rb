@@ -1,21 +1,6 @@
 cask "openemu@experimental" do
-  on_high_sierra :or_older do
-    version "2.0.9.1"
-    sha256 "62c44e823fef65c583cbf5e6f84faa03618d713f45610f73bc23fb34cbf64762"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_mojave :or_newer do
-    version "2.4.1"
-    sha256 "57b6f2b6005119efecb566e8cf611e12f1d0171dcd1f96797a0e9b4c33d3cdb4"
-
-    livecheck do
-      url "https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast-experimental.xml"
-      strategy :sparkle
-    end
-  end
+  version "2.4.1"
+  sha256 "57b6f2b6005119efecb566e8cf611e12f1d0171dcd1f96797a0e9b4c33d3cdb4"
 
   url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}-experimental.zip",
       verified: "github.com/OpenEmu/OpenEmu/"
@@ -23,7 +8,12 @@ cask "openemu@experimental" do
   desc "Retro video game emulation"
   homepage "https://openemu.org/"
 
-  disable! date: "2026-09-01", because: :unsigned
+  livecheck do
+    url "https://raw.github.com/OpenEmu/OpenEmu-Update/master/appcast-experimental.xml"
+    strategy :sparkle
+  end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   conflicts_with cask: "openemu"

@@ -7,6 +7,7 @@ cask "r-name" do
   homepage "https://www.jacek-dom.net/software/R-Name/"
 
   deprecate! date: "2024-08-25", because: :unmaintained
+  disable! date: "2025-08-26", because: :unmaintained
 
   app "R-Name.app"
 

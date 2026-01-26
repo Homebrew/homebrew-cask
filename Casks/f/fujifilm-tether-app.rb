@@ -1,6 +1,6 @@
 cask "fujifilm-tether-app" do
-  version "1.34.0,ym6rhx10"
-  sha256 "e1339b5b4489291742c2805933922c3875236af5520c7fd65365b7a3a05b5b7d"
+  version "1.34.1,9dhb25wz"
+  sha256 "438b8545c64e84cb41a4646c095a1a9f043118518090a3e7255c9c3ef55382c7"
 
   url "https://dl.fujifilm-x.com/support/software/tether-app-mac#{version.csv.first.no_dots}-#{version.csv.second}/FUJIFILM_TetherApp_Mac#{version.csv.first.no_dots}.pkg"
   name "FUJIFILM TETHER APP"
@@ -17,8 +17,6 @@ cask "fujifilm-tether-app" do
       "#{match[1]},#{match[2]}"
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   pkg "FUJIFILM_TetherApp_Mac#{version.csv.first.no_dots}.pkg"
 

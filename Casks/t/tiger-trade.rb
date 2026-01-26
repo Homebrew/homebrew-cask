@@ -1,13 +1,13 @@
 cask "tiger-trade" do
-  version "9.8.2"
-  sha256 "790d0dad57163e811bb0f9398b8e5c6b50db61a5ed6cec8802e3db30a5ba977b"
+  version "9.15.3"
+  sha256 "9a0a89b22f29d33c9e29f0620ef1570d2443f7fda613411f88c1c4aa402b8b18"
 
   url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version}.dmg",
       verified: "download.tigerfintech.com/"
   name "Tiger Trade"
   name "老虎证券"
   desc "Trading platform"
-  homepage "https://www.tigerbrokers.com.sg/download/"
+  homepage "https://www.itiger.com/sg/download/"
 
   livecheck do
     url "https://up.play-analytics.com/app/upgrade/latest?lang=zh_CN&platform=darwin&appVer=1"
@@ -16,8 +16,6 @@ cask "tiger-trade" do
       json["downloadUrl"]&.[](regex, 1)
     end
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Tiger Trade.app"
 

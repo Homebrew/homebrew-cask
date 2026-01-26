@@ -1,15 +1,17 @@
 cask "vnc-server" do
-  version "7.13.1"
-  sha256 "c521436373e5dcc45a874c80e0eb72d45a9740f5d5f49552a53c1fd8474d4ef3"
+  version "7.15.0"
+  sha256 "6b3fa8c2c76cff04cbd4b29fefa2e3e2daa7bcca3aea917e2a13e3e83b5368dc"
 
   url "https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-universal.pkg"
   name "Real VNC Server"
   desc "Remote desktop server application"
   homepage "https://www.realvnc.com/"
 
+  # The upstream download page links to the latest pkg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://www.realvnc.com/en/connect/download/vnc/macos/
   livecheck do
-    url "https://www.realvnc.com/en/connect/download/vnc/macos/"
-    regex(%r{href=.*?/VNC[._-]Server[._-]v?(\d+(?:\.\d+)*)[._-]MacOSX[._-]universal\.pkg}i)
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
   pkg "VNC-Server-#{version}-MacOSX-universal.pkg"
@@ -20,10 +22,15 @@ cask "vnc-server" do
   end
 
   uninstall launchctl: [
+              "com.realvnc.vncagent.peruser",
+              "com.realvnc.vncagent.prelogin",
               "com.realvnc.vncserver",
               "com.realvnc.vncserver.peruser",
             ],
-            pkgutil:   "com.realvnc.vncserver.pkg"
+            pkgutil:   [
+              "com.realvnc.vncserver.1",
+              "com.realvnc.vncserver.pkg",
+            ]
 
   zap trash: [
     "/Library/Logs/vncserver.log.bak",

@@ -1,5 +1,5 @@
 cask "wd-security" do
-  version "2.1.4.174"
+  version "2.1.5.427"
   sha256 :no_check
 
   url "https://downloads.wdc.com/wdapp/WD_Security_MACOS.zip",

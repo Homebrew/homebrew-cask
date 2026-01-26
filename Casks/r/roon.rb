@@ -1,5 +1,5 @@
 cask "roon" do
-  version "2.54"
+  version "2.57"
   sha256 :no_check
 
   url "https://download.roonlabs.net/builds/Roon.dmg",
@@ -19,7 +19,6 @@ cask "roon" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Roon.app"
 

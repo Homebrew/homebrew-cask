@@ -1,9 +1,9 @@
 cask "cherry-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.6"
-  sha256 arm:   "d28c5fdd11aef0b4437014daa017c715cb11e50f27204e213ba38b8bd1ec285d",
-         intel: "6417b926a76b84d1c2ebfe16f37df0045df3a36409d4c0a6b828535b0979af40"
+  version "1.7.15"
+  sha256 arm:   "330821be317ad492690ffdb980ca65c87105893b269ccf2970ad73d4c4057113",
+         intel: "974bcb0a6819baa216ea51f4fc597024f695291b9baffbf7fce546f25d29e3bb"
 
   url "https://releases.cherry-ai.com/Cherry-Studio-#{version}-#{arch}.zip"
   name "Cherry Studio"
@@ -16,7 +16,7 @@ cask "cherry-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Cherry Studio.app"
   binary "#{appdir}/Cherry Studio.app/Contents/MacOS/Cherry Studio", target: "cherry-studio"

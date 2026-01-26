@@ -1,9 +1,9 @@
 cask "webstorm" do
   arch arm: "-aarch64"
 
-  version "2025.2,252.23892.411"
-  sha256 arm:   "5f29ca9472c068f8086cb05c4ef3b0fb2b88d4888ef1c5430a0e1f2c771ccbce",
-         intel: "c748bf829295f1d431c032ccbe88d3bcaf771699c8e654ea4bc9f419fb87b576"
+  version "2025.3.2,253.30387.83"
+  sha256 arm:   "3dcdfe8652a90883a024bc5630e9f4530fbb708ccb0f889ac9a36c598a01e26a",
+         intel: "1ac39013734ba8889f43d9975914f433b84978df9f7734aa9fba708d67fc55cc"
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version.csv.first}#{arch}.dmg"
   name "WebStorm"
@@ -24,7 +24,6 @@ cask "webstorm" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "WebStorm.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

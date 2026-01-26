@@ -1,5 +1,5 @@
 cask "messenger" do
-  version "520.0.0.67.107"
+  version "525.0.0.34.106"
   sha256 :no_check
 
   url "https://www.messenger.com/messenger/desktop/downloadV2/?platform=mac&variant=catalyst"
@@ -7,10 +7,8 @@ cask "messenger" do
   desc "Native desktop app for Messenger (formerly Facebook Messenger)"
   homepage "https://www.messenger.com/desktop"
 
-  livecheck do
-    url "https://www.facebook.com/messenger/desktop/zeratul/update.xml?target=zeratul&platform=mac"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2025-12-25", because: :discontinued
+  disable! date: "2025-12-25", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :monterey"

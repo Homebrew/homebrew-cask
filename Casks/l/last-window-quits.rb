@@ -19,7 +19,6 @@ cask "last-window-quits" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Last Window Quits.app"
 

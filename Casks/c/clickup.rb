@@ -1,9 +1,9 @@
 cask "clickup" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.5.120,250609kokr2q9fk"
-  sha256 arm:   "9e98d39fdd57153abf7cab5367f7081cc5523689c477f8888a82d42a10d1adc4",
-         intel: "3005af1ae8a1c159549c1ba8bc284c3e5dfa58b7f939cac968f341024c67259f"
+  version "3.5.163,251222he6ynyxiw"
+  sha256 arm:   "5479b51b1a25eda62f488fbf948dd3a152f4382522bdf542c0a80102248a4731",
+         intel: "ddeca80b2646644f859d1e7b1871f3d8d7ebdb013440655dcf3767d6ef421cfc"
 
   url "https://download.todesktop.com/221003ra4tebclw/ClickUp%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
       verified: "download.todesktop.com/221003ra4tebclw/"
@@ -27,7 +27,7 @@ cask "clickup" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "ClickUp.app"
 

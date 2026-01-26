@@ -8,6 +8,7 @@ cask "texts" do
   homepage "http://www.texts.io/"
 
   deprecate! date: "2024-11-01", because: :unmaintained
+  disable! date: "2025-11-01", because: :unmaintained
 
   app "Texts.app"
 

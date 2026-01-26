@@ -9,7 +9,7 @@ cask "vagrant-vmware-utility" do
 
   livecheck do
     url "https://releases.hashicorp.com/vagrant-vmware-utility/"
-    regex(%r{href=["']?/?vagrant-vmware-utility/v?(\d+(?:\.\d+)+)/?["' >]}i)
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/}i)
   end
 
   pkg "VagrantVMwareUtility.pkg"

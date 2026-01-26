@@ -7,6 +7,10 @@ cask "gauntlet" do
   desc "Open-source cross-platform application launcher"
   homepage "https://github.com/project-gauntlet/gauntlet"
 
+  deprecate! date: "2025-11-20", because: :unmaintained
+
+  depends_on macos: ">= :big_sur"
+
   app "Gauntlet.app"
 
   uninstall quit: "dev.project-gauntlet.Gauntlet"

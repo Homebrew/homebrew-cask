@@ -1,6 +1,6 @@
 cask "mullvad-vpn@beta" do
-  version "2025.8"
-  sha256 "1a5fe37101923611bb3f1081190db023b66c3d44b0dc89e4c21a9f1a3bc7dcc4"
+  version "2025.14"
+  sha256 "cf285629ac49fdc19a961acdc0a8ac7c8ef1307e39b361476fba1beac2c9c754"
 
   url "https://cdn.mullvad.net/app/desktop/releases/#{version}/MullvadVPN-#{version}.pkg"
   name "Mullvad VPN"
@@ -29,7 +29,6 @@ cask "mullvad-vpn@beta" do
             },
             pkgutil:   "net.mullvad.vpn",
             delete:    [
-              "/etc/mullvad-vpn",
               "/Library/Caches/mullvad-vpn",
               "/opt/homebrew/share/fish/vendor_completions.d/mullvad.fish",
               "/opt/homebrew/share/zsh/site-functions/_mullvad",
@@ -41,6 +40,7 @@ cask "mullvad-vpn@beta" do
             ]
 
   zap trash: [
+    "/etc/mullvad-vpn",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mullvad.vpn.sfl*",
     "~/Library/Application Support/Mullvad VPN",
     "~/Library/Logs/Mullvad VPN",

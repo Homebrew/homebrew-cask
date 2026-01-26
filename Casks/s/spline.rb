@@ -1,9 +1,9 @@
 cask "spline" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.12.5"
-  sha256 arm:   "85ebe3f7f7255fd0c5451ea453aade703cbe55b41efa096c55062175cb50c57f",
-         intel: "bbf43f7b34bff38396e1144a662329edf69713798ed890d151b49d3618623a35"
+  version "0.12.11"
+  sha256 arm:   "e07ca72432a1c53366e2fbe4a06566ebd3f314454a86e4fa1edc6e854974a87a",
+         intel: "9417fa964681c5b74ea7d05d21e5f27e19b455f6d986a04d02c944bb170bd942"
 
   url "https://cdn.spline.design/_assets/Spline-#{version}-#{arch}.mac.zip"
   name "Spline"
@@ -11,11 +11,11 @@ cask "spline" do
   homepage "https://spline.design/"
 
   livecheck do
-    url :homepage
-    regex(/Spline[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]mac\.zip/i)
+    url "https://s3.amazonaws.com/updater.spline.design/latest-mac.yml"
+    strategy :electron_builder
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Spline.app"
 

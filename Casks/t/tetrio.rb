@@ -1,9 +1,9 @@
 cask "tetrio" do
   arch arm: "arm64", intel: "x86"
 
-  version "9"
-  sha256 arm:   "deec4ba6ab1a03b3e9f858f49f40a06f6fd191b27d54d4460a290993c9f9b8f2",
-         intel: "3a80bc7ef4856e5ef1f2653bd85cc3376c50f3cb6919f7a1e906ea4cd7cc1739"
+  version "10"
+  sha256 arm:   "3db2bd5c4ca7a628b7e69e8341888f6da44ce20b8f6b359de4de03af63b81f6e",
+         intel: "238323e9863b2b0a4b936b59d3611da94c67c525bfdef08ce09ed817308b12e3"
 
   url "https://tetr.io/about/desktop/builds/#{version}/TETR.IO%20Setup%20#{arch}.dmg"
   name "TETR.IO"
@@ -15,7 +15,9 @@ cask "tetrio" do
     regex(%r{href=.*builds/(\d+)/TETR\.IO[. _-]Setup[. _-]#{arch}\.dmg}i)
   end
 
-  depends_on macos: ">= :catalina"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "TETR.IO.app"
 

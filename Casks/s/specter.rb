@@ -9,14 +9,24 @@ cask "specter" do
   homepage "https://specter.solutions/"
 
   # Upstream doesn't reliably mark unstable versions as pre-release on GitHub.
-  # We check the upstream download page, which links to the latest stable files
-  # on GitHub.
+  # The first-party download page uses JavaScript to handle the download links,
+  # so we have to check the related JS file for the URL of the latest stable
+  # file on GitHub.
   livecheck do
     url "https://specter.solutions/downloads/"
-    regex(/href=.*?Specter[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end
+    regex(/Specter[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      js_file_name = page[%r{src=["']?/assets/(index[._-]\w+\.js)}i, 1]
+      next unless js_file_name
 
-  depends_on macos: ">= :catalina"
+      js_file = Homebrew::Livecheck::Strategy.page_content(
+        "https://specter.solutions/assets/#{js_file_name}",
+      )[:content]
+      next if js_file.blank?
+
+      js_file.scan(regex).map { |match| match[0] }
+    end
+  end
 
   app "Specter.app"
 

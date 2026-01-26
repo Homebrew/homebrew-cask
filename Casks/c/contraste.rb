@@ -12,7 +12,7 @@ cask "contraste" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
+  auto_updates true
 
   app "Contraste.app"
 

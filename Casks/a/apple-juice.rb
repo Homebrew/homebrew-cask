@@ -13,7 +13,6 @@ cask "apple-juice" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "Apple Juice.app"
 

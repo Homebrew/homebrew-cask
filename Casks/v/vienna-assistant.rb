@@ -1,5 +1,5 @@
 cask "vienna-assistant" do
-  version "1.2.524"
+  version "1.2.542"
   sha256 :no_check
 
   url "https://www.vsl.co.at/service/vamac",
@@ -15,9 +15,10 @@ cask "vienna-assistant" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  # The url is unversioned, but the download returns a pkg with a version number
+  rename "Vienna Assistant*.pkg", "Vienna Assistant.pkg"
 
-  pkg "Vienna Assistant #{version}.pkg"
+  pkg "Vienna Assistant.pkg"
 
   uninstall pkgutil: "at.co.vsl.viassistant.*"
 

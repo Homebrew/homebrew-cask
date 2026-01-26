@@ -1,6 +1,6 @@
 cask "ghostty" do
-  version "1.1.3"
-  sha256 "64e514188f549598f166d6dcb6f8df29f333e954e28172a2901ea988a14f2647"
+  version "1.2.3"
+  sha256 "f35ee91f116e28027ab9f8def45098c7575b44b407ff883a2dcd2985c483206b"
 
   url "https://release.files.ghostty.org/#{version}/Ghostty.dmg"
   name "Ghostty"
@@ -17,7 +17,6 @@ cask "ghostty" do
   depends_on macos: ">= :ventura"
 
   app "Ghostty.app"
-  binary "#{appdir}/Ghostty.app/Contents/MacOS/ghostty"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man1/ghostty.1"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man5/ghostty.5"
   bash_completion "#{appdir}/Ghostty.app/Contents/Resources/bash-completion/completions/ghostty.bash"

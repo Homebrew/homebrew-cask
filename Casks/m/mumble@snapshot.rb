@@ -12,10 +12,9 @@ cask "mumble@snapshot" do
     strategy :header_match
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "mumble"
-  depends_on macos: ">= :high_sierra"
 
   app "Mumble.app"
 

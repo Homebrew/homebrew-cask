@@ -1,30 +1,6 @@
 cask "omnifocus" do
   on_ventura :or_older do
-    on_el_capitan :or_older do
-      version "2.10"
-      sha256 "e808a72e60cdff9ff5aa1046d856bf62d6418e4915248816c4640e32e52fd8e8"
-
-      url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniFocus-#{version}.dmg"
-    end
-    on_sierra do
-      version "2.12.4"
-      sha256 "8a2dc53331dba804f6781773fef546a03c181fc4ff0eb7ee4f871c10342621f0"
-
-      url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniFocus-#{version}.dmg"
-    end
-    on_high_sierra do
-      version "3.4.6"
-      sha256 "b770b046c2c59f6e55f54d0ad822d5aa755a18aa201d333341de14ebbbcc6a85"
-
-      url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniFocus-#{version}.dmg"
-    end
-    on_mojave do
-      version "3.11.7"
-      sha256 "21c0a63b6bd8c8ff3e5067f4ccd0ab16c9fd65815a7305e184ed27723bd0aa15"
-
-      url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniFocus-#{version}.dmg"
-    end
-    on_catalina do
+    on_catalina :or_older do
       version "3.11.7"
       sha256 "21c0a63b6bd8c8ff3e5067f4ccd0ab16c9fd65815a7305e184ed27723bd0aa15"
 
@@ -54,8 +30,8 @@ cask "omnifocus" do
     end
   end
   on_sonoma :or_newer do
-    version "4.6.1"
-    sha256 "9616cf610dc7c20172cb1b3e8e10e26853e8d20b9a21b4e13b19a559420d5239"
+    version "4.8.6"
+    sha256 "99a84f133565dc310669479b3ee0ea9680c951aef19ec1bc0e3457f8ad316f34"
 
     url "https://downloads.omnigroup.com/software/macOS/14/OmniFocus-#{version}.dmg"
 

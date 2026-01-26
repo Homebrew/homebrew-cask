@@ -1,6 +1,6 @@
 cask "textadept" do
-  version "12.8"
-  sha256 "85072473600e4d8b3cb325461e833240478df2bb5e2907bfb89ae6186d45ad04"
+  version "12.9"
+  sha256 "91e96761f1982504473e9d9217eb9543472064be45ab42ad6653b4d597879a96"
 
   url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip",
       verified: "github.com/orbitalquark/textadept/"
@@ -13,7 +13,7 @@ cask "textadept" do
     regex(/^textadept[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Textadept.app"
   binary "ta"
@@ -22,8 +22,4 @@ cask "textadept" do
     "~/.textadept",
     "~/Library/Saved Application State/com.textadept.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -1,9 +1,9 @@
 cask "windsurf@next" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.12.105+next.b8f002c02d,b8f002c02d165600299a109bf21d02d139c52644"
-  sha256 arm:   "55b895139a7b608c8c37f98eaac820c0c7454dd13d10402333770d711effefcc",
-         intel: "576503bcc36ad6d90b697509abae87a4e8f0fa09418c48bf7e37111d0b5bf10a"
+  version "1.13.113+next.aa644d1090,aa644d109002a89ca18e1ba5fe9355859b4f0565"
+  sha256 arm:   "b74a16c28973f461a87c2fcfa06f014ad57ad40711d1245543f37e375cbb0b66",
+         intel: "c035a2d92c02baba0b896379486a587a0370b32ad6e5a230031cc90d754b256a"
 
   url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/next/#{version.csv.second}/Windsurf-darwin-#{arch}-#{version.csv.first}.dmg",
       verified: "windsurf-stable.codeiumdata.com/"
@@ -23,7 +23,7 @@ cask "windsurf@next" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Windsurf - Next.app"
   binary "#{appdir}/Windsurf - Next.app/Contents/Resources/app/bin/windsurf-next"

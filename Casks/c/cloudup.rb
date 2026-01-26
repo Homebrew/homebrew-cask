@@ -12,8 +12,6 @@ cask "cloudup" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Cloudup.app"
 
   zap trash: [

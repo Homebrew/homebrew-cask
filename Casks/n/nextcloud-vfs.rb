@@ -1,14 +1,15 @@
 cask "nextcloud-vfs" do
-  version "3.17.1"
-  sha256 "0f2e4963e18c6882bae2f1a06d571e78c27e961e5761f26c4ae501f177666055"
+  version "4.0.6"
+  sha256 "e74976d87ed93fec19e5b4c789411e5ec5971e99ad9cec2fdc6fc8bea9d591fa"
 
-  url "https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-#{version}-macOS-vfs.pkg"
+  url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}-macOS-vfs.pkg",
+      verified: "github.com/nextcloud-releases/desktop/"
   name "Nextcloud Virtual Files"
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"
 
   livecheck do
-    url "https://download.nextcloud.com/desktop/releases/Mac/Installer/"
+    url "https://nextcloud.com/install/#desktop-files"
     regex(/href=.*?Nextcloud[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]vfs\.pkg/i)
   end
 

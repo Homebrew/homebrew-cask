@@ -1,9 +1,10 @@
 cask "mouseless@preview" do
-  version "0.4.0-preview.6"
-  sha256 "0e90d1ffd1af3795010c8b6505fc00855abf3f5a90fcf62fc0e421b5517aca19"
+  version "0.5.0-preview.1"
+  sha256 "ed201883194b41b8e9d78111f6852e0c7d94d6df55520d6f2a5a85c050ffd8c5"
 
-  url "https://mouseless.click/mouseless-installer_v#{version}.dmg"
-  name "mouseless preview channel"
+  url "https://github.com/croian/mouseless/releases/download/v#{version}/mouseless-installer_v#{version}.dmg",
+      verified: "github.com/croian/mouseless/"
+  name "Mouseless preview channel"
   desc "Mouse control with the keyboard"
   homepage "https://mouseless.click/"
 
@@ -15,8 +16,7 @@ cask "mouseless@preview" do
   end
 
   conflicts_with cask: "mouseless"
-  depends_on macos: ">= :sonoma"
-  depends_on arch: :arm64
+  depends_on macos: ">= :monterey"
 
   app "Mouseless.app"
 

@@ -7,13 +7,7 @@ cask "little-snitch@nightly" do
   desc "Host-based application firewall"
   homepage "https://www.obdev.at/products/littlesnitch/download-nightly.html"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?LittleSnitch[._-]v?(\d+(?:\.\d+)+)[._-]nightly[._-]\((\d+(?:\.\d+)*)\)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
-  end
+  disable! date: "2025-11-20", because: :no_longer_available
 
   auto_updates true
   conflicts_with cask: [

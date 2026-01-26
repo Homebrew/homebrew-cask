@@ -1,6 +1,6 @@
 cask "shortwave" do
-  version "2025.5.2"
-  sha256 "4eebbf080b5b60c040f2dc67b933ef0cf1cd2b75bbccf9536fffc0b2667aa5f6"
+  version "2025.9.2"
+  sha256 "fe6d23dc5e1e861b55ef773852595a982f5e5686c43a8af2d659171ca289fa42"
 
   url "https://storage.googleapis.com/shortwave-downloads/desktop_app/darwin/universal/Shortwave-darwin-universal-#{version}.zip",
       verified: "storage.googleapis.com/shortwave-downloads/"
@@ -16,7 +16,7 @@ cask "shortwave" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Shortwave.app"
 

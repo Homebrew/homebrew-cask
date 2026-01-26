@@ -1,11 +1,11 @@
 cask "appflowy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.9.7"
-  sha256 arm:   "dec96b46fb8cdd8b2c27366e6c7a36e6ec4b23fb18f32cee160bf3b043626c57",
-         intel: "f3c62f8349a65e51181bb9dba88727607f57f9bad55dcf017735a5e79089c1bf"
+  version "0.11.0"
+  sha256 arm:   "92d0c600c34fbe5cea8f0323fdbb6d5b093829e294ec13273065f9ee6c712257",
+         intel: "e1fcaf8bfe16228e003981e837a7da13eed6d96ca3366f07b4121ad442458828"
 
-  url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/Appflowy-#{version}-macos-#{arch}.zip",
+  url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/Appflowy-#{version}-macos-#{arch}.dmg",
       verified: "github.com/AppFlowy-IO/AppFlowy/"
   name "AppFlowy"
   desc "Open-source project and knowledge management tool"
@@ -16,7 +16,7 @@ cask "appflowy" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "AppFlowy.app"
 

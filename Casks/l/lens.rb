@@ -1,14 +1,15 @@
 cask "lens" do
   arch arm: "-arm64"
 
-  version "2025.8.121212"
-  sha256 arm:   "0bac6ced8f0d1b0ea124493db5c0ca7471059f4fd246227abe206ca0dc2e9fdb",
-         intel: "e49800dfcf2e6e880717f9508e08e7440456264136ad3d6e85d58f06893c69db"
+  version "2026.1.161237"
+  sha256 arm:   "c7499e09491e1d4c352e18ab9cd98469736a9bd22631137af43002622c9f0037",
+         intel: "663eb34676fadee01277c70a694cb9764295e72f0b6576c4c00249b0651f6edb"
 
-  url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg"
+  url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg",
+      verified: "api.k8slens.dev/binaries/"
   name "Lens"
   desc "Kubernetes IDE"
-  homepage "https://k8slens.dev/"
+  homepage "https://lenshq.io/"
 
   livecheck do
     url "https://api.k8slens.dev/binaries/latest-mac.yml"
@@ -18,7 +19,7 @@ cask "lens" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Lens.app"
 

@@ -1,9 +1,9 @@
 cask "logos" do
   arch arm: "-arm"
 
-  version "44.1.0.0002"
-  sha256 arm:   "01ebec958f3e59879f0772eefced6cf923fb9cc8496043effd94f3af55fee825",
-         intel: "e5a000f142239b13b62bc12ffa21a17b4e1c219afbcc70b95c86497b13b29b15"
+  version "47.2.0.0002"
+  sha256 arm:   "6df209b560ca421ade7d12376f1dc96be91edd6469d88e3a13ef17d537aa535f",
+         intel: "0b8d56c91493e5abafc99d461e1b23523311a2c010bca313e2c929e36c8126c8"
 
   url "https://downloads.logoscdn.com/LBS10/Installer/#{version}/LogosMac#{arch}.dmg",
       verified: "downloads.logoscdn.com/"
@@ -19,7 +19,7 @@ cask "logos" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Logos.app"
 

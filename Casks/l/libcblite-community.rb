@@ -1,6 +1,6 @@
 cask "libcblite-community" do
-  version "3.2.1"
-  sha256 "a20fcc780b90414796c26b4514373822d075bbdb9c5ad7e1e6f5a8364ca3c035"
+  version "4.0.0"
+  sha256 "81c0a92183a478ded56fe2d724eca8fa76a93e6d81cecd4cbdbfc28eda38fb0a"
 
   url "https://packages.couchbase.com/releases/couchbase-lite-c/#{version}/couchbase-lite-c-community-#{version}-macos.zip"
   name "Couchbase Lite (Community Edition)"
@@ -12,7 +12,6 @@ cask "libcblite-community" do
   end
 
   conflicts_with cask: "libcblite"
-  depends_on macos: ">= :mojave"
 
   artifact "libcblite-#{version}/include/cbl", target: "#{HOMEBREW_PREFIX}/include/cbl"
   artifact "libcblite-#{version}/include/fleece", target: "#{HOMEBREW_PREFIX}/include/fleece"

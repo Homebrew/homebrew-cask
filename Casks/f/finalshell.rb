@@ -14,8 +14,6 @@ cask "finalshell" do
     regex(/版本号?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :el_capitan"
-
   pkg "finalshell_macos_#{arch}.pkg"
 
   uninstall quit:    "finalshellinstall.all",

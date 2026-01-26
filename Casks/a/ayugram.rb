@@ -1,13 +1,11 @@
 cask "ayugram" do
-  version "5.16.4"
-  sha256 "e8094ff3034e838deba74a2230f631af43a523cc7d3413988b000d9c61fa2df9"
+  version "6.3.10"
+  sha256 "07296be7e660b2fb3884dce1ad5a8efeda4b21d45f9d60ddb8245d74e86520da"
 
   url "https://github.com/AyuGram/AyuGramDesktop/releases/download/v#{version}/AyuGram.dmg"
   name "AyuGram"
   desc "Telegram client with ghost mode and message history"
   homepage "https://github.com/AyuGram/AyuGramDesktop"
-
-  depends_on macos: ">= :high_sierra"
 
   app "AyuGram.app"
 

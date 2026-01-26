@@ -13,7 +13,7 @@ cask "liteide" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sierra"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "liteide/LiteIDE.app"
 

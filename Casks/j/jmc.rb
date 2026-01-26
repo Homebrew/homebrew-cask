@@ -8,8 +8,7 @@ cask "jmc" do
   homepage "https://github.com/jcm93/jmc"
 
   deprecate! date: "2024-11-10", because: :unmaintained
-
-  depends_on macos: ">= :catalina"
+  disable! date: "2025-11-10", because: :unmaintained
 
   app "jmc.app"
 

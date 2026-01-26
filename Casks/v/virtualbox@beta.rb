@@ -1,22 +1,14 @@
 cask "virtualbox@beta" do
   arch arm: "macOSArm64", intel: "OSX"
+  desc_arch = on_arch_conditional arm: "arm64", intel: "x86"
 
-  sha256 arm:   "a80da184a56593667e251863f4aaf9eec712ff02e6fc09f244481af4c33a26d6",
-         intel: "2f79d464a9d4c2109e035336dc31b3da9926e8c9ed3c2ec26d1cfab0784f215d"
-
-  on_arm do
-    version "7.1.13-169987"
-
-    desc "Virtualiser for arm64 hardware"
-  end
-  on_intel do
-    version "7.1.13-169978"
-
-    desc "Virtualiser for x86 hardware"
-  end
+  version "7.2.5-172125"
+  sha256 arm:   "84171f48fb3ff70a899c96ae2abddc16b6be3f3a698635e10da732ae36ad0510",
+         intel: "bc52210df5fc6ae71bca28e90a29d5f87aa82c25c5b05c8da753f47dcc7cedb7"
 
   url "https://www.virtualbox.org/download/testcase/VirtualBox-#{version}-#{arch}.dmg"
   name "Oracle VirtualBox"
+  desc "Virtualiser for #{desc_arch} hardware"
   homepage "https://www.virtualbox.org/wiki/Testbuilds"
 
   livecheck do
@@ -28,7 +20,6 @@ cask "virtualbox@beta" do
     "virtualbox",
     "virtualbox@6",
   ]
-  depends_on macos: ">= :catalina"
 
   pkg "VirtualBox.pkg",
       choices: [

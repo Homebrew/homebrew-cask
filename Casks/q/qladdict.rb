@@ -7,6 +7,8 @@ cask "qladdict" do
   desc "Quick Look plugin for subtitle (.srt) files"
   homepage "https://github.com/tattali/QLAddict/"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "QLAddict.qlgenerator"
 
   # No zap stanza required

@@ -8,15 +8,8 @@ cask "allen-and-heath-midi-control" do
   desc "Midi control software for Allen & Heath audio consoles"
   homepage "https://www.allen-heath.com/midi-control/"
 
-  livecheck do
-    url "https://www.allen-heath.com/hardware/controllers/midi-control/resources/"
-    regex(%r{href=.*?/([^/]+)/([^/]+)/Allen-and-Heath-MIDI-Control[._-]v?(\d+(?:\.\d+)+)(?:-Mac)?\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.third},#{match.first},#{match.second}" }
-    end
-  end
+  disable! date: "2025-09-15", because: :unreachable
 
-  depends_on macos: ">= :high_sierra"
   container nested: "Allen and Heath MIDI Control #{version.csv.first}.dmg"
 
   app "Allen and Heath MIDI Control.app"

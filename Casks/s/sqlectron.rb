@@ -1,10 +1,14 @@
 cask "sqlectron" do
-  version "1.38.0"
-  sha256 "30c338d72d0262b4f40d9e105f4e1e0972c24103f7c3b695fdd5cb42a3ada84e"
+  arch arm: "-arm64"
 
-  url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/Sqlectron-#{version}-mac.zip",
+  version "1.39.0"
+  sha256 arm:   "c4eb68ce51cf0fadbe30c67ffc309c71832461132aaffa3abfaeeb8bc9a72265",
+         intel: "4babd40df186b88cf47c10c61b3c4883a6f889934bbf20da23ea7430e6af6157"
+
+  url "https://github.com/sqlectron/sqlectron-gui/releases/download/v#{version}/sqlectron-#{version}#{arch}.dmg",
       verified: "github.com/sqlectron/sqlectron-gui/"
   name "Sqlectron"
+  desc "SQL client"
   homepage "https://sqlectron.github.io/"
 
   app "sqlectron.app"
@@ -13,8 +17,4 @@ cask "sqlectron" do
     "~/.sqlectron.json",
     "~/Library/Application Support/Sqlectron",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

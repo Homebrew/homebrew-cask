@@ -1,6 +1,6 @@
 cask "microsoft-office-businesspro" do
-  version "16.100.25081015"
-  sha256 "975c298ff5f730df7b991c92c72c1692b4eb0f7728ac66b2c62e59eb039100fa"
+  version "16.105.26011018"
+  sha256 "373643cdf8c38fcd0224fbdb30f86d55a4d0ae424c4bb45b2768b9de83e040f6"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg"
   name "Microsoft Office BusinessPro"
@@ -25,8 +25,7 @@ cask "microsoft-office-businesspro" do
     microsoft-word
     onedrive
   ]
-  depends_on cask: "microsoft-auto-update"
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sonoma"
 
   pkg "Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg",
       choices: [

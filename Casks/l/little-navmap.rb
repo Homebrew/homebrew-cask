@@ -1,12 +1,14 @@
 cask "little-navmap" do
-  version "3.0.17"
-  sha256 "8c1faacd96932bc2f6b05cb9fef74826bb8804010a6efe7768831be260afdfd2"
+  version "3.0.18"
+  sha256 "9159906c15fdffdd5c542dff10fda2d279e19b4d396cd73e18be2b3f2bd28c39"
 
   url "https://github.com/albar965/littlenavmap/releases/download/v#{version}/LittleNavmap-macOS-#{version}.zip",
       verified: "github.com/albar965/littlenavmap/"
   name "Little Navmap"
   desc "Flight planning and navigation and airport search and information system"
   homepage "https://albar965.github.io/littlenavmap.html"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Little Navconnect.app"
   app "Little Navmap.app"

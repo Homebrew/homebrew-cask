@@ -14,8 +14,8 @@ cask "datweatherdoe" do
     end
   end
   on_ventura :or_newer do
-    version "5.4.0"
-    sha256 "8f2c1f3542d840949497bc261ad49496aac392ffbe43b6667c3e9a6875cdfda2"
+    version "5.6.1"
+    sha256 "f1643a231d2eba073b07aafbc3c7c6e0dc00c1c9d83ed0d3393d0cf5b8c1e8f2"
 
     livecheck do
       url :url

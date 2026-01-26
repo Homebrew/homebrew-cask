@@ -8,6 +8,7 @@ cask "beacon-scanner" do
   homepage "https://github.com/mlwelles/BeaconScanner/"
 
   deprecate! date: "2024-10-10", because: :unmaintained
+  disable! date: "2025-10-11", because: :unmaintained
 
   app "Beacon Scanner.app"
 

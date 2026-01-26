@@ -13,10 +13,16 @@ cask "pikopixel" do
     regex(/PikoPixel[._-]?(\d+(?:\.\d+)*(?:-b\d+)?)\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "PikoPixel.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.twilightedge.pikopixel.sfl*",
     "~/Library/Preferences/com.twilightedge.PikoPixel.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

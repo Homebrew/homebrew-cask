@@ -10,8 +10,6 @@ cask "muse" do
   deprecate! date: "2024-07-27", because: :unmaintained
   disable! date: "2025-07-27", because: :unmaintained
 
-  depends_on macos: ">= :sierra"
-
   app "Muse.app"
 
   caveats do

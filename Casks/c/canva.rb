@@ -1,6 +1,6 @@
 cask "canva" do
-  version "1.113.0"
-  sha256 "ff799250191facc1f3f0b96472add9f2e5422413f5ab5a3867986fed7e9db5d6"
+  version "1.120.0"
+  sha256 "0f0c0620f8eab292fb869fffc11647ccea7d405230ada7f6ef5c6450ea507e5e"
 
   url "https://desktop-release.canva.com/Canva-#{version}-universal.dmg"
   name "Canva"
@@ -13,7 +13,7 @@ cask "canva" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Canva.app"
 

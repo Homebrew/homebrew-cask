@@ -12,6 +12,8 @@ cask "loungy" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Loungy.app"
 
   zap trash: [

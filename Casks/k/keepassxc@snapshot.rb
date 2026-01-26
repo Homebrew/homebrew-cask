@@ -1,6 +1,6 @@
 cask "keepassxc@snapshot" do
-  version "2.8.0,267148"
-  sha256 "f152ed978ed43ef08f9e65267d9456a1df7c96906251c27d8f7b09015f7d2c6c"
+  version "2.8.0,279189"
+  sha256 "62289edba8b0e0d4ab8527b4eb03dbd41f4b49fce1783dd73e1547acce72dd43"
 
   url "https://snapshot.keepassxc.org/build-#{version.csv.second}/KeePassXC-#{version.csv.first}-snapshot.dmg"
   name "KeePassXC"
@@ -29,18 +29,16 @@ cask "keepassxc@snapshot" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: [
     "keepassxc",
     "keepassxc@beta",
   ]
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
-  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc.1"
-  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc-cli.1"
 
   uninstall quit: "org.keepassxc.keepassxc"
 

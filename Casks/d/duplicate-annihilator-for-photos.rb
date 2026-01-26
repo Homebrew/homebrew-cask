@@ -12,8 +12,6 @@ cask "duplicate-annihilator-for-photos" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Duplicate Annihilator for Photos.app"
 
   uninstall pkgutil: "com.brattoo.pkg.brattoosystemfiles"

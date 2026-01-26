@@ -1,22 +1,6 @@
 cask "microsoft-word" do
-  on_monterey :or_older do
-    on_el_capitan :or_older do
-      version "16.16.20101200"
-      sha256 "0c61b7db7a6a13653270795c085a909aa54668e8de2f2ca749257ce6aa5957d1"
-    end
-    on_sierra do
-      version "16.30.19101301"
-      sha256 "6abd7939b0d935023ebb8fabeb206c4cbbe8eb8f9a3ff7d318448d2ba5f332e4"
-    end
-    on_high_sierra do
-      version "16.43.20110804"
-      sha256 "3d957d534fb2142f6e95a688552890a31f0d942796f0128ca837a3e98405d413"
-    end
-    on_mojave do
-      version "16.54.21101001"
-      sha256 "7f3ed397b517aac3637d8b8f8b4233f9e7132941f0657eaca8ec423ac068616e"
-    end
-    on_catalina do
+  on_ventura :or_older do
+    on_catalina :or_older do
       version "16.66.22101101"
       sha256 "5a6a75d9a5b46cceeff5a1b7925c0eab6e4976cba529149b7b291a0355e7a7c9"
     end
@@ -28,14 +12,18 @@ cask "microsoft-word" do
       version "16.89.24091630"
       sha256 "e064013cf26dc3742f07436fae1bb1a37fdd21fc4fb09640c0de0fc977f4ffd3"
     end
+    on_ventura do
+      version "16.101.25100321"
+      sha256 "c76066232b3367ad37eb03ce108c3a6de73aeb7c17e9a0baa6962c6cb88a5d6f"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
-    version "16.100.25081721"
-    sha256 "17b1379e9d73e24382c572050f35bf85501d87056292d4bfb23e1abefd15b464"
+  on_sonoma :or_newer do
+    version "16.105.26011816"
+    sha256 "f098de30ef70af25c119dcfde0d6ab1b5fc3744ef3bdc5e7d0ccf6aa3cf31c0d"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525134"
@@ -53,7 +41,6 @@ cask "microsoft-word" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_Word_#{version}_Installer.pkg",
       choices: [

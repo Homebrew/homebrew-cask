@@ -1,9 +1,9 @@
 cask "veusz" do
   arch arm: "arm", intel: "x86_64"
 
-  version "4.1"
-  sha256 arm:   "7c77b07cc3534d109b8cc467b58fa8e054c4d75d391d745c0e0b394bd7feb0ec",
-         intel: "1748f3c3f8cb70b04586d645c20950f317ad967cff9e5fcf7931b8d2a0164cf6"
+  version "4.2"
+  sha256 arm:   "0cfef00226d58631b27cfcc0e300f8f12d2bb16a95349757e92fe9008fc4ffff",
+         intel: "1c23d385ecc021e63fc2bf8459a173aca3684816763dd32bdf61f90ced53d7f3"
 
   url "https://github.com/veusz/veusz/releases/download/veusz-#{version.csv.second || version.csv.first}/veusz-#{version.csv.first}-AppleOSX-#{arch}.dmg",
       verified: "github.com/veusz/veusz/"
@@ -26,6 +26,8 @@ cask "veusz" do
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Veusz.app"
 

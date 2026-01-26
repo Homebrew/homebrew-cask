@@ -7,7 +7,7 @@ cask "cool-retro-term" do
   desc "Terminal emulator mimicking the old cathode display"
   homepage "https://github.com/Swordfish90/cool-retro-term"
 
-  depends_on macos: ">= :high_sierra"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "cool-retro-term.app"
 

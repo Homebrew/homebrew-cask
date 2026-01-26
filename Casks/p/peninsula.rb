@@ -1,6 +1,6 @@
 cask "peninsula" do
-  version "0.0.11.post0"
-  sha256 "1e3c7fcca222e5d25b3d2e10945afaa5054fbb994328937d2c86c533b3781b85"
+  version "0.1.0"
+  sha256 "e95654889d4e390e3bcad594cd1c0e2b1a4314958aedb1d1bcec608ff9700890"
 
   url "https://github.com/Celve/Peninsula/releases/download/v#{version}/Peninsula.zip"
   name "Peninsula"

@@ -9,11 +9,12 @@ cask "tsh" do
   homepage "https://goteleport.com/"
 
   deprecate! date: "2024-11-18", because: :unmaintained, replacement_cask: "teleport"
+  disable! date: "2025-11-18", because: :unmaintained, replacement_cask: "teleport"
 
   conflicts_with cask: [
-    "teleport",
-    "teleport@16",
-    "tsh@13",
+    "teleport-suite",
+    "teleport-suite@16",
+    "teleport-suite@17",
   ]
 
   pkg "tsh-#{version}.pkg"

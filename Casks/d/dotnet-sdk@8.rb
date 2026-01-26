@@ -1,9 +1,9 @@
 cask "dotnet-sdk@8" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.0.413"
-  sha256 arm:   "a2163fbcb56c7b7f9f27108bed18e84d388329db216b7eabec5d078317244e46",
-         intel: "8da7638de69ce5e0a2a23987d70b964535d9df6e9cb274a69ca3caef0b2c7a81"
+  version "8.0.417"
+  sha256 arm:   "849c32bce455875a10d0a18b22ebe0c9708a0584a7bd7e2ce0f8a646220fb140",
+         intel: "e3fe62ef220cdeed74dbc2dfcaee47ebb6e48d54aac8d39be4773d8088659051"
 
   url "https://builds.dotnet.microsoft.com/dotnet/Sdk/#{version}/dotnet-sdk-#{version}-osx-#{arch}.pkg"
   name ".NET SDK"
@@ -26,30 +26,12 @@ cask "dotnet-sdk@8" do
     end
   end
 
-  conflicts_with cask: [
-    "dotnet-runtime",
-    "dotnet-runtime@preview",
-    "dotnet-sdk",
-    "dotnet-sdk@preview",
-  ]
-  depends_on macos: ">= :ventura"
+  depends_on cask: "dotnet-sdk"
+  depends_on macos: ">= :big_sur"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
-  binary "/usr/local/share/dotnet/dotnet"
 
-  uninstall pkgutil: [
-    "com.microsoft.dotnet.*#{version.major_minor}*#{arch}",
-    "com.microsoft.dotnet.sharedhost*#{arch}",
-    "com.microsoft.netstandard.pack.targeting.*",
-  ]
+  uninstall pkgutil: "com.microsoft.dotnet.*#{version.major_minor}*#{arch}"
 
-  zap pkgutil: "com.microsoft.dotnet.*",
-      delete:  [
-        "/etc/paths.d/dotnet",
-        "/etc/paths.d/dotnet-cli-tools",
-      ],
-      trash:   [
-        "~/.dotnet",
-        "~/.nuget",
-      ]
+  # No zap stanza required
 end

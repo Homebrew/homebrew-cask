@@ -1,6 +1,6 @@
 cask "ticktick" do
-  version "6.3.60,442"
-  sha256 "506f65db85945f83a29e5425fd9054ad57232ddc482267bc92ab2dfdaa5fe859"
+  version "8.0.02,458"
+  sha256 "02d98ddc354855b035730c5f488edf8df4d908765dd5ad6568ccdd933b352a50"
 
   url "https://ticktick-download-mac.s3.amazonaws.com/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "ticktick-download-mac.s3.amazonaws.com/download/mac/"
@@ -14,7 +14,6 @@ cask "ticktick" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "TickTick.app"
 

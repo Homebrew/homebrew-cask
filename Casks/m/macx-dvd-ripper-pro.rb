@@ -1,5 +1,5 @@
 cask "macx-dvd-ripper-pro" do
-  version "6.8.3"
+  version "6.8.4"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg"
@@ -8,8 +8,18 @@ cask "macx-dvd-ripper-pro" do
   homepage "https://www.macxdvd.com/mac-dvd-ripper-pro/"
 
   livecheck do
-    url :homepage
-    regex(/Version:\s+(\d+(?:\.\d+)*)/i)
+    url "https://www.macxdvd.com/mac-dvd-ripper-pro/upgrade/macx-dvd-ripper-pro"
+    strategy :xml do |xml|
+      # The plist file contains nested "LastestVersion" keys that apply to
+      # language variants, so we specifically match the main key
+      version = xml.elements["/plist/dict/key[text()='LastestVersion']"]&.next_element&.text
+
+      # Retry without the typo if the key isn't found
+      version ||= xml.elements["/plist/dict/key[text()='LatestVersion']"]&.next_element&.text
+      next if version.blank?
+
+      version.strip
+    end
   end
 
   app "MacX DVD Ripper Pro.app"

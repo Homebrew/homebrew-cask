@@ -1,6 +1,6 @@
 cask "kiwi-for-gmail" do
-  version "4.6.0"
-  sha256 "1157e4f562a886d7ee6c0dfcd1c18add3dd0694c13275b985db56718b00ae428"
+  version "4.6.2"
+  sha256 "9053521b5dc3debea09510803ecad056d33c15b7a1477c55a767d1058f68c2ae"
 
   url "https://downloads.kiwiforgmail.com/kiwi/release/consumer/Kiwi%20for%20Gmail-#{version}-universal-mac.zip"
   name "Kiwi for Gmail"
@@ -13,7 +13,6 @@ cask "kiwi-for-gmail" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Kiwi for Gmail.app"
 

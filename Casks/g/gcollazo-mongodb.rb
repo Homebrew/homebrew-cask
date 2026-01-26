@@ -13,8 +13,6 @@ cask "gcollazo-mongodb" do
     regex(/^v?(\d+(?:\.\d+)+(?:-build[._-]?\d+)?)$/i)
   end
 
-  depends_on macos: ">= :mojave"
-
   app "MongoDB.app"
 
   zap trash: [

@@ -12,8 +12,6 @@ cask "trivial" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Trivial.app"
 
   uninstall launchctl: "com.decisivetactics.trivial-server",

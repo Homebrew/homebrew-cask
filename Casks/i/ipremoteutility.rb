@@ -12,8 +12,6 @@ cask "ipremoteutility" do
     regex(/href=.*?IPRemoteUtility[._-]v?(\d+(?:\.\d+)+)[._-]macOS\.zip/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "IPRemoteUtility.app"
 
   zap trash: [

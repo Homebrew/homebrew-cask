@@ -15,8 +15,6 @@ cask "texmacs" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
-
   app "TeXmacs.app"
 
   zap trash: [

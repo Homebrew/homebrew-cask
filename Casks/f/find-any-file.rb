@@ -1,5 +1,5 @@
 cask "find-any-file" do
-  version "2.5.6,408"
+  version "2.5.7,413"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://s3.amazonaws.com/files.tempel.org/FindAnyFile_#{version.csv.first}.zip",
@@ -14,7 +14,6 @@ cask "find-any-file" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "Find Any File.app"
 

@@ -9,8 +9,6 @@ cask "syncalicious" do
 
   deprecate! date: "2025-04-22", because: :unmaintained
 
-  depends_on macos: ">= :mojave"
-
   app "Syncalicious.app"
 
   uninstall quit: "com.zenangst.Syncalicious"

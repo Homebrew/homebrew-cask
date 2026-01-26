@@ -1,6 +1,6 @@
 cask "vcam" do
-  version "5.0.2"
-  sha256 "f2366cd29c86413cd20015ba34e27dfce6810696be0f3541c0a625b6418829a2"
+  version "5.0.4"
+  sha256 "a38c471639d045639f34df58770521b5404f803582c2d5d0bb0483787398aa0b"
 
   url "https://installers.vcam.ai/VCam_#{version}.pkg"
   name "VCam"
@@ -11,8 +11,6 @@ cask "vcam" do
     url "https://go.vcam.ai/download-mac"
     strategy :header_match
   end
-
-  depends_on macos: ">= :catalina"
 
   pkg "VCam_#{version}.pkg"
 

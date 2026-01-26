@@ -10,8 +10,6 @@ cask "autumn" do
 
   deprecate! date: "2025-04-21", because: :unmaintained
 
-  depends_on macos: ">= :high_sierra"
-
   app "Autumn.app"
 
   zap trash: [

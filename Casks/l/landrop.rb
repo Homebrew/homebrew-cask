@@ -8,8 +8,6 @@ cask "landrop" do
   desc "Drop any files to any devices on your LAN"
   homepage "https://landrop.app/"
 
-  depends_on macos: ">= :high_sierra"
-
   app "LANDrop.app"
 
   uninstall quit: "app.landrop.landrop"

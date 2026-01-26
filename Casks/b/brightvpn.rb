@@ -1,6 +1,6 @@
 cask "brightvpn" do
-  version "1.561.208"
-  sha256 "5c7ad0cf6ddc7df1753978b96f523c82d17607a192a18a3c19ff3dfc0db30e28"
+  version "1.600.673"
+  sha256 "ce9a38bdf726fb06cbbeca2b32a04f977b6acc1acfff3e6b145efb0f2f01c97b"
 
   url "https://brightdata.com/static/BrightVPN-#{version}.dmg",
       verified: "brightdata.com/static/"

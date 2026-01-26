@@ -8,6 +8,7 @@ cask "fstream" do
   homepage "https://www.sourcemac.com/?page=fstream"
 
   deprecate! date: "2024-11-01", because: :unmaintained
+  disable! date: "2025-11-01", because: :unmaintained
 
   app "FStream.app"
 

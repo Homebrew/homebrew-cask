@@ -1,6 +1,6 @@
 cask "caffeine" do
-  version "1.1.3"
-  sha256 "240e5ab832a25ed0af43aeffd1d66dc663dfea7c2525d918c214d6107981a03b"
+  version "1.1.4"
+  sha256 "1ad34c3299a0c866873c4feb432c3e11186375adb6f43c5f481ae9d46d06d723"
 
   url "https://github.com/IntelliScape/caffeine/releases/download/#{version}/Caffeine.dmg",
       verified: "github.com/IntelliScape/caffeine/"
@@ -9,6 +9,7 @@ cask "caffeine" do
   homepage "https://intelliscapesolutions.com/apps/caffeine"
 
   conflicts_with cask: "domzilla-caffeine"
+  depends_on macos: ">= :big_sur"
 
   app "Caffeine.app"
 
@@ -20,8 +21,4 @@ cask "caffeine" do
     "~/Library/HTTPStorages/com.intelliscapesolutions.caffeine.binarycookies",
     "~/Library/Preferences/com.intelliscapesolutions.caffeine.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

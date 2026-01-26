@@ -12,8 +12,6 @@ cask "hp-prime" do
     regex(/<title>.*?\((\d+(?:-\d+)+)\)/i)
   end
 
-  depends_on macos: ">= :sierra"
-
   app "HP Prime.app"
 
   caveats do

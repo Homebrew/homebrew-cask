@@ -14,8 +14,6 @@ cask "pdfelement-express" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "PDFelement Express.app"
 
   zap trash: [

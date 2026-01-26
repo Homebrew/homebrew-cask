@@ -1,6 +1,6 @@
 cask "waltr-pro" do
-  version "4.0.118"
-  sha256 "141d2b0d5e645a6a2511217c6445548093063f645d8fad18c1dfd65854d1ef8c"
+  version "4.0.122"
+  sha256 "9f54a213be17eb65d5d3a27907a06dd1c3fc9389eb5375dedd0029ee6a4ff6a5"
 
   url "https://ushining.softorino.com/shine_uploads/waltrpromac_#{version}.dmg"
   name "WALTR PRO"
@@ -13,7 +13,6 @@ cask "waltr-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "WALTR PRO.app"
 

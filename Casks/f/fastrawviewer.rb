@@ -12,8 +12,6 @@ cask "fastrawviewer" do
     regex(/FastRawViewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "FastRawViewer.app"
 
   zap trash: "~/Library/Preferences/com.libraw-llc.FastRawViewer.plist"

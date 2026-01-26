@@ -13,8 +13,6 @@ cask "fluent-reader" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Fluent Reader.app"
 
   zap trash: [

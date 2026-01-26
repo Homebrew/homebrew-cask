@@ -1,6 +1,6 @@
 cask "font-academicons" do
-  version "1.9.4"
-  sha256 "5b6aeecaaf2a63d23b07b722f3e1be2ae1a12f433677704e73a6b8f564943784"
+  version "1.9.6"
+  sha256 "88a1c603b803ed3ba2ba491bb909c0c2fbaadbcde213e43cb86ce1d0a84db1d4"
 
   url "https://github.com/jpswalsh/academicons/archive/refs/tags/v#{version}.tar.gz"
   name "Academicons"

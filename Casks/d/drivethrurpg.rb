@@ -8,9 +8,10 @@ cask "drivethrurpg" do
   desc "Sync DriveThruRPG libraries to compatible devices"
   homepage "https://www.drivethrurpg.com/library_client.php"
 
+  # The upstream homepage links to the latest dmg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually.
   livecheck do
-    url :homepage
-    regex(/href=.*?DriveThruRPG[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    skip "Cannot be fetched due to Cloudflare protections"
   end
 
   depends_on macos: ">= :big_sur"

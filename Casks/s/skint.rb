@@ -1,6 +1,6 @@
 cask "skint" do
-  version "1.08,2024.08"
-  sha256 "f019af31ba25b3c1f93d94e5cd5764d49bd30f9ebd1f44e13804654f3b399548"
+  version "1.09,2025.09"
+  sha256 "5e626d28b51882330e793679c3e442654f99616e26ecfa5b9dfa21d8ed6bd48a"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/skint#{version.csv.first.no_dots}.zip"
   name "Skint"

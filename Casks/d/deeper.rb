@@ -3,28 +3,8 @@ cask "deeper" do
 
   # NOTE: We use separate `url` values in each of the macOS on_system blocks
   # so that the API data correctly includes URL variants for each.
-  on_sonoma :or_older do
-    on_el_capitan :or_older do
-      version "2.1.4"
-
-      url "https://www.titanium-software.fr/download/1011/Deeper.dmg"
-    end
-    on_sierra do
-      version "2.2.3"
-
-      url "https://www.titanium-software.fr/download/1012/Deeper.dmg"
-    end
-    on_high_sierra do
-      version "2.3.3"
-
-      url "https://www.titanium-software.fr/download/1013/Deeper.dmg"
-    end
-    on_mojave do
-      version "2.4.8"
-
-      url "https://www.titanium-software.fr/download/1014/Deeper.dmg"
-    end
-    on_catalina do
+  on_sequoia :or_older do
+    on_catalina :or_older do
       version "2.6.0"
 
       url "https://www.titanium-software.fr/download/1015/Deeper.dmg"
@@ -49,21 +29,26 @@ cask "deeper" do
 
       url "https://www.titanium-software.fr/download/14/Deeper.dmg"
     end
+    on_sequoia do
+      version "3.1.7"
+
+      url "https://www.titanium-software.fr/download/15/Deeper.dmg"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sequoia :or_newer do
-    version "3.1.6"
+  on_tahoe :or_newer do
+    version "3.2.2"
 
-    url "https://www.titanium-software.fr/download/15/Deeper.dmg"
+    url "https://www.titanium-software.fr/download/26/Deeper.dmg"
 
     # We check the version on the homepage, as the version in the related plist
     # file can be out of date.
     livecheck do
       url :homepage
-      regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*15\s*</i)
+      regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s]*26\s*</i)
     end
   end
 
@@ -72,16 +57,13 @@ cask "deeper" do
   homepage "https://www.titanium-software.fr/en/deeper.html"
 
   depends_on macos: [
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
     :catalina,
     :big_sur,
     :monterey,
     :ventura,
     :sonoma,
     :sequoia,
+    :tahoe,
   ]
 
   app "Deeper.app"

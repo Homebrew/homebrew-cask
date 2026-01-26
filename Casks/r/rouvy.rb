@@ -1,5 +1,5 @@
 cask "rouvy" do
-  version "4.2.5"
+  version "4.4.3"
   sha256 :no_check
 
   url "https://cdn.rouvy.com/update/Rouvy_Installer.dmg"
@@ -15,7 +15,7 @@ cask "rouvy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Rouvy.app"
 

@@ -1,9 +1,9 @@
 cask "devkinsta" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.13.4"
-  sha256 arm:   "7010e6e67e767fdc141966074f592a92853322ea3395dda937f4bef1ba377045",
-         intel: "39a4f3e9eb0622d110eb27a150367da815e2b8cc1e60cd3110c0212087dd4f21"
+  version "2.13.6"
+  sha256 arm:   "16dc1b81a1d8d45b6ae6611f9de899f6e7a5be59a2a8c80a0d0edd504afa0303",
+         intel: "ebac05a7b79900c6cd700d1bd8e795ad568f8c1bfa10a1b1f12ea7bfaafa2231"
 
   url "https://devkinsta-updates.s3.amazonaws.com/DevKinsta-#{version}-#{arch}.zip",
       verified: "devkinsta-updates.s3.amazonaws.com/"
@@ -15,8 +15,6 @@ cask "devkinsta" do
     url "https://devkinsta-updates.s3.amazonaws.com/latest-mac.yml"
     strategy :electron_builder
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "DevKinsta.app"
 

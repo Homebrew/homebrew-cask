@@ -1,6 +1,6 @@
 cask "screenflick" do
-  version "3.2.13"
-  sha256 "916c198bfe6ce17acc86f71eb9167e14bad6b50fb350b07d5700cdf664b224d0"
+  version "3.3.2"
+  sha256 "5902bd75e1bc8934ba44feca1801522ef943d70c02c56ce8cf61a30eab861619"
 
   url "https://store.araelium.com/screenflick/downloads/versions/Screenflick#{version}.zip"
   name "Screenflick"
@@ -17,8 +17,6 @@ cask "screenflick" do
       end
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   app "Screenflick.app"
 

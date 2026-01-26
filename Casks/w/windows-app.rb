@@ -1,6 +1,6 @@
 cask "windows-app" do
-  version "11.2.1"
-  sha256 "224ea300a0dbda116e9614f7bf35db81e571e0e4b1dcf5b3411a622bbe3c700a"
+  version "11.3.2"
+  sha256 "7f58640f68c3d25559d66d075fb72687db51f73c8d21575f9637b0122368710a"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Windows_App_#{version}_installer.pkg",
       verified: "officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"

@@ -1,9 +1,9 @@
 cask "wljs-notebook" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.8.1"
-  sha256 arm:   "8d4966c6ce1010cffbc2a101adb98b2b1567af105bd04e2e6bcae72ac106bf89",
-         intel: "660df14039684fcfee6e04b56684d6762df9b4707c18b45ff5e229b2e92f61ae"
+  version "2.9.1"
+  sha256 arm:   "e572f88080233fb1c8a5b169624656f239979f17f0a31da8c66bebd38d5d3917",
+         intel: "c99fbe7c566faee04aa4cecb0b8972be792dcbc13aba83d4279e84707267c710"
 
   url "https://github.com/JerryI/wolfram-js-frontend/releases/download/v#{version.csv.second || version.csv.first}/wljs-notebook-#{version.csv.first}-#{arch}-macos.dmg",
       verified: "github.com/JerryI/wolfram-js-frontend/"
@@ -36,7 +36,7 @@ cask "wljs-notebook" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "WLJS Notebook.app"
 

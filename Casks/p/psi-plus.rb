@@ -6,14 +6,14 @@ cask "psi-plus" do
       verified: "downloads.sourceforge.net/psiplus/"
   name "Psi+"
   desc "XMPP client designed for experienced users"
-  homepage "https://psi-plus.com/"
+  homepage "https://psi-im.org/"
 
   livecheck do
     url "https://sourceforge.net/projects/psiplus/rss?path=/macOS/tehnick"
     regex(%r{url=.*?/Psi%2B[._-]?v?(\d+(?:\.\d+)+)[._-]?macOS[^"' >]*?\.dmg}i)
   end
 
-  depends_on macos: ">= :catalina"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Psi+.app"
 

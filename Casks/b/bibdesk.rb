@@ -1,6 +1,6 @@
 cask "bibdesk" do
-  version "1.9.7"
-  sha256 "89966f14d9b3eebf2a530739ab909bfc61071428d43c628aeae9fdf648a7bec1"
+  version "1.9.10"
+  sha256 "b4bb597b7b5c8b9f26f928a01a5faf1db8706e604276a5e9fccfd3acd8e0031a"
 
   url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version.csv.first}/BibDesk-#{version.csv.first}.dmg",
       verified: "downloads.sourceforge.net/bibdesk/"
@@ -14,7 +14,6 @@ cask "bibdesk" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "BibDesk.app"
 

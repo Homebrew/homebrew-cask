@@ -1,10 +1,10 @@
 cask "slack" do
   arch arm: "arm64", intel: "x64"
 
-  on_catalina do
-    version "4.33.90"
-    sha256 arm:   "8c060d33c7c451b58abaed380da4e6781089530d3b9c12da70e738e27c4eb47c",
-           intel: "7e0ba8a18a9cf95090ad80f58437d647eee5d1842ac4f15ea053c16c1629edde"
+  on_big_sur :or_older do
+    version "4.45.69"
+    sha256 arm:   "31a3f08f49e27a1c0d6224a5f0677329217599eccab481620266730566f0abd0",
+           intel: "88ee611b36189ab1e84f39f0fbe0048468d32a24e783303dfe1a3ea0519755e2"
 
     url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/#{arch}/Slack-#{version}-macOS.dmg",
         verified: "downloads.slack-edge.com/"
@@ -13,10 +13,10 @@ cask "slack" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
-    version "4.45.69"
-    sha256 arm:   "31a3f08f49e27a1c0d6224a5f0677329217599eccab481620266730566f0abd0",
-           intel: "88ee611b36189ab1e84f39f0fbe0048468d32a24e783303dfe1a3ea0519755e2"
+  on_monterey :or_newer do
+    version "4.47.72"
+    sha256 arm:   "02284c4008cc3115897ed40ea7d827202fdd7fc9e7aca9e4a51ca6f2c76d5240",
+           intel: "1f50eab65ab3d45c43aaae2201926c4e4ba02e9f96554f5f281f87d7d97ebee8"
 
     url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg",
         verified: "downloads.slack-edge.com/"
@@ -33,7 +33,7 @@ cask "slack" do
 
   auto_updates true
   conflicts_with cask: "slack@beta"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Slack.app"
 

@@ -1,6 +1,6 @@
 cask "mixed-in-key" do
-  version "11.2.5.7402,67"
-  sha256 "7dd9947c2acc9cd5579afb247b42b5f29a9c982cc26e578ab721dfe1a5579c35"
+  version "11.2.6.7421,67"
+  sha256 "5adcf2c51b6753af39d20b96ed06403512bffb66b9de637f1b62fee96da98c92"
 
   url "https://builds.mixedinkey.com/download/#{version.csv.second}/release/latest?key=public"
   name "Mixed In Key"
@@ -42,7 +42,6 @@ cask "mixed-in-key" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Mixed In Key #{version.major}.app"
 

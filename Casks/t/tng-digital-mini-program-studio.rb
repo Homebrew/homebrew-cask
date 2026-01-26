@@ -2,12 +2,12 @@ cask "tng-digital-mini-program-studio" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "3.7.1031"
-    sha256 "890d30a02ce90a002e86878dc869084031135528082f056c35ed51e90b3a34ba"
+    version "3.9.1047"
+    sha256 "24fc887a78ce1766c8ff9c9d2ba8c0d7f80a30c6fd104ebfae0db74239a028d9"
   end
   on_intel do
-    version "3.7.1032"
-    sha256 "64d3d927f548f92d31c222d89470c7fb48593f7f29ef845a5d0f36e24e796ea6"
+    version "3.9.1048"
+    sha256 "a9d8d4318b49f2810e73557ae88c2acbe1c925ceb9ba36033a529fecc4a6cac4"
   end
 
   url "https://ide-release.marmot-cloud.com/storage/miniprogram-studio/common/#{version.major_minor}/MiniProgramStudio-#{version}-#{arch}.dmg",
@@ -19,8 +19,6 @@ cask "tng-digital-mini-program-studio" do
   livecheck do
     skip "No reliable automated version detection available"
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "MiniProgramStudio.app"
 

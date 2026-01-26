@@ -1,9 +1,9 @@
 cask "smartsynchronize" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.6.2"
-  sha256 arm:   "d44ce873a723d9fe02c2b57ab66cc3bdc403475661f19feb7a9b28a6d84218be",
-         intel: "beceede4c22d98b86f05d51c59bd18490551b7f59893957d20af18f1df909a68"
+  version "4.6.3"
+  sha256 arm:   "980d3d4d95d1f19a6eaa15d2564d852107e02ba07cc9c1097e69627b27731c83",
+         intel: "26b7c0aebe3bc75bd86fdd6f9fd95ad3ae1110d8f43b3dfc3bb016b212aa5fd7"
 
   url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-#{arch}-#{version.dots_to_underscores}.dmg"
   name "SmartSynchronize"
@@ -20,8 +20,6 @@ cask "smartsynchronize" do
       match[1].tr("_", ".")
     end
   end
-
-  depends_on macos: ">= :mojave"
 
   app "SmartSynchronize.app"
   binary "#{appdir}/SmartSynchronize.app/Contents/MacOS/SmartSynchronize"

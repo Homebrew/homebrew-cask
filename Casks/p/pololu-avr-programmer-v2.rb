@@ -15,7 +15,7 @@ cask "pololu-avr-programmer-v2" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   pkg "pololu-usb-avr-programmer-v2-#{version.csv.second}-macos.pkg"
 

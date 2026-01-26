@@ -1,9 +1,9 @@
 cask "jetbrains-gateway" do
   arch arm: "-aarch64"
 
-  version "2025.2,252.23892.437"
-  sha256 arm:   "d8be067bdd845c3c61e8e9c214b1591c2658e0a59ba5e0a45f3b1129f9c6fa63",
-         intel: "637f096b34e8fb4425c570c3140de464ee96884b222cec5df1f630ea7aed833f"
+  version "2025.3.2,253.30387.104"
+  sha256 arm:   "e4b3ca2ad08eade8982045856d034f21392d8ce44603cbfedb6b5b66151cf949",
+         intel: "b8f90af9490050c0be2588869d066676dd432ad4ea1eb8e913f821a67b866ffc"
 
   url "https://download.jetbrains.com/idea/gateway/JetBrainsGateway-#{version.csv.first}#{arch}.dmg"
   name "jetbrains-gateway"
@@ -24,7 +24,6 @@ cask "jetbrains-gateway" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "JetBrains Gateway.app"
   binary "#{appdir}/JetBrains Gateway.app/Contents/MacOS/gateway"

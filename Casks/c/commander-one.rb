@@ -1,5 +1,5 @@
 cask "commander-one" do
-  version "3.15"
+  version "3.17.1"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
@@ -14,7 +14,6 @@ cask "commander-one" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Commander One.app"
 

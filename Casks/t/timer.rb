@@ -8,6 +8,7 @@ cask "timer" do
   homepage "https://www.apimac.com/mac/timer/"
 
   deprecate! date: "2024-10-27", because: :unmaintained
+  disable! date: "2025-10-27", because: :unmaintained
 
   app "Timer.app"
 

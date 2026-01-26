@@ -7,6 +7,8 @@ cask "voxql" do
   desc "Quick Look generator for MagicaVoxel files"
   homepage "https://github.com/heptal/VoxQL"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "VoxQL.qlgenerator"
 
   # No zap stanza required

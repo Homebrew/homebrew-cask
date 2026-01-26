@@ -20,18 +20,7 @@ cask "tastytrade" do
   livecheck do
     url "https://tastytrade.com/page-data/desktop-platform/page-data.json"
     strategy :json do |json|
-      requests = 0
-      version = json["staticQueryHashes"]&.each do |static_hash|
-        requests += 1
-        break if requests > 4
-
-        content = Homebrew::Livecheck::Strategy.page_content("https://tastytrade.com/page-data/sq/d/#{static_hash}.json")
-        next if content[:content].blank?
-
-        hash_json = Homebrew::Livecheck::Strategy::Json.parse_json(content[:content])
-        version = hash_json.dig("data", "contentstackGlobalSettings", "tastyworksSoftware", "desktopVersion")
-        break version if version.present?
-      end
+      json.dig("result", "pageContext", "globalSettings", "tastyworksSoftware", "desktopVersion")
     end
   end
 

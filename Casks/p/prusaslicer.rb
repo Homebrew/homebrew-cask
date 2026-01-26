@@ -1,6 +1,6 @@
 cask "prusaslicer" do
-  version "2.9.2"
-  sha256 "21a5347037c5204da0f1fe8256cc5f4a5bbf01b33f4b6e8842bfbc15176b30a6"
+  version "2.9.4"
+  sha256 "038cb578372cfa29f5428539406c780a872b0027432db3364dbe170ad4fc7fdc"
 
   url "https://cdn.prusa3d.com/downloads/drivers/prusa3d_mac_#{version.dots_to_underscores}.dmg"
   name "PrusaSlicer"
@@ -17,8 +17,6 @@ cask "prusaslicer" do
       end
     end
   end
-
-  depends_on macos: ">= :sierra"
 
   app "Original Prusa Drivers/PrusaSlicer.app"
 

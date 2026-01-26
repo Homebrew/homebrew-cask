@@ -1,7 +1,7 @@
 cask "mplab-xc32" do
   # NOTE: "32" is not a version number, but an intrinsic part of the product name
-  version "4.60"
-  sha256 "d87b13aedec1afa874a6888372cb4928aa6d6d2abca439afbcd93d0c10c912ca"
+  version "5.00"
+  sha256 "e5871c0c4627bb48bcd06dfce2ccb1b5ef0ddc1da50692b373c70a42a165763d"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc32-v#{version}-full-install-osx-installer.dmg"
   name "MPLab XC32 Compiler"
@@ -9,7 +9,8 @@ cask "mplab-xc32" do
   homepage "https://www.microchip.com/mplab/compilers"
 
   livecheck do
-    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc32"
+    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc32",
+        user_agent: :browser
     regex(%r{href=.*?SoftwareTools/xc32[._-]v?(\d+(?:\.\d+)+)[._-]full[._-]install[._-]osx[._-]installer\.dmg}i)
   end
 
@@ -33,8 +34,6 @@ cask "mplab-xc32" do
   binary "#{staged_path}/bin/xc32-as"
   binary "#{staged_path}/bin/xc32-bin2hex"
   binary "#{staged_path}/bin/xc32-c++"
-  binary "#{staged_path}/bin/xc32-c++filt"
-  binary "#{staged_path}/bin/xc32-cpp"
   binary "#{staged_path}/bin/xc32-elfedit"
   binary "#{staged_path}/bin/xc32-g++"
   binary "#{staged_path}/bin/xc32-gcc"

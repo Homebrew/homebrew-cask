@@ -1,6 +1,6 @@
 cask "font-fairfax-hd" do
-  version "2025-03-20"
-  sha256 "383c0b3a7584647b69f4b35982eba73f994e7e62faf98a15e0a99c2a1cd23873"
+  version "2025-09-01"
+  sha256 "85ebff7ad2c2347cbe619cacc9f9e6d2fdba30130441b53e0c7d975f5f6f2a4c"
 
   url "https://github.com/kreativekorp/open-relay/releases/download/#{version}/FairfaxHD.zip",
       verified: "github.com/kreativekorp/open-relay/"

@@ -1,8 +1,11 @@
 cask "synology-surveillance-station-client" do
-  version "2.2.1,2565"
-  sha256 "2671cc6002badb5432b96d9f8b669905b2cedb0a1ebc8be8019b587b45b5089b"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://global.download.synology.com/download/Utility/SurveillanceStationClient/#{version.tr(",", "-")}/Mac/Synology%20Surveillance%20Station%20Client-#{version.tr(",", "-")}.dmg"
+  version "2.2.2,2596"
+  sha256 arm:   "6597cf1f1bf09ab1ba547f3c4a6f3d3fcf926dc69fd1a55972d1106f30adafcf",
+         intel: "e4c216d70a917b7bc021c5997a42886964c197d23a6ff639008fcb87394ef863"
+
+  url "https://global.download.synology.com/download/Utility/SurveillanceStationClient/#{version.tr(",", "-")}/Mac/Synology%20Surveillance%20Station%20Client-#{version.tr(",", "-")}_#{arch}.dmg"
   name "Synology Surveillance Station Client"
   desc "Desktop utility to access Surveillance Station on Synology products"
   homepage "https://www.synology.com/surveillance/"

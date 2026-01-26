@@ -1,6 +1,6 @@
 cask "prefs-editor" do
-  version "1.4.1"
-  sha256 "bfa48939c288455b0f3b7647759d6bb59d022a046209b408290341a6493705a8"
+  version "1.4.2"
+  sha256 "72b99db5da69f1a35a727dbcf7b82afdc482b40ba1b5b612b8e91f8512b23c2d"
 
   url "https://files.tempel.org/Various/OSX_Prefs_Editor/PrefsEditor-#{version}.zip"
   name "Prefs Editor"

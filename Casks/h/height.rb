@@ -8,13 +8,9 @@ cask "height" do
   desc "All-in-one project management tool"
   homepage "https://height.app/"
 
-  livecheck do
-    url "https://storage.googleapis.com/height-statics/_app/latest-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2025-11-01", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Height.app"
 

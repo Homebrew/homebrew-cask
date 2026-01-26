@@ -8,8 +8,6 @@ cask "goxel" do
   desc "Open Source Voxel Editor"
   homepage "https://goxel.xyz/"
 
-  depends_on macos: ">= :mojave"
-
   app "Goxel.app"
 
   zap trash: [

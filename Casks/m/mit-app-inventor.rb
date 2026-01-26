@@ -9,6 +9,7 @@ cask "mit-app-inventor" do
   homepage "https://appinventor.mit.edu/explore/ai2/mac"
 
   deprecate! date: "2024-10-27", because: :unmaintained
+  disable! date: "2025-10-27", because: :unmaintained
 
   depends_on arch: :x86_64
 

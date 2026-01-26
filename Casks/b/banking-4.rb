@@ -1,12 +1,13 @@
 cask "banking-4" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
-  version "8.9.4,9356"
+  version "9.1.4,9515"
   sha256 :no_check
 
-  url "https://subsembly.com/download/MacBanking4.pkg"
+  url "https://subsembly.com/download/MacBanking4.pkg",
+      verified: "subsembly.com/"
   name "Banking 4"
   desc "German accounting software"
-  homepage "https://subsembly.com/banking4.html"
+  homepage "https://banking4.de/index.html"
 
   livecheck do
     url "https://subsembly.com/banking4-macos-updates.php"
@@ -17,7 +18,10 @@ cask "banking-4" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   pkg "MacBanking4.pkg"
 

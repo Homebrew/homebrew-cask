@@ -8,6 +8,8 @@ cask "qlstephen" do
   desc "Quick Look plugin for plaintext files without an extension"
   homepage "https://whomwah.github.io/qlstephen/"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "QLStephen.qlgenerator"
 
   # No zap stanza required

@@ -1,9 +1,9 @@
 cask "freeshow" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.4.9"
-  sha256 arm:   "330636fe07197224526933becd3f94619856c89943bd4804c195cbdb23988fc5",
-         intel: "25e1eee1c76233bab4f7dcf761baa062b4d8ebd2240fa3e68c8d1376439edc34"
+  version "1.5.6"
+  sha256 arm:   "49609cb6fdcf0d1a4898d7337823fb126cf144e247ad864883290d5d1c1e7c15",
+         intel: "6e79255394f7898131266ff1fc4f7e34331d047f7aab8cbadaa574083cbdf34d"
 
   url "https://github.com/ChurchApps/FreeShow/releases/download/v#{version}/FreeShow-#{version}-#{arch}.zip",
       verified: "github.com/ChurchApps/"
@@ -17,7 +17,8 @@ cask "freeshow" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  conflicts_with cask: "freeshow@beta"
+  depends_on macos: ">= :big_sur"
 
   app "FreeShow.app"
 

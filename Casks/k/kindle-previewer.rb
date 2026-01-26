@@ -1,5 +1,5 @@
 cask "kindle-previewer" do
-  version "3.96.0"
+  version "3.101.0"
   sha256 :no_check
 
   url "https://d2bzeorukaqrvt.cloudfront.net/KindlePreviewerInstaller.pkg",
@@ -12,8 +12,6 @@ cask "kindle-previewer" do
     url "https://kindlepreviewer.s3.amazonaws.com/UG_ReleaseNotes_EN.txt"
     regex(/Kindle\sPreviewer\sv?(\d+(?:\.\d+)+)/i)
   end
-
-  depends_on macos: ">= :catalina"
 
   pkg "KindlePreviewerInstaller.pkg"
 

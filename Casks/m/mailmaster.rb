@@ -1,5 +1,5 @@
 cask "mailmaster" do
-  version "5.2.1,1418"
+  version "5.3.2,1424"
   sha256 :no_check
 
   url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
@@ -16,7 +16,6 @@ cask "mailmaster" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "MailMaster.app"
 

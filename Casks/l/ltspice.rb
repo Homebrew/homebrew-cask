@@ -8,8 +8,8 @@ cask "ltspice" do
   homepage "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html"
 
   livecheck do
-    url :homepage
-    regex(/for\s+MacOS[\s\S]*Version\s+v?(\d+(?:\.\d+)+)/i)
+    url :homepage, user_agent: :browser
+    regex(/for\s+MacOS.*?Version\s+v?(\d+(?:\.\d+)+)/im)
   end
 
   pkg "LTspice.pkg"

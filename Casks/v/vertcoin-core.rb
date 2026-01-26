@@ -16,7 +16,7 @@ cask "vertcoin-core" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Vertcoin-Qt.app", target: "Vertcoin Core.app"

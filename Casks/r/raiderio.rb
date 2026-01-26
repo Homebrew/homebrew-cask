@@ -1,6 +1,6 @@
 cask "raiderio" do
-  version "4.7.4"
-  sha256 "e69685830dfa00d37dbbddb7b0a05f96b83f93bf8d7b73ea2b7789d075446c78"
+  version "4.8.9"
+  sha256 "484b9d69c30ad40b347ad834d5ac5361ff297a696c25e58399efc4bfee4e6b90"
 
   url "https://github.com/RaiderIO/raiderio-client-builds/releases/download/v#{version}/RaiderIO_Client.dmg",
       verified: "github.com/RaiderIO/raiderio-client-builds/"

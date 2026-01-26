@@ -1,6 +1,6 @@
 cask "snipaste" do
-  version "2.10.8"
-  sha256 "7038e75db8df481a34f77630244247306d9e603009dc5a02b88ae1d8ea9c5ac9"
+  version "2.11.3"
+  sha256 "a2287838889e7b1734a65d952bae5ef7f479bdc163d0c31be91859bca120fd3e"
 
   url "https://download.snipaste.com/archives/Snipaste-#{version}.dmg"
   name "Snipaste"
@@ -14,7 +14,6 @@ cask "snipaste" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Snipaste.app"
 

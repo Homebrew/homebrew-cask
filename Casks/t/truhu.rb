@@ -1,6 +1,6 @@
 cask "truhu" do
-  version "332"
-  sha256 "3c44ea0da4235b2be86540f94b2226485112d2c2e9586a00e998e7083e927d8e"
+  version "340"
+  sha256 "9ff31fb2e88c3e03cb7a105e0988322cf2c56f9725a911641437df3f7bc958f5"
 
   url "https://truhu-mobile-builds.s3.amazonaws.com/TruHu+Desktop+#{version}.dmg",
       verified: "truhu-mobile-builds.s3.amazonaws.com/"
@@ -21,8 +21,6 @@ cask "truhu" do
       version_page[:content].scan(regex).map { |match| match[0] }
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   app "TruHu Mac Desktop.app"
 

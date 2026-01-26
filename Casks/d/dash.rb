@@ -1,6 +1,6 @@
 cask "dash" do
-  version "7.3.5"
-  sha256 "881d3210ff71cc0ba03fabdf04d84defeb77d7edc688045d29312e59c82f649d"
+  version "8.1.1"
+  sha256 "bf66b0fa12fa8b800e5233c06aa41373f6444d3c8cf9635aca1eb6a528a01513"
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
   name "Dash"
@@ -8,13 +8,12 @@ cask "dash" do
   homepage "https://kapeli.com/dash"
 
   livecheck do
-    url "https://kapeli.com/Dash#{version.major}.xml"
+    url "https://kapeli.com/Dash.xml"
     strategy :sparkle, &:short_version
   end
 
   auto_updates true
   conflicts_with cask: "dash@6"
-  depends_on macos: ">= :high_sierra"
 
   app "Dash.app"
 

@@ -1,14 +1,8 @@
 cask "yate" do
-  version "8.2.4"
+  version "8.3.6"
   sha256 :no_check
 
-  on_sierra :or_older do
-    url "https://2manyrobots.com/Updates/YateOM/Yate.zip"
-  end
-  on_high_sierra :or_newer do
-    url "https://2manyrobots.com/Updates/Yate/Yate.zip"
-  end
-
+  url "https://2manyrobots.com/Updates/Yate/Yate.zip"
   name "Yate"
   desc "Media file tag editor"
   homepage "https://2manyrobots.com/yate/"

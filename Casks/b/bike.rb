@@ -1,15 +1,19 @@
 cask "bike" do
-  version "1.22,193"
-  sha256 "7791036bde228067999dec72fa72b2b7050ac9d7f2e456652730b24bea229428"
+  version "1.22.2,196"
+  sha256 "59222704a85850ddd58d16994f87ec5f8d7cb687a20b50014306f8f328b3e609"
 
   url "https://www.hogbaysoftware.com/bike/releases/#{version.csv.second}.dmg"
   name "Bike"
   desc "Record and process your ideas"
   homepage "https://www.hogbaysoftware.com/bike/"
 
+  # The Sparkle feed can contain items on the "preview" channel, so we restrict
+  # matching to the default channel.
   livecheck do
     url "https://www.hogbaysoftware.com/bike/releases/index.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   auto_updates true

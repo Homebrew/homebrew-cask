@@ -12,7 +12,13 @@ cask "bili-downloader" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "biliDownloader_GUI.app"
 
   zap trash: "~/Library/Saved Application State/biliDownloader_GUI.savedState"
+
+  caveats do
+    requires_rosetta
+  end
 end

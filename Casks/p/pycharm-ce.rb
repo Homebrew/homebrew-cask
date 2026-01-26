@@ -1,9 +1,9 @@
 cask "pycharm-ce" do
   arch arm: "-aarch64"
 
-  version "2025.2.0.1,252.23892.515"
-  sha256 arm:   "acdbfd143a7da358cbd9b1410eff8763f9650c58f9a976d80a9aa8977f358e00",
-         intel: "0fa4e9c93bcb1f0d56dd7faecbb01b38d3c07fbbcf4fc8c0ad4dc5dc2f15b5a9"
+  version "2025.2.5,252.28238.29"
+  sha256 arm:   "040a4ed6bb7563972d844c450f615d0d11385e524fbbfdbfc9fc68d78811e994",
+         intel: "08ba97a278031ff1942ddefb18d8acf7582f0bb4a28ccdf5d65721bfb80ca456"
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
   name "Jetbrains PyCharm Community Edition"
@@ -11,21 +11,10 @@ cask "pycharm-ce" do
   desc "IDE for Python programming - Community Edition"
   homepage "https://www.jetbrains.com/pycharm/"
 
-  livecheck do
-    url "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
-    strategy :json do |json|
-      json["PCC"]&.map do |release|
-        version = release["version"]
-        build = release["build"]
-        next if version.blank? || build.blank?
-
-        "#{version},#{build}"
-      end
-    end
-  end
+  # https://blog.jetbrains.com/pycharm/2025/12/pycharm-2025-3-unified-ide-jupyter-notebooks-in-remote-development-uv-as-default-and-more/
+  deprecate! date: "2025-12-08", because: :discontinued, replacement_cask: "pycharm"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "PyCharm CE.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

@@ -1,5 +1,5 @@
 cask "free42-binary" do
-  version "3.3.8"
+  version "3.3.11"
   sha256 :no_check
 
   url "https://thomasokken.com/free42/download/Free42Mac.zip"
@@ -11,8 +11,6 @@ cask "free42-binary" do
     url "https://thomasokken.com/free42/history.html"
     regex(/:\s*release\s*(\d+(?:\.\d+)+[a-z]?)\s*(?:$|\([^\n)]*MacOS)/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Free42 Binary.app"
 

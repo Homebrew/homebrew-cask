@@ -8,6 +8,8 @@ cask "betterdiscord-installer" do
   desc "Installer for BetterDiscord"
   homepage "https://betterdiscord.app/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on cask: "discord"
 
   app "BetterDiscord.app"

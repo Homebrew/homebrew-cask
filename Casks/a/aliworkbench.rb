@@ -1,6 +1,6 @@
 cask "aliworkbench" do
-  version "9.83.00QNM"
-  sha256 "f18eca82d3097f3274b7fee3650637537cd57c57f3c52b4e67e68eb5b5dbce37"
+  version "9.90.00QNM"
+  sha256 "291787a5989e0c5240d5d8ce0123182b53679b657620ef4e8cc28d2a22f0f511"
 
   url "https://download.alicdn.com/wangwang/AliworkbenchQN_(#{version}).dmg",
       verified: "download.alicdn.com/wangwang/"
@@ -20,8 +20,6 @@ cask "aliworkbench" do
       end
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   app "AliWorkBench.app"
 

@@ -1,9 +1,9 @@
 cask "wavebox" do
   arch arm: "arm64"
 
-  version "10.139.20.2"
-  sha256 arm:   "fa68da108e4ff58a4b58e01577a5520faeebf88e264c80aac60cb2503b3fa4cf",
-         intel: "b250e69ce2162100dff993c9b221f942da3a3af2c8203a8c158f7c20d232e02c"
+  version "10.144.66.2"
+  sha256 arm:   "39a1bc11d21679107798a2bae856e302df6fc498caeddcd70a48722ffa523590",
+         intel: "3c2695ebea4ff49ab592014879ca5d22c99cc248321b44191bc66473394c05d4"
 
   url "https://download.wavebox.app/stable/mac#{arch}/Wavebox_#{version}.zip",
       verified: "download.wavebox.app/"
@@ -17,7 +17,7 @@ cask "wavebox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Wavebox.app"
 

@@ -1,6 +1,6 @@
 cask "mozilla-vpn" do
-  version "2.30.0"
-  sha256 "4b5b682d48b2a0bed0712c9850eb9e2c787bcc4513b3a30ef25c0b29daa5da51"
+  version "2.32.0"
+  sha256 "eb5ad9b9375ea84609e8db01dc88f2f0760b8fe57d140fc25d26ef3fd4238d65"
 
   url "https://archive.mozilla.org/pub/vpn/releases/#{version}/mac/MozillaVPN.pkg"
   name "Mozilla VPN"

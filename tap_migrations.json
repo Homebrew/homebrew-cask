@@ -4,6 +4,7 @@
   "borgbackup": "homebrew/core",
   "chronograf": "homebrew/core",
   "consul-template": "homebrew/core",
+  "container": "homebrew/core",
   "cryptol": "homebrew/core",
   "cups-pdf": "homebrew/core",
   "dmd": "homebrew/core",
@@ -15,6 +16,7 @@
   "gedit": "homebrew/core",
   "gfortran": "homebrew/core",
   "ghc": "homebrew/core",
+  "ghidra": "homebrew/core",
   "go": "homebrew/core",
   "graphviz": "homebrew/core",
   "handbrakecli": "homebrew/core",
@@ -30,7 +32,6 @@
   "nmap": "homebrew/core",
   "node": "homebrew/core",
   "otto": "homebrew/core",
-  "packer": "homebrew/core",
   "pandoc": "homebrew/core",
   "pgloader": "homebrew/core",
   "pgweb": "homebrew/core",
@@ -47,7 +48,6 @@
   "sslmate": "homebrew/core",
   "swi-prolog": "homebrew/core",
   "terraform": "homebrew/core",
-  "vault": "homebrew/core",
   "vfuse": "homebrew/core",
   "volatility": "homebrew/core"
 }

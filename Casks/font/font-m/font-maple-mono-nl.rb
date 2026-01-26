@@ -1,6 +1,6 @@
 cask "font-maple-mono-nl" do
-  version "7.6"
-  sha256 "8ef51f2e2f832d308791d36e28c81c569e3d30c791895563c1d2155cd28e6987"
+  version "7.9"
+  sha256 "bfc2d8a46050e8d73da7c09a59badac1ec6ebd2cff6783548f9005ce5425b84f"
 
   url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMonoNL-Variable.zip",
       verified: "github.com/subframe7536/Maple-font/"

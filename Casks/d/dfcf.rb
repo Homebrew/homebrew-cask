@@ -8,12 +8,7 @@ cask "dfcf" do
   desc "Stock trading platform"
   homepage "https://emdesk.eastmoney.com/pc_activity/AHome/Index"
 
-  livecheck do
-    url :url
-    strategy :extract_plist do |item|
-      item["com.emmac.mac"]&.short_version
-    end
-  end
+  disable! date: "2025-11-24", because: :discontinued
 
   app "东方财富.app"
 

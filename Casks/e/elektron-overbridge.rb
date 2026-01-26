@@ -8,15 +8,12 @@ cask "elektron-overbridge" do
   desc "Integrate Elektron hardware into music software"
   homepage "https://www.elektron.se/overbridge"
 
+  # The upstream download page links to the latest dmg file but Cloudflare
+  # protections prevent us from fetching it, so it must be checked manually:
+  # https://www.elektron.se/support-downloads/overbridge
   livecheck do
-    url "https://www.elektron.se/support-downloads/overbridge"
-    regex(%r{/([\h-]+)/Elektron[._-]?Overbridge[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
+    skip "Cannot be fetched due to Cloudflare protections"
   end
-
-  depends_on macos: ">= :sierra"
 
   pkg "Elektron Overbridge Installer #{version.csv.first}.pkg"
 

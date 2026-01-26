@@ -18,15 +18,14 @@ jobs:
     if: github.repository == 'Homebrew/homebrew-cask'
     env:
       HOMEBREW_DEVELOPER: 1
-    runs-on: macos-15
+    runs-on: macos-26
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@main
         with:
-          core: false
+          core: true
           cask: true
-          test-bot: false
 
       - name: Configure Git user
         uses: Homebrew/actions/git-user-config@main

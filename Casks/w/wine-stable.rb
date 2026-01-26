@@ -1,6 +1,6 @@
 cask "wine-stable" do
-  version "10.0_2"
-  sha256 "465330eaced42d033fc24bfb9bc684c179442f8f7359f24c7dc114c375453e55"
+  version "11.0"
+  sha256 "573d43fc4618521148d98ad9c74e63387831827395c014925fdfdc52fe55cb5a"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
@@ -31,12 +31,13 @@ cask "wine-stable" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   conflicts_with cask: [
     "wine@devel",
     "wine@staging",
   ]
   depends_on cask: "gstreamer-runtime"
-  depends_on macos: ">= :catalina"
 
   app "Wine Stable.app"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/appdb"

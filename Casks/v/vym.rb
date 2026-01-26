@@ -12,6 +12,8 @@ cask "vym" do
     regex(%r{url=.*?/vym[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg)}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "vym.app"
 
   zap trash: "~/Library/Preferences/com.insilmaril.vym.plist"

@@ -1,6 +1,6 @@
 cask "plex" do
-  version "1.110.0.351,4e48eb83"
-  sha256 "d28444cd82d9ca29551f83bd3e3c128c4f5e7cd69f3e615ca14716796c61558d"
+  version "1.112.0.359,0d79a49f"
+  sha256 "9d5fe3143c1d9e4fc1d5385c96213a4a3000ea66054c048b02dc869188bae639"
 
   url "https://downloads.plex.tv/plex-desktop/#{version.csv.first}-#{version.csv.second}/macos/Plex-#{version.csv.first}-#{version.csv.second}-universal.zip"
   name "Plex"
@@ -15,7 +15,6 @@ cask "plex" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Plex.app"
 

@@ -15,7 +15,6 @@ cask "copyclip" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "CopyClip #{version.major}.app"
 

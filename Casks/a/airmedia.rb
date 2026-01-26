@@ -14,8 +14,6 @@ cask "airmedia" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   pkg "airmedia_osx_#{version}_installer.pkg"
 
   uninstall launchctl: "com.crestron.AirMedia2",

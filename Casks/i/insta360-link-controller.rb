@@ -1,8 +1,8 @@
 cask "insta360-link-controller" do
-  version "2.0.5,build9,b5ebf27ff81b175d598f71fd68bb88cc"
-  sha256 "e923357846ce059b3d58c9d853ba40e8ddfac4cbc753afe06483207110616eab"
+  version "2.2.1,build24,520b33b77a91490dae31c63154e36934"
+  sha256 "f714c73ae6b8eb895ba501667e4405b80b6e9ab1e51c1ea0bcad7ab22c3a6c96"
 
-  url "https://file.insta360.com/static/#{version.csv.third}/Insta360LinkController_#{version.csv.first}(#{version.csv.second}).pkg"
+  url "https://wassets.insta360.com/common/#{version.csv.third}/Insta360LinkController_#{version.csv.first}(#{version.csv.second}).pkg"
   name "Insta360 Link Controller"
   desc "Controller for Insta360 webcams"
   homepage "https://www.insta360.com/"
@@ -10,7 +10,6 @@ cask "insta360-link-controller" do
   livecheck do
     url "https://openapi.insta360.com/app/appDownload/getGroupApp?group=insta360-link&X-Language=en-us"
     regex(%r{/(\h+)/Insta360LinkController_\d+\.\d+\.\d+\((build\d+)\)\.pkg}i)
-
     strategy :json do |json, regex|
       # Find the Insta360 Link Controller app
       app = json.dig("data", "apps")&.find { |item| item["app_id"] == 100 }

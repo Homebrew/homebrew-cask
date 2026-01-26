@@ -1,6 +1,6 @@
 cask "sound-control" do
-  version "3.3.0"
-  sha256 "ef26d7697aeea6aa981fe73b50ad3be09fd76d47dc41c4e9de2723e4a27a67cf"
+  version "3.3.3"
+  sha256 "0d00495d22ae5e5bd25b29647023a124a02c85cb1005e9da5973a7c083f54aa9"
 
   url "https://s3.amazonaws.com/staticz.net/downloads/soundcontrol/SoundControl_#{version}.dmg",
       verified: "s3.amazonaws.com/staticz.net/downloads/soundcontrol/"
@@ -9,8 +9,8 @@ cask "sound-control" do
   homepage "https://staticz.com/soundcontrol/"
 
   livecheck do
-    url "http://staticz.net/updates/soundcontrol#{version.major}.rss"
-    strategy :sparkle, &:short_version
+    url "https://staticz.com/download/4297/"
+    strategy :header_match
   end
 
   auto_updates true

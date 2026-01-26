@@ -1,26 +1,16 @@
 cask "jump-desktop-connect" do
-  on_sierra :or_older do
-    version "6.5.39"
-    sha256 "5ad7235db6cc28a2da7048636e7ea3e4f9f144e85d645d56e3a7b75b5b228b34"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_high_sierra :or_newer do
-    version "7.1.48"
-    sha256 "6e8c0420b4ab36181cc59df74c3184e96e01559dd4ad2470441575f566f2693b"
-
-    livecheck do
-      url "https://mirror.jumpdesktop.com/downloads/connect/connect-mac.xml"
-      strategy :sparkle, &:short_version
-    end
-  end
+  version "7.1.52"
+  sha256 "63546be7660a5542e041ff17f20e650915babab2e36b2c29fad16117998fbb84"
 
   url "https://mirror.jumpdesktop.com/downloads/connect/JumpDesktopConnect-#{version}.dmg"
   name "Jump Desktop Connect"
   desc "Remote desktop app"
   homepage "https://jumpdesktop.com/connect/"
+
+  livecheck do
+    url "https://mirror.jumpdesktop.com/downloads/connect/connect-mac.xml"
+    strategy :sparkle, &:short_version
+  end
 
   auto_updates true
 

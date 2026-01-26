@@ -1,9 +1,9 @@
 cask "intellij-idea" do
   arch arm: "-aarch64"
 
-  version "2025.2,252.23892.409"
-  sha256 arm:   "1055a85e2524a67cafa0aa51e75a6d7adf14e7e05a5e52d833a60de5112b60d7",
-         intel: "a142bd47516ee184d3d76676d78451f3e9e05a32ba8fdf8778ac04579b3accab"
+  version "2025.3.2,253.30387.90"
+  sha256 arm:   "b9a057c055fa7dde406bbf9807fca2b367f0c1d47771df6ac068a07ffdb76ec9",
+         intel: "eb6e163dc2f05ea3ff5ac52cb3ee94a68d56ec4e74e12ffe06fb497234c3f6e6"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.first}#{arch}.dmg"
   name "IntelliJ IDEA Ultimate"
@@ -25,7 +25,6 @@ cask "intellij-idea" do
 
   auto_updates true
   conflicts_with cask: "intellij-idea@eap"
-  depends_on macos: ">= :high_sierra"
 
   app "IntelliJ IDEA.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
@@ -35,7 +34,7 @@ cask "intellij-idea" do
   preflight do
     File.write shimscript, <<~EOS
       #!/bin/sh
-      exec '#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea' "$@"
+      open -na "IntelliJ IDEA.app" --args "$@"
     EOS
   end
 

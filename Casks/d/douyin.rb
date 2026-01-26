@@ -1,6 +1,6 @@
 cask "douyin" do
-  version "6.5.0,7044145585217083655,194888245"
-  sha256 "57f17d5a380199a299a4efa89b1e696cf1abfce4d6807cdf9da2e731b419b895"
+  version "7.1.0,7044145585217083655,290103052"
+  sha256 "e79c25af67198b3de4be7c7fe771b4115681e20cb320937ae4696bb1e1fce958"
 
   url "https://www.douyin.com/download/pc/obj/douyin-pc-web//douyin-pc-client/#{version.csv.second}/releases/#{version.csv.third}/#{version.csv.first}/darwin-universal/douyin-v#{version.csv.first}-darwin-universal.dmg"
   name "Douyin"
@@ -17,7 +17,6 @@ cask "douyin" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "抖音.app"
 

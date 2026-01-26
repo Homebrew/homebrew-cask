@@ -9,8 +9,6 @@ cask "frhelper" do
   desc "French-Chinese dictionary and learning tool"
   homepage "https://www.eudic.net/v4/fr/app/frhelper"
 
-  depends_on macos: ">= :high_sierra"
-
   app "Frhelper.app"
 
   uninstall quit: [

@@ -1,5 +1,5 @@
 cask "direqual" do
-  version "7.2.0.02"
+  version "7.4.0.08"
   sha256 :no_check
 
   url "https://naarakstudio.com/download/DirEqual.dmg"
@@ -16,8 +16,6 @@ cask "direqual" do
       end
     end
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "DirEqual.app"
 

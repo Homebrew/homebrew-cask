@@ -1,5 +1,5 @@
 cask "tyme" do
-  version "2025.8"
+  version "2026.1"
   sha256 :no_check
 
   url "https://www.tyme-app.com/app/Tyme.dmg"
@@ -13,7 +13,7 @@ cask "tyme" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Tyme.app"
 

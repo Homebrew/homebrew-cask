@@ -1,9 +1,9 @@
 cask "localcan" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.5.1"
-  sha256 arm:   "51489c62d214009577d6e6474fb23a63bfa0de64b69afbfc335e87860a5516b9",
-         intel: "291818e823f792372b95ae7d142054e14b7f7c5c80d1573f425c54193e2762fb"
+  version "2.7.0"
+  sha256 arm:   "3e558ded16d08852ba7630a1038174cc4de1ac533111a70e3014a0885d44a088",
+         intel: "ea47bc5d04e4f230878462854fe1f831c13c4f519d44717ba73a845e88990e0c"
 
   url "https://assets.localcan.com/download/LocalCan-#{version}-#{arch}.dmg"
   name "LocalCan"
@@ -15,7 +15,7 @@ cask "localcan" do
     regex(/href=.*?LocalCan[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "LocalCan.app"
 

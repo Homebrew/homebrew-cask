@@ -16,8 +16,8 @@ cask "betterdisplay" do
     end
   end
   on_ventura :or_newer do
-    version "3.5.6"
-    sha256 "fbfdaac8699245db60260ecd4dc0d0644e3639774c20e45e2f548bd6a751f2bb"
+    version "4.1.1"
+    sha256 "115c293acb7a761fe8cdcc89eaafa97e5071378ad5d1a1b756b4b367e0c27cd2"
 
     livecheck do
       url "https://betterdisplay.pro/betterdisplay/sparkle/appcast.xml"
@@ -34,7 +34,6 @@ cask "betterdisplay" do
   homepage "https://betterdisplay.pro/"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "BetterDisplay.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

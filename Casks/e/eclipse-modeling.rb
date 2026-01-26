@@ -1,9 +1,9 @@
 cask "eclipse-modeling" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.36.0,2025-06"
-  sha256 arm:   "1e9a131356c918315c32dc1faec0065c9032742772570208158bb6fc7197671c",
-         intel: "12e88d8e3fce342d47d4b0a9d04eb47544bfb5ca4446044361dafb78ec7366e1"
+  version "4.38,2025-12"
+  sha256 arm:   "ca0850b9267ce648e80ac2b19ddb2cef1bc9f8c2a6c3b61b2e8bdd16c20a3a61",
+         intel: "90d704e9b7f3817c14d20320f811dceabc8dfd31228410d079cf915c91ac01a1"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-modeling-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&mirror_id=1"
   name "Eclipse Modeling Tools"
@@ -13,6 +13,8 @@ cask "eclipse-modeling" do
   livecheck do
     cask "eclipse-ide"
   end
+
+  depends_on macos: ">= :big_sur"
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Modeling.app"

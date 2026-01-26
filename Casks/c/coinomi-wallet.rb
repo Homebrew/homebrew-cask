@@ -10,8 +10,6 @@ cask "coinomi-wallet" do
 
   deprecate! date: "2025-05-25", because: :moved_to_mas
 
-  depends_on macos: ">= :sierra"
-
   app "Coinomi Wallet.app"
 
   uninstall quit: "com.coinomi.desktop"

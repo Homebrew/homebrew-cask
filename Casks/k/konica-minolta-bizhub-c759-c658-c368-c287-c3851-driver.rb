@@ -41,8 +41,6 @@ cask "konica-minolta-bizhub-c759-c658-c368-c287-c3851-driver" do
   desc "Drivers for Konica Monolta Bizhub printers"
   homepage "https://www.konicaminolta.eu/eu-en/support/download-centre"
 
-  depends_on macos: ">= :sierra"
-
   uninstall_preflight do
     set_ownership "/Library/Printers/KONICAMINOLTA/Preferences"
   end

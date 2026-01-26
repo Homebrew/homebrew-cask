@@ -12,9 +12,7 @@ cask "coolterm" do
     regex(/^\s*v?(\d+(?:\.\d+)+)\s*$/i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
-
-  depends_on macos: ">= :mojave"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "CoolTerm.app"
 

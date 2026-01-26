@@ -1,8 +1,8 @@
 cask "font-jetbrains-maple-mono" do
-  version "1.2304.76"
-  sha256 "c54c949e603b7cc68442f3309783da072926d90a4583a7c2f4ea1c37574a76e5"
+  version "1.2304.79"
+  sha256 "cb5dc2f02f794adf5fe6db8d4453d4ecc31d6756cb5fb8cd8afc35845da56ff1"
 
-  url "https://github.com/SpaceTimee/Fusion-JetBrainsMapleMono/releases/download/#{version}/JetBrainsMapleMono-XX-XX-XX.zip"
+  url "https://github.com/SpaceTimee/Fusion-JetBrainsMapleMono/releases/download/#{version}/JetBrainsMapleMono-XX-XX-XX-XX.zip"
   name "JetBrains Maple Mono"
   homepage "https://github.com/SpaceTimee/Fusion-JetBrainsMapleMono"
 

@@ -8,7 +8,6 @@ cask "workbench" do
   homepage "https://github.com/mxcl/Workbench"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "Workbench.app"
 

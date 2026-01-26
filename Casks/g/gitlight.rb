@@ -18,8 +18,6 @@ cask "gitlight" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "GitLight.app"
 
   zap trash: [

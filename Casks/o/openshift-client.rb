@@ -1,9 +1,9 @@
 cask "openshift-client" do
   arch arm: "-arm64"
 
-  version "4.19.9"
-  sha256 arm:   "6061444be48d7093d301bb1cc9c7e5147c7985f11a7083e3b75e02a0b8d9eaa1",
-         intel: "cdf43664269c8f8b8cfe81d078c81404019f7ac6a700b5c83492c841a7ceb33c"
+  version "4.20.12"
+  sha256 arm:   "e2daa2f4bdfa72a11aa02db9bacf12de5c1763d1eed5d228d2294fdffef57bcb",
+         intel: "5559fd4715bb019f97b33192d7628457a9b3dc3a06dd8dec328490f43957ec2e"
 
   url "https://mirror.openshift.com/pub/openshift-v#{version.major}/clients/ocp/#{version}/openshift-client-mac#{arch}.tar.gz"
   name "Openshift Client"
@@ -15,7 +15,7 @@ cask "openshift-client" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "oc"
 

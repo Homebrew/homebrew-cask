@@ -1,6 +1,6 @@
 cask "clone-hero" do
   version "1.0.0.4080"
-  sha256 "7b7d170b344773ce8355a0c3274e4adc1715e7cd978e210d3c701af22df00d5c"
+  sha256 "ea0cb7d9ac5e55cbbe736ed30b49e9faeb642ce96f8b4b6383aba05387ea9f12"
 
   url "https://github.com/clonehero-game/releases/releases/download/V#{version}/CloneHero-mac.dmg",
       verified: "github.com/clonehero-game/"
@@ -12,8 +12,6 @@ cask "clone-hero" do
     url :url
     strategy :github_latest
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Clone Hero.app"
 

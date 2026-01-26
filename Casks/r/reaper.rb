@@ -1,17 +1,8 @@
 cask "reaper" do
-  version "7.43"
+  version "7.59"
+  sha256 "4b84405d6b2cd6d3f398ed33cca7e45cfadc801ab034de441358e98c46799989"
 
-  on_mojave :or_older do
-    sha256 "512dc725b0781655ad5f95dd45774869b8a7e3eb4720f596372455267802d13d"
-
-    url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64.dmg"
-  end
-  on_catalina :or_newer do
-    sha256 "f22ec18de3527e8f7f8547c9c3fcf17178cb7c21c13b836e1642ab0e8ce1eaed"
-
-    url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_universal.dmg"
-  end
-
+  url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_universal.dmg"
   name "REAPER"
   desc "Digital audio production application"
   homepage "https://www.reaper.fm/"

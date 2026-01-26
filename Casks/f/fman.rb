@@ -4,6 +4,7 @@ cask "fman" do
 
   url "https://fman.io/updates/mac/#{version}.zip"
   name "fman"
+  desc "Dual-pane file manager"
   homepage "https://fman.io/"
 
   livecheck do
@@ -11,7 +12,11 @@ cask "fman" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "fman.app"
+
+  zap trash: "~/Library/Application Support/fman"
 
   caveats do
     requires_rosetta

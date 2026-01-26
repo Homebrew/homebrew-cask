@@ -3,6 +3,8 @@ cask "propresenter@beta" do
     version "7.14.1,118358275"
     sha256 "266bfffd2753f460f9a22e834aed502c73bed2bf51747238fe4831c9048993db"
 
+    url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
+
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=11.0&appVersion=0&buildNumber=0&includeNotes=0&channel=beta"
       strategy :json do |json|
@@ -14,9 +16,28 @@ cask "propresenter@beta" do
       end
     end
   end
-  on_monterey :or_newer do
-    version "20,335544341"
-    sha256 "affa37b63bde921705773ee91e3191350fe2c3173ba330c8b913e1e5125acc35"
+  on_monterey do
+    version "18.4,302252046"
+    sha256 "fcfb4f9391002065a1f807a1476f51defbcc07b50720f27e0400fedb6952b697"
+
+    url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
+
+    livecheck do
+      url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=12.0&appVersion=0&buildNumber=0&includeNotes=0&channel=beta"
+      strategy :json do |json|
+        json["upgrades"]&.map do |item|
+          next if item["version"].blank? || item["buildNumber"].blank?
+
+          "#{item["version"]},#{item["buildNumber"]}"
+        end
+      end
+    end
+  end
+  on_ventura :or_newer do
+    version "21.2,352452635"
+    sha256 "4f6505cf7f26c083f1b9b44fd3d9d54e464f12c90f5b4005f73249f63e33f472"
+
+    url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
 
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=99&appVersion=0&buildNumber=0&includeNotes=0&channel=beta"
@@ -30,7 +51,6 @@ cask "propresenter@beta" do
     end
   end
 
-  url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
   name "ProPresenter"
   desc "Presentation and production application for live events"
   homepage "https://renewedvision.com/propresenter/"

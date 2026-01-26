@@ -2,11 +2,13 @@ cask "leanote" do
   version "2.7.0"
   sha256 "18c680dc9f3af54a0ef4edfa987407ed41bbd4654bc1791720cb40e0047b3da4"
 
-  url "https://github.com/leanote/desktop-app/releases/download/v#{version}/leanote-desktop-mac-v#{version}.zip",
-      verified: "github.com/leanote/desktop-app/"
+  url "https://github.com/leanote/desktop-app/releases/download/v#{version}/leanote-desktop-mac-v#{version}.zip"
   name "Leanote"
   desc "Open source cloud notepad"
-  homepage "https://leanote.org/"
+  # https://leanote.org/ now hosts unsafe gambling content
+  homepage "https://github.com/leanote/desktop-app"
+
+  disable! date: "2025-11-30", because: :discontinued
 
   app "Leanote.app"
 

@@ -14,8 +14,6 @@ cask "fightcade" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Fightcade#{version.major}.app"
 
   zap trash: [

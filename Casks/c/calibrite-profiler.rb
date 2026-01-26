@@ -1,6 +1,6 @@
 cask "calibrite-profiler" do
-  version "2.0.0"
-  sha256 "8f391499e2d60fbd74728ec01372000665b87e0f49042e5f61c39069e0d2f41d"
+  version "3.0.4"
+  sha256 "4b919de389b7ea597095f665edfefb91103c7b624b7d2e41fb4808e431ac9f75"
 
   url "https://github.com/LUMESCA/calibrite-profiler-releases/releases/download/v#{version}/calibrite-PROFILER-#{version}.dmg",
       verified: "github.com/LUMESCA/calibrite-profiler-releases/"
@@ -18,7 +18,6 @@ cask "calibrite-profiler" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "calibrite PROFILER.app"
 

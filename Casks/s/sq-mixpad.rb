@@ -8,18 +8,7 @@ cask "sq-mixpad" do
   desc "Remote control for Allen & Heath SQ audio consoles"
   homepage "https://www.allen-heath.com/hardware/sq/sq-mixpad/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/(\d+)/(\d+)/SQ[._-]MixPad[._-]v?(\d+(?:\.\d+)+)[._-]Mac[^>]+SQ\s*MixPad\s*v?(\d+(?:\.\d+)+)}i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      "#{match[4]},#{match[3]},#{match[1]},#{match[2]}"
-    end
-  end
-
-  depends_on macos: ">= :sierra"
+  disable! date: "2025-09-15", because: :unreachable
 
   app "SQ MixPad #{version.csv.first}.app"
 

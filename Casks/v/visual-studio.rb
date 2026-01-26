@@ -16,9 +16,9 @@ cask "visual-studio" do
   homepage "https://visualstudio.microsoft.com/vs/mac/"
 
   deprecate! date: "2024-08-31", because: :discontinued
+  disable! date: "2025-09-02", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :catalina"
   depends_on cask: "mono-mdk-for-visual-studio"
 
   app "Visual Studio.app"

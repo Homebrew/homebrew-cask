@@ -1,12 +1,17 @@
 cask "jubler" do
-  version "8.0.0"
-  sha256 "f834a5396d8b612fda0aba21d576f8c2d487977bac518f637675d37b9b7ef497"
+  version "9.0.1"
+  sha256 "20af1deb410e2d81f5612a33546375a4c6c3085072ea2ed01852b8ac018d0633"
 
   url "https://github.com/teras/Jubler/releases/download/v#{version}/Jubler-#{version}.dmg",
       verified: "github.com/teras/Jubler/"
   name "Jubler"
   desc "Subtitle editor"
   homepage "https://www.jubler.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Jubler.app"
 

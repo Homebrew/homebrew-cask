@@ -14,7 +14,6 @@ cask "pycharm-edu" do
   deprecate! date: "2025-02-10", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "PyCharm Edu.app"
 

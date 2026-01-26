@@ -1,5 +1,5 @@
 cask "paragon-extfs" do
-  version "14.0.33"
+  version "14.0.46"
   sha256 :no_check
 
   url "https://dl.paragon-software.com/demo/trial_extfs#{version.major}.dmg"
@@ -15,7 +15,6 @@ cask "paragon-extfs" do
   end
 
   conflicts_with cask: "paragon-extfs@11"
-  depends_on macos: ">= :sierra"
 
   installer manual: "FSInstaller.app"
 

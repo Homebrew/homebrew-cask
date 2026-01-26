@@ -7,6 +7,8 @@ cask "vagrant-manager" do
   name "Vagrant Manager"
   homepage "https://www.vagrantmanager.com/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Vagrant Manager.app"
 
   uninstall quit: "lanayo.Vagrant-Manager"

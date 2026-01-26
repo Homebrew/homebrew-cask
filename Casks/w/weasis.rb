@@ -1,9 +1,9 @@
 cask "weasis" do
   arch arm: "aarch64", intel: "x86-64"
 
-  version "4.6.3"
-  sha256 arm:   "8c70b495b72d605317be3cf51b3d40dc5db4310ef7cc9e684f392b072d0bb13d",
-         intel: "81f6c85d0adbb52e88a3679220a1396f2cccfeba489dfa8f7024a6c25cb31a04"
+  version "4.6.6"
+  sha256 arm:   "9bc1d659aeef1b328e5c1bd0aa725141626f99c0f95c971d427ccc2fb134c0c0",
+         intel: "0d66371807107a4dd80cb1367342c97fde08baa650b1699ca11af8a797698bfe"
 
   url "https://github.com/nroduit/Weasis/releases/download/v#{version}/Weasis-#{version}-#{arch}.pkg",
       verified: "github.com/nroduit/Weasis/"
@@ -19,7 +19,6 @@ cask "weasis" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   pkg "Weasis-#{version}-#{arch}.pkg"
 

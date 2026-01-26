@@ -1,6 +1,6 @@
 cask "font-fontawesome" do
-  version "7.0.0"
-  sha256 "4409b8438d3b8382a502e59facc1d4ab5353b788943efaffb566a5682936c3fe"
+  version "7.1.0"
+  sha256 "d9776d5e9983faf5c791b2d2d579c53cc566e17963d13e3a4c01fc43dfa2dfd2"
 
   url "https://github.com/FortAwesome/Font-Awesome/releases/download/#{version}/fontawesome-free-#{version}-desktop.zip",
       verified: "github.com/FortAwesome/Font-Awesome/"

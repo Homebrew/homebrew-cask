@@ -7,7 +7,10 @@ cask "save-hollywood" do
   desc "Screen saver for custom video files"
   homepage "http://s.sudre.free.fr/Software/SaveHollywood/about.html"
 
-  deprecate! date: "2024-11-03", because: :unmaintained
+  # Artifact not available over HTTPS
+  disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
   screen_saver "SaveHollywood.saver"
+
+  # No zap stanza required
 end

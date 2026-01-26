@@ -5,18 +5,17 @@ cask "keet" do
   sha256 arm:   "db417e3639b5b647b9d6991301b1cb6b6ee3706b0aeac03fcb6bca471a6c66d2",
          intel: "6c2b868d93d6c9176a3912aaa391c1fd3d49d3652ab762ccaf82b1931e4309fc"
 
-  url "https://keet.io/downloads/#{version}/Keet-#{arch}.dmg"
+  url "https://static.keet.io/downloads/#{version}/Keet-#{arch}.dmg"
   name "keet"
   desc "Peer-to-peer video and text chat"
   homepage "https://keet.io/"
 
   livecheck do
-    url "https://keet.io/downloads/"
-    regex(/(\d+(?:\.\d+)+)/i)
+    url "https://static.keet.io/downloads/"
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Keet.app"
 

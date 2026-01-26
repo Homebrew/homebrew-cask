@@ -1,9 +1,10 @@
 cask "muteme" do
   arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "_arm64", intel: "_64"
 
-  version "0.24.8"
-  sha256 arm:   "31288e7f8c1b49e2cedd3ed63a3a7ee2c7f7e648f151edc195a08fb4fb6efdb0",
-         intel: "c0b038cf3da93e17019c9969c5a72e2a45525076b5abd537d120e677a9402f90"
+  version "0.25.9"
+  sha256 arm:   "88478758ad1acc37462ccf5850f938874e4f278c08538f3926055cd24565cbc6",
+         intel: "94539f5f799bad108b326f3f917d65f5eb2b587f0a01b7cf890a73a5285ed4df"
 
   url "https://mutemedownloads.s3.us-east-2.amazonaws.com/main/#{version}/MuteMe-Client-#{version}-#{arch}.dmg",
       verified: "mutemedownloads.s3.us-east-2.amazonaws.com/"
@@ -12,14 +13,13 @@ cask "muteme" do
   homepage "https://muteme.com/"
 
   livecheck do
-    url "https://muteme.io/update/osx_#{arch}/0.0.0"
-    strategy :json do |json|
-      json["name"]
-    end
+    url "https://downloads.muteme.com/download/latest/osx#{livecheck_arch}"
+    regex(/v?(\d+(?:\.\d+)+)/i)
+    strategy :header_match
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "MuteMe-Client.app"
 

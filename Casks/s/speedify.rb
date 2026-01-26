@@ -1,6 +1,6 @@
 cask "speedify" do
-  version "15.7.2,3691"
-  sha256 "7ffaae6fda913f6f0857f4d7e3215ce4fe1ef6d256b6f276847f8c3973e0829a"
+  version "16.3.0,4022"
+  sha256 "03b504932b805c7cbbad1edc17659ae027391731bf797db9b1fa13ea22c442f6"
 
   url "https://downloads.speedify.com/Speedify-#{version.csv.first}.#{version.csv.second}.dmg"
   name "Speedify"
@@ -11,8 +11,6 @@ cask "speedify" do
     url "https://downloads.speedify.com/SpeedifyInstaller.dmg"
     strategy :extract_plist
   end
-
-  depends_on macos: ">= :catalina"
 
   app "Speedify.app"
 

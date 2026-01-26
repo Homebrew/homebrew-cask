@@ -1,13 +1,13 @@
 cask "deltachat" do
   arch arm: "arm64", intel: "universal"
 
-  version "2.11.0"
-  sha256 arm:   "49ac82c53abfbe937bcce41dceb3b99d374be3c4479fc5af5cb0aafbf7682c95",
-         intel: "725206e9918b5e1d3bd4fadd69eeaf4814c7220d39dda7b9f124ce3b769c7983"
+  version "2.35.0"
+  sha256 arm:   "0356459747b87f61c38f4731c69a8adcdd14ffe96a30c003036cd7ad64464924",
+         intel: "95f929e1a4c0e77057fc6c015774a7d612e7b8869f09af10b14e2bd7a24dde9d"
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}-#{arch}.dmg"
-  name "DeltaChat"
-  desc "Chat via the e-mail server network"
+  name "Delta Chat"
+  desc "Secure and reliable decentralised instant messenger"
   homepage "https://delta.chat/"
 
   livecheck do
@@ -15,7 +15,7 @@ cask "deltachat" do
     regex(/href=.*?DeltaChat[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "DeltaChat.app"
 

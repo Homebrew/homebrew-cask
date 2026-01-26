@@ -1,5 +1,5 @@
 cask "publish-or-perish" do
-  version "8.18.5091.9307"
+  version "8.19.5300.9483"
   sha256 :no_check
 
   url "https://harzing.com/download/PoP#{version.major}Mac.pkg"
@@ -11,8 +11,6 @@ cask "publish-or-perish" do
     url "https://harzing.com/download/pop#{version.major}mac.txt"
     regex(/Version=(\d+(?:\.\d+)+)/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   pkg "PoP#{version.major}Mac.pkg"
 

@@ -12,8 +12,6 @@ cask "fireworks" do
     regex(/Download\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Fireworks.app"
 
   zap trash: [

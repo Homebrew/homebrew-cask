@@ -16,12 +16,13 @@ cask "heroic" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Heroic.app"
 
   zap trash: [
     "~/Library/Application Support/heroic",
+    "~/Library/Logs/Heroic Games Launcher",
     "~/Library/Logs/heroic",
     "~/Library/Preferences/com.electron.heroic.plist",
     "~/Library/Preferences/com.heroicgameslauncher.hgl.plist",

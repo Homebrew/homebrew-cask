@@ -1,6 +1,6 @@
 cask "winbox" do
-  version "4.0beta29"
-  sha256 "13ad4bc92afee90f773a25a177cdd55aad096e6c4b81b1a841f885441a26677c"
+  version "4.0beta47"
+  sha256 "a2ecb972fd1679e6b4b8617464834b8fb44f9c1c90f903951a49ff4ed5c381f6"
 
   url "https://download.mikrotik.com/routeros/winbox/#{version}/WinBox.dmg"
   name "WinBox"
@@ -12,7 +12,7 @@ cask "winbox" do
     regex(/v?(\d+(?:\.\d+)+(?:beta\d+)?)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "WinBox.app"
 

@@ -15,8 +15,6 @@ cask "holavpn" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "HolaVPN2E.app"
 
   zap trash: [

@@ -1,9 +1,9 @@
 cask "chromedriver@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "140.0.7339.24"
-  sha256 arm:   "4a305a5354e0b33f73307f12d28123ebe7ab44ad32e631a2434f08235789939f",
-         intel: "1b785a93d4dd848942064268428ca186a122d6a64c5aaf7fe2c6c8b1debcb34f"
+  version "145.0.7632.18"
+  sha256 arm:   "a7667b839a16e011d8894b3fbf3573e4c724a78bc3bfd16e313c4f272f906a15",
+         intel: "852727c25dad4a064bd8d1e783732ba413a4bb062e81f761bf2aed011dff9581"
 
   url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip",
       verified: "storage.googleapis.com/chrome-for-testing-public/"
@@ -18,7 +18,7 @@ cask "chromedriver@beta" do
     end
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "chromedriver"
 

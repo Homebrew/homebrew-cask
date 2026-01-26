@@ -12,8 +12,6 @@ cask "tuneinstructor" do
     regex(/href=.*?TuneInstructor[._-]?v?(\d+(?:[.v]\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Tune•Instructor.app"
 
   zap trash: [

@@ -12,8 +12,6 @@ cask "remote-buddy" do
     regex(/Changes\s+in\s+version\s+(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Remote Buddy.app"
 
   zap trash: [

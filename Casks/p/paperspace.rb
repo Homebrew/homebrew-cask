@@ -17,8 +17,6 @@ cask "paperspace" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Paperspace.app"
 
   zap trash: [

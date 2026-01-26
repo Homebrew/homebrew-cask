@@ -1,6 +1,6 @@
 cask "munkiadmin" do
-  version "1.8.1"
-  sha256 "2037b131b298579bc0213578602e219ee43d6054d4ab5d61432b08c38bc15349"
+  version "1.10.1"
+  sha256 "29a4c5ba0ba9cddde9045a78098d7426d1972ff516707af77cd43c3b82b2222f"
 
   url "https://github.com/hjuutilainen/munkiadmin/releases/download/v#{version}/MunkiAdmin-#{version}.dmg",
       verified: "github.com/hjuutilainen/munkiadmin/"
@@ -12,8 +12,6 @@ cask "munkiadmin" do
     url :url
     regex(/^v?(\d+(?:\.\d+)*)$/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "MunkiAdmin.app"
 

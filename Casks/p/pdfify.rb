@@ -12,8 +12,6 @@ cask "pdfify" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "PDFify.app"
 
   zap trash: [

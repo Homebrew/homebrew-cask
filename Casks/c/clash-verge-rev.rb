@@ -1,9 +1,9 @@
 cask "clash-verge-rev" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.4.0"
-  sha256 arm:   "48ecbcb5672abeb75926cd677f8de030fd8e51f0bff0fd5edf80ae350bc302c7",
-         intel: "6e979429a3400ba9cca7a3afa5e9d50c9ea86ccb967d69d9056615d85e0b77a3"
+  version "2.4.5"
+  sha256 arm:   "994c4e1372fcb507642058b377452aa562c707aa3447893f9df34b60ad9ca614",
+         intel: "ba23dd4cca1c3b135801786df909f64a7900590de57db22f556c43f78c7f40e1"
 
   url "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v#{version}/Clash.Verge_#{version}_#{arch}.dmg",
       verified: "github.com/clash-verge-rev/clash-verge-rev/"
@@ -17,7 +17,6 @@ cask "clash-verge-rev" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Clash Verge.app"
 

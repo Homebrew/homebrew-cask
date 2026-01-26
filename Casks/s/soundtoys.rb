@@ -1,6 +1,6 @@
 cask "soundtoys" do
-  version "5.5.3.18786"
-  sha256 "5cc60d0754f4e577b1661c796feb551e623e6b68892df19cbe5f92df4f261822"
+  version "5.5.4.18982"
+  sha256 "e0f4c76ae8dfd48e5fe632e85ada4f9203b25cd3a9cfa356df3cd010b1d48022"
 
   url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/SoundtoysV#{version.major_minor.no_dots}Bundle_#{version}.dmg",
       verified: "storage.googleapis.com/soundtoys-download/versions/"
@@ -18,8 +18,6 @@ cask "soundtoys" do
       end
     end
   end
-
-  depends_on macos: ">= :sierra"
 
   pkg "Install Soundtoys #{version.major_minor} Bundle.pkg"
 

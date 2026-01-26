@@ -11,8 +11,8 @@ cask "netnewswire" do
     end
   end
   on_ventura :or_newer do
-    version "6.1.9"
-    sha256 "c06d7f129b0ad423170d333f5a5345041515aba2144a3d06124a98e40cdffe5b"
+    version "6.2.1"
+    sha256 "16dd22ef68104ac4f885c61c0a6a944bc2cdce6c5b95cb8ab29ee1c894c86729"
 
     url "https://github.com/Ranchero-Software/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip",
         verified: "github.com/Ranchero-Software/NetNewsWire/"
@@ -29,7 +29,6 @@ cask "netnewswire" do
 
   auto_updates true
   conflicts_with cask: "netnewswire@beta"
-  depends_on macos: ">= :catalina"
 
   app "NetNewsWire.app"
 

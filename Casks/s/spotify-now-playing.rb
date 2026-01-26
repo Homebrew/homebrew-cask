@@ -7,6 +7,7 @@ cask "spotify-now-playing" do
   homepage "https://github.com/davicorreiajr/spotify-now-playing"
 
   deprecate! date: "2024-08-25", because: :unmaintained
+  disable! date: "2025-08-26", because: :unmaintained
 
   app "Spotify - now playing.app"
 

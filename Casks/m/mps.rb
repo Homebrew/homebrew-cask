@@ -1,9 +1,9 @@
 cask "mps" do
   arch arm: "macos-aarch64", intel: "macos"
 
-  version "2025.1,251.23774.423"
-  sha256 arm:   "cb2aaa6311252a655ef55f813d3dff78890c2a10cf0aeff885018c316390486b",
-         intel: "1ddae8569c8a96beeb5e85d20f1eed9115ace532a1154b5624f526cb49ddeaa8"
+  version "2025.3,253.28294.432"
+  sha256 arm:   "dc79c41ce851448f4862306173914eee1e63e230410ed65356498efd2d5f0444",
+         intel: "c216008ca905efd9ab9271df9599ef38ecb66cba2c61482e7a56434ae3eddee6"
 
   url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.csv.first}-#{arch}.dmg"
   name "JetBrains MPS"
@@ -24,7 +24,6 @@ cask "mps" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "MPS.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

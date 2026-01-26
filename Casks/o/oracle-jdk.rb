@@ -1,9 +1,9 @@
 cask "oracle-jdk" do
   arch arm: "aarch64", intel: "x64"
 
-  version "24.0.2"
-  sha256 arm:   "5017f5e9938f4c214b5ca9843fe0351a1f90c8db50dd369ede840dabe9ac76d8",
-         intel: "eb5a134fece0fd8ffc396e44bc4efd6eb48f1c2f0812bebaeab02942bc617605"
+  version "25.0.2"
+  sha256 arm:   "b858c8691ff69d5a7c75146333468ed93c8ea32b3fec8d6c11c726b9e651e9b2",
+         intel: "c9b0f03c4da4744d01221fa3ee406db91862c651cf9f8a76fc6f706b1e106628"
 
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
   name "Oracle Java Standard Edition Development Kit"
@@ -16,8 +16,6 @@ cask "oracle-jdk" do
       json["items"]&.filter_map { |item| item["releaseVersion"] }
     end
   end
-
-  depends_on macos: ">= :mojave"
 
   pkg "JDK #{version}.pkg"
 

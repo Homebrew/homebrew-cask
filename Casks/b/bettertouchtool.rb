@@ -1,6 +1,6 @@
 cask "bettertouchtool" do
-  version "5.444,2025052805"
-  sha256 "3221ea74fa2ac66658755f3739ee241ede5237e63860b053d7ff78b785011434"
+  version "6.106,2026012304"
+  sha256 "66f2ba396787adff3b42ccdd6e536f100f34fc2ac9fae7d94031bd82871e2af7"
 
   url "https://folivora.ai/releases/btt#{version.csv.first}-#{version.csv.second}.zip"
   name "BetterTouchTool"
@@ -8,7 +8,7 @@ cask "bettertouchtool" do
   homepage "https://folivora.ai/"
 
   livecheck do
-    url "https://updates.folivora.ai/appcast_macupdater.xml"
+    url "https://updates.folivora.ai/appcast_manual.xml"
     strategy :sparkle
   end
 

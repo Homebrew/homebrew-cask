@@ -12,8 +12,6 @@ cask "vidl" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
-
   app "ViDL.app"
 
   zap trash: [

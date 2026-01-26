@@ -1,6 +1,6 @@
 cask "coderunner" do
-  version "4.4.1"
-  sha256 "588435c4e46bc0cc7423d3127b0dd8777e04b62cd7563af6fea185d456e1e33b"
+  version "4.5"
+  sha256 "d41c09e7d11226c0e0709ad55c04d4500adce9345568f4ef3da6c8e8190e4651"
 
   url "https://coderunnerapp.com/download/update/CodeRunner-#{version}.zip"
   name "CodeRunner"
@@ -13,7 +13,6 @@ cask "coderunner" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "CodeRunner.app"
 

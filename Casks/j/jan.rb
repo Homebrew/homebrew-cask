@@ -1,6 +1,6 @@
 cask "jan" do
-  version "0.6.8"
-  sha256 "c9a5ed6d9095695e8f5750b6a2da41c418c3c6ecfc2e527671dfcc971fe3026e"
+  version "0.7.5"
+  sha256 "5d857763e502284b251d10b2097ca993ec02679a8edf35f146edd2b17f4c1b1f"
 
   url "https://github.com/janhq/jan/releases/download/v#{version}/jan-mac-universal-#{version}.zip",
       verified: "github.com/janhq/jan/"
@@ -14,7 +14,6 @@ cask "jan" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Jan.app"
 

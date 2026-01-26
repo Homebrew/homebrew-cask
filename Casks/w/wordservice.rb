@@ -12,8 +12,6 @@ cask "wordservice" do
     regex(/wordservice.*?(\d+(?:\.\d+)+).*?app/i)
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "WordService.app"
 
   zap trash: "~/Library/Preferences/org.grunenberg.WordService.plist"

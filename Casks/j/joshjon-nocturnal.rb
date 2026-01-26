@@ -8,8 +8,7 @@ cask "joshjon-nocturnal" do
   homepage "https://github.com/joshjon/nocturnal"
 
   deprecate! date: "2024-08-22", because: :discontinued
-
-  depends_on macos: ">= :high_sierra"
+  disable! date: "2025-08-22", because: :discontinued
 
   app "Nocturnal.app"
 

@@ -1,6 +1,6 @@
 cask "macloggerdx" do
-  version "6.57"
-  sha256 "1b7dca698116f3a36e4e4eadb31894a11e81fa81b2d6615e66b33ac18c4f5f64"
+  version "6.59"
+  sha256 "5caed021a5737d4cc809864752880690dbaa9881dd371253416006d6336497ab"
 
   url "https://www.dogparksoftware.com/files/MacLoggerDX#{version.no_dots}.dmg"
   name "MacLoggerDX"
@@ -13,7 +13,6 @@ cask "macloggerdx" do
   end
 
   conflicts_with cask: "macloggerdx@beta"
-  depends_on macos: ">= :high_sierra"
 
   app "MacLoggerDX.app"
 

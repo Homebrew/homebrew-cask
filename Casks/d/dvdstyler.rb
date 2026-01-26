@@ -9,9 +9,11 @@ cask "dvdstyler" do
   homepage "https://www.dvdstyler.org/"
 
   livecheck do
-    url "https://www.dvdstyler.org/en/downloads"
-    regex(/DVDStyler[._-]?(\d+(?:[._]\d+)+)[._-]?MacOSX\.dmg/i)
+    url "https://sourceforge.net/projects/dvdstyler/rss?path=/dvdstyler"
+    regex(%r{url=.*?/DVDStyler[._-]?v?(\d+(?:[._]\d+)+)(?:[._-]?MacOSX?)?\.dmg}i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "DVDStyler.app"
 

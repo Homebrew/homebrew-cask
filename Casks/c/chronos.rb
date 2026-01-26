@@ -1,13 +1,13 @@
 cask "chronos" do
-  version "6.3.0"
-  sha256 "a505965020e15f7a961cf29b5160dddf7f7d4df69dda32e8ed1f8b6b0e47e587"
+  version "6.3.2"
+  sha256 "b1e05936bea014b823b82436dd46c18c7b4c4fc981d71d633159874353441878"
 
   url "https://github.com/web-pal/chronos-timetracker/releases/download/v#{version}/Chronos-#{version}-mac.zip"
   name "Chronos Timetracker"
   desc "Desktop client for JIRA and Trello"
   homepage "https://github.com/web-pal/chronos-timetracker"
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Chronos.app"
 

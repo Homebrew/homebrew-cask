@@ -1,5 +1,5 @@
 cask "website-watchman" do
-  version "3.3.1"
+  version "3.3.2"
   sha256 :no_check
 
   url "https://peacockmedia.software/mac/watchman/watchman.dmg"
@@ -11,8 +11,6 @@ cask "website-watchman" do
     url :homepage
     regex(/Version\s+(\d+(?:\.\d+)+)\s*released/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Website Watchman.app"
 

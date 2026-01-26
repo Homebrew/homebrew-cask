@@ -8,6 +8,7 @@ cask "cryptr" do
   homepage "https://github.com/adobe/cryptr"
 
   deprecate! date: "2024-10-04", because: :unmaintained
+  disable! date: "2025-10-04", because: :unmaintained
 
   app "Cryptr.app"
 

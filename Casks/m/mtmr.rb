@@ -13,7 +13,6 @@ cask "mtmr" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "MTMR.app"
 

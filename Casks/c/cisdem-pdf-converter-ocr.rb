@@ -1,5 +1,5 @@
 cask "cisdem-pdf-converter-ocr" do
-  version "9.5.2"
+  version "9.6.0"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-pdfconverterocr.dmg",
@@ -12,8 +12,6 @@ cask "cisdem-pdf-converter-ocr" do
     url "https://www.cisdem.com/js/notes/pdf-converter-ocr-mac.js"
     regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Cisdem PDF Converter OCR.app"
 

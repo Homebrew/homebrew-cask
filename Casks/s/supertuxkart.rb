@@ -1,8 +1,8 @@
 cask "supertuxkart" do
-  version "1.4"
-  sha256 "21a7fb34132036c5810a8b48527513981d98d09d27d33b15e2f428bdc492c89d"
+  version "1.5"
+  sha256 "c266acdb8a63a3fe30f52652d9b749f5beba4abeb9e54382fbb934b00c53b303"
 
-  url "https://github.com/supertuxkart/stk-code/releases/download/#{version}/SuperTuxKart-#{version}-mac.zip",
+  url "https://github.com/supertuxkart/stk-code/releases/download/#{version}/SuperTuxKart-#{version}-mac-signed.zip",
       verified: "github.com/supertuxkart/stk-code/"
   name "SuperTuxKart"
   desc "Kart racing game"

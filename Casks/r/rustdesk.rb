@@ -1,9 +1,9 @@
 cask "rustdesk" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.4.1"
-  sha256 arm:   "e521e1fc48c08c8bc6627b372e50f161d52d26dabe1a6f5bf053fe47d08e2f7e",
-         intel: "ce8ebb099d98391eadd90c69f09a196eb3b99fcbce58688d02f25a2c3480c8e3"
+  version "1.4.5"
+  sha256 arm:   "e548e194d80ad44f66f7ae33b3d2879a6300201adaa0dbdf6dd2bd3594e3e912",
+         intel: "91fe86bed9a0607906ead4d38bcf5297c83c404643342456738b036f9a6c58d4"
 
   url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-#{arch}.dmg",
       verified: "github.com/rustdesk/rustdesk/"
@@ -17,7 +17,7 @@ cask "rustdesk" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "RustDesk.app"
 

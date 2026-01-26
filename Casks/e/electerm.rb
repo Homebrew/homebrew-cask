@@ -1,9 +1,9 @@
 cask "electerm" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.100.60"
-  sha256 arm:   "e053e0536adc745e98f0db1203dd71c4b8e44548c115b9b07bace43af4ebdd9c",
-         intel: "1af034f0fce9cbea53092ec34417ef5ccdc248ea104525bb1f95461f95170a66"
+  version "2.4.28"
+  sha256 arm:   "ff9e592d509542f2f1f67341f04b7adb0426cb0500cb3f6436bba9cb2d1c6f61",
+         intel: "af14ec5adc9356fb2fd3bbe0e22628dffacb40eaf7af9be9cf906c39d01a7fb2"
 
   url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg",
       verified: "github.com/electerm/electerm/"
@@ -19,7 +19,7 @@ cask "electerm" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "electerm.app"
   binary "#{appdir}/electerm.app/Contents/MacOS/electerm"

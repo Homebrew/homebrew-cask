@@ -7,14 +7,6 @@ cask "suspicious-package@preview" do
   desc "Application for inspecting installer packages"
   homepage "https://www.mothersruin.com/software/SuspiciousPackage/"
 
-  livecheck do
-    url "https://www.mothersruin.com/software/SuspiciousPackage/preview.html"
-    regex(/<td.+class="version">\s*v?(\d+(?:\.\d+)+)\s*Preview\s*\((\d+)\)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
-  end
-
   disable! date: "2025-08-18", because: :discontinued, replacement_cask: "suspicious-package"
 
   conflicts_with cask: "suspicious-package"

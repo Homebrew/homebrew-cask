@@ -16,8 +16,6 @@ cask "sonic-lineup" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Sonic Lineup.app"
 
   zap trash: [

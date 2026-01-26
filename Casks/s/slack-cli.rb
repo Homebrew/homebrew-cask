@@ -1,12 +1,15 @@
 cask "slack-cli" do
-  version "3.6.0"
-  sha256 "a8842a36732a469e03e62d21e9f79ef68aad53a79eaf65679a569b248173815c"
+  arch arm: "arm64", intel: "amd64"
 
-  url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_64-bit.tar.gz",
+  version "3.10.0"
+  sha256 arm:   "f4b322ca33b5c4922969ce95d26124ec255a947a77a6f630af2b1f502c323082",
+         intel: "2ae60a438eaa4e04272bbf98008b8ef876ad9d49e4b41812e675714bf73f569a"
+
+  url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_#{arch}.tar.gz",
       verified: "downloads.slack-edge.com/slack-cli/"
   name "Slack CLI"
   desc "CLI to create, run, and deploy Slack apps"
-  homepage "https://tools.slack.dev/slack-cli/"
+  homepage "https://docs.slack.dev/tools/slack-cli/"
 
   livecheck do
     url "https://api.slack.com/slackcli/metadata.json"
@@ -14,10 +17,6 @@ cask "slack-cli" do
       json.dig("slack-cli", "releases")&.map { |release| release["version"] }
     end
   end
-
-  disable! date: "2026-09-01", because: :unsigned
-
-  depends_on formula: "deno"
 
   binary "bin/slack"
 

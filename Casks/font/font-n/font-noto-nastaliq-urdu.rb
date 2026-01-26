@@ -2,12 +2,12 @@ cask "font-noto-nastaliq-urdu" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoNastaliqUrdu-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notonastaliqurdu/NotoNastaliqUrdu%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Nastaliq Urdu"
-  homepage "https://www.google.com/get/noto/#nastaliq-aran"
+  homepage "https://fonts.google.com/specimen/Noto+Nastaliq+Urdu"
 
-  font "NotoNastaliqUrdu-Regular.ttf"
+  font "NotoNastaliqUrdu[wght].ttf"
 
   # No zap stanza required
 end

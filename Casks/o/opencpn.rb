@@ -1,6 +1,6 @@
 cask "opencpn" do
-  version "5.12.2,-universal+14584.efdcaa63f-14"
-  sha256 "f60be969a0a334f726df849e5a66d1781903489e9e22f63083589ad84d09cb55"
+  version "5.12.4,-universal+15189.37fd0cddb-14"
+  sha256 "9c28432fe4abaff0542bc24969e19ab363de59afd9bb72c8354787931f87d8e8"
 
   url "https://github.com/OpenCPN/OpenCPN/releases/download/Release_#{version.csv.first}/OpenCPN_#{version.csv.first}#{version.csv.second}.pkg",
       verified: "github.com/OpenCPN/OpenCPN/"

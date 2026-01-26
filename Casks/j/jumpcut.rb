@@ -8,8 +8,6 @@ cask "jumpcut" do
   desc "Clipboard manager"
   homepage "https://snark.github.io/jumpcut/"
 
-  depends_on macos: ">= :sierra"
-
   app "Jumpcut.app"
 
   zap trash: "~/Library/Preferences/net.sf.Jumpcut.plist"

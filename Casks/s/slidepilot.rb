@@ -19,7 +19,6 @@ cask "slidepilot" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "SlidePilot.app"
 

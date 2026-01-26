@@ -8,7 +8,8 @@ cask "mplab-xc16" do
   homepage "https://www.microchip.com/mplab/compilers"
 
   livecheck do
-    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc16"
+    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc16",
+        user_agent: :browser
     regex(%r{href=.*?ProductDocuments/SoftwareTools/xc16[._-]v?(\d+(?:\.\d+)+)-full-install-osx64-installer\.dmg}i)
   end
 

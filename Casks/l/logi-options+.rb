@@ -1,6 +1,4 @@
 cask "logi-options+" do
-  app_path = "logioptionsplus_installer.app"
-
   on_catalina do
     version "1.44.415778"
     sha256 "c38b38aada01a296d32dcebb61200b53977e876089b8502b7f8453d1efa3a3f6"
@@ -23,16 +21,26 @@ cask "logi-options+" do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
-    app_path = "Logi Options+ Installer.app"
+  on_monterey do
     version "1.93.755983"
+    sha256 "297ead81044da4876fe6b1830f39b38769d5f1bca8b7dae8c1768ea42909f482"
+
+    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip",
+        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_ventura :or_newer do
+    version "1.98.824948"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
         verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
 
     livecheck do
-      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus3/osx/public/update.json"
+      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus4/osx/public/update.json"
       strategy :json do |json|
         json["version"]
       end
@@ -44,11 +52,13 @@ cask "logi-options+" do
   homepage "https://www.logitech.com/en-us/software/logi-options-plus.html"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+
+  # The installer path can be inconsistent between versions/systems without notice
+  rename "Logi Options+ Installer.app", "logioptionsplus_installer.app"
 
   # see https://prosupport.logi.com/hc/en-us/articles/6046882446359
   installer script: {
-    executable: "#{app_path}/Contents/MacOS/logioptionsplus_installer",
+    executable: "logioptionsplus_installer.app/Contents/MacOS/logioptionsplus_installer",
     args:       ["--quiet"],
     sudo:       true,
   }
@@ -58,6 +68,7 @@ cask "logi-options+" do
               "com.logi.optionsplus",
               "com.logi.optionsplus.updater",
               "com.logitech.LogiRightSight",
+              "com.logitech.LogiRightSight.Agent",
             ],
             quit:      [
               "com.logi.cp-dev-mgr",

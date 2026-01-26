@@ -1,5 +1,5 @@
 cask "rodecaster" do
-  version "2.0.98"
+  version "2.0.105"
   sha256 :no_check
 
   url "https://update.rode.com/rc-app/RODECaster_App_MACOS.zip"
@@ -13,10 +13,6 @@ cask "rodecaster" do
       json.dig("rc-app-manifest", "macos", "main-version", "update-version")
     end
   end
-
-  disable! date: "2026-09-01", because: :unsigned
-
-  depends_on macos: ">= :catalina"
 
   pkg "RØDECaster App.pkg"
 

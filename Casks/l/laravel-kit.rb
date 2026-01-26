@@ -11,7 +11,7 @@ cask "laravel-kit" do
   desc "Desktop Laravel admin panel app"
   homepage "https://tmdh.github.io/laravel-kit"
 
-  depends_on macos: ">= :high_sierra"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Laravel Kit.app"
 

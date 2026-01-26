@@ -12,8 +12,6 @@ cask "navicat-data-modeler" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Navicat Data Modeler.app"
 
   zap trash: [

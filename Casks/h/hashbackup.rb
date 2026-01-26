@@ -1,16 +1,18 @@
 cask "hashbackup" do
-  version "3296"
+  version "3325"
   sha256 :no_check
 
   url "https://www.hashbackup.com/download/hb-mac-64bit.tar.gz"
   name "HashBackup"
   desc "Command-line backup program"
-  homepage "https://www.hashbackup.com/hashbackup/index.html"
+  homepage "https://www.hashbackup.com/hashbackup/"
 
   livecheck do
-    url "http://upgrade.hashbackup.com/release/latest.txt"
-    regex(/^(\d+)$/i)
+    url "https://www.hashbackup.com/hashbackup/releases.html"
+    regex(/id=["']?_?(\d+)/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "hb"
 

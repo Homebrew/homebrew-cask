@@ -1,5 +1,5 @@
 cask "tal-drum" do
-  version "2.8.2"
+  version "2.9.4"
   sha256 :no_check
 
   url "https://tal-software.com/downloads/plugins/TAL-Drum-installer_macos.zip"
@@ -11,8 +11,6 @@ cask "tal-drum" do
     url "https://api.tal-software.com/api/page/byUrl/*products*tal-drum"
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
-
-  depends_on macos: ">= :el_capitan"
 
   pkg "TAL-Drum-installer.pkg"
 

@@ -8,8 +8,7 @@ cask "trojanx" do
   homepage "https://github.com/JimLee1996/TrojanX"
 
   deprecate! date: "2024-08-30", because: :unmaintained
-
-  depends_on macos: ">= :el_capitan"
+  disable! date: "2025-08-30", because: :unmaintained
 
   app "TrojanX.app"
 

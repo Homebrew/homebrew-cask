@@ -1,6 +1,6 @@
 cask "element" do
-  version "1.11.109"
-  sha256 "230666cb4d5c5a8988f9e60b8334f272f71a47c425ffb27154b61139071fb42b"
+  version "1.12.8"
+  sha256 "de21d4c54e9a24355b5fd0536af3084b07e488081e1c8c89487082bae3001017"
 
   url "https://packages.element.io/desktop/update/macos/Element-#{version}-universal-mac.zip"
   name "Element"
@@ -17,7 +17,7 @@ cask "element" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Element.app"
 

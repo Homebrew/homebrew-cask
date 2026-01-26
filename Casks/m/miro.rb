@@ -1,7 +1,7 @@
 cask "miro" do
   arch arm: "darwin-arm64", intel: "darwin"
 
-  version "0.11.112"
+  version "0.11.125"
   sha256 :no_check
 
   url "https://desktop.miro.com/platforms/#{arch}/Install-Miro.dmg"
@@ -16,7 +16,7 @@ cask "miro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Miro.app"
 

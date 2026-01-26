@@ -1,6 +1,6 @@
 cask "taskbar" do
-  version "1.4.6,2025,08"
-  sha256 "f24fda4ad63d5698cd7c8ce5985febaa6267bac8f6aad7b0f059ecdc931ba19c"
+  version "1.5.2.1,2025,11"
+  sha256 "c46f7b0e9e43b113a2af40cfc57636e9876d2317b26f0d95265305029894e99d"
 
   url "https://lawand.io/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/taskbar-#{version.csv.first}.zip"
   name "Taskbar"
@@ -19,7 +19,6 @@ cask "taskbar" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Taskbar.app"
 

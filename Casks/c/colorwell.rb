@@ -1,5 +1,5 @@
 cask "colorwell" do
-  version "7.8"
+  version "8.1.3"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/colorwell/ColorWell.dmg"
@@ -13,7 +13,7 @@ cask "colorwell" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "ColorWell.app"
 

@@ -5,7 +5,7 @@ cask "font-firago" do
   url "https://github.com/bBoxType/FiraGO/archive/refs/tags/#{version}.tar.gz",
       verified: "github.com/bBoxType/FiraGO/"
   name "FiraGO"
-  homepage "https://bboxtype.com/typefaces/FiraGO/"
+  homepage "https://carrois.com/typefaces/FiraGO/"
 
   font "FiraGO-#{version}/Fonts/FiraGO_OTF/Italic/FiraGO-BoldItalic.otf"
   font "FiraGO-#{version}/Fonts/FiraGO_OTF/Italic/FiraGO-BookItalic.otf"

@@ -13,8 +13,6 @@ cask "marvel" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
-
   app "Marvel.app"
 
   zap trash: "~/Library/Caches/com.marvelprototyping.marvelmacos"

@@ -17,8 +17,6 @@ cask "cloudcompare" do
     regex(/href=.*CloudCompare[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
-
   app "CloudCompare.app"
 
   zap trash: "~/Library/Preferences/com.cccorp.CloudCompare.plist"

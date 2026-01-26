@@ -1,5 +1,5 @@
 cask "xliff-editor" do
-  version "2.16"
+  version "3.3.1"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/xliffeditor/XliffEditor.dmg",

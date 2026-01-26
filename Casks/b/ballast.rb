@@ -8,6 +8,8 @@ cask "ballast" do
   desc "Status Bar app to keep the audio balance from drifting"
   homepage "https://jamsinclair.nz/ballast"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :monterey"
 
   app "ballast.app"

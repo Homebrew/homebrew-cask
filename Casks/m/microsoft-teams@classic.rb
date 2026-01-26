@@ -13,7 +13,6 @@ cask "microsoft-teams@classic" do
 
   auto_updates true
   conflicts_with cask: "microsoft-office-businesspro"
-  depends_on macos: ">= :el_capitan"
 
   pkg "Teams_osx.pkg"
 

@@ -12,8 +12,6 @@ cask "licensed-app" do
     regex(%r{>\s*Version\s*v?(\d+(?:\.\d+)+)[^<]*</}i)
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Licensed.app"
 
   zap trash: [

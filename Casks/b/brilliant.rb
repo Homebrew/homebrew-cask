@@ -1,18 +1,15 @@
 cask "brilliant" do
-  version "1.8.8"
-  sha256 "0d6397ef0a6dfde5fcb0fff23644284114095d1bc8aa68b4ea8420d3008ea071"
+  version "1.8.9"
+  sha256 "e801b856964c38462739be98986eeb03c2954bb633c5d40415d5baf40f48e631"
 
   url "https://s3.eu-north-1.amazonaws.com/brilliant.design/Brilliant.Design-#{version}-Installer.dmg",
       verified: "s3.eu-north-1.amazonaws.com/brilliant.design/"
   name "Brilliant"
   desc "Design and communication tool"
-  homepage "https://brilliant.design/"
+  homepage "https://try-brilliant.com/"
 
   livecheck do
-    url "https://brilliant.design/api/versions/info"
-    strategy :json do |json|
-      json.dig("latest", "version")
-    end
+    skip "No version information available"
   end
 
   auto_updates true

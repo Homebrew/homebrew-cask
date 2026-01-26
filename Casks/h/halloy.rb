@@ -1,6 +1,6 @@
 cask "halloy" do
-  version "2025.8"
-  sha256 "6fe503ed47270864c04275c22112fc6606179eb107b2899a9b6127ba3eb38c36"
+  version "2026.1.1"
+  sha256 "e64f385f5288c0d05a2d344cc437398c05deb3f1c370e942c5db08671ed0bf24"
 
   url "https://github.com/squidowl/halloy/releases/download/#{version}/halloy.dmg",
       verified: "github.com/squidowl/halloy/"

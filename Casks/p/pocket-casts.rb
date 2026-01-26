@@ -1,6 +1,6 @@
 cask "pocket-casts" do
-  version "2.0.15"
-  sha256 "c654cccc251e5989a0fab7984cc4a506739174a182f72dc9bc0093a1c393293d"
+  version "2.0.16"
+  sha256 "65ecb6d6cec19a3a54b7ab368e9c9c7d222ed37368ee4e779f102be727d46460"
 
   url "https://cdn.a8c-ci.services/pocket-casts-desktop/pocket-casts-desktop-darwin-universal-v#{version}.dmg",
       verified: "cdn.a8c-ci.services/pocket-casts-desktop/"
@@ -9,12 +9,13 @@ cask "pocket-casts" do
   homepage "https://play.pocketcasts.com/"
 
   livecheck do
-    url "https://pocketcasts.com/get/mac"
+    url "https://pocketcasts.com/get/mac",
+        user_agent: :browser
     strategy :header_match
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Pocket Casts.app"
 

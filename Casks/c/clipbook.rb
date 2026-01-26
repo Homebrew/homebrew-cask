@@ -1,9 +1,9 @@
 cask "clipbook" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.29.1"
-  sha256 arm:   "f4945f8b4c26f95f1c3a630ac72102f3343ab68267ba830ce21fbaf801e977e2",
-         intel: "ad3d005ee6d743f1ea7501be8445f0f112327b65f9168cc57e246e124b8ea51d"
+  version "1.33.0"
+  sha256 arm:   "b8ddec4532924178ce5bce8fa01d7582725d8b642679b8951f59f3607b1d8fbb",
+         intel: "d57a454a9222529690f2e2990f89d9e137f41c1e8739c9f4da8e79a52926951f"
 
   url "https://f005.backblazeb2.com/file/clipbook/ClipBook-#{version}-#{arch}.dmg",
       verified: "f005.backblazeb2.com/file/clipbook/"
@@ -16,7 +16,7 @@ cask "clipbook" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   app "ClipBook.app"
 

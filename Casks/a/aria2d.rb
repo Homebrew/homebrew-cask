@@ -1,8 +1,8 @@
 cask "aria2d" do
-  version "1.3.9,433"
-  sha256 "efa4be7b0c0d47c814e8d8f8d392d760dd5a02ba46829136f8a6404dffc2bf6f"
+  version "1.4.0,460"
+  sha256 "7da3482c6d4165d52669f68721f22ea3706b6179a1b175e6c5a706f0d00c47fd"
 
-  url "https://github.com/xjbeta/Aria2D/releases/download/#{version.csv.first}%28#{version.csv.second}%29/Aria2D.#{version.csv.first}.dmg"
+  url "https://github.com/xjbeta/Aria2D/releases/download/#{version.csv.first}%28#{version.csv.second}%29/Aria2D.zip"
   name "Aria2D"
   desc "Aria2 GUI"
   homepage "https://github.com/xjbeta/Aria2D"
@@ -14,7 +14,9 @@ cask "aria2d" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "Aria2D.app"
 

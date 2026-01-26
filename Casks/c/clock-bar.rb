@@ -21,7 +21,7 @@ cask "clock-bar" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Clock Bar.app"
 

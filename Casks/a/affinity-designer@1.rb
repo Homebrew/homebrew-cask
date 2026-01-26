@@ -8,10 +8,7 @@ cask "affinity-designer@1" do
   desc "Professional graphic design software"
   homepage "https://affinity.serif.com/en-us/designer/"
 
-  livecheck do
-    url "https://go.seriflabs.com/affinity-update-mac-retail-designer"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2025-10-30", because: :discontinued
 
   auto_updates true
 

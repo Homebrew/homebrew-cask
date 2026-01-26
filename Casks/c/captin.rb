@@ -6,14 +6,11 @@ cask "captin" do
       verified: "raw.githubusercontent.com/cool8jay/public/master/captin/"
   name "Captin"
   desc "Tool to show caps lock status"
-  homepage "https://captin.mystrikingly.com/"
+  # https://captin.mystrikingly.com/ got redirected to some phishing site
+  homepage "https://github.com/cool8jay/public"
 
-  livecheck do
-    url "https://raw.githubusercontent.com/cool8jay/public/master/captin/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
-
-  depends_on macos: ">= :high_sierra"
+  deprecate! date: "2025-11-30", because: :discontinued
+  disable! date: "2026-11-30", because: :discontinued
 
   app "Captin.app"
 

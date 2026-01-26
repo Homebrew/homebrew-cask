@@ -1,12 +1,12 @@
 cask "tableau-reader" do
   arch arm: "-arm64"
 
-  version "2025.2.1"
-  sha256 arm:   "eb86ea76a20a810ccb70080fd53114414ebecf067521130f6db58f6fd5186c08",
-         intel: "b85e5acc0086248d6c14bdf866ce0bbb910a9e128ec5231c09e31106dbd0bfe7"
+  version "2025.3.1"
+  sha256 arm:   "1e11f047913c2878ec01f44d965eab19566574e159889726b31c9b89654f199c",
+         intel: "b19252c05a4087f502106a530d4bf112b2a2cdea598493671133dbac2bb0d878"
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauReader-#{version.dots_to_hyphens}#{arch}.pkg",
-      user_agent: "curl/8.7.1"
+      user_agent: :curl
   name "Tableau Reader"
   desc "Open and interact with data visualisations built in Tableau Desktop"
   homepage "https://www.tableau.com/products/reader"

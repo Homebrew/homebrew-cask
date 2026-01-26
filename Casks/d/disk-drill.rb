@@ -1,5 +1,5 @@
 cask "disk-drill" do
-  version "6.0.2020"
+  version "6.1.2111"
   sha256 :no_check
 
   url "https://dl.cleverfiles.com/diskdrill.dmg"
@@ -13,7 +13,6 @@ cask "disk-drill" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Disk Drill.app"
 

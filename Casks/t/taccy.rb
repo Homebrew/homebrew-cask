@@ -23,8 +23,6 @@ cask "taccy" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "#{token}#{version.csv.first.no_dots}/Taccy.app"
 
   zap trash: [

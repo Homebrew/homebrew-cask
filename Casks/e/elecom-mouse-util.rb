@@ -1,6 +1,6 @@
 cask "elecom-mouse-util" do
-  version "6.1.1"
-  sha256 "7b50ae496ad7d345a2125357dd9fa19ea8074c5b3fef976553322b6987615891"
+  version "6.1.5"
+  sha256 "0082853137027bc901088a4e0ca02debeea70d758520ff15944ba888826e12df"
 
   url "https://dl.elecom.co.jp/support/download/peripheral/mouse/assistant/mac/ELECOM_MA_Setup_#{version}.zip"
   name "ELECOM Mouse Assistant"
@@ -26,7 +26,17 @@ cask "elecom-mouse-util" do
               "jp.co.ELECOM.MouseAssistant",
             ]
 
-  # No zap stanza required
+  zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.co.elecom.mouseassistantui.sfl*",
+        "~/Library/Application Support/elecom_mouse_assistant_ui",
+        "~/Library/Application Support/jp.co.ELECOM/MouseAssistant",
+        "~/Library/Caches/jp.co.ELECOM/MouseAssistant",
+        "~/Library/Preferences/jp.co.elecom.MouseAssistantUi.plist",
+      ],
+      rmdir: [
+        "~/Library/Application Support/jp.co.ELECOM",
+        "~/Library/Caches/jp.co.ELECOM",
+      ]
 
   caveats do
     reboot

@@ -1,6 +1,6 @@
 cask "touchosc" do
-  version "1.4.4,236"
-  sha256 "8e297d32edc7a99b36e3ea29b1bed476f9c9a2563170d3f479c8f2639ad2ac6b"
+  version "1.4.7,243"
+  sha256 "6748e1f7d635b737464fd3292a65a352f2a585831e43df1e9b0e812fda315a50"
 
   url "https://hexler.net/pub/touchosc/touchosc-#{version.csv.first}.#{version.csv.second}-macos.dmg"
   name "touchosc"
@@ -13,7 +13,6 @@ cask "touchosc" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "TouchOSC.app"
 

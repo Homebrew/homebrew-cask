@@ -1,6 +1,6 @@
 cask "clipgrab" do
-  version "3.9.10"
-  sha256 "13bf212540cd2ed89299f40f70505c9d1209752500e63ded1967aedd266f32f4"
+  version "3.9.16"
+  sha256 "cb0b5b47ac8c3de64487994bd03519cd5f99a63221100ac97370138802e5dd2c"
 
   url "https://download.clipgrab.org/ClipGrab-#{version}.dmg"
   name "ClipGrab"
@@ -11,8 +11,6 @@ cask "clipgrab" do
     url :homepage
     regex(/href=.*?ClipGrab[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
-
-  depends_on macos: ">= :sierra"
 
   app "ClipGrab.app"
 

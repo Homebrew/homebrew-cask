@@ -7,6 +7,8 @@ cask "qlnetcdf" do
   desc "Quick Look plugin for viewing NetCDF files"
   homepage "https://github.com/tobeycarman/QLNetcdf/"
 
+  deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
+
   qlplugin "QLNetcdf.qlgenerator"
 
   # No zap stanza required

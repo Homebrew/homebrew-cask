@@ -13,8 +13,6 @@ cask "fuwari" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Fuwari v#{version}/Fuwari.app"
 
   uninstall quit: "com.appknop.Fuwari"

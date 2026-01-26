@@ -8,6 +8,7 @@ cask "gmvault" do
   homepage "http://gmvault.org/"
 
   deprecate! date: "2024-11-02", because: :unmaintained
+  disable! date: "2025-11-02", because: :unmaintained
 
   binary "gmvault-v#{version}/gmvault"
 

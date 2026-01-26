@@ -12,8 +12,6 @@ cask "dropshelf" do
     regex(/href=.*?dropshelf[._-]build[._-](\d+)\.zip/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Dropshelf.app"
 
   zap trash: [

@@ -3,9 +3,9 @@ cask "start" do
   folder_arch = on_arch_conditional arm: "m1/"
   livecheck_arch = on_arch_conditional arm: "-arm"
 
-  version "0.301.21019"
-  sha256 arm:   "70aa53e2093500e8cc6bdae15fc55d0996ed4fd327ccfb1caaa0e96e85222833",
-         intel: "affe785e65228f1816207999e62b0671996f8c8c8952e35d21517a1b9de767ee"
+  version "0.301.22224"
+  sha256 arm:   "7f7b0fff50840076cbdab99e75d21700f78943265060a4edea56c7d97e96ec41",
+         intel: "e71d90b54de4712cbd4426362054f048fdbefc6a28ae0c1becc57a2d4f168915"
 
   url "https://imgcdn.start.qq.com/cdn/mac.client/installer/#{folder_arch}START-Installer-#{arch}-#{version}.dmg"
   name "START"
@@ -25,7 +25,6 @@ cask "start" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "START.app"
 

@@ -1,6 +1,6 @@
 cask "vamiga" do
-  version "4.3"
-  sha256 "0191fa3a7b0510552182c8a37197a324d2c759b128e2e94fbba8f773486087fd"
+  version "4.3.2"
+  sha256 "ed7bee36c04b254741becc44287b34395f07304aa881d4f82e58f0be385de8cc"
 
   url "https://github.com/dirkwhoffmann/vAmiga/releases/download/v#{version}/vAmiga.app.zip",
       verified: "github.com/dirkwhoffmann/vAmiga/"
@@ -12,8 +12,6 @@ cask "vamiga" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :unsigned
 
   depends_on macos: ">= :ventura"
 

@@ -17,8 +17,6 @@ cask "touch-portal" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "TouchPortal.app"
 
   uninstall pkgutil: "org.eclipse.jdt.internal.jarinjarloader"

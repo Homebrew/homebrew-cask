@@ -1,9 +1,9 @@
 cask "nucleo" do
   arch arm: "-silicon"
 
-  version "4.1.7"
-  sha256 arm:   "c23e3754c87d6e1943ed935177e52b05be607b3b9e93368d8a72f06931b4ca1b",
-         intel: "05363f46795951986c070cedbcc14a21fa8260e5ce0332cef9362cd0888452d7"
+  version "4.1.8"
+  sha256 arm:   "90c61c386935dc271fe8c9cf73437f43f9a835c1e71d433a6b94f3301d04bc9f",
+         intel: "1f0599a2ad63808a7a93971929909f56f1ea3a0e1f57e844a6386283a08cf697"
 
   url "https://nucleo-app-releases.s3.amazonaws.com/mac#{arch}/Nucleo_#{version}.zip",
       verified: "nucleo-app-releases.s3.amazonaws.com/"
@@ -15,8 +15,6 @@ cask "nucleo" do
     url "https://nucleoapp.com/updates"
     regex(/href=.*?Nucleo[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
-
-  depends_on macos: ">= :catalina"
 
   app "Nucleo.app"
 

@@ -1,5 +1,5 @@
 cask "plus42-decimal" do
-  version "1.3.10"
+  version "1.3.13"
   sha256 :no_check
 
   url "https://thomasokken.com/plus42/download/Plus42Mac.zip"
@@ -11,8 +11,6 @@ cask "plus42-decimal" do
     url "https://thomasokken.com/plus42/history.html"
     regex(/:\s*release\s*(\d+(?:\.\d+)+[a-z]?)\s*(?:$|\([^\n)]*MacOS)/i)
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Plus42 Decimal.app"
 

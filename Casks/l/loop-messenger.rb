@@ -1,9 +1,9 @@
 cask "loop-messenger" do
   arch arm: "m1", intel: "x64"
 
-  version "5.12.0"
-  sha256 arm:   "25f5181f34aed32aa06f85cfb32745af1cd092f70bee3233f2536b968bd39f9c",
-         intel: "a31409019f85a96191688efe3e032446b600e4b9db05c18bc2178ff38bee54ce"
+  version "5.13.0"
+  sha256 arm:   "c1756453102fa0d214894a5458babd3f56b9f41bb73da40b10133d6be3bfe88e",
+         intel: "c63a87cd734fb49e4851d79f2be94f4c78d6bf5f64307c5938d1ad7101a6a7d1"
 
   url "https://artifacts.wilix.dev/repository/loop-files/loop-#{version.major_minor}/loop-desktop-#{version}-mac-#{arch}.dmg",
       verified: "artifacts.wilix.dev/"
@@ -16,7 +16,7 @@ cask "loop-messenger" do
     regex(/loop[._-]desktop[._-]v?(\d+(?:\.\d+)+).+?\.dmg/i)
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "LOOP.app"
 

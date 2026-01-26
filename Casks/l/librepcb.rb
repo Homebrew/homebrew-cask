@@ -15,6 +15,8 @@ cask "librepcb" do
     regex(%r{href=.*?/librepcb[._-]v?(\d+(?:\.\d+)+)-mac-#{arch}\.dmg}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "librepcb.app"
 
   zap trash: [

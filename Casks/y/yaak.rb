@@ -1,9 +1,9 @@
 cask "yaak" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2025.5.6"
-  sha256 arm:   "1143bbb00565eaf021f4a41b31be8bda97fe8f3be60743ef9c72e313ce5f99b7",
-         intel: "017f41381ba5dbb9668e2a25645a92c319e7ea5a5141cc0e036a0e64d0cd19ee"
+  version "2026.1.0"
+  sha256 arm:   "f17a0b3a762668f5b5035a6c2c487b484becd16795d3f43e97d39039451c450b",
+         intel: "94e8d81395c519f243eb97f081db657cd2703eb294e477e8abbb38a639a45d14"
 
   url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
       verified: "github.com/mountain-loop/yaak/"
@@ -12,7 +12,7 @@ cask "yaak" do
   homepage "https://yaak.app/"
 
   livecheck do
-    url "https://update.yaak.app/check/darwin/#{arch}/0"
+    url "https://update.yaak.app/check/darwin/#{arch}/#{version}"
     strategy :json do |json|
       json["version"]
     end

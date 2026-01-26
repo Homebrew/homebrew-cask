@@ -1,6 +1,6 @@
 cask "elgato-camera-hub" do
-  version "2.1.1.6518"
-  sha256 "1e31c588b043194f9004fc52e40e6eec172fb1988da59ec9fe57b32bda0a7721"
+  version "2.2.1.6945"
+  sha256 "1d87d17ba63ba3334a1f728b13307a9c80734147733e1186284eab52d553d84f"
 
   url "https://edge.elgato.com/egc/macos/echm/#{version.major_minor_patch}/CameraHub_#{version}.pkg"
   name "Elgato Camera Hub"
@@ -19,12 +19,14 @@ cask "elgato-camera-hub" do
   pkg "CameraHub_#{version}.pkg"
 
   uninstall launchctl: [
+              "com.displaylink.loginscreen",
               "com.displaylink.XpcService",
               "com.elgato.CameraHub",
             ],
             quit:      "com.displaylink.DisplayLinkUserAgent",
             signal:    ["TERM", "com.elgato.CameraHub"],
             pkgutil:   [
+              "com.displaylink.displaylinkloginscreenext",
               "com.displaylink.displaylinkmanagerapp",
               "com.elgato.CameraHub.Installer",
             ],

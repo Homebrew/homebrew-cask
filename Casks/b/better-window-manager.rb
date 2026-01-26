@@ -8,6 +8,7 @@ cask "better-window-manager" do
   homepage "http://www.gngrwzrd.com/better-window-manager/"
 
   deprecate! date: "2024-10-12", because: :unmaintained
+  disable! date: "2025-10-12", because: :unmaintained
 
   app "Better Window Manager.app"
 

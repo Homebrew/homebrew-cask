@@ -1,9 +1,9 @@
 cask "oso-cloud" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.33.0"
-  sha256 arm:   "88191d7528662f7b127e0a36a1c1d4c54d9648ddfcbc5fa9be921d86e0ca5cbb",
-         intel: "3405e85c81015c8b6e91a082ba57119202775540b7be9b714db2335181e4779d"
+  version "0.35.0"
+  sha256 arm:   "52cd1e19cd5672a1db1a3ae6f1410085f8a91ebb2a4ef70a44550ddf0039ccd5",
+         intel: "e2f9ff6fad2942c2ba7cd696c54a21bdb1c64d3e5b7b7d746713cb4a03c44394"
 
   url "https://d3i4cc4dqewpo9.cloudfront.net/#{version}/oso_cli_mac_osx_#{arch}",
       verified: "d3i4cc4dqewpo9.cloudfront.net/"
@@ -16,7 +16,7 @@ cask "oso-cloud" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "oso_cli_mac_osx_#{arch}", target: "oso-cloud"
 

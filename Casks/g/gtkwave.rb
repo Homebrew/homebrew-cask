@@ -8,6 +8,7 @@ cask "gtkwave" do
   homepage "https://gtkwave.sourceforge.net/"
 
   deprecate! date: "2024-10-29", because: :discontinued
+  disable! date: "2025-10-29", because: :discontinued
 
   app "gtkwave.app"
   binary "#{appdir}/gtkwave.app/Contents/Resources/bin/gtkwave", target: "gtkwave"

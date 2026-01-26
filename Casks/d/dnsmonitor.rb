@@ -8,8 +8,6 @@ cask "dnsmonitor" do
   desc "Monitor DNS activity"
   homepage "https://objective-see.org/products/utilities.html#DNSMonitor"
 
-  depends_on macos: ">= :catalina"
-
   app "DNSMonitor.app"
 
   postflight do

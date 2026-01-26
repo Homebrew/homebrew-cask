@@ -1,46 +1,47 @@
 cask "openzfs" do
-  version "2.3.0"
+  version "2.3.1"
 
-  on_mojave :or_older do
-    arch intel: "MAVERICKS-10.9"
-
-    sha256 "d45facdaaa80d2b79df309598027f0b48df65c560daf88f0883cebfe9fd9ea6c"
-  end
-  on_catalina do
+  on_catalina :or_older do
     arch intel: "Catalina-10.15"
 
-    sha256 "517f8348b7fedc45191c792bb67c6c07dca2ab1aeababa124ddea15b4600d7d7"
+    sha256 "2732ba22aee62a17f6849c106969b1d09408a64826243dabcf8e5c6a5da99388"
   end
   on_big_sur do
     arch intel: "Big.Sur-11"
 
-    sha256 "95b507418394db9979f8214112f40308fc8244fa1808aea7a26b523da96aa1b9"
+    sha256 "d21e78cdec4974bf1ac783fc780c782caf6a4bd37ad2307f0fa65f9a57b22fc1"
 
     depends_on arch: :x86_64
   end
   on_monterey do
     arch arm: "Monterey-12-arm64", intel: "Monterey-12"
 
-    sha256 arm:   "80d3b2280feecb56692630866d278201180cb0ec2544afb8f5149d1b8c137727",
-           intel: "cdf9533881bdd2da36966387cdb9ee0aada8fcca4dd3d89d8f4a313e4e5f184a"
+    sha256 arm:   "46263c8eb0e815046d198e5f83bf5872ae0547f239497c02f2017666d93c3ea8",
+           intel: "00ce848c2d79015a3e1b5f48096625dd77af09b5059a2d8bfde3e71d304f905d"
   end
   on_ventura do
     arch arm: "Ventura-13-arm64", intel: "Ventura-13"
 
-    sha256 arm:   "0f30a430636d73ea8e403dfa06fcf5fc58453076f390fec8d6f53fbc8c99c3cb",
-           intel: "452ee298a821a377cf2d8af01a3b446ba39afab2ec05c5f27c286ad8d9e1c6ab"
+    sha256 arm:   "dc56d95c7875659ba32396bd7406ced5895c9f9959c8fc77a6ee2e6157207f8d",
+           intel: "e05f14f7c02512da10d0115e0e0712ac2cabbb5f0c3924831ae13af35abaf42b"
   end
   on_sonoma do
     arch arm: "Sonoma-14-arm64", intel: "Sonoma-14"
 
-    sha256 arm:   "01b762d369bdc26ad1e5d2b4c398acf82eefee153b611e5ab9f7686389d11d4b",
-           intel: "eeb480aa4f05908aa150a759554da1de118e709faf117448bcc310a6f34defc5"
+    sha256 arm:   "67c54fdc06fd25e9dbaa50bb82a8398260705535a5a105961ede948e594455e8",
+           intel: "2ecf3d60288e1394031450da8bef6745839ff8ea557f8c834ba5fdc2cc658bbe"
   end
-  on_sequoia :or_newer do
+  on_sequoia do
     arch arm: "Sequoia-15-arm64", intel: "Sequoia-15"
 
-    sha256 arm:   "4d634c845e5b469f0dee4186e89e40dc659f14daa46c493323b46f78ab45d78b",
-           intel: "0de75e00932199d04187dc4e09d3b84218c957974dd3ecb837f7967340f4c90d"
+    sha256 arm:   "33696809cf79cbce5917f37f5688141b73864225dce70cd4c56e0b56f01529b6",
+           intel: "8b25a116a89b021d25839af1f9a4e1ffc240c44aa0ec000d265a3f43d50d2086"
+  end
+  on_tahoe :or_newer do
+    arch arm: "Tahoe.26-26-arm64", intel: "Tahoe.26-26"
+
+    sha256 arm:   "ad5927077e15999ea37f134069267de9609b39768c28b2ff400219dac74382a2",
+           intel: "f6a8910eb450b04a9b8f46fb190f2f5cc1a79e2198cf6533491b64b54500afd0"
   end
 
   url "https://github.com/openzfsonosx/openzfs-fork/releases/download/zfs-macOS-#{version}/OpenZFSonOsX-#{version}-#{arch}.pkg",

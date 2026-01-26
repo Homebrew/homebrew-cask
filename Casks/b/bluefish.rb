@@ -1,6 +1,6 @@
 cask "bluefish" do
-  version "2.2.16"
-  sha256 "63fe6f486d56021112527124b0bfc36677ef1dd1f005b081116fe435270f4ebc"
+  version "2.2.19"
+  sha256 "21eecb9232ca838113259749d2db35f6dc333a32f61324cdbd0feff5b34b05d6"
 
   url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/Bluefish-#{version}.dmg",
       verified: "bennewitz.com/"
@@ -12,6 +12,8 @@ cask "bluefish" do
     url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/"
     regex(/href=.*?Bluefish[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Bluefish.app"
 

@@ -24,8 +24,6 @@ cask "getoutline" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Outline.app"
 
   zap trash: [

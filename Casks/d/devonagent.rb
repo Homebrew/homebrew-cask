@@ -25,7 +25,6 @@ cask "devonagent" do
   homepage "https://www.devontechnologies.com/apps/devonagent"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "DEVONagent.app"
 
@@ -36,7 +35,6 @@ cask "devonagent" do
     "~/Library/Caches/DEVONagent",
     "~/Library/Caches/TemporaryItems/DEVONagent",
     "~/Library/Containers/com.devon-technologies.get",
-    "~/Library/Group Containers/*.devon-technologies.*",
     "~/Library/Group Containers/*.devon-technologies.*",
     "~/Library/HTTPStorages/com.devon-technologies.agent",
     "~/Library/Preferences/com.devon-technologies.agent.plist",

@@ -2,7 +2,7 @@ cask "p4" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
   arch arm: "12arm64", intel: "1015x86_64"
 
-  version "2025.1,2810567"
+  version "2025.2,2852709"
   sha256 :no_check
 
   url "https://filehost.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx#{arch}/p4"
@@ -19,7 +19,6 @@ cask "p4" do
   end
 
   conflicts_with cask: "perforce"
-  depends_on macos: ">= :sierra"
   container type: :naked
 
   binary "bin.macosx#{arch}", target: "p4"

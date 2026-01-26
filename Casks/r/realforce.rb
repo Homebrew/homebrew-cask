@@ -1,6 +1,6 @@
 cask "realforce" do
-  version "3.3.2"
-  sha256 "af5b168fddcb91b1eeb82d78cf463c37d041645a1c13353989aa91af40889bc0"
+  version "4.0.1"
+  sha256 "7b70a72aeca92ea430ec76f164b9b78ea438c02864b11ec7361670326a64a5ba"
 
   url "https://www.realforce.co.jp/support/download/software/mac/files/REALFORCE%20CONNECT%20Software_#{version.dots_to_hyphens}.pkg"
   name "REALFORCE for Mac"
@@ -14,8 +14,6 @@ cask "realforce" do
       page.scan(regex).map { |match| match[0].tr("-", ".") }
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   pkg "REALFORCE CONNECT Software_#{version.dots_to_hyphens}.pkg"
 

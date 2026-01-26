@@ -1,7 +1,7 @@
 cask "roam" do
   arch arm: "arm64", intel: "x64"
 
-  version "175.2.0-beta001"
+  version "197.1.0-beta001"
   sha256 :no_check
 
   url "https://download.ro.am/Roam/8a86d88cfc9da3551063102e9a4e2a83/latest/darwin/#{arch}/Roam.dmg"
@@ -22,7 +22,7 @@ cask "roam" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Roam.app"
 

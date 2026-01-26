@@ -1,9 +1,9 @@
 cask "eclipse-rcp" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.36.0,2025-06"
-  sha256 arm:   "3dead58db91d59fba038b83fda6c32d056902ac0e1e73f72171fd9e2cc8b07b7",
-         intel: "adf25546e13c90382960413321182d208233a10d3433f9a2bac7b5bf5f8bbcd9"
+  version "4.38,2025-12"
+  sha256 arm:   "35cf161e13086ad018f5aea8680801e6f1bb269eca41d95888ad5bae08989758",
+         intel: "60f3b36b8f531f69c40d515f0eaff18c8806ea2f0cb8b7bbe4fd9c858c046e68"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-rcp-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse for RCP and RAP Developers"
@@ -13,6 +13,8 @@ cask "eclipse-rcp" do
   livecheck do
     cask "eclipse-ide"
   end
+
+  depends_on macos: ">= :big_sur"
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse RCP.app"

@@ -1,6 +1,6 @@
 cask "dcommander" do
-  version "3.9.7.2"
-  sha256 "bac6a148b174cc151fa1fde6bf7aa76ef855cf5412dbf067c295c174ae7232d2"
+  version "3.9.9.2"
+  sha256 "e54cc1b5493bfee040cc74065c2b0948641526a5f46725170c2aa640a6099b00"
 
   url "https://devstorm-apps.com/apps/DCommander-#{version.no_dots}.dmg"
   name "DCommander"

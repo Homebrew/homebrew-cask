@@ -7,6 +7,7 @@ cask "apptrap" do
   homepage "http://onnati.net/apptrap/"
 
   deprecate! date: "2024-11-02", because: :unmaintained
+  disable! date: "2025-11-02", because: :unmaintained
 
   prefpane "AppTrap.prefPane"
 

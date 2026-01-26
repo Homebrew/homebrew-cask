@@ -9,6 +9,7 @@ cask "remotix-agent" do
   homepage "https://remotixcloud.com/"
 
   deprecate! date: "2024-11-01", because: :discontinued
+  disable! date: "2025-11-01", because: :discontinued
 
   auto_updates true
 

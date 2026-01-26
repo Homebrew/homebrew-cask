@@ -1,6 +1,6 @@
 cask "lynkeos" do
-  version "3.9"
-  sha256 "b1236393e7ca75ed782daaf8b76f3230ef83764a56b3a388a9b5e7c5d6e0be25"
+  version "3.10"
+  sha256 "18b37ebcf2ebcb08875e2ce55680050b661122147d5ffa15d7090660b1714394"
 
   url "https://downloads.sourceforge.net/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.dots_to_hyphens}.zip",
       verified: "downloads.sourceforge.net/lynkeos/"
@@ -13,7 +13,7 @@ cask "lynkeos" do
     regex(%r{url=.*?/v?(\d+(?:\.\d+)+)/Lynkeos[._-]App[\d._-]*\.zip}i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
 

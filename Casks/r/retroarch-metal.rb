@@ -1,5 +1,5 @@
 cask "retroarch-metal" do
-  version "1.21.0"
+  version "1.22.2"
   sha256 :no_check # required as upstream package is often updated in place
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/universal/RetroArch_Metal.dmg",
@@ -13,7 +13,6 @@ cask "retroarch-metal" do
   end
 
   conflicts_with cask: "retroarch"
-  depends_on macos: ">= :high_sierra"
 
   app "RetroArch.app"
 

@@ -1,6 +1,6 @@
 cask "devilutionx" do
-  version "1.5.4"
-  sha256 "d95c726023b625af6e918700dd3d19b1d4888eb829cd2640ca97de96e4564cf8"
+  version "1.5.5"
+  sha256 "10ecd55caf4239d087bc91bce7538943705399b0b2abcff71c347ddbf01d30c6"
 
   url "https://github.com/diasurgical/devilutionX/releases/download/#{version}/devilutionx-macos-universal.dmg"
   name "DevilutionX"
@@ -23,8 +23,6 @@ cask "devilutionx" do
       end.flatten
     end
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "devilutionX.app"
 

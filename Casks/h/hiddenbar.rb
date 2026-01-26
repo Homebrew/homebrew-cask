@@ -12,8 +12,6 @@ cask "hiddenbar" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Hidden Bar.app"
 
   uninstall launchctl: "com.dwarvesv.LauncherApplication",

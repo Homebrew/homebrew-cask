@@ -8,6 +8,8 @@ cask "pokerth" do
   desc "Free Texas hold'em poker"
   homepage "https://www.pokerth.net/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "pokerth.app"
 
   caveats do

@@ -1,9 +1,9 @@
 cask "hamrs-pro" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.44.0"
-  sha256 arm:   "244d45eaa1ce98619c7eaea5369881afa8682b450fcb94bf5733a386fb23829e",
-         intel: "0cdd8095cd9d31e372af456d5f3c1de016a6b597affa01c17ac7f9a21339c26d"
+  version "2.47.0"
+  sha256 arm:   "317cf977519e5dea0e1b6f45c5e7171ae9d217045255b15fd5da33b00853cc4d",
+         intel: "fed11a45fbe2586c6f48ffd3b11dd939adc514eab1755daec218354cd4ac4f15"
 
   url "https://hamrs-dist.s3.amazonaws.com/hamrs-pro-#{version}-mac-#{arch}.dmg",
       verified: "hamrs-dist.s3.amazonaws.com/"
@@ -17,7 +17,7 @@ cask "hamrs-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "HAMRS Pro.app"
 

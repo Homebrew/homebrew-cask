@@ -7,10 +7,7 @@ cask "league-displays" do
   desc "Create a screensaver or wallpaper playlist using League art"
   homepage "https://support-leagueoflegends.riotgames.com/hc/en-us/articles/207525756-Setting-Custom-League-Screensavers-and-Wallpapers-League-Displays-"
 
-  livecheck do
-    url "https://screensavers.riotgames.com/v2/installer/latest/appcast-mac.xml"
-    strategy :sparkle
-  end
+  disable! date: "2026-10-14", because: :no_longer_available
 
   app "LeagueDisplays.app"
 

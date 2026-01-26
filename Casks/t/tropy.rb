@@ -1,9 +1,9 @@
 cask "tropy" do
   arch arm: "-arm64"
 
-  version "1.16.2"
-  sha256 arm:   "3dc286d185f1fead018d628421bdf29a470a587e6ec64245495a35dafd79a3be",
-         intel: "595d4da00f680767f5b9b48a16510216833cbbeaf50b8b8b2a03b89985765e8e"
+  version "1.17.3"
+  sha256 arm:   "1073ee59e09635aa879eb59f981cf9de949b8c3207124869cde816bd0cfe532c",
+         intel: "21895d3d96f1037078852151b8c94a9b4b69a64ecdd966b54313d28f9b0e8286"
 
   url "https://github.com/tropy/tropy/releases/download/v#{version}/tropy-#{version}#{arch}.dmg",
       verified: "github.com/tropy/tropy/"
@@ -15,8 +15,6 @@ cask "tropy" do
     url :url
     strategy :github_latest
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Tropy.app"
 

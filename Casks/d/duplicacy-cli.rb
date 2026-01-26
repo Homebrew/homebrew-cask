@@ -11,8 +11,6 @@ cask "duplicacy-cli" do
   desc "Cloud backup tool"
   homepage "https://duplicacy.com/"
 
-  conflicts_with cask: "duplicacy"
-
   binary "duplicacy_osx_#{arch}_#{version}", target: "duplicacy"
 
   zap trash: "~/.duplicacy"

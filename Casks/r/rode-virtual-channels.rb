@@ -12,8 +12,6 @@ cask "rode-virtual-channels" do
     regex(/href=.*?RODECASTERDriver[._-]MACOS[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   pkg "RODE Virtual Channels-#{version}.pkg"
 
   uninstall quit:    "com.rode.RODEVirtualChannels",

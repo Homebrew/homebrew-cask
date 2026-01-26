@@ -12,8 +12,6 @@ cask "shortcutor" do
     regex(%r{href=.*?/Shortcutor[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Shortcutor.app"
 
   uninstall quit: "Shortcutor"

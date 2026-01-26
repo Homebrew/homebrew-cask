@@ -19,8 +19,6 @@ cask "freecad" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sierra"
-
   app "FreeCAD.app"
 
   zap trash: [

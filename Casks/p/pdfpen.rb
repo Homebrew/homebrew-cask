@@ -8,8 +8,7 @@ cask "pdfpen" do
   homepage "https://smilesoftware.com/PDFpen"
 
   deprecate! date: "2024-09-30", because: :discontinued
-
-  depends_on macos: ">= :sierra"
+  disable! date: "2025-10-01", because: :discontinued
 
   app "PDFpen.app"
 

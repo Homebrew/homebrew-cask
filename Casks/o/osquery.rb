@@ -1,6 +1,6 @@
 cask "osquery" do
-  version "5.18.1"
-  sha256 "fa0c035be9456ced1f8b7267f209ca1ea3cf217074fec295d1b11e551cba3195"
+  version "5.21.0"
+  sha256 "94e146f864aec681f7d2b86917c640890d6d4ada25968de117617d75fdfb0006"
 
   url "https://github.com/osquery/osquery/releases/download/#{version}/osquery-#{version}.pkg",
       verified: "github.com/osquery/osquery/"

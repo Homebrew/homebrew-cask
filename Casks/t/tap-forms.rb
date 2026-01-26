@@ -1,6 +1,6 @@
 cask "tap-forms" do
-  version "5.3.43,6BP8q0zETkibrmzxpORW"
-  sha256 "264b03ca082805770fdd522a156f0f645ece835eb098c4073f68acf04c4dfdcc"
+  version "5.3.45,sVRdq8QqvjZ3jBJUQNwZ"
+  sha256 "82a6e945b233e1202373393919e97dca891fc5a0f472ff2ebcc71cefacbaf991"
 
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/9234/503174/#{version.csv.second}_Tap%20Forms%20Install%20#{version.csv.first}.dmg",
       verified: "paddle.s3.amazonaws.com/"
@@ -18,8 +18,6 @@ cask "tap-forms" do
       "#{match[2]},#{match[1]}"
     end
   end
-
-  depends_on macos: ">= :mojave"
 
   app "Tap Forms Mac #{version.major}.app"
 

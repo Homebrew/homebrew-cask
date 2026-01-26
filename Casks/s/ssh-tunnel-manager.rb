@@ -9,6 +9,7 @@ cask "ssh-tunnel-manager" do
   homepage "https://tynsoe.org/stm/"
 
   deprecate! date: "2024-09-06", because: :unmaintained
+  disable! date: "2025-09-06", because: :unmaintained
 
   app "SSH Tunnel Manager.app"
 

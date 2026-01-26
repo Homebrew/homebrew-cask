@@ -12,7 +12,8 @@ cask "orangedrangon-android-messages" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "android-messages"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :big_sur"
 
   app "Android Messages.app"

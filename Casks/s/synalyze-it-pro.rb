@@ -14,7 +14,6 @@ cask "synalyze-it-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "Synalyze It! Pro.app"
 

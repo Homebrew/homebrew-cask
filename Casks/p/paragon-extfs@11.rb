@@ -15,7 +15,6 @@ cask "paragon-extfs@11" do
   end
 
   conflicts_with cask: "paragon-extfs"
-  depends_on macos: ">= :sierra"
 
   installer manual: "FSInstaller.app"
 

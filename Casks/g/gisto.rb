@@ -1,9 +1,9 @@
 cask "gisto" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.2.8"
-  sha256 arm:   "3f03f15d2746c0e82ba3627ff36b623d5a098d3e8898bc2d96c389776583ec79",
-         intel: "ed827f7e2f9adce3fa48be5ec4920cc0b36d65c49cf3b441009482b172f34aa8"
+  version "2.4.4"
+  sha256 arm:   "bce6b09e055d5ccb36eb64bd56a7aed81ae34acf09163fb6521a981c1ef7a8ea",
+         intel: "a5450f54d78a7e3e855500bcbfacdccb9dcca64eb31c1d312c0c3727500e5ce1"
 
   url "https://github.com/Gisto/Gisto/releases/download/v#{version}/Gisto_#{version}_#{arch}.dmg",
       verified: "github.com/Gisto/Gisto/"
@@ -16,9 +16,7 @@ cask "gisto" do
     strategy :github_latest
   end
 
-  disable! date: "2026-09-01", because: :unsigned
-
-  depends_on macos: ">= :high_sierra"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Gisto.app"
 

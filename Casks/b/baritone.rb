@@ -9,6 +9,7 @@ cask "baritone" do
   homepage "https://tma02.github.io/baritone/"
 
   deprecate! date: "2024-10-12", because: :unmaintained
+  disable! date: "2025-10-12", because: :unmaintained
 
   app "Baritone-darwin-x64/Baritone.app"
 

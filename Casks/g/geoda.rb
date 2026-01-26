@@ -1,11 +1,18 @@
 cask "geoda" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.22.0.20,1.22.0"
-  sha256 arm:   "0db259e253d18ef4fca65fdaa3c9ad3fa66e90f33b57e6ca6accf07c0abb235d",
-         intel: "08bd3333ac410a34f1f7089f669c8994236781579099be01945003e4d2bd3c5b"
+  version "1.22.0.21,1.22.0"
+  sha256 arm:   "bb7858799c66786812cab6002f59f2b107bc2a62d7d2e5d11fb984f3746138e6",
+         intel: "f42c4dca84071cd1141398e60d5651dbfed12f0a78b1238de9adaeb95b16cdce"
 
-  url "https://github.com/GeoDaCenter/geoda/releases/download/v#{version.csv.first}/GeoDa#{version.csv.second || version.csv.first}-#{arch}-Installer.dmg",
+  on_arm do
+    depends_on macos: ">= :sonoma"
+  end
+  on_intel do
+    depends_on macos: ">= :ventura"
+  end
+
+  url "https://github.com/GeoDaCenter/geoda/releases/download/v#{version.csv.first}/GeoDa-#{version.csv.second || version.csv.first}-#{arch}-MacOS.zip",
       verified: "github.com/GeoDaCenter/geoda/"
   name "GeoDa"
   desc "Spatial analysis, statistics, autocorrelation and regression"
@@ -15,7 +22,7 @@ cask "geoda" do
   # the `version` when necessary.
   livecheck do
     url :url
-    regex(%r{/v?(\d+(?:\.\d+)+)/GeoDav?(\d+(?:\.\d+)+)[._-]#{arch}[._-]Installer\.dmg$}i)
+    regex(%r{/v?(\d+(?:\.\d+)+)/GeoDa[._-]?v?(\d+(?:\.\d+)+)[._-]#{arch}[._-](?:Installer|MacOS)\.(?:dmg|zip)$}i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["browser_download_url"]&.match(regex)
@@ -27,8 +34,6 @@ cask "geoda" do
       end
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   app "GeoDa.app"
 

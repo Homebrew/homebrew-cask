@@ -12,6 +12,7 @@ cask "bloop" do
   homepage "https://bloop.ai/"
 
   deprecate! date: "2025-01-05", because: :discontinued
+  disable! date: "2026-01-05", because: :discontinued
 
   depends_on macos: ">= :big_sur"
 

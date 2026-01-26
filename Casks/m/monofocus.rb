@@ -14,8 +14,6 @@ cask "monofocus" do
     end
   end
 
-  depends_on macos: ">= :catalina"
-
   app "MonoFocus.app"
 
   # No zap stanza required

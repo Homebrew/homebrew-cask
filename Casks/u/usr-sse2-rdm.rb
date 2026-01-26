@@ -7,8 +7,6 @@ cask "usr-sse2-rdm" do
   desc "Set a Retina display to custom resolutions"
   homepage "https://github.com/usr-sse2/RDM"
 
-  depends_on macos: ">= :sierra"
-
   app "RDM.app"
 
   uninstall quit:    "net.alkalay.RDM",

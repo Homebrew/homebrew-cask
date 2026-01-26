@@ -1,9 +1,9 @@
 cask "adobe-creative-cloud" do
   arch arm: "macarm64", intel: "osx10"
 
-  version "6.7.0.278"
-  sha256 arm:   "d533b2e0ae3ea1d0e017c07ed75a7352d2108fe8a8c54479effab8c1909a35c1",
-         intel: "811bb12371d4ce4b129d422c13841be205a426941b9ce439e2b8a5c8f83da9ea"
+  version "6.8.0.821"
+  sha256 arm:   "beadfa4bdf2ab0b3b0c9c7aa9dbe5d699d8351afdbccd2eb18f8be1cf4960543",
+         intel: "d187ac7d1b7854c9a9a3552594337694205665ff84c0bedbb96657ca9466c4bf"
 
   # If url breaks you can find the latest static urls - https://helpx.adobe.com/download-install/kb/creative-cloud-desktop-app-download.html
   url "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/#{version.major_minor_patch}/#{version.split(".").fourth}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
@@ -31,10 +31,6 @@ cask "adobe-creative-cloud" do
     print_stderr: false,
   }
 
-  uninstall_preflight do
-    set_ownership "/Library/Application Support/Adobe"
-  end
-
   uninstall_postflight do
     stdout, * = system_command "/bin/launchctl", args: ["print", "gui/#{Process.uid}"]
     ccx_processes = stdout.lines.grep(/com\.adobe\.CCXProcess\.\d{5}/) { Regexp.last_match(0) }.uniq
@@ -54,6 +50,7 @@ cask "adobe-creative-cloud" do
               "com.adobe.acc.installer",
               "com.adobe.acc.installer.v2",
               "com.adobe.AdobeCreativeCloud",
+              "com.adobe.AdobeDesktopService",
               "com.adobe.ccxprocess",
             ],
             quit:         "com.adobe.acc.AdobeCreativeCloud",

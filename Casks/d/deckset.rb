@@ -1,6 +1,6 @@
 cask "deckset" do
-  version "2.0.42,2764"
-  sha256 "20a8d3815357adc32b626b0cef8051de0369aeaf9e4123a3d0937cfeb94b8b80"
+  version "2.0.47,2790"
+  sha256 "33b74eeeb67f984dd05f143213f48c7865c53df753e5b2f1cfcc88ab9b26f58d"
 
   url "https://dl.decksetapp.com/Deckset+#{version.csv.first}+(#{version.csv.second}).dmg"
   name "Deckset"
@@ -13,7 +13,6 @@ cask "deckset" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Deckset.app"
 

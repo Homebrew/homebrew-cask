@@ -1,12 +1,14 @@
 cask "lapce" do
-  version "0.4.3"
-  sha256 "f4eb6fd004dc85b8aed667663e559265d7c2a9967f1b818c6f1c325b1186c2ce"
+  version "0.4.6"
+  sha256 "d4ba42218148446c265c6a823107a969b3b0dca5e14df834563f2859927228f5"
 
   url "https://github.com/lapce/lapce/releases/download/v#{version}/Lapce-macos.dmg",
       verified: "github.com/lapce/lapce/"
   name "Lapce"
   desc "Open source code editor written in Rust"
   homepage "https://lapce.dev/"
+
+  depends_on macos: ">= :big_sur"
 
   app "Lapce.app"
   binary "#{appdir}/Lapce.app/Contents/MacOS/lapce"

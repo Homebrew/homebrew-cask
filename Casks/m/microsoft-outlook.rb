@@ -1,22 +1,6 @@
 cask "microsoft-outlook" do
-  on_monterey :or_older do
-    on_el_capitan :or_older do
-      version "16.16.20101200"
-      sha256 "aafedfe466b7bf10f96fdfbf6b0f9bcf84e94a5097e5fccb3740d3d0cc666f26"
-    end
-    on_sierra do
-      version "16.30.19101301"
-      sha256 "a131eb9ea7d0f498376f678198b27eab3139ec264a3a4d873be522ec8fe48845"
-    end
-    on_high_sierra do
-      version "16.43.20110804"
-      sha256 "0e53acefafc25d1eebbf257f343de0d0a5258099c154f7ba5d99aa709fb50d08"
-    end
-    on_mojave do
-      version "16.54.21101001"
-      sha256 "c7b3ced52462b611a9762941088fa05e42d79b26349ca62b705a9bcbce00b41e"
-    end
-    on_catalina do
+  on_ventura :or_older do
+    on_catalina :or_older do
       version "16.66.22102801"
       sha256 "bddede85956713be21fdb5ab72be07ecefd05552752e8e60c649e6a15fd0a2c2"
     end
@@ -28,18 +12,24 @@ cask "microsoft-outlook" do
       version "16.89.24091630"
       sha256 "24731ffca0b78c02f2544b145b4a103bd11b724fef0dc938bf5899e156495a72"
     end
+    on_ventura do
+      version "16.101.25100321"
+      sha256 "db4ce5854bbcb60284041f7a04e2f37e317cff578857486af78069b3935c5e86"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
-    version "16.100.25081015"
-    sha256 "a08a670dc4732fea594cd460edc4a7246f2776e458d86c3a5c58bd81627b0fcf"
+  on_sonoma :or_newer do
+    version "16.105.26011816"
+    sha256 "22723389fbb393362abf617a81fbff51470ac3edcb0529eeec655088b97cec91"
 
     livecheck do
-      url "https://go.microsoft.com/fwlink/p/?linkid=525137"
-      strategy :header_match
+      url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409OPIM2019.xml"
+      strategy :xml do |xml|
+        xml.get_elements("//key[text()='Update Version']").map { |item| item.next_element&.text&.strip }
+      end
     end
   end
 
@@ -53,7 +43,6 @@ cask "microsoft-outlook" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_Outlook_#{version}_Installer.pkg",
       choices: [

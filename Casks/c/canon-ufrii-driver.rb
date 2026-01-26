@@ -1,6 +1,6 @@
 cask "canon-ufrii-driver" do
-  version "10.19.21"
-  sha256 "610d6d42f403268b53417b8bab8397ed04596713fef77c33b46d38f397a71ff7"
+  version "10.19.23"
+  sha256 "aa6cb2d87c2c16baf890dd14bedf9fa3a2f4cc6d990dd247c050bb153d13b5a5"
 
   url "https://downloads.canon.com/sss2025/drivers/UFRII_v#{version}_mac.zip",
       verified: "downloads.canon.com/"
@@ -9,7 +9,8 @@ cask "canon-ufrii-driver" do
   homepage "https://oip.manual.canon/USRMA-3844-zz-DR-enUV/"
 
   livecheck do
-    url "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json"
+    url "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json",
+        user_agent: :browser
     regex(/UFRII[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
     strategy :json do |json, regex|
       json.map do |item|
@@ -20,8 +21,6 @@ cask "canon-ufrii-driver" do
       end
     end
   end
-
-  depends_on macos: ">= :catalina"
 
   pkg "UFRII_LT_LIPS_LX_Installer.pkg"
 

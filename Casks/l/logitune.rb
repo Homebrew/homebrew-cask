@@ -21,7 +21,6 @@ cask "logitune" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   installer manual: "LogiTuneInstaller.app"
 

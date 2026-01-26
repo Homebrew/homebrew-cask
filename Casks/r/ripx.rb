@@ -1,6 +1,6 @@
 cask "ripx" do
-  version "7.5.1"
-  sha256 "d50916d2a066cffcbfb640fa1e6e9e7e4a364ec1f5fcaa9bad400f580ded7442"
+  version "8.0.3"
+  sha256 "c1a24eeda44dba2bc9a740f412bca5a364e5802494af255e4abfc83321b71d30"
 
   url "https://s3.us-east-2.amazonaws.com/downloads.hitnmix.com/RipXDAW_#{version.no_dots}.dmg",
       verified: "s3.us-east-2.amazonaws.com/downloads.hitnmix.com/"
@@ -27,8 +27,6 @@ cask "ripx" do
       end
     end
   end
-
-  depends_on macos: ">= :sierra"
 
   pkg "RipX DAW.pkg"
 

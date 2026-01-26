@@ -8,8 +8,6 @@ cask "equinox" do
   desc "Create dynamic wallpapers"
   homepage "https://equinoxmac.com/"
 
-  depends_on macos: ">= :mojave"
-
   app "Equinox.app"
 
   zap trash: [

@@ -15,8 +15,6 @@ cask "exifrenamer" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
-
   app "ExifRenamer.app"
 
   zap trash: "~/Library/Preferences/de.qdev.ExifRenamer.plist"

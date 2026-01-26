@@ -1,8 +1,8 @@
 cask "macwhisper" do
-  version "12.18,1290"
-  sha256 "527e14032593da892f6a630df3ebdba487a926710ebf975ab9bc20f93c52f6d0"
+  version "13.12,1373"
+  sha256 "c5cfb370e7c017dcf188fb2b7c9bde50881be082bc7383c199865463753c87b9"
 
-  url "https://cdn.macwhisper.com/macwhisper/MacWhisper-#{version.csv.second}.zip",
+  url "https://cdn.macwhisper.com/macwhisper/MacWhisper-#{version.csv.second}#{"_#{version.csv.third}" if version.csv.third}.zip",
       verified: "cdn.macwhisper.com/"
   name "MacWhisper"
   desc "Speech recognition tool"
@@ -12,8 +12,14 @@ cask "macwhisper" do
   # to work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://macwhisper-site.vercel.app/appcast.xml"
-    strategy :sparkle do |items|
-      items.map(&:nice_version)
+    regex(/MacWhisper[._-]v?(?:\d+(?:\.\d+)*)(?:_(\h+))?\.zip/i)
+    strategy :sparkle do |items, regex|
+      items.map do |item|
+        version_suffix = item.url.match(regex)
+        next item.nice_version if version_suffix.nil? || version_suffix[1].blank?
+
+        "#{item.nice_version},#{version_suffix[1]}"
+      end
     end
   end
 

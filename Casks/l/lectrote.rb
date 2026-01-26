@@ -1,16 +1,16 @@
 cask "lectrote" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.5"
-  sha256 arm:   "4245360a5455f21ee7f22b78af56c0a35422e86adb24f80d61dc3764b34fd504",
-         intel: "870a200af1b5e56a6ec8942b5091e83019b5cc68f2542305dbb568bfcd5d02ef"
+  version "1.5.6"
+  sha256 arm:   "61db23a78ebae789f10f0c4fad5d57dcb36e285ebd3b8c76f146d552d72c4b9a",
+         intel: "a5c994f7d94715412ef296423b959b44cd2d17ed58860c813cda41570313f401"
 
   url "https://github.com/erkyrath/lectrote/releases/download/lectrote-#{version}/Lectrote-#{version}-macos-#{arch}.dmg"
   name "Lectrote"
   desc "Interactive Fiction interpreter in an Electron shell"
   homepage "https://github.com/erkyrath/lectrote"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Lectrote.app"
 

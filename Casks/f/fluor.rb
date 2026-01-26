@@ -23,7 +23,6 @@ cask "fluor" do
   homepage "https://github.com/Pyroh/Fluor"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "Fluor.app"
 

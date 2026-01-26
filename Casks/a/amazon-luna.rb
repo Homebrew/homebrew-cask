@@ -11,7 +11,6 @@ cask "amazon-luna" do
   disable! date: "2025-07-23", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "Amazon Luna.app"
 

@@ -1,6 +1,6 @@
 cask "timemator" do
-  version "3.1.2"
-  sha256 "de3f1ee44381385d15aef351558560e9892e3b885923c7f34b338fbfa5bb1c50"
+  version "3.2.1"
+  sha256 "92623740733fcd7374fbc2b107479316800f3cb794de5f1ec4dcd73c6424c669"
 
   url "https://catforce-timemator.s3.amazonaws.com/releases/Timemator_#{version}.dmg",
       verified: "catforce-timemator.s3.amazonaws.com/"
@@ -14,7 +14,6 @@ cask "timemator" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Timemator.app"
 

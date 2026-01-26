@@ -1,8 +1,11 @@
 cask "servo" do
-  version "2025-08-22"
-  sha256 "1d0cce93262c54156572337858fe18860b579d532aa660bafb1b68dedd8ab4d0"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://github.com/servo/servo-nightly-builds/releases/download/#{version}/servo-latest.dmg",
+  version "2026-01-26"
+  sha256 arm:   "6c5e9b14ea1de4af6fe49d90e406a0599056ab2aff11e2b6e8f67093df23eb94",
+         intel: "4b8b116812be12c452e3f0fdbf4743db55d575d2f8d5416bb34fd476d5e9b49d"
+
+  url "https://github.com/servo/servo-nightly-builds/releases/download/#{version}/servo-#{arch}-apple-darwin.dmg",
       verified: "github.com/servo/servo-nightly-builds/"
   name "Servo"
   desc "Parallel browser engine"
@@ -14,15 +17,11 @@ cask "servo" do
     strategy :github_latest
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :ventura"
 
   app "Servo.app"
 
   zap trash: "~/Library/Application Support/Servo"
-
-  caveats do
-    requires_rosetta
-  end
 end

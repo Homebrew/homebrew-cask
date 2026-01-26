@@ -16,8 +16,6 @@ cask "robofont" do
     end
   end
 
-  depends_on macos: ">= :sierra"
-
   app "RoboFont.app"
 
   zap trash: [

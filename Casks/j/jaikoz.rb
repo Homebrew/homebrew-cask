@@ -14,8 +14,6 @@ cask "jaikoz" do
     regex(/Jaikoz\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :sierra"
-
   app "Jaikoz.app"
 
   zap trash: [

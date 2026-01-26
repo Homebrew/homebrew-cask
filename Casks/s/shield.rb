@@ -13,8 +13,6 @@ cask "shield" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Shield.app"
 
   zap trash: "/Library/Application Support/Shield/com.csaba.fitzl.shield.preferences.plist"

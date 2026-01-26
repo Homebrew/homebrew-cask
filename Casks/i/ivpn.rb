@@ -1,9 +1,9 @@
 cask "ivpn" do
   arch arm: "-arm64"
 
-  version "3.14.34"
-  sha256 arm:   "08cfa04033591a7320ed2c06697ecc34e9666e9a0f026babc7c4b665bf4c0303",
-         intel: "a1024b219174d3fccaac592be8129cc43f9690fb1a6dcb3ecbcad6b1e610a4aa"
+  version "3.15.0"
+  sha256 arm:   "72647b650a295b764c0a076732121c7930944e68fa6ae9bc797b7e1c93cb5895",
+         intel: "8a58fb44002ca1a861928eaa990bac12baa89163b8b139bcc54ef5273ba58c77"
 
   url "https://repo.ivpn.net/macos/bin/IVPN-#{version}#{arch}.dmg"
   name "IVPN"
@@ -16,7 +16,6 @@ cask "ivpn" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "IVPN.app"
 

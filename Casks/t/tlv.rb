@@ -7,9 +7,7 @@ cask "tlv" do
   desc "Tool for working with Tableau logs"
   homepage "https://github.com/tableau/tableau-log-viewer"
 
-  disable! date: "2026-09-01", because: :unsigned
-
-  depends_on macos: ">= :mojave"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "tlv.app"
 end

@@ -1,6 +1,6 @@
 cask "gpxsee" do
-  version "13.46"
-  sha256 "80f69750acc65cc5d8e660c9d287b67b989f745a79340fb7c853b4214f1bde20"
+  version "15.10"
+  sha256 "6c2e7db13fa42ccb40ce6e1a9956256aca055cd93ef31f969a801d0e73b3dcce"
 
   url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg",
       verified: "sourceforge.net/gpxsee/Mac%20OS%20X/"
@@ -13,7 +13,7 @@ cask "gpxsee" do
     regex(%r{url=.*?/GPXSee[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :monterey"
 

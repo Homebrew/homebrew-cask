@@ -12,6 +12,8 @@ cask "lastfm" do
     strategy :sparkle
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Last.fm.app"
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask "busycal" do
-  version "2025.2.2,2025-06-08-18-02"
-  sha256 "5334b1b8768346d22dffac9477563a818b0429f651c3c844c527426c038fa690"
+  version "2026.1.1,2026-01-17-06-47"
+  sha256 "09dc31af3c3c54a34d0ac32f101c2ccaef8fbddc6a5c2c8295a9897752863f6f"
 
   url "https://downloads.busymac.com/bcl-#{version.csv.first}-#{version.csv.second}.zip"
   name "BusyCal"
@@ -16,7 +16,6 @@ cask "busycal" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   pkg "BusyCal Installer.pkg"
 

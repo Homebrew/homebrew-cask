@@ -1,6 +1,6 @@
 cask "firestorm" do
-  version "7.1.13.78266"
-  sha256 "68b48b0e0c425c078a2afb30dcdb0dd4fe76ccf34a52ce1b80b68a43387e00c3"
+  version "7.2.2.79439"
+  sha256 "446c00b2b812e1797e4e0aabbefd802bdc3d512f28851d92dfddbf909d5c3630"
 
   url "https://downloads.firestormviewer.org/release/mac/Phoenix-Firestorm-Releasex64_AVX2-#{version.dots_to_hyphens}.dmg"
   name "Phoenix Firestorm viewer for Second Life"
@@ -14,7 +14,7 @@ cask "firestorm" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Firestorm-Releasex64.app"
 

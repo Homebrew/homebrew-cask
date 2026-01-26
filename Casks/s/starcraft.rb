@@ -10,8 +10,6 @@ cask "starcraft" do
 
   disable! date: "2025-03-06", because: :no_longer_available
 
-  depends_on macos: ">= :el_capitan"
-
   installer manual: "StarCraft-Setup.app"
 
   uninstall delete: "/Applications/StarCraft"

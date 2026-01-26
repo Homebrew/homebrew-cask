@@ -1,9 +1,9 @@
 cask "pycharm" do
   arch arm: "-aarch64"
 
-  version "2025.2.0.1,252.23892.515"
-  sha256 arm:   "9d3265dd828c45681ba608ee2325b3b560396b7048290d7c69714cbc99e86fd7",
-         intel: "440e613cc7e9d02ea27c921168b27a120e0eed5d084d878a6e7f9af3c874ac1a"
+  version "2025.3.1.1,253.29346.308"
+  sha256 arm:   "b1c1b4622a84dead810a1dd54611d9d1ea7a3c363ccd1b410d10494062c33922",
+         intel: "91e1ee8b2c3f96184ec0fdee3fc83ca6e8b24544ed1e15ea93891d4ab20e7894"
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
   name "PyCharm"
@@ -25,7 +25,6 @@ cask "pycharm" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "PyCharm.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
@@ -45,6 +44,7 @@ cask "pycharm" do
     "~/Library/Caches/JetBrains/PyCharm#{version.major_minor}",
     "~/Library/Logs/JetBrains/PyCharm#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.pycharm.plist",
+    "~/Library/Preferences/jetbrains.pc.*.plist",
     "~/Library/Preferences/jetbrains.py.*.plist",
     "~/Library/Preferences/jetbrains.pycharm.*.plist",
     "~/Library/Preferences/PyCharm#{version.major_minor}",

@@ -18,7 +18,6 @@ cask "kunkun" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "kunkun.app"
 

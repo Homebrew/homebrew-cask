@@ -1,19 +1,14 @@
 cask "far2l" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.6.5"
+  version "2.7.0"
 
-  on_mojave :or_older do
-    sha256 "2bbdcc7531ee0449731a45a07e15739d269ec83cbeca35fa89f15ff9eb9b208c"
-
-    url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.11-x64.dmg"
-  end
-  on_catalina do
-    sha256 "10b1dd4f5302981b0de437c316d8396f75da0abb61c97a67d556e2fa068205f5"
+  on_catalina :or_older do
+    sha256 "7b07de07561f4243f7dcf2975d2236c6a3101463d4c3cfcfa6a8a6ea9b624f40"
 
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.15-x64.dmg"
   end
   on_big_sur :or_newer do
-    sha256 "8069beecc1808a22172efb29a788d8c11921e0669a77d26bbaee95274b6d8c54"
+    sha256 "bdd73f85ac99b2a9655422c188c315d94c4db6e72dbc21d764ca0db2532ef186"
 
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-11.2-universal.dmg"
   end
@@ -27,8 +22,6 @@ cask "far2l" do
     regex(/v?(\d+(?:\.\d+)+(?:\w)*)/i)
     strategy :github_latest
   end
-
-  depends_on macos: ">= :el_capitan"
 
   app "far2l.app"
 

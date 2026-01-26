@@ -2,19 +2,14 @@ cask "lbry" do
   version "0.53.9"
   sha256 "3769997e7cdb6e563a505c5f8375325ef26fc74318aea0defde711fc5fcfee5e"
 
-  url "https://github.com/lbryio/lbry-desktop/releases/download/v#{version}/LBRY_#{version}.dmg",
-      verified: "github.com/lbryio/lbry-desktop/"
+  url "https://github.com/lbryio/lbry-desktop/releases/download/v#{version}/LBRY_#{version}.dmg"
   name "LBRY Desktop"
   desc "Official client for LBRY, a decentralised file-sharing and payment network"
-  homepage "https://lbry.com/"
+  homepage "https://github.com/lbryio/lbry-desktop"
 
-  livecheck do
-    url :url
-    regex(/v?(\d+(?:\.\d+)+)/i)
-    strategy :github_latest
-  end
-
-  depends_on macos: ">= :mojave"
+  # see discussions at https://github.com/lbryio/lbry-desktop/issues/7766
+  deprecate! date: "2025-11-30", because: :unmaintained
+  disable! date: "2026-11-30", because: :unmaintained
 
   app "LBRY.app"
   # shim scripts (https://github.com/Homebrew/homebrew-cask/issues/18809)

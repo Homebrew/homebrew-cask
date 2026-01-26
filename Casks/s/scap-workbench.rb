@@ -9,8 +9,7 @@ cask "scap-workbench" do
   homepage "https://www.open-scap.org/tools/scap-workbench/"
 
   deprecate! date: "2024-10-04", because: :unmaintained
-
-  depends_on macos: ">= :sierra"
+  disable! date: "2025-10-04", because: :unmaintained
 
   app "scap-workbench.app"
 

@@ -13,8 +13,6 @@ cask "letter-opener" do
     regex(%r{Version:\s*<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
-  depends_on macos: ">= :mojave"
-
   pkg "Install Letter Opener.pkg"
 
   uninstall launchctl: [

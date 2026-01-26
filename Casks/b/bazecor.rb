@@ -1,9 +1,9 @@
 cask "bazecor" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.7.0"
-  sha256 arm:   "3f135314f764e0015dffc39ea8a196095220f8bce75ffe9104079ea06bec49d1",
-         intel: "18aa87da0aa697ff1bcd766defc26eeb88e2bd6d77240b4bd30f0b99d79ba51a"
+  version "1.8.3"
+  sha256 arm:   "294e07c664fa2a9479f915cab3be8ffb0cf156ecacabcd5ea3bcfcbccb715411",
+         intel: "9f7adf5bb58269df45a0d3507930ecb29365b5e61980c87c24d28bece5a983a6"
 
   url "https://github.com/Dygmalab/Bazecor/releases/download/v#{version}/Bazecor-#{version}-#{arch}.dmg",
       verified: "github.com/Dygmalab/Bazecor/"
@@ -16,7 +16,7 @@ cask "bazecor" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Bazecor.app"
 

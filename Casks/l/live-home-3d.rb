@@ -1,5 +1,5 @@
 cask "live-home-3d" do
-  version "4.10.1"
+  version "4.11.2"
   sha256 :no_check
 
   url "https://belightsoft.s3.amazonaws.com/updates/LiveHome3D.zip",
@@ -12,8 +12,6 @@ cask "live-home-3d" do
     url "https://www.belightsoft.com/download/updates/appcast_lh3d.xml"
     strategy :sparkle, &:short_version
   end
-
-  depends_on macos: ">= :catalina"
 
   app "Live Home 3D.app"
 

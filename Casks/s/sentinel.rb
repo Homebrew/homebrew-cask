@@ -14,8 +14,8 @@ cask "sentinel" do
   homepage "https://docs.hashicorp.com/sentinel"
 
   livecheck do
-    url "https://developer.hashicorp.com/sentinel/install"
-    regex(%r{href=.*?/sentinel[._-]?v?(\d+(?:\.\d+)+)[._-]#{os}[._-]#{arch}\.zip}i)
+    url "https://releases.hashicorp.com/sentinel/"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/}i)
   end
 
   binary "sentinel"

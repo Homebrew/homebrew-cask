@@ -1,5 +1,5 @@
 cask "ankama" do
-  version "3.13.12"
+  version "3.13.36"
   sha256 :no_check
 
   url "https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup.dmg"
@@ -12,7 +12,7 @@ cask "ankama" do
     strategy :electron_builder
   end
 
-  disable! date: "2026-09-01", because: :unsigned
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
 

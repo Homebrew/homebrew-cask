@@ -16,8 +16,6 @@ cask "twake" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
-
   app "Twake Desktop.app"
 
   zap trash: [

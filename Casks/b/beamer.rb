@@ -1,6 +1,6 @@
 cask "beamer" do
-  version "4.1.17"
-  sha256 "3f1b9fec947cbc91ad8b46344e57fb39db8d06147e077f178db7f939703dc763"
+  version "4.2.0"
+  sha256 "6bd4a6c84e10ce35c5d641f921d875120a2acfb9e58300ee47d63bbdeb8f547a"
 
   url "https://ushining.softorino.com/shine_uploads/beamermac_#{version}.dmg"
   name "Beamer"
@@ -13,7 +13,6 @@ cask "beamer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
 
   app "Beamer.app"
 

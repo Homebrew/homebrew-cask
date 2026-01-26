@@ -15,8 +15,6 @@ cask "preform" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "PreForm.app"
 
   zap trash: [

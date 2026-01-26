@@ -1,6 +1,6 @@
 cask "ik-product-manager" do
-  version "1.1.8"
-  sha256 "30d05bd65d5068692c09030a943a254d09e76f59068d9a6c9c027b64adfcaae8"
+  version "1.1.10"
+  sha256 "efd790b06f0758078f562c0f19cba10611244740a8fe894a5e4a603a9ff2df1e"
 
   url "https://g1.ikmultimedia.com/plugins/ProductManager/ik_product_manager_#{version}.dmg",
       referer:    "https://www.ikmultimedia.com/",

@@ -10,6 +10,25 @@ cask "contour" do
   desc "Terminal emulator"
   homepage "https://github.com/contour-terminal/contour/"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
+  livecheck do
+    url :url
+    regex(/^contour[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.(?:dmg|pkg|zip)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
+  end
+
   depends_on macos: ">= :sonoma"
 
   app "contour.app"

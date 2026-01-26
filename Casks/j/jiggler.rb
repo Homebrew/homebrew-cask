@@ -1,18 +1,16 @@
 cask "jiggler" do
-  version "1.9"
+  version "1.10"
   sha256 :no_check
 
-  url "http://downloads.sticksoftware.com/Jiggler.dmg"
+  url "https://downloads.sticksoftware.com/Jiggler.dmg"
   name "Jiggler"
   desc "Keep your computer awake"
-  homepage "http://www.sticksoftware.com/software/Jiggler.html"
+  homepage "https://www.sticksoftware.com/software/Jiggler.html"
 
   livecheck do
     url :homepage
     regex(/<h1>.+(\d+(?:\.\d+)+)\s/i)
   end
-
-  depends_on macos: ">= :catalina"
 
   app "Jiggler.app"
 

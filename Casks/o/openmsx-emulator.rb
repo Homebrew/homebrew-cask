@@ -1,9 +1,9 @@
 cask "openmsx-emulator" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "20.0"
-  sha256 arm:   "bba6437e047cc9874ce6e7a3d00ff971168fef346646b66ec223aebf2227fad8",
-         intel: "bde52158dbbe6fc1f1c9e9bcecd9ff674ff39614c9624dd4f690ac4f4ff5b173"
+  version "21.0"
+  sha256 arm:   "f211e299ff039658dd8e943b775bb6b5e111a064caa78420e9d2345f2d116e51",
+         intel: "dba74cb02b431ff6255a209887f65af32d6bb165afbb7815931b40915f589ba6"
 
   url "https://github.com/openMSX/openMSX/releases/download/RELEASE_#{version.dots_to_underscores}/openmsx-#{version}-mac-#{arch}-bin.dmg",
       verified: "github.com/openMSX/openMSX/"
@@ -18,6 +18,8 @@ cask "openmsx-emulator" do
       tags.filter_map { |tag| tag[regex, 1]&.tr("_", ".") }
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "openMSX.app"
 

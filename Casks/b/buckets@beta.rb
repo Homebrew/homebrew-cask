@@ -1,9 +1,9 @@
 cask "buckets@beta" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.81.0"
-  sha256 arm:   "1a2cf01973219c36b4874876290ef8b7a92b78ae1c0ae46a63efd80258b9f486",
-         intel: "c01ab811f6fd5218f74dd723796d49a3d7cf28f616d586b0e927c0a076e085e6"
+  version "0.81.1"
+  sha256 arm:   "2bd4217dd75b3f813647c9f4a454e52e6e4c2dbb03bc96161f22e393360d86f3",
+         intel: "47ea9bf7f6c180a2ebb743ffdc6d235752aae87963fd2ed2983024f2e4cae4c7"
 
   url "https://github.com/buckets/desktop-beta/releases/download/v#{version}/Buckets-Beta-#{arch}-#{version}.dmg",
       verified: "github.com/buckets/desktop-beta/"
@@ -15,8 +15,6 @@ cask "buckets@beta" do
     url :url
     strategy :github_latest
   end
-
-  depends_on macos: ">= :high_sierra"
 
   app "Buckets Beta.app"
 

@@ -10,24 +10,7 @@ cask "nvidia-nsight-compute" do
   desc "Interactive profiler for CUDA and NVIDIA OptiX"
   homepage "https://developer.nvidia.com/nsight-compute"
 
-  livecheck do
-    url "https://developer.nvidia.com/tools-downloads.json"
-    regex(/nsight[._-]compute[._-]mac[._-]#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
-    strategy :json do |json, regex|
-      json["downloads"]&.map do |download|
-        next unless download["development_platform"]&.include?("osx")
-
-        download["files"]&.map do |file|
-          match = file["url"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end&.flatten
-    end
-  end
-
-  depends_on macos: ">= :high_sierra"
+  disable! date: "2025-10-02", because: "requires login to download"
 
   app "NVIDIA Nsight Compute.app"
 
