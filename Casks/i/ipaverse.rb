@@ -1,6 +1,6 @@
 cask "ipaverse" do
   version "1.0.0"
-  sha256 "e3e28f60eb9bfc000977e6e5f0e1b455854daebd034770567eefae537e15d4f4"
+  sha256 "ca79f788f14acf9b5be9dac1f18981e3d6e26801f7ab3767e4f66f09974a2b87"
 
   url "https://github.com/bahattinkoc/ipaverse/releases/download/v#{version}/ipaverse.dmg"
   name "ipaverse"
@@ -13,7 +13,7 @@ cask "ipaverse" do
 
   zap trash: [
     "~/Library/Application Support/ipaverse",
-    "~/Library/Caches/ipaverse",
+    "~/Library/Caches/com.ipaverse",
     "~/Library/Preferences/com.ipaverse.plist",
   ]
 end
