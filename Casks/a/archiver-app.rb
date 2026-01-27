@@ -1,6 +1,6 @@
 cask "archiver-app" do
-  version "5.0.1"
-  sha256 "ad069bf588ac8912bf8817f3c6bd13e2f238b98a6a6ed8c520c5ff16f5b96612"
+  version "5.0.2"
+  sha256 "13c443158156fb2654dbeae2f2ea8a99c25561138a58919baef62247ac4d72be"
 
   url "https://github.com/incbee/archiver-#{version.major}-releases/releases/download/v#{version}/Archiver-#{version}-universal-mac.zip",
       verified: "github.com/incbee/archiver-#{version.major}-releases/"
