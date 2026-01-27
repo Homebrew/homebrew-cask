@@ -1,5 +1,5 @@
 cask "keybase" do
-  arch arm: "arm64-"
+  arch arm: "-arm64"
 
   on_arm do
     version "6.5.4,20250917154415,52400b6f28"
