@@ -1,6 +1,6 @@
 cask "cinebench" do
   version "2024"
-  sha256 "abd8533154d54cb74dc005226177767b7f16d6e647a0cc075a2f45854d3887ea"
+  sha256 "c33ed3e001bab5708a6c606a3ef8e95db20f1c03032735636c8433cc06e00140"
 
   url "https://mx-app-blob-prod.maxon.net/mx-package-production/website/macos/maxon/cinebench/Cinebench#{version}_macOS.dmg",
       referer: "https://www.maxon.net/en/downloads/cinebench-#{version}-downloads"
