@@ -1,9 +1,9 @@
 cask "alma" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.235"
-  sha256 arm:   "8a98700c14c6632835a2abbcb5df0632b28d2167fc2cd65746384d55db129ed4",
-         intel: "0e03c7c61e44933e9686f74da1e2a5066c2f958f86370209bfa0e14dc0bf225f"
+  version "0.0.236"
+  sha256 arm:   "6df9d388fbb604a91643770cc74d0fdb6866dad48983aa07fe889e204ff0429e",
+         intel: "34be1af859869255fcc09c7fbf9a5b5f2528847c8d25c465d7b5dae23984d611"
 
   url "https://updates.alma.now/alma-#{version}-mac-#{arch}.dmg"
   name "Alma"
