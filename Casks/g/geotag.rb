@@ -12,7 +12,7 @@ cask "geotag" do
     regex(/href=.*?GeoTag[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
   depends_on formula: "exiftool"
 
   app "GeoTag.app"
