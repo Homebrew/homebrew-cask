@@ -1,5 +1,5 @@
 cask "privadovpn" do
-  version "3.13.0"
+  version "3.18.0"
   sha256 :no_check
 
   url "https://privadovpn.com/apps/osx/PrivadoVPN.dmg"
