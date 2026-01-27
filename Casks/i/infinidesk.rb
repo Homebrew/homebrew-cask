@@ -7,8 +7,8 @@ cask "infinidesk" do
 
   url "https://infinidesk.app/static/download/v#{version}/InfiniDesk.dmg"
   name "infinidesk"
-  desc "Create multiple desktops on your Mac each with unique files, wallpaper & widgets"
-  homepage "https://infinidesk.app"
+  desc "Create multiple virtual desktops, each with unique files, wallpaper and widgets"
+  homepage "https://infinidesk.app/"
 
   livecheck do
     url :homepage
