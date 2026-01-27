@@ -1,4 +1,4 @@
-cask "tritium-desktop" do
+cask "tritium" do
   version "0.2.25"
 
   on_arm do
@@ -15,6 +15,12 @@ cask "tritium-desktop" do
   name "Tritium"
   desc "Integrated drafting environment for legal professionals"
   homepage "https://tritium.legal/"
+
+  livecheck do
+    skip "No reliable version information available"
+  end
+
+  depends_on macos: ">= :big_sur"
 
   app "tritium.app"
 end
