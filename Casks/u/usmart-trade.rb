@@ -1,8 +1,8 @@
 cask "usmart-trade" do
   arch arm: "-arm64"
 
-  version "4.4.6,0605c927-e018-427d-a71f-510876abd545,2026-01-23"
-  sha256 "97922f0d428636c02354d5fe29522750e7e1754dbf4cadba5888dfe8b68a497f"
+  version "4.5.0,6befae6e-0995-4e24-90a4-a367bde95da6,2026-01-27"
+  sha256 "cb853ed47057481e253e6669d43a30d148bab668919e2fbed85f1dc9ae01357a"
 
   url "https://jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/admin/app-version-file/#{version.csv.third}/#{version.csv.second}/uSMART%20Trade-#{version.csv.first}-universal.dmg",
       verified: "jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/"
