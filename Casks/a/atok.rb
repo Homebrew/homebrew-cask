@@ -15,6 +15,8 @@ cask "atok" do
     end
   end
 
+  auto_updates true
+
   pkg "ATOK インストーラ.pkg"
 
   uninstall launchctl: [
