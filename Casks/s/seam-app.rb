@@ -1,10 +1,10 @@
 cask "seam-app" do
-  version "0.0.8"
-  sha256 "3486af51d3575dc18fa21640fca8dd749db70e99fc60e61ead108fbb8e0c4e02"
+  version "0.0.10"
+  sha256 "46b75a18d68ffd3c7e3ab00111e050477387a52e6c25e134c0eaf703895965d2"
 
   url "https://releases.getseam.app/#{version}/Seam.dmg"
   name "Seam"
-  desc "Dynamic Island with system HUDs and notifications"
+  desc "Clean Dynamic Island for macOS"
   homepage "https://getseam.app/"
 
   livecheck do
