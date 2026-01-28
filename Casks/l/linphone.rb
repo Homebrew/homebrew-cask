@@ -1,6 +1,6 @@
 cask "linphone" do
-  version "5.3.3"
-  sha256 "61c235b27877dc81d81b5b62b81302fe98572530a21be45bbd1da78836baa625"
+  version "6.1.0"
+  sha256 "33be372580a2e55323dfd0a17abb12773fad58f5c1179be4f3400dd6eeaea69f"
 
   url "https://download.linphone.org/releases/macosx/app/Linphone-#{version}-mac.dmg"
   name "Linphone"
@@ -24,8 +24,4 @@ cask "linphone" do
     "~/Library/Preferences/linphone",
     "~/Library/Saved Application State/com.belledonnecommunications.linphone.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
