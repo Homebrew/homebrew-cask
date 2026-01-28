@@ -1,6 +1,6 @@
 cask "hyperwhisper" do
-  version "2.20.0"
-  sha256 "eff113de0fd844198a8012fe916895cf65b1bd2d48f7603e0f77db80caf3e350"
+  version "2.20.1"
+  sha256 "4fba19321c7c153c71aa7a7c4b14d3609a424fe94c9e14701e94db488c9b20c9"
 
   url "https://builds.hyperwhisper.com/hyperwhisper-#{version}.dmg"
   name "HyperWhisper"
