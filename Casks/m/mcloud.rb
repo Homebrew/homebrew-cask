@@ -1,6 +1,6 @@
 cask "mcloud" do
-  version "4.1.2,000"
-  sha256 "8264af1af868c71310fd58f0a8c2618a69f5ff72b412fd3910e2e567e55362d7"
+  version "4.2.0,000"
+  sha256 "d0dadba4141efafba59f9ca3a620645cb965ea4b500ba3a9ba42201c81147cb6"
 
   url "https://yun.mcloud.139.com/mCloudPc/macV#{version.csv.first.no_dots}/mCloud-#{version.csv.first}-#{version.csv.second}.dmg"
   name "mcloud"
