@@ -1,6 +1,6 @@
-cask "tigervnc-viewer" do
-  version "1.15.0"
-  sha256 "e43877091f694558f003c2b0e686585c80ed19dd8c8280f0e9817a48b269176c"
+cask "tigervnc" do
+  version "1.16.0"
+  sha256 "40b67a1478b798eed07df54e23bd3975c91b7abb07497044f93fe9b20f63ed5d"
 
   url "https://downloads.sourceforge.net/tigervnc/TigerVNC-#{version}.dmg",
       verified: "downloads.sourceforge.net/tigervnc/"
@@ -13,7 +13,9 @@ cask "tigervnc-viewer" do
     regex(%r{url=.*?/TigerVNC[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  app "TigerVNC Viewer #{version}.app"
+  depends_on macos: ">= :big_sur"
+
+  app "TigerVNC.app"
 
   zap trash: "~/Library/Saved Application State/com.tigervnc.tigervnc.savedState"
 end
