@@ -1,6 +1,6 @@
 cask "chatgpt" do
-  version "1.2026.013,1768606532"
-  sha256 "9e070d183c2e43a5ae339122a3338e93fe928d6573b82465bdc6c6ede3ff1a1c"
+  version "1.2026.014,1769698892"
+  sha256 "daf10ef5d262f43d84537030abf24918669f87a11916715ac8d225921a500539"
 
   url "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "persistent.oaistatic.com/sidekick/public/"
