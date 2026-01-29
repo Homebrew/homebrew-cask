@@ -9,7 +9,7 @@ cask "infinidesk" do
 
   livecheck do
     url :homepage
-    regex(/Version[^\d]*(\d+(?:\.\d+)+)/i)
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :big_sur"
