@@ -4,7 +4,7 @@ cask "seam-app" do
 
   url "https://releases.getseam.app/#{version}/Seam.dmg"
   name "Seam"
-  desc "Dynamic Island with system HUDs and notifications"
+  desc "Productivity-first Dynamic Island for the notch"
   homepage "https://getseam.app/"
 
   livecheck do
