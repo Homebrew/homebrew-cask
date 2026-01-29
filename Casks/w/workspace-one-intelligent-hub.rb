@@ -14,6 +14,7 @@ cask "workspace-one-intelligent-hub" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   pkg "WorkspaceONEIntelligentHub.pkg"
 
