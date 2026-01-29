@@ -1,6 +1,6 @@
 cask "arctic" do
-  version "25.2.0,56,20250926102928"
-  sha256 "5fcb71c093f34fdf70afdcbf4130d8a9201e6a6820d9f589dcf99a6b75741279"
+  version "26.1.0,66,20260120060303"
+  sha256 "775215cccff73f6623a0b5cfb66e6d8b8bb9af6233e94e0f89edd8c25a64bd60"
 
   url "https://updates.hedge.video/arctic/macos/updates/production/Arctic_#{version.csv.third}_v#{version.csv.first}b#{version.csv.second}/Arctic-#{version.csv.second}.zip"
   name "Arctic"
