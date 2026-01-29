@@ -5,6 +5,10 @@ cask "librepcb" do
   sha256 arm:   "729bacf2493378fd4809f8b8700eae44db6b63a4d3e2337f583c3e62d823896a",
          intel: "784c23dca953d3eac1132a288a2fa4d430aef26ce99bf89b864e911293ea9a20"
 
+  on_intel do
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  end
+
   url "https://download.librepcb.org/releases/#{version}/librepcb-#{version}-mac-#{arch}.dmg"
   name "LibrePCB"
   desc "EDA software to develop printed circuit boards"
