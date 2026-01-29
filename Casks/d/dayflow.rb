@@ -8,8 +8,8 @@ cask "dayflow" do
   homepage "https://github.com/JerryZLiu/Dayflow"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://jerryzliu.github.io/Dayflow/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
