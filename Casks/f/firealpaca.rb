@@ -1,5 +1,5 @@
 cask "firealpaca" do
-  version "2.14.1"
+  version "2.15.0"
   sha256 :no_check
 
   url "https://firealpaca.com/download/mac",
@@ -13,11 +13,9 @@ cask "firealpaca" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :monterey"
+
   app "FireAlpaca.app"
 
   zap trash: "~/Library/Application Support/FireAlpaca"
-
-  caveats do
-    requires_rosetta
-  end
 end
