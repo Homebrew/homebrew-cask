@@ -1,6 +1,6 @@
 cask "grandtotal" do
-  version "9.2.6.26"
-  sha256 "48dda1d699d5e634867015537db6e1926b5179220621dbe6becde4dab951559b"
+  version "9.2.6.27"
+  sha256 "6bd20d1637bc4b071ec2c9ffb0ac17f0b2f3918a4ae3de7a59bcdfd5cb501d1c"
 
   url "https://www.mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.dmg"
   name "GrandTotal"
@@ -14,8 +14,6 @@ cask "grandtotal" do
       items.map { |item| item.url[regex, 1] }
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
 
