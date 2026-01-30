@@ -1,8 +1,8 @@
 cask "tentacle-sync-studio" do
-  version "1.36"
-  sha256 "879118fdabbde5551fb0f0120f73b796dfd94a952954c1199837c58fb2407344"
+  version "1.37"
+  sha256 "383cd519b647594254ffc6deb744e47c5f939932d96711a60158e6e40d2fe16e"
 
-  url "https://cms.tentaclesync.com/assets/downloads/download-files/ttsyncstudio-v#{version.dots_to_underscores}.dmg"
+  url "https://cms.tentaclesync.com/assets/ttsyncstudio-v#{version.dots_to_underscores}.dmg"
   name "Tentacle Sync Studio"
   desc "Automatically synchronise video and audio via timecode"
   homepage "https://tentaclesync.com/"
@@ -14,6 +14,8 @@ cask "tentacle-sync-studio" do
       page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Tentacle Sync Studio.app"
 
