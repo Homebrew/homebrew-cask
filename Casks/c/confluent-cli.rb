@@ -2,11 +2,11 @@ cask "confluent-cli" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "4.50.0"
-  sha256 arm:          "191bccd09e32211acadef5cb7d1469946dba1352fb5ed44d52cb80f8bf9d08ea",
-         intel:        "a2dae2c3dfe4cd8035acab88f8468270c637b1220d54ccde6c0e40f5a9ad4b3d",
-         arm64_linux:  "452a33b55d1d2b7435bfb2aa65884d9eede8bf52a12a9c7c0aed86b4497abf29",
-         x86_64_linux: "8817bfb305141e58ea28ccc9de2541acb73b30ed0d06af649a475f7baf89705c"
+  version "4.51.0"
+  sha256 arm:          "6ade0b99f2712a996ca6698541ef9d9edb9650962d6a26e9110e85b0e5147291",
+         intel:        "fea5f17686e896aa5f53170defd573bd63274906e2638a1baa6c3e8a0934ec1d",
+         arm64_linux:  "f9eab340f85948640bd3da491af459974cc5d4c6c50338ed59c953caead4ade1",
+         x86_64_linux: "99a34a183847c0d7cf561b7823c4102c4beca59992a5fa96dff6814812afc438"
 
   url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_#{version}_#{os}_#{arch}.tar.gz",
       verified: "s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/"
