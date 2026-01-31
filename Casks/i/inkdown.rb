@@ -11,6 +11,7 @@ cask "inkdown" do
   homepage "https://www.inkdown.me/"
 
   deprecate! date: "2025-01-25", because: :moved_to_mas
+  disable! date: "2026-01-27", because: :moved_to_mas
 
   auto_updates true
   depends_on macos: ">= :monterey"

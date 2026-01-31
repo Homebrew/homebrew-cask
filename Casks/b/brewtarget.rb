@@ -1,6 +1,6 @@
 cask "brewtarget" do
-  version "5.0.1"
-  sha256 "69c642dc3ff0a2937c2c26fc72ecbbb1d59ffb144590318df9279467a0c3c6ea"
+  version "5.0.2"
+  sha256 "6654e6862459a3b868f149adf40f0f989f8f7379106278afa076d52a655c1874"
 
   url "https://github.com/Brewtarget/brewtarget/releases/download/v#{version}/brewtarget_#{version}_MacOS.dmg",
       verified: "github.com/Brewtarget/brewtarget/"

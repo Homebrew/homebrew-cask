@@ -1,6 +1,6 @@
 cask "send-anywhere" do
-  version "24.4.1,1758092363"
-  sha256 "696d5f93b942faa8f3f52ba537d51d1fbddb7041fc99cd24b3181049e21e61c8"
+  version "24.5.0,1769665926"
+  sha256 "5956b2ab9c935d46341e498e009b9b660f4842d91276676bcdf4fa0cef17f98d"
 
   url "https://update.send-anywhere.com/osx_downloads/SendAnywhere_#{version.csv.second}.dmg"
   name "Send Anywhere"

@@ -1,9 +1,9 @@
 cask "rize" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.6"
-  sha256 arm:   "d29a92a5405109ff2defe3cee25c0d5d5bcb94943d5d41753f1f1e3f29699e8c",
-         intel: "adc163d6e12756315e28a6d514114b7346eac34281415376b4668ef6a4aa5d2e"
+  version "2.3.7"
+  sha256 arm:   "d2b850295d80b808b14f0e76e0e4a512ee86ac0c3e2ed14ee2976e26bf6f3eeb",
+         intel: "2ec9e0b8dee2641739e2802defea0f62915e604362c4e62c1d1be84d3be49b22"
 
   url "https://github.com/rize-io/lua/releases/download/v#{version}/Rize-#{version}-#{arch}.dmg",
       verified: "github.com/rize-io/lua/"

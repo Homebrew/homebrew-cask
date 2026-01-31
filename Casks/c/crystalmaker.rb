@@ -1,5 +1,5 @@
 cask "crystalmaker" do
-  version "11.6.2"
+  version "11.6.3"
   sha256 :no_check
 
   url "https://crystalmaker.com/downloads/crystalmaker#{version.major}_mac.zip"

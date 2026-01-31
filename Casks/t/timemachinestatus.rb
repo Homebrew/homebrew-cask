@@ -1,6 +1,6 @@
 cask "timemachinestatus" do
-  version "0.2.6"
-  sha256 "f3a58386965fdcfe261172c0167a41b887fa635e42e1ed908c337d2f48562627"
+  version "0.3.0"
+  sha256 "da4194bfb2d32bba67b444aeadcb8acf0a536d7002ea5c79af9347c8bea417b5"
 
   url "https://github.com/lukepistrol/TimeMachineStatus/releases/download/#{version}/TimeMachineStatus.dmg"
   name "TimeMachineStatus"
@@ -13,7 +13,7 @@ cask "timemachinestatus" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
 
   app "TimeMachineStatus.app"
 

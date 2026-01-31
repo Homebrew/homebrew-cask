@@ -5,13 +5,13 @@ cask "gogs" do
   on_macos do
     arch arm: "arm64", intel: "amd64"
   end
-  os macos: ".darwin", linux: "linux"
+  os macos: "darwin", linux: "linux"
 
-  version "0.13.3"
-  sha256 arm:          "23804e5e246f054f53c2dce1d735f73710d348adc91cd461631a922351097cea",
-         intel:        "98e5728e9a18aeef1d182492a3cba9d78d7a17df5d7c54a34db93082970f2fb1",
-         arm64_linux:  "c78c0d2a751cb956081bc0f06ed7df4e02f8417a765df90da25a21639c74c607",
-         x86_64_linux: "cb146291e29bbf1e7a8dc13e71a23eb47b5ec55eec44680e8bd8777aa0bdaeb4"
+  version "0.13.4"
+  sha256 arm:          "ddc99b9d54aa8eb1af86552cbf167b34f06f3f59ffca41a83510407b42a785fb",
+         intel:        "a31fa6928732a30d3dda6ef605f2ae0e1aa3c980f4bf69c3802f1a8e1eb3a77c",
+         arm64_linux:  "8118465584774788393e0e39c9be21e8a9f31348c7cb2902b04c2b23b20c6d50",
+         x86_64_linux: "ac03642810b0d1bd50aca8bc6c307ecc25366bfe6fb188c8bbc20af783ce08a4"
 
   url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_#{os}_#{arch}.zip",
       verified: "github.com/gogs/gogs/"

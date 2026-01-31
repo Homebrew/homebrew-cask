@@ -1,6 +1,6 @@
 cask "spotmenu" do
-  version "2.2.0"
-  sha256 "9e373505d2ec01bd27733cd4b4c2dcafc2eed625ed805eefc6eaca9651ce8468"
+  version "2.3.0"
+  sha256 "00394a4ce7413e9fbb8d9df11c0154dde011a74fc1b013f4a9e613883c2dcb8c"
 
   url "https://github.com/kmikiy/SpotMenu/releases/download/v#{version}/SpotMenu.app.zip"
   name "SpotMenu"
@@ -12,10 +12,8 @@ cask "spotmenu" do
     strategy :github_latest
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   auto_updates true
-  depends_on macos: ">= :tahoe"
+  depends_on macos: ">= :ventura"
 
   app "SpotMenu.app"
 

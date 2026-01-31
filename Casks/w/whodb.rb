@@ -1,11 +1,16 @@
 cask "whodb" do
-  version "0.89.0"
-  sha256 "9c95f2d1d872103fa5236a8cf7b4c451431202e5e72d90766f242305da4167b7"
+  version "0.90.0"
+  sha256 "adf16ee03a16c33955c2c922fa189073308aa24dca6b5509beb7463d4831f55e"
 
   url "https://github.com/clidey/whodb/releases/download/#{version}/whodb.dmg"
   name "WhoDB"
   desc "Database management tool with AI-powered features"
   homepage "https://github.com/clidey/whodb"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "WhoDB.app"
 

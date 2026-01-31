@@ -9,10 +9,7 @@ cask "ncar-ncl" do
   desc "Interpreted language for scientific data analysis and visualization"
   homepage "https://www.ncl.ucar.edu/"
 
-  livecheck do
-    url :homepage
-    regex(/>Current\s*Version.*?v?(\d+(?:\.\d+)+)\s*?</i)
-  end
+  disable! date: "2026-01-27", because: :no_longer_available
 
   depends_on cask: "xquartz"
   depends_on formula: "gcc"

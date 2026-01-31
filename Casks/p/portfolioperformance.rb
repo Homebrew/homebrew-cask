@@ -12,8 +12,8 @@ cask "portfolioperformance" do
   homepage "https://www.portfolio-performance.info/en/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://www.portfolio-performance.info/en/download.html"
+    regex(/href=.*?PortfolioPerformance[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   auto_updates true

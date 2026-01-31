@@ -8,10 +8,11 @@ cask "finetune" do
   homepage "https://github.com/ronitsingh10/FineTune"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/ronitsingh10/FineTune/main/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sonoma"
 
   app "FineTune.app"

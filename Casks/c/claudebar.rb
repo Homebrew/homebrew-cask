@@ -1,6 +1,6 @@
 cask "claudebar" do
-  version "0.3.17"
-  sha256 "09b40cef094b715042de53cdde0094dae01c4d8479a69d6903b46cb81d3f319d"
+  version "0.3.18"
+  sha256 "c37e0d19777e05183949c993fb6c6b1f1a432b80ae5038198e8a018689f7f741"
 
   url "https://github.com/tddworks/ClaudeBar/releases/download/v#{version}/ClaudeBar-#{version}.dmg"
   name "ClaudeBar"
@@ -17,8 +17,11 @@ cask "claudebar" do
   app "ClaudeBar.app"
 
   zap trash: [
+    "~/Library/Application Support/ClaudeBar",
     "~/Library/Caches/ClaudeBar",
     "~/Library/Caches/com.tddworks.claudebar",
+    "~/Library/HTTPStorages/com.tddworks.claudebar",
+    "~/Library/Logs/ClaudeBar",
     "~/Library/Preferences/ClaudeBar.plist",
     "~/Library/Preferences/com.tddworks.claudebar.plist",
   ]
