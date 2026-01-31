@@ -1,6 +1,6 @@
 cask "scummvm-app" do
-  version "2.9.1"
-  sha256 "ab273a2986c039bfd255ce905758e1533eabf72d10cfc6f06b516ff005ff4943"
+  version "2026.1.0"
+  sha256 "759815f40affd7424abaec987117080b4d200d713f76027319fe3ae158b13aff"
 
   url "https://downloads.scummvm.org/frs/scummvm/#{version}/scummvm-#{version}-macosx.dmg"
   name "ScummVM"
@@ -13,6 +13,7 @@ cask "scummvm-app" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "ScummVM.app"
 
