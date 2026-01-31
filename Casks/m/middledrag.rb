@@ -18,10 +18,6 @@ cask "middledrag" do
 
   pkg "MiddleDrag-#{version}.pkg"
 
-  postflight do
-      ohai "MiddleDrag requires Accessibility permissions to function."
-      puts "Please grant Accessibility permissions in System Settings -> Privacy & Security -> Accessibility."
-  end
 
   uninstall pkgutil: "app.middledrag.MiddleDrag"
 
