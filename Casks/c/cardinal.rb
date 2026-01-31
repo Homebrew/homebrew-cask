@@ -7,8 +7,6 @@ cask "cardinal" do
   desc "Virtual modular synthesiser plugin"
   homepage "https://github.com/DISTRHO/Cardinal"
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   pkg "Cardinal-macOS-universal-#{version}.pkg"
 
   uninstall pkgutil: [
