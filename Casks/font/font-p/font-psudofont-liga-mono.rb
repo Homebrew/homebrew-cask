@@ -6,10 +6,10 @@ cask "font-psudofont-liga-mono" do
   name "psudoFont Liga Mono"
   homepage "https://github.com/psudo-dev/psudofont-liga-mono"
 
-  font "psudoFont Liga Mono/psudoFont_Liga_Mono_-_Bold.ttf"
-  font "psudoFont Liga Mono/psudoFont_Liga_Mono_-_BoldItalic.ttf"
-  font "psudoFont Liga Mono/psudoFont_Liga_Mono_-_Italic.ttf"
-  font "psudoFont Liga Mono/psudoFont_Liga_Mono_-_Regular.ttf"
+  font "psudoFont_Liga_Mono_V.#{version}/psudoFont_Liga_Mono_-_Bold.ttf"
+  font "psudoFont_Liga_Mono_V.#{version}/psudoFont_Liga_Mono_-_BoldItalic.ttf"
+  font "psudoFont_Liga_Mono_V.#{version}/psudoFont_Liga_Mono_-_Italic.ttf"
+  font "psudoFont_Liga_Mono_V.#{version}/psudoFont_Liga_Mono_-_Regular.ttf"
 
   # No zap stanza required
 end
