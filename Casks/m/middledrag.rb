@@ -18,7 +18,6 @@ cask "middledrag" do
 
   pkg "MiddleDrag-#{version}.pkg"
 
-
   uninstall pkgutil: "app.middledrag.MiddleDrag"
 
   zap trash: [
