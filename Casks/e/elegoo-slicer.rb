@@ -19,8 +19,8 @@ cask "elegoo-slicer" do
 
   zap trash: [
     "~/Library/Application Support/ElegooSlicer",
-    "~/Library/Caches/com.elegoo.slicer",
-    "~/Library/Preferences/com.elegoo.slicer.plist",
-    "~/Library/Saved Application State/com.elegoo.slicer.savedState",
+    "~/Library/Caches/com.elegoo3d.elegoo-slicer",
+    "~/Library/Preferences/com.elegoo3d.elegoo-slicer.plist",
+    "~/Library/Saved Application State/com.elegootechsupport.elegoo-slicer.savedState",
   ]
 end
