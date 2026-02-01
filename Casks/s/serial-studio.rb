@@ -1,6 +1,6 @@
 cask "serial-studio" do
-  version "3.2.2"
-  sha256 "fbef4366c6fe502b454bb399af1c0b6a943d7dc7e84b34cba97deb9c9cd1e14b"
+  version "3.2.3"
+  sha256 "1258b86bfd8f88ce6e32374015cc37d6036b409ac10c53183fb8d69fae1422a2"
 
   url "https://github.com/Serial-Studio/Serial-Studio/releases/download/v#{version}/Serial-Studio-Pro-#{version}-macOS.dmg",
       verified: "github.com/Serial-Studio/Serial-Studio/"
