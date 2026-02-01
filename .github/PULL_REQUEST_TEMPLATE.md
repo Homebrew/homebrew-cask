@@ -18,7 +18,7 @@ Additionally, **if adding a new cask**:
 
 -----
 
-**If AI was used to generate or assist with generating the PR;**
+**If AI was used to generate or assist with generating the PR**:
 
 - [ ] I used AI to generate or assist with generating this PR. *Please specify below how you used AI to help you*.
 - [ ] I have personally reviewed, tested and verified *all* changes/additions, including [`zap` stanza](https://docs.brew.sh/Cask-Cookbook#stanza-zap) paths.
