@@ -8,10 +8,11 @@ cask "retrace" do
   homepage "https://retrace.to/"
 
   livecheck do
-    url "https://cdn.retrace.to/index.html"
-    regex(/Retrace[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://retrace.to/appcast.xml"
+    strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :ventura"
   depends_on arch: :arm64
 
