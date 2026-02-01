@@ -22,6 +22,6 @@ cask "commander" do
     "~/Library/Application Support/Commander",
     "~/Library/Caches/Commander",
     "~/Library/Commander",
-    "~/Library/Preferences/com.krzyzanowskim.Commander.plist"
+    "~/Library/Preferences/com.krzyzanowskim.Commander.plist",
   ]
 end
