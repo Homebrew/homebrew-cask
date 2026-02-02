@@ -15,14 +15,14 @@ cask "mos@beta" do
       json.map do |release|
         next unless release["prerelease"]
 
-        asset_versions = release["assets"]&.map do |asset|
+        asset_versions = release["assets"]&.filter_map do |asset|
           match = asset["name"]&.match(regex)
           next if match.blank?
 
           match[2] ? "#{match[1]},#{match[2]}" : match[1]
-        end.compact
+        end&.compact
 
-        next asset_versions unless asset_versions.blank?
+        next asset_versions if asset_versions.present?
 
         tag_match = release["tag_name"]&.match(/v?(\d+(?:\.\d+)+-beta-\d+(?:\.\d+)?)/i)
         next if tag_match.blank?
