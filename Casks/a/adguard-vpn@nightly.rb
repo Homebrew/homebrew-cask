@@ -1,6 +1,6 @@
 cask "adguard-vpn@nightly" do
-  version "2.9.0.924"
-  sha256 "11d5e29ed1cb934fc64c9d5034eafa0aba5bb161b2cca90377750289c40430a8"
+  version "2.9.0.932"
+  sha256 "c4bb080ac897d2f9166113ef469bd60838731c321f28822df4bbc9a67099e908"
 
   url "https://static.adguard-vpn.com/mac/nightly/AdGuardVPN-#{version}.dmg"
   name "AdGuard VPN"
