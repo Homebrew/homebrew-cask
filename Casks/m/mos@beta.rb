@@ -1,8 +1,8 @@
 cask "mos@beta" do
-  version "4.0.0-beta-1201,123826"
-  sha256 "c238e3ad61d20b2142a857891165ded7928e0b04e2359a86fb9c9d6ae1ca500a"
+  version "4.0.0-beta-20260201.1"
+  sha256 "c1da629077f453eaa142f553176311c6ef588ab5d2bce5d1aa231e1670389c9a"
 
-  url "https://github.com/Caldis/Mos/releases/download/#{version.csv.first}/Mos.Versions.#{version.csv.first}-#{version.csv.second}.zip",
+  url "https://github.com/Caldis/Mos/releases/download/#{version}/Mos.Versions.#{version}.zip",
       verified: "github.com/Caldis/Mos/"
   name "Mos"
   desc "Smooths scrolling and set mouse scroll directions independently"
@@ -10,7 +10,7 @@ cask "mos@beta" do
 
   livecheck do
     url :url
-    regex(/Mos\.Versions\.v?(\d+(?:\.\d+)+-beta-\d+)[._-](\d+)\.zip/i)
+    regex(/Mos\.Versions\.v?(\d+(?:\.\d+)+-beta(?:[.-]\d+)+)\.zip/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next unless release["prerelease"]
@@ -19,7 +19,7 @@ cask "mos@beta" do
           match = asset["name"]&.match(regex)
           next if match.blank?
 
-          "#{match[1]},#{match[2]}"
+          match[1]
         end
       end.flatten.compact
     end
