@@ -14,7 +14,7 @@ cask "bettertouchtool" do
 
   auto_updates true
   conflicts_with cask: "bettertouchtool@alpha"
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :big_sur"
 
   app "BetterTouchTool.app"
 
