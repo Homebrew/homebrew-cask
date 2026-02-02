@@ -1,9 +1,9 @@
 cask "visual-paradigm-ce" do
   arch arm: "AArch64", intel: "WithJRE"
 
-  version "18.0,20260117"
-  sha256 arm:   "2ab2fb8b2c2b575a3e38ed912b5e3293ed948fb53d479e5b0d4ee29231a42181",
-         intel: "d2eb61906564dfe5287682f1759ae2d93e5f1b74b4f0e646d3a782afcdaf4fc1"
+  version "18.0,20260121"
+  sha256 arm:   "76e99cdb3512939d6d5f2d25bf01f95bee56c00e3766960a71294d923bbd3488",
+         intel: "deebfad7f883d90dce4091e7ac434cc686e8ac0a6d8a077711d5944df6e8d3ee"
 
   url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm Community Edition"
@@ -20,8 +20,6 @@ cask "visual-paradigm-ce" do
       "#{match[1]},#{match[2]}"
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   # Renamed to avoid conflict with visual-paradigm.
   app "Visual Paradigm.app", target: "Visual Paradigm CE.app"
