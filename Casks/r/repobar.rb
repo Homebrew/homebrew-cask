@@ -13,10 +13,10 @@ cask "repobar" do
   app "RepoBar.app"
 
   zap trash: [
-    "~/Library/Application Support/RepoBar",
     "~/Library/Application Support/com.steipete.repobar",
-    "~/Library/Caches/RepoBar",
+    "~/Library/Application Support/RepoBar",
     "~/Library/Caches/com.steipete.repobar",
+    "~/Library/Caches/RepoBar",
     "~/Library/HTTPStorages/com.steipete.repobar",
     "~/Library/Preferences/com.steipete.repobar.plist",
     "~/Library/Saved Application State/com.steipete.repobar.savedState",
