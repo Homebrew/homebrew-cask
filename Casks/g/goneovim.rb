@@ -18,6 +18,7 @@ cask "goneovim" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on formula: "neovim"
+  depends_on macos: ">= :big_sur"
 
   app "goneovim-v#{version}-macos-#{arch}/goneovim.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
