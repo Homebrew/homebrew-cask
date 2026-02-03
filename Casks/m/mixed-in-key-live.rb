@@ -13,6 +13,7 @@ cask "mixed-in-key-live" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   pkg "Mixed In Key Live.pkg"
 
