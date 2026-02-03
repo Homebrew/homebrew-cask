@@ -1,6 +1,6 @@
 cask "wireless-workbench" do
-  version "7.7.0"
-  sha256 "1e982c3f1425b9c0fda7aa045984236c0c6a56b288ffb3d1dc723a6a075353e8"
+  version "7.8.0"
+  sha256 "c2abb9f1eedd6f44589acc0994a7220136d8adb8309c67c0813b7e2aff3d271c"
 
   url "https://content-files.shure.com/Software/wireless-workbench/#{version.dots_to_hyphens}/Wireless-Workbench-macOS-#{version}.pkg"
   name "Wireless Workbench"
