@@ -1,6 +1,6 @@
 cask "lunatask" do
-  version "2.1.20"
-  sha256 "00c39e271d757d930e49c80124657123c75563eb539f767fdd9a3843b87bfd5f"
+  version "2.1.21"
+  sha256 "b7fea389f0adb959e0a0625d0e2be6192fec91e230198ce38896b0e0f12dc197"
 
   url "https://github.com/lunatask/lunatask/releases/download/v#{version}/Lunatask-#{version}-universal.dmg",
       verified: "github.com/lunatask/lunatask/"
