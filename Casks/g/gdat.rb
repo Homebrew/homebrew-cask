@@ -19,7 +19,9 @@ cask "gdat" do
     end
   end
 
-  app "OS X 64 bit/Genealogical DNA Analysis Tool.app"
+  container nested: "macOS 64 bit/Genealogical DNA Analysis Tool.app.tar"
+
+  app "Genealogical DNA Analysis Tool.app"
 
   zap trash: [
     "/Library/Logs/DiagnosticReports/Genealogical DNA Analysis Tool*.diag",
