@@ -2,9 +2,9 @@ cask "antigravity" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "1.15.8,5724687216017408"
-  sha256 arm:   "20371f8253edda454fed0c5f68a1ef39b7605551625b56f65b58a1f35e0ff614",
-         intel: "0e2b46bcad70a46e1d3f3d48875e60a198e412fbb866b8080097db8a7271f919"
+  version "1.16.5,6703236727046144"
+  sha256 arm:   "1f64aa400affcedf000b23add6d3b3fd60e39d6b16c05d56809b56489a7682d9",
+         intel: "fd3f602c0ec94c26664175b753d0a5c06518c492fe9cbdb58c2716a0c82bb9fd"
 
   url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg",
       verified: "edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/"
@@ -24,7 +24,7 @@ cask "antigravity" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Antigravity.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
