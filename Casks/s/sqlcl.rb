@@ -1,6 +1,6 @@
 cask "sqlcl" do
-  version "25.3.2.317.1117"
-  sha256 "0af1ecb1da1a840d800cfe88fe20a35aeb9ceac9ff38729be0025b937b101d7e"
+  version "25.4.1.022.0618"
+  sha256 "b717d83aa1a7ada2ca38e7c8be5b369ea6a2f9f50c5fdb55e18d263b471ecab9"
 
   url "https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-#{version}.zip"
   name "sqlcl"
@@ -12,10 +12,7 @@ cask "sqlcl" do
     regex(/href=.*?sqlcl[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on formula: "openjdk@11"
-
-  stage_only true
-
+  # Runs after the staging of the zip file
   postflight do
     cask_dir   = Pathname("#{HOMEBREW_PREFIX}/Caskroom/sqlcl")
     version_dir = cask_dir/version
@@ -26,12 +23,12 @@ cask "sqlcl" do
     latest_dir.make_symlink(version_dir)
   end
 
+  stage_only true
+
   zap trash: "~/.sqlcl"
 
-  caveats <<~EOS
-    sqlcl requires Java 11+. The OpenJDK dependency will be installed automatically.
-    
-    To use sqlcl, add the following to your PATH:
-      #{staged_path}/sqlcl/bin
-  EOS
+  caveats do
+    depends_on_java "11+"
+    path_environment_variable "#{HOMEBREW_PREFIX}/Caskroom/sqlcl/latest/sqlcl/bin"
+  end
 end
