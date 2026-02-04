@@ -15,6 +15,8 @@ cask "rar" do
     regex(/>\s*RAR\s+for\s+macOS.*?v?(\d+(:?\.\d+)+)\s*</i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   binary "rar/rar"
   binary "rar/unrar"
   artifact "rar/default.sfx", target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
