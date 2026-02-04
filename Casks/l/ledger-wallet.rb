@@ -1,6 +1,6 @@
 cask "ledger-wallet" do
-  version "2.139.0"
-  sha256 "09affe03cc39f80442d805ceba38ff1f6a4dfc754711d97167670ec28a0eccbb"
+  version "2.139.1"
+  sha256 "4cbd6a8b5f14f59f713b036fbc1d8ddcce6e13f81e52c6811dec9edcb87d67b1"
 
   url "https://download.live.ledger.com/ledger-live-desktop-#{version}-mac.dmg"
   name "Ledger Wallet"
