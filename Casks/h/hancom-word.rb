@@ -1,5 +1,5 @@
 cask "hancom-word" do
-  version "12.30.0.6163"
+  version "12.30.0.6313"
   sha256 :no_check
 
   url "https://cdn.hancom.com/pds/hnc/DOWN/HancomOfficeHWPGeneral.pkg",
