@@ -15,9 +15,15 @@ cask "touchen-nxkey" do
 
   uninstall launchctl: [
               "com.raon.agent.touchen.nxkey",
+              "com.raon.touchen.nxkey",
               "com.raon.touchen.UserAgent",
+              "kr.co.iniline.crossex-service",
             ],
-            pkgutil:   "com.raonsecure.pkg.nxkey",
+            pkgutil:   [
+              "com.raonsecure.pkg.nxkey",
+              "kr.co.iniline.pkg.CrossEXPackage",
+              "kr.co.iniline.pkg.CrossEXServicePackage",
+            ],
             delete:    [
               "/Applications/CrossEX",
               "/Applications/TouchEn nxKey",
