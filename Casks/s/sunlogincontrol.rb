@@ -2,9 +2,9 @@ cask "sunlogincontrol" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_id = on_arch_conditional arm: "211", intel: "17"
 
-  version "6.6.1.26890"
-  sha256 arm:   "300b2539e8f081c2d320a331dd989fa247afa51938dfc7dd1d1e2bde8bae5214",
-         intel: "aa2d8950d857c9f7d0d0babc2aa76523a2d54e620503e2c9a495b7544c6ae82f"
+  version "6.6.1.28025"
+  sha256 arm:   "fb2386173da8a00bc7cd75bfb5b01bc938d5e3857bc885f12447db4a1fa6c950",
+         intel: "48e40ab23744c3307392a5310104a706fae41299c07c26659ef4c0caa6528ace"
 
   url "https://down.oray.com/sl/mac/SunloginRemote_#{version}_#{arch}.dmg"
   name "SunloginControl"
