@@ -1,5 +1,5 @@
 cask "folder-preview-pro" do
-  version "2.7.4"
+  version "2.7.5"
   sha256 :no_check
 
   url "https://anybox.ltd/folder-preview-pro/download/folder-preview-pro-latest.zip"
