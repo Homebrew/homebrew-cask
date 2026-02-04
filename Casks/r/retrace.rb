@@ -1,6 +1,6 @@
 cask "retrace" do
-  version "0.1"
-  sha256 "7c49152504694fb1e29803fd6adafa423f3129a6ee9b9b817dfec2a9b2e98d50"
+  version "0.5.1"
+  sha256 "7fcd7b2af79e6a1a01676f326fe8d5b76ccc4eed0eebb6607e4d2cc2315b756b"
 
   url "https://cdn.retrace.to/Retrace-v#{version}.dmg"
   name "Retrace"
@@ -9,7 +9,7 @@ cask "retrace" do
 
   livecheck do
     url "https://retrace.to/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
