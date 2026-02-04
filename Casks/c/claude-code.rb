@@ -22,13 +22,13 @@ cask "claude-code" do
   binary "claude"
 
   zap trash: [
-    "~/.cache/claude",
-    "~/.claude",
-    "~/.claude.json*",
-    "~/.config/claude",
-    "~/.local/bin/claude",
-    "~/.local/share/claude",
-    "~/.local/state/claude",
-    "~/Library/Caches/claude-cli-nodejs",
-  ]
+        "~/.cache/claude",
+        "~/.claude.json*",
+        "~/.config/claude",
+        "~/.local/bin/claude",
+        "~/.local/share/claude",
+        "~/.local/state/claude",
+        "~/Library/Caches/claude-cli-nodejs",
+      ],
+      rmdir: "~/.claude"
 end
