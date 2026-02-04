@@ -22,14 +22,14 @@ cask "codex-app" do
   uninstall quit: "com.openai.codex"
 
   zap trash: [
-    "~/.codex",
-    "~/Library/Application Support/Codex",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.openai.codex.sfl*",
-    "~/Library/Caches/com.openai.codex",
-    "~/Library/HTTPStorages/com.openai.codex",
-    "~/Library/HTTPStorages/com.openai.codex.binarycookies",
-    "~/Library/Logs/com.openai.codex",
-    "~/Library/Preferences/com.openai.codex.plist",
-    "~/Library/Saved Application State/com.openai.codex.savedState",
-  ]
+        "~/Library/Application Support/Codex",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.openai.codex.sfl*",
+        "~/Library/Caches/com.openai.codex",
+        "~/Library/HTTPStorages/com.openai.codex",
+        "~/Library/HTTPStorages/com.openai.codex.binarycookies",
+        "~/Library/Logs/com.openai.codex",
+        "~/Library/Preferences/com.openai.codex.plist",
+        "~/Library/Saved Application State/com.openai.codex.savedState",
+      ],
+      rmdir: "~/.codex"
 end
