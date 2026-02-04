@@ -23,5 +23,5 @@ cask "codex" do
 
   binary "codex-#{arch}-#{os}", target: "codex"
 
-  zap trash: "~/.codex"
+  zap rmdir: "~/.codex"
 end
