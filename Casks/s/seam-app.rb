@@ -14,6 +14,9 @@ cask "seam-app" do
     end
   end
 
+  # Download url is unreachable due to Cloudflare protections
+  disable! date: "2026-02-04", because: :unreachable
+
   auto_updates true
   depends_on macos: ">= :sonoma"
 
