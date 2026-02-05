@@ -8,7 +8,8 @@ cask "touchen-nxkey" do
   homepage "https://www.raonsecure.com/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   pkg "TouchEn_nxKey_Installer.pkg"
