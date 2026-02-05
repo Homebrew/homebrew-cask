@@ -2,8 +2,7 @@ cask "lodge" do
   version "1.0.0"
   sha256 "a524aac1d495b60301e4109e2fd003fc945c20dd766080ef0933995efa40c4e4"
 
-  url "https://github.com/nklmilojevic/Lodge/releases/download/v#{version}/Lodge.app.zip",
-      verified: "github.com/nklmilojevic/Lodge/"
+  url "https://github.com/nklmilojevic/Lodge/releases/download/v#{version}/Lodge.app.zip"
   name "Lodge"
   desc "Clipboard manager"
   homepage "https://github.com/nklmilojevic/Lodge"
