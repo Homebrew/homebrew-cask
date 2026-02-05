@@ -11,8 +11,8 @@ cask "google-drive" do
 
   livecheck do
     url :url
-    strategy :extract_plist do |item|
-      item["com.google.drivefs"]&.version
+    strategy :extract_plist do |items|
+      items["com.google.drivefs"]&.version
     end
   end
 

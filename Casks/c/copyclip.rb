@@ -9,8 +9,8 @@ cask "copyclip" do
 
   livecheck do
     url :url
-    strategy :extract_plist do |item|
-      item["com.fiplab.copyclip#{version.major}"]&.short_version
+    strategy :extract_plist do |items|
+      items["com.fiplab.copyclip#{version.major}"]&.short_version
     end
   end
 
