@@ -10,6 +10,7 @@ cask "commander" do
   livecheck do
     url "https://softwareupdate.commanderai.app/appcast/commanderai-appcast.xml"
     strategy :sparkle, &:short_version
+    throttle 5
   end
 
   auto_updates true
