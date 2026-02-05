@@ -9,8 +9,8 @@ cask "google-chrome" do
 
   livecheck do
     url :url
-    strategy :extract_plist do |versions|
-      versions.values.filter_map(&:short_version).first
+    strategy :extract_plist do |items|
+      items["com.google.Chrome"]&.short_version
     end
   end
 
