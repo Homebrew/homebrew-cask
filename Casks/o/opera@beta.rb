@@ -7,10 +7,8 @@ cask "opera@beta" do
   desc "Web browser"
   homepage "https://www.opera.com/computer/beta"
 
-  livecheck do
-    url "https://get.geo.opera.com/pub/opera-beta/"
-    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
-  end
+  # https://blogs.opera.com/desktop/2026/01/opera-126-0-5750-30-beta-update
+  deprecate! date: "2026-02-05", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :big_sur"
