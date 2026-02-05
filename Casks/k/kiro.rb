@@ -20,7 +20,7 @@ cask "kiro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Kiro.app"
   binary "#{appdir}/Kiro.app/Contents/Resources/app/bin/code", target: "kiro"
