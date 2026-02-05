@@ -1,6 +1,6 @@
 cask "plasticscm-cloud-edition" do
-  version "11.0.16.9915"
-  sha256 "d9bf0516286c2150225902ac0a35e21b8738de9d9d7e3a93ed0f1c064122242b"
+  version "11.0.16.9925"
+  sha256 "11f5f9ea935d53a6fb19b9622856ce1633f2ed429f3f3c8227342d2de6bcec07"
 
   url "https://d26z97tczqnlef.cloudfront.net/releases/#{version}/plasticscm/osx/unity-vcs-#{version}-mac.pkg.zip",
       verified: "d26z97tczqnlef.cloudfront.net/"
