@@ -14,6 +14,8 @@ cask "fbreader" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   pkg "FBReader.pkg"
 
   uninstall pkgutil: "com.fbreader"
