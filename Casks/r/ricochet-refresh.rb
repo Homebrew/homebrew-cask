@@ -1,9 +1,9 @@
 cask "ricochet-refresh" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "3.0.39"
-  sha256 arm:   "f584db82b9e4a0cf735cab528925adeda75a899b9bf34567f90b5bea8cf6b1b2",
-         intel: "dd56433f3f04e9af3803248ffbf3ff8f8f19f5ad07a6fff5984101f7e49af129"
+  version "3.0.40"
+  sha256 arm:   "243a35fb6d8f5484b0b8667f6da2feb086e4c03411ec5a1c13d4e48fed81736a",
+         intel: "b666035bf725ae2c63392e72ae298078a6de75bfe86401714b610a1ce351f037"
 
   on_arm do
     depends_on macos: ">= :big_sur"
