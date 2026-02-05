@@ -1,6 +1,6 @@
 cask "commander" do
-  version "0.5.505"
-  sha256 "ebb7cc13d93de4e7cd8bca89518c6e37997a66a7cf44876a1f3e17494b1606f3"
+  version "0.5.511"
+  sha256 "a43c13b5466a5c071049049c0e6f1550a1fcb50d06b7716cca9c85544fee53c4"
 
   url "https://download.commanderai.app/release/Commander-#{version}.zip"
   name "Commander"
@@ -10,6 +10,7 @@ cask "commander" do
   livecheck do
     url "https://softwareupdate.commanderai.app/appcast/commanderai-appcast.xml"
     strategy :sparkle, &:short_version
+    throttle 5
   end
 
   auto_updates true
