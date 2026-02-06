@@ -1,9 +1,9 @@
 cask "artisan" do
   arch arm: "arm", intel: "intel"
 
-  version "4.0.0"
-  sha256 arm:   "068c4223d4bdb3d82dd3b348c1b84f03de5b0ea9382545ad64752477a278ebf2",
-         intel: "2fc4ad31cebfb6bb00aeb0c2f4adf834f64084cf809840d6c5957e81a4824f3f"
+  version "4.0.2"
+  sha256 arm:   "dff6757058d3b55ac249d339f59ebe69bf72c0777d6cd170dbb1d0caf3221d50",
+         intel: "6ef4833ff1990ccf953260c3e4f28e58667d8579cff4b0ab7782b2b301a39642"
 
   on_arm do
     depends_on macos: ">= :sonoma"
