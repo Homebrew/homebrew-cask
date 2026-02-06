@@ -11,10 +11,6 @@ cask "luxury-yacht" do
   desc "Desktop app for managing Kubernetes clusters"
   homepage "https://luxury-yacht.app/"
 
-  livecheck do
-    url :url
-  end
-
   auto_updates true
 
   app "Luxury Yacht.app"
