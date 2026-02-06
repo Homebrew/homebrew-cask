@@ -7,6 +7,8 @@ cask "autodesk-fusion" do
   desc "Integrated CAD, CAM, CAE, and PCB software"
   homepage "https://www.autodesk.com/products/fusion-360/overview"
 
+  auto_updates true
+
   installer script: {
     executable: "#{staged_path}/Install Autodesk Fusion.app/Contents/MacOS/Fusion Client Downloader",
     args:       ["--quiet"],
