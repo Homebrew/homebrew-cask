@@ -1,4 +1,5 @@
 {
   "ai-studio": "all",
-  "icon-composer": "intel"
+  "icon-composer": "intel",
+  "plover": "intel"
 }

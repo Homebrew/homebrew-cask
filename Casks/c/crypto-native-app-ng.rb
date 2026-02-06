@@ -1,6 +1,6 @@
 cask "crypto-native-app-ng" do
-  version "26.1.20466"
-  sha256 "2d4f563b9d1265b75edfafc402ab1eb09e52313af21617aafb0daa73413f90ff"
+  version "26.1.20490"
+  sha256 "f9aa8ca1431776e9e91c3bfa3fee4a54dcc43082df59705f22945856fa010939"
 
   url "https://download.tescosw.cz/crypto/files/cryptong/Crypto-Native-App-NG-v#{version}-x64-MUI.dmg"
   name "Crypto Native App NG"

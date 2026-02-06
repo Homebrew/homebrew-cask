@@ -1,9 +1,9 @@
 cask "emdash" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.3"
-  sha256 arm:   "9395815bf0794d9256d3f3a69bfbbff4e96098449f2d3f99bdddd2aaff4c8893",
-         intel: "1cf398572de6fe84b46f9ffeb53678b64f9018194384f04d2b667c66b3b466df"
+  version "0.4.4"
+  sha256 arm:   "7227912d4d79c577a70f8fcfe9ec05a574aa8fe999e7a917dcf616893dd31daf",
+         intel: "195b3eea0e1c519f134cda6c0844084fab81d76f64eefa89574e857338741d0f"
 
   url "https://github.com/generalaction/emdash/releases/download/v#{version}/emdash-#{arch}.dmg",
       verified: "github.com/generalaction/emdash/"
