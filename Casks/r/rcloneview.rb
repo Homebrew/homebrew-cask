@@ -1,6 +1,6 @@
 cask "rcloneview" do
-  version "1.2.534"
-  sha256 "6342f31a5201142f3bacdaf7650033cee90bfb1932fa852e291074c02240beb5"
+  version "1.3.553"
+  sha256 "4db7985931871847d3552f6e82fb392744b6f6d33ed649f8c78f76fd46018880"
 
   url "https://downloads.bdrive.com/rclone_view/builds/RcloneView-#{version}.dmg",
       verified: "downloads.bdrive.com/rclone_view/"
