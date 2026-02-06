@@ -27,8 +27,7 @@ cask "logos" do
             quit:      "com.logos.Logos"
 
   zap trash: [
-    "~/Library/Preferences/com.logos.Logos.plist",
-    "~/Library/Preferences/com.logos.LogosCEF.plist",
-    "~/Library/Preferences/com.logos.LogosIndexer.plist",
+    "~/Library/LaunchAgents/com.logos.desktop.logosindexer.plist",
+    "~/Library/Preferences/com.logos.*.plist",
   ]
 end
