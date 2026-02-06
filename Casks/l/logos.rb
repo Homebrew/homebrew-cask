@@ -28,10 +28,6 @@ cask "logos" do
 
   zap trash: [
     "~/Library/LaunchAgents/com.logos.desktop.logosindexer.plist",
-    "~/Library/Preferences/com.logos.desktop.logos.plist",
-    "~/Library/Preferences/com.logos.desktop.logosindexer.plist",
-    "~/Library/Preferences/com.logos.Logos.plist",
-    "~/Library/Preferences/com.logos.LogosCEF.plist",
-    "~/Library/Preferences/com.logos.LogosIndexer.plist",
+    "~/Library/Preferences/com.logos.*.plist",
   ]
 end
