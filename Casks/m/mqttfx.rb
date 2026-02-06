@@ -1,9 +1,9 @@
 cask "mqttfx" do
   arch arm: "applesilicon", intel: "intel"
 
-  version "5.11.0"
-  sha256 arm:   "c53210d38104bd4b94da2feadb45e4b62445efb087470cc4fc27cd1412b5ff93",
-         intel: "a0258aa7ede33d57f7d039e7e61d239e2b52a016a3d300fcbd6abeaf0a55f42c"
+  version "5.12.0"
+  sha256 arm:   "38d799f24727b9bdd06166ddda3ca2361339a2c58a08b40fed56d570f73d10e5",
+         intel: "897e1d8f296ae4b062f96decb0d8ff99ba903a0531cf4a7147d31dc5d4afea01"
 
   url "https://download.softblade.net/mqttfx-#{version}-macos-#{arch}.dmg",
       verified: "download.softblade.net/"
