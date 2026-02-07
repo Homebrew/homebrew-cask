@@ -1,5 +1,5 @@
 cask "actual-odbc-pack" do
-  version "1.0.24"
+  version "1.0.25"
   sha256 :no_check
 
   url "https://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg",
