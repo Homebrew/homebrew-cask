@@ -11,7 +11,7 @@ cask "font-dejavu-sans" do
     strategy :github_latest
   end
 
-  font "dejavu-sans-ttf-#{version}/ttf/DejaVuSans.ttf"
+  conflicts_with cask: "font-dejavu"
 
-  # No zap stanza required
+  font "dejavu-sans-ttf-#{version}/ttf/DejaVuSans.ttf"
 end
