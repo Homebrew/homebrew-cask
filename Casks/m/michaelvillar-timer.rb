@@ -7,6 +7,10 @@ cask "michaelvillar-timer" do
   desc "Timer application"
   homepage "https://github.com/michaelvillar/timer-app"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :sonoma"
+
   app "Timer.app"
 
   uninstall quit: "com.michaelvillar.Timer"
