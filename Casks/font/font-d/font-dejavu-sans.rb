@@ -14,4 +14,6 @@ cask "font-dejavu-sans" do
   conflicts_with cask: "font-dejavu"
 
   font "dejavu-sans-ttf-#{version}/ttf/DejaVuSans.ttf"
+
+  zap trash: "~/Library/Fonts/DejaVuSans.ttf"
 end
