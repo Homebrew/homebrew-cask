@@ -19,7 +19,7 @@ cask "xkey" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :monterey"
 
   app "XKey.app"
 
