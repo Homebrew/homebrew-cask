@@ -22,4 +22,3 @@ cask "owocr" do
     "~/Library/Caches/com.aury.owocr",
   ]
 end
-
