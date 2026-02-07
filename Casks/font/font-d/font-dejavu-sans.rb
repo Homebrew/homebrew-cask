@@ -7,7 +7,7 @@ cask "font-dejavu-sans" do
   homepage "https://github.com/dejavu-fonts/dejavu-fonts"
 
   livecheck do
-    url :homepage
+    url :url
     strategy :github_latest
   end
 
