@@ -11,8 +11,6 @@ cask "luxury-yacht" do
   desc "Desktop app for managing Kubernetes clusters"
   homepage "https://luxury-yacht.app/"
 
-  auto_updates true
-
   app "Luxury Yacht.app"
 
   zap trash: "~/Library/Application Support/luxury-yacht"
