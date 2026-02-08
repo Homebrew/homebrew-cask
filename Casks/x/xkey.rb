@@ -9,12 +9,12 @@ cask "xkey" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)-(.+)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)(?:-(.+))?$/i)
     strategy :github_latest do |json, regex|
       match = json["tag_name"]&.match(regex)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
     end
   end
 
