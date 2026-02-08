@@ -15,5 +15,5 @@ cask "font-dejavu-sans" do
 
   font "dejavu-sans-ttf-#{version}/ttf/DejaVuSans.ttf"
 
-  zap trash: "~/Library/Fonts/DejaVuSans.ttf"
+  # No zap stanza required 
 end
