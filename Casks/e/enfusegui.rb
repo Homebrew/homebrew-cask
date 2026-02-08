@@ -1,6 +1,6 @@
 cask "enfusegui" do
-  version "3.25.1"
-  sha256 "9debfea477a31ef3cefa7d2ac3b3e415c1df6631b442590cfd7a32e1a4f6f20c"
+  version "3.26.0"
+  sha256 "81c7252d220443563ab8fed1b2fffd6a55ce8cdb157b014428569e18a3cafc23"
 
   url "https://swipeware.com/apps/enfusegui/v#{version.major}/EnfuseGUI-#{version}.dmg"
   name "EnfuseGUI"
@@ -16,7 +16,7 @@ cask "enfusegui" do
 
   pkg "EnfuseGUI #{version}.pkg"
 
-  uninstall pkgutil: "com.swipeware.enfusegui-installer.bjkzvwjjss"
+  uninstall pkgutil: "com.swipeware.enfusegui-installer*"
 
   zap trash: [
     "~/Library/Application Scripts/com.swipeware.enfusegui",
