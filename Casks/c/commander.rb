@@ -1,16 +1,36 @@
 cask "commander" do
-  version "0.6.530"
-  sha256 "d3f2635f3f7c3c1126fc1d2e8f313c429d67ac4aa4bb9708efa3227c98b4e36b"
+  version "0.6.540"
+  sha256 "3580c3759663aaab1f7a8a62b5d73255935c098ca02cf360e116fa2cdd410612"
 
   url "https://download.commanderai.app/release/Commander-#{version}.zip"
   name "Commander"
   desc "AI agent operator"
   homepage "https://commanderai.app/"
 
+  # Upstream typically creates several releases per day and there isn't always
+  # a release for every version increase. This manually throttles versions to
+  # one in every five versions (not releases), aiming for roughly one update per
+  # day. This may need to be adjusted if the release cadence changes.
   livecheck do
     url "https://softwareupdate.commanderai.app/appcast/commanderai-appcast.xml"
-    strategy :sparkle, &:short_version
-    throttle 5
+    strategy :sparkle do |items|
+      versions = items.filter_map do |item|
+        short_version = item.short_version
+        next unless short_version
+
+        Version.new(short_version)
+      end.uniq.sort
+
+      throttled_patch = nil
+      versions.map do |short_version|
+        patch = short_version.patch.to_i
+        cur_throttled_patch = patch - (patch % 5)
+        next if cur_throttled_patch == throttled_patch
+
+        throttled_patch = cur_throttled_patch
+        short_version
+      end
+    end
   end
 
   auto_updates true
