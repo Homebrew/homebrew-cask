@@ -1,6 +1,6 @@
 cask "houdahspot" do
-  version "6.7.3,d715eae6-3276-4ac8-9bb4-202f784ce629"
-  sha256 "9ac5551c2e3d81dd990c1ac19b2bc92eb815367add315d1d26d6af46f8e05087"
+  version "6.7.4,822f5d17-28d9-4efe-92d5-6cf26403e53d"
+  sha256 "d4e9a1cedb1eecad01e153e9488194a50f1e9563070a872072fe27de5e01b98f"
 
   url "https://dl.houdah.com/houdahSpot/updates/cast_assets/#{version.csv.second}/HoudahSpot_#{version.csv.first}.dmg"
   name "HoudahSpot"
