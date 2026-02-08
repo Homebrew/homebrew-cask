@@ -1,8 +1,8 @@
 cask "spitfire-audio" do
-  version "3.4.13,1720086000"
-  sha256 "1798f5776c181c217b66dd3a8a0f3d63156631b2584bee4d2943437b82c35269"
+  version "3.4.17,1770184800"
+  sha256 "f478d88e4b58eac983e2b481122305b7d91525a047616999d2889f974237ed3a"
 
-  url "https://d1t3zg51rvnesz.cloudfront.net/p/files/lm/#{version.csv.second}/mac/SpitfireAudio-Mac-#{version.csv.first}.dmg",
+  url "https://d1t3zg51rvnesz.cloudfront.net/p/files/lm/#{version.csv.second}/mac/SpitfireAudio.Mac-#{version.csv.first}.dmg",
       verified: "d1t3zg51rvnesz.cloudfront.net/p/files/lm/"
   name "Spitfire Audio"
   desc "Download manager for Spitfire audio libraries"
