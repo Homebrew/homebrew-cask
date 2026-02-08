@@ -1,11 +1,13 @@
 cask "tomatobar" do
-  version "3.5.0"
-  sha256 "f5b29a3761d60a952697fa9f8f9e1c86350ee6f18d4e94eb2e9093ab7cb61e72"
+  version "3.6.0"
+  sha256 "097d6b69e33afcd34cddd5edef93ce846775f6c742b7eec8e7885658d4e4a95c"
 
   url "https://github.com/ivoronin/TomatoBar/releases/download/v#{version}/TomatoBar-v#{version}.zip"
   name "TomatoBar"
   desc "Menu bar pomodoro timer"
   homepage "https://github.com/ivoronin/TomatoBar"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :big_sur"
 
