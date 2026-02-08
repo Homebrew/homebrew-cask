@@ -8,10 +8,8 @@ cask "outguess" do
   desc "Steganography tool to hide a document in an image"
   homepage "https://www.rbcafe.com/software/outguess/"
 
-  livecheck do
-    url :homepage, user_agent: :browser
-    regex(/Version\s+(\d+(?:\.\d+)+)/i)
-  end
+  # The zip file URL is consistently unreachable in CI despite working locally
+  disable! date: "2026-02-08", because: :unreachable
 
   app "Outguess.app"
 
