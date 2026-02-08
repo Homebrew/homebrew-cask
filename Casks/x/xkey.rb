@@ -8,14 +8,8 @@ cask "xkey" do
   homepage "https://github.com/xmannv/xkey/"
 
   livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)(?:-(.+))?$/i)
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
-    end
+    url "https://xmannv.github.io/xkey/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
