@@ -20,8 +20,8 @@ cask "commandpost" do
     end
   end
   on_ventura :or_newer do
-    version "2.0.1"
-    sha256 "6f7edc7dfb8d50e4f660946322a839f05bc30a6134d27ffe03e74784aaffb003"
+    version "2.0.2"
+    sha256 "edd3e6b7b183b856c885b1480d4e05d1fda775915a9026f2cddc81e479c0d9ab"
   end
 
   url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
