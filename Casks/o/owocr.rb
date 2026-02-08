@@ -10,11 +10,6 @@ cask "owocr" do
   desc "Optical character recognition for Japanese text"
   homepage "https://github.com/AuroraWright/owocr/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "OwOCR.app"
 
   zap trash: [
