@@ -1,6 +1,6 @@
 cask "font-lxgw-simzhisong" do
-  version "1.027"
-  sha256 "a9fd681f78106b3017ff0a01fd3121079af33832c5cd4fc9e5d10f4a92cee82c"
+  version "1.027.1"
+  sha256 "01b6886f5d1cbd095f0da3458b34afbda3db2d01bd8cce0d4d694db0e28d0cd9"
 
   url "https://github.com/lxgw/SimXiZhi/releases/download/v#{version}/SimZhiSong.ttf"
   name "LXGW SimZhiSong"
