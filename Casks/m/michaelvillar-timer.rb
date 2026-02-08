@@ -1,11 +1,15 @@
 cask "michaelvillar-timer" do
-  version "1.6.0"
-  sha256 "b953dcc5e8b942f4e2fb0a64e4732c55ba876ad4f1514769df6dc0cd3f225199"
+  version "2.1.0"
+  sha256 "e7bcb1c4e8e7b6be31b55cfeaa34d55aae2bc2e577f30cdf1718ab254418d140"
 
   url "https://github.com/michaelvillar/timer-app/releases/download/#{version}/Timer.app.zip"
   name "Timer"
   desc "Timer application"
   homepage "https://github.com/michaelvillar/timer-app"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :sonoma"
 
   app "Timer.app"
 
