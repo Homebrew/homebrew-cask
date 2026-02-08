@@ -7,7 +7,7 @@ cask "owocr" do
 
   url "https://github.com/AuroraWright/owocr/releases/download/#{version}/owocr-mac_#{arch}.dmg"
   name "OwOCR"
-  desc "Text recognition tool"
+  desc "Optical character recognition for Japanese text"
   homepage "https://github.com/AuroraWright/owocr/"
 
   livecheck do
