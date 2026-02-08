@@ -1,12 +1,17 @@
 cask "openclaw" do
-  version "2026.2.3"
-  sha256 "ae1ae48e70a733519f2fa18a529dec60520b4418e46e2a69588d7011b2e5d80c"
+  version "2026.2.6"
+  sha256 "be08e3ec4a07e8b434e9bff692abd95febcbf45f39dc60d46f703cb35d2886ed"
 
   url "https://github.com/openclaw/openclaw/releases/download/v#{version}/OpenClaw-#{version}.dmg",
       verified: "github.com/openclaw/openclaw/"
   name "OpenClaw"
   desc "Personal AI assistant"
   homepage "https://openclaw.ai/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sequoia"
 
