@@ -11,6 +11,8 @@ cask "pyzo" do
   desc "Python IDE focused on interactivity and introspection"
   homepage "https://pyzo.org/"
 
+  depends_on macos: ">= :big_sur"
+
   app "pyzo.app"
 
   zap trash: "~/Library/Application Support/pyzo"
