@@ -10,7 +10,7 @@ cask "supacode" do
   livecheck do
     url "https://supacode.sh/download/latest/appcast.xml"
     strategy :sparkle do |items|
-      items.max_by { |item| Gem::Version.new(item.short_version) }&.short_version
+      items.map(&:short_version)
     end
   end
 
