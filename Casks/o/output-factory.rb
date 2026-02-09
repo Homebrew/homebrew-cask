@@ -16,7 +16,7 @@ cask "output-factory" do
     end
   end
 
-  installer manual: "Output Factory Installer.app"
+  app "Output Factory Installer.app/Contents/Resources/appPackage/Output Factory.app"
 
   uninstall trash: "/Applications/Adobe Indesign */Plug-Ins/Zevrix/Output Factory.app"
 
