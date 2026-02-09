@@ -1,9 +1,8 @@
 cask "miaoyan" do
-  version "2.4.5"
-  sha256 "bbd3e3e40a65e99de27e0e4249b732bcb44a3aa59475f0775377f24d43f4a23c"
+  version "2.5.2"
+  sha256 "70f1c001911b7b7ecbb4404b68ca33a76200c61ea99a14f719016d2e285656d2"
 
-  url "https://gw.alipayobjects.com/os/k/app/MiaoYan_V#{version}.zip",
-      verified: "gw.alipayobjects.com/"
+  url "https://miaoyan.app/Release/MiaoYan_V#{version}.zip"
   name "MiaoYan"
   desc "Markdown editor"
   homepage "https://miaoyan.app/"
