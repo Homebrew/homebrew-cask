@@ -9,7 +9,7 @@ cask "updatest" do
 
   livecheck do
     url "https://updatest.app/download/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sequoia"
