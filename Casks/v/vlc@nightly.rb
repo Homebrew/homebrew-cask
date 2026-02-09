@@ -3,12 +3,12 @@ cask "vlc@nightly" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "intel64"
 
   on_arm do
-    version "4.0.0,20260208-0415,52762d9d"
-    sha256 "dd28401bc41d7292580f4e36326c2dedc775afde550eba1202d2d2b0865fc545"
+    version "4.0.0,20260209-0417,49622710"
+    sha256 "7edd16f0eeb759943954da571903741889166991060fad793ce17b758e4042b2"
   end
   on_intel do
-    version "4.0.0,20260208-0416,52762d9d"
-    sha256 "b1549dc5cbb3a39cc93164f05d0cfd636313bd39b4d926bc5ff59b3c3fc1d111"
+    version "4.0.0,20260209-0416,49622710"
+    sha256 "d9d64e1a9a280cee89cdc4275fc630cd72f520bd8935933786f9d732775d2860"
   end
 
   url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{version.csv.second}/vlc-#{version.csv.first}-dev-#{livecheck_arch}-#{version.csv.third}.dmg"
