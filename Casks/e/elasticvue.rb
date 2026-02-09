@@ -11,10 +11,6 @@ cask "elasticvue" do
   desc "Free and simple elasticsearch gui"
   homepage "https://elasticvue.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   auto_updates true
 
