@@ -8,13 +8,12 @@ cask "elasticvue" do
   url "https://github.com/cars10/elasticvue/releases/download/v#{version}/elasticvue_#{version}_#{arch}.dmg",
       verified: "github.com/cars10/elasticvue/"
   name "Elasticvue"
-  desc "Free and simple elasticsearch gui"
+  desc "Elasticsearch GUI"
   homepage "https://elasticvue.com/"
-
 
   auto_updates true
 
-  app "Elasticvue.app"
+  app "elasticvue.app"
 
   zap trash: [
     "~/Library/Application Support/com.elasticvue.app",
