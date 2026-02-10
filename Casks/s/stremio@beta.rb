@@ -1,9 +1,9 @@
 cask "stremio@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.1.12"
-  sha256 arm:   "c87c3c5259db3cdcbcbb4dac127e68e386e937870e6c328eb2df60d7b117d973",
-         intel: "cd8cdcc1a692bf748ffe1bc1cf77e45c5dd5b07820640ee2d83617468833c70e"
+  version "5.1.14"
+  sha256 arm:   "7e7c9a7a433b7d3b9491ecde10afe64ca0912a3e5c39126f0d04da6f14484bd9",
+         intel: "c23ab8260314aa92038508fe2677f12837218f16b028f51ee9e6d3a8f7beb933"
 
   url "https://dl.strem.io/stremio-shell-macos/v#{version}/Stremio_#{arch}.dmg"
   name "Stremio"
@@ -16,6 +16,8 @@ cask "stremio@beta" do
       json["version"]
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "stremio"
   depends_on macos: ">= :big_sur"
