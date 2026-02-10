@@ -1,6 +1,6 @@
 cask "expandrive" do
-  version "2026.02.05.816"
-  sha256 "48225574e7ca0049bb0e7eda4b02565224611f01d4c3c471829e94511df670c4"
+  version "2026.02.09.821"
+  sha256 "62892ba317fe186befed61204894fb2316a4691f7a0b72405c0372c661ac90c9"
 
   url "https://files-com-public-builds.s3.us-east-1.amazonaws.com/builds/ExpanDrive/#{version}/mac/ExpanDrive_#{version.major_minor_patch}.dmg",
       verified: "files-com-public-builds.s3.us-east-1.amazonaws.com/builds/ExpanDrive/"
