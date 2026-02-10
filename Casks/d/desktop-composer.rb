@@ -4,7 +4,7 @@ cask "desktop-composer" do
 
   url "https://www.apptorium.com/public/products/desktop-composer/releases/DesktopComposer-#{version}.zip"
   name "Desktop Composer"
-  desc "Change system and apps' look in one click"
+  desc "Appearance manager for the system and individual applications"
   homepage "https://www.apptorium.com/desktop-composer"
 
   livecheck do
