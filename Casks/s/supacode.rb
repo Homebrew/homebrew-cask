@@ -9,9 +9,7 @@ cask "supacode" do
 
   livecheck do
     url "https://supacode.sh/download/latest/appcast.xml"
-    strategy :sparkle do |items|
-      items.map(&:short_version)
-    end
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
