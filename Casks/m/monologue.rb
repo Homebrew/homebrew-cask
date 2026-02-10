@@ -1,5 +1,5 @@
 cask "monologue" do
-  version "1.0.60"
+  version "1.0.61"
   sha256 :no_check
 
   url "https://updates.jottle.ai/Monologue.dmg",
@@ -12,6 +12,8 @@ cask "monologue" do
     url "https://updates.jottle.ai/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :sonoma"
