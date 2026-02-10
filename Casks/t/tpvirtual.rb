@@ -12,6 +12,8 @@ cask "tpvirtual" do
     regex(/href=.*?TPVirtual[._-]Installer[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "TPVirtual-Launcher.app"
 
   zap trash: [
