@@ -1,9 +1,9 @@
 cask "imhex" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.38.0"
-  sha256 arm:   "61b92d5d875d85227a9cbd8465ccf7fa0379d0b74592af5379229663b2b71f8b",
-         intel: "7d4a02de2bb09195aa63862fe7762bc637d2dd298f1a10c04eea0f486b6197bb"
+  version "1.38.1"
+  sha256 arm:   "cbe57f8f16fd9a63bf0bd393d2db695ed201948a8f9167fd10b4af96847b0ee8",
+         intel: "4acd57408770cdfe533fb277f8746a5fdb9cb2048a9b7f8295931aafea97bd0e"
 
   on_arm do
     depends_on macos: ">= :ventura"

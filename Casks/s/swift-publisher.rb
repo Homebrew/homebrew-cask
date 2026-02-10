@@ -1,5 +1,5 @@
 cask "swift-publisher" do
-  version "5.7.4"
+  version "5.7.5"
   sha256 :no_check
 
   url "https://belightsoft.s3.amazonaws.com/SwiftPublisher.dmg",

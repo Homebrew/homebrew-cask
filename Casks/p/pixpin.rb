@@ -1,6 +1,6 @@
 cask "pixpin" do
-  version "2.2.4.1"
-  sha256 "56df9f874853dea65fbda4f4eff5195677c5d7b3e4007e351576f6983ab770f3"
+  version "2.4.9.6"
+  sha256 "bebbf572c378588504482b0fe6ea5a6f2bde505e169fb34f16766586e8dbba60"
 
   url "https://download.pixpin.cn/PixPin_cn_zh-cn_#{version}_uni.dmg"
   name "PixPin"

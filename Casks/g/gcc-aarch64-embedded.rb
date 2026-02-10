@@ -6,27 +6,32 @@ cask "gcc-aarch64-embedded" do
   pkg_version = nil
   gcc_version = nil
   on_arm do
-    version "14.3.rel1"
-    sha256 "82a4987c670f589d3c5b97bc579561365116670ff3c1c67a07fc29fa23aef3b2"
-    pkg_version = "14.3.rel1"
-    gcc_version = "14.3.1"
+    version "15.2.rel1"
+    pkg_version = "15.2.rel1"
+    gcc_version = "15.2.1"
+    sha256 "a616eb0a32738cbddc7b8653a20abbddc487712714d57ac993b8987a7451dbce"
+
     livecheck do
-      url "https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads"
+      url "https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads",
+          user_agent: :curl
       regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-aarch64-none-elf\.pkg/i)
     end
+
+    binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gstack"
   end
   on_intel do
     version "14.2.rel1"
-    sha256 "4e0da7bc82d316deb7f385d249bf7f87ce06d31b9d6f8b63f9b981a2203cf2ce"
     pkg_version = "14.2.rel1"
     gcc_version = "14.2.1"
+    sha256 "4e0da7bc82d316deb7f385d249bf7f87ce06d31b9d6f8b63f9b981a2203cf2ce"
+
     livecheck do
       skip "Legacy version"
     end
   end
 
   url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg",
-      user_agent: "curl/8.7.1"
+      user_agent: :curl
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 64-bit Arm processors"
   homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"

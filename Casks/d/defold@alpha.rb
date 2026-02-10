@@ -1,7 +1,7 @@
 cask "defold@alpha" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.12.1"
+  version "1.12.2"
   sha256 :no_check # required as upstream package is updated in-place
 
   on_arm do
@@ -18,7 +18,7 @@ cask "defold@alpha" do
   homepage "https://defold.com/"
 
   livecheck do
-    url "http://d.defold.com/alpha/info.json"
+    url "https://d.defold.com/alpha/info.json"
     strategy :json do |json|
       json["version"]
     end

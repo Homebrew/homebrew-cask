@@ -1,9 +1,9 @@
 cask "embyserver" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.9.1.90"
-  sha256 arm:   "846b6fc75639af87aea895f7705e0e9b1a50ddc0a47e1a2a9d914fad54c53bb2",
-         intel: "e4e19df19a84ff6f5bada0b20f422ffe96a4d8a1b6d03fd4df10b0323b02a192"
+  version "4.9.3.0"
+  sha256 arm:   "2f7e658e44592520f8cdb4839e8748557b541956997d1ab58e5aac81942c0e9b",
+         intel: "246fa8c51b17d138197b2da43fc037fb56c237fe9adfafa8278464ae69f33e82"
 
   url "https://github.com/MediaBrowser/Emby.Releases/releases/download/#{version}/embyserver-osx-#{arch}-#{version}.zip",
       verified: "github.com/MediaBrowser/Emby.Releases/"
@@ -16,9 +16,7 @@ cask "embyserver" do
     strategy :github_latest
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
-  app "EmbyServer.app"
+  app "osx-#{arch}/EmbyServer.app"
 
   zap trash: "~/.config/emby-server"
 end

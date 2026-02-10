@@ -1,6 +1,6 @@
 cask "godot-mono" do
-  version "4.5.1"
-  sha256 "f00ee565e9d3682584117ef8865f5ff6d8f571fbf2733075ee06b9e0953261b8"
+  version "4.6"
+  sha256 "9336b6454962d8b35682fdbad80763e2176d1907144d9b03dd2fc0c10ddd21d9"
 
   url "https://github.com/godotengine/godot/releases/download/#{version}-stable/Godot_v#{version}-stable_mono_macos.universal.zip",
       verified: "github.com/godotengine/godot/"

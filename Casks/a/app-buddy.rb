@@ -1,6 +1,6 @@
 cask "app-buddy" do
-  version "1.2.1"
-  sha256 "0512265cde30dfb1057d1eb7db52738308435af6d8b8bed18abba72c04b22423"
+  version "1.3.0"
+  sha256 "1dacbc9ed625e80c16db054cc98ac6023f3ad3ed302acbab46f7dda694310289"
 
   url "https://github.com/sindresorhus/app-buddy-meta/releases/download/v#{version}/App.Buddy.zip",
       verified: "github.com/sindresorhus/"
@@ -14,7 +14,7 @@ cask "app-buddy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: ">= :tahoe"
 
   app "App Buddy.app"
 

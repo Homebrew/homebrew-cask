@@ -1,9 +1,9 @@
 cask "folo" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.3"
-  sha256 arm:   "fffaa03bc197c8d59060f2380ffdd30bd31af29b698fbf13813787cb0cf4c9f3",
-         intel: "ec8d95b0e0078e9f6ee5a11bfd9d20218d81ef24ee4853dcecaf5d302d7c629d"
+  version "1.2.6"
+  sha256 arm:   "4182dadb2071b8d12b987ed76b4bab98cc3dd71871ecbd992d8869301335258d",
+         intel: "9feb7ecc8150720038f274e16a1f19d82a71d87cd2f4e9c44aea5733227ce63f"
 
   url "https://github.com/RSSNext/Folo/releases/download/desktop%2Fv#{version}/Folo-#{version}-macos-#{arch}.dmg",
       verified: "github.com/RSSNext/Folo/"
@@ -18,10 +18,7 @@ cask "folo" do
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "follow@alpha",
-    "folo@nightly",
-  ]
+  conflicts_with cask: "folo@nightly"
   depends_on macos: ">= :monterey"
 
   app "Folo.app"

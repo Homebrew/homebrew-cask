@@ -1,20 +1,23 @@
 cask "fastmail" do
-  version "1.0.6"
-  sha256 "6c654b2cd779b8ecb6aa8e6c61d1a2fcb6ffed59730d38e451d54dba7a7f93be"
+  arch arm: "arm64", intel: "x64"
+  arch_suffix = on_arch_conditional arm: "-#{arch}"
 
-  url "https://dl.fastmailcdn.com/desktop/production/mac/arm64/Fastmail-#{version}-arm64-mac.zip",
+  version "1.0.9"
+  sha256 arm:   "749519267d14b4d16ba177bd8aa6fcf654a4eb8e246dfa158498672188d663fe",
+         intel: "e682e8013740e0e50e26759b680a291431340419043cb7a24d626c0477b6a5ff"
+
+  url "https://dl.fastmailcdn.com/desktop/production/mac/#{arch}/Fastmail-#{version}#{arch_suffix}-mac.zip",
       verified: "dl.fastmailcdn.com/"
   name "Fastmail"
   desc "Email client"
   homepage "https://www.fastmail.com/"
 
   livecheck do
-    url "https://dl.fastmailcdn.com/desktop/production/mac/arm64/latest-mac.yml"
+    url "https://dl.fastmailcdn.com/desktop/production/mac/#{arch}/latest-mac.yml"
     strategy :electron_builder
   end
 
   auto_updates true
-  depends_on arch: :arm64
   depends_on macos: ">= :monterey"
 
   app "Fastmail.app"

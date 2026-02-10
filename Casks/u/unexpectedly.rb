@@ -7,10 +7,8 @@ cask "unexpectedly" do
   desc "Browse and visualise the reports from crashes"
   homepage "http://s.sudre.free.fr/Software/Unexpectedly/about.html"
 
-  livecheck do
-    url :homepage
-    regex(%r{Version</b>:</td><td>(\d+(?:\.\d+)*\w)}i)
-  end
+  # Artifact not available over HTTPS
+  disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
   app "Unexpectedly.app"
 

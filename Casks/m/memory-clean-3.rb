@@ -10,8 +10,8 @@ cask "memory-clean-3" do
 
   livecheck do
     url :url
-    strategy :extract_plist do |item|
-      item["com.fiplab.memoryclean3"]&.short_version
+    strategy :extract_plist do |items|
+      items["com.fiplab.memoryclean3"]&.short_version
     end
   end
 

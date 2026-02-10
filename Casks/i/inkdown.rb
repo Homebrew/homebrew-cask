@@ -10,10 +10,8 @@ cask "inkdown" do
   desc "WYSIWYG Markdown editor"
   homepage "https://www.inkdown.me/"
 
-  livecheck do
-    url "https://www.inkdown.cn/update/0/darwin/#{arch}/latest-mac.yml"
-    strategy :electron_builder
-  end
+  deprecate! date: "2025-01-25", because: :moved_to_mas
+  disable! date: "2026-01-27", because: :moved_to_mas
 
   auto_updates true
   depends_on macos: ">= :monterey"

@@ -1,15 +1,16 @@
 cask "hookmark" do
-  version "6.11.1"
-  sha256 "f60e5e31b397add7e00067ed2118b3492cad14145b89c0f8fa4cb1aa7aa1fe97"
+  version "7.0"
+  sha256 "886abb1ac260b13e2c81aff965ec4d8ca2553a9649b43bd4d840057b7c22dc4c"
 
   url "https://updates.hookproductivity.com/downloads/Hookmark-app-#{version}.dmg",
-      user_agent: :fake
+      user_agent: :browser
   name "Hook"
   desc "Link and retrieve key information"
   homepage "https://hookproductivity.com/"
 
   livecheck do
-    url "https://updates.hookproductivity.com/updates/a77a1a87-7d69-435d-90ea-7365b2f7bddb"
+    url "https://updates.hookproductivity.com/updates/a77a1a87-7d69-435d-90ea-7365b2f7bddb",
+        user_agent: :browser
     strategy :sparkle, &:short_version
   end
 

@@ -1,6 +1,6 @@
 cask "fabfilter-pro-q" do
-  version "4.02"
-  sha256 "23c7dc464f5f81205e0055d34d93771d5f1efe202255b9b20caf382369096f57"
+  version "4.10"
+  sha256 "8db4d55bef015f9d48acac96a9227e93e23c8bf524a2683ed261d55b27a63ffa"
 
   url "https://cdn-b.fabfilter.com/downloads/ffproq#{version.no_dots}.dmg"
   name "FabFilter Pro-Q"

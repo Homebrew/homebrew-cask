@@ -8,6 +8,8 @@ APPLE_LAUNCHJOBS_REGEX =
   (AppStore|installer|Preview|Safari|systemevents|systempreferences|Terminal)
   (?:\.|$)/x
 
+GOOGLE_LAUNCHJOBS_REGEX = /com\.google\.(keystone|GoogleUpdater)/
+
 module Check
   # TODO: replace with public API like Utils.safe_popen_read that's less likely to be volatile to changes
   # see https://github.com/Homebrew/brew/pull/16540#issuecomment-1913737000
@@ -30,6 +32,7 @@ module Check
         .children
         .grep(/\.plist$/)
         .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
+        .grep_v(/^com\.google\.Keystone/)
     },
     installed_launchjobs: lambda {
       format_launchjob = lambda { |file|
@@ -50,6 +53,7 @@ module Check
       ].map { |p| Pathname(p).expand_path }
         .select(&:directory?)
         .flat_map(&:children)
+        .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
         .select { |child| child.extname == ".plist" }
         .select(&:exist?)
         .map(&format_launchjob)
@@ -60,12 +64,14 @@ module Check
           .stdout
           .lines.drop(1)
           .grep_v(APPLE_LAUNCHJOBS_REGEX)
+          .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
       end
 
       [false, true]
         .flat_map(&launchctl)
         .map { |l| l.split(/\s+/)[2] }
         .grep_v(/^com\.apple\./)
+        .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
     },
   }.freeze
   private_constant :CHECKS
@@ -138,6 +144,7 @@ module Check
                    .added
                    .grep(/\.\d+\Z/)
                    .grep_v(APPLE_LAUNCHJOBS_REGEX)
+                   .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
                    .map { |id| id.sub(/\A(?:application\.)?(.*?)(?:\.\d+){0,2}\Z/, '\1') }
 
     loaded_launchjobs = diff[:loaded_launchjobs]

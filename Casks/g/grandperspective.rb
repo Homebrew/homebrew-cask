@@ -8,8 +8,8 @@ cask "grandperspective" do
     end
   end
   on_big_sur :or_newer do
-    version "3.6"
-    sha256 "0d276d69fe463753d222df064c6acc52e6952360be00d2a2efc13573156b6131"
+    version "3.6.3"
+    sha256 "45db832b37f1c60f5c82b49f22e0418808d2c0e95bbbe1716a218c3060c2e76a"
   end
 
   url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg"

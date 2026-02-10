@@ -1,6 +1,6 @@
 cask "unifi-identity-enterprise" do
-  version "0.89.2,1e8bca14-01d8-4981-a231-0e50f27f414e,e39c"
-  sha256 "755d67b34e755c4e21638b06b97d096e10b377ccbeb334b1386ceca51ed203f2"
+  version "0.90.0,cf7eb9f5-2570-4d3c-9501-2c3eac3e7409,42db"
+  sha256 "bd2f1f241cdcc02d3ba4e03868aec21f2158f0516538e2380e143244e2ab4e8e"
 
   url "https://fw-download.ubnt.com/data/uid-ui-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
       verified: "fw-download.ubnt.com/data/uid-ui-desktop-app/"

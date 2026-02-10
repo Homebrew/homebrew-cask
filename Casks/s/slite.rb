@@ -1,9 +1,9 @@
 cask "slite" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.0,250731antv74pv7"
-  sha256 arm:   "25d954582c379d2d62b966de40c1c5fcec60d1d0eabab75d2432bca5fb78cac0",
-         intel: "c64a214d2f39de9102df1c7f28dfb39a201b4827a5c24eddc506f4ade83a1fa4"
+  version "1.4.0,2601057xvkfy2mb"
+  sha256 arm:   "845801d03ad5c6afc35bdf1849f3e4a2a53915c009f79b21ebf7392f44031657",
+         intel: "be3ac963be249bae9aed334f7c68fcf9b06b33629c2594d3008e14acfcaa083f"
 
   url "https://download.todesktop.com/20062929x31pwfi/Slite%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/20062929x31pwfi/"
@@ -23,6 +23,8 @@ cask "slite" do
       end
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Slite.app"
 

@@ -1,6 +1,6 @@
 cask "font-lxgw-neozhisong" do
-  version "1.055"
-  sha256 "12773f5979c7c834b71a475bd2f11dba2791dde2469a96ee6de6c46eedc4c8bb"
+  version "1.061"
+  sha256 "f6282228285bcaac0699bff68f4d5aff50bde784ca10b017ae2762fea9e59c63"
 
   url "https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v#{version}/LXGWNeoZhiSong.ttf"
   name "LXGW Neo ZhiSong"

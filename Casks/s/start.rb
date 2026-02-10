@@ -1,13 +1,10 @@
 cask "start" do
-  arch arm: "arm", intel: "x86"
-  folder_arch = on_arch_conditional arm: "m1/"
   livecheck_arch = on_arch_conditional arm: "-arm"
 
-  version "0.301.22089"
-  sha256 arm:   "f847cce72d067c57ea2fe660999c9e393354b3a9eea186e7e7700fe7a5b45766",
-         intel: "ecd56eaed4f12f6e6cf963082453eb6e48e06cfb6293ca17ab818d5178859d61"
+  version "0.301.22466"
+  sha256 "7291a3521720cfade333b4f728f8d6b024e990fe404216c46bba01888a26d519"
 
-  url "https://imgcdn.start.qq.com/cdn/mac.client/installer/#{folder_arch}START-Installer-#{arch}-#{version}.dmg"
+  url "https://imgcdn.start.qq.com/cdn/mac.client/installer/START-Installer-universal-#{version}.dmg"
   name "START"
   name "腾讯云游戏"
   desc "Tencent cloud gaming platform"
@@ -15,7 +12,7 @@ cask "start" do
 
   livecheck do
     url "https://api.start.qq.com/cfg/get?biztypes=macos-update-info#{livecheck_arch}"
-    regex(/START-Installer[._-]#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    regex(/START-Installer(?:-universal)?[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
     strategy :json do |json, regex|
       match = json.dig("configs", "macos-update-info#{livecheck_arch}", "value")&.match(regex)
       next if match.blank?
@@ -25,6 +22,7 @@ cask "start" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "START.app"
 

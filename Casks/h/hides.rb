@@ -1,5 +1,5 @@
 cask "hides" do
-  version "7.2.1"
+  version "7.2.2"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/hides/Hides.dmg"

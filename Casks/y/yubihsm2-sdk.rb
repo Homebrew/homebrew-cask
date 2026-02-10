@@ -1,9 +1,9 @@
 cask "yubihsm2-sdk" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2025-06b"
-  sha256 arm:   "d4105f662a665e4d39f6d88f0b062d2e146f986ebcf66d337939625c507c29b9",
-         intel: "cb2537adc96cef396292351da266e0e526844679dccd9ef5fa16465d6b019124"
+  version "2026-01"
+  sha256 arm:   "f2e907fad5a8ee485d497bb7c9d31364901601872192322d30ea0cac5931d4a5",
+         intel: "447327839168f835e627f80cf1912b5978bdd2d7b851fbe4c9a60231a3f7d6b6"
 
   url "https://developers.yubico.com/YubiHSM2/Releases/yubihsm2-sdk-#{version}-darwin-#{arch}.pkg"
   name "YubiHSM 2 SDK"

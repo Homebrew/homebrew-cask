@@ -1,9 +1,9 @@
 cask "pinta" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.0.5"
-  sha256 arm:   "c5ba1f3bb094a63a7a54cb64ea7864aee474e46c2f86292dead5dbc8b1e9a351",
-         intel: "114f119158c31139709d083e12a825aebb798d51630789ec703f4e29dfb93377"
+  version "3.1.1"
+  sha256 arm:   "84912d381d835a912a11c092e74fef7ad5c13e8563d94dedb1f5e9ad7e9b2b3a",
+         intel: "fac56a672afd4418974fb04d360c24a2d6ec50ab703c23d615eeff40c8b44f39"
 
   on_arm do
     depends_on macos: ">= :big_sur"

@@ -1,6 +1,6 @@
 cask "millie" do
-  version "2.8.0"
-  sha256 "fff6fcd9f58c14c92419b1fcf8b02c51933fe09a64690def103bd5322c0afc00"
+  version "2.11.2"
+  sha256 "a6c2f3ed9e657c4ffad3dfe1b5859a3af5c57c1d340cc4bd82dd0949e37620cb"
 
   url "https://install.millie.co.kr/flutter/#{version}/millie.dmg"
   name "Millie"
@@ -16,7 +16,7 @@ cask "millie" do
 
   depends_on macos: ">= :big_sur"
 
-  app "Millie.app"
+  app "밀리의서재.app"
 
   zap trash: [
     "~/Library/Application Support/kr.co.millie.MillieShelf",

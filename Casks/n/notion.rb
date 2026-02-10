@@ -2,9 +2,9 @@ cask "notion" do
   arch arm: "-arm64"
   livecheck_folder = on_arch_conditional arm: "arm64", intel: "latest"
 
-  version "6.0.0"
-  sha256 arm:   "60e4909d3f3fa73cf638d90876bf6e08e7f92a43432656c6017b934a0bca661e",
-         intel: "755888885ec3d3be41044a4a748cb2312f624a8e746c8570e04d8a4467e62fef"
+  version "7.4.0"
+  sha256 arm:   "dd284f9e95dfa819e2c18c40c9d6c47d5975240bcc19fefaa99be9c6a62af02f",
+         intel: "c103671134a01c8b1fff425177b5d802a296d61ec7a776b5da9384d8a800e6db"
 
   url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg",
       verified: "desktop-release.notion-static.com/"
@@ -18,7 +18,7 @@ cask "notion" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Notion.app"
 

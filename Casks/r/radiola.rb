@@ -1,6 +1,6 @@
 cask "radiola" do
-  version "10.1.1"
-  sha256 "5df1c7b325ce407875f47e3bfc4da7abc64f5adaa36ef14017c5b8f999a3bd6c"
+  version "11.0.1"
+  sha256 "e6aecb444abd9a750461f25824474498c0a503da062d8b31f2f8d6c21358a7bf"
 
   url "https://github.com/SokoloffA/radiola/releases/download/v#{version}/Radiola-#{version}.dmg"
   name "Radiola"

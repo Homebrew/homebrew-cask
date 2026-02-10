@@ -1,6 +1,6 @@
 cask "navigraph-charts" do
-  version "8.39.0"
-  sha256 "d765896907af711941dc8daba200855e8ee6303a4faf99a80ae8438a99f798c2"
+  version "8.40.1"
+  sha256 "46cbc5d71ee2e500bff434fb4a57ab93d5c0dd18160a82f0c70b773b577a4b55"
 
   url "https://download.navigraph.com/software/charts/mac/Navigraph%20Charts%20#{version}.dmg"
   name "Navigraph Charts"

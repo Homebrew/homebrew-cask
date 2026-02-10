@@ -1,6 +1,6 @@
 cask "gitify" do
-  version "6.14.1"
-  sha256 "409087a7a10f6754a21a02a94c1f564df1892eaee4347a209413a6cd0a149672"
+  version "6.17.0"
+  sha256 "d8f63898d8756fc301d7f21b4d9da23c6e145bfa5f95131c0327087c6a829ece"
 
   url "https://github.com/gitify-app/gitify/releases/download/v#{version}/Gitify-#{version}-universal-mac.zip"
   name "Gitify"
@@ -17,20 +17,10 @@ cask "gitify" do
 
   app "Gitify.app"
 
-  preflight do
-    retries ||= 3
-    ohai "Attempting to close Gitify.app to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Gitify.app"]
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to forcibly close Gitify.app"
-  end
-
   uninstall quit: [
     "com.electron.gitify",
     "com.electron.gitify.helper",
-  ]
+  ], on_upgrade: :quit
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.gitify.sfl*",

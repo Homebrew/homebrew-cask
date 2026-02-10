@@ -15,7 +15,7 @@ cask "autogram" do
 
   pkg "Autogram-#{version}-MacOs.pkg"
 
-  # Following 'preflight' is needed to avoid interactive parts of the instalation process. More details in https://github.com/Homebrew/homebrew-cask/pull/201161#discussion_r1950819869
+  # Following 'preflight' is needed to avoid interactive parts of the installation process. More details in https://github.com/Homebrew/homebrew-cask/pull/201161#discussion_r1950819869
   preflight do
     FileUtils.mkdir_p "#{Dir.home}/Library/Application Support/Autogram/tls/"
     FileUtils.touch "#{Dir.home}/Library/Application Support/Autogram/tls/skip"

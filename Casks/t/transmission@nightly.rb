@@ -1,6 +1,6 @@
 cask "transmission@nightly" do
-  version "9898,5a995aa335"
-  sha256 "ca75f1c7c6382398abdef0f7d1593d18d6a745af6d4b5af6dfe13f0d7a463038"
+  version "10023,a3202cbe47"
+  sha256 "4a6bf2473769e9d8adaf211baca7cb9ee9c7f9af5414a4c7f2b6c05fa014810f"
 
   url "https://build.transmissionbt.com/job/trunk-mac/#{version.csv.first}/artifact/release/Transmission-#{version.csv.second}.dmg"
   name "Transmission"
@@ -17,7 +17,10 @@ cask "transmission@nightly" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  conflicts_with cask: "transmission"
+  conflicts_with cask: [
+    "transmission",
+    "transmission@beta",
+  ]
   depends_on macos: ">= :big_sur"
 
   app "Transmission.app"

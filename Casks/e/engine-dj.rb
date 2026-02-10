@@ -8,15 +8,22 @@ cask "engine-dj" do
   desc "DJ software suite"
   homepage "https://enginedj.com/"
 
+  # The file name regex needs to be anchored to avoid matching the variant for
+  # SYSTEM ONE users, which uses the same file name format but has a different
+  # version.
   livecheck do
     url "https://enginedj.com/downloads"
-    regex(
-      %r{href=.*?/Engine/(\d+(?:\.\d+)+)/Release/(\w*)/Engine[._-]DJ[._-]\d+(?:\.\d+)+[._-](\w*?)[._-]Setup\.dmg}i,
-    )
+    regex(%r{
+      MacDownloadButton.+?
+      href=.*?/Engine/v?(\d+(?:\.\d+)+)/Release/(\h+)/
+      Engine[._-]DJ[._-]v?\d+(?:\.\d+)+[._-](\h+?)[._-]Setup\.dmg
+    }imx)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   pkg "Engine DJ_#{version.csv.first}_Setup.pkg"
 

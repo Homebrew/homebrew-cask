@@ -1,9 +1,9 @@
 cask "blockstream" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.0.31"
-  sha256 arm:   "ab2b823b9f848cd132b852e45c6e6f6549fdea4867b3e49485fbcaa81843ae4d",
-         intel: "47b821a0df94b2020da5c386e4cbb76c93395013835f1c9bb2686dcf60c0deef"
+  version "3.0.1"
+  sha256 arm:   "79721f1d754f4ac9fb6973d9b827bb10bcb79f278307202b6970c549da2efa3e",
+         intel: "130f8e0e34312a9558ff235f7dca6b2125ae051655e837d114aaba07dbde271a"
 
   url "https://github.com/Blockstream/green_qt/releases/download/release_#{version}/Blockstream-#{arch}.dmg",
       verified: "github.com/Blockstream/green_qt/"

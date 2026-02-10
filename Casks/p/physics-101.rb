@@ -5,7 +5,7 @@ cask "physics-101" do
   url "https://praetersoftware.com/download/physics101/Physics101.dmg"
   name "Physics 101"
   desc "Collection of simulations, tools, and equations across the field of physics"
-  homepage "http://www.praetersoftware.com/new/physics101/"
+  homepage "https://www.praetersoftware.com/new/physics101/"
 
   livecheck do
     url :url

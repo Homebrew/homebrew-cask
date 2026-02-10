@@ -2,11 +2,11 @@ cask "sunlogincontrol" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_id = on_arch_conditional arm: "211", intel: "17"
 
-  version "6.1.0.62632"
-  sha256 arm:   "030de0ef4a4e8e08afa8bc2f02bb70e1476eae1e33d3a119b7381ba3ec96f3c7",
-         intel: "0af5ae83eda37356fe2eafce26ccda5b4ba6ee180057fdf77b716990b5947fb9"
+  version "6.6.1.28025"
+  sha256 arm:   "fb2386173da8a00bc7cd75bfb5b01bc938d5e3857bc885f12447db4a1fa6c950",
+         intel: "48e40ab23744c3307392a5310104a706fae41299c07c26659ef4c0caa6528ace"
 
-  url "https://down.oray.com/sunlogin/mac/SunloginRemote_#{version}_#{arch}.dmg"
+  url "https://down.oray.com/sl/mac/SunloginRemote_#{version}_#{arch}.dmg"
   name "SunloginControl"
   name "向日葵控制端"
   desc "Target component of remote desktop control and monitoring tool"

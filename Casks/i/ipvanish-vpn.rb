@@ -12,10 +12,12 @@ cask "ipvanish-vpn" do
     regex(/IPVanish[._-]v?(\d+(?:\.\d+)+)[._-](\d+)/i)
     strategy :sparkle do |items, regex|
       items.map do |item|
-        match_data = item.url&.match(regex)
-        next if match_data.blank?
+        next if item.channel != "release"
 
-        match_data.captures.join(",")
+        match = item.url&.match(regex)
+        next if match.blank?
+
+        match.captures.join(",")
       end
     end
   end

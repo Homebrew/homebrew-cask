@@ -1,6 +1,6 @@
 cask "bentobox" do
-  version "0.9.3"
-  sha256 "1903959bea58db76da8bfdf29ae86f3031096222474974d0d6c7ad70df899024"
+  version "1.1.3"
+  sha256 "81e9e8866086c69d29272211d08aff85130278eedf16ae0236424d14fe1cf9b3"
 
   url "https://releases.bentobox.friendlyventures.org/#{version}/bentobox-macos-universal.zip",
       verified: "releases.bentobox.friendlyventures.org/"
@@ -14,7 +14,7 @@ cask "bentobox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "BentoBox.app"
 

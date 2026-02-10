@@ -8,6 +8,13 @@ cask "pibar" do
   desc "Pi-hole(s) management in the menu bar"
   homepage "https://github.com/amiantos/pibar"
 
+  # The GitHub release descriptions contain a link to the AWS zip file, so we
+  # check releases instead of Git tags.
+  livecheck do
+    url :homepage
+    strategy :github_latest
+  end
+
   app "PiBar.app"
 
   zap trash: [

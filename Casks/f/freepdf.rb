@@ -1,6 +1,6 @@
 cask "freepdf" do
-  version "5.1.0"
-  sha256 "a4072e874854a22428070674af156a6510cc4c0f2ccd0b7075bfa852f6e06287"
+  version "5.1.2"
+  sha256 "82a762465d00b4a7dd15f8c36cb724fabc3f5e2180d6f4b61c662a3cb8488a6e"
 
   url "https://github.com/zstar1003/FreePDF/releases/download/v#{version}/FreePDF_v#{version}_macOS.dmg"
   name "FreePDF"

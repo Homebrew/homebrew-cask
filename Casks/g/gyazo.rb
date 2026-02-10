@@ -1,6 +1,6 @@
 cask "gyazo" do
-  version "10.3.3"
-  sha256 "4368e7b576c01e17002e946cb813260d1230e2dd0e0e5c3a53589c053a78458f"
+  version "10.5.0"
+  sha256 "cecfcde53826d8234343a8b5e146075f59493820419ff9d173285c67598c7650"
 
   url "https://files.gyazo.com/setup/Gyazo-#{version}.pkg"
   name "Nota Gyazo GIF"

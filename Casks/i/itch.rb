@@ -1,5 +1,5 @@
 cask "itch" do
-  version "26.1.9"
+  version "26.6.0"
   sha256 :no_check
 
   url "https://broth.itch.zone/install-itch/darwin-amd64/LATEST/archive/default",

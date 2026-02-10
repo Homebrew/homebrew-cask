@@ -7,10 +7,8 @@ cask "font-humor-sans" do
   name "Humor Sans"
   homepage "https://xkcdsucks.blogspot.com.au/2009/03/xkcdsucks-is-proud-to-present-humor.html"
 
-  livecheck do
-    url "http://antiyawn.com/uploads/humorsans.html"
-    regex(/href=.*Humor[._-]Sans[._-]v?(\d+(?:\.\d+)+)\.ttf/i)
-  end
+  # Artifact not available over HTTPS
+  disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
   font "Humor-Sans-#{version}.ttf"
 

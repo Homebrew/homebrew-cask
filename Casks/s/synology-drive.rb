@@ -1,6 +1,6 @@
 cask "synology-drive" do
-  version "4.0.1,17885"
-  sha256 "d2b2bbc38fd10afe2a9a5fbc5d83f02d09b11de9f7a41efddc2a380ef9c356e5"
+  version "4.0.2,17889"
+  sha256 "280a1cdf56364531eeed15a00bad5baeda1e151d5cfa9362e0e76e6f6247adf4"
 
   url "https://global.download.synology.com/download/Utility/SynologyDriveClient/#{version.tr(",", "-")}/Mac/Installer/synology-drive-client-#{version.csv.second}.dmg"
   name "Synology Drive"

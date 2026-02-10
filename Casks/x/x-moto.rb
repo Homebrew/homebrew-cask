@@ -26,7 +26,7 @@ cask "x-moto" do
   desc "2D motocross platform game"
   homepage "https://xmoto.tuxfamily.org/"
 
-  # Not every release suppports both architectures, so we need to check the
+  # Not every release supports both architectures, so we need to check the
   # release artifacts to find the latest version for the current architecture.
   livecheck do
     url :url

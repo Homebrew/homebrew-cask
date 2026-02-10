@@ -1,9 +1,9 @@
 cask "logos" do
   arch arm: "-arm"
 
-  version "47.0.0.0332"
-  sha256 arm:   "a3053aa7e59dc8844e923390deba5522895ed335b9362461da7533667b5844f8",
-         intel: "d4d21da109e4a0666e225b9a1bbe2eadff790d39bf1a604dade40b3ee7eb660d"
+  version "48.0.0.0238"
+  sha256 arm:   "ea767b5451de2ee18047d77fb218b03f3fc15c09e6cfdc3406f3c8c4f7bc4973",
+         intel: "dd92fbc0802a9412b3deb2e49d10db638981ea127350f9851a1cc7e466dd428b"
 
   url "https://downloads.logoscdn.com/LBS10/Installer/#{version}/LogosMac#{arch}.dmg",
       verified: "downloads.logoscdn.com/"
@@ -27,8 +27,7 @@ cask "logos" do
             quit:      "com.logos.Logos"
 
   zap trash: [
-    "~/Library/Preferences/com.logos.Logos.plist",
-    "~/Library/Preferences/com.logos.LogosCEF.plist",
-    "~/Library/Preferences/com.logos.LogosIndexer.plist",
+    "~/Library/LaunchAgents/com.logos.desktop.logosindexer.plist",
+    "~/Library/Preferences/com.logos.*.plist",
   ]
 end

@@ -2,12 +2,15 @@ cask "font-alef" do
   version :latest
   sha256 :no_check
 
-  url "http://alef.hagilda.com/Alef.zip"
+  url "https://github.com/google/fonts.git",
+      verified:  "github.com/google/fonts",
+      branch:    "main",
+      only_path: "ofl/alef"
   name "Alef"
-  homepage "http://alef.hagilda.com/"
+  homepage "https://fonts.google.com/specimen/Alef"
 
-  font "TTF/Alef-Bold.ttf"
-  font "TTF/Alef-Regular.ttf"
+  font "Alef-Bold.ttf"
+  font "Alef-Regular.ttf"
 
   # No zap stanza required
 end

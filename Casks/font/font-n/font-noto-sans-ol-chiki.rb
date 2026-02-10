@@ -2,12 +2,12 @@ cask "font-noto-sans-ol-chiki" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansOlChiki-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansolchiki/NotoSansOlChiki%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Ol Chiki"
-  homepage "https://www.google.com/get/noto/#sans-olck"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Ol+Chiki"
 
-  font "NotoSansOlChiki-Regular.ttf"
+  font "NotoSansOlChiki[wght].ttf"
 
   # No zap stanza required
 end

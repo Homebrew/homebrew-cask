@@ -1,6 +1,6 @@
 cask "sodamusic" do
-  version "2.9.1,273418830"
-  sha256 "6863d0b094e21bdb1113e66b6155e05430da2789f12793f4bc67521b1336cf8b"
+  version "3.1.0,303985836"
+  sha256 "432591971ea9872e5deffb401008865c28fb35d14c7c3f0cc34bc7bac7e3ae48"
 
   url "https://lf-luna-release.qishui.com/obj/luna-release/#{version.csv.first}/#{version.csv.second}/SodaMusic-v#{version.csv.first}-official-darwin_universal.dmg",
       verified: "lf-luna-release.qishui.com/obj/luna-release/"

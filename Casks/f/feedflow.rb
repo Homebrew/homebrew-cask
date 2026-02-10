@@ -1,6 +1,6 @@
 cask "feedflow" do
-  version "1.8.0"
-  sha256 "4ccf4e30c91ca9c0769e61ec3fb273d17c1ee19b43b75e539a629653008eb2e0"
+  version "1.10.0"
+  sha256 "dfbcaa2d7623ee0b3d35793c9dc75946b65c17b3ddb754afe9cbe62266baedfa"
 
   url "https://github.com/prof18/feed-flow/releases/download/#{version}-all/FeedFlow-#{version}.dmg",
       verified: "github.com/prof18/feed-flow/"

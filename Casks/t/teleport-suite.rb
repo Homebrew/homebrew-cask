@@ -1,6 +1,6 @@
 cask "teleport-suite" do
-  version "18.5.1"
-  sha256 "eccbfb1f5a2a91e1b0541d69c9af5be93be729a88e8dce5c20028b1e40dde3d3"
+  version "18.6.7"
+  sha256 "502f206cb7351f61d65241600413a355cf0a8b697097b703ac739dda9f3e698a"
 
   url "https://cdn.teleport.dev/teleport-#{version}.pkg",
       verified: "cdn.teleport.dev/"
@@ -9,7 +9,8 @@ cask "teleport-suite" do
   homepage "https://goteleport.com/"
 
   livecheck do
-    url "https://goteleport.com/download/"
+    url "https://goteleport.com/download/",
+        user_agent: :browser
     regex(/teleport[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 

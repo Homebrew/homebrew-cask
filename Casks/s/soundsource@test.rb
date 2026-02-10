@@ -1,6 +1,6 @@
 cask "soundsource@test" do
-  version "5.8.10,3,20251112,1333,58A7003"
-  sha256 "4ccd8a0c9e107c9c231f4733a954f62f2dedfbc110dc5a11867f325f1321c380"
+  version "6.0.4,3,20260206,1258,6047003"
+  sha256 "d035246c09f5e5d40dd2735d2db83439021432f620d28df6dadcc27424994b1c"
 
   url "https://download.rogueamoeba.com/builds/SoundSource/SoundSource_#{version.csv.fifth}_#{version.csv.third}_#{version.csv.fourth}.zip"
   name "SoundSource"
@@ -9,7 +9,7 @@ cask "soundsource@test" do
 
   # The livecheck uses a hard-coded system version number in the url that corresponds to the latest macOS version
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=150&wantsTestReleases=true&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.csv.fifth}"
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=261&wantsTestReleases=true&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.csv.fifth}"
     regex(/SoundSource[._-]v?(\h+)[._-](\d+)[._-](\d+)\.zip/i)
     strategy :sparkle do |item, regex|
       match = item.url&.match(regex)
@@ -21,7 +21,7 @@ cask "soundsource@test" do
 
   auto_updates true
   conflicts_with cask: "soundsource"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sequoia"
 
   app "SoundSource.app"
 

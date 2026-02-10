@@ -1,9 +1,9 @@
 cask "8x8-work" do
   arch arm: "-arm64"
 
-  version "8.29.1-3"
-  sha256 arm:   "c6aa78d0911a0cb504a21bcf8421de703cc7dd07b7388903cf29227ca5955737",
-         intel: "a631ac34ce2d43b6c2b68d33bddb436757b2129bd901f343775efa46337c64fd"
+  version "8.30.2-10"
+  sha256 arm:   "77235dfbaeaf5391c5055ba71eca0c8b6ba033b556fd20466ef973ffbce561fe",
+         intel: "099a263e1c440858ed43c96b874a6a7fe5da29092f40275a4c236919334e72d0"
 
   url "https://work-desktop-assets.8x8.com/prod-publish/ga/work#{arch}-dmg-v#{version}.dmg"
   name "8x8_work"
@@ -12,10 +12,10 @@ cask "8x8-work" do
 
   livecheck do
     url "https://support-portal.8x8.com/helpcenter/docrenderservice/services/rest/documents/8bff4970-6fbf-4daf-842d-8ae9b533153d"
-    regex(/work[._-]dmg[._-]v(\d+(?:[.-]\d+)+)\.dmg/i)
+    regex(/href=.*?work[._-]dmg[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "8x8 Work.app"
 

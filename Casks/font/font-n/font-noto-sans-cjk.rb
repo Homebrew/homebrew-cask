@@ -6,8 +6,11 @@ cask "font-noto-sans-cjk" do
   name "Noto Sans CJK"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Sans"
 
-  deprecate! date: "2025-11-22", because: :discontinued
-  disable! date: "2026-11-22", because: :discontinued
+  livecheck do
+    url :url
+    regex(/^(?:Noto)?Sans[._-]?v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases
+  end
 
   font "NotoSansCJK.ttc"
 

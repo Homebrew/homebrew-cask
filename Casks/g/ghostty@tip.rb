@@ -1,6 +1,6 @@
 cask "ghostty@tip" do
-  version "13466,67eb4805779a80bfe2d9ac5a67f19b89f4e67b16"
-  sha256 "420ccc6aa8516cd97f94b5d5727efa6ddf929f5ed7619c248b8c6300779bffcd"
+  version "14283,41924c2d0ec50a4268250b90cf46d7b4e60b61ba"
+  sha256 "d64640f0884ada030222dd588c0ee6349d38285dfd0cee0f01073d23d2eefea5"
 
   url "https://tip.files.ghostty.org/#{version.csv.second}/Ghostty.dmg"
   name "Ghostty"
@@ -23,7 +23,6 @@ cask "ghostty@tip" do
   depends_on macos: ">= :ventura"
 
   app "Ghostty.app"
-  binary "#{appdir}/Ghostty.app/Contents/MacOS/ghostty"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man1/ghostty.1"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man5/ghostty.5"
   bash_completion "#{appdir}/Ghostty.app/Contents/Resources/bash-completion/completions/ghostty.bash"

@@ -1,7 +1,7 @@
 cask "defold" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.11.2"
+  version "1.12.1"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://github.com/defold/defold/releases/download/#{version}/Defold-#{arch}-macos.dmg",
@@ -11,7 +11,7 @@ cask "defold" do
   homepage "https://defold.com/"
 
   livecheck do
-    url "http://d.defold.com/stable/info.json"
+    url "https://d.defold.com/stable/info.json"
     strategy :json do |json|
       json["version"]
     end

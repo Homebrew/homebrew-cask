@@ -7,11 +7,9 @@ cask "anydesk" do
   desc "Allows connection to a computer remotely"
   homepage "https://anydesk.com/"
 
-  # The upstream download page links to the unversioned dmg file but Cloudflare
-  # protections prevent us from fetching it, so it must be checked manually:
-  # https://anydesk.com/en/downloads/mac-os
   livecheck do
-    skip "Cannot be fetched due to Cloudflare protections"
+    url "https://download.anydesk.com/changelog.txt"
+    regex(/v?(\d+(?:\.\d+)+)\s+\(macOS\)/i)
   end
 
   app "AnyDesk.app"
@@ -24,6 +22,7 @@ cask "anydesk" do
             ],
             delete: [
               "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
+              "/Library/LaunchAgents/com.philandro.anydesk.Hub.plist",
               "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
               "/Library/LaunchDaemons/com.philandro.anydesk.service.plist",
               "/Library/PrivilegedHelperTools/com.philandro.anydesk.Helper",

@@ -2,13 +2,12 @@ cask "font-noto-sans-oriya" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansOriya-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansoriya/NotoSansOriya%5Bwdth%2Cwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Oriya"
-  homepage "https://www.google.com/get/noto/#sans-orya"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Oriya"
 
-  font "NotoSansOriya-Bold.ttf"
-  font "NotoSansOriya-Regular.ttf"
+  font "NotoSansOriya[wdth,wght].ttf"
 
   # No zap stanza required
 end

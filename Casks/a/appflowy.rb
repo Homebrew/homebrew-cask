@@ -1,11 +1,11 @@
 cask "appflowy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.10.6"
-  sha256 arm:   "0d39ebb0fc167293de5f2b04a04a92827d218c775e360b0e1c18e09400df38e1",
-         intel: "28aba9ea80870f555915f77ff50ff76a9bc9ac3c49b1b952be043a9ae4faa6af"
+  version "0.11.1"
+  sha256 arm:   "e303a8911ed60f84fa5f964bda745b9013327054ad2ef5964e2a36bd4725e685",
+         intel: "9263d236e969437653b13fd932150ebccd4e608a4ef982d376fdabad22f4a38b"
 
-  url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/Appflowy-#{version}-macos-#{arch}.dmg",
+  url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/Appflowy-#{version}-macos-#{arch}.zip",
       verified: "github.com/AppFlowy-IO/AppFlowy/"
   name "AppFlowy"
   desc "Open-source project and knowledge management tool"
@@ -18,7 +18,7 @@ cask "appflowy" do
 
   depends_on macos: ">= :big_sur"
 
-  app "AppFlowy.app"
+  app "AppFlowy-#{arch}.app", target: "AppFlowy.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.appflowy.macos",

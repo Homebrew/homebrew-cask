@@ -12,8 +12,8 @@ cask "choice-financial-terminal" do
 
   livecheck do
     url :url
-    strategy :extract_plist do |item|
-      item["com.eastmoney.choice"]&.short_version
+    strategy :extract_plist do |items|
+      items["com.eastmoney.choice"]&.short_version
     end
   end
 

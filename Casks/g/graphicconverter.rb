@@ -1,6 +1,6 @@
 cask "graphicconverter" do
-  version "12.4.3,7002"
-  sha256 "bb6ba0afec17095f1e8de6465282998c37e46a4c36a68fb4518b57289a876d17"
+  version "12.5.1,7134"
+  sha256 "d9618b6b14c794c772b54ca3ac4c9bfadb267f54035037981e8fa3684d6ed600"
 
   url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.csv.second}.zip",
       verified: "lemkesoft.info/"

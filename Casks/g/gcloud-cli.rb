@@ -1,11 +1,14 @@
 cask "gcloud-cli" do
   arch arm: "arm", intel: "x86_64"
+  os macos: "darwin", linux: "linux"
 
-  version "549.0.1"
-  sha256 arm:   "15eddaa42af6c799b508e69ddd4427bf6a090811828ee840dd52097f0d582eda",
-         intel: "42713e57ea614d01f573bd448a3ad6570d477e6d35d5afd021d6785eaa68711e"
+  version "556.0.0"
+  sha256 arm:          "46fb29568f100a8cca4da05848e2a35e455700ed99339199a580512d9525d521",
+         intel:        "3844ab6ad65eaa16bca726bcee139d0b89921b6ecdfb0f1560aca3608ab5a8fa",
+         arm64_linux:  "6d5feca991c145292b5183721b81793e37c1899450e83989f69c9dcf3e224a7c",
+         x86_64_linux: "fef8769a8d3cf8e9c1377f6111da737db43184cedc55b2f4762b7e5f14e16c72"
 
-  url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-darwin-#{arch}.tar.gz"
+  url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-#{os}-#{arch}.tar.gz"
   name "Google Cloud CLI"
   desc "Set of tools to manage resources and applications hosted on Google Cloud"
   homepage "https://cloud.google.com/cli/"
@@ -16,21 +19,34 @@ cask "gcloud-cli" do
   end
 
   auto_updates true
-  depends_on formula: "python@3.13"
+
+  on_macos do
+    depends_on formula: "python@3.13"
+  end
+  on_linux do
+    on_arm do
+      depends_on formula: "python@3.13"
+    end
+  end
 
   google_cloud_sdk_root = "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
 
+  args = [
+    "--quiet",
+    "--usage-reporting", "false",
+    "--bash-completion", "false",
+    "--path-update", "false",
+    "--rc-path", "false",
+    "--update-installed-components"
+  ]
+
+  on_macos do
+    args << "--install-python" << "false"
+  end
+
   installer script: {
     executable: "google-cloud-sdk/install.sh",
-    args:       [
-      "--quiet",
-      "--usage-reporting", "false",
-      "--bash-completion", "false",
-      "--path-update", "false",
-      "--rc-path", "false",
-      "--install-python", "false",
-      "--update-installed-components"
-    ],
+    args:       args,
   }
   binary "google-cloud-sdk/bin/bq"
   binary "google-cloud-sdk/bin/docker-credential-gcloud"
@@ -51,24 +67,27 @@ cask "gcloud-cli" do
     unless (latest_path = staged_path.dirname/"latest").directory?
       FileUtils.ln_s staged_path, latest_path, force: true
     end
-    # Install required external dependencies via virtualenv
-    if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
-      puts "deleting existing virtual env before enabling virtual env with current Python version"
-      system_command "#{google_cloud_sdk_root}/bin/gcloud",
-                     args:      ["config", "virtualenv", "delete", "-q"],
-                     reset_uid: true
-    end
-    system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                    args:      ["config", "virtualenv", "create", "--python-to-use",
-                                "#{HOMEBREW_PREFIX}/opt/python@3.13/libexec/bin/python3"],
-                    reset_uid: true
-    system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                    args:      ["config", "virtualenv", "enable"],
-                    reset_uid: true
 
-    system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                    args:      ["version"],
-                    reset_uid: true
+    if OS.mac?
+      # Install required external dependencies via virtualenv
+      if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
+        puts "deleting existing virtual env before enabling virtual env with current Python version"
+        system_command "#{google_cloud_sdk_root}/bin/gcloud",
+                       args:      ["config", "virtualenv", "delete", "-q"],
+                       reset_uid: true
+      end
+      system_command  "#{google_cloud_sdk_root}/bin/gcloud",
+                      args:      ["config", "virtualenv", "create", "--python-to-use",
+                                  "#{HOMEBREW_PREFIX}/opt/python@3.13/libexec/bin/python3"],
+                      reset_uid: true
+      system_command  "#{google_cloud_sdk_root}/bin/gcloud",
+                      args:      ["config", "virtualenv", "enable"],
+                      reset_uid: true
+
+      system_command  "#{google_cloud_sdk_root}/bin/gcloud",
+                      args:      ["version"],
+                      reset_uid: true
+    end
   end
 
   uninstall trash: staged_path.dirname/"latest"

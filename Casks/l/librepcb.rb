@@ -1,9 +1,13 @@
 cask "librepcb" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.3.0"
-  sha256 arm:   "5b9061a42f429fb3d4f7404e50542fc9935c9b807cafcb205a9185ed3afa5c3a",
-         intel: "1f19ce21176ce784d875d4592caa49872beaf09be2259b76cc092cab401267b3"
+  version "2.0.0"
+  sha256 arm:   "729bacf2493378fd4809f8b8700eae44db6b63a4d3e2337f583c3e62d823896a",
+         intel: "784c23dca953d3eac1132a288a2fa4d430aef26ce99bf89b864e911293ea9a20"
+
+  on_intel do
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  end
 
   url "https://download.librepcb.org/releases/#{version}/librepcb-#{version}-mac-#{arch}.dmg"
   name "LibrePCB"
@@ -15,7 +19,7 @@ cask "librepcb" do
     regex(%r{href=.*?/librepcb[._-]v?(\d+(?:\.\d+)+)-mac-#{arch}\.dmg}i)
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  depends_on macos: ">= :big_sur"
 
   app "librepcb.app"
 

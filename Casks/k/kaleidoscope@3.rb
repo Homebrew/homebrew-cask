@@ -7,24 +7,14 @@ cask "kaleidoscope@3" do
   desc "Spot and merge differences in text and image files or folders"
   homepage "https://kaleidoscope.app/"
 
-  # Upstream also includes the newest version across all major versions, so we
-  # have to omit items with a different major version.
   livecheck do
-    url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
-    strategy :sparkle do |items|
-      items.map do |item|
-        next if item.short_version&.split(".")&.first != version.major
-
-        item.nice_version
-      end
-    end
+    skip "Legacy version"
   end
 
   auto_updates true
   conflicts_with cask: %w[
     kaleidoscope
     kaleidoscope@2
-    ksdiff
   ]
   depends_on macos: ">= :big_sur"
 

@@ -8,7 +8,8 @@ cask "smart-converter-pro" do
   homepage "https://shedworx.com/smart-converter-pro"
 
   livecheck do
-    url "https://shedworx.com/download/?product=scp3"
+    url "https://shedworx.com/download/?product=scp3",
+        user_agent: :browser
     regex(/href=.*?SmartConverterPro[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

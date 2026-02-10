@@ -135,7 +135,6 @@ Homebrew [automatically taps and keeps Homebrew Cask updated](https://github.com
 * `--debug`: output debug information.
 * `--no-binaries`: skip symlinking executable binaries into `/opt/homebrew/bin`.
 * `--require-sha`: abort installation of cask if no checksum is defined.
-* `--no-quarantine`: [disable Apple’s quarantining](https://docs.brew.sh/FAQ#why-cant-i-open-a-mac-app-from-an-unidentified-developer) for the specific app.
 * `--language=<iso-language>[,<iso-language> ... ]`: changes the language of the cask to be installed. The first matching language is used, otherwise it uses the default language of the cask.
 
 You can also modify the default installation locations used when issuing `brew install`:

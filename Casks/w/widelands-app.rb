@@ -1,20 +1,30 @@
 cask "widelands-app" do
-  version "1.2.1"
+  version "1.3"
 
-  on_ventura :or_older do
-    arch arm: "12-x86", intel: "12-x86"
+  on_sonoma :or_older do
+    on_arm do
+      on_ventura :or_older do
+        arch arm: "12_arm64"
 
-    sha256 "de55c686a82c904c4e585cf93802af3b475ed330e5420b3ef9b4a23d649e6b9e"
+        sha256 "a6eaff7b271b0d046e779f976f0d8aa037886d645b4fd64c939a9f979651cca9"
+      end
+      on_sonoma do
+        arch arm: "14_arm64"
 
-    caveats do
-      requires_rosetta
+        sha256 "e3ae23a9415645c0321e86a64be1666102c524d2e970155979c61aac9aac2845"
+      end
+    end
+    on_intel do
+      arch intel: "12_x86"
+
+      sha256 "9370b6771f2ca9140b77c7c38b59bcda3bd3602d6d90ba0a5d6237185a768fa7"
     end
   end
-  on_sonoma :or_newer do
-    arch arm: "14-arm64", intel: "12-x86"
+  on_sequoia :or_newer do
+    arch arm: "15_arm64", intel: "15_x86"
 
-    sha256 arm:   "7067e26809ba92395644b58ced3d99b2ecd5f83844c913c1cae7290351cc6f38",
-           intel: "de55c686a82c904c4e585cf93802af3b475ed330e5420b3ef9b4a23d649e6b9e"
+    sha256 arm:   "578fbbf53acc805fa807d37f5bea0136d3442514cd57bc4f963275086a623a72",
+           intel: "92bec98b8078a6caf0efed6fffb7f01f5ba82cba0016a185ee61e2a5d009da7f"
   end
 
   url "https://github.com/widelands/widelands/releases/download/v#{version}/Widelands-#{version}-MacOS#{arch}.dmg",
@@ -24,13 +34,18 @@ cask "widelands-app" do
   homepage "https://www.widelands.org/"
 
   livecheck do
-    url "https://www.widelands.org/wiki/Download/"
-    regex(/href=.*?Widelands[._-]v?(\d+(?:\.\d+)+)[._-]MacOS#{arch}\.dmg/i)
+    url :url
+    regex(/Widelands[._-]v?(\d+(?:\.\d+)+)[._-]MacOS#{arch.gsub(/[._-]/, "[._-]")}\.dmg/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.filter_map do |asset|
+        asset["browser_download_url"]&.[](regex, 1)
+      end
+    end
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :big_sur"
 
   app "Widelands.app"
 

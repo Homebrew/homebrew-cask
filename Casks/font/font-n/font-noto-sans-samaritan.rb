@@ -2,10 +2,10 @@ cask "font-noto-sans-samaritan" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansSamaritan-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanssamaritan/NotoSansSamaritan-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Samaritan"
-  homepage "https://www.google.com/get/noto/#sans-samr"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Samaritan"
 
   font "NotoSansSamaritan-Regular.ttf"
 

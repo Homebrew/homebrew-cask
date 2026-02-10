@@ -1,4 +1,5 @@
-[
-  "ai-studio",
-  "shotcut"
-]
+{
+  "ai-studio": "all",
+  "icon-composer": "intel",
+  "plover": "intel"
+}

@@ -1,6 +1,6 @@
 cask "blip" do
-  version "1.1.14,20251129112957"
-  sha256 "9dc1d10f164153f8a740ab43d5888bc2a116935f59aff1e6b134c87464d6e8ad"
+  version "1.1.15,20260112093151"
+  sha256 "0a97787fd8ab19c63a112fc20049a67b40544a596c15f9994356729e69376bd9"
 
   url "https://f000.backblazeb2.com/file/push-mac/Blip-#{version.csv.second}.zip",
       verified: "f000.backblazeb2.com/file/push-mac/"

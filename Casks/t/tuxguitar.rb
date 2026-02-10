@@ -1,6 +1,6 @@
 cask "tuxguitar" do
-  version "2.0.0"
-  sha256 "1eb1ae0284be4da5ada59dcb755f29dff8f07cd9eb0b93b1af02fe65ff9a062d"
+  version "2.0.1"
+  sha256 "b2041622009f6c1663aaeaab123f6b93a1d99550e92d8080d3af918327570912"
 
   url "https://github.com/helge17/tuxguitar/releases/download/#{version}/tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app.tar.gz",
       verified: "github.com/helge17/tuxguitar/"

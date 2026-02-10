@@ -1,6 +1,6 @@
 cask "openboard" do
-  version "1.7.3"
-  sha256 "a380cc4b762929f14e71f580b5c6261c5179b770218d0500a64327dc5610e5de"
+  version "1.7.5"
+  sha256 "f0f06c57e437096a379e1153e50ae5c2941f24e1e56906b78b398562e4d4a34b"
 
   url "https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}.dmg",
       verified: "github.com/OpenBoard-org/OpenBoard/"
@@ -12,6 +12,8 @@ cask "openboard" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :monterey"
 
   app "OpenBoard.app"
 

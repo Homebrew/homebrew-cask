@@ -1,6 +1,6 @@
 cask "batteries" do
-  version "2.3.4"
-  sha256 "8702e399198f30784b12b8805e7755fe96fac7cb88ed981c3e2266f913cbe4c9"
+  version "3.0.0"
+  sha256 "353edbc85cb6255192599cc64dd9bc81a6fd64e6b0dd77f0c6a63559f7512a99"
 
   url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg",
       verified: "github.com/ronyfadel/BatteriesReleases/"
@@ -13,7 +13,7 @@ cask "batteries" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Batteries.app"
 

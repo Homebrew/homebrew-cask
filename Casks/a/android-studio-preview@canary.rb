@@ -1,19 +1,24 @@
 cask "android-studio-preview@canary" do
   arch arm: "mac_arm", intel: "mac"
 
-  version "2025.2.3.5"
-  sha256 arm:   "6cf5e5779c0cd02d30d503fa46045e1e7bfd19647dcdbb50ae6e4de1aa82882d",
-         intel: "a05520d0ce02ecbb707f99ef12603a26cae7c097d4bf8a8aa97115bd87fc82fd"
+  version "2025.3.2.3,panda2-canary3"
+  sha256 arm:   "7b747cb1752aabfdafd7726b3c1213943cc76facf3c8e7a37bcd45bb26d76498",
+         intel: "80d3131da8b6f309bc066d25f74f5bf1740658da6b466cb0d66cee69a9b03fc5"
 
-  url "https://redirector.gvt1.com/edgedl/android/studio/install/#{version}/android-studio-#{version}-#{arch}.dmg",
-      verified: "redirector.gvt1.com/edgedl/android/studio/install/"
+  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
+      verified: "edgedl.me.gvt1.com/android/studio/install/"
   name "Android Studio Preview (Canary)"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/preview/"
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/android[._-]studio[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/android[._-]studio(?:[._-]([^"' >]+))?[._-]#{arch}\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+      end
+    end
   end
 
   auto_updates true

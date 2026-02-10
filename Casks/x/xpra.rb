@@ -1,9 +1,9 @@
 cask "xpra" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.4,0"
-  sha256 arm:   "e9f12a730f1ebf82eb7f36fb094b37c8a63c0ed34aeeb851274123a7ee8668e0",
-         intel: "25ce53067ba558c60553fc04a7d3140af16ab54208f6e52a4713b9ec72c9bd1f"
+  version "6.4.2,1"
+  sha256 arm:   "b4b51c606cd749d93d664b081f9e48f86d1e86a155caa7b8e3f55c16dbcd590e",
+         intel: "b59119b255c615fcc2077c2154ca47646c7726d0a5142f4b12a8ca4c6b4a1640"
 
   url "https://xpra.org/dists/MacOS/#{arch}/Xpra-#{arch}-#{version.csv.first}-r#{version.csv.second}.dmg",
       verified: "xpra.org/"

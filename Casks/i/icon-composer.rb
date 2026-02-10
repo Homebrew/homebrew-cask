@@ -1,15 +1,16 @@
 cask "icon-composer" do
-  version "1.1"
-  sha256 "7c60d4fdedc1e9c7af26f583a3a311bf9dba2ffbb9a2af957cbb6aff499164af"
+  version "1.2"
+  sha256 "dce4d78a615e543832fb2cdca3b28a31355cf21d57b6b4ab96f5b278ed7d5af6"
 
   url "https://devimages-cdn.apple.com/design/resources/download/Icon-Composer-#{version}.dmg"
   name "Icon Composer"
   desc "Apple tool to create multi-platform icons"
   homepage "https://developer.apple.com/icon-composer/"
 
+  # The homepage no longer provides version information. The download link on
+  # the page points to an Icon Composer download page but it's behind a login.
   livecheck do
-    url :homepage
-    regex(/Icon[._-]Composer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    skip "No version information available"
   end
 
   depends_on macos: ">= :sequoia"

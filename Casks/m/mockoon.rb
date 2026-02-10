@@ -1,9 +1,9 @@
 cask "mockoon" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.4.0"
-  sha256 arm:   "a64d822c133487819ea3d5e27dbf280cba474608f007413914b9579448000e96",
-         intel: "29fbcfb7c1ffbc1cc90d909c00641d1e897b96afb43ecd77cd411042f8212537"
+  version "9.5.0"
+  sha256 arm:   "7376bc54a7c9bb104c8bcc21db67b0849215c91b6fcc876e5cf3794817296383",
+         intel: "eabe8222f36df2072d89043d9fae51e01bcf96495a653f5de88e49286341209a"
 
   url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.#{arch}.dmg",
       verified: "github.com/mockoon/mockoon/"

@@ -9,6 +9,7 @@ cask "mozregression-gui" do
   homepage "https://mozilla.github.io/mozregression/"
 
   livecheck do
+    url :url
     strategy :github_latest
   end
 

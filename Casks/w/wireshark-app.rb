@@ -3,9 +3,9 @@ cask "wireshark-app" do
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
   on_big_sur :or_older do
-    version "4.4.12"
-    sha256 arm:   "df982ac0d11858af3841392e727a2ce3907975acade760b381198c30c75304d1",
-           intel: "a9290733fa516f54bc7a4e8380b1a55cefd1f88277424f5f6b8c6832c0322ed6"
+    version "4.4.13"
+    sha256 arm:   "5b1ffb26ab84ac766299e12af8470e4036bffbd5b7a297bd46398d8daf782e7d",
+           intel: "4bcf6def67a6f42e57c578aa7e366bed12fca686082d7d39412454542c393d76"
 
     url "https://www.wireshark.org/download/osx/all-versions/Wireshark%20#{version}%20#{arch}%2064.dmg"
 
@@ -18,8 +18,8 @@ cask "wireshark-app" do
     end
   end
   on_monterey :or_newer do
-    version "4.6.2"
-    sha256 "238af1a676f66a465de3edb6dfb7ce8bed5e91e91b26030f4c1a231982f8d206"
+    version "4.6.3"
+    sha256 "788fef0f62fc58d2523270256694efc30e79f3584d4895eb066ca333daa88fe9"
 
     url "https://www.wireshark.org/download/osx/all-versions/Wireshark%20#{version}.dmg"
 

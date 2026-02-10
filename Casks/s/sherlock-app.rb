@@ -24,7 +24,7 @@ cask "sherlock-app" do
     "~/Library/Application Support/io.inspiredcode.Sherlock",
     "~/Library/Application Support/Sherlock",
     "~/Library/Caches/io.inspiredcode.Sherlock",
-    "~/Library/Caches/io.inspiredcode.Sherlock",
+    "~/Library/HTTPStorages/io.inspiredcode.Sherlock",
     "~/Library/Preferences/io.inspiredcode.Sherlock.plist",
   ]
 end

@@ -2,13 +2,12 @@ cask "font-noto-sans-thaana" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansThaana-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansthaana/NotoSansThaana%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Thaana"
-  homepage "https://www.google.com/get/noto/#sans-thaa"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Thaana"
 
-  font "NotoSansThaana-Bold.ttf"
-  font "NotoSansThaana-Regular.ttf"
+  font "NotoSansThaana[wght].ttf"
 
   # No zap stanza required
 end

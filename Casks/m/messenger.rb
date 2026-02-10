@@ -7,10 +7,8 @@ cask "messenger" do
   desc "Native desktop app for Messenger (formerly Facebook Messenger)"
   homepage "https://www.messenger.com/desktop"
 
-  livecheck do
-    url "https://www.facebook.com/messenger/desktop/zeratul/update.xml?target=zeratul&platform=mac"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2025-12-25", because: :discontinued
+  disable! date: "2025-12-25", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :monterey"

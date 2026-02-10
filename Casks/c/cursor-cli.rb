@@ -1,9 +1,9 @@
 cask "cursor-cli" do
   arch arm: "arm64", intel: "x64"
 
-  version "2025.11.25-e276529"
-  sha256 arm:   "82feb626eed70d033d413b10da8ec321475d4cf4d5a4e2f167be1ea7cb9314ba",
-         intel: "020d05394a3c40fee1f111cab549ced10eeb161adf139b94ae1e565501623f51"
+  version "2026.01.28-fd13201"
+  sha256 arm:   "4799047ddf3821a517b8df8f233a460f53463f30fac7133d3405c002de9dd0df",
+         intel: "1b6dcb0bb4a5d468df6840a7752bb20b11cae1dae424a1b70755369394801c90"
 
   url "https://downloads.cursor.com/lab/#{version}/darwin/#{arch}/agent-cli-package.tar.gz"
   name "Cursor CLI"
@@ -12,7 +12,7 @@ cask "cursor-cli" do
 
   livecheck do
     url "https://cursor.com/install"
-    regex(%r{downloads\.cursor\.com/lab/v?(\d+(?:\.\d+)+(?:[._-]\h+)?)/})
+    regex(%r{downloads\.cursor\.com/lab/v?(\d+(?:\.\d+)+(?:[._-]\h+)?)/}i)
   end
 
   binary "#{staged_path}/dist-package/cursor-agent", target: "cursor-agent"

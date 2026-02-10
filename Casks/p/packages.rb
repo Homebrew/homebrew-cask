@@ -1,20 +1,16 @@
 cask "packages" do
   version "1.2.10"
-  sha256 :no_check
+  sha256 "9d9a73a64317ea6697a380014d2e5c8c8188b59d5fb8ce8872e56cec06cd78e8"
 
-  url "http://s.sudre.free.fr/Software/files/Packages.dmg"
+  url "https://github.com/packagesdev/packages/releases/download/v#{version}/Packages.dmg",
+      verified: "github.com/packagesdev/packages/"
   name "Packages"
   desc "Integrated packaging environment"
   homepage "http://s.sudre.free.fr/Software/Packages/about.html"
 
   livecheck do
-    url "http://s.sudre.free.fr/Software/documentation/RemoteVersion.plist"
-    strategy :xml do |xml|
-      version = xml.elements["//key[text()='WBRemoteAvailableVersion']"]&.next_element&.text
-      next if version.blank?
-
-      version.strip
-    end
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

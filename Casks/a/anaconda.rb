@@ -2,8 +2,8 @@ cask "anaconda" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "2025.12-1"
-    sha256 "f998f0918b9f06e08c3444f2b2c897fd3036da6725441ca064aa71ad47c75481"
+    version "2025.12-2"
+    sha256 "8d0b858358456d4ee159feb0c4ee6d635590b777f8b9ffa4aa7553c469aae2b6"
   end
   on_intel do
     version "2025.06-1"
@@ -21,7 +21,7 @@ cask "anaconda" do
 
   livecheck do
     url "https://repo.anaconda.com/archive/"
-    regex(/Anaconda3-(\d+(?:\.\d+)+[._-]*\d+)-MacOSX-#{arch}\.sh/i)
+    regex(/href=.*?Anaconda3[._-]v?(\d+(?:[.-]\d+)+)[._-]MacOSX?[._-]#{arch}\.sh/i)
   end
 
   auto_updates true

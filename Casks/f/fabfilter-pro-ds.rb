@@ -1,6 +1,6 @@
 cask "fabfilter-pro-ds" do
-  version "1.24"
-  sha256 "853364c2e73c6a8103331549957018e3b71654bc6add69414d312cd208335ebe"
+  version "1.30"
+  sha256 "ffa08760c873d66e52061c2e97d9eaceb3bdb4db002805ae7e6a9024f97e88be"
 
   url "https://cdn-b.fabfilter.com/downloads/ffprods#{version.no_dots}.dmg"
   name "FabFilter Pro-DS"

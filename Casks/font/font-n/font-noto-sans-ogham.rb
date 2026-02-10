@@ -2,10 +2,10 @@ cask "font-noto-sans-ogham" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansOgham-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansogham/NotoSansOgham-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Ogham"
-  homepage "https://www.google.com/get/noto/#sans-ogam"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Ogham"
 
   font "NotoSansOgham-Regular.ttf"
 

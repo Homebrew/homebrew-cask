@@ -1,9 +1,9 @@
 cask "wireframe-sketcher" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "7.4.0"
-  sha256 arm:   "e1a9a0cbe60ff5831b931b1e67a1af21965dbcb737f1d2abeddae7121e819858",
-         intel: "645be5411c4eb074dc8556516e0ddb7f18f389ad1bef72e0393faa718c5f45f1"
+  version "7.4.2"
+  sha256 arm:   "0c5304b2e8bcbca7de7c705673bee0f7f204a6f0895e6b10016d107db95897f0",
+         intel: "2a7d7863b4dfd88f94074b24082b00a192bd6f0d1c6b76afa5ce5f0e360ed9cc"
 
   url "https://wireframesketcher.com/downloads/studio/dist/WireframeSketcher-#{version}-macosx.#{arch}.zip"
   name "WireframeSketcher"

@@ -1,5 +1,5 @@
 cask "macx-youtube-downloader" do
-  version "5.3.8"
+  version "5.4.0"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-youtube-downloader-free.dmg"
@@ -8,7 +8,7 @@ cask "macx-youtube-downloader" do
   homepage "https://www.macxdvd.com/free-youtube-video-downloader-mac/"
 
   livecheck do
-    url "http://www.macxdvd.com/free-youtube-video-downloader-mac/upgrade/macx-youtube-downloader#{version.major}.plist"
+    url "https://www.macxdvd.com/free-youtube-video-downloader-mac/upgrade/macx-youtube-downloader#{version.major}.plist"
     strategy :xml do |xml|
       version = xml.elements["//key[text()='LastestVersion']"]&.next_element&.text
       next if version.blank?

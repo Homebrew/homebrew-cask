@@ -1,6 +1,6 @@
 cask "qctools" do
-  version "1.4"
-  sha256 "0023f0475cc22fbd87e5649db586db9b8c6f34d57563c2087b43b2d32b920fca"
+  version "1.4.1"
+  sha256 "bafce2600d2dfc6efefecfa156b550b6383f26a9739cba4f83a62255bcf51975"
 
   url "https://mediaarea.net/download/binary/qctools/#{version}/QCTools_#{version}_mac.dmg"
   name "QCTools"
@@ -21,8 +21,4 @@ cask "qctools" do
     "~/Library/Preferences/net.mediaarea.QCTools.plist",
     "~/Library/Saved Application State/net.mediaarea.qctools.mac.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

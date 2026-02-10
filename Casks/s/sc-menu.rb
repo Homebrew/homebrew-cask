@@ -1,6 +1,6 @@
 cask "sc-menu" do
-  version "2.0"
-  sha256 "dce4f87c1237d4de0f8c2be691d98800037967d61b6008fec7059ee683e697f1"
+  version "2.1"
+  sha256 "13318245268a2ecc10a64d2fea561807e9f5bef69bf3e66b85ab44ef3157bbda"
 
   url "https://github.com/boberito/sc_menu/releases/download/#{version}/SC_Menu.dmg"
   name "SC Menu"

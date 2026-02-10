@@ -1,6 +1,6 @@
 cask "topaz-photo" do
-  version "1.0.2"
-  sha256 "502f354c595de04da31929fbfec2f9440106279a0fe498463c47fd4f7bd065a4"
+  version "1.2.1"
+  sha256 "895e8b3f7e1990ad4f2e961ea40d46cd6b7abf4522ef52fb7355f91cc32b6021"
 
   url "https://downloads.topazlabs.com/deploy/TopazPhoto/#{version}/TopazPhoto-#{version}.pkg"
   name "Topaz Photo"

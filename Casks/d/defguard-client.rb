@@ -10,10 +10,7 @@ cask "defguard-client" do
   desc "WireGuard VPN client which supports multi-factor authentication"
   homepage "https://github.com/defguard/client"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2025-12-16", because: :moved_to_mas
 
   pkg "defguard-#{arch}-apple-darwin-#{version}.pkg"
 

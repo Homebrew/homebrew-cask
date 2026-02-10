@@ -1,9 +1,9 @@
 cask "typefully" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.0"
-  sha256 arm:   "4341385e52e5a02085bcd316b0015d15ffc8c53d1d97e593bb84ba31bdd4c980",
-         intel: "6f9a081eca3015a0cd5126d1aa711da029c386b90fe119f33b5a5b2efb96330f"
+  version "1.3.1"
+  sha256 arm:   "607d2a6b83a052813776b47818441b34de1083ac2a2a9873e48a60c829bf8e8a",
+         intel: "e546dab98a27d33a1b3978f3f5ff843a5592d5e343ba3b50d855704fbfe68824"
 
   url "https://download.todesktop.com/2304250k2av6yux/Typefully%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/2304250k2av6yux/"

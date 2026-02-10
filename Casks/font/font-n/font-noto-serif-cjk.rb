@@ -6,8 +6,11 @@ cask "font-noto-serif-cjk" do
   name "Noto Serif CJK"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Serif"
 
-  deprecate! date: "2025-11-22", because: :discontinued
-  disable! date: "2026-11-22", because: :discontinued
+  livecheck do
+    url :url
+    regex(/^Serif[._-]?v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases
+  end
 
   font "NotoSerifCJK.ttc"
 

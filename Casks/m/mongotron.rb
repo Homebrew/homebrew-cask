@@ -8,6 +8,7 @@ cask "mongotron" do
   homepage "https://github.com/officert/mongotron"
 
   deprecate! date: "2024-12-30", because: :unmaintained
+  disable! date: "2026-01-05", because: :unmaintained
 
   app "Mongotron-darwin-x64/Mongotron.app"
 

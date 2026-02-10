@@ -1,6 +1,6 @@
 cask "shottr" do
-  version "1.9"
-  sha256 "664d95023406c7fa87d88c149a0302fb8ab43bb4aadf3c7f7a9bc9a4447805b0"
+  version "1.9.1"
+  sha256 "0bfd797dbcfec52a5e122b50062ad6b954847fe3b53d676c05ac4361f50ce5b3"
 
   url "https://shottr.cc/dl/Shottr-#{version}.dmg"
   name "Shottr"

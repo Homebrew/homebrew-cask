@@ -1,9 +1,9 @@
 cask "mqttfx" do
   arch arm: "applesilicon", intel: "intel"
 
-  version "5.10.1"
-  sha256 arm:   "0d3c7e4a8dd7dceaf32821b9081bfefaaf563dae9087ff53b654c6e39f441c65",
-         intel: "9d9527e9e0d4fff82505a22ba636368d8c584100979f0731d4d86dd8a76300c6"
+  version "5.12.0"
+  sha256 arm:   "38d799f24727b9bdd06166ddda3ca2361339a2c58a08b40fed56d570f73d10e5",
+         intel: "897e1d8f296ae4b062f96decb0d8ff99ba903a0531cf4a7147d31dc5d4afea01"
 
   url "https://download.softblade.net/mqttfx-#{version}-macos-#{arch}.dmg",
       verified: "download.softblade.net/"
@@ -16,11 +16,7 @@ cask "mqttfx" do
     regex(/href=.*?mqttfx[._-]v?(\d+(?:\.\d+)+)-macos/i)
   end
 
-  installer script: {
-    executable: "MQTT.fx Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-    sudo:       true,
-  }
+  app "MQTT.fx.app"
 
   uninstall delete: "/Applications/MQTT.fx.app"
 

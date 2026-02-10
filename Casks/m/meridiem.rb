@@ -1,6 +1,6 @@
 cask "meridiem" do
-  version "0.2.8"
-  sha256 "90da08997866abe4a02ac4eb999bbfc80a7e33ae3b21c54f29741d07f7ad05c0"
+  version "1.0.0"
+  sha256 "9baf1608a5edc5ccd8155d7e7d5e426c00c62a6f09487b31bcffc54282ab6ffd"
 
   url "https://storage.googleapis.com/markwhen_binaries/Meridiem/darwin/arm64/Meridiem-darwin-arm64-#{version}.zip",
       verified: "storage.googleapis.com/markwhen_binaries/"
@@ -15,7 +15,7 @@ cask "meridiem" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
   depends_on arch: :arm64
 
   app "Meridiem.app"

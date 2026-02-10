@@ -2,10 +2,10 @@ cask "font-noto-sans-yi" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansYi-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansyi/NotoSansYi-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Yi"
-  homepage "https://www.google.com/get/noto/#sans-yiii"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Yi"
 
   font "NotoSansYi-Regular.ttf"
 

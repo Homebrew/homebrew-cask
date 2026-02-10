@@ -1,9 +1,9 @@
 cask "springtoolsforeclipse" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "5.0.0,4.38.0"
-  sha256 arm:   "fffc6f87665531da1c7f1f42de09899ac12067bc081a0ba43378336d09a2f131",
-         intel: "d709c2095260f999c17a376388574408f9ef2982b3ef970bb455d209693b09cc"
+  version "5.0.1,4.38.0"
+  sha256 arm:   "82ce82a301e9c891fe50c066c39bc897e138d615f40d30b7767285b66eda1f99",
+         intel: "2ec21bb6b84ab68e34c861d9d06be144d3fc9f1a9b9e6d5c0bd2308078f4828c"
 
   url "https://cdn.spring.io/spring-tools/release/dist/#{version.csv.first}.RELEASE/e#{version.csv.second.major_minor}/spring-tools-for-eclipse-#{version.csv.first}.RELEASE-e#{version.csv.second}-macosx.cocoa.#{arch}.dmg"
   name "Spring Tools for Eclipse"

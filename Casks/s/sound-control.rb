@@ -9,8 +9,8 @@ cask "sound-control" do
   homepage "https://staticz.com/soundcontrol/"
 
   livecheck do
-    url "http://staticz.net/updates/soundcontrol#{version.major}.rss"
-    strategy :sparkle, &:short_version
+    url "https://staticz.com/download/4297/"
+    strategy :header_match
   end
 
   auto_updates true

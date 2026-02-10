@@ -1,9 +1,9 @@
 cask "pdf-over" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.4.6.1,2025,09"
-  sha256 arm:   "0e3d3faee6fdabcd1ea2e863eb66dd247f7a7d952497f1bd0c746cf5b78f35ec",
-         intel: "6c1f2424ed851343dd9a7c336f84731faac503b14ab6203dd66fa41a1bb027e7"
+  version "4.4.7,2025,12"
+  sha256 arm:   "635256b16356d53cbd78109ece1ce86857dc90e60570dbc2a467bb87794b6fd6",
+         intel: "68db812280c38a44d8d285545bd4ab2b771f631b490a07080af24dadc41e6135"
 
   url "https://technology.a-sit.at/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/PDF-Over-#{version.csv.first}-#{arch}.dmg"
   name "PDF-Over"

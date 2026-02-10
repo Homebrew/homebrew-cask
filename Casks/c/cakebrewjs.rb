@@ -1,9 +1,9 @@
 cask "cakebrewjs" do
-  version "2.89"
-  sha256 "12cb881af9f116a8c05c296d21e2922148bd840ca4201cb6d20d0133fe80030a"
+  version "2.94"
+  sha256 "90be41715b2297ee5817d14ab15875e56c015f3ff939d4c42518390aedaed67c"
 
   url "https://downloads.sourceforge.net/cakebrewjs/Cakebrewjs-#{version}-Darwin.dmg"
-  name "cakebrewjs"
+  name "Cakebrewjs"
   desc "Homebrew GUI app"
   homepage "https://sourceforge.net/projects/cakebrewjs/"
 

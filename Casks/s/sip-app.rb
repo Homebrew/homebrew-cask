@@ -18,8 +18,8 @@ cask "sip-app" do
     end
   end
   on_sonoma :or_newer do
-    version "4.1.1"
-    sha256 "92f9136ee4a8243ce6cded716114ddd1476a839e825d9bab13e974ccdea5ba00"
+    version "4.1.3"
+    sha256 "552f711dcf37f7e616478bb0a41c6a4e06368a7b64b846827ee445ca2234d438"
 
     # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
     # work with all of the items in the feed (not just the newest one).

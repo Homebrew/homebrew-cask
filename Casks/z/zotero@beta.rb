@@ -1,6 +1,6 @@
 cask "zotero@beta" do
-  version "8.0-beta.3,8355a9540"
-  sha256 "cffacdbd4e018ee3dfbc95d29e39390456da9f76db4780ad474e2d1f0b597e31"
+  version "8.0.2-beta.5,c35d7f21e"
+  sha256 "9c7c31506254b94df22fc3fda1b536e0d0e9553ba6ac216135fd19368908e8cb"
 
   url "https://download.zotero.org/client/beta/#{version.csv.first}%2B#{version.csv.second}/Zotero-#{version.csv.first}%2B#{version.csv.second}.dmg"
   name "Zotero Beta"
@@ -8,9 +8,13 @@ cask "zotero@beta" do
   homepage "https://www.zotero.org/"
 
   livecheck do
-    url "https://www.zotero.org/download/client/update/0/0/Darwin/0/beta/update.xml?force=1"
-    strategy :xml do |xml|
-      xml.get_elements("//update").map { |item| item.attributes["version"]&.tr("+", ",") }
+    url "https://www.zotero.org/download/client/dl?platform=mac&channel=beta"
+    regex(/Zotero[._-]v?(\d+(?:\.\d+)+-beta\.\d+)%2B([0-9a-f]+)\.dmg/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 

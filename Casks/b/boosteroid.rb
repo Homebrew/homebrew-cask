@@ -6,13 +6,14 @@ cask "boosteroid" do
   sha256 :no_check
 
   url "https://boosteroid.com/macos#{folder}/installer/boosteroid-install-#{arch}.dmg",
-      user_agent: :fake
+      user_agent: :browser
   name "Boosteroid"
   desc "Cloud gaming service"
   homepage "https://boosteroid.com/"
 
   livecheck do
-    url "https://boosteroid.com/macos#{folder}/client/changelog.md"
+    url "https://boosteroid.com/macos#{folder}/client/changelog.md",
+        user_agent: :browser
     regex(/\[\s*\v?(\d+(?:\.\d+)+)\s*\]/i)
   end
 

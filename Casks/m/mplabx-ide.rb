@@ -1,6 +1,6 @@
 cask "mplabx-ide" do
-  version "6.25"
-  sha256 "289fd90eef9e9399623e2313cef81f13e2e9709743a403a6e8e2a01160438292"
+  version "6.30"
+  sha256 "5e7c7aec1d5cb9f1bf8a4517a6e8af5f3fdac4fabc953a18b3628c1b161373a4"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v#{version}-osx-installer.dmg",
       referer: "https://www.microchip.com/"
@@ -9,7 +9,7 @@ cask "mplabx-ide" do
   homepage "https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide"
 
   livecheck do
-    url :homepage
+    url :homepage, user_agent: :browser
     regex(/href=.*?MPLABX[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
   end
 
@@ -58,7 +58,7 @@ cask "mplabx-ide" do
             },
             delete: [
               # The below version number needs to be updated manually each time this Cask is updated
-              "/Applications/microchip/mplabcomm/3.54.00",
+              "/Applications/microchip/mplabcomm/3.55.00",
               "/Applications/microchip/mplabx/#{version}",
             ],
             rmdir:  [

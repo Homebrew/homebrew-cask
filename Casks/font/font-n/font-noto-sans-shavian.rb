@@ -2,10 +2,10 @@ cask "font-noto-sans-shavian" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansShavian-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansshavian/NotoSansShavian-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Shavian"
-  homepage "https://www.google.com/get/noto/#sans-shaw"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Shavian"
 
   font "NotoSansShavian-Regular.ttf"
 

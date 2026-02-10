@@ -1,5 +1,5 @@
 cask "softmaker-freeoffice" do
-  version "2024,1228"
+  version "2024,1230"
   sha256 :no_check # required as upstream package is updated in place
 
   url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.csv.first}.pkg",

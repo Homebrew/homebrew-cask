@@ -1,6 +1,6 @@
 cask "tableplus" do
-  version "6.7.8,650"
-  sha256 "5ac0992e6b565f44dd1efb77b32c150fd6b2ed7c1d16070edf16776ec2ffea5f"
+  version "6.8.0,654"
+  sha256 "44e2346be3ed22ea8ef749825f376531e9f73e2bf323dc23364bbb4a7f438464"
 
   url "https://files.tableplus.com/macos/#{version.csv.second}/TablePlus.dmg"
   name "TablePlus"

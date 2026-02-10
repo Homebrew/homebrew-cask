@@ -1,6 +1,6 @@
 cask "cinebench" do
-  version "2024"
-  sha256 "abd8533154d54cb74dc005226177767b7f16d6e647a0cc075a2f45854d3887ea"
+  version "2026"
+  sha256 "c8b156354f027cc9488957ae4129b6229691ff59320fa272f133b7e4cfd9dd94"
 
   url "https://mx-app-blob-prod.maxon.net/mx-package-production/website/macos/maxon/cinebench/Cinebench#{version}_macOS.dmg",
       referer: "https://www.maxon.net/en/downloads/cinebench-#{version}-downloads"
@@ -9,8 +9,8 @@ cask "cinebench" do
   homepage "https://www.maxon.net/products/cinebench/"
 
   livecheck do
-    url "https://www.maxon.net/en/downloads"
-    regex(/cinebench-?[rv]?(\d+(?:\.\d+)*)-downloads/i)
+    url "https://www.maxon.net/en/downloads/cinebench-downloads"
+    regex(/href=.*Cinebench[._-]?v?(\d+(?:\.\d+)*)[._-]macOS\.dmg/i)
   end
 
   depends_on macos: ">= :big_sur"

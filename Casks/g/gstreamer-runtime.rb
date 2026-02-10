@@ -1,6 +1,6 @@
 cask "gstreamer-runtime" do
-  version "1.26.9"
-  sha256 "1776d6dea6edeb74def606b88ceac20c4fab1397d26987d9c09f9133ab02900e"
+  version "1.28.0"
+  sha256 "9c252ae9d3ac5bc54505c4a4e93556c7d6e93218a18ad8060b30770d6db036a6"
 
   url "https://gstreamer.freedesktop.org/data/pkg/osx/#{version}/gstreamer-1.0-#{version}-universal.pkg"
   name "GStreamer runtime package"
@@ -17,27 +17,31 @@ cask "gstreamer-runtime" do
   pkg "gstreamer-1.0-#{version}-universal.pkg"
 
   uninstall pkgutil: [
-    "org.freedesktop.gstreamer.universal.base-crypto",
-    "org.freedesktop.gstreamer.universal.base-system-1.0",
-    "org.freedesktop.gstreamer.universal.GStreamer",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-capture",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-codecs",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-codecs-gpl",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-codecs-restricted",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-core",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-devtools",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-dvd",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-editing",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-effects",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-encoding",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-libav",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-net",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-net-restricted",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-playback",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-python",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-qt5",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-system",
-    "org.freedesktop.gstreamer.universal.gstreamer-1.0-visualizers",
+    "org.freedesktop.gstreamer.darwin.base-crypto",
+    "org.freedesktop.gstreamer.darwin.base-system-1.0",
+    "org.freedesktop.gstreamer.darwin.GStreamer",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-analytics",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-capture",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-codecs",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-codecs-gpl",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-codecs-gpl-restricted",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-codecs-restricted",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-core",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-devtools",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-dvd",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-dvd-gpl",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-editing",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-effects",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-encoding",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-gtk",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-libav",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-net",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-net-restricted",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-playback",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-python",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-qt5",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-system",
+    "org.freedesktop.gstreamer.darwin.gstreamer-1.0-visualizers",
   ]
 
   zap trash: "/Library/Frameworks/GStreamer.framework"

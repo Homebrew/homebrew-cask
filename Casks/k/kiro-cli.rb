@@ -1,6 +1,6 @@
 cask "kiro-cli" do
-  version "1.22.0"
-  sha256 "39d145607cc1619bf71d7adf1f76156438747782dadd8b204d5332813910f6f8"
+  version "1.25.0"
+  sha256 "9fd2b761503e0a1ae6d22da2468c99ba4e19f23136f72955b4af989b41da5d48"
 
   url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/Kiro%20CLI.dmg",
       verified: "desktop-release.q.us-east-1.amazonaws.com/"
@@ -19,6 +19,7 @@ cask "kiro-cli" do
   depends_on macos: ">= :big_sur"
 
   app "Kiro CLI.app"
+  binary "#{appdir}/Kiro CLI.app/Contents/MacOS/kiro-cli"
 
   zap trash: [
     "~/.kiro",

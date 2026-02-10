@@ -2,9 +2,9 @@ cask "awesun" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_id = on_arch_conditional arm: "_ARM"
 
-  version "16.1.0.25667"
-  sha256 arm:   "d1c0379561947adf559c068c74bbc769b6319d86c705c490a30f131d841b3905",
-         intel: "18b16a76ac6c6cf5e9dba26cdc64cd9a5e6386cedd3ae9eab81ef018751f825b"
+  version "16.2.0.27059"
+  sha256 arm:   "eb7e8e36338dcd8109056f2547d3d3f32d42fde169ead276d8c74c456942fd9e",
+         intel: "30627f95c8cf16446f873ebf168f3ade4d3f90a703590bf4c644e17f71635f74"
 
   url "https://dw.oray.com/sl/mac/AweSun_#{version}_#{arch}.dmg"
   name "Sunlogin Client"

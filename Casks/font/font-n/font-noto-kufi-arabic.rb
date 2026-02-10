@@ -2,13 +2,12 @@ cask "font-noto-kufi-arabic" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoKufiArabic-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notokufiarabic/NotoKufiArabic%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Kufi Arabic"
-  homepage "https://www.google.com/get/noto/#kufi-arab"
+  homepage "https://fonts.google.com/specimen/Noto+Kufi+Arabic"
 
-  font "NotoKufiArabic-Bold.ttf"
-  font "NotoKufiArabic-Regular.ttf"
+  font "NotoKufiArabic[wght].ttf"
 
   # No zap stanza required
 end

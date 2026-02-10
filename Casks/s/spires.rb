@@ -1,6 +1,6 @@
 cask "spires" do
-  version "2.0.11"
-  sha256 "e5a9b1e1371f006745de25f7a69ee4b298afd38d46add51f4178f0484473e400"
+  version "2.0.12"
+  sha256 "21e1ce6de6605ad0b0ee6ec85e801fcd876428bfa10681baa4ccb138d0bd1d24"
 
   url "https://member.ipmu.jp/yuji.tachikawa/spires/zips/spires_#{version}.zip"
   name "spires"

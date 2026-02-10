@@ -1,6 +1,6 @@
 cask "mega" do
-  version "12.1.1"
-  sha256 "59aa001b3a0a206f2134036dd1432d50759eb21cec2fcd7aaf3e9413d815e905"
+  version "12.1.2"
+  sha256 "f77e003d8597d8827052e2fb787b3b0b3cc64825d6d4b8c468d3d7dbfab271e6"
 
   url "https://megasoftware.net/releases/MEGA_#{version}_installer.pkg"
   name "MEGA"
@@ -9,7 +9,8 @@ cask "mega" do
   homepage "https://megasoftware.net/"
 
   livecheck do
-    url "https://www.megasoftware.net/current_release/"
+    url "https://www.megasoftware.net/current_release/",
+        user_agent: :browser
     strategy :json do |json|
       json.map do |item|
         next if item["operating_system"] != "mac" ||

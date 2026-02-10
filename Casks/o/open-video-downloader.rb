@@ -1,9 +1,9 @@
 cask "open-video-downloader" do
   arch arm: "aarch64", intel: "x64"
 
-  version "3.0.1"
-  sha256 arm:   "44b8fd4edeef2561a3d98bc9076ace34905d5dfc96b1f35b1a52c220b328a144",
-         intel: "0010285b92c2d80865a1fda982b33acc53b417f835af6658e1b76c0e0b9f9713"
+  version "3.1.1"
+  sha256 arm:   "f9b5bdc319d7a5089fb4d74ba50375367ee3ed0031aee3dc3de50d93abc82edf",
+         intel: "11e4858bdb88c4116aa241134e6826979b555cb3442db419f544ed74874207a3"
 
   url "https://github.com/jely2002/youtube-dl-gui/releases/download/app-v#{version}/Open.Video.Downloader_#{version}_#{arch}.dmg"
   name "Open Video Downloader"
@@ -14,8 +14,6 @@ cask "open-video-downloader" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
 

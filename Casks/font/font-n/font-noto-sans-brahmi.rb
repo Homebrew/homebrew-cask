@@ -2,10 +2,10 @@ cask "font-noto-sans-brahmi" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansBrahmi-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansbrahmi/NotoSansBrahmi-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Brahmi"
-  homepage "https://www.google.com/get/noto/#sans-brah"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Brahmi"
 
   font "NotoSansBrahmi-Regular.ttf"
 

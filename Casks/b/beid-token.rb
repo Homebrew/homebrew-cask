@@ -28,7 +28,14 @@ cask "beid-token" do
     opoo "Unable to forcibly close BEIDToken.app"
   end
 
-  uninstall quit:    ["be.fedict.BEIDToken.BEIDTokenApp", "be.eid.BEIDtoken.app"],
-            pkgutil: ["be.eid.middleware", "be.fedict.BEIDToken.BEIDTokenApp", "be.eid.BEIDtoken.app"]
+  uninstall quit:    [
+              "be.eid.BEIDtoken.app",
+              "be.fedict.BEIDToken.BEIDTokenApp",
+            ],
+            pkgutil: [
+              "be.eid.BEIDtoken.app",
+              "be.eid.middleware",
+              "be.fedict.BEIDToken.BEIDTokenApp",
+            ]
   # No zap stanza required
 end

@@ -10,6 +10,11 @@ cask "matterhorn" do
   desc "Unix terminal client for Mattermost"
   homepage "https://github.com/matterhorn-chat/matterhorn"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   binary "matterhorn-#{version}-Darwin-#{arch}/matterhorn"

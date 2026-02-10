@@ -1,17 +1,15 @@
 cask "vox" do
-  version "3.7.6"
-  sha256 :no_check
+  version "3.7.7,3770.1"
+  sha256 "287159bc31c99a46f71bcad02b73edd2f8fa3926d4bc1bbcfaea3beb7e03a96d"
 
-  url "https://vox.rocks/app-download?app=vox"
+  url "https://cdn.vox.rocks/vox-player/releases/versions/VOX-#{version.csv.second}.dmg"
   name "VOX"
   desc "Music player for high resolution (Hi-Res) music through the external sources"
   homepage "https://vox.rocks/mac-music-player"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |item|
-      item["com.coppertino.Vox"]&.short_version
-    end
+    url "https://cdn.vox.rocks/vox-player/releases/update.xml"
+    strategy :sparkle
   end
 
   auto_updates true

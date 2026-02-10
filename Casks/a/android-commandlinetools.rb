@@ -1,14 +1,14 @@
 cask "android-commandlinetools" do
   os macos: "mac", linux: "linux"
 
-  version "13114758"
+  version "14742923"
 
   on_macos do
-    sha256 "5673201e6f3869f418eeed3b5cb6c4be7401502bd0aae1b12a29d164d647a54e"
+    sha256 "ed304c5ede3718541e4f978e4ae870a4d853db74af6c16d920588d48523b9dee"
   end
 
   on_linux do
-    sha256 "7ec965280a073311c339e571cd5de778b9975026cfcbe79f2b1cdcb1e15317ee"
+    sha256 "04453066b540409d975c676d781da1477479dde3761310f1a7eb92a1dfb15af7"
   end
 
   url "https://dl.google.com/android/repository/commandlinetools-#{os}-#{version}_latest.zip",
@@ -21,8 +21,6 @@ cask "android-commandlinetools" do
     url :homepage
     regex(%r{href=.*?/commandlinetools[._-]#{os}[._-](\d+)[._-]latest\.zip}i)
   end
-
-  conflicts_with cask: "android-sdk"
 
   android_sdk_root = "#{HOMEBREW_PREFIX}/share/android-commandlinetools"
   android_clt_dir = "#{android_sdk_root}/cmdline-tools/latest"

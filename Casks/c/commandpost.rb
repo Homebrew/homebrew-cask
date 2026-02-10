@@ -1,15 +1,27 @@
 cask "commandpost" do
-  on_catalina :or_older do
-    version "1.4.13"
-    sha256 "dd0ddbf94722174760c82870f537b299ce0b1b6265875aa558d515df4338a816"
+  on_monterey :or_older do
+    on_catalina :or_older do
+      version "1.4.13"
+      sha256 "dd0ddbf94722174760c82870f537b299ce0b1b6265875aa558d515df4338a816"
+    end
+
+    on_big_sur do
+      version "1.4.22"
+      sha256 "9115107751cda2cf605a513da378fb0dcc40d57fe7dfbd76f664420946f9f773"
+    end
+
+    on_monterey do
+      version "1.4.27"
+      sha256 "c879eb95f6271b54cb6beb3aa04b36d670955df34f7dfe962bdaea75363b19f5"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
-    version "1.5.2"
-    sha256 "5168abc1c458220822dc17ec4f835c425c82b13066cbfde861fa5ddeb958ca84"
+  on_ventura :or_newer do
+    version "2.0.3"
+    sha256 "75b4048dbe9e4e39916ce82fc39ebf0e1ce45ef8d159f24f3eb53e1c3e7d6c73"
   end
 
   url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",

@@ -1,9 +1,9 @@
 cask "trae" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.26261"
-  sha256 arm:   "02b6737da9a291bcf4d6a4c200c865516a81b50edfe939a4f7a8bcba4a0e2cbc",
-         intel: "9c229de6af24a372851c36c20cbdf68a10ac9780d71ae8e4adb2d93aa8c96d99"
+  version "2.3.8290"
+  sha256 arm:   "c73ddf0e74600b8c99c50f08200603426f5d4f2748577da5197ef3e818e5d550",
+         intel: "5d188b16b2c1cd45d1f0dd4b132d2d8825e4590048f37cd6cf205e5fac50cce1"
 
   url "https://lf-cdn.trae.ai/obj/trae-ai-us/pkg/app/releases/stable/#{version}/darwin/Trae-darwin-#{arch}.dmg"
   name "Trae"
@@ -18,7 +18,7 @@ cask "trae" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Trae.app"
 

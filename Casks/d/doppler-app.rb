@@ -1,16 +1,14 @@
 cask "doppler-app" do
   version "2.1.22"
-  sha256 :no_check
+  sha256 "5eec9fa490fc6d9d287ab6c19d0854ff419ac80c398bfcab0f14dd4a4178e3b2"
 
-  url "https://updates.brushedtype.co/doppler-macos/download"
+  url "https://assets.brushedtype.co/Doppler-#{version}.app.zip"
   name "Doppler"
   desc "Music player"
   homepage "https://brushedtype.co/doppler/"
 
-  livecheck do
-    url "https://updates.brushedtype.co/doppler-macos/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  # Download url is unreachable due to Cloudflare protections
+  disable! date: "2026-01-25", because: :unreachable
 
   depends_on macos: ">= :big_sur"
 

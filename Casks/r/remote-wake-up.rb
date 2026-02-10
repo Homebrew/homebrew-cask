@@ -1,5 +1,5 @@
 cask "remote-wake-up" do
-  version "2.1"
+  version "2.1.1"
   sha256 :no_check
 
   url "https://witt-software.com/downloads/remotewakeup/Remote%20Wake%20Up.dmg"
