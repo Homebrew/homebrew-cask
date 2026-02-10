@@ -12,7 +12,7 @@ cask "texturepacker" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "TexturePacker.app"
 
