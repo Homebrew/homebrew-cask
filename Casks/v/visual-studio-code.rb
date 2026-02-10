@@ -20,7 +20,7 @@ cask "visual-studio-code" do
     end
   end
   on_monterey :or_newer do
-    version "1.109.0"
+    version "1.109.1"
     sha256 arm:   "69f6800cf3d62655b71dd58600c0ee89b1a106d47bb68126d93e7c8d1fe7b227",
            intel: "962fb6f6e9195efc018a19c7b62f809ed30dc21af7835b4e39d99a9597212f8d"
 
