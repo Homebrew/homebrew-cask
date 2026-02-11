@@ -6,13 +6,6 @@ cask "julia-app" do
   sha256 arm:   "356deef6cca2a882cb7ae15ecdfbac5ae32d835c12d0f8e17d45aaf4d30e21b1",
          intel: "bcd78fb4d22881384152816e2e87a16f259739816c8b5fb99d667ce5f3fdc04d"
 
-  on_arm do
-    depends_on macos: ">= :ventura"
-  end
-  on_intel do
-    depends_on macos: ">= :sequoia"
-  end
-
   url "https://julialang-s3.julialang.org/bin/mac/#{arch}/#{version.major_minor}/julia-#{version}-mac#{arch.delete_prefix("x")}.dmg"
   name "Julia"
   desc "Programming language for technical computing"
@@ -29,6 +22,8 @@ cask "julia-app" do
       end
     end
   end
+
+  depends_on macos: ">= :sequoia"
 
   app "Julia-#{version.major_minor}.app"
   binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia"
