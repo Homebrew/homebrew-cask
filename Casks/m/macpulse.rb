@@ -1,6 +1,6 @@
 cask "macpulse" do
-  version "1.0.1"
-  sha256 "04b5b2a310197c18f738a0d905c4795646b8c4b137c1a3a9fac85885a7c371f0"
+  version "1.0.2"
+  sha256 "7429f04fd851653a8778e2dcd1e19dcff092f176be820a5f4a4733d03f5811d7"
 
   url "https://macpulse.app/downloads/MacPulse-#{version}.dmg"
   name "MacPulse"
