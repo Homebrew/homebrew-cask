@@ -2,9 +2,9 @@ cask "julia-app" do
   arch arm: "aarch64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
-  version "1.12.4"
-  sha256 arm:   "69df6d591592bf44af434be77d514d252aa315c89b312e8b5251a6a3313827a8",
-         intel: "47058f83ed84868ea83c1b716a88331a8b2f3e1414c4b04602761eb8ab627790"
+  version "1.12.5"
+  sha256 arm:   "356deef6cca2a882cb7ae15ecdfbac5ae32d835c12d0f8e17d45aaf4d30e21b1",
+         intel: "bcd78fb4d22881384152816e2e87a16f259739816c8b5fb99d667ce5f3fdc04d"
 
   on_arm do
     depends_on macos: ">= :ventura"
