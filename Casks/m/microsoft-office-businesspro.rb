@@ -47,6 +47,7 @@ cask "microsoft-office-businesspro" do
             ],
             quit:      "com.microsoft.autoupdate2",
             pkgutil:   [
+              "com.microsoft.m365copilot.shim",
               "com.microsoft.MSTeamsAudioDevice",
               "com.microsoft.OneDrive",
               "com.microsoft.package.DFonts",
@@ -64,6 +65,7 @@ cask "microsoft-office-businesspro" do
               "com.microsoft.wdav.shim",
             ],
             delete:    [
+              "/Applications/Microsoft 365 Copilot Shim.app",
               "/Applications/Microsoft Defender Shim.app",
               "/Applications/Microsoft Defender.app",
               "/Applications/Microsoft Excel.app",
