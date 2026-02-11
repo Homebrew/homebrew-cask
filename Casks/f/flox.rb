@@ -15,8 +15,6 @@ cask "flox" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  auto_updates true
-
   pkg "flox-#{version}.#{arch}-darwin.pkg"
 
   uninstall launchctl: [
