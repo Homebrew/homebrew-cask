@@ -2,11 +2,11 @@ cask "threema-work@beta" do
   arch arm: "arm64", intel: "x64"
 
   version "2.0-beta59"
-  sha256 arm:   "20ec1ee9716e26d68f1c1ab6de0750507925a02c6ecf533a54aac1c536645918",
-         intel: "1630f63cc2c7ed29e154a181a12b2c4e6fbdd30b0cda6399cc656605aad0ac02"
+  sha256 arm:   "2ef3a5f819d42da8ccd91b03e6b5e19d4ce3281c30e3e4226e96ff25086afa1c",
+         intel: "812e4ebb692fad501501d68d2bc1e82b0301d15c3031c30b08769bcaf94e40c4"
 
   url "https://releases.threema.ch/desktop/#{version}/threema-work-desktop-v#{version}-macos-#{arch}.dmg"
-  name "Threema"
+  name "Threema Work"
   desc "End-to-end encrypted instant messaging application"
   homepage "https://three.ma/mdw"
 
@@ -23,7 +23,7 @@ cask "threema-work@beta" do
 
   zap trash: [
     "~/Library/Application Support/ThreemaDesktop",
-    "~/Library/Preferences/ch.threema.threema-desktop.plist",
-    "~/Library/Saved Application State/ch.threema.threema-desktop.savedState",
+    "~/Library/Preferences/ch.threema.threema-work-desktop.plist",
+    "~/Library/Saved Application State/ch.threema.threema-work-desktop.savedState",
   ]
 end
