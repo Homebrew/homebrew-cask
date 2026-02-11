@@ -8,7 +8,7 @@ cask "threema-work@beta" do
   url "https://releases.threema.ch/desktop/#{version}/threema-work-desktop-v#{version}-macos-#{arch}.dmg"
   name "Threema Work"
   desc "End-to-end encrypted instant messaging application"
-  homepage "https://three.ma/mdw"
+  homepage "https://threema.com/en/download/threema-work/desktop-beta"
 
   livecheck do
     url "https://releases.threema.ch/desktop/latest-version-work-macos.json"
