@@ -26,7 +26,6 @@ cask "dotnet-sdk@9" do
     end
   end
 
-  depends_on cask: "dotnet-sdk"
   depends_on macos: ">= :monterey"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
