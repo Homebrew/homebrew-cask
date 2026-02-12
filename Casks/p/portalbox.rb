@@ -1,6 +1,6 @@
 cask "portalbox" do
-  version "0.2.4"
-  sha256 "a858cec80ce5a8d7b68f2a49e53bb0a6a90e61dbf7ac160e25c51e87a8560506"
+  version "0.2.5"
+  sha256 "6c99612afd1945b52e80ac49540929364101b1fe303700e9a0d5b6a62f2d3640"
 
   url "https://releases.portalbox.friendlyventures.org/#{version}/portalbox-macos-universal.zip",
       verified: "releases.portalbox.friendlyventures.org/"
