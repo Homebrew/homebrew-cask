@@ -1,6 +1,6 @@
 cask "postgres-unofficial" do
-  version "2.9.2,13-14-15-16-17-18"
-  sha256 "816e5b59ead707dd2a9ca8f859aa7461d533bdfe347ab542d829eb4f26cb2e00"
+  version "2.9.3,14-15-16-17-18"
+  sha256 "b7e925a98eda76721892a53edfca41b262493c47fa4b2839c01f2120772c7df5"
 
   url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version.csv.first}/Postgres-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/PostgresApp/PostgresApp/"
