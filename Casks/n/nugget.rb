@@ -4,7 +4,7 @@ cask "nugget" do
 
   url "https://github.com/leminlimez/Nugget/releases/download/v#{version}/Nugget_macOS_arm.dmg"
   name "Nugget"
-  desc "Unlock the fullest potential of your device. Customize your iOS device, disable daemons, and more."
+  desc "Customize your iOS device with animated wallpapers, disable daemons, and more."
   homepage "https://github.com/leminlimez/Nugget"
 
   depends_on arch: :arm64
