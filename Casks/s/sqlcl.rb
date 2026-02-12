@@ -14,7 +14,6 @@ cask "sqlcl" do
 
   stage_only true
 
-  # Runs after the staging of the zip file
   postflight do
     cask_dir   = Pathname("#{HOMEBREW_PREFIX}/Caskroom/sqlcl")
     version_dir = cask_dir/version
