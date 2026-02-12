@@ -12,6 +12,8 @@ cask "sqlcl" do
     regex(/href=.*?sqlcl[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  stage_only true
+
   # Runs after the staging of the zip file
   postflight do
     cask_dir   = Pathname("#{HOMEBREW_PREFIX}/Caskroom/sqlcl")
@@ -22,8 +24,6 @@ cask "sqlcl" do
 
     latest_dir.make_symlink(version_dir)
   end
-
-  stage_only true
 
   zap trash: "~/.sqlcl"
 
