@@ -1,6 +1,6 @@
 cask "geekbench-ai" do
-  version "1.5.0"
-  sha256 "28c3d023cd81dab6ee3a4d52eb14b4531c3907d116da8425ce1a799bfcb7a6fa"
+  version "1.7.0"
+  sha256 "04248377f5a6a9a268f8b84b9834f30b756943a352976e1414c6be1df932dc19"
 
   url "https://cdn.geekbench.com/GeekbenchAI-#{version}-Mac.zip"
   name "Geekbench AI"
