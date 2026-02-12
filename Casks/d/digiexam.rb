@@ -1,5 +1,5 @@
 cask "digiexam" do
-  version "25.4.31"
+  version "25.4.32"
   sha256 :no_check
 
   url "https://www.digiexam.com/hubfs/client/Digiexam_Mac_universal.dmg"
