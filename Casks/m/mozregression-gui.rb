@@ -1,8 +1,8 @@
 cask "mozregression-gui" do
-  version "7.0.0"
-  sha256 "cca56b22a22079c82d170289e2b6b19f942b0a24f027beefcda8463e8df36203"
+  version "7.1.0"
+  sha256 "1b02196cd4e406f663b87b6be8503f71cf4c4638ab08ebfb04bac926cc89f328"
 
-  url "https://github.com/mozilla/mozregression/releases/download/#{version}/mozregression-gui.dmg",
+  url "https://github.com/mozilla/mozregression/releases/download/#{version}/mozregression-gui-app-bundle.tar.gz",
       verified: "github.com/mozilla/mozregression/"
   name "mozregression-gui"
   desc "Interactive regression range finder for Firefox and other Mozilla products"
@@ -13,9 +13,11 @@ cask "mozregression-gui" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :big_sur"
 
-  app "mozregression GUI.app"
+  app "mozregression-gui-app-bundle/mozregression GUI.app"
 
   zap trash: "~/Library/Preferences/org.mozilla.mozregression-gui.plist"
 end

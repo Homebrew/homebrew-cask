@@ -1,6 +1,6 @@
 cask "firestorm" do
-  version "7.2.2.79439"
-  sha256 "446c00b2b812e1797e4e0aabbefd802bdc3d512f28851d92dfddbf909d5c3630"
+  version "7.2.3.80036"
+  sha256 "22677ce38d50215e875e25d4754c7dde2af4f945612545a96cffe65ea8b11d4c"
 
   url "https://downloads.firestormviewer.org/release/mac/Phoenix-Firestorm-Releasex64_AVX2-#{version.dots_to_hyphens}.dmg"
   name "Phoenix Firestorm viewer for Second Life"
@@ -24,8 +24,4 @@ cask "firestorm" do
     "~/Library/Logs/DiagnosticReports/Firestorm*",
     "~/Library/Preferences/Firestorm.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

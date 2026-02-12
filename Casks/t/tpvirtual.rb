@@ -1,6 +1,6 @@
 cask "tpvirtual" do
-  version "3"
-  sha256 "ed4126989c26c2d9b0e2b48ec454340eb3f50042797a5b4a201435d3cdf80e1f"
+  version "4"
+  sha256 "37049e1f9a3403050be2f1b5d551024429a27e72a304838366053ac061f875ba"
 
   url "https://virtual.trainingpeaks.com/TPVirtual-Installer_v#{version}.dmg"
   name "TrainingPeaks Virtual"
@@ -11,6 +11,8 @@ cask "tpvirtual" do
     url :homepage
     regex(/href=.*?TPVirtual[._-]Installer[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "TPVirtual-Launcher.app"
 

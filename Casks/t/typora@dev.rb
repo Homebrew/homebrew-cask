@@ -1,6 +1,6 @@
 cask "typora@dev" do
-  version "1.12.0-dev"
-  sha256 "8ea86dc5135392e986fe4d3f8aa9659e283e5e3e2b0430d0325bb53ed9728464"
+  version "1.13.0-dev"
+  sha256 "760d8a79bfe3e4636132adbc0f28642153f74ebc1ef42e5912cee6faf4aec841"
 
   language "zh-Hans-CN" do # use official Chinese mirror
     url "https://downloads.typoraio.cn/mac/Typora-#{version}.dmg",

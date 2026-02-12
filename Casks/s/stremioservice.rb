@@ -1,6 +1,6 @@
 cask "stremioservice" do
-  version "0.1.15"
-  sha256 "e5a79c36e17d6081aec0879e98de77ada0dd4576ed9e9645f748106f9ee0275f"
+  version "0.1.17"
+  sha256 "e74fe7a085e7462abfefcd050e09ac053342ce37a062f9878f24f0d459b60414"
 
   url "https://github.com/Stremio/stremio-service/releases/download/v#{version}/StremioService.dmg",
       verified: "github.com/Stremio/stremio-service/"
@@ -14,6 +14,8 @@ cask "stremioservice" do
       json["version"]
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :big_sur"
   depends_on arch: :arm64

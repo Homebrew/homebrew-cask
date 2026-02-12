@@ -20,9 +20,9 @@ cask "vscodium" do
     end
   end
   on_monterey :or_newer do
-    version "1.108.20787"
-    sha256 arm:   "7c8a76347d80b69437297157bc3148c38271d909579f01c4e16b242746cbc0d1",
-           intel: "dbda05ad17ddc5c324ce9a589100e428fd039a7ce3c1b49c88abc6c0385ff2ad"
+    version "1.109.21026"
+    sha256 arm:   "88f865e01322a881d1e9f004ea71245414dedf31e3e3c95835002c44589b95ce",
+           intel: "64f6f5e121747c310948db95c1d005f280ec588cff6eed45b66e47f6b70b960d"
 
     livecheck do
       url "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master/stable/darwin/#{arch}/latest.json"
