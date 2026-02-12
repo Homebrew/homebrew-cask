@@ -12,17 +12,16 @@ cask "netviews" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sequoia"
-
   auto_updates true
+  depends_on macos: ">= :sequoia"
 
   app "NetViews.app"
 
-  uninstall quit:      "com.bmmup.PingStalker",
-            launchctl: "com.bmmup.pingstalker.ChmodBPF",
-            delete: [
-              "/Library/LaunchDaemons/com.bmmup.pingstalker.ChmodBPF.plist",
+  uninstall launchctl: "com.bmmup.pingstalker.ChmodBPF",
+            quit:      "com.bmmup.PingStalker",
+            delete:    [
               "/Library/Application Support/PingStalker/ChmodBPF",
+              "/Library/LaunchDaemons/com.bmmup.pingstalker.ChmodBPF.plist",
             ]
 
   zap trash: [
