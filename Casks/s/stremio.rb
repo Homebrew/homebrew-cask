@@ -1,6 +1,6 @@
 cask "stremio" do
-  version "4.4.171"
-  sha256 "22909c6959c07bb375f13b3a3e0943ff3e631a32b11cea343d430ce75912ab65"
+  version "4.4.172"
+  sha256 "a91fc0aa92f6e5593718c69b5558a383b02abde0e56901a13ec21d5365b6e1e0"
 
   url "https://dl.strem.io/shell-osx/v#{version}/Stremio+#{version}.dmg"
   name "Stremio"
@@ -11,6 +11,8 @@ cask "stremio" do
     url "https://www.strem.io/download?platform=mac&four=true"
     strategy :header_match
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Stremio.app"
 
