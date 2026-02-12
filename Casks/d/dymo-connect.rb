@@ -20,7 +20,7 @@ cask "dymo-connect" do
 
   auto_updates true
 
-  pkg "DCDMac#{version}.pkg"
+  pkg "DCDMac#{version}-#{arch}.pkg"
 
   uninstall launchctl: [
               "com.dymo.dcd.webservice",
