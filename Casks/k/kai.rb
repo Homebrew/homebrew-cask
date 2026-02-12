@@ -2,7 +2,7 @@ cask "kai" do
   arch arm: "aarch64", intel: "x64"
 
   version "1.6.2"
-  sha256 :no_check
+  sha256 "121dcc9ca9af011cfeb1924ae1d17d10231cfb9b147ab6b907cf37c9928846aa"
 
   url "https://github.com/SimonSchubert/Kai/releases/download/v#{version}/Kai-#{version}-macos.dmg",
       verified: "github.com/SimonSchubert/Kai/"
