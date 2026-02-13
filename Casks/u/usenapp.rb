@@ -12,6 +12,8 @@ cask "usenapp" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "Usenapp.app"
 
   zap trash: [
