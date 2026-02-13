@@ -1,6 +1,6 @@
 cask "triplecheese" do
   version "1.3,12092"
-  sha256 "89457e5b085cb10fc1ba140b001fda214ddcd08a215292f2dc95c610a53baa03"
+  sha256 "9542262570317927d9914aa45086ae37eae3c4b96f2f00cfd67cef9513d7b353"
 
   url "https://dl.u-he.com/releases/TripleCheese_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip"
   name "Triple Cheese"
