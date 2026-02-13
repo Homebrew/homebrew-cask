@@ -2,8 +2,8 @@ cask "monarch" do
   arch arm: "aarch64", intel: "x64"
 
   on_arm do
-    version "0.8.43"
-    sha256 "04be0d14475b81a9e5a4bab61c13b7cf0ee6056b644e89c6963f95dcdc00ff74"
+    version "0.9.0"
+    sha256 "0b5a033060e51d482104013dbde1ac21006cacd9448688b831d785b327ba7e13"
 
     url "https://storage.googleapis.com/monarchlauncher/v08/#{arch}/monarch-#{version}.dmg",
         verified: "storage.googleapis.com/monarchlauncher/"
