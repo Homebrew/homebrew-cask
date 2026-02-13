@@ -2,8 +2,8 @@ cask "atuin-desktop" do
   arch arm: "aarch64", intel: "x64"
 
   on_arm do
-    version "0.2.19"
-    sha256 "6c8bd7398fb812183f959cc9c0cf496eab1f4106bf52b4bd47f41fa5148d4daa"
+    version "0.2.20"
+    sha256 "ac5444d6df2dff182da4db4fe9f65bac1a49337739b1c913d71304d28c4e45d3"
 
     livecheck do
       url :url
