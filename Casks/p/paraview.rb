@@ -26,8 +26,10 @@ cask "paraview" do
     end
   end
 
-  app "ParaView-#{version.csv.first}.app"
-  binary "#{appdir}/ParaView-#{version.csv.first}.app/Contents/MacOS/paraview"
+  depends_on macos: ">= :big_sur"
+
+  app "ParaView-#{version.csv.first}-#{version.csv.second.split("-").first}.app"
+  binary "#{appdir}/ParaView-#{version.csv.first}-#{version.csv.second.split("-").first}.app/Contents/MacOS/paraview"
 
   zap trash: [
     "~/.config/ParaView",
