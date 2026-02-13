@@ -1,9 +1,9 @@
 cask "luanti" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.15.0,12.3"
-  sha256 arm:   "f1c4506acd50c243181124e1caa30b8aa16d978efa7a35b3e15d25127f637a83",
-         intel: "570df1c2586ef83557115bf81535bc06a9a519d1e192bf2e7fd99943a187df95"
+  version "5.15.1,12.3"
+  sha256 arm:   "846539882367658d9137b26e83a590dd6ebfc110861e3d1f213b833899bad24f",
+         intel: "7c66d8e38dc3806f1dbaf11f1d2fd999453d576df6e21c38a57917305fab115a"
 
   url "https://github.com/minetest/minetest/releases/download/#{version.csv.first}/luanti_#{version.csv.first}-macos#{version.csv.second}_#{arch}.zip",
       verified: "github.com/minetest/minetest/"
