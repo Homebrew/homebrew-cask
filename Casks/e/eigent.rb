@@ -1,11 +1,11 @@
 cask "eigent" do
   arch arm: "-arm64"
 
-  sha256 arm:   "e1df97467f6e1a357ba9b6a938a9795a1db56e876faf49a4737bc569a618664b",
+  sha256 arm:   "6caf62d5630e744f8fa045e264dd7da8af955848763f14110360d0fe365550ef",
          intel: "fd37ec2f77a785117af6a34e685be13fd0b5f3b7a10c36ead8e5d7df92d5a43a"
 
   on_arm do
-    version "0.0.82"
+    version "0.0.83"
   end
   on_intel do
     version "0.0.80"
