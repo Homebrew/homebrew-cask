@@ -11,6 +11,8 @@ cask "usenapp" do
     url "https://www.usenapp.com/download/appcast_unp1.xml"
     strategy :sparkle, &:short_version
   end
+  
+  auto_updates true  
 
   app "Usenapp.app"
 
