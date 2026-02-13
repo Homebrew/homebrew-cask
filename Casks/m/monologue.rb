@@ -1,5 +1,5 @@
 cask "monologue" do
-  version "1.0.62"
+  version "1.0.63"
   sha256 :no_check
 
   url "https://updates.jottle.ai/Monologue.dmg",
