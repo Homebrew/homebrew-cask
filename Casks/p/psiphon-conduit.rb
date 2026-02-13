@@ -5,7 +5,7 @@ cask "psiphon-conduit" do
   url "https://github.com/Psiphon-Inc/conduit/releases/download/release-mac-#{version}/conduit.dmg",
       verified: "github.com/Psiphon-Inc/conduit/"
   name "Psiphon Conduit"
-  desc "Internet freedom tool that turns your device into a proxy for the Psiphon net"
+  desc "Psiphon network proxy tool"
   homepage "https://conduit.psiphon.ca/"
 
   livecheck do
