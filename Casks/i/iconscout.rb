@@ -1,16 +1,12 @@
 cask "iconscout" do
-  version "1.0.5"
-  sha256 "c2c38bd79a819ac04c3c8b0856602ec3fc5ad58b2d24422c0ab23ffdbc98b64c"
+  version "1.0.6"
+  sha256 "ce9290257210a46c3a2e8f0c584e0b1ff798fa66da0c054258a9848c0deb7ee2"
 
-  url "https://iconscout.com/download/v#{version}/Iconscout-#{version}.dmg"
+  url "https://github.com/Iconscout/iconscout-app/releases/download/v#{version}/IconScout-#{version}.dmg",
+      verified: "github.com/Iconscout/iconscout-app/"
   name "Iconscout"
   desc "Desktop toolbar for Iconscout"
   homepage "https://iconscout.com/"
-
-  livecheck do
-    url "https://iconscout.com/desktop-app/for-mac"
-    regex(/Iconscout[._-]v?(\d+(?:\.\d+)+)/i)
-  end
 
   app "Iconscout.app"
 
