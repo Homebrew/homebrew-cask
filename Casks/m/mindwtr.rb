@@ -10,11 +10,6 @@ cask "mindwtr" do
   desc "Local-first GTD productivity tool"
   homepage "https://github.com/dongdongbh/Mindwtr"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Mindwtr.app"
 
   zap trash: [
