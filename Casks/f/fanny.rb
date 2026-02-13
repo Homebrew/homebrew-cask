@@ -1,21 +1,14 @@
 cask "fanny" do
   version "2.3.0"
-  sha256 :no_check
+  sha256 "adcd59e6839934959dc7ebb367f2f94e1b1542b83977a5117a6f670d23d2e053"
 
-  url "https://fannywidget.com/FannyWidget.zip"
+  url "https://github.com/DanielStormApps/Fanny/releases/download/#{version}/FannyWidget.zip",
+      verified: "github.com/DanielStormApps/Fanny/"
   name "FannyWidget"
   desc "Notification Center widget and menu bar application to monitor fans"
   homepage "https://fannywidget.com/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?FannyWidget\.zip["' >].*?v?(\d+(?:\.\d+)+).*?</a>}im)
-  end
-
-  # The url is unversioned, but the download returns an app directory with a version number
-  rename "FannyWidget*", "FannyWidget"
-
-  app "FannyWidget/Fanny.app"
+  app "FannyWidget-v#{version}/Fanny.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.fannywidget.today-extension",
