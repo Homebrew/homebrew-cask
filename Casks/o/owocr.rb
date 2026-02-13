@@ -1,9 +1,9 @@
 cask "owocr" do
   arch arm: "applesilicon", intel: "intel"
 
-  version "1.24.3"
-  sha256 arm:   "9f126af6742f1bc1b49cf510e8ef9a1b1c5719356fe511b18f80a4fedefc0c04",
-         intel: "24ce8ed6d5df586bc199ac1cf88e9a8d6c57141c4972f9da0e303370498d0017"
+  version "1.24.4"
+  sha256 arm:   "f2074ed6ee3d8d7327c2680e6ba7dfce72befed2cac068c4b282b7c559d03653",
+         intel: "e3ce0b2926595d7a46c2cad51ba47b891b43015f30f83b4003d5b55d34b020ea"
 
   url "https://github.com/AuroraWright/owocr/releases/download/#{version}/owocr-mac_#{arch}.dmg"
   name "OwOCR"
