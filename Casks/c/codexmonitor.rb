@@ -8,6 +8,13 @@ cask "codexmonitor" do
   desc "Monitor Codex activity"
   homepage "https://www.codexmonitor.app/"
 
+  # The upstream release cadence varies but can sometimes involve several per
+  # day, so this minimal throttle rate is intended to dampen bursts of releases.
+  livecheck do
+    url :url
+    throttle 2
+  end
+
   auto_updates true
   depends_on arch: :arm64
 
