@@ -1,6 +1,6 @@
 cask "meridiem" do
-  version "1.0.0"
-  sha256 "9baf1608a5edc5ccd8155d7e7d5e426c00c62a6f09487b31bcffc54282ab6ffd"
+  version "1.0.1"
+  sha256 "c9884a28754b0aad6e740241b1ed26faf9763bd55c006190111bd1fe4eefa3b2"
 
   url "https://storage.googleapis.com/markwhen_binaries/Meridiem/darwin/arm64/Meridiem-darwin-arm64-#{version}.zip",
       verified: "storage.googleapis.com/markwhen_binaries/"
