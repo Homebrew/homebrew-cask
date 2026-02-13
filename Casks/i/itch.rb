@@ -2,7 +2,7 @@ cask "itch" do
   version "26.6.0"
   sha256 :no_check
 
-  url "https://broth.itch.zone/install-itch/darwin-amd64/LATEST/archive/default",
+  url "https://broth.itch.zone/install-itch/darwin-universal/LATEST/archive/default",
       verified: "broth.itch.zone/"
   name "itch"
   desc "Game client for itch.io"
