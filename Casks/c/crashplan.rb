@@ -32,7 +32,14 @@ cask "crashplan" do
             pkgutil:   "com.crashplan.app.pkg"
 
   zap trash: [
+    "/Library/Application Support/CrashPlan",
+    "/Library/Caches/CrashPlan",
+    "/Library/LaunchDaemons/com.crashplan.service.plist",
+    "/Library/Logs/CrashPlan",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.crashplan.desktop.sfl*",
     "~/Library/Application Support/CrashPlan",
+    "~/Library/LaunchAgents/com.crashplan.menubar.plist",
+    "~/Library/Logs/CrashPlan",
     "~/Library/Preferences/com.crashplan.desktop.plist",
   ]
 end
