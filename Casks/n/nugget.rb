@@ -1,0 +1,20 @@
+cask "nugget" do
+  version "7.2"
+  sha256 "6340f130d48064eca6625e06363f2bdc9091c50878ae0a67b52f6213a32114cc"
+
+  url "https://github.com/leminlimez/Nugget/releases/download/v#{version}/Nugget_macOS_arm.dmg"
+  name "Nugget"
+  desc "Customise your iOS device with animated wallpapers, disable daemons and more"
+  homepage "https://github.com/leminlimez/Nugget"
+
+  depends_on arch: :arm64
+  depends_on macos: ">= :big_sur"
+
+  app "Nugget.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.nugget.MGA Data.plist",
+    "~/Library/Preferences/com.nugget.Nugget.plist",
+    "~/Library/Preferences/com.nugget.settings.plist",
+  ]
+end
