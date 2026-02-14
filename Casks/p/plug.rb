@@ -7,12 +7,7 @@ cask "plug" do
   desc "Music player for The Hype Machine"
   homepage "https://www.plugformac.com/"
 
-  livecheck do
-    url "https://www.plugformac.com/updates/plug#{version.major}/sparklecast.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version.delete_prefix("Version ")},#{item.version}"
-    end
-  end
+  deprecate! date: "2026-01-14", because: :moved_to_mas
 
   app "Plug.app"
 
