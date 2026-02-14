@@ -24,6 +24,7 @@ cask "morgen" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Morgen.app"
