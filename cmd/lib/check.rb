@@ -18,21 +18,21 @@ module Check
   CHECKS = {
     installed_apps:       lambda {
       ["/Applications", File.expand_path("~/Applications")]
-        .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
+      .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
     },
     installed_kexts:      lambda {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
-        .stdout
-        .lines
-        .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
-        .grep_v(/^com\.apple\./)
+      .stdout
+      .lines
+      .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
+      .grep_v(/^com\.apple\./)
     },
     installed_pkgs:       lambda {
       Pathname("/var/db/receipts")
-        .children
-        .grep(/\.plist$/)
-        .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
-        .grep_v(/^com\.google\.Keystone/)
+      .children
+      .grep(/\.plist$/)
+      .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
+      .grep_v(/^com\.google\.Keystone/)
     },
     installed_launchjobs: lambda {
       format_launchjob = lambda { |file|
@@ -51,27 +51,27 @@ module Check
         "/Library/LaunchAgents",
         "/Library/LaunchDaemons",
       ].map { |p| Pathname(p).expand_path }
-        .select(&:directory?)
-        .flat_map(&:children)
-        .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
-        .select { |child| child.extname == ".plist" }
-        .select(&:exist?)
-        .map(&format_launchjob)
+      .select(&:directory?)
+      .flat_map(&:children)
+      .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
+      .select { |child| child.extname == ".plist" }
+      .select(&:exist?)
+      .map(&format_launchjob)
     },
     loaded_launchjobs:    lambda {
       launchctl = lambda do |sudo|
         system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo:)
-          .stdout
-          .lines.drop(1)
-          .grep_v(APPLE_LAUNCHJOBS_REGEX)
-          .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
+        .stdout
+        .lines.drop(1)
+        .grep_v(APPLE_LAUNCHJOBS_REGEX)
+        .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
       end
 
       [false, true]
-        .flat_map(&launchctl)
-        .map { |l| l.split(/\s+/)[2] }
-        .grep_v(/^com\.apple\./)
-        .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
+      .flat_map(&launchctl)
+      .map { |l| l.split(/\s+/)[2] }
+      .grep_v(/^com\.apple\./)
+      .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
     },
   }.freeze
   private_constant :CHECKS
