@@ -1,9 +1,9 @@
 cask "appflowy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.11.1"
-  sha256 arm:   "e303a8911ed60f84fa5f964bda745b9013327054ad2ef5964e2a36bd4725e685",
-         intel: "9263d236e969437653b13fd932150ebccd4e608a4ef982d376fdabad22f4a38b"
+  version "0.11.2"
+  sha256 arm:   "3eb1295af38eb059c209ca9d676a2b3e2d1a84e5f15982a10edd537053824622",
+         intel: "7e999d73c05c78eafdd64f3e23323b9896baa2537aabf8eeb4ecfc95a13d7473"
 
   url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/Appflowy-#{version}-macos-#{arch}.zip",
       verified: "github.com/AppFlowy-IO/AppFlowy/"
@@ -16,7 +16,7 @@ cask "appflowy" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "AppFlowy-#{arch}.app", target: "AppFlowy.app"
 
