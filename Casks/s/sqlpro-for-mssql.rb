@@ -13,6 +13,8 @@ cask "sqlpro-for-mssql" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :ventura"
+
   app "SQLPro for MSSQL.app"
 
   zap trash: [
