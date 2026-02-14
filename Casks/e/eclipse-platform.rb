@@ -10,11 +10,18 @@ cask "eclipse-platform" do
   desc "SDK for the Eclipse IDE"
   homepage "https://eclipse.org/"
 
+  # The download page (https://download.eclipse.org/eclipse/downloads/) uses
+  # JavaScript to render download links from a JSON file.
   livecheck do
-    url "https://download.eclipse.org/eclipse/downloads/"
-    regex(%r{href=.*/R-(\d+(?:\.\d+)*)-(\d+)/}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    url "https://download.eclipse.org/eclipse/downloads/data.json"
+    regex(/R-(\d+(?:\.\d+)*)-(\d+)/i)
+    strategy :json do |json, regex|
+      json["releases"].map do |item|
+        match = item["path"]&.match(regex)
+        next unless match
+
+        "#{match[1]},#{match[2]}"
+      end
     end
   end
 
