@@ -11,10 +11,9 @@ cask "alma" do
   homepage "https://alma.now/"
 
   livecheck do
-    url "https://updates.alma.now/latest-mac.yml"
-    strategy :yaml do |yaml|
-      yaml["version"]
-    end
+    url "https://github.com/yetone/alma-releases"
+    strategy :github_releases
+    throttle 15
   end
 
   auto_updates true
