@@ -325,7 +325,7 @@ Download the or clone the repository from https://github.com/google/fonts, then 
             try:
               urllib.request.urlopen(cask.homepage())
             except urllib.request.URLError as e:
-              if e.code == 404:
+              if hasattr(e, 'code') and e.code == 404:
                 cask.homepage_override = existing_cask['homepage']
 
           updated_casks[cask.token()] = cask
@@ -333,7 +333,7 @@ Download the or clone the repository from https://github.com/google/fonts, then 
           try:
              urllib.request.urlopen(cask.homepage())
           except urllib.request.URLError as e:
-            if e.code == 404:
+            if hasattr(e, 'code') and e.code == 404:
               cask.homepage_override = cask.meta.source.repository_url
 
           added_casks[cask.token()] = cask
