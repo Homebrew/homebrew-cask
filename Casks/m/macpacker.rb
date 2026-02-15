@@ -1,6 +1,6 @@
 cask "macpacker" do
-  version "0.14"
-  sha256 "603203a5967fac21050747b4704b35901aef7615cf6c9fe8c148d0e7ef153999"
+  version "0.14.1"
+  sha256 "78e8664bfa530062c2cf26cc4891f37d73929ff89d2a2bdf5f36140d21d074cc"
 
   url "https://macpacker-releases.s3.amazonaws.com/MacPacker_v#{version}.zip",
       verified: "macpacker-releases.s3.amazonaws.com/"
