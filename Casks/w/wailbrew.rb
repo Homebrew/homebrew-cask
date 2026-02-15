@@ -1,6 +1,6 @@
 cask "wailbrew" do
-  version "0.9.12"
-  sha256 "3ac636725ebe16d3dd68d9be9d70ee8c1464d49fbdcbd261db0eeffe012ffc17"
+  version "0.9.13"
+  sha256 "964d2e794b86f94dee318b6cff81a7405485f4a1dfbb65e51b7650012c0b98e8"
 
   url "https://github.com/wickenico/WailBrew/releases/download/v#{version}/wailbrew-v#{version}.zip"
   name "WailBrew"
