@@ -8,6 +8,8 @@ cask "visualvm" do
   desc "All-in-One Java Troubleshooting Tool"
   homepage "https://visualvm.github.io/"
 
+  depends_on macos: ">= :big_sur"
+
   app "VisualVM.app"
 
   zap trash: [
