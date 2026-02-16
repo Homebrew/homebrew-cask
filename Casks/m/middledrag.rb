@@ -9,7 +9,7 @@ cask "middledrag" do
   homepage "https://middledrag.app/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/NullPointerDepressiveDisorder/MiddleDrag/main/appcast.xml"
+    url "https://raw.githubusercontent.com/NullPointerDepressiveDisorder/MiddleDrag/appcast/appcast.xml"
     strategy :sparkle
   end
 
