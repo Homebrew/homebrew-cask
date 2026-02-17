@@ -1,9 +1,9 @@
 cask "session-manager-plugin" do
   arch arm: "_arm64"
 
-  version "1.2.764.0"
-  sha256 arm:   "a8d01a3fbd52b32ed45d1fb876844df8776010bc3d3f88178e2a31f540c987c9",
-         intel: "b086ebd702b1d29850a7fb6991c5249f5bcd98ad89c4598d31db280c629d021b"
+  version "1.2.779.0"
+  sha256 arm:   "2457c5926db31f6db2cfe606ba37ef67169604baf4aa6bac44f8213cd728e5ce",
+         intel: "8005072e18f6f402d208ae08ed21f18af81765a755a07dd7b9023757db29457d"
 
   url "https://session-manager-downloads.s3.amazonaws.com/plugin/#{version}/mac#{arch}/session-manager-plugin.pkg",
       verified: "session-manager-downloads.s3.amazonaws.com/plugin/"
