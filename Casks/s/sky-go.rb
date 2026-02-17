@@ -18,9 +18,9 @@ cask "sky-go" do
   end
 
   uninstall quit:  [
-    "com.bskyb.skygoplayer",
-    "com.bskyb.installer.go",
-  ],
+              "com.bskyb.installer.go",
+              "com.bskyb.skygoplayer",
+            ],
             trash: "/Applications/Sky Go.app"
 
   zap trash: [
