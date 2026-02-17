@@ -1,6 +1,6 @@
 cask "vezer" do
-  version "1.9.8,787"
-  sha256 "63b5602e939fb52a4bccc0157537a6535c07a1cd77a7e5abf7639fbc8c16ab2d"
+  version "1.9.9,795"
+  sha256 "5d87ef2281885c5a5fb7c2aa6fcc4343fd14caa94aba4d4be095f7bbf116984d"
 
   url "https://dl.imimot.com/Vezer#{version.csv.first}_#{version.csv.second}.zip"
   name "Vezér"
