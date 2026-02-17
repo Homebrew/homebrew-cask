@@ -17,7 +17,10 @@ cask "sky-go" do
                    sudo: false
   end
 
-  uninstall quit:  "com.bskyb.skygocontrol",
+  uninstall quit:  [
+    "com.bskyb.skygoplayer",
+    "com.bskyb.installer.go",
+  ],
             trash: "/Applications/Sky Go.app"
 
   zap trash: [
