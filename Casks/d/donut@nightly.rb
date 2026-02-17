@@ -1,4 +1,4 @@
-cask "donutbrowser@nightly" do
+cask "donut@nightly" do
   version :latest
   sha256 :no_check
 
@@ -8,7 +8,7 @@ cask "donutbrowser@nightly" do
   desc "Simple yet powerful anti-detect browser"
   homepage "https://donutbrowser.com/"
 
-  conflicts_with cask: "donutbrowser"
+  conflicts_with cask: "donut"
   depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
 

@@ -1,6 +1,6 @@
-cask "donutbrowser" do
-  version "0.14.3"
-  sha256 "f812cbec4c25bad3e129c4787e858d5ec411447c4d9b5fa0e14a42e88ded9061"
+cask "donut" do
+  version "0.14.4"
+  sha256 "94bde17780bf28cb0968d83895820d7574cfd4436e4a8bab6b9bc2896adfbd01"
 
   url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_aarch64.dmg",
       verified: "github.com/zhom/donutbrowser/"
@@ -14,7 +14,7 @@ cask "donutbrowser" do
   end
 
   auto_updates true
-  conflicts_with cask: "donutbrowser@nightly"
+  conflicts_with cask: "donut@nightly"
   depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
 
