@@ -11,12 +11,17 @@ cask "stats" do
 
   app "Stats.app"
 
-  uninstall quit: "eu.exelban.Stats"
+  uninstall launchctl: "eu.exelban.Stats.SMC.Helper",
+            quit:      "eu.exelban.Stats"
 
-  zap delete: "/Library/LaunchDaemons/eu.exelban.Stats.SMC.Helper.plist",
+  zap delete: [
+        "/Library/LaunchDaemons/eu.exelban.Stats.SMC.Helper.plist",
+        "/Library/PrivilegedHelperTools/eu.exelban.Stats.SMC.Helper",
+      ],
       trash:  [
         "~/Library/Application Scripts/eu.exelban.Stats.LaunchAtLogin",
         "~/Library/Application Scripts/eu.exelban.Stats.Widgets",
+        "~/Library/Application Support/Stats",
         "~/Library/Caches/eu.exelban.Stats",
         "~/Library/Containers/eu.exelban.Stats.LaunchAtLogin",
         "~/Library/Containers/eu.exelban.Stats.Widgets",
