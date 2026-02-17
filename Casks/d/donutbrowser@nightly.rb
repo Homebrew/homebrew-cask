@@ -8,7 +8,6 @@ cask "donutbrowser@nightly" do
   desc "Simple yet powerful anti-detect browser"
   homepage "https://donutbrowser.com/"
 
-  auto_updates true
   conflicts_with cask: "donutbrowser"
   depends_on arch: :arm64
   depends_on macos: ">= :big_sur"

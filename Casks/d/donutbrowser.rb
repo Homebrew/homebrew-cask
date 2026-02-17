@@ -1,6 +1,6 @@
 cask "donutbrowser" do
-  version "0.14.2"
-  sha256 "a0e50119a69828bbde6a0a4a7ab23ebf77659347f137df3f3154e09383467687"
+  version "0.14.3"
+  sha256 "f812cbec4c25bad3e129c4787e858d5ec411447c4d9b5fa0e14a42e88ded9061"
 
   url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_aarch64.dmg",
       verified: "github.com/zhom/donutbrowser/"

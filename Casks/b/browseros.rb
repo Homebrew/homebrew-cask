@@ -1,9 +1,9 @@
 cask "browseros" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.39.0.3,0.39.0"
-  sha256 arm:   "a14b71d5e786575db55d60536a7c6536be440af250b4be3134f190ef97fdf1b6",
-         intel: "8e495d931bcb850fa399bf828b7e5db9fa472e5a3c299461c297888d4c721329"
+  version "0.40.1"
+  sha256 arm:   "b03f7c859b0da20dca4f10a64c3919c8b0fc0f6e4d5ae1447d583ae137bb1bc4",
+         intel: "ba2aba0b03369e37b55e91dadceea580ed24a55e2ddd2c44b34c3dfc524f26f4"
 
   url "https://github.com/browseros-ai/BrowserOS/releases/download/v#{version.csv.second || version.csv.first}/BrowserOS_v#{version.csv.first}_#{arch}.dmg",
       verified: "github.com/browseros-ai/BrowserOS/"
