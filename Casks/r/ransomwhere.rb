@@ -1,26 +1,26 @@
 cask "ransomwhere" do
-  version "1.2.5"
-  sha256 "091a61bb99f5fe73944cda2b6ad26efb6d7ffaf8ddd391d237b82afb10b46a67"
+  version "2.0.0"
+  sha256 "52247edb45ee0c381b3f26f52b7b26e3accdd68a9d14ddef145ae80075309f02"
 
-  url "https://bitbucket.org/objective-see/deploy/downloads/RansomWhere_#{version}.zip",
-      verified: "bitbucket.org/objective-see/"
+  url "https://github.com/objective-see/RansomWhere/releases/download/v#{version}/RansomWhere_#{version}.zip",
+      verified: "github.com/objective-see/RansomWhere/"
   name "RansomWhere"
   desc "Protect your personal files"
   homepage "https://objective-see.org/products/ransomwhere.html"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?RansomWhere[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    url :url
+    strategy :github_latest
   end
 
   installer script: {
-    executable: "#{staged_path}/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
+    executable: "#{staged_path}/RansomWhere Installer.app/Contents/MacOS/RansomWhere Installer",
     args:       ["-install"],
     sudo:       true,
   }
 
   uninstall script: {
-    executable: "#{staged_path}/RansomWhere_Installer.app/Contents/MacOS/RansomWhere_Installer",
+    executable: "#{staged_path}/RansomWhere Installer.app/Contents/MacOS/RansomWhere Installer",
     args:       ["-uninstall"],
     sudo:       true,
   }
