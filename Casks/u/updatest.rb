@@ -1,5 +1,5 @@
 cask "updatest" do
-  version "2.1.1"
+  version "2.2.0"
   sha256 :no_check
 
   url "https://updatest.app/download/Updatest.zip"
