@@ -31,4 +31,3 @@ cask "jitsi" do
     requires_rosetta
   end
 end
-
