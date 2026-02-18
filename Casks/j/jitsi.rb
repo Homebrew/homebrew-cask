@@ -7,7 +7,6 @@ cask "jitsi" do
   name "Jitsi"
   desc "Open-source video calls and chat"
   homepage "https://desktop.jitsi.org/"
-  auto_updates true
 
   livecheck do
     url "https://download.jitsi.org/jitsi/macosx/sparkle/updates.xml"
@@ -16,6 +15,8 @@ cask "jitsi" do
       item.url[regex, 1]
     end
   end
+
+  auto_updates true
 
   app "Jitsi.app"
 
@@ -30,3 +31,4 @@ cask "jitsi" do
     requires_rosetta
   end
 end
+
