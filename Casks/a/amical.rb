@@ -1,11 +1,11 @@
 cask "amical" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.17"
-  sha256 arm:   "7c9db4af6d278a0ace0e3024013c146eb27300a46741d47eeda3ab39cfabac77",
-         intel: "90930e971b97af1ec21116ad87f7844254ea6e06a5fd6a9ed7ab2bd4e4b5f53f"
+  version "1.0.0"
+  sha256 arm:   "36a5cf65da94c3e68a229ca4e575ac3af28ece0989ee1137821d1a320e29cc28",
+         intel: "f4927b82fdc926f04031070d57996baa1ef6d4d2c0c5022c2fc412577ef8a106"
 
-  url "https://github.com/amicalhq/amical/releases/download/v#{version}/Amical-#{version}-#{arch}.dmg",
+  url "https://github.com/amicalhq/amical/releases/download/v#{version}/Amical-macos-#{arch}.dmg",
       verified: "github.com/amicalhq/amical/"
   name "Amical"
   desc "AI dictation app"
