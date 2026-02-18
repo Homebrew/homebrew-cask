@@ -4,11 +4,11 @@ cask "vimcal" do
 
   on_arm do
     version "1.0.42"
-    sha256 "7f7bfe9bef171d956cf172bf01642da2ce7ac9e9cc76a50cd70347eaf11c7b79"
+    sha256 "dd05e6c0249eb6d41e6499df7ac949d9649583d373466e9b964a3e9f7e5b9613"
   end
   on_intel do
-    version "1.0.43"
-    sha256 "3075420adc051790c44d500811aa0143f1fc6dd3e46a97790818d96dff9acb53"
+    version "1.0.44"
+    sha256 "50a160b3b2e5d61654bd926cc825087c292d9620d662c993bb56b79b0642c770"
   end
 
   url "https://vimcal-#{host_suffix}.s3.amazonaws.com/Vimcal-#{version}#{arch}.dmg",
