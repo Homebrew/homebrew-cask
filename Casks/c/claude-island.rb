@@ -1,6 +1,3 @@
-# typed: strict
-# frozen_string_literal: true
-
 cask "claude-island" do
   version "1.2"
   sha256 "a29ee23b427dbfd034cf91aeee2ca0458e09e1cef28b8eb5f23d70898c5139a2"
