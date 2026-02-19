@@ -29,4 +29,9 @@ cask "pangolin" do
   depends_on macos: ">= :sonoma"
 
   app "Pangolin.app"
+
+  zap trash: [
+    "~/Library/Application Support/Pangolin",
+    "~/Library/Preferences/net.pangolin.Pangolin.plist",
+  ]
 end
