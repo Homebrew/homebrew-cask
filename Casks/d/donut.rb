@@ -5,7 +5,7 @@ cask "donut" do
   url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_aarch64.dmg",
       verified: "github.com/zhom/donutbrowser/"
   name "Donut Browser"
-  desc "Simple yet powerful anti-detect browser"
+  desc "Anti-detect web browser"
   homepage "https://donutbrowser.com/"
 
   livecheck do
