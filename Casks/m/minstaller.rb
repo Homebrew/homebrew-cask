@@ -8,8 +8,8 @@ cask "minstaller" do
     end
   end
   on_big_sur :or_newer do
-    version "3.2.3"
-    sha256 "cbb5063b1818470fb6e8e4aa41fbabd3366d85e8c92432cbc7a88dd120627e67"
+    version "3.2.4"
+    sha256 "a02c3e7361b6f1789cc62d87db453e7f1d31804e2d58842758ce2ac21f00ca43"
 
     livecheck do
       url "https://s3.motionvfx.com/mvfxpublic/mInstaller/sparkle/appcast.xml"
