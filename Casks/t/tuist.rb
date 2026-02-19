@@ -1,6 +1,6 @@
 cask "tuist" do
-  version "4.148.3"
-  sha256 "7c26fb926aeabc13f7c7b5ddf8de3c8aa6114738aa414840e5c562dbf0c983a4"
+  version "4.148.4"
+  sha256 "61df4ce6a40b6576291fd77888b60cea0e177cf9ae2f95b8c7ef8a92ea1f40f2"
 
   url "https://github.com/tuist/tuist/releases/download/#{version}/tuist.zip",
       verified: "github.com/tuist/tuist/"
