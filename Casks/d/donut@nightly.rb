@@ -1,23 +1,16 @@
-cask "donut" do
+cask "donut@nightly" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.14.5"
-  sha256 arm:   "689af1669efa9b2843f44823384d9847cd71c5bf494fe101ad5a88269eb9f04a",
-         intel: "44590e17899018dcfcb72403528a6e86b5bbe5a43cd62da89377790596da9138"
+  version :latest
+  sha256 :no_check
 
-  url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_#{arch}.dmg",
+  url "https://github.com/zhom/donutbrowser/releases/download/nightly/Donut_nightly_#{arch}.dmg",
       verified: "github.com/zhom/donutbrowser/"
-  name "Donut Browser"
+  name "Donut Browser Nightly"
   desc "Anti-detect web browser"
   homepage "https://donutbrowser.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  auto_updates true
-  conflicts_with cask: "donut@nightly"
+  conflicts_with cask: "donut"
   depends_on macos: ">= :big_sur"
 
   app "Donut.app"
