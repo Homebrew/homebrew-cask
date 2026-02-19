@@ -8,11 +8,6 @@ cask "claude-island" do
   desc "Dynamic Island-style notifications for Claude Code CLI sessions"
   homepage "https://claudeisland.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :sequoia"
 
   app "Claude Island.app"
