@@ -1,6 +1,6 @@
 cask "netviews" do
-  version "2.3"
-  sha256 "f6c2a0e0bdf434e73e11e4fe5d901304a28c3190ce29e99ba62561514e271fcf"
+  version "2.5"
+  sha256 "8fd39b008ebe76fc7b371316e4d617cf2ff5d771ddf74a5f68cdb4eb4a13b2e6"
 
   url "https://www.netviews.app/installers/NetViews-#{version}.zip"
   name "NetViews"
@@ -13,7 +13,7 @@ cask "netviews" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: ">= :sonoma"
 
   app "NetViews.app"
 
