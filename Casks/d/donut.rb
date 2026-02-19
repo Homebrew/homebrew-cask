@@ -1,8 +1,11 @@
 cask "donut" do
-  version "0.14.5"
-  sha256 "689af1669efa9b2843f44823384d9847cd71c5bf494fe101ad5a88269eb9f04a"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_aarch64.dmg",
+  version "0.14.5"
+  sha256 arm:   "689af1669efa9b2843f44823384d9847cd71c5bf494fe101ad5a88269eb9f04a",
+         intel: "44590e17899018dcfcb72403528a6e86b5bbe5a43cd62da89377790596da9138"
+
+  url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_#{arch}.dmg",
       verified: "github.com/zhom/donutbrowser/"
   name "Donut Browser"
   desc "Anti-detect web browser"
@@ -14,8 +17,6 @@ cask "donut" do
   end
 
   auto_updates true
-  # Note: support for Intel will be added when Wayfern has binaries for MacOS x64
-  depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
 
   app "Donut.app"
