@@ -1,9 +1,9 @@
 cask "slack@beta" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.48.94"
-  sha256 arm:   "5d16cad19df19fb59dcc30e464a4f1bd7f2deb4c42552bcaa9efe2c008d656c5",
-         intel: "1b7eed0ea2cb4cabadf2161a3ff4b22d49d68edd6546a23fa79f7542c83b072f"
+  version "4.48.95"
+  sha256 arm:   "067cb93b7602b740654f53a96fd14172ca66b9909b87905e598e1dfd61f7e7f9",
+         intel: "8a573fc462bbbddfa5ad20ff2e3ebce18d5d3327c8dbb7640330b459d6faa44a"
 
   url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg",
       verified: "downloads.slack-edge.com/desktop-releases/mac/"
