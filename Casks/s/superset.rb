@@ -1,6 +1,6 @@
 cask "superset" do
-  version "0.0.80"
-  sha256 "cc5bd7352475058c8feb2a2baf5217fab0d3849b88e5d61a4a8c88286c4578e9"
+  version "0.0.81"
+  sha256 "ff3779e79a947b697cafeecda388aea6e251e746d728d4a8f880b2d578204319"
 
   url "https://github.com/superset-sh/superset/releases/download/desktop-v#{version}/Superset-arm64.dmg",
       verified: "github.com/superset-sh/superset/"
