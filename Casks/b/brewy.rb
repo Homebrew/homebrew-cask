@@ -1,11 +1,13 @@
 cask "brewy" do
-  version "0.2.0"
-  sha256 "fc79db8c3e05038adb1b181d6dc5681f8d9e522320d4dd6696408ea3bf13c23c"
+  version "0.3.0"
+  sha256 "7d70620f887b2b7e083a0376174d60f98872dcaf2d1df96d6ae71156cc549a4d"
 
   url "https://github.com/p-linnane/Brewy/releases/download/#{version}/Brewy-#{version}.zip"
   name "Brewy"
-  desc "Native app for managing Homebrew packages"
+  desc "Simple Homebrew GUI"
   homepage "https://github.com/p-linnane/Brewy"
+
+  no_autobump! because: :bumped_by_upstream
 
   depends_on arch: :arm64
   depends_on macos: ">= :sequoia"
