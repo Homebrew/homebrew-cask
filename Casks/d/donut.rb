@@ -14,6 +14,7 @@ cask "donut" do
   end
 
   auto_updates true
+  # Note: support for Intel will be added when Wayfern has binaries for MacOS x64
   depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
 
