@@ -2,13 +2,13 @@ cask "gogs" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "0.14.1"
-  sha256 arm:          "b7904fd28db26741f6fdffa1525238fc4e5dd8a7426db3344ad82be97fba780d",
-         intel:        "0ad7b59216924dbce1b9adbefe884d39b0550ba42ee6e0c8f1db2a79eb54042b",
-         arm64_linux:  "c112cc0aaad41ae9f7ae92d07724863b57dc6fd63a7d1220571c1b98f677d287",
-         x86_64_linux: "bd2d2797794260aef931ea2c51ee0eafbac3eb8410907fe8267acae963509d71"
+  version "0.14.2"
+  sha256 arm:          "2996f72f5cca4cead31166fb7adc9673ef209827851bcb1dcf45039da1dc59e3",
+         intel:        "00fe70ea1bae2f756c1d31909d09934cbc26264364471a2cdb5cf4a247cc0f91",
+         arm64_linux:  "966e3ae629ef8ec176d03aa0d23e659201b269b310704fddd3f19b15e552dc0b",
+         x86_64_linux: "4bdc61792f145f87a3f7f6f822efb6caa97d67095404f8e526b8a943c9b8b5e9"
 
-  url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_#{os}_#{arch}.zip",
+  url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_v#{version}_#{os}_#{arch}.zip",
       verified: "github.com/gogs/gogs/"
   name "Go Git Service"
   desc "Self-hosted Git service"
