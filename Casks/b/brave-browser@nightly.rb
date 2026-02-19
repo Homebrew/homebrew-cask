@@ -2,9 +2,9 @@ cask "brave-browser@nightly" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "nightly-arm64", intel: "nightly"
 
-  version "1.89.49.0"
-  sha256 arm:   "688beb158ed518a9377b722e0bd2a49ede1a9b65d3bd6009e9e9164440f6f84b",
-         intel: "6670562f3414d36b1bcd6705c5405a8fcecd8b7fb2a9a448d2e6897f15e73c9e"
+  version "1.89.54.0"
+  sha256 arm:   "2a30ab8d992d33f79b4d48c9c61cbb6565eaab18cac8996b1c52b42dba36405a",
+         intel: "947d6d18ea7fa225ebf9ce67c6fd56007c761f91aae5c016314933e473b2e483"
 
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Nightly-#{arch}.dmg",
       verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
