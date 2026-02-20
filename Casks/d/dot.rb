@@ -5,7 +5,7 @@ cask "dot" do
   url "https://github.com/prateekkeshari/dot-releases/releases/download/v#{version}/Dot-#{version}.dmg",
       verified: "github.com/prateekkeshari/dot-releases/"
   name "Dot"
-  desc "Menu bar calendar for Mac with meeting reminders"
+  desc "Menu bar calendar with meeting reminders"
   homepage "https://www.trydot.app/"
 
   livecheck do
