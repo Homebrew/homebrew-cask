@@ -1,9 +1,9 @@
 cask "brainfm" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.217"
-  sha256 arm:   "b357a123ff7beed6def0a4619110175bcd30f14512d98f0a4ce644e17a7afd50",
-         intel: "d09c1d3388207f4cc7ebeee4860daaac02fcd422192ab8aaabd90a11b0de9e7a"
+  version "0.0.247"
+  sha256 arm:   "7f1f5a31e66a9e6614699f86b100728936bca3c4be0f88b3e3210c3040db832f",
+         intel: "dc6481e74ebd3e6d8033b2f322e939d77564840deb615bff1a4ca5044b5ddcd3"
 
   url "https://download.brain.fm/darwin/#{arch}/Brain.fm-#{version}-#{arch}.dmg"
   name "Brain.fm"
