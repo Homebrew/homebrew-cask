@@ -1,6 +1,6 @@
 cask "pokerth" do
-  version "2.0"
-  sha256 "a70f16efc3b2aa91858d33bc306f2eaf697bf03efc23853c50b9dbad50952e8c"
+  version "2.0.1"
+  sha256 "20ab42295c51145ae348f8f900830e23cc3b35ad338440e9c95d57ed903207cc"
 
   url "https://downloads.sourceforge.net/pokerth/PokerTH-#{version}.dmg",
       verified: "downloads.sourceforge.net/pokerth/"
