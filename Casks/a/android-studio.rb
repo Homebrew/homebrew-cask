@@ -41,4 +41,3 @@ cask "android-studio" do
         "~/Library/Android",
       ]
 end
-
