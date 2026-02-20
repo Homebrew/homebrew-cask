@@ -11,14 +11,6 @@ cask "psiphon-conduit" do
   livecheck do
     url :url
     regex(/^release-mac[._-]v?(\d+(?:\.\d+)+(?:[._-]RC(?:[._]?\d+)?)?)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"]
-        next unless (match = release["tag_name"]&.match(regex))
-
-        match[1]
-      end
-    end
   end
 
   depends_on macos: ">= :monterey"
