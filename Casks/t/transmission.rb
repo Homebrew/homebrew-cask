@@ -1,6 +1,6 @@
 cask "transmission" do
-  version "4.1.0"
-  sha256 "dcade005ef4c35ed083e226bd0061e805ed6ef8be22b63c57ec8c72541587578"
+  version "4.1.1"
+  sha256 "744429da72cb2c57964f20b78b83d75f4ecbd3c68ce79aefda08a6e8d83c7930"
 
   url "https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg",
       verified: "github.com/transmission/transmission/"
