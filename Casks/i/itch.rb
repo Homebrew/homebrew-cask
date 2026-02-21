@@ -1,9 +1,9 @@
 cask "itch" do
   arch arm: "arm64", intel: "amd64"
 
-  version "26.6.0"
-  sha256 arm:   "6ac156367f501cbf95dde01746e197d9cbb698c789e7343251f4e7be69bbf5de",
-         intel: "c5b03a780618e002871883d4a6f6b6d9e85a5ee5483fb3e2bce0c84e667504cb"
+  version "26.9.0"
+  sha256 arm:   "8a18dd6f40229b416b7e5de3eb19c6a004515d8374eb01864e3e4466b4519f12",
+         intel: "1e8e3b9e452a6bd5599dc7a772d4d6bdb3b5ee5be094b3ec2db02f7755b83a55"
 
   url "https://github.com/itchio/itch/releases/download/v#{version}/itch-v#{version}-darwin-#{arch}.tar.gz",
       verified: "github.com/itchio/itch/"
@@ -17,6 +17,7 @@ cask "itch" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "itch.app"
 
