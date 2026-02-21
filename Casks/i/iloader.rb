@@ -8,6 +8,13 @@ cask "iloader" do
   desc "iOS Sideloading Companion"
   homepage "https://iloader.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
+
   app "iloader.app"
 
   zap trash: "~/Library/Application Support/me.nabdev.iloader"
