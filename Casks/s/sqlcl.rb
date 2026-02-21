@@ -14,10 +14,20 @@ cask "sqlcl" do
 
   stage_only true
 
+  postflight do
+    cask_dir   = Pathname("#{HOMEBREW_PREFIX}/Caskroom/sqlcl")
+    version_dir = cask_dir/version
+    latest_dir  = cask_dir/"latest"
+
+    latest_dir.delete if latest_dir.symlink?
+
+    latest_dir.make_symlink(version_dir)
+  end
+
   zap trash: "~/.sqlcl"
 
   caveats do
     depends_on_java "11+"
-    path_environment_variable "#{staged_path}/sqlcl/bin"
+    path_environment_variable "#{HOMEBREW_PREFIX}/Caskroom/sqlcl/latest/sqlcl/bin"
   end
 end
