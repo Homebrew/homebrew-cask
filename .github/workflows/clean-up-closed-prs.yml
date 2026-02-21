@@ -1,0 +1,78 @@
+name: Clean up closed PRs
+
+on:
+  pull_request_target:
+    types:
+      - closed
+
+defaults:
+  run:
+    shell: bash -xeuo pipefail {0}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number }}
+  cancel-in-progress: true
+
+env:
+  GH_REPO: ${{ github.repository }}
+  GH_NO_UPDATE_NOTIFIER: 1
+  GH_PROMPT_DISABLED: 1
+  HOMEBREW_DISABLE_LOAD_FORMULA: 1
+  PR: ${{ github.event.number }}
+
+jobs:
+  cancel-tests:
+    if: >
+      github.repository_owner == 'Homebrew' &&
+      !github.event.pull_request.merged
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/homebrew/ubuntu22.04:main
+    permissions:
+      contents: read
+      actions: write # for `gh run cancel`
+      checks: read # for `GitHub.get_workflow_run`
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: false
+          cask: false
+
+      - name: Check CI status
+        id: check
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          brew check-ci-status --cancel "$PR"
+
+      - name: Cancel tests
+        if: fromJson(steps.check.outputs.cancellable-run-id) != null
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ fromJson(steps.check.outputs.cancellable-run-id) }}
+        run: |
+          echo "::notice ::Cancelling tests on closed PR #$PR"
+          gh run cancel "$RUN_ID"
+
+  delete-branch:
+    if: >
+      github.repository_owner == 'Homebrew' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      !github.event.pull_request.merged
+    runs-on: ubuntu-latest
+    # Ignore errors as branch may already be deleted
+    continue-on-error: true
+    permissions:
+      contents: write
+    steps:
+      - name: Delete branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          gh api \
+            -X DELETE \
+            --header 'Accept: application/vnd.github+json' \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/$BRANCH"
