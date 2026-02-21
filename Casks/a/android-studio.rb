@@ -1,11 +1,11 @@
 cask "android-studio" do
   arch arm: "mac_arm", intel: "mac"
 
-  version "2025.2.3.9"
-  sha256 arm:   "b6285cdee418492658a4f5ee68beb52896e81ad27e7d10b3486b9b6e02b33e88",
-         intel: "fb204243b011309526cc041a479177010e22ef6f77a28e1c08f98aee95dc37d1"
+  version "2025.3.1.8,panda1-patch1"
+  sha256 arm:   "55ad6f06b8af88ab9ffc68f33108ea7c734416c1548118997f5a45f3ac77d596",
+         intel: "c277a2d1b9d4c4cd73fa9eda461df3271b3b3ea79b857052a3cc67ec3f2041c0"
 
-  url "https://redirector.gvt1.com/edgedl/android/studio/install/#{version}/android-studio-#{version}-#{arch}.dmg",
+  url "https://redirector.gvt1.com/edgedl/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
       verified: "redirector.gvt1.com/edgedl/android/studio/"
   name "Android Studio"
   desc "Tools for building Android applications"
@@ -13,7 +13,12 @@ cask "android-studio" do
 
   livecheck do
     url :homepage
-    regex(/android[._-]studio[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/android[._-]studio(?:[._-]([^"' >]+))?[._-]#{arch}\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+      end
+    end
   end
 
   auto_updates true
