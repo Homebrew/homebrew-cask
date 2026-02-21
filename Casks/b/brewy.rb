@@ -1,6 +1,6 @@
 cask "brewy" do
-  version "0.5.2"
-  sha256 "7ba60a744ae01454f3159c88b14c999f5040daa56e8473aa7e1b12bba8b3b179"
+  version "0.5.3"
+  sha256 "054fa2973a646a4af91cd041059e302ad54eb7ff3d5da8ec61921ee60cb179c3"
 
   url "https://github.com/p-linnane/Brewy/releases/download/#{version}/Brewy-#{version}.zip"
   name "Brewy"
@@ -21,11 +21,13 @@ cask "brewy" do
   app "Brewy.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.linnane.Brewy",
+    "~/Library/Application Scripts/io.linnane.Brewy",
     "~/Library/Application Support/Brewy",
-    "~/Library/Containers/com.linnane.Brewy",
+    "~/Library/Caches/io.linnane.brewy",
+    "~/Library/Containers/io.linnane.Brewy",
     "~/Library/HTTPStorages/io.linnane.brewy",
     "~/Library/Preferences/Brewy.plist",
-    "~/Library/Preferences/io.linnane.Brewy.plist",
+    "~/Library/Preferences/io.linnane.brewy.plist",
+    "~/Library/WebKit/io.linnane.brewy",
   ]
 end
