@@ -4,7 +4,7 @@ cask "neardrop" do
 
   url "https://github.com/grishka/NearDrop/releases/download/v#{version}/NearDrop.app.zip"
   name "NearDrop"
-  desc "Unofficial Google Nearby Share app for macOS"
+  desc "Unofficial Google Nearby Share app"
   homepage "https://github.com/grishka/NearDrop"
 
   livecheck do
