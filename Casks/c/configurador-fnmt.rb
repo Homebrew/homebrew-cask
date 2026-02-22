@@ -16,8 +16,8 @@ cask "configurador-fnmt" do
 
   pkg "InstaladorConfiguradorFnmt_#{version}.pkg"
 
-  uninstall pkgutil: "es.gob.fnmt.cert.certrerquest",
-            quit:    "es.gob.fnmt.cert.certrerquest"
+  uninstall quit:    "es.gob.fnmt.cert.certrerquest",
+            pkgutil: "es.gob.fnmt.cert.certrerquest"
 
   zap trash: [
     "~/Library/Application Support/Configurador FNMT",
