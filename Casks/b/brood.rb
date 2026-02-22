@@ -2,7 +2,7 @@ cask "brood" do
   version "0.2.3"
   sha256 "3be11616ee6759c3bfb398417b3081f547995ff5584b8e9b9085723a1cda70bf"
 
-  url "https://github.com/kevinshowkat/brood/releases/download/v#{version}/Brood_#{version}_universal.dmg",
+  url "https://github.com/kevinshowkat/brood/releases/download/v#{version}/Brood_#{version}_universal.dmg"
   name "Brood"
   desc "Reference-first AI image editing desktop for developers"
   homepage "https://github.com/kevinshowkat/brood"
