@@ -4,12 +4,10 @@ cask "quickdown" do
 
   url "https://github.com/tennyson-mccalla/QuickDown/releases/download/v#{version}/QuickDown.dmg"
   name "QuickDown"
-  desc "Fast, native Markdown previewer for macOS with QuickLook integration"
+  desc "Fast, native Markdown previewer with QuickLook integration"
   homepage "https://github.com/tennyson-mccalla/QuickDown"
 
   app "QuickDown.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.tennyson.QuickDown.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.tennyson.QuickDown.plist"
 end
