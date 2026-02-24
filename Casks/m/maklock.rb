@@ -4,7 +4,7 @@ cask "maklock" do
 
   url "https://github.com/dutkiewiczmaciej/MakLock/releases/download/v#{version}/MakLock-#{version}.dmg"
   name "MakLock"
-  desc "Lock macOS apps with Touch ID, Apple Watch, or password"
+  desc "Lock apps with Touch ID, Apple Watch, or password"
   homepage "https://github.com/dutkiewiczmaciej/MakLock"
 
   livecheck do
@@ -18,9 +18,9 @@ cask "maklock" do
   app "MakLock.app"
 
   zap trash: [
-    "~/Library/Preferences/com.makmak.MakLock.plist",
-    "~/Library/Caches/com.makmak.MakLock",
     "~/Library/Application Support/com.makmak.MakLock",
+    "~/Library/Caches/com.makmak.MakLock",
     "~/Library/HTTPStorages/com.makmak.MakLock",
+    "~/Library/Preferences/com.makmak.MakLock.plist",
   ]
 end
