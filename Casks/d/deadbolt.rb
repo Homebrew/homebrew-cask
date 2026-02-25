@@ -1,9 +1,9 @@
 cask "deadbolt" do
   arch arm: "-arm64"
 
-  version "2.1.0"
-  sha256 arm:   "0469c775850f3199a0b34394aaa5af5f46766420b341e27eee698ac0c0d3dde7",
-         intel: "6ce5e4bab48ae0eb48523b9c00f76b5cf7c89eeb60bf43d1be7fb570126e790a"
+  version "2.1.1"
+  sha256 arm:   "c8ce77caf427d24730fe0e9abd34cc49ebcb1650952cbbc79a2da180e7c8bee0",
+         intel: "4b3950a09cb8e46ce31bfc5d54853264217810641684d298d30ecf3a05a8a4fd"
 
   url "https://github.com/alichtman/deadbolt/releases/download/v#{version}/Deadbolt-#{version}#{arch}.dmg"
   name "Deadbolt"
@@ -14,8 +14,6 @@ cask "deadbolt" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Deadbolt.app"
 
