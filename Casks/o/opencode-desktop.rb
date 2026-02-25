@@ -1,9 +1,9 @@
 cask "opencode-desktop" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.2.11"
-  sha256 arm:   "35651c7551ebdc62ff728035c7d939e66817bf2365976c5b9f3ced38461942a0",
-         intel: "635d3bfea110b5c89520f76fd7042c2dcc10606d0c40c4e655eb17f3e3b83e30"
+  version "1.2.12"
+  sha256 arm:   "acbf54579a69f250e8f3ad864d5134c1191ccde2ac9112e175bb1e04bf1950dc",
+         intel: "76aa0fb4f68fafb4c2511091a9cd1b88659d6553ebe6260e874b207887ba29c0"
 
   url "https://github.com/sst/opencode/releases/download/v#{version}/opencode-desktop-darwin-#{arch}.dmg",
       verified: "github.com/sst/opencode/"
