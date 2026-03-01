@@ -12,4 +12,11 @@ cask "pkgsmith" do
 
   app "PKGSmith.app"
   binary "PKGSmith.app/Contents/MacOS/PKGSmith", target: "pkgsmith"
+
+  zap trash: [
+    "~/Library/Application Support/PKGSmith",
+    "~/Library/Caches/dk.foghdev.PKGSmith",
+    "~/Library/Preferences/dk.foghdev.PKGSmith.plist",
+    "~/Library/Saved Application State/dk.foghdev.PKGSmith.savedState",
+  ]
 end
