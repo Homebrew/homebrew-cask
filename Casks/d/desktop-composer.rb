@@ -1,6 +1,6 @@
 cask "desktop-composer" do
-  version "1.0.1"
-  sha256 "e4addb4aabac365ca8392699685687a58711ad3607677d508c0c46c8fdcf7d45"
+  version "1.1"
+  sha256 "a80c836f17bdba844a73ee92be71076e23ef225edb1dba130e230265ea3fcb67"
 
   url "https://www.apptorium.com/public/products/desktop-composer/releases/DesktopComposer-#{version}.zip"
   name "Desktop Composer"
