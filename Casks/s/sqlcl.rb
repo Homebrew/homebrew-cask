@@ -12,8 +12,6 @@ cask "sqlcl" do
     regex(/href=.*?sqlcl[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on formula: "openjdk@11"
-
   stage_only true
 
   postflight do
