@@ -1,25 +1,25 @@
 cask "teleport-suite" do
   version "18.7.1"
-  sha256 "54fbe65b39d1753313317115308a04e3167307afe726a33c3f66b45e0b843979"
+  sha256 "e657a19f099edebb83f6db484704e6b712f80951807fbb98d7e5e102c679cab5"
 
-  url "https://cdn.teleport.dev/teleport-#{version}.pkg",
+  url "https://cdn.teleport.dev/teleport-tools-#{version}.pkg",
       verified: "cdn.teleport.dev/"
   name "Teleport"
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
 
   livecheck do
-    url "https://goteleport.com/download/",
-        user_agent: :browser
-    regex(/teleport[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+    url "https://github.com/gravitational/teleport/"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   conflicts_with cask: [
     "teleport-suite@16",
+    "teleport-suite@17",
     "tsh",
   ]
 
-  pkg "teleport-#{version}.pkg"
+  pkg "teleport-tools-#{version}.pkg"
 
   uninstall pkgutil: [
               "(.*).com.gravitational.teleport.tctl",
