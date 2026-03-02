@@ -1,6 +1,6 @@
 cask "scoot" do
-  version "1.2"
-  sha256 "99fb59e9f4e94b9094c4d219c6f376b36a5cb29057b032adc354eda6582c2883"
+  version "1.3"
+  sha256 "805f45f365bf71f5cd28fb63dafff9acefbe4dae50912cb8e6dd3bca2bf74d31"
 
   url "https://github.com/mjrusso/scoot/releases/download/v#{version}/Scoot.app.zip"
   name "Scoot"
