@@ -12,6 +12,8 @@ cask "mendeley-reference-manager" do
     regex(/href=.*?mendeley-reference-manager[._-]v?(\d+(?:\.\d+)+)(?:[._-]universal)?\.dmg/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Mendeley Reference Manager.app"
 
   zap trash: [
