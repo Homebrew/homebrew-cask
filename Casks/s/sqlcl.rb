@@ -28,10 +28,7 @@ cask "sqlcl" do
 
   zap trash: "~/.sqlcl"
 
-  caveats <<~EOS
-    sqlcl requires Java 11 or later.
-
-    To use sqlcl, add the following to your shell PATH:
-      export PATH="#{HOMEBREW_PREFIX}/Caskroom/sqlcl/latest/sqlcl/bin:$PATH"
-  EOS
+  caveats do
+    depends_on_java "11+"
+  end
 end
