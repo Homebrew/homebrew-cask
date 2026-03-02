@@ -1,6 +1,6 @@
 cask "mactex" do
-  version "2025.0308"
-  sha256 "be084f849e545d9e9511b791da07ca4f9f33d85d42bb69dade636e345421ab7c"
+  version "2026.0301"
+  sha256 "61f8ec54441b9f4ac831df9728ab149c0a39ecdaceff04302fabf7301a57c346"
 
   url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
@@ -24,6 +24,7 @@ cask "mactex" do
     "mactex-no-gui",
   ]
   depends_on formula: "ghostscript"
+  depends_on macos: ">= :big_sur"
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
@@ -60,6 +61,7 @@ cask "mactex" do
       ]
 
   uninstall pkgutil: [
+              "org.tug.mactex.ghostscript*",
               "org.tug.mactex.gui#{version.major}",
               "org.tug.mactex.texlive#{version.major}",
             ],
