@@ -1,6 +1,6 @@
 cask "tana" do
-  version "1.513.2"
-  sha256 "4830fac2928ce6e1fc16d13911763f043525693db4f7ed7e429e92de61436410"
+  version "1.513.10"
+  sha256 "70452c6026d759c84a3cde0b743f38c2eb5b80779a99e946d095a8da901154a5"
 
   url "https://github.com/tanainc/tana-desktop-releases/releases/download/v#{version}/Tana-#{version}-universal.dmg",
       verified: "github.com/tanainc/tana-desktop-releases/"
