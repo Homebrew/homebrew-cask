@@ -1,6 +1,6 @@
 cask "netviews" do
-  version "2.7"
-  sha256 "e6c1c1036f71a33f0f161dc8be84dbeb6779f37c47be2c32c3482287fecf3125"
+  version "2.8"
+  sha256 "0527bc6d6b136215dca8ba84ef0e3904239a8a54bd34838dba4a476688d100c6"
 
   url "https://www.netviews.app/installers/NetViews-#{version}.zip"
   name "NetViews"
