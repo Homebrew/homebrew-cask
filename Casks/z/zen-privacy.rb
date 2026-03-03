@@ -1,9 +1,9 @@
 cask "zen-privacy" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.18.1"
-  sha256 arm:   "b34abd6a86ed152db194caf6364b57ca5c563ac4a8368f8114942fd461825264",
-         intel: "68a7a107e0e83e74f7645070dea82c11f94a78274c15ffebcc36b30121811462"
+  version "0.19.1"
+  sha256 arm:   "dce90406344db77b8433dd7989291e22d18fc261bb215ccd88c172fc2e40b3f3",
+         intel: "99433886d69d2b0732a458cfc9e89978029a5f725d23a4652f915a8d5cdefc05"
 
   url "https://github.com/ZenPrivacy/zen-desktop/releases/download/v#{version}/Zen_darwin_#{arch}_noselfupdate.tar.gz",
       verified: "github.com/ZenPrivacy/zen-desktop/"
