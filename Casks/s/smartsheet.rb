@@ -1,5 +1,5 @@
 cask "smartsheet" do
-  version "1.0.53"
+  version "1.0.54"
   sha256 :no_check
 
   url "https://builds.desktopapp.smartsheet.com/public/darwin/Smartsheet-setup.dmg"
