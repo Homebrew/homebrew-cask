@@ -1,5 +1,5 @@
 cask "ultimate" do
-  version "3.0.16.541"
+  version "3.0.16.526"
   sha256 :no_check
 
   url "https://download.epubor.com/epubor_ultimate.zip"
@@ -9,7 +9,7 @@ cask "ultimate" do
 
   livecheck do
     url "https://www.epubor.com/ultimate.html"
-    regex(/Version:\s*(\d+(?:\.\d+)+)/i)
+    regex(/Version:\s*v?(\d+(?:\.\d+)+).*?#os_Mac/i)
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
