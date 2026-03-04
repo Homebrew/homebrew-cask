@@ -16,6 +16,7 @@ cask "ghostty@tip" do
 
       "#{item.version},#{match[1]}"
     end
+    throttle 5
   end
 
   auto_updates true
