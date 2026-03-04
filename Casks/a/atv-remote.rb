@@ -1,9 +1,9 @@
 cask "atv-remote" do
   arch arm: "-arm64"
 
-  version "2.1.0"
-  sha256 arm:   "8a8e33e607eb3aba7841aedbc96d29995485c8001edae801462b66a191e7ce9b",
-         intel: "1fa2fa4fbd533de17c3b054de46a634984855172128dd91536c648c5eeb3dbe6"
+  version "2.1.1"
+  sha256 arm:   "61c9133a3527ae2819ce8f256e036fa866ff3d16d760e753443005790a75305c",
+         intel: "f35c290e96c38696f533520d7b88dcdd8eea99b944dd6c50ecbf31b4b9154444"
 
   url "https://github.com/bsharper/atv-desktop-remote/releases/download/v#{version}/ATV.Remote-#{version}#{arch}.dmg"
   name "ATV Remote"
