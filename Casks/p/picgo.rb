@@ -20,6 +20,7 @@ cask "picgo" do
   app "PicGo.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.molunerfinn.picgo.sfl*",
     "~/Library/Application Support/picgo",
     "~/Library/Preferences/com.molunerfinn.picgo.plist",
     "~/Library/Services/Upload pictures with PicGo.workflow",
