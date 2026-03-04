@@ -4,8 +4,8 @@ cask "spokenly" do
 
   url "https://cdn.spokenly.app/releases/macos/Spokenly-#{version}.dmg"
   name "Spokenly"
-  desc "Dictation and transcription app for macOS"
-  homepage "https://spokenly.app"
+  desc "Dictation and transcription app with AI-powered editing"
+  homepage "https://spokenly.app/"
 
   livecheck do
     url "https://spokenly.app/appcast.xml"
