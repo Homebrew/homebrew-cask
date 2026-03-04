@@ -1,9 +1,9 @@
 cask "tableau" do
   arch arm: "-arm64"
 
-  version "2025.3.3"
-  sha256 arm:   "649de1f8c600a7f0ce517570067bb7808c8677a9ecdd298c6f4e102f29cc9e89",
-         intel: "f950e170ce2560b9a1bca4bd0c1b89a7846bc8efb8d38d0910d313b5aa338735"
+  version "2026.1.0"
+  sha256 arm:   "ee0d7cc9490d13199e1dfed46d306af121db6370d2d3dbd3857d7a3906d49da4",
+         intel: "a138d7ab5da823173261f4b27ade28a390efdee33bd3761b9390cbd6f4525201"
 
   on_arm do
     depends_on macos: ">= :ventura"
