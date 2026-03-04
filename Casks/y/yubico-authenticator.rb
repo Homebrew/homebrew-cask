@@ -4,7 +4,7 @@ cask "yubico-authenticator" do
 
   url "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-#{version}-mac.dmg"
   name "Yubico Authenticator"
-  desc "Manage your YubiKey and access one-time passwords with this full-featured companion app to the YubiKey."
+  desc "Full-featured companion app to the YubiKey"
   homepage "https://developers.yubico.com/yubioath-flutter/"
 
   livecheck do
