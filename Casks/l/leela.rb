@@ -8,6 +8,7 @@ cask "leela" do
   homepage "https://sjeng.org/leela.html"
 
   deprecate! date: "2025-03-04", because: :discontinued
+  disable! date: "2026-03-04", because: :discontinued
 
   app "Leela.app"
   app "Leela OpenCL.app"
