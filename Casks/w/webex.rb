@@ -15,6 +15,7 @@ cask "webex" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Webex.app"
 
