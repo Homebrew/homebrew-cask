@@ -19,7 +19,7 @@ cask "spokenly" do
 
   zap trash: [
     "~/Library/Application Support/Spokenly",
-    "~/Library/Caches/Spokenly",
-    "~/Library/Preferences/app.spokenly.mac.plist",
+    "~/Library/Caches/app.spokenly",
+    "~/Library/Preferences/app.spokenly.plist",
   ]
 end
