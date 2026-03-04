@@ -1,9 +1,9 @@
 cask "beekeeper-studio" do
   arch arm: "-arm64"
 
-  version "5.5.7"
-  sha256 arm:   "c4f56d3366adc0e439b2f33942f49b049c3d079393067ca7011dd1fe41da61b2",
-         intel: "2715053acb13019cd8c6b0361cdeb484c3f94687f4b6f519177dcc9e0d07da7a"
+  version "5.6.0"
+  sha256 arm:   "487f98602f97cee7769951ebd94e47277b2035dbb3792dd7422e755494867ec3",
+         intel: "bdcf8de93cabc7a802147d4a2461222e4f6b45cf62a65c528e8a97836fedd65e"
 
   url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}#{arch}.dmg",
       verified: "github.com/beekeeper-studio/beekeeper-studio/"
