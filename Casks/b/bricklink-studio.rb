@@ -1,6 +1,6 @@
 cask "bricklink-studio" do
-  version "2.26.1_1"
-  sha256 "9d6aaf049386278cf1eaa573122e235fb67007360757909ef346260c31f65594"
+  version "2.26.2_1"
+  sha256 "c7d3d94a096d9fec3ca5eb792325e5687e91190f0ef11e5963ec8414de81399c"
 
   url "https://studio.download.bricklink.info/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
       verified: "studio.download.bricklink.info/"
