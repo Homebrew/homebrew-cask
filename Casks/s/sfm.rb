@@ -10,7 +10,7 @@ cask "sfm" do
 
   depends_on macos: ">= :ventura"
 
-  pkg "SFM-#{version}-Apple.pkg"
+  pkg "SFM-#{version}-Universal.pkg"
 
   uninstall quit:       "io.nekohasekai.sfavt.standalone",
             login_item: "SFM",
