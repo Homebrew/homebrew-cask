@@ -4,7 +4,7 @@ cask "yubico-authenticator" do
 
   url "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-#{version}-mac.dmg"
   name "Yubico Authenticator"
-  desc "Application for generating TOTP and HOTP codes"
+  desc "Full-featured companion app to the YubiKey"
   homepage "https://developers.yubico.com/yubioath-flutter/"
 
   livecheck do
@@ -15,7 +15,7 @@ cask "yubico-authenticator" do
   app "Yubico Authenticator.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.yubico.authenticator",
-    "~/Library/Containers/com.yubico.authenticator",
+    "~/Library/Application Scripts/com.yubico.yubioath",
+    "~/Library/Containers/com.yubico.yubioath",
   ]
 end
