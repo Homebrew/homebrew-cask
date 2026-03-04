@@ -15,7 +15,10 @@ cask "alire" do
 
   binary "bin/alr"
 
-  zap trash: "~/.config/alire"
+  zap trash: [
+    "~/.config/alire",
+    "~/.local/share/alire",
+  ]
 
   caveats do
     <<~EOS
