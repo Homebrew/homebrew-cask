@@ -5,10 +5,8 @@ cask "lumimax" do
   url "https://github.com/Joowonoil/LumiMax/releases/download/v#{version}/LumiMax.dmg",
       verified: "github.com/Joowonoil/LumiMax/"
   name "LumiMax"
-  desc "XDR brightness boost for Mac displays up to 1600 nits"
+  desc "XDR brightness boost for displays up to 1600 nits"
   homepage "https://ramterstudio.com/lumimax/"
-
-  depends_on macos: ">= :ventura"
 
   livecheck do
     url :url
@@ -16,13 +14,14 @@ cask "lumimax" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "LumiMax.app"
 
   uninstall quit: "com.ramster.LumiMax"
 
   zap trash: [
-    "~/Library/Preferences/com.ramster.LumiMax.plist",
     "~/Library/Caches/com.ramster.LumiMax",
+    "~/Library/Preferences/com.ramster.LumiMax.plist",
   ]
 end
