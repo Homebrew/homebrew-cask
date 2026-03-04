@@ -1,9 +1,9 @@
 cask "tableau-public" do
   arch arm: "-arm64"
 
-  version "2025.3.3"
-  sha256 arm:   "6dadd3a8f83d2494885fe8fb0803a8fb7fafb41e0ea1ee107c6a1ea00f422890",
-         intel: "a53d635c45ace6cc2079e5d347865eae1c7222be6ebaca1cfc96ca761b0c8e92"
+  version "2026.1.0"
+  sha256 arm:   "ca508b343f5f6365668e14eb7ee44ad951226e0c80de6942ac75d383d518bcf4",
+         intel: "6ba9aae257cff95d3a3b9a3416b32353aa88dfed6ed6932d06bb6c116cf5cb21"
 
   on_arm do
     depends_on macos: ">= :ventura"
