@@ -2,9 +2,9 @@ cask "kdiff3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.12.3"
-  sha256 arm:   "2484c970943e1f69920dc0e46618b03aea8e5f141017b43d3fd3913cd0db9308",
-         intel: "2bd7e3ee18540f8499b2dab78295f69fd9a8e60c2e2acc911e21ac838dbd43f0"
+  version "1.12.4"
+  sha256 arm:   "80d0a1e3de9382b52df7d67e0c0b6b1998aa7e79213d3147e46e094027bd3d15",
+         intel: "b11849a191173bb75a2884d94e6d175135e432579222d718b05a98b91fcd5619"
 
   url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-#{arch}.dmg"
   name "KDiff3"
@@ -15,6 +15,8 @@ cask "kdiff3" do
     url "https://download.kde.org/stable/kdiff3/"
     regex(/href=["']?kdiff3[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
   end
+
+  depends_on macos: ">= :ventura"
 
   app "kdiff3.app"
   shimscript = "#{staged_path}/kdiff3.wrapper.sh"
