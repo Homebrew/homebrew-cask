@@ -1,6 +1,6 @@
 cask "mactex" do
-  version "2025.0308"
-  sha256 "be084f849e545d9e9511b791da07ca4f9f33d85d42bb69dade636e345421ab7c"
+  version "2026.0301"
+  sha256 "61f8ec54441b9f4ac831df9728ab149c0a39ecdaceff04302fabf7301a57c346"
 
   url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
@@ -24,24 +24,25 @@ cask "mactex" do
     "mactex-no-gui",
   ]
   depends_on formula: "ghostscript"
+  depends_on macos: ">= :big_sur"
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
         {
           # Ghostscript
-          "choiceIdentifier" => "org.tug.mactex.ghostscript10.04.0",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.06.0",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # Ghostscript Dynamic Library
-          "choiceIdentifier" => "org.tug.mactex.ghostscript10.04.0-libgs",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.06.0-libgs",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # Ghostscript Mutool
-          "choiceIdentifier" => "org.tug.mactex.ghostscript10.04.0-mutool",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.06.0-mutool",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
