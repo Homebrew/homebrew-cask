@@ -15,4 +15,10 @@ cask "sfm" do
   uninstall quit:       "io.nekohasekai.sfavt.standalone",
             login_item: "SFM",
             pkgutil:    "io.nekohasekai.sfavt.standalone"
+
+  zap trash: [
+    "~/Library/Application Scripts/287TTNZF8L.io.nekohasekai.sfavt",
+    "~/Library/Group Containers/287TTNZF8L.io.nekohasekai.sfavt",
+    "~/Library/Preferences/io.nekohasekai.sfavt.standalone.plist",
+  ]
 end
