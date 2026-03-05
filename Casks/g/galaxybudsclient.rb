@@ -10,6 +10,8 @@ cask "galaxybudsclient" do
   desc "Unofficial manager for the Buds, Buds+, Buds Live and Buds Pro"
   homepage "https://github.com/ThePBone/GalaxyBudsClient"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :monterey"
 
   pkg "GalaxyBudsClient_macOS_#{arch}.pkg"
