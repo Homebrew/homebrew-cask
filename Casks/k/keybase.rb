@@ -4,10 +4,10 @@ cask "keybase" do
   sha256 :no_check
 
   on_arm do
-    version "6.5.5,20260205204731,f6b3bf4110"
+    version "6.6.0,20260305145732,79477565ce"
   end
   on_intel do
-    version "6.5.5,20260205203538,f6b3bf4110"
+    version "6.6.0,20260305143645,79477565ce"
   end
 
   url "https://prerelease.keybase.io/Keybase#{arch}.dmg"
@@ -23,6 +23,7 @@ cask "keybase" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Keybase.app"
 
