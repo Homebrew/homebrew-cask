@@ -15,8 +15,8 @@ cask "netnewswire" do
     end
   end
   on_tahoe :or_newer do
-    version "7.0"
-    sha256 "d723e062aeedd9b4d70fb3c0f47a81f309e4077cf4e3928f3068da0e44bc91c8"
+    version "7.0.1"
+    sha256 "d9f4943ae95ffc8af539475dd89fb3a7e9d169b4fd56537c8b9826b83de171fc"
 
     livecheck do
       url "https://ranchero.com/downloads/netnewswire-release.xml"
