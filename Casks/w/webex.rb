@@ -1,7 +1,7 @@
 cask "webex" do
   arch arm: "apple-silicon", intel: "intel"
 
-  version "46.2.1.34187"
+  version "46.3.0.34324"
   sha256 :no_check
 
   url "https://binaries.webex.com/webex-macos-#{arch}/Webex.dmg"
@@ -15,6 +15,7 @@ cask "webex" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Webex.app"
 
