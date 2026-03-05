@@ -1,6 +1,6 @@
 cask "topaz-video" do
-  version "1.2.0"
-  sha256 "eff3d8d2e09a0afc0467ac1e983dafc2a711eccf8b24054c8fff397f0c0b095e"
+  version "1.2.1"
+  sha256 "aca85416e371bd796f7df96e56d7bd8bbbc201049d9ea907edf2c3ea2819a32d"
 
   url "https://downloads.topazlabs.com/deploy/TopazVideoStudio/#{version}/TopazVideo-#{version}.pkg"
   name "Topaz Video"
