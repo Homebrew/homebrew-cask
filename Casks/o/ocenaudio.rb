@@ -1,5 +1,5 @@
 cask "ocenaudio" do
-  version "3.17.2"
+  version "3.17.3"
   sha256 :no_check
 
   url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg"
