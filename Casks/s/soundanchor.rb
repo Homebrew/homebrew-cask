@@ -1,6 +1,6 @@
 cask "soundanchor" do
-  version "1.6.1"
-  sha256 "90872e7cd66aeed0b9cf3ecab132be4f5b27743d485d5dc60903d5d0c9567444"
+  version "1.6.2"
+  sha256 "8aaee5b7869d79d95af1c9e421dff6c90ce12bcc991b1b50b7a3cbad2944c478"
 
   url "https://kopiro.s3.amazonaws.com/soundanchor/soundanchor-#{version}.dmg",
       verified: "kopiro.s3.amazonaws.com/soundanchor/"
