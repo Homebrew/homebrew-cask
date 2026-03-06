@@ -1,6 +1,6 @@
 cask "reaper" do
-  version "7.62"
-  sha256 "897dba992779e21e55643fd3bf6199ac9801eb05803929dc8a7228819b744ef1"
+  version "7.63"
+  sha256 "856d9acda3798750c10458e75397b7ad6de8383772d5a0c594b7f4d4714e21b4"
 
   url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_universal.dmg"
   name "REAPER"
