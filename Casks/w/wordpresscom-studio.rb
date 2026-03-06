@@ -2,9 +2,9 @@ cask "wordpresscom-studio" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "silicon", intel: "intel"
 
-  version "1.7.4,11546"
-  sha256 arm:   "f620740ac8ec237d88f19b5f9cafbd9edd294438f3c17f289e42d5534da308a1",
-         intel: "356e333643919dca350b8c24ffcf35f28471f8fe0d1eecdd82d5eebb000a56c5"
+  version "1.7.5,12263"
+  sha256 arm:   "ef43feb13b38f47a215587cabb254bf3301ad52d346d75da40ea3ead511f78f2",
+         intel: "0912935bfd1570aafb659fd1ad7d776b6a761c2ebeb5bee8ce37293c31e31c14"
 
   url "https://appscdn.wordpress.com/downloads/wordpress-com-studio/mac-#{folder_arch}/v#{version.csv.first}/#{version.csv.second}/update/studio-#{arch}-v#{version.csv.first}.zip"
   name "Wordpress Studio"
