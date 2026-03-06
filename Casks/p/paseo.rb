@@ -1,10 +1,8 @@
 cask "paseo" do
-  arch arm: "aarch64"
+  version "0.1.17"
+  sha256 "487171ad6942da5977df1e62f692961b72f933e340feec45757451c09a54aca5"
 
-  version "0.1.16"
-  sha256 arm: "f546d4bb57fe432934ac1c07ebfc4065242ee1d00272c6630f3fb376d7a2ffcf"
-
-  url "https://github.com/getpaseo/paseo/releases/download/v#{version}/Paseo_#{version}_#{arch}.dmg",
+  url "https://github.com/getpaseo/paseo/releases/download/v#{version}/Paseo_#{version}_universal.dmg",
       verified: "github.com/getpaseo/paseo/"
   name "Paseo"
   desc "Orchestrate coding agents from anywhere"
