@@ -1,6 +1,6 @@
 cask "shattered-pixel-dungeon" do
-  version "3.3.6"
-  sha256 "8d2f2ed5213f4cfd0ce604aeb0c31565635300008f5b0ac5cc45fc394d545d02"
+  version "3.3.7"
+  sha256 "a6fd6bea9f71e8979bddd68df3afa739495179097516bdc2a441d358331f81b2"
 
   url "https://github.com/00-Evan/shattered-pixel-dungeon/releases/download/v#{version}/ShatteredPD-v#{version}-macOS.zip",
       verified: "github.com/00-Evan/shattered-pixel-dungeon/"
