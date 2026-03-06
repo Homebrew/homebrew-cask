@@ -22,8 +22,6 @@ cask "stremio" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/Stremio[._-]#{arch}\.dmg}i)
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   app "Stremio.app"
 
   zap trash: [
