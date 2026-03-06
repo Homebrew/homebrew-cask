@@ -1,6 +1,6 @@
 cask "paseo" do
-  version "0.1.17"
-  sha256 "487171ad6942da5977df1e62f692961b72f933e340feec45757451c09a54aca5"
+  version "0.1.18"
+  sha256 "acded7f3eaf3f99c94332ef96e15beabe11d7dce2c018cb87c7bbde7f1c49075"
 
   url "https://github.com/getpaseo/paseo/releases/download/v#{version}/Paseo_#{version}_universal.dmg",
       verified: "github.com/getpaseo/paseo/"
