@@ -3,8 +3,8 @@ cask "vimcal" do
   host_suffix = on_arch_conditional arm: "m1", intel: "production"
 
   on_arm do
-    version "1.0.42"
-    sha256 "dd05e6c0249eb6d41e6499df7ac949d9649583d373466e9b964a3e9f7e5b9613"
+    version "1.0.44"
+    sha256 "141088ba57391c617d7aca456ccc53f6090fbcc3a86f0dd93cb6f550532cc05a"
   end
   on_intel do
     version "1.0.44"
