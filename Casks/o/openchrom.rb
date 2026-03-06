@@ -1,9 +1,9 @@
 cask "openchrom" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.6.7"
-  sha256 arm:   "23e72c95cde9a234cdc0efe7801c81f91e6cbc88461cc33ea281da02a217fb15",
-         intel: "40b62d1282bbe561a42305d67c584e86ea1a2de4f8970bb643a7433f99207c72"
+  version "1.6.8"
+  sha256 arm:   "4270de3df6bec940767c05a895d1cfddac5d687079afcb66afe44412063a2db6",
+         intel: "d4a27af818cd599e4b4df70eb7ceee89d4d6a095dde25a62d119bf33d7d424c0"
 
   url "https://products.lablicate.com/openchrom/#{version}/OpenChrom_#{version}_#{arch}.dmg",
       verified: "products.lablicate.com/openchrom/"
