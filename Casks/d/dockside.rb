@@ -1,6 +1,6 @@
 cask "dockside" do
-  version "2.0.3"
-  sha256 "005571b016afce6cde4a581c87fd8e57456d276b23088059afecb0ff441d60e6"
+  version "2.0.4"
+  sha256 "c4e8f46eb462e1a7c1aa45575c54d95f36b1be627dcd6b6c94e40f2478a684bd"
 
   url "https://github.com/PrajwalSD/Dockside/releases/download/v#{version}/Dockside.dmg",
       verified: "github.com/PrajwalSD/Dockside/"
