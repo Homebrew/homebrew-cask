@@ -1,9 +1,9 @@
 cask "splice" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "5.4.7"
-  sha256 arm:   "2037d3956989d005963f7bd7573efd25dfe172a57792370b07b671b25df4debb",
-         intel: "aa83f45b9142a54b4d8fde99addd69328dbc65103d6a73ee89b9c08574d26e90"
+  version "5.4.8"
+  sha256 arm:   "f400059e892a69ba2ae915e1013c7163961626e5df904dcc74205e9b4d95f787",
+         intel: "c33d50b8aed74657fe264cc822ad08c1d84a3fd1cb356e1a249537cbb4ab0f54"
 
   url "https://desktop.splice.com/conveyor/stable/splice-#{version}-mac-#{arch}.zip"
   name "Splice"
