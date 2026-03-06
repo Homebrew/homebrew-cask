@@ -19,7 +19,16 @@ cask "obsidian" do
   depends_on macos: ">= :monterey"
 
   app "Obsidian.app"
-  binary "#{appdir}/Obsidian.app/Contents/MacOS/Obsidian", target: "obsidian"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/obsidian.wrapper.sh"
+  binary shimscript, target: "obsidian"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/bash
+      exec '#{appdir}/Obsidian.app/Contents/MacOS/Obsidian' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/md.obsidian.sfl*",
