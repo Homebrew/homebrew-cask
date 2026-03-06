@@ -8,6 +8,11 @@ cask "paseo" do
   desc "Orchestrate coding agents from anywhere"
   homepage "https://paseo.sh/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :ventura"
 
   app "Paseo.app"
