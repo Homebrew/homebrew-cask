@@ -1,4 +1,4 @@
-cask "font-ghana-chocolate" do
+cask "font-ghanachocolate" do
   version :latest
   sha256 :no_check
 
