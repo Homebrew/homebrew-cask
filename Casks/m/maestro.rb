@@ -1,11 +1,11 @@
 cask "maestro" do
-  arch arm: "-arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "0.14.5"
-  sha256 arm:   "fb2cd6d1fe2d4555ec920a9b9b9adab0add5c3ed5f3431e5b376d7d78f3eec89",
-         intel: "a89df742bf3b7e1322e5c5ff5dabb82ec9e64e17aaef4e73400731afdc41e98e"
+  version "0.15.1"
+  sha256 arm:   "032c4d0abfc93938635e4d4a8a2a9357d819ca08375c7d42c995d91c180de54f",
+         intel: "ac51738861ebf69ebb8cb764ec6867c1d39012372a4a70ce55bb8ee4a1b0f653"
 
-  url "https://github.com/pedramamini/Maestro/releases/download/v#{version}/Maestro-#{version}#{arch}.dmg",
+  url "https://github.com/pedramamini/Maestro/releases/download/v#{version}/Maestro-#{version}-#{arch}-mac.dmg",
       verified: "github.com/pedramamini/Maestro/"
   name "Maestro"
   desc "AI agent command center"
