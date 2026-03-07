@@ -2,8 +2,7 @@ cask "infimount" do
   version "0.1.0"
   sha256 "72610f728661a199ca1e8f6d8a29bfd71dc5715de9a823a3c1cf289fda41181e"
 
-  url "https://github.com/infimount/infimount/releases/download/v#{version}/Infimount.dmg",
-      verified: "github.com/infimount/infimount/"
+  url "https://github.com/infimount/infimount/releases/download/v#{version}/Infimount.dmg"
   name "Infimount"
   desc "Browse local and cloud storage through a single interface"
   homepage "https://github.com/infimount/infimount"
