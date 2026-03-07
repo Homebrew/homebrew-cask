@@ -1,4 +1,4 @@
-cask "ltx" do
+cask "ltx-desktop" do
   version "1.0.1"
   sha256 "db21abb544da6ca730732498878bba75e98128a40f0b1b81886ee9b9649b18dd"
 
