@@ -1,6 +1,6 @@
 cask "macusb" do
-  version "2.0"
-  sha256 "9b3051c2748a7929c141a65c793acfad8dbc4b22e69e8afbdf5e69f0a016005b"
+  version "2.0.1"
+  sha256 "8940afde1d0ee831da1286a3feb226ee6acaa9dfe236f5af20d70bb4185c6472"
 
   url "https://github.com/Kruszoneq/macUSB/releases/download/v#{version}/macUSB.#{version}.dmg",
       verified: "github.com/Kruszoneq/macUSB/"
