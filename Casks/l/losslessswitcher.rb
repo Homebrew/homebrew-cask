@@ -1,15 +1,15 @@
 cask "losslessswitcher" do
-  version "1.1.0,1.1"
-  sha256 "8b4b8a7ae19df9c9c135a281b48a4306803b53fc98933affa450897343e6a3e2"
+  version "2.0,2"
+  sha256 "bf2cd61b9afa1a0caa7a491b25ccb2cc12f09db3b9831c0d814854083dceae8a"
 
-  url "https://github.com/vincentneo/LosslessSwitcher/releases/download/#{version.csv.first}/LosslessSwitcher-#{version.csv.second || version.csv.first}.app.zip"
+  url "https://github.com/vincentneo/LosslessSwitcher/releases/download/#{version.csv.first}/LosslessSwitcher#{version.csv.second}.app.zip"
   name "LosslessSwitcher"
   desc "Lossless sample rate switcher for Apple Music"
   homepage "https://github.com/vincentneo/LosslessSwitcher"
 
   livecheck do
     url :url
-    regex(%r{/v?(\d+(?:\.\d+)+)/LosslessSwitcher[._-]v?(\d+(?:\.\d+)+)\.app\.zip}i)
+    regex(%r{/v?(\d+(?:\.\d+)+)/LosslessSwitcher(\d+)\.app\.zip}i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["browser_download_url"]&.match(regex)
@@ -20,7 +20,7 @@ cask "losslessswitcher" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sequoia"
 
   app "LosslessSwitcher.app"
 
