@@ -1,6 +1,6 @@
 cask "sfm" do
-  version "1.13.1"
-  sha256 "51286c0bfcb69254d6e38261072295c3256a539e997374fbb72cf1aaf10d1449"
+  version "1.13.2"
+  sha256 "a3da2f92008cb633f0b84b972c9961f3552bece0a9af5d93de7eade59b4b9be3"
 
   url "https://github.com/SagerNet/sing-box/releases/download/v#{version}/SFM-#{version}-Universal.pkg",
       verified: "github.com/SagerNet/sing-box/"
