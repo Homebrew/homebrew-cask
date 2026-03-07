@@ -2,6 +2,8 @@
 
 This document helps coding agents produce high-quality PRs for Homebrew Cask contributions.
 
+> **Agent skill available:** For detailed workflow guidance (token naming, architecture handling, local testing patterns, full contribution workflow), see `.agents/skills/homebrew-cask-authoring/`.
+
 ## Before Any PR
 
 1. **Check for existing PRs** for the same cask: [open PRs](https://github.com/Homebrew/homebrew-cask/pulls)
