@@ -1,12 +1,16 @@
 cask "ghdl" do
   macos_version = nil
-  version "5.1.1"
 
   on_ventura :or_older do
     macos_version = 13
     arch arm: "x86_64", intel: "x86_64"
 
+    version "5.1.1"
     sha256 "4c35a9d6028d11cbfc7b2a98e0cdb28a56e268e5f586d7246904fec40bc8193a"
+
+    livecheck do
+      skip "Legacy version"
+    end
 
     caveats do
       requires_rosetta
@@ -16,21 +20,33 @@ cask "ghdl" do
     arch arm: "aarch64", intel: "x86_64"
 
     on_arm do
+      version "6.0.0"
+
       on_sonoma do
         macos_version = 14
 
-        sha256 "e858a3ee3cee22c976354ee7a66ab6377beec1a9383462f0ba583a8df73f46c1"
+        sha256 "9cb3ccc09ca95f37c88bb757b3da7415ce5efede51e136e0262c74f3f99c2245"
       end
       on_sequoia :or_newer do
         macos_version = 15
 
-        sha256 "0445652a460d01ab94d3a95fa88f398ae9550973daf5873f66c2480d2c73e209"
+        sha256 "69beb5913a490b5971980bd045af6a63b6f52e861b444fa990bffac436587478"
+      end
+
+      livecheck do
+        url :url
+        strategy :github_latest
       end
     end
     on_intel do
       macos_version = 13
 
+      version "5.1.1"
       sha256 "4c35a9d6028d11cbfc7b2a98e0cdb28a56e268e5f586d7246904fec40bc8193a"
+
+      livecheck do
+        skip "Legacy version"
+      end
     end
   end
 
@@ -40,10 +56,7 @@ cask "ghdl" do
   desc "VHDL 2008/93/87 simulator"
   homepage "https://ghdl.github.io/ghdl/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :ventura"
 
