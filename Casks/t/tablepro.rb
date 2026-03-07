@@ -26,6 +26,5 @@ cask "tablepro" do
     "~/Library/Caches/com.TablePro",
     "~/Library/HTTPStorages/com.TablePro",
     "~/Library/Preferences/com.TablePro.plist",
-    "~/Library/Saved Application State/com.TablePro.savedState",
   ]
 end
