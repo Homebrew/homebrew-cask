@@ -5,7 +5,7 @@ cask "infimount" do
   url "https://github.com/infimount/infimount/releases/download/v#{version}/Infimount.dmg"
   name "Infimount"
   desc "Browse local and cloud storage through a single interface"
-  homepage "https://github.com/infimount/infimount"
+  homepage "https://infimount.github.io/infimount/"
 
   livecheck do
     url :url
