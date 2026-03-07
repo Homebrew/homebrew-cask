@@ -28,6 +28,7 @@ cask "copilot-cli@prerelease" do
     end
   end
 
+  auto_updates true
   conflicts_with cask: "copilot-cli"
   depends_on macos: ">= :ventura"
 
