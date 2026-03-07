@@ -1,11 +1,12 @@
 cask "jamovi" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.7.22.0"
-  sha256 arm:   "7c410dd7df256c79e052cf3ca8e08fb2268c938e21b8cb0e7457970e85d13a74",
-         intel: "131db68ac163960fb598eec9b348ad6663b37e4dfc4e985cd06dae762b3f6122"
+  version "2.7.23.0"
+  sha256 arm:   "d772b80766dcb6db58d30c9e3f24dd4e4a22c1acb58a4d0980b8f32cc7c9b1a9",
+         intel: "88f987296fa1922fe1f9b253788db6c8dd0f62ed4d899ba1003f72c6aeadcffb"
 
-  url "https://www.jamovi.org/downloads/jamovi-#{version}-macos-#{arch}.dmg"
+  url "https://www.jamovi.org/downloads/jamovi-#{version}-macos-#{arch}.dmg",
+      referer: "https://www.jamovi.org/download.html"
   name "jamovi"
   desc "Statistical software"
   homepage "https://www.jamovi.org/"
