@@ -8,9 +8,25 @@ cask "the-unofficial-homestuck-collection" do
   desc "Offline viewer for the webcomic Homestuck"
   homepage "https://bambosh.github.io/unofficial-homestuck-collection/"
 
+  # Upstream has stopped publishing macOS versions due to GitHub dropping
+  # support for macOS 13 and it's unclear whether this will be addressed going
+  # forward due to the project maintenance status. For the time being, we check
+  # multiple GitHub releases to identify the newest version with a dmg file.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/v?(\d+(?:\.\d+)+).*?\.dmg/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
