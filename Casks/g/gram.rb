@@ -11,10 +11,6 @@ cask "gram" do
   desc "Code editor focused on stability, without AI, subscsriptions, or telemetry"
   homepage "https://gram.liten.app/"
 
-  livecheck do
-    url "https://codeberg.org/GramEditor/gram.git"
-  end
-
   depends_on macos: ">= :catalina"
 
   app "Gram.app"
