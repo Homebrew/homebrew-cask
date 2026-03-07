@@ -1,18 +1,17 @@
 cask "kaku" do
-  version "2.0.2"
-  sha256 "ba89cd59a49b7c21d7ccde09044e2fed7e2deeb617798ac45281f83130e313ca"
+  version "0.2.0"
+  sha256 "9dd01fac2df72578ca0ecb243cbf3c7964a6b8c9701c6eabcd57cfef70d4ec72"
 
-  url "https://github.com/EragonJ/Kaku/releases/download/#{version}/Kaku-#{version}.dmg",
-      verified: "github.com/EragonJ/Kaku/"
+  url "https://github.com/tw93/Kaku/releases/download/V#{version}/Kaku.dmg",
+      verified: "github.com/tw93/Kaku/"
   name "Kaku"
-  homepage "https://kaku.rocks/"
+  desc "A fast, out-of-the-box terminal built for AI coding"
+  homepage "https://github.com/tw93/Kaku"
 
-  deprecate! date: "2024-07-17", because: :unmaintained
-  disable! date: "2025-07-17", because: :unmaintained
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Kaku.app"
-
-  caveats do
-    requires_rosetta
-  end
 end
