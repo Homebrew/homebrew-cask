@@ -8,11 +8,6 @@ cask "ltx-desktop" do
   desc "Desktop app for generating videos with LTX models"
   homepage "https://ltx.io/ltx-desktop"
 
-  livecheck do
-    url "https://github.com/Lightricks/LTX-Desktop/releases/latest/download/latest-mac.yml"
-    strategy :electron_builder
-  end
-
   auto_updates true
   depends_on arch: :arm64
 
