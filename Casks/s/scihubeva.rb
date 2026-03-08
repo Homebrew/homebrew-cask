@@ -1,9 +1,9 @@
 cask "scihubeva" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.5.0"
-  sha256 arm:   "31bb540d1c3ec6db0950cd593a4017d776d3dfc903c5c17282d939f5f43331b4",
-         intel: "226e8e5f89a6d3bdf4c0382ce879133636f440a2998c788975fad832d2e3c39a"
+  version "6.5.1"
+  sha256 arm:   "769aa2eff2e44b926bbde6b1611355af09cabd50e281864ea57d2d3051d8754d",
+         intel: "30171d1122694f6fbf5ef3f79141ffa111de99cef19ae992bd895d3106dee810"
 
   url "https://github.com/leovan/SciHubEVA/releases/download/v#{version}/SciHubEVA-#{arch}-v#{version}.dmg"
   name "Sci-Hub EVA"
