@@ -1,5 +1,5 @@
 cask "mx-power-gadget" do
-  version "1.5.2"
+  version "1.6"
   sha256 :no_check
 
   url "https://www.seense.com/menubarstats/mxpg/updateapp/mxpg.zip"
@@ -12,7 +12,7 @@ cask "mx-power-gadget" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Mx Power Gadget.app"
 
