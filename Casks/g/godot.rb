@@ -5,7 +5,7 @@ cask "godot" do
   url "https://github.com/godotengine/godot/releases/download/#{version}-stable/Godot_v#{version}-stable_macos.universal.zip",
       verified: "github.com/godotengine/godot/"
   name "Godot Engine"
-  desc "Game development engine"
+  desc "2D and 3D game engine"
   homepage "https://godotengine.org/"
 
   livecheck do
