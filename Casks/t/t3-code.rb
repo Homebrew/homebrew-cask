@@ -8,12 +8,11 @@ cask "t3-code" do
   url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.dmg",
       verified: "github.com/pingdotgg/t3code/"
   name "T3 Code"
-  desc "Minimal GUI for code agents like Codex and Claude Code"
+  desc "Minimal GUI for AI code agents"
   homepage "https://t3.codes/"
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
     strategy :github_latest
   end
 
