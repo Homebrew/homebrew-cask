@@ -8,6 +8,11 @@ cask "breaktimer" do
   desc "Tool to manage periodic breaks"
   homepage "https://breaktimer.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :big_sur"
 
