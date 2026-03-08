@@ -23,4 +23,9 @@ cask "appports" do
     "~/Library/Preferences/com.shimoko.AppPorts.plist",
     "~/Library/Saved Application State/com.shimoko.AppPorts.savedState",
   ]
+
+  caveats <<~EOS
+    AppPorts is not signed by an Apple Developer. To open it, you may need to run:
+      xattr -rd com.apple.quarantine /Applications/AppPorts.app
+  EOS
 end
