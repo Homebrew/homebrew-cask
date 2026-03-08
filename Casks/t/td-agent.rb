@@ -12,6 +12,7 @@ cask "td-agent" do
   homepage "https://www.fluentd.org/"
 
   deprecate! date: "2025-03-01", because: :discontinued
+  disable! date: "2026-03-01", because: :discontinued
 
   pkg "td-agent-#{version}.pkg"
 

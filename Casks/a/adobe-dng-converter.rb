@@ -1,6 +1,6 @@
 cask "adobe-dng-converter" do
-  version "18.1.1"
-  sha256 "f52f7b3cb1762900b97f7254dc86d46fd800d7e991c0311f189926fba57ed45a"
+  version "18.2"
+  sha256 "36278af50d3f110a7951d7507657e9fef4eb7b6256130bbd4a63987b2bb687ec"
 
   url "https://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
   name "Adobe DNG Converter"
@@ -18,6 +18,8 @@ cask "adobe-dng-converter" do
       match[1].tr("_", ".")
     end
   end
+
+  depends_on macos: ">= :sonoma"
 
   pkg "DNGConverter_#{version.dots_to_underscores}.pkg"
 

@@ -1,5 +1,5 @@
 cask "captainplugins" do
-  version "7.4.1.10110"
+  version "8.0.0.10287"
   sha256 :no_check
 
   url "https://builds.mixedinkey.com/download/53/release/latest?key=dh-708a5f510d404bca9c44e2cecf5ced03"
@@ -13,7 +13,7 @@ cask "captainplugins" do
     strategy :header_match
   end
 
-  pkg "CaptainPlugins.pkg"
+  pkg "CaptainPlugins #{version}.pkg"
 
   uninstall pkgutil: "com.mixedinkey.CaptainPlugins.Epic.pkg"
 

@@ -1,6 +1,6 @@
 cask "notchnook" do
-  version "1.5.4"
-  sha256 "385dea226528c133318178b1ffa6946fdbf987a82837d426c8840bdcb8e739a5"
+  version "1.5.5"
+  sha256 "11d03f16e8de481a1ee7bc910736ef67df2922ab8a1cb823d0e4f502b29fe527"
 
   url "https://lo.cafe/notchnook-files/NotchNook-#{version}.zip"
   name "NotchNook"

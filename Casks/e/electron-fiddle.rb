@@ -1,9 +1,9 @@
 cask "electron-fiddle" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.37.3"
-  sha256 arm:   "f253c2726f726627fa27d536d579b1135cc99f21c3f909f8ab92542ffa0865db",
-         intel: "aaab2a30c0cc9d40059b22c9b6ceb52d4d62d635abb8e4697492c4a9f6938012"
+  version "0.38.0"
+  sha256 arm:   "2a6ca62f16eb44c1ff4ecd01e81d79cb2cdefaa26e897bc15c88ab3d39b24c6a",
+         intel: "b08e9455c135f3321d7d30b6b125ca483f01699ab52fda6ff988c7dbaad5d364"
 
   url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-#{arch}-#{version}.zip",
       verified: "github.com/electron/fiddle/"
@@ -16,7 +16,7 @@ cask "electron-fiddle" do
     regex(/href=.*?Electron[._-]Fiddle[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Electron Fiddle.app"
 

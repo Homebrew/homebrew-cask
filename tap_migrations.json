@@ -31,6 +31,7 @@
   "mosh": "homebrew/core",
   "nmap": "homebrew/core",
   "node": "homebrew/core",
+  "openshift-client": "homebrew/core/openshift-cli",
   "otto": "homebrew/core",
   "pandoc": "homebrew/core",
   "pgloader": "homebrew/core",

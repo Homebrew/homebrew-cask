@@ -1,6 +1,6 @@
 cask "vk-calls" do
-  version "1.43.37778"
-  sha256 "8fcd2b2a356aeae5e7724537134ba493660a5521d5c3081b4a5662b4e0d232de"
+  version "1.43.38550"
+  sha256 "1555e569f0979b2e6c5c7e7fae3b9c78ecf27e5e61d31d1c2efa99c6ca5bf36d"
 
   url "https://vkcalls-native-ac.vk-apps.com/#{version}/vk-calls.dmg",
       verified: "vkcalls-native-ac.vk-apps.com/"

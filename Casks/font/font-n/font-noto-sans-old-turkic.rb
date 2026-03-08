@@ -2,10 +2,10 @@ cask "font-noto-sans-old-turkic" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansOldTurkic-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansoldturkic/NotoSansOldTurkic-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Old Turkic"
-  homepage "https://www.google.com/get/noto/#sans-orkh"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Old+Turkic"
 
   font "NotoSansOldTurkic-Regular.ttf"
 

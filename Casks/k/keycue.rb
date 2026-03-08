@@ -9,8 +9,8 @@ cask "keycue" do
   homepage "https://ergonis.com/keycue"
 
   livecheck do
-    url "https://ergonis.com/keycue/download"
-    regex(/<h\d.*?KeyCue\sv?(\d+(?:\.\d+)+)/i)
+    url "https://ergonis.com/en/keycue/download"
+    regex(%r{/keycue/mac/v?(\d+(?:\.\d+)+)/}i)
   end
 
   depends_on macos: ">= :monterey"

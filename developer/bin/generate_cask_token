@@ -1,9 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# Standalone scripts are fine to use top-level methods
-# rubocop:disable Style/TopLevelMethodDefinition
-
 #
 # generate_cask_token
 #
@@ -442,5 +439,3 @@ if ARGV.length != 1
 end
 
 report
-
-# rubocop:enable Style/TopLevelMethodDefinition

@@ -1,9 +1,9 @@
 cask "roam-research" do
   arch arm: "-arm64"
 
-  version "0.0.31"
-  sha256 arm:   "6794c165b1163ecfb0eeaf05a2a87fb49d38a998be74a63a7f5051ee5ca3c14b",
-         intel: "f177f282a4f93571981a134dc6c3fd5cb52435a9fc9a3586071459435cdf4c4a"
+  version "0.0.35"
+  sha256 arm:   "e483b035f03823434ca18d6726ccbbae70c37d06e78fb8f21ebd0253dbb2f15f",
+         intel: "d54bf5c86e07bf2cec01d9f28f33e264b79f073c5eabe42f72131b4efca2870b"
 
   url "https://roam-electron-deploy.s3.amazonaws.com/Roam+Research-#{version}#{arch}.dmg",
       verified: "roam-electron-deploy.s3.amazonaws.com/"

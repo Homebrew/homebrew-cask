@@ -1,9 +1,9 @@
 cask "anytype" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.53.1"
-  sha256 arm:   "cfc005e9fc5196f4bd4710f92e269c4fede954accba6f449e977563184c4896c",
-         intel: "20274e7e47596c5affcbe079bc99d2befea752dc5c9ba52a4cea6cbe56b4ffce"
+  version "0.54.2"
+  sha256 arm:   "9fd88d0b57489669393fa11aeb6db421893831ff266108729909244d4a70ebde",
+         intel: "5cbdd7e2f98d5a39d6901940662a98b72ef93cb04e4b87094427a3c04effb5c7"
 
   url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-#{version}-mac-#{arch}.dmg",
       verified: "anytype-release.fra1.cdn.digitaloceanspaces.com/"
@@ -21,7 +21,7 @@ cask "anytype" do
     "anytype@alpha",
     "anytype@beta",
   ]
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Anytype.app"
 

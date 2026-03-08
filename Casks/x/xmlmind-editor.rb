@@ -1,6 +1,6 @@
 cask "xmlmind-editor" do
-  version "11.0.0"
-  sha256 "3b5d107fcb846693a60c7158c5facf01c8c1ce683dcf8e7dc004dab61bd08533"
+  version "11.1.0"
+  sha256 "2a65fddadbb3ef20397d49219441907b1adf3e9dc6c7585f47a5ce92080bae0b"
 
   url "https://www.xmlmind.com/xmleditor/_download/xxe-perso-#{version.dots_to_underscores}.dmg"
   name "XMLMind XML Editor"

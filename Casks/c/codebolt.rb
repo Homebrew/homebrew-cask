@@ -1,9 +1,9 @@
 cask "codebolt" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.20"
-  sha256 arm:   "cab3bf22f607abfbb057b159d53f0f7b0bb0f87da17287b410861a5cf6fd6a03",
-         intel: "3e6406dca31282e6f9a77f7fcc50776fb1a52242fcd41a86a049c2bb3b1f173d"
+  version "1.1.26"
+  sha256 arm:   "74702dd66300878df3be51d42321dc58dc706bdbc81567f478f3bac43010c0e1",
+         intel: "4bd3d62b08805e3e17e4b649f1d7410b47247ddbfa294471007ef731b9c4b03e"
 
   url "https://releasebuilds.codebolt.ai/CodeBolt-#{version}-#{arch}.dmg"
   name "CodeBolt"

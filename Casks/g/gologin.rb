@@ -2,12 +2,12 @@ cask "gologin" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "-arm"
 
-  version "4.0.5"
-  sha256 arm:   "d8d441c9908a2a0134770bfd11111bc24f89723d983e822c3fdc563f3854a26b",
-         intel: "980b6b9c83782e15af737d2e165b965d683260fc8f8f43ed802485b22549820b"
+  version "4.0.13"
+  sha256 arm:   "56941406896d4378e6e5c585d4fb6f2db382d54024813ef3eb25880bdbaac48a",
+         intel: "dd16d48d3c546e584d12fe5d350e621978fa11e141e6d119c30be4da157db6c0"
 
-  url "https://releases#{livecheck_arch}.gologin.com/GoLogin-#{version}#{arch}.dmg"
-  name "GoLogin"
+  url "https://releases#{livecheck_arch}.gologin.com/Gologin-#{version}#{arch}.dmg"
+  name "Gologin"
   desc "Antidetect browser"
   homepage "https://gologin.com/"
 
@@ -19,12 +19,12 @@ cask "gologin" do
   auto_updates true
   depends_on macos: ">= :monterey"
 
-  app "GoLogin.app"
+  app "Gologin.app"
 
   zap trash: [
     "~/.gologin",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gologin.desktop.sfl*",
-    "~/Library/Application Support/GoLogin",
+    "~/Library/Application Support/Gologin",
     "~/Library/Preferences/com.gologin.desktop.plist",
     "~/Library/Preferences/com.gologin.orbita.plist",
     "~/Library/Saved Application State/com.gologin.desktop.savedState",

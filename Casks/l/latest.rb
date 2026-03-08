@@ -23,6 +23,7 @@ cask "latest" do
   zap trash: [
     "~/Library/Caches/com.max-langer.Latest",
     "~/Library/Cookies/com.max-langer.Latest.binarycookies",
+    "~/Library/HTTPStorages/com.max-langer.Latest",
     "~/Library/Preferences/com.max-langer.Latest.plist",
     "~/Library/Saved Application State/com.max-langer.Latest.savedState",
   ]

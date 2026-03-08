@@ -17,7 +17,10 @@ cask "transmission@nightly" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  conflicts_with cask: "transmission"
+  conflicts_with cask: [
+    "transmission",
+    "transmission@beta",
+  ]
   depends_on macos: ">= :big_sur"
 
   app "Transmission.app"

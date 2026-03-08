@@ -1,8 +1,10 @@
 cask "livebook@nightly" do
+  arch arm: "aarch64", intel: "x64"
+
   version :latest
   sha256 :no_check
 
-  url "https://github.com/livebook-dev/livebook/releases/download/nightly/LivebookInstall-macos-universal.dmg",
+  url "https://github.com/livebook-dev/livebook/releases/download/nightly/Livebook-darwin-#{arch}.dmg",
       verified: "github.com/livebook-dev/livebook/"
   name "Livebook Nightly"
   desc "Code notebooks for Elixir developers"

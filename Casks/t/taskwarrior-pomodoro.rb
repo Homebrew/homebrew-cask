@@ -8,6 +8,7 @@ cask "taskwarrior-pomodoro" do
   homepage "https://github.com/coddingtonbear/taskwarrior-pomodoro"
 
   deprecate! date: "2025-03-02", because: :unmaintained
+  disable! date: "2026-03-02", because: :unmaintained
 
   app "Taskwarrior Pomodoro.app"
 

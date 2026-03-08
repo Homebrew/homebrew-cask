@@ -1,9 +1,9 @@
 cask "laserpecker-design-space" do
   arch arm: "M1", intel: "Mac"
 
-  version "2.10.0"
-  sha256 arm:   "8dc17a4b35038d00cd0c30efdaa9b1ca558654538d17527d6e73fd108c426a7d",
-         intel: "249058f8b1a57b3ba8e6df182a62518ff8ef4117098c5a50b89b478017643938"
+  version "2.11.0"
+  sha256 arm:   "3d09f0377ea4ee79a995feaa97f0ebec6e020e3ae5cc51f51bf2d540206f6fca",
+         intel: "65830a128fac9d500571550874f16386f5f7ff0517c1b11fc81a2e171a9bba64"
 
   url "https://laserpecker-prod.oss-cn-hongkong.aliyuncs.com/apply/software/pc/LaserPecker-Design-Space-#{arch}-#{version}.dmg",
       verified: "laserpecker-prod.oss-cn-hongkong.aliyuncs.com/"
@@ -12,8 +12,8 @@ cask "laserpecker-design-space" do
   homepage "https://laserpecker.net/"
 
   livecheck do
-    url "https://laserpecker.net/pages/software-download"
-    regex(/href=.*LaserPecker[._-]Design[._-]Space[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://www.laserpecker.net/pages/software"
+    regex(/LaserPecker[._-]Design[._-]Space[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :big_sur"

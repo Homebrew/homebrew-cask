@@ -1,22 +1,26 @@
 cask "topaz-photo" do
-  version "1.1.1"
-  sha256 "4ea30b3083b3c46fd81d3c3ca9ac0634282cc75e212be5b69e2776e379c1236e"
+  arch arm: "arm64", intel: "x86_64"
+  livecheck_arch = on_arch_conditional intel: "/intel"
 
-  url "https://downloads.topazlabs.com/deploy/TopazPhoto/#{version}/TopazPhoto-#{version}.pkg"
+  version "1.3.1"
+  sha256 arm:   "2361088732275bf4a64c363a63700c93aff04f59a21f045c68451a769591dd13",
+         intel: "333ac5f4b8d27786de05208fedc6be1cc95b5f9534a878f9b7274c846e0b1c57"
+
+  url "https://downloads.topazlabs.com/deploy/TopazPhoto/#{version}/TopazPhoto-#{version}-#{arch}.pkg"
   name "Topaz Photo"
   desc "AI image enhancer"
   homepage "https://www.topazlabs.com/topaz-photo"
 
   livecheck do
-    url "https://topazlabs.com/d/photostudio/latest/mac/full"
+    url "https://topazlabs.com/d/photostudio/latest/mac#{livecheck_arch}/full"
+    regex(/TopazPhoto[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}/i)
     strategy :header_match
   end
 
   auto_updates true
-  depends_on arch:  :arm64,
-             macos: ">= :monterey"
+  depends_on macos: ">= :monterey"
 
-  pkg "TopazPhoto-#{version}.pkg"
+  pkg "TopazPhoto-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: "com.topazlabs.TopazPhoto",
             delete:  [

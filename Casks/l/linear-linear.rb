@@ -1,9 +1,9 @@
 cask "linear-linear" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.28.6,251002av7g3go28"
-  sha256 arm:   "3989bf97d625424fa15cb5adb9f3e068e31f066cdb17474633005e8ecdc8f054",
-         intel: "c3e97a2a6b07e2fbf7015f33a9ae11a9da4382eb982b30df87ecc929e78241ab"
+  version "1.28.12,260226pqw0vmhth"
+  sha256 arm:   "90fb7a35d79eeb3b4f09ee94151792ee94a65b9537c00f2757e7774719d01f99",
+         intel: "f556b725d39e7c695e98a8964a10090b6479f9b10d88b9e8e86344dd5295d78b"
 
   url "https://download.todesktop.com/200315glz2793v6/Linear%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/200315glz2793v6/"
@@ -25,7 +25,7 @@ cask "linear-linear" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Linear.app"
 

@@ -1,6 +1,6 @@
 cask "mosaic" do
-  version "1.4"
-  sha256 "6fdc884ac0bb21fe84bfb51c389ec810776af0fd78bdb4a176a796bdb7e25c98"
+  version "1.5.1"
+  sha256 "efb5a5f1845da0111401abad63982bf3276d23cce98fee1180f852df2246b1c6"
 
   url "https://lightpillar.com/appdata/mosaic/archive/Mosaic_#{version.dots_to_underscores}.pkg"
   name "Mosaic"

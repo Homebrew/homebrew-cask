@@ -8,6 +8,7 @@ cask "figtree" do
   homepage "https://github.com/rambaut/figtree/"
 
   deprecate! date: "2025-03-02", because: :unmaintained
+  disable! date: "2026-03-02", because: :unmaintained
 
   app "FigTree v#{version}.app"
   qlplugin "QuickLook Plugin/FigTreeQuickLookPlugin.qlgenerator"

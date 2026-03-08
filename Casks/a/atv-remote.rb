@@ -1,11 +1,11 @@
 cask "atv-remote" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "-arm64"
 
-  version "1.4.3"
-  sha256 arm:   "346c95cdae25f78d4d75d9e1fafc60a6d37e05258dfadfd2a40b010231b1b39f",
-         intel: "80c7b55da85799f23e4e36ede23990a9d9ee22c90d9c23bd5fcd8c55125b48e5"
+  version "2.1.1"
+  sha256 arm:   "61c9133a3527ae2819ce8f256e036fa866ff3d16d760e753443005790a75305c",
+         intel: "f35c290e96c38696f533520d7b88dcdd8eea99b944dd6c50ecbf31b4b9154444"
 
-  url "https://github.com/bsharper/atv-desktop-remote/releases/download/v#{version}/ATV.Remote-#{version}-#{arch}.dmg"
+  url "https://github.com/bsharper/atv-desktop-remote/releases/download/v#{version}/ATV.Remote-#{version}#{arch}.dmg"
   name "ATV Remote"
   desc "Control Apple TV from your desktop"
   homepage "https://github.com/bsharper/atv-desktop-remote"

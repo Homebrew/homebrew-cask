@@ -2,20 +2,12 @@ cask "font-noto-sans-cham" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCham-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanscham/NotoSansCham%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Cham"
-  homepage "https://www.google.com/get/noto/#sans-cham"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Cham"
 
-  font "NotoSansCham-Black.ttf"
-  font "NotoSansCham-Bold.ttf"
-  font "NotoSansCham-ExtraBold.ttf"
-  font "NotoSansCham-ExtraLight.ttf"
-  font "NotoSansCham-Light.ttf"
-  font "NotoSansCham-Medium.ttf"
-  font "NotoSansCham-Regular.ttf"
-  font "NotoSansCham-SemiBold.ttf"
-  font "NotoSansCham-Thin.ttf"
+  font "NotoSansCham[wght].ttf"
 
   # No zap stanza required
 end

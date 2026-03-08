@@ -9,6 +9,7 @@ cask "kindle-comic-creator" do
   homepage "https://www.amazon.com/b?node=23496309011"
 
   deprecate! date: "2025-02-09", because: :unmaintained
+  disable! date: "2026-02-11", because: :unmaintained
 
   pkg "Kindle Comic Creator.pkg"
 

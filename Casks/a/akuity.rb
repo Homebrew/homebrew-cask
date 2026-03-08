@@ -2,11 +2,11 @@ cask "akuity" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "0.26.2-0.20260116180725-a0e80213f416"
-  sha256 arm:          "0568cd3db0bd5602278b6e0f05acab61b310d6003eea349c235c322071d046e6",
-         intel:        "e57c72c16bafb9180af7167d3b02780e9f33514ac16eabb6c7c0db512050d579",
-         arm64_linux:  "a70ca527dfc2953beb5e5ac74c67c127be8f8507f71501126329fa91940d6db5",
-         x86_64_linux: "098ecb5c53b57fc4da85e5b5dd2b400c0653262f3784e2cd51ba27c0f4b0dce4"
+  version "0.28.1-0.20260305044940-645aad8ba41c"
+  sha256 arm:          "e35f4823fdfc27f3b30d18181cd256fbad2a31a5aadfef015e1d55fd9b2c9756",
+         intel:        "f591d91c61fad111ef881d4e280db9af4b025a9e22be41448d7d0117bf520278",
+         arm64_linux:  "98674c598594f82b8820198e3e40751add008092db2e42d25c7435c7265370b7",
+         x86_64_linux: "b900fe0af9ce8a98113182153893279ed77370cdb4ddda76073384d574d4c3b3"
 
   url "https://dl.akuity.io/akuity-cli/v#{version}/#{os}/#{arch}/akuity"
   name "Akuity"

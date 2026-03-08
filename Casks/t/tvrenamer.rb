@@ -9,6 +9,7 @@ cask "tvrenamer" do
   homepage "https://www.tvrenamer.org/"
 
   deprecate! date: "2025-03-02", because: :unmaintained
+  disable! date: "2026-03-02", because: :unmaintained
 
   app "TVRenamer-#{version}.app"
 

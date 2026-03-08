@@ -1,6 +1,6 @@
 cask "bezel" do
-  version "3.5.1"
-  sha256 "ee0a13a571b503ba0642bf7a568affc4f94c3f66bcef4d1ee3895ecc5547bd39"
+  version "4.0.2"
+  sha256 "7729993c09f8cdf4408b27290ef6d79388f6a1e5fbd06f84c612ef79d23d7a29"
 
   url "https://download.nonstrict.eu/bezel/Bezel-#{version}.zip",
       verified: "download.nonstrict.eu/bezel/"
@@ -16,7 +16,7 @@ cask "bezel" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "Bezel.app"
 

@@ -1,9 +1,9 @@
 cask "0-ad" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.27.1"
-  sha256 arm:   "12f6b86104ec5023233221e044baeffa572a1ad13db6f99db72f106bc6936032",
-         intel: "dd5c83759ef31bcf6f565e6ac558fe0cdae43b9eb0bed6e29cbb5b8ea8e5b700"
+  version "0.28.0"
+  sha256 arm:   "8c53566123fed9a79766c364e543d6e9dc7c84f642c78d2bb5892eeea9c4c052",
+         intel: "3d30cbafb293fb1178c08075ed8336d1dbfb1090d3702ada76092e85e9c4f076"
 
   url "https://releases.wildfiregames.com/0ad-#{version}-macos-#{arch}.dmg",
       verified: "releases.wildfiregames.com/"

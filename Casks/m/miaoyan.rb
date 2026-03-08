@@ -1,9 +1,8 @@
 cask "miaoyan" do
-  version "2.4.5"
-  sha256 "bbd3e3e40a65e99de27e0e4249b732bcb44a3aa59475f0775377f24d43f4a23c"
+  version "2.7.0"
+  sha256 "4f7874a15db0f826712fb5abf9e976c29c507aca2723805a8fae89418fdd2bcb"
 
-  url "https://gw.alipayobjects.com/os/k/app/MiaoYan_V#{version}.zip",
-      verified: "gw.alipayobjects.com/"
+  url "https://miaoyan.app/Release/MiaoYan_V#{version}.zip"
   name "MiaoYan"
   desc "Markdown editor"
   homepage "https://miaoyan.app/"
@@ -14,8 +13,6 @@ cask "miaoyan" do
       items.map(&:nice_version)
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :big_sur"

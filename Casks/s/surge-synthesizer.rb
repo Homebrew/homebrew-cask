@@ -9,6 +9,7 @@ cask "surge-synthesizer" do
   homepage "https://surge-synthesizer.github.io/"
 
   deprecate! date: "2025-03-02", because: :discontinued, replacement_cask: "surge-xt"
+  disable! date: "2026-03-02", because: :discontinued, replacement_cask: "surge-xt"
 
   pkg "Surge-#{version}-Setup.pkg"
 

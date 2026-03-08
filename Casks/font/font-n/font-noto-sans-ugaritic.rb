@@ -2,10 +2,10 @@ cask "font-noto-sans-ugaritic" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansUgaritic-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansugaritic/NotoSansUgaritic-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Ugaritic"
-  homepage "https://www.google.com/get/noto/#sans-ugar"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Ugaritic"
 
   font "NotoSansUgaritic-Regular.ttf"
 

@@ -9,6 +9,7 @@ cask "lazarus" do
   homepage "https://www.lazarus-ide.org/"
 
   deprecate! date: "2025-01-26", because: :no_longer_meets_criteria
+  disable! date: "2026-01-27", because: :no_longer_meets_criteria
 
   depends_on cask: "fpc-laz"
   depends_on cask: "fpc-src-laz"

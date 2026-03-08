@@ -1,9 +1,9 @@
 cask "netbeans" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "27,27-build1"
-  sha256 arm:   "1b5471269111bd546854008d8b0e067aa7fc72b885563dff99c35274c956233d",
-         intel: "7552a2a365e828bcf40ebddd561c75ed10542474b9329f5412aded6bab437dd8"
+  version "29,29-build1"
+  sha256 arm:   "5a3dcad4edc2a327b7ef25f0c299060f41879f2ca482e27281700ae9ee14e776",
+         intel: "6c51c350d60542ad832a387314469e65aee637c054bdcd443bfb69346432eb05"
 
   url "https://github.com/Friends-of-Apache-NetBeans/netbeans-installers/releases/download/v#{version.csv.second || version.csv.first}/Apache-NetBeans-#{version.csv.first}-#{arch}.pkg",
       verified: "github.com/Friends-of-Apache-NetBeans/netbeans-installers/"

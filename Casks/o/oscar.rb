@@ -1,6 +1,6 @@
 cask "oscar" do
-  version "1.7.0"
-  sha256 "ef5504c1739524912b883c4d8c34459f18ea22cb08c363ff70ef90c2a659a084"
+  version "1.7.1"
+  sha256 "fa6171ddbef287490469abcdd9793e4303fb116af7c125c487ec571ff787db7d"
 
   url "https://www.sleepfiles.com/OSCAR/#{version}/OSCAR-#{version}-Qt5.dmg"
   name "OSCAR"

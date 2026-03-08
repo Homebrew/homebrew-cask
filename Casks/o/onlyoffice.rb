@@ -1,9 +1,9 @@
 cask "onlyoffice" do
   arch arm: "arm", intel: "x86_64"
 
-  version "9.2.1"
-  sha256 arm:   "e7422f1d0350be547eb5f72145d44becc290d6bfbf80747ac70f09fab2314f57",
-         intel: "617626aeb620f897f57372d8a3e7d611f45ac009a2d627d9506ec27b73bf5194"
+  version "9.3.1"
+  sha256 arm:   "c7c17bd32eaa86f2a33cf2e7f5de85d58d65d022ff3667bcf3cf1eed69eed511",
+         intel: "17b56778cd6a13d622d532d1cbb61195a2db4fe69034cf705086d07043a4433e"
 
   url "https://download.onlyoffice.com/install/desktop/editors/mac/#{arch}/updates/ONLYOFFICE-#{arch}-#{version}.zip"
   name "ONLYOFFICE"

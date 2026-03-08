@@ -1,9 +1,9 @@
 cask "clion@eap" do
   arch arm: "-aarch64"
 
-  version "2026.1,261.17801.36"
-  sha256 arm:   "ea895c53b9d7922116fc504e93bc458502adbb06554001711f8123e228f3fcd3",
-         intel: "770eddeac0cc236f57dfeb365c212c8a81c656dcde116a75d25979df3d5b0820"
+  version "2026.1,261.22158.47"
+  sha256 arm:   "cd9247b82341eaf1160934b6adc91cea4b7ea6f9db7d37ae4c56fe0bd3c85b3b",
+         intel: "bcf925d1519766f57b1013131b0a563e806c0a09e73f4407184815cd67b3b957"
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.csv.second}#{arch}.dmg"
   name "CLion EAP"
@@ -11,7 +11,7 @@ cask "clion@eap" do
   homepage "https://www.jetbrains.com/clion/nextversion"
 
   livecheck do
-    url "https://data.services.jetbrains.com/products/releases?code=CL&latest=true&release.type=eap"
+    url "https://data.services.jetbrains.com/products/releases?code=CL&latest=true&type=eap"
     strategy :json do |json|
       json["CL"]&.map do |release|
         version = release["version"]

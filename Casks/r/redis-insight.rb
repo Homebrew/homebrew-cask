@@ -1,9 +1,9 @@
 cask "redis-insight" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.70.1"
-  sha256 arm:   "2ef847845b5cc725050d4ab78992afb9afccd01ee8e84f49a77bfb6e1f9fcb34",
-         intel: "c33dede2ae81cfaeba66cdf6d27084647fcc9f0fb8ea84a11b393420695dd0ba"
+  version "3.2.0"
+  sha256 arm:   "7042bab09eb47ab2dd7e1c0afc359c4a2f9683cc510e66d4c94cb10d11978b3c",
+         intel: "9df42fb54ce6cc220f8ba687396f35a1352c67d4d884dac11e8efc53bd5562e0"
 
   url "https://s3.amazonaws.com/redisinsight.download/public/releases/#{version}/Redis-Insight-mac-#{arch}.dmg",
       verified: "s3.amazonaws.com/redisinsight.download/"
@@ -12,12 +12,12 @@ cask "redis-insight" do
   homepage "https://redis.io/insight/"
 
   livecheck do
-    url "https://s3.amazonaws.com/redisinsight.download/public/latest/latest-mac.yml"
+    url "https://s3.amazonaws.com/redisinsight.download/public/upgrades-v#{version.major}/latest-mac.yml"
     strategy :electron_builder
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Redis Insight.app"
 

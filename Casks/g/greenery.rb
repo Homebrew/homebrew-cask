@@ -1,6 +1,6 @@
 cask "greenery" do
-  version "0.9.12"
-  sha256 "ea4e398ef990aa40961e566441335e6d15196a6347afda7f5dd1a51aa607aa65"
+  version "1.0.0"
+  sha256 "c95bce16d9597234374504d081b77a332b67c5edb196a3116428f97384d90572"
 
   url "https://github.com/GreenfireInc/Releases.Greenery/releases/download/v#{version}/Greenery.#{version}.zip",
       verified: "github.com/GreenfireInc/Releases.Greenery/"

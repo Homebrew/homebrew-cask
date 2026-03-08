@@ -1,6 +1,6 @@
 cask "komet" do
-  version "1.5,52"
-  sha256 "26f78ba3ead04ff7d5d678a2ae885af06cd41dd4a6fa5827e6afafe86eac428f"
+  version "1.5.1,54"
+  sha256 "bce616503ab914cf9140dde87395a39a8069e008f71bee1467f0f85255a9b227"
 
   url "https://zgcoder.net/software/komet/Komet_#{version.csv.first}_#{version.csv.second}.tar.xz"
   name "Komet"

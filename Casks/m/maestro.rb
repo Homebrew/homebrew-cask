@@ -1,15 +1,20 @@
 cask "maestro" do
-  arch arm: "-arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "0.14.4"
-  sha256 arm:   "7f78a5e55d8d7f1f8149c553e8f229f63f93cd63ee078ed7e4e609af6659f4e1",
-         intel: "415e6d9a1ce35a6496db3a84d4149778d7eca481f5485b108e03a56470c910a7"
+  version "0.15.1"
+  sha256 arm:   "032c4d0abfc93938635e4d4a8a2a9357d819ca08375c7d42c995d91c180de54f",
+         intel: "ac51738861ebf69ebb8cb764ec6867c1d39012372a4a70ce55bb8ee4a1b0f653"
 
-  url "https://github.com/pedramamini/Maestro/releases/download/v#{version}/Maestro-#{version}#{arch}.dmg",
+  url "https://github.com/pedramamini/Maestro/releases/download/v#{version}/Maestro-#{version}-#{arch}-mac.dmg",
       verified: "github.com/pedramamini/Maestro/"
   name "Maestro"
   desc "AI agent command center"
   homepage "https://runmaestro.ai/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"

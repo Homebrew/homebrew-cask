@@ -1,13 +1,11 @@
 cask "cardinal" do
-  version "25.06"
-  sha256 "6b8833eea95dcbd4748a8a78cbd2ea095de1f5551a0fbc085b8eb431bbe555d6"
+  version "26.02"
+  sha256 "5f62f020aab3987aea4bf7bfde4caf09b4c41ab555f485c0e7ebf46944bdb415"
 
   url "https://github.com/DISTRHO/Cardinal/releases/download/#{version}/Cardinal-macOS-universal-#{version}.pkg"
   name "Cardinal"
   desc "Virtual modular synthesiser plugin"
   homepage "https://github.com/DISTRHO/Cardinal"
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   pkg "Cardinal-macOS-universal-#{version}.pkg"
 

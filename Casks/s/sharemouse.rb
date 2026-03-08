@@ -1,5 +1,5 @@
 cask "sharemouse" do
-  version "6.0.66"
+  version "7.0.15"
   sha256 :no_check
 
   url "https://www.sharemouse.com/ShareMouseSetup.dmg"
@@ -11,6 +11,8 @@ cask "sharemouse" do
     url "https://www.sharemouse.com/download/"
     regex(/Mac\s*Version:.*?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "ShareMouse.app"
 

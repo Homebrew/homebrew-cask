@@ -1,6 +1,6 @@
 cask "obsidian" do
-  version "1.11.5"
-  sha256 "e68af1e056dfeedf3b74f0b89473b6d39b672d9e7386da7128638802f6bd2bf4"
+  version "1.12.4"
+  sha256 "7ad9b42528e2e47e841ba8e07227b8fd0c4036c7c4271fb36731cba4504dbbba"
 
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}.dmg",
       verified: "github.com/obsidianmd/"
@@ -19,6 +19,16 @@ cask "obsidian" do
   depends_on macos: ">= :monterey"
 
   app "Obsidian.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/obsidian.wrapper.sh"
+  binary shimscript, target: "obsidian"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/bash
+      exec '#{appdir}/Obsidian.app/Contents/MacOS/Obsidian' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/md.obsidian.sfl*",

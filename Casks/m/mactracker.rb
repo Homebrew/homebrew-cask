@@ -1,6 +1,6 @@
 cask "mactracker" do
-  version "8.0.1"
-  sha256 "f3e7a996666f5471075ff58fab4ec65f955ecf4e951e7e82488c9fa10dbd8dc4"
+  version "8.1.1"
+  sha256 "29c549b18c98fe9612b3b913cac13f925d9409b10ba69fd3ca7182c0ea7e82bb"
 
   url "https://mactracker.ca/downloads/Mactracker_#{version}.zip"
   name "Mactracker"
@@ -13,6 +13,7 @@ cask "mactracker" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Mactracker.app"
 

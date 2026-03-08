@@ -1,7 +1,7 @@
 cask "ringcentral" do
   arch arm: "-arm64"
 
-  version "25.2.30"
+  version "26.1.10"
   sha256 :no_check
 
   url "https://app.ringcentral.com/download/RingCentral#{arch}.pkg"
@@ -15,6 +15,7 @@ cask "ringcentral" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   pkg "RingCentral#{arch}.pkg"
 

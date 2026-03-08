@@ -2,10 +2,10 @@ cask "font-noto-sans-imperial-aramaic" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansImperialAramaic-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansimperialaramaic/NotoSansImperialAramaic-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Imperial Aramaic"
-  homepage "https://www.google.com/get/noto/#sans-armi"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Imperial+Aramaic"
 
   font "NotoSansImperialAramaic-Regular.ttf"
 

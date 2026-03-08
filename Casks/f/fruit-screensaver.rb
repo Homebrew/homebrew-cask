@@ -1,6 +1,6 @@
 cask "fruit-screensaver" do
-  version "1.3.2"
-  sha256 "f5dbff457e6bb3d483fa17413b964ec54674b42e32f294478699f86c5a1b9200"
+  version "1.3.3"
+  sha256 "305b30c8ad78113da6f1031e01aae9b8e12eb79c1189afc6425db1d44ef72ef9"
 
   url "https://github.com/Corkscrews/fruit/releases/download/#{version}/Fruit.saver.tar.gz"
   name "Fruit Screensaver"

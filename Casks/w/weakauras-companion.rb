@@ -1,6 +1,6 @@
 cask "weakauras-companion" do
-  version "5.2.10"
-  sha256 "acd79515c9a9c66489a17025e79961532b601f6721d5593ea176ac9e2416c913"
+  version "5.3.1"
+  sha256 "bc430a4d29679c9e446dfe1c215596a307438cb66b885ce637b4c3b22b1fd990"
 
   url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac-universal.dmg"
   name "WeakAuras Companion"
@@ -9,7 +9,7 @@ cask "weakauras-companion" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "WeakAuras Companion.app"
 

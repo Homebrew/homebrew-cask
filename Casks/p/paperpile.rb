@@ -1,6 +1,6 @@
 cask "paperpile" do
-  version "0.8.1"
-  sha256 "9079e2b8a3bdb56049fffe7ae90588b793132416788022351e118b676b1932c1"
+  version "0.9.0"
+  sha256 "1e8954327698f7f419cceff91343e8f5193d9a9007b3872370a883d45e8d3b8a"
 
   url "https://cdn.paperpile.com/download/desktop/Paperpile-#{version}.dmg"
   name "Paperpile"
@@ -13,6 +13,7 @@ cask "paperpile" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Paperpile.app"
 

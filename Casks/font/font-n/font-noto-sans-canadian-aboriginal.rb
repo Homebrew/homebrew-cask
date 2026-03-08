@@ -2,12 +2,12 @@ cask "font-noto-sans-canadian-aboriginal" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCanadianAboriginal-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanscanadianaboriginal/NotoSansCanadianAboriginal%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Canadian Aboriginal"
-  homepage "https://www.google.com/get/noto/#sans-cans"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Canadian+Aboriginal"
 
-  font "NotoSansCanadianAboriginal-Regular.ttf"
+  font "NotoSansCanadianAboriginal[wght].ttf"
 
   # No zap stanza required
 end

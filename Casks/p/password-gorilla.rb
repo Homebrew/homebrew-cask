@@ -9,6 +9,7 @@ cask "password-gorilla" do
   homepage "https://github.com/zdia/gorilla"
 
   deprecate! date: "2025-03-01", because: :unmaintained
+  disable! date: "2026-03-01", because: :unmaintained
 
   app "Password Gorilla.app"
 

@@ -24,8 +24,8 @@ cask "omnioutliner" do
     end
   end
   on_sequoia :or_newer do
-    version "6.0.1"
-    sha256 "47c888186688a4986dd344827b0a3bd9c8ce692e16a2faabbddadef3b0b5b050"
+    version "6.0.4"
+    sha256 "78e9f44bebe14ad3d238c1d19d1a2de7385e395be09a95aeab8415fcbfb898fa"
 
     url "https://downloads.omnigroup.com/software/macOS/15/OmniOutliner-#{version}.dmg"
 

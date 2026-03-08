@@ -2,10 +2,10 @@ cask "font-noto-sans-osage" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansOsage-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansosage/NotoSansOsage-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Osage"
-  homepage "https://www.google.com/get/noto/#sans-osge"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Osage"
 
   font "NotoSansOsage-Regular.ttf"
 

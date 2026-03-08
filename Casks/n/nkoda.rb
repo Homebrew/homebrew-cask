@@ -1,5 +1,5 @@
 cask "nkoda" do
-  version "2.1.21"
+  version "2.1.22"
   sha256 :no_check
 
   url "https://nkodaprodappcenterbuilds.blob.core.windows.net/web-download/nkoda-app-mac.zip",

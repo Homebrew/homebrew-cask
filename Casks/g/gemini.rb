@@ -24,12 +24,13 @@ cask "gemini" do
   app "Gemini #{version.major}.app"
 
   zap trash: [
-    "/Users/Shared/Gemini #{version.major}",
-    "~/Library/Application Support/Gemini*",
-    "~/Library/Caches/com.macpaw.site.Gemini*",
-    "~/Library/Cookies/com.macpaw.site.Gemini*.binarycookies",
-    "~/Library/Logs/com.macpaw.site.Gemini*",
-    "~/Library/Preferences/com.macpaw.site.Gemini*",
-    "~/Library/Saved Application State/com.macpaw.site.Gemini*",
-  ]
+        "/Users/Shared/Gemini #{version.major}",
+        "~/Library/Application Support/Gemini*",
+        "~/Library/Caches/com.macpaw.site.Gemini*",
+        "~/Library/Cookies/com.macpaw.site.Gemini*.binarycookies",
+        "~/Library/Logs/com.macpaw.site.Gemini*",
+        "~/Library/Preferences/com.macpaw.site.Gemini*",
+        "~/Library/Saved Application State/com.macpaw.site.Gemini*",
+      ],
+      rmdir: "~/.gemini"
 end

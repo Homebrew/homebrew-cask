@@ -2,13 +2,12 @@ cask "font-noto-serif-telugu" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSerifTelugu-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notoseriftelugu/NotoSerifTelugu%5Bwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Serif Telugu"
-  homepage "https://www.google.com/get/noto/#serif-telu"
+  homepage "https://fonts.google.com/specimen/Noto+Serif+Telugu"
 
-  font "NotoSerifTelugu-Bold.ttf"
-  font "NotoSerifTelugu-Regular.ttf"
+  font "NotoSerifTelugu[wght].ttf"
 
   # No zap stanza required
 end

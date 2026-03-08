@@ -1,9 +1,9 @@
 cask "iptvnator" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.18.0"
-  sha256 arm:   "540d9fa8f1d0bcbafb1e9e6455756af8f058a1e3e3ad864a04ee501ac77704c0",
-         intel: "4482f67d2cc10d748e76e109c43aa447e7da4b6e0bc934f8aa1e8cbeec30001f"
+  version "0.19.0"
+  sha256 arm:   "5815adc47d192fbf2a47ac96f5ff88027e109b2feb4cec9328c6a0634b3425f0",
+         intel: "a5b81f1bc34dc5d437bd85ac77281655e3451d50c112e24f0a542f574de1afe5"
 
   url "https://github.com/4gray/iptvnator/releases/download/v#{version}/iptvnator-#{version}-mac-#{arch}.dmg"
   name "IPTVnator"

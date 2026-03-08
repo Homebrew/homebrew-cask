@@ -2,13 +2,12 @@ cask "font-noto-sans-kannada" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansKannada-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanskannada/NotoSansKannada%5Bwdth%2Cwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Kannada"
-  homepage "https://www.google.com/get/noto/#sans-knda"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Kannada"
 
-  font "NotoSansKannada-Bold.ttf"
-  font "NotoSansKannada-Regular.ttf"
+  font "NotoSansKannada[wdth,wght].ttf"
 
   # No zap stanza required
 end

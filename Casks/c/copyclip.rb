@@ -1,22 +1,21 @@
 cask "copyclip" do
-  version "2.9.99.2"
-  sha256 :no_check
+  version "3.983"
+  sha256 "2110ec7ddf6517821d81c2f54a923d34b0637c374d9398ec97e6658c73fd53b0"
 
-  url "https://fiplab.com/app-download/CopyClip_#{version.major}.zip"
+  url "https://fiplab.com/updates/copyclip2/CopyClip-2-#{version}.zip"
   name "CopyClip"
   desc "Clipboard manager"
   homepage "https://fiplab.com/apps/copyclip-for-mac"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |item|
-      item["com.fiplab.copyclip#{version.major}"]&.short_version
-    end
+    url "https://fiplab.com/updates/copyclip2/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
-  app "CopyClip #{version.major}.app"
+  app "CopyClip 2.app"
 
   uninstall quit: "com.fiplab.copyclip#{version.major}"
 

@@ -1,9 +1,9 @@
 cask "beekeeper-studio" do
   arch arm: "-arm64"
 
-  version "5.5.5"
-  sha256 arm:   "e534f5befd689d48eda7e49babd492e1f3151d98d8434bc75a0bc0699bdda499",
-         intel: "440c43e8ec6e6c390ff870492a1d322e4e2ed533f978e6d566af3e3922782da9"
+  version "5.6.0"
+  sha256 arm:   "487f98602f97cee7769951ebd94e47277b2035dbb3792dd7422e755494867ec3",
+         intel: "bdcf8de93cabc7a802147d4a2461222e4f6b45cf62a65c528e8a97836fedd65e"
 
   url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}#{arch}.dmg",
       verified: "github.com/beekeeper-studio/beekeeper-studio/"
@@ -17,6 +17,7 @@ cask "beekeeper-studio" do
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Beekeeper Studio.app"
 

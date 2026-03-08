@@ -9,7 +9,7 @@ cask "zulip" do
       verified: "github.com/zulip/zulip-desktop/"
   name "Zulip"
   desc "Desktop client for the Zulip team chat platform"
-  homepage "https://zulipchat.com/apps/"
+  homepage "https://zulip.com/"
 
   auto_updates true
   depends_on macos: ">= :monterey"

@@ -1,9 +1,9 @@
 cask "frescobaldi" do
   arch intel: "-Intel"
 
-  version "4.0.4"
-  sha256 arm:   "3bcc732ecf2fa07e58a04bf52ff96dbc861dbc6405ab616cca64fe0275eed466",
-         intel: "4fea231545831a21ff432c84743dfdc1e3f89695784e78fae82b27f008195cb1"
+  version "4.0.5"
+  sha256 arm:   "9ddd7e2b13484a7e40ea488c58cca29b437b458925765e885ca3f5cc4c15a771",
+         intel: "640d6ee9f8bff366c7c496a22990182fb8a9cab8962d557131ff4ee15a1c1a69"
 
   url "https://github.com/frescobaldi/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}#{arch}.dmg",
       verified: "github.com/frescobaldi/frescobaldi/"

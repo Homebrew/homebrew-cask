@@ -1,6 +1,6 @@
 cask "fly" do
-  version "8.0.0"
-  sha256 "141fcc1607f18e55b655bd7dd3198814238733001347ba814b3e4442dc4d2d7d"
+  version "8.1.0"
+  sha256 "328a408c4d9ac4ec8d576e6b69bb716b027927eb3b529a318694e33a866f7921"
 
   url "https://github.com/concourse/concourse/releases/download/v#{version}/fly-#{version}-darwin-amd64.tgz"
   name "fly"

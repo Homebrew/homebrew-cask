@@ -2,10 +2,10 @@ cask "font-noto-sans-kaithi" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansKaithi-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanskaithi/NotoSansKaithi-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Kaithi"
-  homepage "https://www.google.com/get/noto/#sans-kthi"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Kaithi"
 
   font "NotoSansKaithi-Regular.ttf"
 

@@ -1,6 +1,6 @@
 cask "font-adwaita" do
-  version "49.0"
-  sha256 "3157c620eb5b72b25ab156d194aa4eb223f9870d547fe83fdbdf06d3e7becb37"
+  version "50.0"
+  sha256 "4c927fbfeec1c503801ba510c2c94e0054c82c522cf7ba0d3be5d4d41fcf5c86"
 
   url "https://download.gnome.org/sources/adwaita-fonts/#{version.major}/adwaita-fonts-#{version}.tar.xz"
   name "Adwaita"

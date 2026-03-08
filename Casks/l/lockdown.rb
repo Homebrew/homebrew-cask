@@ -9,6 +9,7 @@ cask "lockdown" do
   homepage "https://objective-see.org/products/lockdown.html"
 
   deprecate! date: "2025-03-02", because: :unmaintained
+  disable! date: "2026-03-02", because: :unmaintained
 
   app "Lockdown.app"
 

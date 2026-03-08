@@ -1,6 +1,6 @@
 cask "screenflow" do
-  version "10.5.1"
-  sha256 "907f08ecf9c6f0fd3b77c169703fa38aa2bee97901c8e65ccf0ba620d5a6653e"
+  version "10.5.2"
+  sha256 "00bb03b77cffcdee8d1ed12011c2e303bb9117021deee611a402090116d84263"
 
   url "https://www.telestream.net/download-files/screenflow/#{version.major_minor.dots_to_hyphens}/ScreenFlow-#{version}.dmg"
   name "ScreenFlow"
@@ -9,7 +9,9 @@ cask "screenflow" do
 
   livecheck do
     url "https://www.telestream.net/updater/screenflow/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true

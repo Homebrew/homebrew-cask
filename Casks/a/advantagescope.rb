@@ -1,9 +1,9 @@
 cask "advantagescope" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.0.0"
-  sha256 arm:   "3153f05bdd205fd464b31c978af93cdc2086afe7613a99f711bee0a002a3f90d",
-         intel: "ace22a6f2c23aadd33074b861cbb804db475d630fcbb27f312f16e39a8daf25c"
+  version "26.0.1"
+  sha256 arm:   "5aac6ad2e4255f3e769c6240fe3813acf83f4a693c663881e2d467b53031e91d",
+         intel: "4d0670ca511aa8edae69a0429d8e1c88b04065b667e415393fb895bef21dd388"
 
   url "https://github.com/Mechanical-Advantage/AdvantageScope/releases/download/v#{version}/advantagescope-mac-#{arch}-v#{version}.dmg",
       verified: "github.com/Mechanical-Advantage/AdvantageScope/"

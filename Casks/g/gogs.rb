@@ -1,19 +1,14 @@
 cask "gogs" do
-  on_linux do
-    arch arm: "armv8", intel: "amd64"
-  end
-  on_macos do
-    arch arm: "arm64", intel: "amd64"
-  end
-  os macos: ".darwin", linux: "linux"
+  arch arm: "arm64", intel: "amd64"
+  os macos: "darwin", linux: "linux"
 
-  version "0.13.3"
-  sha256 arm:          "23804e5e246f054f53c2dce1d735f73710d348adc91cd461631a922351097cea",
-         intel:        "98e5728e9a18aeef1d182492a3cba9d78d7a17df5d7c54a34db93082970f2fb1",
-         arm64_linux:  "c78c0d2a751cb956081bc0f06ed7df4e02f8417a765df90da25a21639c74c607",
-         x86_64_linux: "cb146291e29bbf1e7a8dc13e71a23eb47b5ec55eec44680e8bd8777aa0bdaeb4"
+  version "0.14.2"
+  sha256 arm:          "2996f72f5cca4cead31166fb7adc9673ef209827851bcb1dcf45039da1dc59e3",
+         intel:        "00fe70ea1bae2f756c1d31909d09934cbc26264364471a2cdb5cf4a247cc0f91",
+         arm64_linux:  "966e3ae629ef8ec176d03aa0d23e659201b269b310704fddd3f19b15e552dc0b",
+         x86_64_linux: "4bdc61792f145f87a3f7f6f822efb6caa97d67095404f8e526b8a943c9b8b5e9"
 
-  url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_#{os}_#{arch}.zip",
+  url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_v#{version}_#{os}_#{arch}.zip",
       verified: "github.com/gogs/gogs/"
   name "Go Git Service"
   desc "Self-hosted Git service"

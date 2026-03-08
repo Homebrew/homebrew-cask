@@ -1,9 +1,9 @@
 cask "razorsql" do
   arch arm: "_aarch64"
 
-  version "10.6.6"
-  sha256 arm:   "48715dcf3443696aa9e7182abab02ee0ce3064ff7fc20b0662be42044f1ccbe8",
-         intel: "0c8bc5a838b767cf215727bfd872d6f2e86c25b8ed7c0954d91593b160519bfd"
+  version "10.6.7"
+  sha256 arm:   "385cbbd2c2afa3866623037ef674c325c44547d9db62813a6fc4c436e8842021",
+         intel: "3b2bcc7ebd7b7de8df8e8ecafd98884898faeec6f50edaa52dcc59ee0c4d0c64"
 
   url "https://s3.amazonaws.com/downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}#{arch}.dmg",
       verified: "s3.amazonaws.com/downloads.razorsql.com/downloads/"
@@ -18,6 +18,8 @@ cask "razorsql" do
       page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "RazorSQL.app"
 

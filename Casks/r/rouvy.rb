@@ -1,5 +1,5 @@
 cask "rouvy" do
-  version "4.4.3"
+  version "4.5.2"
   sha256 :no_check
 
   url "https://cdn.rouvy.com/update/Rouvy_Installer.dmg"
@@ -15,13 +15,9 @@ cask "rouvy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Rouvy.app"
 
   zap trash: "~/Library/Application Support/eu.virtualtraining.rouvy.mac"
-
-  caveats do
-    requires_rosetta
-  end
 end

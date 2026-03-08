@@ -1,6 +1,6 @@
 cask "brickstore" do
-  version "2025.11.1"
-  sha256 "0c958b265f002e13d1369f31b18a0288108d363c19e0109c6278c58db65e083a"
+  version "2026.3.2"
+  sha256 "4b8c6b5b2689c60f8264774b55fd1ebd5f61d8741a7841b69c4ae63734ecc21a"
 
   url "https://github.com/rgriebl/brickstore/releases/download/v#{version}/macOS-BrickStore-#{version}.dmg",
       verified: "github.com/rgriebl/brickstore/"
@@ -13,7 +13,7 @@ cask "brickstore" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "BrickStore.app"
 

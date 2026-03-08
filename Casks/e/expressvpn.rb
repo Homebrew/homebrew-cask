@@ -1,6 +1,6 @@
 cask "expressvpn" do
-  version "12.0.2.11960"
-  sha256 "4fa346578f5819d908309d431cd9507063a7065ce42d37ea5e4048713f3057db"
+  version "12.1.0.12141"
+  sha256 "427a1b5a9fcad0e202cfe237203d91d0f6e4cf143dc984a1b51254701f4b8b11"
 
   url "https://www.expressvpn.works/clients/mac/expressvpn-macos-universal-#{version}_release.zip"
   name "ExpressVPN"
@@ -8,7 +8,7 @@ cask "expressvpn" do
   homepage "https://www.expressvpn.works/"
 
   livecheck do
-    url "https://www.expressvpn.works/vpn-download/vpn-mac"
+    url "https://portal.expressvpn.com/latest"
     regex(/href=.*?expressvpn[._-]macos[._-]universal[._-]v?(\d+(?:\.\d+)+)[._-]release\.zip/i)
   end
 

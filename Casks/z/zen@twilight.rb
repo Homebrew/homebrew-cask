@@ -1,8 +1,8 @@
 cask "zen@twilight" do
-  version "1.18t,20260120123653"
+  version "1.20t,20260307110352"
   sha256 :no_check
 
-  url "https://github.com/zen-browser/desktop/releases/download/twilight/zen.macos-universal.dmg",
+  url "https://github.com/zen-browser/desktop/releases/download/twilight-1/zen.macos-universal.dmg",
       verified: "github.com/zen-browser/desktop/"
   name "Zen Twilight"
   desc "Gecko based web browser"

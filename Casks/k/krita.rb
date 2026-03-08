@@ -1,8 +1,8 @@
 cask "krita" do
-  version "5.2.14"
-  sha256 "bbdd9b7aca29e086562b2e49d5b2ffeed737ae2fa093a6fe1ea84e975f687f71"
+  version "5.2.16"
+  sha256 "f79c4ba538e5cff0b0ab59c559cf3613bb555d0857a384d6f63e8c305367cae0"
 
-  url "https://download.kde.org/stable/krita/#{version}/krita-#{version}_signed.dmg",
+  url "https://download.kde.org/stable/krita/#{version}/krita-#{version}-signed.dmg",
       verified: "download.kde.org/stable/krita/"
   name "Krita"
   desc "Free and open-source painting and sketching program"

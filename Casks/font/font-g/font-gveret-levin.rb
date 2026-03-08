@@ -2,9 +2,10 @@ cask "font-gveret-levin" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/gveretlevin/GveretLevin-Regular.ttf"
+  url "https://github.com/google/fonts/raw/main/ofl/gveretlevin/GveretLevin-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Gveret Levin"
-  homepage "https://github.com/AlefAlefAlef/gveret-levin"
+  homepage "https://fonts.google.com/specimen/Gveret+Levin"
 
   font "GveretLevin-Regular.ttf"
 

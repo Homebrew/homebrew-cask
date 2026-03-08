@@ -2,10 +2,10 @@ cask "font-noto-sans-old-persian" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansOldPersian-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansoldpersian/NotoSansOldPersian-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Old Persian"
-  homepage "https://www.google.com/get/noto/#sans-xpeo"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Old+Persian"
 
   font "NotoSansOldPersian-Regular.ttf"
 

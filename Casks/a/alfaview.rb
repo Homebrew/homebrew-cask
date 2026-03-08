@@ -1,6 +1,6 @@
 cask "alfaview" do
-  version "9.24.1"
-  sha256 "ddc4484b2191e97904ad29b16d226eaa7e7b1db359174ca1d0004c197b7ecae4"
+  version "9.25.2"
+  sha256 "e265573e9cb9eb1f6eebe7541cfc6e2d3d4daeb16d7084d59c3744a1b2ac88c3"
 
   url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.pkg"
   name "Alfaview"
@@ -13,6 +13,8 @@ cask "alfaview" do
       json["versions"]&.first&.[]("version")
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   pkg "alfaview-mac-production-#{version}.pkg"
 

@@ -16,6 +16,8 @@ cask "jitsi" do
     end
   end
 
+  auto_updates true
+
   app "Jitsi.app"
 
   zap trash: [

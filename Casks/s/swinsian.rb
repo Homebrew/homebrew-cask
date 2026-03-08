@@ -1,6 +1,6 @@
 cask "swinsian" do
-  version "3.0.4"
-  sha256 "f516d5debe9129e5fb70b63aa12e443c1b2d972d6d53b6b854c9f0e4dca84eb0"
+  version "3.0.7"
+  sha256 "c84085044fa8d020fde8af6e0122120b119660477a676a09de3644a38d53d92e"
 
   url "https://www.swinsian.com/sparkle/Swinsian_#{version}.zip"
   name "Swinsian"

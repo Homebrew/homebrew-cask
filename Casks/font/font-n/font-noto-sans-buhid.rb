@@ -2,10 +2,10 @@ cask "font-noto-sans-buhid" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansBuhid-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosansbuhid/NotoSansBuhid-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Buhid"
-  homepage "https://www.google.com/get/noto/#sans-buhd"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Buhid"
 
   font "NotoSansBuhid-Regular.ttf"
 

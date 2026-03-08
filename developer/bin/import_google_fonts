@@ -308,6 +308,10 @@ Download the or clone the repository from https://github.com/google/fonts, then 
         if cask.token() == 'font-ek-mukta':
           continue
 
+        # The google/fonts repo contains an incomplete legacy font.
+        if cask.token() == 'font-noto-sans-n-ko':
+           continue
+
         # Skip cask if already handled (i.e. if it exists in multiple license sub-directories).
         if cask.token() in added_casks or cask.token() in updated_casks:
           continue

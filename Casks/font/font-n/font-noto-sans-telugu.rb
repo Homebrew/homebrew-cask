@@ -2,13 +2,12 @@ cask "font-noto-sans-telugu" do
   version :latest
   sha256 :no_check
 
-  url "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansTelugu-unhinted.zip",
-      verified: "noto-website-2.storage.googleapis.com/"
+  url "https://github.com/google/fonts/raw/main/ofl/notosanstelugu/NotoSansTelugu%5Bwdth%2Cwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Noto Sans Telugu"
-  homepage "https://www.google.com/get/noto/#sans-telu"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Telugu"
 
-  font "NotoSansTelugu-Regular.ttf"
-  font "NotoSansTelugu-Bold.ttf"
+  font "NotoSansTelugu[wdth,wght].ttf"
 
   # No zap stanza required
 end

@@ -1,6 +1,6 @@
 cask "cakebrewjs" do
-  version "2.93"
-  sha256 "9bf1892de34e8c4b38dc220dd8e7390239cad4075c1cff0aad80cf34977156f0"
+  version "2.96"
+  sha256 "c18803f1ab9559f1e8b61fd715cd5254defbc6d317dc23dbfae111dbeeee64b7"
 
   url "https://downloads.sourceforge.net/cakebrewjs/Cakebrewjs-#{version}-Darwin.dmg"
   name "Cakebrewjs"
@@ -11,6 +11,8 @@ cask "cakebrewjs" do
     url :url
     regex(%r{url=.*?/cakebrewjs[._-]v?(\d+(?:\.\d+)+)(?:[._-]Darwin)?\.dmg}i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :tahoe"
 

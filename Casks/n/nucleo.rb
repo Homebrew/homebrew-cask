@@ -1,9 +1,9 @@
 cask "nucleo" do
   arch arm: "-silicon"
 
-  version "4.1.8"
-  sha256 arm:   "90c61c386935dc271fe8c9cf73437f43f9a835c1e71d433a6b94f3301d04bc9f",
-         intel: "1f0599a2ad63808a7a93971929909f56f1ea3a0e1f57e844a6386283a08cf697"
+  version "4.1.9"
+  sha256 arm:   "d6c51a38ddde4396a27e0ea7ea284725030857cb7cd4ef5d97a51ceb840b0f19",
+         intel: "72d3bb44291a27a565a4557a91705fac6735bfd5297a220159153e6e5a236a82"
 
   url "https://nucleo-app-releases.s3.amazonaws.com/mac#{arch}/Nucleo_#{version}.zip",
       verified: "nucleo-app-releases.s3.amazonaws.com/"

@@ -6,52 +6,57 @@ cask "cockatrice" do
     url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.first}-macOS-11_Big_Sur.dmg",
         verified: "github.com/Cockatrice/Cockatrice/"
 
-    caveats do
-      requires_rosetta
+    livecheck do
+      skip "Legacy version"
     end
-  end
-  on_ventura do
-    version "2.10.2,2025-04-03,Omenpath,2.10.2"
-    sha256 "c9e59ebe3eba15dd84d9a7bda73ab63866119aeec6d2740974e32c574fee25b1"
-
-    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS13_Intel.dmg",
-        verified: "github.com/Cockatrice/Cockatrice/"
 
     caveats do
       requires_rosetta
     end
   end
-  on_sonoma do
-    version "2.10.2,2025-04-03,Omenpath,2.10.2"
-    sha256 "05e9cb269d7cd406d4368a1f71e4fc46fcb2f5ee4966f53c4f51060ab2fda33e"
+  on_ventura :or_newer do
+    version "2.10.3,2026-02-22,Omenpath,2.10.3"
 
-    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS14_Apple.dmg",
-        verified: "github.com/Cockatrice/Cockatrice/"
-  end
-  on_sequoia :or_newer do
-    version "2.10.2,2025-04-03,Omenpath,2.10.2"
-    sha256 "db074a25dc144aee8e665f7caeca7c8067cdf119e930dc4c98d9016c5e2034e2"
+    on_ventura do
+      sha256 "b635b04316a565a0c6880b0e2490d0dd25f0acebf38cd581b3e1e552e0dca428"
 
-    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS15_Apple.dmg",
-        verified: "github.com/Cockatrice/Cockatrice/"
+      url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS13_Intel.dmg",
+          verified: "github.com/Cockatrice/Cockatrice/"
+
+      caveats do
+        requires_rosetta
+      end
+    end
+    on_sonoma do
+      sha256 "96a4f26f0d0014c449ce93cd708cc926dc8133452341b6d65c80a8b692cc6de1"
+
+      url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS14.dmg",
+          verified: "github.com/Cockatrice/Cockatrice/"
+    end
+    on_sequoia :or_newer do
+      sha256 "5ebebf79bf50315f5f7e0dfc015a0775f9fd269fe4b26ffb4ab4f0ec7ebd1cfd"
+
+      url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS15.dmg",
+          verified: "github.com/Cockatrice/Cockatrice/"
+    end
+
+    livecheck do
+      url :url
+      regex(%r{/(\d+(?:-\d+)+)-Release-([^/]+)/Cockatrice-([^-]+)-(\d+(?:\.\d+)+(?:-beta)?)-macOS[.\w]*\.dmg$}i)
+      strategy :github_latest do |json, regex|
+        json["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next if match.blank?
+
+          "#{match[2]},#{match[1]},#{match[3]},#{match[4]}"
+        end
+      end
+    end
   end
 
   name "Cockatrice"
   desc "Virtual tabletop for multiplayer card games"
   homepage "https://cockatrice.github.io/"
-
-  livecheck do
-    url :url
-    regex(%r{/(\d+(?:-\d+)+)-Release-([^/]+)/Cockatrice-([^-]+)-(\d+(?:\.\d+)+(?:-beta)?)-macOS[.\w]*\.dmg$}i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["browser_download_url"]&.match(regex)
-        next if match.blank?
-
-        "#{match[2]},#{match[1]},#{match[3]},#{match[4]}"
-      end
-    end
-  end
 
   depends_on macos: ">= :big_sur"
 

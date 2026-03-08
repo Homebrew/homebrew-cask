@@ -1,6 +1,6 @@
 cask "yuanbao" do
-  version "2.51.0.624,db2b99c9afa60c2af3dc2c95fed1a44b"
-  sha256 "5e5346ae33d13e020a64a91e2b168a70a85a64ca2b35877c3c9f57561216acdf"
+  version "2.57.0.629,8d12d1948fdcf687fba934075e2dc7c9"
+  sha256 "01477cde5fd11b12811f7a743b0d8336089f1a71b304e4d93af1e6455f7c005d"
 
   url "https://cdn-hybrid-prod.hunyuan.tencent.com/Desktop/official/#{version.csv.second}/yuanbao_#{version.csv.first}_universal.dmg"
   name "Yuanbao"
@@ -18,6 +18,7 @@ cask "yuanbao" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "元宝.app"

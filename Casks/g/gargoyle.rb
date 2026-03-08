@@ -1,11 +1,8 @@
 cask "gargoyle" do
-  arch arm: "arm64", intel: "x64"
+  version "2026.1.1"
+  sha256 "d3c40f7f032fbdbe589f6a33c384071a860e6570388139cb4d18c291bd085119"
 
-  version "2023.1"
-  sha256 arm:   "8f0aa0550abde4427a93052009ef68c3eb663d61c7ffae95dfae9b247d49412b",
-         intel: "58788637188d91eded3144dcce9490e65c08fcc5dbc6c9fae93e80805dd5603b"
-
-  url "https://github.com/garglk/garglk/releases/download/#{version}/gargoyle-#{version}-mac-#{arch}.dmg"
+  url "https://github.com/garglk/garglk/releases/download/#{version}/Gargoyle-#{version}.dmg"
   name "Gargoyle"
   desc "IO layer for interactive fiction players"
   homepage "https://github.com/garglk/garglk"

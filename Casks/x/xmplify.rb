@@ -1,6 +1,6 @@
 cask "xmplify" do
-  version "1.11.10"
-  sha256 "5123abdecb7a267e0bd69e7bbdb1011d8713d374652c308738f18e46e41929be"
+  version "1.11.11"
+  sha256 "ed2bbb1f77bf83fd64f209ad487495cb03c05d7f61512e40e2e6b98dc93910ee"
 
   url "https://xmplifyapp.com/releases/Xmplify-#{version}.dmg"
   name "Xmplify"

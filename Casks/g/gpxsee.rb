@@ -1,6 +1,6 @@
 cask "gpxsee" do
-  version "15.8"
-  sha256 "ba0c4f684df57816902f0600b84f23382dbb07fa11b8d27876e8a5a3ffbb8c63"
+  version "15.11"
+  sha256 "7c01f64719324b4f720dd897fededa43aedc8bf9bfabecfdbab166f7700cc14f"
 
   url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg",
       verified: "sourceforge.net/gpxsee/Mac%20OS%20X/"
@@ -15,7 +15,7 @@ cask "gpxsee" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "GPXSee.app"
 

@@ -1,6 +1,6 @@
 cask "scroll" do
-  version "2.10"
-  sha256 "dfafa7a0ea40fcbb1ccf532e04835f3e3be4949c89e78ca31ccd8cd1f7c3d33e"
+  version "2.11"
+  sha256 "cfca7fed00640c7574a9fc74fd5880e16c5517eb88a15522b908cf06d8a4702e"
 
   url "https://ryanhanson.dev/scroll/downloads/Scroll#{version}.dmg"
   name "Scroll"

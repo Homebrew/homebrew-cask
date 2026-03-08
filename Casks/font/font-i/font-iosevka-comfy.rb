@@ -7,6 +7,7 @@ cask "font-iosevka-comfy" do
   homepage "https://github.com/protesilaos/iosevka-comfy"
 
   deprecate! date: "2025-02-19", because: :discontinued, replacement_cask: "font-aporetic"
+  disable! date: "2026-02-22", because: :discontinued, replacement_cask: "font-aporetic"
 
   font "iosevka-comfy-#{version}/iosevka-comfy-duo/TTF/iosevka-comfy-duo-normalbolditalic.ttf"
   font "iosevka-comfy-#{version}/iosevka-comfy-duo/TTF/iosevka-comfy-duo-normalboldupright.ttf"

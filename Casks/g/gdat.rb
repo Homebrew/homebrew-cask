@@ -1,5 +1,5 @@
 cask "gdat" do
-  version "2025r04,1YUy5QFPn4-5fEbgbn5EmGXq4gegku5_8"
+  version "2026r01,1YUy5QFPn4-5fEbgbn5EmGXq4gegku5_8"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}",
@@ -19,7 +19,12 @@ cask "gdat" do
     end
   end
 
-  app "OS X 64 bit/Genealogical DNA Analysis Tool.app"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
+  container nested: "macOS 64 bit/Genealogical DNA Analysis Tool.app.tar"
+
+  app "Genealogical DNA Analysis Tool.app"
 
   zap trash: [
     "/Library/Logs/DiagnosticReports/Genealogical DNA Analysis Tool*.diag",

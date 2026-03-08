@@ -1,33 +1,31 @@
 cask "vk-messenger" do
-  version "5.3.2,723"
-  sha256 :no_check
+  version "6.0.55,1215"
+  sha256 "0f30eef2ed1fbfe6759e40bb317b5e434b372d31511abc5e83859e48b33efd03"
 
-  url "https://desktop.userapi.com/mac/master/vk.dmg",
-      verified: "desktop.userapi.com/mac/master/"
+  url "https://upload.object2.vk-apps.com/vk-me-desktop-dev-5837a06d-5f28-484a-ac22-045903cb1b1a/#{version.csv.first}/vk-messenger-#{version.csv.first}-build.#{version.csv.second}-universal.dmg",
+      verified: "upload.object2.vk-apps.com/"
   name "VK Messenger"
   desc "Messenger app"
-  homepage "https://vk.com/messenger"
+  homepage "https://vk.me/app"
 
   livecheck do
-    url "https://desktop.userapi.com/mac/master/latest.json"
-    strategy :json do |json|
-      version = json["version"]
-      build = json["build"]
-      next if version.blank? || build.blank?
+    url "https://upload.object2.vk-apps.com/vk-me-desktop-dev-5837a06d-5f28-484a-ac22-045903cb1b1a/latest/latest-mac.yml"
+    regex(/vk-messenger[._-](\d+(?:\.\d+)+)[._-]build\.(\d+)[._-]universal\.dmg/i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
 
-      "#{version},#{build}"
+        "#{match[1]},#{match[2]}"
+      end
     end
   end
 
-  app "VK Messenger.app"
+  app "VK Мессенджер.app"
 
   zap trash: [
     "~/Library/Preferences/com.vk.messages.helper.plist",
     "~/Library/Preferences/com.vk.messages.plist",
     "~/Library/Saved Application State/com.vk.messages.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

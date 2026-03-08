@@ -1,5 +1,5 @@
 cask "folx" do
-  version "5.32"
+  version "5.33"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg",
@@ -33,8 +33,4 @@ cask "folx" do
     "~/Library/Preferences/com.eltima.FolxAgent.plist",
     "~/Library/Saved Application State/com.eltima.Folx3.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

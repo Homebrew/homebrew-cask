@@ -1,9 +1,9 @@
 cask "chemdoodle" do
   arch arm: "aarch64", intel: "x64"
 
-  version "12.9.0"
-  sha256 arm:   "7551526d837e70358e7a78c88a92a68afff3f014d3372d9ec37f2d09bc90795f",
-         intel: "ca868932fb4dee57d68c1ea07391ce435600d4ff0b260ff14d996b52aa8786a1"
+  version "12.10.0"
+  sha256 arm:   "fa8a5d0b22fc8586439e8923c5b7bed7620097aef066532e81d24a53d296a9ea",
+         intel: "d127281fda4c3db9d03d9d92e5f8748afbed8407564a4fd8b75c5a396f8b3e98"
 
   url "https://www.ichemlabs.com/downloads/ChemDoodle-macos-#{arch}-#{version}.dmg"
   name "ChemDoodle"

@@ -1,9 +1,9 @@
 cask "synology-surveillance-station-client" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.2,2596"
-  sha256 arm:   "6597cf1f1bf09ab1ba547f3c4a6f3d3fcf926dc69fd1a55972d1106f30adafcf",
-         intel: "e4c216d70a917b7bc021c5997a42886964c197d23a6ff639008fcb87394ef863"
+  version "2.2.3,2598"
+  sha256 arm:   "5a6028d99a443466580456741e8610cf2b9f80b4405fa8135b89a582181bc9ce",
+         intel: "afc206229793d5e59a79c3c029a7edf5a01b0a0df79695c1851a497c5590a699"
 
   url "https://global.download.synology.com/download/Utility/SurveillanceStationClient/#{version.tr(",", "-")}/Mac/Synology%20Surveillance%20Station%20Client-#{version.tr(",", "-")}_#{arch}.dmg"
   name "Synology Surveillance Station Client"

@@ -1,8 +1,8 @@
 cask "veepn" do
-  version "2.3.18"
-  sha256 "b562dee15ab93c85c18ccdaf81df8fe42c587fa378121a7323ee53c231b4b92b"
+  version "2.3.20"
+  sha256 "43eeb49d5ea5bb2d63a16bd77803ea7ab08ceae43a09a21f0e814784738c0464"
 
-  url "https://download.veepn.com/mac/VeePN_v#{version}.dmg"
+  url "https://download.veepn.com/mac/VeePN_#{version}.dmg"
   name "VeePN"
   desc "VPN client"
   homepage "https://veepn.com/vpn-apps/vpn-for-mac/"

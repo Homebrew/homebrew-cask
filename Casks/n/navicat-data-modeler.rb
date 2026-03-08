@@ -1,27 +1,30 @@
 cask "navicat-data-modeler" do
-  version "3.1.4"
+  version "4.3.9,040"
   sha256 :no_check
 
-  url "https://download3.navicat.com/download/modeler0#{version.major_minor.no_dots}_en.dmg"
+  url "https://download3.navicat.com/updater/navicatdatamodeler#{version.csv.second}_mac_en.zip"
   name "Navicat Data Modeler"
   desc "Database design tool"
   homepage "https://www.navicat.com/products/navicat-data-modeler"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Data%20Modeler&appLang=en"
-    strategy :sparkle
+    url "https://updater.navicat.com/mac/v17/navicat_updates.php?appName=Navicat%20Data%20Modeler"
+    regex(%r{/navicatdatamodeler[._-]?v?(\d+(?:\.\d+)*)}i)
+    strategy :sparkle do |item, regex|
+      match = item.url&.match(regex)
+      next if !item.short_version || !match
+
+      "#{item.short_version},#{match[1]}"
+    end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Navicat Data Modeler.app"
 
   zap trash: [
-    "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Data Modeler",
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Data Modeler Help*",
-    "~/Library/Preferences/com.prect.NavicatDataModeler#{version.major}.plist",
-    "~/Library/Saved Application State/com.prect.NavicatDataModeler#{version.major}.savedState",
+    "~/Library/Group Containers/*.com.preact.Navicat.launcherGroup",
+    "~/Library/HTTPStorages/com.navicat.NavicatDataModeler",
+    "~/Library/Preferences/com.navicat.NavicatDataModeler.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
