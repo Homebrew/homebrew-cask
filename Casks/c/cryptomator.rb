@@ -1,9 +1,9 @@
 cask "cryptomator" do
   arch arm: "-arm64", intel: "-x64"
 
-  version "1.18.0"
-  sha256 arm:   "1416c189da2890a234452a23d6d566e7eba4d79babf18423edc656344c676d13",
-         intel: "b8b28bf17ad03864dd0ce3f5894ae1384f3b10d6423f580fabda4ad11ab1b79a"
+  version "1.19.0"
+  sha256 arm:   "f4cc20ba7b8befa8deed0f6fc495e39843228e8dbe48c7314e8fa0b06ad6a162",
+         intel: "3ba6011fe50574ee356c0e0f1a869afdd48f3e8059a679175ae8cb87c965475d"
 
   url "https://github.com/cryptomator/cryptomator/releases/download/#{version}/Cryptomator-#{version}#{arch}.dmg",
       verified: "github.com/cryptomator/cryptomator/"
