@@ -1,6 +1,6 @@
 cask "renamer" do
-  version "7.1.7"
-  sha256 "36e28d9c94fde776f5e1c2540a9fa0af317345693399ddc4446a10ce09b03199"
+  version "7.1.8"
+  sha256 "82124300ca473cfddac6f453efbbb30d9b28d64e9206ec4459bbc5c0e03e743c"
 
   url "https://incredible-bee-honeycomb.fra1.digitaloceanspaces.com/apps/Renamer-#{version.major}/Renamer.zip",
       verified: "incredible-bee-honeycomb.fra1.digitaloceanspaces.com/"
