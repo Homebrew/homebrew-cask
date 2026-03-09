@@ -30,7 +30,7 @@ jobs:
     permissions:
       contents: read
     container:
-      image: ghcr.io/homebrew/ubuntu22.04:main
+      image: ghcr.io/homebrew/ubuntu24.04:main
     steps:
       - name: Set up Homebrew
         id: setup-homebrew
