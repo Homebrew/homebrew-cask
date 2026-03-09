@@ -1,6 +1,6 @@
 cask "waveforms" do
-  version "3.24.4"
-  sha256 "832eb09e6926a76303423b21d950c0c45f18a5223de55935ac92654a891521f7"
+  version "3.25.1"
+  sha256 "84d213276e45309b4523e4ddf2fca76945402b06fb0794f0e849f803f73812cb"
 
   url "https://files.digilent.com/Software/Waveforms/#{version}/digilent.waveforms_v#{version}.dmg"
   name "WaveForms"
@@ -12,14 +12,12 @@ cask "waveforms" do
     regex(/href=.*?digilent[._-]waveforms[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :monterey"
+
   app "WaveForms.app"
 
   zap trash: [
     "~/Library/Application Support/WaveForms",
     "~/Library/Saved Application State/com.digilent.waveforms.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
