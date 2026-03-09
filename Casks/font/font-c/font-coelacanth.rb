@@ -1,6 +1,6 @@
 cask "font-coelacanth" do
-  version "0.2.0,497a6cbf2c514f75bd3ed02d831fbb78"
-  sha256 "8ece70a1abca27debaa6a2b765f3cec5f9102625018de1e1cbb4db398a0f10e7"
+  version "0.3.0,ccbadc45d67c94b0ff7a14f299e8ddbd"
+  sha256 "a4209266d4946c6d44bf5184f62ea2e7b7fb4c09f3670c081936d9c96c632392"
 
   url "https://gitlab.com/-/project/58955984/uploads/#{version.csv.second}/coelacanth_v#{version.csv.first}.zip"
   name "Coelacanth"
