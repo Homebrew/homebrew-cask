@@ -1,6 +1,6 @@
 cask "tiger-trade" do
-  version "9.16.5"
-  sha256 "30536f95c729e368cc94ef71f38c1ab1e3f8b6653cad9e60015f39889491a65d"
+  version "9.17.1"
+  sha256 "97655920e045ab16e328d1eea7ac59610ca2855123b2f85748c3d52457b323d8"
 
   url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version}.dmg",
       verified: "download.tigerfintech.com/"
