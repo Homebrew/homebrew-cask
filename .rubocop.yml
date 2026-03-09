@@ -149,6 +149,16 @@ Style/FetchEnvVar:
   - Taps/*/*/*.rb
   - "/**/Formula/**/*.rb"
   - "**/Formula/**/*.rb"
+Style/OneClassPerFile:
+  Exclude:
+  - "**/*.rbi"
+  - Taps/*/*/*.rb
+  - "/**/Abstract/**/*.rb"
+  - "**/Abstract/**/*.rb"
+  - "/**/Formula/**/*.rb"
+  - "**/Formula/**/*.rb"
+  - "/**/developer/bin/*"
+  - "**/developer/bin/*"
 Style/FrozenStringLiteralComment:
   EnforcedStyle: always
   Exclude:
