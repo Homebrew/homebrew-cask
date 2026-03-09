@@ -1,9 +1,9 @@
 cask "longbridge-pro" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.36.3"
-  sha256 arm:   "37ae28a3e3297c381588307bf68e85ee90772cf3ae053d9f10c69debf4ede831",
-         intel: "0973a401ac747c1034aec79180967407dc7112fe7f9a3fa2e7f7113366c78148"
+  version "2.36.4"
+  sha256 arm:   "e5b2e279e6639aa2e354574cc06f06704cdb1e6f096151400e1af8a2daf96ef6",
+         intel: "67aa65a890063b5457d845daa40ca4bd6e8cfb49a4ff732937c5fc7cbadbd858"
 
   url "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-#{version}-mac-#{arch}.dmg",
       verified: "download.lbkrs.com/longbridge-desktop/prod/"
