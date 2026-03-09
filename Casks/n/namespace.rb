@@ -12,6 +12,8 @@ cask "namespace" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :ventura"
+
   app "NameSpace.app"
 
   zap trash: "~/Library/Preferences/com.ivanhofer.NameSpace.plist"
