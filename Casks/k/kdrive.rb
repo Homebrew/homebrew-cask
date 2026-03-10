@@ -1,11 +1,11 @@
 cask "kdrive" do
-  version "3.8.1.4"
-  sha256 "ad7d188488f41d131de061f9fff9d79ea15d85dc83a47b9f1c218ab9b49bee97"
+  version "3.8.2.6"
+  sha256 "27833aa02980d542523042f753bbfbfb328d608fa8021a89963083e06cc2629a"
 
   url "https://download.storage.infomaniak.com/drive/desktopclient/kDrive-#{version}.pkg"
   name "kDrive"
   desc "Client for the kDrive collaborative cloud storage service"
-  homepage "https://www.infomaniak.com/kdrive"
+  homepage "https://www.infomaniak.com/en/ksuite/kdrive"
 
   livecheck do
     url "https://www.infomaniak.com/drive/latest"
