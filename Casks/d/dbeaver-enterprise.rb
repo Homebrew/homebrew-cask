@@ -1,11 +1,12 @@
 cask "dbeaver-enterprise" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "25.3.0"
-  sha256 arm:   "fde54b4b1c4014adec517f066a8d780012f6e582a9892314b84c58c01b9f65f5",
-         intel: "f545e430afbf05bd116d882f9a2f73d5eb94f972aa1c495858e8fbd2c30b878a"
+  version "26.0.0"
+  sha256 arm:   "f1b5aef7d32ed1536871dd4270455dff3a665249db2f1fbbeba5cd75b3c27969",
+         intel: "58e6c4285bb2e3e702410bdc996d41ecb497a24c668b77bd54f80fc653aafdd4"
 
-  url "https://dbeaver.com/files/#{version}/dbeaver-ee-#{version}-macos-#{arch}.dmg"
+  url "https://downloads.dbeaver.net/enterprise/#{version}/dbeaver-ee-#{version}-macos-#{arch}.dmg",
+      verified: "downloads.dbeaver.net/enterprise/"
   name "DBeaver Enterprise Edition"
   desc "Universal database tool and SQL client"
   homepage "https://dbeaver.com/"
