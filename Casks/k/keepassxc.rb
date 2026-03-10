@@ -1,11 +1,11 @@
 cask "keepassxc" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.7.11"
-  sha256 arm:   "11c514ed9fcc33b82d2a8e113bfc989b5834335dafd7a5dadd8942410cfbd025",
-         intel: "fc04dfbba1f5208ea547af68617f7a6022a73fb841f307ff5f7b2c537320e2c9"
+  version "2.7.12"
+  sha256 arm:   "65f4f63607180c0a15794b4a4068f85e99ed5391c87c1fb9312648f1b36fed40",
+         intel: "f55737bf759b7ea622967ae979e8fd0ef06a8133104124c24861fd11a3fe14b5"
 
-  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-1-#{arch}.dmg",
+  url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-#{arch}.dmg",
       verified: "github.com/keepassxreboot/keepassxc/"
   name "KeePassXC"
   desc "Password manager app"
