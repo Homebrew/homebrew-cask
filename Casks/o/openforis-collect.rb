@@ -1,6 +1,6 @@
 cask "openforis-collect" do
-  version "4.0.103"
-  sha256 "35adf4eabd8ce10fa0fc7054b50bd005c5b985cc2d41715a0a23f51d83ef783c"
+  version "4.0.104"
+  sha256 "f2decc0b82296c2ad0bbbaf58dd0e3689a2c5ad2f695b0cd6664bf80b025e45c"
 
   url "https://search.maven.org/remotecontent?filepath=org/openforis/collect/collect-installer/#{version}/collect-installer-#{version}-osx.dmg",
       verified: "search.maven.org/"
