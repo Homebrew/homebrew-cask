@@ -11,6 +11,7 @@ cask "handy" do
   desc "Speech to text application"
   homepage "https://handy.computer/"
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "Handy.app"
