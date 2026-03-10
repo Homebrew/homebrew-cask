@@ -12,6 +12,8 @@ cask "threema" do
     regex(/Threema\s*(\d+(?:\.\d+)+)\s*for\s*Desktop/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Threema.app"
 
   zap trash: [
