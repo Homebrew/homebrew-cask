@@ -1,15 +1,18 @@
 cask "dorico" do
-  version "6.1.10"
-  sha256 "890cbaf877eb5bde79fe38c8677c640be3231eaf0a845b3a1e116515d1489b75"
+  version "6.2,375be65a-7dd0-43b6-8af0-03b7422373fa"
+  sha256 "16ae9c019b82d22fcf03038d82c6f874b8b965e821a0594f2448c44e6689eb33"
 
-  url "https://download.steinberg.net/support/temporary/Dorico_#{version}/Dorico_#{version}_Installer_mac.dmg"
+  url "https://download.steinberg.net/automated_updates/sda_downloads/#{version.csv.second}/Dorico_#{version.csv.first}_Installer_mac.dmg"
   name "Dorico"
   desc "Scoring software"
   homepage "https://www.steinberg.net/dorico/"
 
   livecheck do
     url "https://o.steinberg.net/en/support/downloads/dorico_#{version.major}.html"
-    regex(%r{href=.*?/Dorico[._-]v?(\d+(?:\.\d+)*)[._-]Installer[._-]mac\.dmg}i)
+    regex(%r{href=.*?/([\h-]+)/Dorico[._-]v?(\d+(?:\.\d+)*)[._-]Installer[._-]mac\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+    end
   end
 
   auto_updates true
