@@ -1,6 +1,6 @@
 cask "surge" do
-  version "6.4.4,10660,fab7cfc6bfb84df1424f90970adfcd6a"
-  sha256 "1a7cda93a2519543440dfb282468fdb3de8702d43e2727d30988ddd9bdfe548e"
+  version "6.4.4,10661,fb942ed275c11bd69e1b4f4db2b795f4"
+  sha256 "447e86e92c10bc5e0d27fae23ad25a903fbffc984a6f11f60950f99fa4ce9b83"
 
   url "https://dl.nssurge.com/mac/v#{version.major}/Surge-#{version.tr(",", "-")}.zip"
   name "Surge"
