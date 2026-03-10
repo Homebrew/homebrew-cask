@@ -5,7 +5,7 @@ cask "seamly2d" do
   url "https://github.com/FashionFreedom/Seamly2D/releases/download/v#{version}/Seamly2D-macos.zip",
       verified: "github.com/FashionFreedom/Seamly2D/"
   name "Seamly2D"
-  desc "Open source patternmaking software to democratize fashion"
+  desc "Pattern making software"
   homepage "https://seamly.io/"
 
   livecheck do
