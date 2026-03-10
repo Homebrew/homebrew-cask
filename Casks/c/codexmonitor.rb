@@ -1,6 +1,6 @@
 cask "codexmonitor" do
-  version "0.7.60"
-  sha256 "0530eaf867707d8fdadb5e6536cecce6709dc69fb6e590f9c5dd49e99a4af0a7"
+  version "0.7.62"
+  sha256 "d320d7c1117bfe84482d6b172155cb8c59025a40d907357edcbc84bc0a6e0068"
 
   url "https://github.com/Dimillian/CodexMonitor/releases/download/v#{version}/CodexMonitor.app.tar.gz",
       verified: "github.com/Dimillian/CodexMonitor/"
