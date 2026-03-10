@@ -1,6 +1,6 @@
 cask "typinator" do
-  version "9.2"
-  sha256 "2558efab1afa701b4760ebf83a5f97960603b08a6ce5a3bc68be0f386c79fd64"
+  version "10.0"
+  sha256 "dc01024d8b36bbb5770b63336eaf1873ba0620265554ba6a973f96650065e6d8"
 
   url "https://www.ergonis.com/downloads/products/typinator/Typinator#{version.no_dots}-Install.dmg",
       user_agent: :fake
@@ -14,6 +14,8 @@ cask "typinator" do
       xml.elements["//Program_Info/Program_Version"]&.text&.strip
     end
   end
+
+  depends_on macos: ">= :ventura"
 
   app "Typinator.app"
 
