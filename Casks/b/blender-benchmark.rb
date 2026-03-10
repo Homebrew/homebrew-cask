@@ -1,8 +1,8 @@
 cask "blender-benchmark" do
-  version "3.1.0,2.0"
-  sha256 "b7a77c636ac4bbb32bc5469fe8ae1429bb13a7af9cb6690094c38271de30b3bc"
+  version "3.3.0,2.0"
+  sha256 "0e911651a26a8aa51bee8f09a4add8f7e56505a520a8a212b356bc908a47164c"
 
-  url "https://opendata.blender.org/cdn/BlenderBenchmark#{version.csv.second}/launcher/benchmark-launcher-#{version.csv.first}-macos.dmg"
+  url "https://download.blender.org/release/BlenderBenchmark#{version.csv.second}/launcher/benchmark-launcher-#{version.csv.first}-macos.dmg"
   name "Blender Open Data Benchmark"
   desc "3D performance benchmarking tool"
   homepage "https://opendata.blender.org/"
