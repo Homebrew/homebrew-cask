@@ -1,5 +1,5 @@
 cask "connectiq-sdk-manager" do
-  version "1.0.15"
+  version "1.0.16"
   sha256 :no_check
 
   url "https://developer.garmin.com/downloads/connect-iq/sdk-manager/connectiq-sdk-manager.dmg"
