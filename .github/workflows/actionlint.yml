@@ -42,6 +42,8 @@ jobs:
       - uses: Homebrew/actions/cache-homebrew-prefix@main
         with:
           install: actionlint shellcheck zizmor
+          # Not needed in .github but required for other repositories with multiple uses of cache-homebrew-prefix.
+          workflow-key: actionlint
 
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
