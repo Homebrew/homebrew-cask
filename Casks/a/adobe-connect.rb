@@ -12,7 +12,7 @@ cask "adobe-connect" do
   livecheck do
     url "https://helpx.adobe.com/adobe-connect/connect-downloads-updates.html",
         user_agent: :browser
-    regex(/macOS.*?v?(\d+(?:\.\d+)+)[< "]/im)
+    regex(/Download\s+for\s+macOS.*?v?(\d+(?:\.\d+)+)[< "]/im)
     strategy :page_match do |page, regex|
       version = page.scan(regex)&.flatten&.first
       directory = page.scan(/href=.*ConnectMac(\d+)Plus/i)&.flatten&.first
