@@ -1,6 +1,6 @@
 cask "clip-studio-paint" do
-  version "4.2.7"
-  sha256 "d88bcfeeab5ca356579270a1736734e0221b709fd1c4c2be53680cd276cda220"
+  version "5.0.0"
+  sha256 "3e2f0a6afccc61b7cae6df6edd3a07931c814fe4f71745332e36f8a463d7336d"
 
   url "https://vd.clipstudio.net/clipcontent/paint/app/#{version.no_dots}/CSP_#{version.no_dots}m_app.pkg"
   name "Clip Studio Paint"
