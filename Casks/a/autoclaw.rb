@@ -5,7 +5,7 @@ cask "autoclaw" do
   url "https://autoglm.aminer.cn/autoclaw/updates/autoclaw-#{version}.dmg",
       verified: "autoglm.aminer.cn/autoclaw/updates/"
   name "AutoClaw"
-  desc "Desktop app for AutoClaw"
+  desc "Desktop app for AutoClaw/OpenClaw"
   homepage "https://autoglm.zhipuai.cn/autoclaw/"
 
   livecheck do
