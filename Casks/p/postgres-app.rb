@@ -1,4 +1,4 @@
-cask "postgres-unofficial" do
+cask "postgres-app" do
   version "2.9.4,14-15-16-17-18"
   sha256 "c73a65789546935c26baf3522bb9c44aa8da09ef1d4409efcdb98a567a34e158"
 
