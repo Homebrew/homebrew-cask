@@ -7,8 +7,8 @@ cask "vlc@nightly" do
     sha256 "71fb1cfbc84b3ce02c6d4004faa852819ebe6a97465db85a8a48d527aa70729b"
   end
   on_intel do
-    version "4.0.0,20260310-0411,259d873b"
-    sha256 "c6b6890bcacc7dddfaf66ebdb02dd9ae0719d4d21aa4aaa8f3336df3a8311f9a"
+    version "4.0.0,20260311-0411,259d873b"
+    sha256 "3a8c1bb3c62f7bd753122d7507a42b61274264f81ce0fdb2b321605067d617bd"
   end
 
   url "https://artifacts.videolan.org/vlc/nightly-macos-#{arch}/#{version.csv.second}/vlc-#{version.csv.first}-dev-#{livecheck_arch}-#{version.csv.third}.dmg"
