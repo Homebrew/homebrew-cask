@@ -8,7 +8,6 @@ cask "x-air-edit" do
   desc "Remote control for the Behringer X AIR series mixers"
   homepage "https://www.behringer.com/series.html?category=R-BEHRINGER-XAIRSERIES"
 
-  # Documentation: https://docs.brew.sh/Brew-Livecheck
   livecheck do
     url "https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=0605-AAD"
     regex(%r{([^/]+)/([^/]+)/Original/X[._-]AIR[._-]Edit[._-]MAC[._-]v?(\d+(?:\.\d+)+)\.zip}i)
@@ -28,7 +27,7 @@ cask "x-air-edit" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "X-AIR-Edit.app"
 
