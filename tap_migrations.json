@@ -38,6 +38,7 @@
   "pgweb": "homebrew/core",
   "pieces-cli": "homebrew/core",
   "podman": "homebrew/core",
+  "powershell": "homebrew/core",
   "purescript": "homebrew/core",
   "python": "homebrew/core",
   "python3": "homebrew/core",
