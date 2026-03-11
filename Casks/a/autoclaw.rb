@@ -4,7 +4,6 @@ cask "autoclaw" do
 
   url "https://autoglm.aminer.cn/autoclaw/updates/autoclaw-#{version}.dmg",
       verified: "autoglm.aminer.cn/autoclaw/updates/"
-
   name "AutoClaw"
   desc "Desktop app for AutoClaw"
   homepage "https://autoglm.zhipuai.cn/autoclaw/"
