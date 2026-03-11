@@ -13,7 +13,7 @@ cask "vivid-app" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :monterey"
 
   app "Vivid.app"
 
