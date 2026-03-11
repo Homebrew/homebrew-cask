@@ -4,7 +4,7 @@ cask "x-air-edit" do
 
   url "https://cdn.mediavalet.com/aunsw/musictribe/#{version.csv.second}/#{version.csv.third}/Original/X-AIR-Edit_MAC_#{version.csv.first}.zip",
       verified: "mediavalet.com/aunsw/musictribe/"
-  name "x-air-edit"
+  name "X AIR Edit"
   desc "Remote control for the Behringer X AIR series mixers"
   homepage "https://www.behringer.com/series.html?category=R-BEHRINGER-XAIRSERIES"
 
