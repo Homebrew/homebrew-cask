@@ -7,6 +7,11 @@ cask "pomotroid" do
   desc "Timer application"
   homepage "https://github.com/Splode/pomotroid"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Pomotroid.app"
