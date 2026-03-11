@@ -1,9 +1,9 @@
 cask "amical" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.2"
-  sha256 arm:   "ee5d080484fa19eed84cca3cc6e6794727eee48cbf1c3d24c3a1250620d512b6",
-         intel: "1658f91e45f76a74d75ff9b5ce9159466aa2fbc0a5b1bb29fbc912a9e8589f47"
+  version "1.0.4"
+  sha256 arm:   "8daceedfa3f7fd03345725b403a4cad4d8eb366c60bc3b9acc1ae6c5606613ea",
+         intel: "302844510e49dc310ae415f2ca3e0ef751fc0346abde7aec4385f10e68f04521"
 
   url "https://github.com/amicalhq/amical/releases/download/v#{version}/Amical-macos-#{arch}.dmg",
       verified: "github.com/amicalhq/amical/"
