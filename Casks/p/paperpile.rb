@@ -1,6 +1,6 @@
 cask "paperpile" do
-  version "0.9.0"
-  sha256 "1e8954327698f7f419cceff91343e8f5193d9a9007b3872370a883d45e8d3b8a"
+  version "0.10.0"
+  sha256 "226a37dc17f12e6a8105403f01d2ea2d800c06247703821e42046cede6f4ff80"
 
   url "https://cdn.paperpile.com/download/desktop/Paperpile-#{version}.dmg"
   name "Paperpile"
