@@ -1,9 +1,9 @@
 cask "eclipse-jee" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.38,2025-12"
-  sha256 arm:   "182b0bb6d4f004f4c6366a53aa142a4d34b0bbc3a0d2a013e82b2d0d1c4394e2",
-         intel: "205a66ec6b14bda942c8d84f19b14c38a4918633c00b514b322e7d15755dd384"
+  version "4.39,2026-03"
+  sha256 arm:   "a9d4e2cf87188fafabb5a8467618b78012179770bd080bdc64099cfe07cd00bb",
+         intel: "a4371fdb6c532cdfbe842d41d5f72b3cc1b3b5965e0ce0b4853b301940e78173"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-jee-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&mirror_id=1"
   name "Eclipse IDE for Java EE Developers"
