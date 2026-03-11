@@ -9,8 +9,7 @@ cask "autoclaw" do
   homepage "https://autoglm.zhipuai.cn/autoclaw/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    skip "No version information available on website"
   end
 
   depends_on arch: :arm64
