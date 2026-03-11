@@ -1,8 +1,8 @@
 cask "quit-all" do
-  version "1.3.6"
-  sha256 "e5c5e797b4b1e35bbc24f9fce495efce9f48d4507f10dddd16295e737e1e12f8"
+  version "1.3.6,207"
+  sha256 "57f699820b1503718762cac592161d2d2780a2cb634cd046e04693f28436c29d"
 
-  url "https://amicoapps.com/wp-content/updates/quitall-#{version}.zip"
+  url "https://amicoapps.com/wp-content/updates/quitall-#{version.before_comma}.zip"
   name "QuitAll"
   desc "Quickly quit one, some, or all apps"
   homepage "https://amicoapps.com/app/quit-all/"
