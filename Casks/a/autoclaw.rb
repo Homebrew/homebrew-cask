@@ -5,7 +5,7 @@ cask "autoclaw" do
   url "https://autoglm.aminer.cn/autoclaw/updates/autoclaw-#{version}.dmg"
   name "AutoClaw"
   desc "Desktop app for AutoClaw"
-  homepage "https://github.com/Freakwill/homebrew-cask"
+  homepage "https://autoglm.zhipuai.cn/autoclaw/"
 
   depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
