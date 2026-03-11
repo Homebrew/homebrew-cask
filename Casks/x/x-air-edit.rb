@@ -31,5 +31,5 @@ cask "x-air-edit" do
 
   app "X-AIR-Edit.app"
 
-  zap trash: "~/Library/.X-Air-Edit"
+  zap trash: "~/Library/.X-AIR-Edit"
 end
