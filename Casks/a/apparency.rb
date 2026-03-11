@@ -18,8 +18,8 @@ cask "apparency" do
     end
   end
   on_ventura :or_newer do
-    version "3.1"
-    sha256 "41d64d14a07bf7533da6f77e082b7b046e006659cf6c1b05db60f85de08747ea"
+    version "3.2"
+    sha256 "0a2639fac59f2a88510193bc6aa79a6e1af7a7f2c6cb6bc468fb7a30c8a68cc3"
 
     livecheck do
       url "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
