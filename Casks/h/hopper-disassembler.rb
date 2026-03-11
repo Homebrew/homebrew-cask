@@ -14,6 +14,7 @@ cask "hopper-disassembler" do
     regex(/<title>\s*Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "Hopper Disassembler.app"
