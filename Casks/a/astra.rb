@@ -8,6 +8,8 @@ cask "astra" do
   desc "Audiophile music player with advanced visualization"
   homepage "https://github.com/Boof2015/astra"
 
+  depends_on arch: :arm64
+
   app "Astra.app"
 
   zap trash: [
