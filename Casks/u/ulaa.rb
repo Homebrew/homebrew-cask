@@ -1,6 +1,6 @@
 cask "ulaa" do
   version "2.41.0"
-  sha256 :no_check
+  sha256 "b921095dcedaebf3465381c2fe32909f8b49fb6f8b88ba06ba247291b233b51e"
 
   url "https://ulaa.com/release/mac/stable/arm64/latest?isDownload=true"
   name "Ulaa Browser"
