@@ -9,4 +9,11 @@ cask "astra" do
   homepage "https://github.com/Boof2015/astra"
 
   app "Astra.app"
+
+  zap trash: [
+    "~/Library/Application Support/Astra",
+    "~/Library/Caches/com.astra.musicplayer",
+    "~/Library/Logs/Astra",
+    "~/Library/Preferences/com.astra.musicplayer.plist",
+  ]
 end
