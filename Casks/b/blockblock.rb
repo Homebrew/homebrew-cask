@@ -1,6 +1,6 @@
 cask "blockblock" do
-  version "2.4.1"
-  sha256 "b47f242af4fc3de5938c63ddc3a2cb2fd255a72ff075bb7fe631fb1a2fce4427"
+  version "2.4.2"
+  sha256 "d236cbe8f93af8a3c9f4c802cc538b99277493384cfb692349bba0d5a0cf07e9"
 
   url "https://github.com/objective-see/BlockBlock/releases/download/v#{version}/BlockBlock_#{version}.zip",
       verified: "github.com/objective-see/BlockBlock/"
