@@ -8,6 +8,8 @@ cask "torrent-file-editor" do
   desc "GUI for editing and creating torrent files"
   homepage "https://torrent-file-editor.github.io/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Torrent File Editor.app"
 
   zap trash: [
