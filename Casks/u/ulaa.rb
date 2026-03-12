@@ -9,8 +9,9 @@ cask "ulaa" do
 
   livecheck do
     url :url
-    strategy :header_match
-    regex(/Ulaa[._-]Browser[._-]v?(\d+(?:\.\d+)+)/i)
+    strategy :header_match do |headers|
+      headers["content-disposition"]&.scan(/Ulaa[._-]Browser[._-]v?(\d+(?:\.\d+)+)/i)&.flatten&.first
+    end
   end
 
   depends_on macos: ">= :monterey"
