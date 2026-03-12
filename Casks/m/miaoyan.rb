@@ -1,6 +1,6 @@
 cask "miaoyan" do
-  version "2.7.0"
-  sha256 "4f7874a15db0f826712fb5abf9e976c29c507aca2723805a8fae89418fdd2bcb"
+  version "3.1.0"
+  sha256 "362840c621b6f054233a54a10b0b8d68221f31befd67a72195b0deacd8881cc3"
 
   url "https://miaoyan.app/Release/MiaoYan_V#{version}.zip"
   name "MiaoYan"
