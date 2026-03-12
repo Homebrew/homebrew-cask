@@ -2,13 +2,13 @@ cask "proton-pass" do
   version "1.35.0"
   sha256 "cf05758c16eda6533b4dd4b52a4122f35dd9d9ec78e73dc13f6640ef6b3aa711"
 
-  url "https://proton.me/download/PassDesktop/darwin/universal/ProtonPass_#{version}.dmg"
+  url "https://proton.me/download/pass/macos/ProtonPass_#{version}.dmg"
   name "Proton Pass"
   desc "Desktop client for Proton Pass"
   homepage "https://proton.me/pass"
 
   livecheck do
-    url "https://proton.me/download/PassDesktop/darwin/universal/version.json"
+    url "https://proton.me/download/pass/macos/version.json"
     strategy :json do |json|
       json["Releases"]&.map do |item|
         next unless item["CategoryName"]&.match?("Stable")
