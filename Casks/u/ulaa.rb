@@ -1,5 +1,5 @@
 cask "ulaa" do
-  version "2.40.5"
+  version "2.41.0"
   sha256 :no_check
 
   url "https://ulaa.com/release/mac/stable/arm64/latest?isDownload=true"
@@ -8,10 +8,7 @@ cask "ulaa" do
   homepage "https://ulaa.com/"
 
   livecheck do
-    url :url
-    strategy :header_match do |headers|
-      headers["content-disposition"]&.scan(/Ulaa[._-]Browser[._-]v?(\d+(?:\.\d+)+)/i)&.flatten&.first
-    end
+    skip "Download URL redirects to latest version without exposing version info"
   end
 
   depends_on macos: ">= :monterey"
