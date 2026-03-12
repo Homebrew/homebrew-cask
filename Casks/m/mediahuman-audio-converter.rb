@@ -14,6 +14,8 @@ cask "mediahuman-audio-converter" do
     regex(/"softwareVersion">\s*(\d+(?:\.\d+)+)[\s<]/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "MediaHuman Audio Converter.app"
 
   zap trash: [
