@@ -21,7 +21,7 @@ cask "chessx" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "ChessX.app"
 
