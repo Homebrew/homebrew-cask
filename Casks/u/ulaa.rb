@@ -8,7 +8,10 @@ cask "ulaa" do
   homepage "https://ulaa.com/"
 
   livecheck do
-    skip "Download URL redirects to latest version without exposing version info"
+    url "https://ulaa.com/release/mac/stable/arm64/latest?isDownload=true"
+    strategy :header_match do |headers|
+      headers["location"]&.match(/Ulaa[._-]Browser[._-]v?(\d+(?:\.\d+)+)/i)&.captures&.first
+    end
   end
 
   depends_on macos: ">= :monterey"
