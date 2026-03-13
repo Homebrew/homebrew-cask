@@ -12,8 +12,6 @@ cask "mtmr-designer" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "MTMR 2026.app"
 
   zap trash: [
