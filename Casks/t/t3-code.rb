@@ -1,9 +1,9 @@
 cask "t3-code" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.10"
-  sha256 arm:   "651e1323f0d4cfc60de9c4018da4b5e30d1a74a3cd69468a7fd3bf756eef705b",
-         intel: "efa250039f67928eb16e4b490178c38f0105d545ca26a435825e5a35a707a2a1"
+  version "0.0.11"
+  sha256 arm:   "296f51e34fa9b1f302767ec21939e0cad3a013d4911bb76caa12407a5bd9d7f1",
+         intel: "b17ac7d81e0307624b2e39057a083e5782147f7aac0ef9608d09a12de9038ca3"
 
   url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.dmg",
       verified: "github.com/pingdotgg/t3code/"
