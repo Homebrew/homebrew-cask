@@ -4,7 +4,7 @@ cask "inkwell" do
 
   url "https://github.com/4worlds4w-svg/inkwell/releases/download/v#{version}/Inkwell_#{version}_aarch64.dmg"
   name "Inkwell"
-  desc "Lightweight Markdown editor with split view, live preview, themes, and focus mode"
+  desc "Markdown editor with split view, live preview, themes, and focus mode"
   homepage "https://github.com/4worlds4w-svg/inkwell"
 
   app "Inkwell.app"
