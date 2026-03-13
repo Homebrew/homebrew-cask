@@ -1,6 +1,6 @@
 cask "silentknight" do
-  version "2.13,2026.03"
-  sha256 "45aae1b60b4b5807113e67c0f165a49d53d8c50a665a624b73e7f6cc1959c5fd"
+  version "2.14,2026.03"
+  sha256 "adeed760e2d4482a250b48013fde40916afc6cbcb253bce491c9bdbc64f8023b"
 
   # Upstream zero-pads the minor version in the no-dot filename version to two
   # digits (e.g. 2.9 is 209). We only need this workaround while the minor
