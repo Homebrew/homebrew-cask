@@ -1,6 +1,6 @@
 cask "silentknight" do
-  version "2.12,2025.06"
-  sha256 "84eb2feb1e4d0ac26f28f963bf809e6d6206b5d345d9d9c428bdbc583b249f76"
+  version "2.13,2026.03"
+  sha256 "45aae1b60b4b5807113e67c0f165a49d53d8c50a665a624b73e7f6cc1959c5fd"
 
   # Upstream zero-pads the minor version in the no-dot filename version to two
   # digits (e.g. 2.9 is 209). We only need this workaround while the minor
@@ -30,6 +30,8 @@ cask "silentknight" do
       "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "silentknight#{no_dot_version}/SilentKnight.app"
 
