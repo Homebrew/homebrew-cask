@@ -1,6 +1,6 @@
 cask "mimestream" do
-  version "1.9.14"
-  sha256 "a85b527916706a5773007597dab56ccaa0c5e18cd3b1b74f93826b34f900f6cb"
+  version "1.9.15"
+  sha256 "a48c909437f13c08f85c294b240ea3657a92b9a7cbef3583924425d78d175ae2"
 
   url "https://download.mimestream.com/Mimestream_#{version}.dmg"
   name "Mimestream"
