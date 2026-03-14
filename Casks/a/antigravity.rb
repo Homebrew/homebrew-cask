@@ -41,7 +41,9 @@ cask "antigravity" do
   zap trash: [
     "~/.antigravity/",
     "~/Library/Application Support/Antigravity",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.antigravity.sfl*",
     "~/Library/Caches/com.google.antigravity",
+    "~/Library/Caches/com.google.antigravity.ShipIt",
     "~/Library/HTTPStorages/com.google.antigravity",
     "~/Library/Preferences/com.google.antigravity.plist",
     "~/Library/Saved Application State/com.google.Antigravity.savedState",
