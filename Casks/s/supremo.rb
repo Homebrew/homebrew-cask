@@ -1,6 +1,6 @@
 cask "supremo" do
   version "4.11.6.2934"
-  sha256 "6b84683ba4c238d223030a267875e95040b54bf2a166e8b8715900af661275ec"
+  sha256 "4d7ca80358fc41de5e348d1476d2c21b536c6db4e9e857bbe499a81d1a9f0524"
 
   url "https://www.nanosystems.com/AutoUpdateS/macOS/stable/Supremo_#{version}.dmg",
       verified: "nanosystems.com/"
