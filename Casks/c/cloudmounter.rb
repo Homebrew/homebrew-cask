@@ -22,7 +22,7 @@ cask "cloudmounter" do
     "~/Library/Application Scripts/*.com.eltima.cloudmounter*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eltima.cloudmounter.sfl*",
     "~/Library/Application Support/com.eltima.cloudmounter",
-    "~/Library/Caches/com.eltima.cloudmounter"
+    "~/Library/Caches/com.eltima.cloudmounter",
     "~/Library/Containers/com.eltima.cloudmounter.*",
     "~/Library/Group Containers/*.com.eltima.cloudmounter",
     "~/Library/HTTPStorages/com.eltima.cloudmounter",
