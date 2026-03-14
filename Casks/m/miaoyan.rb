@@ -1,8 +1,9 @@
 cask "miaoyan" do
-  version "3.1.0"
-  sha256 "362840c621b6f054233a54a10b0b8d68221f31befd67a72195b0deacd8881cc3"
+  version "3.1.1"
+  sha256 "faa9fadd4f29f318d08cacfde00194487acb3612b8ce5ad8af4add8902a459a2"
 
-  url "https://miaoyan.app/Release/MiaoYan_V#{version}.zip"
+  url "https://github.com/tw93/MiaoYan/releases/download/V#{version}/MiaoYan_V#{version}.zip",
+      verified: "github.com/tw93/MiaoYan/"
   name "MiaoYan"
   desc "Markdown editor"
   homepage "https://miaoyan.app/"
