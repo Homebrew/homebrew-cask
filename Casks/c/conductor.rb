@@ -2,12 +2,12 @@ cask "conductor" do
   arch arm: "aarch64", intel: "x86_64"
 
   on_arm do
-    version "0.38.5,01KKF5J43SF42TWFREARG90GB1"
-    sha256 "95fa192663633b6d600333a789ec13af6be10d6161bf0dda3c13f793a7ce03f9"
+    version "0.39.2,01KKPWD3V5YVKNWGN2T2Y0HP3G"
+    sha256 "e00fab0dd9b1d38c44d2dec57b5eb29fdc520b30e228ac22f741a79cce3183a1"
   end
   on_intel do
-    version "0.38.5,01KKF5GQ6X901NRY06KH7TG3JK"
-    sha256 "31209d529dae3563eff0d35b79ae043124e116d688d3dd7e24dfff7689682100"
+    version "0.39.2,01KKPWCHBS22NWBD4M1HBVGAYD"
+    sha256 "fa8e9eab59fea01857cfef59bd3e272570b7f0dded593f2ff3fdcec5ab982ab9"
   end
 
   url "https://cdn.crabnebula.app/asset/#{version.csv.second}",
