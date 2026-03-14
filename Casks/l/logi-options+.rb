@@ -82,6 +82,7 @@ cask "logi-options+" do
             delete:    [
               "/Applications/logioptionsplus.app",
               "/Applications/Utilities/Logi Options+ Driver Installer.bundle",
+              "/Library/Application Support/Logi",
               "/Library/Application Support/Logitech.localized/LogiOptionsPlus",
             ],
             rmdir:     "/Library/Application Support/Logitech.localized"
@@ -89,11 +90,16 @@ cask "logi-options+" do
   zap trash: [
     "/Users/Shared/logi",
     "/Users/Shared/LogiOptionsPlus",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.logi.optionsplus*.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.logi.*.sfl*",
+    "~/Library/Application Support/Logi",
     "~/Library/Application Support/LogiOptionsPlus",
+    "~/Library/HTTPStorages/LogiPluginServiceNative",
+    "~/Library/Logs/xlog_logitech",
     "~/Library/Preferences/com.logi.cp-dev-mgr.plist",
+    "~/Library/Preferences/com.logi.lps.settings.plist",
     "~/Library/Preferences/com.logi.optionsplus.driverhost.plist",
     "~/Library/Preferences/com.logi.optionsplus.plist",
+    "~/Library/Preferences/com.logi.pluginservice.plist",
     "~/Library/Saved Application State/com.logi.optionsplus.savedState",
   ]
 
