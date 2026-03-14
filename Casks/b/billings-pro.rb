@@ -12,6 +12,8 @@ cask "billings-pro" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :monterey"
+
   app "Billings Pro.app"
 
   zap trash: [
