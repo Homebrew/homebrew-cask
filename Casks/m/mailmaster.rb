@@ -1,5 +1,5 @@
 cask "mailmaster" do
-  version "5.5.1,1441"
+  version "5.5.1,1443"
   sha256 :no_check
 
   url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
