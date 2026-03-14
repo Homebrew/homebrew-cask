@@ -1,25 +1,33 @@
 cask "semeru-jdk-open@11" do
   arch arm: "aarch64", intel: "x64"
 
-  version "11.0.30+7,openj9-0.57.0"
-  sha256 arm:   "75b18b61099ed8bc33e16fa3520d8a37169f522fd0cf2ae59d0e0fc1c81daae1",
-         intel: "6413eff7e900e3f7db98cd8e8d455a8471d80e90db6f442994e10d17754baee0"
+  version "11.0.30.1,11.0.30,7.1,openj9-0.57.0"
+  sha256 arm:   "95ca54a8082534ae4bb32e2c885fbb4fed4f4519f5cac619314b254de66c28c9",
+         intel: "4b3f3adadcb025e109ad589e29b2959ba5cdc1f56b74bea8d2acf07f8d1eb054"
 
-  url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version.csv.first}_#{version.csv.second}/ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first.tr("+", "_")}_#{version.csv.second}.pkg",
+  url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version.csv.second}%2B#{version.csv.third}_#{version.csv.fourth}/ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first}.pkg",
       verified: "github.com/ibmruntimes/semeru#{version.major}-binaries/"
   name "IBM Semeru Runtime (JDK 11) Open Edition"
   desc "Production-ready JDK with the OpenJDK class libraries and the Eclipse OpenJ9 JVM"
-  homepage "https://developer.ibm.com/languages/java/semeru-runtimes"
+  homepage "https://developer.ibm.com/languages/semeru-runtimes/"
 
   livecheck do
     url :url
-    regex(/^jdk[._-](\d+(?:[.+]\d+)*)[._-](.+?)$/i)
+    regex(%r{
+      /jdk[._-]v?(\d+(?:\.\d+)*)%2B(\d+(?:\.\d+)*)[._-]([^/]+)/
+      ibm[._-]semeru[._-]open[._-]jdk[._-]#{arch}[._-]mac[._-]v?(\d+(?:\.\d+)+)\.pkg
+    }ix)
     strategy :github_latest do |json, regex|
-      json["tag_name"]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
+      json["assets"]&.map do |asset|
+        match = asset["browser_download_url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[4]},#{match[1]},#{match[2]},#{match[3]}"
+      end
     end
   end
 
-  pkg "ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first.tr("+", "_")}_#{version.csv.second}.pkg"
+  pkg "ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first}.pkg"
 
   uninstall pkgutil: "net.ibm-semeru-open.#{version.major}.jdk"
 
