@@ -12,11 +12,9 @@ cask "reflex-app" do
     regex(/href=.*?reflex[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on macos: ">= :sonoma"
+
   app "Reflex.app"
 
   zap trash: "~/Library/Preferences/com.stuntsoftware.Reflex.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end
