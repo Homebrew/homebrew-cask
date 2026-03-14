@@ -1,6 +1,6 @@
 cask "qownnotes" do
-  version "26.3.9"
-  sha256 "71adfeaafbee4eaaa9100e5dce1c98a2b207ea325f5a61a660a457257b33c79d"
+  version "26.3.10"
+  sha256 "9c117a6420f2be48759e746195ec705226b0b2b3cb54b3cdafcf65155fbaa30e"
 
   url "https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
       verified: "github.com/pbek/QOwnNotes/"
