@@ -1,6 +1,6 @@
 cask "reflex-app" do
-  version "1.2"
-  sha256 "5a192115954a28dccf29ea91a41f226af724ac1ff329362e26fc495073e0424a"
+  version "2.0"
+  sha256 "7f2b92670e723541e65cd3f6dfec637d35b6f009e86cd04ac420bb536ddb4592"
 
   url "https://stuntsoftware.com/download/reflex_#{version}.zip"
   name "Reflex"
