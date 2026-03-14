@@ -17,6 +17,8 @@ cask "electronmail" do
   app "electron-mail.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/github.comvladimiryelectronmail.sfl*",
+    "~/Library/Application Support/electron-mail",
     "~/Library/Logs/ElectronMail",
     "~/Library/Preferences/github.comvladimiryElectronMail.plist",
     "~/Library/Saved Application State/github.comvladimiryElectronMail.savedState",
