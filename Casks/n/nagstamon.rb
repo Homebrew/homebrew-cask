@@ -1,9 +1,9 @@
 cask "nagstamon" do
   arch arm: "ARM", intel: "Intel"
 
-  version "3.18.1"
-  sha256 arm:   "b6f014811dfab97924755a5a91a7a9f64f8f068e675cfc9b56c72791f61e16f3",
-         intel: "043734b8748e5b3cfd17d78b3257f8282f77e85a76493778b96461b9848b5ad6"
+  version "3.18.2"
+  sha256 arm:   "c15cc9002635cc26e6ee496ab6b89ff3f453b9b9697f40a4b9bfa042a07772c7",
+         intel: "1ff751ed5b8801527f916a979a92e36228d4022499736ac6d5874a1d791c949b"
 
   url "https://github.com/HenriWahl/Nagstamon/releases/download/v#{version}/Nagstamon-#{version}-#{arch}.dmg",
       verified: "github.com/HenriWahl/Nagstamon/"
