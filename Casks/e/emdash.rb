@@ -16,8 +16,8 @@ cask "emdash" do
   app "emdash.app"
 
   zap trash: [
-    "/Library/Logs/emdash",
-    "/Library/Saved Application State/com.emdash.savedState",
+    "~/Library/Logs/emdash",
+    "~/Library/Saved Application State/com.emdash.savedState",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.emdash.sfl*",
     "~/Library/Application Support/Emdash",
     "~/Library/Preferences/com.emdash.plist",
