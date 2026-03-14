@@ -1,12 +1,11 @@
 cask "nucleo" do
   arch arm: "-silicon"
 
-  version "4.1.9"
-  sha256 arm:   "d6c51a38ddde4396a27e0ea7ea284725030857cb7cd4ef5d97a51ceb840b0f19",
-         intel: "72d3bb44291a27a565a4557a91705fac6735bfd5297a220159153e6e5a236a82"
+  version "4.2.0"
+  sha256 arm:   "47bb642f3d0491326ae71096be3a5f97f5c3c997bdd2017669a1109bd90c10fd",
+         intel: "d0cc44fc77642cd37fa0236b30a5d5f9404259db76ef2aa48ab916f80dc41a2f"
 
-  url "https://nucleo-app-releases.s3.amazonaws.com/mac#{arch}/Nucleo_#{version}.zip",
-      verified: "nucleo-app-releases.s3.amazonaws.com/"
+  url "https://downloads.nucleoapp.com/mac#{arch}/Nucleo_#{version}.zip"
   name "Nucleo"
   desc "Icon manager and library"
   homepage "https://nucleoapp.com/"
