@@ -1,6 +1,6 @@
 cask "retrace" do
-  version "0.8.0"
-  sha256 "1e2bb99d470ac86338c51fb5bcdad1ffad29705778b838c0d6dcaf972b2d9987"
+  version "0.8.5"
+  sha256 "a6ce513bb1dc64e5d964b8d11809e65b32c9caf22e56054df6ef91ff2878fbec"
 
   url "https://cdn.retrace.to/Retrace-v#{version}.dmg"
   name "Retrace"
