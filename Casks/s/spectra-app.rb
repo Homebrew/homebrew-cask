@@ -11,11 +11,6 @@ cask "spectra-app" do
   desc "OpenSpec document management desktop app"
   homepage "https://spectra.5xcamp.us/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
 
   app "Spectra.app"
