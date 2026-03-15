@@ -1,8 +1,11 @@
 cask "ulaa" do
-  version "2.41.0"
-  sha256 :no_check
+  arch arm: "arm64", intel: "x64"
 
-  url "https://ulaa.com/release/mac/stable/arm64/latest?isDownload=true"
+  version "2.41.0"
+  sha256 arm:   "b921095dcedaebf3465381c2fe32909f8b49fb6f8b88ba06ba247291b233b51e",
+         intel: "f92815f7f64197604422bd37f3ff1aba44fc047d1272ac044860b18f69d5cbdf"
+
+  url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg"
   name "Ulaa Browser"
   desc "Privacy-centric browser with advanced tracking protection"
   homepage "https://ulaa.com/"
