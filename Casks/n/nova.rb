@@ -18,6 +18,9 @@ cask "nova" do
   depends_on macos: ">= :ventura"
 
   app "Nova.app"
+  binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
+  zsh_completion "#{appdir}/Nova.app/Contents/Resources/nova_completions.txt",
+                 target: "_nova"
 
   uninstall delete: [
     "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
