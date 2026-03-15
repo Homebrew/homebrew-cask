@@ -5,6 +5,10 @@ cask "visual-paradigm-ce" do
   sha256 arm:   "c08047bdb35774112b963a3d3dc10cf96ed9b124ac28814d9c40003df5cec71b",
          intel: "25f4f5b534e5b6e109b5ded5ce50b8cce0362840cca255c20d2f84b67249a00f"
 
+  on_arm do
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  end
+
   url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm Community Edition"
   desc "UML, SysML, BPMN modelling platform"
@@ -20,8 +24,6 @@ cask "visual-paradigm-ce" do
       "#{match[1]},#{match[2]}"
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   # Renamed to avoid conflict with visual-paradigm.
   app "Visual Paradigm.app", target: "Visual Paradigm CE.app"
