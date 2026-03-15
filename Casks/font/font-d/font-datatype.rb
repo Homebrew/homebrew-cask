@@ -2,9 +2,10 @@ cask "font-datatype" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/datatype/Datatype%5Bwdth%2Cwght%5D.ttf"
+  url "https://github.com/google/fonts/raw/main/ofl/datatype/Datatype%5Bwdth%2Cwght%5D.ttf",
+      verified: "github.com/google/fonts/"
   name "Datatype"
-  homepage "https://github.com/franktisellano/datatype"
+  homepage "https://fonts.google.com/specimen/Datatype"
 
   font "Datatype[wdth,wght].ttf"
 
