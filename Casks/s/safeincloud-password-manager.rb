@@ -7,10 +7,7 @@ cask "safeincloud-password-manager" do
   desc "Cross-platform AES-256 password manager"
   homepage "https://www.safe-in-cloud.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2026-03-15", because: :moved_to_mas
 
   app "SafeInCloud Password Manager.app"
 
