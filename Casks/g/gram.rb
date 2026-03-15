@@ -8,7 +8,7 @@ cask "gram" do
   url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/Gram-mac-#{arch}-#{version}.dmg",
       verified: "codeberg.org/GramEditor/"
   name "Gram"
-  desc "Code editor focused on stability, without AI, subscsriptions, or telemetry"
+  desc "Code editor focused on stability, without AI, subscriptions, or telemetry"
   homepage "https://gram.liten.app/"
 
   depends_on macos: ">= :catalina"
