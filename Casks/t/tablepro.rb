@@ -1,9 +1,9 @@
 cask "tablepro" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.18.1"
-  sha256 arm:   "f5f026a6c765990d10fa2030bf579da78e0c45513a1c4f0a6d1bcc11fdfc2df6",
-         intel: "09193a080fe373f63bebc4abfd9805c7dc5f4a914abad0da9a570ad1f5af35b7"
+  version "0.19.0"
+  sha256 arm:   "e830c193cc3e80547ec4be7f7d6059c087b7bfa5960aaf87f56997bf17047ed0",
+         intel: "e149a4f49545a9d32f0137a11129a8622e8a229f7bfee04084448e0b54c40203"
 
   url "https://github.com/datlechin/TablePro/releases/download/v#{version}/TablePro-#{version}-#{arch}.dmg",
       verified: "github.com/datlechin/TablePro/"
