@@ -1,6 +1,6 @@
 cask "xkey" do
-  version "1.2.21,20260314"
-  sha256 "277d61d3a511afef24ebe63a62b2144c8281eabae89cd900bff5969106c28d14"
+  version "1.2.21,20260315"
+  sha256 "d0ac19a37f83695b20071db0204e5fcd662cffeade4e2f0550a508937536704e"
 
   url "https://github.com/xmannv/xkey/releases/download/v#{version.csv.first}-#{version.csv.second}/XKey.dmg"
   name "XKey"
@@ -13,7 +13,7 @@ cask "xkey" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :monterey"
 
   app "XKey.app"
 
