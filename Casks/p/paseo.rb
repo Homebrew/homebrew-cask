@@ -14,6 +14,7 @@ cask "paseo" do
   depends_on macos: ">= :ventura"
 
   app "Paseo.app"
+  binary "#{appdir}/Paseo.app/Contents/MacOS/Paseo", target: "paseo"
 
   zap trash: [
     "~/Library/Application Support/dev.paseo.desktop",
