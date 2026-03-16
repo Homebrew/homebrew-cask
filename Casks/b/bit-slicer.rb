@@ -1,6 +1,6 @@
 cask "bit-slicer" do
-  version "1.9.0"
-  sha256 "da1f6f9b33cbf86bda4b73d79826e2862234c7e658d442f67ae621aac0a95bdf"
+  version "1.9.1"
+  sha256 "f415616ab804e4bccd6d1069907ef1f16bdd2626266d9bec9723225a00b25524"
 
   url "https://github.com/zorgiepoo/Bit-Slicer/releases/download/#{version}/Bit.Slicer.dmg"
   name "Bit Slicer"
