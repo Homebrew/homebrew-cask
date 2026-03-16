@@ -1,5 +1,5 @@
 cask "mx-power-gadget" do
-  version "1.6"
+  version "1.6.1"
   sha256 :no_check
 
   url "https://www.seense.com/menubarstats/mxpg/updateapp/mxpg.zip"
