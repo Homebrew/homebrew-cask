@@ -18,11 +18,6 @@ cask "boxcryptor" do
   on_monterey :or_newer do
     version "3.13.680"
     sha256 "b2f4ba62013636bd2db3685eb7c3d9dae3a919eee25b09945ccdc95a9146b05d"
-
-    livecheck do
-      url "https://www.boxcryptor.com/l/download-macosx"
-      strategy :header_match
-    end
   end
 
   url "https://downloads.boxcryptor.com/boxcryptor/mac/Boxcryptor_v#{version}_Installer.dmg"
