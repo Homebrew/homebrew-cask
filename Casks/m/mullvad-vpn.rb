@@ -19,7 +19,7 @@ cask "mullvad-vpn" do
 
   auto_updates true
   conflicts_with cask: "mullvad-vpn@beta"
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :monterey"
 
   pkg "MullvadVPN-#{version}.pkg"
 
