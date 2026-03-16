@@ -1,6 +1,6 @@
 cask "affinity" do
-  version "3.0.3,4027"
-  sha256 "c16f45f4596b61f779ee237ee2f11fd10fc61569e7a7643a94b481e46494d7ff"
+  version "3.1.0,4231"
+  sha256 "3d539e2a32d8d2d9778f5375519b7a3e72ef46ecc983965bc98c99d6e62c6f2e"
 
   url "https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Affinity%20Store%20#{version.csv.second}.zip",
       verified: "affinity-update.s3.amazonaws.com/"
