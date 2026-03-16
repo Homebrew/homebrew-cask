@@ -1,5 +1,5 @@
 cask "fidelity-trader+" do
-  version :latest
+  version "4.4.1"
   sha256 :no_check
 
   url "https://digital.fidelity.com/stgw/digital/atp-mac/FidelityTraderPlus.pkg"
