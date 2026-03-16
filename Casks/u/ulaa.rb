@@ -12,11 +12,9 @@ cask "ulaa" do
   homepage "https://ulaa.com/"
 
   livecheck do
-    url "https://ulaa.com/release/mac/stable/arm64/latest?isDownload=true"
-    strategy :header_match do |headers|
-      match = headers["location"]&.match(/Ulaa[._-]Browser[._-]v?(\d+(?:\.\d+)+)/i)
-      match&.captures&.first
-    end
+    url "https://ulaa.com/release/mac/stable/#{arch}/latest?isDownload=true"
+    regex(/Ulaa[._-]Browser[._-]v?(\d+(?:\.\d+)+)/i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :monterey"
