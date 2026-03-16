@@ -19,7 +19,12 @@ cask "voicemod" do
 
   pkg "Voicemod_#{version}-#{arch}.pkg"
 
-  uninstall pkgutil: "net.voicemod.voicemod"
+  uninstall quit:    "net.voicemod.desktop",
+            pkgutil: [
+              "com.voicemod.desktop",
+              "net.voicemod.desktop",
+              "net.voicemod.voicemod",
+            ]
 
   zap trash: [
     "~/Library/Application Support/Voicemod",
