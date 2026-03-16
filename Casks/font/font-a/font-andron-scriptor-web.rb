@@ -6,11 +6,6 @@ cask "font-andron-scriptor-web" do
   name "Andron Scriptor Web"
   homepage "https://folk.uib.no/hnooh/mufi/fonts/"
 
-  livecheck do
-    url :homepage
-    regex(/AND[._-]SCR[._-]WEB[._-]v?(\d+(?:\.\d+)+)\.zip/i)
-  end
-
   disable! date: "2026-01-24", because: :no_longer_available
 
   font "AND_SCR_WEB_#{version}/Andron Scriptor Web.ttf"
