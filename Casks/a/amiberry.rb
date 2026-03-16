@@ -13,6 +13,8 @@ cask "amiberry" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :sequoia"
+
   app "Amiberry.app"
 
   zap trash: "~/Library/Application Support/Amiberry"
