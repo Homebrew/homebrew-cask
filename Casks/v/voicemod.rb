@@ -17,6 +17,8 @@ cask "voicemod" do
     end
   end
 
+  auto_updates true
+
   pkg "Voicemod_#{version}-#{arch}.pkg"
 
   uninstall quit:    "net.voicemod.desktop",
