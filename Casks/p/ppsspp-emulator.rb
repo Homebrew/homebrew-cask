@@ -1,6 +1,6 @@
 cask "ppsspp-emulator" do
-  version "1.20.2"
-  sha256 "efc337a0d3575184f8b29d757ecc6a204456349cbefe2b3c5a70616af8630837"
+  version "1.20.3"
+  sha256 "141bab69f5b6894e4bedaf90905c87fac7dd887106297c940b2984d2a4523a87"
 
   url "https://www.ppsspp.org/files/#{version.dots_to_underscores}/PPSSPP_macOS.dmg"
   name "PPSSPP"
