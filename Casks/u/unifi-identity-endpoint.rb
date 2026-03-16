@@ -1,6 +1,6 @@
 cask "unifi-identity-endpoint" do
-  version "3.6.0,96918512-1d16-4410-bc24-5d60a514cd52,c816"
-  sha256 "d131daaa870970042a484a8e153a561e400dc04a28f83eb77259103d38e3cb4d"
+  version "3.6.1,bc43dfbc-7c53-47f3-82eb-917c2fa92c93,63e6"
+  sha256 "6afd025fd177cb8a8b3fe6d8638e8dff8fa87a6771794296edec484e524d41f4"
 
   url "https://fw-download.ubnt.com/data/uid-identity-standard-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
       verified: "fw-download.ubnt.com/data/uid-identity-standard-desktop-app/"
