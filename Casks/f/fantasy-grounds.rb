@@ -7,6 +7,7 @@ cask "fantasy-grounds" do
   homepage "https://www.fantasygrounds.com/home/home.php"
 
   deprecate! date: "2025-03-15", because: :discontinued
+  disable! date: "2026-03-16", because: :discontinued
 
   app "Fantasy Grounds.app"
 
