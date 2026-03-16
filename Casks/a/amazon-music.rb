@@ -6,11 +6,9 @@ cask "amazon-music" do
       verified: "d2j9xt6n9dg5d3.cloudfront.net/mac/"
   name "Amazon Music"
   desc "Desktop client for Amazon Music"
-  homepage "https://www.amazon.com/musicapps"
+  homepage "https://music.amazon.com/"
 
   livecheck do
-    # The download page does not provide a version number
-    # The version number of the artifact corresponds with the installer, not the application
     skip "No version information available"
   end
 
