@@ -1,9 +1,18 @@
 cask "deltawalker" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.7.0"
-  sha256 arm:   "804c509f0813e28c3b960a24ab57f200331ba2333ed9ef9dee479f29ac3bf554",
-         intel: "e1000806db159cd760fd4d812f475581851d5c02a6f4f7bc1040835bcc6668ad"
+  version "2.8.0"
+  sha256 arm:   "e6d0b2e8617902fc05b1516c4209ee23bf42fc20dd3dc30d7605fdb3e1649976",
+         intel: "4f897341924bf65b3cbe76361c5fe9c0d4d51cf63cbdcd46fc3ed5a551cc7528"
+
+  # The uninstall script is not present in the intel version.
+  on_arm do
+    uninstall script: {
+      executable:   "#{staged_path}/run-me-first.command",
+      sudo:         false,
+      must_succeed: false,
+    }
+  end
 
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg",
       verified: "deltawalker.s3.amazonaws.com/"
@@ -16,13 +25,9 @@ cask "deltawalker" do
     regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)_#{arch}\.dmg/i)
   end
 
-  app "DeltaWalker.app"
+  depends_on macos: ">= :big_sur"
 
-  uninstall script: {
-    executable:   "#{staged_path}/run-me-first.command",
-    sudo:         false,
-    must_succeed: false,
-  }
+  app "DeltaWalker.app"
 
   zap trash: [
     "~/Library/Caches/com.deltopia.DeltaWalker",
