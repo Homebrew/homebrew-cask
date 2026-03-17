@@ -27,7 +27,7 @@ cask "microsoft-teams" do
 
   auto_updates true
   conflicts_with cask: "microsoft-office-businesspro"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   pkg "MicrosoftTeams.pkg",
       choices: [
