@@ -31,10 +31,10 @@ cask "codelite" do
       end
     end
     on_sequoia :or_newer do
-      arch arm: "macOS_15.6.1-arm64"
+      arch arm: "macOS_26.1-arm64"
 
-      version "18.2.0"
-      sha256 "49f919ebed4cf42e49275dc89b5df12bc14cbd4b435f07dbcdaeddef4849a9df"
+      version "18.3.0"
+      sha256 "81c6ec0e705aa936cabffb564d546b6fdf20cf6605a3dd9667270e58543584b9"
 
       livecheck do
         url "https://downloads.codelite.org/"
@@ -63,6 +63,8 @@ cask "codelite" do
   name "CodeLite"
   desc "IDE for C, C++, PHP and Node.js"
   homepage "https://codelite.org/"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :monterey"
 
