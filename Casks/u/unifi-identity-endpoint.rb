@@ -19,6 +19,7 @@ cask "unifi-identity-endpoint" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   pkg "#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
@@ -30,5 +31,7 @@ cask "unifi-identity-endpoint" do
             ],
             quit:      "com.ui.uid.standard-desktop",
             pkgutil:   "com.ui.uid.standard-desktop",
-            delete:    "/Applications/Identity.app"
+            delete:    "/Applications/UniFi Endpoint.app"
+
+  zap trash: "~/Library/Application Support/com.ui.uid.standard-desktop"
 end
