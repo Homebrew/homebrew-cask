@@ -14,6 +14,14 @@ cask "slack-cli" do
         verified: "downloads.slack-edge.com/slack-cli/"
   end
 
+  on_linux do
+    version "3.14.0"
+    sha256 "9f4bce2953a227208eb343ae098154a4489cb31a03dc73df05cb4ccb0270581d"
+
+    url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_linux_64-bit.tar.gz",
+        verified: "downloads.slack-edge.com/slack-cli/"
+  end
+
   livecheck do
     url "https://api.slack.com/slackcli/metadata.json"
     strategy :json do |json|
@@ -23,5 +31,7 @@ cask "slack-cli" do
 
   binary "bin/slack"
 
-  # No zap stanza required
+  zap trash: [
+    "~/.slack",
+  ]
 end
