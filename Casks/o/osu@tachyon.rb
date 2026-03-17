@@ -1,9 +1,9 @@
 cask "osu@tachyon" do
   arch arm: "Apple.Silicon", intel: "Intel"
 
-  version "2026.311.0-tachyon"
-  sha256 arm:   "09b0097ca2071d4fe95c3ba8f719d978fc9940fefe30c93e9a6a39983c7dec12",
-         intel: "8bf456afdb75b795e2b4c11218ddffbdf04456bbee4c3fba24edd4675be88f28"
+  version "2026.318.0-tachyon"
+  sha256 arm:   "91ee667fd7fbbaa2cadc05a4816163287d901ac4f16d1be8b56623da3b8afe31",
+         intel: "111f96ddca89eb4153f1af32c9167c4af370cab6b768408727754b701803c727"
 
   url "https://github.com/ppy/osu/releases/download/#{version}/osu.app.#{arch}.zip"
   name "osu! (tachyon)"
