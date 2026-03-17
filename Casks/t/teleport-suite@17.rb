@@ -1,16 +1,18 @@
 cask "teleport-suite@17" do
-  version "17.7.19"
-  sha256 "5ada804e1ace296e9665ed6d7c61a0297d12bb508e265096871a5e90458d16d0"
+  version "17.7.21"
+  sha256 "44b9ded5ec5fafcb3db82a86a9d7d9b21c8d3fe4699103ea976cb70bd8e7d3fd"
 
-  url "https://cdn.teleport.dev/teleport-tools-#{version}.pkg",
+  url "https://cdn.teleport.dev/teleport-#{version}.pkg",
       verified: "cdn.teleport.dev/"
   name "Teleport"
   desc "Modern SSH server for teams managing distributed infrastructure"
   homepage "https://goteleport.com/"
 
+  # 17.x versions are found in an array of JavaScript strings on the page.
   livecheck do
-    url "https://github.com/gravitational/teleport/"
-    regex(/^v?(17(?:\.\d+)+)$/i)
+    url "https://goteleport.com/download/all-downloads/",
+        user_agent: :browser
+    regex(/["']v?(17(?:\.\d+)+)["']/i)
   end
 
   # Support window taken from https://goteleport.com/docs/upcoming-releases/
@@ -22,7 +24,7 @@ cask "teleport-suite@17" do
     "tsh",
   ]
 
-  pkg "teleport-tools-#{version}.pkg"
+  pkg "teleport-#{version}.pkg"
 
   uninstall pkgutil: [
               "(.*).com.gravitational.teleport.tctl",
