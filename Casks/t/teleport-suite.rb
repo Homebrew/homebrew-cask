@@ -9,13 +9,14 @@ cask "teleport-suite" do
   homepage "https://goteleport.com/"
 
   livecheck do
-    url "https://goteleport.com/download/",
+    url "https://goteleport.com/download/all-downloads/",
         user_agent: :browser
     regex(/teleport[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   conflicts_with cask: [
     "teleport-suite@16",
+    "teleport-suite@17",
     "tsh",
   ]
 
