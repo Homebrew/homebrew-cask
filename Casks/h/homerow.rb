@@ -1,6 +1,6 @@
 cask "homerow" do
-  version "1.5.0"
-  sha256 "057a5a23f023f0b8db84a0a8bb52d36bda8c915b93208a851fb0e1e237da168c"
+  version "1.5.1"
+  sha256 "37ee3cb8663c9997cc38b5bec151bd4f2be99a295004aa5916e809381f6dfd40"
 
   url "https://builds.homerow.app/v#{version}/Homerow.zip"
   name "Homerow"
