@@ -2,9 +2,9 @@ cask "zoho-mail" do
   arch arm: "arm64-"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "1.8.0"
-  sha256 arm:   "2e56ece49deb63cabb198153d08a971b176932f2bd07272c7c5df0e11c1ffd36",
-         intel: "0354b438dd5911991d2b1bde39b98aa78947b53784db73ead560425d9c91c0b2"
+  version "1.9.0"
+  sha256 arm:   "6988fa22caed7ff6b5763733b3a30d1694d22b00017721cbb4d1c33b6607ea9d",
+         intel: "6bc6128cdca49c0c9553f228320bd706efd85fdeb12a054075eb8a5677c552a6"
 
   url "https://downloads.zohocdn.com/zmail-desktop/mac/zoho-mail-desktop-lite-installer-#{arch}v#{version}.dmg",
       verified: "downloads.zohocdn.com/zmail-desktop/mac/"
