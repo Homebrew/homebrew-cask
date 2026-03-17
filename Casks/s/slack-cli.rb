@@ -23,7 +23,7 @@ cask "slack-cli" do
   end
 
   livecheck do
-    url "https://api.slack.com/slackcli/metadata.json"
+    url "https://docs.slack.dev/tools/metadata.json"
     strategy :json do |json|
       json.dig("slack-cli", "releases")&.map { |release| release["version"] }
     end
@@ -31,7 +31,5 @@ cask "slack-cli" do
 
   binary "bin/slack"
 
-  zap trash: [
-    "~/.slack",
-  ]
+  zap trash: "~/.slack"
 end
