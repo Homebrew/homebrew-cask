@@ -2,9 +2,9 @@ cask "feed-the-beast" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x64"
 
-  version "1.29.4"
-  sha256 arm:   "5611137adece4d82828c60d16c4fc565f474e10281371c999ba9243ba2177b62",
-         intel: "2b7f8d02e3d30baa4f8969161d783fc6d9c0b8f3d49e4f052309a95be21b003c"
+  version "1.29.5"
+  sha256 arm:   "06de3a86ede0a26dfb1a488033650020b75b5dd60c7cd526310378f980ac6c5a",
+         intel: "c48695d541544d491ad1bf0553b202d4d80ec517ce44f749931db05244a86c71"
 
   url "https://piston.feed-the-beast.com/app/ftb-app-macos-#{version}-#{arch}.dmg"
   name "Feed the Beast"
