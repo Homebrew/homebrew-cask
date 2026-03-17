@@ -1,6 +1,6 @@
 cask "holavpn" do
-  version "3.7,1.250.138"
-  sha256 "7ace0b774105ace9fd97b436a1601f4883dea5f49becabf5c12989f1cf6067a0"
+  version "3.7,1.251.91"
+  sha256 "7688768cf786b1d7f41ae07defeed424034aa53334109ee607c975a672d51d49"
 
   url "https://cdn4.hola.org/static/HolaVPN2E-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Hola VPN"
