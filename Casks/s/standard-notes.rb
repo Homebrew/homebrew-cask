@@ -1,9 +1,9 @@
 cask "standard-notes" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.201.19"
-  sha256 arm:   "170b836d50d2d1a07a4227f49fcc114ae0793884aa2b11c93f4d54f2556d0062",
-         intel: "a14085cce017b498c9be4b50fe1c301d1738081e6ad2abf1ecf38c65c193885c"
+  version "3.201.21"
+  sha256 arm:   "192c92d0889dc5b0fbfbd6194d1064afffc06b5d20fe971c1e795aa90e0fdcee",
+         intel: "d2b284b6276b65f25af689d7bd42b8d1b8362539a7f2a9ee4a46561a4ec53242"
 
   url "https://github.com/standardnotes/app/releases/download/%40standardnotes%2Fdesktop%40#{version}/standard-notes-#{version}-mac-#{arch}.zip",
       verified: "github.com/standardnotes/app/"
