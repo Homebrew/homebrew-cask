@@ -1,13 +1,6 @@
 cask "cmake-app" do
-  version "4.2.3"
-  sha256 "d3ac47185cbad9e264d7afac18eb964139f90a641f8442189e64d1da388f120d"
-
-  on_arm do
-    depends_on macos: ">= :big_sur"
-  end
-  on_intel do
-    depends_on macos: ">= :catalina"
-  end
+  version "4.3.0"
+  sha256 "fd01c26fc9ed86e31ab808797ab7ece4a71eb1e705d1d2c12d814b2198add4ae"
 
   url "https://cmake.org/files/v#{version.major_minor}/cmake-#{version}-macos-universal.dmg"
   name "CMake"
@@ -18,6 +11,8 @@ cask "cmake-app" do
     url "https://cmake.org/files/LatestRelease/"
     regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]universal\.dmg/i)
   end
+
+  depends_on macos: ">= :monterey"
 
   app "CMake.app"
   binary "#{appdir}/CMake.app/Contents/bin/ccmake"
