@@ -18,7 +18,7 @@ cask "conductor" do
 
   livecheck do
     url "https://cdn.crabnebula.app/update/melty/conductor/darwin-#{arch}/latest"
-    regex(%r{cdn.crabnebula.app/asset/(.+)}i)
+    regex(%r{/asset/([^?/]+)}i)
     strategy :json do |json, regex|
       asset_id = json["url"]&.[](regex, 1)
       version = json["version"]
