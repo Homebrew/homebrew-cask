@@ -9,7 +9,7 @@ cask "dbeaver-enterprise" do
       verified: "downloads.dbeaver.net/enterprise/"
   name "DBeaver Enterprise Edition"
   desc "Universal database tool and SQL client"
-  homepage "https://dbeaver.com/"
+  homepage "https://dbeaver.com/dbeaver-enterprise/"
 
   livecheck do
     url "https://dbeaver.com/product/dbeaver-ee-version.xml"
