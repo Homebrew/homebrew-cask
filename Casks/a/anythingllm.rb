@@ -1,7 +1,7 @@
 cask "anythingllm" do
   arch arm: "-Silicon"
 
-  version "1.11.1"
+  version "1.11.2"
   sha256 :no_check
 
   url "https://cdn.anythingllm.com/latest/AnythingLLMDesktop#{arch}.dmg",
