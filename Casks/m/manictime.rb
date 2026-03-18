@@ -24,6 +24,8 @@ cask "manictime" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   pkg "ManicTime.pkg"
 
   uninstall pkgutil: "com.finkit.manictime.tracker"
