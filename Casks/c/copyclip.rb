@@ -1,6 +1,6 @@
 cask "copyclip" do
-  version "3.986"
-  sha256 "5d481068b7445d571f2a3c39975d9bab69183ad4e87daf55d3cc0fe358fd46c9"
+  version "3.987"
+  sha256 "94075b0a93355f5d01a2b0c7422b5deb1af72a07bc857de221a943a74fe802f3"
 
   url "https://fiplab.com/updates/copyclip2/CopyClip-2-#{version}.zip"
   name "CopyClip"
