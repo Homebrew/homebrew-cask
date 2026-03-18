@@ -1,8 +1,8 @@
 cask "feedflow" do
-  version "1.10.0"
-  sha256 "dfbcaa2d7623ee0b3d35793c9dc75946b65c17b3ddb754afe9cbe62266baedfa"
+  version "1.11.1,windows"
+  sha256 "8e98011bc4fa380cdac984174b6b75cb4117723dc36d7632d4c77dbb33789ef1"
 
-  url "https://github.com/prof18/feed-flow/releases/download/#{version}-all/FeedFlow-#{version}.dmg",
+  url "https://github.com/prof18/feed-flow/releases/download/#{version.csv.first}-#{version.csv.second}/FeedFlow-#{version.csv.first}.dmg",
       verified: "github.com/prof18/feed-flow/"
   name "FeedFlow"
   desc "RSS reader"
@@ -10,7 +10,15 @@ cask "feedflow" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(%r{/v?(\d+(?:\.\d+)+)(?:[._-](.+))?/[^/]+\.dmg$}i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.filter_map do |asset|
+        match = asset["browser_download_url"]&.match(regex)
+        next unless match
+
+        match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+      end
+    end
   end
 
   depends_on macos: ">= :monterey"
