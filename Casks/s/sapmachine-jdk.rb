@@ -2,8 +2,8 @@ cask "sapmachine-jdk" do
   arch arm: "aarch64", intel: "x64"
 
   on_arm do
-    version "25.0.2"
-    sha256 "180b88054466b884f1903bb4978a6cdcbce9f11f350c3398b4c4bc7689b40f61"
+    version "26"
+    sha256 "c2115ec2606333d821177d5049236153490765e352a4496b71e105d825c42518"
 
     # The version information on the homepage is rendered client-side from the
     # following JSON file, so we have to check it instead.
