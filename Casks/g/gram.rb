@@ -14,6 +14,7 @@ cask "gram" do
   depends_on macos: ">= :catalina"
 
   app "Gram.app"
+  binary "#{appdir}/Gram.app/Contents/MacOS/cli", target: "gram"
 
   zap trash: [
     "~/Library/Application Support/Gram",
