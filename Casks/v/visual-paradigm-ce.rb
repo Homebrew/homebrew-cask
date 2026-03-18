@@ -1,9 +1,9 @@
 cask "visual-paradigm-ce" do
   arch arm: "AArch64", intel: "WithJRE"
 
-  version "18.0,20260303"
-  sha256 arm:   "c08047bdb35774112b963a3d3dc10cf96ed9b124ac28814d9c40003df5cec71b",
-         intel: "25f4f5b534e5b6e109b5ded5ce50b8cce0362840cca255c20d2f84b67249a00f"
+  version "18.0,20260311"
+  sha256 arm:   "540e2ef3810b22e73bd6880f62cba3705a3661f0d5438c3a988bf1f6ea71ff2c",
+         intel: "55424d16dbe6069af37e30f9db8d799dc08723c8444957bfecf94b2fdca654cd"
 
   on_arm do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
