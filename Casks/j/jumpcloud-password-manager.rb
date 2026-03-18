@@ -1,9 +1,9 @@
 cask "jumpcloud-password-manager" do
   arch arm: "arm64/"
 
-  version "3.3.41"
-  sha256 arm:   "022ef12851245e9eab0796d28d2fbe64f7d78199ab962b221827777de62a654e",
-         intel: "f0c0655b26a848c0837a56f6c62f318f992273f90893487ccdb53fc647562ad9"
+  version "3.3.44"
+  sha256 arm:   "f569a324fe92d6537f47d2a7ad334dfe6ea4f894b05bbc0a338112cebb1a6d88",
+         intel: "beeb5b9c76cb2a7798db2544dea98ee313d79e607feed12d45c294bd6ffa5bb2"
 
   url "https://cdn.pwm.jumpcloud.com/DA/release/#{arch}JumpCloud-Password-Manager-#{version}.dmg"
   name "JumpCloud Password Manager"
