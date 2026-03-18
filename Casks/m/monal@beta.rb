@@ -4,7 +4,7 @@ cask "monal@beta" do
 
   url "https://downloads.monal-im.org/monal-im/beta/macOS/Monal-#{version}.zip"
   name "Monal"
-  desc "Tool to securely connect to chat servers"
+  desc "XMPP chat client"
   homepage "https://monal-im.org/"
 
   livecheck do
