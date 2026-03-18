@@ -1,5 +1,5 @@
 cask "sony-ps-remote-play" do
-  version "8.5.2"
+  version "9.0.0"
   sha256 :no_check
 
   url "https://remoteplay.dl.playstation.net/remoteplay/module/mac/RemotePlayInstaller.pkg"
@@ -13,6 +13,8 @@ cask "sony-ps-remote-play" do
       json["version"]
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   pkg "RemotePlayInstaller.pkg"
 
