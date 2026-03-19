@@ -24,8 +24,4 @@ cask "beersmith" do
     "~/Library/Preferences/BeerSmith-LLC.BeerSmith.*.plist",
     "~/Library/Saved Application State/BeerSmith-LLC.BeerSmith.*.savedStat",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
