@@ -1,6 +1,6 @@
 cask "instantview" do
-  version "3.24,R0001"
-  sha256 "5de29be865d99580100689f8a633ff729909e13fb440e8304e357816dfc225ca"
+  version "3.24,R0004"
+  sha256 "968cd5ca428ad5e754425c3134acbf1b230a8ec41a5de47d5d5a1abbbd81c218"
 
   url "https://www.siliconmotion.com/downloads/macOS_InstantView_V#{version.csv.first}#{version.csv.second}.dmg"
   name "SiliconMotion InstantView"
