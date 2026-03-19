@@ -1,9 +1,9 @@
 cask "session" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.17.14"
-  sha256 arm:   "5f02b0bd8ba2ef941717614271348c36e1b1c1886dbb0e8f9204f89987a531b5",
-         intel: "020db9068c174d52f3e9d63d62485a09b57f2afc3ee228e91a68957b60abb84d"
+  version "1.17.15"
+  sha256 arm:   "39953286fab1281a0ef7195ea363f166a6ca83ba30efa96354f9ee7ec35619f8",
+         intel: "f4a0a32c72a156ef0b1583de80c9ad2d9380f98165f926e61429ce3a2a9b482a"
 
   url "https://github.com/session-foundation/session-desktop/releases/download/v#{version}/session-desktop-mac-#{arch}-#{version}.dmg",
       verified: "github.com/session-foundation/session-desktop/"
