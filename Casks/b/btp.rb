@@ -2,11 +2,11 @@ cask "btp" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "2.97.0"
-  sha256 arm:          "cf0ac6c08c69d56e58a6582b2ba3d336ac4eab878ec897dc238efee93acb39cc",
-         intel:        "be95bedac5b41100494902738fb7ca24cbbbbd6be25eed48a860cb145c9f3083",
-         arm64_linux:  "260193419b80dc4ed8a3ab5c21a8c63821f01a973f3276afa562e69d3c0935ae",
-         x86_64_linux: "487d02619b9b1c9c3341ab789083ab53d1857ee68e8aa33dc3a9ff6fadc0683f"
+  version "2.106.1"
+  sha256 arm:          "53cf73af5b919dcf9b280b6ef03f28b41b1b9f283f747179e8a4a4e95dbbe3f5",
+         intel:        "81c547b9bb96b5387cb60b6e8edd289857a97bcd940aac286c647de25b72f076",
+         arm64_linux:  "4e978f5101c10e9ddc00822c4a174c23201e4f5375b809e9284fb8863700b686",
+         x86_64_linux: "2faca3810e33697513b7d440230581066ad906667c5f0138885e9ce8c7bb05be"
 
   url "https://tools.hana.ondemand.com/additional/btp-cli-#{os}-#{arch}-#{version}.tar.gz",
       cookies: {
