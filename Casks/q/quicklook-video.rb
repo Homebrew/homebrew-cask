@@ -1,11 +1,11 @@
-cask "qlvideo" do
+cask "quicklook-video" do
   version "3.06"
   sha256 "e05aed1cd29698f64419d9c6ea89e91da20a11d85609912dfef2d04df9116746"
 
-  url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.no_dots}/QLVideo_#{version.no_dots}.dmg"
+  url "https://github.com/Marginal/QuickLookVideo/releases/download/rel-#{version.no_dots}/QLVideo_#{version.no_dots}.dmg"
   name "QuickLook Video"
   desc "Thumbnails, static previews, cover art and metadata for video files"
-  homepage "https://github.com/Marginal/QLVideo"
+  homepage "https://github.com/Marginal/QuickLookVideo"
 
   livecheck do
     url :url
