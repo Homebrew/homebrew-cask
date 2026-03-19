@@ -1,6 +1,6 @@
 cask "fabfilter-micro" do
-  version "1.30"
-  sha256 "47ad660be71beed6ca6e58445e3fadce71ee8185d73ebc6be5f83a62662acded"
+  version "1.31"
+  sha256 "51bbf80b9e7e5e2b27300e10acc3ccaadac4e68e11d3009bb951dc0cc2152d99"
 
   url "https://cdn-b.fabfilter.com/downloads/ffmicro#{version.no_dots}.dmg"
   name "FabFilter Micro"
