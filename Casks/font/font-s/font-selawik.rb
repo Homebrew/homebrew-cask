@@ -4,13 +4,7 @@ cask "font-selawik" do
 
   url "https://github.com/microsoft/Selawik/releases/download/#{version}/Selawik_Release.zip"
   name "Microsoft Selawik"
-  desc "Open-source sans-serif font family, metrics-compatible replacement for Segoe UI"
   homepage "https://github.com/microsoft/Selawik"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   font "selawk.ttf"
   font "selawkb.ttf"
