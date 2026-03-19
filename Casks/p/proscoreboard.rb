@@ -8,8 +8,8 @@ cask "proscoreboard" do
   homepage "https://renewedvision.com/proscoreboard/"
 
   livecheck do
-   url "https://www.renewedvision.com/update/scoreboard.php"
-   strategy :sparkle
+    url "https://www.renewedvision.com/update/scoreboard.php"
+    strategy :sparkle
   end
 
   auto_updates true
