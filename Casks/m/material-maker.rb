@@ -1,6 +1,6 @@
 cask "material-maker" do
-  version "1.5"
-  sha256 "c0c16aae6d440710a294aa7b36c45a432afe06b6382f394b5fd8d494dec7137c"
+  version "1.5p1"
+  sha256 "7e817100611b4f22cf7fc755faef389a7a4838cd264861e8a92e5f32503bb673"
 
   url "https://github.com/RodZill4/material-maker/releases/download/#{version}/material_maker_#{version.dots_to_underscores}.dmg",
       verified: "github.com/RodZill4/material-maker/"
@@ -11,6 +11,7 @@ cask "material-maker" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(/v?(\d+(?:\.\d+)+(?:p\d+)?)/i)
   end
 
   depends_on macos: ">= :big_sur"
