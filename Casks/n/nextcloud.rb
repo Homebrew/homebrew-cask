@@ -12,8 +12,8 @@ cask "nextcloud" do
     end
   end
   on_monterey :or_newer do
-    version "4.0.7"
-    sha256 "6805b4cc1a5af0209ef57b071f6ac6c265ed42af4b60df1c297b796bdf60bd1e"
+    version "4.0.8"
+    sha256 "3bdc71ab5ecb180a24854c6a735b3014f018520135352478ae5722df080a30fc"
 
     url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud-releases/desktop/"
