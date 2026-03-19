@@ -1,6 +1,6 @@
 cask "marginnote" do
-  version "4.2.5"
-  sha256 "0eeba2af745564c4e77cafb302913c4ef5b98efaa98b1d02e8010f461dcd5a9e"
+  version "4.3.0"
+  sha256 "5e13dd835cce20469dcf5569d1a48a07691d793003738317df78cd5412a2dd1b"
 
   url "https://dist.marginnote.cn/MarginNote#{version}.dmg",
       verified: "marginnote.cn/"
@@ -14,7 +14,7 @@ cask "marginnote" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sonoma"
 
   app "MarginNote #{version.major}.app"
 
