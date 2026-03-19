@@ -17,4 +17,6 @@ cask "font-selawik" do
   font "selawkl.ttf"
   font "selawksb.ttf"
   font "selawksl.ttf"
+
+  # No zap stanza required
 end
