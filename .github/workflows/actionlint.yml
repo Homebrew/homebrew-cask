@@ -40,6 +40,8 @@ jobs:
           cask: false
 
       - uses: Homebrew/actions/cache-homebrew-prefix@main
+        # Don't cache the prefix for the formulae.brew.sh repository as it won't download its own JSON API files
+        if: github.repository != 'Homebrew/formulae.brew.sh'
         with:
           install: actionlint shellcheck zizmor
           # Not needed in .github but required for other repositories with multiple uses of cache-homebrew-prefix.
