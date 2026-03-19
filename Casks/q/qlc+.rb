@@ -11,8 +11,8 @@ cask "qlc+" do
   homepage "https://www.qlcplus.org/"
 
   livecheck do
-      url "https://www.qlcplus.org/download"
-      regex(/href=.*?QLC\+[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg/i)
+    url "https://www.qlcplus.org/download"
+    regex(/href=.*?QLC\+[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :monterey"
