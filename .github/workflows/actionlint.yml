@@ -47,6 +47,10 @@ jobs:
           # Not needed in .github but required for other repositories with multiple uses of cache-homebrew-prefix.
           workflow-key: actionlint
 
+      - name: Install tools
+        if: github.repository == 'Homebrew/formulae.brew.sh'
+        run: brew install actionlint shellcheck zizmor
+
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
