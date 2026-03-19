@@ -1,6 +1,6 @@
 cask "nugget" do
-  version "7.2"
-  sha256 "6340f130d48064eca6625e06363f2bdc9091c50878ae0a67b52f6213a32114cc"
+  version "7.3"
+  sha256 "ae0f43b70e7a76cbbd8a93052143dd48f8be42f33aad983fa630c0a92350077c"
 
   url "https://github.com/leminlimez/Nugget/releases/download/v#{version}/Nugget_macOS_arm.dmg"
   name "Nugget"
