@@ -1,17 +1,19 @@
 cask "unite-phone" do
-  version "2025.10.7"
-  sha256 "09ca6ee8263baf87e137e8129caf79e7e4496904c08c3e550f4ac795c2223b34"
+  version "2026.3.3"
+  sha256 "1d975bb091c77657168aba27000dfca6c024d42df0407a8d2138ba6b28033b11"
 
-  url "https://update.unitephone.nl/updates/unite_phone-#{version}-universal-mac.zip",
+  url "https://update.unitephone.nl/download/unitephone-#{version}.dmg",
       user_agent: :browser
   name "Unite Phone"
   desc "Video and voice calling application"
   homepage "https://unitephone.nl/"
 
-  # Artifact URL is consistently unreachable in the homebrew/cask CI environment
-  disable! date: "2025-12-31", because: :unreachable
+  livecheck do
+    url "https://update.unitephone.nl/"
+    regex(%r{<small>(\d+(?:\.\d+)+)</small>}i)
+  end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Unite Phone.app"
 
