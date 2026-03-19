@@ -1,9 +1,15 @@
 cask "remnote" do
   arch arm: "-arm64"
+  livecheck_arch = on_arch_conditional arm: "_m1"
 
-  version "1.24.5"
-  sha256 arm:   "85412f225e4b6f38bc245b279262b0af044e2b2e3e133f2fd510a78835ae5d8a",
-         intel: "bc479fac33554d9f514a513b4f19d9ea77c56e34cfe2ab03bd77da37ac92ac38"
+  on_arm do
+    version "1.24.7"
+    sha256 "b091608cdb597af7aee9659cdd5c4a212d050417a4834c17a1bb11f947bb6165"
+  end
+  on_intel do
+    version "1.24.5"
+    sha256 "bc479fac33554d9f514a513b4f19d9ea77c56e34cfe2ab03bd77da37ac92ac38"
+  end
 
   url "https://download2.remnote.io/remnote-desktop2/RemNote-#{version}#{arch}-mac.zip",
       verified: "download2.remnote.io/"
@@ -12,8 +18,9 @@ cask "remnote" do
   homepage "https://www.remnote.com/"
 
   livecheck do
-    url "https://download2.remnote.io/remnote-desktop2/latest-mac.yml"
-    strategy :electron_builder
+    url "https://backend.remnote.com/desktop/mac#{livecheck_arch}"
+    regex(/RemNote[._-]v?(\d+(?:\.\d+)+)/i)
+    strategy :header_match
   end
 
   auto_updates true
