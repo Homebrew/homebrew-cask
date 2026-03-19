@@ -1,6 +1,6 @@
 cask "stremioservice" do
-  version "0.1.17"
-  sha256 "e74fe7a085e7462abfefcd050e09ac053342ce37a062f9878f24f0d459b60414"
+  version "0.1.18"
+  sha256 "341592cc918ee0c581340b7284b1cfd65daaa660ec0f095f7b929db936e87509"
 
   url "https://github.com/Stremio/stremio-service/releases/download/v#{version}/StremioService.dmg",
       verified: "github.com/Stremio/stremio-service/"
@@ -9,13 +9,9 @@ cask "stremioservice" do
   homepage "https://web.strem.io/"
 
   livecheck do
-    url "https://www.stremio.com/updater/check?product=stremio-service"
-    strategy :json do |json|
-      json["version"]
-    end
+    url :url
+    strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: ">= :big_sur"
   depends_on arch: :arm64
