@@ -1,5 +1,5 @@
 cask "steam" do
-  version "6.0"
+  version "6.1"
   sha256 :no_check
 
   url "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg",
@@ -34,8 +34,4 @@ cask "steam" do
     "~/Library/Preferences/com.valvesoftware.steam.helper.plist",
     "~/Library/Saved Application State/com.valvesoftware.steam.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
