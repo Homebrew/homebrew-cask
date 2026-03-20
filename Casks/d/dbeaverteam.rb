@@ -29,9 +29,4 @@ cask "dbeaverteam" do
     "~/Library/Preferences/com.dbeaver.product.team.plist",
     "~/Library/Saved Application State/com.dbeaver.product.team.savedState",
   ]
-
-  caveats <<~EOS
-    DBeaver Team Edition is a client-server application that requires server deployment.
-    Once you have deployed and configured the server cluster, you can access Team Edition using this desktop client application.
-  EOS
 end
