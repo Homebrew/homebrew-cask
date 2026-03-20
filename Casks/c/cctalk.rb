@@ -1,5 +1,5 @@
 cask "cctalk" do
-  version "7.10.17.3"
+  version "7.10.17.6"
   sha256 :no_check
 
   url "https://www.cctalk.com/webapi/basic/v1.1/version/down?apptype=1&terminalType=8&versionType=103"
