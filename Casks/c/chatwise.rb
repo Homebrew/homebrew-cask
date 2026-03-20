@@ -1,20 +1,20 @@
 cask "chatwise" do
-  arch arm: "aarch64", intel: "x64"
+  arch arm: "arm64", intel: "x64"
 
-  version "0.10.8"
-  sha256 arm:   "c317243d0f28ab9719fe4ea314e295878af0b6aa22955dbba3a21c473284fb4d",
-         intel: "965ecc45e49e80dd2f262bbd092df83489a645e91cdba0ea68785e8eb7af18a0"
+  version "26.3.21"
+  sha256 arm:   "/S28y/3Isdb5iEJpl0mGqo0d1FzdutHF486sKyRaeROOr7SyNoXzVK99KeUPJ2aHVS8x4/MqxN2JRKxuwsK4xQ=="
+         intel: "DTYVz92qdatRtCijnH6NsPQz+eeAzRu9l7G+D0fsOJKIgOu/2fcfiGfAmSI/IYU/IxOd7wsi7PKZtucOsRYjAQ=="
 
-  url "https://github.com/egoist/chatwise-releases/releases/download/v#{version}/ChatWise_#{version}_#{arch}.dmg",
-      verified: "github.com/egoist/chatwise-releases/"
+  url "https://releases.chatwise.app/#{version}/ChatWise-#{version}-#{arch}.dmg",
+    verified: "releases.chatwise.app/"
   name "ChatWise"
   desc "AI chatbot for many LLMs"
   homepage "https://chatwise.app/"
 
   livecheck do
-    url "https://chatwise.app/api/trpc/getReleases"
+    url "https://releases.chatwise.app/releases"
     strategy :json do |json|
-      json.dig("result", "data")&.map { |item| item["tag"]&.tr("v", "") }
+      Array(json).filter_map { |item| item["version"] }
     end
   end
 
