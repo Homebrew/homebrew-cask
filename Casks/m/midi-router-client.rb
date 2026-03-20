@@ -1,6 +1,6 @@
 cask "midi-router-client" do
-  version "2.22.0"
-  sha256 "74e3818be5d101f7cb15f7711e997b2630bd940cb7648848e057a0e5614fddbb"
+  version "2.23.0"
+  sha256 "8d7c91682d93ffc5f16d0d20bcda794dc6669ca9e449eec4ec0255d076af79b3"
 
   url "https://downloads.sourceforge.net/midi-router-client/midi-router-client-#{version}-Darwin.dmg"
   name "Midi Router Client"
