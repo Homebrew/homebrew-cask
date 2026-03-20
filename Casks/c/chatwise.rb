@@ -2,11 +2,10 @@ cask "chatwise" do
   arch arm: "arm64", intel: "x64"
 
   version "26.3.21"
-  sha256 arm:   "/S28y/3Isdb5iEJpl0mGqo0d1FzdutHF486sKyRaeROOr7SyNoXzVK99KeUPJ2aHVS8x4/MqxN2JRKxuwsK4xQ=="
-         intel: "DTYVz92qdatRtCijnH6NsPQz+eeAzRu9l7G+D0fsOJKIgOu/2fcfiGfAmSI/IYU/IxOd7wsi7PKZtucOsRYjAQ=="
+  sha256 arm:   "a4a46630471c71ea63743bbb5018ad5f21a0eff1a76c5144cc05e84fd7629a38",
+         intel: "8b7bfc97248218f5e20ba763ec5cc838de4fec1d5372236f3bcba53d0b49a754"
 
-  url "https://releases.chatwise.app/#{version}/ChatWise-#{version}-#{arch}.dmg",
-    verified: "releases.chatwise.app/"
+  url "https://releases.chatwise.app/#{version}/ChatWise-#{version}-#{arch}.dmg"
   name "ChatWise"
   desc "AI chatbot for many LLMs"
   homepage "https://chatwise.app/"
@@ -14,7 +13,7 @@ cask "chatwise" do
   livecheck do
     url "https://releases.chatwise.app/releases"
     strategy :json do |json|
-      Array(json).filter_map { |item| item["version"] }
+      json.map { |v| v["version"] }
     end
   end
 
