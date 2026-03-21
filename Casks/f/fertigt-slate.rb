@@ -7,6 +7,8 @@ cask "fertigt-slate" do
   desc "Window management application"
   homepage "https://github.com/fertigt/slate_arm64"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Slate.app"
 
   zap trash: [
