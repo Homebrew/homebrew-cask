@@ -22,6 +22,8 @@ cask "avidemux" do
   desc "Video editor"
   homepage "https://www.avidemux.org/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Avidemux_#{version}.app"
   binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_cli", target: "avidemux"
   binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_jobs"
