@@ -7,10 +7,16 @@ cask "guitar-pro" do
   desc "Sheet music editor software for guitar, bass, keyboards, drums and more"
   homepage "https://www.guitar-pro.com/"
 
-  livecheck do
-    url "https://updates.guitar-pro.com/gp#{version.major}?os=macOS&channel=stable"
-    strategy :sparkle, &:version
-  end
+  # The download now requires authentication key which is returned from a POST request that requires
+  # user information. There is no way to assemble this link systematically.
+  # The Sparkle feed has also changed as below, which can be used if the situation changes in the future.
+  #
+  # livecheck do
+  #   url "https://cast.assets-arobas-music.com/sparkleAppCast?os=MACOS&channel=stable&version=0"
+  #   strategy :sparkle, &:version
+  # end
+
+  disable! date: "2026-03-21", because: "has a download url that requires authentication"
 
   auto_updates true
 
