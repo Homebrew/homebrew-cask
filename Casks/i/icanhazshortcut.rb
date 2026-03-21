@@ -7,6 +7,8 @@ cask "icanhazshortcut" do
   desc "Shortcut manager"
   homepage "https://github.com/deseven/icanhazshortcut/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "iCanHazShortcut.app"
 
   uninstall quit: "info.deseven.icanhazshortcut"
