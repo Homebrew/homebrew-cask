@@ -7,7 +7,7 @@ cask "font-hind-kochi" do
       branch:    "main",
       only_path: "ofl/hindkochi"
   name "Hind Kochi"
-  homepage "https://fonts.google.com/specimen/Hind"
+  homepage "https://fonts.google.com/specimen/Hind+Kochi"
 
   font "HindKochi-Bold.ttf"
   font "HindKochi-Light.ttf"

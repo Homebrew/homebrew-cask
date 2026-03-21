@@ -1,5 +1,5 @@
 cask "font-dm-serif-display" do
-  version :latest
+  version "5.200"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-dm-serif-display" do
       only_path: "ofl/dmserifdisplay"
   name "DM Serif Display"
   homepage "https://fonts.google.com/specimen/DM+Serif+Display"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "DM Serif Display",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "DMSerifDisplay-Italic.ttf"
   font "DMSerifDisplay-Regular.ttf"

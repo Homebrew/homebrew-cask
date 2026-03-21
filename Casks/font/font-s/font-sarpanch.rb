@@ -1,5 +1,5 @@
 cask "font-sarpanch" do
-  version :latest
+  version "2.004"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-sarpanch" do
       only_path: "ofl/sarpanch"
   name "Sarpanch"
   homepage "https://fonts.google.com/specimen/Sarpanch"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Sarpanch",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Sarpanch-Black.ttf"
   font "Sarpanch-Bold.ttf"

@@ -1,11 +1,17 @@
 cask "font-noto-sans-bhaiksuki" do
-  version :latest
+  version "2.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/notosansbhaiksuki/NotoSansBhaiksuki-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Noto Sans Bhaiksuki"
   homepage "https://fonts.google.com/specimen/Noto+Sans+Bhaiksuki"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Noto Sans Bhaiksuki",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "NotoSansBhaiksuki-Regular.ttf"
 

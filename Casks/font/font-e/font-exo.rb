@@ -1,5 +1,5 @@
 cask "font-exo" do
-  version :latest
+  version "2.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-exo" do
       only_path: "ofl/exo"
   name "Exo"
   homepage "https://fonts.google.com/specimen/Exo"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Exo",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Exo-Italic[wght].ttf"
   font "Exo[wght].ttf"

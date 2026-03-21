@@ -1,5 +1,5 @@
 cask "font-inria-serif" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-inria-serif" do
       only_path: "ofl/inriaserif"
   name "Inria Serif"
   homepage "https://fonts.google.com/specimen/Inria+Serif"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Inria Serif",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "InriaSerif-Bold.ttf"
   font "InriaSerif-BoldItalic.ttf"

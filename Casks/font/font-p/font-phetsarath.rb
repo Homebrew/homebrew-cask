@@ -1,5 +1,5 @@
 cask "font-phetsarath" do
-  version :latest
+  version "1.01"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-phetsarath" do
       only_path: "ofl/phetsarath"
   name "Phetsarath"
   homepage "https://fonts.google.com/specimen/Phetsarath"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Phetsarath",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Phetsarath-Bold.ttf"
   font "Phetsarath-Regular.ttf"

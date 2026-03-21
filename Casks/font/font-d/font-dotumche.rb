@@ -2,9 +2,10 @@ cask "font-dotumche" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/dotumche/DotumChe-Regular.ttf"
+  url "https://github.com/google/fonts/raw/main/ofl/dotumche/DotumChe-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "DotumChe"
-  homepage "https://github.com/googlefonts/gulim"
+  homepage "https://fonts.google.com/specimen/DotumChe"
 
   font "DotumChe-Regular.ttf"
 

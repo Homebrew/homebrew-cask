@@ -1,5 +1,5 @@
 cask "font-fahkwang" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-fahkwang" do
       only_path: "ofl/fahkwang"
   name "Fahkwang"
   homepage "https://fonts.google.com/specimen/Fahkwang"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Fahkwang",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Fahkwang-Bold.ttf"
   font "Fahkwang-BoldItalic.ttf"

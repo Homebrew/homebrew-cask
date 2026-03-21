@@ -1,5 +1,5 @@
 cask "font-m-plus-rounded-1c" do
-  version :latest
+  version "1.059.20150529"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-m-plus-rounded-1c" do
       only_path: "ofl/mplusrounded1c"
   name "M PLUS Rounded 1c"
   homepage "https://fonts.google.com/specimen/M+PLUS+Rounded+1c"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "M PLUS Rounded 1c",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "MPLUSRounded1c-Black.ttf"
   font "MPLUSRounded1c-Bold.ttf"

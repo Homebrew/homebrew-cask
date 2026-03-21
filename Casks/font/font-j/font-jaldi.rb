@@ -1,5 +1,5 @@
 cask "font-jaldi" do
-  version :latest
+  version "1.007"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-jaldi" do
       only_path: "ofl/jaldi"
   name "Jaldi"
   homepage "https://fonts.google.com/specimen/Jaldi"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Jaldi",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Jaldi-Bold.ttf"
   font "Jaldi-Regular.ttf"

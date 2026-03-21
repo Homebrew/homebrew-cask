@@ -1,5 +1,5 @@
 cask "font-koho" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-koho" do
       only_path: "ofl/koho"
   name "KoHo"
   homepage "https://fonts.google.com/specimen/KoHo"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "KoHo",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "KoHo-Bold.ttf"
   font "KoHo-BoldItalic.ttf"

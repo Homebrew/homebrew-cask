@@ -1,11 +1,17 @@
 cask "font-baumans" do
-  version :latest
+  version "001.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/baumans/Baumans-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Baumans"
   homepage "https://fonts.google.com/specimen/Baumans"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Baumans",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Baumans-Regular.ttf"
 

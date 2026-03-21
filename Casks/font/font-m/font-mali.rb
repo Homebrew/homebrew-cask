@@ -1,5 +1,5 @@
 cask "font-mali" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-mali" do
       only_path: "ofl/mali"
   name "Mali"
   homepage "https://fonts.google.com/specimen/Mali"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Mali",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Mali-Bold.ttf"
   font "Mali-BoldItalic.ttf"

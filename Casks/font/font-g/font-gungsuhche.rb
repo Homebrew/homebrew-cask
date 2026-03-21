@@ -2,9 +2,10 @@ cask "font-gungsuhche" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/gungsuhche/GungsuhChe-Regular.ttf"
+  url "https://github.com/google/fonts/raw/main/ofl/gungsuhche/GungsuhChe-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "GungsuhChe"
-  homepage "https://github.com/googlefonts/batang"
+  homepage "https://fonts.google.com/specimen/GungsuhChe"
 
   font "GungsuhChe-Regular.ttf"
 

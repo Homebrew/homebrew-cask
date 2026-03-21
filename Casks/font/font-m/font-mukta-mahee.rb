@@ -1,5 +1,5 @@
 cask "font-mukta-mahee" do
-  version :latest
+  version "2.538"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-mukta-mahee" do
       only_path: "ofl/muktamahee"
   name "Mukta Mahee"
   homepage "https://fonts.google.com/specimen/Mukta+Mahee"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Mukta Mahee",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "MuktaMahee-Bold.ttf"
   font "MuktaMahee-ExtraBold.ttf"

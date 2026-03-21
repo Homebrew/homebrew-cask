@@ -1,5 +1,5 @@
 cask "font-asap-condensed" do
-  version :latest
+  version "3.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-asap-condensed" do
       only_path: "ofl/asapcondensed"
   name "Asap Condensed"
   homepage "https://fonts.google.com/specimen/Asap+Condensed"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Asap Condensed",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "AsapCondensed-Black.ttf"
   font "AsapCondensed-BlackItalic.ttf"

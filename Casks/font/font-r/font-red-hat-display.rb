@@ -1,5 +1,5 @@
 cask "font-red-hat-display" do
-  version :latest
+  version "1.030"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-red-hat-display" do
       only_path: "ofl/redhatdisplay"
   name "Red Hat Display"
   homepage "https://fonts.google.com/specimen/Red+Hat+Display"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Red Hat Display",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "RedHatDisplay-Italic[wght].ttf"
   font "RedHatDisplay[wght].ttf"

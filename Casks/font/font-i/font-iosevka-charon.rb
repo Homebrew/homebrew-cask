@@ -1,5 +1,5 @@
 cask "font-iosevka-charon" do
-  version :latest
+  version "34.100"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-iosevka-charon" do
       only_path: "ofl/iosevkacharon"
   name "Iosevka Charon"
   homepage "https://fonts.google.com/specimen/Iosevka+Charon"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Iosevka Charon",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "IosevkaCharon-Bold.ttf"
   font "IosevkaCharon-BoldItalic.ttf"

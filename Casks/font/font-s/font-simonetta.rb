@@ -1,5 +1,5 @@
 cask "font-simonetta" do
-  version :latest
+  version "1.004"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-simonetta" do
       only_path: "ofl/simonetta"
   name "Simonetta"
   homepage "https://fonts.google.com/specimen/Simonetta"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Simonetta",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Simonetta-Black.ttf"
   font "Simonetta-BlackItalic.ttf"

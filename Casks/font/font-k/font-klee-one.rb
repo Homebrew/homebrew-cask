@@ -1,5 +1,5 @@
 cask "font-klee-one" do
-  version :latest
+  version "1.100"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-klee-one" do
       only_path: "ofl/kleeone"
   name "Klee One"
   homepage "https://fonts.google.com/specimen/Klee+One"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Klee One",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "KleeOne-Regular.ttf"
   font "KleeOne-SemiBold.ttf"

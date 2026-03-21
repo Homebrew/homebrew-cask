@@ -1,5 +1,5 @@
 cask "font-lisu-bosa" do
-  version :latest
+  version "2.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-lisu-bosa" do
       only_path: "ofl/lisubosa"
   name "Lisu Bosa"
   homepage "https://fonts.google.com/specimen/Lisu+Bosa"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Lisu Bosa",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "LisuBosa-Black.ttf"
   font "LisuBosa-BlackItalic.ttf"

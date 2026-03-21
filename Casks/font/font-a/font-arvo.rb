@@ -1,5 +1,5 @@
 cask "font-arvo" do
-  version :latest
+  version "1.006"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-arvo" do
       only_path: "ofl/arvo"
   name "Arvo"
   homepage "https://fonts.google.com/specimen/Arvo"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Arvo",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Arvo-Bold.ttf"
   font "Arvo-BoldItalic.ttf"

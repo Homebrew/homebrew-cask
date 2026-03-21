@@ -1,5 +1,5 @@
 cask "font-tuffy" do
-  version :latest
+  version "001.271"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-tuffy" do
       only_path: "ofl/tuffy"
   name "Tuffy"
   homepage "https://fonts.google.com/specimen/Tuffy"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Tuffy",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Tuffy-Bold.ttf"
   font "Tuffy-BoldItalic.ttf"

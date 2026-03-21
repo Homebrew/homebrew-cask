@@ -1,5 +1,5 @@
 cask "font-reddit-sans" do
-  version :latest
+  version "1.013"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-reddit-sans" do
       only_path: "ofl/redditsans"
   name "Reddit Sans"
   homepage "https://fonts.google.com/specimen/Reddit+Sans"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Reddit Sans",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "RedditSans-Italic[wght].ttf"
   font "RedditSans[wght].ttf"

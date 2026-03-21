@@ -1,5 +1,5 @@
 cask "font-rowdies" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-rowdies" do
       only_path: "ofl/rowdies"
   name "Rowdies"
   homepage "https://fonts.google.com/specimen/Rowdies"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Rowdies",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Rowdies-Bold.ttf"
   font "Rowdies-Light.ttf"

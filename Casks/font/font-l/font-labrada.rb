@@ -1,5 +1,5 @@
 cask "font-labrada" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-labrada" do
       only_path: "ofl/labrada"
   name "Labrada"
   homepage "https://fonts.google.com/specimen/Labrada"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Labrada",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Labrada-Italic[wght].ttf"
   font "Labrada[wght].ttf"

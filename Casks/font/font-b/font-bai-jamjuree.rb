@@ -1,5 +1,5 @@
 cask "font-bai-jamjuree" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-bai-jamjuree" do
       only_path: "ofl/baijamjuree"
   name "Bai Jamjuree"
   homepage "https://fonts.google.com/specimen/Bai+Jamjuree"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Bai Jamjuree",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "BaiJamjuree-Bold.ttf"
   font "BaiJamjuree-BoldItalic.ttf"

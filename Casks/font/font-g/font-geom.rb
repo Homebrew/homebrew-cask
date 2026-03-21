@@ -1,5 +1,5 @@
 cask "font-geom" do
-  version :latest
+  version "1.102"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-geom" do
       only_path: "ofl/geom"
   name "Geom"
   homepage "https://fonts.google.com/specimen/Geom"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Geom",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Geom-Italic[wght].ttf"
   font "Geom[wght].ttf"

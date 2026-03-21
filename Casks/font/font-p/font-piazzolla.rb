@@ -1,5 +1,5 @@
 cask "font-piazzolla" do
-  version :latest
+  version "2.005"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-piazzolla" do
       only_path: "ofl/piazzolla"
   name "Piazzolla"
   homepage "https://fonts.google.com/specimen/Piazzolla"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Piazzolla",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Piazzolla-Italic[opsz,wght].ttf"
   font "Piazzolla[opsz,wght].ttf"

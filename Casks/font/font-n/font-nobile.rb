@@ -1,5 +1,5 @@
 cask "font-nobile" do
-  version :latest
+  version "001.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-nobile" do
       only_path: "ofl/nobile"
   name "Nobile"
   homepage "https://fonts.google.com/specimen/Nobile"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Nobile",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Nobile-Bold.ttf"
   font "Nobile-BoldItalic.ttf"

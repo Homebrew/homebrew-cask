@@ -1,5 +1,5 @@
 cask "font-hind-vadodara" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-hind-vadodara" do
       only_path: "ofl/hindvadodara"
   name "Hind Vadodara"
   homepage "https://fonts.google.com/specimen/Hind+Vadodara"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Hind Vadodara",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "HindVadodara-Bold.ttf"
   font "HindVadodara-Light.ttf"

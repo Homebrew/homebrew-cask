@@ -1,5 +1,5 @@
 cask "font-spectral-sc" do
-  version :latest
+  version "2.005"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-spectral-sc" do
       only_path: "ofl/spectralsc"
   name "Spectral SC"
   homepage "https://fonts.google.com/specimen/Spectral+SC"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Spectral SC",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "SpectralSC-Bold.ttf"
   font "SpectralSC-BoldItalic.ttf"

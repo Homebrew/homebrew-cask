@@ -1,11 +1,17 @@
 cask "font-noto-music" do
-  version :latest
+  version "2.003"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/notomusic/NotoMusic-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Noto Music"
   homepage "https://fonts.google.com/specimen/Noto+Music"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Noto Music",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "NotoMusic-Regular.ttf"
 

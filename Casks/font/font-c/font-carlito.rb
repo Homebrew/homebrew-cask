@@ -1,5 +1,5 @@
 cask "font-carlito" do
-  version :latest
+  version "1.104"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-carlito" do
       only_path: "ofl/carlito"
   name "Carlito"
   homepage "https://fonts.google.com/specimen/Carlito"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Carlito",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Carlito-Bold.ttf"
   font "Carlito-BoldItalic.ttf"

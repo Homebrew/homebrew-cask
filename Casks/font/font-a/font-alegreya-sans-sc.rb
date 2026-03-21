@@ -1,5 +1,5 @@
 cask "font-alegreya-sans-sc" do
-  version :latest
+  version "2.003"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-alegreya-sans-sc" do
       only_path: "ofl/alegreyasanssc"
   name "Alegreya Sans SC"
   homepage "https://fonts.google.com/specimen/Alegreya+Sans+SC"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Alegreya Sans SC",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "AlegreyaSansSC-Black.ttf"
   font "AlegreyaSansSC-BlackItalic.ttf"

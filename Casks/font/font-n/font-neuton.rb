@@ -1,5 +1,5 @@
 cask "font-neuton" do
-  version :latest
+  version "1.560"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-neuton" do
       only_path: "ofl/neuton"
   name "Neuton"
   homepage "https://fonts.google.com/specimen/Neuton"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Neuton",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Neuton-Bold.ttf"
   font "Neuton-ExtraBold.ttf"

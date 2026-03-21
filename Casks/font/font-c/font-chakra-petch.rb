@@ -1,5 +1,5 @@
 cask "font-chakra-petch" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-chakra-petch" do
       only_path: "ofl/chakrapetch"
   name "Chakra Petch"
   homepage "https://fonts.google.com/specimen/Chakra+Petch"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Chakra Petch",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "ChakraPetch-Bold.ttf"
   font "ChakraPetch-BoldItalic.ttf"

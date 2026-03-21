@@ -7,7 +7,7 @@ cask "font-yaldevi-colombo" do
       branch:    "main",
       only_path: "ofl/yaldevicolombo"
   name "Yaldevi Colombo"
-  homepage "https://fonts.google.com/specimen/Yaldevi"
+  homepage "https://fonts.google.com/specimen/Yaldevi+Colombo"
 
   font "YaldeviColombo-Bold.ttf"
   font "YaldeviColombo-ExtraLight.ttf"

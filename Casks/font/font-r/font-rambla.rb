@@ -1,5 +1,5 @@
 cask "font-rambla" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-rambla" do
       only_path: "ofl/rambla"
   name "Rambla"
   homepage "https://fonts.google.com/specimen/Rambla"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Rambla",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Rambla-Bold.ttf"
   font "Rambla-BoldItalic.ttf"

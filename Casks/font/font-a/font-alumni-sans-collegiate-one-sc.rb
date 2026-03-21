@@ -3,10 +3,11 @@ cask "font-alumni-sans-collegiate-one-sc" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
+      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/alumnisanscollegiateonesc"
   name "Alumni Sans Collegiate One SC"
-  homepage "https://github.com/googlefonts/alumni-sans-collegiate"
+  homepage "https://fonts.google.com/specimen/Alumni+Sans+Collegiate+One+SC"
 
   font "AlumniSansCollegiateOneSC-Italic.ttf"
   font "AlumniSansCollegiateOneSC-Regular.ttf"

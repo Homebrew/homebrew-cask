@@ -1,5 +1,5 @@
 cask "font-overlock" do
-  version :latest
+  version "1.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-overlock" do
       only_path: "ofl/overlock"
   name "Overlock"
   homepage "https://fonts.google.com/specimen/Overlock"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Overlock",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Overlock-Black.ttf"
   font "Overlock-BlackItalic.ttf"

@@ -7,7 +7,7 @@ cask "font-hind-colombo" do
       branch:    "main",
       only_path: "ofl/hindcolombo"
   name "Hind Colombo"
-  homepage "https://fonts.google.com/specimen/Hind"
+  homepage "https://fonts.google.com/specimen/Hind+Colombo"
 
   font "HindColombo-Bold.ttf"
   font "HindColombo-Light.ttf"

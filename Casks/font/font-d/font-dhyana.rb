@@ -7,7 +7,7 @@ cask "font-dhyana" do
       branch:    "main",
       only_path: "ofl/dhyana"
   name "Dhyana"
-  homepage "https://fonts.google.com/earlyaccess"
+  homepage "https://fonts.google.com/specimen/Dhyana"
 
   font "Dhyana-Bold.ttf"
   font "Dhyana-Regular.ttf"

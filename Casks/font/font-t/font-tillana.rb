@@ -1,5 +1,5 @@
 cask "font-tillana" do
-  version :latest
+  version "2.003"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-tillana" do
       only_path: "ofl/tillana"
   name "Tillana"
   homepage "https://fonts.google.com/specimen/Tillana"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Tillana",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Tillana-Bold.ttf"
   font "Tillana-ExtraBold.ttf"

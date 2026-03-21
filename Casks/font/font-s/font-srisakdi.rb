@@ -1,5 +1,5 @@
 cask "font-srisakdi" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-srisakdi" do
       only_path: "ofl/srisakdi"
   name "Srisakdi"
   homepage "https://fonts.google.com/specimen/Srisakdi"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Srisakdi",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Srisakdi-Bold.ttf"
   font "Srisakdi-Regular.ttf"

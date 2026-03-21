@@ -14,11 +14,14 @@ from glob import glob
 import os
 import re
 import sys
+import json
+import socket
 from google.protobuf import text_format
 import gftools.fonts_public_pb2 as fonts_pb2
 import jinja2
 import html2text
 import urllib.request
+
 
 def parse_metadata(filename):
     # based off of
@@ -36,21 +39,20 @@ class FontCask:
     )
     TEMPLATE = ENVIRONMENT.from_string(
         """cask "{{token}}" do
-  version :latest
+  version {% if font_version == "latest" %}:latest{% else %}"{{font_version}}"{% endif %}
   sha256 :no_check
 
 {% if files|length == 1 %}
-  url "https://github.com/google/fonts/raw/main/{{folder}}/{{files[0] | urlencode}}"
-      {%- if not 'github.com/' in homepage %},
-      verified: "github.com/google/fonts/"
-      {%- endif +%}
+  url "https://github.com/google/fonts/raw/main/{{folder}}/{{files[0] | urlencode}}"{% if not 'github.com/' in homepage %},
+    verified: "github.com/google/fonts/"
+  {% endif %}
 {% else %}
   url "https://github.com/google/fonts.git",
-      {%- if not 'github.com/' in homepage +%}
-      verified:  "github.com/google/fonts",
-      {%- endif +%}
-      branch:    "main",
-      only_path: "{{folder}}"
+  {% if not 'github.com/' in homepage %}
+    verified:  "github.com/google/fonts",
+  {% endif %}
+    branch:    "main",
+    only_path: "{{folder}}"
 {% endif %}
   name "{{font_name}}"
   homepage "{{homepage}}"
@@ -59,27 +61,36 @@ class FontCask:
   font "{{file}}"
 {% endfor %}
 
+{% if font_version != "latest" %}
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "{{font_name}}",[\s\S]*?version": "Version ([\d.]+)/)
+  end
+{% endif %}
+
   # No zap stanza required
 end
 """
     )
 
-    def __init__(self, folder, meta, description=None, early_access=False):
+    def __init__(self, folder, meta, description=None, early_access=False, font_versions=None):
         self.folder = folder
         self.meta = meta
         self.desc = description
         self.early_access = early_access
         self.homepage_override = None
+        self.font_versions = font_versions or {}
 
     def font_name(self):
         return self.meta.name
 
     def description(self):
         if not self.desc:
-          return None
+            return None
 
         if len(self.desc) == 0:
-          return None
+            return None
 
         return self.desc
 
@@ -98,7 +109,7 @@ end
 
     def homepage(self):
         if self.homepage_override is not None:
-          return self.homepage_override
+            return self.homepage_override
 
         if self.early_access:
             return f"https://fonts.google.com/earlyaccess"
@@ -110,15 +121,35 @@ end
         results.sort()
         return results
 
+    def font_version(self):
+        # Extract the version number from the first font file
+        for file in self.files():
+            if file in self.font_versions:
+                version_str = self.font_versions[file]
+                # Extract version number after "Version "
+                match = re.search(r"Version\s+([0-9.]+)", version_str)
+                if match:
+                    return match.group(1)
+        return "latest"
+
     def cask_content(self):
-        return self.TEMPLATE.render(
+        content = self.TEMPLATE.render(
             token=self.token(),
             folder=self.folder,
             font_name=self.font_name(),
             desc=self.description(),
             homepage=self.homepage(),
             files=self.files(),
+            font_versions=self.font_versions,
+            font_version=self.font_version(),
         )
+        # Fix: Ensure version and sha256 are on separate lines
+        import re
+        content = re.sub(r'version "([0-9.]+)"  sha256',
+                         r'version "\1"\n  sha256', content)
+        content = re.sub(r'version :latest  sha256',
+                         r'version :latest\n  sha256', content)
+        return content
 
 
 def is_other_foundry(cask_path):
@@ -139,48 +170,57 @@ def should_skip(cask_path):
     return False
 
 
-def metadata_to_cask(meta_file, repo_dir):
+def metadata_to_cask(meta_file, repo_dir, font_versions=None):
     folder = os.path.dirname(os.path.relpath(meta_file, start=repo_dir))
     meta = parse_metadata(meta_file)
 
-    description_path = os.path.join(os.path.dirname(meta_file), "DESCRIPTION.en_us.html")
+    description_path = os.path.join(
+        os.path.dirname(meta_file), "DESCRIPTION.en_us.html")
 
     description = None
 
     if os.path.exists(description_path):
-      with open(description_path) as f:
-        h2t = html2text.HTML2Text()
-        h2t.ignore_links = True
-        h2t.ignore_images = True
-        h2t.ignore_tables = True
-        h2t.ignore_emphasis = True
+        with open(description_path) as f:
+            h2t = html2text.HTML2Text()
+            h2t.ignore_links = True
+            h2t.ignore_images = True
+            h2t.ignore_tables = True
+            h2t.ignore_emphasis = True
 
-        contents = " ".join(h2t.handle(f.read()).replace('"', '').split())
+            contents = " ".join(h2t.handle(f.read()).replace('"', '').split())
 
-        regex = r".*" + re.escape(meta.name) + r"\s+(?:.*\s+)?is(?:\s+an?|the)?\s+"
-        parts = re.split(regex, contents, maxsplit=1)
+            regex = r".*" + re.escape(meta.name) + \
+                r"\s+(?:.*\s+)?is(?:\s+an?|the)?\s+"
+            parts = re.split(regex, contents, maxsplit=1)
 
-        if len(parts) > 1:
-          description = parts[1].split(".")[0].capitalize()
+            if len(parts) > 1:
+                description = parts[1].split(".")[0].capitalize()
 
-    return FontCask(folder, meta, description=description)
+    # Get font versions for this family
+    family_versions = font_versions.get(meta.name, {}) if font_versions else {}
+
+    return FontCask(folder, meta, description=description, font_versions=family_versions)
 
 
 def write_cask(cask):
-    path = cask.dest_path()
+    # Use absolute path to ensure consistency regardless of working directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(os.path.dirname(script_dir))
+    path = os.path.join(project_root, cask.dest_path())
+
     if should_skip(path):
         return False
 
     content = cask.cask_content()
 
     if os.path.exists(path):
-      with open(path, "r") as f:
-        if f.read() == content:
-          return False
+        with open(path, "r") as f:
+            if f.read() == content:
+                return False
 
     directory = os.path.dirname(path)
     if not os.path.exists(directory):
-      os.makedirs(directory)
+        os.makedirs(directory)
 
     with open(path, "w") as f:
         f.write(content)
@@ -189,42 +229,48 @@ def write_cask(cask):
 
 
 def find_google_casks():
-  casks = {}
+    casks = {}
+    # Use absolute path to ensure consistency regardless of working directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(os.path.dirname(script_dir))
+    cask_pattern = os.path.join(project_root, 'Casks', 'font', '**', '*.rb')
 
-  for cask_path in glob('Casks/font/**/*.rb'):
-    token = os.path.splitext(os.path.basename(cask_path))[0]
+    for cask_path in glob(cask_pattern):
+        token = os.path.splitext(os.path.basename(cask_path))[0]
 
-    with open(cask_path, "r") as f:
-      contents = f.read()
+        with open(cask_path, "r") as f:
+            contents = f.read()
 
-      # Skip "font-material-symbols" as it matches the url regex, but is not included in the Google Fonts repo
-      if os.path.basename(cask_path) == "font-material-symbols.rb":
-        continue
+            # Skip "font-material-symbols" as it matches the url regex, but is not included in the Google Fonts repo
+            if os.path.basename(cask_path) == "font-material-symbols.rb":
+                continue
 
-      if not re.search(r"(github\.com\/google\/fonts|fonts\.google\.com|google\.com/fonts)", contents):
-        continue
+            if not re.search(r"(github\.com\/google\/fonts|fonts\.google\.com|google\.com/fonts)", contents):
+                continue
 
-      homepage = re.search(r"homepage\s+([\"'])(.*)(\1)\s*", contents)
-      if homepage:
-        homepage = homepage[2]
+            homepage = re.search(r"homepage\s+([\"'])(.*)(\1)\s*", contents)
+            if homepage:
+                homepage = homepage[2]
 
-      desc = re.search(r"desc\s+([\"'])(.*)(\1)\s*", contents)
-      if desc:
-        description = desc[2]
-      else:
-        description = None
+            desc = re.search(r"desc\s+([\"'])(.*)(\1)\s*", contents)
+            if desc:
+                description = desc[2]
+            else:
+                description = None
 
-    casks[token] = {
-      'path': cask_path,
-      'description': description,
-      'homepage': homepage,
-    }
+        casks[token] = {
+            'path': cask_path,
+            'description': description,
+            'homepage': homepage,
+        }
 
-  return casks
+    return casks
+
 
 def find_family_folders(repo_dir):
     SUBDIRS = ["apache", "ofl", "ufl"]
-    folders_list = [glob(os.path.join(repo_dir, subdir, "*")) for subdir in SUBDIRS]
+    folders_list = [glob(os.path.join(repo_dir, subdir, "*"))
+                    for subdir in SUBDIRS]
     # flatten
     return reduce(lambda x, y: x + y, folders_list)
 
@@ -264,29 +310,50 @@ def derive_metadata(family_folder):
     return meta
 
 
-def derive_cask(family_folder, repo_dir):
+def derive_cask(family_folder, repo_dir, font_versions=None):
     meta = derive_metadata(family_folder)
     folder = os.path.relpath(family_folder, start=repo_dir)
 
     early_access_file = os.path.join(family_folder, "EARLY_ACCESS.category")
     early_access = os.path.exists(early_access_file)
 
-    return FontCask(folder, meta, early_access=early_access)
+    # Get font versions for this family
+    family_versions = font_versions.get(meta.name, {}) if font_versions else {}
+
+    return FontCask(folder, meta, early_access=early_access, font_versions=family_versions)
 
 
 def run():
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         print(
-            """Usage: ./import_google_fonts <path-to-repo> <mode>
+            """Usage: ./import_google_fonts <path-to-repo> <mode> <path-to-json>
 
-Download the or clone the repository from https://github.com/google/fonts, then provide the path to the script.
+Download the or clone the repository from https://github.com/google/fonts, then provide the path to the script and the path to the version JSON file.
     """
         )
         sys.exit(1)
 
     repo_dir = sys.argv[1]
     mode = sys.argv[2]
+    json_path = sys.argv[3]
     family_folders = find_family_folders(repo_dir)
+
+    # Read and parse version JSON file
+    with open(json_path, 'r') as f:
+        # Skip the first line which contains ')]}'
+        f.readline()
+        version_data = json.load(f)
+
+    # Create a dictionary to map font family names to their versions
+    font_versions = {}
+    for family in version_data.get('familyVersions', []):
+        family_name = family.get('name')
+        font_versions[family_name] = {}
+        for font in family.get('fontVersions', []):
+            filename = font.get('filename')
+            version = font.get('version')
+            if filename and version:
+                font_versions[family_name][filename] = version
 
     existing_casks = find_google_casks()
     added_casks = {}
@@ -297,72 +364,73 @@ Download the or clone the repository from https://github.com/google/fonts, then 
         # check if the metadata file is present
         # https://github.com/google/fonts/issues/2512
         if os.path.exists(meta_file):
-          try:
-            cask = metadata_to_cask(meta_file, repo_dir)
-          except text_format.ParseError:
-            continue
+            try:
+                cask = metadata_to_cask(meta_file, repo_dir, font_versions)
+            except text_format.ParseError:
+                continue
         else:
-          cask = derive_cask(family_folder, repo_dir)
+            cask = derive_cask(family_folder, repo_dir, font_versions)
 
         # Ek Mukta has been renamed to just Mukta but still exists.
         if cask.token() == 'font-ek-mukta':
-          continue
+            continue
 
         # The google/fonts repo contains an incomplete legacy font.
         if cask.token() == 'font-noto-sans-n-ko':
-           continue
+            continue
 
         # Skip cask if already handled (i.e. if it exists in multiple license sub-directories).
         if cask.token() in added_casks or cask.token() in updated_casks:
-          continue
+            continue
 
         existing_cask = existing_casks.pop(cask.token(), None)
         if existing_cask:
-          cask.desc = existing_cask['description']
+            cask.desc = existing_cask['description']
 
-          # If font is unreleased, re-use previous homepage URL.
-          if cask.homepage() != existing_cask['homepage']:
-            try:
-              urllib.request.urlopen(cask.homepage())
-            except urllib.request.URLError as e:
-              if e.code == 404:
-                cask.homepage_override = existing_cask['homepage']
+            # If font is unreleased, re-use previous homepage URL.
+            if cask.homepage() != existing_cask['homepage']:
+                try:
+                    urllib.request.urlopen(cask.homepage(), timeout=5)
+                except (urllib.request.URLError, socket.timeout):
+                    # Skip homepage check on error
+                    pass
 
-          updated_casks[cask.token()] = cask
+            updated_casks[cask.token()] = cask
         else:
-          try:
-             urllib.request.urlopen(cask.homepage())
-          except urllib.request.URLError as e:
-            if e.code == 404:
-              cask.homepage_override = cask.meta.source.repository_url
+            try:
+                urllib.request.urlopen(cask.homepage(), timeout=5)
+            except (urllib.request.URLError, socket.timeout):
+                # Skip homepage check on error
+                pass
 
-          added_casks[cask.token()] = cask
+            added_casks[cask.token()] = cask
 
     changed_casks = {}
 
     print("Mode " + mode)
 
     if not mode or mode == 'add':
-      print("Adding added casks")
+        print("Adding added casks")
 
-      changed_casks |= added_casks
+        changed_casks |= added_casks
 
     if not mode or mode == 'update':
-      print("Adding updated casks")
-      changed_casks |= updated_casks
+        print("Adding updated casks")
+        changed_casks |= updated_casks
 
     written_casks = 0
     for token, cask in changed_casks.items():
-      if write_cask(cask):
-        written_casks += 1
+        if write_cask(cask):
+            written_casks += 1
 
-      # Limit cask changes per PR.
-      if mode is not None and written_casks >= 50:
-        break
+        # Limit cask changes per PR.
+        if mode is not None and written_casks >= 50:
+            break
 
     if not mode or mode == 'delete':
-      # Delete casks which don't exist anymore.
-      for deleted_cask in existing_casks.values():
-        os.remove(deleted_cask["path"])
+        # Delete casks which don't exist anymore.
+        for deleted_cask in existing_casks.values():
+            os.remove(deleted_cask["path"])
+
 
 run()

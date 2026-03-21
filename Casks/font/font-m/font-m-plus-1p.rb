@@ -1,5 +1,5 @@
 cask "font-m-plus-1p" do
-  version :latest
+  version "1.062"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-m-plus-1p" do
       only_path: "ofl/mplus1p"
   name "M PLUS 1p"
   homepage "https://fonts.google.com/specimen/M+PLUS+1p"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "M PLUS 1p",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "MPLUS1p-Black.ttf"
   font "MPLUS1p-Bold.ttf"

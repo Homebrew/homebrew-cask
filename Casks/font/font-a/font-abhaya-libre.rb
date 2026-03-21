@@ -1,5 +1,5 @@
 cask "font-abhaya-libre" do
-  version :latest
+  version "1.050"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-abhaya-libre" do
       only_path: "ofl/abhayalibre"
   name "Abhaya Libre"
   homepage "https://fonts.google.com/specimen/Abhaya+Libre"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Abhaya Libre",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "AbhayaLibre-Bold.ttf"
   font "AbhayaLibre-ExtraBold.ttf"

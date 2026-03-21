@@ -1,5 +1,5 @@
 cask "font-livvic" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-livvic" do
       only_path: "ofl/livvic"
   name "Livvic"
   homepage "https://fonts.google.com/specimen/Livvic"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Livvic",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Livvic-Black.ttf"
   font "Livvic-BlackItalic.ttf"

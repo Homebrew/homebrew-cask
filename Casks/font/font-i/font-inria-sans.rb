@@ -1,5 +1,5 @@
 cask "font-inria-sans" do
-  version :latest
+  version "1.2"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-inria-sans" do
       only_path: "ofl/inriasans"
   name "Inria Sans"
   homepage "https://fonts.google.com/specimen/Inria+Sans"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Inria Sans",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "InriaSans-Bold.ttf"
   font "InriaSans-BoldItalic.ttf"

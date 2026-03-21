@@ -1,11 +1,17 @@
 cask "font-sigmar" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/sigmar/Sigmar-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Sigmar"
   homepage "https://fonts.google.com/specimen/Sigmar"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Sigmar",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Sigmar-Regular.ttf"
 

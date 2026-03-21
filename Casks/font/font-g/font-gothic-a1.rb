@@ -1,5 +1,5 @@
 cask "font-gothic-a1" do
-  version :latest
+  version "2.50"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-gothic-a1" do
       only_path: "ofl/gothica1"
   name "Gothic A1"
   homepage "https://fonts.google.com/specimen/Gothic+A1"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Gothic A1",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "GothicA1-Black.ttf"
   font "GothicA1-Bold.ttf"

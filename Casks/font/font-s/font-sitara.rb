@@ -7,7 +7,7 @@ cask "font-sitara" do
       branch:    "main",
       only_path: "ofl/sitara"
   name "Sitara"
-  homepage "https://www.cdnfonts.com/sitara.font"
+  homepage "https://fonts.google.com/specimen/Sitara"
 
   font "Sitara-Bold.ttf"
   font "Sitara-BoldItalic.ttf"

@@ -1,11 +1,17 @@
 cask "font-bonheur-royale" do
-  version :latest
+  version "1.010"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/bonheurroyale/BonheurRoyale-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Bonheur Royale"
   homepage "https://fonts.google.com/specimen/Bonheur+Royale"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Bonheur Royale",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "BonheurRoyale-Regular.ttf"
 

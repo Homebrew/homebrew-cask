@@ -1,5 +1,5 @@
 cask "font-palanquin" do
-  version :latest
+  version "1.0.4"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-palanquin" do
       only_path: "ofl/palanquin"
   name "Palanquin"
   homepage "https://fonts.google.com/specimen/Palanquin"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Palanquin",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Palanquin-Bold.ttf"
   font "Palanquin-ExtraLight.ttf"

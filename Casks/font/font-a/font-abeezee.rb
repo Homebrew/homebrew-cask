@@ -1,5 +1,5 @@
 cask "font-abeezee" do
-  version :latest
+  version "1.003"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-abeezee" do
       only_path: "ofl/abeezee"
   name "ABeeZee"
   homepage "https://fonts.google.com/specimen/ABeeZee"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "ABeeZee",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "ABeeZee-Italic.ttf"
   font "ABeeZee-Regular.ttf"

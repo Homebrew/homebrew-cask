@@ -1,5 +1,5 @@
 cask "font-source-code-pro" do
-  version :latest
+  version "1.026"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-source-code-pro" do
       only_path: "ofl/sourcecodepro"
   name "Source Code Pro"
   homepage "https://fonts.google.com/specimen/Source+Code+Pro"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Source Code Pro",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "SourceCodePro-Italic[wght].ttf"
   font "SourceCodePro[wght].ttf"

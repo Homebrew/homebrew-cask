@@ -1,5 +1,5 @@
 cask "font-tajawal" do
-  version :latest
+  version "1.700"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-tajawal" do
       only_path: "ofl/tajawal"
   name "Tajawal"
   homepage "https://fonts.google.com/specimen/Tajawal"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Tajawal",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Tajawal-Black.ttf"
   font "Tajawal-Bold.ttf"

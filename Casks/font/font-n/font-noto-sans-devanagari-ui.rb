@@ -7,7 +7,7 @@ cask "font-noto-sans-devanagari-ui" do
       branch:    "main",
       only_path: "ofl/notosansdevanagariui"
   name "Noto Sans Devanagari UI"
-  homepage "https://fonts.google.com/noto/specimen/Noto+Sans+Devanagari"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Devanagari+UI"
 
   font "NotoSansDevanagariUI-Black.ttf"
   font "NotoSansDevanagariUI-Bold.ttf"

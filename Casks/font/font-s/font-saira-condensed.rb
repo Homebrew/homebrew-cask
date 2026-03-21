@@ -1,5 +1,5 @@
 cask "font-saira-condensed" do
-  version :latest
+  version "0.072"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-saira-condensed" do
       only_path: "ofl/sairacondensed"
   name "Saira Condensed"
   homepage "https://fonts.google.com/specimen/Saira+Condensed"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Saira Condensed",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "SairaCondensed-Black.ttf"
   font "SairaCondensed-Bold.ttf"

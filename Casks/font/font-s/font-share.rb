@@ -1,5 +1,5 @@
 cask "font-share" do
-  version :latest
+  version "1.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-share" do
       only_path: "ofl/share"
   name "Share"
   homepage "https://fonts.google.com/specimen/Share"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Share",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Share-Bold.ttf"
   font "Share-BoldItalic.ttf"

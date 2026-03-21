@@ -1,5 +1,5 @@
 cask "font-sour-gummy" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-sour-gummy" do
       only_path: "ofl/sourgummy"
   name "Sour Gummy"
   homepage "https://fonts.google.com/specimen/Sour+Gummy"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Sour Gummy",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "SourGummy-Italic[wdth,wght].ttf"
   font "SourGummy[wdth,wght].ttf"

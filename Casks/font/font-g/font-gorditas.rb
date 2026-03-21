@@ -1,5 +1,5 @@
 cask "font-gorditas" do
-  version :latest
+  version "001.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-gorditas" do
       only_path: "ofl/gorditas"
   name "Gorditas"
   homepage "https://fonts.google.com/specimen/Gorditas"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Gorditas",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Gorditas-Bold.ttf"
   font "Gorditas-Regular.ttf"

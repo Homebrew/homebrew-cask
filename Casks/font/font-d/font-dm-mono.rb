@@ -1,5 +1,5 @@
 cask "font-dm-mono" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-dm-mono" do
       only_path: "ofl/dmmono"
   name "DM Mono"
   homepage "https://fonts.google.com/specimen/DM+Mono"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "DM Mono",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "DMMono-Italic.ttf"
   font "DMMono-Light.ttf"

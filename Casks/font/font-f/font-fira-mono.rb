@@ -1,5 +1,5 @@
 cask "font-fira-mono" do
-  version :latest
+  version "3.206"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-fira-mono" do
       only_path: "ofl/firamono"
   name "Fira Mono"
   homepage "https://fonts.google.com/specimen/Fira+Mono"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Fira Mono",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "FiraMono-Bold.ttf"
   font "FiraMono-Medium.ttf"

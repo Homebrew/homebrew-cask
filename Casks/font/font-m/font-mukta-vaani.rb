@@ -1,5 +1,5 @@
 cask "font-mukta-vaani" do
-  version :latest
+  version "2.538"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-mukta-vaani" do
       only_path: "ofl/muktavaani"
   name "Mukta Vaani"
   homepage "https://fonts.google.com/specimen/Mukta+Vaani"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Mukta Vaani",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "MuktaVaani-Bold.ttf"
   font "MuktaVaani-ExtraBold.ttf"

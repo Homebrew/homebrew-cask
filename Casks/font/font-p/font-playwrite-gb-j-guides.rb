@@ -1,5 +1,5 @@
 cask "font-playwrite-gb-j-guides" do
-  version :latest
+  version "1.003"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-playwrite-gb-j-guides" do
       only_path: "ofl/playwritegbjguides"
   name "Playwrite GB J Guides"
   homepage "https://fonts.google.com/specimen/Playwrite+GB+J+Guides"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Playwrite GB J Guides",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "PlaywriteGBJGuides-Italic.ttf"
   font "PlaywriteGBJGuides-Regular.ttf"

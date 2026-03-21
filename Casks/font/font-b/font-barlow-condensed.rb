@@ -1,5 +1,5 @@
 cask "font-barlow-condensed" do
-  version :latest
+  version "1.408"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-barlow-condensed" do
       only_path: "ofl/barlowcondensed"
   name "Barlow Condensed"
   homepage "https://fonts.google.com/specimen/Barlow+Condensed"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Barlow Condensed",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "BarlowCondensed-Black.ttf"
   font "BarlowCondensed-BlackItalic.ttf"

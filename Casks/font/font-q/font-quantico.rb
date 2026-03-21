@@ -1,5 +1,5 @@
 cask "font-quantico" do
-  version :latest
+  version "2.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-quantico" do
       only_path: "ofl/quantico"
   name "Quantico"
   homepage "https://fonts.google.com/specimen/Quantico"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Quantico",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Quantico-Bold.ttf"
   font "Quantico-BoldItalic.ttf"

@@ -1,5 +1,5 @@
 cask "font-gfs-neohellenic" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-gfs-neohellenic" do
       only_path: "ofl/gfsneohellenic"
   name "GFS Neohellenic"
   homepage "https://fonts.google.com/specimen/GFS+Neohellenic"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "GFS Neohellenic",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "GFSNeohellenic.ttf"
   font "GFSNeohellenicBold.ttf"

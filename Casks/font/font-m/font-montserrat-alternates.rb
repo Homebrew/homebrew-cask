@@ -1,5 +1,5 @@
 cask "font-montserrat-alternates" do
-  version :latest
+  version "7.200"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-montserrat-alternates" do
       only_path: "ofl/montserratalternates"
   name "Montserrat Alternates"
   homepage "https://fonts.google.com/specimen/Montserrat+Alternates"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Montserrat Alternates",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "MontserratAlternates-Black.ttf"
   font "MontserratAlternates-BlackItalic.ttf"

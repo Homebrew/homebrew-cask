@@ -1,11 +1,17 @@
 cask "font-libre-barcode-39-text" do
-  version :latest
+  version "1.005"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/librebarcode39text/LibreBarcode39Text-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Libre Barcode 39 Text"
   homepage "https://fonts.google.com/specimen/Libre+Barcode+39+Text"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Libre Barcode 39 Text",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "LibreBarcode39Text-Regular.ttf"
 

@@ -1,5 +1,5 @@
 cask "font-oxygen" do
-  version :latest
+  version "0.2.3"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-oxygen" do
       only_path: "ofl/oxygen"
   name "Oxygen"
   homepage "https://fonts.google.com/specimen/Oxygen"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Oxygen",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Oxygen-Bold.ttf"
   font "Oxygen-Light.ttf"

@@ -1,5 +1,5 @@
 cask "font-mate" do
-  version :latest
+  version "1.003"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-mate" do
       only_path: "ofl/mate"
   name "Mate"
   homepage "https://fonts.google.com/specimen/Mate"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Mate",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Mate-Italic.ttf"
   font "Mate-Regular.ttf"

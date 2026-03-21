@@ -1,11 +1,17 @@
 cask "font-betania-patmos-in" do
-  version :latest
+  version "11.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/betaniapatmosin/BetaniaPatmosIn-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Betania Patmos In"
   homepage "https://fonts.google.com/specimen/Betania+Patmos+In"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Betania Patmos In",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "BetaniaPatmosIn-Regular.ttf"
 

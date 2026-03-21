@@ -1,5 +1,5 @@
 cask "font-comic-neue" do
-  version :latest
+  version "2.003"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-comic-neue" do
       only_path: "ofl/comicneue"
   name "Comic Neue"
   homepage "https://fonts.google.com/specimen/Comic+Neue"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Comic Neue",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "ComicNeue-Bold.ttf"
   font "ComicNeue-BoldItalic.ttf"

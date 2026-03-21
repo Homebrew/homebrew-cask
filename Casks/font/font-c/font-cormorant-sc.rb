@@ -1,5 +1,5 @@
 cask "font-cormorant-sc" do
-  version :latest
+  version "4.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-cormorant-sc" do
       only_path: "ofl/cormorantsc"
   name "Cormorant SC"
   homepage "https://fonts.google.com/specimen/Cormorant+SC"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Cormorant SC",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "CormorantSC-Bold.ttf"
   font "CormorantSC-Light.ttf"

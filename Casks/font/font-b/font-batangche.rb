@@ -2,9 +2,10 @@ cask "font-batangche" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/batangche/BatangChe-Regular.ttf"
+  url "https://github.com/google/fonts/raw/main/ofl/batangche/BatangChe-Regular.ttf",
+      verified: "github.com/google/fonts/"
   name "BatangChe"
-  homepage "https://github.com/googlefonts/batang"
+  homepage "https://fonts.google.com/specimen/BatangChe"
 
   font "BatangChe-Regular.ttf"
 

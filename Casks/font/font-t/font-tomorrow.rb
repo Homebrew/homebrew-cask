@@ -1,5 +1,5 @@
 cask "font-tomorrow" do
-  version :latest
+  version "2.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-tomorrow" do
       only_path: "ofl/tomorrow"
   name "Tomorrow"
   homepage "https://fonts.google.com/specimen/Tomorrow"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Tomorrow",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Tomorrow-Black.ttf"
   font "Tomorrow-BlackItalic.ttf"

@@ -1,11 +1,17 @@
 cask "font-noto-sans-kaithi" do
-  version :latest
+  version "2.006"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/notosanskaithi/NotoSansKaithi-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Noto Sans Kaithi"
   homepage "https://fonts.google.com/specimen/Noto+Sans+Kaithi"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Noto Sans Kaithi",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "NotoSansKaithi-Regular.ttf"
 

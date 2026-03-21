@@ -1,11 +1,17 @@
 cask "font-yarndings-12" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/yarndings12/Yarndings12-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Yarndings 12"
   homepage "https://fonts.google.com/specimen/Yarndings+12"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Yarndings 12",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Yarndings12-Regular.ttf"
 

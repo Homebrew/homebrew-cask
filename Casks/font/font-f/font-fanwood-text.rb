@@ -1,5 +1,5 @@
 cask "font-fanwood-text" do
-  version :latest
+  version "1.101"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-fanwood-text" do
       only_path: "ofl/fanwoodtext"
   name "Fanwood Text"
   homepage "https://fonts.google.com/specimen/Fanwood+Text"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Fanwood Text",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "FanwoodText-Italic.ttf"
   font "FanwoodText-Regular.ttf"

@@ -7,7 +7,7 @@ cask "font-noto-sans-gujarati-ui" do
       branch:    "main",
       only_path: "ofl/notosansgujaratiui"
   name "Noto Sans Gujarati UI"
-  homepage "https://fonts.google.com/specimen/Noto+Sans+Gujarati"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Gujarati+UI"
 
   font "NotoSansGujaratiUI-Black.ttf"
   font "NotoSansGujaratiUI-Bold.ttf"

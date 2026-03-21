@@ -1,5 +1,5 @@
 cask "font-bellota" do
-  version :latest
+  version "4.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-bellota" do
       only_path: "ofl/bellota"
   name "Bellota"
   homepage "https://fonts.google.com/specimen/Bellota"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Bellota",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Bellota-Bold.ttf"
   font "Bellota-BoldItalic.ttf"

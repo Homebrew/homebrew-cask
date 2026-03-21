@@ -1,5 +1,5 @@
 cask "font-niramit" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-niramit" do
       only_path: "ofl/niramit"
   name "Niramit"
   homepage "https://fonts.google.com/specimen/Niramit"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Niramit",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Niramit-Bold.ttf"
   font "Niramit-BoldItalic.ttf"

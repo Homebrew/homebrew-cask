@@ -1,11 +1,17 @@
 cask "font-carrois-gothic" do
-  version :latest
+  version "1.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/carroisgothic/CarroisGothic-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Carrois Gothic"
   homepage "https://fonts.google.com/specimen/Carrois+Gothic"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Carrois Gothic",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "CarroisGothic-Regular.ttf"
 

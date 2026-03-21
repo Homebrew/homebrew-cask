@@ -1,5 +1,5 @@
 cask "font-battambang" do
-  version :latest
+  version "8.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-battambang" do
       only_path: "ofl/battambang"
   name "Battambang"
   homepage "https://fonts.google.com/specimen/Battambang"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Battambang",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Battambang-Black.ttf"
   font "Battambang-Bold.ttf"

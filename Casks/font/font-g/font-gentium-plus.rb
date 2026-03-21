@@ -1,5 +1,5 @@
 cask "font-gentium-plus" do
-  version :latest
+  version "6.101"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-gentium-plus" do
       only_path: "ofl/gentiumplus"
   name "Gentium Plus"
   homepage "https://fonts.google.com/specimen/Gentium+Plus"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Gentium Plus",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "GentiumPlus-Bold.ttf"
   font "GentiumPlus-BoldItalic.ttf"

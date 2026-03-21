@@ -1,5 +1,5 @@
 cask "font-idiqlat" do
-  version :latest
+  version "2.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-idiqlat" do
       only_path: "ofl/idiqlat"
   name "Idiqlat"
   homepage "https://fonts.google.com/specimen/Idiqlat"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Idiqlat",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Idiqlat-ExtraLight.ttf"
   font "Idiqlat-Light.ttf"

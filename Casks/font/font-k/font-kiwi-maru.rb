@@ -1,5 +1,5 @@
 cask "font-kiwi-maru" do
-  version :latest
+  version "1.100"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-kiwi-maru" do
       only_path: "ofl/kiwimaru"
   name "Kiwi Maru"
   homepage "https://fonts.google.com/specimen/Kiwi+Maru"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Kiwi Maru",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "KiwiMaru-Light.ttf"
   font "KiwiMaru-Medium.ttf"

@@ -1,5 +1,5 @@
 cask "font-noto-serif-myanmar" do
-  version :latest
+  version "2.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-noto-serif-myanmar" do
       only_path: "ofl/notoserifmyanmar"
   name "Noto Serif Myanmar"
   homepage "https://fonts.google.com/specimen/Noto+Serif+Myanmar"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Noto Serif Myanmar",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "NotoSerifMyanmar-Black.ttf"
   font "NotoSerifMyanmar-Bold.ttf"

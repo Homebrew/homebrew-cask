@@ -1,5 +1,5 @@
 cask "font-chathura" do
-  version :latest
+  version "1.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-chathura" do
       only_path: "ofl/chathura"
   name "Chathura"
   homepage "https://fonts.google.com/specimen/Chathura"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Chathura",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Chathura-Bold.ttf"
   font "Chathura-ExtraBold.ttf"

@@ -1,5 +1,5 @@
 cask "font-playfair" do
-  version :latest
+  version "2.203"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-playfair" do
       only_path: "ofl/playfair"
   name "Playfair"
   homepage "https://fonts.google.com/specimen/Playfair"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Playfair",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Playfair-Italic[opsz,wdth,wght].ttf"
   font "Playfair[opsz,wdth,wght].ttf"

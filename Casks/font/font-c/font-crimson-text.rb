@@ -1,5 +1,5 @@
 cask "font-crimson-text" do
-  version :latest
+  version "1.100"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-crimson-text" do
       only_path: "ofl/crimsontext"
   name "Crimson Text"
   homepage "https://fonts.google.com/specimen/Crimson+Text"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Crimson Text",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "CrimsonText-Bold.ttf"
   font "CrimsonText-BoldItalic.ttf"

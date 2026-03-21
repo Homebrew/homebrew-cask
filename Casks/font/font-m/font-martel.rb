@@ -1,5 +1,5 @@
 cask "font-martel" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-martel" do
       only_path: "ofl/martel"
   name "Martel"
   homepage "https://fonts.google.com/specimen/Martel"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Martel",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Martel-Bold.ttf"
   font "Martel-DemiBold.ttf"

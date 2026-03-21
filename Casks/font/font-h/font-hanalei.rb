@@ -1,11 +1,17 @@
 cask "font-hanalei" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts/raw/main/ofl/hanalei/Hanalei-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Hanalei"
   homepage "https://fonts.google.com/specimen/Hanalei"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Hanalei",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Hanalei-Regular.ttf"
 

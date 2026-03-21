@@ -1,5 +1,5 @@
 cask "font-schibsted-grotesk" do
-  version :latest
+  version "1.100"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-schibsted-grotesk" do
       only_path: "ofl/schibstedgrotesk"
   name "Schibsted Grotesk"
   homepage "https://fonts.google.com/specimen/Schibsted+Grotesk"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Schibsted Grotesk",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "SchibstedGrotesk-Italic[wght].ttf"
   font "SchibstedGrotesk[wght].ttf"

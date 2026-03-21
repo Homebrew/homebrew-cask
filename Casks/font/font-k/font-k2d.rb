@@ -1,5 +1,5 @@
 cask "font-k2d" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-k2d" do
       only_path: "ofl/k2d"
   name "K2D"
   homepage "https://fonts.google.com/specimen/K2D"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "K2D",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "K2D-Bold.ttf"
   font "K2D-BoldItalic.ttf"

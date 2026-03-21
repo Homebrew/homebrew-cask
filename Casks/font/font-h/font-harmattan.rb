@@ -1,5 +1,5 @@
 cask "font-harmattan" do
-  version :latest
+  version "4.400"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-harmattan" do
       only_path: "ofl/harmattan"
   name "Harmattan"
   homepage "https://fonts.google.com/specimen/Harmattan"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Harmattan",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Harmattan-Bold.ttf"
   font "Harmattan-Medium.ttf"

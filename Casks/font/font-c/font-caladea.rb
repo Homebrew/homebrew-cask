@@ -1,5 +1,5 @@
 cask "font-caladea" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-caladea" do
       only_path: "ofl/caladea"
   name "Caladea"
   homepage "https://fonts.google.com/specimen/Caladea"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Caladea",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Caladea-Bold.ttf"
   font "Caladea-BoldItalic.ttf"

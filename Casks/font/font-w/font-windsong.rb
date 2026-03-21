@@ -1,5 +1,5 @@
 cask "font-windsong" do
-  version :latest
+  version "1.010"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-windsong" do
       only_path: "ofl/windsong"
   name "WindSong"
   homepage "https://fonts.google.com/specimen/WindSong"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "WindSong",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "WindSong-Medium.ttf"
   font "WindSong-Regular.ttf"

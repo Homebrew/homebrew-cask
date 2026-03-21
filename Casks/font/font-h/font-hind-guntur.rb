@@ -1,5 +1,5 @@
 cask "font-hind-guntur" do
-  version :latest
+  version "1.002"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-hind-guntur" do
       only_path: "ofl/hindguntur"
   name "Hind Guntur"
   homepage "https://fonts.google.com/specimen/Hind+Guntur"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Hind Guntur",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "HindGuntur-Bold.ttf"
   font "HindGuntur-Light.ttf"

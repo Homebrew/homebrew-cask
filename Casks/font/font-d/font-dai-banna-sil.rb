@@ -1,5 +1,5 @@
 cask "font-dai-banna-sil" do
-  version :latest
+  version "4.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-dai-banna-sil" do
       only_path: "ofl/daibannasil"
   name "Dai Banna SIL"
   homepage "https://fonts.google.com/specimen/Dai+Banna+SIL"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Dai Banna SIL",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "DaiBannaSIL-Bold.ttf"
   font "DaiBannaSIL-BoldItalic.ttf"

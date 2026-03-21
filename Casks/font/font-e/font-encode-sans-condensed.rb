@@ -1,5 +1,5 @@
 cask "font-encode-sans-condensed" do
-  version :latest
+  version "2.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-encode-sans-condensed" do
       only_path: "ofl/encodesanscondensed"
   name "Encode Sans Condensed"
   homepage "https://fonts.google.com/specimen/Encode+Sans+Condensed"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Encode Sans Condensed",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "EncodeSansCondensed-Black.ttf"
   font "EncodeSansCondensed-Bold.ttf"

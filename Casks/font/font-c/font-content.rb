@@ -1,5 +1,5 @@
 cask "font-content" do
-  version :latest
+  version "6.00"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-content" do
       only_path: "ofl/content"
   name "Content"
   homepage "https://fonts.google.com/specimen/Content"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Content",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Content-Bold.ttf"
   font "Content-Regular.ttf"

@@ -7,7 +7,7 @@ cask "font-noto-sans-myanmar-ui" do
       branch:    "main",
       only_path: "ofl/notosansmyanmarui"
   name "Noto Sans Myanmar UI"
-  homepage "https://fonts.google.com/specimen/Noto+Sans+Myanmar"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Myanmar+UI"
 
   font "NotoSansMyanmarUI-Black.ttf"
   font "NotoSansMyanmarUI-Bold.ttf"

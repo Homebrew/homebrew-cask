@@ -1,5 +1,5 @@
 cask "font-farro" do
-  version :latest
+  version "1.101"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-farro" do
       only_path: "ofl/farro"
   name "Farro"
   homepage "https://fonts.google.com/specimen/Farro"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Farro",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Farro-Bold.ttf"
   font "Farro-Light.ttf"

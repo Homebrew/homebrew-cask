@@ -1,5 +1,5 @@
 cask "font-aref-ruqaa" do
-  version :latest
+  version "1.003"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-aref-ruqaa" do
       only_path: "ofl/arefruqaa"
   name "Aref Ruqaa"
   homepage "https://fonts.google.com/specimen/Aref+Ruqaa"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Aref Ruqaa",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "ArefRuqaa-Bold.ttf"
   font "ArefRuqaa-Regular.ttf"

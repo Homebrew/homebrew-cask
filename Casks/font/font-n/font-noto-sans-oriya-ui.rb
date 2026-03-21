@@ -7,7 +7,7 @@ cask "font-noto-sans-oriya-ui" do
       branch:    "main",
       only_path: "ofl/notosansoriyaui"
   name "Noto Sans Oriya UI"
-  homepage "https://fonts.google.com/specimen/Noto+Sans+Oriya"
+  homepage "https://fonts.google.com/specimen/Noto+Sans+Oriya+UI"
 
   font "NotoSansOriyaUI-Black.ttf"
   font "NotoSansOriyaUI-Bold.ttf"

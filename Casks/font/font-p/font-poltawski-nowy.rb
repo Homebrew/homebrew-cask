@@ -1,5 +1,5 @@
 cask "font-poltawski-nowy" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-poltawski-nowy" do
       only_path: "ofl/poltawskinowy"
   name "Poltawski Nowy"
   homepage "https://fonts.google.com/specimen/Poltawski+Nowy"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Poltawski Nowy",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "PoltawskiNowy-Italic[wght].ttf"
   font "PoltawskiNowy[wght].ttf"

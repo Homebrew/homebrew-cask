@@ -1,5 +1,5 @@
 cask "font-zen-maru-gothic" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-zen-maru-gothic" do
       only_path: "ofl/zenmarugothic"
   name "Zen Maru Gothic"
   homepage "https://fonts.google.com/specimen/Zen+Maru+Gothic"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Zen Maru Gothic",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "ZenMaruGothic-Black.ttf"
   font "ZenMaruGothic-Bold.ttf"

@@ -1,5 +1,5 @@
 cask "font-fira-sans-condensed" do
-  version :latest
+  version "4.203"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-fira-sans-condensed" do
       only_path: "ofl/firasanscondensed"
   name "Fira Sans Condensed"
   homepage "https://fonts.google.com/specimen/Fira+Sans+Condensed"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Fira Sans Condensed",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "FiraSansCondensed-Black.ttf"
   font "FiraSansCondensed-BlackItalic.ttf"

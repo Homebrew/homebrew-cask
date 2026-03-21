@@ -1,5 +1,5 @@
 cask "font-old-standard-tt" do
-  version :latest
+  version "3.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-old-standard-tt" do
       only_path: "ofl/oldstandardtt"
   name "Old Standard TT"
   homepage "https://fonts.google.com/specimen/Old+Standard+TT"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Old Standard TT",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "OldStandard-Bold.ttf"
   font "OldStandard-Italic.ttf"

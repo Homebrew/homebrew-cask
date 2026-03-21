@@ -1,5 +1,5 @@
 cask "font-blinker" do
-  version :latest
+  version "1.015"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-blinker" do
       only_path: "ofl/blinker"
   name "Blinker"
   homepage "https://fonts.google.com/specimen/Blinker"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Blinker",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Blinker-Black.ttf"
   font "Blinker-Bold.ttf"

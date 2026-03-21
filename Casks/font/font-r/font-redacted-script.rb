@@ -1,5 +1,5 @@
 cask "font-redacted-script" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-redacted-script" do
       only_path: "ofl/redactedscript"
   name "Redacted Script"
   homepage "https://fonts.google.com/specimen/Redacted+Script"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Redacted Script",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "RedactedScript-Bold.ttf"
   font "RedactedScript-Light.ttf"

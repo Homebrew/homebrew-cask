@@ -1,5 +1,5 @@
 cask "font-solway" do
-  version :latest
+  version "1.000"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-solway" do
       only_path: "ofl/solway"
   name "Solway"
   homepage "https://fonts.google.com/specimen/Solway"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Solway",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "Solway-Bold.ttf"
   font "Solway-ExtraBold.ttf"

@@ -1,5 +1,5 @@
 cask "font-b612-mono" do
-  version :latest
+  version "1.008"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-b612-mono" do
       only_path: "ofl/b612mono"
   name "B612 Mono"
   homepage "https://fonts.google.com/specimen/B612+Mono"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "B612 Mono",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "B612Mono-Bold.ttf"
   font "B612Mono-BoldItalic.ttf"

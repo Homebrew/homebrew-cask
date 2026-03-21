@@ -1,5 +1,5 @@
 cask "font-crete-round" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-crete-round" do
       only_path: "ofl/creteround"
   name "Crete Round"
   homepage "https://fonts.google.com/specimen/Crete+Round"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Crete Round",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "CreteRound-Italic.ttf"
   font "CreteRound-Regular.ttf"

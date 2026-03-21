@@ -1,5 +1,5 @@
 cask "font-radio-canada-big" do
-  version :latest
+  version "1.001"
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
@@ -8,6 +8,12 @@ cask "font-radio-canada-big" do
       only_path: "ofl/radiocanadabig"
   name "Radio Canada Big"
   homepage "https://fonts.google.com/specimen/Radio+Canada+Big"
+
+  livecheck do
+    url "https://fonts.sandbox.google.com/metadata/versions"
+    strategy :page_match
+    regex(/name": "Radio Canada Big",[\s\S]*?version": "Version ([\d.]+)/)
+  end
 
   font "RadioCanadaBig-Italic[wght].ttf"
   font "RadioCanadaBig[wght].ttf"
