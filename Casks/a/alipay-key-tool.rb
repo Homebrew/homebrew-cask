@@ -11,6 +11,8 @@ cask "alipay-key-tool" do
     skip "version is shown in screenshot on homepage"
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "支付宝开放平台密钥工具.app"
 
   zap trash: [
