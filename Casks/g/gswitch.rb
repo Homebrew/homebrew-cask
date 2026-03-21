@@ -8,6 +8,8 @@ cask "gswitch" do
   desc "Set which graphics card to use"
   homepage "https://codyschrank.github.io/gSwitch/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "gSwitch.app"
 
   zap trash: [
