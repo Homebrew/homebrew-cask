@@ -8,6 +8,8 @@ cask "jedit" do
   desc "Text editor"
   homepage "https://www.jedit.org/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "jEdit.app"
 
   zap trash: [
