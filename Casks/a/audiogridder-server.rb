@@ -11,6 +11,8 @@ cask "audiogridder-server" do
     cask "audiogridder-plugin"
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   pkg "AudioGridderServer_#{version}_macOS-universal.pkg"
 
   uninstall pkgutil: [
