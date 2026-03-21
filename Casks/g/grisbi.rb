@@ -13,6 +13,8 @@ cask "grisbi" do
     regex(%r{url=.*?/Grisbi[^"' >]*?[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Grisbi.app"
 
   zap trash: [
