@@ -6,7 +6,7 @@ cask "aegisub" do
       verified: "github.com/TypesettingTools/Aegisub/"
   name "Aegisub"
   desc "Create and modify subtitles"
-  homepage "https://aegisub.org/"
+  homepage "https://github.com/TypesettingTools/Aegisub/"
 
   livecheck do
     url :url
@@ -14,6 +14,8 @@ cask "aegisub" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :ventura"
 
   app "Aegisub.app"
 
