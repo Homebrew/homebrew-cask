@@ -7,6 +7,8 @@ cask "html-mangareader" do
   desc "Lightweight offline CBZ/CBR and image viewer with full continuous scrolling"
   homepage "https://github.com/luejerry/html-mangareader"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "HTML Mangareader.app"
 
   zap trash: [
