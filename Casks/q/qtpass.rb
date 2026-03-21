@@ -10,14 +10,12 @@ cask "qtpass" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on macos: ">= :monterey"
+
   app "QtPass.app"
 
   zap trash: [
     "~/Library/Preferences/org.ijhack.QtPass.plist",
     "~/Library/Saved Application State/org.qtpass.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
