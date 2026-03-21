@@ -16,6 +16,10 @@ cask "alloy" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :ventura"
+
   app "Alloy.app"
 
   zap trash: "~/Library/Saved Application State/org.alloytools.alloy.savedState"
