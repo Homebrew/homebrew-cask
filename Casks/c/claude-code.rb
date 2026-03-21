@@ -2,11 +2,11 @@ cask "claude-code" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "2.1.87"
-  sha256 arm:          "80b51562db1a51bfb654aec1fea6a04106daa0bc1525d88c9c74741ff5d9469a",
-         x86_64:       "c1a4cde29e74e4c3952ead69f90a37a2388aa097d7c567a81ca3669a309e9226",
-         x86_64_linux: "b1a5b89469862adee0e4dc28cab5a8314bc4d0117e19ab26a7b7ff7ce9b59bd5",
-         arm64_linux:  "193c5e9c091eadde302fa23af46c8d646b7263f74fa06ed32746e504bd09df18"
+  version "2.1.81"
+  sha256 arm:          "d014162177fc18bfeb7f93d942130dd964f7424e4101f6ad569de66e6eddca03",
+         x86_64:       "3c63d8173d4a86ab3985aead73c4699e42956d10c2f946179274be76ec657099",
+         x86_64_linux: "047e3f5591d6238b08dd9518729ac335b0e8df1c80fe985e5d7fbda2c18fc281",
+         arm64_linux:  "ccfc3845c8d1a2ded9656a3a517694a844a1b7005b87c784a66f7a60cc58012c"
 
   url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/#{version}/#{os}-#{arch}/claude",
       verified: "storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/"
@@ -15,7 +15,7 @@ cask "claude-code" do
   homepage "https://www.anthropic.com/claude-code"
 
   livecheck do
-    url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest"
+    url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/stable"
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
@@ -31,4 +31,12 @@ cask "claude-code" do
         "~/Library/Caches/claude-cli-nodejs",
       ],
       rmdir: "~/.claude"
+
+  caveats <<~EOS
+    This cask tracks the stable release channel. In-app update notifications
+    default to the latest channel regardless. To align notifications with this
+    cask, set the auto-update channel to "stable" via /config or in
+    ~/.claude/settings.json:
+      https://code.claude.com/docs/en/setup#configure-release-channel
+  EOS
 end
