@@ -16,6 +16,8 @@ cask "fpc-src-laz" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   pkg "fpcsrc-#{version.csv.first}.pkg"
 
   uninstall pkgutil: [
