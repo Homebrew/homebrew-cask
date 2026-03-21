@@ -8,6 +8,8 @@ cask "instatus-out" do
   desc "Monitor services in your menu bar"
   homepage "https://instatus.com/out"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Instatus Out.app"
 
   zap trash: [
