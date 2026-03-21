@@ -17,6 +17,8 @@ cask "fvim" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "FVim.app"
 
   zap trash: "~/Library/Saved Application State/com.fvim.www.savedState"
