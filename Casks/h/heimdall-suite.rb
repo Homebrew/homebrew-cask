@@ -13,6 +13,8 @@ cask "heimdall-suite" do
     regex(%r{href=.*?/heimdall[._-]suite[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   pkg "Heimdall Suite #{version}.pkg"
 
   uninstall kext:    "au.com.glassechidna.heimdall_usb_shield",
