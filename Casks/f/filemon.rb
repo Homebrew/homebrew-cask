@@ -12,6 +12,8 @@ cask "filemon" do
     regex(/File\s*Monitor\s+(\d+(?:\.\d+)+)/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   binary "filemon"
 
   # No zap stanza required
