@@ -1,6 +1,6 @@
 cask "qtpass" do
-  version "1.5.0"
-  sha256 "eb44ac534a8b8da67c7f7166f2089a1426d538d0181bc1090285d237d22fe825"
+  version "1.5.1"
+  sha256 "f45ae0e2310bc82024ffe246634bb0f6e37776f0b5ef1635c124220ed84bae39"
 
   url "https://github.com/IJHack/qtpass/releases/download/v#{version}/qtpass-#{version}.dmg",
       verified: "github.com/IJHack/qtpass/"
