@@ -6,6 +6,8 @@ cask "majsoul-plus" do
   name "Majsoul Plus"
   homepage "https://github.com/MajsoulPlus/majsoul-plus/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Majsoul Plus.app"
 
   caveats do
