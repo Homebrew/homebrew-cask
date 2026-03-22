@@ -1,11 +1,11 @@
 cask "gram" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.0.0"
-  sha256 arm:   "5f2518b3cc8baa27b1166e42b8d6e811aae795b84e6b1110348da926570e6f8e",
-         intel: "e49f76ac1ddaa26da00fd358596088c0e7d57d10947541e7fc3489472dbcc9df"
+  version "1.1.0"
+  sha256 arm:   "96d8d3295784ca23727e1aabab731552462abb63a280852c2400be83b20aa80b",
+         intel: "1fa30202830264a99c5ae650b802e41c49b1a610b4e955594f6d7fc9f15dc75d"
 
-  url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/Gram-mac-#{arch}-#{version}.dmg",
+  url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/Gram-#{arch}-#{version}.dmg",
       verified: "codeberg.org/GramEditor/"
   name "Gram"
   desc "Code editor focused on stability, without AI, subscriptions, or telemetry"
