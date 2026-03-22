@@ -13,6 +13,8 @@ cask "n1ghtshade" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on formula: %w[
     libimobiledevice
     libirecovery
@@ -22,6 +24,7 @@ cask "n1ghtshade" do
     libzip
     openssl
   ]
+  depends_on macos: ">= :big_sur"
 
   app "n1ghtshade.app"
 
