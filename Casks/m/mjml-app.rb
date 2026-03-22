@@ -8,6 +8,8 @@ cask "mjml-app" do
   desc "Desktop app for MJML"
   homepage "https://mjmlio.github.io/mjml-app/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "MJML.app"
 
   caveats do
