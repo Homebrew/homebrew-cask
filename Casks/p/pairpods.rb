@@ -1,6 +1,6 @@
 cask "pairpods" do
-  version "0.6.0"
-  sha256 "9dc85b7667f5f99a7df0ceffffa5035cd97220dd0886bd576bb90e7d84dad870"
+  version "0.7.0"
+  sha256 "08c900877a33c2f3c54398001e129933a98d3e931d102929a97efc6c995bc1b0"
 
   url "https://github.com/wozniakpawel/PairPods/releases/download/v#{version}/PairPods-#{version}.app.zip",
       verified: "github.com/wozniakpawel/PairPods/"
