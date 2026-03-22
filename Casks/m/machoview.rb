@@ -7,6 +7,8 @@ cask "machoview" do
   desc "Visual Mach-O file browser"
   homepage "https://sourceforge.net/projects/machoview/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "MachOView.app"
 
   zap trash: [
