@@ -6,7 +6,7 @@ cask "milkytracker" do
       verified: "github.com/milkytracker/MilkyTracker/"
   name "MilkyTracker"
   desc "Music tracker compatible with FT2"
-  homepage "https://milkytracker.titandemo.org/"
+  homepage "https://milkytracker.org/"
 
   livecheck do
     url :url
@@ -14,6 +14,8 @@ cask "milkytracker" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :sequoia"
 
   app "MilkyTracker.app"
 
