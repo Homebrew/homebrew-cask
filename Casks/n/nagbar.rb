@@ -8,6 +8,8 @@ cask "nagbar" do
   desc "Status bar monitor for Nagios, Icinga/2 and Thruk"
   homepage "https://sites.google.com/site/nagbarapp/home"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "NagBar.app"
 
   zap trash: [
