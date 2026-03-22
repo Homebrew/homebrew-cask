@@ -18,8 +18,4 @@ cask "nulloy" do
   app "Nulloy.app"
 
   zap trash: "~/Library/Saved Application State/com.nulloy.savedState"
-
-  caveats do
-    requires_rosetta
-  end
 end
