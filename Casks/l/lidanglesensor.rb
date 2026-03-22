@@ -1,13 +1,13 @@
 cask "lidanglesensor" do
-  version "1.0.3"
-  sha256 "3ee216765f12673527cea98d5509bcd5799333653030ac7f953e3c7fa3dd2cd2"
+  version "1.1"
+  sha256 "d4b14e7d866589117e5b2cfc7f06e8f8b915dc81948073d9df091177d21e0780"
 
-  url "https://github.com/samhenrigold/LidAngleSensor/releases/download/#{version}/LidAngleSensor.app.zip"
+  url "https://github.com/samhenrigold/LidAngleSensor/releases/download/#{version}/LidAngleSensor.zip"
   name "LidAngleSensor"
   desc "Utility to display the lid angle and play a creaking sound"
   homepage "https://github.com/samhenrigold/LidAngleSensor"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sonoma"
 
   app "LidAngleSensor.app"
 
