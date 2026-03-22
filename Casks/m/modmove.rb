@@ -7,6 +7,8 @@ cask "modmove" do
   desc "Utility to move/resize windows using modifiers and the mouse"
   homepage "https://github.com/keith/modmove"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "ModMove.app"
 
   # No zap stanza required
