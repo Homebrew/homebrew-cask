@@ -7,6 +7,8 @@ cask "macstroke" do
   desc "Configurable global mouse gestures"
   homepage "https://github.com/mtjo/MacStroke/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "MacStroke.app"
 
   zap trash: [
