@@ -19,8 +19,8 @@ cask "baobab-app" do
   app "Baobab.app"
 
   zap trash: [
-    "~/Library/Preferences/org.gnome.baobab.plist",
     "~/Library/Application Support/baobab",
     "~/Library/Caches/org.gnome.baobab",
+    "~/Library/Preferences/org.gnome.baobab.plist",
   ]
 end
