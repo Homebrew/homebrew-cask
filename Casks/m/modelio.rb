@@ -8,6 +8,8 @@ cask "modelio" do
   desc "Extensible modelling environment"
   homepage "https://www.modelio.org/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Modelio #{version.major_minor}.app"
 
   zap trash: "~/.modelio"
