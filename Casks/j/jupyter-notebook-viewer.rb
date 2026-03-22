@@ -7,6 +7,8 @@ cask "jupyter-notebook-viewer" do
   desc "Utility to render Jupyter notebooks"
   homepage "https://github.com/tuxu/nbviewer-app"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Jupyter Notebook Viewer.app"
 
   zap trash: "~/Library/Saved Application State/com.tinowagner.nbviewer-app.savedState"
