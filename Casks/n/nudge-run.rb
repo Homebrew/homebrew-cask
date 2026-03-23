@@ -5,14 +5,12 @@ cask "nudge-run" do
   url "https://github.com/mikusnuz/nudge/releases/download/v#{version}/Nudge.dmg",
       verified: "github.com/mikusnuz/nudge/"
   name "Nudge"
-  desc "Lightweight macOS window manager with keyboard shortcuts and drag-to-edge snapping"
-  homepage "https://nudge.run"
+  desc "Lightweight window manager with keyboard shortcuts and drag-to-edge snapping"
+  homepage "https://nudge.run/"
 
   depends_on macos: ">= :big_sur"
 
   app "Nudge.app"
 
-  zap trash: [
-    "~/Library/Preferences/app.nudge.Nudge.plist",
-  ]
+  zap trash: "~/Library/Preferences/app.nudge.Nudge.plist"
 end
