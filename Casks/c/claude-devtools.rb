@@ -1,9 +1,9 @@
 cask "claude-devtools" do
   arch arm: "-arm64"
 
-  version "0.4.8"
-  sha256 arm:   "66d3e203aface31c24525990bb2e8a24eb24c5a07a50dcc846221bc204e17aaa",
-         intel: "22dcb5f407a207ac9f165c40de5b5b0bf5c0700abe1f2be7a5da21544862c3d6"
+  version "0.4.9"
+  sha256 arm:   "7409a45e5ff268a907467a66045cbf12d6537786e7d7d2c8e7c5b302a7935316",
+         intel: "89b8179a68dbb92bc7e1dd9665427d0e48344f80a27af213af576d6ad0145324"
 
   url "https://github.com/matt1398/claude-devtools/releases/download/v#{version}/claude-devtools-#{version}#{arch}.dmg"
   name "Claude DevTools"
