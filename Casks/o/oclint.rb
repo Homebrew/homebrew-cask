@@ -29,6 +29,8 @@ cask "oclint" do
   desc "Static source code analysis tool"
   homepage "https://github.com/oclint/oclint/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :monterey"
 
   binary "oclint-#{version}/bin/oclint-json-compilation-database"
