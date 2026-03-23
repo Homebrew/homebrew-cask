@@ -8,6 +8,8 @@ cask "plugdata@nightly" do
   desc "Plugin wrapper for PureData"
   homepage "https://plugdata.org/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   conflicts_with cask: "plugdata"
 
   pkg "plugdata-macOS-Universal.pkg"
