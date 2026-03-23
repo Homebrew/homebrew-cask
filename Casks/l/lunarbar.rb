@@ -1,5 +1,5 @@
 cask "lunarbar" do
-  arch arm: "-apple-silicon", intel: ""
+  arch arm: "-apple-silicon"
 
   version "1.9.0"
   sha256 arm:   "58bb109d5a1e9909a786dd3fbcad535c795ff0e081659d2ea1425e82fb48f74b",
