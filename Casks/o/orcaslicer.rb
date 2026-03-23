@@ -1,6 +1,6 @@
 cask "orcaslicer" do
-  version "2.3.1"
-  sha256 "c249b58647bb85b55b0dd6560010974e9791458bb850c464c5a69f0499edb371"
+  version "2.3.2"
+  sha256 "334f7265b1df930e94ac75a318005bbe63f670fe719a9e7778c30f4d7c887cc2"
 
   url "https://github.com/SoftFever/OrcaSlicer/releases/download/v#{version}/OrcaSlicer_Mac_universal_V#{version}.dmg"
   name "Orca Slicer"
@@ -8,6 +8,7 @@ cask "orcaslicer" do
   homepage "https://github.com/SoftFever/OrcaSlicer"
 
   conflicts_with cask: "orcaslicer@nightly"
+  depends_on macos: ">= :big_sur"
 
   app "OrcaSlicer.app"
 
