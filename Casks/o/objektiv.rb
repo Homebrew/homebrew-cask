@@ -7,6 +7,8 @@ cask "objektiv" do
   desc "Browser switcher utility"
   homepage "https://github.com/nthloop/Objektiv"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Objektiv.app"
 
   zap trash: "~/Library/Preferences/com.nthloop.Objektiv.plist"
