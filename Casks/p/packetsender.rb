@@ -1,6 +1,6 @@
 cask "packetsender" do
-  version "8.10.4"
-  sha256 "eabf44386f87e87aa4ed02266c0718b288dc6f64a67637be4be902ee72b16023"
+  version "8.10.5"
+  sha256 "3ead23a871b0715a0e5a2c4ff4c9d4e3788baa84ee1e8a33733231a5a1631347"
 
   url "https://github.com/dannagle/PacketSender/releases/download/v#{version}/PacketSender_v#{version}.dmg",
       verified: "github.com/dannagle/PacketSender/"
@@ -16,7 +16,7 @@ cask "packetsender" do
   end
 
   auto_updates true
-  depends_on macos: ">= :tahoe"
+  depends_on macos: ">= :sonoma"
 
   app "PacketSender.app"
 
