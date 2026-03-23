@@ -16,4 +16,8 @@ cask "react-proto" do
     "~/Library/Application Support/react-proto",
     "~/Library/Preferences/com.react.proto*.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
