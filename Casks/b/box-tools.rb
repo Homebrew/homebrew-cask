@@ -18,6 +18,8 @@ cask "box-tools" do
     end
   end
 
+  depends_on macos: ">= :ventura"
+
   apps = [
     "Device Trust",
     "Edit",
@@ -37,8 +39,11 @@ cask "box-tools" do
   zap trash: "~/Library/Application Support/Box/Box Edit",
       rmdir: "~/Library/Application Support/Box"
 
-  caveats <<~EOS
-    Box Edit currently only works with Safari and Firefox.
-    Restart your browser to load the plugin.
-  EOS
+  caveats do
+    requires_rosetta
+    <<~EOS
+      Box Edit currently only works with Safari and Firefox.
+      Restart your browser to load the plugin.
+    EOS
+  end
 end
