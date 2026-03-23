@@ -11,6 +11,8 @@ cask "sabaki" do
   desc "Go board and SGF editor"
   homepage "https://sabaki.yichuanshen.de/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Sabaki.app"
 
   zap trash: [
