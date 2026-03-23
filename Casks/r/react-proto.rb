@@ -8,6 +8,8 @@ cask "react-proto" do
   desc "React application prototyping tool for developers and designers"
   homepage "https://react-proto.github.io/react-proto"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "React-Proto.app"
 
   zap trash: [
