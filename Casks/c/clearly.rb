@@ -5,14 +5,10 @@ cask "clearly" do
   url "https://github.com/Shpigford/clearly/releases/download/v#{version}/Clearly.dmg",
       verified: "github.com/Shpigford/clearly/"
   name "Clearly"
-  desc "Clean, native markdown editor"
+  desc "Markdown editor"
   homepage "https://clearly.md/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
+  auto_updates true
   depends_on macos: ">= :sonoma"
 
   app "Clearly.app"
