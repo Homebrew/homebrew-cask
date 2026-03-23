@@ -1,9 +1,9 @@
 cask "cpu-info" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.9.0"
-  sha256 arm:   "c661d62e8fad138261aaf0a3e7663f38933abbe86cca9475d5f813f31e1addc5",
-         intel: "5bbf1a83a7a41590f821beea24be91d90ad3b3234c331a3cdd6ab6cae4d81a6b"
+  version "1.10.0"
+  sha256 arm:   "080acf4cfd55d4d677bd962e2ab399b303a1a898066d7b2634870900729faa31",
+         intel: "7b7e943ef7855f838ab018a656a4ddc19dd39707ad4026316ee994e8a336be93"
 
   url "https://github.com/kamgurgul/cpu-info/releases/download/jvm-#{version}/CPU-Info-macos-#{arch}-#{version}.dmg"
   name "CPU Info"
