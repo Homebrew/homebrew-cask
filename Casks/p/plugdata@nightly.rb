@@ -19,6 +19,7 @@ cask "plugdata@nightly" do
     "com.plugdata.au.pkg.plugdata",
     "com.plugdata.clap.pkg.plugdata",
     "com.plugdata.lv2.pkg.plugdata",
+    "com.plugdata.sharedlibs.pkg.plugdata",
     "com.plugdata.vst3.pkg.plugdata",
   ]
 
