@@ -1,5 +1,5 @@
 cask "sharemouse" do
-  version "7.0.18"
+  version "7.0.19"
   sha256 :no_check
 
   url "https://www.sharemouse.com/ShareMouseSetup.dmg"
