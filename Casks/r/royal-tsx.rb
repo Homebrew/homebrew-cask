@@ -1,6 +1,6 @@
 cask "royal-tsx" do
-  version "6.4.1.1000"
-  sha256 "5bcf53703969a3abc1397d0e05b4b15f2332e9d4400659470e8fda90694bdfd5"
+  version "6.4.2.1000"
+  sha256 "ebb86257e41684f35f8cb2d2d8d779920ae379073e004b1281740a5c465f276b"
 
   url "https://royaltsx-v#{version.major}.royalapps.com/updates/royaltsx_#{version}.dmg"
   name "Royal TSX"
