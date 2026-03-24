@@ -16,6 +16,7 @@ cask "qflipper" do
   binary "#{appdir}/qFlipper.app/Contents/MacOS/qFlipper-cli"
 
   zap trash: [
+    "~/Library/Application Support/qFlipper",
     "~/Library/Preferences/com.flipperdevices.qFlipper.plist",
     "~/Library/Preferences/com.flipperzero-one.qFlipper.plist",
     "~/Library/Saved Application State/test.qFlipper.savedState",
