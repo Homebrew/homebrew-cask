@@ -6,7 +6,7 @@ cask "altar-ai" do
       verified: "altar-prototype.sgp1.cdn.digitaloceanspaces.com/"
   name "Altar AI"
   desc "AI-powered meeting assistant"
-  homepage "https://altar.inc/"
+  homepage "https://app.altar.inc/"
 
   livecheck do
     url "https://altar-prototype.sgp1.cdn.digitaloceanspaces.com/latest/latest-mac.yml"
