@@ -1,15 +1,14 @@
 cask "soundanchor" do
   version "1.6.2"
-  sha256 "8aaee5b7869d79d95af1c9e421dff6c90ce12bcc991b1b50b7a3cbad2944c478"
+  sha256 "035065faf2fdd3e5e9b2c7e43d09f17254cf637c6882d34b78d8c0f4d81868cb"
 
-  url "https://kopiro.s3.amazonaws.com/soundanchor/soundanchor-#{version}.dmg",
-      verified: "kopiro.s3.amazonaws.com/soundanchor/"
+  url "https://cdn.kopiro.me/soundanchor/SoundAnchor.dmg"
   name "SoundAnchor"
   desc "Audio device utility"
   homepage "https://apps.kopiro.me/soundanchor/"
 
   livecheck do
-    url "https://kopiro.s3.eu-west-1.amazonaws.com/soundanchor/appcast.xml"
+    url "https://cdn.kopiro.me/soundanchor/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
@@ -20,3 +19,4 @@ cask "soundanchor" do
 
   # No zap stanza required
 end
+
