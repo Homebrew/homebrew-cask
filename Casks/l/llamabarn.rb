@@ -1,6 +1,6 @@
 cask "llamabarn" do
-  version "0.25.0"
-  sha256 "835e623fdaea103ea4707d3fc3736574f6f52f61748ce796f6a07c48334c11e3"
+  version "0.26.0"
+  sha256 "767207faf82cede35f4fcba8b4978d4fabe6483e79ffd9b81d17d1382642d606"
 
   url "https://github.com/ggml-org/LlamaBarn/releases/download/#{version}/LlamaBarn.dmg"
   name "LlamaBarn"
