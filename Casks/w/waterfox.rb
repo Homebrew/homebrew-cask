@@ -1,6 +1,6 @@
 cask "waterfox" do
-  version "6.6.9"
-  sha256 "c5e658b0bdb75db8b5539401ccbcd780373514211ad53f8bfb98139d1b2de8ff"
+  version "6.6.10"
+  sha256 "188bce7630321b0bfedb44b45125ab0fb1373f03c08f19b288ad851f2906340e"
 
   url "https://cdn1.waterfox.net/waterfox/releases/#{version}/Darwin_x86_64-aarch64/Waterfox%20#{version}.dmg"
   name "Waterfox"
