@@ -14,7 +14,7 @@ cask "altar-ai" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Altar AI.app"
 
