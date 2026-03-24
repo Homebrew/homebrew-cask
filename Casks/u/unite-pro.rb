@@ -5,7 +5,7 @@ cask "unite-pro" do
   url "https://bzgdownloads.s3.amazonaws.com/Unite/Unite+Pro+#{version}.zip",
       verified: "bzgdownloads.s3.amazonaws.com/Unite/"
   name "Unite Pro"
-  desc "Turn websites into native, customizable Mac apps"
+  desc "Turn websites into native, customizable apps"
   homepage "https://www.bzgapps.com/unite"
 
   livecheck do
@@ -14,10 +14,10 @@ cask "unite-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
   conflicts_with cask: "unite"
+  depends_on macos: ">= :sonoma"
 
-  app "Unite.app"
+  app "Unite Pro.app"
 
   zap trash: [
         "~/Library/Application Scripts/group.BZG.unite.sharedData",
