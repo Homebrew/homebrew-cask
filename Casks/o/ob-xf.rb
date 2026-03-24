@@ -5,7 +5,7 @@ cask "ob-xf" do
   url "https://github.com/surge-synthesizer/OB-Xf/releases/download/v#{version}/ob-xf-macOS-2026-03-24-89eb632.dmg",
       verified: "github.com/surge-synthesizer/OB-Xf/"
   name "OB-Xf"
-  desc "Virtual analog synthesiser"
+  desc "Virtual analog synthesizer"
   homepage "https://surge-synth-team.org/ob-xf/"
 
   pkg "ob-xf-macOS-2026-03-24-89eb632.pkg"
