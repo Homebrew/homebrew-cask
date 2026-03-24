@@ -1,6 +1,6 @@
 cask "butler" do
-  version "4.4.8"
-  sha256 "b6877901f1c5b4d75cebe47fe5cecf461c1b424025b756e6b9efaa44ed9faf7f"
+  version "4.4.9"
+  sha256 "fe01992fa005bc4162f7b38d9d8521b713a48f4e43fc3ebf7e787f570803fab1"
 
   url "https://manytricks.com/download/_do_not_hotlink_/butler#{version.no_dots}.dmg"
   name "Butler"
