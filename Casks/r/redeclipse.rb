@@ -11,8 +11,4 @@ cask "redeclipse" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "redeclipse.app"
-
-  caveats do
-    requires_rosetta
-  end
 end
