@@ -15,7 +15,6 @@
 ### dependencies
 ###
 
-require "pathname"
 require "open3"
 
 begin
