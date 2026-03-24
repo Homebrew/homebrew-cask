@@ -8,6 +8,8 @@ cask "redeclipse" do
   desc "Multiplayer & singleplayer first person shooter"
   homepage "https://www.redeclipse.net/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "redeclipse.app"
 
   caveats do
