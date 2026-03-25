@@ -1,11 +1,11 @@
 cask "libcblite" do
-  version "4.0.0"
-  sha256 "a2ca75240c482f312594bdcea07e2b3dd46fc794733af073714cf849c0b5701f"
+  version "4.0.3"
+  sha256 "e4ddd88181f7781e767b9c66ac2bb17e058a2968cf6c1f6ed434c1313f5cc695"
 
   url "https://packages.couchbase.com/releases/couchbase-lite-c/#{version}/couchbase-lite-c-enterprise-#{version}-macos.zip"
   name "Couchbase Lite (Enterprise Edition)"
   desc "Couchbase Lite Libraries for C and C++ (Enterprise Edition)"
-  homepage "https://www.couchbase.com/products/lite"
+  homepage "https://docs.couchbase.com/couchbase-lite/current/"
 
   livecheck do
     url "https://docs.couchbase.com/couchbase-lite/current/c/gs-downloads.html"
