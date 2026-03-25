@@ -1,6 +1,6 @@
 cask "tdr-nova" do
-  version "2.2.1"
-  sha256 "3f52e024b3aa49c75ce55c2c0fc18363ef4caac0dca0df60277372f66de9297b"
+  version "2.2.2"
+  sha256 "5c6abe00837581d637cfad1286e2eeeb9b25e69362b28a9dadcc64116f00d926"
 
   url "https://www.tokyodawn.net/labs/Nova/#{version}/TDR%20Nova.zip?x24775"
   name "TDR Nova"
