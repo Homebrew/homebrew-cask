@@ -1,5 +1,5 @@
 cask "figma-agent" do
-  version "126.2.9"
+  version "126.2.10"
   sha256 :no_check
 
   url "https://desktop.figma.com/agent/mac/InstallFigmaAgent.dmg"
