@@ -1,6 +1,6 @@
 cask "commander" do
-  version "0.7.935"
-  sha256 "0581af786f28847aad0a0cabfd1386e8d7a87186729fecf6b8bdbfd51c2f4aee"
+  version "0.7.941"
+  sha256 "796aa529c573997b96d34a1eb09b774d4e360af60b27a981c4b4c6ca094595de"
 
   url "https://download.thecommander.app/release/Commander-#{version}.zip"
   name "Commander"
