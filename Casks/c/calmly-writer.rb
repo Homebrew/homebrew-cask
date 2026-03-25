@@ -2,9 +2,9 @@ cask "calmly-writer" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.0.65"
-  sha256 arm:   "3c76aeff11564eed2c921e98420396316e59e77cf8c4ccdfd70a88c809831795",
-         intel: "59cafa3e182e5d567d7f6409eaf989752f1308d9dfbf75ad953457e873c7854d"
+  version "2.0.66"
+  sha256 arm:   "68d4901681e4eb908ed34db32ae529bf93cccf1c52e0313482eaa91132006428",
+         intel: "59ba1f8ffd667fba623e30bd68950b824353068c45d2a5c825ae9f7662ba7053"
 
   url "https://www.calmlywriter.com/releases/Calmly%20Writer-#{version}#{arch}.dmg"
   name "Calmly Writer"
