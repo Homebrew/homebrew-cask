@@ -8,8 +8,8 @@ cask "devonagent" do
     end
   end
   on_big_sur :or_newer do
-    version "3.11.10"
-    sha256 "0022f53963cda024f1d8a6093a739323b4b9ef3489ce01d32e8d55590e6659fe"
+    version "3.11.11"
+    sha256 "470cb01ae5543fd60c846973437610a0c90c3ffd62999bdb9df560f51d5a5cde"
 
     livecheck do
       url "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300005193"
