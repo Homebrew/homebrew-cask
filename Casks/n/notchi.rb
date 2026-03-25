@@ -8,11 +8,6 @@ cask "notchi" do
   desc "Notch companion for Claude Code"
   homepage "https://notchi.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :sequoia"
 
