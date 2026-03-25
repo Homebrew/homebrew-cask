@@ -1,11 +1,11 @@
 cask "libcblite-community" do
-  version "4.0.0"
-  sha256 "81c0a92183a478ded56fe2d724eca8fa76a93e6d81cecd4cbdbfc28eda38fb0a"
+  version "4.0.3"
+  sha256 "359f1ca64ce0ac7c8e34e78db6471c8427313060eb9da86c5461109816415961"
 
   url "https://packages.couchbase.com/releases/couchbase-lite-c/#{version}/couchbase-lite-c-community-#{version}-macos.zip"
   name "Couchbase Lite (Community Edition)"
   desc "Couchbase Lite Libraries for C and C++ (Community Edition)"
-  homepage "https://www.couchbase.com/products/lite"
+  homepage "https://docs.couchbase.com/couchbase-lite/current/"
 
   livecheck do
     cask "libcblite"
