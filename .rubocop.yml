@@ -1,7 +1,7 @@
 # This file is synced from `Homebrew/brew` by the `.github` repository, do not modify it directly.
 ---
 AllCops:
-  TargetRubyVersion: 3.4
+  TargetRubyVersion: 4.0
   NewCops: enable
   Include:
   - "**/*.rbi"
