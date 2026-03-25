@@ -1,9 +1,9 @@
 cask "hbuilderx" do
   arch arm: ".arm64"
 
-  version "5.04.2026031801"
-  sha256 arm:   "3d6bcc0bd1b625b1a3e0f56b9818fbb1704962a2b52b440e92b9c68da699ad1b",
-         intel: "37c5daf56083874ab94bd5044d690e4000d854b91ea14a8aaf014ded60c70b25"
+  version "5.05.2026032417"
+  sha256 arm:   "73979d52f33cde8db89b54f2a537724e50d02518d6f99c7b2c4f057d4c9e29c4",
+         intel: "3fe4c1381165580ccc5e0994bd69b3519aaa143869237ad70a0d5110fece6e4f"
 
   url "https://download1.dcloud.net.cn/download/HBuilderX.#{version}#{arch}.dmg",
       verified: "download1.dcloud.net.cn/download/"
