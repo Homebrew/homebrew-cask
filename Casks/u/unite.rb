@@ -1,22 +1,22 @@
 cask "unite" do
-  version "6.6"
-  sha256 "3b6e006e91d61694262c807598c7c4c62938fa642757083ef224cbce6e36d5ff"
+  version "1.1"
+  sha256 "4692602555423ea49fc5dc6aab8885b5d6dd49ae4562d955bc7652afd03d4cf9"
 
-  url "https://bzgdownloads.s3.amazonaws.com/Unite/Unite+#{version}.zip",
+  url "https://bzgdownloads.s3.amazonaws.com/Unite/Unite+Pro+#{version}.zip",
       verified: "bzgdownloads.s3.amazonaws.com/Unite/"
-  name "Unite"
-  desc "Turn websites into apps"
+  name "Unite Pro"
+  desc "Turn websites into native, customizable apps"
   homepage "https://bzgapps.com/unite"
 
   livecheck do
-    url "https://bzgdownloads.s3.amazonaws.com/Unite/App+Cast/Unite+#{version.major}+appcast.xml"
+    url "https://bzgdownloads.s3.amazonaws.com/Unite/App+Cast/Unite+Pro+appcast.xml"
     strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sonoma"
 
-  app "Unite.app"
+  app "Unite Pro.app"
 
   zap trash: [
         "~/Library/Application Scripts/group.BZG.unite.sharedData",
