@@ -1,9 +1,9 @@
 cask "yingfu-online" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.1"
-  sha256 arm:   "18ec50717fc2c1b06b20f95837b70c33dfe7280b1f2bcd624e9162c1fc8b510e",
-         intel: "b9f8a26ef400660e7a5c0375af707265493f8649c292e0a1245ec1bf4a5be376"
+  version "1.2.2"
+  sha256 arm:   "b39cc50bb72888577e330fd0cfe5e6a032d8b459e55052676459723b9b661d64",
+         intel: "144be9104c0d988ecd3beaa6a6685d4ea49200f89090567a99a3ba4e29227015"
 
   url "https://online.yingfu.com.cn/cdn/desktop-release/stable/darwin/#{arch}/%E8%8B%B1%E5%AD%9A%E4%B9%90%E5%AD%A6%20#{version}%20(#{arch}).dmg"
   name "Yingfu Online"
