@@ -24,11 +24,4 @@ cask "notchi" do
     "~/Library/Preferences/com.ruban.notchi.plist",
     "~/Library/Saved Application State/com.ruban.notchi.savedState",
   ]
-
-  caveats do
-    <<~EOS
-      Notchi is intended for MacBook models with a display notch and expects Claude Code to be installed.
-      Uninstalling the app does not automatically remove Claude Code hook configuration written on first launch.
-    EOS
-  end
 end
