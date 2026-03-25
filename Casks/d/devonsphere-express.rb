@@ -8,8 +8,8 @@ cask "devonsphere-express" do
     end
   end
   on_big_sur :or_newer do
-    version "1.9.8"
-    sha256 "a9bae928bf58c1a5cbb11878c306ec1e7a3d2bdc5de3e5d080f291c5363c6997"
+    version "1.9.9"
+    sha256 "2c09a34fa71398e6f248bc0c6bd34a8278d5d19a4ba8e0f4a9b3864070d962e9"
 
     livecheck do
       url "https://api.devontechnologies.com/2/apps/sparkle/sparkle.php?id=900000028"
