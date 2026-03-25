@@ -1,9 +1,9 @@
 cask "minecraft-server" do
-  version "1.21.11,64bb6d763bed0a9f1d632ec347938594144943ed"
-  sha256 "f83b8e093865806f931c7e34aae41b177d4c076335263dd124c75d6d65dd1726"
+  version "26.1,3872a7f07a1a595e651aef8b058dfc2bb3772f46"
+  sha256 "98ab064389a8b34d48ac3d4c5ed858dd9433d0dfd1a12e1cbbda916448d92994"
 
-  url "https://launcher.mojang.com/v#{version.major}/objects/#{version.csv.second}/server.jar",
-      verified: "launcher.mojang.com/"
+  url "https://piston-data.mojang.com/v1/objects/#{version.csv.second}/server.jar",
+      verified: "piston-data.mojang.com/"
   name "Minecraft Server"
   desc "Run a Minecraft multiplayer server"
   homepage "https://www.minecraft.net/en-us/"
