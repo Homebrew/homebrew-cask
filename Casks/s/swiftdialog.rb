@@ -1,6 +1,6 @@
 cask "swiftdialog" do
-  version "3.0.0,4952"
-  sha256 "a0ea899a8b8ab10b63df47d70ca6daf9983a4a976819bdce60cb44301105c900"
+  version "3.0.1,4955"
+  sha256 "8977a08d706a4615b6c48b6b47badf0fd61cd6c9904c7a4712aa4431c612f385"
 
   url "https://github.com/swiftDialog/swiftDialog/releases/download/v#{version.csv.first}/dialog-#{version.csv.first}-#{version.csv.second}.pkg",
       verified: "github.com/swiftDialog/swiftDialog/"
