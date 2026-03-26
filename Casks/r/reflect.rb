@@ -1,6 +1,6 @@
 cask "reflect" do
-  version "3.2.1"
-  sha256 "68db38ed6e69c98733feec0a80b93c4dde93a1938e189691a79ce183d61d9627"
+  version "3.2.4"
+  sha256 "19e781a5771b11c0753a7ffc1d90cc786890f90c517ffbce1e4b2c53d1aac974"
 
   url "https://github.com/team-reflect/reflect-electron-updates/releases/download/v#{version}/Reflect-darwin-universal-#{version}.zip",
       verified: "github.com/team-reflect/reflect-electron-updates/"
