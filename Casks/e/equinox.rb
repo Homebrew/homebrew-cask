@@ -1,14 +1,12 @@
 cask "equinox" do
-  version "5.0"
-  sha256 "52cc1243ca8afd052a720cc4c8a9edf903eea68f2819e018ae0e3f4636606ca1"
+  version "6.0"
+  sha256 "1271dfb05af237d5f31d18c67b8755c3d57a8683257ea2eef5bddcd9bbd24261"
 
   url "https://github.com/rlxone/Equinox/releases/download/v#{version}/Equinox-Installer.dmg",
       verified: "github.com/rlxone/Equinox/"
   name "Equinox"
   desc "Create dynamic wallpapers"
   homepage "https://equinoxmac.com/"
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "Equinox.app"
 
