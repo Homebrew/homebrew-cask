@@ -18,6 +18,8 @@ cask "voiden" do
     end
   end
 
+  conflicts_with cask: "voiden@beta"
+
   app "Voiden.app"
 
   zap trash: [
