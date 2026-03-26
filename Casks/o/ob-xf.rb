@@ -19,5 +19,5 @@ cask "ob-xf" do
             ],
             delete:  "/Applications/OB-Xf.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Application Support/OB-Xf.settings"
 end
