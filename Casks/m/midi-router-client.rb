@@ -1,6 +1,6 @@
 cask "midi-router-client" do
-  version "2.24.0"
-  sha256 "625c20fcadbdf1adae50456f808bba0927087472cb71880c287bf044e483158d"
+  version "2.25.0"
+  sha256 "686338b219b62e85633e3689e0970136e313e467922954971e98221a46e531cf"
 
   url "https://downloads.sourceforge.net/midi-router-client/midi-router-client-#{version}-Darwin.dmg"
   name "Midi Router Client"
@@ -14,7 +14,7 @@ cask "midi-router-client" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: ">= :ventura"
 
   app "midi-router-client.app"
 
