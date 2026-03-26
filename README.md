@@ -12,7 +12,7 @@ We do this by providing a friendly CLI workflow for the administration of macOS 
 
 To start using Homebrew Cask, you just need [Homebrew](https://brew.sh) installed.
 
-<img src="https://i.imgur.com/FNNM6WL.gif" width="547" alt="Installing and uninstalling Alfred (animated gif)">
+<img src="https://i.imgur.com/faEdcqX.gif" width="1000" alt="Installing and uninstalling Alfred (animated gif)">
 
 Slower, now:
 
