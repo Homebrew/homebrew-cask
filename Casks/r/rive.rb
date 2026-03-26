@@ -1,6 +1,6 @@
 cask "rive" do
-  version "0.8.4450"
-  sha256 "3b3a3f58cceeb9417939f8d10cc58fc51e31868afeb87253342ab4a722651b82"
+  version "0.8.4485"
+  sha256 "8e24312d542909c458b38f3cf480efac6ceccc06f1d64c8fea5defc6ab395d9c"
 
   url "https://releases.rive.app/macos/#{version}/Rive.dmg"
   name "Rive"
