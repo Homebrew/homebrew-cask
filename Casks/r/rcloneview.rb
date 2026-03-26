@@ -1,6 +1,6 @@
 cask "rcloneview" do
-  version "1.3.554"
-  sha256 "0686a1990bc6f87ccf900bbff560ad7144f1be61280bd445ef2a21d5a1adc118"
+  version "1.4.17"
+  sha256 "9ab7884f4f97003ff5aa549d315bef64021bcc3b409c2688b73bfc5652a371ca"
 
   url "https://downloads.bdrive.com/rclone_view/builds/RcloneView-#{version}.dmg",
       verified: "downloads.bdrive.com/rclone_view/"
@@ -16,7 +16,7 @@ cask "rcloneview" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :monterey"
 
   app "RcloneView.app"
 
