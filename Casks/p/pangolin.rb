@@ -1,6 +1,6 @@
 cask "pangolin" do
-  version "0.6.1"
-  sha256 "add08d5fb4f8be6b94d1fbb7bfd25661f1de46087136a53fb619655b0383efb2"
+  version "0.6.2"
+  sha256 "1e688c192acc87a7c5ebab9347bee955da2f02d8ddf224261b0af614fbacda5e"
 
   url "https://pangolin.net/api/downloads/proxy?url=https%3A%2F%2Fgithub.com%2Ffosrl%2Fapple%2Freleases%2Fdownload%2Fmac-#{version}%2FPangolin_Installer_#{version}.dmg"
   name "Pangolin"
