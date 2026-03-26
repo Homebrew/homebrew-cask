@@ -19,7 +19,7 @@ cask "paseo" do
   depends_on macos: ">= :monterey"
 
   app "Paseo.app"
-  binary "#{appdir}/Paseo.app/Contents/Resources/bin/paseo", target: "paseo"
+  binary "#{appdir}/Paseo.app/Contents/Resources/bin/paseo"
 
   zap trash: [
     "~/Library/Application Support/dev.paseo.desktop",
