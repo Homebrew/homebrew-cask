@@ -8,7 +8,7 @@ cask "voiden@beta" do
   url "https://voiden-beta-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/#{arch}/Voiden-darwin-#{arch}-#{version}.zip",
       verified: "voiden-beta-releases.s3.eu-west-1.amazonaws.com/"
   name "Voiden Beta"
-  desc "API development tool (beta)"
+  desc "API development tool"
   homepage "https://voiden.md/"
 
   livecheck do
