@@ -1,9 +1,9 @@
 cask "ableset" do
   arch arm: "-arm64"
 
-  version "3.0.8"
-  sha256 arm:   "20cf36f0016f1e136d8fa399093c4e43a8d10e9a5a97a9baffccfc05e8a1f292",
-         intel: "c7c41221ebd4fc25db861fe2e72a1f5dd33c54939eb29d74ac00d8911fcc4782"
+  version "3.0.9"
+  sha256 arm:   "9388ebc4efb8179f626ea08b722e740fc1375a98791fde4a36366edd66e38e39",
+         intel: "89786f67506cb34e31af25a76b7c3da0da49769baa27f94f07967a34f02d50a6"
 
   url "https://s3.amazonaws.com/download.ableset.app/mac#{arch}/AbleSet-#{version}#{arch}.dmg",
       verified: "s3.amazonaws.com/download.ableset.app/"
