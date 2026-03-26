@@ -23,6 +23,7 @@ cask "voiden@beta" do
   app "Voiden.app"
 
   zap trash: [
+   "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.voiden.sfl*",
     "~/Library/Application Support/Voiden",
     "~/Library/Caches/com.electron.voiden",
     "~/Library/Caches/com.electron.voiden.ShipIt",
