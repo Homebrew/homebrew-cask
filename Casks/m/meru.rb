@@ -1,9 +1,9 @@
 cask "meru" do
   arch arm: "-arm64"
 
-  version "3.38.3"
-  sha256 arm:   "ba127624a0195192d674f35dd95aa66e97f8dadb70ee72ae090b10da2f846541",
-         intel: "f268f5ba8450172d392f1484f0b4cdfdf3a84f856f264a3447a3b163d2a9f526"
+  version "3.38.4"
+  sha256 arm:   "a1bb99a5e5ec65331b24ad5aa09d21cf02992067c2969244f31185be1557fb2e",
+         intel: "c69948dbbeed455c6a0ba6a70db71c2a928464f493f3a1fa5245f5d0c9d226d7"
 
   url "https://github.com/zoidsh/meru/releases/download/v#{version}/Meru-#{version}#{arch}.dmg",
       verified: "github.com/zoidsh/meru/"
