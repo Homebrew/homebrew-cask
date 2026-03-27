@@ -1,6 +1,6 @@
 cask "ob-xf" do
-  version "1.0.2"
-  sha256 "e069c10a1b45b8ac3d4a2243969fad030c91b661ed30b7ea9daa7d1316c42d4f"
+  version "1.0.3"
+  sha256 "e6f52f453c476dfafbd3225b80c5c3ec341ec20be5748c6f70c01cef14e7e7a8"
 
   url "https://github.com/surge-synthesizer/OB-Xf/releases/download/v#{version}/ob-xf-macOS-v#{version}.dmg",
       verified: "github.com/surge-synthesizer/OB-Xf/"
