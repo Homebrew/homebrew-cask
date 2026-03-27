@@ -2,9 +2,9 @@ cask "fathom" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "_arm64"
 
-  version "1.42.4"
-  sha256 arm:   "a2531156accef2c6f46f4f8246f5de38573455e4819012ebc99d50dd0c98a8a5",
-         intel: "f786d2204119005d2d187d1695e9194d1cbe1f7e0e8282fa4561e4d931ea35d1"
+  version "1.42.5"
+  sha256 arm:   "247f9e26a273ad8e05eebe593e752b74988d1654572047c6244dc93f26fb35e1",
+         intel: "81f5f4f5816d0131dec3debfc76f4c4d3fc2ffc3d6be1be132039b7d4fd1d4b3"
 
   url "https://electron-update.fathom.video/download/file/Fathom-darwin-#{arch}-#{version}.dmg"
   name "Fathom"
