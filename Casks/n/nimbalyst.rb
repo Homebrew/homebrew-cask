@@ -11,11 +11,6 @@ cask "nimbalyst" do
   desc "Visual workspace for building with Codex and Claude Code"
   homepage "https://nimbalyst.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :big_sur"
 
   app "Nimbalyst.app"
