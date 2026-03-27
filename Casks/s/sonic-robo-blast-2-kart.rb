@@ -14,6 +14,8 @@ cask "sonic-robo-blast-2-kart" do
     strategy :github_latest
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Sonic Robo Blast 2 Kart.app"
 
   zap trash: "~/srb2kart"
