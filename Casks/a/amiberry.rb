@@ -1,6 +1,6 @@
 cask "amiberry" do
-  version "8.1.1"
-  sha256 "ed8ac8bec9bcfa2a211ee24cac6db30c1f3739b821262ca8459b732458ed8867"
+  version "8.1.2"
+  sha256 "100e7c07dc73594eb2e1eee34b052d2e2c4328831c86fd162e39353796012b60"
 
   url "https://github.com/BlitterStudio/amiberry/releases/download/v#{version}/Amiberry-#{version}-Darwin.dmg",
       verified: "github.com/BlitterStudio/amiberry/"
