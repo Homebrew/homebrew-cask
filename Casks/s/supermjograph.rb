@@ -13,6 +13,8 @@ cask "supermjograph" do
     regex(%r{url=.*?/SuperMjograph[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "SuperMjograph.app"
 
   zap trash: [
