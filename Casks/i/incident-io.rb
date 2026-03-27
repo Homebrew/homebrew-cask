@@ -16,11 +16,4 @@ cask "incident-io" do
   depends_on macos: ">= :sequoia"
 
   app "incident.io.app"
-
-  zap trash: [
-    "~/Library/Application Support/incident.io",
-    "~/Library/Caches/com.incidentio.desktop",
-    "~/Library/Preferences/com.incidentio.desktop.plist",
-    "~/Library/Saved Application State/com.incidentio.desktop.savedState",
-  ]
 end
