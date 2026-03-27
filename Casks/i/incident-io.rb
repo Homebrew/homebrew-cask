@@ -8,6 +8,11 @@ cask "incident-io" do
   desc "Incident management platform"
   homepage "https://incident.io/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   depends_on macos: ">= :sequoia"
 
   app "incident.io.app"
