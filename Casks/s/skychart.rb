@@ -14,6 +14,8 @@ cask "skychart" do
     regex(%r{url=.*?/skychart[._-]v?(\d+(?:[.-]\d+)+[a-z]?)[^"' >]*?\.dmg}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   pkg "Install Skychart.pkg"
 
   uninstall pkgutil: "net.ap-i.pkg.skychart"
