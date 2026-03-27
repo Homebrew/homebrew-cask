@@ -44,6 +44,8 @@ cask "stolendata-mpv" do
   desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   folder = label&.sub("VERSION", version)
 
   app "#{folder}mpv.app"
