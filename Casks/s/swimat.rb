@@ -7,6 +7,8 @@ cask "swimat" do
   desc "Xcode formatter plug-in for Swift code"
   homepage "https://github.com/Jintin/Swimat"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Swimat.app"
 
   zap trash: [
