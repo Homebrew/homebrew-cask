@@ -1,9 +1,9 @@
 cask "gram" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.1.0"
-  sha256 arm:   "96d8d3295784ca23727e1aabab731552462abb63a280852c2400be83b20aa80b",
-         intel: "1fa30202830264a99c5ae650b802e41c49b1a610b4e955594f6d7fc9f15dc75d"
+  version "1.2.1"
+  sha256 arm:   "05737e4df10d162501407d2870aa605e6ded878e7a695c1c3af51a643dbcd5de",
+         intel: "6c8dfabb3afeceef28af0b3a15798b972e9b83add959236ec2d31e24cae40fc4"
 
   url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/Gram-#{arch}-#{version}.dmg",
       verified: "codeberg.org/GramEditor/"
