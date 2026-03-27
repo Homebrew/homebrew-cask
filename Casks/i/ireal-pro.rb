@@ -22,8 +22,8 @@ cask "ireal-pro" do
     end
   end
   on_monterey :or_newer do
-    version "2026.3,20260301"
-    sha256 "e39c780af580ff71f51f3c201831a9946d293e19f20ba36f781866ec71a91e2d"
+    version "2026.3.1,20260312"
+    sha256 "efe3797274660ab57b6a81ef421a068c301a2b8bbb64c9cf430da5e45fd15566"
 
     url "https://ireal-pro.s3.amazonaws.com/iReal%20Pro-#{version.csv.first}-#{version.csv.second}.dmg",
         verified: "ireal-pro.s3.amazonaws.com/"
