@@ -40,7 +40,7 @@ cask "onyx" do
     end
   end
   on_tahoe :or_newer do
-    version "4.9.7"
+    version "4.9.8"
 
     url "https://www.titanium-software.fr/download/26/OnyX.dmg"
 
