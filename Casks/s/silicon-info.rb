@@ -7,6 +7,8 @@ cask "silicon-info" do
   desc "View the architecture of the running application"
   homepage "https://github.com/billycastelli/Silicon-Info"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :big_sur"
 
   app "Silicon Info.app"
