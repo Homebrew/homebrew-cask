@@ -10,26 +10,26 @@ cask "stolendata-mpv" do
     end
   end
   on_big_sur :or_newer do
-    on_ventura :or_older do
-      version "0.39.0"
-      sha256 "35ec81ad86a97b24956a8d0f4fa1ba2690b44ae7741c920e923620bcd7bd402a"
+    on_arm do
+      on_ventura :or_older do
+        version "0.39.0"
+        sha256 "35ec81ad86a97b24956a8d0f4fa1ba2690b44ae7741c920e923620bcd7bd402a"
 
-      caveats do
-        requires_rosetta
+        caveats do
+          requires_rosetta
+        end
       end
-    end
-    on_sonoma :or_newer do
-      arch arm: "-arm64"
-      label = on_arch_conditional arm: "mpv#{arch}-VERSION/"
+      on_sonoma :or_newer do
+        arch arm: "-arm64"
+        label = on_arch_conditional arm: "mpv#{arch}-VERSION/"
 
-      on_arm do
         version "0.40.0"
         sha256 "3170fb709defebaba33e9755297d70dc3562220541de54fc3d494a8309ef1260"
       end
-      on_intel do
-        version "0.39.0"
-        sha256 "35ec81ad86a97b24956a8d0f4fa1ba2690b44ae7741c920e923620bcd7bd402a"
-      end
+    end
+    on_intel do
+      version "0.39.0"
+      sha256 "35ec81ad86a97b24956a8d0f4fa1ba2690b44ae7741c920e923620bcd7bd402a"
     end
 
     livecheck do
@@ -43,6 +43,10 @@ cask "stolendata-mpv" do
   name "mpv"
   desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io/"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   folder = label&.sub("VERSION", version)
 
