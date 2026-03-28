@@ -5,7 +5,6 @@ cask "wondershare-edrawmax" do
   language "zh", "CN" do
     url "https://cc-download.edrawsoft.cn/cbs_down/edraw-max_cn_full5381.zip"
     homepage "https://www.edrawsoft.cn/"
-    disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
     app "亿图图示.app"
 
@@ -26,6 +25,8 @@ cask "wondershare-edrawmax" do
     url "https://www.edrawsoft.com/whats-new/edrawmax.html"
     regex(/ma(?:c|xOS)\s*V?(\d+(?:\.\d+)+)/i)
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   zap trash: [
     "~/Library/Edraw",
