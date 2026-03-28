@@ -13,8 +13,6 @@ cask "deluge" do
     regex(/href=["']?deluge[._-]v?(\d+(?:\.\d+)+)[._-][a-z0-9._-]*\.dmg/i)
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   app "Deluge.app"
 
   zap trash: [
