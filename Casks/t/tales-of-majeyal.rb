@@ -12,6 +12,8 @@ cask "tales-of-majeyal" do
     regex(/href=.*?t-engine4[._-]osx[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   # Renamed for clarity: app name is inconsistent with its branding.
   app "T-Engine.app", target: "Tales-of-Maj'Eyal.app"
 
