@@ -8,6 +8,8 @@ cask "via" do
   desc "Keyboard configurator"
   homepage "https://caniusevia.com/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "VIA.app"
 
   zap trash: [
