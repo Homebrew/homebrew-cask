@@ -6,6 +6,8 @@ cask "transmission-remote-gui" do
   name "Transmission Remote GUI"
   homepage "https://github.com/transmission-remote-gui/transgui"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Transmission Remote GUI.app"
 
   uninstall quit: "com.transgui"
