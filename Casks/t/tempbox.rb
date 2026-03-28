@@ -8,6 +8,8 @@ cask "tempbox" do
   desc "Disposable email client"
   homepage "https://tempbox.waseem.works/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :big_sur"
 
   app "TempBox.app"
