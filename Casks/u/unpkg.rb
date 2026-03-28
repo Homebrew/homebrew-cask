@@ -1,20 +1,20 @@
 cask "unpkg" do
-  version "4.8"
-  sha256 "1b8318d2fb642397471221344836a967176089bce44e70a2b99f5cb4f60eee09"
+  version "5.0"
+  sha256 "3a5936d16cf579cad9949af4673b7fc097b9aedc59d50b28c6f75c2b15a4631b"
 
-  url "https://www.timdoug.com/unpkg/unpkg-#{version}.zip"
+  url "https://www.timdoug.com/unpkg/unpkg-#{version}.dmg"
   name "unpkg"
   desc "Unarchiver for .pkg and .mpkg that unpacks all the files in a package"
   homepage "https://www.timdoug.com/unpkg/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?unpkg[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?unpkg[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  depends_on macos: ">= :big_sur"
 
-  app "unpkg #{version}/unpkg.app"
+  app "unpkg.app"
 
   zap trash: [
     "~/Library/Preferences/org.timdoug.unpkg.plist",
