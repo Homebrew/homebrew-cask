@@ -12,17 +12,18 @@ We do this by providing a friendly CLI workflow for the administration of macOS 
 
 To start using Homebrew Cask, you just need [Homebrew](https://brew.sh) installed.
 
-<img src="https://i.imgur.com/FNNM6WL.gif" width="547" alt="Installing and uninstalling Alfred (animated gif)">
+<div align="center">
+  <img src="./doc/readme/readme-gif.gif" width="450" alt="Installing and uninstalling Alfred (animated gif)">
+</div>
 
 Slower, now:
 
 ```console
-$ brew install alfred
-==> Downloading https://cachefly.alfredapp.com/Alfred_4.2.1_1187.dmg
-######################################################################## 100.0%
-==> Verifying SHA-256 checksum for Cask 'alfred'.
+% brew install alfred
+==> Fetching downloads for: alfred 
+✔︎ Cask alfred (5.7.2,2312)                                           Verified      5.6MB/  5.6MB
 ==> Installing Cask alfred
-==> Moving App 'Alfred 4.app' to '/Applications/Alfred 4.app'.
+==> Moving App 'Alfred 5.app' to '/Applications/Alfred 5.app'
 🍺  alfred was successfully installed!
 ```
 
