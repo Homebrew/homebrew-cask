@@ -12,6 +12,8 @@ cask "unity-android-support-for-editor" do
     cask "unity"
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on cask: "unity"
 
   pkg "UnitySetup-Android-Support-for-Editor-#{version.csv.first}.pkg"
