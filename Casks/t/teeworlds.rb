@@ -11,6 +11,8 @@ cask "teeworlds" do
     regex(%r{href=.*?/teeworlds[._-](\d+(?:\.\d+)*)[._-]osx\.dmg}i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Teeworlds.app"
   app "Teeworlds Server.app"
 
