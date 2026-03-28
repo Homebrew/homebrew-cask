@@ -13,6 +13,8 @@ cask "unetbootin" do
     regex(/^v?(\d+(?:\.\d+)*)$/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "unetbootin.app"
 
   zap trash: "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yourcompany.unetbootin.sfl*"
