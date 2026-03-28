@@ -1,6 +1,6 @@
 cask "font-monaspace-frozen" do
-  version "1.301"
-  sha256 "e82c1a0dc52f88f935b3b46ce4b4e50f811517186c86e183e05b1f1d396797d7"
+  version "1.400"
+  sha256 "f4a846421d1d6bb1233e5cb748d2afb85c7111b3da994a200504eaffd97a3a05"
 
   url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-frozen-v#{version}.zip",
       verified: "github.com/githubnext/monaspace/"
