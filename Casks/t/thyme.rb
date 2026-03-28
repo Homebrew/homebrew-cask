@@ -8,6 +8,8 @@ cask "thyme" do
   desc "Task timer"
   homepage "https://joaomoreno.github.io/thyme/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "Thyme.app"
 
   zap trash: [
