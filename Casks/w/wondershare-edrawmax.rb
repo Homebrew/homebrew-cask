@@ -5,6 +5,8 @@ cask "wondershare-edrawmax" do
   language "zh", "CN" do
     url "https://cc-download.edrawsoft.cn/cbs_down/edraw-max_cn_full5381.zip"
     homepage "https://www.edrawsoft.cn/"
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
     app "亿图图示.app"
 
     "zh-CN"
