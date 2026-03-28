@@ -2,9 +2,9 @@ cask "libreoffice-still" do
   arch arm: "aarch64", intel: "x86-64"
   folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
-  version "25.8.5"
-  sha256 arm:   "5857b25bba14d22f78b1384191ffe69881ace5f7f843f0e4aae1b6dfea4b58f3",
-         intel: "735e4063aca230e97fd725c66017b3356b0031b868b0caccf784ee25f35134c2"
+  version "25.8.6"
+  sha256 arm:   "57ddee0f8ef2d06fd7a9b0e3cf191107e6cb97ec03f0a7f6b137f732e251fde2",
+         intel: "017c64b6e2992db9cbb44f9b1fc3fd2ede3e332c8b481746b780b8a282f09692"
 
   on_arm do
     depends_on macos: ">= :big_sur"
