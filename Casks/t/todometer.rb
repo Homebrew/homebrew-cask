@@ -8,6 +8,8 @@ cask "todometer" do
   desc "Meter-based to-do list"
   homepage "https://cassidoo.github.io/todometer/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "mac/todometer.app"
 
   zap trash: [
