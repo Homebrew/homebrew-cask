@@ -10,6 +10,8 @@ cask "ultimate-vocal-remover" do
   desc "Removes vocals from audio files"
   homepage "https://github.com/Anjok07/ultimatevocalremovergui/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: ">= :big_sur"
 
   app "Ultimate Vocal Remover.app"
