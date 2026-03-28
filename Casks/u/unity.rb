@@ -27,6 +27,8 @@ cask "unity" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on cask: "unity-hub"
 
   pkg "Unity-#{version.csv.first}.pkg"
