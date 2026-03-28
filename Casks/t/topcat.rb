@@ -12,6 +12,8 @@ cask "topcat" do
     regex(/Version\s*(\d+(?:\.\d+)*(?:-\d+)?)\s*released/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "TOPCAT.app"
   binary "#{appdir}/TOPCAT.app/Contents/Resources/app/topcat"
   binary "#{appdir}/TOPCAT.app/Contents/Resources/app/stilts"
