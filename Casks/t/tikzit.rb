@@ -8,6 +8,8 @@ cask "tikzit" do
   desc "PGF/TikZ diagram editor"
   homepage "https://tikzit.github.io/"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "TikZiT.app"
 
   zap trash: [
