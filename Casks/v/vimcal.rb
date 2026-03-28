@@ -4,7 +4,7 @@ cask "vimcal" do
 
   version "1.0.46"
   sha256 arm:   "6b7196106a88a0aaf5e8c5cc439b4210074c07913015f9e6017cf994e95925ef",
-         intel: "8bfbb3a9f41060cbf0865ccc2d52a4fff5c49048ada74bfb076f9a37eb6d790d"
+         intel: "5317ff903de1e2f3958298b55824cf9cf848511c416ff5b3a7a3b798a2a44fb6"
 
   url "https://vimcal-#{host_suffix}.s3.amazonaws.com/Vimcal-#{version}#{arch}.dmg",
       verified: "vimcal-#{host_suffix}.s3.amazonaws.com/"
