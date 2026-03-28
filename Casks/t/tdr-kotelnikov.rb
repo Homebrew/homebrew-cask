@@ -1,6 +1,6 @@
 cask "tdr-kotelnikov" do
   version "1.6.7"
-  sha256 "9dbe66022dee60b2f74335b47b703a00d239bdfa9fac60c6336f4d7e1133e546"
+  sha256 "59e580a260fb66db6f608b92434c9cf9e426eb83734995b5d4633930783389da"
 
   url "https://www.tokyodawn.net/labs/Kotelnikov/#{version}/TDR%20Kotelnikov.zip?x24775"
   name "TDR Kotelnikov"

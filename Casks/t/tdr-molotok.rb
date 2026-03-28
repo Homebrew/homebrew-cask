@@ -1,6 +1,6 @@
 cask "tdr-molotok" do
   version "1.0.7"
-  sha256 "9e523f7eabd4dc17a515228dd75200303a43361071c64a904d76ef32de5d29bf"
+  sha256 "29b65ea823f5b34f5d0e2d1e556b7f92a9889d07bf6fa20dbb40207ca50c288f"
 
   url "https://www.tokyodawn.net/labs/Molotok/#{version}/TDR%20Molotok.zip"
   name "TDR Molotok"
