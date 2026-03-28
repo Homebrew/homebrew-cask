@@ -7,6 +7,8 @@ cask "usr-sse2-rdm" do
   desc "Set a Retina display to custom resolutions"
   homepage "https://github.com/usr-sse2/RDM"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "RDM.app"
 
   uninstall quit:    "net.alkalay.RDM",
