@@ -1,5 +1,5 @@
 cask "calibre" do
-on_ventura :or_older do
+  on_ventura :or_older do
     on_catalina do
       version "6.11.0"
       sha256 "d7c40f3f35ba9043c13303632526f135b2c4086471a5c09ceb8b397c55c076fa"
