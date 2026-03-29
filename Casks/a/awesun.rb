@@ -2,11 +2,11 @@ cask "awesun" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_id = on_arch_conditional arm: "_ARM"
 
-  version "16.2.0.27059"
-  sha256 arm:   "eb7e8e36338dcd8109056f2547d3d3f32d42fde169ead276d8c74c456942fd9e",
-         intel: "30627f95c8cf16446f873ebf168f3ade4d3f90a703590bf4c644e17f71635f74"
+  version "16.3.0.29006"
+  sha256 arm:   "33117215763fcedf59563af9b3c0f6b7063a3e0a462dfb92712bda6d4ed9dfa9",
+         intel: "7f5b7a1d2eb4a630621b6e3607e5145d02f95672b3be6f27e3a771d207d41f9b"
 
-  url "https://dw.oray.com/sl/mac/AweSun_#{version}_#{arch}.dmg"
+  url "https://dl.oray.com/sl/mac/AweSun_#{arch}_#{version}.dmg"
   name "Sunlogin Client"
   name "向日葵个人版"
   desc "Remote desktop control and monitoring tool"
