@@ -15,11 +15,15 @@ cask "fuse-t" do
 
   pkg "fuse-t-macos-installer-#{version}.pkg"
 
-  uninstall script: {
-    executable: "/Library/Application Support/fuse-t/uninstall.sh",
-    input:      ["Y"],
-    sudo:       true,
-  }
+  uninstall script:  {
+              executable: "/Library/Application Support/fuse-t/uninstall.sh",
+              input:      ["Y"],
+              sudo:       true,
+            },
+            pkgutil: [
+              "org.fuse-t.core.#{version}",
+              "org.fuse-t.fskit.#{version}",
+            ]
 
   # No zap stanza required
 end
