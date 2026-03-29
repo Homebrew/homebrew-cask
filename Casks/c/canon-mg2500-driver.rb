@@ -1,15 +1,15 @@
 cask "canon-mg2500-driver" do
-  version "16.90.0.0,04,0100011526,6"
-  sha256 "93a2289b5c69017cc87289b972566411c802d0e73457fb33c8b88a9f2947d13b"
+  version "16.91.0.0,05,0100011526,6"
+  sha256 "95d2cfd5ded450b0e2cecdbed792c7a592223adf3209182d05347f0a44ce96be"
 
   url "https://gdlp01.c-wss.com/gds/#{version.csv.fourth}/#{version.csv.third}/#{version.csv.second}/mcpd-mac-mg2500-#{version.csv.first.dots_to_underscores}-ea21_3.dmg",
       verified: "gdlp01.c-wss.com/"
   name "Canon PIXMA driver"
-  desc "CUPS driver for Canon PIXMA 2500 series"
+  desc "CUPS driver for Canon PIXMA MG2500 series"
   homepage "https://ij.manual.canon/ij/webmanual/Manual/M/MG2500%20series/EN/CNT/Top.html"
 
   livecheck do
-    url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAxMTUyNjA0&cmp=ABR&lang=EN"
+    url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAxMTUyNjA1&cmp=ABR&lang=EN"
     regex(%r{(\d+)/(\d+)/(\d+)/mcpd-mac-mg2500-(\d+(?:_\d+)+)-ea21_3\.dmg}i)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
