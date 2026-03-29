@@ -8,7 +8,7 @@ cask "tablepro" do
   url "https://github.com/datlechin/TablePro/releases/download/v#{version}/TablePro-#{version}-#{arch}.dmg",
       verified: "github.com/datlechin/TablePro/"
   name "TablePro"
-  desc "Native database client for MySQL, PostgreSQL, SQLite, and MongoDB"
+  desc "Native database client for many database types"
   homepage "https://tablepro.app/"
 
   livecheck do
