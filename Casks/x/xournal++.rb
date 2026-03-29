@@ -1,9 +1,9 @@
 cask "xournal++" do
   arch arm: "ARM64", intel: "X64"
 
-  version "1.3.3"
-  sha256 arm:   "95d17d00c4311c542e592ba267e5c086714bf604d723f580a8f7e8a912437b39",
-         intel: "f916a37c5522c36443348e86f610c8286f950c43013d8a7872eb3cc309eb6cb8"
+  version "1.3.4"
+  sha256 arm:   "95c99eda37ec3389c277808126614179fb779ae7f7694ff42fc11b428d679e38",
+         intel: "3a978ce3b22f6de32064c9256c2ca94ae7be30e5fde996b18dd53aa41dcb68c1"
 
   url "https://github.com/xournalpp/xournalpp/releases/download/v#{version}/xournalpp-#{version}-macOS-#{arch}.dmg"
   name "Xournal++"
