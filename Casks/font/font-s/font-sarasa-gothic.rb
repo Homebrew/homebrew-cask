@@ -1,6 +1,6 @@
 cask "font-sarasa-gothic" do
-  version "1.0.36"
-  sha256 "6f1bbb6f2da0f3ec4bbc45b6fa03ae39ef32725c65626b9914d77f2a9a373c98"
+  version "1.0.37"
+  sha256 "bda22d32a7cb6585fadd412bb68c008e75e88375a533347bc659c53a478ff0d2"
 
   url "https://github.com/be5invis/Sarasa-Gothic/releases/download/v#{version}/Sarasa-SuperTTC-#{version}.7z"
   name "Sarasa Gothic"
