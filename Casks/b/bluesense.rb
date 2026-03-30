@@ -8,6 +8,7 @@ cask "bluesense" do
   homepage "https://apps.inspira.io/bluesense/"
 
   deprecate! date: "2025-03-30", because: :unmaintained
+  disable! date: "2026-03-30", because: :unmaintained
 
   app "BlueSense.app"
 

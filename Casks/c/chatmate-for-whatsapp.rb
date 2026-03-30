@@ -9,6 +9,7 @@ cask "chatmate-for-whatsapp" do
   homepage "https://chatmate.io/"
 
   deprecate! date: "2025-03-30", because: :unmaintained
+  disable! date: "2026-03-30", because: :unmaintained
 
   app "ChatMate for WhatsApp.app"
 
