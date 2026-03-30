@@ -2,8 +2,7 @@ cask "shipclip" do
   version "1.3.0"
   sha256 "c7a7870be3f1a16acba723b2509d37a4a51657b62421ad9359ea4aa99bcd222a"
 
-  url "https://api.shipclip.app/releases/ShipClip-#{version}.dmg",
-      verified: "api.shipclip.app/"
+  url "https://api.shipclip.app/releases/ShipClip-#{version}.dmg"
   name "ShipClip"
   desc "Screen recorder with zoom-to-click and multi-track audio"
   homepage "https://shipclip.app/"
