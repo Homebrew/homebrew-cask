@@ -7,6 +7,11 @@ cask "unnaturalscrollwheels" do
   desc "Tool to invert scroll direction for physical scroll wheels"
   homepage "https://github.com/ther0n/UnnaturalScrollWheels"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "UnnaturalScrollWheels.app"
 
   uninstall quit: "com.theron.UnnaturalScrollWheels"
