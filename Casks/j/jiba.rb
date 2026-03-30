@@ -4,7 +4,7 @@ cask "jiba" do
 
   url "https://hee.ink/updates/stable/JiBA-#{version}.dmg"
   name "JiBA"
-  desc "Apple Music metadata localization tool"
+  desc "Apple Music metadata localisation tool"
   homepage "https://jiba.hee.ink/"
 
   livecheck do
