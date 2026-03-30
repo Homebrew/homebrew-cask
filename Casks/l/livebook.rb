@@ -11,6 +11,7 @@ cask "livebook" do
   desc "Code notebooks for Elixir developers"
   homepage "https://livebook.dev/"
 
+  auto_updates true
   conflicts_with cask: "livebook@nightly"
   depends_on macos: ">= :big_sur"
 
