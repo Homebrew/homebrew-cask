@@ -1,6 +1,6 @@
 cask "quicksilver" do
-  version "2.5.8"
-  sha256 "2d78429234e8b208c4d72a0556c0202d2aa874602acd939ce53a085fabc5d3b8"
+  version "2.5.9"
+  sha256 "757a7e08bf55ec90c61d7ea7e2f89a3141b6ea42c762c5ab8437287285573288"
 
   url "https://github.com/quicksilver/Quicksilver/releases/download/v#{version}/Quicksilver.#{version}.dmg",
       verified: "github.com/quicksilver/Quicksilver/"
