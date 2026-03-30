@@ -1,6 +1,6 @@
 cask "pomotroid" do
-  version "1.3.0"
-  sha256 "4fa15b3a664c733a71f4ae9ff551094ed12bec74889da9b38aecfe6d680ce04a"
+  version "1.4.0"
+  sha256 "a16054c899ffd5ba2ab2d77931e495fcc2e1a2f1ede07f7704441fc3b2f92e26"
 
   url "https://github.com/Splode/pomotroid/releases/download/v#{version}/Pomotroid_#{version}_universal.dmg"
   name "Pomotroid"
