@@ -1,7 +1,7 @@
 cask "caldigit-docking-utility" do
   arch arm: "arm", intel: "x86"
 
-  version "1.9.35"
+  version "1.9.37"
   sha256 :no_check
 
   url "https://downloads.caldigit.com/CalDigit-Docking-Station-Utility.zip"
@@ -12,6 +12,8 @@ cask "caldigit-docking-utility" do
   livecheck do
     skip "No version information available"
   end
+
+  depends_on macos: ">= :big_sur"
 
   # The url is unversioned, but the download returns a pkg with a version number
   rename "CalDigit Docking Station Utility*.pkg", "CalDigit Docking Station Utility.pkg"
