@@ -13,6 +13,8 @@ cask "caldigit-docking-utility" do
     skip "No version information available"
   end
 
+  depends_on macos: ">= :big_sur"
+
   # The url is unversioned, but the download returns a pkg with a version number
   rename "CalDigit Docking Station Utility*.pkg", "CalDigit Docking Station Utility.pkg"
 
