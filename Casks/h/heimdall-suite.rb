@@ -8,10 +8,7 @@ cask "heimdall-suite" do
   desc "Flash firmware onto Samsung mobile devices"
   homepage "https://glassechidna.com.au/heimdall/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/heimdall[._-]suite[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
-  end
+  disable! date: "2026-03-29", because: :no_longer_meets_criteria
 
   pkg "Heimdall Suite #{version}.pkg"
 
