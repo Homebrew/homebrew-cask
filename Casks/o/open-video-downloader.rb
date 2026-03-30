@@ -1,9 +1,9 @@
 cask "open-video-downloader" do
   arch arm: "aarch64", intel: "x64"
 
-  version "3.1.3"
-  sha256 arm:   "9d39a7b650582fb68e4d649341bdbd4a8eaf3c92880168e59fd95d15c8dd9d02",
-         intel: "49a831e97a6236a3be786ad6f585f626f083507650fdae6732b63aec95050c1c"
+  version "3.2.0"
+  sha256 arm:   "bb1af8f6bbb238c173dd6934ee4dedb8641341265bb802bd8ab8d72af99f27d2",
+         intel: "b40ee20057419ceddfec1ebb494445884ff2dab058b362fb84b3f8980a26682e"
 
   url "https://github.com/jely2002/youtube-dl-gui/releases/download/app-v#{version}/Open.Video.Downloader_#{version}_#{arch}.dmg"
   name "Open Video Downloader"
