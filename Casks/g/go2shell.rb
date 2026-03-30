@@ -8,6 +8,7 @@ cask "go2shell" do
   homepage "https://zipzapmac.com/go2shell"
 
   deprecate! date: "2025-03-30", because: :unmaintained
+  disable! date: "2026-03-30", because: :unmaintained
 
   app "Go2Shell.app"
 
