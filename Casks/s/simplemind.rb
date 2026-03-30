@@ -1,6 +1,6 @@
 cask "simplemind" do
-  version "2.8.2,b3245"
-  sha256 "7811721fc054ff4e8c644e0d01401a7d1ac2c3b6db585b23ff2f5662c2683b62"
+  version "2.9.0,b3307"
+  sha256 "478e03bf7330b6cb832a984b13723bbf3817b76452193a09f30f69d6d2f0e85c"
 
   url "https://modelmakertools.com/simplemind/SM2Mac_G7Ynr4BfJYzhbHtCCTr/SimpleMindMacOS#{version.csv.first.no_dots}#{version.csv.second}.dmg",
       verified: "modelmakertools.com/simplemind/"
