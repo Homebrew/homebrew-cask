@@ -1,9 +1,9 @@
 cask "lexicon-dj" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "1.10.2"
-  sha256 arm:   "d943702c3263bc1d6786e2633e4a7724c4f1f1ebfe0c554656ae85f73795dc9a",
-         intel: "702e6a88ef97c9b20c5e272d6f1e1f4661a640cc2b0b82fa868bfb23421ec042"
+  version "1.10.3"
+  sha256 arm:   "0fc1e0b23b8d3d284f89c9a4a0a3567e24a36ee0fe70ba572baabb42b859643e",
+         intel: "bc1076525795c66ce0051da169e67bd00d22d0022e35ca5fb8d9851e5fc1f37b"
 
   on_arm do
     depends_on macos: ">= :big_sur"
