@@ -1,9 +1,9 @@
 cask "deltawalker" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.8.0"
-  sha256 arm:   "e6d0b2e8617902fc05b1516c4209ee23bf42fc20dd3dc30d7605fdb3e1649976",
-         intel: "4f897341924bf65b3cbe76361c5fe9c0d4d51cf63cbdcd46fc3ed5a551cc7528"
+  version "2.8.1"
+  sha256 arm:   "f5cc0843ca324f55e84ce7a0907b20349bbdef058440cb56aeb6c245efbb882e",
+         intel: "7301ad9f6ad001251c42fcbce989efe62439d5d2245090f413df438c54857035"
 
   # The uninstall script is not present in the intel version.
   on_arm do
