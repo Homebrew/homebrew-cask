@@ -21,10 +21,10 @@ cask "wallspace" do
   uninstall quit: "wallspace.app"
 
   zap trash: [
+    "~/Library/Application Support/CrashReporter/Wallspace_*.plist",
+    "~/Library/Application Support/Wallspace",
     "~/Library/Caches/Wallspace",
-    "~/Library/Caches/wallspace.app",
     "~/Library/HTTPStorages/wallspace.app",
-    "~/Library/Logs/DiagnosticReports/Wallspace*.ips",
     "~/Library/Preferences/wallspace.app.plist",
   ]
 end
