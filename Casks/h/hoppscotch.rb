@@ -1,9 +1,9 @@
 cask "hoppscotch" do
   arch arm: "aarch64", intel: "x64"
 
-  version "26.2.1-0"
-  sha256 arm:   "17d9046b5b6b64a9b6b14b3924c418f25c2433e56cd121467793466eb9b2b614",
-         intel: "8f1a985773ac7c99637c58b93de303feb3a7a6eb84274fb4f25a338c24d994e7"
+  version "26.3.0-0"
+  sha256 arm:   "9df5e4e8de1c569f4d084fe4299b15784210fb362cb30f1794142070a3072760",
+         intel: "7a69f08e604f2ff78a0153e6827a432bf37d862c137a70826b5db77c97d72c4e"
 
   url "https://github.com/hoppscotch/releases/releases/download/v#{version}/Hoppscotch_mac_#{arch}.dmg",
       verified: "github.com/hoppscotch/releases/"
