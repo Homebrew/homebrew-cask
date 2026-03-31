@@ -22,8 +22,8 @@ cask "microsoft-powerpoint" do
     end
   end
   on_sonoma :or_newer do
-    version "16.107.26032211"
-    sha256 "4eaebe66a74ea2831383233aeb84e518939c40fb4d8a31928c288cfffba9c209"
+    version "16.107.26032814"
+    sha256 "12a99155dfc63aad6ad7be89f36a3fedbf2c25b468a4ff9475c2167bd92b0e06"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
