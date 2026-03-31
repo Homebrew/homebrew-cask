@@ -1,6 +1,6 @@
 cask "astro-editor" do
-  version "1.0.11"
-  sha256 "2bf3466d98ecf722cf204076ba9310409667e44b8191a178bd00d0faf07072f6"
+  version "1.0.12"
+  sha256 "8c1a165a8930e5b98837849066e34493bdfe879f6da51d7580cc3ad0898768da"
 
   url "https://github.com/dannysmith/astro-editor/releases/download/v#{version}/Astro.Editor_#{version}_universal.dmg",
       verified: "github.com/dannysmith/astro-editor/"
