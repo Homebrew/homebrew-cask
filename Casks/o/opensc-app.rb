@@ -1,11 +1,13 @@
 cask "opensc-app" do
-  version "0.26.1"
-  sha256 "7b66e256cefc7fdf6d9267383ac9e4763e299339aa52c99973f414b8a6a2ee05"
+  version "0.27.1"
+  sha256 "13370ea18678a53e2567fc1256bcf7a590e40ccf1c3362a24a805c3e9b5d07bf"
 
   url "https://github.com/OpenSC/OpenSC/releases/download/#{version}/OpenSC-#{version}.dmg"
   name "OpenSC"
   desc "Smart card libraries and utilities"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   pkg "OpenSC #{version}.pkg"
 
