@@ -1,9 +1,9 @@
 cask "aks-desktop" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.5.0"
-  sha256 arm:   "c19727456131c246f875eb711a6dc69cbc6984bc399cb0942f1af62d76aefbbc",
-         intel: "4412610eef10c94838eade9ef18af3ff3c367467c1e9b3e5d80a74ba3fc6f019"
+  version "0.6.0"
+  sha256 arm:   "bdca6544215592427650ce16bd3146fc4b515723e6e959693072fcac87125610",
+         intel: "2fe13841311138c14b2f6a4ae444ec26e54a0b2100dccb201f10d3b6f593a4a9"
 
   url "https://github.com/Azure/aks-desktop/releases/download/v#{version}/aks-desktop-#{version}-mac-#{arch}.dmg"
   name "AKS desktop"

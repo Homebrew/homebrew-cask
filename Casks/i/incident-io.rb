@@ -1,6 +1,6 @@
 cask "incident-io" do
-  version "1.2.17"
-  sha256 "b0dacfca6ccf9d27de0edfb3a0a970575823f854d558565be6a5b93f2f47b872"
+  version "1.2.19"
+  sha256 "e7f246968566b4b69b1edeb95c708e2580014819166db0793eaa7bac9b883ac5"
 
   url "https://storage.googleapis.com/incident-io-production-downloads/incident.io-#{version}.zip",
       verified: "storage.googleapis.com/incident-io-production-downloads/"

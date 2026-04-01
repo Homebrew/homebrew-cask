@@ -1,6 +1,6 @@
 cask "gifox" do
-  version "2.8.0+2,020800.02"
-  sha256 "1d1d65dda04038d6e0d1a4d4fc5cf1fa1f9ba47aea051feeb3fe423a17ab58a2"
+  version "2.9.0+0,020900.00"
+  sha256 "d4d192d9860ed29fc48a08323a1de749dae58b2a180e4d39407daf0676914122"
 
   url "https://d1fqctmfkpkkcg.cloudfront.net/gifox/#{version.csv.second}.dmg",
       verified: "d1fqctmfkpkkcg.cloudfront.net/gifox/"
