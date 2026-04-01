@@ -13,6 +13,7 @@ cask "wallspace" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sequoia"
   container type: :zip
 
