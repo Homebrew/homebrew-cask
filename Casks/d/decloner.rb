@@ -8,6 +8,7 @@ cask "decloner" do
   homepage "https://www.pixelespressoapps.com/decloner/"
 
   deprecate! date: "2025-03-31", because: :unmaintained
+  disable! date: "2026-04-01", because: :unmaintained
 
   app "Decloner.app"
 
