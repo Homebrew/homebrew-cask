@@ -1,6 +1,6 @@
 cask "zotero@beta" do
-  version "9.0-beta.16,6140088b0"
-  sha256 "1f6201bdb72cc7c9b1778b573a38cdaf66a09ab983654cbe389cc3d9cca61942"
+  version "9.0-beta.17,8effdacf6"
+  sha256 "5c4cb576cc4f99efbb8cf6dadbdb6067816047ee8c2492fe37865d13c89a9c82"
 
   url "https://download.zotero.org/client/beta/#{version.csv.first}%2B#{version.csv.second}/Zotero-#{version.csv.first}%2B#{version.csv.second}.dmg"
   name "Zotero Beta"
