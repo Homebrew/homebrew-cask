@@ -1,8 +1,8 @@
 cask "intiface-central" do
-  version "3.0.1,37"
-  sha256 "4dca9f17f8d082564e4480b8eb15e68acfeb593be8f000690184d8d585e5c2c9"
+  version "3.0.3,39"
+  sha256 "c3605043d8a1bbb30a2ce5873e07b5d0d34395f2ad09cc1b82d29a2932ff357e"
 
-  url "https://github.com/intiface/intiface-central/releases/download/v#{version.csv.first}%2B#{version.csv.second}/intiface-central-v#{version.csv.first}-macos-universal.dmg"
+  url "https://github.com/intiface/intiface-central/releases/download/v#{version.csv.first}#{"%2B#{version.csv.second}" if version.csv.second}/intiface-central-v#{version.csv.first}-macos-universal.dmg"
   name "Intiface Central"
   desc "Frontend application for the Buttplug sex toy control library"
   homepage "https://github.com/intiface/intiface-central"
@@ -14,7 +14,7 @@ cask "intiface-central" do
       match = json["tag_name"]&.match(regex)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
     end
   end
 
