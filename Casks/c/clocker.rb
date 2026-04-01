@@ -8,6 +8,11 @@ cask "clocker" do
   desc "Menu bar timezone tracker and compact calendar"
   homepage "https://abhishekbanthia.com/clocker"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :sonoma"
 
   app "Clocker.app"
