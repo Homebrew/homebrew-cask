@@ -1,9 +1,9 @@
 cask "powder" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "99.3.384"
-  sha256 arm:   "c20e68c27e3b595f9c0f410359f606a5b9c6858f9b752d5a9f953e78934ab561",
-         intel: "1e32a99bef0e36aabe740c101efd0665dcc99f196c53b8e86ac852e3b0b7fa40"
+  version "99.4.393"
+  sha256 arm:   "27a802a1211ab6fc26aa7740befe3f0bb42651259b65d789599dc2f68b5853b7",
+         intel: "d1668f9b2fe515b0810ee468cbfe7b1a37cdc5605fbbae87a182bc9ad84ceb5a"
 
   url "https://github.com/The-Powder-Toy/The-Powder-Toy/releases/download/v#{version}/powder-v#{version}-#{arch}-darwin-macos.dmg",
       verified: "github.com/The-Powder-Toy/The-Powder-Toy/"
@@ -17,6 +17,8 @@ cask "powder" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "The Powder Toy.app"
 
