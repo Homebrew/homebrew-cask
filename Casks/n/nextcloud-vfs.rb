@@ -8,10 +8,7 @@ cask "nextcloud-vfs" do
   desc "Desktop sync client for Nextcloud software products"
   homepage "https://nextcloud.com/"
 
-  livecheck do
-    url "https://nextcloud.com/install/#desktop-files"
-    regex(/href=.*?Nextcloud[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]vfs\.pkg/i)
-  end
+  deprecate! date: "2026-04-01", because: :discontinued, replacement_cask: "nextcloud"
 
   auto_updates true
   conflicts_with cask: "nextcloud"
