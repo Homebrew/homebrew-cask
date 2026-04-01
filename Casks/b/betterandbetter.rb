@@ -1,6 +1,6 @@
 cask "betterandbetter" do
-  version "2.7.5,2026033001"
-  sha256 "e3e275afca554b38f2c4112b42c87c72769abf5e7af395b7356a12f6343cd93d"
+  version "2.7.6,2026040101"
+  sha256 "dc1ccd0169c25476bd2c7578febce4858043d33eaf57f82c9636b116a4343d2b"
 
   url "https://cdn.better365.cn/BetterAndBetter/#{version.csv.second[0, 4]}/BetterAndBetter_#{version.csv.first}_#{version.csv.second}.zip"
   name "Better And Better"
