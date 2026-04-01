@@ -7,7 +7,6 @@ cask "remanager" do
   desc "Desktop app for managing mods on reMarkable tablets"
   homepage "https://github.com/rmitchellscott/reManager"
 
-
   app "reManager.app"
 
   zap trash: [
