@@ -1,6 +1,6 @@
 cask "overview" do
-  version "1.2.2-beta"
-  sha256 "74399dd99f472d07879a474654a1f7455d31c2aec67e8a413ff725575062501a"
+  version "1.2.3-beta"
+  sha256 "cb5a741a155fc709e4179675d2651df0ead64a1d78ed8091bf5a1e298acf044f"
 
   url "https://williampierce.io/overview/releases/v#{version}/Overview.dmg"
   name "Overview"
