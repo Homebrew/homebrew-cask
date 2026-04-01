@@ -1,8 +1,8 @@
 cask "chitubox" do
-  version "1.1.0"
-  sha256 "b17a067f460c1fbc132e625a5c1687ee2d695addae67f24eeac0fb3cea62caed"
+  version "1.2.0"
+  sha256 "24d4c60030616b8d79e504a30c92725f0513994cfd4aa3023b053e795d592a6f"
 
-  url "https://sac.chitubox.com/software/download.do?installerUrl=https%3A%2F%2Fdownload.chitubox.com%2F17952%2Fv#{version}%2FCHITUBOX_v#{version}.dmg&softwareId=17952&softwareVersionId=v#{version}"
+  url "https://sac.chitubox.com/software/download.do?installerUrl=https%3A%2F%2Fdownload.chitubox.com%2F17952%2Fv#{version}%2FCHITUBOX_Mac_Installer_v#{version}.dmg&softwareId=17952&softwareVersionId=v#{version}"
   name "CHITUBOX"
   desc "3D printing slicer software"
   homepage "https://www.chitubox.com/"
