@@ -1,6 +1,6 @@
 cask "idevice-pair" do
-  version "0.1.9"
-  sha256 "6a86716ca3485aa90752c35bca014972c4cc4329917b5ba62822487e9baaa413"
+  version "0.1.9-rppairing"
+  sha256 "4d72198366f2873450cde14811de0fae10d305f3e4a94358e234544a22f1e05c"
 
   url "https://github.com/jkcoxson/idevice_pair/releases/download/v#{version}/idevice_pair--macos-universal.dmg"
   name "idevice_pair"
@@ -9,10 +9,13 @@ cask "idevice-pair" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)*(?:-[a-z]\w*|[a-z]\w*)?)$/i)
   end
 
   depends_on macos: ">= :big_sur"
 
   app "idevice_pair.app"
+
+  # No zap stanza required
 end
