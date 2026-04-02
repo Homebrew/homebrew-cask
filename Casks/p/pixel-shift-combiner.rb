@@ -1,6 +1,6 @@
 cask "pixel-shift-combiner" do
-  version "1.7.0,1070,f1127ehf"
-  sha256 "65fe50e8929a0efdf13f599cdce7fb7421d9f59ed54e08a26c2feceab2ca7a15"
+  version "1.7.1,1071,azni331w"
+  sha256 "9ef68715310c7c6cef528fe19c9670e2b919e8cbc553b4f960d9d10b2607be4c"
 
   url "https://dl.fujifilm-x.com/support/software/pixel-shift-combiner-mac#{version.csv.second}-#{version.csv.third}/FUJIFILM_PixelShiftCombiner#{version.csv.second}.pkg"
   name "Fujifilm Pixel Shift Combiner"
