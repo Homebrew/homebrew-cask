@@ -1,9 +1,9 @@
 cask "ogdesign-eagle" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.0,22"
-  sha256 arm:   "6ce2f00b7b437283a90116833dbb4067f1b1cf103bc4676c6848b0e6087fa120",
-         intel: "5d3d2ffdf4a685311cb7d54a12d2ef77b2a48264b146fb45d8c9837f49316ff7"
+  version "4.0,23"
+  sha256 arm:   "899cf880a15a17bb1fe54939110ec56a6a9f8af4a321de0d55c1670c6bee5377",
+         intel: "aa8ad2e62726ea1252fd63f802050d519b5728c2eb6ad2dc608938d9589a12a1"
 
   url "https://r2-app.eagle.cool/releases/Eagle-#{version.csv.first}-#{arch}-build#{version.csv.second}.dmg"
   name "Eagle"
