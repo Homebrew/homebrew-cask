@@ -1,4 +1,4 @@
-cask "sleek-app" do
+cask "sleek-todo-txt" do
   arch arm: "arm64", intel: "x64"
 
   version "2.0.24"
