@@ -22,8 +22,6 @@ cask "wallspace" do
   uninstall quit: "wallspace.app"
 
   zap trash: [
-    "~/Library/Application Support/CrashReporter/Wallspace_*.plist",
-    "~/Library/Application Support/Wallspace",
     "~/Library/Caches/Wallspace",
     "~/Library/HTTPStorages/wallspace.app",
     "~/Library/Preferences/wallspace.app.plist",
