@@ -1,5 +1,5 @@
 cask "nifty-file-lists" do
-  version "1.27"
+  version "1.28"
   sha256 :no_check
 
   url "https://www.publicspace.net/download/NiftyFileLists.zip"
