@@ -1,9 +1,9 @@
 cask "signal" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.4.1"
-  sha256 arm:   "d027d81ef0ec04eced06e804da025d355bd205d144c18102117ba765bd085cbf",
-         intel: "a8f5f190117d709b70f2cea36dd1b3488c169d420cf2c0027312ed9166d72e3a"
+  version "8.5.0"
+  sha256 arm:   "1c6c29ebaa38e59841c98b30deaab42af8f91263ebebefeb6cb27eeacabb3916",
+         intel: "0ff9221a4f231cae611f0c07f51f0c2f53070e490565052d787c6b4c608894e3"
 
   url "https://updates.signal.org/desktop/signal-desktop-mac-#{arch}-#{version}.zip"
   name "Signal"
