@@ -1,7 +1,7 @@
 cask "comet" do
   arch arm: "arm64", intel: "x64"
 
-  version "145.1.7632.3201"
+  version "145.2.7632.4581"
   sha256 :no_check
 
   url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_#{arch}"
