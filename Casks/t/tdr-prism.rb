@@ -1,6 +1,6 @@
 cask "tdr-prism" do
   version "1.1.2"
-  sha256 "710b982abaedc86499f7e2f93d7825dca3bb97e83151339f8d6d46ebfd5d4ffc"
+  sha256 "b494442a7b58f46e8e40443f874dcabfd3692711910747b9201120cdd095ace5"
 
   url "https://www.tokyodawn.net/labs/Prism/#{version}/TDR%20Prism.zip"
   name "TDR Prism"
