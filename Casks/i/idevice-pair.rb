@@ -7,12 +7,6 @@ cask "idevice-pair" do
   desc "Generate pair records for iOS devices"
   homepage "https://github.com/jkcoxson/idevice_pair"
 
-  livecheck do
-    url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*(?:-[a-z]\w*|[a-z]\w*)?)$/i)
-  end
-
   depends_on macos: ">= :big_sur"
 
   app "idevice_pair.app"
