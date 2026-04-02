@@ -13,6 +13,7 @@ cask "wallspace" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sequoia"
   container type: :zip
 
@@ -22,9 +23,7 @@ cask "wallspace" do
 
   zap trash: [
     "~/Library/Caches/Wallspace",
-    "~/Library/Caches/wallspace.app",
     "~/Library/HTTPStorages/wallspace.app",
-    "~/Library/Logs/DiagnosticReports/Wallspace*.ips",
     "~/Library/Preferences/wallspace.app.plist",
   ]
 end
