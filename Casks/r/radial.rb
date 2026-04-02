@@ -10,6 +10,11 @@ cask "radial" do
   auto_updates true
   depends_on macos: ">= :sequoia"
 
+  livecheck do
+    url "https://radial.appverge.net/appcast.xml"
+    strategy :sparkle
+  end
+
   app "Radial.app"
 
   zap trash: [
