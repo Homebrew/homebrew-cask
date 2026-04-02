@@ -9,6 +9,7 @@ cask "ltx-desktop" do
   homepage "https://ltx.io/ltx-desktop"
 
   auto_updates true
+  depends_on macos: ">= :monterey"
   depends_on arch: :arm64
 
   app "LTX Desktop.app"
