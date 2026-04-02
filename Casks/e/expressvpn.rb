@@ -1,6 +1,6 @@
 cask "expressvpn" do
-  version "12.1.0.12143"
-  sha256 "d5831963c1560da6c56ffa078094c72ac4ba762c5d6ec45a4b57b069c2b8182b"
+  version "14.0.0.12844"
+  sha256 "7ebeb5220062fe286690a8c3dc19d40ecf6b0c4af1834d3565b6625a33f39438"
 
   url "https://www.expressvpn.works/clients/mac/expressvpn-macos-universal-#{version}_release.zip"
   name "ExpressVPN"
@@ -18,6 +18,7 @@ cask "expressvpn" do
   }
 
   uninstall launchctl: [
+              "com.express.vpn.client",
               "com.express.vpn.daemon",
               "com.express.vpn.installhelper",
             ],
