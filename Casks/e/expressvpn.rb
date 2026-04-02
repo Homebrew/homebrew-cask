@@ -18,6 +18,7 @@ cask "expressvpn" do
   }
 
   uninstall launchctl: [
+              "com.express.vpn.client",
               "com.express.vpn.daemon",
               "com.express.vpn.installhelper",
             ],
