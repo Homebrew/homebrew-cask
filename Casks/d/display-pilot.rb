@@ -1,6 +1,6 @@
 cask "display-pilot" do
-  version "1.10.5.0,260211144758"
-  sha256 "78b123b157cbf59313fb6db2704a003a2bfb9aa5e58ba48d1af4b74fb69dedef"
+  version "1.10.8.0,260402162600"
+  sha256 "4f210353d67d229eca1396e4d77ccc835fecf7bf1e37a05f95bdad18f6c227e6"
 
   url "https://esupportdownload.benq.com/esupport/VERTICAL%20&%20PROFESSIONAL%20DISPLAY/Software/Display%20Pilot%202/Display%20Pilot%202%20for%20Mac_V#{version.csv.first}_Mac_#{version.csv.second}.zip"
   name "Display Pilot 2"
