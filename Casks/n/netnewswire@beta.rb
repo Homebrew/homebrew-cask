@@ -1,6 +1,6 @@
 cask "netnewswire@beta" do
-  version "7.0.4b5"
-  sha256 "8033976f993a762df5810fcb303cdf28899a6681f5dc2125e065372c348d15f7"
+  version "7.0.4b6"
+  sha256 "cbc2af3fa4b48508c6151ddbc30f9864972ec949bbad15335b5492bf219b1368"
 
   url "https://github.com/brentsimmons/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip",
       verified: "github.com/brentsimmons/NetNewsWire/"
