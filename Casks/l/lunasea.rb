@@ -9,6 +9,7 @@ cask "lunasea" do
   homepage "https://www.lunasea.app/"
 
   deprecate! date: "2025-04-02", because: :discontinued
+  disable! date: "2026-04-02", because: :discontinued
 
   app "LunaSea.app"
 
