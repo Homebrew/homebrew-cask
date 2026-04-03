@@ -1,5 +1,5 @@
 cask "radial" do
-  version "4.1.0,410"
+  version "4.1.0"
   sha256 :no_check
 
   url "https://radial.appverge.net/downloads/Radial.dmg"
@@ -12,7 +12,7 @@ cask "radial" do
 
   livecheck do
     url "https://radial.appverge.net/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Radial.app"
