@@ -13,11 +13,6 @@ cask "super" do
   desc "Analytics database that fuses structured and semi-structured data"
   homepage "https://github.com/brimdata/super"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   binary "super"
 
   # No zap stanza required
