@@ -7,13 +7,13 @@ cask "radial" do
   desc "Gesture-based launcher for apps, text snippets, and scripts"
   homepage "https://radial.appverge.net/"
 
-  auto_updates true
-  depends_on macos: ">= :sequoia"
-
   livecheck do
     url "https://radial.appverge.net/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  auto_updates true
+  depends_on macos: ">= :sequoia"
 
   app "Radial.app"
 
