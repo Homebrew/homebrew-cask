@@ -1,6 +1,6 @@
 cask "whatsyoursign" do
-  version "3.2.1"
-  sha256 "94ee1cdcc59b5a44e0680ddbce7d070d95dec31e502dfb39cce861e676a7f938"
+  version "3.2.2"
+  sha256 "becd29117f4ab68d890f513eaa0d3fbdeb7dd66bd3a2268b365180435852d319"
 
   url "https://github.com/objective-see/WhatsYourSign/releases/download/v#{version}/WhatsYourSign_#{version}.zip",
       verified: "github.com/objective-see/"
