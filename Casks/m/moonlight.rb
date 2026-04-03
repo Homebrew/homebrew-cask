@@ -11,7 +11,7 @@ cask "moonlight" do
   depends_on macos: ">= :big_sur"
 
   app "Moonlight.app"
-  binary "#{appdir}/Moonlight.app/Contents/MacOS/Moonlight"
+  binary "#{appdir}/Moonlight.app/Contents/MacOS/Moonlight", target: "moonlight"
 
   zap trash: [
     "~/Library/Caches/Moonlight Game Streaming Project",
