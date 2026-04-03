@@ -14,7 +14,6 @@ cask "stremioservice" do
   end
 
   depends_on macos: ">= :big_sur"
-  depends_on arch: :arm64
 
   app "StremioService.app"
 
@@ -24,4 +23,8 @@ cask "stremioservice" do
     "~/Library/Application Support/stremio-server",
     "~/Library/LaunchAgents/com.stremio.service.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
