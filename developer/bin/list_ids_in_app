@@ -109,7 +109,7 @@ clean_sources () {
 mark_up_sources () {
     /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
     "$xargs" -0 -I{} -n1 /bin/bash -c                                                  \
-      "printf '{}'; $scriptdir/list_running_app_ids -t '{}' >/dev/null 2>&1 && printf ' (+)'; printf "\\\\n""
+      "printf '{}'; brew list-running-app-ids --test='{}' >/dev/null 2>&1 && printf ' (+)'; printf "\\\\n""
 }
 
 ###
@@ -151,7 +151,7 @@ are excluded from the output.
 If a given app is currently running, it will be followed by a plus
 symbol '(+)' in the output. This can be verified via the command
 
-    list_running_app_ids | grep 'app.id.goes.here'
+    brew list-running-app-ids | grep 'app.id.goes.here'
 
 See CONTRIBUTING.md for more information.
 
