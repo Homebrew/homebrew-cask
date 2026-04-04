@@ -8,10 +8,7 @@ cask "codeship-jet" do
   desc "CI/CD as a service"
   homepage "https://docs.cloudbees.com/docs/cloudbees-codeship/latest/"
 
-  livecheck do
-    url "https://codeship-jet-releases.s3.amazonaws.com/latest/version"
-    regex(/v?(\d+(?:\.\d+)+)/i)
-  end
+  disable! date: "2026-04-04", because: :no_longer_available
 
   binary "jet"
 
