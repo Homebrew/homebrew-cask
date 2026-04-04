@@ -1,8 +1,8 @@
 cask "vibeproxy" do
-  version "1.8.127"
-  sha256 "1ee554e53e6c921b7b1bd61cd8851a359daf9f5f2f7278cf11a9b6e17f1b4aed"
+  version "1.8.129"
+  sha256 "0b8974246023f3ea0b19b1a70c1105d03e648d8a802fc9a97f6a6de70086f111"
 
-  url "https://github.com/automazeio/vibeproxy/releases/download/v#{version}/VibeProxy-arm64.zip"
+  url "https://github.com/automazeio/vibeproxy/releases/download/v#{version}/VibeProxy-arm64.dmg"
   name "VibeProxy"
   desc "Menu bar app for using AI subscriptions with coding tools"
   homepage "https://github.com/automazeio/vibeproxy"
