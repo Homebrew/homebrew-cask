@@ -3,7 +3,6 @@
 
 require "abstract_command"
 require "open3"
-require "set"
 
 module Homebrew
   module Cmd
