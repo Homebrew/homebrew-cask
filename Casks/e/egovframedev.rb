@@ -1,11 +1,12 @@
 cask "egovframedev" do
   arch arm: "AArch64", intel: "x86_64"
 
-  version "4.3.1"
-  sha256 arm:   "f7a13637be51c750093b98763df20210131c6041a6fcba8237c352eb1f335a5d",
-         intel: "f0149077a39664654842b8ee6b2a0084fd0bd17b726d078fe3b1de2eeec64bdb"
+  version "5.0.0"
+  sha256 arm:   "0f46f4b8a6949ef2ac333ec751679e8de8db3cdef1ec16865924c687ac6cbfb7",
+         intel: "ab266af6fc7a1259fe908f5142b28a81ab13e1a2a8fa697d56ca89b4a4eed87d"
 
-  url "https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-#{version}-Mac-#{arch}.dmg"
+  url "https://maven.egovframe.go.kr/publist/HDD1/public/egovframework_v#{version.major_minor}/2_DevelopmentEnvironment/eGovFrame-Dev/#{version}/eGovFrameDev-#{version}-macOS-#{arch}.dmg",
+      user_agent: :fake
   name "eGovFrameDev"
   desc "Open-source framework by South Korea for web-based public service development"
   homepage "https://www.egovframe.go.kr/"
@@ -17,7 +18,7 @@ cask "egovframedev" do
 
   depends_on macos: ">= :big_sur"
 
-  app "eGovFrameDev-#{version}-Mac-#{arch}.app"
+  app "eGovFrameDev-#{version}-macOS-#{arch}.app"
 
   zap trash: [
     "~/Library/Preferences/org.eclipse.platform.ide.plist",
