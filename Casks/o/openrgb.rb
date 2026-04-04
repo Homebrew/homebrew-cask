@@ -1,24 +1,27 @@
 cask "openrgb" do
   arch arm: "ARM64", intel: "Intel"
 
-  version "0.9,b5f46e3"
-  sha256 arm:   "9d14e4ba253b45d39ddcbc52e63b9f9b6982dcca40492190f4580a6d9ef94de7",
-         intel: "95725d6b7a6ba1893c24e4e347e97293d261ccedd77af9d27ec17d75e2f103a4"
+  version "1.0rc2,0fca93e"
+  sha256 arm:   "0846520bdc6d7bf1abc6eabbf4f44c5e2507761fcf1e1a220e85c138056f33eb",
+         intel: "fb1b000293ecd2981134fdc6b26e9453c9db33977a0442a82605ec4f7ab2e5ef"
 
-  url "https://openrgb.org/releases/release_#{version.csv.first}/OpenRGB_#{version.csv.first}_MacOS_#{arch}_#{version.csv.second}.zip"
+  url "https://codeberg.org/OpenRGB/OpenRGB/releases/download/release_candidate_#{version.csv.first}/OpenRGB_#{version.csv.first}_MacOS_#{arch}_#{version.csv.second}.zip",
+      verified: "codeberg.org/OpenRGB/OpenRGB/"
   name "OpenRGB"
   desc "Open source RGB lighting control that doesn't depend on manufacturer software"
   homepage "https://openrgb.org/"
 
   livecheck do
-    url "https://openrgb.org/releases.html"
-    regex(/href=.*?OpenRGB[._-]v?(\d+(?:\.\d+)+)[._-]MacOS[._-]#{arch}[._-](\h+)\.zip/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    url "https://codeberg.org/OpenRGB/OpenRGB/releases"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/release_candidate_(\d+(?:\.\d+)*rc\d+)/OpenRGB_.*?_MacOS_#{arch}_(\h+)\.zip}i)
+      next if match.nil?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  depends_on macos: ">= :big_sur"
 
   app "OpenRGB.app"
 
