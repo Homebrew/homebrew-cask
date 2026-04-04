@@ -1,10 +1,8 @@
 cask "adobe-connect" do
-  version "2025.8.157,11"
-  sha256 "cf03616ec0fe090d59c32c65e31ea870d8f20d2a2bbe629c6eb39ff653eefa28"
+  version "2026.01.39,11"
+  sha256 "e1f1d1497b2bea65b77729771fc304e4792a9fa0db92e179e836039e02b35392"
 
-  # TODO: Remove the leading `0` from the minor version when Adobe updates the URL pattern.
-  # url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.csv.second}/AdobeConnect_#{version.csv.first.dots_to_underscores}.dmg"
-  url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.csv.second}/AdobeConnect_#{version.csv.first.major}_0#{version.csv.first.minor}_#{version.csv.first.patch}.dmg"
+  url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.csv.second}/AdobeConnect_#{version.csv.first.major}_#{version.csv.first.minor}_#{version.csv.first.patch}.dmg"
   name "Adobe Connect"
   desc "Virtual meeting client"
   homepage "https://www.adobe.com/products/adobeconnect.html"
