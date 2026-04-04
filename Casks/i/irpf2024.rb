@@ -14,6 +14,8 @@ cask "irpf2024" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   installer manual: "IRPF2024.app"
 
   uninstall delete: "/Applications/IRPF2024"
