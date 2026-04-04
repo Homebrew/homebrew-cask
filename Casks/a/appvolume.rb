@@ -1,9 +1,9 @@
 cask "appvolume" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.1.36"
-  sha256 arm:   "e956c5e0958c7d01cc67942446bd2da0ce2a1be78723793927805610db5167d8",
-         intel: "0cb745091866ff26ccf6e7ee4118551d82dbfb021e8e122d893666a6483b974f"
+  version "0.1.37"
+  sha256 arm:   "69e265b476d3bdfb11aef307259ce4420beb36bf576b15290dcea3b38593e423",
+         intel: "b5658557d752dfdac7a89efeadbd9192b27865cb2085fb03322945507380db02"
 
   url "https://releases.appvolume.app/AppVolume-#{version}-#{arch}.pkg"
   name "AppVolume"
