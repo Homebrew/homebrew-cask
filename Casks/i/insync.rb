@@ -1,6 +1,6 @@
 cask "insync" do
-  version "3.8.7.50505"
-  sha256 "31b4c5c1cb63548d7809a44f3496c7e02a1b23c032c6eb85c0705d2cf4b26b73"
+  version "3.9.9.60038"
+  sha256 "cb719aa3eaabdd5021323404acb3c7c86cdfb745763d1e614f899dd8c67aa8b8"
 
   url "https://cdn.insynchq.com/builds/mac/Insync-#{version}.dmg"
   name "Insync"
@@ -13,6 +13,7 @@ cask "insync" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Insync.app"
 
