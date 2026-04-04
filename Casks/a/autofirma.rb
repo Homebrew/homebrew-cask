@@ -22,6 +22,8 @@ cask "autofirma" do
     end
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   # See https://github.com/Homebrew/homebrew-cask/pull/116137#issuecomment-998220031
   installer manual: "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
 
