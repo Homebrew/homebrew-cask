@@ -109,7 +109,7 @@ clean_sources () {
 mark_up_sources () {
     /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
     "$xargs" -0 -I{} -n1 /bin/bash -c                                                  \
-      "printf '{}'; brew list-running-app-ids --test='{}' >/dev/null 2>&1 && printf ' (+)'; printf "\\\\n""
+      "printf '{}'; brew list-running-app-ids '{}' >/dev/null 2>&1 && printf ' (+)'; printf "\\\\n""
 }
 
 ###

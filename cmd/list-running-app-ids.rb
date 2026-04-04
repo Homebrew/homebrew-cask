@@ -9,7 +9,7 @@ module Homebrew
     class ListRunningAppIdsCmd < AbstractCommand
       cmd_args do
         usage_banner <<~EOS
-          `list-running-app-ids` [--test=<bundle-id>]
+          `list-running-app-ids` [<bundle-id>]
 
           Print a list of currently running Applications and associated
           Bundle IDs, which may be useful in a Cask uninstall stanza, eg
@@ -18,14 +18,13 @@ module Homebrew
 
           Applications attributed to Apple are excluded from the output.
 
-          With optional `--test`, silently test if a given app
+          With optional <bundle-id>, silently test if a given app
           is running, setting a failing exit code if not.
 
           See CONTRIBUTING.md for more information.
         EOS
 
-        flag "--test=",
-             description: "Silently test if the specified <bundle-id> is running."
+        named_args :bundle_id, max: 1
 
         hide_from_man_page!
       end
@@ -33,9 +32,10 @@ module Homebrew
       sig { override.void }
       def run
         app_names, bundle_ids = load_apps
+        test_bundle_id = args.named.first
 
-        if args.test.present?
-          Homebrew.failed = true unless bundle_ids.include?(args.test)
+        if test_bundle_id
+          Homebrew.failed = true unless bundle_ids.include?(test_bundle_id)
         else
           report_apps(app_names, bundle_ids)
         end
@@ -53,8 +53,8 @@ module Homebrew
 
         parts = out.split(", ")
         one_third = parts.length / 3
-        app_names  = T.must(parts.shift(one_third))
-        bundle_ids = T.must(parts.shift(one_third))
+        app_names  = parts.shift(one_third)
+        bundle_ids = parts.shift(one_third)
         [app_names, bundle_ids]
       end
 
