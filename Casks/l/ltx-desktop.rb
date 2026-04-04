@@ -1,6 +1,6 @@
 cask "ltx-desktop" do
-  version "1.0.3"
-  sha256 "8d500f73f9fd7df1f7a49089310e18e43643a7aef13ef625af5b270803a480b6"
+  version "1.0.4"
+  sha256 "232084949e381149c967de856f5e3fa1852794fd00bd0d1bd7b437d09638c52d"
 
   url "https://github.com/Lightricks/LTX-Desktop/releases/download/v#{version}/LTX-Desktop-arm64.dmg",
       verified: "github.com/Lightricks/LTX-Desktop/"
