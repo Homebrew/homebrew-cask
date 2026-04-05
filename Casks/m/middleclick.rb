@@ -1,6 +1,6 @@
 cask "middleclick" do
-  version "3.1.3"
-  sha256 "d2d36983074caf349917bb4046c6a9cb7b98de0b2682cd797e5b1d9e0b59d7f0"
+  version "3.2.0"
+  sha256 "e93f17612a77413c5e7cef9423f0dc9db166d66f38d41d783a990e2ea6ba698c"
 
   url "https://github.com/artginzburg/MiddleClick/releases/download/#{version}/MiddleClick.zip"
   name "MiddleClick"
