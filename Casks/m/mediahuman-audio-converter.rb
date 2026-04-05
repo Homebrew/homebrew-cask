@@ -1,7 +1,7 @@
 cask "mediahuman-audio-converter" do
   arch arm: "-arm"
 
-  version "2.3.5"
+  version "2.3.6"
   sha256 :no_check
 
   url "https://www.mediahuman.com/files/MHAudioConverter#{arch}.dmg"
