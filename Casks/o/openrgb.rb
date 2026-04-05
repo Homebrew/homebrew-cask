@@ -23,6 +23,8 @@ cask "openrgb" do
 
   depends_on macos: ">= :big_sur"
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   app "OpenRGB.app"
 
   zap trash: [
