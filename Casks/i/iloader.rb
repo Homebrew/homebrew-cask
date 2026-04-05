@@ -1,6 +1,6 @@
 cask "iloader" do
-  version "2.1.0"
-  sha256 "ee823c21849bf49e62b2497b8b2b62bbdd86ae63030895ffa3a7a6e03792804f"
+  version "2.1.1"
+  sha256 "89fe1050cee606ca8485fc970497a7fa9dd7292df15564b41403e57e24209934"
 
   url "https://github.com/nab138/iloader/releases/download/v#{version}/iloader-darwin-universal.dmg",
       verified: "github.com/nab138/iloader/"
