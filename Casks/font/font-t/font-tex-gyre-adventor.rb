@@ -1,20 +1,26 @@
 cask "font-tex-gyre-adventor" do
-  version "2.501"
-  sha256 "9e619eb1c8af5cb55240f8bb865453562a2efd9059dee39d085fb71f7a00f7a2"
+  version "2.609,31_03_2026"
+  sha256 "4cfef1d3df1674d111081d7410fe393185aef719e5d8465314dece308836033e"
 
-  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/adventor/qag#{version.dots_to_underscores}otf.zip"
+  url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/adventor/tg_adventor-otf-#{version.csv.first.dots_to_underscores}#{"-#{version.csv.second}" if version.csv.second}.zip"
   name "TeX Gyre Adventor"
   homepage "https://www.gust.org.pl/projects/e-foundry/tex-gyre/adventor"
 
   livecheck do
-    url "https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole"
-    regex(%r{Adventor</a>,\sver\.\s(\d+(?:\.\d+)+)}i)
+    url :homepage
+    regex(/href=.*?adventor-otf[._-]v?(\d+(?:[._]\d+)+)(?:-(\d+(?:[._]\d+)+))?\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        version = match[0].tr("_", ".")
+        match[1].present? ? "#{version},#{match[1]}" : version
+      end
+    end
   end
 
-  font "qag#{version.dots_to_underscores}otf/texgyreadventor-bold.otf"
-  font "qag#{version.dots_to_underscores}otf/texgyreadventor-bolditalic.otf"
-  font "qag#{version.dots_to_underscores}otf/texgyreadventor-italic.otf"
-  font "qag#{version.dots_to_underscores}otf/texgyreadventor-regular.otf"
+  font "texgyreadventor-bold.otf"
+  font "texgyreadventor-bolditalic.otf"
+  font "texgyreadventor-italic.otf"
+  font "texgyreadventor-regular.otf"
 
   # No zap stanza required
 end
