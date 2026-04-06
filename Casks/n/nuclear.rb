@@ -1,11 +1,11 @@
 cask "nuclear" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "aarch64", intel: "x64"
 
-  version "0.6.48"
-  sha256 arm:   "9749225105d3c4c8000ac4060a1a68f25be64999c54c2d786bd5faa1c0a3a619",
-         intel: "6c62adae6e054f2103b5697bdb4510ff4739fee84a9de8b8645df62bde74bbb3"
+  version "1.32.1"
+  sha256 arm:   "8aeaed10bcb8c276e117cbdf5409f5780f6f4446b3c86b70d09761f39937645f",
+         intel: "2df0d607a57b4681f568a9b476c3796f7c34ecc20d5cbc1bda2d23f667d7e355"
 
-  url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}-#{arch}.dmg",
+  url "https://github.com/nukeop/nuclear/releases/download/player%40#{version}/Nuclear_#{version}_#{arch}.dmg",
       verified: "github.com/nukeop/nuclear/"
   name "Nuclear"
   desc "Streaming music player"
@@ -13,12 +13,12 @@ cask "nuclear" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(/^(?:player@)?v?(\d+(?:\.\d+)+)$/i)
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  app "nuclear.app"
+  app "Nuclear.app"
 
   zap trash: [
     "~/Library/Application Support/nuclear",
