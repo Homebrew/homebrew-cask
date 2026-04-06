@@ -14,7 +14,7 @@ cask "yandextelemost" do
 
   depends_on macos: ">= :big_sur"
 
-  app "Yandex.Telemost.app"
+  app "Yandex Telemost.app"
 
   zap trash: [
     "~/Library/Application Support/Yandex.Telemost",
