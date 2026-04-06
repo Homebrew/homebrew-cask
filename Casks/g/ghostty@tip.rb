@@ -1,6 +1,6 @@
 cask "ghostty@tip" do
-  version "15736,8ae80892baba44eb49faf0b33f142c120ac04412"
-  sha256 "69dae8f88cbe47919ae1f31f38a4fa0bac3e43d7e3443fcbc631d12f198fc5e2"
+  version "15740,f65fb3d44265f9c199df0a78f4788dc62a20b018"
+  sha256 "17b03861b22afa4af28e0b83816962e61384ea907f5d391ab5212dae4ab870fd"
 
   url "https://tip.files.ghostty.org/#{version.csv.second}/Ghostty.dmg"
   name "Ghostty"
@@ -8,31 +8,19 @@ cask "ghostty@tip" do
   homepage "https://ghostty.org/"
 
   # Upstream typically creates several releases per day and there isn't always
-  # a release for every version increase. This manually throttles versions to
-  # one in every ten versions (not releases), aiming for roughly one update per
-  # day. The cadence varies and this will inevitably miss that mark but we can
-  # adjust this as needed.
+  # a release for every version increase.
   livecheck do
     url "https://tip.files.ghostty.org/appcast.xml"
     regex(%r{/(\h+)/Ghostty\.dmg}i)
     strategy :sparkle do |items, regex|
-      versions = items.map do |item|
+      items.map do |item|
         match = item.url&.match(regex)
         next if match.blank?
 
         "#{item.version},#{match[1]}"
       end
-
-      throttled_version = nil
-      versions.filter_map do |version_str|
-        version = version_str.split(",").first.to_i
-        cur_throttled_version = version - (version % 10)
-        next if cur_throttled_version == throttled_version
-
-        throttled_version = cur_throttled_version
-        version_str
-      end
     end
+    throttle days: 1
   end
 
   auto_updates true
