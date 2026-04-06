@@ -1,6 +1,6 @@
 cask "jiba" do
-  version "1.4.1"
-  sha256 "9be528d460933198cdb33759decb54a7f34cc7c94e8da9b5f9bfb537b1c38bb8"
+  version "1.4.2"
+  sha256 "74254a565bc191f6e445c1f832bd0d1fb7ca113784a131925d43c46e01070ed5"
 
   url "https://hee.ink/updates/stable/JiBA-#{version}.dmg"
   name "JiBA"
