@@ -1,6 +1,6 @@
 cask "qidistudio" do
   version "2.05.01.52"
-  sha256 "bf17f07d2e8a257324e6bcad8422112e91aceb34dbba1bbef83896a80c389e5f"
+  sha256 "c89a503bf134582aef04e86ba007f0a426232120ed0256cfe391ab3cc0ec0236"
 
   url "https://github.com/QIDITECH/QIDIStudio/releases/download/v#{version}/QIDIStudio_v0#{version}_MacOS_universal.dmg",
       verified: "github.com/QIDITECH/QIDIStudio/"
