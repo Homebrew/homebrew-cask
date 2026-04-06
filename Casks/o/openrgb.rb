@@ -6,18 +6,18 @@ cask "openrgb" do
          intel: "fb1b000293ecd2981134fdc6b26e9453c9db33977a0442a82605ec4f7ab2e5ef"
 
   url "https://codeberg.org/OpenRGB/OpenRGB/releases/download/release_candidate_#{version.csv.first}/OpenRGB_#{version.csv.first}_MacOS_#{arch}_#{version.csv.second}.zip",
-      verified: "codeberg.org/OpenRGB/OpenRGB/"
+      verified: "codeberg.org/"
   name "OpenRGB"
   desc "Open source RGB lighting control that doesn't depend on manufacturer software"
   homepage "https://openrgb.org/"
 
+  # TODO: Remove the `(?:rc\d*)?` part of this regex when updating to the next
+  # stable version, so we only match stable versions going forward.
   livecheck do
-    url "https://codeberg.org/OpenRGB/OpenRGB/releases"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/release_candidate_(\d+(?:\.\d+)*rc\d+)/OpenRGB_.*?_MacOS_#{arch}_(\h+)\.zip}i)
-      next if match.nil?
-
-      "#{match[1]},#{match[2]}"
+    url "https://openrgb.org/releases.html"
+    regex(/href=.*?OpenRGB[._-]v?(\d+(?:\.\d+)+(?:rc\d*)?)[._-]MacOS[._-]#{arch}[._-](\h+)\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
