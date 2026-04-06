@@ -7,10 +7,7 @@ cask "netviews" do
   desc "Network and Wi-Fi diagnostic tool"
   homepage "https://www.netviews.app/"
 
-  livecheck do
-    url "https://www.netviews.app/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2026-04-06", because: :unreachable
 
   auto_updates true
   depends_on macos: ">= :sonoma"
