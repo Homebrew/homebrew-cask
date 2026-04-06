@@ -8,6 +8,8 @@ cask "spacesaver" do
   desc "Application designed to help you manage and optimize your workspace"
   homepage "https://spacesaver.congdev.com/"
 
+  disable! date: "2026-04-05", because: :no_longer_meets_criteria
+
   depends_on macos: ">= :monterey"
 
   app "SpaceSaver.app"
