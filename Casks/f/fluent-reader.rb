@@ -1,6 +1,6 @@
 cask "fluent-reader" do
-  version "1.1.4"
-  sha256 "cdcac2ad7199b214be1c4fe0f0f0c936c86ef87c2e173fb87e9395652399cad6"
+  version "1.2.0"
+  sha256 "aed7f7249bf9ceae56399d6a3707f347d405d562740de9900ac4b73a55e68722"
 
   url "https://github.com/yang991178/fluent-reader/releases/download/v#{version}/Fluent.Reader.#{version}.dmg",
       verified: "github.com/yang991178/fluent-reader/"
@@ -13,7 +13,7 @@ cask "fluent-reader" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  depends_on macos: ">= :monterey"
 
   app "Fluent Reader.app"
 
@@ -22,8 +22,4 @@ cask "fluent-reader" do
     "~/Library/Preferences/me.hyliu.fluentreader.plist",
     "~/Library/Saved Application State/me.hyliu.fluentreader.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
