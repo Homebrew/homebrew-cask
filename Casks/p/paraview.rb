@@ -2,12 +2,12 @@ cask "paraview" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "6.1.0,RC2-MPI-OSX11.0-Python3.12"
-    sha256 "6bdae4083ab11f147ca84c312217a57b8227e77a2b65e43a2aeb8ff39500a8e7"
+    version "6.1.0,MPI-OSX11.0-Python3.12"
+    sha256 "750ada145dcd8c0e4a27803ecda1d8f53599d26a5ca293eef902fb5ff36058bb"
   end
   on_intel do
-    version "6.1.0,RC2-MPI-OSX10.15-Python3.12"
-    sha256 "fcc7964737eb6cadf5a9c82fc9a2b8b3b83e0fbfc7227da22aa354a7ed1c8e44"
+    version "6.1.0,MPI-OSX10.15-Python3.12"
+    sha256 "e34096914c02c6aee5bb4231885317520aebcb2b050bd8adb4dd8f64a9be141c"
   end
 
   url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.csv.first.major_minor}&type=binary&os=macOS&downloadFile=ParaView-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
@@ -21,15 +21,15 @@ cask "paraview" do
     regex(%r{/v?(?:\d+(?:\.\d+)+)/ParaView[._-]v?(\d+(?:[.-]\d+)+)(?:[._-](.*?))?[._-](?:#{arch}|universal)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        match[1] ? "#{match[0]},#{match[1]}" : match[0]
+        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
       end
     end
   end
 
   depends_on macos: ">= :big_sur"
 
-  app "ParaView-#{version.csv.first}-#{version.csv.second.split("-").first}.app"
-  binary "#{appdir}/ParaView-#{version.csv.first}-#{version.csv.second.split("-").first}.app/Contents/MacOS/paraview"
+  app "ParaView-#{version.csv.first}.app"
+  binary "#{appdir}/ParaView-#{version.csv.first}.app/Contents/MacOS/paraview"
 
   zap trash: [
     "~/.config/ParaView",
