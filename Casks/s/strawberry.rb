@@ -1,6 +1,6 @@
 cask "strawberry" do
-  version "0.0.96"
-  sha256 "97165fb3a1f929f932dbace19a7b46590b1681203b35aed2b5a28917256a8dbe"
+  version "0.0.97"
+  sha256 "58b879db94961a0f799cf44e4d9eb868fa693ccdc00238096a52749137b346f8"
 
   url "https://strawberrybucket.com/strawberry-#{version}.dmg",
       verified: "strawberrybucket.com/"
