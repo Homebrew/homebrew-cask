@@ -24,8 +24,4 @@ cask "linphone" do
     "~/Library/Preferences/linphone",
     "~/Library/Saved Application State/com.belledonnecommunications.linphone.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
