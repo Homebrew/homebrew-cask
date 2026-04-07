@@ -22,8 +22,8 @@ cask "microsoft-excel" do
     end
   end
   on_sonoma :or_newer do
-    version "16.107.26032814"
-    sha256 "2d8cc936c2759a5150b639d36eb2207da5984a5581656ec7a598752d884978a4"
+    version "16.107.26040410"
+    sha256 "cdfbfcad87b164a95e583dcc37ff0a26846b20c73445dcc9428d8ef7602f061c"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525135"
