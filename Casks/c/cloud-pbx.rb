@@ -16,6 +16,8 @@ cask "cloud-pbx" do
     regex(%r{href=.*?/cloud[._-]pbx[._-]2\.0[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)}i)
   end
 
+  depends_on macos: ">= :monterey"
+
   app "Cloud PBX 2.0.app"
 
   zap trash: [
