@@ -17,6 +17,10 @@ cask "baoliandeng" do
 
   pkg "BaoLianDeng-#{version}.pkg"
 
+  postflight do
+    system "open", "x-apple.systempreferences:com.apple.LoginItems-Settings.extension"
+  end
+
   uninstall quit:    [
               "io.github.baoliandeng.macos",
               "io.github.baoliandeng.macos.TransparentProxy",
