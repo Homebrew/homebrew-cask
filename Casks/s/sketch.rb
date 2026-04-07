@@ -17,8 +17,8 @@ cask "sketch" do
     end
   end
   on_sonoma :or_newer do
-    version "2025.3.4,221297"
-    sha256 "8c506b5a713b2a8a959e2f00c892a17591ed40adbffe80101aec8a33a2dd7cc3"
+    version "2026.1,228201"
+    sha256 "0566297840a144b69f84c7cd9371b7907a7437e2530b9a22d60292bd102f83c1"
 
     # Older versions may have a more recent `pubDate` than newer versions, so
     # we have to check all of the items in the appcast.
