@@ -1,6 +1,6 @@
 cask "connect-fonts" do
-  version "28.0.4"
-  sha256 "95261f31179279d3c583de6f92d7acc43ed1fa078f8db86f99bb173539aace63"
+  version "28.1.0"
+  sha256 "4dc2d84f8a4f4d1236a618cd4751dbbd9ecdbc7f72d9756c4b48ce7e0d269173"
 
   url "https://bin.extensis.com/ConnectFonts-M-#{version.dots_to_hyphens}.dmg"
   name "Connect Fonts"
