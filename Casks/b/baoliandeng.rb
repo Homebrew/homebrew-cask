@@ -5,15 +5,15 @@ cask "baoliandeng" do
   url "https://github.com/madeye/BaoLianDeng/releases/download/v#{version}/BaoLianDeng-#{version}.pkg",
       verified: "github.com/madeye/BaoLianDeng/"
   name "BaoLianDeng"
-  desc "macOS VPN proxy powered by Mihomo (Clash Meta)"
+  desc "VPN proxy powered by Mihomo (Clash Meta)"
   homepage "https://madeye.github.io/BaoLianDeng/"
-
-  depends_on macos: ">= :sonoma"
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :sonoma"
 
   pkg "BaoLianDeng-#{version}.pkg"
 
