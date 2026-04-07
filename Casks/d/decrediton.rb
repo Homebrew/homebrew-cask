@@ -1,9 +1,9 @@
 cask "decrediton" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.1.3"
-  sha256 arm:   "dc3a901ee5731fa8e5e071cf4261fe770567fb468bb54e5b7f2cd98b5cc82c8b",
-         intel: "045b4a42294f4471b223e3b089b21484c73a16bdaf6a7882831060b3e648fe60"
+  version "2.1.4"
+  sha256 arm:   "a282230548716eac07a498c25650ef0327a991e50eba0eca614943a8b0542f84",
+         intel: "0ecc32efbce5af743e06514aee94ccb4f6abf44c219868dc3d62913c93233cce"
 
   url "https://github.com/decred/decred-binaries/releases/download/v#{version}/decrediton-darwin-#{arch}-v#{version}.dmg"
   name "Decrediton"
