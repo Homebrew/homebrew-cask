@@ -1,9 +1,9 @@
 cask "pikpak" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.6.3005"
-  sha256 arm:   "9900b973703ba6139a2c32ee3b6baecd5efe04de7ae053574d4ada29d9ade5ac",
-         intel: "d165e035e84660ae648b0597604f0c78881b948bbdd6c10b5dc6487d13192a6e"
+  version "2.0.4.2265"
+  sha256 arm:   "e4113a8816f73c7927f6d5dca21f1f28a9772f49645fb883bfb8646a03a4044a",
+         intel: "47325fe7fe3ed301f97847955c01324058e9438cd833a4c41b845a7a1416fe11"
 
   url "https://static.mypikpak.com/mac/PikPak-v#{version}-#{arch}.zip"
   name "PikPak"
