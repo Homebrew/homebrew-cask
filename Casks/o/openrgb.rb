@@ -8,7 +8,7 @@ cask "openrgb" do
   # TODO: Remove the `candidate` part of this url when updating to the next
   # stable version, so we only match stable versions going forward.
   url "https://codeberg.org/OpenRGB/OpenRGB/releases/download/release_candidate_#{version.csv.first}/OpenRGB_#{version.csv.first}_MacOS_#{arch}_#{version.csv.second}.zip",
-      verified: "codeberg.org/"
+      verified: "codeberg.org/OpenRGB/OpenRGB/"
   name "OpenRGB"
   desc "Open source RGB lighting control that doesn't depend on manufacturer software"
   homepage "https://openrgb.org/"
