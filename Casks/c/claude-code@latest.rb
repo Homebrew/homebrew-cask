@@ -33,9 +33,4 @@ cask "claude-code@latest" do
         "~/Library/Caches/claude-cli-nodejs",
       ],
       rmdir: "~/.claude"
-
-  caveats <<~EOS
-    Note: the in-app upgrade command shown in update notifications is hardcoded to
-    "brew upgrade claude-code" rather than "brew upgrade claude-code@latest".
-  EOS
 end
