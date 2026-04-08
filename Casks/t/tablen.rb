@@ -9,20 +9,20 @@ cask "tablen" do
 
   livecheck do
     url "https://tablen.app/api/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
 
   app "Tablen.app"
 
   zap trash: [
-    "~/Library/Application Support/Tablen",
+    "~/Library/Application Support/CrashReporter/Tablen_*.plist",
     "~/Library/Caches/app.tablen.macos",
     "~/Library/HTTPStorages/app.tablen.macos",
+    "~/Library/Mobile Documents/iCloud~app~tablen~macos",
     "~/Library/Preferences/app.tablen.macos.plist",
     "~/Library/Saved Application State/app.tablen.macos.savedState",
-    "~/Library/WebKit/app.tablen.macos",
   ]
 end
