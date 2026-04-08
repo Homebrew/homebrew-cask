@@ -1,6 +1,6 @@
 cask "movist-pro" do
-  version "2.13.1"
-  sha256 "4321047175f6503c09bf03ae94d53b42cc9ce98d6279d79bf69285d4cda9a058"
+  version "2.15"
+  sha256 "2a856e0bd99d56e16de3b78fdb9b859e67edb0953a96654ab32dc936a064a373"
 
   url "https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/MovistPro_#{version}.dmg",
       verified: "s3.ap-northeast-2.amazonaws.com/update.cocoable.com/"
@@ -14,6 +14,7 @@ cask "movist-pro" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "Movist Pro.app"
 
