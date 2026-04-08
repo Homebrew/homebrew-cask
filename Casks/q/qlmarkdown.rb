@@ -1,6 +1,6 @@
 cask "qlmarkdown" do
-  version "1.0.24"
-  sha256 "e7340e4ca56b943547d3a901e4114237f229222efaf05461dc532758ad0e078a"
+  version "1.5.0"
+  sha256 "8052e2b389644b5820e964974d87d1a3ae28992d103daedd9a522bedab6b4751"
 
   url "https://github.com/sbarex/QLMarkdown/releases/download/#{version}/QLMarkdown.zip"
   name "sbarex QLMarkdown"
@@ -17,8 +17,6 @@ cask "qlmarkdown" do
       items.map(&:short_version)
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :big_sur"
