@@ -1,6 +1,6 @@
 cask "box-drive" do
-  version "2.50.191"
-  sha256 "ab1470864f0a1213a97b13ed6c77b1b0240bd477d1680e6d461f88ce585152f0"
+  version "2.51.230"
+  sha256 "df44254db5daff935d2f2c44e83bf748d30fe011ca9bb647bf6b72599959ff55"
 
   url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive-#{version}.pkg",
       verified: "e3.boxcdn.net/desktop/releases/mac/"
