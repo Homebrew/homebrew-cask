@@ -4,7 +4,7 @@ cask "vibe-island" do
 
   url "https://dl.vibeisland.app/VibeIsland-#{version}.dmg"
   name "Vibe Island"
-  desc "Dynamic Island for AI agents — monitor, approve, and jump back from the notch"
+  desc "Dynamic island AI agent utility"
   homepage "https://vibeisland.app/"
 
   livecheck do
