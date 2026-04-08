@@ -20,8 +20,8 @@ cask "vibe-island" do
   uninstall quit: "app.vibeisland.macos"
 
   zap trash: [
-    "~/Library/Preferences/app.vibeisland.macos.plist",
-    "~/Library/Caches/app.vibeisland.macos",
     "~/.vibe-island",
+    "~/Library/Caches/app.vibeisland.macos",
+    "~/Library/Preferences/app.vibeisland.macos.plist",
   ]
 end
