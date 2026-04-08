@@ -1,9 +1,9 @@
 cask "elan" do
   arch arm: "_M1"
 
-  version "7.0"
-  sha256 arm:   "ee067b519482f64dda66f082b0e6ad38315bca0c47d0f5166ced9ca5cd999be6",
-         intel: "ec2661cc727e7857150b1fb159338711e0b4addfd133a75e6d0dc69b8e643543"
+  version "7.1"
+  sha256 arm:   "71106952d5a1d301c6f4f764a10e654d2581cc8922e8d451a0c091ecf000d99c",
+         intel: "fa984b2feae02d8ac30807a543b146da475c43eb9fdf25836e0cee8fdb2caba5"
 
   url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}#{arch}_mac.zip"
   name "ELAN"
