@@ -10,7 +10,7 @@ cask "appgrid-direct" do
 
   livecheck do
     url "https://zekalogic.com/appgrid/app/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sonoma"
