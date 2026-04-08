@@ -5,15 +5,15 @@ cask "appgrid" do
   url "https://zekalogic.com/appgrid/app/AppGridMac-#{version.csv.first}.zip",
       verified: "zekalogic.com/appgrid/app/"
   name "AppGridMac"
-  desc "AI-assisted Launchpad replacement for macOS"
-  homepage "https://appgridmac.com"
-
-  depends_on macos: ">= :sonoma"
+  desc "AI-assisted Launchpad replacement"
+  homepage "https://appgridmac.com/"
 
   livecheck do
     url "https://zekalogic.com/appgrid/app/appcast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :sonoma"
 
   app "AppGridMac.app"
 
