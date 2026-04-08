@@ -9,8 +9,6 @@ cask "eudic" do
   name "欧路词典"
   desc "English dictionary"
   homepage "https://www.eudic.net/v4/en/app/eudic"
-  
-  livecheck :skip
 
   app "Eudic.app"
 
