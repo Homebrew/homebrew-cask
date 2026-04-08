@@ -1,6 +1,6 @@
 cask "orion" do
   on_catalina :or_older do
-    version "1.0.4,143"
+    version "1.0.5,144"
     sha256 "44bdb8e2d1b1148b940e3f88a37c2ff90a0b16f00ae1b53b8fa628a2b4119016"
 
     url "https://cdn.kagi.com/updates/10_15/#{version.csv.second}.zip"
@@ -11,7 +11,7 @@ cask "orion" do
     end
   end
   on_big_sur do
-    version "1.0.4,143"
+    version "1.0.5,144"
     sha256 "5ade3844f2228630634e77e460fe3c27553371462116c110e851d8730a130b0b"
 
     url "https://cdn.kagi.com/updates/11_0/#{version.csv.second}.zip"
@@ -22,7 +22,7 @@ cask "orion" do
     end
   end
   on_monterey do
-    version "1.0.4,143"
+    version "1.0.5,144"
     sha256 "3020f30d1b7209211a2ac77e5f3c613c8a21d3ed35783771ad02c5e8a979d334"
 
     url "https://cdn.kagi.com/updates/12_0/#{version.csv.second}.zip"
@@ -33,7 +33,7 @@ cask "orion" do
     end
   end
   on_ventura do
-    version "1.0.4,143"
+    version "1.0.5,144"
     sha256 "27b04e7ae106ce96923bf542c5f9f82c6abda59bd3d972797cc1efc439c30ab4"
 
     url "https://cdn.kagi.com/updates/13_0/#{version.csv.second}.zip"
@@ -44,8 +44,8 @@ cask "orion" do
     end
   end
   on_sonoma do
-    version "1.0.4,143"
-    sha256 "4a07035515db6c3bdd9597bd9c780206afd17448f6e88d9b7e6ae1fdbb18b134"
+    version "1.0.5,144"
+    sha256 "0c7e2bf778814e6d704c93be5e04817cf3fff6d59fc7d86c4892a02b511ae882"
 
     url "https://cdn.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
@@ -55,8 +55,8 @@ cask "orion" do
     end
   end
   on_sequoia do
-    version "1.0.4,143"
-    sha256 "2697cabd242b8acb5005a8653cc1bff1710c89c2af0d679080d20eefcd68f4da"
+    version "1.0.5,144"
+    sha256 "ad9936cecf7cf3541935a50ec8b980d7949d1c34fc2b06206aab1c1203e63617"
 
     url "https://cdn.kagi.com/updates/15_0/#{version.csv.second}.zip"
 
@@ -66,8 +66,8 @@ cask "orion" do
     end
   end
   on_tahoe :or_newer do
-    version "1.0.4,143"
-    sha256 "0d32eaf4aaabbfea818dcbcabbf3933acc0e75d327a82fd5627d7a576bb6feb9"
+    version "1.0.5,144"
+    sha256 "f3677e503e872c63d9e7c257f54bd6eacc75bfc853cabcf9d68d9140ad38de48"
 
     url "https://cdn.kagi.com/updates/26_0/#{version.csv.second}.zip"
 
