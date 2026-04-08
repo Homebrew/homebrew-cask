@@ -1,5 +1,5 @@
 cask "hive-app" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "1.0.94"
   sha256 arm:   "b03576d8005be040314ad37518b25b1d6a625087561a5662ff4c984bf2bf360d",
