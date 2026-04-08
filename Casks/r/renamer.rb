@@ -1,6 +1,6 @@
 cask "renamer" do
-  version "7.1.10"
-  sha256 "cf9b2c346b95665584fa434470cabb93c9d1175e52ad69b9228446ec96b14bdb"
+  version "7.2.0"
+  sha256 "c9966963fa0e23ae7398ca79b8d6deb965715e5a34c0de3b1bbd9493777be917"
 
   url "https://github.com/incbee/renamer-#{version.major}-releases/releases/download/v#{version}/Renamer-#{version}-universal-mac.zip",
       verified: "github.com/incbee/renamer-#{version.major}-releases/"
