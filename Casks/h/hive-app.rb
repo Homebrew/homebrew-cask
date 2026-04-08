@@ -10,11 +10,6 @@ cask "hive-app" do
   desc "AI agent orchestrator for parallel coding across projects"
   homepage "https://github.com/morapelker/hive"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :monterey"
 
