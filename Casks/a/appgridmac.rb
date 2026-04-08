@@ -1,4 +1,4 @@
-cask "appgrid-direct" do
+cask "appgridmac" do
   version "1.1.8"
   sha256 "cde179b6e2416f2fa81da2452ca2e26ad8f8655fe79b1cb8489312069109625f"
 
