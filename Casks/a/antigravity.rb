@@ -2,9 +2,9 @@ cask "antigravity" do
   arch arm: "arm", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "1.21.9,4905428782546944"
-  sha256 arm:   "8c561671baad4462cbe169bac85bae8a5163939b2488d83174eeb345f050b0c1",
-         intel: "2569daaab4e8d692cb9657f7a9d0fcd0fc4aa341b3fb3ede237118cdff916c9a"
+  version "1.22.2,5206900187463680"
+  sha256 arm:   "9b845782c74d4b7a95ee37c88f0ec89e85fb2e3cad9d387a2c1a0e1a98684cac",
+         intel: "86644c8c7ce06e40733595c20c35ffececfe67193058f20ab7118cc943efa7a5"
 
   url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg",
       verified: "edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/"
