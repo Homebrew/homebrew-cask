@@ -1,8 +1,8 @@
 cask "eudic" do
-  version :latest
+  version "2026-03-08"
   sha256 :no_check
 
-  url "https://static.frdic.com/pkg/eudicmac.dmg?v=2026-03-08",
+  url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version}",
       verified:   "static.frdic.com/",
       user_agent: :fake
   name "Eudic"
