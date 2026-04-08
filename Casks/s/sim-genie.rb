@@ -1,6 +1,6 @@
 cask "sim-genie" do
-  version "2025.2,322"
-  sha256 "661fa527d528cd984e45e933d8ce8df0fef9a8fa5770b7380298ec3ed75f93d5"
+  version "2026.1,341"
+  sha256 "2ba02bbc8fc7f9bf9af2c4f0c6bde77927e6a9511f2c4babeb8d9800b3c35c01"
 
   url "https://d1b3av25dd6jdq.cloudfront.net/releases/macos/SimGenie.#{version.csv.first}.#{version.csv.second}.zip",
       verified: "d1b3av25dd6jdq.cloudfront.net/"
@@ -12,6 +12,8 @@ cask "sim-genie" do
     url "https://simgenie.app/releases/macos/appcast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Sim Genie.app"
 
