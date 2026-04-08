@@ -1,25 +1,27 @@
 cask "appgrid" do
-  version "1.1.8,39"
-  sha256 "cde179b6e2416f2fa81da2452ca2e26ad8f8655fe79b1cb8489312069109625f"
+  version "1.0.4"
+  sha256 "e89280465b4a3dc580b026f25f2ade04ab1cd9b15a476e327110a1d91bd7da77"
 
-  url "https://zekalogic.com/appgrid/app/AppGridMac-#{version.csv.first}.zip",
-      verified: "zekalogic.com/appgrid/app/"
-  name "AppGridMac"
-  desc "AI-assisted Launchpad replacement"
-  homepage "https://appgridmac.com/"
+  url "https://github.com/mjolnirapp/AppGrid/releases/download/#{version}/AppGrid-#{version}.zip"
+  name "AppGrid"
+  desc "Window manager with Vim–like hotkeys"
+  homepage "https://github.com/mjolnirapp/AppGrid/"
 
   livecheck do
-    url "https://zekalogic.com/appgrid/app/appcast.xml"
-    strategy :sparkle
+    url :homepage
+    regex(/href=.*?AppGrid[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    strategy :page_match
   end
 
-  depends_on macos: ">= :sonoma"
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  app "AppGridMac.app"
+  app "AppGrid.app"
 
-  zap trash: [
-    "~/Library/Application Support/com.zekalogic.appgrid.app.direct",
-    "~/Library/Preferences/com.zekalogic.appgrid.app.direct.plist",
-    "~/Library/Saved Application State/com.zekalogic.appgrid.app.direct.savedState",
-  ]
+  uninstall quit: "com.sdegutis.AppGrid"
+
+  zap trash: "~/Library/Preferences/com.sdegutis.AppGrid.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
