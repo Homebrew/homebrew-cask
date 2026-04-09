@@ -19,6 +19,7 @@ cask "rowboat" do
 
   zap trash: [
     "~/Library/Application Support/Rowboat",
+    "~/.rowboat",
   ]
 
 end
