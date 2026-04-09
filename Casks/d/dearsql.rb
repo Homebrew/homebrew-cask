@@ -17,4 +17,10 @@ cask "dearsql" do
   depends_on macos: ">= :sonoma"
 
   app "DearSQL.app"
+
+  zap trash: [
+    "~/Library/Application Support/DearSQL",
+    "~/Library/Caches/DearSQL",
+    "~/.dearsql",
+  ]
 end
