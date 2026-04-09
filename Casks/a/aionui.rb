@@ -1,9 +1,9 @@
 cask "aionui" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.9.10"
-  sha256 arm:   "ba8cf49062289a6b9e7129dfd37d2ff2b59ae6d9e7770af2413b8f6105c04685",
-         intel: "6a50359eb7c89b2869d39025ae008387a8769bf31236b0f79811b501d28d9291"
+  version "1.9.11"
+  sha256 arm:   "559f8bda7ebcd28391159f19f2f72e302465f154a8c8e357c18cff7d56de419d",
+         intel: "2d41fcb2c8de22e54adba27f443bbea27f79e8c4a54aefd159afdb23f9c29ddb"
 
   url "https://github.com/iOfficeAI/AionUi/releases/download/v#{version}/AionUi-#{version}-mac-#{arch}.dmg"
   name "AionUi"
