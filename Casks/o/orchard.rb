@@ -7,11 +7,6 @@ cask "orchard" do
   desc "Native GUI for Apple Containers"
   homepage "https://github.com/andrew-waters/orchard"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on formula: "container"
   depends_on macos: ">= :tahoe"
 
