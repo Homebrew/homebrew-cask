@@ -15,4 +15,8 @@ cask "rowboat" do
 
   app "rowboat.app"
 
+  zap trash: [
+    "~/Library/Application Support/Rowboat",
+  ]
+
 end
