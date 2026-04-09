@@ -7,6 +7,10 @@ cask "worksheet-crafter" do
   desc "Create your own lesson materials, quick and easy"
   homepage "https://worksheetcrafter.com/"
 
+  livecheck do
+    skip "Download URL redirects to a static cloud storage link with no version information"
+  end
+
   pkg "WorksheetCrafter.pkg"
 
   uninstall pkgutil: "com.schoolcraft.pkg.worksheetcrafter"
