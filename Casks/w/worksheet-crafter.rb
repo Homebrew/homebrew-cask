@@ -8,7 +8,8 @@ cask "worksheet-crafter" do
   homepage "https://worksheetcrafter.com/"
 
   livecheck do
-    skip "Download URL redirects to a static cloud storage link with no version information"
+    url "https://worksheetcrafter.com/download/"
+    regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
   pkg "WorksheetCrafter.pkg"
