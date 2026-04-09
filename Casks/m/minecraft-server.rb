@@ -1,6 +1,6 @@
 cask "minecraft-server" do
-  version "26.1.1,49c8195703ad0ba4f0a4efbccfd85a4a8ca57431"
-  sha256 "d792784979722dc35144acffb953554e707445c62450550044c4281e632cbbcc"
+  version "26.1.2,97ccd4c0ed3f81bbb7bfacddd1090b0c56f9bc51"
+  sha256 "cd47e7c38328f64768fd17af8fcd8b22496b40b63d4ffee81e71ae059fedcb42"
 
   url "https://piston-data.mojang.com/v1/objects/#{version.csv.second}/server.jar",
       verified: "piston-data.mojang.com/"
