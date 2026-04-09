@@ -19,7 +19,12 @@ cask "orchard" do
 
   postflight do
     system_command "defaults",
-                   args: ["write", "container-compose.Orchard", "OrchardCustomBinaryPath", "#{HOMEBREW_PREFIX}/bin/container"]
+                   args: [
+                     "write",
+                     "container-compose.Orchard",
+                     "OrchardCustomBinaryPath",
+                     "#{HOMEBREW_PREFIX}/bin/container",
+                   ]
   end
 
   zap trash: [
