@@ -1,0 +1,12 @@
+#:  * `list-recent-pkg-ids`
+#:
+#:  List pkg receipt IDs for the 10 most recently installed packages.
+#:  Package IDs attributed to Apple are excluded from the output.
+#:
+#:      -h, --help                       Show this message.
+
+/bin/ls -t /var/db/receipts | \
+  /usr/bin/grep '\.plist$' | \
+  /usr/bin/grep --invert-match '^com\.apple\.' | \
+  /usr/bin/sed 's/\.plist$//' | \
+  /usr/bin/head -10
