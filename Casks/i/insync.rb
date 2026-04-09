@@ -1,6 +1,6 @@
 cask "insync" do
   version "3.9.9.60038"
-  sha256 "cb719aa3eaabdd5021323404acb3c7c86cdfb745763d1e614f899dd8c67aa8b8"
+  sha256 "186f96c184fe0518ad8c4f3ae7fc7f81190fbb602b1366480277fc075b69f5cc"
 
   url "https://cdn.insynchq.com/builds/mac/Insync-#{version}.dmg"
   name "Insync"
