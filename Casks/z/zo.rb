@@ -1,8 +1,8 @@
 cask "zo" do
-  version "1.3.3"
-  sha256 "0e9f2667e8e20e6c293c92e35af7c47e32025e445c2ed7156ed344d07478b69c"
+  version "1.4.0"
+  sha256 "6da127420e41ebb544ba6e3daef3eeb29d8e53214a925e6c4781342b3381de75"
 
-  url "https://github.com/zocomputer/Zo/releases/download/v.#{version}/Zo-#{version}-universal-mac.zip",
+  url "https://github.com/zocomputer/Zo/releases/download/v#{version}/Zo-#{version}-universal-mac.zip",
       verified: "github.com/zocomputer/Zo/"
   name "Zo"
   desc "Friendly personal server"
