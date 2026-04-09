@@ -1,6 +1,6 @@
 cask "nteract" do
-  version "2.1.2,202604071001"
-  sha256 "14727ee279c7fcd502ac3588590ce9557c5b80447b0eaf21f36cd7586d3c090a"
+  version "2.1.3,202604090105"
+  sha256 "06052c05995425c3601cfe31552775f81d14883eb3c3b1a4069f0b7d5cf79c2e"
 
   url "https://github.com/nteract/desktop/releases/download/v#{version.csv.first}-stable.#{version.csv.second}/nteract-stable-darwin-arm64.dmg"
   name "nteract"
