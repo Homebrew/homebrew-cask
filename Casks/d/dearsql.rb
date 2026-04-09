@@ -1,12 +1,20 @@
 cask "dearsql" do
   version "0.4.1"
-  sha256 "b8c5d6e31e38ad12ac83aa2bbba85e2d0b064ee14d768a2e8e01a3c6c180cb86"
+  sha256 arm: "b8c5d6e31e38ad12ac83aa2bbba85e2d0b064ee14d768a2e8e01a3c6c180cb86"
 
-  url "https://github.com/dunkbing/dearsql/releases/download/v#{version}/DearSQL-#{version}.dmg",
+  url "https://github.com/dunkbing/dearsql/releases/download/v#{version}/DearSQL.dmg",
       verified: "github.com/dunkbing/dearsql/"
   name "DearSQL"
   desc "Native desktop SQL client for multiple databases"
   homepage "https://dearsql.dev/"
+
+  livecheck do
+    url "https://dearsql.dev/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
+  depends_on macos: ">= :sonoma"
 
   app "DearSQL.app"
 end
