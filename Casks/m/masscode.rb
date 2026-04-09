@@ -1,9 +1,9 @@
 cask "masscode" do
   arch arm: "-arm64"
 
-  version "5.1.0"
-  sha256 arm:   "9b26769c02be0b00133e0349bdc6df32c4efefe50aeb2c7325cb52874064bbbd",
-         intel: "f2e68b8a62b669e513013fb2b8a1b543c7520850ae996a631d3943e33327c8f1"
+  version "5.1.1"
+  sha256 arm:   "4406ea3333c11842956107556e16dd2453f50cb01d7db937ed1e371ff844371e",
+         intel: "1f92ee35ea5915623dd00bddab9e0b3580ed4e59ea33915a6f003ab58aa0605a"
 
   url "https://github.com/massCodeIO/massCode/releases/download/v#{version}/massCode-#{version}#{arch}.dmg",
       verified: "github.com/massCodeIO/massCode/"
