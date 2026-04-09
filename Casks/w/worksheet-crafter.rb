@@ -2,17 +2,18 @@ cask "worksheet-crafter" do
   version "2026.1.2"
   sha256 "efb517d9975075192c431779c63b1bec70178593964c4bf410f99e1ad4c4cf69"
 
-  url "https://worksheetcrafter.com/download/worksheet-crafter/mac/#{version}"
+  url "https://website.cdn.getschoolcraft.com/downloads/worksheet-crafter_#{version}.pkg",
+      verified: "website.cdn.getschoolcraft.com/downloads/"
   name "Worksheet Crafter"
   desc "Create your own lesson materials, quick and easy"
   homepage "https://worksheetcrafter.com/"
 
   livecheck do
-    url "https://worksheetcrafter.com/download/"
-    regex(/Version\s+(\d+(?:\.\d+)+)/i)
+    url "https://worksheetcrafter.com/download/worksheet-crafter/mac/latest"
+    strategy :header_match
   end
 
-  pkg "WorksheetCrafter.pkg"
+  pkg "worksheet-crafter_#{version}.pkg"
 
   uninstall pkgutil: "com.schoolcraft.pkg.worksheetcrafter"
 
