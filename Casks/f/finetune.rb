@@ -1,8 +1,8 @@
 cask "finetune" do
-  version "1.4.1"
-  sha256 "e05ef4d3e66d7e519eb25c966c10de8911b2307b2b224bb63762ac269a8e708c"
+  version "1.5.0"
+  sha256 "0ae321011cb8628419be4b11477e3933beadec75d6a258a83476880be806b24e"
 
-  url "https://github.com/ronitsingh10/FineTune/releases/download/v#{version}/FineTune-#{version}.dmg"
+  url "https://github.com/ronitsingh10/FineTune/releases/download/v#{version}/FineTune.dmg"
   name "FineTune"
   desc "Per-application volume mixer, equalizer, and audio router"
   homepage "https://github.com/ronitsingh10/FineTune"
