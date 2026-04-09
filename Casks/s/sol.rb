@@ -12,7 +12,7 @@ cask "sol" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sonoma"
 
   app "Sol.app"
 
