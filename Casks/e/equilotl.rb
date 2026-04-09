@@ -4,7 +4,7 @@ cask "equilotl" do
 
   url "https://github.com/Equicord/Equilotl/releases/download/v#{version}/Equilotl.MacOS.zip"
   name "Equilotl"
-  desc "A cross platform gui app for installing Equicord"
+  desc "Cross platform gui app for installing Equicord"
   homepage "https://github.com/Equicord/Equilotl"
 
   livecheck do
@@ -14,9 +14,7 @@ cask "equilotl" do
 
   app "Equilotl.app"
 
-  zap trash: [
-    "~/Library/Application Support/Equicord"
-  ]
+  zap trash: "~/Library/Application Support/Equicord"
 
   caveats do
     requires_rosetta
