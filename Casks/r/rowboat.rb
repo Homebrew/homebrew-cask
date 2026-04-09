@@ -1,5 +1,5 @@
 cask "rowboat" do
-  arch arm: "arm64", intel: "amd64"
+  arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
   version "0.2.1"
