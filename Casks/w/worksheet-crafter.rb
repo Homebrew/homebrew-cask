@@ -7,11 +7,6 @@ cask "worksheet-crafter" do
   desc "Create your own lesson materials, quick and easy"
   homepage "https://worksheetcrafter.com/"
 
-  livecheck do
-    url :url
-    strategy :header_match
-  end
-
   pkg "WorksheetCrafter.pkg"
 
   uninstall pkgutil: "com.schoolcraft.pkg.worksheetcrafter"
