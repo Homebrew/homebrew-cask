@@ -13,6 +13,8 @@ cask "rowboat" do
   desc "Open-source AI coworker, with memory"
   homepage "https://github.com/rowboatlabs/rowboat"
 
+  depends_on macos: ">= :monterey"
+
   app "rowboat.app"
 
   zap trash: [
