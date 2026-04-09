@@ -1,11 +1,11 @@
 cask "keet" do
-  arch arm: "Apple-Silicon", intel: "Intel"
+  arch intel: "-Intel"
 
-  version "2.6.0"
-  sha256 arm:   "db417e3639b5b647b9d6991301b1cb6b6ee3706b0aeac03fcb6bca471a6c66d2",
-         intel: "6c2b868d93d6c9176a3912aaa391c1fd3d49d3652ab762ccaf82b1931e4309fc"
+  version "4.13.0"
+  sha256 arm:   "27da264eca14dea4963b25dec62171a5118602e3a258f37ae2bbe9381e7669eb",
+         intel: "1e7d45ec6d4181b41ce8b3be52d13759b913dcbe58662e2987a3af8c20c0d955"
 
-  url "https://static.keet.io/downloads/#{version}/Keet-#{arch}.dmg"
+  url "https://static.keet.io/downloads/#{version}/Keet#{arch}.dmg"
   name "keet"
   desc "Peer-to-peer video and text chat"
   homepage "https://keet.io/"
@@ -16,6 +16,7 @@ cask "keet" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Keet.app"
 
