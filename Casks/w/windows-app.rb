@@ -14,7 +14,7 @@ cask "windows-app" do
   end
 
   conflicts_with cask: "microsoft-remote-desktop"
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sonoma"
 
   pkg "Windows_App_#{version}_installer.pkg"
 
