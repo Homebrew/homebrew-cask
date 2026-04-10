@@ -5,7 +5,7 @@ cask "worksheet-crafter" do
   url "https://website.cdn.getschoolcraft.com/downloads/worksheet-crafter_#{version}.pkg",
       verified: "website.cdn.getschoolcraft.com/downloads/"
   name "Worksheet Crafter"
-  desc "Create your own lesson materials, quick and easy"
+  desc "Worksheet and lesson material creator"
   homepage "https://worksheetcrafter.com/"
 
   livecheck do
