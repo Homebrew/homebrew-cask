@@ -22,4 +22,8 @@ cask "pdf-squeezer" do
     "~/Library/Containers/com.witt-software.PDF-Squeezer",
     "~/Library/Group Containers/group.witt-software.com.PDF-Squeezer",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
