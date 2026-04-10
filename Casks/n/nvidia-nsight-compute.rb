@@ -1,7 +1,7 @@
 cask "nvidia-nsight-compute" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2025.3.0.19-36273991"
+  version "2026.1.0.2"
   sha256 arm:   "e7df8a120a66f72a9a740c81350d365e3acb1f9cff8eab6a9db49f2d702e269d",
          intel: "03ea2e18bbf3e3bcbe552b15ba57159dda795e073efc8dbe1201c7006051e01f"
 
