@@ -1,33 +1,58 @@
 cask "gpgfrontend" do
   macos_version = nil
 
-  version "2.1.10"
-
   on_arm do
     on_ventura :or_older do
-      macos_version = 13
+      macos_version = "13"
 
+      version "2.1.10"
       sha256 "f611956a9b3d7b8a2dfda11a93ebe10ef64100e144890df5efcbd61a4aeb5a37"
+
+      livecheck do
+        skip "Legacy version"
+      end
 
       caveats do
         requires_rosetta
       end
     end
-    on_sonoma do
-      macos_version = 14
+    on_sonoma :or_newer do
+      version "2.1.11"
 
-      sha256 "ae8af5945ac28ec214cb1eee8ae9e034de24f7e4519d5e6bce22bde17a983393"
-    end
-    on_sequoia :or_newer do
-      macos_version = 15
+      on_sonoma do
+        macos_version = "14"
 
-      sha256 "28b05ae0b5e013e3de3d47006a1557d52557d09234313c586c3e4b2dd9ffa0a1"
+        sha256 "86914b0f3ed81ea2ddd2bec7b99c76544e5a09e60b1cfcf2e024afc105156a9a"
+      end
+      on_sequoia do
+        macos_version = "15"
+
+        sha256 "0e332e00a443396957fff522d329c255bd560704537591192c765bfdd04a5cb6"
+      end
+      on_tahoe :or_newer do
+        macos_version = "26"
+
+        sha256 "561c72b35c460f554726e039d42a6ab443f28e41b360128716093b285500921c"
+      end
     end
   end
   on_intel do
-    macos_version = 13
+    on_sonoma :or_older do
+      macos_version = "13"
 
-    sha256 "f611956a9b3d7b8a2dfda11a93ebe10ef64100e144890df5efcbd61a4aeb5a37"
+      version "2.1.10"
+      sha256 "f611956a9b3d7b8a2dfda11a93ebe10ef64100e144890df5efcbd61a4aeb5a37"
+
+      livecheck do
+        skip "Legacy version"
+      end
+    end
+    on_sequoia :or_newer do
+      macos_version = "15-intel"
+
+      version "2.1.11"
+      sha256 "8bb66ef5bcc0432ea4fd1e31d241fe0a20d01fc4b4e9591893fb3716ce16ce95"
+    end
   end
 
   url "https://github.com/saturneric/GpgFrontend/releases/download/v#{version}/GpgFrontend-#{version}-macos-#{macos_version}.dmg",
