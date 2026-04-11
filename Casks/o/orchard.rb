@@ -7,20 +7,9 @@ cask "orchard" do
   desc "Native GUI for Apple Containers"
   homepage "https://github.com/andrew-waters/orchard"
 
-  depends_on formula: "container"
   depends_on macos: ">= :tahoe"
 
   app "Orchard.app"
-
-  postflight do
-    system_command "defaults",
-                   args: [
-                     "write",
-                     "container-compose.Orchard",
-                     "OrchardCustomBinaryPath",
-                     "#{HOMEBREW_PREFIX}/bin/container",
-                   ]
-  end
 
   zap trash: [
     "~/Library/Caches/container-compose.Orchard",
