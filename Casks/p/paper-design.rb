@@ -10,7 +10,7 @@ cask "paper-design" do
 
   livecheck do
     url "https://download.todesktop.com/2601167vjw8xe/latest-mac.yml"
-    regex(/Paper\s+(\d+(?:\.\d+)+)\s+-\s+Build\s+([a-z0-9]+)-arm64\.dmg/i)
+    regex(/Paper\s+v?(\d+(?:\.\d+)+)\s+[._-]\s+Build\s+([a-z\d]+)[._-]arm64\.dmg/i)
     strategy :electron_builder do |yaml, regex|
       yaml["files"]&.map do |item|
         match = item["url"]&.match(regex)
