@@ -5,7 +5,7 @@ cask "eurkey-next" do
   url "https://github.com/felixfoertsch/EurKEY-Next/releases/download/#{version}/EurKEY-Next-#{version}.dmg",
       verified: "github.com/felixfoertsch/EurKEY-Next/"
   name "EurKEY Next keyboard layout"
-  desc "The keyboard layout for Europeans, coders, and translators."
+  desc "Keyboard layout for Europeans, coders, and translators"
   homepage "https://eurkey-macos.eu/"
 
   livecheck do
