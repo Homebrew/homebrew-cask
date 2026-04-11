@@ -1,6 +1,6 @@
 cask "treesheets" do
-  version "3066"
-  sha256 "c5087b450e4dff077e69a095423178d4b4db549d6161e77224829ab19895a17b"
+  version "3068"
+  sha256 "0f78e48730d67f527f3b2cbf40746797392cd6da50f281019d84cd6e446d2c80"
 
   url "https://github.com/aardappel/treesheets/releases/download/#{version.csv.second || version.csv.first}/TreeSheets-#{version.csv.first}-Darwin.dmg",
       verified: "github.com/aardappel/treesheets/"
