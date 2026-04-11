@@ -1,6 +1,6 @@
 cask "rockxy-community" do
-  version "0.5.0,7"
-  sha256 "e1b4952be368be1432ff9366470ec7ac3efadec4f9b7577ef3e130c1e50ca4f1"
+  version "0.6.0,8"
+  sha256 "9b693d33b4e92504b4cb41194a9dc4f2a1652729850ab473c21217165b2a3380"
 
   url "https://github.com/LocNguyenHuu/Rockxy/releases/download/v#{version.csv.first}/Rockxy-Community-#{version.tr(",", "-")}.dmg",
       verified: "github.com/LocNguyenHuu/Rockxy/"
