@@ -1,6 +1,6 @@
 cask "extradock" do
-  version "4.2.2"
-  sha256 "60b092ffc85612bffeaed17e148730e0bae2ecce76fdb9239afaf9adbc58ce27"
+  version "4.2.3"
+  sha256 "0cc1afd880944238804833623536763b76dbf764576bc34ee3fd6a1fa1b06833"
 
   url "https://github.com/AppitStudio/extra-dock-updates/releases/download/v#{version}/extraDock.dmg",
       verified: "github.com/AppitStudio/"
