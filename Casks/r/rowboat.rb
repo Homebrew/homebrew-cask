@@ -11,6 +11,11 @@ cask "rowboat" do
   desc "Open-source AI coworker, with memory"
   homepage "https://www.rowboatlabs.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :monterey"
 
   app "rowboat.app"
