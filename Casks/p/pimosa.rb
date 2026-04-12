@@ -1,5 +1,5 @@
 cask "pimosa" do
-  version "1.3.3"
+  version "1.3.4"
   sha256  :no_check
 
   url "https://pub-e98ac9d8ff7347b29207e39fd6b3cb89.r2.dev/Pimosa.zip",
@@ -13,6 +13,7 @@ cask "pimosa" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :monterey"
   # Binary is universal but only functional on Apple Silicon
   depends_on arch: :arm64
 
