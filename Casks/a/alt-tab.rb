@@ -6,10 +6,10 @@ cask "alt-tab" do
       verified: "github.com/lwouis/alt-tab-macos/"
   name "AltTab"
   desc "Enable Windows-like alt-tab"
-  homepage "https://alt-tab-macos.netlify.app/"
+  homepage "https://alt-tab.app/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/lwouis/alt-tab-macos/master/appcast.xml"
+    url "https://alt-tab.app/appcast.xml"
     strategy :sparkle
   end
 
