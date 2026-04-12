@@ -22,8 +22,8 @@ cask "prismlauncher" do
     end
   end
   on_monterey :or_newer do
-    version "11.0.1"
-    sha256 "47087fc3c472907fd4ff70d8d8f3d862f4370c075da61a5b193041f4fa6e1de9"
+    version "11.0.2"
+    sha256 "5262b43a4ab5724927135288d6f4ddd79ca919aec7df09d9d80b9be63539ca77"
 
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip",
         verified: "github.com/PrismLauncher/PrismLauncher/"
