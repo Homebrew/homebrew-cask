@@ -10,4 +10,6 @@ cask "xdeck" do
   depends_on macos: ">= :ventura"
 
   app "XDeck.app"
+
+  zap trash: "~/Library/Containers/me.morishin.XDeck"
 end
