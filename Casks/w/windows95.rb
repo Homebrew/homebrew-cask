@@ -2,9 +2,9 @@ cask "windows95" do
   # NOTE: "95" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x64"
 
-  version "4.0.0"
-  sha256 arm:   "c232022c72560cdf8fd11175de17bf974e9a9ee9d3e4fe68a7aa9a6e4d2c6e34",
-         intel: "07ee85ee8306b6f4af593e907c61ec5c622e34a584a63753a6bd65d8f1f68e29"
+  version "5.0.0"
+  sha256 arm:   "9d2e97975d5b3c4c0659638b47b7cbeb241dddb26e7ecc73d678522bcc8a609b",
+         intel: "9d87b652a15d8ffa26912b55beaf59b38d248839b1284893b6e485d84ed34115"
 
   url "https://github.com/felixrieseberg/windows95/releases/download/v#{version}/windows95-darwin-#{arch}-#{version}.zip"
   name "Windows 95"
@@ -17,7 +17,7 @@ cask "windows95" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "windows95.app"
 
