@@ -1,6 +1,6 @@
 cask "font-fairfax" do
-  version "2026-02-08"
-  sha256 "9b94b7411ddd3fba67f49df080d0ced30ca692c9ac2ef7b9595c7a769a7bb592"
+  version "2026-04-12"
+  sha256 "3047def427b2e95ad9d33d65970e02c91c51f55e971988e2bbf8614904121213"
 
   url "https://github.com/kreativekorp/open-relay/releases/download/#{version}/Fairfax.zip",
       verified: "github.com/kreativekorp/open-relay/"
