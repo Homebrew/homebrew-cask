@@ -1,9 +1,9 @@
 cask "nethlink" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.4.3"
-  sha256 arm:   "26462443e6f5154bf2cd475ee94b2974bbd79ab5d7ceda8284893b5134ef8b87",
-         intel: "f93e7dd23233fb2ebb3e168d065249e98660e074671e890a8a01ad347b4907ab"
+  version "1.4.4"
+  sha256 arm:   "c0b5d2c90c640d7f1f196e4ade991d6940f5f82ab984563c40539ac81341867b",
+         intel: "7694f91e672f2f49b104c137a7d7f09c9fec73bf212dce7f8c8b4f9be1f5cbc9"
 
   url "https://github.com/NethServer/nethlink/releases/download/v#{version}/nethlink-#{version}-#{arch}.dmg"
   name "NethLink"
