@@ -1,9 +1,9 @@
 cask "iaito" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.1.2"
-  sha256 arm:   "beb9d582ba160bb81fada70808cb6e8a9fa3aba7248bb671c4881df839705832",
-         intel: "3fc76efe5f9ec1426e40772950bacb9eb6a94e1d3666459810af65a2304a4499"
+  version "6.1.4"
+  sha256 arm:   "6ff74d592754b31c0d2845b072edd9ea0eb55dd558c97660b772b0e4f0fcb2b4",
+         intel: "4ff55b25f9a8795735b987395cb5cd5d0f2d0b8e7009e35b5adea057ec5a3ccb"
 
   url "https://github.com/radareorg/iaito/releases/download/#{version}/iaito_#{version}_#{arch}.dmg",
       verified: "github.com/radareorg/iaito/"
@@ -16,7 +16,7 @@ cask "iaito" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "iaito.app"
 
