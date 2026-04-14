@@ -8,6 +8,11 @@ cask "baoliandeng" do
   desc "VPN proxy powered by Mihomo (Clash Meta)"
   homepage "https://madeye.github.io/BaoLianDeng/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :sonoma"
 
   pkg "BaoLianDeng-#{version}.pkg"
