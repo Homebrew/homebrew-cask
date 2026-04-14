@@ -1,6 +1,6 @@
 cask "kontur-talk" do
-  version "3.5.0"
-  sha256 "1604ace26fce0417caaec9d5dee87f45e905b10c42ea46909e2b411db50a7714"
+  version "3.5.1"
+  sha256 "b331a71698cfbc2bfdcfe58c9cd6cbc5043084b8cc56ffc2da1ddcbf78350988"
 
   url "https://st.ktalk.host/ktalk-app/mac/ktalk.#{version}-mac.dmg",
       verified: "st.ktalk.host/"
