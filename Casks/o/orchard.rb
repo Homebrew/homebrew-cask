@@ -11,15 +11,6 @@ cask "orchard" do
 
   app "Orchard.app"
 
-  uninstall launchctl: [
-    "com.openssh.ssh-agent",
-    "com.veertu.anka.addons.ankacp",
-    "com.veertu.anka.addons.ankarun",
-    "com.veertu.anka.addons.autologin",
-    "com.veertu.anka.addons.copypaste",
-    "runner-provisioner",
-  ]
-
   zap trash: [
     "~/Library/Caches/container-compose.Orchard",
     "~/Library/Preferences/container-compose.Orchard.plist",
