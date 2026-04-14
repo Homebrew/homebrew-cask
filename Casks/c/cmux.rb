@@ -18,6 +18,9 @@ cask "cmux" do
 
   app "cmux.app"
   binary "#{appdir}/cmux.app/Contents/Resources/bin/cmux"
+  bash_completion "#{appdir}/cmux.app/Contents/Resources/bash-completion/completions/cmux.bash"
+  fish_completion "#{appdir}/cmux.app/Contents/Resources/fish/vendor_completions.d/cmux.fish"
+  zsh_completion "#{appdir}/cmux.app/Contents/Resources/zsh/site-functions/_cmux"
 
   zap trash: [
     "~/Library/Application Support/cmux",
