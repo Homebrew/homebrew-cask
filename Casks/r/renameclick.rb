@@ -8,7 +8,7 @@ cask "renameclick" do
   url "https://github.com/noemaVision/renameclick/releases/download/v#{version}/RenameClick-#{version}-#{arch}.dmg",
       verified: "github.com/noemaVision/renameclick/"
   name "RenameClick"
-  desc "Desktop application to batch rename files using AI"
+  desc "Local-first AI app for file renaming and organization"
   homepage "https://rename.click/"
 
   livecheck do
