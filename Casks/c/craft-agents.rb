@@ -1,9 +1,9 @@
 cask "craft-agents" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.8.6"
-  sha256 arm:   "62cbd0a543c710f0230b58be52f50087c79654cd889ecd21bbba77fbb26f5c38",
-         intel: "c6a25ad8a3627099dcc3bb2f992ce1106580654c5cde954034af991689fd5dac"
+  version "0.8.7"
+  sha256 arm:   "5e417f5c34a51160b1bc9f3974e3773feca0ea71169711b3a9bd98fe69f1cd39",
+         intel: "1ab51d440751e7c60345a0038e57b39324bd49840500b3fbb43a47ffe658a80c"
 
   url "https://github.com/lukilabs/craft-agents-oss/releases/download/v#{version}/Craft-Agents-#{version}-mac-#{arch}.dmg",
       verified: "github.com/lukilabs/craft-agents-oss/"
