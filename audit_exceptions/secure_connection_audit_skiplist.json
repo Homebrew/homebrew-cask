@@ -52,6 +52,9 @@
     "https://www.tableau.com/products/reader",
     "https://downloads.tableau.com/TableauAutoUpdate.xml"
   ],
+  "tal-drum": [
+    "https://tal-software.com/products/tal-drum"
+  ],
   "vuze": "https://www.vuze.com/",
   "xcodepilot": "https://xcodepilot.thriller.fun/docs/"
 }
