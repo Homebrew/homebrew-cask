@@ -1,6 +1,6 @@
 cask "baoliandeng" do
-  version "5.2"
-  sha256 "e6fae4f1029c55fccdfbc36db2b13d32908e5dc316b444c7d89e7e57feccc08e"
+  version "5.3"
+  sha256 "0189159dd5306338eedc8bd5e70e79a018c4575d734b5679f6932ead1c535039"
 
   url "https://github.com/madeye/BaoLianDeng/releases/download/v#{version}/BaoLianDeng-#{version}.pkg",
       verified: "github.com/madeye/BaoLianDeng/"
