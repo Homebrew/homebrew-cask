@@ -23,7 +23,7 @@ cask "android-studio-preview@canary" do
 
   auto_updates true
 
-  rename "Android Studio Preview.app", "Android Studio Preview Canary.app"
+  rename "Android Studio*.app", "Android Studio Preview Canary.app"
 
   app "Android Studio Preview Canary.app"
   binary "#{appdir}/Android Studio Preview Canary.app/Contents/MacOS/studio", target: "studio-canary"
