@@ -1,6 +1,6 @@
 cask "fluent-reader" do
-  version "1.2.0"
-  sha256 "aed7f7249bf9ceae56399d6a3707f347d405d562740de9900ac4b73a55e68722"
+  version "1.2.1"
+  sha256 "f06d5eb24e705335715a286ee377ede5ca58360dac15edb410d433dc26fad98c"
 
   url "https://github.com/yang991178/fluent-reader/releases/download/v#{version}/Fluent.Reader.#{version}.dmg",
       verified: "github.com/yang991178/fluent-reader/"
