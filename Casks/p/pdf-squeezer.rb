@@ -1,5 +1,5 @@
 cask "pdf-squeezer" do
-  version "4.7.1"
+  version "4.7.2"
   sha256 :no_check
 
   url "https://www.witt-software.com/downloads/pdfsqueezer/PDF%20Squeezer.dmg"
@@ -22,4 +22,8 @@ cask "pdf-squeezer" do
     "~/Library/Containers/com.witt-software.PDF-Squeezer",
     "~/Library/Group Containers/group.witt-software.com.PDF-Squeezer",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

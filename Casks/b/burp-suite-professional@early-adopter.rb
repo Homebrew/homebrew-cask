@@ -1,9 +1,9 @@
 cask "burp-suite-professional@early-adopter" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2026.2.2"
-  sha256 arm:   "2126fb7210fb8df0a2711dec171ec3e346cdfdacce6e27b66510f1778cddd926",
-         intel: "6c1723b94f8ed7b62116fdbe0fa745e4ebed530afcd60d0b1359a0763ed70ebf"
+  version "2026.3.1"
+  sha256 arm:   "24ff82512a59200fec046fe22b67bceae69be70572b1ec982c53e77f377ad572",
+         intel: "f9dcbf00f66cb84ea084184f9e3455713690cbcb89296acb55166f091d22a5d3"
 
   url "https://portswigger-cdn.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}",
       verified: "portswigger-cdn.net/burp/releases/"
@@ -22,7 +22,8 @@ cask "burp-suite-professional@early-adopter" do
               item["releaseChannels"]&.include?("Early Adopter") &&
               item["categories"]&.include?("Professional") &&
               item["builds"]&.any? do |build|
-                build["ProductPlatform"] == arch.to_s
+                build["BuildCategoryId"] == "pro" &&
+                build["BuildCategoryPlatform"] == arch.to_s
               end
       end
     end

@@ -1,16 +1,19 @@
 cask "nvidia-nsight-compute" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2025.3.0.19-36273991"
-  sha256 arm:   "e7df8a120a66f72a9a740c81350d365e3acb1f9cff8eab6a9db49f2d702e269d",
-         intel: "03ea2e18bbf3e3bcbe552b15ba57159dda795e073efc8dbe1201c7006051e01f"
+  version "2026.1.1.3"
+  sha256 arm:   "6b4dd1bfb86d2caea586f289b10e93b5e0510774933942e08df00fb98943b07d",
+         intel: "794bc7abb08eb9841e113004ff8cb99a248a7629d6ad6d7260d8f718f40afaf7"
 
-  url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-compute/#{version.major_minor_patch.dots_to_underscores}/nsight-compute-mac-#{arch}-#{version}.dmg"
+  url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-compute/#{version.major_minor_patch.dots_to_underscores}/nsight_compute-mac-#{arch}-#{version}.dmg"
   name "NVIDIA Nsight Compute"
   desc "Interactive profiler for CUDA and NVIDIA OptiX"
   homepage "https://developer.nvidia.com/nsight-compute"
 
-  disable! date: "2025-10-02", because: "requires login to download"
+  livecheck do
+    url "https://developer.nvidia.com/tools-overview/nsight-compute/get-started"
+    regex(/nsight[._-]compute[._-]mac[._-]#{arch}[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+  end
 
   app "NVIDIA Nsight Compute.app"
 

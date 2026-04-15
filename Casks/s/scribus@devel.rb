@@ -1,9 +1,9 @@
 cask "scribus@devel" do
   arch arm: "-arm64"
 
-  version "1.7.2"
-  sha256 arm:   "7455cc0f83880e08b97565d595ca678a1e463c07251fa72fdb137a5f520629de",
-         intel: "44d31603ceaa0344fb23143484d1e0724cd6635141b13782dc2b62a368cd00ec"
+  version "1.7.3"
+  sha256 arm:   "16d3592d1ba6b84dd226fce438c681b9fcadea9a39b460ac8dfadaf2ffc40938",
+         intel: "9b8564663b369b75c86d129f97daea7379fee95feeaacf34fd9bf063f7d9e79b"
 
   on_arm do
     depends_on macos: ">= :big_sur"

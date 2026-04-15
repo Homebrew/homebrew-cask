@@ -1,5 +1,5 @@
 cask "maru-jan" do
-  version "22.14.0,7838"
+  version "22.15.0,7854"
   sha256 :no_check
 
   url "https://www.maru-jan.com/download/Inst_MaruJan_Mac.pkg"

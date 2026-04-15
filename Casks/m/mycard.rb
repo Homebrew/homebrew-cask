@@ -1,6 +1,6 @@
 cask "mycard" do
-  version "3.0.80"
-  sha256 "feb464641af147d47e864629927c60826308c676fbf8b022cbbac89183243ff7"
+  version "3.0.81"
+  sha256 "a3f1cc27b5dee466083aaead0bfffd6aa2bc4b0874138607548ba8990a6b5611"
 
   url "https://cdn02.moecube.com:444/downloads/MyCard-#{version}.dmg",
       verified: "cdn02.moecube.com:444/downloads/"

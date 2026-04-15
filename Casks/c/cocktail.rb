@@ -30,7 +30,7 @@ cask "cocktail" do
     end
   end
   on_sonoma do
-    version "17.12.1"
+    version "17.14"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
@@ -41,7 +41,7 @@ cask "cocktail" do
     end
   end
   on_sequoia do
-    version "18.8"
+    version "18.9"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
@@ -52,7 +52,7 @@ cask "cocktail" do
     end
   end
   on_tahoe :or_newer do
-    version "19.6.1"
+    version "19.6.2"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}TE.dmg"

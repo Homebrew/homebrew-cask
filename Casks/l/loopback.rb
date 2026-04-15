@@ -1,5 +1,5 @@
 cask "loopback" do
-  version "2.4.8"
+  version "2.4.9"
   sha256 :no_check
 
   url "https://cdn.rogueamoeba.com/loopback/download/Loopback.zip"
@@ -13,7 +13,7 @@ cask "loopback" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sonoma"
 
   app "Loopback.app"
 

@@ -1,6 +1,6 @@
 cask "ipvanish-vpn" do
-  version "4.10.3,154156"
-  sha256 "b9b119548f12af0377732edad68fe0e874b4bada9d118aedac4e322cd3f69d35"
+  version "5.0.1,155743"
+  sha256 "ac180d5974c251973a60b9810cdcc112da9b79b24430ad30db4670fc21357b9c"
 
   url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.csv.first}_#{version.csv.second}.zip"
   name "IPVanish"
@@ -23,7 +23,7 @@ cask "ipvanish-vpn" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   app "IPVanish VPN.app"
 

@@ -1,9 +1,9 @@
 cask "android-studio-preview@canary" do
   arch arm: "mac_arm", intel: "mac"
 
-  version "2025.3.4.3,panda4-canary3"
-  sha256 arm:   "0a05274573431438c992bae2c4ab80a70b060916defcabc874d87e4a6c17641a",
-         intel: "28d9693e9bc20ae5bde59a2f19bed17aa07f5f91a740306623bc4c726a916c42"
+  version "2025.3.4.5,panda4-rc1"
+  sha256 arm:   "da79fa07fbe7284fa2ac058a3a02c9de467fc3d39ba7208c3e8a070d0775dd6e",
+         intel: "a4ade5d4d6cd1345da47cd44c9450bbafddf3680c9d5ae2308c6f9c528f6597e"
 
   url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
       verified: "edgedl.me.gvt1.com/android/studio/install/"
@@ -23,7 +23,9 @@ cask "android-studio-preview@canary" do
 
   auto_updates true
 
-  app "Android Studio Preview.app", target: "Android Studio Preview Canary.app"
+  rename "Android Studio*.app", "Android Studio Preview Canary.app"
+
+  app "Android Studio Preview Canary.app"
   binary "#{appdir}/Android Studio Preview Canary.app/Contents/MacOS/studio", target: "studio-canary"
 
   zap trash: [

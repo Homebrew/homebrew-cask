@@ -1,9 +1,9 @@
 cask "biscuit" do
   arch arm: "-arm64"
 
-  version "1.2.37"
-  sha256 arm:   "58fe744bffac692bb9636cbecde868563fd3190932db10b904e9958f73c0e681",
-         intel: "d3f38f49bcf6664341aba113df7ba92e56c06640c4cd6545ae5611912084d4af"
+  version "1.2.39"
+  sha256 arm:   "d41243f2a3de55be1b50ae49ec4702448ed0987ea400cd55f8b10e37b03d8aee",
+         intel: "06ef94cde3794d0d9aa8f4b41173def47ef8ee605c46b6e863c9ac38c4a2c03d"
 
   url "https://github.com/agata/dl.biscuit/releases/download/#{version}/Biscuit-#{version}#{arch}.dmg",
       verified: "github.com/agata/dl.biscuit/"

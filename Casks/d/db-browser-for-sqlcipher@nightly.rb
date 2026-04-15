@@ -1,6 +1,6 @@
 cask "db-browser-for-sqlcipher@nightly" do
-  version "20260409"
-  sha256 "a3b5c80ef36f232e04be3d3b0676a48d7a8768ca64dc5f525443aa8b751f7d36"
+  version "20260413"
+  sha256 "d54e788e0b611972d235cdd76e68386f4e895be5192708f784ff32cb4fbfc717"
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLCipher-universal_#{version}.dmg",
       verified: "github.com/sqlitebrowser/sqlitebrowser/"

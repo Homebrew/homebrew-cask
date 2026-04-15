@@ -1,9 +1,9 @@
 cask "burp-suite" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2026.1.5"
-  sha256 arm:   "5b4a27f9e6b736d99652b34fab2584af04781f9da34cc923f93a84c3d7153fee",
-         intel: "8035e20c06da36ef709d562deb63bd95c976db4937909d7a486bdea17442878c"
+  version "2026.3.2"
+  sha256 arm:   "e37acda27f378e2237fa086a843a60886fba8ff3098d7961a76e04ef62c2e817",
+         intel: "1bda48b6093e0ef5b58341913af663790c9552e8cf5d75cbbab00df5869ff25b"
 
   url "https://portswigger-cdn.net/burp/releases/download?product=community&version=#{version}&type=#{arch}",
       verified: "portswigger-cdn.net/burp/releases/"
@@ -22,7 +22,8 @@ cask "burp-suite" do
               item["releaseChannels"]&.include?("Stable") &&
               item["categories"]&.include?("Community") &&
               item["builds"]&.any? do |build|
-                build["ProductPlatform"] == arch.to_s
+                build["BuildCategoryId"] == "community" &&
+                build["BuildCategoryPlatform"] == arch.to_s
               end
       end
     end

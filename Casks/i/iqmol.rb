@@ -1,9 +1,9 @@
 cask "iqmol" do
-  version "3.2.1"
-  sha256 "186656e2c61a4b2f8369741832e98827eadd565a922416f8cb62aecb836aea4a"
+  version "3.2.2"
+  sha256 "8f8dfebafe3ef0fc46ba7081bee8ba7c6f459c30a7106b475794ab1bdf6f1883"
 
-  url "https://downloads.q-chem.com/iqmol/IQmol-#{version}.dmg",
-      verified: "downloads.q-chem.com/iqmol/"
+  url "https://github.com/nutjunkie/IQmol#{version.major}/releases/download/v#{version}/IQmol-#{version}.dmg",
+      verified: "github.com/nutjunkie/IQmol#{version.major}/"
   name "IQmol"
   desc "Free open-source molecular editor and visualization package"
   homepage "https://www.iqmol.org/"

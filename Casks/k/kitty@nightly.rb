@@ -8,17 +8,24 @@ cask "kitty@nightly" do
   homepage "https://github.com/kovidgoyal/kitty"
 
   conflicts_with cask: "kitty"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "kitty.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/kitty.wrapper.sh"
-  binary shimscript, target: "kitty"
+  kitty_shimscript = "#{staged_path}/kitty.wrapper.sh"
+  binary kitty_shimscript, target: "kitty"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  kitten_shimscript = "#{staged_path}/kitten.wrapper.sh"
+  binary kitten_shimscript, target: "kitten"
 
   preflight do
-    File.write shimscript, <<~EOS
+    File.write kitty_shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/kitty.app/Contents/MacOS/kitty' "$@"
+    EOS
+    File.write kitten_shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/kitty.app/Contents/MacOS/kitten' "$@"
     EOS
   end
 

@@ -1,6 +1,6 @@
 cask "amiberry" do
-  version "8.1.4"
-  sha256 "0d5b03702d9b39402183e22bc36faf9f2f6b14c00d263b7855d86c64432eb0d1"
+  version "8.1.5"
+  sha256 "cc2dc6d7fefcc1c19ae205c3a435a588923ff24f644c870002666b84ddb3c6d7"
 
   url "https://github.com/BlitterStudio/amiberry/releases/download/v#{version}/Amiberry-#{version}-macOS-universal.dmg",
       verified: "github.com/BlitterStudio/amiberry/"

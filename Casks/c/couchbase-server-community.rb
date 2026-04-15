@@ -1,9 +1,9 @@
 cask "couchbase-server-community" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "8.0.0"
-  sha256 arm:   "e961cf261538ec605dc73511e272f662b684373c9dc01c17607f3aa62494fb93",
-         intel: "d7f73d8e9f2a5b2f0d4f9b67ded5b862eb374c2287d7460f5f3da03726897424"
+  version "8.0.1"
+  sha256 arm:   "24dd400cfeca90bbbffec94354439cee8c17a405c1ef8f0db3ee31df7e42e518",
+         intel: "82eef1054137f5043765622d8c499727489969012b237dde7e051d7496817330"
 
   url "https://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_#{arch}.dmg"
   name "Couchbase Server"

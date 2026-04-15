@@ -13,6 +13,8 @@
     "https://helpx.adobe.com/photoshop/kb/uptodate.html"
   ],
   "canon-ufrii-driver": "https://www.usa.canon.com/bin/canon/support/getsoftwarediver.ds.MACOS_14.39319.All.English.json",
+  "couchbase-server-community": "https://www.couchbase.com/",
+  "couchbase-server-enterprise": "https://www.couchbase.com/",
   "elecom-mouse-util": "https://www.elecom.co.jp/global/download-list/utility/mouse_assistant/mac/",
   "gotomeeting": "https://www.goto.com/meeting",
   "itau": "https://www.itau.com.br/computador/",
@@ -49,6 +51,9 @@
   "tableau-reader": [
     "https://www.tableau.com/products/reader",
     "https://downloads.tableau.com/TableauAutoUpdate.xml"
+  ],
+  "tal-drum": [
+    "https://tal-software.com/products/tal-drum"
   ],
   "vuze": "https://www.vuze.com/",
   "xcodepilot": "https://xcodepilot.thriller.fun/docs/"

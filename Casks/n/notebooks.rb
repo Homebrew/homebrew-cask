@@ -1,6 +1,6 @@
 cask "notebooks" do
-  version "3.8.4"
-  sha256 "0ebbd9497dbbe0b468c5e2758db0bf79b74913cbc32ff59dc6dab13ef7e04850"
+  version "4.0"
+  sha256 :no_check
 
   url "https://www.notebooksapp.com/Download/macOS/v#{version.major}/Notebooks.dmg"
   name "Notebooks"
@@ -8,7 +8,7 @@ cask "notebooks" do
   homepage "https://www.notebooksapp.com/mac/"
 
   livecheck do
-    url "https://notebooksapp.com/Download/macOS/v#{version.major}/Notebooks#{version.major}Appcast.xml"
+    url "https://notebooksapp.com/Download/macOS/v#{version.major}/NotebooksAppcast.xml"
     strategy :sparkle, &:short_version
   end
 

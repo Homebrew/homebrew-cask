@@ -1,8 +1,8 @@
 cask "openrct2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
 
-  version "0.4.32"
-  sha256 "d6a7873c492894e558a946f2e9404219f6d6001cb286327f0243e511d779a4c3"
+  version "0.5.0"
+  sha256 "7736205ec96e93203c129038475026764a267d7883f11095b4ed0b98ca49852c"
 
   url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-v#{version}-macos-universal.zip",
       verified: "github.com/OpenRCT2/OpenRCT2/"

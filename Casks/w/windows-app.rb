@@ -1,6 +1,6 @@
 cask "windows-app" do
-  version "11.3.3"
-  sha256 "2cd505c3b0b042477276dd8beb48bd0162aaaab5b3aaab1c6954f219a2a74ec5"
+  version "11.3.5"
+  sha256 "f725f2a4e48203c6e943d11507f0467938433aeafd220e950456f63638ac05fb"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Windows_App_#{version}_installer.pkg",
       verified: "officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
@@ -14,7 +14,7 @@ cask "windows-app" do
   end
 
   conflicts_with cask: "microsoft-remote-desktop"
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sonoma"
 
   pkg "Windows_App_#{version}_installer.pkg"
 
