@@ -4,7 +4,7 @@ cask "macshot" do
 
   url "https://github.com/sw33tLie/macshot/releases/download/v#{version}/MacShot.dmg"
   name "macshot"
-  desc "Native screenshot tool inspired by Flameshot"
+  desc "Screenshot and screen recording tool"
   homepage "https://github.com/sw33tLie/macshot"
 
   livecheck do
