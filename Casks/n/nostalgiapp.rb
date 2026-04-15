@@ -1,6 +1,6 @@
 cask "nostalgiapp" do
-  version "1.0.8.6"
-  sha256 "5e4ef3eccc375303c63b9a156d6a666cc0334aa2123a81dd992e77eb88612e4d"
+  version "1.0.8.7"
+  sha256 "603357ae7f81b08d7457c11df5bd005d0587a0303bfddad79709b34f6914b26d"
 
   url "https://www.nostalgi.app/downloads/NostalgiApp-#{version}.dmg"
   name "NostalgiApp"
