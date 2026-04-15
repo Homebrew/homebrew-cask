@@ -31,12 +31,4 @@ cask "claude-code" do
         "~/Library/Caches/claude-cli-nodejs",
       ],
       rmdir: "~/.claude"
-
-  caveats <<~EOS
-    This cask tracks the stable release channel. In-app update notifications
-    default to the latest channel regardless. To align notifications with this
-    cask, set the auto-update channel to "stable" via /config or in
-    ~/.claude/settings.json:
-      https://code.claude.com/docs/en/setup#configure-release-channel
-  EOS
 end
