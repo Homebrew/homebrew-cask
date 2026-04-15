@@ -1,5 +1,5 @@
 cask "singlecrystal" do
-  version "5.3.1"
+  version "5.3.3"
   sha256 :no_check
 
   url "https://crystalmaker.com/downloads/singlecrystal#{version.major}_mac.zip"
