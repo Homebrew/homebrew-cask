@@ -2,9 +2,9 @@ cask "fathom" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "_arm64"
 
-  version "1.42.6"
-  sha256 arm:   "8135f3701b9cc132bcb99fa74a754ccdf5681ccbcc49ae6bc91c6a71a4ee6c16",
-         intel: "94c16a761e955b128ef37a4b67aa82f665522db0a6676bfc0e053d94cef42efd"
+  version "3.0.0"
+  sha256 arm:   "a34b945e3df3da2dfea900d6ebaa3924643e7c94c09c866c1a5fd362df465e29",
+         intel: "f364ab5977dc7ad28ff5b8f54dd728134459e5aa6e8d41f764d412114d7e57d8"
 
   url "https://electron-update.fathom.video/download/file/Fathom-darwin-#{arch}-#{version}.dmg"
   name "Fathom"
@@ -17,6 +17,8 @@ cask "fathom" do
       json["name"]&.tr("v", "")
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Fathom.app"
 
