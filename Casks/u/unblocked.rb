@@ -12,16 +12,8 @@ cask "unblocked" do
 
   livecheck do
     url "https://getunblocked.com/api/versionInfo/public"
-    regex(/unblocked-desktop(?:-arm|-intel)[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
-    strategy :json do |json, regex|
-      json["versions"]&.flat_map do |item|
-        [item["desktopMacARMDownloadUrl"], item["desktopMacIntelDownloadUrl"]].map do |url|
-          match = url&.match(regex)
-          next unless match
-
-          match[1]
-        end
-      end&.compact
+    strategy :json do |json|
+      json["versions"]&.filter_map { |item| item["productVersion"] }
     end
   end
 
@@ -30,17 +22,17 @@ cask "unblocked" do
   pkg "unblocked-desktop-#{arch}-#{version}.pkg"
 
   uninstall quit:       "com.nextchaptersoftware.UnblockedHub",
-            signal:     ["TERM", "com.nextchaptersoftware.UnblockedHub"],
             login_item: "Unblocked",
+            script:     {
+              executable:   "/usr/bin/killall",
+              args:         ["-9", "Unblocked"],
+              must_succeed: false,
+            },
             pkgutil:    "com.nextchaptersoftware.UnblockedHub",
             delete:     "/Applications/Unblocked.app"
 
   zap trash: [
     "~/Library/Application Support/Unblocked",
-    "~/Library/Caches/com.nextchaptersoftware.UnblockedHub",
-    "~/Library/Caches/com.nextchaptersoftware.UnblockedHub.ShipIt",
-    "~/Library/HTTPStorages/com.nextchaptersoftware.UnblockedHub",
     "~/Library/Preferences/com.nextchaptersoftware.UnblockedHub.plist",
-    "~/Library/Saved Application State/com.nextchaptersoftware.UnblockedHub.savedState",
   ]
 end
