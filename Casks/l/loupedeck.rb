@@ -1,6 +1,6 @@
 cask "loupedeck" do
-  version "6.2.4.228"
-  sha256 "c1e38c6b304cea19b19a4a4c825787fa9483b836916a3b84f6a69b719b38ecec"
+  version "6.3.0.340"
+  sha256 "d90366dfa8f29d9b32faf09d0d5702772dbde382af43bc9c42fdabdf03dc78bc"
 
   url "https://support.loupedeck.com/hubfs/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor_patch.chomp(".0")}/LoupedeckInstaller_#{version}.dmg"
   name "Loupdeck"
