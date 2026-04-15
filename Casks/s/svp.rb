@@ -1,6 +1,6 @@
 cask "svp" do
-  version "4.7.302-6"
-  sha256 "a47cf42362764d7873b326b4934213688907282e0579a969f5560f509d45ae46"
+  version "4.7.305"
+  sha256 "d1d30674c33e11427ada427d95bf3982eba27370c649b1f4e629b845f57af156"
 
   url "https://www.svp-team.com/files/svp#{version.major}-mac.#{version}.dmg"
   name "SVP #{version.major} Mac"
