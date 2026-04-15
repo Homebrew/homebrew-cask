@@ -12,8 +12,6 @@ cask "xnviewmp" do
     regex(/\[XnViewMP\].*?v?(\d+(?:\.\d+)+)/im)
   end
 
-  auto_updates true
-
   app "XnViewMP.app"
 
   zap trash: "~/Library/Saved Application State/com.xnview.XnView.savedState"
