@@ -1,6 +1,6 @@
 cask "claude-island" do
-  version "1.3"
-  sha256 "06a85e0cd62bd41cd328ccca52ad21f237a1876c11e7b3b91fd824c283726b0f"
+  version "1.3.1"
+  sha256 "56f8fe92ab3344f4c73d88e55325624ed988d7d4405a3200cce7fe64ef5b593d"
 
   url "https://github.com/farouqaldori/claude-island/releases/download/v#{version}/ClaudeIsland-#{version}.dmg",
       verified: "github.com/farouqaldori/claude-island/"
