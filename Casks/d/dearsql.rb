@@ -1,6 +1,6 @@
 cask "dearsql" do
-  version "0.4.1"
-  sha256 "b8c5d6e31e38ad12ac83aa2bbba85e2d0b064ee14d768a2e8e01a3c6c180cb86"
+  version "0.4.3"
+  sha256 "69d88208fd2cb7a2e9c7c5dcc585714ce174c73caf1e0e67eb65bb7d8f9cf430"
 
   url "https://github.com/dunkbing/dearsql/releases/download/v#{version}/DearSQL.dmg",
       verified: "github.com/dunkbing/dearsql/"
