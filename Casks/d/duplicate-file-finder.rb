@@ -13,6 +13,7 @@ cask "duplicate-file-finder" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Duplicate File Finder #{version.major}.app"
 
