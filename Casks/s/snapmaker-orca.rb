@@ -1,6 +1,6 @@
 cask "snapmaker-orca" do
-  version "2.3.0"
-  sha256 "2d8258c745aac50e697a2bd1c261950aa53fca46f60ac6e851abf9f0d516e14b"
+  version "2.3.1"
+  sha256 "7a4a3ef9d43ee9bce6b4b21bd6f48c8eb775e12a38b4317bc9365ce9b3fae478"
 
   url "https://github.com/snapmaker/orcaslicer/releases/download/v#{version}/Snapmaker_Orca_Mac_universal_V#{version}.dmg",
       verified: "github.com/snapmaker/orcaslicer/"
