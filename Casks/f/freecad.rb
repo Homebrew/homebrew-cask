@@ -2,7 +2,7 @@ cask "freecad" do
   arch arm: "arm64", intel: "x86_64"
 
   version "1.1.1"
-  sha256 arm:   "c3fcc95c1dae309e7971d04b32aa4b3feb326d21652f46848ac2d420b3887880",
+  sha256 arm:   "fbcab489c3d37057c2283e298ef2d50c4930cc988fb331ea7df3ad75879e3949",
          intel: "bcbe4c74abb454a05728d84185a64d9d191a8f2c53d3a58dc2e33be597e3cf36"
 
   on_arm do
@@ -25,8 +25,6 @@ cask "freecad" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   app "FreeCAD.app"
 
