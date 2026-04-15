@@ -1,8 +1,8 @@
 cask "fmail3" do
-  version "2.5.1"
-  sha256 "52a05bd8dae5c77d22f59d4018fea10db16b2a16f0702391a652aede256e4a7e"
+  version "2.5.2"
+  sha256 "dd63c85f7604928f36ddb6cdf2deb9720ef97b8d055eeaf187b2703b856b1ca8"
 
-  url "https://fmail3.appmac.fr/update/sparkle/FMail3_#{version.no_dots}.zip"
+  url "https://fmail3.appmac.fr/update/sparkle/FMail3-#{version}.dmg"
   name "FMail3"
   desc "Unofficial native application for Fastmail"
   homepage "https://fmail3.appmac.fr/"
