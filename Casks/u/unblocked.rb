@@ -12,16 +12,8 @@ cask "unblocked" do
 
   livecheck do
     url "https://getunblocked.com/api/versionInfo/public"
-    regex(/unblocked-desktop(?:-arm|-intel)[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
-    strategy :json do |json, regex|
-      json["versions"]&.flat_map do |item|
-        [item["desktopMacARMDownloadUrl"], item["desktopMacIntelDownloadUrl"]].map do |url|
-          match = url&.match(regex)
-          next unless match
-
-          match[1]
-        end
-      end&.compact
+    strategy :json do |json|
+      json["versions"]&.filter_map { |item| item["productVersion"] }
     end
   end
 
