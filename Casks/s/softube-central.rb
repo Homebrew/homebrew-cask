@@ -15,6 +15,7 @@ cask "softube-central" do
 
   auto_updates true
   depends_on cask: "ilok-license-manager"
+  depends_on macos: ">= :monterey"
 
   pkg "Softube Central-#{version}-universal.pkg"
 
