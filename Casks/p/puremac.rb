@@ -5,7 +5,7 @@ cask "puremac" do
   url "https://github.com/momenbasel/PureMac/releases/download/v#{version}/PureMac-#{version}.zip",
       verified: "github.com/momenbasel/PureMac/"
   name "PureMac"
-  desc "Open-source macOS app manager and system cleaner"
+  desc "Open-source application manager and system cleaner"
   homepage "https://github.com/momenbasel/PureMac"
 
   depends_on macos: ">= :ventura"
