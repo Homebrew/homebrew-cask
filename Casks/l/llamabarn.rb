@@ -1,6 +1,6 @@
 cask "llamabarn" do
-  version "0.29.0"
-  sha256 "31c6b0a358869e18237a40f6589675f791c152f83912d2b2e6233ca7884a0e18"
+  version "0.29.1"
+  sha256 "959602cdc5915a8620cdac3643c9961441abd03e9fc4f479f31279b280dfa3ae"
 
   url "https://github.com/ggml-org/LlamaBarn/releases/download/#{version}/LlamaBarn.dmg"
   name "LlamaBarn"
@@ -11,8 +11,6 @@ cask "llamabarn" do
     url "https://releases.llamabarn.app/appcast.xml"
     strategy :sparkle, &:short_version
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on arch: :arm64
