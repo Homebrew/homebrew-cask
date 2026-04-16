@@ -1,6 +1,6 @@
 cask "proton-meet" do
-  version "1.0.7"
-  sha256 "beed0ac38756179b0608f0857db814f1ee9e164753ea43501e2f487fe47346bf"
+  version "1.0.8"
+  sha256 "8224debebb9da5cdca6d57eecd4ad53906eb44d82171ecc814706cc06c4ab35b"
 
   url "https://proton.me/download/meet/macos/#{version}/ProtonMeet-desktop.dmg"
   name "Proton Meet"
