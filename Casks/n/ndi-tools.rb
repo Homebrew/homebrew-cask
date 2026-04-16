@@ -1,5 +1,5 @@
 cask "ndi-tools" do
-  version "6.3.1.0"
+  version "6.3.2.0"
   sha256 :no_check
 
   url "https://downloads.ndi.tv/Tools/NDIToolsInstaller.pkg",
