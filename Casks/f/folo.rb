@@ -18,7 +18,6 @@ cask "folo" do
   end
 
   auto_updates true
-  conflicts_with cask: "folo@nightly"
   depends_on macos: ">= :monterey"
 
   app "Folo.app"
