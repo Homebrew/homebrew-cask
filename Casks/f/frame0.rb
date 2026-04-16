@@ -2,9 +2,9 @@ cask "frame0" do
   # NOTE: "0" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.0"
-  sha256 arm:   "51d719427dd71b77c514af119f2e9eb9c949927a76b4f9186c5ad3cbaa809288",
-         intel: "0594e52a7464bd70e04f8cf6dd65ca831951e3b97f9e52f79e29de07c28f5c7e"
+  version "1.6.0"
+  sha256 arm:   "259c29dc96b03245ab92aec981e5ae95b5c534353b4bdfe93633e03cb25f40d8",
+         intel: "310c510d803c322772916459ebe9eecb3c8270c383d7da518a389090eeda8ce9"
 
   url "https://files.frame0.app/releases/darwin/#{arch}/Frame0-#{version}-#{arch}.dmg"
   name "Frame0"
