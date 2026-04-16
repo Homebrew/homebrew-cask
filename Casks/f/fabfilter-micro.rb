@@ -1,6 +1,6 @@
 cask "fabfilter-micro" do
-  version "1.31"
-  sha256 "51bbf80b9e7e5e2b27300e10acc3ccaadac4e68e11d3009bb951dc0cc2152d99"
+  version "1.32"
+  sha256 "3d7e2e2dcdf7533f6e7af87c464f16c0ebcebdc5a547f09d576fda67201707bf"
 
   url "https://cdn-b.fabfilter.com/downloads/ffmicro#{version.no_dots}.dmg"
   name "FabFilter Micro"
@@ -14,7 +14,7 @@ cask "fabfilter-micro" do
 
   pkg "FabFilter Micro #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Micro.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Micro.*"
 
   # No zap stanza required
 end
