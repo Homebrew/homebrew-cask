@@ -21,13 +21,11 @@ cask "unblocked" do
 
   pkg "unblocked-desktop-#{arch}-#{version}.pkg"
 
-  uninstall quit:       "com.nextchaptersoftware.UnblockedHub",
+  uninstall signal:     [
+              ["KILL", "com.nextchaptersoftware.UnblockedHub"],
+              ["KILL", "com.nextchaptersoftware.UnblockedHub.helper"],
+            ],
             login_item: "Unblocked",
-            script:     {
-              executable:   "/usr/bin/killall",
-              args:         ["-9", "Unblocked"],
-              must_succeed: false,
-            },
             pkgutil:    "com.nextchaptersoftware.UnblockedHub",
             delete:     "/Applications/Unblocked.app"
 
