@@ -14,6 +14,7 @@ cask "mplab-xc32" do
   end
 
   depends_on arch: :x86_64
+  depends_on :macos
 
   installer script: {
     executable: "xc32-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
