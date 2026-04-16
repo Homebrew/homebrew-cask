@@ -1,6 +1,6 @@
 cask "fabfilter-simplon" do
-  version "1.41"
-  sha256 "36551458e8075f994871aba9b0a34f40d301faf94257d360e0f8a755d82e4cf7"
+  version "1.42"
+  sha256 "ec39bcbf3c3170790c6a4b95bbbb42bb0d91c02d23b3cddb0dd04a239be99af8"
 
   url "https://cdn-b.fabfilter.com/downloads/ffsimplon#{version.no_dots}.dmg"
   name "FabFilter Simplon"
@@ -14,7 +14,7 @@ cask "fabfilter-simplon" do
 
   pkg "FabFilter Simplon #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Simplon.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Simplon.*"
 
   # No zap stanza required
 end
