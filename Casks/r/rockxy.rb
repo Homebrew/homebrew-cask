@@ -1,8 +1,8 @@
-cask "rockxy-community" do
-  version "0.7.0,9"
-  sha256 "052b26f7faa1db991333e69d6209e1e7c19e4c7f7e50e60f6c67cdc17f3baa2e"
+cask "rockxy" do
+  version "0.8.0,11"
+  sha256 "469c0c8c3b05b79fd346854576d0e9900bddcf88ee57140b9c3bff86a2e7b699"
 
-  url "https://github.com/LocNguyenHuu/Rockxy/releases/download/v#{version.csv.first}/Rockxy-Community-#{version.tr(",", "-")}.dmg",
+  url "https://github.com/LocNguyenHuu/Rockxy/releases/download/v#{version.csv.first}/Rockxy-#{version.tr(",", "-")}.dmg",
       verified: "github.com/LocNguyenHuu/Rockxy/"
   name "Rockxy"
   desc "HTTP proxy"
@@ -17,7 +17,7 @@ cask "rockxy-community" do
 
   depends_on macos: ">= :sonoma"
 
-  app "Rockxy Community.app"
+  app "Rockxy.app"
 
   zap trash: [
     "~/Library/Application Support/com.amunx.rockxy",
