@@ -1,6 +1,6 @@
 cask "fabfilter-twin" do
-  version "3.06"
-  sha256 "8c015b83a757cdbdeafa64c910f04429a717149648ab7d7d17004c09beb30070"
+  version "3.07"
+  sha256 "ef20ab98909c90fab197343bcc856026c8c4183e9d5743499b37c906fce7d0ae"
 
   url "https://cdn-b.fabfilter.com/downloads/fftwin#{version.no_dots}.dmg"
   name "FabFilter Twin"
@@ -14,7 +14,7 @@ cask "fabfilter-twin" do
 
   pkg "FabFilter Twin #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Twin.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Twin.*"
 
   # No zap stanza required
 end
