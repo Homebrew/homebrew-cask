@@ -1,9 +1,9 @@
 cask "nanoleaf" do
   arch arm: "-arm64"
 
-  version "2.4.0"
-  sha256 arm:   "e79a175fb9145bfcbd431886836cb307b43d207310f20d5695e414f7c57b9d87",
-         intel: "77ba027e7c4d6dfcd94f548e28798ca692759840e1aaf06391a0287fe5da7c5e"
+  version "2.4.1"
+  sha256 arm:   "2a569d12d0f10d8b65fd9943f1bda541e2576fd13bec6109e23b649652203bcf",
+         intel: "ad4d5d297506e665a29fbb3dc843a0217cc403fa11591ebe3bb629ffc2b5f0af"
 
   url "https://desktop-app-prod-3.s3.us-west-2.amazonaws.com/Nanoleaf%20Desktop-#{version}#{arch}.dmg",
       verified: "desktop-app-prod-3.s3.us-west-2.amazonaws.com/"
