@@ -8,6 +8,7 @@ cask "bob-app" do
   homepage "https://github.com/ripperhe/Bob"
 
   deprecate! date: "2025-04-15", because: :moved_to_mas
+  disable! date: "2026-04-16", because: :moved_to_mas
 
   auto_updates true
 
