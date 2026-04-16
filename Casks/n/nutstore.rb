@@ -13,6 +13,7 @@ cask "nutstore" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer script: {
     executable: "坚果云安装程序.app/Contents/MacOS/NutstoreOnlineInstaller",
