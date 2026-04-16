@@ -1,6 +1,6 @@
 cask "proton-pass" do
-  version "1.36.0"
-  sha256 "3d58fadbd5ba9fbc1e2a40095bcc6a380cc095cf6325bb2f18bdb762ecdcf804"
+  version "1.36.1"
+  sha256 "24a9b90e12192e3d975eec562a8e3c558e289d1ca9a2e20951557d20aff02461"
 
   url "https://proton.me/download/pass/macos/ProtonPass_#{version}.dmg"
   name "Proton Pass"
