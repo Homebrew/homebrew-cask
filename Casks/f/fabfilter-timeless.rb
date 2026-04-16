@@ -1,6 +1,6 @@
 cask "fabfilter-timeless" do
-  version "3.09"
-  sha256 "3fb2f4a376c4bea9b442e06b961fa38ce4a46bc1ad2e923b5bdb80260f042c73"
+  version "3.10"
+  sha256 "7f0d65e013ad2992cfcbbd5f1c64b81af09178be10e25675fa94cc772f8e82f0"
 
   url "https://cdn-b.fabfilter.com/downloads/fftimeless#{version.no_dots}.dmg"
   name "FabFilter Timeless"
@@ -14,7 +14,7 @@ cask "fabfilter-timeless" do
 
   pkg "FabFilter Timeless #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Timeless.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Timeless.*"
 
   # No zap stanza required
 end
