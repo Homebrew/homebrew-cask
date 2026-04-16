@@ -1,6 +1,6 @@
 cask "uefitool" do
-  version "A73"
-  sha256 "508ffe1de4e45098576b873c3c5fc61356cdb8e348bc5767caa7aa2c8d7fc56e"
+  version "A74"
+  sha256 "372a636996c6e61461179ed96ee3d019c7636037c4f753c851553ef45b8ea412"
 
   url "https://github.com/LongSoft/UEFITool/releases/download/#{version}/UEFITool_NE_#{version}_universal_mac.dmg"
   name "UEFITool"
