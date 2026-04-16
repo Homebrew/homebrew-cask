@@ -1,6 +1,6 @@
 cask "fabfilter-pro-ds" do
-  version "1.31"
-  sha256 "7ad88d49103af961c0daa9787697677fe3f98d020c7e37519ca1edff238f2d65"
+  version "1.32"
+  sha256 "c16c371d3b0bbbe5bb767c35d931a267e30e7a962be30bc4a037f702e33913c6"
 
   url "https://cdn-b.fabfilter.com/downloads/ffprods#{version.no_dots}.dmg"
   name "FabFilter Pro-DS"
@@ -14,7 +14,7 @@ cask "fabfilter-pro-ds" do
 
   pkg "FabFilter Pro-DS #{version} Installer.pkg"
 
-  uninstall pkgutil: "com.fabfilter.Pro-DS.#{version.major}"
+  uninstall pkgutil: "com.fabfilter.Pro-DS.*"
 
   # No zap stanza required
 end
