@@ -3,15 +3,15 @@ cask "effect-house" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "5.8.0,9456,03102026,104"
-    sha256 "a2c262529cfe82e70703499a396d14c250a0c6e1560c5d6d04f8ea6b68221744"
+    version "5.9.1,1297,04142026,104"
+    sha256 "fbd170f5009965aa3dddd6aab6a337ae92ec9f06e6e6141e30d40715147222aa"
   end
   on_intel do
-    version "5.8.0,5673,03102026,104"
-    sha256 "8c2545e2bfaba46e70abe3eb0b73584de0f95f43521d5c6d83965d418c76c146"
+    version "5.9.1,1752,04142026,104"
+    sha256 "b88ecb8a6d4c73844af14b82a64f445dc7b3501730dfe3a0239ba3b7feb03247"
   end
 
-  url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_Builds_ET_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}_#{arch}_#{version.csv.fourth}.dmg",
+  url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_Builds_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}_#{arch}_#{version.csv.fourth}.dmg",
       verified: "sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/"
   name "TikTok Effect House"
   desc "Create vibrant AR effects for TikTok"
