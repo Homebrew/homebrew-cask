@@ -9,6 +9,7 @@ cask "jpadilla-rabbitmq" do
   homepage "https://jpadilla.github.io/rabbitmqapp/"
 
   deprecate! date: "2025-04-15", because: :unmaintained
+  disable! date: "2026-04-16", because: :unmaintained
 
   app "RabbitMQ.app"
 
