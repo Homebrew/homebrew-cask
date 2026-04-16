@@ -16,6 +16,8 @@ cask "maxon" do
     end
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "#{staged_path}/Maxon_App_#{version}_Mac.app/Contents/MacOS/installbuilder.sh",
     sudo:       true,
