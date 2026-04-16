@@ -1,9 +1,9 @@
 cask "getoutline" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.1,260327nwr8ulsko"
-  sha256 arm:   "f55ab3dc94fd39fbcb95366aff8ffc6283bd68664feaf7e67bc43fef99623ffb",
-         intel: "2bae6b57d053f573e2a61b619e973023f9a47a44c03538f95c48a904ee29fd45"
+  version "1.6.0,260416fn931b31i"
+  sha256 arm:   "6aa6257a95e594a65a370532d04ebe8a53983d4accfc1a6921bb03ac035cd88f",
+         intel: "8952696635378326aa14859406ee758209d6a22cbcdeced733e758f3e40727ac"
 
   url "https://download.todesktop.com/2211128hgkdcltv/Outline%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
       verified: "download.todesktop.com/2211128hgkdcltv/"
@@ -23,6 +23,8 @@ cask "getoutline" do
       end
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Outline.app"
 
