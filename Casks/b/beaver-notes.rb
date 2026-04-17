@@ -1,6 +1,6 @@
 cask "beaver-notes" do
-  version "4.3.0"
-  sha256 "9a373d862b6b349e716eec691280a6263cf75397eaf9e49df3c9713fb4cbf85a"
+  version "4.4.0"
+  sha256 "c2b83192c2b25542e8c8d5ffcaa4152e0175208de1d5caefa83095c6fd064f43"
 
   url "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/#{version}/Beaver-notes-#{version}-universal.dmg",
       verified: "github.com/Beaver-Notes/Beaver-Notes/"
