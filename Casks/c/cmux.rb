@@ -20,11 +20,15 @@ cask "cmux" do
   binary "#{appdir}/cmux.app/Contents/Resources/bin/cmux"
 
   zap trash: [
+    "~/.config/cmux",
     "~/Library/Application Support/cmux",
     "~/Library/Application Support/com.cmuxterm.app",
     "~/Library/Caches/cmux",
     "~/Library/Caches/com.cmuxterm.app",
+    "~/Library/Caches/SentryCrash/cmux",
     "~/Library/HTTPStorages/com.cmuxterm.app",
+    "~/Library/HTTPStorages/com.cmuxterm.app.binarycookies",
+    "~/Library/Logs/cmux-update.log",
     "~/Library/Preferences/com.cmuxterm.app.plist",
     "~/Library/WebKit/com.cmuxterm.app",
   ]
