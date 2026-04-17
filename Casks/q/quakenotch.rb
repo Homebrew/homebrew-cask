@@ -1,6 +1,6 @@
 cask "quakenotch" do
-  version "3.0.5"
-  sha256 "60471046eeff8385e93e72a7cf42d1d151acb7cb8bcfed43f0db71bcc494ddb4"
+  version "3.0.6"
+  sha256 "985311dab867ec074dce830012b826483c999098295568c1573dd53feabd4116"
 
   url "https://github.com/rohanrhu/QuakeNotch/releases/download/v#{version}/QuakeNotch.zip",
       verified: "github.com/rohanrhu/QuakeNotch/"
