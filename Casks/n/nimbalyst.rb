@@ -11,7 +11,7 @@ cask "nimbalyst" do
   desc "Visual workspace for building with Codex and Claude Code"
   homepage "https://nimbalyst.com/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Nimbalyst.app"
 
