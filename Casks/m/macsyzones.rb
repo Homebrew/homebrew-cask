@@ -1,6 +1,6 @@
 cask "macsyzones" do
-  version "2.2.2"
-  sha256 "ded0db9dfc0f75bf70aa6ce6dd2ed0368bbd09ecaff3eba8124d485ed04d06b5"
+  version "2.2.3"
+  sha256 "2320c30f5812b03adb8d23a614927f5f2c58df0d4d2ca5fe8a997a8d8a14757e"
 
   url "https://github.com/rohanrhu/MacsyZones/releases/download/v#{version}/MacsyZones.zip",
       verified: "github.com/rohanrhu/MacsyZones/"
