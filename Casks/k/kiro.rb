@@ -1,9 +1,9 @@
 cask "kiro" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.11.131"
-  sha256  arm:   "7e7586e79b270700f55f751840cf69c9f9e3bf909ee656f5643466680833696a",
-          intel: "b87703d419ceba11f2cd46aec688529d1ee44df1e267acd27de2780eed042eda"
+  version "0.11.132"
+  sha256  arm:   "71a987ab37c392588f80ef5d8f91627ccdcb13ec4461296b7a8b742b72bf0dc4",
+          intel: "60f6acf6858830a4255979434ac90fdc5bb6b174b186c60bbab98a8d11d7db63"
 
   url "https://prod.download.desktop.kiro.dev/releases/stable/darwin-#{arch}/signed/#{version}/kiro-ide-#{version}-stable-darwin-#{arch}.dmg"
   name "kiro"
