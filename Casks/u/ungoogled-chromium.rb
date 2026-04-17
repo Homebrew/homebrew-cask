@@ -1,9 +1,9 @@
 cask "ungoogled-chromium" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "146.0.7680.177-1.1"
-  sha256 arm:   "bcb75a9928de8931c1ee2ea9d4bba34e89f7e33af9f7129cc04f613cf24e1eb0",
-         intel: "a4ef229f5640641fa8e91b1062a2780062582a8ad789683972006362db6f3c0a"
+  version "147.0.7727.55-1.1"
+  sha256 arm:   "c4b45156647a6f6d6cc4109913e884985e46e33742791f55bb1dea1aeb35ff71",
+         intel: "15b70e113b9242eb3daa232f02b82fcb60a91f9ab6548febef2df8b309d12dff"
 
   url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}_#{arch}-macos.dmg",
       verified: "github.com/ungoogled-software/ungoogled-chromium-macos/"
