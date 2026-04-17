@@ -1,6 +1,6 @@
 cask "support" do
-  version "3.0.2"
-  sha256 "43bc012780c6da8a743d8c2313177203ab951b31ff2d2965b89ff69c0a225685"
+  version "3.0.3"
+  sha256 "a299f44ff460398536b3e520777fcd66bb7d13fb6ce210f841aa87e0412b8578"
 
   url "https://github.com/root3nl/SupportApp/releases/download/v#{version}/Support.#{version}.zip"
   name "Support App"
