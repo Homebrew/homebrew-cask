@@ -2,13 +2,13 @@ cask "brewy" do
   version "0.10.0"
   sha256 "3eee0ad7f42856637c5260aa87a649e697bc2ef45596a9896273c39fe2fb7c34"
 
-  url "https://github.com/p-linnane/Brewy/releases/download/#{version}/Brewy-#{version}.zip"
+  url "https://github.com/starhaven-io/Brewy/releases/download/#{version}/Brewy-#{version}.zip"
   name "Brewy"
   desc "Simple Homebrew GUI"
-  homepage "https://github.com/p-linnane/Brewy"
+  homepage "https://github.com/starhaven-io/Brewy"
 
   livecheck do
-    url "https://raw.githubusercontent.com/p-linnane/Brewy/appcast/appcast.xml"
+    url "https://raw.githubusercontent.com/starhaven-io/Brewy/appcast/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
