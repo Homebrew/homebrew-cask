@@ -1,9 +1,9 @@
 cask "camunda-modeler" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.46.0"
-  sha256 arm:   "29dc5f8774e3d2958d76da20c879a4dcf786a9ddbc8e449d40a33caae065d750",
-         intel: "92d493e43880bebe92c1f458acfc703ae81985eff90b2c3f7b3516bdd5caf80a"
+  version "5.46.1"
+  sha256 arm:   "ade9279595c8511cf0ff4b35518f34a9bd4219e94bc748bae9c807f2d1ebe675",
+         intel: "ed2fd1bd060e853893d250fb068d471d4e1e0220d86be4657c0fc602e12aaafd"
 
   url "https://downloads.camunda.cloud/release/camunda-modeler/#{version}/camunda-modeler-#{version}-mac-#{arch}.zip",
       verified: "downloads.camunda.cloud/release/camunda-modeler/"
