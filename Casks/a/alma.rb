@@ -24,8 +24,15 @@ cask "alma" do
   uninstall quit: "com.yetone.alma"
 
   zap trash: [
+    "~/.cache/alma",
     "~/.config/alma",
     "~/Library/Application Support/alma",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yetone.alma.sfl*",
+    "~/Library/Caches/alma-updater",
+    "~/Library/Caches/com.yetone.alma",
+    "~/Library/Caches/com.yetone.alma.ShipIt",
+    "~/Library/HTTPStorages/com.yetone.alma",
+    "~/Library/Preferences/ByHost/com.yetone.alma.ShipIt.*.plist",
     "~/Library/Preferences/com.yetone.alma.plist",
   ]
 end
