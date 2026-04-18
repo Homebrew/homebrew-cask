@@ -1,6 +1,6 @@
 cask "pibar" do
-  version "1.1.2"
-  sha256 "61808096da94b8e7f857e48b0bd499f28ad9f3822ba0d0fed29be9d6b1163949"
+  version "1.2"
+  sha256 "1495ec25459cbaa2cf77d9f7ee8a1425639e2fa9a38592367f171ab6ad367f3e"
 
   url "https://amiantos.s3.amazonaws.com/PiBar-#{version}.zip",
       verified: "amiantos.s3.amazonaws.com/"
@@ -14,6 +14,8 @@ cask "pibar" do
     url :homepage
     strategy :github_latest
   end
+
+  depends_on macos: ">= :sequoia"
 
   app "PiBar.app"
 
