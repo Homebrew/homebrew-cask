@@ -7,8 +7,6 @@ cask "pibar" do
   name "PiBar"
   desc "Pi-hole(s) management in the menu bar"
   homepage "https://github.com/amiantos/pibar"
-  
-  depends_on macos: ">= :sequoia"
 
   # The GitHub release descriptions contain a link to the AWS zip file, so we
   # check releases instead of Git tags.
@@ -16,6 +14,8 @@ cask "pibar" do
     url :homepage
     strategy :github_latest
   end
+
+  depends_on macos: ">= :sequoia"
 
   app "PiBar.app"
 
