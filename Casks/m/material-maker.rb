@@ -1,6 +1,6 @@
 cask "material-maker" do
-  version "1.5p1"
-  sha256 "7e817100611b4f22cf7fc755faef389a7a4838cd264861e8a92e5f32503bb673"
+  version "1.6"
+  sha256 "3b4e97beec81f46c1344f06ba4d379574c8e3f68a559f2abb851863a55928e33"
 
   url "https://github.com/RodZill4/material-maker/releases/download/#{version}/material_maker_#{version.dots_to_underscores}.dmg",
       verified: "github.com/RodZill4/material-maker/"
