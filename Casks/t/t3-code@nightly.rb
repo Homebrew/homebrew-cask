@@ -1,9 +1,9 @@
 cask "t3-code@nightly" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.18-nightly.20260416.46"
-  sha256 arm:   "30ab881b47070f3459e0063820e31e45bf661d0de51d1174d8ab185bd86d98a8",
-         intel: "4649a696758336d790d2ce794678b503397b2b36a354753644993ba06c933bc9"
+  version "0.0.21-nightly.20260417.58"
+  sha256 arm:   "cdc6dca37ec8546e0d1cdb97c7f5d6cc803cebd9e402719c5c2912934470d5b2",
+         intel: "b658af8136c3f1315f001825cb05e1371d21747a7194ff21862f5dce36694b4d"
 
   url "https://github.com/pingdotgg/t3code/releases/download/nightly-v#{version}/T3-Code-#{version}-#{arch}.dmg",
       verified: "github.com/pingdotgg/t3code/"
@@ -27,7 +27,6 @@ cask "t3-code@nightly" do
   end
 
   auto_updates true
-  conflicts_with cask: "t3-code"
   depends_on macos: ">= :monterey"
 
   app "T3 Code (Nightly).app"
