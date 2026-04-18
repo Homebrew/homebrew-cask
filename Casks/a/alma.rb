@@ -26,7 +26,6 @@ cask "alma" do
   zap trash: [
     "~/.cache/alma",
     "~/.config/alma",
-    "~/alma",
     "~/Library/Application Support/alma",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.yetone.alma.sfl*",
     "~/Library/Caches/alma-updater",
