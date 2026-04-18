@@ -32,6 +32,7 @@ cask "alma" do
     "~/Library/Caches/com.yetone.alma",
     "~/Library/Caches/com.yetone.alma.ShipIt",
     "~/Library/HTTPStorages/com.yetone.alma",
+    "~/Library/Preferences/ByHost/com.yetone.alma.ShipIt.*.plist",
     "~/Library/Preferences/com.yetone.alma.plist",
   ]
 end
