@@ -1,6 +1,6 @@
 cask "pixieditor" do
-  version "2.0.1.19"
-  sha256 "3ff0362a057877036df537768176f5628598faa285a3512b412ad30059be9c9f"
+  version "2.1.0.20"
+  sha256 "3d2e1dedef78ba68ad1bfb4dba3083f1d625479584c57d862aba847e640f4492"
 
   url "https://github.com/PixiEditor/PixiEditor/releases/download/#{version}/PixiEditor-#{version}-universal-macos.dmg",
       verified: "github.com/PixiEditor/PixiEditor/"
