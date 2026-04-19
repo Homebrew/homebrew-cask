@@ -39,8 +39,8 @@ cask "klayout" do
     end
   end
   on_sonoma do
-    version "0.30.7"
-    sha256 "4bb4453bd29be37e9a2f1ac7c19759118cee32d6749d06b97ebd836307264348"
+    version "0.30.8"
+    sha256 "04897bc4d85db1fd7bd2e261cba384d4157c82ea0c82b92526a42b0e1a4bd6d6"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sonoma-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
@@ -51,8 +51,8 @@ cask "klayout" do
     end
   end
   on_sequoia :or_newer do
-    version "0.30.7"
-    sha256 "43614fa37a9551e2fc7f962c6aa897e8563f6f14a96fe5f1445d3678d513cefd"
+    version "0.30.8"
+    sha256 "5d6659a4058748e42334b532300088aacf7111e8d23dfcb518ff9c29952b2831"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sequoia-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
