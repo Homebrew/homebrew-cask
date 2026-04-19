@@ -1,6 +1,6 @@
 cask "mdrp" do
-  version "14.1.8"
-  sha256 "b5a157cfd590490606c11068bec632326ddace3f18dfca75fa5ef7d928b30cf7"
+  version "14.2.0"
+  sha256 "2360f97cbc46dde49e9d08d67fa348ad5ac51296fa010bd687d2d67d2f1fb266"
 
   url "https://www.macdvdripperpro.com/MDRP_v#{version.csv.first.no_dots}#{"r#{version.csv.second}" if version.csv.second}.zip"
   name "Mac DVDRipper Pro"
