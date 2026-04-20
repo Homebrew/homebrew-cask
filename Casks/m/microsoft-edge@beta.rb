@@ -1,6 +1,6 @@
 cask "microsoft-edge@beta" do
-  version "148.0.3967.12,cedeaf7e-d3c2-40d6-8263-9039bab6bea2"
-  sha256 "f9166fa5006ec7c92e7ede1011b6b335eb0ff5714d6aabe63fde2044cde6895d"
+  version "148.0.3967.20,9fe06444-d7b4-48ee-90d4-7eafb33aac49"
+  sha256 "763c255867e8bebffa98565e2d7d5a3900fa388f3f24359a8f59634dab3ff808"
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdgeBeta-#{version.csv.first}.dmg"
   name "Microsoft Edge Beta"
