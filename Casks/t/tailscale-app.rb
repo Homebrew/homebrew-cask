@@ -19,7 +19,11 @@ cask "tailscale-app" do
 
   uninstall quit:       "io.tailscale.ipn.macsys",
             login_item: "Tailscale",
-            pkgutil:    "com.tailscale.ipn.macsys"
+            pkgutil:    "com.tailscale.ipn.macsys",
+            delete:     [
+              "/usr/local/bin/tailscale",
+              "/usr/local/share/man/man8/tssentineld.8",
+            ]
 
   zap trash: [
     "/Library/Tailscale",
