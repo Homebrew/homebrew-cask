@@ -1,6 +1,6 @@
 cask "sipgate" do
-  version "2.35.0"
-  sha256 "0876ae48f933859daa3b8bbee68bedbc17bed1d0505c1726fb7b96f2067186e7"
+  version "2.36.1"
+  sha256 "83144b075336778d369f10a136db702fb5fdec20218078735578308ae22d6bf6"
 
   url "https://s3-eu-central-1.amazonaws.com/desktop.download.sipgate.com/sipgate-#{version}.zip",
       verified: "s3-eu-central-1.amazonaws.com/desktop.download.sipgate.com/"
