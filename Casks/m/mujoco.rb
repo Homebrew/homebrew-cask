@@ -9,11 +9,17 @@ cask "mujoco" do
   homepage "https://mujoco.org/"
 
   livecheck do
-    url "https://github.com/google-deepmind/mujoco"
+    url :url
     strategy :github_latest
   end
 
   depends_on macos: ">= :big_sur"
 
   app "MuJoCo.app"
+
+  zap trash: [
+    "~/Library/Caches/org.mujoco.mujoco",
+    "~/Library/Preferences/org.mujoco.mujoco.plist",
+    "~/Library/Saved Application State/org.mujoco.mujoco.savedState",
+  ]
 end
