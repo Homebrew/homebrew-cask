@@ -1,13 +1,13 @@
 cask "font-devicons" do
-  version "1.8.0"
-  sha256 "d8d2dc243ca42897a082ffe32a22cab53cdd148cf87b24162cf450ccfc12fece"
+  version "2.0.1"
+  sha256 "0b68b1350516e2222827b74d826a635c9e6cb288d3baec12d11f85af3a5fb906"
 
-  url "https://github.com/vorillaz/devicons/archive/refs/tags/#{version}.tar.gz",
-      verified: "github.com/vorillaz/devicons/"
+  url "https://registry.npmjs.org/devicons/-/devicons-#{version}.tgz",
+      verified: "registry.npmjs.org/devicons/"
   name "Devicons"
-  homepage "https://vorillaz.github.io/devicons/"
+  homepage "https://devicons.io/"
 
-  font "devicons-#{version}/fonts/devicons.ttf"
+  font "package/dist/devicons.ttf"
 
   # No zap stanza required
 end
