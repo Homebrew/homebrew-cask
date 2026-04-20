@@ -8,6 +8,12 @@ cask "claude-island" do
   desc "Dynamic Island-style notifications for Claude Code CLI sessions"
   homepage "https://claudeisland.com/"
 
+  livecheck do
+    url "https://claudeisland.com/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
   depends_on macos: ">= :sequoia"
 
   app "Claude Island.app"
