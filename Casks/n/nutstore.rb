@@ -1,5 +1,5 @@
 cask "nutstore" do
-  version "6.4.6"
+  version "6.4.7"
   sha256 :no_check
 
   url "https://www.jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg"
@@ -13,6 +13,7 @@ cask "nutstore" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer script: {
     executable: "坚果云安装程序.app/Contents/MacOS/NutstoreOnlineInstaller",
