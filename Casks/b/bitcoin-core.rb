@@ -1,9 +1,9 @@
 cask "bitcoin-core" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "30.2"
-  sha256 arm:   "4b8dbdb054f11a30bebbe796dd8f0bda4be2fd5b33b5d2d217c50577208b6a8a",
-         intel: "68f4fe0f64576833b50a54e2b4cd9d0538c8618f95d44017eeb4b0940be21118"
+  version "31.0"
+  sha256 arm:   "fc119a34915daac57e5fbdf181c9295d862d6843d52a9380e39dc0d0ac69cf20",
+         intel: "8e230f36a2020072763adf742b20d95348cb20aaa0b0a918ca44ecdc83ac4efd"
 
   url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-#{arch}-apple-darwin.zip"
   name "Bitcoin Core"
@@ -19,7 +19,7 @@ cask "bitcoin-core" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :sonoma"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Bitcoin-Qt.app", target: "Bitcoin Core.app"
