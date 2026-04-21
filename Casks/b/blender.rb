@@ -34,8 +34,8 @@ cask "blender" do
     end
   end
   on_intel do
-    version "4.5.8"
-    sha256 "b73378af13eb1d1539f7a6d0fb9a598031d20e1e697b30d8c8c683b90b395a84"
+    version "4.5.9"
+    sha256 "00c8a433504291374bfa045c0c2d708a779f8abc8400b4718fdd11c117486fa4"
 
     # Intel support is limited to version 4.5.x series.
     livecheck do
