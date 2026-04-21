@@ -1,9 +1,9 @@
 cask "librewolf" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "149.0.2,2"
-  sha256 arm:   "616507b3b915538bb881723c7f83dd37204375ce7557d5140861b0c5b507e1bb",
-         intel: "7a2113d229c5dbee92b78da0d20480ef0ebe340ec3c07ec06b7e5c3a6284c84c"
+  version "150.0,1"
+  sha256 arm:   "f5a282b4a06ccc6ea9f94ba91f6452360c4f668b3e90ecf2f8e7018713846162",
+         intel: "4184307292cf4a236b1be8c3869be09ab327a0b6f9132f7c0db282dad994c606"
 
   url "https://codeberg.org/api/packages/librewolf/generic/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-macos-#{arch}-package.dmg",
       verified: "codeberg.org/api/packages/librewolf/generic/librewolf/"
