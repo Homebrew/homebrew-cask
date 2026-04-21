@@ -1,9 +1,9 @@
 cask "mucommander" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.6.0-1"
-  sha256 arm:   "d3946a00a800c311580cd2088d2861c75de5db0519e9939dfa669d3538f14ddd",
-         intel: "0a93cd3d20f083c442e248bd433c22fe73735546957304dc63187dfea7063c1b"
+  version "1.6.1-1"
+  sha256 arm:   "1bf4ef5957aec0bbac1e170862929f8e6340c47170048dc2a8150c8703149b64",
+         intel: "07bd173347695bd4c073a95254dd9e68c602f924baf9a8b7aedfaacbd539defa"
 
   url "https://github.com/mucommander/mucommander/releases/download/#{version}/muCommander-#{version}-#{arch}.dmg",
       verified: "github.com/mucommander/mucommander/"
