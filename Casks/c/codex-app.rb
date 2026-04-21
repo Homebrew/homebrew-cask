@@ -1,5 +1,6 @@
 cask "codex-app" do
   arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional intel: "-x64"
 
   version "26.417.41555"
   sha256 arm:   "5cd157c770584f743bd2855e3e4ebf5558b82a4d4130ea4928b701aa1d4513a5",
@@ -12,7 +13,7 @@ cask "codex-app" do
   homepage "https://openai.com/codex"
 
   livecheck do
-    url "https://persistent.oaistatic.com/codex-app-prod/appcast.xml"
+    url "https://persistent.oaistatic.com/codex-app-prod/appcast#{livecheck_arch}.xml"
     strategy :sparkle, &:short_version
   end
 
