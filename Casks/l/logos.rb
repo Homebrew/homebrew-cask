@@ -1,9 +1,9 @@
 cask "logos" do
   arch arm: "-arm"
 
-  version "49.0.0.0144"
-  sha256 arm:   "5775ff1ca8648287b415ae917b5c807477fa38407a5ad7d59a389888c3bad607",
-         intel: "b82e2ff929abd9ea356f1ca995d56e0d8c05bed848c8ef985b6e0a834ecbf07a"
+  version "50.0.0.0253"
+  sha256 arm:   "cdc7367677be4058839b89526b1d7b372ad2e73fc625c9ed61e083389671177e",
+         intel: "d2a63759310991ebc804947242aa9d8f4d9604c4b6b3cc038a35ff3322acb87f"
 
   url "https://downloads.logoscdn.com/LBS10/Installer/#{version}/LogosMac#{arch}.dmg",
       verified: "downloads.logoscdn.com/"
