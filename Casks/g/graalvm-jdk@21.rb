@@ -2,8 +2,8 @@ cask "graalvm-jdk@21" do
   arch arm: "aarch64", intel: "x64"
 
   on_arm do
-    version "21.0.10,8"
-    sha256 "9e5d8c3b23b793ac3cc92462454edb9465208cb6eee18a0066971748ef5ce197"
+    version "21.0.11,9"
+    sha256 "e6bcbf3b31a5ec5d3c092c3fd5782d86471f0339de6e2b32961f00963a3643f2"
 
     livecheck do
       url "https://java.oraclecloud.com/currentJavaReleases/#{version.major}"
