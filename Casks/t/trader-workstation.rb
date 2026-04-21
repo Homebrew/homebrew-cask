@@ -22,6 +22,7 @@ cask "trader-workstation" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer script: {
     executable: "#{staged_path}/Trader Workstation Installer.app/Contents/MacOS/JavaApplicationStub",
