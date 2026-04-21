@@ -18,7 +18,10 @@ cask "pastenow" do
   app "PasteNow.app"
 
   zap trash: [
+    "~/Library/Application Scripts/*app.pastenow.PasteNow",
     "~/Library/Caches/app.pastenow.PasteNow",
+    "~/Library/Containers/app.pastenow.PasteNow",
+    "~/Library/Group Containers/*.app.pastenow.PasteNow",
     "~/Library/HTTPStorages/app.pastenow.PasteNow",
     "~/Library/Preferences/app.pastenow.PasteNow.plist",
   ]
