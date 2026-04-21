@@ -1,21 +1,24 @@
 cask "codex-app" do
-  version "26.417.41555"
-  sha256 "5cd157c770584f743bd2855e3e4ebf5558b82a4d4130ea4928b701aa1d4513a5"
+  arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional intel: "-x64"
 
-  url "https://persistent.oaistatic.com/codex-app-prod/Codex-darwin-arm64-#{version}.zip",
+  version "26.417.41555"
+  sha256 arm:   "5cd157c770584f743bd2855e3e4ebf5558b82a4d4130ea4928b701aa1d4513a5",
+         intel: "6ca5c99222cc55e4891443539c54d378c5b2daec819575826dd34cce509d5aeb"
+
+  url "https://persistent.oaistatic.com/codex-app-prod/Codex-darwin-#{arch}-#{version}.zip",
       verified: "persistent.oaistatic.com/codex-app-prod/"
   name "Codex"
   desc "OpenAI's Codex desktop app for managing coding agents"
   homepage "https://openai.com/codex"
 
   livecheck do
-    url "https://persistent.oaistatic.com/codex-app-prod/appcast.xml"
+    url "https://persistent.oaistatic.com/codex-app-prod/appcast#{livecheck_arch}.xml"
     strategy :sparkle, &:short_version
   end
 
   auto_updates true
   depends_on macos: ">= :monterey"
-  depends_on arch: :arm64
 
   app "Codex.app"
 
