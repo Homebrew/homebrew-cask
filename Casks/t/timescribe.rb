@@ -1,9 +1,9 @@
 cask "timescribe" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.12.0"
-  sha256 arm:   "83f8bdf73e9ca56ccba8e0a52bdaafdfcac0ec995caf5838727aae2e20420ef6",
-         intel: "7c3c7f277528ad168bab4a3705eca70e7bc68d1494045f867aa8ca516e63a351"
+  version "1.13.0"
+  sha256 arm:   "d84a19775cad71ee54c9b3bef6c4bfedc7027b2c4d61839bbad0a4d75e1048b0",
+         intel: "2fa88cb5470530f8075555f62da6ec46a5d879f98c2b0c2668a48e3b6c1fbcd0"
 
   url "https://github.com/WINBIGFOX/TimeScribe/releases/download/v#{version}/TimeScribe-#{version}-#{arch}.zip",
       verified: "github.com/WINBIGFOX/TimeScribe/"
