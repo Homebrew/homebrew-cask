@@ -1,9 +1,9 @@
 cask "ace-studio" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.0.8,1874"
-  sha256 arm:   "67b3ea7750e5544c599fa3c139932e3bfb32cb7c5106d7d131ee786ed28ce5c1",
-         intel: "17fc20bd1e614f0fd2af9011aa0c6d41ee5ba0e3b5be5ef54392c4c73c27ee85"
+  version "2.0.9,1940"
+  sha256 arm:   "9ae23043db8bbf04eeb404d45c60178eaeb76e341372aaf582581b00a978c9a0",
+         intel: "88c1b8cb0fe2b3472024ec9847551d1c389063eb9bbfa26d6cfa0592ef1d57f7"
 
   url "https://as-api-ws-cdn-1.tdacestudio.com/web/app/ACE_Studio_#{version.csv.first}_#{version.csv.second}_#{arch}_general.dmg",
       verified: "as-api-ws-cdn-1.tdacestudio.com/web/app/"
