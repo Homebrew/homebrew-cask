@@ -1,6 +1,6 @@
 cask "cadran" do
-  version "1.2.12"
-  sha256 "9fdc5fb5806f84949e8318febf29daf47ad7cd86a2a32c07af28384fe5bd57c2"
+  version "1.3.0"
+  sha256 "3e6d2c843fc43ef95730a84a2f9ba016a4142200ce375e80967a9c427a47f7e2"
 
   url "https://github.com/Ilyomix/Cadran-releases/releases/download/v#{version}/Cadran-#{version}.dmg",
       verified: "github.com/Ilyomix/Cadran-releases/"
