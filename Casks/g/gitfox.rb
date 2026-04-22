@@ -19,7 +19,7 @@ cask "gitfox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: ">= :tahoe"
 
   app "Gitfox.app"
   binary "#{appdir}/Gitfox.app/Contents/SharedSupport/bin/gitfox-cli", target: "gitfox"
