@@ -23,5 +23,7 @@ cask "codex" do
 
   binary "codex-#{arch}-#{os}", target: "codex"
 
+  generate_completions_from_executable "codex-#{arch}-#{os}", "completion", base_name: "codex"
+
   zap rmdir: "~/.codex"
 end
