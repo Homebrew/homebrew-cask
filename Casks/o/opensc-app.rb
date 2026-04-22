@@ -7,8 +7,6 @@ cask "opensc-app" do
   desc "Smart card libraries and utilities"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   pkg "OpenSC #{version}.pkg"
 
   uninstall launchctl: [
