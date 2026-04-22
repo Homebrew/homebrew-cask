@@ -39,6 +39,8 @@ cask "sapmachine-jdk" do
   desc "OpenJDK distribution from SAP"
   homepage "https://sapmachine.io/"
 
+  depends_on :macos
+
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk.jdk"
 
   zap trash: "~/Library/Saved Application State/com.sap.openjdk.jconsole.savedState"
