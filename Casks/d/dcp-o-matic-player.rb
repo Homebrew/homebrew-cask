@@ -1,13 +1,17 @@
 cask "dcp-o-matic-player" do
-  version "2.18.21"
-  sha256 "fad2a95fe13e6bbd887c171a446f076005f13c74dc5b7a8e2dab8aaa91ff9057"
+  version "2.18.38"
+  sha256 "04586d07a8863d9bc058c5916a00665b3ce6945758228ac029a779e8e1994eb0"
 
-  url "https://dcpomatic.com/dl.php?id=osx-10.10-player&version=#{version}"
+  url "https://download.dcpomatic.com/dl.php?id=osx-10.10-player&version=#{version}"
   name "DCP-o-matic Player"
   desc "Play Digital Cinema Packages"
   homepage "https://dcpomatic.com/"
 
-  disable! date: "2025-07-28", because: "cannot be reliably fetched due to Cloudflare protections"
+  livecheck do
+    cask "dcp-o-matic"
+  end
+
+  depends_on macos: ">= :big_sur"
 
   app "DCP-o-matic #{version.major} Player.app"
 
