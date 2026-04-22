@@ -1,13 +1,17 @@
 cask "dcp-o-matic-editor" do
-  version "2.18.21"
-  sha256 "a98cbda369500ae32164ae4205e35ce57305a5c17b4971bc14d924804a602f14"
+  version "2.18.38"
+  sha256 "da0f581ff59e5b243603f6af8f0b4cb31a6f931130e762959f82f1455d2f6477"
 
-  url "https://dcpomatic.com/dl.php?id=osx-10.10-editor&version=#{version}"
+  url "https://download.dcpomatic.com/dl.php?id=osx-10.10-editor&version=#{version}"
   name "DCP-o-matic Editor"
   desc "Convert video, audio and subtitles into DCP (Digital Cinema Package)"
   homepage "https://dcpomatic.com/"
 
-  disable! date: "2025-07-28", because: "cannot be reliably fetched due to Cloudflare protections"
+  livecheck do
+    cask "dcp-o-matic"
+  end
+
+  depends_on macos: ">= :big_sur"
 
   app "DCP-o-matic #{version.major} Editor.app"
 
