@@ -1,9 +1,9 @@
 cask "redis-insight" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.4.1"
-  sha256 arm:   "bbc77c6b6e9c0de675ebcc026ec78cc4e61dbac75a228a86014cb3437b4f2bdb",
-         intel: "f0aa8edd6e6cc4c42818127d146670765179ab4ac481d67ec73fdec38b32db7c"
+  version "3.4.2"
+  sha256 arm:   "034754efa16556c50a982b45b3590546b35114559d77284cecb5d24ce71529a8",
+         intel: "54cb025abe344a71e88387937583c5cf5f292a57d96609dc618d92e247399bc3"
 
   url "https://s3.amazonaws.com/redisinsight.download/public/releases/#{version}/Redis-Insight-mac-#{arch}.dmg",
       verified: "s3.amazonaws.com/redisinsight.download/"
