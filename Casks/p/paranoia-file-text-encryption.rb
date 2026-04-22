@@ -16,4 +16,9 @@ cask "paranoia-file-text-encryption" do
   pkg "ParanoiaFileTextEnc-#{version}.pkg"
 
   uninstall pkgutil: "com.paranoiaworks.macos.Paranoia-FileText-Encryption"
+
+  zap trash: [
+    "~/.ssefe.conf",
+    "~/.ssepte.conf",
+  ]
 end
