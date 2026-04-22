@@ -2,7 +2,7 @@ cask "font-pt-root-ui" do
   version :latest
   sha256 :no_check
 
-  url "https://api.paratype.com/api/editions/ofl/download/100278",
+  url "https://api.paratype.com/api/download/ofl/pack/3758",
       referer: "https://www.paratype.com/"
   name "PT Root UI"
   homepage "https://www.paratype.com/fonts/pt/pt-root-ui"
