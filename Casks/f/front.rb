@@ -1,9 +1,9 @@
 cask "front" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.71.1"
-  sha256 arm:   "2663f99cd60788900959bccd2167d05af940c8ec293cb9e850102a6be6814f84",
-         intel: "f4173817b2bdd9da49212b9abf6cbeee9130afe9bd2966f2da7653e60763429e"
+  version "3.73.0"
+  sha256 arm:   "69eaaa0d6db43abd55144c324e1bfc6491b25ab4796f063a843581f6e5974496",
+         intel: "8683716020445a27569005390e7ffd508d5750a0c471b00b0990397f9f5e230e"
 
   url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}-#{arch}.zip",
       verified: "dl.frontapp.com/desktop/builds/"
@@ -17,7 +17,7 @@ cask "front" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Front.app"
 
