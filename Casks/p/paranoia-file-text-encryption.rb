@@ -5,7 +5,7 @@ cask "paranoia-file-text-encryption" do
   url "https://paranoiaworks.com/download/ParanoiaFileTextEnc-#{version}.pkg",
       verified: "paranoiaworks.com/download/"
   name "Paranoia File & Text Encryption"
-  desc "Encrypt files, folders, and text with strong algorithms, steganography, and post-quantum key exchange"
+  desc "File and text encryptor with steganography and post-quantum key exchange"
   homepage "https://paranoiaworks.mobi/pfte/"
 
   livecheck do
