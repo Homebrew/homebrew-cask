@@ -13,7 +13,7 @@ cask "dcp-o-matic" do
   end
 
   on_intel do
-    depends_on macos: ">= :yosemite"
+    depends_on macos: ">= :10.10"
   end
 
   on_arm do
