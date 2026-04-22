@@ -12,13 +12,7 @@ cask "dcp-o-matic" do
     regex(%r{href=.*?/tag/\?h=v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
-  on_intel do
-    depends_on macos: ">= :10.10"
-  end
-
-  on_arm do
-    depends_on macos: ">= :big_sur"
-  end
+  depends_on macos: ">= :big_sur"
 
   app "DCP-o-matic #{version.major}.app"
 
