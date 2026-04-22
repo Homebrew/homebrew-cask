@@ -11,6 +11,7 @@ cask "dcp-o-matic" do
     url "https://git.carlh.net/cgit/dcpomatic/"
     regex(%r{href=.*?/tag/\?h=v?(\d+(?:\.\d+)+)["' >]}i)
   end
+
   app "DCP-o-matic #{version.major}.app"
 
   # No zap stanza required
