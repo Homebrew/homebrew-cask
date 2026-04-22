@@ -2,8 +2,8 @@ cask "sapmachine-jdk" do
   arch arm: "aarch64", intel: "x64"
 
   on_arm do
-    version "26"
-    sha256 "c2115ec2606333d821177d5049236153490765e352a4496b71e105d825c42518"
+    version "26.0.1"
+    sha256 "0595a1c7ae744bb0febdfe67fb86e1a517214262e8af21d52448fe0f545a90fa"
 
     # The version information on the homepage is rendered client-side from the
     # following JSON file, so we have to check it instead.
@@ -38,6 +38,8 @@ cask "sapmachine-jdk" do
   name "SapMachine OpenJDK Development Kit"
   desc "OpenJDK distribution from SAP"
   homepage "https://sapmachine.io/"
+
+  depends_on :macos
 
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk.jdk"
 
