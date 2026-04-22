@@ -1,9 +1,9 @@
 cask "spectra-app" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.2.3"
-  sha256 arm:   "e4d3eb91fb9e62ec46ba09e757b5d3c69de660ee2f6fb1957eaba1ac5624cd35",
-         intel: "cbad05916f5e80416387a08a3ed1835525597269ed87300f83b9b8cbe920b82a"
+  version "2.2.5"
+  sha256 arm:   "f2aa749b314de33bb92c9863c686f4f49091c0ef7602a7008eeb8445e31ab14d",
+         intel: "ea02bb9ad69060b2cade962bbc6a03f6950b3019244fc16e380c5659e57fd187"
 
   url "https://github.com/kaochenlong/spectra-app/releases/download/v#{version}/Spectra_#{version}_#{arch}.dmg",
       verified: "github.com/kaochenlong/spectra-app/"
