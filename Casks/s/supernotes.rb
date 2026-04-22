@@ -1,9 +1,9 @@
 cask "supernotes" do
   arch arm: "-arm64"
 
-  version "3.2.3"
-  sha256 arm:   "5f4ff13ad1f7e977115a1e305323363fa148fc26b64bcb1dfc30a2edf957f22a",
-         intel: "6f9fdf1f18fbcef52103a607f19f906a6cdcbb4f8a9d0367938e6d8e5ddf007f"
+  version "3.2.4"
+  sha256 arm:   "c58f92f63b5282382e2af9317cc001064662fb14dc2c8343f1e331c0c5677230",
+         intel: "54f982a17d97df10656d6ffc97d72a88ddf80caf5a62e08ab6b2c68c7b005d97"
 
   url "https://download.supernotes.app/Supernotes-#{version}#{arch}.dmg"
   name "Supernotes"
