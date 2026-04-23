@@ -1,6 +1,6 @@
 cask "github-copilot-for-xcode" do
-  version "0.47.0"
-  sha256 "0bbe5f6e1f79cd2608f3e5d0f259b5835f443019ae9ed571c6f1ee1ab28b3fd5"
+  version "0.48.0"
+  sha256 "169de00f5519952894d8c635f3339b940122883eff4c4683df98ac58a6d2cb08"
 
   url "https://githubcopilotide.z13.web.core.windows.net/#{version}/GitHubCopilotForXcode.dmg",
       verified: "githubcopilotide.z13.web.core.windows.net/"
@@ -16,7 +16,7 @@ cask "github-copilot-for-xcode" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "GitHub Copilot for Xcode.app"
 
