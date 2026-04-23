@@ -2,8 +2,8 @@ cask "graalvm-jdk@25" do
   arch arm: "aarch64", intel: "x64"
 
   on_arm do
-    version "25.0.2,10"
-    sha256 "48584aa5ae0f4df088d63da7bfdf415858ea3407385fb4f559bc4d7e1b300151"
+    version "25.0.3,9"
+    sha256 "a3f02287883d76b18b2b80de56b0be5729acb3c04b81d4b0b0fdfcfd935228f3"
 
     livecheck do
       url "https://java.oraclecloud.com/currentJavaReleases/#{version.major}"
@@ -30,6 +30,8 @@ cask "graalvm-jdk@25" do
   name "GraalVM Java Development Kit"
   desc "GraalVM from Oracle"
   homepage "https://www.graalvm.org/"
+
+  depends_on :macos
 
   # FIXME: Change 11 back to #{version.csv.second} on the next release
   artifact "graalvm-jdk-#{version.csv.first}+#{version.csv.second}.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
