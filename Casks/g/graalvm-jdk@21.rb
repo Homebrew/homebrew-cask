@@ -31,6 +31,8 @@ cask "graalvm-jdk@21" do
   desc "GraalVM from Oracle"
   homepage "https://www.graalvm.org/"
 
+  depends_on :macos
+
   artifact "graalvm-jdk-#{version.csv.first}+#{version.csv.second}.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
   # No zap stanza required
