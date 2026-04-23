@@ -1,12 +1,11 @@
 cask "moves" do
-  version "1.9.1"
-  sha256 "3371e4388eadfeab13714a2fccdb7becb200eb313d4f2014cac6740c82d4eded"
+  version "1.9.3"
+  sha256 "01551d1d215e60b9d075151168572d3d9c580444e4cc05e585e91d6999dd59bc"
 
-  url "https://github.com/mikker/Moves.app/releases/download/v#{version}/Moves.app.zip",
-      verified: "github.com/mikker/Moves.app/"
+  url "https://github.com/mikker/Moves.app/releases/download/v#{version}/Moves.app.zip"
   name "Moves"
   desc "Window manager"
-  homepage "https://mikkelmalmberg.com/moves"
+  homepage "https://github.com/mikker/Moves.app/"
 
   livecheck do
     url "https://mikker.github.io/Moves.app/appcast.xml"
