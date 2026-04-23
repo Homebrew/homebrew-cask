@@ -1,6 +1,6 @@
 cask "codekit" do
-  version "3.35,34903"
-  sha256 "ec3c7cca5df5605ffcbf52eb567e3f0d59e115fa9bc3ff73d4567a43256c53a9"
+  version "3.36,34921"
+  sha256 "c5e9a80ae3fc98884ea4a6a6ee49b97b30b35b132a43c7ab1aa31ac69a90bee7"
 
   url "https://codekitapp.com/binaries/codekit-#{version.csv.second}.zip"
   name "CodeKit"
