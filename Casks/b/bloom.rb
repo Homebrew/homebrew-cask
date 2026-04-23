@@ -1,6 +1,6 @@
 cask "bloom" do
-  version "1.5.32"
-  sha256 "f06713064a57b3735039a074c2adcf523d30242c691635027a054e07cea79450"
+  version "1.5.33"
+  sha256 "45b78008a25ac83366b06ba9e5bbe6fff0a71113150d5f555b0049ba70c04ffc"
 
   url "https://bloomapp.club/downloads/bloom/Bloom-v#{version}.dmg",
       referer: "https://bloomapp.club"
