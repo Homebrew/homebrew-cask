@@ -31,6 +31,8 @@ cask "graalvm-jdk@25" do
   desc "GraalVM from Oracle"
   homepage "https://www.graalvm.org/"
 
+  depends_on :macos
+
   # FIXME: Change 11 back to #{version.csv.second} on the next release
   artifact "graalvm-jdk-#{version.csv.first}+#{version.csv.second}.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
