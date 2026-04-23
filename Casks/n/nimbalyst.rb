@@ -1,9 +1,9 @@
 cask "nimbalyst" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.57.42"
-  sha256 arm:   "555672a49a8e4a11499b71172d0ac243388b1cd32ab070ce83e36b3b5550f562",
-         intel: "bcdccf79699f9b1574403b50302affb63c70660998de744a3f6ee47bcfef9891"
+  version "0.58.3"
+  sha256 arm:   "0e6d7fb7ea7c521664423a3ac24cc8208d2ea077c0390406230f8315c434bff5",
+         intel: "50700580226851818f4c3e31c481422e0e49c08de6dcff9f507e9ef4940f5b10"
 
   url "https://github.com/Nimbalyst/nimbalyst/releases/download/v#{version}/Nimbalyst-macOS-#{arch}.dmg",
       verified: "github.com/Nimbalyst/nimbalyst/"
