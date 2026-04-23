@@ -1,11 +1,11 @@
 cask "nightshade" do
-  version "1.0.2"
-  sha256 "d58c591bbcf4efde3c5e683658d1dde601c8bb4664e17120c64b3ffcaba0a769"
+  version "1.1"
+  sha256 "ce9df85dd4227763bb89505a275e3b0dba58452b8c86a9b4ceec159fca188e0a"
 
-  url "https://mirror.cs.uchicago.edu/fawkes/files/nightshade/Nightshade-#{version}-m1.dmg"
+  url "https://webvault.cs.uchicago.edu/sandlab/fawkes/files/nightshade/Nightshade-#{version}-m1.dmg"
   name "Nightshade"
   desc "Tool that makes images unsuitable for AI model training"
-  homepage "https://nightshade.cs.uchicago.edu/index.html"
+  homepage "https://nightshade.cs.uchicago.edu/"
 
   livecheck do
     url "https://nightshade.cs.uchicago.edu/downloads.html"
@@ -13,6 +13,7 @@ cask "nightshade" do
   end
 
   depends_on arch: :arm64
+  depends_on macos: ">= :big_sur"
 
   app "Nightshade.app"
 
