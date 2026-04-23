@@ -1,9 +1,9 @@
 cask "flyenv" do
   arch arm: "-arm64"
 
-  version "4.14.1"
-  sha256 arm:   "9184e1c6e0941cafb34939311f4d945c9c6fa7275700b4a691d3819e5ffb1ed5",
-         intel: "96725d59ef35b7397f9501a2eb7f34966cd2efa2bbdcf40558c8e1cf21cb9e33"
+  version "4.14.2"
+  sha256 arm:   "54811379d40560c7f9774b34306c96c6a0695f6710207fb78b626a1daf7e1db3",
+         intel: "56e86aba1238f80dfad08adaf6e8105e996372719396313bce23e1668a9cd113"
 
   url "https://github.com/xpf0000/FlyEnv/releases/download/v#{version}/FlyEnv-#{version}#{arch}-mac.zip",
       verified: "github.com/xpf0000/FlyEnv/"
@@ -17,7 +17,7 @@ cask "flyenv" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "FlyEnv.app"
 
