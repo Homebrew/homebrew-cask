@@ -1,6 +1,6 @@
 cask "aptakube" do
-  version "1.16.2"
-  sha256 "974f3c0ab96f1e75ce9844bb9823abf563d4187f7e1464a76d4a3a914255978e"
+  version "1.16.3"
+  sha256 "3a51810cb83afd0feb8293260ff89db177c787335fa6e904a6b086527193577e"
 
   url "https://releases.aptakube.com/Aptakube_#{version}_universal.dmg"
   name "Aptakube"
@@ -13,8 +13,6 @@ cask "aptakube" do
       json["version"]
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: ">= :big_sur"
