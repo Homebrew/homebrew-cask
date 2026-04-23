@@ -1,9 +1,9 @@
 cask "luanti" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.15.1,12.3"
-  sha256 arm:   "846539882367658d9137b26e83a590dd6ebfc110861e3d1f213b833899bad24f",
-         intel: "7c66d8e38dc3806f1dbaf11f1d2fd999453d576df6e21c38a57917305fab115a"
+  version "5.15.2,12.3"
+  sha256 arm:   "6a052eced6e674167aa19cde6ec575a30ee463cc29580d3d25331130c0077962",
+         intel: "8838d087d2023ffff682f9a5dbd857d5502c0ae880512997cb42192c1381a433"
 
   url "https://github.com/luanti-org/luanti/releases/download/#{version.csv.first}/luanti_#{version.csv.first}-macos#{version.csv.second}_#{arch}.zip",
       verified: "github.com/luanti-org/luanti/"
