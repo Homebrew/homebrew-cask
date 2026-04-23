@@ -1,9 +1,9 @@
 cask "intellij-idea" do
   arch arm: "-aarch64"
 
-  version "2026.1,261.22158.277"
-  sha256 arm:   "90f2aeca3fd0173102b3d2734ad863602bb17146c317fe2d88b0618fd47ea600",
-         intel: "74de5e8a49d16aa1892115a67506df3b932b8806c66ba494ed573a72901c1899"
+  version "2026.1.1,261.23567.138"
+  sha256 arm:   "d2739c1e218e1d2f50a2772e270b43e9c978bf7e26a7d70ec76a0e074b4520e3",
+         intel: "94f37054b3d2ae695054563d003dfec7361e306ec9667513325e37ad78efb563"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.first}#{arch}.dmg"
   name "IntelliJ IDEA Ultimate"
