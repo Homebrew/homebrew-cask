@@ -1,6 +1,6 @@
 cask "jclasslib-bytecode-viewer" do
-  version "7.0"
-  sha256 "d11612e5d4a92970a356264ec74b960beb12a6f56a028204382720e0dbbfecfb"
+  version "7.1"
+  sha256 "b99a7dd84b2525e75d27ea9170f1da29741c35ea10d22a65d15fd2191f04a739"
 
   url "https://github.com/ingokegel/jclasslib/releases/download/#{version}/jclasslib_macos_#{version.dots_to_underscores}.dmg"
   name "jclasslib bytecode viewer"
