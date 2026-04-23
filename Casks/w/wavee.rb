@@ -7,7 +7,7 @@ cask "wavee" do
 
   url "https://github.com/Johuniq/wavee/releases/download/v#{version}/Wavee_#{version}_#{arch}.dmg"
   name "Wavee"
-  desc "Wave your voice. Get text at your cursor"
+  desc "Voice to text desktop application powered by AI"
   homepage "https://github.com/Johuniq/wavee"
 
   livecheck do
@@ -16,4 +16,12 @@ cask "wavee" do
   end
 
   app "Wavee.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.johuniq.wavee",
+    "~/Library/Caches/com.johuniq.wavee",
+    "~/Library/Preferences/com.johuniq.wavee.plist",
+    "~/Library/Saved Application State/com.johuniq.wavee.savedState",
+    "~/Library/WebKit/com.johuniq.wavee",
+  ]
 end
