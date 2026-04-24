@@ -8,6 +8,8 @@ cask "ukrainian-typographic-keyboard" do
   desc "Combined Ukrainian keyboard layout with typographic symbols"
   homepage "https://denysdovhan.com/ukrainian-typographic-keyboard"
 
+  depends_on :macos
+
   keyboard_layout "ukrainian-typographic-keyboard-#{version}/ukrainian-typographic-keyboard.bundle"
 
   # No zap stanza required
