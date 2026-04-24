@@ -23,6 +23,8 @@ cask "cursorcerer" do
   desc "Preference Pane for controlling cursor hiding"
   homepage "https://doomlaser.com/cursorcerer-hide-your-cursor-at-will/"
 
+  depends_on :macos
+
   prefpane "Cursorcerer.prefPane"
 
   zap trash: "~/Library/Preferences/com.doomlaser.cursorcerer.plist"
