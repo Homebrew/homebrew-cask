@@ -7,6 +7,8 @@ cask "clocksaver" do
   desc "Screensavers inspired by Braun watches"
   homepage "https://github.com/soffes/Clock.saver"
 
+  depends_on :macos
+
   screen_saver "Clock.saver"
 
   # No zap stanza required
