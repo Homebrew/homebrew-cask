@@ -17,6 +17,8 @@ cask "wondershare-uniconverter" do
     end
   end
 
+  depends_on :macos
+
   app "Wondershare UniConverter #{version.major}.app"
 
   zap trash: [

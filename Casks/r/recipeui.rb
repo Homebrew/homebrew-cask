@@ -15,6 +15,7 @@ cask "recipeui" do
   disable! date: "2025-06-23", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "RecipeUI.app"
 

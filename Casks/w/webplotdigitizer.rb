@@ -22,6 +22,8 @@ cask "webplotdigitizer" do
   deprecate! date: "2024-06-10", because: :discontinued
   disable! date: "2025-06-11", because: :discontinued
 
+  depends_on :macos
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.webplotdigitizer.sfl*",
     "~/Library/Application Support/WebPlotDigitizer",

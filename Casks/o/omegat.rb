@@ -15,6 +15,7 @@ cask "omegat" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "omegat@latest"
+  depends_on :macos
 
   app "OmegaT_#{version}_Mac/OmegaT.app"
 

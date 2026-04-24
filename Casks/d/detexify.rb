@@ -11,6 +11,8 @@ cask "detexify" do
   deprecate! date: "2025-03-21", because: :discontinued
   disable! date: "2026-03-28", because: :discontinued
 
+  depends_on :macos
+
   app "Detexify.app"
 
   zap trash: "~/Library/Preferences/org.kirelabs.Detexify-Mac.plist"

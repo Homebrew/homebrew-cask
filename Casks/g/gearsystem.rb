@@ -10,6 +10,7 @@ cask "gearsystem" do
   desc "Sega Master System, Game Gear and SG-1000 emulator"
   homepage "https://github.com/drhelius/Gearsystem"
 
+  depends_on :macos
   container nested: "Gearsystem.app.zip"
 
   app "Gearsystem.app"

@@ -38,6 +38,8 @@ cask "grafx" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Grafx#{version.major}.app"
 
   zap trash: "~/Library/Preferences/com.googlecode.grafx2"

@@ -12,6 +12,8 @@ cask "versions" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "Versions.app"
 
   zap trash: [

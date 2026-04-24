@@ -15,6 +15,8 @@ cask "tablecruncher" do
     regex(/href=.*?Tablecruncher[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.zip/i)
   end
 
+  depends_on :macos
+
   app "Tablecruncher.app"
 
   zap trash: [

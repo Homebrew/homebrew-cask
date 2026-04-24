@@ -13,6 +13,8 @@ cask "ioquake3" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "ioquake3.app"
 
   zap trash: [

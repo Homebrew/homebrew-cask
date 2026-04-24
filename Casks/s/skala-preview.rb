@@ -11,5 +11,7 @@ cask "skala-preview" do
   deprecate! date: "2024-06-25", because: :unmaintained
   disable! date: "2025-06-25", because: :unmaintained
 
+  depends_on :macos
+
   app "Skala Preview.app"
 end

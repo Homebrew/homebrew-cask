@@ -15,6 +15,8 @@ cask "edrawmind" do
     end
   end
 
+  depends_on :macos
+
   app "EdrawMind.app"
 
   zap trash: [

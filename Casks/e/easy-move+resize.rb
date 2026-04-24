@@ -14,6 +14,8 @@ cask "easy-move+resize" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Easy Move+Resize.app"
 
   zap trash: "~/Library/Preferences/org.dmarcotte.Easy-Move-Resize.plist"

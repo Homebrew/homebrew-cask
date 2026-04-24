@@ -13,6 +13,8 @@ cask "supertuxkart" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "SuperTuxKart.app"
 
   zap trash: [

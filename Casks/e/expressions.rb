@@ -12,6 +12,8 @@ cask "expressions" do
     regex(%r{href=.*?/Expressions-(\d+(?:\.\d+)*)\.zip}i)
   end
 
+  depends_on :macos
+
   app "Expressions.app"
 
   zap trash: [

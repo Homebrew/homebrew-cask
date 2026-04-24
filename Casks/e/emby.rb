@@ -13,6 +13,8 @@ cask "emby" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "Emby.app"
 
   zap trash: [

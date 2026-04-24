@@ -12,6 +12,8 @@ cask "middleclick" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "MiddleClick.app"
 
   uninstall quit:       "art.ginzburg.MiddleClick",

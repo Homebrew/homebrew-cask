@@ -15,6 +15,8 @@ cask "banksiagui" do
     regex(/Version v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "banksiagui-#{version}/banksiagui.app"
 
   zap trash: [

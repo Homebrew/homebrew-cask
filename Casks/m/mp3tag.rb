@@ -12,6 +12,8 @@ cask "mp3tag" do
     regex(/href=.*?Mp3tag[._-]?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   app "Mp3tag.app"
 
   zap trash: [

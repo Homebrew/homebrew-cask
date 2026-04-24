@@ -26,6 +26,8 @@ cask "swiftformat-for-xcode" do
     end
   end
 
+  depends_on :macos
+
   app "SwiftFormat for Xcode.app"
 
   zap trash: [

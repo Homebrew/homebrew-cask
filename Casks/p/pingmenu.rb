@@ -10,6 +10,8 @@ cask "pingmenu" do
   deprecate! date: "2024-07-14", because: :unmaintained
   disable! date: "2025-07-14", because: :unmaintained
 
+  depends_on :macos
+
   app "PingMenu.app"
 
   caveats do

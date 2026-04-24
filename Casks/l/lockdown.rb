@@ -11,6 +11,8 @@ cask "lockdown" do
   deprecate! date: "2025-03-02", because: :unmaintained
   disable! date: "2026-03-02", because: :unmaintained
 
+  depends_on :macos
+
   app "Lockdown.app"
 
   caveats do

@@ -12,6 +12,8 @@ cask "ghosttile" do
   deprecate! date: "2024-10-14", because: :unmaintained
   disable! date: "2025-10-14", because: :unmaintained
 
+  depends_on :macos
+
   app "GhostTile.app"
 
   caveats do

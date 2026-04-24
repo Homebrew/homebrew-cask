@@ -13,6 +13,8 @@ cask "vallum" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "Vallum.app"
 
   uninstall launchctl: [

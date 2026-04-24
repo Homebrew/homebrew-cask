@@ -10,6 +10,8 @@ cask "cinch" do
   deprecate! date: "2025-03-01", because: :unmaintained
   disable! date: "2026-03-01", because: :unmaintained
 
+  depends_on :macos
+
   app "Cinch.app"
 
   caveats do

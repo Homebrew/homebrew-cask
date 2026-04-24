@@ -13,6 +13,8 @@ cask "dremel-slicer" do
     regex(/Dremel3DSlicer[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
 
+  depends_on :macos
+
   app "Dremel3DSlicer-#{version}-mac/Dremel DigiLab 3D Slicer.app"
 
   zap trash: [

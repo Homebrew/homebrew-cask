@@ -12,6 +12,8 @@ cask "elgato-video-capture" do
     regex(/Video[._-]Capture[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   app "Elgato Video Capture.app"
 
   zap trash: [

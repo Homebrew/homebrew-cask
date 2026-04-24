@@ -24,6 +24,7 @@ cask "itsycal" do
   homepage "https://www.mowglii.com/itsycal/"
 
   auto_updates true
+  depends_on :macos
 
   app "Itsycal.app"
 

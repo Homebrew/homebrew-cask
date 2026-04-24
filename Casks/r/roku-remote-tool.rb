@@ -16,6 +16,8 @@ cask "roku-remote-tool" do
     end
   end
 
+  depends_on :macos
+
   app "roku_remote_tool.app"
 
   zap trash: [

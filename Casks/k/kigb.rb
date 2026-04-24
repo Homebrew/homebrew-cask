@@ -12,6 +12,8 @@ cask "kigb" do
     regex(/>\s*?KiGB\s+?v?(\d+(?:\.\d+)+)\s*?</i)
   end
 
+  depends_on :macos
+
   app "KiGB v#{version}/KiGB.app"
 
   zap trash: [

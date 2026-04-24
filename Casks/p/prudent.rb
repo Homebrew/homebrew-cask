@@ -8,6 +8,8 @@ cask "prudent" do
   desc "Integrated environment for your personal and family ledger"
   homepage "https://prudent.me/"
 
+  depends_on :macos
+
   app "Prudent.app"
 
   zap trash: [

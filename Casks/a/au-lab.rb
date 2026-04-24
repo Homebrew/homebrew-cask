@@ -12,6 +12,8 @@ cask "au-lab" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "AU Lab.app"
 
   zap trash: "~/Library/Preferences/com.apple.aulab.plist"

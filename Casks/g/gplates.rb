@@ -17,6 +17,8 @@ cask "gplates" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   # The url is unversioned, but the download returns an app directory with a version number
   rename "GPlates_*", "Gplates"
 

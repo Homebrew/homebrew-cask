@@ -14,6 +14,7 @@ cask "sourcetree" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Sourcetree.app"
   binary "#{appdir}/Sourcetree.app/Contents/Resources/stree"

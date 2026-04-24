@@ -18,6 +18,8 @@ cask "eddie" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Eddie.app"
 
   uninstall quit: "com.eddie.client"

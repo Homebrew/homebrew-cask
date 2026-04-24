@@ -10,6 +10,8 @@ cask "hacker-menu" do
   deprecate! date: "2024-06-12", because: :unmaintained
   disable! date: "2025-06-12", because: :unmaintained
 
+  depends_on :macos
+
   app "Hacker Menu.app"
 
   zap trash: [

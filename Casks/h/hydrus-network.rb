@@ -20,6 +20,8 @@ cask "hydrus-network" do
   deprecate! date: "2025-09-03", because: :discontinued
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Hydrus Network.app"
 
   zap trash: "~/Library/Hydrus"

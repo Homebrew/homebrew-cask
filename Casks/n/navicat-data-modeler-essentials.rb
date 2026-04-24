@@ -9,6 +9,8 @@ cask "navicat-data-modeler-essentials" do
 
   deprecate! date: "2026-02-23", because: :discontinued
 
+  depends_on :macos
+
   app "Navicat Data Modeler Essentials.app"
 
   zap trash: [

@@ -20,6 +20,7 @@ cask "keyboard-maestro" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Keyboard Maestro.app"
 

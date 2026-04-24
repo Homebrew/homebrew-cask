@@ -21,6 +21,7 @@ cask "gitkraken" do
 
   auto_updates true
   conflicts_with cask: "gitkraken-on-premise-serverless"
+  depends_on :macos
 
   app "GitKraken.app"
 

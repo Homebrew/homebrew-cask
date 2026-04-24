@@ -12,6 +12,8 @@ cask "mini-vmac" do
     regex(/minivmac[._-]v?(\d+(?:\.\d+)+)[._-]mc64[._-]bin\.t/i)
   end
 
+  depends_on :macos
+
   app "Mini vMac.app"
 
   caveats do

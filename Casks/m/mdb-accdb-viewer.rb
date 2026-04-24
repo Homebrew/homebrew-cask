@@ -12,6 +12,8 @@ cask "mdb-accdb-viewer" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "MDB ACCDB Viewer.app"
 
   zap trash: [

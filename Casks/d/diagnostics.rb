@@ -7,6 +7,8 @@ cask "diagnostics" do
   desc "Diagnostic (crash) reports viewer"
   homepage "https://github.com/macmade/Diagnostics"
 
+  depends_on :macos
+
   app "Diagnostics.app"
 
   zap trash: [

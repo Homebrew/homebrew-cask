@@ -11,6 +11,8 @@ cask "comma-chameleon" do
   deprecate! date: "2024-08-19", because: :discontinued
   disable! date: "2025-08-19", because: :discontinued
 
+  depends_on :macos
+
   app "Comma Chameleon-darwin-x64/Comma Chameleon.app"
 
   caveats do

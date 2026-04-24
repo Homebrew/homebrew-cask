@@ -21,6 +21,7 @@ cask "hyper@canary" do
 
   auto_updates true
   conflicts_with cask: "hyper"
+  depends_on :macos
 
   app "Hyper.app"
   binary "#{appdir}/Hyper.app/Contents/Resources/bin/hyper"

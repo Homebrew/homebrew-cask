@@ -20,6 +20,8 @@ cask "mixing-station" do
     end
   end
 
+  depends_on :macos
+
   app "Mixing Station.app"
 
   zap trash: [

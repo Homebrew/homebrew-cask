@@ -11,6 +11,8 @@ cask "nodeclipse" do
   deprecate! date: "2024-09-01", because: :unmaintained
   disable! date: "2025-09-02", because: :unmaintained
 
+  depends_on :macos
+
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/8183

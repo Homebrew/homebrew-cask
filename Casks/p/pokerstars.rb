@@ -12,6 +12,7 @@ cask "pokerstars" do
     strategy :extract_plist
   end
 
+  depends_on :macos
   container nested: "PokerStars/PokerStars.dmg"
 
   app "PokerStars.app"

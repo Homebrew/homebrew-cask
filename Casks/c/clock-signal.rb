@@ -14,6 +14,8 @@ cask "clock-signal" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Clock Signal.app"
 
   uninstall quit: "TH.Clock-Signal"

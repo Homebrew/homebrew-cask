@@ -11,6 +11,7 @@ cask "liteicon" do
   disable! date: "2025-06-11", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "LiteIcon.app"
 

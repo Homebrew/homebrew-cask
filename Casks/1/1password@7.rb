@@ -15,6 +15,7 @@ cask "1password@7" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "1Password #{version.major}.app"
 

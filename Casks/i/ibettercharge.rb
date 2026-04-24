@@ -19,6 +19,8 @@ cask "ibettercharge" do
     end
   end
 
+  depends_on :macos
+
   app "iBetterCharge.app"
 
   zap trash: [

@@ -8,6 +8,8 @@ cask "media-converter" do
   desc "Convert avi, wmv, mkv, rm, mov and more to other formats"
   homepage "https://media-converter.sourceforge.io/"
 
+  depends_on :macos
+
   app "Media Converter.localized/Media Converter.app"
 
   zap trash: "~/Library/Preferences/com.kiwifruitware.Media-Converter.plist"

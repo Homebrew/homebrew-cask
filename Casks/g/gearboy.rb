@@ -15,6 +15,7 @@ cask "gearboy" do
     strategy :github_latest
   end
 
+  depends_on :macos
   container nested: "Gearboy.app.zip"
 
   app "Gearboy.app"

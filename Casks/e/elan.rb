@@ -21,6 +21,8 @@ cask "elan" do
     end
   end
 
+  depends_on :macos
+
   app "ELAN_#{version.dots_to_hyphens}#{arch}_mac/ELAN_#{version}.app"
 
   zap trash: [

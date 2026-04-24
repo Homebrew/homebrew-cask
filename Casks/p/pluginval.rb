@@ -13,6 +13,8 @@ cask "pluginval" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "pluginval.app"
 
   zap trash: [

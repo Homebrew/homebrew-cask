@@ -12,6 +12,8 @@ cask "fresh" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Fresh.app"
 
   zap trash: [

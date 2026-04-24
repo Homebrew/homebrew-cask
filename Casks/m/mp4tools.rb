@@ -12,6 +12,8 @@ cask "mp4tools" do
     regex(%r{href=.*?/mp4tools(\d+(?:\.\d+)*)\.zip}i)
   end
 
+  depends_on :macos
+
   app "mp4tools#{version}/MP4Tools.app"
 
   zap trash: [

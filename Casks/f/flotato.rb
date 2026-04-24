@@ -11,6 +11,8 @@ cask "flotato" do
   deprecate! date: "2024-07-15", because: :unmaintained
   disable! date: "2025-07-15", because: :unmaintained
 
+  depends_on :macos
+
   app "Flotato.app"
 
   zap trash: [

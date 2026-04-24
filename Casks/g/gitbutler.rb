@@ -22,6 +22,7 @@ cask "gitbutler" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "GitButler.app"
   binary "#{appdir}/GitButler.app/Contents/MacOS/gitbutler-tauri", target: "but"

@@ -10,6 +10,8 @@ cask "bluesense" do
   deprecate! date: "2025-03-30", because: :unmaintained
   disable! date: "2026-03-30", because: :unmaintained
 
+  depends_on :macos
+
   app "BlueSense.app"
 
   zap trash: [

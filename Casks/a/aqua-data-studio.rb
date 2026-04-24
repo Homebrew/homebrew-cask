@@ -13,6 +13,8 @@ cask "aqua-data-studio" do
     regex(/>\s*Version\s?v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Aqua Data Studio.app"
 
   zap trash: [

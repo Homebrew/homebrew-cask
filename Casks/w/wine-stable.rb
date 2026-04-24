@@ -37,6 +37,7 @@ cask "wine-stable" do
     "wine@devel",
     "wine@staging",
   ]
+  depends_on :macos
   depends_on cask: "gstreamer-runtime"
 
   app "Wine Stable.app"

@@ -7,6 +7,8 @@ cask "moose" do
   name "moose"
   homepage "https://getmoose.in/"
 
+  depends_on :macos
+
   app "moose.app"
 
   zap trash: [

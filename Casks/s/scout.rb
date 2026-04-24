@@ -11,6 +11,8 @@ cask "scout" do
   deprecate! date: "2024-11-11", because: :unmaintained
   disable! date: "2025-11-11", because: :unmaintained
 
+  depends_on :macos
+
   app "Scout-App.app"
 
   zap trash: "~/Library/Application Support/scout-app"

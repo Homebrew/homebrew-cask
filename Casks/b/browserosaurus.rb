@@ -13,6 +13,7 @@ cask "browserosaurus" do
   deprecate! date: "2025-08-30", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Browserosaurus.app"
 

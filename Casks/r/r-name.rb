@@ -9,6 +9,8 @@ cask "r-name" do
   deprecate! date: "2024-08-25", because: :unmaintained
   disable! date: "2025-08-26", because: :unmaintained
 
+  depends_on :macos
+
   app "R-Name.app"
 
   caveats do

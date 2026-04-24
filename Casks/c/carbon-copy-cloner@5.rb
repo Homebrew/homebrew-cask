@@ -16,6 +16,7 @@ cask "carbon-copy-cloner@5" do
     "carbon-copy-cloner",
     "carbon-copy-cloner@6",
   ]
+  depends_on :macos
 
   app "Carbon Copy Cloner.app"
 

@@ -23,6 +23,8 @@ cask "spundle" do
     end
   end
 
+  depends_on :macos
+
   app "spundle#{version.csv.first.no_dots}/Spundle.app"
 
   zap trash: [

@@ -20,6 +20,8 @@ cask "flykey" do
     end
   end
 
+  depends_on :macos
+
   app "FlyKey.app"
 
   zap trash: [

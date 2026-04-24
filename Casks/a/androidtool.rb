@@ -7,6 +7,8 @@ cask "androidtool" do
   desc "App for recording the screen and installing apps in iOS and Android"
   homepage "https://github.com/mortenjust/androidtool-mac"
 
+  depends_on :macos
+
   app "AndroidTool.app"
 
   zap trash: [

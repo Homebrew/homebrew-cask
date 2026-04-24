@@ -13,6 +13,7 @@ cask "blocs" do
   end
 
   auto_updates true
+  depends_on :macos
   container nested: "Blocs/Blocs-#{version.major}.dmg"
 
   app "Blocs.app"

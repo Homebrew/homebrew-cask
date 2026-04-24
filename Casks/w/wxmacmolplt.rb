@@ -19,6 +19,8 @@ cask "wxmacmolplt" do
     end
   end
 
+  depends_on :macos
+
   app "MacMolPlt/wxMacMolPlt.app"
 
   zap trash: [

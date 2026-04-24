@@ -14,6 +14,7 @@ cask "mos" do
   end
 
   conflicts_with cask: "mos@beta"
+  depends_on :macos
 
   app "Mos.app"
 

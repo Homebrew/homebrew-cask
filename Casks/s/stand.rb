@@ -13,6 +13,8 @@ cask "stand" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Stand.app"
 
   uninstall quit: "com.reddavis.Stand"

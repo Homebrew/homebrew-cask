@@ -29,6 +29,7 @@ cask "kaleidoscope@2" do
     kaleidoscope
     kaleidoscope@3
   ]
+  depends_on :macos
 
   app "Kaleidoscope.app"
   binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"

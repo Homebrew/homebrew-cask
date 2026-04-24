@@ -10,6 +10,8 @@ cask "upm" do
   deprecate! date: "2024-08-30", because: :unmaintained
   disable! date: "2025-08-30", because: :unmaintained
 
+  depends_on :macos
+
   app "upm-mac-#{version}/UPM.app"
 
   zap trash: "~/Library/Saved Application State/com._17od.upm.gui.MainWindow.savedState" \

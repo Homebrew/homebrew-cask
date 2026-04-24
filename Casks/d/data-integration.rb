@@ -10,6 +10,8 @@ cask "data-integration" do
 
   disable! date: "2025-08-24", because: "the download now requires a login"
 
+  depends_on :macos
+
   app "data-integration/Data Integration.app"
 
   caveats do

@@ -13,6 +13,8 @@ cask "celestia" do
     regex(/href=.*?celestia[._-]v?(\d+(?:\.\d+)+)[._-]macOS\.zip/i)
   end
 
+  depends_on :macos
+
   app "Celestia.app"
 
   zap trash: [

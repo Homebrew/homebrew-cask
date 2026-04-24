@@ -13,6 +13,8 @@ cask "envkey" do
     regex(/^darwin-x64-prod[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "EnvKey.app"
 
   zap trash: [

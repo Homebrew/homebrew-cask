@@ -11,6 +11,8 @@ cask "falcon-sql-client" do
   deprecate! date: "2024-06-17", because: :discontinued
   disable! date: "2025-06-17", because: :discontinued
 
+  depends_on :macos
+
   app "Falcon SQL Client.app"
 
   zap trash: [
