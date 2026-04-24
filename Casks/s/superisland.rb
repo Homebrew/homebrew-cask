@@ -8,11 +8,6 @@ cask "superisland" do
   desc "Dynamic island utility"
   homepage "https://dynamicisland.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :sonoma"
 
   app "SuperIsland.app"
