@@ -8,4 +8,6 @@ cask "serverbox" do
   homepage "https://github.com/lollipopkit/flutter_server_box"
 
   app "Server Box.app"
+
+  zap trash: "~/Library/Containers/com.lollipopkit.toolbox"
 end
