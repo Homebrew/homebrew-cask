@@ -4,7 +4,7 @@ cask "server-box" do
 
   url "https://github.com/lollipopkit/flutter_server_box/releases/download/v#{version}/ServerBox-#{version}.dmg"
   name "ServerBox"
-  desc "App for monitoring server status with SSH terminal, SFTP, Container management and more."
+  desc "App for monitoring server status with SSH terminal, SFTP, Container management"
   homepage "https://github.com/lollipopkit/flutter_server_box"
 
   app "Server Box.app"
