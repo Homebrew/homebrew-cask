@@ -30,6 +30,8 @@ cask "magicavoxel" do
     end
   end
 
+  depends_on :macos
+
   suite staged_path, target: "MagicaVoxel"
 
   zap trash: [

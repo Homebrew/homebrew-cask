@@ -29,6 +29,8 @@ cask "java@beta" do
     end
   end
 
+  depends_on :macos
+
   artifact "jdk-#{version.csv.first}.jdk", target: "/Library/Java/JavaVirtualMachines/openjdk-#{version.csv.first}.jdk"
 
   zap trash: "~/Library/Saved Application State/net.java.openjdk*.savedState"

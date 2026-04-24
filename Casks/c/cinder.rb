@@ -13,6 +13,8 @@ cask "cinder" do
     regex(/href=.*?cinder[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
 
+  depends_on :macos
+
   suite "cinder_#{version}_mac"
 
   zap trash: "~/Library/Preferences/org.libcinder.TinderBox.plist"

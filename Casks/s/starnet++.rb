@@ -15,6 +15,8 @@ cask "starnet++" do
     end
   end
 
+  depends_on :macos
+
   bin_path = "#{staged_path}/StarNetv#{version.csv.first}CLI_MacOS"
 
   shimscript = "#{staged_path}/starnet_wrapper.sh"

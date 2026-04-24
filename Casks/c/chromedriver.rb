@@ -21,6 +21,7 @@ cask "chromedriver" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "chromedriver@beta"
+  depends_on :macos
 
   binary "chromedriver-mac-#{arch}/chromedriver"
 

@@ -15,6 +15,8 @@ cask "coderabbit" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   binary "coderabbit"
 
   zap trash: "~/.coderabbit"

@@ -9,6 +9,8 @@ cask "livetail" do
   deprecate! date: "2024-10-30", because: :unmaintained
   disable! date: "2025-11-01", because: :unmaintained
 
+  depends_on :macos
+
   binary "livetail"
 
   caveats do

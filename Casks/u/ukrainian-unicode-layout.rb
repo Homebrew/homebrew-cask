@@ -7,6 +7,8 @@ cask "ukrainian-unicode-layout" do
   desc "Installer for Ukrainian Unicode layout"
   homepage "https://github.com/korzhyk/OSX-Ukrainian-Unicode-Layout"
 
+  depends_on :macos
+
   keyboard_layout "macOS-Ukrainian-Unicode-Layout-#{version}"
 
   # No zap stanza required

@@ -12,6 +12,8 @@ cask "codeql" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   binary "#{staged_path}/codeql/codeql"
 
   # No zap stanza required

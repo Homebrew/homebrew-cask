@@ -10,6 +10,8 @@ cask "terminology" do
   # Artifact not available over HTTPS
   disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
+  depends_on :macos
+
   dictionary "Terminology-for-OS-X/Terminology.dictionary"
 
   # No zap stanza required

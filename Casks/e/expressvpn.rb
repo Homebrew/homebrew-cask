@@ -12,6 +12,8 @@ cask "expressvpn" do
     regex(/href=.*?expressvpn[._-]macos[._-]universal[._-]v?(\d+(?:\.\d+)+)[._-]release\.zip/i)
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "#{staged_path}/ExpressVPN Installer.app/Contents/MacOS/ExpressVPN",
     sudo:       true,

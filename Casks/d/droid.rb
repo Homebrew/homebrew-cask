@@ -15,6 +15,7 @@ cask "droid" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
   depends_on formula: "ripgrep"
 
   binary "droid"

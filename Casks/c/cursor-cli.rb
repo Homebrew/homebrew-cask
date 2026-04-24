@@ -15,6 +15,8 @@ cask "cursor-cli" do
     regex(%r{downloads\.cursor\.com/lab/v?(\d+(?:\.\d+)+(?:[._-]\h+)?)/}i)
   end
 
+  depends_on :macos
+
   binary "#{staged_path}/dist-package/cursor-agent", target: "cursor-agent"
 
   zap trash: [

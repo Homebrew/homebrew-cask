@@ -26,6 +26,8 @@ cask "go-agent" do
     end
   end
 
+  depends_on :macos
+
   binary "go-agent-#{version.csv.first}/bin/go-agent"
 
   # No zap stanza required

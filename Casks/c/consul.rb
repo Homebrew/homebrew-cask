@@ -16,6 +16,8 @@ cask "consul" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/}i)
   end
 
+  depends_on :macos
+
   binary "consul"
 
   # No zap stanza required

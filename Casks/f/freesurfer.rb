@@ -12,6 +12,8 @@ cask "freesurfer" do
     regex(/v(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   suite "freesurfer"
 
   zap trash: "~/Library/Preferences/edu.harvard.mgh.nmr.FreeView.plist"

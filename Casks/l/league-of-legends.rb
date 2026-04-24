@@ -13,6 +13,8 @@ cask "league-of-legends" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   installer manual: "Install League of Legends na.app"
 
   uninstall delete: "/Applications/League of Legends.app"

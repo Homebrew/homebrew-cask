@@ -17,6 +17,8 @@ cask "foks" do
     end
   end
 
+  depends_on :macos
+
   binary "foks"
   binary "foks", target: "git-remote-foks"
 

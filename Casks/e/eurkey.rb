@@ -10,6 +10,8 @@ cask "eurkey" do
 
   deprecate! date: "2026-04-11", because: :discontinued
 
+  depends_on :macos
+
   keyboard_layout "EurKEY-Mac-master/EurKEY.icns"
   keyboard_layout "EurKEY-Mac-master/EurKEY.keylayout"
 

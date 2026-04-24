@@ -10,6 +10,8 @@ cask "codeship-jet" do
 
   disable! date: "2026-04-04", because: :no_longer_available
 
+  depends_on :macos
+
   binary "jet"
 
   # No zap stanza required

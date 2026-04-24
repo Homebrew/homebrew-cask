@@ -31,6 +31,7 @@ cask "miniconda" do
 
   auto_updates true
   conflicts_with cask: "miniforge"
+  depends_on :macos
   container type: :naked
 
   installer script: {

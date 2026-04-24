@@ -26,6 +26,8 @@ cask "go-server" do
     end
   end
 
+  depends_on :macos
+
   binary "go-server-#{version.csv.first}/bin/go-server"
 
   # No zap stanza required

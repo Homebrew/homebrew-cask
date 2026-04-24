@@ -12,6 +12,8 @@ cask "nrfutil" do
     regex(/nrfutil-universal-apple-darwin[._-]v?(\d+(?:\.\d+)+(?:[._-]\h+)?)/i)
   end
 
+  depends_on :macos
+
   binary "nrfutil-universal-apple-darwin-#{version}", target: "nrfutil"
   # No zap stanza required
 end
