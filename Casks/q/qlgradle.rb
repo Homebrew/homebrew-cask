@@ -9,6 +9,8 @@ cask "qlgradle" do
 
   deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
 
+  depends_on :macos
+
   qlplugin "QLGradle.qlgenerator"
 
   # No zap stanza required
