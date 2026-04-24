@@ -5,7 +5,7 @@ cask "flirc" do
   url "https://flirc.com/software/flirc-usb/GUI/release/mac/Flirc-#{version}.dmg"
   name "Flirc"
   desc "IR USB receiver configurator"
-  homepage "https://flirc.com/"
+  homepage "https://flirc.tv/"
 
   livecheck do
     url "https://flirc.com/software/release/gui/mac/appcast.xml"
