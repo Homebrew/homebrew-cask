@@ -9,6 +9,8 @@ cask "icanhazshortcut" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "iCanHazShortcut.app"
 
   uninstall quit: "info.deseven.icanhazshortcut"

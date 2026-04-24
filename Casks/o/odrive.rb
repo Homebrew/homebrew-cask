@@ -13,6 +13,8 @@ cask "odrive" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "odrivesync.#{version}.pkg"
 
   # Should also remove ~/.odrive/bin/ on uninstall, but causes

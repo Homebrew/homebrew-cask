@@ -14,6 +14,8 @@ cask "nomachine-enterprise-client" do
     cask "nomachine"
   end
 
+  depends_on :macos
+
   pkg "NoMachine.pkg"
 
   # A launchctl job ordinarily manages uninstall once the app bundle is removed

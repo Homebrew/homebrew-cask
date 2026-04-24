@@ -17,6 +17,7 @@ cask "macfuse@dev" do
 
   auto_updates true
   conflicts_with cask: "macfuse"
+  depends_on :macos
 
   pkg "Extras/macFUSE #{version}.pkg"
 

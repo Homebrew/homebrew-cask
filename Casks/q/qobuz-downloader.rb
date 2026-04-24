@@ -15,6 +15,8 @@ cask "qobuz-downloader" do
     end
   end
 
+  depends_on :macos
+
   app "Qobuz Downloader.app"
 
   zap trash: [

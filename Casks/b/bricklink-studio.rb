@@ -14,6 +14,7 @@ cask "bricklink-studio" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Studio+#{version.major}.0.pkg"
 

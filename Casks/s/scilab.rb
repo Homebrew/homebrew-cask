@@ -15,6 +15,8 @@ cask "scilab" do
     regex(/scilab[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "scilab-#{version}.app"
   binary "#{appdir}/scilab-#{version}.app/Contents/bin/scilab"
   binary "#{appdir}/scilab-#{version}.app/Contents/bin/scilab-cli"

@@ -13,6 +13,8 @@ cask "elemental@6" do
     regex(/^elemental[._-]v?(6(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "Elemental.app"
 
   zap trash: "~/Library/Application Support/xyz.elemental"

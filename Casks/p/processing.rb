@@ -28,6 +28,7 @@ cask "processing" do
   end
 
   conflicts_with cask: "processing@3"
+  depends_on :macos
 
   app "Processing.app"
 

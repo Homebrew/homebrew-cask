@@ -13,6 +13,8 @@ cask "transocks" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "穿梭Transocks.app"
 
   uninstall trash: [

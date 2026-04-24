@@ -15,6 +15,8 @@ cask "carbide-create" do
     end
   end
 
+  depends_on :macos
+
   app "Carbide Create.app"
 
   zap trash: [

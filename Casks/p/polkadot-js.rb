@@ -12,6 +12,8 @@ cask "polkadot-js" do
   # ref: https://github.com/polkadot-js/apps/pull/11084
   deprecate! date: "2025-08-03", because: :discontinued
 
+  depends_on :macos
+
   app "Polkadot-JS Apps.app"
 
   zap trash: [

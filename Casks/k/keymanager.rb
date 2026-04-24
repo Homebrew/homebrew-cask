@@ -13,6 +13,8 @@ cask "keymanager" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "KeyManager.app"
 
   zap trash: [

@@ -10,6 +10,8 @@ cask "tickeys" do
 
   deprecate! date: "2025-04-21", because: :unmaintained
 
+  depends_on :macos
+
   app "Tickeys.app"
 
   zap trash: "~/Library/Preferences/com.yingDev.Tickeys.plist"

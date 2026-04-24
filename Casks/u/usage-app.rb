@@ -15,6 +15,8 @@ cask "usage-app" do
     end
   end
 
+  depends_on :macos
+
   app "Usage.app"
 
   zap trash: [

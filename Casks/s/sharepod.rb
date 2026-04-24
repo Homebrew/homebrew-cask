@@ -13,6 +13,8 @@ cask "sharepod" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Sharepod.app"
 
   zap trash: [

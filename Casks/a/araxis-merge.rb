@@ -28,6 +28,8 @@ cask "araxis-merge" do
   desc "Two and three-way file comparison, merging and folder synchronisation"
   homepage "https://www.araxis.com/merge/"
 
+  depends_on :macos
+
   app "Araxis Merge.app"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxishgmerge"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisopendiff"

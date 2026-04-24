@@ -12,6 +12,8 @@ cask "electron-cash" do
     regex(/href=.*?Electron[._-]Cash[._-]v?(\d+(?:\.\d+)+)[._-]macosx\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Electron-Cash.app"
 
   zap trash: "~/.electron-cash"

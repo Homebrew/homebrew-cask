@@ -23,6 +23,8 @@ cask "idrive" do
     end
   end
 
+  depends_on :macos
+
   pkg "IDrive.pkg"
 
   uninstall launchctl: [

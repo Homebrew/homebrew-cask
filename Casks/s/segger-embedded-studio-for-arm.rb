@@ -15,6 +15,8 @@ cask "segger-embedded-studio-for-arm" do
     regex(/<h2[^>]*>\s*Version\s*(\d+(?:\.\d+)+[a-z]?)/i)
   end
 
+  depends_on :macos
+
   pkg "Install SEGGER Embedded Studio for ARM #{version}.pkg"
 
   uninstall pkgutil: [

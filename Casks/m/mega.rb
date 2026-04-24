@@ -28,6 +28,7 @@ cask "mega" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "MEGA_#{version}_installer.pkg"
 

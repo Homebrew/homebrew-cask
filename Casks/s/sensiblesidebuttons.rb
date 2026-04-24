@@ -8,6 +8,8 @@ cask "sensiblesidebuttons" do
   desc "Utilise mouse side navigation buttons"
   homepage "https://sensible-side-buttons.archagon.net/"
 
+  depends_on :macos
+
   app "SensibleSideButtons.app"
 
   zap trash: "~/Library/Preferences/net.archagon.sensible-side-buttons.plist"

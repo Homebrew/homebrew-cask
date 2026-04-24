@@ -11,6 +11,8 @@ cask "haroopad" do
   deprecate! date: "2025-01-05", because: :unmaintained
   disable! date: "2026-01-05", because: :unmaintained
 
+  depends_on :macos
+
   app "Haroopad.app"
 
   zap trash: "~/Library/Application Support/Haroopad"

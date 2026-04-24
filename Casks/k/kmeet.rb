@@ -12,6 +12,8 @@ cask "kmeet" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "kMeet.app"
 
   uninstall quit: "com.infomaniak.meet"

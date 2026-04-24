@@ -71,6 +71,7 @@ cask "karabiner-elements" do
   homepage "https://karabiner-elements.pqrs.org/"
 
   auto_updates true
+  depends_on :macos
 
   binary "/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli"
 

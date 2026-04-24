@@ -17,6 +17,7 @@ cask "zen" do
 
   auto_updates true
   conflicts_with cask: "zen-privacy"
+  depends_on :macos
 
   app "Zen.app"
   binary "#{appdir}/Zen.app/Contents/MacOS/zen"

@@ -15,6 +15,8 @@ cask "yousician" do
     end
   end
 
+  depends_on :macos
+
   app "Yousician Launcher.app"
 
   zap trash: [

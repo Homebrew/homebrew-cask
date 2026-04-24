@@ -16,6 +16,8 @@ cask "netdownloadhelpercoapp" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "vdhcoapp-mac-#{arch}-installer.pkg"
   pkg "vdhcoapp-mac-#{arch}-installer.pkg"
 

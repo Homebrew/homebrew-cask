@@ -16,6 +16,8 @@ cask "pgadmin4" do
     regex(%r{href=.*?/pgadmin4/v?(\d+(?:\.\d+)+)/macos/?["' >]}i)
   end
 
+  depends_on :macos
+
   app "pgAdmin 4.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "cinderella" do
     regex(/href=.*?Cinderella[._-](\d+(?:\.[\db]+)*)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Cinderella.app"
 
   zap trash: [

@@ -14,6 +14,8 @@ cask "now-tv-player" do
     end
   end
 
+  depends_on :macos
+
   app "NOW TV Player.app"
 
   zap trash: [

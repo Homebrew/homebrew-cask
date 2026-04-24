@@ -23,6 +23,8 @@ cask "kdocs" do
     end
   end
 
+  depends_on :macos
+
   app "金山文档.app"
 
   zap trash: [

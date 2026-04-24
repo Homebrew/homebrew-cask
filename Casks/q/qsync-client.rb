@@ -21,6 +21,8 @@ cask "qsync-client" do
     end
   end
 
+  depends_on :macos
+
   installer manual: "Qsync Client.pkg"
 
   uninstall quit:    [

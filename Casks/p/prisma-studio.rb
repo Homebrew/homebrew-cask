@@ -8,6 +8,8 @@ cask "prisma-studio" do
   desc "Visual database editor for Prisma projects"
   homepage "https://www.prisma.io/studio"
 
+  depends_on :macos
+
   app "Prisma Studio.app"
 
   zap trash: [

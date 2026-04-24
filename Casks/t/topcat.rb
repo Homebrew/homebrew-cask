@@ -14,6 +14,8 @@ cask "topcat" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "TOPCAT.app"
   binary "#{appdir}/TOPCAT.app/Contents/Resources/app/topcat"
   binary "#{appdir}/TOPCAT.app/Contents/Resources/app/stilts"

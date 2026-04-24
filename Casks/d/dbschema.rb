@@ -15,6 +15,8 @@ cask "dbschema" do
     end
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "#{staged_path}/DbSchema Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],

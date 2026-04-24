@@ -16,6 +16,8 @@ cask "opensoundmeter" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "OpenSoundMeter.app"
 
   zap trash: [

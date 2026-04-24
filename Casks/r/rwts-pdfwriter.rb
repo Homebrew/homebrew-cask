@@ -7,6 +7,8 @@ cask "rwts-pdfwriter" do
   desc "Print driver for printing documents directly to a pdf file"
   homepage "https://github.com/rodyager/RWTS-PDFwriter"
 
+  depends_on :macos
+
   pkg "RWTS-PDFwriter.pkg"
 
   uninstall script: {

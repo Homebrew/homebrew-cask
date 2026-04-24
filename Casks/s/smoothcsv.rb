@@ -8,6 +8,8 @@ cask "smoothcsv" do
   desc "CSV editor"
   homepage "https://smoothcsv.com/"
 
+  depends_on :macos
+
   app "SmoothCSV.app"
 
   uninstall quit: "com.smoothcsv.desktop"

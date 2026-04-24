@@ -45,6 +45,8 @@ cask "sonic-pi" do
   desc "Code-based music creation and performance tool"
   homepage "https://sonic-pi.net/"
 
+  depends_on :macos
+
   app "Sonic Pi.app"
 
   zap trash: [

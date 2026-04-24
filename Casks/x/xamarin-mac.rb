@@ -10,6 +10,7 @@ cask "xamarin-mac" do
   deprecate! date: "2024-08-20", because: :discontinued
   disable! date: "2025-08-20", because: :discontinued
 
+  depends_on :macos
   depends_on cask: "mono-mdk-for-visual-studio"
 
   pkg "xamarin.mac-#{version.csv.first}.pkg"

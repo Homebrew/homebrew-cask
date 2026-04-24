@@ -12,6 +12,8 @@ cask "ninja-download-manager-ndm" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "ndm_#{version}.pkg"
 
   uninstall pkgutil: "com.knockoutsoft.pkg.ndm"

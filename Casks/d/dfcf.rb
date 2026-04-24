@@ -10,6 +10,8 @@ cask "dfcf" do
 
   disable! date: "2025-11-24", because: :discontinued
 
+  depends_on :macos
+
   app "东方财富.app"
 
   caveats do

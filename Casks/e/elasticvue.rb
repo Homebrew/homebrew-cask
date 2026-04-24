@@ -12,6 +12,7 @@ cask "elasticvue" do
   homepage "https://elasticvue.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "elasticvue.app"
 

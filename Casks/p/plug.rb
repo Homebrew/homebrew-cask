@@ -9,6 +9,8 @@ cask "plug" do
 
   deprecate! date: "2026-01-14", because: :moved_to_mas
 
+  depends_on :macos
+
   app "Plug.app"
 
   zap trash: [

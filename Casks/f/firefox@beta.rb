@@ -109,6 +109,7 @@ cask "firefox@beta" do
     "firefox@cn",
     "firefox@esr",
   ]
+  depends_on :macos
 
   app "Firefox.app"
 

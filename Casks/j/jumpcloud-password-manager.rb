@@ -16,6 +16,7 @@ cask "jumpcloud-password-manager" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "JumpCloud Password Manager.app"
 

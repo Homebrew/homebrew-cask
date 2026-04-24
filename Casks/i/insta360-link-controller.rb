@@ -31,6 +31,8 @@ cask "insta360-link-controller" do
     end
   end
 
+  depends_on :macos
+
   pkg "Insta360LinkController_#{version.csv.first}(#{version.csv.second})#{version.csv.third}.pkg"
 
   uninstall quit:    "com.insta360.linkcontroller",

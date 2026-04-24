@@ -12,6 +12,8 @@ cask "massreplaceit" do
     regex(/MassReplaceIt\s+(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "MassReplaceIt.app"
 
   zap trash: [

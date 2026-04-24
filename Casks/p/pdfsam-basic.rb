@@ -16,6 +16,8 @@ cask "pdfsam-basic" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "PDFsam Basic.app"
 
   zap trash: [

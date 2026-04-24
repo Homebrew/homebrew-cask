@@ -15,6 +15,8 @@ cask "smlnj" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   pkg "smlnj-amd64-#{version}.pkg"
 
   uninstall pkgutil: "org.smlnj.amd64.pkg"

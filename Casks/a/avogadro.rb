@@ -11,6 +11,8 @@ cask "avogadro" do
   desc "Molecule editor and visualiser"
   homepage "https://avogadro.cc/"
 
+  depends_on :macos
+
   app "Avogadro2.app"
 
   zap trash: [

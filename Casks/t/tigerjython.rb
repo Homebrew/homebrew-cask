@@ -12,6 +12,8 @@ cask "tigerjython" do
     regex(/version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   suite "TigerJython"
 
   zap trash: "~/Library/Caches/org.aplu.TigerJython-Mac"

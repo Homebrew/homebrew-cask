@@ -22,6 +22,7 @@ cask "android-studio-preview@canary" do
   end
 
   auto_updates true
+  depends_on :macos
 
   rename "Android Studio*.app", "Android Studio Preview Canary.app"
 

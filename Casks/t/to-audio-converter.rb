@@ -13,6 +13,8 @@ cask "to-audio-converter" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   # The url is unversioned, but the download returns an app with a version number
   rename "To Audio Converter*.app", "To Audio Converter.app"
 

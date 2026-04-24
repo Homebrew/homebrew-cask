@@ -19,6 +19,8 @@ cask "softmaker-freeoffice" do
     end
   end
 
+  depends_on :macos
+
   pkg "softmaker-freeoffice-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.SoftMaker.FreeOffice#{version.csv.first}"

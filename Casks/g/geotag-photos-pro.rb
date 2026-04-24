@@ -13,6 +13,8 @@ cask "geotag-photos-pro" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Geotag Photos Pro 2.app"
 
   zap trash: [

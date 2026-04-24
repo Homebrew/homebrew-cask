@@ -10,6 +10,8 @@ cask "owocr" do
   desc "Optical character recognition for Japanese text"
   homepage "https://github.com/AuroraWright/owocr/"
 
+  depends_on :macos
+
   app "OwOCR.app"
 
   zap trash: [

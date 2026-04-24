@@ -12,6 +12,8 @@ cask "adobe-creative-cloud-cleaner-tool" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "Adobe Creative Cloud Cleaner Tool.app"
 
   uninstall quit: "com.Adobe.Installers.AdobeCreativeCloudCleanerTool"

@@ -10,6 +10,8 @@ cask "serene" do
 
   deprecate! date: "2025-08-02", because: :unmaintained
 
+  depends_on :macos
+
   app "Serene.app"
 
   zap trash: [

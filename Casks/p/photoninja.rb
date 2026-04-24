@@ -13,6 +13,8 @@ cask "photoninja" do
     regex(/PhotoNinja[._-]v?(\d+(?:\.\d+)+\w?)[._-]sse42\.pkg/i)
   end
 
+  depends_on :macos
+
   pkg "PhotoNinja_#{version}_sse42.pkg"
 
   uninstall pkgutil: "PhotoNinja.#{version}.sse42"

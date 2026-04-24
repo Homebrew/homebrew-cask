@@ -29,6 +29,8 @@ cask "intellij-idea-oss" do
     end
   end
 
+  depends_on :macos
+
   app "IntelliJ IDEA CE.app"
 
   zap trash: [

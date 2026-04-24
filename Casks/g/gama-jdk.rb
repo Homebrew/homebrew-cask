@@ -18,6 +18,7 @@ cask "gama-jdk" do
   end
 
   conflicts_with cask: "gama-platform"
+  depends_on :macos
 
   app "Gama.app"
 

@@ -12,6 +12,7 @@ cask "beid-viewer" do
     regex(/href=.*?eID(?:(?:%20|\s)+|[._-])?Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
   depends_on cask: "beid-token"
 
   app "eID Viewer.app"

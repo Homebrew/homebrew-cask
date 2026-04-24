@@ -13,6 +13,8 @@ cask "paranoia-file-text-encryption" do
     regex(/ParanoiaFileTextEnc[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
+  depends_on :macos
+
   pkg "ParanoiaFileTextEnc-#{version}.pkg"
 
   uninstall pkgutil: "com.paranoiaworks.macos.Paranoia-FileText-Encryption"

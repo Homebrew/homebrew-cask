@@ -25,6 +25,8 @@ cask "pencil2d" do
   desc "Open-source tool to make 2D hand-drawn animations"
   homepage "https://www.pencil2d.org/"
 
+  depends_on :macos
+
   app "Pencil2D.app"
 
   zap trash: [

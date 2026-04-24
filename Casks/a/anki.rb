@@ -41,6 +41,8 @@ cask "anki" do
   desc "Memory training application"
   homepage "https://apps.ankiweb.net/"
 
+  depends_on :macos
+
   app "Anki.app"
 
   zap trash: [

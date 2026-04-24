@@ -9,6 +9,8 @@ cask "sekey" do
 
   deprecate! date: "2025-05-25", because: :unmaintained
 
+  depends_on :macos
+
   pkg "SeKey-#{version}.pkg"
   binary "/Applications/SeKey.app/Contents/MacOS/sekey"
 

@@ -8,6 +8,8 @@ cask "splayer" do
   desc "Media player"
   homepage "https://splayer.org/"
 
+  depends_on :macos
+
   app "SPlayer.app"
 
   caveats do

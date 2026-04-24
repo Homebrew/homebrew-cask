@@ -11,6 +11,8 @@ cask "stirling-pdf" do
   desc "PDF utility"
   homepage "https://stirlingpdf.com/"
 
+  depends_on :macos
+
   app "Stirling-PDF.app"
 
   zap trash: [

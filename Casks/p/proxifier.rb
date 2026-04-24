@@ -35,6 +35,8 @@ cask "proxifier" do
   desc "Proxy client"
   homepage "https://www.proxifier.com/"
 
+  depends_on :macos
+
   app "Proxifier.app"
 
   zap trash: [

@@ -10,6 +10,8 @@ cask "bossa-app" do
   deprecate! date: "2024-11-03", because: :unmaintained
   disable! date: "2025-11-03", because: :unmaintained
 
+  depends_on :macos
+
   app "BOSSA.app"
   binary "bossac"
   binary "bossash"

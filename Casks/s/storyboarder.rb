@@ -11,6 +11,8 @@ cask "storyboarder" do
   desc "Visualise a story as fast you can draw stick figures"
   homepage "https://wonderunit.com/storyboarder/"
 
+  depends_on :macos
+
   app "Storyboarder.app"
 
   zap trash: [

@@ -3,12 +3,9 @@ cask "gcc-arm-embedded" do
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
   arch arm: "arm64", intel: "x86_64"
 
-  pkg_version = nil
-  gcc_version = nil
   on_arm do
     version "15.2.rel1"
     pkg_version = "15.2.rel1"
-    gcc_version = "15.2.1"
     sha256 "396aacf7bb81126fed0de66f17e2d0009de373b667abbcc7855afab43628224f"
 
     livecheck do
@@ -19,6 +16,8 @@ cask "gcc-arm-embedded" do
 
     binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-gstack"
   end
+  pkg_version = nil
+  gcc_version = nil
   on_intel do
     version "14.2.rel1"
     pkg_version = "14.2.rel1"
@@ -35,6 +34,8 @@ cask "gcc-arm-embedded" do
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
   homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
+
+  depends_on :macos
 
   pkg "arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-addr2line"

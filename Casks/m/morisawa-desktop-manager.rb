@@ -15,6 +15,7 @@ cask "morisawa-desktop-manager" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Morisawa Desktop Manager.pkg"
 

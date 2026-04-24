@@ -13,6 +13,8 @@ cask "ivacy" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "Ivacy.app"
 
   zap trash: [

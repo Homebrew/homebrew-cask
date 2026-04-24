@@ -21,6 +21,8 @@ cask "eufymake-studio" do
     end
   end
 
+  depends_on :macos
+
   app "eufyMake Studio.app"
 
   zap trash: [

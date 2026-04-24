@@ -15,6 +15,8 @@ cask "poker-copilot" do
     end
   end
 
+  depends_on :macos
+
   app "Poker Copilot.app"
 
   zap trash: "~/Library/Application Support/com.barbarysoftware.pokercopilot"

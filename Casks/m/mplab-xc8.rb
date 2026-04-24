@@ -13,6 +13,8 @@ cask "mplab-xc8" do
     regex(%r{href=.*?ProductDocuments/SoftwareTools/xc8[._-]v?(\d+(?:\.\d+)+)-full-install-macos-x64-installer\.dmg}i)
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "xc8-v#{version}-full-install-macos-x64-installer.app/Contents/MacOS/installbuilder.sh",
     args:       [

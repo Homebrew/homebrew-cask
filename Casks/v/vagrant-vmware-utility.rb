@@ -12,6 +12,8 @@ cask "vagrant-vmware-utility" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/}i)
   end
 
+  depends_on :macos
+
   pkg "VagrantVMwareUtility.pkg"
 
   uninstall script:  {

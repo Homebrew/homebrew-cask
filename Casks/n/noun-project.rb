@@ -15,6 +15,8 @@ cask "noun-project" do
     end
   end
 
+  depends_on :macos
+
   app "Noun Project.app"
 
   zap trash: [

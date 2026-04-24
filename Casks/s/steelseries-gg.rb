@@ -14,6 +14,7 @@ cask "steelseries-gg" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "SteelSeriesGG#{version}.pkg"
 

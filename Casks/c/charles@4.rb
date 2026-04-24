@@ -13,6 +13,7 @@ cask "charles@4" do
   end
 
   conflicts_with cask: "charles"
+  depends_on :macos
 
   app "Charles.app"
 

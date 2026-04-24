@@ -34,6 +34,8 @@ cask "visit" do
   desc "Visualisation and data analysis for mesh-based scientific data"
   homepage "https://wci.llnl.gov/simulation/computer-codes/visit"
 
+  depends_on :macos
+
   app "VisIt.app"
 
   zap trash: "~/Library/Saved Application State/gov.llnl.visit.gui.savedState"

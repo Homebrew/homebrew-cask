@@ -16,6 +16,7 @@ cask "codebolt" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "CodeBolt.app"
 

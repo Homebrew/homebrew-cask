@@ -18,6 +18,7 @@ cask "zed@preview" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Zed Preview.app"
   binary "#{appdir}/Zed Preview.app/Contents/MacOS/cli", target: "zed-preview"

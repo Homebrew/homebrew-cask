@@ -12,6 +12,8 @@ cask "talon" do
     regex(/<h\d>\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Talon.app"
 
   zap trash: [

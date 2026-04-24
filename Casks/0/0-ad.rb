@@ -16,6 +16,8 @@ cask "0-ad" do
     regex(/href=.*?0ad[._-]v?(.*?)[._-]macos[._-]#{arch}\.dmg/i)
   end
 
+  depends_on :macos
+
   app "0 A.D..app"
 
   zap trash: "~/Library/Saved Application State/com.wildfiregames.0ad.savedState"

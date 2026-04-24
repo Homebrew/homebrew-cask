@@ -16,6 +16,8 @@ cask "cutter" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Cutter.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/cutter.wrapper.sh"

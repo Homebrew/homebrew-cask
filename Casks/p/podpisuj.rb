@@ -12,6 +12,8 @@ cask "podpisuj" do
     regex(/href=.*?podpisuj[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Podpisuj.app"
 
   zap trash: [

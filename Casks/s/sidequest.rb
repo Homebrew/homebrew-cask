@@ -11,6 +11,8 @@ cask "sidequest" do
   desc "Virtual reality content platform"
   homepage "https://sidequestvr.com/"
 
+  depends_on :macos
+
   app "SideQuest.app"
 
   zap trash: "~/Library/Application Support/SideQuest"

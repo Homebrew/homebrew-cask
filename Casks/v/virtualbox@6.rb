@@ -14,6 +14,7 @@ cask "virtualbox@6" do
     "virtualbox",
     "virtualbox@beta",
   ]
+  depends_on :macos
   depends_on arch: :x86_64
 
   pkg "VirtualBox.pkg",

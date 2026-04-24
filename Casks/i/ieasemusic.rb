@@ -11,6 +11,7 @@ cask "ieasemusic" do
   disable! date: "2025-07-15", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "ieaseMusic.app"
 

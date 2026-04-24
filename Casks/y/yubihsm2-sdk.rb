@@ -15,6 +15,8 @@ cask "yubihsm2-sdk" do
     regex(/href=.*?yubihsm2-sdk[._-]v?(\d+(?:[.-]\d+)+[a-z]?)[._-]darwin[._-]#{arch}\.pkg/i)
   end
 
+  depends_on :macos
+
   pkg "yubihsm2-sdk-#{version}-darwin-#{arch}.pkg"
 
   uninstall pkgutil: "com.yubico.yubihsm2-sdk"

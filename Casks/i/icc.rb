@@ -11,6 +11,8 @@ cask "icc" do
   deprecate! date: "2024-09-11", because: :discontinued
   disable! date: "2025-09-11", because: :discontinued
 
+  depends_on :macos
+
   pkg "ICCforMac.r#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.chessclub.*"

@@ -17,6 +17,8 @@ cask "macx-youtube-downloader" do
     end
   end
 
+  depends_on :macos
+
   app "MacX YouTube Downloader.app"
 
   zap trash: [

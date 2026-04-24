@@ -16,6 +16,7 @@ cask "actual-odbc-pack" do
   end
 
   conflicts_with cask: "odbc-manager"
+  depends_on :macos
 
   pkg "Actual ODBC Pack.pkg"
 

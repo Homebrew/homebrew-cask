@@ -21,6 +21,8 @@ cask "aliworkbench" do
     end
   end
 
+  depends_on :macos
+
   app "AliWorkBench.app"
 
   zap trash: [

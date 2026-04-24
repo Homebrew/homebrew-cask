@@ -13,6 +13,8 @@ cask "gureumkim" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "Gureum-#{version}.pkg"
 
   uninstall pkgutil: "org.youknowone.inputmethod.Gureum"

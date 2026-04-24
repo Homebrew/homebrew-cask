@@ -32,6 +32,8 @@ cask "r-app" do
   desc "Environment for statistical computing and graphics"
   homepage "https://www.r-project.org/"
 
+  depends_on :macos
+
   uninstall pkgutil: [
               "org.r-project*",
               "org.R-project*",

@@ -8,6 +8,8 @@ cask "penc" do
   desc "Trackpad-oriented window manager"
   homepage "https://deniz.co/penc/"
 
+  depends_on :macos
+
   app "Penc.app"
 
   zap trash: "~/Library/Preferences/com.denizgurkaynak.Penc.plist"

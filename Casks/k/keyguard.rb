@@ -23,6 +23,8 @@ cask "keyguard" do
     end
   end
 
+  depends_on :macos
+
   app "keyguard.app"
 
   zap trash: [

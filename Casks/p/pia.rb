@@ -26,6 +26,8 @@ cask "pia" do
     end
   end
 
+  depends_on :macos
+
   app "pia.app"
 
   zap trash: [

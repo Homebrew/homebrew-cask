@@ -13,6 +13,8 @@ cask "openrefine" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "OpenRefine.app"
 
   zap trash: [

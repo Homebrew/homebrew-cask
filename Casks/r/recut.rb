@@ -12,6 +12,8 @@ cask "recut" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Recut.app"
 
   zap trash: [

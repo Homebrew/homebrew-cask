@@ -24,6 +24,7 @@ cask "webstorm" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "WebStorm.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

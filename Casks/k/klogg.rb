@@ -20,6 +20,8 @@ cask "klogg" do
     end
   end
 
+  depends_on :macos
+
   app "klogg.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/klogg.wrapper.sh"

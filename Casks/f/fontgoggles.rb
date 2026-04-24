@@ -8,6 +8,8 @@ cask "fontgoggles" do
   desc "Font viewer for various font formats"
   homepage "https://fontgoggles.org/"
 
+  depends_on :macos
+
   app "FontGoggles.app"
 
   zap trash: "~/Library/Preferences/com.github.justvanrossum.FontGoggles.plist"

@@ -8,6 +8,8 @@ cask "nomad-menu" do
 
   disable! date: "2025-07-10", because: :no_longer_available
 
+  depends_on :macos
+
   pkg "NoMAD.pkg"
 
   uninstall pkgutil: "com.trusourcelabs.NoMAD"

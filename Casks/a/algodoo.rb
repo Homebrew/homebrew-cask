@@ -15,6 +15,8 @@ cask "algodoo" do
     end
   end
 
+  depends_on :macos
+
   app "Algodoo.app"
 
   zap trash: [

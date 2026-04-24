@@ -15,6 +15,8 @@ cask "racket" do
     regex(/racket[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   suite "Racket v#{version}"
   binary "#{appdir}/Racket v#{version}/bin/drracket"
   binary "#{appdir}/Racket v#{version}/bin/gracket"

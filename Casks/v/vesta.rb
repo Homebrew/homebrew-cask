@@ -12,6 +12,8 @@ cask "vesta" do
     regex(/>\s*ver\.\s+v?(\d+(?:\.\d+)+)[<\s]/i)
   end
 
+  depends_on :macos
+
   app "VESTA/VESTA.app"
 
   zap trash: [

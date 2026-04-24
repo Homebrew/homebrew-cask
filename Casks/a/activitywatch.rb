@@ -13,6 +13,8 @@ cask "activitywatch" do
     regex(/href=.*?activitywatch[._-]v?(\d+(?:\.\d+)+)-macos-x86_64\.dmg/i)
   end
 
+  depends_on :macos
+
   app "ActivityWatch.app"
 
   zap trash: [

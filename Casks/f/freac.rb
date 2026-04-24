@@ -38,6 +38,8 @@ cask "freac" do
   desc "Audio converter and CD ripper"
   homepage "https://www.freac.org/"
 
+  depends_on :macos
+
   app "freac.app"
 
   zap trash: [

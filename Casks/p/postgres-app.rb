@@ -22,6 +22,7 @@ cask "postgres-app" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Postgres.app"
 

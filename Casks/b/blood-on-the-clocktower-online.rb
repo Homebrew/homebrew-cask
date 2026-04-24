@@ -11,6 +11,8 @@ cask "blood-on-the-clocktower-online" do
   desc "Client for the game Blood on the Clocktower"
   homepage "https://bloodontheclocktower.com/"
 
+  depends_on :macos
+
   app "Blood on the Clocktower Online.app"
 
   zap trash: [

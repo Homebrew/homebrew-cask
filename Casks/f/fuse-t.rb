@@ -13,6 +13,8 @@ cask "fuse-t" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "fuse-t-macos-installer-#{version}.pkg"
 
   uninstall script:  {

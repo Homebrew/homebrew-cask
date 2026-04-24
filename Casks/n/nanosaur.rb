@@ -8,6 +8,8 @@ cask "nanosaur" do
   desc "Dinosaur 3rd person shooter game from Pangea Software"
   homepage "https://jorio.itch.io/nanosaur"
 
+  depends_on :macos
+
   app "Nanosaur.app"
   artifact "Documentation", target: "~/Library/Application Support/Nanosaur"
 

@@ -9,6 +9,7 @@ cask "boss" do
   homepage "https://www.risalabs.ai/"
 
   auto_updates true
+  depends_on :macos
 
   app "BOSS.app"
 

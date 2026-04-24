@@ -12,6 +12,7 @@ cask "porting-kit" do
   homepage "https://portingkit.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "Porting Kit.app"
 

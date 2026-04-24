@@ -13,6 +13,8 @@ cask "neat-reader" do
     regex(/name=["']?deviceVersion["']?\s*value=["']?(\d+(?:\.\d+)+)["' >]/i)
   end
 
+  depends_on :macos
+
   app "NeatReader.app"
 
   zap trash: [

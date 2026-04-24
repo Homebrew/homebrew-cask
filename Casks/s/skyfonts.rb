@@ -9,6 +9,8 @@ cask "skyfonts" do
 
   deprecate! date: "2025-11-02", because: :discontinued
 
+  depends_on :macos
+
   installer manual: "Install SkyFonts.app"
 
   uninstall launchctl: "com.mti.Monotype-SkyFontsHelper",

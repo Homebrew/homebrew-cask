@@ -20,6 +20,7 @@ cask "tencent-lemon" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Tencent Lemon.app"
 

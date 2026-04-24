@@ -16,6 +16,8 @@ cask "gams" do
     regex(/GAMS\s*Release\s*v?(\d+(?:\.\d+)+)[ <"]/i)
   end
 
+  depends_on :macos
+
   pkg "GAMS#{version}.pkg",
       choices: [
         {

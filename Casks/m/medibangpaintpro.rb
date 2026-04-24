@@ -12,6 +12,8 @@ cask "medibangpaintpro" do
     regex(%r{href=.*?/MediBangPaintPro-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "MediBangPaintPro.app"
 
   zap trash: [

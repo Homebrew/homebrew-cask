@@ -13,6 +13,8 @@ cask "flock-app" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Flock.app"
 
   zap trash: [

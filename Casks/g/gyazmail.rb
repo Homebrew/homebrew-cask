@@ -12,6 +12,8 @@ cask "gyazmail" do
     regex(/Download\s*GyazMail\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "GyazMail.app"
 
   zap trash: [

@@ -14,6 +14,8 @@ cask "gotomeeting" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "GoToMeeting.app"
 
   zap trash: [

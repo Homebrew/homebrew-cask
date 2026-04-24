@@ -14,6 +14,7 @@ cask "xampp@7" do
   end
 
   conflicts_with cask: "xampp"
+  depends_on :macos
 
   installer script: {
     executable: "xampp-osx-#{version}-installer.app/Contents/MacOS/osx-x86_64",

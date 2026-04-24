@@ -24,6 +24,7 @@ cask "teamspeak-client" do
   homepage "https://www.teamspeak.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "TeamSpeak #{version.major} Client.app"
 

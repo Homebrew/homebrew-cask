@@ -10,6 +10,8 @@ cask "mu-editor" do
 
   deprecate! date: "2025-08-31", because: :unmaintained
 
+  depends_on :macos
+
   app "Mu Editor.app"
 
   zap trash: [

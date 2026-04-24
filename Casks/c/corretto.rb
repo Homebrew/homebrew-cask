@@ -16,6 +16,8 @@ cask "corretto" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "amazon-corretto-#{version}-macosx-#{arch}.pkg"
 
   uninstall pkgutil: "com.amazon.corretto.#{version.major}"

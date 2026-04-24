@@ -10,6 +10,8 @@ cask "cutesdr" do
   deprecate! date: "2024-09-01", because: :unmaintained
   disable! date: "2025-09-02", because: :unmaintained
 
+  depends_on :macos
+
   app "cutesdr.app"
 
   caveats do

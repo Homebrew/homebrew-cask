@@ -8,6 +8,8 @@ cask "museeks" do
   desc "Music player"
   homepage "https://museeks.io/"
 
+  depends_on :macos
+
   app "Museeks.app"
 
   zap trash: [

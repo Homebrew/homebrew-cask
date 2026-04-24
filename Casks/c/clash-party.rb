@@ -32,6 +32,7 @@ cask "clash-party" do
   end
 
   auto_updates true
+  depends_on :macos
 
   uninstall launchctl: "party.mihomo.helper",
             pkgutil:   "party.mihomo.app"

@@ -505,6 +505,7 @@ cask "libreoffice-language-pack" do
     cask "libreoffice"
   end
 
+  depends_on :macos
   depends_on cask: "libreoffice"
 
   # Start the silent install

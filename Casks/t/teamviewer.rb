@@ -60,6 +60,7 @@ cask "teamviewer" do
 
   auto_updates true
   conflicts_with cask: "teamviewer-host"
+  depends_on :macos
 
   postflight do
     # postinstall launches the app

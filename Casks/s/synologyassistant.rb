@@ -14,6 +14,8 @@ cask "synologyassistant" do
     end
   end
 
+  depends_on :macos
+
   app "SynologyAssistant.app"
 
   zap trash: "~/Library/Preferences/com.synology.DSAssistant.plist"

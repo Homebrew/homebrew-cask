@@ -41,6 +41,7 @@ cask "microsoft-powerpoint" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on :macos
 
   pkg "Microsoft_PowerPoint_#{version}_Installer.pkg",
       choices: [

@@ -12,6 +12,7 @@ cask "biglybt" do
   homepage "https://www.biglybt.com/"
 
   auto_updates true
+  depends_on :macos
 
   installer script: {
     executable:   "BiglyBT Installer.app/Contents/MacOS/JavaApplicationStub",

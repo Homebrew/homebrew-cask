@@ -16,6 +16,7 @@ cask "jabra-direct" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "JabraDirectSetup.pkg"
 

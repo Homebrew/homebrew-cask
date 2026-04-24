@@ -12,6 +12,8 @@ cask "teensy" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "teensy.app"
 
   zap trash: "~/Library/Saved Application State/com.pjrc.teensy.savedState"

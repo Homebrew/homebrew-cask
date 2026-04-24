@@ -12,6 +12,8 @@ cask "radio-silence" do
     regex(%r{href=.*?/Radio_Silence_(\d+(?:\.\d+)*)\.pkg}i)
   end
 
+  depends_on :macos
+
   pkg "Radio_Silence_#{version}.pkg"
 
   # We intentionally unload the kext twice as a workaround

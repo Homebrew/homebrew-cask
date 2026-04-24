@@ -13,6 +13,8 @@ cask "xbar" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "xbar.app"
 
   uninstall quit:       "com.xbarapp.app",

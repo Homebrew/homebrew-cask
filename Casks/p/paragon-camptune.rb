@@ -14,6 +14,7 @@ cask "paragon-camptune" do
     end
   end
 
+  depends_on :macos
   depends_on arch: :x86_64
 
   app "Paragon CampTune.app"

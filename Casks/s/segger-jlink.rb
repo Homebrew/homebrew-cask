@@ -18,6 +18,8 @@ cask "segger-jlink" do
     regex(/Version\s*V(\d+(?:\.\d+[a-z]?)*)/i)
   end
 
+  depends_on :macos
+
   pkg "JLink_MacOSX_V#{version.no_dots}_universal.pkg"
 
   uninstall quit:    [

@@ -13,6 +13,8 @@ cask "filepane" do
     skip "Appcast only provides the version, no timestamp"
   end
 
+  depends_on :macos
+
   app "FilePane.app"
 
   zap trash: [

@@ -10,6 +10,7 @@ cask "kapitainsky-rclone-browser" do
   deprecate! date: "2024-07-17", because: :unmaintained
   disable! date: "2025-07-17", because: :unmaintained
 
+  depends_on :macos
   depends_on formula: "rclone"
 
   app "Rclone Browser.app"

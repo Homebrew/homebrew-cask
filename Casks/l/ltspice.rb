@@ -12,6 +12,8 @@ cask "ltspice" do
     regex(/for\s+MacOS.*?Version\s+v?(\d+(?:\.\d+)+)/im)
   end
 
+  depends_on :macos
+
   pkg "LTspice.pkg"
 
   uninstall pkgutil: [

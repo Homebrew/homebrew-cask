@@ -18,6 +18,8 @@ cask "amazon-workdocs-drive" do
 
   disable! date: "2025-04-25", because: :discontinued
 
+  depends_on :macos
+
   pkg "AmazonWorkDocsDrive.pkg"
 
   uninstall launchctl: [

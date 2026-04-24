@@ -22,6 +22,8 @@ cask "macx-dvd-ripper-pro" do
     end
   end
 
+  depends_on :macos
+
   app "MacX DVD Ripper Pro.app"
 
   zap trash: [

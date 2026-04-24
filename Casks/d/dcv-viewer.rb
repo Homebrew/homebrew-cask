@@ -16,6 +16,8 @@ cask "dcv-viewer" do
     regex(%r{href=.*?/nice-dcv-viewer[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
+  depends_on :macos
+
   app "DCV Viewer.app"
 
   zap trash: "~/Library/Preferences/com.nicesoftware.dcvviewer.plist"

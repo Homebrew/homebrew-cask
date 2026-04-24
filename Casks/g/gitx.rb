@@ -15,6 +15,8 @@ cask "gitx" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "GitX.app"
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"
 

@@ -11,6 +11,7 @@ cask "skype@preview" do
 
   auto_updates true
   conflicts_with cask: "skype"
+  depends_on :macos
 
   app "Skype.app"
 

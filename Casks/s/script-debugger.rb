@@ -13,6 +13,8 @@ cask "script-debugger" do
     regex(/href=.*?ScriptDebugger[._-]?v?(\d+(?:\.\d+)+(?:-\d+A\d+)?)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Script Debugger.app"
 
   zap trash: [

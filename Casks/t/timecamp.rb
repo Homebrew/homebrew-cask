@@ -13,6 +13,8 @@ cask "timecamp" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "TimeCamp.app"
 
   zap rmdir: "~/Library/Application Support/TimeCamp"

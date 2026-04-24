@@ -15,6 +15,7 @@ cask "intellij-idea-ce" do
   deprecate! date: "2025-12-08", because: :discontinued, replacement_cask: "intellij-idea"
 
   auto_updates true
+  depends_on :macos
 
   app "IntelliJ IDEA CE.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

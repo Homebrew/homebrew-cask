@@ -16,6 +16,8 @@ cask "roonbridge" do
     end
   end
 
+  depends_on :macos
+
   app "RoonBridge.app"
 
   zap trash: "~/Library/RoonBridge"

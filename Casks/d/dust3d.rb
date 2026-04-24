@@ -17,6 +17,8 @@ cask "dust3d" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "dust3d-#{version}.app"
 
   zap trash: "~/Library/Saved Application State/com.yourcompany.dust3d.savedState"

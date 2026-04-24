@@ -10,6 +10,7 @@ cask "techsmith-capture" do
   disable! date: "2026-03-28", because: :no_longer_available, replacement_cask: "snagit"
 
   auto_updates true
+  depends_on :macos
 
   app "TechSmith Capture.app"
 

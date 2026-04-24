@@ -13,6 +13,8 @@ cask "emailchemy" do
     regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Emailchemy.app"
 
   zap trash: "~/Library/Preferences/com.weirdkid.es.plist"

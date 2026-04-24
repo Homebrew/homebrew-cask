@@ -13,6 +13,8 @@ cask "lulu" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "LuLu.app"
 
   # Lulu's uninstaller removes all preference files which breaks `brew upgrade`

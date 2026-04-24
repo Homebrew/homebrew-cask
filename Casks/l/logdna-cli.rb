@@ -10,6 +10,8 @@ cask "logdna-cli" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   pkg "logdna-cli.pkg"
 
   uninstall pkgutil: "com.logdna.logdna-cli"

@@ -16,6 +16,8 @@ cask "sauerbraten" do
     end
   end
 
+  depends_on :macos
+
   app "Sauerbraten.app"
 
   caveats do

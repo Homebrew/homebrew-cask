@@ -20,6 +20,7 @@ cask "parallels@16" do
     "parallels@19",
     "parallels@20",
   ]
+  depends_on :macos
 
   app "Parallels Desktop.app"
 

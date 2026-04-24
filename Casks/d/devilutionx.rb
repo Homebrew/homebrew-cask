@@ -24,6 +24,8 @@ cask "devilutionx" do
     end
   end
 
+  depends_on :macos
+
   app "devilutionX.app"
 
   zap trash: [

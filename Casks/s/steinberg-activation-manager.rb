@@ -13,6 +13,8 @@ cask "steinberg-activation-manager" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "Steinberg Activation Manager.pkg"
 
   uninstall quit:    [

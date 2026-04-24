@@ -12,6 +12,8 @@ cask "maru-jan" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "Inst_MaruJan_Mac.pkg"
 
   uninstall quit:    "com.signaltalk.mji.macos*",

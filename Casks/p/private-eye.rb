@@ -10,6 +10,8 @@ cask "private-eye" do
   deprecate! date: "2024-07-06", because: :unmaintained
   disable! date: "2025-07-06", because: :unmaintained
 
+  depends_on :macos
+
   pkg "Private_Eye_for_OS_X_10.9_and_later.pkg"
 
   # We intentionally unload the kext twice as a workaround

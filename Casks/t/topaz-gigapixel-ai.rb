@@ -10,6 +10,7 @@ cask "topaz-gigapixel-ai" do
   deprecate! date: "2025-09-16", because: :discontinued, replacement_cask: "topaz-gigapixel"
 
   auto_updates true
+  depends_on :macos
 
   pkg "TopazGigapixelAI-#{version}.pkg"
 

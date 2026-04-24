@@ -17,6 +17,8 @@ cask "cables" do
     end
   end
 
+  depends_on :macos
+
   app "cables-#{version}.app"
 
   zap trash: [

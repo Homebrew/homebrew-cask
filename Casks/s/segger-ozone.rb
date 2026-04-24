@@ -21,6 +21,8 @@ cask "segger-ozone" do
     regex(/<h2[^>]*>\s*Version\s*(\d+(?:\.\d+)+[a-z]?)/i)
   end
 
+  depends_on :macos
+
   pkg "Ozone_MacOSX_V#{version.no_dots}_#{arch}.pkg"
 
   uninstall quit:    "com.segger.Ozone.*",

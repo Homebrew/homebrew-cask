@@ -15,6 +15,8 @@ cask "nvidia-nsight-systems" do
     regex(/NsightSystems[._-]macos#{arch}[._-]public[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "NVIDIA Nsight Systems.app"
 
   zap trash: "~/Library/Saved Application State/com.nvidia.devtools.QuadD.savedState"

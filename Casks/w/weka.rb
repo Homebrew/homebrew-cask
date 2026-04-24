@@ -22,6 +22,8 @@ cask "weka" do
     end
   end
 
+  depends_on :macos
+
   app "weka-#{version}.app"
 
   zap trash: [

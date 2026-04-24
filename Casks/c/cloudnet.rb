@@ -13,6 +13,7 @@ cask "cloudnet" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "CloudNet.app"
   installer script: {

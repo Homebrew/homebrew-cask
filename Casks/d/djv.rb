@@ -13,6 +13,7 @@ cask "djv" do
     strategy :github_latest
   end
 
+  depends_on :macos
   depends_on arch: :arm64
 
   app "DJV.app"

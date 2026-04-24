@@ -9,6 +9,8 @@ cask "dehelper" do
   desc "Chinese-German dictionary"
   homepage "https://www.eudic.net/v4/de/app/dehelper"
 
+  depends_on :macos
+
   app "dehelper.app"
 
   uninstall quit: [

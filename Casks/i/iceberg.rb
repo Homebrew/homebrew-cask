@@ -10,6 +10,8 @@ cask "iceberg" do
   # Artifact not available over HTTPS
   disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
+  depends_on :macos
+
   pkg "Iceberg.mpkg"
 
   uninstall script:  {

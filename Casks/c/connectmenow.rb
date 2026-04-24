@@ -15,6 +15,8 @@ cask "connectmenow" do
     regex(%r{href=.*?/ConnectMeNow#{version.major}[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.dmg}i)
   end
 
+  depends_on :macos
+
   app "ConnectMeNow#{version.major}.app"
 
   zap trash: "~/Library/Preferences/com.Tweaking4All.ConnectMeNow#{version.major}.*"

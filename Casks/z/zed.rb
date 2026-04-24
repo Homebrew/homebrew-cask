@@ -18,6 +18,7 @@ cask "zed" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Zed.app"
   binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"

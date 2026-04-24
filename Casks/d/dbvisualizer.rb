@@ -15,6 +15,8 @@ cask "dbvisualizer" do
     regex(/href=.*?dbvis[._-](\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "DbVisualizer.app"
 
   zap trash: [

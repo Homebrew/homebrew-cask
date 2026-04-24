@@ -15,6 +15,7 @@ cask "backblaze" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer manual: "Backblaze Installer.app"
 

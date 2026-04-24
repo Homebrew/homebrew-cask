@@ -14,6 +14,8 @@ cask "gstreamer-runtime" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   pkg "gstreamer-1.0-#{version}-universal.pkg"
 
   uninstall pkgutil: [

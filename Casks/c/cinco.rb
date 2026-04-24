@@ -15,6 +15,8 @@ cask "cinco" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   pkg "Install Cinco.pkg"
 
   uninstall quit:    "de.jabc.cinco.meta.product.product",

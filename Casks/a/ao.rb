@@ -10,6 +10,8 @@ cask "ao" do
   deprecate! date: "2024-11-10", because: :unmaintained
   disable! date: "2025-11-10", because: :unmaintained
 
+  depends_on :macos
+
   app "Ao.app"
 
   caveats do

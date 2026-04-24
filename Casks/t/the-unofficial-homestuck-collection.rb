@@ -31,6 +31,8 @@ cask "the-unofficial-homestuck-collection" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "The Unofficial Homestuck Collection.app"
 
   zap trash: [

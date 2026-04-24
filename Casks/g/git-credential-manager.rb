@@ -16,6 +16,8 @@ cask "git-credential-manager" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "gcm-osx-#{arch}-#{version}.pkg"
 
   uninstall script:  {

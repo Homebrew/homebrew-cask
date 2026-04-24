@@ -11,6 +11,8 @@ cask "cleanapp" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "CleanApp.app"
 
   zap trash: [

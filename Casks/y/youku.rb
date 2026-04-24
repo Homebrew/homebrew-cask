@@ -14,6 +14,8 @@ cask "youku" do
     regex(/youkuclient[._-]setup[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "优酷.app"
 
   zap trash: [

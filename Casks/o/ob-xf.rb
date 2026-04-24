@@ -8,6 +8,8 @@ cask "ob-xf" do
   desc "Virtual analog synthesizer"
   homepage "https://surge-synth-team.org/ob-xf/"
 
+  depends_on :macos
+
   pkg "ob-xf-macOS-v#{version}.pkg"
 
   uninstall pkgutil: [

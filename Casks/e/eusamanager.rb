@@ -12,6 +12,8 @@ cask "eusamanager" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "EUSignWebInstall.pkg"
 
   uninstall pkgutil: [

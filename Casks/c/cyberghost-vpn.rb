@@ -16,6 +16,8 @@ cask "cyberghost-vpn" do
     end
   end
 
+  depends_on :macos
+
   app "CyberGhost VPN.app"
 
   zap trash: [

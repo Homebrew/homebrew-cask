@@ -15,6 +15,8 @@ cask "geneious-prime" do
     end
   end
 
+  depends_on :macos
+
   app "Geneious Prime.app"
 
   zap trash: [

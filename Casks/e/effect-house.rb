@@ -32,6 +32,8 @@ cask "effect-house" do
     end
   end
 
+  depends_on :macos
+
   app "Effect House.app"
 
   zap trash: [

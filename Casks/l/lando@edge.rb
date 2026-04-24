@@ -15,6 +15,7 @@ cask "lando@edge" do
   disable! date: "2025-09-07", because: "no longer distributes an install package"
 
   conflicts_with cask: "lando"
+  depends_on :macos
   depends_on cask: "docker"
 
   pkg "LandoInstaller.pkg",

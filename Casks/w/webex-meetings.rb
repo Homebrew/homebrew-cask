@@ -13,6 +13,8 @@ cask "webex-meetings" do
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
 
+  depends_on :macos
+
   pkg "Cisco_Webex_Meetings.pkg"
 
   uninstall launchctl: "com.webex.pluginagent",

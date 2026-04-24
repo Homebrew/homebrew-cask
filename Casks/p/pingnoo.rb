@@ -14,6 +14,8 @@ cask "pingnoo" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Pingnoo.app"
 
   zap trash: [

@@ -18,6 +18,8 @@ cask "5ire" do
     regex(/5ire[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
   end
 
+  depends_on :macos
+
   app "5ire.app"
 
   zap trash: [

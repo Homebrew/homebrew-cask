@@ -12,6 +12,8 @@ cask "sitala" do
     regex(/Sitala-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Sitala.app"
   pkg "Install Plug-ins.pkg"
 

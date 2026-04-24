@@ -8,6 +8,8 @@ cask "makeracam" do
   desc "CAM software for Makera CNCs"
   homepage "https://www.makera.com/pages/software"
 
+  depends_on :macos
+
   app "MakeraCAM.app"
 
   zap trash: "~/Library/Application Support/MakeraCAM"

@@ -10,6 +10,8 @@ cask "convert3dgui" do
   deprecate! date: "2024-09-02", because: :unmaintained
   disable! date: "2025-09-02", because: :unmaintained
 
+  depends_on :macos
+
   app "Convert3DGUI.app"
   binary "#{appdir}/Convert3DGUI.app/Contents/bin/c2d"
   binary "#{appdir}/Convert3DGUI.app/Contents/bin/c3d"

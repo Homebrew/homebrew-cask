@@ -17,6 +17,7 @@ cask "gpg-suite-no-mail" do
     "gpg-suite-pinentry",
     "gpg-suite@nightly",
   ]
+  depends_on :macos
 
   pkg "Install.pkg",
       choices: [

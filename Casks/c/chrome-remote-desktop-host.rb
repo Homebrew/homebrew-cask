@@ -12,6 +12,8 @@ cask "chrome-remote-desktop-host" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "Chrome Remote Desktop Host.pkg"
 
   # Some launchctl and pkgutil items are shared with other Google apps, they should only be removed in the zap stanza

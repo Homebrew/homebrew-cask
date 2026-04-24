@@ -11,6 +11,8 @@ cask "figma-agent" do
     cask "figma"
   end
 
+  depends_on :macos
+
   installer manual: "Install Figma Agent.app"
 
   uninstall quit:   "com.figma.agent",

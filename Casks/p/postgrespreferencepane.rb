@@ -7,6 +7,8 @@ cask "postgrespreferencepane" do
   desc "Preference Pane for controlling PostgreSQL database servers"
   homepage "https://github.com/MaccaTech/PostgresPrefs"
 
+  depends_on :macos
+
   prefpane "PostgreSQL.prefPane"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "cisco-jabber" do
     regex(%r{jabberAppUrl =.*?(\d+)/Install[._-]Cisco[._-]Jabber[._-]Mac\.pkg}i)
   end
 
+  depends_on :macos
+
   pkg "Install_Cisco-Jabber-Mac.pkg"
 
   uninstall pkgutil: [

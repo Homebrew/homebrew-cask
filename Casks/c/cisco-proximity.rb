@@ -12,6 +12,8 @@ cask "cisco-proximity" do
     regex(/^desktop[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "Cisco Proximity.app"
 
   uninstall launchctl: "com.cisco.proximity",

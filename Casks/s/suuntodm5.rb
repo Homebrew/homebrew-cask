@@ -14,6 +14,7 @@ cask "suuntodm5" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "SuuntoDM5.app"
 

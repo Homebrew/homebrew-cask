@@ -13,6 +13,7 @@ cask "ditto" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Ditto.app"
 

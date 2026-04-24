@@ -15,6 +15,8 @@ cask "4k-image-compressor" do
     regex(%r{href=.*?/4kimagecompressor[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
+  depends_on :macos
+
   app "4K Image Compressor.app"
 
   zap trash: [

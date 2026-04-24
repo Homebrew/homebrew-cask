@@ -238,6 +238,7 @@ cask "thunderbird@esr" do
 
   auto_updates true
   conflicts_with cask: "thunderbird"
+  depends_on :macos
 
   app "Thunderbird.app"
 

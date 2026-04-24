@@ -17,6 +17,8 @@ cask "direqual" do
     end
   end
 
+  depends_on :macos
+
   app "DirEqual.app"
 
   zap trash: [

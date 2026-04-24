@@ -12,6 +12,7 @@ cask "spectra-app" do
   homepage "https://spectra.5xcamp.us/"
 
   auto_updates true
+  depends_on :macos
 
   app "Spectra.app"
 

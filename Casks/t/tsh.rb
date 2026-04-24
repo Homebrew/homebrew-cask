@@ -16,6 +16,7 @@ cask "tsh" do
     "teleport-suite@16",
     "teleport-suite@17",
   ]
+  depends_on :macos
 
   pkg "tsh-#{version}.pkg"
 

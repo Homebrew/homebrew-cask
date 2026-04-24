@@ -18,6 +18,8 @@ cask "youdaonote" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "有道云笔记.app"
 
   zap trash: [

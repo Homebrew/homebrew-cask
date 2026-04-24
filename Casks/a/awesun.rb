@@ -19,6 +19,8 @@ cask "awesun" do
     end
   end
 
+  depends_on :macos
+
   pkg "AweSun.pkg"
 
   postflight do

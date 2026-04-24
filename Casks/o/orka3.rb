@@ -18,6 +18,8 @@ cask "orka3" do
     end
   end
 
+  depends_on :macos
+
   pkg "orka3.pkg"
 
   uninstall pkgutil: "com.macstadium.orka3.pkg"

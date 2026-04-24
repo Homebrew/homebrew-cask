@@ -14,6 +14,7 @@ cask "thonny" do
   end
 
   conflicts_with cask: "thonny-xxl"
+  depends_on :macos
 
   pkg "thonny-#{version}.pkg"
 

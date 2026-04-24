@@ -15,6 +15,7 @@ cask "pycharm-edu" do
   disable! date: "2026-02-11", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "PyCharm Edu.app"
 

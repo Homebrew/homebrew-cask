@@ -13,6 +13,8 @@ cask "svp" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "SVP #{version.major} Mac.app"
 
   zap trash: [

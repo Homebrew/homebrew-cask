@@ -10,6 +10,8 @@ cask "ajour" do
   deprecate! date: "2024-10-04", because: :unmaintained
   disable! date: "2025-10-04", because: :unmaintained
 
+  depends_on :macos
+
   app "Ajour.app"
 
   zap trash: "~/.config/ajour"

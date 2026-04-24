@@ -12,6 +12,8 @@ cask "impactor" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Impactor.app"
 
   zap trash: "~/.config/PlumeImpactor"

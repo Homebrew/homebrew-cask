@@ -31,6 +31,7 @@ cask "commandpost" do
   homepage "https://commandpost.io/"
 
   auto_updates true
+  depends_on :macos
 
   app "CommandPost.app"
   binary "#{appdir}/CommandPost.app/Contents/Frameworks/hs/cmdpost"

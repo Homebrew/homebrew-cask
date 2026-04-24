@@ -18,6 +18,8 @@ cask "xmlmind-editor" do
     end
   end
 
+  depends_on :macos
+
   app "XMLmind.app"
 
   zap trash: [

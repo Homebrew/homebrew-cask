@@ -16,6 +16,8 @@ cask "meshlab" do
     regex(/^Meshlab[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "MeshLab#{version}.app"
 
   postflight do

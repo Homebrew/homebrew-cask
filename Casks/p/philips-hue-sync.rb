@@ -19,6 +19,8 @@ cask "philips-hue-sync" do
     end
   end
 
+  depends_on :macos
+
   pkg "HueSyncInstaller_#{version.csv.first}.pkg"
 
   uninstall quit:    [

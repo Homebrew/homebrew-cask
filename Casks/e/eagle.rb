@@ -12,6 +12,8 @@ cask "eagle" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
 
   uninstall pkgutil: "com.Autodesk.eagle"

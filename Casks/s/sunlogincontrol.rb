@@ -18,6 +18,8 @@ cask "sunlogincontrol" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "SunloginRemote.pkg"
 
   uninstall quit:    "com.oray.remote",

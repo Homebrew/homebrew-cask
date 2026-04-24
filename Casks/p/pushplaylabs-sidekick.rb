@@ -17,6 +17,8 @@ cask "pushplaylabs-sidekick" do
 
   disable! date: "2025-10-05", because: :discontinued
 
+  depends_on :macos
+
   app "Sidekick.app"
 
   zap trash: [
