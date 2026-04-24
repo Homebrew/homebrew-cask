@@ -9,8 +9,7 @@ cask "rstudio" do
   homepage "https://posit.co/products/open-source/rstudio/"
 
   livecheck do
-    # send an outdated version to always get the newest version in response
-    url "https://www.rstudio.org/links/check_for_update?version=2026.01.2%2B418&os=mac&format=kvp"
+    url "https://www.rstudio.org/links/check_for_update?version=0.0.0&os=mac"
     regex(/update-version=v?(\d+(?:\.\d+)+)%2B(\d+)/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
