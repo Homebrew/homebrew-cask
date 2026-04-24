@@ -12,6 +12,8 @@ cask "4k-video-downloader" do
     regex(%r{href=.*?/4kvideodownloader[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
+  depends_on :macos
+
   app "4K Video Downloader.app"
 
   zap trash: [

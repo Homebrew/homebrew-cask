@@ -16,6 +16,8 @@ cask "nheko" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "nheko.app"
 
   zap trash: [

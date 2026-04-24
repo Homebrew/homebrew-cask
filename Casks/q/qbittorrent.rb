@@ -26,6 +26,7 @@ cask "qbittorrent" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "qbittorrent@lt20"
+  depends_on :macos
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "qbittorrent.app", target: "qBittorrent.app"

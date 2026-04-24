@@ -14,6 +14,8 @@ cask "assinador-serpro" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   pkg "AssinadorSerpro-#{version}.pkg"
 
   uninstall pkgutil: "br.gov.serpro.desktop.assinador"

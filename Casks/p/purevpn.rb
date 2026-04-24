@@ -15,6 +15,8 @@ cask "purevpn" do
     end
   end
 
+  depends_on :macos
+
   pkg "PureVPN.pkg"
 
   uninstall quit:    "com.purevpn.app.mac",

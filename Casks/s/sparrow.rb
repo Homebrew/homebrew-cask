@@ -11,6 +11,8 @@ cask "sparrow" do
   desc "Bitcoin wallet application"
   homepage "https://sparrowwallet.com/"
 
+  depends_on :macos
+
   app "Sparrow.app"
 
   zap trash: "~/.sparrow"

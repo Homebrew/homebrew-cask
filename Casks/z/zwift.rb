@@ -12,6 +12,8 @@ cask "zwift" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "ZwiftInstaller.pkg"
 
   uninstall quit:    "com.zwift.ZwiftLauncher",

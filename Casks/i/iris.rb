@@ -13,6 +13,8 @@ cask "iris" do
     regex(/Iris[._-]?v?(\d+(?:\.\d+)+)[._-]?OSX\.zip/i)
   end
 
+  depends_on :macos
+
   app "Iris.app"
 
   uninstall launchctl: "co.iristech.Iris",

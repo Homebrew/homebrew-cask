@@ -23,6 +23,8 @@ cask "ngrok" do
     end
   end
 
+  depends_on :macos
+
   binary "ngrok"
 
   postflight do

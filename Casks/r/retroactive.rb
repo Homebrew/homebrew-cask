@@ -10,6 +10,8 @@ cask "retroactive" do
   deprecate! date: "2024-08-21", because: :discontinued
   disable! date: "2025-08-21", because: :discontinued
 
+  depends_on :macos
+
   app "Retroactive #{version}/Retroactive.app"
 
   zap delete: "~/Library/Caches/com.retroactive.Retroactive"

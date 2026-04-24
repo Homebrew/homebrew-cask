@@ -9,6 +9,8 @@ cask "safeincloud-password-manager" do
 
   disable! date: "2026-03-15", because: :moved_to_mas
 
+  depends_on :macos
+
   app "SafeInCloud Password Manager.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "uniflash" do
     regex(/href=.*?uniflash_sl\.(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "uniflash_sl.#{version}.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended", "--prefix", "/Applications/TI/UniFlash"],

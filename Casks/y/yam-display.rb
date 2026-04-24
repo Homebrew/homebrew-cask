@@ -12,6 +12,8 @@ cask "yam-display" do
     regex(/href=.*?YamDisplay[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Yam Display.app"
 
   zap trash: [

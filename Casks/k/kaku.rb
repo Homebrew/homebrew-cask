@@ -10,6 +10,8 @@ cask "kaku" do
   deprecate! date: "2024-07-17", because: :unmaintained
   disable! date: "2025-07-17", because: :unmaintained
 
+  depends_on :macos
+
   app "Kaku.app"
 
   caveats do

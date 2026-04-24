@@ -7,6 +7,8 @@ cask "font-sf-compact" do
   name "SF Compact"
   homepage "https://developer.apple.com/fonts/"
 
+  depends_on :macos
+
   pkg "SF Compact Fonts.pkg"
 
   uninstall pkgutil: "com.apple.pkg.SFCompactFonts"

@@ -10,6 +10,8 @@ cask "topaz-sharpen-ai" do
   deprecate! date: "2024-05-07", because: :discontinued
   disable! date: "2025-05-07", because: :discontinued
 
+  depends_on :macos
+
   app "Topaz Sharpen AI.app"
 
   # No zap stanza required

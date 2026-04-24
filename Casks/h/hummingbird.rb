@@ -16,6 +16,8 @@ cask "hummingbird" do
     regex(/href=.*?hummingbird[._-]macos[._-]#{arch}[._-]notarized[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   binary "hummingbird-macos-#{arch}-#{version}/hummingbird"
 
   postflight do

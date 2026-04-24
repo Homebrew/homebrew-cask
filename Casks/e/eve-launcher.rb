@@ -15,6 +15,7 @@ cask "eve-launcher" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "EVE Launcher.app"
 

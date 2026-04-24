@@ -13,6 +13,8 @@ cask "vox-preferences-pane" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   prefpane "Vox Preferences.prefPane"
 
   zap trash: "~/Library/Preferences/com.coppertino.VoxPrefs.plist"

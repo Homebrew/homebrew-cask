@@ -42,6 +42,7 @@ cask "powerphotos" do
   homepage "https://www.fatcatsoftware.com/powerphotos/"
 
   auto_updates true
+  depends_on :macos
 
   app "PowerPhotos.app"
 

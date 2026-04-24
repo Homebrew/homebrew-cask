@@ -11,6 +11,7 @@ cask "affinity-photo" do
   deprecate! date: "2025-10-30", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Affinity Photo #{version.csv.first.major}.app"
 

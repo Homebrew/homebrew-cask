@@ -39,6 +39,7 @@ cask "ireal-pro" do
   homepage "https://irealpro.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "iReal Pro.app"
 

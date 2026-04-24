@@ -11,6 +11,8 @@ cask "bestres" do
   deprecate! date: "2024-09-07", because: :unmaintained
   disable! date: "2025-09-07", because: :unmaintained
 
+  depends_on :macos
+
   app "BestRes.app"
 
   caveats do

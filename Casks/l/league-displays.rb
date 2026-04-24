@@ -9,6 +9,8 @@ cask "league-displays" do
 
   disable! date: "2026-10-14", because: :no_longer_available
 
+  depends_on :macos
+
   app "LeagueDisplays.app"
 
   zap trash: [

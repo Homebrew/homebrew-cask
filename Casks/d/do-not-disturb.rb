@@ -11,6 +11,8 @@ cask "do-not-disturb" do
   deprecate! date: "2024-11-16", because: :unmaintained
   disable! date: "2025-11-16", because: :unmaintained
 
+  depends_on :macos
+
   installer script: {
     executable: "#{staged_path}/Do Not Disturb Installer.app/Contents/MacOS/Do Not Disturb Installer",
     args:       ["-install"],

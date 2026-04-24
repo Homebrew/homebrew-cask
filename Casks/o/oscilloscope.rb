@@ -12,6 +12,8 @@ cask "oscilloscope" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Oscilloscope.app"
 
   zap trash: [

@@ -14,6 +14,7 @@ cask "chatglm" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "智谱清言.app"
 

@@ -22,6 +22,8 @@ cask "capcut" do
     end
   end
 
+  depends_on :macos
+
   app "CapCut.app"
 
   zap trash: [

@@ -14,6 +14,8 @@ cask "minecraft-education" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "minecraft-edu.app", target: "Minecraft Education.app"
 

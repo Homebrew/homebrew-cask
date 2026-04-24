@@ -32,6 +32,8 @@ cask "secretive" do
   desc "Store SSH keys in the Secure Enclave"
   homepage "https://github.com/maxgoedjen/secretive"
 
+  depends_on :macos
+
   app "Secretive.app"
 
   zap trash: [

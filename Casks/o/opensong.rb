@@ -15,6 +15,8 @@ cask "opensong" do
     regex(/OpenSong[\s._-]*?v?(\d+(?:[._]\d+)+(?:[\s._-]?(?:B(?:eta)?|RC)\d*)?)(?:[._-][^"']+?)?\.(?:dmg|pkg)/i)
   end
 
+  depends_on :macos
+
   pkg "OpenSong%20#{version}.pkg"
 
   uninstall pkgutil: "org.opensong.opensong"

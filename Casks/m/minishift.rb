@@ -9,6 +9,8 @@ cask "minishift" do
   deprecate! date: "2020-09-26", because: :unmaintained
   disable! date: "2025-06-26", because: :unmaintained
 
+  depends_on :macos
+
   binary "minishift-#{version}-darwin-amd64/minishift"
 
   zap trash: "~/.minishift"

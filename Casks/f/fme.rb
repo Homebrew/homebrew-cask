@@ -19,6 +19,8 @@ cask "fme" do
     end
   end
 
+  depends_on :macos
+
   pkg "fme-form-#{version.csv.first}-b#{version.csv.second}-macosx-#{arch}.pkg"
 
   uninstall pkgutil: [

@@ -14,6 +14,8 @@ cask "diffmerge" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "DiffMerge.app"
   binary "Extras/diffmerge.sh", target: "diffmerge"
   manpage "Extras/diffmerge.1"

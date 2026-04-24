@@ -14,6 +14,7 @@ cask "kindle-create" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "KindleCreateInstaller.pkg"
 

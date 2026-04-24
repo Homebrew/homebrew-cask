@@ -14,6 +14,7 @@ cask "mailmate@beta" do
   end
 
   conflicts_with cask: "mailmate"
+  depends_on :macos
 
   app "MailMate.app"
   binary "#{appdir}/MailMate.app/Contents/Resources/emate"

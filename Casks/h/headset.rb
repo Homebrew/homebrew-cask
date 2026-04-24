@@ -11,6 +11,8 @@ cask "headset" do
   desc "Music player powered by YouTube and Reddit"
   homepage "https://headsetapp.co/"
 
+  depends_on :macos
+
   app "build/headset-darwin-#{arch}/Headset.app"
 
   zap trash: [

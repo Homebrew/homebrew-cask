@@ -13,6 +13,8 @@ cask "jedit-omega" do
     regex(/Rev[._-](\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "JeditOmega#{version.no_dots}.pkg"
 
   uninstall quit:    "jp.co.artman21.JeditOmega",

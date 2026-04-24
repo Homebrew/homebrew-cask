@@ -12,6 +12,8 @@ cask "pingid" do
     regex(/Desktop\s+app\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "PingID.pkg"
 
   uninstall pkgutil: "com.pingidentity.pingid.pcclient"

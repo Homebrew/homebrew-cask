@@ -13,6 +13,8 @@ cask "db-browser-for-sqlcipher@nightly" do
     regex(/^DB[._-]Browser[._-]for[._-]SQLCipher[._-]universal[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "DB Browser for SQLCipher Nightly.app"
 
   zap trash: [

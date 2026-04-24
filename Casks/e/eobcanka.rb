@@ -12,6 +12,8 @@ cask "eobcanka" do
     regex(%r{<h3>Verze\s(\d+(?:\.\d+)+)</h3>}i)
   end
 
+  depends_on :macos
+
   pkg "eObcanka.pkg"
 
   uninstall quit:    [

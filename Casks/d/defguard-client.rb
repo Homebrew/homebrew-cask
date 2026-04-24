@@ -12,6 +12,8 @@ cask "defguard-client" do
 
   deprecate! date: "2025-12-16", because: :moved_to_mas
 
+  depends_on :macos
+
   pkg "defguard-#{arch}-apple-darwin-#{version}.pkg"
 
   uninstall launchctl: "net.defguard",

@@ -8,6 +8,8 @@ cask "bindiff" do
   desc "Binary diffing tool"
   homepage "https://zynamics.com/bindiff.html"
 
+  depends_on :macos
+
   pkg "Install BinDiff.pkg"
 
   uninstall pkgutil: "com.google.security.zynamics.bindiff"

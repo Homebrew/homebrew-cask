@@ -12,6 +12,8 @@ cask "switch" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
 
+  depends_on :macos
+
   app "Switch.app"
 
   zap trash: [

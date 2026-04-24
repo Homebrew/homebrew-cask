@@ -12,6 +12,8 @@ cask "shureplus-motiv" do
     regex(/href=.*MOTIV[._-]Desktop[._-]macOS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "ShurePlus MOTIV.app"
 
   uninstall quit: "com.shure.motiv.desktop"

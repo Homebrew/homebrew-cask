@@ -37,6 +37,7 @@ cask "tripmode" do
   homepage "https://www.tripmode.ch/"
 
   auto_updates true
+  depends_on :macos
 
   app "TripMode.app"
 

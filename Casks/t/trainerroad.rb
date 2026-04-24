@@ -21,6 +21,8 @@ cask "trainerroad" do
     end
   end
 
+  depends_on :macos
+
   app "TrainerRoad.app"
 
   zap trash: "~/Library/Application Support/TrainerRoad"

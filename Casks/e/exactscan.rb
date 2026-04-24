@@ -13,6 +13,8 @@ cask "exactscan" do
     regex(%r{href=.*?/ExactScan-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "ExactScan.app"
 
   zap trash: [

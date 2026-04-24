@@ -10,6 +10,8 @@ cask "bluegriffon" do
   deprecate! date: "2024-06-28", because: :discontinued
   disable! date: "2025-06-29", because: :discontinued
 
+  depends_on :macos
+
   app "BlueGriffon.app"
 
   caveats do

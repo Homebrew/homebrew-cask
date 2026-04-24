@@ -27,6 +27,7 @@ cask "bot-framework-emulator" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Bot Framework Emulator.app"
 

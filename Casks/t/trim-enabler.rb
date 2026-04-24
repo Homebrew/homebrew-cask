@@ -19,6 +19,8 @@ cask "trim-enabler" do
     end
   end
 
+  depends_on :macos
+
   app "Trim Enabler.app"
 
   uninstall launchctl: "org.cindori.TEHelper",

@@ -10,6 +10,8 @@ cask "cumulus" do
 
   deprecate! date: "2025-04-21", because: :unmaintained
 
+  depends_on :macos
+
   app "Cumulus.app"
 
   zap trash: [

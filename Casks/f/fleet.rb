@@ -14,6 +14,8 @@ cask "fleet" do
   # https://blog.jetbrains.com/fleet/2025/12/the-future-of-fleet/
   disable! date: "2025-12-22", because: :no_longer_available
 
+  depends_on :macos
+
   app "Fleet.app"
   binary "#{appdir}/Fleet.app/Contents/app/bin/fleet"
 

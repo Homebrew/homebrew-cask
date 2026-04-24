@@ -11,6 +11,8 @@ cask "google-trends" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   screen_saver "Google Trends.saver"
 
   # No zap stanza required

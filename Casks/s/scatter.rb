@@ -8,6 +8,8 @@ cask "scatter" do
   desc "Desktop wallet for EOS"
   homepage "https://get-scatter.com/"
 
+  depends_on :macos
+
   app "Scatter.app"
 
   zap trash: [

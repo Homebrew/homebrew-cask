@@ -13,6 +13,7 @@ cask "name-mangler" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Name Mangler.app"
 

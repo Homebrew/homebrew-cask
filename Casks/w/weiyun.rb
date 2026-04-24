@@ -15,6 +15,8 @@ cask "weiyun" do
     end
   end
 
+  depends_on :macos
+
   app "Weiyun.app"
 
   uninstall quit: "com.tencent.MacWeiyun"

@@ -14,6 +14,8 @@ cask "rodecaster" do
     end
   end
 
+  depends_on :macos
+
   pkg "RØDECaster App.pkg"
 
   preflight do

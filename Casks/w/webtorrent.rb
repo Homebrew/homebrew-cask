@@ -8,6 +8,8 @@ cask "webtorrent" do
   desc "Torrent streaming application"
   homepage "https://webtorrent.io/desktop/"
 
+  depends_on :macos
+
   app "WebTorrent.app"
 
   zap trash: [

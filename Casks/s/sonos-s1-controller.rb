@@ -19,6 +19,7 @@ cask "sonos-s1-controller" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Sonos S1 Controller.app"
 

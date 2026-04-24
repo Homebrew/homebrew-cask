@@ -13,6 +13,7 @@ cask "accessmenubarapps" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "AccessMenuBarApps#{version}/AccessMenuBarApps.app"
 

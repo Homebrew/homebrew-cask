@@ -13,6 +13,7 @@ cask "yandex-disk" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Yandex.Disk.2.app"
 

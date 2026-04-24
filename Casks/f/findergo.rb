@@ -10,6 +10,8 @@ cask "findergo" do
   deprecate! date: "2025-02-22", because: :unmaintained
   disable! date: "2026-02-22", because: :unmaintained
 
+  depends_on :macos
+
   app "FinderGo.app"
 
   caveats do

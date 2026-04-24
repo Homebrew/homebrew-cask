@@ -12,6 +12,8 @@ cask "squidman" do
     regex(%r{href=.*?/resources/downloads/?[^>]+?>\s*version\s+v?(\d+(?:\.\d+)+)\s*<}im)
   end
 
+  depends_on :macos
+
   app "SquidMan.app"
 
   zap trash: [

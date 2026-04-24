@@ -52,6 +52,8 @@ cask "mysql-shell" do
   desc "Interactive JavaScript, Python or SQL interface"
   homepage "https://dev.mysql.com/downloads/shell/"
 
+  depends_on :macos
+
   pkg "mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.pkg"
 
   uninstall pkgutil: "com.mysql.shell"

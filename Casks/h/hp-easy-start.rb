@@ -12,6 +12,8 @@ cask "hp-easy-start" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "HP Easy Start.app"
 
   zap trash: [

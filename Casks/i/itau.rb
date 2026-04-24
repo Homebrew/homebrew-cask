@@ -20,6 +20,8 @@ cask "itau" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "Itau.app"
 
   zap trash: [

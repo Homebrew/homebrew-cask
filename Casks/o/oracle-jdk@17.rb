@@ -13,6 +13,8 @@ cask "oracle-jdk@17" do
   deprecate! date: "2024-10-28", because: :no_longer_meets_criteria
   disable! date: "2025-10-29", because: :no_longer_meets_criteria
 
+  depends_on :macos
+
   pkg "JDK #{version}.pkg"
 
   uninstall pkgutil: "com.oracle.jdk-#{version}"

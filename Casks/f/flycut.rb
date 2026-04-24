@@ -7,6 +7,8 @@ cask "flycut" do
   desc "Clipboard manager for developers"
   homepage "https://github.com/TermiT/Flycut"
 
+  depends_on :macos
+
   app "Flycut.app"
 
   zap trash: "~/Library/Preferences/com.generalarcade.flycut.plist"

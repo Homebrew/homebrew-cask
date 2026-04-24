@@ -15,6 +15,8 @@ cask "flox" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   pkg "flox-#{version}.#{arch}-darwin.pkg"
 
   uninstall launchctl: [

@@ -18,6 +18,8 @@ cask "moradownloader" do
     end
   end
 
+  depends_on :macos
+
   pkg "MoraDownloader.pkg"
 
   uninstall pkgutil: "jp.co.sonymusicsolutions.moradownloader"

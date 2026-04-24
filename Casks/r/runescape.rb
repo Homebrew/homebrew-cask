@@ -11,6 +11,8 @@ cask "runescape" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "RuneScape.app"
 
   caveats do

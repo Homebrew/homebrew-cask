@@ -22,6 +22,7 @@ cask "mellel" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Mellel #{version.major}.app"
 

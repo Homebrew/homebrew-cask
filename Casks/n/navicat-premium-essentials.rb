@@ -10,6 +10,8 @@ cask "navicat-premium-essentials" do
   deprecate! date: "2024-05-14", because: :discontinued
   disable! date: "2025-05-15", because: :discontinued
 
+  depends_on :macos
+
   app "Navicat Premium Essentials.app"
 
   zap trash: [

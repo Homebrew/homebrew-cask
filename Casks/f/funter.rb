@@ -12,6 +12,8 @@ cask "funter" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "Funter #{version.major}.app"
 
   # MacCleaner files are part of the cask

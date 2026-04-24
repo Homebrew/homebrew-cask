@@ -14,6 +14,8 @@ cask "meld" do
     url "https://gitlab.com/dehesselle/meld_macos.git"
   end
 
+  depends_on :macos
+
   app "Meld.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/meld.wrapper.sh"

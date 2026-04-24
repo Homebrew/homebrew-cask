@@ -13,6 +13,8 @@ cask "foxmail" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Foxmail.app"
 
   zap trash: [

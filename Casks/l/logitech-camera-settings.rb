@@ -20,6 +20,8 @@ cask "logitech-camera-settings" do
     end
   end
 
+  depends_on :macos
+
   pkg "LogiCameraSettings_#{version}.pkg"
 
   uninstall signal:     ["TERM", "com.logitech.vc.LogiVCCoreService"],

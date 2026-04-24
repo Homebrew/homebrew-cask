@@ -12,6 +12,8 @@ cask "focus" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Focus.app"
 
   uninstall quit: "BradJasper.focus"

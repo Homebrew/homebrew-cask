@@ -19,6 +19,8 @@ cask "multipass" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "multipass-#{version}+mac-Darwin.pkg"
 
   uninstall launchctl: "com.canonical.multipassd",

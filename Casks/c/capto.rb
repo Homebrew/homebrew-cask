@@ -13,6 +13,8 @@ cask "capto" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "Capto.app"
 
   zap trash: [

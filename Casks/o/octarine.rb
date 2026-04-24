@@ -17,6 +17,8 @@ cask "octarine" do
     regex(/href=.*?octarine[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Octarine.app"
 
   zap trash: [

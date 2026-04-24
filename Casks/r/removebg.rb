@@ -15,6 +15,8 @@ cask "removebg" do
     end
   end
 
+  depends_on :macos
+
   app "remove.bg.app"
 
   zap trash: [

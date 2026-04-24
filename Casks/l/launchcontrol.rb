@@ -23,6 +23,7 @@ cask "launchcontrol" do
   homepage "https://www.soma-zone.com/LaunchControl/"
 
   auto_updates true
+  depends_on :macos
 
   app "LaunchControl.app"
   binary "#{appdir}/LaunchControl.app/Contents/MacOS/fdautil"

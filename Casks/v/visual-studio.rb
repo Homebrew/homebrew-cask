@@ -19,6 +19,7 @@ cask "visual-studio" do
   disable! date: "2025-09-02", because: :discontinued
 
   auto_updates true
+  depends_on :macos
   depends_on cask: "mono-mdk-for-visual-studio"
 
   app "Visual Studio.app"

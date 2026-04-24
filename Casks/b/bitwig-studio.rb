@@ -12,6 +12,8 @@ cask "bitwig-studio" do
     regex(/Bitwig\s*Studio\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Bitwig Studio.app"
 
   zap trash: [

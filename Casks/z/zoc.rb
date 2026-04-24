@@ -12,6 +12,8 @@ cask "zoc" do
     regex(/\*\s*VERSION\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "zoc#{version.major}.app"
 
   zap trash: [

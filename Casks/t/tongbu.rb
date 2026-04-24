@@ -9,6 +9,8 @@ cask "tongbu" do
 
   disable! date: "2025-07-14", because: :no_longer_available
 
+  depends_on :macos
+
   app "Tongbu.app"
 
   zap trash: [

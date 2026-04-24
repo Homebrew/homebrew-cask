@@ -15,6 +15,8 @@ cask "nperf" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "nPerf-#{arch}-#{version}.pkg"
 
   uninstall pkgutil: "com.nperf.nPerf"

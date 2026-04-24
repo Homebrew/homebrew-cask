@@ -11,6 +11,8 @@ cask "focusany" do
   desc "Open source desktop toolbox"
   homepage "https://focusany.com/"
 
+  depends_on :macos
+
   app "FocusAny.app"
 
   zap trash: [

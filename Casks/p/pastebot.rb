@@ -15,6 +15,8 @@ cask "pastebot" do
     end
   end
 
+  depends_on :macos
+
   app "Pastebot.app"
 
   zap delete: [

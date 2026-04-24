@@ -84,6 +84,7 @@ cask "firefox@developer-edition" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Firefox Developer Edition.app"
 

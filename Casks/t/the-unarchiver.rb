@@ -20,6 +20,7 @@ cask "the-unarchiver" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "The Unarchiver.app"
 

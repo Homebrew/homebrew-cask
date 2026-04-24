@@ -10,6 +10,8 @@ cask "cord" do
   deprecate! date: "2024-07-17", because: :discontinued
   disable! date: "2025-07-17", because: :discontinued
 
+  depends_on :macos
+
   app "CoRD.app"
 
   zap trash: [

@@ -19,6 +19,8 @@ cask "mumu" do
     end
   end
 
+  depends_on :macos
+
   app "Mumu.app"
 
   zap trash: [

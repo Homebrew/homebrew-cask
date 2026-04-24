@@ -12,6 +12,8 @@ cask "m3unify" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "M3Unify.app"
 
   caveats do

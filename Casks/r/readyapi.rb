@@ -16,6 +16,8 @@ cask "readyapi" do
     regex(/>\s*Ready(?:!\s+)?API\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "ReadyAPI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],

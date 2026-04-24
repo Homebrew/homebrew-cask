@@ -10,6 +10,8 @@ cask "joinme" do
   deprecate! date: "2024-07-16", because: :discontinued
   disable! date: "2025-07-16", because: :discontinued
 
+  depends_on :macos
+
   app "join.me.app"
 
   zap trash: [

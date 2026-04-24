@@ -67,6 +67,8 @@ cask "cocktail" do
   desc "Cleans, repairs and optimises computer systems"
   homepage "https://www.maintain.se/cocktail/"
 
+  depends_on :macos
+
   app "Cocktail.app"
 
   zap trash: [

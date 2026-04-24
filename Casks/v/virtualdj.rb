@@ -18,6 +18,8 @@ cask "virtualdj" do
     end
   end
 
+  depends_on :macos
+
   pkg "install_virtualdj_#{version.csv.first}_b#{version.csv.second}_mac.pkg"
 
   uninstall pkgutil: "com.atomixproductions.com.virtualdj8.VirtualDJ.pkg"

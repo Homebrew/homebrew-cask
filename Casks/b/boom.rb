@@ -15,6 +15,8 @@ cask "boom" do
     end
   end
 
+  depends_on :macos
+
   app "Boom 2.app"
 
   uninstall launchctl: "com.globaldelight.Boom2Daemon",

@@ -12,6 +12,8 @@ cask "hdhomerun" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "HDHomeRun Installer.pkg"
 
   uninstall pkgutil: "com.silicondust.*hdhomerun"

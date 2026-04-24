@@ -13,6 +13,8 @@ cask "firecamp" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Firecamp.app"
 
   zap trash: [

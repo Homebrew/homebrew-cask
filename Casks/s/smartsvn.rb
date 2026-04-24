@@ -18,6 +18,8 @@ cask "smartsvn" do
     end
   end
 
+  depends_on :macos
+
   app "SmartSVN.app"
 
   zap trash: [

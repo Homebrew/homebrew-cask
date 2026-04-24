@@ -12,6 +12,8 @@ cask "presentation" do
     regex(/^(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   pkg "osx-presentation-#{version}.pkg"
 
   uninstall pkgutil: "fr.imag.iihm.blanch.osx-presentation"

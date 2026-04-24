@@ -12,6 +12,8 @@ cask "nosqlbooster-for-mongodb" do
     regex(/%22patch_ver%22(?:%20|\s)*%3A(?:%20|\s)*%22v?(\d+(?:\.\d+)+)%22/i)
   end
 
+  depends_on :macos
+
   app "NoSQLBooster for MongoDB.app"
 
   zap trash: [

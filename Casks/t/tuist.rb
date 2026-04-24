@@ -8,6 +8,8 @@ cask "tuist" do
   desc "Create, maintain, and interact with Xcode projects at scale"
   homepage "https://tuist.io/"
 
+  depends_on :macos
+
   binary "tuist"
 
   zap trash: "~/.tuist"

@@ -19,6 +19,7 @@ cask "openvanilla" do
     end
   end
 
+  depends_on :macos
   container nested: "OpenVanillaInstaller.app/Contents/Resources/NotarizedArchives/OpenVanilla-r#{version.csv.second}.zip"
 
   input_method "OpenVanilla.app"

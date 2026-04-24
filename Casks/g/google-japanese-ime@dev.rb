@@ -8,6 +8,8 @@ cask "google-japanese-ime@dev" do
   desc "Japanese input software"
   homepage "https://www.google.co.jp/ime/"
 
+  depends_on :macos
+
   pkg "GoogleJapaneseInput.pkg"
 
   # Some launchctl and pkgutil items are shared with other Google apps, they should only be removed in the zap stanza

@@ -8,6 +8,8 @@ cask "burn" do
   desc "CD burning application"
   homepage "https://burn-osx.sourceforge.io/"
 
+  depends_on :macos
+
   app "Burn.localized/Burn.app"
 
   zap trash: "~/Library/Preferences/com.kiwifruitware.Burn.plist"

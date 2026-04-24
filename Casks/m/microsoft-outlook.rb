@@ -43,6 +43,7 @@ cask "microsoft-outlook" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on :macos
 
   pkg "Microsoft_Outlook_#{version}_Installer.pkg",
       choices: [

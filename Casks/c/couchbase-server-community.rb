@@ -17,6 +17,7 @@ cask "couchbase-server-community" do
   end
 
   conflicts_with cask: "couchbase-server-enterprise"
+  depends_on :macos
 
   app "Couchbase Server.app"
 

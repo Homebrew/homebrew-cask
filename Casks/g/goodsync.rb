@@ -12,6 +12,8 @@ cask "goodsync" do
     regex(/Version\sv?\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "GoodSync.app"
 
   zap trash: [

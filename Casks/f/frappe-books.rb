@@ -16,6 +16,8 @@ cask "frappe-books" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Frappe Books.app"
 
   zap trash: [

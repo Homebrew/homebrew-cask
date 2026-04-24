@@ -10,6 +10,8 @@ cask "mindwtr" do
   desc "Local-first GTD productivity tool"
   homepage "https://github.com/dongdongbh/Mindwtr"
 
+  depends_on :macos
+
   app "Mindwtr.app"
 
   zap trash: [

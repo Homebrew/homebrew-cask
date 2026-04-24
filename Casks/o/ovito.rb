@@ -22,6 +22,7 @@ cask "ovito" do
 
   auto_updates true
   conflicts_with cask: "ovito-pro"
+  depends_on :macos
 
   app "Ovito.app"
 

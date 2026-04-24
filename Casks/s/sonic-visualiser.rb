@@ -21,6 +21,8 @@ cask "sonic-visualiser" do
     end
   end
 
+  depends_on :macos
+
   app "Sonic Visualiser.app"
 
   zap trash: [

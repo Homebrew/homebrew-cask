@@ -13,6 +13,7 @@ cask "folding-at-home@beta" do
   end
 
   conflicts_with cask: "folding-at-home"
+  depends_on :macos
 
   pkg "fah-client_#{version}_universal.pkg"
 

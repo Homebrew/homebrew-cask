@@ -15,6 +15,8 @@ cask "yojimbo" do
     end
   end
 
+  depends_on :macos
+
   app "Yojimbo.app"
 
   zap trash: [

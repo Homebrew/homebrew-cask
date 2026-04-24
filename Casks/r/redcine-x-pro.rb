@@ -22,6 +22,8 @@ cask "redcine-x-pro" do
     end
   end
 
+  depends_on :macos
+
   pkg "REDCINE-X_PRO_Build_#{version}.pkg"
 
   uninstall pkgutil: [

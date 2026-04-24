@@ -17,6 +17,7 @@ cask "wezterm" do
   end
 
   conflicts_with cask: "wezterm@nightly"
+  depends_on :macos
 
   app "WezTerm-macos-#{version.csv.first}-#{version.csv.second}/WezTerm.app"
   %w[

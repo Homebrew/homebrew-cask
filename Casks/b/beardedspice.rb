@@ -11,6 +11,7 @@ cask "beardedspice" do
   disable! date: "2025-07-09", because: :unmaintained
 
   auto_updates true
+  depends_on :macos
 
   app "BeardedSpice.app"
 

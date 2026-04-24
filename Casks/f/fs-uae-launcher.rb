@@ -16,6 +16,8 @@ cask "fs-uae-launcher" do
     regex(/href=.*?FS[._-]UAE[._-]Launcher[._-](\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}/i)
   end
 
+  depends_on :macos
+
   app "FS-UAE Launcher.app"
 
   zap trash: [

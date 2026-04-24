@@ -16,6 +16,7 @@ cask "pieces-os" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Pieces OS.app"
 

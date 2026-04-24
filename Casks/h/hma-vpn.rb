@@ -8,6 +8,8 @@ cask "hma-vpn" do
   desc "VPN program from Hide My Ass"
   homepage "https://www.hidemyass.com/index.html"
 
+  depends_on :macos
+
   installer manual: "Install HMA VPN.pkg"
 
   uninstall launchctl: "com.privax.osx.provpn.helper",

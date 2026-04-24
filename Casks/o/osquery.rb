@@ -13,6 +13,8 @@ cask "osquery" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "osquery-#{version}.pkg"
 
   uninstall launchctl: "com.facebook.osqueryd",

@@ -19,6 +19,7 @@ cask "agentkube" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Agentkube.app"
 

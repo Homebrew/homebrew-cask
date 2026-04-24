@@ -14,6 +14,8 @@ cask "jt-bridge" do
     regex(/JT[._-]Bridge[._-]app[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   app "JT-Bridge.app"
 
   zap trash: [

@@ -16,6 +16,8 @@ cask "simplex" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "SimpleX.app"
 
   zap trash: "~/Library/Saved Application State/chat.simplex.app.savedState"

@@ -13,6 +13,8 @@ cask "boinc" do
     regex(%r{href=.*?/boinc[._-]v?(\d+(?:\.\d+)+)[._-]macOSX[._-]universal\.zip}i)
   end
 
+  depends_on :macos
+
   pkg "boinc_#{version}_macOSX_universal/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
   uninstall launchctl: [

@@ -22,6 +22,8 @@ cask "jamulus" do
     url "https://sourceforge.net/projects/llcon/rss?path=/Jamulus"
   end
 
+  depends_on :macos
+
   app "Jamulus.app"
   app "JamulusServer.app"
 

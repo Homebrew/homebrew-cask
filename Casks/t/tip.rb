@@ -9,6 +9,8 @@ cask "tip" do
 
   deprecate! date: "2025-05-25", because: :moved_to_mas
 
+  depends_on :macos
+
   app "Tip.app"
 
   zap trash: "~/Library/Application Scripts/tanin.tip"

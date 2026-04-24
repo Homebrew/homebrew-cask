@@ -13,6 +13,8 @@ cask "sweet-home3d" do
     regex(%r{url=.*?/SweetHome3D[._-]v?(\d+(?:\.\d+)+)-macosx\.dmg}i)
   end
 
+  depends_on :macos
+
   app "Sweet Home 3D.app"
 
   zap trash: "~/Library/Preferences/com.eteks.sweethome3d.plist"

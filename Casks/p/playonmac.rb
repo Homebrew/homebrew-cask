@@ -12,6 +12,8 @@ cask "playonmac" do
     regex(%r{href=.*?/PlayOnMac_(\d+(?:\.\d+)*)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "PlayOnMac.app"
 
   zap trash: [

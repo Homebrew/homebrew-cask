@@ -14,6 +14,7 @@ cask "splashtop-streamer" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Splashtop Streamer.pkg"
 

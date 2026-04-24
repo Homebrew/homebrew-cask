@@ -12,6 +12,8 @@ cask "hiarcs-chess-explorer" do
     regex(%r{href=.*?/HIARCS-Chess-Explorer-Installer[._-]v?(\d+(?:\.\d+)+[a-z]?)\.pkg}i)
   end
 
+  depends_on :macos
+
   pkg "HIARCS-Chess-Explorer-Installer-v#{version}.pkg"
 
   uninstall signal:  ["TERM", "com.hiarcs.chessexplorer"],

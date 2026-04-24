@@ -9,5 +9,7 @@ cask "markdownmdimporter" do
   deprecate! date: "2024-07-07", because: :unmaintained
   disable! date: "2025-07-07", because: :unmaintained
 
+  depends_on :macos
+
   mdimporter "Markdown.mdimporter"
 end

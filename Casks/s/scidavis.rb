@@ -12,6 +12,8 @@ cask "scidavis" do
     regex(%r{url=.*?/scidavis[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]dist\.dmg}i)
   end
 
+  depends_on :macos
+
   app "scidavis.app"
 
   zap trash: [

@@ -11,6 +11,7 @@ cask "cheatsheet" do
   disable! date: "2025-11-09", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "CheatSheet.app"
 

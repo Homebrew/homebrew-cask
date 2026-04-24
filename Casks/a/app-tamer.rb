@@ -13,6 +13,7 @@ cask "app-tamer" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "App Tamer.app"
 

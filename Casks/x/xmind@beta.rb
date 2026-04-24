@@ -19,6 +19,7 @@ cask "xmind@beta" do
   end
 
   conflicts_with cask: "xmind"
+  depends_on :macos
 
   app "Xmind.app"
 

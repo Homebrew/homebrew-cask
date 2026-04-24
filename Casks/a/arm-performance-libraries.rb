@@ -1,8 +1,8 @@
 cask "arm-performance-libraries" do
   version "26.01"
-  install_suffix="#{version}_flang-21"
   sha256 "f69da819aad0faf4817df1503b270832ea67d2decec6240dda99c9891dd2bc2f"
 
+  install_suffix="#{version}_flang-21"
   url "https://developer.arm.com/-/cdn-downloads/permalink/Arm-Performance-Libraries/Version_#{version}/arm-performance-libraries_#{version}_macOS.tgz",
       user_agent: :curl
   name "Arm Performance Libraries"
@@ -15,6 +15,7 @@ cask "arm-performance-libraries" do
     regex(/Version[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
   depends_on arch: :arm64
 
   installer script: {

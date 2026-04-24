@@ -16,6 +16,8 @@ cask "satdump" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "SatDump.app"
   binary "#{appdir}/SatDump.app/Contents/MacOS/satdump"
 

@@ -14,6 +14,8 @@ cask "termius@beta" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "Termius Beta.app"
 
   uninstall delete: [

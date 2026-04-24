@@ -16,6 +16,8 @@ cask "overt" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Overt.app"
 
   zap trash: [

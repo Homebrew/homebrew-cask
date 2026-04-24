@@ -10,6 +10,8 @@ cask "spark-ar-studio" do
   # https://spark.meta.com/blog/meta-spark-announcement
   disable! date: "2025-12-01", because: :discontinued
 
+  depends_on :macos
+
   app "Meta Spark Studio.app"
 
   zap trash: [

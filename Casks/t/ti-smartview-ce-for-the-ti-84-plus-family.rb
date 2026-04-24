@@ -14,6 +14,8 @@ cask "ti-smartview-ce-for-the-ti-84-plus-family" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "TI-SmartView-CE-84-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.ti.et.smartview.TI-SmartViewCE84"

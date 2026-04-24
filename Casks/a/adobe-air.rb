@@ -23,6 +23,8 @@ cask "adobe-air" do
     end
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer",
     args:       ["-silent"],

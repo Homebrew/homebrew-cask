@@ -37,6 +37,8 @@ cask "astah-uml" do
   desc "UML diagramming tool with mind mapping"
   homepage "https://astah.net/products/astah-uml/"
 
+  depends_on :macos
+
   uninstall pkgutil: "com.change-vision.astah.uml"
 
   zap trash: "~/Library/Preferences/com.change-vision.astah.uml.plist"

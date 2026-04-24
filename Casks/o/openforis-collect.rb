@@ -13,6 +13,8 @@ cask "openforis-collect" do
     regex(%r{<version>v?(\d+(?:\.\d+)+)</version>}i)
   end
 
+  depends_on :macos
+
   rename "OpenForisCollect-*-osx-installer.app", "OpenForisCollect-osx-installer.app"
 
   installer script: {

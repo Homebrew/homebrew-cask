@@ -10,6 +10,8 @@ cask "tnefs-enough" do
   deprecate! date: "2025-03-02", because: :unmaintained
   disable! date: "2026-03-02", because: :unmaintained
 
+  depends_on :macos
+
   app "TNEF's Enough.app"
 
   caveats do

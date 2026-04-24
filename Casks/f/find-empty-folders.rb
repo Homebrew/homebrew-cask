@@ -12,6 +12,8 @@ cask "find-empty-folders" do
     regex(/href=.*?FindEmptyFolders[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   app "Find Empty Folders.app"
 
   zap trash: "~/Library/Saved Application State/org.tempel.findemptyfolders.savedState"

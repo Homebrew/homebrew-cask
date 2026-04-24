@@ -12,6 +12,8 @@ cask "vcam" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "VCam_#{version}.pkg"
 
   postflight do

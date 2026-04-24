@@ -12,6 +12,8 @@ cask "aquaskk" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "AquaSKK-#{version}.pkg"
 
   uninstall pkgutil: "org.codefirst.aquaskk.pkg"

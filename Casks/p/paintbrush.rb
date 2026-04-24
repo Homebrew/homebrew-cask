@@ -15,6 +15,8 @@ cask "paintbrush" do
     end
   end
 
+  depends_on :macos
+
   app "Paintbrush.app"
 
   zap trash: [

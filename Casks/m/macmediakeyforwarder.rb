@@ -9,6 +9,8 @@ cask "macmediakeyforwarder" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "MacMediaKeyForwarder.app"
 
   zap trash: "~/Library/Preferences/com.milgra.hsmke.plist"

@@ -15,6 +15,7 @@ cask "keka@beta" do
 
   auto_updates true
   conflicts_with cask: "keka"
+  depends_on :macos
 
   app "Keka.app"
 

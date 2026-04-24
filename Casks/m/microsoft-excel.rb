@@ -41,6 +41,7 @@ cask "microsoft-excel" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on :macos
 
   pkg "Microsoft_Excel_#{version}_Installer.pkg",
       choices: [

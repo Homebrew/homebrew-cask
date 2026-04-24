@@ -12,6 +12,8 @@ cask "geph" do
     regex(%r{href=.*?v?(\d+(?:\.\d+)+)/geph[._-]macos\.dmg}i)
   end
 
+  depends_on :macos
+
   app "Geph.app"
 
   zap trash: [

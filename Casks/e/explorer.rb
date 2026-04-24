@@ -9,6 +9,8 @@ cask "explorer" do
 
   deprecate! date: "2025-04-20", because: :unmaintained
 
+  depends_on :macos
+
   app "Explorer-darwin-x64.app"
 
   zap trash: [

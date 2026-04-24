@@ -13,6 +13,8 @@ cask "reikey" do
     regex(/href=.*?ReiKey[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "#{staged_path}/ReiKey Installer.app/Contents/MacOS/ReiKey Installer",
     args:       ["-install"],

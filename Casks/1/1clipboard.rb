@@ -10,6 +10,8 @@ cask "1clipboard" do
   deprecate! date: "2024-08-05", because: :unmaintained
   disable! date: "2025-08-12", because: :unmaintained
 
+  depends_on :macos
+
   app "1Clipboard.app"
 
   uninstall quit: [

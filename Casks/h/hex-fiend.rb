@@ -14,6 +14,7 @@ cask "hex-fiend" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Hex Fiend.app"
   binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"

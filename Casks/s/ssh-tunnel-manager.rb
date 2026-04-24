@@ -11,6 +11,8 @@ cask "ssh-tunnel-manager" do
   deprecate! date: "2024-09-06", because: :unmaintained
   disable! date: "2025-09-06", because: :unmaintained
 
+  depends_on :macos
+
   app "SSH Tunnel Manager.app"
 
   zap trash: "~/Library/Preferences/org.tynsoe.sshtunnelmanager.plist"

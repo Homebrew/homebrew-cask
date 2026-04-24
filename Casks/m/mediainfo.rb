@@ -14,6 +14,8 @@ cask "mediainfo" do
     regex(/href=.*?MediaInfo[._-]GUI[._-]v?(\d+(?:\.\d+)+)(?:[._-]Mac)?\.dmg/i)
   end
 
+  depends_on :macos
+
   app "MediaInfo.app"
 
   zap trash: [

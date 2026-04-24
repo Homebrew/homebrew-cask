@@ -9,6 +9,8 @@ cask "betelguese" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Betelguese.app"
 
   zap trash: "~/Library/Saved Application State/com.23aaron.Betelgeuse.savedState"

@@ -17,6 +17,7 @@ cask "popsql" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "PopSQL.app"
 

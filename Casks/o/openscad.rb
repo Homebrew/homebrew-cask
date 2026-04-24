@@ -15,6 +15,7 @@ cask "openscad" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "openscad@snapshot"
+  depends_on :macos
 
   app "OpenSCAD-#{version}.app"
   binary "#{appdir}/OpenSCAD-#{version}.app/Contents/MacOS/OpenSCAD", target: "openscad"

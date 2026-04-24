@@ -10,6 +10,8 @@ cask "pashua" do
   deprecate! date: "2024-07-05", because: :unmaintained
   disable! date: "2025-07-05", because: :unmaintained
 
+  depends_on :macos
+
   app "Pashua.app"
 
   caveats do

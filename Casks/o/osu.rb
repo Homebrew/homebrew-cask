@@ -18,6 +18,7 @@ cask "osu" do
 
   auto_updates true
   conflicts_with cask: "osu@tachyon"
+  depends_on :macos
 
   app "osu!.app"
 

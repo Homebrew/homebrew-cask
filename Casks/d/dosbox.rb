@@ -21,6 +21,8 @@ cask "dosbox" do
     end
   end
 
+  depends_on :macos
+
   app "dosbox.app"
 
   zap trash: "~/Library/Preferences/DOSBox*"

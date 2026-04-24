@@ -41,6 +41,7 @@ cask "devonthink" do
   homepage "https://www.devontechnologies.com/apps/devonthink"
 
   auto_updates true
+  depends_on :macos
 
   zap trash: [
     "~/Library/Application Scripts/com.devon-technologies.*",

@@ -20,6 +20,7 @@ cask "alfred@prerelease" do
 
   auto_updates true
   conflicts_with cask: "alfred"
+  depends_on :macos
 
   app "Alfred #{version.major}.app"
 

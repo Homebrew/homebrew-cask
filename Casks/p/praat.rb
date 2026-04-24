@@ -21,6 +21,8 @@ cask "praat" do
     end
   end
 
+  depends_on :macos
+
   app "Praat.app"
   binary "#{appdir}/Praat.app/Contents/MacOS/Praat", target: "praat"
 

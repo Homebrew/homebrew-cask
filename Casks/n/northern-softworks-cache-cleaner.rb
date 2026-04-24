@@ -14,6 +14,8 @@ cask "northern-softworks-cache-cleaner" do
     regex(/Download\s*Tahoe\s*Cache\s*Cleaner\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Tahoe Cache Cleaner.app"
 
   zap trash: [

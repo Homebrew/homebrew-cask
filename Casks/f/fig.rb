@@ -11,6 +11,7 @@ cask "fig" do
   disable! date: "2025-08-03", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Fig.app"
   binary "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal", target: "fig"

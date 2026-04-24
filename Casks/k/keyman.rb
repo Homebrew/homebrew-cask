@@ -12,6 +12,8 @@ cask "keyman" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  depends_on :macos
+
   input_method "Install Keyman.app/Contents/MacOS/Keyman.app"
 
   uninstall quit: "keyman.inputmethod.Keyman"

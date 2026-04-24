@@ -12,6 +12,8 @@ cask "vero" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "VERO.app"
 
   zap trash: [

@@ -10,6 +10,8 @@ cask "wewechat" do
   deprecate! date: "2024-07-07", because: :discontinued
   disable! date: "2025-07-07", because: :discontinued
 
+  depends_on :macos
+
   app "wewechat.app"
 
   zap trash: [

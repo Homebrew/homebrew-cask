@@ -14,6 +14,7 @@ cask "air-video-server-hd" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Air Video Server HD.app"
 

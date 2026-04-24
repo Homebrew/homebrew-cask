@@ -15,6 +15,8 @@ cask "lotus" do
     end
   end
 
+  depends_on :macos
+
   app "Lotus.app"
 
   zap trash: [

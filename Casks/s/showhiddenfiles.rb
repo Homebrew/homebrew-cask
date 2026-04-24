@@ -10,6 +10,8 @@ cask "showhiddenfiles" do
   deprecate! date: "2024-07-06", because: :unmaintained
   disable! date: "2025-07-06", because: :unmaintained
 
+  depends_on :macos
+
   app "ShowHiddenFiles.app"
 
   caveats do

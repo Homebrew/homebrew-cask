@@ -16,6 +16,7 @@ cask "busycal" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "BusyCal Installer.pkg"
 

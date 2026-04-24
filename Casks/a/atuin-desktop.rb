@@ -25,6 +25,8 @@ cask "atuin-desktop" do
   desc "Runbook editor for terminal workflows"
   homepage "https://atuin.sh/"
 
+  depends_on :macos
+
   app "Atuin.app"
 
   uninstall quit: "sh.atuin.app"

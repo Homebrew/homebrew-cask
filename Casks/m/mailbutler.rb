@@ -13,6 +13,7 @@ cask "mailbutler" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Mailbutler_#{version.csv.first}-#{version.csv.second}.pkg"
 

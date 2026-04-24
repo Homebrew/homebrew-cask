@@ -10,6 +10,8 @@ cask "themeengine" do
   deprecate! date: "2024-10-31", because: :unmaintained
   disable! date: "2025-11-01", because: :unmaintained
 
+  depends_on :macos
+
   app "ThemeEngine.app"
 
   zap trash: "~/Library/Preferences/com.alexzielenski.ThemeEngine.LSSharedFileList.plist"

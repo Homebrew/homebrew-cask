@@ -19,6 +19,7 @@ cask "glide-browser" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Glide.app"
   binary "#{appdir}/Glide.app/Contents/MacOS/glide"

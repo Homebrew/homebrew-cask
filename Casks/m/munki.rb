@@ -21,6 +21,8 @@ cask "munki" do
     end
   end
 
+  depends_on :macos
+
   pkg "munkitools-#{version}.pkg"
 
   uninstall launchctl: [

@@ -10,6 +10,8 @@ cask "mjolnir" do
   deprecate! date: "2025-11-30", because: :unmaintained
   disable! date: "2026-11-30", because: :unmaintained
 
+  depends_on :macos
+
   app "Mjolnir.app"
 
   zap trash: [

@@ -16,6 +16,8 @@ cask "oracle-data-modeler" do
     strategy :page_match
   end
 
+  depends_on :macos
+
   app "OracleDataModeler.app"
 
   # No zap stanza required

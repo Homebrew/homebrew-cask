@@ -13,6 +13,8 @@ cask "pandora" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Pandora.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "vlc-setup" do
     regex(/VLCSetup[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "VLC Setup.app"
 
   zap trash: [

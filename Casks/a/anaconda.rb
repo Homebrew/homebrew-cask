@@ -25,6 +25,7 @@ cask "anaconda" do
   end
 
   auto_updates true
+  depends_on :macos
   container type: :naked
 
   installer script: {

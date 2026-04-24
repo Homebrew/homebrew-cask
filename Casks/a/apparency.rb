@@ -37,6 +37,8 @@ cask "apparency" do
   desc "Inspect application bundles"
   homepage "https://www.mothersruin.com/software/Apparency/"
 
+  depends_on :macos
+
   app "Apparency.app"
   binary "#{appdir}/Apparency.app/Contents/MacOS/appy"
 

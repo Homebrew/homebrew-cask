@@ -22,6 +22,7 @@ cask "logitech-g-hub" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer script: {
     executable: "lghub_installer.app/Contents/MacOS/lghub_installer",

@@ -10,6 +10,7 @@ cask "topaz-photo-ai" do
   deprecate! date: "2025-09-16", because: :discontinued, replacement_cask: "topaz-photo"
 
   auto_updates true
+  depends_on :macos
 
   pkg "TopazPhotoAI-#{version}.pkg"
 

@@ -21,6 +21,8 @@ cask "iexplorer" do
     end
   end
 
+  depends_on :macos
+
   app "iExplorer.app"
 
   zap trash: [

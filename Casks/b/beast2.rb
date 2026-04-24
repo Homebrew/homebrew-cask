@@ -14,6 +14,8 @@ cask "beast2" do
     regex(/location=.*?BEAST[._-]v?(\d+(?:\.\d+)+)\.Mac\.dmg/i)
   end
 
+  depends_on :macos
+
   suite "BEAST #{version}"
 
   zap trash: [

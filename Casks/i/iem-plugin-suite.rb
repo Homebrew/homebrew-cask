@@ -13,6 +13,7 @@ cask "iem-plugin-suite" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "IEMPluginSuite_v#{version}.pkg"
 

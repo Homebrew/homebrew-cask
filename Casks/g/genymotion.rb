@@ -22,6 +22,8 @@ cask "genymotion" do
   desc "Android emulator"
   homepage "https://www.genymotion.com/"
 
+  depends_on :macos
+
   app "Genymotion.app"
   app "Genymotion Shell.app"
   binary "#{appdir}/Genymotion Shell.app/Contents/MacOS/genyshell"

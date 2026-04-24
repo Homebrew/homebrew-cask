@@ -21,6 +21,8 @@ cask "visual-paradigm" do
     end
   end
 
+  depends_on :macos
+
   app "Visual Paradigm.app"
 
   zap trash: [

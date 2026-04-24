@@ -9,6 +9,7 @@ cask "opencore-patcher" do
   homepage "https://dortania.github.io/OpenCore-Legacy-Patcher/"
 
   auto_updates true
+  depends_on :macos
 
   pkg "OpenCore-Patcher.pkg"
 

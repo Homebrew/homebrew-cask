@@ -9,6 +9,8 @@ cask "quickgeojson" do
 
   deprecate! date: "2025-09-22", because: :no_longer_meets_criteria
 
+  depends_on :macos
+
   qlplugin "quickgeojson.qlgenerator"
 
   # No zap stanza required

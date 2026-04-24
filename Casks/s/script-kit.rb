@@ -16,6 +16,8 @@ cask "script-kit" do
     regex(/href=.*?Script[._-]Kit[._-]macOS[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Script Kit.app"
 
   zap trash: [

@@ -10,6 +10,8 @@ cask "ringcentral-meetings" do
   deprecate! date: "2024-07-11", because: :discontinued
   disable! date: "2025-07-11", because: :discontinued
 
+  depends_on :macos
+
   pkg "RCMeetingsClientSetup.pkg"
 
   uninstall quit:    "us.zoom.RingCentralOpener",

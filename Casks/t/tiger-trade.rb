@@ -17,6 +17,8 @@ cask "tiger-trade" do
     end
   end
 
+  depends_on :macos
+
   app "Tiger Trade.app"
 
   zap trash: [

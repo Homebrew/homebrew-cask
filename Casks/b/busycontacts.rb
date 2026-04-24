@@ -21,6 +21,7 @@ cask "busycontacts" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "BusyContacts Installer.pkg"
 

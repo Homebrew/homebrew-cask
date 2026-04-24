@@ -12,6 +12,8 @@ cask "quit-all" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "QuitAll.app"
 
   zap trash: [

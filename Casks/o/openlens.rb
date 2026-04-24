@@ -11,6 +11,7 @@ cask "openlens" do
   homepage "https://github.com/MuhammedKalkan/OpenLens/"
 
   auto_updates true
+  depends_on :macos
 
   app "OpenLens.app"
 

@@ -31,6 +31,7 @@ cask "logitech-options" do
   deprecate! date: "2025-12-12", because: :discontinued, replacement_cask: "logi-options+"
 
   auto_updates true
+  depends_on :macos
 
   uninstall launchctl: [
               "com.logi.bolt.app",

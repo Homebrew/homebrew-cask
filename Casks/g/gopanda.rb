@@ -12,6 +12,8 @@ cask "gopanda" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "GoPanda#{version.major}.app"
 
   zap trash: [

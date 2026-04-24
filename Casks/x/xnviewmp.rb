@@ -12,6 +12,8 @@ cask "xnviewmp" do
     regex(/\[XnViewMP\].*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  depends_on :macos
+
   app "XnViewMP.app"
 
   zap trash: "~/Library/Saved Application State/com.xnview.XnView.savedState"

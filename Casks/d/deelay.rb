@@ -9,6 +9,8 @@ cask "deelay" do
 
   disable! date: "2025-06-01", because: :no_longer_meets_criteria
 
+  depends_on :macos
+
   pkg "Deelay-#{version.csv.first}/Deelay-#{version.csv.first}-Installer-macOS.pkg"
 
   uninstall pkgutil: [

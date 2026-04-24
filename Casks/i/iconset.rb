@@ -16,6 +16,8 @@ cask "iconset" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Iconset.app"
 
   zap trash: [

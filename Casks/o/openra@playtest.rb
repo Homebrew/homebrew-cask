@@ -14,6 +14,7 @@ cask "openra@playtest" do
   end
 
   conflicts_with cask: "openra"
+  depends_on :macos
 
   app "OpenRA - Dune 2000.app"
   app "OpenRA - Red Alert.app"

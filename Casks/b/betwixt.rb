@@ -9,6 +9,8 @@ cask "betwixt" do
 
   deprecate! date: "2025-04-21", because: :unmaintained
 
+  depends_on :macos
+
   app "Betwixt-darwin-x64/Betwixt.app"
 
   uninstall_postflight do

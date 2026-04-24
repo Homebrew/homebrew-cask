@@ -12,6 +12,8 @@ cask "reaper" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "REAPER.app"
 
   zap trash: [

@@ -15,6 +15,8 @@ cask "tev" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "tev.app"
   binary "#{appdir}/tev.app/Contents/MacOS/tev"
 

@@ -13,6 +13,8 @@ cask "safe-exam-browser" do
     regex(/href=.*?SafeExamBrowser[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Safe Exam Browser.app"
 
   zap trash: "~/Library/Preferences/org.safeexambrowser.SafeExamBrowser.plist"

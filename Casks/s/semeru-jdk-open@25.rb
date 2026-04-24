@@ -27,6 +27,8 @@ cask "semeru-jdk-open@25" do
     end
   end
 
+  depends_on :macos
+
   pkg "ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first}.pkg"
 
   uninstall pkgutil: "net.ibm-semeru-open.#{version.major}.jdk"

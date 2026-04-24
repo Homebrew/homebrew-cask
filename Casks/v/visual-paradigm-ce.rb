@@ -21,6 +21,8 @@ cask "visual-paradigm-ce" do
     end
   end
 
+  depends_on :macos
+
   # Renamed to avoid conflict with visual-paradigm.
   app "Visual Paradigm.app", target: "Visual Paradigm CE.app"
 

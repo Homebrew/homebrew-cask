@@ -17,6 +17,8 @@ cask "vbrokers" do
     end
   end
 
+  depends_on :macos
+
   # Rename to match displayed name
   app "HSTong.app", target: "VBrokers.app"
 

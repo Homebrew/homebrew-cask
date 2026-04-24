@@ -12,6 +12,8 @@ cask "cisdem-document-reader" do
     regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
 
+  depends_on :macos
+
   app "Cisdem Document Reader.app"
 
   zap trash: [

@@ -9,6 +9,8 @@ cask "objektiv" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Objektiv.app"
 
   zap trash: "~/Library/Preferences/com.nthloop.Objektiv.plist"

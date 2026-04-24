@@ -12,6 +12,8 @@ cask "virtualhereserver" do
     regex(/Version\s*(\d+(?:\.\d*)*)/i)
   end
 
+  depends_on :macos
+
   app "VirtualHereServerUniversal.app"
 
   zap trash: "~/Library/Preferences/com.virtualhere.vhusbd.plist"

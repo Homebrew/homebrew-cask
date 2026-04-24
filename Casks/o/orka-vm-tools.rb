@@ -15,6 +15,8 @@ cask "orka-vm-tools" do
     end
   end
 
+  depends_on :macos
+
   pkg "orka-vm-tools.pkg"
 
   uninstall pkgutil: "com.macstadium.orka-vm-tools.pkg"

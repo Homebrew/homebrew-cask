@@ -8,6 +8,7 @@ cask "koharu" do
   desc "ML-powered manga translator"
   homepage "https://koharu.rs/"
 
+  depends_on :macos
   depends_on arch: :arm64
 
   app "Koharu.app"

@@ -23,6 +23,7 @@ cask "flutter" do
   end
 
   auto_updates true
+  depends_on :macos
 
   suite "flutter", target: "#{HOMEBREW_PREFIX}/share/flutter"
   binary "flutter/bin/dart"

@@ -23,6 +23,8 @@ cask "wifiman" do
     end
   end
 
+  depends_on :macos
+
   pkg "wifiman-desktop-#{version}-#{arch}.pkg"
 
   uninstall launchctl: "wifiman-desktop",

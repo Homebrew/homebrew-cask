@@ -20,6 +20,8 @@ cask "ximalaya" do
     end
   end
 
+  depends_on :macos
+
   app "喜马拉雅.app"
 
   zap trash: [

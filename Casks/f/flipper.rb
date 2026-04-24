@@ -14,6 +14,8 @@ cask "flipper" do
   deprecate! date: "2024-12-01", because: :discontinued
   disable! date: "2025-12-01", because: :discontinued
 
+  depends_on :macos
+
   app "Flipper.app"
 
   zap trash: [

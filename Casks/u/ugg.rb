@@ -14,6 +14,7 @@ cask "ugg" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "U.GG.app"
 

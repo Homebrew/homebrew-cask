@@ -17,6 +17,8 @@ cask "publii" do
     end
   end
 
+  depends_on :macos
+
   app "Publii.app"
 
   zap trash: [

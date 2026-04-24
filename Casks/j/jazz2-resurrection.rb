@@ -13,6 +13,7 @@ cask "jazz2-resurrection" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
   container nested: "#{arch}/jazz2_sdl2.dmg"
 
   app "Jazz² Resurrection.app"

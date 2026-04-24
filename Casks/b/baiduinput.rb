@@ -15,6 +15,8 @@ cask "baiduinput" do
     end
   end
 
+  depends_on :macos
+
   installer manual: "安装百度输入法.app"
 
   uninstall pkgutil: "com.baidu.inputmethod.*",

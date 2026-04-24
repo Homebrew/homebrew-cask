@@ -13,6 +13,8 @@ cask "pdl" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "PDL.app"
   binary "#{appdir}/PDL.app/Contents/MacOS/PDL", target: "pdl"
 

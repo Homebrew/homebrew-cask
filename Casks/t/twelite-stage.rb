@@ -12,6 +12,8 @@ cask "twelite-stage" do
     regex(/MWSTAGEv?(\d+(?:[._]\d+)+)/i)
   end
 
+  depends_on :macos
+
   # It is an SDK with a shell-based application that
   # includes source code and other user resources.
   # It is neither an "app" nor a "suite".

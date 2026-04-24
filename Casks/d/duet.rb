@@ -28,6 +28,7 @@ cask "duet" do
   homepage "https://www.duetdisplay.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "duet.app"
 

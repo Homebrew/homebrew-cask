@@ -9,6 +9,8 @@ cask "timche-gmail-desktop" do
 
   deprecate! date: "2025-05-09", because: :discontinued, replacement_cask: "meru"
 
+  depends_on :macos
+
   app "Gmail Desktop.app"
 
   zap trash: [

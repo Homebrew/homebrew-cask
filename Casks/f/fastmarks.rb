@@ -13,6 +13,7 @@ cask "fastmarks" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Fastmarks.app"
 

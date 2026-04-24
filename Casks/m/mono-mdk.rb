@@ -13,6 +13,7 @@ cask "mono-mdk" do
   end
 
   conflicts_with cask: "mono-mdk-for-visual-studio"
+  depends_on :macos
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 

@@ -16,6 +16,8 @@ cask "pomatez" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Pomatez.app"
 
   uninstall signal: ["KILL", "application.com.roldanjr.pomatez"]

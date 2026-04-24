@@ -15,6 +15,8 @@ cask "mweb-pro" do
     end
   end
 
+  depends_on :macos
+
   app "MWeb Pro.app"
 
   zap trash: [

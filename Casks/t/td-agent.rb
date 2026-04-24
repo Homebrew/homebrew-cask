@@ -14,6 +14,8 @@ cask "td-agent" do
   deprecate! date: "2025-03-01", because: :discontinued
   disable! date: "2026-03-01", because: :discontinued
 
+  depends_on :macos
+
   pkg "td-agent-#{version}.pkg"
 
   uninstall launchctl: "td-agent",

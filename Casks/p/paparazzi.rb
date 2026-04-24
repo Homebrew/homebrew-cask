@@ -12,6 +12,8 @@ cask "paparazzi" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Paparazzi!.app"
 
   zap trash: [

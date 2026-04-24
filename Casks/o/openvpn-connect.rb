@@ -20,6 +20,8 @@ cask "openvpn-connect" do
     end
   end
 
+  depends_on :macos
+
   pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
 
   uninstall launchctl:  [

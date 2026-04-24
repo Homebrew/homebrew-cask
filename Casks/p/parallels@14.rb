@@ -20,6 +20,7 @@ cask "parallels@14" do
     "parallels@19",
     "parallels@20",
   ]
+  depends_on :macos
   # This .dmg cannot be extracted normally
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/67202
   container type: :naked

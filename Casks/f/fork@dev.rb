@@ -20,6 +20,7 @@ cask "fork@dev" do
 
   auto_updates true
   conflicts_with cask: "fork"
+  depends_on :macos
 
   app "Fork.app"
   binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: "fork"

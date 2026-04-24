@@ -27,6 +27,8 @@ cask "tiled" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Tiled.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/tiled.wrapper.sh"

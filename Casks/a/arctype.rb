@@ -13,6 +13,7 @@ cask "arctype" do
   disable! date: "2025-11-30", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Arctype.app"
 

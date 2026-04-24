@@ -11,6 +11,7 @@ cask "typcn-bilibili" do
   disable! date: "2025-08-30", because: :unmaintained
 
   auto_updates true
+  depends_on :macos
 
   app "Bilibili.app"
 

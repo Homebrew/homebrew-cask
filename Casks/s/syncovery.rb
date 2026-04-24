@@ -15,6 +15,8 @@ cask "syncovery" do
     regex(%r{href=.*?/SyncoveryMac[._-]?v?(\d+(?:\.\d+)+[a-z]?)#{arch}\.dmg}i)
   end
 
+  depends_on :macos
+
   pkg "SyncoveryMac (double-click to install).pkg"
 
   uninstall pkgutil: "com.company.Syncovery*",

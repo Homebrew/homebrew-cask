@@ -10,6 +10,8 @@ cask "coffitivity-offline" do
 
   deprecate! date: "2025-04-17", because: :unmaintained
 
+  depends_on :macos
+
   app "Coffitivity Offline.app"
 
   zap trash: [

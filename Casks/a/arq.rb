@@ -13,6 +13,7 @@ cask "arq" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Arq#{version}.pkg"
   binary "#{appdir}/Arq.app/Contents/Resources/arqc"

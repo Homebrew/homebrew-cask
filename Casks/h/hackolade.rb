@@ -24,6 +24,8 @@ cask "hackolade" do
     end
   end
 
+  depends_on :macos
+
   pkg "Hackolade-mac#{arch}-setup-signed.pkg"
 
   uninstall pkgutil: "com.hackolade.pkg.Hackolade"

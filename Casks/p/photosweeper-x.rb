@@ -12,6 +12,8 @@ cask "photosweeper-x" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "PhotoSweeper X.app"
 
   zap trash: "~/Library/Preferences/com.overmacs.photosweeperpaddle.plist"

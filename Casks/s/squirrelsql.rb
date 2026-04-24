@@ -8,6 +8,7 @@ cask "squirrelsql" do
   desc "Graphical Java program for viewing the structure of a JDBC compliant database"
   homepage "https://squirrel-sql.sourceforge.io/"
 
+  depends_on :macos
   container type: :naked
 
   installoptions = "#{staged_path}/install-options.xml"

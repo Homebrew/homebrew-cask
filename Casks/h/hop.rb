@@ -11,6 +11,8 @@ cask "hop" do
   desc "View and edit HWP documents"
   homepage "https://golbin.github.io/hop/"
 
+  depends_on :macos
+
   app "HOP.app"
 
   zap trash: [

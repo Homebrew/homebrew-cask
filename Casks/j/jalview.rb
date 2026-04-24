@@ -21,6 +21,8 @@ cask "jalview" do
     end
   end
 
+  depends_on :macos
+
   app "Jalview.app"
   binary "#{appdir}/Jalview.app/Contents/MacOS/jalview"
 

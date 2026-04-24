@@ -15,6 +15,8 @@ cask "finch" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "Finch-v#{version}-#{arch}.pkg"
 
   uninstall script: {

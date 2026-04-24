@@ -21,6 +21,8 @@ cask "futubull" do
     end
   end
 
+  depends_on :macos
+
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "富途牛牛.app", target: "Futubull.app"
 

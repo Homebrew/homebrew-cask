@@ -15,6 +15,8 @@ cask "parsec" do
     end
   end
 
+  depends_on :macos
+
   pkg "parsec-macos.pkg"
 
   postflight do

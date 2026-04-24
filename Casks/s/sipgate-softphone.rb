@@ -13,6 +13,8 @@ cask "sipgate-softphone" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "sipgate softphone.app"
 
   zap trash: [

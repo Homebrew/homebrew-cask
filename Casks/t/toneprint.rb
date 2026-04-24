@@ -23,6 +23,8 @@ cask "toneprint" do
     end
   end
 
+  depends_on :macos
+
   app "Toneprint.app"
 
   zap trash: [

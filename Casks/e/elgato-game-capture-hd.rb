@@ -12,6 +12,8 @@ cask "elgato-game-capture-hd" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Game Capture HD.app"
 
   zap trash: [

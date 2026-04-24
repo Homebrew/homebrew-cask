@@ -14,6 +14,8 @@ cask "utterly" do
     end
   end
 
+  depends_on :macos
+
   pkg "Utterly-Elevate.pkg"
 
   uninstall launchctl: "app.utterly.Utterly.XPCHelper",

@@ -27,6 +27,8 @@ cask "boxcryptor" do
 
   disable! date: "2026-01-07", because: :discontinued
 
+  depends_on :macos
+
   app "Boxcryptor.app"
 
   uninstall delete: [

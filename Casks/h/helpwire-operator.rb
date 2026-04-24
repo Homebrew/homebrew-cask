@@ -13,6 +13,7 @@ cask "helpwire-operator" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "HelpWire Operator.app"
 

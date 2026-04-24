@@ -23,6 +23,8 @@ cask "fliqlo" do
   desc "Flip clock screensaver"
   homepage "https://fliqlo.com/"
 
+  depends_on :macos
+
   screen_saver "Fliqlo.saver"
 
   zap trash: "/Library/Screen Savers/Fliqlo.saver"

@@ -14,6 +14,8 @@ cask "shutter-encoder" do
     regex(/^\s*Version\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "Shutter Encoder #{version} #{arch}.pkg"
 
   uninstall launchctl: "application.com.paulpacifico.shutterencoder.*",

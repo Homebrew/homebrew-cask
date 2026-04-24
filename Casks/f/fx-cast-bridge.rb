@@ -26,6 +26,8 @@ cask "fx-cast-bridge" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   pkg "fx_cast_bridge-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: "tf.matt.fx_cast_bridge"

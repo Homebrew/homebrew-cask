@@ -11,6 +11,8 @@ cask "remix-ide" do
   deprecate! date: "2024-07-28", because: :discontinued
   disable! date: "2025-07-28", because: :unmaintained
 
+  depends_on :macos
+
   app "Remix IDE.app"
 
   zap trash: [

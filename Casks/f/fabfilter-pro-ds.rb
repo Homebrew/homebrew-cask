@@ -12,6 +12,8 @@ cask "fabfilter-pro-ds" do
     regex(/FabFilter\s+Pro-DS.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  depends_on :macos
+
   pkg "FabFilter Pro-DS #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Pro-DS.*"

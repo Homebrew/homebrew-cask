@@ -13,6 +13,8 @@ cask "clone-hero" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Clone Hero.app"
 
   zap trash: [

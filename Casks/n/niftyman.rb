@@ -13,6 +13,8 @@ cask "niftyman" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "Niftyman.app"
 
   zap trash: [

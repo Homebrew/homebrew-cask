@@ -13,6 +13,7 @@ cask "outerbase-studio" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Outerbase Studio.app"
 

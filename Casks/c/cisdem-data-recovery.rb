@@ -13,6 +13,8 @@ cask "cisdem-data-recovery" do
     regex(/(\d+(?:\.\d+)+)\s+\(\d+(?:-\d+)+\)/i)
   end
 
+  depends_on :macos
+
   app "Cisdem Data Recovery.app"
 
   zap trash: [

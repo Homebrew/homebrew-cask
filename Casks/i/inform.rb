@@ -21,6 +21,8 @@ cask "inform" do
     end
   end
 
+  depends_on :macos
+
   app "Inform.app"
 
   zap trash: [

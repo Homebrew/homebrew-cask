@@ -18,6 +18,7 @@ cask "mubu" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "幕布.app"
 

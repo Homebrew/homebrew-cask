@@ -9,6 +9,8 @@ cask "apptrap" do
   deprecate! date: "2024-11-02", because: :unmaintained
   disable! date: "2025-11-02", because: :unmaintained
 
+  depends_on :macos
+
   prefpane "AppTrap.prefPane"
 
   uninstall login_item: "AppTrap"

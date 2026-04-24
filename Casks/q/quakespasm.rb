@@ -11,6 +11,8 @@ cask "quakespasm" do
     url "https://sourceforge.net/projects/quakespasm/rss?path=/Mac"
   end
 
+  depends_on :macos
+
   suite "QuakeSpasm"
 
   preflight do

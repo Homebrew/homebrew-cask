@@ -12,6 +12,8 @@ cask "tdr-nova" do
     regex(%r{latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
+  depends_on :macos
+
   pkg "TDR Nova.pkg"
 
   uninstall pkgutil: [

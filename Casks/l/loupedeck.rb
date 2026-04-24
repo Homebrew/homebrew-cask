@@ -12,6 +12,8 @@ cask "loupedeck" do
     regex(/href=.*?LoupedeckInstaller(?:[._\s-]|%20)+v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   # pkg cannot be installed automatically
   installer manual: "LoupedeckInstaller.pkg"
 

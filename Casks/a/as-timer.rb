@@ -12,6 +12,8 @@ cask "as-timer" do
     regex(/AS\s+Timer\s+V?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "AS Timer.app"
 
   zap trash: [

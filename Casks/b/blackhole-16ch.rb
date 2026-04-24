@@ -14,6 +14,8 @@ cask "blackhole-16ch" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "BlackHole16ch-#{version}.pkg"
 
   uninstall quit:    "com.apple.audio.AudioMIDISetup",

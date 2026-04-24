@@ -14,6 +14,8 @@ cask "bean" do
     end
   end
 
+  depends_on :macos
+
   app "Bean-Install-#{version.dots_to_hyphens}/Bean.app"
 
   zap trash: [

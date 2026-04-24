@@ -10,6 +10,8 @@ cask "deepnest" do
   deprecate! date: "2024-07-09", because: :unmaintained
   disable! date: "2025-07-09", because: :unmaintained
 
+  depends_on :macos
+
   app "Deepnest-#{version}-mac/Deepnest-mac-#{version}.app", target: "Deepnest.app"
 
   zap trash: [

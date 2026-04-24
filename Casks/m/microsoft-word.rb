@@ -41,6 +41,7 @@ cask "microsoft-word" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on :macos
 
   pkg "Microsoft_Word_#{version}_Installer.pkg",
       choices: [

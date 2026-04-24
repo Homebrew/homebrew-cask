@@ -15,6 +15,8 @@ cask "motu-m-series" do
     end
   end
 
+  depends_on :macos
+
   pkg "MOTU MSeries Installer (#{version.csv.second}).pkg"
 
   uninstall launchctl: "com.motu.coreuac.reenumerator",

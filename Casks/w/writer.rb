@@ -10,6 +10,8 @@ cask "writer" do
   deprecate! date: "2024-09-06", because: :unmaintained
   disable! date: "2025-09-06", because: :unmaintained
 
+  depends_on :macos
+
   app "Writer.app"
 
   zap trash: [

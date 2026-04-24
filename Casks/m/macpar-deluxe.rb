@@ -17,6 +17,8 @@ cask "macpar-deluxe" do
     end
   end
 
+  depends_on :macos
+
   app "MacPAR deLuxe.app"
 
   zap trash: [

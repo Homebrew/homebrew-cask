@@ -12,6 +12,8 @@ cask "touchosc-bridge" do
     regex(%r{href=.*?/touchosc[._-]bridge[._-]v?(\d+(?:\.\d+)+)[._-]macos\.dmg}i)
   end
 
+  depends_on :macos
+
   app "TouchOSC Bridge.app"
 
   zap trash: "~/Library/Preferences/net.hexler.TouchOSCBridge.plist"

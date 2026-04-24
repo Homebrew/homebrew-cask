@@ -10,6 +10,8 @@ cask "dictunifier" do
   deprecate! date: "2024-07-10", because: :unmaintained
   disable! date: "2025-07-10", because: :unmaintained
 
+  depends_on :macos
+
   app "DictUnifier.app"
 
   zap trash: "~/Library/Saved Application State/org.jjgod.DictUnifier.savedState"

@@ -13,6 +13,7 @@ cask "macloggerdx@beta" do
   end
 
   conflicts_with cask: "macloggerdx"
+  depends_on :macos
 
   app "MacLoggerDX.app"
 

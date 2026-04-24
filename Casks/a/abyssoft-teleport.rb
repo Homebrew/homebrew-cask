@@ -12,6 +12,8 @@ cask "abyssoft-teleport" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "teleport.app"
 
   zap trash: [

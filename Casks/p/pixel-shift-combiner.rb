@@ -18,6 +18,8 @@ cask "pixel-shift-combiner" do
     end
   end
 
+  depends_on :macos
+
   pkg "FUJIFILM_PixelShiftCombiner#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.fujifilm.denji.PIXEL-SHIFT-COMBINER",

@@ -15,6 +15,8 @@ cask "jameica" do
     regex(%r{href=.*?/jameica[._-]macos64[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  depends_on :macos
+
   # `audit_rosetta` assumes that an app contains at least one binary in the
   #  Contents/MacOS directory, so mitigate it by use of `artifact`.
   artifact "jameica.app", target: "#{appdir}/jameica.app"

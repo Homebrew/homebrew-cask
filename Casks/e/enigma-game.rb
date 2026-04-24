@@ -8,6 +8,8 @@ cask "enigma-game" do
   desc "Puzzle game inspired by Oxyd and Rock'n'Roll"
   homepage "https://www.nongnu.org/enigma/"
 
+  depends_on :macos
+
   suite "Enigma"
 
   zap trash: [

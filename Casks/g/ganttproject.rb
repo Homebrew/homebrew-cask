@@ -16,6 +16,8 @@ cask "ganttproject" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "GanttProject.app"
 
   zap trash: [

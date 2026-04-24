@@ -433,6 +433,7 @@ cask "firefox" do
     "firefox@cn",
     "firefox@esr",
   ]
+  depends_on :macos
 
   app "Firefox.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

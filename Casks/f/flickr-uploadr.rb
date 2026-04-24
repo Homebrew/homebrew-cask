@@ -18,6 +18,8 @@ cask "flickr-uploadr" do
     end
   end
 
+  depends_on :macos
+
   app "Flickr Uploadr.app"
 
   zap trash: [

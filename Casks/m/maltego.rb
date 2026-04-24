@@ -22,6 +22,8 @@ cask "maltego" do
     end
   end
 
+  depends_on :macos
+
   app "Maltego.app"
 
   zap trash: "~/Library/Application Support/maltego"

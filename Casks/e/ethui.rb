@@ -8,6 +8,8 @@ cask "ethui" do
   desc "Ethereum development toolkit with wallet and anvil support"
   homepage "https://ethui.dev/"
 
+  depends_on :macos
+
   app "ethui.app"
 
   zap trash: [

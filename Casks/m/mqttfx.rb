@@ -16,6 +16,8 @@ cask "mqttfx" do
     regex(/href=.*?mqttfx[._-]v?(\d+(?:\.\d+)+)-macos/i)
   end
 
+  depends_on :macos
+
   app "MQTT.fx.app"
 
   uninstall delete: "/Applications/MQTT.fx.app"

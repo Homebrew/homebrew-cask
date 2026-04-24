@@ -7,6 +7,8 @@ cask "fruit-screensaver" do
   desc "Screensaver of the vintage Apple logo"
   homepage "https://github.com/Corkscrews/fruit"
 
+  depends_on :macos
+
   screen_saver "Fruit.saver"
 
   # No zap stanza required

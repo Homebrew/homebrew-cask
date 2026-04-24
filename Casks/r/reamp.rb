@@ -12,6 +12,8 @@ cask "reamp" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "reAMP.app"
 
   zap trash: [

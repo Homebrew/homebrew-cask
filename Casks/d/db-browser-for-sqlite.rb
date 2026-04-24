@@ -13,6 +13,8 @@ cask "db-browser-for-sqlite" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "DB Browser for SQLite.app"
 
   zap trash: [

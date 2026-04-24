@@ -18,6 +18,8 @@ cask "hubstaff" do
     end
   end
 
+  depends_on :macos
+
   app "Hubstaff.app"
 
   zap trash: [

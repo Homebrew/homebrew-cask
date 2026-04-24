@@ -15,6 +15,8 @@ cask "confectionery" do
     end
   end
 
+  depends_on :macos
+
   app "Confectionery.app"
 
   zap trash: [

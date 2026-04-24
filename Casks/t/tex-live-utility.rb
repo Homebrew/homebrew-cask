@@ -13,6 +13,7 @@ cask "tex-live-utility" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "TeX Live Utility.app"
 

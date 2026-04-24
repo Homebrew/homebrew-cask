@@ -14,6 +14,8 @@ cask "vuze" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   installer script: {
     executable: "Vuze Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],

@@ -13,6 +13,8 @@ cask "mysteriumdark" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "MysteriumDark.app"
 
   zap trash: [

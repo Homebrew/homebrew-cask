@@ -42,6 +42,8 @@ cask "openoffice" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "OpenOffice.app"
 
   zap trash: "~/Library/Application Support/OpenOffice"

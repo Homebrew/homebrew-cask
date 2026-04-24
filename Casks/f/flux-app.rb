@@ -13,6 +13,7 @@ cask "flux-app" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Flux.app"
 

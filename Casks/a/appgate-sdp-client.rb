@@ -41,6 +41,8 @@ cask "appgate-sdp-client" do
   desc "Software-defined perimeter for secure network access"
   homepage "https://www.appgate.com/support/software-defined-perimeter-support"
 
+  depends_on :macos
+
   pkg "AppGate SDP Installer.pkg"
 
   uninstall launchctl: [

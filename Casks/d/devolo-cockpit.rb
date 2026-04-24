@@ -18,6 +18,8 @@ cask "devolo-cockpit" do
     end
   end
 
+  depends_on :macos
+
   installer manual: "#{staged_path}/devolo Cockpit Installation.app"
 
   uninstall script: {

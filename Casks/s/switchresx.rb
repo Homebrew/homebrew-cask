@@ -13,6 +13,7 @@ cask "switchresx" do
   end
 
   auto_updates true
+  depends_on :macos
 
   prefpane "SwitchResX Installer.app/Contents/Plugins/SwitchResX.prefPane"
 

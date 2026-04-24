@@ -12,6 +12,8 @@ cask "fastdmg" do
     regex(/href=.*?FastDMG[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   app "FastDMG.app"
 
   zap trash: "~/Library/Preferences/org.sveinbjorn.FastDMG.plist"

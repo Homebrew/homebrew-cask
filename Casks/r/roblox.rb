@@ -23,6 +23,7 @@ cask "roblox" do
   end
 
   auto_updates true
+  depends_on :macos
 
   # The default installer installs the application as `Roblox.app` - so do the same for consistency
   app "RobloxPlayer.app", target: "Roblox.app"

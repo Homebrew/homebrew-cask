@@ -14,6 +14,8 @@ cask "tales-of-majeyal" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   # Renamed for clarity: app name is inconsistent with its branding.
   app "T-Engine.app", target: "Tales-of-Maj'Eyal.app"
 

@@ -12,6 +12,8 @@ cask "dosbox-staging-app" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "DOSBox Staging.app"
 
   zap trash: "~/Library/Preferences/DOSBox"

@@ -12,6 +12,8 @@ cask "sauce-connect" do
     regex(/href=.*?sauce-connect[._-]v?(\d+(?:\.\d+)+)[._-]darwin\.all\.zip/i)
   end
 
+  depends_on :macos
+
   binary "sc"
   bash_completion "completions/sc.bash"
   fish_completion "completions/sc.fish"

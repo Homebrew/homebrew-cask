@@ -10,6 +10,8 @@ cask "deco" do
 
   deprecate! date: "2025-04-21", because: :unmaintained
 
+  depends_on :macos
+
   # pkg cannot be installed automatically and the .zip of the `app` has errors
   installer manual: "Deco-#{version}.pkg"
 

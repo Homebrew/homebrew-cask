@@ -11,6 +11,7 @@ cask "active-trader-pro" do
   disable! date: "2026-12-17", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Active Trader Pro.app"
 

@@ -13,6 +13,8 @@ cask "openaudible" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "OpenAudible.app"
 
   zap trash: "/Library/OpenAudible"

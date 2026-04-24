@@ -10,6 +10,8 @@ cask "tysimulator" do
   deprecate! date: "2024-09-08", because: :discontinued
   disable! date: "2025-09-09", because: :discontinued
 
+  depends_on :macos
+
   app "TySimulator.app"
 
   uninstall quit: "com.tianyiyan.TySimulator"

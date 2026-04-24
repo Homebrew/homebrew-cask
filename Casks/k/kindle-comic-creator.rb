@@ -11,6 +11,8 @@ cask "kindle-comic-creator" do
   deprecate! date: "2025-02-09", because: :unmaintained
   disable! date: "2026-02-11", because: :unmaintained
 
+  depends_on :macos
+
   pkg "Kindle Comic Creator.pkg"
 
   uninstall launchctl: "com.amazon.KindlePreviewerUpdater",

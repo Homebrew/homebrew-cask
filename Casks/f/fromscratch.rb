@@ -11,6 +11,8 @@ cask "fromscratch" do
   deprecate! date: "2024-07-10", because: :unmaintained
   disable! date: "2025-07-10", because: :unmaintained
 
+  depends_on :macos
+
   app "FromScratch.app"
 
   caveats do

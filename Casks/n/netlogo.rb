@@ -15,6 +15,8 @@ cask "netlogo" do
     regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   suite "NetLogo #{version}"
 
   zap trash: [

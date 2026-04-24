@@ -12,6 +12,8 @@ cask "grid" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Grid.app"
 
   uninstall launchctl: "app.macgrid.GridLaunchAtLogin",

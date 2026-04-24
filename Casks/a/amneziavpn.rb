@@ -13,6 +13,8 @@ cask "amneziavpn" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "AmneziaVPN_#{version}_macos.pkg"
 
   uninstall launchctl: [

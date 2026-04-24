@@ -20,6 +20,7 @@ cask "daedalus-mainnet" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "daedalus-#{version.csv.first}-#{version.csv.second}-mainnet-#{version.csv.third}-x86_64-darwin.pkg"
 

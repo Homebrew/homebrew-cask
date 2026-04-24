@@ -13,6 +13,7 @@ cask "droidcam-obs" do
     strategy :github_latest
   end
 
+  depends_on :macos
   depends_on cask: "obs"
 
   pkg "DroidCamOBS_#{version}_macos.pkg"

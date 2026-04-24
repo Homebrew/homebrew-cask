@@ -10,6 +10,8 @@ cask "amazon-workdocs" do
 
   disable! date: "2025-04-25", because: :discontinued
 
+  depends_on :macos
+
   app "Amazon WorkDocs.app"
 
   caveats do

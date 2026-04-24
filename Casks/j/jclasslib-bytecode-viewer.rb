@@ -8,6 +8,7 @@ cask "jclasslib-bytecode-viewer" do
   homepage "https://github.com/ingokegel/jclasslib"
 
   auto_updates true
+  depends_on :macos
 
   app "jclasslib bytecode viewer.app"
 

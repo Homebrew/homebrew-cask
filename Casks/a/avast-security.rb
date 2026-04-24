@@ -13,6 +13,8 @@ cask "avast-security" do
     regex(%r{<h2>(\d+(?:\.\d+)+).*</h2>}i)
   end
 
+  depends_on :macos
+
   # pkg cannot be installed automatically
   installer manual: "Install Avast Security.pkg"
 

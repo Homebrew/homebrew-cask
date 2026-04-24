@@ -18,6 +18,8 @@ cask "triplecheese" do
     end
   end
 
+  depends_on :macos
+
   pkg "TripleCheese_#{version.csv.second}_Mac/TripleCheese #{version.csv.first}.0 Installer.pkg"
 
   uninstall pkgutil: [

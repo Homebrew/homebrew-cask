@@ -13,6 +13,7 @@ cask "smcfancontrol@beta" do
   end
 
   conflicts_with cask: "smcfancontrol"
+  depends_on :macos
 
   app "smcFanControl.app"
 

@@ -16,6 +16,7 @@ cask "mamp" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "MAMP-MAMP-PRO-#{version}-#{arch}.pkg"
 

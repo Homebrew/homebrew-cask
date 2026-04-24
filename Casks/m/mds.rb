@@ -19,6 +19,8 @@ cask "mds" do
     end
   end
 
+  depends_on :macos
+
   pkg "MDS.pkg"
 
   uninstall launchctl: "com.mds-micromdm",

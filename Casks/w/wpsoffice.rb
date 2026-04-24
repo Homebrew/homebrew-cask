@@ -15,6 +15,7 @@ cask "wpsoffice" do
   end
 
   conflicts_with cask: "wpsoffice-cn"
+  depends_on :macos
 
   app "wpsoffice.app"
 

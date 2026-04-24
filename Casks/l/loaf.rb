@@ -8,6 +8,8 @@ cask "loaf" do
   desc "Animated icon library"
   homepage "https://getloaf.io/"
 
+  depends_on :macos
+
   app "Loaf.app"
 
   zap trash: [

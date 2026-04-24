@@ -19,6 +19,8 @@ cask "openttd" do
     end
   end
 
+  depends_on :macos
+
   app "OpenTTD.app"
 
   zap trash: [

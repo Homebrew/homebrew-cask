@@ -21,6 +21,8 @@ cask "solar2d" do
     end
   end
 
+  depends_on :macos
+
   suite "Corona-#{version.minor}"
 
   zap trash: [

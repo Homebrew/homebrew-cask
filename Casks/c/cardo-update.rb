@@ -12,6 +12,8 @@ cask "cardo-update" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "Cardo Update.app"
 
   zap trash: [

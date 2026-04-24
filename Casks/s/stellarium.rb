@@ -28,6 +28,8 @@ cask "stellarium" do
   desc "Tool to render realistic skies in real time on the screen"
   homepage "https://stellarium.org/"
 
+  depends_on :macos
+
   app "Stellarium.app"
 
   zap trash: [

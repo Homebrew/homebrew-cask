@@ -15,6 +15,8 @@ cask "grayjay" do
     strategy :json, &:to_s
   end
 
+  depends_on :macos
+
   app "Grayjay.app"
 
   zap trash: "~/Library/Application Support/Grayjay"

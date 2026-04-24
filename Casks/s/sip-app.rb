@@ -38,6 +38,7 @@ cask "sip-app" do
   homepage "https://sipapp.io/"
 
   auto_updates true
+  depends_on :macos
 
   app "Sip.app"
 

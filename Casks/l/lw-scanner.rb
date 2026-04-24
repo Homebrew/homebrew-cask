@@ -18,6 +18,8 @@ cask "lw-scanner" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   binary "bin/lw-scanner"
 
   zap trash: "~/.config/lw-scanner"

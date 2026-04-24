@@ -22,6 +22,8 @@ cask "shimonote" do
     end
   end
 
+  depends_on :macos
+
   app "石墨文档.app"
 
   zap trash: [

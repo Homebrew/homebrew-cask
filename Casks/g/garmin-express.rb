@@ -33,6 +33,7 @@ cask "garmin-express" do
   homepage "https://www.garmin.com/en-US/software/express"
 
   auto_updates true
+  depends_on :macos
 
   pkg "Install Garmin Express.pkg"
 

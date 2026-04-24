@@ -11,6 +11,8 @@ cask "lunasea" do
   deprecate! date: "2025-04-02", because: :discontinued
   disable! date: "2026-04-02", because: :discontinued
 
+  depends_on :macos
+
   app "LunaSea.app"
 
   zap trash: [

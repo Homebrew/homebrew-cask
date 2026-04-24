@@ -13,6 +13,8 @@ cask "sonixd" do
   deprecate! date: "2024-08-30", because: :discontinued
   disable! date: "2025-08-30", because: :discontinued
 
+  depends_on :macos
+
   app "Sonixd.app"
 
   zap trash: [

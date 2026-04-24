@@ -12,6 +12,8 @@ cask "jgrasp" do
     regex(/jGRASP\s*(\d+(?:\.\d+)*_\d+)\s(?!Beta)/i)
   end
 
+  depends_on :macos
+
   pkg "jgrasp#{version.no_dots}.pkg"
 
   uninstall pkgutil: "jgrasp"

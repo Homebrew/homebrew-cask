@@ -12,6 +12,8 @@ cask "securesafe" do
     regex(/securesafe-(\d+(?:\.\d+)+)\.pkg/i)
   end
 
+  depends_on :macos
+
   pkg "securesafe-#{version}.pkg"
 
   uninstall pkgutil: [

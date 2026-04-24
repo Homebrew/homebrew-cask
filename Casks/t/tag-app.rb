@@ -16,6 +16,8 @@ cask "tag-app" do
     end
   end
 
+  depends_on :macos
+
   app "Tag.app"
 
   zap trash: "~/Library/Preferences/com.feisty-dog.Tag.plist"

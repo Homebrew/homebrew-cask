@@ -24,6 +24,8 @@ cask "qfinder-pro" do
     end
   end
 
+  depends_on :macos
+
   pkg "Qfinder Pro.pkg"
 
   uninstall launchctl: "com.qnap.qsoftwareupdater",

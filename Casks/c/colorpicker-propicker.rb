@@ -12,6 +12,8 @@ cask "colorpicker-propicker" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   colorpicker "ProPicker.colorPicker"
 
   # No zap stanza required

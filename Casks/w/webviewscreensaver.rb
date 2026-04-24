@@ -12,6 +12,8 @@ cask "webviewscreensaver" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   screen_saver "WebViewScreenSaver.saver"
 
   zap trash: [

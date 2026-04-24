@@ -11,6 +11,7 @@ cask "distroav" do
   # Reference: https://github.com/Homebrew/homebrew-cask/pull/235792
   disable! date: "2026-11-14", because: "the package is not compatible with Homebrew's installation parameters"
 
+  depends_on :macos
   depends_on cask: "libndi"
 
   pkg "distroav-#{version}-macos-universal.pkg"

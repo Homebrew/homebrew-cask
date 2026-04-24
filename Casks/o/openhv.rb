@@ -14,6 +14,8 @@ cask "openhv" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "OpenHV.app"
 
   zap trash: [

@@ -21,6 +21,8 @@ cask "temurin@8" do
     end
   end
 
+  depends_on :macos
+
   pkg "OpenJDK#{version.csv.first}U-jdk_x64_mac_hotspot_#{version.csv.first}u#{version.csv.second}b#{version.csv.third.split(".").first}.pkg"
 
   uninstall pkgutil: "net.temurin.#{version.csv.first}.jdk"

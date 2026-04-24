@@ -8,6 +8,8 @@ cask "musiver" do
   desc "Music client compatible with self-hosted music services"
   homepage "https://music.aqzscn.cn/"
 
+  depends_on :macos
+
   app "Musiver.app"
 
   zap trash: [

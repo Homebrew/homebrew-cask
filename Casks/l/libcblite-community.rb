@@ -12,6 +12,7 @@ cask "libcblite-community" do
   end
 
   conflicts_with cask: "libcblite"
+  depends_on :macos
 
   artifact "libcblite-#{version}/include/cbl", target: "#{HOMEBREW_PREFIX}/include/cbl"
   artifact "libcblite-#{version}/include/fleece", target: "#{HOMEBREW_PREFIX}/include/fleece"

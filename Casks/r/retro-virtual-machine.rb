@@ -13,6 +13,8 @@ cask "retro-virtual-machine" do
     regex(/RetroVirtualMachine[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Retro Virtual Machine #{version.major_minor}.app"
 
   zap trash: [

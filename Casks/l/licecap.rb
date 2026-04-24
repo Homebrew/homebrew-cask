@@ -12,6 +12,8 @@ cask "licecap" do
     regex(/v?(\d+(?:\.\d+)*)\s*for\s*macOS/i)
   end
 
+  depends_on :macos
+
   app "LICEcap.app"
 
   zap trash: [

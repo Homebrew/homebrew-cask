@@ -12,6 +12,8 @@ cask "lrtimelapse" do
     regex(/LRTimelapse[._-]?v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
+  depends_on :macos
+
   pkg "LRTimelapse #{version} Installer.pkg"
 
   uninstall script:  {

@@ -12,6 +12,8 @@ cask "zerobranestudio" do
     regex(/href=.*?ZeroBraneStudioEduPack[._-]?v?(\d+(?:\.\d+)+)[._-]macos\.dmg/i)
   end
 
+  depends_on :macos
+
   app "ZeroBraneStudio.app"
 
   zap trash: "~/Library/Preferences/ZeroBraneStudio Preferences"

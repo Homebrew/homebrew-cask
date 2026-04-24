@@ -11,6 +11,7 @@ cask "bob-app" do
   disable! date: "2026-04-16", because: :moved_to_mas
 
   auto_updates true
+  depends_on :macos
 
   app "Bob.app"
 

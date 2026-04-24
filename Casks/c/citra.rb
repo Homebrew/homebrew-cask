@@ -11,6 +11,8 @@ cask "citra" do
   deprecate! date: "2024-06-25", because: :discontinued
   disable! date: "2025-06-25", because: :discontinued
 
+  depends_on :macos
+
   installer manual: "citra-setup-mac.app"
 
   uninstall delete: "/Applications/Citra"

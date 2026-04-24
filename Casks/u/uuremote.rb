@@ -15,6 +15,8 @@ cask "uuremote" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "uuyc_#{version}.pkg"
 
   postflight do

@@ -23,6 +23,7 @@ cask "wechatwork" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "企业微信.app"
 

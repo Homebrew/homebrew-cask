@@ -13,6 +13,8 @@ cask "worksheet-crafter" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "worksheet-crafter_#{version}.pkg"
 
   uninstall pkgutil: "com.schoolcraft.pkg.worksheetcrafter"

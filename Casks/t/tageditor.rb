@@ -12,6 +12,8 @@ cask "tageditor" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   # The url is unversioned, but the download returns an app with a version number
   rename "Tag Editor*.app", "Tag Editor.app"
 

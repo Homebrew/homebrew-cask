@@ -11,6 +11,8 @@ cask "workman" do
   deprecate! date: "2024-06-21", because: :unmaintained
   disable! date: "2025-06-21", because: :unmaintained
 
+  depends_on :macos
+
   keyboard_layout "Workman-master/mac/Workman.bundle"
 
   # No zap stanza required

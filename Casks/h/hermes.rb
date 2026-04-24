@@ -12,6 +12,7 @@ cask "hermes" do
   disable! date: "2025-07-12", because: :unmaintained
 
   auto_updates true
+  depends_on :macos
 
   app "Hermes.app"
 

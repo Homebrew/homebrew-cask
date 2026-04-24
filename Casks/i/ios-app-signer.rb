@@ -13,6 +13,8 @@ cask "ios-app-signer" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "iOS App Signer.app"
 
   zap trash: [

@@ -15,6 +15,8 @@ cask "boop" do
     end
   end
 
+  depends_on :macos
+
   app "Boop.app"
 
   zap trash: [

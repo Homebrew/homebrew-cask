@@ -10,5 +10,7 @@ cask "unraid-usb-creator" do
   deprecate! date: "2024-07-14", because: :discontinued
   disable! date: "2025-07-14", because: :discontinued
 
+  depends_on :macos
+
   app "Unraid USB Creator.app"
 end

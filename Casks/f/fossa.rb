@@ -16,6 +16,8 @@ cask "fossa" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   binary "fossa"
 
   # No zap stanza required

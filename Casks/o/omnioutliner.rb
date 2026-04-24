@@ -40,6 +40,7 @@ cask "omnioutliner" do
   homepage "https://www.omnigroup.com/omnioutliner/"
 
   auto_updates true
+  depends_on :macos
 
   app "OmniOutliner.app"
 

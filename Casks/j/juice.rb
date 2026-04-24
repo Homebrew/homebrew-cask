@@ -7,6 +7,8 @@ cask "juice" do
   desc "Make your battery information a bit more interesting"
   homepage "https://github.com/brianmichel/Juice"
 
+  depends_on :macos
+
   app "Juice.app"
 
   zap trash: [

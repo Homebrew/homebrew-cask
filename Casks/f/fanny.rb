@@ -8,6 +8,8 @@ cask "fanny" do
   desc "Notification Center widget and menu bar application to monitor fans"
   homepage "https://fannywidget.com/"
 
+  depends_on :macos
+
   app "FannyWidget-v#{version}/Fanny.app"
 
   zap trash: [

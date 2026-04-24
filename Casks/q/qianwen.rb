@@ -20,6 +20,8 @@ cask "qianwen" do
     end
   end
 
+  depends_on :macos
+
   app "Qianwen.app"
 
   zap trash: [

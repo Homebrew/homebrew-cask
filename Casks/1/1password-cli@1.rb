@@ -14,6 +14,7 @@ cask "1password-cli@1" do
     "1password-cli",
     "1password-cli@beta",
   ]
+  depends_on :macos
 
   pkg "op_apple_universal_v#{version}.pkg"
 

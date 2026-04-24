@@ -12,6 +12,8 @@ cask "monokle" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Monokle.app"
 
   zap trash: [

@@ -13,6 +13,8 @@ cask "aleph-one" do
     regex(%r{href=.*?/AlephOne[._-]v?(\d+(?:\.\d+)*)[._-]Mac\.dmg}i)
   end
 
+  depends_on :macos
+
   app "Aleph One.app"
 
   zap trash: [

@@ -18,6 +18,8 @@ cask "geogebra@5" do
     end
   end
 
+  depends_on :macos
+
   app "Geogebra.app"
 
   uninstall quit:       "org.geogebra#{version.major}.mac",

@@ -29,6 +29,7 @@ cask "omnidisksweeper" do
   homepage "https://www.omnigroup.com/more/"
 
   auto_updates true
+  depends_on :macos
 
   app "OmniDiskSweeper.app"
 

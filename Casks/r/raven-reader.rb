@@ -14,6 +14,7 @@ cask "raven-reader" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Raven Reader.app"
 

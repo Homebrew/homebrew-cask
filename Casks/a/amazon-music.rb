@@ -15,6 +15,7 @@ cask "amazon-music" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer script: {
     executable: "Amazon Music Installer.app/Contents/MacOS/installbuilder.sh",

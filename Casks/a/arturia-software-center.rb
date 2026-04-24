@@ -20,6 +20,7 @@ cask "arturia-software-center" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Arturia_Software_Center__#{version.dots_to_underscores}.pkg"
 

@@ -13,6 +13,7 @@ cask "ultdata" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "UltData.app"
 

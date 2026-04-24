@@ -11,6 +11,8 @@ cask "waterfox-classic" do
   deprecate! date: "2024-11-09", because: :unmaintained
   disable! date: "2025-11-09", because: :unmaintained
 
+  depends_on :macos
+
   app "Waterfox Classic.app"
 
   zap trash: [

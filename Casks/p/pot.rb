@@ -16,6 +16,8 @@ cask "pot" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "pot.app"
   binary "#{appdir}/pot.app/Contents/MacOS/pot"
 

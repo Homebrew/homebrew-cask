@@ -13,6 +13,8 @@ cask "photozoom-pro" do
     regex(/PhotoZoom.*?Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "PhotoZoom Pro #{version.major} Installer.mpkg"
 
   uninstall pkgutil: "com.benvista.pkg.PhotoZoom-Pro-#{version.major}.app"

@@ -18,6 +18,7 @@ cask "programmer-dvorak" do
     end
   end
 
+  depends_on :macos
   container nested: "Programmer Dvorak v#{version.major_minor}.pkg/Contents/Archive.pax.gz"
 
   keyboard_layout "Library/Keyboard Layouts/Programmer Dvorak.bundle"

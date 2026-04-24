@@ -11,6 +11,8 @@ cask "bwana" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Bwana.app"
 
   zap trash: [

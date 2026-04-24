@@ -10,6 +10,8 @@ cask "xact" do
   # Artifact not available over HTTPS
   disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
+  depends_on :macos
+
   app "xACT#{version}/xACT.app"
 
   zap trash: "~/Library/Preferences/org.scottcbrown.xact.plist"

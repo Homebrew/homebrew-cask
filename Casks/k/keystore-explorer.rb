@@ -16,6 +16,8 @@ cask "keystore-explorer" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "KeyStore Explorer.app"
 
   zap trash: "~/Library/Saved Application State/org.kse.keystore-explorer.savedState"

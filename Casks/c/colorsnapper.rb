@@ -18,6 +18,8 @@ cask "colorsnapper" do
     end
   end
 
+  depends_on :macos
+
   app "ColorSnapper2.app"
 
   uninstall quit: "com.koolesache.ColorSnapper2"

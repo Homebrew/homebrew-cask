@@ -24,6 +24,8 @@ cask "qudedup-extract-tool" do
     end
   end
 
+  depends_on :macos
+
   pkg "QudedupExTool.pkg"
 
   uninstall pkgutil: "com.qnap.pkg.QuDedupExTool"

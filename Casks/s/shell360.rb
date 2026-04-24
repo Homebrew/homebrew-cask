@@ -16,6 +16,7 @@ cask "shell360" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Shell360.app"
 

@@ -15,6 +15,8 @@ cask "podolski" do
     end
   end
 
+  depends_on :macos
+
   pkg "Podolski_#{version.csv.second}_Mac/Podolski #{version.csv.first} Installer.pkg"
 
   uninstall pkgutil: [

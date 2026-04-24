@@ -16,6 +16,8 @@ cask "microsoft-openjdk" do
     regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.pkg}i)
   end
 
+  depends_on :macos
+
   pkg "microsoft-jdk-#{version}-macos-#{arch}.pkg"
 
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"

@@ -14,6 +14,7 @@ cask "commandq" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "CommandQ.app"
 

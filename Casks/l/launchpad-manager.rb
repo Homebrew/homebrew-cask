@@ -22,6 +22,8 @@ cask "launchpad-manager" do
   desc "Tool to manage the launchpad"
   homepage "https://launchpadmanager.com/"
 
+  depends_on :macos
+
   app "Launchpad Manager.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "workspaces" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Workspaces.app"
 
   zap trash: [

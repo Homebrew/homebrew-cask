@@ -22,6 +22,8 @@ cask "dynobase" do
     end
   end
 
+  depends_on :macos
+
   app "Dynobase.app"
 
   zap trash: [

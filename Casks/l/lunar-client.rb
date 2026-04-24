@@ -14,6 +14,7 @@ cask "lunar-client" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Lunar Client.app"
 

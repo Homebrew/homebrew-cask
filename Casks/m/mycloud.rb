@@ -12,6 +12,8 @@ cask "mycloud" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   installer manual: "myCloud Desktop installer.app"
 
   uninstall quit:       "ch.swisscom.mycloud.desktop.finder",

@@ -13,6 +13,8 @@ cask "mycard" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "MyCard.app"
 
   zap trash: [

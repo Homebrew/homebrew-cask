@@ -12,6 +12,8 @@ cask "doxie" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Doxie.app"
 
   zap trash: [

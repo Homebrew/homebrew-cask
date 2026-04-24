@@ -13,6 +13,7 @@ cask "scroll" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Scroll.app"
 

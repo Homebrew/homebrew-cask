@@ -46,6 +46,7 @@ cask "omnifocus" do
   homepage "https://www.omnigroup.com/omnifocus/"
 
   auto_updates true
+  depends_on :macos
 
   app "OmniFocus.app"
 

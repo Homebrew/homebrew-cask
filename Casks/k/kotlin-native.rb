@@ -16,6 +16,8 @@ cask "kotlin-native" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/cinterop"
   binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/generate-platform"
   binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/klib"

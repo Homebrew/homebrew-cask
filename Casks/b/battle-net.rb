@@ -23,6 +23,7 @@ cask "battle-net" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer manual: "Battle.net-Setup.app"
 

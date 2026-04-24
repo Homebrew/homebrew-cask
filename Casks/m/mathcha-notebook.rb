@@ -13,6 +13,7 @@ cask "mathcha-notebook" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Mathcha Notebook.app"
 

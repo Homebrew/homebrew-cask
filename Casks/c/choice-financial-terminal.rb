@@ -18,6 +18,7 @@ cask "choice-financial-terminal" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Choice金融终端.app"
 

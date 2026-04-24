@@ -18,6 +18,7 @@ cask "zen-privacy" do
 
   auto_updates true
   conflicts_with cask: "zen"
+  depends_on :macos
 
   app "Zen.app"
 
