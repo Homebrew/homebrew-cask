@@ -10,6 +10,8 @@ cask "soundboosterlite" do
   deprecate! date: "2024-08-11", because: :unmaintained
   disable! date: "2025-08-11", because: :unmaintained
 
+  depends_on :macos
+
   pkg "SoundBoosterLite.pkg"
 
   uninstall launchctl: "com.froyosoft.soundboosterxpc",

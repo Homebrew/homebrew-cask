@@ -8,6 +8,8 @@ cask "pritunl" do
   desc "OpenVPN client"
   homepage "https://client.pritunl.com/"
 
+  depends_on :macos
+
   pkg "Pritunl#{arch}.pkg"
 
   uninstall launchctl: [

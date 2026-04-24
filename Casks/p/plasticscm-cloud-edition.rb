@@ -13,6 +13,8 @@ cask "plasticscm-cloud-edition" do
     regex(%r{href=.*?/download/v?(\d+(?:\.\d+)+)/plasticscm/[^/]+/cloudedition}i)
   end
 
+  depends_on :macos
+
   pkg "unity-vcs-osx-x64-#{version}.pkg"
 
   uninstall launchctl: [

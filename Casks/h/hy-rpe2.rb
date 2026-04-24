@@ -24,6 +24,8 @@ cask "hy-rpe2" do
     end
   end
 
+  depends_on :macos
+
   pkg "HY-RPE2.pkg"
 
   uninstall pkgutil: [

@@ -10,6 +10,8 @@ cask "osirix-quicklook" do
   deprecate! date: "2024-11-15", because: :unmaintained
   disable! date: "2025-11-15", because: :unmaintained
 
+  depends_on :macos
+
   pkg "OsiriXQuickLookInstaller.pkg"
 
   uninstall pkgutil: "com.pixmeo.osirix.osirixQuicklookPlugin.OsiriXQuickLookPlugin.pkg"

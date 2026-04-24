@@ -13,6 +13,8 @@ cask "captainplugins" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "CaptainPlugins #{version}.pkg"
 
   uninstall pkgutil: "com.mixedinkey.CaptainPlugins.Epic.pkg"

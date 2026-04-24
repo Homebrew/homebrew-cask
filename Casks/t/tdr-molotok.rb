@@ -12,6 +12,8 @@ cask "tdr-molotok" do
     regex(%r{href=.*?Molotok/v?(\d+(?:\.\d+)+)/TDR(%20|\s)Molotok\.zip}i)
   end
 
+  depends_on :macos
+
   pkg "TDR Molotok.pkg"
 
   uninstall pkgutil: [

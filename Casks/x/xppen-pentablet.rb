@@ -46,6 +46,8 @@ cask "xppen-pentablet" do
     end
   end
 
+  depends_on :macos
+
   pkg "XPPenMac_#{version.csv.first}_#{version.csv.second}.pkg"
 
   uninstall launchctl: "com.ugee.Pentablet2.0",

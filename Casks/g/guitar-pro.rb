@@ -19,6 +19,7 @@ cask "guitar-pro" do
   disable! date: "2026-03-21", because: "has a download url that requires authentication"
 
   auto_updates true
+  depends_on :macos
 
   pkg "GuitarPro#{version.major}.pkg"
 

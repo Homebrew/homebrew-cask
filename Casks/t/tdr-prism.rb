@@ -12,6 +12,8 @@ cask "tdr-prism" do
     regex(%r{href=.*?Prism/v?(\d+(?:\.\d+)+)/TDR(%20|\s)Prism\.zip}i)
   end
 
+  depends_on :macos
+
   pkg "TDR Prism.pkg"
 
   uninstall pkgutil: [

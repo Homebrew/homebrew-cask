@@ -41,6 +41,7 @@ cask "choosy" do
   homepage "https://choosy.app/"
 
   auto_updates true
+  depends_on :macos
 
   pkg "Choosy.pkg"
 

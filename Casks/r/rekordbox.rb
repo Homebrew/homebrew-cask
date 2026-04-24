@@ -16,6 +16,7 @@ cask "rekordbox" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Install_rekordbox_#{version.csv.first.dots_to_underscores}.pkg"
 

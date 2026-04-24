@@ -12,6 +12,7 @@ cask "vb-cable" do
     regex(%r{href=.*?/VBCable_MACDriver_Pack(\d+)\.zip}i)
   end
 
+  depends_on :macos
   container nested: "VBCable_MACDriver_Pack#{version}.dmg"
 
   pkg "vb-cable-installer.pkg"

@@ -17,6 +17,7 @@ cask "mpluginmanager" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "MPluginManager_#{version.dots_to_underscores}_setupmac.pkg"
 

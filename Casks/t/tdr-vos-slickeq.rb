@@ -12,6 +12,8 @@ cask "tdr-vos-slickeq" do
     regex(%r{latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
+  depends_on :macos
+
   pkg "TDR VOS SlickEQ.pkg"
 
   uninstall pkgutil: [
