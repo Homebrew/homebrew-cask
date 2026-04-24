@@ -11,6 +11,8 @@ cask "ia-markdown-dictionary" do
     skip "No version information available"
   end
 
+  depends_on :macos
+
   dictionary "iA Markdown.dictionary"
 
   # No zap stanza required

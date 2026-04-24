@@ -7,6 +7,8 @@ cask "emojipedia" do
   desc "Dictionary containing Emoji and their meanings"
   homepage "https://github.com/gingerbeardman/Emojipedia"
 
+  depends_on :macos
+
   dictionary "Emojipedia.dictionary"
 
   # No zap stanza required
