@@ -44,5 +44,7 @@ cask "flox" do
         "/usr/local/share/flox/scripts/uninstall_zap",
         "~/.cache/flox",
         "~/.config/flox",
+        "~/.local/share/flox/",
+        "~/.local/state/flox/",
       ]
 end
