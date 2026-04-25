@@ -1,6 +1,6 @@
 cask "praat" do
-  version "6.4.64,6464"
-  sha256 "be6d4d592532f3e10a86a058789a7e7a06a4ca42ecd678dd51db682b81ce6bb9"
+  version "6.4.65,6465"
+  sha256 "f6107078968a0db3ed1aed6065766faa213178d512fc524dd6cf3e6e7062609d"
 
   url "https://github.com/praat/praat.github.io/releases/download/v#{version.csv.first}/praat#{version.csv.second}_mac.dmg",
       verified: "github.com/praat/praat.github.io/"
@@ -20,6 +20,8 @@ cask "praat" do
       end
     end
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on :macos
 
