@@ -4,12 +4,12 @@ cask "rustcast" do
 
   url "https://github.com/RustCastLabs/rustcast/releases/download/v#{version}/Rustcast-universal-macos.app.zip"
   name "Rustcast"
-  desc "Utility tooling popup window for your system"
+  desc "Application and utility launcher"
   homepage "https://github.com/unsecretised/rustcast"
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true
