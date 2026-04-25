@@ -12,6 +12,7 @@ cask "cocoapacketanalyzer" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :tahoe"
   depends_on :macos
 
   app "CocoaPacketAnalyzer.app"
