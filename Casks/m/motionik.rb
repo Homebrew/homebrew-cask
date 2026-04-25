@@ -1,9 +1,9 @@
 cask "motionik" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.10.6"
-  sha256 arm:   "2241b0342c7f8c79c043d9f7c5899fd8b543187b7018bc5c3ec54f3168556f2f",
-         intel: "1ff801ce74840428c270a58d1524d86b79d89861dca998cbecdd872c5b417722"
+  version "2.0.1"
+  sha256 arm:   "b1c24476f75955822d0c23264f1ddff88c3dbdd8ab7c1a19547396ac85c585df",
+         intel: "56b7eacaeea78253e1feef9b361bbc499a3b2383ec1e5778b93e7edc14ac8bd8"
 
   url "https://assets.motionik.com/releases/Motionik-#{version}-#{arch}.dmg"
   name "Motionik"
@@ -15,7 +15,7 @@ cask "motionik" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Motionik.app"
 
