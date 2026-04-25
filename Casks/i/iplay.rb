@@ -4,7 +4,7 @@ cask "iplay" do
 
   url "https://artifact.saltpi.cn/build/iPlay/macOS/latest.dmg"
   name "iPlay"
-  desc "Multi-platform multimedia player"
+  desc "Multimedia player"
   homepage "https://iplay.saltpi.cn/"
 
   livecheck do
