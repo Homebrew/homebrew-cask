@@ -5,7 +5,7 @@ cask "rustcast" do
   url "https://github.com/RustCastLabs/rustcast/releases/download/v#{version}/Rustcast-universal-macos.app.zip"
   name "Rustcast"
   desc "Application and utility launcher"
-  homepage "https://github.com/unsecretised/rustcast"
+  homepage "https://rustcast.app"
 
   livecheck do
     url :url
@@ -16,4 +16,13 @@ cask "rustcast" do
   depends_on macos: ">= :big_sur"
 
   app "target/release/macos/Rustcast.app"
+
+  zap trash: [
+    "~/Library/Application Support/CrashReporter/rustcast_*.plist",
+    "~/Library/Logs/DiagnosticReports/rustcast-*.ips",
+    "~/Library/Preferences/com.*.rustcast.plist",
+    "~/Library/Preferences/rustcast.plist",
+    "~/.config/rustcast/config.toml",
+    "/tmp/rustcast.log",
+  ]
 end
