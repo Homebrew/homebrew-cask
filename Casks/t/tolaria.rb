@@ -1,6 +1,6 @@
 cask "tolaria" do
-  version "2026.4.24"
-  sha256 "dbef3022cd1c24271b733e23c660602a2046fd3a5c9c78453a6f9b697540379d"
+  version "2026.4.25"
+  sha256 "3ae52b2d920b8595259fee3d8cc6ef44a2d022677364536f9d46e6be77e6c7cf"
 
   url "https://github.com/refactoringhq/tolaria/releases/download/stable-v#{version}/Tolaria_#{version}_aarch64.dmg",
       verified: "github.com/refactoringhq/tolaria/"
