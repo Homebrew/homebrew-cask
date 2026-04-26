@@ -63,7 +63,7 @@ module Homebrew
       sig { params(app: Pathname).returns(T::Boolean) }
       def find_sparkle(app)
         plist = app.join("Contents/Info.plist")
-        url = Open3.capture3("defaults", "read", plist.to_path, "SUFeedURL").first.strip
+        url = Plist.parse_xml(plist)["SUFeedURL"]&.strip
         return false if url.empty?
 
         verify_appcast!("Sparkle", url)
@@ -74,18 +74,7 @@ module Homebrew
         appcast_file = app.join("Contents/Resources/app-update.yml")
         return false unless appcast_file.exist?
 
-        data = YAML.load_file(appcast_file)
-        components = {
-          url:      data["url"],
-          owner:    data["owner"],
-          repo:     data["repo"],
-          bucket:   data["bucket"],
-          channel:  data["channel"],
-          path:     data["path"],
-          region:   data["region"],
-          name:     data["name"],
-          endpoint: data["endpoint"],
-        }.compact
+        components = YAML.load_file(appcast_file, symbolize_names: true).compact
 
         possible_appcasts = [
           "#{components[:url]}/latest-mac.yml",
