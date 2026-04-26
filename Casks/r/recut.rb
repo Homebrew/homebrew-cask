@@ -9,6 +9,7 @@ cask "recut" do
 
   livecheck do
     url "https://updates.getrecut.com/latest-mac"
+    regex(/Recut[._-]v?(\d+(?:\.\d+)+)/i)
     strategy :header_match
   end
 
