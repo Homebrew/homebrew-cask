@@ -15,7 +15,7 @@ cask "keka" do
 
   auto_updates true
   conflicts_with cask: "keka@beta"
-  depends_on :macos
+  depends_on macos: ">= :catalina"
 
   app "Keka.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
