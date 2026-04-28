@@ -27,5 +27,7 @@ cask "copilot-cli" do
 
   binary "copilot"
 
+  generate_completions_from_executable "copilot", "completion"
+
   zap trash: "~/.copilot"
 end
