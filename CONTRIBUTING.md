@@ -1,5 +1,5 @@
 # How To Contribute
-
+c0ed99385f0625415c8f05bcae33fe649ed2952894a95ff8b08f26ca57ea5b3c
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
 * [Updating a Cask](#updating-a-cask)
