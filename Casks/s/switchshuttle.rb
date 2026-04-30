@@ -8,14 +8,9 @@ cask "switchshuttle" do
   homepage "https://github.com/s00d/switchshuttle"
 
   livecheck do
-    url "https://api.github.com/repos/s00d/switchshuttle/releases/latest"
-    regex(/^app-v(\d+(?:\.\d+)+)$/i)
-    strategy :json do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
+    url "https://github.com/s00d/switchshuttle/releases/latest"
+    regex(/app-v(\d+(?:\.\d+)+)/i)
+    strategy :header_match
   end
 
   auto_updates true
