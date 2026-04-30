@@ -7,5 +7,7 @@ cask "brewstation" do
   desc "Homebrew GUI manager with snapshot saving and restoring"
   homepage "https://github.com/hreinssondev/brewstation"
 
+  depends_on macos: ">= :ventura"
+
   app "BrewStation.app"
 end
