@@ -1,6 +1,6 @@
-cask "notepad++" do
-  version "1.0.4"
-  sha256 "a243dd7c555c3d8e6319a69517f8965c86da601b31d82192322c555c7267cb4f"
+cask "notepad-plus-plus-mac" do
+  version "1.0.5"
+  sha256 "e4ea508885760315678c54f1e012883a4266eca6ad602ed7b4086bff57af19cc"
 
   url "https://github.com/notepad-plus-plus-mac/notepad-plus-plus-macos/releases/download/v#{version}/Notepad%2B%2Bv#{version}.dmg",
       verified: "github.com/notepad-plus-plus-mac/notepad-plus-plus-macos/"
