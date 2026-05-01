@@ -1,15 +1,13 @@
 cask "unifi-os-server" do
-  arch arm: "arm64", intel: "amd64"
+  version "5.0.6"
 
   on_intel do
-    version "5.0.6"
     sha256 "8e030977c6bf4e9c1e2e65ee3afd71033b67264167cf50add3fad48ab9544d40"
     url "https://fw-download.ubnt.com/data/unifi-os-server/b290-macOS-dmg-amd64-#{version}-a165bb5f-f865-476a-b4bd-703e0d3d4ca1.dmg",
         verified: "fw-download.ubnt.com/data/unifi-os-server/"
   end
 
   on_arm do
-    version "5.0.6"
     sha256 "ecc766175285e446da5a5f774f65bcc1f97657fba6155c2930022fa0380b33dd"
     url "https://fw-download.ubnt.com/data/unifi-os-server/b114-macOS-dmg-arm64-#{version}-52fc45da-b544-4a72-a162-ad5c28b93989.dmg",
         verified: "fw-download.ubnt.com/data/unifi-os-server/"
