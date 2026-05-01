@@ -35,6 +35,7 @@ cask "unifi-os-server" do
   ]
 
   caveats do
+    requires_rosetta
     license "https://www.ui.com/eula/"
   end
 end
