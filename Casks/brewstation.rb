@@ -1,8 +1,8 @@
 cask "brewstation" do
-  version "1.3"
-  sha256 "1c1b1d698df59218475170638bfe7d98b5c226ffcae148ce4955871c1dfb9df6"
+  version "1.4"
+  sha256 "7f31a0c5c45cdb5252f508a4e4439a49eeace4d4e62bea291cca093b83a0268b"
 
-  url "https://github.com/hreinssondev/brewstation/releases/download/#{version}/BrewStation.dmg"
+  url "https://github.com/hreinssondev/brewstation/releases/download/#{version}/Brewstation.dmg"
   name "BrewStation"
   desc "Homebrew GUI manager with snapshot saving and restoring"
   homepage "https://github.com/hreinssondev/brewstation"
@@ -10,4 +10,10 @@ cask "brewstation" do
   depends_on macos: ">= :ventura"
 
   app "BrewStation.app"
+
+  zap trash: [
+    "~/Library/Application Support/BrewStation",
+    "~/Library/Preferences/com.hreinssondev.brewstation.plist",
+    "~/Library/Caches/BrewStation",
+  ]
 end
