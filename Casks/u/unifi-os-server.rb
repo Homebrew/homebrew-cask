@@ -20,11 +20,12 @@ cask "unifi-os-server" do
   livecheck do
     url "https://fw-update.ui.com/api/firmware?filter=eq~~product~~unifi-os-server&filter=eq~~channel~~release"
     strategy :json do |json|
-      versions = json.dig("_embedded", "firmware")&.filter_map do |item|
+      firmware = json.dig("_embedded", "firmware") || []
+      versions = firmware.filter_map do |item|
         next unless item["platform"]&.start_with?("macOS-dmg-")
         item["version"]&.delete_prefix("v")
-      end&.uniq
-      versions&.max
+      end
+      versions.uniq.max
     end
   end
 
