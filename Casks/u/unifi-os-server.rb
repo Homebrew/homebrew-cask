@@ -1,4 +1,6 @@
 cask "unifi-os-server" do
+  arch arm: "arm64", intel: "amd64"
+
   on_intel do
     version "5.0.6"
     sha256 "8e030977c6bf4e9c1e2e65ee3afd71033b67264167cf50add3fad48ab9544d40"
