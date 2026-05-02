@@ -1,6 +1,6 @@
 cask "superisland" do
-  version "1.0.4"
-  sha256 "557f1e8e1875f1b6ad1859629dbaf76d452035e460f80d4a9cafce92addcdc6e"
+  version "1.0.5"
+  sha256 "979d83b8d846ebb838c4992e461fc5033180603cebe2b38baaea1aa84e890618"
 
   url "https://github.com/shobhit99/SuperIsland/releases/download/#{version}/SuperIsland.dmg",
       verified: "github.com/shobhit99/SuperIsland/"
