@@ -1,5 +1,5 @@
 cask "ariax" do
-  version "1.0.7,19"
+  version "1.0.7"
   sha256 :no_check
 
   url "https://artifact.saltpi.cn/build/AriaX/macOS/latest.dmg"
@@ -9,7 +9,7 @@ cask "ariax" do
 
   livecheck do
     url "https://artifact.saltpi.cn/build/AriaX/macOS/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
