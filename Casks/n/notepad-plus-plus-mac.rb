@@ -8,11 +8,6 @@ cask "notepad-plus-plus-mac" do
   desc "Source code editor and Notepad replacement"
   homepage "https://notepad-plus-plus-mac.org/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :big_sur"
 
   app "Notepad++.app"
