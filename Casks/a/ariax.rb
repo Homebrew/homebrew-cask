@@ -1,5 +1,5 @@
 cask "ariax" do
-  version "1.0.7,17"
+  version "1.0.7,19"
   sha256 :no_check
 
   url "https://artifact.saltpi.cn/build/AriaX/macOS/latest.dmg"
