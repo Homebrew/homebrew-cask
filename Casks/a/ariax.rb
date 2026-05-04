@@ -1,15 +1,14 @@
 cask "ariax" do
   version "1.0.7,17"
-  sha256 "6cd6d7af6fae1c8bf8493f7976b52ec2d9031c09d6f2d6b1fc911167f9feef24"
+  sha256 :no_check
 
-  url "https://github.com/saltpi/Aria.X/releases/download/#{version.csv.first}/AriaX.dmg",
-      verified: "github.com/saltpi/Aria.X/"
+  url "https://artifact.saltpi.cn/build/AriaX/macOS/latest.dmg"
   name "AriaX"
   desc "Aria2 download manager"
   homepage "https://ariax.saltpi.cn/"
 
   livecheck do
-    url "https://github.com/saltpi/Aria.X/releases/latest/download/appcast.xml"
+    url "https://artifact.saltpi.cn/build/AriaX/macOS/appcast.xml"
     strategy :sparkle
   end
 
