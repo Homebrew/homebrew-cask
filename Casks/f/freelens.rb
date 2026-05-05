@@ -9,7 +9,7 @@ cask "freelens" do
       verified: "github.com/freelensapp/freelens/"
   name "Freelens"
   desc "Kubernetes IDE"
-  homepage "https://freelens.app/"
+  homepage "https://freelensapp.github.io/"
 
   conflicts_with cask: "freelens@nightly"
   depends_on macos: ">= :monterey"
