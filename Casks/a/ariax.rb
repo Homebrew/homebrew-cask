@@ -2,7 +2,8 @@ cask "ariax" do
   version "1.0.7"
   sha256 :no_check
 
-  url "https://artifact.saltpi.cn/build/AriaX/macOS/latest.dmg"
+  url "https://github.com/saltpi/Aria.X/releases/download/#{version}/AriaX.dmg",
+      verified: "github.com/saltpi/Aria.X/"
   name "AriaX"
   desc "Aria2 download manager"
   homepage "https://ariax.saltpi.cn/"
