@@ -24,7 +24,11 @@ cask "proton-drive" do
 
   zap trash: [
     "~/Library/Application Scripts/ch.protonmail.drive*",
+    "~/Library/Application Support/FileProvider/ch.protonmail.drive.fileprovider",
     "~/Library/Containers/ch.protonmail.drive*",
-    "~/Library/Group Containers/group.ch.protonmail.protondrive",
+    "~/Library/Group Containers/*ch.protonmail.protondrive",
+    "~/Library/Preferences/ch.protonmail.drive*",
   ]
+
+  caveats "After logging out or uninstalling it, the client creates a folder with all files that failed to get uploaded or ones that were made available locally at the location: ~/Library/CloudStorage/ProtonDrive-{UserEmail} ({TimeStamp})."
 end
