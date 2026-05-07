@@ -12,7 +12,9 @@ cask "pretzel" do
     strategy :electron_builder
   end
 
-  depends_on :macos
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: ">= :big_sur"
 
   app "Pretzel.app"
 
