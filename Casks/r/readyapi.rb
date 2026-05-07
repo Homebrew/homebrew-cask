@@ -19,7 +19,7 @@ cask "readyapi" do
   depends_on :macos
 
   installer script: {
-    executable: "ReadyAPI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
+    executable: "ReadyAPI-#{version}.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
   }
 
