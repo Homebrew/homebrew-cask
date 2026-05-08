@@ -1,6 +1,6 @@
 cask "kimi" do
-  version "3.0.6"
-  sha256 "57ff6dcae0653294b490ffb0f8a4941c0e93226fff0ad098aeea38bc9ba0184c"
+  version "3.0.9"
+  sha256 "1d36e0881045c07d46edc543fa55b760b8839c3e5224bcc874f689ebd6ddd8ef"
 
   url "https://kimi-img.moonshot.cn/app/download/mac/kimi_#{version}.dmg",
       verified: "kimi-img.moonshot.cn/"
@@ -13,6 +13,7 @@ cask "kimi" do
     strategy :header_match
   end
 
+  depends_on arch: :arm64
   depends_on macos: ">= :monterey"
 
   app "Kimi.app"
