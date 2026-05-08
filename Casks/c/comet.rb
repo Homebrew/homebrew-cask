@@ -23,7 +23,9 @@ cask "comet" do
 
   zap trash: [
     "~/Library/Application Support/ai.perplexity.comet",
+    "~/Library/Application Support/Comet",
     "~/Library/Caches/ai.perplexity.comet",
+    "~/Library/Caches/Comet",
     "~/Library/Preferences/ai.perplexity.comet.plist",
     "~/Library/Saved Application State/ai.perplexity.comet.savedState",
     "~/Library/WebKit/ai.perplexity.comet",
