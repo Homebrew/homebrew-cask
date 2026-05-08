@@ -7,12 +7,11 @@ cask "mirai" do
 
   url "https://github.com/trymirai/uzu/releases/download/#{version}/mirai-#{arch}-apple-darwin.tar.gz"
   name "Mirai"
-  desc "High-performance inference engine for AI models"
-  homepage "https://github.com/trymirai/uzu"
+  desc "Inference engine for AI models"
+  homepage "https://trymirai.com/"
 
   livecheck do
-    url "https://github.com/trymirai/uzu"
-    regex(/^(\d+(?:\.\d+)+)$/i)
+    url :url
     strategy :github_latest
   end
 
