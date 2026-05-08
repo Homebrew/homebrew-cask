@@ -13,6 +13,7 @@ cask "kimi" do
     strategy :header_match
   end
 
+  depends_on arch: :arm64
   depends_on macos: ">= :monterey"
 
   app "Kimi.app"
