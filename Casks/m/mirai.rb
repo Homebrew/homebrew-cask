@@ -16,6 +16,8 @@ cask "mirai" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   binary "mirai-#{arch}-apple-darwin", target: "mirai"
 
   zap rmdir: "~/.config/com.trymirai.cli"
