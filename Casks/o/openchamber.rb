@@ -10,6 +10,7 @@ cask "openchamber" do
   desc "Rich interface for OpenCode"
   homepage "https://github.com/openchamber/openchamber"
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "OpenChamber.app"
