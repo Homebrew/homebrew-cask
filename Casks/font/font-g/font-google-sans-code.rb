@@ -9,8 +9,8 @@ cask "font-google-sans-code" do
   name "Google Sans Code"
   homepage "https://fonts.google.com/specimen/Google+Sans+Code"
 
-  font "GoogleSansCode-Italic[wght].ttf"
-  font "GoogleSansCode[wght].ttf"
+  font "GoogleSansCode-Italic[MONO,wght].ttf"
+  font "GoogleSansCode[MONO,wght].ttf"
 
   # No zap stanza required
 end
