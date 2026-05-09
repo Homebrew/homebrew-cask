@@ -2,6 +2,10 @@ cask "copilot-cli@prerelease" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
+  on_macos do
+    depends_on macos: ">= :ventura"
+  end
+
   version "1.0.44-3"
   sha256 arm:          "33df72591e6b8066d052d3213054e00c17d2bd65adea47eb455f397b4adca739",
          intel:        "ffb64118f6461606e4fdb02451e10f2904d2318bf73dc2fbd9ec5755c9e392c8",
@@ -30,7 +34,6 @@ cask "copilot-cli@prerelease" do
 
   auto_updates true
   conflicts_with cask: "copilot-cli"
-  depends_on macos: ">= :ventura"
 
   binary "copilot"
 
