@@ -24,14 +24,21 @@ cask "stremio" do
 
   auto_updates true
 
+  conflicts_with cask: "stremio@beta"
+
   app "Stremio.app"
 
   zap trash: [
+    "~/Library/Application Support/Smart Code ltd",
     "~/Library/Application Support/stremio-server",
     "~/Library/Caches/com.stremio.stremio-shell-macos",
-    "~/Library/Caches/com.westbridge.stremio5-mac",
-    "~/Library/Preferences/com.westbridge.stremio5-mac.plist",
+    "~/Library/Caches/com.westbridge.stremio*-mac",
+    "~/Library/Caches/Smart Code ltd",
+    "~/Library/Preferences/com.smartcodeltd.stremio.plist",
+    "~/Library/Preferences/com.stremio.Stremio.plist",
+    "~/Library/Preferences/com.westbridge.stremio*-mac.plist",
+    "~/Library/Saved Application State/com.smartcodeltd.stremio.savedState",
     "~/Library/WebKit/com.stremio.stremio-shell-macos",
-    "~/Library/WebKit/com.westbridge.stremio5-mac",
+    "~/Library/WebKit/com.westbridge.stremio*-mac",
   ]
 end
