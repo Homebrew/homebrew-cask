@@ -13,7 +13,6 @@ cask "chiri" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(/^app-v(\d+(?:\.\d+)+)$/i)
   end
 
   app "Chiri.app"
