@@ -23,7 +23,6 @@ cask "stremio" do
   end
 
   auto_updates true
-
   conflicts_with cask: "stremio@beta"
 
   app "Stremio.app"
