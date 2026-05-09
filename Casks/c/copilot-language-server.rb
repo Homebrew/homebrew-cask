@@ -2,6 +2,10 @@ cask "copilot-language-server" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
+  on_macos do
+    depends_on macos: ">= :big_sur"
+  end
+
   version "1.485.0"
   sha256 arm:          "2ccdbab51e3c9f42c608dc2026e50337fbf5938f296a341cd20b2387ed166134",
          intel:        "abb8f137bee53b3ad181afd1ae6625690f8a562b8bf38654de3806aaa2d55bb1",
@@ -12,8 +16,6 @@ cask "copilot-language-server" do
   name "GitHub Copilot Language Server"
   desc "Language Server Protocol server for GitHub Copilot"
   homepage "https://github.com/github/copilot-language-server-release"
-
-  depends_on macos: ">= :big_sur"
 
   binary "copilot-language-server"
 
