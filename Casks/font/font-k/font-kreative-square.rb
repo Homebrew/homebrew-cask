@@ -1,5 +1,5 @@
 cask "font-kreative-square" do
-  version "2026-04-12"
+  version "2026-05-08"
   sha256 "e6f393e2ec82073fb297da9b1c601ef6225729fbc109a0121f0e64fb3d773e05"
 
   url "https://github.com/kreativekorp/open-relay/releases/download/#{version}/KreativeSquare.zip",
