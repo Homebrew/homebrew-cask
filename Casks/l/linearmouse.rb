@@ -1,6 +1,6 @@
 cask "linearmouse" do
-  version "0.11.1"
-  sha256 "c88da3781d20b2ec40e563da5739bd6c44b919a1865ec5a66730df29a90402c5"
+  version "0.11.2"
+  sha256 "f7fa320b8f74e3cd293e29ae469e6899419d1edb9e7e40141fbdc7e3ecfa44a7"
 
   url "https://dl.linearmouse.org/v#{version}/LinearMouse.dmg"
   name "LinearMouse"
