@@ -18,6 +18,7 @@ cask "nteract" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
   depends_on :macos
   depends_on arch: :arm64
 
