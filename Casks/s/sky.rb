@@ -1,6 +1,6 @@
 cask "sky" do
-  version "0.5.2"
-  sha256 "ae823d8926471c64f35735f6b36a07e9d342ce4057d27dc4242e19a1f454b209"
+  version "0.5.3"
+  sha256 "1cbf4cd430ef7ff9a6aa1d42c4bf491b02b6c84952644eada20c7ac2ddf971d5"
 
   url "https://github.com/jcsalterego/Sky.app/releases/download/#{version}/Sky.#{version}.dmg"
   name "Sky"
