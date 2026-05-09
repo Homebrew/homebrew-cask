@@ -7,7 +7,7 @@ cask "chiri" do
 
   url "https://github.com/chiriapp/chiri/releases/download/app-v#{version}/Chiri_#{version}_#{arch}.dmg"
   name "Chiri"
-  desc "Cross-platform CalDAV-compatible task management app"
+  desc "CalDAV-compatible task management app"
   homepage "https://github.com/chiriapp/chiri"
 
   livecheck do
