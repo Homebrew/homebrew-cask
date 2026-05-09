@@ -29,8 +29,4 @@ cask "proton-drive" do
     "~/Library/Group Containers/*ch.protonmail.protondrive",
     "~/Library/Preferences/ch.protonmail.drive*",
   ]
-
-  caveats "After logging out or uninstalling it, the client creates a folder with all files that failed \
-  to get uploaded or ones that were made available locally at the location: \
-  ~/Library/CloudStorage/ProtonDrive-{UserEmail} ({TimeStamp})."
 end
