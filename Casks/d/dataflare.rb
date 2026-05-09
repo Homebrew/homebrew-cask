@@ -1,9 +1,9 @@
 cask "dataflare" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "3.0.0"
-  sha256 arm:   "85bf4ab5c29b29fe6cb65414f036a1c8cdd40afbb72613bdc77daa3aff5c6a59",
-         intel: "8ce70d0ea7c685e908fc8d1687164676572358ca21d109499c23f5bdbb413c67"
+  version "3.0.1"
+  sha256 arm:   "00c04c9138e2334ff5763d5e0a9d0b7427ffb462b76f0a523a2bc921c3bc8a09",
+         intel: "8abf22597b8e2ce994819d09d2f5aa3f27e2b80f068d4f3beb2ea8fd784e51cf"
 
   url "https://assets.dataflare.app/release/darwin/#{arch}/Dataflare-#{version}.dmg"
   name "Dataflare"
