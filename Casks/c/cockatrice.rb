@@ -15,10 +15,10 @@ cask "cockatrice" do
     end
   end
   on_ventura :or_newer do
-    version "2.10.3,2026-02-22,Omenpath,2.10.3"
+    version "3.0.0,2026-05-08,Graduation-Day,3.0.0"
 
     on_ventura do
-      sha256 "b635b04316a565a0c6880b0e2490d0dd25f0acebf38cd581b3e1e552e0dca428"
+      sha256 "99fa0a861128289fc000b4c33a28c5b8a3d82967a88bc0b3c975a7699551a5f3"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS13_Intel.dmg",
           verified: "github.com/Cockatrice/Cockatrice/"
@@ -28,21 +28,20 @@ cask "cockatrice" do
       end
     end
     on_sonoma do
-      sha256 "96a4f26f0d0014c449ce93cd708cc926dc8133452341b6d65c80a8b692cc6de1"
+      sha256 "3d36072fa24ce50ccfb144ce6d9263084381f6d3fb08a79e8573baac20c0e192"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS14.dmg",
           verified: "github.com/Cockatrice/Cockatrice/"
     end
     on_sequoia :or_newer do
-      sha256 "5ebebf79bf50315f5f7e0dfc015a0775f9fd269fe4b26ffb4ab4f0ec7ebd1cfd"
+      sha256 "9956fe6f58836b6d0b90ee4c52274fd5d929feb473c3246ef9fda9b996cfa627"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS15.dmg",
           verified: "github.com/Cockatrice/Cockatrice/"
     end
-
     livecheck do
       url :url
-      regex(%r{/(\d+(?:-\d+)+)-Release-([^/]+)/Cockatrice-([^-]+)-(\d+(?:\.\d+)+(?:-beta)?)-macOS[.\w]*\.dmg$}i)
+      regex(%r{/(\d+(?:-\d+)+)-Release-([^/]+)/Cockatrice-(.+?)-(\d+(?:\.\d+)+(?:-beta)?)-macOS[.\w]*\.dmg$}i)
       strategy :github_latest do |json, regex|
         json["assets"]&.map do |asset|
           match = asset["browser_download_url"]&.match(regex)
