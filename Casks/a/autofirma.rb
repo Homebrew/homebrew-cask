@@ -2,11 +2,11 @@ cask "autofirma" do
   arch arm: "M1", intel: "x64"
   pkg_arch = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  version "1.9"
-  sha256 arm:   "8684c89024711d3a29745738f2e67e85f3d7d22fd3d80ddfb1acf4137f97d455",
-         intel: "06bd9980f86c0e45a54474c827e87747d4a84f9b4df608460b10bfa0eee524ff"
+  version "1.9.1"
+  sha256 arm:   "c189636cd52f84c4206ea7f265d2a859cc2f2c54513d0f1f81634846ac7a7b60",
+         intel: "38f1e0df1f41b034cae30df9b19b2d93282f138d80b768ba21f7d23a0fcd854b"
 
-  url "https://firmaelectronica.gob.es/content/dam/firmaelectronica/descargas-software/autofirma#{version.no_dots}/Autofirma_Mac_#{arch}.zip"
+  url "https://firmaelectronica.gob.es/content/dam/firmaelectronica/descargas-software/Autofirma_#{version.dots_to_underscores}_Mac_#{arch}.zip"
   name "AutoFirma"
   desc "Digital signature editor and validator"
   homepage "https://firmaelectronica.gob.es/ciudadanos/descargas"
@@ -22,12 +22,10 @@ cask "autofirma" do
     end
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   depends_on :macos
 
   # See https://github.com/Homebrew/homebrew-cask/pull/116137#issuecomment-998220031
-  installer manual: "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
+  installer manual: "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}_signed.pkg"
 
   # remove 'Autofirma ROOT' and '127.0.0.1' certificates from keychain (these were installed by pkg)
   uninstall_postflight do
