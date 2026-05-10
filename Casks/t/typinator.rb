@@ -1,12 +1,11 @@
 cask "typinator" do
   version "10.0"
-  sha256 "dc01024d8b36bbb5770b63336eaf1873ba0620265554ba6a973f96650065e6d8"
+  sha256 "e8c42d9eaf3f737f412b01d01f9237cd583598091ff4c1b73577b0f38c7dfaa5"
 
-  url "https://www.ergonis.com/downloads/products/typinator/Typinator#{version.no_dots}-Install.dmg",
-      user_agent: :fake
+  url "https://storage.ergonis.com/apps/production/typinator/archive/Typinator_#{version.no_dots}.dmg"
   name "Typinator"
   desc "Tool to automate the insertion of frequently used text and graphics"
-  homepage "https://www.ergonis.com/products/typinator/"
+  homepage "https://ergonis.com/en/typinator/"
 
   livecheck do
     url "https://update.ergonis.com/vck/typinator.xml"
