@@ -179,6 +179,7 @@ cask "blackmagic-davinci-resolve" do
   pkg "Install Resolve #{version}.pkg"
 
   uninstall pkgutil: [
+              "com.Apple.pkg.ASAF.SDK",
               "com.blackmagic-design.BlackmagicRaw_resolve",
               "com.blackmagic-design.DaVinciKeyboards",
               "com.blackmagic-design.DaVinciPanels",
