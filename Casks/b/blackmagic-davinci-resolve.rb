@@ -203,6 +203,8 @@ cask "blackmagic-davinci-resolve" do
   zap trash: [
     "~/Library/Application Support/Blackmagic Design/DaVinci Resolve",
     "~/Library/Caches/com.blackmagic-design.DaVinciResolve",
+    "~/Library/Caches/DaVinci Resolve Welcome",
+    "~/Library/Preferences/Blackmagic Design/DaVinci Resolve",
     "~/Library/Preferences/com.blackmagic-design.DaVinciResolve.plist",
     "~/Library/Saved Application State/com.blackmagic-design.DaVinciResolve.savedState",
   ]
