@@ -5,7 +5,7 @@ cask "typinator" do
   url "https://storage.ergonis.com/apps/production/typinator/archive/Typinator_#{version.no_dots}.dmg"
   name "Typinator"
   desc "Tool to automate the insertion of frequently used text and graphics"
-  homepage "https://www.ergonis.com/products/typinator/"
+  homepage "https://ergonis.com/en/typinator/"
 
   livecheck do
     url "https://update.ergonis.com/vck/typinator.xml"
