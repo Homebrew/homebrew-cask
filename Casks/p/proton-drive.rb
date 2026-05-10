@@ -24,7 +24,9 @@ cask "proton-drive" do
 
   zap trash: [
     "~/Library/Application Scripts/ch.protonmail.drive*",
+    "~/Library/Application Support/FileProvider/ch.protonmail.drive.fileprovider",
     "~/Library/Containers/ch.protonmail.drive*",
-    "~/Library/Group Containers/group.ch.protonmail.protondrive",
+    "~/Library/Group Containers/*ch.protonmail.protondrive",
+    "~/Library/Preferences/ch.protonmail.drive*",
   ]
 end
