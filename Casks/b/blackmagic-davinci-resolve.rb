@@ -169,6 +169,10 @@ cask "blackmagic-davinci-resolve" do
   desc "Professional video editing, color correction, and visual effects"
   homepage "https://www.blackmagicdesign.com/products/davinciresolve"
 
+  livecheck do
+    skip "Download URL requires a signed token; livecheck cannot determine version"
+  end
+
   auto_updates true
   depends_on macos: ">= :ventura"
 
