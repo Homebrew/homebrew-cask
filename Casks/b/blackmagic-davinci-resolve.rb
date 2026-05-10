@@ -29,15 +29,16 @@ class BlackmagicDownloadStrategy < CurlDownloadStrategy
     else
       "DaVinci_Resolve_#{Time.now.to_i}.zip"
     end
-    cache_dir = File.expand_path("~/Library/Caches/Homebrew/Cask/downloads")
-    FileUtils.mkdir_p(cache_dir)
 
-    # determine Homebrew's expected cached location (fallback to our derived filename)
+    # determine Homebrew's expected cached location
     begin
       expected_cached = cached_location
     rescue
-      expected_cached = Pathname.new(cache_dir) / filename
+      expected_cached = Pathname.new(HOMEBREW_CACHE) / filename
     end
+
+    cache_dir = expected_cached.dirname
+    FileUtils.mkdir_p(cache_dir)
 
     if expected_cached.exist?
       ohai "Using cached DaVinci Resolve: #{expected_cached.basename}"
