@@ -1,9 +1,9 @@
 cask "winbox" do
-  os linux: "_Linux"
+  os macos: ".dmg", linux: "_Linux.zip"
 
   version "4.1"
 
-  url "https://download.mikrotik.com/routeros/winbox/#{version}/WinBox#{os}.dmg"
+  url "https://download.mikrotik.com/routeros/winbox/#{version}/WinBox#{os}"
   on_macos do
     sha256 "45715942a89261d4b14cf5edb13c73d65458c853bdef6d1dfc9da500259cacb2"
 
