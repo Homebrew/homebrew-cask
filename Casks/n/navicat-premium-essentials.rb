@@ -2,7 +2,47 @@ cask "navicat-premium-essentials" do
   version "16.3.9"
   sha256 :no_check
 
-  url "https://dn.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_en.dmg"
+  language "zh-CN" do
+    "cs"
+  end
+  language "zh-SG" do
+    "cs"
+  end
+  language "zh-HK" do
+    "ct"
+  end
+  language "zh-MO" do
+    "ct"
+  end
+  language "zh-TW" do
+    "ct"
+  end
+  language "ja" do
+    "jp"
+  end
+  language "fr" do
+    "fr"
+  end
+  language "de" do
+    "de"
+  end
+  language "es" do
+    "es"
+  end
+  language "pl" do
+    "pl"
+  end
+  language "ko" do
+    "kr"
+  end
+  language "ru" do
+    "ru"
+  end
+  language "en", default: true do
+    "en"
+  end
+
+  url "https://dn.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_#{language}.dmg"
   name "Navicat Premium Essentials"
   desc "Database administration and development tool"
   homepage "https://www.navicat.com/products/navicat-premium"
