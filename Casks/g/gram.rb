@@ -1,7 +1,7 @@
 cask "gram" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.2.1"
+  version "2.0.0"
   sha256 arm:   "05737e4df10d162501407d2870aa605e6ded878e7a695c1c3af51a643dbcd5de",
          intel: "6c8dfabb3afeceef28af0b3a15798b972e9b83add959236ec2d31e24cae40fc4"
 
