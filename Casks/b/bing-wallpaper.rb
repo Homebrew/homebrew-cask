@@ -1,8 +1,8 @@
 cask "bing-wallpaper" do
-  version "1.1.8"
-  sha256 "564b0793186dfb639d5207849a65ab20a6ea0b93a16d3de3939a24bb9b56984c"
+  version "1.1.9"
+  sha256 "64f63c9f2f9f8c42a441ed3dc630e6d2cdcc0a7287b6ec872ebcfe41b474905e"
 
-  url "https://download.microsoft.com/download/3a8e7366-aac0-4636-bc1d-a3c6c217accf/Installer/#{version}/MSN/Var1/MW021/Bing%20Wallpaper.pkg"
+  url "https://download.microsoft.com/download/3c2365ad-ed5f-4ebc-bacf-6dd9c66a2d15/Installer/#{version}/var1/MW011/2/BingWallpaper.pkg"
   name "Bing Wallpaper"
   desc "Use the Bing daily image as your wallpaper"
   homepage "https://bingwallpaper.microsoft.com/"
@@ -15,7 +15,7 @@ cask "bing-wallpaper" do
 
   depends_on macos: ">= :big_sur"
 
-  pkg "Bing Wallpaper.pkg"
+  pkg "BingWallpaper.pkg"
 
   uninstall launchctl: [
               "com.microsoft.msbwapp",
@@ -27,7 +27,8 @@ cask "bing-wallpaper" do
               "com.microsoft.msbwapp",
               "com.microsoft.msbwdefaults",
             ],
-            pkgutil:   "com.microsoft.msbwpackage"
+            pkgutil:   "com.microsoft.msbwpackage",
+            delete:    "/Applications/Microsoft Bing for Safari.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.msbwdefaults.sfl*",
