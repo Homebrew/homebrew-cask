@@ -10,9 +10,7 @@ cask "miaoyan" do
 
   livecheck do
     url "https://miaoyan.app/appcast.xml"
-    strategy :sparkle do |items|
-      items.map(&:nice_version)
-    end
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
