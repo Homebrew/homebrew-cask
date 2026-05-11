@@ -1,6 +1,6 @@
 cask "vibe-island" do
-  version "1.0.32"
-  sha256 "232a74e17c4de3d2d614bbb794fcea8723605460ee81ed779bf548d09e3fe228"
+  version "1.0.33"
+  sha256 "edbf63ddb6d44dfc9592c02b4c122b2d44766e25e80c8bfe270d8d64b46723ca"
 
   url "https://dl.vibeisland.app/VibeIsland-#{version}.dmg"
   name "Vibe Island"
