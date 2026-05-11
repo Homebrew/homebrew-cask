@@ -1,6 +1,6 @@
 cask "thelowtechguys-cling" do
-  version "2.3.1"
-  sha256 "2b3804bc7abcee7c7b04d39850856bb99197df585e249ae858b0bc1f002acfc3"
+  version "2.3.2"
+  sha256 "7ec802dc8bbc4a5ef020e25151b819f466653a04fa0b2c55233c907c66b6a7db"
 
   url "https://files.lowtechguys.com/releases/Cling-#{version}.dmg"
   name "The low-tech guys Cling"
