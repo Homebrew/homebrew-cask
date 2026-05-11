@@ -1,19 +1,23 @@
 cask "petdex" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.9"
-  sha256 :no_check
+  version "0.1.10"
+  sha256 arm:   "02885442276100ecb52bb3151abe9df2b6a62e9857d70d648e705173d2853eb9",
+         intel: "7f53237019edc213a431d28872cc819bb1758ba4301de1165a8eeb3ed56c32ac"
 
-  url "https://petdex.crafter.run/api/desktop/latest-release?asset=darwin-#{arch}"
+  url "https://github.com/crafter-station/petdex/releases/download/desktop-v#{version}/Petdex-#{arch}.dmg",
+      verified: "github.com/crafter-station/petdex/"
   name "Petdex"
   desc "Desktop companion for Codex pets"
   homepage "https://petdex.crafter.run/"
 
   livecheck do
-    url "https://petdex.crafter.run/api/desktop/latest-release?asset=darwin-arm64"
-    regex(%r{/desktop-v?(\d+(?:\.\d+)+)/Petdex-arm64\.dmg}i)
-    strategy :header_match do |all_headers, regex|
-      all_headers.filter_map { |headers| headers["location"]&.[](regex, 1) }.first
+    url :url
+    regex(%r{/desktop-v?(\d+(?:\.\d+)+)/Petdex[._-]#{arch}\.dmg}i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.filter_map do |asset|
+        asset["browser_download_url"]&.[](regex, 1)
+      end
     end
   end
 
