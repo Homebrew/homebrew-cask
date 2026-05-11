@@ -1,9 +1,9 @@
 cask "notesnook" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.3.17"
-  sha256 arm:   "e04f94a993a6ecd8c7a6fc48567ae79793a0f7174cbaecb377082259e10d66b8",
-         intel: "7789669a4e20627a6297fa0f6a4ec4a21c894631b1f646268e8a67d54c4f47a5"
+  version "3.3.18"
+  sha256 arm:   "eff9f8a3d0b64b05f7927fa668a0d17a7592bd5f0a421a7556432419970870a2",
+         intel: "ed867e6d28406d637a423476629c913ad808ff8803bfa8e891574d01b905a819"
 
   url "https://github.com/streetwriters/notesnook/releases/download/v#{version}/notesnook_mac_#{arch}.dmg",
       verified: "github.com/streetwriters/notesnook/"
