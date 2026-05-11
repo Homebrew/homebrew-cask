@@ -2,14 +2,14 @@ cask "macmd-viewer" do
   version "1.2.1"
   sha256 "a189d96898f47d8fdf609269abf454d122a8699949cca7549af176d43cea10db"
 
-  url "https://github.com/macmdviewer/MacMDViewer/releases/download/v#{version}/MacMDViewer.dmg",
-      verified: "github.com/macmdviewer/MacMDViewer/"
+  url "https://macmdviewer.com/downloads/v#{version}/MacMDViewer.dmg",
+      verified: "macmdviewer.com/downloads/"
   name "MacMD Viewer"
-  desc "Native SwiftUI Markdown viewer for macOS with QuickLook and Mermaid support"
-  homepage "https://macmdviewer.com"
+  desc "Native SwiftUI Markdown viewer with QuickLook and Mermaid support"
+  homepage "https://macmdviewer.com/"
 
   livecheck do
-    url :url
+    url "https://github.com/macmdviewer/MacMDViewer/releases/latest"
     strategy :github_latest
   end
 
