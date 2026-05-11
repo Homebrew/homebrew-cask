@@ -1,8 +1,8 @@
 cask "wetype" do
-  version "2.0.1,581"
-  sha256 "b1ecc57e7d4595e1306a73095c5a9c808b8dbc67f95ddeabc68a2a5b4609d7f5"
+  version "2.1.0,601"
+  sha256 "bb75e2f50ec94e02c38c488e719d7ac7197a00b13bd697016647fc65b9f039de"
 
-  url "https://download.z.weixin.qq.com/app/mac/#{version.csv.first}/WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.zip"
+  url "https://download.weread.qq.com/app/wxkb/mac/#{version.csv.first}/WeType_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
   name "微信输入法"
   desc "Text input app from WeChat team for Chinese users"
