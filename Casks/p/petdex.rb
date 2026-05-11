@@ -1,7 +1,7 @@
 cask "petdex" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.6"
+  version "0.1.9"
   sha256 :no_check
 
   url "https://petdex.crafter.run/api/desktop/latest-release?asset=darwin-#{arch}"
@@ -18,7 +18,6 @@ cask "petdex" do
   end
 
   auto_updates true
-  depends_on formula: "node"
   depends_on macos: ">= :ventura"
 
   app "Petdex.app"
