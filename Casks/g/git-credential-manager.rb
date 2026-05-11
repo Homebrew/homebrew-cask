@@ -4,11 +4,11 @@ cask "git-credential-manager" do
 
   container_ext = on_system_conditional linux: "tar.gz", macos: "pkg"
 
-  version "2.7.3"
-  sha256 arm:          "9b4a4008b505a5878a4ee3e7e906b84cbc595e499d92d2c382e0a9f587a8861a",
-         intel:        "5638e6aef7dfc097ba5f9ceb6fcefaa05187859404de19a680e329bd97047f17",
-         arm64_linux:  "291763d626106891d794b17bd7c02fe77c3d9924193fdde9e284d1d1f3fe5c21",
-         x86_64_linux: "c7935c3e1b22681d56011b580086aeb6d60f3f0aaf6ef9c581480356988ff804"
+  version "2.8.0"
+  sha256 arm:          "687ab927a4e2aa2e3298a777c0185f6e1b85bef0e77e7010fb0f6929da2c8b4e",
+         intel:        "c304c5d704b35255c8b8a6e1d45cf3c58d1daaf08c73b3f8503eab53c45c6498",
+         arm64_linux:  "6e1782b351eec3399db43699ff4fe2a1bf576654310ee4580aa4867705c0bc08",
+         x86_64_linux: "6040c849b428a4e5b78594fd4fd2819fc3ea4ca472c13580b65a486bef9df21d"
 
   url "https://github.com/git-ecosystem/git-credential-manager/releases/download/v#{version.major_minor_patch}/gcm-#{os}-#{arch}-#{version.major_minor_patch}.#{container_ext}",
       verified: "github.com/git-ecosystem/git-credential-manager/"
