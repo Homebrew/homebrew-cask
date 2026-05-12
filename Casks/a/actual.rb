@@ -11,7 +11,7 @@ cask "actual" do
   desc "Privacy-focused app for managing your finances"
   homepage "https://actualbudget.org/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Actual.app"
 
