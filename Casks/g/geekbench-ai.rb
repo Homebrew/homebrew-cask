@@ -16,7 +16,7 @@ cask "geekbench-ai" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Geekbench AI.app"
 
