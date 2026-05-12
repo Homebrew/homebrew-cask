@@ -12,7 +12,7 @@ cask "keeper-password-manager" do
     regex(/Release\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Keeper Password Manager.app"
 
