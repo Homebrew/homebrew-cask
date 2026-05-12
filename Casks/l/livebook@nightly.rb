@@ -11,7 +11,7 @@ cask "livebook@nightly" do
   homepage "https://livebook.dev/"
 
   conflicts_with cask: "livebook"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Livebook.app"
 
