@@ -12,7 +12,7 @@ cask "rawtherapee" do
     regex(/href=.*?RawTherapee[._-]macOS.+(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   container nested: "RawTherapee_macOS_15.4_Universal_#{version}_folder/RawTherapee_macOS_15.4_Universal_#{version}.dmg"
 
   app "RawTherapee.app"
