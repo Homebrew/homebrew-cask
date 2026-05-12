@@ -18,7 +18,7 @@ cask "lasso-app" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Lasso.app"
 
