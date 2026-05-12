@@ -57,7 +57,7 @@ cask "navicat-premium-lite" do
     cask "navicat-premium"
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Navicat Premium Lite.app"
 
