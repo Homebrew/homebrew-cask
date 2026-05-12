@@ -8,7 +8,7 @@ cask "soulver-cli" do
   homepage "https://github.com/soulverteam/Soulver-CLI"
 
   conflicts_with cask: "soulver"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   binary "soulver"
 
