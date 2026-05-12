@@ -8,7 +8,7 @@ cask "ollamac" do
   homepage "https://github.com/kevinhermawan/Ollamac"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Ollamac.app"
 
