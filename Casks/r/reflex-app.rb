@@ -12,7 +12,7 @@ cask "reflex-app" do
     regex(/href=.*?reflex[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Reflex.app"
 
