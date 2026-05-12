@@ -14,7 +14,7 @@ cask "material-maker" do
     regex(/v?(\d+(?:\.\d+)+(?:p\d+)?)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Material Maker.app"
 
