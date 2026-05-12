@@ -14,7 +14,7 @@ cask "flowdown" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "FlowDown.app"
 
