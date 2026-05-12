@@ -13,7 +13,7 @@ cask "a-better-finder-rename" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "A Better Finder Rename #{version.major}.app"
 
