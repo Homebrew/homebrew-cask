@@ -8,7 +8,7 @@ cask "exelearning" do
   desc "Authoring tool to create educational resources"
   homepage "https://exelearning.net/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "eXeLearning.app"
 
