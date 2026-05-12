@@ -11,7 +11,7 @@ cask "simple-web-server" do
   desc "Create local web servers"
   homepage "https://simplewebserver.org/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Simple Web Server.app"
 
