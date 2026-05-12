@@ -14,7 +14,7 @@ cask "middledrag" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   pkg "MiddleDrag-#{version}.pkg"
 
