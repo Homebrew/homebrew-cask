@@ -12,7 +12,7 @@ cask "label-live" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Label LIVE.app"
 
