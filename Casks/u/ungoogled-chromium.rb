@@ -23,7 +23,7 @@ cask "ungoogled-chromium" do
   end
 
   conflicts_with cask: "chromium"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Chromium.app"
 
