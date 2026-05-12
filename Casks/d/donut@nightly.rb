@@ -11,7 +11,7 @@ cask "donut@nightly" do
   homepage "https://donutbrowser.com/"
 
   conflicts_with cask: "donut"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Donut.app"
 
