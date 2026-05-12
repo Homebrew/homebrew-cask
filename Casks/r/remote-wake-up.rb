@@ -12,7 +12,7 @@ cask "remote-wake-up" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Remote Wake Up.app"
 
