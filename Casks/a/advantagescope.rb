@@ -11,7 +11,7 @@ cask "advantagescope" do
   desc "FRC log analysis tool"
   homepage "https://docs.advantagescope.org/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "AdvantageScope.app"
 
