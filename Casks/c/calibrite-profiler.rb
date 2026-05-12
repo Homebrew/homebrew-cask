@@ -1,6 +1,6 @@
 cask "calibrite-profiler" do
-  version "3.0.4"
-  sha256 "4b919de389b7ea597095f665edfefb91103c7b624b7d2e41fb4808e431ac9f75"
+  version "3.1.0"
+  sha256 "a35392f3d43562ab03f2e0a20f8befe6d4329fd2c8fb4d27279efda92125db60"
 
   url "https://github.com/LUMESCA/calibrite-profiler-releases/releases/download/v#{version}/calibrite-PROFILER-#{version}.dmg",
       verified: "github.com/LUMESCA/calibrite-profiler-releases/"
@@ -18,7 +18,7 @@ cask "calibrite-profiler" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "calibrite PROFILER.app"
 
@@ -32,8 +32,4 @@ cask "calibrite-profiler" do
     "~/Library/Preferences/com.calibrite.profiler.plist",
     "~/Library/Saved Application State/com.calibrite.profiler.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
