@@ -18,7 +18,7 @@ cask "ferdium@nightly" do
 
   auto_updates true
   conflicts_with cask: "ferdium"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Ferdium.app"
 
