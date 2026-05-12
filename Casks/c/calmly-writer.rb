@@ -17,7 +17,7 @@ cask "calmly-writer" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Calmly Writer.app"
 
