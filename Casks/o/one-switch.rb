@@ -12,7 +12,7 @@ cask "one-switch" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "One Switch.app"
 
