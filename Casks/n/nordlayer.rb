@@ -13,7 +13,7 @@ cask "nordlayer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "NordLayer_v#{version}.pkg"
 
