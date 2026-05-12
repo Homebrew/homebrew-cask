@@ -20,7 +20,7 @@ cask "okta-verify" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   pkg "OktaVerify-#{version.csv.first}-#{version.csv.second}.pkg"
 
