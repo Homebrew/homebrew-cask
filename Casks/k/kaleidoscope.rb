@@ -17,7 +17,7 @@ cask "kaleidoscope" do
     kaleidoscope@2
     kaleidoscope@3
   ]
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Kaleidoscope.app"
 
