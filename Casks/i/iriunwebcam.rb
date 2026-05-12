@@ -12,7 +12,7 @@ cask "iriunwebcam" do
     regex(/href=.*?IriunWebcam[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "IriunWebcam-#{version}.pkg"
 
