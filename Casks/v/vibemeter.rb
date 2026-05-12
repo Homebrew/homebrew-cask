@@ -11,7 +11,7 @@ cask "vibemeter" do
   deprecate! date: "2025-11-20", because: :unmaintained
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "VibeMeter.app"
 
