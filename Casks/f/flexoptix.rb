@@ -18,7 +18,7 @@ cask "flexoptix" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "FLEXOPTIX App.app"
 
