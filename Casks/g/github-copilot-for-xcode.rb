@@ -16,7 +16,7 @@ cask "github-copilot-for-xcode" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "GitHub Copilot for Xcode.app"
 
