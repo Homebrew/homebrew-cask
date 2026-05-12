@@ -19,7 +19,7 @@ cask "electerm" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "electerm.app"
   binary "#{appdir}/electerm.app/Contents/MacOS/electerm"
