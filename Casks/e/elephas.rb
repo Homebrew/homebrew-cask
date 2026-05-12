@@ -20,7 +20,7 @@ cask "elephas" do
 
   auto_updates true
   conflicts_with cask: "elephas@beta"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Elephas.app"
 

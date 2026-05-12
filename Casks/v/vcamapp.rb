@@ -8,7 +8,7 @@ cask "vcamapp" do
   desc "Face-tracking virtual avatar app"
   homepage "https://vcamapp.com/en"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "VCam.app"
 

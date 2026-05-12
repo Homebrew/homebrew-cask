@@ -23,7 +23,7 @@ cask "mcloud" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   app "中国移动云盘.app"
 

@@ -13,7 +13,7 @@ cask "seadrive" do
     regex(%r{href=.*?/seadrive[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "seadrive-#{version}.pkg"
 

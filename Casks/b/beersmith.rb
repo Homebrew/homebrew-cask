@@ -16,7 +16,7 @@ cask "beersmith" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "BeerSmith#{version.major}.app"
 

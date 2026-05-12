@@ -16,7 +16,7 @@ cask "kdiff3" do
     regex(/href=["']?kdiff3[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "kdiff3.app"
   shimscript = "#{staged_path}/kdiff3.wrapper.sh"

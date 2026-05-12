@@ -15,7 +15,7 @@ cask "google-japanese-ime" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "GoogleJapaneseInput.pkg"
 

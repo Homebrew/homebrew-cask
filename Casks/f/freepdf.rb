@@ -7,7 +7,7 @@ cask "freepdf" do
   desc "Reader that supports translating PDF documents"
   homepage "https://github.com/zstar1003/FreePDF"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "FreePDF.app"
 

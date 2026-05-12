@@ -13,7 +13,7 @@ cask "raspberry-pi-imager" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Raspberry Pi Imager.app"
 

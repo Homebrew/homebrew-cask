@@ -6,10 +6,10 @@ cask "tableau" do
          intel: "c0237557ccd3c33a670aa3ac5d077ad01c31e97fe181e4f841eced4a04041d86"
 
   on_arm do
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauDesktop-#{version.dots_to_hyphens}#{arch}.dmg",
@@ -37,6 +37,8 @@ cask "tableau" do
       end
     end
   end
+
+  depends_on :macos
 
   pkg "Tableau Desktop.pkg"
 

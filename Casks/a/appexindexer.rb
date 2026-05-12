@@ -16,7 +16,7 @@ cask "appexindexer" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "appexindexer#{version.csv.first.no_dots}/AppexIndexer.app"
 

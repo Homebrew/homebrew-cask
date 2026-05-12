@@ -13,7 +13,7 @@ cask "qgroundcontrol" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "QGroundControl.app"
 

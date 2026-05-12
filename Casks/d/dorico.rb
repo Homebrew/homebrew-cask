@@ -21,7 +21,7 @@ cask "dorico" do
     "steinberg-library-manager",
     "steinberg-mediabay",
   ]
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Dorico #{version.major}.pkg"
 

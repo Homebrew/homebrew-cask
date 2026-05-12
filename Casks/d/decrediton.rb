@@ -10,7 +10,7 @@ cask "decrediton" do
   desc "GUI for the Decred wallet"
   homepage "https://github.com/decred/decrediton"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "decrediton.app"
 

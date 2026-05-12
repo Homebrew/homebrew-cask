@@ -30,7 +30,7 @@ cask "langflow" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Langflow .app"
 

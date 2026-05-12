@@ -15,6 +15,8 @@ cask "chiri" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Chiri.app"
 
   zap trash: [

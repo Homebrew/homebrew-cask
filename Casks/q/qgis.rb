@@ -18,7 +18,7 @@ cask "qgis" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "QGIS-final-#{version.dots_to_underscores}.app"
 

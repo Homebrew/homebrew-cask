@@ -17,7 +17,7 @@ cask "box-drive" do
 
   auto_updates true
   conflicts_with cask: "box-sync"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "BoxDrive-#{version}.pkg"
 

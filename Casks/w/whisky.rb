@@ -14,7 +14,7 @@ cask "whisky" do
   deprecate! date: "2025-04-09", because: :unmaintained
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "Whisky.app"

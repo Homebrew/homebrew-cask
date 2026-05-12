@@ -18,7 +18,7 @@ cask "onedrive" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "OneDrive.pkg"
 

@@ -7,7 +7,7 @@ cask "spaceradar" do
 
     url "https://github.com/zz85/space-radar/releases/download/v#{version}/stable-macos-#{arch}-SpaceRadar.dmg"
 
-    depends_on macos: ">= :sonoma"
+    depends_on macos: :sonoma
 
     app "Space Radar.app"
   end
@@ -17,7 +17,7 @@ cask "spaceradar" do
 
     url "https://github.com/zz85/space-radar/releases/download/v#{version}/SpaceRadar-#{version}-mac-#{arch}.zip"
 
-    depends_on macos: ">= :monterey"
+    depends_on macos: :monterey
 
     app "SpaceRadar.app"
   end

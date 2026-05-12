@@ -7,7 +7,7 @@ cask "reminders-menubar" do
   desc "Simple menu bar app to view and interact with reminders"
   homepage "https://github.com/DamascenoRafael/reminders-menubar"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Reminders MenuBar.app"
 

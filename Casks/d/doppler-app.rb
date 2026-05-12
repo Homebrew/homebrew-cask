@@ -10,7 +10,7 @@ cask "doppler-app" do
   # Download url is unreachable due to Cloudflare protections
   disable! date: "2026-01-25", because: :unreachable
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Doppler.app"
 

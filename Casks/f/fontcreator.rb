@@ -12,7 +12,7 @@ cask "fontcreator" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "FontCreator.app"
 

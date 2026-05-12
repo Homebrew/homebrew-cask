@@ -14,7 +14,7 @@ cask "plamo-translate" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
   depends_on arch: :arm64
 
   app "PLaMo翻訳.app"

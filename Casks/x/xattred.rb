@@ -23,7 +23,7 @@ cask "xattred" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "xattred#{version.csv.first.major}#{version.csv.first.minor}/xattred.app"
 

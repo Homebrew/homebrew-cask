@@ -24,7 +24,7 @@ cask "datadog-agent" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   installer manual: "datadog-agent-#{version}.#{arch}.pkg"
 

@@ -13,7 +13,7 @@ cask "appgridmac" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "AppGridMac.app"
 

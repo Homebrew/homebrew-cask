@@ -11,7 +11,7 @@ cask "zettlr" do
   desc "Open-source markdown editor"
   homepage "https://www.zettlr.com/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Zettlr.app"
 

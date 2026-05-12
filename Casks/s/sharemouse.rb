@@ -12,7 +12,7 @@ cask "sharemouse" do
     regex(/Mac\s*Version:.*?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "ShareMouse.app"
 

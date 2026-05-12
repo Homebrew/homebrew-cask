@@ -9,7 +9,7 @@ cask "pairpods" do
   homepage "https://pairpods.app/"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "PairPods.app"
 

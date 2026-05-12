@@ -11,7 +11,7 @@ cask "dcp-o-matic-encode-server" do
     cask "dcp-o-matic"
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "DCP-o-matic #{version.major} Encode Server.app"
 

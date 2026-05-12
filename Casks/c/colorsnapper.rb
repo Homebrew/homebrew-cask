@@ -18,7 +18,7 @@ cask "colorsnapper" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "ColorSnapper2.app"
 

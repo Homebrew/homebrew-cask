@@ -15,7 +15,7 @@ cask "clover-chord-systems" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "CloverChordSystems#{version.major}.pkg"
 

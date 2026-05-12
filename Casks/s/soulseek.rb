@@ -13,7 +13,7 @@ cask "soulseek" do
     regex(/href=.*?SoulseekQt[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "SoulseekQt.app"
 

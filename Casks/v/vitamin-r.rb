@@ -13,7 +13,7 @@ cask "vitamin-r" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Vitamin-R #{version.major}.app"
 

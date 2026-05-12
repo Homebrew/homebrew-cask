@@ -13,7 +13,7 @@ cask "sherlock-app" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Sherlock.app"
 

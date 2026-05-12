@@ -12,7 +12,7 @@ cask "ecodms-client" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   # The url is unversioned, but the download returns a pkg with a version number
   rename "ecoDMS*Clients*.pkg", "ecoDMS-Clients.pkg"

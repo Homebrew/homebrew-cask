@@ -14,7 +14,7 @@ cask "rsyncui" do
 
   no_autobump! because: :bumped_by_upstream
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "RsyncUI.app"
 

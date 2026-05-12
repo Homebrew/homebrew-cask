@@ -9,7 +9,7 @@ cask "huggingchat" do
 
   deprecate! date: "2026-05-02", because: :discontinued
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "HuggingChat.app"
 

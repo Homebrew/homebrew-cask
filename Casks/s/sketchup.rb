@@ -19,7 +19,7 @@ cask "sketchup" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   suite "SketchUp #{version.major}"
 

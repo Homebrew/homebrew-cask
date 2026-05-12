@@ -13,7 +13,7 @@ cask "rippling" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Rippling.app"
 

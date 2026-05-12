@@ -7,7 +7,7 @@ cask "multi" do
   desc "Create apps from groups of websites"
   homepage "https://github.com/hkgumbs/multi"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Multi.app"
 

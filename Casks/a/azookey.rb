@@ -7,7 +7,7 @@ cask "azookey" do
   desc "Japanese input method"
   homepage "https://github.com/azooKey/azooKey-Desktop"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "azooKey-release-signed.pkg"
 

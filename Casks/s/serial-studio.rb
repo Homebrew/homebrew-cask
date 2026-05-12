@@ -13,7 +13,7 @@ cask "serial-studio" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Serial Studio Pro.app"
 

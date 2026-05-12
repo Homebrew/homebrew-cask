@@ -12,7 +12,7 @@ cask "netxms-console" do
     regex(/href=.*?nxmc[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "NetXMS #{version.major_minor}.app"
 

@@ -13,7 +13,7 @@ cask "the-clock" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "The Clock.app"
 

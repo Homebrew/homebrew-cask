@@ -13,7 +13,7 @@ cask "psiphon-conduit" do
     regex(/^release-mac[._-]v?(\d+(?:\.\d+)+(?:[._-]RC(?:[._]?\d+)?)?)$/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Conduit.app"
 

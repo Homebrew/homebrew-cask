@@ -18,7 +18,7 @@ cask "donut" do
 
   auto_updates true
   conflicts_with cask: "donut@nightly"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Donut.app"
 

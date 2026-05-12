@@ -12,7 +12,7 @@ cask "duplicateaudiofinder" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "DuplicateAudioFinder.app"
 

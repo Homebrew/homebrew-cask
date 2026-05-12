@@ -16,7 +16,7 @@ cask "mixxx" do
   end
 
   conflicts_with cask: "mixxx@snapshot"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Mixxx.app"
 

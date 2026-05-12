@@ -7,7 +7,7 @@ cask "doll" do
   desc "Utility to show apps badges from the dock in the menu bar"
   homepage "https://github.com/xiaogdgenuine/Doll/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Doll.app"
 

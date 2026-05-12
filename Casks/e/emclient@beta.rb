@@ -15,7 +15,7 @@ cask "emclient@beta" do
 
   auto_updates true
   conflicts_with cask: "emclient"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "setup.pkg"
 

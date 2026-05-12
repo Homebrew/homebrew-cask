@@ -10,7 +10,7 @@ cask "kitlangton-hex" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Hex.app"
 

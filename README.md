@@ -20,7 +20,7 @@ Slower, now:
 
 ```console
 % brew install alfred
-==> Fetching downloads for: alfred 
+==> Fetching downloads for: alfred
 ✔︎ Cask alfred (5.7.2,2312)                                           Verified      5.6MB/  5.6MB
 ==> Installing Cask alfred
 ==> Moving App 'Alfred 5.app' to '/Applications/Alfred 5.app'

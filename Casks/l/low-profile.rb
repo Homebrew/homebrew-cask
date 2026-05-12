@@ -7,7 +7,7 @@ cask "low-profile" do
   desc "Utility to help inspect Apple Configuration Profile payloads"
   homepage "https://github.com/ninxsoft/LowProfile"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "Low.Profile.#{version}.pkg"
 

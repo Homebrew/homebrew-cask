@@ -25,7 +25,7 @@ cask "shotcut" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Shotcut.app"
 

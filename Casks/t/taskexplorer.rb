@@ -8,7 +8,7 @@ cask "taskexplorer" do
   desc "Tool to explore all the running tasks (processes)"
   homepage "https://objective-see.org/products/taskexplorer.html"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "TaskExplorer.app"
 

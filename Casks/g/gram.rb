@@ -11,7 +11,7 @@ cask "gram" do
   desc "Code editor focused on stability, without AI, subscriptions, or telemetry"
   homepage "https://gram.liten.app/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   app "Gram.app"
   binary "#{appdir}/Gram.app/Contents/MacOS/cli", target: "gram"

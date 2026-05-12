@@ -12,7 +12,7 @@ cask "quo" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Quo.app"
 

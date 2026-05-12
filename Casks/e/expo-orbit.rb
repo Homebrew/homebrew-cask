@@ -8,7 +8,7 @@ cask "expo-orbit" do
   homepage "https://github.com/expo/orbit/"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Expo Orbit.app"
 

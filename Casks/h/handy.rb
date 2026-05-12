@@ -12,7 +12,7 @@ cask "handy" do
   homepage "https://handy.computer/"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Handy.app"
 

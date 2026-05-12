@@ -11,7 +11,7 @@ cask "polypane" do
   desc "Browser for ambitious developers"
   homepage "https://polypane.app/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Polypane.app"
 

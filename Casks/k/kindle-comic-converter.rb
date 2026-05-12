@@ -6,10 +6,10 @@ cask "kindle-comic-converter" do
          intel: "e1270a1ce532845abfd113050829dfc039282b09d740955ff89d7a17f07225f1"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/ciromattia/kcc/releases/download/v#{version}/kcc_macos_#{arch}_#{version}.dmg"
@@ -24,6 +24,8 @@ cask "kindle-comic-converter" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Kindle Comic Converter.app"
 

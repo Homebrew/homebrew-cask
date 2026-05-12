@@ -6,10 +6,10 @@ cask "geoda" do
          intel: "f42c4dca84071cd1141398e60d5651dbfed12f0a78b1238de9adaeb95b16cdce"
 
   on_arm do
-    depends_on macos: ">= :sonoma"
+    depends_on macos: :sonoma
   end
   on_intel do
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
 
   url "https://github.com/GeoDaCenter/geoda/releases/download/v#{version.csv.first}/GeoDa-#{version.csv.second || version.csv.first}-#{arch}-MacOS.zip",
@@ -34,6 +34,8 @@ cask "geoda" do
       end
     end
   end
+
+  depends_on :macos
 
   app "GeoDa.app"
 

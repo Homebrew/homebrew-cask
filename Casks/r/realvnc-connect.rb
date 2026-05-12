@@ -14,7 +14,7 @@ cask "realvnc-connect" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   pkg "RealVNC-Connect-#{version}-MacOSX-universal.pkg"
 

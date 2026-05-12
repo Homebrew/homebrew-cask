@@ -12,7 +12,7 @@ cask "anydesk" do
     regex(/v?(\d+(?:\.\d+)+)\s+\(macOS\)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "AnyDesk.app"
 

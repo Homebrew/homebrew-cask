@@ -11,7 +11,7 @@ cask "parallels-virtualization-sdk" do
     cask "parallels"
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "Parallels Virtualization SDK.pkg"
 

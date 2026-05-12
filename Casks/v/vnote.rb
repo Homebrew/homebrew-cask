@@ -8,7 +8,7 @@ cask "vnote" do
   desc "Note-taking platform"
   homepage "https://vnotex.github.io/vnote/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "VNote.app"
 

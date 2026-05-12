@@ -18,7 +18,7 @@ cask "pdf-over" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "PDF-Over.app"
 

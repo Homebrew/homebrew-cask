@@ -12,7 +12,7 @@ cask "papercut-mobility-print-client" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "PaperCut Mobility Print Client.pkg"
 

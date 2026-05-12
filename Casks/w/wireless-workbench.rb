@@ -18,7 +18,7 @@ cask "wireless-workbench" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "Wireless-Workbench-macOS-#{version.csv.first}#{".#{version.csv.second}" if version.csv.second}.pkg"
 

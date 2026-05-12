@@ -22,7 +22,7 @@ cask "defold@beta" do
     "defold",
     "defold@alpha",
   ]
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Defold.app"
 

@@ -8,7 +8,7 @@ cask "zeitgeist" do
   desc "Keep an eye on your Vercel deployments"
   homepage "https://zeitgeist.daneden.me/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Zeitgeist.app"
 

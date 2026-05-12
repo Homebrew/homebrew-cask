@@ -20,7 +20,7 @@ cask "losslessswitcher" do
     end
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "LosslessSwitcher.app"
 

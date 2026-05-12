@@ -13,7 +13,7 @@ cask "blip" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Blip.app"
 

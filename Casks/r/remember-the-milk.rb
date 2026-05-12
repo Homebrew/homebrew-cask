@@ -21,7 +21,7 @@ cask "remember-the-milk" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Remember The Milk.app"
 

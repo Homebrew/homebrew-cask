@@ -12,7 +12,7 @@ cask "cavalry" do
     regex(/Latest\s+version:\s*(?:<[^>]+>)?\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Cavalry.app"
 

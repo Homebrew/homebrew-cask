@@ -8,7 +8,7 @@ cask "loop" do
   homepage "https://github.com/MrKai77/Loop"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Loop.app"
 

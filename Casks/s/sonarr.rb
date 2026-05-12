@@ -6,10 +6,10 @@ cask "sonarr" do
          intel: "24bde8272ded1bef0163ad42ca841f378a9d1a2c9d626cab747cf1249f364eeb"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/Sonarr/Sonarr/releases/download/v#{version}/Sonarr.main.#{version}.osx-#{arch}-app.zip",
@@ -27,6 +27,7 @@ cask "sonarr" do
 
   auto_updates true
   conflicts_with cask: "sonarr@beta"
+  depends_on :macos
 
   app "Sonarr.app"
 

@@ -21,7 +21,7 @@ cask "yacreader" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "YACReader.app"
   app "YACReaderLibrary.app"

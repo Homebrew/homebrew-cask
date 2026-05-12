@@ -21,7 +21,7 @@ cask "swiftdialog" do
     end
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   pkg "dialog-#{version.csv.first}-#{version.csv.second}.pkg"
 

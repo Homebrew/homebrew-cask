@@ -7,7 +7,7 @@ cask "privileges" do
   desc "Admin rights switcher"
   homepage "https://github.com/SAP/macOS-enterprise-privileges"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "Privileges_#{version}.pkg"
   binary "#{appdir}/Privileges.app/Contents/MacOS/PrivilegesCLI"

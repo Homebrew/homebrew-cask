@@ -17,7 +17,7 @@ cask "lazycat" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "懒猫微服.app"
 

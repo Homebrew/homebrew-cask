@@ -13,7 +13,7 @@ cask "mi" do
   end
 
   conflicts_with cask: "mi@beta"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "mi.app"
 

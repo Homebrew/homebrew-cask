@@ -11,7 +11,7 @@ cask "command-x" do
   deprecate! date: "2024-07-09", because: :moved_to_mas
   disable! date: "2025-07-09", because: :moved_to_mas
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Command X.app"
 

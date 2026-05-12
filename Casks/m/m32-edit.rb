@@ -27,7 +27,7 @@ cask "m32-edit" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "M32-Edit.app"
 

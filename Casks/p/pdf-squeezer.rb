@@ -12,7 +12,7 @@ cask "pdf-squeezer" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "PDF Squeezer.app"
 

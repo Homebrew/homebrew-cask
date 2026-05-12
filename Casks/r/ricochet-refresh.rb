@@ -6,10 +6,10 @@ cask "ricochet-refresh" do
          intel: "bd0a50f7863b900fc7f4f4fa81182bed2d4bb614a36170c5c1aa23d57fcd1e2e"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/blueprint-freespeech/ricochet-refresh/releases/download/v#{version}-release/ricochet-refresh-#{version}-macos-#{arch}.dmg",
@@ -25,6 +25,7 @@ cask "ricochet-refresh" do
   end
 
   # The container is incorrectly detected as a generic archive
+  depends_on :macos
   container type: :dmg
 
   app "Ricochet Refresh.app"

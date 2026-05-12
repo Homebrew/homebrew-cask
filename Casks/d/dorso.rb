@@ -8,7 +8,7 @@ cask "dorso" do
   homepage "https://github.com/tldev/dorso"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Dorso.app"
 

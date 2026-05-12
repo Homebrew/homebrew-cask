@@ -15,7 +15,7 @@ cask "gpxsee" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "GPXSee.app"
 

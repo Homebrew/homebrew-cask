@@ -7,7 +7,7 @@ cask "corelocationcli" do
   desc "Prints location information from CoreLocation"
   homepage "https://github.com/fulldecent/corelocationcli"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "CoreLocationCLI.app"
   binary "#{appdir}/CoreLocationCLI.app/Contents/MacOS/CoreLocationCLI"

@@ -8,7 +8,7 @@ cask "fredm-fuse" do
   desc "Port of the UNIX ZX Spectrum emulator Fuse"
   homepage "https://fuse-for-macosx.sourceforge.io/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Fuse for MacOS/Fuse.app"
 

@@ -28,7 +28,7 @@ cask "ossia-score" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "ossia score.app"
 

@@ -15,7 +15,7 @@ cask "gretl" do
     regex(%r{url=.*?/gretl[._-]v?(\d+(?:\.\d+)*[a-z]?)[._-]macos[._-]#{arch}\.pkg}i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "gretl-#{version}-macos-#{arch}.pkg"
 

@@ -18,7 +18,7 @@ cask "sharefile" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "Install ShareFile.pkg"
 

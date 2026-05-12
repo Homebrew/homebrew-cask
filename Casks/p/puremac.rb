@@ -7,7 +7,7 @@ cask "puremac" do
   desc "Open-source application manager and system cleaner"
   homepage "https://github.com/momenbasel/PureMac"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "PureMac.app"
 

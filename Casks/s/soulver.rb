@@ -14,7 +14,7 @@ cask "soulver" do
 
   auto_updates true
   conflicts_with cask: "soulver-cli"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Soulver #{version.major}.app"
   binary "#{appdir}/Soulver #{version.major}.app/Contents/MacOS/CLI/soulver"

@@ -14,7 +14,7 @@ cask "soundsource" do
 
   auto_updates true
   conflicts_with cask: "soundsource@test"
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "SoundSource.app"
 

@@ -14,7 +14,7 @@ cask "pdf-expert" do
 
   auto_updates true
   conflicts_with cask: "pdf-expert@beta"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "PDF Expert.app"
 

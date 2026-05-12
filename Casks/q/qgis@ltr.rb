@@ -18,7 +18,7 @@ cask "qgis@ltr" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   # The application path can change between versions,
   # renaming also allows installation alongside the main "qgis" cask.

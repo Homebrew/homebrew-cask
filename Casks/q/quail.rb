@@ -5,7 +5,7 @@ cask "quail" do
     version "3.0.0"
     sha256 "270fca5c4381775b6bfe75c7b9b0abb3492166745f0805d0dae3862776500ea2"
 
-    depends_on macos: ">= :monterey"
+    depends_on macos: :monterey
   end
   on_intel do
     version "2.4.0"
@@ -15,7 +15,7 @@ cask "quail" do
       skip "Legacy version"
     end
 
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/1000ch/quail/releases/download/v#{version}/Quail-#{version}#{arch}.dmg"
@@ -24,6 +24,8 @@ cask "quail" do
   homepage "https://github.com/1000ch/quail"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Quail.app"
 

@@ -15,7 +15,7 @@ cask "brewtarget" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "brewtarget_#{version}_MacOS.app"
 

@@ -10,7 +10,7 @@ cask "devtoys" do
   desc "Utilities designed to make common development tasks easier"
   homepage "https://github.com/DevToys-app/DevToys"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "DevToys.app"
 

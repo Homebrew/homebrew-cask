@@ -14,7 +14,7 @@ cask "topaz-gigapixel" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "TopazGigapixel-#{version}.pkg"
 

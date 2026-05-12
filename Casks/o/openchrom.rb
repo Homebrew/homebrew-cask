@@ -23,7 +23,7 @@ cask "openchrom" do
 
   no_autobump! because: :bumped_by_upstream
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "OpenChrom.app"
 

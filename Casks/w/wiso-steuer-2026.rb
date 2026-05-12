@@ -20,7 +20,7 @@ cask "wiso-steuer-2026" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "SteuerMac 2026.app", target: "WISO Steuer 2026.app"
 

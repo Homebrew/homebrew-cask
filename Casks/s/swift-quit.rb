@@ -7,7 +7,7 @@ cask "swift-quit" do
   desc "Enable Windows-like program quitting when all windows are closed"
   homepage "https://github.com/onebadidea/swiftquit"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Swift Quit.app"
 

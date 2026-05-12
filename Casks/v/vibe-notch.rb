@@ -14,7 +14,7 @@ cask "vibe-notch" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Vibe Notch.app"
 

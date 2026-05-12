@@ -9,7 +9,7 @@ cask "context" do
   homepage "https://www.contextmcp.app/"
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Context.app"
 

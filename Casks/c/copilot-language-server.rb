@@ -3,7 +3,7 @@ cask "copilot-language-server" do
   os macos: "darwin", linux: "linux"
 
   on_macos do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
 
   version "1.485.0"

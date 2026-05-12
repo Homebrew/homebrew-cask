@@ -17,7 +17,7 @@ cask "beyond-compare" do
     "beyond-compare@4",
     "beyond-compare@beta",
   ]
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"

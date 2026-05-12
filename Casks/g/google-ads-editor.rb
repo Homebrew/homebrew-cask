@@ -13,7 +13,7 @@ cask "google-ads-editor" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Google Ads Editor.app"
 

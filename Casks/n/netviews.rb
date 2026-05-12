@@ -10,7 +10,7 @@ cask "netviews" do
   disable! date: "2026-04-06", because: :unreachable
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "NetViews.app"
 

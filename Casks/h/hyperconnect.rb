@@ -17,7 +17,7 @@ cask "hyperconnect" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "小米互联服务.app"
 

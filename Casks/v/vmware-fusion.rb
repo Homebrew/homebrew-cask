@@ -11,7 +11,7 @@ cask "vmware-fusion" do
   disable! date: "2025-06-23", because: "requires authentication to download"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
   container nested: "com.vmware.fusion.zip"
 
   app "#{staged_path}/payload/VMware Fusion.app"

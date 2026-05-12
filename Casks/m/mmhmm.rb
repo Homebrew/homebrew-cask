@@ -10,7 +10,7 @@ cask "mmhmm" do
   deprecate! date: "2025-05-25", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "mmhmm.pkg"
 

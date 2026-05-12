@@ -15,7 +15,7 @@ cask "pika@beta" do
 
   auto_updates true
   conflicts_with cask: "pika"
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Pika.app"
 

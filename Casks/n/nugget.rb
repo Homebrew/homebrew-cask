@@ -10,7 +10,7 @@ cask "nugget" do
   desc "Customise your iOS device with animated wallpapers, disable daemons and more"
   homepage "https://github.com/leminlimez/Nugget"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Nugget.app"
 

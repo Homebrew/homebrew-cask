@@ -13,7 +13,7 @@ cask "bandage" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Bandage.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

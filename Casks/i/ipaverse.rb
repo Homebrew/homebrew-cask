@@ -7,7 +7,7 @@ cask "ipaverse" do
   desc "Tool for downloading and managing iOS apps from the App Store"
   homepage "https://github.com/bahattinkoc/ipaverse"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "ipaverse.app"
 

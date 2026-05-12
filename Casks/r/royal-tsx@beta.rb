@@ -14,7 +14,7 @@ cask "royal-tsx@beta" do
 
   auto_updates true
   conflicts_with cask: "royal-tsx"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Royal TSX.app"
 

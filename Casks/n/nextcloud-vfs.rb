@@ -12,7 +12,7 @@ cask "nextcloud-vfs" do
 
   auto_updates true
   conflicts_with cask: "nextcloud"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Nextcloud-#{version}-macOS-vfs.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"
