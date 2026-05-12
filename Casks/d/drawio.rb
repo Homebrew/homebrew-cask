@@ -17,7 +17,7 @@ cask "drawio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "draw.io.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
