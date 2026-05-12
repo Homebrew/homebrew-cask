@@ -3,6 +3,11 @@ cask "gram" do
 
   version "2.0.0"
 
+  livecheck do
+    url "https://codeberg.org/GramEditor/gram.git"
+    strategy :git
+  end
+
   on_arm do
     sha256 "249d0ceef917889b66dca8976d1b1efeb0548f52793ece0c2b31a4bdb0982e2e"
 
