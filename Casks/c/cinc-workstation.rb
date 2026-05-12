@@ -44,7 +44,7 @@ cask "cinc-workstation" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "cinc-workstation-#{version}-1.#{arch}.pkg"
 
