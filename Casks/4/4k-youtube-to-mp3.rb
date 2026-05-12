@@ -16,7 +16,7 @@ cask "4k-youtube-to-mp3" do
     regex(%r{href=.*?/4kyoutubetomp3[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "4K YouTube to MP3.app"
 
