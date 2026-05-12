@@ -6,10 +6,10 @@ cask "lidarr" do
          intel: "8450993360e485fc083204a84726fb002b6dfac54c29d583f8d4a22c3a59cf30"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/lidarr/Lidarr/releases/download/v#{version}/Lidarr.master.#{version}.osx-app-core-#{arch}.zip",
@@ -28,6 +28,7 @@ cask "lidarr" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on :macos
 
   app "Lidarr.app"
 
