@@ -12,7 +12,7 @@ cask "virtualhere" do
     regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "VirtualHereUniversal.app"
 
