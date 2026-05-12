@@ -1,9 +1,9 @@
 cask "lw-scanner" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.27.9"
-  sha256 arm:   "4453d08e52cccb0aedafd9f439182f1bebde190e7cbe652671abdfd77258a392",
-         intel: "7f3f1d16411f092810af898f14e722fe170ad910b72caa266b7bbcbe2d15d400"
+  version "0.28.0"
+  sha256 arm:   "600744fa43ca2c012055910d802123f2494d8c0b92191d471ec482e2cc655878",
+         intel: "ec3376c498fb8bf4b4199bc6aa98ec75ffc23d2ce67f00bb3e709a6f1f30ba04"
 
   url "https://github.com/lacework/lacework-vulnerability-scanner/releases/download/v#{version}/lw-scanner-darwin-#{arch}.zip",
       verified: "github.com/lacework/lacework-vulnerability-scanner/"
