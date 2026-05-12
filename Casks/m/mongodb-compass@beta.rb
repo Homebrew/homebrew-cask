@@ -23,7 +23,7 @@ cask "mongodb-compass@beta" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "MongoDB Compass Beta.app"
 
