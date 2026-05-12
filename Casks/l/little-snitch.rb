@@ -26,7 +26,7 @@ cask "little-snitch" do
     "little-snitch@5",
     "little-snitch@nightly",
   ]
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Little Snitch.app"
 
