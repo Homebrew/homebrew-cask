@@ -15,7 +15,7 @@ cask "domzilla-caffeine" do
 
   auto_updates true
   conflicts_with cask: "caffeine"
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Caffeine.app"
 
