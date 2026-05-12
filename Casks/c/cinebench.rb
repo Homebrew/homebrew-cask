@@ -13,7 +13,7 @@ cask "cinebench" do
     regex(/href=.*Cinebench[._-]?v?(\d+(?:\.\d+)*)[._-]macOS\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Cinebench.app"
 
