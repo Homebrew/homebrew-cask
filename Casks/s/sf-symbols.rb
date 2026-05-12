@@ -47,7 +47,7 @@ cask "sf-symbols" do
   homepage "https://developer.apple.com/sf-symbols/"
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "SF Symbols.pkg"
 
