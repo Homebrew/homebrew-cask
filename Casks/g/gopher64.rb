@@ -12,7 +12,7 @@ cask "gopher64" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
   depends_on arch: :arm64
 
   app "Gopher64.app"
