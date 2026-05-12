@@ -15,7 +15,7 @@ cask "8x8-work" do
     regex(/href=.*?work[._-]dmg[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "8x8 Work.app"
 
