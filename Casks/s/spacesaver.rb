@@ -10,7 +10,7 @@ cask "spacesaver" do
 
   disable! date: "2026-04-05", because: :no_longer_meets_criteria
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "SpaceSaver.app"
 
