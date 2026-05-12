@@ -13,7 +13,7 @@ cask "elephas@beta" do
   end
 
   conflicts_with cask: "elephas"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Elephas.app"
 
