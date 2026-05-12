@@ -6,10 +6,10 @@ cask "freecad" do
          intel: "bcbe4c74abb454a05728d84185a64d9d191a8f2c53d3a58dc2e33be597e3cf36"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/FreeCAD/FreeCAD/releases/download/#{version}/FreeCAD_#{version}-macOS-#{arch}-py311.dmg",
@@ -25,6 +25,8 @@ cask "freecad" do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "FreeCAD.app"
 
