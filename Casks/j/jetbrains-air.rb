@@ -20,6 +20,7 @@ cask "jetbrains-air" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Air.app"
 
