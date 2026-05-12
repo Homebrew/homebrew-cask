@@ -15,7 +15,7 @@ cask "chime@alpha" do
 
   auto_updates true
   conflicts_with cask: "chime"
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Chime.app"
 
