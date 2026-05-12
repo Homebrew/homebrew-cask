@@ -24,7 +24,7 @@ cask "ace-studio" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "ACE Studio.app"
 
