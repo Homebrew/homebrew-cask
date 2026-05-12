@@ -22,7 +22,7 @@ cask "insomnia@alpha" do
 
   auto_updates true
   conflicts_with cask: "insomnia"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Insomnia.app"
 
