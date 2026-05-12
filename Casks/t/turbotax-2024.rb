@@ -33,7 +33,7 @@ cask "turbotax-2024" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "TurboTax 2024.app"
 
