@@ -26,9 +26,7 @@ cask "wetype" do
   auto_updates true
   depends_on :macos
 
-  installer manual: "WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.app"
-
-  uninstall delete: "/Library/Input Methods/WeType.app"
+  app "WeType.app"
 
   zap trash: [
     "~/Library/Application Support/WeType",
