@@ -15,7 +15,7 @@ cask "opensuperwhisper" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "OpenSuperWhisper.app"
