@@ -8,7 +8,7 @@ cask "macusb" do
   desc "Tool to create bootable USB installers"
   homepage "https://kruszoneq.github.io/macUSB/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "macUSB.app"
 
