@@ -13,7 +13,7 @@ cask "keycue" do
     regex(%r{/keycue/mac/v?(\d+(?:\.\d+)+)/}i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "KeyCue.app"
 
