@@ -13,7 +13,7 @@ cask "butterkit" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "ButterKit-Direct-#{version}-macOS.app", target: "ButterKit.app"
 
