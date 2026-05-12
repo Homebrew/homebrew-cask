@@ -7,10 +7,10 @@ cask "libreoffice-still" do
          intel: "017c64b6e2992db9cbb44f9b1fc3fd2ede3e332c8b481746b780b8a282f09692"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
@@ -32,6 +32,7 @@ cask "libreoffice-still" do
   end
 
   conflicts_with cask: "libreoffice"
+  depends_on :macos
 
   app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
