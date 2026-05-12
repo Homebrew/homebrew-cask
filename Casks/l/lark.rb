@@ -6,13 +6,13 @@ cask "lark" do
     version "7.67.10,f6dbb709"
     sha256 "5a79523cb557e6559f2e245085fc6d6e55a957498328ccc0ec5e9e8a464285de"
 
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
     version "7.67.10,b6d2b47e"
     sha256 "dd707d2edf251026481c742d5959b46a7bcd0ac16bcc57f0a18eecfba2d6dd1c"
 
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://sf16-sg.larksuitecdn.com/obj/lark-version-sg/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg",
@@ -33,6 +33,7 @@ cask "lark" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "LarkSuite.app"
 
