@@ -7,7 +7,7 @@ cask "mater" do
   desc "Menubar pomodoro app"
   homepage "https://github.com/jasonlong/mater"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Mater.app"
 
