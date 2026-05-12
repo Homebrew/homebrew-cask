@@ -11,7 +11,7 @@ cask "hive-app" do
   homepage "https://github.com/morapelker/hive"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Hive.app"
 
