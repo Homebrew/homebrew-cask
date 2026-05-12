@@ -16,7 +16,7 @@ cask "kiro-cli" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Kiro CLI.app"
   binary "#{appdir}/Kiro CLI.app/Contents/MacOS/kiro-cli"
