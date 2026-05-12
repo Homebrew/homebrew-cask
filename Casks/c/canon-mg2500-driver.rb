@@ -19,7 +19,7 @@ cask "canon-mg2500-driver" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "PrinterDriver_MG2500 series_#{version.csv.first.no_dots}.pkg"
 
