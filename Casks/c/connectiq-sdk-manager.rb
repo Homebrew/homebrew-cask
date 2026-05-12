@@ -14,7 +14,7 @@ cask "connectiq-sdk-manager" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "SdkManager.app"
 
