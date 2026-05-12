@@ -18,7 +18,7 @@ cask "slack@beta" do
 
   auto_updates true
   conflicts_with cask: "slack"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Slack.app"
 
