@@ -8,7 +8,7 @@ cask "beaver-notes" do
   desc "Privacy-focused note-taking app"
   homepage "https://beavernotes.com/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Beaver Notes.app"
 
