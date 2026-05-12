@@ -9,7 +9,7 @@ cask "macdown-3000" do
   homepage "https://macdown.app/"
 
   conflicts_with cask: "macdown"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "MacDown 3000.app"
   binary "#{appdir}/MacDown 3000.app/Contents/SharedSupport/bin/macdown"
