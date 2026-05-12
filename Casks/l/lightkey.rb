@@ -41,7 +41,7 @@ cask "lightkey" do
   homepage "https://lightkeyapp.com/"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "LightkeyInstaller.pkg"
 
