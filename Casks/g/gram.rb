@@ -1,15 +1,24 @@
 cask "gram" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.2.1"
-  sha256 arm:   "05737e4df10d162501407d2870aa605e6ded878e7a695c1c3af51a643dbcd5de",
-         intel: "6c8dfabb3afeceef28af0b3a15798b972e9b83add959236ec2d31e24cae40fc4"
+  version "2.0.0"
 
-  url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/Gram-#{arch}-#{version}.dmg",
-      verified: "codeberg.org/GramEditor/"
+  on_arm do
+    sha256 "249d0ceef917889b66dca8976d1b1efeb0548f52793ece0c2b31a4bdb0982e2e"
+
+    url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/Gram-#{arch}-#{version}.dmg",
+        verified: "codeberg.org/GramEditor/"
+  end
+  on_intel do
+    sha256 "f5c9946de08a92a72d3b2ffe567c741ab7bedbae3738f03a2e92e010c05fa532"
+
+    url "https://ziranpub.b-cdn.net/Gram-#{arch}-#{version}.dmg",
+        verified: "ziranpub.b-cdn.net"
+  end
+
   name "Gram"
   desc "Code editor focused on stability, without AI, subscriptions, or telemetry"
-  homepage "https://gram.liten.app/"
+  homepage "https://gram-editor.com/"
 
   depends_on macos: ">= :catalina"
 
