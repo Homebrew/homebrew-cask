@@ -14,7 +14,7 @@ cask "openbb-terminal" do
   deprecate! date: "2024-05-16", because: :discontinued
   disable! date: "2025-05-16", because: :discontinued
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "#{arch}.MacOS.OpenBB.Terminal.v#{version}.pkg"
 
