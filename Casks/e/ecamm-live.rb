@@ -13,7 +13,7 @@ cask "ecamm-live" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   # The url is unversioned, but the download returns an app directory with a version number
   rename "Ecamm v#{version}", "Ecamm Live"
