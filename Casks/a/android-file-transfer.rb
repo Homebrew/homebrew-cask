@@ -14,6 +14,8 @@ cask "android-file-transfer" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Android File Transfer.app"
 
   zap trash: [

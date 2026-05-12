@@ -19,6 +19,7 @@ cask "phoenix-code" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Phoenix Code.app"
 

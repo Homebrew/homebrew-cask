@@ -12,6 +12,8 @@ cask "isabelle" do
     regex(/href=.*?Isabelle[._-]?v?(\d+(?:[.-]\d+)*)[._-]macos\.t/i)
   end
 
+  depends_on :macos
+
   binary "#{appdir}/Isabelle#{version}.app/bin/isabelle"
   artifact "Isabelle#{version}.app", target: "#{appdir}/Isabelle#{version}.app"
 

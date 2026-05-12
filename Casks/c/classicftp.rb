@@ -12,6 +12,8 @@ cask "classicftp" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)[^>]*>\s*macOS/im)
   end
 
+  depends_on :macos
+
   app "ClassicFTP.app"
 
   zap trash: [

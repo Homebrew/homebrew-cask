@@ -10,6 +10,8 @@ cask "modelio" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Modelio #{version.major_minor}.app"
 
   zap trash: "~/.modelio"

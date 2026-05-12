@@ -15,6 +15,8 @@ cask "electrum-grs" do
     end
   end
 
+  depends_on :macos
+
   app "Electrum-GRS.app"
 
   zap trash: [

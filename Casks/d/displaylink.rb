@@ -60,6 +60,8 @@ cask "displaylink" do
   desc "Drivers for DisplayLink docks, adapters and monitors"
   homepage "https://www.synaptics.com/products/displaylink-graphics"
 
+  depends_on :macos
+
   uninstall launchctl: [
               "73YQY62QM3.com.displaylink.DisplayLinkAPServer",
               "com.displaylink.displaylinkmanager",

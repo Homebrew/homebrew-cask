@@ -21,6 +21,8 @@ cask "omnipresence" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "OmniPresence.app"
 
   zap trash: [

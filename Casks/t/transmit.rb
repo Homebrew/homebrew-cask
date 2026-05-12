@@ -1,6 +1,6 @@
 cask "transmit" do
-  version "5.11.5"
-  sha256 "9557a8dceb9af8d9f031fdff6f7ca351e02c18180816c77d542f8caa11550366"
+  version "5.11.6"
+  sha256 "6761097e3ec7141058f0fa67815ff2244e2ca68f9fcdce06edeaf04279a10208"
 
   url "https://download-cdn.panic.com/transmit/Transmit%20#{version}.zip",
       user_agent: :browser
@@ -14,7 +14,7 @@ cask "transmit" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Transmit.app"
 

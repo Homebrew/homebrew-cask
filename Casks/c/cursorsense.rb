@@ -12,6 +12,8 @@ cask "cursorsense" do
     regex(%r{href=.*?/CursorSensev?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "CursorSense.app"
 
   zap trash: [

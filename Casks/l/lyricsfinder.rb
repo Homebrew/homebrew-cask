@@ -12,6 +12,8 @@ cask "lyricsfinder" do
     regex(/"softwareVersion">(\d+(?:\.\d+)+)</i)
   end
 
+  depends_on :macos
+
   app "LyricsFinder.app"
 
   zap trash: "~/Library/Preferences/com.mediahuman.Lyrics Finder.plist"

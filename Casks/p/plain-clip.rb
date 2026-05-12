@@ -10,6 +10,8 @@ cask "plain-clip" do
   deprecate! date: "2024-07-06", because: :discontinued
   disable! date: "2025-07-06", because: :discontinued
 
+  depends_on :macos
+
   app "Plain Clip/Plain Clip.app"
 
   zap trash: "~/Library/Preferences/net.bluem.plain-clip.plist"

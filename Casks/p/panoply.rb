@@ -15,6 +15,8 @@ cask "panoply" do
     regex(/href=.*?PanoplyMacOS[._-]#{arch}v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Panoply.app"
 
   zap trash: [

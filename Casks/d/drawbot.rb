@@ -8,6 +8,8 @@ cask "drawbot" do
   desc "Write Python scripts to generate two-dimensional graphics"
   homepage "https://www.drawbot.com/"
 
+  depends_on :macos
+
   app "DrawBot.app"
 
   zap trash: [

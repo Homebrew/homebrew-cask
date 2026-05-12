@@ -9,6 +9,8 @@ cask "sql-tabs" do
 
   deprecate! date: "2025-09-07", because: :unmaintained
 
+  depends_on :macos
+
   app "SQL Tabs.app"
 
   zap trash: "~/.sqltabs"

@@ -20,6 +20,8 @@ cask "send-anywhere" do
     end
   end
 
+  depends_on :macos
+
   app "Send Anywhere.app"
 
   zap trash: [

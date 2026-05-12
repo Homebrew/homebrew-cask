@@ -1,6 +1,6 @@
 cask "expressvpn" do
-  version "14.0.1.12858"
-  sha256 "26c457b51d175560578806ae76baa903f981473f13dbe25b3443ec6bec9d54b5"
+  version "14.1.0.13058"
+  sha256 "4395df575fd2282c345a436dbd11aa8399567768ad8d562de92f440d38c0f7e1"
 
   url "https://www.expressvpn.works/clients/mac/expressvpn-macos-universal-#{version}_release.zip"
   name "ExpressVPN"
@@ -11,6 +11,8 @@ cask "expressvpn" do
     url "https://portal.expressvpn.com/latest"
     regex(/href=.*?expressvpn[._-]macos[._-]universal[._-]v?(\d+(?:\.\d+)+)[._-]release\.zip/i)
   end
+
+  depends_on :macos
 
   installer script: {
     executable: "#{staged_path}/ExpressVPN Installer.app/Contents/MacOS/ExpressVPN",

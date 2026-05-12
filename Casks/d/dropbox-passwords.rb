@@ -11,6 +11,8 @@ cask "dropbox-passwords" do
   deprecate! date: "2024-11-01", because: :discontinued
   disable! date: "2025-11-01", because: :discontinued
 
+  depends_on :macos
+
   app "Dropbox Passwords.app"
 
   caveats do

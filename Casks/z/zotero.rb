@@ -1,6 +1,6 @@
 cask "zotero" do
-  version "9.0.1"
-  sha256 "c7dce69eea9d837d7ed5f0a3462059f943bdaa6c5a561c0113a723b390871711"
+  version "9.0.3"
+  sha256 "7aaa8c6c916740ef542bc24e9b7d48cbd9bdc797546271e2c0f0d72be274836b"
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   name "Zotero"
@@ -14,6 +14,7 @@ cask "zotero" do
 
   auto_updates true
   conflicts_with cask: "zotero@beta"
+  depends_on :macos
 
   app "Zotero.app"
 

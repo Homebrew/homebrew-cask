@@ -15,6 +15,7 @@ cask "navigraph-simlink" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Navigraph Simlink.app"
 

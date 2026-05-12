@@ -30,7 +30,7 @@ cask "flying-carpet" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "FlyingCarpet.app"
 

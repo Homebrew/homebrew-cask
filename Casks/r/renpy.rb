@@ -12,6 +12,8 @@ cask "renpy" do
     regex(/href=.*?renpy[._-]v?(\d+(?:\.\d+)+)[._-]sdk\.dmg/i)
   end
 
+  depends_on :macos
+
   suite "renpy-#{version}-sdk"
 
   zap trash: [

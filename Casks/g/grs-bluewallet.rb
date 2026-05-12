@@ -8,6 +8,8 @@ cask "grs-bluewallet" do
   desc "Groestlcoin wallet and Lightning wallet"
   homepage "https://www.groestlcoin.org/grs-bluewallet/"
 
+  depends_on :macos
+
   app "GRS BlueWallet.app"
 
   zap trash: [

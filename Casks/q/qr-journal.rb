@@ -12,6 +12,8 @@ cask "qr-journal" do
     regex(%r{href=.*?/QRJournal(\d+(?:\.\d+)*)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "QR Journal.app"
 
   zap trash: [

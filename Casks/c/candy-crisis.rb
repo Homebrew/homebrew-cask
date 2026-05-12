@@ -13,6 +13,8 @@ cask "candy-crisis" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Candy Crisis.app"
 
   zap trash: [

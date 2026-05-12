@@ -1,9 +1,9 @@
 cask "foxglove" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.51.0"
-  sha256 arm:   "c8be56af8cd382e9e64a2e6d23b2c33a9ce945ca578670d60bf2411c63922e5c",
-         intel: "beab47ac703a08f72ac87236c489cb481370f3fe24aa75db05e21e402ced4c19"
+  version "2.52.0"
+  sha256 arm:   "ba11269fe0878df5268cd03de252713399fb4308563bdc0fe436f894b16c3486",
+         intel: "46cd238784660d9c09ee93390ececf4f27b9a13078c3cb2f2a3491b00e0fa2d1"
 
   url "https://get.foxglove.dev/desktop/latest/foxglove-#{version}-mac-#{arch}.dmg"
   name "Foxglove"
@@ -16,7 +16,7 @@ cask "foxglove" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Foxglove.app"
 

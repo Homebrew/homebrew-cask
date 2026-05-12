@@ -13,6 +13,7 @@ cask "markdown-service-tools" do
   end
 
   depends_on formula: "multimarkdown"
+  depends_on :macos
 
   service "MarkdownServiceTools#{version}/md - Convert - MultiMarkdown to RTF.workflow"
   service "MarkdownServiceTools#{version}/md - Code - Make Code Block.workflow"

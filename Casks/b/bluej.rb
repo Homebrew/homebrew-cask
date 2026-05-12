@@ -16,6 +16,8 @@ cask "bluej" do
     regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "BlueJ.app"
 
   zap trash: "~/Library/Preferences/org.bluej"

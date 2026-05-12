@@ -1,6 +1,6 @@
 cask "metashape" do
-  version "2.3.0"
-  sha256 "1af185187856a25c0a3572ee95fc8bb88d4c1255398d893c3efe0442d1badb35"
+  version "2.3.1"
+  sha256 "e612c7b209b148d321b81f45e847c9c2a25001207b9dbac5c23743d9a9af6c01"
 
   url "https://download.agisoft.com/metashape_#{version.dots_to_underscores}.dmg"
   name "Agisoft Metashape Standard Edition"
@@ -12,7 +12,7 @@ cask "metashape" do
     regex(/Metashape\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Metashape.app"
 

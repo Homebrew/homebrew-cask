@@ -12,6 +12,8 @@ cask "ape" do
     regex(/latest\s*ApE\s*\(v?(\d+(?:\.\d+)+)[ ,<"]/i)
   end
 
+  depends_on :macos
+
   app "ApE.app"
 
   zap trash: "~/Library/Application Support/ApE"

@@ -12,6 +12,8 @@ cask "sim-daltonism" do
     regex(/href=.*?sim-daltonism-(\d+(?:\.\d+)*)\.zip/i)
   end
 
+  depends_on :macos
+
   app "Sim Daltonism.app"
 
   zap trash: [

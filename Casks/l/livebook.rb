@@ -13,7 +13,7 @@ cask "livebook" do
 
   auto_updates true
   conflicts_with cask: "livebook@nightly"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Livebook.app"
 

@@ -1,9 +1,9 @@
 cask "lx-music" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.12.1"
-  sha256 arm:   "92f2c04dfa0959e3aabaa0ac9717e97a55adf79cbce08e22a1c1e92b77bbc04f",
-         intel: "c50f148503d75e841e5acd44dd14a916aa1d87385a3290318e793b56b1807aef"
+  version "2.12.2"
+  sha256 arm:   "e28f4dbed7edc0182c4994117181ed5ceee674f9e36b004f10d34d23864630bf",
+         intel: "7c74e817e254c2805bf66395dca0d58ae0d4d6f6be5e478db9733f0a96239170"
 
   url "https://github.com/lyswhut/lx-music-desktop/releases/download/v#{version}/lx-music-desktop-#{version}-#{arch}.dmg"
   name "LX Music Assistant Desktop Edition"
@@ -13,7 +13,7 @@ cask "lx-music" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "lx-music-desktop.app"
 

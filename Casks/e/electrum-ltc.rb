@@ -12,6 +12,8 @@ cask "electrum-ltc" do
     regex(%r{href=.*?/electrum[._-]ltc[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "Electrum-LTC.app"
 
   zap trash: "~/.electrum-ltc"

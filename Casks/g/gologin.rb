@@ -2,9 +2,9 @@ cask "gologin" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "-arm"
 
-  version "4.2.5"
-  sha256 arm:   "ac5005f2e842adbc7d05250e9df88d3f5acb5e05d0d6871c7a28b948ec01ec3e",
-         intel: "a379f113519e3be9e34dea038c152e56e37245ede88406f8da0c89df176cfbcc"
+  version "4.2.7"
+  sha256 arm:   "10614fd21593d4572d7b2ff1576a3a78c7f5f72fb58688de59f7f06effc02b80",
+         intel: "4fbe3a842b0584092e10e257725d240a86da4132f425ae769baf8cdeb4aec463"
 
   url "https://releases#{livecheck_arch}.gologin.com/Gologin-#{version}#{arch}.dmg"
   name "Gologin"
@@ -17,7 +17,7 @@ cask "gologin" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Gologin.app"
 

@@ -24,7 +24,7 @@ cask "nao" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "nao.app"
   binary "#{appdir}/nao.app/Contents/Resources/app/bin/nao"

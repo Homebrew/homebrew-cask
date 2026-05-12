@@ -1,6 +1,6 @@
 cask "visualdiffer" do
-  version "2.1.10"
-  sha256 "22ce6db4921907ed51c7cbbd1e11e6f494f2750027ca0202f602ba1ff3a9e772"
+  version "2.1.11"
+  sha256 "78ba6b06cf8f009ca9da0c060414189d858ccf929c093954df21f2952da879fa"
 
   url "https://github.com/visualdiffer/visualdiffer/releases/download/v#{version}/VisualDiffer-#{version}.zip",
       verified: "github.com/visualdiffer/visualdiffer/"
@@ -14,7 +14,7 @@ cask "visualdiffer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "VisualDiffer.app"
 

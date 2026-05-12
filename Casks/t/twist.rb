@@ -12,6 +12,8 @@ cask "twist" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "Twist.app"
 
   zap trash: [

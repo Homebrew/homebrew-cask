@@ -11,6 +11,8 @@ cask "koa11y" do
   deprecate! date: "2024-07-21", because: :unmaintained
   disable! date: "2025-07-21", because: :unmaintained
 
+  depends_on :macos
+
   app "Koa11y.app"
 
   caveats do

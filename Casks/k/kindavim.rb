@@ -1,5 +1,5 @@
 cask "kindavim" do
-  version "91"
+  version "92"
   sha256 :no_check
 
   url "https://releases.kindavim.app/kindaVim.zip"
@@ -13,7 +13,7 @@ cask "kindavim" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "kindaVim.app"
 

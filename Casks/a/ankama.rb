@@ -1,5 +1,5 @@
 cask "ankama" do
-  version "3.14.8"
+  version "3.14.9"
   sha256 :no_check
 
   url "https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup.dmg"
@@ -15,6 +15,7 @@ cask "ankama" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on :macos
 
   app "Ankama Launcher.app"
 

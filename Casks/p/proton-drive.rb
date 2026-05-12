@@ -18,13 +18,15 @@ cask "proton-drive" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Proton Drive.app"
 
   zap trash: [
     "~/Library/Application Scripts/ch.protonmail.drive*",
+    "~/Library/Application Support/FileProvider/ch.protonmail.drive.fileprovider",
     "~/Library/Containers/ch.protonmail.drive*",
-    "~/Library/Group Containers/group.ch.protonmail.protondrive",
+    "~/Library/Group Containers/*ch.protonmail.protondrive",
+    "~/Library/Preferences/ch.protonmail.drive*",
   ]
 end

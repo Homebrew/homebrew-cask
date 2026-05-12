@@ -7,6 +7,8 @@ cask "symboliclinker" do
   desc "Service that allows users to make symbolic links in the Finder"
   homepage "https://github.com/nickzman/symboliclinker"
 
+  depends_on :macos
+
   service "SymbolicLinker.service"
 
   # No zap stanza required

@@ -7,6 +7,8 @@ cask "locationsimulator" do
   desc "Application to spoof your iOS, iPadOS or iPhoneSimulator device location"
   homepage "https://github.com/Schlaubischlump/LocationSimulator"
 
+  depends_on :macos
+
   app "LocationSimulator.app"
 
   zap trash: [

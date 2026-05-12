@@ -16,6 +16,8 @@ cask "monero-wallet" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "monero-wallet-gui.app"
 
   zap trash: [

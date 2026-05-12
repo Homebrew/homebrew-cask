@@ -1,6 +1,6 @@
 cask "yam-display" do
-  version "2.4.8.1"
-  sha256 "05a33821af7917165db53cdad72cca3b716c5f3ef07d8c0d6b551dbbe3c7c5ec"
+  version "2.4.8.4"
+  sha256 "49b67f195e23365559310c51e3d423c5d89d04ea58cad1ecf98e7292d19e121c"
 
   url "https://www.yamdisplay.com/app/YamDisplay#{version}.dmg"
   name "Yam Display"
@@ -11,6 +11,8 @@ cask "yam-display" do
     url :homepage, user_agent: :browser
     regex(/href=.*?YamDisplay[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on :macos
 
   app "Yam Display.app"
 

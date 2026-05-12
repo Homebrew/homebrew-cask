@@ -15,6 +15,8 @@ cask "nkoda" do
     end
   end
 
+  depends_on :macos
+
   app "nkoda.app"
 
   uninstall quit: "com.nkoda.macapp"

@@ -1,6 +1,6 @@
 cask "linqpad" do
-  version "9.7.13.2777418"
-  sha256 "7e7a0e21fe7ce2d0a4d743fee59636e687687f06ef880f14947a05699e33f2b1"
+  version "9.8.11.6582054"
+  sha256 "163905e7915e0c4c8f5490da9575943e27fab131dc3549b522693bd63b0d3a92"
 
   url "https://cdn.linqpad.net/public/LINQPad#{version.major}.dmg?cache=#{version}"
   name "LINQPad"
@@ -27,7 +27,7 @@ cask "linqpad" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "LINQPad #{version.major}.app"
 

@@ -11,6 +11,8 @@ cask "sqlectron" do
   desc "SQL client"
   homepage "https://sqlectron.github.io/"
 
+  depends_on :macos
+
   app "sqlectron.app"
 
   zap trash: [

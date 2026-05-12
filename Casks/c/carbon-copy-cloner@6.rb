@@ -14,10 +14,8 @@ cask "carbon-copy-cloner@6" do
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "carbon-copy-cloner",
-    "carbon-copy-cloner@5",
-  ]
+  conflicts_with cask: "carbon-copy-cloner"
+  depends_on :macos
 
   app "Carbon Copy Cloner.app"
 

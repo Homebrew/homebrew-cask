@@ -24,6 +24,8 @@ cask "prolific-pl2303" do
     end
   end
 
+  depends_on :macos
+
   pkg "PL2303HXD_G_Mac Driver_v#{version.csv.first}_#{version.csv.second}.pkg"
 
   uninstall quit:    [

@@ -1,9 +1,9 @@
 cask "rclone-ui" do
   arch arm: "aarch64", intel: "x64"
 
-  version "3.5.3"
-  sha256 arm:   "951b6697df6ec981752d2b4f9f65e6750f01040d31b7ca5c67283505b33e516b",
-         intel: "7e88dc2034f879948ebb64072c66d5e17492dc1ba1209604791a3319987bee10"
+  version "3.5.4"
+  sha256 arm:   "2c919af519237f209caa3bed6b33a22211e52d9d8b849030b7c7cd2d032a114c",
+         intel: "f71b58ab5174909daab6d5041841e431c55abd55b0eab8673672bb760fc33e63"
 
   url "https://github.com/rclone-ui/rclone-ui/releases/download/v#{version}/Rclone.UI_#{arch}.dmg"
   name "Rclone UI"
@@ -16,7 +16,7 @@ cask "rclone-ui" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Rclone UI.app"
 

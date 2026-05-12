@@ -18,6 +18,8 @@ cask "pages-data-merge" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Pages Data Merge.app"
 
   zap trash: "~/Library/Saved Application State/com.NyhthawkProductions.Pages-Data-Merge.savedState"

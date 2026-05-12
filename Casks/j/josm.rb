@@ -18,6 +18,8 @@ cask "josm" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "JOSM_24_#{app_arch}.app"
 
   zap trash: [

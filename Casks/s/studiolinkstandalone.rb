@@ -13,6 +13,8 @@ cask "studiolinkstandalone" do
     regex(%r{href=.*?/releases/v?(\d+(?:\.\d+)+)-stable/macos}i)
   end
 
+  depends_on :macos
+
   app "StudioLinkStandalone.app"
 
   zap trash: "~/Library/Saved Application State/link.studio.standalone.savedState"

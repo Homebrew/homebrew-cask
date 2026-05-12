@@ -19,6 +19,7 @@ cask "alfred@4" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Alfred #{version.major}.app"
 

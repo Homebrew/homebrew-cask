@@ -1,9 +1,9 @@
 cask "actual" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.4.0"
-  sha256 arm:   "2a20949626ab84442db7ac36d0a3b710867c6ce71464e941c8d07c74685d13bf",
-         intel: "f32e67f6a39b8223fd1d223ab6f0d9442c88d0e041b599cdc3c5374b3045f586"
+  version "26.5.2"
+  sha256 arm:   "61ba7d7ccdfd309919aae22f39480ee251afca5c86aaf50ee25d239c99ee5821",
+         intel: "005a6f2f3e07f3df40c8b95cf98e818f0839d585b34de692b49f39f41f23a322"
 
   url "https://github.com/actualbudget/actual/releases/download/v#{version}/Actual-mac-#{arch}.dmg",
       verified: "github.com/actualbudget/actual/"
@@ -11,7 +11,7 @@ cask "actual" do
   desc "Privacy-focused app for managing your finances"
   homepage "https://actualbudget.org/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Actual.app"
 

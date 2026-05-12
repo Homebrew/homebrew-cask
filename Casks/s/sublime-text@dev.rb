@@ -17,6 +17,7 @@ cask "sublime-text@dev" do
 
   auto_updates true
   conflicts_with cask: "sublime-text"
+  depends_on :macos
 
   app "Sublime Text.app"
   binary "#{appdir}/Sublime Text.app/Contents/SharedSupport/bin/subl"

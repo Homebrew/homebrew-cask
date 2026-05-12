@@ -14,7 +14,7 @@ cask "hammerspoon" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Hammerspoon.app"
   binary "#{appdir}/Hammerspoon.app/Contents/Frameworks/hs/hs"

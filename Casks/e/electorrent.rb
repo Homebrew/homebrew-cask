@@ -1,22 +1,24 @@
 cask "electorrent" do
-  version "2.8.5"
-  sha256 "83e9e16181e8944f1feee57efe199acd90ab556d358dca6a006469ad008d4779"
+  version "2.9.0"
+  sha256 "9c11fddd4f66f61b8d17cf6138061930f600e7641d9ffe93ed77331abeef57a8"
 
-  url "https://github.com/tympanix/Electorrent/releases/download/v#{version}/electorrent-#{version}.dmg"
+  url "https://github.com/tympanix/Electorrent/releases/download/v#{version}/Electorrent-#{version}-universal.dmg"
   name "Electorrent"
   desc "Desktop remote torrenting application"
   homepage "https://github.com/tympanix/Electorrent"
 
   livecheck do
     url "https://electorrent.vercel.app/update/dmg/0.0.0"
-    strategy :json do |json|
-      json["name"]&.tr("v", "")
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :json do |json, regex|
+      json["name"]&.[](regex, 1)
     end
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on macos: :big_sur
 
   app "Electorrent.app"
 
@@ -25,8 +27,4 @@ cask "electorrent" do
     "~/Library/Preferences/com.github.tympanix.Electorrent.plist",
     "~/Library/Saved Application State/com.github.tympanix.Electorrent.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

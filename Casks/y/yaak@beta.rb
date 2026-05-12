@@ -1,9 +1,9 @@
 cask "yaak@beta" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2026.3.1"
-  sha256 arm:   "e50abf290e970c97a9304496c00a484058854a49e202fcfbf8b3ca64fe34e002",
-         intel: "8f9add684b45042e28b6039ec3a8da03e364a65eea8ee3ce7c682c1edbefce30"
+  version "2026.4.0-beta.1"
+  sha256 arm:   "c862a62be78f28061a0120e6acd7375e2cf15abdff6d438a59ffcb3687758dd7",
+         intel: "c0aefc6f79d2527d7f3cc584a1a79533e491b1fa76dd23b2b3500349f88bdaa7"
 
   url "https://github.com/mountain-loop/yaak/releases/download/v#{version}/Yaak_#{version}_#{arch}.dmg",
       verified: "github.com/mountain-loop/yaak/"
@@ -33,7 +33,7 @@ cask "yaak@beta" do
 
   auto_updates true
   conflicts_with cask: "yaak"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "yaak.app"
 

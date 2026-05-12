@@ -23,6 +23,8 @@ cask "hdfview" do
     regex(/HDFView[._-]v?(\d+(?:\.\d+)+)[._-]?App[._-]Darwin[._-]#{arch}\.t/i)
   end
 
+  depends_on :macos
+
   app "HDFView.app"
 
   zap trash: [

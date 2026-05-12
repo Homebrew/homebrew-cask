@@ -8,7 +8,7 @@ cask "kextviewr" do
   desc "Display all currently loaded kexts"
   homepage "https://objective-see.org/products/kextviewr.html"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "KextViewr.app"
 

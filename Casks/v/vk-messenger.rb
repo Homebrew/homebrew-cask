@@ -21,6 +21,8 @@ cask "vk-messenger" do
     end
   end
 
+  depends_on :macos
+
   app "VK Мессенджер.app"
 
   zap trash: [

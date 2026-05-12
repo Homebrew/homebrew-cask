@@ -13,6 +13,7 @@ cask "protoio-overflow" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Overflow.app"
 

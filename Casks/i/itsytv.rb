@@ -1,6 +1,6 @@
 cask "itsytv" do
-  version "1.5.1"
-  sha256 "67559c8982200e997a8e25ad1ce4d4114bc175fd719194fb01638aece9944021"
+  version "1.5.4"
+  sha256 "0194c00aadc65add2f913658702f14445a9ce1ef4bfb3daff34cad52175c1cab"
 
   url "https://github.com/nickustinov/itsytv-macos/releases/download/v#{version}/Itsytv-#{version}.dmg",
       verified: "github.com/nickustinov/itsytv-macos/"
@@ -13,7 +13,7 @@ cask "itsytv" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Itsytv.app"
 

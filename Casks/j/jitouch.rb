@@ -8,6 +8,8 @@ cask "jitouch" do
   desc "Multi-touch gestures editor"
   homepage "https://www.jitouch.com/"
 
+  depends_on :macos
+
   pkg "Install-Jitouch.pkg"
 
   uninstall launchctl: "com.jitouch.Jitouch.agent",

@@ -1,9 +1,9 @@
 cask "forkgram" do
   arch arm: "arm64", intel: "x86"
 
-  version "6.7.7"
-  sha256 arm:   "8741d8890d08086e45aef88343c618bb66469b5c69aff0e85881d29643d3a749",
-         intel: "7383d7db5ec4afed04d58b8005bb0c4143688e05d57d181ab043f218e85904ba"
+  version "6.8.1"
+  sha256 arm:   "a9ac1d99aaa37069373dabe20e48dcb6d36a35c7e1b71ee0a51e67757aac51ed",
+         intel: "f4634ee0d9075864b5af2be53293c17e99408c1b28159e0854f80faeaa2769ee"
 
   url "https://github.com/Forkgram/tdesktop/releases/download/v#{version}/Forkgram.macOS.no.auto-update_#{arch}.zip"
   name "Forkgram"
@@ -31,6 +31,8 @@ cask "forkgram" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Forkgram.app"
 

@@ -12,6 +12,8 @@ cask "privadovpn" do
     regex(/macOS\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "PrivadoVPN.app"
 
   zap trash: [

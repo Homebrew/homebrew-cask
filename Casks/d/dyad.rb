@@ -1,9 +1,9 @@
 cask "dyad" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.43.0"
-  sha256 arm:   "7462bf2e9ccdcd84ddc36031863459be022aacce4a2603972f43cd01c27b1f79",
-         intel: "d36026f49f45a171a88f47b0721913dfe891fd0a4ea2b3e95014c474a4a37c3a"
+  version "0.44.0"
+  sha256 arm:   "857b41b36548ba1dc36842a15c4abd0f70d299c917794ed0acf23951b8ac29f7",
+         intel: "819fe4e35d40d214d29533cfee2f974780cf16cc02c6666b2810950f98590c19"
 
   url "https://github.com/dyad-sh/dyad/releases/download/v#{version}/dyad-darwin-#{arch}-#{version}.zip",
       verified: "github.com/dyad-sh/dyad/"
@@ -20,7 +20,7 @@ cask "dyad" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "dyad.app"
 

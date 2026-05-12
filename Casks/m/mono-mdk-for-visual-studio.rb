@@ -12,6 +12,7 @@ cask "mono-mdk-for-visual-studio" do
   disable! date: "2025-09-02", because: :discontinued
 
   conflicts_with cask: "mono-mdk"
+  depends_on :macos
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 

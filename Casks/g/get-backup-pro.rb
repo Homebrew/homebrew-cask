@@ -14,6 +14,7 @@ cask "get-backup-pro" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Get Backup Pro #{version.major}.app"
 

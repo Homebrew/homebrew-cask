@@ -1,5 +1,5 @@
 cask "tuta-mail" do
-  version "345.260421.2"
+  version "348.260506.0"
   sha256 :no_check
 
   url "https://app.tuta.com/desktop/tutanota-desktop-mac.dmg"
@@ -13,7 +13,7 @@ cask "tuta-mail" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Tuta Mail.app"
 

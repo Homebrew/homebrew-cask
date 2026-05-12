@@ -8,6 +8,8 @@ cask "libndi" do
   desc "NDI SDK"
   homepage "https://ndi.video/"
 
+  depends_on :macos
+
   pkg "libNDI_for_Mac.pkg"
 
   uninstall pkgutil: "com.newtek.libndi"

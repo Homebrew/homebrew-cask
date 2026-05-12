@@ -1,9 +1,9 @@
 cask "paseo" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.62"
-  sha256 arm:   "f9e2b73cb50f2b259257ccb5cb2e05c927ddc2921ed19842bf29f791a140ee49",
-         intel: "96ac561f378b57828b6d1103fdc5d884433e0a4aeb2210aaaf3da6f73c41ee45"
+  version "0.1.74"
+  sha256 arm:   "35a0b1a63e0be32ff5f3a82bf3f81211e9b5a7235a0ac97fe90cba9b466a1a00",
+         intel: "65a590f869f60bdcbc7c57017861d7ad957220528e9887974f534c525576d74b"
 
   url "https://github.com/getpaseo/paseo/releases/download/v#{version}/Paseo-#{version}-#{arch}.dmg",
       verified: "github.com/getpaseo/paseo/"
@@ -16,7 +16,7 @@ cask "paseo" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Paseo.app"
   binary "#{appdir}/Paseo.app/Contents/Resources/bin/paseo"

@@ -20,6 +20,7 @@ cask "sys-pc-tool" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "SYS_PC_TOOL_setup_mac-#{version}.pkg"
 

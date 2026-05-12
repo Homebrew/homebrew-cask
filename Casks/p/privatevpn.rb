@@ -9,6 +9,8 @@ cask "privatevpn" do
 
   disable! date: "2026-01-07", because: :unreachable
 
+  depends_on :macos
+
   app "PrivateVPN.app"
 
   zap trash: [

@@ -11,6 +11,8 @@ cask "outguess" do
   # The zip file URL is consistently unreachable in CI despite working locally
   disable! date: "2026-02-08", because: :unreachable
 
+  depends_on :macos
+
   app "Outguess.app"
 
   zap trash: [

@@ -30,6 +30,7 @@ cask "burp-suite" do
   end
 
   conflicts_with cask: "burp-suite@early-adopter"
+  depends_on :macos
 
   app "Burp Suite Community Edition.app"
 

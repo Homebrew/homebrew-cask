@@ -12,6 +12,8 @@ cask "freefilesync" do
     regex(/href=.*?FreeFileSync[._-]v?(\d+(?:\.\d+)+)(?:[._-]macOS)?\.zip/i)
   end
 
+  depends_on :macos
+
   pkg "FreeFileSync_#{version}.pkg"
 
   uninstall pkgutil: [

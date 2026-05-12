@@ -8,7 +8,7 @@ cask "mac-monitor" do
   homepage "https://github.com/Brandon7CC/mac-monitor"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "Mac-Monitor.pkg"
 

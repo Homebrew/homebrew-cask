@@ -10,6 +10,8 @@ cask "wowmatrix" do
   deprecate! date: "2024-08-05", because: :unmaintained
   disable! date: "2025-08-05", because: :unmaintained
 
+  depends_on :macos
+
   app "WowMatrix.app"
 
   caveats do

@@ -15,6 +15,8 @@ cask "anythingllm" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "AnythingLLM.app"
 
   zap trash: "~/Library/Application Support/anythingllm-desktop"

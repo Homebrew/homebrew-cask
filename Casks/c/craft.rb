@@ -1,5 +1,5 @@
 cask "craft" do
-  version "3.4.1"
+  version "3.4.2"
   sha256 :no_check
 
   url "https://res.craft.do/native/sparkle/Craft.dmg"
@@ -13,7 +13,7 @@ cask "craft" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Craft.app"
 

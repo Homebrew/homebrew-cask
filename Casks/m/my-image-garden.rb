@@ -19,6 +19,8 @@ cask "my-image-garden" do
     end
   end
 
+  depends_on :macos
+
   pkg "My Image Garden V#{version.csv.first.no_dots}.pkg"
 
   uninstall quit:    "jp.co.canon.MyImageGarden",

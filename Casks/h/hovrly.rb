@@ -8,6 +8,8 @@ cask "hovrly" do
   desc "Display and convert timezones time in different cities"
   homepage "https://hovrly.com/"
 
+  depends_on :macos
+
   app "Hovrly.app"
 
   zap trash: [

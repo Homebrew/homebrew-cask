@@ -12,6 +12,8 @@ cask "enclave" do
     regex(/(\d+(?:\.\d+)+(?:\.hotfix\d+)?)/i)
   end
 
+  depends_on :macos
+
   pkg "enclave_osx-installer-x64-stable-#{version}.pkg"
   binary "/Applications/enclave/enclave"
 

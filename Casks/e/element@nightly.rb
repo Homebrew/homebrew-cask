@@ -1,6 +1,6 @@
 cask "element@nightly" do
-  version "2026042301"
-  sha256 "f5698fcf14a044f1a8ef221acee4f98650c587742e2dcc31d0569336b62fa3f4"
+  version "2026051201"
+  sha256 "d1024d9a02e1689b49132b9334c5166f28b4bfb32fba57154218c6117aa58c28"
 
   url "https://packages.element.io/nightly/update/macos/Element%20Nightly-#{version}-universal-mac.zip"
   name "Element Nightly"
@@ -17,7 +17,7 @@ cask "element@nightly" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Element Nightly.app"
 

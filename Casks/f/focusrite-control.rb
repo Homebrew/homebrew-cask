@@ -18,6 +18,8 @@ cask "focusrite-control" do
     end
   end
 
+  depends_on :macos
+
   pkg "Focusrite Control.pkg"
 
   uninstall launchctl: "com.focusrite.ControlServer",

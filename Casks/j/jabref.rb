@@ -16,6 +16,8 @@ cask "jabref" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "JabRef.app"
 
   zap trash: [

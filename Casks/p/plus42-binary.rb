@@ -1,5 +1,5 @@
 cask "plus42-binary" do
-  version "1.3.14"
+  version "1.3.15"
   sha256 :no_check
 
   url "https://thomasokken.com/plus42/download/Plus42Mac.zip"
@@ -11,6 +11,8 @@ cask "plus42-binary" do
     url "https://thomasokken.com/plus42/history.html"
     regex(/:\s*release\s*(\d+(?:\.\d+)+[a-z]?)\s*(?:$|\([^\n)]*MacOS)/i)
   end
+
+  depends_on :macos
 
   app "Plus42 Binary.app"
 

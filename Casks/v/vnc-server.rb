@@ -14,6 +14,8 @@ cask "vnc-server" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
+  depends_on :macos
+
   pkg "VNC-Server-#{version}-MacOSX-universal.pkg"
 
   uninstall_preflight do

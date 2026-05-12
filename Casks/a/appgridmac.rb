@@ -1,6 +1,6 @@
 cask "appgridmac" do
-  version "1.1.12"
-  sha256 "ccb5afb29402ea60ad99a190e411b57fd9d54bcf7d212798e6eb07daab97c2a5"
+  version "1.1.17"
+  sha256 "be62f98e77f12f755dd8da04b3893956a271da6f14ba465ea728e6e5aa072366"
 
   url "https://zekalogic.com/appgrid/app/AppGridMac-#{version}.zip",
       verified: "zekalogic.com/appgrid/app/"
@@ -13,7 +13,7 @@ cask "appgridmac" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "AppGridMac.app"
 

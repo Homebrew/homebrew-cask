@@ -1,6 +1,6 @@
 cask "blip" do
-  version "1.1.16,20260420185806"
-  sha256 "4a49b8dd435a815180f33f9d2fcf6d1134e765c3a2629f375d97237281076acc"
+  version "1.1.16,20260425132215"
+  sha256 "c5dd4954c0f22c135c9bd5c21c7799757fe6cce0279554a99c36a0e625a8aab9"
 
   url "https://f000.backblazeb2.com/file/push-mac/Blip-#{version.csv.second}.zip",
       verified: "f000.backblazeb2.com/file/push-mac/"
@@ -13,7 +13,7 @@ cask "blip" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Blip.app"
 

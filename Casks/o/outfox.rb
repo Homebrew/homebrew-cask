@@ -28,6 +28,8 @@ cask "outfox" do
     end
   end
 
+  depends_on :macos
+
   suite "OutFox"
 
   zap trash: [

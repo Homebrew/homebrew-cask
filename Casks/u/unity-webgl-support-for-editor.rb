@@ -14,6 +14,7 @@ cask "unity-webgl-support-for-editor" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
   depends_on cask: "unity"
 
   pkg "UnitySetup-WebGL-Support-for-Editor-#{version.csv.first}.pkg"

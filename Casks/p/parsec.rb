@@ -1,5 +1,5 @@
 cask "parsec" do
-  version "150-102b"
+  version "150-103a"
   sha256 :no_check
 
   url "https://builds.parsec.app/package/parsec-macos.pkg"
@@ -14,6 +14,8 @@ cask "parsec" do
       json["so_name"]&.match(regex) { |match| match[1] }
     end
   end
+
+  depends_on :macos
 
   pkg "parsec-macos.pkg"
 

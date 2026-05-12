@@ -6,10 +6,10 @@ cask "copyq" do
          intel: "0ca67c1db53cc769ca28152bffa4738d7b50da03f90337a88d5adc6e09891235"
 
   on_arm do
-    depends_on macos: ">= :monterey"
+    depends_on macos: :monterey
   end
   on_intel do
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
 
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ-#{version}-macos-#{arch}.dmg",
@@ -24,6 +24,8 @@ cask "copyq" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "CopyQ.app"
 

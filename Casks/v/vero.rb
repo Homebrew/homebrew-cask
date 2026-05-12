@@ -1,6 +1,6 @@
 cask "vero" do
-  version "0.20.2431"
-  sha256 "a27621184577f12af29a22bc92915baa21ce11c395d385a191b60d48459cf6b7"
+  version "0.20.2450"
+  sha256 "1ae42f88ea346b9ea1406a539826ad54fd59417e749233a93972d2b8ce8519b1"
 
   url "https://downloads.vero.co/vero-beta-#{version}.dmg"
   name "VERO"
@@ -11,6 +11,8 @@ cask "vero" do
     url "https://vero.co/download/desktop/beta/macos"
     strategy :header_match
   end
+
+  depends_on :macos
 
   app "VERO.app"
 

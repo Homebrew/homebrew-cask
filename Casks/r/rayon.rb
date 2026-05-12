@@ -1,9 +1,9 @@
 cask "rayon" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.12.0"
-  sha256 arm:   "24986a3807027817ed1c214c1283b6f68dea68ff156150eb8ae6ddb00cce8cc0",
-         intel: "77fe67c5fb0ff91e393145bbe035875c16c2fd20452dc407afded6db37d92df8"
+  version "2.14.0"
+  sha256 arm:   "cada8e3e907ab8bbfef9a429cb4046f27b40af00680f1f5e14bc273bd2212493",
+         intel: "bff8c95cbad4368d99bc34d03a76ff276b4332f5b164161956184c033329e2dd"
 
   url "https://rayon-electron.s3.eu-west-3.amazonaws.com/rayon-electron/rayon-electron/rayon-electron-#{version}-#{arch}.dmg",
       verified: "rayon-electron.s3.eu-west-3.amazonaws.com/"
@@ -17,7 +17,7 @@ cask "rayon" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :monterey
 
   app "Rayon.app"
 

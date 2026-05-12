@@ -14,6 +14,7 @@ cask "commander-one" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Commander One.app"
 

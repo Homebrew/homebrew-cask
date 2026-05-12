@@ -7,6 +7,8 @@ cask "font-sf-arabic" do
   name "SF Arabic"
   homepage "https://developer.apple.com/fonts"
 
+  depends_on :macos
+
   pkg "SF Arabic Fonts.pkg"
 
   uninstall pkgutil: "com.apple.pkg.SFArabicFonts"

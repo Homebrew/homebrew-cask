@@ -1,6 +1,6 @@
 cask "kitlangton-hex" do
-  version "0.7.3"
-  sha256 "2149e81187cdda54d2a8eacf5cd3cc6e69ce727e0132254d4fda54ccedbfb8e3"
+  version "0.7.6"
+  sha256 "574c02859ae9c13a25b10980317788ce04e9b75f230e707540796ba68b76a710"
 
   url "https://github.com/kitlangton/Hex/releases/download/v#{version}/Hex-#{version}.dmg",
       verified: "github.com/kitlangton/Hex/"
@@ -10,7 +10,7 @@ cask "kitlangton-hex" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sonoma
 
   app "Hex.app"
 

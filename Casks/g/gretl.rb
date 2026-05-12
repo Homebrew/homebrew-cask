@@ -1,9 +1,9 @@
 cask "gretl" do
   arch arm: "arm64", intel: "intel"
 
-  version "2026a"
-  sha256 arm:   "d13afc263e7c6eec123f5887ef0fa1480559ef10f0fd12f118071eeb85cd74d5",
-         intel: "ca707b8eef3502a0d0681b65a2077d8d0a35f7167a4b5f7c47263ff4e81c17f0"
+  version "2026b"
+  sha256 arm:   "6b30eb3d39ccd4fcbe31d4039ae2b070d172cebc5984cb17810913dd2f2df776",
+         intel: "9b9160de1480660f7f3dc20619cff1ebb647ee805aa4c7bf70ea542b84e994f6"
 
   url "https://downloads.sourceforge.net/gretl/gretl-#{version}-macos-#{arch}.pkg"
   name "gretl"
@@ -15,7 +15,7 @@ cask "gretl" do
     regex(%r{url=.*?/gretl[._-]v?(\d+(?:\.\d+)*[a-z]?)[._-]macos[._-]#{arch}\.pkg}i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "gretl-#{version}-macos-#{arch}.pkg"
 

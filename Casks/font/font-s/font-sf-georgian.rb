@@ -7,6 +7,8 @@ cask "font-sf-georgian" do
   name "SF Georgian"
   homepage "https://developer.apple.com/fonts"
 
+  depends_on :macos
+
   pkg "SF Georgian Fonts.pkg"
 
   uninstall pkgutil: "com.apple.pkg.SFGeorgianFonts"

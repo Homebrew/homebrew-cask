@@ -12,6 +12,8 @@ cask "kid3" do
   desc "Audio tagger focusing on efficiency"
   homepage "https://kid3.kde.org/"
 
+  depends_on :macos
+
   app "kid3.app"
   binary "#{appdir}/kid3.app/Contents/MacOS/kid3-cli"
 

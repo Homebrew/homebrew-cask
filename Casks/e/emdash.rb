@@ -1,9 +1,9 @@
 cask "emdash" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.50"
-  sha256 arm:   "2072247545b0b0c44588fbc4187065585077d20abc343f88247b630c9efdbfb1",
-         intel: "bb933d618118001e5ec2ecfdbe10123ee81ad7f07346d3cdd9fa840124400ff6"
+  version "1.1.10"
+  sha256 arm:   "5a3b9583f1871e12fe68c79ceaca5044e139fcaa3dcdef245fdc73ca8670b6e5",
+         intel: "57e58c638d8882a6f284a126ca3cbc7acee0e7ece3646b86a7e11fc24c0ca935"
 
   url "https://github.com/generalaction/emdash/releases/download/v#{version}/emdash-#{arch}.dmg",
       verified: "github.com/generalaction/emdash/"
@@ -11,7 +11,12 @@ cask "emdash" do
   desc "UI for running multiple coding agents in parallel"
   homepage "https://www.emdash.sh/"
 
-  depends_on macos: ">= :big_sur"
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  depends_on macos: :monterey
 
   app "emdash.app"
 

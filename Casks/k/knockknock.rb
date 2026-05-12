@@ -13,6 +13,8 @@ cask "knockknock" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "KnockKnock.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "mbed-studio" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   rename "MbedStudio-*.pkg", "MbedStudio.pkg"
 
   pkg "MbedStudio.pkg"

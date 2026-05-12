@@ -9,6 +9,8 @@ cask "yemuzip" do
   deprecate! date: "2024-10-12", because: :unmaintained
   disable! date: "2025-10-12", because: :unmaintained
 
+  depends_on :macos
+
   app "YemuZip.app"
 
   caveats do

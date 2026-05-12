@@ -9,6 +9,8 @@ cask "backlog" do
   deprecate! date: "2024-10-30", because: :unmaintained
   disable! date: "2025-11-01", because: :unmaintained
 
+  depends_on :macos
+
   app "Backlog-darwin-x64/Backlog.app"
 
   zap trash: "~/Library/Application Support/Backlog"

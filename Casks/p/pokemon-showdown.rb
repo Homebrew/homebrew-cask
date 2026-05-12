@@ -8,6 +8,8 @@ cask "pokemon-showdown" do
 
   deprecate! date: "2025-06-07", because: :discontinued
 
+  depends_on :macos
+
   app "Pokemon Showdown.app"
 
   caveats do

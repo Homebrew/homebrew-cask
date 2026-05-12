@@ -12,6 +12,8 @@ cask "nessus" do
     regex(/Nessus[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   pkg "Install Nessus.pkg"
   binary "/Library/Nessus/run/bin/nasl"
   binary "/Library/Nessus/run/bin/ndbg"

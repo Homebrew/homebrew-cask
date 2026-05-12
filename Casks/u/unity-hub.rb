@@ -1,7 +1,7 @@
 cask "unity-hub" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.17.3"
+  version "3.18.0"
   sha256 :no_check
 
   url "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup-#{arch}.dmg"
@@ -15,7 +15,7 @@ cask "unity-hub" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Unity Hub.app"
 

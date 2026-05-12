@@ -1,9 +1,9 @@
 cask "wondershare-uniconverter" do
   arch arm: "_arm"
 
-  version "17.3.2"
-  sha256 arm:   "719415a871155c44f3dfb9fd84fcfdfb7bf94ea9e5fa76fd9ba8d1fb925c2a1e",
-         intel: "5f5a88c316dad303a79d47f4889e3b0f499bbfec977928ac8b240969c905e1fa"
+  version "17.3.5"
+  sha256 arm:   "0032b19d529f4c6e689271dc1586a5fe2c36e06cdb0464930f5840b54f950e91",
+         intel: "f8eec4d01ee663b2bebdfa27ad09dbc4f89b86a6c0181b4741d68aa79efd96a7"
 
   url "https://download.wondershare.com/cbs_down/uniconverter-mac#{arch}_#{version}_full14207.zip"
   name "UniConverter"
@@ -16,6 +16,8 @@ cask "wondershare-uniconverter" do
       json["data"]&.map { |release| release["version_name"] }
     end
   end
+
+  depends_on :macos
 
   app "Wondershare UniConverter #{version.major}.app"
 

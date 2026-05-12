@@ -13,6 +13,8 @@ cask "gamemaker" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   pkg "GameMaker-#{version}.pkg"
 
   postflight do

@@ -1,5 +1,5 @@
 cask "ecamm-live" do
-  version "4.5.5"
+  version "4.5.7"
   sha256 :no_check
 
   url "https://downloads.ecamm.com/EcammLive.zip"
@@ -13,7 +13,7 @@ cask "ecamm-live" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   # The url is unversioned, but the download returns an app directory with a version number
   rename "Ecamm v#{version}", "Ecamm Live"

@@ -12,6 +12,8 @@ cask "dockey" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "dockey.app"
 
   uninstall quit: "com.igorstumberger.dockey"

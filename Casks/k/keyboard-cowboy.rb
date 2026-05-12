@@ -8,7 +8,7 @@ cask "keyboard-cowboy" do
   homepage "https://github.com/zenangst/KeyboardCowboy"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Keyboard Cowboy.app"
 

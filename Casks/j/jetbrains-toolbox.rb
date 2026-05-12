@@ -24,6 +24,7 @@ cask "jetbrains-toolbox" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "JetBrains Toolbox.app"
 

@@ -7,6 +7,8 @@ cask "opensc-app" do
   desc "Smart card libraries and utilities"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
 
+  depends_on :macos
+
   pkg "OpenSC #{version}.pkg"
 
   uninstall launchctl: [

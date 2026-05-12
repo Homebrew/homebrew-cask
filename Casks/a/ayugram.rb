@@ -1,6 +1,6 @@
 cask "ayugram" do
-  version "6.3.10"
-  sha256 "9ac1c4f4e7ca32fa0fdc07006639d17fffe346de59898dfe0a217d588879c62a"
+  version "6.7.8"
+  sha256 "77b1d53a5dfa5917e8b5b405ee956dea2e7ba6d535be84f72444fc3a0cc3ff03"
 
   url "https://github.com/AyuGram/AyuGramDesktop/releases/download/v#{version}/AyuGram.dmg"
   name "AyuGram"
@@ -8,6 +8,8 @@ cask "ayugram" do
   homepage "https://github.com/AyuGram/AyuGramDesktop"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "AyuGram.app"
 

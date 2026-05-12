@@ -28,6 +28,7 @@ cask "macpilot" do
   homepage "https://www.koingosw.com/products/macpilot/"
 
   auto_updates true
+  depends_on :macos
 
   app "MacPilot.app"
 

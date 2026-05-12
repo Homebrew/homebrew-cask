@@ -6,10 +6,10 @@ cask "tribler" do
          intel: "8057a15463abf63ce6834d79a1dec3fde506934704e299ea509909ade96fc6e8"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/Tribler/tribler/releases/download/v#{version}/Tribler-#{version}-#{arch}.dmg"
@@ -23,6 +23,8 @@ cask "tribler" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "tribler-#{version}-#{arch}.app", target: "Tribler.app"
 

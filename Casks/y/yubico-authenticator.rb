@@ -12,6 +12,8 @@ cask "yubico-authenticator" do
     regex(/href=.*?yubico[._-]authenticator[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Yubico Authenticator.app"
 
   zap trash: [

@@ -13,7 +13,7 @@ cask "silhouette-studio" do
     regex(/SS[._-]V?((?:\d+(?:\.\d+)+)[._-]M6R(?:[._-]\d+)?)\.dmg/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Silhouette Studio.app"
 

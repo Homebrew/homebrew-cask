@@ -10,6 +10,8 @@ cask "old-school-runescape" do
   deprecate! date: "2024-12-25", because: :discontinued
   disable! date: "2025-12-25", because: :discontinued
 
+  depends_on :macos
+
   app "Old School RuneScape.app"
 
   zap trash: [

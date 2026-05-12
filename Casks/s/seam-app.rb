@@ -1,6 +1,6 @@
 cask "seam-app" do
-  version "1.6.0"
-  sha256 "8542d56b2f3a72993e2564bfab8ddeef29b4137383e0b21ef8982aab8cbef47d"
+  version "1.8.3"
+  sha256 "952e658effabe8698cac846b742fae5d2f84988937768197e429c47911936410"
 
   url "https://releases.getseam.app/#{version}/Seam.dmg"
   name "Seam"
@@ -15,7 +15,7 @@ cask "seam-app" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Seam.app"
 

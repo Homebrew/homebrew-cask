@@ -7,6 +7,8 @@ cask "proxy-audio-device" do
   desc "Sound and audio controller"
   homepage "https://github.com/briankendall/proxy-audio-device"
 
+  depends_on :macos
+
   app "Proxy Audio Device Settings.app"
   artifact "ProxyAudioDevice.driver", target: "/Library/Audio/Plug-Ins/HAL/ProxyAudioDevice.driver"
 

@@ -1,9 +1,9 @@
 cask "gearboy" do
   arch arm: "arm64", intel: "intel"
 
-  version "3.8.2"
-  sha256 arm:   "3c850054955f207074d458ff3548e63f310a1818d3e539877ee34718a600f0d0",
-         intel: "270f6d23019583b922becf3a334c9d17c4baa34bb92c086b6c5f62a75e4d01f1"
+  version "3.8.4"
+  sha256 arm:   "5372e35589aabc7db3d4d8d11b6f31f3f10dacf1bc4353712a1cce6af7b41cf3",
+         intel: "7320edd64fd8dcea044fe49e96bd9a386cf5981b954b6c065d641f7fba8f5e7b"
 
   url "https://github.com/drhelius/Gearboy/releases/download/#{version}/Gearboy-#{version}-desktop-macos-#{arch}.zip"
   name "Gearboy"
@@ -15,6 +15,7 @@ cask "gearboy" do
     strategy :github_latest
   end
 
+  depends_on :macos
   container nested: "Gearboy.app.zip"
 
   app "Gearboy.app"

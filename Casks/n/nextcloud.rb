@@ -12,8 +12,8 @@ cask "nextcloud" do
     end
   end
   on_monterey :or_newer do
-    version "33.0.2"
-    sha256 "c1cd72fef13708fbd61ff668df5bde89355466a9fa3cef80996a10f6af9654f0"
+    version "33.0.4"
+    sha256 "412d934416a8785cffbecda0531393d91e3b8c8270437d80a53cd883084b8e5f"
 
     url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud-releases/desktop/"
@@ -30,6 +30,7 @@ cask "nextcloud" do
 
   auto_updates true
   conflicts_with cask: "nextcloud-vfs"
+  depends_on :macos
 
   pkg "Nextcloud-#{version}.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"

@@ -1,6 +1,6 @@
 cask "trimmy" do
-  version "0.8.0"
-  sha256 "c1a59fccbcb910cb025a376190c45f30fc7966875d481404ef12dc78f6aa9678"
+  version "0.9.0"
+  sha256 "c9247b55f60776b8bd8bf3aa1d759762df290b32dcff30a28f184699b4989035"
 
   url "https://github.com/steipete/Trimmy/releases/download/v#{version}/Trimmy-#{version}.zip"
   name "Trimmy"
@@ -8,7 +8,7 @@ cask "trimmy" do
   homepage "https://github.com/steipete/Trimmy"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Trimmy.app"
 

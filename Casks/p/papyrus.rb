@@ -18,6 +18,7 @@ cask "papyrus" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "morkro-papyrus"
+  depends_on :macos
 
   app "Papyrus.app"
 

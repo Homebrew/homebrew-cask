@@ -23,6 +23,8 @@ cask "signet" do
     end
   end
 
+  depends_on :macos
+
   app "#{token}#{version.csv.first.no_dots}/Signet.app"
 
   zap trash: [

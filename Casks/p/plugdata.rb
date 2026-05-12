@@ -15,6 +15,7 @@ cask "plugdata" do
 
   auto_updates true
   conflicts_with cask: "plugdata@nightly"
+  depends_on :macos
 
   pkg "plugdata-macOS-Universal.pkg"
 

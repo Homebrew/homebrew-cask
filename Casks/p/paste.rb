@@ -1,6 +1,6 @@
 cask "paste" do
-  version "6.4.0"
-  sha256 "f1f628f25f044cf4f01a586826d4e877eea90bf4fee0c67b478f95413aa7d369"
+  version "6.5.2"
+  sha256 "b0c2bd49ec66360f4e6672a9da226768ec39b5d8b15591f33a983c3ed86ea556"
 
   url "https://downloads.pasteapp.io/dist/stable/Paste-#{version}.zip"
   name "Paste"
@@ -13,7 +13,7 @@ cask "paste" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :sonoma
 
   app "Paste.app"
 

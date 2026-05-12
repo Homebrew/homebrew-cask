@@ -1,5 +1,5 @@
 cask "browserstacklocal" do
-  version "3.7.5"
+  version "3.7.6"
   sha256 :no_check
 
   url "https://www.browserstack.com/local-testing/downloads/native-app/BrowserStackLocal.tar.gz"
@@ -13,6 +13,7 @@ cask "browserstacklocal" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "BrowserStackLocal.app"
 

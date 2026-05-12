@@ -10,6 +10,8 @@ cask "decloner" do
   deprecate! date: "2025-03-31", because: :unmaintained
   disable! date: "2026-04-01", because: :unmaintained
 
+  depends_on :macos
+
   app "Decloner.app"
 
   zap trash: [

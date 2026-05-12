@@ -14,6 +14,7 @@ cask "gitup-app" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "GitUp.app"
   binary "#{appdir}/GitUp.app/Contents/SharedSupport/gitup"

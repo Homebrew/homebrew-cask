@@ -8,6 +8,8 @@ cask "transmission-remote-gui" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Transmission Remote GUI.app"
 
   uninstall quit: "com.transgui"

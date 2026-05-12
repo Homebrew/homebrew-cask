@@ -15,6 +15,8 @@ cask "dungeon-crawl-stone-soup-console" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Dungeon Crawl Stone Soup - Console.app"
 
   zap trash: "~/Library/Application Support/Dungeon Crawl Stone Soup"

@@ -1,9 +1,9 @@
 cask "orbstack" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.1.1,20026"
-  sha256 arm:   "18a41f759958e1fa0951696b820b5478d3ed7353f8ca486fe9d026a1a7d97207",
-         intel: "c7eef8f0f29aaac9d0a9ea962208a1362a63ced0926645a5ba89835e5260513c"
+  version "2.1.3,20115"
+  sha256 arm:   "f494db804fc486ef2f88eab903d186a6987c786de39868ff883416a5eb9a7317",
+         intel: "5a2efa5becf95eceba823b72c54648a3e2b7ce21dbdc6027f3793b9395e8a639"
 
   url "https://cdn-updates.orbstack.dev/#{arch}/OrbStack_v#{version.csv.first}_#{version.csv.second}_#{arch}.dmg"
   name "OrbStack"
@@ -18,7 +18,7 @@ cask "orbstack" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "OrbStack.app"
   binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orb"

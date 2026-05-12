@@ -9,7 +9,7 @@ cask "gauntlet" do
 
   deprecate! date: "2025-11-20", because: :unmaintained
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Gauntlet.app"
 

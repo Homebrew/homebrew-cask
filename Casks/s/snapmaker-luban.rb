@@ -17,6 +17,7 @@ cask "snapmaker-luban" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Snapmaker Luban.app"
 

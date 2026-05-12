@@ -16,6 +16,8 @@ cask "cadreader" do
     end
   end
 
+  depends_on :macos
+
   app "CAD快速看图.app"
 
   zap trash: "~/Library/Preferences/com.glodonyuntu.cadreadermac.plist"

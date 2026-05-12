@@ -1,6 +1,6 @@
 cask "happ" do
-  version "2.9.0"
-  sha256 "9bff5639b6000d4e5a8adf2e9a2b0cba3d953c62bfb27bdd89bddd32c1ac815c"
+  version "2.14.0"
+  sha256 "260931f9dd4774dbea172027754fa0e63dbc8f8f16d0aa9128df179224e41222"
 
   url "https://github.com/Happ-proxy/happ-desktop/releases/download/#{version}/Happ.macOS.universal.dmg",
       verified: "github.com/Happ-proxy/happ-desktop/"
@@ -13,7 +13,7 @@ cask "happ" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Happ.app"
 

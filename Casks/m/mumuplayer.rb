@@ -1,6 +1,6 @@
 cask "mumuplayer" do
-  version "1.8.9"
-  sha256 "d5c1749d2090934de625d8b250192c7f42c9a5468bceed72f6e60b5a874a8d46"
+  version "1.8.11"
+  sha256 "8587ea2d538ecc1906c76bd83693ca1a1be6f16e18e889eaa55be8bb4cefa90f"
 
   url "https://a11.gdl.netease.com/MuMuUpdater_#{version}_default.tar.gz",
       verified: "a11.gdl.netease.com/"
@@ -23,7 +23,7 @@ cask "mumuplayer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   depends_on arch: :arm64
 
   app "MuMuPlayer.app"

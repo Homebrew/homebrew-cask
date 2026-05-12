@@ -7,6 +7,8 @@ cask "developerexcuses" do
   desc "Screensaver showing quotes from developerexcuses.com"
   homepage "https://github.com/kimar/DeveloperExcuses"
 
+  depends_on :macos
+
   screen_saver "DeveloperExcuses.saver"
 
   # No zap stanza required

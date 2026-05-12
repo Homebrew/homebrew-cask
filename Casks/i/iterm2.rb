@@ -22,7 +22,7 @@ cask "iterm2" do
     "iterm2@beta",
     "iterm2@nightly",
   ]
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "iTerm.app"
 

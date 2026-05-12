@@ -1,5 +1,5 @@
 cask "macloggerdx@beta" do
-  version "6.61b1"
+  version "6.61b9"
   sha256 :no_check
 
   url "https://www.dogparksoftware.com/files/MacLoggerDX.beta.dmg"
@@ -13,6 +13,7 @@ cask "macloggerdx@beta" do
   end
 
   conflicts_with cask: "macloggerdx"
+  depends_on :macos
 
   app "MacLoggerDX.app"
 

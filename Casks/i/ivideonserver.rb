@@ -13,6 +13,8 @@ cask "ivideonserver" do
     regex(/href=.*?IvideonServer[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg/i)
   end
 
+  depends_on :macos
+
   app "IvideonServer.app"
 
   zap trash: "~/Library/Saved Application State/com.ivideon.IvideonServer.savedState"

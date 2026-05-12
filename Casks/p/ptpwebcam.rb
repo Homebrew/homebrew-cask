@@ -13,6 +13,8 @@ cask "ptpwebcam" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   pkg "PTP_Webcam-v#{version}.pkg"
 
   uninstall launchctl: [

@@ -17,6 +17,8 @@ cask "etrecheckpro" do
     end
   end
 
+  depends_on :macos
+
   app "EtreCheckPro.app"
 
   zap trash: [

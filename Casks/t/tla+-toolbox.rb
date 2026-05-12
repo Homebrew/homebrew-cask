@@ -27,6 +27,8 @@ cask "tla+-toolbox" do
     end
   end
 
+  depends_on :macos
+
   app "TLA+ Toolbox.app"
 
   caveats do

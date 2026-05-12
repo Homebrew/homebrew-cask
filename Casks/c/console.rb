@@ -7,6 +7,8 @@ cask "console" do
   desc "Replacement for console application"
   homepage "https://github.com/macmade/Console"
 
+  depends_on :macos
+
   app "Console.app"
 
   zap trash: [

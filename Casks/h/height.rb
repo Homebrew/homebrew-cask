@@ -11,6 +11,7 @@ cask "height" do
   disable! date: "2025-11-01", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Height.app"
 

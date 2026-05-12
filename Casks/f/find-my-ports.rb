@@ -19,7 +19,7 @@ cask "find-my-ports" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Find My Ports.app"
 

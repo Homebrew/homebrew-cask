@@ -1,6 +1,6 @@
 cask "vibe-island" do
-  version "1.0.29"
-  sha256 "eed3c9e097d883525c7fbec1d4e789b3d9800f27c6496737708e7699f915d707"
+  version "1.0.33"
+  sha256 "edbf63ddb6d44dfc9592c02b4c122b2d44766e25e80c8bfe270d8d64b46723ca"
 
   url "https://dl.vibeisland.app/VibeIsland-#{version}.dmg"
   name "Vibe Island"
@@ -13,7 +13,7 @@ cask "vibe-island" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Vibe Island.app"
 

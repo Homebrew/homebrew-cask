@@ -12,6 +12,8 @@ cask "install-disk-creator" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "Install Disk Creator.app"
 
   zap trash: "~/Library/Saved Application State/io.macdaddy.Install-Disk-Creator.savedState"

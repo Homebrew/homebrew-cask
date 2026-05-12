@@ -8,6 +8,8 @@ cask "mcbopomofo" do
   desc "Input method for Bopomofo (Phonetic Symbols of Mandarin Chinese)"
   homepage "https://mcbopomofo.openvanilla.org/"
 
+  depends_on :macos
+
   installer manual: "McBopomofoInstaller.app"
 
   uninstall delete: "~/Library/Input Methods/McBopomofo.app"

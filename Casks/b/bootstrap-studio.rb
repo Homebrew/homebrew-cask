@@ -16,6 +16,7 @@ cask "bootstrap-studio" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Bootstrap Studio.app"
 

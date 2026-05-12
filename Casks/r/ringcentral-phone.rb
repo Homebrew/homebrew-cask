@@ -12,6 +12,8 @@ cask "ringcentral-phone" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "RingCentral for Mac.app", target: "RingCentral Phone.app"
 

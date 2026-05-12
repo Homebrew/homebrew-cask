@@ -8,6 +8,8 @@ cask "bananas" do
   desc "Cross-platform screen sharing tool"
   homepage "https://getbananas.net/"
 
+  depends_on :macos
+
   app "bananas.app"
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask "mujoco" do
-  version "3.7.0"
-  sha256 "da863520e171c1a3c8005810529058b8c9bb7bc0b51a54731d12b614053c5c2e"
+  version "3.8.1"
+  sha256 "10b0e3960b5fcae95254a52e771dee9d377e3aaae796934e280fa13dc036e898"
 
   url "https://github.com/google-deepmind/mujoco/releases/download/#{version}/mujoco-#{version}-macos-universal2.dmg",
       verified: "github.com/google-deepmind/mujoco/"
@@ -8,7 +8,7 @@ cask "mujoco" do
   desc "General purpose physics engine"
   homepage "https://mujoco.org/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "MuJoCo.app"
 

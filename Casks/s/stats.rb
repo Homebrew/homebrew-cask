@@ -1,6 +1,6 @@
 cask "stats" do
-  version "2.12.11"
-  sha256 "41edc5bc9c6a4503f9b48826ea1040ea3b94f76221f0801788c8714d18924093"
+  version "2.12.13"
+  sha256 "4f64594886a09647caf1750978f6b90fac84787b7f2d2c764ccc5cb0e775e088"
 
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
   name "Stats"
@@ -8,7 +8,7 @@ cask "stats" do
   homepage "https://github.com/exelban/stats"
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Stats.app"
 

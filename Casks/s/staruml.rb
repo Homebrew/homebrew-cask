@@ -16,6 +16,7 @@ cask "staruml" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "StarUML.app"
 

@@ -37,6 +37,8 @@ cask "insta360-studio" do
     end
   end
 
+  depends_on :macos
+
   # The pkg is often inconsistently named comparatively to the url version
   rename "Insta360_Studio*.pkg", "Insta360_Studio.pkg"
 

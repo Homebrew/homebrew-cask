@@ -1,6 +1,6 @@
 cask "btcpayserver-vault" do
-  version "2.0.14"
-  sha256 "cc8bf583109875813bbbd6e5f48a25baec959fb1975da1e27df2bfd2ce7fdd8f"
+  version "3.0.0"
+  sha256 "c92ae7f7b60d606d3b8d05e319a0eb0ff34438c84ebb2112bbda2aa1f5d64798"
 
   url "https://github.com/btcpayserver/BTCPayServer.Vault/releases/download/Vault%2Fv#{version}/BTCPayServerVault-osx-x64-#{version}.dmg"
   name "BTCPayServer Vault"
@@ -12,6 +12,8 @@ cask "btcpayserver-vault" do
     regex(/v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "BTCPayServer Vault.app"
 

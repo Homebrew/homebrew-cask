@@ -1,6 +1,6 @@
 cask "elemental@6" do
-  version "6.9.0"
-  sha256 "af5ee81a43875719ce67bc5687c2829acec4e1cdde2bbf46bb84de625d8f898f"
+  version "6.10.0"
+  sha256 "271e4911112446c70e5f3ab528608097d691faf9f686c57b471c841ef6f2a21c"
 
   url "https://github.com/evolvedbinary/elemental/releases/download/elemental-#{version}/elemental-#{version}.dmg",
       verified: "github.com/evolvedbinary/elemental/"
@@ -12,6 +12,8 @@ cask "elemental@6" do
     url :url
     regex(/^elemental[._-]v?(6(?:\.\d+)+)$/i)
   end
+
+  depends_on :macos
 
   app "Elemental.app"
 

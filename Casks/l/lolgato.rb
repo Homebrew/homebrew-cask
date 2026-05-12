@@ -7,7 +7,7 @@ cask "lolgato" do
   desc "Enhances control over Elgato lights"
   homepage "https://github.com/raine/Lolgato/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Lolgato.app"
 

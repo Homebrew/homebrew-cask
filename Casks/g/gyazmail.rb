@@ -1,8 +1,8 @@
 cask "gyazmail" do
-  version "1.7.1"
-  sha256 "002ad687dedfc9eea6391b4241312e35b6143d5caa0a813d8fe4e323a568fbfb"
+  version "1.8"
+  sha256 "6d8b78109cbd119f6b6dca20b23ed79ac820d6ea0f09c607ae21ea03acba67ea"
 
-  url "https://gyazsquare.com/download/GyazMail-#{version.no_dots}.dmg"
+  url "https://gyazsquare.com/download/GyazMail-#{version}.dmg"
   name "GyazMail"
   desc "Email client"
   homepage "https://gyazsquare.com/gyazmail/"
@@ -11,6 +11,8 @@ cask "gyazmail" do
     url "https://gyazsquare.com/gyazmail/download/"
     regex(/Download\s*GyazMail\s*v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   app "GyazMail.app"
 
@@ -22,8 +24,4 @@ cask "gyazmail" do
     "~/Library/Preferences/jp.gyazsquare.GyazMail.plist",
     "~/Library/Saved Application State/jp.gyazsquare.GyazMail.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

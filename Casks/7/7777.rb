@@ -14,6 +14,8 @@ cask "7777" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   binary "7777"
 
   # No zap stanza required

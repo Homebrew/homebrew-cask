@@ -1,9 +1,9 @@
 cask "mongodb-compass-isolated-edition" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.49.5"
-  sha256 arm:   "af3dcf150dd856cea2c22ececbfcd2f551e858636dcbbb2b3061029af124f22b",
-         intel: "2ddcc78ff5ad30d6a3ff27550459174668578b73f3a409673a831a96d62a87c4"
+  version "1.49.6"
+  sha256 arm:   "e370a7d980222fe6fb72acec24223208109f4bf5eb53b98512ea501522e00e28",
+         intel: "7b1bd9ab68e6e1e55153c23054ed3a24b8ae40ee6862bdda7c040eec54e6a42f"
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-isolated-#{version}-darwin-#{arch}.dmg"
   name "MongoDB Compass Isolated"
@@ -23,7 +23,7 @@ cask "mongodb-compass-isolated-edition" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "MongoDB Compass Isolated Edition.app"
 

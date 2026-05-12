@@ -13,6 +13,7 @@ cask "black-ink" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Black Ink.app"
 

@@ -10,6 +10,8 @@ cask "surfeasy-vpn" do
   deprecate! date: "2024-12-30", because: :discontinued
   disable! date: "2026-01-05", because: :discontinued
 
+  depends_on :macos
+
   app "SurfEasy VPN.app"
 
   caveats do

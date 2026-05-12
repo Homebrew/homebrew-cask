@@ -10,6 +10,8 @@ cask "license-control-center" do
 
   deprecate! date: "2025-05-27", because: :discontinued
 
+  depends_on :macos
+
   installer manual: "eLicenserControlSetup.app"
 
   uninstall delete: [

@@ -13,6 +13,8 @@ cask "dexed" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "Dexed-#{version}-macOS.pkg"
 
   uninstall pkgutil: [

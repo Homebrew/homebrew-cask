@@ -18,6 +18,8 @@ cask "psychopy" do
     end
   end
 
+  depends_on :macos
+
   app "PsychoPy.app"
 
   zap trash: [

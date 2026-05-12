@@ -19,6 +19,8 @@ cask "cloud189" do
     end
   end
 
+  depends_on :macos
+
   app "天翼云盘.app"
 
   uninstall quit: "com.cnki.cnkiexpress"

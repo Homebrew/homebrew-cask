@@ -1,9 +1,9 @@
 cask "netlogo" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "7.0.3"
-  sha256 arm:   "14fb4870415fe78e7391641a62aaab96e570b4531ac3cd82d8d16ad8f60a24ca",
-         intel: "79ecc61c231559681f1d2f0f79943956ae681c538fc65fef1c781e483ae6b5e6"
+  version "7.0.4"
+  sha256 arm:   "39c215b3f79e9fd66c4aac6f269c660763d111514c0ae37992d3c9d37d4b6b3c",
+         intel: "18dc290f038505994e134cc89520c2988856e730dc3c8f7ecf7d692ce90cab87"
 
   url "https://downloads.netlogo.org/#{version}/NetLogo-#{version}-#{arch}.dmg"
   name "NetLogo"
@@ -14,6 +14,8 @@ cask "netlogo" do
     url "https://docs.netlogo.org/versions"
     regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   suite "NetLogo #{version}"
 

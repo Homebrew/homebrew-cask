@@ -19,7 +19,7 @@ cask "viables" do
 
   conflicts_with cask: "viable"
   depends_on arch: :arm64
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "viables#{version.csv.first}/ViableS.app"
 

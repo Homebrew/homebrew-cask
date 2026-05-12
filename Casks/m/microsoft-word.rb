@@ -22,8 +22,8 @@ cask "microsoft-word" do
     end
   end
   on_sonoma :or_newer do
-    version "16.108.26041915"
-    sha256 "544b307e085d2a578ac93dc8c240e6301403f11aec7c45570c97a4ee8bdbddab"
+    version "16.108.26050324"
+    sha256 "03a364cba813a6db9be45a9ac77ef9cfbcc0cb21a47a75b5fb756c3147750849"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525134"
@@ -41,6 +41,7 @@ cask "microsoft-word" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on :macos
 
   pkg "Microsoft_Word_#{version}_Installer.pkg",
       choices: [

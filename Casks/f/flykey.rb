@@ -1,6 +1,6 @@
 cask "flykey" do
-  version "1.7.1,2025121201"
-  sha256 "983462ef05ae9b935c351a0dc67e70491414eac600ea9a2b90d06791360b0243"
+  version "1.7.2,2026043002"
+  sha256 "e89ce587dcdbbd9a47f638d9cea53e8bb40701a9f1e9ce13006ca3a0c881341c"
 
   url "https://cdn.better365.cn/FlyKey/#{version.csv.second[0..3]}/FlyKey#{version.csv.first}_#{version.csv.second}.zip"
   name "FlyKey"
@@ -19,6 +19,8 @@ cask "flykey" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  depends_on :macos
 
   app "FlyKey.app"
 

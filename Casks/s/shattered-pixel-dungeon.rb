@@ -14,6 +14,7 @@ cask "shattered-pixel-dungeon" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Shattered Pixel Dungeon.app"
 

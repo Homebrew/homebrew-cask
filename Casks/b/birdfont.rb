@@ -27,6 +27,8 @@ cask "birdfont" do
   desc "Font editor"
   homepage "https://birdfont.org/"
 
+  depends_on :macos
+
   app "BirdFontNonCommercial.app"
 
   zap trash: [

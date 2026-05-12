@@ -35,7 +35,7 @@ cask "nx-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "Installer/NikonInstaller.pkg"
 

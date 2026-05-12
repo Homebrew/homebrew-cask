@@ -13,6 +13,7 @@ cask "glyphs" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Glyphs #{version.major}.app"
 

@@ -23,6 +23,8 @@ cask "revisionist" do
     end
   end
 
+  depends_on :macos
+
   app "revisionist#{version.csv.first.no_dots}/Revisionist.app"
 
   zap trash: [

@@ -11,6 +11,8 @@ cask "hdrmerge" do
   deprecate! date: "2024-07-12", because: :unmaintained
   disable! date: "2025-07-12", because: :unmaintained
 
+  depends_on :macos
+
   app "HDRMerge.app"
   binary "#{appdir}/HDRMerge.app/Contents/MacOS/hdrmerge"
 

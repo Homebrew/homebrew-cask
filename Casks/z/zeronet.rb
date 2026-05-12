@@ -12,6 +12,8 @@ cask "zeronet" do
   deprecate! date: "2024-06-17", because: :unmaintained
   disable! date: "2025-06-17", because: :unmaintained
 
+  depends_on :macos
+
   app "ZeroNet-dist-mac/ZeroNet.app"
 
   zap trash: [

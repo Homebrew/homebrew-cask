@@ -1,9 +1,9 @@
 cask "tev" do
   arch intel: "-intel"
 
-  version "2.10.0"
-  sha256 arm:   "ab606c147c89ef68419fee8cdc97a607f289c5cc326cbcd69f02f11e031d5d74",
-         intel: "6f623d52ea9b17ef3c1b8cc8f4078ccc7f9fe72a614ad5ecb8fb79862c56a07f"
+  version "2.11.0"
+  sha256 arm:   "7d55fd16d4b1cf66bf8ce66682d95eb230f2ba3adc242bcaed72ff57688d7c75",
+         intel: "2740f1d1ee31c2dceb84ba817731b216027b66b2caf23486598bed317a34132a"
 
   url "https://github.com/Tom94/tev/releases/download/v#{version}/tev#{arch}.dmg"
   name "tev"
@@ -14,6 +14,8 @@ cask "tev" do
     url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  depends_on :macos
 
   app "tev.app"
   binary "#{appdir}/tev.app/Contents/MacOS/tev"

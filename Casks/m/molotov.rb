@@ -22,6 +22,8 @@ cask "molotov" do
     end
   end
 
+  depends_on :macos
+
   app "Molotov.app"
 
   zap trash: [

@@ -21,6 +21,8 @@ cask "cemu" do
   desc "TI-84 Plus CE and TI-83 Premium CE calculator emulator"
   homepage "https://ce-programming.github.io/CEmu/"
 
+  depends_on :macos
+
   app "CEmu.app"
 
   zap trash: [

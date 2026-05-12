@@ -1,5 +1,5 @@
 cask "wooshy" do
-  version "47"
+  version "48"
   sha256 :no_check
 
   url "https://releases.wooshy.app/Wooshy.zip"
@@ -13,7 +13,7 @@ cask "wooshy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Wooshy.app"
 

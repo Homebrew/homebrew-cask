@@ -2,7 +2,7 @@ cask "boosteroid" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "_ARM"
 
-  version "1.10.10"
+  version "1.10.12"
   sha256 :no_check
 
   url "https://boosteroid.com/macos#{folder}/installer/boosteroid-install-#{arch}.dmg",
@@ -16,6 +16,8 @@ cask "boosteroid" do
         user_agent: :browser
     regex(/\[\s*\v?(\d+(?:\.\d+)+)\s*\]/i)
   end
+
+  depends_on :macos
 
   app "Boosteroid.app"
 

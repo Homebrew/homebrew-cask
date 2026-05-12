@@ -1,9 +1,9 @@
 cask "tablepro" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.34.0"
-  sha256 arm:   "6183d6a632ff5f82569c4589a53436dd88c450b086a9db94d72dca9261c33743",
-         intel: "ca6eb450b57cf66192cd0e0325248290891f26dc900c9dafdd052e1539f25f7e"
+  version "0.40.0"
+  sha256 arm:   "4da102136bfa70b11d779c1843a61cbbade28235860597c2f5df357be993d1da",
+         intel: "37dbbe6b8cd1309be01fbd71589e66ae7fc0eb62197865c93de1507809314ee3"
 
   url "https://github.com/TableProApp/TablePro/releases/download/v#{version}/TablePro-#{version}-#{arch}.dmg",
       verified: "github.com/TableProApp/TablePro/"
@@ -17,7 +17,7 @@ cask "tablepro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "TablePro.app"
 

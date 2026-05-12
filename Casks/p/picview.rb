@@ -16,6 +16,8 @@ cask "picview" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "PicView.app"
 
   zap trash: [

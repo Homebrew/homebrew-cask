@@ -13,6 +13,8 @@ cask "mymonero" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "MyMonero.app"
 
   zap trash: [

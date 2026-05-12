@@ -1,8 +1,8 @@
 cask "wetype" do
-  version "2.0.0,570"
-  sha256 "197bf476cdb99819700883082f965bfca95aeb9a7e020c901e66d6d75b7ae304"
+  version "2.1.0,601"
+  sha256 "bb75e2f50ec94e02c38c488e719d7ac7197a00b13bd697016647fc65b9f039de"
 
-  url "https://download.z.weixin.qq.com/app/mac/#{version.csv.first}/WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.zip"
+  url "https://download.weread.qq.com/app/wxkb/mac/#{version.csv.first}/WeType_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
   name "微信输入法"
   desc "Text input app from WeChat team for Chinese users"
@@ -24,10 +24,9 @@ cask "wetype" do
   end
 
   auto_updates true
+  depends_on :macos
 
-  installer manual: "WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.app"
-
-  uninstall delete: "/Library/Input Methods/WeType.app"
+  app "WeType.app"
 
   zap trash: [
     "~/Library/Application Support/WeType",

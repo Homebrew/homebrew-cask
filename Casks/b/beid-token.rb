@@ -12,6 +12,8 @@ cask "beid-token" do
     regex(/href=.*?eID(?:(?:%20|\s)+|[._-])?Quickinstaller[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   pkg "eID-Quickinstaller-signed.pkg"
 
   postflight do

@@ -16,6 +16,8 @@ cask "chemdoodle" do
     regex(%r{href=.*?/ChemDoodle[._-]macos[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   suite "ChemDoodle"
 
   zap trash: "~/Library/Saved Application State/com.iChemLabs.ChemDoodle.savedState"

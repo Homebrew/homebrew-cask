@@ -10,5 +10,7 @@ cask "continuity-activation-tool" do
   deprecate! date: "2024-07-06", because: :unmaintained
   disable! date: "2025-07-06", because: :unmaintained
 
+  depends_on :macos
+
   app "Continuity-Activation-Tool-master/Continuity Activation Tool.app"
 end

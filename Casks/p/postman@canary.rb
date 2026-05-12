@@ -13,6 +13,7 @@ cask "postman@canary" do
   disable! date: "2025-11-15", because: :no_longer_available
 
   auto_updates true
+  depends_on :macos
 
   app "PostmanCanary.app"
 

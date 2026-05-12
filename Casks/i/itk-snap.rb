@@ -21,7 +21,7 @@ cask "itk-snap" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "ITK-SNAP.app"
 

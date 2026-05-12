@@ -1,6 +1,6 @@
 cask "vibeproxy" do
-  version "1.8.138"
-  sha256 "d5444106f6713f0274ac1e5fd1f15fd61f19ad85f71f8d07611e20573db9ccc9"
+  version "1.8.147"
+  sha256 "eb62a0d02b268123fa4fac498f3ed5c22f9a1fcf9abc0e80a864d657a2bca74c"
 
   url "https://github.com/automazeio/vibeproxy/releases/download/v#{version}/VibeProxy-arm64.dmg"
   name "VibeProxy"
@@ -9,7 +9,7 @@ cask "vibeproxy" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "VibeProxy.app"
 

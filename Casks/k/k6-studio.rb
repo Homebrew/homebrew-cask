@@ -1,9 +1,9 @@
 cask "k6-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.12.0"
-  sha256 arm:   "2815c4ccd24c2d63a7ffea37c32989e67459d473a4bfbb0abe83a8aa51624590",
-         intel: "625ab14232ee6bd54818489af3b6a70cb00671fb9cf4d15e1ee153e72641b9be"
+  version "1.13.1"
+  sha256 arm:   "723a50c320df17834d6a5ada3e8f6acd74fbf083989033c7bbb9c151526e7a7d",
+         intel: "7df25c20178c38e337ac815d155197848dfb10993c4985d822bcf738a2afbc41"
 
   url "https://github.com/grafana/k6-studio/releases/download/v#{version}/k6.Studio-#{version}-#{arch}.dmg",
       verified: "github.com/grafana/k6-studio/"
@@ -12,7 +12,7 @@ cask "k6-studio" do
   homepage "https://grafana.com/docs/k6-studio"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "k6 Studio.app"
 

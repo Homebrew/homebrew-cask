@@ -12,6 +12,7 @@ cask "opera-crypto@developer" do
   disable! date: "2025-05-15", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Opera Crypto.app"
 

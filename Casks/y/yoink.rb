@@ -1,5 +1,5 @@
 cask "yoink" do
-  version "3.7.1"
+  version "3.7.2"
   sha256 :no_check
 
   url "https://downloads.eternalstorms.at/Yoink.zip"
@@ -13,6 +13,7 @@ cask "yoink" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Yoink.app"
 

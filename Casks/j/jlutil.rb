@@ -11,6 +11,8 @@ cask "jlutil" do
   deprecate! date: "2024-11-17", because: :unmaintained
   disable! date: "2025-11-17", because: :unmaintained
 
+  depends_on :macos
+
   binary "jlutil.universal", target: "jlutil"
 
   # No zap stanza required

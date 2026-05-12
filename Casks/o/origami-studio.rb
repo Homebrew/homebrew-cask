@@ -1,5 +1,5 @@
 cask "origami-studio" do
-  version "217.0.0.0.0"
+  version "219.0.0.0.0"
   sha256 :no_check
 
   url "https://facebook.com/designtools/origami/",
@@ -13,7 +13,7 @@ cask "origami-studio" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Origami Studio.app"
 

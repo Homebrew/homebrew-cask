@@ -8,6 +8,8 @@ cask "projectlibre" do
   desc "Microsoft Project in your browser"
   homepage "https://www.projectlibre.com/"
 
+  depends_on :macos
+
   app "ProjectLibre.app"
 
   zap trash: "~/Library/Preferences/com.projectlibre#{version.major}.*"

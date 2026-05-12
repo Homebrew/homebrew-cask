@@ -20,9 +20,9 @@ cask "vscodium" do
     end
   end
   on_monterey :or_newer do
-    version "1.112.01907"
-    sha256 arm:   "f67ee456d927a9f49f4dcd8c985a6ce5bc52a8c9cbe8a3616604dbf835549216",
-           intel: "e0458a21773e08a40ba2dede37a06477fc62801c8419a7cb30a27cdf610e4b00"
+    version "1.116.02821"
+    sha256 arm:   "bad0cf23cd0908f7174c5bcaeb9511e42065c9bf84b287291ccd0a59ea236942",
+           intel: "1fab0a56d422fbe53b36f4a42968a98c30c942c4eed19837b69f648a32fce5e5"
 
     livecheck do
       url "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master/stable/darwin/#{arch}/latest.json"
@@ -38,6 +38,7 @@ cask "vscodium" do
   homepage "https://github.com/VSCodium/vscodium"
 
   auto_updates true
+  depends_on :macos
 
   app "VSCodium.app"
   binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/codium"

@@ -25,7 +25,7 @@ cask "ibabel" do
   end
 
   depends_on formula: "open-babel"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "iBabel.app"
 

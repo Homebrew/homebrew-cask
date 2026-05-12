@@ -1,5 +1,5 @@
 cask "navicat-data-modeler" do
-  version "4.3.10,040"
+  version "4.3.11,040"
   sha256 :no_check
 
   url "https://download3.navicat.com/updater/navicatdatamodeler#{version.csv.second}_mac_en.zip"
@@ -18,7 +18,7 @@ cask "navicat-data-modeler" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Navicat Data Modeler.app"
 

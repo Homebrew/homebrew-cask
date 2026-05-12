@@ -13,6 +13,8 @@ cask "ransomwhere" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "#{staged_path}/RansomWhere Installer.app/Contents/Resources/configure.sh",
     args:       ["-install"],

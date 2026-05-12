@@ -12,6 +12,8 @@ cask "vcv-rack" do
     regex(/###\s(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "RackFree-#{version}-mac-x64+arm64.pkg"
 
   uninstall pkgutil: "com.vcvrack.rack*"

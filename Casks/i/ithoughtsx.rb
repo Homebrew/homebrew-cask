@@ -13,6 +13,7 @@ cask "ithoughtsx" do
   disable! date: "2025-07-11", because: :unmaintained
 
   auto_updates true
+  depends_on :macos
 
   app "iThoughtsX.app"
 

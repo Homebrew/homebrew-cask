@@ -16,7 +16,7 @@ cask "onyx@beta" do
   end
 
   conflicts_with cask: "onyx"
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "OnyX.app"
 

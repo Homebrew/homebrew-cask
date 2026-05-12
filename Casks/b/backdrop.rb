@@ -1,6 +1,6 @@
 cask "backdrop" do
-  version "2.5.2,86"
-  sha256 "ce8ebefb38911626e3b1898d8a842b3129ef8412dd055a9a459488e481d0acdd"
+  version "2.6.6,96"
+  sha256 "ad2f288cc7cf8586f5b0d9716dc0ec8efd2798d7aba351ace15cc0976053b474"
 
   url "https://cdn.cindori.com/apps/backdrop/updates/#{version.csv.first}-#{version.csv.second}/Backdrop.dmg"
   name "Backdrop"
@@ -13,7 +13,7 @@ cask "backdrop" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Backdrop.app"
 

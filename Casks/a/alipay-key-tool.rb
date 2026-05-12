@@ -13,6 +13,8 @@ cask "alipay-key-tool" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "支付宝开放平台密钥工具.app"
 
   zap trash: [

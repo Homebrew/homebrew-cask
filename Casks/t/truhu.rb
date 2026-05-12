@@ -22,6 +22,8 @@ cask "truhu" do
     end
   end
 
+  depends_on :macos
+
   app "TruHu Mac Desktop.app"
 
   zap trash: [

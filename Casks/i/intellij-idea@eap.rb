@@ -1,9 +1,9 @@
 cask "intellij-idea@eap" do
   arch arm: "-aarch64"
 
-  version "2026.1.1,261.23567.71"
-  sha256 arm:   "6f2a6f91714516e7c6bdf569551e97aa2d2176cf58ded3de0564881185fd8d84",
-         intel: "eac0f680dc057983c3c54cfb2603210249008e2c8da895adf7bfc928d89e664c"
+  version "2026.2,262.4852.50"
+  sha256 arm:   "1de27c4ff24cc7ebde4ff753128713f7b09555dc5cc69b8a2f5951bf808a659a",
+         intel: "9c7e669b25eb98b3fe11b9a1bf53786962916f87ea34849bd9b804c501cb2681"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.second}#{arch}.dmg"
   name "IntelliJ IDEA EAP"
@@ -25,6 +25,7 @@ cask "intellij-idea@eap" do
 
   auto_updates true
   conflicts_with cask: "intellij-idea"
+  depends_on :macos
 
   # The application path is often inconsistent between version
   rename "IntelliJ IDEA*.app", "IntelliJ IDEA.app"

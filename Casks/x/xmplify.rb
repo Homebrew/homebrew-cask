@@ -12,6 +12,8 @@ cask "xmplify" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "Xmplify.app"
 
   uninstall quit: "au.com.moso.Xmplify"

@@ -16,6 +16,8 @@ cask "virtualhostx" do
     skip "No longer developed or maintained"
   end
 
+  depends_on :macos
+
   app "VirtualHostX.app"
 
   zap trash: [

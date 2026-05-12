@@ -1,6 +1,6 @@
 cask "xmind" do
-  version "26.03.04126-202604200306"
-  sha256 "feda04fe9702527bad71a22e021fa926b7c3ade659a1ef54be419db6ad36b4bb"
+  version "26.03.04129-202605110616"
+  sha256 "d9fa4ab1588f56ac3cf5c14dd22e156cfb880f212ac0c913b72f6b6b75994070"
 
   url "https://dl3.xmind.net/Xmind-for-macOS-#{version}.dmg"
   name "XMind"
@@ -14,7 +14,7 @@ cask "xmind" do
   end
 
   conflicts_with cask: "xmind@beta"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Xmind.app"
 

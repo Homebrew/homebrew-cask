@@ -1,9 +1,9 @@
 cask "twake" do
   arch arm: "-arm64"
 
-  version "5.1.0"
-  sha256 arm:   "8cb01d7c94f059f9cbb265fd4f69fdc025e1c00125d2660a8be260f2a2d85c97",
-         intel: "f31fe4894e2c413c2a857a242da8fed1e656362b20697a6c88b56e477e4546d2"
+  version "5.1.1"
+  sha256 arm:   "92172fa54de051ffd43bc48a8ee32d4a1041b72f1cd34d741d1f6cd7c910c0e9",
+         intel: "01ce2f8c717dc58200c7194cfe2327823fedf8141a67e8422c7737eed3e36f67"
 
   url "https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Twake-Desktop-#{version}#{arch}.dmg",
       verified: "github.com/cozy-labs/cozy-desktop/"
@@ -15,6 +15,8 @@ cask "twake" do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "Twake Desktop.app"
 

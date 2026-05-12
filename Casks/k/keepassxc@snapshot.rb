@@ -1,6 +1,6 @@
 cask "keepassxc@snapshot" do
-  version "2.8.0,284013"
-  sha256 "2d3575cba1d771c07aff3ad0cf6ec2d8905c49a189af494447bccde0da1a2c83"
+  version "2.8.0,285089"
+  sha256 "78096edd03b9285d594732e673e11fb0c616a65b1fe1b1f06a0122bf9c7c82cd"
 
   url "https://snapshot.keepassxc.org/build-#{version.csv.second}/KeePassXC-#{version.csv.first}-snapshot.dmg"
   name "KeePassXC"
@@ -35,7 +35,7 @@ cask "keepassxc@snapshot" do
     "keepassxc",
     "keepassxc@beta",
   ]
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"

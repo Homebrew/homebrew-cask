@@ -14,6 +14,7 @@ cask "skim" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Skim.app"
   binary "#{appdir}/Skim.app/Contents/SharedSupport/displayline"

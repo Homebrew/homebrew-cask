@@ -10,6 +10,8 @@ cask "trojanx" do
   deprecate! date: "2024-08-30", because: :unmaintained
   disable! date: "2025-08-30", because: :unmaintained
 
+  depends_on :macos
+
   app "TrojanX.app"
 
   uninstall delete: "/Library/Application Support/TrojanX"

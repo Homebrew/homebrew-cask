@@ -17,6 +17,8 @@ cask "photostickies" do
     end
   end
 
+  depends_on :macos
+
   app "PhotoStickies.app"
 
   zap trash: [

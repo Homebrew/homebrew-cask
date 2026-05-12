@@ -1,6 +1,6 @@
 cask "pangolin" do
-  version "0.7.0"
-  sha256 "18eca7bd1de7a0fa7ad1e3b8d913ccc91716c738f11ded726a0a48c812be784c"
+  version "0.8.3"
+  sha256 "de6d26494d2281df15a59b6fee811e95b19db49b968e6019f50ea3bdc0893b61"
 
   url "https://pangolin.net/api/downloads/proxy?url=https%3A%2F%2Fgithub.com%2Ffosrl%2Fapple%2Freleases%2Fdownload%2Fmac-#{version}%2FPangolin_Installer_#{version}.dmg"
   name "Pangolin"
@@ -13,7 +13,7 @@ cask "pangolin" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Pangolin.app"
 

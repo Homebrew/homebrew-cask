@@ -23,6 +23,7 @@ cask "macdown" do
 
   auto_updates true
   conflicts_with cask: "macdown-3000"
+  depends_on :macos
 
   app "MacDown.app"
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"

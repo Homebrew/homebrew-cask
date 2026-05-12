@@ -12,6 +12,8 @@ cask "airdroid" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "AirDroid.app"
 
   zap trash: [

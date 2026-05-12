@@ -16,6 +16,8 @@ cask "output-factory" do
     end
   end
 
+  depends_on :macos
+
   app "Output Factory Installer.app/Contents/Resources/appPackage/Output Factory.app"
 
   uninstall trash: "/Applications/Adobe Indesign */Plug-Ins/Zevrix/Output Factory.app"

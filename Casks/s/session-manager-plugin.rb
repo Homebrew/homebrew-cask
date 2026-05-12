@@ -1,9 +1,9 @@
 cask "session-manager-plugin" do
   arch arm: "_arm64"
 
-  version "1.2.804.0"
-  sha256 arm:   "986f37bad62c9bea257de3f2a8189a8c07aae6c498f83afe7d9e688be07fda24",
-         intel: "cd9a0249d9f451e41902f5a27c4cab40cc7beda85ba6635fe409de36d9e0d797"
+  version "1.2.814.0"
+  sha256 arm:   "7fa5a121af05c4429c5ed2853eb8c5eb8a94ba11cb42a7194728614e4db4726b",
+         intel: "d8e34e460bfda92e421257123b310fef8827234086ec265dabe0c28cdb128443"
 
   url "https://session-manager-downloads.s3.amazonaws.com/plugin/#{version}/mac#{arch}/session-manager-plugin.pkg",
       verified: "session-manager-downloads.s3.amazonaws.com/plugin/"
@@ -16,7 +16,7 @@ cask "session-manager-plugin" do
     regex(%r{<td tabindex="-1">(\d+(?:\.\d+)+)</td>}i)
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  depends_on :macos
 
   pkg "session-manager-plugin.pkg"
   binary "/usr/local/sessionmanagerplugin/bin/session-manager-plugin"

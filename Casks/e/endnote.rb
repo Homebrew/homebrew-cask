@@ -46,6 +46,7 @@ cask "endnote" do
     end
   end
 
+  depends_on :macos
   container nested: "Install EndNote #{version.csv.second}.app/Contents/Resources/EndNote.zip"
 
   suite "EndNote"

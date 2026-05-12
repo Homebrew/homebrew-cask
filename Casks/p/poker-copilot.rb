@@ -1,6 +1,6 @@
 cask "poker-copilot" do
-  version "8.11,9964"
-  sha256 "f0f1abec26d26dd538720380e4e172c89c961fd061c7a9b84c30d9cfc0d7cfa0"
+  version "8.12,10000"
+  sha256 "a2dcc74451d962f2dffed014c42abf2a6f3ee579d7c288c68e9cb491b0af67fa"
 
   url "https://static.pokercopilot.com/pokercopilot_macos_#{version.csv.first.dots_to_underscores}_build_#{version.csv.second}.dmg"
   name "Poker Copilot"
@@ -14,6 +14,8 @@ cask "poker-copilot" do
       page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
     end
   end
+
+  depends_on :macos
 
   app "Poker Copilot.app"
 

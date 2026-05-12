@@ -10,6 +10,7 @@ cask "allen-and-heath-midi-control" do
 
   disable! date: "2025-09-15", because: :unreachable
 
+  depends_on :macos
   container nested: "Allen and Heath MIDI Control #{version.csv.first}.dmg"
 
   app "Allen and Heath MIDI Control.app"

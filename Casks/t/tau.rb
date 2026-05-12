@@ -14,6 +14,8 @@ cask "tau" do
     regex(/version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   suite "TAU"
 
   uninstall delete: "#{staged_path}/TAU/tau/"

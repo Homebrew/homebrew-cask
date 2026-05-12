@@ -10,6 +10,8 @@ cask "denemo" do
   deprecate! date: "2024-11-16", because: :discontinued
   disable! date: "2025-11-16", because: :discontinued
 
+  depends_on :macos
+
   app "Denemo.app"
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask "eqmac" do
-  version "1.8.14"
-  sha256 "994eec89cc9b172d32212885a5aeb8bfdc919d482fb71e9dd3de577f2a236c6b"
+  version "1.8.15"
+  sha256 "20bd0ab255655dd1e22cbec90117c8a5095f8e774f32f0a4669a475513c7f08d"
 
   url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.dmg",
       verified: "github.com/bitgapp/eqMac/"
@@ -14,6 +14,7 @@ cask "eqmac" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "eqMac.app"
 

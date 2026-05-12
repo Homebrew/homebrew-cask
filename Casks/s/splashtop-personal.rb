@@ -13,6 +13,8 @@ cask "splashtop-personal" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "Splashtop Personal.pkg"
 
   uninstall launchctl: "com.splashtop.stp.macosx.helper.autoupdate",

@@ -8,6 +8,8 @@ cask "zxpinstaller" do
   desc "Adobe extensions installer"
   homepage "https://zxpinstaller.com/"
 
+  depends_on :macos
+
   app "ZXPInstaller.app"
 
   zap trash: "~/Library/Preferences/com.electron.zxpinstaller.plist"

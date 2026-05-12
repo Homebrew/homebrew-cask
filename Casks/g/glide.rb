@@ -16,7 +16,7 @@ cask "glide" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Glide.app"
   binary "#{appdir}/Glide.app/Contents/MacOS/glide"

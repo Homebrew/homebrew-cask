@@ -12,6 +12,8 @@ cask "duefocus" do
     regex(%r{/DueFocus[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "DueFocus.app"
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask "fmail3" do
-  version "2.5.4"
-  sha256 "ddbdd32f8d9134799c1ebdfdaafdafff161447cd2662050fa8efdd127150c5b2"
+  version "2.5.6"
+  sha256 "d4053e5206d8ada076ba5a20ee4cd81816927b4eb824350d6ab8a802666cfa26"
 
   url "https://fmail3.appmac.fr/update/sparkle/FMail3-#{version}.dmg"
   name "FMail3"
@@ -13,7 +13,7 @@ cask "fmail3" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "FMail3.app"
 

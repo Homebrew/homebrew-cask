@@ -8,6 +8,8 @@ cask "golly" do
   desc "Explore Conway's Game of Life and other types of cellular automata"
   homepage "https://golly.sourceforge.io/"
 
+  depends_on :macos
+
   suite "golly-#{version}-mac"
   binary "#{appdir}/golly-#{version}-mac/bgolly"
 

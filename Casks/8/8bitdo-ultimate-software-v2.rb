@@ -12,7 +12,7 @@ cask "8bitdo-ultimate-software-v2" do
     regex(/href=.*?8BitDo[._-]Ultimate[._-]Software[._-]V2[._-]macOS[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "8BitDo Ultimate Software V2.app"
 

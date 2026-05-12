@@ -6,10 +6,10 @@ cask "artisan" do
          intel: "6ef4833ff1990ccf953260c3e4f28e58667d8579cff4b0ab7782b2b301a39642"
 
   on_arm do
-    depends_on macos: ">= :sonoma"
+    depends_on macos: :sonoma
   end
   on_intel do
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
 
   url "https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-mac-#{arch}-#{version}.dmg",
@@ -22,6 +22,8 @@ cask "artisan" do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "Artisan.app"
 

@@ -1,9 +1,9 @@
 cask "kate" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "26.04,11511"
-  sha256 arm:   "ad81cc9c8a530ce5aa53ed818e64fc281320b975eb38a1582d73aa4507576f27",
-         intel: "c2d810afccd0dd34e5ca6449d41a34f64f5e19f28a1bc25e57486ef32815404b"
+  version "26.04,11618"
+  sha256 arm:   "f26223301df70a9490e1f398073dbe2fdbe13da62c3232e3c0c2ea38c0392676",
+         intel: "8904436ed4ed441eee50dd17c141c7f5320ad138b8d6a70b04795d3bbd168d72"
 
   url "https://cdn.kde.org/ci-builds/utilities/kate/release-#{version.csv.first}/macos-#{arch}/kate-release_#{version.csv.first}-#{version.csv.second}-macos-clang-#{arch}.dmg",
       verified: "cdn.kde.org/ci-builds/utilities/kate/"
@@ -31,7 +31,7 @@ cask "kate" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "kate.app"
   shimscript = "#{staged_path}/kate.wrapper.sh"

@@ -8,6 +8,8 @@ cask "virtualgl" do
   desc "3D without boundaries"
   homepage "https://www.virtualgl.org/"
 
+  depends_on :macos
+
   pkg "VirtualGL.pkg"
 
   uninstall script:  {

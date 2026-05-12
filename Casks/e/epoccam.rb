@@ -18,6 +18,8 @@ cask "epoccam" do
     end
   end
 
+  depends_on :macos
+
   pkg "EpocCam_Installer_#{version.dots_to_underscores}.pkg"
 
   uninstall_preflight do

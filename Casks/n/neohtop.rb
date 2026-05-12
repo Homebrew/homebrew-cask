@@ -17,6 +17,8 @@ cask "neohtop" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "NeoHtop.app"
 
   zap trash: [

@@ -14,6 +14,8 @@ cask "temurin@19" do
   deprecate! date: "2025-03-21", because: :discontinued
   disable! date: "2026-03-28", because: :discontinued
 
+  depends_on :macos
+
   pkg "OpenJDK19U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
 
   uninstall pkgutil: "net.temurin.19.jdk"

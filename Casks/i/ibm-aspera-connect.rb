@@ -30,6 +30,8 @@ cask "ibm-aspera-connect" do
     regex(/ibm[._-]aspera[._-]connect[._-]v?(\d+(?:\.\d+)+(?:[._-]HEAD)?)[._-]macOS#{livecheck_arch}/i)
   end
 
+  depends_on :macos
+
   pkg "ibm-aspera-connect_#{version}_macOS_#{arch}.pkg"
 
   uninstall pkgutil: [

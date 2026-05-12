@@ -7,7 +7,7 @@ cask "kubecontext" do
   desc "Menu bar app for managing Kubernetes contexts"
   homepage "https://github.com/turkenh/KubeContext"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "KubeContext.app"
 

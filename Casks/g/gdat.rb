@@ -21,7 +21,7 @@ cask "gdat" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   container nested: "macOS 64 bit/Genealogical DNA Analysis Tool.app.tar"
 
   app "Genealogical DNA Analysis Tool.app"

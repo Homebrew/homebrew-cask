@@ -9,6 +9,8 @@ cask "bit-fiddle" do
 
   deprecate! date: "2025-05-12", because: :moved_to_mas
 
+  depends_on :macos
+
   app "Bit Fiddle.app"
 
   zap trash: [

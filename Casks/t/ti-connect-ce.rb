@@ -15,6 +15,8 @@ cask "ti-connect-ce" do
     end
   end
 
+  depends_on :macos
+
   app "TI Connect CE.app"
 
   zap trash: [

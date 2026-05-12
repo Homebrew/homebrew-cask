@@ -15,7 +15,7 @@ cask "godot" do
   end
 
   conflicts_with cask: "godot@3"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Godot.app"
   binary "#{appdir}/Godot.app/Contents/MacOS/Godot", target: "godot"

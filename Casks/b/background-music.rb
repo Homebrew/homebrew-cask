@@ -12,6 +12,8 @@ cask "background-music" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "BackgroundMusic-#{version}.pkg"
 
   uninstall_postflight do

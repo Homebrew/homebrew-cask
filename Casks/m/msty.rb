@@ -12,6 +12,7 @@ cask "msty" do
   deprecate! date: "2026-01-02", because: :discontinued, replacement_cask: "mstystudio"
 
   auto_updates true
+  depends_on :macos
 
   app "Msty.app"
 

@@ -13,6 +13,8 @@ cask "filemonitor" do
     regex(/href=.*?FileMonitor[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   app "FileMonitor.app"
   binary "#{appdir}/FileMonitor.app/Contents/MacOS/FileMonitor", target: "filemonitor"
 

@@ -17,6 +17,8 @@ cask "openframeworks" do
     regex(/href=.*?of[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]release\.(?:t|zip)/i)
   end
 
+  depends_on :macos
+
   suite "of_v#{version}_osx_release"
 
   # No zap stanza required

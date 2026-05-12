@@ -10,6 +10,7 @@ cask "topaz-video-ai" do
   deprecate! date: "2025-09-16", because: :discontinued, replacement_cask: "topaz-video"
 
   auto_updates true
+  depends_on :macos
 
   pkg "TopazVideoAI-#{version}.pkg"
 

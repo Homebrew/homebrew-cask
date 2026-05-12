@@ -1,6 +1,6 @@
 cask "dockside" do
-  version "2.6.4"
-  sha256 "83b4b30e858472f421bf0f6e5405460eb52c0d82218b277c9b23cfd7774de0c2"
+  version "2.8.4"
+  sha256 "c97745bae23810c7fbbf3aabcfe463ff30a792229cb9ddf0d7db4794dbd8ba70"
 
   url "https://github.com/PrajwalSD/Dockside/releases/download/v#{version}/Dockside.dmg",
       verified: "github.com/PrajwalSD/Dockside/"
@@ -14,7 +14,7 @@ cask "dockside" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Dockside.app"
 

@@ -13,6 +13,8 @@ cask "chordpotion" do
     regex(/href=.*?ChordPotion[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
 
+  depends_on :macos
+
   pkg "ChordPotion_#{version}.pkg"
 
   uninstall pkgutil: [

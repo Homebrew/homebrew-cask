@@ -21,6 +21,8 @@ cask "prosys-opc-ua-browser" do
     end
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "Prosys OPC UA Browser Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],

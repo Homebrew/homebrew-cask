@@ -1,9 +1,9 @@
 cask "zen-privacy" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.20.0"
-  sha256 arm:   "09e9df2682aacafc350cc341f5d4623c8522665e992a1baba5d33262a2be614f",
-         intel: "5a6ce0871895a10f1cd04d6c4a5dbbdbe9c8f67fa9c1008901398c1eadc87288"
+  version "0.21.1"
+  sha256 arm:   "1dbddbd42885466de047e14435dff191577a524fc57293fbbb2746e0a2e1a20d",
+         intel: "a6e34f4185ae420a7b4a3f2eddd8a73c1a99cd40a876e12a7127c16fc62c9a5e"
 
   url "https://github.com/ZenPrivacy/zen-desktop/releases/download/v#{version}/Zen_darwin_#{arch}_noselfupdate.tar.gz",
       verified: "github.com/ZenPrivacy/zen-desktop/"
@@ -18,6 +18,7 @@ cask "zen-privacy" do
 
   auto_updates true
   conflicts_with cask: "zen"
+  depends_on :macos
 
   app "Zen.app"
 

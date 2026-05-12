@@ -16,6 +16,8 @@ cask "memoryanalyzer" do
     regex(/href=.*?MemoryAnalyzer-(\d+(?:\.\d+)*).*?\.dmg/i)
   end
 
+  depends_on :macos
+
   app "MemoryAnalyzer.app"
 
   zap trash: "~/Library/Preferences/org.eclipse.mat.ui.rcp.MemoryAnalyzer.plist"

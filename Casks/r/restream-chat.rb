@@ -12,6 +12,8 @@ cask "restream-chat" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Restream Chat.app"
 
   zap trash: "~/Library/Application Support/Restream Chat"

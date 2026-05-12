@@ -1,9 +1,9 @@
 cask "kiro" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.11.133"
-  sha256  arm:   "3f40714b6c50a99495a58430e88e3de81fdab0df68bfd9f5f1b10a7d88d2554e",
-          intel: "9023c3adcc08c7b54b5b4b0412f8a520efafa1b5a5ad1a92f7ba5bced1a4025e"
+  version "0.12.155"
+  sha256  arm:   "4b734ab90fc98de6097219c05ac20d12c045f697e889e2b6e184ed1c734a8833",
+          intel: "7f10ecde97465304825cc9ab52344aca1dc281633d5d2a2122c2b095b1d9fe74"
 
   url "https://prod.download.desktop.kiro.dev/releases/stable/darwin-#{arch}/signed/#{version}/kiro-ide-#{version}-stable-darwin-#{arch}.dmg"
   name "kiro"
@@ -20,7 +20,7 @@ cask "kiro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Kiro.app"
   binary "#{appdir}/Kiro.app/Contents/Resources/app/bin/code", target: "kiro"

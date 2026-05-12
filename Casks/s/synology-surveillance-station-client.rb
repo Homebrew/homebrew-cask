@@ -17,6 +17,8 @@ cask "synology-surveillance-station-client" do
     end
   end
 
+  depends_on :macos
+
   pkg "Install Synology Surveillance Station Client.pkg"
 
   uninstall launchctl: "com.synology.svsclient-SurveillanceStationClient",

@@ -22,6 +22,8 @@ cask "testfully" do
     end
   end
 
+  depends_on :macos
+
   app "Testfully.app"
 
   zap trash: [

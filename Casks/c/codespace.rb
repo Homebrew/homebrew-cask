@@ -12,6 +12,8 @@ cask "codespace" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Codespace.app"
 
   zap trash: [

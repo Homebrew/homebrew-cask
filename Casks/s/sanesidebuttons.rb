@@ -23,7 +23,7 @@ cask "sanesidebuttons" do
   desc "Menu bar app that enables system-wide navigation using side mouse buttons"
   homepage "https://janhuelsmann.com/sanesidebuttons"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "SaneSideButtons.app"
 

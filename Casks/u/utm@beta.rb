@@ -1,6 +1,6 @@
 cask "utm@beta" do
-  version "5.0.2"
-  sha256 "e4f61e6a7a317fe85d855715a2845264ead3751e56cda808af8dc8e0156ed1b9"
+  version "5.0.3"
+  sha256 "fd44a83cf2faecf7e85691652f204a304ba6d86d7d52bfbeee73b26c63a7e3c0"
 
   url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
       verified: "github.com/utmapp/UTM/"
@@ -26,7 +26,7 @@ cask "utm@beta" do
   end
 
   conflicts_with cask: "utm"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "UTM.app"
   binary "#{appdir}/UTM.app/Contents/MacOS/utmctl"

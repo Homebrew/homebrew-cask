@@ -5,13 +5,13 @@ cask "rnote" do
     version "0.14.0+227"
     sha256 "63f3178f1fba2b0d2d2ac131766e3f581df4550a1d49dfa3d24e8cc909e44803"
 
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
   on_intel do
     version "0.13.1+215"
     sha256 "c985ea4757b9ac03cd7485ac824d3488a31b52b98fdb221a1d5ee062d58d7af8"
 
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
 
   url "https://gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/#{version}/Rnote-#{version}_#{arch}.dmg",
@@ -33,6 +33,8 @@ cask "rnote" do
       end.flatten
     end
   end
+
+  depends_on :macos
 
   app "Rnote.app"
 

@@ -1,5 +1,5 @@
 cask "cavalry" do
-  version "2.7"
+  version "2.7.1"
   sha256 :no_check
 
   url "https://cavalry.studio/downloads/latest/Cavalry.dmg"
@@ -12,7 +12,7 @@ cask "cavalry" do
     regex(/Latest\s+version:\s*(?:<[^>]+>)?\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Cavalry.app"
 

@@ -9,6 +9,9 @@ cask "deco" do
   homepage "https://www.decosoftware.com/"
 
   deprecate! date: "2025-04-21", because: :unmaintained
+  disable! date: "2026-04-30", because: :unmaintained
+
+  depends_on :macos
 
   # pkg cannot be installed automatically and the .zip of the `app` has errors
   installer manual: "Deco-#{version}.pkg"

@@ -12,6 +12,8 @@ cask "paulxstretch" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "PaulXStretch Installer.pkg"
 
   uninstall pkgutil: "com.sonosaurus.paulxstretch.pkg.*"

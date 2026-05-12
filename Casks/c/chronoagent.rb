@@ -12,6 +12,8 @@ cask "chronoagent" do
     regex(/>\s*ChronoAgent.*?Version\s+(\d+(?:\.\d+)+)[\s<]+/i)
   end
 
+  depends_on :macos
+
   pkg "Install.pkg"
 
   uninstall launchctl: "com.econtechnologies.ChronoAgentRemote",

@@ -10,5 +10,7 @@ cask "alchemy" do
   deprecate! date: "2024-06-10", because: :discontinued
   disable! date: "2025-06-11", because: :discontinued
 
+  depends_on :macos
+
   app "Alchemy/Alchemy.app"
 end

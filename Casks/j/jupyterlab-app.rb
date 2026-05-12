@@ -16,6 +16,8 @@ cask "jupyterlab-app" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "JupyterLab.app"
 
   uninstall pkgutil: "com.electron.jupyterlab-desktop",

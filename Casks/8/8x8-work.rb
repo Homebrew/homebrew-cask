@@ -1,9 +1,9 @@
 cask "8x8-work" do
   arch arm: "-arm64"
 
-  version "8.32.2-10"
-  sha256 arm:   "64b4f566378d1417cba150bfc62f11a7250f2a6d2a6b189fc666d36cc615423d",
-         intel: "12278cd2a8ab972bc96c81c971f091836e70826d1ed9e0cab805f967f7ac82bf"
+  version "8.33.2-2"
+  sha256 arm:   "c9eaf3b9017a44864e4ed89d7b4f55e49ffe5b979401d1a425c03fb2d8f414bb",
+         intel: "5edeb2fdf5ef994a1d94e9b250c825929c18986ad4476eeb9d1a77a8a10947ea"
 
   url "https://work-desktop-assets.8x8.com/prod-publish/ga/work#{arch}-dmg-v#{version}.dmg"
   name "8x8_work"
@@ -15,7 +15,7 @@ cask "8x8-work" do
     regex(/href=.*?work[._-]dmg[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "8x8 Work.app"
 

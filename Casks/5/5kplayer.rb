@@ -18,6 +18,7 @@ cask "5kplayer" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "5KPlayer.app"
 

@@ -30,6 +30,7 @@ cask "bcut" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "BCUT.app"
 

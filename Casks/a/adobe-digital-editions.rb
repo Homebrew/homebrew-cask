@@ -13,6 +13,8 @@ cask "adobe-digital-editions" do
     regex(/Adobe\s*Digital\s*Editions\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "Digital Editions #{version.major_minor} Installer.pkg"
 
   uninstall quit:    "com.adobe.adobedigitaleditions.app",

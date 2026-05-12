@@ -13,6 +13,7 @@ cask "clamxav" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "ClamXAV_#{version.csv.first}_#{version.csv.second}_Installer.pkg"
   binary "#{appdir}/ClamXAV.app/Contents/MacOS/XAV"

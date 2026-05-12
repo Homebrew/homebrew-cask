@@ -1,6 +1,6 @@
 cask "anka-virtualization" do
-  version "3.8.6.212"
-  sha256 "9a020774c32aacf9442d0a89ed1f2160a570b3ab8144ddbb61dfbea94d5bdbf5"
+  version "3.9.0.215"
+  sha256 "03b58ed2147f4105bcbfabdfd61e52f137d3c26514e307a35784bb098b7c12db"
 
   url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
@@ -13,7 +13,7 @@ cask "anka-virtualization" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Anka-#{version}.pkg"
 

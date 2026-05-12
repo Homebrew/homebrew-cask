@@ -12,6 +12,8 @@ cask "screenfocus" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "ScreenFocus.app"
 
   zap trash: [

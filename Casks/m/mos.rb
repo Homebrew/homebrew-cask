@@ -1,6 +1,6 @@
 cask "mos" do
-  version "4.0.2,20260308.2"
-  sha256 "d4304544846347d15c9790ed1debb09f7a99810fa3591ba3605ce33ea6b7fdd6"
+  version "4.2.0,20260505.1"
+  sha256 "4acc001bb57eecb6c06cf707c12e0aafed13160e975a161310aee5542de56024"
 
   url "https://github.com/Caldis/Mos/releases/download/#{version.csv.first}/Mos.Versions.#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}.zip",
       verified: "github.com/Caldis/Mos/"
@@ -14,6 +14,7 @@ cask "mos" do
   end
 
   conflicts_with cask: "mos@beta"
+  depends_on :macos
 
   app "Mos.app"
 

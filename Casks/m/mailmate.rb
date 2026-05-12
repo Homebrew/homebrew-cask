@@ -15,6 +15,7 @@ cask "mailmate" do
 
   auto_updates true
   conflicts_with cask: "mailmate@beta"
+  depends_on :macos
 
   app "MailMate.app"
   binary "#{appdir}/MailMate.app/Contents/Resources/emate"

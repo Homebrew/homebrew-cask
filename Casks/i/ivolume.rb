@@ -12,6 +12,8 @@ cask "ivolume" do
     regex(/iVolume\s+(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "iVolume.app"
 
   zap trash: [

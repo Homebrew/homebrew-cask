@@ -1,6 +1,6 @@
 cask "tablen" do
-  version "1.23.0"
-  sha256 "fb142bfeb0c184cc4e1786f9405bb5412a79b3fd509da140e867cbbd9dbb355c"
+  version "1.25.1"
+  sha256 "b99816a81fb1612649cfd0eae4ee3a2c5044d0c4e78b5341fa2b11fa8a26c5c1"
 
   url "https://cdn.tablen.app/releases/Tablen-#{version}.dmg"
   name "Tablen"
@@ -13,7 +13,7 @@ cask "tablen" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Tablen.app"
 

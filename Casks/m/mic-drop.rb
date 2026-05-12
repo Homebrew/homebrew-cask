@@ -12,6 +12,7 @@ cask "mic-drop" do
   disable! date: "2025-10-08", because: :moved_to_mas
 
   auto_updates true
+  depends_on :macos
 
   app "Mic Drop.app"
 

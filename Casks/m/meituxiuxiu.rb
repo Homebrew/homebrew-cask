@@ -1,5 +1,5 @@
 cask "meituxiuxiu" do
-  version "2.2.16"
+  version "2.2.30"
   sha256 :no_check
 
   url "https://xiuxiupc-dl.meitudata.com/xiuxiumac_setup.dmg",
@@ -18,7 +18,7 @@ cask "meituxiuxiu" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   app "美图秀秀.app"
 

@@ -11,6 +11,8 @@ cask "geburtstagschecker" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   # The url is unversioned, but the download returns an app directory with a version number
   rename "GeburtstagsChecker #{version.csv.first} (#{version.csv.second})", "GeburtstagsChecker"
 

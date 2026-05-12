@@ -8,6 +8,8 @@ cask "qwerty-fr" do
   desc "QWERTY-based layout. Type EU languages, greek, math, currencies, & more!"
   homepage "https://qwerty-fr.org/"
 
+  depends_on :macos
+
   keyboard_layout "qwerty-fr.bundle"
 
   # No zap stanza required

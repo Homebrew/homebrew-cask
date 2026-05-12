@@ -12,6 +12,8 @@ cask "keysafe" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   binary "miln-keysafe-v#{version}-darwin-universal/keysafe"
 
   # No zap stanza required

@@ -39,5 +39,7 @@ cask "tinypng4mac" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   zap trash: "~/Library/Preferences/com.kyleduo.tinypngmac.plist"
 end

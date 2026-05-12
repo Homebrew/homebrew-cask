@@ -1,6 +1,6 @@
 cask "reaper" do
-  version "7.69"
-  sha256 "c9a042bc4c58be8e3af8bb5c0fe0c44cf387caf3f51ccb439c04f2fa4b14549a"
+  version "7.72"
+  sha256 "6ed872c050cecd6b7c9e62ac79c7d1ce545c8455687c8c1b0e047dcd402ec713"
 
   url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_universal.dmg"
   name "REAPER"
@@ -11,6 +11,8 @@ cask "reaper" do
     url "https://www.cockos.com/reaper/latestversion/?p=osx_64"
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
+
+  depends_on :macos
 
   app "REAPER.app"
 

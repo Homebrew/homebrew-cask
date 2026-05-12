@@ -1,5 +1,5 @@
 cask "youdaodict" do
-  version "11.3.2,1053"
+  version "11.3.4,1055"
   sha256 :no_check
 
   url "https://codown.youdao.com/cidian/download/MacDict.dmg"
@@ -12,6 +12,8 @@ cask "youdaodict" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on :macos
 
   app "网易有道翻译.app"
 

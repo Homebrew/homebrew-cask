@@ -13,6 +13,8 @@ cask "chatty" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   suite "Chatty"
 
   preflight do

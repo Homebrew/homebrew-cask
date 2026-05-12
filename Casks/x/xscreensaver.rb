@@ -12,6 +12,8 @@ cask "xscreensaver" do
     regex(/href=.*?xscreensaver[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   pkg "Install Everything.pkg"
 
   # There is no uninstall script for this Cask, so a manual uninstall is performed

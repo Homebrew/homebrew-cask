@@ -1,6 +1,6 @@
 cask "pcoipclient" do
-  version "26.01.1"
-  sha256 "e96911b8e30f1f1871d71b3adfdaed67eb406154ebaf0200100b4c6a32faf24f"
+  version "26.01.2"
+  sha256 "5a2adec5fa5664ac1142855b080c0dc53c5de0ddbce76c74ab64f8b895b726d5"
 
   url "https://dl.anyware.hp.com/DeAdBCiUYInHcSTy/pcoip-client/raw/names/pcoip-client-dmg/versions/#{version}/pcoip-client_#{version}.dmg"
   name "Teradici PCoIP Software Client for macOS"
@@ -12,7 +12,7 @@ cask "pcoipclient" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "PCoIPClient.app"
 

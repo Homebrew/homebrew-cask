@@ -10,6 +10,8 @@ cask "aws-vault-binary" do
   desc "Securely stores and accesses AWS credentials in a development environment"
   homepage "https://github.com/99designs/aws-vault"
 
+  depends_on :macos
+
   binary "aws-vault"
 
   # No zap stanza required

@@ -12,6 +12,7 @@ cask "thonny-xxl" do
   disable! date: "2025-07-04", because: :discontinued
 
   conflicts_with cask: "thonny"
+  depends_on :macos
 
   pkg "thonny-xxl-#{version}.pkg"
 

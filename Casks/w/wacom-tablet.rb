@@ -1,6 +1,6 @@
 cask "wacom-tablet" do
-  version "6.4.12-3"
-  sha256 "7a5fb45ad8e54757cae4fde6a9ec54c645198d81ee5db531864e3cc675270efe"
+  version "6.4.13-4"
+  sha256 "9790dc62a49e27f1a4b03f47133cbc47ae0d4975523ad387120048ad2776a17f"
 
   url "https://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
   name "Wacom Tablet"
@@ -12,7 +12,7 @@ cask "wacom-tablet" do
     regex(%r{/WacomTablet[._-]?v?(\d+(?:\.\d+)+(?:[_-]\d+[a-z]?)?)\.dmg}i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :ventura
 
   pkg "Install Wacom Tablet.pkg"
 

@@ -16,6 +16,8 @@ cask "aviatrix-vpn-client" do
     end
   end
 
+  depends_on :macos
+
   pkg "AVPNC_mac.pkg"
 
   uninstall launchctl: "aviatrix.vpn.client.rp.plist",

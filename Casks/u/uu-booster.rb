@@ -13,6 +13,8 @@ cask "uu-booster" do
     regex(%r{pc_link.*?/UU[._-]macOS[._-]v?(\d+(?:\.\d+)+).dmg}i)
   end
 
+  depends_on :macos
+
   app "UUBooster.app"
 
   zap trash: [

@@ -20,7 +20,7 @@ cask "longplay" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Longplay.app"
 

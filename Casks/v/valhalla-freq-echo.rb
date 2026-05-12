@@ -16,6 +16,8 @@ cask "valhalla-freq-echo" do
     end
   end
 
+  depends_on :macos
+
   pkg "ValhallaFreqEchoOSX.pkg"
 
   uninstall pkgutil: "com.valhalladsp.FreqEcho.pkg.*"

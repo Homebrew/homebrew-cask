@@ -24,6 +24,8 @@ cask "dyalog" do
   desc "APL-based development environment"
   homepage "https://www.dyalog.com/"
 
+  depends_on :macos
+
   pkg "mac#{arch}_64_#{version}_unicode.pkg"
 
   uninstall pkgutil: "com.dyalog.pkg.dyalog#{version.major_minor.no_dots}"

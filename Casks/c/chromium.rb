@@ -13,7 +13,7 @@ cask "chromium" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   conflicts_with cask: "ungoogled-chromium"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "chrome-mac/Chromium.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

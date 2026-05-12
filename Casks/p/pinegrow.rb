@@ -1,9 +1,9 @@
 cask "pinegrow" do
   arch arm: "ARM64", intel: "X64"
 
-  version "9.01"
-  sha256 arm:   "25a6e5462ab964037eaf32b22667f6449fc67010771ddcba4a70dddc21ec1f9a",
-         intel: "46d7ae810276286a9c0a6981fd5bf891556222338a1cdf77f1b9349152fa769d"
+  version "9.2"
+  sha256 arm:   "e4f2c8428feddb5de61a8f3e2636c973646078ee9a8a44a34fa9f8551ae8904f",
+         intel: "37d22c3a222d31fd9159d1e72603de947b7b1cbb91ff709c87163719d8cc8106"
 
   url "https://download.pinegrow.com/PinegrowMac#{arch}.#{version}.dmg"
   name "Pinegrow"
@@ -15,7 +15,7 @@ cask "pinegrow" do
     regex(%r{href=.*?/PinegrowMac#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Pinegrow.app"
 

@@ -7,7 +7,7 @@ cask "widgettoggler" do
   desc "Tool to toggle the visibility of homescreen widgets"
   homepage "https://github.com/sieren/WidgetToggler"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "WidgetToggler.app"
 

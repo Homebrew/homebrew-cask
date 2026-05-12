@@ -16,6 +16,8 @@ cask "fightcade" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Fightcade#{version.major}.app"
 
   zap trash: [

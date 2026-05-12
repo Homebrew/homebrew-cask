@@ -28,6 +28,7 @@ cask "tunnelbear" do
   homepage "https://www.tunnelbear.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "TunnelBear.app"
 

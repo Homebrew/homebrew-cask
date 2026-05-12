@@ -21,6 +21,8 @@ cask "smartsynchronize" do
     end
   end
 
+  depends_on :macos
+
   app "SmartSynchronize.app"
   binary "#{appdir}/SmartSynchronize.app/Contents/MacOS/SmartSynchronize"
 

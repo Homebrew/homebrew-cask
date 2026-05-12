@@ -13,6 +13,8 @@ cask "flic" do
     regex(/Flic\.(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   app "Flic.app"
 
   zap trash: [

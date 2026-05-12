@@ -24,6 +24,8 @@ cask "zulu@8" do
     end
   end
 
+  depends_on :macos
+
   pkg "Double-Click to Install Azul Zulu JDK #{version.major}.pkg"
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"

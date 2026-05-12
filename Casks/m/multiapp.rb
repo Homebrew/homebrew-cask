@@ -10,7 +10,7 @@ cask "multiapp" do
   disable! date: "2025-06-06", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Multi.app"
 

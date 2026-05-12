@@ -13,6 +13,8 @@ cask "colorchecker-camera-calibration" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "ColorCheckerCameraCalibration.pkg"
 
   uninstall \

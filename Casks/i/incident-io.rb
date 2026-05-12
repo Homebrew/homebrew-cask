@@ -1,6 +1,6 @@
 cask "incident-io" do
-  version "1.2.23"
-  sha256 "453448426dc027543fec81d4179f91f50117a4e8bd469a225c66a5b634960178"
+  version "1.2.24"
+  sha256 "5ce6e6e69832db208101b4b2524a28deca88d6c8da4b597d8589ba03bd81ddbe"
 
   url "https://storage.googleapis.com/incident-io-production-downloads/incident.io-#{version}.zip",
       verified: "storage.googleapis.com/incident-io-production-downloads/"
@@ -14,7 +14,7 @@ cask "incident-io" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "incident.io.app"
 

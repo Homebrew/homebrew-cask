@@ -1,6 +1,6 @@
 cask "nomachine-enterprise-client" do
-  version "9.4.14_1"
-  sha256 "864b5345a9930f09a9d5bad06f0b92735636ca686074ac44b273025ebdd7d6b2"
+  version "9.5.7_1"
+  sha256 "5f4e8bc1f22813910df8bfeb12d55e3ac92a7537c3b0de3070e533b32fba04bb"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine-enterprise-client_#{version}.dmg"
   name "NoMachine Enterprise Client"
@@ -13,6 +13,8 @@ cask "nomachine-enterprise-client" do
   livecheck do
     cask "nomachine"
   end
+
+  depends_on :macos
 
   pkg "NoMachine.pkg"
 

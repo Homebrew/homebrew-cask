@@ -1,6 +1,6 @@
 cask "openforis-collect" do
-  version "4.0.106"
-  sha256 "5d6b2a27df21fec82ca81bb056155aef19f20e8218d115f09fd09872f6c0b88b"
+  version "4.0.108"
+  sha256 "6e6f03cf7e472eabf32a434ef97d4ff4f826c36e08c3946f99a276cc8611af9f"
 
   url "https://search.maven.org/remotecontent?filepath=org/openforis/collect/collect-installer/#{version}/collect-installer-#{version}-osx.dmg",
       verified: "search.maven.org/"
@@ -12,6 +12,8 @@ cask "openforis-collect" do
     url "https://search.maven.org/remotecontent?filepath=org/openforis/collect/collect-installer/maven-metadata.xml"
     regex(%r{<version>v?(\d+(?:\.\d+)+)</version>}i)
   end
+
+  depends_on :macos
 
   rename "OpenForisCollect-*-osx-installer.app", "OpenForisCollect-osx-installer.app"
 

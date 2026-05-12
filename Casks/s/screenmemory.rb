@@ -13,7 +13,7 @@ cask "screenmemory" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "ScreenMemory.app"
 

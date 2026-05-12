@@ -13,6 +13,7 @@ cask "fontfinagler" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Font Finagler.app"
   binary "#{appdir}/Font Finagler.app/Contents/MacOS/finagler"

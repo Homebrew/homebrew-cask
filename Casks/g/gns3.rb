@@ -19,7 +19,7 @@ cask "gns3" do
     strategy :github_releases
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "GNS3.app"
 

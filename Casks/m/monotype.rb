@@ -16,6 +16,7 @@ cask "monotype" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "MTFInstaller.pkg"
 

@@ -13,6 +13,8 @@ cask "avg-antivirus" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "AVG AntiVirus.pkg"
 
   uninstall launchctl: [

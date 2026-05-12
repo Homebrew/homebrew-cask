@@ -12,6 +12,8 @@ cask "elpass" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "Elpass.app"
 
   zap trash: [

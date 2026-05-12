@@ -13,6 +13,8 @@ cask "hhkb" do
     regex(%r{macOS\s*</td>.*?HHKBkeymapTool[._-]v?\d+(?:\.\d+)*[^.]*?\.dmg.*?>\s*v?(\d+(?:\.\d+)+)\s*<}im)
   end
 
+  depends_on :macos
+
   pkg "HHKBkeymapTool_#{version.no_dots}ma.pkg"
 
   uninstall quit:    "jp.co.pfu.hhkb-keymap-tool",

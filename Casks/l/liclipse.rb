@@ -24,6 +24,8 @@ cask "liclipse" do
     end
   end
 
+  depends_on :macos
+
   app "LiClipse_#{arch}/LiClipse.app"
   artifact "LiClipse_#{arch}/LiClipseJre19.app", target: "#{appdir}/LiClipseJre19.app"
 

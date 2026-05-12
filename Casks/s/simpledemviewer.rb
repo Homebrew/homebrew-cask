@@ -12,7 +12,7 @@ cask "simpledemviewer" do
     regex(/SimpleDEMViewer\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "SimpleDEMViewer #{version}/SimpleDEMViewer.app"
 

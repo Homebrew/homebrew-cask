@@ -15,6 +15,8 @@ cask "alifix" do
     end
   end
 
+  depends_on :macos
+
   app "alifix#{version.csv.first.no_dots}/Alifix.app"
 
   zap trash: [

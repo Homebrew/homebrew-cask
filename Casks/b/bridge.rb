@@ -12,6 +12,7 @@ cask "bridge" do
   disable! date: "2026-12-18", because: :discontinued, replacement_cask: "epic-games"
 
   auto_updates true
+  depends_on :macos
 
   app "Bridge.app"
 

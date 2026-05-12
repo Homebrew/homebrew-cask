@@ -12,6 +12,8 @@ cask "scratch" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Scratch #{version.major}.app"
 
   zap trash: [

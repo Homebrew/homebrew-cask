@@ -17,7 +17,7 @@ cask "excire-search" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "Install.pkg"
 

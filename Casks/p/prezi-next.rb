@@ -10,6 +10,8 @@ cask "prezi-next" do
   deprecate! date: "2025-04-05", because: :discontinued
   disable! date: "2026-04-06", because: :discontinued
 
+  depends_on :macos
+
   app "Prezi Next.app"
 
   zap trash: [

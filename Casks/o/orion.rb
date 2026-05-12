@@ -82,6 +82,7 @@ cask "orion" do
   homepage "https://browser.kagi.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "Orion.app"
 

@@ -9,7 +9,7 @@ cask "novation-play" do
 
   disable! date: "2026-02-22", because: "download requires authentication"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "Play.pkg"
 

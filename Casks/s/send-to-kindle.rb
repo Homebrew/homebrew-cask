@@ -13,6 +13,8 @@ cask "send-to-kindle" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "SendToKindleForMac-installer.pkg"
 
   uninstall launchctl: "com.amazon.sendtokindle.launcher",

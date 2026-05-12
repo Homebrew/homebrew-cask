@@ -1,6 +1,6 @@
 cask "ghostty@tip" do
-  version "15934,2a3d93f77ba42ebb099bc7d686e65f6978ff4a94"
-  sha256 "e35a081f0a48fa502054fb1a4ed65ae71a4290ce5dfa30cf7a885e6ff5d29c96"
+  version "16124,b0f8276658fbcc75318d2125d40146074a3fc505"
+  sha256 "a7599e92b9b933fa52c8e639fe20bd4c93e4e0c81de41ccd82357feb14bd1aec"
 
   url "https://tip.files.ghostty.org/#{version.csv.second}/Ghostty.dmg"
   name "Ghostty"
@@ -25,7 +25,7 @@ cask "ghostty@tip" do
 
   auto_updates true
   conflicts_with cask: "ghostty"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Ghostty.app"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man1/ghostty.1"

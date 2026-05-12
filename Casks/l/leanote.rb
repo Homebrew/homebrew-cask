@@ -10,6 +10,8 @@ cask "leanote" do
 
   disable! date: "2025-11-30", because: :discontinued
 
+  depends_on :macos
+
   app "Leanote.app"
 
   zap trash: [

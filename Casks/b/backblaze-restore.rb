@@ -13,7 +13,7 @@ cask "backblaze-restore" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "BackblazeRestore.app", target: "Backblaze Restore.app"

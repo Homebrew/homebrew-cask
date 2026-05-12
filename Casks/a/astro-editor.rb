@@ -13,6 +13,8 @@ cask "astro-editor" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Astro Editor.app"
 
   zap trash: [

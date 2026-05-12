@@ -1,6 +1,6 @@
 cask "topaz-video" do
-  version "1.3.1"
-  sha256 "bdcd1e8f13f0bf6f81fd1b0befe1b9301422b3a01f5e7d2d6a80bd2c1fb67c6e"
+  version "1.5.0"
+  sha256 "a2192a98545ef73aa190f5dde6b38d09d61d5e41fec12b441aa8ff80cc946ea5"
 
   url "https://downloads.topazlabs.com/deploy/TopazVideoStudio/#{version}/TopazVideo-#{version}.pkg"
   name "Topaz Video"
@@ -13,8 +13,8 @@ cask "topaz-video" do
   end
 
   auto_updates true
-  depends_on arch:  :arm64,
-             macos: ">= :big_sur"
+  depends_on arch: :arm64
+  depends_on macos: :big_sur
 
   pkg "TopazVideo-#{version}.pkg"
 

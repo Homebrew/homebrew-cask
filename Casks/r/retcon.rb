@@ -1,6 +1,6 @@
 cask "retcon" do
-  version "1.5.3"
-  sha256 "c0d5d9b94d3232322d68d702c2d62f8b43d3ccbd2dd916156dfac5297d81e495"
+  version "1.6"
+  sha256 "27a4530efb798cdbf5c3abf10b39664711d70bd3c75ed17b121c2944da7e09dc"
 
   url "https://downloads.lemon.garden/retcon/retcon-#{version}.dmg",
       verified: "downloads.lemon.garden/retcon/"
@@ -16,7 +16,7 @@ cask "retcon" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Retcon.app"
 

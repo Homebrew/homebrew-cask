@@ -14,6 +14,8 @@ cask "ente-auth" do
     strategy :github_releases
   end
 
+  depends_on :macos
+
   app "Ente Auth.app"
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask "zen" do
-  version "1.19.8b"
-  sha256 "08b06881fea899fc4f2adac93232c028a71334bbba6945a00268279e31108355"
+  version "1.19.12b"
+  sha256 "5c564941d6117e87ac7eb4cfe11b0a1fad772be2e02d6f0af48d38f788bea012"
 
   url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen.macos-universal.dmg",
       verified: "github.com/zen-browser/desktop/"
@@ -17,6 +17,7 @@ cask "zen" do
 
   auto_updates true
   conflicts_with cask: "zen-privacy"
+  depends_on :macos
 
   app "Zen.app"
   binary "#{appdir}/Zen.app/Contents/MacOS/zen"

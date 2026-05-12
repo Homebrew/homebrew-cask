@@ -7,7 +7,7 @@ cask "santa" do
   desc "Binary authorization system"
   homepage "https://github.com/northpolesec/santa"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "santa-#{version}.pkg"
 

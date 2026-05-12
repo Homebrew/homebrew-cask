@@ -13,6 +13,7 @@ cask "pacifist" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Pacifist.app"
   binary "#{appdir}/Pacifist.app/Contents/Resources/usr/bin/pacifist"

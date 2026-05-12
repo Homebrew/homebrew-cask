@@ -67,6 +67,8 @@ cask "klayout" do
   desc "IC design layout viewer and editor"
   homepage "https://www.klayout.de/"
 
+  depends_on :macos
+
   suite "KLayout"
 
   preflight do

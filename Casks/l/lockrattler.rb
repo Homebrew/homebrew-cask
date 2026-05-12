@@ -23,6 +23,8 @@ cask "lockrattler" do
     end
   end
 
+  depends_on :macos
+
   app "lockrattler#{version.csv.first.major}#{version.csv.first.minor}/LockRattler.app"
 
   zap trash: [

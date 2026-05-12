@@ -12,6 +12,8 @@ cask "virtual-desktop-streamer" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "VirtualDesktop.Streamer.Setup.pkg"
 
   uninstall launchctl: [

@@ -23,7 +23,7 @@ cask "halion-sonic" do
     "steinberg-library-manager",
     "steinberg-mediabay",
   ]
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "HALion_Sonic_Installer.pkg"
 

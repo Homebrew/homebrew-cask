@@ -1,7 +1,7 @@
 cask "shutter-encoder" do
   arch arm: "Apple Silicon", intel: "Mac 64bits"
 
-  version "20.0"
+  version "20.1"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.shutterencoder.com/Shutter%20Encoder%20#{version}%20#{arch.gsub(" ", "%20")}.pkg"
@@ -13,6 +13,8 @@ cask "shutter-encoder" do
     url "https://www.shutterencoder.com/changelog.txt"
     regex(/^\s*Version\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   pkg "Shutter Encoder #{version} #{arch}.pkg"
 

@@ -18,6 +18,8 @@ cask "screenflick" do
     end
   end
 
+  depends_on :macos
+
   app "Screenflick.app"
 
   zap trash: [

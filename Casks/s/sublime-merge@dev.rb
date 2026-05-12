@@ -17,6 +17,7 @@ cask "sublime-merge@dev" do
 
   auto_updates true
   conflicts_with cask: "sublime-merge"
+  depends_on :macos
 
   app "Sublime Merge.app"
   binary "#{appdir}/Sublime Merge.app/Contents/SharedSupport/bin/smerge"

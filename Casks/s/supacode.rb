@@ -1,6 +1,6 @@
 cask "supacode" do
-  version "0.8.4"
-  sha256 "70b4d3569986e75018e02aeac67618a9b880e49c2cd5838de3bb3a8611289f39"
+  version "0.8.5"
+  sha256 "0391cce0060879ca7c68bc6d3a8a29ce86e5b6fb91e4c04237d005159db0e3ea"
 
   url "https://supacode.sh/download/v#{version}/supacode.dmg"
   name "supacode"
@@ -22,7 +22,7 @@ cask "supacode" do
   end
 
   auto_updates true
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "supacode.app"
 

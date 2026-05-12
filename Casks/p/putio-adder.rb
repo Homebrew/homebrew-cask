@@ -9,5 +9,7 @@ cask "putio-adder" do
   deprecate! date: "2024-06-03", because: :unmaintained
   disable! date: "2025-06-03", because: :unmaintained
 
+  depends_on :macos
+
   app "put.io adder.app"
 end

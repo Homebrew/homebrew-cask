@@ -16,6 +16,8 @@ cask "turbovnc-viewer" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "TurboVNC.pkg"
 
   uninstall script:  {

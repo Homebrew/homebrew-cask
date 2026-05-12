@@ -1,6 +1,6 @@
 cask "reflect" do
-  version "3.2.4"
-  sha256 "19e781a5771b11c0753a7ffc1d90cc786890f90c517ffbce1e4b2c53d1aac974"
+  version "3.3.5"
+  sha256 "247eadb15ec3849f98838019d4d575da52e7681da0556be7d7c66d84474930db"
 
   url "https://github.com/team-reflect/reflect-electron-updates/releases/download/v#{version}/Reflect-darwin-universal-#{version}.zip",
       verified: "github.com/team-reflect/reflect-electron-updates/"
@@ -9,7 +9,7 @@ cask "reflect" do
   homepage "https://reflect.app/"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Reflect.app"
 

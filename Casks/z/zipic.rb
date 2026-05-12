@@ -1,6 +1,6 @@
 cask "zipic" do
-  version "1.9.3"
-  sha256 "9e002979e9c2c9634ee1d63897e9f211da59196151efdc9abc034a619414ec2d"
+  version "1.9.5"
+  sha256 "3ade66b76994aaed4c910b4b30cc6a5b106c9b4ef86949d086e058d2ecbf0817"
 
   url "https://releases.5km.tech/zipic/Zipic%20#{version}.dmg",
       verified: "releases.5km.tech/"
@@ -14,7 +14,7 @@ cask "zipic" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Zipic.app"
 

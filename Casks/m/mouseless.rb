@@ -16,7 +16,7 @@ cask "mouseless" do
   end
 
   conflicts_with cask: "mouseless@preview"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Mouseless.app"
 

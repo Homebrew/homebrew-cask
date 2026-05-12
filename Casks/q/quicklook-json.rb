@@ -10,6 +10,8 @@ cask "quicklook-json" do
   # Artifact not available over HTTPS
   disable! date: "2025-12-23", because: :no_longer_meets_criteria
 
+  depends_on :macos
+
   qlplugin "QuickLookJSON.qlgenerator"
 
   # No zap stanza required

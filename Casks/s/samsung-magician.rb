@@ -13,6 +13,7 @@ cask "samsung-magician" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer manual: "Samsung_Magician_Installer_Official_#{version}.pkg"
 

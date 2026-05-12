@@ -18,6 +18,8 @@ cask "gitlight" do
     end
   end
 
+  depends_on :macos
+
   app "GitLight.app"
 
   zap trash: [

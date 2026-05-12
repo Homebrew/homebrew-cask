@@ -14,6 +14,8 @@ cask "earnapp" do
     end
   end
 
+  depends_on :macos
+
   pkg "earnapp-macos-#{version}.pkg"
 
   uninstall quit:    [

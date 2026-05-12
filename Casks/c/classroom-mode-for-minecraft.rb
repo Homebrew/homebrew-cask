@@ -13,6 +13,8 @@ cask "classroom-mode-for-minecraft" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Classroom Mode for Minecraft.app"
 
   zap trash: [

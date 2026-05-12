@@ -12,6 +12,8 @@ cask "gg" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "gg.app"
   binary "#{appdir}/gg.app/Contents/MacOS/gg"
 

@@ -11,7 +11,7 @@ cask "unite-phone" do
   # Artifact URL is consistently unreachable in the homebrew/cask CI environment
   disable! date: "2025-12-31", because: :unreachable
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Unite Phone.app"
 

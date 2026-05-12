@@ -14,6 +14,8 @@ cask "synology-chat" do
     end
   end
 
+  depends_on :macos
+
   app "Synology Chat.app"
 
   zap trash: "~/Library/Application Support/Synology Chat"

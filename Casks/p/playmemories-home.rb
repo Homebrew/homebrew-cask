@@ -19,6 +19,8 @@ cask "playmemories-home" do
     end
   end
 
+  depends_on :macos
+
   pkg "PMH_INST.pkg"
 
   uninstall launchctl: [

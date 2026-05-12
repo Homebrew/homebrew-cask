@@ -1,6 +1,6 @@
 cask "dolphin@dev" do
-  version "2603-316,b5,35"
-  sha256 "375b6c7ee56c6ebfb760cd78f1edba981c3dd3c0adda8d8a08bb3ebe20e51cb2"
+  version "2603-369,2a,a5"
+  sha256 "505bf1bd74546987e4696d5724d656d51b2ecb2f6daf86affaa5905015edabcd"
 
   url "https://dl.dolphin-emu.org/builds/#{version.csv.second}/#{version.csv.third}/dolphin-master-#{version.csv.first}-universal.dmg"
   name "Dolphin Dev"
@@ -22,7 +22,7 @@ cask "dolphin@dev" do
 
   auto_updates true
   conflicts_with cask: "dolphin"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Dolphin.app"
 

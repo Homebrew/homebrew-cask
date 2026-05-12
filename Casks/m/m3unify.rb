@@ -1,8 +1,8 @@
 cask "m3unify" do
-  version "2.2.0"
-  sha256 "f46192615beff9572e1c0438a9f75bc73540352e1a7a85a4844e20aa10a3215d"
+  version "3.0.0"
+  sha256 "093714e18978c2fb8c5a2704ba66932d99dbc8137bed2802cdb677842e1f9c0b"
 
-  url "https://dougscripts.com/itunes/scrx/m3unifyv#{version.no_dots}.zip"
+  url "https://dougscripts.com/itunes/scrx/M3Unify_#{version}.dmg"
   name "M3Unify"
   desc "File exporter and M3U playlist creator"
   homepage "https://dougscripts.com/apps/m3unifyapp.php"
@@ -12,9 +12,13 @@ cask "m3unify" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: :monterey
+
   app "M3Unify.app"
 
-  caveats do
-    requires_rosetta
-  end
+  zap trash: [
+    "~/Library/Caches/com.dougscripts.M3Unify",
+    "~/Library/HTTPStorages/com.dougscripts.M3Unify",
+    "~/Library/Preferences/com.dougscripts.M3Unify.plist",
+  ]
 end

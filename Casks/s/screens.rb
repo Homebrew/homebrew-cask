@@ -11,7 +11,7 @@ cask "screens" do
   disable! date: "2025-07-09", because: :moved_to_mas
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Screens #{version.major}.app"
 

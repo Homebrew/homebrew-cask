@@ -1,24 +1,28 @@
 cask "billings-pro" do
-  version "1.8.0,39009,2026-03-11-1718"
-  sha256 "1cc0f3c2ad69870bf65281309190223acb0613c4372933043463c2556c3a0046"
+  version "1.8.1,39116,2026-04-06-1244"
+  sha256 "e98801c189677736216217753a5b2355c8a613fbfa42c45b6e45aedee118a24a"
 
   url "https://www.marketcircle.com/appcasts/releases/billingspro-releases-#{version.csv.first}.b#{version.csv.second}.#{version.csv.third}.zip"
   name "Billings Pro"
   desc "Invoices, estimates, quotes and time-tracking"
   homepage "https://www.marketcircle.com/billingspro/"
 
+  # Older versions may have a more recent `pubDate` than newer versions, so we
+  # have to check all the items in the appcast.
   livecheck do
     url "https://www.daylite.app/appcasts/billingspro.xml"
     regex(/billingspro[._-]releases[._-]v?(\d+(?:\.\d+)+)[._-]b(\d+)[._-](\d+(?:-\d+)+)\.zip/i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
+    strategy :sparkle do |items, regex|
+      items.map do |item|
+        match = item.url.match(regex)
+        next if match.blank?
 
-      "#{match[1]},#{match[2]},#{match[3]}"
+        "#{match[1]},#{match[2]},#{match[3]}"
+      end
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Billings Pro.app"
 

@@ -13,6 +13,8 @@ cask "energia" do
     regex(/file=energia[._-]?v?(\d+(?:\.[\dE]+)+)[._-]macosx[._-]signed\.zip/i)
   end
 
+  depends_on :macos
+
   app "Energia.app"
 
   zap trash: [

@@ -10,6 +10,8 @@ cask "go2shell" do
   deprecate! date: "2025-03-30", because: :unmaintained
   disable! date: "2026-03-30", because: :unmaintained
 
+  depends_on :macos
+
   app "Go2Shell.app"
 
   zap trash: "~/Library/Preferences/com.zipzapmac.Go2Shell.plist"

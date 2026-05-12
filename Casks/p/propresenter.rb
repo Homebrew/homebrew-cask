@@ -52,7 +52,7 @@ cask "propresenter" do
 
   auto_updates true
   conflicts_with cask: "propresenter@beta"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "ProPresenter.app"
 

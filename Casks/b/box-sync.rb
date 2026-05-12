@@ -12,6 +12,7 @@ cask "box-sync" do
   disable! date: "2025-07-26", because: :discontinued
 
   conflicts_with cask: "box-drive"
+  depends_on :macos
 
   app "Box Sync.app"
 

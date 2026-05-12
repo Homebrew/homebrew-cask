@@ -10,6 +10,8 @@ cask "quicklook-pat" do
   deprecate! date: "2024-11-15", because: :unmaintained
   disable! date: "2025-11-15", because: :unmaintained
 
+  depends_on :macos
+
   pkg "PatternQuickLook.pkg"
 
   uninstall pkgutil: "de.pixelrowdies.PatternQuickLook"

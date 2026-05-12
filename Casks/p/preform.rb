@@ -15,6 +15,8 @@ cask "preform" do
     end
   end
 
+  depends_on :macos
+
   app "PreForm.app"
 
   zap trash: [

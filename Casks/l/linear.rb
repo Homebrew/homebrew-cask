@@ -1,4 +1,4 @@
-cask "linear-linear" do
+cask "linear" do
   arch arm: "arm64", intel: "x64"
 
   version "1.28.13,260318pho1bttxr"
@@ -25,7 +25,7 @@ cask "linear-linear" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Linear.app"
 

@@ -10,5 +10,7 @@ cask "imagealpha" do
   deprecate! date: "2024-06-22", because: :discontinued
   disable! date: "2025-06-23", because: :discontinued
 
+  depends_on :macos
+
   app "ImageAlpha.app"
 end

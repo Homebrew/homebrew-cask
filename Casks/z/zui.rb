@@ -11,6 +11,8 @@ cask "zui" do
   desc "Graphical user interface for exploring data in Zed lakes"
   homepage "https://zui.brimdata.io/docs"
 
+  depends_on :macos
+
   app "Zui.app"
 
   zap trash: [

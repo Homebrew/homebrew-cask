@@ -1,6 +1,6 @@
 cask "languagetool-desktop" do
-  version "2.13.0"
-  sha256 "887d9f9f46fcb3edc25d656b69fbd4f3da823f9e1bbe7b6856f237dfe7535057"
+  version "2.14.0"
+  sha256 "5fde42b179f69e3594c5b4785f7925d3c90746633830cdc03ad0d4f35061fcac"
 
   url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version.csv.first}#{version.csv.second if version.csv.second}.dmg"
   name "LanguageTool for Desktop"
@@ -26,7 +26,7 @@ cask "languagetool-desktop" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "LanguageTool for Desktop.app"
 

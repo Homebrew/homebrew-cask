@@ -15,6 +15,8 @@ cask "blender-benchmark" do
     end
   end
 
+  depends_on :macos
+
   app "Blender Benchmark Launcher.app"
 
   zap trash: [

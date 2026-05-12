@@ -10,6 +10,8 @@ cask "puzzles-app" do
   deprecate! date: "2024-11-18", because: :discontinued, replacement_formula: "puzzles"
   disable! date: "2025-11-18", because: :discontinued, replacement_formula: "puzzles"
 
+  depends_on :macos
+
   app "Puzzles.app"
 
   zap trash: [

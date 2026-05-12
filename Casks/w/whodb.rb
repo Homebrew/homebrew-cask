@@ -1,6 +1,6 @@
 cask "whodb" do
-  version "0.106.0"
-  sha256 "2dd9a552a7ff42554fc5a879523fdedd0c21167e2aa2832884e5cd0b81fd89ea"
+  version "0.109.0"
+  sha256 "521ef1471d8e2a3763bebf654e319791e4f442afc1d55ae242e48243ac347a7b"
 
   url "https://github.com/clidey/whodb/releases/download/#{version}/whodb.dmg"
   name "WhoDB"
@@ -11,6 +11,8 @@ cask "whodb" do
     url :url
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "WhoDB.app"
 

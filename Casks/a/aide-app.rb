@@ -16,6 +16,7 @@ cask "aide-app" do
   disable! date: "2026-11-30", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Aide.app"
   binary "#{appdir}/Aide.app/Contents/Resources/app/bin/aide"

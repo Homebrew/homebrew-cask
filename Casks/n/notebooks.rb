@@ -12,6 +12,8 @@ cask "notebooks" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Notebooks.app"
 
   zap trash: [

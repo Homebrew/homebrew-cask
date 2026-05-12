@@ -13,6 +13,8 @@ cask "jamkazam" do
     regex(/JamKazam[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "JamKazam.app"
 
   zap trash: "~/Library/Application Support/JamKazam"

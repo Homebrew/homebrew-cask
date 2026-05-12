@@ -16,6 +16,8 @@ cask "duplicacy-web-edition" do
     regex(%r{href=.*?/duplicacy[._-]web[._-]osx[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "Duplicacy Web Edition.app"
 
   zap trash: "~/.duplicacy-web"

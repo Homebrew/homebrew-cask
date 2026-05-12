@@ -10,6 +10,7 @@ cask "neovide-app" do
   desc "Neovim Client"
   homepage "https://github.com/neovide/neovide"
 
+  depends_on :macos
   depends_on formula: "neovim"
 
   app "Neovide.app"

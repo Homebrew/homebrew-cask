@@ -13,6 +13,8 @@ cask "smart-converter-pro" do
     regex(/href=.*?SmartConverterPro[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Smart Converter Pro #{version.major}.app"
 
   zap trash: [

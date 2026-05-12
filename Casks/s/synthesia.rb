@@ -13,6 +13,8 @@ cask "synthesia" do
     regex(/synthesia\s(\d+(?:\.\d+)+)\sfor\smacOS/i)
   end
 
+  depends_on :macos
+
   app "Synthesia.app"
 
   zap trash: [

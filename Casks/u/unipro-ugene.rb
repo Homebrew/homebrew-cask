@@ -8,6 +8,8 @@ cask "unipro-ugene" do
   desc "Free open-source cross-platform bioinformatics software"
   homepage "https://ugene.net/"
 
+  depends_on :macos
+
   app "Unipro UGENE.app"
 
   zap trash: [

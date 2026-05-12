@@ -14,6 +14,7 @@ cask "all-in-one-messenger" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "All-in-One Messenger.app"
 

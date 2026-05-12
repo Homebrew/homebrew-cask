@@ -1,6 +1,6 @@
 cask "zotero@beta" do
-  version "10.0-beta.3,6b42f9f9c"
-  sha256 "141ef547e3dd8e011cf8d24103e3dc2666daf0380d2061a90cc06a2e49582cca"
+  version "10.0-beta.4,03d94060b"
+  sha256 "5d64d869e655838969752d6f4eaaf0f3a5e015c8392d780d2ed7010e5add38e8"
 
   url "https://download.zotero.org/client/beta/#{version.csv.first}%2B#{version.csv.second}/Zotero-#{version.csv.first}%2B#{version.csv.second}.dmg"
   name "Zotero Beta"
@@ -20,6 +20,7 @@ cask "zotero@beta" do
 
   auto_updates true
   conflicts_with cask: "zotero"
+  depends_on :macos
 
   app "Zotero.app"
 

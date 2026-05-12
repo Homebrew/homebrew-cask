@@ -1,9 +1,9 @@
 cask "masscode" do
   arch arm: "-arm64"
 
-  version "5.1.1"
-  sha256 arm:   "4406ea3333c11842956107556e16dd2453f50cb01d7db937ed1e371ff844371e",
-         intel: "1f92ee35ea5915623dd00bddab9e0b3580ed4e59ea33915a6f003ab58aa0605a"
+  version "5.4.0"
+  sha256 arm:   "f87301e4abf8d289632a5f6f8deff2dd88a1bb8d7ef688e8245168ea6aeeddc2",
+         intel: "9d8cafb41191f403d7fcd47e36098a2738fb9ef77d3d24b05d5218b9a29bf62f"
 
   url "https://github.com/massCodeIO/massCode/releases/download/v#{version}/massCode-#{version}#{arch}.dmg",
       verified: "github.com/massCodeIO/massCode/"
@@ -18,7 +18,7 @@ cask "masscode" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "massCode.app"
 

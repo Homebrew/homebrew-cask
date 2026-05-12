@@ -14,6 +14,8 @@ cask "ssokit" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "SSokit.app"
 
   zap trash: "~/Library/Preferences/cn.rangaofei.SSokit.plist"

@@ -37,6 +37,8 @@ cask "astah-professional" do
   desc "Software modelling tool"
   homepage "https://astah.net/editions/professional"
 
+  depends_on :macos
+
   uninstall pkgutil: "com.change-vision.astah.professional"
 
   zap trash: [

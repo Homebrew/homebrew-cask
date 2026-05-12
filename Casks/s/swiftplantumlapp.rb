@@ -7,6 +7,8 @@ cask "swiftplantumlapp" do
   desc "Generate and view a class diagram for Swift code in Xcode"
   homepage "https://github.com/MarcoEidinger/SwiftPlantUML-Xcode-Extension"
 
+  depends_on :macos
+
   app "SwiftPlantUMLApp.app"
 
   zap trash: [

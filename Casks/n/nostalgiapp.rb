@@ -1,19 +1,29 @@
 cask "nostalgiapp" do
-  version "1.0.8.7.12"
-  sha256 "21a8a0ac1082d76ac3e8bf90fe6447231c573caa020b0cf7e0b3ca04c12741e7"
+  version "1.0.8.9,138"
+  sha256 "82d250175525d53328ae17660bb24223b7d9b2bc5c3c68da0280208926ed78b2"
 
-  url "https://www.nostalgi.app/downloads/NostalgiApp-#{version}.dmg"
+  url "https://www.nostalgi.app/downloads/NostalgiApp-#{version.csv.first}#{"-b#{version.csv.second}" if version.csv.second}.dmg"
   name "NostalgiApp"
   desc "Launcher for eXoDOS and retro game collections"
-  homepage "https://nostalgi.app/"
+  homepage "https://www.nostalgi.app/"
 
+  # The `sparkle:version` corresponds to the number in the file name suffix
+  # (e.g. `-b123`) but we match against the URL instead of using `nice_version`
+  # because we only want to include the second number in the version if it's
+  # used in the URL.
   livecheck do
-    url "https://nostalgi.app/appcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://www.nostalgi.app/appcast.xml"
+    regex(/NostalgiApp[._-]v?(\d+(?:\.\d+)+)(?:[._-]b(\d+))?/i)
+    strategy :sparkle do |item, regex|
+      match = item.url&.match(regex)
+      next unless match
+
+      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "NostalgiApp.app"
 

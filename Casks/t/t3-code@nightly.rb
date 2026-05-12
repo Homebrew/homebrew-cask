@@ -27,7 +27,7 @@ cask "t3-code@nightly" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "T3 Code (Nightly).app"
 

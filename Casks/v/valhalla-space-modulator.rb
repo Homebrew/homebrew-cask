@@ -16,6 +16,8 @@ cask "valhalla-space-modulator" do
     end
   end
 
+  depends_on :macos
+
   pkg "ValhallaSpaceModulatorOSX.pkg"
 
   uninstall pkgutil: "com.valhalladsp.SpaceModulator.pkg.*"

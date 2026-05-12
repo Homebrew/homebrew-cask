@@ -1,9 +1,9 @@
 cask "sourcegit" do
   arch arm: "arm64", intel: "x64"
 
-  version "2026.09"
-  sha256 arm:   "311ea8875344c7325d6e8e4104463f35ba2f2b2642599174b8b31d1ea65e4dc4",
-         intel: "9ec92d642026e2bf0db9e0165f0e850f30c8f4eba85cd1f549a75040767331d2"
+  version "2026.10"
+  sha256 arm:   "a444b194870d1650709e55acb511e0e6550b742b5fd09b1deb2f6268eac0aaa6",
+         intel: "fa57613cfc078a9d3dd8069b929459972cbb0f714d3eab0d3efc73801052c3b2"
 
   url "https://github.com/ybeapps/homebrew-sourcegit/releases/download/v#{version}-signed/SourceGit-v#{version}-#{arch}-signed.dmg"
   name "SourceGit"
@@ -15,7 +15,7 @@ cask "sourcegit" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "SourceGit.app"
 

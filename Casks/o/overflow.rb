@@ -13,6 +13,8 @@ cask "overflow" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Overflow #{version.major}.app"
 
   zap trash: [

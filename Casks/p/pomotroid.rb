@@ -1,6 +1,6 @@
 cask "pomotroid" do
-  version "1.5.2"
-  sha256 "0f870994eab4c642c0866ca4516e0e82c7a8a8813acf95c8909ceac54fdfb60e"
+  version "1.7.1"
+  sha256 "2ccc0f4d64a8491f9771cb5a3c8df46b37ead752bd6592dcc9d562e4c139fd4a"
 
   url "https://github.com/Splode/pomotroid/releases/download/v#{version}/Pomotroid_#{version}_universal.dmg"
   name "Pomotroid"
@@ -13,6 +13,8 @@ cask "pomotroid" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "Pomotroid.app"
 

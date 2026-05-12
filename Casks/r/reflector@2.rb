@@ -12,6 +12,8 @@ cask "reflector@2" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Reflector #{version.major}.app"
 
   zap trash: [

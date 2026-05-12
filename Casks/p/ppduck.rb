@@ -12,6 +12,8 @@ cask "ppduck" do
     regex(/PPDuck.[._-]?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "PPDuck#{version.major}.app"
 
   zap trash: [

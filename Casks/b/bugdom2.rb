@@ -8,6 +8,8 @@ cask "bugdom2" do
   desc "Bug-themed 3D action/adventure game sequel from Pangea Software"
   homepage "https://jorio.itch.io/bugdom2"
 
+  depends_on :macos
+
   app "Bugdom 2.app"
   artifact "Instructions", target: "~/Library/Application Support/Bugdom2"
 

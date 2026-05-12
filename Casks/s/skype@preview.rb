@@ -8,9 +8,11 @@ cask "skype@preview" do
   homepage "https://www.skype.com/"
 
   deprecate! date: "2025-05-05", because: :discontinued
+  disable! date: "2026-05-09", because: :discontinued
 
   auto_updates true
   conflicts_with cask: "skype"
+  depends_on :macos
 
   app "Skype.app"
 

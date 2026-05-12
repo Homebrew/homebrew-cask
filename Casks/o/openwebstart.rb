@@ -16,6 +16,8 @@ cask "openwebstart" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   installer script: {
     executable:   "#{staged_path}/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",
     args:         ["-q"],

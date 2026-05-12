@@ -7,6 +7,8 @@ cask "ksnip" do
   desc "Screenshot and annotation tool"
   homepage "https://github.com/ksnip/ksnip"
 
+  depends_on :macos
+
   app "ksnip.app"
 
   zap trash: [

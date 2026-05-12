@@ -29,6 +29,8 @@ cask "snes9x" do
     end
   end
 
+  depends_on :macos
+
   app "Snes9x.app"
 
   zap trash: [

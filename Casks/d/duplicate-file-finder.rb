@@ -1,6 +1,6 @@
 cask "duplicate-file-finder" do
-  version "9.0.1,955"
-  sha256 "12c5f57b49ebaf31c3a6132aff9e5c96bbab0bd827953c13252fa89689de1c67"
+  version "9.1,974"
+  sha256 "1832ad02490dda6743d3c5137a732dec2bafce380b4ede11f2560cd7f1226c75"
 
   url "https://download.nektony.com/download/duplicate-file-finder/duplicate-file-finder.dmg?build=#{version.csv.second}"
   name "Duplicate File Finder"
@@ -13,7 +13,7 @@ cask "duplicate-file-finder" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Duplicate File Finder #{version.major}.app"
 

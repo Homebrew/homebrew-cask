@@ -12,6 +12,7 @@ cask "processing@3" do
   disable! date: "2025-07-28", because: :unmaintained
 
   conflicts_with cask: "processing"
+  depends_on :macos
 
   app "Processing.app"
 

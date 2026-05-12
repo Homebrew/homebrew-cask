@@ -11,6 +11,8 @@ cask "asciidocfx" do
   desc "Asciidoc editor and toolchain to build books, documents and slides"
   homepage "https://www.asciidocfx.com/"
 
+  depends_on :macos
+
   installer script: {
     executable: "AsciidocFX Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],

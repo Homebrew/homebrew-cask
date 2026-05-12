@@ -13,6 +13,7 @@ cask "picoscope" do
   end
 
   conflicts_with cask: "picoscope@beta"
+  depends_on :macos
 
   pkg "PicoScope_#{version.major}_TandM_#{version}.x64.pkg"
 

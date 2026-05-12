@@ -14,6 +14,7 @@ cask "dash" do
 
   auto_updates true
   conflicts_with cask: "dash@6"
+  depends_on :macos
 
   app "Dash.app"
 

@@ -12,6 +12,7 @@ cask "restic-browser" do
     strategy :github_latest
   end
 
+  depends_on :macos
   depends_on formula: "restic"
 
   app "Restic-Browser.app"

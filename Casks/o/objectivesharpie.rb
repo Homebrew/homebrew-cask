@@ -18,6 +18,8 @@ cask "objectivesharpie" do
     end
   end
 
+  depends_on :macos
+
   pkg "objectivesharpie-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.xamarin.ObjectiveSharpie"

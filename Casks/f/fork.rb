@@ -1,6 +1,6 @@
 cask "fork" do
-  version "2.63.2"
-  sha256 "152c20e7e9285e41518deaae36a6feae0df6190caca878091f0d489a5a75b030"
+  version "2.66.7"
+  sha256 "f344f9e3943cd09f83ae2eb66e3e360b1504c4eec70bf8a185ff6d814f62f10d"
 
   url "https://cdn.fork.dev/mac/Fork-#{version}.dmg"
   name "Fork"
@@ -20,6 +20,7 @@ cask "fork" do
 
   auto_updates true
   conflicts_with cask: "fork@dev"
+  depends_on :macos
 
   app "Fork.app"
   binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: "fork"

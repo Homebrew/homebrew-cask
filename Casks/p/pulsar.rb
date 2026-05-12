@@ -17,6 +17,8 @@ cask "pulsar" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Pulsar.app"
   binary "#{appdir}/Pulsar.app/Contents/Resources/app/ppm/bin/ppm"
   binary "#{appdir}/Pulsar.app/Contents/Resources/pulsar.sh", target: "pulsar"

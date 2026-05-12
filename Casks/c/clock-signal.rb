@@ -1,6 +1,6 @@
 cask "clock-signal" do
-  version "2026-04-21"
-  sha256 "005e3db90021f1fd6606887b382709beaac562088683a7ee98b61cabdcd5789f"
+  version "2026-04-30"
+  sha256 "60c54285a184c767b55bfafbf828aa7e141bb6ee9011c15f94e3c28208a07281"
 
   url "https://github.com/TomHarte/CLK/releases/download/#{version}/Clock.Signal.MacOS.#{version}.zip"
   name "Clock Signal"
@@ -13,6 +13,8 @@ cask "clock-signal" do
     regex(/v?(\d+(?:[.-]\d+)+)/i)
     strategy :github_latest
   end
+
+  depends_on :macos
 
   app "Clock Signal.app"
 

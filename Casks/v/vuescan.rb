@@ -12,7 +12,7 @@ cask "vuescan" do
     regex(%r{href=.*?vuescan-versions/(\d+(?:\.\d+)+)\.html}i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "VueScan.app"
 

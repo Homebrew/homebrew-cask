@@ -13,6 +13,8 @@ cask "vip-access" do
     regex(/VIP\s+Access\s+for\s+Mac\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "VIP Access.pkg"
 
   uninstall pkgutil: "com.symantec.vippaccess"

@@ -26,6 +26,8 @@ cask "automattic-texts" do
     end
   end
 
+  depends_on :macos
+
   app "Texts.app"
 
   zap trash: [

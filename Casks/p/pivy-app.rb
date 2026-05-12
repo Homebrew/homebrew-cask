@@ -9,6 +9,8 @@ cask "pivy-app" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   # pkg cannot be installed automatically
   installer manual: "pivy-#{version}-macos12.pkg"
 

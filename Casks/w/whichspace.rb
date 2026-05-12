@@ -15,7 +15,7 @@ cask "whichspace" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "WhichSpace.app"
 

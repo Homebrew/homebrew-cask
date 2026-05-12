@@ -18,6 +18,7 @@ cask "reunion" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Reunion #{version.major}.app"
 

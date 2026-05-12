@@ -14,6 +14,8 @@ cask "songkong" do
     regex(/SongKong\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "SongKong.app"
 
   zap trash: [

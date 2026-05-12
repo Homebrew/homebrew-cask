@@ -12,6 +12,8 @@ cask "fabfilter-saturn" do
     regex(/FabFilter\s+Saturn.*?v?(\d+(?:\.\d+)+)/im)
   end
 
+  depends_on :macos
+
   pkg "FabFilter Saturn #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Saturn.*"

@@ -1,5 +1,5 @@
 cask "steamcmd" do
-  version "1773426366"
+  version "1778284286"
   sha256 :no_check
 
   url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz",
@@ -14,6 +14,7 @@ cask "steamcmd" do
   end
 
   auto_updates true
+  depends_on :macos
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = staged_path/"steamcmd.wrapper.sh"

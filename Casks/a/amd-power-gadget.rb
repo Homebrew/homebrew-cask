@@ -9,6 +9,7 @@ cask "amd-power-gadget" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
   depends_on arch: :x86_64
 
   app "AMD Power Gadget.app"

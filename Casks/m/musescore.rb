@@ -22,6 +22,7 @@ cask "musescore" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "MuseScore #{version.major}.app"
   # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)

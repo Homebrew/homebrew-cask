@@ -12,6 +12,8 @@ cask "snapndrag" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "SnapNDrag.app"
 
   zap trash: [

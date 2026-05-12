@@ -20,9 +20,9 @@ cask "visual-studio-code" do
     end
   end
   on_monterey :or_newer do
-    version "1.117.0"
-    sha256 arm:   "3628f084f3b634ad84ea86c4cd58a6022a9e89e8df5d5973ba2c83c1a8939ae5",
-           intel: "a685653c1331465fcaff3c73d5d03f0afa51fb973117f2a761e826f7988ee5c5"
+    version "1.119.0"
+    sha256 arm:   "f22c553947b811c357ff3d239eec758573a19c6d49ba16ecb07d81011a94f34a",
+           intel: "98c0f1100b7f2ecb7889f79ccdc2fe413f265555cd93c7c3353335607199f2d6"
 
     livecheck do
       url "https://update.code.visualstudio.com/api/update/#{arch}/stable/latest"
@@ -39,6 +39,7 @@ cask "visual-studio-code" do
   homepage "https://code.visualstudio.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "Visual Studio Code.app"
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"

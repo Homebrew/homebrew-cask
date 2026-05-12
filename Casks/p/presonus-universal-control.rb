@@ -18,6 +18,8 @@ cask "presonus-universal-control" do
     end
   end
 
+  depends_on :macos
+
   pkg "PreSonus Universal Control.pkg"
 
   uninstall launchctl: [

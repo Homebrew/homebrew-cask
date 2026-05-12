@@ -12,6 +12,8 @@ cask "uninstallpkg" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "UninstallPKG.app"
 
   uninstall launchctl: "com.corecode.UninstallPKGDeleteHelper",

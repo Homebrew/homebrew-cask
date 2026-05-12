@@ -14,7 +14,7 @@ cask "prizmo" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Prizmo.app"
 

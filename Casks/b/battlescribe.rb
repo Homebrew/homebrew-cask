@@ -10,6 +10,8 @@ cask "battlescribe" do
   deprecate! date: "2024-11-16", because: :unmaintained
   disable! date: "2025-11-16", because: :unmaintained
 
+  depends_on :macos
+
   pkg "BattleScribe_#{version}_Installer.pkg"
 
   uninstall pkgutil: [

@@ -15,6 +15,8 @@ cask "utools" do
     regex(/uTools[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "uTools.app"
 
   zap trash: [

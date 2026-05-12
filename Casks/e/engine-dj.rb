@@ -23,7 +23,7 @@ cask "engine-dj" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Engine DJ_#{version.csv.first}_Setup.pkg"
 

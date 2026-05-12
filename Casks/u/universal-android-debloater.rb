@@ -11,6 +11,7 @@ cask "universal-android-debloater" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on :macos
   depends_on cask: "android-platform-tools"
 
   binary "uad_gui-macos-opengl", target: "uad"

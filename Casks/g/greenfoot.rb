@@ -15,6 +15,8 @@ cask "greenfoot" do
     regex(/Version:\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Greenfoot.app"
 
   zap trash: [

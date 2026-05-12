@@ -18,6 +18,8 @@ cask "fontstand" do
     end
   end
 
+  depends_on :macos
+
   app "Fontstand.app"
 
   zap trash: [

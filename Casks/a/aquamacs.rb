@@ -13,6 +13,8 @@ cask "aquamacs" do
     regex(/^Aquamacs[._-](\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "Aquamacs.app"
 
   zap trash: "~/Library/Caches/Aquamacs Emacs"

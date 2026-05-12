@@ -1,7 +1,7 @@
 cask "iterm2@beta" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "3.7.0beta1"
-  sha256 "25b989a1ba91b51bb01ef5d48ac78870e0fc8e1569d98decf9f2c9414b970690"
+  version "3.7.0beta2"
+  sha256 "411d8ab4c9132c4acb1874ef3f1aefc6c7c862fa5277221930a98400e387787a"
 
   url "https://iterm2.com/downloads/beta/iTerm2-#{version.dots_to_underscores}.zip"
   name "iTerm2"
@@ -22,7 +22,7 @@ cask "iterm2@beta" do
     "iterm2",
     "iterm2@nightly",
   ]
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "iTerm.app"
 

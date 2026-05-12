@@ -1,6 +1,6 @@
 cask "captains-deck" do
-  version "1.4.2.5"
-  sha256 "aed0633b8299f69dc178698efb1006dc77183f2aa6bf9921fb984ef2612c40f8"
+  version "1.4.5"
+  sha256 "70bbfc32b5f1638b9f85d3e3b5cd045c8395c5043befc62f919131b3381a8c88"
 
   url "https://captains-deck.com/downloads/CaptainsDeck-#{version}.dmg"
   name "Captain's Deck"
@@ -13,7 +13,7 @@ cask "captains-deck" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Captain's Deck.app"
 

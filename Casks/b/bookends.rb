@@ -1,5 +1,5 @@
 cask "bookends" do
-  version "15.3.2"
+  version "15.4"
   sha256 :no_check
 
   url "https://www.sonnysoftware.com/bookends-for-mac/downloads/Bookends.dmg"
@@ -14,7 +14,7 @@ cask "bookends" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Bookends.app"
 

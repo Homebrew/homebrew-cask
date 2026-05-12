@@ -12,6 +12,8 @@ cask "lehreroffice" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "LehrerOffice.app"
 
   zap delete: "/Library/Application Support/LehrerOffice",

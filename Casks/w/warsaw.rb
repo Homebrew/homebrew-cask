@@ -8,6 +8,8 @@ cask "warsaw" do
   desc "Security software for online banking in Brazil"
   homepage "https://www.topazevolution.com/"
 
+  depends_on :macos
+
   pkg "warsaw_setup.pkg"
 
   uninstall_postflight do

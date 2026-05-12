@@ -13,7 +13,7 @@ cask "app-fair" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "App Fair.app"
   binary "#{appdir}/App Fair.app/Contents/MacOS/App Fair", target: "app-fair"

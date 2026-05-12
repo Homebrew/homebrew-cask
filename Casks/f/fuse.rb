@@ -10,6 +10,8 @@ cask "fuse" do
   desc "Visual desktop tool suite for working with the Fuse framework"
   homepage "https://fuse-open.github.io/"
 
+  depends_on :macos
+
   pkg "fuse_osx_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.fusetools.fuse"

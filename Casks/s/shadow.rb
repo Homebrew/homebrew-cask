@@ -15,6 +15,8 @@ cask "shadow" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "Shadow PC.app"
 
   zap trash: [

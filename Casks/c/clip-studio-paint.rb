@@ -12,7 +12,7 @@ cask "clip-studio-paint" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   installer manual: "CSP_#{version.no_dots}m_app.pkg"
 

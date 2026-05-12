@@ -16,6 +16,8 @@ cask "webull" do
     end
   end
 
+  depends_on :macos
+
   app "Webull Desktop.app"
 
   zap trash: [

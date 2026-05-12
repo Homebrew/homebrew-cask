@@ -24,6 +24,7 @@ cask "aquaskk@prerelease" do
   end
 
   conflicts_with cask: "aquaskk"
+  depends_on :macos
 
   pkg "AquaSKK-#{version}.pkg"
 

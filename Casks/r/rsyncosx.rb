@@ -10,7 +10,7 @@ cask "rsyncosx" do
   deprecate! date: "2024-08-25", because: :discontinued, replacement_cask: "rsyncui"
   disable! date: "2025-08-26", because: :discontinued
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "RsyncOSX.app"
 

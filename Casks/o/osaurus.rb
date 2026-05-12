@@ -1,6 +1,6 @@
 cask "osaurus" do
-  version "0.17.4"
-  sha256 "3544d863a114b86a989908174a244c2a2f3d62c655ef8b36a170d754fad2f79c"
+  version "0.18.13"
+  sha256 "63cf1fc64d58c2a382ec6cbbd8e0d18661355a742a0bd1adeada302269fac5df"
 
   url "https://github.com/osaurus-ai/osaurus/releases/download/#{version}/Osaurus-#{version}.dmg",
       verified: "github.com/osaurus-ai/osaurus/"
@@ -13,7 +13,7 @@ cask "osaurus" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
   depends_on arch: :arm64
 
   app "Osaurus.app"

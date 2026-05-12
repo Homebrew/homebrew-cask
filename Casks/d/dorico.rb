@@ -1,6 +1,6 @@
 cask "dorico" do
-  version "6.2.10,aa79cebc-bdea-4359-98f9-c27535dc1b16"
-  sha256 "01df923e75bbf371ef94b3d84eca4b46ae30d40888c2ba647379dc908cd14c1d"
+  version "6.2.20,ebb343b1-4034-4e2e-8655-536e2ef378a0"
+  sha256 "672e6b29a3888b9102a4c9d259812bd0df1973eaa2f81e4a3e5baf92053394a3"
 
   url "https://download.steinberg.net/automated_updates/sda_downloads/#{version.csv.second}/Dorico_#{version.csv.first}_Installer_mac.dmg"
   name "Dorico"
@@ -21,7 +21,7 @@ cask "dorico" do
     "steinberg-library-manager",
     "steinberg-mediabay",
   ]
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Dorico #{version.major}.pkg"
 

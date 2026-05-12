@@ -42,6 +42,7 @@ cask "mixed-in-key" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Mixed In Key #{version.major}.app"
 

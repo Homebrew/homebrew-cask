@@ -13,6 +13,7 @@ cask "maccleaner-pro" do
   end
 
   auto_updates true
+  depends_on :macos
 
   suite "MacCleaner #{version.major} Pro"
 

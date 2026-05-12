@@ -1,9 +1,9 @@
 cask "pycharm" do
   arch arm: "-aarch64"
 
-  version "2026.1,261.22158.340"
-  sha256 arm:   "1ca4123f1b56cb6aecc0299f052ef49cb539d7b879e1b299d1ac87883bba48eb",
-         intel: "8f3c408f143d23bbf928690534b7231ba65b8602d376ad24b87db604b1fd5c9a"
+  version "2026.1.1,261.23567.174"
+  sha256 arm:   "ddc6169187301ccf81891a6881c73cbfd25a46835964acff5299e1581075303e",
+         intel: "9e8cbd28aea754dfdd95d7f8c1457e7abff8e1a07fe718c76b0000bede56919c"
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
   name "PyCharm"
@@ -25,6 +25,7 @@ cask "pycharm" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "PyCharm.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

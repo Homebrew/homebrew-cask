@@ -15,6 +15,8 @@ cask "megacmd-app" do
     regex(/^v?(\d+(?:\.\d+)+)[._-]macOS$/i)
   end
 
+  depends_on :macos
+
   app "MEGAcmd.app"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdShell", target: "megacmd"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-attr"

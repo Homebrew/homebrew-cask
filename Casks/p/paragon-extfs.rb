@@ -15,6 +15,7 @@ cask "paragon-extfs" do
   end
 
   conflicts_with cask: "paragon-extfs@11"
+  depends_on :macos
 
   installer manual: "FSInstaller.app"
 

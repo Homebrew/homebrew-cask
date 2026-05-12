@@ -8,6 +8,8 @@ cask "retroarch-metal@nightly" do
   desc "Frontend for emulators, game engines, and media players (Metal graphics API)"
   homepage "https://www.retroarch.com/"
 
+  depends_on :macos
+
   app "RetroArch.app", target: "RetroArch Nightly.app"
 
   zap trash: [

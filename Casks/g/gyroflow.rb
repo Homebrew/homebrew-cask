@@ -8,6 +8,8 @@ cask "gyroflow" do
   desc "Video stabilization using gyroscope data"
   homepage "https://gyroflow.xyz/"
 
+  depends_on :macos
+
   app "Gyroflow.app"
 
   zap trash: "~/Library/Caches/Gyroflow"

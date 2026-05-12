@@ -15,6 +15,8 @@ cask "geomap" do
     regex(/href=.*?GeoMapApp[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
+  depends_on :macos
+
   app "GeoMapApp.app"
 
   zap trash: "~/.GMA"

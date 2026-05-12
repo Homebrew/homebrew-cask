@@ -12,6 +12,8 @@ cask "steermouse" do
     regex(/href=.*?SteerMouse[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "SteerMouse.app"
 
   zap trash: [

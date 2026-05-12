@@ -13,6 +13,8 @@ cask "ideamaker" do
   # Download url is unreachable due to Cloudflare protections
   disable! date: "2026-01-23", because: :unreachable
 
+  depends_on :macos
+
   app "ideaMaker.app"
 
   zap trash: [

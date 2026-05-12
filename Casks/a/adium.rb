@@ -14,6 +14,7 @@ cask "adium" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Adium.app"
 

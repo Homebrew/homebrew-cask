@@ -11,6 +11,8 @@ cask "thinkorswim" do
     skip "unversioned Java application"
   end
 
+  depends_on :macos
+
   # Installation options are stored in `.install4j/response.varfile` of the installation directory.
   installer script: {
     executable: "thinkorswim Installer.app/Contents/MacOS/JavaApplicationStub",

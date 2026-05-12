@@ -1,6 +1,6 @@
 cask "qgis" do
-  version "4.0.1"
-  sha256 "93bbd704e678eabcfbf28132fd52839cbd365f8a48ef89bdd1ad5f23f0d4338a"
+  version "4.0.2"
+  sha256 "5246a99ccb348dad33c0fadc732c7c6f59f5693f4a61aed059862f4b1d228aa3"
 
   url "https://download.qgis.org/downloads/macos/pr/qgis_pr_final-#{version.dots_to_underscores.csv.join("_")}.dmg"
   name "QGIS"
@@ -18,7 +18,7 @@ cask "qgis" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "QGIS-final-#{version.dots_to_underscores}.app"
 

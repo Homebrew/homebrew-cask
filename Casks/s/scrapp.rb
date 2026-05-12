@@ -13,6 +13,8 @@ cask "scrapp" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Scrapp.app"
 
   zap trash: [

@@ -16,6 +16,8 @@ cask "robofont" do
     end
   end
 
+  depends_on :macos
+
   app "RoboFont.app"
 
   zap trash: [

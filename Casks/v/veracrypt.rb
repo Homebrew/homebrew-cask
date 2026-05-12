@@ -14,6 +14,7 @@ cask "veracrypt" do
   end
 
   conflicts_with cask: "veracrypt-fuse-t"
+  depends_on :macos
   depends_on cask: "macfuse"
 
   pkg "VeraCrypt_Installer.pkg"

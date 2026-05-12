@@ -13,6 +13,8 @@ cask "crushftp" do
     regex(/href=.*?CrushFTP(\d+)\.zip/i)
   end
 
+  depends_on :macos
+
   suite "CrushFTP#{version}"
 
   # No zap stanza required

@@ -13,6 +13,8 @@ cask "remoteviewer" do
     regex(/href=.*?RemoteViewer[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "RemoteViewer.app"
 
   # No zap stanza required

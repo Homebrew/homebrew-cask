@@ -1,6 +1,6 @@
 cask "brewy" do
-  version "0.10.0"
-  sha256 "3eee0ad7f42856637c5260aa87a649e697bc2ef45596a9896273c39fe2fb7c34"
+  version "0.10.1"
+  sha256 "e6b1d2ebcd3f0b662735f2448423fa6c968b67b08d6973634a812c06211226ac"
 
   url "https://github.com/starhaven-io/Brewy/releases/download/#{version}/Brewy-#{version}.zip"
   name "Brewy"
@@ -14,7 +14,7 @@ cask "brewy" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Brewy.app"
 

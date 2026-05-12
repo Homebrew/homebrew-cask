@@ -1,6 +1,6 @@
 cask "extradock" do
-  version "4.2.4"
-  sha256 "5a7ef4daacd83ab3cadb646717b28b07c7e878b15f3d0de1c6811bd52f2d6892"
+  version "4.2.5"
+  sha256 "d7a94f3301333e827eb3caf9ee7878a21f415bb18523bcc3a6b88cdc6122a735"
 
   url "https://github.com/AppitStudio/extra-dock-updates/releases/download/v#{version}/extraDock.dmg",
       verified: "github.com/AppitStudio/"
@@ -14,7 +14,7 @@ cask "extradock" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "ExtraDock.app"
 

@@ -2,11 +2,11 @@ cask "codex" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-musl"
 
-  version "0.124.0"
-  sha256 arm:          "71e8744944791ca8be22b9a51b1f1114af9b05d6dcd29916e53f3961ebe529ce",
-         intel:        "af2300db912d97431c4a8d1ba47f6e979ab45d4923f3aa60c17597d610e03c18",
-         arm64_linux:  "1301b1624c9ee89c41a501b77b95107a8dc3c8c285624d72edcda7921be6332e",
-         x86_64_linux: "70948cbaa8d7318e526da430fbbad1140cd7bd08ba78afb282392a11e7bcacf5"
+  version "0.130.0"
+  sha256 arm:          "bc50a4b7f9a0c8ca99179189e4659b601107830770e21547dc0c246bce733577",
+         intel:        "feddb116bd96d7d83f8bb19b34fbabe6843cc64461baf2e49c017e1206ad5e67",
+         arm64_linux:  "1d7e00f2c22c3016b5bcb71c61010947b022a90e2901bc6baafe82256492c767",
+         x86_64_linux: "16779e7b7857508a768a36d7d4e084eec336ec23946ed70a9b09489b8f861190"
 
   url "https://github.com/openai/codex/releases/download/rust-v#{version}/codex-#{arch}-#{os}.tar.gz"
   name "Codex"
@@ -22,6 +22,8 @@ cask "codex" do
   depends_on formula: "ripgrep"
 
   binary "codex-#{arch}-#{os}", target: "codex"
+
+  generate_completions_from_executable "codex-#{arch}-#{os}", "completion", base_name: "codex"
 
   zap rmdir: "~/.codex"
 end

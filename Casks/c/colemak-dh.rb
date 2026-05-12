@@ -18,6 +18,8 @@ cask "colemak-dh" do
     end
   end
 
+  depends_on :macos
+
   keyboard_layout "mod-dh-master/macOS/Colemak DH.bundle"
 
   # No zap stanza required

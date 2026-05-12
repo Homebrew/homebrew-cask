@@ -1,24 +1,25 @@
 cask "opencode-desktop" do
-  arch arm: "aarch64", intel: "x64"
+  arch arm: "arm64", intel: "x64"
 
-  version "1.14.22"
-  sha256 arm:   "62441a26d1ea1824815889601a994ab44a96b8105a1119e7ff1b9d8db86bb59c",
-         intel: "37c574061ed43b2de0af28ba88e7fb297978ca3138cd0a1ea1387610eaece3c1"
+  version "1.14.48"
+  sha256 arm:   "3930ef442dc953fd539c6200c18d55e76dc4d504f0b640bbc507fdb9752fcbdd",
+         intel: "c8bf21b4c7c4c4c1d24d81551f23486df51aa47d55a012394f94d0b778516433"
 
-  url "https://github.com/sst/opencode/releases/download/v#{version}/opencode-desktop-darwin-#{arch}.dmg",
-      verified: "github.com/sst/opencode/"
+  url "https://github.com/anomalyco/opencode/releases/download/v#{version}/opencode-desktop-mac-#{arch}.dmg",
+      verified: "github.com/anomalyco/opencode/"
   name "OpenCode"
   desc "AI coding agent desktop client"
   homepage "https://opencode.ai/"
 
   livecheck do
-    url "https://github.com/sst/opencode/releases/latest/download/latest.json"
+    url "https://github.com/anomalyco/opencode/releases/latest/download/latest.json"
     strategy :json do |json|
       json["version"]
     end
   end
 
   auto_updates true
+  depends_on macos: :monterey
 
   app "OpenCode.app"
 

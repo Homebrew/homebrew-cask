@@ -12,6 +12,8 @@ cask "serviio" do
     regex(%r{href=.*?/serviio-(\d+(?:\.\d+)+)-osx\.t}i)
   end
 
+  depends_on :macos
+
   pkg "Serviio-#{version}.pkg"
 
   uninstall launchctl: "org.serviio.server",

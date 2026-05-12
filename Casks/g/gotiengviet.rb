@@ -12,6 +12,8 @@ cask "gotiengviet" do
     regex(/macOS.*?>\s*v?(\d+(?:\.\d+)+)[^<]*</im)
   end
 
+  depends_on :macos
+
   app "GoTiengViet.app"
 
   zap trash: [

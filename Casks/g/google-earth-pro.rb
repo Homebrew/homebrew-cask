@@ -14,6 +14,8 @@ cask "google-earth-pro" do
     end
   end
 
+  depends_on :macos
+
   pkg "Install Google Earth Pro #{version}.pkg"
 
   # Some launchctl and pkgutil items are shared with other Google apps, they should only be removed in the zap stanza

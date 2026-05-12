@@ -1,9 +1,9 @@
 cask "chatwise" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.4.12"
-  sha256 arm:   "3ce6a3bcbea467eb155a521e90e2a1215facb0658cd546b922eb9ca70aff00c3",
-         intel: "9502b6ec3c0ba0fe6b43c01765e7bb4a0d1018b77432c5f2f586a6f0b72f021f"
+  version "26.5.0"
+  sha256 arm:   "b23e9a8620d427a891ccd822accf5d3692adc565a7eaa06bee339c47bc2aca77",
+         intel: "c2958d46814dbbd73dd75d5eacb7460ee90db41982c67d5b769a59fadaf1eec6"
 
   url "https://releases.chatwise.app/#{version}/ChatWise-#{version}-#{arch}.dmg"
   name "ChatWise"
@@ -18,7 +18,7 @@ cask "chatwise" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "ChatWise.app"
 

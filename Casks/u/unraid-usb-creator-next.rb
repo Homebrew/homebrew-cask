@@ -8,7 +8,7 @@ cask "unraid-usb-creator-next" do
   desc "Home of the Next-Gen Unraid USB Creator, a fork of the Raspberry Pi Imager"
   homepage "https://unraid.net/download/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Unraid USB Creator.app"
 

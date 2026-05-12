@@ -15,8 +15,8 @@ cask "netnewswire" do
     end
   end
   on_sequoia :or_newer do
-    version "7.0.4"
-    sha256 "f914b7c428154cb0ffd4b5dae606902c3781c911fb0a85b937d1ac843af9d00d"
+    version "7.0.5"
+    sha256 "4747765fbce3fda8ae1b78360fdd44425796451e7b31969ccabe87b901d60fe9"
 
     livecheck do
       url "https://ranchero.com/downloads/netnewswire-release.xml"
@@ -32,6 +32,7 @@ cask "netnewswire" do
 
   auto_updates true
   conflicts_with cask: "netnewswire@beta"
+  depends_on :macos
 
   app "NetNewsWire.app"
 

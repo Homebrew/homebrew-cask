@@ -12,6 +12,8 @@ cask "audiocupcake" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "AudioCupcake.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "aimersoft-video-converter-ultimate" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "Aimersoft Video Converter Ultimate.app"
 
   caveats do

@@ -10,7 +10,7 @@ cask "auto-claude" do
   desc "Autonomous multi-session AI coding"
   homepage "https://github.com/AndyMik90/Auto-Claude/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Auto-Claude.app"
 

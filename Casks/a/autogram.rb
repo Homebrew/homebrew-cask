@@ -13,6 +13,8 @@ cask "autogram" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   pkg "Autogram-#{version}-MacOs.pkg"
 
   # Following 'preflight' is needed to avoid interactive parts of the installation process. More details in https://github.com/Homebrew/homebrew-cask/pull/201161#discussion_r1950819869

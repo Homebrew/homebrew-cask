@@ -18,6 +18,8 @@ cask "prusaslicer" do
     end
   end
 
+  depends_on :macos
+
   app "Original Prusa Drivers/PrusaSlicer.app"
 
   zap trash: [

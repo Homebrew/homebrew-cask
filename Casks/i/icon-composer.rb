@@ -13,7 +13,7 @@ cask "icon-composer" do
     skip "No version information available"
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Icon Composer.app"
 

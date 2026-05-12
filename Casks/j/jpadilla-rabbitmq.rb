@@ -11,6 +11,8 @@ cask "jpadilla-rabbitmq" do
   deprecate! date: "2025-04-15", because: :unmaintained
   disable! date: "2026-04-16", because: :unmaintained
 
+  depends_on :macos
+
   app "RabbitMQ.app"
 
   zap trash: [

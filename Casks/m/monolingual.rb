@@ -8,6 +8,8 @@ cask "monolingual" do
   desc "Utility to remove unnecessary language resources from the system"
   homepage "https://ingmarstein.github.io/Monolingual/"
 
+  depends_on :macos
+
   app "Monolingual.app"
 
   zap trash: [

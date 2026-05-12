@@ -1,6 +1,6 @@
 cask "font-ark-pixel-12px-monospaced" do
-  version "2026.02.27"
-  sha256 "398b3559c385c5e3b9a0807c4af45ebe9d845a86a892744f6c853912e8cfbd67"
+  version "2026.05.07"
+  sha256 "c7a22fb957a4a77f3cb0d123ca3c8dd4c10bb59c292db12212e78eeb2c01d9a9"
 
   url "https://github.com/TakWolf/ark-pixel-font/releases/download/#{version}/ark-pixel-font-12px-monospaced-otf-v#{version}.zip"
   name "Ark Pixel 12px Monospaced"

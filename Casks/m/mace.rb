@@ -1,6 +1,6 @@
 cask "mace" do
-  version "0.1.2-beta"
-  sha256 "0895bff508e71dfdf9f1c8c9108b5ddddc759cfffdeba693f5173c9f36b9d4ec"
+  version "0.1.5-beta"
+  sha256 "55ab46635e3f1f3e6ff6807267685cb258e567154041c3c6044989a208a903b1"
 
   url "https://github.com/MACE-App/MACE/releases/download/v#{version}/M.A.C.E.V#{version}.dmg"
   name "MACE"
@@ -13,7 +13,7 @@ cask "mace" do
     regex(/^v?(\d+(?:\.\d+)+(?:[._-](?:alpha|beta|rc).*)?)$/i)
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "MACE.app"
 

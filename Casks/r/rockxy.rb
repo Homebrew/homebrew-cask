@@ -1,21 +1,20 @@
 cask "rockxy" do
-  version "0.10.0,13"
-  sha256 "a376fd1bf603e5dcb147fa065e3ce7a78f06dff75b5c8d8b1a17ba0e17d35e26"
+  version "0.18.0,27"
+  sha256 "0d8eefa4b36dd336ba869d3a50c675b98b9a15d83844e39fcc89b9d48c95c6bb"
 
-  url "https://github.com/LocNguyenHuu/Rockxy/releases/download/v#{version.csv.first}/Rockxy-#{version.tr(",", "-")}.dmg",
-      verified: "github.com/LocNguyenHuu/Rockxy/"
+  url "https://github.com/RockxyApp/Rockxy/releases/download/v#{version.csv.first}/Rockxy-#{version.tr(",", "-")}.dmg",
+      verified: "github.com/RockxyApp/Rockxy/"
   name "Rockxy"
   desc "HTTP proxy"
   homepage "https://rockxy.io/"
 
   livecheck do
-    url "https://github.com/LocNguyenHuu/Rockxy/releases/latest/download/manifest.json"
-    strategy :json do |json|
-      "#{json["appVersion"]},#{json["appBuild"]}"
-    end
+    url "https://raw.githubusercontent.com/RockxyApp/Rockxy/main/appcast.xml"
+    strategy :sparkle
   end
 
-  depends_on macos: ">= :sonoma"
+  auto_updates true
+  depends_on macos: :sonoma
 
   app "Rockxy.app"
 

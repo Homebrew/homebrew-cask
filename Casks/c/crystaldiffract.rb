@@ -14,6 +14,8 @@ cask "crystaldiffract" do
     end
   end
 
+  depends_on :macos
+
   app "CrystalDiffract.app"
 
   zap trash: [

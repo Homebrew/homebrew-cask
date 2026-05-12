@@ -13,6 +13,8 @@ cask "hancom-docs" do
     regex(/Hwp_mac\s*=\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "HwpMac_HancomDocs.pkg"
 
   uninstall quit:    "com.hancom.office.hwp#{version.major}.mac.general",

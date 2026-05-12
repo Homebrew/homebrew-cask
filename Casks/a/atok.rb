@@ -16,6 +16,7 @@ cask "atok" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "ATOK インストーラ.pkg"
 

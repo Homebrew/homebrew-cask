@@ -1,6 +1,6 @@
 cask "opera-gx" do
-  version "130.0.5847.89"
-  sha256 "b06e8e2f51fb594309ea1252f6416bcffd275b5c561c78b1734c6dd3d8a8e46b"
+  version "131.0.5877.36"
+  sha256 "5c637ff91183c04c150469124a5081f1d1e2ed3ad00d8a386777272ace8da350"
 
   url "https://get.geo.opera.com/pub/opera_gx/#{version}/mac/Opera_GX_#{version}_Setup.dmg"
   name "Opera GX"
@@ -13,7 +13,7 @@ cask "opera-gx" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Opera GX.app"
 

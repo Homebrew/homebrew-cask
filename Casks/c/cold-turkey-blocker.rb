@@ -12,6 +12,8 @@ cask "cold-turkey-blocker" do
     regex(/Blocker\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "Cold_Turkey_Mac_Installer.pkg"
 
   uninstall launchctl: [

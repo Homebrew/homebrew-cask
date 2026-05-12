@@ -12,6 +12,8 @@ cask "datagraph" do
     regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "DataGraph.app"
 
   zap trash: [

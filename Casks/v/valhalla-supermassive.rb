@@ -16,6 +16,8 @@ cask "valhalla-supermassive" do
     end
   end
 
+  depends_on :macos
+
   pkg "ValhallaSupermassiveOSX.pkg"
 
   uninstall pkgutil: "com.valhalladsp.supermassive.pkg.*"

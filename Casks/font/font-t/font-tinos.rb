@@ -5,7 +5,7 @@ cask "font-tinos" do
   url "https://github.com/google/fonts.git",
       verified:  "github.com/google/fonts",
       branch:    "main",
-      only_path: "apache/tinos"
+      only_path: "ofl/tinos"
   name "Tinos"
   homepage "https://fonts.google.com/specimen/Tinos"
 

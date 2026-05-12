@@ -14,6 +14,8 @@ cask "mobirise" do
     regex(/>\s*Mobirise\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Mobirise.app"
 
   zap trash: [

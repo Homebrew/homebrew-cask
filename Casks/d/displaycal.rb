@@ -15,6 +15,7 @@ cask "displaycal" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on :macos
   depends_on formula: "argyll-cms"
 
   pkg "DisplayCAL-#{version}.pkg"

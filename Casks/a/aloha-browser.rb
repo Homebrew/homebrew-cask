@@ -9,7 +9,7 @@ cask "aloha-browser" do
   desc "Web browser focused on privacy"
   homepage "https://alohabrowser.com/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Aloha.app"
 

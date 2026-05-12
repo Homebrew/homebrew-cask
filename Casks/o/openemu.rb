@@ -17,6 +17,7 @@ cask "openemu" do
 
   auto_updates true
   conflicts_with cask: "openemu@experimental"
+  depends_on :macos
 
   app "OpenEmu.app"
 

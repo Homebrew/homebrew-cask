@@ -20,7 +20,7 @@ cask "cycling74-max" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Max.app"
 

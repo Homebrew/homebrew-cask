@@ -12,6 +12,8 @@ cask "spark-app" do
     regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Spark.app"
 
   zap trash: "~/Library/Application Support/Spark"

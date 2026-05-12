@@ -12,6 +12,8 @@ cask "zerotier-one" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  depends_on :macos
+
   pkg "ZeroTier One.pkg"
 
   uninstall launchctl: "com.zerotier.one",

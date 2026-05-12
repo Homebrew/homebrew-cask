@@ -16,6 +16,7 @@ cask "opencore-configurator" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on :macos
 
   app "OpenCore Configurator.app"
 

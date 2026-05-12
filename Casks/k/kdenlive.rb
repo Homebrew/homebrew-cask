@@ -1,9 +1,14 @@
 cask "kdenlive" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "25.12.2"
-  sha256 arm:   "193959980b24f108f8782d518292f266d84d75d4d4549cccefb9dcfaf6ba83b5",
-         intel: "e63d895c91dc35b2b57ab44a9f48210db4ffd8c095bee84c9d3b7cf735f877c4"
+  on_arm do
+    version "26.04.0,A"
+    sha256 "b17a09c29b81b1651da15d92c0c33f3d1e977ebe2849ef68233eb33abd624900"
+  end
+  on_intel do
+    version "26.04.0"
+    sha256 "68b435007621152a875201f761ab27c05267bb7f5d96bf17d2104587381fb913"
+  end
 
   url "https://cdn.download.kde.org/stable/kdenlive/#{version.csv.first.major_minor}/macOS/kdenlive-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
       verified: "cdn.download.kde.org/stable/kdenlive/"
@@ -19,7 +24,7 @@ cask "kdenlive" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "kdenlive.app"
 

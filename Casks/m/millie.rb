@@ -14,7 +14,7 @@ cask "millie" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "밀리의서재.app"
 

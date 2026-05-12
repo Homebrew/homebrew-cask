@@ -12,6 +12,7 @@ cask "obs-backgroundremoval" do
   disable! date: "2026-11-13", because: "the package is not compatible with Homebrew's installation parameters"
 
   auto_updates true
+  depends_on :macos
 
   pkg "obs-backgroundremoval-#{version}-macos-universal.pkg"
 

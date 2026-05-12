@@ -14,6 +14,7 @@ cask "endless-sky-high-dpi" do
   end
 
   depends_on cask: "endless-sky"
+  depends_on :macos
 
   highdpi_dir = "endless-sky-high-dpi-#{version}"
   artifact highdpi_dir, target: "~/Library/Application Support/endless-sky/plugins/#{highdpi_dir}"

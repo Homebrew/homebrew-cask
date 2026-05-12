@@ -1,6 +1,6 @@
 cask "cadran" do
-  version "1.3.2"
-  sha256 "2f74db318fa77b98324dd3c7b40b5a4a901fb0655bdd0d98cccf0200cfeb292e"
+  version "1.3.11"
+  sha256 "b31b20418d3c4fef3b4eba617edc62b14da9e92bcbea3097b48ed3a52cc9420d"
 
   url "https://github.com/Ilyomix/Cadran-releases/releases/download/v#{version}/Cadran-#{version}.dmg",
       verified: "github.com/Ilyomix/Cadran-releases/"
@@ -14,7 +14,7 @@ cask "cadran" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Cadran.app"
 

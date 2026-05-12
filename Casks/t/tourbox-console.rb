@@ -18,6 +18,8 @@ cask "tourbox-console" do
     end
   end
 
+  depends_on :macos
+
   pkg "TourBoxInstall#{version.csv.first}/TourBoxInstall#{version.csv.first}.pkg"
 
   uninstall quit:    "com.tourbox.ui.launch",

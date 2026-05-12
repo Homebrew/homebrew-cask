@@ -30,6 +30,7 @@ cask "canon-eos-utility" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "EU3Installer-M#{version.csv.first}.pkg"
 

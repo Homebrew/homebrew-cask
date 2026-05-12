@@ -13,6 +13,7 @@ cask "waltr" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Waltr #{version.major}.app"
 

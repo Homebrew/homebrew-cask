@@ -1,6 +1,6 @@
 cask "orka-vm-tools" do
-  version "3.5.2"
-  sha256 "813dfb310bd2edd845aaf2e25dbb305e7c92e14633be66fe1c22c0c55ff3d37c"
+  version "3.6.0"
+  sha256 "54be7207b27790de8ba32a7e082b904e07672ac2c2c732472c100937407fd80f"
 
   url "https://orka-tools.s3.amazonaws.com/orka-vm-tools/official/#{version}/orka-vm-tools.pkg",
       verified: "orka-tools.s3.amazonaws.com/orka-vm-tools/official/"
@@ -14,6 +14,8 @@ cask "orka-vm-tools" do
       json["version"]
     end
   end
+
+  depends_on :macos
 
   pkg "orka-vm-tools.pkg"
 

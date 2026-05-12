@@ -34,6 +34,8 @@ cask "jasper-app" do
     end
   end
 
+  depends_on :macos
+
   app "Jasper.app"
 
   zap trash: [

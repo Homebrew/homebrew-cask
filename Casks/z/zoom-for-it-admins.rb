@@ -13,6 +13,7 @@ cask "zoom-for-it-admins" do
 
   auto_updates true
   conflicts_with cask: "zoom"
+  depends_on :macos
 
   pkg "ZoomInstallerIT.pkg"
 

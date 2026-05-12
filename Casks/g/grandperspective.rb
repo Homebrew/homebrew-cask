@@ -8,14 +8,16 @@ cask "grandperspective" do
     end
   end
   on_big_sur :or_newer do
-    version "3.6.4"
-    sha256 "fd6ed93947087d79cd71053bd4f3da1f162c2fc39dda2053974b4081b12e15d9"
+    version "3.7.0"
+    sha256 "9764ee28e01d3f0d047f81d5405ab96042c0ed8e27932d9a8547378cbfd6156e"
   end
 
   url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg"
   name "GrandPerspective"
   desc "Graphically shows disk usage within a file system"
   homepage "https://grandperspectiv.sourceforge.net/"
+
+  depends_on :macos
 
   app "GrandPerspective.app"
 

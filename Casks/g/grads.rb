@@ -10,6 +10,8 @@ cask "grads" do
 
   disable! date: "2025-11-30", because: :no_longer_available
 
+  depends_on :macos
+
   binary "grads-#{version}/bin/bufrscan"
   binary "grads-#{version}/bin/grads"
   binary "grads-#{version}/bin/grib2scan"

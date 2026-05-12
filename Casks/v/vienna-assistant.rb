@@ -1,5 +1,5 @@
 cask "vienna-assistant" do
-  version "1.2.567"
+  version "1.2.572"
   sha256 :no_check
 
   url "https://www.vsl.co.at/service/vamac",
@@ -14,6 +14,8 @@ cask "vienna-assistant" do
       json["vaLatestVersionReadable"]
     end
   end
+
+  depends_on :macos
 
   # The url is unversioned, but the download returns a pkg with a version number
   rename "Vienna Assistant*.pkg", "Vienna Assistant.pkg"

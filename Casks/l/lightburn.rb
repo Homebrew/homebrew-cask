@@ -12,7 +12,7 @@ cask "lightburn" do
     regex(/href=.*?LightBurn[._-]V?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "LightBurn.app"
 

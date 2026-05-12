@@ -1,9 +1,9 @@
 cask "longbridge-pro" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.37.2"
-  sha256 arm:   "a3f43ba3f732ae114fd0d4dbb050a9c79c004bc7094f3dbfbfeeef621fe006be",
-         intel: "60f581996abb98e770bf9ac78d7398776394089c47146d5b3d825a5e7e48bfa9"
+  version "2.38.2"
+  sha256 arm:   "7a9cf4970a08753b3cc10cbfa4c8ec9dd9cd01a5217ae4a9d64453cc77dbb0cb",
+         intel: "9132041208e5045cdd9252c0b8e936f9437e8aa7f9ceef813588bf04afd5d20a"
 
   url "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-#{version}-mac-#{arch}.dmg",
       verified: "download.lbkrs.com/longbridge-desktop/prod/"
@@ -16,7 +16,7 @@ cask "longbridge-pro" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Longbridge Pro.app"
 

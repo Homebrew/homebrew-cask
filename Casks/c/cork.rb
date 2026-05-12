@@ -1,6 +1,6 @@
 cask "cork" do
-  version "1.7.4"
-  sha256 "b207a6e6fca2d5288184cff352233de2b85ca6b6571d21f6359c4591081aefcc"
+  version "1.7.5"
+  sha256 "c8d827334d21676572541f2c330ec0621ebe149f760eeeb07347382c525b2417"
 
   url "https://corkmac.app/RLS/#{version}/Cork.zip"
   name "Cork"
@@ -12,7 +12,7 @@ cask "cork" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Cork.app"
 

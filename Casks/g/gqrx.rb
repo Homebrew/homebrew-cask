@@ -23,7 +23,7 @@ cask "gqrx" do
   desc "Software-defined radio receiver powered by GNU Radio and Qt"
   homepage "https://www.gqrx.dk/"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Gqrx.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

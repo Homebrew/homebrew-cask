@@ -23,6 +23,8 @@ cask "rivet" do
     end
   end
 
+  depends_on :macos
+
   app "Rivet.app"
 
   zap trash: [

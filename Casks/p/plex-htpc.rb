@@ -15,6 +15,7 @@ cask "plex-htpc" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Plex HTPC.app"
 

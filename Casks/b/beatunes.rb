@@ -15,6 +15,8 @@ cask "beatunes" do
     end
   end
 
+  depends_on :macos
+
   app "beaTunes#{version.major}.app"
 
   zap trash: [

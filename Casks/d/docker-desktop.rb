@@ -1,9 +1,9 @@
 cask "docker-desktop" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.70.0,224270"
-  sha256 arm:   "38a19ac039dee38e0e445118da34962039ef1601b0656dc4d138592efda2caba",
-         intel: "2f0e3d0b9e0341810399fc1d5b3eb2a3dd05ca4dcf2add0df3a62eb1d328a36c"
+  version "4.73.0,226246"
+  sha256 arm:   "5f08b5e3e7e33cca7c364a585b15bcea4947159606453095a8a09bcc0fd44005",
+         intel: "a88a63b4c74d5e85c9d41ec9b4065472b8812c0e3dfb63e31fdda3d3b1268a8b"
 
   on_intel do
     binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.hyperkit",
@@ -24,7 +24,7 @@ cask "docker-desktop" do
 
   auto_updates true
   conflicts_with cask: "rancher"
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",

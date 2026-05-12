@@ -15,6 +15,8 @@ cask "scenebuilder" do
     regex(%r{href=.*?/SceneBuilder-(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
+  depends_on :macos
+
   app "SceneBuilder.app"
 
   zap trash: [

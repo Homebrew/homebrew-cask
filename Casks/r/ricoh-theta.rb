@@ -13,6 +13,8 @@ cask "ricoh-theta" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "RICOH THETA.app"
 
   zap trash: [

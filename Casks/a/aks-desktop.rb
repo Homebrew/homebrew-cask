@@ -15,6 +15,8 @@ cask "aks-desktop" do
     regex(/v?(\d+(?:\.\d+)+(?:-alpha|-beta)?)/i)
   end
 
+  depends_on :macos
+
   app "AKS desktop.app"
 
   uninstall quit: "com.microsoft.aks-desktop"

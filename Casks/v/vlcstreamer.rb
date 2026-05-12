@@ -12,6 +12,8 @@ cask "vlcstreamer" do
     regex(%r{href=.*?/VLCStreamer_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "VLCStreamer.app"
 
   zap trash: [

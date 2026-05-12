@@ -8,6 +8,8 @@ cask "datasette-desktop" do
   desc "Desktop application that wraps Datasette"
   homepage "https://datasette.io/desktop"
 
+  depends_on :macos
+
   app "Datasette.app"
 
   zap trash: [

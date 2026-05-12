@@ -12,6 +12,8 @@ cask "caldigit-thunderbolt-charging" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "CalDigit-Thunderbolt-Station-Mac-Drivers.pkg"
 
   uninstall kext:    "com.CalDigit.ThunderboltStationChargingSupport",

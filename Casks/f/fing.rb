@@ -12,6 +12,8 @@ cask "fing" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "Fing.app"
 
   uninstall launchctl: "com.fing.service"

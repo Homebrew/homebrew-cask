@@ -1,9 +1,9 @@
 cask "doxygen-app" do
   arch arm: "arm", intel: "intel"
 
-  version "1.16.1"
-  sha256 arm:   "f473c0f76cc969309b86c0f441934e844bc9c049112ae3482678bd45a7c8a28c",
-         intel: "ec2b4714b6b3fbef0ecdc1778bc7cf60a83b902cd5d6ff37e4733ff74f359a51"
+  version "1.17.0"
+  sha256 arm:   "238cc26fd8fbc041af8d952c56a0f311775e98ee7352ae86ce65f45582feefac",
+         intel: "f79b108a90355c77a9e23efe9c57c58a94cf964f97319c437956f49e77af79c8"
 
   url "https://www.doxygen.nl/files/Doxygen-#{version}-#{arch}.dmg"
   name "Doxygen"
@@ -15,9 +15,7 @@ cask "doxygen-app" do
     regex(/href=.*?Doxygen[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Doxygen.app"
 

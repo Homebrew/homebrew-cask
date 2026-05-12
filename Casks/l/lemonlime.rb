@@ -6,10 +6,10 @@ cask "lemonlime" do
          intel: "4eeb11cf7c7a039959e5e30bf4f2a97522ed0ca70eceb2d4296039903f52059d"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/#{version.csv.first}/lemon-Qt#{version.csv.second}-Release-#{arch}.dmg"
@@ -31,6 +31,8 @@ cask "lemonlime" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "lemon.app"
 

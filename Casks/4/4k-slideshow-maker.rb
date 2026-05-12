@@ -12,6 +12,8 @@ cask "4k-slideshow-maker" do
     regex(/href=.*?4kslideshowmaker[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "4K Slideshow Maker.app"
 
   zap trash: [

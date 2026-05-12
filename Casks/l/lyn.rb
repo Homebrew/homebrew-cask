@@ -12,6 +12,8 @@ cask "lyn" do
     regex(%r{href=.*?/Lyn[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "Lyn.app"
 
   zap trash: [

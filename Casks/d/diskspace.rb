@@ -7,6 +7,8 @@ cask "diskspace" do
   desc "Show available disk space on APFS volumes"
   homepage "https://github.com/scriptingosx/diskspace"
 
+  depends_on :macos
+
   pkg "diskspace-#{version}.pkg"
 
   uninstall pkgutil: "com.scriptingosx.diskspace"

@@ -14,6 +14,7 @@ cask "mudlet" do
   disable! date: "2026-01-19", because: :unreachable
 
   auto_updates true
+  depends_on :macos
 
   app "Mudlet.app"
 

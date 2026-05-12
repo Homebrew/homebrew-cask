@@ -21,7 +21,7 @@ cask "opencpn" do
 
   disable! date: "2026-10-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "OpenCPN_#{version.csv.first}#{version.csv.second}.pkg"
 

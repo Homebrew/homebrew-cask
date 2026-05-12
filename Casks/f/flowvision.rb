@@ -1,6 +1,6 @@
 cask "flowvision" do
-  version "1.7.1"
-  sha256 "71bb09899f8adca696511c5052185e66fbadb5b5d256378e60674b6939f820e1"
+  version "1.7.2"
+  sha256 "ed9a0f88b9d6cd7d14d2b24fd68ed14cc544469d9c88d6de252a3c131a862507"
 
   url "https://github.com/netdcy/FlowVision/releases/download/#{version}/FlowVision.#{version}.zip",
       verified: "github.com/netdcy/FlowVision/"
@@ -13,7 +13,7 @@ cask "flowvision" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "FlowVision.app"
 

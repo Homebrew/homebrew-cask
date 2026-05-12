@@ -14,6 +14,8 @@ cask "ik-product-manager" do
     regex(/href=.*?ik[._-]product[._-]manager[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on :macos
+
   pkg "Install IK Product Manager (v#{version}).pkg"
 
   uninstall pkgutil: "com.ikmultimedia.productmanager",

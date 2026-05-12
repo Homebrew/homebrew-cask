@@ -23,6 +23,7 @@ cask "adobe-creative-cloud" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer script: {
     executable:   "#{staged_path}/Install.app/Contents/MacOS/Install",

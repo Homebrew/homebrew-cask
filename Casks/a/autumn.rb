@@ -9,6 +9,9 @@ cask "autumn" do
   homepage "https://apandhi.github.io/Autumn/"
 
   deprecate! date: "2025-04-21", because: :unmaintained
+  disable! date: "2026-04-30", because: :unmaintained
+
+  depends_on :macos
 
   app "Autumn.app"
 

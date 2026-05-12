@@ -12,6 +12,8 @@ cask "keyboardcleantool" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "KeyboardCleanTool.app"
 
   # No zap stanza required

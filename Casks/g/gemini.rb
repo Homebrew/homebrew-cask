@@ -20,6 +20,7 @@ cask "gemini" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Gemini #{version.major}.app"
 

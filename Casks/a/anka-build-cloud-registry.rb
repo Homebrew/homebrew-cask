@@ -16,6 +16,8 @@ cask "anka-build-cloud-registry" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "anka-registry-#{arch}-#{version}.pkg"
 
   uninstall script: {

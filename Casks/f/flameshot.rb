@@ -6,10 +6,10 @@ cask "flameshot" do
          intel: "c549e5687ae32d3f6a48badbd1fedac6bbba659ec16f44a0f1bf56a8dec20fd2"
 
   on_arm do
-    depends_on macos: ">= :sonoma"
+    depends_on macos: :sonoma
   end
   on_intel do
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
 
   url "https://github.com/flameshot-org/flameshot/releases/download/v#{version}/Flameshot-#{version}-artifact-macos-#{arch}.dmg",
@@ -24,6 +24,8 @@ cask "flameshot" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "flameshot.app"
 

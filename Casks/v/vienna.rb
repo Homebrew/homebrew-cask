@@ -1,6 +1,6 @@
 cask "vienna" do
-  version "3.10.3"
-  sha256 "8de2c6ea815f1a3121e0935e81e9f6a16962a3d1210e4fba8998711978787100"
+  version "3.10.5"
+  sha256 "df32a3bbe1a5e6e685eeedb75b47820be32953993507b9f5f155eaf8b1e184c6"
 
   url "https://downloads.sourceforge.net/vienna-rss/v_#{version}/Vienna#{version}.dmg",
       verified: "downloads.sourceforge.net/vienna-rss/"
@@ -17,6 +17,7 @@ cask "vienna" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Vienna.app"
 

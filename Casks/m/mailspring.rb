@@ -1,9 +1,9 @@
 cask "mailspring" do
   arch arm: "-AppleSilicon"
 
-  version "1.20.1"
-  sha256 arm:   "7f7999a329a627d5522185ed38f93f9f73c4a2dfb1673bb857a96e68a87ab7df",
-         intel: "42d0842acfe4bc04dd723b83d2a8501c70861ac97c21647bac1ff0c6f7238139"
+  version "1.21.0"
+  sha256 arm:   "3f854ffc41d029bf16161661259c9a689d4a2e93e5d1f670073a336729e7eb6c",
+         intel: "d96b2cfaca8df20d895985d70e0f62da6413175bdde3241c6691a1da817c6f81"
 
   url "https://github.com/Foundry376/Mailspring/releases/download/#{version}/Mailspring#{arch}.zip",
       verified: "github.com/Foundry376/Mailspring/"
@@ -12,7 +12,7 @@ cask "mailspring" do
   homepage "https://getmailspring.com/"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Mailspring.app"
 

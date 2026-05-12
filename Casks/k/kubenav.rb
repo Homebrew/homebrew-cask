@@ -11,7 +11,7 @@ cask "kubenav" do
   deprecate! date: "2024-05-31", because: :discontinued
   disable! date: "2025-05-31", because: :discontinued
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "kubenav.app"
   binary "#{appdir}/kubenav.app/Contents/MacOS/kubenav"

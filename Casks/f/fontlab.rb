@@ -14,6 +14,7 @@ cask "fontlab" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "FontLab #{version.major}.app"
 

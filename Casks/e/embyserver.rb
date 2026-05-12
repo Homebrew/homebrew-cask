@@ -16,6 +16,8 @@ cask "embyserver" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "osx-#{arch}/EmbyServer.app"
 
   zap trash: "~/.config/emby-server"

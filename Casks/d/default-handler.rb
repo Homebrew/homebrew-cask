@@ -13,7 +13,7 @@ cask "default-handler" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Default Handler.app"
 

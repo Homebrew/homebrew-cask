@@ -14,6 +14,8 @@ cask "singlecrystal" do
     end
   end
 
+  depends_on :macos
+
   app "SingleCrystal.app"
 
   zap trash: [

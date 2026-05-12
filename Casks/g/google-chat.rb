@@ -8,6 +8,8 @@ cask "google-chat" do
 
   disable! date: "2026-01-23", because: :discontinued
 
+  depends_on :macos
+
   app "Chat.app"
 
   zap trash: [

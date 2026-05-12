@@ -15,6 +15,8 @@ cask "cityofzion-neon" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Neon.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "magicplot" do
     regex(/href=.*?MagicPlot(\d+(?:\.\d+)*)\.zip/i)
   end
 
+  depends_on :macos
+
   app "MagicPlot#{version}.app"
 
   zap trash: [

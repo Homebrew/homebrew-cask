@@ -22,8 +22,8 @@ cask "microsoft-outlook" do
     end
   end
   on_sonoma :or_newer do
-    version "16.108.26041915"
-    sha256 "1597ea7aeb6820cf6874976f738ec5c2a13f33b4676a39a2cb7e0eeb3af6057b"
+    version "16.108.26050324"
+    sha256 "9f597bb38e5ae41f7c9ca22b2b94aeef5a3dc9d26f4a87bc62475f87e914b029"
 
     livecheck do
       url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409OPIM2019.xml"
@@ -43,6 +43,7 @@ cask "microsoft-outlook" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on :macos
 
   pkg "Microsoft_Outlook_#{version}_Installer.pkg",
       choices: [

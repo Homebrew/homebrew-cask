@@ -25,7 +25,7 @@ cask "plistedit-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "PlistEdit Pro.app"
   binary "#{appdir}/PlistEdit Pro.app/Contents/MacOS/pledit"

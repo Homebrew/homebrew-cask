@@ -9,6 +9,8 @@ cask "flow-desktop" do
 
   disable! date: "2025-11-05", because: :unreachable
 
+  depends_on :macos
+
   app "Flow.app"
 
   zap trash: [

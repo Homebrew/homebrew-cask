@@ -16,6 +16,8 @@ cask "mockuuups-studio" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "Mockuuups Studio.app"
 
   zap trash: [

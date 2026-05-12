@@ -1,6 +1,6 @@
 cask "nani" do
-  version "1.0.85"
-  sha256 "852c50561a6777211da55bba901f0d47889c01eac52b26da32cc7f5c1634f723"
+  version "1.0.86"
+  sha256 "82e32527380f2306a64f694286490c5501d14bfbe24b4c8c6535a7b49b8d6a76"
 
   url "https://nani-desktop.kiok.jp/artifacts/nani-#{version}.dmg",
       verified: "nani-desktop.kiok.jp/artifacts/"
@@ -14,7 +14,7 @@ cask "nani" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Nani.app"
 

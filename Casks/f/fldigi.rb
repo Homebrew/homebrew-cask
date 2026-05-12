@@ -13,7 +13,7 @@ cask "fldigi" do
     regex(%r{url=.*?/fldigi[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "fldigi-#{version}.app"
 

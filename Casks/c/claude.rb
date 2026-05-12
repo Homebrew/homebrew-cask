@@ -1,6 +1,6 @@
 cask "claude" do
-  version "1.3883.0,93ff6cb984386882b4bd9b6bca80d4cf5af8e13b"
-  sha256 "f9c9c216a5cd6d504d3d4de67479bde7f28e959e2a9d8caed96f90f22c20115a"
+  version "1.6608.2,ebf1a166e82541b54229aa620d117c60923a939a"
+  sha256 "1e11b6b175750072123e837db8c2b06a337bee61fff4d570a03327245c4f5a90"
 
   url "https://downloads.claude.ai/releases/darwin/universal/#{version.csv.first}/Claude-#{version.csv.second}.zip",
       verified: "downloads.claude.ai/releases/darwin/universal/"
@@ -22,7 +22,7 @@ cask "claude" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Claude.app"
 

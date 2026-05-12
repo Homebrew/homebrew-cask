@@ -1,6 +1,6 @@
 cask "onedrive" do
-  version "26.055.0323.0004"
-  sha256 "14a3870b9bc09ec2c1d8e3d5c291b22879793c3e8ba11993c37e34f4553aa7df"
+  version "26.063.0405.0002"
+  sha256 "2a832e34c4603b7de122d3a7bc7652f1b254dc8af0045f0ec6e4730427f68623"
 
   url "https://oneclient.sfx.ms/Mac/Installers/#{version}/universal/OneDrive.pkg",
       verified: "oneclient.sfx.ms/Mac/Installers/"
@@ -18,7 +18,7 @@ cask "onedrive" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "OneDrive.pkg"
 

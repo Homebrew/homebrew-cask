@@ -16,6 +16,8 @@ cask "portx" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   app "PortX.app"
 
   zap trash: [

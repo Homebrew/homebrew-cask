@@ -17,6 +17,7 @@ cask "opcode" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "opcode.app"
 

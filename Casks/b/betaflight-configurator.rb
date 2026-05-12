@@ -10,6 +10,8 @@ cask "betaflight-configurator" do
   deprecate! date: "2025-12-26", because: :discontinued
   disable! date: "2026-12-26", because: :discontinued
 
+  depends_on :macos
+
   app "Betaflight Configurator.app"
 
   zap trash: [

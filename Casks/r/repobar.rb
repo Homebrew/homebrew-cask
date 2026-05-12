@@ -1,6 +1,6 @@
 cask "repobar" do
-  version "0.2.0"
-  sha256 "dcc628c8073185ab0ea669190dfe88828368c307b3f7f21ca38f5ce320ccce2f"
+  version "0.5.2"
+  sha256 "7d0fcf487c6630f233964805fad0dfadd5b453f6689a57391140ad4f4da35114"
 
   url "https://github.com/steipete/RepoBar/releases/download/v#{version}/RepoBar-#{version}.zip",
       verified: "github.com/steipete/RepoBar/"
@@ -8,7 +8,7 @@ cask "repobar" do
   desc "Menu bar dashboard for GitHub repository health"
   homepage "https://repobar.app/"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "RepoBar.app"
 

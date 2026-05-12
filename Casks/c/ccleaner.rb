@@ -13,6 +13,7 @@ cask "ccleaner" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Install CCleaner.pkg"
 

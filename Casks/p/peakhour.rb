@@ -11,6 +11,7 @@ cask "peakhour" do
   disable! date: "2025-09-24", because: :moved_to_mas
 
   auto_updates true
+  depends_on :macos
 
   app "PeakHour #{version.major}.app"
 

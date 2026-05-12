@@ -22,6 +22,7 @@ cask "futubull@legacy" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "FutuNiuniu.app"
 

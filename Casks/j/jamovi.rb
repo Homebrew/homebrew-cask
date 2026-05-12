@@ -1,9 +1,9 @@
 cask "jamovi" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.7.26.0"
-  sha256 arm:   "e77d5fb3069ffe05f8eaf75515e523bf321525433d811626767d7a62affcac54",
-         intel: "d6e292a58e2ef0421f7693d03135cffd5a6a469af0b6e8d70782b2cfe489e22e"
+  version "2.7.28.0"
+  sha256 arm:   "8934d7f901d2c98e0ded613b5c557e7c2c13738d6b74241bd3c49882e652a8f0",
+         intel: "1d8c7330eaced1a22419639a43772e8c314a6d67b05152df6614880d969fce82"
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos-#{arch}.dmg",
       referer: "https://www.jamovi.org/download.html"
@@ -19,7 +19,7 @@ cask "jamovi" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "jamovi.app"
 

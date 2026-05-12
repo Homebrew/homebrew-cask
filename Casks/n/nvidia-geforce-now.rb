@@ -1,5 +1,5 @@
 cask "nvidia-geforce-now" do
-  version "2.0.83.141"
+  version "2.0.84.124"
   sha256 :no_check
 
   url "https://download.nvidia.com/gfnpc/GeForceNOW-release.dmg"
@@ -15,6 +15,7 @@ cask "nvidia-geforce-now" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "GeForceNOW.app"
 

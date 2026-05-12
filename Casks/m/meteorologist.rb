@@ -13,7 +13,7 @@ cask "meteorologist" do
     regex(%r{url=.*?/Meteorologist[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Meteorologist.app"
 

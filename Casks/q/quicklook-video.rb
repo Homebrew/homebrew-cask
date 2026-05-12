@@ -1,6 +1,6 @@
 cask "quicklook-video" do
-  version "3.06"
-  sha256 "e05aed1cd29698f64419d9c6ea89e91da20a11d85609912dfef2d04df9116746"
+  version "3.07"
+  sha256 "b7a493a45115b4ec2c33fcef7cba2907ae755657839b348661ce739c2cbc97be"
 
   url "https://github.com/Marginal/QuickLookVideo/releases/download/rel-#{version.no_dots}/QLVideo_#{version.no_dots}.dmg"
   name "QuickLook Video"
@@ -20,7 +20,7 @@ cask "quicklook-video" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sequoia
 
   app "QuickLook Video.app"
 

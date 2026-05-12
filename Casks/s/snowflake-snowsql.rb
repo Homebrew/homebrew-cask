@@ -22,6 +22,8 @@ cask "snowflake-snowsql" do
     end
   end
 
+  depends_on :macos
+
   pkg "snowsql-#{version.csv.first}-darwin_#{arch}.pkg"
 
   uninstall pkgutil: "net.snowflake.snowsql"

@@ -1,9 +1,9 @@
 cask "gams" do
   arch arm: "_arm64"
 
-  version "53.4.0"
-  sha256 arm:   "b59c201f3da7d9a26d62aa2605e7a1ebc7a6ffa3342c9ffd3de331da0195e90e",
-         intel: "6d1494492c6a7dc8b2f14b8c57d6dca8d489c639279c9968a0ae6fba5dafc116"
+  version "53.5.0"
+  sha256 arm:   "42638eaf3f7ac116ec22a8f0dde9ddb4cf0d0cd99b60468ec94fd70688b5e4fc",
+         intel: "031a0ef7151a584d975d8a793db15f69d22cfb188399fbf968904b22b3dd3344"
 
   url "https://d37drm4t2jghv5.cloudfront.net/distributions/#{version}/macosx#{arch}/GAMS#{version}.pkg",
       verified: "d37drm4t2jghv5.cloudfront.net/"
@@ -15,6 +15,8 @@ cask "gams" do
     url "https://www.gams.com/download/"
     regex(/GAMS\s*Release\s*v?(\d+(?:\.\d+)+)[ <"]/i)
   end
+
+  depends_on :macos
 
   pkg "GAMS#{version}.pkg",
       choices: [

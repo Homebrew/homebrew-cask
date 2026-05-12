@@ -16,7 +16,7 @@ cask "screaming-frog-seo-spider" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Screaming Frog SEO Spider.app"
 

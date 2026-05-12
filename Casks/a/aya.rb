@@ -11,6 +11,8 @@ cask "aya" do
   desc "Android ADB desktop app"
   homepage "https://aya.liriliri.io/"
 
+  depends_on :macos
+
   app "AYA.app"
 
   zap trash: [

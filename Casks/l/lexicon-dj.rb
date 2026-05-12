@@ -6,10 +6,10 @@ cask "lexicon-dj" do
          intel: "6949538e5093ef473c93328284666148cc170c7f30e6bdb8263c8de67807f210"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://update.rekord.cloud/releases/lexicon/latest/lexicon-#{version}-mac-#{arch}.zip",
@@ -24,6 +24,7 @@ cask "lexicon-dj" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Lexicon.app"
 

@@ -12,6 +12,8 @@ cask "mkvtools" do
     regex(%r{href=.*?/mkvtools(\d+(?:\.\d+)*)\.zip}i)
   end
 
+  depends_on :macos
+
   app "mkvtools#{version}/MKVtools.app"
 
   zap trash: [

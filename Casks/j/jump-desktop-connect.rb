@@ -13,6 +13,7 @@ cask "jump-desktop-connect" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg ".jdc.sparkle_guided.pkg"
 

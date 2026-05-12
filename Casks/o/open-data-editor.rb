@@ -13,6 +13,8 @@ cask "open-data-editor" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Open Data Editor.app"
 
   # No zap stanza required

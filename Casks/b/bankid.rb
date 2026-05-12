@@ -12,6 +12,8 @@ cask "bankid" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "BankID_installation_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.bankid.BankID"

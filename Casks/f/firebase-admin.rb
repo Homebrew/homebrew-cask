@@ -9,6 +9,8 @@ cask "firebase-admin" do
 
   deprecate! date: "2025-06-01", because: :unmaintained
 
+  depends_on :macos
+
   app "firebase-admin.app"
 
   zap trash: [

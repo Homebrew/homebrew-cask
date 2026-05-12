@@ -13,6 +13,8 @@ cask "splashtop-business" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   pkg "Splashtop Business.pkg"
 
   uninstall launchctl: "com.splashtop.stb.macosx.helper.autoupdate",

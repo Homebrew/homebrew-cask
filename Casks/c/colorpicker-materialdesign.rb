@@ -7,6 +7,8 @@ cask "colorpicker-materialdesign" do
   desc "Colour picker"
   homepage "https://github.com/CodeCatalyst/MaterialDesignColorPicker"
 
+  depends_on :macos
+
   colorpicker "MaterialDesignColorPicker.colorPicker"
 
   # No zap stanza required

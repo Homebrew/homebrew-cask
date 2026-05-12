@@ -1,6 +1,6 @@
 cask "feedflow" do
-  version "1.12.0,all"
-  sha256 "d60c22fadbcee6c94bda161c26617d88feac7b1376518854b0d03403c55b7707"
+  version "1.13.1,all"
+  sha256 "173f0dea2b37bff07ecf229fb6072b560e631864a4b624693504b00be2756638"
 
   url "https://github.com/prof18/feed-flow/releases/download/#{version.csv.first}-#{version.csv.second}/FeedFlow-#{version.csv.first}.dmg",
       verified: "github.com/prof18/feed-flow/"
@@ -21,7 +21,7 @@ cask "feedflow" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
   depends_on arch: :arm64
 
   app "FeedFlow.app"

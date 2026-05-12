@@ -1,6 +1,6 @@
 cask "wallspace" do
-  version "1.5"
-  sha256 "12a633612a04d1883c4ca565686e426aa2300276a7017b13f53d56b4c682b000"
+  version "1.5.1"
+  sha256 "ac3b52dbe675273793256d03a12392a6fdccdf05f46d1d6d5d8cb745e173d61c"
 
   url "https://dvivcibhncrefmnjtjeq.supabase.co/functions/v1/download-version?v=#{version}",
       verified: "dvivcibhncrefmnjtjeq.supabase.co/"
@@ -14,7 +14,7 @@ cask "wallspace" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
   container type: :zip
 
   app "Wallspace.app"

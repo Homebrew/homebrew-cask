@@ -17,6 +17,8 @@ cask "time-to-leave" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Time To Leave.app"
 
   zap trash: [

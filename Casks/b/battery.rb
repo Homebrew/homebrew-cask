@@ -8,6 +8,7 @@ cask "battery" do
   homepage "https://github.com/actuallymentor/battery/"
 
   auto_updates true
+  depends_on :macos
   depends_on arch: :arm64
 
   app "battery.app"

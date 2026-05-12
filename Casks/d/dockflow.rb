@@ -1,6 +1,6 @@
 cask "dockflow" do
-  version "1.68"
-  sha256 "9ddea8a0efdf0a1b9d6b863ae80b8e39ee05c45aeb10fce203a87185f7915f6e"
+  version "1.69"
+  sha256 "39b056b1bf24f24095720a048c5b9ec59a6f6d71f7f38b1a8bf8ce3c87005a16"
 
   url "https://github.com/AppitStudio/dock-flow-updates/releases/download/v#{version}/DockFlow.dmg",
       verified: "github.com/AppitStudio/"
@@ -14,7 +14,7 @@ cask "dockflow" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "DockFlow.app"
 

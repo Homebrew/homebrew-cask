@@ -10,7 +10,7 @@ cask "cardinal-search" do
   desc "Fastest file searching tool"
   homepage "https://github.com/cardisoft/Cardinal"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Cardinal.app"
 

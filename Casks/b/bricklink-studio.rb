@@ -1,6 +1,6 @@
 cask "bricklink-studio" do
-  version "2.26.3_1"
-  sha256 "3a1d14c69386e485329a1110e1686147b4e6fcb8ae7b5f8ed9443477a7372006"
+  version "2.26.4_1"
+  sha256 "9220038ec1d4f9256ef2388c11dca2d3e805ea811be155268d0815ea20112beb"
 
   url "https://studio.download.bricklink.info/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
       verified: "studio.download.bricklink.info/"
@@ -14,6 +14,7 @@ cask "bricklink-studio" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Studio+#{version.major}.0.pkg"
 

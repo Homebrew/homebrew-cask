@@ -1,6 +1,6 @@
 cask "juxtacode" do
-  version "1.2.5"
-  sha256 "844f298a0dad410dbba6ff080685c5997ef2fef6209eeea2c9dc84722900af54"
+  version "1.3"
+  sha256 "83af3c8609cbf9528c87686848688d2b16ad3ad93bf71db39348cd02e376250c"
 
   url "https://appcast.juxtacode.app/juxtacode-#{version}.zip"
   name "JuxtaCode"
@@ -13,7 +13,7 @@ cask "juxtacode" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "JuxtaCode.app"
   binary "#{appdir}/JuxtaCode.app/Contents/MacOS/juxta"

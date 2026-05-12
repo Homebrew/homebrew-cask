@@ -9,6 +9,7 @@ cask "cashnotify" do
   homepage "https://cashnotify.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "CashNotify.app"
 

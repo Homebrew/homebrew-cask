@@ -6,10 +6,10 @@ cask "tableau-public" do
          intel: "02a21c8d63b7676de6994226e32317f8732a353d414b70ce11b81e7c725dd0cc"
 
   on_arm do
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauPublic-#{version.dots_to_hyphens}#{arch}.pkg",
@@ -21,6 +21,8 @@ cask "tableau-public" do
   livecheck do
     cask "tableau"
   end
+
+  depends_on :macos
 
   pkg "TableauPublic-#{version.dots_to_hyphens}#{arch}.pkg"
 

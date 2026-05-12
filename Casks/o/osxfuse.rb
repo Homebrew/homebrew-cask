@@ -11,6 +11,8 @@ cask "osxfuse" do
   deprecate! date: "2025-03-28", because: :discontinued, replacement_cask: "macfuse"
   disable! date: "2026-03-28", because: :discontinued, replacement_cask: "macfuse"
 
+  depends_on :macos
+
   pkg "Extras/FUSE for macOS #{version}.pkg"
 
   postflight do

@@ -18,6 +18,8 @@ cask "itunes-producer" do
     end
   end
 
+  depends_on :macos
+
   pkg "iTunesProducer.pkg"
 
   uninstall pkgutil: "com.apple.pkg.iTunesProducer"

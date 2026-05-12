@@ -12,6 +12,8 @@ cask "pingplotter" do
     regex(/(\d+(?:\.\d+)+).*?h2/i)
   end
 
+  depends_on :macos
+
   app "PingPlotter.app"
 
   uninstall quit: "com.pingman.pingplotter.mac"

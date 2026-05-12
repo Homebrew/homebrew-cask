@@ -7,6 +7,8 @@ cask "anybar" do
   desc "Menu bar status indicator"
   homepage "https://github.com/tonsky/AnyBar"
 
+  depends_on :macos
+
   app "AnyBar.app"
 
   # No zap stanza required

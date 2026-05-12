@@ -15,6 +15,8 @@ cask "lynkeos" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
 
   zap trash: [

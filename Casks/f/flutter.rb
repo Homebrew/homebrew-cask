@@ -1,9 +1,9 @@
 cask "flutter" do
   arch arm: "_arm64"
 
-  version "3.41.7"
-  sha256 arm:   "2e3e6af44d1adccf695deff52e5e4c8beb10e5625066b27ad082b38b83ef805e",
-         intel: "a0b9af49e6e1a6800f31a408b98c1d7bd51e98650a8b9ebcd77168b48c916ff0"
+  version "3.41.9"
+  sha256 arm:   "d692b030a63466c44d6b2bc88583380371ecbe328f22cc4057835f59739821a1",
+         intel: "eaee3b6aa6da114eb0be843ac53f4f138d3d8827779ff1e4546b345c75b9cba1"
 
   url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos#{arch}_#{version}-stable.zip",
       verified: "storage.googleapis.com/flutter_infra_release/releases/stable/macos/"
@@ -23,6 +23,7 @@ cask "flutter" do
   end
 
   auto_updates true
+  depends_on :macos
 
   suite "flutter", target: "#{HOMEBREW_PREFIX}/share/flutter"
   binary "flutter/bin/dart"

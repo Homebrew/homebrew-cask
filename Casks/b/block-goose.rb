@@ -1,9 +1,9 @@
 cask "block-goose" do
   arch intel: "_intel_mac"
 
-  version "1.32.0"
-  sha256 arm:   "d682c8ba064048883e0da117c9d5dcbbb1816456c933d489e8a4f26dc42f3d06",
-         intel: "f38ddf56672dc05976f1235777b82d5409c6c98399012260d64cb75cfa98bcfd"
+  version "1.33.1"
+  sha256 arm:   "9a3605551551e6c34b900d0d1221e30955a2bf5e021e01ddd7a667836f705550",
+         intel: "e7b79bd236ab8f57fb3b1725234a826729caad51b7a89aab26d7f071628830f7"
 
   url "https://github.com/block/goose/releases/download/v#{version}/Goose#{arch}.zip",
       verified: "github.com/block/goose/"
@@ -30,7 +30,7 @@ cask "block-goose" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Goose.app"
 

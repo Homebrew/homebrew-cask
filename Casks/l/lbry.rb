@@ -11,6 +11,8 @@ cask "lbry" do
   deprecate! date: "2025-11-30", because: :unmaintained
   disable! date: "2026-11-30", because: :unmaintained
 
+  depends_on :macos
+
   app "LBRY.app"
   # shim scripts (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shim_lbrynet = "#{staged_path}/lbrynet.wrapper.sh"

@@ -2,7 +2,7 @@ cask "circuitjs1" do
   # NOTE: "1" is not a version number, but an intrinsic part of the product name
   arch arm: "arm"
 
-  version "4.0.0js"
+  version "4.1.0js"
   sha256 :no_check
 
   url "https://www.falstad.com/circuit/offline/CircuitJS1-mac#{arch}.dmg"
@@ -16,6 +16,8 @@ cask "circuitjs1" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "CircuitJS1.app"
 

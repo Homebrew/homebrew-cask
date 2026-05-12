@@ -8,6 +8,8 @@ cask "iconscout" do
   desc "Desktop toolbar for Iconscout"
   homepage "https://iconscout.com/"
 
+  depends_on :macos
+
   app "Iconscout.app"
 
   zap trash: [

@@ -13,6 +13,8 @@ cask "icab" do
     regex(/iCab\sv?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "iCab #{version}/iCab.app"
 
   zap trash: [

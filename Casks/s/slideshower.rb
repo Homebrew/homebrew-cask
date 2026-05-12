@@ -1,6 +1,6 @@
 cask "slideshower" do
-  version "4.3"
-  sha256 "3767772efa590e78a818a8f9403b33636ac63f93b6d64c0e2f136aa0b465a7cc"
+  version "4.4"
+  sha256 "437febbaed6fbeb48d1b680848a717dd41008837ceb87cf2f2e1b0a0327a5944"
 
   url "https://slideshower.com/slideshower_#{version.dots_to_underscores}.dmg"
   name "Slideshower for macOS"
@@ -12,7 +12,7 @@ cask "slideshower" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Slideshower for macOS.app"
 

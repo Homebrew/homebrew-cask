@@ -12,6 +12,8 @@ cask "mate-translate" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Mate Translate.app"
 
   uninstall quit: "com.twopeoplesoftware.InstantTranslate-nomas"

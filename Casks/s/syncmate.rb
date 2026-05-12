@@ -13,6 +13,8 @@ cask "syncmate" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "SyncMate.app"
 
   zap trash: [

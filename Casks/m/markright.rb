@@ -12,6 +12,8 @@ cask "markright" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "MarkRight.app"
 
   zap trash: [

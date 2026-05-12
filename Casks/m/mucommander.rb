@@ -11,6 +11,8 @@ cask "mucommander" do
   desc "File manager with a dual-pane interface"
   homepage "https://www.mucommander.com/"
 
+  depends_on :macos
+
   app "muCommander.app"
 
   zap trash: "~/Library/Preferences/muCommander"

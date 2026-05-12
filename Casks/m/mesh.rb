@@ -1,6 +1,6 @@
 cask "mesh" do
-  version "2.20.0"
-  sha256 "c634363be4fc4a8b2bac531e199c7e6dfc181b6bc457a541cc1033f61193901b"
+  version "2.20.1"
+  sha256 "66b00ae22df7c83db17969115d6f5f25d895a4faff161770e3f29c39df91117d"
 
   url "https://assets.me.sh/mesh-desktop/mac/Mesh-#{version}-universal.dmg"
   name "Mesh"
@@ -13,7 +13,7 @@ cask "mesh" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Mesh.app"
 

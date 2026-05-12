@@ -2,7 +2,7 @@ cask "youtube-to-mp3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
   arch arm: "-arm"
 
-  version "3.9.19"
+  version "3.9.20"
   sha256 :no_check
 
   url "https://www.mediahuman.net/files/YouTubeToMP3#{arch}.dmg"
@@ -15,7 +15,7 @@ cask "youtube-to-mp3" do
     regex(/>\s*Version:.*?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "YouTube to MP3.app"
 

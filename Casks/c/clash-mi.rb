@@ -1,6 +1,6 @@
 cask "clash-mi" do
-  version "1.0.21.703"
-  sha256 "67a3489238626e74a36cf2707bf486e4fd49a9e230d809d4938d8f267fe682dc"
+  version "1.0.23.904"
+  sha256 "d330be6d4d2de21742a195c92fbc0da736613a166b8e04ab3be6950dea9870df"
 
   url "https://github.com/KaringX/clashmi/releases/download/v#{version}/clashmi_#{version}_macos_universal.dmg"
   name "Clash Mi"
@@ -12,7 +12,7 @@ cask "clash-mi" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Clash Mi.app"
 

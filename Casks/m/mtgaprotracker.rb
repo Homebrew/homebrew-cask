@@ -11,6 +11,8 @@ cask "mtgaprotracker" do
   deprecate! date: "2024-07-27", because: :discontinued
   disable! date: "2025-07-27", because: :discontinued
 
+  depends_on :macos
+
   app "mtgaprotracker.app"
 
   zap trash: [

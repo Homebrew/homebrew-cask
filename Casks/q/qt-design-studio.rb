@@ -1,6 +1,6 @@
 cask "qt-design-studio" do
-  version "4.8.1-0-202511211723"
-  sha256 "9939e03748468e2dd6a2b8ad334ebbbfe8b2f182c247d319821e5c6359ede46c"
+  version "4.8.2-0-202604291709"
+  sha256 "61c18174b403e90aa6527911a21493c7d544fd804a6363982e2280b0a0f966fc"
 
   url "https://download.qt.io/online/qtsdkrepository/mac_x64/desktop/tools_qtdesignstudio_generation2/qt.tools.qtdesignstudio/#{version}opensource.7z"
   name "Qt Design Studio"
@@ -14,7 +14,7 @@ cask "qt-design-studio" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Qt Design Studio.app"
 

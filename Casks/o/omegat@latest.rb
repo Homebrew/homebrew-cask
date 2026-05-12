@@ -13,6 +13,7 @@ cask "omegat@latest" do
   end
 
   conflicts_with cask: "omegat"
+  depends_on :macos
 
   app "OmegaT_#{version}_Beta_Mac_Notarized//OmegaT.app"
 

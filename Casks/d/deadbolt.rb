@@ -15,6 +15,8 @@ cask "deadbolt" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Deadbolt.app"
 
   zap trash: [

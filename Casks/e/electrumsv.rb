@@ -13,6 +13,8 @@ cask "electrumsv" do
     regex(/href=.*?ElectrumSV[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "ElectrumSV.app"
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask "fontra-pak" do
-  version "2026.4.3"
-  sha256 "a2792ac120e6f8c79f4425f3a881f76498e41e6db6f3e67f3be30dafa74bcadd"
+  version "2026.5.0"
+  sha256 "bfd6b7f8860946f1592380076ed711680a8a4ebba3afdb3d88591a10e51e7163"
 
   url "https://github.com/fontra/fontra-pak/releases/download/#{version}/FontraPak-macOS.dmg",
       verified: "github.com/fontra/fontra-pak/"
@@ -8,7 +8,7 @@ cask "fontra-pak" do
   desc "Browser-based font editor"
   homepage "https://fontra.xyz/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Fontra Pak.app"
 

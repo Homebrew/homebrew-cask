@@ -1,9 +1,9 @@
 cask "claude-devtools" do
-  arch arm: "-arm64"
+  arch arm: "-arm64", intel: "-x64"
 
-  version "0.4.10"
-  sha256 arm:   "bb61e85f9c4f64e181c61c4de0016edd206ebc46d624be0d91eeba3dbc17e18b",
-         intel: "206e653313aeb5c97f937baea3bc8db823e249ff6e8d2c8d11a2e92ec1eb251d"
+  version "0.4.16"
+  sha256 arm:   "3f9268b0b6c5c4b082fa1838c97840cbbcc3df8d089c76a34a2dfe01674b4a7b",
+         intel: "f68a13ab7356d42a89b0d39c7c896f42fde8e1606af234d567c401636d10db7d"
 
   url "https://github.com/matt1398/claude-devtools/releases/download/v#{version}/claude-devtools-#{version}#{arch}.dmg"
   name "Claude DevTools"
@@ -16,7 +16,7 @@ cask "claude-devtools" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "claude-devtools.app"
 

@@ -12,6 +12,8 @@ cask "onionshare" do
     regex(/href=.*?OnionShare[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "OnionShare.app"
 
   zap trash: [

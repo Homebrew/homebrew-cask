@@ -23,6 +23,7 @@ cask "perforce" do
   end
 
   conflicts_with cask: "p4"
+  depends_on :macos
 
   binary "p4"
   binary "p4broker"

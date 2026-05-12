@@ -26,8 +26,8 @@ cask "coteditor" do
     end
   end
   on_sequoia :or_newer do
-    version "7.0.0"
-    sha256 "9eb8c709fe29046673d56e9e62c0176d4eb5869166860825cc005267f26da68d"
+    version "7.0.2"
+    sha256 "8c3c8811f1a95dd8bc3f2e1f6cdbc53c237aad128432a82f669ba256a679272f"
 
     livecheck do
       url "https://coteditor.com/appcast.xml"
@@ -44,6 +44,7 @@ cask "coteditor" do
   homepage "https://coteditor.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "CotEditor.app"
   binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"

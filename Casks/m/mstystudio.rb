@@ -1,7 +1,7 @@
 cask "mstystudio" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.6.4"
+  version "2.7.2"
   sha256 :no_check
 
   url "https://next-assets.msty.studio/app/latest/mac/MstyStudio_#{arch}.dmg",
@@ -16,7 +16,7 @@ cask "mstystudio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "MstyStudio.app"
 

@@ -31,6 +31,7 @@ cask "virtualbox" do
     "virtualbox@6",
     "virtualbox@beta",
   ]
+  depends_on :macos
 
   pkg "VirtualBox.pkg",
       choices: [

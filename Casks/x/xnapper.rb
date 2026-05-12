@@ -12,6 +12,8 @@ cask "xnapper" do
     regex(%r{href=.*?/Xnapper[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on :macos
+
   app "Xnapper.app"
 
   zap trash: [

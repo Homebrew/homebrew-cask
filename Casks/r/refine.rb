@@ -1,6 +1,6 @@
 cask "refine" do
-  version "1.26.1"
-  sha256 "f6777e105d249a21c4fdaa3b4cf34674c8f15014f745387c3cdc52f655d7ffbb"
+  version "1.30"
+  sha256 "cd3af94df5fbbe1800e26cc7ffaaae2409bb6ce97d7fa3b409e80caf4f745a59"
 
   url "https://refine.sh/release/stable/Refine_#{version}.zip"
   name "Refine"
@@ -13,7 +13,7 @@ cask "refine" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Refine.app"
 

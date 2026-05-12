@@ -1,9 +1,9 @@
 cask "zed@preview" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.234.0"
-  sha256 arm:   "c54eb020ec64907613adb87896ebfed2b0ef12ff0d3b74c9b57d56833d41fa0b",
-         intel: "3027d55653fcce141ecf683cf9245f9273208624740a990c5e9562596928db08"
+  version "1.2.2"
+  sha256 arm:   "b06b9f0ec1d18acf4fca899cd64d2cd4583701aa6b003a3e325547f70f18a1d3",
+         intel: "d20b767871ab44150e54043bf47650d294c3501ac55ca47f3141d43327021e2c"
 
   url "https://zed.dev/api/releases/preview/#{version}/Zed-#{arch}.dmg"
   name "Zed Preview"
@@ -11,13 +11,14 @@ cask "zed@preview" do
   homepage "https://zed.dev/"
 
   livecheck do
-    url "https://zed.dev/api/releases/latest?asset=Zed.dmg&preview=1&os=macos&arch=#{arch}"
+    url "https://cloud.zed.dev/releases/preview/latest/asset?asset=zed&os=macos&arch=#{arch}"
     strategy :json do |json|
       json["version"]
     end
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Zed Preview.app"
   binary "#{appdir}/Zed Preview.app/Contents/MacOS/cli", target: "zed-preview"

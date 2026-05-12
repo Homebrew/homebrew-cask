@@ -12,6 +12,8 @@ cask "ilspy" do
 
   deprecate! date: "2025-07-27", because: :unmaintained
 
+  depends_on :macos
+
   app "artifacts/osx-#{arch}/ILSpy.app"
 
   zap trash: [

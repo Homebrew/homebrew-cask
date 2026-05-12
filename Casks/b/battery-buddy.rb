@@ -1,5 +1,5 @@
 cask "battery-buddy" do
-  version "1.0.3"
+  version "1.0.4"
   sha256 :no_check
 
   url "https://batterybuddy.app/releases/Battery%20Buddy.zip"
@@ -13,7 +13,7 @@ cask "battery-buddy" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Battery Buddy.app"
 

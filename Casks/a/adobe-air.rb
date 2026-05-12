@@ -1,6 +1,6 @@
 cask "adobe-air" do
-  version "51.3.1.2"
-  sha256 "48006e4d0acccbcd8ffa6487c57ca76c432a2fab5d3425da4b19209581435a41"
+  version "51.3.2.3"
+  sha256 "685587623fa010cb9146742847b8a5199306df3f034b2932a1eaa441f59ec9f9"
 
   url "https://airsdk.harman.com/assets/downloads/#{version}/AdobeAIR.dmg"
   name "Adobe AIR"
@@ -22,6 +22,8 @@ cask "adobe-air" do
       version_page[:content]&.scan(regex)&.map { |match| match[0] }
     end
   end
+
+  depends_on :macos
 
   installer script: {
     executable: "Adobe AIR Installer.app/Contents/MacOS/Adobe AIR Installer",

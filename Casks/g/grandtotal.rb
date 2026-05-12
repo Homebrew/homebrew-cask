@@ -1,6 +1,6 @@
 cask "grandtotal" do
-  version "9.3.0.32"
-  sha256 "b43b9e642b50571d0479ea8f03eb7a923233bceb082b6933e139c6ced03f2daa"
+  version "9.3.1.14"
+  sha256 "a123eb5bba33bc72b0c4a1c67dcd58898fc9f39c0f87167e0d8c7067d842b84b"
 
   url "https://www.mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.dmg"
   name "GrandTotal"
@@ -16,6 +16,7 @@ cask "grandtotal" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "GrandTotal.app"
 

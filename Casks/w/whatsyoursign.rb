@@ -8,6 +8,8 @@ cask "whatsyoursign" do
   desc "Shows a files cryptographic signing information"
   homepage "https://objective-see.org/products/whatsyoursign.html"
 
+  depends_on :macos
+
   installer manual: "WhatsYourSign Installer.app"
 
   uninstall script: {

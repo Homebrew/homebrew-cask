@@ -17,6 +17,7 @@ cask "xld" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
+  depends_on :macos
 
   app "XLD.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

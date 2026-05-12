@@ -1,6 +1,6 @@
 cask "milanote" do
-  version "3.18.93"
-  sha256 "83eadbbe1b1f43a293f81a87dffd26088cb073a7430777d5eb0af5464bbdba9e"
+  version "3.18.99"
+  sha256 "b66e3ada22d254a87fc84f16a5afd7879cd9a43fc6409cf54bcfaeb6eadf85c1"
 
   url "https://milanote-app-releases.s3.amazonaws.com/Milanote-#{version}.dmg",
       verified: "milanote-app-releases.s3.amazonaws.com/"
@@ -14,7 +14,7 @@ cask "milanote" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Milanote.app"
 

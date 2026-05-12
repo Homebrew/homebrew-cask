@@ -1,6 +1,6 @@
 cask "claudebar" do
-  version "0.4.59"
-  sha256 "68a988cbc382f6b0afe651c63e9eefe00730f6e8ffc82f56f0782908f9eac3dd"
+  version "0.4.61"
+  sha256 "1e64da7d823cdc406eaae5cb4598bd0759086c3ce1978df0cc6e0e569ba9acb2"
 
   url "https://github.com/tddworks/ClaudeBar/releases/download/v#{version}/ClaudeBar-#{version}.dmg"
   name "ClaudeBar"
@@ -12,7 +12,7 @@ cask "claudebar" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "ClaudeBar.app"
 

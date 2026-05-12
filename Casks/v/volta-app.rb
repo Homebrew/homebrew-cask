@@ -14,6 +14,7 @@ cask "volta-app" do
   disable! date: "2026-02-23", because: :no_longer_available
 
   auto_updates true
+  depends_on :macos
 
   app "Volta.app"
 

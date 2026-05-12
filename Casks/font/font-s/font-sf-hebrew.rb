@@ -7,6 +7,8 @@ cask "font-sf-hebrew" do
   name "SF Hebrew"
   homepage "https://developer.apple.com/fonts"
 
+  depends_on :macos
+
   pkg "SF Hebrew Fonts.pkg"
 
   uninstall pkgutil: "com.apple.pkg.SFHebrewFonts"

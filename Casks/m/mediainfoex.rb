@@ -9,7 +9,7 @@ cask "mediainfoex" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "MediaInfoEx.app"
 

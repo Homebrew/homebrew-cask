@@ -9,6 +9,7 @@ cask "journey" do
   homepage "https://2appstudio.com/journey/"
 
   auto_updates true
+  depends_on :macos
 
   app "Journey.app"
 

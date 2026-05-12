@@ -22,8 +22,8 @@ cask "microsoft-powerpoint" do
     end
   end
   on_sonoma :or_newer do
-    version "16.108.26041915"
-    sha256 "dfbd359babcb81b3a8a734ae4e4a15858025fa70e5e1d5f4ff14a52b4fff8f2c"
+    version "16.108.26050324"
+    sha256 "4bb8d2df4e0aa7e5bbc918f61ce835097e607754f7d21a20c24a2f533c6d77f1"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
@@ -41,6 +41,7 @@ cask "microsoft-powerpoint" do
     "microsoft-office",
     "microsoft-office-businesspro",
   ]
+  depends_on :macos
 
   pkg "Microsoft_PowerPoint_#{version}_Installer.pkg",
       choices: [

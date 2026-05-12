@@ -19,6 +19,8 @@ cask "mindmaster-cn" do
     end
   end
 
+  depends_on :macos
+
   app "亿图脑图MindMaster.app"
 
   caveats do

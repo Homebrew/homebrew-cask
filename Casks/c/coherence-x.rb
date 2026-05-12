@@ -1,6 +1,6 @@
 cask "coherence-x" do
-  version "5.1.1"
-  sha256 "92b538b69f99563407ddbd375454aa130b3a5ee7d87da839f00ac36a74132ee6"
+  version "5.1.2"
+  sha256 "f92a16c58c0d6bc23938c86025e79ce7293750b8e970e781bb4c2e72132ff3aa"
 
   url "https://bzgdownloads.s3.amazonaws.com/Coherence/Coherence+X+#{version}.zip",
       verified: "bzgdownloads.s3.amazonaws.com/Coherence/"
@@ -14,7 +14,7 @@ cask "coherence-x" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Coherence X.app"
 

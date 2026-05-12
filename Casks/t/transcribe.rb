@@ -37,6 +37,8 @@ cask "transcribe" do
   desc "Transcribes recorded music"
   homepage "https://www.seventhstring.com/xscribe/overview.html"
 
+  depends_on :macos
+
   app "Transcribe!.app"
 
   uninstall quit: "com.seventhstring.transcribe"

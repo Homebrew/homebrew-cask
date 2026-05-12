@@ -1,6 +1,6 @@
 cask "openshot-video-editor@daily" do
-  version "3.5.1,15978-a5856529-48516e0b,dev-daily"
-  sha256 "7c9646656b36dd940045276fe7082a5c3253934128d6c2289aa9e5021c2c3b90"
+  version "3.5.1,16275-0751153d-48516e0b,dev-daily"
+  sha256 "2855f0aa1c50b6f68bfeaafc0fab3416f87679bad3d292f71a459a6746a6e69b"
 
   url "https://github.com/OpenShot/openshot-qt/releases/download/daily/OpenShot-v#{version.csv.first}-#{version.csv.third || "daily"}-#{version.csv.second}-x86_64.dmg",
       verified: "github.com/OpenShot/openshot-qt/"
@@ -22,6 +22,7 @@ cask "openshot-video-editor@daily" do
   end
 
   conflicts_with cask: "openshot-video-editor"
+  depends_on :macos
 
   app "OpenShot Video Editor.app"
 

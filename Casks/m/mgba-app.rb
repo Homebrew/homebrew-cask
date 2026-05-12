@@ -13,6 +13,8 @@ cask "mgba-app" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "mGBA.app"
 
   zap trash: [

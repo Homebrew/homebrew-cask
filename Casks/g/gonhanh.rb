@@ -13,7 +13,7 @@ cask "gonhanh" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "GoNhanh.app"
 

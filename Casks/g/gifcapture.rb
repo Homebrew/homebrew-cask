@@ -9,6 +9,8 @@ cask "gifcapture" do
   deprecate! date: "2024-07-11", because: :unmaintained
   disable! date: "2025-07-11", because: :unmaintained
 
+  depends_on :macos
+
   app "GifCapture.app"
 
   caveats do

@@ -11,6 +11,7 @@ cask "synology-cloud-station-backup" do
   disable! date: "2025-10-08", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   pkg "Install Cloud Station Backup.pkg"
 

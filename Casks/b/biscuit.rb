@@ -1,9 +1,9 @@
 cask "biscuit" do
   arch arm: "-arm64"
 
-  version "2.0.0"
-  sha256 arm:   "0c26983ee3feffb4630263139ea99833f752e59c980f653b2a61f56f0b5ffe0d",
-         intel: "5a1755f11943cb5d48d1728be5084ad80a5115d2af25e8431a1d11d965e79a96"
+  version "2.1.1"
+  sha256 arm:   "998dcc9785aea8161b6740398a460cb7a0d3d6d8c627728a14ee885dbb946c3e",
+         intel: "8dffe8207ac9056d3c3762d0703c81bb185e68402535ebfbcf982d0638441f15"
 
   url "https://github.com/agata/dl.biscuit/releases/download/#{version}/Biscuit-#{version}#{arch}.dmg",
       verified: "github.com/agata/dl.biscuit/"
@@ -12,7 +12,7 @@ cask "biscuit" do
   homepage "https://eatbiscuit.com/"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Biscuit.app"
 

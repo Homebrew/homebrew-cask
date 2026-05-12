@@ -7,11 +7,6 @@ cask "j" do
   desc "Programming language for mathematical, statistical and logical analysis of data"
   homepage "https://www.jsoftware.com/"
 
-  apps = %w[jbrk jcon jqt]
-  apps.each do |a|
-    app "j#{version.major_minor}/#{a}.app"
-  end
-
   livecheck do
     url "https://code.jsoftware.com/wiki/System/Installation"
     regex(/Jv?(\d+(?:\.\d+)+)\s+release/i)
@@ -28,6 +23,13 @@ cask "j" do
                             &.map { |match| match[0] }
     end
   end
+
+  apps = %w[jbrk jcon jqt]
+  apps.each do |a|
+    app "j#{version.major_minor}/#{a}.app"
+  end
+
+  depends_on :macos
 
   installer script: "j#{version.major_minor}/macos-fix.command"
   installer script: {

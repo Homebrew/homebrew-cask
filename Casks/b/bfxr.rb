@@ -10,6 +10,8 @@ cask "bfxr" do
   deprecate! date: "2024-07-04", because: :discontinued
   disable! date: "2025-07-04", because: :discontinued
 
+  depends_on :macos
+
   app "Bfxr.app"
 
   caveats do

@@ -28,6 +28,8 @@ cask "specter" do
     end
   end
 
+  depends_on :macos
+
   app "Specter.app"
 
   zap trash: [

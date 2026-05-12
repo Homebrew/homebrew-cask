@@ -14,6 +14,8 @@ cask "i1profiler" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   pkg "i1Profiler.pkg"
 
   uninstall launchctl: [

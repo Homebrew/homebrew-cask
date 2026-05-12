@@ -1,6 +1,6 @@
 cask "atomic-wallet" do
-  version "2.100.8"
-  sha256 "9095354195442493588aca91a97f45ecbf2ba994a42de6f6defb89fc992c43ea"
+  version "2.101.7"
+  sha256 "0a8ba88674b0fd42e6149df292fbb9d854d70a12aa46d7bddccd9d694d50572b"
 
   url "https://releases.atomicwallet.io/AtomicWallet-#{version}.dmg"
   name "Atomic Wallet"
@@ -12,7 +12,7 @@ cask "atomic-wallet" do
     regex(/v?(\d+(?:[.-]\d+)+)/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Atomic Wallet.app"
 

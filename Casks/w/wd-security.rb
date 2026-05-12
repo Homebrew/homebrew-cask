@@ -13,6 +13,7 @@ cask "wd-security" do
     regex(/Version:?\s*(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
   container nested: "WD Security Installer.dmg"
 
   installer script: {

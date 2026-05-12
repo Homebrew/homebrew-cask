@@ -11,6 +11,8 @@ cask "feem" do
   deprecate! date: "2024-05-17", because: :moved_to_mas
   disable! date: "2025-05-17", because: :moved_to_mas
 
+  depends_on :macos
+
   pkg "Feem_Mac_#{version}_beta_Installer.pkg"
 
   uninstall quit:    "com.feeperfect.airsend.mac",

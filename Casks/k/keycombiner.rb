@@ -12,6 +12,8 @@ cask "keycombiner" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "KeyCombiner.app"
 
   zap trash: [

@@ -8,6 +8,8 @@ cask "surge-xt" do
   desc "Hybrid synthesiser"
   homepage "https://surge-synthesizer.github.io/"
 
+  depends_on :macos
+
   pkg "surge-xt-macOS-#{version}.pkg"
 
   uninstall pkgutil: [

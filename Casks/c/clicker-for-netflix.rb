@@ -13,6 +13,7 @@ cask "clicker-for-netflix" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Clicker for Netflix.app"
 

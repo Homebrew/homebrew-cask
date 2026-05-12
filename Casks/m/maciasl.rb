@@ -8,6 +8,7 @@ cask "maciasl" do
   homepage "https://github.com/acidanthera/MaciASL"
 
   auto_updates true
+  depends_on :macos
 
   app "MaciASL.app"
   binary "#{appdir}/MaciASL.app/Contents/MacOS/iasl-stable", target: "iasl"

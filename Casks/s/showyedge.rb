@@ -13,12 +13,14 @@ cask "showyedge" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "ShowyEdge.app"
 
   zap trash: [
+    "~/Library/Application Scripts/org.pqrs.ShowyEdge",
     "~/Library/Caches/org.pqrs.ShowyEdge",
+    "~/Library/Containers/org.pqrs.ShowyEdge",
     "~/Library/Preferences/org.pqrs.ShowyEdge.plist",
   ]
 end

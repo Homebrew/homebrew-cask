@@ -1,9 +1,9 @@
 cask "datadog-agent" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "7.78.0-1"
-  sha256 arm:   "719c821c50eafa0cae9354efae5f0abe72ef5ff5e57dd154640e6fde0e84348e",
-         intel: "94464e737e4124f351ec969eec51e88994b3f9d561a72dd17837200b028bf95f"
+  version "7.78.3-1"
+  sha256 arm:   "b7c700abade928068952c3beaa1c8a42cb1eead415164cc290e3c9072057a5de",
+         intel: "8a316e2a4b8a92e39c1becb628b0b7f1cdba95829f08927b30c3d3c6ca1630a9"
 
   url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.#{arch}.dmg",
       verified: "dd-agent.s3.amazonaws.com/"
@@ -24,9 +24,7 @@ cask "datadog-agent" do
     end
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   installer manual: "datadog-agent-#{version}.#{arch}.pkg"
 

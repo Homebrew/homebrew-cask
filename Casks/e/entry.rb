@@ -17,6 +17,8 @@ cask "entry" do
     end
   end
 
+  depends_on :macos
+
   pkg "Entry-#{version}.pkg"
 
   uninstall pkgutil: "org.playentry.entry"

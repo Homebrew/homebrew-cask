@@ -15,6 +15,8 @@ cask "ftdi-vcp-driver" do
     end
   end
 
+  depends_on :macos
+
   # App must be installed in `/Applications`.
   app "FTDIUSBSerialDextInstaller_#{version.csv.first.dots_to_underscores}.app",
       target: "/Applications/FTDIUSBSerialDextInstaller.app"

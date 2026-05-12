@@ -15,6 +15,7 @@ cask "inso" do
   end
 
   conflicts_with cask: "inso@beta"
+  depends_on :macos
 
   binary "inso"
 

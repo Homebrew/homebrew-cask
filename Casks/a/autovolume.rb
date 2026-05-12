@@ -10,6 +10,8 @@ cask "autovolume" do
   deprecate! date: "2024-09-30", because: :unmaintained
   disable! date: "2025-10-01", because: :unmaintained
 
+  depends_on :macos
+
   app "AutoVolume.app"
 
   caveats do

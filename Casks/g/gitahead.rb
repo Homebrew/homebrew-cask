@@ -7,7 +7,7 @@ cask "gitahead" do
   desc "Git Client"
   homepage "https://github.com/gitahead/gitahead"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "GitAhead.app"
 

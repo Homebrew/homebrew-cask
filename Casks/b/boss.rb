@@ -1,6 +1,6 @@
 cask "boss" do
-  version "8.17.24"
-  sha256 "9ff6e24f41c855a26b47a7f34eec8ebabea0709527594d2ad53d269bc99854ce"
+  version "9.1.2"
+  sha256 "f3db24c7c7df478af09b865d208ac96e9fc1dae45e37169f43b1b5db7252b26e"
 
   url "https://github.com/risa-labs-inc/BOSS-Releases/releases/download/v#{version}/BOSS-#{version}-Universal.dmg",
       verified: "github.com/risa-labs-inc/BOSS-Releases/"
@@ -9,6 +9,7 @@ cask "boss" do
   homepage "https://www.risalabs.ai/"
 
   auto_updates true
+  depends_on :macos
 
   app "BOSS.app"
 

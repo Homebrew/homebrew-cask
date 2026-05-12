@@ -1,6 +1,6 @@
 cask "baoliandeng" do
-  version "5.3"
-  sha256 "0189159dd5306338eedc8bd5e70e79a018c4575d734b5679f6932ead1c535039"
+  version "5.5"
+  sha256 "7921e69ff4eede118c850c7e9152ee972ad5bb8b522f98d3f3952b677e1a265f"
 
   url "https://github.com/madeye/BaoLianDeng/releases/download/v#{version}/BaoLianDeng-#{version}.pkg",
       verified: "github.com/madeye/BaoLianDeng/"
@@ -13,7 +13,7 @@ cask "baoliandeng" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   pkg "BaoLianDeng-#{version}.pkg"
 

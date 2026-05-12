@@ -10,6 +10,8 @@ cask "jd-gui" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "jd-gui-osx-#{version}/JD-GUI.app"
 
   zap trash: "~/Library/Saved Application State/jd.jd-gui.savedState"

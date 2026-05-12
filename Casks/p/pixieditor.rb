@@ -1,6 +1,6 @@
 cask "pixieditor" do
-  version "2.1.0.22"
-  sha256 "280b7bcd7109521fca0a26d52f99011f84c473f5397a8f9d774305579ea44c80"
+  version "2.1.0.23"
+  sha256 "1af46a068d40d7a927362e1c866b743bff1199720d30ef1734c4222135b3c852"
 
   url "https://github.com/PixiEditor/PixiEditor/releases/download/#{version}/PixiEditor-#{version}-universal-macos.dmg",
       verified: "github.com/PixiEditor/PixiEditor/"
@@ -13,7 +13,7 @@ cask "pixieditor" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "PixiEditor.app"
 

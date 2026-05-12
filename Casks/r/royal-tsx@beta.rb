@@ -1,6 +1,6 @@
 cask "royal-tsx@beta" do
-  version "6.4.2.1000"
-  sha256 "ebb86257e41684f35f8cb2d2d8d779920ae379073e004b1281740a5c465f276b"
+  version "6.4.3.1000"
+  sha256 "bf0c1bebfc3aed2e67c1fe9cf5e4b06be5d07cc6d916d61185f5818fd79af482"
 
   url "https://royaltsx-v#{version.major}.royalapps.com/updates/royaltsx_#{version}.dmg"
   name "Royal TSX"
@@ -14,7 +14,7 @@ cask "royal-tsx@beta" do
 
   auto_updates true
   conflicts_with cask: "royal-tsx"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Royal TSX.app"
 

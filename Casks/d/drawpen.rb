@@ -1,9 +1,9 @@
 cask "drawpen" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.47"
-  sha256 arm:   "14cf979ee89e1e120ccf1b4d3dc3c67dd9029b5e48e6db607c211ae556a858a5",
-         intel: "02728d4fd5cefdcc05430514b0573a9fc355fc1aa494d5cd2e19a5afad2fbb39"
+  version "0.0.50"
+  sha256 arm:   "3962e83428fa879c0070b1355da633c3f569a04897453c351f08cc9168e2fd6e",
+         intel: "29228c5a49acb57c7ffb340c756bd7dda7e789ff4ce4320190db6e01c731dd0a"
 
   url "https://github.com/DmytroVasin/DrawPen/releases/download/v#{version}/DrawPen-#{version}-#{arch}.dmg"
   name "DrawPen"
@@ -16,7 +16,7 @@ cask "drawpen" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "DrawPen.app"
 

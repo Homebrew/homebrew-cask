@@ -8,6 +8,8 @@ cask "fspy" do
   desc "Still image camera matching"
   homepage "https://fspy.io/"
 
+  depends_on :macos
+
   app "fSpy.app"
 
   zap trash: "~/Library/Application Support/fspy"

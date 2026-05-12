@@ -13,7 +13,7 @@ cask "restapia" do
     regex(/^v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "RestApia-osx-stable-Setup.pkg"
 

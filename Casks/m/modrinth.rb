@@ -1,6 +1,6 @@
 cask "modrinth" do
-  version "0.13.4"
-  sha256 "9ab438b9e67ae765d31edfed8bd19f95ba89619635600b70e8b2152e99d3b46c"
+  version "0.13.15"
+  sha256 "362ff957b35614879ebd705860fb426a0a07ed819f47d4f62dba62f3d17b0000"
 
   url "https://launcher-files.modrinth.com/versions/#{version}/macos/Modrinth%20App_#{version}_universal.dmg"
   name "Modrinth App"
@@ -15,6 +15,7 @@ cask "modrinth" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Modrinth App.app"
 

@@ -2,8 +2,8 @@ cask "miniconda" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "py313_26.1.1-1"
-    sha256 "745f97a6553ebdce0bfdaafe00b0d1939784b38cdaadb3378ca7868a51616a65"
+    version "py313_26.3.2-2"
+    sha256 "6efc019c78003166fec1551486c68e08605eaca009039b1cda5f4e919e0c6dce"
 
     livecheck do
       url "https://repo.anaconda.com/miniconda/"
@@ -31,6 +31,7 @@ cask "miniconda" do
 
   auto_updates true
   conflicts_with cask: "miniforge"
+  depends_on :macos
   container type: :naked
 
   installer script: {

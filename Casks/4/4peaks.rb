@@ -12,6 +12,8 @@ cask "4peaks" do
     regex(/"product-version">v?\s+?(\d+(?:\.\d+)+)[\s<]/i)
   end
 
+  depends_on :macos
+
   app "4Peaks.app"
 
   zap trash: [

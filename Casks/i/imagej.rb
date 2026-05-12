@@ -23,6 +23,8 @@ cask "imagej" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "ImageJ.app"
 
   zap trash: "~/Library/Saved Application State/ImageJ.savedState"

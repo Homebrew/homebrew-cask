@@ -1,9 +1,9 @@
 cask "handy" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.8.2"
-  sha256 arm:   "5eb376481d777994e49de9cb644a077ccf32e3ebffeb3502adf56c907f6d8295",
-         intel: "c316a5f619e87e66313cf178a9e452054b6da756de0d0e04f88c45cf659ad13e"
+  version "0.8.3"
+  sha256 arm:   "0cb58c272aefad670dc556370cef72ef3bae5ac35d7fc5135d7c47585a318fcf",
+         intel: "5d972b30d711aa59ba7c76a6695e4b183833125fd37c4fe90a14e0f8f7960160"
 
   url "https://github.com/cjpais/Handy/releases/download/v#{version}/Handy_#{version}_#{arch}.dmg",
       verified: "github.com/cjpais/Handy/"
@@ -12,7 +12,7 @@ cask "handy" do
   homepage "https://handy.computer/"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Handy.app"
 

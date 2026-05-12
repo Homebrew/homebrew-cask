@@ -8,6 +8,8 @@ cask "cro-mag-rally" do
   desc "Prehistoric-themed 3D racing game from Pangea Software"
   homepage "https://jorio.itch.io/cromagrally"
 
+  depends_on :macos
+
   app "Cro-Mag Rally.app"
   artifact "Documentation", target: "~/Library/Application Support/CroMagRally"
 

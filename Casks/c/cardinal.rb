@@ -7,6 +7,8 @@ cask "cardinal" do
   desc "Virtual modular synthesiser plugin"
   homepage "https://github.com/DISTRHO/Cardinal"
 
+  depends_on :macos
+
   pkg "Cardinal-macOS-universal-#{version}.pkg"
 
   uninstall pkgutil: [

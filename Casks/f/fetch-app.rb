@@ -12,6 +12,8 @@ cask "fetch-app" do
     regex(/href=.*Fetch[._-]v?(\d+(?:\.\d+)+)\.zip"/i)
   end
 
+  depends_on :macos
+
   app "Fetch.app"
 
   zap trash: [

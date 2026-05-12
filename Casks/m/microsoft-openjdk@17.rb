@@ -1,9 +1,9 @@
 cask "microsoft-openjdk@17" do
   arch arm: "aarch64", intel: "x64"
 
-  version "17.0.18"
-  sha256 arm:   "cb3d278ccea4500e085e78ea1e1cca543394bcdeddc8656a4c4778235425364e",
-         intel: "ebbe9e536ef534b381290eebf354542da73bbf8fd89c7f0828020d962a6afbc9"
+  version "17.0.19"
+  sha256 arm:   "43556fc0c42350b3140c51dd87b8e27fdac75c0f8f08a059aebd69af0b28b3b6",
+         intel: "9d35cf820aaa26df069d4e328013191c01cac45623719608ccda995c1af73ef6"
 
   url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg",
       verified: "aka.ms/download-jdk/"
@@ -15,6 +15,8 @@ cask "microsoft-openjdk@17" do
     url "https://docs.microsoft.com/java/openjdk/download"
     regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(17(?:\.\d+)+)[._-]macos[._-]#{arch}\.pkg}i)
   end
+
+  depends_on :macos
 
   pkg "microsoft-jdk-#{version}-macos-#{arch}.pkg"
 

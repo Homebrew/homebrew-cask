@@ -1,6 +1,6 @@
 cask "davmail-app" do
-  version "6.6.0,4011"
-  sha256 "57ed299c6ac7d0838380eb0379015346a4bd147861e72ec9a72e0ff1dff4a5df"
+  version "6.7.0,4068"
+  sha256 "fbc70838555234fa2f3a2c0e8ed268779c7254c2cdb5064e7703cbdc39fcfb00"
 
   url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "DavMail"
@@ -16,6 +16,8 @@ cask "davmail-app" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "DavMail.app"
 

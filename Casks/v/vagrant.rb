@@ -15,6 +15,8 @@ cask "vagrant" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/}i)
   end
 
+  depends_on :macos
+
   pkg "vagrant.pkg"
   bash_completion "/opt/vagrant/embedded/gems/gems/vagrant-#{version}/contrib/bash/completion.sh", target: "vagrant"
   zsh_completion "/opt/vagrant/embedded/gems/gems/vagrant-#{version}/contrib/zsh/_vagrant"

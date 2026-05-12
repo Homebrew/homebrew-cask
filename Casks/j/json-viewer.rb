@@ -12,6 +12,8 @@ cask "json-viewer" do
     regex(/JSON[._-]Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on :macos
+
   app "JSON Viewer.app"
 
   zap trash: [

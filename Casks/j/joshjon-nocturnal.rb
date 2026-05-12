@@ -10,6 +10,8 @@ cask "joshjon-nocturnal" do
   deprecate! date: "2024-08-22", because: :discontinued
   disable! date: "2025-08-22", because: :discontinued
 
+  depends_on :macos
+
   app "Nocturnal.app"
 
   zap trash: "~/Library/Preferences/com.joshua.jon.Nocturnal.plist"

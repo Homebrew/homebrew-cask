@@ -21,6 +21,8 @@ cask "mitmproxy" do
     end
   end
 
+  depends_on :macos
+
   binary "mitmproxy.app/Contents/MacOS/mitmproxy"
   binary "mitmproxy.app/Contents/MacOS/mitmdump"
   binary "mitmproxy.app/Contents/MacOS/mitmweb"

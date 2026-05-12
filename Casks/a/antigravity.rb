@@ -24,7 +24,7 @@ cask "antigravity" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Antigravity.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
@@ -37,6 +37,8 @@ cask "antigravity" do
       exec '#{appdir}/Antigravity.app/Contents/Resources/app/bin/antigravity' "$@"
     EOS
   end
+
+  uninstall quit: "com.google.antigravity"
 
   zap trash: [
     "~/.antigravity/",

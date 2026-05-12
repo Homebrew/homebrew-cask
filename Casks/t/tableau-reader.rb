@@ -6,10 +6,10 @@ cask "tableau-reader" do
          intel: "5c206ec060a18eef391bd249664d3c87aa6d43258037ec98cd88e4eb1271ede4"
 
   on_arm do
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauReader-#{version.dots_to_hyphens}#{arch}.pkg",
@@ -21,6 +21,8 @@ cask "tableau-reader" do
   livecheck do
     cask "tableau"
   end
+
+  depends_on :macos
 
   pkg "TableauReader-#{version.dots_to_hyphens}#{arch}.pkg"
 

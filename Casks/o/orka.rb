@@ -12,6 +12,8 @@ cask "orka" do
     skip "Legacy version"
   end
 
+  depends_on :macos
+
   pkg "orka.pkg"
 
   uninstall pkgutil: "com.macstadium.orka.pkg"

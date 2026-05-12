@@ -1,6 +1,6 @@
 cask "kiro-cli" do
-  version "2.0.1"
-  sha256 "d513ee340eff0a91f89ccba0d07e7ebae628cdf50dd0468f3dc3a693ab337bbb"
+  version "2.3.0"
+  sha256 "947065ccf15e4fd9b9e1d6c50579bb97f6c921570126aa1d67ac4a0fd5d38497"
 
   url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/Kiro%20CLI.dmg",
       verified: "desktop-release.q.us-east-1.amazonaws.com/"
@@ -16,7 +16,7 @@ cask "kiro-cli" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Kiro CLI.app"
   binary "#{appdir}/Kiro CLI.app/Contents/MacOS/kiro-cli"

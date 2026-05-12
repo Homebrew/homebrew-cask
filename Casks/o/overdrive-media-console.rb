@@ -11,6 +11,8 @@ cask "overdrive-media-console" do
   deprecate! date: "2024-07-04", because: :discontinued
   disable! date: "2025-07-04", because: :discontinued
 
+  depends_on :macos
+
   rename "OverDrive-Mac-Installer-Version-*.pkg", "OverDrive-Mac-Installer.pkg"
 
   pkg "OverDrive-Mac-Installer.pkg"

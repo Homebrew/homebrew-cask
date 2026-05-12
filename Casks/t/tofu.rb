@@ -13,6 +13,8 @@ cask "tofu" do
     skip "Upstream website uses a CAPTCHA"
   end
 
+  depends_on :macos
+
   app "Tofu.app"
 
   zap trash: [

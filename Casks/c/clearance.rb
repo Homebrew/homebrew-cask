@@ -13,7 +13,7 @@ cask "clearance" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Clearance.app"
   binary "#{appdir}/Clearance.app/Contents/Helpers/clearance"

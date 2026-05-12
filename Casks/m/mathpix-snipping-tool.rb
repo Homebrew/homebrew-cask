@@ -16,6 +16,7 @@ cask "mathpix-snipping-tool" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Mathpix Snipping Tool.app"
 

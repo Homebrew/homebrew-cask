@@ -1,6 +1,6 @@
 cask "openclaw" do
-  version "2026.4.22"
-  sha256 "be2332920c2f4a0f10d18c2ebbd7297d5d1fcec3924a9661ab54c10679fdac6f"
+  version "2026.5.7"
+  sha256 "4cf6a5dfdab821b865949fe51134f2caf1a4e7e854e014953aeba61c0c132bb8"
 
   url "https://github.com/openclaw/openclaw/releases/download/v#{version}/OpenClaw-#{version}.dmg",
       verified: "github.com/openclaw/openclaw/"
@@ -14,7 +14,7 @@ cask "openclaw" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "OpenClaw.app"
 

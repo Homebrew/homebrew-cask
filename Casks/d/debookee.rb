@@ -11,6 +11,7 @@ cask "debookee" do
   disable! date: "2025-10-12", because: :no_longer_available
 
   auto_updates true
+  depends_on :macos
 
   app "Debookee.app"
 

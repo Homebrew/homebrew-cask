@@ -52,7 +52,7 @@ cask "cocktail" do
     end
   end
   on_tahoe :or_newer do
-    version "19.7"
+    version "19.7.1"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}TE.dmg"
@@ -66,6 +66,8 @@ cask "cocktail" do
   name "Cocktail"
   desc "Cleans, repairs and optimises computer systems"
   homepage "https://www.maintain.se/cocktail/"
+
+  depends_on :macos
 
   app "Cocktail.app"
 

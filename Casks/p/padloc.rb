@@ -16,6 +16,8 @@ cask "padloc" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Padloc.app"
 
   zap trash: [

@@ -12,6 +12,8 @@ cask "miktex-console" do
     regex(%r{href=.*?/miktex[._-](\d+(?:\.\d+)+)[._-]darwin[._-]x86_64\.dmg}i)
   end
 
+  depends_on :macos
+
   app "MiKTeX Console.app"
 
   zap trash: [

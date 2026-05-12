@@ -11,6 +11,8 @@ cask "surge-synthesizer" do
   deprecate! date: "2025-03-02", because: :discontinued, replacement_cask: "surge-xt"
   disable! date: "2026-03-02", because: :discontinued, replacement_cask: "surge-xt"
 
+  depends_on :macos
+
   pkg "Surge-#{version}-Setup.pkg"
 
   uninstall pkgutil: [

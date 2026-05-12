@@ -1,6 +1,6 @@
 cask "iloader" do
-  version "2.2.4"
-  sha256 "9e9954a517419250b852a0a359c437f182042b2f07ddaa19e3fb19855f472f37"
+  version "2.2.6"
+  sha256 "8494c0221b5fd3efbe7100637ecbeaddfe1bb5bf29de90b01a8b9de4a580cf1e"
 
   url "https://github.com/nab138/iloader/releases/download/v#{version}/iloader-darwin-universal.dmg",
       verified: "github.com/nab138/iloader/"
@@ -14,6 +14,7 @@ cask "iloader" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "iloader.app"
 

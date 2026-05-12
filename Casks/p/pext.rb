@@ -11,5 +11,7 @@ cask "pext" do
   deprecate! date: "2024-09-06", because: :discontinued
   disable! date: "2025-09-06", because: :discontinued
 
+  depends_on :macos
+
   app "Pext.app"
 end

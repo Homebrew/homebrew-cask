@@ -1,6 +1,6 @@
 cask "dayflow" do
-  version "1.10.1"
-  sha256 "c6970b5d35c8dca67752d065a30ed81d93821a50e14afc0b072490bc44016717"
+  version "1.11.0"
+  sha256 "0feec4fcf795a647a91eb21dc59f9085def359ebe1dd5cb521e0526295f6cf3e"
 
   url "https://github.com/JerryZLiu/Dayflow/releases/download/v#{version}/Dayflow.dmg"
   name "Dayflow"
@@ -13,7 +13,7 @@ cask "dayflow" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Dayflow.app"
 

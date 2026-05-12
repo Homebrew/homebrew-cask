@@ -8,6 +8,8 @@ cask "otto-matic" do
   desc "Science fiction 3D action/adventure game from Pangea Software"
   homepage "https://jorio.itch.io/ottomatic"
 
+  depends_on :macos
+
   app "Otto Matic.app"
   artifact "Documentation", target: "~/Library/Application Support/OttoMatic"
 

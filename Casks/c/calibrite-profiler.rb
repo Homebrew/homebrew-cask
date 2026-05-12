@@ -18,6 +18,7 @@ cask "calibrite-profiler" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "calibrite PROFILER.app"
 

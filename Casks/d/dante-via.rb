@@ -13,6 +13,8 @@ cask "dante-via" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   pkg "Dante Via.pkg"
 
   # The installer looks for a file at /tmp/.DanteVia_silent_install

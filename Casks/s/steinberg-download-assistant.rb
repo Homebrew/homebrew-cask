@@ -19,6 +19,7 @@ cask "steinberg-download-assistant" do
   end
 
   auto_updates true
+  depends_on :macos
 
   installer manual: "Steinberg Download Assistant Setup.app"
 

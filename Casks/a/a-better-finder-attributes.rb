@@ -13,7 +13,7 @@ cask "a-better-finder-attributes" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "A Better Finder Attributes #{version.major}.app"
 

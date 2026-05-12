@@ -10,6 +10,8 @@ cask "overkill" do
   deprecate! date: "2024-07-27", because: :unmaintained
   disable! date: "2025-07-27", because: :unmaintained
 
+  depends_on :macos
+
   app "Overkill.app"
 
   zap trash: "~/Library/Preferences/com.krausefx.Overkill.plist"

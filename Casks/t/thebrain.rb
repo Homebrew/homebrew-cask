@@ -12,6 +12,8 @@ cask "thebrain" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "TheBrain #{version.major}.app"
 
   zap trash: [

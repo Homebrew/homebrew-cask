@@ -1,6 +1,6 @@
 cask "shapr3d" do
-  version "26.60.0.10796"
-  sha256 "f2de93afa0e0f4ede83400f4a689d5837d982cfa87a58c061ab5d9b5aca83318"
+  version "26.80.0.10920"
+  sha256 "84107bbfde56855a4d931b68c4f2578b547e01728619805f4a4ca7d568091aaa"
 
   url "https://download.shapr3d.com/mac/Shapr3D-#{version}.dmg"
   name "Shapr3D"
@@ -12,7 +12,7 @@ cask "shapr3d" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Shapr3D.app"
 

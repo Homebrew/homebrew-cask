@@ -21,6 +21,8 @@ cask "outline-manager" do
     end
   end
 
+  depends_on :macos
+
   app "Outline Manager.app"
 
   zap trash: [

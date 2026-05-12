@@ -16,6 +16,8 @@ cask "bookwright" do
     end
   end
 
+  depends_on :macos
+
   app "BookWright.app"
 
   zap trash: [

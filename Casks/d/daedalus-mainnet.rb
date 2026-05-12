@@ -1,6 +1,6 @@
 cask "daedalus-mainnet" do
-  version "7.2.0,77924,1458fc3a2"
-  sha256 "8667b4f740ee689952461fa03195b4133f0c613bec444510b37814590031f918"
+  version "8.0.0,83783,c3d83ffb2"
+  sha256 "f4989410ff9b60e271816e5f7236964e280c009f8b29069e389ccc66cfcbf183"
 
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.csv.first}-#{version.csv.second}-mainnet-#{version.csv.third}-x86_64-darwin.pkg",
       verified: "update-cardano-mainnet.iohk.io/"
@@ -20,6 +20,7 @@ cask "daedalus-mainnet" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "daedalus-#{version.csv.first}-#{version.csv.second}-mainnet-#{version.csv.third}-x86_64-darwin.pkg"
 

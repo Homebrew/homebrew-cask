@@ -1,5 +1,5 @@
 cask "folder-preview-pro" do
-  version "2.9.3"
+  version "2.10"
   sha256 :no_check
 
   url "https://anybox.ltd/folder-preview-pro/download/folder-preview-pro-latest.zip"
@@ -13,7 +13,7 @@ cask "folder-preview-pro" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Folder Preview Pro.app"
 

@@ -12,7 +12,7 @@ cask "pearcleaner" do
   homepage "https://itsalin.com/appInfo/?id=pearcleaner"
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Pearcleaner.app"
   binary "#{appdir}/Pearcleaner.app/Contents/MacOS/Pearcleaner", target: "pearcleaner"

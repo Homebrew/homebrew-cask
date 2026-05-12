@@ -12,6 +12,8 @@ cask "after-dark-classic" do
     regex(/After\sDark\sClassic\sSet\s(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "AfterDark.pkg"
 
   uninstall pkgutil: [

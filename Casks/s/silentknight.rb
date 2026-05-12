@@ -31,7 +31,7 @@ cask "silentknight" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "silentknight#{no_dot_version}/SilentKnight.app"
 

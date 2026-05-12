@@ -13,6 +13,7 @@ cask "midi-monitor" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "MIDI Monitor.app"
 

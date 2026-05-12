@@ -23,6 +23,8 @@ cask "dintch" do
     end
   end
 
+  depends_on :macos
+
   app "dintch#{version.csv.first.no_dots}/Dintch.app"
 
   zap trash: [

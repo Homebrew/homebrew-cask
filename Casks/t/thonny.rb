@@ -1,8 +1,11 @@
 cask "thonny" do
-  version "4.1.7"
-  sha256 "32c7540498b9df038abb286363f2eab13b5ba6a731c3cb3d9e348226762225d9"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg",
+  version "5.0.0"
+  sha256 arm:   "cdaaef53d59580139c8c811bc5a2a9f4246e0cb9d194bce0a89f621889b29e7e",
+         intel: "07a3b0f74f5159e0d3d5d78901fe726d408de38c8d7bddacca0f3c6aa6575997"
+
+  url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}-#{arch}.pkg",
       verified: "github.com/thonny/thonny/"
   name "Thonny"
   desc "Python IDE for beginners"
@@ -14,8 +17,9 @@ cask "thonny" do
   end
 
   conflicts_with cask: "thonny-xxl"
+  depends_on :macos
 
-  pkg "thonny-#{version}.pkg"
+  pkg "thonny-#{version}-#{arch}.pkg"
 
   uninstall quit:    "org.thonny.Thonny",
             pkgutil: "org.thonny.Thonny.component",

@@ -11,6 +11,7 @@ cask "ipa-manager" do
   disable! date: "2025-07-17", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "IPA Manager.app"
 

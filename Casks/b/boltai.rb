@@ -1,6 +1,6 @@
 cask "boltai" do
-  version "2.10.1"
-  sha256 "7ef2e17dc63b1e94352ee9632309f1f6d2ca486f282cf21e6990ba4094a80429"
+  version "2.12.1"
+  sha256 "ee06184c92ac1fd8e44e672808df698b2a3ca970ac3daf1ad4e632f8851a4808"
 
   url "https://updates.boltai.com/dmg/BoltAI-#{version}.dmg"
   name "BoltAI 2"
@@ -13,7 +13,7 @@ cask "boltai" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "BoltAI #{version.major}.app"
 

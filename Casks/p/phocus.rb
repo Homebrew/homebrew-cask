@@ -20,7 +20,7 @@ cask "phocus" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Phocus.app"
 

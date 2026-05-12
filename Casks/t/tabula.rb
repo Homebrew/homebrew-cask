@@ -8,6 +8,8 @@ cask "tabula" do
   desc "Tool for liberating data tables trapped inside PDF files"
   homepage "https://tabula.technology/"
 
+  depends_on :macos
+
   app "tabula/Tabula.app"
 
   zap trash: [

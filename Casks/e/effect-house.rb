@@ -3,12 +3,12 @@ cask "effect-house" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "5.9.1,1297,04142026,104"
-    sha256 "fbd170f5009965aa3dddd6aab6a337ae92ec9f06e6e6141e30d40715147222aa"
+    version "5.10.0,1306,04212026,104"
+    sha256 "7a60c3dfb401fda36e0cc830ce666725c1b1c468cb3153c2829f0d3697a7092a"
   end
   on_intel do
-    version "5.9.1,1752,04142026,104"
-    sha256 "b88ecb8a6d4c73844af14b82a64f445dc7b3501730dfe3a0239ba3b7feb03247"
+    version "5.10.0,6214,04212026,104"
+    sha256 "e675b962a33821f83194c68167aead6d1007a21753d86c93ebb2683b70723c3e"
   end
 
   url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_Builds_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}_#{arch}_#{version.csv.fourth}.dmg",
@@ -31,6 +31,8 @@ cask "effect-house" do
       "#{match[2]},#{match[3]},#{match[1]},#{match[4]}"
     end
   end
+
+  depends_on :macos
 
   app "Effect House.app"
 

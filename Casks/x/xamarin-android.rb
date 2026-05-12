@@ -10,6 +10,8 @@ cask "xamarin-android" do
   deprecate! date: "2024-08-20", because: :discontinued
   disable! date: "2025-08-20", because: :discontinued
 
+  depends_on :macos
+
   pkg "xamarin.android-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.xamarin.android.pkg"

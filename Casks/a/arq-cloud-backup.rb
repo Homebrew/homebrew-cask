@@ -12,6 +12,8 @@ cask "arq-cloud-backup" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "Install Arq Cloud Backup.pkg"
 
   uninstall launchctl: "com.haystacksoftware.arqcloudagent",

@@ -1,6 +1,6 @@
 cask "keyboardholder" do
-  version "1.14.7"
-  sha256 "b70756f0cd75de5e0426c131e313c958fb5fd5e4cba31451e17ca34a562a3175"
+  version "1.14.9"
+  sha256 "8f097ce13334b45c5f23fd874ad9602fb955d87d641d3176c3127b6b21c1e4e6"
 
   url "https://github.com/leaves615/KeyboardHolder/releases/download/v#{version}/KeyboardHolder-#{version}.zip",
       verified: "github.com/leaves615/KeyboardHolder/"
@@ -15,7 +15,7 @@ cask "keyboardholder" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "KeyboardHolder.app"
 

@@ -11,7 +11,7 @@ cask "aware" do
   deprecate! date: "2024-10-04", because: :unmaintained
   disable! date: "2025-10-04", because: :unmaintained
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Aware.app"
 

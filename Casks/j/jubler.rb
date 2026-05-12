@@ -13,6 +13,8 @@ cask "jubler" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "Jubler.app"
 
   zap trash: [

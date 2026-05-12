@@ -8,7 +8,7 @@ cask "freetex" do
   desc "Free intelligent formula recognition software"
   homepage "https://xdxsb.top/FreeTex"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "FreeTex.app"
 

@@ -1,6 +1,6 @@
 cask "teleport-suite" do
-  version "18.7.5"
-  sha256 "f842b32f8dd1ee7a3ac923028be6c50cdf69df19c834481008f4b9b1dc57ffeb"
+  version "18.7.6"
+  sha256 "a7fe57ea1633d25a879126076845c1604ccf47e8982c062d8b172ee72ab5c2ad"
 
   url "https://cdn.teleport.dev/teleport-#{version}.pkg",
       verified: "cdn.teleport.dev/"
@@ -19,6 +19,7 @@ cask "teleport-suite" do
     "teleport-suite@17",
     "tsh",
   ]
+  depends_on :macos
 
   pkg "teleport-#{version}.pkg"
 

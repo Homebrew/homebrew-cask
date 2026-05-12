@@ -18,6 +18,8 @@ cask "deepgit" do
     end
   end
 
+  depends_on :macos
+
   app "DeepGit.app"
 
   zap trash: [

@@ -6,10 +6,10 @@ cask "tableau-prep" do
          intel: "c60174f13cf7989cc71ce88e32621079fc1fe3c24a557d0db2efe30c0d761bd5"
 
   on_arm do
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}#{arch}.dmg",
@@ -22,6 +22,8 @@ cask "tableau-prep" do
   livecheck do
     cask "tableau"
   end
+
+  depends_on :macos
 
   pkg "Tableau Prep Builder.pkg"
 

@@ -18,7 +18,7 @@ cask "box-tools" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   apps = [
     "Device Trust",

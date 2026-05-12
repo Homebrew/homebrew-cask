@@ -22,8 +22,8 @@ cask "calibre" do
     end
   end
   on_sonoma :or_newer do
-    version "9.7.0"
-    sha256 "cbdb1fb6685254bee6323f7b2bb68781c65ec8ab8198a2c8a123b1f30969d10c"
+    version "9.8.0"
+    sha256 "79307abb2d7823d35a91f3cff54e6f852b94f246be9d7bf8ebda7e21e341b608"
 
     livecheck do
       url "https://calibre-ebook.com/dist/osx"
@@ -39,6 +39,8 @@ cask "calibre" do
   name "calibre"
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
+
+  depends_on :macos
 
   app "calibre.app"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"

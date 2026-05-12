@@ -1,5 +1,5 @@
 cask "northern-softworks-cache-cleaner" do
-  version "26.4"
+  version "26.5"
   sha256 :no_check
 
   # Homepage, livecheck regex, and app change with major macOS releases
@@ -13,6 +13,8 @@ cask "northern-softworks-cache-cleaner" do
     url :homepage
     regex(/Download\s*Tahoe\s*Cache\s*Cleaner\s*v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on :macos
 
   app "Tahoe Cache Cleaner.app"
 

@@ -1,6 +1,6 @@
 cask "f-bar" do
-  version "6.0.4"
-  sha256 "ea0fd6f72e4e7a1aefaec28cd9454333ddf839c10d73511555550c94d5ef7d92"
+  version "6.1.0"
+  sha256 "da22b1a27a007a036ec075abb2399ec73dc905401e1339c87e3d1b4665a55d05"
 
   url "https://app.laravel-forge-menubar.com/storage/releases/F-Bar_#{version}.zip"
   name "F-Bar"
@@ -13,7 +13,7 @@ cask "f-bar" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "F-Bar.app"
 

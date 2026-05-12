@@ -11,6 +11,8 @@ cask "sparkleshare" do
   deprecate! date: "2024-10-14", because: :discontinued
   disable! date: "2025-10-14", because: :discontinued
 
+  depends_on :macos
+
   app "SparkleShare.app"
 
   caveats do

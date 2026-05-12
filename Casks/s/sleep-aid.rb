@@ -19,6 +19,7 @@ cask "sleep-aid" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Sleep_Aid_#{version.dots_to_underscores}_#{arch}.pkg"
 

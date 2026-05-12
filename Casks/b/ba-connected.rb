@@ -1,6 +1,6 @@
 cask "ba-connected" do
-  version "1.78.0"
-  sha256 "0fb561a54363c10efbecd2685e61448518ec96ff9df212f3a9925a64129db781"
+  version "1.85.0"
+  sha256 "3628c2eab7ee4d36a7e1247e4d2ae5fc8f81e5c671c734dcb0e7912ff3e3a686"
 
   url "https://downloads.bsn.cloud/BA%20connected-#{version}.dmg",
       verified: "downloads.bsn.cloud/"
@@ -19,7 +19,7 @@ cask "ba-connected" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "BA connected.app"
 

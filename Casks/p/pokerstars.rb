@@ -1,5 +1,5 @@
 cask "pokerstars" do
-  version "81.318"
+  version "81.790"
   sha256 :no_check
 
   url "https://download.pokerstars.net/PokerStars.net.app.zip"
@@ -12,6 +12,7 @@ cask "pokerstars" do
     strategy :extract_plist
   end
 
+  depends_on :macos
   container nested: "PokerStars/PokerStars.dmg"
 
   app "PokerStars.app"

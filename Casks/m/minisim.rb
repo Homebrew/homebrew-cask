@@ -8,7 +8,7 @@ cask "minisim" do
   desc "App for launching iOS and Android simulators"
   homepage "https://www.minisim.app/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "MiniSim.app"
 

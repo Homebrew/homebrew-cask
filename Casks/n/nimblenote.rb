@@ -9,6 +9,7 @@ cask "nimblenote" do
   homepage "https://nimblenote.app/"
 
   auto_updates true
+  depends_on :macos
 
   app "nimblenote.app"
 

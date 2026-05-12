@@ -16,6 +16,7 @@ cask "simpholders" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "simpholders_#{version.csv.first.dots_to_underscores}.app", target: "SimPholders.app"
 

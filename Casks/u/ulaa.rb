@@ -1,9 +1,9 @@
 cask "ulaa" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.42.2"
-  sha256 arm:   "6be39fb4729840613c1cde83e206d36aee128a115f73c15bcbfa04134c29b2aa",
-         intel: "d179d9b12d746e8b61a8062947ffdc627a3164752569eff13010df83fe7031fa"
+  version "2.43.1"
+  sha256 arm:   "8d4f8bdae12823a28a130b00f9e7c5cda017c4573ef90f00cdcb07e4834dc0e3",
+         intel: "f17563d9df3cdd4bc6245b8b9db50d64d7604c0ffa1917d36eaf76844f0670d8"
 
   url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg",
       verified: "downloads.zohocdn.com/ulaa-browser/"
@@ -17,7 +17,7 @@ cask "ulaa" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Ulaa.app"
 

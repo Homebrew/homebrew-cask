@@ -7,6 +7,8 @@ cask "rocketman-choices-packager" do
   desc "Utility for customising installer package choices"
   homepage "https://github.com/Rocketman-Tech/Rocketman-Choices-Packager"
 
+  depends_on :macos
+
   pkg "Rocketman-Choices-Packager-v#{version}.pkg"
 
   uninstall pkgutil: "tech.rocketman.ChoicesPackager"

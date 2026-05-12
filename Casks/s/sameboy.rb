@@ -13,6 +13,8 @@ cask "sameboy" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "SameBoy.app"
 
   zap trash: [

@@ -20,6 +20,7 @@ cask "xiaomi-cloud" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "小米云服务.app"
 

@@ -12,6 +12,8 @@ cask "code-composer-studio" do
     regex(/href=.*?CCS[._-]?v?(\d+(?:\.\d+)+)[._-]mac[._-]x86\.dmg/i)
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "ccs_setup_#{version}.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended", "--prefix", "/Applications/TI"],

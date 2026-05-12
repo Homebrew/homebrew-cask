@@ -28,6 +28,8 @@ cask "ripx" do
     end
   end
 
+  depends_on :macos
+
   pkg "RipX DAW.pkg"
 
   uninstall pkgutil: [

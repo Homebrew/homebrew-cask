@@ -10,6 +10,8 @@ cask "heimdall-suite" do
 
   disable! date: "2026-03-29", because: :no_longer_meets_criteria
 
+  depends_on :macos
+
   pkg "Heimdall Suite #{version}.pkg"
 
   uninstall kext:    "au.com.glassechidna.heimdall_usb_shield",

@@ -40,6 +40,7 @@
   "python3": "homebrew/core",
   "rust": "homebrew/core",
   "serf": "homebrew/core",
+  "smlnj": "homebrew/core",
   "sshfs": "homebrew/core",
   "sslmate": "homebrew/core",
   "swi-prolog": "homebrew/core"

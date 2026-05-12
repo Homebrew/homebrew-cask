@@ -1,5 +1,5 @@
 cask "karafun" do
-  version "2.15.1"
+  version "2.15.3"
   sha256 :no_check
 
   url "https://www.karafun.com/download/mac.html"
@@ -13,7 +13,7 @@ cask "karafun" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "KaraFun.app"
 

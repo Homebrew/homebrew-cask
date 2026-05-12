@@ -13,6 +13,7 @@ cask "tiny-player" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Tiny Player.app"
 

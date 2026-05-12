@@ -15,6 +15,8 @@ cask "silo" do
     end
   end
 
+  depends_on :macos
+
   app "Silo.app"
 
   zap trash: [

@@ -19,6 +19,7 @@ cask "dymo-connect" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "DCDMac#{version}-#{arch}.pkg"
 

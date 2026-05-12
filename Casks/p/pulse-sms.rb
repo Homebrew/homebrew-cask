@@ -8,6 +8,8 @@ cask "pulse-sms" do
   desc "Desktop client for Pulse SMS"
   homepage "https://home.pulsesms.app/overview/"
 
+  depends_on :macos
+
   app "Pulse SMS.app"
 
   zap trash: [

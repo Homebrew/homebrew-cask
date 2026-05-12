@@ -6,10 +6,10 @@ cask "pinta" do
          intel: "2f386c0d77008b1beab5153d877d5dd750f52e866621ef1ee734143f052b9f83"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta-macos-#{arch}.dmg",
@@ -17,6 +17,8 @@ cask "pinta" do
   name "Pinta"
   desc "Simple Gtk# Paint Program"
   homepage "https://www.pinta-project.com/"
+
+  depends_on :macos
 
   app "Pinta.app"
 

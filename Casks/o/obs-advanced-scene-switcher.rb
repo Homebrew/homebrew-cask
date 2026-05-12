@@ -16,7 +16,7 @@ cask "obs-advanced-scene-switcher" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on cask: "obs"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "advanced-scene-switcher-#{version}-macos-universal.pkg"
 

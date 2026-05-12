@@ -10,6 +10,7 @@ cask "arduino-ide@nightly" do
   homepage "https://www.arduino.cc/en/software"
 
   conflicts_with cask: "arduino-ide"
+  depends_on :macos
 
   app "Arduino IDE.app"
 

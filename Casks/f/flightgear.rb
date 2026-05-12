@@ -13,6 +13,8 @@ cask "flightgear" do
     regex(/href=.*?flightgear[._-]?v?(\d+(?:\.\d+)+)(?:[._-]macos)?(?:[._-]universal)?\.dmg/i)
   end
 
+  depends_on :macos
+
   app "FlightGear.app"
 
   zap trash: "~/Library/Application Support/FlightGear"

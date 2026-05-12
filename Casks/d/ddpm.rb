@@ -15,6 +15,8 @@ cask "ddpm" do
     end
   end
 
+  depends_on :macos
+
   pkg "DDPM_Installer.pkg"
   binary "/Applications/DDPM/DDPM.app/Contents/MacOS/DDPM"
 

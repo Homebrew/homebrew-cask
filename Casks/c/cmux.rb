@@ -1,6 +1,6 @@
 cask "cmux" do
-  version "0.63.2"
-  sha256 "c64d8a2f54f34bbb422fa940fbc01d525abc014a099292c866d89f206235a94c"
+  version "0.64.4"
+  sha256 "b20af604b40f41e3e0a7831d4a5bf53c49a290874f268efcb6b8ef7cd1db52c7"
 
   url "https://github.com/manaflow-ai/cmux/releases/download/v#{version}/cmux-macos.dmg",
       verified: "github.com/manaflow-ai/cmux/"
@@ -14,7 +14,7 @@ cask "cmux" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "cmux.app"
   binary "#{appdir}/cmux.app/Contents/Resources/bin/cmux"

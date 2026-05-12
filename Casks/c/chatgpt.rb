@@ -1,6 +1,6 @@
 cask "chatgpt" do
-  version "1.2026.104,1776709323"
-  sha256 "aec119a7a536caa3c35757e27ff9ba4628726ac140a207c85bf025b292173285"
+  version "1.2026.118,1777682760"
+  sha256 "8b6f103e2b3dd58e0a685f0f2dfedfa2cf51f37b9b2bf56979489859060d4f83"
 
   url "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "persistent.oaistatic.com/sidekick/public/"
@@ -18,7 +18,7 @@ cask "chatgpt" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "ChatGPT.app"

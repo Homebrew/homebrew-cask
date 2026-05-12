@@ -1,9 +1,9 @@
 cask "headlamp" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.41.0"
-  sha256 arm:   "eeb281bd58d912f1b4fb8c4f16a2574a845751583c373e540e67d8acf71629ac",
-         intel: "e353c7ed44393eee4950ac4250d12143d5e02d5f29a25d3dcf0d8851d0325fc2"
+  version "0.42.0"
+  sha256 arm:   "ebab5239b1e7d56b74a41e89fe64c04e0cd370afbfd3c53fba3c1fa30c0867ea",
+         intel: "4b7ddb9c7b8304e4d695698883b754b439aea486190fe6f5b39433388811a899"
 
   url "https://github.com/headlamp-k8s/headlamp/releases/download/v#{version.sub(/-\d+/, "")}/Headlamp-#{version}-mac-#{arch}.dmg",
       verified: "github.com/headlamp-k8s/headlamp/"
@@ -25,6 +25,8 @@ cask "headlamp" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on macos: :monterey
 
   app "Headlamp.app"
 

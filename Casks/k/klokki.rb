@@ -17,6 +17,8 @@ cask "klokki" do
     end
   end
 
+  depends_on :macos
+
   app "Klokki.app"
 
   uninstall launchctl: "com.klokki-launcher",

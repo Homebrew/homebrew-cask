@@ -17,6 +17,8 @@ cask "sanctum" do
     regex(/href=.*?Sanctum[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
+  depends_on :macos
+
   app "Sanctum.app"
 
   zap trash: [

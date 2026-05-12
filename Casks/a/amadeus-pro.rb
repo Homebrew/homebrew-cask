@@ -13,6 +13,8 @@ cask "amadeus-pro" do
     regex(/Download\s*Amadeus\s*Pro\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   app "Amadeus Pro.app"
 
   zap trash: [

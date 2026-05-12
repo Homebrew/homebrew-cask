@@ -14,6 +14,8 @@ cask "bose-updater" do
     end
   end
 
+  depends_on :macos
+
   app "Bose Updater.app"
 
   uninstall quit: [

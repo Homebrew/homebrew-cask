@@ -10,6 +10,8 @@ cask "black-light-pro" do
   deprecate! date: "2024-07-17", because: :discontinued
   disable! date: "2025-07-17", because: :discontinued
 
+  depends_on :macos
+
   app "BLack Light Pro.app"
 
   zap trash: [

@@ -10,6 +10,8 @@ cask "macx-video" do
   deprecate! date: "2024-07-15", because: :discontinued
   disable! date: "2025-07-15", because: :discontinued
 
+  depends_on :macos
+
   app "macXvideo.app"
 
   zap trash: [

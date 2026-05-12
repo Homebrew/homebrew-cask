@@ -8,6 +8,7 @@ cask "macgesture" do
   homepage "https://github.com/MacGesture/MacGesture"
 
   auto_updates true
+  depends_on :macos
 
   app "MacGesture.app"
 

@@ -18,7 +18,7 @@ cask "imaging-edge" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "ied_#{version.csv.first.major_minor_patch.dots_to_underscores}.pkg"
 

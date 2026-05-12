@@ -20,6 +20,7 @@ cask "waltr-heic-converter" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "WALTR HEIC Converter.app"
 

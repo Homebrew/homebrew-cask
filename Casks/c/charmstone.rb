@@ -13,6 +13,7 @@ cask "charmstone" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Charmstone.app"
 

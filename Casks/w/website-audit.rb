@@ -14,7 +14,7 @@ cask "website-audit" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "website-audit.app"
 

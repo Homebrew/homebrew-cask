@@ -12,6 +12,7 @@ cask "replit" do
   homepage "https://replit.com/"
 
   auto_updates true
+  depends_on :macos
 
   app "Replit.app"
 

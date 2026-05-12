@@ -14,7 +14,7 @@ cask "chime" do
 
   auto_updates true
   conflicts_with cask: "chime@alpha"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Chime.app"
   binary "#{appdir}/Chime.app/Contents/MacOS/chimecli", target: "chime"

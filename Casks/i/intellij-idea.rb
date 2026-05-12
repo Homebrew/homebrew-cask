@@ -25,6 +25,7 @@ cask "intellij-idea" do
 
   auto_updates true
   conflicts_with cask: "intellij-idea@eap"
+  depends_on :macos
 
   app "IntelliJ IDEA.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

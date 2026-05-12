@@ -11,6 +11,7 @@ cask "origin" do
   disable! date: "2025-08-06", because: :no_longer_available, replacement_cask: "ea"
 
   auto_updates true
+  depends_on :macos
 
   app "Origin.app"
 

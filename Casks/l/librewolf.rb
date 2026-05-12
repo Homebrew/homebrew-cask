@@ -1,9 +1,9 @@
 cask "librewolf" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "150.0,1"
-  sha256 arm:   "f5a282b4a06ccc6ea9f94ba91f6452360c4f668b3e90ecf2f8e7018713846162",
-         intel: "4184307292cf4a236b1be8c3869be09ab327a0b6f9132f7c0db282dad994c606"
+  version "150.0.2,1"
+  sha256 arm:   "3a22fd5f41d06afca48613addb9b5eaefc5277a2294490da31ec071fc7d6769a",
+         intel: "a60aa45d4a7317378aaab6259298fec406b3079d5e79da7aaadecbe58e846fea"
 
   url "https://codeberg.org/api/packages/librewolf/generic/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-macos-#{arch}-package.dmg",
       verified: "codeberg.org/api/packages/librewolf/generic/librewolf/"
@@ -23,6 +23,8 @@ cask "librewolf" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "LibreWolf.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

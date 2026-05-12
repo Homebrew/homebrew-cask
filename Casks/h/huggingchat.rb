@@ -7,7 +7,9 @@ cask "huggingchat" do
   desc "Chat client for models on HuggingFace"
   homepage "https://github.com/huggingface/chat-macOS"
 
-  depends_on macos: ">= :sonoma"
+  deprecate! date: "2026-05-02", because: :discontinued
+
+  depends_on macos: :sonoma
 
   app "HuggingChat.app"
 

@@ -1,6 +1,6 @@
 cask "altar-ai" do
-  version "1.10.5"
-  sha256 "6d085e06d42aa08bb3faea612dd0666f4a2138c75f85b201bedbe0f7c56ad169"
+  version "1.10.8"
+  sha256 "876abe406f5ecd7521caa5ebdb0725c905996178a1339758eeeb4d5e243765c7"
 
   url "https://altar-prototype.sgp1.cdn.digitaloceanspaces.com/releases/v#{version}/altar-app-#{version}.dmg",
       verified: "altar-prototype.sgp1.cdn.digitaloceanspaces.com/"
@@ -14,7 +14,7 @@ cask "altar-ai" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Altar AI.app"
 

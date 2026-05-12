@@ -16,7 +16,7 @@ cask "dana-dex" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Dex.app"
 

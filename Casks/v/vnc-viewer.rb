@@ -14,7 +14,7 @@ cask "vnc-viewer" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "VNC Viewer.app"
 

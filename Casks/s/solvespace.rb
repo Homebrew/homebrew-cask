@@ -8,7 +8,7 @@ cask "solvespace" do
   desc "Parametric 2d/3d CAD"
   homepage "https://solvespace.com/index.pl/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "SolveSpace.app"
 

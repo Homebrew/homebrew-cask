@@ -1,5 +1,5 @@
 cask "yate" do
-  version "9.0.0.1"
+  version "9.1"
   sha256 :no_check
 
   url "https://2manyrobots.com/Updates/Yate/Yate.zip"
@@ -13,6 +13,7 @@ cask "yate" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Yate.app"
 

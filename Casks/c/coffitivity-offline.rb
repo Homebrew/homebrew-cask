@@ -9,6 +9,9 @@ cask "coffitivity-offline" do
   homepage "https://coffitivity-offline.siwalik.in/"
 
   deprecate! date: "2025-04-17", because: :unmaintained
+  disable! date: "2026-04-30", because: :unmaintained
+
+  depends_on :macos
 
   app "Coffitivity Offline.app"
 

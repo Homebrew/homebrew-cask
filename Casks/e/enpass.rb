@@ -1,6 +1,6 @@
 cask "enpass" do
-  version "6.11.20.2229"
-  sha256 "a382070deba83ad67a82fbdfc6b3c55c2a2ed2790b3a970c9e2a7ff9fe9e5645"
+  version "6.12.0.2411"
+  sha256 "3d8c3fec8ed1afae130b5a7219ac088d7afc8751e3d8be16efc356cc7c8cef32"
 
   url "https://dl.enpass.io/stable/mac/package/#{version}/Enpass.pkg"
   name "Enpass"
@@ -11,6 +11,8 @@ cask "enpass" do
     url "https://www.enpass.io/download/macos/website/stable"
     strategy :header_match
   end
+
+  depends_on :macos
 
   pkg "Enpass.pkg"
 

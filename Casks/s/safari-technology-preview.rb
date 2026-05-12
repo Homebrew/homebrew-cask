@@ -1,8 +1,8 @@
 cask "safari-technology-preview" do
   # when adjusting the on_{os} scoping, also update the livecheck regex
   on_sequoia :or_older do
-    version "242,122-52744-20260422-06b90b6a-f5ce-40d0-88da-2101d743c10a"
-    sha256 "accb4e338fa1231a516c64e63f2921b0294b580159078ee05b1bf5afb3cd37a9"
+    version "243,122-72143-20260507-72eb88f1-3f1a-496b-8fac-e70ddc90c600"
+    sha256 "b8b1765036ddf9e1b63cd2ca4762ef327e82699a6744b2868dc9cd4588b48711"
 
     livecheck do
       url :homepage
@@ -18,8 +18,8 @@ cask "safari-technology-preview" do
     end
   end
   on_tahoe :or_newer do
-    version "242,122-52743-20260422-45cd20be-cc9d-4957-a60d-f593495e919f"
-    sha256 "84e94b55aa4cfbc34ffa897aa7762fa5d6261f164faa2491a1e422225f307671"
+    version "243,122-72142-20260507-c9a810c9-3745-4fcf-905c-a556d95ae394"
+    sha256 "523ae810ee0ac32e83fe14938166c880bde7c002b101be5c50cd4bf61bc675c6"
 
     livecheck do
       url :homepage
@@ -41,7 +41,7 @@ cask "safari-technology-preview" do
   homepage "https://developer.apple.com/safari/resources/"
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   pkg "Safari Technology Preview.pkg"
 

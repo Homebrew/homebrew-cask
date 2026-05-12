@@ -16,6 +16,7 @@ cask "postico@1" do
   end
 
   conflicts_with cask: "postico"
+  depends_on :macos
 
   app "Postico.app"
 

@@ -12,6 +12,8 @@ cask "noto" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on :macos
+
   app "Noto.app"
 
   zap trash: [

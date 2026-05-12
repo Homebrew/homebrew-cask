@@ -12,6 +12,8 @@ cask "unnaturalscrollwheels" do
     strategy :github_latest
   end
 
+  depends_on :macos
+
   app "UnnaturalScrollWheels.app"
 
   uninstall quit: "com.theron.UnnaturalScrollWheels"

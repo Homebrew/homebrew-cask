@@ -17,6 +17,8 @@ cask "prepros" do
     end
   end
 
+  depends_on :macos
+
   app "Prepros.app"
 
   zap trash: [

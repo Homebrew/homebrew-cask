@@ -14,6 +14,8 @@ cask "crystalviewer" do
     end
   end
 
+  depends_on :macos
+
   app "CrystalViewer.app"
 
   zap trash: [

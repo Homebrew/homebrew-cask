@@ -13,6 +13,7 @@ cask "prezi-video" do
   end
 
   auto_updates true
+  depends_on :macos
 
   pkg "Prezi_Video.pkg"
 

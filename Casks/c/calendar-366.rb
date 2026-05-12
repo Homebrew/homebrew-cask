@@ -1,7 +1,7 @@
 cask "calendar-366" do
   # NOTE: "366" is not a version number, but an intrinsic part of the product name
-  version "2.15.8"
-  sha256 "c747c16541281501ecc57450a524060690e5cdc4cf9f15f95304333eed88a80e"
+  version "2.16.0"
+  sha256 "864dbbbf02ed52b09791ea33dee5b7eed2cee68044886ada71910eadf46ae945"
 
   url "https://nspektor.com/downloads/Calendar366_v#{version}.dmg"
   name "Calendar 366 II"
@@ -14,7 +14,7 @@ cask "calendar-366" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Calendar 366 II.app"
 

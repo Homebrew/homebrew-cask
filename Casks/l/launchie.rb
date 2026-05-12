@@ -8,7 +8,7 @@ cask "launchie" do
   desc "Launchpad replacement"
   homepage "https://www.launchie.app/"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Launchie.app"
 

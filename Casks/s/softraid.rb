@@ -13,6 +13,8 @@ cask "softraid" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "SoftRAID.app"
 
   zap trash: [

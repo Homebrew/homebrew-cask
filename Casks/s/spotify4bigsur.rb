@@ -9,7 +9,7 @@ cask "spotify4bigsur" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   # Renamed for clarity: app name is inconsistent with its branding.
   app "SpotifyMain.app", target: "Spotify4BigSur.app"

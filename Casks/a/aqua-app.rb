@@ -14,6 +14,7 @@ cask "aqua-app" do
   deprecate! date: "2025-08-16", because: :discontinued
 
   auto_updates true
+  depends_on :macos
 
   app "Aqua.app"
   binary "#{appdir}/Aqua.app/Contents/MacOS/aqua"

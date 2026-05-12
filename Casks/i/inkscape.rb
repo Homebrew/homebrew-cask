@@ -1,9 +1,9 @@
 cask "inkscape" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.4.3"
-  sha256 arm:   "f4aa9c9b2e06db432c6f81a494ad9aa59b87cb7d9539cd7e6f6000002cb9edff",
-         intel: "c4e7056dee4faaa623730e93a94ad1bfa017643eb85a58f9d25419397ccc5073"
+  version "1.4.4"
+  sha256 arm:   "eacca94ab01e59467cdd5452a2867c3734450f9a4cfb3346956cc9b07f34f3f1",
+         intel: "17ff9f49b60115237cad9b60605950e26b11b04600e726a4513224aa373aee11"
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version.csv.second || version.csv.first}_#{arch}.dmg"
   name "Inkscape"
@@ -28,7 +28,7 @@ cask "inkscape" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Inkscape.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

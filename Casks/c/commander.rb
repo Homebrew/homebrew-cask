@@ -1,6 +1,6 @@
 cask "commander" do
-  version "0.7.986"
-  sha256 "a7ea523413dd8d87656da3f055f60e292cc92996243a682fdf29226794c06b59"
+  version "0.7.998"
+  sha256 "83f594dfc67b97219cc124b7f0f6324ad750353fae7ee0c15b6a7e14b645aa05"
 
   url "https://download.thecommander.app/release/Commander-#{version}.zip"
   name "Commander"
@@ -34,7 +34,7 @@ cask "commander" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Commander.app"
 

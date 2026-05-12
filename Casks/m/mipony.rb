@@ -12,6 +12,8 @@ cask "mipony" do
     strategy :extract_plist
   end
 
+  depends_on :macos
+
   pkg "Mipony-Installer.pkg"
 
   uninstall quit:    "com.downloader.Mipony",

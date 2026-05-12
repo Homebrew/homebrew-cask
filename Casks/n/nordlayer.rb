@@ -1,6 +1,6 @@
 cask "nordlayer" do
-  version "3.9.1"
-  sha256 "ee4e5515fc298f834f1fc5cb34984daa3fda5cc7c9d1bfefa8f073b20ae9c147"
+  version "3.10.0"
+  sha256 "140e1cf5748a7a17176e44ac0334b081531b38ae57911418226e2ae41a955b29"
 
   url "https://downloads.nordlayer.com/mac/latest/NordLayer_v#{version}.pkg"
   name "NordLayer"
@@ -13,7 +13,7 @@ cask "nordlayer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "NordLayer_v#{version}.pkg"
 

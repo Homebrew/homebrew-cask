@@ -1,9 +1,9 @@
 cask "cncjs" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.11.0"
-  sha256 arm:   "8a46dcedc78cf8ac89dadbe47c9ec6c0eae252300a2eeebf0c84da0b28c32f48",
-         intel: "3793b520dbacbf97b1e137a6e6bf1b62e71e70b0f01f02b80ea2a2cc9726abd8"
+  version "1.11.1"
+  sha256 arm:   "b34a71c820d0e0e0addc15319ebd44596c88ca49b15bf534eb671f28e601a0f9",
+         intel: "ebe40dfccf2d71e7fb4c0d6a84ab338744f48672e9279cd48fd9169ac3b1b034"
 
   url "https://github.com/cncjs/cncjs/releases/download/v#{version}/cncjs-app-#{version}-macos-#{arch}.dmg",
       verified: "github.com/cncjs/cncjs/"
@@ -17,6 +17,8 @@ cask "cncjs" do
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+  depends_on :macos
 
   app "CNCjs.app"
 

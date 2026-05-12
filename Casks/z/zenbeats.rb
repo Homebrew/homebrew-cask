@@ -12,6 +12,8 @@ cask "zenbeats" do
     regex(/Zenbeats\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on :macos
+
   pkg "Zenbeats_Installer.pkg"
 
   uninstall pkgutil: "jp.co.roland.zenbeats"

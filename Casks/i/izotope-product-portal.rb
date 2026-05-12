@@ -20,6 +20,8 @@ cask "izotope-product-portal" do
     end
   end
 
+  depends_on :macos
+
   installer script: {
     executable: "#{staged_path}/Install Product Portal.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended", "--disable-components", "launch_after_install"],

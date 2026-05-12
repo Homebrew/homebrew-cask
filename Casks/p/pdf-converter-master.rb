@@ -12,6 +12,8 @@ cask "pdf-converter-master" do
     strategy :sparkle
   end
 
+  depends_on :macos
+
   app "PDF Converter Master.app"
 
   zap trash: [

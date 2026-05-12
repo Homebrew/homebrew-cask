@@ -16,6 +16,8 @@ cask "audacity" do
     regex(/^Audacity[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on :macos
+
   app "Audacity.app"
 
   zap trash: [

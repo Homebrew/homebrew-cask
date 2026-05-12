@@ -12,6 +12,7 @@ cask "mplayerx" do
   disable! date: "2025-07-27", because: :unmaintained
 
   auto_updates true
+  depends_on :macos
 
   app "MPlayerX.app"
 

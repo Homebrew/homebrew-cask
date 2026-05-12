@@ -1,5 +1,5 @@
 cask "monologue" do
-  version "1.1.2"
+  version "1.1.5"
   sha256 :no_check
 
   url "https://updates.jottle.ai/Monologue.dmg",
@@ -14,7 +14,7 @@ cask "monologue" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Monologue.app"
 

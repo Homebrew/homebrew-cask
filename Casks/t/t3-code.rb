@@ -1,9 +1,9 @@
 cask "t3-code" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.21"
-  sha256 arm:   "f06b0d7f99f5b21d57e38e0ac67200426142286dd251b3162baa725f350ea7dc",
-         intel: "bf611eef9b953898118add65fd36681d4f7fd4a7368077497d4607b1e0aa263f"
+  version "0.0.23"
+  sha256 arm:   "86d966f39bd55e3847b06192c9dc5b9af2fef7495a2e7c7e7e5b13ed58f94b52",
+         intel: "6bb43e98d21731b84567a61e2baf9785beb3a50f4141331ac790ea5990e83364"
 
   url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.dmg",
       verified: "github.com/pingdotgg/t3code/"
@@ -17,7 +17,7 @@ cask "t3-code" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "T3 Code (Alpha).app"
 

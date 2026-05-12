@@ -1,6 +1,6 @@
 cask "copilot-money" do
-  version "6.2.1,320-44d752cf"
-  sha256 "44d752cf1e8b27144eb390fc411973a8ce6ee7c75a362de4d3d65182b7e979e5"
+  version "6.3.0,324-53b698cb"
+  sha256 "53b698cbde53064ba24b197eb4928cbc9dda9d685851a7de3279151bd92174c2"
 
   url "https://storage.googleapis.com/copilot-mac-releases/images/Copilot-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "storage.googleapis.com/copilot-mac-releases/"
@@ -17,7 +17,7 @@ cask "copilot-money" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Copilot.app"
 

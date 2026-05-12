@@ -9,6 +9,8 @@ cask "rember" do
   deprecate! date: "2024-08-25", because: :unmaintained
   disable! date: "2025-08-26", because: :unmaintained
 
+  depends_on :macos
+
   app "Rember.app"
 
   caveats do

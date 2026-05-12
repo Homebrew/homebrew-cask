@@ -8,6 +8,7 @@ cask "kactus" do
   desc "True version control tool for designers"
   homepage "https://kactus.io/"
 
+  depends_on :macos
   depends_on cask: "sketch"
 
   app "Kactus.app"

@@ -14,6 +14,8 @@ cask "ibm-cloud-cli" do
     url "https://github.com/IBM-Cloud/ibm-cloud-cli-release"
   end
 
+  depends_on :macos
+
   pkg "IBM_Cloud_CLI_#{version}#{arch}.pkg"
 
   uninstall pkgutil: "com.ibm.cloud.cli",

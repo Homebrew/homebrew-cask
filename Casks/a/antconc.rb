@@ -22,6 +22,8 @@ cask "antconc" do
     end
   end
 
+  depends_on :macos
+
   app "AntConc.app"
 
   zap trash: "~/Library/Preferences/AntConc.plist"

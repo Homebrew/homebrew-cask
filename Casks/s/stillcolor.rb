@@ -7,7 +7,7 @@ cask "stillcolor" do
   desc "Tool to disable temporal dithering on Apple Silicon Macs"
   homepage "https://github.com/aiaf/Stillcolor"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Stillcolor.app"
 

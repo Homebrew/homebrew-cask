@@ -13,6 +13,8 @@ cask "osmc" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   # Renamed for clarity: app name is inconsistent with its branding.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/9420
   app "qt_host_installer.app", target: "OSMC.app"

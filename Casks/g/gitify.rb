@@ -1,6 +1,6 @@
 cask "gitify" do
-  version "6.19.0"
-  sha256 "959eb4ced55f84668e9e5b0424c994be20186ba6fd854a40def236f1c303c9be"
+  version "6.20.0"
+  sha256 "8fc383a66b7190e33b488bdd208178e35e4cbc9d22eb8bd3d3931ab9f3e77a1b"
 
   url "https://github.com/gitify-app/gitify/releases/download/v#{version}/Gitify-#{version}-universal-mac.zip"
   name "Gitify"
@@ -13,7 +13,7 @@ cask "gitify" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Gitify.app"
 

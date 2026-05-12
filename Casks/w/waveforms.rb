@@ -12,7 +12,7 @@ cask "waveforms" do
     regex(/href=.*?digilent[._-]waveforms[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "WaveForms.app"
 

@@ -1,6 +1,6 @@
 cask "tdr-prism" do
-  version "1.1.2"
-  sha256 "b494442a7b58f46e8e40443f874dcabfd3692711910747b9201120cdd095ace5"
+  version "1.1.4"
+  sha256 "a0bc1cdac9c5474941f93da4d96d87bd077d1fa0427ee201c844b94c738c318c"
 
   url "https://www.tokyodawn.net/labs/Prism/#{version}/TDR%20Prism.zip"
   name "TDR Prism"
@@ -11,6 +11,8 @@ cask "tdr-prism" do
     url :homepage
     regex(%r{href=.*?Prism/v?(\d+(?:\.\d+)+)/TDR(%20|\s)Prism\.zip}i)
   end
+
+  depends_on :macos
 
   pkg "TDR Prism.pkg"
 

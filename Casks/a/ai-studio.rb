@@ -13,6 +13,8 @@ cask "ai-studio" do
     strategy :header_match
   end
 
+  depends_on :macos
+
   app "AI Studio #{version}.app"
 
   zap trash: "~/.RapidMiner",

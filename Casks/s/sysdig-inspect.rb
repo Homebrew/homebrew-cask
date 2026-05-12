@@ -14,6 +14,8 @@ cask "sysdig-inspect" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on :macos
+
   app "Sysdig Inspect-darwin-x64/Sysdig Inspect.app"
 
   zap trash: [

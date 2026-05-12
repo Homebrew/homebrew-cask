@@ -11,6 +11,8 @@ cask "corona-tracker" do
   deprecate! date: "2025-11-30", because: :discontinued
   disable! date: "2026-11-30", because: :discontinued
 
+  depends_on :macos
+
   app "Corona Tracker.app"
 
   zap trash: [

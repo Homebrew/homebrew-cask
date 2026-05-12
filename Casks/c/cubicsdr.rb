@@ -27,6 +27,8 @@ cask "cubicsdr" do
     end
   end
 
+  depends_on :macos
+
   app "CubicSDR.app"
 
   caveats do

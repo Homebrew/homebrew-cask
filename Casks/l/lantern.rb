@@ -8,6 +8,8 @@ cask "lantern" do
   desc "Open Internet For All"
   homepage "https://lantern.io/"
 
+  depends_on :macos
+
   app "Lantern.app"
 
   uninstall launchctl: "org.getlantern",

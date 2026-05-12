@@ -8,6 +8,8 @@ cask "mighty-mike" do
   desc "Top-down action game from Pangea Software (a.k.a. Power Pete)"
   homepage "https://jorio.itch.io/mightymike"
 
+  depends_on :macos
+
   app "Mighty Mike.app"
   artifact "Documentation", target: "~/Library/Application Support/MightyMike"
 

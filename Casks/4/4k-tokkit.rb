@@ -15,6 +15,8 @@ cask "4k-tokkit" do
     regex(/href=.*?4ktokkit[._-]v?(\d+(?:\.\d+)+)[._-]x64\.dmg/i)
   end
 
+  depends_on :macos
+
   app "4K Tokkit.app"
 
   zap trash: [

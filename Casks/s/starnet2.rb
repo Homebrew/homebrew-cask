@@ -15,6 +15,7 @@ cask "starnet2" do
     end
   end
 
+  depends_on :macos
   depends_on arch: :arm64
 
   bin_path = "#{staged_path}/StarNet2T_MacOS"

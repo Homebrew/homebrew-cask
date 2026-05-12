@@ -13,6 +13,8 @@ cask "kubernetic" do
     strategy :electron_builder
   end
 
+  depends_on :macos
+
   app "Kubernetic.app"
 
   uninstall signal: [

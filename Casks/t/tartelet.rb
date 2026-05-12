@@ -7,7 +7,7 @@ cask "tartelet" do
   desc "Manage GitHub Actions runners in virtual machines"
   homepage "https://github.com/shapehq/tartelet"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Tartelet.app"
 

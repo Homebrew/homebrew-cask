@@ -18,7 +18,7 @@ cask "kodi" do
     regex(/href=.*?kodi[._-]v?(\d+(?:\.\d+)+[._-][^_-]+?)[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Kodi.app"
 

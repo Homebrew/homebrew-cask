@@ -16,6 +16,7 @@ cask "open-video-downloader" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Open Video Downloader.app"
 
