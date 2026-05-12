@@ -13,7 +13,7 @@ cask "juxtacode" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "JuxtaCode.app"
   binary "#{appdir}/JuxtaCode.app/Contents/MacOS/juxta"
