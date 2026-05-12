@@ -6,10 +6,10 @@ cask "scribus" do
          intel: "69cc1b918747882395d984f0d0a3c06e965d06368299952e645b31925e284a99"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :monterey"
+    depends_on macos: :monterey
   end
 
   url "https://downloads.sourceforge.net/scribus/scribus/#{version.csv.first}/scribus-#{version.csv.second || version.csv.first}#{arch}.dmg",
@@ -30,6 +30,8 @@ cask "scribus" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  depends_on :macos
 
   app "Scribus.app"
 
