@@ -31,7 +31,7 @@ cask "oclint" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   binary "oclint-#{version}/bin/oclint-json-compilation-database"
   binary "oclint-#{version}/bin/oclint-xcodebuild"
