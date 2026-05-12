@@ -20,7 +20,7 @@ cask "skint" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "skint#{version.csv.first.no_dots}/Skint.app"
   app "skint#{version.csv.first.no_dots}/SkintM.app"
