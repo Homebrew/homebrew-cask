@@ -11,7 +11,7 @@ cask "openlist-app" do
   homepage "https://github.com/OpenListTeam/OpenList-Desktop"
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   app "OpenList-Desktop.app"
 
