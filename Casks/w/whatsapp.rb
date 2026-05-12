@@ -17,7 +17,7 @@ cask "whatsapp" do
 
   auto_updates true
   conflicts_with cask: "whatsapp@beta"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "WhatsApp.app"
 
