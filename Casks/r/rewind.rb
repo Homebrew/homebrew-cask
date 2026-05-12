@@ -11,7 +11,7 @@ cask "rewind" do
   disable! date: "2026-01-05", because: :unmaintained
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Rewind.app"
 
