@@ -8,7 +8,7 @@ cask "mist" do
   homepage "https://github.com/ninxsoft/Mist"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Mist.#{version}.pkg"
 
