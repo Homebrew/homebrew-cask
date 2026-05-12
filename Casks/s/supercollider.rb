@@ -13,7 +13,7 @@ cask "supercollider" do
     regex(/href=.*?SuperCollider[._-]v?(\d+(?:\.\d+)+)[._-]macOS(?:[._-]universal)?\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "SuperCollider.app"
 
