@@ -12,7 +12,7 @@ cask "freelens@nightly" do
   homepage "https://freelens.app/"
 
   conflicts_with cask: "freelens"
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Freelens.app"
 
