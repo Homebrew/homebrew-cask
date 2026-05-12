@@ -14,7 +14,7 @@ cask "acronis-true-image-cleanup-tool" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   lib_directory = "#{HOMEBREW_PREFIX}/lib/acronis-true-image"
 
