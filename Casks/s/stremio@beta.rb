@@ -6,10 +6,10 @@ cask "stremio@beta" do
          intel: "077dd1d816d64bfee806c9facef5a72effcd686a09d7590ba3cfe51de8d5ab79"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://dl.strem.io/stremio-shell-macos/v#{version}/Stremio_#{arch}.dmg"
@@ -26,6 +26,7 @@ cask "stremio@beta" do
 
   auto_updates true
   conflicts_with cask: "stremio"
+  depends_on :macos
 
   app "Stremio.app"
 
