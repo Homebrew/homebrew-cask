@@ -15,7 +15,7 @@ cask "foxitreader" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "FoxitPDFReader#{version.major_minor.no_dots}.L10N.Setup.pkg"
 
