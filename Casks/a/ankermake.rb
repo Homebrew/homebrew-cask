@@ -10,7 +10,7 @@ cask "ankermake" do
 
   disable! date: "2025-05-26", because: :discontinued, replacement_cask: "eufymake-studio"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   container nested: "AnkerMake_V#{version}/AnkerMake_V#{version}.dmg"
 
   app "AnkerMake.app"
