@@ -17,7 +17,7 @@ cask "warcraft-logs-uploader" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Warcraft Logs Uploader.app"
 
