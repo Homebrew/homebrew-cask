@@ -17,7 +17,7 @@ cask "simplysign" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "SimplySignDesktop-#{version.csv.first}_signed_prod.pkg"
 
