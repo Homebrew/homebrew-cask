@@ -6,7 +6,7 @@ cask "todometer" do
     url "https://github.com/cassidoo/todometer/releases/download/v#{version}/todometer-#{version}-arm64-mac.zip",
         verified: "github.com/cassidoo/todometer/"
 
-    depends_on macos: ">= :monterey"
+    depends_on macos: :monterey
 
     app "todometer.app"
   end
@@ -23,7 +23,7 @@ cask "todometer" do
 
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
 
     app "mac/todometer.app"
   end
