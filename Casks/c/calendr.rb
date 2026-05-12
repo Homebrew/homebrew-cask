@@ -7,7 +7,7 @@ cask "calendr" do
   desc "Menu bar calendar"
   homepage "https://github.com/pakerwreah/Calendr"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Calendr.app"
 
