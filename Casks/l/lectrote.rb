@@ -10,7 +10,7 @@ cask "lectrote" do
   desc "Interactive Fiction interpreter in an Electron shell"
   homepage "https://github.com/erkyrath/lectrote"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Lectrote.app"
 
