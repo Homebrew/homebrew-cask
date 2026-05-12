@@ -13,7 +13,7 @@ cask "anka-virtualization" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Anka-#{version}.pkg"
 
