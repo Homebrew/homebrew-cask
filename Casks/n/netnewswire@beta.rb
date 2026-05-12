@@ -15,7 +15,7 @@ cask "netnewswire@beta" do
 
   auto_updates true
   conflicts_with cask: "netnewswire"
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "NetNewsWire.app"
 
