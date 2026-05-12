@@ -9,7 +9,7 @@ cask "codexbar" do
   homepage "https://codexbar.app/"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "CodexBar.app"
   binary "#{appdir}/CodexBar.app/Contents/Helpers/CodexBarCLI", target: "codexbar"
