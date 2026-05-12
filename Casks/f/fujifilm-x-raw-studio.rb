@@ -21,7 +21,7 @@ cask "fujifilm-x-raw-studio" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "FUJIFILM X RAW STUDIO.app"
 
