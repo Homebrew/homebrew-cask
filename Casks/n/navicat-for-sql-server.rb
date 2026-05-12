@@ -57,7 +57,7 @@ cask "navicat-for-sql-server" do
     cask "navicat-premium"
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Navicat For SQL Server.app"
 
