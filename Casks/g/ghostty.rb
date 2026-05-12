@@ -14,7 +14,7 @@ cask "ghostty" do
 
   auto_updates true
   conflicts_with cask: "ghostty@tip"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Ghostty.app"
   manpage "#{appdir}/Ghostty.app/Contents/Resources/man/man1/ghostty.1"
