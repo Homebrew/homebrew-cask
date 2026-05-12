@@ -18,7 +18,7 @@ cask "appvolume" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   pkg "AppVolume-#{version}-#{arch}.pkg"
 
