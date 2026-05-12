@@ -18,7 +18,7 @@ cask "jdk-mission-control" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "jmc-#{version.csv.first}_macos-#{arch}/JDK Mission Control.app"
 
