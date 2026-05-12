@@ -15,7 +15,7 @@ cask "cpu-info" do
     regex(/^jvm[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "CPU-Info.app"
 
