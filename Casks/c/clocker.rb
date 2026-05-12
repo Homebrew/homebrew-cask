@@ -20,7 +20,7 @@ cask "clocker" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Clocker.app"
 
