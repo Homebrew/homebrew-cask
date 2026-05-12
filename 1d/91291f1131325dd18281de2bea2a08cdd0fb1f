@@ -1,0 +1,20 @@
+Casks/c/claude-code@latest.rb
+  s_5ba851219c9cf7::t_7630d8c06cba58 5
+  s_5ba851219c9cf7::t_9e65b66b8709e7 6-9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "1d91291f1131325dd18281de2bea2a08cdd0fb1f",
+  "prompts": {},
+  "sessions": {
+    "s_5ba851219c9cf7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f6650054-fa43-4a04-88f1-857a72beee66",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
