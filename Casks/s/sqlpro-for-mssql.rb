@@ -13,7 +13,7 @@ cask "sqlpro-for-mssql" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "SQLPro for MSSQL.app"
 
