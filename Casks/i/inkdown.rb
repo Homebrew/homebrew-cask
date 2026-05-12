@@ -14,7 +14,7 @@ cask "inkdown" do
   disable! date: "2026-01-27", because: :moved_to_mas
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Inkdown.app"
 
