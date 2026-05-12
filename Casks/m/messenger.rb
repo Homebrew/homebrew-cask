@@ -11,7 +11,7 @@ cask "messenger" do
   disable! date: "2025-12-25", because: :discontinued
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Messenger.app"
 
