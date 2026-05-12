@@ -14,7 +14,7 @@ cask "virtualc64" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "VirtualC64.app"
 
