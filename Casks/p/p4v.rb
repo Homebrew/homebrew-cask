@@ -17,7 +17,7 @@ cask "p4v" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "p4v.app"
   app "p4admin.app"
