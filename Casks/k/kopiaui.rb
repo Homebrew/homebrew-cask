@@ -1,9 +1,9 @@
 cask "kopiaui" do
   arch arm: "-arm64"
 
-  version "0.22.3"
-  sha256 arm:   "bae50d8b9df7abef0cdf20e7e92338b1a2387cfd21b93c5ccee79e438fb72f12",
-         intel: "835290f49c602f51775f0a61dea59f8c4aeecbebaa038eda2e208aaba8b74add"
+  version "0.23.0"
+  sha256 arm:   "387ca1530829fc95667b23e88b644f9f0cf9f49a2abfeffeed22e3fc261f6e29",
+         intel: "74039eff6bcf61f94d754f73c47a4207d222d00341a775afcad47dcf9e76e239"
 
   url "https://github.com/kopia/kopia/releases/download/v#{version}/KopiaUI-#{version}#{arch}.dmg",
       verified: "github.com/kopia/kopia/"
@@ -17,7 +17,7 @@ cask "kopiaui" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "KopiaUI.app"
 
