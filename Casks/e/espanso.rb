@@ -13,7 +13,7 @@ cask "espanso" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   container nested: "espanso/Espanso.dmg"
 
   app "Espanso.app"
