@@ -8,7 +8,7 @@ cask "voikkospellservice" do
   desc "Spell-checking service for Finnish"
   homepage "https://verteksi.net/lab/osxspell/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   service "VoikkoSpellService.app"
 
