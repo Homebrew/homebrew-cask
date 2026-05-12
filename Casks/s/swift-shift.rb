@@ -14,7 +14,7 @@ cask "swift-shift" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Swift Shift.app"
 
