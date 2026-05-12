@@ -15,7 +15,7 @@ cask "boltai@1" do
   disable! date: "2026-06-01", because: :unmaintained
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "BoltAI.app"
 
