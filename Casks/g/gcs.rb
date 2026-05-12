@@ -6,10 +6,10 @@ cask "gcs" do
          intel: "1d8866f970d5675643931b6523fcc81f3874ed03fafe5ebce83bca3d33307e6d"
 
   on_arm do
-    depends_on macos: ">= :big_sur"
+    depends_on macos: :big_sur
   end
   on_intel do
-    depends_on macos: ">= :catalina"
+    depends_on macos: :catalina
   end
 
   url "https://github.com/richardwilkes/gcs/releases/download/v#{version}/gcs-#{version}-macos-#{arch}.dmg",
@@ -17,6 +17,8 @@ cask "gcs" do
   name "gcs"
   desc "Character sheet editor for the GURPS Fourth Edition roleplaying game"
   homepage "https://gurpscharactersheet.com/"
+
+  depends_on :macos
 
   app "GCS.app"
 
