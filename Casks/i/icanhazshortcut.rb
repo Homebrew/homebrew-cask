@@ -8,7 +8,7 @@ cask "icanhazshortcut" do
   desc "Shortcut manager"
   homepage "https://icanhazapps.d7.wtf/shortcut"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "iCanHazShortcut.app"
 
