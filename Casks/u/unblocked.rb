@@ -17,7 +17,7 @@ cask "unblocked" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "unblocked-desktop-#{arch}-#{version}.pkg"
 
