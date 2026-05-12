@@ -3,11 +3,6 @@ cask "gram" do
 
   version "2.0.0"
 
-  livecheck do
-    url "https://codeberg.org/GramEditor/gram.git"
-    strategy :git
-  end
-
   on_arm do
     sha256 "249d0ceef917889b66dca8976d1b1efeb0548f52793ece0c2b31a4bdb0982e2e"
 
@@ -24,6 +19,11 @@ cask "gram" do
   name "Gram"
   desc "Code editor focused on stability, without AI, subscriptions, or telemetry"
   homepage "https://gram-editor.com/"
+
+  livecheck do
+    url "https://codeberg.org/GramEditor/gram.git"
+    strategy :git
+  end
 
   depends_on macos: ">= :catalina"
 
