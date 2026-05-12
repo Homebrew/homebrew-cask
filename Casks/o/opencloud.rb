@@ -15,7 +15,7 @@ cask "opencloud" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "OpenCloud_Desktop-v#{version}-macos-clang-#{arch}.pkg"
 
