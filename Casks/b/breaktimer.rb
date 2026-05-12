@@ -14,7 +14,7 @@ cask "breaktimer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "BreakTimer.app"
   binary "#{appdir}/BreakTimer.app/Contents/MacOS/BreakTimer", target: "breaktimer"
