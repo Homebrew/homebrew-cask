@@ -15,7 +15,7 @@ cask "boom" do
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Boom 2.app"
 
