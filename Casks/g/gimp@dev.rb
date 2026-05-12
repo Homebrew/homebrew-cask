@@ -25,7 +25,7 @@ cask "gimp@dev" do
   end
 
   conflicts_with cask: "gimp"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "GIMP.app"
   shimscript = "#{staged_path}/gimp.wrapper.sh"
