@@ -21,7 +21,7 @@ cask "surge" do
 
   auto_updates true
   conflicts_with cask: "surge@4"
-  depends_on macos: ">= :monterey" # Confirmed by LSMinimumSystemVersion "12.0"
+  depends_on macos: :monterey # Confirmed by LSMinimumSystemVersion "12.0"
 
   app "Surge.app"
   binary "#{appdir}/Surge.app/Contents/Applications/Surge Dashboard.app", target: "#{appdir}/Surge Dashboard.app"
