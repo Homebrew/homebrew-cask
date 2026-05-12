@@ -8,7 +8,7 @@ cask "twine-app" do
   desc "Tool for telling interactive, nonlinear stories"
   homepage "https://twinery.org/"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Twine.app"
 
