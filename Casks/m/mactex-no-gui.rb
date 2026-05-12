@@ -17,7 +17,7 @@ cask "mactex-no-gui" do
     "mactex",
   ]
   depends_on formula: "ghostscript"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   pkg "mactex-#{version.no_dots}.pkg",
       choices: [
