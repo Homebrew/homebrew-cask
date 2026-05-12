@@ -8,7 +8,7 @@ cask "hush" do
   desc "Block nags to accept cookies and privacy invasive tracking in Safari"
   homepage "https://oblador.github.io/hush/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Hush.app"
 
