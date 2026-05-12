@@ -1,5 +1,5 @@
 cask "ecamm-live" do
-  version "4.5.7"
+  version "4.5.8"
   sha256 :no_check
 
   url "https://downloads.ecamm.com/EcammLive.zip"
@@ -18,7 +18,7 @@ cask "ecamm-live" do
   # The url is unversioned, but the download returns an app directory with a version number
   rename "Ecamm v#{version}", "Ecamm Live"
 
-  app "Ecamm Live/Ecamm Live.app"
+  app "Ecamm Live/Ecamm.app"
 
   uninstall delete: [
               "/Library/Application Support/EcammLive/EcammLiveAudioXPCHelper.xpc",
