@@ -19,7 +19,7 @@ cask "imaging-edge-webcam" do
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   pkg "IEW_INST.pkg"
 
