@@ -11,7 +11,7 @@ cask "dcp-o-matic-kdm-creator" do
     cask "dcp-o-matic"
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "DCP-o-matic #{version.major} KDM Creator.app"
 
