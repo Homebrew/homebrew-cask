@@ -1,9 +1,8 @@
 cask "perplexity" do
-  version "26.19.0"
-  sha256 "20f86784c170c4d733eab8b80df246aa7f5190f87ffda15241b8c64022b2be9f"
+  version :latest
+  sha256 :no_check
 
-  url "https://macos-download.perplexity.ai/Perplexity.dmg",
-      verified: "macos-download.perplexity.ai/"
+  url "https://macos-download.perplexity.ai/Perplexity.dmg"
   name "Perplexity"
   desc "AI-powered answer engine with agentic search capabilities"
   homepage "https://www.perplexity.ai/"
