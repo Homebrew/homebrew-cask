@@ -12,7 +12,7 @@ cask "filefaker" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "FileFaker.app"
 
