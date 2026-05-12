@@ -18,7 +18,7 @@ cask "fxfactory" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   pkg "Install FxFactory #{version.csv.first}.pkg"
 
