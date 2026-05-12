@@ -13,7 +13,7 @@ cask "renamer" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Renamer.app"
 
