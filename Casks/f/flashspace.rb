@@ -8,7 +8,7 @@ cask "flashspace" do
   homepage "https://github.com/wojciech-kulik/FlashSpace"
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "FlashSpace.app"
   binary "#{appdir}/FlashSpace.app/Contents/Resources/flashspace"
