@@ -7,7 +7,7 @@ cask "lidanglesensor" do
   desc "Utility to display the lid angle and play a creaking sound"
   homepage "https://github.com/samhenrigold/LidAngleSensor"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "LidAngleSensor.app"
 
