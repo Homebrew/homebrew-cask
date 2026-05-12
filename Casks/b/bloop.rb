@@ -14,7 +14,7 @@ cask "bloop" do
   deprecate! date: "2025-01-05", because: :discontinued
   disable! date: "2026-01-05", because: :discontinued
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "bloop.app"
 
