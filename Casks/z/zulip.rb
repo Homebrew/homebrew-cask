@@ -12,7 +12,7 @@ cask "zulip" do
   homepage "https://zulip.com/"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Zulip.app"
 

@@ -15,7 +15,7 @@ cask "yakit" do
     regex(/^v?(\d+(?:[.-]\d+)+)$/)
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
 
   app "Yakit.app"
 

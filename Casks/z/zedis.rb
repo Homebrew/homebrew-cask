@@ -10,7 +10,7 @@ cask "zedis" do
   desc "Redis GUI built with Rust and GPUI"
   homepage "https://github.com/vicanso/zedis"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Zedis.app"
 

@@ -20,7 +20,7 @@ cask "yaak" do
 
   auto_updates true
   conflicts_with cask: "yaak@beta"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "yaak.app"
 

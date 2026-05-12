@@ -13,7 +13,7 @@ cask "wolfram-engine" do
     regex(/^(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Wolfram Engine.app"
   binary "#{appdir}/Wolfram Engine.app/Contents/Resources/Wolfram Player.app/Contents/MacOS/wolframscript"

@@ -7,7 +7,7 @@ cask "xdeck" do
   desc "TweetDeck-style X/Twitter client"
   homepage "https://github.com/morishin/XDeck"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "XDeck.app"
 

@@ -28,7 +28,7 @@ cask "xpra" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Xpra.app"
   binary "#{appdir}/Xpra.app/Contents/MacOS/Xpra", target: "xpra"

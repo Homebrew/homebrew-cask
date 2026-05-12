@@ -33,7 +33,7 @@ cask "yaak@beta" do
 
   auto_updates true
   conflicts_with cask: "yaak"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "yaak.app"
 

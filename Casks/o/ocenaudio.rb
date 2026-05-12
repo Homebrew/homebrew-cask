@@ -12,7 +12,7 @@ cask "ocenaudio" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "ocenaudio.app"
 

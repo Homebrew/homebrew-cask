@@ -22,7 +22,7 @@ cask "yellowdot" do
   desc "Hides privacy indicators"
   homepage "https://lowtechguys.com/yellowdot"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "YellowDot.app"
 

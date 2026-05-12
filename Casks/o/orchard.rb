@@ -7,7 +7,7 @@ cask "orchard" do
   desc "Native GUI for Apple Containers"
   homepage "https://github.com/andrew-waters/orchard"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Orchard.app"
 
