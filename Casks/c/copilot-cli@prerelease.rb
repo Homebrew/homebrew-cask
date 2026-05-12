@@ -3,7 +3,7 @@ cask "copilot-cli@prerelease" do
   os macos: "darwin", linux: "linux"
 
   on_macos do
-    depends_on macos: ">= :ventura"
+    depends_on macos: :ventura
   end
 
   version "1.0.44-3"
