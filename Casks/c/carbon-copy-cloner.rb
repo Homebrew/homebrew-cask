@@ -29,7 +29,7 @@ cask "carbon-copy-cloner" do
 
   auto_updates true
   conflicts_with cask: "carbon-copy-cloner@6"
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Carbon Copy Cloner.app"
 
