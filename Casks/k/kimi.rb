@@ -14,7 +14,7 @@ cask "kimi" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Kimi.app"
 
