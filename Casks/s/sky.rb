@@ -7,7 +7,7 @@ cask "sky" do
   desc "Bluesky Social client"
   homepage "https://github.com/jcsalterego/Sky.app"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Sky.app"
 
