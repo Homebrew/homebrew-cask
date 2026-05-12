@@ -12,7 +12,7 @@ cask "biscuit" do
   homepage "https://eatbiscuit.com/"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Biscuit.app"
 
