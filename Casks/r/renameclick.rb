@@ -1,9 +1,9 @@
 cask "renameclick" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.10.5"
-  sha256 arm:   "2fa7168510ca7de89dc96133b3faae6f767ff7c61c338e42d344faef0be30395",
-         intel: "26de43b0c729d0ef50f389192505b0c38f1ca14259a2526e70c5560af335108e"
+  version "2.10.6"
+  sha256 arm:   "31fa1618df2df6681adbceb1a6d36d53ff38562fc445aa81bb39ba1c077732e5",
+         intel: "684bc99903c38a0a393c014b14c20eb4589e6a492842147735cc8a78e1c00e2e"
 
   url "https://github.com/noemaVision/renameclick/releases/download/v#{version}/RenameClick-#{version}-#{arch}.dmg",
       verified: "github.com/noemaVision/renameclick/"
@@ -17,7 +17,7 @@ cask "renameclick" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "RenameClick.app"
 
