@@ -1,6 +1,6 @@
 cask "clocker" do
-  version "26.11"
-  sha256 "16338f6297805f8ec0b5b6e2f2977116edebe1955acdfb4491bd0472b6ef438c"
+  version "26.12"
+  sha256 "ab483109025f36491abe29156a784280366b492985c568b0d31bc60a4e50a38b"
 
   url "https://github.com/n0shake/Clocker/releases/download/#{version.csv.second || version.csv.first}/Clocker.zip",
       verified: "github.com/n0shake/Clocker/"
