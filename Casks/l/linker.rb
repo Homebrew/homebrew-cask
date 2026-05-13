@@ -7,5 +7,19 @@ cask "linker" do
   desc "Connect files, folders, emails, websites and more — bidirectionally"
   homepage "https://linker.appmac.fr"
 
+  livecheck do
+    url "https://linker.appmac.fr/update/sparkle/appcast.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
+  depends_on macos: :sequoia
+
   app "Linker.app"
+
+  zap trash: [
+    "~/Library/Application Support/Linker",
+    "~/Library/Caches/fr.arievanboxel.linker",
+    "~/Library/HTTPStorages/fr.arievanboxel.linker",
+  ]
 end
