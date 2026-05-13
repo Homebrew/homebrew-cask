@@ -4,7 +4,7 @@ cask "macmd-viewer" do
 
   url "https://macmdviewer.com/downloads/v#{version}/MacMDViewer.dmg"
   name "MacMD Viewer"
-  desc "Native SwiftUI Markdown viewer with QuickLook and Mermaid support"
+  desc "Markdown viewer with QuickLook and Mermaid support"
   homepage "https://macmdviewer.com/"
 
   livecheck do
