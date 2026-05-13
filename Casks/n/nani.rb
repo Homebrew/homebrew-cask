@@ -1,6 +1,6 @@
 cask "nani" do
-  version "1.0.86"
-  sha256 "82e32527380f2306a64f694286490c5501d14bfbe24b4c8c6535a7b49b8d6a76"
+  version "1.0.87"
+  sha256 "5d6e16c14117417e18669f82550cea4fe06a6fe6c5a43c1185bce253cb9d1eba"
 
   url "https://nani-desktop.kiok.jp/artifacts/nani-#{version}.dmg",
       verified: "nani-desktop.kiok.jp/artifacts/"
