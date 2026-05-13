@@ -8,8 +8,8 @@ cask "runtimeviewer" do
   homepage "https://github.com/MxIris-Reverse-Engineering/RuntimeViewer"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://mxiris-reverse-engineering.github.io/RuntimeViewer/appcast.xml"
+    strategy :sparkle
   end
 
   depends_on macos: :sequoia
