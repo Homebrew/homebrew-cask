@@ -19,7 +19,7 @@ cask "kdenlive" do
     end
   end
 
-  depends_on macos: :ventura
+  depends_on macos: ">= :ventura"
 
   app "kdenlive.app"
 
