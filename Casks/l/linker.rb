@@ -12,7 +12,6 @@ cask "linker" do
     strategy :sparkle
   end
 
-  auto_updates true
   depends_on macos: :sequoia
 
   app "Linker.app"
