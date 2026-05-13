@@ -1,6 +1,6 @@
 cask "bookmacster@beta" do
-  version "3.3.7"
-  sha256 "b40cbd46dfc7927fa46c70602175dca712888509442d286017fca33a830c2ce1"
+  version "3.3.8"
+  sha256 "5cc06b006365e999ef0d16c1b3de2b911b93f56c28c1afaa39c14381c440c194"
 
   url "https://sheepsystems.com/bookmacster/BookMacster_#{version}.zip"
   name "BookMacster"
