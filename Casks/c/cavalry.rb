@@ -1,5 +1,5 @@
 cask "cavalry" do
-  version "2.7.1"
+  version "2.7.2"
   sha256 :no_check
 
   url "https://cavalry.studio/downloads/latest/Cavalry.dmg"
