@@ -1,6 +1,6 @@
 cask "switch-mac" do
   version "0.1.7"
-  sha256 "bb59c30e0a38c776d162ef2d12096c2a5ed50065b2e45e9a66476465ea8d0e8d"
+  sha256 "51458ccc415b4ad2e311a6da3d4af941b1e61428ba3c90a9775e8dda5cd074cc"
 
   url "https://github.com/Sanyam-G/switch/releases/download/v#{version}/Switch-#{version}.dmg",
       verified: "github.com/Sanyam-G/switch/"
