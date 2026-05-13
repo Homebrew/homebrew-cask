@@ -1,6 +1,6 @@
 cask "intune-company-portal" do
-  version "5.2603.0"
-  sha256 "e5060291fb06eb14f91f0b3cdc47aa729fadbab44f4fc3e44a0f21c1a6cf6082"
+  version "5.2604.0"
+  sha256 "116d80b7e133cdfa7b528501a916d6fa4973f2f005754d3346f50bf417f888f8"
 
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/CompanyPortal_#{version}-Upgrade.pkg"
   name "Company Portal"
