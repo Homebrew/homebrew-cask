@@ -1,6 +1,6 @@
 cask "superisland" do
-  version "1.0.5"
-  sha256 "979d83b8d846ebb838c4992e461fc5033180603cebe2b38baaea1aa84e890618"
+  version "1.0.7"
+  sha256 "58cac70638abec0c95e638efd269874a4354c5a935c7ce9a70b52b5ca55982d6"
 
   url "https://github.com/shobhit99/SuperIsland/releases/download/#{version}/SuperIsland.dmg",
       verified: "github.com/shobhit99/SuperIsland/"
@@ -8,7 +8,7 @@ cask "superisland" do
   desc "Dynamic island utility"
   homepage "https://dynamicisland.app/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "SuperIsland.app"
 
