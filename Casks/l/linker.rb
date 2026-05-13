@@ -1,6 +1,6 @@
 cask "linker" do
   version "1.1.1"
-  sha256 "20a6123264113894b05ded67e3dd6fa913a69b6ff15718f4d60041f75e7e66ef"
+  sha256 "6ef73d7c0ae8ab7c70270965f85b68735baf93c5cf02564c2e0328d56c63f530"
 
   url "https://linker.appmac.fr/update/download/"
   name "Linker"
