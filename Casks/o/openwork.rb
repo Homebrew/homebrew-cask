@@ -8,7 +8,7 @@ cask "openwork" do
   url "https://github.com/different-ai/openwork/releases/download/v#{version}/openwork-mac-#{arch}-#{version}.dmg",
       verified: "github.com/different-ai/openwork/"
   name "OpenWork"
-  desc "Open source Claude Cowork alternative for teams"
+  desc "Unofficial desktop GUI for OpenCode"
   homepage "https://openworklabs.com/"
 
   livecheck do
