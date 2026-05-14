@@ -24,7 +24,6 @@ cask "stremio" do
 
   auto_updates true
   conflicts_with cask: "stremio@beta"
-  depends_on :macos
 
   app "Stremio.app"
 
