@@ -2,11 +2,11 @@ cask "gcloud-cli" do
   arch arm: "arm", intel: "x86_64"
   os macos: "darwin", linux: "linux"
 
-  version "567.0.0"
-  sha256 arm:          "1c6cd01b0c039f3966326514f380686f32637f1066862b28a0d766a7eb34a9f4",
-         intel:        "871b40b75c0046ea9a54310037083945fe7929a2a799c3c31c8f37b70e82937a",
-         arm64_linux:  "43ca9e1d07652c5c689debb8012bbc1c30fb73fa3d41287d1cc7f17cbea7e87f",
-         x86_64_linux: "bd5afc0d249609cb40d45f665209190fdd38b9937954291b8f9ae54206c75d83"
+  version "568.0.0"
+  sha256 arm:          "09e2f3fc57da5a858523b91cf8a3842d2b30d2390ec0fdaf33ef10926dcc9d3b",
+         intel:        "a0c97f183b2d934dc206121d27333dba221dcdb234299402f7490ef1416ce68c",
+         arm64_linux:  "0b31153517665f12a664675b48571938f0beeec46450485e966a4dce7b125cf6",
+         x86_64_linux: "ee39a260f5d30486c654be018b0e99f396a9c061617d206becaca4456e84ff94"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-#{os}-#{arch}.tar.gz"
   name "Google Cloud CLI"
@@ -69,6 +69,7 @@ cask "gcloud-cli" do
     end
 
     if OS.mac?
+      ENV["CLOUDSDK_PYTHON"] = "#{HOMEBREW_PREFIX}/opt/python@3.13/libexec/bin/python"
       # Install required external dependencies via virtualenv
       if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
         puts "deleting existing virtual env before enabling virtual env with current Python version"
