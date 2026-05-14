@@ -1,4 +1,4 @@
-cask "notion-cli@beta" do
+cask "notion-cli" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-musl"
 
