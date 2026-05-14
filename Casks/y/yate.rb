@@ -1,8 +1,8 @@
 cask "yate" do
-  version "9.1"
+  version "9.2"
   sha256 :no_check
 
-  url "https://2manyrobots.com/Updates/Yate/Yate.zip"
+  url "https://2manyrobots.com/Updates/YateMain/Yate.zip"
   name "Yate"
   desc "Media file tag editor"
   homepage "https://2manyrobots.com/yate/"
