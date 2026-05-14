@@ -32,6 +32,8 @@ cask "todometer" do
   desc "Meter-based to-do list"
   homepage "https://cassidoo.github.io/todometer/"
 
+  depends_on :macos
+
   zap trash: [
     "~/Library/Application Support/todometer",
     "~/Library/Preferences/com.electron.todometer.plist",
