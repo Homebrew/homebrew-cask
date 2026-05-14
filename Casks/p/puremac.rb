@@ -1,6 +1,6 @@
 cask "puremac" do
-  version "2.1.0"
-  sha256 "d979b9e5a270ead5566698a01e5065a1a12804c69f1d4898eed2781a1250bacf"
+  version "2.2.0"
+  sha256 "ba92024d22628ccbf9824e95b161cadf85479c0ea8ffae2a83125878e17f47b3"
 
   url "https://github.com/momenbasel/PureMac/releases/download/v#{version}/PureMac-#{version}.zip"
   name "PureMac"
