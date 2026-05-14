@@ -1,11 +1,11 @@
 cask "codebuddy" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.4.2.20019762,f909b20a20,df14f824"
-  sha256 arm:   "4b0f740747b645c5c7a3e62a6a677c1502c2a79202fef57c360f915dfd49ae86",
-         intel: "d03e32577fbf6dce5c54d63b13af6e09c9c33442c5817b96db7153b0ab3fbf98"
+  version "4.9.5.25622162,bae7923c"
+  sha256 arm:   "d98f10aca4e30eab27198d30c486f4da2cbbf6b477c926c65af01eecf77becea",
+         intel: "9d8a650f7e037e775a4b9c9e7aaffb06a01f426513a6df5bc82d3a97340a8943"
 
-  url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}-#{version.csv.third}.zip",
+  url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/"
   name "CodeBuddy"
   desc "AI-powered adaptive IDE"
@@ -13,12 +13,12 @@ cask "codebuddy" do
 
   livecheck do
     url "https://www.codebuddy.ai/v2/update?platform=ide-darwin-#{arch}&version=1.0.0&x-machine-id=default"
-    regex(%r{/CodeBuddy[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)-(\h+)-(\h+)\.zip}i)
+    regex(%r{/CodeBuddy[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)-(\h+)\.zip}i)
     strategy :json do |json, regex|
       match = json["url"]&.match(regex)
       next if match.blank?
 
-      "#{match[1]},#{match[2]},#{match[3]}"
+      "#{match[1]},#{match[2]}"
     end
   end
 
