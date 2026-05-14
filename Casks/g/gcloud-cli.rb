@@ -69,6 +69,7 @@ cask "gcloud-cli" do
     end
 
     if OS.mac?
+      ENV["CLOUDSDK_PYTHON"] = "#{HOMEBREW_PREFIX}/opt/python@3.13/libexec/bin/python"
       # Install required external dependencies via virtualenv
       if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
         puts "deleting existing virtual env before enabling virtual env with current Python version"
