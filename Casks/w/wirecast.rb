@@ -1,6 +1,6 @@
 cask "wirecast" do
-  version "16.5.1"
-  sha256 "175d35d5b144f7f312fafd45177ad1111421a66cf6260ad24de1132e6fde898a"
+  version "16.5.2"
+  sha256 "289caee253ddf67fe053bb9b7bf696ba7cae3b0547792b513eb0b144967c556e"
 
   url "https://www.telestream.net/download-files/wirecast/#{version.major_minor.dots_to_hyphens}/Wirecast-#{version}.dmg"
   name "Wirecast"
