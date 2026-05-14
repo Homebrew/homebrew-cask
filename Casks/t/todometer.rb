@@ -1,7 +1,7 @@
 cask "todometer" do
   on_arm do
-    version "3.0.0"
-    sha256 "1fd5168ba37fcd43cea97b55e116bfcd271960dae249f5c2fbcfdd39a683b6d7"
+    version "3.0.1"
+    sha256 "9d97f439171965c0ed7cc5020cd6ebbe9516de7bb1fbb8bc8f2635ed1a0f6806"
 
     url "https://github.com/cassidoo/todometer/releases/download/v#{version}/todometer-#{version}-arm64-mac.zip",
         verified: "github.com/cassidoo/todometer/"
@@ -31,6 +31,8 @@ cask "todometer" do
   name "todometer"
   desc "Meter-based to-do list"
   homepage "https://cassidoo.github.io/todometer/"
+
+  depends_on :macos
 
   zap trash: [
     "~/Library/Application Support/todometer",
