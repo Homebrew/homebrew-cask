@@ -17,14 +17,14 @@ cask "duo-desktop" do
 
   pkg "DuoDesktop-#{version}.pkg"
 
-  uninstall quit:      "com.duosecurity.duo-device-health",
-            launchctl: [
+  uninstall launchctl: [
               "com.duosecurity.duoappupdater",
               "com.duosecurity.DuoDesktopService",
               "com.duosecurity.ForceLaunchDuoDesktop",
               "com.duosecurity.LaunchDuoDesktop",
               "com.duosecurity.trustedpeermessagebroker",
             ],
+            quit:      "com.duosecurity.duo-device-health",
             pkgutil:   "com.duosecurity.duo-device-health",
             delete:    [
               "/Applications/Duo Desktop.app",
