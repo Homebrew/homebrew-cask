@@ -10,7 +10,7 @@ cask "shichizip" do
   desc "7-Zip derivative GUI"
   homepage "https://github.com/idawnlight/ShichiZip"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "ShichiZip.app"
 
