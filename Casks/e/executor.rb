@@ -1,4 +1,4 @@
-cask "executor-desktop" do
+cask "executor" do
   arch arm: "arm64", intel: "x64"
 
   version "1.4.28"
