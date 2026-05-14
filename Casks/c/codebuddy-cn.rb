@@ -1,11 +1,11 @@
 cask "codebuddy-cn" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.7.0.23812295,7d73d160ce,a0234226"
-  sha256 arm:   "a164a221d23bb63737766ffc11a8bbbefd38cd2886f5f58f8a020d481fdd7ece",
-         intel: "7baed8c9412aa30b26f6244697bcc8029efc6bf8bffd7fec6e7ad1d136eaf84e"
+  version "4.9.9.27861944,19255a94"
+  sha256 arm:   "eb689d5aaab6a73220b57249cb2afee680f2bd5929287fbd93afbfe5d6aa6937",
+         intel: "9d9ff4ade4faa5e7110cc6470bb2b82fd2f45c7f7eea7249662a6a9811604e80"
 
-  url "https://acc-1258344699.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}-#{version.csv.third}-cn.zip",
+  url "https://acc-1258344699.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}-cn.zip",
       verified: "acc-1258344699.cos.accelerate.myqcloud.com/aiide/"
   name "CodeBuddy CN"
   desc "AI-powered adaptive IDE (Chinese version)"
@@ -13,12 +13,12 @@ cask "codebuddy-cn" do
 
   livecheck do
     url "https://copilot.tencent.com/v2/update?platform=ide-darwin-#{arch}&version=1.0.0&x-machine-id=default"
-    regex(%r{/CodeBuddy[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)-(\h+)-(\h+)[._-]cn\.zip}i)
+    regex(%r{/CodeBuddy[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)-(\h+)[._-]cn\.zip}i)
     strategy :json do |json, regex|
       match = json["url"]&.match(regex)
       next if match.blank?
 
-      "#{match[1]},#{match[2]},#{match[3]}"
+      "#{match[1]},#{match[2]}"
     end
   end
 
