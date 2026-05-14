@@ -1,18 +1,18 @@
 cask "capacities" do
   arch arm: "-arm64"
 
-  version "1.59.1"
-  sha256 arm:   "a8e0083bd7f88c8bbd12dd1924e9a116412df77de8a995b4c189fb49c48d8cd5",
-         intel: "8c51536b2b293c638231aecb0cceffd3a891d517247d159ef84c7fe71e11aa65"
+  version "1.64.6"
+  sha256 arm:   "3058d8c0a3ae4019bab724e112110eb59e627d7038442edfa30448a6b31d85a9",
+         intel: "fd4e7a7bd1b7fed35e6591f08dad862af7d31d115d52df07316f57b534e4d2d1"
 
-  url "https://capacities-desktop-app.fra1.cdn.digitaloceanspaces.com/Capacities-#{version}#{arch}.dmg",
-      verified: "capacities-desktop-app.fra1.cdn.digitaloceanspaces.com/"
+  url "https://2vks4.upcloudobjects.com/capacities-desktop-app/Capacities-#{version}#{arch}.dmg",
+      verified: "2vks4.upcloudobjects.com/capacities-desktop-app/"
   name "Capacities"
   desc "App to write and organise your ideas"
   homepage "https://capacities.io/"
 
   livecheck do
-    url "https://capacities-desktop-app.fra1.cdn.digitaloceanspaces.com/latest-mac.yml"
+    url "https://2vks4.upcloudobjects.com/capacities-desktop-app/latest-mac.yml"
     strategy :electron_builder
   end
 
