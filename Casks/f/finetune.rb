@@ -1,6 +1,6 @@
 cask "finetune" do
-  version "1.6.0"
-  sha256 "bd3e40de605a08e94da537f1fff721e0aa865998b184c18ef81a1652dd1fa0d6"
+  version "1.7.0"
+  sha256 "caa8640fe88ecd2d05cf3b0b80996dd9cb4aa42faef363fac4497eb0dfd12ca7"
 
   url "https://github.com/ronitsingh10/FineTune/releases/download/v#{version}/FineTune.dmg"
   name "FineTune"
