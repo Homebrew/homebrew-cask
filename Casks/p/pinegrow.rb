@@ -2,17 +2,19 @@ cask "pinegrow" do
   arch arm: "ARM64", intel: "X64"
 
   version "9.2"
-  sha256 arm:   "e4f2c8428feddb5de61a8f3e2636c973646078ee9a8a44a34fa9f8551ae8904f",
-         intel: "37d22c3a222d31fd9159d1e72603de947b7b1cbb91ff709c87163719d8cc8106"
+  sha256 arm:   "4378fb9bc5d83617486ff824b520a30207b226e2b8df261085c22e3cd4bccf8a",
+         intel: "5800b27952449c749a57b2d8dd0255b6825e5a37b519c573a3ff053a6c0bbd3a"
 
-  url "https://download.pinegrow.com/PinegrowMac#{arch}.#{version}.dmg"
+  url "https://github.com/Pinegrow/PinegrowReleases/releases/download/pg#{version}/PinegrowMac#{arch}.#{version}.dmg",
+      verified: "github.com/Pinegrow/PinegrowReleases/"
   name "Pinegrow"
   desc "Web editor"
   homepage "https://pinegrow.com/"
 
   livecheck do
-    url "https://docs.pinegrow.com/wp-json/wp/v2/pages/1698"
-    regex(%r{href=.*?/PinegrowMac#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url :url
+    strategy :github_latest
+    regex(/^pg(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on macos: :big_sur
