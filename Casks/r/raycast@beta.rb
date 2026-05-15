@@ -5,7 +5,7 @@ cask "raycast@beta" do
   url "https://x-r2.raycast-releases.com/Raycast_Beta_#{version.csv.first}_#{version.csv.second}_arm64.dmg",
       verified: "x-r2.raycast-releases.com/"
   name "Raycast Beta"
-  desc "Control your tools with a few keystrokes (beta channel, v2)"
+  desc "Control your tools with a few keystrokes"
   homepage "https://raycast.com/"
 
   livecheck do
@@ -15,8 +15,6 @@ cask "raycast@beta" do
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
-
-  no_autobump! because: :bumped_by_upstream
 
   auto_updates true
   depends_on macos: :tahoe
