@@ -2,11 +2,11 @@ cask "gitkraken-cli" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "3.1.62"
-  sha256 arm:          "2547fa05e9d5c0a1e58936bae5d33c862f327b9e3d3920e3cba5e6b8c67b4347",
-         intel:        "8bd3bfbaa2d1713a0936c0542b13486ebed8cdecf2f0213176e373ff043ee4ed",
-         arm64_linux:  "b533fa6d42fc288738bf5e1d7d1528b39e374c5cb6769ccf80ff3d77b247b81e",
-         x86_64_linux: "0fdf77697c51adaf7b6a6af3a60f8e735d9015c704c0e339d2237bdca1040033"
+  version "3.1.64"
+  sha256 arm:          "97685c0c4e460e64ba830f7927877eb0c1cb9b662de8370fdbd9ee8eed2c74ed",
+         intel:        "dee165530cad8d99bf21f51ccd7964201841dda5f1297fc377ef5b669b9fb411",
+         arm64_linux:  "4135e31732920ac7b09ec0c139042515ff8389c3b6ee7a8b423d0e803436665c",
+         x86_64_linux: "acb41257e445a29e45e2027a80799b2d8000807dc36c9a0f5aa53725f43f0810"
 
   url "https://github.com/gitkraken/gk-cli/releases/download/v#{version}/gk_#{version}_#{os}_#{arch}.zip"
   name "GitKraken CLI"

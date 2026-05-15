@@ -1,6 +1,6 @@
 cask "seadrive" do
-  version "3.0.21"
-  sha256 "86dba35268620c496ebfc95bc4a9313c3140661b33ff5673dd6daa2cf3aaf16e"
+  version "3.0.22"
+  sha256 "943e93e0599495652f901ee7f365c56a239c790dd6c5ef841a831162349f628d"
 
   url "https://sos-ch-dk-2.exo.io/seafile-downloads/seadrive-#{version}.pkg",
       verified: "sos-ch-dk-2.exo.io/seafile-downloads/"
