@@ -126,8 +126,9 @@ module Check
       errors << message
     end
 
-    installed_packages = diff[:installed_pkgs].added
-                                               .grep_v(/^com\.logi\.installer\.pluginservice\.package/i)
+    installed_packages = diff[:installed_pkgs]
+                         .added
+                         .grep_v(/^com\.logi\.installer\.pluginservice\.package/i)
     if installed_packages.any?
       message = "Some packages are still installed, add them to #{Formatter.identifier("uninstall pkgutil:")}\n"
       message += installed_packages.join("\n")
