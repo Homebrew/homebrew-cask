@@ -11,6 +11,16 @@ cask "smoothcsv" do
   depends_on :macos
 
   app "SmoothCSV.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/smoothcsv.wrapper.sh"
+  binary shimscript, target: "smoothcsv"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/bash
+      exec '#{appdir}/SmoothCSV.app/Contents/MacOS/smoothcsv-cli' "$@"
+    EOS
+  end
 
   uninstall quit: "com.smoothcsv.desktop"
 
