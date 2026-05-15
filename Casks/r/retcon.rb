@@ -9,7 +9,7 @@ cask "retcon" do
   homepage "https://retcon.app/"
 
   livecheck do
-    url "https://lemon.garden/retcon/appcast.xml"
+    url "https://downloads.lemon.garden/retcon/appcast.xml"
     strategy :sparkle do |items|
       items.find { |item| item.channel == "release" }&.short_version
     end
