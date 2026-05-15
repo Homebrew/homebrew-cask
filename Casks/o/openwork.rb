@@ -1,9 +1,9 @@
 cask "openwork" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.13.8"
-  sha256 arm:   "f29d9f249c0fb0a0c64f1a194f042daaf4272fd61f4ea235e1f50f1f622b71bb",
-         intel: "59df7c329bbee2af5a3dad0232cf4c11102bb0da87f39a9235bcbba2d390af13"
+  version "0.13.9"
+  sha256 arm:   "bd5184505dea4684ce42fb6d79d79dcbb6899c7dc891cf3b7a2a6edc246b3b51",
+         intel: "b201f144c0c41f8f791dfab8c087ac036998d88d6eb707dd428069317f3db395"
 
   url "https://github.com/different-ai/openwork/releases/download/v#{version}/openwork-mac-#{arch}-#{version}.dmg",
       verified: "github.com/different-ai/openwork/"
