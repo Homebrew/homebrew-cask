@@ -33,6 +33,7 @@ module Check
       .grep(/\.plist$/)
       .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
       .grep_v(/^com\.google(?:\.pkg)?\.Keystone/i)
+      .grep_v(/^com\.logi\.installer\.pluginservice\.package/i)
     },
     installed_launchjobs: lambda {
       format_launchjob = lambda { |file|
