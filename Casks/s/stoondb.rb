@@ -1,6 +1,6 @@
 cask "stoondb" do
   version "1.1.1"
-  sha256 "9849940d731195d18ee826c5566c3ccf6c062f065d07e1096e374ae011e1a49d"
+  sha256 "fcae2b03de2eb42c1eb71ec472951ba5be6717dd3425da19c0d6cdda95fe2354"
 
   url "https://github.com/dissojak/StoonDB/releases/download/v#{version}/StoonDB-macOS-v#{version}.dmg"
   name "StoonDB"
