@@ -1,9 +1,9 @@
 cask "anypointstudio" do
   arch arm: "Arm", intel: "64"
 
-  version "7.24.0"
-  sha256 arm:   "565421e0f14597a3c16a78ffc1a2dd65245beb60aa89cb279dc94560299fea56",
-         intel: "434f51f02c88ae9342cf6a71552996a4284afd616dec780aa0cbd253586b6301"
+  version "7.25.0"
+  sha256 arm:   "0dec5479ae4d44fd2df228769b680fe5a8a66296d00cb6271e886e5f3fe96300",
+         intel: "4e8fca0660a568693db4da21602e199a55975bd101dcca0df07cb5d857c0d995"
 
   url "https://mule-studio.s3.amazonaws.com/#{version}-GA/AnypointStudio-#{version}-macos#{arch}.zip",
       verified: "mule-studio.s3.amazonaws.com/"
