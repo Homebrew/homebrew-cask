@@ -29,7 +29,6 @@ cask "loupedeck" do
               "com.loupedeck.loupedeckconfig",
             ],
             pkgutil:   [
-              "com.logi.installer.pluginservice.package",
               "com.loupedeck.ImageLibraryInstaller",
               "com.loupedeck.LibraryInstaller",
               "com.loupedeck.LoupedeckLibraryPackageManagerMacPackageInstaller",
