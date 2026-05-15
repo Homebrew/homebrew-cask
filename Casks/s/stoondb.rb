@@ -4,7 +4,7 @@ cask "stoondb" do
 
   url "https://github.com/dissojak/StoonDB/releases/download/v#{version}/StoonDB-macOS-v#{version}.dmg"
   name "StoonDB"
-  desc "Native macOS control panel for local databases and phpMyAdmin"
+  desc "Native control panel for local databases and phpMyAdmin"
   homepage "https://github.com/dissojak/StoonDB"
 
   depends_on macos: :monterey
