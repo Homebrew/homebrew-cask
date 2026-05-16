@@ -1,6 +1,6 @@
 cask "fredm-fuse" do
-  version "1.7.0"
-  sha256 "75902a76b4c45bed9d4cf60405edddb7068c778609eab558aa2cbe7c375c6ce1"
+  version "1.8.0"
+  sha256 "aefcb27a26d278045e0315056ce5fcfaa467b8af9522157527c187bb57d06f6e"
 
   url "https://downloads.sourceforge.net/fuse-for-macosx/fuse-for-macosx/#{version}/FuseForMacOS-#{version}.zip",
       verified: "downloads.sourceforge.net/fuse-for-macosx/"
