@@ -1,15 +1,28 @@
 cask "expressvpn" do
-  version "14.1.0.13058"
-  sha256 "4395df575fd2282c345a436dbd11aa8399567768ad8d562de92f440d38c0f7e1"
+  version "14.1.1.13156"
+  sha256 "b954a07bde7413436dfc38fe8dcc26e684dc0ed3fbc27e2bfcfae496019dd75d"
 
   url "https://www.expressvpn.works/clients/mac/expressvpn-macos-universal-#{version}_release.zip"
   name "ExpressVPN"
   desc "VPN client for secure and private internet access"
   homepage "https://www.expressvpn.works/"
 
+  # The download page (https://www.expressvpn.com/latest) uses JavaScript to
+  # render asset links, so we check the JSON source.
   livecheck do
-    url "https://portal.expressvpn.com/latest"
-    regex(/href=.*?expressvpn[._-]macos[._-]universal[._-]v?(\d+(?:\.\d+)+)[._-]release\.zip/i)
+    url "https://main-kp-site-gateway-http.prodv2.pac.xvservice.net/api/v2/installers"
+    regex(/expressvpn[._-]macos[._-]universal[._-]v?(\d+(?:\.\d+)+)[._-]release\.zip/i)
+    strategy :json do |json, regex|
+      version = nil
+      json["installers"].filter_map do |_key, item|
+        match = item.dig("locations", "default")&.match(regex)
+        next unless match
+
+        version = match[1]
+        break
+      end
+      version
+    end
   end
 
   depends_on :macos
