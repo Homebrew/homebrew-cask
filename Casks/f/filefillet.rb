@@ -10,7 +10,9 @@ cask "filefillet" do
 
   livecheck do
     url "https://filefillet-releases.s3.eu-central-1.amazonaws.com/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
