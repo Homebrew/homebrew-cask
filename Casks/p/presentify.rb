@@ -1,6 +1,6 @@
 cask "presentify" do
-  version "8.0.4"
-  sha256 "a16a3f69582a9db996c3dd81072bab161156e2eb0a0e421297974bba1669ddef"
+  version "8.0.6"
+  sha256 "b1520808ce46992ad5985f4c3e8d5ce1a640658685ce2537fbc9d8843581abc9"
 
   url "https://rampatra.github.io/presentify-updates/Presentify-#{version}.dmg",
       verified: "rampatra.github.io/presentify-updates/"
