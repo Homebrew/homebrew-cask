@@ -1,25 +1,22 @@
 cask "dosbox-x-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2026.03.29,2026.03.29"
-  sha256 arm:   "92ca56423000c9708ea922beb30eeb5d2083030d6efa36ed7afdc11adf786f9e",
-         intel: "b804f57f2001b7a89ada6161ed9865e48ccc907fc9337fe0b94521b6a9466fea"
+  version "2026.05.02"
+  sha256 arm:   "e15b2b31897647bb1ff0e908c740acbc00249d64d1304a15658f683bec1dbc44",
+         intel: "da411bb31c2c7954876302104aebd1ed635b6cfe3ffad160cb5dfcfab86d6a0d"
 
-  url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
+  url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second || version.csv.first}.zip",
       verified: "github.com/joncampbell123/dosbox-x/"
   name "DOSBox-X"
   desc "Fork of the DOSBox project"
   homepage "https://dosbox-x.com/"
 
   livecheck do
-    url :url
-    regex(%r{/dosbox-x-v?(\d+(?:\.\d+)+)/dosbox-x-macosx-#{arch}-([^/]+)\.zip$}i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["browser_download_url"]&.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
+    url :homepage
+    regex(%r{href=.*?v?(\d+(?:\.\d+)+)/dosbox-x-macosx?-#{arch}[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        (match[0] == match[1]) ? match[0] : "#{match[0]},#{match[1]}"
       end
     end
   end
