@@ -13,15 +13,7 @@ cask "headlamp" do
 
   livecheck do
     url :url
-    regex(/Headlamp[._-]v?(\d+(?:[.-]\d+)+)-mac-#{arch}/i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
-    end
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
