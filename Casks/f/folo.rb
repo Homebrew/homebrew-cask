@@ -13,8 +13,7 @@ cask "folo" do
 
   livecheck do
     url :url
-    regex(%r{^(?:desktop[/@])?v?(\d+(?:\.\d+)+(?:[._-]beta[._-]?\d+)?)$}i)
-    strategy :github_latest
+    regex(%r{^(?:desktop[/@])?v?(\d+(?:\.\d+)+)$}i)
   end
 
   auto_updates true
