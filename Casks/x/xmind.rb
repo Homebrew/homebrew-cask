@@ -1,6 +1,6 @@
 cask "xmind" do
-  version "26.03.04129-202605110616"
-  sha256 "d9fa4ab1588f56ac3cf5c14dd22e156cfb880f212ac0c913b72f6b6b75994070"
+  version "26.03.04129-202605150708"
+  sha256 "54dd3e24a57f24d76fd7b58e992bae704422740a34f2236bdea5d151def39cfc"
 
   url "https://dl3.xmind.net/Xmind-for-macOS-#{version}.dmg"
   name "XMind"
