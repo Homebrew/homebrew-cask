@@ -8,8 +8,8 @@ cask "free-download-manager" do
   homepage "https://www.freedownloadmanager.org/"
 
   livecheck do
-    url "https://www.freedownloadmanager.org/download-fdm-for-mac.htm"
-    regex(/>\s*FDM\s*v?(\d+(?:\.\d+)+)/i)
+    url "https://www.freedownloadmanager.org/download.htm"
+    regex(/>\s*FDM\s+v?(\d+(?:\.\d+)+)\s+for\s+Mac\s*</i)
   end
 
   auto_updates true
