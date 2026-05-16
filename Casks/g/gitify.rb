@@ -20,7 +20,7 @@ cask "gitify" do
   uninstall quit: [
     "com.electron.gitify",
     "com.electron.gitify.helper",
-  ], on_upgrade: :quit
+  ]
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.gitify.sfl*",
