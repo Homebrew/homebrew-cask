@@ -2,11 +2,11 @@ cask "font-office-code-pro" do
   version "1.004"
   sha256 "9bca923d17f6c47a586d8e4567d46ccfa58fb8b8e2247b5ee2a19da1597c58f6"
 
-  url "https://github.com/nathco/Office-Code-Pro/archive/refs/tags/#{version}.tar.gz"
+  # Upstream nathco/Office-Code-Pro was deleted from GitHub on 2025-08-18.
+  # Sourced from a community mirror with a byte-identical 1.004 tarball.
+  url "https://github.com/case/font-office-code-pro-mirror/releases/download/#{version}/Office-Code-Pro-#{version}.tar.gz"
   name "Office Code Pro"
-  homepage "https://github.com/nathco/Office-Code-Pro"
-
-  disable! date: "2025-08-18", because: :no_longer_available
+  homepage "https://github.com/case/font-office-code-pro-mirror"
 
   font "Office-Code-Pro-#{version}/Fonts/Office Code Pro D/OTF/OfficeCodeProD-Bold.otf"
   font "Office-Code-Pro-#{version}/Fonts/Office Code Pro D/OTF/OfficeCodeProD-BoldItalic.otf"
