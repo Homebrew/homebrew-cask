@@ -1,6 +1,6 @@
 cask "cloudpouch" do
-  version "1.45.0"
-  sha256 "979400dad49950be9e253cf7542d4dfdc57892a62212fbb7de5054e6f74de841"
+  version "1.46.0"
+  sha256 "be8094bf320cff6b3268ea956134d77b968b5bfed869ee3cdb80d7cf403fc0cc"
 
   url "https://github.com/CloudPouch/CloudPouch.dev/releases/download/v#{version}/CloudPouch-#{version}-universal-mac.zip",
       verified: "github.com/CloudPouch/CloudPouch.dev/"
