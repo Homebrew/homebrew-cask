@@ -1,5 +1,5 @@
 cask "gosign" do
-  version "2.4.8"
+  version "3.0.1"
   sha256 :no_check
 
   url "https://rinnovofirma.infocert.it/gosign/download/darwin/latest"
@@ -12,7 +12,7 @@ cask "gosign" do
     strategy :extract_plist
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "GoSign-Desktop.app"
 
@@ -22,8 +22,4 @@ cask "gosign" do
     "~/Library/Preferences/it.infocert.desktop.gosign.plist",
     "~/Library/Saved Application State/it.infocert.desktop.gosign.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
