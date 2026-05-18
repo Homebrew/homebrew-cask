@@ -11,11 +11,6 @@ cask "revpdf-editor" do
   desc "PDF editor for annotation and editing"
   homepage "https://revpdf.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :big_sur
 
   app "RevPDF Editor.app"
