@@ -1,6 +1,6 @@
 cask "monocle-app" do
-  version "3.0.3"
-  sha256 "a18b42ef927fe1d1cbc1521cc77c20222beabffb5c16e5240aba7363dc69cb21"
+  version "3.5"
+  sha256 "cdc34f0d2843a9fca79f1f4a4351930db937144868560c77910bc8588552bcd8"
 
   url "https://files.heyiam.dk/updates/monocle/Monocle-#{version.dots_to_hyphens}.zip"
   name "Monocle"
