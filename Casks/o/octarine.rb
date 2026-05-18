@@ -2,9 +2,9 @@ cask "octarine" do
   arch arm: "aarch64", intel: "x64"
   folder = on_arch_conditional arm: "arm", intel: "intel"
 
-  version "0.42.2"
-  sha256 arm:   "bc973c679d86639a4b28076096a354036db752a5695b82a1453b0ca069b060c1",
-         intel: "37df4cdea9124dd755ad45b22e66357e34bc9e4a6090e6a2595279379e549939"
+  version "0.43.0"
+  sha256 arm:   "6316c1d8a38af26eb9876c99331e201447055884caa42a751fdafb6ac191770e",
+         intel: "2780d96ef99cb6937d6281234409165167cdfc95eabea1ce829f4cd60207eb42"
 
   url "https://pub-3d35bc018fc54f11bde129e3e73e8002.r2.dev/#{version}/#{folder}/octarine_#{version}_#{arch}.dmg",
       verified: "pub-3d35bc018fc54f11bde129e3e73e8002.r2.dev/"
