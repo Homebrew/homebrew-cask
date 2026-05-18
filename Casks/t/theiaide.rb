@@ -1,9 +1,9 @@
 cask "theiaide" do
   arch arm: "-arm"
 
-  version "1.70.200"
-  sha256 arm:   "d300f4c0063e3b034a5f85dd6e38203ffdd85946321b9579b78d8ad5886c56c8",
-         intel: "7a65eab1ab255602d64eb0d159e5a23010f60547d5c97f4e58a570a1b27f7a1b"
+  version "1.71.101"
+  sha256 arm:   "b3461409769280ac1f6551e94812ed94d90a35153719652471b1049e292a7a68",
+         intel: "dbf2fa111723cd81dbbaa0c04bcc4535d40441e2a4c8b5431878ca7b5c0cc09b"
 
   url "https://download.eclipse.org/theia/ide/#{version}/macos#{arch}/TheiaIDE.dmg",
       verified: "download.eclipse.org/theia/ide/"
