@@ -4,7 +4,7 @@ cask "pgen" do
 
   url "https://pgendb.com/download/v#{version}/pgen.dmg"
   name "pgen"
-  desc "Modern, AI-powered PostgreSQL desktop client"
+  desc "PostgreSQL client"
   homepage "https://pgendb.com/"
 
   livecheck do
@@ -13,7 +13,7 @@ cask "pgen" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "pgen.app"
 
@@ -22,6 +22,5 @@ cask "pgen" do
     "~/Library/Caches/com.tragen.pgendb",
     "~/Library/HTTPStorages/com.tragen.pgendb",
     "~/Library/Preferences/com.tragen.pgendb.plist",
-    "~/Library/Saved Application State/com.tragen.pgendb.savedState",
   ]
 end
