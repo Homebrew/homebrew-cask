@@ -6,6 +6,10 @@ cask "pulsar" do
   sha256 arm:   "f6e5ed69a0d34b5f7e1927a2c68e89077726b5843204b905b437082c45d25ec3",
          intel: "5342e52b2304de02061051de1d409eede6f1ed2085d8b374a1c158abef23fa34"
 
+  on_intel do
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+  end
+
   url "https://github.com/pulsar-edit/pulsar/releases/download/v#{version}/#{arch}.Mac.Pulsar-#{version}#{arch_suffix}.dmg",
       verified: "github.com/pulsar-edit/pulsar/"
   name "Pulsar"
