@@ -1,25 +1,26 @@
 cask "j" do
-  version "9.6.3"
-  sha256 "4a39e4f3f90382c04387bf46bcc7c2331461368dd08cc40cc647e05430572461"
+  version "9.7.1"
+  sha256 "fc34fe96fc19520c9f317ecb6b318aeb3bd83a4994b505dfa1216cf1775fd3e3"
 
-  url "https://www.jsoftware.com/download/j#{version.major_minor}/install/j#{version}_mac64.zip"
+  url "https://www.jsoftware.com/download/j#{version.major_minor}/install/j#{version}_mac.zip"
   name "J"
   desc "Programming language for mathematical, statistical and logical analysis of data"
   homepage "https://www.jsoftware.com/"
 
+  # The installation page (https://code.jsoftware.com/wiki/System/Installation)
+  # is behind Cloudflare and is inaccessible, so we check the main page. The
+  # content is rendered client-side from a Markdown file, so we fetch that.
   livecheck do
-    url "https://code.jsoftware.com/wiki/System/Installation"
-    regex(/Jv?(\d+(?:\.\d+)+)\s+release/i)
+    url "https://www.jsoftware.com/main.md"
+    regex(/href=.*?j[._-]?v?(\d+(?:\.\d+)+)[._-]mac/i)
     strategy :page_match do |page, regex|
-      # Identify partial release version (e.g., J1.2) on installation page
-      release = page.scan(regex)
-                    .flatten
-                    .max_by { |v| Version.new(v) }
-      next if release.blank?
+      # Identify partial release version (e.g., J1.2)
+      release = page.match(/latest\s+release\s+is\s+J(\d+(?:\.\d+)+)/i)
+      next unless release
 
       # Fetch the release install page (containing full versions like 1.2.3)
-      install_page = Homebrew::Livecheck::Strategy.page_content("https://www.jsoftware.com/download/j#{release}/install/")
-      install_page[:content]&.scan(/href=.*?j[._-]?v?(\d+(?:\.\d+)+)[._-]mac/i)
+      install_page = Homebrew::Livecheck::Strategy.page_content("https://www.jsoftware.com/download/j#{release[1]}/install/")
+      install_page[:content]&.scan(regex)
                             &.map { |match| match[0] }
     end
   end
