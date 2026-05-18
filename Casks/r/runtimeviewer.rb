@@ -9,7 +9,9 @@ cask "runtimeviewer" do
 
   livecheck do
     url "https://mxiris-reverse-engineering.github.io/RuntimeViewer/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
