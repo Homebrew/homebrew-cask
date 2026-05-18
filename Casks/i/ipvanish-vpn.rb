@@ -8,7 +8,7 @@ cask "ipvanish-vpn" do
   homepage "https://www.ipvanish.com/"
 
   livecheck do
-    url "https://www.ipvanish.com/software/osx/updates_V#{version.major}.xml"
+    url "https://www.ipvanish.com/software/osx/updates_V4.xml"
     regex(/IPVanish[._-]v?(\d+(?:\.\d+)+)[._-](\d+)/i)
     strategy :sparkle do |items, regex|
       items.map do |item|
