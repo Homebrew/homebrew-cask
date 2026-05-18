@@ -11,6 +11,7 @@ cask "smoothcsv" do
   depends_on :macos
 
   app "SmoothCSV.app"
+  binary "#{appdir}/SmoothCSV.app/Contents/MacOS/smoothcsv-cli", target: "smoothcsv"
 
   uninstall quit: "com.smoothcsv.desktop"
 
