@@ -1,6 +1,6 @@
 cask "mace" do
-  version "0.1.6-beta"
-  sha256 "614bbf147bdf7664de781a7be6ea301210068cd78b12dd9f6d19e036b2c868f8"
+  version "0.1.7-beta"
+  sha256 "f02235b6d54c6554afc14a60daa2f8eb7ca30afaa79e7b668edc7ec781c9fd37"
 
   url "https://github.com/MACE-App/MACE/releases/download/v#{version}/M.A.C.E.V#{version}.dmg"
   name "MACE"
