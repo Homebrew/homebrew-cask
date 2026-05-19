@@ -16,6 +16,8 @@ cask "batchoutput-pdf" do
 
   app "BatchOutput PDF.app"
 
+  uninstall quit: "com.zevrix.BatchOutputPDF*"
+
   zap trash: [
     "~/Library/Caches/com.zevrix.BatchOutputPDF*",
     "~/Library/HTTPStorages/com.zevrix.BatchOutputPDF*",
