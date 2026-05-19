@@ -18,6 +18,8 @@ cask "zotero" do
 
   app "Zotero.app"
 
+  uninstall quit: "org.zotero.zotero"
+
   zap trash: [
         "~/Library/Application Scripts/org.zotero.SafariExtensionApp.SafariExtension",
         "~/Library/Application Support/Zotero",
