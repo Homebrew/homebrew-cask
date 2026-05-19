@@ -28,6 +28,12 @@ cask "discord" do
 
   app "Discord.app"
 
+  uninstall quit: [
+    "com.hnc.Discord",
+    "com.hnc.Discord.helper.Plugin",
+    "com.hnc.Discord.helper.Renderer",
+  ]
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hnc.discord.sfl*",
     "~/Library/Application Support/discord",
