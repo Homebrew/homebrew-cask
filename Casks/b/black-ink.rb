@@ -1,6 +1,6 @@
 cask "black-ink" do
-  version "2.4.6"
-  sha256 "2de51726a36b670f58318507aa5966c82b6385cae1e5c26eb7b79a54ad90d994"
+  version "2.4.7"
+  sha256 "c89f432a8b45db1558402259f8c555199776abc5fc2d328a4318c4c9eea74c6f"
 
   url "https://redsweater.com/blackink/BlackInk#{version}.zip"
   name "Black Ink"
