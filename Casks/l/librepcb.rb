@@ -1,13 +1,9 @@
 cask "librepcb" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.0.1"
-  sha256 arm:   "e7cd6f32d8ef6ea9724d64c8c2d82f65642da0166a0f3b38b15f2a2856a6e650",
-         intel: "f460757030eccaea81aba8b8a0de54612f4632fd0a86f4f55ccb5def2c97a8c0"
-
-  on_intel do
-    disable! date: "2026-09-01", because: :fails_gatekeeper_check
-  end
+  version "2.1.0"
+  sha256 arm:   "c7dfd88604d62b88c93229a092f0f16816e6051d702005d7c5e7c2b31516efe7",
+         intel: "838b586a6e1c191755356a4c9c3a1ebbb4edeceba75f8bea3a3f4665b5d0c01b"
 
   url "https://download.librepcb.org/releases/#{version}/librepcb-#{version}-mac-#{arch}.dmg"
   name "LibrePCB"
