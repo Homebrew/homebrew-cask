@@ -1,6 +1,6 @@
 cask "maa" do
-  version "6.10.3"
-  sha256 "6237d096a54c14b9fe5e6b2012c4aab0189bd7fba51b5503273abad1b62690ab"
+  version "6.10.4"
+  sha256 "e9761aa6134bd6702c40820dff7a66a323143784e3312807a0ec7db7f170cfe6"
 
   url "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v#{version}/MAA-v#{version}-macos-universal.dmg"
   name "MAA"
