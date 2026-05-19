@@ -12,10 +12,8 @@ cask "witsy" do
   homepage "https://witsyai.com/"
 
   livecheck do
-    url "https://update.electronjs.org/Kochava-Studios/witsy/darwin-#{arch}/0.0.0"
-    strategy :json do |json|
-      json["name"]
-    end
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
