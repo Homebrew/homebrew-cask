@@ -1,6 +1,6 @@
 cask "arm-performance-libraries" do
-  version "26.01"
-  sha256 "f69da819aad0faf4817df1503b270832ea67d2decec6240dda99c9891dd2bc2f"
+  version "26.01.1"
+  sha256 "412a1cc6aa7575c325055152dbe45a4be15915b827dfbf266c0d6edc38482d24"
 
   install_suffix="#{version}_flang-21"
   url "https://developer.arm.com/-/cdn-downloads/permalink/Arm-Performance-Libraries/Version_#{version}/arm-performance-libraries_#{version}_macOS.tgz",
