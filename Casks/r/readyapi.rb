@@ -1,9 +1,9 @@
 cask "readyapi" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.65.0"
-  sha256 arm:   "54791ab228391fcab313a717e71912181453f5bf087793b08f4053a0c19789d9",
-         intel: "531da72013518ac994abf9c81f6172e2951cc4b34e4e8301fc43c2c63487050b"
+  version "4.0.1"
+  sha256 arm:   "d12eb87e5a48a6e58bd3b6a124950e2461d562ab9e9a10d8d2449554661affc1",
+         intel: "c2358257ec7ee7b07ba6d77c4b3d1bff7b71a31cdd4a3d235912aa35036cd206"
 
   url "https://dl.eviware.com/ready-api/#{version}/ReadyAPI-#{arch}-#{version}.dmg",
       verified: "dl.eviware.com/ready-api/"
@@ -19,7 +19,7 @@ cask "readyapi" do
   depends_on :macos
 
   installer script: {
-    executable: "ReadyAPI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
+    executable: "ReadyAPI-#{version}.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
   }
 
