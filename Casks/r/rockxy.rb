@@ -18,6 +18,8 @@ cask "rockxy" do
 
   app "Rockxy.app"
 
+  uninstall quit: "com.amunx.rockxy.community"
+
   zap trash: [
     "~/Library/Application Support/com.amunx.rockxy",
     "~/Library/Application Support/com.amunx.rockxy.community",
