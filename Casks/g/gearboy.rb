@@ -1,9 +1,9 @@
 cask "gearboy" do
   arch arm: "arm64", intel: "intel"
 
-  version "3.8.4"
-  sha256 arm:   "5372e35589aabc7db3d4d8d11b6f31f3f10dacf1bc4353712a1cce6af7b41cf3",
-         intel: "7320edd64fd8dcea044fe49e96bd9a386cf5981b954b6c065d641f7fba8f5e7b"
+  version "3.8.5"
+  sha256 arm:   "df236a22db6d693116cb0f63895bf70ba635e6f077aeb32fda961b49414948e4",
+         intel: "aef85ca322b8085ef0a7728659ae421aac22c78310456ad679f2491a299fc383"
 
   url "https://github.com/drhelius/Gearboy/releases/download/#{version}/Gearboy-#{version}-desktop-macos-#{arch}.zip"
   name "Gearboy"
