@@ -1,9 +1,9 @@
 cask "proclaim" do
   arch arm: "-arm"
 
-  version "4.18.0.0401"
-  sha256 arm:   "d31f6749cb6f39289e6dbbe59345704c3cd0b081042f603422997eb5008987c5",
-         intel: "73f5449159bfffcabd565a91751bc2099959629b66d5c676b85a2683d0ae60f4"
+  version "4.18.0.0406"
+  sha256 arm:   "bf6ac76c24f06ffdfaca8394b360552376f49a8323c58cdc05547c62402858a3",
+         intel: "346ca3f88325ee40518332dcc83a9337f41522ea87c3ecb99991377abe5ca0a9"
 
   url "https://downloads.logoscdn.com/Proclaim/Installer/#{version}/Proclaim#{arch}.dmg",
       verified: "logoscdn.com/Proclaim/"
