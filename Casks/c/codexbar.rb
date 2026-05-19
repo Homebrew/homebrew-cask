@@ -14,6 +14,8 @@ cask "codexbar" do
   app "CodexBar.app"
   binary "#{appdir}/CodexBar.app/Contents/Helpers/CodexBarCLI", target: "codexbar"
 
+  uninstall quit: "com.steipete.codexbar"
+
   zap trash: [
     "~/.codexbar",
     "~/Library/Application Scripts/*.com.steipete.codexbar",
