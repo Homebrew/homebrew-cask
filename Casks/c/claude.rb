@@ -26,6 +26,11 @@ cask "claude" do
 
   app "Claude.app"
 
+  uninstall quit: [
+    "com.anthropic.claudefordesktop",
+    "com.anthropic.claudefordesktop.helper",
+  ]
+
   zap trash: [
     "~/Library/Application Support/Claude",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.anthropic.claudefordesktop.sfl*",
