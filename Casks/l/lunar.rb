@@ -17,6 +17,8 @@ cask "lunar" do
 
   app "Lunar.app"
 
+  uninstall quit: "fyi.lunar.Lunar"
+
   zap trash: [
     "~/Library/Application Support/fyi.lunar.Lunar",
     "~/Library/Application Support/Lunar",
