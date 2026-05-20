@@ -1,6 +1,6 @@
 cask "adobe-dng-converter" do
-  version "18.3"
-  sha256 "18f8d3698b8de123299b5c1337ab9606666d3ee915e80869dfbeef63420117ac"
+  version "18.3.1"
+  sha256 "190c639e8683a50c1147879f15cd49b5df32a70562e042da20f0b3ca9e023636"
 
   url "https://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
   name "Adobe DNG Converter"
