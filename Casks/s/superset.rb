@@ -1,9 +1,9 @@
 cask "superset" do
   arch arm: "-arm64"
 
-  version "1.9.7"
-  sha256 arm:   "a1550b2687fe6abb1f4b6c176b8a646b1fac4d9cdb15b5f2d5ea78cf83d42f65",
-         intel: "cef45fb9825c0ab286bc449cf399928ed72a4ef8ae9cef5dcf8043279e2f64b9"
+  version "1.9.9"
+  sha256 arm:   "01b31673eb18509a407f81ff371ccd62ec1902eeb8c4cd03daddb51d74293a7c",
+         intel: "414df30441e6819767b8b446a4011ede677875fdbf431c811634b3561a535af5"
 
   url "https://github.com/superset-sh/superset/releases/download/desktop-v#{version}/Superset-#{version}#{arch}.dmg",
       verified: "github.com/superset-sh/superset/"
