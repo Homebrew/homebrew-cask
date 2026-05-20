@@ -1,20 +1,20 @@
 cask "royal-tsx@beta" do
-  version "6.4.3.1000"
-  sha256 "bf0c1bebfc3aed2e67c1fe9cf5e4b06be5d07cc6d916d61185f5818fd79af482"
+  version "26.0.1.0"
+  sha256 "fa2232fb2a266cc2ce3c3e592321709c449eec81b3e91cefdfcf7cce3ec5143e"
 
-  url "https://royaltsx-v#{version.major}.royalapps.com/updates/royaltsx_#{version}.dmg"
+  url "https://royaltsx-v#{version.major}.royalapps.com/app/updates/downloads/royaltsx_#{version}.dmg"
   name "Royal TSX"
   desc "Remote management solution"
-  homepage "https://www.royalapps.com/ts/mac/features"
+  homepage "https://www.royalapps.com/ts/mac/features-beta"
 
   livecheck do
-    url "https://royaltsx-v#{version.major}.royalapps.com/updates_beta.php"
+    url "https://royaltsx-v#{version.major}.royalapps.com/app/updates"
     strategy :sparkle
   end
 
   auto_updates true
   conflicts_with cask: "royal-tsx"
-  depends_on macos: :big_sur
+  depends_on macos: :sonoma
 
   app "Royal TSX.app"
 
