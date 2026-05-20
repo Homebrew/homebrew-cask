@@ -1,6 +1,6 @@
 cask "pgen" do
-  version "1.7.0"
-  sha256 "dea091bc5cdebabbea8d37daa7b8adabf57e0eef5a825d926fe63d3ae438b4b3"
+  version "1.8.0"
+  sha256 "8ba54111113dd526ad14cc752cdaed3b00740117407fab6235cbc20a43c307c6"
 
   url "https://pgendb.com/download/v#{version}/pgen.dmg"
   name "pgen"
