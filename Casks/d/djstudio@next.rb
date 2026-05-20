@@ -2,9 +2,9 @@ cask "djstudio@next" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "-apple"
 
-  version "4.2.0-beta.5"
-  sha256 arm:   "ca1b4d8417b5bfe0404dbb266ae7a7f86df8628031342ad93750466e6da01b36",
-         intel: "f5ebf76534eb63ea29a4f5143c44f8d2f8d0dd0c49090c36444092375b2e93a6"
+  version "4.2.0-beta.6"
+  sha256 arm:   "3c20fc4d3399a059dab270e105ab3310915305a3506ab551ba62428e8efa549b",
+         intel: "3df9f320e86d992b0c301080a39f9a0ad0839db2ab7a9c7c42ff529cd11dd051"
 
   url "https://download.next.dj.studio/DJ.Studio%20Next-#{version}#{arch}.dmg"
   name "DJ.Studio Next"
