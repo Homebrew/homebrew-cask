@@ -1,6 +1,6 @@
 cask "scratch" do
-  version "3.31.1"
-  sha256 "97367a199a00f98965c826cda6cc019285affa097f700a9af09c38697b64863f"
+  version "3.32.0"
+  sha256 "e28ec141cd34c2976600923a63d1d663329c5819798f69e0dd389e92c5339f1f"
 
   url "https://downloads.scratch.mit.edu/desktop/Scratch%20#{version}.dmg"
   name "Scratch"
@@ -12,7 +12,7 @@ cask "scratch" do
     strategy :header_match
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Scratch #{version.major}.app"
 
