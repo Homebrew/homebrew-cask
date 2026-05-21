@@ -16,6 +16,8 @@ cask "hoppscotch" do
 
   app "Hoppscotch.app"
 
+  uninstall quit: "io.hoppscotch.desktop"
+
   zap trash: [
     "~/Library/Application Support/io.hoppscotch.desktop",
     "~/Library/Caches/io.hoppscotch.desktop",
