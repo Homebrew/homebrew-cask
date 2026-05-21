@@ -11,10 +11,23 @@ cask "frescobaldi" do
   desc "LilyPond editor"
   homepage "https://frescobaldi.org/"
 
-  # Some GitHub tags do not follow standard versioning pattern
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^Frescobaldi[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   depends_on macos: :big_sur
