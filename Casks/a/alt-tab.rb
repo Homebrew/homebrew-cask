@@ -23,9 +23,13 @@ cask "alt-tab" do
   zap trash: [
     "~/Library/Application Support/com.lwouis.alt-tab-macos",
     "~/Library/Caches/com.lwouis.alt-tab-macos",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.lwouis.alt-tab-macos",
     "~/Library/Cookies/com.lwouis.alt-tab-macos.binarycookies",
     "~/Library/HTTPStorages/com.lwouis.alt-tab-macos",
+    "~/Library/HTTPStorages/com.lwouis.alt-tab-macos.binarycookies",
     "~/Library/LaunchAgents/com.lwouis.alt-tab-macos.plist",
+    "~/Library/Preferences/com.lwouis.alt-tab-macos.license.plist",
     "~/Library/Preferences/com.lwouis.alt-tab-macos.plist",
+    "~/Library/Preferences/com.lwouis.alt-tab-macos.usage.plist",
   ]
 end
