@@ -2,7 +2,7 @@ cask "vocevista-video" do
   version "5.11.0.9351"
   sha256 "9b2d7bd0c41cfef8c55717ef043b33f72dc48bd8b94248f94e833d11b4b56aa1"
 
-  url "https://download.sygyt.com/5.11.0/VoceVistaVideo_macOS_#{version}.dmg"
+  url "https://download.sygyt.com/#{version.major_minor_patch}/VoceVistaVideo_macOS_#{version}.dmg"
   name "VoceVista Video"
   desc "Voice spectrum analyzer with resonance and vowel analysis"
   homepage "https://www.sygyt.com/"
