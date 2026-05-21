@@ -1,8 +1,15 @@
 cask "iina" do
-  version "1.4.2,164"
-  sha256 "804e3368518f19039ebfbc3d698e1fabc9cd20f15fc4e42de635456cdf6a7f58"
+  version "1.4.3,167"
+  sha256 "899a15c3cee499d6e5d1a47bce02194a5a2709b3aa1c7ba82fb16a002fa81e02"
 
-  url "https://dl-portal.iina.io/IINA.v#{version.csv.first}-build#{version.csv.second}.dmg"
+  on_arm do
+    depends_on macos: :monterey
+  end
+  on_intel do
+    depends_on macos: :catalina
+  end
+
+  url "https://dl.iina.io/IINA.v#{version.csv.first}.dmg"
   name "IINA"
   desc "Free and open-source media player"
   homepage "https://iina.io/"
@@ -13,7 +20,6 @@ cask "iina" do
   end
 
   auto_updates true
-  depends_on :macos
 
   app "IINA.app"
   binary "#{appdir}/IINA.app/Contents/MacOS/iina-cli", target: "iina"
