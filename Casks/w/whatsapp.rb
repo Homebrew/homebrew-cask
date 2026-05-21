@@ -21,6 +21,8 @@ cask "whatsapp" do
 
   app "WhatsApp.app"
 
+  uninstall quit: "net.whatsapp.WhatsApp"
+
   zap trash: [
     "~/Library/Application Scripts/net.whatsapp.WhatsApp*",
     "~/Library/Caches/net.whatsapp.WhatsApp",
