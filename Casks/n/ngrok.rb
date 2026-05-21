@@ -2,12 +2,12 @@ cask "ngrok" do
   arch arm: "arm64", intel: "amd64"
 
   on_arm do
-    version "3.39.2,c2kYG4NCXNy,a"
-    sha256 "847ee9cb2947a9adeb2f7618ba37c1d2ebe46725dded5a235e20e13281c15e63"
+    version "3.39.3,2vZur35asZP,a"
+    sha256 "2efccd81e73a45292c15913b549a9397dee0ebeba5f6d42427772f15927b51c7"
   end
   on_intel do
-    version "3.39.2,6mp4z58YGV3,a"
-    sha256 "0a07ac6cd27678018e6bcd2ae0528c151514aa9d9f8cd1480e1e93808f732d18"
+    version "3.39.3,8AWbaAbtY5z,a"
+    sha256 "e3a3e06f78953f293c5e166c7097cc04e9db2bc914586a96afda81b09507f3b3"
   end
 
   url "https://bin.ngrok.com/#{version.csv.third}/#{version.csv.second}/ngrok-v#{version.major}-#{version.csv.first}-darwin-#{arch}.zip"
