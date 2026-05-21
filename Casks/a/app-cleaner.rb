@@ -1,6 +1,6 @@
 cask "app-cleaner" do
-  version "9.2,2135"
-  sha256 "032d5b7cc2d010174576ad0a666a5e0bfce45ba49ccf5a8e3ccdf695b15f50a7"
+  version "9.2.1,2139"
+  sha256 "f1f7b5abc623e0932f3be1b10e59811c27b812182b9158a33618b4021a50631b"
 
   url "https://download.nektony.com/download/app-cleaner-uninstaller/app-cleaner-uninstaller.dmg?build=#{version.csv.second}"
   name "Nektony App Cleaner & Uninstaller"
