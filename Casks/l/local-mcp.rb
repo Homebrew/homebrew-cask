@@ -4,8 +4,20 @@ cask "local-mcp" do
 
   url "https://download.local-mcp.com/LocalMCP-#{version}.dmg"
   name "Local MCP"
-  desc "Connect AI agents to Mac apps — Mail, Calendar, Teams, OneDrive and 217 more tools"
-  homepage "https://local-mcp.com"
+  desc "Connect AI agents to Mail, Calendar, Teams, OneDrive and more"
+  homepage "https://local-mcp.com/"
+
+  depends_on macos: ">= :ventura"
+
+  app "LocalMCPTray.app"
+
+  uninstall delete:    "#{Dir.home}/Library/LaunchAgents/com.local-mcp.server.plist",
+            launchctl: "com.local-mcp.server"
+
+  zap trash: [
+    "~/Library/Application Support/Local MCP",
+    "~/.local/share/local-mcp",
+  ]
 
   livecheck do
     url "https://office-mcp-production.up.railway.app/latest"
@@ -13,14 +25,4 @@ cask "local-mcp" do
       json["version"]
     end
   end
-
-  app "LocalMCPTray.app"
-
-  uninstall launchctl: "com.local-mcp.server",
-            delete:    "#{Dir.home}/Library/LaunchAgents/com.local-mcp.server.plist"
-
-  zap trash: [
-    "~/Library/Application Support/Local MCP",
-    "~/.local/share/local-mcp",
-  ]
 end
