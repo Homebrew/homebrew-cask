@@ -23,6 +23,8 @@ cask "mattermost" do
 
   app "Mattermost.app"
 
+  uninstall quit: "Mattermost.Desktop"
+
   zap trash: [
     "~/Library/Application Support/Mattermost",
     "~/Library/Containers/Mattermost.Desktop",
