@@ -25,6 +25,7 @@ cask "antigravity-cli" do
   end
 
   auto_updates true
+  conflicts_with cask: "antigravity"
   depends_on macos: :monterey
 
   binary "antigravity", target: "agy"

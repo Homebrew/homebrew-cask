@@ -24,6 +24,7 @@ cask "antigravity" do
   end
 
   auto_updates true
+  conflicts_with cask: "antigravity-cli"
   depends_on macos: :monterey
 
   app "Antigravity.app"
