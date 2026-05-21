@@ -2,7 +2,7 @@ cask "vocevista-video-pro" do
   version "5.11.0.9351"
   sha256 "889b03dcf12d21263cfad064154868def9dd09257e8a043e33176343cc630466"
 
-  url "https://download.sygyt.com/5.11.0/VoceVistaVideoPro_macOS_#{version}.dmg"
+  url "https://download.sygyt.com/#{version.major_minor_patch}/VoceVistaVideoPro_macOS_#{version}.dmg"
   name "VoceVista Video Pro"
   desc "High-resolution voice spectrum and vibrato analyzer"
   homepage "https://www.sygyt.com/"
