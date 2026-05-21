@@ -1,6 +1,6 @@
 cask "plasticscm-cloud-edition" do
-  version "11.0.16.10042"
-  sha256 "fc9b3a9f5c01e9384fe9aed8468122d98d555750c027ae4ff8afee6b147a4d61"
+  version "11.0.16.10181"
+  sha256 "93fd242285ac1c6218d4ef95d06ee6aa346d0dace6fd4e585fee11870e1c4918"
 
   url "https://d26z97tczqnlef.cloudfront.net/releases/#{version}/plasticscm/osx/unity-vcs-#{version}-mac.pkg.zip",
       verified: "d26z97tczqnlef.cloudfront.net/"
@@ -21,7 +21,7 @@ cask "plasticscm-cloud-edition" do
               "com.codicesoftware.plasticscm.macplastic",
               "com.codicesoftware.plasticscm.server",
             ],
-            quit:      "com.codicesoftware.plasticscm",
+            quit:      ["com.codicesoftware.plasticscm", "com.codicesoftware.unityvcstray"],
             pkgutil:   [
               "com.codicesoftware.plasticscm.macplastic",
               "com.codicesoftware.plasticscm.server",
