@@ -4,7 +4,7 @@ cask "newfile" do
 
   url "https://github.com/mariusgm/newfile/releases/download/v#{version}/NewFile.dmg"
   name "NewFile"
-  desc "'New File' button for the macOS Finder"
+  desc "'New File' button for Finder"
   homepage "https://github.com/mariusgm/newfile"
 
   livecheck do
@@ -12,7 +12,7 @@ cask "newfile" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "NewFile.app"
 
