@@ -7,22 +7,22 @@ cask "local-mcp" do
   desc "Connect AI agents to Mail, Calendar, Teams, OneDrive and more"
   homepage "https://local-mcp.com/"
 
-  depends_on macos: ">= :ventura"
-
-  app "LocalMCPTray.app"
-
-  uninstall delete:    "#{Dir.home}/Library/LaunchAgents/com.local-mcp.server.plist",
-            launchctl: "com.local-mcp.server"
-
-  zap trash: [
-    "~/Library/Application Support/Local MCP",
-    "~/.local/share/local-mcp",
-  ]
-
   livecheck do
     url "https://office-mcp-production.up.railway.app/latest"
     strategy :json do |json|
       json["version"]
     end
   end
+
+  depends_on macos: :ventura
+
+  app "LocalMCPTray.app"
+
+  uninstall launchctl: "com.local-mcp.server",
+            delete:    "#{Dir.home}/Library/LaunchAgents/com.local-mcp.server.plist"
+
+  zap trash: [
+    "~/.local/share/local-mcp",
+    "~/Library/Application Support/Local MCP",
+  ]
 end
