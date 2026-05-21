@@ -1,6 +1,6 @@
 cask "dbngin" do
-  version "8.0,80"
-  sha256 "87e6a45354e43362129924372513e173cc6642929cd0ac4b236916a8a73099c8"
+  version "8.2,82"
+  sha256 "ebdac404355dcd07989397ed4404df2b22ac1033aa85040f31d30ebcccc9a022"
 
   url "https://files.dbngin.com/macos/#{version.csv.second}/DBngin.dmg"
   name "DBngin"
