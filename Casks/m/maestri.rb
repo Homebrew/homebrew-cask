@@ -13,6 +13,7 @@ cask "maestri" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: :tahoe
 
   app "Maestri.app"
