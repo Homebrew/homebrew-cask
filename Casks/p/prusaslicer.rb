@@ -10,7 +10,7 @@ cask "prusaslicer" do
 
   livecheck do
     url "https://files.prusa3d.com/wp-content/uploads/repository/PrusaSlicer-settings-master/live/PrusaSlicer.version"
-    regex(/^\[common\][^\[]*?^release\s*=\s*(\d+(?:\.\d+)+)/mi)
+    regex(/release\s*=\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on :macos
