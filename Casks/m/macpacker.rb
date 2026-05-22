@@ -10,7 +10,9 @@ cask "macpacker" do
 
   livecheck do
     url "https://macpacker-releases.s3.amazonaws.com/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
