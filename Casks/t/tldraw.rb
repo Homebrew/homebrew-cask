@@ -3,8 +3,8 @@ cask "tldraw" do
   sha256 "e10d8c78a1bdf1539ff68d399bba0e30f80fef021c9a767b7b6b6cfc9886ba2f"
 
   url "https://github.com/tldraw/tldraw-desktop/releases/download/v#{version}/tldraw-#{version}-universal.dmg"
-  name "tldraw-desktop"
-  desc "Desktop editor for .tldr files, built with tldraw and Electron"
+  name "tldraw desktop"
+  desc "Editor for .tldr files"
   homepage "https://github.com/tldraw/tldraw-desktop"
 
   auto_updates true
