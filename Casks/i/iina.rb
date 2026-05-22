@@ -1,5 +1,5 @@
 cask "iina" do
-  version "1.4.3,167"
+  version "1.4.3"
   sha256 "899a15c3cee499d6e5d1a47bce02194a5a2709b3aa1c7ba82fb16a002fa81e02"
 
   on_arm do
@@ -9,14 +9,14 @@ cask "iina" do
     depends_on macos: :catalina
   end
 
-  url "https://dl.iina.io/IINA.v#{version.csv.first}.dmg"
+  url "https://dl.iina.io/IINA.v#{version}.dmg"
   name "IINA"
   desc "Free and open-source media player"
   homepage "https://iina.io/"
 
   livecheck do
     url "https://www.iina.io/appcast.xml"
-    strategy :sparkle # IINA sometimes rebuilds with the same short version.
+    strategy :sparkle, &:short_version # IINA sometimes rebuilds with the same short version.
   end
 
   auto_updates true
