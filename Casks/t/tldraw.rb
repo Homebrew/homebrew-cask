@@ -4,7 +4,7 @@ cask "tldraw" do
 
   url "https://github.com/tldraw/tldraw-desktop/releases/download/v#{version}/tldraw-#{version}-universal.dmg"
   name "tldraw-desktop"
-  desc "Desktop editor for .tldr files, built with  and Electron"
+  desc "Desktop editor for .tldr files, built with tldraw and Electron"
   homepage "https://github.com/tldraw/tldraw-desktop"
 
   auto_updates true
