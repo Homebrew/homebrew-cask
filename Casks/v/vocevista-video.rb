@@ -8,8 +8,8 @@ cask "vocevista-video" do
   homepage "https://www.sygyt.com/"
 
   livecheck do
-    url "https://www.sygyt.com/en/download-mac/"
-    regex(/>\s*Version\s+v?(\d+(?:\.\d+)+)\s*</i)
+    url "https://www.sygyt.com/dwnld/516/"
+    strategy :header_match
   end
 
   depends_on macos: :ventura
