@@ -1,7 +1,7 @@
 cask "emdash" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.22"
+  version "1.1.24"
   sha256 arm:   "439b6674377260345a10209b476e9c71b99b11a8c2de7a592f7656fbdeb841d1",
          intel: "e1e8966fba5db0a05d5c9ca200203f692ed11011e2740c8c623abec1ff277d46"
 
