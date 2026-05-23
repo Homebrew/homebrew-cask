@@ -26,7 +26,7 @@ cask "wetype" do
   auto_updates true
   depends_on :macos
 
-  app "WeType.app"
+  input_method "WeType.app"
 
   zap trash: [
     "~/Library/Application Support/WeType",
