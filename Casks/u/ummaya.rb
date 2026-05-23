@@ -1,9 +1,9 @@
 cask "ummaya" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.17"
-  sha256 arm:   "88280d98f256fac399726adbc794723593e11ff4f2d4a060d8fda71e8137bc88",
-         intel: "6823e69f32de101e2d4826c3eb9e73e8aa85bd5d793789637dbf49b570a94660"
+  version "0.1.18"
+  sha256 arm:   "84fee75d4fe826ef66cd56e8c48f551c4f00d753f7b4cb07af10e4488b4de0f8",
+         intel: "99ff8d2051b5e5e2f9e3cf1377717d3a6c0097c1fa1f6d55a369d2c589443c35"
 
   url "https://ummaya-docs.pages.dev/downloads/homebrew/v#{version}/ummaya-#{version}-macos-#{arch}.tar.gz"
   name "UMMAYA"
@@ -18,11 +18,9 @@ cask "ummaya" do
   end
 
   depends_on :macos
-  depends_on formula: "bun"
-  depends_on formula: "node"
   depends_on formula: "uv"
 
-  binary "package/bin/ummaya", target: "ummaya"
+  binary "ummaya"
 
   zap trash: "~/.ummaya"
 end
