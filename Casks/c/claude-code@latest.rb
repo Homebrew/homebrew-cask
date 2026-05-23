@@ -8,14 +8,14 @@ cask "claude-code@latest" do
          x86_64_linux: "6c086a0f5fbf684d4148bb69629268b4f5109498c1a7be757acf18c51fd04f4b",
          arm64_linux:  "2052949543ea076e2b5cda44c031b2b34fc303db98dc56ad6583b7e0a417ebeb"
 
-  url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/#{version}/#{os}-#{arch}/claude",
-      verified: "storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/"
+  url "https://downloads.claude.ai/claude-code-releases/#{version}/#{os}-#{arch}/claude",
+      verified: "downloads.claude.ai/claude-code-releases/"
   name "Claude Code"
   desc "Terminal-based AI coding assistant"
-  homepage "https://www.anthropic.com/claude-code"
+  homepage "https://claude.com/product/claude-code"
 
   livecheck do
-    url "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest"
+    url "https://downloads.claude.ai/claude-code-releases/latest"
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
