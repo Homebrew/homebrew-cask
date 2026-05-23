@@ -1,8 +1,11 @@
 cask "hubstaff" do
-  version "1.9.2,12156"
-  sha256 "4554bbba0da2d5ab1a9f61148fa3b8424c247be4e16ef3beec575dfa4c0c020b"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://app.hubstaff.com/download/#{version.csv.second}-standard-mac-os-x-#{version.csv.first.dots_to_hyphens}-release"
+  version "1.9.2,12156"
+  sha256 arm:   "c47c1fd6250770844cf9a85437861a5e17967a279e90de21f5c5bdb9085c0c8e",
+         intel: "4554bbba0da2d5ab1a9f61148fa3b8424c247be4e16ef3beec575dfa4c0c020b"
+
+  url "https://app.hubstaff.com/download/#{version.csv.second}-standard-mac-os-x-#{version.csv.first.dots_to_hyphens}-release/dmg?architecture=#{arch}"
   name "Hubstaff"
   desc "Work time tracker"
   homepage "https://hubstaff.com/"
@@ -26,8 +29,4 @@ cask "hubstaff" do
     "~/Library/Application Support/Hubstaff",
     "~/Library/Preferences/com.netsoft.Hubstaff.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
