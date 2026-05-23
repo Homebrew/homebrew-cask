@@ -3,8 +3,8 @@ cask "tuna" do
   sha256 "f25a8014cfbf0589ad1747d8e1681c0a08f0b7dbad4dec93e6b720b9c1b73ee0"
 
   url "https://tunaformac.com/download/releases/#{version.csv.second}"
-  name "tuna"
-  desc "New, modern launcher built upon the original ideas of Quicksilver"
+  name "Tuna"
+  desc "Application launcher"
   homepage "https://tunaformac.com/"
 
   livecheck do
