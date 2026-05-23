@@ -2,11 +2,13 @@ cask "iina" do
   version "1.4.3"
   sha256 "899a15c3cee499d6e5d1a47bce02194a5a2709b3aa1c7ba82fb16a002fa81e02"
 
-  on_arm do
-    depends_on macos: :monterey
-  end
-  on_intel do
-    depends_on macos: :catalina
+  on_macos do
+    on_arm do
+      depends_on macos: :monterey
+    end
+    on_intel do
+      depends_on macos: :catalina
+    end
   end
 
   url "https://dl.iina.io/IINA.v#{version}.dmg"
@@ -20,6 +22,7 @@ cask "iina" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "IINA.app"
   binary "#{appdir}/IINA.app/Contents/MacOS/iina-cli", target: "iina"
