@@ -18,15 +18,11 @@ cask "ummaya" do
   end
 
   depends_on :macos
+  depends_on formula: "bun"
+  depends_on formula: "node"
   depends_on formula: "uv"
 
-  binary "ummaya"
-
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", staged_path.to_s],
-                   sudo: false
-  end
+  binary "package/bin/ummaya", target: "ummaya"
 
   zap trash: "~/.ummaya"
 end
