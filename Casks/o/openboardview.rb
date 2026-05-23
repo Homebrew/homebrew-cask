@@ -1,8 +1,8 @@
 cask "openboardview" do
-  version "9.95.2"
-  sha256 "0d70f9a2c87ff40217385976d51795f21cb45476383c8b36f1e380e3cd2b6b40"
+  version "10.0.0"
+  sha256 "236730f93853383e3df8dc451752ae33dbf39d31467f4a696137e8b78f473e7b"
 
-  url "https://github.com/OpenBoardView/OpenBoardView/releases/download/#{version}/OpenBoardView-#{version}-Darwin-x86_64.dmg",
+  url "https://github.com/OpenBoardView/OpenBoardView/releases/download/#{version}/OpenBoardView-#{version}-Darwin.dmg",
       verified: "github.com/OpenBoardView/OpenBoardView/"
   name "OpenBoardView"
   desc "File viewer for .brd files"
