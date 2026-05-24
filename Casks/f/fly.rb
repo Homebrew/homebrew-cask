@@ -1,9 +1,9 @@
 cask "fly" do
   arch arm: "arm64", intel: "amd64"
 
-  version "8.2.1"
-  sha256 arm:   "cc3ab873229e48ffd7a43aae4e8e04625ad96de18037534cc97b8c8b577abca6",
-         intel: "b9f7edf7f91e6201a76a4c9251afb4dd6712bb82b44a150181c41b90101b99df"
+  version "8.2.2"
+  sha256 arm:   "eaeafbc3b3c9671af67f2de60301dd496ca54063c7b6bc9764495daab4a77468",
+         intel: "761c6a6b816a633724ea26b2267d9d42937a173f81838bb5bf665c54437ea105"
 
   url "https://github.com/concourse/concourse/releases/download/v#{version}/fly-#{version}-darwin-#{arch}.tgz"
   name "fly"
