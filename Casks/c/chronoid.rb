@@ -13,7 +13,7 @@ cask "chronoid" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Chronoid.app"
 
@@ -22,7 +22,6 @@ cask "chronoid" do
     "~/Library/Caches/com.vu.Chronoid",
     "~/Library/HTTPStorages/com.vu.Chronoid",
     "~/Library/Preferences/com.vu.Chronoid.plist",
-    "~/Library/Saved Application State/com.vu.Chronoid.savedState",
     "~/Library/WebKit/com.vu.Chronoid",
   ]
 end
