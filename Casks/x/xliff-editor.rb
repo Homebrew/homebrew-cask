@@ -1,5 +1,5 @@
 cask "xliff-editor" do
-  version "3.3.2"
+  version "4.0"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/xliffeditor/XliffEditor.dmg",
@@ -14,7 +14,7 @@ cask "xliff-editor" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Xliff Editor.app"
 
