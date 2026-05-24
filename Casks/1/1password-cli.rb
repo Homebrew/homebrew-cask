@@ -28,5 +28,5 @@ cask "1password-cli" do
 
   binary "op"
 
-  zap trash: "~/.op"
+  zap trash: "~/.config/op"
 end
