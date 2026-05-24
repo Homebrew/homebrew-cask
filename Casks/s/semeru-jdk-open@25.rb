@@ -1,11 +1,11 @@
 cask "semeru-jdk-open@25" do
   arch arm: "aarch64", intel: "x64"
 
-  version "25.0.2.1,25.0.2,10.1,openj9-0.57.0"
-  sha256 arm:   "a69c459c8c3af34da19d4d7ebcb7af88d75428d0ab2dd531d60d32570d3e62c2",
-         intel: "b6a67db95342effe3d89c8eff8350913e34e9dc7c16552128538df40c64ded9f"
+  version "25.0.3.0"
+  sha256 arm:   "1a8f15731320a62309f2b3ffd69daf1f332ed9120478499650ebe6cb38c71163",
+         intel: "03f32b1571e79c3dd74a9257dab15bec280882d8df415079812f0ba7faf3e893"
 
-  url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version.csv.second}%2B#{version.csv.third}_#{version.csv.fourth}/ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first}.pkg",
+  url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version}/ibm-semeru-open-jdk_#{arch}_mac_#{version}.pkg",
       verified: "github.com/ibmruntimes/"
   name "IBM Semeru Runtime (JDK 25) Open Edition"
   desc "Production-ready JDK with the OpenJDK class libraries and the Eclipse OpenJ9 JVM"
@@ -14,7 +14,7 @@ cask "semeru-jdk-open@25" do
   livecheck do
     url :url
     regex(%r{
-      /jdk[._-]v?(\d+(?:\.\d+)*)%2B(\d+(?:\.\d+)*)[._-]([^/]+)/
+      /jdk[._-]v?(\d+(?:\.\d+)+)/
       ibm[._-]semeru[._-]open[._-]jdk[._-]#{arch}[._-]mac[._-]v?(\d+(?:\.\d+)+)\.pkg
     }ix)
     strategy :github_latest do |json, regex|
@@ -22,14 +22,14 @@ cask "semeru-jdk-open@25" do
         match = asset["browser_download_url"]&.match(regex)
         next if match.blank?
 
-        "#{match[4]},#{match[1]},#{match[2]},#{match[3]}"
+        match[2]
       end
     end
   end
 
   depends_on :macos
 
-  pkg "ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first}.pkg"
+  pkg "ibm-semeru-open-jdk_#{arch}_mac_#{version}.pkg"
 
   uninstall pkgutil: "net.ibm-semeru-open.#{version.major}.jdk"
 
