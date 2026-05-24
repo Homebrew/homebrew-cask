@@ -6,7 +6,7 @@ cask "stirling-pdf" do
       verified: "github.com/Stirling-Tools/Stirling-PDF/"
   name "Stirling-PDF"
   desc "PDF utility"
-  homepage "https://stirlingpdf.com/"
+  homepage "https://stirling.com/"
 
   depends_on :macos
 
