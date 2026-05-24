@@ -1,13 +1,13 @@
 cask "mkvtoolnix-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "98.0-1"
-  sha256 arm:   "38aad91a07166bb74a68d6920dc809135f863762cd8f883749f9c24cc34563a6",
-         intel: "4caeaed71d1066483ef43b05fe7ad51d7c5f2807e74afdc9ae27733cfa866024"
+  version "99.0-1"
+  sha256 arm:   "8d3f3b5428fcdfcbbdc48f63a49d2919f64583889747a6197fcc6d582f4d9a4d",
+         intel: "eae9cd5fcd6d48723f6f6bbeed959f784dcaae1a7d48b10fae61b51c2a3f0140"
 
   url "https://mkvtoolnix.download/macos/releases/#{version.split("-").first}/MKVToolNix-#{version}-#{arch}.dmg"
   name "MKVToolNix"
-  desc "Set of tools to create, alter and inspect Matroska files (MKV)"
+  desc "GUI including a set of tools to create, alter and inspect Matroska files (MKV)"
   homepage "https://mkvtoolnix.download/"
 
   livecheck do
