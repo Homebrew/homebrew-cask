@@ -13,6 +13,7 @@ cask "stirling-pdf" do
   app "Stirling-PDF.app"
 
   zap trash: [
+    "~/Library/Application Support/Stirling-PDF",
     "~/Library/Application Support/stirling.pdf.dev",
     "~/Library/Caches/stirling.pdf.dev",
     "~/Library/Logs/Stirling-PDF",
