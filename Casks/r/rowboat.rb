@@ -1,9 +1,9 @@
 cask "rowboat" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.7"
-  sha256 arm:   "f2c1fa3e378074cbac9f127f30d5c053cc4ea785f77c65bab32cdf656eb9d700",
-         intel: "2fb9a9d310dc999abca347750699b9eab270301cbc3fd059eab26c68f55517e8"
+  version "0.4.8"
+  sha256 arm:   "bbbbef9d0bf43123373cf77ac468810f7616cd7ac4c0e5f54b938cbab923fb74",
+         intel: "cd0fc76c5443d0a302491318c833d7e87767c215c16bd0ece8b5cbfb1e609ba4"
 
   url "https://github.com/rowboatlabs/rowboat/releases/download/v#{version}/Rowboat-darwin-#{arch}-#{version}.zip",
       verified: "github.com/rowboatlabs/rowboat/"
