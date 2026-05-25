@@ -1,9 +1,9 @@
 cask "yakit" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.4.7-0522"
-  sha256 arm:   "cf7013cfe946c3473ae3186e16de72886b24856309c0dde520a2a33a73c2c18c",
-         intel: "4e5458bc0a218ee14386fafb6df1f56dca8f0719ba9af65fce1f4d5ab43d48ef"
+  version "1.4.7-0525"
+  sha256 arm:   "ab6e1ce3a9a4018377000824d1f960f47113a7c705f14f129875f6702502fd24",
+         intel: "8ca6a0bbc1452907dd2bd8d08b9352d5b881f0071bb70a5c4c6e488edd0ecec6"
 
   url "https://github.com/yaklang/yakit/releases/download/v#{version}/Yakit-#{version}-darwin-#{arch}.dmg"
   name "Yakit"
