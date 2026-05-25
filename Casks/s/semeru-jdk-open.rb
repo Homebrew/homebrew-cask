@@ -13,18 +13,7 @@ cask "semeru-jdk-open" do
 
   livecheck do
     url :url
-    regex(%r{
-      /jdk[._-]v?(\d+(?:\.\d+)+)/
-      ibm[._-]semeru[._-]open[._-]jdk[._-]#{arch}[._-]mac[._-]v?(\d+(?:\.\d+)+)\.pkg
-    }ix)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["browser_download_url"]&.match(regex)
-        next if match.blank?
-
-        match[2]
-      end
-    end
+    strategy :github_latest
   end
 
   depends_on :macos
