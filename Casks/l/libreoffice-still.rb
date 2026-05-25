@@ -23,8 +23,8 @@ cask "libreoffice-still" do
   # cask, so we need to make sure that the former always checks a page that
   # provides the latest versions for both Fresh and Still.
   livecheck do
-    url "https://www.libreoffice.org/download/download-libreoffice/?type=mac-#{folder}"
-    regex(/href=.*?LibreOffice[._-]v?(\d+(?:\.\d+)+)(?:[._-]MacOS)?[._-]#{arch}\.dmg/i)
+    url "https://www.libreoffice.org/download/"
+    regex(%r{href=["']?[^"' >]*/stable/[^"' >]*LibreOffice[._-]v?(\d+(?:\.\d+)+)(?:[._-]MacOS)?[._-]#{arch}\.dmg}i)
     strategy :page_match do |page, regex|
       # Sort versions from lowest to highest, using the lowest (or only) version
       page.scan(regex).map(&:first).uniq.min_by { |v| Version.new(v) }

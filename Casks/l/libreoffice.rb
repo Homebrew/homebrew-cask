@@ -25,8 +25,8 @@ cask "libreoffice" do
   # NOTE: This needs to check a page that provides the latest versions for both
   # Fresh and Still, as this check is also used by the `libreoffice-still` cask.
   livecheck do
-    url "https://www.libreoffice.org/download/download-libreoffice/?type=mac-#{folder}"
-    regex(/href=.*?LibreOffice[._-]v?(\d+(?:\.\d+)+)(?:[._-]MacOS)?[._-]#{arch}\.dmg/i)
+    url "https://www.libreoffice.org/download/"
+    regex(%r{href=["']?[^"' >]*/stable/[^"' >]*LibreOffice[._-]v?(\d+(?:\.\d+)+)(?:[._-]MacOS)?[._-]#{arch}\.dmg}i)
   end
 
   conflicts_with cask: "libreoffice-still"
