@@ -1,6 +1,6 @@
 cask "epilogue-playback" do
-  version "1.9.0"
-  sha256 "457518b52b781baa376c24fa84382396b1ce87905613ef5aed8137b5c7f09e5a"
+  version "1.10.0"
+  sha256 "fa208044442a6341a04c17354caf018867217ce6cb35180c5ec5f0f0b6b4b65e"
 
   url "https://releases.epilogue.co/desktop/playback/#{version}/release/macos/Playback.dmg"
   name "Epilogue Playback"
