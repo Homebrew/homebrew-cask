@@ -11,6 +11,8 @@
 # merge entirely into "brew create" command
 #
 
+exec "brew", "ruby", __FILE__, *ARGV if RUBY_VERSION < "4.0"
+
 ###
 ### dependencies
 ###
