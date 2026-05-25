@@ -1,9 +1,9 @@
 cask "github-copilot-app" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.8"
-  sha256 arm:   "e472a1d631ddc1ab3cc12d2d756e85ada2c6ca405d8be51b9a6a649e7c8ec9a4",
-         intel: "d7ff84f257fb0e85585da254bf5bc12ee9930cdbd251629bb044b4cd8fa22ea2"
+  version "0.2.9"
+  sha256 arm:   "98532fd40750297ee3e4959b4825246b104b02ad3f375767041150a7525ce99a",
+         intel: "0a909ce3952509964a432ec7b0d45a5c53026d2d0a7f83dfe2daf1d0adfc1c5c"
 
   url "https://github.com/github/app/releases/download/v#{version}/GitHub-Copilot-darwin-#{arch}.dmg"
   name "GitHub Copilot"
