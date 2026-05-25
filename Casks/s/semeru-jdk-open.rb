@@ -6,7 +6,7 @@ cask "semeru-jdk-open" do
          intel: "03f32b1571e79c3dd74a9257dab15bec280882d8df415079812f0ba7faf3e893"
 
   url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version}/ibm-semeru-open-jdk_#{arch}_mac_#{version}.pkg",
-      verified: "github.com/ibmruntimes/"
+      verified: "github.com/ibmruntimes/semeru#{version.major}-binaries/"
   name "IBM Semeru Runtime (JDK) Open Edition"
   desc "Production-ready JDK with the OpenJDK class libraries and the Eclipse OpenJ9 JVM"
   homepage "https://developer.ibm.com/languages/semeru-runtimes/"
