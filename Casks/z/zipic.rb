@@ -1,6 +1,6 @@
 cask "zipic" do
-  version "1.9.6"
-  sha256 "a254fe279fc208b3d3f3f3e55ad22d861db6ffd1746cafdd0a273e37dd6756a1"
+  version "1.9.7"
+  sha256 "99c8fabfc55e5cd7712925c7347dee08ff38d5a1d95b2265e6cd2f1b55daafb4"
 
   url "https://releases.5km.tech/zipic/Zipic%20#{version}.dmg",
       verified: "releases.5km.tech/"
