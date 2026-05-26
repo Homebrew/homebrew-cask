@@ -39,15 +39,4 @@ cask "aerial" do
     "~/Library/Saved Application State/com.glouel.Aerial-App.savedState",
     "~/Library/Screen Savers/Aerial.saver",
   ]
-
-  caveats <<~EOS
-    Aerial is now a full macOS app (was previously a .saver plug-in).
-
-    Launch Aerial.app once after install — it will install its bundled
-    screen saver extension and migrate settings from any previous .saver
-    install. Then enable "Aerial" in System Settings → Screen Saver
-    (or set it as a wallpaper).
-
-    Requires macOS Sequoia (15) or later.
-  EOS
 end
