@@ -5,7 +5,7 @@ cask "aerial" do
   url "https://github.com/AerialScreensaver/Aerial/releases/download/v#{version}/Aerial-#{version}.zip",
       verified: "github.com/AerialScreensaver/Aerial/"
   name "Aerial"
-  desc "Apple TV Aerial screensaver, now as a full macOS app"
+  desc "Apple TV Aerial screensaver"
   homepage "https://aerialscreensaver.github.io/"
 
   livecheck do
