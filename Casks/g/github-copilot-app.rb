@@ -10,6 +10,7 @@ cask "github-copilot-app" do
   desc "Native client for GitHub Copilot"
   homepage "https://github.com/github/app"
 
+  auto_updates true
   depends_on :macos
 
   app "GitHub Copilot.app"
