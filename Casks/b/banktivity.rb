@@ -17,7 +17,7 @@ cask "banktivity" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Banktivity.app"
 
