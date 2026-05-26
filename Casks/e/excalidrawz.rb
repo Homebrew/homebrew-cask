@@ -1,6 +1,6 @@
 cask "excalidrawz" do
-  version "1.7.2"
-  sha256 "1f438126abc7f75bb5d07d1607d6d55a157a42de28f662cfb5c3c0d1ab50a6f1"
+  version "2.0.0"
+  sha256 "066e1f372720a123a05a0e0df094c9d6bf057f5de94c131f38db4a0f186a84b8"
 
   url "https://github.com/chocoford/ExcalidrawZ/releases/download/v#{version}/ExcalidrawZ.#{version}.dmg",
       verified: "github.com/chocoford/ExcalidrawZ/releases/download/"
@@ -13,7 +13,7 @@ cask "excalidrawz" do
     strategy :github_latest
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "ExcalidrawZ.app"
 
