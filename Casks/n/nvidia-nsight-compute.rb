@@ -1,9 +1,9 @@
 cask "nvidia-nsight-compute" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2026.1.1.3"
-  sha256 arm:   "6b4dd1bfb86d2caea586f289b10e93b5e0510774933942e08df00fb98943b07d",
-         intel: "794bc7abb08eb9841e113004ff8cb99a248a7629d6ad6d7260d8f718f40afaf7"
+  version "2026.2.0.8"
+  sha256 arm:   "f708cf1238a71563deeab21c54730ce64fcd134feefef4d8d031746b4e11dcfe",
+         intel: "f8fa90913bc6b97568696a127a34ad0c1ab6ca9d9f1d87f6df15f8a4053a56d8"
 
   url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-compute/#{version.major_minor_patch.dots_to_underscores}/nsight_compute-mac-#{arch}-#{version}.dmg"
   name "NVIDIA Nsight Compute"
