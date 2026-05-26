@@ -1,6 +1,6 @@
 cask "elgato-studio" do
-  version "1.0.4.946"
-  sha256 "7a2a34b8dc2e18053cf1d16b59a4118930ca35441ffd9da5f5d7be37e2813bfa"
+  version "1.1.0.1170"
+  sha256 "90eb81b1b06b166f69e309e0861f176e99159555aaccd86993f79f1563e54795"
 
   url "https://edge.elgato.com/egc/macos/estm/release/ElgatoStudio-#{version}.dmg"
   name "Elgato Studio"
