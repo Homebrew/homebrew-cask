@@ -2,8 +2,8 @@ cask "chef-workstation" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "25.13.7,14"
-    sha256 "13f6d27250cd5104253454cf06f00032e7a78efb8198f126d7dea009e6b64cac"
+    version "25.14.2,14"
+    sha256 "35f28e3bd3549a322a287cee6b85a1ddc5a9e8f013aa32154e7dd36c741a7004"
 
     depends_on macos: :ventura
   end
