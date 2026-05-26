@@ -1,9 +1,9 @@
 cask "tableau-reader" do
   arch arm: "-arm64"
 
-  version "2026.1.1"
-  sha256 arm:   "118b67d08edf61e2057b81ca7abdbd61d51eb364c5218404e03fd24d53795f01",
-         intel: "5c206ec060a18eef391bd249664d3c87aa6d43258037ec98cd88e4eb1271ede4"
+  version "2026.1.2"
+  sha256 arm:   "12242a3e312ce4c5dc85478c1d0bc87b7c2b52010bd9d8fc499dcfea3359da64",
+         intel: "6b1a80e20eb0918fe8e41720f6a5f776207cbd120e66b4fd2f9a41b4d447a862"
 
   on_arm do
     depends_on macos: :ventura
