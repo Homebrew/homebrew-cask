@@ -25,6 +25,7 @@ cask "dropbox" do
   app "Dropbox.app"
 
   uninstall launchctl: "com.dropbox.DropboxMacUpdate.agent",
+            quit:      "com.getdropbox.dropbox",
             kext:      "com.getdropbox.dropbox.kext",
             delete:    [
               "/Library/DropboxHelperTools",
