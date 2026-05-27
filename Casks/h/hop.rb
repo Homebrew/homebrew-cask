@@ -1,9 +1,9 @@
 cask "hop" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.2.0"
-  sha256 arm:   "4c163f9b03c922cd1407b4a3f5420a7d48039366db6a5b860368a1cdba4927c0",
-         intel: "5ed036edc0338130d0c487deb32c034cd73731710fc315f2250dfa31cbca4768"
+  version "0.3.1"
+  sha256 arm:   "b6cb288b6f6432e800ffc703ca2f7db25de8b725e5521b4fe050c6a11dbef13d",
+         intel: "599e63c779c8f61746b87a8f8613ccd4b5e1d283324e9bbed61fa4e18357515d"
 
   url "https://github.com/golbin/hop/releases/download/v#{version}/HOP-macos-#{arch}.dmg",
       verified: "github.com/golbin/hop/"
@@ -11,7 +11,7 @@ cask "hop" do
   desc "View and edit HWP documents"
   homepage "https://golbin.github.io/hop/"
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "HOP.app"
 
