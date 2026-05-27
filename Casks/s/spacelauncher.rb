@@ -1,5 +1,5 @@
 cask "spacelauncher" do
-  version "2.0.12"
+  version "3.0.6"
   sha256 :no_check
 
   url "https://spacelauncherapp.com/download/SpaceLauncher.zip"
@@ -11,6 +11,8 @@ cask "spacelauncher" do
     url "https://spacelauncherapp.com/download/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: :monterey
