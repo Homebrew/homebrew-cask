@@ -15,7 +15,7 @@ cask "devin-cli" do
   end
 
   on_linux do
-    sha256 x86_64_linux: "007aa9b841873df2d529375c840e0808e84364c7f8a1f0fe3e73d184bb20732f"
+    sha256 "007aa9b841873df2d529375c840e0808e84364c7f8a1f0fe3e73d184bb20732f"
 
     depends_on arch: :x86_64
   end
