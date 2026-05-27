@@ -13,8 +13,12 @@ cask "atomcode" do
   name "AtomCode"
   desc "Open-source terminal AI coding agent"
   homepage "https://atomgit.com/atomgit_atomcode/atomcode"
-  binary "atomcode"
-  
-  zap rmdir: "~/.atomcode"
 
+  livecheck do
+    skip "Version detection requires authentication on AtomGit"
+  end
+
+  binary "atomcode"
+
+  zap rmdir: "~/.atomcode"
 end
