@@ -8,11 +8,6 @@ cask "eurkey-next" do
   desc "Keyboard layout for Europeans, coders, and translators"
   homepage "https://eurkey-macos.eu/"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   keyboard_layout "EurKEY-Next.bundle"
 
   # No zap stanza required
