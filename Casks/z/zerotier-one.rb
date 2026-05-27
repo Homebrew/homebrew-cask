@@ -1,6 +1,6 @@
 cask "zerotier-one" do
-  version "1.16.1"
-  sha256 "726a83e725061974089d5eae9aa68a16dfb24df2289a044c414dcad22a517546"
+  version "1.16.2"
+  sha256 "13b5054c0b51e337970e83da6f32bd245a70a5dd92421b08dadbefcaadf2f37f"
 
   url "https://download.zerotier.com/RELEASES/#{version}/dist/ZeroTier%20One.pkg"
   name "ZeroTier One"
