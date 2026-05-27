@@ -1,9 +1,9 @@
 cask "wrike" do
   arch arm: "_ARM"
 
-  version "4.6.0"
-  sha256 arm:   "ed72ca481e1f49a160219ac69ecd0b2f7b2093574895a3dcbfb40cf5baafe16b",
-         intel: "7a6ed455846d0bb44f597028e779528f647eac255482727ad82305908f245180"
+  version "4.6.1"
+  sha256 arm:   "4bfe955f8421b5e44770a24481970402856c9f7b3408a89cbfc11495472577a2",
+         intel: "adcb19a8076685ee8f9a16f5209f87a48d7f5076d5b82b4ded70963b3a4f50cc"
 
   url "https://dl.wrike.com/download/WrikeDesktopApp#{arch}.v#{version}.dmg"
   name "Wrike"
@@ -23,7 +23,7 @@ cask "wrike" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Wrike for Mac.app"
 
