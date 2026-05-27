@@ -13,8 +13,8 @@ cask "atomcode" do
   name "AtomCode"
   desc "Open-source terminal AI coding agent"
   homepage "https://atomgit.com/atomgit_atomcode/atomcode"
-  license "MIT"
-
   binary "atomcode"
+  
+  zap rmdir: "~/.atomcode"
 
 end
