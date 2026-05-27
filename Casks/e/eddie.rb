@@ -5,7 +5,7 @@ cask "eddie" do
   sha256 arm:   "821aafcaffea695bf938f671cce343d86416989f7f21d8db2d8bfe9aaa609d9c",
          intel: "d46a8e8cffce5b05708e2a096fad825487920d2d57e6eede1a523b0862a82291"
 
-  url "https://eddie.website/download/?platform=macos-10.15&arch=#{arch}&ui=ui&format=disk.dmg&version=#{version}"
+  url "https://eddie.website/repository/eddie/#{version}/eddie-ui_#{version}_macos-10.15_#{arch}_disk.dmg"
   name "Air VPN"
   name "Eddie"
   desc "OpenVPN UI"
