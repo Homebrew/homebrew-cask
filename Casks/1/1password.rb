@@ -26,6 +26,8 @@ cask "1password" do
 
   app "1Password.app"
 
+  uninstall quit: "com.1password.1password"
+
   zap trash: [
     "~/Library/Application Scripts/2BUA8C4S2C.com.1password*",
     "~/Library/Application Scripts/2BUA8C4S2C.com.agilebits",
