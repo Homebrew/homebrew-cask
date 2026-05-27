@@ -18,7 +18,7 @@ cask "airi" do
 
   depends_on macos: :monterey
 
-  app "airi.app", target: "AIRI.app"
+  app "AIRI.app"
 
   zap trash: [
     "~/Library/Application Support/ai.moeru.airi",
