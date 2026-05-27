@@ -11,7 +11,7 @@ cask "hop" do
   desc "View and edit HWP documents"
   homepage "https://golbin.github.io/hop/"
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "HOP.app"
 
