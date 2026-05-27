@@ -7,11 +7,6 @@ cask "mactools" do
   desc "Menu bar toolbox"
   homepage "https://github.com/ggbond268/MacTools"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :sonoma
 
