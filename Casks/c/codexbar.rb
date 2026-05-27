@@ -8,7 +8,6 @@ cask "codexbar" do
   desc "Menu bar usage monitor for Codex and Claude"
   homepage "https://codexbar.app/"
 
-  depends_on arch: :arm64
   depends_on macos: :sonoma
 
   app "CodexBar.app"
