@@ -22,6 +22,8 @@ cask "zen" do
   app "Zen.app"
   binary "#{appdir}/Zen.app/Contents/MacOS/zen"
 
+  uninstall quit: "app.zen-browser.zen"
+
   zap trash: [
         "~/Library/Application Support/Zen",
         "~/Library/Caches/Mozilla/updates/Applications/Zen Browser",
