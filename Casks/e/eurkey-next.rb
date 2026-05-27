@@ -8,6 +8,8 @@ cask "eurkey-next" do
   desc "Keyboard layout for Europeans, coders, and translators"
   homepage "https://eurkey-macos.eu/"
 
+  depends_on :macos
+
   keyboard_layout "EurKEY-Next.bundle"
 
   # No zap stanza required
