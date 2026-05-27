@@ -1,9 +1,9 @@
 cask "appflowy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.12.0"
-  sha256 arm:   "28d09d83406f2088bad3d0e973d06fbaad495d575070201bcbebb8a95fbd3fcf",
-         intel: "cbf7c074f32cf81c843932bb516f4944c432b88a81e10f496408407bd2a65f93"
+  version "0.12.1"
+  sha256 arm:   "e69d87ada466ef3c3f48b17b865be0667b797b5dae85c8177d4fbc8d2f4faa01",
+         intel: "631f1f21a18d259a9b76b732503247e59063ee5dc60e64d9c3bae93f62c0d5ee"
 
   url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/Appflowy-#{version}-macos-#{arch}.zip",
       verified: "github.com/AppFlowy-IO/AppFlowy/"
