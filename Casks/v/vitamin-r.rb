@@ -1,6 +1,6 @@
 cask "vitamin-r" do
-  version "4.22"
-  sha256 "6e0eb0795e249ee428e4ed3d26c1724b1ad0e745581658015dc7ea3174b7d274"
+  version "4.23"
+  sha256 "0be06564edddf6a7e79074fb1cf610738e07511d3873f9146f1de2c7a70c3a13"
 
   url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"
   name "Vitamin-R"
