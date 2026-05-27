@@ -14,7 +14,9 @@ cask "atomcode" do
   homepage "https://atomgit.com/atomgit_atomcode/atomcode"
 
   livecheck do
-    skip "Version detection requires authentication on AtomGit"
+    url "https://atomgit.com/atomgit_atomcode/atomcode.git"
+    regex(/^v(\d+\.\d+\.\d+)$/)
+    strategy :git
   end
 
   binary "atomcode"
