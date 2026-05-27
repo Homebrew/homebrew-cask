@@ -1,6 +1,6 @@
 cask "uuremote" do
-  version "4.25.0"
-  sha256 "8993446a4e4eb5dfa95c5ea79c564fa32bc499d47d8a57de321e40a3e8431f74"
+  version "4.26.0"
+  sha256 "3ff889976f833297d44627291ca25faa2ed68b61c159046d7d16117ec48c48a2"
 
   url "https://a56.gdl.netease.com/uuyc_#{version}.pkg",
       verified: "a56.gdl.netease.com/"
