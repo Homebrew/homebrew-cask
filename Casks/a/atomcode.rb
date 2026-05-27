@@ -15,7 +15,7 @@ cask "atomcode" do
 
   livecheck do
     url "https://atomgit.com/atomgit_atomcode/atomcode.git"
-    regex(/^v(\d+\.\d+\.\d+)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
     strategy :git
   end
 
