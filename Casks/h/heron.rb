@@ -3,10 +3,11 @@ cask "heron" do
   sha256 "eb81176f6d5234ba73ab7044a5d282251d18ee7fe4dbdbf8764b78b23585870b"
 
   url "https://github.com/tunjid/heron/releases/download/#{version}/com.tunjid.heron-#{version}.dmg",
-      verified: "github.com/tunjid/heron/"
   name "Heron"
   desc "Adaptive offline-first Bluesky client"
   homepage "https://github.com/tunjid/heron"
+
+  depends_on :macos
 
   app "com.tunjid.heron.app"
 
