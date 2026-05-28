@@ -22,9 +22,9 @@ cask "perplexity" do
   app "Perplexity.app"
 
   zap trash: [
-    "~/Library/Application Support/ai.perplexity.pro",
-    "~/Library/Caches/ai.perplexity.pro",
-    "~/Library/Preferences/ai.perplexity.pro.plist",
-    "~/Library/Saved Application State/ai.perplexity.pro.savedState",
+    "~/Library/Application Support/ai.perplexity.macv3",
+    "~/Library/Caches/ai.perplexity.macv3",
+    "~/Library/Preferences/ai.perplexity.macv3.plist",
+    "~/Library/Saved Application State/ai.perplexity.macv3.savedState",
   ]
 end
