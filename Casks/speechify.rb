@@ -9,7 +9,7 @@ cask "speechify" do
   name "Speechify AI Assistant"
   homepage "https://www.speechify.com/"
 
-  depends_on macos: "sonoma"
+  depends_on macos: :sonoma
 
   app "Speechify AI Assistant.app"
 end
