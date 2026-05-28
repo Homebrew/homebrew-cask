@@ -1,5 +1,5 @@
 cask "perplexity" do
-  version "145.2.7632.4581"
+  version "26.20.0"
   sha256 :no_check
 
   url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_#{arch}"
