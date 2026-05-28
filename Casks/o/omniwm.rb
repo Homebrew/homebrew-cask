@@ -10,7 +10,7 @@ cask "omniwm" do
   depends_on macos: :sequoia
 
   app "OmniWM.app"
-  binary "#{appdir}/OmniWM.app/Contents/MacOS/omniwmctl", target: "omniwmctl"
+  binary "#{appdir}/OmniWM.app/Contents/MacOS/omniwmctl"
 
   uninstall quit: "com.barut.OmniWM"
 
