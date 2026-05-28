@@ -1,6 +1,6 @@
 cask "hhkb-studio" do
-  version "1.1.1"
-  sha256 "2938653604517bf664e51a5ae071e14d37dc46c7f368c8427b1f76d01b5e0413"
+  version "1.1.2"
+  sha256 "b58e77841517952f4ec218dab600ae70c20a3ac49860f22eccfb67eab967288f"
 
   url "https://origin.pfultd.com/downloads/hhkbstudio/mac/HHKBStudiokeymapTool_#{version.no_dots}ma.dmg",
       verified: "origin.pfultd.com/downloads/hhkbstudio/mac/"
