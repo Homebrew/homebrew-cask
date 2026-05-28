@@ -1,10 +1,12 @@
 cask "mirai" do
-  arch arm: "aarch64"
-
   version "0.3.0"
-  sha256 arm: "3c47ac165417f1329304da9161208734607c7217377e8cd910d5b3489960f7b9"
 
-  url "https://assets.trymirai.com/app/mirai-#{version}-#{arch}-apple-darwin.dmg"
+  on_arm do
+    sha256 "3c47ac165417f1329304da9161208734607c7217377e8cd910d5b3489960f7b9"
+
+    url "https://assets.trymirai.com/app/mirai-#{version}-aarch64-apple-darwin.dmg"
+  end
+
   name "Mirai"
   desc "Inference engine for AI models"
   homepage "https://trymirai.com/"
