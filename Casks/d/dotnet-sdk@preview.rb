@@ -1,4 +1,5 @@
 cask "dotnet-sdk@preview" do
+  # Differs from the `dotnet` formula by including additional closed-source components
   arch arm: "arm64", intel: "x64"
 
   version "11.0.100-preview.4.26230.115"
