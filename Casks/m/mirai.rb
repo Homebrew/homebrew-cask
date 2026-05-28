@@ -1,24 +1,30 @@
 cask "mirai" do
-  arch arm: "aarch64", intel: "x86_64"
+  arch arm: "aarch64"
 
-  version "0.4.6"
-  sha256 arm:   "877c0967f31ce0be82d4e4c8d2130482193a141bf75fa85d9a52fa02da8b7281",
-         intel: "7cf84238a902f94c55afc187fff4e2b3672cc2ee22a18805fad2e96c17f9b51a"
+  version "0.3.0"
+  sha256 arm: "3c47ac165417f1329304da9161208734607c7217377e8cd910d5b3489960f7b9"
 
-  url "https://github.com/trymirai/uzu/releases/download/#{version}/mirai-#{arch}-apple-darwin.tar.gz",
-      verified: "github.com/trymirai/uzu/"
+  url "https://assets.trymirai.com/app/mirai-#{version}-#{arch}-apple-darwin.dmg"
   name "Mirai"
   desc "Inference engine for AI models"
   homepage "https://trymirai.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://sdk.trymirai.com/api/v1/app/latest"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
-  depends_on :macos
+  auto_updates true
+  depends_on macos: :tahoe
 
-  binary "mirai-#{arch}-apple-darwin", target: "mirai"
+  app "Mirai.app"
+  binary "#{appdir}/Mirai.app/Contents/Resources/cli/mirai"
 
-  zap rmdir: "~/.config/com.trymirai.cli"
+  zap trash: [
+    "~/.config/com.trymirai.cli",
+    "~/Library/Application Support/mirai",
+    "~/Library/Caches/com.mirai.tech.chat.ShipIt/",
+  ]
 end
