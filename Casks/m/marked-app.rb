@@ -1,31 +1,31 @@
 cask "marked-app" do
-  version "2.6.46,1071"
-  sha256 "9d67af603347b00f6c4b2b40eea6c0aef7f3b4c88abc3c77453a7d836f050626"
+  version "3.0.19,1148"
+  sha256 "2d5baece48794ced3fc1b48da59e1682e51dabce8fe2691e71d71363b3639587"
 
-  url "https://updates.marked2app.com/Marked#{version.delete(",")}.dmg"
+  url "https://updates.markedapp.com/updates/Marked%20#{version.csv.first}.zip"
   name "Marked"
   desc "Previewer for Markdown, MultiMarkdown and other text markup languages"
-  homepage "https://marked2app.com/"
+  homepage "https://markedapp.com/"
 
   livecheck do
-    url "https://updates.marked2app.com/marked.xml"
+    url "https://updates.markedapp.com/updates/marked3.xml"
     strategy :sparkle
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
-  app "Marked #{version.major}.app"
+  app "Marked.app"
 
-  uninstall quit: "com.brettterpstra.marked#{version.major}"
+  uninstall quit: "com.brettterpstra.marked"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brettterpstra.marked#{version.major}.sfl*",
-    "~/Library/Application Support/Marked #{version.major}",
-    "~/Library/Caches/com.brettterpstra.marked#{version.major}",
-    "~/Library/Caches/Marked #{version.major}",
-    "~/Library/Logs/Marked #{version.major}",
-    "~/Library/Preferences/com.brettterpstra.marked#{version.major}.plist",
-    "~/Library/Saved Application State/com.brettterpstra.marked#{version.major}.savedState",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brettterpstra.marked.sfl*",
+    "~/Library/Application Support/Marked",
+    "~/Library/Caches/com.brettterpstra.marked",
+    "~/Library/Caches/Marked",
+    "~/Library/Logs/Marked",
+    "~/Library/Preferences/com.brettterpstra.marked.plist",
+    "~/Library/Saved Application State/com.brettterpstra.marked.savedState",
   ]
 end
