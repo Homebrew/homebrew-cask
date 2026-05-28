@@ -1,6 +1,6 @@
 cask "input0" do
-  version "0.6.0"
-  sha256 "686f3f91a3cccd0ab67ed7b1bd567d981cd364ebc92bb843d63198b9e3bf38b5"
+  version "0.6.1"
+  sha256 "8581c22c7bc8f5fa2d05ba84ee1f85ccd80f5d4af7bf07798af6f3d53c9f08e0"
 
   url "https://github.com/10xChengTu/input0/releases/download/v#{version}/Input0_#{version}_aarch64.dmg",
       verified: "github.com/10xChengTu/input0/"
