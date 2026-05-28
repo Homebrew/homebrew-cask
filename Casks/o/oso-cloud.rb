@@ -1,9 +1,9 @@
 cask "oso-cloud" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.37.0"
-  sha256 arm:   "d79536b0c4bc71794580b0c64718956f383d1dd9b92d62c2d8ee01dedb8b10f4",
-         intel: "0421456b2f13370c75316f5cb43b10433f85ce58a63487b1105dfe2f1ce046e1"
+  version "0.37.2"
+  sha256 arm:   "c9e236045f0a90ea5a2476556997562cc4b7ea6ba0d8bba2a8dc82f7cde2a2b6",
+         intel: "017dd11b0b4fa728fde9b70691b7b11120bc5877dc47c22953535f77a054d9c6"
 
   url "https://d3i4cc4dqewpo9.cloudfront.net/#{version}/oso_cli_mac_osx_#{arch}",
       verified: "d3i4cc4dqewpo9.cloudfront.net/"
