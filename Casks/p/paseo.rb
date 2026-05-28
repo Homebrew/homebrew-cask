@@ -11,11 +11,6 @@ cask "paseo" do
   desc "Self-hosted daemon for AI coding agents"
   homepage "https://paseo.sh/"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   depends_on macos: :monterey
 
   app "Paseo.app"
