@@ -7,6 +7,8 @@ cask "mpv-macWrapper" do
   desc "Wrap mpv CLI as a native macOS .app bundle"
   homepage "https://github.com/IstPlayer/mpv-macWrapper"
 
+  depends_on macos: ">= :monterey"
+
   app "mpv.app"
 
   caveats <<~EOS
@@ -17,5 +19,7 @@ cask "mpv-macWrapper" do
     prompt you to locate it on first launch.  The chosen path
     is saved to ~/.config/mpv-macWrapper/path.conf so you only
     need to do this once.
+
+    This cask provides an Apple Silicon (arm64) binary only.
   EOS
 end
