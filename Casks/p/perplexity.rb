@@ -1,12 +1,10 @@
 cask "perplexity" do
-  arch arm: "arm64", intel: "x64"
-
   version "145.2.7632.4581"
-  sha256 "d7628822dc8ee48a673df43112a183194f1cf8b724e0497f048cb44f89f15fee"
+  sha256 :no_check
 
   url "https://www.perplexity.ai/rest/browser/download?channel=stable&platform=mac_#{arch}"
   name "Perplexity"
-  desc "AI-powered search and answer engine"
+  desc "AI-powered answer engine with agentic search capabilities"
   homepage "https://www.perplexity.ai/"
 
   livecheck do
@@ -17,13 +15,15 @@ cask "perplexity" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :sonoma
 
   app "Perplexity.app"
 
   zap trash: [
-    "~/Library/Application Support/ai.perplexity.macv3",
+    "~/Library/Application Support/Perplexity",
     "~/Library/Caches/ai.perplexity.macv3",
+    "~/Library/HTTPStorages/ai.perplexity.macv3",
+    "~/Library/Logs/Perplexity",
     "~/Library/Preferences/ai.perplexity.macv3.plist",
     "~/Library/Saved Application State/ai.perplexity.macv3.savedState",
   ]
