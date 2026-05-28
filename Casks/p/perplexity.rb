@@ -1,4 +1,6 @@
 cask "perplexity" do
+  arch arm: "arm64", intel: "x64"
+
   version :latest
   sha256 :no_check
 
