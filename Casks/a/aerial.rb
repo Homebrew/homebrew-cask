@@ -1,6 +1,6 @@
 cask "aerial" do
-  version "4.0.8"
-  sha256 "0d9f3ec4a6e40d3f5fa7d0b1776d2f840fe97a0a1ff3fd5facd069cdea5c510a"
+  version "4.0.9"
+  sha256 "754c2d08297a768a53d847fc8f7d93e7a930cfbcf7b4cc97a688289e40921322"
 
   url "https://github.com/AerialScreensaver/Aerial/releases/download/v#{version}/Aerial-#{version}.zip",
       verified: "github.com/AerialScreensaver/Aerial/"
