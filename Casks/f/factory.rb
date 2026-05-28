@@ -1,9 +1,9 @@
 cask "factory" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.92.0"
-  sha256 arm:   "3a8f7788925ca09ae74b13b3f2e8dced8bb765f41e4f9e8dd3965e20cf1bc161",
-         intel: "e71a7193c1ae953106be4960a75b8ddd989da089016f3a628a40afb18d02f121"
+  version "0.92.1"
+  sha256 arm:   "5938c6c7ad7f7e11541563c3315bc6fa5d8f795bfa3ed9aa37033103f58a18b7",
+         intel: "241c15e30fa563efd5fbb6a580920aa04ba47913a5ff6e4e216bafd949ca78da"
 
   url "https://downloads.factory.ai/factory-desktop/releases/#{version}/darwin/#{arch}/Factory-#{version}-#{arch}.dmg"
   name "Factory"
