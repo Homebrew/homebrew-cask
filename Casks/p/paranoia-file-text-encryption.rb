@@ -1,6 +1,8 @@
 cask "paranoia-file-text-encryption" do
-  version "16.1.43"
-  sha256 "1c91a48925e364d3cf9dd88ceba4aebf11b915fb5984788cba3e28764b6a160b"
+  arch arm: "arm64", intel: "x86_64"
+
+  version "16.1.431"
+  sha256 "c9a73eedb968e021f588fde07571b3c1464de1f6a6d41f833f993be7b2f224c0"
 
   url "https://paranoiaworks.com/download/ParanoiaFileTextEnc-#{version}.pkg",
       verified: "paranoiaworks.com/download/"
@@ -17,7 +19,7 @@ cask "paranoia-file-text-encryption" do
 
   pkg "ParanoiaFileTextEnc-#{version}.pkg"
 
-  uninstall pkgutil: "com.paranoiaworks.macos.Paranoia-FileText-Encryption"
+  uninstall pkgutil: "com.paranoiaworks.macos.Paranoia-FileText-Encryption.#{arch}"
 
   zap trash: [
     "~/.ssefe.conf",
