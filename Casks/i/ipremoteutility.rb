@@ -1,6 +1,6 @@
 cask "ipremoteutility" do
-  version "1.11.0"
-  sha256 "0c429fab7602e33f6035859208156b5809870b424a42849e77c9ebc4857b34c7"
+  version "1.11.2"
+  sha256 "e11fa814bcb95863a1a161cc99090aa9c19da221a4fed59adf76d6e1f63055a1"
 
   url "https://www.flandersscientific.com/ip-remote/release/IPRemoteUtility-#{version}-macOS.zip"
   name "Flanders IP Remote Utility"
@@ -14,7 +14,7 @@ cask "ipremoteutility" do
 
   depends_on :macos
 
-  app "IPRemoteUtility-#{version}-macOS/IPRemoteUtility.app"
+  app "IPRemoteUtility.app"
 
   zap trash: [
     "~/Library/Application Support/FlandersScientific/IPRemoteUtility",
