@@ -1,6 +1,6 @@
 cask "wetype" do
-  version "2.2.0,611"
-  sha256 "e7fbf8129b73e697b88c993c9e3d4c9b6015ba9c53a568ab14fad41ee51751a1"
+  version "2.2.0,616"
+  sha256 "9bc875701f6eaf98a8d49f1db01e7169ec9a7241533b0d2e1bac2310b4c843f1"
 
   url "https://download.weread.qq.com/app/wxkb/mac/#{version.csv.first}/WeType_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
