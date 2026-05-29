@@ -11,11 +11,6 @@ cask "openpencil" do
   desc "Open-source design editor compatible with Figma"
   homepage "https://openpencil.dev/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on :macos
 
