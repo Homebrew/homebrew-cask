@@ -3,12 +3,13 @@ cask "dbx" do
 
   on_arm do
     sha256 "67aec2bbf3d82d1ea1b42719de1dd7bbf3cdab4152334d9884e8d9fabda99edc"
+
     url "https://github.com/t8y2/dbx/releases/download/v#{version}/DBX_#{version}_aarch64.dmg",
         verified: "github.com/t8y2/dbx/"
   end
-
   on_intel do
     sha256 "e1078dc50b53c44eafa4c06d41670a79d89b98ed0b1c9e239a944c73aef6d06b"
+
     url "https://github.com/t8y2/dbx/releases/download/v#{version}/DBX_#{version}_x64.dmg",
         verified: "github.com/t8y2/dbx/"
   end
