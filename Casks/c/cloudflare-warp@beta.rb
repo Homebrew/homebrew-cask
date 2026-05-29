@@ -15,7 +15,7 @@ cask "cloudflare-warp@beta" do
 
   auto_updates true
   conflicts_with cask: "cloudflare-warp"
-  depends_on :macos
+  depends_on macos: :sonoma
 
   pkg "Cloudflare_WARP_#{version}.pkg"
 
