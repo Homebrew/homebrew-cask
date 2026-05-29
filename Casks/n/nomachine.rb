@@ -1,6 +1,6 @@
 cask "nomachine" do
-  version "9.5.7_1"
-  sha256 "06ebfec7c2bcd8ab035be105577d85ff8c6f776082943d4273587ca2264689ee"
+  version "9.6.3_1"
+  sha256 "0abaee8b5aa2e9619b9b84961cd8b99307e209b2ef2de4f01ad066af39645d81"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   name "NoMachine"
