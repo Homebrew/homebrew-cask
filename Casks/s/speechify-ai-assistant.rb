@@ -1,4 +1,4 @@
-cask "speechify" do
+cask "speechify-ai-assistant" do
   version "3.3.0"
   sha256 :no_check
 
@@ -13,16 +13,15 @@ cask "speechify" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "Speechify AI Assistant.app"
 
   zap delete: [
+        "~/Library/Application Support/com.cliffweitzman.speechifymacagent",
         "~/Library/Caches/com.cliffweitzman.speechifymacagent",
         "~/Library/Caches/com.crashlytics.data/com.cliffweitzman.speechifymacagent",
-      ],
-      trash:  [
-        "~/Library/Application Support/com.cliffweitzman.speechifymacagent",
         "~/Library/Preferences/com.cliffweitzman.speechifymacagent.plist",
       ]
 end
