@@ -34,11 +34,7 @@ cask "yojam" do
     "~/Library/HTTPStorages/com.yojam.app",
     "~/Library/HTTPStorages/com.yojam.app.binarycookies",
     "~/Library/Logs/Yojam",
-    "~/Library/Preferences/com.yojam.app.CLI.plist",
-    "~/Library/Preferences/com.yojam.app.NativeHost.plist",
-    "~/Library/Preferences/com.yojam.app.plist",
-    "~/Library/Preferences/com.yojam.app.SafariExtension.plist",
-    "~/Library/Preferences/com.yojam.app.ShareExtension.plist",
+    "~/Library/Preferences/com.yojam.app.*",
     "~/Library/Saved Application State/com.yojam.app.savedState",
     "~/Library/WebKit/com.yojam.app",
   ]
