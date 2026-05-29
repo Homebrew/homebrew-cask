@@ -14,6 +14,8 @@ cask "mpv-macwrapper" do
 
   app "mpv.app"
 
+  zap trash: "~/.config/mpv-macWrapper"
+
   caveats <<~EOS
     Apple Silicon (arm64) only.  mpv must be installed separately:
       brew install mpv
