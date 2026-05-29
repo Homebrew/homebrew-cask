@@ -23,7 +23,6 @@ cask "auto-subs" do
   uninstall quit:    "com.autosubs",
             pkgutil: "com.tom-moroney.autosubs",
             delete:  [
-              "/Applications/AutoSubs.app",
               "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Workflow Integration Plugins/AutoSubs.lua",
               "~/Library/Application Support/Adobe/CEP/extensions/com.autosubs.adobe",
               "~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Scripts/Utility/AutoSubs",
