@@ -18,7 +18,7 @@ cask "speechify-ai-assistant" do
 
   app "Speechify AI Assistant.app"
 
-  zap delete: [
+  zap trash: [
     "~/Library/Application Support/com.cliffweitzman.speechifymacagent",
     "~/Library/Caches/com.cliffweitzman.speechifymacagent",
     "~/Library/Caches/com.crashlytics.data/com.cliffweitzman.speechifymacagent",
