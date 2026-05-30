@@ -1,6 +1,6 @@
 cask "vienna" do
-  version "3.10.5"
-  sha256 "df32a3bbe1a5e6e685eeedb75b47820be32953993507b9f5f155eaf8b1e184c6"
+  version "3.10.6"
+  sha256 "a725098937faedb74e365f3f825c75ad4812f866bce79531c5e0d06f83d83959"
 
   url "https://downloads.sourceforge.net/vienna-rss/v_#{version}/Vienna#{version}.dmg",
       verified: "downloads.sourceforge.net/vienna-rss/"
