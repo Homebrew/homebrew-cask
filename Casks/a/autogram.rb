@@ -17,10 +17,10 @@ cask "autogram" do
 
   pkg "Autogram-#{version}-MacOs.pkg"
 
-  # Following 'preflight' is needed to avoid interactive parts of the installation process. More details in https://github.com/Homebrew/homebrew-cask/pull/201161#discussion_r1950819869
-  preflight do
-    FileUtils.mkdir_p "#{Dir.home}/Library/Application Support/Autogram/tls/"
-    FileUtils.touch "#{Dir.home}/Library/Application Support/Autogram/tls/skip"
+  # Following 'preflight_steps' is needed to avoid interactive parts of the installation process. More details in https://github.com/Homebrew/homebrew-cask/pull/201161#discussion_r1950819869
+  preflight_steps do
+    mkdir_p "Library/Application Support/Autogram/tls", base: :home
+    touch "Library/Application Support/Autogram/tls/skip", base: :home
   end
 
   uninstall quit:    "digital.slovensko.autogram",
