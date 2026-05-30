@@ -11,6 +11,7 @@ cask "dbx" do
   desc "Database management tool"
   homepage "https://dbxio.com/"
 
+  auto_updates true
   depends_on macos: :big_sur
 
   app "DBX.app"
