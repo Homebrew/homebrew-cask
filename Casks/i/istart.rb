@@ -4,7 +4,7 @@ cask "istart" do
 
   url "https://github.com/Pylogmon/iStart/releases/download/#{version}/iStart.app.zip"
   name "iStart"
-  desc "Lightweight Start menu and application launcher for macOS"
+  desc "Lightweight Start menu and application launcher"
   homepage "https://github.com/Pylogmon/iStart"
 
   depends_on macos: ">= :sonoma"
