@@ -71,9 +71,9 @@ cask "klayout" do
 
   suite "KLayout"
 
-  preflight do
+  preflight_steps do
     # There is no sub-folder in the DMG; the root *is* the folder
-    FileUtils.mv(staged_path.children, staged_path.join("KLayout").tap(&:mkpath))
+    move_children ".", "KLayout"
   end
 
   uninstall quit:    "klayout.de",

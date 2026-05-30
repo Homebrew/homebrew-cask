@@ -19,8 +19,8 @@ cask "dante-via" do
 
   # The installer looks for a file at /tmp/.DanteVia_silent_install
   # to determine if it should run in silent mode.
-  preflight do
-    FileUtils.touch "/tmp/.DanteVia_silent_install"
+  preflight_steps do
+    touch "/tmp/.DanteVia_silent_install"
   end
 
   uninstall launchctl: [
