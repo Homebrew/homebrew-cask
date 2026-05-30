@@ -1,9 +1,9 @@
 cask "powershell@preview" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.7.0-preview.1"
-  sha256 arm:   "2e94687bd31fcfa161426a1bc175923aa7d9536b47700aa8b4c4d2852d40d891",
-         intel: "79dd0d523d909e9756c2f81e901f6e96be7abcdeae8fe851ac5d809bf34e95a9"
+  version "7.7.0-preview.2"
+  sha256 arm:   "6c03bd508bfc6124b660befab755ac90d5ca226e30fd6e982102db09ca0c81ac",
+         intel: "aabb353a16914070ad315bc19562534f4829598b860af3dba933a07b626ef7c8"
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
   name "PowerShell"
@@ -28,8 +28,6 @@ cask "powershell@preview" do
       end
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: :big_sur
 
