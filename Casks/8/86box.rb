@@ -27,8 +27,8 @@ cask "86box" do
 
   roms_dir = Pathname("~/Library/Application Support/net.86box.86Box/roms")
 
-  preflight do
-    roms_dir.expand_path.mkpath
+  preflight_steps do
+    mkdir_p "Library/Application Support/net.86box.86Box/roms", base: :home
   end
 
   uninstall trash: "#{appdir}/86box"
