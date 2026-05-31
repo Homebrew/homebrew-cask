@@ -1,0 +1,21 @@
+cask "font-kose-mono" do
+  version "3.126"
+  sha256 "802b658db492e02ae5b659f5b56d7d4ef8f77609515bdcc82f462ae912888c33"
+
+  url "https://github.com/lxgw/kose-font/releases/download/v#{version}/XiaolaiMono-Regular.ttf"
+  name "Kose Font Mono"
+  name "Xiaolai Font Mono"
+  name "小赖字体等宽"
+  name "小瀨字體等寬"
+  desc "Monospace Chinese handwriting font derived from SetoFont"
+  homepage "https://github.com/lxgw/kose-font"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  font "XiaolaiMono-Regular.ttf"
+
+  # No zap stanza required
+end
