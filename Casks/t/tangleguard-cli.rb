@@ -19,4 +19,8 @@ cask "tangleguard-cli" do
   depends_on :macos
 
   binary "tangleguard-cli"
+
+  zap trash: [
+    "~/Library/Application Support/CrashReporter/tangleguard-cli*",
+  ]
 end
