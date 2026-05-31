@@ -1,6 +1,6 @@
 cask "repobar" do
-  version "0.6.6"
-  sha256 "ac352f6f311c95da28174c7e1ee01bb8c1d6fbb864f9fc27a2e7d2e36813c095"
+  version "0.7.0"
+  sha256 "54332de972e642e59ff808a1c56e700b470e84d0fb2d60b93208fccdea5ffdf1"
 
   url "https://github.com/steipete/RepoBar/releases/download/v#{version}/RepoBar-#{version}.zip",
       verified: "github.com/steipete/RepoBar/"
