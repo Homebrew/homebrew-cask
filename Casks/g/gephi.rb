@@ -1,9 +1,9 @@
 cask "gephi" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.10.1"
-  sha256 arm:   "cbb852d2f33cddf793290a64aee564cd46ad80ef6c51766ad05dfeb801ac7227",
-         intel: "abc7ca1ba7f2a91e51af716ad0a1a785a798f7bb7100841dfdb775895919f508"
+  version "0.11.2"
+  sha256 arm:   "c5ab54d387386f568b400c03d6918a7a99232de828e29f6eb36c79d86f435fa8",
+         intel: "20a858631ae85ed1250e7a3afabe3ac09ec17375adf48d50d37157855ca5fcc3"
 
   url "https://github.com/gephi/gephi/releases/download/v#{version}/gephi-#{version}-macos-#{arch}.dmg",
       verified: "github.com/gephi/gephi/"
@@ -11,7 +11,7 @@ cask "gephi" do
   desc "Open-source platform for visualizing and manipulating large graphs"
   homepage "https://gephi.org/"
 
-  depends_on :macos
+  depends_on macos: ">= :big_sur"
 
   app "Gephi.app"
 
