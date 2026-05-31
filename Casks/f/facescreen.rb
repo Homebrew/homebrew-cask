@@ -5,7 +5,7 @@ cask "facescreen" do
   url "https://rampatra.github.io/facescreen-updates/FaceScreen-#{version}.dmg",
       verified: "rampatra.github.io/facescreen-updates/"
   name "FaceScreen"
-  desc "App to show your face and brand on screen"
+  desc "Camera and text overlay for presentations and screen sharing"
   homepage "https://facescreenapp.com/"
 
   livecheck do
