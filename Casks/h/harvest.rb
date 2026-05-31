@@ -1,13 +1,21 @@
 cask "harvest" do
-  version :latest
-  sha256 :no_check
+  version "3.0.5"
+  sha256 "b4f58c4391b34c67affd9c94ac7ca2d8e0a5ee5ced8a058ecd033c57b09e4998"
 
-  url "https://downloads.harvestfiles.com/harvest-desktop/darwin/universal/Harvest-latest.zip",
+  url "https://downloads.harvestfiles.com/harvest-desktop/darwin/universal/Harvest-darwin-universal-#{version}.zip",
       verified: "downloads.harvestfiles.com/harvest-desktop/"
   name "Harvest"
   desc "Time tracking application"
   homepage "https://www.getharvest.com/apps/mac"
 
+  livecheck do
+    url "https://downloads.harvestfiles.com/harvest-desktop/darwin/universal/RELEASES.json"
+    strategy :json do |json|
+      json["currentRelease"]
+    end
+  end
+
+  auto_updates true
   depends_on macos: :big_sur
 
   app "Harvest.app"
