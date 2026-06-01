@@ -9,11 +9,6 @@ cask "font-xiaolai" do
   name "Kose Font"
   homepage "https://github.com/lxgw/kose-font"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   font "Xiaolai-Regular.ttf"
 
   # No zap stanza required
