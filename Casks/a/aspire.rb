@@ -25,5 +25,5 @@ cask "aspire" do
     File.write("#{staged_path}/.aspire-install.json", %Q({"source":"brew"}\n))
   end
 
-  # No zap stanza required
+  zap trash: "~/.aspire"
 end
