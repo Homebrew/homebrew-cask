@@ -1,5 +1,5 @@
 cask "speechify-ai-assistant" do
-  version "3.3.0"
+  version "3.4.0"
   sha256 :no_check
 
   url "https://storage.googleapis.com/speechifymobile.appspot.com/macAgentSparkle/SpeechifyVoiceAssistant.dmg",
