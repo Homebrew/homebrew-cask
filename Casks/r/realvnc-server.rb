@@ -17,7 +17,7 @@ cask "realvnc-server" do
   pkg "VNC-Server-#{version}-MacOSX-universal.pkg"
 
   uninstall early_script: {
-    executable: "/Applications/RealVNC/Uninstall RealVNC Server.app/Contents/MacOS/Resources/uninstaller.sh",
+    executable: "/Applications/RealVNC/Uninstall RealVNC Server.app/Contents/Resources/uninstaller.sh",
     sudo:       true,
   }, launchctl: [
        "com.realvnc.vncagent.peruser",
