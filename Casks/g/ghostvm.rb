@@ -19,8 +19,10 @@ cask "ghostvm" do
   app "GhostVM.app"
 
   zap trash: [
+    "/Library/Logs/DiagnosticReports/GhostVM_*.diag",
     "~/Library/Application Support/GhostVM",
     "~/Library/Application Support/org.ghostvm.GhostVM",
+    "~/Library/Caches/org.ghostvm.ghostvm",
     "~/Library/HTTPStorages/org.ghostvm.ghostvm",
     "~/Library/Preferences/org.ghostvm.ghostvm.helper.plist",
     "~/Library/Preferences/org.ghostvm.ghostvm.plist",
