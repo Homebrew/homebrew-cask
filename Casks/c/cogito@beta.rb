@@ -2,8 +2,7 @@ cask "cogito@beta" do
   version "0.12.3,1"
   sha256 "f1b07d2cb34f0aad38e9b4a110c4f8cada9722f75631cbe47750c3be94025ebd"
 
-  url "https://downloads.cogito.md/releases/#{version.csv.first}/#{version.csv.second}/Cogito-#{version.csv.first}-#{version.csv.second}-mac.zip",
-      verified: "downloads.cogito.md/"
+  url "https://downloads.cogito.md/releases/#{version.csv.first}/#{version.csv.second}/Cogito-#{version.csv.first}-#{version.csv.second}-mac.zip"
   name "Cogito"
   desc "Native Markdown editor for folder-first notes"
   homepage "https://cogito.md/"
