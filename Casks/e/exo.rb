@@ -24,13 +24,13 @@ cask "exo" do
               "/Library/Application Support/EXO/disable_bridge.sh",
               "/Library/Application Support/EXO/disable_bridge_enable_dhcp.sh",
               "/Library/LaunchDaemons/io.exo.networksetup.plist",
-              "/var/log/io.exo.networksetup.err.log",
-              "/var/log/io.exo.networksetup.log",
             ],
-            rmdir:     "/Library/Application Support/EXO"
+            rmdir:     [
+              "/Library/Application Support/EXO",
+              "~/exo",
+            ]
 
   zap trash: [
-    "~/.exo",
     "~/Library/Application Support/exolabs.EXO",
     "~/Library/Caches/exolabs.EXO",
     "~/Library/HTTPStorages/exolabs.EXO",
