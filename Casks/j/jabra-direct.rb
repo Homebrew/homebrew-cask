@@ -46,8 +46,4 @@ cask "jabra-direct" do
     "~/Library/Preferences/com.jabra.prefsettings.plist",
     "~/Library/Saved Application State/com.jabra.directonline.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
