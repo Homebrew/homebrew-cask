@@ -13,7 +13,7 @@ cask "netbeans" do
 
   livecheck do
     url :url
-    regex(%r{/download/(nb\d+(?:-zulu\d+)?)/Apache-NetBeans-(\d+(?:\.\d+)*)-(zulu-\d+)-#{arch}\.pkg}i)
+    regex(%r{/download/(nb\d+(?:-zulu-?\d+)?)/Apache-NetBeans[._-]v?(\d+(?:\.\d+)*)[._-](zulu-?v?\d+(?:\.\d+)*)-#{arch}\.pkg}i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["browser_download_url"]&.match(regex)
