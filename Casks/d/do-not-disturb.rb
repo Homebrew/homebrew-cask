@@ -1,6 +1,6 @@
 cask "do-not-disturb" do
-  version "2.0.0"
-  sha256 "3ea3b66705e2a373c734435981e74908361cfcd0957591d9e0aa8ac94df2cf2f"
+  version "2.1.0"
+  sha256 "af4a0e55d20ff5a28b5c91a9517f70bdba77c182174c24a93d234347e2885da1"
 
   url "https://github.com/objective-see/DoNotDisturb/releases/download/v#{version}/DoNotDisturb_#{version}.zip",
       verified: "github.com/objective-see/DoNotDisturb/"
