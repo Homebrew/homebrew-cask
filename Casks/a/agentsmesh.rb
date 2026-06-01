@@ -1,5 +1,5 @@
 cask "agentsmesh" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "0.39.0"
   sha256 arm:   "1df93b1dad1167b64b2c996c23f589182ae3bbba44c8e6901b4f3eef27494b36",
@@ -21,11 +21,11 @@ cask "agentsmesh" do
   app "AgentsMesh.app"
 
   zap trash: [
-    "~/Library/Application Support/AgentsMesh",
+    "~/Library/Application Support/agentsmesh",
     "~/Library/Caches/agentsmesh-updater",
     "~/Library/Caches/ai.agentsmesh.desktop",
     "~/Library/HTTPStorages/ai.agentsmesh.desktop",
-    "~/Library/Logs/AgentsMesh",
+    "~/Library/Logs/agentsmesh",
     "~/Library/Preferences/ai.agentsmesh.desktop.plist",
     "~/Library/Saved Application State/ai.agentsmesh.desktop.savedState",
   ]
