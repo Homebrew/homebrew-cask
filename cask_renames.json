@@ -203,6 +203,8 @@
   "vapor": "vapor-app",
   "vivid": "vivid-app",
   "vmware-horizon-client": "omnissa-horizon-client",
+  "vnc-server": "realvnc-server",
+  "vnc-viewer": "realvnc-connect-viewer",
   "volt": "volt-app",
   "volta": "volta-app",
   "widelands": "widelands-app",
