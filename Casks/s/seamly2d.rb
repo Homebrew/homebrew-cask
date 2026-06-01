@@ -1,6 +1,6 @@
 cask "seamly2d" do
-  version "2026.5.25.216"
-  sha256 "21b5f53c8aeb8c67c5f34970c1ee632ab3a7dc814bf86ccdb90dfcba6082502c"
+  version "2026.6.1.216"
+  sha256 "b7833e8debca7d0153ea09196cc78196ac7c9066ccc53122fb9b959dd69e8752"
 
   url "https://github.com/FashionFreedom/Seamly2D/releases/download/v#{version}/Seamly2D-macos.zip",
       verified: "github.com/FashionFreedom/Seamly2D/"
