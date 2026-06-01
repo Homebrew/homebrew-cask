@@ -22,8 +22,11 @@ cask "cogito@beta" do
   app "Cogito.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.cogito.app.quicklook",
     "~/Library/Application Support/Cogito",
+    "~/Library/Application Support/com.cogito.app",
     "~/Library/Caches/com.cogito.app",
+    "~/Library/Containers/com.cogito.app.quicklook",
     "~/Library/HTTPStorages/com.cogito.app",
     "~/Library/Preferences/com.cogito.app.plist",
     "~/Library/Saved Application State/com.cogito.app.savedState",
