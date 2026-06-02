@@ -2,9 +2,9 @@ cask "typeless" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "latest"
 
-  version "1.5.1"
-  sha256 arm:   "b2d6bc74c4df2f636a026771bcf578266f3052fbf4bbbede5a9d05d528ca7648",
-         intel: "99a61743e273be6e2d8eb43f656f44d28369dd586c98bbea3a86938e0873941a"
+  version "1.6.0"
+  sha256 arm:   "cf46cdc857e32ce514c5c37c67b7d2b82b75ebcd86dc5e329a63c2c90ad7dd9c",
+         intel: "f68ed5d82bdd2d55e469724f4026cd35c271e171d4312f737070bb128f64ff01"
 
   url "https://typeless-static.com/desktop-release/Typeless-#{version}-#{arch}.dmg",
       verified: "typeless-static.com/"
