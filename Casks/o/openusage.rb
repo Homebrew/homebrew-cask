@@ -1,9 +1,9 @@
 cask "openusage" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.6.24"
-  sha256 arm:   "9ffe147fd5c3e08c9c066a149a5b5aeeddcb56983a346cd7af8db87aecc48542",
-         intel: "77aa971d8b8c3d1671c12f9e216cb2a4a24b86780a7a7f44cf555189da3b6550"
+  version "0.6.25"
+  sha256 arm:   "72c1908c16a0659f1ea709dba279e718edb1d05bc0c6f286219c32d6fc959e72",
+         intel: "6ce2fa4631249d63a4d8fb725fd8d081e4cfa2abd9f3bfa8c9cbda19da58c669"
 
   url "https://github.com/robinebers/openusage/releases/download/v#{version}/OpenUsage_#{version}_#{arch}.dmg",
       verified: "github.com/robinebers/openusage/"
