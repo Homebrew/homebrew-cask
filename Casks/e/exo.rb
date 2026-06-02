@@ -27,7 +27,7 @@ cask "exo" do
             ],
             rmdir:     [
               "/Library/Application Support/EXO",
-              "~/exo",
+              "~/.exo",
             ]
 
   zap trash: [
