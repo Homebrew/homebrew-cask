@@ -28,7 +28,10 @@ cask "cogito@beta" do
     "~/Library/Caches/com.cogito.app",
     "~/Library/Containers/com.cogito.app.quicklook",
     "~/Library/HTTPStorages/com.cogito.app",
+    "~/Library/HTTPStorages/com.cogito.app.binarycookies",
     "~/Library/Preferences/com.cogito.app.plist",
+    "~/Library/Preferences/com.telemetrydeck.4dfea52a4025.plist",
     "~/Library/Saved Application State/com.cogito.app.savedState",
+    "~/Library/WebKit/com.cogito.app",
   ]
 end
