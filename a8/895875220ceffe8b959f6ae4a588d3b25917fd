@@ -1,0 +1,14 @@
+Casks/r/rectangle-pro.rb
+  h_9df9c32c3f321d 16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "a8895875220ceffe8b959f6ae4a588d3b25917fd",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
