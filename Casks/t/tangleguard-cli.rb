@@ -23,5 +23,7 @@ cask "tangleguard-cli" do
 
   binary "tangleguard-cli"
 
-  zap trash: "~/Library/Application Support/CrashReporter/tangleguard-cli*"
+  on_macos do
+    zap trash: "~/Library/Application Support/CrashReporter/tangleguard-cli*"
+  end
 end
