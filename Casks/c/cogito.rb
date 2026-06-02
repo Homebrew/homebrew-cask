@@ -1,4 +1,4 @@
-cask "cogito@beta" do
+cask "cogito" do
   version "0.12.3,1"
   sha256 "f1b07d2cb34f0aad38e9b4a110c4f8cada9722f75631cbe47750c3be94025ebd"
 
