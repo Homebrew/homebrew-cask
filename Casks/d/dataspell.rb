@@ -23,7 +23,7 @@ cask "dataspell" do
     end
   end
 
-	# see https://blog.jetbrains.com/dataspell/2026/05/the-upcoming-sunset-of-dataspell/
+  # see https://blog.jetbrains.com/dataspell/2026/05/the-upcoming-sunset-of-dataspell/
   deprecate! date: "2026-06-02", because: :discontinued, replacement_cask: "pycharm"
   disable! date: "2026-09-01", because: :discontinued, replacement_cask: "pycharm"
 
