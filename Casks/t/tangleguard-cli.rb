@@ -19,8 +19,6 @@ cask "tangleguard-cli" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on :macos
-
   binary "tangleguard-cli"
 
   on_macos do
