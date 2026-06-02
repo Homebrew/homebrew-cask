@@ -16,7 +16,7 @@ cask "speechify-ai-assistant" do
   auto_updates true
   depends_on macos: :sonoma
 
-  app "Speechify AI Assistant.app"
+  app "Speechify Voice AI.app"
 
   zap trash: [
     "~/Library/Application Support/com.cliffweitzman.speechifymacagent",
