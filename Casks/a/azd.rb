@@ -21,9 +21,6 @@ cask "azd" do
     strategy :github_latest
   end
 
-  conflicts_with cask:    "azd@daily",
-                 formula: "azure-dev"
-
   binary "azd-#{os}-#{arch}", target: "azd"
 
   postflight do
