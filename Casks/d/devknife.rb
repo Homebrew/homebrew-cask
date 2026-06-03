@@ -1,6 +1,6 @@
 cask "devknife" do
-  version "1.15.0"
-  sha256 "7ad1cc7af8caf2b5c62515a5f586f9fa8be566306092a97afcb3fecff2e628d5"
+  version "1.15.1"
+  sha256 "971b784ecd600c0db5dba30910f1fca398dd75166b8d3f51b3ff7acd8ca6baa4"
 
   url "https://files.solotuna.com/devknife/DevKnife-#{version}.dmg",
       verified: "files.solotuna.com/devknife/"
