@@ -1,6 +1,6 @@
 cask "intiface-central" do
-  version "3.0.4,40"
-  sha256 "d770e20a0194abef13b744854ac30b8251ee6e336f40af45ac498146741e450c"
+  version "3.1.0,42"
+  sha256 "c57e37d3000531889a87ca2027244ccbae070fd2e1096e6bd25532197c42f454"
 
   url "https://github.com/intiface/intiface-central/releases/download/v#{version.csv.first}#{"%2B#{version.csv.second}" if version.csv.second}/intiface-central-v#{version.csv.first}-macos-universal.dmg"
   name "Intiface Central"
@@ -17,8 +17,6 @@ cask "intiface-central" do
       match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: :big_sur
 
