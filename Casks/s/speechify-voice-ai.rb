@@ -1,4 +1,4 @@
-cask "speechify-ai-assistant" do
+cask "speechify-voice-ai" do
   version "3.4.0"
   sha256 :no_check
 
