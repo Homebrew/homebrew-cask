@@ -8,4 +8,9 @@ cask "uad-ng" do
   homepage "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation"
 
   binary "uad-ng-macos", target: "uad-ng"
+
+  zap trash: [
+  "~/Library/Caches/uad",
+  "~/Library/Application Support/uad",
+]
 end
