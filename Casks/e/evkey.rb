@@ -17,7 +17,7 @@ cask "evkey" do
 
   depends_on :macos
 
-  app "EVKey.app"
+  app "EVKeyMac.app"
 
   zap trash: [
     "~/Library/Containers/com.lamquangminh.evkey",
