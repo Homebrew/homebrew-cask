@@ -1,9 +1,9 @@
 cask "iaito" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.1.4"
-  sha256 arm:   "6ff74d592754b31c0d2845b072edd9ea0eb55dd558c97660b772b0e4f0fcb2b4",
-         intel: "4ff55b25f9a8795735b987395cb5cd5d0f2d0b8e7009e35b5adea057ec5a3ccb"
+  version "6.1.6"
+  sha256 arm:   "c1988288127d887baa6758b0b1e34232dda4238bad627d30f80cc059538ee794",
+         intel: "aeb31232955c32554cf422da1fc3132801cf1c5ee282b8a1f22516494b8c1452"
 
   url "https://github.com/radareorg/iaito/releases/download/#{version}/iaito_#{version}_#{arch}.dmg",
       verified: "github.com/radareorg/iaito/"
