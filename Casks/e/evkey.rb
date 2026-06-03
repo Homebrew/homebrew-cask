@@ -15,7 +15,7 @@ cask "evkey" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "EVKeyMac.app"
 
@@ -23,4 +23,8 @@ cask "evkey" do
     "~/Library/Containers/com.lamquangminh.evkey",
     "~/Library/Containers/com.lamquangminh.evkeyhelper",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
