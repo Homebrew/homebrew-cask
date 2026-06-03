@@ -207,6 +207,8 @@
   "volt": "volt-app",
   "volta": "volta-app",
   "widelands": "widelands-app",
+  "windsurf": "devin-desktop",
+  "windsurf@next": "devin-desktop@next",
   "wireshark": "wireshark-app",
   "xcodes": "xcodes-app",
   "xournal-plus-plus": "xournal++",
