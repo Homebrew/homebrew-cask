@@ -17,7 +17,7 @@ cask "google-chrome@canary" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :monterey
 
   app "Google Chrome Canary.app"
 
