@@ -1,21 +1,18 @@
 cask "cleanmymac" do
-  version "5.3.1,50301.0.2601271414,1769524551"
-  sha256 "8b847a21f919b41598fc135f21134ccca7c5c78dea4bcdfd99687eb65455f38a"
+  version "5.5.4,50504.0.2605191427"
+  sha256 "4581b2e6d0a7c1203ea68aecf4c6e0e57fa2c224ebe6653b50afae19afe2c464"
 
-  url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.csv.second}/#{version.csv.third}/CleanMyMac#{version.major}-#{version.csv.second}.zip",
-      verified: "dl.devmate.com/"
+  url "https://updates.cleanmymac.com/com.macpaw.cleanmymac#{version.major}/releases/CleanMyMac#{version.major}_#{version.csv.second}.zip",
+      verified: "updates.cleanmymac.com/"
   name "CleanMyMac"
   desc "Tool to remove unnecessary files and folders from disk"
   homepage "https://macpaw.com/cleanmymac"
 
   livecheck do
-    url "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml"
+    url "https://updates.cleanmymac.com/com.macpaw.cleanmymac#{version.major}/updates.xml"
     regex(%r{/([^/]+)/CleanMyMac#{version.major}[._-]v?(?:\d+(?:\.\d+)+)\.zip}i)
-    strategy :sparkle do |item, regex|
-      directory = item.url[regex, 1]
-      next if directory.blank?
-
-      "#{item.short_version},#{item.version},#{directory}"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}"
     end
   end
 
