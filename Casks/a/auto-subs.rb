@@ -1,9 +1,9 @@
 cask "auto-subs" do
   arch arm: "ARM", intel: "Intel"
 
-  version "3.6.0"
-  sha256 arm:   "61e2917f7ade604d2d07f37ddcbedf7313a132ddc9d5800f01d85faed70974b6",
-         intel: "889e8812f72a5fccc8acdab157750cba06b39b8dfa9fb25efcbcd38bdd562186"
+  version "3.6.1"
+  sha256 arm:   "6142bf05eb56eb0d0246a31c08fb25e726fb93bca427f71d94e9fee083b52eeb",
+         intel: "ccd1022a7b0707e4bfc4b61552918e16aee4fbe55f05e45c83fb3c24d97f1a11"
 
   url "https://github.com/tmoroney/auto-subs/releases/download/v#{version}/AutoSubs-Mac-#{arch}.pkg"
   name "AutoSubs"
