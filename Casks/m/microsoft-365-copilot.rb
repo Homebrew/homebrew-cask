@@ -20,7 +20,8 @@ cask "microsoft-365-copilot" do
 
   pkg "Microsoft_365_Copilot_universal_#{version}_Installer.pkg"
 
-  uninstall pkgutil: "com.microsoft.m365copilot"
+  uninstall quit:    "com.microsoft.autoupdate2",
+            pkgutil: "com.microsoft.m365copilot"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.m365copilot",
