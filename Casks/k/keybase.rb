@@ -4,10 +4,10 @@ cask "keybase" do
   sha256 :no_check
 
   on_arm do
-    version "6.6.2,20260408133959,70cbb6ec7c"
+    version "6.6.3,20260603142618,f60f2ff97e"
   end
   on_intel do
-    version "6.6.2,20260408132313,70cbb6ec7c"
+    version "6.6.3,20260603140308,f60f2ff97e"
   end
 
   url "https://prerelease.keybase.io/Keybase#{arch}.dmg"
