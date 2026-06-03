@@ -6,7 +6,7 @@ cask "microsoft-365-copilot" do
       verified: "res.cdn.office.net/"
   name "Microsoft 365 Copilot"
   desc "AI-first productivity assistant for Microsoft 365"
-  homepage "https://www.microsoft.com/en-us/microsoft-365/copilot-app"
+  homepage "https://www.microsoft.com/en-us/microsoft-365-copilot/download-copilot-app"
 
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=2325438"
@@ -16,6 +16,7 @@ cask "microsoft-365-copilot" do
 
   auto_updates true
   depends_on macos: :sonoma
+  depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_365_Copilot_universal_#{version}_Installer.pkg"
 
