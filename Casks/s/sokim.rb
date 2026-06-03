@@ -1,6 +1,6 @@
 cask "sokim" do
-  version "1.3.2"
-  sha256 "fcbb30d00f5a889738ad57530f70e855fb794aeac907648089cf6b0679933531"
+  version "1.3.3"
+  sha256 "3d829fc50cce1d5d46e2b9d38388012b2fa0d91dcd91ee57321a14312e4afef2"
 
   url "https://github.com/kiding/SokIM/releases/download/v#{version}/SokIM.pkg"
   name "SokIM"
