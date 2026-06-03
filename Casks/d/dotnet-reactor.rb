@@ -8,10 +8,18 @@ cask "dotnet-reactor" do
   homepage "https://www.eziriz.com/dotnet_reactor.htm"
 
   livecheck do
-    url "https://www.eziriz.com/reactor_history.htm"
-    regex(/\b(\d+(?:\.\d+){3})\b/)
+    url "https://www.eziriz.com/reactor_download.htm"
+    regex(/href=.*?dotnet[._-]reactor[._-]v?(\d+(?:[._]\d+)+)[._-]macos/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
+    end
   end
 
   binary "dotNET_Reactor"
   binary "dotNET_Reactor.Console"
+
+  zap trash: [
+    "~/Library/Application Support/Eziriz/.NET Reactor",
+    "~/Library/Preferences/dotNET_Reactor.plist",
+  ]
 end
