@@ -7,11 +7,9 @@ cask "ailernhub" do
   desc "LLM course learning platform with in-browser Python execution"
   homepage "https://github.com/ArronAI007/AILearnHub"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "AILearnHub.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.ailernhub.app.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.ailernhub.app.plist"
 end
