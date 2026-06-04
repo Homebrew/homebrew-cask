@@ -1,9 +1,9 @@
 cask "rubymine" do
   arch arm: "-aarch64"
 
-  version "2026.1.2,261.24374.145"
-  sha256 arm:   "3449a9b37c316a8f5c6f6c206e62277573ecefc4e6a276b8c02f7ef0306fedc2",
-         intel: "2966f2b123d51ccd014b4f6b9ed0fbf22f01b8fdefdbace16bc19ab45319b60d"
+  version "2026.1.3,261.25134.97"
+  sha256 arm:   "96a6b72feac18841ff84f98571ebd606e9afbf2041ce8511dedb6f03cb34b93d",
+         intel: "523a703025e123e6cc3afcb211b441a0d5b7186083a62eda17a854c5f7d6fe1d"
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.csv.first}#{arch}.dmg"
   name "RubyMine"
