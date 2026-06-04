@@ -1,6 +1,6 @@
 cask "hhkb" do
-  version "2.0.0"
-  sha256 "7da232553ac6d256002ba71a6babfd1ff3fa5f95d71887d41e14e0f07e205241"
+  version "2.0.1"
+  sha256 "c0e57922fc972f1d8ab6f317d8f4e9cffc25f51b2aad1f78fbf187f968f1af5a"
 
   url "https://origin.pfultd.com/downloads/hhkb/mac/HHKBkeymapTool_#{version.no_dots}ma.dmg",
       verified: "origin.pfultd.com/downloads/hhkb/mac/"
