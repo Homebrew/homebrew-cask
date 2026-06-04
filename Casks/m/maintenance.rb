@@ -40,7 +40,7 @@ cask "maintenance" do
     url "https://www.titanium-software.fr/download/15/Maintenance.dmg"
   end
   on_tahoe :or_newer do
-    version "3.5.0"
+    version "3.5.1"
 
     url "https://www.titanium-software.fr/download/26/Maintenance.dmg"
 
