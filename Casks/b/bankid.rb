@@ -8,8 +8,7 @@ cask "bankid" do
   homepage "https://install.bankid.com/"
 
   livecheck do
-    url "https://install.bankid.com/api/file-download/Mac"
-    strategy :extract_plist
+    skip "Cannot be fetched due to Microsoft validate perfdrive protections"
   end
 
   depends_on :macos
