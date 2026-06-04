@@ -1,6 +1,6 @@
 cask "nessie-app" do
-  version "1.4.840"
-  sha256 "c2fcc789bb2afb80fb8e10eb7a74ab3c4c3c54f40212db5dc09fd2fadc7bec2d"
+  version "1.4.845"
+  sha256 "ef383dc592d3e741e0ff099039f0441d2d0f0902b2feb4720763ba61e17a6a8d"
 
   url "https://nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/Nessie_#{version}.zip",
       verified: "nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/"
