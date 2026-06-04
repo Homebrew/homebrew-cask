@@ -1,6 +1,6 @@
 cask "gitfox" do
-  version "4.2.0,11427"
-  sha256 "f81ef066b89970e392df575a5263df31906bc71b89c104e7d65f434264e6e9f6"
+  version "4.3.1,11509"
+  sha256 "d6af153ad480524c369d4876600924961696dfc94851c0077254c15f146fddb7"
 
   url "https://update.gitfox.app/builds/retail/#{version.csv.second}/Gitfox.#{version.csv.second}.zip"
   name "Gitfox"
