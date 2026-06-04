@@ -12,7 +12,6 @@ cask "font-geist-mono" do
     strategy :github_latest
   end
 
-
   font "geist-font/GeistMono/otf/GeistMono-Black.otf"
   font "geist-font/GeistMono/otf/GeistMono-BlackItalic.otf"
   font "geist-font/GeistMono/otf/GeistMono-Bold.otf"
