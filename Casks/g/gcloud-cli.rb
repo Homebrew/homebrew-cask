@@ -21,11 +21,11 @@ cask "gcloud-cli" do
   auto_updates true
 
   on_macos do
-    depends_on formula: "python@3.13"
+    depends_on formula: "python@3.14"
   end
   on_linux do
     on_arm do
-      depends_on formula: "python@3.13"
+      depends_on formula: "python@3.14"
     end
   end
 
@@ -69,7 +69,7 @@ cask "gcloud-cli" do
     end
 
     if OS.mac?
-      ENV["CLOUDSDK_PYTHON"] = "#{HOMEBREW_PREFIX}/opt/python@3.13/libexec/bin/python"
+      ENV["CLOUDSDK_PYTHON"] = "#{HOMEBREW_PREFIX}/opt/python@3.14/libexec/bin/python"
       # Install required external dependencies via virtualenv
       if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
         puts "deleting existing virtual env before enabling virtual env with current Python version"
@@ -79,7 +79,7 @@ cask "gcloud-cli" do
       end
       system_command  "#{google_cloud_sdk_root}/bin/gcloud",
                       args:      ["config", "virtualenv", "create", "--python-to-use",
-                                  "#{HOMEBREW_PREFIX}/opt/python@3.13/libexec/bin/python"],
+                                  "#{HOMEBREW_PREFIX}/opt/python@3.14/libexec/bin/python"],
                       reset_uid: true
       system_command  "#{google_cloud_sdk_root}/bin/gcloud",
                       args:      ["config", "virtualenv", "enable"],
