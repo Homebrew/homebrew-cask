@@ -1,9 +1,9 @@
 cask "orbstack" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.2.0,20607"
-  sha256 arm:   "43b77bc05af716676e774f40e58ce540c2a91d467dbe51e18facad7f4c0f3ea3",
-         intel: "57b33ca9dffa01f8a22b548cd77f855d5a9b0ef7536b86bfc6e0779c1c64e30d"
+  version "2.2.1,20628"
+  sha256 arm:   "5bc1719c3c987c4c60c65be9fdd65b4730990e1697ec1cb1c33e6bba31bf92b5",
+         intel: "f30a15811104a494fe206695b1ab21fcfaee12ec9efbcba129a0034ebb68319b"
 
   url "https://cdn-updates.orbstack.dev/#{arch}/OrbStack_v#{version.csv.first}_#{version.csv.second}_#{arch}.dmg"
   name "OrbStack"
