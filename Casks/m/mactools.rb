@@ -1,6 +1,6 @@
 cask "mactools" do
-  version "1.0.15"
-  sha256 "6a57eaa2cb30299079060e1cba30e828b7a5e0670b3c3d15c0825a347fb92e14"
+  version "1.0.16"
+  sha256 "d6706cc5c80dab84e05a9206d62fd32e7d35064e394b965e7391e5dfd9d88a8b"
 
   url "https://github.com/ggbond268/MacTools/releases/download/v#{version}/MacTools.dmg"
   name "MacTools"
