@@ -1,6 +1,6 @@
 cask "sensei" do
-  version "2.0.2,127"
-  sha256 "9074c6060eeee00b6997932865df17407e72d85d5a8103bd63012efa1db83740"
+  version "2.1,131"
+  sha256 "2d8d68f136b8ee14ffbd3e57f170566eefda36ff88ae848069b268a8b5486e7d"
 
   url "https://cdn.cindori.com/apps/sensei/updates/#{version.csv.first}-#{version.csv.second}/Sensei.dmg"
   name "Sensei"
