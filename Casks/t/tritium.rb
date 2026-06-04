@@ -1,9 +1,9 @@
 cask "tritium" do
   arch arm: "arm64", intel: "x86"
 
-  version "0.2.42"
-  sha256 arm:   "19c3cdf4943f2ab04d4fcbc68a2371861773d028fa9d9b1605c01705937710c6",
-         intel: "a4f545cb7e0cb5ab586d79feaed892a4db1051f035bae2aab179603b84cff701"
+  version "0.2.43"
+  sha256 arm:   "0d64b74cebb03e9033ca1d670b5084f95c3c3f2f066524f435daa5535aefc59e",
+         intel: "0be66ee58cb27674c9f184f5f440949bc9182e21255a3025096452c98536f773"
 
   url "https://tritium.legal/static/releases/tritium-macos-#{arch}.#{version}.zip"
   name "Tritium"
