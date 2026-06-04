@@ -22,7 +22,7 @@ cask "mindmanager" do
 
   zap trash: [
     "~/Library/Application Support/Mindjet",
-    "~/Library/Caches/com.mindjet.mindmanager.25",
-    "~/Library/Preferences/com.mindjet.mindmanager.25.plist",
+    "~/Library/Caches/com.mindjet.mindmanager.*",
+    "~/Library/Preferences/com.mindjet.mindmanager.*.plist",
   ]
 end
