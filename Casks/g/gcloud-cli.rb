@@ -21,11 +21,11 @@ cask "gcloud-cli" do
   auto_updates true
 
   on_macos do
-    depends_on formula: "python@3.13"
+    depends_on formula: "python@3.14"
   end
   on_linux do
     on_arm do
-      depends_on formula: "python@3.13"
+      depends_on formula: "python@3.14"
     end
   end
 
