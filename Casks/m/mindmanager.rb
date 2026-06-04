@@ -10,7 +10,6 @@ cask "mindmanager" do
 
   livecheck do
     url "https://www.mindmanager.com/mm-mac-dmg"
-    regex(/MindManager[._-]Mac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :header_match
   end
 
