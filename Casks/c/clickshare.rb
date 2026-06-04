@@ -10,7 +10,7 @@ cask "clickshare" do
   livecheck do
     url "https://assets.cloud.barco.com/clickshare/release/release.mac"
     strategy :json do |json|
-      json["version"].to_s.sub(/-?b/, ",")
+      json["version"].tr("-b", ",")
     end
   end
 
