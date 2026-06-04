@@ -16,7 +16,6 @@ cask "microsoft-365-copilot" do
 
   auto_updates true
   depends_on macos: :sonoma
-  depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_365_Copilot_universal_#{version}_Installer.pkg"
 
