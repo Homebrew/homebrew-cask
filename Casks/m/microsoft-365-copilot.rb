@@ -17,7 +17,14 @@ cask "microsoft-365-copilot" do
   auto_updates true
   depends_on macos: :sonoma
 
-  pkg "Microsoft_365_Copilot_universal_#{version}_Installer.pkg"
+  pkg "Microsoft_365_Copilot_universal_#{version}_Installer.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_all_autoupdate.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
 
   uninstall quit:    "com.microsoft.autoupdate2",
             pkgutil: "com.microsoft.m365copilot"
