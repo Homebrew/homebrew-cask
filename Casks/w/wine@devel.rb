@@ -1,6 +1,6 @@
 cask "wine@devel" do
-  version "11.9"
-  sha256 "e0ac24b3c525d7dd2c88e6447e94fa106fd05a581a178773f47c7a254d4f6296"
+  version "11.10"
+  sha256 "6d0637c3526fbe7051a5f8968dbde68fbc3ac417717648b9331c46642b52173b"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
