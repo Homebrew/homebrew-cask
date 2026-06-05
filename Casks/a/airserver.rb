@@ -1,6 +1,6 @@
 cask "airserver" do
-  version "7.3.2"
-  sha256 "fe614835ff275c91434d037f4bbde7309ea93e6eac7bb88c728da97a0841bb97"
+  version "7.3.3"
+  sha256 "e8a6ecd95e5ce8fa1ec92e6107c737e7c3c3ef5eaff6f32cadf1ffa7515faeb0"
 
   url "https://dl.airserver.com/mac/AirServer-#{version}.dmg"
   name "AirServer"
