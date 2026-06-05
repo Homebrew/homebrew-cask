@@ -2,12 +2,12 @@ cask "popo" do
   arch arm: "arm", intel: "intel"
 
   on_arm do
-    version "4.30.2,1778870327720"
-    sha256 "f5cfd26e71a12c4896bfddbb4f754e9f20bb0e365966b26ff0eb4f5e9f6880a8"
+    version "4.31.1,1780652264465"
+    sha256 "780097d980a3853ea2621225dfba2ab551363d6ab98d90f1a984ed57aaac73fc"
   end
   on_intel do
-    version "4.30.2,1778870136720"
-    sha256 "d74fbcef766df47a39262f346c026034a70e3fce077c73bcb42d3cdd08c85c4d"
+    version "4.31.1,1780652601286"
+    sha256 "fac76241f821780f688da8e7aab555ad2e14c4a07561aed68fd34529a18ef43f"
   end
 
   url "https://popo.netease.com/file/popomac/POPO-setup_#{version.csv.first}_#{arch}_prod_#{version.csv.second}.dmg"
