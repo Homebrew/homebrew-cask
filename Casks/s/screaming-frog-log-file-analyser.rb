@@ -1,9 +1,9 @@
 cask "screaming-frog-log-file-analyser" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "6.4"
-  sha256 arm:   "5420b56a7ba0b5ff3fdd5c6ad459c189d585f49102518fa86b0278d144ca4abc",
-         intel: "56d5efef845c263d73d438cdce0df7f5cd328cef82301b3bdc997607da22f06f"
+  version "7.0"
+  sha256 arm:   "83d16cfc97c2efebe6f2e085669486b241c0035f087c8e3e68bdbd657350deef",
+         intel: "fd645eb07b679e4eded107fca264383dc028e6fa8c5dbd54ec74b84d4caac085"
 
   url "https://download.screamingfrog.co.uk/products/log-file-analyser/ScreamingFrogLogFileAnalyser-#{version}-#{arch}.dmg"
   name "Screaming Frog Log File Analyser"
