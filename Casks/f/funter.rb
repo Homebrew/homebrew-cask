@@ -1,6 +1,6 @@
 cask "funter" do
-  version "7.1,366"
-  sha256 "56f516c28396fc5cb795f6fb4c639e40047e7df8d0a25b53c030a85998f2d727"
+  version "7.1.1,374"
+  sha256 "8a8f8784ef3042106ff1f776803d96682f079c175e21a63d8f42568205e1081c"
 
   url "https://download.nektony.com/download/funter/Funter.dmg?build=#{version.csv.second}"
   name "Funter"
@@ -12,7 +12,7 @@ cask "funter" do
     strategy :sparkle
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "Funter #{version.major}.app"
 
