@@ -1,9 +1,9 @@
 cask "labymod" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.0"
-  sha256 arm:   "46007c1321f259bd10a1cdc56251d2f2fae3451453562464c8ee625a0e5e0f97",
-         intel: "7eae4f1c1eeda91c547d072dfb18bc063605b40b0adc08483fa57a9de6444939"
+  version "3.0.3"
+  sha256 arm:   "2ba3657e22c6d6f5c97086f202b20114a1fa79406256036948d84c41bfe722c2",
+         intel: "b87ec981afd9581f22d99916ee9384ce2deedb918fffa144ed6fe2766117aedb"
 
   url "https://releases.r2.labymod.net/launcher/darwin/#{arch}/LabyMod%20Launcher-#{version}-#{arch}.dmg"
   name "LabyMod Launcher"
@@ -19,7 +19,7 @@ cask "labymod" do
 
   depends_on macos: :catalina
 
-  app "LabyMod Launcher.app"
+  app "Laby Launcher.app"
 
   zap trash: [
     "~/Library/Application Support/LabyMod Launcher",
