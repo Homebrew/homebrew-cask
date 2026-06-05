@@ -1,6 +1,6 @@
 cask "meetily" do
-  version "0.3.0"
-  sha256 "84f17516418745997125e14e8455a2fdc4d87badd51806b24f3370599323c52f"
+  version "0.4.0"
+  sha256 "a38eab454a8dd3b3e0956f24915564e5bc08222dcf007342446f916f51caa728"
 
   url "https://github.com/Zackriya-Solutions/meetily/releases/download/v#{version}/meetily_#{version}_aarch64.dmg",
       verified: "github.com/Zackriya-Solutions/meetily/"
