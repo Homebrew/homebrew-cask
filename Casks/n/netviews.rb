@@ -7,6 +7,11 @@ cask "netviews" do
   desc "Network and Wi-Fi diagnostic tool"
   homepage "https://www.netviews.app/"
 
+  livecheck do
+    url "https://www.netviews.app/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
   depends_on macos: :sonoma
 
