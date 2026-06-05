@@ -1,5 +1,5 @@
-cask "speechify-ai-assistant" do
-  version "3.3.0"
+cask "speechify-voice-ai" do
+  version "3.4.0"
   sha256 :no_check
 
   url "https://storage.googleapis.com/speechifymobile.appspot.com/macAgentSparkle/SpeechifyVoiceAssistant.dmg",
@@ -16,7 +16,7 @@ cask "speechify-ai-assistant" do
   auto_updates true
   depends_on macos: :sonoma
 
-  app "Speechify AI Assistant.app"
+  app "Speechify Voice AI.app"
 
   zap trash: [
     "~/Library/Application Support/com.cliffweitzman.speechifymacagent",
