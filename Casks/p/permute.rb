@@ -23,6 +23,7 @@ cask "permute" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Permute #{version.major}.app"
 
