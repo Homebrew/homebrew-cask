@@ -1,9 +1,9 @@
 cask "folo" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.7.0"
-  sha256 arm:   "739f103a22b5b4e0032f507112650b455c7edd04d17fa543cfa04e18b8a56e40",
-         intel: "c5c0568e7ce8dd7085f3a8184f362672a60ff69e23976281f1fc08a7ac4e378d"
+  version "1.9.0"
+  sha256 arm:   "13123bdb17a8b2e59448085f0c2f3927d9158e748ae421064d5b87bca70076f6",
+         intel: "8b7b48ceda9dc6d6ec388926f6eee5773b357f6a53338f7a691d349621e76be0"
 
   url "https://github.com/RSSNext/Folo/releases/download/desktop%2Fv#{version}/Folo-#{version}-macos-#{arch}.dmg",
       verified: "github.com/RSSNext/Folo/"
@@ -13,8 +13,7 @@ cask "folo" do
 
   livecheck do
     url :url
-    regex(%r{^(?:desktop[/@])?v?(\d+(?:\.\d+)+(?:[._-]beta[._-]?\d+)?)$}i)
-    strategy :github_latest
+    regex(%r{^(?:desktop[/@])?v?(\d+(?:\.\d+)+)$}i)
   end
 
   auto_updates true

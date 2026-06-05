@@ -15,9 +15,9 @@ cask "quakespasm" do
 
   suite "QuakeSpasm"
 
-  preflight do
+  preflight_steps do
     # There is no sub-folder; the root *is* the folder
-    FileUtils.mv(staged_path.children, staged_path.join("QuakeSpasm").tap(&:mkpath))
+    move_children ".", "QuakeSpasm"
   end
 
   caveats <<~EOS

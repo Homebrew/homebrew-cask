@@ -1,6 +1,6 @@
 cask "cadreader" do
-  version "5.2.1.13"
-  sha256 "df61dd2d344a9c80a1ea54918f34c8019e2121d8ab09eec3857dedec61936e46"
+  version "5.2.2.14"
+  sha256 "3f1d78aca7aa121936b4d83d118d9d56f35a57359ac46f700255dac10972d2bb"
 
   url "https://yuntu-f.kuaicad.com/app/CADReaderMac_#{version}.dmg",
       verified: "yuntu-f.kuaicad.com/app/"
@@ -21,8 +21,4 @@ cask "cadreader" do
   app "CAD快速看图.app"
 
   zap trash: "~/Library/Preferences/com.glodonyuntu.cadreadermac.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end

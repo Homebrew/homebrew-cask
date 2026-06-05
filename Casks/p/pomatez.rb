@@ -1,9 +1,9 @@
 cask "pomatez" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.10.0"
-  sha256 arm:   "a8e308fb795645f01179d7bb3ffaeff932d242cd0e9a7a29f0ca80c836eabbbb",
-         intel: "4a2c0590f27a9e2fc6eff2619fe811cb51a36f2c7ee4c16d406d0e54ff189817"
+  version "1.11.0"
+  sha256 arm:   "7c24b6ddf6f913ec4eec26f097788d42eb0ead3c96560f579d0fd8babb6f405b",
+         intel: "22eb0ac33b60d098e8c8b8ed846f3c0f9a1bb5aefdc3c69a3efb264c44ef4a90"
 
   url "https://github.com/zidoro/pomatez/releases/download/v#{version}/Pomatez-v#{version}-mac-#{arch}.dmg",
       verified: "github.com/zidoro/pomatez/"
@@ -16,7 +16,7 @@ cask "pomatez" do
     strategy :github_latest
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "Pomatez.app"
 

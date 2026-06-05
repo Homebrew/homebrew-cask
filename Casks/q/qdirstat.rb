@@ -1,6 +1,6 @@
 cask "qdirstat" do
-  version "2.0"
-  sha256 "03ff7fc6e1d5b820ca2b1b2fcb983d0539d86f6b53ff94096eed9ded709b3c88"
+  version "2.0-macos.1"
+  sha256 "ae1e417ba5be0b6dfe562ab05573347e900f55d159306da7097d0a8c9ec6ce14"
 
   url "https://github.com/jesusha123/qdirstat-macos/releases/download/#{version}/QDirStat.dmg"
   name "QDirStat"

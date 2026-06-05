@@ -1,6 +1,6 @@
 cask "whatsapp" do
-  version "2.26.19.15"
-  sha256 "f08210c580a615567ee3cd89fd3c7de94741d00b375888cbef8a37c2644dacbb"
+  version "2.26.22.26"
+  sha256 "354f0c9afd3ad4a5ada8ed974cfaa3cacb1066d19ae79571722d941db613634b"
 
   url "https://web.whatsapp.com/desktop/mac_native/release/?version=#{version}&extension=zip&configuration=Release&branch=master&is_buck=true"
   name "WhatsApp"
@@ -20,6 +20,8 @@ cask "whatsapp" do
   depends_on macos: :monterey
 
   app "WhatsApp.app"
+
+  uninstall quit: "net.whatsapp.WhatsApp"
 
   zap trash: [
     "~/Library/Application Scripts/net.whatsapp.WhatsApp*",

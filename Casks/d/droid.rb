@@ -1,9 +1,9 @@
 cask "droid" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.122.0"
-  sha256 arm:   "83d435421013f7db521a1afd1ea58c003cf7daf2bd8f6cf187f68996fd9d7855",
-         intel: "11348c4991de1d0aa347dd835962b0d28c0385052b9092a05f9e0f62c5745255"
+  version "0.141.0"
+  sha256 arm:   "399e5c61de6b15ddb54aff059b7defd8bbc75f4661686904f0f9dd35ffe7aefb",
+         intel: "5eb5953ddde2e8d12b152740cb2accf499e21191bc003fb6e464082e39613b76"
 
   url "https://downloads.factory.ai/factory-cli/releases/#{version}/darwin/#{arch}/droid"
   name "Droid"
@@ -15,6 +15,7 @@ cask "droid" do
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
   depends_on :macos
   depends_on formula: "ripgrep"
 

@@ -1,6 +1,6 @@
 cask "displaybuddy" do
-  version "3.4.1"
-  sha256 "0f41d3258671d0449f537bac05c8bc2b17fac86148130f9112889129b825673a"
+  version "3.6.1"
+  sha256 "d5207a6304d3c160433cbcac1818a2799420d4c69c92fa5ecba18e4c4a09cae3"
 
   url "https://displaybuddy.app/public/DisplayBuddy_#{version}.dmg"
   name "DisplayBuddy"
@@ -13,7 +13,7 @@ cask "displaybuddy" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "DisplayBuddy.app"
 

@@ -1,8 +1,8 @@
 cask "butterkit" do
-  version "1.9.01"
-  sha256 "9a6ece0dcbbd228bc8a1a07389cade1feee101f70521b3e642a9f97f15673053"
+  version "1.9.20"
+  sha256 "0c2d16a9a25811b5ce3c91bbd5bf8a3a0b44ab5e7c689f154bded988a4e1d6d5"
 
-  url "https://butterkit.app/updates/ButterKit-Direct-#{version}-macOS.zip"
+  url "https://download.butterkit.app/updates/ButterKit-Direct-#{version}-macOS.zip"
   name "ButterKit"
   desc "App Store screenshots editor"
   homepage "https://butterkit.app/"

@@ -1,9 +1,9 @@
 cask "getoutline" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.0,260416fn931b31i"
-  sha256 arm:   "6aa6257a95e594a65a370532d04ebe8a53983d4accfc1a6921bb03ac035cd88f",
-         intel: "8952696635378326aa14859406ee758209d6a22cbcdeced733e758f3e40727ac"
+  version "1.7.1,260603ocv9rfz1d"
+  sha256 arm:   "ee8908bfb75e0968328e42718288ec62d64d8f770b34a049942c61d4b2fd12d2",
+         intel: "93d60a9017bea8f8780ef67ac0c7fedcc6e81885f2666871250ab9138fe3a1ea"
 
   url "https://download.todesktop.com/2211128hgkdcltv/Outline%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
       verified: "download.todesktop.com/2211128hgkdcltv/"

@@ -1,9 +1,9 @@
 cask "lazycat" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.29"
-  sha256 arm:   "c3c970206533f8e8869cadb82fa43d6e3f2e8a996904faf1bc8a8aad58a24825",
-         intel: "ecb83baada6cd785fd0ab0b635136ba3c2cda0edfd451061e2d19e185f70eb46"
+  version "2.0.11"
+  sha256 arm:   "5c1df3c3124cefb32d80dfdf61c02b06060720825c03c591571d63da1ae90dc8",
+         intel: "a0daaccc09196d97b89f606fcb72957187ee9c8c52304a690e210f059f92b2f0"
 
   url "https://dl.lazycat.cloud/client/desktop/stable/lzc-client-desktop_v#{version}_#{arch}.dmg"
   name "LazyCat"
@@ -17,7 +17,7 @@ cask "lazycat" do
     end
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "懒猫微服.app"
 

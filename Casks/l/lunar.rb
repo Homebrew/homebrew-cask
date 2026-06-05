@@ -1,6 +1,6 @@
 cask "lunar" do
-  version "6.10.2"
-  sha256 "83fe6c07a8fa291871a1e0dcbb0ef29ebc94db869b5596e3c3d812220284a34b"
+  version "6.10.4"
+  sha256 "be79c8b73e4f01f0adc20e6ee985e06c001eeaee5e0fbaf6a44faaf149f14f06"
 
   url "https://files.lunar.fyi/releases/Lunar-#{version}.dmg"
   name "Lunar"
@@ -16,6 +16,8 @@ cask "lunar" do
   depends_on macos: :big_sur
 
   app "Lunar.app"
+
+  uninstall quit: "fyi.lunar.Lunar"
 
   zap trash: [
     "~/Library/Application Support/fyi.lunar.Lunar",

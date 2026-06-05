@@ -12,6 +12,7 @@ cask "fresh" do
     strategy :sparkle, &:short_version
   end
 
+  conflicts_with cask: "general-software-fresh"
   depends_on :macos
 
   app "Fresh.app"

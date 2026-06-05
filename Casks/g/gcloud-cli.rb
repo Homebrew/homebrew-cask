@@ -2,11 +2,11 @@ cask "gcloud-cli" do
   arch arm: "arm", intel: "x86_64"
   os macos: "darwin", linux: "linux"
 
-  version "567.0.0"
-  sha256 arm:          "1c6cd01b0c039f3966326514f380686f32637f1066862b28a0d766a7eb34a9f4",
-         intel:        "871b40b75c0046ea9a54310037083945fe7929a2a799c3c31c8f37b70e82937a",
-         arm64_linux:  "43ca9e1d07652c5c689debb8012bbc1c30fb73fa3d41287d1cc7f17cbea7e87f",
-         x86_64_linux: "bd5afc0d249609cb40d45f665209190fdd38b9937954291b8f9ae54206c75d83"
+  version "571.0.0"
+  sha256 arm:          "f03958841f4b0a5838ccd9da2290e0f7be479a7f0bc24d016bf9d1e333f23b96",
+         intel:        "c9ad0f2e54b9e92f5d33d85989bd2ddd23bed51f58da342b2fe966ac823bd97a",
+         arm64_linux:  "25431065668969c6b5b647834fe73ecf2b1522ae6d1a3caf49e62451852370e9",
+         x86_64_linux: "e537598d1c7b6839ddce95ce25dbaf25571322886c1f3464dd74771e568fcfdd"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-#{os}-#{arch}.tar.gz"
   name "Google Cloud CLI"
@@ -21,11 +21,11 @@ cask "gcloud-cli" do
   auto_updates true
 
   on_macos do
-    depends_on formula: "python@3.13"
+    depends_on formula: "python@3.14"
   end
   on_linux do
     on_arm do
-      depends_on formula: "python@3.13"
+      depends_on formula: "python@3.14"
     end
   end
 
@@ -69,6 +69,7 @@ cask "gcloud-cli" do
     end
 
     if OS.mac?
+      ENV["CLOUDSDK_PYTHON"] = "#{HOMEBREW_PREFIX}/opt/python@3.14/libexec/bin/python"
       # Install required external dependencies via virtualenv
       if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
         puts "deleting existing virtual env before enabling virtual env with current Python version"
@@ -78,7 +79,7 @@ cask "gcloud-cli" do
       end
       system_command  "#{google_cloud_sdk_root}/bin/gcloud",
                       args:      ["config", "virtualenv", "create", "--python-to-use",
-                                  "#{HOMEBREW_PREFIX}/opt/python@3.13/libexec/bin/python"],
+                                  "#{HOMEBREW_PREFIX}/opt/python@3.14/libexec/bin/python"],
                       reset_uid: true
       system_command  "#{google_cloud_sdk_root}/bin/gcloud",
                       args:      ["config", "virtualenv", "enable"],

@@ -1,6 +1,6 @@
 cask "microsoft-teams" do
-  version "26093.311.4599.3126"
-  sha256 "15c7b72ff51da883173d140985cc1edbd9538290d5846b14a7ead03fcf65d6ef"
+  version "26120.3106.4725.800"
+  sha256 "cdb17499b42e04dfeccb25eb5440f733e968320cb4d80e055518893353d5bef6"
 
   url "https://statics.teams.cdn.office.net/production-osx/#{version}/MicrosoftTeams.pkg",
       verified: "statics.teams.cdn.office.net/production-osx/"
@@ -27,7 +27,7 @@ cask "microsoft-teams" do
 
   auto_updates true
   conflicts_with cask: "microsoft-office-businesspro"
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   pkg "MicrosoftTeams.pkg",
       choices: [

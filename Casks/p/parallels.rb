@@ -1,6 +1,6 @@
 cask "parallels" do
-  version "26.3.2-57398"
-  sha256 "2636d7404b4f29f0ac80ea6e7df9868e66b2a554ff24adeac7dd87594149ed52"
+  version "26.3.3-57507"
+  sha256 "417af3750e9e6378a4830303d75ff312461abbf5f49a69b6ba4e8ef76afcc35a"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
@@ -63,6 +63,7 @@ cask "parallels" do
               "/usr/local/bin/prl_convert",
               "/usr/local/bin/prl_disk_tool",
               "/usr/local/bin/prl_perf_ctl",
+              "/usr/local/bin/prlcopy",
               "/usr/local/bin/prlcore2dmp",
               "/usr/local/bin/prlctl",
               "/usr/local/bin/prlexec",

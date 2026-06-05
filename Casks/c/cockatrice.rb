@@ -10,15 +10,17 @@ cask "cockatrice" do
       skip "Legacy version"
     end
 
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
     caveats do
       requires_rosetta
     end
   end
   on_ventura :or_newer do
-    version "3.0.0,2026-05-08,Graduation-Day,3.0.0"
+    version "3.0.1,2026-05-23,Graduation-Day,3.0.1"
 
     on_ventura do
-      sha256 "99fa0a861128289fc000b4c33a28c5b8a3d82967a88bc0b3c975a7699551a5f3"
+      sha256 "9042482b3d04e3760371ce51111e2ac23fce6f5eb6a49d10ff7e13e1fe34bb7f"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS13_Intel.dmg",
           verified: "github.com/Cockatrice/Cockatrice/"
@@ -28,17 +30,18 @@ cask "cockatrice" do
       end
     end
     on_sonoma do
-      sha256 "3d36072fa24ce50ccfb144ce6d9263084381f6d3fb08a79e8573baac20c0e192"
+      sha256 "f9a738f1ec2249658dd49b5157de3ffe7ef63d71baf44470989c79568a6bea3d"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS14.dmg",
           verified: "github.com/Cockatrice/Cockatrice/"
     end
     on_sequoia :or_newer do
-      sha256 "9956fe6f58836b6d0b90ee4c52274fd5d929feb473c3246ef9fda9b996cfa627"
+      sha256 "a721aebca11e6acd3a0dbfe922521e975e819c836f053789d0acff844cab7915"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS15.dmg",
           verified: "github.com/Cockatrice/Cockatrice/"
     end
+
     livecheck do
       url :url
       regex(%r{/(\d+(?:-\d+)+)-Release-([^/]+)/Cockatrice-(.+?)-(\d+(?:\.\d+)+(?:-beta)?)-macOS[.\w]*\.dmg$}i)

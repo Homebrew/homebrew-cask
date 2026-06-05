@@ -2,16 +2,21 @@ cask "dda" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-gnu"
 
-  version "0.33.1"
-  sha256 arm:          "ddd279a094ff111bc6fa23920dad50c1e320c8c66085aeb2db23ffad8045076d",
-         intel:        "02953e502863b96d9fe7e8f2f233895cc72f834f3ef15a139435fd5c35c9de21",
-         arm64_linux:  "55f61091e2d089eebb3b1453fece88395d055008b83823cf70158b3517db0e73",
-         x86_64_linux: "ad1dd64900bf9ed423ea01d9474ee707879ea51da8e302d13777f6a09a0f505f"
+  version "0.34.0"
+  sha256 arm:          "19980f0f6484c21a806b790721eee309a3d0a9b930142f1efd9f408ab04a6613",
+         intel:        "8bbdd77c43e40c7a032a5af379bfdfe3fee430b98ea78579c2d502b14d2b5f06",
+         arm64_linux:  "6ecd2adf180cb68bdd5eb4daaa8e8089c60556e0e7d70118317abcf13e8e761f",
+         x86_64_linux: "d711a7a073158619b9d9f65e4c1c7bdcd9ad69cc1c768c2feac9aa82464000fa"
 
   url "https://github.com/DataDog/datadog-agent-dev/releases/download/v#{version}/dda-#{arch}-#{os}.tar.gz"
   name "dda"
   desc "Tool for developing on the Datadog Agent platform"
   homepage "https://github.com/DataDog/datadog-agent"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

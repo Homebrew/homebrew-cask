@@ -17,9 +17,9 @@ cask "chatty" do
 
   suite "Chatty"
 
-  preflight do
+  preflight_steps do
     # There is no sub-folder in the ZIP; the root *is* the folder
-    FileUtils.mv(staged_path.children, staged_path.join("Chatty").tap(&:mkpath))
+    move_children ".", "Chatty"
   end
 
   zap trash: "~/.chatty"

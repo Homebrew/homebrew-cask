@@ -1,9 +1,9 @@
 cask "losslesscut" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.68.0"
-  sha256 arm:   "e61c335bed288bc1869b150bbc314298a29bad82edabd1e3c0b2e9323dcf9db0",
-         intel: "2b8879906eb933dbd60338d357c8f114976d744b8b0b146bd1bc8c37549f7c99"
+  version "3.69.0"
+  sha256 arm:   "c7801b482df3be0384acc8171d5a7d16cce70d1588871e344b155aaca39fa58b",
+         intel: "ab828d1a652c895661b15b682d81106562e0f11fabcb8c2d1e4bf2c4fdddf64a"
 
   url "https://github.com/mifi/lossless-cut/releases/download/v#{version}/LosslessCut-mac-#{arch}.dmg"
   name "LosslessCut"

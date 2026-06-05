@@ -9,6 +9,7 @@ cask "license-control-center" do
   homepage "https://helpcenter.steinberg.de/hc/en-us/articles/360008841379"
 
   deprecate! date: "2025-05-27", because: :discontinued
+  disable! date: "2026-05-27", because: :discontinued
 
   depends_on :macos
 

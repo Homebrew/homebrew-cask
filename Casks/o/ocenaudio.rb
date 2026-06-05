@@ -1,5 +1,5 @@
 cask "ocenaudio" do
-  version "3.18.2"
+  version "3.19.1"
   sha256 :no_check
 
   url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg"
@@ -12,7 +12,7 @@ cask "ocenaudio" do
     strategy :header_match
   end
 
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "ocenaudio.app"
 

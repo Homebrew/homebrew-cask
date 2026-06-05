@@ -1,8 +1,11 @@
 cask "bisq" do
-  version "1.9.22"
-  sha256 "31785d3122f4494313124b37783e923da0f3f6f5d7a0d7e9d66d94b872db4e57"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://github.com/bisq-network/bisq/releases/download/v#{version}/Bisq-#{version}.dmg",
+  version "1.10.1"
+  sha256 arm:   "ddd8f4709db5e8a15f5731eaa4c84aeef32c2e9d1aae30c2525f1cd76547e1ab",
+         intel: "02a8b794a4e39819c79a030ac3bc0976823fd94cd6950ada4655e930dc0dd485"
+
+  url "https://github.com/bisq-network/bisq/releases/download/v#{version}/Bisq-#{arch}-#{version}.dmg",
       verified: "github.com/bisq-network/bisq/"
   name "Bisq"
   desc "Decentralised bitcoin exchange network"
@@ -23,8 +26,4 @@ cask "bisq" do
     "~/Library/Application Support/Bisq",
     "~/Library/Saved Application State/io.bisq.CAT.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

@@ -1,6 +1,6 @@
 cask "taskbar" do
-  version "1.5.2.1,2025,11"
-  sha256 "c46f7b0e9e43b113a2af40cfc57636e9876d2317b26f0d95265305029894e99d"
+  version "1.6.1,2026,05"
+  sha256 "86cd42b1c58063f53cb7b2ab4a73d4256da120ab01b229aef7098af39a9e236b"
 
   url "https://lawand.io/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/taskbar-#{version.csv.first}.zip"
   name "Taskbar"

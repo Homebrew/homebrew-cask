@@ -18,6 +18,8 @@ cask "transmit" do
 
   app "Transmit.app"
 
+  uninstall quit: "com.panic.Transmit"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.transmit.sfl*",
     "~/Library/Application Support/com.panic.Transmit",

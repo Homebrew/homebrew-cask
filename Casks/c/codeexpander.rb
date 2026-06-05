@@ -1,40 +1,28 @@
 cask "codeexpander" do
-  version "4.3.8"
-  sha256 "993849b21822b62c29b96d70e7ee306e329ed963d0560ca2ecc2b5e7e23d29e1"
+  version "5.12.8"
+  sha256 :no_check
 
-  url "https://github.com/oncework/codeexpander/releases/download/#{version.major_minor}.x/CodeExpander-#{version}.dmg"
+  url "https://download.floweb.cn/CodeExpander_latest_universal.dmg",
+      verified: "download.floweb.cn/"
   name "CodeExpander"
-  desc "Cloud synchronisation development tool"
-  homepage "https://github.com/oncework/codeexpander"
+  desc "Text expansion, screenshot & annotation, and clipboard management tool"
+  homepage "https://codeexpander.com/"
 
   livecheck do
-    url :url
-    regex(/^CodeExpander[._-]v?(\d+(?:\.\d+)+)\.dmg$/i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
-        next if match.blank?
-
-        match[1]
-      end
+    url "https://download.floweb.cn/codeexpander-latest.json"
+    strategy :json do |json|
+      json["version"]
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on :macos
 
   app "CodeExpander.app"
 
   zap trash: [
-    "~/.codeexpander",
-    "~/Documents/codeexpander",
-    "~/Library/Logs/Codeexpander",
-    "~/Library/Preferences/com.codeexpander.plist",
-    "~/Library/Saved Application State/com.codeexpander.savedState",
+    "~/Library/Caches/codeexpander",
+    "~/Library/Caches/com.codeexpander.pro",
+    "~/Library/Logs/com.codeexpander.pro",
+    "~/Library/WebKit/com.codeexpander.pro",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

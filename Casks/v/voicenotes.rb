@@ -1,9 +1,9 @@
 cask "voicenotes" do
   arch arm: "-arm64"
 
-  version "1.8.1"
-  sha256 arm:   "db736794c15944eeace0a6bfeebe47def5db5a21831b9580bc4c388eab821909",
-         intel: "8870e74bce7110f40970e0b2a3a1484be55da5e5cb5519f74340a2e2556715a4"
+  version "1.8.3"
+  sha256 arm:   "e4ee4c395c7ec02a07e4cd95259a17c5a38ada0febe0009171ec9e57e8ed23bc",
+         intel: "3db3e0bda782d2e37a69299ad46b23fa1b6bb037e2644d9566119de657b52fe3"
 
   url "https://github.com/brewdotcom/vn-apps-release/releases/download/#{version}/Voicenotes-#{version}#{arch}.dmg",
       verified: "github.com/brewdotcom/vn-apps-release/"

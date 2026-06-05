@@ -1,5 +1,5 @@
 cask "emailchemy" do
-  version "14.6"
+  version "14.6.1"
   sha256 :no_check
 
   url "https://wksdownload.s3.amazonaws.com/emailchemy/Emailchemy-Mac.dmg",

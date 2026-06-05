@@ -1,33 +1,41 @@
 cask "codexbar" do
-  version "0.25.1"
-  sha256 "2e9bb3c9083896623157426c20b6578d75166a19bdfe8bca1638614ab3a9f34d"
+  version "0.32.4"
+  sha256 "f8863df7e9f584da6397a085377a3040d96881a4138557855de694321df9e401"
 
-  url "https://github.com/steipete/CodexBar/releases/download/v#{version}/CodexBar-#{version}.zip",
+  url "https://github.com/steipete/CodexBar/releases/download/v#{version}/CodexBar-macos-universal-#{version}.zip",
       verified: "github.com/steipete/CodexBar/"
   name "CodexBar"
   desc "Menu bar usage monitor for Codex and Claude"
   homepage "https://codexbar.app/"
 
-  depends_on arch: :arm64
   depends_on macos: :sonoma
 
   app "CodexBar.app"
   binary "#{appdir}/CodexBar.app/Contents/Helpers/CodexBarCLI", target: "codexbar"
 
+  uninstall quit: "com.steipete.codexbar"
+
   zap trash: [
+    "~/.codexbar",
+    "~/Library/Application Scripts/*.com.steipete.codexbar",
     "~/Library/Application Scripts/com.steipete.codexbar",
     "~/Library/Application Scripts/com.steipete.codexbar.widget",
     "~/Library/Application Support/CodexBar",
     "~/Library/Application Support/com.steipete.codexbar",
+    "~/Library/Application Support/CrashReporter/CodexBar_*.plist",
     "~/Library/Caches/CodexBar",
     "~/Library/Caches/com.steipete.codexbar",
     "~/Library/Containers/com.steipete.codexbar",
     "~/Library/Containers/com.steipete.codexbar.widget",
-    "~/Library/Group Containers/group.com.steipete.codexbar",
+    "~/Library/Group Containers/*.com.steipete.codexbar",
+    "~/Library/HTTPStorages/codexbar",
+    "~/Library/HTTPStorages/codexbar.binarycookies",
     "~/Library/HTTPStorages/com.steipete.codexbar",
     "~/Library/HTTPStorages/com.steipete.codexbar.binarycookies",
+    "~/Library/Logs/DiagnosticReports/CodexBar-*.ips",
     "~/Library/Preferences/com.steipete.codexbar.plist",
     "~/Library/Saved Application State/com.steipete.codexbar.savedState",
+    "~/Library/WebKit/codexbar",
     "~/Library/WebKit/com.steipete.codexbar",
   ]
 end

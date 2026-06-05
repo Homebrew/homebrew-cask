@@ -1,6 +1,6 @@
 cask "zen" do
-  version "1.19.12b"
-  sha256 "5c564941d6117e87ac7eb4cfe11b0a1fad772be2e02d6f0af48d38f788bea012"
+  version "1.20.2b"
+  sha256 "4f960e8d8ef353e91a49433c004500f8b9915861e4f048ba8bd2968e0cc513c7"
 
   url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen.macos-universal.dmg",
       verified: "github.com/zen-browser/desktop/"
@@ -21,6 +21,8 @@ cask "zen" do
 
   app "Zen.app"
   binary "#{appdir}/Zen.app/Contents/MacOS/zen"
+
+  uninstall quit: "app.zen-browser.zen"
 
   zap trash: [
         "~/Library/Application Support/Zen",

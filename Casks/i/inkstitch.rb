@@ -37,10 +37,9 @@ cask "inkstitch" do
   depends_on :macos
   depends_on cask: "inkscape"
 
-  preflight do
+  preflight_steps do
     # This needs to exist, otherwise the installer gets stuck at a prompt asking the user to run Inkscape first.
-    inkscape_extensions = Pathname("~/Library/Application Support/org.inkscape.Inkscape/config/inkscape").expand_path
-    inkscape_extensions.mkpath
+    mkdir_p "Library/Application Support/org.inkscape.Inkscape/config/inkscape", base: :home
   end
 
   uninstall pkgutil: "org.inkstitch.installer",

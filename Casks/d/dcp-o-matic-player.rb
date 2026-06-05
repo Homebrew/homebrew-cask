@@ -1,6 +1,6 @@
 cask "dcp-o-matic-player" do
-  version "2.18.40"
-  sha256 "c5225317733d3bf108e9a9fc499b86927bf8aa9579ceece69c7fdba0c84e4d1d"
+  version "2.18.43"
+  sha256 "b621d8ee497eb6770e9bc5f0084fdfa9f3504765ed7b02db499e6ff1d9fa4bab"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-player&version=#{version}"
   name "DCP-o-matic Player"

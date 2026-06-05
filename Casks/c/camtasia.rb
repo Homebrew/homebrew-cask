@@ -1,8 +1,8 @@
 cask "camtasia" do
-  version "26.0.7"
-  sha256 "e5bbf9500bef6d3caac3a58eebf54695784af6bf5c04548dd6320a5c728da74d"
+  version "2026.1.3"
+  sha256 "ccbea2007f3277dfe8c1060a41abb5e90faab4d77ca2d56e68163e3c397d57be"
 
-  url "https://download.techsmith.com/camtasiamac/releases/#{version.no_dots}/Camtasia.dmg"
+  url "https://download.techsmith.com/camtasiamac/releases/#{version}/Camtasia.dmg"
   name "Camtasia"
   desc "Screen recorder and video editor"
   homepage "https://www.techsmith.com/video-editor.html"
@@ -11,7 +11,7 @@ cask "camtasia" do
     url "https://www.techsmith.com/api/v/1/products/getallversions/9"
     strategy :json do |json|
       json.map do |item|
-        "#{item["Major"]}.#{item["Minor"]}.#{item["Maintenance"]}"
+        "20#{item["Major"]}.#{item["Minor"]}.#{item["Maintenance"]}"
       end
     end
   end

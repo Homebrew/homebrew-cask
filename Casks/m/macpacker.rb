@@ -1,6 +1,6 @@
 cask "macpacker" do
-  version "0.14.1"
-  sha256 "78e8664bfa530062c2cf26cc4891f37d73929ff89d2a2bdf5f36140d21d074cc"
+  version "0.15.1"
+  sha256 "bb942d37433b6131f131fdf2c41f8eb560fe7866154a33dab30d0522dfa843ad"
 
   url "https://macpacker-releases.s3.amazonaws.com/MacPacker_v#{version}.zip",
       verified: "macpacker-releases.s3.amazonaws.com/"
@@ -10,11 +10,13 @@ cask "macpacker" do
 
   livecheck do
     url "https://macpacker-releases.s3.amazonaws.com/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "MacPacker.app"
 

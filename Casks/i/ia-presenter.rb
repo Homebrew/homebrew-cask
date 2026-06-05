@@ -1,6 +1,6 @@
 cask "ia-presenter" do
-  version "1.5.4,15166"
-  sha256 "43d3c6f42e6dcc86345fef97d9f6c1f4b420e2f433a09e73d23dd5b448c1d016"
+  version "1.6.1,16034"
+  sha256 "141b00f282c8ea9a511286910e2ed3b9fb3ad688fbfe669a4aa625b5aa194c06"
 
   url "https://files.ia.net/presenter/release/iA-Presenter-#{version.csv.first}-#{version.csv.second}.zip"
   name "iA Presenter"
@@ -8,7 +8,7 @@ cask "ia-presenter" do
   homepage "https://ia.net/presenter"
 
   livecheck do
-    url "https://iapresenter.s3.amazonaws.com/release/updates.xml"
+    url "https://files.ia.net/presenter/release/updates.xml"
     strategy :sparkle
   end
 

@@ -2,9 +2,9 @@
 
 _“To install, drag this icon…” no more!_
 
-Homebrew Cask extends [Homebrew](https://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI macOS applications such as Visual Studio Code and Google Chrome.
+Homebrew Cask extends [Homebrew](https://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of prebuilt software artifacts distributed by upstream vendors, including GUI applications, CLI tools, fonts, plugins, and other packaged software.
 
-We do this by providing a friendly CLI workflow for the administration of macOS applications distributed as binaries.
+We do this by providing a friendly CLI workflow for the administration of these artifacts on macOS and Linux.
 
 [![Join us on GitHub discussions](https://img.shields.io/badge/github-discussions-informational)](https://github.com/orgs/Homebrew/discussions/categories/casks)
 

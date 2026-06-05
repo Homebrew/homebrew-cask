@@ -1,6 +1,6 @@
 cask "clone-hero" do
-  version "1.1.0.6085,-final"
-  sha256 "ca84b001de1e9205a9599b88355b6e0d005b6da7e28bef95d8baf3aa7b4bb819"
+  version "1.1.0.6142,-final"
+  sha256 "1b880f98a164d97a84bf09ee1b9636b8a67fe3ccfa0ec04ebfc0bb31561a2f39"
 
   url "https://github.com/clonehero-game/releases/releases/download/v#{version.csv.first}#{version.csv.second if version.csv.second}/CloneHero.v#{version.csv.first}#{version.csv.second if version.csv.second}.dmg",
       verified: "github.com/clonehero-game/"

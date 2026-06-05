@@ -1,9 +1,9 @@
 cask "ontime" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.7.0"
-  sha256 arm:   "39d0e0b44a706b94a569d6af56facd888f7bcf63ab6ff3b072a38424d156f4f5",
-         intel: "150954849d1985a6e45d33d8b8b48a9fc9137ff6bfb2260c0a23b164304169c5"
+  version "4.8.0"
+  sha256 arm:   "02d8ee01ac86877e571e11b3223e60312937ef55fd22c82ecbaccc6d335aed64",
+         intel: "231cff6c049fa0f99429ac20a3149d0d095893d10939fdf58b1c4f2cc44dcb87"
 
   url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg",
       verified: "github.com/cpvalente/ontime/"

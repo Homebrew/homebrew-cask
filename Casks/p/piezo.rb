@@ -1,5 +1,5 @@
 cask "piezo" do
-  version "1.9.8"
+  version "1.9.9"
   sha256 :no_check
 
   url "https://cdn.rogueamoeba.com/piezo/download/Piezo.zip"
@@ -13,7 +13,7 @@ cask "piezo" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :sonoma
 
   app "Piezo.app"
 

@@ -14,8 +14,14 @@ cask "loupedeck" do
 
   depends_on :macos
 
-  # pkg cannot be installed automatically
-  installer manual: "LoupedeckInstaller.pkg"
+  # The bundled child pkg's postinstall runs `pkill -f Loupedeck`,
+  # which would also kill the parent `installer` process because its
+  # argv contains "LoupedeckInstaller.pkg". Rename the pkg to a name
+  # without "Loupedeck" so the (case-sensitive) regex does not match
+  # the parent installer.
+  rename "LoupedeckInstaller.pkg", "Installer.pkg"
+
+  pkg "Installer.pkg"
 
   uninstall launchctl: "com.loupedeck.loupedeck2.launch",
             quit:      [

@@ -1,26 +1,35 @@
 cask "font-kikai-chokoku-jis" do
-  version "0.310"
-  sha256 "a0c2b1cde05d89e34ec2b1b137f27ab23b768b89570fbd800c48dd2cd4a7c5a7"
+  version "0.320"
+  sha256 "8702e0e538a8ae423a8bf8ea60abdafa07414b04388adfdab8311afdfde1b1e4"
 
-  url "https://font.kim/ki-cho-jis_#{version.no_dots}.zip"
+  url "https://font.kim/distribution/fk-kikaichokoku-v#{version.no_dots}.zip"
   name "Kikai Chokoku JIS"
   name "機械彫刻用標準書体フォント"
   homepage "https://font.kim/"
 
   livecheck do
     url :homepage
-    regex(%r{<script\s+type="application/ld\+json">([^<]+)</script>}i)
+    regex(/href=.*?fk-kikaichokoku[._-]v?(\d+(?:\.\d+)*)\.zip/i)
     strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
+      ver = page.scan(regex).map { |match| match[0] }.max
+      next ver if ver.include?(".")
 
-      json = Homebrew::Livecheck::Strategy::Json.parse_json(match[1])
-      json&.select { |item| item["name"] == "機械彫刻用標準書体 M" }
-          &.map { |item| item["softwareVersion"] }
+      # Find version text with dot(s) that matches dotless version
+      dotted_ver = nil
+      page.scan(%r{<td[^>]*?>\s*v?(\d+(?:\.\d+)+)\s*</td>}i).each do |match|
+        dotless_ver = DSL::Version.new(match[0]).no_dots
+
+        if ver == dotless_ver
+          dotted_ver = match[0]
+          break
+        end
+      end
+
+      dotted_ver
     end
   end
 
-  font "KikaiChokokuJIS-Md.otf"
+  font "fkKikaiChokoku.otf"
 
   # No zap stanza required
 end

@@ -18,6 +18,8 @@ cask "pika" do
 
   app "Pika.app"
 
+  uninstall quit: "com.superhighfives.Pika"
+
   zap trash: [
     "~/Library/Application Scripts/com.superhighfives.Pika-LaunchAtLoginHelper",
     "~/Library/Containers/com.superhighfives.Pika-LaunchAtLoginHelper",

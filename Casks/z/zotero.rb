@@ -1,6 +1,6 @@
 cask "zotero" do
-  version "9.0.3"
-  sha256 "7aaa8c6c916740ef542bc24e9b7d48cbd9bdc797546271e2c0f0d72be274836b"
+  version "9.0.4"
+  sha256 "59b762ec9682a8cfbab53bb762f53ea8d5bb17695f438fb3d330e9cf9603c2d2"
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   name "Zotero"
@@ -17,6 +17,8 @@ cask "zotero" do
   depends_on :macos
 
   app "Zotero.app"
+
+  uninstall quit: "org.zotero.zotero"
 
   zap trash: [
         "~/Library/Application Scripts/org.zotero.SafariExtensionApp.SafariExtension",

@@ -1,6 +1,6 @@
 cask "insomnia@alpha" do
-  version "12.6.0-beta.0"
-  sha256 "2190ba84566070fda4c78cc755cad5fb58d705ce16823bae82706264cd66cf61"
+  version "13.0.0-beta.0"
+  sha256 "818061e253c2ca841fdfb88410d2d0d18a1ea6cb4dbe013583977a69c25a64aa"
 
   url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg",
       verified: "github.com/Kong/insomnia/"

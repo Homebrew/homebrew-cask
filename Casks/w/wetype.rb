@@ -1,6 +1,6 @@
 cask "wetype" do
-  version "2.1.0,601"
-  sha256 "bb75e2f50ec94e02c38c488e719d7ac7197a00b13bd697016647fc65b9f039de"
+  version "2.2.0,616"
+  sha256 "9bc875701f6eaf98a8d49f1db01e7169ec9a7241533b0d2e1bac2310b4c843f1"
 
   url "https://download.weread.qq.com/app/wxkb/mac/#{version.csv.first}/WeType_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
@@ -26,7 +26,7 @@ cask "wetype" do
   auto_updates true
   depends_on :macos
 
-  app "WeType.app"
+  input_method "WeType.app"
 
   zap trash: [
     "~/Library/Application Support/WeType",

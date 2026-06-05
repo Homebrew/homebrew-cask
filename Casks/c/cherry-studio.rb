@@ -1,18 +1,19 @@
 cask "cherry-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.9.4"
-  sha256 arm:   "3e79b6280e11566b4ea9cea23488d4bb01ea3bb27e8651c531a585a9d1164f60",
-         intel: "8deea88e8157becdb96cda089eb2aa9c4844a170bf7313dec6c6988ffd7ae4cc"
+  version "1.9.9"
+  sha256 arm:   "5b6eebafb258fc534680b9544cab328c926e85069c2752198b16306343b9b760",
+         intel: "f5f21ba209e1355f7db7af74d2c6bbcd1e00fb957e569816020c1a0eda2a55da"
 
-  url "https://releases.cherry-ai.com/Cherry-Studio-#{version}-#{arch}.zip"
+  url "https://github.com/CherryHQ/cherry-studio/releases/download/v#{version}/Cherry-Studio-#{version}-#{arch}.dmg",
+      verified: "github.com/CherryHQ/cherry-studio/"
   name "Cherry Studio"
   desc "Desktop client that supports multiple LLM providers"
-  homepage "https://cherry-ai.com/"
+  homepage "https://www.cherry-ai.com/"
 
   livecheck do
-    url "https://releases.cherry-ai.com/latest-mac.yml"
-    strategy :electron_builder
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

@@ -1,9 +1,9 @@
 cask "keet" do
   arch intel: "-Intel"
 
-  version "4.14.1"
-  sha256 arm:   "d76028ab75c7a622ffceed75aabb9f79744c99574d5ddfb9699cfe64f836a801",
-         intel: "02dc6ce2bb8f5927ba5d24ac4c5f66b3f49fab9616ffddad12ee07cfb907dff8"
+  version "4.16.3"
+  sha256 arm:   "02cde720673ffd9fdc968eba7ca50c5bf276da79dc0185094dff18bfa7255a93",
+         intel: "dad38ca5f90601a621655d37028fea38cc1fc88a8fc74c7fe33256905c2298fb"
 
   url "https://static.keet.io/downloads/#{version}/Keet#{arch}.dmg"
   name "keet"
@@ -16,7 +16,7 @@ cask "keet" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Keet.app"
 

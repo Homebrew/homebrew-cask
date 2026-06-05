@@ -1,6 +1,6 @@
 cask "movist-pro" do
-  version "2.15.3"
-  sha256 "62e9b084fd00de3de704d9f957e86fa1c187cb8f04785495527645005fb739f7"
+  version "2.15.5"
+  sha256 "25c2b13fcc7e315817fe40175b16f9dbbca493faed6892d1ade9de5c9698fde9"
 
   url "https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/MovistPro_#{version}.dmg",
       verified: "s3.ap-northeast-2.amazonaws.com/update.cocoable.com/"

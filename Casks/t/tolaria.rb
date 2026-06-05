@@ -1,20 +1,33 @@
 cask "tolaria" do
   arch arm: "Silicon", intel: "Intel"
 
-  version "2026.5.2"
-  sha256 arm:   "f592666d63b3734f99fea7db170a883e7d90b3a6b7edf77e55143606677e5e33",
-         intel: "02935b29aaf562437d58deaacf7b824e13eadccd15759947fa82141b0f6435f6"
+  version "2026.06.01,2026.6.1"
+  sha256 arm:   "ff17a4d48f374c43407a28a4921ca432732623e9e89f2967b607bae9db65ce08",
+         intel: "b8c129f1663b19dab9a615448cb1082acbb90845787453d160b7c13318474438"
 
-  url "https://github.com/refactoringhq/tolaria/releases/download/stable-v#{version}/Tolaria_#{version}_macOS_#{arch}.dmg",
+  url "https://github.com/refactoringhq/tolaria/releases/download/v#{version.csv.first.dots_to_hyphens}/Tolaria_#{version.csv.second || version}_macOS_#{arch}.dmg",
       verified: "github.com/refactoringhq/tolaria/"
   name "Tolaria"
   desc "Markdown knowledgebase manager"
   homepage "https://tolaria.md/"
 
+  # The version formatting in the tag name can be inconsistent
+  # with the version in the asset name, so we need to compare
+  # both and return them in the version if they don't match.
   livecheck do
     url :url
-    regex(/^stable[._-]v?(\d+(?:\.\d+)+)$/i)
-    strategy :github_latest
+    regex(/Tolaria[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.dmg/i)
+    strategy :github_latest do |json, regex|
+      tag_version = json["tag_name"]&.tr("-", ".")&.gsub(/^v/, "")
+      next if tag_version.blank?
+
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        (match[1] == tag_version) ? tag_version : "#{tag_version},#{match[1]}"
+      end
+    end
   end
 
   depends_on :macos

@@ -1,5 +1,5 @@
 cask "battle-net" do
-  version "1.19.0.3190"
+  version "1.19.1.3215"
   sha256 :no_check
 
   language "en", default: true do
@@ -21,6 +21,8 @@ cask "battle-net" do
     url :url
     strategy :extract_plist
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on :macos

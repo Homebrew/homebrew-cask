@@ -1,6 +1,6 @@
 cask "lets" do
-  version "3.1.0"
-  sha256 "24ee0b7e6a9bfc27102b309b43b58f6941e8b3d1db68fa7da3e2bb3a4c0f3544"
+  version "3.1.1"
+  sha256 "d07d17b9feaf1f4953ca4bf1c56871c830019160276bc8d0c3ccf83d90709282"
 
   url "https://d1lzipub3cpsx.cloudfront.net/download/apps/2/#{version}/LETS-Installer.zip",
       verified: "d1lzipub3cpsx.cloudfront.net/"
