@@ -1,6 +1,6 @@
 cask "maccleaner-pro" do
-  version "4.0.2,585"
-  sha256 "49e1f9e1536f3b75b533ab5204822d428b60ce7269f9ede1c14bda0055167dc7"
+  version "4.0.3,599"
+  sha256 "cdd50ab50adfe4da42cdfa97013ad2d5fc3b1370ac9e63cf2e016bfa5fd4d61a"
 
   url "https://nektony.com/download/mac-cleaner-pro/dmg/mac-cleaner-pro.dmg?build=#{version.csv.second}"
   name "Nektony MacCleaner Pro"
@@ -13,7 +13,7 @@ cask "maccleaner-pro" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :big_sur
 
   suite "MacCleaner #{version.major} Pro"
 
