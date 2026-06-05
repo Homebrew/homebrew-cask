@@ -18,7 +18,7 @@ cask "mindmanager" do
 
   app "MindManager.app"
 
-  uninstall quit: "com.mindjet.mindmanager.25"
+  uninstall quit: "com.mindjet.mindmanager.#{version.major}"
 
   zap trash: [
     "~/Library/Application Support/Mindjet",
