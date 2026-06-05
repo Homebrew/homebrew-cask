@@ -28,7 +28,8 @@ cask "screens-connect" do
               executable:   "#{appdir}/Screens Connect.app/Contents/Resources/sc-uninstaller.tool",
               must_succeed: false,
               sudo:         true,
-            }
+            },
+            delete:    "/Applications/Screens Connect.app"
 
   zap trash: [
     "~/Library/Preferences/com.edovia.Screens-Connect.plist",
