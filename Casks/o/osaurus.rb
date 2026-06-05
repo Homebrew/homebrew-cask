@@ -1,6 +1,6 @@
 cask "osaurus" do
-  version "0.19.9"
-  sha256 "7787d2f75b12c423b306e7ac0274c2ce8ddb35f8781842af639089a289d7e292"
+  version "0.19.10"
+  sha256 "ae72963e2b96d44a217488b268fc1163b3ca9093a3e02b8806ad541c30ad0159"
 
   url "https://github.com/osaurus-ai/osaurus/releases/download/#{version}/Osaurus-#{version}.dmg",
       verified: "github.com/osaurus-ai/osaurus/"
