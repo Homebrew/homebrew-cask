@@ -1,6 +1,6 @@
 cask "choragus" do
-  version "4.10"
-  sha256 "23f14cdfeebe933144ed83578d330f14ae1bbaa53478e8ab7f7f1b59d6e91c44"
+  version "4.11"
+  sha256 "3bfe3eb500faa3eec18c14bc7414491d4ef7f674c5b87e187c26a1692a4df41f"
 
   url "https://github.com/scottwaters/Choragus/releases/download/v#{version}/Choragus.dmg"
   name "Choragus"
