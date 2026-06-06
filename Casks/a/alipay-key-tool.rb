@@ -1,5 +1,5 @@
 cask "alipay-key-tool" do
-  version "2.0.3"
+  version "2.0.4"
   sha256 :no_check
 
   url "https://ideservice.alipay.com/ide/getPluginUrl.htm?clientType=assistant&platform=mac&channelType=WEB"
