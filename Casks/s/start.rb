@@ -1,10 +1,10 @@
 cask "start" do
   livecheck_arch = on_arch_conditional arm: "-arm"
 
-  version "0.301.22466"
-  sha256 "7291a3521720cfade333b4f728f8d6b024e990fe404216c46bba01888a26d519"
+  version "0.301.23903,10000000"
+  sha256 "df97ccd749000955f70288d3f00cce0196db4375c69203c539e1ff0a677b469e"
 
-  url "https://imgcdn.start.qq.com/cdn/mac.client/installer/START-Installer-universal-#{version}.dmg"
+  url "https://imgcdn.start.qq.com/cdn/mac.client/installer/#{version.csv.first}/START-Installer-universal-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}.dmg"
   name "START"
   name "腾讯云游戏"
   desc "Tencent cloud gaming platform"
@@ -17,7 +17,7 @@ cask "start" do
       match = json.dig("configs", "macos-update-info#{livecheck_arch}", "value")&.match(regex)
       next if match.blank?
 
-      match[1]
+      match[1].tr("-", ",")
     end
   end
 
