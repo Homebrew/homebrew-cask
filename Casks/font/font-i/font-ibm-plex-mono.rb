@@ -6,9 +6,15 @@ cask "font-ibm-plex-mono" do
   name "IBM Plex Mono"
   homepage "https://github.com/IBM/plex"
 
+  # There can be a notable gap between when a version is tagged and a
+  # corresponding release is created, so we check releases instead of the Git
+  # tags. Upstream maintains multiple fonts in this repository and the "latest"
+  # release may be for another font, so we have to check multiple releases to
+  # identify the correct version.
   livecheck do
     url :url
     regex(%r{^@ibm/plex-mono@?(\d+(?:\.\d+)+)$}i)
+    strategy :github_releases
   end
 
   font "ibm-plex-mono/fonts/complete/otf/IBMPlexMono-Bold.otf"
