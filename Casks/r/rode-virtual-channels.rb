@@ -20,6 +20,7 @@ cask "rode-virtual-channels" do
             pkgutil: [
               "com.rode.pkg.RODEVirtualChannels",
               "com.rode.pkg.RODEVirtualChannelsApp",
+              "com.rode.pkg.RODEVirtualChannelsDriver",
               "com.rode.pkg.RODEVirtualChannelsLaunchAgent",
               "com.rode.RodeVirtualChannels.driver",
             ]
