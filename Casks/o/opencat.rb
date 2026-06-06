@@ -1,8 +1,8 @@
 cask "opencat" do
-  version "2.92.5,2339"
-  sha256 "08dcf6c6a0f51e1eaac440e896100278e6a7c7ade086905e7e9bb51f91f09f1d"
+  version "2.93.1,2379"
+  sha256 "602d0b2c425ce25635de320bedf634303e4844a67d5e256ba88fe84418423bd3"
 
-  url "https://opencat.app/releases/OpenCat-#{version.csv.first}.#{version.csv.second}.dmg"
+  url "https://releases.opencat.app/OpenCat-#{version.csv.first}.#{version.csv.second}.dmg"
   name "OpenCat"
   desc "Native AI chat client"
   homepage "https://opencat.app/"
