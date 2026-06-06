@@ -1,9 +1,9 @@
 cask "tolaria" do
   arch arm: "Silicon", intel: "Intel"
 
-  version "2026.06.01,2026.6.1"
-  sha256 arm:   "ff17a4d48f374c43407a28a4921ca432732623e9e89f2967b607bae9db65ce08",
-         intel: "b8c129f1663b19dab9a615448cb1082acbb90845787453d160b7c13318474438"
+  version "2026.06.06,2026.6.6"
+  sha256 arm:   "2ededa2e4b5b3bc23a3ab67d81c51410e8aa6d783bfd1725b169d85bb949b236",
+         intel: "0ac79cf972a0e0df0983a26a92d295a8662b9e1398f9412c01db1d0423274d77"
 
   url "https://github.com/refactoringhq/tolaria/releases/download/v#{version.csv.first.dots_to_hyphens}/Tolaria_#{version.csv.second || version}_macOS_#{arch}.dmg",
       verified: "github.com/refactoringhq/tolaria/"
