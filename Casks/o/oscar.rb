@@ -1,15 +1,11 @@
 cask "oscar" do
-  arch arm: "AppleSilicon", intel: "Intel"
+  arch arm: "ARM", intel: "Intel"
 
-  version "1.7.1"
-  sha256 arm:   "f4ff813ccfca6eafe7b3102df84344b4197c84f56e6c81f9f39ea937fea2c5fe",
-         intel: "fa6171ddbef287490469abcdd9793e4303fb116af7c125c487ec571ff787db7d"
+  version "2.0.0"
+  sha256 arm:   "26ce5039ee73a10364a09d92ccfbc24720d75ffb57e40ea829129e5817638813",
+         intel: "0a08b55ca66c272b127d9dd1399fd3a18b61abae5d876554d3ee0632f5614e34"
 
-  on_intel do
-    disable! date: "2026-09-01", because: :fails_gatekeeper_check
-  end
-
-  url "https://www.sleepfiles.com/OSCAR/#{version}/OSCAR-#{version}-#{arch}.dmg"
+  url "https://www.sleepfiles.com/OSCAR/#{version.major_minor}/OSCAR-#{version}-#{arch}.dmg"
   name "OSCAR"
   desc "CPAP Analysis Reporter"
   homepage "https://www.sleepfiles.com/OSCAR/"
@@ -19,9 +15,11 @@ cask "oscar" do
     regex(%r{href=.*?/OSCAR[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
   end
 
-  depends_on :macos
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  app "OSCAR.app"
+  depends_on macos: :ventura
+
+  app "OSCAR#{version.major_minor.no_dots}.app"
 
   zap trash: [
     "~/Library/Preferences/org.oscar-team.OSCAR.plist",
