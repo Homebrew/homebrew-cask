@@ -6,7 +6,7 @@ cask "kkbox" do
       verified: "dl-universal-v2.kfs.io/"
   name "KKBOX"
   desc "Music streaming service"
-  homepage "https://www.kkbox.com/"
+  homepage "https://play.kkbox.com/"
 
   livecheck do
     url "https://play.kkbox.com/download/macos"
