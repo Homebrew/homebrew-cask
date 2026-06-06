@@ -1,12 +1,12 @@
 cask "kkbox" do
-  version "26.5.2"
-  sha256 "f77a677de60296955ac095e65912ab8aa490cc4bd9999eed830393ab5e2836c1"
+  version "26.6.1"
+  sha256 "20bc56fa27ee3db43d58729fa5c578b929d8dd9da16f1a9ea61b1f2ff098662b"
 
   url "https://dl-universal-v2.kfs.io/KKBOX-#{version}-universal.dmg",
       verified: "dl-universal-v2.kfs.io/"
   name "KKBOX"
   desc "Music streaming service"
-  homepage "https://www.kkbox.com/"
+  homepage "https://play.kkbox.com/"
 
   livecheck do
     url "https://play.kkbox.com/download/macos"
