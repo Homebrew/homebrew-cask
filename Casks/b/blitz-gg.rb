@@ -1,8 +1,8 @@
 cask "blitz-gg" do
-  version "2.1.580"
-  sha256 "6bc49ff71da69ebde973562066c8f61a24dad58ac8b8f24697f39ed243ccd8d0"
+  version "2.1.582"
+  sha256 "a0ec3b7a5f807a5f84edb854b50614ae51170d0d97f12f8faa7a0a69a27c493c"
 
-  url "https://blitz-main.blitz.gg/Blitz-x64-#{version}.dmg"
+  url "https://blitz-main.blitz.gg/Blitz-universal-#{version}.dmg"
   name "Blitz"
   desc "Performance analysis software"
   homepage "https://blitz.gg/"
@@ -28,8 +28,4 @@ cask "blitz-gg" do
     "~/Library/Preferences/com.blitz.app.plist",
     "~/Library/Saved Application State/com.blitz.app.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
