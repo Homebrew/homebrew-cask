@@ -1,13 +1,16 @@
 cask "netviews" do
-  version "2.9"
-  sha256 "d1566e757f62a9fdcf2f60eb8660cfa9cd8a91a92f79e2604d8af298e371da5e"
+  version "2.13"
+  sha256 "1c47ce0e2103b9e87b58bb8763a020f23074a81d31d34bfe468c04b31ede7edd"
 
   url "https://www.netviews.app/installers/NetViews-#{version}.zip"
   name "NetViews"
   desc "Network and Wi-Fi diagnostic tool"
   homepage "https://www.netviews.app/"
 
-  disable! date: "2026-04-06", because: :unreachable
+  livecheck do
+    url "https://www.netviews.app/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
 
   auto_updates true
   depends_on macos: :sonoma
