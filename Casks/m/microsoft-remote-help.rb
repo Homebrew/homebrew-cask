@@ -10,7 +10,7 @@ cask "microsoft-remote-help" do
 
   livecheck do
     url "https://aka.ms/downloadremotehelpmacos"
-    regex(/Microsoft_Remote_Help_(\d+(?:\.\d+)+)_installer\.pkg/i)
+    regex(/Microsoft[._-]Remote[._-]Help[._-]v?(\d+(?:\.\d+)+)[._-]installer\.pkg/i)
     strategy :header_match
   end
 
