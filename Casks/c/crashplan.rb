@@ -29,7 +29,10 @@ cask "crashplan" do
               executable: "Uninstall.app/Contents/Resources/uninstall.sh",
               sudo:       true,
             },
-            pkgutil:   "com.crashplan.app.pkg"
+            pkgutil:   [
+              "com.crashplan.app.pkg",
+              "com.crashplan.uninstaller.pkg",
+            ]
 
   zap trash: [
     "/Library/Application Support/CrashPlan",
