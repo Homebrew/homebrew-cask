@@ -1,6 +1,6 @@
 cask "crashplan" do
-  version "11.9.1,19"
-  sha256 "1d8dc0d518b1e8684b5f35ddc191a307d3cb6adf4900015922dae4c299f6023d"
+  version "12.0.0,735"
+  sha256 "2fe4dfb428c6342a7e9e4c0ad73429d5ca45149e8b260fbb398285bd16c77152"
 
   url "https://download.crashplan.com/installs/agent/cloud/#{version.csv.first}/#{version.csv.second}/install/CrashPlan_#{version.csv.first}_#{version.csv.second}_Mac.dmg"
   name "CrashPlan"
@@ -29,7 +29,10 @@ cask "crashplan" do
               executable: "Uninstall.app/Contents/Resources/uninstall.sh",
               sudo:       true,
             },
-            pkgutil:   "com.crashplan.app.pkg"
+            pkgutil:   [
+              "com.crashplan.app.pkg",
+              "com.crashplan.uninstaller.pkg",
+            ]
 
   zap trash: [
     "/Library/Application Support/CrashPlan",
