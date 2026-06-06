@@ -1,12 +1,11 @@
 cask "k8studio" do
   arch arm: "-arm64"
 
-  version "3.1.4"
-  sha256 arm:   "45356d4096d7b625137f8ab621aa04de8432464e23d04ce7fa04fb5ff66b86b8",
-         intel: "3db8e7e1b95f27d9c478c65fe79a42a30aa6d0083cc9123191a8f6b419ff09ad"
+  version "3.1.5"
+  sha256 arm:   "b7de17764be599222d7170d818e6967e62167fe116b3d0ee8b5a055091574aaa",
+         intel: "4a7e4f7f370db97e013b4073e44688e1fc5a01c37b855c86ef836cca1fc23a2e"
 
-  url "https://github.com/k8Studio/k8Studio/releases/download/v#{version}/K8Studio-#{version}#{arch}.dmg",
-      verified: "github.com/k8Studio/k8Studio/"
+  url "https://releases.k8studio.io/K8Studio-#{version}#{arch}.dmg"
   name "K8studio"
   desc "Kubernetes GUI"
   homepage "https://k8studio.io/"
