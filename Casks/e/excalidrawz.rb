@@ -1,8 +1,8 @@
 cask "excalidrawz" do
-  version "2.0.2,78"
-  sha256 "35e59204750ae016825bfac1adc765539ae07db0c9d9a7c5c434367f47bd27ff"
+  version "2.1.0"
+  sha256 "1227e69ef85c612772a108427aea533c277734bd40fd4b49c85e702d90cb76c5"
 
-  url "https://github.com/chocoford/ExcalidrawZ/releases/download/v#{version.csv.first}/ExcalidrawZ.#{version.tr(",", ".")}.dmg",
+  url "https://github.com/chocoford/ExcalidrawZ/releases/download/v#{version.csv.first}/ExcalidrawZ.#{version}.dmg",
       verified: "github.com/chocoford/ExcalidrawZ/releases/download/"
   name "ExcalidrawZ"
   desc "Excalidraw client"
@@ -10,7 +10,7 @@ cask "excalidrawz" do
 
   livecheck do
     url "https://excalidrawz.chocoford.com/downloads/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
