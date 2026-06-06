@@ -1,6 +1,6 @@
 cask "clearance" do
-  version "1.3.3"
-  sha256 "1ba81958af83bcbe04a56f959dadeceb445cceaf9ef38c969b00fbe3c7286724"
+  version "1.3.4"
+  sha256 "edbb401906eda2f46876355f325c9e7e0ad75c9accd74f73265025a7c1823cd1"
 
   url "https://github.com/prime-radiant-inc/clearance/releases/download/v#{version}/Clearance-#{version}-macOS.dmg"
   name "Clearance"
