@@ -1,6 +1,6 @@
 cask "facescreen" do
-  version "2.2.0"
-  sha256 "ce5c41da4b373cfbfd257428274a8cd05927e3565aebfa6b8d0945ce00addda5"
+  version "2.2.5"
+  sha256 "82fd6ea7a4d7c54d6a4485f80837443d770cbfcc1d00ca61575e2cb136a46fd2"
 
   url "https://rampatra.github.io/facescreen-updates/FaceScreen-#{version}.dmg",
       verified: "rampatra.github.io/facescreen-updates/"
