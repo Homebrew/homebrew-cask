@@ -1,15 +1,15 @@
 cask "rode-virtual-channels" do
-  version "1.0.0"
-  sha256 "00c0b5a2f5f24eb80d4bb0d2e8b5ce2e409fc95ef37099ad7e3f629a4bfd72fe"
+  version "1.1.1"
+  sha256 :no_check
 
-  url "https://update.rode.com/virtual_dev_driver/RODECASTERDriver_MACOS_#{version}.zip"
+  url "https://update.rode.com/virtual_dev_driver/RODECasterDriver_MACOS.zip"
   name "RODE Virtual Channels"
   desc "Virtual Device Driver for RODECASTER Pro II"
   homepage "https://rode.com/en/user-guides/rodecaster-pro-ii/virtual-devices"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?RODECASTERDriver[._-]MACOS[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    url :url
+    strategy :extract_plist
   end
 
   depends_on :macos
