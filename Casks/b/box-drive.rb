@@ -1,6 +1,6 @@
 cask "box-drive" do
-  version "2.51.233"
-  sha256 "4c2a7bf1f14eec4a03d8c4144aecaf8b94ccd9e3c3925d073a89727a1e1a130a"
+  version "2.52.306"
+  sha256 "5686af1a65d50faca5c2428801e2a8196e8f425d3789c7eddee3d1321d4758d6"
 
   url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive-#{version}.pkg",
       verified: "e3.boxcdn.net/desktop/releases/mac/"
@@ -17,7 +17,7 @@ cask "box-drive" do
 
   auto_updates true
   conflicts_with cask: "box-sync"
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   pkg "BoxDrive-#{version}.pkg"
 
