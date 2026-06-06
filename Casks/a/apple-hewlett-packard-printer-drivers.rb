@@ -19,7 +19,7 @@ cask "apple-hewlett-packard-printer-drivers" do
     end
   end
 
-  depends_on macos: "<= :sonoma"
+  depends_on maximum_macos: :sonoma
 
   pkg "HewlettPackardPrinterDrivers.pkg"
 

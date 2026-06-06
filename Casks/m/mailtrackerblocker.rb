@@ -11,7 +11,7 @@ cask "mailtrackerblocker" do
   no_autobump! because: :bumped_by_upstream
 
   auto_updates true
-  depends_on macos: "<= :ventura"
+  depends_on maximum_macos: :ventura
 
   pkg "MailTrackerBlocker.pkg"
 
