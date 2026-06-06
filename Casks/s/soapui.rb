@@ -19,7 +19,7 @@ cask "soapui" do
   depends_on :macos
 
   installer script: {
-    executable: "SoapUI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
+    executable: "SoapUI-#{version}.app/Contents/MacOS/JavaApplicationStub",
     # For future Cask maintainers, if any of these variables
     # change in future versions from SmartBear, you can run
     # the installer manually and then check the values in
