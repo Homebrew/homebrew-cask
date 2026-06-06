@@ -1,11 +1,11 @@
 cask "openchamber" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.11.6"
-  sha256 arm:   "42633e4fa26af08fe424c612f420c67580c334a918472a61db02c21441f8580b",
-         intel: "24c91df362b1a20ef093dc74f1c3a51324bfa8f42da62363fa291cb3cb42ea54"
+  version "1.12.3"
+  sha256 arm:   "82e167615b3b2325cff4f2728c8ac3c0378455bcba97d8c14a24a2523bfba463",
+         intel: "36ab67bccf7ccce1054c528c29c96aca5bdba0afbff1e2ddd1e402be2b8b8563"
 
-  url "https://github.com/openchamber/openchamber/releases/download/v#{version}/OpenChamber-#{version}-#{arch}.dmg",
+  url "https://github.com/openchamber/openchamber/releases/download/v#{version}/OpenChamber-#{version}-mac-#{arch}.dmg",
       verified: "github.com/openchamber/openchamber/"
   name "OpenChamber"
   desc "Desktop and web interface for OpenCode AI agent"
