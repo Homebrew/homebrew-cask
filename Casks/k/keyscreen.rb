@@ -1,6 +1,6 @@
 cask "keyscreen" do
-  version "2.2.0"
-  sha256 "30e04bc9b85f6c8ecaf0793a194e2a5106da2feb4454dd20618d8da1f47a9cdc"
+  version "2.2.3"
+  sha256 "89fa3e4300d5c7eeee05cd2403ace53c4d46bdcf31233ee706895cc2c33914bd"
 
   url "https://rampatra.github.io/keyscreen-updates/KeyScreen-#{version}.dmg",
       verified: "rampatra.github.io/keyscreen-updates/"
