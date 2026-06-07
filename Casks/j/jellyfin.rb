@@ -1,9 +1,9 @@
 cask "jellyfin" do
   arch arm: "arm64", intel: "amd64"
 
-  version "10.11.10"
-  sha256 arm:   "7ea6013b610885a25f2fc7ab9aa3083cb23939016877e49ad40e29bdb5109932",
-         intel: "1ea89460fe82fcc07c7fe5fa966a686f438d6254b8e944d4b4d98ab73feeeb6c"
+  version "10.11.11"
+  sha256 arm:   "f345914f10b988f56fd453b07128faa23dfcd561405216ffd04e32a47e9f6c9c",
+         intel: "ee8a5b843254f733ee4b315f2c038ea1a37e5ac1ce4c56fdfe66faa545229e3b"
 
   url "https://repo.jellyfin.org/files/server/macos/stable/v#{version}/#{arch}/jellyfin_#{version}-#{arch}.dmg"
   name "Jellyfin"
