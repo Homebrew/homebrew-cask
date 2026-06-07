@@ -8,16 +8,24 @@ cask "omlx" do
   desc "MLX inference server for Apple Silicon"
   homepage "https://omlx.ai/"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases
+  end
+
+  auto_updates true
   depends_on arch: :arm64
   depends_on macos: :sequoia
 
   app "oMLX.app"
 
   zap trash: [
-    "~/Library/Application Support/app.omlx",
-    "~/Library/Caches/app.omlx",
-    "~/Library/HTTPStorages/app.omlx",
-    "~/Library/Preferences/app.omlx.plist",
-    "~/Library/Saved Application State/app.omlx.savedState",
-  ]
+        "~/Library/Application Support/oMLX",
+        "~/Library/Caches/app.omlx",
+        "~/Library/HTTPStorages/app.omlx*",
+        "~/Library/Preferences/app.omlx.plist",
+        "~/Library/Preferences/com.omlx.app.plist",
+      ],
+      rmdir: "~/.omlx"
 end
