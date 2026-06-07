@@ -1,6 +1,6 @@
 cask "electorrent" do
-  version "2.9.0"
-  sha256 "9c11fddd4f66f61b8d17cf6138061930f600e7641d9ffe93ed77331abeef57a8"
+  version "2.10.0"
+  sha256 "8fa073c946e66a16d7a2ba2fe2bfafc70fc288ea3f8f1ed850948f3188eaac93"
 
   url "https://github.com/tympanix/Electorrent/releases/download/v#{version}/Electorrent-#{version}-universal.dmg"
   name "Electorrent"
@@ -18,7 +18,7 @@ cask "electorrent" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Electorrent.app"
 
