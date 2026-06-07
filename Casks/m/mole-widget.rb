@@ -8,7 +8,7 @@ cask "mole-widget" do
   homepage "https://github.com/bsnkhua/mole-widget"
 
   livecheck do
-    url :url
+    url "https://github.com/bsnkhua/mole-widget"
     strategy :github_latest
   end
 
