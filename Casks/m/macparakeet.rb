@@ -1,17 +1,12 @@
 cask "macparakeet" do
-  version "0.6.18"
-  sha256 "0bbc4dfc130c4f250105e0a0144eb623b9c6488294fc8c39b8ddff9b023da6b7"
+  version "0.6.21"
+  sha256 "1179db1673496b42e6bf669aebec4a4660d520540da1a012d765aee71b7db2b4"
 
   url "https://github.com/moona3k/macparakeet/releases/download/v#{version}/MacParakeet-#{version}.dmg",
       verified: "github.com/moona3k/macparakeet/"
   name "MacParakeet"
   desc "Local speech-to-text, transcription, and meeting recording"
   homepage "https://macparakeet.com/"
-
-  livecheck do
-    url "https://macparakeet.com/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
 
   auto_updates true
   depends_on arch: :arm64
