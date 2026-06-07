@@ -3,8 +3,8 @@ cask "kid3" do
 
   # NOTE: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
   version "3.10.0"
-  sha256 arm:   "2992dc81b20eb9097f6b73411f74d09d23fb8374774c5f97609c74b5a1610473",
-         intel: "7508aece4fc0553b13ee63e646375d6b9f45a10296463c2772470d183bab101d"
+  sha256 arm:   "d18a73808cff3b3155b5b87f44a6a790a52f1d546741440e9ae7e0cccbec67c5",
+         intel: "b344286e84143e6613e9f433f1e887c24e33c2320a0c597342ec1cbd35eb8e68"
 
   url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-#{arch}.dmg",
       verified: "downloads.sourceforge.net/kid3/"
