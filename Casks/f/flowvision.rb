@@ -1,6 +1,6 @@
 cask "flowvision" do
-  version "1.7.3"
-  sha256 "2a94672d710376be8bacc8da390353d6a4568dc597f4ae985213cbcf7d35a6f4"
+  version "1.7.4"
+  sha256 "f9ae7ae6043f798ac773fe8832c5c3cc31dfbdb9a1e963417d8e5eb24454136e"
 
   url "https://github.com/netdcy/FlowVision/releases/download/#{version}/FlowVision.#{version}.zip",
       verified: "github.com/netdcy/FlowVision/"
