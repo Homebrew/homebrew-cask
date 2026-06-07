@@ -16,13 +16,9 @@ cask "silkypix-developer-studio-se" do
 
   depends_on :macos
 
-  pkg "SILKYPIX Developer Studio 8 SE Installer.pkg"
+  pkg "SILKYPIX Developer Studio #{version.major} SE Installer.pkg"
 
-  uninstall pkgutil: "jp.co.isl.SILKYPIX8SE"
+  uninstall pkgutil: "jp.co.isl.SILKYPIX*SE"
 
-  zap trash: [
-    "/private/var/db/receipts/jp.co.isl.SILKYPIX8SE.bom",
-    "/private/var/db/receipts/jp.co.isl.SILKYPIX8SE.plist",
-    "~/Library/Preferences/jp.co.isl.SILKYPIX8SE.plist",
-  ]
+  zap trash: "~/Library/Preferences/jp.co.isl.SILKYPIX*SE.plist"
 end
