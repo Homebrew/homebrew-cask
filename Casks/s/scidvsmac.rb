@@ -1,6 +1,6 @@
 cask "scidvsmac" do
-  version "4.26"
-  sha256 "f9f52ac36ecba8495e0fbd8cade2aec9bc5c1d991857469f53061ac828ec6965"
+  version "4.27"
+  sha256 "6a9564f30b8e8725a0569d83d39cb8ac14f0cd053f0d75cbb0649fc4def73a2c"
 
   url "https://downloads.sourceforge.net/scidvspc/ScidvsMac-#{version}.x64.dmg"
   name "Scid vs. Mac"
