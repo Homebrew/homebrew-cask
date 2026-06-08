@@ -1,6 +1,6 @@
 cask "overtone-analyzer" do
-  version "5.11.0.9351"
-  sha256 "9bd74dc0580855a68968afc38110ef2c789ae364ba22c907134fbb33390b9c9a"
+  version "5.11.1.9379"
+  sha256 "e5d57ca258173391fc7efdc19328e9cb87a123c4ecd1215e539ae8133bbee410"
 
   url "https://download.sygyt.com/#{version.major_minor_patch}/OvertoneAnalyzer_macOS_#{version}.dmg"
   name "Overtone Analyzer"
