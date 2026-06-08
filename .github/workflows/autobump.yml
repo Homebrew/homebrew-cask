@@ -1,0 +1,55 @@
+name: Bump casks on schedule or request
+
+on:
+  workflow_dispatch:
+    inputs:
+      casks:
+        description: Custom list of casks to livecheck and bump if outdated
+        required: false
+  schedule:
+    # Every 3 hours 23 minutes past the hour
+    - cron: "23 */3 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  autobump:
+    if: github.repository == 'Homebrew/homebrew-cask'
+    env:
+      HOMEBREW_DEVELOPER: 1
+    runs-on: macos-26
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: true
+          cask: true
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@main
+        with:
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
+
+      - name: Set up commit signing
+        uses: Homebrew/actions/setup-commit-signing@main
+        with:
+          signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
+
+      - name: Bump casks
+        id: autobump
+        env:
+          HOMEBREW_TEST_BOT_AUTOBUMP: 1
+          HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
+          HOMEBREW_GIT_COMMITTER_NAME: BrewTestBot
+          HOMEBREW_GIT_COMMITTER_EMAIL: 1589480+BrewTestBot@users.noreply.github.com
+          CASKS: ${{ inputs.casks }}
+        continue-on-error: true
+        run: |
+          BREW_BUMP=(brew bump --no-fork --open-pr --casks)
+          if [[ -n "${CASKS-}" ]]; then
+            xargs "${BREW_BUMP[@]}" <<<"${CASKS}"
+          else
+            "${BREW_BUMP[@]}" --auto --tap=Homebrew/cask
+          fi

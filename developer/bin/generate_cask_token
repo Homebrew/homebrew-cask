@@ -11,11 +11,12 @@
 # merge entirely into "brew create" command
 #
 
+exec "brew", "ruby", __FILE__, *ARGV if RUBY_VERSION < "4.0"
+
 ###
 ### dependencies
 ###
 
-require "pathname"
 require "open3"
 
 begin
@@ -124,21 +125,28 @@ AFTER_INTERIOR_VERSION_PATS = [
 ### classes
 ###
 
-class AppName < String
+class AppName
+  def initialize(string)
+    @string = string
+  end
+
+  # Using class variables here for more optimal global caching
+  # rubocop:disable Style/ClassVars
   def self.remove_trailing_pat
-    @@remove_trailing_pat ||= /(?<=.)(?:#{REMOVE_TRAILING_PATS.join('|')})\Z/i
+    @@remove_trailing_pat ||= /(?<=.)(?:#{REMOVE_TRAILING_PATS.join("|")})\Z/i
   end
 
   def self.preserve_trailing_pat
-    @@preserve_trailing_pat ||= /(?:#{PRESERVE_TRAILING_PATS.join('|')})\Z/i
+    @@preserve_trailing_pat ||= /(?:#{PRESERVE_TRAILING_PATS.join("|")})\Z/i
   end
 
   def self.after_interior_version_pat
-    @@after_interior_version_pat ||= /(?:#{AFTER_INTERIOR_VERSION_PATS.join('|')})/i
+    @@after_interior_version_pat ||= /(?:#{AFTER_INTERIOR_VERSION_PATS.join("|")})/i
   end
+  # rubocop:enable Style/ClassVars
 
   def english_from_app_bundle
-    return self if ascii_only?
+    return self if @string.ascii_only?
     return self unless File.exist?(self)
 
     # check Info.plist CFBundleDisplayName
@@ -149,7 +157,7 @@ class AppName < String
     rescue
       nil
     end
-    return AppName.new(bundle_name) if bundle_name&.ascii_only?
+    return self.class.new(bundle_name) if bundle_name&.ascii_only?
 
     # check Info.plist CFBundleName
     bundle_name = Open3.popen3("/usr/libexec/PlistBuddy", "-c",
@@ -159,7 +167,7 @@ class AppName < String
     rescue
       nil
     end
-    return AppName.new(bundle_name) if bundle_name&.ascii_only?
+    return self.class.new(bundle_name) if bundle_name&.ascii_only?
 
     # check localization strings
     local_strings_file = Pathname.new(self).join("Contents", "Resources", "en.lproj", "InfoPlist.strings")
@@ -174,7 +182,7 @@ class AppName < String
           match.captures.first
         end
       end
-      return AppName.new(bundle_name) if bundle_name&.ascii_only?
+      return self.class.new(bundle_name) if bundle_name&.ascii_only?
     end
 
     # check Info.plist CFBundleExecutable
@@ -185,70 +193,71 @@ class AppName < String
     rescue
       nil
     end
-    return AppName.new(bundle_name) if bundle_name&.ascii_only?
+    return self.class.new(bundle_name) if bundle_name&.ascii_only?
 
     self
   end
 
   def basename
-    if Pathname.new(self).exist?
-      AppName.new(Pathname.new(self).basename.to_s)
+    if Pathname.new(@string).exist?
+      self.class.new(Pathname.new(@string).basename.to_s)
     else
       self
     end
   end
 
   def remove_extension
-    sub(/\.app\Z/i, "")
+    self.class.new(@string.sub(/\.app\Z/i, ""))
   end
 
   def decompose_to_ascii
     # crudely (and incorrectly) decompose extended latin characters to ASCII
-    return self if ascii_only?
-    return self unless respond_to?(:mb_chars)
+    return self if @string.ascii_only?
+    return self unless @string.respond_to?(:mb_chars)
 
-    AppName.new(mb_chars.normalize(:kd).each_char.select(&:ascii_only?).join)
+    self.class.new(@string.mb_chars.normalize(:kd).each_char.select(&:ascii_only?).join)
   end
 
   def hardcoded_exception
     APP_EXCEPTION_PATS.each do |regexp, exception|
-      return AppName.new(exception) if regexp.match(self)
+      return self.class.new(exception) if regexp.match(@string)
     end
     nil
   end
 
   def insert_vertical_tabs_for_camel_case
-    app_name = AppName.new(self)
+    app_name = @string.dup
     trailing = Regexp.last_match(1) if app_name.sub!(/(#{self.class.preserve_trailing_pat})\Z/i, "")
     app_name.gsub!(/([^A-Z])([A-Z])/, "\\1\v\\2")
     app_name.sub!(/\Z/, trailing) if trailing
-    app_name
+    self.class.new(app_name)
   end
 
   def insert_vertical_tabs_for_snake_case
-    tr("_", "\v")
+    self.class.new(@string.tr("_", "\v"))
   end
 
   def clean_up_vertical_tabs
-    delete("\v")
+    self.class.new(@string.delete("\v"))
   end
 
-  def remove_interior_versions!
+  def remove_interior_versions
     # done separately from REMOVE_TRAILING_PATS because this
     # requires a substitution with a backreference
-    sub!(/(?<=.)[.\d]+(#{self.class.after_interior_version_pat})\Z/i, '\1')
-    sub!(/(?<=.)[\s.\d-]*\d[\s.\d-]*(#{self.class.after_interior_version_pat})\Z/i, '-\1')
+    app_name = @string
+               .sub(/(?<=.)[.\d]+(#{self.class.after_interior_version_pat})\Z/i, '\1')
+               .sub(/(?<=.)[\s.\d-]*\d[\s.\d-]*(#{self.class.after_interior_version_pat})\Z/i, '-\1')
+    self.class.new(app_name)
   end
 
   def remove_trailing_strings_and_versions
     app_name = insert_vertical_tabs_for_camel_case
-               .insert_vertical_tabs_for_snake_case
+               .insert_vertical_tabs_for_snake_case.to_s
     while self.class.remove_trailing_pat.match(app_name) &&
           !self.class.preserve_trailing_pat.match(app_name)
       app_name.sub!(self.class.remove_trailing_pat, "")
     end
-    app_name.remove_interior_versions!
-    app_name.clean_up_vertical_tabs
+    self.class.new(app_name).remove_interior_versions.clean_up_vertical_tabs
   end
 
   def simplified
@@ -261,43 +270,56 @@ class AppName < String
     @simplified = @simplified.hardcoded_exception || @simplified.remove_trailing_strings_and_versions
     @simplified
   end
+
+  def to_s
+    @string
+  end
 end
 
-class CaskFileName < String
+class CaskFileName
+  def initialize(string)
+    @string = string
+  end
+
   def spaces_to_hyphens
-    gsub(/ +/, "-")
+    self.class.new(@string.gsub(/ +/, "-"))
   end
 
   def delete_invalid_chars
-    gsub(/[^a-z0-9-]+/, "")
+    self.class.new(@string.gsub(/[^a-z0-9-]+/, ""))
   end
 
   def collapse_multiple_hyphens
-    gsub(/--+/, "-")
+    self.class.new(@string.gsub(/--+/, "-"))
   end
 
   def delete_leading_hyphens
-    gsub(/^--+/, "")
+    self.class.new(@string.gsub(/^--+/, ""))
   end
 
   def delete_hyphens_before_numbers
-    gsub(/-([0-9])/, '\1')
+    self.class.new(@string.gsub(/-([0-9])/, '\1'))
   end
 
   def spell_out_symbols
-    cask_file_name = self
+    cask_file_name = @string.dup
     EXPANDED_SYMBOLS.each do |k, v|
       cask_file_name.gsub!(k, " #{v} ")
     end
-    cask_file_name.sub(/ +\Z/, "")
+    cask_file_name.sub!(/ +\Z/, "")
+    self.class.new(cask_file_name)
   end
 
   def add_extension
-    sub(/(?:#{escaped_cask_file_extension})?\Z/i, CASK_FILE_EXTENSION)
+    self.class.new(@string.sub(/(?:#{escaped_cask_file_extension})?\Z/i, CASK_FILE_EXTENSION))
   end
 
   def remove_extension
-    sub(/#{escaped_cask_file_extension}\Z/i, "")
+    self.class.new(@string.sub(/#{escaped_cask_file_extension}\Z/i, ""))
+  end
+
+  def downcase
+    self.class.new(@string.downcase)
   end
 
   def from_simplified_app_name
@@ -315,9 +337,13 @@ class CaskFileName < String
         .delete_leading_hyphens
         .delete_hyphens_before_numbers
     end
-    raise "Could not determine Simplified App name" if @from_simplified_app_name.empty?
+    raise "Could not determine Simplified App name" if @from_simplified_app_name.to_s.empty?
 
     @from_simplified_app_name.add_extension
+  end
+
+  def to_s
+    @string
   end
 end
 
@@ -346,11 +372,11 @@ def simplified_app_name
 end
 
 def cask_file_name
-  @cask_file_name ||= CaskFileName.new(simplified_app_name).from_simplified_app_name
+  @cask_file_name ||= CaskFileName.new(simplified_app_name.to_s).from_simplified_app_name
 end
 
 def cask_token
-  @cask_token ||= cask_file_name.remove_extension
+  @cask_token ||= cask_file_name.remove_extension.to_s
 end
 
 def warnings
@@ -360,7 +386,7 @@ def warnings
   if !APP_EXCEPTION_PATS.rassoc(cask_token) && /\d/.match?(cask_token)
     @warnings.push "WARNING: '#{cask_token}' contains digits. Digits which are version numbers should be removed."
   end
-  filename = project_root.join("Casks", cask_file_name)
+  filename = project_root.join("Casks", cask_file_name.to_s[0], cask_file_name.to_s)
   if filename.exist?
     @warnings.push(
       "WARNING: the file '#{filename}' already exists. Prepend the vendor name if this is not a duplicate.",
@@ -370,10 +396,11 @@ def warnings
 end
 
 def report
-  puts "Proposed Simplified App name: #{simplified_app_name}" if $debug
+  # Debug flag needs to be globally accessible across the script
+  puts "Proposed Simplified App name: #{simplified_app_name}" if $debug # rubocop:disable Style/GlobalVars
   puts "Proposed token:               #{cask_token}"
   puts "Proposed file name:           #{cask_file_name}"
-  puts "Cask Header Line:             cask '#{cask_token}' do"
+  puts "Cask Header Line:             cask \"#{cask_token}\" do"
   return if warnings.empty?
 
   $stderr.puts "\n"
@@ -402,11 +429,12 @@ if /^-+h(elp)?$/i.match?(ARGV.first)
 end
 
 if /^-+debug?$/i.match?(ARGV.first)
-  $debug = 1
+  # Debug flag needs to be globally accessible in the script
+  $debug = 1 # rubocop:disable Style/GlobalVars
   ARGV.shift
 end
 
-unless ARGV.length == 1
+if ARGV.length != 1
   puts usage
   exit 1
 end

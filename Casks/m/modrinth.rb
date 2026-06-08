@@ -1,0 +1,30 @@
+cask "modrinth" do
+  version "0.14.4"
+  sha256 "a4c7a6a54aaa6aa6472e8e4f25edeba4a3c8793acf94fc34a4be19238d9a269d"
+
+  url "https://launcher-files.modrinth.com/versions/#{version}/macos/Modrinth%20App_#{version}_universal.dmg"
+  name "Modrinth App"
+  desc "Minecraft modding platform"
+  homepage "https://modrinth.com/"
+
+  livecheck do
+    url "https://launcher-files.modrinth.com/updates.json"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
+
+  auto_updates true
+  depends_on :macos
+
+  app "Modrinth App.app"
+
+  uninstall quit: "com.modrinth.theseus"
+
+  zap trash: [
+    "~/Library/Application Support/com.modrinth.theseus",
+    "~/Library/Caches/com.modrinth.theseus",
+    "~/Library/Saved Application State/com.modrinth.theseus.savedState",
+    "~/Library/WebKit/com.modrinth.theseus",
+  ]
+end

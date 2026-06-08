@@ -1,0 +1,28 @@
+cask "ente" do
+  version "1.7.24"
+  sha256 "86b62e20f9988fe11167ddd027cb5bd0567a858d8db2969ddd543ec3f38bc591"
+
+  url "https://github.com/ente-io/photos-desktop/releases/download/v#{version}/ente-#{version}-universal.dmg",
+      verified: "github.com/ente-io/photos-desktop/"
+  name "Ente"
+  desc "Desktop client for Ente Photos"
+  homepage "https://ente.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
+  depends_on macos: :monterey
+
+  app "ente.app"
+
+  zap trash: [
+    "~/Library/Application Support/ente",
+    "~/Library/Logs/ente",
+    "~/Library/Preferences/io.ente.bhari-frame.helper.plist",
+    "~/Library/Preferences/io.ente.bhari-frame.plist",
+    "~/Library/Saved Application State/io.ente.bhari-frame.savedState",
+  ]
+end

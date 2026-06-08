@@ -1,12 +1,13 @@
 name: Reproducible Bug Report
 description: If you’re sure it’s reproducible and not just your machine, submit an issue so we can investigate
-issue_body: false
+type: "Bug"
 body:
   - type: checkboxes
     attributes:
+      label: Verification
       description: Please verify that you’ve followed these steps
       options:
-        - label: I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
+        - label: I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/HEAD/doc/faq/closing_issues_without_review.md).
           required: true
         - label: I have retried my command with `--force`.
           required: false
@@ -16,7 +17,7 @@ body:
           required: false
         - label: I have checked the instructions for [reporting bugs](https://github.com/Homebrew/homebrew-cask#reporting-bugs).
           required: true
-        - label: I made doubly sure this is not a [checksum does not match](https://github.com/Homebrew/homebrew-cask/blob/master/doc/reporting_bugs/checksum_does_not_match_error.md) error.
+        - label: I made doubly sure this is not a [checksum does not match / SHA256 mismatch](https://docs.brew.sh/Common-Issues#cask---checksum-does-not-match) error (do not open an issue before trying to open a PR to fix first).
           required: true
   - type: textarea
     attributes:
@@ -31,33 +32,18 @@ body:
   - type: textarea
     attributes:
       label: Output of command with `--verbose --debug`
-      value: |
-        <details><summary>Click to expand</summary><pre><code>
-
-        REPLACE THIS TEXT WITH THE OUTPUT
-
-        </code></pre></details>
+      render: shell
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Output of `brew doctor --verbose`
-      value: |
-        <details><summary>Click to expand</summary><pre><code>
-
-        REPLACE THIS TEXT WITH THE OUTPUT
-
-        </code></pre></details>
+      label: Output of `brew doctor` and `brew config`
+      render: shell
     validations:
       required: true
   - type: textarea
     attributes:
       label: Output of `brew tap`
-      value: |
-        <details><summary>Click to expand</summary><pre><code>
-
-        REPLACE THIS TEXT WITH THE OUTPUT
-
-        </code></pre></details>
+      render: shell
     validations:
       required: true

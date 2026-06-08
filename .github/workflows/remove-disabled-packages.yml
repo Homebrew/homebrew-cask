@@ -1,0 +1,85 @@
+name: Remove disabled packages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - .github/workflows/remove-disabled-packages.yml
+  schedule:
+    # Once every day at midnight UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: remove-disabled-packages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  remove-disabled-packages:
+    if: github.repository_owner == 'Homebrew'
+    runs-on: macos-latest
+    env:
+      REMOVAL_BRANCH: remove-disabled-packages
+    permissions:
+      contents: write # for Homebrew/actions/git-try-push
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          core: false
+          cask: true
+
+      - name: Configure Git user
+        id: git-user-config
+        uses: Homebrew/actions/git-user-config@main
+        with:
+          username: BrewTestBot
+
+      - name: Set up commit signing
+        uses: Homebrew/actions/setup-commit-signing@main
+        with:
+          signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
+
+      - name: Checkout removal branch
+        run: git checkout -b "$REMOVAL_BRANCH" origin/HEAD
+        working-directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
+
+      - name: Remove disabled packages
+        id: remove_disabled
+        uses: Homebrew/actions/remove-disabled-packages@main
+        env:
+          HOMEBREW_EVAL_ALL: 1
+          HOMEBREW_NO_INSTALL_FROM_API: 1
+
+      - name: Push commits
+        if: fromJson(steps.remove_disabled.outputs.packages-removed)
+        uses: Homebrew/actions/git-try-push@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
+          branch: ${{ env.REMOVAL_BRANCH }}
+        env:
+          GIT_COMMITTER_NAME: ${{ steps.git-user-config.outputs.name }}
+          GIT_COMMITTER_EMAIL: ${{ steps.git-user-config.outputs.email }}
+
+      - name: Create pull request
+        id: pr-create
+        if: fromJson(steps.remove_disabled.outputs.packages-removed)
+        working-directory: ${{ steps.set-up-homebrew.outputs.repository-path }}
+        env:
+          GH_TOKEN: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          PR_BODY: >
+            This pull request was created automatically by the
+            [`remove-disabled-packages`](https://github.com/Homebrew/homebrew-cask/blob/HEAD/.github/workflows/remove-disabled-packages.yml)
+            workflow.
+        run: |
+          gh pr create \
+            --body "$PR_BODY" \
+            --head "$REMOVAL_BRANCH" \
+            --title 'Remove disabled packages'

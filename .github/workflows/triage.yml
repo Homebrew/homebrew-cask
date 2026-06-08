@@ -1,0 +1,118 @@
+name: Triage tasks
+
+on: pull_request_target
+
+concurrency:
+  group: "triage-${{ github.event.number }}"
+  cancel-in-progress: true
+
+jobs:
+  triage:
+    runs-on: ubuntu-slim
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Check commit format
+        uses: Homebrew/actions/check-commit-format@main
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+      - name: Label pull request
+        uses: Homebrew/actions/label-pull-requests@main
+        if: always()
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+          def: |
+            - label: cask deprecated
+              path: Casks/.+
+              content: \n  deprecate!.*\n
+
+            - label: cask disabled
+              path: Casks/.+
+              content: \n  disable!.*\n
+
+            - label: unsigned
+              path: Casks/.+
+              content: \n  (deprecate|disable)!.*:fails_gatekeeper_check\n
+
+            - label: new cask
+              status: added
+              path: Casks/.+
+              allow_any_match: true
+
+            - label: marked for removal/rejection
+              status: removed
+              path: Casks/.+
+
+            - label: documentation
+              path: (.*\.md|\.github/ISSUE_TEMPLATE/.*\.yml)
+
+            - label: bump-cask-pr
+              pr_body_content: Created with `brew bump-cask-pr`
+
+            - label: missing description
+              path: Casks/.+
+              missing_content:
+                - \n  desc .+\n
+                - cask "font-
+
+            - label: extract_plist livecheck
+              path: Casks/.+
+              content: strategy :extract_plist
+
+            - label: missing zap
+              path: Casks/.+
+              missing_content: zap .+\n
+
+            - label: linux cask
+              path: Casks/.+
+              content: (x86_64|arm64)_linux
+
+  check-base-branch:
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    if: always() && github.repository_owner == 'Homebrew' && github.actor != 'BrewTestBot'
+    runs-on: ubuntu-slim
+    env:
+      PR: ${{ github.event.number }}
+    steps:
+      - name: Check pull request base branch
+        id: base
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          branch="$(
+            gh api \
+              --header 'Accept: application/vnd.github+json' \
+              --header 'X-GitHub-Api-Version: 2022-11-28' \
+              "repos/$GITHUB_REPOSITORY/pulls/$PR" \
+              --jq '.base.ref'
+          )"
+          echo "branch=${branch}" >>"${GITHUB_OUTPUT}"
+
+      - name: Change base branch to `main`
+        id: change
+        if: steps.base.outputs.branch == 'master'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr edit "${PR}" --base main --repo "${GITHUB_REPOSITORY}"
+
+      - name: Post comment
+        if: steps.base.outputs.branch == 'master'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: |-
+            > [!TIP]
+            > This pull request targets the `master` branch. For future pull requests, please target the `main` branch instead.
+        run: gh pr comment "${PR}" --body "${BODY}" --repo "${GITHUB_REPOSITORY}"
+
+      - name: Post failure comment
+        if: failure() && steps.change.conclusion == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BODY: |-
+            > [!CAUTION]
+            > Failed to change base branch to `main`. Please edit your pull request manually to target the `main` branch instead of the `master` branch.
+        run: gh pr comment "${PR}" --body "${BODY}" --repo "${GITHUB_REPOSITORY}"

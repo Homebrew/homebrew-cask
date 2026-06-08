@@ -1,33 +1,47 @@
 # frozen_string_literal: true
 
 require "forwardable"
+require "system_command"
+
+APPLE_LAUNCHJOBS_REGEX =
+  /\A(?:application\.)?com\.apple\.
+  (AppStore|installer|Preview|Safari|systemevents|systempreferences|Terminal)
+  (?:\.|$)/x
+
+GOOGLE_LAUNCHJOBS_REGEX = /com\.google\.(keystone|GoogleUpdater)/
 
 module Check
+  # TODO: replace with public API like Utils.safe_popen_read that's less likely to be volatile to changes
+  # see https://github.com/Homebrew/brew/pull/16540#issuecomment-1913737000
+  extend SystemCommand::Mixin
+
   CHECKS = {
     installed_apps:       lambda {
       ["/Applications", File.expand_path("~/Applications")]
-        .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
+      .flat_map { |dir| (0..5).map { |i| "/*" * i }.flat_map { |glob| Dir["#{dir}#{glob}.app"] } }
     },
     installed_kexts:      lambda {
       system_command!("/usr/sbin/kextstat", args: ["-kl"], print_stderr: false)
-        .stdout
-        .lines
-        .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
-        .grep_v(/^com\.apple\./)
+      .stdout
+      .lines
+      .map { |l| l.match(/^.{52}([^\s]+)/)[1] }
+      .grep_v(/^com\.apple\./)
     },
     installed_pkgs:       lambda {
       Pathname("/var/db/receipts")
-        .children
-        .grep(/\.plist$/)
-        .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
+      .children
+      .grep(/\.plist$/)
+      .map { |path| path.basename.to_s.sub(/\.plist$/, "") }
+      .grep_v(/^com\.google(?:\.pkg)?\.Keystone/i)
     },
     installed_launchjobs: lambda {
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
 
-        xml, = system_command! "plutil", args: ["-convert", "xml1", "-o", "-", "--", file], sudo: true
+        result = system_command "plutil", args: ["-convert", "xml1", "-o", "-", "--", file], sudo: true
+        return name unless result.success?
 
-        label = Plist.parse_xml(xml)["Label"]
+        label = result.plist["Label"]
         (name == label) ? name : "#{name} (#{label})"
       }
 
@@ -37,26 +51,27 @@ module Check
         "/Library/LaunchAgents",
         "/Library/LaunchDaemons",
       ].map { |p| Pathname(p).expand_path }
-        .select(&:directory?)
-        .flat_map(&:children)
-        .select { |child| child.extname == ".plist" }
-        .select(&:exist?)
-        .map(&format_launchjob)
+      .select(&:directory?)
+      .flat_map(&:children)
+      .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
+      .select { |child| child.extname == ".plist" }
+      .select(&:exist?)
+      .map(&format_launchjob)
     },
     loaded_launchjobs:    lambda {
       launchctl = lambda do |sudo|
-        system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo: sudo)
-          .stdout
-          .lines.drop(1)
-          .reject do |id|
-            id.match?(/\A(?:application\.)?com\.apple\.(installer|Safari|systemevents|systempreferences)(?:\.|$)/)
-          end
+        system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo:)
+        .stdout
+        .lines.drop(1)
+        .grep_v(APPLE_LAUNCHJOBS_REGEX)
+        .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
       end
 
       [false, true]
-        .flat_map(&launchctl)
-        .map { |l| l.split(/\s+/)[2] }
-        .grep_v(/^com\.apple\./)
+      .flat_map(&launchctl)
+      .map { |l| l.split(/\s+/)[2] }
+      .grep_v(/^com\.apple\./)
+      .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
     },
   }.freeze
   private_constant :CHECKS
@@ -102,14 +117,18 @@ module Check
       errors << message
     end
 
-    installed_kexts = diff[:installed_kexts].added
+    installed_kexts = diff[:installed_kexts]
+                      .added
+                      .grep_v(/^com\.(softraid\.driver\.SoftRAID|highpoint-tech\.kext\.*)/)
     if installed_kexts.any?
       message = "Some kernel extensions are still installed, add them to #{Formatter.identifier("uninstall kext:")}\n"
       message += installed_kexts.join("\n")
       errors << message
     end
 
-    installed_packages = diff[:installed_pkgs].added
+    installed_packages = diff[:installed_pkgs]
+                         .added
+                         .grep_v(/^com\.logi\.installer\.pluginservice\.package/i)
     if installed_packages.any?
       message = "Some packages are still installed, add them to #{Formatter.identifier("uninstall pkgutil:")}\n"
       message += installed_packages.join("\n")
@@ -125,14 +144,21 @@ module Check
 
     running_apps = diff[:loaded_launchjobs]
                    .added
-                   .select { |id| id.match?(/\.\d+\Z/) }
+                   .grep(/\.\d+\Z/)
+                   .grep_v(APPLE_LAUNCHJOBS_REGEX)
+                   .grep_v(GOOGLE_LAUNCHJOBS_REGEX)
                    .map { |id| id.sub(/\A(?:application\.)?(.*?)(?:\.\d+){0,2}\Z/, '\1') }
 
     loaded_launchjobs = diff[:loaded_launchjobs]
                         .added
-                        .reject { |id| id.match?(/\.\d+\Z/) }
+                        .grep_v(/\.\d+\Z/)
 
     missing_running_apps = running_apps - Array(uninstall_directives[:quit])
+
+    # Some applications may launch a browser session after install
+    # Skip Firefox, unless the cask is a Firefox cask
+    missing_running_apps.delete("org.mozilla.firefox") unless cask.token.include?("firefox")
+
     if missing_running_apps.any?
       message = "Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}\n"
       message += missing_running_apps.join("\n")

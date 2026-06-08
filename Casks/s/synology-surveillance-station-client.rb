@@ -1,0 +1,41 @@
+cask "synology-surveillance-station-client" do
+  arch arm: "arm64", intel: "x64"
+
+  version "2.2.3,2598"
+  sha256 arm:   "5a6028d99a443466580456741e8610cf2b9f80b4405fa8135b89a582181bc9ce",
+         intel: "afc206229793d5e59a79c3c029a7edf5a01b0a0df79695c1851a497c5590a699"
+
+  url "https://global.download.synology.com/download/Utility/SurveillanceStationClient/#{version.tr(",", "-")}/Mac/Synology%20Surveillance%20Station%20Client-#{version.tr(",", "-")}_#{arch}.dmg"
+  name "Synology Surveillance Station Client"
+  desc "Desktop utility to access Surveillance Station on Synology products"
+  homepage "https://www.synology.com/surveillance/"
+
+  livecheck do
+    url "https://www.synology.com/api/releaseNote/findChangeLog?identify=SurveillanceStationClient&lang=en-us"
+    strategy :json do |json|
+      json.dig("info", "versions", "", "all_versions")&.map { |item| item["version"]&.tr("-", ",") }
+    end
+  end
+
+  depends_on :macos
+
+  pkg "Install Synology Surveillance Station Client.pkg"
+
+  uninstall launchctl: "com.synology.svsclient-SurveillanceStationClient",
+            quit:      "com.synology.svsclient-SurveillanceStationClient",
+            pkgutil:   [
+              "com.synology.svsclient-Live-View",
+              "com.synology.svsclient-Monitor-Center",
+              "com.synology.svsclient-Recording",
+              "com.synology.svsclient-SurveillanceStationClient",
+              "com.synology.svsclient-Timeline",
+            ],
+            delete:    "/Applications/Synology Surveillance Station Client.app"
+
+  zap trash: [
+    "~/Library/Application Support/SynologySurveillanceStationClient",
+    "~/Library/Preferences/com.synology.Surveillance Station Client.plist",
+    "~/Library/Preferences/com.synology.svsclient-SurveillanceStationClient.plist",
+    "~/Library/Saved Application State/com.synology.svsclient-SurveillanceStationClient.savedState",
+  ]
+end
