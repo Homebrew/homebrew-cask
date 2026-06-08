@@ -1,6 +1,6 @@
 cask "dwellclick" do
-  version "2.3.1"
-  sha256 "0f8423715bec34ea18d1ebbd20d1c9dbba45dbf04695c7eef62689a782078d4b"
+  version "2.3.2"
+  sha256 "0873f6aa1485eb617bb35ec5796b1258128befc18f99101ca6b494cff966b5bd"
 
   url "https://pilotmoon.com/downloads/DwellClick-#{version}.zip"
   name "DwellClick"
