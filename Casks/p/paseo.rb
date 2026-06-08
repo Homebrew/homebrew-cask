@@ -26,6 +26,7 @@ cask "paseo" do
 
   zap trash: [
     "~/.paseo",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/sh.paseo.desktop.sfl*",
     "~/Library/Application Support/Paseo",
     "~/Library/Caches/@getpaseodesktop-updater",
     "~/Library/Caches/sh.paseo.desktop",
