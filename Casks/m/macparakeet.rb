@@ -26,5 +26,6 @@ cask "macparakeet" do
     "~/Library/Logs/MacParakeet",
     "~/Library/Preferences/com.macparakeet.MacParakeet.plist",
     "~/Library/Saved Application State/com.macparakeet.MacParakeet.savedState",
+    "~/Library/WebKit/com.macparakeet.MacParakeet",
   ]
 end
