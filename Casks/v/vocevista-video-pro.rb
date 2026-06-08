@@ -1,6 +1,6 @@
 cask "vocevista-video-pro" do
-  version "5.11.0.9351"
-  sha256 "889b03dcf12d21263cfad064154868def9dd09257e8a043e33176343cc630466"
+  version "5.11.1.9379"
+  sha256 "fe2f00ba40362ee8c2e7b7929267c8eb91ce7d121a1e8262ea6287980f5037fb"
 
   url "https://download.sygyt.com/#{version.major_minor_patch}/VoceVistaVideoPro_macOS_#{version}.dmg"
   name "VoceVista Video Pro"
