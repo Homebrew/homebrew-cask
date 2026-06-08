@@ -1,9 +1,9 @@
 cask "dbeaverteam" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "26.0.0"
-  sha256 arm:   "541161f7be2521bed3ee71d10e0647d0715c51bade68eedca4c352c0684a752b",
-         intel: "f1ea64ce76cdfe0f1be29fde0c0bf814b7a7f0e963eb2b8e0afe29604bbfd6ea"
+  version "26.1.0"
+  sha256 arm:   "cff721607c32bd852261018d6e72e6e9c5bafaf286703983b10651bc355f9159",
+         intel: "ca1df9960173c16d78930475589855379f71b28b94c09adaf6c059f2be8b0fe3"
 
   url "https://downloads.dbeaver.net/team/#{version}/dbeaver-te-#{version}-macos-#{arch}.dmg",
       verified: "downloads.dbeaver.net/team/"
