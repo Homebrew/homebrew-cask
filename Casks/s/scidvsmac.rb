@@ -12,6 +12,8 @@ cask "scidvsmac" do
     regex(/ScidvsMac-(\d+(?:\.\d+)*)\.x64\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on :macos
 
   app "ScidvsMac.app"
@@ -21,8 +23,4 @@ cask "scidvsmac" do
     "~/Library/Preferences/net.sf.scid.plist",
     "~/Library/Saved Application State/net.sf.scid.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
