@@ -22,7 +22,11 @@ cask "paseo" do
   binary "#{appdir}/Paseo.app/Contents/Resources/bin/paseo"
 
   uninstall launchctl: "sh.paseo.desktop.ShipIt",
-            quit:      "sh.paseo.desktop"
+            quit:      "sh.paseo.desktop",
+            script:    {
+              executable: "#{appdir}/Paseo.app/Contents/Resources/bin/paseo",
+              args:       ["daemon", "stop", "--force"],
+            }
 
   zap trash: [
     "~/.paseo",
