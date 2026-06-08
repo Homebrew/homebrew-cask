@@ -17,6 +17,7 @@ cask "ghostvm" do
   depends_on arch: :arm64
 
   app "GhostVM.app"
+  binary "#{appdir}/GhostVM.app/Contents/PlugIns/Helpers/vmctl.app/Contents/MacOS/vmctl"
 
   zap trash: [
     "/Library/Logs/DiagnosticReports/GhostVM_*.diag",
