@@ -1,9 +1,9 @@
 cask "4k-video-downloader+" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.1.2"
-  sha256 arm:   "51a1fa9e3cd5766276e51dfbe355f4e4558a66b7e4fa929610d39ca80b41d1a8",
-         intel: "beecc4ceb4f16b3e311e4c1cceeaa428a47a56d266a4a6fbf4a50a17856fc123"
+  version "26.1.4"
+  sha256 arm:   "e4f6e617edf3549d807cd41c54946ac07ccb9872649d4395901cff361e658016",
+         intel: "19a1d545a0ba057573810ae1db634452b39dd75fc12d85146db269d9526a0f46"
 
   url "https://dl.4kdownload.com/app/4kvideodownloaderplus_#{version}_#{arch}.dmg"
   name "4K Video Downloader Plus"
