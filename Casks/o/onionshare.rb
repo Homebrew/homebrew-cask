@@ -12,7 +12,7 @@ cask "onionshare" do
     regex(/href=.*?OnionShare[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "OnionShare.app"
 
