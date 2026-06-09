@@ -1,8 +1,8 @@
 cask "screens-connect" do
-  version "5.2.6,22851"
-  sha256 "e8260a42fe0dd5191b5f8b77e2778f49b5f4000e5c95d7fa76c0314e65792760"
+  version "5.3.1,22924"
+  sha256 "a480015c49a04ff25da57a33a9fe0627a15e00121184b850f0df418c141a74e0"
 
-  url "https://updates.edovia.com/com.edovia.screens.connect.mac/ScreensConnect_#{version.csv.first}b#{version.csv.second}.zip"
+  url "https://updates.edovia.com/com.edovia.screens.connect.mac/ScreensConnect_#{version.csv.first.major_minor}b#{version.csv.second}.zip"
   name "Screens Connect"
   desc "Remote desktop software"
   homepage "https://edovia.com/en/screens-connect/"
@@ -23,12 +23,7 @@ cask "screens-connect" do
               "com.edovia.Screens-Connect.launcher",
               "com.edovia.screens.connect",
             ],
-            quit:      "com.edovia.Screens-Connect",
-            script:    {
-              executable:   "#{appdir}/Screens Connect.app/Contents/Resources/sc-uninstaller.tool",
-              must_succeed: false,
-              sudo:         true,
-            }
+            quit:      "com.edovia.Screens-Connect"
 
   zap trash: [
     "~/Library/Preferences/com.edovia.Screens-Connect.plist",
