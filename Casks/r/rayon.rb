@@ -1,9 +1,9 @@
 cask "rayon" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.14.0"
-  sha256 arm:   "cada8e3e907ab8bbfef9a429cb4046f27b40af00680f1f5e14bc273bd2212493",
-         intel: "bff8c95cbad4368d99bc34d03a76ff276b4332f5b164161956184c033329e2dd"
+  version "2.15.0"
+  sha256 arm:   "3265481422830d11a44b4ecd8b22e48edeb715667190741083e043836185e6db",
+         intel: "66968f4ec4636457a5359aaef28f6f0214ae2fdb2b0b0f1077b16f54f4c19d40"
 
   url "https://rayon-electron.s3.eu-west-3.amazonaws.com/rayon-electron/rayon-electron/rayon-electron-#{version}-#{arch}.dmg",
       verified: "rayon-electron.s3.eu-west-3.amazonaws.com/"
