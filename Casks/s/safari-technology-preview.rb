@@ -1,25 +1,19 @@
 cask "safari-technology-preview" do
-  # when adjusting the on_{os} scoping, also update the livecheck regex
+  # TODO: When possible, update this to remove the `on_sequoia :or_older` block,
+  # update the Tahoe block to `on_tahoe :or_older`, add an
+  # `on_golden_gate :or_newer` block, and use `depends_on macos: :tahoe`.
   on_sequoia :or_older do
     version "244,122-88534-20260521-6dc38dc5-09a4-4572-985a-13bccab2baca"
     sha256 "31967983d9557954828224869f2bc446395d3f33f383202f89799344a5d2ed2b"
 
     livecheck do
-      url :homepage
-      regex(%r{
-        href=.*?/([^/]+)/Safari(?:%20|\+)?Technology(?:%20|\+)?Preview\.dmg
-        .*?macOS(?:\s|&nbsp;)*15[\s.<]
-      }ix)
-      strategy :page_match do |page, regex|
-        release = page[%r{>\s*Release\s*</p>\s*<p[^>]*>\s*(\d+)[^<]*<}i, 1]
-        id = page[regex, 1]
-        "#{release},#{id}"
-      end
+      skip "Legacy version"
     end
   end
+  # when adjusting the on_{os} scoping, also update the livecheck regex
   on_tahoe :or_newer do
-    version "244,122-88537-20260521-a8fe9705-30d4-4c1c-8c22-b2b7f2bb260e"
-    sha256 "ff85d84cd63b62c59e774ba007b5e8ac7e2605613dc094b470e17b8dcdaaef97"
+    version "245,122-98668-20260605-fba5ee23-9734-48f0-91b1-a872b1bd55f1"
+    sha256 "658877c0303dde88aeed412e64706e7fed856f5f1cf4fddcc979a36802458203"
 
     livecheck do
       url :homepage
