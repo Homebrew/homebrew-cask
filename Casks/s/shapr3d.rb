@@ -12,7 +12,7 @@ cask "shapr3d" do
     strategy :header_match
   end
 
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Shapr3D.app"
 
