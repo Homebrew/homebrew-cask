@@ -1,12 +1,13 @@
 cask "reminders-menubar" do
-  version "1.25.0"
-  sha256 "56ce91ee4148af571200dfb7af9dc8724a0ec4b764377aac4f233c2ede429d6b"
+  version "2.0.0"
+  sha256 "7c71704fb79ac4488bf88edc43df8e0cff08bfadbefecf378c14df6bd21f93f9"
 
   url "https://github.com/DamascenoRafael/reminders-menubar/releases/download/v#{version}/reminders-menubar.zip"
   name "Reminders MenuBar"
   desc "Simple menu bar app to view and interact with reminders"
   homepage "https://github.com/DamascenoRafael/reminders-menubar"
 
+  auto_updates true
   depends_on macos: :big_sur
 
   app "Reminders MenuBar.app"
