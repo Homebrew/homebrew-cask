@@ -1,5 +1,5 @@
 cask "adobe-acrobat-pro" do
-  version "26.001.21651"
+  version "26.001.21662"
   sha256 :no_check
 
   url "https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_DC_Web_WWMUI.dmg",
@@ -15,7 +15,7 @@ cask "adobe-acrobat-pro" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   pkg "Acrobat/Acrobat DC Installer.pkg"
 
