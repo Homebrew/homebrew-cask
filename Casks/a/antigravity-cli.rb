@@ -3,9 +3,9 @@ cask "antigravity-cli" do
   file_arch = on_arch_conditional arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "amd64"
 
-  version "1.0.6,6458082025406464"
-  sha256 arm:   "75d23ad8451a6ab2fc49b7baa615bb532f157b4152d877ba76a2ee72a63ec7d0",
-         intel: "619817086950c0bd37f2fcb7796e82f90dc1fff920ef2f5fed4e11170c04ab3e"
+  version "1.0.7,5436940900761600"
+  sha256 arm:   "e0dec63ee4bd0a6aa2a3521eb3e9fc90448c453991ce2300e0cff138bd1bf31a",
+         intel: "24865be9d7233156827a75c4973306846f02c0ea664aaca2aeb2dc22ef5decd7"
 
   url "https://storage.googleapis.com/antigravity-public/antigravity-cli/#{version.csv.first}-#{version.csv.second}/darwin-#{folder_arch}/cli_mac_#{file_arch}.tar.gz",
       verified: "storage.googleapis.com/antigravity-public/antigravity-cli/"
