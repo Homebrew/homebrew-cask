@@ -1,6 +1,6 @@
 cask "onionshare" do
-  version "2.6.3"
-  sha256 "ba0d7c7a79cc4d9253f9591db9872f45ebdf2e9ca751f873af1a4ffcef9d1a05"
+  version "2.6.4"
+  sha256 "2c034b3bbe8128a7c033dbd69ebaf4a8ea2a5988e83dc65d3fa787f7fdf308f5"
 
   url "https://onionshare.org/dist/#{version}/OnionShare-#{version}.dmg"
   name "OnionShare"
@@ -12,7 +12,7 @@ cask "onionshare" do
     regex(/href=.*?OnionShare[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "OnionShare.app"
 
