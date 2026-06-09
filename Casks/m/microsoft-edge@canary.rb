@@ -1,6 +1,6 @@
 cask "microsoft-edge@canary" do
-  version "151.0.4083.0,b23761c6-d1c2-43ad-ba89-ad2c2826a62f"
-  sha256 "9a4af6a55ed906d368e3907d43bcd7b01ad9a291886025f1d024f01a837895a0"
+  version "151.0.4084.0,c8ba1edb-7f65-4722-89f4-824431beb402"
+  sha256 "933abc1b76902f157fbe2ea6f769e4db1f5f38ba6c976bab126ed3c8183cf27d"
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdgeCanary-#{version.csv.first}.dmg"
   name "Microsoft Edge Canary"
@@ -19,7 +19,7 @@ cask "microsoft-edge@canary" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Microsoft Edge Canary.app"
 
