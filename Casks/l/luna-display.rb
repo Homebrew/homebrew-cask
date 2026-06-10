@@ -9,7 +9,6 @@ cask "luna-display" do
 
   livecheck do
     url "https://downloads.astropad.com/luna/mac/latest"
-    regex(/LunaDisplay-(\d+(?:\.\d+)+)\.dmg/i)
     strategy :header_match
   end
 
