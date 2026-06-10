@@ -19,7 +19,9 @@ cask "microsoft-skype-for-business" do
 
   pkg "SkypeForBusinessUpdater-#{version}.pkg"
 
-  uninstall pkgutil: "macosx"
+  app "Skype for Business.app"
+
+  uninstall pkgutil: "com.microsoft.SkypeForBusiness"
 
   zap trash: [
     "~/Library/Caches/com.microsoft.skype",
