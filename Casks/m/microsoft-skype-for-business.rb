@@ -17,20 +17,29 @@ cask "microsoft-skype-for-business" do
   auto_updates true
   depends_on macos: :catalina
 
-  pkg "SkypeForBusinessUpdater-#{version}.pkg"
+  pkg "SkypeForBusinessUpdater-#{version}.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.autoupdate.fba",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
 
-  app "Skype for Business.app"
-
-  uninstall pkgutil: "com.microsoft.SkypeForBusiness"
+  uninstall quit:       "com.microsoft.autoupdate2",
+            login_item: "Skype for Business",
+            pkgutil:    [
+              "com.microsoft.SkypeForBusiness",
+              "com.microsoft.SkypeForBusiness.MeetingJoinPlugin",
+            ],
+            delete:     "/Applications/Skype for Business.app"
 
   zap trash: [
-    "~/Library/Caches/com.microsoft.skype",
-    "~/Library/Caches/com.microsoft.skype.slimeu",
-    "~/Library/HTTPStorages/com.microsoft.skype",
-    "~/Library/HTTPStorages/com.microsoft.skype.slimeu",
-    "~/Library/Preferences/com.microsoft.skype.plist",
-    "~/Library/Preferences/com.microsoft.skype.slimeu.plist",
-    "~/Library/Saved Application State/com.microsoft.skype.savedState",
-    "~/Library/Saved Application State/com.microsoft.skype.slimeu.savedState",
-  ]
+    "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",
+    "~/Library/Application Support/com.microsoft.SkypeForBusinessTAP",
+    "~/Library/Application Support/Skype for Business",
+    "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist",
+    "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist",
+  ],
+      rmdir: "/Library/Application Support/Microsoft"
 end
