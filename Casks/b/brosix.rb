@@ -9,15 +9,14 @@ cask "brosix" do
 
   livecheck do
     url "https://www.brosix.com/download/"
-    regex(/version="mac">(\d+(?:\.\d+)+)/i)
-    strategy :page_match
+    regex(/version="mac">v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: :big_sur
 
   pkg "Brosix.pkg"
 
-  uninstall pkgutil: "org.Brosix.5.2.4"
+  uninstall pkgutil: "org.Brosix"
 
   zap trash: [
     "~/Library/Caches/com.brosix.mac",
