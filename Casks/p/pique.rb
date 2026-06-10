@@ -20,7 +20,7 @@ cask "pique" do
 
   depends_on macos: :sequoia
 
-  pkg "Pique-0.1.0b5.pkg"
+  pkg "Pique-#{version}.pkg"
 
   uninstall pkgutil: "io.macadmins.Pique"
 
