@@ -9,8 +9,7 @@ cask "alarm-clock-pro" do
 
   livecheck do
     url "https://www.koingosw.com/products/alarmclockpro/"
-    regex(/Version (\d+(?:\.\d+)+)/i)
-    strategy :page_match
+    regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: :big_sur
