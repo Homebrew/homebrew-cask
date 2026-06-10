@@ -1,4 +1,4 @@
-cask "jamf-reenroller" do
+cask "reenroller" do
   version "5.9.0"
   sha256 "ab86e3fd2e4c0b56198ce0e7aa121c4bb92ba111cd21e5e419b6f80d953c1618"
 
