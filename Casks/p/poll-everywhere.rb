@@ -11,7 +11,6 @@ cask "poll-everywhere" do
   livecheck do
     url "https://polleverywhere-app.s3.amazonaws.com/?list-type=2&prefix=mac-stable/"
     regex(%r{mac-stable/(\d+(?:\.\d+)+)/pollev\.dmg}i)
-    strategy :page_match
   end
 
   depends_on macos: :sonoma
