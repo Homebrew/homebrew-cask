@@ -14,7 +14,7 @@ cask "utiluti" do
 
   depends_on macos: :big_sur
 
-  pkg "utiluti-1.5.pkg"
+  pkg "utiluti-#{version}.pkg"
 
   uninstall pkgutil: "com.scriptingosx.utiluti"
 end
