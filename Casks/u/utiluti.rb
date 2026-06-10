@@ -17,4 +17,11 @@ cask "utiluti" do
   pkg "utiluti-#{version}.pkg"
 
   uninstall pkgutil: "com.scriptingosx.utiluti"
+
+  zap trash: [
+    "~/Library/Caches/com.scriptingosx.utiluti",
+    "~/Library/HTTPStorages/com.scriptingosx.utiluti",
+    "~/Library/Preferences/com.scriptingosx.utiluti.plist",
+    "~/Library/Saved Application State/com.scriptingosx.utiluti.savedState",
+  ]
 end
