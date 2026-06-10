@@ -9,7 +9,7 @@ cask "airradar" do
 
   livecheck do
     url "https://www.koingosw.com/products/airradar/"
-    regex(/Version (\d+(?:\.\d+)+)/i)
+    regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: :big_sur
