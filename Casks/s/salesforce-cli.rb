@@ -1,9 +1,9 @@
 cask "salesforce-cli" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.137.7,deb1334"
-  sha256 arm:   "16315c967a9326f2082ec39a4b37e9d44d25637c85492aedb052c043062c93b2",
-         intel: "a1d89539f8bc2cf09a5ee632ed6936dbbe8e8bde6fe2eef2f001cb842bf316d8"
+  version "2.138.6,fab2b4f"
+  sha256 arm:   "ae2eb426336b99dfedd228571712e4d29f0701716b62cffc7c1547f77db520e6",
+         intel: "e336525c98781b89b40209facacb32a531077aada64989e65239ed519e09ace8"
 
   url "https://github.com/salesforcecli/cli/releases/download/#{version.csv.first}/sf-v#{version.csv.first}-#{version.csv.second}-#{arch}.pkg",
       verified: "github.com/salesforcecli/cli/"
