@@ -20,4 +20,15 @@ cask "microsoft-skype-for-business" do
   pkg "SkypeForBusinessUpdater-#{version}.pkg"
 
   uninstall pkgutil: "macosx"
+
+  zap trash: [
+    "~/Library/Caches/com.microsoft.skype",
+    "~/Library/Caches/com.microsoft.skype.slimeu",
+    "~/Library/HTTPStorages/com.microsoft.skype",
+    "~/Library/HTTPStorages/com.microsoft.skype.slimeu",
+    "~/Library/Preferences/com.microsoft.skype.plist",
+    "~/Library/Preferences/com.microsoft.skype.slimeu.plist",
+    "~/Library/Saved Application State/com.microsoft.skype.savedState",
+    "~/Library/Saved Application State/com.microsoft.skype.slimeu.savedState",
+  ]
 end
