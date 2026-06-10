@@ -1,6 +1,6 @@
 cask "background-music" do
-  version "0.4.3"
-  sha256 "c1c48a37c83af44ce50bee68879856c96b2f6c97360ce461b1c7d653515be7fd"
+  version "0.5.0"
+  sha256 "c7742b48ac2e9ea955fea66e5c13bb56be5f1487e0b12bad93820984bccb69ef"
 
   url "https://github.com/kyleneideck/BackgroundMusic/releases/download/v#{version}/BackgroundMusic-#{version}.pkg"
   name "Background Music"
