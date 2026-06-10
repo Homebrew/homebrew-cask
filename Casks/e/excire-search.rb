@@ -1,9 +1,9 @@
 cask "excire-search" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.0.4"
-  sha256 arm:   "21703048088548f1d9fb57ca08a6d687ba59d61ae75d826e5b6ddcd3f64b0058",
-         intel: "89233c87b52d42470c53576504be0be184f564a2b784ca7039ec623697f1b4e8"
+  version "5.0.5"
+  sha256 arm:   "60cfc1859b079c62d58ea9f9fbbc67158afbae6ec88ea025220f20ed7d2618d0",
+         intel: "8e71371eb3389da3d7c0e7bc5e24c9e89fdb146d5d61e8d93cbef75da99c79f4"
 
   url "https://www.excire.com/downloads/excire-search/ExcireSearch-#{version}-#{arch}.zip"
   name "Excire Search"
