@@ -1,9 +1,9 @@
 cask "voiden" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.3"
-  sha256 arm:   "576d1aa0d00ba44c67807ef40f87e3b7d222e9fcc8fd752bd80cf0d16ade5186",
-         intel: "1f89a9f6f6e030b544a6956e9e89a6914970efcb2c2df9251a39d4f3b0e17ad1"
+  version "2.0.1"
+  sha256 arm:   "d5a5fa779ea1145f6de4f0125c5836b43d63fa12d3f7686bc65dc85e14fe657a",
+         intel: "73084922f98abf0ae0cc74972512dbd810ad0da52b1eb6be2d01df191cb8dd16"
 
   url "https://voiden-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/#{arch}/Voiden-darwin-#{arch}-#{version}.zip",
       verified: "voiden-releases.s3.eu-west-1.amazonaws.com/"
