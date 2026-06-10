@@ -1,6 +1,6 @@
 cask "db-browser-for-sqlite@nightly" do
-  version "20260518"
-  sha256 "c5e6e25d5b2a8b6c24082f2f1eea88f46c0d0c9f87a47c62a59d5e88b7056fd8"
+  version "20260610"
+  sha256 "26d03c56761658e8f317e081457883c072bf47fd311039cb61b94033ffb6ea54"
 
   url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-universal_#{version}.dmg",
       verified: "github.com/sqlitebrowser/sqlitebrowser/"
