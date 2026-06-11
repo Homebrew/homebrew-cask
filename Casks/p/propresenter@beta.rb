@@ -34,8 +34,8 @@ cask "propresenter@beta" do
     end
   end
   on_ventura :or_newer do
-    version "21.4,352583698"
-    sha256 "169d9b084151e4784d850118faa4771e949021f2b941ff1f81e3f37935c02e56"
+    version "21.4,352583700"
+    sha256 "1d116403dcf1e5360630dc9546966f3959913d51a5ff493e655b2bfe2e2342d3"
 
     url "https://renewedvision.com/downloads//propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
 
