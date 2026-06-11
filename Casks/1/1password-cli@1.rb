@@ -9,6 +9,7 @@ cask "1password-cli@1" do
   homepage "https://developer.1password.com/docs/cli/v1/usage/"
 
   deprecate! date: "2025-06-11", because: :unmaintained
+  disable! date: "2026-06-11", because: :unmaintained
 
   conflicts_with cask: [
     "1password-cli",
