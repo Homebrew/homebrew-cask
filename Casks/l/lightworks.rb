@@ -1,5 +1,5 @@
 cask "lightworks" do
-  version "2025.2,56356"
+  version "2025.2.56356"
   sha256 "8771f90dfc4a1872567e320679729df1a9a06b14ad47f69a4b1200528eef0ef1"
 
   url "https://cdn.lwks.com/releases/#{version.major_minor}/Lightworks-#{version}.dmg"
@@ -9,7 +9,6 @@ cask "lightworks" do
 
   livecheck do
     url "https://forum.lwks.com/forums/product-releases.19/index.rss"
-    # v2025-2-56356-now-available
     regex(/v?(\d+(?:[._-]\d+)+)[._-]now[._-]available/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match.first&.tr("-", ".") }
