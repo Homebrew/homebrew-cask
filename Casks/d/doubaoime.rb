@@ -20,7 +20,9 @@ cask "doubaoime" do
 
   input_method "DoubaoIme.app"
 
-  uninstall delete: "~/Library/Input Methods/DoubaoIme.app"
+  preflight do
+    system_command "/usr/bin/xattr", args: ["-d", "-r", "com.apple.quarantine", "#{staged_path}/DoubaoIme.app"]
+  end
 
   zap trash: [
     "/tmp/DoubaoIme",
