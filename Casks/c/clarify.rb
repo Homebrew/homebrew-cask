@@ -5,7 +5,7 @@ cask "clarify" do
   url "https://github.com/clarifyhq/desktop-app-releases/releases/download/v#{version}/Clarify.dmg",
       verified: "github.com/clarifyhq/desktop-app-releases/"
   name "Clarify"
-  desc "AI-native CRM with meeting recording and transcription"
+  desc "Autonomous CRM with agents to source leads, send campaigns, and manage pipeline"
   homepage "https://clarify.ai/"
 
   livecheck do
@@ -20,7 +20,7 @@ cask "clarify" do
   app "Clarify.app"
 
   zap trash: [
-    "~/Library/Application Support/Clarify",
+    "~/Library/Application Support/clarify-desktop",
     "~/Library/Caches/com.clarify.desktop",
     "~/Library/Caches/com.clarify.desktop.ShipIt",
     "~/Library/HTTPStorages/com.clarify.desktop",
