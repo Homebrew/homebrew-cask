@@ -24,7 +24,7 @@ cask "sf-symbols" do
     end
   end
   on_sonoma :or_newer do
-    version "7.2,119"
+    version "8.0,123"
     sha256 :no_check # required as upstream package is updated in-place
 
     livecheck do
