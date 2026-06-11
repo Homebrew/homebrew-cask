@@ -16,27 +16,11 @@ cask "doubaoime" do
   end
 
   depends_on macos: :catalina
+  container nested: "DoubaoImeInstaller_v#{version}.app/Contents/Resources/DoubaoIme.zip"
 
-  postflight do
-    system_command "/bin/sh",
-                   args: [
-                     "-c",
-                     "cd '#{staged_path}/DoubaoImeInstaller_v#{version}.app/Contents/Resources' && " \
-                     "APP_NAME=DoubaoIme sh install.sh",
-                   ],
-                   sudo: true
-  end
+  input_method "DoubaoIme.app"
 
-  uninstall script: {
-    executable: "/bin/sh",
-    args:       [
-      "-c",
-      "sudo rm -rf '/Library/Input Methods/DoubaoIme.app' && " \
-      "defaults delete com.apple.HIToolbox AppleEnabledInputSources 2>/dev/null; " \
-      "killall SystemUIServer TextInputMenuAgent cfprefsd 2>/dev/null || true",
-    ],
-    sudo:       true,
-  }
+  uninstall delete: "~/Library/Input Methods/DoubaoIme.app"
 
   zap trash: [
     "/tmp/DoubaoIme",
