@@ -34,10 +34,4 @@ cask "doubaoime" do
     "~/Library/Preferences/com.bytedance.inputmethod.doubaoime.plist",
     "~/Library/Preferences/com.bytedance.inputmethod.doubaoime.settings.plist",
   ]
-
-  caveats do
-    <<~EOS
-      安装完成后，请在系统设置的输入法中添加「豆包输入法」。
-    EOS
-  end
 end
