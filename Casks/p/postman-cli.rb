@@ -1,9 +1,9 @@
 cask "postman-cli" do
   arch arm: "osx_arm64", intel: "osx64"
 
-  version "1.38.1"
-  sha256 arm:   "a2973d352a667e114a61d83d5b46c00a0c41d5706a9c567b1194c3d444e9fc56",
-         intel: "53c3e767c72721816dd4bb787c2c25e0bc6247455f0bb44d4ee0a92e0bead12f"
+  version "1.39.0"
+  sha256 arm:   "7e25100ca03778d730e77aed67bcccf1b0f6dfa5ec8cf1dc593327ee397a22a4",
+         intel: "cad46f56f9d3cce24f70bbf56178535bb488e794864dfe460c15852c2d3592ce"
 
   url "https://dl-cli.pstmn.io/download/version/#{version}/#{arch}",
       verified: "dl-cli.pstmn.io/download/"
