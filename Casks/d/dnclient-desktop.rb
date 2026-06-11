@@ -1,9 +1,9 @@
-cask "dnclient" do
+cask "dnclient-desktop" do
   version "0.9.5,764f2278"
   sha256 "d74ce6a7683e0ad7b96b842d0a8feaf4abefca6319ea9c352c95e16b9b0482fc"
 
   url "https://dl.defined.net/#{version.csv.second}/v#{version.csv.first}/macos/DNClient-Desktop.dmg"
-  name "DNClient"
+  name "DNClient Desktop"
   desc "Peer-to-peer VPN client for managed nebula networks"
   homepage "https://www.defined.net/"
 
