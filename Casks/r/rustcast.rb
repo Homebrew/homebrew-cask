@@ -1,6 +1,6 @@
 cask "rustcast" do
-  version "0.7.8"
-  sha256 "d1ced42352d5b4189aa6cb0e88c7661e81e3137d6356806bdb543fb62d1a4f47"
+  version "0.7.9"
+  sha256 "454155b7a596821f00676f88a944d37f68124348c8ca4eda37116060b3aed123"
 
   url "https://github.com/RustCastLabs/rustcast/releases/download/v#{version}/Rustcast-universal-macos.app.zip",
       verified: "github.com/RustCastLabs/rustcast/releases/download/"
