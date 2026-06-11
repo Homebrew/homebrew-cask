@@ -23,13 +23,6 @@ cask "devin-cli" do
   binary "bin/devin"
   manpage "share/man/man1/devin.1"
 
-  postflight do
-    # Write distribution marker to indicate this is a Homebrew-managed installation
-    # This prevents the CLI from attempting self-update, directing users to
-    # use `brew upgrade devin-cli` instead
-    File.write("#{staged_path}/distribution", "homebrew")
-  end
-
   zap trash: [
     "~/.cache/devin/cli",
     "~/.config/devin/cli",
