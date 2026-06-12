@@ -24,6 +24,7 @@ cask "topaz-photo" do
 
   uninstall pkgutil: "com.topazlabs.TopazPhoto",
             delete:  [
+              "/Applications/Topaz Photo.app",
               "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhoto.plugin",
               "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhotoApply.plugin",
               "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhotoAutomate.plugin",
