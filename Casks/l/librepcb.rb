@@ -1,9 +1,9 @@
 cask "librepcb" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.1.0"
-  sha256 arm:   "c7dfd88604d62b88c93229a092f0f16816e6051d702005d7c5e7c2b31516efe7",
-         intel: "838b586a6e1c191755356a4c9c3a1ebbb4edeceba75f8bea3a3f4665b5d0c01b"
+  version "2.1.1"
+  sha256 arm:   "d3050399256c0d15cf7e561ca52e09b59facc25801d5bdf56d2df643236e3206",
+         intel: "c4394dafe9355acfdfa0271c4229f633d21cbcb80e0788f1a9c9e094c3a75ef5"
 
   url "https://download.librepcb.org/releases/#{version}/librepcb-#{version}-mac-#{arch}.dmg"
   name "LibrePCB"
