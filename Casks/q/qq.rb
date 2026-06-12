@@ -1,15 +1,22 @@
 cask "qq" do
-  version "6.9.95_260429_01"
-  sha256 "89ba6d483f00150d66edc2a5d32395e91043241ea7d6c15947d2c745ead0ccc7"
+  version "6.9.96_260528_01,9.9.31,045f4292"
+  sha256 "70c8163177cab4be192c1ae31a144ea4230d007b4521d9d945fca2f57b6c2232"
 
-  url "https://dldir1v6.qq.com/qqfile/qq/QQNT/Mac/QQ_#{version}.dmg"
+  url "https://qqdl.gtimg.cn/qqfile/QQNT/#{version.csv.second}/release/#{version.csv.third}/QQ_#{version.csv.first}.dmg",
+      verified: "qqdl.gtimg.cn/qqfile/QQNT/"
   name "QQ"
   desc "Instant messaging tool"
-  homepage "https://im.qq.com/macqq/index.shtml"
+  homepage "https://im.qq.com/index/#/macos"
 
   livecheck do
-    url "https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/macOSConfig.js"
-    regex(/QQ[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
+    url "https://im.qq.com/proxy/domain/cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/pcConfig.json"
+    regex(%r{/QQNT/(\d+(?:\.\d+)+)/release/(\h+)/QQ[._-]v?(\d+(?:[._]\d+)+)\.dmg}i)
+    strategy :json do |json, regex|
+      match = json.dig("macOS", "downloadUrl")&.match(regex)
+      next if match.blank?
+
+      "#{match[3]},#{match[1]},#{match[2]}"
+    end
   end
 
   auto_updates true
