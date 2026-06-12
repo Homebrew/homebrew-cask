@@ -1,6 +1,6 @@
 cask "soulver-cli" do
-  version "1.0.3"
-  sha256 "79e61156d59b44af5b9926c92e56f71e2d4b75ec574a81c8ba3319ca4f22341f"
+  version "2.0.0"
+  sha256 "b641d7ff2de9768b0dad2ca1eb70ffd7b445e9beaceb7388e986d1318e465dba"
 
   url "https://github.com/soulverteam/Soulver-CLI/releases/download/#{version}/soulver.zip"
   name "Soulver CLI"
