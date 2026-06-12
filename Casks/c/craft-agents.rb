@@ -13,8 +13,7 @@ cask "craft-agents" do
       skip "Legacy version"
     end
 
-    deprecate! date: "2026-06-02", because: :discontinued
-    disable! date: "2027-06-02", because: :discontinued
+    deprecate! date: "2026-06-12", because: :discontinued
   end
 
   url "https://github.com/lukilabs/craft-agents-oss/releases/download/v#{version}/Craft-Agents-#{version}-mac-#{arch}.dmg",
