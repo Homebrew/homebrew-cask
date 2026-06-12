@@ -1,6 +1,6 @@
 cask "xkey" do
-  version "1.2.24,20260611.1"
-  sha256 "055a8c7cd8289e7856f05b60f44dc19cb0723e5d8af4ddcdba4c8155f8153bbe"
+  version "1.2.24,20260612"
+  sha256 "54c505d7c4bb38cd4e10e5a134cac9cf995187dc89b08803ced64752832a3e65"
 
   url "https://github.com/xmannv/xkey/releases/download/v#{version.csv.first}-#{version.csv.second}/XKey.dmg"
   name "XKey"
