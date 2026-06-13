@@ -25,6 +25,7 @@
   "cmake": "cmake-app",
   "codewhisperer": "kiro-cli",
   "cog": "cog-app",
+  "comfyui": "comfy",
   "copilot": "copilot-money",
   "coqide": "coq-platform",
   "cozy-drive": "twake",
