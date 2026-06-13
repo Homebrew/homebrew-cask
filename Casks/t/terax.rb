@@ -1,9 +1,9 @@
 cask "terax" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.7.3"
-  sha256 arm:   "f7159c016387425467724faad3b4c159d263d410bda62ffb8afe0df444a2e64f",
-         intel: "3061d3954dc4629d50c23eafbb883914e97100d4606f68fc47bebb396b1357bf"
+  version "0.8.0"
+  sha256 arm:   "97cc3861743dd2c78372e387446c291460dfc5911347a2b5287fc96032898a67",
+         intel: "6d41ef43c5f37a865ec2f8d2d5b82f484645f7b1a28b73add93d090442cfd3a6"
 
   url "https://github.com/crynta/terax-ai/releases/download/v#{version}/Terax_#{version}_#{arch}.dmg",
       verified: "github.com/crynta/terax-ai/"
