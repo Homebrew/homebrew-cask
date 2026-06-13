@@ -1,7 +1,7 @@
 cask "lyricsfinder" do
   arch arm: "-arm"
 
-  version "1.7"
+  version "1.7.2"
   sha256 :no_check
 
   url "https://www.mediahuman.com/download/LyricsFinder#{arch}.dmg"
