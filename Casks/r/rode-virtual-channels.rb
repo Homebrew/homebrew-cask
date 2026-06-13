@@ -13,7 +13,9 @@ cask "rode-virtual-channels" do
   end
 
   depends_on :macos
+  rename "RODE Virtual Channels-*.pkg", "RODE Virtual Channels.pkg"
 
+  app "Rode Virtual Channels.pkg"
   pkg "RODE Virtual Channels-#{version}.pkg"
 
   uninstall quit:    "com.rode.RODEVirtualChannels",
