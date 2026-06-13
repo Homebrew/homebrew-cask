@@ -1,5 +1,5 @@
 cask "mailmaster" do
-  version "5.5.1,1460"
+  version "5.5.6,1476"
   sha256 :no_check
 
   url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
@@ -11,8 +11,7 @@ cask "mailmaster" do
   homepage "https://dashi.163.com/"
 
   livecheck do
-    url "https://u.163.com/macds-beta"
-    strategy :extract_plist
+    skip "Automated checks regular face 403 Forbidden errors from the upstream server"
   end
 
   auto_updates true
