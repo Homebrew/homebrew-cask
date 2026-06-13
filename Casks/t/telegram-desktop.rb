@@ -1,6 +1,6 @@
 cask "telegram-desktop" do
-  version "6.9.2"
-  sha256 "cfc4cb334e16de0662ade7a2371f3f8ab51f86e0d85880d5373b8498bb95302c"
+  version "6.9.3"
+  sha256 "9940a9e28219af569b6ed5841fe9026f2ac4c8049317b06289b4a06f1fb40c6e"
 
   url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg",
       verified: "updates.tdesktop.com/tmac/"
