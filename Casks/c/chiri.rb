@@ -1,9 +1,9 @@
 cask "chiri" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.9.1"
-  sha256 arm:   "f1922ce81a4fd079b581b720ef4fc5f152bf97b3cea5e80e443d15e0fe5f4b7f",
-         intel: "3d31a895ebc810ed790b8d525025f647ec81e5bd678cc680d3917ab960915faf"
+  version "0.9.2"
+  sha256 arm:   "9bec2092c46ce05bb2b1cf89d640e8fe26c8c73b7a57cb1e23820b0dfc1e8697",
+         intel: "4e23be09ba19c44d1e69f820d7e947fa0b29b534b36a2a1d2bebcf31f06a9bd4"
 
   url "https://github.com/chiriapp/chiri/releases/download/app-v#{version}/Chiri_#{version}_#{arch}.dmg"
   name "Chiri"
