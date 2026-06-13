@@ -2,9 +2,12 @@ class MailmasterInsecureDownloadStrategy < CurlDownloadStrategy
   def initialize(url, name, version, **meta)
     super
   end
-
-  def curl_args(*args)
-    super(*args) + ["--insecure"]
+  
+  def _fetch
+    @meta_args ||= []
+    @meta_args << "--insecure" unless @meta_args.include?("--insecure")
+    
+    super
   end
 end
 
