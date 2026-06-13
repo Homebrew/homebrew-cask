@@ -3,8 +3,8 @@ class MailmasterInsecureDownloadStrategy < CurlDownloadStrategy
     super
   end
 
-  def curl_args
-    super + ["--insecure"]
+  def curl_args(*args)
+    super(*args) + ["--insecure"]
   end
 end
 
