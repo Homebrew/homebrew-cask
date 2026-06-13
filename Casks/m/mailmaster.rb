@@ -3,11 +3,7 @@ class MailmasterInsecureDownloadStrategy < CurlDownloadStrategy
     super
   end
 
-  # 重写核心的 curl_args 方法
-  # 这是最优雅的注入方式，既保留了父类(Homebrew核心)指定的所有输出路径(-o)，又安全地追加了参数
   def curl_args
-    # super 会返回类似 ["--location", "--remote-time", "--continue-at", "-", "-o", "/path/to/cache"]
-    # 我们在其基础上追加 "--insecure" (-k) 
     super + ["--insecure"]
   end
 end
@@ -17,7 +13,7 @@ cask "mailmaster" do
   sha256 "95b8d8aa22eba8c1dbb497eb92cc16975b1af071e62fef4f94259e11bcf21791"
 
   url "https://fm.dl.126.net/mailmaster/updatemac/mailmaster-#{version}.dmg",
-      verified: "fm.dl.126.net/mailmaster/updatemac/"
+      verified: "fm.dl.126.net/mailmaster/updatemac/",
       using: MailmasterInsecureDownloadStrategy
   name "NetEase Mail Master"
   name "网易邮箱大师"
