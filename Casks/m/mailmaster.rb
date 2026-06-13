@@ -1,10 +1,6 @@
 require "download_strategy"
 
 class MailmasterInsecureDownloadStrategy < CurlDownloadStrategy
-  def initialize(url, name, version, **meta)
-    super
-  end
-  
   def curl_args(*args, **kwargs)
     ["--insecure"] + super
   end
@@ -16,7 +12,7 @@ cask "mailmaster" do
 
   url "https://fm.dl.126.net/mailmaster/updatemac/mailmaster-#{version}.dmg",
       verified: "fm.dl.126.net/mailmaster/updatemac/",
-      using: MailmasterInsecureDownloadStrategy
+      using:    MailmasterInsecureDownloadStrategy
   name "NetEase Mail Master"
   name "网易邮箱大师"
   desc "Email client"
