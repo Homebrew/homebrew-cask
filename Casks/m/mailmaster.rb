@@ -4,6 +4,8 @@ cask "mailmaster" do
 
   url "https://fm.dl.126.net/mailmaster/updatemac/mailmaster-#{version}.dmg",
       verified: "fm.dl.126.net/mailmaster/updatemac/"
+  ENV["HOMEBREW_CURL_RC"] = "1"
+  ENV["curl_args"] = "-k"
   name "NetEase Mail Master"
   name "网易邮箱大师"
   desc "Email client"
