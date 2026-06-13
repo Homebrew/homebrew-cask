@@ -13,7 +13,6 @@ cask "mudlet" do
 
   livecheck do
     url :url
-    regex(/^Mudlet[._-]v?(\d+(?:\.\d+)+)$/i)
     strategy :github_latest
   end
 
