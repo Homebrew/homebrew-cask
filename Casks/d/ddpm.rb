@@ -1,8 +1,9 @@
 cask "ddpm" do
-  version "2.2.0.0024"
-  sha256 "5413aa27d21bad3c73dee2e885a64b076efafc6ceb562c1477071834e76214df"
+  version "2.3.0.0023"
+  sha256 "f48ee7ac871c843d4135df7503a25d75e74ed20e319b2771f3a000e215987ac0"
 
-  url "https://clientperipherals.dell.com/DDPM/Mac/Application/DDPMv#{version}.zip"
+  url "https://clientperipherals.dell.com/DDPM/Mac/Application/DDPMv#{version}.zip",
+      user_agent: :browser
   name "DDPM"
   name "Dell Display and Peripheral Manager"
   desc "Monitors and peripherals manager"
