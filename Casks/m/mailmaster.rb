@@ -1,17 +1,35 @@
 cask "mailmaster" do
-  version "5.5.6,1476"
-  sha256 :no_check
+  version "5.5.6.1476"
+  sha256 "95b8d8aa22eba8c1dbb497eb92cc16975b1af071e62fef4f94259e11bcf21791"
 
-  url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
-      verified:   "res.126.net/dl/client/macmail/dashi/",
-      user_agent: :fake
+  url "https://fm.dl.126.net/mailmaster/updatemac/mailmaster-#{version}.dmg",
+      verified: "fm.dl.126.net/mailmaster/updatemac/"
   name "NetEase Mail Master"
   name "网易邮箱大师"
   desc "Email client"
   homepage "https://dashi.163.com/"
 
   livecheck do
-    skip "Automated checks regular face 403 Forbidden errors from the upstream server"
+    url "https://appconf.mail.163.com/mailmaster/api/app/update.do",
+        post_json: {
+          app_ver:    version.csv.first.split(".").then do |p|
+                        (p[0].to_i * 10_000_000_000) +
+                          (p[1].to_i * 10_000_000) +
+                          (p[2].to_i * 10_000) +
+                          p[3].to_i
+                      end,
+          appid:      11,
+          deviceInfo: {
+            appId:      "11",
+            appVersion: version.to_s,
+            deviceId:   "x",
+            osType:     "mac",
+            osVersion:  "26.3.1",
+          },
+        }
+    strategy :json do |json|
+      json.dig("data", "original", "ver")
+    end
   end
 
   auto_updates true
