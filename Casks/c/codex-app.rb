@@ -2,9 +2,9 @@ cask "codex-app" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional intel: "-x64"
 
-  version "26.609.30741"
-  sha256 arm:   "24cd7b226c70aefb9143571cdcfb2d39fb38794a98ba3935d406d89e7202bf7e",
-         intel: "2d1717c198fed0505e35187a2b7c1b5de6d57d403eb95936296c0b00a1958e58"
+  version "26.609.41114"
+  sha256 arm:   "6f69d0de7800bc7f48cda0f87810068f109fe6ecf839df8dec0d093cb23ad362",
+         intel: "823dd84a9d54cc47180c9a6e8ee644fcff3c2b7f0cc07617331f6b1e99bd8b32"
 
   url "https://persistent.oaistatic.com/codex-app-prod/Codex-darwin-#{arch}-#{version}.zip",
       verified: "persistent.oaistatic.com/codex-app-prod/"
