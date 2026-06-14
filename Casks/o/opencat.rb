@@ -21,9 +21,19 @@ cask "opencat" do
   app "OpenCat.app"
 
   zap trash: [
-    "~/Library/Application Scripts/tech.baye.OpenCat",
+    "~/Library/Application Scripts/group.tech.baye.openai",
+    "~/Library/Application Support/OpenCat",
+    "~/Library/Application Support/tech.baye.OpenCat",
+    "~/Library/Application Support/tech.baye.OpenCat.revenuecat",
+    "~/Library/Caches/CloudKit/tech.baye.OpenCat",
+    "~/Library/Caches/com.crashlytics.data/tech.baye.OpenCat",
+    "~/Library/Caches/SentryCrash/OpenCat",
+    "~/Library/Caches/tech.baye.OpenCat",
+    "~/Library/Caches/tech.baye.OpenCat.revenuecat",
     "~/Library/Containers/tech.baye.OpenCat",
     "~/Library/Group Containers/group.tech.baye.openai",
+    "~/Library/HTTPStorages/tech.baye.OpenCat",
+    "~/Library/Preferences/tech.baye.OpenCat.plist",
     "~/Library/Saved Application State/tech.baye.OpenCat.savedState",
   ]
 end
