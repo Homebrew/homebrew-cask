@@ -30,8 +30,10 @@ cask "opencat" do
     "~/Library/Caches/SentryCrash/OpenCat",
     "~/Library/Caches/tech.baye.OpenCat",
     "~/Library/Caches/tech.baye.OpenCat.revenuecat",
+    "~/Library/Containers/tech.baye.OpenCat",
     "~/Library/Group Containers/group.tech.baye.openai",
     "~/Library/HTTPStorages/tech.baye.OpenCat",
     "~/Library/Preferences/tech.baye.OpenCat.plist",
+    "~/Library/Saved Application State/tech.baye.OpenCat.savedState",
   ]
 end
