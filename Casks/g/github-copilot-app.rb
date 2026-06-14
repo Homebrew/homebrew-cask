@@ -16,7 +16,9 @@ cask "github-copilot-app" do
   app "GitHub Copilot.app"
 
   zap trash: [
+    "~/Library/Application Support/com.github.githubapp",
     "~/Library/Caches/com.github.githubapp",
+    "~/Library/Preferences/com.github.githubapp.plist",
     "~/Library/WebKit/com.github.githubapp",
   ]
 end
