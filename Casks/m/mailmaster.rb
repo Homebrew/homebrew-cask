@@ -23,7 +23,7 @@ cask "mailmaster" do
           deviceInfo: {
             appId:      "11",
             appVersion: version.to_s,
-            deviceId:   "x",
+            deviceId:   Array.new(32) { rand(16).to_s(16) }.join,
             osType:     "mac",
             osVersion:  "26.3.1",
           },
