@@ -1,18 +1,10 @@
-require "download_strategy"
-
-class MailmasterInsecureDownloadStrategy < CurlDownloadStrategy
-  def curl_args(*args, **kwargs)
-    ["--insecure"] + super
-  end
-end
-
 cask "mailmaster" do
   version "5.5.6.1476"
   sha256 "95b8d8aa22eba8c1dbb497eb92cc16975b1af071e62fef4f94259e11bcf21791"
 
-  url "https://fm.dl.126.net/mailmaster/updatemac/mailmaster-#{version}.dmg",
-      verified: "fm.dl.126.net/mailmaster/updatemac/",
-      using:    MailmasterInsecureDownloadStrategy
+  url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
+      verified:   "res.126.net/dl/client/macmail/dashi/",
+      user_agent: :fake
   name "NetEase Mail Master"
   name "网易邮箱大师"
   desc "Email client"
