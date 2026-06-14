@@ -13,7 +13,7 @@ cask "mailmaster" do
   livecheck do
     url "https://appconf.mail.163.com/mailmaster/api/app/update.do",
         post_json: {
-          app_ver:    version.csv.first.split(".").then do |p|
+          app_ver:    version.split(".").then do |p|
                         (p[0].to_i * 10_000_000_000) +
                           (p[1].to_i * 10_000_000) +
                           (p[2].to_i * 10_000) +
