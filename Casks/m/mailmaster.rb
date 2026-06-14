@@ -25,7 +25,7 @@ cask "mailmaster" do
             appVersion: version.to_s,
             deviceId:   Array.new(32) { rand(16).to_s(16) }.join,
             osType:     "mac",
-            osVersion:  "26.3.1",
+            osVersion:  "999",
           },
         }
     strategy :json do |json|
