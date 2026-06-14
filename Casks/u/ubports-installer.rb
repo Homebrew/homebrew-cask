@@ -18,7 +18,7 @@ cask "ubports-installer" do
 
   livecheck do
     url :url
-    regex(/^ubports-installer_(\d+(?:\.\d+)+)_mac_#{arch}\.dmg$/i)
+    regex(/^ubports-installer[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]
