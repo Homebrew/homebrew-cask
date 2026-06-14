@@ -1,9 +1,16 @@
 cask "qlc+" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.2.1"
-  sha256 arm:   "c29b60d5fb23607b9ee7f13fb681e66adb8b84138214567521c6f267db982cf4",
-         intel: "642f61ba6322a3199d2664a60e9df4a947cf1ce5d42d37ef34e1b3ac95b488df"
+  version "5.2.2"
+  sha256 arm:   "116b83e96be1bbc66b89f3bbc98dc79be8766f4a123bb7347658b34d07eb1c18",
+         intel: "6e07bb853e115655db8447ac7f5123f38f233426f27a8d4dfe77e5c59dcb2146"
+
+  on_arm do
+    depends_on macos: :ventura
+  end
+  on_intel do
+    depends_on macos: :monterey
+  end
 
   url "https://www.qlcplus.org/downloads/#{version.split("-").first}/QLC+_#{version}_#{arch}.dmg"
   name "Q Light Controller+"
@@ -14,8 +21,6 @@ cask "qlc+" do
     url "https://www.qlcplus.org/download"
     regex(/href=.*?QLC\+[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg/i)
   end
-
-  depends_on macos: :monterey
 
   app "QLC+.app"
 
