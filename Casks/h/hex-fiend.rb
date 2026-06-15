@@ -6,7 +6,7 @@ cask "hex-fiend" do
       verified: "github.com/ridiculousfish/HexFiend/"
   name "Hex Fiend"
   desc "Hex editor focussing on speed"
-  homepage "https://ridiculousfish.com/hexfiend/"
+  homepage "https://hexfiend.com/"
 
   livecheck do
     url "https://raw.githubusercontent.com/ridiculousfish/HexFiend/master/app/appcast.xml"
