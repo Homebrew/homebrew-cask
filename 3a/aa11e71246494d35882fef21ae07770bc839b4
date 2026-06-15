@@ -1,0 +1,14 @@
+Casks/d/duckduckgo.rb
+  h_9df9c32c3f321d 18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.7",
+  "base_commit_sha": "3aaa11e71246494d35882fef21ae07770bc839b4",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
