@@ -13,14 +13,18 @@ cask "ariax" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "AriaX.app"
 
   zap trash: [
+    "~/Library/Application Scripts/cn.saltpi.app.Aria2Helper",
     "~/Library/Application Scripts/cn.saltpi.app.AriaX",
+    "~/Library/Application Scripts/cn.saltpi.app.AriaX.Extension",
     "~/Library/Application Scripts/group.cn.saltpi.app.AriaX",
+    "~/Library/Containers/cn.saltpi.app.Aria2Helper",
     "~/Library/Containers/cn.saltpi.app.AriaX",
+    "~/Library/Containers/cn.saltpi.app.AriaX.Extension",
     "~/Library/Group Containers/group.cn.saltpi.app.AriaX",
   ]
 end
