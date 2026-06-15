@@ -18,9 +18,4 @@ cask "baseline" do
               "/Library/LaunchDaemons/com.secondsonconsulting.baseline.plist",
               "/usr/local/Baseline",
             ]
-
-  zap trash: [
-    "/var/log/Baseline.log",
-    "/var/log/BaselineOutput.log",
-  ]
 end
