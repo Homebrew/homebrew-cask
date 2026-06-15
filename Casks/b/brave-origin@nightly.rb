@@ -6,14 +6,14 @@ cask "brave-origin@nightly" do
   sha256 arm:   "158301149a85f35ba158607d87815dad6c999ef3df7551a6b534c6d4307f2a2d",
          intel: "cf059d6561cc0a792f3e5f69165ae0fc4635425674c450491366646f47f7b257"
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/stable#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Nightly-#{arch}.dmg",
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/nightly#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Nightly-#{arch}.dmg",
       verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Origin/"
   name "Brave Origin Nightly"
   desc "Privacy-focused web browser"
   homepage "https://brave.com/origin/#nightly"
 
   livecheck do
-    url "https://updates.bravesoftware.com/sparkle/Brave-Origin/stable#{folder_arch}/appcast.xml"
+    url "https://updates.bravesoftware.com/sparkle/Brave-Origin/nightly#{folder_arch}/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
