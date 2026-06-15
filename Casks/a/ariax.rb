@@ -7,11 +7,6 @@ cask "ariax" do
   desc "Aria2 download manager"
   homepage "https://github.com/saltpi/Aria.X"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :sonoma
 
