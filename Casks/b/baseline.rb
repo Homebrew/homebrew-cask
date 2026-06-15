@@ -13,7 +13,7 @@ cask "baseline" do
   pkg "Baseline_v#{version}.pkg"
 
   uninstall launchctl: "com.secondsonconsulting.baseline",
-            pkgutil:   "com.secondsonconsulting.baseline",
+            pkgutil:   "com.secondsonconsulting.Baseline",
             delete:    [
               "/Library/LaunchDaemons/com.secondsonconsulting.baseline.plist",
               "/usr/local/Baseline",
