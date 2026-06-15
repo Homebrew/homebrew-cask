@@ -8,6 +8,12 @@ cask "tuist" do
   desc "Create, maintain, and interact with Xcode projects at scale"
   homepage "https://tuist.io/"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :git
+  end
+
   depends_on :macos
 
   binary "tuist"
