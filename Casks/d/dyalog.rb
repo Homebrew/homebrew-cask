@@ -2,8 +2,8 @@ cask "dyalog" do
   arch arm: "arm"
 
   on_arm do
-    version "20.0.52760"
-    sha256 "44813e8814427a0612c8f4f954a9ffb5f83f25ca3eda9eb048fc042a056d7e52"
+    version "20.0.53963"
+    sha256 "40fdd728d43b4275d749af3d41014a22bdb44314a56c8edfeaa98647b5b06aba"
 
     livecheck do
       url "https://www.dyalog.com/download-zone.htm?p=download"
