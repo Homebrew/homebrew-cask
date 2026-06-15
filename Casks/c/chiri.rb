@@ -20,10 +20,10 @@ cask "chiri" do
   app "Chiri.app"
 
   zap trash: [
-    "~/Library/Application Support/moe.sapphic.Chiri",
-    "~/Library/Caches/moe.sapphic.chiri",
-    "~/Library/Logs/moe.sapphic.chiri",
-    "~/Library/Preferences/moe.sapphic.Chiri.plist",
-    "~/Library/WebKit/moe.sapphic.Chiri",
+    "~/Library/Application Support/garden.chiri.Chiri",
+    "~/Library/Caches/garden.chiri.Chiri",
+    "~/Library/Logs/garden.chiri.Chiri",
+    "~/Library/Preferences/garden.chiri.Chiri.plist",
+    "~/Library/WebKit/garden.chiri.Chiri",
   ]
 end
