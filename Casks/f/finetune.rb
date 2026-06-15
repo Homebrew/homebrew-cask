@@ -1,6 +1,6 @@
 cask "finetune" do
-  version "1.7.0"
-  sha256 "caa8640fe88ecd2d05cf3b0b80996dd9cb4aa42faef363fac4497eb0dfd12ca7"
+  version "1.8.0"
+  sha256 "ae9e8f36be92aa2caff0aba755feb7127219c24825a7f48027e3d74378f4a41f"
 
   url "https://github.com/ronitsingh10/FineTune/releases/download/v#{version}/FineTune.dmg"
   name "FineTune"
@@ -13,7 +13,7 @@ cask "finetune" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "FineTune.app"
 
