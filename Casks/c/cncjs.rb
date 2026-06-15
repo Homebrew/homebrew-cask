@@ -2,8 +2,8 @@ cask "cncjs" do
   arch arm: "arm64", intel: "x64"
 
   version "1.11.1"
-  sha256 arm:   "b34a71c820d0e0e0addc15319ebd44596c88ca49b15bf534eb671f28e601a0f9",
-         intel: "ebe40dfccf2d71e7fb4c0d6a84ab338744f48672e9279cd48fd9169ac3b1b034"
+  sha256 arm:   "25ce807e72f3639e4626399fe504078060618ff9dddf352d2d1f6649d787c91e",
+         intel: "7ac8ca6ee61dd01196f51eca9aebc2bd97be6872ac816dd2c41160e9a30776a9"
 
   url "https://github.com/cncjs/cncjs/releases/download/v#{version}/cncjs-app-#{version}-macos-#{arch}.dmg",
       verified: "github.com/cncjs/cncjs/"
