@@ -31,10 +31,10 @@ cask "codelite" do
       end
     end
     on_sequoia :or_newer do
-      arch arm: "macOS_26.1-arm64"
+      arch arm: "macOS_26.4.1-arm64"
 
-      version "18.3.0"
-      sha256 "81c6ec0e705aa936cabffb564d546b6fdf20cf6605a3dd9667270e58543584b9"
+      version "18.4.0"
+      sha256 "395e227230446d8274767ef274f67a7ca087da2af1b61366b0548259b7949a11"
 
       livecheck do
         url "https://downloads.codelite.org/"
