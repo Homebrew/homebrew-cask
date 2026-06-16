@@ -1,9 +1,8 @@
-cask "clippy" do
+cask "clippy-clipboard" do
   version "1.0.9"
   sha256 "fbea39c4fd1d0c22221f2cb1b1b389783129ecd5e6c81c91857d20153b45f9b7"
 
-  url "https://github.com/yarasaa/Clippy/releases/download/v#{version}/Clippy-v1.dmg",
-      verified: "github.com/yarasaa/Clippy/"
+  url "https://github.com/yarasaa/Clippy/releases/download/v#{version}/Clippy-v1.dmg"
   name "Clippy"
   desc "Clipboard manager with content-aware previews, AI, and screenshot editor"
   homepage "https://github.com/yarasaa/Clippy"
