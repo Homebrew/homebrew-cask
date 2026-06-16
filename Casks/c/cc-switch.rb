@@ -7,6 +7,7 @@ cask "cc-switch" do
   desc "Configuration manager for AI coding agents"
   homepage "https://github.com/farion1231/cc-switch"
 
+  auto_updates true
   depends_on macos: :monterey
 
   app "CC Switch.app"
