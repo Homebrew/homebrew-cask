@@ -7,9 +7,12 @@ cask "calendr" do
   desc "Menu bar calendar"
   homepage "https://github.com/pakerwreah/Calendr"
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "Calendr.app"
+
+  uninstall quit: "br.paker.Calendr"
 
   zap trash: [
     "~/Library/Application Scripts/br.paker.Calendr",
