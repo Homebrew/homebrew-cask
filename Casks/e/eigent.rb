@@ -1,9 +1,9 @@
 cask "eigent" do
   arch arm: "-arm64"
 
-  version "0.0.91"
-  sha256 arm:   "cf8912139e74e757676cb9273710c0663f4ab737041504d476d7da75bdf263bc",
-         intel: "409f0e43c5467b9d164c9ceaad6aa0447674d1b857ebd896c042c60d6e298fb9"
+  version "1.0.0"
+  sha256 arm:   "f941d049b8c917615caa24d3b087ffdbfc343ee6122c2166bc27abaec52cd314",
+         intel: "e30f2cf599af8ab1d1eb44ce4964d0f434c6fff17387b275123885bf4fceb5ce"
 
   url "https://github.com/eigent-ai/eigent/releases/download/v#{version}/Eigent-#{version}#{arch}.dmg",
       verified: "github.com/eigent-ai/eigent/"
