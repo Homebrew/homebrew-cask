@@ -2,13 +2,13 @@ cask "makemkv" do
   version "1.18.4"
   sha256 "b77de54fffe4bd8dfdb498bed15a44cf4ca2002c3f86e9184faf8407b2486166"
 
-  url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
+  url "https://makemkv.com/download/makemkv_v#{version}_osx.dmg"
   name "MakeMKV"
   desc "Video format converter (transcoder)"
-  homepage "https://www.makemkv.com/"
+  homepage "https://makemkv.com/"
 
   livecheck do
-    url "https://www.makemkv.com/download/"
+    url "https://makemkv.com/download/"
     regex(%r{href=.*?/makemkv[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg}i)
   end
 
