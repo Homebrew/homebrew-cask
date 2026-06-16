@@ -64,7 +64,7 @@ module Homebrew
       def find_sparkle(app)
         plist = app.join("Contents/Info.plist")
         url = Plist.parse_xml(plist)["SUFeedURL"]&.strip
-        return false if url.empty?
+        return false if url.blank?
 
         verify_appcast!("Sparkle", url)
       end
