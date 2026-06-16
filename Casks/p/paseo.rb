@@ -21,12 +21,23 @@ cask "paseo" do
   app "Paseo.app"
   binary "#{appdir}/Paseo.app/Contents/Resources/bin/paseo"
 
+  uninstall launchctl: "sh.paseo.desktop.ShipIt",
+            quit:      "sh.paseo.desktop",
+            script:    {
+              executable: "#{appdir}/Paseo.app/Contents/Resources/bin/paseo",
+              args:       ["daemon", "stop", "--force"],
+            }
+
   zap trash: [
-    "~/Library/Application Support/dev.paseo.desktop",
-    "~/Library/Caches/dev.paseo.desktop",
-    "~/Library/Logs/dev.paseo.desktop",
-    "~/Library/Preferences/dev.paseo.desktop.plist",
-    "~/Library/Saved Application State/dev.paseo.desktop.savedState",
-    "~/Library/WebKit/dev.paseo.desktop",
+    "~/.paseo",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/sh.paseo.desktop.sfl*",
+    "~/Library/Application Support/Paseo",
+    "~/Library/Caches/@getpaseodesktop-updater",
+    "~/Library/Caches/sh.paseo.desktop",
+    "~/Library/Caches/sh.paseo.desktop.ShipIt",
+    "~/Library/HTTPStorages/sh.paseo.desktop",
+    "~/Library/Logs/Paseo",
+    "~/Library/Preferences/ByHost/sh.paseo.desktop.ShipIt.*.plist",
+    "~/Library/Preferences/sh.paseo.desktop.plist",
   ]
 end
