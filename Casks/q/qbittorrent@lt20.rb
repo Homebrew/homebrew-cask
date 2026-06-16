@@ -14,8 +14,8 @@ cask "qbittorrent@lt20" do
     end
   end
   on_ventura :or_newer do
-    version "5.2.1"
-    sha256 "3fe09a467edb12b58f8fb4c10f1cc343c57a5f03e87a14c803c1069f460533be"
+    version "5.2.2"
+    sha256 "ab72fb3920963b0a5c16d09bf104a30993de366cad9e33f96cf4c18dfd6c7ed0"
 
     livecheck do
       url "https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac"
