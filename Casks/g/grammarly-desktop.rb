@@ -13,7 +13,7 @@ cask "grammarly-desktop" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "Grammarly Installer.app", target: "Grammarly Desktop.app"
 
