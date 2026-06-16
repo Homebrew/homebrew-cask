@@ -24,6 +24,7 @@ cask "alma" do
   uninstall quit: "com.yetone.alma"
 
   zap trash: [
+    "~/.alma",
     "~/.cache/alma",
     "~/.config/alma",
     "~/Library/Application Support/alma",
