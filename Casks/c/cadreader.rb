@@ -1,6 +1,6 @@
 cask "cadreader" do
-  version "5.2.2.14"
-  sha256 "3f1d78aca7aa121936b4d83d118d9d56f35a57359ac46f700255dac10972d2bb"
+  version "5.2.3.15"
+  sha256 "1b1c1a035cd438a6cfe42f0525923cafed0d2b864119ba087e3024a2bb68e5c4"
 
   url "https://yuntu-f.kuaicad.com/app/CADReaderMac_#{version}.dmg",
       verified: "yuntu-f.kuaicad.com/app/"
