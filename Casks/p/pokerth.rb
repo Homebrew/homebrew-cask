@@ -1,8 +1,8 @@
 cask "pokerth" do
-  version "2.0.7"
-  sha256 "00075441262752133b85e62ada78798c12fd945e9a7ae9e8b67a30f55f144f67"
+  version "2.0.8"
+  sha256 "c35ba20313883caac2cce5be6910b3c05f3db5f284f509ff12340d7fc0da07c3"
 
-  url "https://downloads.sourceforge.net/pokerth/PokerTH-#{version}.dmg",
+  url "https://downloads.sourceforge.net/pokerth/PokerTH-Widget-#{version}.dmg",
       verified: "downloads.sourceforge.net/pokerth/"
   name "PokerTH"
   desc "Free Texas hold'em poker"
@@ -12,7 +12,7 @@ cask "pokerth" do
 
   depends_on macos: :monterey
 
-  app "pokerth.app"
+  app "PokerTH.app"
 
   zap trash: "~/.pokerth"
 
