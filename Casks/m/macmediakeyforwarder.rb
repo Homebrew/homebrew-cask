@@ -7,11 +7,6 @@ cask "macmediakeyforwarder" do
   desc "Media key forwarder for Apple Music and Spotify"
   homepage "https://github.com/quentinlesceller/macmediakeyforwarder/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :tahoe
 
   app "MacMediaKeyForwarder.app"
