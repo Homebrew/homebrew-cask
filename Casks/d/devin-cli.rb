@@ -2,7 +2,7 @@ cask "devin-cli" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux"
 
-  version "2026.5.26-8"
+  version "2026.7.16"
 
   url "https://static.devin.ai/cli/#{version}/devin-#{version}-#{arch}-#{os}.tar.gz"
   name "Devin CLI"
@@ -10,12 +10,12 @@ cask "devin-cli" do
   homepage "https://cli.devin.ai/docs"
 
   on_macos do
-    sha256 arm:   "ffcbdddba574cf5ab2b7c10e27667f25d58d1a36fe88df98920689411a011d49",
-           intel: "b85e8e45b5b00b4860214445a1715087fe683ef7d2e1c81105a0ae8b84b41341"
+    sha256 arm:   "891b79e91993ed4de5805a70fdef4a164028060e94b8935d7fbf7fcc7891c1cd",
+           intel: "96e4aebcec971cfb38343cc5f48aa5f5c15437569cf647b2fdb36bd6c68b6411"
   end
 
   on_linux do
-    sha256 "4ea480041c6282261369f8b4bf11589ecb0b8c76e25d868dc48f29ae4929f021"
+    sha256 "9dba7923a4dae8e169cf93fe4f0295c5376da2add07028628b54336078b3cf36"
 
     depends_on arch: :x86_64
   end
