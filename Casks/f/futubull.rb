@@ -1,6 +1,6 @@
 cask "futubull" do
-  version "16.19.16408"
-  sha256 "a5bbb44600dce0482051faec9927f19b026c949ffde0b675008024fec1344af4"
+  version "16.20.16508"
+  sha256 "15ac3b1d70cbab6bbcbdd3924306299ac30bd5518b538bb1d739c70ba0557dd2"
 
   url "https://softwaredownload.futunn.com/FTNN_desktop_#{version}_Website.dmg",
       user_agent: :fake,
