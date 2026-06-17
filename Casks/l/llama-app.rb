@@ -1,4 +1,4 @@
-cask "llamabarn" do
+cask "llama-app" do
   version "0.32.0"
   sha256 "4490984d2ad7b0756a129d1636c82379ecbdaa82c9c4cefae6f789050a23a40b"
 
@@ -16,7 +16,7 @@ cask "llamabarn" do
   uninstall quit: "app.llamabarn.LlamaBarn"
 
   zap trash: [
-    "~/.llama-app/llama",
+    "~/.llama-app",
     "~/.local/bin/llama",
     "~/Library/Application Support/Llama",
     "~/Library/Application Support/LlamaBarn",
