@@ -1,6 +1,6 @@
 cask "rockboxutility" do
   version "1.5.1"
-  sha256 "b979b6aa7ab2894f32425114213d7f9efa803ee41523df6658739b3029058841"
+  sha256 "2928f9563f5dc42dc95e31c70176ff28374f7e34c0b5a1d29903ff9e6c62efcf"
 
   url "https://download.rockbox.org/rbutil/macosx/RockboxUtility-v#{version}.dmg"
   name "Rockbox Utility"
