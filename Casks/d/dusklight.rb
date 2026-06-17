@@ -1,9 +1,9 @@
 cask "dusklight" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.4.0"
-  sha256 arm:   "06375a1a5a171cafd0533b1d053bd5f1816275bef60db5f278f9d322c56b0e91",
-         intel: "8d950f52a22d8122e31abfddfbc347f4880fcee9ac0866f7d229597ace868b85"
+  version "1.4.1"
+  sha256 arm:   "fc6086b6d4713aff24360727510dd5997f8daeae7be7da6f5c6b7ff008cdb910",
+         intel: "76807140252bd72640c54fe063a92f58428ad567fd224600f6966f4358d73018"
 
   url "https://github.com/TwilitRealm/dusklight/releases/download/v#{version}/Dusklight-v#{version}-macos-#{arch}.zip",
       verified: "github.com/TwilitRealm/dusklight/"
