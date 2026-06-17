@@ -1,6 +1,6 @@
 cask "idevice-pair" do
-  version "0.1.13"
-  sha256 "d1501f7da6d8156bf739fe2dafb4e0b38b3027ddabedcdc4f61544902a9491c4"
+  version "0.1.14"
+  sha256 "c510409552083b89ee4ab513d9d923c57013d16401260c525860243e5e158a84"
 
   url "https://github.com/jkcoxson/idevice_pair/releases/download/#{version}/idevice_pair--macos-universal.dmg"
   name "idevice_pair"
