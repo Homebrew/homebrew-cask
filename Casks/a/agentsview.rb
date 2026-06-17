@@ -16,15 +16,29 @@ cask "agentsview" do
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
 
-  url "https://github.com/wesm/agentsview/releases/download/v#{version}/AgentsView_#{version}_#{arch}#{url_end}",
-      verified: "github.com/wesm/agentsview/"
+  url "https://github.com/kenn-io/agentsview/releases/download/v#{version}/AgentsView_#{version}_#{arch}#{url_end}",
+      verified: "github.com/kenn-io/agentsview/"
   name "AgentsView"
   desc "Browse, search and analyse your past AI coding sessions"
   homepage "https://www.agentsview.io/"
 
+  # Not every release on GitHub provides assets for the app, so we have to find
+  # the newest one with the files the cask uses.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(%r{/AgentsView[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}#{url_end}}i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next unless match
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   on_macos do
