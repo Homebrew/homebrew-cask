@@ -6,11 +6,11 @@ cask "copilot-cli@prerelease" do
     depends_on macos: :ventura
   end
 
-  version "1.0.63"
-  sha256 arm:          "84ef09fb2988eb2ea5360625226ec255f69d0ebf521b2029d6658f8d36b674cd",
-         intel:        "ef627639ee04862d71e2065e3d2e1d668ef62a20c03ae190c715e31ca865a237",
-         arm64_linux:  "fa3255439d7d63ae0e51ab614b0285606212b316790550351eae88a62f0bb20f",
-         x86_64_linux: "64d4a80496248f316030c358f530e60b96bae670e18f0c3f62e1f91fefacaf82"
+  version "1.0.64-0"
+  sha256 arm:          "8d0d881f163d386786a6e8efcc3f4519ceae7550fe8df84ee54ba7b9279a5b79",
+         intel:        "a545b327cc3e7b577a8deb6af6ae7d37e2ff5cff02fb623720a2e76fec771458",
+         arm64_linux:  "d3fc4af361cc3196330f34809092320b191500aadbf13497242fb0b0f3c80a73",
+         x86_64_linux: "50120f2c3cd6afe04674bb57478bd431015dadf183a2284c0f32eb6d025d66aa"
 
   url "https://github.com/github/copilot-cli/releases/download/v#{version}/copilot-#{os}-#{arch}.tar.gz"
   name "GitHub Copilot CLI"
