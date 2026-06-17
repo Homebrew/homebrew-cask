@@ -1,6 +1,6 @@
 cask "free-ruler" do
-  version "2.0.18"
-  sha256 "b85a752d071c5c186a96246129bddecc4dac15d011b60174b17cd2c817f0b954"
+  version "2.0.19"
+  sha256 "b261c6bb152fdef376844e88c3e2b32938077ca7cdd1ccc9d9f60b97d3294e0d"
 
   url "https://github.com/pascalpp/FreeRuler/releases/download/v#{version}/free-ruler-#{version}.zip",
       verified: "github.com/pascalpp/FreeRuler/"
