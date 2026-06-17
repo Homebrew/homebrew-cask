@@ -1,9 +1,9 @@
 cask "hummingbird" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.0.0"
-  sha256 arm:   "ded04a6b3909a5f001825851cf4941489fc3b780b382e6bac4bb9f18596b3b30",
-         intel: "43ce210c9e5b62bc0c2f147b4631a7d021c4bd8eb2f4cd49d937b0a887513122"
+  version "2.1.0"
+  sha256 arm:   "58a9ddd410fd63b6e8fcbad4c51c0e14bd51d96ac4dffa9e86e7df711c170cd4",
+         intel: "cc8d635e433e19074dad918d79cf6bd2041135af1fad86e0d7abc2eff24a9325"
 
   url "https://eddie.website/repository/hummingbird/#{version}/hummingbird-macos-#{arch}-notarized-#{version}.zip",
       verified: "eddie.website/repository/hummingbird/"
