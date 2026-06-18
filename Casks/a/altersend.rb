@@ -11,11 +11,6 @@ cask "altersend" do
   desc "Secure, peer-to-peer file transfer app"
   homepage "https://altersend.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :monterey
 
   app "AlterSend.app"
