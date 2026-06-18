@@ -1,0 +1,14 @@
+Casks/s/serial-studio.rb
+  h_9df9c32c3f321d 16-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "bb4782e853e41e437f443e420e86ef2dbf422c07",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
