@@ -18,5 +18,4 @@ cask "sxitch" do
   app "target/release/macos/Sxitch.app"
 
   zap trash: "~/Library/Application Support/Sxitch"
-  
 end
