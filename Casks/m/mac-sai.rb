@@ -4,7 +4,7 @@ cask "mac-sai" do
 
   url "https://github.com/iliyami/MacSai/releases/download/v#{version}/MacSai-#{version}.dmg"
   name "Mac Sai"
-  desc "Open-source system cleaner, optimizer, and malware scanner"
+  desc "System cleaner, optimiser, and malware scanner"
   homepage "https://github.com/iliyami/MacSai"
 
   livecheck do
