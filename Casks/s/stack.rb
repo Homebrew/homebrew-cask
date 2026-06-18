@@ -1,9 +1,9 @@
 cask "stack" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "6.0.2-20251124"
-  sha256 arm:   "21db02b3ffb7efa634115fa0976a6ca69840aa2bb346fc332fbaaa75c5da39ab",
-         intel: "bc1330291c618aef19537ba073e02f421a068a1d617af960775b24e11f3a737d"
+  version "6.0.3-20260618"
+  sha256 arm:   "3353444d37321ed4e94c3dfe9b0c99d2e125179126a6c9e0ce35253f847321dc",
+         intel: "c45c39eda23816539fb3f13d220fb847575ba8ada69710f8d7111ec1baf81690"
 
   url "https://filehosting-client.transip.nl/packages/stack/v#{version}/macos/stack-v#{version}.#{arch}.dmg"
   name "STACK"
