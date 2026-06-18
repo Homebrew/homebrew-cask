@@ -1,5 +1,5 @@
 cask "navigator" do
-  version :latest
+  version "1.0.5"
   sha256 :no_check
 
   url "https://oryx.nyc3.digitaloceanspaces.com/navigator-app/Navigator.dmg",
@@ -10,11 +10,10 @@ cask "navigator" do
 
   livecheck do
     url "https://oryx.nyc3.digitaloceanspaces.com/navigator-app/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
- 
   depends_on macos: :ventura
 
   app "Navigator.app"
