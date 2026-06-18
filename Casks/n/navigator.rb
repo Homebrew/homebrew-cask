@@ -8,9 +8,13 @@ cask "navigator" do
   desc "Companion app for ZSA's Navigator trackpad"
   homepage "https://www.zsa.io/voyager/navigator"
 
-  # No version pin / livecheck on purpose: the download is a single rolling DMG
-  # and the app updates itself in place via Sparkle, so brew only bootstraps the
-  # install. There's no versioned URL or stable checksum to track.
+  livecheck do
+    url "https://oryx.nyc3.digitaloceanspaces.com/navigator-app/appcast.xml"
+    strategy :sparkle
+  end
+
+  auto_updates true
+ 
   depends_on macos: :ventura
 
   app "Navigator.app"
