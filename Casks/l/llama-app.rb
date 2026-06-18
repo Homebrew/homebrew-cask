@@ -13,7 +13,7 @@ cask "llama-app" do
 
   app "Llama.app"
 
-  uninstall quit: "app.llamabarn.LlamaBarn"
+  uninstall quit: "app.llama.Llama"
 
   zap trash: [
     "~/.llama-app",
