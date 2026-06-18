@@ -5,7 +5,7 @@ cask "sxitch" do
   url "https://storage.sxitch.app/v#{version}/Sxitch-universal-macos.app.zip"
   name "Sxitch"
   desc "Tree based app switcher"
-  homepage "https://sxitch.app"
+  homepage "https://sxitch.app/"
 
   livecheck do
     url "https://storage.sxitch.app/version.txt"
@@ -17,7 +17,6 @@ cask "sxitch" do
 
   app "target/release/macos/Sxitch.app"
 
-  zap trash: [
-    "~/Library/Application Support/Sxitch",
-  ]
+  zap trash: "~/Library/Application Support/Sxitch"
+  
 end
