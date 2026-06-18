@@ -1,6 +1,6 @@
 cask "stirling-pdf" do
-  version "2.12.0"
-  sha256 "319da4ad0e873387780cbc5360e62e9119ac31e5a8459aa4b68c8fa53c5b5500"
+  version "2.13.0"
+  sha256 "21011a6177268d06ec16ebd7e8861f3a69a436cbb769d65a5c66f53645f3d3a0"
 
   url "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v#{version}/Stirling-PDF-macos-universal.dmg",
       verified: "github.com/Stirling-Tools/Stirling-PDF/"
