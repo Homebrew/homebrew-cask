@@ -1,5 +1,5 @@
 cask "algoapp" do
-  version "13.1.1"
+  version "13.1.2"
   sha256 :no_check
 
   url "https://static.algoapp.ai/AlgoApp-MacOS.zip"
