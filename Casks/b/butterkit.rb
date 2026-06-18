@@ -1,6 +1,6 @@
 cask "butterkit" do
-  version "1.9.20"
-  sha256 "0c2d16a9a25811b5ce3c91bbd5bf8a3a0b44ab5e7c689f154bded988a4e1d6d5"
+  version "2.0.02"
+  sha256 "87b5a040593e9105401f2c50632010f0ad0f5bcdf9ad3f5916696cccacfec187"
 
   url "https://download.butterkit.app/updates/ButterKit-Direct-#{version}-macOS.zip"
   name "ButterKit"
@@ -13,7 +13,7 @@ cask "butterkit" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
+  depends_on macos: :tahoe
 
   app "ButterKit-Direct-#{version}-macOS.app", target: "ButterKit.app"
 
