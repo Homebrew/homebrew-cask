@@ -1,6 +1,6 @@
 cask "smoothcsv" do
-  version "3.21.1"
-  sha256 "b136a26654923b754d0d34d41c308b876e77faf02f2e58238653ad9440e5604d"
+  version "3.22.0"
+  sha256 "90f5dae35878df906e5ca6796a0c081045e6e35fb6c522838019e9edac4831b6"
 
   url "https://github.com/kohii/smoothcsv3/releases/download/v#{version}/SmoothCSV_#{version}_universal.dmg",
       verified: "github.com/kohii/smoothcsv3/"
