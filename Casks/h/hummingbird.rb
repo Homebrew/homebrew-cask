@@ -12,7 +12,8 @@ cask "hummingbird" do
   homepage "https://airvpn.org/hummingbird"
 
   livecheck do
-    url "https://airvpn.org/macos/hummingbird/"
+    url "https://airvpn.org/macos/hummingbird/",
+        user_agent: :fake
     regex(/href=.*?hummingbird[._-]macos[._-]#{arch}[._-]notarized[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
