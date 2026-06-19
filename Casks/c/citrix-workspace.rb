@@ -1,6 +1,6 @@
 cask "citrix-workspace" do
-  version "26.03.10.40"
-  sha256 "a992f9f19db45dcb654e0511acb992b0e222bd1e6f92945e4bd0ed76a56f4eaa"
+  version "26.03.0.49"
+  sha256 "a2a2d43c779a5b3c3b19f31b0483366acf2a3609a1f953d071c88f30d4c4fd9f"
 
   url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/Receiver/Mac/CitrixWorkspaceAppUniversal#{version}.pkg"
   name "Citrix Workspace"
@@ -28,7 +28,6 @@ cask "citrix-workspace" do
               "com.citrix.devicetrust.launchagent",
               "com.citrix.ReceiverHelper",
               "com.citrix.ReceiverUninstallHelper",
-              "com.citrix.ReceiverUpdaterHelper",
               "com.citrix.safariadapter",
               "com.citrix.ServiceRecords",
               "com.citrix.UninstallMonitor",
@@ -47,7 +46,6 @@ cask "citrix-workspace" do
               "com.citrix.ICAClient",
               "com.citrix.ICAClientcwa",
               "com.citrix.ICAClienthdx",
-              "com.citrix.receiver.bcr",
             ]
 
   zap trash: [
