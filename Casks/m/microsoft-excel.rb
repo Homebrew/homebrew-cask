@@ -22,8 +22,8 @@ cask "microsoft-excel" do
     end
   end
   on_sonoma :or_newer do
-    version "16.109.26053122"
-    sha256 "fce501614e212cb672590c91d5d15711f902e9c21cdbdd80f1da5e18b5581d3f"
+    version "16.110.26061317"
+    sha256 "d9ced6c1a95f60649739394597d7dc89281b587ae6951e055b6a52197e351c0a"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525135"
@@ -31,7 +31,8 @@ cask "microsoft-excel" do
     end
   end
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
+      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
   name "Microsoft Excel"
   desc "Spreadsheet software"
   homepage "https://www.microsoft.com/en-US/microsoft-365/excel"

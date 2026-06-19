@@ -22,8 +22,8 @@ cask "microsoft-word" do
     end
   end
   on_sonoma :or_newer do
-    version "16.109.26053122"
-    sha256 "b31a44750ea2fafa99385c80878ca5221f1858febf6aeddd44d7b953a4bd8b07"
+    version "16.110.26061317"
+    sha256 "4189eafe4c660bad05107aabae6667a344cf0221719498096b169c719fa4e311"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525134"
@@ -31,7 +31,8 @@ cask "microsoft-word" do
     end
   end
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg",
+      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
   name "Microsoft Word"
   desc "Word processor"
   homepage "https://www.microsoft.com/en-US/microsoft-365/word"
