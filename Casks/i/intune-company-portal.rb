@@ -2,7 +2,8 @@ cask "intune-company-portal" do
   version "5.2604.2"
   sha256 "7f990faf3ce5f9f5641f796a25c1f43d7f69aaefd5b569503c772d159f75a91e"
 
-  url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/CompanyPortal_#{version}-Upgrade.pkg"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/CompanyPortal_#{version}-Upgrade.pkg",
+      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
   name "Company Portal"
   desc "App to manage access to corporate apps, data, and resources"
   homepage "https://docs.microsoft.com/en-us/mem/intune/user-help/enroll-your-device-in-intune-macos-cp"

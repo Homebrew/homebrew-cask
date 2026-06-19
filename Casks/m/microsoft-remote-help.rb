@@ -1,9 +1,9 @@
 cask "microsoft-remote-help" do
   version "1.0.2601221"
-  sha256 "9a4d981dfa906c5f10227f906098917307da976700bdd5314b5eed2b6c275ee0"
+  sha256 "2523e95459808b48bd7e3cd3289613966d0ef3b0014aec53321d8ee762cdfdcf"
 
-  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/1ac37578-5a24-40fb-892e-b89d85b6dfaa/MacAutoupdate/Microsoft_Remote_Help_#{version}_installer.pkg",
-      verified: "res.public.onecdn.static.microsoft/"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Help_#{version}_installer.pkg",
+      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
   name "Microsoft Remote Help"
   desc "Screen sharing and assistance tool for enterprise IT support"
   homepage "https://learn.microsoft.com/mem/intune/fundamentals/remote-help"
