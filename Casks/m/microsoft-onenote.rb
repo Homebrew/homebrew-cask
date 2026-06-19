@@ -2,7 +2,8 @@ cask "microsoft-onenote" do
   version "16.109.26053122"
   sha256 "aade4b2b3bad2286388e2f0d9f88667b1bdc7717d8a69606b29198caa6acdc62"
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_OneNote_#{version}_Updater.pkg"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_OneNote_#{version}_Updater.pkg",
+      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
   name "Microsoft OneNote"
   desc "Digital note taking app"
   homepage "https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app"
