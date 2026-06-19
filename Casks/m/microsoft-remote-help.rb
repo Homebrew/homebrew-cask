@@ -1,6 +1,6 @@
 cask "microsoft-remote-help" do
-  version "1.0.2601221"
-  sha256 "2523e95459808b48bd7e3cd3289613966d0ef3b0014aec53321d8ee762cdfdcf"
+  version "1.0.2606021"
+  sha256 "9199369e1351d9c2796d7b86946aa76d9aef2e832128121537a96357b9a0ee8a"
 
   url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Help_#{version}_installer.pkg",
       verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
