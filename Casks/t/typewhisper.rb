@@ -9,8 +9,10 @@ cask "typewhisper" do
   homepage "https://www.typewhisper.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://typewhisper.github.io/typewhisper-mac/appcast.xml"
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
