@@ -1,11 +1,18 @@
 cask "openmw" do
-  arch arm: "arm64", intel: "amd64"
+  arch arm: "arm64", intel: "x86_64"
 
-  version "0.50.0"
-  sha256 arm:   "f1787384b54ae6b76444ca0899c553c491800d28185e7ee8bf052a30656160ed",
-         intel: "8ba6c83933d999f5f1f6f9d1bb35b948c1d01972fc35e6bfe2c302735ca2db8e"
+  version "0.51.0"
+  sha256 arm:   "76bc0436413ed500dcd846a2cc3889711af948645bdd4eafd36ad16bc0c5615c",
+         intel: "cce014e1827cf2b1a23017894015648298c90e3324097fac157dd9e40b341602"
 
-  url "https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}-macos-#{arch}.dmg",
+  on_arm do
+    depends_on macos: :sonoma
+  end
+  on_intel do
+    depends_on macos: :ventura
+  end
+
+  url "https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/OpenMW/openmw/"
   name "OpenMW"
   desc "Open-source open-world RPG game engine that supports playing Morrowind"
@@ -19,7 +26,7 @@ cask "openmw" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :ventura
+  depends_on :macos
 
   app "OpenMW.app"
   app "OpenMW-CS.app"
