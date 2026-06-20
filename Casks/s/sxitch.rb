@@ -15,7 +15,7 @@ cask "sxitch" do
 
   depends_on macos: :monterey
 
-  app "Sxitch.app"
+  app "target/release/macos/Sxitch.app"
 
   zap trash: "~/Library/Application Support/Sxitch"
 end
