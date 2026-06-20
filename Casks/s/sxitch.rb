@@ -7,16 +7,11 @@ cask "sxitch" do
   name "Sxitch"
   desc "Tree based app switcher"
   homepage "https://sxitch.app/"
-
   livecheck do
     url "https://pub-de38f9dc4d154d119d16caaa9a29824b.r2.dev/version.txt"
     regex(/^v?(\d+(?:\.\d+)+[\w-]*)$/i)
   end
-
-  auto_updates false
   depends_on macos: :monterey
-
   app "target/release/macos/Sxitch.app"
-
   zap trash: "~/Library/Application Support/Sxitch"
 end
