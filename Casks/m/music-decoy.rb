@@ -1,6 +1,6 @@
 cask "music-decoy" do
-  version "1.2"
-  sha256 "fbe22ccd809bec5694409f1e304d76e5b941ab19a9a218348416a039f30883b0"
+  version "1.3"
+  sha256 "14132d0a14057e3288f8c4446829e15daa512c17e8e85d5d4e396c3722ef128f"
 
   url "https://github.com/FuzzyIdeas/MusicDecoy/releases/download/v#{version}/MusicDecoy.zip",
       verified: "github.com/FuzzyIdeas/MusicDecoy/"
@@ -13,7 +13,7 @@ cask "music-decoy" do
     strategy :github_latest
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Music Decoy.app"
 
