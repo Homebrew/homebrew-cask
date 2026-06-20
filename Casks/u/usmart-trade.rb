@@ -1,9 +1,8 @@
 cask "usmart-trade" do
-  version "4.6.3,20260606_182424,1f34c0c2-6efc-4c3a-8dc8-20c0aaf812e4,2026-06-08"
-  sha256 "de116398f8db36625ba5c90526d24b058bb8821f574ce8c9e83099ffb8cbe034"
+  version "4.6.5,20260619_002703,02609818-14be-40d4-8412-aace07267c43,2026-06-19"
+  sha256 "6cc95762e65cd7de2a08da88c8ae3d76daa43614b036afda778c368e5d81f567"
 
-  url "https://jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/admin/app-version-file/#{version.csv.fourth}/#{version.csv.third}/usmart_macapp_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/"
+  url "https://hk-static.usmartglobal.com/admin/app-version-file/#{version.csv.fourth}/#{version.csv.third}/usmart_macapp_#{version.csv.first}_#{version.csv.second}.dmg"
   name "uSMART Trade"
   desc "Stock and options trading platform"
   homepage "https://www.usmartglobal.com/"
