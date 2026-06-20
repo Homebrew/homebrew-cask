@@ -13,7 +13,7 @@ cask "sxitch" do
     regex(/^v?(\d+(?:\.\d+)+[\w-]*)$/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Sxitch.app"
 
