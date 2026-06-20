@@ -3,7 +3,7 @@ cask "cotypist" do
   sha256 "0e5011681901936edce67bf68fa1dedd827c32c9ef7e3a9392ab33d77fbb7238"
 
   url "https://cotypist.app/download/Cotypist-#{version}.dmg"
-  name "cotypist"
+  name "Cotypist"
   desc "System-wide AI autocomplete"
   homepage "https://cotypist.app/"
 
