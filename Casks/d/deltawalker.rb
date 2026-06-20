@@ -1,9 +1,9 @@
 cask "deltawalker" do
   arch arm: "aarch64", intel: "x64"
 
-  version "3.0.2-RC2"
-  sha256 arm:   "27bb38ba3e35ed043bd8ac89316ae5fd42ec69b5fc3f83a9a252ff4bee9fbb0f",
-         intel: "b056087c267a753e4b98eb2fa2a95621115e402c2752a768a103549d5fe60389"
+  version "2.8.1"
+  sha256 arm:   "f5cc0843ca324f55e84ce7a0907b20349bbdef058440cb56aeb6c245efbb882e",
+         intel: "7301ad9f6ad001251c42fcbce989efe62439d5d2245090f413df438c54857035"
 
   # The uninstall script is not present in the intel version.
   on_arm do
@@ -20,9 +20,9 @@ cask "deltawalker" do
   desc "Tool to compare and synchronise files and folders"
   homepage "https://www.deltawalker.com/"
 
+  # The download page only provides release candidate versions.
   livecheck do
-    url "https://www.deltawalker.com/download"
-    regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:[._]\d+)+(?:[._-]RC\d+)?)[._-]#{arch}\.dmg/i)
+    skip "Download page only provides release candidate versions"
   end
 
   depends_on macos: :big_sur
