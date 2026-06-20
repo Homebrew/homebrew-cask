@@ -2,14 +2,14 @@ cask "kotlin-lsp" do
   arch arm: "-aarch64"
   os macos: "sit", linux: "tar.gz"
 
-  version "262.7569.0"
-  sha256 arm:          "e3076b6500db8f1d40e087a80223ecbb3a14cf4fd2221e031c424a94c6094620",
-         intel:        "0fdc0f0d345a759e6ac1522217679d8c175f8182eab51705bb267ca926ae24e5",
-         arm64_linux:  "f974434597dcd41a0e7e9c3973b1ed999fc52150fb05e72582aacde3d1e79f7f",
-         x86_64_linux: "333cb21215e2ce04817257bbd5c693cbbd4a99121ac100814601edc1f92d2570"
+  version "262.8190.0"
+  sha256 arm:          "e20183262784bb7e665ce1aea4855872a8b16f211ebb478d452773553732d9fb",
+         intel:        "f3845ae9ee38c22ef5e436390d86a3d908f77073e9667fa643a5ae0957c19728",
+         arm64_linux:  "c3edd59ef34a7faa4d04f3517afb7a932b19c3f9cf17d1a14e9da17b0b5440ad",
+         x86_64_linux: "8b4c70e95065420e7867c99aaf9f18e0b4e76311ec453e4c1a39e3f6ae774cbf"
 
-  url "https://download-cdn.jetbrains.com/kotlin-lsp/#{version}/kotlin-server-#{version}#{arch}.#{os}",
-      verified: "download-cdn.jetbrains.com/kotlin-lsp/"
+  url "https://download-cdn.jetbrains.com/language-server/kotlin-server/#{version}/kotlin-server-#{version}#{arch}.#{os}",
+      verified: "download-cdn.jetbrains.com/language-server/kotlin-server/"
   name "Kotlin LSP"
   desc "Official Kotlin Language Server"
   homepage "https://github.com/Kotlin/kotlin-lsp"
