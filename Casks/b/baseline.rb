@@ -18,4 +18,6 @@ cask "baseline" do
               "/Library/LaunchDaemons/com.secondsonconsulting.baseline.plist",
               "/usr/local/Baseline",
             ]
+
+  # No zap stanza required
 end
