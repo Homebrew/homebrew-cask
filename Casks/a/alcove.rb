@@ -1,5 +1,5 @@
 cask "alcove" do
-  version "1.7.3"
+  version "1.7.4"
   sha256 :no_check
 
   url "https://download.tryalcove.com/Alcove.dmg"
