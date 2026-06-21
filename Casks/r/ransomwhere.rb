@@ -1,6 +1,6 @@
 cask "ransomwhere" do
-  version "2.1.2"
-  sha256 "0aa1fe3299f3d6ebab30c9410951cfbc4ccee688a9b4757e49eafd2b83c2a214"
+  version "2.1.3"
+  sha256 "2d9675bfaf671d78718404ff8c4fb41e6889796fecdfa0aaf91a9b31358ba460"
 
   url "https://github.com/objective-see/RansomWhere/releases/download/v#{version}/RansomWhere_#{version}.zip",
       verified: "github.com/objective-see/RansomWhere/"
