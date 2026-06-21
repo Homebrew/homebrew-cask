@@ -28,5 +28,7 @@ cask "1password-cli" do
 
   binary "op"
 
+  generate_completions_from_executable "op", "completion"
+
   zap trash: "~/.config/op"
 end
