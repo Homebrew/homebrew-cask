@@ -14,7 +14,7 @@ cask "clipy" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Clipy.app"
 
@@ -29,8 +29,4 @@ cask "clipy" do
     "~/Library/Cookies/com.clipy-app.Clipy.binarycookies",
     "~/Library/Preferences/com.clipy-app.Clipy.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
