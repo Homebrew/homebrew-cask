@@ -2,7 +2,7 @@ cask "5kplayer" do
   version "6.11.0"
   sha256 :no_check
 
-  url "https://www.5kplayer.com/download/5kplayer.dmg"
+  url "https://www.5kplayer.com/download/5kplayer-setup.dmg"
   name "5KPlayer"
   desc "Play 4K/1080p/360-degree video, MP3/AAC/APE/FLAC music without quality loss"
   homepage "https://www.5kplayer.com/"
