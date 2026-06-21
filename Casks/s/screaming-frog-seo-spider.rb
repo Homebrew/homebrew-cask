@@ -10,10 +10,9 @@ cask "screaming-frog-seo-spider" do
   desc "SEO site audit tool"
   homepage "https://www.screamingfrog.co.uk/seo-spider/"
 
-  # The homepage links to the latest dmg files but Cloudflare protections
-  # prevent us from fetching it, so it must be checked manually.
   livecheck do
-    skip "Cannot be fetched due to Cloudflare protections"
+    url "https://download.screamingfrog.co.uk/products/seo-spider/getlatestversion.php"
+    regex(/(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: :big_sur
