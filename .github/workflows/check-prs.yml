@@ -78,6 +78,17 @@ jobs:
       - name: Check pull request template
         id: template
         run: |
+          # homebrew-core and homebrew-cask allow a condensed PR body when opened by brew bump.
+          if [[ "${GITHUB_REPOSITORY}" == "Homebrew/homebrew-core" ||
+                "${GITHUB_REPOSITORY}" == "Homebrew/homebrew-cask" ]]
+          then
+            if grep -qE 'Created (with|by) `brew bump(-cask-pr|-formula-pr)?`' "${RUNNER_TEMP}/check-prs/body"
+            then
+              echo "complete_template=true" >>"${GITHUB_OUTPUT:?}"
+              exit 0
+            fi
+          fi
+
           complete_template="$(
             ruby "${RUNNER_TEMP:?}/check_template.rb" pull-request \
               "${RUNNER_TEMP}/check-prs/body" \
