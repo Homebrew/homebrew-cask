@@ -10,7 +10,7 @@ cask "github-copilot-app" do
 
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  url "https://github.com/github/app/releases/download/v#{version}/GitHub-Copilot-#{os}-#{arch}.#{suffix}"
+  url "https://github.com/github/app/releases/download/v#{version}/GitHub-Copilot-#{os}-#{arch}.#{url_end}"
   name "GitHub Copilot"
   desc "Native client for GitHub Copilot"
   homepage "https://github.com/github/app"
