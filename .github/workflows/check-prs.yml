@@ -82,7 +82,7 @@ jobs:
           if [[ "${GITHUB_REPOSITORY}" == "Homebrew/homebrew-core" ||
                 "${GITHUB_REPOSITORY}" == "Homebrew/homebrew-cask" ]]
           then
-            if grep -qE 'Created (with|by) `brew bump(-cask-pr|-formula-pr)?`' "${RUNNER_TEMP}/check-prs/body"
+            if grep -qE "Created (with|by) \`brew bump(-cask-pr|-formula-pr)?\`" "${RUNNER_TEMP}/check-prs/body"
             then
               echo "complete_template=true" >>"${GITHUB_OUTPUT:?}"
               exit 0
