@@ -1,6 +1,6 @@
 cask "thecommander" do
-  version "1.6.1"
-  sha256 "02c50adc6289762c5bf7f6be56d5aa3129231738bed8a15de5bd158e09834ca1"
+  version "1.6.2"
+  sha256 "52baecaede44b8f6a9bd08cb6c6e42017594ab055948555f52ef496fd5f156aa"
 
   url "https://die-gutbrods.de/thecommander/updates/TheCommander-#{version}.dmg"
   name "TheCommander"
