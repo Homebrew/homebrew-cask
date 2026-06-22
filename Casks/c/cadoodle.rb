@@ -5,7 +5,7 @@ cask "cadoodle" do
   url "https://github.com/CommonWealthRobotics/CaDoodle/releases/download/#{version}/CaDoodle-MacOS-arm64.dmg"
   name "CaDoodle"
   desc "3D CAD tool for robotics and makers"
-  homepage "https://github.com/CommonWealthRobotics/CaDoodle"
+  homepage "https://cadoodlecad.com/"
 
   app "CaDoodle.app"
 end
