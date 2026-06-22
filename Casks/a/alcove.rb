@@ -1,15 +1,21 @@
 cask "alcove" do
-  version "1.7.2"
-  sha256 "83357f05d2edd1c978f7470f1cf2b943a4b81d168723f7b8cdc39d9ccf8c5588"
+  version "1.7.4"
+  sha256 :no_check
 
-  url "https://github.com/henrikruscon/alcove-releases/releases/download/#{version}/Alcove.zip",
-      verified: "github.com/henrikruscon/alcove-releases/"
+  url "https://download.tryalcove.com/Alcove.dmg"
   name "Alcove"
   desc "Utility to add Dynamic Island like features to notch area"
   homepage "https://tryalcove.com/"
 
+  livecheck do
+    url "https://api.tryalcove.com/latest?channel=trial"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
+
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "Alcove.app"
 

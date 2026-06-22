@@ -1,6 +1,6 @@
 cask "kicad" do
-  version "10.0.3"
-  sha256 "065344be912b121e7afd853a21ea29526234830661e1b7a7b7df042163e6cd01"
+  version "10.0.4"
+  sha256 "fa87baa14694b6c12c42da1230b473bac89c03b783a74d89c4a06319e5cabffe"
 
   url "https://github.com/KiCad/kicad-source-mirror/releases/download/#{version}/kicad-unified-universal-#{version}.dmg",
       verified: "github.com/KiCad/kicad-source-mirror/"

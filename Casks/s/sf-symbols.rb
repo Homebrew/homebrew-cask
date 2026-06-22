@@ -23,8 +23,16 @@ cask "sf-symbols" do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
+  on_sonoma do
     version "7.2,119"
+    sha256 :no_check # required as upstream package is updated in-place
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sequoia :or_newer do
+    version "8.0,123"
     sha256 :no_check # required as upstream package is updated in-place
 
     livecheck do

@@ -1,9 +1,9 @@
 cask "tribler" do
   arch arm: "arm", intel: "i386"
 
-  version "8.4.2"
-  sha256 arm:   "7add076282df31f47434b7e1c383491882dba07722f13c0fccec5b5088270cde",
-         intel: "8057a15463abf63ce6834d79a1dec3fde506934704e299ea509909ade96fc6e8"
+  version "8.4.3"
+  sha256 arm:   "5f6541b71f5537469728db8b7cda2fd0e2a11a33a3185db3339c518843b33e3c",
+         intel: "65652bc9889e91b8be6364c133d097ecc1af88a74351be7bb7f680bcd171e5a2"
 
   on_arm do
     depends_on macos: :big_sur

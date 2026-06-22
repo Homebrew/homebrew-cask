@@ -1,6 +1,6 @@
 cask "virtualbuddy@beta" do
-  version "2.1,323"
-  sha256 "422b3b59546496a1d74ce3442f8cd028070642bd6a97e787bb7606b408b14199"
+  version "2.2,366"
+  sha256 "34c15415df5efdb8e0b40a63a1b00cce630d13f4b43d0c3e1ff258dd33779e2a"
 
   url "https://su.virtualbuddy.app/beta/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "su.virtualbuddy.app/"
@@ -15,7 +15,7 @@ cask "virtualbuddy@beta" do
 
   conflicts_with cask: "virtualbuddy"
   depends_on arch: :arm64
-  depends_on macos: :ventura
+  depends_on macos: :tahoe
 
   app "VirtualBuddy.app"
   binary "#{appdir}/VirtualBuddy.app/Contents/MacOS/vctool", target: "vctool"

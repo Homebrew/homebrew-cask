@@ -1,6 +1,6 @@
 cask "phoenix-slides" do
-  version "1.6.1"
-  sha256 "84c6165c37ad3f143bfbbab8e57a797b23d9524cbbc2c7349884f8ed5de4c694"
+  version "1.6.2"
+  sha256 "0abfb07aca4dbfce3c35dc4263d0ad52c803ced67f90449bdc0bd07a65334298"
 
   url "https://github.com/gobbledegook/creevey/releases/download/v#{version}/phoenix-slides-#{version.no_dots.ljust(3, "0")}.dmg",
       verified: "github.com/gobbledegook/creevey/"

@@ -1,9 +1,9 @@
 cask "opencode-desktop" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.17.0"
-  sha256 arm:   "3507d91237e60619bd25d1c9a719144141668b4849ea487b645e5f53d7aa3a5f",
-         intel: "032758bfc0777aa61fc81f7f003f3b6b36e1b057f76566407848a998103ceb74"
+  version "1.17.9"
+  sha256 arm:   "edcc148f2d2f78932e7edd5ea7a5ffd6cc9aa0280a53de686f7cd88e63d737c4",
+         intel: "e84bc4c83e714946dc1557075901c3f831d5868029dabd98f0c647056051dd54"
 
   url "https://github.com/anomalyco/opencode/releases/download/v#{version}/opencode-desktop-mac-#{arch}.dmg",
       verified: "github.com/anomalyco/opencode/"

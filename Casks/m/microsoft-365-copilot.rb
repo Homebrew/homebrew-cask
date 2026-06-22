@@ -1,9 +1,9 @@
 cask "microsoft-365-copilot" do
-  version "1.2606.0101"
-  sha256 "99c2abda06be7a5369b2f3a9124c4735ecb4db69b1438265a872a4f1d768eabc"
+  version "1.2606.0801"
+  sha256 "334b47a40de9e2adddc225399a0335464a00a4f2059c2578e6e0ff2fb424733d"
 
-  url "https://res.cdn.office.net/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_Copilot_universal_#{version}_Installer.pkg",
-      verified: "res.cdn.office.net/"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_Copilot_universal_#{version}_Installer.pkg",
+      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
   name "Microsoft 365 Copilot"
   desc "AI-first productivity assistant for Microsoft 365"
   homepage "https://www.microsoft.com/en-us/microsoft-365-copilot/download-copilot-app"

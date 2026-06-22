@@ -1,9 +1,9 @@
 cask "darktable" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.4.1"
-  sha256 arm:   "23ce74a4d7cbab30dc5e55043f97480b2a4eb1d96d602d529c9f9a428b99d041",
-         intel: "d615f7e78af9fb23d7c8017a5d35be50ea13f1ccf89491ef4b927e23eff0f43a"
+  version "5.6.0"
+  sha256 arm:   "49aec447e891ab481e436b4c0231fc3c8d0001aad220762ae8e765d3bda5d102",
+         intel: "24c83655af0d81c2f8cb78b97531a03bb6a650349b7fd49c1679080db675cbcb"
 
   on_arm do
     depends_on macos: :sonoma

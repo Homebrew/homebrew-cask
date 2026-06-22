@@ -1,5 +1,5 @@
 cask "updf" do
-  version "2.5.3"
+  version "2.5.4"
   sha256 :no_check
 
   url "https://download.updf.com/updf/basic/mac/apple/updf-mac-full.dmg"

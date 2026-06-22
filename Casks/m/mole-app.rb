@@ -1,5 +1,5 @@
 cask "mole-app" do
-  version "1.6.2"
+  version "1.7.1"
   sha256 :no_check
 
   url "https://mole.fit/Mole.dmg"
@@ -12,6 +12,7 @@ cask "mole-app" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "Mole.app"

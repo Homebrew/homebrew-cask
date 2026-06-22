@@ -1,12 +1,13 @@
 cask "cc-switch" do
-  version "3.16.2"
-  sha256 "004a28e79f60f34840e32ed54c394c1ffdb55f25e90dfdf8cc5c3435fb987d8b"
+  version "3.16.3"
+  sha256 "1954b0772266d88c820d78dcd50ae7149916f969a44692e65cdfbda7e76e86d7"
 
   url "https://github.com/farion1231/cc-switch/releases/download/v#{version}/CC-Switch-v#{version}-macOS.dmg"
   name "CC Switch"
   desc "Configuration manager for AI coding agents"
   homepage "https://github.com/farion1231/cc-switch"
 
+  auto_updates true
   depends_on macos: :monterey
 
   app "CC Switch.app"

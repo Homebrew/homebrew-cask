@@ -1,9 +1,9 @@
 cask "baidunetdisk" do
-  arch arm: "_arm64"
+  arch arm: "_arm64", intel: "_x64"
 
-  version "8.3.9"
-  sha256 arm:   "362987e7171046615c5a44f1da1335a90a1673c12055176687eef16c346e743f",
-         intel: "2a44ddf6fb38183d8e4f28826b41298169c9db8ae68a571cafdded57218834f1"
+  version "8.5.6"
+  sha256 arm:   "c9e77b07dc7ed8c2d9fa893094b871abf0e26184e65f7be3b7b689348917c993",
+         intel: "f956ac452a839ec66108b5348532b508e4f5873feb45502f1fdaa1d6e9af89b4"
 
   url "https://pkg-ant.baidu.com/issue/netdisk/MACguanjia/#{version}/BaiduNetdisk_mac_#{version}#{arch}.dmg"
   name "Baidu NetDisk"

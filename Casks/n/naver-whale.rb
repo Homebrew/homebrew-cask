@@ -1,5 +1,5 @@
 cask "naver-whale" do
-  version "4.37.378.12"
+  version "4.38.386.12"
   sha256 :no_check
 
   url "https://installer-whale.pstatic.net/downloads/installers/NaverWhale.dmg",

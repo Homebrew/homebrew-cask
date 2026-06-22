@@ -1,11 +1,18 @@
 cask "mactools" do
-  version "1.0.17"
-  sha256 "304459e0280023b3ec671e5142e5aa9a5d52200b5079c38b69ea890a21faff67"
+  version "1.0.21"
+  sha256 "27fc44361b66d06d671cba6c13be9d8ef2c59e024b238b77481e15b05c4d29b5"
 
   url "https://github.com/ggbond268/MacTools/releases/download/v#{version}/MacTools.dmg"
   name "MacTools"
   desc "Menu bar toolbox"
   homepage "https://github.com/ggbond268/MacTools"
+
+  # The upstream repository also contains tags like `plugins-1.2.3`, so we
+  # only match the main version tags that correspond to app releases.
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   auto_updates true
   depends_on macos: :sonoma

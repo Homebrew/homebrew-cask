@@ -1,6 +1,6 @@
 cask "mailmaster" do
-  version "5.5.1,1460"
-  sha256 :no_check
+  version "5.5.6.1476"
+  sha256 "95b8d8aa22eba8c1dbb497eb92cc16975b1af071e62fef4f94259e11bcf21791"
 
   url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
       verified:   "res.126.net/dl/client/macmail/dashi/",
@@ -11,8 +11,26 @@ cask "mailmaster" do
   homepage "https://dashi.163.com/"
 
   livecheck do
-    url "https://u.163.com/macds-beta"
-    strategy :extract_plist
+    url "https://appconf.mail.163.com/mailmaster/api/app/update.do",
+        post_json: {
+          app_ver:    version.split(".").then do |p|
+                        (p[0].to_i * 10_000_000_000) +
+                          (p[1].to_i * 10_000_000) +
+                          (p[2].to_i * 10_000) +
+                          p[3].to_i
+                      end,
+          appid:      11,
+          deviceInfo: {
+            appId:      "11",
+            appVersion: version.to_s,
+            deviceId:   Array.new(32) { rand(16).to_s(16) }.join,
+            osType:     "mac",
+            osVersion:  "999",
+          },
+        }
+    strategy :json do |json|
+      json.dig("data", "original", "ver")
+    end
   end
 
   auto_updates true

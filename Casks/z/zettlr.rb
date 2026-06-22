@@ -8,11 +8,11 @@ cask "zettlr" do
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
 
-  version "4.5.0"
-  sha256 arm:          "fd1e964378f4130703754ceee48ad99db57a5917e7d961af0e83ddf52d392a4b",
-         intel:        "4ab3fde2ab4cc103797c2f74f035738c3f735e09bd1d5c16529bb5db64790ceb",
-         x86_64_linux: "244d413861cecb3707cfbcc5c4346d5367daa827da5ea08fb3f3bc2b6276d239",
-         arm64_linux:  "9a1c0967baa46828930ccbbc88668d1b0db07e6edf778800ed4da073c00054f8"
+  version "4.6.0"
+  sha256 arm:          "c0ff76d9e869eee312d7c131764fe73322344f85127ed2e5fada1076cb88cf32",
+         intel:        "051a6d34f3df17b7ec02d4b5bc3ea341d6885ee643646657518853f2ed18f730",
+         x86_64_linux: "0c7eea7263758794e48785cb0660af1d97f531447cb5ac31733864832b6f14e0",
+         arm64_linux:  "45e558ad0b1da0fb2f223258a8a22c94669625afa081773b8094d72c1a83a64b"
 
   url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}#{url_end}",
       verified: "github.com/Zettlr/Zettlr/"

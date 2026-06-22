@@ -1,6 +1,6 @@
 cask "superkey" do
-  version "1.62"
-  sha256 "d6f60b81efbe4ddd4dccf41a0d0d9729c7d53c28f9e4fd14822f140068862705"
+  version "1.65"
+  sha256 "0ac80d99b8561eb4d4d2df98f864129e0a20eaec0306b6c8e8491bbc5aeddc1c"
 
   url "https://superkey.app/downloads/Superkey#{version}.dmg"
   name "Superkey"

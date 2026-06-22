@@ -1,9 +1,9 @@
 cask "paseo" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.92"
-  sha256 arm:   "8a2e94770312e309d8082f40d3443288bc3e78afeb2b61bd7a782de2a3bbd6da",
-         intel: "2ff3c76e69d03f43c7406b138af949df9794b5437619dd9dcb9713f146f73338"
+  version "0.1.98"
+  sha256 arm:   "23b23798d4f85c403813dd63a359890a650de86205e52253ff18b433e864a90d",
+         intel: "f628337329c65fbd80c17d6af44c761c168973fe52b0f44d3ae65acb6605c4d6"
 
   url "https://github.com/getpaseo/paseo/releases/download/v#{version}/Paseo-#{version}-#{arch}.dmg",
       verified: "github.com/getpaseo/paseo/"
@@ -21,12 +21,23 @@ cask "paseo" do
   app "Paseo.app"
   binary "#{appdir}/Paseo.app/Contents/Resources/bin/paseo"
 
+  uninstall launchctl: "sh.paseo.desktop.ShipIt",
+            quit:      "sh.paseo.desktop",
+            script:    {
+              executable: "#{appdir}/Paseo.app/Contents/Resources/bin/paseo",
+              args:       ["daemon", "stop", "--force"],
+            }
+
   zap trash: [
-    "~/Library/Application Support/dev.paseo.desktop",
-    "~/Library/Caches/dev.paseo.desktop",
-    "~/Library/Logs/dev.paseo.desktop",
-    "~/Library/Preferences/dev.paseo.desktop.plist",
-    "~/Library/Saved Application State/dev.paseo.desktop.savedState",
-    "~/Library/WebKit/dev.paseo.desktop",
+    "~/.paseo",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/sh.paseo.desktop.sfl*",
+    "~/Library/Application Support/Paseo",
+    "~/Library/Caches/@getpaseodesktop-updater",
+    "~/Library/Caches/sh.paseo.desktop",
+    "~/Library/Caches/sh.paseo.desktop.ShipIt",
+    "~/Library/HTTPStorages/sh.paseo.desktop",
+    "~/Library/Logs/Paseo",
+    "~/Library/Preferences/ByHost/sh.paseo.desktop.ShipIt.*.plist",
+    "~/Library/Preferences/sh.paseo.desktop.plist",
   ]
 end

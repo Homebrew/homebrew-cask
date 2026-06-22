@@ -1,9 +1,8 @@
 cask "factory" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.101.0"
-  sha256 arm:   "af9707f27302c6031c14c4f3f52fb2515e1d4f755e6d74f12e33d274d6b53bfd",
-         intel: "4256277b08bd10e4e8b4c61e04c18274edcf1b5477aaaa0848c42461ec663b4e"
+  version "0.110.0"
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://downloads.factory.ai/factory-desktop/releases/#{version}/darwin/#{arch}/Factory-#{version}-#{arch}.dmg"
   name "Factory"

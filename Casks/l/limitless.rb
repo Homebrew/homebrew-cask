@@ -14,6 +14,8 @@ cask "limitless" do
     end
   end
 
+  disable! date: "2026-06-21", because: :discontinued
+
   auto_updates true
   depends_on macos: :ventura
 

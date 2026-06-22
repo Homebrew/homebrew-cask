@@ -1,9 +1,9 @@
 cask "librecad" do
   arch arm: "-arm64"
 
-  version "2.2.1.4,2.2.1.3-12-gd1ca469c9"
-  sha256 arm:   "32e50dd71461745d2563224eeab9df0a0a26c5cf99e3b8498937c2e41ce2ec56",
-         intel: "74e4f8c000f55eebe4da0fc10b1a7b6c868ce68918acddc8b8b5ab3ee8486f05"
+  version "2.2.1.5"
+  sha256 arm:   "0c6ce2e25a027ff3e921b74101d1c4e167687d2386fe0798f2f4c37d12deb436",
+         intel: "34369e791af12e414d6e08c0954f679990706215a07b569a8eb7b9a6fa115f38"
 
   url "https://github.com/LibreCAD/LibreCAD/releases/download/v#{version.csv.first}/LibreCAD-v#{version.csv.second || version.csv.first}#{arch}.dmg",
       verified: "github.com/LibreCAD/LibreCAD/"
@@ -13,7 +13,7 @@ cask "librecad" do
 
   livecheck do
     url :url
-    regex(/^LibreCAD[._-]v?(\d+(?:[.-]\d+)+(?:-\w+)?)#{arch}\.dmg$/i)
+    regex(/^LibreCAD[._-]v?(\d+(?:[.-]\d+)+(?:-\d+-g\h+)?)#{arch}\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"] || release["prerelease"]

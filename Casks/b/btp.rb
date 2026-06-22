@@ -25,6 +25,10 @@ cask "btp" do
 
   # No zap stanza required
 
+  generate_completions_from_executable "#{os}-#{arch}/btp",
+                                       shell_parameter_format: "--autocomplete=init:",
+                                       shells:                 [:bash, :zsh, :pwsh]
+
   caveats do
     license "https://tools.hana.ondemand.com/developer-license-3_2.txt"
   end

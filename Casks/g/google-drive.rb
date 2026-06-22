@@ -1,5 +1,5 @@
 cask "google-drive" do
-  version "126.0.5"
+  version "127.0.1"
   sha256 :no_check
 
   # "5-percent" is included in the url to ensure that `brew upgrade` does not update to an older version as the
@@ -17,7 +17,7 @@ cask "google-drive" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   pkg "GoogleDrive.pkg"
 

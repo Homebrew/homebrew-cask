@@ -18,9 +18,11 @@ cask "jiba" do
   app "JiBA.app"
 
   zap trash: [
+    "~/.jibam",
     "~/Library/Application Support/CrashReporter/JiBA_*.plist",
     "~/Library/Application Support/CrashReporter/jiba_duplicate_guard_harness_*.plist",
     "~/Library/Application Support/JiBA",
+    "~/Library/Caches/com.apple.helpd/Generated/com.hee.jiba.help*",
     "~/Library/Caches/ink.hee.jibapplemusic",
     "~/Library/HTTPStorages/ink.hee.jibapplemusic",
     "~/Library/Preferences/ink.hee.jibapplemusic.plist",

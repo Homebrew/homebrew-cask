@@ -1,9 +1,9 @@
 cask "v2rayu" do
   arch arm: "arm64", intel: "64"
 
-  version "4.2.8"
-  sha256 arm:   "6b747bd3a02008e14495ed349c4a52d7a2013219c2ab22265c8c97ed8172933e",
-         intel: "4997366a5c230e405268b074d7607e159f588a2f71b9078008c4f53f50a9c51f"
+  version "5.1.0"
+  sha256 arm:   "af31f080a97a2d4ec2aa22338a59e7f2c28600d9b62cff64c954ad1676dc6b45",
+         intel: "6bc790d1b1dcbb4091d6f96c230784670dab34a9583d516c689662702b6d8029"
 
   url "https://github.com/yanue/V2rayU/releases/download/v#{version}/V2rayU-#{arch}.dmg"
   name "V2rayU"
@@ -20,7 +20,7 @@ cask "v2rayu" do
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :sonoma
 
   app "V2rayU.app"
 

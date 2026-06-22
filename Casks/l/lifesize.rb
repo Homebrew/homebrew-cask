@@ -1,6 +1,6 @@
 cask "lifesize" do
-  version "3.0.18"
-  sha256 "93967bf314406a4408f3e8c808cbd7d0676530107360d9f460643aeb471e4e33"
+  version "3.0.20"
+  sha256 "c2df41bb7d5179c46e308ccb40b3cb2b84effccb4722486f647b0ca78ec8635a"
 
   url "https://download.lifesizecloud.com/Lifesize-#{version}-mac.zip",
       verified: "download.lifesizecloud.com/"

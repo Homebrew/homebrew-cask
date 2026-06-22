@@ -1,9 +1,9 @@
 cask "alma" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.810"
-  sha256 arm:   "c3f960504dd543af40cc1d0816d76d2491b9e714e83958a0f58decb6c5da9839",
-         intel: "18531a9dc605933c30d4329c511ccff693982bf8fdd65e08c6f7739449e8d781"
+  version "0.0.825"
+  sha256 arm:   "d0743d498d2a25c72c45aa31c318b08439e650ea17e2febf6ac428e71d8c8e72",
+         intel: "3c18cd7f4a26edab3252bf8211d49741290417fccab856533d573998fd4ebe0f"
 
   url "https://updates.alma.now/alma-#{version}-mac-#{arch}.dmg"
   name "Alma"
@@ -24,6 +24,7 @@ cask "alma" do
   uninstall quit: "com.yetone.alma"
 
   zap trash: [
+    "~/.alma",
     "~/.cache/alma",
     "~/.config/alma",
     "~/Library/Application Support/alma",

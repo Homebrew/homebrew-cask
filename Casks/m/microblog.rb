@@ -1,6 +1,6 @@
 cask "microblog" do
-  version "3.9.2"
-  sha256 "a4dbb1f93e050c8fb75dd14fc4279e27e2adce7c844d7e62267d6d3568397a18"
+  version "4.0.2"
+  sha256 "24acb43ad182ed95edef3a487dccb29197b75d8d7e61106bc6ea95da28b1ca57"
 
   url "https://s3.amazonaws.com/micro.blog/mac/Micro.blog_#{version}.zip",
       verified: "s3.amazonaws.com/micro.blog/mac/"
@@ -14,7 +14,7 @@ cask "microblog" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :sonoma
 
   app "Micro.blog.app"
 

@@ -1,6 +1,6 @@
 cask "thaw@beta" do
-  version "2.0.0-beta.15"
-  sha256 "7105ec93b7d63c57ae49ba8fd559d4c6d8cba0321a1ae39776ef666ccc0c0ab6"
+  version "2.0.0-rc.1"
+  sha256 "3be7a39bd12586f4b627c4bd317f7053bb7f68eb889a3a2c59b07e6cc8dd698f"
 
   url "https://github.com/stonerl/Thaw/releases/download/#{version}/Thaw_#{version}.zip"
   name "Thaw"
@@ -16,6 +16,8 @@ cask "thaw@beta" do
   depends_on macos: :tahoe
 
   app "Thaw.app"
+
+  uninstall quit: ["com.stonerl.Thaw", "com.stonerl.Thaw.MenuBarItemService"]
 
   zap trash: [
     "~/Library/Caches/com.stonerl.Thaw",

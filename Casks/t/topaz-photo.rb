@@ -2,9 +2,9 @@ cask "topaz-photo" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_arch = on_arch_conditional intel: "/intel"
 
-  version "1.6.0"
-  sha256 arm:   "0d5584877a5a4e374500c95b5ab2854682a247de03af8f058ece8cfba7a62932",
-         intel: "f3a53bde69baf7acc8e33e2960cbedecea7378a80affe3a43e491df4cff5244e"
+  version "1.6.1"
+  sha256 arm:   "ff150d67343f7a4ad979098f98c6364743d222de8bfcc170da853ac8c0138994",
+         intel: "84c1ac4635e4f4d855bf326e07cdc703b2cc4349383d6cc33507979228c4b64a"
 
   url "https://downloads.topazlabs.com/deploy/TopazPhoto/#{version}/TopazPhoto-#{version}-#{arch}.pkg"
   name "Topaz Photo"
@@ -24,6 +24,7 @@ cask "topaz-photo" do
 
   uninstall pkgutil: "com.topazlabs.TopazPhoto",
             delete:  [
+              "/Applications/Topaz Photo.app",
               "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhoto.plugin",
               "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhotoApply.plugin",
               "/Library/Application Support/Adobe/Plug-Ins/CC/TopazPhotoAutomate.plugin",

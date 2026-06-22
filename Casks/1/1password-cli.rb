@@ -2,11 +2,11 @@ cask "1password-cli" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "2.34.0"
-  sha256 arm:          "a9c93d45ad62665c6350ed8958f281a94034a79c94e88077e530f6d129699a5d",
-         x86_64:       "d2e4cbdf8b5d2d421a411e5251c6956f3ffce90adde82b2a429435645c9bc91d",
-         x86_64_linux: "198b05dcf9a0972778ce5a4e262c459979b0c837257b5da65e2fba6187734226",
-         arm64_linux:  "7b5c361a23e738a3969cf676960f4843af4aa9aa68dbec23d18a9134da428ba3"
+  version "2.34.1"
+  sha256 arm:          "101b54dd194fbb6c63276b84f5eee1968be3558e2212519d9f5e26ab24a4ad05",
+         x86_64:       "ca4e6b00eedc80a9a134297eb2390ca6039d2c9040ac57a80dbb8a1127823a27",
+         x86_64_linux: "b13ed106335419ea0fb0ebd7ebbb3b48cf26a2f214eb4b2fd8d950548e7980ed",
+         arm64_linux:  "fd730a28ffa68376ac62b563d30e20e30ef59d3e2f142d9c6a959cfac5b50f60"
 
   url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_#{os}_#{arch}_v#{version}.zip",
       verified: "cache.agilebits.com/dist/1P/op2/pkg/"
@@ -27,6 +27,8 @@ cask "1password-cli" do
   ]
 
   binary "op"
+
+  generate_completions_from_executable "op", "completion"
 
   zap trash: "~/.config/op"
 end

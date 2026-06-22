@@ -1,5 +1,5 @@
 cask "notebooks" do
-  version "4.0"
+  version "4.1"
   sha256 :no_check
 
   url "https://www.notebooksapp.com/Download/macOS/v#{version.major}/Notebooks.dmg"

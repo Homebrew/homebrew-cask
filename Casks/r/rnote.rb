@@ -1,18 +1,9 @@
 cask "rnote" do
   arch arm: "arm64", intel: "x86_64"
 
-  on_arm do
-    version "0.14.0+227"
-    sha256 "63f3178f1fba2b0d2d2ac131766e3f581df4550a1d49dfa3d24e8cc909e44803"
-
-    depends_on macos: :ventura
-  end
-  on_intel do
-    version "0.13.1+215"
-    sha256 "c985ea4757b9ac03cd7485ac824d3488a31b52b98fdb221a1d5ee062d58d7af8"
-
-    depends_on macos: :big_sur
-  end
+  version "0.14.2+239"
+  sha256 arm:   "6db9e55b9a2c7ca19f4f02f779f930926da289ead4f6086915dc48e70159410b",
+         intel: "fe321bdaa4c065c2ea3d757210316e6c995fa132ada484ce65ebe12586b4a902"
 
   url "https://gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/#{version}/Rnote-#{version}_#{arch}.dmg",
       verified: "gitlab.com/api/v4/projects/44053427/packages/generic/rnote_macos/"
@@ -34,7 +25,7 @@ cask "rnote" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Rnote.app"
 

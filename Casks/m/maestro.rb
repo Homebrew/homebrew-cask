@@ -1,9 +1,9 @@
 cask "maestro" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.15.4,0.15.4-RC"
-  sha256 arm:   "92861629e5a29ae5dfa0d4828eb51ff9dc883c8a7f9ac8d677ee18a410d8fbc6",
-         intel: "d31ccd3d5ebbb788a6577c839094ce83c018f037bca130504fb7ce93fee1f4f1"
+  version "0.17.1"
+  sha256 arm:   "ad713b65e7ede46d51df13a9a77bb48a5ec22d87f95c2f42928e38fc772b884e",
+         intel: "260c729bd95681e37c19ac5093f1b32bed1c9b9b09bcde1bd0cd72d6bfaafc9f"
 
   url "https://github.com/pedramamini/Maestro/releases/download/v#{version.csv.second || version.csv.first}/Maestro-#{version.csv.second || version.csv.first}-#{arch}-mac.dmg",
       verified: "github.com/pedramamini/Maestro/"
@@ -24,7 +24,7 @@ cask "maestro" do
   end
 
   auto_updates true
-  depends_on macos: :catalina
+  depends_on macos: :monterey
 
   app "Maestro.app"
 

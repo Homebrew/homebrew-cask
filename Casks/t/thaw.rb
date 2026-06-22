@@ -12,6 +12,8 @@ cask "thaw" do
 
   app "Thaw.app"
 
+  uninstall quit: ["com.stonerl.Thaw", "com.stonerl.Thaw.MenuBarItemService"]
+
   zap trash: [
     "~/Library/Caches/com.stonerl.Thaw",
     "~/Library/HTTPStorages/com.stonerl.Thaw",

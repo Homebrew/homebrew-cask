@@ -1,6 +1,6 @@
 cask "pretzel" do
   version "2.13.2"
-  sha256 "f35963bb89adecd05fc2e72f7bc5532f518877b695895567a3df72a6491003a6"
+  sha256 "6c35608d13bd890926f08e0e83f08abb8b703e9e2b521401b3b24278c89fa23e"
 
   url "https://download.pretzel.rocks/Pretzel-#{version}-universal-mac.zip"
   name "Pretzel"
@@ -11,8 +11,6 @@ cask "pretzel" do
     url "https://download.pretzel.rocks/latest-mac.yml"
     strategy :electron_builder
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: :big_sur
 

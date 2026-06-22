@@ -1,6 +1,6 @@
 cask "makemkv" do
-  version "1.18.3"
-  sha256 "2ba5d9a9e281016f58f54de201c2a11da0e1f5b12d1bc854537473568b7ded5b"
+  version "1.18.4"
+  sha256 "b77de54fffe4bd8dfdb498bed15a44cf4ca2002c3f86e9184faf8407b2486166"
 
   url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   name "MakeMKV"

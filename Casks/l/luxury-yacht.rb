@@ -1,9 +1,9 @@
 cask "luxury-yacht" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.8.8"
-  sha256 arm:   "a8635419375f9e2470c47b60268dc201173ee1072f2dc5f0a15c01757eafe170",
-         intel: "9563d2bf920947d660b03bf3c3b85e66f98034d471f2562dd7c132e9b63cd70b"
+  version "1.9.3"
+  sha256 arm:   "c470521cf4cc887455bb0258ce1bc0517e9471c684dea6cb4916d17ce7c7d218",
+         intel: "53256a79bdca207200ec73806f5f68d0818ef2279806d5e84cad1c6361a05a72"
 
   url "https://github.com/luxury-yacht/app/releases/download/v#{version}/luxury-yacht-v#{version}-macos-#{arch}.dmg",
       verified: "github.com/luxury-yacht/app/"

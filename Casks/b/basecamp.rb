@@ -1,29 +1,25 @@
 cask "basecamp" do
-  arch arm: "_arm64"
+  arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "_arm64"
 
-  version "3,2.5.2"
-  sha256 arm:   "434e37465b4959f468f797fd9eaf3b493e8556763bfc7fb3a2c0ce15eed7b5cb",
-         intel: "35eeb1fde93a8c338436321f27787b5fe948c30ea51d376f850b32721067fde5"
+  version "5.0.8"
+  sha256 arm:   "daa9ae879dfe01bb5fdc272f6aeed4ba2e124604fefbb13de08b719eb0ec1546",
+         intel: "d9611e6af466d015b6485b8d63c278f61bf880b288c9b6660aa8ce1b69874778"
 
-  url "https://basecamp.com/desktop/mac#{arch}/basecamp#{version.major}-#{version.csv.second}.zip",
-      verified: "basecamp.com/desktop/"
+  url "https://basecamp.com/desktop/Basecamp-#{version}-mac-#{arch}.zip"
   name "Basecamp"
   desc "All-In-One Toolkit for Working Remotely"
-  homepage "https://3.basecamp-help.com/"
+  homepage "https://basecamp.com/"
 
   livecheck do
-    url "https://basecamp.com/desktop/mac#{arch}/updates.json"
-    regex(/basecamp(\d*)[_-]v?(\d+(?:\.\d+)+)/i)
-    strategy :json do |json, regex|
-      match = json["url"]&.match(regex)
-      next if match.blank?
-
-      (match.length > 2) ? "#{match[1]},#{match[2]}" : match[1]
+    url "https://basecamp.com/desktop/mac#{livecheck_arch}/updates.json"
+    strategy :json do |json|
+      json["version"]
     end
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Basecamp.app"
 

@@ -8,23 +8,37 @@ cask "agentsview" do
     arch arm: "aarch64", intel: "amd64"
   end
 
-  version "0.32.1"
-  sha256 arm:          "711fa89bee1a2fe2db90b24c7b461694cc9e1838931a271d754c35bed19e5dff",
-         x86_64:       "0ed4640135235bde419052058135db08268b4e105be736db2fe9e954716ddf77",
-         x86_64_linux: "30126e1db09111f491bf2675d27ac4602902f2cbfd523e78c94fc277975053ab",
-         arm64_linux:  "46d7fdc5116f63326be35fede359187fe8afdd546dd98c03c0d224219f118007"
+  version "0.34.1"
+  sha256 arm:          "ab5e5fe76ecc2b3e19efd3c0b12fa87c3a96e72f609bf995a11f49d4996b59fc",
+         x86_64:       "eff26403a096995d79dfdda51994769c4a2a1de9176c5a3f5f02d009eddec73e",
+         x86_64_linux: "936f7d1f6c1813d6df0e5285714b0d6219ffb5d42bb48a3f79341899c53a782f",
+         arm64_linux:  "41c959b7b5853ec07323afcd5f8888834448b0fb559a98e865d48d9e9a4f52b0"
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
 
-  url "https://github.com/wesm/agentsview/releases/download/v#{version}/AgentsView_#{version}_#{arch}#{url_end}",
-      verified: "github.com/wesm/agentsview/"
+  url "https://github.com/kenn-io/agentsview/releases/download/v#{version}/AgentsView_#{version}_#{arch}#{url_end}",
+      verified: "github.com/kenn-io/agentsview/"
   name "AgentsView"
   desc "Browse, search and analyse your past AI coding sessions"
   homepage "https://www.agentsview.io/"
 
+  # Not every release on GitHub provides assets for the app, so we have to find
+  # the newest one with the files the cask uses.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(%r{/AgentsView[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}#{url_end}}i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["browser_download_url"]&.match(regex)
+          next unless match
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   on_macos do

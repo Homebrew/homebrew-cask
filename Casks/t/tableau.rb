@@ -1,9 +1,9 @@
 cask "tableau" do
   arch arm: "-arm64"
 
-  version "2026.1.2"
-  sha256 arm:   "3ec517f935adef87325b4adff8a0c6510550fbdb7eabcba96cf63fbd27e91793",
-         intel: "e50065d70ff07519f4d602b8dc4202c654883ff9c150b48367688ee683111464"
+  version "2026.2.0"
+  sha256 arm:   "e2f60f6853461bd0a11098cb9df479a07df9c2bf263bc7a4a3c09d8b5d145571",
+         intel: "969f64cd12dcfe3048a12468395a3737c50a360fa4b9bb70416d7a4042c05c51"
 
   on_arm do
     depends_on macos: :ventura
@@ -38,7 +38,7 @@ cask "tableau" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   pkg "Tableau Desktop.pkg"
 

@@ -1,5 +1,5 @@
 cask "yoink" do
-  version "3.7.3"
+  version "3.7.5"
   sha256 :no_check
 
   url "https://downloads.eternalstorms.at/Yoink.zip"

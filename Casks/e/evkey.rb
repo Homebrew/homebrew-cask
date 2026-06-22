@@ -1,5 +1,5 @@
 cask "evkey" do
-  version "3.3.9"
+  version "3.3.10"
   sha256 :no_check
 
   url "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKeyMac.zip",

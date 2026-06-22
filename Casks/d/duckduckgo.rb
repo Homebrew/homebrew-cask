@@ -1,6 +1,6 @@
 cask "duckduckgo" do
-  version "1.193.0,728"
-  sha256 "6ea66005051cb86c1d9cae80b45e18bb3c9494de15fc3044bfd6a2063fb12b8f"
+  version "1.194.0,737"
+  sha256 "54f45d1ba694b8c23c50d6b63ba080db53b852ffc557bd8ea35bf4eed5905b46"
 
   url "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-#{version.csv.first}.#{version.csv.second}.dmg"
   name "DuckDuckGo"
@@ -15,7 +15,7 @@ cask "duckduckgo" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "DuckDuckGo.app"
 

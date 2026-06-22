@@ -1,6 +1,6 @@
 cask "kubeterm" do
-  version "2.4.0"
-  sha256 "9b2dbc534c1a2b6f643302a51a6f7e942bf8d1ad4ad748d346c350a3606a747a"
+  version "2.5.0"
+  sha256 "26265b6aa16df1618daa10a6985f72da202302ba1d727ebd17852744ce4165bd"
 
   url "https://github.com/kbterm/kubeterm/releases/download/v#{version}/Kubeterm-v#{version}-universal.dmg",
       verified: "github.com/kbterm/kubeterm/"

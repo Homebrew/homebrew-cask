@@ -1,6 +1,6 @@
 cask "electorrent" do
-  version "2.10.1"
-  sha256 "4918a700ef1aef6b05933ed9d706974a96ff91f90f6bb06670c2caf3b1b1b8b5"
+  version "2.12.1"
+  sha256 "00e83eaaff8de95580946120f6039b2daff489953d509a8d944a243e238f942e"
 
   url "https://github.com/tympanix/Electorrent/releases/download/v#{version}/Electorrent-#{version}-universal.dmg"
   name "Electorrent"

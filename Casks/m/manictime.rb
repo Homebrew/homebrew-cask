@@ -1,9 +1,9 @@
 cask "manictime" do
   arch arm: "arm64", intel: "x64"
 
-  version "2026.1.1.0"
-  sha256 arm:   "b79eb7a167b9988ca5a3ec7dac5003f91032b969e9523efceb27114822d05369",
-         intel: "ffc6163bfa2be65809f0e3810cfd96c2e1cf2e9bd096100e61e64e1b8e6921c8"
+  version "2026.2.0.4"
+  sha256 arm:   "f816da9f54fc18f6ccdba6af1f48af975cba69db75350b9208c53b0510868dcf",
+         intel: "4911e504959192a7804ab722d2d522b65df3821c47b5df083738e9b07c5395fd"
 
   url "https://cdn.manictime.com/setup/mac/v#{version.dots_to_underscores}/manictime-#{version}-osx-#{arch}.dmg"
   name "ManicTime"

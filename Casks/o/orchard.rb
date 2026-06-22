@@ -1,6 +1,6 @@
 cask "orchard" do
-  version "1.12.1"
-  sha256 "456aff4a805eb4fd3c1750d81449a13888eed3964e812ccd5d8c8f88931126f1"
+  version "1.12.2"
+  sha256 "22070651f9f1fbfcd83c986db9cd9c5357ea5d672153d48c9fdd94ad5a4e171a"
 
   url "https://github.com/andrew-waters/orchard/releases/download/v#{version}/Orchard-#{version}.dmg"
   name "Orchard"

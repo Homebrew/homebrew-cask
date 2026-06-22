@@ -1,6 +1,6 @@
 cask "marginnote" do
-  version "4.4.2"
-  sha256 "5465e443962b98bd304240358d21ecb20cdc47b9d6be1e5e45dbd79b164fb6ad"
+  version "4.4.3"
+  sha256 "1b85d7ecda4e63128f17d35640b00c3aff2cc6b69dfc4d0155a95b826b9bd1b9"
 
   url "https://dist.marginnote.cn/MarginNote#{version}.dmg",
       verified: "marginnote.cn/"

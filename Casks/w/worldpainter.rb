@@ -1,6 +1,6 @@
 cask "worldpainter" do
-  version "2.26.1"
-  sha256 "889443673a92c124c3b1e67e67b1c9d8f29ea34f1d70337eddd69485c36fee37"
+  version "2.26.3"
+  sha256 "32ff4c294b8a61850de3f02b362e89df250261f5c94c66f1ba410092cfab2d30"
 
   url "https://www.worldpainter.net/files/worldpainter_#{version}.tgz"
   name "WorldPainter"

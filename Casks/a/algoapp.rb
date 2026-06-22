@@ -1,19 +1,19 @@
 cask "algoapp" do
-  version "11.2.2"
-  sha256 "6500ce0268d010774248cc15dabd3e1ff326e953dc6458bf476a2ad5d894c174"
+  version "13.1.2"
+  sha256 :no_check
 
-  url "https://updates.ankiapp.com/AlgoApp-#{version}-universal.dmg"
+  url "https://static.algoapp.ai/AlgoApp-MacOS.zip"
   name "AlgoApp"
   desc "Spaced Repetition Flashcard App"
-  homepage "https://www.ankiapp.com/"
+  homepage "https://www.algoapp.ai/"
 
   livecheck do
-    url "https://updates.ankiapp.com/latest-mac.yml"
-    strategy :electron_builder
+    # The app checks https://updates.algoapp.ai/latest-mac.yml but it currently returns 404.
+    url :url
+    strategy :extract_plist
   end
 
-  auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "AlgoApp.app"
 
