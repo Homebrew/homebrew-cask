@@ -1,17 +1,12 @@
 cask "clarify" do
-  version "1.5.8"
-  sha256 "89b680efce4b33e8504b593d4757fd16526fe040eccb2d3e97c59fb3c8ddc73c"
+  version "1.6.0"
+  sha256 "57049bad71a873493ef4fac1b176c47f045608dc5f6a1ba25d3d47f40ba7ed99"
 
   url "https://github.com/clarifyhq/desktop-app-releases/releases/download/v#{version}/Clarify.dmg",
       verified: "github.com/clarifyhq/desktop-app-releases/"
   name "Clarify"
-  desc "Autonomous CRM with agents to source leads, send campaigns, and manage pipeline"
+  desc "Autonomous CRM"
   homepage "https://clarify.ai/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   auto_updates true
   depends_on arch: :arm64
