@@ -12,8 +12,8 @@ cask "dnsmonitor" do
 
   app "DNSMonitor.app"
 
-  postflight do
-    File.write "#{staged_path}/unload.sh", <<~SH
+  postflight_steps do
+    write "unload.sh", <<~SH, overwrite: true
       #!/bin/sh
       systemextensionsctl list | grep -q "com.objective-see.dnsmonitor.extension.*activated" && \
         /Applications/DNSMonitor.app/Contents/MacOS/DNSMonitor -unload
