@@ -1,6 +1,6 @@
 cask "mater" do
-  version "3.0.0"
-  sha256 "7aaa096ab307da5123641f9238083c413de3929625cf1ecd1cd080814ce855ff"
+  version "3.0.1"
+  sha256 "a535092df0f30d1dc677c55a8892e139384db447ada8c12b1f00008efd781300"
 
   url "https://github.com/jasonlong/mater/releases/download/v#{version}/Mater-v#{version}-macos.zip"
   name "Mater"
