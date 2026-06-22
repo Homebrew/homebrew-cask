@@ -1,6 +1,5 @@
 cask "fathom" do
   arch arm: "arm64", intel: "x64"
-  on_arch_conditional arm: "_arm64"
 
   version "3.2.0"
   sha256 arm:   "07c6a4bddaa3b39e73d3bba735b13ca0769dace502efea63ed173d25ea3ad3ce",
