@@ -20,8 +20,4 @@ cask "foxmail" do
     "~/Library/Application Scripts/com.tencent.Foxmail*",
     "~/Library/Containers/com.tencent.Foxmail*",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
