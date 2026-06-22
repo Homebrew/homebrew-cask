@@ -1,6 +1,6 @@
 cask "fluidvoice" do
-  version "1.5.15"
-  sha256 "137fb8f39f6ad8d786492d9db733068c3f160601a2d229af385c4d4822b6b515"
+  version "1.6.0"
+  sha256 "3375e57e871cbc49663eaa3dfa49e13d2432fee4e86c3427603b0993729e8100"
 
   url "https://github.com/altic-dev/FluidVoice/releases/download/v#{version}/Fluid-oss-#{version}.dmg",
       verified: "github.com/altic-dev/FluidVoice/"
