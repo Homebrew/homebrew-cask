@@ -10,5 +10,6 @@ cask "cadoodle" do
 
   depends_on :macos
 
-  app "CaDoodle.app"
+  app "CaDoodle.app"  
+  zap trash: []
 end
