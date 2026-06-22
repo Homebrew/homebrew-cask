@@ -10,7 +10,7 @@ cask "bettercmdtab" do
 
   livecheck do
     url :url
-    regex(/BetterCmdTab-(\d+(?:\.\d+)+)-(\d+)\.dmg$/i)
+    regex(/BetterCmdTab[._-]v?(\d+(?:\.\d+)+)-(\d+)\.dmg$/i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["browser_download_url"]&.match(regex)
