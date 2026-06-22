@@ -1,9 +1,9 @@
 cask "screaming-frog-seo-spider" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "24.1"
-  sha256 arm:   "fa6a520b0f3d4b7fa7650990c886eeb37e2bcb3c132d2c3a64879b01e1f0ebbd",
-         intel: "741b49e399748f742543878880c241655af65821afb7c2ec12ecfeca64abaee7"
+  version "24.2"
+  sha256 arm:   "16d081749112d05c2a3c8b12bc24cdeef451ba0525c3f15adfd807089ff97bea",
+         intel: "3da4294d9f88a22ce6b081aa8c7045740a1b31f1b0558082d5db3778a049ff02"
 
   url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}-#{arch}.dmg"
   name "Screaming Frog SEO Spider"
