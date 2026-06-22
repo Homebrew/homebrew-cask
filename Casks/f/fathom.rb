@@ -1,10 +1,10 @@
 cask "fathom" do
   arch arm: "arm64", intel: "x64"
-  livecheck_arch = on_arch_conditional arm: "_arm64"
+  on_arch_conditional arm: "_arm64"
 
-  version "3.0.1"
-  sha256 arm:   "f07612b8b245b963d7a4fc1e9b9cb0227e2407eac58e9b32f811b13d63484935",
-         intel: "655c6ff1df507143810532ee72193ea52d00d93f3f34a1c1a561072c77150242"
+  version "3.2.0"
+  sha256 arm:   "07c6a4bddaa3b39e73d3bba735b13ca0769dace502efea63ed173d25ea3ad3ce",
+         intel: "33eb9dd4f272a353eb8bdb6b1c931bb4dcd57973ae2fab688373b5ced1bf6d1a"
 
   url "https://electron-update.fathom.video/download/file/Fathom-darwin-#{arch}-#{version}.dmg"
   name "Fathom"
@@ -12,10 +12,8 @@ cask "fathom" do
   homepage "https://fathom.video/"
 
   livecheck do
-    url "https://electron-update.fathom.video/update/darwin#{livecheck_arch}/0.0.0"
-    strategy :json do |json|
-      json["name"]&.tr("v", "")
-    end
+    url "https://electron-update.fathom.video/"
+    regex(%r{href=.*?/releases/tag/v?(\d+(?:\.\d+)+)}i)
   end
 
   depends_on macos: :monterey
