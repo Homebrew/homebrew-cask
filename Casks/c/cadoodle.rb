@@ -7,7 +7,6 @@ cask "cadoodle" do
     url "https://github.com/CommonWealthRobotics/CaDoodle/releases/download/#{version}/CaDoodle-MacOS-arm64.dmg",
         verified: "github.com/CommonWealthRobotics/CaDoodle/"
   end
-
   on_intel do
     sha256 "70a896441e1711082813f99eadfe8bdeda455126c525c10c717a72c1b490bebf"
 
