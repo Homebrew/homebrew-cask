@@ -83,6 +83,7 @@
   "gitup": "gitup-app",
   "glaze": "glaze-app",
   "google-cloud-sdk": "gcloud-cli",
+  "gosign": "infocert-sign",
   "gridtracker": "gridtracker2",
   "handbrake": "handbrake-app",
   "hepta": "heptabase",
