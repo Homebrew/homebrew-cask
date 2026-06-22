@@ -21,19 +21,11 @@ cask "whatsapp@beta" do
   uninstall quit: "net.whatsapp.WhatsApp"
 
   zap trash: [
-    "~/Library/Application Scripts/net.whatsapp.WhatsApp",
-    "~/Library/Application Scripts/net.whatsapp.WhatsApp.Intents",
-    "~/Library/Application Scripts/net.whatsapp.WhatsApp.IntentsUI",
-    "~/Library/Application Scripts/net.whatsapp.WhatsApp.ServiceExtension",
+    "~/Library/Application Scripts/net.whatsapp.WhatsApp*",
     "~/Library/Caches/net.whatsapp.WhatsApp",
-    "~/Library/Containers/net.whatsapp.WhatsApp",
-    "~/Library/Containers/net.whatsapp.WhatsApp.Intents",
-    "~/Library/Containers/net.whatsapp.WhatsApp.ServiceExtension",
+    "~/Library/Containers/net.whatsapp.WhatsApp*",
     "~/Library/Group Containers/group.com.facebook.family",
-    "~/Library/Group Containers/group.net.whatsapp.family",
-    "~/Library/Group Containers/group.net.whatsapp.WhatsApp.private",
-    "~/Library/Group Containers/group.net.whatsapp.WhatsApp.shared",
-    "~/Library/Group Containers/group.net.whatsapp.WhatsAppSMB.shared",
+    "~/Library/Group Containers/group.net.whatsapp*",
     "~/Library/Saved Application State/net.whatsapp.WhatsApp.savedState",
   ]
 end
