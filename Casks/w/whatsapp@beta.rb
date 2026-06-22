@@ -18,6 +18,8 @@ cask "whatsapp@beta" do
 
   app "WhatsApp.app"
 
+  uninstall quit: "net.whatsapp.WhatsApp"
+
   zap trash: [
     "~/Library/Application Scripts/net.whatsapp.WhatsApp",
     "~/Library/Application Scripts/net.whatsapp.WhatsApp.Intents",
