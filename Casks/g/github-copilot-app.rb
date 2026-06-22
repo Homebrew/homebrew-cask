@@ -8,7 +8,7 @@ cask "github-copilot-app" do
          arm64_linux:  "0fadadb65708228955ce54208d7df614306b5319d81d35f9b5fc6deddee1cda5",
          x86_64_linux: "7e6c6f812d1d845490999f09e463fcc046c61447a3e328d7a3e70ce13d06e795"
 
-  suffix = on_system_conditional macos: "dmg", linux: "AppImage"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   url "https://github.com/github/app/releases/download/v#{version}/GitHub-Copilot-#{os}-#{arch}.#{suffix}"
   name "GitHub Copilot"
