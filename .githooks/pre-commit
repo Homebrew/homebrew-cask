@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Homebrew Cask development git hook.
+# Runs a quick style/lint check before allowing a commit.
+# This script is intentionally minimal so it can run in all developer clones.
+
+set -e
+
+if command -v brew >/dev/null 2>&1; then
+  echo "Running brew style on changed cask files..."
+  changed_files=$(git diff --cached --name-only --diff-filter=ACM | grep '^Casks/.*\.rb$' || true)
+  if [ -n "$changed_files" ]; then
+    brew style $changed_files
+  else
+    echo "No cask files staged for commit; skipping brew style."
+  fi
+else
+  echo "brew not found; skipping hook checks."
+fi

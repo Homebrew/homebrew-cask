@@ -1,0 +1,7 @@
+{
+    "editor.autoIndentOnPaste": true,
+    "terminal.integrated.commandsToSkipShell": [
+        ""
+    ],
+    "window.density.editorTabHeight": "compact"
+}
