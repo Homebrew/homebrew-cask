@@ -20,5 +20,7 @@ cask "craft" do
   zap trash: [
     "~/Library/Application Scripts/com.lukilabs.lukiapp.Craft*",
     "~/Library/Containers/com.lukilabs.lukiapp.Craft*",
+    "~/Library/Group Containers/group.com.lukilabs.lukiapp.share",
+    "~/Library/Preferences/com.lukilabs.lukiapp.plist",
   ]
 end
