@@ -34,9 +34,9 @@ cask "pycharm-oss" do
   app "PyCharm CE.app"
 
   zap trash: [
-    "~/Library/Application Support/JetBrains/PyCharmCE#{version.major_minor}",
-    "~/Library/Caches/JetBrains/PyCharmCE#{version.major_minor}",
-    "~/Library/Logs/JetBrains/PyCharmCE#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/PyCharmCE*",
+    "~/Library/Caches/JetBrains/PyCharmCE*",
+    "~/Library/Logs/JetBrains/PyCharmCE*",
     "~/Library/Preferences/com.jetbrains.pycharm.ce.plist",
     "~/Library/Saved Application State/com.jetbrains.pycharm.ce.savedState",
   ]
