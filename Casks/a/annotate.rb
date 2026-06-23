@@ -7,20 +7,10 @@ cask "annotate" do
   desc "Keyboard-driven screen annotation tool"
   homepage "https://github.com/epilande/Annotate/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :sonoma
 
   app "Annotate.app"
 
-  zap trash: [
-    "~/Library/Caches/com.epilande.Annotate",
-    "~/Library/HTTPStorages/com.epilande.Annotate",
-    "~/Library/Preferences/com.epilande.Annotate.plist",
-    "~/Library/Saved Application State/com.epilande.Annotate.savedState",
-  ]
+  zap trash: "~/Library/Containers/com.epilande.Annotate"
 end
