@@ -10,17 +10,17 @@ cask "meta-quest-remote-desktop" do
 
   livecheck do
     url "https://www.oculus.com/download_app/?id=7248432555245552"
-    regex(%r{/binaries/download/\?id=(\d+)}i)
+    regex(%r{/binaries/download/.*?[?&]id=(\d+)}i)
     strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next if match.blank?
+      binary_id = headers["location"]&.[](regex, 1)
+      next unless binary_id
 
-      binary_id = match[1]
       cask = CaskLoader.load(__FILE__)
-      download_url = "https://securecdn.oculus.com/binaries/download/?id=#{binary_id}"
-      app_version = Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask,
-                                                                              url:  download_url)[:matches].values.max
-      next if app_version.blank?
+      app_version = Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(
+        cask: cask,
+        url:  "https://securecdn.oculus.com/binaries/download/?id=#{binary_id}",
+      )[:matches].values.max
+      next unless app_version
 
       "#{app_version},#{binary_id}"
     end
