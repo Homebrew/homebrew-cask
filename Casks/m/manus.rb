@@ -1,6 +1,6 @@
 cask "manus" do
-  version "1.6.2"
-  sha256 "693996554074eaf5950dc49bc338c953ff9f3843d3096b9daa7489cfcfd0d6fd"
+  version "1.6.3"
+  sha256 "64aa948c6a45fc527cd2eefe44e3ecfdc609fc9f2525b1dd4ed883f73d1f7ef6"
 
   url "https://download.manus.im/Manus-Setup-#{version}.dmg"
   name "Manus"
@@ -13,7 +13,7 @@ cask "manus" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
   depends_on arch: :arm64
 
   app "Manus.app"
