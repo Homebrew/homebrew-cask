@@ -1,5 +1,5 @@
 cask "gdat" do
-  version "2026r01,1YUy5QFPn4-5fEbgbn5EmGXq4gegku5_8"
+  version "2026r02,1rGnfTHdr7cuhSDDoN_oTqSYqqDzw3kkQ"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}",
