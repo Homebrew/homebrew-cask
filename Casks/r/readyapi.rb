@@ -21,6 +21,7 @@ cask "readyapi" do
   app "ReadyAPI-#{version}.app"
 
   zap trash: [
+    "~/.readyapi",
     "~/Library/Application Support/ReadyAPI-#{version}",
     "~/Library/Preferences/com.smartbear.ready.plist",
   ]
