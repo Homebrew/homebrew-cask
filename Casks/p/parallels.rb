@@ -59,7 +59,6 @@ cask "parallels" do
               must_succeed: false,
             },
             delete: [
-              "/Library/Preferences/Parallels",
               "/usr/local/bin/prl_convert",
               "/usr/local/bin/prl_disk_tool",
               "/usr/local/bin/prl_perf_ctl",
@@ -70,7 +69,8 @@ cask "parallels" do
               "/usr/local/bin/prlsrvctl",
             ]
 
-  zap trash: [
+  zap delete: "/Library/Preferences/Parallels",
+      trash:  [
         "~/.parallels_settings",
         "~/Applications (Parallels)",
         "~/Library/Application Scripts/*.com.parallels.Desktop",
@@ -95,7 +95,7 @@ cask "parallels" do
         "~/Library/Preferences/Parallels",
         "~/Library/Saved Application State/com.parallels.desktop.console.savedState",
       ],
-      rmdir: [
+      rmdir:  [
         "/Users/Shared/Parallels",
         "~/Library/Caches/Parallels Software",
         "~/Library/Parallels",
