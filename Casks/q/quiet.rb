@@ -1,8 +1,11 @@
 cask "quiet" do
-  version "7.0.1"
-  sha256 "413eadd8548a3714b673e3dba8694fc46bd3a4c57e0ae3548bfedc7206769c07"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/TryQuiet/quiet/releases/download/@quiet/desktop@#{version}/Quiet-#{version}.dmg",
+  version "7.3.3"
+  sha256 arm:   "d5deaea762f421ecc1f6cc1c008049a4dc578bac90653be6ca20aa7866679111",
+         intel: "95719ad75e66f929d54da5a924f12a63decb3687e3852b8a218debafb17d4d3c"
+
+  url "https://github.com/TryQuiet/quiet/releases/download/@quiet/desktop@#{version}/Quiet-#{version}-#{arch}.dmg",
       verified: "github.com/TryQuiet/quiet/"
   name "Quiet"
   desc "Private, p2p alternative to Slack and Discord built on Tor & IPFS"
@@ -10,7 +13,7 @@ cask "quiet" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?Quiet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?Quiet[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on :macos
@@ -18,8 +21,4 @@ cask "quiet" do
   app "Quiet.app"
 
   zap trash: "~/Library/Application Support/Quiet*"
-
-  caveats do
-    requires_rosetta
-  end
 end
