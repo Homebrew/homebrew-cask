@@ -1,6 +1,6 @@
 cask "filefillet" do
-  version "2.10.0"
-  sha256 "48f8781ac1f9cd8d5f40ee29b2c01131967bfa037b64015ad08e3afe856d49eb"
+  version "2.11.0"
+  sha256 "b14a0eb1638ca2dbb831a340d089aea1a6501099463c531bf92d0d6db75aaada"
 
   url "https://filefillet-releases.s3.eu-central-1.amazonaws.com/FileFillet_v#{version}.zip",
       verified: "filefillet-releases.s3.eu-central-1.amazonaws.com/"
