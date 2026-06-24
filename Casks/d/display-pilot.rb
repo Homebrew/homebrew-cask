@@ -7,11 +7,21 @@ cask "display-pilot" do
   desc "Display control utility"
   homepage "https://www.benq.com/en-ap/monitor/software/display-pilot-2.html"
 
-  # The only checkable source of version information requires a referer to work,
-  # so we're skipping this for now.
-  # See: https://github.com/Homebrew/homebrew-cask/pull/219373#issuecomment-3054380576
   livecheck do
-    skip "Requires referer for request to work"
+    url "https://www.benq.com/api/esupport-tm/getFiles/en_gb/display%20pilot%202/en_gb,ge_ge",
+        referer: "https://www.benq.com/en-ap/support/downloads-faq/products/monitor/display-pilot-2/software-driver.html"
+    regex(/Display\s+Pilot\s+\d+(?:\s+for\s+Mac)?[._-]v?(\d+(?:\.\d+)+)(?:[._-]Mac)?[._-](\d+)/i)
+    strategy :json do |json, regex|
+      json.dig("response", "list", "detail")&.filter_map do |item|
+        next unless item["OS"]&.include?("Mac")
+        next if item["Description"].match?(/Release\s+Note/i)
+
+        match = item["Download"]&.match(regex)
+        next unless match
+
+        "#{match[1]},#{match[2]}"
+      end
+    end
   end
 
   depends_on macos: :big_sur
