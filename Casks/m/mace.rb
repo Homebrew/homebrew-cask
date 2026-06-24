@@ -13,7 +13,7 @@ cask "mace" do
     regex(/^v?(\d+(?:\.\d+)+(?:[._-](?:alpha|beta|rc).*)?)$/i)
   end
 
-  depends_on macos: :sequoia
+  depends_on macos: :sonoma
 
   app "MACE.app"
 
