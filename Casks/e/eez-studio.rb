@@ -1,9 +1,9 @@
 cask "eez-studio" do
   arch arm: "arm64-mac", intel: "mac"
 
-  version "0.27.1"
-  sha256 arm:   "bf083a48d0167ab4203a51f55318ae1690b77be598868751c37a7dad0d4966a0",
-         intel: "467c4b08154b3cdb326235ae2ac3d601604f0c6c07425d47b9c6c91c43806d99"
+  version "0.28.0"
+  sha256 arm:   "89d2f2a04e2a48e3787aa9ff4dc73be2a7d9300ba655d3e5e87eb3f9bbb55eb6",
+         intel: "49a9dc96279a181cfe969bdd0441f2d2db6e849bce53da2c6b2799f01d4b05be"
 
   url "https://github.com/eez-open/studio/releases/download/v#{version}/EEZ.Studio-#{version}-#{arch}.zip",
       verified: "github.com/eez-open/studio/"
