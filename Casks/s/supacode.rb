@@ -1,6 +1,6 @@
 cask "supacode" do
-  version "0.10.2"
-  sha256 "d6995094374ace2e05ff74f4bc6ac67712c8517e07991a6b1fa1d25933f46c55"
+  version "0.10.3"
+  sha256 "0b1f5a79f505e8e24707e073552ee3540ed38856a3c8521c8f7efbba495ed172"
 
   url "https://supacode.sh/download/v#{version}/supacode.dmg"
   name "supacode"
