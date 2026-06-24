@@ -5,7 +5,7 @@ cask "sessionwatcher" do
   url "https://sessionwatcher-updates.vercel.app/downloads/SessionWatcher-#{version}.dmg",
       verified: "sessionwatcher-updates.vercel.app/"
   name "SessionWatcher"
-  desc "Menu-bar monitor for Claude, Codex, and Cursor usage"
+  desc "Menu bar monitor for AI coding assistant usage and limits"
   homepage "https://www.sessionwatcher.com/"
 
   livecheck do
@@ -14,7 +14,7 @@ cask "sessionwatcher" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "SessionWatcher.app"
 
