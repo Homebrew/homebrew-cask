@@ -1,18 +1,21 @@
 cask "nosqlbooster-for-mongodb" do
-  version "10.1.7"
-  sha256 "72d558385009f021eb08574d66ab1807eda77745e837a9e3bf008d149c1e37c1"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://s3.nosqlbooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}.dmg"
+  version "11.0.3"
+  sha256 arm:   "7835bcca537f85260729aaf2277651e5a175160f43aa79b16290bed02d90d5b2",
+         intel: "7aecea2af697f45a7b83cc95b6d0172cf4485db9e70ce37c5d408c92c30a8c82"
+
+  url "https://s3.nosqlbooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}-#{arch}.dmg"
   name "NoSQLBooster for MongoDB"
   desc "GUI tool and IDE for MongoDB"
   homepage "https://nosqlbooster.com/"
 
   livecheck do
     url "https://nosqlbooster.com/downloads"
-    regex(/%22patch_ver%22(?:%20|\s)*%3A(?:%20|\s)*%22v?(\d+(?:\.\d+)+)%22/i)
+    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "NoSQLBooster for MongoDB.app"
 
@@ -22,8 +25,4 @@ cask "nosqlbooster-for-mongodb" do
     "~/Library/Preferences/com.nosqlbooster.mongodb.plist",
     "~/Library/Saved Application State/com.nosqlbooster.mongodb.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
