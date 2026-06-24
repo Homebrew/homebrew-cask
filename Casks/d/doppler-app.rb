@@ -7,8 +7,10 @@ cask "doppler-app" do
   desc "Music player"
   homepage "https://brushedtype.co/doppler/"
 
-  # Download url is unreachable due to Cloudflare protections
-  disable! date: "2026-01-25", because: :unreachable
+  livecheck do
+    url "https://updates.brushedtype.co/doppler-macos/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
 
   depends_on macos: :big_sur
 
