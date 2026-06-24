@@ -11,6 +11,11 @@ cask "executor" do
   desc "Tool discovery and execution layer for AI agents"
   homepage "https://executor.sh/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: :monterey
 
