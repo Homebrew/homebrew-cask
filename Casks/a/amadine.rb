@@ -1,5 +1,5 @@
 cask "amadine" do
-  version "1.8.2"
+  version "1.8.3"
   sha256 :no_check
 
   url "https://belightsoft.s3.amazonaws.com/Amadine.dmg",
@@ -14,7 +14,7 @@ cask "amadine" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "Amadine.app"
 
