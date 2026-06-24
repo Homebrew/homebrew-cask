@@ -17,9 +17,12 @@ cask "ariax" do
     "~/Library/Application Scripts/cn.saltpi.app.AriaX",
     "~/Library/Application Scripts/cn.saltpi.app.AriaX.Extension",
     "~/Library/Application Scripts/group.cn.saltpi.app.AriaX",
+    "~/Library/Caches/cn.saltpi.app.AriaX",
     "~/Library/Containers/cn.saltpi.app.Aria2Helper",
     "~/Library/Containers/cn.saltpi.app.AriaX",
     "~/Library/Containers/cn.saltpi.app.AriaX.Extension",
     "~/Library/Group Containers/group.cn.saltpi.app.AriaX",
+    "~/Library/HTTPStorages/cn.saltpi.app.AriaX",
+    "~/Library/Preferences/cn.saltpi.app.AriaX.plist",
   ]
 end
