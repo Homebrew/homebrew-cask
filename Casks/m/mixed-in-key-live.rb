@@ -38,15 +38,15 @@ cask "mixed-in-key-live" do
 
   pkg "Mixed In Key Live.pkg"
 
-  bundle_id = "com.mixedinkey.MIK-Live"
-  uninstall quit: bundle_id, pkgutil: "com.mixedinkey.Mixed_In_Key_Live.pkg"
+  uninstall quit:    "com.mixedinkey.MIK-Live",
+            pkgutil: "com.mixedinkey.Mixed_In_Key_Live.pkg"
 
   zap trash: [
-    "~/Library/Application Support/#{bundle_id}",
+    "~/Library/Application Support/com.mixedinkey.MIK-Live",
     "~/Library/Application Support/Mixedinkey",
-    "~/Library/Caches/#{bundle_id}",
-    "~/Library/HTTPStorages/#{bundle_id}",
-    "~/Library/Preferences/#{bundle_id}.plist",
-    "~/Library/Saved Application State/#{bundle_id}.savedState",
+    "~/Library/Caches/com.mixedinkey.MIK-Live",
+    "~/Library/HTTPStorages/com.mixedinkey.MIK-Live",
+    "~/Library/Preferences/com.mixedinkey.MIK-Live.plist",
+    "~/Library/Saved Application State/com.mixedinkey.MIK-Live.savedState",
   ]
 end
