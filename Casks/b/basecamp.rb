@@ -1,21 +1,22 @@
 cask "basecamp" do
   arch arm: "arm64", intel: "x64"
-  livecheck_arch = on_arch_conditional arm: "_arm64"
 
-  version "5.0.8"
-  sha256 arm:   "daa9ae879dfe01bb5fdc272f6aeed4ba2e124604fefbb13de08b719eb0ec1546",
-         intel: "d9611e6af466d015b6485b8d63c278f61bf880b288c9b6660aa8ce1b69874778"
+  version "5.1.3"
+  sha256 arm:   "a26fe02d79299f2f7feb444dbecb6cbd1c47416bf6eff774be42cf0264deda6c",
+         intel: "5e2af7ae9060c183036ccf02179bc9494b9b30d8bec2da72432df5fb2ce7d404"
 
   url "https://basecamp.com/desktop/Basecamp-#{version}-mac-#{arch}.zip"
   name "Basecamp"
   desc "All-In-One Toolkit for Working Remotely"
   homepage "https://basecamp.com/"
 
+  # This file is served with a `Content-Encoding: aws-chunked` header when
+  # compression is requested but that causes curl to error because it doesn't
+  # understand what decompression to apply.
   livecheck do
-    url "https://basecamp.com/desktop/mac#{livecheck_arch}/updates.json"
-    strategy :json do |json|
-      json["version"]
-    end
+    url "https://basecamp.com/desktop/latest-mac.yml",
+        compressed: false
+    strategy :electron_builder
   end
 
   auto_updates true
