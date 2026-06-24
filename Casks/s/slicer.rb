@@ -19,8 +19,6 @@ cask "slicer" do
     end
   end
 
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
   conflicts_with cask: "slicer@preview"
   depends_on macos: :sonoma
 
