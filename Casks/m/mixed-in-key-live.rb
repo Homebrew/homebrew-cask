@@ -1,5 +1,5 @@
 cask "mixed-in-key-live" do
-  version "11.0.4.567"
+  version "11.0.4.567,55"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://builds.mixedinkey.com/download/#{version.csv.second}/release/latest?key=public"
