@@ -7,13 +7,11 @@ cask "element" do
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
-  # The `releases.json` file is served with a `Content-Encoding: aws-chunked`
-  # header, which will cause curl to error if the `--compressed` option is used.
-  # This checks the version on the directory listing page until we can account
-  # for this situation in livecheck.
   livecheck do
-    url "https://packages.element.io/desktop/update/macos/index.html"
-    regex(/href=.*?Element[._-]v?(\d+(?:\.\d+)+)[._-]universal[._-]mac\.zip/i)
+    url "https://packages.element.io/desktop/update/macos/releases.json"
+    strategy :json do |json|
+      json["currentRelease"]
+    end
   end
 
   auto_updates true
