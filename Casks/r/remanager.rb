@@ -1,6 +1,6 @@
 cask "remanager" do
-  version "1.5.4"
-  sha256 "025ac7b59e9fd0e35be8aebb30f3b09b0e5f798bcc920dc61e455e23ee4d299f"
+  version "1.6.0"
+  sha256 "4484daa1737d5ba003ab3576d7ccff4ca569e0a87fc0bc48a0a82e2b4ce08577"
 
   url "https://github.com/rmitchellscott/reManager/releases/download/v#{version}/reManager-macos-universal.zip"
   name "reManager"
