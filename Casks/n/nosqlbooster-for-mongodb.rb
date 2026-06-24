@@ -12,7 +12,7 @@ cask "nosqlbooster-for-mongodb" do
 
   livecheck do
     url "https://nosqlbooster.com/downloads"
-    regex(/Version\s+v?(\d+(?:\.\d+)+)/i)
+    regex(/href=.*?nosqlbooster4mongo[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: :monterey
