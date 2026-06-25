@@ -50,7 +50,7 @@ cask "klayout" do
       regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Sonoma.*?\.dmg/i)
     end
   end
-  on_sequoia :or_newer do
+  on_sequoia do
     version "0.30.9"
     sha256 "73fcd98f74b563f232e1eae9866bc52957b0d198f02a4570e77f4c9be05d89c5"
 
@@ -60,6 +60,32 @@ cask "klayout" do
     livecheck do
       url "https://www.klayout.de/build.html"
       regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Sequoia.*?\.dmg/i)
+    end
+  end
+  on_tahoe :or_newer do
+    on_arm do
+      version "0.30.9"
+      sha256 "5b2807b2e522760535a84fb83828de768995c9b68914b75be14c961d1ea0bc49"
+
+      url "https://www.klayout.org/downloads/MacOS/ARM64/arm64ST-klayout-#{version}-macOS-Tahoe-1-qt5MP-RsysPsys.dmg",
+          verified: "klayout.org/downloads/MacOS/ARM64/"
+
+      livecheck do
+        url "https://www.klayout.de/build.html"
+        regex(/href=.*?arm64ST[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Tahoe.*?\.dmg/i)
+      end
+    end
+    on_intel do
+      version "0.30.9"
+      sha256 "73fcd98f74b563f232e1eae9866bc52957b0d198f02a4570e77f4c9be05d89c5"
+
+      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sequoia-1-qt5MP-RsysPhb311.dmg",
+          verified: "klayout.org/downloads/MacOS/"
+
+      livecheck do
+        url "https://www.klayout.de/build.html"
+        regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Sequoia.*?\.dmg/i)
+      end
     end
   end
 
