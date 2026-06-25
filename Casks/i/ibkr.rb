@@ -1,7 +1,7 @@
 cask "ibkr" do
   arch arm: "-arm", intel: "x-x64"
 
-  version "3.3i"
+  version "3.3j"
   sha256 :no_check
 
   url "https://download2.interactivebrokers.com/installers/ntws/latest-standalone/ntws-latest-standalone-macos#{arch}.dmg"
