@@ -1,6 +1,6 @@
 cask "mouseless@preview" do
-  version "1.0.0-preview.4"
-  sha256 "2eb5aad9292f2bd55b94ea5fdee28f969acd0258478b34527fafc6c8ab687c17"
+  version "1.0.0-preview.5"
+  sha256 "92d8ab3ccee5566b3694dc1ee950a35b64311bfbdcb2a52ff16a800608a702ad"
 
   url "https://github.com/croian/mouseless/releases/download/v#{version}/mouseless-installer_v#{version}.dmg",
       verified: "github.com/croian/mouseless/"
