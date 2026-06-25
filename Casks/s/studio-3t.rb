@@ -2,9 +2,9 @@ cask "studio-3t" do
   arch arm: "-aarch64"
   livecheckarch = on_arch_conditional arm: "_aarch64"
 
-  version "2026.8.0"
-  sha256 arm:   "a94f17e537896662c2b6e878c4ecaffe20b572805dc6728775ab865f8800a24a",
-         intel: "1c66751087cfe15ed41f613099fd4dc8f3a8849c0eed0a3c505545d629c7d48f"
+  version "2026.11.0"
+  sha256 arm:   "a88fcf7822cfd0e6cc112edb4d8b42b28a069a23f5705802bc5584df13506e71",
+         intel: "3d0ac43a93644191170f9655a4054dad320e70de49f4a3268dcd0d66a4c8d6c5"
 
   url "https://download.studio3t.com/studio-3t/mac#{arch}/#{version}/Studio-3T.dmg"
   name "Studio 3T"
@@ -12,7 +12,8 @@ cask "studio-3t" do
   homepage "https://studio3t.com/"
 
   livecheck do
-    url "https://studio3t.com/download-thank-you/?OS=osx#{livecheckarch}"
+    url "https://studio3t.com/download-thank-you/?OS=osx#{livecheckarch}",
+        cookies: { "3t-can-download-software" => "1" }
     regex(%r{/v?(\d+(?:\.\d+)+)/Studio[._-]?3T\.dmg}i)
   end
 
