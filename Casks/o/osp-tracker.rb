@@ -1,6 +1,6 @@
 cask "osp-tracker" do
-  version "6.3.4"
-  sha256 "6cbb7e26db6f7fb38315383f09755181fa685a110a5942db35179b9e59a1d5d2"
+  version "6.3.5"
+  sha256 "b43fae20b5acd01b9f8f1c1dba1a5a7958cbd67e2b7a132432bc4d01fbc471b0"
 
   url "https://www.compadre.org/osp/images/tracker/Tracker-#{version}-osx-installer.dmg",
       verified: "compadre.org/osp/images/tracker/"
