@@ -1,9 +1,9 @@
 cask "pktriot" do
   arch arm: "arm64", intel: "intel"
 
-  version "1.0.0"
-  sha256 arm:   "2534af4c55f84717cd8255e2b6e819d6c8cae6852c4c29b2e7df8e8db3e42f82",
-         intel: "d87d7bdc3002f121f57b2d9dfb9241753f8cdd7b3c053a17cfbba1e8191d3a45"
+  version "1.0.1"
+  sha256 arm:   "ae5f7f8b2d32b085abaf7ccc5ff49706639ea24f25409af723ad7c22a53ab149",
+         intel: "79ca600ea582ac837a03b047559dfeed0f24814dff24a7e706568d75aff9edfd"
 
   url "https://download.packetriot.com/macos/pktriot-#{version}.macos.#{arch}.zip"
   name "pktriot"
