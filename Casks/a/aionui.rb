@@ -1,9 +1,9 @@
 cask "aionui" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.23"
-  sha256 arm:   "879b03e32b6af59fa93965b72a930a5c49ffa54d93bf415c854f1a424949ac03",
-         intel: "d050f7f57534eebdeb62b5bfa25a35eaeaacab119052614a09929e8f66ba846a"
+  version "2.1.24"
+  sha256 arm:   "56f491393fdbebd504ee99fcb5a0fdf2054067ec1c77f1e10ed6a7a714ab7d80",
+         intel: "5a80beb30aa8926140e9e974dc8456914a8f11631f42982b9e923c11d404978e"
 
   url "https://github.com/iOfficeAI/AionUi/releases/download/v#{version}/AionUi-#{version}-mac-#{arch}.dmg"
   name "AionUi"
@@ -14,8 +14,6 @@ cask "aionui" do
     url :url
     strategy :github_latest
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: :big_sur
