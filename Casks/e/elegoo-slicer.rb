@@ -1,9 +1,9 @@
 cask "elegoo-slicer" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.5.1.6"
-  sha256 arm:   "968214dd1ee00784c8fed30ac90e22f7c81045b1f560e2fbc0ce5bb3b53da981",
-         intel: "9dc3681869f44660fada57f67d380a9d90972f1e38c5e7d49c9ca43d3c952cec"
+  version "1.5.2.2"
+  sha256 arm:   "6ebd483669595aedcfe0a3fe44e28902caf2b544464d0bb6f71f855ddb633d1c",
+         intel: "35201584803446e88534eeaed9bcf4c0cd9f72fe2d29d854b50f51e749c7f0e6"
 
   url "https://github.com/ELEGOO-3D/ElegooSlicer/releases/download/v#{version}/ElegooSlicer_Mac_#{arch}_V#{version}.dmg"
   name "ElegooSlicer"
