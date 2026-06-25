@@ -1,6 +1,6 @@
 cask "poker-copilot" do
-  version "8.14,10034"
-  sha256 "5acc42817594de52255013ac63f5eb0eb46f6b11e507f70623a2de6c0c7aec4b"
+  version "8.15,10070"
+  sha256 "9b182eadc90b2adf90c30c38b209d6983c2127641014af1770d980b72f03f22b"
 
   url "https://static.pokercopilot.com/pokercopilot_macos_#{version.csv.first.dots_to_underscores}_build_#{version.csv.second}.dmg"
   name "Poker Copilot"
