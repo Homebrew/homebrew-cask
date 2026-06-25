@@ -28,6 +28,7 @@ cask "citrix-workspace" do
               "com.citrix.devicetrust.launchagent",
               "com.citrix.ReceiverHelper",
               "com.citrix.ReceiverUninstallHelper",
+              "com.citrix.ReceiverUpdaterHelper",
               "com.citrix.safariadapter",
               "com.citrix.ServiceRecords",
               "com.citrix.UninstallMonitor",
@@ -46,6 +47,7 @@ cask "citrix-workspace" do
               "com.citrix.ICAClient",
               "com.citrix.ICAClientcwa",
               "com.citrix.ICAClienthdx",
+              "com.citrix.receiver.bcr"
             ]
 
   zap trash: [
