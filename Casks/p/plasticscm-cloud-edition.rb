@@ -20,6 +20,7 @@ cask "plasticscm-cloud-edition" do
   uninstall launchctl: [
               "com.codicesoftware.plasticscm.macplastic",
               "com.codicesoftware.plasticscm.server",
+              "com.codicesoftware.unityvcstray",
             ],
             quit:      ["com.codicesoftware.plasticscm", "com.codicesoftware.unityvcstray"],
             pkgutil:   [
