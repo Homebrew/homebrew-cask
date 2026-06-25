@@ -1,5 +1,5 @@
 cask "radial" do
-  version "5.0.0"
+  version "5.1.0"
   sha256 :no_check
 
   url "https://radial.appverge.net/downloads/Radial.dmg"
