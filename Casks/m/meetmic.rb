@@ -1,16 +1,16 @@
-cask "quickwhisper" do
-  version "1.29.336"
-  sha256 "7a5dfe96fe5882ce120c45de07d3289702b789bde1277f0a13f720ae8eba733b"
+cask "meetmic" do
+  version "1.30.357"
+  sha256 "8aec9292ba3e296b7335738eaa7d0c691b25cc0f6d0cb22f892c3eaa691ed040"
 
-  url "https://quickwhisperapp.s3.us-west-002.backblazeb2.com/QuickWhisper_#{version}.zip",
-      verified: "quickwhisperapp.s3.us-west-002.backblazeb2.com/"
-  name "QuickWhisper"
+  url "https://meetmicapp.s3.us-west-002.backblazeb2.com/MeetMic_#{version}.zip",
+      verified: "meetmicapp.s3.us-west-002.backblazeb2.com/"
+  name "MeetMic"
   desc "Audio transcription tool"
-  homepage "https://quickwhisper.app/"
+  homepage "https://meetmic.app/"
 
   livecheck do
-    url "https://f002.backblazeb2.com/file/quickwhisperapp/appcast.xml"
-    regex(/QuickWhisper[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    url "https://f002.backblazeb2.com/file/meetmicapp/appcast.xml"
+    regex(/MeetMic[._-]v?(\d+(?:\.\d+)+)\.zip/i)
     strategy :sparkle do |item, regex|
       item.url[regex, 1]
     end
@@ -20,7 +20,7 @@ cask "quickwhisper" do
   depends_on macos: :sequoia
   depends_on arch: :arm64
 
-  app "QuickWhisper.app"
+  app "MeetMic.app"
 
   zap trash: [
     "~/Library/Application Scripts/ltd.iwt.QuickWhisper",
