@@ -47,7 +47,7 @@ cask "citrix-workspace" do
               "com.citrix.ICAClient",
               "com.citrix.ICAClientcwa",
               "com.citrix.ICAClienthdx",
-              "com.citrix.receiver.bcr"
+              "com.citrix.receiver.bcr",
             ]
 
   zap trash: [
