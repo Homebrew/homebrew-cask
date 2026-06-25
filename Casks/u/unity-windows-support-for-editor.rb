@@ -19,5 +19,5 @@ cask "unity-windows-support-for-editor" do
 
   pkg "UnitySetup-Windows-Mono-Support-for-Editor-#{version.csv.first}.pkg"
 
-  uninstall pkgutil: "com.unity3d.WindowsStandaloneSupport"
+  uninstall pkgutil: "com.unity3d.WindowsStandaloneSupport-#{version.csv.first}"
 end
