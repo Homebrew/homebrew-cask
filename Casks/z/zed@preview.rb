@@ -23,6 +23,8 @@ cask "zed@preview" do
   app "Zed Preview.app"
   binary "#{appdir}/Zed Preview.app/Contents/MacOS/cli", target: "zed-preview"
 
+  generate_completions_from_executable "zed-preview", "--completions"
+
   zap trash: [
     "~/.config/zed",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zed.zed-preview.sfl*",
