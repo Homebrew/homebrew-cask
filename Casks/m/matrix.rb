@@ -1,8 +1,8 @@
 cask "matrix" do
-  version "0.1.87,119"
+  version "0.1.87"
   sha256 "b16e8d7f70a99783c2987a57cedbf2625eb150ee43da44e2f5c46e34786ed5af"
 
-  url "https://download.matrix.build/mac/#{version.csv.first}/Matrix-#{version.csv.first}-arm64.dmg"
+  url "https://download.matrix.build/mac/#{version}/Matrix-#{version}-arm64.dmg"
   name "Matrix"
   desc "Workspace for coordinating AI agents"
   homepage "https://matrix.build/"
