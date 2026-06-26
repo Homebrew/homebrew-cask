@@ -1,9 +1,9 @@
 cask "zulip" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.12.3"
-  sha256 arm:   "d2fe145f0d226ba124945e25f9c9a16051e61e15fc489f20a1ce15f22c96b699",
-         intel: "2812423a61990d489929ba14e3b7064277cca879de9b487c437a77d1bd201ac5"
+  version "5.12.4"
+  sha256 arm:   "619cce44e8305766db464c8352f15c2ba4d7bb192fac52c30d6dd1d6d199eed6",
+         intel: "27d5c08aeea4513a168a51d0f24996138f3a7d80b0a353c85828f0f4f77f4e35"
 
   url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}-#{arch}.dmg",
       verified: "github.com/zulip/zulip-desktop/"
