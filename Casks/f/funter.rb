@@ -1,6 +1,6 @@
 cask "funter" do
-  version "7.1.1,374"
-  sha256 "8a8f8784ef3042106ff1f776803d96682f079c175e21a63d8f42568205e1081c"
+  version "7.1.2,377"
+  sha256 "8f160d43fb50191b4e1bc9fe74a6c979a1be14faff9b8c2ce564506e75e8844f"
 
   url "https://download.nektony.com/download/funter/Funter.dmg?build=#{version.csv.second}"
   name "Funter"
