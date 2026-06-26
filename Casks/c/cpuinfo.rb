@@ -1,6 +1,6 @@
 cask "cpuinfo" do
-  version "1.6.0"
-  sha256 "d3cd0ebfd3ce57d475101d9401aeb659c053d93486d131078a8057e61274d20d"
+  version "1.7.0"
+  sha256 "9ba2008a1b7101bfae32ea33f03c5c9dc7759d5a48881a8cba446b7da7328293"
 
   url "https://github.com/yusukeshib/cpuinfo/releases/download/v#{version}/cpuinfo.zip"
   name "cpuinfo"
