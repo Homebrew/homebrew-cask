@@ -1,9 +1,9 @@
 cask "sonarr" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.0.18.2971"
-  sha256 arm:   "6fdbeff4cc00df1ae934df226ef68dc86d1b67eb430e6a7967e3f5a9f70ddff9",
-         intel: "66038bf0e431e15bbbb98072929e3365886a02c4a5f38d6e49931f02b29e2977"
+  version "4.0.19.2979"
+  sha256 arm:   "fbc2acc3984f12e1bae95f07ad7424425b5f1058fc02f8bb79e709638d2c5c94",
+         intel: "ef3025f57f1f2451a393e28871bb67abce057f132d84c2ce174af3656bd7670b"
 
   on_arm do
     depends_on macos: :big_sur
