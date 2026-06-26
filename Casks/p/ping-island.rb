@@ -8,6 +8,11 @@ cask "ping-island" do
   desc "Menu bar status for coding agent sessions"
   homepage "https://erha19.github.io/ping-island/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: :sonoma
 
