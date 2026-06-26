@@ -9,7 +9,7 @@ cask "matrix" do
 
   livecheck do
     url "https://download.matrix.build/mac/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
