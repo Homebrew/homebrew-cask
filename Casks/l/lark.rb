@@ -3,14 +3,14 @@ cask "lark" do
   livecheck_arch = on_arch_conditional arm: "_m1"
 
   on_arm do
-    version "7.70.11,939ee4ab"
-    sha256 "e22c33876efd724f4f5eb11e49fea52eaa38aabbd2a1125298fc537db39cbf01"
+    version "7.70.12,499fe423"
+    sha256 "3096ec02e49fe9f30aadc22d3bedf8c33a6f5c5f09b11a98a7bbdd99e93ddba1"
 
     depends_on macos: :big_sur
   end
   on_intel do
-    version "7.70.11,5a581654"
-    sha256 "f813350a277a38ae5165462d8cdb00b8d4ba75144b160bd2c28b9c4d0f73dc76"
+    version "7.70.12,6b0eeba3"
+    sha256 "0578ba323980001bc2923fb7d1b12047cd0a6a0171dd2acc2a07b97587415900"
 
     depends_on macos: :catalina
   end
