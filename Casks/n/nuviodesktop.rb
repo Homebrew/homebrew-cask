@@ -1,5 +1,4 @@
-cask "nuviodesktop"
-do
+cask "nuviodesktop" do
   arch arm: "arm64", intel: "x86_64"
 
 version "0.1.9-alpha"
