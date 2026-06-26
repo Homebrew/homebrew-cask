@@ -8,6 +8,12 @@ cask "atoll" do
   desc "Dynamic Island for the MacBook notch"
   homepage "https://getatoll.app/"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/Ebullioscopic/Atoll/refs/heads/main/Updates/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
   depends_on macos: :sonoma
 
   app "Atoll.app"
