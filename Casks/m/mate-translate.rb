@@ -2,16 +2,18 @@ cask "mate-translate" do
   version "8.3.3"
   sha256 :no_check
 
-  url "https://gikken.co/mate/MateTranslate.dmg"
+  url "https://gikken.co/mate/MateTranslate.dmg",
+      verified: "gikken.co/mate/"
   name "Mate Translate"
   desc "Select text in any app and translate it"
-  homepage "https://gikken.co/mate-translate/mac/"
+  homepage "https://matetranslate.com/"
 
   livecheck do
     url "https://gikken.co/mate/appcast-sub.xml"
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on :macos
 
   app "Mate Translate.app"
