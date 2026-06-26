@@ -14,7 +14,7 @@ cask "cloudmounter" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "CloudMounter.app"
 
@@ -28,6 +28,7 @@ cask "cloudmounter" do
     "~/Library/Group Containers/*.com.eltima.cloudmounter",
     "~/Library/HTTPStorages/com.eltima.cloudmounter",
     "~/Library/Logs/CloudMounter.log",
+    "~/Library/Preferences/com.eltima.activator.xml",
     "~/Library/Preferences/com.eltima.cloudmounter.plist",
   ]
 end
