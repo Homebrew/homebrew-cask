@@ -12,7 +12,7 @@ cask "scenebuilder" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/SceneBuilder-(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
+    regex(/href=.*?SceneBuilder[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on :macos
