@@ -8,7 +8,7 @@ cask "geolibre" do
   url "https://github.com/opengeos/GeoLibre/releases/download/v#{version}/GeoLibre.Desktop_#{version}_#{arch}.dmg",
       verified: "github.com/opengeos/GeoLibre/"
   name "GeoLibre Desktop"
-  desc "Lightweight, cloud-native GIS platform"
+  desc "GIS platform"
   homepage "https://geolibre.app/"
 
   livecheck do
