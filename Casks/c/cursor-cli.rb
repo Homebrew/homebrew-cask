@@ -11,7 +11,7 @@ cask "cursor-cli" do
   homepage "https://cursor.com/"
 
   livecheck do
-    url "https://cursor.com/install"
+    url "https://cursor.com/install?channel=prod"
     regex(%r{downloads\.cursor\.com/lab/v?(\d+(?:[.-]\d+)+(?:[._-]\h+)?)/}i)
   end
 
