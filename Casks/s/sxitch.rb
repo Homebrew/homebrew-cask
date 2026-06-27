@@ -3,7 +3,7 @@ cask "sxitch" do
   sha256 :no_check
 
   url "https://pub-de38f9dc4d154d119d16caaa9a29824b.r2.dev/Sxitch.app.zip",
-    verified: "pub-de38f9dc4d154d119d16caaa9a29824b.r2.dev"
+      verified: "pub-de38f9dc4d154d119d16caaa9a29824b.r2.dev/"
   name "Sxitch"
   desc "Tree-based app switcher"
   homepage "https://sxitch.app/"
