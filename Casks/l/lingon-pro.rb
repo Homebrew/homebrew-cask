@@ -17,7 +17,7 @@ cask "lingon-pro" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Lingon Pro.app"
 
