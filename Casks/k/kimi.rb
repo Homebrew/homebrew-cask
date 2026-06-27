@@ -1,6 +1,6 @@
 cask "kimi" do
-  version "3.0.23"
-  sha256 "a0a45815a0c539480111ce411756df314f51ecd588d55e512984c4f684606a57"
+  version "3.0.24"
+  sha256 "c15f9c5d6d5066c2271413f62dee9eacbdd24691b755a3347052c93da9188c2a"
 
   url "https://kimi-img.moonshot.cn/app/download/mac/kimi_#{version}.dmg",
       verified: "kimi-img.moonshot.cn/"
@@ -16,7 +16,7 @@ cask "kimi" do
   depends_on arch: :arm64
   depends_on macos: :monterey
 
-  app "Kimi.app"
+  app "Kimi Installer.app/Contents/Helpers/Kimi.app"
 
   zap trash: [
     "~/Library/Application Support/kimi",
