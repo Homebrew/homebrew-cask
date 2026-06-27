@@ -1,6 +1,6 @@
 cask "shotcut" do
-  version "26.4.30"
-  sha256 "07bcf7d53086a804892b66dab50b2fc03bf0c2dfd67a33923517f8d22a3fe17e"
+  version "26.6.25"
+  sha256 "630dcb251915f0ceaf9344b5fd4213cfda162ccef2ae00215bdf4de79d3e5c69"
 
   url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.first}/shotcut-macos-#{version.csv.second || version.csv.first}.dmg",
       verified: "github.com/mltframework/shotcut/"
