@@ -1,6 +1,6 @@
 cask "palmier-pro" do
-  version "0.4.3"
-  sha256 "e0d7a56e83856bda7bbf7d96f0052ae80975a71271d95e57ca14af82a3792e14"
+  version "0.4.4"
+  sha256 "fd18c8b07b20681d8fed94968537246cf55234237fc9b4a4b6175909f0689e79"
 
   url "https://github.com/palmier-io/palmier-pro/releases/download/v#{version}/PalmierPro.dmg",
       verified: "github.com/palmier-io/palmier-pro/"
