@@ -14,7 +14,7 @@ cask "jamovi" do
   # The download page will redirect to the homepage unless a `referer` is used.
   livecheck do
     url "https://www.jamovi.org/download.html",
-        referer: "https://www.jamovi.org"
+        referer: "https://www.jamovi.org/"
     regex(/href=.*?jamovi[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
   end
 
