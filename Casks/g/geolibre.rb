@@ -11,11 +11,6 @@ cask "geolibre" do
   desc "GIS platform"
   homepage "https://geolibre.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :catalina
 
   app "GeoLibre Desktop.app"
