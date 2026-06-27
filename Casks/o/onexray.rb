@@ -16,4 +16,11 @@ cask "onexray" do
   depends_on macos: :monterey
 
   app "OneXraySE.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/group.net.yuandev.onexray.se",
+    "~/Library/Containers/net.yuandev.onexray.se",
+    "~/Library/Containers/net.yuandev.onexray.se.tun",
+    "~/Library/Group Containers/group.net.yuandev.onexray.se",
+  ]
 end
