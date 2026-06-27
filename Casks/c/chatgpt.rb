@@ -26,13 +26,20 @@ cask "chatgpt" do
   uninstall quit: "com.openai.chat"
 
   zap trash: [
+    "~/Library/Application Scripts/com.openai.chat.Widgets",
+    "~/Library/Application Scripts/group.com.openai.chat",
     "~/Library/Application Support/ChatGPT",
     "~/Library/Application Support/com.openai.chat",
     "~/Library/Caches/com.openai.chat",
+    "~/Library/Containers/com.openai.chat.Widgets",
+    "~/Library/Group Containers/group.com.openai.chat",
+    "~/Library/HTTPStorages/ChatGPTHelper.binarycookies",
     "~/Library/HTTPStorages/com.openai.chat",
     "~/Library/HTTPStorages/com.openai.chat.binarycookies",
-    "~/Library/Preferences/com.openai.chat.*.plist",
     "~/Library/Preferences/com.openai.chat.plist",
+    "~/Library/Preferences/com.openai.chat.RemoteFeatureFlags.*.plist",
+    "~/Library/Preferences/com.openai.chat.StatsigService.plist",
     "~/Library/Saved Application State/com.openai.chat.savedState",
+    "~/Library/WebKit/com.openai.chat",
   ]
 end
