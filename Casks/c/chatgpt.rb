@@ -36,9 +36,8 @@ cask "chatgpt" do
     "~/Library/HTTPStorages/ChatGPTHelper.binarycookies",
     "~/Library/HTTPStorages/com.openai.chat",
     "~/Library/HTTPStorages/com.openai.chat.binarycookies",
+    "~/Library/Preferences/com.openai.chat.*.plist",
     "~/Library/Preferences/com.openai.chat.plist",
-    "~/Library/Preferences/com.openai.chat.RemoteFeatureFlags.*.plist",
-    "~/Library/Preferences/com.openai.chat.StatsigService.plist",
     "~/Library/Saved Application State/com.openai.chat.savedState",
     "~/Library/WebKit/com.openai.chat",
   ]
