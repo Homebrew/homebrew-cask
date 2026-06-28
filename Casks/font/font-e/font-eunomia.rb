@@ -17,9 +17,9 @@ cask "font-eunomia" do
     regex(/Version\D*?(\d+(?:\.\d+)+)/i)
   end
 
-  font "eunomia_#{version.no_dots}/Eunomia-Bold.otf"
-  font "eunomia_#{version.no_dots}/Eunomia-Light.otf"
-  font "eunomia_#{version.no_dots}/Eunomia-Regular.otf"
+  font "Eunomia-Bold.otf"
+  font "Eunomia-Light.otf"
+  font "Eunomia-Regular.otf"
 
   # No zap stanza required
 end
