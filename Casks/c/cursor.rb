@@ -2,11 +2,11 @@ cask "cursor" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "3.9.8,4aa8ff1b7877ed7bd01bcba308698f71a6735380"
-  sha256 arm:          "7bc9cab98328f4c74e69d87c895151b6e6895c89b161c81ab573d649f942169d",
-         intel:        "3106ee9650ef3de818f99e0e88d956423a930d05d65b89063d7d175f52b8a695",
-         arm64_linux:  "cba31e7af41642d0ed96e5d9f28cfe591ad9cfbaeaf63228c2b1e7403b609801",
-         x86_64_linux: "3d4dcff773b098f47ab570f6069fb1a4da46e5cd21f1f94e88a815cf4c6b2579"
+  version "3.9.16,042b3c1a4c53f2c3808067f519fbfc67b72cad8b"
+  sha256 arm:          "83d8de4cf35339404cdf00b69d5e46a1a3c0deb396c784f76abd7ab08e3db1fd",
+         intel:        "2a75d621b7e27c3e9c1fbde91d9368cf9b2e527fc618c1ec95e75ea1995c84ee",
+         arm64_linux:  "eed92ea72cbc10578ea7342aa0742c631590945a16e950695e4b8226c448851c",
+         x86_64_linux: "746eb555818c1cf8a9e7b95dccd202122d723dce2cd5d38df8c9431a229a74a7"
 
   url_end = on_system_conditional linux: "AppImage", macos: "zip"
 
