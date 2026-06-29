@@ -18,15 +18,7 @@ cask "readyapi" do
 
   depends_on :macos
 
-  installer script: {
-    executable: "ReadyAPI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-  }
-
-  uninstall delete: [
-    "/Applications/ReadyAPI-#{version}.app",
-    "~/Desktop/ReadyAPI #{version}",
-  ]
+  app "ReadyAPI-#{version}.app"
 
   zap trash: [
     "~/Library/Application Support/ReadyAPI-#{version}",
