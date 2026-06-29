@@ -16,7 +16,7 @@ cask "libifd-cyberjack" do
     regex(/href=.*?pcsc[._-]cyberjack[._-]v?(\d+(?:\.\d+)+[^"' >]*)[._-]#{arch}(?:[._-]signed)?\.pkg/i)
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   pkg "pcsc-cyberjack_#{version}-#{arch}-signed.pkg"
 
