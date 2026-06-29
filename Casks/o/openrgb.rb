@@ -1,9 +1,9 @@
 cask "openrgb" do
   arch arm: "ARM64", intel: "Intel"
 
-  version "1.0rc2,0fca93e"
-  sha256 arm:   "0846520bdc6d7bf1abc6eabbf4f44c5e2507761fcf1e1a220e85c138056f33eb",
-         intel: "fb1b000293ecd2981134fdc6b26e9453c9db33977a0442a82605ec4f7ab2e5ef"
+  version "1.0rc3,6fbcf62"
+  sha256 arm:   "d90ec7045a54acfeb00b230ce5c173eb915234e032f9c9c98f1a5172dc7d1746",
+         intel: "050222f6a0740977980e59dd849182180faa6c6a8f19ffe4ea51a98451415c20"
 
   # TODO: Remove the `candidate` part of this url when updating to the next
   # stable version, so we only match stable versions going forward.
