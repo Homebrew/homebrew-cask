@@ -2,9 +2,9 @@ cask "jetbrains-air" do
   arch arm: "-aarch64"
   folder = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  version "262.43.17"
-  sha256 arm:   "3b0de6496a172b21ba8a0e991bc57cfc0bf036c973913534bfb407851bb9f247",
-         intel: "e6ec6c20a8e4f77c8d76496f03cec2df83ef9a3c8abf59ad754b18bb486f5372"
+  version "262.43.30"
+  sha256 arm:   "225f11fe99cdb21018dc5e7d43f1c60cd9a3769d113d707635dc9cfc6d8b2165",
+         intel: "de743fdce31299e9454ad8951017d98dce2e355452ec1c2842f22ff5613e8fa7"
 
   url "https://download.jetbrains.com/air/installers/macos_#{folder}/Air-#{version}#{arch}.dmg",
       verified: "download.jetbrains.com/air/installers/"
