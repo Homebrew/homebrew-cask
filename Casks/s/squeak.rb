@@ -1,6 +1,6 @@
 cask "squeak" do
-  version "6.0,22148"
-  sha256 "a1902d43ba77a0fc02ea31b38d9a290bacb08a82a5933a296c4c586657918bce"
+  version "6.0,22156"
+  sha256 "e0ba2ed3dba3bf16c018795af1bf43dc895e8436be20c0479639b952452217cf"
 
   url "https://files.squeak.org/#{version.csv.first}/Squeak#{version.csv.first}-#{version.csv.second}-64bit/Squeak#{version.csv.first}-#{version.csv.second}-64bit-All-in-One.zip"
   name "Squeak"
@@ -15,7 +15,7 @@ cask "squeak" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "Squeak#{version.csv.first}-#{version.csv.second}-64bit-All-in-One.app"
 
