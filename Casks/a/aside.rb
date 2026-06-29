@@ -1,0 +1,54 @@
+cask "aside" do
+  version "1.0.626.1"
+  sha256 "ad85eea5bd6e542444d8504047e14525c9f96ecdb3305e7552f01964c9f5704d"
+
+  url "https://releases.aside.com/dev-updater/Aside-#{version}.dmg"
+  name "Aside"
+  desc "The most intelligent AI assistant, but it's a browser."
+  homepage "https://aside.com/"
+
+  livecheck do
+    url "https://ptqgesmtzwdmeiknncqc.supabase.co/functions/v1/omaha/version_info.json"
+    strategy :json do |json|
+      json.dig("platforms", "mac", "version")
+    end
+  end
+
+  auto_updates true
+  depends_on macos: :monterey
+
+  app "Aside.app"
+
+  uninstall quit:      "at.studio.AsideBrowser",
+            launchctl: "at.studio.AsideBrowser.UpdaterPrivilegedHelper",
+            delete:    [
+              "/Library/LaunchDaemons/at.studio.AsideBrowser.UpdaterPrivilegedHelper.plist",
+              "/Library/PrivilegedHelperTools/at.studio.AsideBrowser.UpdaterPrivilegedHelper",
+            ]
+
+  zap launchctl: [
+        "at.studio.AsideKeystone.agent",
+        "at.studio.AsideKeystone.daemon",
+      ],
+      trash: [
+        "/Library/Aside/Aside Brand.plist",
+        "/Library/Aside/AsideSoftwareUpdate",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/at.studio.AsideBrowser.sfl*",
+        "~/Library/Application Support/Aside",
+        "~/Library/Caches/Aside",
+        "~/Library/Caches/at.studio.AsideKeystone",
+        "~/Library/Caches/at.studio.AsideKeystone.Agent",
+        "~/Library/Caches/at.studio.AsideBrowser",
+        "~/Library/HTTPStorages/at.studio.AsideBrowser",
+        "~/Library/HTTPStorages/at.studio.AsideBrowser.binarycookies",
+        "~/Library/LaunchAgents/at.studio.AsideKeystone.agent.plist",
+        "~/Library/LaunchAgents/at.studio.AsideKeystone.xpcservice.plist",
+        "~/Library/Preferences/at.studio.AsideKeystone.Agent.plist",
+        "~/Library/Preferences/at.studio.AsideBrowser.plist",
+        "~/Library/Saved Application State/at.studio.AsideBrowser.savedState",
+        "~/Library/WebKit/at.studio.AsideBrowser",
+      ],
+      rmdir: [
+        "/Library/Aside",
+      ]
+end
