@@ -4,7 +4,7 @@ cask "aside" do
 
   url "https://releases.aside.com/dev-updater/Aside-#{version}.dmg"
   name "Aside"
-  desc "The most intelligent AI assistant, but it's a browser."
+  desc "Most intelligent AI assistant, but it's a browser"
   homepage "https://aside.com/"
 
   livecheck do
@@ -19,8 +19,8 @@ cask "aside" do
 
   app "Aside.app"
 
-  uninstall quit:      "at.studio.AsideBrowser",
-            launchctl: "at.studio.AsideBrowser.UpdaterPrivilegedHelper",
+  uninstall launchctl: "at.studio.AsideBrowser.UpdaterPrivilegedHelper",
+            quit:      "at.studio.AsideBrowser",
             delete:    [
               "/Library/LaunchDaemons/at.studio.AsideBrowser.UpdaterPrivilegedHelper.plist",
               "/Library/PrivilegedHelperTools/at.studio.AsideBrowser.UpdaterPrivilegedHelper",
@@ -30,25 +30,23 @@ cask "aside" do
         "at.studio.AsideKeystone.agent",
         "at.studio.AsideKeystone.daemon",
       ],
-      trash: [
+      trash:     [
         "/Library/Aside/Aside Brand.plist",
         "/Library/Aside/AsideSoftwareUpdate",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/at.studio.AsideBrowser.sfl*",
         "~/Library/Application Support/Aside",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/at.studio.AsideBrowser.sfl*",
         "~/Library/Caches/Aside",
+        "~/Library/Caches/at.studio.AsideBrowser",
         "~/Library/Caches/at.studio.AsideKeystone",
         "~/Library/Caches/at.studio.AsideKeystone.Agent",
-        "~/Library/Caches/at.studio.AsideBrowser",
         "~/Library/HTTPStorages/at.studio.AsideBrowser",
         "~/Library/HTTPStorages/at.studio.AsideBrowser.binarycookies",
         "~/Library/LaunchAgents/at.studio.AsideKeystone.agent.plist",
         "~/Library/LaunchAgents/at.studio.AsideKeystone.xpcservice.plist",
-        "~/Library/Preferences/at.studio.AsideKeystone.Agent.plist",
         "~/Library/Preferences/at.studio.AsideBrowser.plist",
+        "~/Library/Preferences/at.studio.AsideKeystone.Agent.plist",
         "~/Library/Saved Application State/at.studio.AsideBrowser.savedState",
         "~/Library/WebKit/at.studio.AsideBrowser",
       ],
-      rmdir: [
-        "/Library/Aside",
-      ]
+      rmdir:     "/Library/Aside"
 end
