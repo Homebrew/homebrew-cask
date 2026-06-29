@@ -1,6 +1,6 @@
 cask "miditrail" do
-  version "2.0.3"
-  sha256 "c9143721f652f6ddf6a3134a3c2d20ca547663f1998e4a213630606f6ed23eb0"
+  version "2.1.0"
+  sha256 "e5133ff7470afb164abcd3ccb7e2cbc16c332f7642206661f3309958a1c4a19c"
 
   url "https://github.com/wdmss/MIDITrail-macOS/releases/download/v#{version}/MIDITrail-Ver.#{version}-macOS.zip",
       verified: "github.com/wdmss/MIDITrail-macOS/"
