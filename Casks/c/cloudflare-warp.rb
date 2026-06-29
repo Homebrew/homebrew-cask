@@ -15,7 +15,7 @@ cask "cloudflare-warp" do
 
   auto_updates true
   conflicts_with cask: "cloudflare-warp@beta"
-  depends_on :macos
+  depends_on macos: :sonoma
 
   pkg "Cloudflare_WARP_#{version}.pkg"
 
@@ -24,6 +24,10 @@ cask "cloudflare-warp" do
               "com.cloudflare.1dot1dot1dot1.macos.warp.daemon",
             ],
             quit:      "com.cloudflare.1dot1dot1dot1.macos",
+            script:    {
+              executable: "/Applications/Cloudflare WARP.app/Contents/Resources/uninstall.sh",
+              sudo:       true,
+            },
             pkgutil:   "com.cloudflare.1dot1dot1dot1.macos",
             delete:    [
               "/usr/local/bin/warp-cli",
