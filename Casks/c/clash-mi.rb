@@ -1,6 +1,6 @@
 cask "clash-mi" do
-  version "1.0.26.1200"
-  sha256 "2a952e6a20e7d12eee3dd62fb2beeee7fc2d467a87c2ffc85a18a6211b072085"
+  version "1.0.26.1201"
+  sha256 "e024ad8d6d9fa437f9c92cb365b9cc0e8ffb02d37460dd820eb9d43d6caf30d9"
 
   url "https://github.com/KaringX/clashmi/releases/download/#{version}/clashmi_#{version}_macos_universal.dmg"
   name "Clash Mi"
