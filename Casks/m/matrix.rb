@@ -1,6 +1,6 @@
 cask "matrix" do
-  version "0.1.87"
-  sha256 "b16e8d7f70a99783c2987a57cedbf2625eb150ee43da44e2f5c46e34786ed5af"
+  version "0.1.88"
+  sha256 "a0ec48c6e87f50336c4c689c6055701be075051d3bd396fe11c20fb886248114"
 
   url "https://download.matrix.build/mac/#{version}/Matrix-#{version}-arm64.dmg"
   name "Matrix"
@@ -21,14 +21,10 @@ cask "matrix" do
   uninstall quit: "com.matrixai.app"
 
   zap trash: [
-    "~/.browser-v2",
-    "~/.neo",
     "~/Library/Application Support/com.matrixai.app",
     "~/Library/Application Support/Matrix",
     "~/Library/Caches/com.matrixai.app",
     "~/Library/Caches/Matrix",
-    "~/Library/Caches/neo-cli-nodejs",
-    "~/Library/Caches/neo-cuadriver",
     "~/Library/HTTPStorages/com.matrixai.app",
     "~/Library/HTTPStorages/com.matrixai.app.binarycookies",
     "~/Library/Preferences/com.matrixai.app.plist",
