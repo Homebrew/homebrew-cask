@@ -8,13 +8,8 @@ cask "snapzy" do
   desc "Native screenshots, recording, annotation, and editing from the menu bar"
   homepage "https://snapzy.app/"
 
-  livecheck do
-    url "https://raw.githubusercontent.com/duongductrong/Snapzy/master/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
-
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Snapzy.app"
 
