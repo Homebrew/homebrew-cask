@@ -1,5 +1,5 @@
 cask "postman" do
-  arch arm: "osx_arm64", intel: "osx64"
+  arch arm: "osx_arm64", intel: "osx_64"
 
   version "12.16.4"
   sha256 arm:   "38c7213481b3176c80bc4b1295ef0c60b807fee8f72ee46857a097032e0687d7",
