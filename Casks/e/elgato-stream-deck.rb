@@ -19,7 +19,7 @@ cask "elgato-stream-deck" do
 
   pkg "Stream_Deck_#{version}.pkg"
 
-  uninstall launchctl: "com.elgato.StreamDeck",
+  uninstall launchctl: "com.elgato.StreamDeck*",
             quit:      "com.elgato.StreamDeck",
             pkgutil:   "com.elgato.StreamDeck",
             delete:    [
