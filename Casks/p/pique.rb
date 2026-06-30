@@ -13,7 +13,7 @@ cask "pique" do
     regex(/^v(\d+(?:\.\d+)+(?:b\d+)?)$/i)
   end
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   pkg "Pique-#{version}.pkg"
 
