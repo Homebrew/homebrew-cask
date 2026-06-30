@@ -13,11 +13,11 @@ cask "pique" do
     regex(/^v(\d+(?:\.\d+)+(?:b\d+)?)$/i)
   end
 
-  depends_on macos: :sequoia
+  depends_on macos: ">= :sequoia"
 
   pkg "Pique-#{version}.pkg"
 
-  uninstall pkgutil: "io.macadmins.Pique",
+  uninstall pkgutil: "io.macadmins.Pique"
 
   zap trash: "~/Library/Preferences/io.macadmins.pique.plist"
 end
