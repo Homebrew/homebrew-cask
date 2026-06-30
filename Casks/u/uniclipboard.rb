@@ -8,7 +8,7 @@ cask "uniclipboard" do
   url "https://github.com/UniClipboard/UniClipboard/releases/download/v#{version}/UniClipboard_#{version}_#{arch}.dmg",
       verified: "github.com/UniClipboard/UniClipboard/"
   name "UniClipboard"
-  desc "Privacy-first cross-device clipboard sync"
+  desc "Cross-device clipboard syncing tool"
   homepage "https://www.uniclipboard.app/"
 
   livecheck do
