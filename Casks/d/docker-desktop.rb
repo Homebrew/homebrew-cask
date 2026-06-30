@@ -70,7 +70,10 @@ cask "docker-desktop" do
               "com.docker.socket",
               "com.docker.vmnetd",
             ],
-            quit:      "com.docker.docker",
+            quit:      [
+              "com.docker.docker",
+              "com.electron.dockerdesktop",
+            ],
             delete:    [
               "/Library/PrivilegedHelperTools/com.docker.socket",
               "/Library/PrivilegedHelperTools/com.docker.vmnetd",
