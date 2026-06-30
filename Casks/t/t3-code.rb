@@ -18,8 +18,8 @@ cask "t3-code" do
   end
 
   on_macos do
-    sha256 arm:   "e91072fc84ae8ade0e2b73fbe0520e8fdfbe2b98cb1561783e6d995d7d944d14",
-           intel: "d860e9a9aca8b9e69c9586b0485d2b5fa8415b8f0fa655f2e8d7674db48127ab"
+    sha256 arm:   "4df23548031b302751144c0b6d5b0824b1578346e9550a6d96064298a80b05a3",
+           intel: "adfb83407e6d44b0ea2c193d3c90365ed709d3007ec389065e6fc0f0a56858c5"
 
     auto_updates true
     depends_on macos: :monterey
@@ -37,7 +37,7 @@ cask "t3-code" do
   end
 
   on_linux do
-    sha256 "db7b9aba6b3bd3859e5e2d88f3fc55849fde8f5ff538def623be6caf0ff838cc"
+    sha256 "fa6069fb03eb25157f1e96a29901dca81bb0a9970f5936ca255342556ec42e0a"
 
     depends_on arch: :x86_64
     app_image artifact, target: "T3 Code.AppImage"
