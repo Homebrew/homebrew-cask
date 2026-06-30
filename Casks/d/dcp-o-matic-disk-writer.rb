@@ -1,6 +1,6 @@
 cask "dcp-o-matic-disk-writer" do
-  version "2.18.43"
-  sha256 "e7118d8cdd47a4ad2a3f8bf9a0878f69d30241722d743fe2ed46a2fc3e7f90fe"
+  version "2.18.44"
+  sha256 "48e2bb608cade7bccf2973e398df769ebbd2bccf0989453d3a36522aa4b9f1de"
 
   url "https://download.dcpomatic.com/dl.php?id=osx-10.10-disk&version=#{version}"
   name "DCP-o-matic Disk Writer"
