@@ -4,7 +4,7 @@ cask "aside" do
 
   url "https://releases.aside.com/dev-updater/Aside-#{version}.dmg"
   name "Aside"
-  desc "Most intelligent AI assistant, but it's a browser"
+  desc "Web browser with built-in AI assistant"
   homepage "https://aside.com/"
 
   livecheck do
