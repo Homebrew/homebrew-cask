@@ -3,7 +3,7 @@ cask "lm-studio" do
   livecheck_arch = on_arch_conditional intel: "x86", arm: "arm64"
   os macos: "darwin", linux: "linux"
 
-  version "0.4.16,2"
+  version "0.4.18,1"
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
 
@@ -26,7 +26,7 @@ cask "lm-studio" do
   auto_updates true
 
   on_macos do
-    sha256 "1a3f2632b34d0d7343c858f6a777a689cdb19ace2d592a154b65d72ec11e102e"
+    sha256 "1fcd8f8f4d26f2c0be139eb3408674338c1d6025ffdf139fa18c584c82d85bd2"
     depends_on arch: :arm64
 
     app "LM Studio.app"
@@ -48,8 +48,8 @@ cask "lm-studio" do
   end
 
   on_linux do
-    sha256 arm64_linux:  "b219f75be8a5eba397f150e3efe8581602ff37c199d403c1d8c1fce2ea021ce3",
-           x86_64_linux: "7da2ed8fff4ce7d2917443071e04c23cb1b81a5e42ee191d02099a4bf3b9ace9"
+    sha256 arm64_linux:  "7524606dfd97a3b271a933fed95aad3456c71c520d75ab9c3cc08c9f050860f3",
+           x86_64_linux: "2a9ce766ed6d89786d5bd5c3bdb302807f71c86c9a3b7eff175b16a8ad510949"
 
     app_image "LM-Studio-#{version.tr(",", "-")}-#{arch}.AppImage", target: "LM Studio.AppImage"
   end
