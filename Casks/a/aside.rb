@@ -1,6 +1,6 @@
 cask "aside" do
-  version "1.0.626.1"
-  sha256 "ad85eea5bd6e542444d8504047e14525c9f96ecdb3305e7552f01964c9f5704d"
+  version "1.0.630.1"
+  sha256 "8e2dc722f57fe9f08884bbf4c7a577e2938e3eab7ef1496412a893c49ad93216"
 
   url "https://releases.aside.com/dev-updater/Aside-#{version}.dmg"
   name "Aside"
