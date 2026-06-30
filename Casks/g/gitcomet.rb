@@ -25,6 +25,7 @@ cask "gitcomet" do
     uninstall quit: "ai.autoexplore.gitcomet"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.autoexplore.gitcomet.sfl*",
       "~/Library/Application Support/gitcomet",
       "~/Library/Logs/gitcomet",
       "~/Library/Preferences/ai.autoexplore.gitcomet.plist",
