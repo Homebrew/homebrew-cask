@@ -1,12 +1,12 @@
 cask "anypointstudio" do
   arch arm: "Arm", intel: "64"
 
-  version "7.25.0"
-  sha256 arm:   "0dec5479ae4d44fd2df228769b680fe5a8a66296d00cb6271e886e5f3fe96300",
-         intel: "4e8fca0660a568693db4da21602e199a55975bd101dcca0df07cb5d857c0d995"
+  version "7.26.0"
+  sha256 arm:   "04d3316b8175f7482f4b04b4b049a17db48a355bb28c2102cf0358034ff3924d",
+         intel: "86e1ac3c75c0d993ee67800af624c6974fa30864ca953b046138dba9c02b859c"
 
-  url "https://mule-studio.s3.amazonaws.com/#{version}-GA/AnypointStudio-#{version}-macos#{arch}.zip",
-      verified: "mule-studio.s3.amazonaws.com/"
+  url "https://www.mulesoft.com/downloads/studio/latest/AnypointStudio-#{version}-macos#{arch}.zip",
+      referer: "https://www.mulesoft.com/api/products"
   name "Anypoint Studio"
   desc "Eclipse-based IDE for designing and testing Mule applications"
   homepage "https://www.mulesoft.com/platform/studio"
