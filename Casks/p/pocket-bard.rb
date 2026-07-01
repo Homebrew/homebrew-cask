@@ -8,7 +8,7 @@ cask "pocket-bard" do
 
   url "https://downloads.pocketbard.app/desktop/channels/stable/pocketbard-#{version.csv.first}-#{version.csv.second}-mac-#{arch}.zip"
   name "Pocket Bard"
-  desc "Easiest immersive audio solution for your TTRPG toolkit"
+  desc "TTRPG ambient audio and sound effects"
   homepage "https://www.pocketbard.app/"
 
   livecheck do
@@ -24,11 +24,9 @@ cask "pocket-bard" do
   app "Pocket Bard.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pocketbard.pocketbard.sfl*",
-    "~/Library/Application Support/pocketbard",
+    "~/Library/Application Support/com.pocketbard.pocketbard",
     "~/Library/Caches/com.pocketbard.pocketbard",
     "~/Library/HTTPStorages/com.pocketbard.pocketbard",
     "~/Library/Preferences/com.pocketbard.pocketbard.plist",
-    "~/Library/Saved Application State/com.pocketbard.pocketbard.savedState",
   ]
 end
