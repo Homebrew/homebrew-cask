@@ -10,7 +10,7 @@ cask "stirling-pdf" do
 
   depends_on :macos
 
-  app "Stirling-PDF.app"
+  app "Stirling PDF.app"
 
   zap trash: [
     "~/Library/Application Support/Stirling-PDF",
