@@ -27,6 +27,7 @@ jobs:
     if: >-
       contains(fromJSON('["Homebrew/brew", "Homebrew/homebrew-core", "Homebrew/homebrew-cask"]'), github.repository) &&
       github.event.pull_request.user.login != 'BrewTestBot' &&
+      github.event.pull_request.user.login != 'lablicateqa' &&
       github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     permissions:
