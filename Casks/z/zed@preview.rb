@@ -23,7 +23,7 @@ cask "zed@preview" do
   app "Zed Preview.app"
   binary "#{appdir}/Zed Preview.app/Contents/MacOS/cli", target: "zed-preview"
 
-  generate_completions_from_executable "zed-preview", "--completions"
+  generate_completions_from_executable "zed-preview", "--completions", shells: [:bash, :zsh, :fish, :pwsh]
 
   zap trash: [
     "~/.config/zed",
