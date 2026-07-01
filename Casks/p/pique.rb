@@ -7,12 +7,6 @@ cask "pique" do
   desc "Quick Look extension for syntax-highlighted file previews"
   homepage "https://github.com/macadmins/pique"
 
-  livecheck do
-    url "https://github.com/macadmins/pique.git"
-    strategy :git
-    regex(/^v(\d+(?:\.\d+)+(?:b\d+)?)$/i)
-  end
-
   depends_on macos: :sequoia
 
   pkg "Pique-#{version}.pkg"
