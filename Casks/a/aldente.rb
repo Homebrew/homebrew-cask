@@ -1,6 +1,6 @@
 cask "aldente" do
-  version "1.37.3"
-  sha256 "468ac2c11f1d3310e4e9a3c68d32bc8d514282c63d6d2e189f469415a468bdee"
+  version "1.38"
+  sha256 "5e079f1ce5614a76cf4fab6cc7d1b40cc95dc63e5ab217a777602bf2d5cce9e7"
 
   url "https://apphousekitchen.com/aldente/AlDente#{version}.dmg"
   name "AlDente"
@@ -13,7 +13,7 @@ cask "aldente" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "AlDente.app"
 
