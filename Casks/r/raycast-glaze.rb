@@ -1,4 +1,4 @@
-cask "glaze-raycast" do
+cask "raycast-glaze" do
   version "0.8.0"
   sha256 "a8c23e5c92fe7d0b53add89b3e27ede58be1ec20d8c28356708dfc579eba38d8"
 
@@ -16,9 +16,8 @@ cask "glaze-raycast" do
     end
   end
 
-  no_autobump! because: :bumped_by_upstream
-
   auto_updates true
+  conflicts_with cask: "glaze-app"
   depends_on arch: :arm64
   depends_on macos: :tahoe
 
