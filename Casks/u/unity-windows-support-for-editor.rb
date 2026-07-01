@@ -1,6 +1,6 @@
 cask "unity-windows-support-for-editor" do
-  version "6000.5.1f1,0d9463e84828"
-  sha256 "8af7189356048b2d42dea0be914744e9a3769710b28ccc6bb88d4d0d277e8eac"
+  version "6000.5.2f1,eb73d3b415a1"
+  sha256 "3c008019c96ec2d9f0d2d1fad2df56586fbb4e6d1de06af15be3e9b3a4f10009"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
