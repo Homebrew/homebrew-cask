@@ -1,6 +1,6 @@
 cask "stirling-pdf" do
-  version "2.13.2"
-  sha256 "7a39c704b32e17337e4502d2ab13d4d854d3f4b336d77008cfbf44a5547af45b"
+  version "2.14.0"
+  sha256 "d970bf8d8f793804ebf1bac16e63e1891c3c01c7d84c9921c09dc0b295f27244"
 
   url "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v#{version}/Stirling-PDF-macos-universal.dmg",
       verified: "github.com/Stirling-Tools/Stirling-PDF/"
@@ -10,7 +10,7 @@ cask "stirling-pdf" do
 
   depends_on :macos
 
-  app "Stirling-PDF.app"
+  app "Stirling PDF.app"
 
   zap trash: [
     "~/Library/Application Support/Stirling-PDF",
