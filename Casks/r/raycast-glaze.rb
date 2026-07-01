@@ -1,8 +1,8 @@
 cask "raycast-glaze" do
-  version "0.8.0"
+  version "0.8.0,7639b72eb7"
   sha256 "a8c23e5c92fe7d0b53add89b3e27ede58be1ec20d8c28356708dfc579eba38d8"
 
-  url "https://glaze.raycast-releases.com/Glaze_#{version}_CI_Production_7639b72eb7_arm64.dmg",
+  url "https://glaze.raycast-releases.com/Glaze_#{version.csv.first}_CI_Production_#{version.csv.second}_arm64.dmg",
       verified: "glaze.raycast-releases.com/"
   name "Glaze"
   desc "Build custom desktop apps for you and your team"
@@ -10,9 +10,12 @@ cask "raycast-glaze" do
 
   livecheck do
     url "https://glaze.raycast-releases.com/latest.json"
-    regex(/Glaze[._-]v?(\d+(?:\.\d+)+)[._-]CI/i)
+    regex(/Glaze[._-]v?(\d+(?:\.\d+)+)[._-]CI[._-]Production[._-](\h+)[._-]arm64/i)
     strategy :json do |json, regex|
-      json["url"][regex, 1]
+      match = json["url"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
@@ -34,7 +37,8 @@ cask "raycast-glaze" do
     "~/Library/Application Support/app.glaze.macos.main",
     "~/Library/Caches/app.glaze.macos.main",
     "~/Library/HTTPStorages/app.glaze.macos.main",
+    "~/Library/Logs/app.glaze.macos.main",
     "~/Library/Preferences/app.glaze.macos.main.plist",
-    "~/Library/Saved Application State/app.glaze.macos.main.savedState",
+    "~/Library/WebKit/app.glaze.macos.main",
   ]
 end
