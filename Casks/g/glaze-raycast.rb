@@ -1,0 +1,41 @@
+cask "glaze-raycast" do
+  version "0.8.0"
+  sha256 "a8c23e5c92fe7d0b53add89b3e27ede58be1ec20d8c28356708dfc579eba38d8"
+
+  url "https://glaze.raycast-releases.com/Glaze_#{version}_CI_Production_7639b72eb7_arm64.dmg",
+      verified: "glaze.raycast-releases.com/"
+  name "Glaze"
+  desc "Build custom desktop apps for you and your team"
+  homepage "https://www.glaze.app/"
+
+  livecheck do
+    url "https://glaze.raycast-releases.com/latest.json"
+    regex(/Glaze[._-]v?(\d+(?:\.\d+)+)[._-]CI/i)
+    strategy :json do |json, regex|
+      json["url"][regex, 1]
+    end
+  end
+
+  no_autobump! because: :bumped_by_upstream
+
+  auto_updates true
+  depends_on arch: :arm64
+  depends_on macos: :tahoe
+
+  app "Glaze.app"
+
+  uninstall launchctl: [
+              "app.glaze.macos.main.cross-app-broker",
+              "app.glaze.macos.main.updater",
+              "app.glaze.macos.main.updater.daemon",
+            ],
+            quit:      "app.glaze.macos.main"
+
+  zap trash: [
+    "~/Library/Application Support/app.glaze.macos.main",
+    "~/Library/Caches/app.glaze.macos.main",
+    "~/Library/HTTPStorages/app.glaze.macos.main",
+    "~/Library/Preferences/app.glaze.macos.main.plist",
+    "~/Library/Saved Application State/app.glaze.macos.main.savedState",
+  ]
+end
