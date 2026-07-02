@@ -22,6 +22,5 @@ cask "toolhive-studio" do
   zap trash: [
     "~/Library/Application Support/ToolHive",
     "~/Library/Logs/ToolHive",
-    "~/Library/Preferences/dev.toolhive.studio.plist",
   ]
 end
