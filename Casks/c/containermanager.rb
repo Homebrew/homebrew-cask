@@ -4,15 +4,15 @@ cask "containermanager" do
 
   url "https://github.com/bartreardon/ContainerManager-App/releases/download/v#{version}/ContainerManager.dmg"
   name "ContainerManager"
-  desc "App for managing Apple's container tool without dropping to a terminal."
+  desc "App for managing Apple's container tool without dropping to a terminal"
   homepage "https://github.com/bartreardon/ContainerManager-App"
 
   depends_on macos: :tahoe
-  
+
   app "ContainerManager.app"
 
   zap trash: [
-       "~/Library/Caches/com.apple.containermanagerd",
-       "~/Library/ContainerManager",
-     ]
+    "~/Library/Caches/com.apple.containermanagerd",
+    "~/Library/ContainerManager",
+  ]
 end
