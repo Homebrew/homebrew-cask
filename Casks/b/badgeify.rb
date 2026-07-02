@@ -1,6 +1,6 @@
 cask "badgeify" do
-  version "1.13.2"
-  sha256 "d6aec4dbed547e5a9e5f864a698c7f98ac4cf30f87d1ae6b08d557e90d9466cb"
+  version "1.13.3"
+  sha256 "58b624948611e3d78425d03a3f16757148cf28fc841610ba633748fadd9c7d8c"
 
   url "https://api.badgeify.app/release/download/darwin/universal/#{version}"
   name "Badgeify"
