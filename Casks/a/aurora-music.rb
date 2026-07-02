@@ -8,7 +8,7 @@ cask "aurora-music" do
   url "https://github.com/nanjingya/Aurora-Music/releases/download/v#{version}/Aurora-Music-#{version}-mac-#{arch}.dmg",
       verified: "github.com/nanjingya/Aurora-Music/"
   name "Aurora Music"
-  desc "Immersive music player with lyrics stage, particle visuals, and 3D playlist shelf"
+  desc "Immersive music player with lyrics, particle visuals, and 3D playlist shelf"
   homepage "https://github.com/nanjingya/Aurora-Music"
 
   livecheck do
@@ -20,7 +20,5 @@ cask "aurora-music" do
 
   app "Aurora Music.app"
 
-  zap trash: [
-    "~/Library/Application Support/Aurora Music",
-  ]
+  zap trash: "~/Library/Application Support/Aurora Music"
 end
