@@ -17,22 +17,22 @@ cask "gpgfrontend" do
       end
     end
     on_sonoma :or_newer do
-      version "2.1.12"
+      version "2.2.1"
 
       on_sonoma do
         macos_version = "14"
 
-        sha256 "a3ce5e9460bcafbaf10de2c7a3848056484590147912a23a3aa60195ecf56ff5"
+        sha256 "b263c1e6576a3ec06e38379f433cbc1a86c99bcadd96214ba4ed96fd9f699873"
       end
       on_sequoia do
         macos_version = "15"
 
-        sha256 "7ac4d44d07b8a0931b815768dcdb60c3e9cd46305a5d7b4ac083e1fda218ea59"
+        sha256 "8b2999d223ca7c35691ece6a3eb80a6822f35ba9c29e60ba91f2d573885d17d8"
       end
       on_tahoe :or_newer do
         macos_version = "26"
 
-        sha256 "af295876bd002d7ee0761af15d3249f1a12ae93baf5cc36ced5db04192232a60"
+        sha256 "4ef0ba76b0d0eae19be45efc3df53b8dcd3bfa5019cc436e160adb792660b554"
       end
     end
   end
@@ -50,8 +50,8 @@ cask "gpgfrontend" do
     on_sequoia :or_newer do
       macos_version = "15-intel"
 
-      version "2.1.12"
-      sha256 "6fc0de6f444251162e8f4f8901e219939605f62772d7c00ea2d6c23e588f9ebc"
+      version "2.2.1"
+      sha256 "a174f0da40e53c49b6d9d2f9ec7fb28edce3831d9beed4bfd3453c1ac4bb387d"
     end
   end
 
