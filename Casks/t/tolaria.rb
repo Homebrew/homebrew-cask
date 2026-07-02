@@ -42,6 +42,7 @@ cask "tolaria" do
     uninstall quit: "club.refactoring.tolaria"
 
     zap trash: [
+      "~/.config/com.tolaria.app",
       "~/Library/Application Support/com.tolaria.app",
       "~/Library/Caches/club.refactoring.tolaria",
       "~/Library/Preferences/club.refactoring.tolaria.plist",
