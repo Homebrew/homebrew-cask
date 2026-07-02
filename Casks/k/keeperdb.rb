@@ -5,7 +5,7 @@ cask "keeperdb" do
   url "https://keepersecurity.com/pam/keeperdb/v#{version}/KeeperDB_#{version}_universal.dmg"
   name "KeeperDB"
   desc "Database management tool for Postgres, MySQL, SQLite, MSSQL, Oracle, Redshift"
-  homepage "https://www.keepersecurity.com/"
+  homepage "https://www.keepersecurity.com/keeperdb/"
 
   livecheck do
     url "https://keepersecurity.com/pam/keeperdb/latest.txt"
