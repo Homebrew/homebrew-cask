@@ -15,7 +15,6 @@ cask "toolhive-studio" do
     strategy :github_latest
   end
 
-  depends_on arch: :arm64
   depends_on macos: :monterey
 
   app "ToolHive.app"
