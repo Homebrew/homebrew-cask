@@ -23,6 +23,8 @@ cask "zed" do
   app "Zed.app"
   binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"
 
+  generate_completions_from_executable "zed", "--completions", shells: [:bash, :zsh, :fish, :pwsh]
+
   zap trash: [
     "~/.config/zed",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zed.zed.sfl*",
