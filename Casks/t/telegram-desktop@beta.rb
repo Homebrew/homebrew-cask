@@ -1,6 +1,6 @@
 cask "telegram-desktop@beta" do
-  version "6.9.3"
-  sha256 "9940a9e28219af569b6ed5841fe9026f2ac4c8049317b06289b4a06f1fb40c6e"
+  version "6.9.4.beta"
+  sha256 "c51c75620162681ad99134d94cd2ea76031575c09ee14214af64237091a9c564"
 
   url "https://github.com/telegramdesktop/tdesktop/releases/download/v#{version.major_minor_patch}/tsetup.#{version}.dmg",
       verified: "github.com/telegramdesktop/tdesktop/"
