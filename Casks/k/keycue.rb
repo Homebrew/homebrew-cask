@@ -1,6 +1,6 @@
 cask "keycue" do
-  version "11.1.1"
-  sha256 "cd5da2bada2130ee09a2b36b20bc52e3c49ebb90122b38aedb2f36087bd0908f"
+  version "11.2"
+  sha256 "4974f30dfeda32e56756d977182acabedadd82622882e3b1c1b632cbac69bfce"
 
   url "https://www.ergonis.com/downloads/products/keycue/KeyCue#{version.no_dots}-Install.dmg",
       user_agent: :fake
@@ -13,7 +13,7 @@ cask "keycue" do
     regex(%r{/keycue/mac/v?(\d+(?:\.\d+)+)/}i)
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "KeyCue.app"
 
