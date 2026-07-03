@@ -1,6 +1,6 @@
 cask "bettercmdtab" do
-  version "26.6,20260702140005"
-  sha256 "6211d6413355bac99ab17d0d3f7de7d616d7687c45ca75fb65fa11fb9d30dd96"
+  version "26.6.1,20260703123053"
+  sha256 "7b95e0d033160143ccfa42d7204e807c8a8e8fe5dbb270f55f793c43c9974136"
 
   url "https://github.com/rokartur/BetterCmdTab/releases/download/v#{version.csv.first}/BetterCmdTab-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/rokartur/BetterCmdTab/"
