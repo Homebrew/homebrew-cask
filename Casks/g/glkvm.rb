@@ -1,6 +1,6 @@
 cask "glkvm" do
-  version "1.4.0,1772531687978,release2"
-  sha256 "250a730385a68c10324d4b1b22befd3d322bf374d42352753159378d96794c93"
+  version "1.5.0,1782704518562,release1"
+  sha256 "5223d52f61a88e154e9233cf6e87f75baa5e5d3e8325e924f56b0b544771853d"
 
   url "https://static.gl-inet.com/edge-app-staging/kvm-mac/#{version.csv.first}#{"-#{version.csv.third}" if version.csv.third}/#{version.csv.second}/gl-kvm-#{version.csv.first}#{"-#{version.csv.third}" if version.csv.third}.dmg"
   name "GLKVM"
