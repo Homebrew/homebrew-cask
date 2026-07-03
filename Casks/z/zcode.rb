@@ -12,7 +12,7 @@ cask "zcode" do
 
   livecheck do
     url :homepage
-    regex(/href=.*ZCode[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg/i)
+    regex(%r{href="https://cdn-zcode\.z\.ai/.*?ZCode[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg"}i)
   end
 
   auto_updates true
