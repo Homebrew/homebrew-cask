@@ -1,8 +1,12 @@
 cask "zen@twilight" do
+  arch arm: "aarch64", intel: "x86_64"
+
   version "1.22t,20260702090219"
   sha256 :no_check
 
-  url "https://github.com/zen-browser/desktop/releases/download/twilight-1/zen.macos-universal.dmg",
+  artifact = on_system_conditional macos: "zen.macos-universal.dmg", linux: "zen-#{arch}.AppImage"
+
+  url "https://github.com/zen-browser/desktop/releases/download/twilight-1/#{artifact}",
       verified: "github.com/zen-browser/desktop/"
   name "Zen Twilight"
   desc "Gecko based web browser"
@@ -16,19 +20,27 @@ cask "zen@twilight" do
   end
 
   auto_updates true
-  depends_on :macos
 
-  app "Twilight.app"
+  on_macos do
+    app "Twilight.app"
+    binary "#{appdir}/Twilight.app/Contents/MacOS/zen", target: "zen-twilight"
 
-  zap trash: [
-        "~/Library/Application Support/Zen",
-        "~/Library/Caches/Mozilla/updates/Applications/Twilight",
-        "~/Library/Caches/Mozilla/updates/Applications/Zen Twilight",
-        "~/Library/Caches/Zen",
-        "~/Library/Preferences/app.zen-browser.zen.plist",
-        "~/Library/Preferences/org.mozilla.com.zen.browser.plist",
-        "~/Library/Saved Application State/app.zen-browser.zen.savedState",
-        "~/Library/Saved Application State/org.mozilla.com.zen.browser.savedState",
-      ],
-      rmdir: "~/Library/Caches/Mozilla"
+    uninstall quit: "app.zen-browser.zen"
+
+    zap trash: [
+          "~/Library/Application Support/Zen",
+          "~/Library/Caches/Mozilla/updates/Applications/Twilight",
+          "~/Library/Caches/Mozilla/updates/Applications/Zen Twilight",
+          "~/Library/Caches/Zen",
+          "~/Library/Preferences/app.zen-browser.zen.plist",
+          "~/Library/Preferences/org.mozilla.com.zen.browser.plist",
+          "~/Library/Saved Application State/app.zen-browser.zen.savedState",
+          "~/Library/Saved Application State/org.mozilla.com.zen.browser.savedState",
+        ],
+        rmdir: "~/Library/Caches/Mozilla"
+  end
+
+  on_linux do
+    app_image artifact, target: "Zen Twilight.AppImage"
+  end
 end
