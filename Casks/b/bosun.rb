@@ -2,7 +2,8 @@ cask "bosun" do
   version "1.2.2"
   sha256 "f51d35ca30652fc227a1e66eec3c40a28ddeda35a78ac08523a1c593c634bb7a"
 
-  url "https://github.com/iwunkhaus/bosun-releases/releases/download/#{version}/Bosun.dmg"
+  url "https://github.com/iwunkhaus/bosun-releases/releases/download/#{version}/Bosun.dmg",
+      verified: "github.com/iwunkhaus/bosun-releases/"
   name "Bosun"
   desc "Menu bar network port, tunnel, VPN, and Docker visibility tool"
   homepage "https://bosun.dev/"
