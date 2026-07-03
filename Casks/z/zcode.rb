@@ -1,9 +1,9 @@
 cask "zcode" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.2.3"
-  sha256 arm:   "10d3ebb6cae5f1d30d8bfc1919c33da1ad92aa4c198a7b83159e8d28a039ffcc",
-         intel: "5c31d1da903d665eff53b76e1fdb11e2009dfbcc8c5fad8f57f294d1bbcae8cd"
+  version "3.2.4"
+  sha256 arm:   "7755502e3dd0daa794e6be44290418c7890dfe9f7d875948aee2a93c1ae33e28",
+         intel: "bcf04a1da7ab5bcd50c18dff7ad9df121aaf404110610e25d291150fc34c3a17"
 
   url "https://cdn-zcode.z.ai/zcode/electron/releases/#{version}/ZCode-#{version}-mac-#{arch}.dmg"
   name "ZCode"
@@ -12,7 +12,7 @@ cask "zcode" do
 
   livecheck do
     url :homepage
-    regex(/ZCode[._-]v?(\d+(?:\.\d+)+)-mac-arm64\.dmg/i)
+    regex(/href=.*ZCode[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg/i)
   end
 
   auto_updates true
