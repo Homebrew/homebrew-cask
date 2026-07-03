@@ -6,11 +6,11 @@ cask "tev" do
     arch arm: "-arm"
   end
 
-  version "2.12.2"
-  sha256 arm:          "acab07c8997f3356cd11f715c8d55be73020d98e813a794ead82121e89e9de8d",
-         intel:        "0482eb9e348d6a03c836389dfc48fb81ad99a84842909130bf09cc52020b566a",
-         arm64_linux:  "8ecc9b1f9003202f33c437fcaa7e5d01544ad8c85d938781df924ae09b52721d",
-         x86_64_linux: "dfecc8900bd8b012e4efd4612791a9eff1d175f6c1b35c75f57a2f232c47a0a7"
+  version "2.13.0"
+  sha256 arm:          "3289be8ae50930cd0cae73e6118229bdacec23dfc796810d333c422742dd899e",
+         intel:        "b33f2a8637af32a4ad061881d87d768baa07be1547df7e6c6487381ecebd4bc1",
+         arm64_linux:  "7f7a16015a3234dcf10d29015761cee311439c2290c131b0c8d9fdf7c90adf15",
+         x86_64_linux: "c59fd5c933c40d6f22145fbe432936a35aea27c633cfee187853b695fb625058"
 
   url_end = on_system_conditional linux: ".appimage", macos: ".dmg"
 

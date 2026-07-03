@@ -1,6 +1,6 @@
 cask "reminders-menubar" do
-  version "2.1.0"
-  sha256 "8e4f43e089849950f4631b121a8a4536352c457622ab7c1a4e36441d6303dff9"
+  version "2.1.1"
+  sha256 "1eafb0ef195f61c7e72823899b3ac031a7e6fc4967b56a459b2a78cd5a1795a1"
 
   url "https://github.com/DamascenoRafael/reminders-menubar/releases/download/v#{version}/reminders-menubar.zip"
   name "Reminders MenuBar"

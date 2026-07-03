@@ -1,9 +1,9 @@
 cask "siyuan" do
   arch arm: "-arm64"
 
-  version "3.6.5"
-  sha256 arm:   "8fc2ff58c6ed400514cb27e44d70315a7f861d77cf3d7b16d64f2644171186a9",
-         intel: "16e7560eb01c8e1d6af88662c07305131fde3ef4e050a91fa06c1593b6e5ed29"
+  version "3.7.0"
+  sha256 arm:   "10dbe06db60ed206f6269d06f6a518b4d26340fdb8c8996c443b62418254f155",
+         intel: "897fed06aa11ff233de41251147fdf3c263bb20f674bd52690d75eb8e5b26758"
 
   url "https://github.com/siyuan-note/siyuan/releases/download/v#{version}/siyuan-#{version}-mac#{arch}.dmg"
   name "SiYuan"
@@ -11,7 +11,7 @@ cask "siyuan" do
   homepage "https://github.com/siyuan-note/siyuan"
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "SiYuan.app"
 

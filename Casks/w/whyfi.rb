@@ -1,8 +1,8 @@
 cask "whyfi" do
-  version "1.4.2,22"
-  sha256 "265062a55d3675f1aafb6155d7a5aec5a8fe02b8c0dba46adb16b53161b33404"
+  version "1.4.3,23"
+  sha256 "d8dee58a92b5377073d627a1a9addf1afdc182c92390bba7dcdcd45edc232f8e"
 
-  url "https://cdn.amore.computer/releases/com.whyfi.app/#{version.csv.first}%20(#{version.csv.second})/WhyFi.dmg",
+  url "https://cdn.amore.computer/releases/com.whyfi.app/#{version.csv.first}-#{version.csv.second}/WhyFi.dmg",
       verified: "cdn.amore.computer/"
   name "WhyFi"
   desc "Menu bar Wi-Fi monitor and diagnostics app"

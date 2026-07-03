@@ -1,7 +1,7 @@
 cask "zen" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.21.4b"
+  version "1.21.5b"
 
   filename = on_system_conditional macos: "zen.macos-universal.dmg", linux: "zen-#{arch}.AppImage"
 
@@ -21,7 +21,7 @@ cask "zen" do
   auto_updates true
 
   on_macos do
-    sha256 "40a708776e8f251859a4fa73ed485f862eb5e1b97be356bfe014b414504fdb4a"
+    sha256 "e6ab356ede41d6973f2f3c165edf974dd04d94b497aad0132f80d1aa25d4a566"
 
     conflicts_with cask: "zen-privacy"
 
@@ -44,8 +44,8 @@ cask "zen" do
   end
 
   on_linux do
-    sha256 arm64_linux:  "c330ea0436fe973eb02908ad1485dd36015947423e285be122580b66e9efac5f",
-           x86_64_linux: "ea1763434255eff81d79f91f08a415b526a1d66663d1fa6cded40e0c87da4c05"
+    sha256 arm64_linux:  "2356dbe9eb0f06173fb4e1039630794dcf4751ba5533e7fa7ed30de439446899",
+           x86_64_linux: "95a1e64f16189614cbf45de88532b0ef4ac21022a0d795fb69b1cef5654c3a96"
 
     app_image filename, target: "Zen.AppImage"
   end

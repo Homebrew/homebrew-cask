@@ -1,9 +1,9 @@
 cask "zed@preview" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.9.0"
-  sha256 arm:   "9a38637cabeab972fddd98df727fd58594f5276217c7e5e5dc5263627fc184b6",
-         intel: "5d325cb557bfc64a8d30beced20faf08e373fc8b63085c0c6eefee376740ba5b"
+  version "1.10.0"
+  sha256 arm:   "edd8b19ceda3dbe922610ca594660333ad96dbf53a96174da8b071652ae4721f",
+         intel: "3fa939c2abef15d28fe59ff394deb15091ead3bc9b022211ee2dffaf90ee23f6"
 
   url "https://zed.dev/api/releases/preview/#{version}/Zed-#{arch}.dmg"
   name "Zed Preview"
@@ -23,7 +23,8 @@ cask "zed@preview" do
   app "Zed Preview.app"
   binary "#{appdir}/Zed Preview.app/Contents/MacOS/cli", target: "zed-preview"
 
-  generate_completions_from_executable "zed-preview", "--completions"
+  generate_completions_from_executable "#{HOMEBREW_PREFIX}/bin/zed-preview", "--completions",
+                                       shells: [:bash, :zsh, :fish, :pwsh]
 
   zap trash: [
     "~/.config/zed",

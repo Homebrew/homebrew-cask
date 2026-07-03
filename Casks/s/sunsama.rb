@@ -1,9 +1,9 @@
 cask "sunsama" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.4.7,260603582h9hybp"
-  sha256 arm:   "fb63ba25192bddd40b1117c72fda1973ab00301b544bc1e940782b4c7d56b178",
-         intel: "ab310980bc1e16fb544d9aa386eba96c7e72311ede4545d448561fa39ece0de0"
+  version "3.4.8,260702zbryxepji"
+  sha256 arm:   "7a4201275c5dffaf93b524b023a1e1cfe3bd1d10650bf069fb515a3847c7f281",
+         intel: "645be094e198641ae2199194b15cd0fac16b174a450b51be9e20e62bc0c8064d"
 
   url "https://download.todesktop.com/2003096gmmnl0g1/Sunsama%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/2003096gmmnl0g1/"

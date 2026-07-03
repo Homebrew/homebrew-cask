@@ -1,11 +1,8 @@
 cask "basecamp" do
-  arch arm: "arm64", intel: "x64"
+  version "5.1.4"
+  sha256 "9fd30377ca4f02beaa2af073441836905728ff7a007e597e6c0f497bb7f50d33"
 
-  version "5.1.3"
-  sha256 arm:   "a26fe02d79299f2f7feb444dbecb6cbd1c47416bf6eff774be42cf0264deda6c",
-         intel: "5e2af7ae9060c183036ccf02179bc9494b9b30d8bec2da72432df5fb2ce7d404"
-
-  url "https://basecamp.com/desktop/Basecamp-#{version}-mac-#{arch}.zip"
+  url "https://basecamp.com/desktop/Basecamp-#{version}-mac.zip"
   name "Basecamp"
   desc "All-In-One Toolkit for Working Remotely"
   homepage "https://basecamp.com/"

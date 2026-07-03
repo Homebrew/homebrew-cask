@@ -1,6 +1,6 @@
 cask "annotate" do
-  version "1.3.1"
-  sha256 "3a4ea15463c541eaa93faacfa6ba72e8009bd247acc8d670f30b4f3d997bc70d"
+  version "1.4.1"
+  sha256 "103c61dce4f8744c057f9e5980d217b136ee54bb21b7d4e1585111926bc3e607"
 
   url "https://github.com/epilande/Annotate/releases/download/v#{version}/Annotate-#{version}.dmg"
   name "Annotate"
