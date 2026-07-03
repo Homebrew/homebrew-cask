@@ -37,8 +37,6 @@ cask "docker-desktop" do
          target: "/usr/local/bin/docker-credential-osxkeychain"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/kubectl",
          target: "/usr/local/bin/kubectl.docker"
-  binary "#{appdir}/Docker.app/Contents/Resources/cli-plugins/docker-compose",
-         target: "/usr/local/cli-plugins/docker-compose"
   bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion"
   bash_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion"
   fish_completion "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion"
