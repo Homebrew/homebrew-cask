@@ -1,6 +1,6 @@
 cask "altar-ai" do
-  version "1.12.6"
-  sha256 "cac556eb1603c9a9f40bb933af0620b32134179d29c0c0d5a12dec92041885b6"
+  version "1.12.7"
+  sha256 "be04ac3ee0b48aa7ab3a1e183d0004958a2db413662d6dcaa46db649ab8e8a38"
 
   url "https://altar-prototype.sgp1.cdn.digitaloceanspaces.com/releases/v#{version}/altar-app-#{version}.dmg",
       verified: "altar-prototype.sgp1.cdn.digitaloceanspaces.com/"
