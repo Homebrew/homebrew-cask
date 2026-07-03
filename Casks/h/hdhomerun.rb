@@ -7,10 +7,11 @@ cask "hdhomerun" do
   desc "Client for HDHomeRun streamer"
   homepage "https://www.silicondust.com/support/downloads/"
 
-  livecheck do
-    url "https://download.silicondust.com/hdhomerun/hdhomerun_mac.dmg"
-    strategy :header_match
-  end
+  # The installer can only be ran manually, and the majority of the process
+  # is deferring to the Mac App Store version. This is no longer a suitable
+  # user experience for `homebrew-cask`.
+  # Ref: https://github.com/Homebrew/homebrew-cask/pull/272281
+  disable! date: "2027-07-03", because: :no_longer_meets_criteria
 
   depends_on :macos
 
