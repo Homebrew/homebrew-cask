@@ -11,6 +11,15 @@ cask "ungoogled-chromium" do
   desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/"
 
+  caveats do
+    <<~EOS
+      Ungoogled Chromium may not work reliably as the default browser for macOS
+      system OAuth flows such as Internet Accounts. If account sign-in does not
+      open a browser, temporarily set Safari or Google Chrome as the default
+      browser, finish the sign-in, then switch back to Ungoogled Chromium.
+    EOS
+  end
+
   livecheck do
     url :url
     regex(/^v?(\d+(?:[.-]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?$/i)
