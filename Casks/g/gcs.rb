@@ -1,9 +1,9 @@
 cask "gcs" do
   arch arm: "arm64", intel: "amd64"
 
-  version "5.43.0"
-  sha256 arm:   "5bcf91cf1053134874b5ebace12b6644a4ea7ebfa463d458219d8c13553e5a84",
-         intel: "5cb8f378fbfa4dc660fd4d54e6d448651f0d884397f78b459aee8a29fd684feb"
+  version "5.44.0"
+  sha256 arm:   "2732282202e0da1d54c85fe504fece3974bbf8e1095210b3a8bd8c9637874233",
+         intel: "cd7c1d4c5a7265e073c9ac729fb24357b9cf3f2537ca0286b884b34e6b62ae6b"
 
   on_arm do
     depends_on macos: :big_sur
