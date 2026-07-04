@@ -4,7 +4,7 @@ cask "zush" do
 
   url "https://zushapp.com/releases/Zush-#{version}.dmg"
   name "Zush"
-  desc "AI-powered file renamer and organizer"
+  desc "AI-powered file renamer and organiser"
   homepage "https://zushapp.com/"
 
   livecheck do
