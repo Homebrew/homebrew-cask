@@ -5,7 +5,7 @@ cask "adrafinil" do
   url "https://github.com/kageroumado/adrafinil/releases/download/v#{version}/Adrafinil-#{version}.dmg",
       verified: "github.com/kageroumado/adrafinil/"
   name "Adrafinil"
-  desc "Keep your Mac awake while AI coding agents are working"
+  desc "Keep your computer awake while AI coding agents are working"
   homepage "https://kagerou.glass/adrafinil/"
 
   livecheck do
@@ -14,7 +14,7 @@ cask "adrafinil" do
   end
 
   auto_updates true
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Adrafinil.app"
 
