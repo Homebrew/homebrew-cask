@@ -1,8 +1,8 @@
 cask "clash-mi" do
-  version "1.0.26.1201"
-  sha256 "e024ad8d6d9fa437f9c92cb365b9cc0e8ffb02d37460dd820eb9d43d6caf30d9"
+  version "1.0.26.1203"
+  sha256 "f7180d8892dd2c3e344d7214083dc415df8807fcda435e47e6307fe00e4fefec"
 
-  url "https://github.com/KaringX/clashmi/releases/download/#{version}/clashmi_#{version}_macos_universal.dmg"
+  url "https://github.com/KaringX/clashmi/releases/download/v#{version}/clashmi_#{version}_macos_universal.dmg"
   name "Clash Mi"
   desc "Another Mihomo GUI based on Flutter"
   homepage "https://github.com/KaringX/clashmi"
