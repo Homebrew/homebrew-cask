@@ -1,9 +1,9 @@
 cask "shell360" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.4"
-  sha256 arm:   "8729fb43a8522bdeb11bffea19850f94c49acb99957b96e4cb65e084bf0fd8e7",
-         intel: "26a10aa6f07c13ed33b973380bc7ca154cc5a0c736c9955f88366667af3393a3"
+  version "0.2.5"
+  sha256 arm:   "52ac73160ae0605f48aae9e9cee3e6a5a722f5ee56d8a27122664610e3f6523f",
+         intel: "06907da037a3114e4c652c25bd7f06cec296432cdf4f070ce1e0c46b6f275a26"
 
   url "https://github.com/nashaofu/shell360/releases/download/v#{version}/Shell360_#{version}_#{arch}.dmg"
   name "Shell360"
