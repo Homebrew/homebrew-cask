@@ -1,6 +1,6 @@
 cask "xaos" do
-  version "4.3.5"
-  sha256 "ef54cf7f01bf8f05cffcf20e782159c4c1545fbc2be5937222dbc5d324a66408"
+  version "4.3.6"
+  sha256 "99acf00490cd9c9bedb5fbee8aaae96cc6eb04e45fa9abc9b670ee9991a9e2c2"
 
   url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg",
       verified: "github.com/xaos-project/XaoS/"
