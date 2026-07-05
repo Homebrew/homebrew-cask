@@ -6,11 +6,11 @@ cask "altersend" do
     arch arm: "arm64", intel: "x86_64"
   end
 
-  version "1.5.0"
-  sha256 arm:          "868d6ae51cae5ac8afc59f22a1a43e53d79f582baa9c5ec6c3f6201e95fc7ce2",
-         intel:        "88ff6fb60eaf8cc363ab528fedab76b0e98bc92bf950e29a9490c0e34e58061d",
-         arm64_linux:  "879b3365532d14b6535aa4184633490a3163e4b3f48ac6029239f26fb433d5c7",
-         x86_64_linux: "5d05a8dfd43c442a960af56fa43998cc4610831c21a5e247f3a3d17aa9aa5ce5"
+  version "1.5.1"
+  sha256 arm:          "7bb4862e645ce158bc1aef056ef48a6ba1f53a47397cb8630d2ab135ad113d39",
+         intel:        "4c6f93eed1dc69f5ba824fb0ce463b60461b85cf72d29a12e100696060c0c833",
+         arm64_linux:  "8aac6aeb7c084c67feafc071b45c1094139b26463eb5e58f9ba1aab215372ab4",
+         x86_64_linux: "03f2c3289b17d53b3cf151ece33fc50741718b117f5e6979c7e43702c4292e86"
 
   artifact = on_system_conditional macos: "AlterSend-#{version}#{arch}.dmg",
                                    linux: "AlterSend-#{arch}.AppImage"
