@@ -5,7 +5,7 @@ cask "lumide" do
   url "https://github.com/SoFluffyOS/lumide/releases/download/#{version}/Lumide_macOS.dmg",
       verified: "github.com/SoFluffyOS/lumide/"
   name "Lumide"
-  desc "Agent-native code editor built with Flutter"
+  desc "Agent-native code editor"
   homepage "https://lumide.dev/"
 
   depends_on macos: :catalina
