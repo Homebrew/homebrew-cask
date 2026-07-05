@@ -16,6 +16,15 @@ cask "ghosttile" do
 
   app "GhostTile.app"
 
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/im.kernelpanic.ghosttile.sfl*",
+    "~/Library/Application Support/GhostTile",
+    "~/Library/Application Support/im.kernelpanic.GhostTile",
+    "~/Library/HTTPStorages/im.kernelpanic.GhostTile",
+    "~/Library/Logs/GhostTile",
+    "~/Library/Preferences/im.kernelpanic.GhostTile.plist",
+  ]
+
   caveats do
     requires_rosetta
   end
