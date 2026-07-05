@@ -8,11 +8,6 @@ cask "adrafinil" do
   desc "Keep your computer awake while AI coding agents are working"
   homepage "https://kagerou.glass/adrafinil/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :tahoe
 
