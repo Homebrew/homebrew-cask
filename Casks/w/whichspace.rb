@@ -4,7 +4,7 @@ cask "whichspace" do
 
   url "https://github.com/gechr/WhichSpace/releases/download/v#{version}/WhichSpace.zip"
   name "WhichSpace"
-  desc "Active space menu bar icon"
+  desc "Menu bar utility for viewing and switching Spaces"
   homepage "https://github.com/gechr/WhichSpace"
 
   livecheck do
