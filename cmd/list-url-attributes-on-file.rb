@@ -2,7 +2,6 @@
 # frozen_string_literal: true
 
 require "abstract_command"
-require "open3"
 
 module Homebrew
   module Cmd
@@ -33,9 +32,9 @@ module Homebrew
       sig { override.returns(T.nilable(String)) }
       def run
         attribute = "com.apple.metadata:kMDItemWhereFroms"
-        xattr, _, status = Open3.capture3("/usr/bin/xattr -p #{attribute} #{args.named.first}")
+        xattr = Utils.popen_read("/usr/bin/xattr", "-p", attribute, args.named.first, err: :err)
 
-        exit status.exitstatus.to_i unless status.success?
+        exit $CHILD_STATUS.exitstatus.to_i unless $CHILD_STATUS.success?
 
         puts Plist.parse_xml(xattr, marshal: false) || xattr
       end
