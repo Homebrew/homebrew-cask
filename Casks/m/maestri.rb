@@ -1,6 +1,6 @@
 cask "maestri" do
-  version "0.30.15"
-  sha256 "e58d14c438bc85a7f22beac31d1fcd5ed309c1c72a40faf6d5b410cb7fe17ffb"
+  version "0.30.16"
+  sha256 "47bd99fb72dc2dff3f39c990976a2de6f1900496147a22878ed9214d55f5396d"
 
   url "https://pub-84eb0b1f3fb3420bbe57a88de7443b71.r2.dev/downloads/Maestri-#{version}.zip",
       verified: "pub-84eb0b1f3fb3420bbe57a88de7443b71.r2.dev/downloads/"
