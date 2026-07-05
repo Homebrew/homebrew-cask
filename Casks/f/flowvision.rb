@@ -18,6 +18,7 @@ cask "flowvision" do
   app "FlowVision.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/netdcy.flowvision.sfl*",
     "~/Library/Application Support/FlowVision",
     "~/Library/Preferences/netdcy.FlowVision.plist",
     "~/Library/Saved Application State/netdcy.FlowVision.savedState",
