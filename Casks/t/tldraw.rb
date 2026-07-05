@@ -1,6 +1,6 @@
 cask "tldraw" do
-  version "1.3.0"
-  sha256 "40d40cbae2ec7ba058aa275b604d41d7bd918ee5e0d30d54951a1db12334f47c"
+  version "1.4.0"
+  sha256 "94661c3f1664e965c19f50fb5ed0f2104c228fcd252ec64dd073cde3d23a2de8"
 
   url "https://github.com/tldraw/tldraw-desktop/releases/download/v#{version}/tldraw-#{version}-universal.dmg"
   name "tldraw desktop"
