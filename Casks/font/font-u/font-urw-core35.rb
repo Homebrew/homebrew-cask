@@ -1,6 +1,6 @@
 cask "font-urw-core35" do
-  version "1.0.0"
-  sha256 "6cfedddd6733f99172778330b779d35e62360eebf6b7f36002ff65178ee21495"
+  version "1.0.1"
+  sha256 "2226fcb02acac299a5ea3b025cdd64dce877fb8a3e57cafdc806ef483badcb88"
 
   url "https://github.com/twardoch/urw-core35-fonts/archive/refs/tags/v#{version}.tar.gz"
   name "URW Core 35 Fonts"
