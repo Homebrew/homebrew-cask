@@ -16,7 +16,6 @@ cask "thonny" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "thonny-xxl"
   depends_on :macos
 
   pkg "thonny-#{version}-#{arch}.pkg"
