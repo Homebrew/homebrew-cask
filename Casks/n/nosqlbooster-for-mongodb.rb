@@ -1,9 +1,9 @@
 cask "nosqlbooster-for-mongodb" do
   arch arm: "arm64", intel: "x64"
 
-  version "11.0.3"
-  sha256 arm:   "7835bcca537f85260729aaf2277651e5a175160f43aa79b16290bed02d90d5b2",
-         intel: "7aecea2af697f45a7b83cc95b6d0172cf4485db9e70ce37c5d408c92c30a8c82"
+  version "11.0.4"
+  sha256 arm:   "be94538106a550f92accaae78804eadf430e6e928676064735addb3693371235",
+         intel: "a8de6bbb4e9434cac17692c81d2089aea5ff4cc7ac2f6a8005511573507d8fd9"
 
   url "https://s3.nosqlbooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}-#{arch}.dmg"
   name "NoSQLBooster for MongoDB"
