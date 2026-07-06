@@ -1,6 +1,6 @@
 cask "macmd-viewer" do
-  version "1.4.0"
-  sha256 "6d6569cba2c13f64a4358867ccf5ed84b98a4c98ec89b6dd1ffbf763226d7eca"
+  version "1.4.1"
+  sha256 "759095209bfc032a4e672b0340e8c3414d8236e7982f6057e3c01baa826a7b3b"
 
   url "https://macmdviewer.com/downloads/v#{version}/MacMDViewer.dmg"
   name "MacMD Viewer"
