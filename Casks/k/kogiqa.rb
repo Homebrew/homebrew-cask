@@ -1,6 +1,6 @@
 cask "kogiqa" do
-  version "0.5.1097"
-  sha256 "9ee9dda650c5753010e998eefbee563ab44b8cda12da8fe36083a1a30aa701f0"
+  version "0.5.1105"
+  sha256 "098b8416deafacaad53329c1a35ba6e0554243eb3b6db386597f54f33b519fe5"
 
   url "https://updater.kogiqa.com/release/kogi-qa-#{version}-universal.dmg"
   name "kogiQA"
