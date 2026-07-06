@@ -2,19 +2,19 @@ cask "sonarqube-cli" do
   arch arm: "arm64", intel: "x86-64"
   os macos: "macos", linux: "linux"
 
-  version "1.2.0.3278"
+  version "1.3.0.3493"
 
   artifact = "sonarqube-cli-#{version}-#{os}-#{arch}.bin"
 
   url "https://binaries.sonarsource.com/Distribution/sonarqube-cli/#{version}/#{os}/#{artifact}"
   on_macos do
-    sha256 "7a1aeaea130e35d6570e3f4c8f32de9efc9bda1870108ba1189402b7ba7f26ed"
+    sha256 "f4c80d4c3c484e7c2545395931bc0035f895deaec10003d4479e08d3cad28045"
     depends_on arch: :arm64
   end
 
   on_linux do
-    sha256 arm64_linux:  "c3435baad44c27950617aa65b252824ec0130713f544073c4b1c2715b8b70851",
-           x86_64_linux: "508751d6574729357ba415a367157130b1fb4f5e5959d6cbd16170d38da5f957"
+    sha256 arm64_linux:  "57019f9b8540015c0aba5a9e6defc3d46b1ff984fa12f71602597b4c82bee679",
+           x86_64_linux: "c999e7873f53df19512aae53e1089f13bb3e8d87680d8aa0d1de2f8d801950c9"
   end
 
   name "SonarQube CLI"
