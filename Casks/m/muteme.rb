@@ -1,9 +1,9 @@
 cask "muteme" do
   arch arm: "arm64", intel: "64"
 
-  version "0.27.2"
-  sha256 arm:   "96cdf78449cd422c5581f0676adca016bf1c4077308cccd900803e9ab7b2c57f",
-         intel: "9072461e07b5072c541d4e9a2c08b24fd635f3dc047500ce7d72dcbcdbfbf638"
+  version "0.27.6"
+  sha256 arm:   "c0c971d641b353b46088b8b0065d0ba7702d820d401a13fb99d0f3d32d5fc39a",
+         intel: "fa8b06f0c9ff6d35d640c50471a0a83cb59616480557d014fa0dcd96f915ffa3"
 
   url "https://downloads.muteme.com/download/#{version}/osx_#{arch}"
   name "MuteMe"
