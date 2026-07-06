@@ -22,7 +22,6 @@ cask "microsoft-office-businesspro" do
     microsoft-outlook
     microsoft-powerpoint
     microsoft-teams
-    microsoft-teams@classic
     microsoft-word
     onedrive
   ]
