@@ -16,10 +16,17 @@ cask "keeperdb" do
 
   app "KeeperDB.app"
 
+  uninstall quit: "com.keepersecurity.keeperdb"
+
   zap trash: [
-    "~/Library/Application Support/com.keepersecurity.keeperdb",
+    "~/Library/Application Support/KeeperDB",
     "~/Library/Caches/com.keepersecurity.keeperdb",
+    "~/Library/Caches/keeperdb-desktop",
+    "~/Library/HTTPStorages/com.keepersecurity.keeperdb",
+    "~/Library/HTTPStorages/com.keepersecurity.keeperdb.binarycookies",
+    "~/Library/Logs/KeeperDB",
     "~/Library/Preferences/com.keepersecurity.keeperdb.plist",
-    "~/Library/Saved Application State/com.keepersecurity.keeperdb.savedState",
+    "~/Library/WebKit/com.keepersecurity.keeperdb",
+    "~/Library/WebKit/keeperdb-desktop",
   ]
 end
