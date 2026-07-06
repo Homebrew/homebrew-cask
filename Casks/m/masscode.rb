@@ -21,7 +21,9 @@ cask "masscode" do
   app "massCode.app"
 
   zap trash: [
-        "~/Library/Application Support/massCode",
+        "~/.massCode",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.masscode.app.sfl*",
+        "~/Library/Application Support/masscode",
         "~/Library/Preferences/io.masscode.app.plist",
         "~/Library/Saved Application State/io.masscode.app.savedState",
       ],
