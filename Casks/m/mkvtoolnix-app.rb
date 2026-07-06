@@ -12,12 +12,14 @@ cask "mkvtoolnix-app" do
 
   livecheck do
     url "https://mkvtoolnix.download/macos/releases/"
-    regex(%r{.*?/MKVToolNix[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg}i)
+    regex(/href=.*?MKVToolNix[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg/i)
     strategy :page_match do |page, regex|
-      major_version = page.scan(%r{href=".*?releases/(\d+(?:\.\d+)+)/}i)&.max&.first
-      next if major_version.blank?
+      main_version = page.scan(%r{href=.*?releases/v?(\d+(?:\.\d+)+)/}i)
+                         .max_by { |match| Version.new(match[0]) }
+                         &.first
+      next if main_version.blank?
 
-      version_directory = Homebrew::Livecheck::Strategy.page_content("https://mkvtoolnix.download/macos/releases/#{major_version}/")
+      version_directory = Homebrew::Livecheck::Strategy.page_content("https://mkvtoolnix.download/macos/releases/#{main_version}/")
       version_directory[:content]&.scan(regex)&.map { |match| match[0] }
     end
   end
