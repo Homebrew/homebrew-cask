@@ -12,8 +12,12 @@ cask "wailbrew" do
   app "WailBrew.app"
 
   zap trash: [
+    "~/.config/wailbrew",
     "~/Library/Application Support/WailBrew",
+    "~/Library/Caches/io.github.wickenico.wailbrew",
     "~/Library/Preferences/dev.wailbrew.plist",
+    "~/Library/Preferences/io.github.wickenico.wailbrew.plist",
     "~/Library/Saved Application State/dev.wailbrew.savedState",
+    "~/Library/WebKit/io.github.wickenico.wailbrew",
   ]
 end
