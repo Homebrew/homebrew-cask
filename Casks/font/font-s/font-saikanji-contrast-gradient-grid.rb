@@ -1,6 +1,6 @@
 cask "font-saikanji-contrast-gradient-grid" do
   version "0.020"
-  sha256 "ba1f95b1a43c4411a1f1564ed88c9779bf5b55fbdd3b7841443df44315a48cf7"
+  sha256 "bb40f2a9ddb5bc7af682ab876f03dec2a0c04c6ca30497e817a45361f0a7fb78"
 
   url "https://github.com/am517/SaiKanji/releases/download/v#{version}/SaiKanji.Contrast.Gradient.Grid.ttf",
       verified: "github.com/am517/SaiKanji/"
@@ -9,4 +9,5 @@ cask "font-saikanji-contrast-gradient-grid" do
   homepage "https://saikanji.moore.is/"
 
   font "SaiKanji.Contrast.Gradient.Grid.ttf"
+  # No zap stanza required
 end

@@ -1,6 +1,6 @@
 cask "font-saikanji-regular-solid-nogrid" do
   version "0.020"
-  sha256 "2ebc3a60a33da533b1e33e93764f547b57f30398e4bd02cf4c6ca05bf12ee81f"
+  sha256 "def609861579217e4800f932beab99fb6a92f3f2661c52afa71f2c0b4f97d419"
 
   url "https://github.com/am517/SaiKanji/releases/download/v#{version}/SaiKanji.Regular.Solid.ttf",
       verified: "github.com/am517/SaiKanji/"
@@ -9,4 +9,5 @@ cask "font-saikanji-regular-solid-nogrid" do
   homepage "https://saikanji.moore.is/"
 
   font "SaiKanji.Regular.Solid.ttf"
+  # No zap stanza required
 end

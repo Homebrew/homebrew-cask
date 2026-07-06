@@ -1,6 +1,6 @@
 cask "font-saikanji-balanced-light-solid-grid" do
   version "0.020"
-  sha256 "81ce2c1bd2643f226c57d52bae2e60b043796dcace684cc6c7087b1ad2d75c6e"
+  sha256 "34ffdd85df6734c00a296e6a25b9d7f429cff850687f8c4aacefa96a23419710"
 
   url "https://github.com/am517/SaiKanji/releases/download/v#{version}/SaiKanji.Balanced-Light.Solid.Grid.ttf",
       verified: "github.com/am517/SaiKanji/"
@@ -9,4 +9,5 @@ cask "font-saikanji-balanced-light-solid-grid" do
   homepage "https://saikanji.moore.is/"
 
   font "SaiKanji.Balanced-Light.Solid.Grid.ttf"
+  # No zap stanza required
 end

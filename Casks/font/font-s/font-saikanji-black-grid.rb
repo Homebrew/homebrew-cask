@@ -1,6 +1,6 @@
 cask "font-saikanji-black-grid" do
   version "0.020"
-  sha256 "9b1686629bb487d2fe59e7d7898cc3d1c5f461c3f4f3723eb48109791c189fee"
+  sha256 "00ce7d8de70018041e62108b804a3b33461d9266f16c0d00a8e685cfdce31518"
 
   url "https://github.com/am517/SaiKanji/releases/download/v#{version}/SaiKanji.Black.Grid.ttf",
       verified: "github.com/am517/SaiKanji/"
@@ -9,4 +9,5 @@ cask "font-saikanji-black-grid" do
   homepage "https://saikanji.moore.is/"
 
   font "SaiKanji.Black.Grid.ttf"
+  # No zap stanza required
 end

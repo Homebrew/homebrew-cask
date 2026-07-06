@@ -1,6 +1,6 @@
 cask "font-saikanji-regular-gradient-nogrid" do
   version "0.020"
-  sha256 "b6a03e43d02d449c55e45a41d34d9b5e3b45a94e5f84c06d93c7b2f3c4f1ec47"
+  sha256 "1c9d051649dfb5d80185e13160fba2923ae74168485a0c6feae937e5344ce52f"
 
   url "https://github.com/am517/SaiKanji/releases/download/v#{version}/SaiKanji.Regular.Gradient.ttf",
       verified: "github.com/am517/SaiKanji/"
@@ -9,4 +9,5 @@ cask "font-saikanji-regular-gradient-nogrid" do
   homepage "https://saikanji.moore.is/"
 
   font "SaiKanji.Regular.Gradient.ttf"
+  # No zap stanza required
 end

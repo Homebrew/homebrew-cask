@@ -1,6 +1,6 @@
 cask "font-saikanji-black-nogrid" do
   version "0.020"
-  sha256 "2aca6ed0dc8b2e8c942721881abc76b75e33fbb560a738abb2706001cd49f5a5"
+  sha256 "55c5aef5b1c0786caa67552edda4d1513e2a681e2d38756b6298e14d1398f43d"
 
   url "https://github.com/am517/SaiKanji/releases/download/v#{version}/SaiKanji.Black.ttf",
       verified: "github.com/am517/SaiKanji/"
@@ -9,4 +9,5 @@ cask "font-saikanji-black-nogrid" do
   homepage "https://saikanji.moore.is/"
 
   font "SaiKanji.Black.ttf"
+  # No zap stanza required
 end

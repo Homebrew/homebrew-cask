@@ -1,6 +1,6 @@
 cask "font-saikanji-balanced-gradient-grid" do
   version "0.020"
-  sha256 "c22452708cf7d9b11ff68028d50fd9dd5997937d4018ab6af94d73656bfc3558"
+  sha256 "bddaf36b0dd958663b31b226cce2a6b2dd52478dc287835ce520ad598ae6806a"
 
   url "https://github.com/am517/SaiKanji/releases/download/v#{version}/SaiKanji.Balanced.Gradient.Grid.ttf",
       verified: "github.com/am517/SaiKanji/"
@@ -9,4 +9,5 @@ cask "font-saikanji-balanced-gradient-grid" do
   homepage "https://saikanji.moore.is/"
 
   font "SaiKanji.Balanced.Gradient.Grid.ttf"
+  # No zap stanza required
 end

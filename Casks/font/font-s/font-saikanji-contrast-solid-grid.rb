@@ -1,6 +1,6 @@
 cask "font-saikanji-contrast-solid-grid" do
   version "0.020"
-  sha256 "1063ea381fd4d37f21be207c159312392db3cf5a3719b974aafac60db8152a2b"
+  sha256 "772505493de7f91ed9ad130fd6c992f22714bf42e8e0a96aec584957adb500ad"
 
   url "https://github.com/am517/SaiKanji/releases/download/v#{version}/SaiKanji.Contrast.Solid.Grid.ttf",
       verified: "github.com/am517/SaiKanji/"
@@ -9,4 +9,5 @@ cask "font-saikanji-contrast-solid-grid" do
   homepage "https://saikanji.moore.is/"
 
   font "SaiKanji.Contrast.Solid.Grid.ttf"
+  # No zap stanza required
 end
