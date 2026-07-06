@@ -1,9 +1,9 @@
 cask "twake" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.4.0"
-  sha256 arm:   "4029c0b22b14ebf8b0444f2549d1cc956427e9319a5fbc75e73dda4191a0f0d8",
-         intel: "9b99363160894de08aafb0c678e7737887d2c908758994b3f0a5d355fbd045b3"
+  version "5.5.0"
+  sha256 arm:   "62550ad6e9f34ce8f831019932ccbce74a39c59a585b61f24c47ad159cfce206",
+         intel: "298bd6f34fd64a248387b1bbeab337780166d2753be13b29b24f9b3d1ec128fb"
 
   url "https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Twake-Desktop-#{arch}.dmg",
       verified: "github.com/cozy-labs/cozy-desktop/"
