@@ -22,10 +22,13 @@ cask "mactools" do
   uninstall quit: "cc.ggbond.mactools"
 
   zap trash: [
+    "~/Library/Application Scripts/cc.ggbond.mactools.right-click.finder-sync",
     "~/Library/Application Support/MacTools",
     "~/Library/Caches/cc.ggbond.mactools",
+    "~/Library/Containers/cc.ggbond.mactools.right-click.finder-sync",
     "~/Library/HTTPStorages/cc.ggbond.mactools",
     "~/Library/Preferences/cc.ggbond.mactools.plist",
+    "~/Library/Preferences/cc.ggbond.mactools.right-click.finder-sync.plist",
     "~/Library/Saved Application State/cc.ggbond.mactools.savedState",
   ]
 end
