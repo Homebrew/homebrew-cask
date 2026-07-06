@@ -1,8 +1,11 @@
 cask "lepton" do
-  version "1.10.0"
-  sha256 "060071b6b2c3e52e0be04e6f118d77fbcc7afdae50895545bfda0b04b9cc1c12"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}.dmg",
+  version "2.0.0"
+  sha256 arm:   "e5a783fd960438af176ad2b79c5687371cbb985f49c13cdfea695fd5df0e8115",
+         intel: "4c7e11a3af18362d20a7cfaefe9da585271ae36e4c5ba69b080409acedae9ba8"
+
+  url "https://github.com/hackjutsu/Lepton/releases/download/v#{version}/Lepton-#{version}-mac-#{arch}.dmg",
       verified: "github.com/hackjutsu/Lepton/"
   name "Lepton"
   desc "Snippet management app"
@@ -10,7 +13,7 @@ cask "lepton" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Lepton.app"
 
@@ -20,8 +23,4 @@ cask "lepton" do
     "~/Library/Preferences/com.cosmox.lepton.plist",
     "~/Library/Saved Application State/com.cosmox.lepton.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
