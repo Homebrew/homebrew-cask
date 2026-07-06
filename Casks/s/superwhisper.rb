@@ -1,6 +1,6 @@
 cask "superwhisper" do
-  version "2.16.1"
-  sha256 "ff2b1852826cd8e8222c1bb3e97436b565d95dbf3c1c00959cdb33a90570bcd3"
+  version "2.16.2"
+  sha256 "a3e2d936424e9d8dda867cb8a0df120e6d4c257870c91788db239c0b4f001770"
 
   url "https://builds.superwhisper.com/v#{version}/superwhisper.zip"
   name "superwhisper"
@@ -13,7 +13,7 @@ cask "superwhisper" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "superwhisper.app"
 
