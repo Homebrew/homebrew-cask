@@ -39,5 +39,6 @@ cask "spotify" do
     "~/Library/Preferences/com.spotify.client.helper.plist",
     "~/Library/Preferences/com.spotify.client.plist",
     "~/Library/Saved Application State/com.spotify.client.savedState",
+    "~/Library/WebKit/com.spotify.client",
   ]
 end
