@@ -1,5 +1,5 @@
 cask "izip" do
-  version "26.01"
+  version "26.07"
   sha256 :no_check
 
   url "https://www.izip.com/izip.dmg",
