@@ -1,9 +1,9 @@
 cask "mkvtoolnix-app" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "99.0-1"
-  sha256 arm:   "8d3f3b5428fcdfcbbdc48f63a49d2919f64583889747a6197fcc6d582f4d9a4d",
-         intel: "eae9cd5fcd6d48723f6f6bbeed959f784dcaae1a7d48b10fae61b51c2a3f0140"
+  version "100.0-1"
+  sha256 arm:   "155ded045a35bd1079ba466c2e1011bdcb1a85b74c984ed5627841cd313850a0",
+         intel: "aea7ab9c7146943fd9535b2ea60c074deeea3181a9c6736e58e1437456906c0a"
 
   url "https://mkvtoolnix.download/macos/releases/#{version.split("-").first}/MKVToolNix-#{version}-#{arch}.dmg"
   name "MKVToolNix"
@@ -12,12 +12,14 @@ cask "mkvtoolnix-app" do
 
   livecheck do
     url "https://mkvtoolnix.download/macos/releases/"
-    regex(%r{.*?/MKVToolNix[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg}i)
+    regex(/href=.*?MKVToolNix[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg/i)
     strategy :page_match do |page, regex|
-      major_version = page.scan(%r{href=".*?releases/(\d+(?:\.\d+)+)/}i)&.max&.first
-      next if major_version.blank?
+      main_version = page.scan(%r{href=.*?releases/v?(\d+(?:\.\d+)+)/}i)
+                         .max_by { |match| Version.new(match[0]) }
+                         &.first
+      next if main_version.blank?
 
-      version_directory = Homebrew::Livecheck::Strategy.page_content("https://mkvtoolnix.download/macos/releases/#{major_version}/")
+      version_directory = Homebrew::Livecheck::Strategy.page_content("https://mkvtoolnix.download/macos/releases/#{main_version}/")
       version_directory[:content]&.scan(regex)&.map { |match| match[0] }
     end
   end
