@@ -5,14 +5,13 @@ cask "electerm" do
   sha256 arm:   "b26f85ec1f80c841e133516764dc4f26f20aab1024bdd20968385bebac4ff74c",
          intel: "6629b1cfef78b1516c221091434e0f05f666eabeda36a682fa3bba3d1d259a73"
 
-  url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/electerm/electerm/"
+  url "https://mirror.electerm.org/https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
   name "electerm"
-  desc "Terminal/ssh/sftp client"
-  homepage "https://electerm.html5beta.com/"
+  desc "Free and open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client (linux, mac, win)"
+  homepage "https://electerm.org"
 
   livecheck do
-    url "https://electerm.html5beta.com/data/electerm-github-release.json"
+    url "https://electerm.org/data/electerm-github-release.json"
     strategy :json do |json|
       json.dig("release", "tag_name")&.sub("v", "")
     end
