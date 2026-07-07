@@ -12,7 +12,6 @@ cask "otty" do
   homepage "https://otty.sh/"
 
   livecheck do
-    url "https://docs.otty.sh/changelog"
     url "https://otty.sh/releases/macos-#{livecheck_arch}.json"
     strategy :json do |json|
       json["version"]
