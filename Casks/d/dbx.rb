@@ -20,6 +20,11 @@ cask "dbx" do
   desc "Database management tool"
   homepage "https://dbxio.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   on_macos do
     auto_updates true
     depends_on macos: :big_sur
