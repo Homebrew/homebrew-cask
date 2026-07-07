@@ -7,7 +7,7 @@ cask "electerm" do
 
   url "https://mirror.electerm.org/https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
   name "electerm"
-  desc "Free open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client"
+  desc "Terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client"
   homepage "https://electerm.org/"
 
   livecheck do
