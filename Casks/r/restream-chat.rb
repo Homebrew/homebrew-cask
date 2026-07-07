@@ -1,6 +1,6 @@
 cask "restream-chat" do
-  version "2.7.0"
-  sha256 "0aaea4b2d41a60d7b4a84579a432f48b6e39fccfb0693f77e2fa172c518bbe94"
+  version "2.7.1"
+  sha256 "e3cfb00f13c0c75667ae66cb5cf2615ea2a5a66b3d22f43aa25cfdb476a9533f"
 
   url "https://chat-client.restream.io/Restream+Chat-#{version}.dmg"
   name "Restream Chat"
