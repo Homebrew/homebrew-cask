@@ -4,7 +4,7 @@ cask "anka-virtualization" do
 
   url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
-  desc "CLI tool for managing and creating virtual machines"
+  desc "CLI tool for managing and creating macOS virtual machines"
   homepage "https://veertu.com/"
 
   livecheck do
