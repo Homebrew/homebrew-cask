@@ -1,6 +1,6 @@
 cask "tablen" do
-  version "1.27.0"
-  sha256 "0d7f399bae63843cfef41986cb9ab67edb225cd034aae97fad2dda859701770a"
+  version "1.27.1"
+  sha256 "c053ab2bf43ce4c951c05d92bb2a23bd944d2867baf2c867905fb5880ec0e43b"
 
   url "https://cdn.tablen.app/releases/Tablen-#{version}.dmg"
   name "Tablen"
