@@ -21,7 +21,7 @@ cask "ltspice" do
         "~/Documents/LTspice/examples",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.analog.ltspice.app.sfl*",
         "~/Library/Application Support/LTspice",
-        "~/Library/Preferences/com.analog.LTspice.App.plist",
+        "~/Library/Preferences/com.analog.ltspice.plist",
         "~/Library/Saved Application State/com.analog.LTspice.App.savedState",
       ],
       rmdir: "~/Documents/LTspice"
