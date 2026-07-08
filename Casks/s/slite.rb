@@ -1,9 +1,9 @@
 cask "slite" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.4.2,260505ptf5yrsn2"
-  sha256 arm:   "0ce44847096edb70cadd39a77e19ee1bed10bbc00fa8845b33b5cbe8105e659a",
-         intel: "1f56774a125b6da4b388078109efd2e7258fd10fd26189ea84fadef5725754d3"
+  version "1.5.0,2607089tasayt8d"
+  sha256 arm:   "24940f4fc41577729f0c15644a005e572d7b4a98217bdf0310457ce4edeacd3b",
+         intel: "d8efeb7b0f36a49d5bab12de755f5fc00b0c62ce60d48e3d45cb6438ecda2cb3"
 
   url "https://download.todesktop.com/20062929x31pwfi/Slite%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/20062929x31pwfi/"
