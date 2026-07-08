@@ -27,8 +27,4 @@ cask "amazon-workspaces" do
     "~/Library/Preferences/com.amazon.workspaces.plist",
     "~/Library/Saved Application State/com.amazon.workspaces.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
