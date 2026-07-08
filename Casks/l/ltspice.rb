@@ -18,6 +18,7 @@ cask "ltspice" do
   uninstall pkgutil: [
     "com.analog.LTspice",
     "com.analog.LTspice.App",
+    "com.analog.ltspice",
   ]
 
   zap trash: [
