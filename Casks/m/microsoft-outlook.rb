@@ -26,10 +26,8 @@ cask "microsoft-outlook" do
     sha256 "1c95d6c9b8310a97f0d13f612bd2ce94c0ec546abab0d978aed12cb6d3dfbe12"
 
     livecheck do
-      url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409OPIM2019.xml"
-      strategy :xml do |xml|
-        xml.get_elements("//key[text()='Update Version']").map { |item| item.next_element&.text&.strip }
-      end
+      url "https://go.microsoft.com/fwlink/p/?linkid=525137"
+      strategy :header_match
     end
   end
 
