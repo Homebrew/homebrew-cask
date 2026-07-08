@@ -1,5 +1,6 @@
 cask "zen" do
   arch arm: "aarch64", intel: "x86_64"
+  os macos: "macos", linux: "linux"
 
   version "1.21.5b"
 
