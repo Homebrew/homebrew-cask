@@ -40,6 +40,8 @@ cask "antigravity" do
     "~/Library/Caches/com.google.antigravity",
     "~/Library/Caches/com.google.antigravity.ShipIt",
     "~/Library/HTTPStorages/com.google.antigravity",
+    "~/Library/Logs/Antigravity",
+    "~/Library/Preferences/ByHost/com.google.antigravity.ShipIt.*.plist",
     "~/Library/Preferences/com.google.antigravity.plist",
     "~/Library/Saved Application State/com.google.Antigravity.savedState",
   ]
