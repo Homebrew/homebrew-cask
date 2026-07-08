@@ -1,6 +1,6 @@
 cask "mister-plimsoll" do
-  version "1.1.8"
-  sha256 "141db768ceaf0a449e15110907ac50847aca050577148611af42871ad40c7b03"
+  version "1.1.9"
+  sha256 "f3a922c4e05459ce4c135b99007664cc1febbfe52262fee737a340208b09e896"
 
   url "https://www.misterplimsoll.app/downloads/MisterPlimsoll-#{version}.dmg"
   name "Mister Plimsoll"
