@@ -8,11 +8,11 @@ cask "tagspaces" do
     arch arm: "arm64", intel: "x86_64"
   end
 
-  version "6.13.9"
-  sha256 arm:          "91d247d1b64465138c37e7fd8cc8a0462b18b492e7735566212d05582f7ae860",
-         intel:        "0ae871c87326863d4ea81f7c43519d829f15c8a13744b8f2da04a50c7b44e9a4",
-         arm64_linux:  "5db7e5461639317faa17d2221ca6f2f70dec101fd056674cdf9e0c22d38cee7c",
-         x86_64_linux: "85d555fe000a885a7be82131bda19b7d00ed4cec5114fdb546872498ffa7f34f"
+  version "6.13.11"
+  sha256 arm:          "1ab5b775b9dae964167ba6d81cd009cd7d335b773f080c626aa9e3b3942a7649",
+         intel:        "326e30b9e953d8546f464743de5be13948069b36fc159fd59b5bf9b501bae1bb",
+         arm64_linux:  "d64ab6bbbb3aab69aea10a820941b805c11dc8f6b324d1c8f12f387571c9e171",
+         x86_64_linux: "96d53e491fc0c497a5f54b730cdfc4752453d950f47e27cc3d947c75f6030695"
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
   url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-#{os}-#{arch}-#{version}#{url_end}",
