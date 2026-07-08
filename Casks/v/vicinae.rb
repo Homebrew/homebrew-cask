@@ -5,7 +5,7 @@ cask "vicinae" do
   url "https://github.com/vicinaehq/vicinae/releases/download/v#{version}/Vicinae.dmg",
       verified: "github.com/vicinaehq/vicinae/"
   name "Vicinae"
-  desc "Focused launcher for your desktop - native, fast, extensible"
+  desc "Application launcher and command palette"
   homepage "https://vicinae.com/"
 
   depends_on arch: :arm64
