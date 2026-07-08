@@ -1,7 +1,7 @@
 cask "zen@twilight" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.22t,20260703112201"
+  version "1.22t,20260707111955"
   sha256 :no_check
 
   artifact = on_system_conditional macos: "zen.macos-universal.dmg", linux: "zen-#{arch}.AppImage"
