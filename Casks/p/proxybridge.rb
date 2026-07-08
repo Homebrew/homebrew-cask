@@ -27,9 +27,4 @@ cask "proxybridge" do
     "~/Library/Group Containers/group.com.interceptsuite.ProxyBridge",
     "~/Library/Preferences/com.interceptsuite.ProxyBridge.plist",
   ]
-
-  caveats <<~EOS
-    ProxyBridge installs a network system extension. On first launch, approve it
-    in System Settings > General > Login Items & Extensions.
-  EOS
 end
