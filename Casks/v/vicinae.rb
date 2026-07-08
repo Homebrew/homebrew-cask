@@ -9,7 +9,7 @@ cask "vicinae" do
   homepage "https://vicinae.com/"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :sonoma
 
   app "Vicinae.app"
   binary "#{appdir}/Vicinae.app/Contents/MacOS/vicinae-cli", target: "vicinae"
