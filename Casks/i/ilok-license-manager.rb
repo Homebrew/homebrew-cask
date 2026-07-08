@@ -1,5 +1,5 @@
 cask "ilok-license-manager" do
-  version "5.10.5"
+  version "6.0.0"
   sha256 :no_check
 
   url "https://installers.ilok.com/iloklicensemanager/LicenseSupportInstallerMac.zip"
