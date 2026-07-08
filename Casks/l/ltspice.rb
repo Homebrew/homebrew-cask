@@ -8,11 +8,10 @@ cask "ltspice" do
   homepage "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html"
 
   livecheck do
-    url :homepage, user_agent: :browser
-    regex(/for\s+MacOS.*?Version\s+v?(\d+(?:\.\d+)+)/im)
+    skip "Blocked by upstream bot protection"
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   pkg "LTspice_26.pkg"
 
