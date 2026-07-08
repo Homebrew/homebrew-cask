@@ -1,6 +1,6 @@
 cask "kimi" do
-  version "3.0.26"
-  sha256 "38b93dda93a30ae0a9a5078698250f328b13405e59e99863efe222f4ae0cfdff"
+  version "3.0.27"
+  sha256 "e6bc1ba02905ee54c1b020cfe3ac24afb2cd54d00eb2f20bdd5ecf01e2b9d5cd"
 
   url "https://kimi-img.moonshot.cn/app/download/mac/kimi_#{version}.dmg",
       verified: "kimi-img.moonshot.cn/"
