@@ -41,6 +41,8 @@ cask "agentsview" do
     end
   end
 
+  auto_updates true
+
   on_macos do
     app "AgentsView.app"
     binary "#{appdir}/AgentsView.app/Contents/MacOS/agentsview"
