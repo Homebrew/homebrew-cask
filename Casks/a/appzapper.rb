@@ -1,22 +1,28 @@
 cask "appzapper" do
-  version "2.0.3"
-  sha256 "bb541a89fd513c4fa95eeefe46ebac6b985ac6498a46da4e4622089a15ef6bcd"
+  version "2.0.4"
+  sha256 "a03299821d55a83bd3072cb6e13f2badb9108d0ea5ef017004c0f6b762ceb80b"
 
   url "https://appzapper.com/downloads/appzapper#{version.no_dots}.zip"
   name "AppZapper"
   desc "Tool to uninstall unwanted applications and their support files"
-  homepage "https://www.appzapper.com/"
+  homepage "https://appzapper.com/"
 
+  # The upstream website doesn't provide any version information, so we have to
+  # naively add dots to the dotless version in the file name.
   livecheck do
-    url :homepage
-    regex(/href=.*?appzapper(\d+)(\d+)(\d+)\.zip/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}.#{match[2]}" }
+    url "https://appzapper.com/downloads/latest.zip"
+    regex(/appzapper[._-]?v?(\d+(?:\.\d+)*)\.zip/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next unless match
+
+      ver = match[1]
+      ver.include?(".") ? ver : ver.chars.join(".")
     end
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "AppZapper.app"
 
@@ -24,8 +30,4 @@ cask "appzapper" do
     "~/Library/Application Support/AppZapper",
     "~/Library/Preferences/com.appzapper.appzapper2.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
