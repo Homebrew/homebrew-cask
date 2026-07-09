@@ -10,7 +10,7 @@ cask "mace" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+(?:[._-](?:alpha|beta|rc).*)?)$/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on macos: :sonoma
