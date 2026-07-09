@@ -2,11 +2,11 @@ cask "devtunnel" do
   arch arm: "arm64", intel: "x64"
   os macos: "osx", linux: "linux"
 
-  version "1.0.1968+7baf8adc20"
-  sha256 arm:          "05398bb90bd5376eafbe9116682afbefedd3124ca7855826744fe94a7471a241",
-         intel:        "74c3c258b785dccd5cf968712cbbbde8ca4fc505a5da13c595a47645aad7f47b",
-         arm64_linux:  "7d252be2d0100af342e25dda8985f09a30d3805c6df9214f6ddf916cc9fb00d8",
-         x86_64_linux: "7ea79ad08059becc5fbb5bd6e9de08b3e6edae2fff97df4e6029c49044d81841"
+  version "1.0.1972+07cc55c789"
+  sha256 arm:          "b350b7016b76c5565e633481ce53bfc9ffd7564d8abdf657235e70f7ce390983",
+         intel:        "af16f2dff43a70629af305983a5af8f8cd7a7ab3a344948ae61ba21a1ae557b3",
+         arm64_linux:  "e23f23e4e68c46ee08a1e9db5d62e5c00785c66cb70236597bee0e0a64120512",
+         x86_64_linux: "6380d3e54c81e7e2541900bec3d4f2785dbf81f17cd81effbd54d98f11a874b9"
 
   on_macos do
     url "https://tunnelsassetsprod.blob.core.windows.net/cli/#{version}/#{os}-#{arch}-devtunnel-zip",
