@@ -28,15 +28,4 @@ cask "dnclient-server" do
     "/etc/defined",
     "/Library/LaunchDaemons/dnclient.plist",
   ]
-
-  caveats <<~EOS
-    To run dnclient as a system service and enroll this host:
-      sudo dnclient install
-      sudo dnclient start
-      sudo dnclient enroll -code <enrollment-code>
-
-    Before uninstalling this cask, remove the service:
-      sudo dnclient stop
-      sudo dnclient uninstall
-  EOS
 end
