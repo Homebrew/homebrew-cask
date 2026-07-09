@@ -1,6 +1,6 @@
 cask "meta-quest-remote-desktop" do
-  version "95.0.0.1.111,27394998086829035"
-  sha256 "9441113b109b086acf3982c77fd88f6a82042b84e3c8036880fc9d3982faaeef"
+  version "97.0.0.1.109,27556227337372775"
+  sha256 "e3fa9986f40fe715b5408921c29a791651f9b8cfd2ca942e8f44bbfacce73857"
 
   url "https://securecdn.oculus.com/binaries/download/?id=#{version.csv.second}",
       verified: "securecdn.oculus.com/"
