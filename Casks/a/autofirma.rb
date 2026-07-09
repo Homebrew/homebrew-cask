@@ -28,18 +28,9 @@ cask "autofirma" do
   installer manual: "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}_signed.pkg"
 
   # remove 'Autofirma ROOT' and '127.0.0.1' certificates from keychain (these were installed by pkg)
-  uninstall_postflight do
-    ["AutoFirma ROOT", "127.0.0.1"].each do |cert_name|
-      stdout, * = system_command "/usr/bin/security",
-                                 args: ["find-certificate", "-a", "-c", cert_name, "-Z"],
-                                 sudo: true
-      hashes = stdout.lines.grep(/^SHA-256 hash:/) { |l| l.split(":").second.strip }
-      hashes.each do |h|
-        system_command "/usr/bin/security",
-                       args: ["delete-certificate", "-Z", h],
-                       sudo: true
-      end
-    end
+  uninstall_postflight_steps do
+    delete_keychain_certificate "AutoFirma ROOT"
+    delete_keychain_certificate "127.0.0.1"
   end
 
   uninstall quit:    "es.gob.afirma",
