@@ -2,7 +2,7 @@ cask "ltspice" do
   version "26.0.2"
   sha256 :no_check
 
-  url "https://ltspice.analog.com/software/LTspice_26.pkg"
+  url "https://ltspice.analog.com/software/LTspice_#{version.major}.pkg"
   name "LTspice"
   desc "SPICE simulation software, schematic capture and waveform viewer"
   homepage "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html"
