@@ -19,9 +19,7 @@ cask "mplab-xc32" do
     executable: "xc32-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
     args:       [
       "--mode", "unattended",
-      "--unattendedmodeui", "none",
       "--ModifyAll", "0",
-      "--LicenseType", "FreeMode",
       "--prefix", staged_path.to_s
     ],
     input:      ["y"],
