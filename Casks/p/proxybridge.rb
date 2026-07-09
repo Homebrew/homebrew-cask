@@ -8,11 +8,6 @@ cask "proxybridge" do
   desc "Proxy client with per-application traffic routing rules"
   homepage "https://interceptsuite.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: :ventura
 
   pkg "ProxyBridge-v#{version}-Universal-Installer.pkg"
