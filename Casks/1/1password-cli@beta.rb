@@ -2,11 +2,11 @@ cask "1password-cli@beta" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "2.36.0-beta.03"
-  sha256 arm:          "14ba25b5eec4f2a54694ca0dca33e8c5c0ff1933dd308dd5c97bd78bf7de2194",
-         x86_64:       "c97c88deadeea7f5581b498f57270f7e6e0613cbefa76c18e7eb21d7b941a1c3",
-         x86_64_linux: "ed9ebf2bbc16ff624da1da9c3a4786f5e75fa9861e996d0c22eec650ec617ea9",
-         arm64_linux:  "cde7831ba16ccdbf67f1a34fb6b232f8b0d77e422a0b78535229951df740dca6"
+  version "2.37.0-beta.01"
+  sha256 arm:          "b03cdb1d15903ec92523e53abcecc6130533140a420ca37e5194b0fea311d56e",
+         x86_64:       "97627144ed48e97bc93428c43faf0c05497e678f6f61e5010d62682ecb07db51",
+         x86_64_linux: "4a9868fe53d1f4d498d1e962a10b70d88d3a93788a439d3dc40f9007408f6f0f",
+         arm64_linux:  "03f351c337b0e0b8cc18cf15632689e414f6111e07763ca514ba988edfe9f6fb"
 
   url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_#{os}_#{arch}_v#{version}.zip",
       verified: "cache.agilebits.com/dist/1P/op2/pkg/"
