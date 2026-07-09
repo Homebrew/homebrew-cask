@@ -14,7 +14,7 @@ cask "crystaldiffract" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "CrystalDiffract.app"
 
