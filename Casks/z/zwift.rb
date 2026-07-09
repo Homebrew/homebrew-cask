@@ -1,5 +1,5 @@
 cask "zwift" do
-  version "1.1.16,159403"
+  version "1.1.17,162624"
   sha256 :no_check
 
   url "https://cdn.zwift.com/app/ZwiftOSX.dmg"
