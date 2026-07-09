@@ -14,27 +14,9 @@ cask "betwixt" do
 
   app "Betwixt-darwin-x64/Betwixt.app"
 
-  uninstall_postflight do
-    cert = Pathname("~/Library/Application Support/betwixt/ssl/certs/ca.pem").expand_path
-    next unless cert.exist?
-
-    stdout, * = system_command "/usr/bin/openssl",
-                               args: [
-                                 "x509",
-                                 "-fingerprint", "-sha256",
-                                 "-noout",
-                                 "-in", cert
-                               ]
-    hash = stdout.lines.first.split("=").second.delete(":").strip
-    stdout, * = system_command "/usr/bin/security",
-                               args: ["find-certificate", "-a", "-c", "NodeMITMProxyCA", "-Z"],
-                               sudo: true
-    hashes = stdout.lines.grep(/^SHA-256 hash:/) { |l| l.split(":").second.strip }
-    if hashes.include?(hash)
-      system_command "/usr/bin/security",
-                     args: ["delete-certificate", "-Z", hash],
-                     sudo: true
-    end
+  uninstall_postflight_steps do
+    delete_keychain_certificate "NodeMITMProxyCA",
+                                matching_certificate: "~/Library/Application Support/betwixt/ssl/certs/ca.pem"
   end
 
   zap trash: [
