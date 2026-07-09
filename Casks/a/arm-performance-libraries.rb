@@ -7,7 +7,7 @@ cask "arm-performance-libraries" do
       user_agent: :curl
   name "Arm Performance Libraries"
   desc "Optimized standard core math libraries for Arm processors"
-  homepage "https://developer.arm.com/Tools%20and%20Software/Arm%20Performance%20Libraries"
+  homepage "https://developer.arm.com/tools-and-software/arm-performance-libraries"
 
   livecheck do
     url :homepage,
