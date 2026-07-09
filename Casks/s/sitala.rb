@@ -14,11 +14,11 @@ cask "sitala" do
 
   depends_on :macos
 
-  app "Sitala.app"
-  pkg "Install Plug-ins.pkg"
+  pkg "Install Sitala.pkg"
 
   uninstall pkgutil: [
     "de.decomposer.Sitala.aax",
+    "de.decomposer.Sitala.app",
     "de.decomposer.Sitala.au",
     "de.decomposer.Sitala.vst",
     "de.decomposer.Sitala.vst3",
