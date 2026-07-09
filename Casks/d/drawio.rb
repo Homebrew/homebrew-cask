@@ -1,9 +1,9 @@
 cask "drawio" do
   arch arm: "arm64", intel: "x64"
 
-  version "30.2.6"
-  sha256 arm:   "259117e3b04ac93fb175268e127896a6cfbdc451fe1edea0dc33121aaaff9a54",
-         intel: "019b003945c649ecfb38f62be47e8a40fe5acee0ad178b9147568d026a81f2c1"
+  version "30.3.6"
+  sha256 arm:   "b54aae3d06525f81c80f42b494b58c45352047bbbfaecb6030c61158d2fb69e4",
+         intel: "d53874bbd4b07224235ac9c026a35406890dad7ed4cfc3e4a998b88db5698c2d"
 
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{arch}-#{version}.dmg",
       verified: "github.com/jgraph/drawio-desktop/"
