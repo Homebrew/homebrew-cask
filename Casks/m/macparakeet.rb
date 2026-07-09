@@ -1,6 +1,6 @@
 cask "macparakeet" do
-  version "0.7.0"
-  sha256 "ef33ccd18ea5ce2316a7271ee74fcf7b1fec9951434dcd9b392aaf7e3d84206a"
+  version "0.7.1"
+  sha256 "119e77ac02b2f2a8e0351b629a8d1e93a0f9fc774b0a3a9ee429b7b627ded4ec"
 
   url "https://github.com/moona3k/macparakeet/releases/download/v#{version}/MacParakeet.dmg",
       verified: "github.com/moona3k/macparakeet/"
