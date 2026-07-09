@@ -13,7 +13,6 @@ cask "mplab-xc32" do
     regex(%r{href=.*?SoftwareTools/xc32[._-]v?(\d+(?:\.\d+)+)[._-]full[._-]install[._-]osx[._-]installer\.dmg}i)
   end
 
-  depends_on arch: :x86_64
   depends_on :macos
 
   installer script: {
@@ -22,7 +21,6 @@ cask "mplab-xc32" do
       "--mode", "unattended",
       "--unattendedmodeui", "none",
       "--ModifyAll", "0",
-      "--netservername", '""',
       "--LicenseType", "FreeMode",
       "--prefix", staged_path.to_s
     ],
