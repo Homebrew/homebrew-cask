@@ -8,11 +8,11 @@ cask "agentsview" do
     arch arm: "aarch64", intel: "amd64"
   end
 
-  version "0.37.3"
-  sha256 arm:          "28555daa189b95038ce628d3a402ef5629651bd1a8b0d7189c3e2918cbd5de1c",
-         x86_64:       "c8a6fcbab405d14039141d5ee820b6c2ba9db6e3123bd02c855c5232e3db99d4",
-         x86_64_linux: "c37aa10c895054e6ee46a70109990f2d1d751fede1028e9f62c24b4705f7ffc5",
-         arm64_linux:  "f3f3232257a9cd52f764a23620a9691b4b64fea440e1556de3c98c4aa692817a"
+  version "0.37.4"
+  sha256 arm:          "f94e7248d7d63dce74ad4cb51a503eceb4a7bd08c13c46d9b4f1342cf24453b1",
+         x86_64:       "7648a9dac5a7f5f1feb982616a1eb887228c5b22680c9c9ca699eb231313d0ca",
+         x86_64_linux: "89e43248e937ccddfbcdc68f4f1663e713eec3115b537ae499cf69f3f124dc06",
+         arm64_linux:  "597c9baa666138d7e91bbf9495b6606b60c007d15aec12b5972a1a588eeed5e9"
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
 
