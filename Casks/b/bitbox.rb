@@ -1,6 +1,6 @@
 cask "bitbox" do
-  version "4.51.2"
-  sha256 "3c1aeda74248ba58c6631a9b03c350863909b696a6fa27e2e2ee992961d796b3"
+  version "4.51.3"
+  sha256 "cbc6c336a20a91d01fe530a966a130e6c1452ac01269134917d0d1d207044f30"
 
   url "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/download/v#{version}/BitBox-#{version}-macOS.dmg",
       verified: "github.com/BitBoxSwiss/bitbox-wallet-app/releases/download/"
