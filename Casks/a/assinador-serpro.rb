@@ -9,7 +9,7 @@ cask "assinador-serpro" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?AssinadorSerpro[._-]v?(\d+(?:\.\d+)+)\.m?pkg/i)
+    regex(/href=.*?Assinador[._-]?Serpro[._-]v?(\d+(?:\.\d+)+)\.m?pkg/i)
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
