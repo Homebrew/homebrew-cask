@@ -13,7 +13,7 @@ cask "ltspice" do
 
   depends_on macos: :sonoma
 
-  pkg "LTspice_26.pkg"
+  pkg "LTspice_#{version.major}.pkg"
 
   uninstall pkgutil: "com.analog.ltspice"
 
