@@ -1,8 +1,8 @@
 cask "vivaldi" do
-  version "8.0.4033.57"
-  sha256 "a2d8c970bec75d9af787acceb4498ce2dc2a6f4bbb7f7e4ae39c94fed68a6a77"
+  version "8.1.4087.46"
+  sha256 "f2195db7be86a87a9758a6354b5a4bf8234c8f0691d599bb571a08a5afcce5e1"
 
-  url "https://downloads.vivaldi.com/stable-auto/Vivaldi.#{version}.universal.dmg"
+  url "https://downloads.vivaldi.com/stable-auto/Vivaldi.#{version}.universal.tar.xz"
   name "Vivaldi"
   desc "Web browser with built-in email client focusing on customization and control"
   homepage "https://vivaldi.com/"
