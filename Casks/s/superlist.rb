@@ -14,7 +14,7 @@ cask "superlist" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Superlist.app"
 
