@@ -21,8 +21,8 @@ cask "keeweb" do
 
   app "KeeWeb.app"
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/KeeWeb.app"
+  uninstall_preflight_steps do
+    set_ownership "KeeWeb.app", base: :appdir
   end
 
   zap trash: [
