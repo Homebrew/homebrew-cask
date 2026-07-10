@@ -43,8 +43,8 @@ cask "mplab-xc32" do
   binary "#{staged_path}/bin/xc32-strings"
   binary "#{staged_path}/bin/xc32-strip"
 
-  postflight do
-    set_ownership staged_path.to_s
+  postflight_steps do
+    set_ownership "."
   end
 
   uninstall script: {
