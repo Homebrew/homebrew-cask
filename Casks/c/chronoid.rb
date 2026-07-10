@@ -1,6 +1,6 @@
 cask "chronoid" do
-  version "1.0.90"
-  sha256 "f3fa1fdcfdfc388babc1dbae4e646c761b5dc45a15735ab0ad9d0928f0f5238b"
+  version "1.0.91"
+  sha256 "c4b910af5765ac0d5d48ff0679084eaf518c142b4095f626c16e26fd49b849ec"
 
   url "https://download.chronoid.app/Chronoid-#{version}.dmg"
   name "Chronoid"
