@@ -34,8 +34,8 @@ cask "anaconda" do
     sudo:       true,
   }
 
-  postflight do
-    set_ownership "#{HOMEBREW_PREFIX}/anaconda3"
+  postflight_steps do
+    set_ownership "anaconda3", base: :homebrew_prefix
   end
 
   uninstall delete: [
