@@ -24,6 +24,15 @@ cask "codex" do
   binary "bin/codex"
   binary "bin/codex-code-mode-host"
 
+  # The `codex-package` archive also contains binaries outside of the `/bin`
+  # directory that can cause problems (e.g., an adhoc-signed ripgrep binary), so
+  # we only install the `/bin` directory.
+  preflight do
+    staged_path.glob("*[!/bin/]*").each do |unwanted_path|
+      FileUtils.rm_r(unwanted_path)
+    end
+  end
+
   generate_completions_from_executable "bin/codex", "completion"
 
   zap rmdir: "~/.codex"
