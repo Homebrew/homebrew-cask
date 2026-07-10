@@ -15,7 +15,7 @@ cask "osxfuse" do
 
   pkg "Extras/FUSE for macOS #{version}.pkg"
 
-  postflight do
+  postflight_steps do
     set_ownership ["/usr/local/include", "/usr/local/lib"]
   end
 
