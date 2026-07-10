@@ -14,11 +14,11 @@ jobs:
       pull-requests: write
     steps:
       - name: Check commit format
-        uses: Homebrew/actions/check-commit-format@main
+        uses: Homebrew/actions/check-commit-format@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
       - name: Label pull request
-        uses: Homebrew/actions/label-pull-requests@main
+        uses: Homebrew/actions/label-pull-requests@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
         if: always()
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
