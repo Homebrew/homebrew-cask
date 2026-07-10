@@ -24,7 +24,7 @@ cask "codex" do
   binary "bin/codex"
   binary "bin/codex-code-mode-host"
 
-  generate_completions_from_executable "bin/codex", "completion", base_name: "codex"
+  generate_completions_from_executable "bin/codex", "completion"
 
   zap rmdir: "~/.codex"
 end
