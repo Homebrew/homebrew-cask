@@ -2,11 +2,11 @@ cask "codex-app" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional intel: "-x64"
 
-  version "26.623.141536"
-  sha256 arm:   "d948dc36b8358f5a2924b033fbf08398eea7860dc9e97cb5ab9b354490283a0a",
-         intel: "5a8eb9bca0c021b994e56c93ef3502bdbc105975bcb83f99aef40f2ae56d48cc"
+  version "26.707.31428"
+  sha256 arm:   "ffdc351a507105d55d7464e3340302c758b8a54b926711c4b15bf373ccb47d64",
+         intel: "bf24b45c83d86efc03155bcba5f6e6c1df87219e6ea8ee7c7059ff4d767afeac"
 
-  url "https://persistent.oaistatic.com/codex-app-prod/Codex-darwin-#{arch}-#{version}.zip",
+  url "https://persistent.oaistatic.com/codex-app-prod/ChatGPT-darwin-#{arch}-#{version}.zip",
       verified: "persistent.oaistatic.com/codex-app-prod/"
   name "Codex"
   desc "OpenAI's Codex desktop app for managing coding agents"
