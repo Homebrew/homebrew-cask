@@ -1,6 +1,5 @@
 cask "codex-app" do
   arch arm: "arm64", intel: "x64"
-  livecheck_arch = on_arch_conditional intel: "-x64"
 
   version "26.623.141536"
   sha256 arm:   "d948dc36b8358f5a2924b033fbf08398eea7860dc9e97cb5ab9b354490283a0a",
@@ -13,9 +12,10 @@ cask "codex-app" do
   homepage "https://openai.com/codex"
 
   livecheck do
-    url "https://persistent.oaistatic.com/codex-app-prod/appcast#{livecheck_arch}.xml"
-    strategy :sparkle, &:short_version
+    skip "Upstream appcast now serves the renamed ChatGPT app"
   end
+
+  deprecate! date: "2026-07-09", because: "is now part of the ChatGPT app", replacement_cask: "chatgpt"
 
   auto_updates true
   depends_on macos: :monterey
