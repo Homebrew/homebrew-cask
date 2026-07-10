@@ -1,11 +1,11 @@
 cask "beekeeper-studio" do
   arch arm: "-arm64"
 
-  version "5.9.1"
-  sha256 arm:          "51fc3e09aeef0bcee4ea0e8ba4aa7aa09c6be1d10cac59f37af12e5cee2f8c16",
-         intel:        "3e432b07f27f66c6938f479961fad20f9e9ae89861a788ff58e2e1b6d31a19f2",
-         arm64_linux:  "f9088f59d20519c5bc0cd76ab046f7518cedfd7b002a1650a6b36f2bafb5e03b",
-         x86_64_linux: "34b615de535df2fdd8c9a460b9316b351e8ff4a8cba2855a88b9efc68c2a5b81"
+  version "5.9.2"
+  sha256 arm:          "b737b2f7782847e5cf073cc148edbe18356316ecf10c82f49d2145f8c4046cc8",
+         intel:        "61a3a0fe2a3628c591b5cad47dec4a741944cbabfc1f82d4d2c47e2c7be79f29",
+         arm64_linux:  "4f994ff8c465261bb28781594634cfe1902e07edb9336c325e7c009d8631356d",
+         x86_64_linux: "b2e2e7a891ef08eede9f67dec318e80e001f27ea7d2b441463b8635823172201"
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
 
