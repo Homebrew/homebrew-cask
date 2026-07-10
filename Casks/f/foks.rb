@@ -22,8 +22,8 @@ cask "foks" do
   binary "foks"
   binary "foks", target: "git-remote-foks"
 
-  postflight do
-    set_permissions "#{staged_path}/foks", "0755"
+  postflight_steps do
+    set_permissions "foks", "0755"
   end
 
   zap trash: [
