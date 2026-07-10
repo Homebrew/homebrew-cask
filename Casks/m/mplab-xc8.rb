@@ -34,8 +34,8 @@ cask "mplab-xc8" do
   binary "#{staged_path}/bin/xc8-clangd"
   binary "#{staged_path}/bin/xclm"
 
-  postflight do
-    set_ownership staged_path.to_s
+  postflight_steps do
+    set_ownership "."
   end
 
   uninstall script: {
