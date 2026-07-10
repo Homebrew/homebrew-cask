@@ -47,7 +47,7 @@ cask "virtualbox" do
         },
       ]
 
-  postflight do
+  postflight_steps do
     # If VirtualBox is installed before `/usr/local/lib/pkgconfig` is created by Homebrew,
     # it creates it itself with incorrect permissions that break other packages.
     # See https://github.com/Homebrew/homebrew-cask/issues/68730#issuecomment-534363026
