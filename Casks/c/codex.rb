@@ -3,12 +3,12 @@ cask "codex" do
   os macos: "apple-darwin", linux: "unknown-linux-musl"
 
   version "0.144.1"
-  sha256 arm:          "326198829dfb4b68da59723cf605478a2e9bec89ff47feb645814a4c5eaf5f6c",
-         intel:        "1c797880977549b281eeb4ecd9dbd145542c4ce262a2835ea2847f19922ed30c",
-         arm64_linux:  "218ab48bdda98dde3e10df184cc0c4eb92c4372d9ca924ef1aa5fc81b4f6a38e",
-         x86_64_linux: "3fd50cf96809b1eea294bbfba0a5c3a576871b4876a1f0e91226e520c1923be1"
+  sha256 arm:          "88e72ac8bd30815f7d18e62dac333dc20ce3ad1cba94be1649a1977dd9bfdbb8",
+         intel:        "0ea72d21c794504342d5fe0d5d057b0221c0a42f4bdf4a48b95af243af2b0c0e",
+         arm64_linux:  "b9f8ef5f98e46ced4dbbd3756a4223e3ee299a457ff488a3305bea455da8b5b8",
+         x86_64_linux: "84091ae20c65fcc7d4120db97d1bd57d7ff8df9c7609fb781c78c2ebbd4f5a28"
 
-  url "https://github.com/openai/codex/releases/download/rust-v#{version}/codex-package-#{arch}-#{os}.tar.gz"
+  url "https://github.com/openai/codex/releases/download/rust-v#{version}/codex-#{arch}-#{os}.tar.gz"
   name "Codex"
   desc "OpenAI's coding agent that runs in your terminal"
   homepage "https://github.com/openai/codex"
@@ -21,19 +21,9 @@ cask "codex" do
 
   depends_on formula: "ripgrep"
 
-  binary "bin/codex"
-  binary "bin/codex-code-mode-host"
+  binary "codex-#{arch}-#{os}", target: "codex"
 
-  # The `codex-package` archive also contains binaries outside of the `/bin`
-  # directory that can cause problems (e.g., an adhoc-signed ripgrep binary), so
-  # we only install the `/bin` directory.
-  preflight do
-    staged_path.glob("*[!/bin/]*").each do |unwanted_path|
-      FileUtils.rm_r(unwanted_path)
-    end
-  end
-
-  generate_completions_from_executable "bin/codex", "completion"
+  generate_completions_from_executable "codex-#{arch}-#{os}", "completion", base_name: "codex"
 
   zap rmdir: "~/.codex"
 end
