@@ -20,8 +20,8 @@ cask "dash-dash" do
 
   app "Dash-Qt.app"
 
-  preflight do
-    set_permissions "#{staged_path}/Dash-Qt.app", "0755"
+  preflight_steps do
+    set_permissions "Dash-Qt.app", "0755"
   end
 
   zap trash: [
