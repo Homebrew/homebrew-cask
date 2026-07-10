@@ -1,6 +1,6 @@
 cask "microsoft-edge@beta" do
-  version "150.0.4078.65,fc9b9bf9-7325-4020-81b7-74f6dc3fe97f"
-  sha256 "8a76120b107148cee088bf8a500de9cfafd265488dda29e2a8938e3043110af3"
+  version "151.0.4129.15,29c866b2-6528-454a-9426-b0574d27cd54"
+  sha256 "56624319572415eba479489ae23501ae8d54f7b153e683fc81971a8cb9ac2d37"
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdgeBeta-#{version.csv.first}.dmg"
   name "Microsoft Edge Beta"
@@ -19,7 +19,7 @@ cask "microsoft-edge@beta" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Microsoft Edge Beta.app"
 
