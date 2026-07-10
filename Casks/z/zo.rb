@@ -9,7 +9,7 @@ cask "zo" do
   homepage "https://www.zo.computer/"
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Zo.app"
 
