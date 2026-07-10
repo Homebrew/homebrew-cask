@@ -1,7 +1,7 @@
 cask "terax" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.8.2"
+  version "0.8.5"
 
   artifact = on_system_conditional linux: "Terax_#{version}_amd64.AppImage",
                                    macos: "Terax_#{version}_#{arch}.dmg"
@@ -20,8 +20,8 @@ cask "terax" do
   auto_updates true
 
   on_macos do
-    sha256 arm:   "a25cc6d2e2dd958bccbbb83045d31cda55780af2f617850a6df3c59e077774c4",
-           intel: "d80372ab32d6782e6192ffd9bdafd3756efc44ad01391d8d59b60c2c142688bb"
+    sha256 arm:   "dec4c1dcf2b571bd3411d179064cb356492ec7305433ef9528870766f128a414",
+           intel: "13696011e53ecfe42e5e37258c81612f1e928892f39da0745f0716c7787e07e4"
 
     depends_on macos: :ventura
 
@@ -36,7 +36,7 @@ cask "terax" do
   end
 
   on_linux do
-    sha256 "a6e9ea9e26bdd47ce76563396c31386a85658bafc88206e30dca58b367de85b7"
+    sha256 "7cb2e88ee61cc387671db3f81d35a491514138b970d6b4365240edfb743f8192"
 
     depends_on arch: :x86_64
 
