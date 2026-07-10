@@ -23,4 +23,11 @@ cask "step-agent" do
               "com.smallstep.launchd.Agent",
             ],
             pkgutil:   "com.smallstep.Agent"
+
+  zap trash: [
+    "~/Library/Caches/com.smallstep.Agent",
+    "~/Library/HTTPStorages/com.smallstep.Agent",
+    "~/Library/Preferences/com.smallstep.Agent.plist",
+    "~/Library/Saved Application State/com.smallstep.Agent.savedState",
+  ]
 end
