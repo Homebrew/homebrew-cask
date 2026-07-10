@@ -20,8 +20,8 @@ cask "ivpn" do
 
   app "IVPN.app"
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/IVPN.app"
+  uninstall_preflight_steps do
+    set_ownership "IVPN.app", base: :appdir
   end
 
   uninstall launchctl: "net.ivpn.client.Helper",
