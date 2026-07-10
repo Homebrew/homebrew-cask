@@ -18,8 +18,8 @@ cask "ampps" do
 
   suite "AMPPS"
 
-  uninstall_preflight do
-    set_permissions "#{appdir}/AMPPS", "0777"
+  uninstall_preflight_steps do
+    set_permissions "AMPPS", "0777", base: :appdir
   end
 
   caveats do
