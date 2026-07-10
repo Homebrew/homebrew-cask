@@ -1,6 +1,6 @@
 cask "sogouinput" do
-  version "623a"
-  sha256 "a31532d5734a581fe8fdef9171fc2a0920e5531a5ea83c9da6ad0dd9f48989ab"
+  version "624b"
+  sha256 "53c47dd53381b5f6b65e27fb5a48739a0b7b0eb83010c2f7aabe881c2dc65978"
 
   url "https://ime.gtimg.com/pc/sogou_mac_#{version}.zip",
       verified: "ime.gtimg.com/pc/"
