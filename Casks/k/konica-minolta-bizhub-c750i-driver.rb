@@ -43,7 +43,7 @@ cask "konica-minolta-bizhub-c750i-driver" do
 
   depends_on :macos
 
-  uninstall_preflight do
+  uninstall_preflight_steps do
     set_ownership "/Library/Printers/KONICAMINOLTA/Preferences"
   end
 
