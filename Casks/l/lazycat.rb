@@ -1,17 +1,18 @@
 cask "lazycat" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.13"
-  sha256 arm:   "d23dbd516712657ebbbc035cfa3f559022bc76f6ea95dca686e655f6417dbdba",
-         intel: "c1375a5823e43d6d0e8147faec112052eeb4596e0b1ceb50f9aa074ceafeab99"
+  version "2.0.14"
+  sha256 arm:   "081357d95dc6fdc9c9c2a45d85894931fde27199e8da0bfed279eb98a983ba45",
+         intel: "e23d04df2ea2056e35ca386fa174a78620254f7813438f6d05534b5b17b18a64"
 
-  url "https://dl.lazycat.cloud/client/desktop/stable/lzc-client-desktop_v#{version}_#{arch}.dmg"
+  url "https://dl.lazycatmicroserver.com/client/desktop/stable/lzc-client-desktop_v#{version}_#{arch}.dmg",
+      verified: "dl.lazycatmicroserver.com/client/desktop/stable/"
   name "LazyCat"
   desc "Client for LazyCat hardware"
   homepage "https://lazycat.cloud/"
 
   livecheck do
-    url "https://dl.lazycat.cloud/client/desktop/lzc-client-desktop_#{arch}.dmg.metadata.json"
+    url "https://dl.lazycatmicroserver.com/client/desktop/lzc-client-desktop_#{arch}.dmg.metadata.json"
     strategy :json do |json|
       json["buildVersion"]&.delete_prefix("v")
     end
