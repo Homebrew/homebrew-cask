@@ -27,8 +27,8 @@ cask "ngrok" do
 
   binary "ngrok"
 
-  postflight do
-    set_permissions "#{staged_path}/ngrok", "0755"
+  postflight_steps do
+    set_permissions "ngrok", "0755"
   end
 
   zap trash: [
