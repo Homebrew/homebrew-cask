@@ -21,6 +21,7 @@ cask "ibm-notifier" do
   depends_on macos: :big_sur
 
   app "IBM Notifier.app"
+  binary "#{appdir}/IBM Notifier.app/Contents/MacOS/IBM Notifier"
 
   zap trash: [
     "~/Library/Caches/com.ibm.cio.notifier",
