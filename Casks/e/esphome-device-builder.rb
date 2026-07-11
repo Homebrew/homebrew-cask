@@ -35,11 +35,12 @@ cask "esphome-device-builder" do
     app "ESPHome Device Builder.app"
     binary "#{appdir}/ESPHome Device Builder.app/Contents/MacOS/esphome-desktop"
 
-    zap quit:  "io.esphome.builder",
-        trash: [
+    uninstall quit:  "io.esphome.builder",
+              trash: "~/Library/LaunchAgents/ESPHome Device Builder.plist"
+
+    zap trash: [
           "~/esphome",
           "~/Library/Application Support/io.esphome.builder",
-          "~/Library/LaunchAgents/ESPHome Device Builder.plist",
         ]
   end
 
