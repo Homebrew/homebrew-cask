@@ -1,6 +1,6 @@
 cask "screens-connect" do
-  version "5.3.3,22947"
-  sha256 "6cc908710e999fe58ef952270ee6bcf1ea5eee69d63543760bf46550f1e58482"
+  version "5.3.3,22948"
+  sha256 "1390b4c4d09f93d0914e7712c9065dfeae43e7e64d91cab53a3f99d6772b14e0"
 
   url "https://updates.edovia.com/com.edovia.screens.connect.mac/ScreensConnect_#{version.csv.first}b#{version.csv.second}.zip"
   name "Screens Connect"
@@ -13,7 +13,7 @@ cask "screens-connect" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
+  depends_on macos: :monterey
 
   app "Screens Connect.app"
 
