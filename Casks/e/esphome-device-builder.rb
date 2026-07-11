@@ -39,9 +39,9 @@ cask "esphome-device-builder" do
               trash: "~/Library/LaunchAgents/ESPHome Device Builder.plist"
 
     zap trash: [
-          "~/esphome",
-          "~/Library/Application Support/io.esphome.builder",
-        ]
+      "~/esphome",
+      "~/Library/Application Support/io.esphome.builder",
+    ]
   end
 
   on_linux do
