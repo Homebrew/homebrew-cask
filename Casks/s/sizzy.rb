@@ -1,7 +1,7 @@
 cask "sizzy" do
   arch arm: "arm64", intel: "intel"
 
-  version "73.1.0"
+  version "74.0.0"
   sha256 :no_check
 
   url "https://proxy.sizzy.co/updates/download/mac?arch=#{arch}"
@@ -16,7 +16,7 @@ cask "sizzy" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Sizzy.app"
 
