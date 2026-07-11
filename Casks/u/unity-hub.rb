@@ -1,9 +1,9 @@
 cask "unity-hub" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.19.4"
-  sha256 arm:   "8314a09f37a8ca1ac089c1561df20797c7dc871074a82d7cef69dbed4b42e59d",
-         intel: "d1ea4d52888813c66a3477f1378b5239aa60e854c0730ff26bfba0df424fa630"
+  version "3.19.5"
+  sha256 arm:   "da6773add1f638d8bd00615a47661408d1de4a3c94e7efb5a37f1e7131e63272",
+         intel: "d86dc505d27560dfe3b5f6da060093034c0ecf934e6d7e85de3223947ef82702"
 
   url "https://public-cdn.cloud.unity3d.com/hub/prod/#{version}/UnityHubSetup-#{version}-#{arch}.dmg"
   name "Unity Hub"
