@@ -37,6 +37,7 @@ cask "esphome-device-builder" do
 
     zap quit:  "io.esphome.builder",
         trash: [
+          "~/esphome",
           "~/Library/Application Support/io.esphome.builder",
           "~/Library/LaunchAgents/ESPHome Device Builder.plist",
         ]
