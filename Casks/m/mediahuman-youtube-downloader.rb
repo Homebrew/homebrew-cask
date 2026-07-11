@@ -1,7 +1,7 @@
 cask "mediahuman-youtube-downloader" do
   arch arm: "-arm"
 
-  version "3.9.21"
+  version "3.9.22"
   sha256 :no_check
 
   on_arm do
