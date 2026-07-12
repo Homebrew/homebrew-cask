@@ -18,7 +18,6 @@ cask "chatgpt" do
   end
 
   auto_updates true
-  conflicts_with cask: "codex-app"
   depends_on macos: :monterey
 
   app "ChatGPT.app"
