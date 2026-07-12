@@ -1,9 +1,9 @@
 cask "flyenv" do
   arch arm: "-arm64"
 
-  version "4.16.1"
-  sha256 arm:   "15df31fd5c9126715f7e75aec061d9eff2a339d8ef0b174d131b172b8a72cbb9",
-         intel: "0bb21d9b055fbf4cf1d85a4632cb6edf707009a4ba38308d97e2c754c64af767"
+  version "4.16.2"
+  sha256 arm:   "492a3842a489493ffa5aef4db25026c4d7459a85822b8c0f6fea3bf4f87705df",
+         intel: "b529a20b1f4118e64182c2c90c323726602a9d595f905fba5d52347586a8dadb"
 
   url "https://github.com/xpf0000/FlyEnv/releases/download/v#{version}/FlyEnv-#{version}#{arch}-mac.zip",
       verified: "github.com/xpf0000/FlyEnv/"
