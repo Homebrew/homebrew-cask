@@ -18,11 +18,10 @@ cask "chatgpt-classic" do
   end
 
   auto_updates true
-  conflicts_with cask: "chatgpt"
   depends_on macos: :sonoma
   depends_on arch: :arm64
 
-  app "ChatGPT.app"
+  app "ChatGPT.app", target: "ChatGPT Classic.app"
 
   uninstall quit: "com.openai.chat"
 
