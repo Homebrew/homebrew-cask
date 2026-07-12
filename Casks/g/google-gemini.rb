@@ -41,6 +41,7 @@ cask "google-gemini" do
         "~/Library/Caches/com.google.GeminiMacOS",
         "~/Library/Caches/com.google.GeminiMacOS.launcher",
         "~/Library/Google/GoogleSoftwareUpdate/Actives/com.google.GeminiMacOS",
+        "~/Library/Group Containers/group.com.google.gemini",
         "~/Library/HTTPStorages/com.google.GeminiMacOS",
         "~/Library/Preferences/com.google.GeminiMacOS.*",
       ]
