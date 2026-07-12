@@ -13,6 +13,7 @@ cask "wailbrew" do
 
   zap trash: [
     "~/.config/wailbrew",
+    "~/.wailbrew",
     "~/Library/Application Support/WailBrew",
     "~/Library/Caches/io.github.wickenico.wailbrew",
     "~/Library/Preferences/dev.wailbrew.plist",
