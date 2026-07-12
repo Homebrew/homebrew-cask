@@ -16,6 +16,7 @@ cask "openusage" do
   zap trash: [
     "~/Library/Application Support/com.robinebers.openusage",
     "~/Library/Application Support/OpenUsage",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.robinebers.openusage",
     "~/Library/Caches/com.robinebers.openusage",
     "~/Library/HTTPStorages/com.robinebers.openusage",
     "~/Library/HTTPStorages/com.robinebers.openusage.binarycookies",
