@@ -1,44 +1,39 @@
 cask "chatgpt" do
-  version "1.2026.183,1783607847"
-  sha256 "49b33cadd2ec659b76352384f7ebd332a7ec7029663365a9f720f4a251d3b8d1"
+  arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional intel: "-x64"
 
-  url "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "persistent.oaistatic.com/sidekick/public/"
+  version "26.707.31428"
+  sha256 arm:   "ffdc351a507105d55d7464e3340302c758b8a54b926711c4b15bf373ccb47d64",
+         intel: "bf24b45c83d86efc03155bcba5f6e6c1df87219e6ea8ee7c7059ff4d767afeac"
+
+  url "https://persistent.oaistatic.com/codex-app-prod/ChatGPT-darwin-#{arch}-#{version}.zip",
+      verified: "persistent.oaistatic.com/codex-app-prod/"
   name "ChatGPT"
   desc "OpenAI's official ChatGPT desktop app"
   homepage "https://chatgpt.com/"
 
-  # Some older items in the Sparkle feed have a more recent pubDate, so it's necessary to
-  # work with all of the items in the feed (not just the newest one).
   livecheck do
-    url "https://persistent.oaistatic.com/sidekick/public/sparkle_public_appcast.xml"
-    strategy :sparkle do |items|
-      items.map(&:nice_version)
-    end
+    url "https://persistent.oaistatic.com/codex-app-prod/appcast#{livecheck_arch}.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: :sonoma
-  depends_on arch: :arm64
+  conflicts_with cask: "codex-app"
+  depends_on macos: :monterey
 
   app "ChatGPT.app"
 
-  uninstall quit: "com.openai.chat"
+  uninstall quit: "com.openai.codex"
 
   zap trash: [
-    "~/Library/Application Scripts/com.openai.chat.Widgets",
-    "~/Library/Application Scripts/group.com.openai.chat",
-    "~/Library/Application Support/ChatGPT",
-    "~/Library/Application Support/com.openai.chat",
-    "~/Library/Caches/com.openai.chat",
-    "~/Library/Containers/com.openai.chat.Widgets",
-    "~/Library/Group Containers/group.com.openai.chat",
-    "~/Library/HTTPStorages/ChatGPTHelper.binarycookies",
-    "~/Library/HTTPStorages/com.openai.chat",
-    "~/Library/HTTPStorages/com.openai.chat.binarycookies",
-    "~/Library/Preferences/com.openai.chat.*.plist",
-    "~/Library/Preferences/com.openai.chat.plist",
-    "~/Library/Saved Application State/com.openai.chat.savedState",
-    "~/Library/WebKit/com.openai.chat",
-  ]
+        "~/Library/Application Support/Codex",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.openai.codex.sfl*",
+        "~/Library/Caches/com.openai.codex",
+        "~/Library/HTTPStorages/com.openai.codex",
+        "~/Library/HTTPStorages/com.openai.codex.binarycookies",
+        "~/Library/Logs/com.openai.codex",
+        "~/Library/Preferences/com.openai.codex.plist",
+        "~/Library/Saved Application State/com.openai.codex.savedState",
+      ],
+      rmdir: "~/.codex"
 end
