@@ -25,9 +25,14 @@ cask "codex-app" do
   uninstall quit: "com.openai.codex"
 
   zap trash: [
+        "/Library/Application Support/CodexComputerUseAuthorizationPlugin",
         "~/Library/Application Support/Codex",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.openai.codex.sfl*",
+        "~/Library/Application Support/com.openai.codex",
+        "~/Library/Application Support/OpenAI/Codex",
+        "~/Library/Caches/Codex",
         "~/Library/Caches/com.openai.codex",
+        "~/Library/Group Containers/*.com.openai.sky.CUAService",
         "~/Library/HTTPStorages/com.openai.codex",
         "~/Library/HTTPStorages/com.openai.codex.binarycookies",
         "~/Library/Logs/com.openai.codex",
