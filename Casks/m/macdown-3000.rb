@@ -1,6 +1,6 @@
 cask "macdown-3000" do
-  version "3000.0.6"
-  sha256 "f4cd91a4bda40314322209ffdeddcb7309c917be216f7ce7817cd5a19e4d7dd9"
+  version "3000.0.7"
+  sha256 "62296564c5b6604b93c9a11849ec441572beadbde2e499dcc232e1d1ddd01c98"
 
   url "https://github.com/schuyler/macdown3000/releases/download/v#{version}/MacDown-#{version}.dmg",
       verified: "github.com/schuyler/macdown3000/"
