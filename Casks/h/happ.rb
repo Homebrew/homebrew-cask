@@ -17,5 +17,11 @@ cask "happ" do
 
   app "Happ.app"
 
-  zap trash: "~/Library/Preferences/Happ"
+  zap trash: [
+    "/Library/LaunchDaemons/com.happ.happd.plist",
+    "~/Library/Application Support/Happ",
+    "~/Library/Caches/Happ",
+    "~/Library/Preferences/com.happ.plist",
+    "~/Library/Preferences/Happ",
+  ]
 end
