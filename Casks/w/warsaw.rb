@@ -12,18 +12,9 @@ cask "warsaw" do
 
   pkg "warsaw_setup.pkg"
 
-  uninstall_postflight do
-    ["Warsaw Personal CA", "127.0.0.1"].each do |cert_name|
-      stdout, * = system_command "/usr/bin/security",
-                                 args: ["find-certificate", "-a", "-c", cert_name, "-Z"],
-                                 sudo: true
-      hashes = stdout.lines.grep(/^SHA-256 hash:/) { |l| l.split(":").second.strip }
-      hashes.each do |h|
-        system_command "/usr/bin/security",
-                       args: ["delete-certificate", "-Z", h],
-                       sudo: true
-      end
-    end
+  uninstall_postflight_steps do
+    delete_keychain_certificate "Warsaw Personal CA"
+    delete_keychain_certificate "127.0.0.1"
   end
 
   uninstall launchctl: [
