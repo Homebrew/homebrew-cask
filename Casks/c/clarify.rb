@@ -1,6 +1,6 @@
 cask "clarify" do
-  version "1.6.6"
-  sha256 "3ecb50009a829b5a2cb9fd2d4596a52cc0a5ca1619edc7db28eb807c4c9db095"
+  version "1.6.7"
+  sha256 "c12a5a4f73ec3e8bb11104486fb9f0c7b7615a2e59155f0999c04bee97449b45"
 
   url "https://github.com/clarifyhq/desktop-app-releases/releases/download/v#{version}/Clarify.dmg",
       verified: "github.com/clarifyhq/desktop-app-releases/"
