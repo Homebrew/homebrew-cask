@@ -1,6 +1,6 @@
 cask "get-api" do
-  version "2.0.4"
-  sha256 "10ecdbc04e69f18426971a963e0128d273bfa8fc4113ab7e3fab2d28425c872a"
+  version "2.1.0"
+  sha256 "0b03d2e2328c5d3127c3dc245a6a92882f67c76453af764c1939fd6958730d36"
 
   url "https://files.getapi.io/macos/#{version}/Get%20API.dmg"
   name "GetAPI"
