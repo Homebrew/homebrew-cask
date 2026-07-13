@@ -1,6 +1,6 @@
 cask "whatroute" do
-  version "2.7.2"
-  sha256 "b500084ab8ceb4625a212704b0e076bb29011002a0e681fbc865a58a65ad7a49"
+  version "2.8.0"
+  sha256 "25c955c8e685ee55d92c0e4fd585a7827ad7c7f32d5f4af940a79853336afb8e"
 
   url "https://www.whatroute.net/software/whatroute-#{version}.zip"
   name "WhatRoute"
@@ -12,7 +12,7 @@ cask "whatroute" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :sonoma
 
   app "WhatRoute.app"
 
