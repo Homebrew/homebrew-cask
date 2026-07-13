@@ -1,5 +1,5 @@
 cask "navicat-for-mariadb" do
-  version "17.3.11"
+  version "17.3.12"
   sha256 :no_check
 
   language "zh-CN" do
