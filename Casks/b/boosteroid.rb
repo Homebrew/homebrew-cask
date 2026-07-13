@@ -8,7 +8,7 @@ cask "boosteroid" do
     version "1.10.19"
   end
   on_intel do
-    version "1.10.17"
+    version "1.10.20"
   end
 
   url "https://boosteroid.com/macos#{folder}/installer/boosteroid-install-#{arch}.dmg",
