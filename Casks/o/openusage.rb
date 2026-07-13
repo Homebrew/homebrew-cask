@@ -1,6 +1,6 @@
 cask "openusage" do
-  version "0.7.4"
-  sha256 "641aff827a4519ddd3d248073ec7c21b2589fc8cbb117668a801dd51c5834773"
+  version "0.7.5"
+  sha256 "c9c2a6ee4cce33e7efe49863bf726b1bea322b72c43a3f4fb3b965d8fcf44fd7"
 
   url "https://github.com/robinebers/openusage/releases/download/v#{version}/OpenUsage-#{version}.dmg",
       verified: "github.com/robinebers/openusage/"
