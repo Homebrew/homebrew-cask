@@ -1,9 +1,9 @@
 cask "inav-configurator" do
   arch arm: "arm64", intel: "x64"
 
-  version "9.1.0"
-  sha256 arm:   "4b2bebac0b8fff13d5a16390248d8391becfb0d0887c2029b32ebfd33ccf0552",
-         intel: "5e0e2c41b30a4bce29329680dfd8b8bf4dd448a0d7145a32b89383d3ffd1a35c"
+  version "9.1.1"
+  sha256 arm:   "386d6845587286c66c37df3e6b919dd9c783b4cfb0f173aa203c6d150609f158",
+         intel: "2d499766f9d8efb0f3524b20528c02c5168423889ab31b70c260e16d11497652"
 
   url "https://github.com/iNavFlight/inav-configurator/releases/download/#{version}/INAV-Configurator_MacOS_#{arch}_#{version}.zip"
   name "INAV Configurator"
