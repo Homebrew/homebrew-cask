@@ -1,6 +1,6 @@
 cask "ibm-notifier" do
-  version "3.2.3,135"
-  sha256 "2b4d13398d68a2305574567f486c34204998641206cd21ff2c2d816e346ab257"
+  version "3.2.4,136"
+  sha256 "27eebdca2301aea50c9a2a8610b1a8c11c59245883be39fde9ec9c3d894ef4de"
 
   url "https://github.com/IBM/mac-ibm-notifications/releases/download/v-#{version.csv.first}-b-#{version.csv.second}/IBM.Notifier.zip"
   name "IBM Notifier"
