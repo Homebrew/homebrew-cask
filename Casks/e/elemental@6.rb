@@ -1,6 +1,6 @@
 cask "elemental@6" do
-  version "6.10.0"
-  sha256 "271e4911112446c70e5f3ab528608097d691faf9f686c57b471c841ef6f2a21c"
+  version "6.11.0"
+  sha256 "604fbfcfe728ca1797bfdc921121614c11a71135e9c454fa14900370bb620eb3"
 
   url "https://github.com/evolvedbinary/elemental/releases/download/elemental-#{version}/elemental-#{version}.dmg",
       verified: "github.com/evolvedbinary/elemental/"
