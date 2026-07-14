@@ -7,6 +7,7 @@ cask "whatcable" do
   desc "Menu bar app for USB-C cable diagnostics"
   homepage "https://github.com/darrylmorley/whatcable"
 
+  auto_updates true
   depends_on macos: :sonoma
 
   app "WhatCable.app"
