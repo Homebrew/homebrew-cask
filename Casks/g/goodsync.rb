@@ -1,5 +1,5 @@
 cask "goodsync" do
-  version "12.11.4"
+  version "12.11.5"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.goodsync.com/download/goodsync-vsub-mac.dmg"
