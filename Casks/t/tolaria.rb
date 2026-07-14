@@ -1,7 +1,7 @@
 cask "tolaria" do
   arch arm: "Silicon", intel: "Intel"
 
-  version "2026.07.09,2026.7.9"
+  version "2026.07.14,2026.7.14"
 
   artifact = on_system_conditional linux: "Tolaria_#{version.csv.second || version}_amd64.AppImage",
                                    macos: "Tolaria_#{version.csv.second || version}_macOS_#{arch}.dmg"
@@ -32,8 +32,8 @@ cask "tolaria" do
   end
 
   on_macos do
-    sha256 arm:   "71f2bb20adc70a7238be8ec4a7d0dc74d8ddc262238448c9fdbb8c3a447297c8",
-           intel: "9f9f6ad08cd4ff2cc0060dc55377c9f91130cdd2699eb5a83b740b6fa1ebde71"
+    sha256 arm:   "aea8f257638711e92b315def769906add50c66b483180ba1c39ec84804a6eafb",
+           intel: "a63c975afaf9a1f51f6eb7cab489f6759d74fc2fbe331750d2c0089210c2eb85"
 
     auto_updates true
 
@@ -51,7 +51,7 @@ cask "tolaria" do
   end
 
   on_linux do
-    sha256 "807255964558af0e199d6495bda144ae37d1e87dbf2fa9aa3e2758bb85f41e62"
+    sha256 "93b16afbf6c42ad9c50f877990bf055ae050d8b134cec7b1027f9e052a080d0c"
 
     depends_on arch: :x86_64
 
