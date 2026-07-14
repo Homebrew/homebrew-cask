@@ -1,6 +1,6 @@
 cask "proscoreboard" do
-  version "7.2,117571588"
-  sha256 "f0626ef2c842d142adbd17285033ca53f01981cadf59e113baf03c92d9010296"
+  version "7.3,117637122"
+  sha256 "a8bcbaa4f994c9fd6eb47d4d13040519f7ca45a2e634939cd294739a5a9a9dcf"
 
   url "https://renewedvision.com/downloads/ProScoreboard_#{version.csv.first}_#{version.csv.second}.zip"
   name "ProScoreboard"
