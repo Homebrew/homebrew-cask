@@ -1,6 +1,6 @@
 cask "nvidia-sync" do
-  version "0.97.6"
-  sha256 "e84ebf6e73d56e8d73bef2c8102fe0f5e078f0f7d5a243cf95235a36e6b8fd14"
+  version "0.100.18"
+  sha256 "d3c096a5e6219c8be2fda8e54feb50a029ca19708f88474dd7f5a73805ed219c"
 
   url "https://workbench.download.nvidia.com/stable/nvidia-sync/#{version}/nvidia-sync.dmg"
   name "NVIDIA Sync"
