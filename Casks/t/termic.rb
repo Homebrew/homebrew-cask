@@ -22,6 +22,8 @@ cask "termic" do
     "~/Library/Application Support/com.simion.termic",
     "~/Library/Application Support/termic",
     "~/Library/Caches/com.simion.termic",
+    "~/Library/Caches/termic",
+    "~/Library/HTTPStorages/com.simion.termic",
     "~/Library/Preferences/com.simion.termic.plist",
     "~/Library/Saved Application State/com.simion.termic.savedState",
     "~/Library/WebKit/com.simion.termic",
