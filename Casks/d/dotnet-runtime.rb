@@ -1,9 +1,9 @@
 cask "dotnet-runtime" do
   arch arm: "arm64", intel: "x64"
 
-  version "10.0.9"
-  sha256 arm:   "367b153b0d5b8865cf7e49d70a87b206cd6a5e09444f5f787977fc9b8b451f2f",
-         intel: "e4bdd9b4561bd7d5f257c281c918e35b1d552f2c6ffc8b58668c438d7453ee9a"
+  version "10.0.10"
+  sha256 arm:   "238990637faf831a5a2e21eda41810bc7d2a31b55afcb722262d27f4956cd6c8",
+         intel: "1def9abdcd19a58ada87fa2452e42242ea233ccc048861845f54f606d23442a5"
 
   url "https://builds.dotnet.microsoft.com/dotnet/Runtime/#{version}/dotnet-runtime-#{version}-osx-#{arch}.pkg"
   name ".Net Runtime"
