@@ -2,11 +2,11 @@ cask "cursor" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "3.11.13,3f21b08f0b436a07be29fbfe00b304fa15553353"
-  sha256 arm:          "c4416be422f654e5bc9b0ad3ff024376029af95074af58489f94b29230eded03",
-         intel:        "97a3ac969f77a186e487a57d30bda9dbb4dc555b94c7e92004e158b3a1d44bf7",
-         arm64_linux:  "6677240df70842bc4ab216ffd4cd9b4721123001f62e3ed8309dcfe8b948e43b",
-         x86_64_linux: "b6733eb91f8dc36a645d67140e90b58b99786e3c9521065b3a9656097e8be501"
+  version "3.11.19,bf249e6efb5b097f23d7e21d7283429f0760b74a"
+  sha256 arm:          "7ba2aa1e8597bd1444581cb31b9784d95317c17f7ab9fe29ce768f9e64c4226f",
+         intel:        "ab2eb4fc39b18e562d231433de26d167d44c46229832f04a648c12f22b757eae",
+         arm64_linux:  "94500aeb14c80377749268f26c362c3136198436ebff16ac0c6fcdb99984f376",
+         x86_64_linux: "104e50b93335eac89be0c600933df83cb6c03978dbee171dc15b6b61210ab7f2"
 
   url_end = on_system_conditional linux: "AppImage", macos: "zip"
 
