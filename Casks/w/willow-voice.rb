@@ -19,4 +19,14 @@ cask "willow-voice" do
   app "Willow Voice.app"
 
   uninstall quit: "com.seewillow.WillowMac"
+
+  zap trash: [
+    "~/Library/Application Support/com.seewillow.WillowMac",
+    "~/Library/Application Support/CrashReporter/Willow Voice_*.plist",
+    "~/Library/Caches/com.seewillow.WillowMac",
+    "~/Library/Caches/SentryCrash/Willow Voice",
+    "~/Library/HTTPStorages/com.seewillow.WillowMac",
+    "~/Library/HTTPStorages/com.seewillow.WillowMac.binarycookies",
+    "~/Library/Preferences/com.seewillow.WillowMac.plist",
+  ]
 end
