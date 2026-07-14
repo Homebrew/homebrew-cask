@@ -1,6 +1,6 @@
 cask "jollysfastvnc" do
-  version "1.64,22052516"
-  sha256 "a8fd7f4691008689cf7aae2e349a364e187b4d989ca675101a9f716c3b9525eb"
+  version "1.66,26010802"
+  sha256 "061ab6792ec0574420752a422c123b9325557bd130f65c0ab4acc42c37f8a74d"
 
   url "https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.#{version.csv.first}.(#{version.csv.second}).11.0.dmg"
   name "JollysFastVNC"
