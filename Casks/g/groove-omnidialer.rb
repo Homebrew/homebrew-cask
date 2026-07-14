@@ -1,6 +1,6 @@
 cask "groove-omnidialer" do
-  version "26.603.1017"
-  sha256 "5f15c447daa74986b0a31140fa5bce7a5c694f596390ad6dcdb209b3b1550c09"
+  version "26.714.742"
+  sha256 "861a4e4b79411fe91bb1cae040479fca669d78f2cbd51b7e13d1b6a3834adb79"
 
   url "https://groove-dialer.s3-us-west-2.amazonaws.com/electron/Groove%20OmniDialer-#{version}-universal.dmg",
       verified: "groove-dialer.s3-us-west-2.amazonaws.com/electron/"
