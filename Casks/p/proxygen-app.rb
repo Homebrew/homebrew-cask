@@ -1,5 +1,5 @@
 cask "proxygen-app" do
-  version "6.1"
+  version "6.1.1"
   sha256 :no_check
 
   url "https://download.proxygen.app/Proxygen.dmg"
