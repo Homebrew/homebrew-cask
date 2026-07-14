@@ -1,6 +1,6 @@
 cask "microsoft-365-copilot" do
-  version "1.2606.1501"
-  sha256 "19148ebe9846d3cc5871d808fe2568c3abab7901da24feb453be00b472e2f6ac"
+  version "1.2607.0602"
+  sha256 "92f21e5df089d5f49004de8a849aba709a803bac41aa3d6f1fb01652e8e26690"
 
   url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_Copilot_universal_#{version}_Installer.pkg",
       verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
