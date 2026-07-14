@@ -11,7 +11,7 @@ cask "rambox" do
   auto_updates true
   depends_on macos: :monterey
 
-  app "Rambox-darwin-universal/Rambox.app"
+  app "Rambox.app"
 
   zap trash: [
     "~/Library/Application Support/CrashReporter/Rambox Helper_*.plist",
