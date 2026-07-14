@@ -21,7 +21,7 @@ cask "macfuse@dev" do
 
   pkg "Extras/macFUSE #{version}.pkg"
 
-  postflight do
+  postflight_steps do
     set_ownership ["/usr/local/include", "/usr/local/lib"]
   end
 

@@ -22,8 +22,8 @@ cask "tidelift" do
 
   binary "tidelift"
 
-  postflight do
-    set_permissions "#{staged_path}/tidelift", "+x"
+  postflight_steps do
+    set_permissions "tidelift", "+x"
   end
 
   # No zap stanza required

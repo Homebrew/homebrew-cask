@@ -13,8 +13,8 @@ cask "spaceid" do
 
   app "SpaceId.app"
 
-  preflight do
-    set_permissions "#{staged_path}/SpaceId.app", "0755"
+  preflight_steps do
+    set_permissions "SpaceId.app", "0755"
   end
 
   uninstall login_item: "SpaceId"

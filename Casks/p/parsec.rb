@@ -19,7 +19,7 @@ cask "parsec" do
 
   pkg "parsec-macos.pkg"
 
-  postflight do
+  postflight_steps do
     set_ownership "~/.parsec"
   end
 

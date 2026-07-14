@@ -46,8 +46,8 @@ cask "parallels@20" do
                    sudo: true
   end
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/Parallels Desktop.app"
+  uninstall_preflight_steps do
+    set_ownership "Parallels Desktop.app", base: :appdir
   end
 
   uninstall signal: ["TERM", "com.parallels.desktop.console"],

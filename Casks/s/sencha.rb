@@ -19,7 +19,7 @@ cask "sencha" do
     sudo:       true,
   }
 
-  postflight do
+  postflight_steps do
     set_ownership "/opt/Sencha"
   end
 

@@ -23,8 +23,8 @@ cask "tunnelblick" do
 
   app "Tunnelblick.app"
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/Tunnelblick.app"
+  uninstall_preflight_steps do
+    set_ownership "Tunnelblick.app", base: :appdir
   end
 
   uninstall launchctl: [

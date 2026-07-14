@@ -20,7 +20,7 @@ cask "mamp" do
 
   pkg "MAMP-MAMP-PRO-#{version}-#{arch}.pkg"
 
-  postflight do
+  postflight_steps do
     set_ownership ["/Applications/MAMP", "/Applications/MAMP PRO"]
   end
 

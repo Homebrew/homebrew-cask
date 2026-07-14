@@ -25,7 +25,7 @@ cask "openwebstart" do
     print_stderr: false,
   }
 
-  uninstall_preflight do
+  uninstall_preflight_steps do
     set_ownership "/Applications/OpenWebStart"
   end
 

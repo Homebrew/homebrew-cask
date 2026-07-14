@@ -24,8 +24,8 @@ cask "bitcoin-core" do
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Bitcoin-Qt.app", target: "Bitcoin Core.app"
 
-  preflight do
-    set_permissions "#{staged_path}/Bitcoin-Qt.app", "0755"
+  preflight_steps do
+    set_permissions "Bitcoin-Qt.app", "0755"
   end
 
   # Don't trash directory "~/Library/Application Support/Bitcoin" because it can contain bitcoin wallets

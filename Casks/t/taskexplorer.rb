@@ -12,8 +12,8 @@ cask "taskexplorer" do
 
   app "TaskExplorer.app"
 
-  uninstall_preflight do
-    set_ownership "#{appdir}/TaskExplorer.app"
+  uninstall_preflight_steps do
+    set_ownership "TaskExplorer.app", base: :appdir
   end
 
   zap trash: [

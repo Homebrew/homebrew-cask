@@ -19,8 +19,8 @@ cask "dogecoin" do
 
   app "Dogecoin-Qt.app"
 
-  preflight do
-    set_permissions "#{staged_path}/Dogecoin-Qt.app", "0755"
+  preflight_steps do
+    set_permissions "Dogecoin-Qt.app", "0755"
   end
 
   zap trash: "~/Library/com.dogecoin.Dogecoin-Qt.plist"
