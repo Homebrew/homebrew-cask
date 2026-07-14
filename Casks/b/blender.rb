@@ -5,8 +5,8 @@ cask "blender" do
   # https://www.blender.org/download/lts/ when updating this cask, as we cannot
   # identify LTS versions using livecheck.
   on_arm do
-    version "5.1.2"
-    sha256 "f104ffee2ba6aee32328e5c203b7e4608d8a1745f7bbcf2766f3b9777e8fbe17"
+    version "5.2.0"
+    sha256 "ed4d8390166dec5ea0a2813a03db6221f206ce016442be7f59f41d760972568a"
 
     # The upstream download page (https://www.blender.org/download/) cannot be
     # fetched due to Cloudflare protections, so we have to naively assume a
