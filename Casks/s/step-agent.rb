@@ -10,7 +10,7 @@ cask "step-agent" do
   livecheck do
     url "https://packages.smallstep.com/stable/step-agent/darwin/index.json"
     strategy :json do |json|
-      json["versions"]&.map { |v| v["version"] }
+      json["latest_version"]
     end
   end
 
@@ -24,10 +24,9 @@ cask "step-agent" do
             ],
             pkgutil:   "com.smallstep.Agent"
 
-  zap trash: [
-    "~/Library/Caches/com.smallstep.Agent",
-    "~/Library/HTTPStorages/com.smallstep.Agent",
-    "~/Library/Preferences/com.smallstep.Agent.plist",
-    "~/Library/Saved Application State/com.smallstep.Agent.savedState",
-  ]
+  zap delete: "/Library/LaunchAgents/com.smallstep.Agent.UserAgent.plist",
+      trash:  [
+        "~/Library/Application Scripts/com.smallstep.Agent.Token",
+        "~/Library/Containers/com.smallstep.Agent.Token",
+      ]
 end
