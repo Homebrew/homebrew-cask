@@ -1,4 +1,4 @@
-cask "step-agent" do
+cask "smallstepagent" do
   version "0.68.0"
   sha256 "e1f200513070880fd8072c2e8491c41552bf533290a69d1d0e7edf5628993fb2"
 
