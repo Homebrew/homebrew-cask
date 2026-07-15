@@ -1,7 +1,7 @@
 cask "pencil2d" do
   on_arm do
     version "0.7.2"
-    sha256 "e96b12cc18dc8895cf7259ee8e8d6853c8e8fd40a7b6bdb68f2514b6b096f4e0"
+    sha256 "9d65cb23326c0b0bc9f86995e70c74d6745212c61d8f535fd340866854f64fe0"
 
     url "https://github.com/pencil2d/pencil/releases/download/v#{version}/pencil2d-mac-v#{version}.dmg",
         verified: "github.com/pencil2d/pencil/"
