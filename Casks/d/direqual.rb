@@ -23,8 +23,10 @@ cask "direqual" do
 
   zap trash: [
     "~/Library/Application Scripts/com.naarak.DirEqual",
+    "~/Library/Application Support/DirEqual",
     "~/Library/Caches/com.naarak.DirEqual",
     "~/Library/Containers/com.naarak.DirEqual",
+    "~/Library/HTTPStorages/com.naarak.DirEqual",
     "~/Library/Preferences/com.naarak.DirEqual.plist",
     "~/Library/WebKit/com.naarak.DirEqual",
   ]
