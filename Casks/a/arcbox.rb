@@ -20,25 +20,17 @@ cask "arcbox" do
   app "ArcBox.app"
   binary "#{appdir}/ArcBox.app/Contents/MacOS/bin/abctl"
 
-  postflight do
-    system_command "#{appdir}/ArcBox.app/Contents/MacOS/bin/abctl",
-                   args: ["_internal", "brew-postflight"]
-  end
-
-  uninstall script: {
-    executable: "#{appdir}/ArcBox.app/Contents/MacOS/bin/abctl",
-    args:       ["_internal", "brew-uninstall"],
-  }
+  uninstall launchctl: "com.arcboxlabs.desktop.daemon",
+            quit:      "com.arcboxlabs.desktop"
 
   zap trash: [
     "~/.arcbox",
+    "~/Library/Application Support/com.arcboxlabs.desktop",
+    "~/Library/Caches/com.arcboxlabs.desktop",
+    "~/Library/HTTPStorages/com.arcboxlabs.desktop",
     "~/Library/LaunchAgents/com.arcboxlabs.desktop.daemon.plist",
     "~/Library/Logs/arcbox",
     "~/Library/Preferences/com.arcboxlabs.desktop.plist",
     "~/Library/Saved Application State/com.arcboxlabs.desktop.savedState",
   ]
-
-  caveats <<~EOS
-    Open the ArcBox app to finish setup.
-  EOS
 end
