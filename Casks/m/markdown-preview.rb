@@ -21,6 +21,7 @@ cask "markdown-preview" do
   zap trash: [
     "~/Library/Application Scripts/doc.md-preview",
     "~/Library/Application Scripts/doc.md-preview.quick-look",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/doc.md-preview.sfl*",
     "~/Library/Caches/doc.md-preview",
     "~/Library/Containers/doc.md-preview",
     "~/Library/Containers/doc.md-preview.quick-look",
