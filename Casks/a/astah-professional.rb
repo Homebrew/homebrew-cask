@@ -1,7 +1,7 @@
 cask "astah-professional" do
   on_arm do
-    version "11.0.0,ba221e"
-    sha256 "220f7057cef479f7fb28841bb22ae7552771ab3c5295e471719c1ac9912590d2"
+    version "12.0.0,4fa570"
+    sha256 "a2730a2a818394d889a4d7eedeb141c3b6ba40b5c8376387b12cdbfb7fee1020"
 
     url "https://cdn.change-vision.com/files/astah-professional-#{version.csv.first.dots_to_underscores}-#{version.csv.second}-MacOs-aarch64.dmg",
         verified: "cdn.change-vision.com/files/"
