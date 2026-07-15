@@ -1,6 +1,6 @@
 cask "soundanchor" do
-  version "1.8.1"
-  sha256 "c91ff3f761e2d50648f8a1327c115cc2790f604cf789156faf5834619c47a64b"
+  version "1.8.2"
+  sha256 "338eaf6838880e8a9676040b8a37eadec0f8b1e4c18937836b8a05abac2118eb"
 
   url "https://cdn.kopiro.me/soundanchor/soundanchor-#{version}.dmg"
   name "SoundAnchor"
