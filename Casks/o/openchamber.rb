@@ -24,9 +24,12 @@ cask "openchamber" do
   zap trash: [
     "~/.config/openchamber",
     "~/Library/Application Support/ai.opencode.openchamber",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.openchamber.desktop.sfl*",
+    "~/Library/Application Support/OpenChamber",
     "~/Library/Caches/ai.opencode.openchamber",
     "~/Library/Logs/OpenChamber",
     "~/Library/Preferences/ai.opencode.openchamber.plist",
+    "~/Library/Preferences/dev.openchamber.desktop.plist",
     "~/Library/Saved Application State/ai.opencode.openchamber.savedState",
     "~/Library/WebKit/ai.opencode.openchamber",
   ]
