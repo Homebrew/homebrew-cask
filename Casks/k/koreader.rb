@@ -1,9 +1,9 @@
 cask "koreader" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "2026.03"
-  sha256 on_arch_conditional(arm:   "48f582a1a32aed0d431f69c65b60467212d956513fa5846c08f3543eb4226eb6",
-                             intel: "2767db0e38c5ee88b2324bb2de88693982585831ecd9b19bf90d3e3a8436d224")
+  version "2026.07.1"
+  sha256 arm64_linux:  "fff2394e2d896f4df61501d89c1ae7f53903c34433b5e587551ed2279f90ab10",
+         x86_64_linux: "e60ed106cf4e824d50394a259b3aa6c46fb1daee189df73a1734e5732b5dc245"
 
   url "https://github.com/koreader/koreader/releases/download/v#{version}/koreader-v#{version}-#{arch}.AppImage",
       verified: "github.com/koreader/koreader/"
@@ -19,4 +19,6 @@ cask "koreader" do
   depends_on :linux
 
   app_image "koreader-v#{version}-#{arch}.AppImage", target: "KOReader.AppImage"
+
+  # No zap stanza required
 end
