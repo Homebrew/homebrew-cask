@@ -1,6 +1,6 @@
 cask "canon-ufrii-driver" do
-  version "10.19.24,2026"
-  sha256 "8681b6aab54f09938497f625b4f43048d26a09497c52f565976dac96d233d621"
+  version "10.19.25,2026"
+  sha256 "103a190b3b689799ddf7921548e317f4ae9ac72d41a1c0e2df0182c26a659024"
 
   url "https://downloads.canon.com/sss#{version.csv.second}/drivers/UFRII_v#{version.csv.first}_mac.zip",
       verified: "downloads.canon.com/"
