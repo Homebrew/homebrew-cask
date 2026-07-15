@@ -16,6 +16,7 @@ cask "amore" do
   depends_on macos: :sequoia
 
   app "Amore.app"
+  binary "#{appdir}/Amore.app/Contents/MacOS/AmoreCLI", target: "amore"
 
   zap trash: [
     "~/Library/Application Support/Amore",
