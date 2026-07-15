@@ -1,6 +1,6 @@
 cask "supaterm" do
-  version "26.3.1"
-  sha256 "d0a917de4b4fe0e9edbb48ab1a11a04e3e3f96aa2e237c4b9de1d19a4f88b1e9"
+  version "26.4.0"
+  sha256 "10b02a1b93ee618462dd6dce7664848d6ffb8a37a4acbb68ead7e7c903de07e4"
 
   url "https://supaterm.com/download/v#{version}/supaterm.dmg"
   name "Supaterm"
