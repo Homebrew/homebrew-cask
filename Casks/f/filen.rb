@@ -8,11 +8,11 @@ cask "filen" do
     arch arm: "arm64", intel: "x86_64"
   end
 
-  version "3.0.47"
-  sha256 arm:          "041f30b361fb5b07f9039d380cf9f3e56b1180491a1ebf711cc5d2d81d5f741b",
-         intel:        "405a75b94f26814562f568e5098735ce28bbe80317f47eef920b993bc6b4ef69",
-         x86_64_linux: "91e683e4f52392816b1530ae6a9e03be662ae57dd38e7abe9e3b622e0019f56f",
-         arm64_linux:  "e28d9fbe1458f7050647bf6117ac8182d9bac851239e5f49fb241d74597e6ac7"
+  version "3.0.50"
+  sha256 arm:          "f1733fa58aaa8dc06477ecaaf5fd60f85b209016ff04a5abda29c65fb1fc9cc4",
+         intel:        "b0702e4b8b5e40f8e7cd70a6c99f7c138facf8e931644d8a14659b8744dc3c09",
+         x86_64_linux: "b2d9810e7786dd4a01773e512b839fdd0baca98c2a139b563c3bfa58eb728277",
+         arm64_linux:  "740fdb5e2e8612bc0b45936c3e32bc2e2c34d659b102ce0f68756d817b2b7b83"
 
   url_end = on_system_conditional macos: ".dmg", linux: ".AppImage"
 
@@ -27,7 +27,7 @@ cask "filen" do
   end
 
   on_macos do
-    depends_on macos: :big_sur
+    depends_on macos: :monterey
     auto_updates true
 
     app "Filen.app"
