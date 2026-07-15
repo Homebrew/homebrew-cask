@@ -1,5 +1,5 @@
 cask "white-rabbit" do
-  version "1.4"
+  version "1.5"
   sha256 :no_check
 
   url "https://delivery.kadomaru.app/white-rabbit/White%20Rabbit.dmg"
