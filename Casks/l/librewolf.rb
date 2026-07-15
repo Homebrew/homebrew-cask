@@ -1,11 +1,11 @@
 cask "librewolf" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "152.0.5,1"
-  sha256 arm:          "320b6fb01a448fcdcf0df4a50cae56373b8528c48c02bfed840ddcb65a7b24e3",
-         intel:        "881c511556a425984567c810dfa579ab3d777272a92ade47206d56bddf767a09",
-         arm64_linux:  "ba2a875f0810cfe889bccdfc4981344704d10782b6c0399f1f8932abd41f9e56",
-         x86_64_linux: "6d9f18e0c60c0747ef7ec03d766e633ab1ee71fe60ccda808b183367e9873aa0"
+  version "152.0.6,1"
+  sha256 arm:          "4a3b7d9a45a2ede23f5790c6fec6e9924b03bcc0aba3201fad240b37d3f47628",
+         intel:        "5014dd8829f03e49572b5dc0612c387ff41ba45417641fea987fbc529a8d1b27",
+         arm64_linux:  "477f1fd9f39d333c6ddecf32d30be89963487031e1c6ec03bb8fb4a40d6b6676",
+         x86_64_linux: "29377de73cc21e3e53eeb15a6b782e02926a51fb96e22ff5dee620e20522e4d6"
 
   artifact = on_system_conditional macos: "librewolf-#{version.tr(",", "-")}-macos-#{arch}-package.dmg",
                                    linux: "librewolf-#{version.tr(",", "-")}-linux-#{arch}-appimage.AppImage"
