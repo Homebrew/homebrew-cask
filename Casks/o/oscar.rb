@@ -6,7 +6,7 @@ cask "oscar" do
          intel: "16d518bb04e32cf58d748cb4f05e5c703a36f3da654d70b77896cebd1683c5da"
 
   on_arm do
-    url "https://www.sleepfiles.com/OSCAR/#{version}/OSCAR-#{version}-#{arch}.dmg"
+    url "https://www.sleepfiles.com/OSCAR/#{version}/OSCAR#{version.major_minor.no_dots}-#{version}-#{arch}.dmg"
   end
   on_intel do
     url "https://www.sleepfiles.com/OSCAR/#{version}/OSCAR#{version.major_minor.no_dots}-#{version}-#{arch}.dmg"
@@ -20,8 +20,6 @@ cask "oscar" do
     url :homepage
     regex(%r{href=.*?/OSCAR.*?v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on macos: :ventura
 
