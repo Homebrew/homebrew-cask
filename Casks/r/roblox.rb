@@ -1,9 +1,9 @@
 cask "roblox" do
   arch arm: "arm64/"
 
-  version "0.729.24.7290838,56940828b8454204"
-  sha256 arm:   "40dc1d7f9bbcbe64222a398e5573ddbeb9870e7dc85d7118f9d45fd53b42ca5a",
-         intel: "fda147f2e5a48be8f1415a50ff31872a2da2a3685845ad7c7c9ad4dff5263fe2"
+  version "0.730.0.7300790,f2083d2275244e01"
+  sha256 arm:   "e62c51a732ebbd5abbca3ea947a2c2fc6edd4de6f87bc1f19589f6818fab4258",
+         intel: "f9ddc6bc5b6e4d4386e0a637af21de7719bb68c7a9154ede7bd123deeebebc13"
 
   url "https://setup.rbxcdn.com/mac/#{arch}version-#{version.csv.second}-RobloxPlayer.zip",
       verified: "setup.rbxcdn.com/"
