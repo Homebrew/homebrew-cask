@@ -27,7 +27,7 @@ cask "filen" do
   end
 
   on_macos do
-    depends_on macos: :big_sur
+    depends_on macos: :monterey
     auto_updates true
 
     app "Filen.app"
