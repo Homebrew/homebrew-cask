@@ -115,6 +115,8 @@ Style/AndOr:
   EnforcedStyle: always
 Style/ArgumentsForwarding:
   Enabled: false
+Style/ArrayIntersect:
+  Enabled: false
 Style/AutoResourceCleanup:
   Enabled: true
 Style/BarePercentLiterals:
