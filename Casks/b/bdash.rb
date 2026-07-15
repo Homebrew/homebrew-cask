@@ -1,5 +1,5 @@
 cask "bdash" do
-  version "1.35.0"
+  version "1.35.1"
 
   url_end = on_system_conditional linux: ".AppImage", macos: "-universal-mac.zip"
 
@@ -14,7 +14,7 @@ cask "bdash" do
   end
 
   on_macos do
-    sha256 "e8676ad4420a727590fea4db1c4e49393e18abad7309778584cda4784af8d7a3"
+    sha256 "ba56bebc97f714a95ad5dfdcb52b49d55cfd08ebad4235211488632d1128d990"
 
     depends_on macos: :monterey
 
@@ -30,7 +30,7 @@ cask "bdash" do
   end
 
   on_linux do
-    sha256 "484a34f6f7ab282f786803fcaa602cac71fd6a9bc6c0844265db2663f12de114"
+    sha256 "f1aa573012cc3a55f86ca313116b9269f94651ae815dcc5a1a5754d7df520b72"
 
     depends_on arch: :x86_64
 
