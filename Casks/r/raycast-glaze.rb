@@ -1,6 +1,6 @@
 cask "raycast-glaze" do
-  version "0.9.1,d058ea1e36"
-  sha256 "b40c7028a3ef59b0a12c8859e2b2aa50528c022009750da30a710fb00f315a78"
+  version "0.10.0,016bd9e319"
+  sha256 "1b247847cd3874306f614847afecbb027f9df4266056f2c86560f5fd7cb18d2f"
 
   url "https://glaze.raycast-releases.com/Glaze_#{version.csv.first}_CI_Production_#{version.csv.second}_arm64.dmg",
       verified: "glaze.raycast-releases.com/"
