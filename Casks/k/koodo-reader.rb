@@ -1,11 +1,11 @@
 cask "koodo-reader" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
 
-  version "2.4.0"
-  sha256 arm:          "790a23d974c500e8442a24bd8abb27fe1689495fbcf426b0135fdc6f2f766bc3",
-         intel:        "c12c288a3f1a147798d849cafb2cd10488fe37437899005b2c6d34656e96e7c5",
-         arm64_linux:  "3421e2ad769e48419ca0e6fc3982c0a8d8ff26d8c283cca5c407706e64f220ca",
-         x86_64_linux: "5bc9142e688f18c67465326b0b2c1f2e83e86c3919320a7642bccd4a12875d70"
+  version "2.4.1"
+  sha256 arm:          "9b2d9549b7d52327788cf7e60360ef768a604397fdd4d7b730588788b0c57016",
+         intel:        "f08a1f957f7149e590eb48451cad0ff294a850b712c1a30495a4d2ed9f4adf5d",
+         arm64_linux:  "a0ce8de67235787ef33760ede3f3c2c17b1d675c043c0b50c60c3ca4d0d2f985",
+         x86_64_linux: "2f05b60ebcb098b866c856027672414735594132de88eae1985a58691071f78b"
 
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
