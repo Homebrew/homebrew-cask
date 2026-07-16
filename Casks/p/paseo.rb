@@ -1,9 +1,9 @@
 cask "paseo" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.108"
-  sha256 arm:   "8550dd6b2dbad0338a77f0ad45138f1f391fd22863983f99791695c010cdb827",
-         intel: "6db50842942064a9694a177eae6ae036129f2913cf888c1b080f060c14e83746"
+  version "0.1.109"
+  sha256 arm:   "1c6c3c6a4882ae9761c138e286ce2d21a3e97b616cd04dd9847d94f76dbebd53",
+         intel: "7d6a262dace02b6cc6d70c30a6e1fa0a6b0dbb14bf1bf4e4b8fb3aa6d76c3f92"
 
   url "https://github.com/getpaseo/paseo/releases/download/v#{version}/Paseo-#{version}-#{arch}.dmg",
       verified: "github.com/getpaseo/paseo/"
