@@ -19,8 +19,10 @@ cask "mimestream" do
 
   zap trash: [
     "~/Library/Application Scripts/com.mimestream.Mimestream*",
+    "~/Library/Application Scripts/group.com.mimestream.Mimestream",
     "~/Library/Caches/com.mimestream.Mimestream",
     "~/Library/Containers/com.mimestream.Mimestream*",
+    "~/Library/Group Containers/group.com.mimestream.Mimestream",
     "~/Library/Preferences/com.mimestream.Mimestream.plist",
     "~/Library/Saved Application State/com.mimestream.Mimestream.savedState",
   ]
