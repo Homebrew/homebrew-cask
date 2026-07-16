@@ -9,7 +9,7 @@ cask "quicklook-video" do
 
   livecheck do
     url :url
-    regex(/^QLVideo[._-]v?(\d+?)(\d+)\.dmg$/i)
+    regex(/^QLVideo[._-]v?(\d)(\d+)\.dmg$/i)
     strategy :github_latest do |json, regex|
       json["assets"]&.map do |asset|
         match = asset["name"]&.match(regex)
