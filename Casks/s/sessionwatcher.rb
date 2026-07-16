@@ -1,6 +1,6 @@
 cask "sessionwatcher" do
-  version "6.3.25"
-  sha256 "b3438000930a872899d4ba5ac3a1d6c98f50346c383191a86e0530b74443478e"
+  version "6.5.21"
+  sha256 "e1467df9b676f23a8f955eda9b985cda638bc94f97b8a57dbe2b7dbb7a6602f7"
 
   url "https://sessionwatcher-updates.vercel.app/downloads/SessionWatcher-#{version}.dmg",
       verified: "sessionwatcher-updates.vercel.app/"
@@ -19,11 +19,15 @@ cask "sessionwatcher" do
   app "SessionWatcher.app"
 
   zap trash: [
+    "~/Library/Application Scripts/C4XW4P5L2Q.com.sessionwatcher.app",
     "~/Library/Application Scripts/com.sessionwatcher.app.widgets",
+    "~/Library/Application Scripts/com.sessionwatcher.app.writer",
     "~/Library/Application Scripts/group.com.sessionwatcher.app",
     "~/Library/Application Support/SessionWatcher",
     "~/Library/Caches/com.sessionwatcher.app",
     "~/Library/Containers/com.sessionwatcher.app.widgets",
+    "~/Library/Containers/com.sessionwatcher.app.writer",
+    "~/Library/Group Containers/C4XW4P5L2Q.com.sessionwatcher.app",
     "~/Library/Group Containers/group.com.sessionwatcher.app",
     "~/Library/HTTPStorages/com.sessionwatcher.app",
     "~/Library/HTTPStorages/com.sessionwatcher.app.binarycookies",
