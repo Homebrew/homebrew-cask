@@ -1,9 +1,9 @@
 cask "intellij-idea-oss" do
   arch arm: "-aarch64"
 
-  version "2026.1.4"
-  sha256 arm:   "0630e888527119cacdd6abc242e9ea3a0ce802951b46b23d8bcbd6caf0838db2",
-         intel: "a505ea19627abdd56e083825d5c5ca8f8478d8743e42f49cb9ea8d8ea728a421"
+  version "2026.2"
+  sha256 arm:   "d406df698ca0ab9e148926a2d8e1a62ed2c7fbf8248ac84e1f9623047416a09e",
+         intel: "7d0c79523ce4354023a9daec542586be68f7e76ef25fa72d5a5626db2b41f19e"
 
   url "https://github.com/JetBrains/intellij-community/releases/download/idea%2F#{version}/idea-#{version}#{arch}.dmg"
   name "IntelliJ IDEA OSS"
@@ -31,7 +31,7 @@ cask "intellij-idea-oss" do
 
   depends_on :macos
 
-  app "IntelliJ IDEA CE.app"
+  app "IntelliJ IDEA OSS.app"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/IdeaIC#{version.major_minor}",
