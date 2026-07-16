@@ -8,11 +8,11 @@ cask "openwork" do
     arch arm: "arm64", intel: "x86_64"
   end
 
-  version "0.17.28"
-  sha256 arm:          "87e08f3e372f35d567a424e2ce36de6c7ffddac9d810f160e76d178957396935",
-         intel:        "f379a53d5960641735d3c9ce395ec0de66884ab23acd8267adc59177bc6ad591",
-         arm64_linux:  "297f77f823f307d0895be1cf9325b11ee5307dc885c891ba0451debd2dce1e17",
-         x86_64_linux: "fddff0603a18b6ee050c6c0c61f03650a865e2e18f6428f27de639f7bf2c3843"
+  version "0.17.29"
+  sha256 arm:          "e59495cb047c4b0ab4b4c689ff174b6b0e3daf99b736b435cab4ade0caca5042",
+         intel:        "4ce4df764c108e0e30c2d200fd75839c78c0a837db61d23e8c5a2d1ed1bac656",
+         arm64_linux:  "ea3ce11d0349a28795859e2f0f1ce7107e0e487cd8e1fe8cd056b0457cc0bceb",
+         x86_64_linux: "784450b363d1d66a677b8ab94fbec179194c92d797e3c4861cc701a0d8b83708"
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
 
