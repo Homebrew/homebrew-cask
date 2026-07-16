@@ -1,5 +1,5 @@
 cask "crystalviewer" do
-  version "11.4.3"
+  version "11.4.4"
   sha256 :no_check
 
   url "https://crystalmaker.com/downloads/crystalviewer#{version.major}_mac.zip"
@@ -14,7 +14,7 @@ cask "crystalviewer" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "CrystalViewer.app"
 
