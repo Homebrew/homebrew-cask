@@ -7,16 +7,13 @@ cask "quicklook-video" do
   desc "Thumbnails, static previews, cover art and metadata for video files"
   homepage "https://github.com/Marginal/QuickLookVideo"
 
+  # The version in the tag and asset file name doesn't include dots, so we match
+  # the version from the release title (e.g. "Release 1.23").
   livecheck do
     url :url
-    regex(/^QLVideo[._-]v?(\d+?)(\d+)\.dmg$/i)
+    regex(/v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
-        next if match.blank?
-
-        "#{match[1]}.#{match[2]}"
-      end
+      json["name"]&.[](regex, 1)
     end
   end
 
