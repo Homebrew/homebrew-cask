@@ -2,14 +2,14 @@ cask "brave-origin@nightly" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "-arm64"
 
-  sha256 arm:   "81f6ce2b09b98f70fffe5094a08dd1e479c3042e13dd1f6d32537c253f7110dd",
-         intel: "63cc8d9bebfb36962053fb5b9d91d1f80f77a2004eb9dce288c2275a30dfcd53"
+  sha256 arm:   "0872f4ffc6706f53bdc5b295eb650c3fbd488101ebe4ca9406936a3259ca0f25",
+         intel: "faf9b905aaa19a6d5f096fe001931bd477bf4dfb64feab9ad9ac9de8140a6de6"
 
   on_arm do
-    version "1.94.68.0"
+    version "1.94.70.0"
   end
   on_intel do
-    version "1.94.68.0"
+    version "1.94.70.0"
   end
 
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/nightly#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Nightly-#{arch}.dmg",
@@ -24,7 +24,7 @@ cask "brave-origin@nightly" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Brave Origin Nightly.app"
 
