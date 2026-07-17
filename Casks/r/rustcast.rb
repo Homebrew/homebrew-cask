@@ -14,7 +14,7 @@ cask "rustcast" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   app "target/release/macos/Rustcast.app"
 
@@ -22,6 +22,7 @@ cask "rustcast" do
     "/tmp/rustcast.log",
     "~/.config/rustcast/config.toml",
     "~/Library/Application Support/CrashReporter/rustcast_*.plist",
+    "~/Library/Application Support/rustcast/clipboard.db",
     "~/Library/Logs/DiagnosticReports/rustcast-*.ips",
     "~/Library/Preferences/com.*.rustcast.plist",
     "~/Library/Preferences/rustcast.plist",
