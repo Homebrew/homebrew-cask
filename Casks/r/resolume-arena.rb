@@ -1,6 +1,6 @@
 cask "resolume-arena" do
-  version "7.27.0,14395"
-  sha256 "8a83a07206eb2503ed005d819561f0ead22070404c5c3cb4c9d356ab5573cdeb"
+  version "7.27.1,15990"
+  sha256 "a7c177755dd9658f05f5ff9fcc636137599681e0dc83121f730380093f4b70b5"
 
   url "https://dd5sgwxv3xok.cloudfront.net/Resolume_Arena_#{version.csv.first.dots_to_underscores}_rev_#{version.csv.second}_Installer.dmg",
       verified: "dd5sgwxv3xok.cloudfront.net/"
