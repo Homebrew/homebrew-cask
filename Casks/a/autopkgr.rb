@@ -1,6 +1,6 @@
 cask "autopkgr" do
-  version "1.6.1"
-  sha256 "598aa227ef544d37b7f964c1352e6f2d955fc5a8127cc2a708e7bc02af2cc7f0"
+  version "2.0"
+  sha256 "05955ffd7cc7e6e18b099aae1c3e2a373350543366e604bd540958148ce729e7"
 
   url "https://github.com/lindegroup/autopkgr/releases/download/v#{version}/AutoPkgr-#{version}.dmg",
       verified: "github.com/lindegroup/autopkgr/"
@@ -14,7 +14,7 @@ cask "autopkgr" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "AutoPkgr.app"
 
@@ -25,8 +25,4 @@ cask "autopkgr" do
     "~/Library/HTTPStorages/com.lindegroup.AutoPkgr.binarycookies",
     "~/Library/Preferences/com.lindegroup.AutoPkgr.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
