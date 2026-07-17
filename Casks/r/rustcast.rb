@@ -3,10 +3,10 @@ cask "rustcast" do
   sha256 "34d0db49f2a925667d594d849973b8a0833943489371f4277490cf94fbfe7af6"
 
   url "https://github.com/MystikoLab/rustcast/releases/download/v#{version}/Rustcast-universal-macos.app.zip",
-    verified: "github.com/MystikoLab/rustcast"
+      verified: "github.com/MystikoLab/rustcast"
   name "Rustcast"
   desc "Application and utility launcher"
-  homepage "https://rustcast.app"
+  homepage "https://rustcast.app/"
 
   livecheck do
     url :url
