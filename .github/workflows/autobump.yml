@@ -22,18 +22,18 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
+        uses: Homebrew/actions/setup-homebrew@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
         with:
           core: true
           cask: true
 
       - name: Configure Git user
-        uses: Homebrew/actions/git-user-config@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
+        uses: Homebrew/actions/git-user-config@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
         with:
           username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
 
       - name: Set up commit signing
-        uses: Homebrew/actions/setup-commit-signing@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
+        uses: Homebrew/actions/setup-commit-signing@18fcb8e3e06b4247c676c506750dc95ea7226479 # 2026.07.13.1
         with:
           signing_key: ${{ secrets.BREWTESTBOT_SSH_SIGNING_KEY }}
 
