@@ -19,8 +19,8 @@ cask "rustcast" do
   app "target/release/macos/Rustcast.app"
 
   zap trash: [
-    "~/.config/rustcast/config.toml",
     "/tmp/rustcast.log",
+    "~/.config/rustcast/config.toml",
     "~/Library/Application Support/CrashReporter/rustcast_*.plist",
     "~/Library/Application Support/rustcast/clipboard.db",
     "~/Library/Logs/DiagnosticReports/rustcast-*.ips",
