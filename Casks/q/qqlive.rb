@@ -1,6 +1,6 @@
 cask "qqlive" do
-  version "2.175.0.55797"
-  sha256 "55b4693a3382021a1f066fd2c1c30a409edbb8d9372561e80e182220539bff15"
+  version "2.176.0.55802"
+  sha256 "72d0f5089b68ddd91b0f6c86ec7a8e99b33a53f5f0056cd6f686274d383d550a"
 
   url "https://dldir1.qq.com/qqtv/mac/TencentVideo#{version}.dmg"
   name "QQLive"
