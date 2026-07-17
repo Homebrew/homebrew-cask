@@ -83,6 +83,7 @@ jobs:
             ruby "${RUNNER_TEMP:?}/check_template.rb" issue \
               "${RUNNER_TEMP}/check-issues/body" \
               "${RUNNER_TEMP}/check-issues/templates" \
+              "${GITHUB_REPOSITORY:?}" \
               2>"${RUNNER_TEMP}/check-issues/missing-checkboxes"
           )"
           case "${complete_template}" in
