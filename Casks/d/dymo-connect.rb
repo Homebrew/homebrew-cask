@@ -1,9 +1,9 @@
 cask "dymo-connect" do
   arch arm: "Arm64", intel: "X64"
 
-  version "1.6.0.41"
+  version "1.6.1.4"
   # At present, the checksum are the same across architectures, but this may change in future.
-  sha256 "a42f4da175b26b4017384ac41ed978470078aee84b1f43bb591b3c9855d2c919"
+  sha256 "5b3b201c99235aadc6178f0dd0dae30d6edb64e7cef6e1de5faa875c5fb5967b"
 
   url "https://dymoreleasecontent.blob.core.windows.net/dymo-release/DCDMAC/DCDMac#{version}-#{arch}.pkg",
       verified: "dymoreleasecontent.blob.core.windows.net/dymo-release/"
