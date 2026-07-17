@@ -27,5 +27,7 @@ cask "keyclu" do
     "~/Library/HTTPStorages/com.0804Team.KeyClu",
     "~/Library/Preferences/com.0804Team.KeyClu.plist",
     "~/Library/Saved Application State/com.0804Team.KeyClu.savedState",
+    "~/Library/Application Support/KeyClu",
+    "~/Library/WebKit/com.0804Team.KeyClu",
   ]
 end
