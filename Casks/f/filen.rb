@@ -8,11 +8,11 @@ cask "filen" do
     arch arm: "arm64", intel: "x86_64"
   end
 
-  version "3.0.50"
-  sha256 arm:          "f1733fa58aaa8dc06477ecaaf5fd60f85b209016ff04a5abda29c65fb1fc9cc4",
-         intel:        "b0702e4b8b5e40f8e7cd70a6c99f7c138facf8e931644d8a14659b8744dc3c09",
-         x86_64_linux: "b2d9810e7786dd4a01773e512b839fdd0baca98c2a139b563c3bfa58eb728277",
-         arm64_linux:  "740fdb5e2e8612bc0b45936c3e32bc2e2c34d659b102ce0f68756d817b2b7b83"
+  version "3.0.52"
+  sha256 arm:          "8ce4e9cba97686b4715d3c261dd1b93a36299e90b0ade9b66ed283859ac228bd",
+         intel:        "eb466baf847706998740e6860056dfee836f750e871251844129aa35e53967dd",
+         x86_64_linux: "b07f79c4d02e5c8bea8b7762fea23f07c2d12bb336023e7ea429d288dfe63156",
+         arm64_linux:  "ca94a125d28840f64ac76f6ea5de010f8e2f7c6d5d50abc187e3d9daf6948c57"
 
   url_end = on_system_conditional macos: ".dmg", linux: ".AppImage"
 
