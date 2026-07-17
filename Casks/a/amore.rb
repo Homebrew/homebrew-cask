@@ -9,7 +9,9 @@ cask "amore" do
 
   livecheck do
     url "https://api.amore.computer/v1/apps/com.lucas-fischer.Amore/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   auto_updates true
