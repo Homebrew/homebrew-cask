@@ -29,6 +29,7 @@ cask "jetbrains-toolbox" do
   app "JetBrains Toolbox.app"
 
   uninstall launchctl: "com.jetbrains.toolbox",
+            quit:      "com.jetbrains.toolbox",
             signal:    ["TERM", "com.jetbrains.toolbox"]
 
   zap trash: [
