@@ -7,8 +7,8 @@ cask "brave-browser@nightly" do
     sha256 "1d3501d1662ef3261bdd5681ad1f7e4884e5ebdf79ed8e191e04a93c245e15a5"
   end
   on_intel do
-    version "1.94.70.0"
-    sha256 "cfd371d8dbba8a028dd5a1070a7432c0bfc95f58f9b97cb5a32f9f0470e62a8c"
+    version "1.94.77.0"
+    sha256 "21044cdcc3c9b0b2f294083d549be7972ffc8efcfbdf0af40ee43150d0f2bddf"
   end
 
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.major_minor_patch.sub(".", "")}/Brave-Browser-Nightly-#{arch}.dmg",
