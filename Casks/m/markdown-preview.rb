@@ -17,7 +17,7 @@ cask "markdown-preview" do
   depends_on macos: :sequoia
 
   app "Markdown Preview.app"
-  binary "#{appdir}/Markdown Preview.app/Contents/Resources/bin/markdown-preview", target: "md-preview"
+  binary "#{appdir}/Markdown Preview.app/Contents/Resources/bin/markdown-preview", target: "mdp"
 
   zap trash: [
     "~/Library/Application Scripts/doc.md-preview",
