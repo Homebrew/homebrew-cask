@@ -1,6 +1,6 @@
 cask "keeperdb" do
-  version "2.2.0"
-  sha256 "17ccc6ce7b6cf4fe527fe5c5ca35d24cc476976002f828f3c75f6308ad39a960"
+  version "2.3.0"
+  sha256 "20ca896c3322c23d9f5bf66041ccbf7df228d9085c202719c0ba0404e098661d"
 
   url "https://keepersecurity.com/pam/keeperdb/v#{version}/KeeperDB_#{version}_universal.dmg"
   name "KeeperDB"
