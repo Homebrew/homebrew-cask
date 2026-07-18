@@ -5,7 +5,7 @@ cask "arcbox" do
   url "https://release.arcboxcdn.com/desktop/v#{version}/ArcBox-#{version}-arm64.dmg",
       verified: "release.arcboxcdn.com/desktop/"
   name "ArcBox"
-  desc "High-performance container and VM runtime"
+  desc "Runtime for containers, Linux virtual machines, and AI agent sandboxes"
   homepage "https://arcbox.dev/"
 
   livecheck do
