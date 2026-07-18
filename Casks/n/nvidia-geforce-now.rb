@@ -22,15 +22,22 @@ cask "nvidia-geforce-now" do
   uninstall signal: ["QUIT", "com.nvidia.nvcontainer"]
 
   zap trash: [
+        "~/Library/Application Support/CrashReporter/GeForceNOWContainer_*.plist",
         "~/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf",
         "~/Library/Application Support/NVIDIA/GeForceNOW",
         "~/Library/Caches/com.apple.nsurlsessiond/Downloads/com.nvidia.gfnpc.mall",
         "~/Library/Caches/com.nvidia.nvcontainer",
         "~/Library/Caches/NVIDIA/GeForceNOW",
         "~/Library/HTTPStorages/com.nvidia.gfnpc.mall",
+        "~/Library/Logs/DiagnosticReports/GeForceNOWContainer*.crash",
         "~/Library/Preferences/com.nvidia.gfnpc.mall.helper.plist",
         "~/Library/Preferences/com.nvidia.gfnpc.mall.helper.renderer.plist",
+        "~/Library/Preferences/com.nvidia.nvcontainer.plist",
         "~/Library/Saved Application State/com.nvidia.gfnpc.mall.savedState",
       ],
-      rmdir: "~/Movies/NVIDIA"
+      rmdir: [
+        "~/Library/Application Support/NVIDIA",
+        "~/Library/Caches/NVIDIA",
+        "~/Movies/NVIDIA",
+      ]
 end
