@@ -1,3 +1,5 @@
+# typed: false
+
 cask "mailtrackerblocker" do
   version "0.8.10"
   sha256 "1ed068e689a3a64bb489881d912a79b7f584e8bd564f073de8e0bc9a18c0ecb2"
@@ -15,13 +17,18 @@ cask "mailtrackerblocker" do
 
   pkg "MailTrackerBlocker.pkg"
 
-  uninstall_postflight do
-    if system_command("ps", args: ["x"]).stdout.match?("Mail.app/Contents/MacOS/Mail")
-      opoo "Restart Mail.app to finish uninstalling #{token}"
-    end
-  end
+  generated_script "warn-if-mail-running.sh", content: <<~SH
+    #!/bin/sh
+    if /bin/ps x | /usr/bin/grep -q 'Mail.app/Contents/MacOS/[M]ail'; then
+      echo 'Warning: Restart Mail.app to finish uninstalling mailtrackerblocker' >&2
+    fi
+  SH
 
-  uninstall pkgutil: "com.onefatgiraffe.mailtrackerblocker",
+  uninstall script:  {
+              executable:   "warn-if-mail-running.sh",
+              must_succeed: false,
+            },
+            pkgutil: "com.onefatgiraffe.mailtrackerblocker",
             delete:  "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle"
 
   zap trash: "~/Library/Containers/com.apple.mail/Data/Library/Application Support/com.onefatgiraffe.mailtrackerblocker"
