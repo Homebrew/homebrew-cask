@@ -27,16 +27,15 @@ cask "rubymine" do
   depends_on :macos
 
   app "RubyMine.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/rubymine.wrapper.sh"
-  binary shimscript, target: "rubymine"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      open -na "RubyMine.app" --args "$@"
-    EOS
-  end
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+
+  command_wrapper "rubymine.wrapper.sh",
+                  target:  "rubymine",
+                  content: <<~EOS
+                    #!/bin/sh
+                    open -na "RubyMine.app" --args "$@"
+                  EOS
 
   zap trash: [
     "~/Library/Application Support/RubyMine#{version.major_minor}",

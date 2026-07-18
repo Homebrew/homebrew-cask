@@ -19,29 +19,26 @@ cask "starnet++" do
 
   bin_path = "#{staged_path}/StarNetv#{version.csv.first}CLI_MacOS"
 
-  shimscript = "#{staged_path}/starnet_wrapper.sh"
-  binary shimscript, target: "starnet++"
+  command_wrapper "starnet_wrapper.sh",
+                  target:  "starnet++",
+                  content: <<~EOS
+                    #!/bin/sh
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
+                    # delete the symlink on process exit
+                    cleanup() {
+                      rm -f starnet#{version.csv.first}_weights.pb
+                    }
+                    trap cleanup RETURN EXIT SIGINT SIGKILL
 
-      # delete the symlink on process exit
-      cleanup() {
-        rm -f starnet#{version.csv.first}_weights.pb
-      }
-      trap cleanup RETURN EXIT SIGINT SIGKILL
+                    # the binary hardcodes the weights path so we have to symlink it to the CWD
+                    ln -sf "#{bin_path}/starnet#{version.csv.first}_weights.pb" .
 
-      # the binary hardcodes the weights path so we have to symlink it to the CWD
-      ln -sf "#{bin_path}/starnet#{version.csv.first}_weights.pb" .
+                    # define a load path since the libs are not in the same dir as the bin
+                    DYLD_LIBRARY_PATH=#{bin_path} command #{bin_path}/starnet++ $@
+                  EOS
 
-      # define a load path since the libs are not in the same dir as the bin
-      DYLD_LIBRARY_PATH=#{bin_path} command #{bin_path}/starnet++ $@
-    EOS
-  end
-
-  postflight do
-    set_permissions "#{bin_path}/starnet++", "0755"
+  postflight_steps do
+    set_permissions "StarNetv*CLI_MacOS/starnet++", "0755"
   end
 
   # No zap stanza required

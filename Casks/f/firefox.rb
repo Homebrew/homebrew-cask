@@ -436,16 +436,15 @@ cask "firefox" do
   depends_on :macos
 
   app "Firefox.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/firefox.wrapper.sh"
-  binary shimscript, target: "firefox"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      exec '#{appdir}/Firefox.app/Contents/MacOS/firefox' "$@"
-    EOS
-  end
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+
+  command_wrapper "firefox.wrapper.sh",
+                  target:  "firefox",
+                  content: <<~EOS
+                    #!/bin/bash
+                    exec '#{appdir}/Firefox.app/Contents/MacOS/firefox' "$@"
+                  EOS
 
   uninstall quit: "org.mozilla.firefox"
 
