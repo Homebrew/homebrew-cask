@@ -16,25 +16,8 @@ cask "markdown-preview" do
   auto_updates true
   depends_on macos: :sequoia
 
-  legacy_cli = HOMEBREW_PREFIX/"bin/md-preview"
-  legacy_aliases = [HOMEBREW_PREFIX/"bin/mdp", HOMEBREW_PREFIX/"bin/markdown-preview"]
-
   app "Markdown Preview.app"
-  binary "#{appdir}/Markdown Preview.app/Contents/Resources/bin/markdown-preview", target: "mdp"
   binary "#{appdir}/Markdown Preview.app/Contents/Resources/bin/markdown-preview", target: "md-preview"
-  binary "#{appdir}/Markdown Preview.app/Contents/Resources/bin/markdown-preview", target: "markdown-preview"
-
-  preflight do
-    managed_legacy_cli = legacy_cli.file? && !legacy_cli.symlink? &&
-                         legacy_cli.read.include?("# Managed by Markdown Preview CLI")
-
-    if managed_legacy_cli
-      legacy_aliases.each do |path|
-        Utils.gain_permissions_remove(path) if path.symlink? && path.readlink.to_s == "md-preview"
-      end
-      Utils.gain_permissions_remove(legacy_cli)
-    end
-  end
 
   zap trash: [
     "~/Library/Application Scripts/doc.md-preview",
