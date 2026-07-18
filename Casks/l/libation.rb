@@ -11,11 +11,6 @@ cask "libation" do
   desc "Audible audiobook manager and liberator"
   homepage "https://getlibation.com/"
 
-  livecheck do
-    url "https://github.com/rmcrackan/Libation"
-    strategy :github_latest
-  end
-
   depends_on macos: :ventura
 
   app "Libation.app"
