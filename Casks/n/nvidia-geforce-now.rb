@@ -19,6 +19,8 @@ cask "nvidia-geforce-now" do
 
   app "GeForceNOW.app"
 
+  uninstall signal: ["QUIT", "com.nvidia.nvcontainer"]
+
   zap trash: [
         "~/Library/Application Support/NVIDIA Corporation/MessageBus_GFN_session*.conf",
         "~/Library/Application Support/NVIDIA/GeForceNOW",
