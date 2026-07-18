@@ -22,14 +22,12 @@ cask "microsoft-outlook" do
     end
   end
   on_sonoma :or_newer do
-    version "16.109.26053122"
-    sha256 "1c95d6c9b8310a97f0d13f612bd2ce94c0ec546abab0d978aed12cb6d3dfbe12"
+    version "16.111.26071325"
+    sha256 "16207f42ed65c4aa74e17647e9a8dd09f3586f58a3b82fcafd466acd95c47a4e"
 
     livecheck do
-      url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/0409OPIM2019.xml"
-      strategy :xml do |xml|
-        xml.get_elements("//key[text()='Update Version']").map { |item| item.next_element&.text&.strip }
-      end
+      url "https://go.microsoft.com/fwlink/p/?linkid=525137"
+      strategy :header_match
     end
   end
 
