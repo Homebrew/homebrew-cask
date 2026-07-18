@@ -246,11 +246,7 @@ jobs:
         if: >
           always() &&
           steps.install.outcome == 'success' &&
-          runner.os == 'macOS' &&
-          (
-            contains(matrix.audit_args, '--new') ||
-            (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'check zap'))
-          )
+          runner.os == 'macOS'
         continue-on-error: true
         timeout-minutes: 10
 
