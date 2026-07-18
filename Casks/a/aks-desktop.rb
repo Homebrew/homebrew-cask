@@ -15,7 +15,7 @@ cask "aks-desktop" do
     regex(/v?(\d+(?:\.\d+)+(?:-alpha|-beta)?)/i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "AKS desktop.app"
 
