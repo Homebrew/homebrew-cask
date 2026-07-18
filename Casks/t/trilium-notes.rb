@@ -1,9 +1,9 @@
 cask "trilium-notes" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.103.0"
-  sha256 arm:   "f086230502d3d77e01f9940332c307c89adee7167cf8e3604f8e8e2ea7c93fb1",
-         intel: "747100a8f77601437889f4a12d9e92f221a90dbf6e67e22b740f7260907f9686"
+  version "0.104.0"
+  sha256 arm:   "29cde238b42a0a9dc20c49a1d990f2bd678ce46b64a5eb7c05bf796321cac63f",
+         intel: "81759f41f540cb9c8e36b8c5cd093f3ebc6cbc8b35a0baefbc0c771bda9a81ed"
 
   url "https://github.com/TriliumNext/Trilium/releases/download/v#{version}/TriliumNotes-v#{version}-macos-#{arch}.dmg",
       verified: "github.com/TriliumNext/Trilium/"
