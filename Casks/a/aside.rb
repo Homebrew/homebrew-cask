@@ -19,7 +19,12 @@ cask "aside" do
 
   app "Aside.app"
 
-  uninstall launchctl: "at.studio.AsideBrowser.UpdaterPrivilegedHelper",
+  uninstall launchctl: [
+              "at.studio.AsideBrowser.UpdaterPrivilegedHelper",
+              "at.studio.AsideKeystone.agent",
+              "at.studio.AsideKeystone.xpcservice",
+              "at.studio.AsideUpdater.wake",
+            ],
             quit:      "at.studio.AsideBrowser",
             delete:    [
               "/Library/LaunchDaemons/at.studio.AsideBrowser.UpdaterPrivilegedHelper.plist",
@@ -33,8 +38,10 @@ cask "aside" do
       trash:     [
         "/Library/Aside/Aside Brand.plist",
         "/Library/Aside/AsideSoftwareUpdate",
+        "~/.aside",
         "~/Library/Application Support/Aside",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/at.studio.AsideBrowser.sfl*",
+        "~/Library/Aside",
         "~/Library/Caches/Aside",
         "~/Library/Caches/at.studio.AsideBrowser",
         "~/Library/Caches/at.studio.AsideKeystone",
@@ -43,6 +50,7 @@ cask "aside" do
         "~/Library/HTTPStorages/at.studio.AsideBrowser.binarycookies",
         "~/Library/LaunchAgents/at.studio.AsideKeystone.agent.plist",
         "~/Library/LaunchAgents/at.studio.AsideKeystone.xpcservice.plist",
+        "~/Library/LaunchAgents/at.studio.AsideUpdater.wake.plist",
         "~/Library/Preferences/at.studio.AsideBrowser.plist",
         "~/Library/Preferences/at.studio.AsideKeystone.Agent.plist",
         "~/Library/Saved Application State/at.studio.AsideBrowser.savedState",
