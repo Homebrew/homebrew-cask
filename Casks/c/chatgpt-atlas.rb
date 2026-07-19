@@ -23,7 +23,8 @@ cask "chatgpt-atlas" do
 
   app "ChatGPT Atlas.app"
 
-  uninstall quit: "com.openai.atlas"
+  uninstall launchctl: "com.openai.atlas.update-helper",
+            quit:      "com.openai.atlas"
 
   zap trash: [
     "~/Library/Application Support/com.openai.atlas",
