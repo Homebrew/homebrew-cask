@@ -1,9 +1,9 @@
 cask "uniclipboard" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.19.0"
-  sha256 arm:   "1efe3665a22e7ddc91b13a9ac54265c41adafc079235b92192dbcefc7aefbe2a",
-         intel: "00a06cebe321b19e9f2915682f31c9b8273822517229091505aee3c3cae9f439"
+  version "0.19.1"
+  sha256 arm:   "8836a78b382602de833988e057bd6b91d86b45f25dd039afffd8d87d3edaba92",
+         intel: "dd49c7aa0b397e5dfd59dbfa1d9e6d1c0952df096a13a7db752fe424ec0c3038"
 
   url "https://github.com/UniClipboard/UniClipboard/releases/download/v#{version}/UniClipboard_#{version}_#{arch}.dmg",
       verified: "github.com/UniClipboard/UniClipboard/"
