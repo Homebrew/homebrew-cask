@@ -1,9 +1,8 @@
 cask "chatgpt-classic" do
   version "1.2026.184,1784145287"
-  sha256 "a94117fb34627229baafe3e8b7b45467c5aee7861b4cd795a5be8d547b1ff7b4"
+  sha256 :no_check
 
-  # The version and build parameters only make Homebrew's cache key unique; they do not select the app version.
-  url "https://persistent.oaistatic.com/classic/public/ChatGPT_Classic.dmg?version=#{version.csv.first}&build=#{version.csv.second}",
+  url "https://persistent.oaistatic.com/classic/public/ChatGPT_Classic.dmg",
       verified: "persistent.oaistatic.com/classic/public/"
   name "ChatGPT Classic"
   desc "OpenAI's previous ChatGPT desktop app"
