@@ -30,8 +30,8 @@ cask "unison-app" do
   app "Unison.app"
   binary "#{appdir}/Unison.app/Contents/MacOS/cltool", target: "unison"
 
-  postflight do
-    system_command "/usr/bin/defaults", args: ["write", "edu.upenn.cis.Unison", "CheckCltool", "-bool", "false"]
+  postflight_steps do
+    run "/usr/bin/defaults", args: ["write", "edu.upenn.cis.Unison", "CheckCltool", "-bool", "false"]
   end
 
   zap trash: [
