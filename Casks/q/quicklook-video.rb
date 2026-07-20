@@ -23,8 +23,14 @@ cask "quicklook-video" do
 
   zap trash: [
     "~/Library/Application Scripts/*.qlvideo",
+    "~/Library/Application Scripts/com.apple.uk.org.marginal.qlvideo.previewer",
     "~/Library/Application Scripts/com.apple.uk.org.marginal.qlvideo.thumbnailer",
+    "~/Library/Application Scripts/uk.org.marginal.qlvideo.formatreader",
+    "~/Library/Application Scripts/uk.org.marginal.qlvideo.videodecoder",
+    "~/Library/Containers/com.apple.uk.org.marginal.qlvideo.previewer",
     "~/Library/Containers/com.apple.uk.org.marginal.qlvideo.thumbnailer",
+    "~/Library/Containers/uk.org.marginal.qlvideo.formatreader",
+    "~/Library/Containers/uk.org.marginal.qlvideo.videodecoder",
     "~/Library/Group Containers/*.qlvideo",
     "~/Library/Saved Application State/com.apple.uk.org.marginal.qlvideo.savedState",
   ]
