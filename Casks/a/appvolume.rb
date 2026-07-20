@@ -22,10 +22,8 @@ cask "appvolume" do
 
   pkg "AppVolume-#{version}-#{arch}.pkg"
 
-  uninstall_postflight do
-    system_command "/usr/bin/killall",
-                   args: ["coreaudiod"],
-                   sudo: true
+  uninstall_postflight_steps do
+    terminate_process "coreaudiod", sudo: true, must_succeed: true
   end
 
   uninstall launchctl: "io.appvolume.daemon",
