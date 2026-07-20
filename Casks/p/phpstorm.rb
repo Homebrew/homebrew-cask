@@ -27,16 +27,15 @@ cask "phpstorm" do
   depends_on :macos
 
   app "PhpStorm.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/phpstorm.wrapper.sh"
-  binary shimscript, target: "phpstorm"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/PhpStorm.app/Contents/MacOS/phpstorm' "$@"
-    EOS
-  end
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+
+  command_wrapper "phpstorm.wrapper.sh",
+                  target:  "phpstorm",
+                  content: <<~EOS
+                    #!/bin/sh
+                    exec '#{appdir}/PhpStorm.app/Contents/MacOS/phpstorm' "$@"
+                  EOS
 
   zap trash: [
     "~/Library/Application Support/JetBrains/consentOptions",

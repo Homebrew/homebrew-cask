@@ -19,15 +19,13 @@ cask "kdiff3" do
   depends_on macos: :ventura
 
   app "kdiff3.app"
-  shimscript = "#{staged_path}/kdiff3.wrapper.sh"
-  binary shimscript, target: "kdiff3"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      '#{appdir}/kdiff3.app/Contents/MacOS/kdiff3' "$@"
-    EOS
-  end
+  command_wrapper "kdiff3.wrapper.sh",
+                  target:  "kdiff3",
+                  content: <<~EOS
+                    #!/bin/bash
+                    '#{appdir}/kdiff3.app/Contents/MacOS/kdiff3' "$@"
+                  EOS
 
   zap trash: [
     "~/.kdiff3rc",

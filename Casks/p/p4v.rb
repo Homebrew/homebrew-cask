@@ -23,24 +23,20 @@ cask "p4v" do
   app "p4admin.app"
   app "p4merge.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  p4_wrapper = "#{staged_path}/p4.wrapper.sh"
   binary "p4vc"
-  binary p4_wrapper, target: "p4v"
-  binary p4_wrapper, target: "p4admin"
-  binary p4_wrapper, target: "p4merge"
-
-  preflight do
-    File.write p4_wrapper, <<~EOS
-      #!/bin/bash
-      set -euo pipefail
-      COMMAND=$(basename "$0")
-      if [[ "$COMMAND" == "p4merge" ]]; then
-        exec "#{appdir}/${COMMAND}.app/Contents/Resources/launch${COMMAND}" "$@" 2> /dev/null
-      else
-        exec "#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}" "$@" 2> /dev/null
-      fi
-    EOS
-  end
+  command_wrapper "p4.wrapper.sh",
+                  target: "p4v", content: <<~EOS
+                    #!/bin/bash
+                    set -euo pipefail
+                    COMMAND=$(basename "$0")
+                    if [[ "$COMMAND" == "p4merge" ]]; then
+                      exec "#{appdir}/${COMMAND}.app/Contents/Resources/launch${COMMAND}" "$@" 2> /dev/null
+                    else
+                      exec "#{appdir}/${COMMAND}.app/Contents/MacOS/${COMMAND}" "$@" 2> /dev/null
+                    fi
+                  EOS
+  binary "p4.wrapper.sh", target: "p4admin"
+  binary "p4.wrapper.sh", target: "p4merge"
 
   zap trash: [
     "~/Library/Preferences/com.perforce.p4v",

@@ -27,16 +27,15 @@ cask "clion" do
   depends_on macos: :monterey
 
   app "CLion.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/clion.wrapper.sh"
-  binary shimscript, target: "clion"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/CLion.app/Contents/MacOS/clion' "$@"
-    EOS
-  end
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+
+  command_wrapper "clion.wrapper.sh",
+                  target:  "clion",
+                  content: <<~EOS
+                    #!/bin/sh
+                    exec '#{appdir}/CLion.app/Contents/MacOS/clion' "$@"
+                  EOS
 
   zap trash: [
     "~/Library/Application Support/JetBrains/CLion#{version.major_minor}",
