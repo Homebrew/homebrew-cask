@@ -1,20 +1,23 @@
 cask "magicquit" do
-  version "1.4"
-  sha256 "2deebd8efc69f06ae51cbc17eecfa15310a8a6a46a800645b285d2be360fd922"
+  version "2.0"
+  sha256 "eb7a42caa1318d977750d3421bbc13a34bc0694f35aeb3d010ec190dd6e0553f"
 
-  url "https://magicquit.com/apps/MagicQuit_#{version}.dmg"
+  url "https://github.com/BigBerny/magicquit/releases/download/v#{version}/MagicQuit-#{version}.zip"
   name "MagicQuit"
-  desc "Efficiency tool for automatically closing apps when they are not in use"
-  homepage "https://magicquit.com/"
+  desc "Automatically quits apps that are idle or whose last window was closed"
+  homepage "https://github.com/BigBerny/magicquit"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?MagicQuit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url :url
+    strategy :github_latest
   end
 
-  depends_on macos: :ventura
+  auto_updates true
+  depends_on macos: ">= :sonoma"
 
   app "MagicQuit.app"
 
-  zap trash: "~/Library/Preferences/com.MagicQuit.plist"
+  zap trash: [
+    "~/Library/Preferences/com.MagicQuit.plist",
+  ]
 end
