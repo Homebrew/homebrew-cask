@@ -40,15 +40,8 @@ cask "kate" do
   depends_on macos: :ventura
 
   app "kate.app"
-  shimscript = "#{staged_path}/kate.wrapper.sh"
-  binary shimscript, target: "kate"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      exec '#{appdir}/Kate.app/Contents/MacOS/kate' "$@"
-    EOS
-  end
+  command_wrapper "kate",
+                  executable: "#{appdir}/Kate.app/Contents/MacOS/kate"
 
   zap trash: [
     "~/Library/Application Support/kate",
