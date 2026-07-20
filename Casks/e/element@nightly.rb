@@ -1,6 +1,6 @@
 cask "element@nightly" do
-  version "2026071901"
-  sha256 "2b3ef9d8eed503ddf37725305f85f0aec1c04a617565f7b5e5b93156340c3777"
+  version "2026072001"
+  sha256 "9a9510e0a94563e35e8206284089b46f6718e8a548ec902e11b0b539e9dc09bc"
 
   url "https://packages.element.io/nightly/update/macos/Element%20Nightly-#{version}-universal-mac.zip"
   name "Element Nightly"
@@ -20,6 +20,8 @@ cask "element@nightly" do
   app "Element Nightly.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/im.riot.nightly.sfl*",
+    "~/Library/Application Support/Element Nightly",
     "~/Library/Application Support/Element",
     "~/Library/Application Support/Riot",
     "~/Library/Caches/im.riot.app",
@@ -29,6 +31,7 @@ cask "element@nightly" do
     "~/Library/Preferences/ByHost/im.riot.app.ShipIt.*.plist",
     "~/Library/Preferences/im.riot.app.helper.plist",
     "~/Library/Preferences/im.riot.app.plist",
+    "~/Library/Preferences/im.riot.nightly.plist",
     "~/Library/Saved Application State/im.riot.app.savedState",
   ]
 end
