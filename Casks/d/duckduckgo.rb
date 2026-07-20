@@ -20,8 +20,12 @@ cask "duckduckgo" do
   app "DuckDuckGo.app"
 
   zap trash: [
+    "~/Library/Application Scripts/HKE973VLUW.com.duckduckgo.macos.browser*",
+    "~/Library/Application Support/com.duckduckgo.macos.browser",
+    "~/Library/Application Support/DuckDuckGo",
     "~/Library/Caches/com.duckduckgo.macos.browser",
     "~/Library/Containers/com.duckduckgo.macos.browser",
+    "~/Library/Group Containers/HKE973VLUW.com.duckduckgo.macos.browser*",
     "~/Library/HTTPStorages/com.duckduckgo.macos.browser",
     "~/Library/Preferences/com.duckduckgo.macos.browser.plist",
     "~/Library/Saved Application State/com.duckduckgo.macos.browser.savedState",
