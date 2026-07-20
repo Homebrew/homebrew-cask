@@ -1,3 +1,5 @@
+# typed: false
+
 cask "j" do
   version "9.7.1"
   sha256 "fc34fe96fc19520c9f317ecb6b318aeb3bd83a4994b505dfa1216cf1775fd3e3"
@@ -46,18 +48,19 @@ cask "j" do
     binary "j#{version.major_minor}/bin/#{b}.command", target: b
   end
 
-  postflight do
+  postflight_steps do
     # Use `readlink` to get full path of symlinked commands.
-    commands.each do |c|
-      command = "#{staged_path}/j#{version.major_minor}/bin/#{c}.command"
-      File.write command, File.read(command).gsub("$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")')
-    end
+    inreplace "j#{version.major_minor}/bin/jbrk.command", "$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")'
+    inreplace "j#{version.major_minor}/bin/jhs.command", "$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")'
+    inreplace "j#{version.major_minor}/bin/jqt.command", "$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")'
 
     # Fix relative paths inside App bundles.
-    apps.each do |a|
-      apprun = "#{appdir}/#{a}.app/Contents/MacOS/apprun"
-      File.write apprun, File.read(apprun).gsub(%r{`dirname "\$0"`.*?/bin}, "#{staged_path}/j#{version.major_minor}/bin")
-    end
+    inreplace "jbrk.app/Contents/MacOS/apprun", %r{`dirname "\$0"`.*?/bin},
+              "{{staged_path}}/j#{version.major_minor}/bin", base: :appdir
+    inreplace "jcon.app/Contents/MacOS/apprun", %r{`dirname "\$0"`.*?/bin},
+              "{{staged_path}}/j#{version.major_minor}/bin", base: :appdir
+    inreplace "jqt.app/Contents/MacOS/apprun", %r{`dirname "\$0"`.*?/bin},
+              "{{staged_path}}/j#{version.major_minor}/bin", base: :appdir
   end
 
   # Not actually necessary, since it would be deleted anyway.
