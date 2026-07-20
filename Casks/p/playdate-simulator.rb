@@ -17,10 +17,8 @@ cask "playdate-simulator" do
 
   pkg "PlaydateSDK.pkg"
 
-  uninstall_preflight do
-    Pathname("/usr/local/bin").glob("arm-*").each do |exec|
-      Utils.gain_permissions_remove(exec) if exec.exist? && exec.readlink.to_s.include?("playdate")
-    end
+  uninstall_preflight_steps do
+    remove "/usr/local/bin/arm-*", symlink_target_contains: "playdate", sudo: true
   end
 
   uninstall pkgutil: "date.play.sdk",
