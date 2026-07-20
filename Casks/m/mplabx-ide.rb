@@ -34,22 +34,16 @@ cask "mplabx-ide" do
   # staged_path files are owned by root which prevents binaries from being moved
   # to appdir, as cp does not use sudo. This copies the binaries after the owner
   # is changed.
-  postflight do
-    set_ownership staged_path.to_s
-    system_command "mkdir",
-                   args: ["-p", "#{appdir}/microchip/mplabx/#{version}"],
-                   sudo: true
-
-    system_command "cp",
-                   args: [
-                     "-pR",
-                     "#{staged_path}/MPLAB IPE v#{version}.app",
-                     "#{staged_path}/MPLAB X IDE v#{version}.app",
-                     "#{appdir}/microchip/mplabx/#{version}/",
-                   ],
-                   sudo: true
-
-    set_ownership "/Applications/microchip/mplabx/#{version}"
+  postflight_steps do
+    set_ownership "."
+    run "/bin/mkdir", args: ["-p", "{{appdir}}/microchip/mplabx/#{version}"], sudo: true
+    run "/bin/cp", args: [
+      "-pR",
+      "{{staged_path}}/MPLAB IPE v#{version}.app",
+      "{{staged_path}}/MPLAB X IDE v#{version}.app",
+      "{{appdir}}/microchip/mplabx/#{version}/",
+    ], sudo: true
+    set_ownership "microchip/mplabx/#{version}", base: :appdir
   end
 
   uninstall script: {
