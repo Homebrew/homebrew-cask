@@ -23,9 +23,9 @@ cask "topaz-video" do
   # options for the user to manually install the plugins post-installation. Until this is resolved
   # by the vendor, trigger the plugin installation scripts here so the end state is a ready-to-use
   # installation as per the previous version users are likely to be transitioning from.
-  postflight do
-    system "sudo", "bash", "#{appdir}/Topaz Video.app/Contents/Resources/ae_inst.sh"
-    system "sudo", "bash", "#{appdir}/Topaz Video.app/Contents/Resources/ofx_inst.sh"
+  postflight_steps do
+    run "/bin/bash", args: ["{{appdir}}/Topaz Video.app/Contents/Resources/ae_inst.sh"], sudo: true
+    run "/bin/bash", args: ["{{appdir}}/Topaz Video.app/Contents/Resources/ofx_inst.sh"], sudo: true
   end
 
   uninstall launchctl: "com.topazlabs.veai.nukepath",
