@@ -17,6 +17,12 @@ cask "grammarly-desktop" do
 
   app "Grammarly Installer.app", target: "Grammarly Desktop.app"
 
+  uninstall launchctl: [
+    "com.grammarly.ProjectLlama.LoginHelper",
+    "com.grammarly.ProjectLlama.Shepherd",
+    "com.grammarly.ProjectLlama.Uninstaller",
+  ]
+
   zap trash: [
     "~/Library/Application Support/com.grammarly.ProjectLlama",
     "~/Library/Caches/com.grammarly.ProjectLlama",
