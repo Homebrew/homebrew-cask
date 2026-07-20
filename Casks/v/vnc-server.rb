@@ -18,9 +18,11 @@ cask "vnc-server" do
 
   pkg "VNC-Server-#{version}-MacOSX-universal.pkg"
 
-  uninstall_preflight do
-    file = "/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh"
-    system_command file, print_stderr: false, sudo: true if File.exist?(file)
+  uninstall_preflight_steps do
+    if_path_exists "/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh" do
+      run "/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh",
+          print_stderr: false, sudo: true
+    end
   end
 
   uninstall launchctl: [

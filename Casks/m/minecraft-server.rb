@@ -45,32 +45,27 @@ cask "minecraft-server" do
 
   container type: :naked
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/minecraft-server.wrapper.sh"
-  binary shimscript, target: "minecraft-server"
-
   config_dir = HOMEBREW_PREFIX.join("etc", "minecraft-server")
 
-  preflight do
-    FileUtils.mkdir_p config_dir
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  command_wrapper "minecraft-server.wrapper.sh", target: "minecraft-server", content: <<~EOS
+    #!/bin/sh
+    cd '#{config_dir}' && \
+      exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
+  EOS
 
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      cd '#{config_dir}' && \
-        exec /usr/bin/java ${@:--Xms1024M -Xmx1024M} -jar '#{staged_path}/server.jar' nogui
-    EOS
+  preflight_steps do
+    mkdir_p "{{HOMEBREW_PREFIX}}/etc/minecraft-server"
   end
 
   eula_file = config_dir.join("eula.txt")
 
-  postflight do
-    system_command shimscript
-    File.write(eula_file, File.read(eula_file).sub("eula=false", "eula=TRUE"))
+  postflight_steps do
+    run "minecraft-server.wrapper.sh", base: :staged_path
+    inreplace "{{HOMEBREW_PREFIX}}/etc/minecraft-server/eula.txt", "eula=false", "eula=TRUE", audit_result: false
   end
 
-  uninstall_preflight do
-    FileUtils.rm(eula_file) if eula_file.exist?
-  end
+  uninstall delete: eula_file
 
   zap trash: config_dir
 
