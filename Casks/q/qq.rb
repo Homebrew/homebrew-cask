@@ -1,6 +1,6 @@
 cask "qq" do
-  version "6.9.96_260528_01,9.9.31,045f4292"
-  sha256 "70c8163177cab4be192c1ae31a144ea4230d007b4521d9d945fca2f57b6c2232"
+  version "6.9.98_260710_01,9.9.32,7ee184e7"
+  sha256 "a4390ae3a90ee4ac5c19c0da429b4a920907e17604554ad48711ef2174f56dee"
 
   url "https://qqdl.gtimg.cn/qqfile/QQNT/#{version.csv.second}/release/#{version.csv.third}/QQ_#{version.csv.first}.dmg",
       verified: "qqdl.gtimg.cn/qqfile/QQNT/"
