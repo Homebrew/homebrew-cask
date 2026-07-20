@@ -20,16 +20,8 @@ cask "vlc" do
   depends_on :macos
 
   app "VLC.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/vlc.wrapper.sh"
-  binary shimscript, target: "vlc"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/VLC.app/Contents/MacOS/VLC' "$@"
-    EOS
-  end
+  command_wrapper "vlc",
+                  executable: "#{appdir}/VLC.app/Contents/MacOS/VLC"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.videolan.vlc.sfl*",
