@@ -8,15 +8,22 @@ cask "prisma-access-browser" do
   desc "Secure enterprise browser with built-in threat and data protection"
   homepage "https://get.pabrowser.com/welcome"
 
+  # The upstream appcast uses "stable" and "lts" channels, with older releases
+  # in the default channel as well. It's possible for a release to be in both
+  # the "stable" and "lts" channels, so this works with releases in the "stable"
+  # or default channels.
   livecheck do
     url "https://releases.talon-sec.com/api/v1/appcast.xml?appid=%7Bdfef2477-4f0e-454b-bc0d-03ce61074e4c%7D&platform=mac&architecture=universal&channel=packaged"
-    strategy :sparkle do |items|
-      item = items.find do |i|
-        i.channel != "lts" && i.url&.match?(/-\d+(?:\.\d+)+-\h+\.pkg/i)
+    regex(/[._-]v?(\d+(?:\.\d+)+)[._-](\h+)\.pkg/i)
+    strategy :sparkle do |items, regex|
+      item = items.find do |item|
+        (item_channel = item.channel) == "stable" || item_channel.nil?
       end
-      next if item.blank?
+      next unless item
 
-      match = item.url.match(/-(\d+(?:\.\d+)+)-(\h+)\.pkg/i)
+      match = item.url&.match(regex)
+      next unless match
+
       "#{match[1]},#{match[2]}"
     end
   end
