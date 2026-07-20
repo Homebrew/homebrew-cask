@@ -16,11 +16,9 @@ cask "rodecaster" do
 
   depends_on :macos
 
-  pkg "RØDECaster App.pkg"
+  rename "RØDECaster App*.pkg", "RØDECaster App.pkg"
 
-  preflight do
-    staged_path.glob("RØDECaster App*.pkg")&.first&.rename(staged_path/"RØDECaster App.pkg")
-  end
+  pkg "RØDECaster App.pkg"
 
   uninstall quit:    "com.rode.rodecastercomp",
             pkgutil: "com.rodecastercomp.installer"

@@ -1,3 +1,5 @@
+# typed: false
+
 cask "adobe-creative-cloud" do
   arch arm: "macarm64", intel: "osx10"
 
@@ -32,12 +34,6 @@ cask "adobe-creative-cloud" do
     print_stderr: false,
   }
 
-  uninstall_postflight do
-    stdout, * = system_command "/bin/launchctl", args: ["print", "gui/#{Process.uid}"]
-    ccx_processes = stdout.lines.grep(/com\.adobe\.CCXProcess\.\d{5}/) { Regexp.last_match(0) }.uniq
-    ccx_processes.each { |id| system "/bin/launchctl", "bootout", "gui/#{Process.uid}/#{id}" }
-  end
-
   uninstall early_script: {
               executable:   "/usr/bin/pluginkit",
               args:         [
@@ -53,6 +49,7 @@ cask "adobe-creative-cloud" do
               "com.adobe.AdobeCreativeCloud",
               "com.adobe.AdobeDesktopService",
               "com.adobe.ccxprocess",
+              "com.adobe.CCXProcess.*",
             ],
             quit:         "com.adobe.acc.AdobeCreativeCloud",
             signal:       ["QUIT", "com.adobe.accmac"],
