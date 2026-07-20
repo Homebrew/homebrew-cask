@@ -1,3 +1,5 @@
+# typed: false
+
 cask "xscreensaver" do
   version "6.15"
   sha256 "c04b4829707f23a152c01bbb3fe1652b5bdefc52f97605a228e551bfcd54d9da"
@@ -16,21 +18,22 @@ cask "xscreensaver" do
 
   pkg "Install Everything.pkg"
 
-  # There is no uninstall script for this Cask, so a manual uninstall is performed
-  # Loop through all screensaver plist files, looking for "org,jwz" in the bundle identifier
-  # Then remove the screensaver if the bundle identifier matches
-  uninstall_postflight do
-    Pathname.glob("/Library/Screen Savers/*.saver/Contents/Info.plist").each do |plist|
-      bundle_id = `/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "#{plist}"`
-      next unless bundle_id.start_with?("org.jwz")
+  generated_script "uninstall-xscreensaver.sh", content: <<~'SH'
+    #!/bin/bash
+    for plist in /Library/Screen\ Savers/*.saver/Contents/Info.plist; do
+      [[ -e "$plist" ]] || continue
+      bundle_id=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$plist")
+      [[ "$bundle_id" == org.jwz* ]] || continue
+      screensaver_name=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$plist")
+      /bin/rm -rf "/Library/Screen Savers/${screensaver_name// /}.saver"
+    done
+  SH
 
-      screensaver_name = `/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "#{plist}"`.delete(" ").strip
-      screensaver = Pathname.new("/Library/Screen Savers/#{screensaver_name}.saver")
-      Utils.gain_permissions_remove(screensaver) if screensaver.directory?
-    end
-  end
-
-  uninstall pkgutil: "org.jwz.xscreensaver",
+  uninstall script:  {
+              executable: "uninstall-xscreensaver.sh",
+              sudo:       true,
+            },
+            pkgutil: "org.jwz.xscreensaver",
             delete:  [
               "/Applications/Apple2.app",
               "/Applications/Phosphor.app",
