@@ -18,53 +18,42 @@ cask "starnet2" do
   depends_on :macos
   depends_on arch: :arm64
 
-  bin_path = "#{staged_path}/StarNet2T_MacOS"
-  installer = "#{bin_path}/installer.sh"
-  shim = "#{bin_path}/shim.sh"
-
   installer script: {
-    executable: installer,
+    executable: "StarNet2T_MacOS/installer.sh",
     sudo:       true,
   }
-  binary shim, target: "starnet2"
 
-  preflight do
-    File.write installer, <<~EOS
-      #!/bin/sh
+  generated_script "StarNet2T_MacOS/installer.sh", content: <<~EOS
+    #!/bin/sh
 
-      chmod 0755 #{bin_path}/lib/*
-      mkdir -p /usr/local/lib
-      cp #{bin_path}/lib/* /usr/local/lib/
-    EOS
+    chmod 0755 "$(dirname "$0")"/lib/*
+    mkdir -p /usr/local/lib
+    cp "$(dirname "$0")"/lib/* /usr/local/lib/
+  EOS
 
-    File.write shim, <<~EOS
-      #!/bin/sh
+  command_wrapper "StarNet2T_MacOS/shim.sh", target: "starnet2", content: <<~EOS
+    #!/bin/sh
 
-      # delete the symlink on process exit
-      cleanup() {
-        rm -f StarNet2_weights.pt
-      }
-      trap cleanup RETURN EXIT SIGINT SIGKILL
+    cleanup() {
+      rm -f StarNet2_weights.pt
+    }
+    trap cleanup RETURN EXIT SIGINT SIGKILL
 
-      # the binary hardcodes the weights path so we have to symlink it to the CWD
-      ln -sf #{bin_path}/StarNet2_weights.pt .
-      #{bin_path}/starnet2 $@
-    EOS
-  end
+    ln -sf "#{staged_path}/StarNet2T_MacOS/StarNet2_weights.pt" .
+    "#{staged_path}/StarNet2T_MacOS/starnet2" "$@"
+  EOS
 
-  uninstaller = "#{bin_path}/uninstaller.sh"
-  uninstall_preflight do
-    script_dir = "#{caskroom_path}/#{version}/StarNet2T_MacOS/lib"
-    next unless Dir.exist?(script_dir)
+  generated_script "StarNet2T_MacOS/uninstaller.sh", content: <<~EOS
+    #!/bin/sh
 
-    libs = Dir.children(script_dir).map { |lib| "/usr/local/lib/#{lib}" }
-    File.write uninstaller, <<~EOS
-      rm #{libs.join(" ")}
-    EOS
-  end
+    for lib in "$(dirname "$0")"/lib/*; do
+      test -e "${lib}" || continue
+      rm -f "/usr/local/lib/$(basename "${lib}")"
+    done
+  EOS
 
   uninstall script: {
-    executable: uninstaller,
+    executable: "StarNet2T_MacOS/uninstaller.sh",
     sudo:       true,
   }
 
