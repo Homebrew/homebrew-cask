@@ -14,14 +14,22 @@ cask "mailtrackerblocker" do
   depends_on maximum_macos: :ventura
 
   pkg "MailTrackerBlocker.pkg"
+  generated_script "warn-if-mail-running.sh", content: <<~SH
+    #!/bin/sh
+    if /bin/ps x | /usr/bin/grep -q 'Mail.app/Contents/MacOS/[M]ail'; then
+      echo 'Warning: Restart Mail.app to finish uninstalling mailtrackerblocker' >&2
+    fi
+  SH
 
-  uninstall_postflight do
-    if system_command("ps", args: ["x"]).stdout.match?("Mail.app/Contents/MacOS/Mail")
-      opoo "Restart Mail.app to finish uninstalling #{token}"
-    end
+  uninstall_postflight_steps do
+    remove "warn-if-mail-running.sh"
   end
 
-  uninstall pkgutil: "com.onefatgiraffe.mailtrackerblocker",
+  uninstall script:  {
+              executable:   "warn-if-mail-running.sh",
+              must_succeed: false,
+            },
+            pkgutil: "com.onefatgiraffe.mailtrackerblocker",
             delete:  "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle"
 
   zap trash: "~/Library/Containers/com.apple.mail/Data/Library/Application Support/com.onefatgiraffe.mailtrackerblocker"
