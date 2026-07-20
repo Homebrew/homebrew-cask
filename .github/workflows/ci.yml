@@ -106,7 +106,7 @@ jobs:
           persist-credentials: false
 
       - name: Clean up CI machine
-        if: runner.os == 'macOS'
+        if: runner.os == 'macOS' && !matrix.stable
         run: brew test-bot --cleanup --only-cleanup-before
 
       - name: Cache Homebrew Gems
