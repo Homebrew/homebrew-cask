@@ -1,9 +1,9 @@
 cask "keet" do
   arch intel: "-Intel"
 
-  version "4.19.0"
-  sha256 arm:   "4e935b0292adc030003cabce6ad09aed21834893390d6546ee10a3744d93acf2",
-         intel: "065b1706de3e5e6802c0ac8ea4e436b7f1ed89624b364c1377eb35600fa98af7"
+  version "4.19.1"
+  sha256 arm:   "d9f294c66eaa157569350264829797d354606544fadfb321fccc2f7a5eacc9ab",
+         intel: "a20f8e07f6daf28368692f2868ec154d36ee8d8aa66ba238648a2241bafdd1a7"
 
   url "https://static.keet.io/downloads/#{version}/Keet#{arch}.dmg"
   name "keet"
@@ -20,9 +20,14 @@ cask "keet" do
 
   app "Keet.app"
 
+  uninstall quit: "io.keet.app"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.keet.app.sfl*",
+    "~/Library/Application Support/Keet",
     "~/Library/Application Support/pear",
     "~/Library/Application Support/pear-runtime",
+    "~/Library/Preferences/io.keet.app.plist",
     "~/Library/Saved Application State/io.keet.app.savedState",
   ]
 end
