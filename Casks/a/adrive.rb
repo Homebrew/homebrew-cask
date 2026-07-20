@@ -1,9 +1,9 @@
 cask "adrive" do
   arch arm: "-arm64"
 
-  version "6.9.1"
-  sha256 arm:   "c01303f9a45e47d49d0dc551745ff22a38aa4b20147f31e5ce50adc91d8f2479",
-         intel: "13159c91858923d06c01697ea4ab4dc7a51bc77a54f61f1374441364f060e974"
+  version "6.9.3"
+  sha256 arm:   "dbf432bf09a4f6669fb9a74c56d082833b751d1b036d627550f6cf55ef7f32f4",
+         intel: "a0273748eda47b69f621e281a8228fd2791c4f8615ce041a3f248eec629941b2"
 
   on_intel do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
