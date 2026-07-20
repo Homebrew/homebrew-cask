@@ -19,7 +19,7 @@ cask "chatty" do
 
   preflight_steps do
     # There is no sub-folder in the ZIP; the root *is* the folder
-    move_children ".", "Chatty"
+    move_contents ".", "Chatty"
   end
 
   zap trash: "~/.chatty"

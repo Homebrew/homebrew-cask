@@ -18,7 +18,7 @@ cask "charles" do
   app "Charles.app"
 
   uninstall_postflight_steps do
-    delete_keychain_certificate "Charles"
+    delete_keychain_certificates "Charles"
   end
 
   uninstall launchctl: "com.xk72.Charles.ProxyHelper",
