@@ -21,17 +21,13 @@ cask "dynamodb-local" do
     end
   end
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/dynamodb-local.wrapper.sh"
-  binary shimscript, target: "dynamodb-local"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      cd "$(dirname "$(readlink -n "${0}")")" && \
-        exec java -Djava.library.path='./DynamoDBLocal_lib' -jar 'DynamoDBLocal.jar' "$@"
-    EOS
-  end
+  command_wrapper "dynamodb-local",
+                  executable: "java",
+                  args:       [
+                    "-Djava.library.path=#{staged_path}/DynamoDBLocal_lib",
+                    "-jar",
+                    "#{staged_path}/DynamoDBLocal.jar",
+                  ]
 
   # No zap stanza required
 
