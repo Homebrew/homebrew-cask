@@ -1,6 +1,6 @@
 cask "nova" do
-  version "13.4"
-  sha256 "728e933f0f64f7547c2bd057f6bda74d056953a9272c9f9382a71af5e50e25b3"
+  version "14"
+  sha256 "9b327a9e16101ba06b46291e4905718b6062df73642ad753cbbe9f213a468104"
 
   url "https://panic.com/download/nova/Nova%20#{version}.zip",
       verified:   "panic.com/download/nova/",
@@ -15,7 +15,7 @@ cask "nova" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sequoia
 
   app "Nova.app"
   binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
