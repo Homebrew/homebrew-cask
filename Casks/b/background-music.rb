@@ -16,11 +16,8 @@ cask "background-music" do
 
   pkg "BackgroundMusic-#{version}.pkg"
 
-  uninstall_postflight do
-    system_command "/usr/bin/killall",
-                   args:         ["coreaudiod"],
-                   sudo:         true,
-                   must_succeed: true
+  uninstall_postflight_steps do
+    terminate_process "coreaudiod", sudo: true, must_succeed: true
   end
 
   uninstall launchctl: "com.bearisdriving.BGM.XPCHelper",
