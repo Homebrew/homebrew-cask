@@ -65,8 +65,8 @@ cask "openzfs" do
     set_ownership "/usr/local/zfs"
   end
 
-  uninstall_preflight do
-    system "sudo", "/usr/local/zfs/bin/zpool", "export", "-af"
+  uninstall_preflight_steps do
+    run "/usr/local/zfs/bin/zpool", args: ["export", "-af"], sudo: true
   end
 
   uninstall launchctl: [

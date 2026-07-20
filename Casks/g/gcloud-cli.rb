@@ -56,38 +56,42 @@ cask "gcloud-cli" do
   bash_completion "google-cloud-sdk/completion.bash.inc", target: "google-cloud-sdk"
   zsh_completion "google-cloud-sdk/completion.zsh.inc", target: "_google_cloud_sdk"
 
-  preflight do
-    FileUtils.cp_r staged_path/"google-cloud-sdk/.", google_cloud_sdk_root, remove_destination: true
-    FileUtils.rm_r(staged_path/"google-cloud-sdk")
-    FileUtils.ln_s google_cloud_sdk_root, (staged_path/"google-cloud-sdk")
+  preflight_steps do
+    copy "google-cloud-sdk/.", "share/google-cloud-sdk", target_base: :homebrew_prefix, recursive: true
+    remove "google-cloud-sdk", recursive: true
+    symlink "{{HOMEBREW_PREFIX}}/share/google-cloud-sdk", "google-cloud-sdk"
   end
 
-  postflight do
+  postflight_steps do
     # HACK: Allow existing shell profiles to work by linking the current version to the `latest` directory.
-    unless (latest_path = staged_path.dirname/"latest").directory?
-      FileUtils.ln_s staged_path, latest_path, force: true
+    unless_path_exists "{{caskroom_path}}/latest" do
+      symlink "{{staged_path}}", "{{caskroom_path}}/latest", overwrite: true
     end
 
-    if OS.mac?
-      ENV["CLOUDSDK_PYTHON"] = "#{HOMEBREW_PREFIX}/opt/python@3.14/libexec/bin/python"
-      # Install required external dependencies via virtualenv
-      if File.exist?(File.join(Dir.home, "/.config/gcloud/virtenv"))
-        puts "deleting existing virtual env before enabling virtual env with current Python version"
-        system_command "#{google_cloud_sdk_root}/bin/gcloud",
-                       args:      ["config", "virtualenv", "delete", "-q"],
-                       reset_uid: true
+    on_macos do
+      if_path_exists "~/.config/gcloud/virtenv" do
+        run "share/google-cloud-sdk/bin/gcloud", base: :homebrew_prefix,
+                                                 args: ["config", "virtualenv", "delete", "-q"],
+                                                 env:  {
+                                                   "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/" \
+                                                                        "python@3.14/libexec/bin/python",
+                                                 }
       end
-      system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                      args:      ["config", "virtualenv", "create", "--python-to-use",
-                                  "#{HOMEBREW_PREFIX}/opt/python@3.14/libexec/bin/python"],
-                      reset_uid: true
-      system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                      args:      ["config", "virtualenv", "enable"],
-                      reset_uid: true
-
-      system_command  "#{google_cloud_sdk_root}/bin/gcloud",
-                      args:      ["version"],
-                      reset_uid: true
+      run "share/google-cloud-sdk/bin/gcloud", base: :homebrew_prefix,
+                                               args: ["config", "virtualenv", "create", "--python-to-use",
+                                                      "{{HOMEBREW_PREFIX}}/opt/python@3.14/libexec/bin/python"],
+                                               env:  {
+                                                 "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/" \
+                                                                      "python@3.14/libexec/bin/python",
+                                               }
+      run "share/google-cloud-sdk/bin/gcloud", base: :homebrew_prefix,
+                                               args: ["config", "virtualenv", "enable"],
+                                               env:  {
+                                                 "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/" \
+                                                                      "python@3.14/libexec/bin/python",
+                                               }
+      run "share/google-cloud-sdk/bin/gcloud", args: ["version"], base: :homebrew_prefix,
+          env: { "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/python@3.14/libexec/bin/python" }
     end
   end
 
