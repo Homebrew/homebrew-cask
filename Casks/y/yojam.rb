@@ -17,22 +17,26 @@ cask "yojam" do
 
   app "Yojam.app"
 
-  uninstall quit: [
-    "com.yojam.app",
-    "com.yojam.app.NativeHost",
-    "com.yojam.app.SafariExtension",
-    "com.yojam.app.ShareExtension",
-  ]
+  uninstall launchctl: "org.yojam.cleanup",
+            quit:      [
+              "com.yojam.app",
+              "com.yojam.app.NativeHost",
+              "com.yojam.app.SafariExtension",
+              "com.yojam.app.ShareExtension",
+            ]
 
   zap trash: [
     "~/.config/yojam",
+    "~/Library/Application Scripts/group.org.yojam.shared",
     "~/Library/Application Support/*/*/NativeMessagingHosts/org.yojam.host.json",
     "~/Library/Application Support/*/NativeMessagingHosts/org.yojam.host.json",
+    "~/Library/Application Support/com.yojam.app",
     "~/Library/Application Support/Yojam",
     "~/Library/Caches/com.yojam.app*",
     "~/Library/Group Containers/group.org.yojam.shared",
     "~/Library/HTTPStorages/com.yojam.app",
     "~/Library/HTTPStorages/com.yojam.app.binarycookies",
+    "~/Library/LaunchAgents/org.yojam.cleanup.plist",
     "~/Library/Logs/Yojam",
     "~/Library/Preferences/com.yojam.app.*",
     "~/Library/Saved Application State/com.yojam.app.savedState",
