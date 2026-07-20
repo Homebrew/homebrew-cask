@@ -19,6 +19,7 @@ cask "boss" do
   app "BOSS.app"
 
   zap trash: [
+    "~/.boss",
     "~/Library/Application Support/BOSS",
     "~/Library/Caches/ai.rever.boss",
     "~/Library/Preferences/ai.rever.boss.plist",
