@@ -1,9 +1,9 @@
 cask "znote" do
   arch arm: "-arm64"
 
-  version "4.2.4"
-  sha256 arm:   "f16d941da0c370b76fd03b34331bce0bdec6d3baf84cdef6b781673b39cf97ff",
-         intel: "cc528f5d5068203ecea97165e0c9a194b8c3d47cebaca159922a03dd4ea14116"
+  version "4.3.0"
+  sha256 arm:   "b8c7337b75fa365304238cc59261a399a8ccec54f5092ef13841504221b7bcd0",
+         intel: "7d3e07ab865671efdc50771d9d39f5ef201d9dce3b0927409b9fd53a2775a6ae"
 
   url "https://github.com/alagrede/znote-app/releases/download/v#{version}/znote-#{version}#{arch}.dmg",
       verified: "github.com/alagrede/znote-app/"
