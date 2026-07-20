@@ -19,23 +19,11 @@ cask "distroav" do
   # The pkg installs the plugin files to /Library/Application Support/obs-studio/plugins
   # however OBS Studio expects them to be in ~/Library/Application Support/obs-studio/plugins
   # so we create symlinks to correctly link the plugin files for OBS Studio.
-  postflight do
-    puts "Creating #{token} symlinks in ~/Library/Application Support/obs-studio/plugins"
-    target = Pathname.new("~/Library/Application Support/obs-studio/plugins").expand_path
-    source = "/Library/Application Support/obs-studio/plugins"
-
-    FileUtils.mkdir_p target
-    File.symlink("#{source}/distroav.plugin", "#{target}/distroav.plugin")
-    File.symlink("#{source}/distroav.plugin.dSYM", "#{target}/distroav.plugin.dSYM")
-  end
-
-  uninstall_preflight do
-    puts "Removing #{token} symlinks from in ~/Library/Application Support/obs-studio/plugins"
-    target = Pathname.new("~/Library/Application Support/obs-studio/plugins").expand_path
-
-    if File.symlink?("#{target}/distroav.plugin")
-      File.unlink("#{target}/distroav.plugin", "#{target}/distroav.plugin.dSYM")
-    end
+  postflight_steps do
+    symlink "/Library/Application Support/obs-studio/plugins/distroav.plugin",
+            "~/Library/Application Support/obs-studio/plugins/distroav.plugin", remove_on_uninstall: true
+    symlink "/Library/Application Support/obs-studio/plugins/distroav.plugin.dSYM",
+            "~/Library/Application Support/obs-studio/plugins/distroav.plugin.dSYM", remove_on_uninstall: true
   end
 
   uninstall pkgutil: [
