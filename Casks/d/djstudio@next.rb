@@ -23,9 +23,11 @@ cask "djstudio@next" do
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dj.studio.app.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dj.studio.next.app.sfl*",
     "~/Library/Application Support/DJ.Studio",
     "~/Library/Application Support/dj.studio.app",
     "~/Library/Preferences/dj.studio.app.plist",
+    "~/Library/Preferences/dj.studio.next.app.plist",
     "~/Library/Saved Application State/dj.studio.app.savedState",
   ]
 end
