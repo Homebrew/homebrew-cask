@@ -1,18 +1,18 @@
 cask "capcut" do
-  version "3.3.0.1159"
-  sha256 "26c253719a61eae679a2923121a83d0a39b98d920a5c57f3e00d66224986c867"
+  version "9.0.0.4346"
+  sha256 "e1015de3ec46022f7797eee2144f3eb4853d92a6b88e0bee408a38fa9dcfb07f"
 
-  url "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg",
-      verified: "lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/"
+  url "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg",
+      verified: "sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/"
   name "CapCut"
-  desc "Video editing and image design platform"
+  desc "All-in-one video editor and maker"
   homepage "https://www.capcut.com/"
 
   livecheck do
-    url "https://editor-api.capcutapi.com/service/settings/v3/?aid=359289&from_aid=359289&device_platform=mac&from_channel=capcutpc_0"
+    url "https://editor-api-sg.capcutapi.com/service/settings/v3/?aid=359289&device_platform=mac&channel=capcutpc_0&version_code=1&os_version=26.4&region=GB&traffic_type=release"
     regex(/CapCut[._-]v?(\d+(?:[._]\d+)+).+?\.dmg/i)
     strategy :json do |json, regex|
-      url = json.dig("data", "settings", "installer_downloader_config", "url")
+      url = json.dig("data", "settings", "update_reminder", "lastest_stable_url")
       next if url.blank?
 
       match = url.match(regex)
@@ -30,6 +30,5 @@ cask "capcut" do
     "~/Library/Application Scripts/com.lemon.lvoverseas",
     "~/Library/Containers/com.lemon.lvoverseas",
     "~/Library/Group Containers/22MMUN2RN5.lv",
-    "~/Library/Group Containers/22MMUN2RN5.ve",
   ]
 end
