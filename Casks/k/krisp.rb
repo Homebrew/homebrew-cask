@@ -33,10 +33,13 @@ cask "krisp" do
   zap trash: [
     "~/Library/Application Scripts/ai.krisp.krispMac.LaunchHelper",
     "~/Library/Application Support/ai.krisp.krispMac",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.krisp.krispmac.sfl*",
+    "~/Library/Application Support/krisp",
     "~/Library/Caches/ai.krisp.krispMac",
     "~/Library/Containers/ai.krisp.krispMac.LaunchHelper",
     "~/Library/HTTPStorages/ai.krisp.krispMac.*",
     "~/Library/LaunchAgents/ai.krisp.krispMac.cameraAssistant.plist",
+    "~/Library/LaunchAgents/krisp.plist",
     "~/Library/Preferences/ai.krisp.krispMac.plist",
   ]
 end
