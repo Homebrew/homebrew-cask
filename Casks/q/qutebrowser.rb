@@ -15,17 +15,9 @@ cask "qutebrowser" do
 
   depends_on macos: :big_sur
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/qutebrowser.wrapper.sh"
   app "qutebrowser.app"
-  binary shimscript, target: "qutebrowser"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      '#{appdir}/qutebrowser.app/Contents/MacOS/qutebrowser' "$@"
-    EOS
-  end
+  command_wrapper "qutebrowser",
+                  executable: "#{appdir}/qutebrowser.app/Contents/MacOS/qutebrowser"
 
   zap trash: [
         "~/Library/Application Support/qutebrowser",
