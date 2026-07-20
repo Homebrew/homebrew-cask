@@ -1,0 +1,115 @@
+cask "teamviewer" do
+  on_catalina :or_older do
+    version "15.42.4"
+    sha256 "3357bc366cd0295dd100b790d6af6216d349d34451ea18ba08692a51eadd6cf7"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    # This Cask should be installed and uninstalled manually on Catalina.
+    # See https://github.com/Homebrew/homebrew-cask/issues/76829
+    installer manual: "TeamViewer.pkg"
+
+    caveats <<~EOS
+      WARNING: #{token} has a bug in Catalina where it doesn't deal well with being uninstalled by other utilities.
+      The recommended way to remove it is by running their uninstaller under:
+
+         Preferences → Advanced
+    EOS
+  end
+  on_big_sur do
+    version "15.71.4"
+    sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    pkg "TeamViewer.pkg"
+  end
+  on_monterey do
+    version "15.71.4"
+    sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=12.7&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    pkg "TeamViewer.pkg"
+  end
+  on_ventura :or_newer do
+    version "15.79.4"
+    sha256 "beff41a4941da37479bc8c7b6fed0e8a4fee08eb7773f1c868f7af9e063f16ab"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=13.7&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    pkg "TeamViewer.pkg"
+  end
+
+  url "https://dl.teamviewer.com/download/version_15x/update/#{version}/TeamViewer.pkg"
+  name "TeamViewer"
+  desc "Remote access and connectivity software focused on security"
+  homepage "https://www.teamviewer.com/"
+
+  auto_updates true
+  conflicts_with cask: "teamviewer-host"
+  depends_on :macos
+
+  postflight do
+    # postinstall launches the app
+    retries ||= 3
+    ohai "The TeamViewer package postinstall script launches the TeamViewer app" if retries >= 3
+    ohai "Attempting to close the TeamViewer app to avoid unwanted user intervention" if retries >= 3
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/TeamViewer.app"]
+  rescue RuntimeError
+    sleep 1
+    retry unless (retries -= 1).zero?
+    opoo "Unable to forcibly close TeamViewer"
+  end
+
+  uninstall launchctl: [
+              "com.teamviewer.desktop",
+              "com.teamviewer.Helper",
+              "com.teamviewer.service",
+              "com.teamviewer.teamviewer",
+              "com.teamviewer.teamviewer_desktop",
+              "com.teamviewer.teamviewer_service",
+              "com.teamviewer.UninstallerHelper",
+              "com.teamviewer.UninstallerWatcher",
+            ],
+            quit:      [
+              "com.teamviewer.TeamViewer",
+              "com.teamviewer.TeamViewerUninstaller",
+            ],
+            pkgutil:   [
+              "com.teamviewer.AuthorizationPlugin",
+              "com.teamviewer.AuthorizationResources",
+              "com.teamviewer.remoteaudiodriver",
+              "com.teamviewer.teamviewer.*",
+              "TeamViewerUninstaller",
+            ],
+            delete:    [
+              "/Applications/TeamViewer.app",
+              "/Library/Preferences/com.teamviewer*",
+            ]
+
+  zap trash: [
+    "~/Library/Application Support/TeamViewer",
+    "~/Library/Caches/com.teamviewer.TeamViewer",
+    "~/Library/Caches/TeamViewer",
+    "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
+    "~/Library/HTTPStorages/com.teamviewer.TeamViewer",
+    "~/Library/HTTPStorages/com.teamviewer.TeamViewer.binarycookies",
+    "~/Library/Logs/TeamViewer",
+    "~/Library/Preferences/com.teamviewer*",
+    "~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState",
+    "~/Library/WebKit/com.teamviewer.TeamViewer",
+  ]
+end

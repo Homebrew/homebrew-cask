@@ -1,0 +1,28 @@
+cask "fbreader" do
+  version "2.1.5"
+  sha256 "27c05006a1b16be5219fec9aeb364d4470ffee665ea5a9d185748801d8782b73"
+
+  url "https://fbreader.org/static/packages/macos/FBReader-#{version}.dmg"
+  name "FBReader"
+  desc "Book reader"
+  homepage "https://fbreader.org/macos/"
+
+  livecheck do
+    url "https://fbreader.org/service/look_for_updates/macos/other"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
+
+  depends_on macos: :monterey
+
+  pkg "FBReader.pkg"
+
+  uninstall pkgutil: "com.fbreader"
+
+  zap trash: [
+    "~/.FBReader",
+    "~/Library/Application Scripts/com.fbreader",
+    "~/Library/Containers/com.fbreader",
+  ]
+end

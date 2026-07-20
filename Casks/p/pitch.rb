@@ -1,0 +1,33 @@
+cask "pitch" do
+  version "2.136.1,stable.1,8257804"
+  sha256 "37c67e1d653bb9faf237c417edb25b03a321be9aa7deea3b2788e7fdc866eef9"
+
+  url "https://desktop-app-builds.pitch.com/Pitch-#{version.csv.first}-#{version.csv.second}-ci#{version.csv.third}.dmg"
+  name "Pitch"
+  desc "Collaborative presentation software"
+  homepage "https://pitch.com/"
+
+  livecheck do
+    url "https://desktop-app-builds.pitch.com/latest-mac.yml"
+    regex(/Pitch[._-]v?(\d+(?:\.\d+)+)-([^-]+)-ci(\d+)\.dmg/i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]},#{match[3]}"
+      end
+    end
+  end
+
+  depends_on macos: :monterey
+
+  app "Pitch.app"
+
+  zap trash: [
+    "~/Library/Application Support/Pitch",
+    "~/Library/Logs/Pitch",
+    "~/Library/Preferences/io.pitch.pitch-macos.plist",
+    "~/Library/Saved Application State/io.pitch.pitch-macos.savedState",
+  ]
+end

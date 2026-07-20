@@ -1,0 +1,34 @@
+cask "sublime-merge@dev" do
+  version "2124"
+  sha256 "453da973102d32d952356b3526fb1294f69cbfc412dda78424786a43f05a8f72"
+
+  url "https://download.sublimetext.com/sublime_merge_build_#{version}_mac.zip",
+      verified: "download.sublimetext.com/"
+  name "Sublime Merge"
+  desc "Git client"
+  homepage "https://www.sublimemerge.com/dev"
+
+  livecheck do
+    url "https://www.sublimemerge.com/updates/dev_update_check"
+    strategy :json do |json|
+      json["latest_version"]&.to_s
+    end
+  end
+
+  auto_updates true
+  conflicts_with cask: "sublime-merge"
+  depends_on :macos
+
+  app "Sublime Merge.app"
+  binary "#{appdir}/Sublime Merge.app/Contents/SharedSupport/bin/smerge"
+
+  uninstall quit: "com.sublimemerge"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimemerge.sfl*",
+    "~/Library/Application Support/Sublime Merge",
+    "~/Library/Caches/com.sublimemerge",
+    "~/Library/Preferences/com.sublimemerge.plist",
+    "~/Library/Saved Application State/com.sublimemerge.savedState",
+  ]
+end

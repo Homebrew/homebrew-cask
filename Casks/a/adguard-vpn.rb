@@ -1,0 +1,45 @@
+cask "adguard-vpn" do
+  version "2.9.2.1014"
+  sha256 "3e7643f4bdb8fdd54c7b6f3bab04fca4f6670a26e52fe3d1a633b4e431e2e6f8"
+
+  url "https://static.adguard-vpn.com/mac/release/AdGuardVPN-#{version}.dmg"
+  name "AdGuard VPN"
+  desc "VPN for privacy and security"
+  homepage "https://adguard-vpn.com/"
+
+  livecheck do
+    url "https://static.adguard-vpn.com/mac/adguard-release-appcast.xml"
+    strategy :sparkle do |item|
+      item.short_version.delete_suffix(" release")
+    end
+  end
+
+  auto_updates true
+  conflicts_with cask: "adguard-vpn@nightly"
+  depends_on macos: :monterey
+
+  pkg "AdGuard VPN.pkg"
+
+  uninstall launchctl: [
+              "com.adguard.mac.vpn.tun-helper",
+              "com.adguard.mac.vpn.vpn_helper",
+            ],
+            quit:      "com.adguard.mac.vpn",
+            pkgutil:   "com.adguard.mac.vpn-pkg",
+            delete:    [
+              "/Library/Application Support/AdGuard Software/com.adguard.mac.vpn",
+              "/Library/Application Support/com.adguard.mac.vpn",
+              "/Library/Logs/com.adguard.mac.vpn",
+            ],
+            rmdir:     "/Library/Application Support/AdGuard Software"
+
+  zap trash: [
+    "~/Library/Application Scripts/*com.adguard.mac*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adguard.mac.vpn.launchatlogin.sfl*",
+    "~/Library/Caches/com.adguard.mac.vpn",
+    "~/Library/Containers/com.adguard.mac.vpn.launchatlogin",
+    "~/Library/Group Containers/*.com.adguard.mac",
+    "~/Library/HTTPStorages/com.adguard.mac.vpn",
+    "~/Library/Preferences/com.adguard.mac.vpn.plist",
+  ]
+end

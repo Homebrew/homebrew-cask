@@ -1,252 +1,179 @@
-# How to Use Homebrew-cask
-
-## Getting Started
-
-First ensure you have Homebrew version '0.9.5' or higher:
-
-```bash
-$ brew --version
-0.9.5
-```
-
-Install the homebrew-cask tool:
-
-```bash
-$ brew install caskroom/cask/brew-cask
-```
+# How to Use Homebrew Cask
 
 ## Frequently Used Commands
 
-Homebrew-cask is implemented as a subcommand of Homebrew.  All homebrew-cask
-commands begin with `brew cask`.  Homebrew-cask has its own set of command
-verbs many of which are similar to Homebrew's.  The most frequently-used
-commands are:
+Homebrew Cask is implemented as part of [Homebrew](https://brew.sh). All Homebrew Cask commands begin with `brew`, which works for both casks and formulae. The most frequently-used commands are:
 
-* `search` -- searches all known Casks
-* `install` -- installs the given Cask
-* `uninstall` -- uninstalls the given Cask
+* `install --cask` — installs the given cask.
+* `uninstall --cask` — uninstalls the given cask.
+* `reinstall --cask` — reinstalls the given cask.
+* `list --cask` — lists installed casks.
 
 ## Searching for Casks
 
-The `brew cask search` command accepts a series of substring arguments,
-and returns tokens representing matching Casks.  Let's see if there's a
-Cask for Google Chrome:
+To search for casks, use `brew search`. Let’s see if there’s a cask for Mozilla Firefox:
 
-```bash
-$ brew cask search chrome
-google-chrome
-```
-
-A `search` command with no search term will list all available Casks:
-
-```bash
-$ brew cask search
-# <list of all available Casks>
+```console
+$ brew search --cask firefox
+==> Casks
+firefox                      firefox@cn                   firefox@esr
+firefox@beta                 firefox@developer-edition    firefox@nightly
+Use `brew desc` to list packages with a short description.
 ```
 
 ## Installing Casks
 
-The command `brew cask install` accepts a Cask token as returned by `brew cask search`.
-Let's try to install Google Chrome:
+The command `brew install --cask` accepts one or multiple cask tokens. Let’s try to install Mozilla Firefox:
 
-```bash
-$ brew cask install google-chrome
-==> Downloading https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-==> Success! google-chrome installed to /opt/homebrew-cask/Caskroom/google-chrome/stable-channel
-==> Linking Google Chrome.app to /Users/paulh/Applications/Google Chrome.app
+```console
+$ brew install --cask firefox
+==> Downloading https://raw.githubusercontent.com/Homebrew/homebrew-cask/ba243ff8f7984a43088e0a1721e872cdd9ae7df0/Casks/f/firefox.rb
+######################################################################## 100.0%
+==> Downloading https://download-installer.cdn.mozilla.net/pub/firefox/releases/128.0/mac/en-US/Firefox%20128.0.dmg
+######################################################################## 100.0%
+==> Installing Cask firefox
+==> Moving App 'Firefox.app' to '/Applications/Firefox.app'
+==> Linking Binary 'firefox.wrapper.sh' to '/opt/homebrew/bin/firefox'
+🍺  firefox was successfully installed!
 ```
 
 ## Uninstalling Casks
 
 Easy peasy:
 
-```bash
-$ brew cask uninstall google-chrome
+```console
+$ brew uninstall --cask firefox
 ```
 
-This will both uninstall the Cask and remove symlinks which were created in
-`~/Applications`.
-
-To uninstall all versions of a Cask, use `--force`:
-
-```bash
-$ brew cask uninstall --force google-chrome
-```
-
-Note that `uninstall --force` is currently imperfect.  See the man page for
-more information.
+This will both uninstall the cask and remove the applications that were moved to `/Applications`.
 
 ## Other Commands
 
-* `info` -- displays information about the given Cask
-* `list` -- with no args, lists installed Casks; given installed Casks, lists staged files
-* `fetch` -- downloads Cask resources to local cache (with `--force`, re-download even if already cached)
-* `doctor` -- checks for configuration issues
-* `cleanup` -- cleans up cached downloads (with `--outdated`, only cleans old downloads)
-* `home` -- opens the homepage of the given Cask; or with no arguments, the homebrew-cask project page
-* `update` -- a synonym for `brew update`
-* `zap` -- try to remove *all* files associated with a Cask (including resources which may be shared with other applications)
+Unless noted, these are run with `--cask <cask_token>` to apply to Homebrew Cask.
 
-The following commands are for Cask authors:
+* `info` — displays information about the given cask.
+* `fetch` — downloads remote application files for the given cask to the local cache (with `--force`, re-downloads even if already cached).
+* `--cache` — displays the expected path to Homebrew's local cache of application files.
+* `doctor` — checks for configuration issues (run with no arguments).
+* `style` — checks style for the given cask using RuboCop.
+* `home` — opens the homepage of the given cask; or, with no arguments, the Homebrew project page.
+* `uninstall --zap` — try to remove _all_ files associated with a cask (may include resources shared with other applications).
+* `outdated` — lists all outdated casks (run with just `--cask`).
+* `upgrade` — updates all outdated casks (run with just `--cask`).
 
-* `audit` -- verifies installability of Casks
-* `cat` -- dumps the given Cask to the standard output
-* `create` -- creates a Cask and opens it in an editor
-* `edit` -- edits the given Cask
+The following commands are for cask authors:
+
+* `audit` — verifies installability of casks.
+* `cat` — dumps the given cask to the standard output.
+* `create --cask` — creates a cask and opens it in an editor.
+* `edit` — edits the given cask.
 
 The following aliases and abbreviations are provided for convenience:
 
-* `ls` -- `list`
-* `-S` -- `search`
-* `rm`, `remove` -- `uninstall`
-* `up` -- `update`
-* `dr` -- `doctor`
+* `ls` — `list`
+* `-S` — `search`
+* `rm`, `remove` — `uninstall`
+* `dr` — `doctor`
+* `abv` — `info`
+* `homepage` — `home`
+
+## Tab Completion
+
+Homebrew comes with `bash`, `zsh` and `fish` tab completion for the `brew` command. See [`brew` Shell Completion](https://docs.brew.sh/Shell-Completion) for more information.
 
 ## Inspecting Installed Casks
 
-List all installed Casks
+List staged files for an installed cask:
 
-```bash
-$ brew cask list
-adium          google-chrome     onepassword
+```console
+$ brew list --cask firefox
+==> App
+/Applications/Firefox.app (112 files, 360MB)
 ```
 
-Show details about a specific Cask:
+List all installed casks:
 
-```bash
-$ brew cask info caffeine
-caffeine: 1.1.1
-http://lightheadsw.com/caffeine/
+```console
+$ brew list --cask
+firefox       google-chrome     opera
+```
+
+With `--full-name`, any external tap names will also be included, _e.g._: `purple/monkey/dishwasher` for the cask `dishwasher` installed from the tap `purple/monkey`.
+
+Show details about a specific cask:
+
+```console
+$ brew info firefox
+==> firefox: 128.0 (auto_updates)
+https://www.mozilla.org/firefox/
 Not installed
-https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
+From: https://github.com/Homebrew/homebrew-cask/blob/HEAD/Casks/f/firefox.rb
+==> Name
+Mozilla Firefox
+==> Description
+Web browser
+==> Languages
+af, ar, be, bg, bn, ca, cs, de, en-CA, en-GB, en, eo, es-AR, es-CL, es-ES, fa, ff, fi, fr, gl, gn, gu, he, hi, in, it, ja, ka, ko, mr, my, ne, nl, pa-IN, pl, pt-BR, pt, ru, si, sq, sr, sv, ta, te, th, tl, tr, uk, ur, zh-TW, zh
+==> Artifacts
+Firefox.app (App)
+/opt/homebrew/Caskroom/firefox/128.0/firefox.wrapper.sh -> firefox (Binary)
 ```
 
 ## Updating/Upgrading Casks
 
-Since the homebrew-cask repository is a Homebrew Tap, you'll pull down the latest
-Casks every time you issue the regular Homebrew command `brew update`. Currently,
-homebrew-cask cannot always detect if an Application has been updated. You
-can force an update via the command `brew cask install --force`. We are working
-on improving this.
+Since the Homebrew Cask repository is a Homebrew tap, you’ll pull down the latest casks every time you issue the regular Homebrew command `brew update`. You can check for outdated casks with `brew outdated` and install the outdated casks with `brew upgrade`. Many applications update themselves, so their casks are ignored by `brew outdated` and `brew upgrade`. This behaviour can be overridden by adding `--greedy` to either command.
 
-It is generally safe to run updates from within an Application.
+## Updating/Upgrading Homebrew Cask
 
-## Updating/Upgrading the Homebrew-cask Tool
-
-When a new version homebrew-cask is released, it will appear in the output of
-`brew outdated` after running `brew update`.  You can upgrade it via the normal
-Homebrew `brew upgrade` workflow:
-```bash
-$ brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-```
-
-## Additional Taps (optional)
-
-The primary homebrew-cask Tap includes most of the Casks that a typical user will
-be interested in. There are a few additional Taps where we store different kinds
-of Casks.
-
-| Tap name | description |
-| -------- | ----------- |
-| [caskroom/versions](https://github.com/caskroom/homebrew-versions)     | contains alternate versions of Casks (e.g. betas, nightly releases, old versions)
-| [caskroom/fonts](https://github.com/caskroom/homebrew-fonts)           | contains Casks that install fonts, which are kept separate so we can educate users about the different licensing landscape around font installation/usage
-| [caskroom/unofficial](https://github.com/caskroom/homebrew-unofficial) | contains Casks that install unofficial builds or forks
-
-There are also [alternate Cask Taps](doc/alternate_cask_taps.md#alternate-cask-taps-maintained-by-users) maintained by users.
-
-You can tap any of the above with a `brew tap` command:
-
-```bash
-$ brew tap <tap_name>
-```
-
-after which, Casks from the new Tap will be available to `search` or `install` just like Casks from the main Tap.
-`brew update` will automatically keep your new Tap up to date.
-
-You may also specify a fully-qualified Cask token (which includes the Tap) for any `brew cask` command.  This will implicitly add the Tap if you have not previously added it with `brew tap`:
-
-```bash
-$ brew cask install caskroom/fonts/font-symbola
-```
+Homebrew [automatically taps and keeps Homebrew Cask updated](https://github.com/Homebrew/homebrew-cask/pull/15381). `brew update` is all that is required.
 
 ## Options
 
-`brew cask` accepts a number of options:
+`brew` accepts a number of options:
 
-* `--version`: print version and exit
-* `--debug`: output debug information
-* `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`
+* `--version`: print version and exit.
+* `--debug`: output debug information.
+* `--no-binaries`: skip symlinking executable binaries into `/opt/homebrew/bin`.
+* `--require-sha`: abort installation of cask if no checksum is defined.
+* `--language=<iso-language>[,<iso-language> ... ]`: changes the language of the cask to be installed. The first matching language is used, otherwise it uses the default language of the cask.
 
-You can also modify the default installation locations used when issuing `brew cask install`:
+You can also modify the default installation locations used when issuing `brew install`:
 
-* `--caskroom=/my/path` determines where the actual applications will be located.
-Should be handled with care — setting it outside `/opt` or your home directory might mess up your system.
-Default is `/opt/homebrew-cask/Caskroom`.
-* `--appdir=/my/path` changes the path where the symlinks to the applications (above)
-will be generated. This is commonly used to create the links in the _root_ Applications directory
-instead of the _home_ Applications directory by specifying `--appdir=/Applications`. Default is `~/Applications`.
-* `--prefpanedir=/my/path` changes the path for PreferencePane symlinks.
-Default is `~/Library/PreferencePanes`
-* `--qlplugindir=/my/path` changes the path for Quicklook Plugin symlinks.
-Default is `~/Library/QuickLook`
-* `--fontdir=/my/path` changes the path for Fonts symlinks.
-Default is `~/Library/Fonts`
-* `--binarydir=/my/path` changes the path for binary symlinks.
-Default is `/usr/local/bin`
-* `--input_methoddir=/my/path` changes the path for Input Methods symlinks.
-Default is `~/Library/Input Methods`
-* `--screen_saverdir=/my/path` changes the path for Screen Saver symlinks.
-Default is `~/Library/Screen Savers`
+* `--appdir=/my/path` changes the path where the applications will be moved. Default is `/Applications`.
+* `--fontdir=/my/path` changes the path for fonts. Default is `~/Library/Fonts`.
 
+See `man brew` for the other default installation locations and the flags to change them.
 
-To make these settings persistent, you might want to add the following line to your `.bash_profile` or `.zshenv`:
+To make these settings persistent, you might want to add the following line to your `.profile`, `.bash_profile` or `.zprofile`:
 
 ```bash
 # Specify your defaults in this environment variable
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/etc/Caskroom"
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
 ```
 
-Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing
-options in the command line:
+Note that you still can override the environment variable `HOMEBREW_CASK_OPTS` by _explicitly_ providing options in the command line:
 
 ```bash
-# Will force the Chrome app to be linked to ~/Applications
-# even though HOMEBREW_CASK_OPTS specified /Applications
-$ brew cask install --appdir="~/Applications" google-chrome
-```
-
-## Advanced searching
-
-The default search algorithm is a lax substring approach, which does not
-use the command-line arguments exactly as given.  If you need to specify
-a search more precisely, a single search argument enclosed in `/` characters
-will be taken as a Ruby regular expression:
-
-```bash
-$ brew cask search '/^google.c[a-z]rome$/'
-google-chrome
+# Will force the Mozilla Firefox app to be moved to /Applications
+# even though HOMEBREW_CASK_OPTS specified ~/Applications
+brew install --appdir="/Applications" firefox
 ```
 
 ## Other Ways to Specify a Cask
 
-Most `brew cask` commands can accept a Cask token as an argument. As described
-above, the token on the command line can take the form of:
+Most `brew` commands can accept a cask token as an argument. As described above, the token on the command line can take the form of:
 
- * a token as returned by `brew cask search`, _eg_: `google-chrome`
- * a fully-qualified token which includes the Tap, _eg_: `caskroom/fonts/font-symbola`
+* A simple token, _e.g._: `firefox`.
+* A fully-qualified token which includes the tap, _e.g._: `homebrew/cask/firefox`.
 
-`brew cask` also accepts three other forms as arguments
+`brew` also accepts three other forms as arguments:
 
- * a path to a Cask file, _eg_: `/usr/local/Cellar/brew-cask/0.25.0/Casks/google-chrome.rb`
- * a `curl`-retrievable URI to a Cask file, _eg_: `https://raw.github.com/caskroom/homebrew-cask/f54bbfaae0f2fa7210484f46313a459cb8a14d2f/Casks/google-chrome.rb`
- * a file in the current working directory, _eg_: `my-modfied-google-chrome.rb`.  Note
-   that matching Tapped Cask tokens will be preferred over this form when there is a
-   conflict.  To force the use of a Cask file in the current directory, specify a
-   pathname with slashes, _eg_: `./google-chrome.rb`.
+* A path to a cask file, _e.g._: `/opt/homebrew/Library/Taps/homebrew/homebrew-cask/Casks/f/firefox.rb`.
+* A `curl`-retrievable URI to a cask file, _e.g._: `https://raw.githubusercontent.com/Homebrew/homebrew-cask/HEAD/Casks/f/firefox.rb`.
+* A file in the current working directory, _e.g._: `my-modified-firefox.rb`. Note that matching tapped cask tokens will be preferred over this form when there is a conflict. To force the use of a cask file in the current directory, specify a pathname with slashes, _e.g._: `./firefox.rb`.
 
-The last three forms are intended for users who wish to maintain private Casks.
+The last three forms are intended for users who wish to maintain private casks.
 
 ## Taps
 
-You can add Casks to your existing (or new) Taps: just create a directory named
-`Casks` inside your Tap, put your Cask files there, and everything will just work.
+You can add casks to your existing (or new) taps: just create a directory named `Casks` inside your tap, put your cask files there, and everything will just work.

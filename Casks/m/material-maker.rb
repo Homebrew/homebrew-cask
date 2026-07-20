@@ -1,0 +1,26 @@
+cask "material-maker" do
+  version "1.7"
+  sha256 "af07244151d890f2ee4863c0cb8cdc526b7ca226b8dfcfe14bb8ae6acbc98550"
+
+  url "https://github.com/RodZill4/material-maker/releases/download/#{version}/material_maker_#{version.dots_to_underscores}.dmg",
+      verified: "github.com/RodZill4/material-maker/"
+  name "Material Maker"
+  desc "Procedural material authoring and 3D painting tool based on the Godot Engine"
+  homepage "https://rodzilla.itch.io/material-maker"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(/v?(\d+(?:\.\d+)+(?:p\d+)?)/i)
+  end
+
+  depends_on macos: :big_sur
+
+  app "Material Maker.app"
+
+  zap trash: [
+    "~/Library/Application Support/CrashReporter/material_maker*.plist",
+    "~/Library/Application Support/material_maker*",
+    "~/Library/Saved Application State/com.rodzlabs.materialmaker.savedState",
+  ]
+end
