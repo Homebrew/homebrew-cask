@@ -20,6 +20,8 @@ cask "element@nightly" do
   app "Element Nightly.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/im.riot.nightly.sfl*",
+    "~/Library/Application Support/Element Nightly",
     "~/Library/Application Support/Element",
     "~/Library/Application Support/Riot",
     "~/Library/Caches/im.riot.app",
@@ -29,6 +31,7 @@ cask "element@nightly" do
     "~/Library/Preferences/ByHost/im.riot.app.ShipIt.*.plist",
     "~/Library/Preferences/im.riot.app.helper.plist",
     "~/Library/Preferences/im.riot.app.plist",
+    "~/Library/Preferences/im.riot.nightly.plist",
     "~/Library/Saved Application State/im.riot.app.savedState",
   ]
 end
