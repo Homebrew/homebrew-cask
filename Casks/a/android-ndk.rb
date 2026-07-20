@@ -15,28 +15,16 @@ cask "android-ndk" do
 
   depends_on :macos
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/ndk_exec.sh"
-  preflight do
-    Pathname.new("#{HOMEBREW_PREFIX}/share").mkpath
+  command_wrapper "ndk-build", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-build"
+  command_wrapper "ndk-depends", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-depends"
+  command_wrapper "ndk-gdb", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-gdb"
+  command_wrapper "ndk-stack", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-stack"
+  command_wrapper "ndk-which", executable: "#{HOMEBREW_PREFIX}/share/android-ndk/ndk-which"
 
-    build = File.read("#{staged_path}/source.properties").match(/(?<=Pkg.Revision\s=\s\d\d.\d.)\d+/)
-    FileUtils.ln_sf("#{staged_path}/AndroidNDK#{build}.app/Contents/NDK", "#{HOMEBREW_PREFIX}/share/android-ndk")
-
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      readonly executable="#{staged_path}/AndroidNDK#{build}.app/Contents/NDK/$(basename ${0})"
-      test -f "${executable}" && exec "${executable}" "${@}"
-    EOS
+  preflight_steps do
+    symlink "AndroidNDK*.app/Contents/NDK", "share/android-ndk",
+            target_base: :homebrew_prefix, source_glob: true, force: true
   end
-
-  %w[
-    ndk-build
-    ndk-depends
-    ndk-gdb
-    ndk-stack
-    ndk-which
-  ].each { |link_name| binary shimscript, target: link_name }
 
   uninstall delete: "#{HOMEBREW_PREFIX}/share/android-ndk"
 
