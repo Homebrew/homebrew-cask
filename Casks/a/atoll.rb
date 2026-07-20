@@ -1,8 +1,8 @@
 cask "atoll" do
-  version "2.2.0"
-  sha256 "30e532e69650a7183769dff222bca7106de7dfe4936e9bd9c2096e20f58a4cb2"
+  version "2.3.2"
+  sha256 "b2b81d6eebb719cc50db04694d25101f85a201bac477418001348c23cecce8b8"
 
-  url "https://github.com/Ebullioscopic/Atoll/releases/download/v#{version}/Atoll.#{version}.dmg",
+  url "https://github.com/Ebullioscopic/Atoll/releases/download/v#{version}/Atoll-#{version}.dmg",
       verified: "github.com/Ebullioscopic/Atoll/"
   name "Atoll"
   desc "Dynamic Island for the MacBook notch"
