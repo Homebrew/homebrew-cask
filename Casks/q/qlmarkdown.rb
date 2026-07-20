@@ -25,13 +25,19 @@ cask "qlmarkdown" do
   binary "#{appdir}/QLMarkdown.app/Contents/Resources/qlmarkdown_cli"
 
   zap trash: [
+    "~/Library/Application Scripts/group.org.sbarex.qlmarkdown/",
     "~/Library/Application Scripts/org.sbarex.QLMarkdown",
     "~/Library/Application Scripts/org.sbarex.QLMarkdown.QLExtension",
+    "~/Library/Application Scripts/org.sbarex.QLMarkdown.Shortcut-Extension/",
+    "~/Library/Application Support/QLMarkdown/",
     "~/Library/Containers/org.sbarex.QLMarkdown",
     "~/Library/Containers/org.sbarex.QLMarkdown.QLExtension",
-    "~/Library/Group Containers/org.sbarex.qlmarkdown",
+    "~/Library/Containers/org.sbarex.QLMarkdown.Shortcut-Extension/",
+    "~/Library/Group Containers/group.org.sbarex.qlmarkdown/",
     "~/Library/Group Containers/org.sbarex.QLMarkdown",
+    "~/Library/Group Containers/org.sbarex.qlmarkdown",
     "~/Library/Preferences/org.sbarex.QLMarkdown.plist",
+    "~/Library/Preferences/org.sbarex.QLMarkdownXPCHelper.plist",
     "~/Library/QuickLook/QLMarkdown.qlgenerator",
   ]
 end
