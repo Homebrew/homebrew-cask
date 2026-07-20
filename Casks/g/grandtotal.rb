@@ -21,6 +21,7 @@ cask "grandtotal" do
   app "GrandTotal.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mediaatelier.grandtotal3.sfl*",
     "~/Library/Application Support/com.mediaatelier.GrandTotal*",
     "~/Library/Caches/com.mediaatelier.GrandTotal*",
     "~/Library/HTTPStorages/com.mediaatelier.GrandTotal*",
