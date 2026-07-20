@@ -30,16 +30,8 @@ cask "tiled" do
   depends_on :macos
 
   app "Tiled.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/tiled.wrapper.sh"
-  binary shimscript, target: "tiled"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      exec '#{appdir}/Tiled.app/Contents/MacOS/Tiled' "$@"
-    EOS
-  end
+  command_wrapper "tiled",
+                  executable: "#{appdir}/Tiled.app/Contents/MacOS/Tiled"
 
   zap trash: [
     "~/Library/Application Support/Tiled",
