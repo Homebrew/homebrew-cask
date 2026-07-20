@@ -18,7 +18,11 @@ cask "ff-works" do
   app "ff·Works.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.osbytes.ffworks*.sfl*",
     "~/Library/Application Support/ffWorks",
-    "~/Library/WebKit/com.osbytes.ffworks#{version.major}",
+    "~/Library/Caches/com.osbytes.ffworks*",
+    "~/Library/HTTPStorages/com.osbytes.ffworks*",
+    "~/Library/Preferences/com.osbytes.ffworks*.plist",
+    "~/Library/WebKit/com.osbytes.ffworks*",
   ]
 end
