@@ -1,7 +1,7 @@
 cask "ego-lite" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.4.13"
+  version "0.4.4.15"
   sha256 :no_check
 
   url "https://cdn.ego.app/channel/egobrowser_npx_referral/setup/macos/#{arch}/egolite.dmg"
@@ -10,10 +10,28 @@ cask "ego-lite" do
   homepage "https://lite.ego.app/"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |items|
-      items["com.citrolabs.ego.lite"]&.short_version
-    end
+    url "https://update.citrolabs.ai/service/update2", post_json: {
+      request: {
+        protocol:     "4.0",
+        acceptformat: "crx3,download,puff,run,xz,zucc",
+        arch:         arch,
+        os:           {
+          platform: "Mac OS X",
+          version:  "26.5.0",
+          arch:     arch,
+        },
+        apps:         [
+          {
+            appid:       "com.citrolabs.ego.lite",
+            version:     "0.0.0.0",
+            ap:          "lite",
+            updatecheck: {},
+          },
+        ],
+      },
+    }
+    regex(/"nextversion":"(\d+(?:\.\d+)+)"/i)
+    strategy :page_match
   end
 
   auto_updates true
