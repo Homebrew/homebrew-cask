@@ -91,6 +91,7 @@ jobs:
         with:
           core: true
           cask: true
+          stable: ${{ matrix.stable || false }}
 
       - name: Enable debug mode
         run: |
@@ -121,15 +122,15 @@ jobs:
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: ~/Library/Caches/Homebrew/style
-          key: macos-style-cache-${{ github.sha }}
-          restore-keys: macos-style-cache-
+          key: macos-style-cache-${{ matrix.stable && 'stable-' || 'main-' }}${{ github.sha }}
+          restore-keys: macos-style-cache-${{ matrix.stable && 'stable-' || 'main-' }}
 
       - name: Run brew config
         run: brew config
 
       - name: Run brew test-bot --only-tap-syntax
         id: tap-syntax
-        run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax
+        run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax ${{ matrix.stable && '--stable' || '' }}
         if: always() && !matrix.cask
 
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
