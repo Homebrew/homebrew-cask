@@ -14,16 +14,9 @@ cask "subsync" do
   depends_on :macos
 
   app "subsync.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/subsync.wrapper.sh"
-  binary shimscript, target: "subsync"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/subsync.app/Contents/MacOS/subsync' --cli "$@"
-    EOS
-  end
+  command_wrapper "subsync",
+                  executable: "#{appdir}/subsync.app/Contents/MacOS/subsync",
+                  args:       "--cli"
 
   zap trash: "~/Library/Preferences/subsync"
 
