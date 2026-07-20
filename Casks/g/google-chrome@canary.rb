@@ -43,6 +43,7 @@ cask "google-chrome@canary" do
         "~/Library/LaunchAgents/com.google.keystone.agent.plist",
         "~/Library/LaunchAgents/com.google.keystone.xpcservice.plist",
         "~/Library/Logs/GoogleSoftwareUpdateAgent.log",
+        "~/Library/Preferences/com.google.Chrome.canary.plist",
         "~/Library/Preferences/com.google.Chrome.plist",
         "~/Library/Preferences/com.google.Keystone.Agent.plist",
         "~/Library/Saved Application State/com.google.Chrome.app.*.savedState",
