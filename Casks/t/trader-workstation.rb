@@ -29,11 +29,11 @@ cask "trader-workstation" do
     args:       ["-q"],
   }
 
-  uninstall_preflight do
-    ohai "Stopping all running instances of Trader Workstation prior to uninstall"
-    system_command "/usr/bin/pkill", args: ["-f", "/Applications/Trader Workstation/Trader Workstation.app"]
-  rescue RuntimeError
-    ohai "No running instances of Trader Workstation found"
+  uninstall_preflight_steps do
+    terminate_process "/Applications/Trader Workstation/Trader Workstation.app",
+                      match: :full, must_succeed: false,
+                      notices: ["Stopping all running instances of Trader Workstation prior to uninstall"],
+                      failure_message: "No running instances of Trader Workstation found"
   end
 
   uninstall quit:   "com.install4j.5889-6375-8446-2021",
