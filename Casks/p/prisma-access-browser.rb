@@ -48,7 +48,9 @@ cask "prisma-access-browser" do
       ],
       trash:  [
         "~/Library/Application Support/PAB",
+        "~/Library/Caches/com.paloaltonetworks.PrismaAccessBrowserUpdater",
         "~/Library/Caches/PAB",
+        "~/Library/HTTPStorages/com.paloaltonetworks.PrismaAccessBrowserUpdater",
         "~/Library/PAB",
       ]
 end
