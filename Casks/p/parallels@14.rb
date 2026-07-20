@@ -25,26 +25,20 @@ cask "parallels@14" do
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/67202
   container type: :naked
 
-  preflight do
-    system_command "/usr/bin/hdiutil",
-                   args: ["attach", "-nobrowse", "#{staged_path}/ParallelsDesktop-#{version}.dmg"]
-    system_command "/Volumes/Parallels Desktop #{version.major}/Parallels Desktop.app/Contents/MacOS/inittool",
-                   args: ["install", "-t", "#{appdir}/Parallels Desktop.app", "-s"],
-                   sudo: true
-    system_command "/usr/bin/hdiutil",
-                   args: ["detach", "/Volumes/Parallels Desktop #{version.major}"]
+  preflight_steps do
+    run "/usr/bin/hdiutil", args: ["attach", "-nobrowse", "{{staged_path}}/ParallelsDesktop-#{version}.dmg"]
+    run "/Volumes/Parallels Desktop #{version.major}/Parallels Desktop.app/Contents/MacOS/inittool",
+        args: ["install", "-t", "{{appdir}}/Parallels Desktop.app", "-s"], sudo: true
+    run "/usr/bin/hdiutil", args: ["detach", "/Volumes/Parallels Desktop #{version.major}"]
   end
 
-  postflight do
+  postflight_steps do
     # Unhide the application
-    system_command "/usr/bin/chflags",
-                   args: ["nohidden", "#{appdir}/Parallels Desktop.app"],
-                   sudo: true
+    run "/usr/bin/chflags", args: ["nohidden", "{{appdir}}/Parallels Desktop.app"], sudo: true
 
     # Run the initialization script
-    system_command "#{appdir}/Parallels Desktop.app/Contents/MacOS/inittool",
-                   args: ["init", "-b", "#{appdir}/Parallels Desktop.app"],
-                   sudo: true
+    run "Parallels Desktop.app/Contents/MacOS/inittool",
+        args: ["init", "-b", "{{appdir}}/Parallels Desktop.app"], base: :appdir, sudo: true
   end
 
   uninstall_preflight_steps do
