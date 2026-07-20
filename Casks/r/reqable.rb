@@ -17,7 +17,7 @@ cask "reqable" do
   app "Reqable.app"
 
   uninstall_postflight_steps do
-    delete_keychain_certificate "Reqable Proxy"
+    delete_keychain_certificates "Reqable Proxy"
   end
 
   zap trash: [

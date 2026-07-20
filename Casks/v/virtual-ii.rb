@@ -23,7 +23,7 @@ cask "virtual-ii" do
 
   preflight_steps do
     # There is no sub-folder in the DMG; the root *is* the folder
-    move_children ".", "Virtual ]["
+    move_contents ".", "Virtual ]["
   end
 
   zap trash: [

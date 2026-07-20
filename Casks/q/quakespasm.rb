@@ -17,7 +17,7 @@ cask "quakespasm" do
 
   preflight_steps do
     # There is no sub-folder; the root *is* the folder
-    move_children ".", "QuakeSpasm"
+    move_contents ".", "QuakeSpasm"
   end
 
   caveats <<~EOS
