@@ -15,7 +15,7 @@ cask "nova" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sequoia
 
   app "Nova.app"
   binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
