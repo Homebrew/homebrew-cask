@@ -23,6 +23,7 @@ cask "koodo-reader" do
     app "Koodo Reader.app"
 
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/xyz.960960.koodo.sfl*",
       "~/Library/Application Support/koodo-reader",
       "~/Library/Preferences/xyz.960960.koodo.plist",
       "~/Library/Saved Application State/xyz.960960.koodo.savedState",
