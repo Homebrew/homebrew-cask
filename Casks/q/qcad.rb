@@ -2,8 +2,8 @@ cask "qcad" do
   arch arm: "-arm64"
 
   on_arm do
-    version "3.32.9,12.7-26-qt6"
-    sha256 "8380e923a4ab1b6ec8872aa3d43e3ec78bdda6efdc83b900b3195643f0e48518"
+    version "3.32.9,13-26-qt6"
+    sha256 "4d558d2537f985ef3b93cb7e148d2eee9ea9dbd43af05cf60801ba3fb8c9fa92"
   end
   on_intel do
     version "3.32.9,11-26-qt6"
