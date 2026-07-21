@@ -1,9 +1,9 @@
 cask "capacities" do
   arch arm: "-arm64"
 
-  version "1.67.3"
-  sha256 arm:   "2e780398a6c64207490bae46f42f7a655239ade80ff561ed31f5a3bda6253047",
-         intel: "4f608cf01499a889051cf502b987feee3d7171ac7569eb6e702635041576c52c"
+  version "1.67.13"
+  sha256 arm:   "4f20b318b52146b8c4bb4e6fe4a4eb7e0ca61429597c13ef13267d0f955bb68e",
+         intel: "f37a7691964eeb28d910f4163811d36fcb01b8ab8c1eb9d7f9634f71518400af"
 
   url "https://2vks4.upcloudobjects.com/capacities-desktop-app/Capacities-#{version}#{arch}.dmg",
       verified: "2vks4.upcloudobjects.com/capacities-desktop-app/"
