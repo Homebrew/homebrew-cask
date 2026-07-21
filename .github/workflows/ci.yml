@@ -156,12 +156,14 @@ jobs:
 
       - name: Gather cask information
         id: info
+        env:
+          CASK_PATH: ${{ matrix.cask.path }}
         run: |
-          brew ruby <<'EOF'
+          brew ruby -- - "$CASK_PATH" <<'EOF'
             require 'cask/cask_loader'
             require 'cask/installer'
 
-            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+            cask = Cask::CaskLoader.load(ARGV.fetch(0))
 
             manual_installer = cask.artifacts.any? do |artifact|
               if defined?(artifact.manual_install)
