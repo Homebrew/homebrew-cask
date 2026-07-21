@@ -1,6 +1,6 @@
 cask "quo" do
-  version "5.5.18"
-  sha256 "975dfb764f054a424607f75819d47a0dbf5159088410727b3be093204981699b"
+  version "5.6.3"
+  sha256 "5e1363092a47b5c95f6310f1041866a78f6e4a2dd424e1c80a965e16fdb5eff9"
 
   url "https://download.quo.com/Quo-#{version}-universal.dmg"
   name "Quo"
