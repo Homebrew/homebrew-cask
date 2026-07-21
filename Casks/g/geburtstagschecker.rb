@@ -1,8 +1,8 @@
 cask "geburtstagschecker" do
   version "1.9,240"
-  sha256 :no_check
+  sha256 "aadc2005c7a535107383ff6b517d09cd7859fcbb1dd4178420e895aff2643513"
 
-  url "https://earthlingsoft.net/GeburtstagsChecker/GeburtstagsChecker.zip"
+  url "https://earthlingsoft.net/GeburtstagsChecker/GeburtstagsChecker%20#{version.csv.first}%20(#{version.csv.second}).zip"
   name "GeburtstagsChecker"
   homepage "https://earthlingsoft.net/GeburtstagsChecker/"
 
@@ -13,10 +13,7 @@ cask "geburtstagschecker" do
 
   depends_on :macos
 
-  # The url is unversioned, but the download returns an app directory with a version number
-  rename "GeburtstagsChecker #{version.csv.first} (#{version.csv.second})", "GeburtstagsChecker"
-
-  app "GeburtstagsChecker/GeburtstagsChecker.app"
+  app "GeburtstagsChecker #{version.csv.first} (#{version.csv.second})/GeburtstagsChecker.app"
 
   zap trash: [
     "~/Library/Caches/earthlingsoft.GeburtstagsChecker",
