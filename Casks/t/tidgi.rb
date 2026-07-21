@@ -22,6 +22,8 @@ cask "tidgi" do
 
   app "TidGi.app"
 
+  uninstall quit: "com.tidgi"
+
   zap trash: [
     "~/Library/Application Support/TidGi",
     "~/Library/Caches/com.tidgi.app",
