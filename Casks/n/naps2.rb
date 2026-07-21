@@ -2,9 +2,9 @@ cask "naps2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x64"
 
-  version "8.2.1"
-  sha256 arm:   "4a40e0d1a717714bf12615325acbb938737962c076fc6d83007d973f3b241a4f",
-         intel: "305d6976d8c07de18ff3475de416868680e34734959d2e86399a53c0805aea1d"
+  version "8.3.0"
+  sha256 arm:   "c55d9ee14ff001d3f139c47b8bbdd4ac2809e366879344e4dd461a1bc691f536",
+         intel: "a24901d36eda17b7b63cc74513db9e5bb478c5edd249f44c74ee840a869bf377"
 
   url "https://github.com/cyanfish/naps2/releases/download/v#{version}/naps2-#{version}-mac-#{arch}.pkg",
       verified: "github.com/cyanfish/naps2/"
@@ -17,7 +17,7 @@ cask "naps2" do
     strategy :github_latest
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   pkg "naps2-#{version}-mac-#{arch}.pkg"
 
