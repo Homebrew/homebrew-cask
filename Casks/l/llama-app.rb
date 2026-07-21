@@ -1,6 +1,6 @@
 cask "llama-app" do
-  version "0.35.0"
-  sha256 "095b7106581a4e8c970af1e6508ab094ada958617a278392ed614caa449452fd"
+  version "0.36.0"
+  sha256 "3e73f79a367b5061fbeeef8d9a4d28e5a5ba77e3389c985a00e5dcacdd1a0262"
 
   url "https://github.com/ggml-org/Llama-macOS/releases/download/#{version}/Llama.dmg"
   name "Llama"
