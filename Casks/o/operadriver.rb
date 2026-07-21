@@ -1,6 +1,6 @@
 cask "operadriver" do
-  version "146.0.7680.178"
-  sha256 "a9fcbe8373fe76260f4c08e5a814f6840fc20fb85f5a91a2e83b8a4c287e78a3"
+  version "149.0.7827.201"
+  sha256 "765823f6136acd4a9686f07e13192b48fa480a3d8df36394d0fb76bddab80400"
 
   url "https://github.com/operasoftware/operachromiumdriver/releases/download/v.#{version}/operadriver_mac64.zip"
   name "OperaChromiumDriver"
