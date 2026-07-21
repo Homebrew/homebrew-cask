@@ -4,6 +4,7 @@ cask "geburtstagschecker" do
 
   url "https://earthlingsoft.net/GeburtstagsChecker/GeburtstagsChecker%20#{version.csv.first}%20(#{version.csv.second}).zip"
   name "GeburtstagsChecker"
+  desc "Check for and remind about upcoming birthdays"
   homepage "https://earthlingsoft.net/GeburtstagsChecker/"
 
   livecheck do
@@ -11,16 +12,12 @@ cask "geburtstagschecker" do
     strategy :sparkle
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
-  app "GeburtstagsChecker #{version.csv.first} (#{version.csv.second})/GeburtstagsChecker.app"
+  app "GeburtstagsChecker.app"
 
   zap trash: [
     "~/Library/Caches/earthlingsoft.GeburtstagsChecker",
     "~/Library/Preferences/earthlingsoft.GeburtstagsChecker.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
