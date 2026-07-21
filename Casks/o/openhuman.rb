@@ -8,11 +8,11 @@ cask "openhuman" do
     arch arm: "aarch64", intel: "amd64"
   end
 
-  version "0.61.8"
-  sha256 arm:          "93a949473bfc8c29e7d747eda03e0fc5e300d5353e2644f67f5080a220cbb5bc",
-         x86_64:       "4cf0a8c98a5e36d53ae39cf9c77085e413fbc02db9df6ba656c8c5a448450ed5",
-         x86_64_linux: "2ed1b064a7fb8d85551248060ae2d2b9479610f4c6c44414da2298532d2ac39f",
-         arm64_linux:  "a25ef228f89727cb40d0c2c4f547308ab90d471340a96db9aabe98e564049d04"
+  version "0.63.0"
+  sha256 arm:          "8c85692572a4795a7ee46a1eed038569d0842d5aabab43849cac5922fe59efd2",
+         x86_64:       "aaafc746d4f3df921c7a124af19b91332ec09b28bf2be436892471e60c5963c7",
+         x86_64_linux: "103a1905291ce829b6ae95e055c110705905062db7d6c881f47e7d9cd306ba20",
+         arm64_linux:  "aa43f25424b49cc3d6b1678355221c1521e910df7ace19be4916a8e781dad8c0"
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
 
