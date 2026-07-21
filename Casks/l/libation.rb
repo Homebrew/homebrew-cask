@@ -14,6 +14,7 @@ cask "libation" do
   depends_on macos: :ventura
 
   app "Libation.app"
+  binary "#{appdir}/Libation.app/Contents/MacOS/LibationCli", target: "libationcli"
 
   zap trash: [
     "~/Library/Application Support/Libation",
