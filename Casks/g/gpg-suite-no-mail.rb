@@ -118,10 +118,9 @@ cask "gpg-suite-no-mail" do
         },
       ]
 
-  uninstall_postflight do
-    ["gpg", "gpg2", "gpg-agent"].map { |exec_name| Pathname("/usr/local/bin")/exec_name }.each do |exec|
-      exec.unlink if exec.exist? && exec.readlink.to_s.include?("MacGPG2")
-    end
+  uninstall_postflight_steps do
+    remove ["/usr/local/bin/gpg", "/usr/local/bin/gpg2", "/usr/local/bin/gpg-agent"],
+           symlink_target_contains: "MacGPG2"
   end
 
   uninstall launchctl: [
