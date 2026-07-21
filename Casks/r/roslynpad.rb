@@ -13,26 +13,12 @@ cask "roslynpad" do
 
   livecheck do
     url :url
-    # Releases are tagged without trailing zero components ("22", "21.1"),
-    # which the default strategy regex rejects.
     regex(/^v?(\d+(?:\.\d+)*)$/i)
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
   end
 
   depends_on macos: :sequoia
 
   app "RoslynPad.app"
 
-  # ~/RoslynPad holds the user's own documents, so it is deliberately not zapped.
   zap trash: "~/Library/Preferences/net.roslynpad.plist"
-
-  caveats <<~EOS
-    RoslynPad needs a supported .NET SDK to compile and run programs:
-      brew install --cask dotnet-sdk
-  EOS
 end
