@@ -11,9 +11,11 @@ cask "emacs-app@pretest" do
 
   livecheck do
     url "https://emacsformacosx.com/atom/pretest"
-    regex(%r{\Atag:emacsformacosx\.com,2010:emacs-builds/Emacs-pretest-(.+)-universal\.dmg\Z}i)
+    regex(/Emacs-pretest-(\d+\.\d+(?:\.\d+|-rc\d+)(?:-\d+)?)-universal\.dmg/i)
     strategy :xml do |xml, regex|
-      xml.get_elements("/feed/entry/id").map { |item| item.text[regex, 1] }
+      xml.get_elements("/feed/entry/link").filter_map do |item|
+        item.attributes["href"]&.[](regex, 1)
+      end
     end
   end
 
