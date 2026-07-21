@@ -28,7 +28,7 @@ module Homebrew
       def run
         pattern, = args.named
         analyze_regexp pattern if pattern
-        pkgs, = Open3.capture3("/usr/sbin/pkgutil --pkgs='#{pattern}'")
+        pkgs = Utils.popen_read("/usr/sbin/pkgutil", "--pkgs=#{pattern}")
         raise "No match. Suggestion: try '#{pattern}.*'" if pkgs.empty?
 
         puts pkgs
