@@ -1,9 +1,9 @@
 cask "wowup" do
   arch arm: "-arm64"
 
-  version "2.22.0"
-  sha256 arm:   "9c8afe0c233f2d100f8b4ffd0ba92aa28aa4a4fbdd171b12911e6739fdc83609",
-         intel: "4bfe2c0dcae893faa685fa44621f37183dcd67a83b76dd5cf15ff8f32ff4ef3e"
+  version "2.23.0"
+  sha256 arm:   "bc331211b99bccc0bb802e76f8d69ef1ae0ad531b022b4424a6219d5bd5c295b",
+         intel: "180b2d9dead8ace0ffee4f65aa6b3e0c2f2fa91a82b21f07eebfccd793f816ed"
 
   url "https://github.com/WowUp/WowUp/releases/download/v#{version}/WowUp-#{version}#{arch}.dmg",
       verified: "github.com/WowUp/WowUp/"
