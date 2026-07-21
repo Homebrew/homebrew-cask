@@ -5,7 +5,7 @@ require "system_command"
 
 APPLE_LAUNCHJOBS_REGEX =
   /\A(?:application\.)?com\.apple\.
-  (AppStore|installer|Preview|Safari|systemevents|systempreferences|Terminal)
+  (AppStore|installer|Preview|Safari|shortcuts|systemevents|systempreferences|Terminal)
   (?:\.|$)/x
 
 GOOGLE_LAUNCHJOBS_REGEX = /com\.google\.(keystone|GoogleUpdater)/
