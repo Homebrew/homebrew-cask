@@ -1,5 +1,5 @@
 cask "geburtstagschecker" do
-  version "1.8.2,195"
+  version "1.9,240"
   sha256 :no_check
 
   url "https://earthlingsoft.net/GeburtstagsChecker/GeburtstagsChecker.zip"
