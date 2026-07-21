@@ -13,7 +13,7 @@ cask "android-studio-preview@canary" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/android[._-]studio(?:[._-]([^"' >]+))?[._-]#{arch}\.dmg}i)
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/android[._-]studio(?:[._-]([^"' >]+))?[._-]#{arch}\.dmg[^>]*?canary}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
