@@ -22,8 +22,8 @@ cask "microsoft-word" do
     end
   end
   on_sonoma :or_newer do
-    version "16.111.26071325"
-    sha256 "dfad5bd77687ef19721a0099a8dc4cec48979b938cadbe731b7d05185c1826df"
+    version "16.111.26071913"
+    sha256 "db5c3c4383f9ba66403e398923f6241951ba358e1c25391692a8e8051a9fc11f"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525134"
