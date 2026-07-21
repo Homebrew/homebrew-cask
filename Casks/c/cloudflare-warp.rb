@@ -1,6 +1,6 @@
 cask "cloudflare-warp" do
-  version "2026.6.822.0"
-  sha256 "601823e4b3c2a55b7a9f914add1bcc1b8a0a49c1c7762d13198c1ec8801aefc7"
+  version "2026.6.880.0"
+  sha256 "5a39c189f8ec95fe0897fa4efc22299286a2fbe5b08a1088c9bffec3a6e800c9"
 
   url "https://downloads.cloudflareclient.com/v1/download/macos/version/#{version}",
       verified: "downloads.cloudflareclient.com/v1/download/macos/"
