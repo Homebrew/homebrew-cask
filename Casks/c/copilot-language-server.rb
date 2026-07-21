@@ -6,11 +6,11 @@ cask "copilot-language-server" do
     depends_on macos: :big_sur
   end
 
-  version "1.523.0"
-  sha256 arm:          "32365bfc9debba4c07ebcc9cd314d32f1a9a0f394f1d48e7ff6ca031562b6b6d",
-         intel:        "1ee6cc8f4d1784b8684b808938735943726ec5af487588a0b9285eb9114217c3",
-         arm64_linux:  "c76a26e4781c84e06dc4fc0d635f656f39e5fd08a403fe2a5c55b3d582c3b14f",
-         x86_64_linux: "6390d066408f48e8b6c6e0797c131e5cea26905a7e6535750c2d1c2fb6960127"
+  version "1.524.0"
+  sha256 arm:          "bc6a6a877353653d199e294d4da5a8326d9c474f453c3524bfa7639b1f86e33c",
+         intel:        "92084a4834f64312faa74d0aafa367c687f64647981647d00458bec1a23ae771",
+         arm64_linux:  "ec2ddde6cf64dd61cb0c56b849112cffcdba7fcdae56eb560daaf4d46baff580",
+         x86_64_linux: "595544b08b8ab037ab752989a410389b19f62bec3935529c3642bf65b324d5d4"
 
   url "https://github.com/github/copilot-language-server-release/releases/download/#{version}/copilot-language-server-#{os}-#{arch}-#{version}.zip"
   name "GitHub Copilot Language Server"
