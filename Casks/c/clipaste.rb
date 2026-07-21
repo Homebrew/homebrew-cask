@@ -1,6 +1,6 @@
 cask "clipaste" do
-  version "1.0.3"
-  sha256 "c46be1234db1e42898a0bea74277ff5c8248c710e8f0e6fed146720ab1dcf910"
+  version "1.0.4"
+  sha256 "ed465a26443bfe7114a66e60f80a2cb828e743d435f7c9f3f7fcf2e4b80b2c71"
 
   url "https://www.ntwind.com/files/Clipaste_#{version}-mac.dmg"
   name "Clipaste"
