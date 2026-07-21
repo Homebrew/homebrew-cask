@@ -28,6 +28,8 @@ cask "oracle-jdk-javadoc" do
     end
   end
 
+  depends_on :macos
+
   artifact "docs", target: "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Home/docs"
 
   uninstall rmdir: "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk"
