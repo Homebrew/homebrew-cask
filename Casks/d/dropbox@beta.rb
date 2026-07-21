@@ -1,9 +1,9 @@
 cask "dropbox@beta" do
   arch arm: "&arch=arm64"
 
-  version "262.3.3141"
-  sha256 arm:   "caf1011c2a837e4627d954051e58ecdf1b0302d7b02f202ec06620e8e4d02b0c",
-         intel: "362f8175287a97078ae586fbf096fbfef3ab860b42c28e389a80c27109ce4a4e"
+  version "264.3.3264"
+  sha256 arm:   "61715723973d14dc6439427bb6f130e82718ae1d831c81475cf3fdab032bd7db",
+         intel: "2e96b4cb2d0451493153cfe5c9b7c740a87e633f4be2fd6dc7c1d771be5094a8"
 
   url "https://www.dropbox.com/download?build=#{version}&plat=mac&rtoken=&type=full#{arch}",
       verified: "dropbox.com/"
@@ -22,7 +22,11 @@ cask "dropbox@beta" do
 
   app "Dropbox.app"
 
-  uninstall launchctl: "com.dropbox.DropboxMacUpdate.agent",
+  uninstall launchctl: [
+              "com.dropbox.DropboxMacUpdate.agent",
+              "com.dropbox.dropboxmacupdate.xpcservice",
+              "com.dropbox.DropboxUpdater.wake",
+            ],
             kext:      "com.getdropbox.dropbox.kext",
             delete:    [
               "/Library/DropboxHelperTools",
