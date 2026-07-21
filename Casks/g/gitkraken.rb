@@ -2,9 +2,9 @@ cask "gitkraken" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "12.3.0"
-  sha256 arm:   "b19ac4af1f2f449164c975198ed8bec4f047799c0878e307ea68737fae38eacd",
-         intel: "8b4412c9e9a1bc45f5928518bf8b248d7483b46d4adb2b0b3290db7ff5c58548"
+  version "12.3.1"
+  sha256 arm:   "86097ff00dc5c94db41c40aa81e5d006eb77ea1edec3edd3465ee7da2e542f0a",
+         intel: "c79132e2f57a38229796c0ea903d89c3a6b050cab495b578b41e7712868d3bfb"
 
   url "https://api.gitkraken.dev/releases/production/darwin/#{arch}/#{version}/GitKraken-v#{version}.zip",
       verified: "api.gitkraken.dev/releases/production/"
