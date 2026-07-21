@@ -49,12 +49,15 @@ cask "cursor" do
 
   livecheck do
     url "https://api2.cursor.sh/updates/api/update/#{os}-#{arch}/cursor/0.0.0/stable"
-    regex(%r{/production/(\h+)/#{os}/#{arch}/Cursor[._-]#{os}[._-]#{arch}\.#{url_end}}i)
+    regex(%r{/production/(\h+)/}i)
     strategy :json do |json, regex|
+      ver = json["name"] || json["version"] || json["productVersion"]
+      next unless ver
+
       match = json["url"]&.match(regex)
       next if match.blank?
 
-      "#{json["name"]},#{match[1]}"
+      "#{ver},#{match[1]}"
     end
   end
 end
