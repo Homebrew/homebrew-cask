@@ -21,6 +21,8 @@ cask "baidunetdisk" do
 
   app "BaiduNetdisk_mac.app"
 
+  uninstall launchctl: "netdisk_service"
+
   zap trash: [
         "~/Library/Application Scripts/com.baidu.BaiduNetdisk-mac.FinderSync",
         "~/Library/Application Support/baidunetdisk",
