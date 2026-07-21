@@ -20,6 +20,8 @@ cask "ea" do
 
   app "EA app.app"
 
+  uninstall launchctl: "com.ea.app.backgroundAgent"
+
   zap delete: [
         "/Library/Application Support/Electronic Arts",
         "/Library/LaunchDaemons/com.ea.app.backgroundservice.plist",
