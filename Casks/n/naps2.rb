@@ -17,7 +17,7 @@ cask "naps2" do
     strategy :github_latest
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   pkg "naps2-#{version}-mac-#{arch}.pkg"
 
