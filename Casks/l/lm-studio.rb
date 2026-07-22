@@ -27,6 +27,8 @@ cask "lm-studio" do
 
   on_macos do
     sha256 "f8552c3c3d9a089ccb719d05d123f77eaa7c3fa377723bc81ffd459ed1be8222"
+
+    depends_on macos: :monterey
     depends_on arch: :arm64
 
     app "LM Studio.app"
