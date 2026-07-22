@@ -26,6 +26,8 @@ cask "zed@preview" do
   generate_completions_from_executable "#{HOMEBREW_PREFIX}/bin/zed-preview", "--completions",
                                        shells: [:bash, :zsh, :fish, :pwsh]
 
+  uninstall quit: "dev.zed.Zed-Preview"
+
   zap trash: [
     "~/.config/zed",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zed.zed-preview.sfl*",
