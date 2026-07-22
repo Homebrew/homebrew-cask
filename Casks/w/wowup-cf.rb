@@ -1,9 +1,9 @@
 cask "wowup-cf" do
   arch arm: "-arm64"
 
-  version "2.22.0"
-  sha256 arm:   "efe7d96b2666be9ad7797794799bc5f28dea321786d0001b870598eb6aac2bb7",
-         intel: "6adc00b4247fcc63a7497aaa917c3e7ee656747162b3cd48fd198a0583f04669"
+  version "2.23.0"
+  sha256 arm:   "b6fd067e604196f637fcfc3282bb1c40a9290da1f1a3603e02f973a6cabbe396",
+         intel: "9c03b5cfea84e08996cdfde8f98632fef844898d07ffd8bc36f64b2281a3d03a"
 
   url "https://github.com/WowUp/WowUp.CF/releases/download/v#{version}/WowUp-CF-#{version}#{arch}.dmg",
       verified: "github.com/WowUp/WowUp.CF/"
@@ -12,7 +12,7 @@ cask "wowup-cf" do
   homepage "https://wowup.io/"
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "WowUp-CF.app"
 
