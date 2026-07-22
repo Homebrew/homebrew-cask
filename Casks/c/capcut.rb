@@ -5,7 +5,7 @@ cask "capcut" do
   url "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg",
       verified: "sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/"
   name "CapCut"
-  desc "All-in-one video editor and maker"
+  desc "Video editing and image design platform"
   homepage "https://www.capcut.com/"
 
   livecheck do
