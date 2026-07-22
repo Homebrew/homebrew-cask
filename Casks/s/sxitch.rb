@@ -9,7 +9,7 @@ cask "sxitch" do
   homepage "https://sxitch.app/"
 
   livecheck do
-    url "https://pub-de38f9dc4d154d119d16caaa9a29824b.r2.dev/#{version}/version.txt"
+    url "https://pub-de38f9dc4d154d119d16caaa9a29824b.r2.dev/v#{version}/version.txt"
     regex(/^(\d+(?:\.\d+)+)$/i)
   end
 
