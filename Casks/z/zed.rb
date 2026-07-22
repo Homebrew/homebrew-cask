@@ -26,6 +26,8 @@ cask "zed" do
   generate_completions_from_executable "#{HOMEBREW_PREFIX}/bin/zed", "--completions",
                                        shells: [:bash, :zsh, :fish, :pwsh]
 
+  uninstall quit: "dev.zed.Zed"
+
   zap trash: [
     "~/.config/zed",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zed.zed.sfl*",
