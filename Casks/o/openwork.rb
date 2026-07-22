@@ -33,10 +33,15 @@ cask "openwork" do
 
     app "OpenWork.app"
 
+    uninstall quit: "com.differentai.openwork"
+
     zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.differentai.openwork.sfl*",
+      "~/Library/Application Support/com.differentai.openwork",
       "~/Library/Application Support/OpenWork",
       "~/Library/Caches/OpenWork",
       "~/Library/Preferences/com.differentai.openwork.plist",
+      "~/Library/Preferences/com.differentai.openwork.ShipIt.plist",
     ]
   end
 
