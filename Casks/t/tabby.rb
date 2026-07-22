@@ -8,11 +8,11 @@ cask "tabby" do
     arch arm: "arm64", intel: "x64"
   end
 
-  version "1.0.234"
-  sha256 arm:          "e5073aed89680a591dbb0fb34a2d7de031c792d160c5475357547234ebe29af7",
-         intel:        "3e6b6050b22060029823c5bdcbcda79015c0ea9a29f6b9b5e767da56131440b2",
-         arm64_linux:  "1c880e64edda3a3f5b2ea30e080b56a9d8db95867012b4cb4dfb6e867a7c7c25",
-         x86_64_linux: "8cc12dbf7af301b95aa738da024856aef49280e982845f42491993ef0d49a97d"
+  version "1.0.235"
+  sha256 arm:          "1080a05d44c8acfe9301ec56c5ffa3ab0e472086d1ace8fe8a5e2cbf9f71c7d5",
+         intel:        "09878c64b4c213c653310ba81655b91dc0f8063e1dd64dc57c3844a0bb58456d",
+         arm64_linux:  "746c9e301eea78af152f26c6df1d29b3eea55b30ef29ffd9fa86bcf2bd8d03be",
+         x86_64_linux: "0ca5dc015fe5ee7840f2b206864cc37c52f7c36b7a734e8653a39ae8a576dcef"
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".zip"
 
