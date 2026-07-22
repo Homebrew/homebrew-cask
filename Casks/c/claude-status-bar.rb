@@ -1,15 +1,20 @@
 cask "claude-status-bar" do
-  version "0.3.4"
-  sha256 "d812ebf2b3ef161c06b700636789b517b47222a093d2074f0cc324903b514aea"
+  version "0.4.0"
+  sha256 "d66b984fa4362b412417df81500bb8df4b524c839de48a70d5c8d8a6d27c55b6"
 
   url "https://github.com/m1ckc3s/claude-status-bar/releases/download/v#{version}/ClaudeStatusBar.dmg"
   name "Claude Status Bar"
   desc "Menu bar status indicator for Claude Code"
   homepage "https://github.com/m1ckc3s/claude-status-bar"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: :monterey
 
-  app "ClaudeStatusBar.app"
+  app "Claude Status Bar.app"
 
   zap trash: [
     "~/.claude/statusbar",
