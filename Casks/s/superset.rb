@@ -20,6 +20,8 @@ cask "superset" do
 
   app "Superset.app"
 
+  uninstall quit: "com.superset.desktop"
+
   zap trash: [
     "~/Library/Application Support/Superset",
     "~/Library/Caches/com.superset.desktop",
