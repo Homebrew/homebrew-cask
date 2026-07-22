@@ -28,6 +28,8 @@ cask "notion" do
 
   app "Notion.app"
 
+  uninstall quit: "notion.id"
+
   zap trash: [
     "~/Library/Application Support/Caches/notion-updater",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/notion.id.sfl*",
