@@ -1,5 +1,5 @@
 cask "adlock" do
-  version "2.1.8.8"
+  version "2.1.8.9"
   sha256 :no_check
 
   url "https://downloads.adlock.com/mac/AdLock_Installer.dmg"
