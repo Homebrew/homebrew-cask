@@ -24,7 +24,7 @@ cask "activitywatch@beta" do
   end
 
   conflicts_with cask: "activitywatch"
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
   depends_on arch: :arm64
 
   app "ActivityWatch.app"
