@@ -1,9 +1,9 @@
 cask "cate" do
   arch arm: "-arm64"
 
-  version "1.5.2"
-  sha256 arm:   "a2695c8bee890d064c857492316416efb200b93106127f77867b3198c608198b",
-         intel: "6eaa3ea7efd082f0ed173ae09d1a3234b4116dc99ecf87ba7e38d0a4ea034ac8"
+  version "1.5.3"
+  sha256 arm:   "b6d756e7347c40b613428fde60adb20744be2f4a4456240c9cd54df1b09d81b5",
+         intel: "5d20f8b740f33a3f205225d9c053e5ccde66cfd85a246f133add46f24a243511"
 
   url "https://github.com/0-AI-UG/cate/releases/download/v#{version}/Cate-#{version}#{arch}.dmg",
       verified: "github.com/0-AI-UG/cate/"
