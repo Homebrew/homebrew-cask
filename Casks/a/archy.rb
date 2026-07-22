@@ -16,7 +16,6 @@ cask "archy" do
   end
 
   deprecate! date: "2026-07-22", because: "is now maintained in the official Genesys tap"
-
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on :macos
@@ -32,6 +31,6 @@ cask "archy" do
 
         brew tap mypurecloud/archy
         brew install --cask mypurecloud/archy/archy
-  EOS
+    EOS
   end
 end
