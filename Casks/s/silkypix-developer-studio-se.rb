@@ -1,6 +1,6 @@
 cask "silkypix-developer-studio-se" do
-  version "8.0.30.4"
-  sha256 "d3d7a4811fb16b244422fd6d2556a03ef678a4bd6f07afdaa797919aec4e559c"
+  version "8.0.31.1"
+  sha256 "57611278f81951c4ecd26d8e283626cc5789e6660ce6a1473697160237cd3cff"
 
   url "https://www2.isl.co.jp/SILKYPIX/p/download/files/SILKYPIX_DS#{version.major}_SE.#{version}.dmg"
   name "SILKYPIX Developer Studio #{version.major} SE"
