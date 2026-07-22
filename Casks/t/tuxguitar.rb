@@ -19,5 +19,7 @@ cask "tuxguitar" do
 
   app "tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app"
 
+  uninstall quit: "app.tuxguitar"
+
   zap trash: "~/Library/Application Support/tuxguitar"
 end
