@@ -26,9 +26,12 @@ cask "wezterm@nightly" do
   zsh_completion "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/zsh", target: "_wezterm"
 
   preflight_steps do
-    # Move "WezTerm-macos-#{version}/WezTerm.app" out of the subfolder
-    move "{WezTerm-*,wezterm-*}/WezTerm.app", ".", source_glob: true
-    remove ["WezTerm-*", "wezterm-*"], recursive: true
+    # Move "WezTerm-macos-#{version}/WezTerm.app" out of the subfolder.
+    # A "{WezTerm-*,wezterm-*}" brace glob matches the single subfolder
+    # twice on case-insensitive filesystems, failing the `move` step's
+    # "exactly one path" check, so match the real (capitalised) name once.
+    move "WezTerm-*/WezTerm.app", ".", source_glob: true
+    remove "WezTerm-*", recursive: true
   end
 
   zap trash: "~/Library/Saved Application State/com.github.wez.wezterm.savedState"
