@@ -1,5 +1,5 @@
 cask "fxfactory" do
-  version "9.0.4,8619"
+  version "9.0.5,8649"
   sha256 :no_check # required as upstream package is often updated in place
 
   url "https://files.fxfactory.com/fxfactory/FxFactory-#{version.csv.first}-#{version.csv.second}.zip"
