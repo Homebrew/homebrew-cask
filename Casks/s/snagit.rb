@@ -22,9 +22,15 @@ cask "snagit" do
 
   app "Snagit.app"
 
+  uninstall quit: "com.TechSmith.Snagit"
+
   zap trash: [
+    "~/Library/Application Scripts/7TQL462TU8.com.techsmith.snagit",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.techsmith.snagit.sfl*",
+    "~/Library/Application Support/Snagit",
     "~/Library/Caches/com.TechSmith.Snagit*",
     "~/Library/Group Containers/*.com.techsmith.snagit",
+    "~/Library/HTTPStorages/com.TechSmith.Snagit*",
     "~/Library/Preferences/com.TechSmith.Snagit*.plist",
     "~/Library/Preferences/com.techsmith.snagit.capturehelper*.plist",
     "~/Library/Saved Application State/com.TechSmith.Snagit*.savedState",
