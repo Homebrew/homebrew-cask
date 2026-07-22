@@ -24,11 +24,23 @@ cask "setapp" do
 
   app "Setapp.app"
 
+  uninstall launchctl: [
+    "com.setapp.DesktopClient.SetappAgent",
+    "com.setapp.DesktopClient.SetappAssistant",
+    "com.setapp.DesktopClient.SetappLauncher",
+    "com.setapp.DesktopClient.SetappUpdater",
+  ]
+
   zap trash: [
     "~/Library/Application Scripts/com.setapp.DesktopClient.SetappAgent.FinderSyncExt",
+    "~/Library/Application Support/Setapp*",
     "~/Library/Caches/com.setapp.DesktopClient",
     "~/Library/Caches/com.setapp.DesktopClient.SetappAgent",
+    "~/Library/Containers/com.setapp.DesktopClient.SetappAgent.FinderSyncExt",
+    "~/Library/HTTPStorages/com.setapp.DesktopClient*",
+    "~/Library/LaunchAgents/com.setapp.DesktopClient.*plist",
     "~/Library/Logs/Setapp",
+    "~/Library/Preferences/com.setapp.DesktopClient.plist",
     "~/Library/Preferences/com.setapp.DesktopClient.SetappAgent.plist",
     "~/Library/Saved Application State/com.setapp.DesktopClient.savedState",
   ]
