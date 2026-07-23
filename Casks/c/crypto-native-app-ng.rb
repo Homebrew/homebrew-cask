@@ -12,7 +12,7 @@ cask "crypto-native-app-ng" do
 
   livecheck do
     url "https://download.tescosw.cz/crypto/files/cryptong/"
-    regex(/href=.*?Crypto-Native-App-NG-v?(\d+(?:\.\d+)+)-(?:arm64|x64)-MUI\.dmg/i)
+    regex(/href=.*?Crypto-Native-App-NG[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]MUI\.dmg/i)
   end
 
   depends_on macos: :monterey
