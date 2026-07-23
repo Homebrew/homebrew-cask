@@ -1,6 +1,5 @@
 cask "crypto-native-app-ng" do
-  arch  arm:   "arm64",
-        intel: "x64"
+  arch arm: "arm64", intel: "x64"
 
   version "26.1.20558"
   sha256  arm:   "4d7e79ccafe8db6a29d18fcb67ac1ad405933a0f54ccdd0d2acea83d7d1b06d2",
