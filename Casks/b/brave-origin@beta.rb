@@ -7,13 +7,9 @@ cask "brave-origin@beta" do
 
   on_arm do
     version "1.94.94.0"
-
-    depends_on macos: :monterey
   end
   on_intel do
     version "1.94.94.0"
-
-    depends_on macos: :ventura
   end
 
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Beta-#{arch}.dmg",
@@ -28,7 +24,7 @@ cask "brave-origin@beta" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Brave Origin Beta.app"
 
