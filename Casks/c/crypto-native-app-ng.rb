@@ -1,20 +1,19 @@
 cask "crypto-native-app-ng" do
-  version "26.1.20558"
-  sha256 "8938cbf3e082e0005fe7ccdf644f07973390cc311c882763de7003c3ca6c4c91"
+  arch  arm:   "arm64",
+        intel: "x64"
 
-  url "https://download.tescosw.cz/crypto/files/cryptong/Crypto-Native-App-NG-v#{version}-x64-MUI.dmg"
+  version "26.1.20558"
+  sha256  arm:   "4d7e79ccafe8db6a29d18fcb67ac1ad405933a0f54ccdd0d2acea83d7d1b06d2",
+          intel: "8938cbf3e082e0005fe7ccdf644f07973390cc311c882763de7003c3ca6c4c91"
+
+  url "https://download.tescosw.cz/crypto/files/cryptong/Crypto-Native-App-NG-v#{version}-#{arch}-MUI.dmg"
   name "Crypto Native App NG"
   desc "Encrypts and signs data on your computer and communicates with browser extension"
   homepage "https://download.tescosw.cz/crypto/en/"
 
-  # The JSON file has a UTF-8 BOM and incorrect content-type, so we use
-  # page_match with manual JSON parsing instead of the json strategy.
   livecheck do
-    url "https://download.tescosw.cz/crypto/files/cryptong_updates.json"
-    strategy :page_match do |page|
-      json = Homebrew::Livecheck::Strategy::Json.parse_json(page.delete_prefix("\xEF\xBB\xBF"))
-      json.select { |item| item["Platform"] == "Darwin" }.map { |item| item["Version"] }
-    end
+    url "https://download.tescosw.cz/crypto/files/cryptong/"
+    regex(/href=.*?Crypto-Native-App-NG-v?(\d+(?:\.\d+)+)-(?:arm64|x64)-MUI\.dmg/i)
   end
 
   depends_on macos: :monterey
