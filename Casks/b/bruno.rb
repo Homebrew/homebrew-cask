@@ -8,11 +8,11 @@ cask "bruno" do
     arch arm: "arm64", intel: "x86_64"
   end
 
-  version "3.5.3"
-  sha256 arm:          "89627c0fa17a53a10cdf5b3d1f7884b84cfbf2fab21aebde7a44ebcf38c859ce",
-         intel:        "76c45473c4aa0e53281181494dcc6ae759db0a40bfaa0841202f5e03d49f9f11",
-         arm64_linux:  "44210442522d2c2e204e650b2b9b7564de48bfa587143e4ee04caa9b00ba09a5",
-         x86_64_linux: "ffcebdd4e86eab98274d76e9af39a964dbcd925b06c0a83a2a81a45860ef0629"
+  version "4.0.0"
+  sha256 arm:          "533d435d1760f8ccdb98db24605335716710d346181659fb60956a7e4d529407",
+         intel:        "53d49a890fb3c53a25c6807448d2134881fdb79cda7e47d13ce705d722804f05",
+         arm64_linux:  "fe6ac8e0eaa3e6b479f8732827afb02001994af402289606f4901ac48b438b85",
+         x86_64_linux: "e07e655b83450e7b9f8789972eb37d0d49e8c33d9431f1983140fc0ebeb1ee26"
 
   url_end = on_system_conditional linux: ".AppImage", macos: ".dmg"
 
