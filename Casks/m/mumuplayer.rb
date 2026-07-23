@@ -1,6 +1,6 @@
 cask "mumuplayer" do
-  version "1.8.15"
-  sha256 "9915822069b1529597562e58f8b2982e4da594cdee17f213d5c72f37fab2db8a"
+  version "1.8.16"
+  sha256 "54d8d2ec67d9bde92e05290ef40818ceb932f87017f8081b69acef5ae3126603"
 
   url "https://a11.gdl.netease.com/MuMuUpdater_#{version}_default.tar.gz",
       verified: "a11.gdl.netease.com/"
