@@ -28,6 +28,7 @@ cask "brave-origin@beta" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "Brave Origin Beta.app"
 
