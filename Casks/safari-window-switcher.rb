@@ -7,7 +7,7 @@ cask "safari-window-switcher" do
   desc "Assign custom names to Safari windows and switch focus effortlessly"
   homepage "https://github.com/bricolageTheory/NameYourSafariWindow"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Safari Window Switcher.app"
 
