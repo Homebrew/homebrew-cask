@@ -7,10 +7,12 @@ cask "brave-origin@beta" do
 
   on_arm do
     version "1.93.122.0"
+
     depends_on macos: :monterey
   end
   on_intel do
     version "1.93.125.0"
+
     depends_on macos: :ventura
   end
 
