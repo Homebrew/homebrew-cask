@@ -13,7 +13,7 @@ cask "gog-galaxy" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   pkg "galaxy_client_#{version}.pkg"
 
