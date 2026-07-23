@@ -2,11 +2,11 @@ cask "trae-cn" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "2.3.56916"
-  sha256 arm:          "ca9948fd3824bcb156b5a3973fdc31a4a09a5f6c2397e48d9cdbfbfb2cc68060",
-         intel:        "dd7eceeeb0e1aafa0b71a2688d7753855e5a4cec33a8e0d3031285543c37a471",
-         arm64_linux:  "95f945328f9f57c1e4e08efa96b5b3089dd0f3095d274d666ba19f0a7068ffa7",
-         x86_64_linux: "5cc025421213a013af4f5fb831d89de2c21fa4608793a5f62b42f576c70e56b1"
+  version "2.3.58366"
+  sha256 arm:          "af187750e6eda046b9ed2d36715d3a8a858471f0226cc40c67ab2fd3a0377749",
+         intel:        "af2fbc26c564dc6b80e9dd402f2c72ece214ce9de377cfcf3abc29a7e0a5692b",
+         arm64_linux:  "fe55c0377fd9f332048612284b649ce50f5b70f38b1957bbe06f4fab77a3403c",
+         x86_64_linux: "3bfee1c9506bdd64285e285530ed863234b41ee8ae6b56162185852855c93bb7"
 
   url_end = on_system_conditional linux: "tar.gz", macos: "dmg"
 
