@@ -2,9 +2,9 @@ cask "unity" do
   arch arm: "Arm64"
   livecheck_arch = on_arch_conditional arm: "ARM64", intel: "X86_64"
 
-  version "6000.5.4f1,d550df8bd089"
-  sha256 arm:   "c5f72d42e9c5072cd13adbb358facc9df47eb0d24a279a0dffbdbe7cbad65c8a",
-         intel: "de8781ed1ba3910d4f665a99c96bbfbd41f26092627ce80fe16e6199e64a4b99"
+  version "6000.5.5f1,d16e074b49fd"
+  sha256 arm:   "77de85ddec26fbd7ebf185518ff3defea824bc1a3440ab4fb8e9687044884e15",
+         intel: "9f373ec519e95c763efed803240681ade09019869628782df0e4c8b223a35524"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorInstaller#{arch}/Unity-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
