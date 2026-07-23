@@ -1,6 +1,6 @@
 cask "claude-status-bar" do
-  version "0.4.0"
-  sha256 "d66b984fa4362b412417df81500bb8df4b524c839de48a70d5c8d8a6d27c55b6"
+  version "0.4.1"
+  sha256 "f959ed62f8ca4e9108d8098c928b73a1b5ed99d1155a8fc3d3f7bbc2588e277c"
 
   url "https://github.com/m1ckc3s/claude-status-bar/releases/download/v#{version}/ClaudeStatusBar.dmg"
   name "Claude Status Bar"
