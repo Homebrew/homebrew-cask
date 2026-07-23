@@ -10,11 +10,6 @@ cask "openwhispr" do
   desc "Privacy-first voice-to-text dictation with AI agents"
   homepage "https://github.com/OpenWhispr/openwhispr"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :monterey
 
@@ -31,5 +26,6 @@ cask "openwhispr" do
     "~/Library/HTTPStorages/com.gizmolabs.openwhispr",
     "~/Library/Preferences/ByHost/com.gizmolabs.openwhispr.ShipIt.*.plist",
     "~/Library/Preferences/com.gizmolabs.openwhispr.plist",
+    "~/Library/Saved Application State/com.gizmolabs.openwhispr.savedState",
   ]
 end
