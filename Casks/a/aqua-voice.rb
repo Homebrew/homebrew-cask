@@ -1,12 +1,11 @@
 cask "aqua-voice" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.12.1"
-  sha256 arm:   "a2fc413fe92642b569f9cc0359757db177c0fb3d2f0d047c5ae23cc5d51c6818",
-         intel: "caa2a132a7644374ebafd55822b6aa1d344a4e9d84a66e5a6fce2498f564d1ac"
+  version "0.17.2"
+  sha256 arm:   "1cd75f0e6c58cf5ea4a4fc35689aaa003d4fa26726cc24abbb7fef2d39aca648",
+         intel: "a7bd44419154861a6950af31e027530d51674956d0fe79cf19e3ebcb3d6a5d63"
 
-  url "https://d1a1dx1sgvjqrz.cloudfront.net/aqua-voice-updates/darwin/#{arch}/Aqua%20Voice-darwin-#{arch}-#{version}.zip",
-      verified: "d1a1dx1sgvjqrz.cloudfront.net/"
+  url "https://updates.aquavoice.com/stable/darwin/#{arch}/Aqua%20Voice-darwin-#{arch}-#{version}.zip"
   name "Aqua Voice"
   desc "Speech-to-text system"
   homepage "https://aquavoice.com/"
