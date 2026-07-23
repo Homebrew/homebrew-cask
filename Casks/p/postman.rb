@@ -1,9 +1,9 @@
 cask "postman" do
   arch arm: "osx_arm64", intel: "osx64"
 
-  version "12.20.2"
-  sha256 arm:   "11ad485ab8fa266f8e155df4619ab49dea0b4df894fb35256ebf3d15685072da",
-         intel: "e211d14e92b44e5c2d3fcbbf9fcefbb56553f004f618da24266c8ae09b3dd782"
+  version "12.20.4"
+  sha256 arm:   "48894a976f6e7b52066b14bc4ba770779b4d11ba30d7de706a6ca540d7fc9eef",
+         intel: "0377f6bab7362a94de0eaa44759abc5a9a8e8e350e35fc8592a0a8c7d49f4872"
 
   url "https://dl.pstmn.io/download/version/#{version}/#{arch}",
       verified: "dl.pstmn.io/download/version/"
