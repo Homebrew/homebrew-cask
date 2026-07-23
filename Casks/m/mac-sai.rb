@@ -16,7 +16,8 @@ cask "mac-sai" do
 
   app "Mac Sai.app"
 
-  uninstall launchctl: "com.macclean.menu"
+  uninstall launchctl: "com.macclean.menu",
+            quit:      "com.macclean.app"
 
   zap trash: [
     "~/Library/Application Support/MacClean",
@@ -24,6 +25,7 @@ cask "mac-sai" do
     "~/Library/HTTPStorages/com.macclean.app",
     "~/Library/Logs/MacClean",
     "~/Library/Preferences/com.macclean.app.plist",
+    "~/Library/Preferences/com.macclean.shared.plist",
     "~/Library/Saved Application State/com.macclean.app.savedState",
   ]
 end
