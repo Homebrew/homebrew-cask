@@ -1,6 +1,6 @@
 cask "pastebot" do
-  version "2.4.6"
-  sha256 "822de3c00786e6a92f4a50104bae47ef189e19bb3db9f2932ebbea7251288535"
+  version "2.4.8"
+  sha256 "3cd01fee94994cebce198ea81e48dce9b1aef86986836d17fc86f91fa9f047cc"
 
   url "https://tapbots.net/pastebot#{version.major}/Pastebot.dmg",
       verified: "tapbots.net/"
@@ -15,12 +15,19 @@ cask "pastebot" do
     end
   end
 
+  auto_updates true
   depends_on :macos
 
   app "Pastebot.app"
 
-  zap delete: [
-    "~/Library/Containers/com.tapbots.Pastebot#{version.major}Mac",
+  uninstall quit: "com.tapbots.Pastebot#{version.major}Mac"
+
+  zap trash: [
+    "~/Library/Application Scripts/9JTH7AWHE6.com.tapbots.Pastebot#{version.major}Mac",
+    "~/Library/Application Scripts/com.tapbots.Pastebot#{version.major}Mac*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tapbots.pastebot#{version.major}mac.launchhelper.sfl*",
+    "~/Library/Containers/com.tapbots.Pastebot#{version.major}Mac*",
+    "~/Library/Group Containers/9JTH7AWHE6.com.tapbots.Pastebot#{version.major}Mac",
     "~/Library/Preferences/com.tapbots.Pastebot#{version.major}Mac.plist",
   ]
 end
