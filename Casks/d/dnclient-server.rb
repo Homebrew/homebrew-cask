@@ -11,9 +11,9 @@ cask "dnclient-server" do
     url "https://api.defined.net/v1/downloads"
     regex(%r{/(\h+)/v?(\d+(?:\.\d+)+)/macos/DNClient-Server\.dmg}i)
     strategy :json do |json, regex|
-      json.dig("data", "dnclient")&.map do |_, release|
+      json.dig("data", "dnclient")&.filter_map do |_, release|
         match = release["macos-universal-server-dmg"]&.match(regex)
-        next if match.blank?
+        next unless match
 
         "#{match[2]},#{match[1]}"
       end
