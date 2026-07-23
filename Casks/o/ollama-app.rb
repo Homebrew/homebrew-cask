@@ -19,6 +19,9 @@ cask "ollama-app" do
   app "Ollama.app"
   binary "#{appdir}/Ollama.app/Contents/Resources/ollama"
 
+  uninstall launchctl: "com.ollama.ollama",
+            quit:      "com.electron.ollama"
+
   zap trash: [
     "~/.ollama",
     "~/Library/Application Support/Ollama",
