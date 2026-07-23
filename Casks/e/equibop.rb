@@ -1,6 +1,6 @@
 cask "equibop" do
-  version "3.2.1"
-  sha256 "27b49690c83deb24dc95f6e198d8dc350de663428fa8b3bdc077be618bea739c"
+  version "3.2.2"
+  sha256 "37ff17edf329d0eaf537982cfc74874f8caa1444539b58778999b8c35e280876"
 
   url "https://github.com/Equicord/Equibop/releases/download/v#{version}/Equibop-#{version}-universal.dmg"
   name "Equibop"
