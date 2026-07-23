@@ -1,6 +1,6 @@
 cask "mesh" do
-  version "2.20.4"
-  sha256 "0bcabd3406f7533ee295455fcea3524eda052a7e3780aae2d551be8557d34c5e"
+  version "2.20.5"
+  sha256 "433603fcdee8fbbf0e713ef4f9dfb51deeb7be4630bc40f1c0d6fdcf7195777b"
 
   url "https://assets.me.sh/mesh-desktop/mac/Mesh-#{version}-universal.dmg"
   name "Mesh"
