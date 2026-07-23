@@ -1,6 +1,6 @@
 cask "kiro-cli" do
-  version "2.13.0"
-  sha256 "1802bcf9a773ac4735917b47542342d5a534f42f3a0fd9aba1242fedd5ef6dfa"
+  version "2.14.0"
+  sha256 "e9ec002e4d553ac546fda8ba306f2b0ae3c3abe6ca25faedf238f69f52086ee3"
 
   url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/Kiro%20CLI.dmg",
       verified: "desktop-release.q.us-east-1.amazonaws.com/"
@@ -21,12 +21,17 @@ cask "kiro-cli" do
   app "Kiro CLI.app"
   binary "#{appdir}/Kiro CLI.app/Contents/MacOS/kiro-cli"
 
+  uninstall launchctl: "com.amazon.codewhisperer.launcher"
+
   zap trash: [
     "~/.kiro",
     "~/.local/bin/kiro-cli",
     "~/.local/bin/kiro-cli-chat",
     "~/Library/Application Support/kiro-cli",
+    "~/Library/Caches/com.amazon.codewhisperer",
     "~/Library/Caches/dev.kiro.cli",
+    "~/Library/LaunchAgents/com.amazon.codewhisperer.launcher.plist",
     "~/Library/Preferences/dev.kiro.cli.plist",
+    "~/Library/WebKit/com.amazon.codewhisperer",
   ]
 end
