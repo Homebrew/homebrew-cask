@@ -24,6 +24,7 @@ cask "aionui" do
     "~/.aionui",
     "~/Library/Application Support/AionUi",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.aionui.app.sfl*",
+    "~/Library/Logs/AionUi",
     "~/Library/Preferences/com.aionui.app.plist",
     "~/Library/Saved Application State/com.aionui.app.savedState",
   ]
