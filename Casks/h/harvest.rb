@@ -1,6 +1,6 @@
 cask "harvest" do
-  version "3.0.11"
-  sha256 "e11dc138ddce6aabac065f252cd63185795f4977810cd88152858d4016acc534"
+  version "3.0.12"
+  sha256 "a825312b359125ded539d738decf0bc7d8e17f21cab8d063a3ebab5dbebcc5b2"
 
   url "https://downloads.harvestfiles.com/harvest-desktop/darwin/universal/Harvest-darwin-universal-#{version}.zip",
       verified: "downloads.harvestfiles.com/harvest-desktop/"
