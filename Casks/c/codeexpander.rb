@@ -19,9 +19,13 @@ cask "codeexpander" do
 
   app "CodeExpander.app"
 
+  uninstall launchctl: "CodeExpander"
+
   zap trash: [
+    "~/Library/Application Support/com.codeexpander",
     "~/Library/Caches/codeexpander",
     "~/Library/Caches/com.codeexpander.pro",
+    "~/Library/LaunchAgents/CodeExpander.plist",
     "~/Library/Logs/com.codeexpander.pro",
     "~/Library/WebKit/com.codeexpander.pro",
   ]
