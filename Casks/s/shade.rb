@@ -2,9 +2,9 @@ cask "shade" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.3.17"
-  sha256 arm:   "c35395816bae222501eb318366e5f697ff33a5fb1076e1906b1bed1f1c028780",
-         intel: "ad1dca1206a2746e1ba7202e3c5eae5a0b73f036c650b16493acefaa29c2a56f"
+  version "2.3.18"
+  sha256 arm:   "92777a9172bad9b619d7f0ef3fd0e7cad6a8c8658e265f9268362b38b1fa9a8f",
+         intel: "4438f826a8b4ffb101528c3005ca78f9b928119d651686e80977897846178e1d"
 
   url "https://storage.googleapis.com/v2-public.shade.inc/releases/stable/mac/Shade-#{version}#{arch}.pkg",
       verified: "storage.googleapis.com/v2-public.shade.inc/"
