@@ -1,6 +1,6 @@
 cask "font-d2coding" do
-  version "1.3.2,20180524"
-  sha256 "0f1c9192eac7d56329dddc620f9f1666b707e9c8ed38fe1f988d0ae3e30b24e6"
+  version "1.3.3,20260725"
+  sha256 "c2a6e364d4102eb2c4de52ffe3d76317c1f4c045e3737e022e69ee0be47f31e2"
 
   url "https://github.com/naver/d2codingfont/releases/download/VER#{version.csv.first}/D2Coding-Ver#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}.zip"
   name "D2 Coding"
