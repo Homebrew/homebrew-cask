@@ -15,5 +15,7 @@ cask "gearsystem" do
 
   app "Gearsystem.app"
 
+  uninstall quit: "com.drhelius.Gearsystem"
+
   zap trash: "~/Library/Saved Application State/me.ignaciosanchez.Gearsystem.savedState"
 end
