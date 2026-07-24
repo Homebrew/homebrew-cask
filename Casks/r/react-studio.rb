@@ -9,6 +9,7 @@ cask "react-studio" do
   homepage "https://reactstudio.com/"
 
   deprecate! date: "2025-07-24", because: :unmaintained
+  disable! date: "2026-07-24", because: :unmaintained
 
   depends_on :macos
 
