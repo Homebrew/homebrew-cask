@@ -20,5 +20,7 @@ cask "gearboy" do
 
   app "Gearboy.app"
 
+  uninstall quit: "com.drhelius.Gearboy"
+
   zap trash: "~/Library/Saved Application State/me.ignaciosanchez.Gearboy.savedState"
 end
