@@ -1,9 +1,9 @@
 cask "bisq" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.10.3"
-  sha256 arm:   "12168e3ab15b3084eaefa4bef249c3abc23cb32c950833a2ec3f2a7456c4d988",
-         intel: "34119231d30d8962d8c16a3a974bf510f7788c0d71146b2ee322eac48026c74a"
+  version "1.10.4"
+  sha256 arm:   "45b20ea078c907e2f44ff5dfe42111fb0276e7c7f74fcb6af2932ccac8a3b38e",
+         intel: "e1e16feb54e99fb2b9e9cf436973acf13629a9ac95b69df65c47328287ea5c8d"
 
   url "https://github.com/bisq-network/bisq/releases/download/v#{version}/Bisq-#{arch}-#{version}.dmg",
       verified: "github.com/bisq-network/bisq/"
