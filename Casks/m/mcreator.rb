@@ -20,5 +20,7 @@ cask "mcreator" do
 
   app "MCreator.app"
 
+  uninstall quit: "net.mcreator"
+
   zap trash: "~/.mcreator"
 end
