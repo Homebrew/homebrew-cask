@@ -1,6 +1,6 @@
 cask "tencent-lemon" do
-  version "5.3.4,63031A20CAFA1CEC51B5BE1020CF4D16"
-  sha256 "2b17f6887632462527d0b35a3f05726402e34d20aaf60bcef924b2faa5a778f8"
+  version "5.3.5,72D26ECD22A939801BA005F833372288"
+  sha256 "901dc9008e031e073f7aa1245008ba21e5297b2957d82a2d6c7fd48c84572f31"
 
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/#{version.csv.second}/Lemon#{version.csv.first}.dmg",
       verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/"
