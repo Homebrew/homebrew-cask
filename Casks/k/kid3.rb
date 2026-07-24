@@ -2,9 +2,9 @@ cask "kid3" do
   arch arm: "arm64", intel: "amd64"
 
   # NOTE: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
-  version "3.10.0"
-  sha256 arm:   "d18a73808cff3b3155b5b87f44a6a790a52f1d546741440e9ae7e0cccbec67c5",
-         intel: "b344286e84143e6613e9f433f1e887c24e33c2320a0c597342ec1cbd35eb8e68"
+  version "3.10.1"
+  sha256 arm:   "b8d5339c8b2e584e073a42f8f90fce8cc6865e121040d1a10d476d74d0a54950",
+         intel: "243c842d7bc74b54934051562ad4a6ebbdf4ef6866b4c35a4a8e41803b97cfcc"
 
   url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-#{arch}.dmg",
       verified: "downloads.sourceforge.net/kid3/"
