@@ -27,8 +27,8 @@ cask "wezterm@nightly" do
 
   preflight_steps do
     # Move "WezTerm-macos-#{version}/WezTerm.app" out of the subfolder
-    move "{WezTerm-*,wezterm-*}/WezTerm.app", ".", source_glob: true
-    remove ["WezTerm-*", "wezterm-*"], recursive: true
+    move "WezTerm-*/WezTerm.app", ".", source_glob: true
+    remove "WezTerm-*", recursive: true
   end
 
   zap trash: "~/Library/Saved Application State/com.github.wez.wezterm.savedState"
