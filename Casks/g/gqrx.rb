@@ -26,16 +26,15 @@ cask "gqrx" do
   depends_on macos: :ventura
 
   app "Gqrx.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/gqrx.wrapper.sh"
-  binary shimscript, target: "gqrx"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      '#{appdir}/Gqrx.app/Contents/MacOS/gqrx' "$@"
-    EOS
-  end
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+
+  command_wrapper "gqrx.wrapper.sh",
+                  target:  "gqrx",
+                  content: <<~EOS
+                    #!/bin/sh
+                    '#{appdir}/Gqrx.app/Contents/MacOS/gqrx' "$@"
+                  EOS
 
   zap trash: "~/.config/gqrx"
 end

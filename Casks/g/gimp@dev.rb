@@ -28,15 +28,13 @@ cask "gimp@dev" do
   depends_on macos: :big_sur
 
   app "GIMP.app"
-  shimscript = "#{staged_path}/gimp.wrapper.sh"
-  binary shimscript, target: "gimp"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      "#{appdir}/GIMP.app/Contents/MacOS/gimp" "$@"
-    EOS
-  end
+  command_wrapper "gimp.wrapper.sh",
+                  target:  "gimp",
+                  content: <<~EOS
+                    #!/bin/sh
+                    "#{appdir}/GIMP.app/Contents/MacOS/gimp" "$@"
+                  EOS
 
   zap trash: [
     "~/Library/Application Support/Gimp",

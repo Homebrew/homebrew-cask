@@ -20,16 +20,15 @@ cask "drawio" do
   depends_on macos: :monterey
 
   app "draw.io.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/drawio.wrapper.sh"
-  binary shimscript, target: "drawio"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      exec '#{appdir}/draw.io.app/Contents/MacOS/draw.io' "$@"
-    EOS
-  end
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+
+  command_wrapper "drawio.wrapper.sh",
+                  target:  "drawio",
+                  content: <<~EOS
+                    #!/bin/bash
+                    exec '#{appdir}/draw.io.app/Contents/MacOS/draw.io' "$@"
+                  EOS
 
   zap trash: [
     "~/Library/Application Support/draw.io",

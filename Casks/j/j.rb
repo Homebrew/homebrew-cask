@@ -1,3 +1,5 @@
+# typed: false
+
 cask "j" do
   version "9.7.1"
   sha256 "fc34fe96fc19520c9f317ecb6b318aeb3bd83a4994b505dfa1216cf1775fd3e3"

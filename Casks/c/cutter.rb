@@ -19,16 +19,15 @@ cask "cutter" do
   depends_on macos: :big_sur
 
   app "Cutter.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/cutter.wrapper.sh"
-  binary shimscript, target: "cutter"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      '#{appdir}/Cutter.app/Contents/MacOS/Cutter' "$@"
-    EOS
-  end
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+
+  command_wrapper "cutter.wrapper.sh",
+                  target:  "cutter",
+                  content: <<~EOS
+                    #!/bin/sh
+                    '#{appdir}/Cutter.app/Contents/MacOS/Cutter' "$@"
+                  EOS
 
   zap trash: [
     "~/.config/rizin",

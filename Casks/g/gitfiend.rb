@@ -22,16 +22,15 @@ cask "gitfiend" do
   depends_on :macos
 
   app "GitFiend.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/gitfiend.wrapper.sh"
-  binary shimscript, target: "gitfiend"
 
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/GitFiend.app/Contents/MacOS/GitFiend' "$@"
-    EOS
-  end
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+
+  command_wrapper "gitfiend.wrapper.sh",
+                  target:  "gitfiend",
+                  content: <<~EOS
+                    #!/bin/sh
+                    exec '#{appdir}/GitFiend.app/Contents/MacOS/GitFiend' "$@"
+                  EOS
 
   zap trash: [
     "~/Library/Application Support/GitFiend",
