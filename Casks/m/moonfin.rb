@@ -8,7 +8,7 @@ cask "moonfin" do
   desc "Premium media streaming clients for Jellyfin and Emby"
   homepage "https://moonfin.io/"
 
-  depends_on :macos
+  depends_on macos: :big_sur
   
   app "Moonfin.app"
 
