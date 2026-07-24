@@ -1,6 +1,6 @@
 cask "macdisplaymagic" do
   version "0.2.1"
-  sha256 "6d90e35348bb0bb77159ec44df027f88fab348ce3872d98e65d478f1494e7a4a"
+  sha256 "88b7e77aef95b0d505559acd729dfaf8941c228b55de929c6c283f59a2972716"
 
   url "https://github.com/bricolageTheory/macDisplayMagic/releases/download/v#{version}/macDisplayMagic.zip"
   name "macDisplayMagic"
