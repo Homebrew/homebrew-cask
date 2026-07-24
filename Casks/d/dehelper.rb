@@ -1,8 +1,8 @@
 cask "dehelper" do
-  version :latest
+  version "26.5"
   sha256 :no_check
 
-  url "https://static.eudic.net/pkg/dhmac.dmg",
+  url "https://static.eudic.net/pkg/dhmac.dmg?v=2026-06-24",
       user_agent: :fake
   name "Dehelper"
   name "德语助手"
