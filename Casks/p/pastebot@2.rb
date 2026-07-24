@@ -1,6 +1,6 @@
-cask "pastebot" do
-  version "3.0,30000"
-  sha256 "22fd4d29482c0c04012ecbbdd918ca60b372d79dd7caabb2eb4671e9ddd69862"
+cask "pastebot@2" do
+  version "2.4.8,24800"
+  sha256 "3cd01fee94994cebce198ea81e48dce9b1aef86986836d17fc86f91fa9f047cc"
 
   url "https://tapbots.net/pastebot#{version.major}/Pastebot.#{version.csv.second}.dmg",
       verified: "tapbots.net/"
@@ -21,19 +21,10 @@ cask "pastebot" do
   end
 
   auto_updates true
-  depends_on macos: :tahoe
+  conflicts_with cask: "pastebot"
+  depends_on :macos
 
   app "Pastebot.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/pasteboot-tool.wrapper.sh"
-  binary shimscript, target: "pastebot-tool"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      exec '#{appdir}/Pastebot.app/Contents/Helpers/pastebot-tool' "$@"
-    EOS
-  end
 
   uninstall quit: "com.tapbots.Pastebot#{version.major}Mac"
 
