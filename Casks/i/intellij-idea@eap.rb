@@ -33,11 +33,6 @@ cask "intellij-idea@eap" do
   app "IntelliJ IDEA.app"
   binary "#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea"
 
-  uninstall_postflight_steps do
-    remove "idea", base:             :search_path,
-                   content_contains: "# see com.intellij.idea.SocketLock for the server side of this interface"
-  end
-
   zap trash: [
     "~/Library/Application Support/JetBrains/IntelliJIdea#{version.csv.first}",
     "~/Library/Caches/JetBrains/IntelliJIdea#{version.csv.first}",
