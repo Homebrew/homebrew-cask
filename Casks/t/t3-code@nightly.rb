@@ -1,7 +1,7 @@
 cask "t3-code@nightly" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.29-nightly.20260724.890"
+  version "0.0.29-nightly.20260724.893"
 
   artifact = on_system_conditional linux: "T3-Code-#{version}-x86_64.AppImage",
                                    macos: "T3-Code-#{version}-#{arch}.dmg"
@@ -28,8 +28,8 @@ cask "t3-code@nightly" do
   end
 
   on_macos do
-    sha256 arm:   "5f961ea54bdfce9c5ecf5adead8d0c99de5c87ad1fa74c083c21893d32128efc",
-           intel: "250012a9119ad8f3b30e8956ce211d4e8db54e5eff2d34ebd052e2b765cd64ba"
+    sha256 arm:   "3a0cb7701de292a2815e736e036af1ffb3064b26349cb13404c1a6749de630be",
+           intel: "be9c7b3e6ebaf9a0ff29a9747f21c99c678e1be9a8e7675eafb469b1757deadf"
 
     auto_updates true
     depends_on macos: :monterey
@@ -48,7 +48,7 @@ cask "t3-code@nightly" do
   end
 
   on_linux do
-    sha256 "ab7c8215162fae3992fe54ef78aad11ad6b71220da72107623d9c6736b5867b2"
+    sha256 "161d3635326b9b1fe878a54906cb2bd1db6148f90ee75ff4fb1aa519decae69b"
 
     depends_on arch: :x86_64
     app_image artifact, target: "T3 Code Nightly.AppImage"
