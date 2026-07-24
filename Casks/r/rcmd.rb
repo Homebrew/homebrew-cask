@@ -16,6 +16,7 @@ cask "rcmd" do
   depends_on macos: :ventura
 
   app "rcmd.app"
+  binary "#{appdir}/rcmd.app/Contents/SharedSupport/rcmdCLI", target: "rcmd"
 
   zap trash: [
     "~/.config/rcmd",
