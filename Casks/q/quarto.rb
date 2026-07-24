@@ -4,11 +4,11 @@ cask "quarto" do
 
   container_ext = on_system_conditional macos: "pkg", linux: "tar.gz"
 
-  version "1.9.38"
-  sha256 arm:          "de056ec2407c1b79832bc8fd6181ad6077fde433728285b2a0ae62710d853b84",
-         x86_64:       "de056ec2407c1b79832bc8fd6181ad6077fde433728285b2a0ae62710d853b84",
-         arm64_linux:  "75fbc5c1121ffe65e564e9d24711db2ad8f617f9552f5dc7d8a06307d72dde38",
-         x86_64_linux: "ea8c897368791ad9f200010c087ea3111b2e556b12a960487dd4e216902aa102"
+  version "1.10.18"
+  sha256 arm:          "c57119e22012a4de14de0addf6da51db455082fcc2524a6dcba9696e7577cf4d",
+         x86_64:       "c57119e22012a4de14de0addf6da51db455082fcc2524a6dcba9696e7577cf4d",
+         arm64_linux:  "f6a07df68e25330b5df34f65d3df66bca605acce3b830c593a58e91884d4cf6c",
+         x86_64_linux: "afad071b5bd22c02f2d300695743189d3650e0537a53073e654b630cff2b0c73"
 
   url "https://github.com/quarto-dev/quarto-cli/releases/download/v#{version}/quarto-#{version}-#{os}.#{container_ext}",
       verified: "github.com/quarto-dev/quarto-cli/"
