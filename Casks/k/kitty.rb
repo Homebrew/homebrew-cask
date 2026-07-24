@@ -1,16 +1,16 @@
 cask "kitty" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.48.0"
+  version "0.48.1"
 
   container_ext = on_system_conditional linux: "-#{arch}.txz", macos: ".dmg"
 
   on_macos do
-    sha256 "ed8f4297a84c967e14040865ead2e24e768d67dd4f6fd0bb384a1073ca1e74b7"
+    sha256 "6d4e683945815e9d5ca42eac9480a3692258cf6145c823b92623f54b5dfa4b36"
   end
   on_linux do
-    sha256 arm64_linux:  "29d106d9bf51adf78a519ac9feab9c3f696f6edd3f1b0e6da80e2803649bbd5e",
-           x86_64_linux: "ab2009af6acf58abafbfeb1dd1cbd4a6c1aa7991c5820c2cbd9fbb2f42d8c416"
+    sha256 arm64_linux:  "6b0d8fe0af20ba03348e97e303f3c6084b5338bb4abd52737d8e2ffd2dba3d33",
+           x86_64_linux: "ab7d4978b146a3f4799d74fdd6fddf322e5cf93601494e3fcbed925141611963"
   end
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}#{container_ext}"
