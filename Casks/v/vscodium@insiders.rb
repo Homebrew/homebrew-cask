@@ -1,0 +1,39 @@
+cask "vscodium@insiders" do
+  arch arm: "arm64", intel: "x64"
+
+  version "1.126.04518-insider"
+  sha256 arm:   "aca99669637582a8d5c5b9050a9f53ff1fdbdd20cac7c219d62467739e55db5d",
+         intel: "a5486e7c010935753f75f636e6f0a2bd9679606d22d8d8b861b7a7c1fdc175bc"
+
+  url "https://github.com/VSCodium/vscodium-insiders/releases/download/#{version}/VSCodium-darwin-#{arch}-#{version}.zip",
+      verified: "github.com/VSCodium/vscodium-insiders/"
+  name "VSCodium"
+  name "VSCodium Insiders"
+  desc "Code editor"
+  homepage "https://vscodium.com/"
+
+  livecheck do
+    url "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master/insider/darwin/#{arch}/latest.json"
+    strategy :json do |json|
+      json["name"]
+    end
+  end
+
+  auto_updates true
+  depends_on macos: :monterey
+
+  app "VSCodium - Insiders.app"
+  binary "#{appdir}/VSCodium - Insiders.app/Contents/Resources/app/bin/codium-insiders"
+
+  zap trash: [
+    "~/.vscodium-insiders",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vscodium.vscodiuminsiders.sfl*",
+    "~/Library/Application Support/VSCodium - Insiders",
+    "~/Library/Caches/com.vscodium.VSCodiumInsiders",
+    "~/Library/Caches/com.vscodium.VSCodiumInsiders.ShipIt",
+    "~/Library/Caches/VSCodium - Insiders",
+    "~/Library/HTTPStorages/com.vscodium.VSCodiumInsiders",
+    "~/Library/Preferences/com.vscodium.VSCodiumInsiders*.plist",
+    "~/Library/Saved Application State/com.vscodium.VSCodiumInsiders.savedState",
+  ]
+end

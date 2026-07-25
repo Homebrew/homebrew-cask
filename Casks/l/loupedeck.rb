@@ -1,0 +1,53 @@
+cask "loupedeck" do
+  version "6.3.0.340"
+  sha256 "d90366dfa8f29d9b32faf09d0d5702772dbde382af43bc9c42fdabdf03dc78bc"
+
+  url "https://support.loupedeck.com/hubfs/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor_patch.chomp(".0")}/LoupedeckInstaller_#{version}.dmg"
+  name "Loupdeck"
+  desc "Software for Loupedeck consoles"
+  homepage "https://loupedeck.com/"
+
+  livecheck do
+    url "https://loupedeck.com/downloads/"
+    regex(/href=.*?LoupedeckInstaller(?:[._\s-]|%20)+v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
+  depends_on :macos
+
+  # The bundled child pkg's postinstall runs `pkill -f Loupedeck`,
+  # which would also kill the parent `installer` process because its
+  # argv contains "LoupedeckInstaller.pkg". Rename the pkg to a name
+  # without "Loupedeck" so the (case-sensitive) regex does not match
+  # the parent installer.
+  rename "LoupedeckInstaller.pkg", "Installer.pkg"
+
+  pkg "Installer.pkg"
+
+  uninstall launchctl: "com.loupedeck.loupedeck2.launch",
+            quit:      [
+              "com.loupedeck.Loupedeck2",
+              "com.loupedeck.loupedeckconfig",
+            ],
+            pkgutil:   [
+              "com.loupedeck.ImageLibraryInstaller",
+              "com.loupedeck.LibraryInstaller",
+              "com.loupedeck.LoupedeckLibraryPackageManagerMacPackageInstaller",
+              "com.loupedeck.LoupedeckPackageInstaller",
+              "com.loupedeck.LoupedeckServiceToolPackageInstaller",
+              "com.loupedeck.MediaInstaller",
+              "com.loupedeck.OBSClientPluginPackageInstaller",
+              "com.loupedeck.PluginPackageInstaller",
+              "com.loupedeck.UIPackageInstaller",
+            ],
+            delete:    "/Applications/Loupedeck.app"
+
+  zap trash: [
+    "~/Library/Application Support/Adobe/CameraRaw/Settings/Loupedeck - Karo Holmberg",
+    "~/Library/Application Support/Adobe/CameraRaw/Settings/Loupedeck - Loke Roos",
+    "~/Library/Application Support/Adobe/Lightroom/Export Presets/Loupedeck Exports",
+    "~/Library/Application Support/Adobe/Lightroom/Modules/loupedeck2.lrplugin",
+    "~/Library/Application Support/Capture One/KeyboardShortcuts/Loupedeck_beta.plist",
+    "~/Library/Application Support/LoupedeckConfig",
+    "~/Library/Logs/LoupedeckConfig",
+  ]
+end

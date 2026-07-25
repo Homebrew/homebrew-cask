@@ -1,0 +1,93 @@
+#!/bin/bash
+#
+# list_id_in_kext
+#
+
+###
+### settings
+###
+
+set -e                # exit on any uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch  # case-insensitive regular expressions
+
+###
+### global variables
+###
+
+kextdir=''
+
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
+###
+### functions
+###
+
+bundle_id_source_1 () {
+    /usr/bin/find "$kextdir" -name Info.plist -print0 |                                \
+    "$xargs" -0 -I {} /usr/libexec/PlistBuddy {} -c 'Print :CFBundleIdentifier'
+}
+
+merge_sources () {
+    /usr/bin/sort | /usr/bin/uniq
+}
+
+clean_sources () {
+    /usr/bin/egrep -v '^com\.apple\.'
+}
+
+mark_up_sources () {
+    /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
+    "$xargs" -0 -I{} -n1 /bin/bash -c                                                  \
+      'printf "{}"; /bin/test "$(/usr/sbin/kextstat -kl -b "{}" | /usr/bin/wc -l)" -gt 0 && printf " (+)"; printf "\n"'
+}
+
+###
+### main
+###
+
+_list_id_in_kext () {
+
+    kextdir="$1"
+    if [[ -h "$kextdir" ]]; then
+        kextdir="$(/usr/bin/readlink "$kextdir")"
+    fi
+
+    {
+      # emit strings that look like bundle ids
+      bundle_id_source_1;
+    } |                     \
+    clean_sources |         \
+    merge_sources |         \
+    mark_up_sources
+
+}
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
+    printf "list_id_in_kext <file.kext>
+
+Given a Kernel Extension (kext) bundle dir on disk, extract the
+associated kext Bundle ID, which may be useful in a Cask uninstall
+stanza, eg
+
+    uninstall :kext => 'kext.id.goes.here'
+
+The kext need not be loaded for this script to work.
+
+If a given kext is currently loaded, it will be followed by a plus
+symbol '(+)' in the output. This can be verified via the command
+
+    /usr/sbin/kextstat -kl -b 'kext.id.goes.here'
+
+See CONTRIBUTING.md and 'man kextstat' for more information.
+
+"
+    exit
+fi
+
+# dispatch main
+_list_id_in_kext "${@}"
+
+#

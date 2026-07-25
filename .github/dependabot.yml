@@ -1,0 +1,21 @@
+# This file is synced from the `.github` repository, do not modify it directly.
+---
+version: 2
+updates:
+- package-ecosystem: github-actions
+  directories:
+  - "/"
+  schedule:
+    interval: weekly
+    day: friday
+    time: '08:00'
+    timezone: Etc/UTC
+  groups:
+    github-actions:
+      patterns:
+      - "*"
+  allow:
+  - dependency-type: all
+  cooldown:
+    default-days: 7
+

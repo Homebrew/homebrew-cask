@@ -1,0 +1,33 @@
+cask "commander-one" do
+  version "3.17.1"
+  sha256 :no_check
+
+  url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
+      verified: "cdn.electronic.us/"
+  name "Commander One"
+  desc "Two-panel file manager"
+  homepage "https://mac.eltima.com/file-manager.html"
+
+  livecheck do
+    url "https://cdn.electronic.us/products/commander/mac/update/settings.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
+  depends_on :macos
+
+  app "Commander One.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.eltima.cmd1",
+    "~/Library/Caches/com.eltima.cmd1",
+    "~/Library/HTTPStorages/com.eltima.cmd1",
+    "~/Library/Preferences/com.eltima.activator.xml",
+    "~/Library/Preferences/com.eltima.cmd1.plist",
+    "~/Library/Preferences/com.eltima.TCXDropboxFS.plist",
+    "~/Library/Preferences/com.eltima.TCXFtpFS.plist",
+    "~/Library/Preferences/com.eltima.TCXGDrive.plist",
+    "~/Library/Preferences/com.eltima.TCXWebDAVFS.plist",
+    "~/Library/Saved Application State/com.eltima.cmd1.savedState",
+  ]
+end
