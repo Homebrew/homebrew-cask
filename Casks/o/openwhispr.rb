@@ -1,5 +1,5 @@
 cask "openwhispr" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "1.7.6"
   sha256 arm:   "c4114cb665c25a4e1e0a10b59272d5b2af0155f422a8c4550f23656474b648c2",
