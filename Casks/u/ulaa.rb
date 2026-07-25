@@ -1,15 +1,9 @@
 cask "ulaa" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "92ca6f3838ddac73187b27cb7fd743f883f132c72a05708f09fc64c3e4564662",
-         intel: "d25fb92b192e5bc4ddf819fa127fa22a5489d0d08ed7416a6f235f2a1a20fb4f"
-
-  on_arm do
-    version "2.45.4"
-  end
-  on_intel do
-    version "2.45.3"
-  end
+  version "2.45.5"
+  sha256 arm:   "d43dfd88c3d37cb4eb44033bd92bf2d96e5942d7cb1863d6b35da8faa9a1bfe0",
+         intel: "9aa48a03d926b8f7570cb2cbf70085ec9bd3e2b2646a3b7a6800e1a4fdb8c049"
 
   url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg",
       verified: "downloads.zohocdn.com/ulaa-browser/"
@@ -27,9 +21,13 @@ cask "ulaa" do
 
   app "Ulaa.app"
 
+  uninstall quit: "com.primeum.Browser"
+
   zap trash: [
     "~/Library/Application Support/Ulaa",
     "~/Library/Caches/Ulaa",
+    "~/Library/HTTPStorages/com.primeum.Browser",
+    "~/Library/Preferences/com.primeum.Browser.plist",
     "~/Library/Preferences/com.zoho.ulaa.plist",
     "~/Library/Saved Application State/com.zoho.ulaa.savedState",
   ]
