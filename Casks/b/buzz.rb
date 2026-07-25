@@ -11,6 +11,7 @@ cask "buzz" do
   homepage "https://github.com/chidiwilliams/buzz"
 
   auto_updates true
+  conflicts_with cask: "block-buzz"
   depends_on macos: :big_sur
 
   app "Buzz.app"
