@@ -38,6 +38,7 @@ cask "t3-code@nightly" do
 
     zap trash: [
       "~/.t3/userdata",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.t3tools.t3code.sfl*",
       "~/Library/Application Support/T3 Code (Alpha)",
       "~/Library/Application Support/t3code",
       "~/Library/Caches/com.t3tools.t3code",
