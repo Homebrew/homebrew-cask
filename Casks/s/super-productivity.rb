@@ -1,9 +1,9 @@
 cask "super-productivity" do
   arch arm: "arm64", intel: "x64"
 
-  version "18.15.1"
-  sha256 arm:   "0e7382260d0afba7bcb557038ee750270122d201756337bcec9081d701076591",
-         intel: "78e000594fe4e52f4f0a137217deea4085547bd6af08608bd50017a0a34d590a"
+  version "18.16.0"
+  sha256 arm:   "ac5335d334e47842fc0a090207b0e115873617d4c56afe123ad9baa6a1738b2a",
+         intel: "61b590b32f4c9e5b6680a9375eec9aac51000693716c2aa2c85bc3c63e46e98b"
 
   url "https://github.com/super-productivity/super-productivity/releases/download/v#{version}/superProductivity-#{arch}.dmg",
       verified: "github.com/super-productivity/super-productivity/"
