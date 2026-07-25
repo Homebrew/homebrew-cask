@@ -1,6 +1,6 @@
 cask "whyfi" do
-  version "1.4.3,23"
-  sha256 "d8dee58a92b5377073d627a1a9addf1afdc182c92390bba7dcdcd45edc232f8e"
+  version "1.4.4,24"
+  sha256 "cc38a85663921864f18c0156f66c17cd5585450e011e86c6c5aa61e43679da2e"
 
   url "https://cdn.amore.computer/releases/com.whyfi.app/#{version.csv.first}-#{version.csv.second}/WhyFi.dmg",
       verified: "cdn.amore.computer/"
