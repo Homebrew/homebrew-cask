@@ -1,9 +1,9 @@
 cask "aionui" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.40"
-  sha256 arm:   "119d5e4ed18ebb9c4408cd3228363b474b38fe2e20aa09fe496fee3e6d5138ea",
-         intel: "1cef58fe87a2fbd1028378a6a4a2038778db31ab1933ec16d05ea73cc87a24ae"
+  version "2.1.41"
+  sha256 arm:   "609cb5b421ff88b1aa075668d206c3a38b65e83097da9876409280581f6d11bf",
+         intel: "977be8f5bfce0ce46fcbcfe4e25ed2faf390c4731576e87c170df42210a323b3"
 
   url "https://github.com/iOfficeAI/AionUi/releases/download/v#{version}/AionUi-#{version}-mac-#{arch}.dmg"
   name "AionUi"
@@ -24,6 +24,7 @@ cask "aionui" do
     "~/.aionui",
     "~/Library/Application Support/AionUi",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.aionui.app.sfl*",
+    "~/Library/Logs/AionUi",
     "~/Library/Preferences/com.aionui.app.plist",
     "~/Library/Saved Application State/com.aionui.app.savedState",
   ]
