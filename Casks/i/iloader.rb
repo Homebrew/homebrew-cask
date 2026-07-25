@@ -5,7 +5,7 @@ cask "iloader" do
     arch arm: "aarch64", intel: "amd64"
   end
 
-  version "2.2.6"
+  version "2.2.7"
 
   artifact = on_system_conditional linux: "iloader-#{os}-#{arch}.AppImage",
                                    macos: "iloader-#{os}-universal.dmg"
@@ -22,7 +22,7 @@ cask "iloader" do
   end
 
   on_macos do
-    sha256 "8494c0221b5fd3efbe7100637ecbeaddfe1bb5bf29de90b01a8b9de4a580cf1e"
+    sha256 "f01c5f52cdc6e29b6cdb90072ddee092863923bcfa5575c3860a21302c27d382"
 
     auto_updates true
     app "iloader.app"
@@ -31,8 +31,8 @@ cask "iloader" do
   end
 
   on_linux do
-    sha256 arm64_linux:  "58141b686830b3f45480278549a7e7d865c95e9c6d2135c45b7ca96ed00a1f82",
-           x86_64_linux: "acbb0355772df6116eddcc83bf98bb3505fcdb4583c4c7c510c7e250f1ab3a35"
+    sha256 arm64_linux:  "d729877a2f0bb3b060aac65d106a50c92b59367cd50229774f7845bce2dd19fc",
+           x86_64_linux: "16e3f1101b612bb8adaa680cd51fb8bc229ca27c68d37c46fbdff6ad6251bb4e"
 
     app_image artifact, target: "iloader.AppImage"
   end
