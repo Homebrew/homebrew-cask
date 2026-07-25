@@ -4,7 +4,7 @@ cask "changes" do
 
   url "https://github.com/maoyama/Changes/releases/download/v#{version}/Changes.zip"
   name "Changes"
-  desc "Open source GUI Git client, built with SwiftUI and AppKit"
+  desc "Git GUI"
   homepage "https://github.com/maoyama/Changes"
 
   depends_on macos: :tahoe
