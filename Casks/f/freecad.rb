@@ -1,9 +1,9 @@
 cask "freecad" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.1.2"
-  sha256 arm:   "eb99a27bf4c84f2d40b8bff0ff3a7059ea597234af9d0b7c3ac1a391d8f5947a",
-         intel: "e24e65c1166ad481b12fbe3f5390185426d301f2816a82c0b6bab357c72021cd"
+  version "1.1.3"
+  sha256 arm:   "f5c0ece7cd7c932466d6effadc0fc6e179b0538a9d9a6a77a6769eae3af2667c",
+         intel: "8434bd6ad32f597605d184e5b996f496e9cbc7e6d8ffb6db4dbd6e2ce6d1612b"
 
   on_arm do
     depends_on macos: :big_sur
