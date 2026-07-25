@@ -4,7 +4,7 @@ cask "airsync" do
 
   url "https://github.com/sameerasw/airsync-mac/releases/download/v#{version}/AirSync.dmg"
   name "AirSync"
-  desc "Your Android works the best with your mac"
+  desc "Continuity with your Android. Sync notifications, clipboard, mirror screen and a lot more. "
   homepage "https://github.com/sameerasw/airsync-mac"
 
   livecheck do
