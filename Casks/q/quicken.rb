@@ -18,7 +18,10 @@ cask "quicken" do
   app "Quicken.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.quicken.quicken.sfl*",
     "~/Library/Application Support/Quicken",
+    "~/Library/Caches/com.quicken.Quicken",
+    "~/Library/HTTPStorages/com.quicken.Quicken",
     "~/Library/Preferences/com.quicken.Quicken.plist",
   ]
 end
