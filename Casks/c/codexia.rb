@@ -7,7 +7,7 @@ cask "codexia" do
 
   url "https://github.com/milisp/codexia/releases/download/v#{version}/codexia_#{version}_#{arch}.dmg"
   name "Codexia"
-  desc "GUI and toolkit for Codex CLI + Claude Code"
+  desc "GUI and toolkit for Codex CLI and Claude Code"
   homepage "https://github.com/milisp/codexia"
 
   livecheck do
