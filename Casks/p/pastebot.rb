@@ -21,6 +21,7 @@ cask "pastebot" do
   end
 
   auto_updates true
+  conflicts_with cask: "pastebot@2"
   depends_on macos: :tahoe
 
   app "Pastebot.app"
