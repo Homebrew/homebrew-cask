@@ -5,7 +5,7 @@ cask "billy" do
   url "https://cdn.amore.computer/releases/com.simonlou.Billy/#{version.csv.first}-#{version.csv.second}/Billy.dmg",
       verified: "cdn.amore.computer/releases/com.simonlou.Billy/"
   name "Billy"
-  desc "Local-first invoice manager"
+  desc "Invoice manager"
   homepage "https://usebilly.app/"
 
   livecheck do
