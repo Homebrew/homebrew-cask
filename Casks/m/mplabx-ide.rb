@@ -60,7 +60,7 @@ cask "mplabx-ide" do
             },
             delete: [
               # The below version number needs to be updated manually each time this Cask is updated
-              "/Applications/microchip/mplabcomm/3.55.00",
+              "/Applications/microchip/mplabcomm/3.56.00",
               "/Applications/microchip/mplabx/#{version}",
             ],
             rmdir:  [
