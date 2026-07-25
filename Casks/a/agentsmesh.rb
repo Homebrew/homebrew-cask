@@ -22,6 +22,7 @@ cask "agentsmesh" do
 
   zap trash: [
     "~/Library/Application Support/agentsmesh",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.agentsmesh.desktop.sfl*",
     "~/Library/Caches/agentsmesh-updater",
     "~/Library/Caches/ai.agentsmesh.desktop",
     "~/Library/HTTPStorages/ai.agentsmesh.desktop",
