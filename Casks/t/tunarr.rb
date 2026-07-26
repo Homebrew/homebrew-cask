@@ -35,7 +35,7 @@ cask "tunarr" do
   app "Tunarr.app"
 
   zap trash: [
-    "~/.cache/tunarr/",
-    "~/Library/Preferences/tunarr/",
+    "~/.cache/tunarr",
+    "~/Library/Preferences/tunarr",
   ]
 end
