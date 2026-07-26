@@ -13,7 +13,7 @@ cask "elgato-control-center" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Elgato Control Center.app"
 
