@@ -1,8 +1,8 @@
 cask "emacs-app" do
   arch arm: "arm64-11", intel: "x86_64-10_12"
 
-  version "30.2-1"
-  sha256 "72b31176903a68a7b82093a94fedd51eda7ecbb3c54eae21a9160cedc88fab1f"
+  version "30.2-2"
+  sha256 "eca916e584744fead7dd600a66f148b05b0daf58c45be606e8599ef25bad8835"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   name "Emacs"
