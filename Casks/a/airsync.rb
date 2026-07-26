@@ -13,18 +13,13 @@ cask "airsync" do
   end
 
   depends_on macos: :sonoma
-  depends_on cask: "android-platform-tools"
-  depends_on formula: [
-    "media-control",
-    "scrcpy",
-  ]
 
   app "AirSync.app"
 
   zap trash: [
-    "~/Library/Application Support/AirSync",
-    "~/Library/Caches/com.sameerasw.airsync-mac",
-    "~/Library/Preferences/com.sameerasw.airsync-mac.plist",
-    "~/Library/Saved Application State/com.sameerasw.airsync-mac.savedState",
+    "~/Library/Caches/sameerasw.airsync-mac",
+    "~/Library/Preferences/sameerasw.airsync-mac.plist",
+    "~/Library/Saved Application State/sameerasw.airsync-mac.savedState",
+    "~/Library/Application Support/airsync-mac",
   ]
 end
