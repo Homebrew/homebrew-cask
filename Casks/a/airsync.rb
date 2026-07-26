@@ -17,9 +17,9 @@ cask "airsync" do
   app "AirSync.app"
 
   zap trash: [
+    "~/Library/Application Support/airsync-mac",
     "~/Library/Caches/sameerasw.airsync-mac",
     "~/Library/Preferences/sameerasw.airsync-mac.plist",
     "~/Library/Saved Application State/sameerasw.airsync-mac.savedState",
-    "~/Library/Application Support/airsync-mac",
   ]
 end
