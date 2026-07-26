@@ -1,6 +1,6 @@
 cask "neodisk" do
-  version "2.70.2"
-  sha256 "15107271c56c4512e11c5634ea3768295e360a624e090231be0cfada56b7aa6b"
+  version "2.71.0"
+  sha256 "627d7a7fbe51298f5751e730b27dba62c149b2b555dba2a486e606640fa1a5ff"
 
   url "https://github.com/tkslucas/Neodisk/releases/download/v#{version}/Neodisk-#{version}.dmg",
       verified: "github.com/tkslucas/Neodisk/"
