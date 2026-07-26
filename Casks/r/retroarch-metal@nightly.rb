@@ -13,7 +13,7 @@ cask "retroarch-metal@nightly" do
   app "RetroArch.app", target: "RetroArch Nightly.app"
 
   zap trash: [
-    "~/Documents/RetroArchNightly/",
+    "~/Documents/RetroArchNightly",
     "~/Library/Application Support/RetroArchNightly",
     "~/Library/Saved Application State/com.libretro.RetroArchNightly.savedState",
   ]
