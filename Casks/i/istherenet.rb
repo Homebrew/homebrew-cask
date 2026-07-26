@@ -21,7 +21,7 @@ cask "istherenet" do
             login_item: "IsThereNet"
 
   zap trash: [
-    "~/.config/istherenet/",
+    "~/.config/istherenet",
     "~/Library/Application Scripts/com.lowtechguys.IsThereNet",
     "~/Library/Preferences/com.lowtechguys.IsThereNet.plist",
     "~/Library/WebKit/com.lowtechguys.IsThereNet",
