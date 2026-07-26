@@ -12,7 +12,7 @@ cask "changes" do
   app "Changes.app"
 
   zap trash: [
-    "~/Library/Caches/dev.aoyama.changes/",
-    "~/Library/HTTPStorages/dev.aoyama.changes/",
+    "~/Library/Caches/dev.aoyama.changes",
+    "~/Library/HTTPStorages/dev.aoyama.changes",
   ]
 end

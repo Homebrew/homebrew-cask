@@ -19,7 +19,7 @@ cask "mole-app" do
 
   zap trash: [
     "/Library/Mole",
-    "~/.config/mole/",
+    "~/.config/mole",
     "~/Library/Application Support/com.tw93.MoleApp",
     "~/Library/Caches/com.tw93.MoleApp",
     "~/Library/HTTPStorages/com.tw93.MoleApp",

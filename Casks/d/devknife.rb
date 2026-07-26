@@ -19,7 +19,7 @@ cask "devknife" do
   app "DevKnife.app"
 
   zap trash: [
-    "~/Library/Application Support/com.solotuna.devknife/",
+    "~/Library/Application Support/com.solotuna.devknife",
     "~/Library/Preferences/com.solotuna.devknife.plist",
   ]
 end

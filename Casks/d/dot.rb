@@ -18,8 +18,8 @@ cask "dot" do
   app "Dot.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.dot.app/",
-    "~/Library/Caches/com.dot.app/",
-    "~/Library/Containers/com.dot.app/",
+    "~/Library/Application Scripts/com.dot.app",
+    "~/Library/Caches/com.dot.app",
+    "~/Library/Containers/com.dot.app",
   ]
 end

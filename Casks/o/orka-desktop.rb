@@ -19,7 +19,7 @@ cask "orka-desktop" do
 
   zap trash: [
     "~/.local/state/orka",
-    "~/Library/Caches/com.macstadium.OrkaDesktop/",
+    "~/Library/Caches/com.macstadium.OrkaDesktop",
     "~/Library/HTTPStorages/com.macstadium.OrkaDesktop",
     "~/Library/Preferences/com.macstadium.OrkaDesktop.plist",
     "~/orka-toolkit",

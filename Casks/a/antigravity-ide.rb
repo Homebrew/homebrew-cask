@@ -33,9 +33,9 @@ cask "antigravity-ide" do
   uninstall quit: "com.google.antigravity-ide"
 
   zap trash: [
-    "~/.antigravity-ide-server/",
-    "~/.antigravity-ide/",
-    "~/.gemini/antigravity-ide/",
+    "~/.antigravity-ide",
+    "~/.antigravity-ide-server",
+    "~/.gemini/antigravity-ide",
     "~/Library/Application Support/Antigravity IDE",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.antigravity-ide.sfl*",
     "~/Library/Caches/com.google.antigravity-ide",

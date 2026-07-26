@@ -20,7 +20,7 @@ cask "deluge" do
   app "Deluge.app"
 
   zap trash: [
-    "~/.config/deluge/",
+    "~/.config/deluge",
     "~/Library/Preferences/org.deluge.plist",
     "~/Library/Saved Application State/org.deluge.savedState",
   ]

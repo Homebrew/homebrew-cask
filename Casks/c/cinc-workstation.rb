@@ -55,5 +55,5 @@ cask "cinc-workstation" do
             },
             pkgutil:   "com.cinc-project.pkg.cinc-workstation"
 
-  zap trash: "~/.cinc-workstation/"
+  zap trash: "~/.cinc-workstation"
 end

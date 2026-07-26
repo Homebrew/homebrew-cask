@@ -32,5 +32,5 @@ cask "lidarr" do
 
   app "Lidarr.app"
 
-  zap trash: "~/.config/Lidarr/"
+  zap trash: "~/.config/Lidarr"
 end

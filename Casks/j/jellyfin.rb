@@ -21,9 +21,9 @@ cask "jellyfin" do
 
   zap trash: [
     "/Library/Logs/DiagnosticReports/jellyfin*.diag",
-    "~/.cache/jellyfin/",
-    "~/.config/jellyfin/",
-    "~/.local/share/jellyfin/",
+    "~/.cache/jellyfin",
+    "~/.config/jellyfin",
+    "~/.local/share/jellyfin",
     "~/Library/Application Support/jellyfin",
     "~/Library/Preferences/Jellyfin.Server.plist",
   ]
