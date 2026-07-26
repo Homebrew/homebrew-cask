@@ -17,10 +17,10 @@ cask "cockatrice" do
     end
   end
   on_ventura :or_newer do
-    version "3.0.1,2026-05-23,Graduation-Day,3.0.1"
+    version "3.0.2,2026-06-26,Graduation-Day,3.0.2"
 
     on_ventura do
-      sha256 "9042482b3d04e3760371ce51111e2ac23fce6f5eb6a49d10ff7e13e1fe34bb7f"
+      sha256 "4137a2021c97ef47f514b44898bc3897c1448698962dcad1f4d8482632e57bb8"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS13_Intel.dmg",
           verified: "github.com/Cockatrice/Cockatrice/"
@@ -30,13 +30,13 @@ cask "cockatrice" do
       end
     end
     on_sonoma do
-      sha256 "f9a738f1ec2249658dd49b5157de3ffe7ef63d71baf44470989c79568a6bea3d"
+      sha256 "53bc76f1e0291af6e53c6989c6811561a7fe3f64aea574e4826ae00e370da98d"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS14.dmg",
           verified: "github.com/Cockatrice/Cockatrice/"
     end
     on_sequoia :or_newer do
-      sha256 "a721aebca11e6acd3a0dbfe922521e975e819c836f053789d0acff844cab7915"
+      sha256 "51705bcd11211ab1beb19ebb41931e64c16c1f2ec8d530473de57fdc0a9b764b"
 
       url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS15.dmg",
           verified: "github.com/Cockatrice/Cockatrice/"
