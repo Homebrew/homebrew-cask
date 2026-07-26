@@ -15,7 +15,7 @@ cask "transmission-remote-gui" do
   uninstall quit: "com.transgui"
 
   zap trash: [
-    "~/.config/Transmission Remote GUI/",
+    "~/.config/Transmission Remote GUI",
     "~/Library/Preferences/com.transgui.plist",
     "~/Library/Saved Application State/com.transgui.savedState",
   ]
