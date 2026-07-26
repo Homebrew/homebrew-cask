@@ -2,11 +2,11 @@ cask "tangleguard-cli" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-gnu"
 
-  version "0.12.0"
-  sha256 arm:          "c11dfb64b495d1c5457cbbb811c12fd7a1d7040fe3e83fb16cc1b4f27e015b8b",
-         x86_64:       "77b54c34920ad562210de0d6845bc13d24171bd9610b0b090f82c2bddd6b174f",
-         arm64_linux:  "09a1c22f87f538a738cb197c6a6b1c3a4dff39d8098367b480c5797a4d56966e",
-         x86_64_linux: "e3ed587f290ae3c6ba1908995a142a5e809ed1e1d934a110c4984457518f49e2"
+  version "0.13.0"
+  sha256 arm:          "e36e4bb48b2f962aef26b187568fcf66874bb9b456b10679b5591c313b4a3651",
+         x86_64:       "38ad3fdbe0a2f5757af3419ce067ea18a8a65662edff0600dc25031c0517b4f9",
+         arm64_linux:  "c4412246b750d2cf8c91d71a3e240a65896811a616e9594a4cdda784ee8bb716",
+         x86_64_linux: "e63c160685e64b512ac68db0b22ac848165e12e44b4e240b5fd9fbfe82503259"
 
   url "https://tangleguard-cli-builds.s3.eu-central-1.amazonaws.com/v#{version}/tangleguard-cli_#{version}_#{arch}-#{os}.tar.gz",
       verified: "tangleguard-cli-builds.s3.eu-central-1.amazonaws.com/"
