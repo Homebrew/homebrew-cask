@@ -1,6 +1,6 @@
 cask "willow-voice" do
-  version "2.3.5"
-  sha256 "1e420238bf9cbd091824420a50c1a773f8c7d7b12d755d50e950930ba534ad2a"
+  version "2.3.6"
+  sha256 "2a3df06d4364a33e18aca8743519996b9376673da4859217e3c104e176c72359"
 
   url "https://github.com/LiuLawrence45/stt-sparkle-update/releases/download/v#{version}/Willow.Installer.dmg",
       verified: "github.com/LiuLawrence45/stt-sparkle-update/"
@@ -14,7 +14,7 @@ cask "willow-voice" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Willow Voice.app"
 
