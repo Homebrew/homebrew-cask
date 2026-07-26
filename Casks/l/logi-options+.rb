@@ -33,14 +33,14 @@ cask "logi-options+" do
     end
   end
   on_ventura :or_newer do
-    version "2.1.854976"
+    version "2.5.926888"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
         verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
 
     livecheck do
-      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus4/osx/public/update.json"
+      url "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus5/osx/public/update.json"
       strategy :json do |json|
         json["version"]
       end
