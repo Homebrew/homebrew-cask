@@ -24,6 +24,6 @@ cask "mirai" do
   zap trash: [
     "~/.config/com.trymirai.cli",
     "~/Library/Application Support/mirai",
-    "~/Library/Caches/com.mirai.tech.chat.ShipIt/",
+    "~/Library/Caches/com.mirai.tech.chat.ShipIt",
   ]
 end
