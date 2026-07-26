@@ -23,13 +23,9 @@ cask "kimi" do
     "~/.kimi-work",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.moonshot.kimichat.sfl*",
     "~/Library/Application Support/kimi",
-    "~/Library/Application Support/kimi",
     "~/Library/Application Support/kimi-desktop",
     "~/Library/Caches/KimiAppCache",
-    "~/Library/Caches/KimiAppCache",
     "~/Library/HTTPStorages/com.moonshot.kimichat",
-    "~/Library/HTTPStorages/com.moonshot.kimichat",
-    "~/Library/Logs/kimi-desktop",
     "~/Library/Logs/kimi-desktop",
     "~/Library/Preferences/com.moonshot.kimichat.plist",
   ]
