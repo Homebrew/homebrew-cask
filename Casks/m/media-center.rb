@@ -22,7 +22,7 @@ cask "media-center" do
   app "Media Center #{version.major}.app"
 
   zap trash: [
-    "~/Documents/JRiver/",
+    "~/Documents/JRiver",
     "~/Library/Application Support/J River",
     "~/Library/Caches/com.jriver.MediaCenter#{version.major}",
     "~/Library/Cookies/com.jriver.MediaCenter#{version.major}*",
