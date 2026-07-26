@@ -22,6 +22,7 @@ cask "blockbench" do
 
   zap trash: [
     "~/Library/Application Support/Blockbench",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/blockbench.sfl*",
     "~/Library/Preferences/blockbench.plist",
     "~/Library/Saved Application State/blockbench.savedState",
   ]
