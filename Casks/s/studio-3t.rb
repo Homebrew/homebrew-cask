@@ -23,7 +23,7 @@ cask "studio-3t" do
   app "Studio 3T.app"
 
   zap trash: [
-    "~/.3T/studio-3t/",
+    "~/.3T/studio-3t",
     "~/Library/Preferences/3t.enterprise.mongochef.plist",
     "~/Library/Preferences/3t.mongochef.core.plist",
     "~/Library/Preferences/3t.mongochef.enterprise.plist",
