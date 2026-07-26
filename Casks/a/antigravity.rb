@@ -33,8 +33,8 @@ cask "antigravity" do
   uninstall quit: "com.google.antigravity"
 
   zap trash: [
-    "~/.antigravity/",
-    "~/.gemini/antigravity/",
+    "~/.antigravity",
+    "~/.gemini/antigravity",
     "~/Library/Application Support/Antigravity",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.antigravity.sfl*",
     "~/Library/Caches/com.google.antigravity",
