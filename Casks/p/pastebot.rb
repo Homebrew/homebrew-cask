@@ -2,8 +2,7 @@ cask "pastebot" do
   version "3.0,30000"
   sha256 "22fd4d29482c0c04012ecbbdd918ca60b372d79dd7caabb2eb4671e9ddd69862"
 
-  url "https://tapbots.net/pastebot#{version.major}/Pastebot.#{version.csv.second}.dmg",
-      verified: "tapbots.net/"
+  url "https://tapbots.net/pastebot#{version.major}/Pastebot.#{version.csv.second}.dmg"
   name "Pastebot"
   desc "Workflow application to improve productivity"
   homepage "https://tapbots.com/pastebot/"
@@ -25,23 +24,8 @@ cask "pastebot" do
   depends_on macos: :tahoe
 
   app "Pastebot.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  tool_shimscript = "#{staged_path}/pasteboot-tool.wrapper.sh"
-  binary tool_shimscript, target: "pastebot-tool"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  mcp_shimscript = "#{staged_path}/pasteboot-mcp.wrapper.sh"
-  binary mcp_shimscript, target: "pastebot-mcp"
-
-  preflight do
-    File.write tool_shimscript, <<~EOS
-      #!/bin/bash
-      exec '#{appdir}/Pastebot.app/Contents/Helpers/pastebot-tool' "$@"
-    EOS
-    File.write mcp_shimscript, <<~EOS
-      #!/bin/bash
-      exec '#{appdir}/Pastebot.app/Contents/Helpers/pastebot-mcp' "$@"
-    EOS
-  end
+  command_wrapper "pastebot-tool", executable: "#{appdir}/Pastebot.app/Contents/Helpers/pastebot-tool"
+  command_wrapper "pastebot-mcp", executable: "#{appdir}/Pastebot.app/Contents/Helpers/pastebot-mcp"
 
   uninstall quit: "com.tapbots.Pastebot#{version.major}Mac"
 
