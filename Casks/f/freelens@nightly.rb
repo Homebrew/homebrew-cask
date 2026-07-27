@@ -17,7 +17,11 @@ cask "freelens@nightly" do
   app "Freelens.app"
 
   zap trash: [
-    "~/Library/Application Support/Freelens",
-    "~/Library/Logs/Freelens",
-  ]
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.freelens.freelens.sfl*",
+        "~/Library/Application Support/Freelens",
+        "~/Library/Logs/Freelens",
+        "~/Library/Preferences/app.freelens.Freelens.plist",
+        "~/Library/Saved Application State/app.freelens.Freelens.savedState",
+      ],
+      rmdir: "~/.freelens"
 end
