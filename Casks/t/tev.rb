@@ -1,10 +1,6 @@
 cask "tev" do
-  on_macos do
-    arch intel: "-intel"
-  end
-  on_linux do
-    arch arm: "-arm"
-  end
+  arch arm: on_system_conditional(linux: "-arm"), intel: on_system_conditional(macos: "-intel")
+  os macos: "dmg", linux: "appimage"
 
   version "2.13.1"
   sha256 arm:          "9ad099756f6ece21e3a2a3f99529ce19679119b27730a23d022235871f6eda8c",
@@ -12,9 +8,17 @@ cask "tev" do
          arm64_linux:  "59af79f1ef83b2eb447997e5598e7bba1426c0bcce781cf4ac960f736f277803",
          x86_64_linux: "2d2a833f60c073b027a83d58f78f79dd6f5ae772566d62680738a1d0fc90e962"
 
-  url_end = on_system_conditional linux: ".appimage", macos: ".dmg"
+  on_macos do
+    app "tev.app"
+    binary "#{appdir}/tev.app/Contents/MacOS/tev"
 
-  url "https://github.com/Tom94/tev/releases/download/v#{version}/tev#{arch}#{url_end}"
+    zap trash: "~/Library/Preferences/org.tom94.tev.plist"
+  end
+  on_linux do
+    app_image "tev#{arch}.appimage", target: "tev.AppImage"
+  end
+
+  url "https://github.com/Tom94/tev/releases/download/v#{version}/tev#{arch}.#{os}"
   name "tev"
   desc "High dynamic range (HDR) image viewer with accurate color management"
   homepage "https://github.com/Tom94/tev"
@@ -22,16 +26,5 @@ cask "tev" do
   livecheck do
     url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
-  on_macos do
-    app "tev.app"
-    binary "#{appdir}/tev.app/Contents/MacOS/tev"
-
-    zap trash: "~/Library/Preferences/org.tom94.tev.plist"
-  end
-
-  on_linux do
-    app_image "tev#{arch}.appimage", target: "tev.AppImage"
   end
 end
