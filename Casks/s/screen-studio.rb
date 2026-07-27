@@ -2,9 +2,9 @@ cask "screen-studio" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "3.7.3-4475"
-  sha256 arm:   "ddbe1f8967d04d00f4b8131aa82c11df680461ba1f3681e0fb140696d67d7dfc",
-         intel: "4b87a17174e692fe0656b220d17cb0539e10b169a1b42c9eafc9162cc72fbda6"
+  version "3.7.3-4540"
+  sha256 arm:   "da0b28d8b90c9dd14f29079305b09e7c42073401af1995ab87f6db62fd42806e",
+         intel: "eb1036e07d49bb08471ce3f239887aa9d7d69ec65a08314a6eda4227b4da077c"
 
   url "https://screenstudioassets.com/releases/#{version}/Screen%20Studio-#{version}#{arch}-mac.zip",
       verified: "screenstudioassets.com/"
