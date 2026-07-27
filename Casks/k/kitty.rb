@@ -1,26 +1,12 @@
 cask "kitty" do
   arch arm: "arm64", intel: "x86_64"
+  os macos: ".dmg", linux: "-#{arch}.txz"
 
   version "0.48.1"
 
-  container_ext = on_system_conditional linux: "-#{arch}.txz", macos: ".dmg"
-
   on_macos do
     sha256 "6d4e683945815e9d5ca42eac9480a3692258cf6145c823b92623f54b5dfa4b36"
-  end
-  on_linux do
-    sha256 arm64_linux:  "6b0d8fe0af20ba03348e97e303f3c6084b5338bb4abd52737d8e2ffd2dba3d33",
-           x86_64_linux: "ab7d4978b146a3f4799d74fdd6fddf322e5cf93601494e3fcbed925141611963"
-  end
 
-  url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}#{container_ext}"
-  name "kitty"
-  desc "GPU-based terminal emulator"
-  homepage "https://github.com/kovidgoyal/kitty"
-
-  conflicts_with cask: "kitty@nightly"
-
-  on_macos do
     depends_on macos: :monterey
 
     app "kitty.app"
@@ -42,8 +28,10 @@ cask "kitty" do
       EOS
     end
   end
-
   on_linux do
+    sha256 arm64_linux:  "6b0d8fe0af20ba03348e97e303f3c6084b5338bb4abd52737d8e2ffd2dba3d33",
+           x86_64_linux: "ab7d4978b146a3f4799d74fdd6fddf322e5cf93601494e3fcbed925141611963"
+
     binary "bin/kitty"
     binary "bin/kitten"
     manpage "share/man/man1/kitty.1"
@@ -116,6 +104,13 @@ cask "kitty" do
     manpage "share/man/man1/kitten-update-self.1"
     manpage "share/man/man5/kitty.conf.5"
   end
+
+  url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}#{os}"
+  name "kitty"
+  desc "GPU-based terminal emulator"
+  homepage "https://github.com/kovidgoyal/kitty"
+
+  conflicts_with cask: "kitty@nightly"
 
   zap trash: [
     "~/.config/kitty",
