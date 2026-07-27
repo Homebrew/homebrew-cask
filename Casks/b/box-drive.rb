@@ -16,7 +16,6 @@ cask "box-drive" do
   end
 
   auto_updates true
-  conflicts_with cask: "box-sync"
   depends_on macos: :ventura
 
   pkg "BoxDrive-#{version}.pkg"
