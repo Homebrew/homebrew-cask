@@ -19,6 +19,7 @@ cask "thelowtechguys-cling" do
 
   zap trash: [
     "~/Library/Application Scripts/com.lowtechguys.Cling",
+    "~/Library/Application Support/Cling",
     "~/Library/Caches/Cling",
     "~/Library/Caches/com.lowtechguys.Cling",
     "~/Library/HTTPStorages/com.lowtechguys.Cling",

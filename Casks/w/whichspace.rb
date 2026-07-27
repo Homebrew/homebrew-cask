@@ -22,6 +22,7 @@ cask "whichspace" do
   zap trash: [
     "~/Library/Caches/io.gechr.WhichSpace",
     "~/Library/Cookies/io.gechr.WhichSpace.binarycookies",
+    "~/Library/HTTPStorages/io.gechr.WhichSpace",
     "~/Library/Preferences/io.gechr.WhichSpace.plist",
     "~/Library/Saved Application State/io.gechr.WhichSpace.savedState",
   ]

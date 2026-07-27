@@ -15,5 +15,5 @@ cask "dcp-o-matic-batch-converter" do
 
   app "DCP-o-matic #{version.major} Batch converter.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.batch.plist"
 end

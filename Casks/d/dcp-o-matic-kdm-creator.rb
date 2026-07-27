@@ -15,5 +15,5 @@ cask "dcp-o-matic-kdm-creator" do
 
   app "DCP-o-matic #{version.major} KDM Creator.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.kdm.plist"
 end

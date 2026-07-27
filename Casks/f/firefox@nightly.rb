@@ -107,6 +107,7 @@ cask "firefox@nightly" do
         "~/Library/Caches/Mozilla/updates/Applications/Firefox",
         "~/Library/Caches/org.mozilla.firefox",
         "~/Library/Preferences/org.mozilla.firefox.plist",
+        "~/Library/Preferences/org.mozilla.nightly.plist",
         "~/Library/Saved Application State/org.mozilla.firefox.savedState",
         "~/Library/WebKit/org.mozilla.firefox",
       ],

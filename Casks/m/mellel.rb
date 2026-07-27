@@ -28,6 +28,7 @@ cask "mellel" do
 
   zap trash: [
     "~/Library/Application Scripts/com.redlex.mellel",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.redlex.mellel#{version.major}.sfl*",
     "~/Library/Application Support/com.redlex.mellel#{version.major}",
     "~/Library/Application Support/Mellel #{version.major}",
     "~/Library/Caches/com.redlex.mellel#{version.major}",

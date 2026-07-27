@@ -22,7 +22,11 @@ cask "flyenv" do
   app "FlyEnv.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/phpstudy.xpfme.com.sfl*",
+    "~/Library/Application Support/FlyEnv",
     "~/Library/Application Support/PhpWebStudy",
+    "~/Library/FlyEnv",
+    "~/Library/Logs/FlyEnv",
     "~/Library/Logs/PhpWebStudy",
     "~/Library/PhpWebStudy",
     "~/Library/Preferences/phpstudy.xpfme.com.plist",

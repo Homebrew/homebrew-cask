@@ -24,6 +24,7 @@ cask "electerm" do
   binary "#{appdir}/electerm.app/Contents/MacOS/electerm"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.electerm.electerm.sfl*",
     "~/Library/Application Support/electerm",
     "~/Library/Logs/electerm",
     "~/Library/Preferences/org.electerm.electerm.plist",

@@ -18,7 +18,11 @@ cask "spacelauncher" do
   app "SpaceLauncher.app"
 
   zap trash: [
+    "~/Library/Application Support/bugsnag-shared-name.guoc.SpaceLauncher",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/name.guoc.spacelauncher.sfl*",
     "~/Library/Application Support/name.guoc.SpaceLauncher",
+    "~/Library/Application Support/SpaceLauncher",
+    "~/Library/Caches/bugsnag-shared-name.guoc.SpaceLauncher",
     "~/Library/Caches/name.guoc.SpaceLauncher",
     "~/Library/HTTPStorages/name.guoc.SpaceLauncher",
     "~/Library/Preferences/name.guoc.SpaceLauncher.*plist",

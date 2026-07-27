@@ -16,5 +16,5 @@ cask "dcp-o-matic" do
 
   app "DCP-o-matic #{version.major}.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic"
 end

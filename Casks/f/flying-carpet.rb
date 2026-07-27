@@ -35,7 +35,10 @@ cask "flying-carpet" do
   app "FlyingCarpet.app"
 
   zap trash: [
+    "~/Library/Application Scripts/dev.spiegl.FlyingCarpet",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.spiegl.flyingcarpet.sfl*",
     "~/Library/Caches/dev.spiegl",
+    "~/Library/Containers/dev.spiegl.FlyingCarpet",
     "~/Library/Preferences/com.yourcompany.flyingcarpet.plist",
     "~/Library/Preferences/dev.spiegl.plist",
     "~/Library/Saved Application State/com.yourcompany.flyingcarpet.savedState",

@@ -15,5 +15,5 @@ cask "dcp-o-matic-disk-writer" do
 
   app "DCP-o-matic #{version.major} Disk Writer.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.disk.plist"
 end

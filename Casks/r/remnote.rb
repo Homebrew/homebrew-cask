@@ -24,7 +24,9 @@ cask "remnote" do
   app "RemNote.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.remnote.sfl*",
     "~/Library/Application Support/RemNote",
+    "~/Library/Logs/RemNote",
     "~/Library/Preferences/io.remnote.plist",
     "~/Library/Saved Application State/io.remnote.savedState",
   ]

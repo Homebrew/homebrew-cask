@@ -21,10 +21,13 @@ cask "elgato-control-center" do
 
   zap trash: [
     "~/Library/Application Scripts/com.corsair.ControlCenterLauncher",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.corsair.controlcenter.sfl*",
     "~/Library/Application Support/com.corsair.ControlCenter",
+    "~/Library/Application Support/Elgato Control Center",
     "~/Library/Caches/com.corsair.ControlCenter",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.corsair.ControlCenter",
     "~/Library/Containers/com.corsair.ControlCenterLauncher",
+    "~/Library/HTTPStorages/com.corsair.ControlCenter",
     "~/Library/Preferences/com.corsair.ControlCenter.plist",
   ]
 end

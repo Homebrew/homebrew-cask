@@ -15,5 +15,5 @@ cask "dcp-o-matic-encode-server" do
 
   app "DCP-o-matic #{version.major} Encode Server.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.server.plist"
 end
