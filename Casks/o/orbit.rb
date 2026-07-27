@@ -8,7 +8,7 @@ cask "orbit" do
   homepage "https://orbitformac.com/"
 
   livecheck do
-    url "https://orbitformac.com/appcast-v1.xml"
+    url "https://orbitformac.com/appcast-v#{version.major}.xml"
     strategy :sparkle, &:short_version
   end
 
