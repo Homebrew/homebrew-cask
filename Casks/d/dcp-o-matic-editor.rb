@@ -15,5 +15,5 @@ cask "dcp-o-matic-editor" do
 
   app "DCP-o-matic #{version.major} Editor.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.editor.plist"
 end
