@@ -1,9 +1,9 @@
 cask "elektron-overbridge" do
-  version "2.21.3,caf823ee-6ade-5704-9a60-e59196ab46b7"
-  sha256 "aa4b32ada6fdd0d5416bf6d0276842bdb8814d2f664acd7325c9fceadbaf8c3c"
+  version "2.25.7"
+  sha256 "e205f7cabc1908fc52347449f630181c0a012b69cb2834bbec966a3cad13cbe6"
 
-  url "https://s3-eu-west-1.amazonaws.com/se-elektron-devops/release/#{version.csv.second}/Elektron_Overbridge_#{version.csv.first}.dmg",
-      verified: "s3-eu-west-1.amazonaws.com/se-elektron-devops/release/"
+  url "https://elektron-software.s3.eu-west-1.amazonaws.com/overbridge/Elektron_Overbridge_#{version}.dmg",
+      verified: "elektron-software.s3.eu-west-1.amazonaws.com/overbridge/"
   name "Overbridge"
   desc "Integrate Elektron hardware into music software"
   homepage "https://www.elektron.se/overbridge"
@@ -15,9 +15,9 @@ cask "elektron-overbridge" do
     skip "Cannot be fetched due to Cloudflare protections"
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
-  pkg "Elektron Overbridge Installer #{version.csv.first}.pkg"
+  pkg "Elektron Overbridge Installer #{version}.pkg"
 
   uninstall launchctl: [
               "asp.se.elektron.overbridge.coreaudio2",
