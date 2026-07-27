@@ -1,26 +1,31 @@
 cask "brilliant" do
-  version "1.8.9"
-  sha256 "e801b856964c38462739be98986eeb03c2954bb633c5d40415d5baf40f48e631"
+  version "0.1.0-beta.36"
+  sha256 "7eea166e2b885f5dbe3707decb87ff5d77a1da7409a2b9585c31334606d4d3ad"
 
-  url "https://s3.eu-north-1.amazonaws.com/brilliant.design/Brilliant.Design-#{version}-Installer.dmg",
-      verified: "s3.eu-north-1.amazonaws.com/brilliant.design/"
+  url "https://api.brilliant.design/v1/download/macos/#{version}"
   name "Brilliant"
-  desc "Design and communication tool"
+  desc "AI-native design tool"
   homepage "https://brilliant.design/"
 
   livecheck do
-    skip "No version information available"
+    url "https://api.brilliant.design/v1/versions/latest"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
-  app "Brilliant.Design.app"
+  app "brilliant.app"
 
   zap trash: [
+    "~/.config/brilliant",
     "~/.config/brilliant.design",
     "~/Library/Application Support/Brilliant",
+    "~/Library/Application Support/design.brilliant",
     "~/Library/Caches/design.brilliant",
     "~/Library/Preferences/design.brilliant.plist",
+    "~/Library/Saved Application State/design.brilliant.savedState",
   ]
 end
