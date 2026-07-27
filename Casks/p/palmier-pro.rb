@@ -14,6 +14,7 @@ cask "palmier-pro" do
   app "PalmierPro.app"
 
   zap trash: [
+    "~/Library/Application Support/io.palmier.pro",
     "~/Library/Application Support/PalmierPro",
     "~/Library/Caches/io.palmier.pro",
     "~/Library/Caches/PalmierPro",
