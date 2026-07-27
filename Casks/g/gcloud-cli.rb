@@ -8,27 +8,6 @@ cask "gcloud-cli" do
          arm64_linux:  "6a1f0dd3dc22a1a9cd8a37578bb0455f04644f56e1f6fd67680ab73e59106c33",
          x86_64_linux: "322ac42ef7670cf2e16d46a1c3f827b36e55a865d2e26f34c64c914869e400f0"
 
-  url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-#{os}-#{arch}.tar.gz"
-  name "Google Cloud CLI"
-  desc "Set of tools to manage resources and applications hosted on Google Cloud"
-  homepage "https://cloud.google.com/cli/"
-
-  livecheck do
-    url "https://docs.cloud.google.com/sdk/docs/install-sdk"
-    regex(/gcloud\s*CLI\s*version\s*\(?v?(\d+(?:\.\d+)+)\)?/i)
-  end
-
-  auto_updates true
-
-  on_macos do
-    depends_on formula: "python@3.14"
-  end
-  on_linux do
-    on_arm do
-      depends_on formula: "python@3.14"
-    end
-  end
-
   google_cloud_sdk_root = "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
 
   args = [
@@ -41,8 +20,27 @@ cask "gcloud-cli" do
   ]
 
   on_macos do
+    depends_on formula: "python@3.14"
+
     args << "--install-python" << "false"
   end
+  on_linux do
+    on_arm do
+      depends_on formula: "python@3.14"
+    end
+  end
+
+  url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-#{os}-#{arch}.tar.gz"
+  name "Google Cloud CLI"
+  desc "Set of tools to manage resources and applications hosted on Google Cloud"
+  homepage "https://cloud.google.com/cli/"
+
+  livecheck do
+    url "https://docs.cloud.google.com/sdk/docs/install-sdk"
+    regex(/gcloud\s*CLI\s*version\s*\(?v?(\d+(?:\.\d+)+)\)?/i)
+  end
+
+  auto_updates true
 
   installer script: {
     executable: "google-cloud-sdk/install.sh",
