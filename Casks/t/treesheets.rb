@@ -30,6 +30,7 @@ cask "treesheets" do
   uninstall quit: "dot3labs.TreeSheets"
 
   zap trash: [
+    "~/Library/Preferences/com.strlen.TreeSheets.plist",
     "~/Library/Preferences/dot3labs.TreeSheets.plist",
     "~/Library/Preferences/TreeSheets Preferences",
     "~/Library/Saved Application State/dot3labs.TreeSheets.savedState",
