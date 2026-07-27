@@ -20,8 +20,10 @@ cask "maestri" do
 
   zap trash: [
     "~/.maestri",
+    "~/Library/Application Support/CrashReporter/Maestri_*.plist",
     "~/Library/Caches/com.evercraftlabs.Maestro",
     "~/Library/HTTPStorages/com.evercraftlabs.Maestro",
+    "~/Library/Logs/DiagnosticReports/Maestri-*.ips",
     "~/Library/Preferences/com.evercraftlabs.Maestro.plist",
   ]
 end
