@@ -22,6 +22,8 @@ cask "figma" do
 
   app "Figma.app"
 
+  uninstall quit: "com.figma.agent"
+
   zap trash: [
     "~/Library/Application Support/Figma",
     "~/Library/Application Support/figma-desktop",
