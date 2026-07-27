@@ -20,12 +20,17 @@ cask "marked-app" do
   uninstall quit: "com.brettterpstra.marked"
 
   zap trash: [
+    "~/Library/Application Scripts/com.brettterpstra.marked.Share",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brettterpstra.marked.sfl*",
+    "~/Library/Application Support/com.brettterpstra.marked",
     "~/Library/Application Support/Marked",
     "~/Library/Caches/com.brettterpstra.marked",
     "~/Library/Caches/Marked",
+    "~/Library/Containers/com.brettterpstra.marked.Share",
+    "~/Library/HTTPStorages/com.brettterpstra.marked",
     "~/Library/Logs/Marked",
     "~/Library/Preferences/com.brettterpstra.marked.plist",
     "~/Library/Saved Application State/com.brettterpstra.marked.savedState",
+    "~/Library/WebKit/com.brettterpstra.marked",
   ]
 end
