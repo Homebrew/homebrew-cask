@@ -22,6 +22,7 @@ cask "rize" do
   app "Rize.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.rize.sfl*",
     "~/Library/Application Support/Rize",
     "~/Library/Caches/io.rize",
     "~/Library/Caches/io.rize.ShipIt",
