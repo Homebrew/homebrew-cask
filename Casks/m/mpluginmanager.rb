@@ -1,6 +1,6 @@
 cask "mpluginmanager" do
-  version "02.27"
-  sha256 "ce86a6e39379128fa105084fd1752152ecb2f246a8eb9b67f4ab5318f06d57cf"
+  version "02.28"
+  sha256 "1ba662123c6ef9c04d74fc49bad7f48e44a9ea734cc09fb26aa1cbc8517931a8"
 
   url "https://meldaproduction.b-cdn.net/download/mpluginmanager/MPluginManager_#{version.dots_to_underscores}_setupmac.zip",
       verified: "meldaproduction.b-cdn.net/download/mpluginmanager/"
