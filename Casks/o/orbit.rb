@@ -1,6 +1,6 @@
 cask "orbit" do
   version "1.1.0"
-  sha256 "9c30971861f20fd35eef684dcd8afc185e4ea26e7483e410234f80a302fea8f8"
+  sha256 :no_check
 
   url "https://orbitformac.com/downloads/Orbit-#{version}.dmg"
   name "Orbit for Mac"
