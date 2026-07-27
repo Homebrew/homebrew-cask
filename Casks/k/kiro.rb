@@ -26,8 +26,10 @@ cask "kiro" do
   binary "#{appdir}/Kiro.app/Contents/Resources/app/bin/code", target: "kiro"
 
   zap trash: [
-    "~/Library/Application Support/Kiro",
-    "~/Library/Preferences/dev.kiro.desktop.plist",
-    "~/Library/Saved Application State/dev.kiro.desktop.savedState",
-  ]
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.kiro.desktop.sfl*",
+        "~/Library/Application Support/Kiro",
+        "~/Library/Preferences/dev.kiro.desktop.plist",
+        "~/Library/Saved Application State/dev.kiro.desktop.savedState",
+      ],
+      rmdir: "~/.kiro"
 end
