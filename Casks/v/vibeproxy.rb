@@ -20,5 +20,8 @@ cask "vibeproxy" do
 
   app "VibeProxy.app"
 
-  zap trash: "~/Library/Preferences/com.vibeproxy.app.plist"
+  zap trash: [
+    "~/Library/HTTPStorages/com.vibeproxy.app",
+    "~/Library/Preferences/com.vibeproxy.app.plist",
+  ]
 end
