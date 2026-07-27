@@ -1,14 +1,13 @@
 cask "cursor" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
+  url_end = on_system_conditional macos: "zip", linux: "AppImage"
 
   version "3.13.21,55434bd8062ece6fee083b82beed2aee42d253f3"
   sha256 arm:          "8835a83440a331e4212d98f8b3a152d2ada2189dfec1e81151026402946bd55c",
          intel:        "6cb3edb3ff04e99f55af6688663750e4cf609bfece59498068a07ba089c8529d",
          arm64_linux:  "401f7ad310ebd9b82e90f5a54589823f8d57e384c3f256aaaa0c2f3753efab54",
          x86_64_linux: "645d1c08ac20af38aef5a179a08be998cd4e0fc1b78f0713ea8d0b7b7c2fdab2"
-
-  url_end = on_system_conditional linux: "AppImage", macos: "zip"
 
   on_macos do
     url "https://downloads.cursor.com/production/#{version.csv.second}/#{os}/#{arch}/Cursor-darwin-#{arch}.#{url_end}"
@@ -35,7 +34,6 @@ cask "cursor" do
       "~/Library/Saved Application State/todesktop.com.ToDesktop-Installer.savedState",
     ]
   end
-
   on_linux do
     artifact_arch = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
