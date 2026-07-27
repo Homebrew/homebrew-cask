@@ -1,6 +1,6 @@
 cask "lulu" do
-  version "4.3.2"
-  sha256 "651d85539cb7008b33b8571215a8b8040f4f26d77306675e9c8972294a80f541"
+  version "4.4.0"
+  sha256 "c9f8c669a7b4e3ff33bd1df224a65451989142e678d4a3cff3db8c3deb62bca9"
 
   url "https://github.com/objective-see/LuLu/releases/download/v#{version}/LuLu_#{version}.dmg",
       verified: "github.com/objective-see/LuLu/"
