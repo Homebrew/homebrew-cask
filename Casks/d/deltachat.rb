@@ -21,6 +21,7 @@ cask "deltachat" do
 
   zap trash: [
     "~/Library/Application Scripts/chat.delta.desktop.electron",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/chat.delta.desktop.electron.sfl*",
     "~/Library/Application Support/CrashReporter/DeltaChat *_*.plist",
     "~/Library/Application Support/DeltaChat",
     "~/Library/Containers/chat.delta.desktop.electron",
