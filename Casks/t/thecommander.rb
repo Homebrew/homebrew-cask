@@ -19,6 +19,7 @@ cask "thecommander" do
 
   zap trash: [
     "~/Library/Application Support/de.die-gutbrods.TheCommander",
+    "~/Library/Application Support/TheCommander",
     "~/Library/Caches/de.die-gutbrods.TheCommander",
     "~/Library/HTTPStorages/de.die-gutbrods.TheCommander",
     "~/Library/Preferences/de.die-gutbrods.TheCommander.plist",
