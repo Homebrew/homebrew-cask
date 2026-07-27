@@ -6,7 +6,7 @@ cask "dbx" do
     arch arm: "aarch64", intel: "amd64"
   end
 
-  version "0.5.66"
+  version "0.5.67"
   sha256 arm:          "97850b1f4690034cf4e7d77453f22b96d7128cad05e81ed8f621f43d0bab2862",
          intel:        "279fcf07b77cf797659e36220a726b2fc5e416f687e03ff9ef7c6bcca2bb7059",
          arm64_linux:  "cc238b233050b0ccb74a66408344752170c392004d306819fd8aa241275b9f72",
