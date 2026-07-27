@@ -34,6 +34,7 @@ cask "multiviewer" do
   app "MultiViewer.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.multiviewer-for-f1.sfl*",
     "~/Library/Application Support/MultiViewer",
     "~/Library/Caches/com.electron.multiviewer-for-f1",
     "~/Library/Caches/com.electron.multiviewer-for-f1.ShipIt",
