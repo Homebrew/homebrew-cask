@@ -21,6 +21,7 @@ cask "reqable" do
   end
 
   zap trash: [
+    "~/Library/Application Support/com.reqable.macosx",
     "~/Library/Caches/Reqable",
     "~/Library/Preferences/com.reqable.macosx.plist",
   ]
