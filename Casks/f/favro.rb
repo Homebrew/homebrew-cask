@@ -19,6 +19,7 @@ cask "favro" do
   app "Favro.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.favro.desktop-app.sfl*",
     "~/Library/Application Support/Favro",
     "~/Library/Logs/Favro",
     "~/Library/Preferences/com.favro.desktop-app.plist",
