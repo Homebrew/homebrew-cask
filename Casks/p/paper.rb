@@ -20,6 +20,7 @@ cask "paper" do
   uninstall quit: "com.w.paper"
 
   zap trash: [
+    "~/Library/Application Scripts/com.w.paper",
     "~/Library/Containers/com.w.paper",
     "~/Library/Containers/com.w.paper-LaunchAtLoginHelper",
   ]
