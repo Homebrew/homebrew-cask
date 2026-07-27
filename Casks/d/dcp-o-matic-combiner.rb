@@ -15,5 +15,5 @@ cask "dcp-o-matic-combiner" do
 
   app "DCP-o-matic #{version.major} Combiner.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.combiner.plist"
 end
