@@ -8,6 +8,11 @@ cask "koharu" do
   desc "ML-powered manga translator"
   homepage "https://koharu.rs/"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   depends_on :macos
   depends_on arch: :arm64
 
