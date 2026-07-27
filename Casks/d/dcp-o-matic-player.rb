@@ -15,5 +15,5 @@ cask "dcp-o-matic-player" do
 
   app "DCP-o-matic #{version.major} Player.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Preferences/com.dcpomatic.player.plist"
 end
