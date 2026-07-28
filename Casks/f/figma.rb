@@ -25,10 +25,12 @@ cask "figma" do
   uninstall quit: "com.figma.agent"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.figma.desktop.sfl*",
     "~/Library/Application Support/Figma",
     "~/Library/Application Support/figma-desktop",
     "~/Library/Caches/com.figma.agent",
     "~/Library/Caches/com.figma.Desktop",
+    "~/Library/HTTPStorages/com.figma.agent",
     "~/Library/Preferences/com.figma.Desktop.plist",
     "~/Library/Saved Application State/com.figma.Desktop.savedState",
   ]
