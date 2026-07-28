@@ -16,7 +16,12 @@ cask "restream-chat" do
 
   app "Restream Chat.app"
 
-  zap trash: "~/Library/Application Support/Restream Chat"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.restream.chat.sfl*",
+    "~/Library/Application Support/Restream Chat",
+    "~/Library/Logs/Restream Chat",
+    "~/Library/Preferences/io.restream.chat.plist",
+  ]
 
   caveats do
     requires_rosetta
