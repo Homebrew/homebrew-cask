@@ -31,6 +31,7 @@ cask "terax" do
       "~/Library/Application Support/app.crynta.terax",
       "~/Library/Caches/app.crynta.terax",
       "~/Library/Logs/app.crynta.terax",
+      "~/Library/Preferences/app.crynta.terax.plist",
       "~/Library/WebKit/app.crynta.terax",
     ]
   end
