@@ -18,7 +18,9 @@ cask "vitalsource-bookshelf" do
   app "VitalSource Bookshelf.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vitalsource.bookshelf.sfl*",
     "~/Library/Application Support/com.vitalsource.bookshelf",
+    "~/Library/HTTPStorages/com.vitalsource.bookshelf",
     "~/Library/Logs/Vitalsource Bookshelf",
     "~/Library/Preferences/com.vitalsource.bookshelf.plist",
   ]
