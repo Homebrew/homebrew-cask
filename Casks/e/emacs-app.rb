@@ -1,17 +1,22 @@
 cask "emacs-app" do
-  arch arm: "arm64-11", intel: "x86_64-10_12"
+  arch arm: "arm64-11", intel: "x86_64-11"
 
   version "30.2-2"
   sha256 "eca916e584744fead7dd600a66f148b05b0daf58c45be606e8599ef25bad8835"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   name "Emacs"
-  desc "Text editor"
+  desc "GNU Emacs text editor"
   homepage "https://emacsformacosx.com/"
 
   livecheck do
     url "https://emacsformacosx.com/atom/release"
-    regex(%r{href=.*?/Emacs[._-]v?(\d+(?:\.\d+)*(?:-\d+)?)[._-]universal\.dmg}i)
+    regex(/Emacs[._-]v?(\d+(?:[.-]\d+)+)[._-]universal\.dmg/i)
+    strategy :xml do |xml, regex|
+      xml.get_elements("/feed/entry/link").filter_map do |item|
+        item.attributes["href"]&.[](regex, 1)
+      end
+    end
   end
 
   conflicts_with cask: [
@@ -22,11 +27,9 @@ cask "emacs-app" do
 
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"
-  binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/ctags"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/ebrowse"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/emacsclient"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/etags"
-  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/ctags.1.gz"
   manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/ebrowse.1.gz"
   manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacs.1.gz"
   manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacsclient.1.gz"
