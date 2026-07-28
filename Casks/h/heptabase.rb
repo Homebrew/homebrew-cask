@@ -22,6 +22,7 @@ cask "heptabase" do
   app "Heptabase.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.projectmeta.projectmeta.sfl*",
     "~/Library/Preferences/app.projectmeta.projectmeta.plist",
     "~/Library/Saved Application State/app.projectmeta.projectmeta.savedState",
   ]

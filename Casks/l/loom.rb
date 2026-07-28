@@ -23,6 +23,7 @@ cask "loom" do
   uninstall login_item: "Loom"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.loom.desktop.sfl*",
     "~/Library/Application Support/Loom",
     "~/Library/Logs/Loom",
     "~/Library/Preferences/com.loom.desktop.plist",

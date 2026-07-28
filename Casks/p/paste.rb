@@ -20,6 +20,7 @@ cask "paste" do
   zap trash: [
     "~/Library/Application Support/com.wiheads.paste-direct",
     "~/Library/Caches/com.wiheads.paste-direct",
+    "~/Library/Group Containers/group.com.wiheads.paste",
     "~/Library/HTTPStorages/com.wiheads.paste-direct",
     "~/Library/Preferences/com.wiheads.paste-direct.plist",
   ]

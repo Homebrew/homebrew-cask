@@ -25,6 +25,7 @@ cask "pitch" do
   app "Pitch.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.pitch.pitch-macos.sfl*",
     "~/Library/Application Support/Pitch",
     "~/Library/Logs/Pitch",
     "~/Library/Preferences/io.pitch.pitch-macos.plist",

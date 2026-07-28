@@ -22,6 +22,7 @@ cask "bilibili" do
 
   zap trash: [
     "~/Library/Application Support/bilibili",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bilibili.bilibilipc.sfl*",
     "~/Library/Logs/bilibili",
     "~/Library/Preferences/com.bilibili.bilibiliPC.plist",
     "~/Library/Saved Application State/com.bilibili.bilibiliPC.savedState",

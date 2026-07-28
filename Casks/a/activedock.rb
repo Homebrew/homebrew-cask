@@ -20,6 +20,7 @@ cask "activedock" do
 
   zap trash: [
     "~/Library/Application Support/ActiveDock #{version.major}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sergey-gerasimenko.activedock-#{version.major}.sfl*",
     "~/Library/Application Support/com.sergey-gerasimenko.ActiveDock-#{version.major}",
     "~/Library/Caches/com.sergey-gerasimenko.ActiveDock-#{version.major}",
     "~/Library/HTTPStorages/com.sergey-gerasimenko.ActiveDock-#{version.major}",

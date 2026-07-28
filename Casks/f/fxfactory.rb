@@ -33,6 +33,8 @@ cask "fxfactory" do
 
   zap trash: [
     "~/Library/Application Scripts/com.fxfactory.FxFactoryService.pluginkit",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fxfactory.fxfactory.sfl*",
+    "~/Library/Caches/com.fxfactory.FxFactory",
     "~/Library/Preferences/com.fxfactory.FxFactory.plist",
     "~/Movies/Motion Templates.localized",
   ]

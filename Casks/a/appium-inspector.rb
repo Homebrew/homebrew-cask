@@ -37,6 +37,7 @@ cask "appium-inspector" do
 
   zap trash: [
     "~/Library/Application Support/appium-inspector",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.appium.inspector.sfl*",
     "~/Library/Logs/Appium Inspector",
     "~/Library/Preferences/io.appium.inspector.plist",
     "~/Library/Saved Application State/io.appium.inspector.savedState",

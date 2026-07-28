@@ -19,5 +19,8 @@ cask "vicinae" do
     "~/.config/vicinae",
     "~/.local/share/vicinae",
     "~/.local/state/vicinae",
+    "~/Library/Caches/com.vicinaehq.Vicinae",
+    "~/Library/Caches/vicinae",
+    "~/Library/HTTPStorages/com.vicinaehq.Vicinae",
   ]
 end

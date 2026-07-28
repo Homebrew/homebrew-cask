@@ -29,8 +29,10 @@ cask "cc-pocket" do
   app "CC Pocket.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.k9i.ccpocket",
     "~/Library/Application Support/com.k9i.ccpocket",
     "~/Library/Caches/com.k9i.ccpocket",
+    "~/Library/Containers/com.k9i.ccpocket",
     "~/Library/HTTPStorages/com.k9i.ccpocket",
     "~/Library/Preferences/com.k9i.ccpocket.plist",
     "~/Library/Saved Application State/com.k9i.ccpocket.savedState",

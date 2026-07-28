@@ -20,5 +20,9 @@ cask "nimbalyst" do
 
   app "Nimbalyst.app"
 
-  zap trash: "~/Library/Application Support/@nimbalyst"
+  zap trash: [
+    "~/Library/Application Support/@nimbalyst",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nimbalyst.electron.sfl*",
+    "~/Library/Preferences/com.nimbalyst.electron.plist",
+  ]
 end

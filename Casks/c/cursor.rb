@@ -23,6 +23,7 @@ cask "cursor" do
       "~/.cursor",
       "~/.cursor-tutor",
       "~/Library/Application Support/Caches/cursor-updater",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.230313mzl4w4u92.sfl*",
       "~/Library/Application Support/Cursor",
       "~/Library/Caches/com.todesktop.*",
       "~/Library/Caches/com.todesktop.*.ShipIt",

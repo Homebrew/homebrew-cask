@@ -18,7 +18,14 @@ cask "expandrive" do
   app "ExpanDrive.app"
 
   zap trash: [
+    "~/Library/Application Scripts/CH86M498V4.com.expandrive",
+    "~/Library/Application Scripts/com.expandrive.ExpanDrive.FileProvider",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.expandrive.expandrive.sfl*",
     "~/Library/Application Support/ExpanDrive",
+    "~/Library/Containers/com.expandrive.ExpanDrive.FileProvider",
+    "~/Library/Group Containers/CH86M498V4.com.expandrive",
+    "~/Library/HTTPStorages/com.expandrive.ExpanDrive",
+    "~/Library/Logs/ExpanDrive",
     "~/Library/Preferences/com.expandrive.exfs.plist",
     "~/Library/Preferences/com.expandrive.ExpanDrive*.plist",
     "~/Library/Preferences/com.expandrive.ExpanDrive.helper.plist",

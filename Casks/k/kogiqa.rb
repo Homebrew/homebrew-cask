@@ -17,5 +17,9 @@ cask "kogiqa" do
 
   app "kogiQA.app"
 
-  zap trash: "~/Library/Application Support/kogiQA"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.atagon.kogi.app.sfl*",
+    "~/Library/Application Support/kogiQA",
+    "~/Library/Preferences/com.atagon.kogi.app.plist",
+  ]
 end

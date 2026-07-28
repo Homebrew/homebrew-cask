@@ -18,8 +18,10 @@ cask "spokenly" do
   app "Spokenly.app"
 
   zap trash: [
+    "~/Library/Application Support/app.spokenly.revenuecat",
     "~/Library/Application Support/Spokenly",
     "~/Library/Caches/app.spokenly",
+    "~/Library/HTTPStorages/app.spokenly",
     "~/Library/Preferences/app.spokenly.plist",
   ]
 end

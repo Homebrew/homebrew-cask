@@ -23,7 +23,9 @@ cask "apifox" do
   app "Apifox.app"
 
   zap trash: [
+    "~/.apifox-ai-agent-debugger",
     "~/Library/Application Support/apifox",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cn.apifox.app.sfl*",
     "~/Library/Preferences/cn.apifox.app.plist",
     "~/Library/Saved Application State/cn.apifox.app.savedState",
   ]

@@ -25,6 +25,7 @@ cask "opencode-desktop" do
 
   zap trash: [
     "~/Library/Application Support/ai.opencode.desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.opencode.desktop.sfl*",
     "~/Library/Caches/ai.opencode.desktop",
     "~/Library/HTTPStorages/ai.opencode.desktop",
     "~/Library/Logs/ai.opencode.desktop",

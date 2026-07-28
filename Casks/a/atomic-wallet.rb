@@ -18,6 +18,7 @@ cask "atomic-wallet" do
 
   zap trash: [
     "~/Library/Application Support/atomic",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.atomicwallet.sfl*",
     "~/Library/Logs/atomic",
     "~/Library/Preferences/io.atomicwallet.plist",
     "~/Library/Saved Application State/io.atomicwallet.savedState",

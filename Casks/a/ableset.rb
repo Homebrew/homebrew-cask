@@ -23,6 +23,7 @@ cask "ableset" do
 
   zap trash: [
     "~/Library/Application Support/ableset",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.leolabs.ableset.sfl*",
     "~/Library/Caches/ableset-updater",
     "~/Library/Caches/ableset_controller",
     "~/Library/Caches/org.leolabs.ableset",

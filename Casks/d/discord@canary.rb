@@ -19,6 +19,7 @@ cask "discord@canary" do
   app "Discord Canary.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hnc.discordcanary.sfl*",
     "~/Library/Application Support/discordcanary",
     "~/Library/Caches/com.hnc.DiscordCanary",
     "~/Library/Caches/com.hnc.DiscordCanary.ShipIt",

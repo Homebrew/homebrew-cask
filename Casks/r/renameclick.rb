@@ -22,10 +22,12 @@ cask "renameclick" do
   app "RenameClick.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.renameclick.app.sfl*",
     "~/Library/Application Support/RenameClick",
     "~/Library/Caches/com.renameclick.app",
     "~/Library/Caches/com.renameclick.app.helper",
     "~/Library/HTTPStorages/com.renameclick.app",
+    "~/Library/Logs/RenameClick",
     "~/Library/Logs/renameclick.log",
     "~/Library/Preferences/com.renameclick.app.helper.plist",
     "~/Library/Preferences/com.renameclick.app.plist",

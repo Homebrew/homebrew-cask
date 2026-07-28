@@ -22,6 +22,7 @@ cask "hotovo-aider-desk" do
 
   zap trash: [
     "~/Library/Application Support/aider-desk",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hotovo.aider-desk.sfl*",
     "~/Library/Logs/aider-desk",
     "~/Library/Preferences/com.hotovo.aider-desk.plist",
     "~/Library/Saved Application State/com.hotovo.aider-desk.savedState",

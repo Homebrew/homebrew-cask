@@ -33,6 +33,7 @@ cask "chatgpt-atlas" do
     "~/Library/Caches/com.openai.atlas",
     "~/Library/HTTPStorages/com.openai.atlas",
     "~/Library/HTTPStorages/com.openai.atlas.binarycookies",
+    "~/Library/LaunchAgents/com.openai.atlas.update-helper.plist",
     "~/Library/Logs/DiagnosticReports/ChatGPT Atlas (Service)*.ips",
     "~/Library/Preferences/com.openai.atlas.plist",
     "~/Library/Preferences/com.openai.atlas.web.plist",

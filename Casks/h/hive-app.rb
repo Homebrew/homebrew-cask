@@ -17,6 +17,7 @@ cask "hive-app" do
 
   zap trash: [
     "~/.hive",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hive.app.sfl*",
     "~/Library/Application Support/hive",
     "~/Library/Logs/hive",
     "~/Library/Preferences/com.hive.app.plist",

@@ -28,6 +28,7 @@ cask "gitify" do
     "~/Library/Caches/com.electron.gitify*",
     "~/Library/Caches/gitify-updater",
     "~/Library/HTTPStorages/com.electron.gitify",
+    "~/Library/Logs/gitify",
     "~/Library/Preferences/com.electron.gitify*.plist",
     "~/Library/Saved Application State/com.electron.gitify.savedState",
   ]
