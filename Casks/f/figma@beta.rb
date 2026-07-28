@@ -21,7 +21,10 @@ cask "figma@beta" do
 
   app "Figma Beta.app"
 
+  uninstall quit: "com.figma.agent"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.figma.desktopbeta.sfl*",
     "~/Library/Caches/com.figma.agent",
     "~/Library/Preferences/com.figma.DesktopBeta.plist",
     "~/Library/Saved Application State/com.figma.DesktopBeta.savedState",
