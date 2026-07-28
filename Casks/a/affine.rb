@@ -1,12 +1,14 @@
 cask "affine" do
   arch arm: "arm64", intel: "x64"
+  os macos: "macos", linux: "linux"
 
   version "0.27.3"
 
-  artifact = on_system_conditional(
-    macos: "affine-#{version}-stable-macos-#{arch}.zip",
-    linux: "affine-#{version}-stable-linux-x64.appimage",
-  )
+  extension = on_system_conditional(
+    macos: "zip",
+    linux: "appimage",
+    )
+  artifact = "affine-#{version}-stable-#{os}-#{arch}.#{extension}"
 
   url "https://github.com/toeverything/AFFiNE/releases/download/v#{version}/#{artifact}",
       verified: "github.com/toeverything/AFFiNE/"
