@@ -16,5 +16,9 @@ cask "beid-viewer" do
   depends_on cask: "beid-token"
 
   app "eID Viewer.app"
-  # No zap stanza required
+
+  zap trash: [
+    "~/Library/Caches/be.fedict.eid.eID-Viewer",
+    "~/Library/HTTPStorages/be.fedict.eid.eID-Viewer",
+  ]
 end
