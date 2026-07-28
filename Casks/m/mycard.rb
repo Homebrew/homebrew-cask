@@ -18,6 +18,7 @@ cask "mycard" do
   app "MyCard.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mycard.mycard.sfl*",
     "~/Library/Application Support/mycard",
     "~/Library/Application Support/MyCardLibrary",
     "~/Library/Logs/MyCard",
