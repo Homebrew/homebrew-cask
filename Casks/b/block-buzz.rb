@@ -1,7 +1,7 @@
 cask "block-buzz" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.4.26"
+  version "0.5.0"
 
   artifact = on_system_conditional linux: "Buzz_#{version}_amd64.AppImage",
                                    macos: "Buzz_#{version}_#{arch}.dmg"
@@ -12,8 +12,8 @@ cask "block-buzz" do
   homepage "https://github.com/block/buzz"
 
   on_macos do
-    sha256 arm:   "abc60e0e44c9bc9b0ce7d668651a955a87cf95390f66bb9b71d36f9c0e5c25a3",
-           intel: "fa7c94c41a535295535a772fc5751fe478deea8caae3fe19268c28f7153d07d1"
+    sha256 arm:   "a096767f08f5528d780335b58b4bebc948becaa8855c5093107edf16e45a497c",
+           intel: "7beec2b49fef0c7d5f976d65a5960560322912f3426877fea96f9a9175de51f7"
 
     conflicts_with cask: "buzz"
 
@@ -31,7 +31,7 @@ cask "block-buzz" do
   end
 
   on_linux do
-    sha256 "5ce7a56ee51db66c3d219f4f95bd92021fc689563ea6a425441751f68582820f"
+    sha256 "aecd02d92afe5c5aa2c86f44f4b321be08c149a9d24f1dc5905a03737595ec69"
 
     depends_on arch: :x86_64
 
