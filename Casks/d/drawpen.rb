@@ -21,7 +21,10 @@ cask "drawpen" do
   app "DrawPen.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dmytro.vasin.drawpen.sfl*",
     "~/Library/Application Support/DrawPen",
+    "~/Library/Caches/dmytro.vasin.drawpen*",
+    "~/Library/HTTPStorages/dmytro.vasin.drawpen",
     "~/Library/Logs/DrawPen",
     "~/Library/Preferences/*drawpen*.plist",
     "~/Library/Saved Application State/*DrawPen*.savedState",
