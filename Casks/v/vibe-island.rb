@@ -22,6 +22,7 @@ cask "vibe-island" do
   zap trash: [
     "~/.vibe-island",
     "~/Library/Caches/app.vibeisland.macos",
+    "~/Library/HTTPStorages/app.vibeisland.macos",
     "~/Library/Preferences/app.vibeisland.macos.plist",
   ]
 end
