@@ -1,5 +1,5 @@
 cask "nvidia-geforce-now" do
-  version "2.0.86.136"
+  version "2.0.87.131"
   sha256 :no_check
 
   url "https://download.nvidia.com/gfnpc/GeForceNOW-release.dmg"
