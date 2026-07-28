@@ -21,6 +21,7 @@ cask "framer" do
   app "Framer.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.framer.electron.sfl*",
     "~/Library/Application Support/Framer",
     "~/Library/Caches/com.framer.electron",
     "~/Library/Caches/com.framer.electron.ShipIt",
