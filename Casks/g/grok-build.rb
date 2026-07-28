@@ -20,7 +20,6 @@ cask "grok-build" do
 
   binary "grok-#{version}-#{os}-#{arch}", target: "grok"
   binary "grok-#{version}-#{os}-#{arch}", target: "agent"
-
   generate_completions_from_executable "grok-#{version}-#{os}-#{arch}", "completions", base_name: "grok"
 
   zap rmdir: "~/.grok"

@@ -1,17 +1,8 @@
 cask "neovide-app" do
   arch arm: "aarch64", intel: "x86_64"
+  os macos: "Neovide-#{arch}-apple-darwin.dmg", linux: "neovide.AppImage"
 
   version "0.16.2"
-
-  artifact = on_system_conditional linux: "neovide.AppImage",
-                                   macos: "Neovide-#{arch}-apple-darwin.dmg"
-
-  url "https://github.com/neovide/neovide/releases/download/#{version}/#{artifact}"
-  name "Neovide"
-  desc "Neovim Client"
-  homepage "https://github.com/neovide/neovide"
-
-  depends_on formula: "neovim"
 
   on_macos do
     sha256 arm:   "5eb745ea7f20cf00491a8ffd8d793c6169ef1c6e1a0f75ae8be40571e65c6b26",
@@ -25,11 +16,18 @@ cask "neovide-app" do
       "~/Library/Saved Application State/com.neovide.neovide.savedState",
     ]
   end
-
   on_linux do
     sha256 "ef617c743d7425267ac3ae2f1761ac8fc801683bd3e013758eb68247a53c6812"
 
     depends_on arch: :x86_64
-    app_image artifact
+
+    app_image "neovide.AppImage", target: "Neovide.AppImage"
   end
+
+  url "https://github.com/neovide/neovide/releases/download/#{version}/#{os}"
+  name "Neovide"
+  desc "Neovim Client"
+  homepage "https://github.com/neovide/neovide"
+
+  depends_on formula: "neovim"
 end
