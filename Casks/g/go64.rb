@@ -1,7 +1,7 @@
 cask "go64" do
   # NOTE: "64" is not a version number, but an intrinsic part of the product name
-  version "1.4"
-  sha256 "f12025face61f2d1c33b11445a5fb635c0bd92252d7f4e79ab791102d7c4cd78"
+  version "1.5"
+  sha256 "1909511d64852e7b203357d37f7c1db4c01cb869a3e703ce338737d59b27188d"
 
   url "https://www.stclairsoft.com/download/Go64-#{version}.zip"
   name "Go64"
