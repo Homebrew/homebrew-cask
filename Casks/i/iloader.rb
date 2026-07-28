@@ -27,7 +27,11 @@ cask "iloader" do
     auto_updates true
     app "iloader.app"
 
-    zap trash: "~/Library/Application Support/me.nabdev.iloader"
+    zap trash: [
+      "~/Library/Application Support/me.nabdev.iloader",
+      "~/Library/Caches/me.nabdev.iloader",
+      "~/Library/WebKit/me.nabdev.iloader",
+    ]
   end
 
   on_linux do
