@@ -22,9 +22,7 @@ cask "otty" do
 
   app "Otty.app"
   binary "#{appdir}/Otty.app/Contents/MacOS/otty-cli", target: "otty"
-
-  generate_completions_from_executable "#{HOMEBREW_PREFIX}/bin/otty", "completions",
-                                       shells: [:bash, :zsh, :fish]
+  generate_completions_from_executable "#{HOMEBREW_PREFIX}/bin/otty", "completions"
 
   zap trash: [
     "~/.config/otty",
