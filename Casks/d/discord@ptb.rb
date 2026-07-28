@@ -19,6 +19,7 @@ cask "discord@ptb" do
   app "Discord PTB.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hnc.discordptb.sfl*",
     "~/Library/Application Support/com.hnc.DiscordPTB.ShipIt",
     "~/Library/Application Support/discordptb",
     "~/Library/Caches/com.hnc.DiscordPTB",
