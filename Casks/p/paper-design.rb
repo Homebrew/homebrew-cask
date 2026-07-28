@@ -30,6 +30,7 @@ cask "paper-design" do
   uninstall quit: "com.todesktop.2601167vjw8xe"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.todesktop.2601167vjw8xe.sfl*",
     "~/Library/Application Support/Paper",
     "~/Library/Preferences/com.todesktop.2601167vjw8xe.plist",
   ]
