@@ -21,6 +21,7 @@ cask "subtitle-studio" do
   app "Subtitle Studio.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.subtitle.studio.sfl*",
     "~/Library/Application Support/subtitle-studio",
     "~/Library/Preferences/com.subtitle.studio.plist",
   ]
