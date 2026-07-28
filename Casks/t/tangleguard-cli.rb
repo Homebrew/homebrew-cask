@@ -8,8 +8,11 @@ cask "tangleguard-cli" do
          arm64_linux:  "c4412246b750d2cf8c91d71a3e240a65896811a616e9594a4cdda784ee8bb716",
          x86_64_linux: "e63c160685e64b512ac68db0b22ac848165e12e44b4e240b5fd9fbfe82503259"
 
-  url "https://tangleguard-cli-builds.s3.eu-central-1.amazonaws.com/v#{version}/tangleguard-cli_#{version}_#{arch}-#{os}.tar.gz",
-      verified: "tangleguard-cli-builds.s3.eu-central-1.amazonaws.com/"
+  on_macos do
+    zap trash: "~/Library/Application Support/CrashReporter/tangleguard-cli*"
+  end
+
+  url "https://tangleguard-cli-builds.s3.eu-central-1.amazonaws.com/v#{version}/tangleguard-cli_#{version}_#{arch}-#{os}.tar.gz"
   name "Tangleguard CLI"
   desc "Codebase Architecture Context via the CLI for LLMs and Humans"
   homepage "https://tangleguard.com/"
@@ -20,8 +23,4 @@ cask "tangleguard-cli" do
   end
 
   binary "tangleguard-cli"
-
-  on_macos do
-    zap trash: "~/Library/Application Support/CrashReporter/tangleguard-cli*"
-  end
 end

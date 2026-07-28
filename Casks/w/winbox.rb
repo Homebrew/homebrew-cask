@@ -3,7 +3,6 @@ cask "winbox" do
 
   version "4.3"
 
-  url "https://download.mikrotik.com/routeros/winbox/#{version}/WinBox#{os}"
   on_macos do
     sha256 "5681d03e32133858b3dc541c78c1bae38cb3355b5fd98326ac725e0bd8bab570"
 
@@ -27,6 +26,7 @@ cask "winbox" do
     zap trash: "#{ENV.fetch("HOMEBREW_XDG_DATA_HOME", "~/.local/share")}/MikroTik/WinBox"
   end
 
+  url "https://download.mikrotik.com/routeros/winbox/#{version}/WinBox#{os}"
   name "WinBox"
   desc "Administration tool for MikroTik RouterOS"
   homepage "https://mikrotik.com/"

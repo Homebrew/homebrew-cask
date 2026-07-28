@@ -22,7 +22,6 @@ cask "zed" do
 
   app "Zed.app"
   binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"
-
   generate_completions_from_executable "#{HOMEBREW_PREFIX}/bin/zed", "--completions",
                                        shells: [:bash, :zsh, :fish, :pwsh]
 

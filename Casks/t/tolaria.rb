@@ -1,35 +1,8 @@
 cask "tolaria" do
-  arch arm: "Silicon", intel: "Intel"
+  arch arm: "Silicon", intel: on_system_conditional(macos: "Intel", linux: "amd64")
+  os macos: "_macOS_#{arch}.dmg", linux: "_#{arch}.AppImage"
 
   version "2026.07.22,2026.7.22"
-
-  artifact = on_system_conditional linux: "Tolaria_#{version.csv.second || version}_amd64.AppImage",
-                                   macos: "Tolaria_#{version.csv.second || version}_macOS_#{arch}.dmg"
-
-  url "https://github.com/refactoringhq/tolaria/releases/download/v#{version.csv.first.dots_to_hyphens}/#{artifact}",
-      verified: "github.com/refactoringhq/tolaria/"
-  name "Tolaria"
-  desc "Markdown knowledgebase manager"
-  homepage "https://tolaria.md/"
-
-  # The version formatting in the tag name can be inconsistent
-  # with the version in the asset name, so we need to compare
-  # both and return them in the version if they don't match.
-  livecheck do
-    url :url
-    regex(/Tolaria[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.dmg/i)
-    strategy :github_latest do |json, regex|
-      tag_version = json["tag_name"]&.tr("-", ".")&.gsub(/^v/, "")
-      next if tag_version.blank?
-
-      json["assets"]&.map do |asset|
-        match = asset["name"]&.match(regex)
-        next if match.blank?
-
-        (match[1] == tag_version) ? tag_version : "#{tag_version},#{match[1]}"
-      end
-    end
-  end
 
   on_macos do
     sha256 arm:   "cb8f5997868fc42aba31b67e154c02a86f046ca53ee98a2d48b3385cb2c902c4",
@@ -49,12 +22,35 @@ cask "tolaria" do
       "~/Library/WebKit/club.refactoring.tolaria",
     ]
   end
-
   on_linux do
     sha256 "6893d455572b42f095acfa3041673005ddb6e84852e3f3f3c7c2ab8d5ef6b7c1"
 
     depends_on arch: :x86_64
 
-    app_image artifact, target: "Tolaria.AppImage"
+    app_image "Tolaria_#{version.csv.second || version}_#{arch}.AppImage", target: "Tolaria.AppImage"
+  end
+
+  url "https://github.com/refactoringhq/tolaria/releases/download/v#{version.csv.first.dots_to_hyphens}/Tolaria_#{version.csv.second || version}#{os}"
+  name "Tolaria"
+  desc "Markdown knowledgebase manager"
+  homepage "https://tolaria.md/"
+
+  # The version formatting in the tag name can be inconsistent
+  # with the version in the asset name, so we need to compare
+  # both and return them in the version if they don't match.
+  livecheck do
+    url :url
+    regex(/Tolaria[._-]v?(\d+(?:\.\d+)+)#{os}/i)
+    strategy :github_latest do |json, regex|
+      tag_version = json["tag_name"]&.tr("-", ".")&.gsub(/^v/, "")
+      next if tag_version.blank?
+
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        (match[1] == tag_version) ? tag_version : "#{tag_version},#{match[1]}"
+      end
+    end
   end
 end
