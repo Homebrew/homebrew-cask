@@ -20,8 +20,12 @@ cask "nessie-app" do
 
   zap trash: [
     "~/Library/Application Scripts/com.nessielabs.Nessie",
+    "~/Library/Application Support/CrashReporter/Nessie_*.plist",
+    "~/Library/Application Support/Nessie",
     "~/Library/Caches/com.nessielabs.Nessie",
     "~/Library/Containers/com.nessielabs.Nessie",
+    "~/Library/HTTPStorages/com.nessielabs.Nessie",
+    "~/Library/Logs/DiagnosticReports/Nessie-*.ips",
     "~/Library/Preferences/com.nessielabs.Nessie.plist",
   ]
 end
