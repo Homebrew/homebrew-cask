@@ -24,12 +24,14 @@ cask "grammarly-desktop" do
   ]
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.grammarly.projectllama.loginhelper.sfl*",
     "~/Library/Application Support/com.grammarly.ProjectLlama",
     "~/Library/Caches/com.grammarly.ProjectLlama",
     "~/Library/HTTPStorages/com.grammarly.GRLlamaOnboarding.binarycookies",
     "~/Library/HTTPStorages/com.grammarly.ProjectLlama",
     "~/Library/HTTPStorages/com.grammarly.ProjectLlama.binarycookies",
     "~/Library/LaunchAgents/com.grammarly.ProjectLlama.Shepherd.plist",
+    "~/Library/LaunchAgents/com.grammarly.ProjectLlama.Uninstaller.plist",
     "~/Library/Preferences/com.grammarly.ProjectLlama.plist",
     "~/Library/WebKit/com.grammarly.GRLlamaOnboarding",
     "~/Library/WebKit/com.grammarly.ProjectLlama",
