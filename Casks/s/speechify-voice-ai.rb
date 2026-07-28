@@ -22,6 +22,7 @@ cask "speechify-voice-ai" do
     "~/Library/Application Support/com.cliffweitzman.speechifymacagent",
     "~/Library/Caches/com.cliffweitzman.speechifymacagent",
     "~/Library/Caches/com.crashlytics.data/com.cliffweitzman.speechifymacagent",
+    "~/Library/HTTPStorages/com.cliffweitzman.speechifymacagent",
     "~/Library/Preferences/com.cliffweitzman.speechifymacagent.plist",
   ]
 end
