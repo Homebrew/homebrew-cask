@@ -12,6 +12,8 @@ cask "hiddenbar" do
     strategy :github_latest
   end
 
+  disable! date: "2026-07-28", because: :moved_to_mas
+
   depends_on :macos
 
   app "Hidden Bar.app"
