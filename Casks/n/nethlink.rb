@@ -20,5 +20,9 @@ cask "nethlink" do
 
   app "NethLink.app"
 
-  zap trash: "~/Library/Application Support/nethlink"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nethesis.nethlink.app.sfl*",
+    "~/Library/Application Support/nethlink",
+    "~/Library/Preferences/com.nethesis.nethlink.app.plist",
+  ]
 end
