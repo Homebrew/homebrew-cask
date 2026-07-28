@@ -4,13 +4,9 @@ cask "affine" do
 
   version "0.27.3"
 
-  extension = on_system_conditional(
-    macos: "zip",
-    linux: "appimage",
-  )
-  artifact = "affine-#{version}-stable-#{os}-#{arch}.#{extension}"
+  url_end = on_system_conditional macos: ".zip", linux: ".appimage"
 
-  url "https://github.com/toeverything/AFFiNE/releases/download/v#{version}/#{artifact}",
+  url "https://github.com/toeverything/AFFiNE/releases/download/v#{version}/affine-#{version}-stable-#{os}-#{arch}#{url_end}",
       verified: "github.com/toeverything/AFFiNE/"
   name "AFFiNE"
   desc "Note editor and whiteboard"
@@ -44,6 +40,6 @@ cask "affine" do
 
     depends_on arch: :x86_64
 
-    app_image artifact, target: "AFFiNE.AppImage"
+    app_image "affine-#{version}-stable-linux-#{arch}.appimage", target: "AFFiNE.AppImage"
   end
 end
