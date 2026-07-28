@@ -26,6 +26,7 @@ cask "osaurus" do
     "~/Library/Application Support/Osaurus",
     "~/Library/Caches/com.dinoki.osaurus",
     "~/Library/HTTPStorages/com.dinoki.osaurus",
+    "~/Library/Logs/Osaurus",
     "~/Library/Preferences/com.dinoki.osaurus.plist",
     "~/Library/Saved Application State/com.dinoki.osaurus.savedState",
     "~/MLXModels",
