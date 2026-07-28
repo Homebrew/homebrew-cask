@@ -1,5 +1,5 @@
 cask "activedock" do
-  version "2.860"
+  version "2.881"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/ActiveDock.zip",
@@ -14,7 +14,7 @@ cask "activedock" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :sonoma
 
   app "ActiveDock #{version.major}.app"
 
