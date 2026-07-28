@@ -22,6 +22,8 @@ cask "bazecor" do
 
   zap trash: [
     "~/Library/Application Support/BAZECOR",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.dygmalab.bazecor.sfl*",
+    "~/Library/Logs/Bazecor",
     "~/Library/Preferences/com.dygmalab.bazecor.plist",
     "~/Library/Saved Application State/com.dygmalab.bazecor.savedState",
   ]
