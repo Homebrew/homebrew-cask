@@ -1,6 +1,6 @@
 cask "beid-viewer" do
-  version "5.1.22"
-  sha256 "925bf141569f0f27c28b54f25f2cfe61c5733a5bc5be4d1a2e827cdf3da21a80"
+  version "5.1.31"
+  sha256 "afa0795da0c1d49b4af0c9de0f38a6f66c4930ab4cc785822ca2eb7fd8773b5b"
 
   url "https://eid.belgium.be/sites/default/files/software/eID%20Viewer-#{version}.dmg"
   name "Belgian eID Viewer"
@@ -12,7 +12,7 @@ cask "beid-viewer" do
     regex(/href=.*?eID(?:(?:%20|\s)+|[._-])?Viewer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
   depends_on cask: "beid-token"
 
   app "eID Viewer.app"
