@@ -29,7 +29,12 @@ cask "geogebra" do
             pkgutil:    "org.geogebra#{version.major}.mac"
 
   zap trash: [
+    "~/Library/Application Scripts/org.geogebra#{version.major}.mac",
+    "~/Library/Application Scripts/W5S878FTRC.org.geogebra#{version.major}.mac",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.geogebra#{version.major}.mac.sfl*",
+    "~/Library/Containers/org.geogebra#{version.major}.mac",
     "~/Library/GeoGebra",
+    "~/Library/Group Containers/W5S878FTRC.org.geogebra#{version.major}.mac",
     "~/Library/Preferences/org.geogebra.mathapps.helper.plist",
     "~/Library/Preferences/org.geogebra.mathapps.plist",
     "~/Library/Saved Application State/org.geogebra.mathapps.savedState",
