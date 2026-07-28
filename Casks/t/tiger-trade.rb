@@ -23,6 +23,7 @@ cask "tiger-trade" do
 
   zap trash: [
     "~/Library/Application Scripts/com.itiger.TigerTrade-Mac",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.itiger.tigertrade-mac.sfl*",
     "~/Library/Containers/com.itiger.TigerTrade-Mac",
   ]
 end
