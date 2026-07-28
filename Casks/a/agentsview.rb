@@ -50,6 +50,7 @@ cask "agentsview" do
     zap trash: [
       "~/.agentsview",
       "~/Library/Caches/io.agentsview.desktop",
+      "~/Library/Logs/io.agentsview.desktop",
       "~/Library/WebKit/io.agentsview.desktop",
     ]
   end
