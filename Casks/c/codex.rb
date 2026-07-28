@@ -22,7 +22,6 @@ cask "codex" do
   depends_on formula: "ripgrep"
 
   binary "codex-#{arch}-#{os}", target: "codex"
-
   generate_completions_from_executable "codex-#{arch}-#{os}", "completion", base_name: "codex"
 
   zap rmdir: "~/.codex"
