@@ -18,9 +18,11 @@ cask "tableplus" do
   app "TablePlus.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyapp.tableplus.sfl*",
     "~/Library/Application Support/com.tinyapp.TablePlus",
     "~/Library/Caches/com.tinyapp.TablePlus",
     "~/Library/Cookies/com.tinyapp.TablePlus.binarycookies",
+    "~/Library/HTTPStorages/com.tinyapp.TablePlus",
     "~/Library/Preferences/com.tinyapp.TablePlus.plist",
     "~/Library/Saved Application State/com.tinyapp.TablePlus.savedState",
   ]
