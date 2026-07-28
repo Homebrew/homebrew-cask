@@ -25,7 +25,11 @@ cask "trainerroad" do
 
   app "TrainerRoad.app"
 
-  zap trash: "~/Library/Application Support/TrainerRoad"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.trainerroad.mac.sfl*",
+    "~/Library/Application Support/TrainerRoad",
+    "~/Library/Preferences/com.trainerroad.mac.plist",
+  ]
 
   caveats do
     requires_rosetta
