@@ -23,6 +23,7 @@ cask "ankama" do
 
   zap trash: [
     "~/Library/Application Support/Ankama Launcher",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ankama.zaap.sfl*",
     "~/Library/Preferences/com.ankama.zaap.plist",
     "~/Library/Saved Application State/com.ankama.zaap.savedState",
   ]
