@@ -7,7 +7,7 @@ cask "affine" do
   extension = on_system_conditional(
     macos: "zip",
     linux: "appimage",
-    )
+  )
   artifact = "affine-#{version}-stable-#{os}-#{arch}.#{extension}"
 
   url "https://github.com/toeverything/AFFiNE/releases/download/v#{version}/#{artifact}",
