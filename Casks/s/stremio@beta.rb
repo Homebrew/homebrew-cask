@@ -36,6 +36,7 @@ cask "stremio@beta" do
     "~/Library/Caches/com.stremio.stremio-shell-macos",
     "~/Library/Caches/com.westbridge.stremio*-mac",
     "~/Library/Caches/Smart Code ltd",
+    "~/Library/Logs/DiagnosticReports/Stremio-*.ips",
     "~/Library/Preferences/com.smartcodeltd.stremio.plist",
     "~/Library/Preferences/com.stremio.Stremio.plist",
     "~/Library/Preferences/com.westbridge.stremio*-mac.plist",
