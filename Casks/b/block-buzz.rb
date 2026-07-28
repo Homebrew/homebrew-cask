@@ -1,15 +1,8 @@
 cask "block-buzz" do
-  arch arm: "aarch64", intel: "x64"
+  arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
+  os macos: "dmg", linux: "AppImage"
 
   version "0.5.0"
-
-  artifact = on_system_conditional linux: "Buzz_#{version}_amd64.AppImage",
-                                   macos: "Buzz_#{version}_#{arch}.dmg"
-
-  url "https://github.com/block/buzz/releases/download/v#{version}/#{artifact}"
-  name "Buzz"
-  desc "Workspace for humans and AI agents"
-  homepage "https://github.com/block/buzz"
 
   on_macos do
     sha256 arm:   "a096767f08f5528d780335b58b4bebc948becaa8855c5093107edf16e45a497c",
@@ -29,12 +22,16 @@ cask "block-buzz" do
         ],
         rmdir: "~/.buzz"
   end
-
   on_linux do
     sha256 "aecd02d92afe5c5aa2c86f44f4b321be08c149a9d24f1dc5905a03737595ec69"
 
     depends_on arch: :x86_64
 
-    app_image artifact, target: "Buzz.AppImage"
+    app_image "Buzz_#{version}_#{arch}.AppImage", target: "Buzz.AppImage"
   end
+
+  url "https://github.com/block/buzz/releases/download/v#{version}/Buzz_#{version}_#{arch}.#{os}"
+  name "Buzz"
+  desc "Workspace for humans and AI agents"
+  homepage "https://github.com/block/buzz"
 end

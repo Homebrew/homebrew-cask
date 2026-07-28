@@ -14,7 +14,6 @@ cask "devtunnel" do
 
     binary "devtunnel"
   end
-
   on_linux do
     url "https://tunnelsassetsprod.blob.core.windows.net/cli/#{version}/#{os}-#{arch}-devtunnel",
         verified: "tunnelsassetsprod.blob.core.windows.net/cli/"
