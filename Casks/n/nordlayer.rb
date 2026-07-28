@@ -27,10 +27,12 @@ cask "nordlayer" do
 
   zap trash: [
     "~/Library/Application Scripts/com.nordvpn.macos.teams",
+    "~/Library/Application Scripts/group.com.nordlayer.macos",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nordvpn.macos.teams.sfl*",
     "~/Library/Application Support/com.nordvpn.macos.teams",
     "~/Library/Caches/com.nordvpn.macos.teams",
     "~/Library/Containers/com.nordvpn.macos.teams",
+    "~/Library/Group Containers/group.com.nordlayer.macos",
     "~/Library/HTTPStorages/com.nordvpn.macos.teams",
     "~/Library/Preferences/com.nordvpn.macos.teams.plist",
   ]
