@@ -20,7 +20,11 @@ cask "toolhive-studio" do
   app "ToolHive.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.toolhive.sfl*",
     "~/Library/Application Support/ToolHive",
+    "~/Library/Caches/com.electron.toolhive*",
+    "~/Library/HTTPStorages/com.electron.toolhive",
     "~/Library/Logs/ToolHive",
+    "~/Library/Preferences/com.electron.toolhive.plist",
   ]
 end
