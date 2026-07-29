@@ -54,5 +54,6 @@ cask "uuremote" do
     "~/Library/HTTPStorages/com.netease.uuremote.server",
     "~/Library/Preferences/com.netease.uuremote.plist",
     "~/Library/Preferences/com.netease.uuremote.server.plist",
+    "~/Library/WebKit/com.netease.uuremote",
   ]
 end
