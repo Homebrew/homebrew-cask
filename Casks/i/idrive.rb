@@ -49,9 +49,15 @@ cask "idrive" do
 
   zap trash: [
     "/Library/Application Support/IDriveforMac",
+    "~/Library/Application Scripts/Idrive.Finder*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.prosoftnet.idrivemonitor.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/idrive.finderpluginapp.sfl*",
     "~/Library/Application Support/IDriveforMac",
     "~/Library/Caches/com.prosoftnet.IDriveMonitor",
+    "~/Library/Containers/Idrive.FinderPluginApp.IDriveFinderSync",
+    "~/Library/Group Containers/Idrive.Finder",
     "~/Library/Preferences/com.prosoftnet.IDrive.plist",
     "~/Library/Preferences/com.prosoftnet.IDriveMonitor.plist",
+    "~/Library/Preferences/Idrive.FinderPluginApp.plist",
   ]
 end
