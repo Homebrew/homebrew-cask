@@ -19,6 +19,7 @@ cask "discord@development" do
   app "Discord Development.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hnc.discorddevelopment.sfl*",
     "~/Library/Application Support/discorddevelopment",
     "~/Library/Caches/com.hnc.DiscordDevelopment",
     "~/Library/Caches/com.hnc.DiscordDevelopment.ShipIt",
