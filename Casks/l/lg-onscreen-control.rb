@@ -33,10 +33,8 @@ cask "lg-onscreen-control" do
 
   pkg "OSC_V#{version.csv.first}_signed.pkg"
 
-  postflight do
-    system_command "/bin/chmod",
-                   args: ["755", "/usr/local", "/usr/local/lmm"],
-                   sudo: true
+  postflight_steps do
+    run "/bin/chmod", args: ["755", "/usr/local", "/usr/local/lmm"], sudo: true
   end
 
   uninstall quit:       [
