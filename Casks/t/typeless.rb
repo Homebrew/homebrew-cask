@@ -23,8 +23,12 @@ cask "typeless" do
   app "Typeless.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/now.typeless.desktop.sfl*",
+    "~/Library/Application Support/now.typeless.desktop",
     "~/Library/Application Support/typeless",
     "~/Library/Caches/typeless",
     "~/Library/Preferences/com.typeless.plist",
+    "~/Library/Preferences/now.typeless.desktop.plist",
+    "~/Library/Saved Application State/now.typeless.desktop.savedState",
   ]
 end
