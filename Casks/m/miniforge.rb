@@ -29,15 +29,15 @@ cask "miniforge" do
   binary "#{caskroom_path}/base/condabin/mamba"
 
   postflight_steps do
-    if_path_exists "{{temp}}/#{token}-envs" do
+    if_path_exists "{{temp}}/{{token}}-envs" do
       remove "base/envs", base: :caskroom_path, recursive: true
-      move "{{temp}}/#{token}-envs", "base/envs", target_base: :caskroom_path
+      move "{{temp}}/{{token}}-envs", "base/envs", target_base: :caskroom_path
     end
   end
 
   uninstall_preflight_steps do
     if_path_exists "{{caskroom_path}}/base/envs" do
-      move "base/envs", "{{temp}}/#{token}-envs", source_base: :caskroom_path
+      move "base/envs", "{{temp}}/{{token}}-envs", source_base: :caskroom_path
     end
   end
 
