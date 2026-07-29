@@ -21,6 +21,7 @@ cask "screenkite" do
   zap trash: [
     "~/Library/Application Scripts/com.screenkite.mac.ScreenKitePreviewExtension",
     "~/Library/Application Scripts/com.screenkite.mac.ScreenKiteThumbnailExtension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.screenkite.mac.sfl*",
     "~/Library/Application Support/com.screenkite.mac",
     "~/Library/Application Support/ScreenKite",
     "~/Library/Caches/com.crashlytics.data/com.screenkite.mac",
@@ -31,6 +32,7 @@ cask "screenkite" do
     "~/Library/HTTPStorages/com.screenkite.mac.binarycookies",
     "~/Library/Logs/ScreenKite",
     "~/Library/Preferences/com.screenkite.mac.plist",
+    "~/Library/Preferences/group.com.screenkite.mac.firebase.plist",
     "~/Library/Saved Application State/com.screenkite.mac.savedState",
     "~/Library/WebKit/com.screenkite.mac",
   ]
