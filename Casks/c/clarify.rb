@@ -16,6 +16,7 @@ cask "clarify" do
 
   zap trash: [
     "~/Library/Application Support/clarify-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.clarify.desktop.sfl*",
     "~/Library/Caches/com.clarify.desktop",
     "~/Library/Caches/com.clarify.desktop.ShipIt",
     "~/Library/HTTPStorages/com.clarify.desktop",
