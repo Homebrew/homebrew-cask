@@ -46,6 +46,7 @@ cask "cmake-app" do
   manpage "#{appdir}/CMake.app/Contents/man/man7/cpack-generators.7"
 
   zap trash: [
+    "~/Library/Preferences/com.kitware.CMakeSetup.plist",
     "~/Library/Preferences/org.cmake.cmake.plist",
     "~/Library/Saved Application State/org.cmake.cmake.savedState",
   ]
