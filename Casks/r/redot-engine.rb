@@ -5,7 +5,7 @@ cask "redot-engine" do
   url "https://github.com/Redot-Engine/redot-engine/releases/download/redot-#{version}-stable/Redot_v#{version}-stable_macos_universal.zip",
       verified: "github.com/Redot-Engine/redot-engine/"
   name "Redot Engine"
-  desc "2D and 3D game engine"
+  desc "Redot Engine – Multi-platform 2D and 3D game engine"
   homepage "https://redotengine.org/"
 
   livecheck do
