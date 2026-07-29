@@ -1,6 +1,6 @@
 cask "typinator" do
-  version "10.1"
-  sha256 "223b0ef7d877274ba0133aaf1bf836ff06a3122e0683c82f790446a6d038fd77"
+  version "10.2"
+  sha256 "381d0a71931f08de2f588185ae9647d59692389d04735c0835322ed5fb3b9694"
 
   url "https://storage.ergonis.com/apps/production/typinator/archive/Typinator_#{version.no_dots}.dmg"
   name "Typinator"
