@@ -1,9 +1,9 @@
 cask "1password@beta" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "8.12.30-19.BETA"
-  sha256 arm:   "ef267e14cb49cf22910dfb207f103cfa9af237ec106eef6f174a7178b82d0836",
-         intel: "81825c70cf880d210f01680563337106b95a7f3cf4a34182cf300b0443c5a1ec"
+  version "8.12.32-26.BETA"
+  sha256 arm:   "795915006411456bf8bcc9c626dfb811301d9d4ebfb252d79532605f184d4737",
+         intel: "3e1a9d52677b12362261bcf1bb3b38678bf64c3d12e9224f68a2ef8a70b172a1"
 
   url "https://downloads.1password.com/mac/1Password-#{version}-#{arch}.zip"
   name "1Password"
@@ -25,6 +25,12 @@ cask "1password@beta" do
   depends_on macos: :monterey
 
   app "1Password.app"
+
+  uninstall launchctl: [
+              "2BUA8C4S2C.com.1password.browser-helper",
+              "com.1password.1password-launcher",
+            ],
+            quit:      "com.1password.1password"
 
   zap trash: [
     "~/Library/Application Scripts/2BUA8C4S2C.com.1password*",
