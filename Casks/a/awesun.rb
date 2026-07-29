@@ -23,13 +23,18 @@ cask "awesun" do
 
   pkg "AweSun.pkg"
 
-  postflight do
+  postflight_steps do
     # The postinstall script automatically opens the app. Therefore, we must
     # suppress this behavior to make the cask installation non-interactive.
-    retries ||= 3
-    ohai "The AweSun package postinstall script launches the app" if retries >= 3
-    ohai "Attempting to close AweSun to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/AweSun.app"]
+    terminate_process(
+      "/Applications/AweSun.app",
+      match:        :full,
+      must_succeed: true,
+      notices:      [
+        "The AweSun package postinstall script launches the app",
+        "Attempting to close AweSun to avoid unwanted user intervention",
+      ],
+    )
   end
 
   uninstall launchctl: [

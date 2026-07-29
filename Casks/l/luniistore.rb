@@ -21,13 +21,18 @@ cask "luniistore" do
 
   pkg "Lunii-#{version}-#{arch}.pkg"
 
-  postflight do
+  postflight_steps do
     # The postinstall script automatically opens the app. Therefore, we must
     # suppress this behavior to make the cask installation non-interactive.
-    retries ||= 3
-    ohai "The Luniistore package postinstall script launches the app" if retries >= 3
-    ohai "Attempting to close Luniistore to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Lunii.app"]
+    terminate_process(
+      "/Applications/Lunii.app",
+      match:        :full,
+      must_succeed: true,
+      notices:      [
+        "The Luniistore package postinstall script launches the app",
+        "Attempting to close Luniistore to avoid unwanted user intervention",
+      ],
+    )
   end
 
   uninstall quit:    "com.lunii.luniistore",

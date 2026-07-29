@@ -19,17 +19,20 @@ cask "uuremote" do
 
   pkg "uuyc_#{version}.pkg"
 
-  postflight do
+  postflight_steps do
     # The postinstall script automatically opens the app. Therefore, we must
     # suppress this behavior to make the cask installation non-interactive.
-    retries ||= 3
-    ohai "The UU Remote package postinstall script launches the app" if retries >= 3
-    ohai "Attempting to close UU Remote to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/UURemote.app"]
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to forcibly close UU Remote"
+    terminate_process(
+      "/Applications/UURemote.app",
+      match:           :full,
+      attempts:        3,
+      must_succeed:    false,
+      notices:         [
+        "The UU Remote package postinstall script launches the app",
+        "Attempting to close UU Remote to avoid unwanted user intervention",
+      ],
+      failure_message: "Unable to forcibly close UU Remote",
+    )
   end
 
   uninstall launchctl: [
