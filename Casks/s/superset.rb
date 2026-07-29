@@ -23,9 +23,11 @@ cask "superset" do
   uninstall quit: "com.superset.desktop"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.superset.desktop.sfl*",
     "~/Library/Application Support/Superset",
     "~/Library/Caches/com.superset.desktop",
     "~/Library/HTTPStorages/com.superset.desktop",
+    "~/Library/Logs/Superset",
     "~/Library/Preferences/com.superset.desktop.plist",
     "~/Library/Saved Application State/com.superset.desktop.savedState",
   ]
