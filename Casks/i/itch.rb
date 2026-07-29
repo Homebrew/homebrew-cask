@@ -24,7 +24,10 @@ cask "itch" do
   uninstall quit: "io.itch.mac"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.itch.mac.sfl*",
+    "~/Library/Application Support/CrashReporter/itch_*.plist",
     "~/Library/Application Support/itch",
+    "~/Library/Logs/DiagnosticReports/itch-*.ips",
     "~/Library/Preferences/io.itch.mac.helper.plist",
     "~/Library/Preferences/io.itch.mac.plist",
   ]
