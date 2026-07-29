@@ -16,6 +16,9 @@ cask "vivaldi@snapshot" do
   depends_on macos: :ventura
 
   app "Vivaldi Snapshot.app"
+  command_wrapper "vivaldi-snapshot",
+                  executable: "/usr/bin/open",
+                  args:       ["-na", "#{appdir}/Vivaldi Snapshot.app", "--args"]
 
   uninstall quit: "com.vivaldi.Vivaldi.snapshot"
 
