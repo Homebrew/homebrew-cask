@@ -22,4 +22,4 @@ cask "neon-vision-editor" do
     "~/Library/Logs/NeonVisionEditorUpdater.log",
     "~/Library/Preferences/h3p.Neon-Vision-Editor.plist",
   ]
-end\n
+end
