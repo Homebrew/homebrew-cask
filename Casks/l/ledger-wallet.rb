@@ -23,6 +23,7 @@ cask "ledger-wallet" do
   ]
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ledger.live.sfl*",
     "~/Library/Application Support/Ledger Wallet",
     "~/Library/Preferences/com.ledger.live.plist",
     "~/Library/Saved Application State/com.ledger.live.savedState",
