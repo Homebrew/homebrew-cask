@@ -9,11 +9,8 @@ cask "fujitsu-scansnap-home" do
   homepage "https://www.fujitsu.com/global/products/computing/peripheral/scanners/soho/sshome/"
 
   livecheck do
-    url "https://www.pfu.ricoh.com/global/scanners/scansnap/dl/mac-sshoffline.html"
-    regex(/m-sshoffline[._-]v?(\d+(?:[._]\d+)+)\.html/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].tr("_", ".") }
-    end
+    url "https://www.pfu.ricoh.com/imaging/ss_hist/en/mac/index.html"
+    regex(/ScanSnap\s+Home\s+for\s+Mac\s+v?(\d+(?:\.\d+)+)\s+Released/i)
   end
 
   auto_updates true
