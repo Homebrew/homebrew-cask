@@ -19,5 +19,8 @@ cask "rio" do
   binary "#{appdir}/rio.app/Contents/Resources/72/rio",
          target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/72/rio"
 
-  zap trash: "~/Library/Saved Application State/com.raphaelamorim.rio.savedState"
+  zap trash: [
+    "~/Library/Preferences/com.raphaelamorim.rio.plist",
+    "~/Library/Saved Application State/com.raphaelamorim.rio.savedState",
+  ]
 end
