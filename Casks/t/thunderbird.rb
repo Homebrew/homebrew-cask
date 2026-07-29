@@ -243,6 +243,7 @@ cask "thunderbird" do
 
   zap trash: [
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird*.sfl*",
+        "~/Library/Application Support/Thunderbird",
         "~/Library/Caches/Mozilla/updates/Applications/Thunderbird*",
         "~/Library/Caches/Thunderbird",
         "~/Library/Preferences/org.mozilla.thunderbird*.plist",
