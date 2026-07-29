@@ -18,6 +18,7 @@ cask "meta" do
   app "Meta.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nightbirdsevolve.meta.sfl*",
     "~/Library/Application Support/Meta",
     "~/Library/Caches/com.nightbirdsevolve.Meta",
     "~/Library/HTTPStorages/com.nightbirdsevolve.Meta",
