@@ -18,6 +18,7 @@ cask "webcatalog" do
   app "WebCatalog.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.webcatalog.jordan.sfl*",
     "~/Library/Application Support/WebCatalog",
     "~/Library/Caches/com.webcatalog.jordan",
     "~/Library/Caches/com.webcatalog.jordan.ShipIt",
