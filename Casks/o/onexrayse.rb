@@ -8,7 +8,7 @@ cask "onexrayse" do
   desc "Cross-platform Xray-core client"
   homepage "https://onexray.com/"
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "OneXraySE.app"
 
