@@ -31,12 +31,17 @@ cask "kaleidoscope" do
             pkgutil: "app.kaleidoscope.uninstall_ksdiff"
 
   zap trash: [
+    "~/Library/Application Scripts/app.kaleidoscope.v*.KaleidoscopePrism",
+    "~/Library/Application Scripts/app.kaleidoscope.v*.KSShareExtension",
     "~/Library/Application Support/app.kaleidoscope.v*",
     "~/Library/Application Support/com.blackpixel.kaleidoscope",
     "~/Library/Application Support/Kaleidoscope",
     "~/Library/Caches/app.kaleidoscope.v*",
     "~/Library/Caches/com.blackpixel.kaleidoscope",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.blackpixel.kaleidoscope",
+    "~/Library/Containers/app.kaleidoscope.v*.KaleidoscopePrism",
+    "~/Library/Containers/app.kaleidoscope.v*.KSShareExtension",
+    "~/Library/HTTPStorages/app.kaleidoscope.v*",
     "~/Library/Preferences/app.kaleidoscope.v*.plist",
     "~/Library/Preferences/com.blackpixel.kaleidoscope.plist",
     "~/Library/Saved Application State/app.kaleidoscope.v*.savedState",
