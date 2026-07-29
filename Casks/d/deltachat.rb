@@ -1,9 +1,9 @@
 cask "deltachat" do
   arch arm: "arm64", intel: "universal"
 
-  version "2.56.0"
-  sha256 arm:   "a0a709084e978417c2f7a6942ea04d0ed8b3ac8e7d7dbf9dbb4874948cfb8682",
-         intel: "b2802e8f72fa26123469767b0223128fcbfe53fd221fd74fa0e8fb3cfbc50fe5"
+  version "2.57.0"
+  sha256 arm:   "7c988374e9bba2f184c871279598f2b13d75ab0792acbd67093c80dd9dad9783",
+         intel: "452b4a3d1e668e33c4af4c8838f3b0271ac6d13183234ed017151af18a633af0"
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}-#{arch}.dmg"
   name "Delta Chat"
