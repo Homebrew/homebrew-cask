@@ -16,6 +16,9 @@ cask "vivaldi" do
   depends_on macos: :monterey
 
   app "Vivaldi.app"
+  command_wrapper "vivaldi",
+                  executable: "/usr/bin/open",
+                  args:       ["-na", "#{appdir}/Vivaldi.app", "--args"]
 
   uninstall quit: "com.vivaldi.Vivaldi"
 
