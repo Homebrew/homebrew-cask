@@ -19,5 +19,7 @@ cask "vassal" do
 
   app "VASSAL.app"
 
+  uninstall quit: "org.vassalengine.vassal"
+
   zap trash: "~/Library/Application Support/VASSAL"
 end
