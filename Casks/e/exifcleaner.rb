@@ -1,6 +1,6 @@
 cask "exifcleaner" do
-  version "3.6.0"
-  sha256 "459b296b000a7cd614713772e9b4ecf1604d3bb10926ab2346e8ea88e44df323"
+  version "4.0.0"
+  sha256 "307ec159d9faa41cc4d7c45523130f92821a2ccf30d9b3faf2a35ae10db34666"
 
   url "https://github.com/szTheory/exifcleaner/releases/download/v#{version}/ExifCleaner-#{version}.dmg",
       verified: "github.com/szTheory/exifcleaner/"
