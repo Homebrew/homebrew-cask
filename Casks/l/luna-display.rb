@@ -26,6 +26,7 @@ cask "luna-display" do
     "~/Library/Application Support/LunaDisplay",
     "~/Library/Caches/com.astro-hq.LunaDeviceSetupService",
     "~/Library/Caches/com.astro-hq.LunaDisplayMac",
+    "~/Library/HTTPStorages/com.astro-hq.LunaDisplayMac",
     "~/Library/Logs/Astropad",
     "~/Library/Preferences/com.astro-hq.AstroLauncher.shared.plist",
     "~/Library/Preferences/com.astro-hq.LunaDisplayMac.plist",
