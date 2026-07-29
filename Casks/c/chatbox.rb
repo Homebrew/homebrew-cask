@@ -23,8 +23,10 @@ cask "chatbox" do
   uninstall quit: "xyz.chatboxapp.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/xyz.chatboxapp.app.sfl*",
     "~/Library/Application Support/xyz.chatboxapp.app",
     "~/Library/Caches/xyz.chatboxapp.app",
+    "~/Library/Logs/xyz.chatboxapp.app",
     "~/Library/Preferences/xyz.chatboxapp.app.plist",
     "~/Library/Saved Application State/xyz.chatboxapp.app.savedState",
     "~/Library/WebKit/xyz.chatboxapp.app",
