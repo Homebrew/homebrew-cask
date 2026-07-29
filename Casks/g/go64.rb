@@ -21,6 +21,7 @@ cask "go64" do
   zap trash: [
     "~/Library/Application Support/com.stclairsoft.Go64",
     "~/Library/Caches/com.stclairsoft.Go64",
+    "~/Library/HTTPStorages/com.stclairsoft.Go64",
     "~/Library/Preferences/com.stclairsoft.Go64.plist",
     "~/Library/Saved Application State/com.stclairsoft.Go64.savedState",
   ]
