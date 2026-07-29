@@ -18,16 +18,8 @@ cask "godot-mono" do
   depends_on cask: "dotnet-sdk"
 
   app "Godot_mono.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/godot-mono.wrapper.sh"
-  binary shimscript, target: "godot-mono"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      '#{appdir}/Godot_mono.app/Contents/MacOS/Godot' "$@"
-    EOS
-  end
+  command_wrapper "godot-mono",
+                  executable: "#{appdir}/Godot_mono.app/Contents/MacOS/Godot"
 
   uninstall quit: "org.godotengine.godot"
 

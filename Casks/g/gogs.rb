@@ -14,17 +14,11 @@ cask "gogs" do
   desc "Self-hosted Git service"
   homepage "https://gogs.io/"
 
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/gogs.wrapper.sh"
-
-  binary shimscript, target: "gogs"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      cd '#{staged_path}/gogs' && ./gogs "$@"
-    EOS
-  end
+  command_wrapper "gogs",
+                  content: <<~EOS
+                    #!/bin/sh
+                    cd '#{staged_path}/gogs' && ./gogs "$@"
+                  EOS
 
   # No zap stanza required
 end

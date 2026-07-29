@@ -16,16 +16,8 @@ cask "bandage" do
   depends_on macos: :big_sur
 
   app "Bandage.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/bandage.wrapper.sh"
-  binary shimscript, target: "bandage"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/Bandage.app/Contents/MacOS/Bandage' "$@"
-    EOS
-  end
+  command_wrapper "bandage",
+                  executable: "#{appdir}/Bandage.app/Contents/MacOS/Bandage"
 
   zap trash: [
     "~/Library/Preferences/com.rrwick.Bandage.plist",

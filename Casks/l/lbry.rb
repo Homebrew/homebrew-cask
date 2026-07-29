@@ -14,23 +14,10 @@ cask "lbry" do
   depends_on :macos
 
   app "LBRY.app"
-  # shim scripts (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shim_lbrynet = "#{staged_path}/lbrynet.wrapper.sh"
-  shim_lbryfirst = "#{staged_path}/libry-first.wrapper.sh"
-  binary shim_lbrynet, target: "lbrynet"
-  binary shim_lbryfirst, target: "lbry-first"
-
-  preflight do
-    File.write shim_lbrynet, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/LBRY.app/Contents/Resources/static/daemon/lbrynet' "$@"
-    EOS
-
-    File.write shim_lbryfirst, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/LBRY.app/Contents/Resources/static/lbry-first/lbry-first' "$@"
-    EOS
-  end
+  command_wrapper "lbrynet",
+                  executable: "#{appdir}/LBRY.app/Contents/Resources/static/daemon/lbrynet"
+  command_wrapper "lbry-first",
+                  executable: "#{appdir}/LBRY.app/Contents/Resources/static/lbry-first/lbry-first"
 
   zap trash: [
     "~/Library/Application Support/lbry",

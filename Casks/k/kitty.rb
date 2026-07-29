@@ -10,23 +10,10 @@ cask "kitty" do
     depends_on macos: :monterey
 
     app "kitty.app"
-    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-    kitty_shimscript = "#{staged_path}/kitty.wrapper.sh"
-    binary kitty_shimscript, target: "kitty"
-    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-    kitten_shimscript = "#{staged_path}/kitten.wrapper.sh"
-    binary kitten_shimscript, target: "kitten"
-
-    preflight do
-      File.write kitty_shimscript, <<~EOS
-        #!/bin/sh
-        exec '#{appdir}/kitty.app/Contents/MacOS/kitty' "$@"
-      EOS
-      File.write kitten_shimscript, <<~EOS
-        #!/bin/sh
-        exec '#{appdir}/kitty.app/Contents/MacOS/kitten' "$@"
-      EOS
-    end
+    command_wrapper "kitty",
+                    executable: "#{appdir}/kitty.app/Contents/MacOS/kitty"
+    command_wrapper "kitten",
+                    executable: "#{appdir}/kitty.app/Contents/MacOS/kitten"
   end
   on_linux do
     sha256 arm64_linux:  "6b0d8fe0af20ba03348e97e303f3c6084b5338bb4abd52737d8e2ffd2dba3d33",

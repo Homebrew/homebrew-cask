@@ -31,16 +31,8 @@ cask "dataspell" do
   depends_on :macos
 
   app "DataSpell.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/dataspell.wrapper.sh"
-  binary shimscript, target: "dataspell"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/DataSpell.app/Contents/MacOS/dataspell' "$@"
-    EOS
-  end
+  command_wrapper "dataspell",
+                  executable: "#{appdir}/DataSpell.app/Contents/MacOS/dataspell"
 
   zap trash: [
     "~/Library/Application Support/DataSpell*",

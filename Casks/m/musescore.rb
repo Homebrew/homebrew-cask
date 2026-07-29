@@ -25,16 +25,8 @@ cask "musescore" do
   depends_on :macos
 
   app "MuseScore #{version.major}.app"
-  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/mscore.wrapper.sh"
-  binary shimscript, target: "mscore"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/MuseScore #{version.major}.app/Contents/MacOS/mscore' "$@"
-    EOS
-  end
+  command_wrapper "mscore",
+                  executable: "#{appdir}/MuseScore #{version.major}.app/Contents/MacOS/mscore"
 
   zap trash: [
     "~/Library/Application Support/MuseScore",

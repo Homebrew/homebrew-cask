@@ -31,16 +31,8 @@ cask "inkscape" do
   depends_on macos: :big_sur
 
   app "Inkscape.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/inkscape.wrapper.sh"
-  binary shimscript, target: "inkscape"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{staged_path}/Inkscape.app/Contents/MacOS/inkscape' "$@"
-    EOS
-  end
+  command_wrapper "inkscape",
+                  executable: "#{staged_path}/Inkscape.app/Contents/MacOS/inkscape"
 
   zap trash: [
     "~/.config/inkscape",

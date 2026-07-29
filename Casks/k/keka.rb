@@ -18,16 +18,9 @@ cask "keka" do
   depends_on :macos
 
   app "Keka.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/keka.wrapper.sh"
-  binary shimscript, target: "keka"
-
-  preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/bash
-      exec '#{appdir}/Keka.app/Contents/MacOS/Keka' '--cli' "$@"
-    EOS
-  end
+  command_wrapper "keka",
+                  executable: "#{appdir}/Keka.app/Contents/MacOS/Keka",
+                  args:       "--cli"
 
   zap trash: [
     "~/Library/Application Scripts/*.group.com.aone.keka",

@@ -12,16 +12,8 @@ cask "librewolf" do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
     app "LibreWolf.app"
-    # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-    shimscript = "#{staged_path}/librewolf.wrapper.sh"
-    binary shimscript, target: "librewolf"
-
-    preflight do
-      File.write shimscript, <<~EOS
-        #!/bin/sh
-        exec '#{appdir}/LibreWolf.app/Contents/MacOS/librewolf' "$@"
-      EOS
-    end
+    command_wrapper "librewolf",
+                    executable: "#{appdir}/LibreWolf.app/Contents/MacOS/librewolf"
 
     zap trash: [
       "~/.librewolf",
