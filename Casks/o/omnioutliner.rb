@@ -47,6 +47,7 @@ cask "omnioutliner" do
   zap trash: [
     "~/Library/Application Scripts/com.omnigroup.OmniOutliner#{version.major}",
     "~/Library/Application Scripts/com.omnigroup.OmniOutliner#{version.major}.Thumbnails",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnioutliner*.sfl*",
     "~/Library/Containers/com.omnigroup.OmniOutliner#{version.major}",
     "~/Library/Containers/com.omnigroup.OmniOutliner#{version.major}.Thumbnails",
   ]
