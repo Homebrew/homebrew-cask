@@ -16,5 +16,8 @@ cask "virtualhere" do
 
   app "VirtualHereUniversal.app"
 
-  zap trash: "~/Library/Preferences/com.virtualhere.vhui.plist"
+  zap trash: [
+    "~/Library/Preferences/com.virtualhere.client.plist",
+    "~/Library/Preferences/com.virtualhere.vhui.plist",
+  ]
 end
