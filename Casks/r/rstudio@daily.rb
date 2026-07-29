@@ -21,7 +21,12 @@ cask "rstudio@daily" do
 
   app "RStudio.app"
 
-  zap trash: "~/.rstudio-desktop"
+  zap trash: [
+    "~/.rstudio-desktop",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rstudio.desktop.sfl*",
+    "~/Library/Application Support/RStudio",
+    "~/Library/Preferences/com.rstudio.desktop.plist",
+  ]
 
   caveats <<~EOS
     #{token} depends on R. The R Project provides official binaries:

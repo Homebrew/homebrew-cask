@@ -24,8 +24,10 @@ cask "support" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/nl.root3.support",
     "~/Library/Application Support/Support",
     "~/Library/Caches/nl.root3.support",
+    "~/Library/Containers/nl.root3.support",
     "~/Library/HTTPStorages/nl.root3.support",
     "~/Library/LaunchAgents/nl.root3.support.plist",
     "~/Library/Preferences/nl.root3.support.plist",

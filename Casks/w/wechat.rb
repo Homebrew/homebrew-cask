@@ -33,6 +33,7 @@ cask "wechat" do
   zap trash: [
     "~/Library/Application Scripts/$(TeamIdentifierPrefix)com.tencent.xinWeChat",
     "~/Library/Application Scripts/$(TeamIdentifierPrefix)com.tencent.xinWeChat.IPCHelper",
+    "~/Library/Application Scripts/5A4RE8SF68.com.tencent.xinWeChat",
     "~/Library/Application Scripts/com.tencent.xinWeChat",
     "~/Library/Application Scripts/com.tencent.xinWeChat.MiniProgram",
     "~/Library/Application Scripts/com.tencent.xinWeChat.WeChatMacShare",
@@ -43,6 +44,7 @@ cask "wechat" do
     "~/Library/Containers/com.tencent.xinWeChat.WeChatMacShare",
     "~/Library/Cookies/com.tencent.xinWeChat.binarycookies",
     "~/Library/Group Containers/$(TeamIdentifierPrefix)com.tencent.xinWeChat",
+    "~/Library/Group Containers/5A4RE8SF68.com.tencent.xinWeChat",
     "~/Library/Preferences/com.tencent.xinWeChat.plist",
     "~/Library/Saved Application State/com.tencent.xinWeChat.savedState",
   ]

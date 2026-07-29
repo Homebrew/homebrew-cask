@@ -25,8 +25,10 @@ cask "termius@beta" do
 
   zap trash: [
     "~/.termius",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.termius-beta.mac.sfl*",
     "~/Library/Application Support/Termius Beta",
     "~/Library/Logs/Termius Beta",
+    "~/Library/Preferences/com.termius-beta.mac.plist",
     "~/Library/Saved Application State/com.termius-beta.mac.savedState",
   ]
 end

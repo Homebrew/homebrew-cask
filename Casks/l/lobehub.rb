@@ -36,8 +36,13 @@ cask "lobehub" do
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lobehub.lobehub-desktop-beta.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lobehub.lobehub-desktop.sfl*",
+    "~/Library/Application Support/LobeHub",
     "~/Library/Application Support/LobeHub-Beta",
+    "~/Library/Logs/LobeHub",
     "~/Library/Logs/LobeHub-Beta",
     "~/Library/Preferences/com.lobehub.lobehub-desktop-beta.plist",
+    "~/Library/Preferences/com.lobehub.lobehub-desktop.plist",
+    "~/Library/Saved Application State/com.lobehub.lobehub-desktop.savedState",
   ]
 end

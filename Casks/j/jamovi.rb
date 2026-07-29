@@ -24,6 +24,7 @@ cask "jamovi" do
   app "jamovi.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.jamovi.jamovi.sfl*",
     "~/Library/Application Support/jamovi",
     "~/Library/Logs/jamovi",
     "~/Library/Preferences/org.jamovi.jamovi.plist",

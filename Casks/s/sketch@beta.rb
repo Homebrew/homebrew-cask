@@ -20,11 +20,15 @@ cask "sketch@beta" do
   uninstall quit: "com.bohemiancoding.sketch3.beta"
 
   zap trash: [
+    "~/Library/Application Support/bugsnag-shared-com.bohemiancoding.sketch3.beta",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bohemiancoding.sketch3.beta.sfl*",
     "~/Library/Application Support/com.bohemiancoding.sketch3.beta",
+    "~/Library/Application Support/Sketch Beta",
+    "~/Library/Caches/bugsnag-shared-com.bohemiancoding.sketch3.beta",
     "~/Library/Caches/com.bohemiancoding.sketch3.beta",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.bohemiancoding.sketch3.beta",
     "~/Library/Cookies/com.bohemiancoding.sketch3.beta.binarycookies",
+    "~/Library/HTTPStorages/com.bohemiancoding.sketch3.beta",
     "~/Library/Logs/com.bohemiancoding.sketch3.beta",
     "~/Library/Preferences/com.bohemiancoding.sketch3.beta.LSSharedFileList.plist",
     "~/Library/Preferences/com.bohemiancoding.sketch3.beta.plist",

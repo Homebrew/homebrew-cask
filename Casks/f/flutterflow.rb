@@ -20,6 +20,7 @@ cask "flutterflow" do
   zap trash: [
     "~/Library/Application Support/io.flutterflow.prod.mac",
     "~/Library/Caches/io.flutterflow.prod.mac",
+    "~/Library/Containers/io.flutterflow.flutterflow",
     "~/Library/HTTPStorages/io.flutterflow.prod.mac",
     "~/Library/Preferences/io.flutterflow.prod.mac.plist",
     "~/Library/Saved Application State/io.flutterflow.prod.mac.savedState",

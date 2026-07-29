@@ -24,5 +24,6 @@ cask "remote-desktop-manager" do
     "~/Library/Caches/com.devolutions.remotedesktopmanager",
     "~/Library/Preferences/com.devolutions.remotedesktopmanager.plist",
     "~/Library/Saved Application State/com.devolutions.remotedesktopmanager.savedState",
+    "~/Library/WebKit/com.devolutions.remotedesktopmanager",
   ]
 end

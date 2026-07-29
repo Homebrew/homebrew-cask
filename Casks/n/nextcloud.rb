@@ -41,11 +41,15 @@ cask "nextcloud" do
             delete:    "/Applications/Nextcloud.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.nextcloud.desktopclient.FileProviderExt",
     "~/Library/Application Scripts/com.nextcloud.desktopclient.FinderSyncExt",
+    "~/Library/Application Scripts/NKUJUXUJ3B.com.nextcloud.desktopclient",
     "~/Library/Application Support/Nextcloud",
     "~/Library/Caches/Nextcloud",
+    "~/Library/Containers/com.nextcloud.desktopclient.FileProviderExt",
     "~/Library/Containers/com.nextcloud.desktopclient.FinderSyncExt",
     "~/Library/Group Containers/com.nextcloud.desktopclient",
+    "~/Library/Group Containers/NKUJUXUJ3B.com.nextcloud.desktopclient",
     "~/Library/Preferences/com.nextcloud.desktopclient.plist",
     "~/Library/Preferences/Nextcloud",
   ]

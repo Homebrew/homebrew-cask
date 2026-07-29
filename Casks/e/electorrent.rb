@@ -23,6 +23,7 @@ cask "electorrent" do
   app "Electorrent.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.tympanix.electorrent.sfl*",
     "~/Library/Application Support/Electorrent",
     "~/Library/Preferences/com.github.tympanix.Electorrent.plist",
     "~/Library/Saved Application State/com.github.tympanix.Electorrent.savedState",

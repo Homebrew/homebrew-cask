@@ -30,8 +30,15 @@ cask "bartender" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/24J875RH8J.com.surteesstudios.Bartender",
+    "~/Library/Application Support/Bartender #{version.major}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.surteesstudios.bartender.sfl*",
+    "~/Library/Application Support/com.surteesstudios.Bartender.revenuecat",
     "~/Library/Caches/com.surteesstudios.Bartender",
+    "~/Library/Caches/com.surteesstudios.Bartender.revenuecat",
     "~/Library/Cookies/com.surteesstudios.Bartender.binarycookies",
+    "~/Library/Group Containers/24J875RH8J.com.surteesstudios.Bartender",
+    "~/Library/HTTPStorages/com.surteesstudios.Bartender",
     "~/Library/Preferences/com.surteesstudios.Bartender.plist",
   ]
 end

@@ -19,6 +19,7 @@ cask "granola" do
   app "Granola.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.granola.app.sfl*",
     "~/Library/Application Support/Granola",
     "~/Library/Caches/com.granola.app",
     "~/Library/HTTPStorages/com.granola.app",

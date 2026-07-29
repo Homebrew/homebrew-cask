@@ -101,6 +101,7 @@ cask "teamviewer" do
             ]
 
   zap trash: [
+    "/Library/Application Support/TeamViewer",
     "~/Library/Application Support/TeamViewer",
     "~/Library/Caches/com.teamviewer.TeamViewer",
     "~/Library/Caches/TeamViewer",

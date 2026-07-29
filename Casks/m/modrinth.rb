@@ -23,8 +23,12 @@ cask "modrinth" do
 
   zap trash: [
     "~/Library/Application Support/com.modrinth.theseus",
+    "~/Library/Application Support/ModrinthApp",
     "~/Library/Caches/com.modrinth.theseus",
+    "~/Library/Caches/ModrinthApp",
+    "~/Library/HTTPStorages/ModrinthApp.binarycookies",
     "~/Library/Saved Application State/com.modrinth.theseus.savedState",
     "~/Library/WebKit/com.modrinth.theseus",
+    "~/Library/WebKit/ModrinthApp",
   ]
 end

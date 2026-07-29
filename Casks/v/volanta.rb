@@ -25,6 +25,7 @@ cask "volanta" do
   app "Volanta.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/orbx.volanta.sfl*",
     "~/Library/Application Support/Volanta",
     "~/Library/Logs/Volanta",
     "~/Library/Preferences/orbx.volanta.plist",

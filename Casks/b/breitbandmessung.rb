@@ -16,5 +16,9 @@ cask "breitbandmessung" do
 
   app "Breitbandmessung.app"
 
-  zap trash: "~/Library/Application Support/Breitbandmessung"
+  zap trash: [
+    "~/Library/Application Support/Breitbandmessung",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.zafaco.breitbandmessung.sfl*",
+    "~/Library/Preferences/com.zafaco.breitbandmessung.plist",
+  ]
 end

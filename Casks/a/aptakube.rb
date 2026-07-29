@@ -23,5 +23,6 @@ cask "aptakube" do
     "~/Library/Application Support/com.aptakube.Aptakube",
     "~/Library/Caches/com.aptakube.Aptakube",
     "~/Library/Logs/com.aptakube.Aptakube",
+    "~/Library/WebKit/com.aptakube.Aptakube",
   ]
 end

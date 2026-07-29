@@ -30,6 +30,7 @@ cask "unblocked" do
             delete:     "/Applications/Unblocked.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nextchaptersoftware.unblockedhub.sfl*",
     "~/Library/Application Support/Unblocked",
     "~/Library/Preferences/com.nextchaptersoftware.UnblockedHub.plist",
   ]

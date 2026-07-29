@@ -17,7 +17,9 @@ cask "mindwtr" do
   zap trash: [
     "~/Library/Application Support/mindwtr",
     "~/Library/Application Support/tech.dongdongbh.mindwtr",
+    "~/Library/Caches/tech.dongdongbh.mindwtr",
     "~/Library/Preferences/tech.dongdongbh.mindwtr.plist",
     "~/Library/Saved Application State/tech.dongdongbh.mindwtr.savedState",
+    "~/Library/WebKit/tech.dongdongbh.mindwtr",
   ]
 end

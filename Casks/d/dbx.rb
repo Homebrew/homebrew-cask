@@ -19,6 +19,7 @@ cask "dbx" do
       "~/Library/Caches/com.dbx.app",
       "~/Library/Logs/com.dbx.app",
       "~/Library/Preferences/com.dbx.app.plist",
+      "~/Library/WebKit/com.dbx.app",
     ]
   end
   on_linux do

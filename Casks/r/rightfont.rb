@@ -22,6 +22,7 @@ cask "rightfont" do
         "~/Library/Application Support/com.rightfontapp.RightFont*",
         "~/Library/Application Support/RightFont",
         "~/Library/Caches/com.rightfontapp.RightFont*",
+        "~/Library/HTTPStorages/com.rightfontapp.RightFont5",
         "~/Library/Logs/RightFont*",
         "~/Library/Preferences/com.rightfontapp.RightFont*.plist",
         "~/Library/WebKit/com.rightfontapp.RightFont*",

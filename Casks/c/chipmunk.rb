@@ -20,5 +20,8 @@ cask "chipmunk" do
 
   app "chipmunk.app"
 
-  zap trash: "~/.chipmunk"
+  zap trash: [
+    "~/.chipmunk",
+    "~/Library/Application Support/Chipmunk",
+  ]
 end

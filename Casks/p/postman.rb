@@ -28,6 +28,7 @@ cask "postman" do
   app "Postman.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.postmanlabs.mac.sfl*",
     "~/Library/Application Support/com.postmanlabs.mac.ShipIt",
     "~/Library/Application Support/Postman",
     "~/Library/Caches/com.postmanlabs.mac",

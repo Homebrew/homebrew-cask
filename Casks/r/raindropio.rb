@@ -23,11 +23,13 @@ cask "raindropio" do
   app "Raindrop.io.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.raindrop.macapp.sfl*",
     "~/Library/Application Support/Raindrop.io",
     "~/Library/Caches/com.apple.Safari/Extensions/Raindrop.io.safariextension",
     "~/Library/Cookies/io.raindrop.mac.binarycookies",
     "~/Library/Preferences/io.raindrop.mac.helper.plist",
     "~/Library/Preferences/io.raindrop.mac.plist",
+    "~/Library/Preferences/io.raindrop.macapp.plist",
     "~/Library/Safari/Extensions/Raindrop.io.safariextz",
     "~/Library/Saved Application State/io.raindrop.mac.savedState",
   ]

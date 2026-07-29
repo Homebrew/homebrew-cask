@@ -31,8 +31,11 @@ cask "roblox" do
   uninstall quit: "com.roblox.RobloxPlayer"
 
   zap trash: [
+    "~/Library/HTTPStorages/com.roblox.RobloxPlayer.binarycookies",
+    "~/Library/Logs/Roblox",
     "~/Library/Preferences/com.Roblox.Roblox.plist",
     "~/Library/Preferences/com.roblox.RobloxPlayer.plist",
     "~/Library/Preferences/com.roblox.RobloxPlayerChannel.plist",
+    "~/Library/Roblox",
   ]
 end

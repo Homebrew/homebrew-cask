@@ -22,6 +22,7 @@ cask "royal-tsx@beta" do
     "~/Library/Application Support/com.lemonmojo.RoyalTSX.App",
     "~/Library/Application Support/Royal TSX",
     "~/Library/Caches/com.lemonmojo.RoyalTSX.App",
+    "~/Library/HTTPStorages/com.lemonmojo.RoyalTSX.App",
     "~/Library/Preferences/com.lemonmojo.RoyalTSX.App.plist",
   ]
 end
