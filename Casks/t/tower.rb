@@ -1,6 +1,6 @@
 cask "tower" do
-  version "17.0,545,da8d35ec"
-  sha256 "f14b315b67fa329ea8f7571b58302df3cc40ab1a370e548d3b66de450ef9fb8b"
+  version "17.1,551,751159f7"
+  sha256 "5e13858087ee99dbb8615243aa4c27b11c343b3191baf1342ac364e3d9f3f909"
 
   url "https://www.git-tower.com/apps/tower3-mac/#{version.csv.second}-#{version.csv.third}/Tower-#{version.csv.first}-#{version.csv.second}.zip"
   name "Tower"
@@ -19,7 +19,7 @@ cask "tower" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :sonoma
 
   app "Tower.app"
   binary "#{appdir}/Tower.app/Contents/MacOS/gittower"
