@@ -2,11 +2,11 @@ cask "librewolf" do
   arch arm: "arm64", intel: "x86_64"
   os macos: "macos-#{arch}-package.dmg", linux: "linux-#{arch}-appimage.AppImage"
 
-  version "153.0,3"
-  sha256 arm:          "57a31fbb580ebd45d462280b246d3f7fc885e4367741f1ab54742c6b65284a91",
-         intel:        "0c96e8596ab22f36dc7b95223d843937f01475525f09c6311e8b914b699b0275",
-         arm64_linux:  "93fb3c3eee298d56bbca77800c040a5193679d98c78fc8fe59ac37a48973e43a",
-         x86_64_linux: "ca07961e3f1a19e5b856b36c645c3c460a785dc114ffa0a63bd0a5d4835c8203"
+  version "153.0.1,1"
+  sha256 arm:          "12f94015488b7953902f0cb05117633ac502869687c4c710c93c4ac496d04d18",
+         intel:        "f274c91ea4bcec1f17cb17943c9d4aea35bad892be6632c0f5df0f24559f27be",
+         arm64_linux:  "a00409ddbe1efe97da246c464055fffda32db741b15af2b0b22c53363fc97bae",
+         x86_64_linux: "94954263d8db3245499e51ba5c1e447f895ce8010bfbd077fddaf358e76a4c9f"
 
   on_macos do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
