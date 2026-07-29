@@ -24,6 +24,7 @@ cask "etrecheckpro" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.etresoft.etrecheck*.sfl*",
     "~/Library/Caches/com.etresoft.EtreCheck*",
+    "~/Library/HTTPStorages/com.etresoft.EtreCheck*",
     "~/Library/Preferences/com.etresoft.EtreCheck*.plist",
     "~/Library/WebKit/com.etresoft.EtreCheck*",
   ]
