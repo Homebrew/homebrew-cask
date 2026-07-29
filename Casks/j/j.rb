@@ -48,17 +48,17 @@ cask "j" do
 
   postflight_steps do
     # Use `readlink` to get full path of symlinked commands.
-    inreplace "j#{version.major_minor}/bin/jbrk.command", "$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")'
-    inreplace "j#{version.major_minor}/bin/jhs.command", "$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")'
-    inreplace "j#{version.major_minor}/bin/jqt.command", "$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")'
+    inreplace "j{{version.major_minor}}/bin/jbrk.command", "$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")'
+    inreplace "j{{version.major_minor}}/bin/jhs.command", "$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")'
+    inreplace "j{{version.major_minor}}/bin/jqt.command", "$0", '$(/usr/bin/readlink "$0" || /bin/echo "$0")'
 
     # Fix relative paths inside App bundles.
     inreplace "jbrk.app/Contents/MacOS/apprun", %r{`dirname "\$0"`.*?/bin},
-              "{{staged_path}}/j#{version.major_minor}/bin", base: :appdir
+              "{{staged_path}}/j{{version.major_minor}}/bin", base: :appdir
     inreplace "jcon.app/Contents/MacOS/apprun", %r{`dirname "\$0"`.*?/bin},
-              "{{staged_path}}/j#{version.major_minor}/bin", base: :appdir
+              "{{staged_path}}/j{{version.major_minor}}/bin", base: :appdir
     inreplace "jqt.app/Contents/MacOS/apprun", %r{`dirname "\$0"`.*?/bin},
-              "{{staged_path}}/j#{version.major_minor}/bin", base: :appdir
+              "{{staged_path}}/j{{version.major_minor}}/bin", base: :appdir
   end
 
   # Not actually necessary, since it would be deleted anyway.
