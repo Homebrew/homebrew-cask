@@ -1,5 +1,5 @@
 cask "vip-access" do
-  version "1.0.7"
+  version "1.0.8"
   sha256 :no_check
 
   url "https://storage.googleapis.com/sedvip-prd-idcenter-downloads/VIPAccessSecurityCode.dmg",
