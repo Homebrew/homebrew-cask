@@ -9,17 +9,19 @@ cask "tatamio" do
 
   livecheck do
     url "https://tatamio.app/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :ventura"
 
   app "Tatamio.app"
 
   zap trash: [
     "~/.tatami",
-    "~/.tatamio",
     "~/Library/Application Support/app.tatamio",
+    "~/Library/Caches/app.tatamio.mac",
+    "~/Library/HTTPStorages/app.tatamio.mac",
+    "~/Library/Preferences/app.tatamio.mac.plist",
   ]
 end
