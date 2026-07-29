@@ -508,46 +508,41 @@ cask "libreoffice-still-language-pack" do
   depends_on :macos
   depends_on cask: "libreoffice-still"
 
+  generated_script "SilentInstall.sh", content: <<~EOS
+    #!/bin/bash
+    pathOfApp=$(mdfind "kMDItemContentType == 'com.apple.application-bundle' && kMDItemFSName == 'LibreOffice.app'")
+    if [[ $(mdls --raw --name kMDItemFSName --name kMDItemVersion "$pathOfApp" | xargs -0) == "LibreOffice.app #{version}"* ]]
+    then
+      #Test if the .app have quarantine attribute, or if they are already launched once.
+      if [[ $(xattr -l "$pathOfApp") != *'com.apple.quarantine'* || $(xattr -p com.apple.quarantine "$pathOfApp") != '0181;'* ]]
+      then
+        echo "Silent installation has started, you didn't need to use the .app"
+        echo "Add language pack support for $pathOfApp"
+        /usr/bin/tar -C "$pathOfApp" -xjf "#{staged_path}/LibreOffice Language Pack.app/Contents/Resources/tarball.tar.bz2" && touch "$pathOfApp"
+      else
+        echo "You need to run $pathOfApp once before you can silently install language pack"
+      fi
+    else
+      echo 'Silent installation cannot match the prerequisite'
+      echo "To complete the installation of Cask #{token}, you must also run the installer at:"
+      echo "#{staged_path}/LibreOffice Language Pack.app"
+    fi
+  EOS
   # Start the silent install
   installer script: {
     executable: "#{staged_path}/SilentInstall.sh",
     sudo:       true,
   }
 
-  preflight do
-    File.write "#{staged_path}/SilentInstall.sh", <<~EOS
-      #!/bin/bash
-      pathOfApp=$(mdfind "kMDItemContentType == 'com.apple.application-bundle' && kMDItemFSName == 'LibreOffice.app'")
-      if [[ $(mdls --raw --name kMDItemFSName --name kMDItemVersion "$pathOfApp" | xargs -0) == "LibreOffice.app #{version}"* ]]
-      then
-        #Test if the .app have quarantine attribute, or if they are already launched once.
-        if [[ $(xattr -l "$pathOfApp") != *'com.apple.quarantine'* || $(xattr -p com.apple.quarantine "$pathOfApp") != '0181;'* ]]
-        then
-          echo "Silent installation has started, you didn't need to use the .app"
-          echo "Add language pack support for $pathOfApp"
-          /usr/bin/tar -C "$pathOfApp" -xjf "#{staged_path}/LibreOffice Language Pack.app/Contents/Resources/tarball.tar.bz2" && touch "$pathOfApp"
-        else
-          echo "You need to run $pathOfApp once before you can silently install language pack"
-        fi
-      else
-        echo 'Silent installation cannot match the prerequisite'
-        echo "To complete the installation of Cask #{token}, you must also run the installer at:"
-        echo "#{staged_path}/LibreOffice Language Pack.app"
-      fi
-    EOS
-    # Make the script executable
-    system_command "/bin/chmod",
-                   args: ["u+x", "#{staged_path}/SilentInstall.sh"]
+  postflight_steps do
+    remove "SilentInstall.sh"
   end
 
   # Not actually necessary, since it would be deleted anyway.
   # It is present to make clear an uninstall was not forgotten
   # and that for this cask it is indeed this simple.
   # See https://github.com/Homebrew/homebrew-cask/pull/52893
-  uninstall delete: [
-    "#{staged_path}/#{token}",
-    "#{staged_path}/SilentInstall.sh",
-  ]
+  uninstall delete: "#{staged_path}/#{token}"
 
   # No zap stanza required
 
