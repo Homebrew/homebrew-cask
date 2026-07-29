@@ -58,7 +58,6 @@ Layout/LineLength:
   - "\"~/Library/Caches/"
   - "\"~/Library/Containers"
   - "\"~/Application Support"
-  - " was verified as official when first introduced to the cask"
 Layout/SpaceAroundOperators:
   Enabled: false
 Layout/SpaceBeforeBrackets:
