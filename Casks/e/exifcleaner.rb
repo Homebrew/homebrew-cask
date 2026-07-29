@@ -1,8 +1,11 @@
 cask "exifcleaner" do
-  version "4.0.0"
-  sha256 "307ec159d9faa41cc4d7c45523130f92821a2ccf30d9b3faf2a35ae10db34666"
+  arch arm: "-arm64"
 
-  url "https://github.com/szTheory/exifcleaner/releases/download/v#{version}/ExifCleaner-#{version}.dmg",
+  version "4.0.0"
+  sha256 arm:   "f8837c155fe3cd826ef9f82b87d3936780bbafbcfc2b1902cc2a594a26037c1d",
+         intel: "307ec159d9faa41cc4d7c45523130f92821a2ccf30d9b3faf2a35ae10db34666"
+
+  url "https://github.com/szTheory/exifcleaner/releases/download/v#{version}/ExifCleaner-#{version}#{arch}.dmg",
       verified: "github.com/szTheory/exifcleaner/"
   name "ExifCleaner"
   desc "Metadata cleaner"
@@ -15,7 +18,7 @@ cask "exifcleaner" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "ExifCleaner.app"
 
@@ -23,8 +26,4 @@ cask "exifcleaner" do
     "~/Library/Application Support/ExifCleaner",
     "~/Library/Saved Application State/com.exifcleaner.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
