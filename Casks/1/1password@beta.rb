@@ -26,6 +26,12 @@ cask "1password@beta" do
 
   app "1Password.app"
 
+  uninstall launchctl: [
+              "2BUA8C4S2C.com.1password.browser-helper",
+              "com.1password.1password-launcher",
+            ],
+            quit:      "com.1password.1password"
+
   zap trash: [
     "~/Library/Application Scripts/2BUA8C4S2C.com.1password*",
     "~/Library/Application Scripts/2BUA8C4S2C.com.agilebits",
