@@ -18,8 +18,10 @@ cask "luna-secondary" do
 
   zap trash: [
     "~/Library/Application Support/astropad",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.astro-hq.lunasecondarymac.sfl*",
     "~/Library/Application Support/com.astro-hq.LunaSecondaryMac",
     "~/Library/Caches/com.astro-hq.LunaSecondaryMac",
+    "~/Library/HTTPStorages/com.astro-hq.LunaSecondaryMac",
     "~/Library/Logs/Astropad",
     "~/Library/Preferences/com.astro-hq.LunaSecondaryMac.plist",
     "~/Library/Saved Application State/com.astro-hq.LunaSecondaryMac.savedState",
