@@ -7,6 +7,8 @@ cask "caffeine" do
   desc "Tiny menu bar app to keep your Mac's display awake"
   homepage "https://github.com/RyanStoffel/caffeine"
 
+  depends_on macos: ">= :ventura"
+
   app "Caffeine.app"
 
   zap trash: [
