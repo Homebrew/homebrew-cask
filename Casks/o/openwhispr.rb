@@ -1,9 +1,9 @@
 cask "openwhispr" do
   arch arm: "-arm64"
 
-  version "1.7.6"
-  sha256 arm:   "c4114cb665c25a4e1e0a10b59272d5b2af0155f422a8c4550f23656474b648c2",
-         intel: "4585922bc52eab9a3dcfd456a52c0d2e34bf1edc54c4035df68cfac78b72969d"
+  version "1.8.0"
+  sha256 arm:   "044e39356fe6e5628739635bb4e0f6c05e4d1beb7094b0b113efa3cdcac5ebcb",
+         intel: "65323a9a8a09f939b21c904aa4e6d1188f2b382ea70c5981f3a8184b826af52c"
 
   url "https://github.com/OpenWhispr/openwhispr/releases/download/v#{version}/OpenWhispr-#{version}#{arch}.dmg"
   name "OpenWhispr"
