@@ -1,4 +1,4 @@
-cask "redot-engine" do
+cask "redot" do
   version "26.2"
   sha256 "128cb7bca69b95a3998a84e72b0990a302ce5b1919dfb56cfdc709c2c87925ae"
 
