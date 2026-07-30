@@ -2,8 +2,8 @@ cask "anaconda" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "2025.12-2"
-    sha256 "8d0b858358456d4ee159feb0c4ee6d635590b777f8b9ffa4aa7553c469aae2b6"
+    version "2026.07-1"
+    sha256 "6a9b63c645db4dbe293ffe9f168f7e380fe7a041fc863e67ee84db027425bce2"
   end
   on_intel do
     version "2025.06-1"
