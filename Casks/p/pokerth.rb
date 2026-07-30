@@ -19,8 +19,4 @@ cask "pokerth" do
   app "PokerTH.app"
 
   zap trash: "~/.pokerth"
-
-  caveats do
-    requires_rosetta
-  end
 end
