@@ -1,6 +1,6 @@
 cask "pokerth" do
-  version "2.1.4"
-  sha256 "777f8557bf4474153f554d438ae911b9afc6c77ef779102842577e429ffdabf0"
+  version "2.1.5"
+  sha256 "0445889a1c08593c77f2ddc6362e0258496c23e39d29d7e0fe1a26390a4264db"
 
   url "https://downloads.sourceforge.net/pokerth/PokerTH-#{version}-Combined.dmg",
       verified: "downloads.sourceforge.net/pokerth/"
@@ -19,8 +19,4 @@ cask "pokerth" do
   app "PokerTH.app"
 
   zap trash: "~/.pokerth"
-
-  caveats do
-    requires_rosetta
-  end
 end
