@@ -2,11 +2,11 @@ cask "atomcode" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "5.0.2"
-  sha256 arm:          "0ad6ca0c7dca0e236861ad5f061aae6b548f37ed3769ba827afa1b5022dc2956",
-         intel:        "1e7b05a9a59b962aad862d39417e826bea637b4289f8dd246b13d1cd72917d6a",
-         arm64_linux:  "18561292e9313cbfe8d7bdfb606ec1eb88675a50e5073a11241ad6adf5b57e42",
-         x86_64_linux: "3f2899f4c3c4be36afa820dc2c5e2a401754ccd34f25d58f6c8b407e2149c228"
+  version "5.0.3"
+  sha256 arm:          "90fda2b9b53fa9e65803d78f8bbb477b61b330b3d56a5babb2c19b8d5642ebc6",
+         intel:        "2e13b385dd42783847cf12fb3e83166235df31f285fd239fcbc86b7034f15010",
+         arm64_linux:  "ad54eb6c39bd8cd4d38388e8a4430d42254d0973f0704f69729492d9fca4611b",
+         x86_64_linux: "202d63593a21c6b33b058be9272b23f41c4f37fbcb532c136561f711cfbb4e3f"
 
   url "https://atomgit.com/atomgit_atomcode/atomcode/releases/download/v#{version}/atomcode-v#{version}-#{os}-#{arch}.tar.gz"
   name "AtomCode"
