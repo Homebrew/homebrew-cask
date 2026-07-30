@@ -19,7 +19,9 @@ cask "spacejump" do
   app "SpaceJump.app"
 
   zap trash: [
+    "~/Library/Application Support/com.ideabridge.spacejump",
     "~/Library/Caches/com.ideabridge.spacejump",
+    "~/Library/HTTPStorages/com.ideabridge.spacejump*",
     "~/Library/Logs/SpaceJump",
     "~/Library/Preferences/com.ideabridge.spacejump.plist",
   ]
