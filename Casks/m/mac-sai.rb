@@ -1,6 +1,6 @@
 cask "mac-sai" do
-  version "1.18.1"
-  sha256 "93d132ccdc3dbce0da5916b9f289e2d1201294410e249ce7add4af1f11fea82b"
+  version "1.18.2"
+  sha256 "ebeb39eb6f5dbbe2d07a14a0ec275b3e53eeccbe484a63c9fbe9f46750da1161"
 
   url "https://github.com/iliyami/MacSai/releases/download/v#{version}/MacSai-#{version}.dmg"
   name "Mac Sai"
