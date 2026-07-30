@@ -4,7 +4,7 @@ cask "meetingrecorder" do
 
   url "https://meetingsrecorder.com/downloads/MeetingRecorder-#{version}.dmg"
   name "MeetingRecorder"
-  desc "Recorder for meetings capturing mic and system audio, no bot in the call"
+  desc "Recorder for meetings capturing mic and system audio"
   homepage "https://meetingsrecorder.com/"
 
   livecheck do
