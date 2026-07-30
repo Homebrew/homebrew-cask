@@ -2,9 +2,9 @@ cask "brave-origin" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "-arm64"
 
-  version "1.92.144.0"
-  sha256 arm:   "7991cf9a381fd5acacfc4124c5186cebc1ac3863207d1d9832531ef590cbfa7f",
-         intel: "422ea9ce59b19506204b8667d1e1d55aea21b5c1a0835453444e45b0159507f1"
+  version "1.93.129.0"
+  sha256 arm:   "a5d24f0b9e74bd3bce80393194b5b86fed47275b3f40dd5540c6b5338e1b5591",
+         intel: "602986c3171de6e6358fa7d01173a80c564d62d41d93548b916e2f8049308f48"
 
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/stable#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-#{arch}.dmg",
       verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Origin/"
@@ -18,7 +18,7 @@ cask "brave-origin" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Brave Origin.app"
 
