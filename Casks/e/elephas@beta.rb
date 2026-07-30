@@ -1,5 +1,5 @@
 cask "elephas@beta" do
-  version "11.8002"
+  version "12.0001"
   sha256 :no_check
 
   url "https://assets.elephas.app/Elephas_beta.dmg"
