@@ -2,10 +2,10 @@ cask "kitty" do
   arch arm: "arm64", intel: "x86_64"
   os macos: ".dmg", linux: "-#{arch}.txz"
 
-  version "0.48.1"
+  version "0.48.2"
 
   on_macos do
-    sha256 "6d4e683945815e9d5ca42eac9480a3692258cf6145c823b92623f54b5dfa4b36"
+    sha256 "f804f58ee4b69c76f84eb3281e140748269a63f3f4a816015a8dec2a06d2b195"
 
     depends_on macos: :monterey
 
@@ -16,8 +16,8 @@ cask "kitty" do
                     executable: "#{appdir}/kitty.app/Contents/MacOS/kitten"
   end
   on_linux do
-    sha256 arm64_linux:  "6b0d8fe0af20ba03348e97e303f3c6084b5338bb4abd52737d8e2ffd2dba3d33",
-           x86_64_linux: "ab7d4978b146a3f4799d74fdd6fddf322e5cf93601494e3fcbed925141611963"
+    sha256 arm64_linux:  "534b214d407a05e4603da75ef02fffa592ec1bbec20a413c5e0cd3f853c928cb",
+           x86_64_linux: "967a1958e7fc67b495d279c0963bcd1a0482097151817ce6506fabc822689af7"
 
     binary "bin/kitty"
     binary "bin/kitten"
