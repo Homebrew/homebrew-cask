@@ -1,6 +1,6 @@
 cask "grammarly-desktop" do
-  version "1.178.0.0"
-  sha256 "beeed3fafe93de91bcb9f374dfa41f47f2ce111ded0ea9e0e88eee345818db90"
+  version "1.179.1.0"
+  sha256 "cbb069fd7d62d8e749509b6e2ed262304aa08e241f4d209d478b93be1aac9987"
 
   url "https://download-mac.grammarly.com/versions/#{version}/Grammarly.dmg"
   name "Grammarly Desktop"
