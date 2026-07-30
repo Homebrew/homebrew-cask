@@ -2,10 +2,10 @@ cask "zen" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: ".macos-universal.dmg", linux: "-#{arch}.AppImage"
 
-  version "1.21.9b"
+  version "1.21.10b"
 
   on_macos do
-    sha256 "29e0b6653d82ad890dc8232cd1ca03e2860bdfb68dcd9f79582282a6ccbd12fb"
+    sha256 "324e164cf9774e0463f88c523dcb95871732b37936810a7ed1fee364cfe8c236"
 
     conflicts_with cask: "zen-privacy"
 
@@ -27,8 +27,8 @@ cask "zen" do
         rmdir: "~/Library/Caches/Mozilla"
   end
   on_linux do
-    sha256 arm64_linux:  "7f080e01439cd34d08de873a2635b6b9c0a9188b5406ae704a9127235f0ff5a7",
-           x86_64_linux: "927080c5a6f219a98b2f115fbcfb14fc9bed16c7f8b8df17a6994f2477160beb"
+    sha256 arm64_linux:  "b7718457bc891ac36d37e57033617ab3c50659250244f14e4f29fcb0b5623ece",
+           x86_64_linux: "4fa68e4b004bf9fe2ac4ab4446761c062ad3c56655e8a5abddcad582a1e57283"
 
     app_image "zen-#{arch}.AppImage", target: "Zen.AppImage"
   end
