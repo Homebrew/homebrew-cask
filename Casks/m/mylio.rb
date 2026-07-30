@@ -1,5 +1,5 @@
 cask "mylio" do
-  version "24.7.7891"
+  version "24.8.7901"
   sha256 :no_check
 
   url "https://myliodownloads.com/Mylio.dmg",
@@ -17,6 +17,8 @@ cask "mylio" do
   depends_on :macos
 
   app "Mylio.app"
+
+  uninstall launchctl: "mylollc.Mylio.LoginItem"
 
   zap trash: [
     "~/Library/Application Support/Mylio",
