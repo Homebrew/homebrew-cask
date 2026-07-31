@@ -13,7 +13,7 @@ cask "squirrelsql" do
 
   preflight_steps do
     # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-    write "install-options.xml", <<~EOS
+    write_file "install-options.xml", <<~EOS
       <?xml version="1.0" encoding="UTF-8" standalone="no"?>
       <AutomatedInstallation langpack="eng">
       <com.izforge.izpack.panels.hello.HelloPanel id="HelloPanel_0"/>
