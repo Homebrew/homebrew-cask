@@ -1,5 +1,5 @@
 cask "inkstitch" do
-  version "3.2.2"
+  version "3.3.0"
 
   on_monterey :or_older do
     sha256 "0e4a39a7dfc62b8ec84b110dc3a9ccceff52fa1b92940e19d34dd04e16dcfca4"
@@ -16,8 +16,8 @@ cask "inkstitch" do
   on_ventura :or_newer do
     arch arm: "arm64", intel: "x86_64"
 
-    sha256 arm:   "fb9f62931eddd7e0ebdf2364651738d5c825222f4c17939b881a67cd3a44012e",
-           intel: "6a143c5bf4f007009cb51b0b7ddcbd4ee3d45d908d7c1a59d3a112ef6cd130ec"
+    sha256 arm:   "eb48bbed6b58438427accc5adc079f41d4ad3a82a3ebeeb04af93f204a529b2f",
+           intel: "756485679c1de66d9052571200695a7e247829ef8bef99bf2e336afdd2c93b57"
 
     url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx-#{arch}.pkg",
         verified: "github.com/inkstitch/inkstitch/"
