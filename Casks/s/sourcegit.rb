@@ -1,9 +1,9 @@
 cask "sourcegit" do
   arch arm: "arm64", intel: "x64"
 
-  version "2026.16"
-  sha256 arm:   "16788af52aa330fb134f050912ef197169b3971b7724f670970057b9cf62d9e5",
-         intel: "feca8f7c860d0c0723d3b9ea8a2f3fd57aefd73cafb2791c91d79a5d85b5c9a7"
+  version "2026.17"
+  sha256 arm:   "99c2b15265e50ea50b7629e7a9466bc21d82d2920587b4c2eeed5303daff83f3",
+         intel: "b67b047c9bd56398f43a58fe1539adb8c7a546c20641a5493398f1872584f15f"
 
   url "https://github.com/ybeapps/homebrew-sourcegit/releases/download/v#{version}-signed/SourceGit-v#{version}-#{arch}-signed.dmg"
   name "SourceGit"
