@@ -1,6 +1,6 @@
 cask "hapigo" do
-  version "2.22.0"
-  sha256 "5a33ab4ff0892e8bbbfd95396d8b26654e1ce6ae8e88602e7b8f41360703abbe"
+  version "2.22.1"
+  sha256 "3dea65cabd50e104a229aa6e70b9ec6ed9670a6dc37f4bf2e4e5e20659111352"
 
   url "https://dl.hapigo.com/HapiGo_#{version}.dmg"
   name "HapiGo"
@@ -18,6 +18,8 @@ cask "hapigo" do
   depends_on macos: :monterey
 
   app "HapiGo.app"
+
+  uninstall quit: "com.xunyong.hapigo"
 
   zap trash: [
     "~/Library/Application Support/Hapigo",
