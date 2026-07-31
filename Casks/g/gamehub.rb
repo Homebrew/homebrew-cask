@@ -1,5 +1,5 @@
 cask "gamehub" do
-  version "0.8.456"
+  version "0.8.465"
   sha256 :no_check
 
   language "en", default: true do
