@@ -1,15 +1,15 @@
 cask "bazecor" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.9.1"
-  sha256 arm:   "02dc5530079844bb78927a688db21761b921d3e0440b64efa5e1f94355b86eec",
-         intel: "4723fb37dc19df62968c288fbdf42466db141b78325fa994892e23ab505763d1"
+  version "1.9.2"
+  sha256 arm:   "55699405c2e2572cacc48db2fe141a421b052b26b15ad5b9df3ba9be1ee9cad6",
+         intel: "2a9b1377b7be417c14d1499d2e152e467dbbc26e0339fac14ff6f0cfa4b011ac"
 
   url "https://github.com/Dygmalab/Bazecor/releases/download/v#{version}/Bazecor-#{version}-#{arch}.dmg",
       verified: "github.com/Dygmalab/Bazecor/"
   name "Bazecor"
   desc "Graphical configurator for Dygma Raise keyboards"
-  homepage "https://dygma.com/pages/programmable-split-keyboard"
+  homepage "https://github.com/Dygmalab/Bazecor"
 
   livecheck do
     url :url
