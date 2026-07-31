@@ -1,6 +1,6 @@
 cask "mirai" do
-  version "0.3.9"
-  sha256 "4eed45c7ed8f66328cb12ba5a174433eb05597b66d1b9212ae07c719eb5e2db4"
+  version "0.3.10"
+  sha256 "78c92b41cc1fe4971f7a832d671506fd3a258d465bbec43d5d36d7c5467358da"
 
   url "https://assets.trymirai.com/app/mirai-#{version}-aarch64-apple-darwin.dmg"
   name "Mirai"
