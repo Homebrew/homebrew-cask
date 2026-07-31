@@ -21,6 +21,7 @@ cask "orka3" do
   depends_on :macos
 
   pkg "orka3.pkg"
+  generate_completions_from_executable "/usr/local/bin/orka3", "completion"
 
   uninstall pkgutil: "com.macstadium.orka3.pkg"
 
