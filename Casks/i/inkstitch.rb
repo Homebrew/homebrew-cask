@@ -39,7 +39,7 @@ cask "inkstitch" do
 
   preflight_steps do
     # This needs to exist, otherwise the installer gets stuck at a prompt asking the user to run Inkscape first.
-    mkdir_p "Library/Application Support/org.inkscape.Inkscape/config/inkscape", base: :home
+    mkdir_p "Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions", base: :home
   end
 
   uninstall pkgutil: "org.inkstitch.installer",
