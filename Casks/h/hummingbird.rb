@@ -20,8 +20,8 @@ cask "hummingbird" do
 
   binary "hummingbird-macos-#{arch}-#{version}/hummingbird"
 
-  postflight do
-    set_ownership("#{staged_path}/hummingbird-macos-#{arch}-#{version}/hummingbird", user: "root")
+  postflight_steps do
+    set_ownership "hummingbird-macos-*-#{version}/hummingbird", user: "root"
   end
 
   # No zap stanza required
