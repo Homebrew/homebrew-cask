@@ -1,6 +1,6 @@
 cask "orbit" do
   version "1.1.0"
-  sha256 :no_check
+  sha256 :no_check # required as upstream 302 redirects outdated versions to the latest
 
   url "https://orbitformac.com/downloads/Orbit-#{version}.dmg"
   name "Orbit for Mac"
@@ -27,3 +27,4 @@ cask "orbit" do
     "~/Library/WebKit/com.dearnode.orbit",
   ]
 end
+
