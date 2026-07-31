@@ -8,7 +8,7 @@ cask "lm-studio-bionic" do
   homepage "https://lmstudio.ai/"
 
   livecheck do
-    url "https://versions-prod.lmstudio.ai/update/bionic/darwin/arm64/#{version.csv.first}"
+    url "https://versions-prod.lmstudio.ai/update/bionic/darwin/arm64"
     strategy :json do |json|
       version = json["version"]
       build = json["build"]
