@@ -19,6 +19,8 @@ cask "hapigo" do
 
   app "HapiGo.app"
 
+  uninstall quit: "com.xunyong.hapigo"
+
   zap trash: [
     "~/Library/Application Support/Hapigo",
     "~/Library/Caches/com.xunyong.hapigo",
