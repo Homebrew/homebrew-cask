@@ -1,5 +1,5 @@
 cask "perplexity" do
-  version "26.28.1"
+  version "26.31.0"
   sha256 :no_check
 
   url "https://macos-download.perplexity.ai/Perplexity.dmg"
