@@ -1,6 +1,6 @@
 cask "comfy" do
-  version "1.0.31,260728ufiw375mu"
-  sha256 "2f99558d28670d5faeedd402d602664af3a4abb850962442bef26cc8e75985b1"
+  version "1.0.33,260731zdzih5jyo"
+  sha256 "2780e58643109a447b51bab4ed49d5153f8d03764881abef323b9a1c1659bcc2"
 
   url "https://download.todesktop.com/241012ess7yxs0e/Comfy%20Desktop%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64-mac.zip",
       verified: "download.todesktop.com/241012ess7yxs0e/"
