@@ -2,7 +2,7 @@ cask "pieces-os" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "_arm64"
 
-  version "12.5.0"
+  version "12.6.0"
   sha256 :no_check
 
   url "https://builds.pieces.app/stages/production/os_server/macos#{arch}/download"
@@ -20,7 +20,8 @@ cask "pieces-os" do
 
   app "Pieces OS.app"
 
-  uninstall quit: "com.pieces.os"
+  uninstall launchctl: "com.pieces.os.launch",
+            quit:      "com.pieces.os"
 
   zap trash: [
     "~/Library/Application Support/com.pieces.os",
