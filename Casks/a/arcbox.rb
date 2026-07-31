@@ -1,6 +1,6 @@
 cask "arcbox" do
-  version "1.30.0"
-  sha256 "7f4082d22fd651628e3a076ab3ca84c5d1c84f1cbecdd5a63bfc0bdc5ce14ca2"
+  version "1.30.1"
+  sha256 "199ef5f604802f7d94a13b3ba7cbcdd1c49e43816700eac8e1405748253faabe"
 
   url "https://release.arcboxcdn.com/desktop/v#{version}/ArcBox-#{version}-arm64.dmg",
       verified: "release.arcboxcdn.com/desktop/"
