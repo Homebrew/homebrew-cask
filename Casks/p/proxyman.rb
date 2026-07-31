@@ -19,7 +19,7 @@ cask "proxyman" do
   binary "#{appdir}/Proxyman.app/Contents/MacOS/proxyman-cli"
 
   uninstall_postflight_steps do
-    delete_keychain_certificate "Proxyman"
+    delete_keychain_certificates "Proxyman"
   end
 
   uninstall launchctl: "com.proxyman.NSProxy.HelperTool",
