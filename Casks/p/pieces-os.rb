@@ -20,7 +20,8 @@ cask "pieces-os" do
 
   app "Pieces OS.app"
 
-  uninstall quit: "com.pieces.os"
+  uninstall launchctl: "com.pieces.os.launch",
+            quit:      "com.pieces.os"
 
   zap trash: [
     "~/Library/Application Support/com.pieces.os",
