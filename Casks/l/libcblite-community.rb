@@ -20,17 +20,11 @@ cask "libcblite-community" do
   artifact "libcblite-#{version}/lib/cmake/CouchbaseLite", target: "#{HOMEBREW_PREFIX}/lib/cmake/CouchbaseLite"
   artifact "libcblite-#{version}/lib/libcblite.#{version}.dylib", target: "#{HOMEBREW_PREFIX}/lib/libcblite.#{version}.dylib"
 
-  postflight do
-    puts "Creating library symlinks in #{HOMEBREW_PREFIX}/lib"
-    File.symlink("libcblite.#{version}.dylib", "#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib")
-    File.symlink("libcblite.#{version.major}.dylib", "#{HOMEBREW_PREFIX}/lib/libcblite.dylib")
-  end
-
-  uninstall_postflight do
-    if File.symlink?("#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib")
-      puts "Removing library symlinks in #{HOMEBREW_PREFIX}/lib"
-      File.unlink("#{HOMEBREW_PREFIX}/lib/libcblite.#{version.major}.dylib", "#{HOMEBREW_PREFIX}/lib/libcblite.dylib")
-    end
+  postflight_steps do
+    symlink "libcblite.#{version}.dylib", "{{HOMEBREW_PREFIX}}/lib/libcblite.#{version.major}.dylib",
+            source_base: :relative, remove_on_uninstall: true
+    symlink "libcblite.#{version.major}.dylib", "{{HOMEBREW_PREFIX}}/lib/libcblite.dylib",
+            source_base: :relative, remove_on_uninstall: true
   end
 
   # No zap stanza required
