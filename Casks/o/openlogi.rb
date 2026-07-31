@@ -19,6 +19,7 @@ cask "openlogi" do
   depends_on macos: :ventura
 
   app "OpenLogi.app"
+  binary "#{appdir}/OpenLogi.app/Contents/MacOS/openlogi"
 
   zap trash: [
     "~/.config/openlogi",
