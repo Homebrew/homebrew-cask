@@ -29,8 +29,8 @@ cask "autofirma" do
 
   # remove 'Autofirma ROOT' and '127.0.0.1' certificates from keychain (these were installed by pkg)
   uninstall_postflight_steps do
-    delete_keychain_certificate "AutoFirma ROOT"
-    delete_keychain_certificate "127.0.0.1"
+    delete_keychain_certificates "AutoFirma ROOT"
+    delete_keychain_certificates "127.0.0.1"
   end
 
   uninstall quit:    "es.gob.afirma",
