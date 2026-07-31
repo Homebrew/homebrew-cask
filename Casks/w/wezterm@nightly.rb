@@ -9,7 +9,10 @@ cask "wezterm@nightly" do
   homepage "https://wezterm.org/"
 
   conflicts_with cask: "wezterm"
-  depends_on :macos
+  depends_on macos: :big_sur
+
+  # Move "WezTerm-macos-<date>/WezTerm.app" out of the subfolder
+  rename "WezTerm-*/WezTerm.app", "WezTerm.app"
 
   app "WezTerm.app"
   %w[
@@ -24,12 +27,6 @@ cask "wezterm@nightly" do
   bash_completion "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/bash", target: "wezterm"
   fish_completion "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/fish", target: "wezterm.fish"
   zsh_completion "#{appdir}/WezTerm.app/Contents/Resources/shell-completion/zsh", target: "_wezterm"
-
-  preflight_steps do
-    # Move "WezTerm-macos-#{version}/WezTerm.app" out of the subfolder
-    move "{WezTerm-*,wezterm-*}/WezTerm.app", ".", source_glob: true
-    remove ["WezTerm-*", "wezterm-*"], recursive: true
-  end
 
   zap trash: "~/Library/Saved Application State/com.github.wez.wezterm.savedState"
 end
