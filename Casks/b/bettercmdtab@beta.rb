@@ -10,11 +10,10 @@ cask "bettercmdtab@beta" do
 
   livecheck do
     url :url
-    regex(/BetterCmdTab[._-]v?(\d+(?:\.\d+)+-beta\.\d+)-(\d+)\.dmg$/i)
+    regex(/BetterCmdTab[._-]v?(\d+(?:\.\d+)+(?:-beta\.\d+)?)-(\d+)\.dmg$/i)
     strategy :github_releases do |json, regex|
       json.map do |release|
         next if release["draft"]
-        next unless release["prerelease"]
 
         release["assets"]&.map do |asset|
           match = asset["browser_download_url"]&.match(regex)
