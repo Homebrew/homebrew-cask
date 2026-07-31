@@ -1,6 +1,6 @@
 cask "xppen-pentablet" do
-  version "4.0.18,260716,2026,07"
-  sha256 "e442d9c889222ed55579c897b5d9bd8ad1accd5b047a0988dbb02f6355c554cd"
+  version "4.0.18,260723,2026,07"
+  sha256 "1a8d91c9d7b4e698c7a7969417513d2de6d52e190f4865753f4f58b79a861c10"
 
   url "https://download01.xp-pen.com/file/#{version.csv.third}/#{version.csv.fourth}/XPPenMac_#{version.csv.first}_#{version.csv.second}.zip"
   name "XPPen PenTablet"
