@@ -63,7 +63,7 @@ cask "gcloud-cli" do
   postflight_steps do
     # HACK: Allow existing shell profiles to work by linking the current version to the `latest` directory.
     unless_path_exists "{{caskroom_path}}/latest" do
-      symlink "{{staged_path}}", "{{caskroom_path}}/latest", force: true
+      symlink "{{staged_path}}", "{{caskroom_path}}/latest", overwrite: true
     end
 
     on_macos do
