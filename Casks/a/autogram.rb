@@ -1,6 +1,6 @@
 cask "autogram" do
-  version "2.7.4"
-  sha256 "db98281cf2d3ae3630ce4dce4c5b69ef20f82508acebb9bdf3ec996f9eb1dc62"
+  version "2.7.5"
+  sha256 "2e225c212377157a4500ef8485772d7a0187dd515575cff33ab24a3cd3c6ab71"
 
   url "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/Autogram-#{version}-MacOs.pkg",
       verified: "github.com/slovensko-digital/autogram/"
@@ -14,6 +14,7 @@ cask "autogram" do
   end
 
   depends_on :macos
+  depends_on arch: :arm64
 
   pkg "Autogram-#{version}-MacOs.pkg"
 
