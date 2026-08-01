@@ -51,7 +51,7 @@ cask "cocktail" do
     end
   end
   on_tahoe do
-    version "19.8.4"
+    version "19.9"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}TE.dmg"
