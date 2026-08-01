@@ -1,6 +1,6 @@
 cask "spokenly" do
-  version "2.27.6"
-  sha256 "8fee17d521cad472297592251cd720e2e6313e859e4a923ebc8d513553891e12"
+  version "2.27.8"
+  sha256 "01e5362bda39e5c05cc1d9047b233738a02c94575427ef303a2beeb5e8b1b227"
 
   url "https://cdn.spokenly.app/releases/macos/Spokenly-#{version}.dmg"
   name "Spokenly"
@@ -13,7 +13,7 @@ cask "spokenly" do
   end
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :ventura
 
   app "Spokenly.app"
 
