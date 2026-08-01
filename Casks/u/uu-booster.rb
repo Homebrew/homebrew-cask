@@ -1,6 +1,6 @@
 cask "uu-booster" do
   version "2.8.19"
-  sha256 "f722e97e3ba23b3b5e0420effb80365df6744b986517391e8971c3710f22470d"
+  sha256 :no_check
 
   url "https://adl.netease.com/d/g/uu/c/gw?type=mac&direct=1",
       verified: "adl.netease.com/d/g/uu/"
