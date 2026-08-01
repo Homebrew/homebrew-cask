@@ -1,6 +1,6 @@
 cask "dolphin@dev" do
-  version "2606-272,96,c8"
-  sha256 "58135f96c0beba5b31df13563af6a400111f172d3cc6b50053ff6ce9ec513cea"
+  version "2606-274,d9,19"
+  sha256 "b0ad6fcbb8850c14126b9c951b5bfe54ac0cd4c750ddbd61d321d7852a21d2d2"
 
   url "https://dl.dolphin-emu.org/builds/#{version.csv.second}/#{version.csv.third}/dolphin-master-#{version.csv.first}-universal.dmg"
   name "Dolphin Dev"
