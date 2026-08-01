@@ -18,6 +18,8 @@ cask "jazz2-resurrection" do
 
   app "Jazz² Resurrection.app"
 
+  uninstall quit: "jazz2.resurrection"
+
   zap trash: "~/Library/Application Support/Jazz² Resurrection"
 
   caveats <<~EOS
