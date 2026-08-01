@@ -1,5 +1,5 @@
 cask "onyx@beta" do
-  version "4.9.0,250902"
+  version "5.1.0,260730"
   sha256 :no_check
 
   url "https://www.titanium-software.fr/download/beta/OnyX.dmg"
@@ -9,14 +9,14 @@ cask "onyx@beta" do
 
   livecheck do
     url :homepage
-    regex(/>?\s*OnyX\s+v?(\d+(?:\.\d+)+).*?\((\d+)\)\s+for\s+[\w\s]*26/i)
+    regex(/>?\s*OnyX\s+v?(\d+(?:\.\d+)+).*?\((\d+)\)\s+for\s+[\w\s]*27/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
   conflicts_with cask: "onyx"
-  depends_on macos: :tahoe
+  depends_on macos: :golden_gate
 
   app "OnyX.app"
 
