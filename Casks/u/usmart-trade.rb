@@ -1,6 +1,6 @@
 cask "usmart-trade" do
-  version "4.6.7,20260723_181958,7cffafa3-3ab8-4ae8-9758-e3736575ddcf,2026-07-23"
-  sha256 "82d58ad741714c1e97462c5f776d4a33c2fb60721628ef24344997c9cd621c5a"
+  version "4.6.7,20260801_091431,057c7237-79e9-46a3-addb-79fbd4f8e09b,2026-08-01"
+  sha256 "92d1fef5636172b6bcff21f1f414c1514ae195d4b0d582cd110e9e4c9c87564b"
 
   url "https://hk-static.usmartglobal.com/admin/app-version-file/#{version.csv.fourth}/#{version.csv.third}/usmart_macapp_#{version.csv.first}_#{version.csv.second}.dmg"
   name "uSMART Trade"
