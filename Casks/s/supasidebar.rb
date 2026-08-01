@@ -1,6 +1,6 @@
 cask "supasidebar" do
-  version "0.21.2"
-  sha256 "14c4d50f3e6f856c10fd9de8eec4e3d02b1b5775a2bf868a1def4947d2af8c23"
+  version "1.0.0"
+  sha256 "67636aeec0441c03200bc951e8491a11d60831e0623956824b4b844e59296041"
 
   url "https://github.com/auspy/supasidebar-updates/releases/download/v#{version}/supasidebar_v#{version}.dmg",
       verified: "github.com/auspy/supasidebar-updates/"
