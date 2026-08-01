@@ -27,4 +27,3 @@ cask "orbit" do
     "~/Library/WebKit/com.dearnode.orbit",
   ]
 end
-
