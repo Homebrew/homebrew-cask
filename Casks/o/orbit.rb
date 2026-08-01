@@ -1,5 +1,5 @@
 cask "orbit" do
-  version "1.1.3"
+  version "1.1.4"
   sha256 :no_check # required as upstream 302 redirects outdated versions to the latest
 
   url "https://orbitformac.com/downloads/Orbit-#{version}.dmg"
