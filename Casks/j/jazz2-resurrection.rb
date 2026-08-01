@@ -2,8 +2,8 @@ cask "jazz2-resurrection" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
   arch arm: "ARM64", intel: "x64"
 
-  version "3.6.0"
-  sha256 "6a8050653aa9d12a8680c898a55970b68b2c4d890528693cb05664bbb29e17c4"
+  version "3.7.0"
+  sha256 "b737320e4802e9b7fbe125438a10e82c50496729da117cc9354dd506280d43d0"
 
   url "https://github.com/deathkiller/jazz2/releases/download/#{version}/Jazz2_#{version}_MacOS.zip",
       verified: "github.com/deathkiller/jazz2/"
@@ -17,6 +17,8 @@ cask "jazz2-resurrection" do
   container nested: "#{arch}/jazz2_sdl2.dmg"
 
   app "Jazz² Resurrection.app"
+
+  uninstall quit: "jazz2.resurrection"
 
   zap trash: "~/Library/Application Support/Jazz² Resurrection"
 
