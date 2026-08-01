@@ -1,8 +1,8 @@
 cask "superduper" do
   version "4.0.0"
-  sha256 :no_check
+  sha256 "c7fdb821817869056cdc7adef1b11adc8deed01ccf2d666c0bc507239cdd8964"
 
-  url "https://www.shirt-pocket.com/downloads/SuperDuper.dmg"
+  url "https://www.shirt-pocket.com/downloads/SuperDuper-#{version}.dmg"
   name "SuperDuper!"
   desc "Backup, recovery and cloning software"
   homepage "https://www.shirt-pocket.com/superduper4.php"
