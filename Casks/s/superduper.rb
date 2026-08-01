@@ -8,7 +8,7 @@ cask "superduper" do
   homepage "https://www.shirt-pocket.com/superduper4.php"
 
   livecheck do
-    url "https://www.shirt-pocket.com/SuperDuper4/appcast.xml"
+    url "https://www.shirt-pocket.com/SuperDuper#{version.major}/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
