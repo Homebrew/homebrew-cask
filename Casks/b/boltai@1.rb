@@ -7,11 +7,6 @@ cask "boltai@1" do
   desc "AI chat client"
   homepage "https://boltai.com/"
 
-  livecheck do
-    url "https://boltai.com/sparkle/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
-
   disable! date: "2026-06-01", because: :unmaintained
 
   auto_updates true
