@@ -1,11 +1,8 @@
 cask "blender@lts" do
-  arch arm: "arm64", intel: "x64"
+  version "5.2.0"
+  sha256 "ed4d8390166dec5ea0a2813a03db6221f206ce016442be7f59f41d760972568a"
 
-  version "4.5.11"
-  sha256 arm:   "1fad76c7da9451c7d6db99f1a5ed3c0a1a461d0aa07bf2b639e2fb4804ca4f13",
-         intel: "d5b0e77ab3baf3cfdf8a80847b3b716ec7448ecd8e299564b7f5a934427224fc"
-
-  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-#{arch}.dmg"
+  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-arm64.dmg"
   name "Blender LTS"
   desc "3D creation suite"
   homepage "https://www.blender.org/"
@@ -20,6 +17,7 @@ cask "blender@lts" do
 
   conflicts_with cask: "blender"
   depends_on macos: :big_sur
+  depends_on arch: :arm64
 
   app "Blender.app"
   command_wrapper "blender",
