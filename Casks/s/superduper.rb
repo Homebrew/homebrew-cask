@@ -17,6 +17,8 @@ cask "superduper" do
 
   app "SuperDuper!.app"
 
+  uninstall launchctl: "com.shirtpocket.SuperDuper4.menu"
+
   zap trash: [
     "~/Library/Application Support/CrashReporter/SuperDuper!_*.plist",
     "~/Library/Application Support/SuperDuper!",
