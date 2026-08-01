@@ -9,7 +9,7 @@ cask "mend" do
            intel: "b8bf81976ee616ea6ad68dd131009d7b6a78f884f5a2fc9ec5677a0846883a54"
   end
   on_linux do
-    sha256 x86_64_linux: "6af968b22a8f4e975ef50138b319156eda6ce0a41f21705bbc65ed0ccc645d0f"
+    sha256 "6af968b22a8f4e975ef50138b319156eda6ce0a41f21705bbc65ed0ccc645d0f"
 
     depends_on arch: :x86_64
   end
