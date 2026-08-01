@@ -18,6 +18,15 @@ cask "exifcleaner" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
+  depends_on macos: :big_sur
+
+  app "ExifCleaner.app"
+
+  zap trash: [
+    "~/Library/Application Support/ExifCleaner",
+    "~/Library/Saved Application State/com.exifcleaner.savedState",
+  ]
+
   caveats <<~EOS
     ExifCleaner is unsigned. To open it on macOS 14 (Sonoma) and earlier,
     right-click (or Control-click) ExifCleaner, choose Open, then click Open
@@ -27,13 +36,4 @@ cask "exifcleaner" do
     macOS to block it. Then open System Settings > Privacy & Security and
     click Open Anyway next to the ExifCleaner message.
   EOS
-
-  depends_on macos: :big_sur
-
-  app "ExifCleaner.app"
-
-  zap trash: [
-    "~/Library/Application Support/ExifCleaner",
-    "~/Library/Saved Application State/com.exifcleaner.savedState",
-  ]
 end
