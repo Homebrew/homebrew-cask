@@ -1,6 +1,6 @@
 cask "favro" do
-  version "1.0.195"
-  sha256 "cd07f1be9c9acb985fe9e1cf19e2b37657531f07b1e619b5b3828233678f3365"
+  version "1.0.196"
+  sha256 "66558a20fc9a924bffb1298580959d8d0ed450be04478575a6466cde47bdaf4e"
 
   url "https://download.favro.com/FavroDesktop/macOS/x64/Favro-#{version}.dmg"
   name "Favro"
