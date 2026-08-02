@@ -40,7 +40,7 @@ cask "deeper" do
     end
   end
   on_tahoe :or_newer do
-    version "3.3.0"
+    version "3.3.1"
 
     url "https://www.titanium-software.fr/download/26/Deeper.dmg"
 
