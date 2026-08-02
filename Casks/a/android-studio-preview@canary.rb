@@ -1,7 +1,7 @@
 cask "android-studio-preview@canary" do
   arch arm: "mac_arm", intel: "mac"
 
-  version "2026.1.4.3,quail4-canary3"
+  version "2026.1.4.3,quail4-canary3,AI-261.26222.65.2614.15978069"
   sha256 arm:   "e5cc66a505493945a4fa3c1cbf5dee4d721484b5649915825673e62598c91ec1",
          intel: "5e6a2435456572956f15c04e88e7a64e0d8eabdbd4785409bacbbcecf8b460e7"
 
@@ -12,11 +12,18 @@ cask "android-studio-preview@canary" do
   homepage "https://developer.android.com/studio/preview/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/android[._-]studio(?:[._-]([^"' >]+))?[._-]#{arch}\.dmg[^>]*?canary}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+    url "https://jb.gg/android-studio-releases-list.json"
+    strategy :json do |json|
+      json.dig("content", "item")&.filter_map do |release|
+        next if release["channel"] != "Canary"
+
+        version = release["version"]
+        build = release["build"]
+        download = release["download"]&.find { |item| item["link"]&.end_with?("-#{arch}.dmg") }
+        match = download&.dig("link")&.match(%r{/android-studio-([^/]+)-#{arch}\.dmg\z}i)
+        next if version.blank? || build.blank? || match.blank?
+
+        "#{version},#{match[1]},#{build}"
       end
     end
   end
