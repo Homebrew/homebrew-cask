@@ -40,4 +40,5 @@ cask "unity-hub" do
   end
 
   auto_updates true
+  conflicts_with cask: "unity-hub@beta"
 end
