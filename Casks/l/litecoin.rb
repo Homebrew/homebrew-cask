@@ -1,6 +1,6 @@
 cask "litecoin" do
-  version "0.21.4"
-  sha256 "1ae347f6e77c10f857d98a18b778ec4fc2449b7bb51c425bad726b02cb9ef876"
+  version "0.21.5.6"
+  sha256 "8eae361597a1698d61bac73e89d6aed8a32578db24be5e42958a583d7abf7276"
 
   url "https://download.litecoin.org/litecoin-#{version}/osx/litecoin-#{version}-osx.dmg"
   name "Litecoin"
@@ -8,8 +8,8 @@ cask "litecoin" do
   homepage "https://litecoin.org/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?litecoin[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
+    url "https://download.litecoin.org/"
+    regex(%r{href=["']?litecoin[._-]v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   depends_on :macos
