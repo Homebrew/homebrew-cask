@@ -29,8 +29,7 @@ cask "intellij-idea" do
 
   app "IntelliJ IDEA.app"
   command_wrapper "idea",
-                  executable: "/usr/bin/open",
-                  args:       ["-na", "IntelliJ IDEA.app", "--args"]
+                  executable: "#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/IntelliJIdea#{version.major_minor}",
