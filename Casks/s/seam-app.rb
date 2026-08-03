@@ -21,7 +21,10 @@ cask "seam-app" do
 
   zap trash: [
     "~/Library/Caches/app.seam",
+    "~/Library/Caches/app.seam.Seam",
+    "~/Library/HTTPStorages/app.seam.Seam",
     "~/Library/Logs/Seam",
+    "~/Library/Preferences/app.seam.Seam.plist",
     "~/Library/Preferences/seam.app.plist",
   ]
 end
