@@ -1,8 +1,8 @@
 cask "font-recursive-mono-nerd-font" do
-  version "3.4.0"
-  sha256 "0bd832ed9de2b5955208494808e69528cfc471cc03eea850ecfbf8e3b1ed702f"
+  version "3.5.0"
+  sha256 "e3ed0f6107bcfc1bf8599f2d54e97978e01050982b36533f2ed880567672df31"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Recursive.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Recursive.tar.xz"
   name "RecMono Nerd Font families (Recursive Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
