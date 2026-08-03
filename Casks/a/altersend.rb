@@ -1,15 +1,16 @@
 cask "altersend" do
-  arch arm: "arm64", intel: "x86_64"
   os macos: "dmg", linux: "AppImage"
 
-  version "1.7.0"
-  sha256 arm:          "0df4ea9407b71a7efe11f1b12e38f3f9034b21ecdb881d33f4e8f22d02642df4",
-         intel:        "8235ae3ebd25832292faed53ee3da4cef25198f5097e2b6817c01598ad348ec4",
-         arm64_linux:  "526d17c8fd58fac6dbb7da12524ca544aba5419ec1b3b5f73fcc0b2342c0aa26",
-         x86_64_linux: "52d7245103f8a8f2e05ed6b62a39d19303c68bf45d6aadb07bc7abb2b77c23e4"
+  version "1.8.0"
+  sha256 arm:          "f7ba7bf25eec22321f8433161c840e9f4a68ed3363433584aae7699b81c3d040",
+         intel:        "5d36979b04d95ae3c82f9e317366fab2c0ca009c036337550275e1400ea6777b",
+         arm64_linux:  "404106991daf9baac204d15e5343f1ffeed22d5e44bd0151cc84ba35166a209a",
+         x86_64_linux: "2b429aedad7bf96aa693d544715bfc582f1c90fde47e8b503aa9b8157d613656"
 
   on_macos do
-    url "https://github.com/denislupookov/altersend/releases/download/v#{version}/AlterSend-#{version}-#{arch}.#{os}"
+    arch arm: "-arm64"
+
+    url "https://github.com/denislupookov/altersend/releases/download/v#{version}/AlterSend-#{version}#{arch}.#{os}"
 
     depends_on macos: :monterey
 
@@ -21,6 +22,8 @@ cask "altersend" do
     ]
   end
   on_linux do
+    arch arm: "arm64", intel: "x86_64"
+
     url "https://github.com/denislupookov/altersend/releases/download/v#{version}/AlterSend-#{arch}.#{os}"
 
     app_image "AlterSend-#{arch}.AppImage", target: "AlterSend.AppImage"
