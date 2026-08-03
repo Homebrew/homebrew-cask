@@ -26,6 +26,7 @@ cask "usmart-trade" do
   app "uSMART Trade.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.usmart.mac.test.sfl*",
     "~/Library/Application Support/uSmart",
     "~/Library/Preferences/com.usmart.mac.test.plist",
     "~/Library/Saved Application State/com.usmart.mac.test.savedState",
