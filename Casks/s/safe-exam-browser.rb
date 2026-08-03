@@ -17,5 +17,10 @@ cask "safe-exam-browser" do
 
   app "Safe Exam Browser.app"
 
-  zap trash: "~/Library/Preferences/org.safeexambrowser.SafeExamBrowser.plist"
+  zap trash: [
+    "~/Library/Caches/org.safeexambrowser.SafeExamBrowser",
+    "~/Library/Logs/Safe Exam Browser",
+    "~/Library/Preferences/org.safeexambrowser.SafeExamBrowser.plist",
+    "~/Library/WebKit/org.safeexambrowser.SafeExamBrowser",
+  ]
 end
