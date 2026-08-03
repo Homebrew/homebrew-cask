@@ -1,6 +1,6 @@
 cask "juicy" do
-  version "1.5.4,2607311714"
-  sha256 "3e5521b164cdf922d67c9399ca8252af636111198c92e80904a64d2ff0c7ab69"
+  version "1.5.5,2608032333"
+  sha256 "0135b7329b18f6217c08890152b2f92e2a3a41ff405a543c9ea247aeff0b508f"
 
   url "https://cdn.amore.computer/releases/io.sevendegrees.juicy.direct/#{version.csv.first}-#{version.csv.second}/Juicy.dmg",
       verified: "cdn.amore.computer/releases/io.sevendegrees.juicy.direct/"
