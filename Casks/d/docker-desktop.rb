@@ -1,9 +1,9 @@
 cask "docker-desktop" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.84.0,234817"
-  sha256 arm:   "ed9e93bf2b71c53492eb80ef35e722e131222018cba8157973dfe3bb717952dd",
-         intel: "5e42979b75b13d516e3bfe69b93f134c3a48c76943cba068fd814007f922bf87"
+  version "4.85.0,235549"
+  sha256 arm:   "84b1224c93456fe261955ebc91f3cd88ce19778ffdb6d0a0d423ce37246f7c2b",
+         intel: "c9cfb925d7a76c8c26dd67cd57a91b3eb408867232dfd6bbb9b47ee364d941ed"
 
   on_intel do
     binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.hyperkit",
