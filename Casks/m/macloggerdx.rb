@@ -18,9 +18,11 @@ cask "macloggerdx" do
   app "MacLoggerDX.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.dogparksoftware.macloggerdx.sfl*",
     "~/Library/Caches/com.apple.helpd/Generated/MacLoggerDX Help*",
     "~/Library/Caches/com.dogparksoftware.MacLoggerDX",
     "~/Library/HTTPStorages/com.dogparksoftware.MacLoggerDX",
     "~/Library/Preferences/com.dogparksoftware.MacLoggerDX*.plist",
+    "~/Library/WebKit/com.dogparksoftware.MacLoggerDX",
   ]
 end

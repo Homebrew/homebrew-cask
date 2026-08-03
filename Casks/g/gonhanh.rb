@@ -21,6 +21,7 @@ cask "gonhanh" do
 
   zap trash: [
     "~/Library/Application Support/GoNhanh",
+    "~/Library/Preferences/org.gonhanh.GoNhanh.plist",
     "~/Library/Preferences/space.khaphan.gonhanh.plist",
   ]
 end

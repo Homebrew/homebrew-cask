@@ -18,6 +18,7 @@ cask "chronoid" do
   app "Chronoid.app"
 
   zap trash: [
+    "/Users/Shared/.chronoid-security",
     "~/Library/Application Support/com.vu.Chronoid",
     "~/Library/Caches/com.vu.Chronoid",
     "~/Library/HTTPStorages/com.vu.Chronoid",

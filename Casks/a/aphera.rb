@@ -22,8 +22,11 @@ cask "aphera" do
     "~/Library/Application Scripts/co.latentco.Aphera.QuickLook",
     "~/Library/Application Support/Aphera",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.latentco.aphera.sfl*",
+    "~/Library/Caches/co.latentco.Aphera",
     "~/Library/Containers/co.latentco.Aphera",
     "~/Library/Containers/co.latentco.Aphera.QuickLook",
+    "~/Library/HTTPStorages/co.latentco.Aphera",
     "~/Library/Preferences/co.latentco.Aphera.plist",
+    "~/Library/WebKit/co.latentco.Aphera",
   ]
 end

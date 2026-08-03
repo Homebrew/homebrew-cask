@@ -34,6 +34,7 @@ cask "devin-desktop@next" do
   zap trash: [
         "~/.devin-next",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.exafunction.windsurfnext.sfl*",
+        "~/Library/Application Support/Devin - Next",
         "~/Library/Application Support/Devin Next",
         "~/Library/Caches/com.exafunction.windsurfNext",
         "~/Library/Caches/com.exafunction.windsurfNext.ShipIt",

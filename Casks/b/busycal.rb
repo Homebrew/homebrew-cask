@@ -27,7 +27,9 @@ cask "busycal" do
             delete:    "/Applications/BusyCal.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal#{version.major}.sfl*",
+    "~/Library/Application Scripts/com.busymac.busycal#{version.minor}*",
+    "~/Library/Application Scripts/N4RA379GBW.com.busymac.busycal#{version.minor}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal#{version.minor}.sfl*",
     "~/Library/Containers/com.busymac.busycal#{version.minor}",
     "~/Library/Containers/N4RA379GBW.com.busymac.busycal#{version.minor}.alarm",
     "~/Library/Group Containers/com.busymac.busycal#{version.minor}",

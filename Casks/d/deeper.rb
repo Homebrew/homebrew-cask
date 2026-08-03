@@ -70,6 +70,8 @@ cask "deeper" do
 
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/Deeper Help*",
+    "~/Library/Caches/com.titanium.Deeper",
+    "~/Library/HTTPStorages/com.titanium.Deeper",
     "~/Library/Logs/Deeper.log",
     "~/Library/Preferences/com.titanium.Deeper.plist",
     "~/Library/Saved Application State/com.titanium.Deeper.savedState",

@@ -31,6 +31,7 @@ cask "lm-studio-bionic" do
 
   zap trash: [
     "~/Library/Application Support/Bionic",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ai.elementlabs.bionic.sfl*",
     "~/Library/Caches/ai.elementlabs.bionic",
     "~/Library/Caches/ai.elementlabs.bionic.ShipIt",
     "~/Library/HTTPStorages/ai.elementlabs.bionic",

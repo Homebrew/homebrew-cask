@@ -21,6 +21,7 @@ cask "franz" do
 
   zap trash: [
     "~/Library/Application Support/Caches/franz-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.meetfranz.franz.sfl*",
     "~/Library/Application Support/Franz",
     "~/Library/Caches/com.meetfranz.franz",
     "~/Library/Caches/com.meetfranz.franz.ShipIt",

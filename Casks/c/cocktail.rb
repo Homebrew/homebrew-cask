@@ -82,8 +82,9 @@ cask "cocktail" do
   app "Cocktail.app"
 
   zap trash: [
+    "~/Library/Logs/Cocktail.log",
+    "~/Library/Preferences/com.maintain.cocktail.*.plist",
     "~/Library/Preferences/com.maintain.cocktail.plist",
-    "~/Library/Preferences/com.maintain.cocktail.ventura#{version.major}.plist",
   ]
 
   caveats do
