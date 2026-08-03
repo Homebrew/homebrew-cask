@@ -22,6 +22,7 @@ cask "sparkle" do
   zap trash: [
     "~/Library/Application Scripts/org.sparkle-project.Downloader",
     "~/Library/Application Scripts/org.sparkle-project.SparkleTestApp",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sparkle-project.sparkletestapp.sfl*",
     "~/Library/Containers/org.sparkle-project.Downloader",
     "~/Library/Containers/org.sparkle-project.SparkleTestApp",
     "~/Library/Preferences/org.sparkle-project.SparkleTestApp.plist",
