@@ -20,6 +20,8 @@ cask "zcode" do
 
   app "ZCode.app"
 
+  uninstall quit: "dev.zcode.app"
+
   zap trash: [
     "~/Library/Application Support/ZCode",
     "~/Library/Caches/@zcodedesktop-updater",
