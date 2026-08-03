@@ -1,8 +1,11 @@
 cask "autogram" do
-  version "2.7.5"
-  sha256 "2e225c212377157a4500ef8485772d7a0187dd515575cff33ab24a3cd3c6ab71"
+  arch intel: "-intel"
 
-  url "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/Autogram-#{version}-MacOs.pkg",
+  version "2.7.5"
+  sha256 arm:   "2e225c212377157a4500ef8485772d7a0187dd515575cff33ab24a3cd3c6ab71",
+         intel: "34851c479f556badaa2d03baf8aa7c9e0b58db2289601eb5113542b4bdc564f4"
+
+  url "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/autogram-#{version}-macos#{arch}.pkg",
       verified: "github.com/slovensko-digital/autogram/"
   name "autogram"
   desc "Application for electronic signing of signatures"
@@ -14,9 +17,8 @@ cask "autogram" do
   end
 
   depends_on :macos
-  depends_on arch: :arm64
 
-  pkg "Autogram-#{version}-MacOs.pkg"
+  pkg "autogram-#{version}-macos#{arch}.pkg"
 
   # Following 'preflight_steps' is needed to avoid interactive parts of the installation process. More details in https://github.com/Homebrew/homebrew-cask/pull/201161#discussion_r1950819869
   preflight_steps do
