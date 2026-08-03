@@ -19,6 +19,7 @@ cask "pdf-squeezer" do
   zap trash: [
     "~/Library/Application Scripts/com.witt-software.PDF-Squeezer",
     "~/Library/Application Scripts/group.witt-software.com.PDF-Squeezer",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.witt-software.pdf-squeezer.sfl*",
     "~/Library/Containers/com.witt-software.PDF-Squeezer",
     "~/Library/Group Containers/group.witt-software.com.PDF-Squeezer",
   ]

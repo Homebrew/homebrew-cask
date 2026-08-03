@@ -18,6 +18,7 @@ cask "waves-central" do
   app "Waves Central.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wavesaudio.central.sfl*",
     "~/Library/Application Support/Waves Audio",
     "~/Library/Application Support/Waves Central",
     "~/Library/Preferences/com.WavesAudio.central.plist",

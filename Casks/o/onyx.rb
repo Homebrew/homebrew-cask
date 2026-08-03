@@ -69,6 +69,7 @@ cask "onyx" do
   app "OnyX.app"
 
   zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/com.titanium.OnyX.help*",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help*",
     "~/Library/Logs/OnyX.log",
     "~/Library/Preferences/com.titanium.OnyX.plist",

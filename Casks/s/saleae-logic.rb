@@ -21,6 +21,7 @@ cask "saleae-logic" do
   app "Saleae Logic.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.saleae.saleae.sfl*",
     "~/Library/Application Support/Logic",
     "~/Library/Logs/Logic#{version.major}",
     "~/Library/Preferences/com.saleae.saleae.plist",

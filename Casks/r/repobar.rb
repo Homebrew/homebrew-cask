@@ -15,6 +15,7 @@ cask "repobar" do
   zap trash: [
     "~/Library/Application Support/com.steipete.repobar",
     "~/Library/Application Support/RepoBar",
+    "~/Library/Caches/com.onevcat.Kingfisher.ImageCache.RepoBarAvatars",
     "~/Library/Caches/com.steipete.repobar",
     "~/Library/Caches/RepoBar",
     "~/Library/HTTPStorages/com.steipete.repobar",

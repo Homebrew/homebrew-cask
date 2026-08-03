@@ -19,7 +19,9 @@ cask "teleport-connect" do
   app "Teleport Connect.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/gravitational.teleport.connect.sfl*",
     "~/Library/Application Support/Teleport Connect",
+    "~/Library/Caches/Teleport Connect",
     "~/Library/Preferences/gravitational.teleport.connect.plist",
     "~/Library/Saved Application State/gravitational.teleport.connect.savedState",
   ]

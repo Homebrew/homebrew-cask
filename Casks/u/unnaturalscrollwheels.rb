@@ -21,5 +21,6 @@ cask "unnaturalscrollwheels" do
   zap trash: [
     "~/Library/Application Scripts/com.theron.UnnaturalScrollWheels",
     "~/Library/Containers/com.theron.UnnaturalScrollWheels",
+    "~/Library/Preferences/com.theron.UnnaturalScrollWheels.plist",
   ]
 end
