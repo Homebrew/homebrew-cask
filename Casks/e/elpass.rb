@@ -12,7 +12,7 @@ cask "elpass" do
     strategy :sparkle
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Elpass.app"
 
