@@ -17,7 +17,9 @@ cask "supasidebar" do
 
   zap trash: [
     "~/Library/Application Support/com.supasidebar",
+    "~/Library/Application Support/supasidebar",
     "~/Library/Caches/com.supasidebar",
+    "~/Library/Caches/com.vinayak.supasidebar",
     "~/Library/HTTPStorages/com.supasidebar",
     "~/Library/HTTPStorages/com.supasidebar.binarycookies",
     "~/Library/Preferences/com.supasidebar.plist",
