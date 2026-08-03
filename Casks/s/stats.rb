@@ -22,12 +22,14 @@ cask "stats" do
       trash:  [
         "~/Library/Application Scripts/eu.exelban.Stats.LaunchAtLogin",
         "~/Library/Application Scripts/eu.exelban.Stats.Widgets",
+        "~/Library/Application Scripts/RP2S87B72W.eu.exelban.Stats.widgets",
         "~/Library/Application Support/Stats",
         "~/Library/Caches/eu.exelban.Stats",
         "~/Library/Containers/eu.exelban.Stats.LaunchAtLogin",
         "~/Library/Containers/eu.exelban.Stats.Widgets",
         "~/Library/Cookies/eu.exelban.Stats.binarycookies",
         "~/Library/Group Containers/eu.exelban.Stats.widgets",
+        "~/Library/Group Containers/RP2S87B72W.eu.exelban.Stats.widgets",
         "~/Library/HTTPStorages/eu.exelban.Stats",
         "~/Library/Preferences/eu.exelban.Stats.plist",
       ]
