@@ -1,8 +1,8 @@
 cask "font-0xproto-nerd-font" do
-  version "3.4.0"
-  sha256 "e50e7fec9efbe1eb986b65f01e210098e122a3f495db24e6624bdcbca52da11d"
+  version "3.5.0"
+  sha256 "b6cd12d383255548292c12fc3f8b03e197407d8299393fb27e351aba42224965"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/0xProto.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/0xProto.tar.xz"
   name "0xProto Nerd Font (0xProto)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
