@@ -1,5 +1,5 @@
 cask "ape" do
-  version "3.1.9"
+  version "3.1.10"
   sha256 :no_check
 
   url "https://jorgensen.biology.utah.edu/wayned/ape/Download/Mac/ApE_OSX_modern_current.dmg"
