@@ -18,5 +18,13 @@ cask "dockside" do
 
   app "Dockside.app"
 
-  zap trash: "~/Library/Preferences/com.hachipoo.Dockside.plist"
+  zap trash: [
+    "~/Library/Application Scripts/8T2DC9NRXS.group.com.hachipoo.Dockside",
+    "~/Library/Application Scripts/com.hachipoo.Dockside.Dockside*",
+    "~/Library/Caches/com.hachipoo.Dockside",
+    "~/Library/Containers/com.hachipoo.Dockside.Dockside*",
+    "~/Library/Group Containers/8T2DC9NRXS.group.com.hachipoo.Dockside",
+    "~/Library/HTTPStorages/com.hachipoo.Dockside",
+    "~/Library/Preferences/com.hachipoo.Dockside.plist",
+  ]
 end
