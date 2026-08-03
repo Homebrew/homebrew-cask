@@ -20,8 +20,11 @@ cask "zappy" do
   uninstall quit: "com.blackbeltlabs.Zappy"
 
   zap trash: [
+    "~/Library/Application Scripts/6LS97Q5E79.ZappyShared",
     "~/Library/Application Support/com.blackbeltlabs.Zappy",
     "~/Library/Caches/com.blackbeltlabs.Zappy",
+    "~/Library/Group Containers/6LS97Q5E79.ZappyShared",
+    "~/Library/HTTPStorages/com.blackbeltlabs.Zappy",
     "~/Library/Preferences/com.blackbeltlabs.Zappy.plist",
     "~/Library/zappy",
   ]
