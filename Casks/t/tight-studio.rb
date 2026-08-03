@@ -1,8 +1,8 @@
 cask "tight-studio" do
-  version "3.0.5"
-  sha256 "d711591a5a4891d2b12ef4369f0585e5d9e3adaab1303f44b615500b016b1f70"
+  version "3.0.7"
+  sha256 :no_check
 
-  url "https://downloads.tight.studio/TightStudio-#{version}-arm64.dmg"
+  url "https://downloads.tight.studio/TightStudio.zip"
   name "Tight Studio"
   desc "Screen recorder and video editor"
   homepage "https://tight.studio/"
