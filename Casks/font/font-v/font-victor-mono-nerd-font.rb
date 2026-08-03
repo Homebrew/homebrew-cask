@@ -1,8 +1,8 @@
 cask "font-victor-mono-nerd-font" do
-  version "3.4.0"
-  sha256 "9b4bd827fc59f60c5bd3306a31c148208522d5d6801b9fb5233c39c503013f2f"
+  version "3.5.0"
+  sha256 "37f46ec119b6ea329dabefbc20ce76428d290fe5a12f29f54ff037bdf5803514"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/VictorMono.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/VictorMono.tar.xz"
   name "VictorMono Nerd Font (Victor Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
