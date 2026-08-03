@@ -1,8 +1,8 @@
 cask "idevice-pair" do
-  version "0.1.14"
-  sha256 "c510409552083b89ee4ab513d9d923c57013d16401260c525860243e5e158a84"
+  version "1.0.0"
+  sha256 "5b021c70e0983600e3f85442aa7a16e10b845ed6a8d0da42b5c39b02098b65c5"
 
-  url "https://github.com/jkcoxson/idevice_pair/releases/download/#{version}/idevice_pair--macos-universal.dmg"
+  url "https://github.com/jkcoxson/idevice_pair/releases/download/v#{version}/idevice_pair--macos-universal.dmg"
   name "idevice_pair"
   desc "Generate pair records for iOS devices"
   homepage "https://github.com/jkcoxson/idevice_pair"
