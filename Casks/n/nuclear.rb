@@ -23,9 +23,13 @@ cask "nuclear" do
   app "Nuclear.app"
 
   zap trash: [
+    "~/Library/Application Support/com.nuclearplayer",
     "~/Library/Application Support/nuclear",
+    "~/Library/Caches/com.nuclearplayer",
+    "~/Library/Logs/com.nuclearplayer",
     "~/Library/Logs/nuclear",
     "~/Library/Preferences/nuclear.plist",
     "~/Library/Saved Application State/nuclear.savedState",
+    "~/Library/WebKit/com.nuclearplayer",
   ]
 end
