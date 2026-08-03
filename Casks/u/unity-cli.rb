@@ -21,7 +21,7 @@ cask "unity-cli" do
   url "https://public-cdn.cloud.unity3d.com/hub/prod/cli/#{version}/unity-#{os}-#{arch}"
   name "Unity CLI"
   desc "Command-line interface for Unity"
-  homepage "https://docs.unity.com/en-us/cli"
+  homepage "https://docs.unity.com/en-us/unity-cli"
 
   livecheck do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/cli/latest-beta.json"
