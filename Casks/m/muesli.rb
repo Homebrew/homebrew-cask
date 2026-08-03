@@ -22,5 +22,8 @@ cask "muesli" do
   zap trash: [
     "~/.cache/muesli",
     "~/Library/Application Support/Muesli",
+    "~/Library/Caches/com.muesli.app",
+    "~/Library/HTTPStorages/com.muesli.app",
+    "~/Library/Preferences/com.muesli.app.plist",
   ]
 end
