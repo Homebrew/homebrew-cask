@@ -23,7 +23,9 @@ cask "exifcleaner" do
   app "ExifCleaner.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.exifcleaner.sfl*",
     "~/Library/Application Support/ExifCleaner",
+    "~/Library/Preferences/com.exifcleaner.plist",
     "~/Library/Saved Application State/com.exifcleaner.savedState",
   ]
 end
