@@ -1,5 +1,5 @@
 cask "free-download-manager" do
-  version "6.34.3"
+  version "6.34.4"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://files2.freedownloadmanager.org/#{version.major}/latest/fdm.dmg"
@@ -39,8 +39,4 @@ cask "free-download-manager" do
         "~/Library/Application Support/Softdeluxe",
         "~/Library/Caches/Softdeluxe",
       ]
-
-  caveats do
-    requires_rosetta
-  end
 end
