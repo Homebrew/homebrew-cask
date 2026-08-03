@@ -79,7 +79,6 @@ Commit message: `<cask> <version> (new cask)` (e.g., `myapp 1.0.0 (new cask)`)
 
 - **Token**: Follow the [token reference](https://docs.brew.sh/Cask-Cookbook#token-reference)—lowercase, hyphens, no version numbers
 - **Required stanzas**: `version`, `sha256`, `url`, `name`, `desc`, `homepage`, and at least one artifact (`app`, `pkg`, etc.)
-- **`verified:` parameter**: Required when `url` host differs from `homepage` host
 - **`uninstall` stanza**: Required for `pkg` and `installer` artifacts
 - **`zap` stanza**: Recommended for thorough cleanup (preference files, caches in `~/Library`)
 
