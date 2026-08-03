@@ -34,7 +34,9 @@ cask "companion-satellite" do
   app "Companion Satellite.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/remote.companion.bitfocus.no.sfl*",
     "~/Library/Application Support/companion-satellite",
     "~/Library/Application Support/satellite",
+    "~/Library/Preferences/remote.companion.bitfocus.no.plist",
   ]
 end
