@@ -38,10 +38,7 @@ cask "esphome-device-builder" do
     uninstall quit:  "io.esphome.builder",
               trash: "~/Library/LaunchAgents/ESPHome Device Builder.plist"
 
-    zap trash: [
-      "~/esphome",
-      "~/Library/Application Support/io.esphome.builder",
-    ]
+    zap trash: "~/Library/Application Support/io.esphome.builder"
   end
 
   on_linux do
