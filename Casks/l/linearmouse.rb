@@ -25,6 +25,7 @@ cask "linearmouse" do
 
   zap trash: [
     "~/.config/linearmouse",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.lujjjh.linearmouse.sfl*",
     "~/Library/Preferences/com.lujjjh.LinearMouse.plist",
   ]
 end
