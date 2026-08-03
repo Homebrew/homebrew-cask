@@ -21,6 +21,7 @@ cask "nosqlbooster-for-mongodb" do
 
   zap trash: [
     "~/Documents/NoSQLBooster",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nosqlbooster.mongodb.sfl*",
     "~/Library/Application Support/NoSQLBooster for MongoDB",
     "~/Library/Preferences/com.nosqlbooster.mongodb.plist",
     "~/Library/Saved Application State/com.nosqlbooster.mongodb.savedState",
