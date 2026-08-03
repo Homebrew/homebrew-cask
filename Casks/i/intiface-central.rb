@@ -1,6 +1,6 @@
 cask "intiface-central" do
-  version "3.1.0,42"
-  sha256 "c57e37d3000531889a87ca2027244ccbae070fd2e1096e6bd25532197c42f454"
+  version "3.1.1,43"
+  sha256 "8d3ee725a830772262a4550b23b9fe913d7b28eaed370ea95bfc3a12f3bdd869"
 
   url "https://github.com/intiface/intiface-central/releases/download/v#{version.csv.first}#{"%2B#{version.csv.second}" if version.csv.second}/intiface-central-v#{version.csv.first}-macos-universal.dmg"
   name "Intiface Central"
