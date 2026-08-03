@@ -1,8 +1,8 @@
 cask "font-adwaita-mono-nerd-font" do
-  version "3.4.0"
-  sha256 "6f0e3e32dcc408196e0abebf953e3e4f6213813b38201d669a33085811f240e1"
+  version "3.5.0"
+  sha256 "0c50b1ec676232a0c357419c5ba55bf1bba886da66de77b4d028794f0922cd44"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/AdwaitaMono.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/AdwaitaMono.tar.xz"
   name "AdwaitaMono Nerd Font (Adwaita Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 

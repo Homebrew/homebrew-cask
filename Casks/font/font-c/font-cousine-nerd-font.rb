@@ -1,8 +1,8 @@
 cask "font-cousine-nerd-font" do
-  version "3.4.0"
-  sha256 "a62e0defe6c648d9063e49ae46a4e7d01c71fe154206dc0aeeaa2a9b7f7cfa82"
+  version "3.5.0"
+  sha256 "23cd2c9de4b88c14da09b5560b2c9679f9892ea41b334a46c16fe7dc1b0620c1"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Cousine.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Cousine.tar.xz"
   name "Cousine Nerd Font (Cousine)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 

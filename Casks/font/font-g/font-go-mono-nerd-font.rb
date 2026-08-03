@@ -1,8 +1,8 @@
 cask "font-go-mono-nerd-font" do
-  version "3.4.0"
-  sha256 "4946b79dab0d34d88e219f1378e9227c862974cc04c381128b6b24279125771d"
+  version "3.5.0"
+  sha256 "df35a387d47558fd2fe2fb67779077721f841babaf4849aaa9e6df36c870310c"
 
-  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Go-Mono.zip"
+  url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Go-Mono.tar.xz"
   name "GoMono Nerd Font (Go Mono)"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
