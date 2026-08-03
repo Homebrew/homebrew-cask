@@ -1,6 +1,6 @@
 cask "dot" do
-  version "2.3.3"
-  sha256 "4ce5fd781b447c33982548aac2a936f40de405b495204f49e605e335211ed475"
+  version "2.3.4"
+  sha256 "f969a9714f051b659f52de42d4cb6b8cf9a7bac016f75d1108866972e718e047"
 
   url "https://github.com/prateekkeshari/dot-releases/releases/download/v#{version}/Dot-#{version}.dmg",
       verified: "github.com/prateekkeshari/dot-releases/"
