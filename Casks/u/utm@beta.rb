@@ -34,6 +34,7 @@ cask "utm@beta" do
   uninstall quit: "com.utmapp.UTM"
 
   zap trash: [
+    "~/Library/Application Scripts/*.com.utmapp.UTM",
     "~/Library/Application Scripts/com.utmapp.QEMUHelper",
     "~/Library/Application Scripts/com.utmapp.UTM",
     "~/Library/Containers/com.utmapp.QEMUHelper",
