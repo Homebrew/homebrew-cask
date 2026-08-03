@@ -1,8 +1,10 @@
 cask "autogram" do
   version "2.7.5"
-  sha256 "2e225c212377157a4500ef8485772d7a0187dd515575cff33ab24a3cd3c6ab71"
+  sha256 arm64: "2e225c212377157a4500ef8485772d7a0187dd515575cff33ab24a3cd3c6ab71",
+         intel: "2e225c212377157a4500ef8485772d7a0187dd515575cff33ab24a3cd3c6ab71",
 
-  url "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/Autogram-#{version}-MacOs.pkg",
+  url arm64: "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/autogram-#{version}-macos.pkg",
+      intel: "https://github.com/slovensko-digital/autogram/releases/download/v#{version}/autogram-#{version}-macos-intel.pkg"
       verified: "github.com/slovensko-digital/autogram/"
   name "autogram"
   desc "Application for electronic signing of signatures"
@@ -14,7 +16,6 @@ cask "autogram" do
   end
 
   depends_on :macos
-  depends_on arch: :arm64
 
   pkg "Autogram-#{version}-MacOs.pkg"
 
