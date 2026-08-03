@@ -19,6 +19,8 @@ cask "appgridmac" do
 
   zap trash: [
     "~/Library/Application Support/com.zekalogic.appgrid.app.direct",
+    "~/Library/Caches/com.zekalogic.appgrid.app.direct",
+    "~/Library/HTTPStorages/com.zekalogic.appgrid.app.direct",
     "~/Library/Preferences/com.zekalogic.appgrid.app.direct.plist",
     "~/Library/Saved Application State/com.zekalogic.appgrid.app.direct.savedState",
   ]
