@@ -1,9 +1,9 @@
 cask "exifcleaner" do
   arch arm: "-arm64"
 
-  version "4.0.1"
-  sha256 arm:   "3bf251e84cc879df264ad012a2a0c7682bdc16312d49441ecb0316917d0616ad",
-         intel: "a1976df1538dbc461cd26dc18bf0e3cc0f5b3b28ad62200d21964e2942cf088f"
+  version "4.1.0"
+  sha256 arm:   "fac68f2a9fd1162b6a5e240ab3cf57a946a1cc0bb5264ce46d2fe53409a18f41",
+         intel: "95b486d87c6ff3f6bd36000303e9b5da52529c916c55ce5ec7c9b06a7c06310c"
 
   url "https://github.com/szTheory/exifcleaner/releases/download/v#{version}/ExifCleaner-#{version}#{arch}.dmg",
       verified: "github.com/szTheory/exifcleaner/"
@@ -18,7 +18,7 @@ cask "exifcleaner" do
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "ExifCleaner.app"
 
