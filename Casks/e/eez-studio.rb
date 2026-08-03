@@ -20,5 +20,9 @@ cask "eez-studio" do
 
   app "EEZ Studio.app"
 
-  zap trash: "~/Library/Application Support/eezstudio"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/hr.envox.eez.studio.sfl*",
+    "~/Library/Application Support/eezstudio",
+    "~/Library/Preferences/hr.envox.eez.studio.plist",
+  ]
 end
