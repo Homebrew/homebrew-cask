@@ -17,6 +17,8 @@ cask "profind" do
 
   app "ProFind.app"
 
+  uninstall launchctl: "com.zeroonetwenty.ProFindHelper"
+
   zap trash: [
     "~/Library/Application Scripts/com.zeroonetwenty.ProFind",
     "~/Library/Application Support/com.zeroonetwenty.ProFind",
