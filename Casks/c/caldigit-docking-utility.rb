@@ -1,7 +1,7 @@
 cask "caldigit-docking-utility" do
   arch arm: "arm", intel: "x86"
 
-  version "1.9.37"
+  version "1.9.7"
   sha256 :no_check
 
   url "https://downloads.caldigit.com/CalDigit-Docking-Station-Utility.zip"
