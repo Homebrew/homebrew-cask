@@ -1,9 +1,9 @@
 cask "hubstaff" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.9.2,12156"
-  sha256 arm:   "c47c1fd6250770844cf9a85437861a5e17967a279e90de21f5c5bdb9085c0c8e",
-         intel: "4554bbba0da2d5ab1a9f61148fa3b8424c247be4e16ef3beec575dfa4c0c020b"
+  version "1.9.6,12322"
+  sha256 arm:   "f795e01fb8962bd2d2ff967ced823ec06757e32a1f8b2b308e1e890ac298320c",
+         intel: "f6a93a55712c6396d5b457858a068275a94ca3433ab6caa21053c3cd9d5e6e8b"
 
   url "https://app.hubstaff.com/download/#{version.csv.second}-standard-mac-os-x-#{version.csv.first.dots_to_hyphens}-release/dmg?architecture=#{arch}"
   name "Hubstaff"
