@@ -8,8 +8,8 @@ cask "meetingrecorder" do
   homepage "https://meetingsrecorder.com/"
 
   livecheck do
-    url "https://github.com/emishin/meetingrecorder-updates/releases"
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/emishin/meetingrecorder-updates/main/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
