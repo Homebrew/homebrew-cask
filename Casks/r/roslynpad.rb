@@ -1,9 +1,9 @@
 cask "roslynpad" do
   arch arm: "arm64", intel: "x64"
 
-  version "22"
-  sha256 arm:   "009899acb3697a6739e7bef69e4efada66b2be1118ddced5e114c91e3e14d20d",
-         intel: "4005d9d8309def06c6a4a4cff1e3816469c516d32a521abb871b3c45da99cdc3"
+  version "22.1"
+  sha256 arm:   "b8bfb0f5ab2874bfe7aa369d8f0eeb388545a24cca7a1afb37df66fd9063f2a0",
+         intel: "268280175cd2f325cdb9d43f2166d12a1f103976b244041bcc30aaed386f90f7"
 
   url "https://github.com/roslynpad/roslynpad/releases/download/#{version}/RoslynPad-macos-#{arch}.dmg",
       verified: "github.com/roslynpad/roslynpad/"
