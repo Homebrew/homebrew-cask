@@ -1,6 +1,6 @@
 cask "boss" do
-  version "9.2.65"
-  sha256 "4e0f7dd2f728bc47dca407a8ee78e01bab4681296df2c5e7f5804130a5838957"
+  version "9.4.0"
+  sha256 "a8c89a8b5612207bc6787179b9248b7850040e9d88f33f4b3f76ae827bb88c00"
 
   url "https://github.com/risa-labs-inc/BOSS-Releases/releases/download/v#{version}/BOSS-#{version}-Universal.dmg",
       verified: "github.com/risa-labs-inc/BOSS-Releases/"
@@ -14,7 +14,7 @@ cask "boss" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "BOSS.app"
 
