@@ -1,6 +1,6 @@
 cask "backdrop" do
-  version "2.6.14,118"
-  sha256 "25a94af6bfe39e6193feb918f8f51e12dfb4ebd0063ed4919f593f992a5320ca"
+  version "2.6.15,119"
+  sha256 "58c98659b305127144acdb1ff2f776514164b185ae54f2f0d772e718025df9cc"
 
   url "https://cdn.cindori.com/apps/backdrop/updates/#{version.csv.first}-#{version.csv.second}/Backdrop.dmg"
   name "Backdrop"
