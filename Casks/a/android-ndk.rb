@@ -23,7 +23,7 @@ cask "android-ndk" do
 
   preflight_steps do
     symlink "AndroidNDK*.app/Contents/NDK", "share/android-ndk",
-            target_base: :homebrew_prefix, source_glob: true, force: true
+            target_base: :homebrew_prefix, source_glob: true, overwrite: true
   end
 
   uninstall delete: "#{HOMEBREW_PREFIX}/share/android-ndk"

@@ -15,8 +15,8 @@ cask "betwixt" do
   app "Betwixt-darwin-x64/Betwixt.app"
 
   uninstall_postflight_steps do
-    delete_keychain_certificate "NodeMITMProxyCA",
-                                matching_certificate: "~/Library/Application Support/betwixt/ssl/certs/ca.pem"
+    delete_keychain_certificates "NodeMITMProxyCA",
+                                 fingerprint_of: "~/Library/Application Support/betwixt/ssl/certs/ca.pem"
   end
 
   zap trash: [

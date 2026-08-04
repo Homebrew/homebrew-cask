@@ -13,8 +13,8 @@ cask "warsaw" do
   pkg "warsaw_setup.pkg"
 
   uninstall_postflight_steps do
-    delete_keychain_certificate "Warsaw Personal CA"
-    delete_keychain_certificate "127.0.0.1"
+    delete_keychain_certificates "Warsaw Personal CA"
+    delete_keychain_certificates "127.0.0.1"
   end
 
   uninstall launchctl: [

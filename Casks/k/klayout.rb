@@ -94,7 +94,7 @@ cask "klayout" do
 
   preflight_steps do
     # There is no sub-folder in the DMG; the root *is* the folder
-    move_children ".", "KLayout"
+    move_contents ".", "KLayout"
   end
 
   uninstall quit:    "klayout.de",
