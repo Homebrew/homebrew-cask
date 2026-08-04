@@ -8,7 +8,7 @@ cask "zcode" do
   url "https://cdn-zcode.z.ai/zcode/electron/releases/#{version}/macos-#{arch}/ZCode-#{version}-mac-#{arch}.dmg"
   name "ZCode"
   desc "AI-assisted development environment"
-  homepage "https://zcode.z.ai/"
+  homepage "https://zcode.z.ai/en/"
 
   livecheck do
     url "https://zcode.z.ai/en"
