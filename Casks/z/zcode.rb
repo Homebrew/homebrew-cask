@@ -23,11 +23,11 @@ cask "zcode" do
   uninstall quit: "dev.zcode.app"
 
   zap trash: [
-    "~/Library/Application Support/ZCode",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zcode.app.sfl*",
-    "~/Library/Caches/@zcodedesktop-updater",
-    "~/Library/Preferences/dev.zcode.app.plist",
-    "~/Library/Services/Open in ZCode.workflow",
-  ],
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zcode.app.sfl*",
+        "~/Library/Application Support/ZCode",
+        "~/Library/Caches/@zcodedesktop-updater",
+        "~/Library/Preferences/dev.zcode.app.plist",
+        "~/Library/Services/Open in ZCode.workflow",
+      ],
       rmdir: "~/.zcode"
 end
