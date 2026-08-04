@@ -1,6 +1,6 @@
 cask "lumide" do
-  version "0.18.1"
-  sha256 "72df9b0403246bf12375bf222e6786b35b03ec34ed80a003e7591e4f52944f6b"
+  version "0.18.2"
+  sha256 "e9ad52992dd7cc6c4cd62e1a8f55e34eeaa824b0533d9530e11869af726baa75"
 
   url "https://github.com/SoFluffyOS/lumide/releases/download/#{version}/Lumide_macOS.dmg",
       verified: "github.com/SoFluffyOS/lumide/"
