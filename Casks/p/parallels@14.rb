@@ -26,10 +26,10 @@ cask "parallels@14" do
   container type: :naked
 
   preflight_steps do
-    run "/usr/bin/hdiutil", args: ["attach", "-nobrowse", "{{staged_path}}/ParallelsDesktop-#{version}.dmg"]
-    run "/Volumes/Parallels Desktop #{version.major}/Parallels Desktop.app/Contents/MacOS/inittool",
+    run "/usr/bin/hdiutil", args: ["attach", "-nobrowse", "{{staged_path}}/ParallelsDesktop-{{version}}.dmg"]
+    run "/Volumes/Parallels Desktop {{version.major}}/Parallels Desktop.app/Contents/MacOS/inittool",
         args: ["install", "-t", "{{appdir}}/Parallels Desktop.app", "-s"], sudo: true
-    run "/usr/bin/hdiutil", args: ["detach", "/Volumes/Parallels Desktop #{version.major}"]
+    run "/usr/bin/hdiutil", args: ["detach", "/Volumes/Parallels Desktop {{version.major}}"]
   end
 
   postflight_steps do

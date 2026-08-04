@@ -18,7 +18,7 @@ cask "airtool" do
   pkg "Airtool_#{version}.pkg"
 
   uninstall_preflight_steps do
-    set_ownership "/Library/Application Support/Airtool #{version.major}"
+    set_ownership "/Library/Application Support/Airtool {{version.major}}"
   end
 
   uninstall launchctl:  "com.intuitibits.airtool#{version.major}.airtool-bpf",

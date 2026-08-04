@@ -71,7 +71,7 @@ cask "squirrelsql" do
 
   postflight_steps do
     run "/usr/bin/java",
-        args: ["-jar", "{{staged_path}}/squirrel-sql-#{version}-MACOSX-install.jar",
+        args: ["-jar", "{{staged_path}}/squirrel-sql-{{version}}-MACOSX-install.jar",
                "{{staged_path}}/install-options.xml"]
   end
 

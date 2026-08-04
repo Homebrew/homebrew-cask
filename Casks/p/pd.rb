@@ -17,7 +17,7 @@ cask "pd" do
   app "Pd-#{version}.app"
 
   postflight_steps do
-    set_permissions "Pd-#{version}.app", "u+w", base: :appdir
+    set_permissions "Pd-{{version}}.app", "u+w", base: :appdir
   end
 
   zap trash: [

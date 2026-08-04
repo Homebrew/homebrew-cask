@@ -20,7 +20,7 @@ cask "ncar-ncl" do
   artifact "lib", target: "#{HOMEBREW_PREFIX}/ncl-#{version}/lib"
 
   preflight_steps do
-    run "/bin/mkdir", args: ["-p", "{{HOMEBREW_PREFIX}}/ncl-#{version}"], sudo: true
+    run "/bin/mkdir", args: ["-p", "{{HOMEBREW_PREFIX}}/ncl-{{version}}"], sudo: true
   end
 
   uninstall delete: "#{HOMEBREW_PREFIX}/ncl-#{version}"
