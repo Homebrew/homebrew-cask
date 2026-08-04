@@ -1,18 +1,23 @@
 cask "diversion" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "arm64", intel: "amd64"
 
-  # Diversion publishes one "latest" binary per platform and the agent updates
-  # itself, so there is no pinned version or checksum. version :latest already
-  # tells Homebrew not to manage versions, so auto_updates is omitted.
-  version :latest
-  sha256 :no_check
+  version "1.0.943"
+  sha256 arm:   "f4f6e292ae30fb585a252734efdda2b388176c759f131e1cd0f2a36d28f1fbcc",
+         intel: "5b4ab239f779fa3165b0a4f322453ad103e051a87eeb01a995a3cfd24c047170"
 
-  url "https://dv-binaries.s3.us-east-2.amazonaws.com/darwin_#{arch}/dv"
+  url "https://get.diversion.dev/update/dv/v#{version}/darwin-#{arch}.gz"
   name "Diversion CLI"
   desc "Cloud-native version control CLI and agent"
   homepage "https://www.diversion.dev/"
 
-  binary "dv"
+  livecheck do
+    url "https://get.diversion.dev/update/dv/darwin-arm64.json"
+    strategy :json do |json|
+      json["Version"]&.sub(/^v/, "")
+    end
+  end
+
+  binary "darwin-#{arch}", target: "dv"
 
   uninstall launchctl: "diversion.dv.agent"
 
