@@ -11,6 +11,7 @@ cask "polkadot-js" do
   # Upstream is not currently building for MacOS
   # ref: https://github.com/polkadot-js/apps/pull/11084
   deprecate! date: "2025-08-03", because: :discontinued
+  disable! date: "2026-08-04", because: :discontinued
 
   depends_on :macos
 
