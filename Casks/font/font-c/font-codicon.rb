@@ -1,6 +1,6 @@
 cask "font-codicon" do
-  version "0.0.45"
-  sha256 "dd7c6b20535753027c399dcaea4d12a0e6aaf73de10a3a8f4abfc51d13a88362"
+  version "0.0.46-24"
+  sha256 "d77bf2ed152e82c4b81288c5271a3481c61559d1a5416593756e3b0fe8a02bf1"
 
   url "https://registry.npmjs.org/@vscode/codicons/-/codicons-#{version}.tgz",
       verified: "registry.npmjs.org/@vscode/codicons/"
