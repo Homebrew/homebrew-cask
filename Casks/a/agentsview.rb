@@ -3,11 +3,11 @@ cask "agentsview" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.40.0"
-  sha256 arm:          "2b2ffbca7f9a9a0c27f25113f1e09afe212ce3c9a52ed63c35ecc0966f91927a",
-         x86_64:       "4ba6c13359ebf53142184b5f4ea1ab28a3e59f232e1ecb5d1b68a7f733f52bbc",
-         x86_64_linux: "0151088c1ad921def67ddb7eb2144e7e381d89a162099d21e0178cdfe6d3d6fc",
-         arm64_linux:  "58baaabb2df03c7e8610914d0b48d0792bee886753772ccc23f417275059294e"
+  version "0.40.1"
+  sha256 arm:          "6b9c945245cc0bc3f0926dce9f2020d088ccca7e83e8ea89a7617097856b0ae1",
+         x86_64:       "9e25f9f818858575597abe157b6277342d71ee803882572bc01be96ff97d97f8",
+         x86_64_linux: "fef7c977f6606b72b877aff0b78c5ce0375ec7771aff92cd246c9f9e927b9770",
+         arm64_linux:  "5faedf08b647b74c85e43464ff73dc470f9d29e682fe06f5adb9b84050e3d5e8"
 
   on_macos do
     depends_on macos: :big_sur
