@@ -9,6 +9,7 @@ cask "serene" do
   homepage "https://sereneapp.com/"
 
   deprecate! date: "2025-08-02", because: :unmaintained
+  disable! date: "2026-08-04", because: :unmaintained
 
   depends_on :macos
 
