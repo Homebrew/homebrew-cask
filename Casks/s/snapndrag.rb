@@ -1,6 +1,6 @@
 cask "snapndrag" do
-  version "4.5.1"
-  sha256 "5f46c1e003bf4adad52e3e201d81d6ad26b4eef481106f1ef3799a11ed078a5a"
+  version "4.5.4"
+  sha256 "ffcef31891184fadae977bcfaa2a33502188592b6bf250defebc9975e95ad2bd"
 
   url "https://yellowmug.com/download/SnapNDrag_#{version}.dmg"
   name "SnapNDrag"
@@ -20,8 +20,4 @@ cask "snapndrag" do
     "~/Library/Application Support/com.yellowmug.SnapNDrag",
     "~/Library/Preferences/com.yellowmug.SnapNDrag.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
