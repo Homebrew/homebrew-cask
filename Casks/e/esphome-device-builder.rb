@@ -1,34 +1,15 @@
 cask "esphome-device-builder" do
+  os macos: "dmg", linux: "AppImage"
+
+  version "1.0.2"
+  sha256 arm:          "646fb8d4ee5e2573dbadc2759b67e0ddfaad9c9a72bc1d7f83a90e526c49df50",
+         intel:        "d3dc20ba9648fde36d2e3aef33c3fc95c710d902b10590371f98b19e2be6cf98",
+         arm64_linux:  "8447208521c7169a0a8f0ed08d7ee715fa14141488e771365c3824f10d58bb55",
+         x86_64_linux: "a059d59d76b833b7708187f2e067cf0924d77272625f3b36014aa66c03c3c0e8"
+
   on_macos do
     arch arm: "aarch64", intel: "x64"
-  end
-  on_linux do
-    arch arm: "aarch64", intel: "amd64"
-  end
 
-  version "0.14.1"
-  sha256 arm:          "85735ea0f8daee796732e5753f26b98fdb3ceb489ab65e27bd037a61d82cbc39",
-         intel:        "e02536d66d0fd267b59496144f1e869c1285a3dff80d5ba1f6ec051f7e1fc5c9",
-         arm64_linux:  "67c6f678a1229247842fe8da302be319fad199947a735816b4f26a84b5bc4b52",
-         x86_64_linux: "6404649240766feee45782d3317f85e165667bf85cdf70bd3c6a4cbdd761f912"
-
-  artifact = on_system_conditional macos: "ESPHome.Device.Builder_#{version}_#{arch}.dmg",
-                                   linux: "ESPHome.Device.Builder_#{version}_#{arch}.AppImage"
-
-  url "https://github.com/esphome/esphome-desktop/releases/download/v#{version}/#{artifact}",
-      verified: "github.com/esphome/esphome-desktop/"
-  name "ESPHome Device Builder"
-  desc "Desktop app to create, edit and install your ESPHome device configurations"
-  homepage "https://desktop.esphome.io/"
-
-  livecheck do
-    url "https://github.com/esphome/esphome-desktop/releases/latest/download/latest.json"
-    strategy :json do |json|
-      json["version"]
-    end
-  end
-
-  on_macos do
     auto_updates true
     depends_on macos: :catalina
 
@@ -40,8 +21,22 @@ cask "esphome-device-builder" do
 
     zap trash: "~/Library/Application Support/io.esphome.builder"
   end
-
   on_linux do
-    app_image artifact, target: "ESPHome Device Builder.AppImage"
+    arch arm: "aarch64", intel: "amd64"
+
+    app_image "ESPHome.Device.Builder_#{version}_#{arch}.AppImage", target: "ESPHome Device Builder.AppImage"
+  end
+
+  url "https://github.com/esphome/esphome-desktop/releases/download/v#{version}/ESPHome.Device.Builder_#{version}_#{arch}.#{os}",
+      verified: "github.com/esphome/esphome-desktop/"
+  name "ESPHome Device Builder"
+  desc "Desktop app to create, edit and install your ESPHome device configurations"
+  homepage "https://desktop.esphome.io/"
+
+  livecheck do
+    url "https://github.com/esphome/esphome-desktop/releases/latest/download/latest.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 end
