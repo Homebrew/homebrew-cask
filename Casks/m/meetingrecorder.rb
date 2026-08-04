@@ -9,7 +9,7 @@ cask "meetingrecorder" do
 
   livecheck do
     url "https://raw.githubusercontent.com/emishin/meetingrecorder-updates/main/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
