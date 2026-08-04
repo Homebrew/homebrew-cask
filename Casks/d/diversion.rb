@@ -17,9 +17,15 @@ cask "diversion" do
     end
   end
 
+  depends_on macos: :big_sur
+
   binary "darwin-#{arch}", target: "dv"
 
   uninstall launchctl: "diversion.dv.agent"
 
-  zap trash: "~/Library/LaunchAgents/diversion.dv.agent.plist"
+  zap trash: [
+    "~/.diversion",
+    "~/Library/Caches/diversion",
+    "~/Library/LaunchAgents/diversion.dv.agent.plist",
+  ]
 end
