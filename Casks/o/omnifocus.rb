@@ -30,8 +30,8 @@ cask "omnifocus" do
     end
   end
   on_sonoma :or_newer do
-    version "4.8.12"
-    sha256 "c9ecedc38019a8950502db397ac9e844ba1af6c76d2ee64232759d3863c07716"
+    version "4.8.13"
+    sha256 "bc547b38e18d34409603666dc467ef3b83de615f728b53554003ac7d88c44ea7"
 
     url "https://downloads.omnigroup.com/software/macOS/14/OmniFocus-#{version}.dmg"
 
