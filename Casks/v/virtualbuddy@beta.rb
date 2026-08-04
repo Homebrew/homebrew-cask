@@ -15,7 +15,7 @@ cask "virtualbuddy@beta" do
 
   conflicts_with cask: "virtualbuddy"
   depends_on arch: :arm64
-  depends_on macos: :tahoe
+  depends_on macos: :sonoma
 
   app "VirtualBuddy.app"
   binary "#{appdir}/VirtualBuddy.app/Contents/MacOS/vctool", target: "vctool"
