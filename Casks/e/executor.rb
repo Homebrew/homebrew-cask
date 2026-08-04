@@ -1,9 +1,9 @@
 cask "executor" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.37"
-  sha256 arm:   "6d0e3ff71759d719f43d39c95ad8775dd72c6c473e576de1aca83dfcd346587d",
-         intel: "57b6d2fff6d1743ffd60a8c7e70ded2687ce23413f4d1fe991e32233178f2527"
+  version "1.5.38"
+  sha256 arm:   "305a7ccbc866d72bce7f28b3544ec350772f3e935242c27e0b97709b264fabdd",
+         intel: "f55c2be209b5deefba103849cc95a9a3a419493cf8a3cd36008dce5ad8fdf196"
 
   url "https://github.com/RhysSullivan/executor/releases/download/v#{version}/executor-desktop-mac-#{arch}.dmg",
       verified: "github.com/RhysSullivan/executor/"
