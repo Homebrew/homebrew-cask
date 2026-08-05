@@ -32,7 +32,7 @@ cask "sf-symbols" do
     end
   end
   on_sequoia :or_newer do
-    version "8.0,123"
+    version "8.0,135"
     sha256 :no_check # required as upstream package is updated in-place
 
     livecheck do
