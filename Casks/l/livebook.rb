@@ -1,9 +1,9 @@
 cask "livebook" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.19.8"
-  sha256 arm:   "72b65a36dc25e003ca7278fde6624613a84b8577086cf1851934b6f1c3a694c6",
-         intel: "795c1e4ea23d3df8da5324e85d888c9f1f232083be3f27687520da1ec7e7dd39"
+  version "0.19.9"
+  sha256 arm:   "ec36260c09ade0c8e724cf9c707b16e2997af9046e7e2d8f223008e51dc85d76",
+         intel: "c361c66c33d5e974775bedb74920c0752c56003f3498c71c88961db15cae47a4"
 
   url "https://github.com/livebook-dev/livebook/releases/download/v#{version}/Livebook-darwin-#{arch}.dmg",
       verified: "github.com/livebook-dev/livebook/"
