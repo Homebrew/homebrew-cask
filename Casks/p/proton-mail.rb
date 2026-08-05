@@ -23,7 +23,10 @@ cask "proton-mail" do
 
   app "Proton Mail.app"
 
+  uninstall delete: "/Applications/Proton Mail Uninstaller.app"
+
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ch.protonmail.desktop.sfl*",
     "~/Library/Application Support/Proton Mail",
     "~/Library/Caches/ch.protonmail.desktop",
     "~/Library/Caches/ch.protonmail.desktop.ShipIt",
