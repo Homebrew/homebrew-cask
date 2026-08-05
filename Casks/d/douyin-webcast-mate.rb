@@ -1,11 +1,16 @@
-cask "douyin-live" do
+cask "douyin-webcast-mate" do
   version "10.0.1"
   sha256 :no_check
 
-  url "https://lf3-cdn-tos.bytegoofy.com/obj/tron-demo/7637411201357453594/442376885/10.0.1/darwin-universal/douyin-webcast-mate-v10.0.1-master-257b711c-darwin-universal.dmg"
+  url "https://lf3-cdn-tos.bytegoofy.com/obj/tron-demo/7637411201357453594/442376885/#{version}/darwin-universal/douyin-webcast-mate-v10.0.1-master-257b711c-darwin-universal.dmg"
   name "Douyin Webcast Mate"
   desc "Live streaming application"
   homepage "https://streamingtool.douyin.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   depends_on macos: :ventura
 
@@ -13,6 +18,7 @@ cask "douyin-live" do
 
   zap trash: [
     "/Users/Shared/com.bytedance.webcastmate.mac",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bytedance.webcastmate.mac.sfl*",
     "~/Library/Application Support/Douyin Webcast Mate",
     "~/Library/Caches/com.bytedance.webcastmate.mac",
     "~/Library/HTTPStorages/com.bytedance.webcastmate.mac",
