@@ -14,7 +14,7 @@ cask "movist-pro" do
   end
 
   auto_updates true
-  depends_on macos: :sequoia
+  depends_on macos: :monterey
 
   app "Movist Pro.app"
 
