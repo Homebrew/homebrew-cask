@@ -15,12 +15,12 @@ jobs:
       statuses: write
     steps:
       - name: Check commit format
-        uses: Homebrew/actions/check-commit-format@9af03b7ae3f9e2ae5c174f659d5c3909f7e7dbac # 2026.07.29.1
+        uses: Homebrew/actions/check-commit-format@fd832223f9f99ebf0244dd20658680e5d4aca049 # 2026.08.03.2
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
 
       - name: Label pull request
-        uses: Homebrew/actions/label-pull-requests@df4b09108a1de9d6f995fe68f302b3f68bd6d2ef # 2026.07.20.1
+        uses: Homebrew/actions/label-pull-requests@fd832223f9f99ebf0244dd20658680e5d4aca049 # 2026.08.03.2
         if: always()
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
