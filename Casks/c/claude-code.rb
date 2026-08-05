@@ -19,6 +19,8 @@ cask "claude-code" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  conflicts_with cask: "claude-code@latest"
+
   binary "claude"
 
   zap trash: [
