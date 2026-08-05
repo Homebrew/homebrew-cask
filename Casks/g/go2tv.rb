@@ -17,7 +17,7 @@ cask "go2tv" do
 
   depends_on :macos
 
-  app "go2tv_v#{version}_macOS_#{arch}/go2tv.app"
+  app "go2tv.app"
 
   zap trash: "~/Library/Preferences/fyne/app.go2tv.go2tv"
 end
