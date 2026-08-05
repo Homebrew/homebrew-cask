@@ -21,8 +21,6 @@ cask "mplab-xc8" do
       "--mode", "unattended",
       "--unattendedmodeui", "none",
       "--ModifyAll", "0",
-      "--netservername", '""',
-      "--LicenseType", "WorkstationMode",
       "--prefix", staged_path.to_s
     ],
     input:      ["y"],
@@ -32,11 +30,6 @@ cask "mplab-xc8" do
   binary "#{staged_path}/bin/xc8-ar"
   binary "#{staged_path}/bin/xc8-cc"
   binary "#{staged_path}/bin/xc8-clangd"
-  binary "#{staged_path}/bin/xclm"
-
-  postflight_steps do
-    set_ownership "."
-  end
 
   uninstall script: {
     executable: "Uninstall-xc8-v#{version}.app/Contents/MacOS/installbuilder.sh",
