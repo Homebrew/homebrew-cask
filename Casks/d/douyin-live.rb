@@ -7,7 +7,7 @@ cask "douyin-live" do
   desc "Live streaming application"
   homepage "https://streamingtool.douyin.com/"
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "Douyin Webcast Mate.app"
 
