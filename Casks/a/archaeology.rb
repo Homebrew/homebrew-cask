@@ -1,5 +1,5 @@
 cask "archaeology" do
-  version "1.5,215"
+  version "1.6,255"
   sha256 :no_check
 
   url "https://www.mothersruin.com/software/downloads/Archaeology.dmg"
