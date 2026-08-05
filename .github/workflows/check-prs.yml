@@ -77,6 +77,8 @@ jobs:
 
       - name: Check pull request template
         id: template
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
           # homebrew-core and homebrew-cask allow condensed PR bodies from recognised bump tools.
           if [[ "${GITHUB_REPOSITORY}" == "Homebrew/homebrew-core" ||
@@ -93,7 +95,9 @@ jobs:
           complete_template="$(
             ruby "${RUNNER_TEMP:?}/check_template.rb" pull-request \
               "${RUNNER_TEMP}/check-prs/body" \
-              "${RUNNER_TEMP}/check-prs/template"
+              "${RUNNER_TEMP}/check-prs/template" \
+              "${PR_TITLE}" \
+              "${GITHUB_REPOSITORY:?}"
           )"
           case "${complete_template}" in
             true | false) ;;
