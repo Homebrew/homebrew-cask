@@ -1,6 +1,6 @@
 cask "egnyte" do
-  version "1.19.0,2364"
-  sha256 "8af51ef25b932c3de1971d041b8d1854dfc179dc9a893231c7fe6e530c326073"
+  version "1.19.1,2367"
+  sha256 "687e35bab2d54b6c979ec6002a7f09aa6259b7331a490b5173ee8b1d29a200d0"
 
   url "https://egnyte-cdn.egnyte.com/desktopapp/mac/en-us/#{version.csv.first}/Egnyte_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Egnyte"
