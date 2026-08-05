@@ -1,19 +1,12 @@
 cask "ray" do
+  arch arm: "arm64", intel: "x64"
+
   version "3.2.10"
+  sha256 arm:   "8965569f043c36bd7e12decfbb12db1511962b4e7edf423d05599d65c5ccc25a",
+         intel: "dc7a6fbfcfd6029180dfd0181c834124b714ebb249e0472a9ca0de4060dcbfe1"
 
-  on_arm do
-    sha256 "8965569f043c36bd7e12decfbb12db1511962b4e7edf423d05599d65c5ccc25a"
-
-    url "https://ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v3/stable/ray-#{version}-latest-darwin-arm64.dmg",
-        verified: "ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v3/"
-  end
-  on_intel do
-    sha256 "dc7a6fbfcfd6029180dfd0181c834124b714ebb249e0472a9ca0de4060dcbfe1"
-
-    url "https://ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v3/stable/ray-#{version}-latest-darwin-x64.dmg",
-        verified: "ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v3/"
-  end
-
+  url "https://ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v3/stable/ray-#{version}-latest-darwin-#{arch}.dmg",
+      verified: "ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v3/"
   name "Ray"
   desc "Debug with Ray to fix problems faster"
   homepage "https://myray.app/"
