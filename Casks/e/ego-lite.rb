@@ -13,21 +13,9 @@ cask "ego-lite" do
     url "https://update.citrolabs.ai/service/update2", post_json: {
       request: {
         protocol:     "4.0",
-        acceptformat: "crx3,download,puff,run,xz,zucc",
-        arch:         arch,
-        os:           {
-          platform: "Mac OS X",
-          version:  "26.5.0",
-          arch:     arch,
-        },
-        apps:         [
-          {
-            appid:       "com.citrolabs.ego.lite",
-            version:     "0.0.0.0",
-            ap:          "lite",
-            updatecheck: {},
-          },
-        ],
+        acceptformat: "download,run",
+        os:           { platform: "Mac OS X", arch: arch },
+        apps:         [{ appid: "com.citrolabs.ego.lite", updatecheck: {} }],
       },
     }
     regex(/"nextversion":"(\d+(?:\.\d+)+)"/i)
