@@ -1,6 +1,6 @@
 cask "lm-studio-bionic" do
-  version "1.0.4,9"
-  sha256 "60891bb8318f669d40f66b4ac98e509d3ee1e373aba572b5c92b68859785294b"
+  version "1.0.5,7"
+  sha256 "6271a021824b3bf40cf63e96b00f5ef793d5a7774c6fcfd88a4ea4cba6a1ed63"
 
   url "https://bionic-installers.lmstudio.ai/darwin/arm64/#{version.tr(",", "-")}/Bionic-#{version.tr(",", "-")}-arm64.dmg"
   name "LM Studio Bionic"
