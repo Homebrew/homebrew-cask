@@ -21,14 +21,19 @@ cask "aws-vpn-client" do
 
   pkg "AWS_VPN_Client#{arch}.pkg"
 
-  uninstall launchctl: "com.amazonaws.acvc.helper",
+  uninstall launchctl: [
+              "com.amazonaws.acvc.helper",
+              "com.amazonaws.acvc.osx.core",
+            ],
             quit:      "com.amazonaws.acvc.osx",
             pkgutil:   "com.amazon.awsvpnclient",
             delete:    [
               "/Applications/AWS VPN Client",
               "/Library/Application Support/AWSVPNClient",
               "/Library/LaunchDaemons/com.amazonaws.acvc.helper.plist",
+              "/Library/LaunchDaemons/com.amazonaws.acvc.osx.core.plist",
               "/Library/PrivilegedHelperTools/com.amazonaws.acvc.helper",
+              "/usr/local/bin/aws-vpn-client",
             ]
 
   zap trash: [
