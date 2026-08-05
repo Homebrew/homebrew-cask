@@ -22,7 +22,9 @@ cask "binance" do
 
   zap trash: [
     "~/Library/Application Support/Binance",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.binance.binancedesktop.sfl*",
     "~/Library/Logs/Binance",
+    "~/Library/Preferences/com.binance.BinanceDesktop.plist",
     "~/Library/Saved Application State/com.binance.BinanceDesktop.savedState",
   ]
 end
