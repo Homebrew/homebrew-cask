@@ -13,30 +13,26 @@ cask "suspicious-package" do
       sha256 "9bcd1c8169458fa4e370c1f2ea6c2f98ecd6dbafe9cfa71f9fce032a0d1b57bc"
     end
 
-    url "https://www.mothersruin.com/software/archives/SuspiciousPackage-#{version}.dmg"
-
     livecheck do
       skip "Legacy version"
     end
   end
   on_sonoma :or_newer do
-    version "4.7,1415"
-    sha256 :no_check
-
-    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg"
+    version "4.7"
+    sha256 "5b8215b7a6536d1d41f1a3485e3428b39f8d3d0f2471ab1a0c69bedb22df4e5b"
 
     livecheck do
       url "https://www.mothersruin.com/software/SuspiciousPackage/data/SuspiciousPackageVersionInfo.plist"
       strategy :xml do |xml|
         short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text
-        version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text
-        next if short_version.blank? || version.blank?
+        next if short_version.blank?
 
-        "#{short_version.strip},#{version.strip}"
+        short_version.strip
       end
     end
   end
 
+  url "https://www.mothersruin.com/software/archives/SuspiciousPackage-#{version}.dmg"
   name "Suspicious Package"
   desc "Application for inspecting installer packages"
   homepage "https://www.mothersruin.com/software/SuspiciousPackage/"
