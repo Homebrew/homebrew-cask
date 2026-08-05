@@ -8,6 +8,8 @@ cask "cables" do
     sha256 arm:   "a03b1051f00061a991fcc11b3771fd09eb890f5febd313b912000ead380f3e01",
            intel: "2b207148c5297275d4657d1e9cd25bca75860eba9f130af9b93b553774ce57e6"
 
+    depends_on macos: :monterey
+
     app "cables.app"
 
     uninstall quit: "gl.cables.standalone"
