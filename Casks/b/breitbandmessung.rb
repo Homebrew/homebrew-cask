@@ -1,6 +1,6 @@
 cask "breitbandmessung" do
-  version "3.12.0"
-  sha256 "42e25a353c8101541bdd20873639e1779925c53ac7ffdfc9e7a33197a97fb0ab"
+  version "3.12.1"
+  sha256 "f33cec43ceae7577f835e4d8af182b6f6f0de70c11698ac002d6791ffd53e70e"
 
   url "https://download.breitbandmessung.de/bbm/Breitbandmessung-#{version}-mac.dmg"
   name "Breitbandmessung"
