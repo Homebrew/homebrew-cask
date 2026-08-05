@@ -1,6 +1,6 @@
 cask "minecraft-education" do
-  version "1.21.133.2"
-  sha256 "b8c66ae3e8221bf129cddbc2425ec6150c29180acf30656abb2902ceb4d1d3f7"
+  version "1.26.32.0"
+  sha256 "8aaada426842ebc054acb70ecd0a44fcb9abe02988e98d5488f17376380e2960"
 
   url "https://downloads.minecrafteduservices.com/retailbuilds/MacOS/Minecraft_Education_#{version}.dmg",
       verified: "downloads.minecrafteduservices.com/"
@@ -29,8 +29,4 @@ cask "minecraft-education" do
     "~/Library/Saved Application State/com.microsoft.minecraftpe.savedState",
     "~/Library/WebKit/com.microsoft.minecraftpe",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
