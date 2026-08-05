@@ -29,8 +29,4 @@ cask "minecraft-education" do
     "~/Library/Saved Application State/com.microsoft.minecraftpe.savedState",
     "~/Library/WebKit/com.microsoft.minecraftpe",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
