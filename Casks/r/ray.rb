@@ -19,8 +19,8 @@ cask "ray" do
   homepage "https://myray.app/"
 
   livecheck do
-    url "https://amazonaws.com"
-    skip "Upstream tracking file is hardcoded to obsolete 2.x stream"
+    url "https://spatie.be/products/ray/v3/download/macos-#{arch}/latest"
+    strategy :header_match
   end
 
   auto_updates true
