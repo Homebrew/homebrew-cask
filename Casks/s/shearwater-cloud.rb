@@ -25,5 +25,9 @@ cask "shearwater-cloud" do
 
   app "Shearwater Cloud.app"
 
-  zap trash: "~/Library/Containers/unity.Shearwater-Research.Shearwater"
+  zap trash: [
+    "~/Library/Application Scripts/research.shearwater.cloud",
+    "~/Library/Containers/research.shearwater.cloud",
+    "~/Library/Containers/unity.Shearwater-Research.Shearwater",
+  ]
 end
