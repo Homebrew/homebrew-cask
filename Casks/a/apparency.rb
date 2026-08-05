@@ -1,5 +1,5 @@
 cask "apparency" do
-  on_monterey :or_older do
+  on_ventura :or_older do
     on_catalina :or_older do
       version "1.4.1"
       sha256 "850d19c6d6a86380211d9acdb3d8b0ee3b2a4c8af833126c28141f105823c59a"
@@ -12,14 +12,18 @@ cask "apparency" do
       version "2.3"
       sha256 "41a3fb2e5e592b44151cf1730cf995f2b7745e663721ed153c10d72440cc1025"
     end
+    on_ventura do
+      version "3.2"
+      sha256 "0a2639fac59f2a88510193bc6aa79a6e1af7a7f2c6cb6bc468fb7a30c8a68cc3"
+    end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
-    version "3.2"
-    sha256 "0a2639fac59f2a88510193bc6aa79a6e1af7a7f2c6cb6bc468fb7a30c8a68cc3"
+  on_sonoma :or_newer do
+    version "3.3"
+    sha256 "9f0622d654603556861baf41e4959134e3321169a90c012909dc44057f7a3dc3"
 
     livecheck do
       url "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
