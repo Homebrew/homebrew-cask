@@ -19,7 +19,8 @@ cask "tresorit" do
 
   app "Tresorit.app"
 
-  uninstall login_item: "Tresorit"
+  uninstall launchctl:  "com.tresorit.mac.ExtensionHelper",
+            login_item: "Tresorit"
 
   zap trash: [
     "~/Library/Application Support/Tresorit",
