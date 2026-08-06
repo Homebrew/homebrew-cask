@@ -26,7 +26,9 @@ cask "wetype" do
   auto_updates true
   depends_on :macos
 
-  input_method "WeType.app"
+  # The bundle moves itself to `/Library/Input Methods` on first launch,
+  # so let's put it there to begin with to prevent uninstallation issues.
+  input_method "WeType.app", target: "/Library/Input Methods/WeType.app"
 
   zap trash: [
     "~/Library/Application Support/WeType",
@@ -35,4 +37,9 @@ cask "wetype" do
     "~/Library/HTTPStorages/com.tencent.inputmethod.wetype",
     "~/Library/Preferences/com.tencent.inputmethod.wetype.plist",
   ]
+
+  # The input method is only registered after a reboot, or logging out and back in.
+  caveats do
+    logout
+  end
 end
