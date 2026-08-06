@@ -1,6 +1,6 @@
 cask "simpledemviewer" do
-  version "8.6.0"
-  sha256 "24b8d594805ade8ef2c5e1d5b2179e3fb45a019c20bc8b4450a4b4dd87bc5706"
+  version "8.6.1"
+  sha256 "cca95230db8e0758a6c6a68b39554b69db3849991974e0d77346dcb085b03834"
 
   url "https://jizoh.jp/program/SDVr_#{version.no_dots}.zip"
   name "SimpleDEMViewer"
