@@ -9,7 +9,7 @@ cask "thaw@beta" do
 
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+(?:-(beta|RC)[._-]\d+)?)/i)
+    regex(/^v?(\d+(?:\.\d+)+(?:-(?:beta|rc)[._-]?\d+(?:\.\d+)*)?)$/i)
   end
 
   auto_updates true
