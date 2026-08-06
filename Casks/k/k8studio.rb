@@ -1,9 +1,9 @@
 cask "k8studio" do
   arch arm: "-arm64"
 
-  version "4.0.0"
-  sha256 arm:   "a022514aefc679f34389ae9125aab10e36d328e6b3181cbd451b1fd12a4ca242",
-         intel: "7386dae6e31e6544a97e4c69ca75a7f3a7e50f30a19ad4951f9f2e6cdf2dc691"
+  version "4.0.1"
+  sha256 arm:   "966a782cdc151748ddb70ca30e57e442a37513bfa64914de28dd478797e47f3c",
+         intel: "cea0fb46bead2d649325e402e3c50339c5a199c3a5017b30bf8bb80ee990a3cc"
 
   url "https://releases.k8studio.io/K8Studio-#{version}#{arch}.dmg"
   name "K8studio"
