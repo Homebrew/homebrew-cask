@@ -24,7 +24,10 @@ cask "steinberg-library-manager" do
 
   uninstall launchctl: "com.steinberg.HALionLibraryInstallerHelper",
             quit:      "com.steinberg.HALionLibraryManager",
-            pkgutil:   "com.steinberg.SteinbergLibraryManager",
+            pkgutil:   [
+              "com.steinberg.HALionLibraryManager",
+              "com.steinberg.SteinbergLibraryManager",
+            ],
             delete:    "/Applications/Steinberg Library Manager.app"
 
   zap trash: [
