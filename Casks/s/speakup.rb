@@ -21,9 +21,16 @@ cask "speakup" do
 
   app "SpeakUp.app"
 
+  # SpeakUp is sandboxed, so nearly all user data lives in the container —
+  # measured at 2.5 GB on a machine with several Whisper models downloaded.
+  # The bare Application Support paths are from older, non-sandboxed builds
+  # and are kept so upgraders are cleaned up too.
   zap trash: [
+    "~/Library/Application Scripts/com.nedelcu.SpeakUp",
+    "~/Library/Application Support/com.nedelcu.SpeakUp",
     "~/Library/Application Support/SpeakUp",
     "~/Library/Caches/com.nedelcu.SpeakUp",
+    "~/Library/Containers/com.nedelcu.SpeakUp",
     "~/Library/HTTPStorages/com.nedelcu.SpeakUp",
     "~/Library/Preferences/com.nedelcu.SpeakUp.plist",
     "~/Library/Saved Application State/com.nedelcu.SpeakUp.savedState",
