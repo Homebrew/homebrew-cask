@@ -1,6 +1,6 @@
 cask "exelearning" do
-  version "4.0.2"
-  sha256 "3a3aa4a16a980c3c32f1553b3a23abafa76e12a8f9a1925e34f4f375895a4c96"
+  version "4.0.3"
+  sha256 "2418ccf91da5e746113818b789ccfe2170c6bcb4457b6db4ee38a0ef78a4c20c"
 
   url "https://github.com/exelearning/exelearning/releases/download/v#{version}/eXeLearning-#{version}-universal.dmg",
       verified: "github.com/exelearning/exelearning/"
