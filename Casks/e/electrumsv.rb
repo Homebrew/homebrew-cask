@@ -2,8 +2,8 @@ cask "electrumsv" do
   version "1.3.16"
   sha256 "d1910e583813bfc8cbe5d815d0df1059a1d144df6d96fc6bc6c0ae3dccc4bc7e"
 
-  url "https://electrumsv-downloads.s3.amazonaws.com/releases/#{version}/ElectrumSV-#{version}.dmg",
-      verified: "electrumsv-downloads.s3.amazonaws.com/"
+  url "https://github.com/electrumsv/electrumsv/releases/download/sv-#{version}/ElectrumSV-#{version}.dmg",
+      verified: "github.com/electrumsv/electrumsv/"
   name "ElectrumSV"
   desc "Desktop wallet for Bitcoin SV"
   homepage "https://electrumsv.io/"
