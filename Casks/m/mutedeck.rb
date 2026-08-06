@@ -1,7 +1,7 @@
 cask "mutedeck" do
   arch arm: "-arm"
 
-  version "2.8.1"
+  version "4.9.3"
   sha256 :no_check
 
   url "https://releases.mutedeck.com/macos#{arch}/mutedeck-mac#{arch}.dmg"
@@ -10,8 +10,10 @@ cask "mutedeck" do
   homepage "https://mutedeck.com/"
 
   livecheck do
-    url "https://mutedeck.canny.io/api/changelog/feed.rss"
-    regex(/<title>\s*v?(\d+(?:\.\d+)+)[ <"]/i)
+    url "https://releases.r2.mutedeck.com/updates/macos#{arch}/Updates.xml"
+    strategy :xml do |xml|
+      xml.elements["/Updates/PackageUpdate[Name='com.mutedeck.client']/Version"]&.text&.strip
+    end
   end
 
   auto_updates true
