@@ -1,6 +1,6 @@
 cask "citrix-workspace" do
-  version "26.03.11.41"
-  sha256 "cfdf300d8e5ebd90d7cdb7d4bbbc3c4cabfd1c9afe29dd89274736c65eaaf699"
+  version "26.07.0.71"
+  sha256 "bc4d23adb9e0362d358159552069d2012c3513e6774266446141d88fc94ffe74"
 
   url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/Receiver/Mac/CitrixWorkspaceAppUniversal#{version}.pkg"
   name "Citrix Workspace"
@@ -20,12 +20,18 @@ cask "citrix-workspace" do
 
   pkg "CitrixWorkspaceAppUniversal#{version}.pkg"
 
+  uninstall_preflight_steps do
+    remove "/Library/Citrix Workspace/CitrixWorkspaceInstaller/Applications/Citrix Workspace.app",
+           symlink_target_contains: "/Applications/Citrix Workspace.app", sudo: true
+  end
+
   uninstall launchctl: [
               "com.citrix.AuthManager_Mac",
               "com.citrix.ctxusbd",
               "com.citrix.CtxWorkspaceHelperDaemon",
               "com.citrix.ctxworkspaceupdater",
               "com.citrix.devicetrust.launchagent",
+              "com.citrix.PluginBroker",
               "com.citrix.ReceiverHelper",
               "com.citrix.ReceiverUninstallHelper",
               "com.citrix.ReceiverUpdaterHelper",
@@ -48,9 +54,14 @@ cask "citrix-workspace" do
               "com.citrix.ICAClientcwa",
               "com.citrix.ICAClienthdx",
               "com.citrix.receiver.bcr",
+            ],
+            delete:    [
+              "/Applications/Citrix Workspace.app",
+              "/Library/Citrix Workspace",
             ]
 
   zap trash: [
+    "/Library/Logs/Citrix Workspace",
     "~/Library/Application Support/Citrix Receiver",
     "~/Library/Application Support/Citrix Workspace",
     "~/Library/Application Support/Citrix",
