@@ -2,16 +2,16 @@ cask "dehelper" do
   version :latest
   sha256 :no_check
 
-  url "https://static.eudic.net/pkg/dhmac.dmg",
+  url "https://static.eudic.net/pkg/dhmac.dmg?version",
       user_agent: :fake
   name "Dehelper"
   name "德语助手"
   desc "Chinese-German dictionary"
   homepage "https://www.eudic.net/v4/de/app/dehelper"
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
-  app "dehelper.app"
+  app "Dehelper.app"
 
   uninstall quit: [
     "com.eusoft.dehelper",
@@ -19,16 +19,19 @@ cask "dehelper" do
   ]
 
   zap trash: [
-    "~/Library/Application Scripts/com.eusoft.dehelper.QuickLook",
+    "~/Library/Application Scripts/7L3ARZ2SN3.com.eusoft.dehelper",
     "~/Library/Caches/com.eusoft.dehelper",
     "~/Library/Caches/com.eusoft.dehelper.LightPeek",
     "~/Library/Containers/com.eusoft.dehelper.QuickLook",
     "~/Library/Eudb_de",
+    "~/Library/Group Containers/7L3ARZ2SN3.com.eusoft.dehelper",
     "~/Library/HTTPStorages/com.eusoft.dehelper",
-    "~/Library/HTTPStorages/com.eusoft.dehelper.binarycookies",
+    "~/Library/HTTPStorages/com.eusoft.dehelper.LightPeek",
+    "~/Library/Mobile Documents/iCloud~com~eusoft~dehelper~Document",
     "~/Library/Preferences/com.eusoft.dehelper.LightPeek.plist",
     "~/Library/Preferences/com.eusoft.dehelper.plist",
     "~/Library/Preferences/group.com.eusoft.dehelper.plist",
     "~/Library/WebKit/com.eusoft.dehelper",
+    "~/Library/WebKit/com.eusoft.dehelper.LightPeek",
   ]
 end
