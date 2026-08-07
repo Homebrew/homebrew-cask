@@ -1,6 +1,6 @@
 cask "modrinth" do
-  version "0.17.3"
-  sha256 "02bfe61920235491ea8b3c72bb3acb079746ae7726f31865285c95706be6ff5e"
+  version "0.17.4"
+  sha256 "efb6a02e816580493abff4070955be1c1c526f23f84b96af7f2fbebb77381de3"
 
   url "https://launcher-files.modrinth.com/versions/#{version}/macos/Modrinth%20App_#{version}_universal.dmg"
   name "Modrinth App"
