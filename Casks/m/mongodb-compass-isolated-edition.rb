@@ -27,8 +27,11 @@ cask "mongodb-compass-isolated-edition" do
 
   app "MongoDB Compass Isolated Edition.app"
 
+  uninstall quit: "com.mongodb.compass.isolated"
+
   zap trash: [
     "~/.mongodb/compass",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.isolated.sfl*",
     "~/Library/Application Support/MongoDB Compass Isolated Edition",
     "~/Library/Preferences/com.mongodb.compass.isolated.plist",
     "~/Library/Saved Application State/com.mongodb.compass.isolated.savedState",
