@@ -1,6 +1,6 @@
 cask "letos" do
-  version "4.0.1"
-  sha256 "820eb81471ac6641ae4e7d2f6b390b1f1e0d4c6ca6196fa7bb982076971fdebd"
+  version "4.0.2"
+  sha256 "4f70b16de6bdd796f8e8cee512ae1b0b902200efa56903d8d68b29c9b3cf78fe"
 
   url "https://github.com/pawelsalawa/letos/releases/download/#{version}/letos-#{version}-macos-universal.dmg",
       verified: "github.com/pawelsalawa/letos/releases/download/"
@@ -8,7 +8,7 @@ cask "letos" do
   desc "Create, edit, browse SQLite databases"
   homepage "https://letos.org/"
 
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   app "Letos.app"
 
