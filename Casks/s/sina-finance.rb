@@ -19,4 +19,9 @@ cask "sina-finance" do
   depends_on macos: :big_sur
 
   app "新浪财经APP.app"
+  
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sina.stock.desktop.sfl*",
+    "~/Library/Preferences/com.sina.stock.desktop.plist"
+  ]
 end
