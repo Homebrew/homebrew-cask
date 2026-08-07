@@ -1,6 +1,6 @@
 cask "statbar" do
   version "1.0.0"
-  sha256 "6c191ec7fce73eeee9f8a23e357897ca01deb1f930ba0e89b3806acbc15e0b9c"
+  sha256 "e46ffd07eb234346874d270318cf0b5397d5f61b50e42f288c743e2edf6a4ad8"
 
   url "https://github.com/coderhd/system-stats-menubar-app/releases/download/v#{version}/StatBar.app.zip"
   name "StatBar"
