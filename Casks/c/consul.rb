@@ -1,9 +1,9 @@
 cask "consul" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.0.2"
-  sha256 arm:   "5954509aec5ed54dabc88fc8e357756c7b0dc56437bd296c1399e525e3657417",
-         intel: "4e76391b19d2e2db08cd2a910acadc6e67b9e1e9333a7434a7ea3c6c977a8889"
+  version "2.0.3"
+  sha256 arm:   "fed05e8e2a296989c1a5c86e3b38d5f4dbdc7d83e0c0acf4c5fe7e302e8f4fde",
+         intel: "9a8ced39610be73c4b6c918e64c1589a3fe9747f3a2188b8da55d0a35ddca4e0"
 
   url "https://releases.hashicorp.com/consul/#{version}/consul_#{version}_darwin_#{arch}.zip",
       verified: "releases.hashicorp.com/consul/"
