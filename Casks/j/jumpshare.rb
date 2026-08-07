@@ -18,6 +18,8 @@ cask "jumpshare" do
 
   app "Jumpshare.app"
 
+  uninstall launchctl: "com.jumpshare.JumpshareLoginHelper"
+
   zap trash: [
     "~/Library/Application Scripts/com.jumpshare.JumpshareLoginHelper",
     "~/Library/Application Support/com.jumpshare.Jumpshare",
