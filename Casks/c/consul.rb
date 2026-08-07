@@ -21,4 +21,8 @@ cask "consul" do
   binary "consul"
 
   # No zap stanza required
+
+  caveats do
+    license "https://github.com/hashicorp/consul/blob/v#{version}/LICENSE"
+  end
 end
