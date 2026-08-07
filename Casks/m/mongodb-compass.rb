@@ -28,6 +28,8 @@ cask "mongodb-compass" do
 
   app "MongoDB Compass.app"
 
+  uninstall quit: "com.mongodb.compass"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.sfl*",
     "~/Library/Application Support/MongoDB Compass",
