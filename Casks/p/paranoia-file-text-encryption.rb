@@ -1,8 +1,8 @@
 cask "paranoia-file-text-encryption" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "17.0.43"
-  sha256 "5b94503f957a79854fa6a1aa6adb04e0173b526004c97c436d64c851d594e0ac"
+  version "17.1.43"
+  sha256 "6cddc01c894088bcb023dfe95cef8910d6ff13d8bca2f10006cf61b76261c18e"
 
   url "https://paranoiaworks.com/download/ParanoiaFileTextEnc-#{version}.pkg",
       verified: "paranoiaworks.com/download/"
