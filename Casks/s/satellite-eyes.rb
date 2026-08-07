@@ -1,6 +1,6 @@
 cask "satellite-eyes" do
-  version "2.1.0"
-  sha256 "217add8279f09b88d24903bb6a5c92e322ffd043743d34669a8cc131b33249d2"
+  version "2.1.1"
+  sha256 "7fdda2fba11af68103859b60d03f3ad9ffa3cc9ef6cd13aabb8d1939728b6d0a"
 
   url "https://satellite-eyes.s3.amazonaws.com/satellite-eyes-#{version}.zip",
       verified: "satellite-eyes.s3.amazonaws.com/"
