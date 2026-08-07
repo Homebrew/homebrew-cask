@@ -1,7 +1,7 @@
 cask "chatwork" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
 
-  version "2.23.2"
+  version "2.24.0"
   sha256 :no_check
 
   url "https://desktop-app.chatwork.com/installer/ChatWork.dmg"
@@ -19,7 +19,7 @@ cask "chatwork" do
   auto_updates true
   depends_on macos: :monterey
 
-  app "ChatWork.app"
+  app "Chatwork.app"
 
   zap trash: [
     "~/Library/Application Support/Chatwork",
