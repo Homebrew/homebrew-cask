@@ -1,6 +1,6 @@
 cask "applite" do
-  version "1.3.1"
-  sha256 "7c2972f21f373c1f64518212098a76604f14b05bd56eb7e56f84c25f4c9c8da2"
+  version "1.4.0"
+  sha256 "5344b3c868a80eb9b4ce6734f35c18e13b1c4ed1559038ddec8e271257abdeab"
 
   url "https://github.com/milanvarady/Applite/releases/download/v#{version}/Applite.dmg",
       verified: "github.com/milanvarady/Applite/"
@@ -14,7 +14,7 @@ cask "applite" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Applite.app"
 
