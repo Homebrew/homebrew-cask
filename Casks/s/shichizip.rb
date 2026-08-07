@@ -1,9 +1,9 @@
 cask "shichizip" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.2.6"
-  sha256 arm:   "62c905dcf7bb8deff847cf0578e09d003ff4371d0a9b5cf8d887e2de964cef0c",
-         intel: "cade8283e3f7a3d1e03280445b8876678708d90dba7caff7fa5423f7d3267262"
+  version "0.3.1"
+  sha256 arm:   "ef81a388012daa58c8f59f7958c14d6c8ba585d7f387d4f38192436c644ea863",
+         intel: "5b461d806da8ec3d66656d9a21460cc55caf52fc90544a4d7bbca05ba654e008"
 
   url "https://github.com/idawnlight/ShichiZip/releases/download/v#{version}/ShichiZip-v#{version}-#{arch}.zip"
   name "ShichiZip"
