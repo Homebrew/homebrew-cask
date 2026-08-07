@@ -22,6 +22,8 @@ cask "proton-drive" do
 
   app "Proton Drive.app"
 
+  uninstall launchctl: "ch.protonmail.drive.agent"
+
   zap trash: [
     "~/Library/Application Scripts/ch.protonmail.drive*",
     "~/Library/Application Support/FileProvider/ch.protonmail.drive.fileprovider",
