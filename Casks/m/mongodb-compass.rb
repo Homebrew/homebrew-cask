@@ -1,9 +1,9 @@
 cask "mongodb-compass" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.49.12"
-  sha256 arm:   "b32710b2ad0a8b119e865fe7d00f825d20a43145d82b3c5fd3f333328c8a069d",
-         intel: "7ca4b3a597bd65ef085159b7550ecf094c46a0ccb6d4378ec54ee5de50a09cab"
+  version "1.49.14"
+  sha256 arm:   "19622bfbd88aad63a961adbeb9e133ef4744d0ccc30d78ad5549000e3d1801a6",
+         intel: "38026ba67dff801f9ec9ebbef055de6846ba80930193c822dfe8a5ed516543ee"
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-#{version}-darwin-#{arch}.dmg"
   name "MongoDB Compass"
@@ -27,6 +27,8 @@ cask "mongodb-compass" do
   depends_on macos: :monterey
 
   app "MongoDB Compass.app"
+
+  uninstall quit: "com.mongodb.compass"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.sfl*",
