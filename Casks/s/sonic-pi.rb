@@ -1,36 +1,31 @@
 cask "sonic-pi" do
   arch arm: "Mac-arm64", intel: "Mac-x64"
 
-  on_monterey :or_older do
+  on_ventura :or_older do
     on_catalina :or_older do
       version "4.3.0"
       sha256 "c5646b221d61ba55c8e1025a646718d1244333bd57e2a7bccc8eb71c5a7be585"
 
       url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-x64-v#{version.dots_to_hyphens}.dmg"
     end
-    on_big_sur do
+    on_big_sur :or_newer do
       version "4.6.0"
-      sha256 "c19b132a9426b9c44b22aaea10fa63b56b21a708e042f99496758d0076d61b23"
+      sha256 arm:   "47025f6c2c0047855fc0bc4b6953064a59fb7de1bfb7b8004b94ee18550b475f",
+             intel: "c19b132a9426b9c44b22aaea10fa63b56b21a708e042f99496758d0076d61b23"
 
-      url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Intel-Mac-x64-v#{version.dots_to_hyphens}.dmg"
-    end
-    on_monterey do
-      version "4.6.0"
-      sha256 "c19b132a9426b9c44b22aaea10fa63b56b21a708e042f99496758d0076d61b23"
-
-      url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Intel-Mac-x64-v#{version.dots_to_hyphens}.dmg"
+      url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-#{arch}-v#{version.dots_to_hyphens}.dmg"
     end
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_ventura :or_newer do
-    version "4.6.0"
-    sha256 arm:   "47025f6c2c0047855fc0bc4b6953064a59fb7de1bfb7b8004b94ee18550b475f",
-           intel: "c19b132a9426b9c44b22aaea10fa63b56b21a708e042f99496758d0076d61b23"
+  on_sonoma :or_newer do
+    version "5.0.0"
+    sha256 arm:   "3dd0b9873a74aa274d3723be098622fdea73896ceba29a1423af9e7b46a7c291",
+           intel: "5a2634924646f85f410c8b7c51aca5b15b4cf3f1705c4771f3174d7762b1d20a"
 
-    url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-#{arch}-v#{version.dots_to_hyphens}.dmg"
+    url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-#{arch}-v#{version}.dmg"
 
     livecheck do
       url :homepage
