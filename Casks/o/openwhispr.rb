@@ -10,6 +10,11 @@ cask "openwhispr" do
   desc "Privacy-first voice-to-text dictation with AI agents"
   homepage "https://github.com/OpenWhispr/openwhispr"
 
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   auto_updates true
   depends_on macos: :monterey
 
