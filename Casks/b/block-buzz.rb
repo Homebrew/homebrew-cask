@@ -2,11 +2,11 @@ cask "block-buzz" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   os macos: "dmg", linux: "AppImage"
 
-  version "0.5.5"
+  version "0.5.6"
 
   on_macos do
-    sha256 arm:   "a34df1e57f8020322637a8da274679a82c27e42b2b54fa88dea18e3e59221846",
-           intel: "56fe61c2e1e0083203dc2ec0650c9eee5d8d2440453425ecaf19cdabefb52308"
+    sha256 arm:   "53494a0d16e192f34a8268f8417e891c1530ea21b3109279c3ee012aa7adc30e",
+           intel: "c11519049746cbf14af9a62dfb6e2b40eab39fd8b2c05cd1fcce16a825e6200f"
 
     conflicts_with cask: "buzz"
 
@@ -23,7 +23,7 @@ cask "block-buzz" do
         rmdir: "~/.buzz"
   end
   on_linux do
-    sha256 "cc51cada637d6197121e95f08328ac19cbbfeedd3e992228b552cf43893e2bdd"
+    sha256 "44067c1b315fc73e3ab24abe4f1845e28f1a25c03e5d6271e231fb652110fc19"
 
     depends_on arch: :x86_64
 
