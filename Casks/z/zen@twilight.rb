@@ -2,7 +2,7 @@ cask "zen@twilight" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: ".macos-universal.dmg", linux: "-#{arch}.AppImage"
 
-  version "1.22t,20260806121746"
+  version "1.22t,20260807120251"
   sha256 :no_check
 
   on_macos do
