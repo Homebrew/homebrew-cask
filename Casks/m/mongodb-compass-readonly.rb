@@ -27,8 +27,11 @@ cask "mongodb-compass-readonly" do
 
   app "MongoDB Compass Readonly.app"
 
+  uninstall quit: "com.mongodb.compass.readonly"
+
   zap trash: [
     "~/.mongodb/compass",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mongodb.compass.readonly.sfl*",
     "~/Library/Application Support/MongoDB Compass Readonly",
     "~/Library/Caches/com.mongodb.compass.readonly",
     "~/Library/Caches/com.mongodb.compass.readonly.ShipIt",
