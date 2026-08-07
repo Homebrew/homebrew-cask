@@ -22,8 +22,8 @@ cask "calibre" do
     end
   end
   on_sonoma :or_newer do
-    version "9.12.0"
-    sha256 "9bf73b38ecf46e064b068c89047e6d55c827458a1db20d7c90dc435db4b1783a"
+    version "9.13.0"
+    sha256 "001be6ed70d8acfd793fa7d8c95ea50045abedaf0e756b20e564275a0b0a7667"
 
     livecheck do
       url "https://calibre-ebook.com/dist/osx"
