@@ -2,8 +2,8 @@ cask "dbeaverultimate" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "26.1.0"
-  sha256 arm:   "20aacb0db1f818989cb4cb4a4e982c88a3ff6756ce4e0753d25c40920d8b76bb",
-         intel: "a1e00d518ae1aae36999b1c2f8c33067e2cf1e5452da5121acbd9b626d85552d"
+  sha256 arm:   "ac134703e8cf541e8489d61367f9c0d29bd8fa048a1f18239978fe7355957786",
+         intel: "1401d140bd9e8c58d9e370d235a1861db4baa7b13494a545a94192a39dd237b9"
 
   url "https://downloads.dbeaver.net/ultimate/#{version}/dbeaver-ue-#{version}-macos-#{arch}.dmg",
       verified: "downloads.dbeaver.net/ultimate/"
