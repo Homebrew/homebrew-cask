@@ -1,6 +1,6 @@
 cask "osaurus" do
-  version "0.22.15"
-  sha256 "93368bd8da9d356973148db09b2b75375a8c59dda494b58f22d500b669dfadd1"
+  version "0.22.17"
+  sha256 "e4f031f00ab4d41a9fa2d6f629910476b39659d5189b243bd00fda3fa21a1a52"
 
   url "https://github.com/osaurus-ai/osaurus/releases/download/#{version}/Osaurus-#{version}.dmg",
       verified: "github.com/osaurus-ai/osaurus/"
@@ -16,8 +16,8 @@ cask "osaurus" do
   depends_on macos: :sequoia
   depends_on arch: :arm64
 
-  app "Osaurus.app"
-  binary "#{appdir}/Osaurus.app/Contents/Helpers/osaurus"
+  app "osaurus.app"
+  binary "#{appdir}/osaurus.app/Contents/Helpers/osaurus"
 
   uninstall quit: "com.dinoki.osaurus"
 
