@@ -8,7 +8,7 @@ cask "letos" do
   desc "Create, edit, browse SQLite databases"
   homepage "https://letos.org/"
 
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   app "Letos.app"
 
