@@ -2,10 +2,10 @@ cask "stirling-pdf" do
   arch intel: "x86_64"
   os macos: "macos-universal.dmg", linux: "linux-#{arch}.AppImage"
 
-  version "2.14.2"
+  version "2.14.3"
 
   on_macos do
-    sha256 "d31e0f2e8f6d06d3fd199aa47804f1e05377f9d05680377390bfdb2ac949f67c"
+    sha256 "25073f75260c75854af3c81b457958471142b204f3f37c1142b41c75c5704a55"
 
     app "Stirling PDF.app"
 
@@ -19,7 +19,7 @@ cask "stirling-pdf" do
     ]
   end
   on_linux do
-    sha256 "ad534e652e02536ebb1542c6f62d8a38f64a9eff7f8387525a2c8bd203c309f1"
+    sha256 "9beca308e9c507a7eec804b672e3bf220728caf49a58e2cd896154a69ac82d07"
 
     depends_on arch: :x86_64
 
