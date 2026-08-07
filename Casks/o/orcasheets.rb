@@ -1,9 +1,9 @@
 cask "orcasheets" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "26.7.1"
-  sha256 arm:   "9c0a1602cc16b34742e3dfcf296583bed20343cf680dbe0a93c42e6733b7e6a9",
-         intel: "548c2ba2bcbd2dff3522828226ba8d97d9fa5faea2b5f57c384b8a71ca584c47"
+  version "26.8.1"
+  sha256 arm:   "82d68c8ed64bd83359ccc7cfd19760a1e0ac3b7d793e29b4891bfe86338ed807",
+         intel: "7ac6674a85c67b9101a0623a5fc5173ac94727fafb615eb6e72ea3d57001c30c"
 
   url "https://github.com/dataorchestration/homebrew-orcasheets/releases/download/#{version}/orcasheets_#{version}_#{arch}.dmg",
       verified: "github.com/dataorchestration/homebrew-orcasheets/"
@@ -18,7 +18,7 @@ cask "orcasheets" do
 
   depends_on macos: :big_sur
 
-  app "OrcaSheets.app"
+  app "orcasheets.app"
 
   zap trash: "~/Library/Application Support/OrcaSheets"
 end
