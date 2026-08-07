@@ -10,6 +10,11 @@ cask "hdrview" do
   desc "Research-oriented, high-dynamic range (HDR) image viewer and comparison tool"
   homepage "https://github.com/wkjarosz/hdrview"
 
+  livecheck do
+    url "https://github.com/wkjarosz/hdrview/releases"
+    regex(/v?(\d+(?:\.\d+)+)/i)
+  end
+
   depends_on :macos
 
   app "HDRView.app"
