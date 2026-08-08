@@ -1,12 +1,12 @@
 cask "mountmate" do
-  version "5.11"
-  sha256 "3a7cbdca0bd11335f41b8f15ce764acd21316bcbef784a7587b573da19d04bda"
+  version "5.16"
+  sha256 "dea38ecc9233e7dec22cac5b13f6618a40171b1514e3dccd02a7e2e6a64c431a"
 
   url "https://github.com/homielab/mountmate/releases/download/v#{version}/MountMate_#{version}.dmg",
       verified: "github.com/homielab/mountmate/"
   name "MountMate"
   desc "Menubar app to easily manage external drives"
-  homepage "https://mountmate.homielab.com/"
+  homepage "https://homielab.com/en/page/mountmate"
 
   livecheck do
     url "https://mountmate.homielab.com/appcast.xml"
