@@ -7,7 +7,7 @@ cask "webex" do
   url "https://binaries.webex.com/webex-macos-#{arch}/Webex.dmg"
   name "Webex"
   desc "Video communication and virtual meeting platform"
-  homepage "https://www.webex.com/"
+  homepage "https://www.webex.com/", browsed: "2026-08-05"
 
   livecheck do
     url "https://help.webex.com/en-us/article/mqkve8"
