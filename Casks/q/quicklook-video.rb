@@ -17,7 +17,7 @@ cask "quicklook-video" do
     end
   end
 
-  depends_on macos: :tahoe
+  depends_on macos: :sequoia
 
   app "QuickLook Video.app"
 
