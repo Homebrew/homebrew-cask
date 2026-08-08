@@ -1,6 +1,4 @@
 cask "canario@beta" do
-  arch arm: "aarch64"
-
   version "2026.08.07.15"
   sha256 "aff4897319c2ab1464c9e547a7ba9803277326a1abdfc26c1b4ccbea8ae7f7e4"
 
@@ -16,6 +14,7 @@ cask "canario@beta" do
 
   auto_updates true
   depends_on macos: :sonoma
+  depends_on arch: :arm64
 
   app "Canario.app"
 
