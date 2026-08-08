@@ -7,11 +7,6 @@ cask "space-rabbit" do
   desc "Removes animations when switching between Spaces"
   homepage "https://space-rabbit.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :sequoia
 
