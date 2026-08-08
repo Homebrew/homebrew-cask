@@ -7,6 +7,13 @@ cask "synapse" do
   desc "Every tool you need in your daily workflow"
   homepage "https://www.synapsemac.com"
 
+  livecheck do
+    url "https://www.synapsemac.com/api/appcast"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :sonoma"
+
   app "Synapse.app"
 
   zap trash: [
