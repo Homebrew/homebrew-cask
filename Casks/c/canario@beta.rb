@@ -5,7 +5,7 @@ cask "canario@beta" do
   sha256 "aff4897319c2ab1464c9e547a7ba9803277326a1abdfc26c1b4ccbea8ae7f7e4"
 
   url "https://github.com/canarioterm/releases/releases/download/v#{version}/Canario.dmg"
-  name "Canario Beta"
+  name "Canario"
   desc "Terminal that thinks like a browser"
   homepage "https://rioterm.com/canario"
 
