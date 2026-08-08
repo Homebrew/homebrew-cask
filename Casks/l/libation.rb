@@ -1,9 +1,9 @@
 cask "libation" do
   arch arm: "arm64", intel: "x64"
 
-  version "13.7.5"
-  sha256 arm:   "c3411938a705ca546ac0e008c3d8173acd11051db77e7ab0f17f5ef9bff0dee8",
-         intel: "2b1fbd69f1a1ecb5a7a3d7ab8b615c888f1260fe428d88b1e75b8ce258154747"
+  version "13.7.6"
+  sha256 arm:   "d5b78e10b382ecb3bb0cc8ab1c7617cb84654284497c0bd476e9c75fff19c2d4",
+         intel: "386443abb60a66d4247f0417db1f4bb89a8bb50fd0afec017e9d2e1cd2697bf2"
 
   url "https://github.com/rmcrackan/Libation/releases/download/v#{version}/Libation.#{version}-macOS-chardonnay-#{arch}.dmg",
       verified: "github.com/rmcrackan/Libation/"
