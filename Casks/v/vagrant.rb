@@ -29,4 +29,8 @@ cask "vagrant" do
             pkgutil: "com.vagrant.vagrant"
 
   zap trash: "~/.vagrant.d"
+
+  caveats do
+    license "https://github.com/hashicorp/vagrant/blob/v#{version}/LICENSE"
+  end
 end
