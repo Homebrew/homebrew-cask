@@ -1,6 +1,6 @@
 cask "synapse" do
   version "2.2.2"
-  sha256 "cf73fcc11de44e44cef1a4ab6f1d60e9060bc84eb10dc989ceee12c22186764"
+  sha256 "cf73fcc11de44e44cef1a4ab6f1d60e9060bc84eb10dc989ceee12c22186764d"
 
   url "https://www.synapsemac.com/downloads/Synapse-#{version}.dmg"
   name "Synapse"
