@@ -12,7 +12,7 @@ cask "synapse" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Synapse.app"
 
