@@ -1,6 +1,6 @@
 cask "biglybt" do
   version "4.1.0.0"
-  sha256 "0e57accd9e8efa7198ea909342bce4ac5597df76960516d683e559a5ebbb8df2"
+  sha256 "2e20642b6fda147ee7fd3e523235359355a07e753e5c7961e27d005a72753b0d"
 
   url "https://github.com/BiglySoftware/BiglyBT/releases/download/v#{version}/GitHub_BiglyBT_Mac_Universal_Installer.dmg",
       verified: "github.com/BiglySoftware/BiglyBT/"
