@@ -8,10 +8,8 @@ cask "pixpin" do
   homepage "https://pixpin.cn/"
 
   livecheck do
-    url "https://api.viewdepth.cn/app_info?app_id=pixpin&update_type=0&sys=mac&ver=0.0.0"
-    strategy :json do |json|
-      json.dig("ver_info", "version")
-    end
+    url "https://pixpin.cn/download/"
+    regex(/href=.*?PixPin(?:[._-]mac)?[._-]v?(\d+(?:\.\d+)+)(?:[._-]uni)?\.dmg/i)
   end
 
   auto_updates true
