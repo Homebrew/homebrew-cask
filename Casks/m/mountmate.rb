@@ -5,7 +5,7 @@ cask "mountmate" do
   url "https://github.com/homielab/mountmate/releases/download/v#{version}/MountMate_#{version}.dmg",
       verified: "github.com/homielab/mountmate/"
   name "MountMate"
-  desc "Manage external drives right from your menubar"
+  desc "Manage external drives right from your menubar."
   homepage "https://homielab.com/en/page/mountmate"
 
   livecheck do
