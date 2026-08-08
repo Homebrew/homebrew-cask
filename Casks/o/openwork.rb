@@ -6,7 +6,7 @@ cask "openwork" do
   version "0.18.18"
   sha256 arm:          "98db199035a61d4648d89fe2b828af5bbeccc1df03b26194b960172676e78ab8",
          intel:        "b3a722315d95fa10794894ed4c8163a0e2a329518f07324caf35c45fe96a1643",
-         arm64_linux:  "3127a583432fb24bc225a87add9038d324a22a45e8daa12b0f553088716b2bd0",
+         arm64_linux:  "58fb2875f016ee1e9fb1ae502234e53d661207950729bd7716a77f4b330f920b",
          x86_64_linux: "aa07e59fc43f26625d2e8ec91c0d979675da51cf1e6b7b42aa5a58e0a249f7ef"
 
   on_macos do
