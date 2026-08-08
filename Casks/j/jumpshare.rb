@@ -1,6 +1,6 @@
 cask "jumpshare" do
-  version "3.5.1"
-  sha256 "0623faffbc4ad57fc879b3271e0d1621671d8531d6a72bca7569f072cb5463d2"
+  version "3.5.2"
+  sha256 "2f2cf7be6124cdeba2de200750d23b2648b456ecf40ea5e77c843dca1bf8949f"
 
   url "https://d21hi1or3tbtjm.cloudfront.net/desktop/mac/updates/Jumpshare-#{version}.tar.bz2",
       verified: "d21hi1or3tbtjm.cloudfront.net/desktop/mac/updates/"
@@ -17,6 +17,8 @@ cask "jumpshare" do
   depends_on macos: :big_sur
 
   app "Jumpshare.app"
+
+  uninstall launchctl: "com.jumpshare.JumpshareLoginHelper"
 
   zap trash: [
     "~/Library/Application Scripts/com.jumpshare.JumpshareLoginHelper",
