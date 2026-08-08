@@ -1,6 +1,6 @@
 cask "captin" do
-  version "1.3.1"
-  sha256 :no_check
+  version "2.0.1"
+  sha256 "a56ee238b94f21d99c250ca95d11aba41f270ac68d6e888a4bff6628a361890a"
 
   url "https://raw.githubusercontent.com/cool8jay/public/master/captin/Captin.zip",
       verified: "raw.githubusercontent.com/cool8jay/public/master/captin/"
@@ -8,9 +8,6 @@ cask "captin" do
   desc "Tool to show caps lock status"
   # https://captin.mystrikingly.com/ got redirected to some phishing site
   homepage "https://github.com/cool8jay/public"
-
-  deprecate! date: "2025-11-30", because: :discontinued
-  disable! date: "2026-11-30", because: :discontinued
 
   depends_on :macos
 
