@@ -8,10 +8,14 @@ cask "amadeus-pro" do
   desc "Multi-purpose audio recorder, editor and converter"
   homepage "https://www.hairersoft.com/pro.html"
 
+  # The homepage is inaccessible from CI and autobump environments,
+  # so we have to skip it in those instances for now.
   livecheck do
     url :homepage
     regex(/Download\s*Amadeus\s*Pro\s*v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: "Livecheck is unreachable in autobump environment"
 
   depends_on :macos
 
