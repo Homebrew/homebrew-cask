@@ -7,6 +7,8 @@ cask "font-golos-ui" do
   name "Golos UI"
   homepage "https://www.paratype.com/fonts/pt/golos-ui"
 
+  disable! date: "2026-08-07", because: "requires a login to download"
+
   font "PT/PT/Golos-UI/golos-ui_vf.ttf"
 
   # No zap stanza required
