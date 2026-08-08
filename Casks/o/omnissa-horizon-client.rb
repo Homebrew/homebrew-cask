@@ -34,7 +34,7 @@ cask "omnissa-horizon-client" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   pkg "Omnissa Horizon Client.pkg"
 
@@ -48,6 +48,7 @@ cask "omnissa-horizon-client" do
             quit:      "com.omnissa.horizonapp",
             pkgutil:   [
               "com.omnissa.horizon.client.mac",
+              "com.omnissa.html5videoplayer",
               "com.ws1.Deem",
               "com.ws1.Deem.InstallerHelper",
               "com.ws1.EndpointTelemetryService",
