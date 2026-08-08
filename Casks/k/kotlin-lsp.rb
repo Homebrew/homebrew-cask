@@ -19,7 +19,7 @@ cask "kotlin-lsp" do
     strategy :github_latest
   end
 
-  binary "kotlin-server-#{version}/kotlin-lsp.sh", target: "kotlin-lsp"
+  binary "kotlin-server-#{version}/bin/intellij-server", target: "kotlin-lsp"
 
   # No zap stanza required
 end
