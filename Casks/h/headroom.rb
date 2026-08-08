@@ -1,6 +1,6 @@
 cask "headroom" do
-  version "0.7.5"
-  sha256 "6c31a0511430e2a7b235ca290c4ada1b7de2f8051ccad35c84bc18ecb46abad2"
+  version "0.7.6"
+  sha256 "750b50900964cc3817c6fc9b828b768daba3003f138d9668cd3aa6452a4215e1"
 
   url "https://github.com/gglucass/headroom-desktop/releases/download/v#{version}/Headroom_#{version}_mac.dmg",
       verified: "github.com/gglucass/headroom-desktop/"
@@ -23,12 +23,18 @@ cask "headroom" do
             quit:      "com.extraheadroom.headroom"
 
   zap trash: [
+    "~/.cache/huggingface/hub/.locks/models--chopratejas--kompress-v2-base",
+    "~/.cache/huggingface/hub/models--chopratejas--kompress-v2-base",
     "~/.headroom",
     "~/Library/Application Support/Headroom",
     "~/Library/Caches/com.extraheadroom.headroom",
+    "~/Library/HTTPStorages/com.extraheadroom.headroom",
+    "~/Library/HTTPStorages/com.extraheadroom.headroom.binarycookies",
     "~/Library/LaunchAgents/com.extraheadroom.headroom.plist",
     "~/Library/LaunchAgents/Headroom.plist",
+    "~/Library/Logs/Headroom",
     "~/Library/Preferences/com.extraheadroom.headroom.plist",
     "~/Library/Saved Application State/com.extraheadroom.headroom.savedState",
+    "~/Library/WebKit/com.extraheadroom.headroom",
   ]
 end
