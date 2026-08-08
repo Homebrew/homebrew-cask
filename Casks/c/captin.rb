@@ -9,7 +9,7 @@ cask "captin" do
   # https://captin.mystrikingly.com/ got redirected to some phishing site
   homepage "https://github.com/cool8jay/public"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Captin.app"
 
