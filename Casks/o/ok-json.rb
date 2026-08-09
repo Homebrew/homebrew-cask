@@ -1,8 +1,8 @@
 cask "ok-json" do
-  version "2.10.2"
+  version "3.0"
   sha256 :no_check
 
-  url "https://okjson.app/download/okjson-latest.zip"
+  url "https://okjson.app/download/okjson-latest.dmg"
   name "OK JSON"
   desc "Scriptable JSON formatter and editor"
   homepage "https://okjson.app/"
@@ -13,7 +13,7 @@ cask "ok-json" do
   end
 
   auto_updates true
-  depends_on macos: :ventura
+  depends_on macos: :sequoia
 
   app "OK JSON.app"
 
