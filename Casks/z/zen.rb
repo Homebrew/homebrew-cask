@@ -10,7 +10,7 @@ cask "zen" do
     conflicts_with cask: "zen-privacy"
 
     app "Zen.app"
-    binary "#{appdir}/Zen.app/Contents/MacOS/zen"
+    command_wrapper "zen", executable: "#{appdir}/Zen.app/Contents/MacOS/zen"
 
     uninstall quit: "app.zen-browser.zen"
 
