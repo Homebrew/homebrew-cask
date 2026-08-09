@@ -19,10 +19,7 @@ cask "mplab-xc8" do
     executable: "xc8-v#{version}-full-install-macos-x64-installer.app/Contents/MacOS/installbuilder.sh",
     args:       [
       "--mode", "unattended",
-      "--unattendedmodeui", "none",
       "--ModifyAll", "0",
-      "--netservername", '""',
-      "--LicenseType", "WorkstationMode",
       "--prefix", staged_path.to_s
     ],
     input:      ["y"],
