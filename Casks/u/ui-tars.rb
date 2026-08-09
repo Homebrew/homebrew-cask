@@ -12,7 +12,19 @@ cask "ui-tars" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    regex(/^UI[._-]TARS[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   auto_updates true
