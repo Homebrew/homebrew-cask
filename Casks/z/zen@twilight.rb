@@ -7,7 +7,7 @@ cask "zen@twilight" do
 
   on_macos do
     app "Twilight.app"
-    binary "#{appdir}/Twilight.app/Contents/MacOS/zen", target: "zen-twilight"
+    command_wrapper "zen-twilight", executable: "#{appdir}/Twilight.app/Contents/MacOS/zen"
 
     uninstall quit: "app.zen-browser.zen"
 
