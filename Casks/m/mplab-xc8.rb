@@ -29,7 +29,6 @@ cask "mplab-xc8" do
   binary "#{staged_path}/bin/xc8-ar"
   binary "#{staged_path}/bin/xc8-cc"
   binary "#{staged_path}/bin/xc8-clangd"
-  binary "#{staged_path}/bin/xclm"
 
   postflight_steps do
     set_ownership "."
