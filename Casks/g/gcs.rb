@@ -1,16 +1,9 @@
 cask "gcs" do
   arch arm: "arm64", intel: "amd64"
 
-  version "5.44.0"
-  sha256 arm:   "2732282202e0da1d54c85fe504fece3974bbf8e1095210b3a8bd8c9637874233",
-         intel: "cd7c1d4c5a7265e073c9ac729fb24357b9cf3f2537ca0286b884b34e6b62ae6b"
-
-  on_arm do
-    depends_on macos: :big_sur
-  end
-  on_intel do
-    depends_on macos: :catalina
-  end
+  version "5.45.0"
+  sha256 arm:   "1d369c91a3865f8ddc5b71a8069f4471930704c4294b0b80f09e4a27d78b9646",
+         intel: "c8e249d44426378d768c4292b61c29fd5bfb17519d042a28ca1c3f3924e9e017"
 
   url "https://github.com/richardwilkes/gcs/releases/download/v#{version}/gcs-#{version}-macos-#{arch}.dmg",
       verified: "github.com/richardwilkes/gcs/"
@@ -18,12 +11,14 @@ cask "gcs" do
   desc "Character sheet editor for the GURPS Fourth Edition roleplaying game"
   homepage "https://gurpscharactersheet.com/"
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "GCS.app"
 
   zap trash: [
     "~/GCS",
+    "~/Library/Application Support/com.trollworks.gcs",
+    "~/Library/Logs/com.trollworks.gcs",
     "~/Library/Logs/gcs.log",
     "~/Library/Preferences/com.trollworks.gcs.plist",
     "~/Library/Preferences/gcs.json",
