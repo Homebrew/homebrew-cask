@@ -1,8 +1,10 @@
 cask "emailchemy" do
+  arch arm: "-AppleSilicon"
+
   version "15.0"
   sha256 :no_check
 
-  url "https://wksdownload.s3.amazonaws.com/emailchemy/Emailchemy-Mac.dmg",
+  url "https://wksdownload.s3.amazonaws.com/emailchemy/Emailchemy-Mac#{arch}.dmg",
       verified: "wksdownload.s3.amazonaws.com/emailchemy/"
   name "Emailchemy"
   desc "Email migration, conversion and archival software"
@@ -18,8 +20,4 @@ cask "emailchemy" do
   app "Emailchemy.app"
 
   zap trash: "~/Library/Preferences/com.weirdkid.es.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end
