@@ -1,6 +1,6 @@
 cask "batteries" do
-  version "3.0.0"
-  sha256 "e6b0c797f9fe6c804b2d058563e47c02206c65eee5ae74f21166b8f105612f74"
+  version "3.0.2"
+  sha256 "33f1cf5e6af2087f3720e80239f78f09d31734d11d3d60b54a41a0dbf566b9e2"
 
   url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg",
       verified: "github.com/ronyfadel/BatteriesReleases/"
@@ -17,12 +17,18 @@ cask "batteries" do
 
   app "Batteries.app"
 
+  uninstall launchctl: "io.fadel.Batteries.Helper"
+
   zap trash: [
     "~/Library/Application Scripts/io.fadel.Batteries.BatteriesTodayExtension",
+    "~/Library/Application Scripts/io.fadel.Batteries.Widget",
+    "~/Library/Application Scripts/KUC6B4JW25.io.fadel.Batteries",
     "~/Library/Caches/io.fadel.Batteries",
     "~/Library/Caches/io.fadel.Batteries.Helper",
     "~/Library/Containers/io.fadel.Batteries.BatteriesTodayExtension",
+    "~/Library/Containers/io.fadel.Batteries.Widget",
     "~/Library/Group Containers/KUC6B4JW25.io.fadel.Batteries",
+    "~/Library/HTTPStorages/io.fadel.Batteries*",
     "~/Library/Preferences/io.fadel.Batteries.Helper.plist",
     "~/Library/Preferences/io.fadel.Batteries.plist",
   ]
