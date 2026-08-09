@@ -14,9 +14,11 @@ cask "wins" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "Wins.app"
+
+  uninstall launchctl: "cool.wins.WinsHelper"
 
   zap trash: [
     "~/Library/Application Scripts/cool.wins.WinsHelper",
