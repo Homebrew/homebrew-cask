@@ -18,6 +18,8 @@ cask "kstars" do
 
   app "kstars.app"
 
+  uninstall launchctl: "org.freedesktop.dbus-kstars"
+
   zap trash: [
     "~/Library/Application Support/kstars",
     "~/Library/Caches/kstars",
