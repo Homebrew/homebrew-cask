@@ -1,11 +1,16 @@
 cask "neon-vision-editor" do
-  version "1.2.5"
-  sha256 "24755972145d1fc4a299fd02788da878265a2c64712cf9cc2c51bcc4505685ff"
+  version "1.2.6"
+  sha256 "cd48e312cc27c36fd0b108b84c18c4b8008cd940b9e2f891c3b827f4cd286561"
 
   url "https://github.com/h3pdesign/Neon-Vision-Editor/releases/download/v#{version}/Neon.Vision.Editor.app.zip"
   name "Neon Vision Editor"
   desc "Native code and text editor"
   homepage "https://github.com/h3pdesign/Neon-Vision-Editor"
+
+  livecheck do
+    url "https://github.com/h3pdesign/Neon-Vision-Editor/releases"
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: :sonoma
