@@ -1,6 +1,8 @@
 cask "zen" do
   arch arm: "aarch64", intel: "x86_64"
-  os macos: ".macos-universal.dmg", linux: "-#{arch}.AppImage"
+  os macos: ".macos-universal", linux: "-#{arch}"
+  livecheck_os = on_system_conditional macos: "Darwin", linux: "Linux"
+  url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   version "1.21.13b"
 
@@ -33,13 +35,13 @@ cask "zen" do
     app_image "zen-#{arch}.AppImage", target: "Zen.AppImage"
   end
 
-  url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen#{os}"
+  url "https://github.com/zen-browser/desktop/releases/download/#{version}/zen#{os}.#{url_end}"
   name "Zen Browser"
   desc "Gecko based web browser"
   homepage "https://zen-browser.app/"
 
   livecheck do
-    url "https://updates.zen-browser.app/updates/browser/Darwin_aarch64-gcc3/release/update.xml"
+    url "https://updates.zen-browser.app/updates/browser/#{livecheck_os}_#{arch}-gcc3/release/update.xml"
     strategy :xml do |xml|
       xml.get_elements("//update").map { |item| item.attributes["appVersion"] }
     end
