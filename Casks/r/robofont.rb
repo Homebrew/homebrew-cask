@@ -9,7 +9,7 @@ cask "robofont" do
   homepage "https://robofont.com/"
 
   livecheck do
-    url "https://doc.robofont.com/appcast.xml"
+    url "https://robofont.com/appcast.xml"
     regex(/(?:buil[dt]\s+)?v?(\d+(?:\.\d+)*)/i)
     strategy :sparkle do |item, regex|
       "#{item.short_version},#{item.version[regex, 1]}"
