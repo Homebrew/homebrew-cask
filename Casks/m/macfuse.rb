@@ -22,7 +22,7 @@ cask "macfuse" do
   pkg "Extras/macFUSE #{version}.pkg"
 
   postflight_steps do
-    set_ownership ["/usr/local/include", "/usr/local/lib"]
+    set_ownership ["/usr/local/include", "/usr/local/lib"], recursive: false
   end
 
   uninstall launchctl: [
