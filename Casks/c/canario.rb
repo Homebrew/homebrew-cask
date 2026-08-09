@@ -4,7 +4,7 @@ cask "canario" do
 
   url "https://github.com/canarioterm/releases/releases/download/v#{version}/Canario.dmg"
   name "Canario"
-  desc "Terminal that thinks like a browser"
+  desc "Terminal emulator"
   homepage "https://rioterm.com/canario"
 
   livecheck do
