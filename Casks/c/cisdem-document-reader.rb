@@ -1,5 +1,5 @@
 cask "cisdem-document-reader" do
-  version "5.5.1"
+  version "6.0.0"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-documentreader.dmg"
@@ -8,8 +8,8 @@ cask "cisdem-document-reader" do
   homepage "https://www.cisdem.com/document-reader-mac.html"
 
   livecheck do
-    url "https://www.cisdem.com/js/notes/document-reader-mac.js"
-    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
+    url "https://www.cisdem.com/document-reader-mac/release-notes.html"
+    regex(/(\d+(?:\.\d+)+)\(\d+(?:-\d+)+\)/i)
   end
 
   depends_on :macos
@@ -24,8 +24,4 @@ cask "cisdem-document-reader" do
     "~/Library/Preferences/com.cisdem.documentreader.plist",
     "~/Library/Saved Application State/com.cisdem.documentreader.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
