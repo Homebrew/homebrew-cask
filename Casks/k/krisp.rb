@@ -2,9 +2,9 @@ cask "krisp" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "64"
 
-  version "3.14.6"
-  sha256 arm:   "e8f321838c6627462974441e3d6a79c2f8bb473e29cf68824227f3b4a215d774",
-         intel: "87e1242269974caa184110376c149fb89392eb6cefde2557a1ac9962d6424d29"
+  version "3.15.4"
+  sha256 arm:   "adb7b9368be5de58cb270ef1cb13de6355da93b8bb02de1a602960c82cc8f8fa",
+         intel: "deee7f29210a1f1ddc303e9014cb30df2fba44de7a3bd6039d8f361188364409"
 
   url "https://cdn.krisp.ai/mp/mn/#{version.major_minor}/mac/Krisp_#{version}_#{arch}.pkg"
   name "Krisp"
@@ -20,7 +20,7 @@ cask "krisp" do
   auto_updates true
   depends_on :macos
 
-  pkg "krisp_#{version}_#{arch}.pkg"
+  pkg "Krisp_#{version}_#{arch}.pkg"
 
   uninstall launchctl: [
               "ai.krisp.krispMac*",
