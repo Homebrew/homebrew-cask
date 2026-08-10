@@ -4,7 +4,7 @@ cask "ok-json" do
 
   url "https://okjson.app/download/okjson-latest.dmg"
   name "OK JSON"
-  desc "Scriptable JSON formatter and editor"
+  desc "JSON Viewer for macOS"
   homepage "https://okjson.app/"
 
   livecheck do
@@ -20,5 +20,6 @@ cask "ok-json" do
   zap trash: [
     "~/Library/Containers/net.shinystone.OKJSON",
     "~/Library/Group Containers/group.net.shinystone.OKJSON",
+    "~/Library/Group Containers/S8MRM84X6F.group.net.shinystone.OKJSON"
   ]
 end
