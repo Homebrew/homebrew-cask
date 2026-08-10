@@ -12,6 +12,8 @@ cask "netxms-console" do
     regex(/href=.*?nxmc[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
   depends_on macos: :big_sur
 
   app "NetXMS #{version.major_minor}.app"
