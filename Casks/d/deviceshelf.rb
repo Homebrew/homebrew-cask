@@ -1,6 +1,6 @@
 cask "deviceshelf" do
-  version "1.7.9"
-  sha256 "a5d7f475d984371ff4696a60541d66296226d988e4a61c4e5d554cc01e3cc2b8"
+  version "1.9.4"
+  sha256 "8B591AF494B03D8496BF41C96827AE12139744C83C4D9B855B211E7E2E0C5C00"
 
   url "https://downloads.deviceshelf.app/DeviceShelf-#{version}.dmg",
       verified: "downloads.deviceshelf.app/"
