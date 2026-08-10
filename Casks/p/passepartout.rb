@@ -9,7 +9,7 @@ cask "passepartout" do
       verified: "github.com/partout-io/passepartout/"
   name "Passepartout"
   desc "OpenVPN and WireGuard client"
-  homepage "https://partout-io/passepartout/"
+  homepage "https://partout.io/passepartout/"
 
   livecheck do
     url :url
