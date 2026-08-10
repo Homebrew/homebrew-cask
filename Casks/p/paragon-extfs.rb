@@ -17,9 +17,12 @@ cask "paragon-extfs" do
   conflicts_with cask: "paragon-extfs@11"
   depends_on :macos
 
-  installer manual: "FSInstaller.app"
+  pkg "FSInstaller.app/Contents/Resources/product.pkg"
 
-  uninstall launchctl: "com.paragon-software.extfs*",
+  uninstall launchctl: [
+              "com.paragon-software.extfs*",
+              "com.paragon-software.extfsd",
+            ],
             quit:      "com.paragon-software.extfs*",
             signal:    [
               ["KILL", "com.paragon-software.extfs.FSMenuApp"],
