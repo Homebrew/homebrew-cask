@@ -1,9 +1,9 @@
 cask "crosspaste" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "2.1.6.2390"
-  sha256 arm:   "a5a31634e54b9e009c86ce3a2bcd5da3a2c36b8ec6b04ea4b0229115bc1f30e8",
-         intel: "d7115466493bdd6dfebc37624676e93279941a42f9635737ce6cff5f2625efa4"
+  version "2.1.7.2461"
+  sha256 arm:   "6b2f5af679370eb0ec2f64cabbf350297a930efd0c276409e10417381c3b4d71",
+         intel: "e4ae5b70c6254704a69294811ae00bf81c2bece9e96609780518b9dd8baf8d3d"
 
   url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-mac-#{arch}.zip",
       verified: "github.com/CrossPaste/crosspaste-desktop/"
@@ -19,6 +19,8 @@ cask "crosspaste" do
   depends_on macos: :sonoma
 
   app "CrossPaste.app"
+
+  uninstall launchctl: "com.crosspaste.mac"
 
   zap trash: [
     "~/Library/Application Support/CrossPaste",
