@@ -4,10 +4,10 @@ cask "zen" do
   livecheck_os = on_system_conditional macos: "Darwin", linux: "Linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "1.21.12b"
+  version "1.21.13b"
 
   on_macos do
-    sha256 "dba6a9674d3199ac9b1ea8753c5f08486fe91de36ff113f7339f34423ffe5ea0"
+    sha256 "6ee7eb09ae3f92ef56d14340acc7948b45d76806d232a54de23a8cd348361b09"
 
     conflicts_with cask: "zen-privacy"
 
@@ -29,8 +29,8 @@ cask "zen" do
         rmdir: "~/Library/Caches/Mozilla"
   end
   on_linux do
-    sha256 arm64_linux:  "390e64fc54a0ee4783052dc4cd099bc8c3835c99af60a98e0c08292c7725c6bd",
-           x86_64_linux: "401a83b89f3d889a2c230b5c350b733a453410401bffbd09f16e421013a5d5f3"
+    sha256 arm64_linux:  "ce58d66ce836356cc911b3ce0d5dbd8438b491f12b7ad9d8d63326abc4ef305e",
+           x86_64_linux: "a70f0e92de77c43c9f86ae5210849bf2c8c86dee571eb43957d87e3b4ffbdb9d"
 
     app_image "zen-#{arch}.AppImage", target: "Zen.AppImage"
   end
