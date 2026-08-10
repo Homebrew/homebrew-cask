@@ -20,6 +20,8 @@ cask "crosspaste" do
 
   app "CrossPaste.app"
 
+  uninstall launchctl: "com.crosspaste.mac"
+
   zap trash: [
     "~/Library/Application Support/CrossPaste",
     "~/Library/HTTPStorages/com.crosspaste.mac",
