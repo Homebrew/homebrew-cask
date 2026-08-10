@@ -1,6 +1,6 @@
 cask "mailmaster" do
-  version "5.6.4.1495"
-  sha256 "ecd420f2c8004ec2bf965fff8304d755047f1d39dc6a74578a90e43cff865e9b"
+  version "5.6.4.1496"
+  sha256 "193023064fc921baa97680084f510a4571d9e1c2ac11b0b247318fab2c4afe9b"
 
   url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
       verified:   "res.126.net/dl/client/macmail/dashi/",
