@@ -22,8 +22,4 @@ cask "massreplaceit" do
     "~/Library/Preferences/com.hexmonkey.massreplaceit.plist",
     "~/Library/Saved Application State/com.hexmonkey.massreplaceit.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
