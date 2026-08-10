@@ -4,7 +4,7 @@ cask "ok-json" do
 
   url "https://okjson.app/download/okjson-latest.dmg"
   name "OK JSON"
-  desc "JSON Viewer for macOS"
+  desc "Scriptable JSON formatter and editor"
   homepage "https://okjson.app/"
 
   livecheck do
