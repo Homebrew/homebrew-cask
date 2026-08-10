@@ -23,8 +23,6 @@ cask "headroom" do
             quit:      "com.extraheadroom.headroom"
 
   zap trash: [
-    "~/.cache/huggingface/hub/.locks/models--chopratejas--kompress-v2-base",
-    "~/.cache/huggingface/hub/models--chopratejas--kompress-v2-base",
     "~/.headroom",
     "~/Library/Application Support/Headroom",
     "~/Library/Caches/com.extraheadroom.headroom",
