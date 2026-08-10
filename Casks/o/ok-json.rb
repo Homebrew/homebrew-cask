@@ -20,5 +20,6 @@ cask "ok-json" do
   zap trash: [
     "~/Library/Containers/net.shinystone.OKJSON",
     "~/Library/Group Containers/group.net.shinystone.OKJSON",
+    "~/Library/Group Containers/S8MRM84X6F.group.net.shinystone.OKJSON",
   ]
 end
