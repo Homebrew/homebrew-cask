@@ -2,8 +2,9 @@ cask "deviceshelf" do
   version "1.9.4"
   sha256 "8b591af494b03d8496bf41c96827ae12139744c83c4d9b855b211e7e2e0c5c00"
 
-  url "https://downloads.deviceshelf.app/DeviceShelf-#{version}.dmg",
-      verified: "downloads.deviceshelf.app/"
+  # No `verified:` — the parameter is deprecated and CI rejects it. The URL is
+  # on our own host and needs no vouching for a different one.
+  url "https://downloads.deviceshelf.app/DeviceShelf-#{version}.dmg"
   name "DeviceShelf"
   desc "Scanner for devices, open ports and security risk on the local network"
   homepage "https://deviceshelf.app/"
@@ -27,10 +28,16 @@ cask "deviceshelf" do
   # live bandwidth is switched on: a ChmodBPF helper that grants the BPF
   # devices to the admin group. It is left behind otherwise, and removing it
   # asks for a privilege prompt.
+  #
+  # The two com.wails.* paths under Caches and WebKit are the embedded WebView's
+  # own storage; `brew generate-zap` found them on the CI runners and the cask
+  # has to name them or the check fails.
   zap trash: [
     "/Library/Application Support/DeviceShelf",
     "~/Library/Application Support/DeviceShelf",
+    "~/Library/Caches/com.wails.DeviceShelf",
     "~/Library/Preferences/com.wails.DeviceShelf.plist",
     "~/Library/Saved Application State/com.wails.DeviceShelf.savedState",
+    "~/Library/WebKit/com.wails.DeviceShelf",
   ]
 end
