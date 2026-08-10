@@ -2,14 +2,14 @@ cask "mend" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "26.7.1-hf1"
+  version "26.7.2"
 
   on_macos do
-    sha256 arm:   "27db5c5310c3b7ba40dd8d203c14b9b897a2d3899df13c7bc6422dea14ba3ae8",
-           intel: "b8bf81976ee616ea6ad68dd131009d7b6a78f884f5a2fc9ec5677a0846883a54"
+    sha256 arm:   "bc226a7eafc155330b8c46bb6b6d6b16d54dcd252b53a147076a420a4bd721e4",
+           intel: "301fcd3ec90cb8536470b4d9492cf730b9e233105a8f402e92b237a93a691cdf"
   end
   on_linux do
-    sha256 "6af968b22a8f4e975ef50138b319156eda6ce0a41f21705bbc65ed0ccc645d0f"
+    sha256 "de339b2a2c6ed31836c6e32ffce7bb5273856d79cadff98c01142c304660e77c"
 
     depends_on arch: :x86_64
   end
