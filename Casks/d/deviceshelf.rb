@@ -1,6 +1,6 @@
 cask "deviceshelf" do
-  version "1.9.5"
-  sha256 "0586ad7b1101dc8a9b58b0b1bf526673a02b5f53839f70898e7e823c0af0933f"
+  version "1.9.6"
+  sha256 "46a49b97459c2b6c47d1c27e36eac9a3cada76717daa3e5dc26699e93418210a"
 
   # No `verified:` — the parameter is deprecated and CI rejects it. The URL is
   # on our own host and needs no vouching for a different one.
