@@ -1,24 +1,32 @@
 cask "dingtalk" do
-  version "8.0.2,48936485"
-  sha256 "d35a0e88d92f9398a76959419864b6399a014dbe13c8a286ad4af2939d3b40b7"
+  version "8.5.0,57245204"
+  sha256 "04c0ebd1b1f408ad9841b452a78650299d85d4f4db5e06139c24064e4cbe5c98"
 
-  url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/M1-Beta/DingTalk_v#{version.csv.first}_#{version.csv.second}_universal.dmg"
+  url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version.csv.first}-Installer_#{version.csv.second}_universal.dmg"
   name "DingTalk"
   name "钉钉"
   desc "Teamwork app by Alibaba Group"
   homepage "https://www.dingtalk.com/"
 
   livecheck do
-    url "https://im.dingtalk.com/manifest/appcast_gray_release.xml"
-    strategy :sparkle
+    url "https://www.dingtalk.com/mac/d/"
+    regex(/DingTalk[._-]v?(\d+(?:\.\d+)+)[._-]installer[._-](\d+)[._-]universal\.dmg/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   auto_updates true
   depends_on :macos
 
-  app "DingTalk.app"
+  pkg "DingTalkInstaller.pkg"
 
-  uninstall quit: "com.alibaba.DingTalkMac"
+  uninstall quit:    "com.alibaba.DingTalkMac",
+            pkgutil: "com.alibaba.DingTalkInstaller.app",
+            delete:  "/Applications/DingTalk.app"
 
   zap trash: [
     "~/Library/Application Support/DingTalkMac",
