@@ -1,6 +1,6 @@
 cask "synology-chat" do
-  version "1.2.3,0232"
-  sha256 "7286331883107347ff675fe6cb76c3e2233a1af75f0d2903391a3c3da97dedb9"
+  version "1.2.4,0235"
+  sha256 "a040f79c5b65fad84b271f21be5fdc4805afc46d391ebca790e9f906fc710f89"
 
   url "https://global.download.synology.com/download/Utility/ChatClient/#{version.tr(",", "-")}/Mac/Installer/Synology%20Chat%20Client-#{version.tr(",", "-")}.dmg"
   name "Synology Chat"
@@ -19,8 +19,4 @@ cask "synology-chat" do
   app "Synology Chat.app"
 
   zap trash: "~/Library/Application Support/Synology Chat"
-
-  caveats do
-    requires_rosetta
-  end
 end
