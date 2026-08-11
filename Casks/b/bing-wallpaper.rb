@@ -1,6 +1,6 @@
 cask "bing-wallpaper" do
-  version "1.1.10,45e5bd06-b77e-48d7-a4f2-ae06e39dd0b4"
-  sha256 "44a0000f1e18a0be1daaa4f1b14eedc2d2e10136a8b8a56eed88b33ce699fbe3"
+  version "1.1.11,fac946bc-73a0-4cba-bee9-fe223d0304e0"
+  sha256 "6470d9f89843ed7e04c8f6c14fb323d6d18099d9a2605b4651eca604ae055020"
 
   url "https://download.microsoft.com/download/#{version.csv.second}/Installer/#{version.csv.first}/var1/MW011/2/BingWallpaper.pkg"
   name "Bing Wallpaper"
