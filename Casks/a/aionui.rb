@@ -8,11 +8,11 @@ cask "aionui" do
   url "https://static.aionui.com/releases/#{version}/AionUi-#{version}-mac-#{arch}.dmg"
   name "AionUi"
   desc "Unified GUI for command-line AI agents"
-  homepage "https://github.com/iOfficeAI/AionUi"
+  homepage "https://www.aionui.com/"
 
   livecheck do
-    url "https://github.com/iOfficeAI/AionUi"
-    strategy :github_latest
+    url "https://static.aionui.com/releases/latest-mac.yml"
+    regex(/^version:\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
