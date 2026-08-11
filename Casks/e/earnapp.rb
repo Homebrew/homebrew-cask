@@ -1,6 +1,6 @@
 cask "earnapp" do
-  version "1.605.415"
-  sha256 "d1cdeec01a32a5ef3342ee67c42276af143b8b2a58e42211c476f515d0562f75"
+  version "1.656.948"
+  sha256 "32031a19c18b4a6f1a0b2276f0a91d1c86e83c02eb526118460bc18e7f41be03"
 
   url "https://cdn.earnapp.com/static/earnapp-macos-#{version}.pkg"
   name "EarnApp"
