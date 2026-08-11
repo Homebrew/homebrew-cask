@@ -2,11 +2,11 @@ cask "gcloud-cli" do
   arch arm: "arm", intel: "x86_64"
   os macos: "darwin", linux: "linux"
 
-  version "579.0.0"
-  sha256 arm:          "c43232ba6cedfea699ead175273e6018b411390ed028a5e3346d858a76acf7d4",
-         intel:        "8869810649bde738381f1574c081498e19213b83e93753fc3d216393808b6862",
-         arm64_linux:  "edc914b75f8c5d50e1efc78b849d6fa636c4412346784c148c4130f5dc3eba00",
-         x86_64_linux: "a9a7fbe51cda37cf6142b1bbcff12227550e60a6c67e8cf84644fb301371c4de"
+  version "580.0.0"
+  sha256 arm:          "aa10ddc51b7813c3b4904af15e19e76a5ea6f7b65e36fc4d2989f5942203238d",
+         intel:        "bcee90113f41fded6be607e6e06e5163026e67b49c5092b5aaffb39a95bbb2c6",
+         arm64_linux:  "a02b7c478f94c070d7cb1ec1c595d3a0c9ae84601c17d93946b89a33d3155d71",
+         x86_64_linux: "e580c04b45dfa2e537b8dc0cf7c828e46a65bc77ef61de69161e1f3a124d7480"
 
   google_cloud_sdk_root = "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
 
