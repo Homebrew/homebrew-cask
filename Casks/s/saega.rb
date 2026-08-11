@@ -18,7 +18,7 @@ cask "saega" do
   end
 
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
   depends_on arch:  :arm64
 
   app "Saega.app"
