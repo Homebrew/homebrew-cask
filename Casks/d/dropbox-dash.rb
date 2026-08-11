@@ -18,7 +18,12 @@ cask "dropbox-dash" do
 
   app "Dropbox Dash.app"
 
-  uninstall quit: "io.hypertools.Dropbox-Dash"
+  uninstall launchctl: [
+              "com.dropbox.dropboxmacupdate.agent",
+              "com.dropbox.dropboxmacupdate.xpcservice",
+              "com.dropbox.DropboxUpdater.wake",
+            ],
+            quit:      "io.hypertools.Dropbox-Dash"
 
   zap trash: [
     "~/Library/Application Support/Dropbox Dash",
