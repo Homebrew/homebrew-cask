@@ -5,7 +5,7 @@ cask "cisco-jabber" do
   url "https://binaries.webex.com/jabberclientmac/#{version}/Install_Cisco-Jabber-Mac.pkg"
   name "Cisco Jabber"
   desc "Jabber client from Cisco"
-  homepage "https://www.webex.com/downloads/jabber.html"
+  homepage "https://www.webex.com/downloads/jabber.html", browsed: "2026-08-05"
 
   livecheck do
     url :homepage, user_agent: :browser
