@@ -15,7 +15,7 @@ cask "4k-image-compressor" do
     regex(%r{href=.*?/4kimagecompressor[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "4K Image Compressor.app"
 
