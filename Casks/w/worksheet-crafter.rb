@@ -1,6 +1,6 @@
 cask "worksheet-crafter" do
-  version "2026.2.11"
-  sha256 "c931f890d554c312ea985eccc51bd51e380c2a82d8a3dfb24405f9153dcd0b08"
+  version "2026.2.5"
+  sha256 "591681374f78f55e6c9f1fc258209eebab1a1a0f0d7044588dd7209ae70056f2"
 
   url "https://website.cdn.getschoolcraft.com/downloads/worksheet-crafter_#{version}.pkg",
       verified: "website.cdn.getschoolcraft.com/downloads/"
