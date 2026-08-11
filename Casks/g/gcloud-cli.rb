@@ -75,13 +75,15 @@ cask "gcloud-cli" do
                                                                         "python@3.14/libexec/bin/python",
                                                  }
       end
-      run "share/google-cloud-sdk/bin/gcloud", base: :homebrew_prefix,
-                                               args: ["config", "virtualenv", "create", "--python-to-use",
-                                                      "{{HOMEBREW_PREFIX}}/opt/python@3.14/libexec/bin/python"],
-                                               env:  {
+      run "share/google-cloud-sdk/bin/gcloud", base:           :homebrew_prefix,
+                                               args:           ["config", "virtualenv", "create", "--python-to-use",
+                                                                "{{HOMEBREW_PREFIX}}/opt/" \
+                                                                "python@3.14/libexec/bin/python"],
+                                               env:            {
                                                  "CLOUDSDK_PYTHON" => "{{HOMEBREW_PREFIX}}/opt/" \
                                                                       "python@3.14/libexec/bin/python",
-                                               }
+                                               },
+                                               network_access: true
       run "share/google-cloud-sdk/bin/gcloud", base: :homebrew_prefix,
                                                args: ["config", "virtualenv", "enable"],
                                                env:  {
