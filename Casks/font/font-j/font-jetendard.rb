@@ -4,13 +4,7 @@ cask "font-jetendard" do
 
   url "https://github.com/kuskhan/jetendard/releases/download/v#{version}/Jetendard-TTF.zip"
   name "Jetendard"
-  desc "Monospaced programming font combining JetBrains Mono Nerd Font and Pretendard"
   homepage "https://github.com/kuskhan/jetendard"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   font "ttf/Jetendard-Bold.ttf"
   font "ttf/Jetendard-BoldItalic.ttf"
@@ -25,6 +19,7 @@ cask "font-jetendard" do
   font "ttf/Jetendard-MediumItalic.ttf"
   font "ttf/Jetendard-Regular.ttf"
   font "ttf/Jetendard-SemiBold.ttf"
+  font "ttf/Jetendard-SemiBoldItalic.ttf"
   font "ttf/Jetendard-Thin.ttf"
   font "ttf/Jetendard-ThinItalic.ttf"
 
