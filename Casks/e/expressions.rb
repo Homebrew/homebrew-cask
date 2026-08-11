@@ -12,7 +12,7 @@ cask "expressions" do
     regex(%r{href=.*?/Expressions-(\d+(?:\.\d+)*)\.zip}i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Expressions.app"
 
