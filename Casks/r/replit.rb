@@ -1,5 +1,5 @@
 cask "replit" do
-  version "1.1.6"
+  version "1.1.7"
   sha256 :no_check
 
   url "https://desktop.replit.com/download/mac"
