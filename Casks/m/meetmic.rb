@@ -1,6 +1,6 @@
 cask "meetmic" do
-  version "1.32.380"
-  sha256 "cbd88a89758de811620805d8618d0cacc303281c2e27f88e3aa199df8fb32abd"
+  version "1.32.384"
+  sha256 "2f8dbca6a4089623d97ffc71bcf12b14dc07c62bccd0c140e74acd03683cec2a"
 
   url "https://meetmicapp.s3.us-west-002.backblazeb2.com/MeetMic-#{version}.zip",
       verified: "meetmicapp.s3.us-west-002.backblazeb2.com/"
@@ -20,7 +20,7 @@ cask "meetmic" do
   depends_on macos: :sequoia
   depends_on arch: :arm64
 
-  app "MeetMic developer-id/MeetMic.app"
+  app "MeetMic.app"
 
   zap trash: [
     "~/Library/Application Scripts/ltd.iwt.QuickWhisper",
