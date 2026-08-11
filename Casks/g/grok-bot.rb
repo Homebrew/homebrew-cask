@@ -1,29 +1,25 @@
 cask "grok-bot" do
-  version "0.16.0,076e9d4bf42abbfa576702aea18ddbc49d9d3ab5"
-  sha256 "f8aa79866a8fd5e53a6e852248eab819cf186d29312497d8b0a93e302a8e5f7a"
+  arch arm: "arm64", intel: "x64"
+  arch_suffix = on_arch_conditional intel: "_x64"
 
-  url "https://downloads.cursor.com/sand/stable/#{version.csv.second}/darwin/arm64/Cursor-darwin-arm64.zip"
+  version "0.16.0"
+  sha256 arm:   "6dae3cc5259eecd749b28e3622fe9f0333d7aacb32dd71c03dc7fac658617cd4",
+         intel: "ec7950bff3b22f0e35da1d2cb4f117a7e971f3a323679aba1ed8190584197f15"
+
+  url "https://downloads.cursor.com/sand/stable/darwin-#{arch}/#{version}/Grok_Bot_#{version}#{arch_suffix}.dmg"
   name "Grok Bot"
-  desc "AI coding agent from xAI and Cursor"
-  homepage "https://cursor.com/grok"
+  desc "AI teammates that work across your apps and tools"
+  homepage "https://x.ai/bot"
 
   livecheck do
-    url "https://api2.cursor.sh/updates/api/update/darwin-arm64/sand/0.0.0/stable"
-    regex(%r{/sand/stable/(\h+)/}i)
-    strategy :json do |json, regex|
-      ver = json["name"] || json["version"] || json["productVersion"]
-      next unless ver
-
-      match = json["url"]&.match(regex)
-      next if match.blank?
-
-      "#{ver},#{match[1]}"
+    url "https://api2.cursor.sh/updates/api/update/darwin-#{arch}/sand/0.0.0/stable"
+    strategy :json do |json|
+      json["name"]
     end
   end
 
   auto_updates true
   depends_on macos: :monterey
-  depends_on arch: :arm64
 
   app "Grok Bot.app"
 
