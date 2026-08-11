@@ -1,4 +1,4 @@
-cask "muse-code" do
+cask "muse" do
   arch arm: "aarch64", intel: "x86"
   os macos: "macos", linux: "linux"
 
@@ -12,8 +12,7 @@ cask "muse-code" do
     depends_on macos: :monterey
   end
 
-  url "https://lookaside.facebook.com/lookaside/muse/download/?channel=muse&version=#{version}&file=muse-#{arch}-#{os}",
-      verified: "lookaside.facebook.com/lookaside/muse/"
+  url "https://lookaside.facebook.com/lookaside/muse/download/?channel=muse&version=#{version}&file=muse-#{arch}-#{os}"
   name "Muse Code"
   desc "Interactive terminal coding agent"
   homepage "https://dev.meta.ai/"
