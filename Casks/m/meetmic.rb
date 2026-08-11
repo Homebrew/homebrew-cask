@@ -20,7 +20,7 @@ cask "meetmic" do
   depends_on macos: :sequoia
   depends_on arch: :arm64
 
-  app "MeetMic developer-id/MeetMic.app"
+  app "MeetMic.app"
 
   zap trash: [
     "~/Library/Application Scripts/ltd.iwt.QuickWhisper",
