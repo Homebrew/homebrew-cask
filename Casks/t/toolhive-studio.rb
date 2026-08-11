@@ -19,6 +19,8 @@ cask "toolhive-studio" do
 
   app "ToolHive.app"
 
+  uninstall quit: "com.electron.toolhive"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.toolhive.sfl*",
     "~/Library/Application Support/ToolHive",
