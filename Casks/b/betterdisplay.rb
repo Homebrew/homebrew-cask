@@ -16,8 +16,8 @@ cask "betterdisplay" do
     end
   end
   on_ventura :or_newer do
-    version "4.3.5"
-    sha256 "f25502e82b37b9b1d1467a2843834ce203c8537ab73c449c6e79460ae0bb5607"
+    version "4.3.6"
+    sha256 "04e212bb1dfa5622e1a0bba078f5aa454e82e73ae3209faf00be413b5dbc854f"
 
     livecheck do
       url "https://betterdisplay.pro/betterdisplay/sparkle/appcast.xml"
