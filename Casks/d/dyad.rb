@@ -1,9 +1,9 @@
 cask "dyad" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.9.0"
-  sha256 arm:   "9061e1425392e21c788a4c19b0ac7d2e325af140c01fc6f7e907e76d13941f6d",
-         intel: "043602962ed6e0d3e2ea3269cd41103bae5a6eb9c550face6d049a2dacd302ba"
+  version "1.10.0"
+  sha256 arm:   "f2e957c1c4bc63b8c4d5f2c47080d5e6384c326c6836a4c833e4adc58f2bba31",
+         intel: "97d9e200943c9c5ebab2d07ff0ac18d77a4c1604a535fb676a27dc55f1cf9407"
 
   url "https://github.com/dyad-sh/dyad/releases/download/v#{version}/dyad-darwin-#{arch}-#{version}.zip",
       verified: "github.com/dyad-sh/dyad/"
