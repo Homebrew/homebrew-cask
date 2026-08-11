@@ -2,11 +2,11 @@ cask "blockstream" do
   arch arm: "arm64", intel: "x86_64"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.4.1"
+  version "3.5.0"
 
   on_macos do
-    sha256 arm:   "6922f5f617d466c37a3a16a354f7a5b052495255fee48f0283e3c31a23a7de8a",
-           intel: "8a0d41abf0995efdf3478413f34d8317040e7659dd2843eb170e3fbb7c958b8e"
+    sha256 arm:   "fe62273a13632a40ff1864ef6b29e7b618bb53648a98977012e1585a581fde6b",
+           intel: "7d4b73b87956bac705661b19b99222d318e2575c601de0366a3987a5d9eba85b"
 
     depends_on macos: :ventura
 
@@ -18,7 +18,7 @@ cask "blockstream" do
     ]
   end
   on_linux do
-    sha256 "f27ddf2f1c25f87479204200bfb64f1097d4703e1587b5a1ad5f0eea089d6a99"
+    sha256 "845ff44bbe859d9f8321e980a07517e43e5332a939ad159ecc3ba98f2a8bcf30"
 
     depends_on arch: :x86_64
 
