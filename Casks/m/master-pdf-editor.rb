@@ -13,7 +13,7 @@ cask "master-pdf-editor" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Master PDF Editor.app"
 
