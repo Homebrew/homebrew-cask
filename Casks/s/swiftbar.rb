@@ -1,6 +1,6 @@
 cask "swiftbar" do
-  version "2.0.1,536"
-  sha256 "ac70a9cbdde20d58dae27d360764aa42c3698f6e1bc4618c4b03297a2cee67fa"
+  version "2.1.0,594"
+  sha256 "54b425256f449dd90f8d167993cc65c3673bcd44d206e1aaf641a09fb58bc0da"
 
   url "https://github.com/swiftbar/SwiftBar/releases/download/v#{version.csv.first}/SwiftBar.v#{version.csv.first}.b#{version.csv.second}.zip",
       verified: "github.com/swiftbar/SwiftBar/"
@@ -14,7 +14,7 @@ cask "swiftbar" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "SwiftBar.app"
 
