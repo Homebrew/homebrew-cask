@@ -1,6 +1,6 @@
 cask "yinxiangbiji" do
-  version "9.8.4_478587"
-  sha256 "22a67f7eede9fc7092218f0c0b9edddfe3a35319208cc9ad21529ba17303dcd4"
+  version "9.8.5_478686"
+  sha256 "fd9f9f85e087109f81e11dddb14cf1cd80bb475e643c4c8fd30b40ffb9e6f6fe"
 
   url "https://cdn.yinxiang.com/mac-smd/public/YinxiangBiji_RELEASE_#{version}.zip"
   name "Evernote"
@@ -19,10 +19,11 @@ cask "yinxiangbiji" do
 
   app "印象笔记.app"
 
-  uninstall quit: [
-    "com.yinxiang.Mac",
-    "com.yinxiang.MacHelper",
-  ]
+  uninstall launchctl: "com.yinxiang.Mac.XPCService",
+            quit:      [
+              "com.yinxiang.Mac",
+              "com.yinxiang.MacHelper",
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.yinxiang.Mac",
