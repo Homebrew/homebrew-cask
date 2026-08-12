@@ -1,4 +1,4 @@
-cask "muse" do
+cask "muse-code" do
   arch arm: "aarch64", intel: "x86"
   os macos: "macos", linux: "linux"
 
