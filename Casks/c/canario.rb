@@ -1,6 +1,6 @@
 cask "canario" do
-  version "2026.08.11.19"
-  sha256 "9eb25efaf6267ade7adc4c1f8ccd31d1e5aa9d2ed9cde862f913ec8411e22fc2"
+  version "2026.08.12.21"
+  sha256 "0ab24caae486e30fb04495b7e74649a6fc4526f289e8843aff84278741365bff"
 
   url "https://github.com/canarioterm/releases/releases/download/v#{version}/Canario.dmg"
   name "Canario"
