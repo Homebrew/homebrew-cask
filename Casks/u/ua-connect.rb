@@ -23,7 +23,10 @@ cask "ua-connect" do
 
   app "UA Connect.app"
 
-  uninstall launchctl: "com.uaudio.bsd.helper",
+  uninstall launchctl: [
+              "com.uaudio.bsd.helper",
+              "com.uaudio.uac.launch-helper",
+            ],
             quit:      "com.uaudio.ua-connect",
             delete:    [
               "/Library/LaunchDaemons/com.uaudio.bsd.helper.plist",
