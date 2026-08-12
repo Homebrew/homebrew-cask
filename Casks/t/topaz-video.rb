@@ -31,6 +31,7 @@ cask "topaz-video" do
   uninstall launchctl: "com.topazlabs.veai.nukepath",
             pkgutil:   [
               "com.topazlabs.aeplugin",
+              "com.topazlabs.fcpplugin",
               "com.topazlabs.ofxplugin",
               "com.topazlabs.VStudioPackage",
             ],
