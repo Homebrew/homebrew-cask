@@ -24,7 +24,7 @@ cask "concept2-utility" do
 
   pkg "Concept2Utility#{version.no_dots}.pkg"
 
-  uninstall pkgutil: "com.concept2.pkg.Concept2Utility"
+  uninstall pkgutil: "com.concept2.c2utility"
 
   zap trash: [
     "~/Documents/Concept2",
