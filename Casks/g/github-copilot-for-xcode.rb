@@ -20,6 +20,8 @@ cask "github-copilot-for-xcode" do
 
   app "GitHub Copilot for Xcode.app"
 
+  uninstall launchctl: "com.github.CopilotForXcode.CommunicationBridge"
+
   zap trash: [
     "~/Library/Application Scripts/com.github.CopilotForXcode.EditorExtension",
     "~/Library/Application Scripts/VEKTX9H2N7.group.com.github.CopilotForXcode",
