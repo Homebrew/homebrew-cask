@@ -25,4 +25,10 @@ cask "warp-agent-cli" do
   end
 
   binary "warp-tui-stable", target: "warp"
+
+  zap trash: [
+    "~/.local/bin/warp",
+    "~/.warp",
+    "~/Library/Logs/warp-cli",
+  ]
 end
