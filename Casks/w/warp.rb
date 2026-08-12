@@ -5,7 +5,7 @@ cask "warp" do
   url "https://app.warp.dev/download/brew?version=v#{version}"
   name "Warp"
   desc "Rust-based terminal"
-  homepage "https://www.warp.dev/"
+  homepage "https://www.warp.dev/terminal"
 
   livecheck do
     url "https://releases.warp.dev/channel_versions.json"
