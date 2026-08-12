@@ -1,6 +1,6 @@
 cask "github-copilot-for-xcode" do
-  version "0.50.0"
-  sha256 "50a2ce3556d044137dd9fbc1d95a918768aeb035f267d5a4b973b40b116a6b50"
+  version "0.51.0"
+  sha256 "4bdf74338a366f166bbe85fa2e06616036de7bde41fa154becc95e6ec34adbf0"
 
   url "https://githubcopilotide.z13.web.core.windows.net/#{version}/GitHubCopilotForXcode.dmg",
       verified: "githubcopilotide.z13.web.core.windows.net/"
@@ -19,6 +19,8 @@ cask "github-copilot-for-xcode" do
   depends_on macos: :ventura
 
   app "GitHub Copilot for Xcode.app"
+
+  uninstall launchctl: "com.github.CopilotForXcode.CommunicationBridge"
 
   zap trash: [
     "~/Library/Application Scripts/com.github.CopilotForXcode.EditorExtension",
