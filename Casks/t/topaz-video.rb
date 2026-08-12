@@ -1,6 +1,6 @@
 cask "topaz-video" do
-  version "1.6.1"
-  sha256 "c2a9f3ffd9aaaac5dc739dcd351252c7fd6337ab366fabb0671ea26f48b7490e"
+  version "1.7.0"
+  sha256 "7a854d549b1cf2ffe9f8dfb208f954a94e0fa770ded8fb481fdd140b16a6079a"
 
   url "https://downloads.topazlabs.com/deploy/TopazVideoStudio/#{version}/TopazVideo-#{version}.pkg"
   name "Topaz Video"
@@ -31,6 +31,7 @@ cask "topaz-video" do
   uninstall launchctl: "com.topazlabs.veai.nukepath",
             pkgutil:   [
               "com.topazlabs.aeplugin",
+              "com.topazlabs.fcpplugin",
               "com.topazlabs.ofxplugin",
               "com.topazlabs.VStudioPackage",
             ],
