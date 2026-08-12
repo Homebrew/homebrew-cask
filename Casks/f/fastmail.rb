@@ -2,9 +2,9 @@ cask "fastmail" do
   arch arm: "arm64", intel: "x64"
   arch_suffix = on_arch_conditional arm: "-#{arch}"
 
-  version "1.5.1"
-  sha256 arm:   "6115519ae888e2ffc8040d523c56703932a9bb6d092554aff9a25e736c40fb7d",
-         intel: "82f629da170aba8f636ae04a7be7cdc368516e6685b907f087ac9c369ef07a7d"
+  version "1.6.0"
+  sha256 arm:   "738257cb04333254b60b61f076186ec08ba7b6b4f7610c77b6d174e2945c1722",
+         intel: "01ab078d2aa89dedc377b97b1d2380b30f91b1b6ee8d6f50373e71630c07b9c8"
 
   url "https://dl.fastmailcdn.com/desktop/production/mac/#{arch}/Fastmail-#{version}#{arch_suffix}-mac.zip",
       verified: "dl.fastmailcdn.com/"
