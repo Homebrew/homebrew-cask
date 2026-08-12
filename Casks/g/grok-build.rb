@@ -11,7 +11,7 @@ cask "grok-build" do
   url "https://x.ai/cli/grok-#{version}-#{os}-#{arch}"
   name "Grok Build"
   desc "Extensible coding agent for the terminal"
-  homepage "https://x.ai/cli"
+  homepage "https://x.ai/build", browsed: "2026-08-13"
 
   livecheck do
     url "https://x.ai/cli/stable"
