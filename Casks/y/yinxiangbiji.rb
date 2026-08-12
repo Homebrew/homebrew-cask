@@ -19,10 +19,11 @@ cask "yinxiangbiji" do
 
   app "印象笔记.app"
 
-  uninstall quit: [
-    "com.yinxiang.Mac",
-    "com.yinxiang.MacHelper",
-  ]
+  uninstall launchctl: "com.yinxiang.Mac.XPCService",
+            quit:      [
+              "com.yinxiang.Mac",
+              "com.yinxiang.MacHelper",
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.yinxiang.Mac",
