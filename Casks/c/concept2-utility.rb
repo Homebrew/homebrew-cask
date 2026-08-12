@@ -22,6 +22,8 @@ cask "concept2-utility" do
 
   depends_on :macos
 
+  pkg "Concept2Utility#{version.no_dots}.pkg"
+
   uninstall pkgutil: "com.concept2.pkg.Concept2Utility"
 
   zap trash: [
