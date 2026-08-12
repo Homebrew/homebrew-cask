@@ -18,6 +18,8 @@ cask "tencent-ugit" do
     end
   end
 
+  depends_on macos: :big_sur
+
   app "UGit.app"
 
   zap trash: [
