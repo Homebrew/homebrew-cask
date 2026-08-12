@@ -2,9 +2,9 @@ cask "fme" do
   arch arm: "aarch64", intel: "x64"
   folder = on_arch_conditional arm: "-aarch64"
 
-  version "2026.2,26333"
-  sha256 arm:   "bdd7e2b1f4c6c3cf42b3521281aeb6630a45a37a96d17eee9d1eab1bccf47a4e",
-         intel: "6dd209bc08855bdfdc2b0c56bbbaadbe17b1cb1f3681ba0bb800df1d7b9bf210"
+  version "2026.2.1,26345"
+  sha256 arm:   "c867e19567269ecf1bfa8fd7f19dde1cf714d37582a650edf8c5b9da292a1232",
+         intel: "4028310ae690b7c60a707929eff99e3a7002d74008d2bbfca237e919b822fcea"
 
   url "https://downloads.safe.com/fme/#{version.major}/macos#{folder}/fme-form-#{version.csv.first}-b#{version.csv.second}-macosx-#{arch}.pkg"
   name "FME Form"
