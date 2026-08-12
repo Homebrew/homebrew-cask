@@ -21,6 +21,8 @@ cask "camtasia" do
 
   app "Camtasia.app"
 
+  uninstall launchctl: "com.techsmith.TechSmithAgent"
+
   zap trash: [
     "/Users/Shared/TechSmith/Camtasia",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.techsmith.camtasia#{version.major}.sfl*",
