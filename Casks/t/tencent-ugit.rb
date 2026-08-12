@@ -18,8 +18,6 @@ cask "tencent-ugit" do
     end
   end
 
-  depends_on macos: :catalina
-
   app "UGit.app"
 
   zap trash: [
