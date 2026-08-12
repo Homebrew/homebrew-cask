@@ -24,10 +24,6 @@ cask "muse-code" do
     end
   end
 
-  container type: :naked
-
-  rename "download", "muse-#{arch}-#{os}"
-
   binary "muse-#{arch}-#{os}", target: "muse"
 
   zap trash: [
