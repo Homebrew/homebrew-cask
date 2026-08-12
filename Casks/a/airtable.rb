@@ -1,6 +1,6 @@
 cask "airtable" do
-  version "1.6.6"
-  sha256 "cc677bb77a76437cf423cb49675bdbb6e54840f1c29ea80d3910f2ed41ceb627"
+  version "1.7.0"
+  sha256 "948ddf85f9e62c5abe98a53e35201e4a59175c65640d29545ed81430dc13f726"
 
   url "https://static.airtable.com/download/macos/Airtable-#{version}.dmg"
   name "Airtable"
@@ -15,7 +15,7 @@ cask "airtable" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Airtable.app"
 
