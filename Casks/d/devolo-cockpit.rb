@@ -5,7 +5,7 @@ cask "devolo-cockpit" do
   url "https://devolo.scalecommerce.cloud/media/a2/c6/4d/1758704955/devolo-cockpit-v#{version.dots_to_hyphens}.dmg"
   name "Devolo dLAN Cockpit"
   desc "Configuration and network monitoring software"
-  homepage "https://www.devolo.global/devolo-cockpit"
+  homepage "https://www.devolo.com/en/software-downloads/cockpit"
 
   livecheck do
     url "https://www.devolo.com/en/software-downloads/cockpit"
