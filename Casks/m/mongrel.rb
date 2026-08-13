@@ -11,14 +11,15 @@ cask "mongrel" do
     url "https://www.visorcraft.com/api/downloads/mongrel"
     strategy :json do |json|
       json["files"]&.filter_map do |file|
-        next unless file["platform"] == "macos" && file["arch"] == "arm64" &&
-                    file["channel"] == "stable" && file["file_name"]&.end_with?(".dmg")
-
-        "#{file["version"]},#{file["id"]}"
+        if file["platform"] == "macos" && file["arch"] == "arm64" &&
+           file["channel"] == "stable" && file["file_name"]&.end_with?(".dmg")
+          "#{file["version"]},#{file["id"]}"
+        end
       end
     end
   end
 
+  depends_on :macos
   depends_on arch: :arm64
 
   app "Mongrel.app"
