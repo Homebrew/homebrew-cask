@@ -20,8 +20,10 @@ cask "discord" do
     sha256 "d474e00ad0297a51c50910a40f9efab550a1fff38526f160229a98f0e2f76e9b"
 
     livecheck do
-      url "https://discord.com/api/download/stable?platform=osx"
-      strategy :header_match
+      url "https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=osx&arch=x64"
+      strategy :json do |json|
+        json.dig("full", "host_version")&.join(".")
+      end
     end
   end
 
