@@ -1,9 +1,9 @@
 cask "hdrview" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.8.1"
-  sha256 arm:   "6cd00bb8152d23acc12ee15eb8a40d33c08ee578223ffb3fb675d83068acea66",
-         intel: "fb959f7707d09ff47ce645239a3f7749f4b0d00e688271c45f5165b09d7945b4"
+  version "2.8.3"
+  sha256 arm:   "f12c26d7edc26f045fdae7a190e8137d3ca3e5059076c77d6944eb88c40887ba",
+         intel: "5ff65eca6567a310428c7c151dac50729db667e434038f5e480d7a8d15bb813a"
 
   url "https://github.com/wkjarosz/hdrview/releases/download/v#{version}/HDRView-#{version}-#{arch}.dmg"
   name "HDRView"
