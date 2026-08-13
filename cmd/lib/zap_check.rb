@@ -95,23 +95,39 @@ module ZapCheck
     puts "Warning: Timed out opening #{app} after #{LAUNCH_TIMEOUT} seconds."
   end
 
-  # AppleScript quit events are blocked by TCC on CI, so signal the app's
-  # processes directly. Quitting also prompts `cfprefsd` to write the app's
-  # preferences to disk, where `brew generate-zap` can find them.
+  # Ask the app to quit the same way `uninstall quit:` does, which also prompts
+  # `cfprefsd` to write the app's preferences to disk, where `brew generate-zap`
+  # can find them. An app that ignores the request is left running: signalling
+  # it instead denies it the chance to undo any system-wide changes it made.
   def self.quit(apps)
     apps.each do |app|
-      signal("TERM", app)
+      script = <<~JAVASCRIPT
+        'use strict';
+
+        ObjC.import('stdlib')
+
+        function run(argv) {
+          var app = Application(argv[0])
+
+          try {
+            app.quit()
+          } catch (err) {
+            if (app.running()) {
+              $.exit(1)
+            }
+          }
+
+          $.exit(0)
+        }
+      JAVASCRIPT
+      system_command "osascript", args: ["-l", "JavaScript", "-e", script, app.to_s], print_stderr: false
+
       next if wait_until(QUIT_TIMEOUT) { !running?(app) }
 
-      puts "Warning: #{app} did not quit after SIGTERM, sending SIGKILL."
-      signal("KILL", app)
+      puts "Warning: #{app} did not quit when asked; leaving it running."
     end
 
     sleep 3
-  end
-
-  def self.signal(name, app)
-    system_command "/usr/bin/pkill", args: ["-#{name}", "-f", process_pattern(app)], print_stderr: false
   end
 
   def self.running?(app)
