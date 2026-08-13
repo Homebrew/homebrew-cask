@@ -13,7 +13,7 @@ cask "koharu" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
   depends_on arch: :arm64
 
   app "Koharu.app"
