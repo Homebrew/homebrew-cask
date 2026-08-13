@@ -5,7 +5,7 @@ cask "baocut-cli" do
   url "https://github.com/JimLiu/baocut/releases/download/baocut-v#{version.csv.first}-build.#{version.csv.second}/bcut-#{version.csv.first}-build.#{version.csv.second}-aarch64-apple-darwin.zip"
   name "BaoCut CLI"
   desc "Local video, transcription, subtitle, and BCF rendering CLI"
-  homepage "https://baocut.app/"
+  homepage "https://baocut.app/cli/"
 
   livecheck do
     url "https://github.com/JimLiu/baocut/releases/latest/download/appcast.json"
