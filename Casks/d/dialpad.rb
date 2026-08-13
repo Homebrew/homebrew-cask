@@ -1,7 +1,7 @@
 cask "dialpad" do
   arch arm: "arm64", intel: "x64"
 
-  version "2607.1.1"
+  version "2607.1.3"
   sha256 :no_check
 
   url "https://download.dialpad.com/osx/#{arch}/dialpad.pkg"
