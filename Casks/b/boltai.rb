@@ -1,6 +1,6 @@
 cask "boltai" do
-  version "2.14.4"
-  sha256 "40a6b45f77edba582b69da891b56e44ffa2e53d83f42c844d5919882bebba1dc"
+  version "2.15.0"
+  sha256 "777afdcf09ba614342b153d83d0b563a5bb8853dbfc80c43c4a2bff7258af181"
 
   url "https://updates.boltai.com/dmg/BoltAI-#{version}.dmg"
   name "BoltAI 2"
@@ -17,7 +17,7 @@ cask "boltai" do
   auto_updates true
   depends_on macos: :ventura
 
-  app "BoltAI #{version.major}.app"
+  app "BoltAI.app"
 
   zap trash: [
     "~/Library/Application Scripts/co.podzim.boltai-mobile",
