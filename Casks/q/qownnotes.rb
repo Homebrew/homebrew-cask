@@ -1,6 +1,6 @@
 cask "qownnotes" do
-  version "26.8.2"
-  sha256 "1d36dc2a858992737a6c857b2bfadc63632ef9a2d95b8e6a164db0209d26fa6a"
+  version "26.8.3"
+  sha256 "7afd9b30940df4e8b16c966da81539231ce5436b954b0c61a5a3a2e9183549f3"
 
   url "https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
       verified: "github.com/pbek/QOwnNotes/"
@@ -19,6 +19,8 @@ cask "qownnotes" do
   depends_on macos: :ventura
 
   app "QOwnNotes.app"
+
+  uninstall quit: "com.PBE.QOwnNotes"
 
   zap trash: [
     "~/Library/Preferences/com.pbe.QOwnNotes.plist",
