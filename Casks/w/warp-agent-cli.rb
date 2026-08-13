@@ -15,7 +15,7 @@ cask "warp-agent-cli" do
   url "https://app.warp.dev/download/agent-cli/artifact?os=#{os}&arch=#{arch}&version=v#{version}"
   name "Warp Agent CLI"
   desc "Agentic development environment for command-line workflows"
-  homepage "https://www.warp.dev/"
+  homepage "https://www.warp.dev/agent-cli"
 
   livecheck do
     url "https://releases.warp.dev/channel_versions.json"
