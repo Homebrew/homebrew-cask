@@ -12,12 +12,11 @@ cask "sqlcl" do
     regex(/href=.*?sqlcl[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  stage_only true
+  binary "sqlcl/bin/sql", target: "sqlcl"
 
   zap trash: "~/.sqlcl"
 
   caveats do
     depends_on_java "11+"
-    path_environment_variable "#{staged_path}/sqlcl/bin"
   end
 end
