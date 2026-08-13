@@ -1,8 +1,8 @@
 cask "bettercmdtab" do
-  version "26.6.1,20260703123053"
-  sha256 "7b95e0d033160143ccfa42d7204e807c8a8e8fe5dbb270f55f793c43c9974136"
+  version "26.7,20260813144806"
+  sha256 "d72cdffb691b8e2fbb892afaf4d016ceb9bbf4ee99d8b2272a952db9278be67b"
 
-  url "https://github.com/rokartur/BetterCmdTab/releases/download/v#{version.csv.first}/BetterCmdTab-#{version.csv.first}-#{version.csv.second}.dmg",
+  url "https://github.com/rokartur/BetterCmdTab/releases/download/#{version.csv.first}/BetterCmdTab-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/rokartur/BetterCmdTab/"
   name "BetterCmdTab"
   desc "Replacement for the built-in Cmd+Tab app switcher"
