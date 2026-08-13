@@ -7,15 +7,14 @@ cask "glean" do
   desc "Workplace search and AI assistant"
   homepage "https://www.glean.com/glean-for-desktop"
 
-  depends_on macos: :monterey
-
-  app "Glean.app"
-
   livecheck do
     url "https://storage.googleapis.com/glean-downloads/glean-desktop-app/latest-mac.yml"
     strategy :electron_builder
   end
 
+  depends_on macos: :monterey
+
+  app "Glean.app"
 
   uninstall quit: "com.glean.desktop"
 
