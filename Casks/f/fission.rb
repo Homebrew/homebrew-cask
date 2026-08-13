@@ -1,5 +1,5 @@
 cask "fission" do
-  version "2.9.4"
+  version "2.9.5"
   sha256 :no_check
 
   url "https://cdn.rogueamoeba.com/fission/download/Fission.zip"
