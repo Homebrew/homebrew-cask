@@ -1,9 +1,9 @@
 cask "work-louder-input" do
   arch arm: "-arm64"
 
-  version "0.18.1"
-  sha256 arm:   "ccad61171fa8ca63cee5461e9df48e189bb51079e93c3983bc45ed180929dfb6",
-         intel: "5820ced595461f8b1003a7239449f0472dadd2a136edb4b16844e346863d5707"
+  version "0.18.2"
+  sha256 arm:   "22973e1bc2459afb764d8468eaa19495d3e9abd77814246a842c1705e6f1bb1d",
+         intel: "844f453bc684b796b9db100243332ffe9d2d07f89553592843ac71d8cf3d3dd0"
 
   url "https://github.com/worklouder/input-releases/releases/download/v#{version}/input-#{version}#{arch}.dmg",
       verified: "github.com/worklouder/input-releases/"
