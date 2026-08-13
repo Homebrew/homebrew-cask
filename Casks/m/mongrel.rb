@@ -1,6 +1,6 @@
 cask "mongrel" do
-  version "5.71.41,8e8920d3-57e0-4b60-8597-1d856deb02db"
-  sha256 "6d25ba54ddf52a173a411b955ca11786d561f7b10ab414a36bca6a459552df7e"
+  version "5.71.42,3eee7112-5b33-4ac6-9d65-7c7e4cffc271"
+  sha256 "1a18f60a5e0568883e65cf71cfd1307b41fcc259918df2692de1eb5561ff19ec"
 
   url "https://www.visorcraft.com/api/downloads/mongrel/#{version.csv.second}"
   name "Mongrel"
@@ -26,6 +26,7 @@ cask "mongrel" do
 
   zap trash: [
     "~/Library/Application Support/com.mongrel.desktop",
+    "~/Library/Application Support/Mongrel",
     "~/Library/Caches/com.mongrel.desktop",
     "~/Library/HTTPStorages/com.mongrel.desktop",
     "~/Library/Logs/Mongrel",
