@@ -5,7 +5,7 @@ cask "warp@preview" do
   url "https://releases.warp.dev/preview/v#{version}/WarpPreview.dmg"
   name "Warp Preview"
   desc "Rust-based terminal"
-  homepage "https://www.warp.dev/"
+  homepage "https://www.warp.dev/terminal"
 
   livecheck do
     url "https://releases.warp.dev/channel_versions.json"
