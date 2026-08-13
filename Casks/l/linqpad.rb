@@ -1,6 +1,6 @@
 cask "linqpad" do
-  version "9.10.18.2107430"
-  sha256 "6001cf45fde514ebc8e27420c70fd60f49de6766baf1945a17729cc0b18fd3e4"
+  version "9.10.19.7331683"
+  sha256 "285939dfb148da08b3f8261f365ddfa8e5238a493098cfec0049544602d8be3d"
 
   url "https://cdn.linqpad.net/public/LINQPad#{version.major}.dmg?cache=#{version}"
   name "LINQPad"
