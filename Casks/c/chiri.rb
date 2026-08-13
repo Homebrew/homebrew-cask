@@ -2,13 +2,15 @@ cask "chiri" do
   arch arm: "aarch64", intel: on_system_conditional(macos: "x64", linux: "amd64")
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.9.2"
-  sha256 arm:          "9bec2092c46ce05bb2b1cf89d640e8fe26c8c73b7a57cb1e23820b0dfc1e8697",
-         intel:        "4e23be09ba19c44d1e69f820d7e947fa0b29b534b36a2a1d2bebcf31f06a9bd4",
-         arm64_linux:  "8b70b5b085e8050c8cea338d0f3b1b2c84c7981da79a86a19a53883a21dcb87c",
-         x86_64_linux: "54186ce8a1393a94d72d13f8f404e42b610a625d66a13c8a974a7b75cfd110ef"
+  version "1.0.0"
+  sha256 arm:          "058df7a9e1663045ad438697f070f7342e3852fd7455fea8f80db0f0df7d2316",
+         intel:        "23367f9701f16ac8a561d934288d70d55feb4a52d2b9b5669cf04fbeac64d1fd",
+         arm64_linux:  "81b55a78063fd79d7a086010c58e2626acc67f44880f60d519a0f20f01d5d58c",
+         x86_64_linux: "36758affb6382df0f904d56b1d9f44d7da88b8a17a9b6d10bf3fd88d86741141"
 
   on_macos do
+    depends_on macos: :monterey
+
     app "Chiri.app"
 
     zap trash: [
