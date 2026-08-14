@@ -1,8 +1,14 @@
 cask "mutedeck" do
   arch arm: "-arm"
 
-  version "4.9.3"
   sha256 :no_check
+
+  on_arm do
+    version "4.9.4"
+  end
+  on_intel do
+    version "4.9.3"
+  end
 
   url "https://releases.mutedeck.com/macos#{arch}/mutedeck-mac#{arch}.dmg"
   name "Mutedeck"
