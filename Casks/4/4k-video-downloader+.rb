@@ -19,6 +19,8 @@ cask "4k-video-downloader+" do
 
   app "4K Video Downloader+.app"
 
+  uninstall quit: "com.openmedia.4kvideodownloaderplus"
+
   zap trash: [
     "~/Library/Application Support/4kdownload.com/4K Video Downloader+",
     "~/Library/Preferences/com.4kdownload.4K Video Downloader+.plist",
