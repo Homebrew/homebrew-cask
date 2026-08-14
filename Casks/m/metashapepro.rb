@@ -1,6 +1,6 @@
 cask "metashapepro" do
   version "2.3.1"
-  sha256 "46e8fdefef888473fab609b4a24080649f66f03a3c9366f68c89f8a48c04feb2"
+  sha256 "85b7e43dc87c1295605cc5a1cb55aa9c4260429431856289535c3c573d6fd03b"
 
   url "https://download.agisoft.com/metashape-pro_#{version.dots_to_underscores}.dmg"
   name "Agisoft Metashape Professional Edition"
@@ -15,6 +15,8 @@ cask "metashapepro" do
   depends_on macos: :big_sur
 
   app "MetashapePro.app"
+
+  uninstall quit: "com.agisoft.metashape.professional"
 
   zap trash: [
     "~/Library/Preferences/com.agisoft.Metashape Pro.plist",
