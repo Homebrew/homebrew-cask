@@ -29,7 +29,7 @@ cask "librewolf" do
               target: "LibreWolf.AppImage"
   end
 
-  url "https://codeberg.org/api/packages/librewolf/generic/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-#{os}"
+  url "https://librewolf.dev/api/packages/librewolf/generic/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-#{os}"
   name "LibreWolf"
   desc "Web browser"
   homepage "https://librewolf.net/"
@@ -38,7 +38,7 @@ cask "librewolf" do
   # corresponding release is created, so we check the "latest" release instead
   # of the Git tags.
   livecheck do
-    url "https://codeberg.org/api/v1/repos/librewolf/bsys6/releases/latest"
+    url "https://librewolf.dev/api/v1/repos/librewolf/bsys6/releases/latest"
     regex(/^v?(\d+(?:[.-]\d+)+)$/i)
     strategy :json do |json, regex|
       json["tag_name"]&.[](regex, 1)&.tr("-", ",")
