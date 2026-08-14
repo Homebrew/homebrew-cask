@@ -1,6 +1,6 @@
 cask "mixin" do
-  version "5.5.1"
-  sha256 "7bd2f298f904ac61dc29aedd8be76c97e50f749b068b8773783caf8b57ccd947"
+  version "6.0.0"
+  sha256 "c08760b38a07b11ec9d7301a49f949ceefa7155ebd5f23694459105e6be27bbe"
 
   url "https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin-#{version}.dmg",
       verified: "github.com/MixinNetwork/flutter-app/"
@@ -28,7 +28,7 @@ cask "mixin" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Mixin.app"
 
