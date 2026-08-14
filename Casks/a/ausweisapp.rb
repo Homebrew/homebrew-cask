@@ -1,6 +1,6 @@
 cask "ausweisapp" do
-  version "2.5.4"
-  sha256 "9472083ecda8cf5f3107eb7e2f0f692d6b20f7e1d7f6ce2327144d11cc6fae05"
+  version "2.5.5"
+  sha256 "907d059ab4fed21986ca9960d6dbc0b816746b617d4a0fa1efc220ec69d7559f"
 
   url "https://github.com/Governikus/AusweisApp/releases/download/#{version}/AusweisApp-#{version}.dmg",
       verified: "github.com/Governikus/AusweisApp/"
