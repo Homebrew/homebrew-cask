@@ -17,6 +17,8 @@ cask "seafile-client" do
 
   app "Seafile Client.app"
 
+  uninstall quit: "com.seafile.seafile-client"
+
   zap trash: [
     "~/Library/Application Scripts/com.seafile.seafile-client.findersync",
     "~/Library/Containers/com.seafile.seafile-client.findersync",
