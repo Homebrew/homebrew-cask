@@ -1,6 +1,7 @@
 cask "librewolf" do
   arch arm: "arm64", intel: "x86_64"
-  os macos: "macos-#{arch}-package.dmg", linux: "linux-#{arch}-appimage.AppImage"
+  os macos: "macos", linux: "linux"
+  url_end = on_system_conditional macos: "package.dmg", linux: "appimage.AppImage"
 
   version "153.0.4,1"
   sha256 arm:          "4971d23a262a7414d6d7de2bc0449832a7e39cb341fc3f9b7388fe181fbf24a1",
@@ -29,7 +30,7 @@ cask "librewolf" do
               target: "LibreWolf.AppImage"
   end
 
-  url "https://librewolf.dev/api/packages/librewolf/generic/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-#{os}"
+  url "https://librewolf.dev/api/packages/librewolf/generic/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-#{os}-#{arch}-#{url_end}"
   name "LibreWolf"
   desc "Web browser"
   homepage "https://librewolf.net/"
