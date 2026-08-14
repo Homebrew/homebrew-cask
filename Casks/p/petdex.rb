@@ -12,12 +12,7 @@ cask "petdex" do
 
   livecheck do
     url :url
-    regex(%r{/desktop-v?(\d+(?:\.\d+)+)/Petdex[._-]#{arch}\.dmg}i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.filter_map do |asset|
-        asset["browser_download_url"]&.[](regex, 1)
-      end
-    end
+    regex(/^desktop[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on macos: :big_sur
