@@ -24,6 +24,8 @@ cask "qqlive" do
 
   app "QQLive.app"
 
+  uninstall quit: "com.tencent.tenvideo"
+
   zap trash: [
     "~/Library/Caches/com.tencent.tenvideo",
     "~/Library/Containers/com.tencent.tenvideo",
