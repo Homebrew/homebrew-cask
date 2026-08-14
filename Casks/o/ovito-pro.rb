@@ -26,6 +26,8 @@ cask "ovito-pro" do
 
   app "Ovito.app"
 
+  uninstall quit: "org.ovito"
+
   zap trash: [
     "~/Library/Preferences/org.ovito.Ovito.plist",
     "~/Library/Saved Application State/org.ovito.savedState",
