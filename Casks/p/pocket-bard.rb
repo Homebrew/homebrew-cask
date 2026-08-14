@@ -2,9 +2,9 @@ cask "pocket-bard" do
   arch arm: "aarch64", intel: "amd64"
   livecheck_arch = on_arch_conditional arm: "aarch64", intel: "amd64"
 
-  version "3.1.16,234"
-  sha256 arm:   "5c6ae9317e9fb7655ffcb3f4deda78dfc1fddcab118937d89d56a8fa57c55f19",
-         intel: "604838f5433bc86548f836c3580d345a0fb07b6d8d6e2d6c920db91f139978da"
+  version "3.1.17,236"
+  sha256 arm:   "7676c3631d1ec7046b86e3d0a5d4966f1d338e54712fd1af4b5c8f4a6fc72f89",
+         intel: "b8e10d1a26c31a92956ee0cd032d14d52105573933b47182876e408e54251451"
 
   url "https://downloads.pocketbard.app/desktop/channels/stable/pocketbard-#{version.csv.first}-#{version.csv.second}-mac-#{arch}.zip"
   name "Pocket Bard"
