@@ -1,9 +1,9 @@
 cask "aionui" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.55"
-  sha256 arm:   "6aae098fa2b6a356ba19e69fa9b8205c646cd228f87355a6d2777c58bf62446a",
-         intel: "fd2e752267e8b242260ef373ba08d436bbb15d69f29093c44bd7927dbcf39cde"
+  version "2.1.56"
+  sha256 arm:   "65ad27344fefcbc9d499e778d0777118a682e5eae5b9beed379cf533acca3fe4",
+         intel: "be2dd1e83a04985d40bec178e168b2dbaf7e291a16c79d00d7cf3fe324f6b837"
 
   url "https://static.aionui.com/releases/#{version}/AionUi-#{version}-mac-#{arch}.dmg"
   name "AionUi"
