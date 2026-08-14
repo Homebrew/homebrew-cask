@@ -7,6 +7,11 @@ cask "geeklink" do
   desc "Local subtitle transcription, translation, and burned-in subtitle OCR"
   homepage "https://geeklink.dev/"
 
+  livecheck do
+    url "https://github.com/GeekLinkDev/GeekLink-release/releases/latest"
+    strategy :github_latest
+  end
+
   depends_on arch: :arm64
   depends_on macos: :ventura
 
