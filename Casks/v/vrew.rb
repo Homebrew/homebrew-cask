@@ -17,6 +17,8 @@ cask "vrew" do
 
   app "Vrew.app"
 
+  uninstall quit: "com.voyagerx.vrew"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.voyagerx.vrew.sfl*",
     "~/Library/Application Support/vrew",
