@@ -23,7 +23,8 @@ cask "microsoft-edge" do
 
   app "Microsoft Edge.app"
 
-  uninstall launchctl: "com.microsoft.EdgeUpdater.wake"
+  uninstall launchctl: "com.microsoft.EdgeUpdater.wake",
+            quit:      "com.microsoft.edgemac"
 
   zap trash: [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
