@@ -21,6 +21,8 @@ cask "iterm2@nightly" do
 
   app "iTerm.app"
 
+  uninstall quit: "com.googlecode.iterm2"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.iterm2.sfl*",
     "~/Library/Application Support/iTerm",
