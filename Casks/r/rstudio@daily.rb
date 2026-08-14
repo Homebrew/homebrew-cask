@@ -21,6 +21,8 @@ cask "rstudio@daily" do
 
   app "RStudio.app"
 
+  uninstall quit: "com.rstudio.desktop"
+
   zap trash: [
     "~/.rstudio-desktop",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rstudio.desktop.sfl*",
