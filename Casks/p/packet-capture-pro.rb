@@ -2,7 +2,7 @@ cask "packet-capture-pro" do
   version "2.20.2"
   sha256 "37765cf4f1cc15d9356e8b29f9d2e7440af57ef1a5a7dd630359c3929cb7594a"
 
-  url "https://github.com/REALSIGNAL/packet-capture-pro-app/releases/download/v#{version}/PacketCapturePro_v#{version}.dmg",
+  url "https://github.com/REALSIGNAL/packet-capture-pro-app/releases/download/v#{version}/PacketCapturePro_v#{version}.dmg"
   name "Packet Capture Pro"
   desc "HTTP/HTTPS packet capture and API debugging proxy"
   homepage "https://pcp.realsignal.com/"
