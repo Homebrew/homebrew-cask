@@ -2,9 +2,6 @@ cask "eve-online" do
   version "1.16.0"
   sha256 "7c6cb0d0f6c1a6597d53a60b6a3b5a42fc55e4bd6701ec06c6b4b04a065633e6"
 
-  # CCP Games rebranded as Fenris Creations in May 2026, but
-  # upstream URLs and data paths still use the former name.
-
   url "https://launcher.ccpgames.com/eve-online/release/darwin/universal/eve-online-darwin-universal-#{version}.zip"
   name "EVE Online"
   desc "Launcher for the space MMO game EVE Online"
