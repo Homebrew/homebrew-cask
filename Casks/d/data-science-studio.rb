@@ -4,7 +4,7 @@ cask "data-science-studio" do
   on_arm do
     version "15.0.1"
     sha256 "db79190f424b991af11749c5a17f4f53cc2d005bdc596e9ca315edf58261b1f2"
-    
+
     livecheck do
       url "https://cdn.downloads.dataiku.com/public/launcher/macos/latest-mac.yml"
       strategy :electron_builder
@@ -30,11 +30,12 @@ cask "data-science-studio" do
 
   app "DataScienceStudio.app"
 
+  uninstall quit: "com.dataiku.datasciencestudio"
+
   zap trash: [
     "~/Library/Application Support/DataikuLauncher",
     "~/Library/DataScienceStudio",
     "~/Library/Preferences/com.dataiku.datasciencestudio.plist",
     "~/Library/Saved Application State/com.dataiku.datasciencestudio.savedState",
   ]
-
 end
