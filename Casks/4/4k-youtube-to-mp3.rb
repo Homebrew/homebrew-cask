@@ -20,6 +20,8 @@ cask "4k-youtube-to-mp3" do
 
   app "4K YouTube to MP3.app"
 
+  uninstall quit: "com.openmedia.4kyoutubetomp3"
+
   zap trash: [
     "~/Library/Application Support/4kdownload.com",
     "~/Library/Preferences/com.4kdownload.*",
