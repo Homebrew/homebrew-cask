@@ -1,9 +1,9 @@
 cask "open-design" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.19.0"
-  sha256 arm:   "2c55ebfc724e36cc0527aef92292698689b315b9aabc4d769c5bb867e60fc411",
-         intel: "f67e3067deac6e6b78c1956872d5e3580cf937ff470466ebacee6621dc2958d3"
+  version "0.19.1"
+  sha256 arm:   "4dea2229bc8c382398f88f0360971ece9112452e5151fdb8784ea746d4c2e294",
+         intel: "ff9fbaf21fd32a968639e6a4bea781f4ca9550bb17b0bc33bf6aa11f486739a1"
 
   url "https://github.com/nexu-io/open-design/releases/download/open-design-v#{version}/open-design-#{version}-mac-#{arch}.dmg",
       verified: "github.com/nexu-io/open-design/"
