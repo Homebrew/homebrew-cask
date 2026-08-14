@@ -1,6 +1,6 @@
 cask "seafile-client" do
-  version "9.0.19"
-  sha256 "72b705bd3ec7142bca6fce7f069b4fe256066473f9368a9236a7b4e4e0189bd9"
+  version "9.0.21"
+  sha256 "7af0726a075ea4280383a5191011e840729aef9fbe1554faa6924a4545e7f1b3"
 
   url "https://sos-ch-dk-2.exo.io/seafile-downloads/seafile-client-#{version}.dmg",
       verified: "sos-ch-dk-2.exo.io/seafile-downloads/"
@@ -16,6 +16,8 @@ cask "seafile-client" do
   depends_on macos: :big_sur
 
   app "Seafile Client.app"
+
+  uninstall quit: "com.seafile.seafile-client"
 
   zap trash: [
     "~/Library/Application Scripts/com.seafile.seafile-client.findersync",
