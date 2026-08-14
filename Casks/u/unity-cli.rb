@@ -2,11 +2,11 @@ cask "unity-cli" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "1.0.0-beta.3"
-  sha256 arm:          "adfb6dbd4bc2015052a63d2097ec535b5408f585e2e35f3754b995e1541eef48",
-         intel:        "d0d3b356d107f333e866f72b96ff440f810976715df93dd79ea2a6b777c3b50f",
-         arm64_linux:  "21da2bf98d16dbad55dd3bb187a01008acfe08396075e491880d97d818a9ef11",
-         x86_64_linux: "9b89aaa5a676e8e5bd6a3844a9398defb963bd3495186445a464a47057e54ea3"
+  version "1.0.0-beta.5"
+  sha256 arm:          "1c0215d89460526057589774ef6c53136103d81d9a458fc52d8ba3a6295711b2",
+         intel:        "9aa78ca9ad0629efe9b06987e04523292e9694c1e827b0f781b692fa325f389c",
+         arm64_linux:  "757494c2fefd9bec1d88f42ebac77a4588d81963756dbae2ea770b297c38742b",
+         x86_64_linux: "7fb0edbe2e6c889d38b0982c030713855edca82c3cda01758b0bd50a3ffd356a"
 
   on_macos do
     zap trash: "~/Library/Application Support/UnityHub"
