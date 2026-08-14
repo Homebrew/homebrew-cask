@@ -45,8 +45,14 @@ cask "safari-technology-preview" do
 
   pkg "Safari Technology Preview.pkg"
 
-  uninstall launchctl: "com.apple.SafariTechnologyPreview.History",
+  uninstall launchctl: [
+              "com.apple.AuthenticationServicesCore.AuthenticationServicesAgent-STP",
+              "com.apple.SafariTechnologyPreview.History",
+              "com.apple.SafariTechnologyPreview.SyncService",
+              "com.apple.webkit.webpushd.relocatable",
+            ],
             quit:      "com.apple.SafariTechnologyPreview",
+            pkgutil:   "com.apple.pkg.SafariTechPreviewPackage",
             delete:    "/Applications/Safari Technology Preview.app"
 
   zap trash: [
