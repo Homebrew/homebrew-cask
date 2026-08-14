@@ -24,6 +24,8 @@ cask "get-iplayer-automator" do
 
   app "Get iPlayer Automator.app"
 
+  uninstall quit: "com.ascoware.get-iplayer-automator"
+
   zap trash: [
     "~/Library/Application Scripts/group.com.ascoware.get-iplayer-automator",
     "~/Library/Application Support/Get iPlayer Automator",
