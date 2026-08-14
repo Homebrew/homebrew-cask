@@ -8,7 +8,7 @@ cask "geeklink" do
   homepage "https://geeklink.dev/"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "GeekLink.app"
 
