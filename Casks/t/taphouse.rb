@@ -17,6 +17,8 @@ cask "taphouse" do
 
   app "Taphouse.app"
 
+  uninstall quit: "com.multimodalsolutions.taphouse"
+
   zap trash: [
     "~/Library/Application Support/Taphouse",
     "~/Library/Caches/Taphouse",
