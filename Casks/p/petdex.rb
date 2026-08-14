@@ -22,10 +22,8 @@ cask "petdex" do
   uninstall quit: "dev.petdex.desktop-native"
 
   zap trash: [
-    "~/Library/Caches/dev.petdex.desktop-native",
-    "~/Library/HTTPStorages/dev.petdex.desktop-native",
-    "~/Library/Preferences/dev.petdex.desktop-native.plist",
-    "~/Library/Saved Application State/dev.petdex.desktop-native.savedState",
-    "~/Library/WebKit/dev.petdex.desktop-native",
+    "~/.petdex",
+    "~/Library/Application Support/dev.petdex.desktop-native",
+    "~/Library/Logs/dev.petdex.desktop-native",
   ]
 end
