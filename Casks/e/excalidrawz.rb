@@ -18,6 +18,8 @@ cask "excalidrawz" do
 
   app "ExcalidrawZ.app"
 
+  uninstall quit: "com.chocoford.excalidraw"
+
   zap trash: [
     "~/Library/Application Scripts/com.chocoford.excalidraw",
     "~/Library/Containers/com.chocoford.excalidraw",
