@@ -34,6 +34,8 @@ cask "ghostty@tip" do
   fish_completion "#{appdir}/Ghostty.app/Contents/Resources/fish/vendor_completions.d/ghostty.fish"
   zsh_completion "#{appdir}/Ghostty.app/Contents/Resources/zsh/site-functions/_ghostty"
 
+  uninstall quit: "com.mitchellh.ghostty"
+
   zap trash: [
     "~/.cache/ghostty",
     "~/.config/ghostty",
