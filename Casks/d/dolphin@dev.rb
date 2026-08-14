@@ -26,6 +26,8 @@ cask "dolphin@dev" do
 
   app "Dolphin.app"
 
+  uninstall quit: "org.dolphin-emu.dolphin"
+
   zap trash: [
     "~/Library/Application Support/Dolphin",
     "~/Library/Preferences/org.dolphin-emu.dolphin.plist",
