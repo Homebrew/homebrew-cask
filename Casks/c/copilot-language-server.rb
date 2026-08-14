@@ -2,11 +2,11 @@ cask "copilot-language-server" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "1.531.0"
-  sha256 arm:          "1cea180c2a349c173fc4eda22176249d5500b1bda48e3855d192e3e04c368ef4",
-         intel:        "e7a0efcaf9a1e804d504cb2f48242ffd97612c9d5b2e3dcf457c6ae2dbc8f249",
-         arm64_linux:  "e0a30bd7de0956e11ca982ee09d9f698eac780f5336f061dee6e6ee2edcde4fc",
-         x86_64_linux: "7c5ca824c4a8f10583199aa014db21c55ff7cc9e55cb408dc7429d5b42f88a7b"
+  version "1.532.0"
+  sha256 arm:          "3e4acbba1880fd329399e784d71d9e43b9a1d498efba680520662890c61a0f38",
+         intel:        "0e01557efeb9ffefc9193a23ffee3aa12ec90d10cbe5ab289ac2aa6ce5e7e8ce",
+         arm64_linux:  "2f246da1970cf4a505722ce6fb0a1a6d00a1539886b1dbe7cf31204d75e871e7",
+         x86_64_linux: "5b3fece111898a3ac3a167cdc9ddf47f78bd6855f35fa5e627b00a50efc28d7a"
 
   on_macos do
     depends_on macos: :big_sur
