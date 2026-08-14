@@ -18,6 +18,8 @@ cask "canario" do
 
   app "Canario.app"
 
+  uninstall quit: "com.raphaelamorim.canario"
+
   zap trash: [
     "~/Library/Application Support/canario",
     "~/Library/Caches/com.raphaelamorim.canario",
