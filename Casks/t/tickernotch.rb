@@ -1,6 +1,6 @@
 cask "tickernotch" do
-  version "1.8.1"
-  sha256 "faebd7f7cfa01655171ab9110a584c11643d62cc40581fef14568e33821d98c3"
+  version "1.8.3"
+  sha256 "12ddc80da09e782145596dd8a458167b7cd4ebbea4f77fa01bd8589869993b90"
 
   url "https://bitvibelabs.com/tickernotch/TickerNotch-v#{version}.dmg"
   name "TickerNotch"
