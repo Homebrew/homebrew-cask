@@ -16,6 +16,8 @@ cask "metashapepro" do
 
   app "MetashapePro.app"
 
+  uninstall quit: "com.agisoft.metashape.professional"
+
   zap trash: [
     "~/Library/Preferences/com.agisoft.Metashape Pro.plist",
     "~/Library/Saved Application State/com.agisoft.metashape.professional.savedState",
