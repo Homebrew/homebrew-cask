@@ -23,5 +23,6 @@ cask "sina-finance" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sina.stock.desktop.sfl*",
     "~/Library/Preferences/com.sina.stock.desktop.plist",
+    "~/Library/Saved Application State/com.sina.stock.desktop.savedState",
   ]
 end
