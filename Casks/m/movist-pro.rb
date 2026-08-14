@@ -18,6 +18,8 @@ cask "movist-pro" do
 
   app "Movist Pro.app"
 
+  uninstall quit: "com.movist.MovistPro"
+
   zap trash: [
     "~/Library/Application Scripts/com.movist.MovistPro.MovistSafariExtension",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.movist.movistpro.sfl*",
