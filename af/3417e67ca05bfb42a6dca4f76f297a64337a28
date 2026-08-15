@@ -1,0 +1,19 @@
+Casks/n/nostalgiapp.rb
+  s_fe76e028e78b4e::t_eb436360c34556 30-31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "af3417e67ca05bfb42a6dca4f76f297a64337a28",
+  "prompts": {},
+  "sessions": {
+    "s_fe76e028e78b4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "82c49e9a-8779-4a72-956d-16c438f82138",
+        "model": "unknown"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
