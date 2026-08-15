@@ -18,9 +18,12 @@ cask "superlist" do
 
   app "Superlist.app"
 
+  uninstall quit: "com.superlist.superlist"
+
   zap trash: [
     "~/Library/Application Support/com.superlist.superlist*",
     "~/Library/Caches/com.superlist.superlist*",
+    "~/Library/Caches/superlist_sounds",
     "~/Library/HTTPStorages/com.superlist.superlist*",
     "~/Library/Preferences/com.superlist.superlist*.plist",
     "~/Library/Preferences/group.com.superlist.superlist.firebase.plist",
