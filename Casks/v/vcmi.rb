@@ -1,9 +1,9 @@
 cask "vcmi" do
   arch arm: "arm", intel: "intel"
 
-  version "1.7.4"
-  sha256 arm:   "cf6a142313265b4078e053d3c7c250d6136d46741f6dc51c3cbe0faff7f6ea03",
-         intel: "d2e427df80ea10fa1e118125a93554fbae7302aec04e5e70a28d89e0cb13c480"
+  version "1.7.5"
+  sha256 arm:   "b56b55d0671ae604effb12d0394b74a552f203426cafa165f82488505fb465e3",
+         intel: "613f7e9c2d515e10ff1eae77bab236308cf5bd08b68ff3d1b65cb7a16cde0ef6"
 
   on_arm do
     depends_on macos: :big_sur
