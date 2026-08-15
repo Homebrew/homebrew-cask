@@ -12,6 +12,8 @@ cask "lumide" do
 
   app "Lumide.app"
 
+  uninstall quit: "io.sofluffy.lumide"
+
   zap trash: [
     "~/Library/Application Support/io.sofluffy.lumide",
     "~/Library/Caches/io.sofluffy.lumide",
