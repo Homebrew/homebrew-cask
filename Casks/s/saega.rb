@@ -4,8 +4,8 @@
 cask "saega" do
   arch arm: "arm64"
 
-  version "1.0.16"
-  sha256 "230afad610a2be220a63cd75e4ecce97ab396bc525009c6d578c42ed67970c00"
+  version "1.0.17"
+  sha256 "1e0f2959ed6a36b21cc9fc165d4aecebf37f4c3b6283107b8ed5fff03ed6b07e"
 
   url "https://storage.googleapis.com/saega-downloads/Saega-#{version}.dmg"
   name "Saega"
