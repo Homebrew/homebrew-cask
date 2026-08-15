@@ -9,7 +9,9 @@ cask "rcmd" do
 
   livecheck do
     url "https://files.lowtechguys.com/rcmd/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
