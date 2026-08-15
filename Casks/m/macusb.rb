@@ -11,6 +11,8 @@ cask "macusb" do
 
   app "macUSB.app"
 
+  uninstall quit: "com.kruszoneq.macUSB"
+
   zap trash: [
     "~/Library/Application Support/macUSB",
     "~/Library/Caches/com.kruszoneq.macusb",
