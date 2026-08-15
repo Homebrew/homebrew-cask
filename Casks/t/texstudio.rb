@@ -17,6 +17,8 @@ cask "texstudio" do
 
   app "texstudio-#{version}-osx#{arch}.app"
 
+  uninstall quit: "texstudio"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texstudio.sfl*",
     "~/Library/Preferences/texstudio.plist",
