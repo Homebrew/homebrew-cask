@@ -17,6 +17,8 @@ cask "meta" do
 
   app "Meta.app"
 
+  uninstall quit: "com.nightbirdsevolve.Meta"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nightbirdsevolve.meta.sfl*",
     "~/Library/Application Support/Meta",
