@@ -1,0 +1,19 @@
+Casks/s/sequel-ace.rb
+  s_fe76e028e78b4e::t_7ae71ca5417fa9 24-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "f6a0613588cadd9bb81b85794e77e26545dd6499",
+  "prompts": {},
+  "sessions": {
+    "s_fe76e028e78b4e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "82c49e9a-8779-4a72-956d-16c438f82138",
+        "model": "unknown"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
