@@ -1,6 +1,6 @@
 cask "superlist" do
-  version "1.56.4"
-  sha256 "a938c8626051d23276c9777a46368221822107d0e57365ecfa14757707595ca1"
+  version "1.57.0"
+  sha256 "441ab74c2eb9b885243a8884c40d5356ea74f8d9e58e1611daea22885b2ba3d4"
 
   url "https://storage.googleapis.com/superlist-appcast/beta/updates/Superlist-#{version}.zip",
       verified: "storage.googleapis.com/superlist-appcast/beta/updates/"
@@ -18,9 +18,12 @@ cask "superlist" do
 
   app "Superlist.app"
 
+  uninstall quit: "com.superlist.superlist"
+
   zap trash: [
     "~/Library/Application Support/com.superlist.superlist*",
     "~/Library/Caches/com.superlist.superlist*",
+    "~/Library/Caches/superlist_sounds",
     "~/Library/HTTPStorages/com.superlist.superlist*",
     "~/Library/Preferences/com.superlist.superlist*.plist",
     "~/Library/Preferences/group.com.superlist.superlist.firebase.plist",
