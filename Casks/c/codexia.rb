@@ -1,9 +1,9 @@
 cask "codexia" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.42.2"
-  sha256 arm:   "f86dc04fcfae57c0daf7523ad7ff99ec7c11439345cb59d12ca00ec2bc97dd3b",
-         intel: "7f05a88de4e0072292a5f9bc6d9aa3121cc2458e0ffad04abc10dfe030a3a90b"
+  version "0.44.0"
+  sha256 arm:   "484398949440ac8993212696d447d4c34a4eb9e49470e6d67e888f627d11deff",
+         intel: "f4a8bbf9a0b72879a7d7f764cc42be08f01c0ecff5e34375c72d4cfe14c23be1"
 
   url "https://github.com/milisp/codexia/releases/download/v#{version}/codexia_#{version}_#{arch}.dmg"
   name "Codexia"
@@ -17,7 +17,7 @@ cask "codexia" do
 
   depends_on :macos
 
-  app "Codexia.app"
+  app "codexia.app"
 
   zap trash: [
     "~/.codexia",
