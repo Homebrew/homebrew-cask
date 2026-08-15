@@ -27,6 +27,8 @@ cask "nostalgiapp" do
 
   app "NostalgiApp.app"
 
+  uninstall quit: "com.nostalgi.app"
+
   zap trash: [
     "~/Library/Application Support/NostalgiApp",
     "~/Library/Caches/com.nostalgi.app",
