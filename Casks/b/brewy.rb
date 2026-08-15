@@ -18,6 +18,8 @@ cask "brewy" do
 
   app "Brewy.app"
 
+  uninstall quit: "io.linnane.brewy"
+
   zap trash: [
     "~/Library/Application Scripts/io.linnane.Brewy",
     "~/Library/Application Support/Brewy",
