@@ -21,6 +21,8 @@ cask "sequel-ace" do
 
   app "Sequel Ace.app"
 
+  uninstall quit: "com.sequel-ace.sequel-ace"
+
   zap trash: [
     "~/Library/Application Support/Sequel Ace",
     "~/Library/Caches/com.sequelace.SequelAce",
