@@ -15,8 +15,9 @@ cask "macusb" do
 
   zap trash: [
     "~/Library/Application Support/macUSB",
-    "~/Library/Caches/com.kruszoneq.macusb",
-    "~/Library/Preferences/com.kruszoneq.macusb.plist",
+    "~/Library/Caches/com.kruszoneq.macUSB",
+    "~/Library/HTTPStorages/com.kruszoneq.macUSB*",
+    "~/Library/Preferences/com.kruszoneq.macUSB.plist",
     "~/Library/Saved Application State/com.kruszoneq.macusb.savedState",
   ]
 end
