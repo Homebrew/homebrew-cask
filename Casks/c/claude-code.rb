@@ -4,7 +4,7 @@ cask "claude-code" do
 
   version "2.1.223"
   sha256 arm:          "fcbe0b8d47570c501302dd1ad31cc26ac2810f022c45fa253936a6961dee32bf",
-         x86_64:       "350e657428a6d34f7cf71f6738c5ebb6a1952ccb12fc1747f64297e065b1846f",
+         intel:        "350e657428a6d34f7cf71f6738c5ebb6a1952ccb12fc1747f64297e065b1846f",
          arm64_linux:  "60e83d8db0e894d0e54413e5e7daa256d180db660f51e139a51b614fc30cf3ac",
          x86_64_linux: "98226474f802e3094d6a86c5ade8883c16206d0fcb5c400b7401c800063e99d7"
 
