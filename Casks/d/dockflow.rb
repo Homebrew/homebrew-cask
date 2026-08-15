@@ -18,6 +18,8 @@ cask "dockflow" do
 
   app "DockFlow.app"
 
+  uninstall quit: "com.appit.DockFlow"
+
   zap trash: [
     "~/Library/Application Support/DockFlow",
     "~/Library/Group Containers/com.appit.DockFlowGroup",
