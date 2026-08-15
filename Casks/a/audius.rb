@@ -2,8 +2,8 @@ cask "audius" do
   arch arm: "-arm64"
 
   on_arm do
-    version "1.5.161"
-    sha256 "5ced8f562a65dfa8f5ce7310788792c943d61c326a3b1fae8fbcacd47f62d2e0"
+    version "1.5.180"
+    sha256 "20eab1e665aa6670d67e8eb28d9473a831de156028e7698ba70299c145886461"
 
     livecheck do
       url "https://download.audius.co/latest-mac.yml"
