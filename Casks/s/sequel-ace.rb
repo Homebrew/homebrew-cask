@@ -24,9 +24,9 @@ cask "sequel-ace" do
   uninstall quit: "com.sequel-ace.sequel-ace"
 
   zap trash: [
-    "~/Library/Application Support/Sequel Ace",
-    "~/Library/Caches/com.sequelace.SequelAce",
-    "~/Library/Preferences/com.sequelace.SequelAce.plist",
-    "~/Library/Saved Application State/com.sequelace.SequelAce.savedState",
+    "~/Library/Application Scripts/com.sequel-ace.sequel-ace",
+    "~/Library/Application Scripts/NKQ4HJ66PX.sequel-ace",
+    "~/Library/Containers/com.sequel-ace.sequel-ace",
+    "~/Library/Group Containers/NKQ4HJ66PX.sequel-ace",
   ]
 end
