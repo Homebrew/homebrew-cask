@@ -18,6 +18,8 @@ cask "extradock" do
 
   app "ExtraDock.app"
 
+  uninstall quit: "dignicy.extraDock"
+
   zap trash: [
     "~/Library/Application Support/ExtraDock",
     "~/Library/Caches/dignicy.extraDock",
