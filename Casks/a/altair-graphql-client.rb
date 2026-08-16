@@ -10,7 +10,7 @@ cask "altair-graphql-client" do
          x86_64_linux: "f12d800ec9cfa1f5153bcbd41a1da9152edfe76141dced42c9e188570d1213aa"
 
   on_macos do
-    depends_on macos: :big_sur
+    depends_on macos: :monterey
 
     app "Altair GraphQL Client.app"
 
