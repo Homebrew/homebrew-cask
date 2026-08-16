@@ -1,4 +1,6 @@
 cask "freac" do
+  arch arm: "aarch64", intel: "x86_64"
+
   version "1.1.7"
 
   on_catalina :or_older do
@@ -33,18 +35,40 @@ cask "freac" do
       end
     end
   end
+  on_macos do
+    app "freac.app"
+
+    uninstall quit: "org.freac.freac"
+
+    zap trash: [
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.freac.freac.sfl*",
+      "~/Library/Caches/freac",
+      "~/Library/Preferences/freac",
+      "~/Library/Preferences/org.freac.freac.plist",
+      "~/Library/Saved Application State/org.freac.freac.savedState",
+    ]
+  end
+  on_linux do
+    sha256 arm64_linux:  "027a53acf9c083edaada7d9225d6b75b69020a8beec0b99e65e950a19716e37e",
+           x86_64_linux: "17d5d8ee6c3a0498e1639d002ff64ee557fe3c9f4b347996107d8755ea91f2d6"
+
+    url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version}-linux-#{arch}.AppImage",
+        verified: "github.com/enzo1982/freac/"
+
+    livecheck do
+      url "https://www.freac.org/downloads-mainmenu-33"
+      regex(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)[._-]linux[._-]x86_64\.AppImage}i)
+      strategy :page_match do |page, regex|
+        page.scan(regex).map do |match|
+          match[1].blank? ? match[0] : "#{match[0]},#{match[1]}"
+        end
+      end
+    end
+
+    app_image "freac-#{version}-linux-#{arch}.AppImage", target: "freac.AppImage"
+  end
 
   name "fre:ac"
   desc "Audio converter and CD ripper"
   homepage "https://www.freac.org/"
-
-  depends_on :macos
-
-  app "freac.app"
-
-  zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.freac.freac.sfl*",
-    "~/Library/Preferences/org.freac.freac.plist",
-    "~/Library/Saved Application State/org.freac.freac.savedState",
-  ]
 end
