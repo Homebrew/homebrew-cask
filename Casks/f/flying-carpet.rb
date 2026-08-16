@@ -1,8 +1,40 @@
 cask "flying-carpet" do
   version "10.0.4,10.0.0"
-  sha256 "b6db75afed626081275fd56215330fcfaf16af3070ddcfeda09c91a8c9ba2771"
 
-  url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version.csv.second || version.csv.first}/macOS_FlyingCarpet_#{version.csv.first}.zip"
+  on_macos do
+    sha256 "b6db75afed626081275fd56215330fcfaf16af3070ddcfeda09c91a8c9ba2771"
+
+    url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version.csv.second || version.csv.first}/macOS_FlyingCarpet_#{version.csv.first}.zip"
+
+    depends_on macos: :ventura
+
+    app "FlyingCarpet.app"
+
+    zap trash: [
+      "~/Library/Application Scripts/dev.spiegl.FlyingCarpet",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.spiegl.flyingcarpet.sfl*",
+      "~/Library/Caches/dev.spiegl",
+      "~/Library/Containers/dev.spiegl.FlyingCarpet",
+      "~/Library/Preferences/com.yourcompany.flyingcarpet.plist",
+      "~/Library/Preferences/dev.spiegl.plist",
+      "~/Library/Saved Application State/com.yourcompany.flyingcarpet.savedState",
+      "~/Library/Saved Application State/dev.spiegl.savedState",
+      "~/Library/WebKit/dev.spiegl",
+    ]
+  end
+  on_linux do
+    sha256 "21a056e19d3a4cc0e6aa3d4c1053c0daeeca82e2c35adcae486fac127323c0aa"
+
+    # Upstream only refreshes the macOS zip in place; the Linux asset keeps the
+    # release tag's version, so it cannot share a url with the macOS one.
+    url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version.csv.second || version.csv.first}/linux_FlyingCarpet_#{version.csv.second || version.csv.first}_amd64.AppImage"
+
+    depends_on arch: :x86_64
+
+    app_image "linux_FlyingCarpet_#{version.csv.second || version.csv.first}_amd64.AppImage",
+              target: "FlyingCarpet.AppImage"
+  end
+
   name "Flying Carpet"
   desc "File transfer over ad-hoc wifi"
   homepage "https://github.com/spieglt/flyingcarpet"
@@ -29,20 +61,4 @@ cask "flying-carpet" do
       end.flatten
     end
   end
-
-  depends_on macos: :ventura
-
-  app "FlyingCarpet.app"
-
-  zap trash: [
-    "~/Library/Application Scripts/dev.spiegl.FlyingCarpet",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.spiegl.flyingcarpet.sfl*",
-    "~/Library/Caches/dev.spiegl",
-    "~/Library/Containers/dev.spiegl.FlyingCarpet",
-    "~/Library/Preferences/com.yourcompany.flyingcarpet.plist",
-    "~/Library/Preferences/dev.spiegl.plist",
-    "~/Library/Saved Application State/com.yourcompany.flyingcarpet.savedState",
-    "~/Library/Saved Application State/dev.spiegl.savedState",
-    "~/Library/WebKit/dev.spiegl",
-  ]
 end
