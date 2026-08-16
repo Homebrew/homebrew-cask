@@ -1,9 +1,9 @@
 cask "codexia" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.44.0"
-  sha256 arm:   "484398949440ac8993212696d447d4c34a4eb9e49470e6d67e888f627d11deff",
-         intel: "f4a8bbf9a0b72879a7d7f764cc42be08f01c0ecff5e34375c72d4cfe14c23be1"
+  version "0.45.0"
+  sha256 arm:   "5163a98a36138aaab9f16aa2fc85c9ba710f65628e7e7ccb9d1a3e2a7fbf5197",
+         intel: "00c12d951efcc42c1cc113c7ac1675070464b67425a270ef4ef4cb07040fcfce"
 
   url "https://github.com/milisp/codexia/releases/download/v#{version}/codexia_#{version}_#{arch}.dmg"
   name "Codexia"
