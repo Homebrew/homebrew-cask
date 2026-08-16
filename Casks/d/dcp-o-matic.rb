@@ -16,5 +16,7 @@ cask "dcp-o-matic" do
 
   app "DCP-o-matic #{version.major}.app"
 
+  uninstall quit: "com.dcpomatic"
+
   zap trash: "~/Library/Preferences/com.dcpomatic"
 end
