@@ -1,6 +1,6 @@
 cask "switchy" do
-  version "1.1.5,79"
-  sha256 "4e7826563ee44c335a9e483ef85afc58d12b40a7df2a7f2b44161cbc5ca27e41"
+  version "1.1.5,81"
+  sha256 "7d7c813a7a69e99d06f2f96dd6dcba215d110f10ade7aa95b811828d8644582b"
 
   url "https://github.com/benhursenabathi/mangobuns/releases/download/switchy-v#{version.csv.first}-build#{version.csv.second}/Switchy-#{version.csv.first}.dmg"
   name "Switchy"
