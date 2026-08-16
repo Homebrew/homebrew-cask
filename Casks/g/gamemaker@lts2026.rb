@@ -3,16 +3,15 @@ cask "gamemaker@lts2026" do
   sha256 "1b69aa2fedb0f29ae1e9e7e2500ba29dfadacf6fa2a022d03041f72080603c6e"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg"
-  name "GameMaker LTS 2026"
-  desc "Complete development tool for making 2D games (LTS 2026)"
+  name "GameMaker LTS #{version.major}"
+  desc "Complete development tool for making 2D games (LTS #{version.major})"
   homepage "https://gamemaker.io/"
 
   livecheck do
-    url "https://gms.yoyogames.com/update-mac-LTS2026.rss"
+    url "https://gms.yoyogames.com/update-mac-LTS#{version.major}.rss"
     strategy :sparkle
   end
 
-  auto_updates false
   depends_on :macos
 
   pkg "GameMaker-#{version}.pkg"
@@ -22,20 +21,20 @@ cask "gamemaker@lts2026" do
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
     terminate_process(
-      "/Applications/GameMaker LTS 2026.app",
+      "/Applications/GameMaker LTS #{version.major}.app",
       match:           :full,
       attempts:        3,
       must_succeed:    false,
       notices:         [
         "The GameMaker package postinstall script launches the GameMaker app",
-        "Attempting to close com.yoyogames.gm-lts2026 to avoid unwanted user intervention",
+        "Attempting to close com.yoyogames.gm-lts#{version.major} to avoid unwanted user intervention",
       ],
-      failure_message: "Unable to forcibly close GameMaker LTS 2026.app",
+      failure_message: "Unable to forcibly close GameMaker LTS #{version.major}.app",
     )
   end
 
-  uninstall pkgutil: "com.yoyogames.gm-lts2026",
-            delete:  "/Applications/GameMaker LTS 2026.app"
+  uninstall pkgutil: "com.yoyogames.gm-lts#{version.major}",
+            delete:  "/Applications/GameMaker LTS #{version.major}.app"
 
-  zap trash: "/Users/Shared/GameMaker-LTS2026"
+  zap trash: "/Users/Shared/GameMaker-LTS#{version.major}"
 end
