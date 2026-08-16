@@ -2,8 +2,7 @@ cask "movist-pro" do
   version "2.17.3"
   sha256 "5fa40da5bf6d2b791edb2cfd773cc2bbe5ca54b02a33db31c06c49bb2b63d2f8"
 
-  url "https://update.cocoable.com/MovistPro_#{version}.dmg",
-      verified: "update.cocoable.com/"
+  url "https://update.cocoable.com/MovistPro_#{version}.dmg"
   name "Movist Pro"
   desc "Media player"
   homepage "https://movistprime.com/"
