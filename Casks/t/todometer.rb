@@ -1,7 +1,7 @@
 cask "todometer" do
   on_arm do
-    version "3.0.2"
-    sha256 "6b2c744110738c19e650c6578f472a56a849d9394352b5517c8b358fabd6f264"
+    version "3.0.3"
+    sha256 "862cdb44d5fc006d2c858add489c5c17796e4dbad7df154dd79f4c69ffd258da"
 
     url "https://github.com/cassidoo/todometer/releases/download/v#{version}/todometer-#{version}-arm64-mac.zip",
         verified: "github.com/cassidoo/todometer/"
