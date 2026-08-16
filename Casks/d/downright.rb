@@ -2,11 +2,10 @@ cask "downright" do
   version "1.0.16,186,27a82e3183d1db27b292947eb4b64618e7a2a920"
   sha256 "ce60c6fd3076c71e1b40dfbb2fced147155236a0eb7a0922b2dde9206f375428"
 
-  url "https://github.com/ezzy1630/Downright/releases/download/auto-#{version.csv.third}/Downright-#{version.csv.first}-#{version.csv.second}-#{version.csv.third[0, 12]}.dmg",
-      verified: "github.com/ezzy1630/Downright/"
+  url "https://github.com/ezzy1630/Downright/releases/download/auto-#{version.csv.third}/Downright-#{version.csv.first}-#{version.csv.second}-#{version.csv.third[0, 12]}.dmg"
   name "Downright"
   desc "Native Markdown reader and editor"
-  homepage "https://downright.cc/"
+  homepage "https://github.com/ezzy1630/Downright/"
 
   livecheck do
     url :url
