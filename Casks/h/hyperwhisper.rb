@@ -23,6 +23,8 @@ cask "hyperwhisper" do
 
   app "HyperWhisper.app"
 
+  uninstall quit: "com.hyperwhisper.hyperwhisper"
+
   zap trash: [
     "~/Library/Application Support/HyperWhisper",
     "~/Library/Caches/com.hyperwhisper.hyperwhisper",
