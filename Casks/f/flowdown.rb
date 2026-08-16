@@ -18,6 +18,8 @@ cask "flowdown" do
 
   app "FlowDown.app"
 
+  uninstall quit: "wiki.qaq.flow"
+
   zap trash: [
     "~/Library/Containers/wiki.qaq.flow.FlowDownWidget",
     "~/Library/Containers/wiki.qaq.FlowDown.Community",
