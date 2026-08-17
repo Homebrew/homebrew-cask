@@ -31,7 +31,8 @@ cask "obs" do
   command_wrapper "obs",
                   executable: "#{appdir}/OBS.app/Contents/MacOS/OBS"
 
-  uninstall delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
+  uninstall quit:   "com.obsproject.obs-studio",
+            delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
 
   zap trash: [
     "~/Library/Application Support/obs-studio",
