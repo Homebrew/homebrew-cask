@@ -18,7 +18,7 @@ cask "airbuddy" do
   app "AirBuddy.app"
 
   zap trash: [
-    "~/Library/Application Scripts/*.group.codes.rambo.AirBuddy"
+    "~/Library/Application Scripts/*.group.codes.rambo.AirBuddy",
     "~/Library/Application Scripts/codes.rambo.AirBuddy*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/codes.rambo.airbuddyhelper.sfl*",
     "~/Library/Caches/codes.rambo.AirBuddy",
