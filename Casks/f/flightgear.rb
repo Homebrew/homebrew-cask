@@ -17,5 +17,7 @@ cask "flightgear" do
 
   app "FlightGear.app"
 
+  uninstall quit: "org.flightgear.mac"
+
   zap trash: "~/Library/Application Support/FlightGear"
 end
