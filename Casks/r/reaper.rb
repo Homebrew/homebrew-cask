@@ -16,6 +16,8 @@ cask "reaper" do
 
   app "REAPER.app"
 
+  uninstall quit: "com.cockos.reaper"
+
   zap trash: [
     "~/Library/Application Support/REAPER",
     "~/Library/Preferences/com.cockos.reaper.plist",
