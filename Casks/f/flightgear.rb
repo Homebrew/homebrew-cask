@@ -1,6 +1,6 @@
 cask "flightgear" do
-  version "2024.1.6"
-  sha256 "44aa39c6344b17d2186d853c51387bc27336b3f763dca37a167b38cad3ffbeb7"
+  version "2024.1.7"
+  sha256 "302e9e068342eed1aac6808b2966b5b0e70fa40cef4bb92bddfef709d098d6fc"
 
   url "https://mirrors.ibiblio.org/flightgear/ftp/release-#{version.major_minor}/flightgear-#{version}-macos-universal.dmg",
       verified: "mirrors.ibiblio.org/flightgear/"
@@ -16,6 +16,8 @@ cask "flightgear" do
   depends_on :macos
 
   app "FlightGear.app"
+
+  uninstall quit: "org.flightgear.mac"
 
   zap trash: "~/Library/Application Support/FlightGear"
 end
