@@ -17,6 +17,8 @@ cask "diskcatalogmaker" do
 
   app "DiskCatalogMaker.app"
 
+  uninstall quit: "com.mac.fujisoft.DiskCatalogMaker"
+
   zap trash: [
     "~/Library/Application Support/com.mac.fujisoft.DiskCatalogMaker",
     "~/Library/Application Support/DiskCatalogMaker",
