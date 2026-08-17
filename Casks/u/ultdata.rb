@@ -17,6 +17,8 @@ cask "ultdata" do
 
   app "UltData.app"
 
+  uninstall quit: "com.tenorshare.TenorshareUltData"
+
   zap trash: [
     "~/Library/Application Support/com.tenorshare.TenorshareUltData",
     "~/Library/Application Support/UltData",
