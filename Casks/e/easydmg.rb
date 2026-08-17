@@ -18,9 +18,9 @@ cask "easydmg" do
   app "EasyDMG.app"
   
   zap trash: [
-    "~/Library/Preferences/com.jeff.easydmg.plist",
     "~/Library/HTTPStorages/com.jeff.easydmg",
     "~/Library/Logs/EasyDMG",
+    "~/Library/Preferences/com.jeff.easydmg.plist",
     "~/Library/Saved Application State/com.jeff.easydmg.savedState",
   ]
 end
