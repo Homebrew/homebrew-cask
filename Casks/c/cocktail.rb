@@ -81,6 +81,8 @@ cask "cocktail" do
 
   app "Cocktail.app"
 
+  uninstall quit: "com.maintain.cocktail.ventura165"
+
   zap trash: [
     "~/Library/Logs/Cocktail.log",
     "~/Library/Preferences/com.maintain.cocktail.*.plist",
