@@ -4,7 +4,7 @@ cask "easydmg" do
 
   url "https://github.com/jeff-schumann/EasyDMG/releases/download/v#{version}/EasyDMG.dmg"
   name "EasyDMG"
-  desc "Automate DMG installation on macOS"
+  desc "One click DMG installs"
   homepage "https://easydmg.app/"
 
   livecheck do
@@ -13,8 +13,14 @@ cask "easydmg" do
   end
 
   auto_updates true
-  
   depends_on macos: :ventura
 
   app "EasyDMG.app"
+  
+  zap trash: [
+    "~/Library/Preferences/com.jeff.easydmg.plist",
+    "~/Library/HTTPStorages/com.jeff.easydmg",
+    "~/Library/Logs/EasyDMG",
+    "~/Library/Saved Application State/com.jeff.easydmg.savedState",
+  ]
 end
