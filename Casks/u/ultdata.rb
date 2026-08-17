@@ -1,5 +1,5 @@
 cask "ultdata" do
-  version "10.4.3.1"
+  version "10.5.0.26"
   sha256 :no_check
 
   url "https://download.tenorshare.com/downloads/ultdata-ios-mac.dmg"
@@ -16,6 +16,8 @@ cask "ultdata" do
   depends_on :macos
 
   app "UltData.app"
+
+  uninstall quit: "com.tenorshare.TenorshareUltData"
 
   zap trash: [
     "~/Library/Application Support/com.tenorshare.TenorshareUltData",
