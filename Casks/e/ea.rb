@@ -20,7 +20,8 @@ cask "ea" do
 
   app "EA app.app"
 
-  uninstall launchctl: "com.ea.app.backgroundAgent"
+  uninstall launchctl: "com.ea.app.backgroundAgent",
+            quit:      "com.ea.mac.eaapp"
 
   zap delete: [
         "/Library/Application Support/Electronic Arts",
