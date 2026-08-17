@@ -26,6 +26,8 @@ cask "defold" do
 
   app "Defold.app"
 
+  uninstall quit: "com.defold.editor"
+
   zap trash: [
     "~/Library/Application Support/Defold",
     "~/Library/Caches/com.defold.editor",
