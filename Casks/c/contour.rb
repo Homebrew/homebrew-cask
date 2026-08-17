@@ -6,9 +6,15 @@ cask "contour" do
 
   on_arm do
     version "0.7.0.8982"
+
+    depends_on macos: :ventura
   end
   on_intel do
     version "0.6.1.7494"
+
+    disable! date: "2026-09-01", because: :fails_gatekeeper_check
+
+    depends_on macos: :sonoma
   end
 
   url "https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-macOS-#{arch}.dmg"
@@ -34,10 +40,6 @@ cask "contour" do
       end.flatten
     end
   end
-
-  disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
-  depends_on macos: :ventura
 
   app "contour.app"
   binary "#{appdir}/contour.app/Contents/MacOS/contour"
