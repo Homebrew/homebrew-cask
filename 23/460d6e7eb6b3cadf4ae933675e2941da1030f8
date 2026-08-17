@@ -1,0 +1,14 @@
+Casks/c/clickshare.rb
+  h_9df9c32c3f321d 31-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "23460d6e7eb6b3cadf4ae933675e2941da1030f8",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
