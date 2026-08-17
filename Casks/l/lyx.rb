@@ -29,6 +29,8 @@ cask "lyx" do
   binary "#{appdir}/LyX.app/Contents/MacOS/maxima", target: "lyx-maxima"
   binary "#{appdir}/LyX.app/Contents/MacOS/tex2lyx"
 
+  uninstall quit: "org.lyx.lyx"
+
   zap trash: [
     "~/Library/Application Support/LyX-#{version.major_minor}",
     "~/Library/Caches/com.apple.python/Applications/LyX.app",
