@@ -1,10 +1,10 @@
 cask "bitbox" do
   url_end = on_system_conditional macos: "macOS.dmg", linux: "x86_64.AppImage"
 
-  version "4.51.3"
+  version "4.51.4"
 
   on_macos do
-    sha256 "cbc6c336a20a91d01fe530a966a130e6c1452ac01269134917d0d1d207044f30"
+    sha256 "b0acaacc07e25f0e6da6290133572c45c67c2267203863ceb98bddf70eb5ac6c"
 
     depends_on macos: :monterey
 
@@ -16,7 +16,7 @@ cask "bitbox" do
     ]
   end
   on_linux do
-    sha256 "b336263fb66ece1b17f0a22e42f5e565f4bb788ce30575d546ef5435bd502e9a"
+    sha256 "4a71cfeec7a42e95907dd08faad1032d6996364a10d77c3c06c9a6df4ebd3ba7"
 
     depends_on arch: :x86_64
 
