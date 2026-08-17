@@ -1,0 +1,14 @@
+Casks/d/diskcatalogmaker.rb
+  h_9df9c32c3f321d 20-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "68145f5c92bbd4af2b89eca1fe8c4e38eb351c8d",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
