@@ -18,15 +18,20 @@ cask "airbuddy" do
   app "AirBuddy.app"
 
   zap trash: [
+    "~/Library/Application Scripts/*.group.codes.rambo.AirBuddy"
     "~/Library/Application Scripts/codes.rambo.AirBuddy*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/codes.rambo.airbuddyhelper.sfl*",
     "~/Library/Caches/codes.rambo.AirBuddy",
     "~/Library/Caches/codes.rambo.AirCore",
     "~/Library/Containers/codes.rambo.AirBuddy*",
     "~/Library/Group Containers/*.group.codes.rambo.AirBuddy",
+    "~/Library/HTTPStorages/codes.rambo.AirBuddy",
     "~/Library/HTTPStorages/codes.rambo.AirBuddy.binarycookies",
     "~/Library/LaunchAgents/codes.rambo.AirBuddyHelper.plist",
+    "~/Library/Preferences/codes.rambo.AirBuddy.BluetoothClassicService.plist",
     "~/Library/Preferences/codes.rambo.AirBuddy.plist",
     "~/Library/SyncedPreferences/codes.rambo.AirBuddy.plist",
     "~/Library/SyncedPreferences/com.apple.kvs/ChangeTokens/NoEncryption/AirBuddy",
+    "~/Library/WebKit/codes.rambo.AirBuddy",
   ]
 end
