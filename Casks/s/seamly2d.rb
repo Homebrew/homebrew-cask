@@ -18,6 +18,8 @@ cask "seamly2d" do
 
   app "Seamly2D.app"
 
+  uninstall quit: "org.seamly2dproject.Seamly2D"
+
   zap trash: [
     "~/.config/Seamly2DTeam",
     "~/Library/Application Support/Seamly2D",
