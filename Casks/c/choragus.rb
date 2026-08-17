@@ -17,6 +17,8 @@ cask "choragus" do
 
   app "Choragus.app"
 
+  uninstall quit: "com.choragus.app"
+
   zap trash: [
     "~/Library/Application Scripts/com.choragus.app",
     "~/Library/Containers/com.choragus.app",
