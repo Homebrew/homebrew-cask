@@ -16,23 +16,28 @@ cask "gpgfrontend" do
         requires_rosetta
       end
     end
-    on_sonoma :or_newer do
+    on_sonoma do
+      macos_version = "14"
+
       version "2.2.1"
+      sha256 "b263c1e6576a3ec06e38379f433cbc1a86c99bcadd96214ba4ed96fd9f699873"
 
-      on_sonoma do
-        macos_version = "14"
-
-        sha256 "b263c1e6576a3ec06e38379f433cbc1a86c99bcadd96214ba4ed96fd9f699873"
+      livecheck do
+        skip "Legacy version"
       end
+    end
+    on_sequoia :or_newer do
+      version "2.2.2"
+
       on_sequoia do
         macos_version = "15"
 
-        sha256 "8b2999d223ca7c35691ece6a3eb80a6822f35ba9c29e60ba91f2d573885d17d8"
+        sha256 "1939548a9fa638c0393489bbb094c5d3e71aa1869e858bc926981c64e3220847"
       end
       on_tahoe :or_newer do
         macos_version = "26"
 
-        sha256 "4ef0ba76b0d0eae19be45efc3df53b8dcd3bfa5019cc436e160adb792660b554"
+        sha256 "e2503c724975578eec19d25bd34dd94f3281bd3c70b80bb40550cacff41be917"
       end
     end
   end
@@ -48,10 +53,18 @@ cask "gpgfrontend" do
       end
     end
     on_sequoia :or_newer do
-      macos_version = "15-intel"
+      version "2.2.2"
 
-      version "2.2.1"
-      sha256 "a174f0da40e53c49b6d9d2f9ec7fb28edce3831d9beed4bfd3453c1ac4bb387d"
+      on_sequoia do
+        macos_version = "15-intel"
+
+        sha256 "157ca3a73676c2aedeb3828d404a7baf633e1e8276e08d524ec3944de4ddfdcb"
+      end
+      on_tahoe :or_newer do
+        macos_version = "26-intel"
+
+        sha256 "5de9cd993b4a90e818e9c1c746fba3828840388d25392d729774c93c654679ea"
+      end
     end
   end
 
@@ -65,6 +78,8 @@ cask "gpgfrontend" do
   depends_on macos: :ventura
 
   app "GpgFrontend.app"
+
+  uninstall quit: "com.bktus.gpgfrontend"
 
   zap trash: [
     "~/Library/Application Scripts/pub.gpgfrontend.gpgfrontend",
