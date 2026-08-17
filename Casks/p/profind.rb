@@ -1,6 +1,6 @@
 cask "profind" do
-  version "1.40"
-  sha256 "6608ff22b48e0d2a10a31b054a741be327e230d8c616311bf3f944a8f3e70ece"
+  version "1.41"
+  sha256 "384dd212746d79c374143468974b4f65cc0c7ad57c25ac9dc0917c61046bf969"
 
   url "https://www.zeroonetwenty.com/profind/downloads/ProFind#{version.major_minor.no_dots}.dmg"
   name "ProFind"
@@ -17,7 +17,8 @@ cask "profind" do
 
   app "ProFind.app"
 
-  uninstall launchctl: "com.zeroonetwenty.ProFindHelper"
+  uninstall launchctl: "com.zeroonetwenty.ProFindHelper",
+            quit:      "com.zeroonetwenty.ProFind"
 
   zap trash: [
     "~/Library/Application Scripts/com.zeroonetwenty.ProFind",
