@@ -1,6 +1,6 @@
 cask "db-browser-for-sqlcipher@nightly" do
   arch arm: "aarch64", intel: "x86.64"
-  os macos: "universal_", linux: ""
+  os macos: "universal_"
   url_end = on_system_conditional macos: ".dmg", linux: "-#{arch}.AppImage"
 
   version "20260810"
