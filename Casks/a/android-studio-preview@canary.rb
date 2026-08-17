@@ -29,6 +29,8 @@ cask "android-studio-preview@canary" do
   app "Android Studio Preview Canary.app"
   binary "#{appdir}/Android Studio Preview Canary.app/Contents/MacOS/studio", target: "studio-canary"
 
+  uninstall quit: "com.google.android.studio"
+
   zap trash: [
         "~/.android",
         "~/Library/Android/sdk",
