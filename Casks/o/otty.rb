@@ -28,6 +28,7 @@ cask "otty" do
     "~/.config/otty",
     "~/Library/Application Support/io.appmakes.otty",
     "~/Library/Caches/io.appmakes.otty",
+    "~/Library/Caches/otty",
     "~/Library/HTTPStorages/io.appmakes.otty",
     "~/Library/Preferences/io.appmakes.otty.plist",
     "~/Library/WebKit/io.appmakes.otty",
