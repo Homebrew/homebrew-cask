@@ -17,6 +17,8 @@ cask "perplexity" do
 
   app "Perplexity.app"
 
+  uninstall quit: "ai.perplexity.macv3"
+
   zap trash: [
     "~/Library/Application Support/ai.perplexity.macv3",
     "~/Library/Caches/ai.perplexity.macv3",
