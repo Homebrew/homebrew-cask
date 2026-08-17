@@ -1,9 +1,9 @@
 cask "longbridge-pro" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.38.7"
-  sha256 arm:   "1fdf1e93cf7a144869b6dda12fd7a5b44a8646edf81a5a647784dd06bb060add",
-         intel: "e776fdb96adf6e032092781886fe208bd2022846b4dd26a64942e6687651b455"
+  version "2.38.10"
+  sha256 arm:   "b13b44e00284390356addddd5edc972deeddc06efb63f5cbe730dad25d660c31",
+         intel: "cce3d5da8a2fb3e3b321bc7d24a553c6b31791efe910a6301961e4dd269dfcf4"
 
   url "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-#{version}-mac-#{arch}.dmg",
       verified: "download.lbkrs.com/longbridge-desktop/prod/"
@@ -19,6 +19,8 @@ cask "longbridge-pro" do
   depends_on macos: :big_sur
 
   app "Longbridge Pro.app"
+
+  uninstall quit: "global.longbridge.app.desktop"
 
   zap trash: [
     "~/Library/Application Support/Longbridge Pro",
