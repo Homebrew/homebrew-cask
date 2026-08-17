@@ -27,6 +27,8 @@ cask "android-studio-preview@beta" do
   app "Android Studio.app", target: "Android Studio Preview Beta.app"
   binary "#{appdir}/Android Studio Preview Beta.app/Contents/MacOS/studio", target: "studio-beta"
 
+  uninstall quit: "com.google.android.studio"
+
   zap trash: [
         "~/.android",
         "~/Library/Android/sdk",
