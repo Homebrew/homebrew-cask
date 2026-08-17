@@ -2,11 +2,11 @@ cask "codexia" do
   arch arm: "aarch64", intel: "x64"
   url_end = on_system_conditional macos: "#{arch}.dmg", linux: "amd64.AppImage"
 
-  version "0.45.0"
+  version "0.46.0"
 
   on_macos do
-    sha256 arm:   "5163a98a36138aaab9f16aa2fc85c9ba710f65628e7e7ccb9d1a3e2a7fbf5197",
-           intel: "00c12d951efcc42c1cc113c7ac1675070464b67425a270ef4ef4cb07040fcfce"
+    sha256 arm:   "49802727b0d04d429f727980be062c30d7aa6d6c99e970e19c9e8bcb7a3a2b5c",
+           intel: "214a002c41480c67a47215107210fe438eca37a88b617d3442c378da7bf2c3d6"
 
     app "codexia.app"
 
@@ -20,7 +20,7 @@ cask "codexia" do
     ]
   end
   on_linux do
-    sha256 "b32087dc57f07985390af822bd180bb5b52a8b3dfe56da865c6dd359cd0f2dca"
+    sha256 "34e85c6c1620de70ff839b8d9bbaf204b72164d8f9f2bd11224629c5621ae7b4"
 
     depends_on arch: :x86_64
 
