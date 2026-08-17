@@ -1,0 +1,14 @@
+Casks/p/perplexity.rb
+  h_9df9c32c3f321d 20-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "2bc01571e9fbb989e7dfb59488919b7b0b50d081",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
