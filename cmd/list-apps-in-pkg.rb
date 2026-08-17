@@ -80,7 +80,7 @@ module Homebrew
       end
 
       sig { returns(Pathname) }
-      def appdir = Pathname Cask::Config.defaults[:appdir].to_s
+      def appdir = Pathname(Cask::Config.defaults[:appdir].to_s)
     end
   end
 end
