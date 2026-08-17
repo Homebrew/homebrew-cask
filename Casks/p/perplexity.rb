@@ -1,5 +1,5 @@
 cask "perplexity" do
-  version "26.31.1"
+  version "26.32.0"
   sha256 :no_check
 
   url "https://macos-download.perplexity.ai/Perplexity.dmg"
@@ -16,6 +16,8 @@ cask "perplexity" do
   depends_on macos: :sequoia
 
   app "Perplexity.app"
+
+  uninstall quit: "ai.perplexity.macv3"
 
   zap trash: [
     "~/Library/Application Support/ai.perplexity.macv3",
