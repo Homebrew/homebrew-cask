@@ -79,6 +79,8 @@ cask "gpgfrontend" do
 
   app "GpgFrontend.app"
 
+  uninstall quit: "com.bktus.gpgfrontend"
+
   zap trash: [
     "~/Library/Application Scripts/pub.gpgfrontend.gpgfrontend",
     "~/Library/Application Support/GpgFrontend",
