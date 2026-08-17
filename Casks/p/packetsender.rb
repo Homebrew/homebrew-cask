@@ -20,5 +20,7 @@ cask "packetsender" do
 
   app "PacketSender.app"
 
+  uninstall quit: "com.packetsender.desktop"
+
   zap trash: "~/Library/Application Support/PacketSender"
 end
