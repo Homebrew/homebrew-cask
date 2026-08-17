@@ -62,7 +62,7 @@ cask "cocktail" do
     end
   end
   on_golden_gate :or_newer do
-    version "20.0"
+    version "20.0.2"
     sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}GG.dmg"
