@@ -20,6 +20,8 @@ cask "longbridge-pro" do
 
   app "Longbridge Pro.app"
 
+  uninstall quit: "global.longbridge.app.desktop"
+
   zap trash: [
     "~/Library/Application Support/Longbridge Pro",
     "~/Library/Caches/global.longbridge.app.desktop",
