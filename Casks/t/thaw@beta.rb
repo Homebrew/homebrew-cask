@@ -1,6 +1,6 @@
 cask "thaw@beta" do
-  version "2.0.0-rc.3"
-  sha256 "cfef620aacb399354879100272612c084c2592f43dddc1310bfcfd5531edcb88"
+  version "2.0.0-rc.4"
+  sha256 "8623e753dbd2ba4464ec1176970a07af3dd5d0c4714f240bf81b9a13ac052303"
 
   url "https://github.com/thaw-app/Thaw/releases/download/#{version}/Thaw_#{version}.zip"
   name "Thaw"
