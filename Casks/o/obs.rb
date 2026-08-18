@@ -25,7 +25,7 @@ cask "obs" do
 
   auto_updates true
   conflicts_with cask: "obs@beta"
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "OBS.app"
   command_wrapper "obs",
