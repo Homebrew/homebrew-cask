@@ -1,0 +1,19 @@
+Casks/o/obs.rb
+  s_4f4c44ce85d2d2::t_61a3d43d2ba8fe 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "2b3d0a9d923fab033ef39901128e50516b723979",
+  "prompts": {},
+  "sessions": {
+    "s_4f4c44ce85d2d2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ac267535-3de4-47a9-9add-1ab1f9532ede",
+        "model": "unknown"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
