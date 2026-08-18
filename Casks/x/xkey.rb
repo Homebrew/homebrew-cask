@@ -17,6 +17,8 @@ cask "xkey" do
 
   app "XKey.app"
 
+  uninstall quit: "com.codetay.XKey"
+
   zap trash: [
     "~/Library/Application Support/XKey",
     "~/Library/Preferences/com.codetay.XKey.plist",
