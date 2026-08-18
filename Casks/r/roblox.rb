@@ -28,7 +28,10 @@ cask "roblox" do
   # The default installer installs the application as `Roblox.app` - so do the same for consistency
   app "RobloxPlayer.app", target: "Roblox.app"
 
-  uninstall quit: "com.roblox.RobloxPlayer"
+  uninstall quit: [
+    "com.roblox.RobloxPlayer",
+    "com.roblox.RobloxPlayer.MenuBar",
+  ]
 
   zap trash: [
     "~/Library/HTTPStorages/com.roblox.RobloxPlayer.binarycookies",
