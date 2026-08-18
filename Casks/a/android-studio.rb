@@ -27,6 +27,8 @@ cask "android-studio" do
   app "Android Studio.app"
   binary "#{appdir}/Android Studio.app/Contents/MacOS/studio"
 
+  uninstall quit: "com.google.android.studio"
+
   zap trash: [
         "~/.android",
         "~/Library/Android/sdk",
