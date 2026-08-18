@@ -20,6 +20,8 @@ cask "rclone-ui" do
 
   app "Rclone UI.app"
 
+  uninstall quit: "com.rclone.ui"
+
   zap trash: [
     "~/Library/Application Support/com.rclone.ui",
     "~/Library/Caches/com.rclone.ui",
