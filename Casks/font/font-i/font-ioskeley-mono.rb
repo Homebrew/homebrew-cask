@@ -1,6 +1,6 @@
 cask "font-ioskeley-mono" do
-  version "2.0.0"
-  sha256 "dc37763fbb82cbb99611955ee3196c774c164c716c0f659b4bddbe3d370c3204"
+  version "2.1.0"
+  sha256 "d3c4474bfc9ec5b74d9638f3a2b602a886d33b89bcc30ba228b91b0631fc7a36"
 
   url "https://github.com/ahatem/IoskeleyMono/releases/download/v#{version}/IoskeleyMono.zip"
   name "Ioskeley Mono"
