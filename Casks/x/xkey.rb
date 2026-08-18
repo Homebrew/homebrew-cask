@@ -1,6 +1,6 @@
 cask "xkey" do
-  version "1.2.24,20260721"
-  sha256 "72aece91bd086696622ae3da3fb7d078675eac3ec9001bbff6f824fc03641796"
+  version "1.2.25,20260818"
+  sha256 "f28bc5eb3e6f72a7b61d195ab34368edc4319a11cfe591bb79505ade16f5ee30"
 
   url "https://github.com/xmannv/xkey/releases/download/v#{version.csv.first}-#{version.csv.second}/XKey.dmg"
   name "XKey"
@@ -16,6 +16,8 @@ cask "xkey" do
   depends_on macos: :monterey
 
   app "XKey.app"
+
+  uninstall quit: "com.codetay.XKey"
 
   zap trash: [
     "~/Library/Application Support/XKey",
