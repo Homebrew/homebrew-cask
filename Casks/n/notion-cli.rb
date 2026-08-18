@@ -2,11 +2,11 @@ cask "notion-cli" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "apple-darwin", linux: "unknown-linux-musl"
 
-  version "0.22.5"
-  sha256 arm:          "8dedbfb3458137b07c38e0200c3b96ba0fab515c4b9f75c770467bdd48e00ae8",
-         intel:        "250a54df4f5e4a8a67f2b1a4286bdc6b25ba477d6ceda03d176d4cb3a1cf7d18",
-         arm64_linux:  "a416220df7ee74c8df92e6bc91316b9b2a4002b9c99fdd4f65c271e5198d175a",
-         x86_64_linux: "ec79be517871064838246982c4741051ad0a1214d64892859f0e7f7f8c36898d"
+  version "0.22.6"
+  sha256 arm:          "845d6c5f9536630997db0998c9b0e4c32930074f2780c33a3991666985a24c09",
+         intel:        "ff1997251f925497d1eb5f8a74a9a81e11510d1e3202d5233be0b2e56d2f653d",
+         arm64_linux:  "e1bb4173abf1884edace2c87623f68db30d012e1f0865266c578ee5be86b2ba2",
+         x86_64_linux: "83647adcfe181128ac0c52902d6e8dacaf03852388d9ed10bf58840d63114aad"
 
   url "https://ntn.dev/releases/v#{version}/ntn-#{arch}-#{os}.tar.gz",
       verified: "ntn.dev/"
