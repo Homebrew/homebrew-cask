@@ -1,6 +1,6 @@
 cask "font-ioskeley-mono" do
-  version "2.0.0"
-  sha256 "dc37763fbb82cbb99611955ee3196c774c164c716c0f659b4bddbe3d370c3204"
+  version "2.1.0"
+  sha256 "d3c4474bfc9ec5b74d9638f3a2b602a886d33b89bcc30ba228b91b0631fc7a36"
 
   url "https://github.com/ahatem/IoskeleyMono/releases/download/v#{version}/IoskeleyMono.zip"
   name "Ioskeley Mono"
@@ -12,26 +12,6 @@ cask "font-ioskeley-mono" do
     strategy :github_latest
   end
 
-  font "Condensed/Unhinted/IoskeleyMono-Condensed.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedBlack.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedBlackItalic.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedBold.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedBoldItalic.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedExtraBold.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedExtraBoldItalic.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedExtraLight.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedExtraLightItalic.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedItalic.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedLight.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedLightItalic.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedMedium.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedMediumItalic.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedSemiBold.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedSemiBoldItalic.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedSemiLight.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedSemiLightItalic.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedThin.ttf"
-  font "Condensed/Unhinted/IoskeleyMono-CondensedThinItalic.ttf"
   font "Normal/Unhinted/IoskeleyMono-Black.ttf"
   font "Normal/Unhinted/IoskeleyMono-BlackItalic.ttf"
   font "Normal/Unhinted/IoskeleyMono-Bold.ttf"
