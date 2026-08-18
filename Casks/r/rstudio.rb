@@ -24,6 +24,8 @@ cask "rstudio" do
 
   app "RStudio.app"
 
+  uninstall quit: "com.rstudio.desktop"
+
   zap trash: "~/.rstudio-desktop"
 
   caveats <<~EOS
