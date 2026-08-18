@@ -12,7 +12,7 @@ cask "snapndrag" do
     strategy :sparkle
   end
 
-  depends_on :macos
+  depends_on macos: :sequoia
 
   app "SnapNDrag.app"
 
