@@ -1,6 +1,6 @@
 cask "connect-fonts" do
-  version "28.1.6"
-  sha256 "005d5922afa1eb08f72d6b8b4f298ba6c5bea0614f30387340e34dab5eb86836"
+  version "28.1.7"
+  sha256 "3fed92dfb13f59f9efbe195bd9a551587185979977386805d7496f77d38a9c31"
 
   url "https://bin.extensis.com/ConnectFonts-M-#{version.dots_to_hyphens}.dmg"
   name "Connect Fonts"
@@ -16,6 +16,9 @@ cask "connect-fonts" do
   depends_on macos: :ventura
 
   app "Connect Fonts.app"
+
+  uninstall launchctl: "com.extensis.FMCore",
+            quit:      "com.extensis.SuitcaseFusion"
 
   # Connect Fonts uses many of the same paths as its predecessor, Suitcase Fusion.
   zap trash: [
