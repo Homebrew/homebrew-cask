@@ -16,6 +16,8 @@ cask "snapndrag" do
 
   app "SnapNDrag.app"
 
+  uninstall quit: "com.yellowmug.SnapNDrag"
+
   zap trash: [
     "~/Library/Application Support/com.yellowmug.SnapNDrag",
     "~/Library/Preferences/com.yellowmug.SnapNDrag.plist",
