@@ -1,6 +1,6 @@
 cask "archiver-app" do
-  version "5.0.10"
-  sha256 "dedd172f31bf6fcfd2ed7afceeccbb4f01b0e585dd9f16447d1c5cf50cfae618"
+  version "5.0.11"
+  sha256 "8cf64162fb96598182c08a63142cf842ac9745e2a6c511f9b7cd0ec1ab673be1"
 
   url "https://github.com/incbee/archiver-#{version.major}-releases/releases/download/v#{version}/Archiver-#{version}-universal-mac.zip",
       verified: "github.com/incbee/archiver-#{version.major}-releases/"
@@ -16,6 +16,8 @@ cask "archiver-app" do
   depends_on macos: :tahoe
 
   app "Archiver.app"
+
+  uninstall quit: "com.incrediblebee.Archiver"
 
   zap trash: [
     "~/Library/Application Support/com.incrediblebee.Archiver*",
