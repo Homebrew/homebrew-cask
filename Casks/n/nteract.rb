@@ -23,10 +23,11 @@ cask "nteract" do
 
   app "nteract.app"
 
-  uninstall delete: [
-    "/usr/local/bin/nb",
-    "/usr/local/bin/runt",
-  ]
+  uninstall launchctl: "io.nteract.runtimed",
+            delete:    [
+              "/usr/local/bin/nb",
+              "/usr/local/bin/runt",
+            ]
 
   zap trash: [
     "~/Library/Application Support/nteract",
