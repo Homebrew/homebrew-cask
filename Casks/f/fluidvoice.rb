@@ -18,6 +18,8 @@ cask "fluidvoice" do
 
   app "FluidVoice.app"
 
+  uninstall quit: "com.FluidApp.app"
+
   zap trash: [
     "~/Library/Application Support/FluidAudio",
     "~/Library/Application Support/FluidVoice",
