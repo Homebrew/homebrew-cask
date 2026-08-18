@@ -7,11 +7,6 @@ cask "easydmg" do
   desc "One click DMG installs"
   homepage "https://easydmg.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: :ventura
 
