@@ -17,6 +17,8 @@ cask "downie" do
 
   app "Downie #{version.major}.app"
 
+  uninstall quit: "com.charliemonroe.Downie-#{version.major}"
+
   zap trash: [
     "~/Library/Application Scripts/com.charliemonroe.Downie*",
     "~/Library/Application Scripts/D43XN356JM.Downie",
