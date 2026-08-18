@@ -1,6 +1,6 @@
 cask "expo-orbit" do
-  version "2.8.0"
-  sha256 "789024ba4a7d3af9e0cfac25a976a3ae2969ddd3b175c00459d563b14022babc"
+  version "2.8.1"
+  sha256 "55a05786c5f3c99b3198bcefc5de3557de776bbb3a01414f620f79975795bab0"
 
   url "https://github.com/expo/orbit/releases/download/expo-orbit-v#{version}/expo-orbit.v#{version}-macos.zip"
   name "Expo Orbit"
