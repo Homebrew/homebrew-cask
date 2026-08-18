@@ -241,6 +241,8 @@ cask "thunderbird" do
 
   app "Thunderbird.app"
 
+  uninstall quit: "org.mozilla.thunderbird"
+
   zap trash: [
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird*.sfl*",
         "~/Library/Application Support/Thunderbird",
