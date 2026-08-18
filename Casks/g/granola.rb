@@ -18,6 +18,8 @@ cask "granola" do
 
   app "Granola.app"
 
+  uninstall quit: "com.granola.app"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.granola.app.sfl*",
     "~/Library/Application Support/Granola",
