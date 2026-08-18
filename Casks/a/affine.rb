@@ -3,11 +3,11 @@ cask "affine" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: ".zip", linux: ".appimage"
 
-  version "0.27.3"
+  version "0.27.4"
 
   on_macos do
-    sha256 arm:   "bdeaa87ae8f200d63c738dfcdc3a8435fd8386e82cb28ef8b1ac5cc975207264",
-           intel: "41ca92935673f2e94f994cbc13af6698c6276886bd5debe09ba19d703eb04090"
+    sha256 arm:   "1139f5788f40e3f0552416d8f57615d1c2750c5f184a2a1b754dde9a4d0077f6",
+           intel: "0db7851f16082a35db4b990fa6fff04717d745b81c2a202eb1d30d596099c63b"
 
     depends_on macos: :monterey
 
@@ -21,7 +21,7 @@ cask "affine" do
     ]
   end
   on_linux do
-    sha256 "bc132e3f8dea5a05c3943da79822d92ed7f3218456eb051bd81d11d4f0580114"
+    sha256 "102ff093ea3af7067893e76ae85b8a5d5818aa92c8785d399312bd8f468f5cac"
 
     depends_on arch: :x86_64
 
