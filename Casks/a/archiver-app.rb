@@ -17,6 +17,8 @@ cask "archiver-app" do
 
   app "Archiver.app"
 
+  uninstall quit: "com.incrediblebee.Archiver"
+
   zap trash: [
     "~/Library/Application Support/com.incrediblebee.Archiver*",
     "~/Library/Preferences/com.incrediblebee.Archiver*.plist",
