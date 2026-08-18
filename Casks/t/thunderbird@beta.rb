@@ -84,6 +84,8 @@ cask "thunderbird@beta" do
 
   app "Thunderbird Beta.app"
 
+  uninstall quit: "org.mozilla.thunderbirdbeta"
+
   zap trash: [
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.thunderbird*.sfl*",
         "~/Library/Caches/Mozilla/updates/Applications/Thunderbird*",
