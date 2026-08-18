@@ -17,7 +17,8 @@ cask "connect-fonts" do
 
   app "Connect Fonts.app"
 
-  uninstall quit: "com.extensis.SuitcaseFusion"
+  uninstall launchctl: "com.extensis.FMCore",
+            quit:      "com.extensis.SuitcaseFusion"
 
   # Connect Fonts uses many of the same paths as its predecessor, Suitcase Fusion.
   zap trash: [
