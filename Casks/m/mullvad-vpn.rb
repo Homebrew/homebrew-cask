@@ -44,7 +44,6 @@ cask "mullvad-vpn" do
             ]
 
   zap trash: [
-    "/etc/mullvad-vpn",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mullvad.vpn.sfl*",
     "~/Library/Application Support/Mullvad VPN",
     "~/Library/Logs/Mullvad VPN",
