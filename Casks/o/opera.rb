@@ -17,6 +17,8 @@ cask "opera" do
 
   app "Opera.app"
 
+  uninstall quit: "com.operasoftware.Opera"
+
   zap trash: [
     "~/Library/Application Support/com.operasoftware.Opera",
     "~/Library/Caches/com.operasoftware.Installer.Opera",
