@@ -7,7 +7,7 @@ cask "server-box" do
   desc "App for monitoring server status with SSH terminal, SFTP, Container management"
   homepage "https://github.com/lollipopkit/flutter_server_box"
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Server Box.app"
 
