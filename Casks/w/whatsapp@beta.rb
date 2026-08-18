@@ -18,7 +18,11 @@ cask "whatsapp@beta" do
 
   app "WhatsApp.app"
 
-  uninstall quit: "net.whatsapp.WhatsApp"
+  uninstall quit: [
+    "net.whatsapp.WhatsApp",
+    "net.whatsapp.WhatsApp-sparkle-progress",
+    "net.whatsapp.WhatsApp-sparkle-updater",
+  ]
 
   zap trash: [
     "~/Library/Application Scripts/group.net.whatsapp.family",
