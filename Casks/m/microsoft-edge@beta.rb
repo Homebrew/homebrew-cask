@@ -1,6 +1,6 @@
 cask "microsoft-edge@beta" do
-  version "152.0.4191.19,529b6b0e-10d6-4f27-a0dc-cd678c862418"
-  sha256 "c9df91455566afa3e2bf6ff6868fd514255d64681e5525510366f6e73050deee"
+  version "152.0.4191.35,473355fc-a9ee-47b8-b856-c13467441005"
+  sha256 "79c4974a8de18bd53aacbd7ca54b6b2993e4363569f69497992c19f59bfe982a"
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdgeBeta-#{version.csv.first}.dmg"
   name "Microsoft Edge Beta"
@@ -23,7 +23,8 @@ cask "microsoft-edge@beta" do
 
   app "Microsoft Edge Beta.app"
 
-  uninstall launchctl: "com.microsoft.EdgeUpdater.wake"
+  uninstall launchctl: "com.microsoft.EdgeUpdater.wake",
+            quit:      "com.microsoft.edgemac.Beta"
 
   zap trash: [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension.Beta",
