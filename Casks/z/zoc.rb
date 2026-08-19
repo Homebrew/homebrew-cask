@@ -16,6 +16,8 @@ cask "zoc" do
 
   app "zoc#{version.major}.app"
 
+  uninstall quit: "com.emtec.zoc#{version.major}"
+
   zap trash: [
     "~/Library/Application Support/ZOC#{version.major} Files",
     "~/Library/Logs/EmTec_ZOC_Assert.log",
