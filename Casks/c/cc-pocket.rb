@@ -1,6 +1,6 @@
 cask "cc-pocket" do
-  version "1.114.1,213"
-  sha256 "33af7028c3c18560e370fcd2e08bffe484c5be47edcddd6a415ab1e6e7e489be"
+  version "1.114.2,214"
+  sha256 "ab2edc3f35385cf65fb3b1caa895350eb5575e6aeb12bf5b77fd66997ea3e288"
 
   url "https://github.com/K9i-0/ccpocket/releases/download/macos/v#{version.csv.first}%2B#{version.csv.second}/CC-Pocket-macos-v#{version.csv.first}.dmg",
       verified: "github.com/K9i-0/ccpocket/"
@@ -24,7 +24,7 @@ cask "cc-pocket" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "CC Pocket.app"
 
