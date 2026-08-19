@@ -1,5 +1,5 @@
 cask "transcribex" do
-  version "9.0"
+  version "9.2"
   sha256 :no_check
 
   url "https://www.transcribex.io/download/TranscribeX.dmg"
