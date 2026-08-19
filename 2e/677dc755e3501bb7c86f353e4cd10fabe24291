@@ -1,0 +1,14 @@
+Casks/h/hstracker.rb
+  h_9df9c32c3f321d 23-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "2e677dc755e3501bb7c86f353e4cd10fabe24291",
+  "prompts": {},
+  "humans": {
+    "h_9df9c32c3f321d": {
+      "author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
