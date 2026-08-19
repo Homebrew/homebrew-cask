@@ -2,9 +2,9 @@ cask "otty" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "intel"
 
-  version "1.4.0"
-  sha256 arm:   "3cf63e26b37b19d6b676ea68463123bb4f79d0a854280304c4b20ee8f4cfc5a8",
-         intel: "4bd939b43e4cd3e38a7347d181aee024426d25fa6ecbae2e55a718d49fab61f2"
+  version "1.4.1"
+  sha256 arm:   "93a0f3872bb37dee5ba09dfdf63e4aaeefbbcd8e3735bd2601b218e521750e3a",
+         intel: "840ff0a3a30a03e67127aba3e03a79c87617d8770733e91ced994efd8cdae670"
 
   url "https://downloads.otty.sh/macos/Otty-#{version}-#{arch}.zip"
   name "Otty"
