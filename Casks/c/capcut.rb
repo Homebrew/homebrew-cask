@@ -1,6 +1,6 @@
 cask "capcut" do
-  version "9.2.0.4444"
-  sha256 "5abd96d2d022088e655958c8c526b91632783bb887e270482caeba222f50d14e"
+  version "9.3.0.4490"
+  sha256 "8cc8703ca65359e69463c0e464b4661134757be2cda06dee2ffeb06e5238c8cb"
 
   url "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg",
       verified: "sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/"
@@ -25,6 +25,8 @@ cask "capcut" do
   depends_on :macos
 
   app "CapCut.app"
+
+  uninstall quit: "com.lemon.lvoverseas"
 
   zap trash: [
     "~/Library/Application Scripts/com.lemon.lvoverseas",
