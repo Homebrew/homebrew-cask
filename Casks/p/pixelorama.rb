@@ -14,5 +14,7 @@ cask "pixelorama" do
 
   app "Pixelorama.app"
 
+  uninstall quit: "com.orama-interactive.pixelorama"
+
   zap trash: "~/Library/Saved Application State/com.orama_interactive.pixelorama.savedState"
 end
