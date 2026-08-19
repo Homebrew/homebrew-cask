@@ -1,9 +1,9 @@
 cask "athas" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.11.0"
-  sha256 arm:   "818e2f56ec04d2992751df83e65577260879e25926a11285868121f8ad00e124",
-         intel: "fda7b6e78076faab4a1d4a00ac4d2bd7d1e9ab86772f2ed765582c7a4dd4dd21"
+  version "0.12.0"
+  sha256 arm:   "82a0069811d44f61135f97c0acfda4d0342373dd30de1cb356ca790c2d42e5aa",
+         intel: "87a85076dffcd86c5d5c00ca5a7bdc79fa4efc9259a6bd61baa756d8ea51e057"
 
   url "https://github.com/athasdev/athas/releases/download/v#{version}/Athas_#{version}_#{arch}.dmg",
       verified: "github.com/athasdev/athas/"
@@ -19,6 +19,8 @@ cask "athas" do
   depends_on :macos
 
   app "Athas.app"
+
+  uninstall quit: "com.code.athas"
 
   zap trash: [
     "~/Library/Application Support/com.code.athas",
