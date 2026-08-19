@@ -20,6 +20,8 @@ cask "athas" do
 
   app "Athas.app"
 
+  uninstall quit: "com.code.athas"
+
   zap trash: [
     "~/Library/Application Support/com.code.athas",
     "~/Library/Caches/com.code.athas",
