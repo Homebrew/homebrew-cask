@@ -8,8 +8,7 @@ cask "azure-cli-ci-test" do
          arm64_linux:  "7476cdcb31da93c52c90b951fb493df24a8814474590e55f996335909e7963df",
          x86_64_linux: "bbf7a627370995993c9b25ba2e45584061fc6c5a07531ebae6be7451af4fe6aa"
 
-  url "https://github.com/Azure/homebrew-azure-cli/releases/download/azure-cli-#{version}/azure-cli-#{version}-#{os}-#{arch}.tar.gz",
-      verified: "github.com/Azure/homebrew-azure-cli/"
+  url "https://github.com/Azure/homebrew-azure-cli/releases/download/azure-cli-#{version}/azure-cli-#{version}-#{os}-#{arch}.tar.gz"
   name "Azure CLI CI Test"
   desc "Microsoft Azure CLI 2.0 standalone archive validation"
   homepage "https://docs.microsoft.com/cli/azure/overview"
