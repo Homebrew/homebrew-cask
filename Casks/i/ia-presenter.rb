@@ -1,6 +1,6 @@
 cask "ia-presenter" do
-  version "1.6.1,16034"
-  sha256 "141b00f282c8ea9a511286910e2ed3b9fb3ad688fbfe669a4aa625b5aa194c06"
+  version "2.0.1,20024"
+  sha256 "b517f4eb1427878911e98cd2a59334a088bdab0f81a36ad5b40111436eff0989"
 
   url "https://files.ia.net/presenter/release/iA-Presenter-#{version.csv.first}-#{version.csv.second}.zip"
   name "iA Presenter"
@@ -13,7 +13,7 @@ cask "ia-presenter" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   app "iA Presenter.app"
 
