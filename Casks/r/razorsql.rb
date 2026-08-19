@@ -1,9 +1,9 @@
 cask "razorsql" do
   arch arm: "_aarch64"
 
-  version "11.0.2"
-  sha256 arm:   "0c76a12c3be296b778355a6414a77f6720500a31b015fa68b6f1c2cff9f1d0e5",
-         intel: "96028ab3d2c30316729cb6e7cb964409a70ca7992105ccbee0a02f482cdfd741"
+  version "11.0.3"
+  sha256 arm:   "eb2b2a97b8893272df509382f2764315ad31e6c3641fba5f5213a0c4085ed4a1",
+         intel: "80761f9a1af8f2371fd4f3cfb84d39e9c38087d1398d5f875df2ca3a0784a44e"
 
   url "https://s3.amazonaws.com/downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}#{arch}.dmg",
       verified: "s3.amazonaws.com/downloads.razorsql.com/downloads/"
