@@ -18,6 +18,11 @@ cask "monet" do
 
   app "Monet.app"
 
+  uninstall launchctl: [
+    "io.github.zenolab124.monet.tray",
+    "io.github.zenolab124.monet.widget-updater",
+  ]
+
   zap trash: [
     "~/.monet",
     "~/Library/Application Support/io.github.zenolab124.monet",
