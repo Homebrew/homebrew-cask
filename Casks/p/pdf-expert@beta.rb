@@ -18,6 +18,8 @@ cask "pdf-expert@beta" do
 
   app "PDF Expert.app"
 
+  uninstall quit: "com.readdle.PDFExpert-Mac"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.readdle.pdfexpert-mac.sfl*",
     "~/Library/Application Support/com.readdle.PDFExpert-Mac",
