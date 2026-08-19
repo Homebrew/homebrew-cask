@@ -3,11 +3,11 @@ cask "dyad" do
   os macos: "-darwin-#{arch}-", linux: "_"
   url_end = on_system_conditional macos: ".zip", linux: "_x86_64.AppImage"
 
-  version "1.11.0"
+  version "1.11.1"
 
   on_macos do
-    sha256 arm:   "a1129bbf123ce29120b09ed759af560d4a4eb7d3c8857e1ebdfd262b1d72316c",
-           intel: "2a3308f9b281f32daa7c5b135a91da6aa19197e5537006c099ddffdc061239c6"
+    sha256 arm:   "0982909fcccce3ac62389933e7193dc84acd126f9406225fa21d826cf07af6c2",
+           intel: "d73155068d1a5d87789d2b182d6fadb9e9b7da5cbf8daa4378ac5d836c369e43"
 
     depends_on macos: :monterey
 
@@ -24,7 +24,7 @@ cask "dyad" do
     ], rmdir: "~/dyad-apps"
   end
   on_linux do
-    sha256 "40c1c58cf5f993c3120457a7d76d6b625f3d90252a0376e2655892ed6a9e03c8"
+    sha256 "37399d24b38439745d90a08ede98c3cefe4115b9d29f7d400dc41263307114c1"
 
     depends_on arch: :x86_64
 
