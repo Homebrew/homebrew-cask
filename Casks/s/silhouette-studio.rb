@@ -24,8 +24,4 @@ cask "silhouette-studio" do
     "~/Library/Preferences/com.silhouettesoftware*",
     "~/Library/Saved Application State/com.silhouettesoftware.Silhouette-Studio*",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
