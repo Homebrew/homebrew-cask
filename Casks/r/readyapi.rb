@@ -20,6 +20,9 @@ cask "readyapi" do
 
   app "ReadyAPI-#{version}.app"
 
+  # The app identifier has unique numeric parts like 3080-8797-1984-6034.102895.
+  uninstall quit: "com.install4j*"
+
   zap trash: [
     "~/.readyapi",
     "~/Library/Application Support/ReadyAPI-#{version}",
