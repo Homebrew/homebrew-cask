@@ -28,6 +28,8 @@ cask "macwhisper" do
 
   app "MacWhisper.app"
 
+  uninstall quit: "com.goodsnooze.MacWhisper"
+
   zap trash: [
     "~/Library/Application Scripts/com.goodsnooze.MacWhisper",
     "~/Library/Application Support/MacWhisper",
