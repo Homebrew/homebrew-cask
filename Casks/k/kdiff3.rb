@@ -22,6 +22,8 @@ cask "kdiff3" do
   command_wrapper "kdiff3",
                   executable: "#{appdir}/kdiff3.app/Contents/MacOS/kdiff3"
 
+  uninstall quit: "org.kde.KDiff3"
+
   zap trash: [
     "~/.kdiff3rc",
     "~/Library/Application Support/kdiff3",
