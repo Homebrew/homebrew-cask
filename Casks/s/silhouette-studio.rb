@@ -1,6 +1,6 @@
 cask "silhouette-studio" do
-  version "5.0.414.001_M6R"
-  sha256 "6bbbf85143199dbd43a41263151b3258fbdef5f2dcb0c330f69ce10ee4c574cb"
+  version "5.0.523.001_M6R"
+  sha256 "dad85ff9c3240dedd2e534749bdfb9a6300873c9aeedd3472d809df56000bd2e"
 
   url "https://d62nvtdcnsm38.cloudfront.net/files/softwares/ss/SS_V#{version}.dmg",
       verified: "d62nvtdcnsm38.cloudfront.net/files/softwares/ss/"
@@ -24,8 +24,4 @@ cask "silhouette-studio" do
     "~/Library/Preferences/com.silhouettesoftware*",
     "~/Library/Saved Application State/com.silhouettesoftware.Silhouette-Studio*",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
