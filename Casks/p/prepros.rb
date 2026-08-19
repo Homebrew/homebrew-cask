@@ -1,9 +1,9 @@
 cask "prepros" do
   arch arm: "-Mac"
 
-  version "7.39.0"
-  sha256 arm:   "86fa98db4a4ae73d6fc9c5988f3fdbd2430e788245da2ea8b1511ceb8ef58217",
-         intel: "07ab09a642e3ccef51feef7db36ffeb00052de4be1647b0eebbd7ca5c3fec99c"
+  version "7.39.1"
+  sha256 arm:   "b3744379c9212c38b6895481b01c6880f03420be488807d1129b0587abb1ce6e",
+         intel: "14079b21f18e38640914d3300c2366eaf35860af5c3a3c0ab6ffb8bcbae4895e"
 
   url "https://downloads.prepros.io/v#{version.major}/#{version}/Prepros#{arch}-#{version}.zip"
   name "Prepros"
