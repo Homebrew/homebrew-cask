@@ -20,6 +20,8 @@ cask "prism" do
 
   app "Prism #{version.major}.app"
 
+  uninstall quit: "com.GraphPad.Prism"
+
   zap delete: [
         "/Library/Application Support/GraphPad",
         "/Library/GraphPad",
