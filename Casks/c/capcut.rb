@@ -26,6 +26,8 @@ cask "capcut" do
 
   app "CapCut.app"
 
+  uninstall quit: "com.lemon.lvoverseas"
+
   zap trash: [
     "~/Library/Application Scripts/com.lemon.lvoverseas",
     "~/Library/Containers/com.lemon.lvoverseas",
