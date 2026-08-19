@@ -19,6 +19,8 @@ cask "waterfox" do
   command_wrapper "waterfox",
                   executable: "#{appdir}/Waterfox.app/Contents/MacOS/waterfox"
 
+  uninstall quit: "net.waterfox.waterfox"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.waterfox.sfl*",
     "~/Library/Application Support/Waterfox",
