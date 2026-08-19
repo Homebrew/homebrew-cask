@@ -1,6 +1,6 @@
 cask "pdf-expert@beta" do
-  version "3.13,1170"
-  sha256 "253cf3d4441182707c4b0841fb698a6376de7f1a95998472eab33b28d19c78d8"
+  version "3.13.1,1171"
+  sha256 "d0aec54a613de2e2986e0217e3319eeab242c285b412d5ef2116a059df6836f5"
 
   url "https://downloads.pdfexpert.com/pem#{version.major}/versions/#{version.csv.second}/PDFExpert.zip"
   name "PDF Expert"
@@ -17,6 +17,8 @@ cask "pdf-expert@beta" do
   depends_on macos: :monterey
 
   app "PDF Expert.app"
+
+  uninstall quit: "com.readdle.PDFExpert-Mac"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.readdle.pdfexpert-mac.sfl*",
