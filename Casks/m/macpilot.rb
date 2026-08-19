@@ -10,7 +10,7 @@ cask "macpilot" do
     end
   end
   on_ventura :or_newer do
-    version "17.5"
+    version "18.0"
     sha256 :no_check
 
     url "https://www.koingosw.com/products/macpilot/download/macpilot.dmg"
