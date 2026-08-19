@@ -1,6 +1,6 @@
 cask "remote-desktop-manager" do
-  version "2026.2.4.4"
-  sha256 "2d0fc8c8c77ecc78b4b308bed4477099a63e996ee5e4b96cb5beead5afa8b3d0"
+  version "2026.2.5.1"
+  sha256 "d3b9beae70bda2083adb644c577c0880be28b445a5a4d6cd5056491ccd1896c1"
 
   url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg",
       verified: "cdn.devolutions.net/download/Mac/"
@@ -17,6 +17,8 @@ cask "remote-desktop-manager" do
   depends_on macos: :monterey
 
   app "Remote Desktop Manager.app"
+
+  uninstall quit: "com.devolutions.remotedesktopmanager"
 
   zap trash: [
     "~/Library/Application Support/com.devolutions.remotedesktopmanager",
