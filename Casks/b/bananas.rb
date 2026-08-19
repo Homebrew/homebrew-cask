@@ -2,10 +2,10 @@ cask "bananas" do
   arch arm: "arm64", intel: "x86_64"
   url_end = on_system_conditional macos: "universal.dmg", linux: "#{arch}.AppImage"
 
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
-    sha256 "8bcc609da42b847a578bd10749f6237620c5fa30f3abaa1a965b3aa6db73ae9a"
+    sha256 "b540be4a27b4bb2ad791794f65628146e2334210490448a2d3157fa88084b8ab"
 
     app "bananas.app"
 
@@ -16,8 +16,8 @@ cask "bananas" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "5a55f754d1303677a41353ae35ac2626d5a64a90d162ff255f2bce16c0d5be67",
-           x86_64_linux: "07a7064cd334bff0a55bd5ef85a8f941941de871609cc7e1fb7d67b9d81b0913"
+    sha256 arm64_linux:  "5e5d0adc0bca1821328b88c511eeb735a0764d6952659272f159b272ef8f9c54",
+           x86_64_linux: "b4af9a638c151a384414d6ba53b9cd5777f7fbac541b610d4e4da2cffed66947"
 
     app_image "bananas_#{arch}.AppImage", target: "Bananas.AppImage"
   end
