@@ -1,6 +1,6 @@
 cask "swift-shift" do
-  version "1.3.2"
-  sha256 "b4e3d8b2e922111e142210c07aff6501fe4e03fe74b44f516eb2abfc917b8b80"
+  version "1.4.0"
+  sha256 "4937b01b5df0035595b0b0066eb7fd28f1db41ff861dc085c23baf35f9d8bcc3"
 
   url "https://github.com/pablopunk/SwiftShift/releases/download/#{version}/SwiftShift.zip",
       verified: "github.com/pablopunk/SwiftShift/"
