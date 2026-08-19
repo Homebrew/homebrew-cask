@@ -19,6 +19,8 @@ cask "psychopy" do
 
   app "PsychoPy.app"
 
+  uninstall quit: "org.opensciencetools.psychopy"
+
   zap trash: [
     "~/.psychopy3",
     "~/Library/Preferences/org.opensciencetools.psychopy.plist",
