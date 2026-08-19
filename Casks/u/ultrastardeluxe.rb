@@ -17,5 +17,7 @@ cask "ultrastardeluxe" do
 
   app "UltraStarDeluxe.app"
 
+  uninstall quit: "org.ultrastardeluxe.ultrastardeluxe"
+
   zap trash: "~/Library/Application Support/UltraStarDeluxe1.3"
 end
