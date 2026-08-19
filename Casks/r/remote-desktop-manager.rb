@@ -18,6 +18,8 @@ cask "remote-desktop-manager" do
 
   app "Remote Desktop Manager.app"
 
+  uninstall quit: "com.devolutions.remotedesktopmanager"
+
   zap trash: [
     "~/Library/Application Support/com.devolutions.remotedesktopmanager",
     "~/Library/Application Support/Remote Desktop Manager",
