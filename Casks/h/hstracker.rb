@@ -20,6 +20,8 @@ cask "hstracker" do
 
   app "HSTracker.app"
 
+  uninstall quit: "net.hearthsim.hstracker"
+
   zap trash: [
     "~/Library/Application Support/HSTracker",
     "~/Library/Application Support/net.hearthsim.hstracker",
