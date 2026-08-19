@@ -34,6 +34,8 @@ cask "osu@tachyon" do
 
   app "osu!.app"
 
+  uninstall quit: "sh.ppy.osu.lazer"
+
   zap trash: [
     "~/.local/share/osu",
     "~/Library/Saved Application State/sh.ppy.osu.lazer.savedState",
