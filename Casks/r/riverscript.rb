@@ -7,6 +7,8 @@ cask "riverscript" do
   desc "Capture and transcribe everything you hear on your computer"
   homepage "https://riverscript.com/"
 
+  depends_on macos: ">=:ventura"
+
   livecheck do
     url "https://downloads.riverscript.com/latest.json"
     strategy :json do |json|
