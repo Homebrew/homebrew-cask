@@ -17,6 +17,8 @@ cask "filemaker-pro" do
 
   app "FileMaker Pro.app"
 
+  uninstall quit: "com.filemaker.client.pro12"
+
   zap trash: [
     "/Users/Shared/FileMaker",
     "~/Library/Application Support/FileMaker",
