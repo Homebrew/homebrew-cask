@@ -2,9 +2,9 @@ cask "kdiff3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.12.4"
-  sha256 arm:   "80d0a1e3de9382b52df7d67e0c0b6b1998aa7e79213d3147e46e094027bd3d15",
-         intel: "b11849a191173bb75a2884d94e6d175135e432579222d718b05a98b91fcd5619"
+  version "1.12.6"
+  sha256 arm:   "e80b3a304a6896d6906a930e72b0760bbd6d6dcb3392c842e15f14867c28f136",
+         intel: "f0a0189f55d539cdd695497df18104a2698c2f1f4c1d7632fbd99257f39abea0"
 
   url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-#{arch}.dmg"
   name "KDiff3"
@@ -21,6 +21,8 @@ cask "kdiff3" do
   app "kdiff3.app"
   command_wrapper "kdiff3",
                   executable: "#{appdir}/kdiff3.app/Contents/MacOS/kdiff3"
+
+  uninstall quit: "org.kde.KDiff3"
 
   zap trash: [
     "~/.kdiff3rc",
