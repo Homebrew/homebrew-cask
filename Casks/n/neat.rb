@@ -1,9 +1,9 @@
 cask "neat" do
   arch arm: "-arm64"
 
-  version "0.0.62"
-  sha256 arm:   "73fbb1cd93f160d7c7e789025631fc32a40399433a2fbf124758f618428b556a",
-         intel: "7f7a024d850388b74bf770aed608ecd7b1a285b6689dd7ba6e3660ec30cf0230"
+  version "0.0.63"
+  sha256 arm:   "52e31f839420ab47a7bb00b2d6570def5e332ddf56e9512814350ee57816430a",
+         intel: "6f53e67fec43e9c9d004a766281e74a0b2d76433e372ca2b8b888f804df0abc8"
 
   url "https://github.com/neat-run/activity-feed-public/releases/download/v#{version}/Neat-#{version}#{arch}.dmg",
       verified: "github.com/neat-run/activity-feed-public/"
