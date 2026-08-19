@@ -1,9 +1,9 @@
 cask "passepartout" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.9.5"
-  sha256 arm:   "f860801929159f87573738c0595c5e75aa4850ec0dc232b211444c84065a461e",
-         intel: "a1fa47992ab3e7e9de68e676e71830d63d5ae16bc5e384b3f70091e73bf44943"
+  version "3.9.6"
+  sha256 arm:   "3f872f248c0b51170f6724c27fae86cc94367f6f227f47bcdab72cbee8d44ecc",
+         intel: "db2dbedce681aa3833468157ac04d82859e91ffd95f1dc8459d043a5a4d9a613"
 
   url "https://github.com/partout-io/passepartout/releases/download/v#{version}/Passepartout.#{arch}.dmg",
       verified: "github.com/partout-io/passepartout/"
@@ -19,6 +19,8 @@ cask "passepartout" do
   depends_on macos: :sonoma
 
   app "Passepartout.app"
+
+  uninstall quit: "com.algoritmico.mac.Passepartout"
 
   zap trash: [
     "~/Library/Application Scripts/com.algoritmico.mac.Passepartout",
