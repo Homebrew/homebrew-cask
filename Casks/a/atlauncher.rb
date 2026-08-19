@@ -14,6 +14,8 @@ cask "atlauncher" do
 
   app "ATLauncher.app"
 
+  uninstall quit: "com.atlauncher.App"
+
   zap trash: [
     "~/Library/Preferences/com.atlauncher.App.plist",
     "~/Library/Saved Application State/com.atlauncher.App.savedState",
