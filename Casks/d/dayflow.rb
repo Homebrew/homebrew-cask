@@ -17,6 +17,8 @@ cask "dayflow" do
 
   app "Dayflow.app"
 
+  uninstall quit: "teleportlabs.com.Dayflow"
+
   zap trash: [
     "~/Library/Application Scripts/teleportlabs.com.Dayflow",
     "~/Library/Application Support/Dayflow",
