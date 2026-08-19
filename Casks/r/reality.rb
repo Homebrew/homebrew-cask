@@ -1,4 +1,4 @@
-cask "reality-launcher" do
+cask "reality" do
   os macos: "aarch64.dmg", linux: "amd64.AppImage"
 
   version "4.1.0"
@@ -18,8 +18,7 @@ cask "reality-launcher" do
     app_image "Reality Launcher_#{version}_amd64.AppImage", target: "Reality Launcher.AppImage"
   end
 
-  url "https://cdn.reality.catlabdesign.space/client/#{version}/Reality%20Launcher_#{version}_#{os}",
-      verified: "cdn.reality.catlabdesign.space/client/"
+  url "https://cdn.reality.catlabdesign.space/client/#{version}/Reality%20Launcher_#{version}_#{os}"
   name "Reality Launcher"
   desc "Minecraft launcher for the Reality community server"
   homepage "https://github.com/catlab-design/realitylauncher-client"
