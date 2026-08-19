@@ -1,6 +1,6 @@
 cask "macwhisper" do
-  version "14.7,1475"
-  sha256 "b608c65bf0c714fbae2e6fd6889c26ec9e91a2cc43fd203b5cd17262d7518e5d"
+  version "14.7.1,1476"
+  sha256 "8f4ba48c01dbc382bf4a86b19c46f2cadbc91a677ce972423395a41d7b0a2610"
 
   url "https://cdn.macwhisper.com/macwhisper/MacWhisper-#{version.csv.second}#{"_#{version.csv.third}" if version.csv.third}.zip",
       verified: "cdn.macwhisper.com/"
@@ -27,6 +27,8 @@ cask "macwhisper" do
   depends_on macos: :sonoma
 
   app "MacWhisper.app"
+
+  uninstall quit: "com.goodsnooze.MacWhisper"
 
   zap trash: [
     "~/Library/Application Scripts/com.goodsnooze.MacWhisper",
