@@ -20,6 +20,8 @@ cask "passepartout" do
 
   app "Passepartout.app"
 
+  uninstall quit: "com.algoritmico.mac.Passepartout"
+
   zap trash: [
     "~/Library/Application Scripts/com.algoritmico.mac.Passepartout",
     "~/Library/Application Scripts/DTDYD63ZX9.group.com.algoritmico.Passepartout",
