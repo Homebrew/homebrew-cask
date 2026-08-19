@@ -20,7 +20,7 @@ cask "josm" do
 
   depends_on :macos
 
-  app "JOSM_25_#{app_arch}.app"
+  app "JOSM_25_#{app_arch}.app", target: "JOSM.app"
 
   zap trash: [
     "~/Library/Caches/JOSM",
