@@ -19,5 +19,7 @@ cask "utc-menu-clock" do
 
   app "UTCMenuClock.app"
 
+  uninstall launchctl: "application.UTCMenuClock.app.*"
+
   zap trash: "~/Library/Preferences/net.retina.UTCMenuClock.plist"
 end
