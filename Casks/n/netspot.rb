@@ -17,6 +17,8 @@ cask "netspot" do
 
   app "NetSpot.app"
 
+  uninstall quit: "com.etwok.netspotwifi"
+
   zap trash: [
     "~/Library/Application Support/NetSpot",
     "~/Library/Caches/com.etwok.netspotwifi",
