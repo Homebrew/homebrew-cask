@@ -1,6 +1,6 @@
 cask "extradock" do
-  version "4.3.5"
-  sha256 "6b3607bcfcdf1a16cde318e58d0c05c03bcdb465507987aaf3b5e2c1af4d6c63"
+  version "4.3.7"
+  sha256 "d0d735a64e15f66396700e20103a2ec6273584f0580dab92786f5a5d4d759095"
 
   url "https://github.com/AppitStudio/extra-dock-updates/releases/download/v#{version}/extraDock.dmg",
       verified: "github.com/AppitStudio/"
@@ -16,7 +16,7 @@ cask "extradock" do
   auto_updates true
   depends_on macos: :monterey
 
-  app "ExtraDock.app"
+  app "extraDock.app"
 
   uninstall quit: "dignicy.extraDock"
 
