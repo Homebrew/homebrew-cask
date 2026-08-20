@@ -22,6 +22,8 @@ cask "graphicconverter" do
 
   app "GraphicConverter #{version.major}.app"
 
+  uninstall quit: "com.lemkesoft.graphicconverter*"
+
   zap trash: [
     "/Users/Shared/Library/Application Support/GraphicConverter",
     "~/Library/Application Support/GraphicConverter",
