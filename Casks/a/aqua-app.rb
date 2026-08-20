@@ -12,6 +12,7 @@ cask "aqua-app" do
 
   # https://blog.jetbrains.com/qa/2025/04/aqua-sunset/
   deprecate! date: "2025-08-16", because: :discontinued
+  disable! date: "2026-08-20", because: :discontinued
 
   auto_updates true
   depends_on :macos
