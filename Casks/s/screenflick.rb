@@ -18,7 +18,7 @@ cask "screenflick" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Screenflick.app"
 
