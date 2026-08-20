@@ -1,9 +1,9 @@
 cask "tritium" do
   arch arm: "arm64", intel: "x86"
 
-  version "0.2.53"
-  sha256 arm:   "d63edb535f77c70b8c77dcb62813bc7736313172b9cc9a4b5bb0e3040ceba7cd",
-         intel: "4eb1f8b38ba54aff1bb6f62ea0fac2284aaf39d9deb6a92b77f955e0dce1aa03"
+  version "0.2.54"
+  sha256 arm:   "d2286df7cb6780ec97c63828f9333a383bf316c4ace7fcd09680312a90602071",
+         intel: "f340f8842354d32f2d20ecc8ab7e407a0f5398a0e942c50bccacfc80ad81422b"
 
   url "https://tritium.legal/static/releases/tritium-macos-#{arch}.#{version}.zip"
   name "Tritium"
@@ -14,6 +14,8 @@ cask "tritium" do
     url "https://tritium.legal/version"
     strategy :page_match, &:strip
   end
+
+  disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   auto_updates true
   depends_on macos: :big_sur
