@@ -1,6 +1,6 @@
 cask "utc-menu-clock" do
-  version "1.4"
-  sha256 "bb6104168763b1878e14a2c6583f0cde03549e437c870b096b5147eb20d7d7b1"
+  version "1.5"
+  sha256 "3caf9c44e65fe93da7083b58bb792974c44d9c6d12b934d19370b0003305bf87"
 
   url "https://github.com/netik/UTCMenuClock/raw/master/downloads/UTCMenuClock_v#{version}_universal.zip"
   name "UTCMenuClock"
@@ -18,6 +18,8 @@ cask "utc-menu-clock" do
   depends_on macos: :sequoia
 
   app "UTCMenuClock.app"
+
+  uninstall launchctl: "application.UTCMenuClock.app.*"
 
   zap trash: "~/Library/Preferences/net.retina.UTCMenuClock.plist"
 end
