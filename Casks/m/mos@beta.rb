@@ -1,6 +1,6 @@
 cask "mos@beta" do
-  version "4.0.0-beta-20260201.1"
-  sha256 "c1da629077f453eaa142f553176311c6ef588ab5d2bce5d1aa231e1670389c9a"
+  version "4.3.0-beta-20260820.1"
+  sha256 "48a621cf66fec3bf68e3792829f2ae0f412a2d9bc41f491789ea7bdeac39d880"
 
   url "https://github.com/Caldis/Mos/releases/download/#{version}/Mos.Versions.#{version}.zip",
       verified: "github.com/Caldis/Mos/"
