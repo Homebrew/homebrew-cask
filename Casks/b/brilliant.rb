@@ -19,6 +19,8 @@ cask "brilliant" do
 
   app "brilliant.app"
 
+  uninstall quit: "design.brilliant"
+
   zap trash: [
     "~/.config/brilliant",
     "~/.config/brilliant.design",
