@@ -1,6 +1,6 @@
 cask "calendr" do
-  version "1.23.2"
-  sha256 "eff1e3adc3e251cf65133f4607e953d19e90452582b41804483cdbe1338aae26"
+  version "1.24.0"
+  sha256 "de8aa5a478b7b88e0ac6f948b559911303d02c0bb66f6bb4a981057c749fa722"
 
   url "https://github.com/pakerwreah/Calendr/releases/download/v#{version}/Calendr.zip"
   name "Calendr"
@@ -8,7 +8,7 @@ cask "calendr" do
   homepage "https://github.com/pakerwreah/Calendr"
 
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "Calendr.app"
 
