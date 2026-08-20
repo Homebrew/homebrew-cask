@@ -15,7 +15,7 @@ cask "ghost-downloader" do
     strategy :github_latest
   end
 
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   app "Ghost Downloader.app"
 
