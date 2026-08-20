@@ -33,6 +33,8 @@ cask "yandex" do
 
   app "Yandex.app"
 
+  uninstall quit: "ru.yandex.desktop.yandex-browser"
+
   zap trash: [
     "~/.yandex",
     "~/Library/Application Support/Yandex",
