@@ -17,4 +17,11 @@ cask "riverscript" do
   depends_on macos: :ventura
 
   app "RiverScript client.app"
+
+  zap trash: [
+    "~/Library/Caches/com.riverscript.desktop",
+    "~/Library/Preferences/com.riverscript.desktop.plist",
+    "~/Library/Saved Application State/com.riverscript.desktop.savedState",
+    "~/Library/WebKit/com.riverscript.desktop",
+  ]
 end
