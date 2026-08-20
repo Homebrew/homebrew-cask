@@ -1,6 +1,6 @@
 cask "graphicconverter" do
-  version "12.5.2,7231"
-  sha256 "2a0aa9ff08ca549c3c3d2c348da14ee2cb6d756059875f56da5fa308a37937cb"
+  version "12.5.3,7341"
+  sha256 "5f5065d02896bee73a87f7500a9c6c84f45d3919ec7ccc566b75ec72b48bbcaa"
 
   url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.csv.second}.zip",
       verified: "lemkesoft.info/"
@@ -21,6 +21,8 @@ cask "graphicconverter" do
   depends_on :macos
 
   app "GraphicConverter #{version.major}.app"
+
+  uninstall quit: "com.lemkesoft.graphicconverter*"
 
   zap trash: [
     "/Users/Shared/Library/Application Support/GraphicConverter",
