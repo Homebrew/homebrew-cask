@@ -15,7 +15,7 @@ cask "vesktop" do
   auto_updates true
   depends_on macos: :monterey
 
-  app "Vesktop.app"
+  app "vesktop.app"
 
   zap trash: [
     "~/Library/Application Support/vesktop",
