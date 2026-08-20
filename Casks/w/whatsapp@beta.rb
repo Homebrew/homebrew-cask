@@ -1,6 +1,6 @@
 cask "whatsapp@beta" do
-  version "26.33.17"
-  sha256 "608e613808760883450f6c996917185600f97a193da5ef0ef199add1387afa46"
+  version "26.33.19"
+  sha256 "3d236925148132e8de39dc4c0adc27bb5b93a3b5a1d9c3d2cd1dcd2e9c2d4422"
 
   url "https://web.whatsapp.com/desktop/mac_native/release/?version=2.#{version}&extension=zip&configuration=Beta&branch=master"
   name "WhatsApp Beta"
@@ -18,11 +18,15 @@ cask "whatsapp@beta" do
 
   app "WhatsApp.app"
 
-  uninstall quit: [
-    "net.whatsapp.WhatsApp",
-    "net.whatsapp.WhatsApp-sparkle-progress",
-    "net.whatsapp.WhatsApp-sparkle-updater",
-  ]
+  uninstall launchctl: [
+              "net.whatsapp.WhatsApp-sparkle-progress",
+              "net.whatsapp.WhatsApp-sparkle-updater",
+            ],
+            quit:      [
+              "net.whatsapp.WhatsApp",
+              "net.whatsapp.WhatsApp-sparkle-progress",
+              "net.whatsapp.WhatsApp-sparkle-updater",
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/group.net.whatsapp.family",
