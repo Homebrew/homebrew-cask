@@ -23,6 +23,8 @@ cask "qqnews" do
 
   app "腾讯新闻.app"
 
+  uninstall quit: "com.tencent.macNet"
+
   zap trash: [
     "~/Library/Application Support/com.tencent.macNet",
     "~/Library/Caches/com.tencent.macNet",
