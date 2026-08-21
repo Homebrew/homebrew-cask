@@ -20,5 +20,7 @@ cask "datovka" do
 
   app "datovka.app"
 
+  uninstall quit: "cz.nic.datovka"
+
   zap trash: "~/Library/Saved Application State/cz.nic.datovka.savedState"
 end
