@@ -46,6 +46,8 @@ cask "powerphotos" do
 
   app "PowerPhotos.app"
 
+  uninstall quit: "com.fatcatsoftware.PowerPhotos"
+
   zap trash: [
     "~/Library/Application Scripts/8NQ43ND65V.com.fatcatsoftware.PowerPhotosLibraryList",
     "~/Library/Application Support/com.fatcatsoftware.PowerPhotos",
