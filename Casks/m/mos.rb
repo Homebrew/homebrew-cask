@@ -10,7 +10,9 @@ cask "mos" do
 
   livecheck do
     url "https://mos.caldis.me/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   conflicts_with cask: "mos@beta"
