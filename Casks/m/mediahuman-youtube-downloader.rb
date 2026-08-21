@@ -1,7 +1,7 @@
 cask "mediahuman-youtube-downloader" do
   arch arm: "-arm"
 
-  version "3.9.22"
+  version "3.9.23"
   sha256 :no_check
 
   on_arm do
@@ -25,6 +25,8 @@ cask "mediahuman-youtube-downloader" do
   depends_on :macos
 
   app "MediaHuman YouTube Downloader.app"
+
+  uninstall launchctl: "application.com.mediahuman.YouTube"
 
   zap trash: [
     "~/Library/Application Support/MediaHuman/YouTube Downloader",
