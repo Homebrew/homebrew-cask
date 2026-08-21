@@ -14,7 +14,17 @@ cask "alex313031-thorium" do
   livecheck do
     url :url
     regex(/^(M?\d+(?:\.\d+)+)$/i)
-    strategy :github_latest
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        match = release["tag_name"]&.match(regex)
+        # Ignore releases that have `Beta` in their names
+        next if match.blank? || release["name"]&.match?(/beta/i)
+
+        match[1]
+      end
+    end
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
