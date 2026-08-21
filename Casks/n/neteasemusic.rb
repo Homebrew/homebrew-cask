@@ -1,8 +1,12 @@
 cask "neteasemusic" do
-  version "3.1.9,3364"
-  sha256 "6e117a5db6957650fff187cd6c8a3970d8784685ee72ec1cb97f957b46d4d5f7"
+  arch arm: "_arm64"
+  livecheck_arch = on_arch_conditional arm: "arm64", intel: "amd64"
 
-  url "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_#{version.csv.join(".")}.dmg",
+  version "3.1.11,3415"
+  sha256 arm:   "4d4e08e4b794a36a4e061d159b9d9e731ffae3fe76bb8b3623c90e5f0d29e4c4",
+         intel: "326812d1d7f1bdfebd64be6cfe5c465191ad3abbe8ac1831ad2055e8c6a57791"
+
+  url "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_#{version.csv.join(".")}#{arch}.dmg",
       verified:   "d1.music.126.net/",
       user_agent: :fake
   name "NetEase cloud music"
@@ -11,7 +15,7 @@ cask "neteasemusic" do
   homepage "https://music.163.com/"
 
   livecheck do
-    url "https://music.163.com/api/mac/package/download/latest?arch=arm64&productName=music"
+    url "https://music.163.com/api/mac/package/download/latest?arch=#{livecheck_arch}&productName=music"
     strategy :json do |json|
       version = json.dig("data", "appVer")
       build = json.dig("data", "buildVer")
