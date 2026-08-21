@@ -1,6 +1,6 @@
 cask "font-comic-shanns-mono-nerd-font" do
-  version "3.5.0"
-  sha256 "3c6550fe0b3877ea9ca27484af0c74e10aea73d155a9dc3250f11ff3dd4601cd"
+  version "3.5.1"
+  sha256 "0ca2a0aac547d52a395551a19c2bed0d6ee9541feb06c90cbd48f314ec995045"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/ComicShannsMono.tar.xz"
   name "ComicShannsMono Nerd Font (Comic Shanns Mono)"
