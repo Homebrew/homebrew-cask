@@ -1,9 +1,9 @@
 cask "datovka" do
   arch arm: "arm64-macos13.3", intel: "64bit-macos10.12"
 
-  version "4.29.4"
-  sha256 arm:   "2a7c27180b286ff81abb96d34952a4632ae8bdce42135b4674c6a3946371dba4",
-         intel: "a7428dfd69f5ac8fa41581b2d4164dbc0aef2585c3512a64f44ec3d500c84f2c"
+  version "4.29.5"
+  sha256 arm:   "7373c5e57fd1c21920329e1235b65188aea197a74f049d42bdbe6d5a309201be",
+         intel: "62a709201022acebf0e2a6d9c0fc9fb1d91295007c4b38bb35ed64ac4fda14b8"
 
   url "https://datovka.nic.cz/#{version}/datovka-#{version}-#{arch}.dmg",
       verified: "datovka.nic.cz/"
@@ -19,6 +19,8 @@ cask "datovka" do
   depends_on macos: :big_sur
 
   app "datovka.app"
+
+  uninstall quit: "cz.nic.datovka"
 
   zap trash: "~/Library/Saved Application State/cz.nic.datovka.savedState"
 end
