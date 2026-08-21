@@ -12,7 +12,7 @@ cask "thinlinc-client" do
     regex(/tl[._-]v?(\d+(?:[._]\d+)+)[._-]client[._-]macos\.(?:dmg|iso)/i)
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "ThinLinc Client.app"
 
