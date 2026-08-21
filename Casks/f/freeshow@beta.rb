@@ -22,6 +22,8 @@ cask "freeshow@beta" do
 
   app "FreeShow.app"
 
+  uninstall quit: "app.freeshow"
+
   zap trash: [
         "~/Library/Application Support/freeshow",
         "~/Library/Preferences/app.freeshow.plist",
