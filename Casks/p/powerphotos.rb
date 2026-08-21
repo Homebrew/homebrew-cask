@@ -24,7 +24,7 @@ cask "powerphotos" do
     end
   end
   on_sonoma :or_newer do
-    version "3.4.3"
+    version "3.4.4"
     sha256 :no_check
 
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
@@ -45,6 +45,8 @@ cask "powerphotos" do
   depends_on :macos
 
   app "PowerPhotos.app"
+
+  uninstall quit: "com.fatcatsoftware.PowerPhotos"
 
   zap trash: [
     "~/Library/Application Scripts/8NQ43ND65V.com.fatcatsoftware.PowerPhotosLibraryList",
