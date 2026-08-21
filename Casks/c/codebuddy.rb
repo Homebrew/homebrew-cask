@@ -1,9 +1,9 @@
 cask "codebuddy" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.10.4.33993995,1ba59196"
-  sha256 arm:   "08746bab91a2d706cb7a63cb59f2eaf4605029c696a080ef7731976c20d4f643",
-         intel: "e068435314e4fe724ba58825f86142511666b63da51e103a0957dbb602921e4a"
+  version "4.11.2.36529961,74e2511a"
+  sha256 arm:   "56f3391d9879266dbcfb017239c1f09eeb07f781ecfb4745c5ef218a20e5ca20",
+         intel: "e306163184c430d409926bfea30ede785270421d44627bffaf2a8798bb902e8c"
 
   url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/"
