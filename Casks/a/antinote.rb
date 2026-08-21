@@ -1,6 +1,6 @@
 cask "antinote" do
-  version "1.1.7"
-  sha256 "f0a900697929d981ba2ab1aaa7b538a232d895ff53e38d42e1e6c9b9a769e7e5"
+  version "2.0.8"
+  sha256 "d336f18bec9bf09c3f976ebd2b6220a26a373e9dd0dfbc3a6c6edea469af847e"
 
   url "https://antinote.io/updates/Antinote_#{version}.dmg"
   name "Antinote"
