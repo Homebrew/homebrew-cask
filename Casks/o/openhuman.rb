@@ -3,11 +3,11 @@ cask "openhuman" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.63.12"
-  sha256 arm:          "048c589582df5d63c053ac6e171fe0f3d59e653823f31ab8b74fc49957f720e2",
-         intel:        "1d4cceab6477a8d80e40453f5fa1525a5d08c6d271f1fd2027ba9c19efe95a0d",
-         arm64_linux:  "5c24d76482e8b25ba291500f4bafb57c875f0dca2ac2f779fa1941c7f0ada652",
-         x86_64_linux: "aeda8aa7fa9b4a479a7fc8a94afff0dde99a408a1b04cbc4fea2f64139cc9e5b"
+  version "0.63.17"
+  sha256 arm:          "930e1d892ef202fb426443cd4766f685ac7c52343dcd5556427b2330091760d1",
+         intel:        "d96582e178ce4f697c7ff97fd1aecc53fcd34b58725db0a87e76fbc303c8c786",
+         arm64_linux:  "01c0d333ab233a25afa8b687e73a80aac4709711cb0b8fa7c0b6f853e59e8856",
+         x86_64_linux: "9f7caa5cf4e612720c3fcdac06c02c9b42285fd9c86b2428b65e0a2bba679625"
 
   on_macos do
     auto_updates true
