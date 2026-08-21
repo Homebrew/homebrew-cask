@@ -1,5 +1,5 @@
 cask "hermes-desktop" do
-  version "0.20.4,1f234a1033ca"
+  version "0.20.4,8794e5a21c98"
   sha256 "b61e047efe3059faf1c55fec3252e661f2d2a993a7a3eebf5cc6a9aa5c1790f5"
 
   url "https://hermes-assets.nousresearch.com/Hermes-Setup.dmg?build=#{version.csv.second}"
