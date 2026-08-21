@@ -7,11 +7,12 @@ cask "unsloth" do
   desc "Desktop application for Unsloth Studio"
   homepage "https://unsloth.ai/"
 
+  # This regex has to match unstable versions until a stable version becomes
+  # available. This should be updated in the future to only match stable
+  # versions when possible.
   livecheck do
     url :url
-    # Preserve the `-beta` suffix from GitHub tags because the default
-    # `GithubLatest` regex captures only the numeric portion.
-    regex(/^v?(\d+(?:\.\d+)+(?:-[0-9A-Za-z.-]+)?)$/i)
+    regex(/^v?(\d+(?:\.\d+)+.*)$/i)
     strategy :github_latest
   end
 
