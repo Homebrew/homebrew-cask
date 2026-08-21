@@ -1,6 +1,6 @@
 cask "reveal" do
-  version "58"
-  sha256 "707a4277c1a7501bdb4ed340ded6cfc53552a5a6805f31a33d8601c6db9e1af7"
+  version "59"
+  sha256 "2d9dfffe08c90dac77ab5bb44abbbfb3bb912f84556df04510606404651d3841"
 
   url "https://download.revealapp.com/Reveal.app-#{version}.zip"
   name "Reveal"
@@ -16,6 +16,8 @@ cask "reveal" do
   depends_on macos: :sequoia
 
   app "Reveal.app"
+
+  uninstall quit: "com.ittybittyapps.Reveal2"
 
   zap trash: [
     "/Users/Shared/Reveal",
