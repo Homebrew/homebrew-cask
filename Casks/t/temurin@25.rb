@@ -1,14 +1,14 @@
 cask "temurin@25" do
   arch arm: "aarch64", intel: "x64"
 
-  sha256 arm:   "dd8a5213663e96e152a384a302e2a69e9b73d8a10f0474b5b2a9a9a940250f07",
-         intel: "ae657a5caf2eb78d5fd28e84dbf7283e2b7a7ee947a43547a85d9190df01f87e"
+  sha256 arm:   "68e28a99fa76f4825a6e00efc5623262267c3f1593eb233bc0aafc4e202b86cb",
+         intel: "2a04409351992e365b62eb765ae79de607fbd65c7c2db564bc32e460b51b1edf"
 
   on_arm do
-    version "25.0.4,7"
+    version "25.0.4.1,1"
   end
   on_intel do
-    version "25.0.4,7"
+    version "25.0.4.1,1"
   end
 
   url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
