@@ -1,4 +1,4 @@
-cask "atlas-ai" do
+cask "atlas-app" do
   version "0.2.6"
   sha256 "6d03258d5f4caab7786ba358de5aed0bb9a094f4f3856cfe8e5c661179e3c70d"
 
