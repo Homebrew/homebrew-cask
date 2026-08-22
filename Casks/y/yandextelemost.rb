@@ -16,6 +16,8 @@ cask "yandextelemost" do
 
   app "Yandex.Telemost.app"
 
+  uninstall quit: "ru.yandex.desktop.telemost"
+
   zap trash: [
     "~/Library/Application Support/Yandex.Telemost",
     "~/Library/Preferences/ru.yandex.Telemost.plist",
