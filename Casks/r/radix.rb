@@ -6,10 +6,10 @@ cask "radix" do
       verified: "github.com/colinvkim/Radix/"
   name "Radix"
   desc "Disk space analyzer"
-  homepage "https://radix.colinkim.dev/"
+  homepage "https://tryradix.app/"
 
   livecheck do
-    url "https://radix.colinkim.dev/appcast.xml"
+    url "https://tryradix.app/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
