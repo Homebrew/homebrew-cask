@@ -11,7 +11,7 @@ cask "luxury-yacht" do
   desc "Desktop app for managing Kubernetes clusters"
   homepage "https://luxury-yacht.app/"
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "Luxury Yacht.app"
 
