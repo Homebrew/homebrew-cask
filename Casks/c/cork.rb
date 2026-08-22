@@ -16,6 +16,8 @@ cask "cork" do
 
   app "Cork.app"
 
+  uninstall quit: "eu.davidbures.cork"
+
   zap trash: [
     "~/Documents/Cork",
     "~/Library/Caches/com.davidbures.cork",
