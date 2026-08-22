@@ -1,5 +1,5 @@
 cask "goodsync" do
-  version "12.11.5"
+  version "12.11.6"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.goodsync.com/download/goodsync-vsub-mac.dmg"
@@ -15,6 +15,8 @@ cask "goodsync" do
   depends_on :macos
 
   app "GoodSync.app"
+
+  uninstall quit: "com.sibersystems.goodsyncmac2000"
 
   zap trash: [
     "/Library/Application Support/GoodSync",
