@@ -28,10 +28,12 @@ cask "sonarqube-cli" do
     end
   end
 
-  binary artifact, target: "sonar"
+  rename artifact, "sonar"
+
+  binary "sonar"
 
   zap script: {
-    executable:   artifact,
+    executable:   "sonar",
     args:         ["system", "reset", "--force"],
     must_succeed: false,
   }
