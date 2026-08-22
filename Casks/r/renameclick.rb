@@ -21,6 +21,8 @@ cask "renameclick" do
 
   app "RenameClick.app"
 
+  uninstall quit: "com.renameclick.app"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.renameclick.app.sfl*",
     "~/Library/Application Support/RenameClick",
