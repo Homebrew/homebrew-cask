@@ -16,21 +16,16 @@ cask "windows-app" do
   conflicts_with cask: "microsoft-remote-desktop"
   depends_on macos: :sonoma
 
-  pkg "Windows_App_#{version}_installer.pkg"
+  pkg "Windows_App_#{version}_installer.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_autoupdate_updater.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
 
-  uninstall launchctl: [
-              "com.microsoft.autoupdate.helper",
-              "com.microsoft.update.agent",
-            ],
-            quit:      [
-              "com.microsoft.autoupdate.fba",
-              "com.microsoft.autoupdate2",
-              "com.microsoft.errorreporting",
-            ],
-            pkgutil:   [
-              "com.microsoft.package.Microsoft_AutoUpdate.app",
-              "com.microsoft.rdc.macos",
-            ]
+  uninstall pkgutil: "com.microsoft.rdc.macos"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.rdc.macos",
