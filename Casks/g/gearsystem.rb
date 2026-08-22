@@ -1,9 +1,9 @@
 cask "gearsystem" do
   arch arm: "arm64", intel: "intel"
 
-  version "3.9.15"
-  sha256 arm:   "2d7dbdfc7e940679a9e968c3eac66275902fe859c0a25b416e5011e3e80cf536",
-         intel: "02bed91c852b7d04e56a534b4d150d6ced020e503d6401970bff95a20f92c102"
+  version "3.9.16"
+  sha256 arm:   "e0dfa929580a259a9a6097f0efb88fcad6e30fb0b8c13364f449505e86617781",
+         intel: "0e6435deeb3211b382f8565e46ab3373c812d25a88bba0766447c05e90208607"
 
   url "https://github.com/drhelius/Gearsystem/releases/download/#{version}/Gearsystem-#{version}-desktop-macos-#{arch}.zip"
   name "Gearsystem"
