@@ -25,12 +25,6 @@ cask "mullvad-vpn" do
 
   uninstall launchctl: "net.mullvad.daemon",
             quit:      "net.mullvad.vpn",
-            script:    {
-              executable:   "/Applications/Mullvad VPN.app/Contents/Resources/mullvad-setup",
-              args:         ["reset-firewall"],
-              sudo:         true,
-              must_succeed: false,
-            },
             pkgutil:   "net.mullvad.vpn",
             delete:    [
               "/Library/Caches/mullvad-vpn",
@@ -43,12 +37,18 @@ cask "mullvad-vpn" do
               "/var/log/mullvad-vpn",
             ]
 
-  zap trash: [
-    "/etc/mullvad-vpn",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mullvad.vpn.sfl*",
-    "~/Library/Application Support/Mullvad VPN",
-    "~/Library/Logs/Mullvad VPN",
-    "~/Library/Preferences/net.mullvad.vpn.helper.plist",
-    "~/Library/Preferences/net.mullvad.vpn.plist",
-  ]
+  zap script: {
+        executable:   "/Applications/Mullvad VPN.app/Contents/Resources/mullvad-setup",
+        args:         ["reset-firewall"],
+        sudo:         true,
+        must_succeed: false,
+      },
+      trash:  [
+        "/etc/mullvad-vpn",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.mullvad.vpn.sfl*",
+        "~/Library/Application Support/Mullvad VPN",
+        "~/Library/Logs/Mullvad VPN",
+        "~/Library/Preferences/net.mullvad.vpn.helper.plist",
+        "~/Library/Preferences/net.mullvad.vpn.plist",
+      ]
 end
