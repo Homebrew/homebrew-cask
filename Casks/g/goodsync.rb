@@ -16,6 +16,8 @@ cask "goodsync" do
 
   app "GoodSync.app"
 
+  uninstall quit: "com.sibersystems.goodsyncmac2000"
+
   zap trash: [
     "/Library/Application Support/GoodSync",
     "/Library/LaunchDaemons/com.siber.gs-server.plist",
