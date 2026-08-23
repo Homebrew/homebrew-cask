@@ -12,7 +12,14 @@ cask "tev" do
     app "tev.app"
     binary "#{appdir}/tev.app/Contents/MacOS/tev"
 
-    zap trash: "~/Library/Preferences/org.tom94.tev.plist"
+    uninstall quit: "org.tom94.tev"
+
+    zap trash: [
+      "~/Library/Application Scripts/com.apple.CalendarUI.SpotlightEventPreview",
+      "~/Library/Containers/com.apple.CalendarUI.SpotlightEventPreview",
+      "~/Library/Preferences/org.tom94.tev.plist",
+      "~/Library/Saved Application State/org.tom94.tev.savedState",
+    ]
   end
   on_linux do
     app_image "tev#{arch}.appimage", target: "tev.AppImage"
