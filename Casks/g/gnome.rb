@@ -1,5 +1,5 @@
 cask "gnome" do
-  version "1.20,2"
+  version "1.21,1"
   sha256 :no_check
 
   url "https://lexfriedman.com/gnome/GAsInGnome.zip"
