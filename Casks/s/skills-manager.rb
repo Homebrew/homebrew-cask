@@ -10,11 +10,6 @@ cask "skills-manager" do
   desc "Manage, sync, and organise AI agent skills across coding tools"
   homepage "https://github.com/xingkongliang/skills-manager"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on :macos
 
