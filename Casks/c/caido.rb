@@ -27,6 +27,7 @@ cask "caido" do
     "~/Library/Application Support/Caido",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.caido.caido.sfl*",
     "~/Library/Application Support/io.caido.Caido",
+    "~/Library/Logs/Caido",
     "~/Library/Preferences/io.caido.Caido.plist",
     "~/Library/Saved Application State/io.caido.Caido.savedState",
   ]
