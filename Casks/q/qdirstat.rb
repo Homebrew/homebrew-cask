@@ -12,6 +12,8 @@ cask "qdirstat" do
 
   app "QDirStat.app"
 
+  uninstall quit: "com.qdirstat.QDirStat"
+
   zap trash: [
     "~/Library/Preferences/com.qdirstat.QDirStat*.plist",
     "~/Library/Preferences/com.yourcompany.qdirstat.plist",
