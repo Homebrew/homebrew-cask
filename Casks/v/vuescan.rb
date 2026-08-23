@@ -1,5 +1,5 @@
 cask "vuescan" do
-  version "9.8.56"
+  version "9.8.57"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.hamrick.com/files/vuea64#{version.major_minor.no_dots}.dmg"
@@ -16,9 +16,14 @@ cask "vuescan" do
 
   app "VueScan.app"
 
+  uninstall quit: "com.hamrick.vuescan"
+
   zap trash: [
+        "/Users/Shared/.vuescanrc",
         "~/.vuescanrc",
         "~/Library/Preferences/com.hamrick.vuescan.plist",
+        "~/Library/Preferences/vuescan.log",
+        "~/Library/Preferences/vuescan_trouble.vid",
         "~/Library/Saved Application State/com.hamrick.vuescan.savedState",
         "~/Pictures/VueScan/vuescan.ini",
         "~/Pictures/VueScan/vuescan.log",
