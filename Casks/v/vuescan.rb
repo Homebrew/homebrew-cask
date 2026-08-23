@@ -16,9 +16,14 @@ cask "vuescan" do
 
   app "VueScan.app"
 
+  uninstall quit: "com.hamrick.vuescan"
+
   zap trash: [
+        "/Users/Shared/.vuescanrc",
         "~/.vuescanrc",
         "~/Library/Preferences/com.hamrick.vuescan.plist",
+        "~/Library/Preferences/vuescan.log",
+        "~/Library/Preferences/vuescan_trouble.vid",
         "~/Library/Saved Application State/com.hamrick.vuescan.savedState",
         "~/Pictures/VueScan/vuescan.ini",
         "~/Pictures/VueScan/vuescan.log",
