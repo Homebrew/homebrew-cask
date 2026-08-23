@@ -1,6 +1,6 @@
 cask "space-rabbit" do
-  version "2.3.3"
-  sha256 "bd39b11bb002aa4048a867d19f17ed075010fea07b8a5f4ba30c742ca8bdd89d"
+  version "2.4.0"
+  sha256 "ce1d61ac9b421b5e2b8effa6b30fea41b1f696185c449e746cbe5329f4a67668"
 
   url "https://github.com/Tahul/space-rabbit/releases/download/v#{version}/Space-Rabbit.dmg"
   name "Space Rabbit"
