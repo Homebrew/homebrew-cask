@@ -22,6 +22,7 @@ cask "openmtp" do
 
   zap trash: [
     "~/.io.ganeshrvel",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.ganeshrvel.openmtp.sfl*",
     "~/Library/Application Support/io.ganeshrvel.openmtp",
     "~/Library/Application Support/OpenMTP",
     "~/Library/Preferences/io.ganeshrvel.openmtp.plist",
