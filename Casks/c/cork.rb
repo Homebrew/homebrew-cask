@@ -20,9 +20,13 @@ cask "cork" do
 
   zap trash: [
     "~/Documents/Cork",
+    "~/Library/Application Support/Cork",
     "~/Library/Caches/com.davidbures.cork",
+    "~/Library/Caches/eu.davidbures.cork",
     "~/Library/HTTPStorages/com.davidbures.cork",
+    "~/Library/HTTPStorages/eu.davidbures.cork",
     "~/Library/Preferences/com.davidbures.cork.plist",
+    "~/Library/Preferences/eu.davidbures.cork.plist",
     "~/Library/Saved Application State/com.davidbures.cork.savedState",
   ]
 end
