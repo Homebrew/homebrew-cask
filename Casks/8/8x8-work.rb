@@ -11,13 +11,18 @@ cask "8x8-work" do
   homepage "https://docs.8x8.com/8x8WebHelp/8x8-work-for-desktop/Content/workd/about-the-app.htm"
 
   livecheck do
-    url "https://support-portal.8x8.com/helpcenter/docrenderservice/services/rest/documents/8bff4970-6fbf-4daf-842d-8ae9b533153d"
-    regex(/href=.*?work[._-]dmg[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    url "https://help.8x8.com/docs/download-8x8-work-for-desktop"
+    regex(/href=.*?work#{arch}[._-]dmg[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
   depends_on macos: :monterey
 
   app "8x8 Work.app"
 
-  zap trash: "~/Library/Application Support/8x8 Work"
+  zap trash: [
+    "~/Library/Application Support/8x8 Work",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.8x8---virtual-office.sfl*",
+    "~/Library/Logs/8x8 Work",
+    "~/Library/Preferences/com.electron.8x8---virtual-office.plist",
+  ]
 end
