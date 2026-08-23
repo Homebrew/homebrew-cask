@@ -36,5 +36,8 @@ cask "forkgram" do
 
   app "Forkgram.app"
 
-  zap trash: "~/Library/Application Support/Forkgram Desktop"
+  zap trash: [
+    "~/Library/Application Support/Forkgram Desktop",
+    "~/Library/Preferences/com.tdesktop.Telegram.plist",
+  ]
 end
