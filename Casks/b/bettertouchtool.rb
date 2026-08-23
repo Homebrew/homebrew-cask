@@ -21,7 +21,14 @@ cask "bettertouchtool" do
   uninstall quit: "com.hegenberg.BetterTouchTool"
 
   zap trash: [
+    "~/Library/Application Scripts/com.hegenberg.BetterTouchTool.BetterTouchTool-Widgets",
+    "~/Library/Application Scripts/com.hegenberg.BetterTouchTool.BTTFinderContextMenu",
     "~/Library/Application Support/BetterTouchTool",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hegenberg.bettertouchtool.sfl*",
+    "~/Library/Caches/com.hegenberg.BetterTouchTool",
+    "~/Library/Containers/com.hegenberg.BetterTouchTool.BetterTouchTool-Widgets",
+    "~/Library/Containers/com.hegenberg.BetterTouchTool.BTTFinderContextMenu",
+    "~/Library/HTTPStorages/com.hegenberg.BetterTouchTool",
     "~/Library/Preferences/com.hegenberg.BetterTouchTool.plist",
   ]
 end
