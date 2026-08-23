@@ -3,11 +3,11 @@ cask "ferdium@nightly" do
   os macos: "mac", linux: "linux-Portable"
   url_end = on_system_conditional macos: "#{arch}.dmg", linux: "x86_64.AppImage"
 
-  version "7.2.2-nightly.2"
+  version "7.2.2-nightly.3"
 
   on_macos do
-    sha256 arm:   "74a6e93bafdf72ea0561f999e547c808a69fc08517a296c4cd6590a425ae8117",
-           intel: "7d1a23123f0c0a19fcc4d5d42cbeedbea5cbe42e1d97226354d34ca7e2402ea6"
+    sha256 arm:   "08d7f9d1532cd5eeadcbbc7030ff88c2eb7da9600c80d7b38cf9f25cc1c9d0c5",
+           intel: "e5e6a0f0e8fafab5114ecd260f0718f206550c63785039321c404a8e63293be4"
 
     depends_on macos: :monterey
 
@@ -33,7 +33,7 @@ cask "ferdium@nightly" do
     ]
   end
   on_linux do
-    sha256 "29ec3b3d7db7f5e792610948bd0e0283c917b5f19506c6c7e745d8553a77f1e8"
+    sha256 "8767b0da1b406e23b7784a828518b2ada758aa5c214c882754a58e65f0c9f58c"
 
     depends_on arch: :x86_64
 
