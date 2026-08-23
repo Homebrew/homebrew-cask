@@ -1,6 +1,6 @@
 cask "pixieditor" do
-  version "2.1.2.1"
-  sha256 "341fbac5f2e74e7f72ad883da3fed19ee9d1710d0407584bf16f8ad5ca5402a8"
+  version "2.1.2.2"
+  sha256 "8f85445b2244d64593a81655d6ca480fda45eebb8f72649f817ca7b33b11052b"
 
   url "https://github.com/PixiEditor/PixiEditor/releases/download/#{version}/PixiEditor-#{version}-universal-macos.dmg",
       verified: "github.com/PixiEditor/PixiEditor/"
@@ -16,6 +16,8 @@ cask "pixieditor" do
   depends_on macos: :big_sur
 
   app "PixiEditor.app"
+
+  uninstall quit: "com.pixieditor"
 
   zap trash: [
     "~/Library/Application Support/PixiEditor",
