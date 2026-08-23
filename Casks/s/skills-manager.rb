@@ -7,7 +7,7 @@ cask "skills-manager" do
 
   url "https://github.com/xingkongliang/skills-manager/releases/download/v#{version}/skills-manager_#{version}_#{arch}.dmg"
   name "Skills Manager"
-  desc "Manage, sync, and organize AI agent skills across coding tools"
+  desc "Manage, sync, and organise AI agent skills across coding tools"
   homepage "https://github.com/xingkongliang/skills-manager"
 
   livecheck do
