@@ -17,6 +17,8 @@ cask "pixieditor" do
 
   app "PixiEditor.app"
 
+  uninstall quit: "com.pixieditor"
+
   zap trash: [
     "~/Library/Application Support/PixiEditor",
     "~/Library/Preferences/com.pixieditor.plist",
