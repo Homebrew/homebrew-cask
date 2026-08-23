@@ -4,7 +4,7 @@ cask "riverscript" do
 
   url "https://downloads.riverscript.com/releases/v#{version}/riverscript_#{version}_universal.dmg"
   name "RiverScript"
-  desc "Capture and transcribe everything you can hear on your computer. Literally"
+  desc "AI platform for recording and transcribing system audio from any app"
   homepage "https://riverscript.com/"
 
   livecheck do
