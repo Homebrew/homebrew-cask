@@ -19,5 +19,10 @@ cask "8x8-work" do
 
   app "8x8 Work.app"
 
-  zap trash: "~/Library/Application Support/8x8 Work"
+  zap trash: [
+    "~/Library/Application Support/8x8 Work",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.8x8---virtual-office.sfl*",
+    "~/Library/Logs/8x8 Work",
+    "~/Library/Preferences/com.electron.8x8---virtual-office.plist",
+  ]
 end
