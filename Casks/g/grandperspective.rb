@@ -17,7 +17,7 @@ cask "grandperspective" do
   desc "Graphically shows disk usage within a file system"
   homepage "https://grandperspectiv.sourceforge.net/"
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "GrandPerspective.app"
 
