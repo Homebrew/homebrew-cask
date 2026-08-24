@@ -29,6 +29,7 @@ cask "t3-code" do
     depends_on arch: :x86_64
 
     app_image "T3-Code-#{version}-#{arch}.AppImage", target: "T3 Code.AppImage"
+    binary "T3-Code-#{version}-#{arch}.AppImage", target: "t3code"
   end
 
   url "https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.#{os}"
