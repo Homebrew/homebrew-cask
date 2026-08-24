@@ -16,6 +16,8 @@ cask "workspaces" do
 
   app "Workspaces.app"
 
+  uninstall quit: "com.apptorium.Workspaces#{version.major}-paddle"
+
   zap trash: [
     "~/Library/Application Scripts/com.apptorium.Workspaces*",
     "~/Library/Application Support/com.apptorium.Workspaces*",
