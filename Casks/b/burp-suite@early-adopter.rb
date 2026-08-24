@@ -1,9 +1,9 @@
 cask "burp-suite@early-adopter" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2026.7"
-  sha256 arm:   "fb381299cca50990ab3f62c802e8a44f59f042f6ef8230c563cf453b89cabee5",
-         intel: "0597d32bd2759b4885cddf5dd0e0b13343a1f26bd452a15868af9adf0c7ada7e"
+  version "2026.8"
+  sha256 arm:   "638ff9d9c3026838798f5659904e3e9cba00ee0b26f3d616f93b1967f275d2ce",
+         intel: "6c6f0f8450179d1c3e99538fcdad7d1d764a5d7e290c8c48b9070018e08c9411"
 
   url "https://portswigger-cdn.net/burp/releases/download?product=desktop&version=#{version}&type=#{arch}",
       verified: "portswigger-cdn.net/burp/releases/"
@@ -33,6 +33,8 @@ cask "burp-suite@early-adopter" do
   depends_on :macos
 
   app "Burp Suite.app"
+
+  uninstall quit: "com.install4j.6592-1155-2163-3973.70"
 
   zap trash: "~/.BurpSuite"
 end
