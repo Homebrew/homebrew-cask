@@ -1,6 +1,6 @@
 cask "mcbopomofo" do
-  version "3.0"
-  sha256 "b9495f228e70014d1a763b44a3fe4e89a99cc757c4d539c9a5ffe6f7ada611c5"
+  version "3.1"
+  sha256 "0f940645ee8b471474d2c9e6068edd795b84486bbb396b3ce6757f407ae6e806"
 
   url "https://github.com/openvanilla/McBopomofo/releases/download/#{version}/McBopomofo-Installer-#{version}.zip",
       verified: "github.com/openvanilla/McBopomofo/"
