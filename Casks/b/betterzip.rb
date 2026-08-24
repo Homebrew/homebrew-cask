@@ -18,6 +18,8 @@ cask "betterzip" do
   app "BetterZip.app"
   binary "#{appdir}/BetterZip.app/Contents/Resources/betterzip"
 
+  uninstall quit: "com.macitbetter.betterzip"
+
   zap trash: [
     "~/Library/Application Scripts/79RR9LPM2N.group.com.macitbetter.betterzip",
     "~/Library/Application Scripts/79RR9LPM2N.group.com.macitbetter.betterzip-setapp",
