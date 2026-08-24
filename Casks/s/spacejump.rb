@@ -1,6 +1,6 @@
 cask "spacejump" do
-  version "2.0.0"
-  sha256 "b31bdc2ea12e347de4e84aed8804a2ffa11c75104f776641669fa5e7f527ef52"
+  version "2.0.2"
+  sha256 "7bd066c0fb2b4dfa858604f5a0aed3bf233bb3f96968b977955ff4539adb2291"
 
   url "https://pub-2f1e73dd67bd462192b6592baa57a0ce.r2.dev/SpaceJump-v#{version}.dmg",
       verified: "pub-2f1e73dd67bd462192b6592baa57a0ce.r2.dev/"
