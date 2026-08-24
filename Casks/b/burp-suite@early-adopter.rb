@@ -34,5 +34,7 @@ cask "burp-suite@early-adopter" do
 
   app "Burp Suite.app"
 
+  uninstall quit: "com.install4j.6592-1155-2163-3973.70"
+
   zap trash: "~/.BurpSuite"
 end
