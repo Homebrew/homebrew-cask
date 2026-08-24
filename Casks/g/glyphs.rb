@@ -17,6 +17,8 @@ cask "glyphs" do
 
   app "Glyphs #{version.major}.app"
 
+  uninstall quit: "com.GeorgSeifert.Glyphs3"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.georgseifert.glyphs#{version.major}.sfl*",
     "~/Library/Application Support/com.GeorgSeifert.Glyphs#{version.major}",
