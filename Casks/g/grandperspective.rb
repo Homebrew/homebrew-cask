@@ -21,6 +21,8 @@ cask "grandperspective" do
 
   app "GrandPerspective.app"
 
+  uninstall quit: "net.sourceforge.grandperspectiv"
+
   zap trash: [
     "~/Library/Application Scripts/net.courceforge.grandperspectiv",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.grandperspectiv.sfl*",
