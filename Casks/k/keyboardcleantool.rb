@@ -1,5 +1,5 @@
 cask "keyboardcleantool" do
-  version "7"
+  version "8.1,10"
   sha256 :no_check
 
   url "https://folivora.ai/releases/KeyboardCleanTool.zip"
@@ -12,7 +12,7 @@ cask "keyboardcleantool" do
     strategy :extract_plist
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "KeyboardCleanTool.app"
 
