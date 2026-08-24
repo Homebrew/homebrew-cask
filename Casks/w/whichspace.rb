@@ -1,6 +1,6 @@
 cask "whichspace" do
-  version "1.3.0"
-  sha256 "35d4919a9e2af57756a2bf548de193c90dfde9c9a5f96f47cee1aeffaa6a30ab"
+  version "1.3.1"
+  sha256 "f3aad609f9808af17d9a046760b5a3789671f0d5cf0e5f1fc64840c3c980e2c0"
 
   url "https://github.com/gechr/WhichSpace/releases/download/v#{version}/WhichSpace.zip"
   name "WhichSpace"
