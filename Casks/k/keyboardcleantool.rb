@@ -1,6 +1,6 @@
 cask "keyboardcleantool" do
-  version "8.1"
-  sha256 "1c5f6b20021235031323c2d7398fdc3a5e47f27e9671e8a81714ac408912a8e0"
+  version "8.2"
+  sha256 "c85b7342bce59cc3f76a3689aa92405f1b672f93f697c0775a178a8b255b6191"
 
   url "https://folivora.ai/releases/KeyboardCleanTool-#{version}.zip"
   name "KeyboardCleanTool"
