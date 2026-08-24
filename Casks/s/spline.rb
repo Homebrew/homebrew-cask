@@ -19,5 +19,7 @@ cask "spline" do
 
   app "Spline.app"
 
+  uninstall launchctl: "com.design.spline.ShipIt"
+
   zap trash: "~/Library/Preferences/com.design.spline.plist"
 end
