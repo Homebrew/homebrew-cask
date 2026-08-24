@@ -29,6 +29,10 @@ cask "splashtop-streamer" do
             pkgutil:   [
               "com.splashtop.soundDriver",
               "com.splashtop.Splashtop-Streamer",
+            ],
+            delete:    [
+              "/Library/LaunchAgents/com.splashtop.streamer.plist",
+              "~/Library/LaunchAgents/com.splashtop.streamer.plist",
             ]
 
   zap trash: [
