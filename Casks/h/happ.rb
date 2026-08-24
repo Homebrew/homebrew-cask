@@ -1,6 +1,6 @@
 cask "happ" do
-  version "3.3.6"
-  sha256 "722c7734be623de6e1dd19cef5650ae02b0d9f93cd9a274a3c53eac148f17b15"
+  version "4.1.1"
+  sha256 "31b900f983e5a3113af59e7fb29c5d16e91e222e31fe794a3c70509619b48122"
 
   url "https://github.com/Happ-proxy/happ-desktop/releases/download/#{version}/Happ.macOS.universal.dmg",
       verified: "github.com/Happ-proxy/happ-desktop/"
