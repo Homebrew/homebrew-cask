@@ -1,6 +1,6 @@
 cask "bramble" do
-  version "0.4.0"
-  sha256 "54a0914d235558fb2846e94b5cbab037745eff9b8e9f5871d0933fe56c6c5a90"
+  version "0.5.0"
+  sha256 "36cc2becebaa14d8ed1dc85b4f2b19213d3629d125cca2541435c488e5fdd4c7"
 
   url "https://github.com/flythenimbus/bramble/releases/download/#{version}-desktop/Bramble_#{version}_universal.dmg"
   name "Bramble"
