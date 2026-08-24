@@ -1,9 +1,9 @@
 cask "thoughtdag" do
   arch arm: "-arm64"
 
-  version "0.3.28"
-  sha256 arm:   "edc721fd0ee46f6f7a3e3a700f00fc64b3713549a524020d6ef6fb51c02103be",
-         intel: "78662db3e7ae6a8d787bd3ed45db399c1359d8035866af5ce8d4b81614be55aa"
+  version "0.3.30"
+  sha256 arm:   "8de863d39e4584ba7e5aa95629873a1e82227d69e4446a8e48dd5d9234a36b87",
+         intel: "64e6118218427b7eb3d369c8c0dd37b9a422755b2995bffe3c1e6f11832a8659"
 
   url "https://github.com/chenxiachan/thoughtdag/releases/download/v#{version}/ThoughtDAG-#{version}#{arch}.dmg"
   name "ThoughtDAG"
