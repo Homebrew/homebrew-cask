@@ -26,7 +26,10 @@ cask "splashtop-streamer" do
               "com.splashtop.streamer-srioframebuffer",
             ],
             quit:      "com.splashtop.Splashtop-Streamer",
-            pkgutil:   "com.splashtop.Splashtop-Streamer"
+            pkgutil:   [
+              "com.splashtop.soundDriver",
+              "com.splashtop.Splashtop-Streamer",
+            ]
 
   zap trash: [
     "~/Library/Application Support/Splashtop Streamer",
