@@ -12,7 +12,7 @@ cask "workspaces" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Workspaces.app"
 
