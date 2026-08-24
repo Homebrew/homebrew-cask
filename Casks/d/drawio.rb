@@ -17,10 +17,13 @@ cask "drawio" do
                     executable: "#{appdir}/draw.io.app/Contents/MacOS/draw.io"
 
     zap trash: [
+      "~/Library/Application Scripts/com.jgraph.drawio.desktop.PreviewExtension",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.jgraph.drawio.desktop.sfl*",
       "~/Library/Application Support/draw.io",
       "~/Library/Caches/com.jgraph.drawio.desktop",
       "~/Library/Caches/com.jgraph.drawio.desktop.ShipIt",
       "~/Library/Caches/draw.io-updater",
+      "~/Library/Containers/com.jgraph.drawio.desktop.PreviewExtension",
       "~/Library/HTTPStorages/com.jgraph.drawio.desktop",
       "~/Library/Logs/draw.io",
       "~/Library/Preferences/ByHost/com.jgraph.drawio.desktop.ShipIt.*.plist",

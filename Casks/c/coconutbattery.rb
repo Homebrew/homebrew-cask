@@ -23,11 +23,14 @@ cask "coconutbattery" do
             quit:      "com.coconut-flavour.coconutBattery-Menu"
 
   zap trash: [
+    "~/Library/Application Scripts/R5SC3K86L5.com.coconut-flavour.coconutBattery",
     "~/Library/Application Support/coconutBattery",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.coconut-flavour.coconutbattery.sfl*",
     "~/Library/Caches/com.coconut-flavour.coconutBattery*",
     "~/Library/Group Containers/*.coconut-flavour.coconutBattery",
     "~/Library/Preferences/com.coconut-flavour.coconutBattery-Menu.plist",
     "~/Library/Preferences/com.coconut-flavour.coconutBattery.plist",
     "~/Library/Saved Application State/com.coconut-flavour.coconutBattery.savedState",
+    "~/Library/WebKit/com.coconut-flavour.coconutBattery",
   ]
 end

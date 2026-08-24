@@ -24,6 +24,7 @@ cask "aerial@beta" do
 
   zap trash: [
     "/Users/Shared/Aerial",
+    "~/Library/Application Scripts/com.glouel.Aerial-App.AerialScreenSaverExtension",
     "~/Library/Application Support/Aerial",
     "~/Library/Caches/com.glouel.Aerial-App",
     "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver.x86-64/Data/Library/Application Support/Aerial",
@@ -32,6 +33,7 @@ cask "aerial@beta" do
     "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Caches/Aerial",
     "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Preferences/ByHost/com.JohnCoates.Aerial*.plist",
     "~/Library/Containers/com.glouel.Aerial-App",
+    "~/Library/Containers/com.glouel.Aerial-App.AerialScreenSaverExtension",
     "~/Library/Containers/com.glouel.Aerial-App.ScreenSaverExtension",
     "~/Library/HTTPStorages/com.glouel.Aerial-App",
     "~/Library/Logs/Aerial",
