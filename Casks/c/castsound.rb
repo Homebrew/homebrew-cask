@@ -32,6 +32,7 @@ cask "castsound" do
   }
 
   zap trash: [
+    "~/Library/Application Support/CastSound",
     "~/Library/Application Support/com.devculi.castsound",
     "~/Library/Caches/com.devculi.castsound",
     "~/Library/Preferences/com.devculi.castsound.plist",
