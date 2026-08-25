@@ -16,14 +16,13 @@ cask "castsound" do
   end
 
   auto_updates true
+  depends_on :macos
 
   app "CastSound.app"
 
-  postflight do
-    system_command "/bin/mkdir",
-                   args:         ["-p", "#{Dir.home}/Library/Application Support/com.devculi.castsound"],
-                   must_succeed: false
-    File.write("#{Dir.home}/Library/Application Support/com.devculi.castsound/.managed_by_homebrew", "")
+  postflight_steps do
+    mkdir_p "Library/Application Support/com.devculi.castsound", base: :home
+    touch "Library/Application Support/com.devculi.castsound/.managed_by_homebrew", base: :home
   end
 
   uninstall script: {
