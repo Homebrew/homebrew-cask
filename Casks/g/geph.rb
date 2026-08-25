@@ -20,6 +20,8 @@ cask "geph" do
             pkgutil:   "io.geph.GephGui"
 
   zap trash: [
+    "/Library/Application Support/geph",
+    "/Library/LaunchDaemons/io.geph.manager.plist",
     "~/Library/Application Support/gephgui#{version.major}",
     "~/Library/Preferences/io.geph.geph-electron.plist",
   ]
