@@ -14,7 +14,7 @@ cask "mkvtoolnix-app" do
     url "https://mkvtoolnix.download/macos/releases/"
     regex(/href=.*?MKVToolNix[._-]v?(\d+(?:[.-]\d+)+)[._-]#{arch}\.dmg/i)
     strategy :page_match do |page, regex|
-      main_version = page.scan(%r{href=.*?releases/v?(\d+(?:\.\d+)+)/}i)
+      main_version = page.scan(%r{href=.*?/v?(\d+(?:\.\d+)+)/}i)
                          .max_by { |match| Version.new(match[0]) }
                          &.first
       next if main_version.blank?
