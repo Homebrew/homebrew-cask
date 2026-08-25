@@ -18,6 +18,8 @@ cask "royal-tsx" do
 
   app "Royal TSX.app"
 
+  uninstall quit: "com.lemonmojo.RoyalTSX.App"
+
   zap trash: [
     "~/Library/Application Support/com.lemonmojo.RoyalTSX.App",
     "~/Library/Application Support/Royal TSX",
