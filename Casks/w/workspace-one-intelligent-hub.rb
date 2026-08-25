@@ -47,7 +47,4 @@ cask "workspace-one-intelligent-hub" do
               "/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/SpotlightAppStub.app",
               "/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/SSOHelper.app",
             ]
-
-  zap trash: [
-  ]
 end
