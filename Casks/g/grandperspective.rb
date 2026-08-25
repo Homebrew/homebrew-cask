@@ -8,8 +8,8 @@ cask "grandperspective" do
     end
   end
   on_big_sur :or_newer do
-    version "3.7.2"
-    sha256 "57abef30e93506d90094978aa75a706cf98f1d32903f3ae694840bc742f21ba8"
+    version "3.8.0"
+    sha256 "32f04ad4d3a84511a9a9cfa2752d85a98ba365d462f80a7201635c8e249e09d3"
   end
 
   url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg"
@@ -17,9 +17,11 @@ cask "grandperspective" do
   desc "Graphically shows disk usage within a file system"
   homepage "https://grandperspectiv.sourceforge.net/"
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "GrandPerspective.app"
+
+  uninstall quit: "net.sourceforge.grandperspectiv"
 
   zap trash: [
     "~/Library/Application Scripts/net.courceforge.grandperspectiv",
