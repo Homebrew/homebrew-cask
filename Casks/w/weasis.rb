@@ -1,9 +1,9 @@
 cask "weasis" do
   arch arm: "aarch64", intel: "x86-64"
 
-  version "4.7.2"
-  sha256 arm:   "14ac25390574168da11596a2dd02f79ef9c56b5398c3fbb95d64c73ff58e23aa",
-         intel: "645a23c5d958af6c96f5a8f24f78614de8fe11ee45381a989b84a21ab46cbac3"
+  version "4.7.3"
+  sha256 arm:   "5dc395a35390798bc8c9174c00afe968fce29c2845d248f9fa08e90e437a1ba7",
+         intel: "7580a3c20a0f52b2e3635ef6040cf09db6392c41c9522aa714d12fb7bb654579"
 
   url "https://github.com/nroduit/Weasis/releases/download/v#{version}/Weasis-#{version}-#{arch}.pkg",
       verified: "github.com/nroduit/Weasis/"
