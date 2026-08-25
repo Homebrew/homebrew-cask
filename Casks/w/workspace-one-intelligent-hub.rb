@@ -2,10 +2,10 @@ cask "workspace-one-intelligent-hub" do
   version "26.06"
   sha256 :no_check
 
-  url "https://packages.omnissa.com/wsone/WorkspaceONEIntelligentHub.pkg",
+  url "https://packages.omnissa.com/wsone/HubMacOS.pkg",
       verified: "packages.omnissa.com/wsone/"
   name "Workspace ONE Intelligent Hub"
-  desc "VMware workspace"
+  desc "Register your device for access to resources within your organization"
   homepage "https://www.getwsone.com/"
 
   livecheck do
@@ -16,29 +16,40 @@ cask "workspace-one-intelligent-hub" do
   auto_updates true
   depends_on macos: :monterey
 
-  pkg "WorkspaceONEIntelligentHub.pkg"
+  pkg "HubMacOS.pkg"
 
   uninstall launchctl: [
+              "com.airwatch.airwatchd (com.ws1.hub.hubd)",
               "com.airwatch.awcmd",
               "com.airwatch.mac.agent",
-              "com.vmware.hub.flagd",
-              "com.vmware.hub.healthd",
-              "com.vmware.hub.hubupdatedaemon",
-              "com.vmware.hubupdateagent",
-              "com.vmware.uem.hubd",
-              "com.vmware.uem.hublogd",
+              "com.ws1.hub.flagd",
+              "com.ws1.hub.focusedlauncher",
+              "com.ws1.hub.healthd",
+              "com.ws1.hub.hubd",
+              "com.ws1.hub.hublogd",
+              "com.ws1.hub.hubupdatedaemon",
+              "com.ws1.hub.installer.agent (com.ws1.hubupdateagent)",
+              "com.ws1.hub.installer.daemon (com.ws1.hub.hubupdatedaemon)",
+              "com.ws1.hub.logvaultd",
+              "com.ws1.hublogd (com.ws1.hub.hublogd)",
+              "com.ws1.hubupdateagent",
             ],
             pkgutil:   [
               "com.air-watch.pkg.OSXAgent",
               "com.airwatch.munki.admin",
               "com.airwatch.munki.core",
               "com.airwatch.munki.python",
+            ],
+            delete:    [
+              "/Applications/Workspace ONE Intelligent Hub.app",
+              "/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/AadRegistrationTool.app",
+              "/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/IntelligentHubAgent.app",
+              "/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/SpotlightAppStub.app",
+              "/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/SSOHelper.app",
             ]
 
   zap trash: [
-    "~/Library/Application Support/AirWatchs",
-    "~/Library/Caches/com.vmware.hub.mac",
-    "~/Library/Preferences/com.vmware.hub.mac.plist",
-    "~/Library/Saved Application State/com.vmware.hub.mac.savedState",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.apple.mobiledeviceupdater.sfl*",
+    "~/Library/Preferences/com.apple.UserAccountUpdater.plist",
   ]
 end
