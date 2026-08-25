@@ -17,6 +17,8 @@ cask "surfshark" do
 
   app "Surfshark.app"
 
+  uninstall launchctl: "com.surfshark.vpnclient.macos.direct.launchAgent"
+
   zap trash: [
     "~/Library/Application Scripts/com.surfshark.vpnclient.macos*",
     "~/Library/Application Support/CrashReporter/Surfshark.OpenVPN_*.plist",
