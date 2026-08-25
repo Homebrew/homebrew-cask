@@ -21,6 +21,8 @@ cask "simplemind" do
 
   app "SimpleMind Pro.app"
 
+  uninstall quit: "com.modelmakertools.simplemindosx"
+
   zap trash: [
     "~/Library/Caches/com.modelmakertools.simplemindosx",
     "~/Library/Preferences/com.modelmakertools.simplemindosx.plist",
