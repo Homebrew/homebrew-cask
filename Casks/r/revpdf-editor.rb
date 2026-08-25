@@ -1,9 +1,9 @@
 cask "revpdf-editor" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.6.5"
-  sha256 arm:   "ecf423a9dd25d51eef91c921644cd793146f928359254bd17f0fe42ceadc3378",
-         intel: "c9258ff23e72903d867c4150ee57e0ec0a5146c2d9a6038e4a61d384e09f11f2"
+  version "5.0.0"
+  sha256 arm:   "f0872364b5533761dc6d638cd4b12246f08a3692ffc7129904341281da97ea57",
+         intel: "c1446d66660e8409f3dc6f9ffe8c0b072fa70c0ffd917597e0ab43f09f9dc49e"
 
   url "https://github.com/Pawandeep-prog/revpdf-release/releases/download/v#{version}/RevPDF_Editor_#{arch}.dmg",
       verified: "github.com/Pawandeep-prog/revpdf-release/"
