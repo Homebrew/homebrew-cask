@@ -1,6 +1,6 @@
 cask "royal-tsx" do
-  version "6.4.3.1000"
-  sha256 "bf0c1bebfc3aed2e67c1fe9cf5e4b06be5d07cc6d916d61185f5818fd79af482"
+  version "6.4.4.1000"
+  sha256 "3fc8fb0078f0af7e9b04ce5e0980ab3f23fbc7eef192e521e0066108254835ed"
 
   url "https://royaltsx-v#{version.major}.royalapps.com/updates/royaltsx_#{version}.dmg"
   name "Royal TSX"
@@ -17,6 +17,8 @@ cask "royal-tsx" do
   depends_on macos: :big_sur
 
   app "Royal TSX.app"
+
+  uninstall quit: "com.lemonmojo.RoyalTSX.App"
 
   zap trash: [
     "~/Library/Application Support/com.lemonmojo.RoyalTSX.App",
