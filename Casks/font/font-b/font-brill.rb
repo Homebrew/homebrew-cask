@@ -6,10 +6,6 @@ cask "font-brill" do
   name "Brill"
   homepage "https://brill.com/page/resources_brilltypeface"
 
-  # The upstream website is inaccessible outside of a browser context and this
-  # applies to the zip file, so the cask is effectively unusable.
-  disable! date: "2025-11-01", because: :unreachable
-
   font "Brill-Bold.ttf"
   font "Brill-BoldItalic.ttf"
   font "Brill-Italic.ttf"
