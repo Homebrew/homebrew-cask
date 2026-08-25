@@ -16,7 +16,8 @@ cask "geph" do
 
   pkg "geph-macos.pkg"
 
-  uninstall launchctl: "io.geph.geph-electron"
+  uninstall launchctl: "io.geph.manager",
+            pkgutil:   "io.geph.GephGui"
 
   zap trash: [
     "~/Library/Application Support/gephgui#{version.major}",
