@@ -23,6 +23,8 @@ cask "melodics" do
 
   app "Melodics.app"
 
+  uninstall quit: "com.melodics.melodics"
+
   zap trash: [
     "~/Library/Application Support/Melodics",
     "~/Library/Caches/com.melodics.melodics",
