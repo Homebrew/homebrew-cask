@@ -11,5 +11,9 @@ cask "font-brill" do
   font "Brill-Italic.ttf"
   font "Brill-Roman.ttf"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   # No zap stanza required
 end
