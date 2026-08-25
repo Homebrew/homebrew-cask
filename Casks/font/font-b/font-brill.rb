@@ -6,14 +6,14 @@ cask "font-brill" do
   name "Brill"
   homepage "https://brill.com/page/resources_brilltypeface"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "Brill-Bold.ttf"
   font "Brill-BoldItalic.ttf"
   font "Brill-Italic.ttf"
   font "Brill-Roman.ttf"
-
-  livecheck do
-    skip "No version information available"
-  end
 
   # No zap stanza required
 end
