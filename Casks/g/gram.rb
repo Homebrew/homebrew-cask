@@ -1,16 +1,16 @@
 cask "gram" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "3.0.1"
+  version "3.3.0"
 
   on_arm do
-    sha256 "26eae1ca77c5300f4afe5e76bf909b1420d82e515a18b7fa3904655b599833a3"
+    sha256 "30fc7e9ff549d05dbddcec8c73530f0d8a19701d8e74b01304b53af0df2eaa40"
 
     url "https://codeberg.org/GramEditor/gram/releases/download/#{version}/Gram-#{arch}-#{version}.dmg",
         verified: "codeberg.org/GramEditor/"
   end
   on_intel do
-    sha256 "d50c92bcdd37f656d2e8c40b3cc6e34b98f0eff58f7366a18599d18cf411bbdb"
+    sha256 "f65d6e0be7386f321c9c6db39028ffb9c62e1ed8393fc5aaa760755577b2a386"
 
     url "https://ziranpub.b-cdn.net/Gram-#{arch}-#{version}.dmg",
         verified: "ziranpub.b-cdn.net"
