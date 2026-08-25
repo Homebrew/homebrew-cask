@@ -17,6 +17,8 @@ cask "cyberduck" do
 
   app "Cyberduck.app"
 
+  uninstall quit: "ch.sudo.cyberduck"
+
   zap trash: [
     "~/Library/Application Support/Cyberduck",
     "~/Library/Caches/ch.sudo.cyberduck",
