@@ -5,7 +5,7 @@ cask "workspace-one-intelligent-hub" do
   url "https://packages.omnissa.com/wsone/HubMacOS.pkg",
       verified: "packages.omnissa.com/wsone/"
   name "Workspace ONE Intelligent Hub"
-  desc "Register your device for access to resources within your organization"
+  desc "Digital workspace hub"
   homepage "https://www.getwsone.com/"
 
   livecheck do
@@ -49,7 +49,5 @@ cask "workspace-one-intelligent-hub" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.apple.mobiledeviceupdater.sfl*",
-    "~/Library/Preferences/com.apple.UserAccountUpdater.plist",
   ]
 end
