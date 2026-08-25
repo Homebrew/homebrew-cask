@@ -1,6 +1,6 @@
 cask "appzapper" do
-  version "2.0.4"
-  sha256 "a03299821d55a83bd3072cb6e13f2badb9108d0ea5ef017004c0f6b762ceb80b"
+  version "2.0.5"
+  sha256 "cfca80dd9deabb9fc5168397ec5467ec60f348a778b19f3596927e47742544d7"
 
   url "https://appzapper.com/downloads/appzapper#{version.no_dots}.zip"
   name "AppZapper"
