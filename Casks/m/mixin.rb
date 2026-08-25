@@ -1,6 +1,6 @@
 cask "mixin" do
-  version "6.0.0"
-  sha256 "c08760b38a07b11ec9d7301a49f949ceefa7155ebd5f23694459105e6be27bbe"
+  version "6.1.0"
+  sha256 "e36f16f59ca040073dddc2afe0e92a6f82a6c92a5838d184e614a1146c23f21a"
 
   url "https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin-#{version}.dmg",
       verified: "github.com/MixinNetwork/flutter-app/"
