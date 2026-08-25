@@ -1,6 +1,6 @@
 cask "surfshark" do
-  version "4.28.1,4373"
-  sha256 "19e25c9886717646a5047cbd283c300c0002c5c102d3970177a451734952ae71"
+  version "4.29.0,4541"
+  sha256 "63c6286ece4c46a6700e130558e1f86e0a941ce95428d17004beef8381e39cba"
 
   url "https://downloads.surfshark.com/macOS/stable/#{version.csv.first}/#{version.csv.second}/Surfshark.dmg"
   name "Surfshark"
@@ -16,6 +16,8 @@ cask "surfshark" do
   depends_on macos: :monterey
 
   app "Surfshark.app"
+
+  uninstall launchctl: "com.surfshark.vpnclient.macos.direct.launchAgent"
 
   zap trash: [
     "~/Library/Application Scripts/com.surfshark.vpnclient.macos*",
