@@ -5,8 +5,7 @@ cask "ray" do
   sha256 arm:   "8965569f043c36bd7e12decfbb12db1511962b4e7edf423d05599d65c5ccc25a",
          intel: "dc7a6fbfcfd6029180dfd0181c834124b714ebb249e0472a9ca0de4060dcbfe1"
 
-  url "https://ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v#{version.major}/stable/ray-#{version}-latest-darwin-#{arch}.dmg",
-      verified: "ray-app.s3.eu-west-1.amazonaws.com/"
+  url "https://ray-app.s3.eu-west-1.amazonaws.com/ray-app-updates-v#{version.major}/stable/ray-#{version}-latest-darwin-#{arch}.dmg"
   name "Ray"
   desc "Debug with Ray to fix problems faster"
   homepage "https://myray.app/"
