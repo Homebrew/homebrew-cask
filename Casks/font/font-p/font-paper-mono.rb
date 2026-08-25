@@ -6,11 +6,6 @@ cask "font-paper-mono" do
   name "Paper Mono"
   homepage "https://github.com/paper-design/paper-mono"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   font "paper-mono-v#{version}/fonts/otf/PaperMono-Bold.otf"
   font "paper-mono-v#{version}/fonts/otf/PaperMono-ExtraBold.otf"
   font "paper-mono-v#{version}/fonts/otf/PaperMono-ExtraLight.otf"
