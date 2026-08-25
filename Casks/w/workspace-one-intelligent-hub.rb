@@ -2,10 +2,10 @@ cask "workspace-one-intelligent-hub" do
   version "26.06"
   sha256 :no_check
 
-  url "https://packages.omnissa.com/wsone/WorkspaceONEIntelligentHub.pkg",
+  url "https://packages.omnissa.com/wsone/HubMacOS.pkg",
       verified: "packages.omnissa.com/wsone/"
   name "Workspace ONE Intelligent Hub"
-  desc "VMware workspace"
+  desc "Digital workspace hub"
   homepage "https://www.getwsone.com/"
 
   livecheck do
@@ -16,29 +16,60 @@ cask "workspace-one-intelligent-hub" do
   auto_updates true
   depends_on macos: :monterey
 
-  pkg "WorkspaceONEIntelligentHub.pkg"
+  pkg "HubMacOS.pkg"
 
   uninstall launchctl: [
+              "com.airwatch.airwatchd",
               "com.airwatch.awcmd",
               "com.airwatch.mac.agent",
-              "com.vmware.hub.flagd",
-              "com.vmware.hub.healthd",
-              "com.vmware.hub.hubupdatedaemon",
-              "com.vmware.hubupdateagent",
-              "com.vmware.uem.hubd",
-              "com.vmware.uem.hublogd",
+              "com.airwatch.mac.workflowd",
+              "com.ws1.hub.flagd",
+              "com.ws1.hub.focusedlauncher",
+              "com.ws1.hub.healthd",
+              "com.ws1.hub.hubd",
+              "com.ws1.hub.hublogd",
+              "com.ws1.hub.hubupdatedaemon",
+              "com.ws1.hub.installer.agent",
+              "com.ws1.hub.installer.daemon",
+              "com.ws1.hub.logvaultd",
+              "com.ws1.hublogd",
+              "com.ws1.hubupdateagent",
             ],
             pkgutil:   [
               "com.air-watch.pkg.OSXAgent",
               "com.airwatch.munki.admin",
               "com.airwatch.munki.core",
               "com.airwatch.munki.python",
+              "com.airwatch.pkg.WF",
+            ],
+            delete:    [
+              "/Applications/Workspace ONE Intelligent Hub.app",
+              "/Library/Application Support/AirWatch",
+              "/usr/local/bin/hubcli",
+              "/usr/local/bin/hubhealth",
             ]
 
   zap trash: [
-    "~/Library/Application Support/AirWatchs",
-    "~/Library/Caches/com.vmware.hub.mac",
-    "~/Library/Preferences/com.vmware.hub.mac.plist",
-    "~/Library/Saved Application State/com.vmware.hub.mac.savedState",
+    "/Library/Logs/ws1",
+    "/Library/Preferences/AirWatchManagedInstalls.plist",
+    "/Library/Preferences/com.ws1.hub.agent.plist",
+    "/Library/Preferences/com.ws1.pkg.wf.plist",
+    "~/Library/Application Scripts/com.ws1.hub.mac.PreviewExtension",
+    "~/Library/Application Scripts/com.ws1.hub.mac.SSOExtension",
+    "~/Library/Application Scripts/S2ZMFGQM93.com.ws1.hub.mac",
+    "~/Library/Application Support/HubExtensions",
+    "~/Library/Application Support/Intelligent Hub",
+    "~/Library/Caches/com.ws1.hub.HubAutoUpdater",
+    "~/Library/Caches/com.ws1.hub.mac",
+    "~/Library/Containers/com.ws1.hub.mac.PreviewExtension",
+    "~/Library/Containers/com.ws1.hub.mac.SSOExtension",
+    "~/Library/Group Containers/S2ZMFGQM93.com.ws1.hub.mac",
+    "~/Library/HTTPStorages/com.ws1.hub.mac",
+    "~/Library/HTTPStorages/com.ws1.hub.mac.binarycookies",
+    "~/Library/Logs/IntelligentHub",
+    "~/Library/Preferences/com.airwatch.mac.agent.plist",
+    "~/Library/Preferences/com.ws1.hub.mac.plist",
+    "~/Library/WebKit/com.ws1.hub.mac",
+    "~/Library/WSOneLogs",
   ]
 end
