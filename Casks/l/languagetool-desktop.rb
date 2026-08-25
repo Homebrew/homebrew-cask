@@ -1,6 +1,6 @@
 cask "languagetool-desktop" do
-  version "3.3.0,rc2"
-  sha256 "6ec200d7910ab514be4c5d74a788e725a21fc12a11ca4648026cb1d44844c23c"
+  version "3.2.1"
+  sha256 "4222ca35aba04aa5584ff32ff2fe8563a6d41056b57c115ecd525c630be2f6e1"
 
   url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version.csv.first}#{version.csv.second if version.csv.second}.dmg"
   name "LanguageTool for Desktop"
@@ -19,6 +19,11 @@ cask "languagetool-desktop" do
 
         match = item.url&.match(regex)
         next unless match
+
+        # Skip items whose filename embeds a pre-release tag (e.g. `rc2`,
+        # `beta1`), since upstream sometimes omits `sparkle:channel` for
+        # these despite them not being stable releases.
+        next if match[2]&.match?(/\A[._-]?(?:alpha|beta|rc|pre|dev|a|b)\d*\z/i)
 
         match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
       end
