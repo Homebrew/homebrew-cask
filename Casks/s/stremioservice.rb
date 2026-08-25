@@ -1,6 +1,6 @@
 cask "stremioservice" do
-  version "0.1.21"
-  sha256 "600a6273f77319f444b6dc691d8aa44e4c009c249a50809bde8ff4248101c935"
+  version "0.1.22"
+  sha256 "0b2aaf882823d16132bf1d49900d377d22f57741768ffdaa2958a8b6cef9c4f8"
 
   url "https://github.com/Stremio/stremio-service/releases/download/v#{version}/StremioService.dmg",
       verified: "github.com/Stremio/stremio-service/"
