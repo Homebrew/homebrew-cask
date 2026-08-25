@@ -1,6 +1,6 @@
 cask "atlas-app" do
-  version "0.2.6"
-  sha256 "6d03258d5f4caab7786ba358de5aed0bb9a094f4f3856cfe8e5c661179e3c70d"
+  version "0.3.0"
+  sha256 "c8877e5106953aa4432e5ef0a810ce8250d0eab9d82575cf82d11c3695ad7db6"
 
   url "https://github.com/pacifio/atlas/releases/download/alpha-#{version}/Atlas_#{version}_aarch64.dmg"
   name "Atlas"
