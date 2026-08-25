@@ -9,14 +9,17 @@ cask "keychron-assistant" do
 
   livecheck do
     url "https://launcher.keychron.com/"
-    strategy :page_match do |page|
-      main_js = page[/src="main\.([a-f0-9]+)\.js"/, 1]
-      next if main_js.blank?
+    regex(/keychronAssistVersion:\s*["']v?(\d+(?:\.\d+)+)["']/i)
+    strategy :page_match do |page, regex|
+      js_path = page[/src=["']?([^"' >]*?main[._-]\h+\.js)["' >]/i, 1]
+      next unless js_path
 
-      js_page = Homebrew::Livecheck::Strategy.page_content("https://launcher.keychron.com/main.#{main_js}.js")
+      js_page = Homebrew::Livecheck::Strategy.page_content(
+        URI.join("https://launcher.keychron.com/", js_path).to_s,
+      )
       next if (js_content = js_page[:content]).blank?
 
-      js_content[/keychronAssistVersion:"(\d+(?:\.\d+)+)"/, 1]
+      js_content[regex, 1]
     end
   end
 
