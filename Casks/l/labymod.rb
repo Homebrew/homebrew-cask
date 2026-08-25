@@ -1,9 +1,9 @@
 cask "labymod" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.13"
-  sha256 arm:   "264c6d77118a08af40b2435f29be96a1b25dc2b0e6ab8312bc9f3ed4463915fc",
-         intel: "11e3daabfd8cbca5a787cc66a9fe103fc407032cb966f87e7d98ba75faa7d26a"
+  version "3.0.14"
+  sha256 arm:   "49dff8c561c3c271213c3c05ae64a7524e0e91018f4d39db85fe01430327a000",
+         intel: "d2d10f58f8b99375ee0bc96d0dd977d7de457c6edb13a261d36a13e25a8f7017"
 
   url "https://releases.r2.labymod.net/launcher/darwin/#{arch}/LabyMod%20Launcher-#{version}-#{arch}.dmg"
   name "LabyMod Launcher"
