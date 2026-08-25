@@ -17,11 +17,20 @@ cask "mountain-duck" do
 
   app "Mountain Duck.app"
 
+  uninstall launchctl: "io.mountainduck.loginitem"
+
   zap trash: [
+    "~/Library/Application Scripts/io.mountainduck.fileprovider",
     "~/Library/Application Scripts/io.mountainduck.findersync",
+    "~/Library/Application Scripts/io.mountainduck.loginitem",
+    "~/Library/Application Support/Mountain Duck",
     "~/Library/Caches/io.mountainduck",
+    "~/Library/Containers/io.mountainduck.fileprovider",
     "~/Library/Containers/io.mountainduck.findersync",
+    "~/Library/Containers/io.mountainduck.loginitem",
     "~/Library/Group Containers/G69SCX94XU.duck",
+    "~/Library/HTTPStorages/io.mountainduck",
+    "~/Library/Logs/Mountain Duck",
     "~/Library/Preferences/G69SCX94XU.duck.plist",
     "~/Library/Preferences/io.mountainduck.plist",
   ]
