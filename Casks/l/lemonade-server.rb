@@ -14,10 +14,12 @@ cask "lemonade-server" do
   pkg "Lemonade-#{version}-Darwin.pkg"
 
   uninstall launchctl: [
+              "ai.lemonadeserver.server",
+              "ai.lemonadeserver.tray",
               "com.lemonade.server",
               "com.lemonade.tray",
             ],
-            pkgutil:   "com.lemonade.server.*"
+            pkgutil:   ["ai.lemonadeserver.server.*", "com.lemonade.server.*"]
 
   zap delete: [
         "/Library/Application Support/Lemonade",
