@@ -1,6 +1,6 @@
 cask "mailsteward" do
-  version "18.2.1"
-  sha256 "0d5cc8fdfa1e6a88ee39599faa59081538ca49123ec8d75c258ff226b729231c"
+  version "18.2.2"
+  sha256 "dd1695e20fb7aedec3c495d2f5869ebeb1b9b33a5de5fd261ca428dcfe330c05"
 
   url "https://s3.amazonaws.com/mailsteward/images/MailSteward_#{version}.zip",
       verified: "s3.amazonaws.com/mailsteward/"
@@ -18,7 +18,10 @@ cask "mailsteward" do
 
   app "MailSteward.app"
 
+  uninstall quit: ["com.apple.mail", "com.pubblog.MailSteward"]
+
   zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/MailSteward Help*",
     "~/Library/Preferences/com.pubblog.MailSteward.plist",
     "~/Library/Saved Application State/com.pubblog.MailSteward.savedState",
   ]
