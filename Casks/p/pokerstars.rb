@@ -1,5 +1,5 @@
 cask "pokerstars" do
-  version "82.810"
+  version "82.946"
   sha256 :no_check
 
   url "https://download.pokerstars.net/PokerStars.net.app.zip"
@@ -20,6 +20,7 @@ cask "pokerstars" do
   uninstall quit:   [
               "com.pokerstars.PokerStars",
               "com.pokerstars.PokerStarsBrowse",
+              "com.starstechnologies.Update",
             ],
             delete: "#{appdir}/PokerStars.app"
 
