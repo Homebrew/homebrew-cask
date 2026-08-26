@@ -1,6 +1,6 @@
 cask "headroom" do
-  version "0.8.9"
-  sha256 "fdf0aa52f901d39c17768f0989d3fb1fbc2f4f61dd7141345f10cad444392f1f"
+  version "0.9.0"
+  sha256 "a4da04351d215bd49355db7ee353d5697965a83df6cefd44612da419d9751c95"
 
   url "https://github.com/gglucass/headroom-desktop/releases/download/v#{version}/Headroom_#{version}_mac.dmg"
   name "Headroom"
