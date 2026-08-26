@@ -18,6 +18,7 @@ cask "dbvr" do
     end
   end
 
+  conflicts_with cask: "dbvr-community"
   depends_on macos: :big_sur
 
   app "dbvr.app"
