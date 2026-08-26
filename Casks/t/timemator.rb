@@ -9,7 +9,7 @@ cask "timemator" do
   homepage "https://timemator.com/"
 
   livecheck do
-    url "https://catforce-timemator.s3.amazonaws.com/releases/appcast.xml"
+    url "https://timemator.com/assets/updates/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
