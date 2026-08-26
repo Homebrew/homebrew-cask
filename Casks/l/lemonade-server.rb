@@ -1,6 +1,6 @@
 cask "lemonade-server" do
-  version "11.7.0"
-  sha256 "7f16717b8459195228a4c74cc56f82f865eab76130bd2216215ba86ae7d56d1f"
+  version "11.8.0"
+  sha256 "c160423f98ba4e2e1f5e7b32937625acd6de11da2976e4358919bd381e7ebfea"
 
   url "https://github.com/lemonade-sdk/lemonade/releases/download/v#{version}/Lemonade-#{version}-Darwin.pkg",
       verified: "github.com/lemonade-sdk/lemonade/"
@@ -14,10 +14,12 @@ cask "lemonade-server" do
   pkg "Lemonade-#{version}-Darwin.pkg"
 
   uninstall launchctl: [
+              "ai.lemonadeserver.server",
+              "ai.lemonadeserver.tray",
               "com.lemonade.server",
               "com.lemonade.tray",
             ],
-            pkgutil:   "com.lemonade.server.*"
+            pkgutil:   ["ai.lemonadeserver.server.*", "com.lemonade.server.*"]
 
   zap delete: [
         "/Library/Application Support/Lemonade",
