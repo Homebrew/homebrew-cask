@@ -20,7 +20,7 @@ cask "qgis" do
 
   depends_on macos: :big_sur
 
-  app "QGIS-final-#{version.dots_to_underscores}.app"
+  app "QGIS-final-#{version.dots_to_underscores}.app", target: "QGIS.app"
 
   zap trash: [
     "~/Library/Application Support/QGIS",
