@@ -1,6 +1,6 @@
 cask "opera" do
-  version "135.0.5973.41"
-  sha256 "12f5a0afe3d8544ca1a22eaa9c18da1547ae001eebb9f9ca08ddb1548243b7b4"
+  version "135.0.5973.55"
+  sha256 "cd884c290bde773dccb0876fd133beb45ce58327d5f5243bb8fde1d5cde65c54"
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   name "Opera"
@@ -13,7 +13,7 @@ cask "opera" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   app "Opera.app"
 
