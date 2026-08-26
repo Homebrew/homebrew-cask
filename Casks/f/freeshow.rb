@@ -22,7 +22,10 @@ cask "freeshow" do
 
   app "FreeShow.app"
 
+  uninstall quit: "app.freeshow"
+
   zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.freeshow.sfl*",
         "~/Library/Application Support/freeshow",
         "~/Library/Preferences/app.freeshow.plist",
         "~/Library/Saved Application State/app.freeshow.savedState",
