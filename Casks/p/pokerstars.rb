@@ -20,6 +20,7 @@ cask "pokerstars" do
   uninstall quit:   [
               "com.pokerstars.PokerStars",
               "com.pokerstars.PokerStarsBrowse",
+              "com.starstechnologies.Update",
             ],
             delete: "#{appdir}/PokerStars.app"
 
