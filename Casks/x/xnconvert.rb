@@ -16,5 +16,7 @@ cask "xnconvert" do
 
   app "XnConvert.app"
 
+  uninstall quit: "com.xnview.XnConvert"
+
   zap trash: "~/Library/Preferences/com.xnview.XnConvert.plist"
 end
