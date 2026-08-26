@@ -1,7 +1,7 @@
 cask "nordpass" do
   arch arm: "arm/"
 
-  version "7.9.5"
+  version "7.10.9"
   sha256 :no_check
 
   url "https://downloads.npass.app/mac/#{arch}NordPass.dmg",
@@ -20,14 +20,20 @@ cask "nordpass" do
 
   app "NordPass.app"
 
-  uninstall quit:       "com.nordsec.nordpass",
+  uninstall launchctl:  "com.nordsec.nordpass.ShipIt",
+            quit:       "com.nordsec.nordpass",
             login_item: "NordPass"
 
   zap trash: [
     "/Library/Application Support/NordPass",
     "~/Library/Application Scripts/com.nordsec.nordpass.safari.extension",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.nordsec.nordpass.sfl*",
     "~/Library/Application Support/NordPass",
+    "~/Library/Caches/com.nordsec.nordpass*",
+    "~/Library/Caches/nordpass-updater",
     "~/Library/Containers/com.nordsec.nordpass.safari.extension",
+    "~/Library/HTTPStorages/com.nordsec.nordpass",
+    "~/Library/Preferences/ByHost/com.nordsec.nordpass.ShipIt.*.plist",
     "~/Library/Preferences/com.nordsec.nordpass.plist",
     "~/Library/Saved Application State/com.nordsec.nordpass.savedState",
   ]
