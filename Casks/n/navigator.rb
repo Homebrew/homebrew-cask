@@ -1,5 +1,5 @@
 cask "navigator" do
-  version "1.0.5"
+  version "1.0.6"
   sha256 :no_check
 
   url "https://oryx.nyc3.digitaloceanspaces.com/navigator-app/Navigator.dmg",
