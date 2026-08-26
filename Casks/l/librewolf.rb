@@ -3,11 +3,11 @@ cask "librewolf" do
   os macos: "macos", linux: "linux"
   url_end = on_system_conditional macos: "package.dmg", linux: "appimage.AppImage"
 
-  version "154.0,2"
-  sha256 arm:          "5cbc1df3f927b3034600bc961681c0ce5624e6758388499b4b34048c5bd57f01",
-         intel:        "f25f7f96ce2feca8a156bd1e3db88fd52c3238c338711e70dcd8cb80e7847b42",
-         arm64_linux:  "719270c8ac2fe090c6f2d3334ad5ab356bf159f40726f823aa3403a85059b356",
-         x86_64_linux: "e1a3ea2b8feb8208e901bf014d5455ec19998dfa20b9bbc4fb8fa8bb0a7359cd"
+  version "154.0.1,2"
+  sha256 arm:          "a36564f26f66923773472f252f418367fd8702824060c0a0f3149a3ab23a72bb",
+         intel:        "6570176d30ac3c21c835954989356f0e70ec3c641570b580518e4db0083bad51",
+         arm64_linux:  "48b242afeeeb1e0b051df92c76eb5a629c9098676cf71d1a59f0dd83dc990ca8",
+         x86_64_linux: "aa1c209bad240e026409fade345a784c7f145320e43dbb419b5511de2c006856"
 
   on_macos do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
