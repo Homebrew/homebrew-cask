@@ -1,9 +1,9 @@
 cask "unblocked" do
   arch arm: "arm", intel: "intel"
 
-  version "1.0.2825"
-  sha256 arm:   "3980837157e24fa3a7c265cbcb9e0d68cee5c05475c1ba708bd6b66ec378d00c",
-         intel: "83f6dad8407c51f2e51a45195a606fa113f69c7621b46f64b7c419506ae6422a"
+  version "1.0.2834"
+  sha256 arm:   "3c8a447cc29d9c8f9316b14921b635c329e1bb1318b4ed50c93282187b00a8a7",
+         intel: "be2a8c8ba6589528c8ee9f8678d6bd0dc5d0d6f41a180053bf8094c2db95a18d"
 
   url "https://getunblocked.com/releases/macos/unblocked-desktop-#{arch}-#{version}.pkg"
   name "Unblocked"
