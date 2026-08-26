@@ -20,6 +20,7 @@ cask "librewolf" do
       "~/Library/Caches/LibreWolf Community",
       "~/Library/Caches/LibreWolf",
       "~/Library/Preferences/io.gitlab.librewolf-community.librewolf.plist",
+      "~/Library/Preferences/net.librewolf.librewolf.plist",
       "~/Library/Saved Application State/io.gitlab.librewolf-community.librewolf.savedState",
     ]
   end
