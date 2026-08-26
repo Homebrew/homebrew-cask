@@ -1,6 +1,6 @@
 cask "riverscript" do
-  version "1.2.0"
-  sha256 "d06b318c41bd02c9a80e72bdab6904ba54c17880a1bd5fc5a6f37ab87a371390"
+  version "1.2.5"
+  sha256 "134b5c2054a260638a66fe8545414c9546de7275be69f42e4b71c674ce3bce4c"
 
   url "https://downloads.riverscript.com/releases/v#{version}/riverscript_#{version}_universal.dmg"
   name "RiverScript"
