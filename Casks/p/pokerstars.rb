@@ -35,6 +35,7 @@ cask "pokerstars" do
     "~/Library/Preferences/com.pokerstars.PokerStars.net.plist",
     "~/Library/Preferences/com.pokerstars.PokerStars.plist",
     "~/Library/Preferences/com.pokerstars.PokerStarsBrowse.plist",
+    "~/Library/Preferences/com.pokerstars.user.ini",
     "~/Library/WebKit/com.pokerstars.PokerStars",
   ]
 end
