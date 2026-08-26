@@ -1,5 +1,5 @@
 cask "sketch" do
-  on_ventura :or_older do
+  on_sonoma :or_older do
     on_big_sur :or_older do
       version "96.3,167315"
       sha256 "3ba2c147aab6b2fcb4b5cc3e3ee7fce3f63551e6ef743a7afe459bd0a87bb4a6"
@@ -12,11 +12,15 @@ cask "sketch" do
       version "101.9,182113"
       sha256 "e6de9d00399f4511711f895c74b909496f690d4f0f4ba66340b158106262e873"
     end
+    on_sonoma do
+      version "2026.2.1,231087"
+      sha256 "97a0b99a69b562747c9b6c2bd6acc15815ff9297144204816344bece13cd4544"
+    end
     livecheck do
       skip "Legacy version"
     end
   end
-  on_sonoma :or_newer do
+  on_sequoia :or_newer do
     version "2026.3,233959"
     sha256 "a868d974167ae7b7c20d5edbf71c1430c65412911d19839e9fb35ab3136f3b0e"
 
