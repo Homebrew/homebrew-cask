@@ -1,6 +1,6 @@
 cask "vicinae" do
-  version "0.27.0"
-  sha256 "28655452a1f0fc9fac324495cab34947d8249bc2920b84bd59bcd636e5c086b7"
+  version "0.27.1"
+  sha256 "20d685d4f03845f8a555a14bc898dcd4d7e7d5f9ff3c9cf69e6cee945c653c65"
 
   url "https://github.com/vicinaehq/vicinae/releases/download/v#{version}/Vicinae.dmg",
       verified: "github.com/vicinaehq/vicinae/"
