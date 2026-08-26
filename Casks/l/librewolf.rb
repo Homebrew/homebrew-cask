@@ -29,7 +29,7 @@ cask "librewolf" do
               target: "LibreWolf.AppImage"
   end
 
-  url "https://librewolf.dev/api/packages/librewolf/generic/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-#{os}-#{arch}-#{url_end}"
+  url "https://dl.librewolf.net/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-#{os}-#{arch}-#{url_end}"
   name "LibreWolf"
   desc "Web browser"
   homepage "https://librewolf.net/"
