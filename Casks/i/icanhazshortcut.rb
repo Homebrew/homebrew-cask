@@ -1,6 +1,6 @@
 cask "icanhazshortcut" do
-  version "2.0.0"
-  sha256 "7f45636bd2e47cc73a29cb4dfe36904f157897f602176712b118d68de4af1045"
+  version "2.0.1"
+  sha256 "95de7bfaf4a986ec5426ca720e4eda80fb233ad93b8294d2e5b65c3fd2ae6e7d"
 
   url "https://github.com/deseven/icanhazshortcut/releases/download/#{version}/ichs.dmg",
       verified: "github.com/deseven/icanhazshortcut/"
