@@ -25,6 +25,8 @@ cask "little-snitch@nightly" do
 
   app "Little Snitch.app"
 
+  uninstall quit: "at.obdev.littlesnitch"
+
   zap trash: [
         "/Library/Application Support/Objective Development/Little Snitch",
         "/Library/Caches/at.obdev.LittleSnitchConfiguration",
