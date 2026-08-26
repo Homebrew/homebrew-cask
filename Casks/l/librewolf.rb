@@ -10,8 +10,6 @@ cask "librewolf" do
          x86_64_linux: "aa1c209bad240e026409fade345a784c7f145320e43dbb419b5511de2c006856"
 
   on_macos do
-    disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
     app "LibreWolf.app"
     command_wrapper "librewolf",
                     executable: "#{appdir}/LibreWolf.app/Contents/MacOS/librewolf"
