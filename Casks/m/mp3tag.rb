@@ -1,6 +1,6 @@
 cask "mp3tag" do
-  version "1.13.5"
-  sha256 "7a1b42dc2ba71c97a36d7bbfa177d4111cd01365fd18ecd3070c44d3f430a70d"
+  version "1.14.0"
+  sha256 "2996a0220f6faeb00c3e27517530cf63c598e95c2d0b9d9796cd17132f0b4eee"
 
   url "https://updates.mp3tag.app/Mp3tag-#{version}.zip"
   name "Mp3tag"
@@ -15,6 +15,8 @@ cask "mp3tag" do
   depends_on :macos
 
   app "Mp3tag.app"
+
+  uninstall quit: "app.mp3tag.Mp3tag"
 
   zap trash: [
     "~/Library/Application Scripts/app.mp3tag.Mp3tag",
