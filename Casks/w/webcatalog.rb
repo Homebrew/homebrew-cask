@@ -1,6 +1,6 @@
 cask "webcatalog" do
-  version "77.10.0"
-  sha256 "7d39085535a1af227b74e429253e101617a4146f1e0905810dc06402c07a1c44"
+  version "78.0.0"
+  sha256 "823a0546ff697df59056ff4cd2be5a209b5e0de8407d318798e35b58567f59ac"
 
   url "https://cdn-2.webcatalog.io/webcatalog/WebCatalog-#{version}-universal.dmg"
   name "WebCatalog"
@@ -13,7 +13,7 @@ cask "webcatalog" do
   end
 
   auto_updates true
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "WebCatalog.app"
 
