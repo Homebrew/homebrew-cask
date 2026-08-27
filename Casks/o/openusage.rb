@@ -13,6 +13,8 @@ cask "openusage" do
 
   app "OpenUsage.app"
 
+  uninstall quit: "com.robinebers.openusage"
+
   zap trash: [
     "~/Library/Application Support/com.robinebers.openusage",
     "~/Library/Application Support/OpenUsage",
