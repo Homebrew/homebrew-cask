@@ -18,7 +18,11 @@ cask "ddnet" do
   app "DDNet.app"
   app "DDNet-Server.app"
 
+  uninstall launchctl: "application.DDNetServer.app.*",
+            quit:      "org.DDNetClient.app"
+
   zap trash: [
+    "~/Library/Application Support/DDNet",
     "~/Library/Preferences/DDNet-Server-Launcher.plist",
     "~/Library/Saved Application State/org.DDNetClient.app.savedState",
     # "~/Library/Application Support/Teeworlds" is left out on purpose because teeworlds uses it as well.
