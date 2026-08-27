@@ -21,7 +21,7 @@ cask "yapstack" do
 
   zap trash: [
     "~/Library/Application Support/com.yapstack.app",
-    "~/Library/Preferences/com.yapstack.app.plist",
     "~/Library/Logs/com.yapstack.app",
+    "~/Library/Preferences/com.yapstack.app.plist",
   ]
 end
