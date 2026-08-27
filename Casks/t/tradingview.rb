@@ -17,6 +17,8 @@ cask "tradingview" do
 
   app "TradingView.app"
 
+  uninstall quit: "com.tradingview.tradingviewapp.desktop"
+
   zap trash: [
     "~/Library/Application Support/TradingView",
     "~/Library/Preferences/com.tradingview.tradingviewapp.desktop.plist",
