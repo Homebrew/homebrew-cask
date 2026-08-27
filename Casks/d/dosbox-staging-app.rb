@@ -1,6 +1,6 @@
 cask "dosbox-staging-app" do
-  version "0.82.2"
-  sha256 "3b83bb63a7314212b207ae19b82ffd15bac6ddc3a2e96d65a425343b4e9bd4a2"
+  version "0.83.0"
+  sha256 "d8a771adfb8010fa6b5f7fb5351abfba659273ad01c89f03675a92bdbdae8167"
 
   url "https://github.com/dosbox-staging/dosbox-staging/releases/download/v#{version}/dosbox-staging-macOS-v#{version}.dmg"
   name "DOSBox Staging"
@@ -12,7 +12,7 @@ cask "dosbox-staging-app" do
     strategy :github_latest
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "DOSBox Staging.app"
 
