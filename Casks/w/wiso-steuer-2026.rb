@@ -25,6 +25,8 @@ cask "wiso-steuer-2026" do
 
   app "SteuerMac 2026.app", target: "WISO Steuer 2026.app"
 
+  uninstall quit: "com.BuhlData.WISOsteuerMac2026"
+
   zap trash: [
     "~/Library/Application Support/BuhlData.com/WISOsteuerMac2026",
     "~/Library/Caches/com.BuhlData.WISOsteuerMac2026",
