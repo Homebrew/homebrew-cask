@@ -13,9 +13,12 @@ cask "syncmate" do
     strategy :sparkle
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "SyncMate.app"
+
+  uninstall launchctl: "com.eltima.SyncMate.com.eltima.SyncMateService",
+            quit:      ["com.eltima.SyncMate", "com.eltima.SyncMate.com.eltima.SyncMateService"]
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eltima.syncmate.com.eltima.syncmateservice.sfl*",
@@ -27,8 +30,4 @@ cask "syncmate" do
     "~/Library/Preferences/com.eltima.SyncMate.plist",
     "~/Library/Saved Application State/com.eltima.SyncMate.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
