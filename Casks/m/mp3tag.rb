@@ -16,6 +16,8 @@ cask "mp3tag" do
 
   app "Mp3tag.app"
 
+  uninstall quit: "app.mp3tag.Mp3tag"
+
   zap trash: [
     "~/Library/Application Scripts/app.mp3tag.Mp3tag",
     "~/Library/Containers/app.mp3tag.Mp3tag",
