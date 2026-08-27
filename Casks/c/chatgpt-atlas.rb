@@ -17,7 +17,7 @@ cask "chatgpt-atlas" do
     end
   end
 
-  deprecate! date: "2026-08-26", because: :discontinued
+  disable! date: "2026-08-26", because: :discontinued
 
   auto_updates true
   depends_on macos: :sonoma
