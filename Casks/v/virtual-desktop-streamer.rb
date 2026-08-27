@@ -28,6 +28,7 @@ cask "virtual-desktop-streamer" do
             ]
 
   zap trash: [
+    "/Library/LaunchAgents/com.virtualdesktop.streamer.plist",
     "~/Library/Application Support/VirtualDesktop",
     "~/Library/Caches/com.virtualdesktop.streamer",
     "~/Library/Preferences/com.virtualdesktop.streamer.plist",
