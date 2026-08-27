@@ -44,5 +44,6 @@ cask "google-gemini" do
         "~/Library/Group Containers/group.com.google.gemini",
         "~/Library/HTTPStorages/com.google.GeminiMacOS",
         "~/Library/Preferences/com.google.GeminiMacOS.*",
+        "~/Library/WebKit/com.google.GeminiMacOS",
       ]
 end
