@@ -1,6 +1,6 @@
 cask "font-paper-mono" do
-  version "0.300"
-  sha256 "969b9d49f4d68ca61d39359be7f04df0c25f391b0a0ae9fd582486fb00ceb529"
+  version "0.320"
+  sha256 "fd250b2a6e0f96da3bbc7654fddf288fd0cb48bd5d81712c88403826efc65e53"
 
   url "https://github.com/paper-design/paper-mono/releases/download/v#{version}/paper-mono-v#{version}.zip"
   name "Paper Mono"
