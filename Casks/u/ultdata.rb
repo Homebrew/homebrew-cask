@@ -1,5 +1,5 @@
 cask "ultdata" do
-  version "10.5.0.26"
+  version "10.5.1.5"
   sha256 :no_check
 
   url "https://download.tenorshare.com/downloads/ultdata-ios-mac.dmg"
@@ -23,6 +23,7 @@ cask "ultdata" do
     "~/Library/Application Support/com.tenorshare.TenorshareUltData",
     "~/Library/Application Support/UltData",
     "~/Library/Caches/com.tenorshare.TenorshareUltData",
+    "~/Library/HTTPStorages/com.tenorshare.TenorshareUltData*",
     "~/Library/Preferences/com.tenorshare.TenorshareUltData.plist",
     "~/Library/Saved Application State/com.tenorshare.TenorshareUltData.savedState",
   ]
