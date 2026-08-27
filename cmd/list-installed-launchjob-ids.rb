@@ -47,7 +47,7 @@ module Homebrew
       def read_label(plist)
         xml = plist.read
         if xml.start_with? "bplist"
-          xml, _, status = Open3.capture3("/usr/bin/plutil -convert xml1 -o - '#{plist}'")
+          xml, _, status = Open3.capture3("/usr/bin/plutil", "-convert", "xml1", "-o", "-", plist.to_s)
           return unless status.success?
         end
         Plist.parse_xml(xml, marshal: false)["Label"]

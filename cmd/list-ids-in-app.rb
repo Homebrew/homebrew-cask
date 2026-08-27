@@ -175,7 +175,7 @@ module Homebrew
       sig { returns(T::Array[String]) }
       def list_running_app_ids
         applescript = 'tell application "System Events" to get bundle identifier of every process'
-        running, = Open3.capture3("/usr/bin/osascript -e '#{applescript}'")
+        running, = Open3.capture3("/usr/bin/osascript", "-e", applescript)
         running.split(/,\s*/)
       end
     end

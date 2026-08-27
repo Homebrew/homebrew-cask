@@ -55,7 +55,7 @@ module Homebrew
         mktemp = Mktemp.new("list-apps-in-pkg", retain_in_cache: true)
         mktemp.quiet!
         pkgdir ||= mktemp.run(chdir: false) do
-          Open3.capture3("/usr/sbin/pkgutil --expand '#{pkg}' #{it.tmpdir}/unpack")
+          Open3.capture3("/usr/sbin/pkgutil", "--expand", pkg.to_s, "#{it.tmpdir}/unpack")
           Pathname "#{it.tmpdir}/unpack"
         end
         info = pkgdir.glob("**/{Package,}Info{.plist,}")
@@ -79,7 +79,7 @@ module Homebrew
           .uniq.sort
           .send(filter) { it.start_with?("com.apple.") || it.end_with?("sparkle.finish-installation") }
           .map {
-            installed, = Open3.capture3("/usr/sbin/pkgutil --pkg-info #{it}")
+            installed, = Open3.capture3("/usr/sbin/pkgutil", "--pkg-info", it)
             installed.present? ? "#{it} (+)" : it
           }
       end

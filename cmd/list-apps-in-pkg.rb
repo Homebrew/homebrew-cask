@@ -47,7 +47,7 @@ module Homebrew
         mktemp = Mktemp.new("list-apps-in-pkg", retain_in_cache: true)
         mktemp.quiet!
         pkgdir ||= mktemp.run(chdir: false) do
-          Open3.capture3("/usr/sbin/pkgutil --expand '#{pkg}' #{it.tmpdir}/unpack")
+          Open3.capture3("/usr/sbin/pkgutil", "--expand", pkg.to_s, "#{it.tmpdir}/unpack")
           Pathname "#{it.tmpdir}/unpack"
         end
         info = pkgdir.glob("**/{PackageInfo,Archive.pax.gz}")
