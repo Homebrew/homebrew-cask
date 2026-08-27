@@ -29,6 +29,8 @@ cask "darktable" do
 
   app "darktable.app"
 
+  uninstall quit: "org.darktable"
+
   zap trash: [
     "~/.cache/darktable",
     "~/.config/darktable",
