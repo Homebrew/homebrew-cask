@@ -15,5 +15,7 @@ cask "sparrow" do
 
   app "Sparrow.app"
 
+  uninstall quit: "com.sparrowwallet.sparrow"
+
   zap trash: "~/.sparrow"
 end
