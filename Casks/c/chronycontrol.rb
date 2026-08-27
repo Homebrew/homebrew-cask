@@ -21,6 +21,7 @@ cask "chronycontrol" do
               "org.tuxfamily.chronyc",
               "org.tuxfamily.chronyd",
             ],
+            quit:      "net.whatroute.ChronyControl",
             delete:    [
               "/Library/LaunchDaemons/org.tuxfamily.chronyc",
               "/Library/LaunchDaemons/org.tuxfamily.chronyd",
@@ -30,5 +31,6 @@ cask "chronycontrol" do
   zap trash: [
     "/etc/chrony.d",
     "/var/log/chrony",
+    "~/Library/Logs/net.whatroute.ChronyControl",
   ]
 end
