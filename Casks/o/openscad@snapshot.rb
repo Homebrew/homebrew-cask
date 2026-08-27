@@ -18,7 +18,10 @@ cask "openscad@snapshot" do
   app "OpenSCAD.app"
   binary "#{appdir}/OpenSCAD.app/Contents/MacOS/OpenSCAD", target: "openscad"
 
+  uninstall quit: "org.openscad.OpenSCAD"
+
   zap trash: [
+    "~/Library/Application Support/OpenSCAD",
     "~/Library/Caches/org.openscad.OpenSCAD",
     "~/Library/Preferences/org.openscad.OpenSCAD.plist",
     "~/Library/Saved Application State/org.openscad.OpenSCAD.savedState",
