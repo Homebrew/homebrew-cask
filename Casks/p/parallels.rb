@@ -1,6 +1,6 @@
 cask "parallels" do
-  version "26.4.1-57516"
-  sha256 "f32a4ff2bf5d522392a9d28c133b0c768dd09b757634f33f301c7cb21d243b1f"
+  version "27.0.0-58628"
+  sha256 "587dc8bdcf9a856ce501b0698e5877ef252d48221bdbb4eabf1266ad1d51abef"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
@@ -29,7 +29,8 @@ cask "parallels" do
     "parallels@19",
     "parallels@20",
   ]
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
+  depends_on arch: :arm64
 
   app "Parallels Desktop.app"
 
