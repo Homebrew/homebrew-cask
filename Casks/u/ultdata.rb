@@ -23,6 +23,7 @@ cask "ultdata" do
     "~/Library/Application Support/com.tenorshare.TenorshareUltData",
     "~/Library/Application Support/UltData",
     "~/Library/Caches/com.tenorshare.TenorshareUltData",
+    "~/Library/HTTPStorages/com.tenorshare.TenorshareUltData*",
     "~/Library/Preferences/com.tenorshare.TenorshareUltData.plist",
     "~/Library/Saved Application State/com.tenorshare.TenorshareUltData.savedState",
   ]
