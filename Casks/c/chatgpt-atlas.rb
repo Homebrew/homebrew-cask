@@ -17,6 +17,8 @@ cask "chatgpt-atlas" do
     end
   end
 
+  disable! date: "2026-08-26", because: :discontinued
+
   auto_updates true
   depends_on macos: :sonoma
   depends_on arch: :arm64
