@@ -17,7 +17,7 @@ cask "nrf-connect" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "nRF Connect for Desktop.app"
 
