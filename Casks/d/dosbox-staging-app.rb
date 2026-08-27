@@ -12,7 +12,7 @@ cask "dosbox-staging-app" do
     strategy :github_latest
   end
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "DOSBox Staging.app"
 
