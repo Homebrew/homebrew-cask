@@ -25,8 +25,11 @@ cask "openchrom" do
 
   app "OpenChrom.app"
 
+  uninstall quit: "net.openchrom.rcp.compilation.community.product.id"
+
   zap trash: [
     "~/.openchrom",
+    "~/Library/Preferences/net.openchrom.rcp.compilation.community.product.id.plist",
     "~/OpenChrom",
   ]
 end
