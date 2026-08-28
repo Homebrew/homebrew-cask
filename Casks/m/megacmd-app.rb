@@ -79,7 +79,14 @@ cask "megacmd-app" do
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-webdav"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-whoami"
 
-  zap trash: "~/.megaCmd"
+  uninstall launchctl: "megacmd.mac.megaupdater"
+
+  zap trash: [
+    "~/.megaCmd",
+    "~/Library/Caches/megacmd.mac",
+    "~/Library/HTTPStorages/megacmd.mac",
+    "~/Library/LaunchAgents/megacmd.mac.megaupdater.plist",
+  ]
 
   caveats <<~EOS
     #{token} only works if called from /Applications, so you may need to install
