@@ -12,7 +12,8 @@ cask "aks-desktop" do
 
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+(?:-alpha|-beta)?)/i)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   depends_on macos: :monterey
