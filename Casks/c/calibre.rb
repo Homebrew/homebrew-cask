@@ -64,6 +64,8 @@ cask "calibre" do
   binary "#{appdir}/calibre.app/Contents/MacOS/markdown-calibre"
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
 
+  uninstall quit: "net.kovidgoyal.calibre"
+
   zap trash: [
     "~/Library/Application Support/calibre-ebook.com",
     "~/Library/Caches/calibre",
