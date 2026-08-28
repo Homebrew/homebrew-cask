@@ -22,8 +22,8 @@ cask "calibre" do
     end
   end
   on_sonoma :or_newer do
-    version "9.13.0"
-    sha256 "001be6ed70d8acfd793fa7d8c95ea50045abedaf0e756b20e564275a0b0a7667"
+    version "9.14.0"
+    sha256 "a2f825138645ea29d9f77a78c177216c0db855fa0c7b993a16ace230c04fe3d4"
 
     livecheck do
       url "https://calibre-ebook.com/dist/osx"
@@ -63,6 +63,8 @@ cask "calibre" do
   binary "#{appdir}/calibre.app/Contents/MacOS/lrs2lrf"
   binary "#{appdir}/calibre.app/Contents/MacOS/markdown-calibre"
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
+
+  uninstall quit: "net.kovidgoyal.calibre"
 
   zap trash: [
     "~/Library/Application Support/calibre-ebook.com",
