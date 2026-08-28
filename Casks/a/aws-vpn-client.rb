@@ -1,12 +1,11 @@
 cask "aws-vpn-client" do
   arch arm: "_ARM64"
 
-  version "6.0.2"
-  sha256 arm:   "0188775963a86946c17e90f102e39b1ac45e1e2df49d4e4d6aa44ca92c0f3116",
-         intel: "8e2d7a2fd3ce62c0109d93cff6a6099defdabb668d8069cb27e56e4861a84ff5"
+  version "6.0.3"
+  sha256 arm:   "94b62371a679d05b69edc2c6768b1c2a5652676a5403ce787cbafaeec92cec5a",
+         intel: "3d96ffddbb2bfe40f3b22f5f02cff47aa23da48fb5fde1d341a2c79bc2831b2a"
 
-  url "https://d20adtppz83p9s.cloudfront.net/OSX#{arch}/#{version}/AWS_VPN_Client#{arch}.pkg",
-      verified: "d20adtppz83p9s.cloudfront.net/"
+  url "https://d3c4iklh14o4hj.cloudfront.net/OSX#{arch}/#{version}/AWS_VPN_Client#{arch}.pkg"
   name "AWS Client VPN"
   desc "Managed client-based VPN service to securely access AWS resources"
   homepage "https://aws.amazon.com/vpn/"
