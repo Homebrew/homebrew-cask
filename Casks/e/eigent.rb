@@ -34,6 +34,8 @@ cask "eigent" do
 
   app "Eigent.app"
 
+  uninstall quit: "com.eigent.app"
+
   zap trash: [
     "~/.eigent",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eigent.app.sfl*",
