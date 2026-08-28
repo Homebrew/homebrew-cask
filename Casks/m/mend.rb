@@ -2,7 +2,7 @@ cask "mend" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "26.8.1-hf1"
+  version "26.8.1-hf2"
 
   on_macos do
     sha256 arm:   "ec29c49813d45bcf16ae0a579a473965b5fa0cfe9a9d3c3bfbcb4e4ed7805a37",
