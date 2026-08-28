@@ -21,7 +21,7 @@
   "duplicati": "all",
   "ferdium@nightly": "all",
   "font-bizter": "all",
-  "font-bravura": "all",
+  "font-bravura": "any",
   "font-devicons": "all",
   "font-gilbert": "all",
   "font-zhuque-fangsong": "all",
