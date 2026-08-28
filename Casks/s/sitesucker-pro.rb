@@ -38,6 +38,8 @@ cask "sitesucker-pro" do
 
   app "SiteSucker Pro.app"
 
+  uninstall quit: "us.sitesucker.mac.sitesucker-pro"
+
   zap trash: [
     "~/Library/Application Scripts/us.sitesucker.mac.sitesucker-pro",
     "~/Library/Containers/us.sitesucker.mac.sitesucker-pro",
