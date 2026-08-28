@@ -1,15 +1,15 @@
 cask "cashnotify" do
-  version "3.7.0"
-  sha256 "98977df0f1b9776b890285c353bebf1f03eed1cf3d15cb6d85412f5bee30db87"
+  version "3.8.2"
+  sha256 "a799d2a91048533192375d72eeba9e4bbd0bae6987606065b7d59c9487d9c3a8"
 
-  url "https://github.com/BaguetteEngineering/download.cashnotify.com/releases/download/v#{version}/CashNotify-#{version}.dmg",
+  url "https://github.com/BaguetteEngineering/download.cashnotify.com/releases/download/v#{version}/CashNotify-#{version}-universal.dmg",
       verified: "github.com/BaguetteEngineering/download.cashnotify.com/"
   name "CashNotify"
   desc "Monitor your Stripe and Paypal accounts from your menubar"
   homepage "https://cashnotify.com/"
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "CashNotify.app"
 
@@ -26,8 +26,4 @@ cask "cashnotify" do
     "~/Library/Preferences/com.baguetteengineering.cashnotify.plist",
     "~/Library/Saved Application State/com.baguetteengineering.cashnotify.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
