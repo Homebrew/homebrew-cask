@@ -16,6 +16,7 @@ cask "dayflow" do
   depends_on macos: :sonoma
 
   app "Dayflow.app"
+  binary "#{appdir}/Dayflow.app/Contents/Helpers/dayflow"
 
   uninstall quit: "teleportlabs.com.Dayflow"
 
