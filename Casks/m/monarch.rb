@@ -36,9 +36,14 @@ cask "monarch" do
 
   app "Monarch.app"
 
+  uninstall quit: "com.monarch.macos"
+
   zap trash: [
     "~/Library/Application Support/com.monarch.macos",
     "~/Library/Application Support/monarch",
+    "~/Library/Caches/com.monarch.macos",
+    "~/Library/Preferences/com.monarch.macos.plist",
     "~/Library/Saved Application State/com.electron.monarch.savedState",
+    "~/Library/WebKit/com.monarch.macos",
   ]
 end
