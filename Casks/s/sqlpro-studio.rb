@@ -1,6 +1,6 @@
 cask "sqlpro-studio" do
-  version "2026.87"
-  sha256 "5d7fb3b82837228cbec1361387f4e20eff8553defa169c6eef6d092b71e565b8"
+  version "2026.238"
+  sha256 "59f808e0ce1943d8720dea2aaa43d40b9a7989b910b984ce2b85dcc11337db27"
 
   on_sequoia :or_older do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
