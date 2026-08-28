@@ -1,9 +1,9 @@
 cask "wispr-flow" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.675"
-  sha256 arm:   "675f226d0f5fbe06dedac12614d6fe29ef1c396e01f9548d1f6f97ad1a38d600",
-         intel: "1637fdb3b471bd5970ae151b40ff46aea0e9f4278ee7ebc0bc9baf38f766e1e0"
+  version "1.6.721"
+  sha256 arm:   "4da33ea4a6150ff142d963c566f238242f10f3c531683965d68cc68220f138d4",
+         intel: "193e977cfdff3436fdd49afbcc5729f12b2c7884bf4bf1e94ea7467a9bee4c08"
 
   url "https://dl.wisprflow.com/wispr-flow/darwin/#{arch}/dmgs/Flow-v#{version}.dmg",
       verified: "dl.wisprflow.com/wispr-flow/"
