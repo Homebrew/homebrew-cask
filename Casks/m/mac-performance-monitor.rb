@@ -7,11 +7,6 @@ cask "mac-performance-monitor" do
   desc "Menu bar performance monitor with recorded history and analytics"
   homepage "https://macperformancemonitor.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on arch: :arm64
   depends_on macos: :sequoia
