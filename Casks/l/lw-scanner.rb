@@ -1,15 +1,15 @@
 cask "lw-scanner" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.29.1"
-  sha256 arm:   "bf31b22049650ce5d3839d9339436e31419682b72be33481bd243e099787c116",
-         intel: "2026819d11c2fc519d86cb9fea323d9faa0cace2a8accb8d59eb998956396455"
+  version "0.29.2"
+  sha256 arm:   "620e875a9d225d68dd2412d3d909c0b6b6880b63209f6610451d96159c298b7b",
+         intel: "b8b2e512c1efc037455c710089fcea38d705c083cbbc3e59c99d49d47b186d49"
 
   url "https://github.com/lacework/lacework-vulnerability-scanner/releases/download/v#{version}/lw-scanner-darwin-#{arch}.zip",
       verified: "github.com/lacework/lacework-vulnerability-scanner/"
   name "Lacework vulnerability scanner"
   desc "Lacework inline scanner"
-  homepage "https://docs.lacework.net/console/local-scanning-quickstart"
+  homepage "https://github.com/lacework/lacework-vulnerability-scanner"
 
   livecheck do
     url :url
