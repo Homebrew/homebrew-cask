@@ -4,10 +4,10 @@ cask "lm-studio" do
   os macos: "darwin", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.4.21,2"
+  version "0.4.22,1"
 
   on_macos do
-    sha256 "0343d0df8f15428bcd6c1aa7979cf492b64a79cd2d3d9419d1a67541d36ecf31"
+    sha256 "0f9976c08474f5ff14c5beae9ebfad52a46ebaa91c0e783d255ea5be5c246e13"
 
     depends_on macos: :monterey
     depends_on arch: :arm64
@@ -30,8 +30,8 @@ cask "lm-studio" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "7edfee77530e3f778e11982207e21d2faaa1a538967c4a86cfc88aa169c22a7f",
-           x86_64_linux: "1014376d89d668c3814cd20e2b146a076146760ded1ef07b968fb61c58ded355"
+    sha256 arm64_linux:  "6956801e90065f8b1a2077fff3f10d2d0fdd7c1a4cea54745ffffa18c60dff23",
+           x86_64_linux: "91401ceedea652e6944a704f1b20c10758f027c1dc52ad8f6fa9912129ebe613"
 
     app_image "LM-Studio-#{version.tr(",", "-")}-#{arch}.AppImage", target: "LM Studio.AppImage"
   end
