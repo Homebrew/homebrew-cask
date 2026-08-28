@@ -14,7 +14,7 @@ cask "lyricsfinder" do
     regex(/"softwareVersion">(\d+(?:\.\d+)+)</i)
   end
 
-  depends_on macos: :monterey
+  depends_on macos: :big_sur
 
   app "LyricsFinder.app"
 
