@@ -1,6 +1,6 @@
-cask "droppy@beta" do
-  version "15.0.0-beta.4"
-  sha256 "6986518f56cb9fefd850d3dd6178f1872405c051468e26535400c43650bc64b8"
+cask "droppy" do
+  version "15.0.0-beta.6"
+  sha256 "df16ccab8277d0de84948b4bca2f012698cda65af9420519565e0829b2810f73"
 
   url "https://droppy-releases.jordylegrand.workers.dev/app-releases/beta/Droppy-#{version}.dmg"
   name "Droppy"
@@ -19,5 +19,8 @@ cask "droppy@beta" do
 
   app "Droppy.app"
 
-  zap trash: "~/Library/Application Support/Droppy"
+  zap trash: [
+    "~/Library/Application Support/Droppy",
+    "~/Library/Preferences/iordv.Droppy.plist",
+  ]
 end
