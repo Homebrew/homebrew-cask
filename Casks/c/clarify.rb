@@ -1,6 +1,6 @@
 cask "clarify" do
-  version "1.7.3"
-  sha256 "8ba1e6c47080b12822c0cd76c8a7cd2982169b17a2ad849210741fc5851aa63e"
+  version "1.7.5"
+  sha256 "cab1556264606b4ef11895bf9f69fbe2e76f71a373476963f653b9974ecc3508"
 
   url "https://github.com/clarifyhq/desktop-app-releases/releases/download/v#{version}/Clarify.dmg",
       verified: "github.com/clarifyhq/desktop-app-releases/"
@@ -10,9 +10,11 @@ cask "clarify" do
 
   auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "Clarify.app"
+
+  uninstall quit: "com.clarify.desktop"
 
   zap trash: [
     "~/Library/Application Support/clarify-desktop",
