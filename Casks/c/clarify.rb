@@ -14,6 +14,8 @@ cask "clarify" do
 
   app "Clarify.app"
 
+  uninstall quit: "com.clarify.desktop"
+
   zap trash: [
     "~/Library/Application Support/clarify-desktop",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.clarify.desktop.sfl*",
