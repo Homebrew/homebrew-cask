@@ -19,5 +19,7 @@ cask "wasabi-wallet" do
 
   app "Wasabi Wallet.app"
 
+  uninstall quit: "zksnacks.wasabiwallet"
+
   zap trash:  "~/.walletwasabi"
 end
