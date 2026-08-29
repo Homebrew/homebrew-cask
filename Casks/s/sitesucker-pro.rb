@@ -14,8 +14,8 @@ cask "sitesucker-pro" do
     end
   end
   on_monterey :or_newer do
-    version "6.2"
-    sha256 "21b2e963af696cf5d9e93fd69c1487b98e96f7d7a7b30d89850a8eb59306f9b1"
+    version "6.2.1"
+    sha256 "01439505e8b15bfe7831f238737a0c95ab8d6553454fcaeeb65dc54ee733bb16"
 
     livecheck do
       url "https://ricks-apps.com/osx/sitesucker/pro-versions.plist"
@@ -37,6 +37,8 @@ cask "sitesucker-pro" do
   depends_on :macos
 
   app "SiteSucker Pro.app"
+
+  uninstall quit: "us.sitesucker.mac.sitesucker-pro"
 
   zap trash: [
     "~/Library/Application Scripts/us.sitesucker.mac.sitesucker-pro",
