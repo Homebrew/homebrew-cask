@@ -9,7 +9,7 @@ cask "tableau" do
     depends_on macos: :ventura
   end
   on_intel do
-    depends_on macos: :catalina
+    depends_on macos: :big_sur
   end
 
   url "https://downloads.tableau.com/esdalt/#{version}/TableauDesktop-#{version.dots_to_hyphens}#{arch}.dmg",
