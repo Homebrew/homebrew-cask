@@ -11,7 +11,7 @@ cask "geolibre" do
   desc "GIS platform"
   homepage "https://geolibre.app/"
 
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "GeoLibre Desktop.app"
 
