@@ -12,11 +12,11 @@ cask "unified-remote" do
     strategy :header_match
   end
 
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "Unified Remote.app"
 
-  caveats do
-    requires_rosetta
-  end
+  uninstall quit: "com.unified.Unified-Remote"
+
+  zap trash: "~/Library/Application Support/Unified Remote"
 end
