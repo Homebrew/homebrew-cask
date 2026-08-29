@@ -17,7 +17,7 @@ cask "labymod" do
     end
   end
 
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Laby Launcher.app"
 
