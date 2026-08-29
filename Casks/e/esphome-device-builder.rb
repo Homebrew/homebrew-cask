@@ -11,7 +11,6 @@ cask "esphome-device-builder" do
     arch arm: "aarch64", intel: "x64"
 
     auto_updates true
-    depends_on macos: :catalina
 
     app "ESPHome Device Builder.app"
     binary "#{appdir}/ESPHome Device Builder.app/Contents/MacOS/esphome-desktop"
