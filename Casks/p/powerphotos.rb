@@ -1,12 +1,6 @@
 cask "powerphotos" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "1.9.14"
-      sha256 "760bfa114e0a6c807613c689c84ac5eceeae2763bcf246b104636d2d862676f1"
-
-      url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "2.1.8"
       sha256 "b9fbf7b188e157b20b779611d5fd4f922574d8818517f4341a538c06bbfcd88d"
 
