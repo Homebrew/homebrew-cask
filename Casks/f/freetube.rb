@@ -2,15 +2,7 @@ cask "freetube" do
   arch arm: "arm64", intel: "x64"
 
   on_big_sur :or_older do
-    on_catalina do
-      version "0.22.1"
-      sha256 "0e9eb9db841f36671c81fedff4580c39dbbd6bd541d5158ed4897218c4134946"
-
-      url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-mac-x64.dmg",
-          verified: "github.com/FreeTubeApp/FreeTube/"
-    end
-
-    on_big_sur do
+    on_big_sur :or_older do
       version "0.23.15"
       sha256 arm:   "6a25f689ecf0382c9b3c98be308f5d97eda1c362035dd1d715307a25ab68320a",
              intel: "ebade3bc4b3cb7c994201cf1bd50459c33c8b4d85ae0e714b2c5a32612c70e69"
