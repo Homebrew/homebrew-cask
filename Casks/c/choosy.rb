@@ -1,10 +1,6 @@
 cask "choosy" do
   on_sonoma :or_older do
-    on_catalina :or_older do
-      version "2.2.1"
-      sha256 "71fe3c3c592d449063189a575a39b1f00735ee20cf1de94552896f5f8e93bf47"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "2.3.1"
       sha256 "8d6a44b78ed256d6f502872fd1f62cf1f7fea877906bedddc5bbf26f93b6ea57"
     end

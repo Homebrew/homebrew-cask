@@ -1,11 +1,6 @@
 cask "commandpost" do
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "1.4.13"
-      sha256 "dd0ddbf94722174760c82870f537b299ce0b1b6265875aa558d515df4338a816"
-    end
-
-    on_big_sur do
+    on_big_sur :or_older do
       version "1.4.22"
       sha256 "9115107751cda2cf605a513da378fb0dcc40d57fe7dfbd76f664420946f9f773"
     end

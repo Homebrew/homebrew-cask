@@ -1,14 +1,6 @@
 cask "cocktail" do
   on_sonoma :or_older do
-    on_catalina :or_older do
-      version "13.3"
-      sha256 "8fa2285b84360e9fea73024b9477dbc7ce1bf073fae36a86553c8c95c5fcfcc2"
-
-      url "https://www.maintain.se/downloads/sparkle/catalina/Cocktail_#{version}.zip"
-
-      uninstall quit: "com.maintain.cocktail.catalina13"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "14.5.0"
       sha256 :no_check
 

@@ -25,7 +25,7 @@ cask "gram" do
     strategy :git
   end
 
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Gram.app"
   binary "#{appdir}/Gram.app/Contents/MacOS/cli", target: "gram"

@@ -1,10 +1,6 @@
 cask "microsoft-word" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "16.66.22101101"
-      sha256 "5a6a75d9a5b46cceeff5a1b7925c0eab6e4976cba529149b7b291a0355e7a7c9"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "16.77.23091703"
       sha256 "10c8db978206275a557faf3650763a656b1f7170c9b2a65fa6fdce220bd23066"
     end

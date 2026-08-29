@@ -5,13 +5,6 @@ cask "sonarr" do
   sha256 arm:   "fbc2acc3984f12e1bae95f07ad7424425b5f1058fc02f8bb79e709638d2c5c94",
          intel: "ef3025f57f1f2451a393e28871bb67abce057f132d84c2ce174af3656bd7670b"
 
-  on_arm do
-    depends_on macos: :big_sur
-  end
-  on_intel do
-    depends_on macos: :catalina
-  end
-
   url "https://github.com/Sonarr/Sonarr/releases/download/v#{version}/Sonarr.main.#{version}.osx-#{arch}-app.zip",
       verified: "github.com/Sonarr/Sonarr/"
   name "Sonarr"

@@ -13,7 +13,7 @@ cask "vocaster-hub" do
   end
 
   auto_updates true
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Vocaster Hub.app"
 

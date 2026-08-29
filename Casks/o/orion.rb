@@ -1,16 +1,5 @@
 cask "orion" do
-  on_catalina :or_older do
-    version "1.1.2,151"
-    sha256 "2625c564e5da0f3f7209d99d7689c1ea56121c47a11657f6ea378e277e61955e"
-
-    url "https://cdn.kagi.com/updates/10_15/#{version.csv.second}.zip"
-
-    livecheck do
-      url "https://cdn.kagi.com/updates/10_15/appcast.xml"
-      strategy :sparkle
-    end
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "1.1.2,151"
     sha256 "192d941c929a4961071f6c2e2e947c8388d200d42655dd4ddcd0b460d6a1171d"
 

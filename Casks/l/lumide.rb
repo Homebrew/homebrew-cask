@@ -8,7 +8,7 @@ cask "lumide" do
   desc "Agent-native code editor"
   homepage "https://lumide.dev/"
 
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Lumide.app"
 

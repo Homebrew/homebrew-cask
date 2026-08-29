@@ -5,14 +5,10 @@ cask "lark" do
   on_arm do
     version "7.74.22,18b7e01d"
     sha256 "94a9b3abf7bf005162a35ac2599644ea2afd984a56978df30dfa0c39e1d6efd5"
-
-    depends_on macos: :big_sur
   end
   on_intel do
     version "7.74.22,994acc84"
     sha256 "fc7a38ec0ae5e15cc71441c588492c29f7a88d95a080200d40d5dbe0dc4d1215"
-
-    depends_on macos: :catalina
   end
 
   url "https://sf16-sg.larksuitecdn.com/obj/lark-version-sg/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg",

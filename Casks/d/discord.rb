@@ -1,13 +1,5 @@
 cask "discord" do
-  on_catalina :or_older do
-    version "0.0.336"
-    sha256 "470fc7ad490d7ad42f01632af16dee69fbec6e3db7e3f79af4f2ee246e382398"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "0.0.402"
     sha256 "568293a1f65fab2244b5acdac282b88b6f00efd87defd76cc77185d1b9caba64"
 

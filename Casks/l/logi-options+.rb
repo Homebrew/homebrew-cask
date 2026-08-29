@@ -1,16 +1,5 @@
 cask "logi-options+" do
-  on_catalina do
-    version "1.44.415778"
-    sha256 "c38b38aada01a296d32dcebb61200b53977e876089b8502b7f8453d1efa3a3f6"
-
-    url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_#{version}.zip",
-        verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "1.60.495862"
     sha256 "711d64f48b9dc2ed48f50dccc8610e64b3ce437383ed6ff3da6e220380271434"
 

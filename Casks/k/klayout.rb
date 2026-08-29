@@ -1,13 +1,6 @@
 cask "klayout" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "0.27.13"
-      sha256 "25d38cba66f4009f8ed19a755ec73863721a6f2e3b2d57257f077bf71ec5beba"
-
-      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb38.dmg",
-          verified: "klayout.org/downloads/MacOS/"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "0.27.13"
       sha256 "d0216355390d83954611461ecd93d7cab0a819f7b0f98327b1c42d92da022fa7"
 

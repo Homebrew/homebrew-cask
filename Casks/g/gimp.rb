@@ -6,31 +6,21 @@ cask "gimp" do
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
   on_macos do
-    on_catalina :or_older do
-      version "2.10.38,1"
-      sha256 "d2d3ac20c762fe12f0dd0ec8d7c6c2f1f3a43e046ecb4ed815a49afcbaa92b92"
+    version "3.2.4"
+    sha256 arm:   "294c016dca7795999129a38b462f80fac3c13cb963e6de9d04eeb5d6e519392b",
+           intel: "85214a388687718d30169d88b22794d6b0a89849bcc7aa456f4afb83c1326be8"
 
-      livecheck do
-        skip "Legacy version"
-      end
-    end
-    on_big_sur :or_newer do
-      version "3.2.4"
-      sha256 arm:   "294c016dca7795999129a38b462f80fac3c13cb963e6de9d04eeb5d6e519392b",
-             intel: "85214a388687718d30169d88b22794d6b0a89849bcc7aa456f4afb83c1326be8"
+    livecheck do
+      url "https://www.gimp.org/gimp_versions.json"
+      strategy :json do |json|
+        json["STABLE"]&.map do |release|
+          release[livecheck_os]&.map do |build|
+            next unless build["filename"]&.match?(/#{arch}/i)
+            next release["version"] unless build["revision"]
 
-      livecheck do
-        url "https://www.gimp.org/gimp_versions.json"
-        strategy :json do |json|
-          json["STABLE"]&.map do |release|
-            release[livecheck_os]&.map do |build|
-              next unless build["filename"]&.match?(/#{arch}/i)
-              next release["version"] unless build["revision"]
-
-              "#{release["version"]},#{build["revision"]}"
-            end
-          end&.flatten
-        end
+            "#{release["version"]},#{build["revision"]}"
+          end
+        end&.flatten
       end
     end
 
