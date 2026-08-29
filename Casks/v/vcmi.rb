@@ -5,13 +5,6 @@ cask "vcmi" do
   sha256 arm:   "b56b55d0671ae604effb12d0394b74a552f203426cafa165f82488505fb465e3",
          intel: "613f7e9c2d515e10ff1eae77bab236308cf5bd08b68ff3d1b65cb7a16cde0ef6"
 
-  on_arm do
-    depends_on macos: :big_sur
-  end
-  on_intel do
-    depends_on macos: :catalina
-  end
-
   url "https://github.com/vcmi/vcmi/releases/download/#{version}/VCMI-macOS-#{arch}.dmg",
       verified: "github.com/vcmi/vcmi/"
   name "VCMI"
