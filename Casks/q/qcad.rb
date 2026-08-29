@@ -29,6 +29,8 @@ cask "qcad" do
 
   app "QCAD.app"
 
+  uninstall quit: "org.qcad"
+
   zap trash: [
     "~/.config/QCAD",
     "~/Library/Preferences/org.qcad.plist",
