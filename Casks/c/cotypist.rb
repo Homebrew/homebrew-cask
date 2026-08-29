@@ -1,6 +1,6 @@
 cask "cotypist" do
-  version "2026.3"
-  sha256 "3c10b140e7637bab7ca59c9f0a2ed24c0b1fe02d73e199a8ad8e99467440594d"
+  version "2026.4"
+  sha256 "245a9ded69d04b6c2f56d956b6a8cb9310fa7de490ecd32e5f9576ee6b640b6a"
 
   url "https://cotypist.app/download/Cotypist-#{version}.dmg"
   name "Cotypist"
