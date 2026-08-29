@@ -1,9 +1,7 @@
 cask "sitesucker-pro" do
   on_big_sur :or_older do
-    on_big_sur :or_older do
-      version "5.2"
-      sha256 "244fa73a0aa73b3786ee6eb4e5d6f6438942853d6d58c5de38b92f11e8d44428"
-    end
+    version "5.2"
+    sha256 "244fa73a0aa73b3786ee6eb4e5d6f6438942853d6d58c5de38b92f11e8d44428"
 
     livecheck do
       skip "Legacy version"
