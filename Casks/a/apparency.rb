@@ -1,10 +1,6 @@
 cask "apparency" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "1.4.1"
-      sha256 "850d19c6d6a86380211d9acdb3d8b0ee3b2a4c8af833126c28141f105823c59a"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "1.6.1"
       sha256 "cadd8894ec15b664fd60a141f82136cbe139af0b13000851497d880235abe8b2"
     end
