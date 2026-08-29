@@ -1,25 +1,5 @@
 cask "teamviewer" do
-  on_catalina :or_older do
-    version "15.42.4"
-    sha256 "3357bc366cd0295dd100b790d6af6216d349d34451ea18ba08692a51eadd6cf7"
-
-    livecheck do
-      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
-      strategy :sparkle
-    end
-
-    # This Cask should be installed and uninstalled manually on Catalina.
-    # See https://github.com/Homebrew/homebrew-cask/issues/76829
-    installer manual: "TeamViewer.pkg"
-
-    caveats <<~EOS
-      WARNING: #{token} has a bug in Catalina where it doesn't deal well with being uninstalled by other utilities.
-      The recommended way to remove it is by running their uninstaller under:
-
-         Preferences → Advanced
-    EOS
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "15.71.4"
     sha256 "194147bcb5a23452f974e73e0b9570b9395d9c46190f7dc8fcd867aaae9cef06"
 
