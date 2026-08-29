@@ -12,7 +12,7 @@ cask "keeperdb" do
     regex(/VERSION=(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "KeeperDB.app"
 
