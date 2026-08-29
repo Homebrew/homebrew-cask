@@ -3,18 +3,10 @@ cask "transcribe" do
   url_arch = on_arch_conditional arm: "_arm"
 
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "8.75.2"
-      sha256 "f01781100cd3b9987c8f8892145a2eaa358df07b92e10e26f30b6a877f5b352c"
+    version "9.21"
+    sha256 :no_check
 
-      url "https://www.seventhstring.com/xscribe/downmo/transcribe#{version.no_dots}.dmg"
-    end
-    on_big_sur :or_newer do
-      version "9.21"
-      sha256 :no_check
-
-      url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe#{url_arch}.dmg"
-    end
+    url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe#{url_arch}.dmg"
 
     livecheck do
       skip "Legacy version"
