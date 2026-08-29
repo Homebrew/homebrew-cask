@@ -1,14 +1,9 @@
 cask "qcad" do
   arch arm: "-arm64"
 
-  on_arm do
-    version "3.32.9,13-26-qt6"
-    sha256 "4d558d2537f985ef3b93cb7e148d2eee9ea9dbd43af05cf60801ba3fb8c9fa92"
-  end
-  on_intel do
-    version "3.32.9,11-26-qt6"
-    sha256 "8edb2fe2d22bcb56bcb654c779fda459cacb2113bb263c124f6742f51e30b410"
-  end
+  version "3.33.0,13-26-qt6"
+  sha256 arm:   "dbf4b115ac70498ad8ea588258f13e1c4abb902ce6daaed4085477446f4f0e51",
+         intel: "904e5b8da8cd4aead8cdcc083f56fa1ac63f067d55fa7809ed998f4246e72a5b"
 
   url "https://www.qcad.org/archives/qcad/qcad-#{version.csv.first}-trial-macos-#{version.csv.second}#{arch}.dmg"
   name "QCAD"
