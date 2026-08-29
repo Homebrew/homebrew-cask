@@ -1,6 +1,6 @@
 cask "pcsx2" do
-  version "2.6.3"
-  sha256 "cb7b9e6330f1abf0cf92c94065f7eb983d0fa8affcfe6b0ccb9c2a4ebf067f1a"
+  version "2.8.1"
+  sha256 "a2a59e934ee9043e89bb8df4fd649d06fa094aedc98ce000ea9f23f597c3193d"
 
   url "https://github.com/PCSX2/pcsx2/releases/download/v#{version}/pcsx2-v#{version}-macos-Qt.tar.xz",
       verified: "github.com/PCSX2/pcsx2/"
@@ -23,6 +23,8 @@ cask "pcsx2" do
   depends_on macos: :big_sur
 
   app "PCSX2-v#{version}.app", target: "PCSX2.app"
+
+  uninstall quit: "net.pcsx2.pcsx2"
 
   zap trash: [
     "~/Library/Application Support/PCSX2",
