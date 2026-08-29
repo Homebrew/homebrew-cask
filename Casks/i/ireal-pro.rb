@@ -1,16 +1,5 @@
 cask "ireal-pro" do
-  on_catalina :or_older do
-    version "2023.11.2"
-    sha256 "6801ab4d288a83a75859af8fe9aca135de2d0175001f3c2492cebda9fd78f855"
-
-    url "https://ireal-pro.s3.amazonaws.com/iReal+Pro+#{version}.dmg",
-        verified: "ireal-pro.s3.amazonaws.com/"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "2024.7,20240707"
     sha256 "19dd261ce559a8c8e1efd49dbc63b55248e7dca75f2b8bf2940ecec08c94ab49"
 
