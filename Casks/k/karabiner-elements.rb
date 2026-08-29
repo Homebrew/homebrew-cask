@@ -1,14 +1,6 @@
 cask "karabiner-elements" do
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "13.7.0"
-      sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
-
-      livecheck do
-        skip "Legacy version"
-      end
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "14.13.0"
       sha256 "826270a21b7f4df9b9a8c79c9aad4de8f48021f58eaacbee1d4f150c963c6cbc"
 
