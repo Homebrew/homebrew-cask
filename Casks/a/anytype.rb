@@ -5,8 +5,7 @@ cask "anytype" do
   sha256 arm:   "b8283663de017a2545d94709662f56fa0cdd7759cd0c1ff4e73dc9092e39508a",
          intel: "c6d6c8c7ead46b4802ac09b0920eee617152141f2eb6a05e4bcf896634693141"
 
-  url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-#{version}-mac-#{arch}.dmg",
-      verified: "anytype-release.fra1.cdn.digitaloceanspaces.com/"
+  url "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-#{version}-mac-#{arch}.dmg"
   name "Anytype"
   desc "Local-first and end-to-end encrypted notes app"
   homepage "https://anytype.io/"
