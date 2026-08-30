@@ -6,8 +6,7 @@ cask "screen-studio" do
   sha256 arm:   "287530005db8ca3f505101cbc1bb386986b3bfbe351b6cb158222279a48cc6ef",
          intel: "710b84ce8fdb7613f1ba2de06f8934706bc5e76ef601dc70d64b1cbbecfe42c7"
 
-  url "https://screenstudioassets.com/releases/#{version}/Screen%20Studio-#{version}#{arch}-mac.zip",
-      verified: "screenstudioassets.com/"
+  url "https://screenstudioassets.com/releases/#{version}/Screen%20Studio-#{version}#{arch}-mac.zip"
   name "Screen Studio"
   desc "Screen recorder and editor"
   homepage "https://screen.studio/"
