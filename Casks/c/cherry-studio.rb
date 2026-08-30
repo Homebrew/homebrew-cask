@@ -29,8 +29,7 @@ cask "cherry-studio" do
     app_image "Cherry-Studio-#{version}-linux-#{arch}.AppImage", target: "Cherry Studio.AppImage"
   end
 
-  url "https://github.com/CherryHQ/cherry-studio/releases/download/v#{version}/Cherry-Studio-#{version}-#{os}-#{arch}.#{url_end}",
-      verified: "github.com/CherryHQ/cherry-studio/"
+  url "https://github.com/CherryHQ/cherry-studio/releases/download/v#{version}/Cherry-Studio-#{version}-#{os}-#{arch}.#{url_end}"
   name "Cherry Studio"
   desc "Desktop client that supports multiple LLM providers"
   homepage "https://www.cherry-ai.com/"
