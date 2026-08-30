@@ -2,8 +2,7 @@ cask "duet" do
   version "3.20.3.0"
   sha256 "2edcc20b4238f1490579595956c1e18dfd441d0e6abbb69c9cba788640e80ab9"
 
-  url "https://duetdownload.com/Mac/#{version.major}_x/duet-dd-#{version.dots_to_hyphens}.dmg",
-      verified: "duetdownload.com/Mac/"
+  url "https://duetdownload.com/Mac/#{version.major}_x/duet-dd-#{version.dots_to_hyphens}.dmg"
   name "Duet"
   desc "Remote desktop and second display tool"
   homepage "https://www.duetdisplay.com/"
