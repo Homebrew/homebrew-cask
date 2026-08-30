@@ -21,11 +21,12 @@ cask "openlogi" do
   app "OpenLogi.app"
   binary "#{appdir}/OpenLogi.app/Contents/MacOS/openlogi"
 
-  uninstall quit: [
-    "org.openlogi.agent",
-    "org.openlogi.openlogi",
-    "org.openlogi.overlay",
-  ]
+  uninstall launchctl: "org.openlogi.agent.service",
+            quit:      [
+              "org.openlogi.agent",
+              "org.openlogi.openlogi",
+              "org.openlogi.overlay",
+            ]
 
   zap trash: [
     "~/.config/openlogi",
