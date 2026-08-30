@@ -2,8 +2,7 @@ cask "yojimbo" do
   version "4.6.3"
   sha256 "1496c28e14c86ef501d9e66caf1620abd2f80acb15ca78eb42a9cc03f1aba50f"
 
-  url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg",
-      verified: "s3.amazonaws.com/BBSW-download/"
+  url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg"
   name "Yojimbo"
   desc "Your effortless, reliable information organiser"
   homepage "https://www.barebones.com/products/yojimbo/"
