@@ -2,8 +2,7 @@ cask "dockx" do
   version "1.1.21"
   sha256 "dca9f337c81fe2a44b51a2fbdd454e6d2222a982491de8d3d5217b1d3e7b58ae"
 
-  url "https://d-1251679148.file.myqcloud.com/download/DockX-#{version.csv.first}.dmg",
-      verified: "d-1251679148.file.myqcloud.com/download/"
+  url "https://d-1251679148.file.myqcloud.com/download/DockX-#{version.csv.first}.dmg"
   name "DockX"
   desc "Display content in the dock and menu bar"
   homepage "https://dockx.app/"
