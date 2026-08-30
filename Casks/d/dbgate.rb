@@ -27,8 +27,7 @@ cask "dbgate" do
     app_image "dbgate-#{version}-linux_#{arch}.AppImage", target: "DbGate.AppImage"
   end
 
-  url "https://github.com/dbgate/dbgate/releases/download/v#{version}/dbgate-#{version}-#{os}.#{url_end}",
-      verified: "github.com/dbgate/dbgate/"
+  url "https://github.com/dbgate/dbgate/releases/download/v#{version}/dbgate-#{version}-#{os}.#{url_end}"
   name "DbGate"
   desc "Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others"
   homepage "https://dbgate.org/"
