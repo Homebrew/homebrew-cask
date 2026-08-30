@@ -2,8 +2,7 @@ cask "renamer" do
   version "7.3.3"
   sha256 "0a831dd865b662e94b55a5408643942f9017f6fb5b1a7d6d569f402933c528ef"
 
-  url "https://github.com/incbee/renamer-#{version.major}-releases/releases/download/v#{version}/Renamer-#{version}-universal-mac.zip",
-      verified: "github.com/incbee/renamer-#{version.major}-releases/"
+  url "https://github.com/incbee/renamer-#{version.major}-releases/releases/download/v#{version}/Renamer-#{version}-universal-mac.zip"
   name "Renamer"
   desc "Batch file renamer application"
   homepage "https://renamer.com/"
