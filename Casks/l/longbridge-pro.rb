@@ -5,8 +5,7 @@ cask "longbridge-pro" do
   sha256 arm:   "e193869e42d3d4167ca9905b5bc46802fb0fe6a2539cdf9a62c92d097bb0fef6",
          intel: "f680281fba31104e70b29da36b5cd5872a8ef17d105c39e839942677d5301ab6"
 
-  url "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-#{version}-mac-#{arch}.dmg",
-      verified: "download.lbkrs.com/longbridge-desktop/prod/"
+  url "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-#{version}-mac-#{arch}.dmg"
   name "Longbridge Pro"
   desc "Stock trading platform"
   homepage "https://longbridge.com/"
