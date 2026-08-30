@@ -2,8 +2,7 @@ cask "minecraft-education" do
   version "1.26.32.0"
   sha256 "8aaada426842ebc054acb70ecd0a44fcb9abe02988e98d5488f17376380e2960"
 
-  url "https://downloads.minecrafteduservices.com/retailbuilds/MacOS/Minecraft_Education_#{version}.dmg",
-      verified: "downloads.minecrafteduservices.com/"
+  url "https://downloads.minecrafteduservices.com/retailbuilds/MacOS/Minecraft_Education_#{version}.dmg"
   name "Minecraft Education Edition"
   desc "Educational version of Minecraft"
   homepage "https://education.minecraft.net/"
