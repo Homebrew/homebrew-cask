@@ -5,8 +5,7 @@ cask "theiaide" do
   sha256 arm:   "50fd68c20bdf01dacf695aea9b9ec9312a84e6b6ce38b3bf83952c6a5b03257f",
          intel: "a71eeb339b75c77ac0e1f7a633a3e236cf3a4f23b626a8c1c73a7289367a7af2"
 
-  url "https://download.eclipse.org/theia/ide/#{version}/macos#{arch}/TheiaIDE.dmg",
-      verified: "download.eclipse.org/theia/ide/"
+  url "https://download.eclipse.org/theia/ide/#{version}/macos#{arch}/TheiaIDE.dmg"
   name "TheiaIDE"
   desc "IDE framework"
   homepage "https://theia-ide.org/"
