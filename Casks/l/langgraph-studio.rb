@@ -2,8 +2,7 @@ cask "langgraph-studio" do
   version "0.0.37"
   sha256 "3686a8164d001f371bfbd019024cbef0f2a8945e8fdca7467836cd5fc8882959"
 
-  url "https://github.com/langchain-ai/langgraph-studio/releases/download/v#{version}/LangGraph-Studio-#{version}-universal.dmg",
-      verified: "github.com/langchain-ai/langgraph-studio/"
+  url "https://github.com/langchain-ai/langgraph-studio/releases/download/v#{version}/LangGraph-Studio-#{version}-universal.dmg"
   name "LangGraph Studio"
   desc "Desktop app for prototyping and debugging LangGraph applications locally"
   homepage "https://studio.langchain.com/"
