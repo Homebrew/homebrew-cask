@@ -26,5 +26,6 @@ cask "tabularis" do
     "~/Library/Logs/tabularis",
     "~/Library/Preferences/com.debba.tabularis.plist",
     "~/Library/Saved Application State/com.debba.tabularis.savedState",
+    "~/Library/WebKit/tabularis",
   ]
 end
