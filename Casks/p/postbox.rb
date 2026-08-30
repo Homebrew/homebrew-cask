@@ -2,8 +2,7 @@ cask "postbox" do
   version "7.0.65"
   sha256 "baa32f662fe1d3663f1bec4e3afb4120a31809bd6478d13f1b94d72a0363559c"
 
-  url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg",
-      verified: "d3nx85trn0lqsg.cloudfront.net/mac/"
+  url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg"
   name "Postbox"
   desc "Email client focusing on privacy protection"
   homepage "https://www.postbox-inc.com/"
