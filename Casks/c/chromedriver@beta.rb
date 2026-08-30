@@ -5,8 +5,7 @@ cask "chromedriver@beta" do
   sha256 arm:   "fe2a4644020a93e79614d547074932b9eb0c00ed34b9fec0e1d87e2ee6d24886",
          intel: "36331c586f5b9e26d9dfd8cb0c01b248313afaf25839b99d725be2bfcba2b529"
 
-  url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip",
-      verified: "storage.googleapis.com/chrome-for-testing-public/"
+  url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip"
   name "ChromeDriver"
   desc "Automated testing of webapps for Google Chrome"
   homepage "https://chromedriver.chromium.org/"
