@@ -5,8 +5,7 @@ cask "codebuddy" do
   sha256 arm:   "3f889f5d1d3c66f4b9b9ee29523fda4266372b80a3c0563c4ed834eef7b2e100",
          intel: "d710f4003637a248d91ecbb42e76d861162b27663aed22fa4b6c5cceef5cf2a4"
 
-  url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}.zip",
-      verified: "codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/"
+  url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}.zip"
   name "CodeBuddy"
   desc "AI-powered adaptive IDE"
   homepage "https://www.codebuddy.ai/ide/"
