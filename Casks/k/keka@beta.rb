@@ -2,8 +2,7 @@ cask "keka@beta" do
   version "1.6.7"
   sha256 "0fa0995fc3e58ba3e438ba53aba03636eb226c64002757d21250934116e19f7e"
 
-  url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
-      verified: "github.com/aonez/Keka/"
+  url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg"
   name "Keka"
   desc "File archiver"
   homepage "https://www.keka.io/#beta"
