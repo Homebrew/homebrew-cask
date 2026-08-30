@@ -11,8 +11,10 @@ cask "miro" do
   homepage "https://miro.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://desktop.miro.com/platforms/#{arch}/update.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   auto_updates true
