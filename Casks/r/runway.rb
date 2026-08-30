@@ -2,8 +2,7 @@ cask "runway" do
   version "0.19.2"
   sha256 "25ef6c07a8c0c3832a35d414cfc11ee12f45a8f7c159dcc45129e1514041c474"
 
-  url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg",
-      verified: "runway-releases.s3.amazonaws.com/"
+  url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg"
   name "Runway"
   desc "Creative toolkit powered by machine learning"
   homepage "https://runwayml.com/"
