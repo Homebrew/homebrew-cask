@@ -10,8 +10,7 @@ cask "yandex" do
     sha256 "397da6a476fa9474ff305767b1b6d172138967b8c41dd53f5c0d5bee5e74c713"
   end
 
-  url "https://download.cdn.yandex.net/browser/update/#{version.csv.first.dots_to_underscores}_#{version.csv.second}_m_s_r/yandex.dmg",
-      verified: "download.cdn.yandex.net/"
+  url "https://download.cdn.yandex.net/browser/update/#{version.csv.first.dots_to_underscores}_#{version.csv.second}_m_s_r/yandex.dmg"
   name "Yandex.Browser"
   desc "Web browser"
   homepage "https://browser.yandex.ru/"
