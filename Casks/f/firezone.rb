@@ -2,8 +2,7 @@ cask "firezone" do
   version "1.5.19"
   sha256 "163bcfb0cd87736276fb676b15639276b600f6306350fb2411425ce12207c810"
 
-  url "https://github.com/firezone/firezone/releases/download/macos-client-#{version}/firezone-macos-client-#{version}.dmg",
-      verified: "github.com/firezone/firezone/"
+  url "https://github.com/firezone/firezone/releases/download/macos-client-#{version}/firezone-macos-client-#{version}.dmg"
   name "Firezone"
   desc "Zero-trust access platform built on WireGuard"
   homepage "https://www.firezone.dev/"
