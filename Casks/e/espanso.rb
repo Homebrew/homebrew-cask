@@ -2,8 +2,7 @@ cask "espanso" do
   version "2.4.0"
   sha256 "aaf81d7573db785e5447b867e0f2f1d6f061ea9fa1756fda02f21b0402407669"
 
-  url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-Universal.dmg",
-      verified: "github.com/espanso/espanso/"
+  url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-Universal.dmg"
   name "Espanso"
   desc "Cross-platform Text Expander written in Rust"
   homepage "https://espanso.org/"
