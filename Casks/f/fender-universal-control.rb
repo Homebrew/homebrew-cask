@@ -22,6 +22,7 @@ cask "fender-universal-control" do
   pkg "Fender Universal Control.pkg"
 
   uninstall launchctl: [
+              "asp.com.fender.pae-quantum-audio-plug-in",
               "asp.com.presonus.pae-quantum-audio-plug-in",
               "com.presonus.ucdaemon",
             ],
