@@ -2,8 +2,7 @@ cask "linguax" do
   version "2025.12,5118"
   sha256 "1528dace8d6c24389006042cd38a996d9d23cf682dfd13b0bfd2df3c1fbf80dd"
 
-  url "https://st.deepzz.com/linguax/LinguaX#{version.csv.first}.#{version.csv.second}.zip",
-      verified: "st.deepzz.com/linguax/"
+  url "https://st.deepzz.com/linguax/LinguaX#{version.csv.first}.#{version.csv.second}.zip"
   name "LinguaX"
   desc "Menu-bar utility for third-party mice with smooth scrolling and mapping"
   homepage "https://linguax.app/"
