@@ -8,8 +8,7 @@ cask "1password-cli@beta" do
          arm64_linux:  "e4cc960792a98dec659d87d571c6c1e82d6f2e4b872686409c9dd31e2ea095bd",
          x86_64_linux: "57a5d7637e1f508194b48732136de57e53efcc447877a5dbcaed7801abeb7f49"
 
-  url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_#{os}_#{arch}_v#{version}.zip",
-      verified: "cache.agilebits.com/dist/1P/op2/pkg/"
+  url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_#{os}_#{arch}_v#{version}.zip"
   name "1Password CLI"
   desc "Command-line helper for the 1Password password manager"
   homepage "https://developer.1password.com/docs/cli"
