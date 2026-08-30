@@ -1,6 +1,6 @@
 cask "movist-pro" do
-  version "2.17.5"
-  sha256 "0eefefeaefe409d50c049628b97f822a64645c6d9c35aecf273a4074dbbbea52"
+  version "2.17.6"
+  sha256 "88decf55258c7cc97397a60f285ddb9c116feb32fbbf4c1db4fc5e681a2a9f46"
 
   url "https://update.cocoable.com/MovistPro_#{version}.dmg"
   name "Movist Pro"
