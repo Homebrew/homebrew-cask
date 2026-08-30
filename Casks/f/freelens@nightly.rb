@@ -5,8 +5,7 @@ cask "freelens@nightly" do
   sha256 arm:   "19f535b9255347d027b48104fd3d61c7248888181123bd41e194d4cfd89a7920",
          intel: "282b949eee7e3863b1f232b3dc02323fae017aba45638da7da2c7b218906f448"
 
-  url "https://github.com/freelensapp/freelens-nightly-builds/releases/download/v#{version}/Freelens-#{version}-macos-#{arch}.dmg",
-      verified: "github.com/freelensapp/freelens-nightly-builds/"
+  url "https://github.com/freelensapp/freelens-nightly-builds/releases/download/v#{version}/Freelens-#{version}-macos-#{arch}.dmg"
   name "Freelens"
   desc "Kubernetes IDE"
   homepage "https://freelens.app/"
