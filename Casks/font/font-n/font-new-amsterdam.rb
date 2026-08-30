@@ -2,8 +2,7 @@ cask "font-new-amsterdam" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/newamsterdam/NewAmsterdam-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/newamsterdam/NewAmsterdam-Regular.ttf"
   name "New Amsterdam"
   homepage "https://fonts.google.com/specimen/New+Amsterdam"
 
