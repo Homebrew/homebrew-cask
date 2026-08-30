@@ -2,8 +2,7 @@ cask "chatgpt-atlas" do
   version "1.2026.189.1,20260724200710000"
   sha256 "894b60a1276c65dd220984db647963e6245e06e2211fb3c61b944f6e1a013435"
 
-  url "https://persistent.oaistatic.com/atlas/public/ChatGPT_Atlas_Desktop_public_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "persistent.oaistatic.com/atlas/public/"
+  url "https://persistent.oaistatic.com/atlas/public/ChatGPT_Atlas_Desktop_public_#{version.csv.first}_#{version.csv.second}.dmg"
   name "ChatGPT Atlas"
   desc "OpenAI's official browser with ChatGPT built in"
   homepage "https://chatgpt.com/atlas"
