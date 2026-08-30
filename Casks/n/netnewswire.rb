@@ -24,8 +24,7 @@ cask "netnewswire" do
     end
   end
 
-  url "https://github.com/Ranchero-Software/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip",
-      verified: "github.com/Ranchero-Software/NetNewsWire/"
+  url "https://github.com/Ranchero-Software/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip"
   name "NetNewsWire"
   desc "Free and open-source RSS reader"
   homepage "https://netnewswire.com/"
