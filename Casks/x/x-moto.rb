@@ -20,8 +20,7 @@ cask "x-moto" do
     end
   end
 
-  url "https://github.com/xmoto/xmoto/releases/download/v#{version}/xmoto-#{version}#{arch}-macos.dmg",
-      verified: "github.com/xmoto/xmoto/"
+  url "https://github.com/xmoto/xmoto/releases/download/v#{version}/xmoto-#{version}#{arch}-macos.dmg"
   name "X-Moto"
   desc "2D motocross platform game"
   homepage "https://xmoto.tuxfamily.org/"
