@@ -6,8 +6,7 @@ cask "sqlpro-studio" do
     disable! date: "2026-09-01", because: :fails_gatekeeper_check
   end
 
-  url "https://d3fwkemdw8spx3.cloudfront.net/studio/SQLProStudio.#{version}.app.zip",
-      verified: "d3fwkemdw8spx3.cloudfront.net/studio/"
+  url "https://d3fwkemdw8spx3.cloudfront.net/studio/SQLProStudio.#{version}.app.zip"
   name "SQLPro Studio"
   desc "Database management tool"
   homepage "https://www.sqlprostudio.com/"
