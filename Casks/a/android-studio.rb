@@ -5,8 +5,7 @@ cask "android-studio" do
   sha256 arm:   "aa77ef6919b22be51566dcd79603c323f7c403fa91dc79dc413eed7f6a05c048",
          intel: "864d19d7955695b5383d59d1c64693baa34fa8979242553417ba9f2ddd69dffc"
 
-  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
-      verified: "edgedl.me.gvt1.com/android/studio/install/"
+  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
   name "Android Studio"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/"
