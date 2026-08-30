@@ -5,8 +5,7 @@ cask "gnucash" do
   sha256 arm:   "26ae2e340edf2a58fdb906962cc48eb4ec1cf1a7b5862b72108f9a5401fd664b",
          intel: "f86d41e70a2d2124395baabc357124e1d04120039c741c18775473bd0deb3705"
 
-  url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-#{arch}-#{version}.dmg",
-      verified: "github.com/Gnucash/gnucash/"
+  url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-#{arch}-#{version}.dmg"
   name "GnuCash"
   desc "Double-entry accounting program"
   homepage "https://www.gnucash.org/"
