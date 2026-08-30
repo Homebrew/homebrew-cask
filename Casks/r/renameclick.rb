@@ -5,8 +5,7 @@ cask "renameclick" do
   sha256 arm:   "14ef6914d9d19d6ff521b0be508eb27e3f4613232e98f05400998affef70aad7",
          intel: "880b376f5784114268a9b0827be617b5e572ebe234ae6d485c4ecf06d36a0327"
 
-  url "https://github.com/noemaVision/renameclick/releases/download/v#{version}/RenameClick-#{version}-#{arch}.dmg",
-      verified: "github.com/noemaVision/renameclick/"
+  url "https://github.com/noemaVision/renameclick/releases/download/v#{version}/RenameClick-#{version}-#{arch}.dmg"
   name "RenameClick"
   desc "Local-first AI app for file renaming and organisation"
   homepage "https://rename.click/"
