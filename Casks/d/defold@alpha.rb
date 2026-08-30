@@ -4,8 +4,7 @@ cask "defold@alpha" do
   version "1.13.2"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://github.com/defold/defold/releases/download/#{version}-alpha/Defold-#{arch}-macos.dmg",
-      verified: "github.com/defold/defold/"
+  url "https://github.com/defold/defold/releases/download/#{version}-alpha/Defold-#{arch}-macos.dmg"
   name "Defold"
   desc "Game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
