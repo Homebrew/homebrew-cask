@@ -11,8 +11,7 @@ cask "xpra" do
     version "6.5.3,0"
   end
 
-  url "https://xpra.org/dists/MacOS/#{arch}/Xpra-#{arch}-#{version.csv.first}-r#{version.csv.second}.dmg",
-      verified: "xpra.org/"
+  url "https://xpra.org/dists/MacOS/#{arch}/Xpra-#{arch}-#{version.csv.first}-r#{version.csv.second}.dmg"
   name "Xpra"
   desc "Screen and application forwarding system"
   homepage "https://github.com/Xpra-org/xpra/"
