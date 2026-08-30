@@ -11,8 +11,7 @@ cask "lark" do
     sha256 "fc7a38ec0ae5e15cc71441c588492c29f7a88d95a080200d40d5dbe0dc4d1215"
   end
 
-  url "https://sf16-sg.larksuitecdn.com/obj/lark-version-sg/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg",
-      verified: "sf16-sg.larksuitecdn.com/obj/lark-version-sg/"
+  url "https://sf16-sg.larksuitecdn.com/obj/lark-version-sg/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg"
   name "Lark"
   desc "Project management software"
   homepage "https://www.larksuite.com/"
