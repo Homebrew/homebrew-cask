@@ -5,8 +5,7 @@ cask "block-goose" do
   sha256 arm:   "98d7b09c9e57949e0dc2c8889fc05934bffb3159ae1a0c26ae0d78f397db5041",
          intel: "0c11b1240ade6bc971ddb65e69cf33f39cf4d5faba7f8ba141e3190796c21c36"
 
-  url "https://github.com/block/goose/releases/download/v#{version}/Goose#{arch}.zip",
-      verified: "github.com/block/goose/"
+  url "https://github.com/block/goose/releases/download/v#{version}/Goose#{arch}.zip"
   name "Goose"
   desc "Open source, extensible AI agent that goes beyond code suggestions"
   homepage "https://block.github.io/goose/"
