@@ -2,8 +2,7 @@ cask "repobar" do
   version "0.8.7"
   sha256 "c359a24f6a1108fb5254a5c099939de7b2ae5e21901dad51530b452662ece1a3"
 
-  url "https://github.com/steipete/RepoBar/releases/download/v#{version}/RepoBar-#{version}.zip",
-      verified: "github.com/steipete/RepoBar/"
+  url "https://github.com/steipete/RepoBar/releases/download/v#{version}/RepoBar-#{version}.zip"
   name "RepoBar"
   desc "Menu bar dashboard for GitHub repository health"
   homepage "https://repobar.app/"
