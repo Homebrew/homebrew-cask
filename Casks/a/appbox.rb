@@ -2,8 +2,7 @@ cask "appbox" do
   version "3.6.0"
   sha256 "e978af3b776a3efd8cc6cef4cb69729173b4277dbec291eb6710545f550ade72"
 
-  url "https://github.com/getappbox/AppBox-iOSAppsWirelessInstallation/releases/download/#{version}/AppBox.app.zip",
-      verified: "github.com/getappbox/AppBox-iOSAppsWirelessInstallation/"
+  url "https://github.com/getappbox/AppBox-iOSAppsWirelessInstallation/releases/download/#{version}/AppBox.app.zip"
   name "AppBox"
   desc "iOS app distribution tool"
   homepage "https://getappbox.com/"
