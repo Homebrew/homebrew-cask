@@ -6,8 +6,7 @@ cask "antigravity" do
   sha256 arm:   "713225e2da4d9f50a196e68937d862c12e98b1dd18b7bfab0d0a0c127e67e8dc",
          intel: "0c3b7aeaec7386d70c522d8209876a272da6edeba0d2dcc432857a792c12bee6"
 
-  url "https://storage.googleapis.com/antigravity-public/antigravity-hub/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg",
-      verified: "storage.googleapis.com/antigravity-public/antigravity-hub/"
+  url "https://storage.googleapis.com/antigravity-public/antigravity-hub/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity.dmg"
   name "Google Antigravity"
   desc "Agent orchestration platform"
   homepage "https://antigravity.google/product/antigravity-2"
