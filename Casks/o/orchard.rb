@@ -12,6 +12,7 @@ cask "orchard" do
   app "Orchard.app"
 
   zap trash: [
+    "~/Library/Application Support/Orchard",
     "~/Library/Caches/container-compose.Orchard",
     "~/Library/Preferences/container-compose.Orchard.plist",
   ]
