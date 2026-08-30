@@ -2,8 +2,7 @@ cask "lycheeslicer" do
   version "7.6.6"
   sha256 "70fd494199795476e5c5feeaa9822e0253e13d93cdade2dd45d0a7ca14cf15c0"
 
-  url "https://mango-lychee.nyc3.cdn.digitaloceanspaces.com/LycheeSlicer-#{version}.dmg",
-      verified: "mango-lychee.nyc3.cdn.digitaloceanspaces.com/"
+  url "https://mango-lychee.nyc3.cdn.digitaloceanspaces.com/LycheeSlicer-#{version}.dmg"
   name "Lychee Slicer"
   desc "Slicer for Resin 3D printers"
   homepage "https://mango3d.io/"
