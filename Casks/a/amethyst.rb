@@ -2,8 +2,7 @@ cask "amethyst" do
   version "0.24.3"
   sha256 "442d2b9fe53f8062051dd63e5d01512ed2020c78cbdbe4f93ecf30290a5b0302"
 
-  url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
-      verified: "github.com/ianyh/Amethyst/"
+  url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip"
   name "Amethyst"
   desc "Automatic tiling window manager similar to xmonad"
   homepage "https://ianyh.com/amethyst/"
