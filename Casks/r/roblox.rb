@@ -5,8 +5,7 @@ cask "roblox" do
   sha256 arm:   "c676c975ddfd0a49b845baa82cd16a0fa8063c9bcd9b57967ab8b6543af4b23e",
          intel: "053544b8534159c557a910b76b6bb9202e6a9c108829284713e24687cf0df4e7"
 
-  url "https://setup.rbxcdn.com/mac/#{arch}version-#{version.csv.second}-RobloxPlayer.zip",
-      verified: "setup.rbxcdn.com/"
+  url "https://setup.rbxcdn.com/mac/#{arch}version-#{version.csv.second}-RobloxPlayer.zip"
   name "Roblox"
   desc "Online multiplayer game platform"
   homepage "https://www.roblox.com/"
