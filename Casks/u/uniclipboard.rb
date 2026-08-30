@@ -24,5 +24,6 @@ cask "uniclipboard" do
     "~/Library/Application Support/app.uniclipboard.desktop",
     "~/Library/Caches/app.uniclipboard.desktop",
     "~/Library/Logs/app.uniclipboard.desktop",
+    "~/Library/WebKit/app.uniclipboard.desktop",
   ]
 end

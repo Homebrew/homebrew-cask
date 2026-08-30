@@ -32,8 +32,11 @@ cask "codebuddy-cn" do
     "~/Library/Application Support/CodeBuddy CN",
     "~/Library/Application Support/CodeBuddyExtension",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tencent.codebuddycn.sfl*",
+    "~/Library/Application Support/com.tencent.codebuddycn*",
     "~/Library/Caches/com.tencent.codebuddycn",
     "~/Library/Caches/com.tencent.codebuddycn.ShipIt",
+    "~/Library/HTTPStorages/com.tencent.codebuddycn*",
+    "~/Library/Preferences/com.tencent.codebuddycn.helper.plist",
     "~/Library/Preferences/com.tencent.codebuddycn.plist",
   ]
 end

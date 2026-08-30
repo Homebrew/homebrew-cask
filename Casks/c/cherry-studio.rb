@@ -17,6 +17,7 @@ cask "cherry-studio" do
 
     zap trash: [
       "~/Library/Application Support/CherryStudio",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.kangfenmao.cherrystudio.sfl*",
       "~/Library/Caches/cherrystudio-updater",
       "~/Library/HTTPStorages/com.kangfenmao.CherryStudio",
       "~/Library/Logs/CherryStudio",
