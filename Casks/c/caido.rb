@@ -5,8 +5,7 @@ cask "caido" do
   sha256 arm:   "465aee61799c4eb781f76607a4847b30d32ddd1db97455ab983426d13561f1c4",
          intel: "c33fe20906aae3af1b15a5f6dd89064402902fd06a4b5fc12b12c3bc4343cfe5"
 
-  url "https://caido.download/releases/v#{version}/caido-desktop-v#{version}-mac-#{arch}.dmg",
-      verified: "caido.download/"
+  url "https://caido.download/releases/v#{version}/caido-desktop-v#{version}-mac-#{arch}.dmg"
   name "Caido"
   desc "Web security auditing toolkit"
   homepage "https://caido.io/"
