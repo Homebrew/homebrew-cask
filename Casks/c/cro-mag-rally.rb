@@ -22,8 +22,7 @@ cask "cro-mag-rally" do
     app_image "CroMagRally-#{version}-linux-#{arch}.AppImage", target: "Cro-Mag Rally.AppImage"
   end
 
-  url "https://github.com/jorio/CroMagRally/releases/download/#{version}/CroMagRally-#{version}-#{url_end}",
-      verified: "github.com/jorio/CroMagRally/"
+  url "https://github.com/jorio/CroMagRally/releases/download/#{version}/CroMagRally-#{version}-#{url_end}"
   name "Cro-Mag Rally"
   desc "Prehistoric-themed 3D racing game from Pangea Software"
   homepage "https://jorio.itch.io/cromagrally"
