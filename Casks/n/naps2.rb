@@ -6,8 +6,7 @@ cask "naps2" do
   sha256 arm:   "9af9cc4aa8afd2230a6a1302e14ba4f4ec9a06d53e4266e4c8ff1dfe9ae75f7d",
          intel: "81e39bdc3ec522268090a808325ffe40e4dfafecb12261fd160e7232a4c31393"
 
-  url "https://github.com/cyanfish/naps2/releases/download/v#{version}/naps2-#{version}-mac-#{arch}.pkg",
-      verified: "github.com/cyanfish/naps2/"
+  url "https://github.com/cyanfish/naps2/releases/download/v#{version}/naps2-#{version}-mac-#{arch}.pkg"
   name "NAPS2"
   desc "Document scanning application"
   homepage "https://www.naps2.com/"
