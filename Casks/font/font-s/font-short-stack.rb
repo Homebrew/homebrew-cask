@@ -2,8 +2,7 @@ cask "font-short-stack" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/shortstack/ShortStack-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/shortstack/ShortStack-Regular.ttf"
   name "Short Stack"
   homepage "https://fonts.google.com/specimen/Short+Stack"
 
