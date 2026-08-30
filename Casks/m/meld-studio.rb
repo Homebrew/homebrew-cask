@@ -27,10 +27,15 @@ cask "meld-studio" do
 
   zap trash: [
     "~/Library/Application Support/MeldStudio",
+    "~/Library/Caches/co.meldstudio.MeldStudio",
+    "~/Library/Caches/Meld Studio",
+    "~/Library/HTTPStorages/co.meldstudio.MeldStudio.binarycookies",
     "~/Library/HTTPStorages/co.meldstudio.MeldStudioUpdater",
     "~/Library/LaunchAgents/co.meldstudio.keystone.agent.plist",
     "~/Library/LaunchAgents/co.meldstudio.keystone.xpcservice.plist",
     "~/Library/LaunchAgents/co.meldstudio.MeldStudioUpdater.wake.plist",
+    "~/Library/Meld Studio",
     "~/Library/MeldStudio",
+    "~/Library/WebKit/co.meldstudio.MeldStudio",
   ]
 end
