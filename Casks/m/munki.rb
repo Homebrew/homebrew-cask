@@ -2,8 +2,7 @@ cask "munki" do
   version "7.3.0.5808"
   sha256 "4ed826bd32811ef54524a10300f66c9af4c9fdd8c243ada146d468485e1bffcc"
 
-  url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
-      verified: "github.com/munki/munki/"
+  url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg"
   name "Munki"
   desc "Software installation manager"
   homepage "https://www.munki.org/munki/"
