@@ -4,8 +4,7 @@ cask "stratoshark" do
   version "0.10.2"
   sha256 "b77bdb3341c7c454ff907fd65aea9f40bc8eed9797b5aac00f4c0502c0beda1a"
 
-  url "https://www.wireshark.org/download/osx/all-versions/Stratoshark%20#{version}.dmg",
-      verified: "wireshark.org/download/osx/all-versions/"
+  url "https://www.wireshark.org/download/osx/all-versions/Stratoshark%20#{version}.dmg"
   name "Stratoshark"
   desc "System calls and log messages analyzer"
   homepage "https://stratoshark.org/"
