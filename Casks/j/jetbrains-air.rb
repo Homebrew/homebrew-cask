@@ -6,8 +6,7 @@ cask "jetbrains-air" do
   sha256 arm:   "75b61f28a619e1abbb9a55ecf250664a9c670f325f4bb2a212dbdb6da9c6e1f9",
          intel: "77cbac42b1cdf9685ce5fd3d68ffb4c24ba9994a03f6585e837f77f811f40ee0"
 
-  url "https://download.jetbrains.com/air/installers/macos_#{folder}/Air-#{version}#{arch}.dmg",
-      verified: "download.jetbrains.com/air/installers/"
+  url "https://download.jetbrains.com/air/installers/macos_#{folder}/Air-#{version}#{arch}.dmg"
   name "JetBrains Air"
   desc "Agentic development environment"
   homepage "https://air.dev/"
