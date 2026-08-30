@@ -33,8 +33,7 @@ cask "sapmachine-jdk" do
     end
   end
 
-  url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_macos-#{arch}_bin.dmg",
-      verified: "github.com/SAP/SapMachine/"
+  url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_macos-#{arch}_bin.dmg"
   name "SapMachine OpenJDK Development Kit"
   desc "OpenJDK distribution from SAP"
   homepage "https://sapmachine.io/"
