@@ -5,8 +5,7 @@ cask "orka3" do
   sha256 arm:   "e990bfccb6290a808b3060d87315f0e4752fca1a12c44e1c7a1e785a7a4d48e9",
          intel: "69fb9e7fabf922e6ccd1076386c4d5ccaf89602d67ea16cdb403a1433ebbe9ab"
 
-  url "https://cli-builds-public.s3.amazonaws.com/official/#{version}/orka3/macos/#{arch}/orka3.pkg",
-      verified: "cli-builds-public.s3.amazonaws.com/official/"
+  url "https://cli-builds-public.s3.amazonaws.com/official/#{version}/orka3/macos/#{arch}/orka3.pkg"
   name "Orka3 CLI"
   desc "Orchestration with Kubernetes on Apple"
   homepage "https://support.macstadium.com/hc/en-us/articles/42514244203419-Orka3-CLI-Overview-Configuration"
