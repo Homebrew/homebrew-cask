@@ -2,8 +2,7 @@ cask "macpass" do
   version "0.8.1"
   sha256 "2d0d3bdc945b42c0c1fe79b1eb74e5969b5f768ffc56aa286d73d3492873b173"
 
-  url "https://github.com/MacPass/MacPass/releases/download/#{version}/MacPass-#{version}.zip",
-      verified: "github.com/MacPass/MacPass/"
+  url "https://github.com/MacPass/MacPass/releases/download/#{version}/MacPass-#{version}.zip"
   name "MacPass"
   desc "Open-source, KeePass-client and password manager"
   homepage "https://macpass.github.io/"
