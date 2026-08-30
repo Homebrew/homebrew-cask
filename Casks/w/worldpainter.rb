@@ -18,5 +18,7 @@ cask "worldpainter" do
 
   app "WorldPainter.app"
 
+  uninstall quit: "com.install4j.4144-4862-0472-7103.67"
+
   zap trash: "~/Library/Application Support/WorldPainter"
 end
