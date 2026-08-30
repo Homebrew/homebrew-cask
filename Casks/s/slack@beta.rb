@@ -5,8 +5,7 @@ cask "slack@beta" do
   sha256 arm:   "28f3d5dcdfcb267c10a863417bcdfe6d1a6f73b214965b19f72c825fd4b7b60e",
          intel: "21669dad8412cbe75af0e0ea694fe3fb0b49e36e2600c5d0f39676a17fcd4201"
 
-  url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg",
-      verified: "downloads.slack-edge.com/desktop-releases/mac/"
+  url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg"
   name "Slack"
   desc "Team communication and collaboration software"
   homepage "https://slack.com/beta/osx"
