@@ -4,8 +4,7 @@ cask "mstystudio" do
   version "2.9.8"
   sha256 :no_check
 
-  url "https://next-assets.msty.studio/app/latest/mac/MstyStudio_#{arch}.dmg",
-      verified: "msty.studio/"
+  url "https://next-assets.msty.studio/app/latest/mac/MstyStudio_#{arch}.dmg"
   name "Msty Studio"
   desc "AI platform with local and online models"
   homepage "https://msty.ai/"
