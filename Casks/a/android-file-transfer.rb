@@ -2,8 +2,7 @@ cask "android-file-transfer" do
   version "5071136"
   sha256 "b9249399a351e8146358ff1ddb546c68a63134b780be795ae64e0a4c2258bc61"
 
-  url "https://dl.google.com/dl/androidjumper/mtp/#{version}/androidfiletransfer.dmg",
-      verified: "google.com/dl/androidjumper/"
+  url "https://dl.google.com/dl/androidjumper/mtp/#{version}/androidfiletransfer.dmg"
   name "Android File Transfer"
   desc "Transfer files from and to an Android smartphone"
   homepage "https://www.android.com/filetransfer/"
