@@ -5,8 +5,7 @@ cask "ungoogled-chromium" do
   sha256 arm:   "fa2a93935151ec49d8b31b1cf8e5723684199038957467f26205e8202c5a0c13",
          intel: "c3fdac7855aeb58cf951916e6934eb6c1eb08821b0fb74dba40640a32a5113ec"
 
-  url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}_#{arch}-macos.dmg",
-      verified: "github.com/ungoogled-software/ungoogled-chromium-macos/"
+  url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}_#{arch}-macos.dmg"
   name "Ungoogled Chromium"
   desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/"
