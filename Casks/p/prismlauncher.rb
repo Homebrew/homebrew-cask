@@ -3,8 +3,7 @@ cask "prismlauncher" do
     version "9.4"
     sha256 "5cc0148e427d28c632978a9e83e2da3fc02f5072990d9e7732dff3fdb1912ae4"
 
-    url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip",
-        verified: "github.com/PrismLauncher/PrismLauncher/"
+    url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip"
 
     livecheck do
       skip "Legacy version"
@@ -14,8 +13,7 @@ cask "prismlauncher" do
     version "11.0.3"
     sha256 "b8e06ef55ec78fceddfa9f4270b3d4d93f2606b83f70ad6a2c6dde90f2b65408"
 
-    url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip",
-        verified: "github.com/PrismLauncher/PrismLauncher/"
+    url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.zip"
 
     livecheck do
       url "https://prismlauncher.org/feed/appcast.xml"
