@@ -2,8 +2,7 @@ cask "typewhisper" do
   version "1.6.0"
   sha256 "10ef14b5db7dba0cf93072553052ee9725f65551ec9acb67de4a26d6a9f48e87"
 
-  url "https://github.com/TypeWhisper/typewhisper-mac/releases/download/v#{version}/TypeWhisper-v#{version}.dmg",
-      verified: "github.com/TypeWhisper/typewhisper-mac/"
+  url "https://github.com/TypeWhisper/typewhisper-mac/releases/download/v#{version}/TypeWhisper-v#{version}.dmg"
   name "TypeWhisper"
   desc "Speech-to-text and AI text processing"
   homepage "https://www.typewhisper.com/"
