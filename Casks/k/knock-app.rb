@@ -2,8 +2,7 @@ cask "knock-app" do
   version "2.2.1"
   sha256 :no_check
 
-  url "https://knock-updates.s3.amazonaws.com/Knock.zip",
-      verified: "knock-updates.s3.amazonaws.com/"
+  url "https://knock-updates.s3.amazonaws.com/Knock.zip"
   name "Knock"
   desc "Unlock with AppleWatch"
   homepage "http://www.knocktounlock.com/"
