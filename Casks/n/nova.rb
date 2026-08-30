@@ -3,7 +3,6 @@ cask "nova" do
   sha256 "80d090495a4b43b78e8558ddc161fd30adafdac287b7a8cafdd9c7fd9cc9940f"
 
   url "https://panic.com/download/nova/Nova%20#{version}.zip",
-      verified:   "panic.com/download/nova/",
       user_agent: :browser
   name "Panic Nova"
   desc "Native code editor"
