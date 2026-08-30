@@ -10,8 +10,7 @@ cask "cap" do
     sha256 "a1bdb4a780e1dee7d313ca13cebec2a5fa8db7102e3cbeb449eacf6471d40507"
   end
 
-  url "https://cdn.crabnebula.app/asset/#{version.csv.second}",
-      verified: "crabnebula.app/asset/"
+  url "https://cdn.crabnebula.app/asset/#{version.csv.second}"
   name "Cap"
   desc "Screen recording software"
   homepage "https://cap.so/"
