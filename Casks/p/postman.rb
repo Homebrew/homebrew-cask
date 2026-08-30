@@ -5,8 +5,7 @@ cask "postman" do
   sha256 arm:   "42d2e3bdf50a3286904f87dd7fa44d353306e8de88eae6d990b0def620071b34",
          intel: "62c58ca687e73c032046dab87de32d393e7f63902a5db47f3643bc8b37707405"
 
-  url "https://dl.pstmn.io/download/version/#{version}/#{arch}",
-      verified: "dl.pstmn.io/download/version/"
+  url "https://dl.pstmn.io/download/version/#{version}/#{arch}"
   name "Postman"
   desc "Collaboration platform for API development"
   homepage "https://www.postman.com/"
