@@ -3,8 +3,7 @@ cask "flame" do
   sha256 "cc09216769022fc4acb20eaddd37898ace0d3a9ca8d9f53fbc06cdbfd45868e0"
 
   # Tag version format is 1.2.3(45) but zip file uses 1.2.3.45
-  url "https://github.com/tominsam/flametouch/releases/download/#{version.csv.first}(#{version.csv.second})/Flame.#{version.csv.first}.#{version.csv.second}.zip",
-      verified: "github.com/tominsam/flametouch/"
+  url "https://github.com/tominsam/flametouch/releases/download/#{version.csv.first}(#{version.csv.second})/Flame.#{version.csv.first}.#{version.csv.second}.zip"
   name "Flame"
   desc "Rendezvous service browser for iPhone / iPod touch"
   homepage "https://movieos.org/code/flame/"
