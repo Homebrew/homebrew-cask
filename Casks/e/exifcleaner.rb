@@ -5,8 +5,7 @@ cask "exifcleaner" do
   sha256 arm:   "10b2a070ac0fb399f4bb1468d341e0cc0984aa627cd2f118ed370e7fe748a258",
          intel: "29f052d00c46c6fd2b26d76f8b9853f625d2ecd380c8a32c21c5f711489f7ba4"
 
-  url "https://github.com/szTheory/exifcleaner/releases/download/v#{version}/ExifCleaner-#{version}#{arch}.dmg",
-      verified: "github.com/szTheory/exifcleaner/"
+  url "https://github.com/szTheory/exifcleaner/releases/download/v#{version}/ExifCleaner-#{version}#{arch}.dmg"
   name "ExifCleaner"
   desc "Metadata cleaner"
   homepage "https://exifcleaner.com/"
