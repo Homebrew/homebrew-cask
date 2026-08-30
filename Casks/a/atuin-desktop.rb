@@ -19,8 +19,7 @@ cask "atuin-desktop" do
     end
   end
 
-  url "https://github.com/atuinsh/desktop/releases/download/v#{version}/Atuin_#{version}_#{arch}.dmg",
-      verified: "github.com/atuinsh/desktop/"
+  url "https://github.com/atuinsh/desktop/releases/download/v#{version}/Atuin_#{version}_#{arch}.dmg"
   name "Atuin Desktop"
   desc "Runbook editor for terminal workflows"
   homepage "https://atuin.sh/"
