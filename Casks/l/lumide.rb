@@ -2,8 +2,7 @@ cask "lumide" do
   version "0.20.0"
   sha256 "44b1e435203140723355b9758614c2e7d3eb3f2bc3df3167fafc3b3117349402"
 
-  url "https://github.com/SoFluffyOS/lumide/releases/download/#{version}/Lumide-macOS-#{version}.dmg",
-      verified: "github.com/SoFluffyOS/lumide/"
+  url "https://github.com/SoFluffyOS/lumide/releases/download/#{version}/Lumide-macOS-#{version}.dmg"
   name "Lumide"
   desc "Agent-native code editor"
   homepage "https://lumide.dev/"
