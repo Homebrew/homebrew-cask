@@ -24,8 +24,7 @@ cask "db-browser-for-sqlcipher@nightly" do
               target: "DBBrowserForSQLCipherNightly.AppImage"
   end
 
-  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLCipher-#{os}#{version}#{url_end}",
-      verified: "github.com/sqlitebrowser/sqlitebrowser/"
+  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLCipher-#{os}#{version}#{url_end}"
   name "DB Browser for SQLCipher Nightly"
   desc "Database browser for SQLCipher"
   homepage "https://sqlitebrowser.org/"
