@@ -2,8 +2,7 @@ cask "accordance@13" do
   version "13.3.5"
   sha256 "c91674da93b87915d7c27ed45792518dd1f07bc9fd5aa9c98fae2b25d38ae8b3"
 
-  url "https://d366ra67x2bs56.cloudfront.net/mac/Acc_#{version}.zip",
-      verified: "d366ra67x2bs56.cloudfront.net/"
+  url "https://d366ra67x2bs56.cloudfront.net/mac/Acc_#{version}.zip"
   name "Accordance Bible Software"
   desc "Bible study software"
   homepage "https://www.accordancebible.com/"
