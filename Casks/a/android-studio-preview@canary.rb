@@ -5,8 +5,7 @@ cask "android-studio-preview@canary" do
   sha256 arm:   "412e982f90a41f291d9ecc9213e37220b8d900052d01f1a9e67ea494eb706d25",
          intel: "0c5781ffff847a0532f3770f6bd77680fd62abd96f9fc2ca4801d033beb0c443"
 
-  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
-      verified: "edgedl.me.gvt1.com/android/studio/install/"
+  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
   name "Android Studio Preview (Canary)"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/preview/"
