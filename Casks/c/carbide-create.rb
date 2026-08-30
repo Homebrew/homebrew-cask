@@ -23,8 +23,7 @@ cask "carbide-create" do
     depends_on macos: :big_sur
   end
 
-  url "https://carbide-downloads.website-us-east-1.linodeobjects.com/cc/stable/#{version}/CarbideCreate-#{version}.dmg",
-      verified: "carbide-downloads.website-us-east-1.linodeobjects.com/"
+  url "https://carbide-downloads.website-us-east-1.linodeobjects.com/cc/stable/#{version}/CarbideCreate-#{version}.dmg"
   name "Carbide Create"
   desc "CAD/CAM software for CNC routers"
   homepage "https://carbide3d.com/carbidecreate/"
