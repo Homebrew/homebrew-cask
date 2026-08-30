@@ -6,8 +6,7 @@ cask "dropbox" do
   sha256 arm:   "e2b52305d2f93d5b656f0d861bb37e0601fd16cb5fad2aa071c96b582370e0ab",
          intel: "fb46c1076e73b851d552746fd78fcbb83bd407fff77c8f331137d4a27d2b7b03"
 
-  url "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}#{arch}.dmg",
-      verified: "dropboxstatic.com/dbx-releng/client/"
+  url "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}#{arch}.dmg"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
