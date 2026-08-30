@@ -2,8 +2,7 @@ cask "openusage" do
   version "0.7.10"
   sha256 "3d789eaa794cf6c7408fc70e3544dc990a42c60a059d1bba8d77563917f53d96"
 
-  url "https://github.com/robinebers/openusage/releases/download/v#{version}/OpenUsage-#{version}.dmg",
-      verified: "github.com/robinebers/openusage/"
+  url "https://github.com/robinebers/openusage/releases/download/v#{version}/OpenUsage-#{version}.dmg"
   name "OpenUsage"
   desc "AI usage tracker for Cursor, Claude Code, Codex, Copilot and more"
   homepage "https://www.openusage.ai/"
