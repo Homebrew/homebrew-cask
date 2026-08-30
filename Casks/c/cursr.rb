@@ -23,8 +23,7 @@ cask "cursr" do
     app_image "Cursr.AppImage"
   end
 
-  url "https://github.com/bitgapp/Cursr/releases/download/v#{version}/Cursr#{url_end}",
-      verified: "github.com/bitgapp/Cursr/"
+  url "https://github.com/bitgapp/Cursr/releases/download/v#{version}/Cursr#{url_end}"
   name "Cursr"
   desc "Customise mouse movements between multiple displays"
   homepage "https://cursr.app/"
