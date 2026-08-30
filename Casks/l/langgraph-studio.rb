@@ -9,6 +9,7 @@ cask "langgraph-studio" do
   homepage "https://studio.langchain.com/"
 
   deprecate! date: "2025-08-30", because: :discontinued
+  disable! date: "2026-08-30", because: :discontinued
 
   depends_on :macos
 
