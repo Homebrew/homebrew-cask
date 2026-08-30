@@ -24,8 +24,7 @@ cask "feedflow" do
     app_image "FeedFlow-#{version.csv.first}-x86_64.AppImage", target: "FeedFlow.AppImage"
   end
 
-  url "https://github.com/prof18/feed-flow/releases/download/#{version.csv.first}-#{version.csv.second}/FeedFlow-#{version.csv.first}#{url_end}",
-      verified: "github.com/prof18/feed-flow/"
+  url "https://github.com/prof18/feed-flow/releases/download/#{version.csv.first}-#{version.csv.second}/FeedFlow-#{version.csv.first}#{url_end}"
   name "FeedFlow"
   desc "RSS reader"
   homepage "https://www.feedflow.dev/"
