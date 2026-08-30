@@ -5,8 +5,7 @@ cask "stashpad" do
   sha256 arm:   "38631d69db2316ca513a4f7331fa3e15248720ea252e596a81e91842791ddd8b",
          intel: "2139046350c14907030700c548b2e6899553baba20fa4cb8c995c717eeb6c068"
 
-  url "https://github.com/stashpad/sp-desktop-release/releases/download/v#{version}/Stashpad-#{version}#{arch}.dmg",
-      verified: "github.com/stashpad/sp-desktop-release/"
+  url "https://github.com/stashpad/sp-desktop-release/releases/download/v#{version}/Stashpad-#{version}#{arch}.dmg"
   name "Stashpad"
   desc "Notes app for collaborative work"
   homepage "https://www.stashpad.com/"
