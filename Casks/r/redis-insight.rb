@@ -5,8 +5,7 @@ cask "redis-insight" do
   sha256 arm:   "af58c218b09b2a3d10ba6f296969fcd792a6544ff0dbd89845804eab86f05ddb",
          intel: "32e68ba139dfbb24665874132e5d0fb9b4a5d626cd296a41d677cd713a0d5c18"
 
-  url "https://s3.amazonaws.com/redisinsight.download/public/releases/#{version}/Redis-Insight-mac-#{arch}.dmg",
-      verified: "s3.amazonaws.com/redisinsight.download/"
+  url "https://s3.amazonaws.com/redisinsight.download/public/releases/#{version}/Redis-Insight-mac-#{arch}.dmg"
   name "Redis Insight"
   desc "GUI for streamlined Redis application development"
   homepage "https://redis.io/insight/"
