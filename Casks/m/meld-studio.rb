@@ -2,8 +2,7 @@ cask "meld-studio" do
   version "0.10.5.3"
   sha256 :no_check
 
-  url "https://packages.streamwithmeld.com/MeldStudioInstaller.dmg",
-      verified: "packages.streamwithmeld.com/"
+  url "https://packages.streamwithmeld.com/MeldStudioInstaller.dmg"
   name "Meld Studio"
   desc "Live streaming and recording software"
   homepage "https://www.meldstudio.co/"
