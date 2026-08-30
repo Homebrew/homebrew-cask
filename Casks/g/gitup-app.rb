@@ -2,8 +2,7 @@ cask "gitup-app" do
   version "1.5.0"
   sha256 "5e1d915ed533334e1691f9c01eb3cb9d2e5f459fb7aa2631b71120ff59ad585b"
 
-  url "https://github.com/git-up/GitUp/releases/download/v#{version}/GitUp.zip",
-      verified: "github.com/git-up/GitUp/"
+  url "https://github.com/git-up/GitUp/releases/download/v#{version}/GitUp.zip"
   name "GitUp"
   desc "Git interface focused on visual interaction"
   homepage "https://gitup.co/"
