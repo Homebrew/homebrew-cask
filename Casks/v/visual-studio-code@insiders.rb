@@ -5,8 +5,7 @@ cask "visual-studio-code@insiders" do
   sha256 arm:   "ba3bc6c1b5c24b51157719fcf2f3cc9060c709f7ddfb4cf84c2166727f6def8f",
          intel: "1ca3bd718007214636d94ec5556947c07d228df9c0714967a8238566f0625a68"
 
-  url "https://vscode.download.prss.microsoft.com/dbazure/download/insider/#{version.csv.third}/VSCode-darwin#{arch}.zip",
-      verified: "vscode.download.prss.microsoft.com/"
+  url "https://vscode.download.prss.microsoft.com/dbazure/download/insider/#{version.csv.third}/VSCode-darwin#{arch}.zip"
   name "Microsoft Visual Studio Code Insiders"
   name "VS Code Insiders"
   desc "Open-source code editor"
