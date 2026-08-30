@@ -2,8 +2,7 @@ cask "softmaker-freeoffice" do
   version "2024,1234"
   sha256 :no_check # required as upstream package is updated in place
 
-  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.csv.first}.pkg",
-      verified: "softmaker.net/"
+  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.csv.first}.pkg"
   name "SoftMaker FreeOffice"
   desc "Office suite"
   homepage "https://www.freeoffice.com/"
