@@ -11,8 +11,7 @@ cask "ulaa" do
     version "2.47.1"
   end
 
-  url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg",
-      verified: "downloads.zohocdn.com/ulaa-browser/"
+  url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg"
   name "Ulaa Browser"
   desc "Privacy-centric browser with advanced tracking protection"
   homepage "https://ulaa.com/"
