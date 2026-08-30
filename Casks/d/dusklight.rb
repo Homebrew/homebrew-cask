@@ -20,8 +20,7 @@ cask "dusklight" do
     app_image "Dusklight-v#{version}-linux-#{arch}.AppImage", target: "Dusklight.AppImage"
   end
 
-  url "https://github.com/TwilitRealm/dusklight/releases/download/v#{version}/Dusklight-v#{version}-#{os}-#{arch}.#{url_end}",
-      verified: "github.com/TwilitRealm/dusklight/"
+  url "https://github.com/TwilitRealm/dusklight/releases/download/v#{version}/Dusklight-v#{version}-#{os}-#{arch}.#{url_end}"
   name "Dusklight"
   desc "Reverse-engineered reimplementation of Twilight Princess"
   homepage "https://twilitrealm.dev/"
