@@ -2,8 +2,7 @@ cask "rotato" do
   version "154"
   sha256 "f8a9b0c1cae6398b5b0973bcabe1ce8e840539b29df987adb92443c67662a3bc"
 
-  url "https://download.rota.to/Rotato-#{version}.dmg",
-      verified: "download.rota.to/"
+  url "https://download.rota.to/Rotato-#{version}.dmg"
   name "Rotato"
   desc "Mockup generator & animator 3D"
   homepage "https://rotato.app/"
