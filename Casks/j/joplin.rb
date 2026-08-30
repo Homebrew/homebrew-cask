@@ -5,8 +5,7 @@ cask "joplin" do
   sha256 arm:   "0aa77a277bc2040aae73ce1f77c6eca5e52d6d21f8e83cfbc206916b600bfb4e",
          intel: "6a2fef367384e5ee54b89471e68a860973de6f01444d20da3b16f3dccdf63f1a"
 
-  url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}#{arch}.DMG",
-      verified: "github.com/laurent22/joplin/"
+  url "https://github.com/laurent22/joplin/releases/download/v#{version}/Joplin-#{version}#{arch}.DMG"
   name "Joplin"
   desc "Note taking and to-do application with synchronisation capabilities"
   homepage "https://joplinapp.org/"
