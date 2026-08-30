@@ -27,8 +27,7 @@ cask "donut@nightly" do
     app_image "Donut_nightly_#{arch}.AppImage", target: "Donut.AppImage"
   end
 
-  url "https://github.com/zhom/donutbrowser/releases/download/nightly/Donut_nightly_#{arch}.#{url_end}",
-      verified: "github.com/zhom/donutbrowser/"
+  url "https://github.com/zhom/donutbrowser/releases/download/nightly/Donut_nightly_#{arch}.#{url_end}"
   name "Donut Browser Nightly"
   desc "Anti-detect web browser"
   homepage "https://donutbrowser.com/"
