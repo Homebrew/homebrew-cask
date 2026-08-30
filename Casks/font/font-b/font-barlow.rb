@@ -2,8 +2,7 @@ cask "font-barlow" do
   version "1.422"
   sha256 "f4bc7fd2802844deead4d19634b9c4d11710624a48fcfd7196821e353159c048"
 
-  url "https://github.com/jpt/barlow/archive/refs/tags/#{version}.tar.gz",
-      verified: "github.com/jpt/barlow/"
+  url "https://github.com/jpt/barlow/archive/refs/tags/#{version}.tar.gz"
   name "Barlow"
   homepage "https://tribby.com/fonts/barlow"
 
