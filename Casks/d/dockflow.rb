@@ -22,6 +22,7 @@ cask "dockflow" do
 
   zap trash: [
     "~/Library/Application Support/DockFlow",
+    "~/Library/Caches/com.appit.DockFlow",
     "~/Library/Group Containers/com.appit.DockFlowGroup",
     "~/Library/Preferences/com.appit.DockFlow.plist",
     "~/Library/Preferences/com.appit.DockFlowHelper.plist",
