@@ -70,8 +70,7 @@ cask "firefox@developer-edition" do
     "zh-CN"
   end
 
-  url "https://download-installer.cdn.mozilla.net/pub/devedition/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg",
-      verified: "download-installer.cdn.mozilla.net/pub/devedition/releases/"
+  url "https://download-installer.cdn.mozilla.net/pub/devedition/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
   name "Mozilla Firefox Developer Edition"
   desc "Web browser"
   homepage "https://www.mozilla.org/firefox/developer/"
