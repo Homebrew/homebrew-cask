@@ -2,8 +2,7 @@ cask "quip" do
   version "9.59.0"
   sha256 "1091d886dae9bcf7cd7c93e68fc4824d03e46f68da01c6620d79d51cda0ce6ae"
 
-  url "https://quip-clients.com/macosx_#{version}.dmg",
-      verified: "quip-clients.com/"
+  url "https://quip-clients.com/macosx_#{version}.dmg"
   name "Quip"
   desc "Tool for teams to create living documents"
   homepage "https://quip.com/"
