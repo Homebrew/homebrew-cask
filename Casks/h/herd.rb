@@ -2,8 +2,7 @@ cask "herd" do
   version "1.30.0"
   sha256 "b474ebf3ca462cc01bb636abceb4bb959149850ba4518b98c4f181d5faa48a68"
 
-  url "https://download.herdphp.com/app_versions/Herd_#{version}.dmg",
-      verified: "download.herdphp.com/app_versions/"
+  url "https://download.herdphp.com/app_versions/Herd_#{version}.dmg"
   name "Laravel Herd"
   desc "Laravel and PHP development environment manager"
   homepage "https://herd.laravel.com/"
