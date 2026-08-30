@@ -4,8 +4,7 @@ cask "wpsoffice" do
   version "12.1.26032,0024.21300060"
   sha256 :no_check
 
-  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/installer/i18n/WPSOffice_#{arch}_#{version.csv.second}.dmg",
-      verified: "wdl1.pcfg.cache.wpscdn.com/"
+  url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/installer/i18n/WPSOffice_#{arch}_#{version.csv.second}.dmg"
   name "WPS Office"
   desc "All-in-one office suite"
   homepage "https://www.wps.com/office/mac/"
