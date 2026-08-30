@@ -5,8 +5,7 @@ cask "microsoft-openjdk@11" do
   sha256 arm:   "79625a2a38d5bf2817a2b91e8ecd1723d88f5ed3c3fa3e4ecc92d84b2125a641",
          intel: "159a50e15d4921400bcf619d25fcfe7a2138c99199c9fcf34a587c724c9375cf"
 
-  url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg",
-      verified: "aka.ms/download-jdk/"
+  url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg"
   name "Microsoft Build of OpenJDK"
   desc "OpenJDK distribution from Microsoft"
   homepage "https://microsoft.com/openjdk"
