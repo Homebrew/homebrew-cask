@@ -40,6 +40,8 @@ cask "wljs-notebook" do
 
   app "WLJS Notebook.app"
 
+  uninstall quit: "wljs-notebook"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/wljs-notebook.sfl*",
     "~/Library/Application Support/wljs-notebook",
