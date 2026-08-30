@@ -2,8 +2,7 @@ cask "berrycast" do
   version "0.39.4"
   sha256 "64d1c4c8ac4efb4e10c367a02efd5b38b97ee61c70089014312eb4210fa0ab32"
 
-  url "https://media.berrycast.app/desktop-installer/Berrycast-#{version}-latest.dmg",
-      verified: "media.berrycast.app/"
+  url "https://media.berrycast.app/desktop-installer/Berrycast-#{version}-latest.dmg"
   name "Berrycast"
   desc "Screen recorder"
   homepage "https://www.berrycast.com/"
