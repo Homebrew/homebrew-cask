@@ -2,8 +2,7 @@ cask "winclone" do
   version "10.5"
   sha256 "cf19db5220339eb157aacf4cf1e179de783f9570fcb53b074861905da3ae6a40"
 
-  url "https://twocanoes-software-updates.s3.amazonaws.com/Winclone#{version.major}.dmg",
-      verified: "twocanoes-software-updates.s3.amazonaws.com/"
+  url "https://twocanoes-software-updates.s3.amazonaws.com/Winclone#{version.major}.dmg"
   name "Winclone"
   desc "Boot Camp cloning and backup solution"
   homepage "https://twocanoes.com/products/mac/winclone"
