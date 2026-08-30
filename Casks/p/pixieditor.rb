@@ -2,8 +2,7 @@ cask "pixieditor" do
   version "2.1.2.2"
   sha256 "8f85445b2244d64593a81655d6ca480fda45eebb8f72649f817ca7b33b11052b"
 
-  url "https://github.com/PixiEditor/PixiEditor/releases/download/#{version}/PixiEditor-#{version}-universal-macos.dmg",
-      verified: "github.com/PixiEditor/PixiEditor/"
+  url "https://github.com/PixiEditor/PixiEditor/releases/download/#{version}/PixiEditor-#{version}-universal-macos.dmg"
   name "PixiEditor"
   desc "Open Source Universal 2D Graphics Editor"
   homepage "https://pixieditor.net/"
