@@ -2,8 +2,7 @@ cask "loginputmac" do
   version "3.6.9,17592"
   sha256 "c9df7f563c0940dce94d910ff135d21afb6b8c4bd173b73d4e7095c72df6156b"
 
-  url "https://loginput-mac2.totest.top/LogInputMac#{version.csv.first.major}.app#{version.csv.second}.zip",
-      verified: "loginput-mac2.totest.top/"
+  url "https://loginput-mac2.totest.top/LogInputMac#{version.csv.first.major}.app#{version.csv.second}.zip"
   name "LoginputMac"
   desc "Chinese input method"
   homepage "https://im.logcg.com/loginputmac#{version.major}"
