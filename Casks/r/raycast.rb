@@ -42,8 +42,7 @@ cask "raycast" do
       version "2.1.2.0"
       sha256 "968744a36c5dc71572690f9c2f39265784920dccb25969023b99863e4eb175cc"
 
-      url "https://x.raycast-releases.com/download?platform=macos&architecture=arm64&version=#{version}",
-          verified: "x.raycast-releases.com/"
+      url "https://x.raycast-releases.com/download?platform=macos&architecture=arm64&version=#{version}"
 
       livecheck do
         url "https://x.raycast-releases.com/releases/latest?platform=macos&architecture=arm64"
