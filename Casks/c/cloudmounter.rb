@@ -2,8 +2,7 @@ cask "cloudmounter" do
   version "4.18"
   sha256 :no_check
 
-  url "https://cdn.electronic.us/products/cloudmounter/mac/download/cloudmounter.dmg",
-      verified: "cdn.electronic.us/products/cloudmounter/mac/download/"
+  url "https://cdn.electronic.us/products/cloudmounter/mac/download/cloudmounter.dmg"
   name "Eltima CloudMounter"
   desc "Mounts cloud storages as local discs"
   homepage "https://mac.eltima.com/mount-cloud-drive.html"
