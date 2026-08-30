@@ -22,8 +22,7 @@ cask "bananas" do
     app_image "bananas_#{arch}.AppImage", target: "Bananas.AppImage"
   end
 
-  url "https://github.com/mistweaverco/bananas/releases/download/v#{version}/bananas_#{url_end}",
-      verified: "github.com/mistweaverco/bananas/"
+  url "https://github.com/mistweaverco/bananas/releases/download/v#{version}/bananas_#{url_end}"
   name "Bananas Screen Sharing"
   desc "Cross-platform screen sharing tool"
   homepage "https://getbananas.net/"
