@@ -45,8 +45,7 @@ cask "openzfs" do
            intel: "24c2867bcaaac770de398ecbfbc7a023cf2189b32264f77568e0e4599daba726"
   end
 
-  url "https://github.com/openzfsonosx/openzfs-fork/releases/download/zfs-macOS-#{version}/OpenZFSonOsX-#{version}-#{arch}.pkg",
-      verified: "github.com/openzfsonosx/openzfs-fork/"
+  url "https://github.com/openzfsonosx/openzfs-fork/releases/download/zfs-macOS-#{version}/OpenZFSonOsX-#{version}-#{arch}.pkg"
   name "OpenZFS on OS X"
   desc "ZFS driver and utilities"
   homepage "https://openzfsonosx.org/"
