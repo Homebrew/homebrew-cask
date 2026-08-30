@@ -5,8 +5,7 @@ cask "blisk" do
   sha256 arm:   "0173afde0d441dc93bf4c2d9ea151981300d342c4d530790c6507a0efaae5392",
          intel: "c14c9397999ac2058b216168bbb5613f7aa5ef75be71c3658a0fe344bcf07c22"
 
-  url "https://bliskcloudstorage.blob.core.windows.net/mac#{arch}-installers/BliskInstaller_#{version}.dmg",
-      verified: "bliskcloudstorage.blob.core.windows.net/"
+  url "https://bliskcloudstorage.blob.core.windows.net/mac#{arch}-installers/BliskInstaller_#{version}.dmg"
   name "Blisk Browser"
   desc "Developer-oriented browser"
   homepage "https://blisk.io/"
