@@ -2,8 +2,7 @@ cask "logitech-options" do
   version "10.26.49"
   sha256 :no_check
 
-  url "https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.zip",
-      verified: "download01.logi.com/web/ftp/pub/techsupport/options/"
+  url "https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.zip"
   name "Logitech Options"
   desc "Software for Logitech devices"
   homepage "https://support.logitech.com/software/options"
