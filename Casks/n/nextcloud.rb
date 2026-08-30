@@ -3,8 +3,7 @@ cask "nextcloud" do
     version "3.13.4"
     sha256 "8c31281f2acecc2a4e384e01199767569a8f3aa2beedc8ae93513ba0c87062c6"
 
-    url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-legacy-#{version}.pkg",
-        verified: "github.com/nextcloud-releases/desktop/"
+    url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-legacy-#{version}.pkg"
 
     livecheck do
       url "https://nextcloud.com/install/#desktop-files"
@@ -15,8 +14,7 @@ cask "nextcloud" do
     version "34.0.3"
     sha256 "552dd713ffd94ff43d802c41808900ff4c6101d8f6231422985c1bd184fb605d"
 
-    url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
-        verified: "github.com/nextcloud-releases/desktop/"
+    url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg"
 
     livecheck do
       url "https://nextcloud.com/install/#desktop-files"
