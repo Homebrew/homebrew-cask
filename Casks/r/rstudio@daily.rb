@@ -2,8 +2,7 @@ cask "rstudio@daily" do
   version "2026.09.0-daily-146"
   sha256 "e0279d48ac348b16ff95fcd52089c64ee5d982e074f801e34ca0a1539a4e2da4"
 
-  url "https://rstudio-ide-build.s3.amazonaws.com/electron/macos/RStudio-#{version}.dmg",
-      verified: "rstudio-ide-build.s3.amazonaws.com/electron/macos/"
+  url "https://rstudio-ide-build.s3.amazonaws.com/electron/macos/RStudio-#{version}.dmg"
   name "RStudio Daily"
   desc "Data science software focusing on R and Python"
   homepage "https://dailies.rstudio.com/"
