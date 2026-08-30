@@ -5,8 +5,7 @@ cask "znote" do
   sha256 arm:   "af3bbd4e1b1d58baf9ac73455e97f3814001f0a3025f6298615be59ec574459c",
          intel: "be7fa10810d85d64c041923c113e85331392e55f56392295755c86c8ac209a95"
 
-  url "https://github.com/alagrede/znote-app/releases/download/v#{version}/znote-#{version}#{arch}.dmg",
-      verified: "github.com/alagrede/znote-app/"
+  url "https://github.com/alagrede/znote-app/releases/download/v#{version}/znote-#{version}#{arch}.dmg"
   name "Znote"
   desc "Notes-taking app"
   homepage "https://znote.io/"
