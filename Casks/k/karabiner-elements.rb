@@ -56,8 +56,7 @@ cask "karabiner-elements" do
     # The system extension 'org.pqrs.Karabiner-DriverKit-VirtualHIDDevice*' should not be uninstalled by Cask
   end
 
-  url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
-      verified: "github.com/pqrs-org/Karabiner-Elements/"
+  url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg"
   name "Karabiner Elements"
   desc "Keyboard customiser"
   homepage "https://karabiner-elements.pqrs.org/"
