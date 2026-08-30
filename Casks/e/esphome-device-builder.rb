@@ -26,8 +26,7 @@ cask "esphome-device-builder" do
     app_image "ESPHome.Device.Builder_#{version}_#{arch}.AppImage", target: "ESPHome Device Builder.AppImage"
   end
 
-  url "https://github.com/esphome/esphome-desktop/releases/download/v#{version}/ESPHome.Device.Builder_#{version}_#{arch}.#{os}",
-      verified: "github.com/esphome/esphome-desktop/"
+  url "https://github.com/esphome/esphome-desktop/releases/download/v#{version}/ESPHome.Device.Builder_#{version}_#{arch}.#{os}"
   name "ESPHome Device Builder"
   desc "Desktop app to create, edit and install your ESPHome device configurations"
   homepage "https://desktop.esphome.io/"
