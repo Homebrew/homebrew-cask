@@ -2,8 +2,7 @@ cask "robofont" do
   version "4.6,2602231550"
   sha256 "d4f84518091be37aa9e4d7695a4154200bf28a9ca98825eb8ad49cf19e1a44a1"
 
-  url "https://static.typemytype.com/robofont/versionHistory/RoboFont_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "static.typemytype.com/robofont/"
+  url "https://static.typemytype.com/robofont/versionHistory/RoboFont_#{version.csv.first}_#{version.csv.second}.dmg"
   name "RoboFont"
   desc "Font editor"
   homepage "https://robofont.com/"
