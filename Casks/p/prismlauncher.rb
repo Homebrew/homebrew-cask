@@ -20,22 +20,46 @@ cask "prismlauncher" do
       strategy :sparkle
     end
   end
+  on_macos do
+    depends_on macos: :big_sur
+
+    app "Prism Launcher.app"
+    binary "#{appdir}/Prism Launcher.app/Contents/MacOS/prismlauncher"
+
+    zap trash: [
+      "~/Library/Application Support/PrismLauncher/metacache",
+      "~/Library/Application Support/PrismLauncher/PrismLauncher-*.log",
+      "~/Library/Application Support/PrismLauncher/prismlauncher.cfg",
+      "~/Library/Preferences/org.prismlauncher.PrismLauncher.plist",
+      "~/Library/Saved Application State/org.prismlauncher.PrismLauncher.savedState",
+    ]
+  end
+  on_linux do
+    arch arm: "aarch64", intel: "x86_64"
+
+    version "11.0.3"
+    sha256 arm64_linux:  "e4aa885be2cc1184bf3266c51462bc776343482202b46f0fd5ce32dcdbb4f002",
+           x86_64_linux: "0823a0e5f53694f0ff65a9523b6f221e6f10565b904941fa9522d89e8e7c69d1"
+
+    url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-Linux-#{arch}.AppImage"
+
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
+
+    app_image "PrismLauncher-Linux-#{arch}.AppImage", target: "Prism Launcher.AppImage"
+
+    zap trash: [
+      "~/.local/share/PrismLauncher/metacache",
+      "~/.local/share/PrismLauncher/PrismLauncher-*.log",
+      "~/.local/share/PrismLauncher/prismlauncher.cfg",
+    ]
+  end
 
   name "Prism Launcher"
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
 
   auto_updates true
-  depends_on :macos
-
-  app "Prism Launcher.app"
-  binary "#{appdir}/Prism Launcher.app/Contents/MacOS/prismlauncher"
-
-  zap trash: [
-    "~/Library/Application Support/PrismLauncher/metacache",
-    "~/Library/Application Support/PrismLauncher/PrismLauncher-*.log",
-    "~/Library/Application Support/PrismLauncher/prismlauncher.cfg",
-    "~/Library/Preferences/org.prismlauncher.PrismLauncher.plist",
-    "~/Library/Saved Application State/org.prismlauncher.PrismLauncher.savedState",
-  ]
 end
