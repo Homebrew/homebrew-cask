@@ -2,8 +2,7 @@ cask "vk-messenger" do
   version "6.0.57,41"
   sha256 "f2ea309b7d0e9941467c0e2715d56f463d1bcffeb548bc3d94556da861c50a2f"
 
-  url "https://upload.object2.vk-apps.com/vk-me-desktop-dev-5837a06d-5f28-484a-ac22-045903cb1b1a/#{version.csv.first}/vk-messenger-#{version.csv.first}-build.#{version.csv.second}-universal.dmg",
-      verified: "upload.object2.vk-apps.com/"
+  url "https://upload.object2.vk-apps.com/vk-me-desktop-dev-5837a06d-5f28-484a-ac22-045903cb1b1a/#{version.csv.first}/vk-messenger-#{version.csv.first}-build.#{version.csv.second}-universal.dmg"
   name "VK Messenger"
   desc "Messenger app"
   homepage "https://vk.me/app"
