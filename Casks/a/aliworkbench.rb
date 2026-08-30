@@ -2,8 +2,7 @@ cask "aliworkbench" do
   version "9.95.01QNM"
   sha256 "10bc474553bd97fde78598d331327617f3ded8c81c13db32f4ef50973d42390f"
 
-  url "https://download.alicdn.com/wangwang/AliworkbenchQN_(#{version}).dmg",
-      verified: "download.alicdn.com/wangwang/"
+  url "https://download.alicdn.com/wangwang/AliworkbenchQN_(#{version}).dmg"
   name "AliWorkBench"
   name "Qian Niu"
   name "千牛"
