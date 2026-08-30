@@ -2,8 +2,7 @@ cask "openemu" do
   version "2.4.1"
   sha256 "521ca1305c012d38f6f907f50399fefbf4e45a9bb8d9d4063157ffca78b217d4"
 
-  url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip",
-      verified: "github.com/OpenEmu/OpenEmu/"
+  url "https://github.com/OpenEmu/OpenEmu/releases/download/v#{version}/OpenEmu_#{version}.zip"
   name "OpenEmu"
   desc "Retro video game emulation"
   homepage "https://openemu.org/"
