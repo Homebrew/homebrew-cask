@@ -1,6 +1,6 @@
 cask "launchcontrol" do
-  version "2.10.5"
-  sha256 "275ef2032c20abb1e7a60c0101076aeef9c9471c29996b8b64131c064935dba8"
+  version "2.11"
+  sha256 "d46eb1548e78e9f811e089bd23f0fffa0a5a8fc7f3ed297658cff53d2bf519e5"
 
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version}.tar.xz"
   name "LaunchControl"
@@ -13,7 +13,7 @@ cask "launchcontrol" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :big_sur
 
   app "LaunchControl.app"
   binary "#{appdir}/LaunchControl.app/Contents/MacOS/fdautil"
