@@ -2,8 +2,7 @@ cask "qq" do
   version "7.0.0_260812_01,9.9.33,126b7ce6"
   sha256 "b195c26df362af58954c898ab1dd984784a2ba6f57a629e6fb9b3ecc3bf9e65c"
 
-  url "https://qqdl.gtimg.cn/qqfile/QQNT/#{version.csv.second}/release/#{version.csv.third}/QQ_#{version.csv.first}.dmg",
-      verified: "qqdl.gtimg.cn/qqfile/QQNT/"
+  url "https://qqdl.gtimg.cn/qqfile/QQNT/#{version.csv.second}/release/#{version.csv.third}/QQ_#{version.csv.first}.dmg"
   name "QQ"
   desc "Instant messaging tool"
   homepage "https://im.qq.com/index/#/macos"
