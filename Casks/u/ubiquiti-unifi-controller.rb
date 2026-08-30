@@ -1,12 +1,12 @@
 cask "ubiquiti-unifi-controller" do
-  version "10.4.57"
-  sha256 "9d6a698ce10643f9fb27c6ca29af346b0791179fba86def41498943162d686ca"
+  version "10.6.101"
+  sha256 "62aae907b989a34392f82818ce339829b441d59d40643e7d3c8c78b8e3d08fbb"
 
   url "https://dl.ubnt.com/unifi/#{version}/UniFi-Network-Server.dmg",
       verified: "dl.ubnt.com/"
   name "Ubiquiti UniFi Network Controller"
   desc "Set up, configure, manage and analyze your UniFi network"
-  homepage "https://unifi-sdn.ui.com/"
+  homepage "https://www.ui.com/"
 
   livecheck do
     url "https://fw-update.ubnt.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~channel~~release&filter=eq~~platform~~macos"
