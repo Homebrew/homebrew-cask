@@ -2,8 +2,7 @@ cask "xliff-editor" do
   version "4.1"
   sha256 :no_check
 
-  url "https://sweetpproductions.com/products/xliffeditor/XliffEditor.dmg",
-      verified: "sweetpproductions.com/products/xliffeditor/"
+  url "https://sweetpproductions.com/products/xliffeditor/XliffEditor.dmg"
   name "Xliff Editor"
   desc "Localization file editor"
   homepage "https://xliffedit.com/"
