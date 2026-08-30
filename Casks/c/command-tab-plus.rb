@@ -2,8 +2,7 @@ cask "command-tab-plus" do
   version "2.9.11"
   sha256 :no_check
 
-  url "https://macplus-software.com/downloads/Command-Tab%20Plus%20#{version.major}.zip",
-      verified: "macplus-software.com/downloads/"
+  url "https://macplus-software.com/downloads/Command-Tab%20Plus%20#{version.major}.zip"
   name "Command-Tab Plus"
   desc "Keyboard-centric application and window switcher"
   homepage "https://noteifyapp.com/command-tab-plus/"
