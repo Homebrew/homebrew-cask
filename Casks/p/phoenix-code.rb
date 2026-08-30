@@ -5,8 +5,7 @@ cask "phoenix-code" do
   sha256 arm:   "a1e49fc187df97e0e8e122ff1733439a1809ceda74cf643d70d9338b3475268d",
          intel: "ed2dfcb732f929d41a3dcc7fdcb2a280f110d285338dff1f8dd0a8f81d2d9515"
 
-  url "https://github.com/phcode-dev/phoenix-desktop/releases/download/prod-app-v#{version}/Phoenix.Code_#{version}_#{arch}.dmg",
-      verified: "github.com/phcode-dev/phoenix-desktop/"
+  url "https://github.com/phcode-dev/phoenix-desktop/releases/download/prod-app-v#{version}/Phoenix.Code_#{version}_#{arch}.dmg"
   name "Phoenix Code"
   desc "Code editor"
   homepage "https://phcode.io/"
