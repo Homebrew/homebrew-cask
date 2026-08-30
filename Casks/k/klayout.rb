@@ -27,8 +27,8 @@ cask "klayout" do
     end
   end
   on_sonoma do
-    version "0.30.10"
-    sha256 "6c51fe01c9c4d6ef0b52e7df534403b131ae1e8be330993f04baa007beb3788a"
+    version "0.30.12"
+    sha256 "911bd07c1a9926247c18e59627b20408d05ff04666fb277372130a061a56339d"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sonoma-C32-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
@@ -39,8 +39,8 @@ cask "klayout" do
     end
   end
   on_sequoia do
-    version "0.30.10"
-    sha256 "65bb64339cc9a1b53b0329656182bcd359ca3958efededfe133b71ce93301412"
+    version "0.30.12"
+    sha256 "8c4ec9066844b16170d3781aca0433c194c937ce13806a678bb3c71c20cfd887"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sequoia-C32-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
@@ -52,8 +52,8 @@ cask "klayout" do
   end
   on_tahoe :or_newer do
     on_arm do
-      version "0.30.10"
-      sha256 "903d44aa707a38cfc464d43b3f26b59be6ef27c84b5289b6ecbd155a5b02e827"
+      version "0.30.12"
+      sha256 "1acbaf5f0863f77ef76921fb213696d7c0c1b65284ddf7cf6057b1b1d048f468"
 
       url "https://www.klayout.org/downloads/MacOS/ARM64/arm64ST-klayout-#{version}-macOS-Tahoe-C32-1-qt5MP-RsysPsys.dmg",
           verified: "klayout.org/downloads/MacOS/ARM64/"
@@ -64,8 +64,8 @@ cask "klayout" do
       end
     end
     on_intel do
-      version "0.30.10"
-      sha256 "65bb64339cc9a1b53b0329656182bcd359ca3958efededfe133b71ce93301412"
+      version "0.30.12"
+      sha256 "8c4ec9066844b16170d3781aca0433c194c937ce13806a678bb3c71c20cfd887"
 
       url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sequoia-C32-1-qt5MP-RsysPhb311.dmg",
           verified: "klayout.org/downloads/MacOS/"
