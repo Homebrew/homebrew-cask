@@ -2,8 +2,7 @@ cask "aria-maestosa" do
   version "1.4.13d"
   sha256 "76d46509e0d7b64168158e724e8867ccf34f20b8ec2cdbbfc8c2073597fb9806"
 
-  url "https://downloads.sourceforge.net/ariamaestosa/AriaMaestosa-osx-64bits-#{version}.zip",
-      verified: "downloads.sourceforge.net/ariamaestosa/"
+  url "https://downloads.sourceforge.net/ariamaestosa/AriaMaestosa-osx-64bits-#{version}.zip"
   name "Aria Maestosa"
   desc "Midi sequencer and editor"
   homepage "https://ariamaestosa.github.io/ariamaestosa/docs/index.html"
