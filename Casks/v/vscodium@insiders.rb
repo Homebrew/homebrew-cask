@@ -5,8 +5,7 @@ cask "vscodium@insiders" do
   sha256 arm:   "b7d5db55ad2aa3df818b4de2d32ca4c11bb122ffdba5d1be65a8e1ea755fb7b1",
          intel: "8c4efde042e558f712ea9b039ad0f6f6f8a39fbc048f92a02d2cd147c9357f21"
 
-  url "https://github.com/VSCodium/vscodium-insiders/releases/download/#{version}/VSCodium-darwin-#{arch}-#{version}.zip",
-      verified: "github.com/VSCodium/vscodium-insiders/"
+  url "https://github.com/VSCodium/vscodium-insiders/releases/download/#{version}/VSCodium-darwin-#{arch}-#{version}.zip"
   name "VSCodium"
   name "VSCodium Insiders"
   desc "Code editor"
