@@ -30,8 +30,7 @@ cask "donut" do
     app_image "Donut_#{version}_#{arch}.AppImage", target: "Donut.AppImage"
   end
 
-  url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_#{arch}.#{url_end}",
-      verified: "github.com/zhom/donutbrowser/"
+  url "https://github.com/zhom/donutbrowser/releases/download/v#{version}/Donut_#{version}_#{arch}.#{url_end}"
   name "Donut Browser"
   desc "Anti-detect web browser"
   homepage "https://donutbrowser.com/"
