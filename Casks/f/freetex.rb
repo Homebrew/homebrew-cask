@@ -2,8 +2,7 @@ cask "freetex" do
   version "1.0.0"
   sha256 "072bf0a4db144fb2a44c0fbaffe9ef7368dcb93d42aa21de10f5119d53239444"
 
-  url "https://github.com/zstar1003/FreeTex/releases/download/v#{version}/FreeTex-Installer-#{version}.dmg",
-      verified: "github.com/zstar1003/FreeTex/"
+  url "https://github.com/zstar1003/FreeTex/releases/download/v#{version}/FreeTex-Installer-#{version}.dmg"
   name "FreeTex"
   desc "Free intelligent formula recognition software"
   homepage "https://xdxsb.top/FreeTex"
