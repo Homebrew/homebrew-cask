@@ -2,8 +2,7 @@ cask "spacejump" do
   version "2.1"
   sha256 "277aa36c0273bbd12c23f0dd6fee03847350ae97cbfd059f55dd4aacbe8fe845"
 
-  url "https://pub-2f1e73dd67bd462192b6592baa57a0ce.r2.dev/SpaceJump-v#{version}.dmg",
-      verified: "pub-2f1e73dd67bd462192b6592baa57a0ce.r2.dev/"
+  url "https://pub-2f1e73dd67bd462192b6592baa57a0ce.r2.dev/SpaceJump-v#{version}.dmg"
   name "SpaceJump"
   desc "Menu bar utility to name and switch desktop Spaces"
   homepage "https://getspacejump.com/"
