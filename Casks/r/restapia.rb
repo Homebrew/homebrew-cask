@@ -2,8 +2,7 @@ cask "restapia" do
   version "0.8.14"
   sha256 "f9d2d232c1757046d3d83f35aa63cacb152dcfb8812add29b54f69603bdad384"
 
-  url "https://github.com/RestApia/Releases.Osx.Stable/releases/download/v#{version}-osx-stable/RestApia-osx-stable-Setup.pkg",
-      verified: "github.com/RestApia/Releases.Osx.Stable/releases/download/"
+  url "https://github.com/RestApia/Releases.Osx.Stable/releases/download/v#{version}-osx-stable/RestApia-osx-stable-Setup.pkg"
   name "RestApia"
   desc "HTTP API client"
   homepage "https://www.restapia.app/"
