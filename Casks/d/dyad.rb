@@ -31,8 +31,7 @@ cask "dyad" do
     app_image "dyad_#{version}_x86_64.AppImage", target: "Dyad.AppImage"
   end
 
-  url "https://github.com/dyad-sh/dyad/releases/download/v#{version}/dyad#{os}#{version}#{url_end}",
-      verified: "github.com/dyad-sh/dyad/"
+  url "https://github.com/dyad-sh/dyad/releases/download/v#{version}/dyad#{os}#{version}#{url_end}"
   name "Dyad"
   desc "AI-powered app builder"
   homepage "https://dyad.sh/"
