@@ -6,8 +6,7 @@ cask "libreoffice" do
   sha256 arm:   "8858d8058da4f862f47559486814e65efc27294da67c5e4bb56b006b1ee59f89",
          intel: "2dcbce4894e01bc1ecd594658e2cbda70ff7bfcd0b310f35d38887797172d09e"
 
-  url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
-      verified: "download.documentfoundation.org/libreoffice/stable/"
+  url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg"
   name "LibreOffice"
   desc "Free cross-platform office suite, fresh version"
   homepage "https://www.libreoffice.org/"
