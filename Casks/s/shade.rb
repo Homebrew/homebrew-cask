@@ -6,8 +6,7 @@ cask "shade" do
   sha256 arm:   "745bbdad49a375eade2062bd81b29c5d2f81808badd84d630d1fe35c80277bbc",
          intel: "92f6e3cf49a625b1111af9a58e4cf2915c73be613cf8e71a1cb89ab342ce891b"
 
-  url "https://storage.googleapis.com/v2-public.shade.inc/releases/stable/mac/Shade-#{version}#{arch}.pkg",
-      verified: "storage.googleapis.com/v2-public.shade.inc/"
+  url "https://storage.googleapis.com/v2-public.shade.inc/releases/stable/mac/Shade-#{version}#{arch}.pkg"
   name "Shade"
   desc "AI-powered media storage and asset management platform"
   homepage "https://shade.inc/"
