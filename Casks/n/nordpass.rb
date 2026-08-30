@@ -4,8 +4,7 @@ cask "nordpass" do
   version "7.10.9"
   sha256 :no_check
 
-  url "https://downloads.npass.app/mac/#{arch}NordPass.dmg",
-      verified: "downloads.npass.app/mac/"
+  url "https://downloads.npass.app/mac/#{arch}NordPass.dmg"
   name "NordPass"
   desc "Password manager"
   homepage "https://nordpass.com/"
