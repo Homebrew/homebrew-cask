@@ -3,8 +3,7 @@ cask "banking-4" do
   version "9.3.1,9715"
   sha256 :no_check
 
-  url "https://subsembly.com/download/MacBanking4.pkg",
-      verified: "subsembly.com/"
+  url "https://subsembly.com/download/MacBanking4.pkg"
   name "Banking 4"
   desc "German accounting software"
   homepage "https://banking4.de/index.html"
