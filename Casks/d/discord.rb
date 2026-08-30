@@ -19,8 +19,7 @@ cask "discord" do
     end
   end
 
-  url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg",
-      verified: "dl.discordapp.net/"
+  url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg"
   name "Discord"
   desc "Voice and text chat software"
   homepage "https://discord.com/"
