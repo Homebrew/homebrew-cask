@@ -1,18 +1,17 @@
-cask "presonus-universal-control" do
-  version "4.7.2-108537,10121"
-  sha256 "15db9f847dc3383a19d9348bb482b4fd73c63444a160b3ac34fe30d71f2ed199"
+cask "fender-universal-control" do
+  version "5.1.1.113315,10153"
+  sha256 "37734bd937d40ed5a4e19b9c3d916202641e144da812b3b629cadd9026e1fbf8"
 
-  url "https://www.fmicassets.com/Damroot/Original/#{version.csv.second}/PreSonus_Universal_Control_v#{version.csv.first.dots_to_underscores}.dmg",
-      verified: "fmicassets.com/Damroot/Original/"
+  url "https://www.fmicassets.com/Damroot/Original/#{version.csv.second}/Fender_Universal_Control_v#{version.csv.first.dots_to_underscores}.dmg"
   name "Universal Control"
-  desc "PreSonus software control interface"
+  desc "Fender software control interface"
   homepage "https://www.presonus.com/pages/universal-control"
 
   # There is no page available specifically for the software
   # so we return the downloads from one of the popular products
   livecheck do
     url "https://www.presonus.com/products/audiobox-usb-96-studio"
-    regex(%r{href=.*?/(\d+)/PreSonus[._-]Universal[._-]Control[._-]v?(\d+(?:[._-]\d+)+)\.dmg}i)
+    regex(%r{href=.*?/(\d+)/Fender[._-]Universal[._-]Control[._-]v?(\d+(?:[._-]\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1].tr("_", ".")},#{match[0]}" }
     end
@@ -20,9 +19,10 @@ cask "presonus-universal-control" do
 
   depends_on :macos
 
-  pkg "PreSonus Universal Control.pkg"
+  pkg "Fender Universal Control.pkg"
 
   uninstall launchctl: [
+              "asp.com.fender.pae-quantum-audio-plug-in",
               "asp.com.presonus.pae-quantum-audio-plug-in",
               "com.presonus.ucdaemon",
             ],
@@ -36,7 +36,11 @@ cask "presonus-universal-control" do
   zap trash: [
     "/Library/Application Support/PreSonus/universalcontrol",
     "/Library/LaunchDaemons/com.presonus.ucdaemon.plist",
+    "~/Library/Application Support/Fender/Universal Control",
     "~/Library/Application Support/PreSonus/universalcontrol",
+    "~/Library/Caches/Juce/Universal Control",
+    "~/Library/Preferences/com.fender.ucapp.plist",
     "~/Library/Preferences/com.presonus.ucapp.plist",
+    "~/Library/Preferences/Fender/Universal Control",
   ]
 end
