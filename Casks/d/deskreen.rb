@@ -25,8 +25,7 @@ cask "deskreen" do
     app_image "deskreen-ce-#{version}-#{arch}.AppImage", target: "Deskreen.AppImage"
   end
 
-  url "https://github.com/pavlobu/deskreen/releases/download/v#{version}/#{os}-ce-#{version}-#{arch}.#{url_end}",
-      verified: "github.com/pavlobu/deskreen/"
+  url "https://github.com/pavlobu/deskreen/releases/download/v#{version}/#{os}-ce-#{version}-#{arch}.#{url_end}"
   name "Deskreen"
   desc "Turns any device with a web browser into a secondary screen"
   homepage "https://deskreen.com/"
