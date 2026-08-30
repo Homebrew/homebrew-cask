@@ -2,8 +2,7 @@ cask "amazon-photos" do
   version "11.2.0,27"
   sha256 :no_check
 
-  url "https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosApp.zip",
-      verified: "d29x207vrinatv.cloudfront.net/"
+  url "https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosApp.zip"
   name "Amazon Photos"
   name "Amazon Drive"
   desc "Photo storage and sharing service"
