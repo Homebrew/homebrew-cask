@@ -68,8 +68,7 @@ cask "gpgfrontend" do
     end
   end
 
-  url "https://github.com/saturneric/GpgFrontend/releases/download/v#{version}/GpgFrontend-#{version}-macos-#{macos_version}.dmg",
-      verified: "github.com/saturneric/GpgFrontend/"
+  url "https://github.com/saturneric/GpgFrontend/releases/download/v#{version}/GpgFrontend-#{version}-macos-#{macos_version}.dmg"
   name "GpgFrontend"
   desc "OpenPGP/GnuPG crypto, sign and key management tool"
   homepage "https://gpgfrontend.bktus.com/"
