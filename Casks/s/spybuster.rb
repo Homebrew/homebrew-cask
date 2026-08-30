@@ -2,8 +2,7 @@ cask "spybuster" do
   version "3.0.1,202,1711714226"
   sha256 "fdbb1d0df481524348e35d0f9e349f5bb7ab72aa415b12c7e99ce0e831fa8098"
 
-  url "https://dl.devmate.com/com.macpaw-labs.snitch/#{version.csv.second}/#{version.csv.third}/SpyBuster-#{version.csv.second}.zip",
-      verified: "dl.devmate.com/com.macpaw-labs.snitch/"
+  url "https://dl.devmate.com/com.macpaw-labs.snitch/#{version.csv.second}/#{version.csv.third}/SpyBuster-#{version.csv.second}.zip"
   name "SpyBuster"
   desc "Anti-spyware tool"
   homepage "https://spybuster.app/"
