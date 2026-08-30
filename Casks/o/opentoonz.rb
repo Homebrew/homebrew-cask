@@ -2,8 +2,7 @@ cask "opentoonz" do
   version "1.8.0"
   sha256 "6360efbde7739910d4eefe9d494b6b57e852a3f75bdbeb1e6d75abb84e609d13"
 
-  url "https://github.com/opentoonz/opentoonz/releases/download/v#{version}/OpenToonz.pkg",
-      verified: "github.com/opentoonz/opentoonz/"
+  url "https://github.com/opentoonz/opentoonz/releases/download/v#{version}/OpenToonz.pkg"
   name "OpenToonz"
   desc "Open-source full-featured 2D animation creation software"
   homepage "https://opentoonz.github.io/e/index.html"
