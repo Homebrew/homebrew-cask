@@ -10,8 +10,7 @@ cask "tencent-meeting" do
     sha256 "cb2cde231cadd19a82160cccd79f3a1ff2c55204bd3a910caa10a8fcb3b41199"
   end
 
-  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.officialwebsite.dmg",
-      verified: "updatecdn.meeting.qq.com/cos/"
+  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.officialwebsite.dmg"
   name "Tencent Meeting"
   name "腾讯会议"
   desc "Cloud video conferencing"
