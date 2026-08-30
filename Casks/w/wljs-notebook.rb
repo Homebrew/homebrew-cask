@@ -5,8 +5,7 @@ cask "wljs-notebook" do
   sha256 arm:   "1144757290f0460e210aecb284fb17075302b7811f790a360e0b8527ae83b094",
          intel: "dfee6b08e1bff7830138f8efbea4f6f032b0aca8546daf6c0d99e02701fa994a"
 
-  url "https://github.com/JerryI/wolfram-js-frontend/releases/download/v#{version.csv.second || version.csv.first}/wljs-notebook-#{version.csv.first}-#{arch}-macos.dmg",
-      verified: "github.com/JerryI/wolfram-js-frontend/"
+  url "https://github.com/JerryI/wolfram-js-frontend/releases/download/v#{version.csv.second || version.csv.first}/wljs-notebook-#{version.csv.first}-#{arch}-macos.dmg"
   name "WLJS Notebook"
   desc "Javascript frontend for Wolfram Engine"
   homepage "https://jerryi.github.io/wljs-docs/"
