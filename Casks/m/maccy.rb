@@ -2,8 +2,7 @@ cask "maccy" do
   version "2.7.1"
   sha256 "f388aee34de09a0c7531631303785d9938bef9a92130e21ce1049c8f56aad077"
 
-  url "https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip",
-      verified: "github.com/p0deje/Maccy/"
+  url "https://github.com/p0deje/Maccy/releases/download/#{version}/Maccy.app.zip"
   name "Maccy"
   desc "Clipboard manager"
   homepage "https://maccy.app/"
