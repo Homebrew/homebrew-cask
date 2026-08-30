@@ -20,7 +20,12 @@ cask "quarkclouddrive" do
 
   livecheck do
     url "https://download.quark.cn/download/quarkclouddrivemac?platform=mac&ch=#{channel}"
-    regex(%r{QuarkCloudDriveMac[._-]v?(\d+(?:\.\d+)+)[^/]*\(Build(\d+)\)\.dmg}i)
+    regex(%r{
+      /download/37213/quarkclouddrivemac/
+      #{Regexp.escape(channel)}/
+      QuarkCloudDriveMac[._-]v?(\d+(?:\.\d+)+)
+      [^/]*\(Build(\d+)\)\.dmg
+    }xi)
     strategy :header_match do |headers, regex|
       match = headers["location"]&.match(regex)
       next if match.blank?
