@@ -2,8 +2,7 @@ cask "tableflip" do
   version "1.7.0"
   sha256 "63ddd81524d22477176936492a34175d65bfb18ef00d2aa069badd0afddf639c"
 
-  url "https://update.christiantietze.de/tableflip/v#{version.major}/TableFlip-v#{version}.zip",
-      verified: "update.christiantietze.de/tableflip/"
+  url "https://update.christiantietze.de/tableflip/v#{version.major}/TableFlip-v#{version}.zip"
   name "TableFlip"
   desc "Edit plain text tables in place: Markdown, CSV, JSON. LaTeX and HTML export"
   homepage "https://tableflipapp.com/"
