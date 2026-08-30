@@ -5,8 +5,7 @@ cask "ontime" do
   sha256 arm:   "d639e76efb67cc090ce7e129ffc6d31f05173c6b7b9d2c62805cb642269ee54a",
          intel: "2719a7108cd212d15b9aa11ea2cc956969c7d43e430926f9cdba5fbe0be715da"
 
-  url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg",
-      verified: "github.com/cpvalente/ontime/"
+  url "https://github.com/cpvalente/ontime/releases/download/v#{version}/ontime-macOS-#{arch}.dmg"
   name "Ontime"
   desc "Time keeping for live events"
   homepage "https://getontime.no/"
