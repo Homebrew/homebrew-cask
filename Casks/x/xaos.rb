@@ -2,8 +2,7 @@ cask "xaos" do
   version "4.3.7"
   sha256 "b265b728ddeb476661d09c70a3f6cdc7b25b2f9d2622c8d29f88748c2162e98a"
 
-  url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS.dmg",
-      verified: "github.com/xaos-project/XaoS/"
+  url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS.dmg"
   name "GNU XaoS"
   desc "Real-time interactive fractal zoomer"
   homepage "https://xaos-project.github.io/"
