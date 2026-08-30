@@ -1,6 +1,6 @@
 cask "tcp-viewer" do
-  version "1.12.0,36"
-  sha256 "eaad5ea5af537f9388493ae39c3847c3b0218f9fde22885804b2c73d658f6928"
+  version "1.14.0,42"
+  sha256 "f27e0b49866606602ee5f308250b50131a15a8560ca3871d678b53f3e55c915a"
 
   url "https://assets-tcpviewer.proxyman.com/release/production/#{version.csv.first}/#{version.csv.second}/tcpviewer_#{version.csv.first}_#{version.csv.second}.dmg"
   name "TCP Viewer"
@@ -17,6 +17,7 @@ cask "tcp-viewer" do
   depends_on macos: :sequoia
 
   app "TCP Viewer.app"
+  binary "#{appdir}/TCP Viewer.app/Contents/MacOS/tcpviewer-cli"
 
   uninstall launchctl: "com.proxyman.tcpviewer.helpertool",
             quit:      "com.proxyman.tcpviewer",
