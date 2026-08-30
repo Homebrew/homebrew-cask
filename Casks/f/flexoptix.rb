@@ -6,8 +6,7 @@ cask "flexoptix" do
   sha256 arm:   "af2f7a75a2475b26742a0445e0e0e6cc3fb8583e0c8d4cf99aac399ffd431c70",
          intel: "670a16b1857eb1b4f899335dc619b91140a009eab51a5c7e0983ab1841404658"
 
-  url "https://flexbox.reconfigure.me/download/electron/mac/#{arch}/FLEXOPTIX%20App-#{version}#{arch_suffix}.dmg",
-      verified: "flexbox.reconfigure.me/download/electron/mac/"
+  url "https://flexbox.reconfigure.me/download/electron/mac/#{arch}/FLEXOPTIX%20App-#{version}#{arch_suffix}.dmg"
   name "FLEXOPTIX App"
   desc "Connect to your FLEXBOX without cables and configure transceivers"
   homepage "https://www.flexoptix.net/en/flexoptix-app/#"
