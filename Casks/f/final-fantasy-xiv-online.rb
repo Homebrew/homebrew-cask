@@ -2,8 +2,7 @@ cask "final-fantasy-xiv-online" do
   version "pnvdkzgk77dj10"
   sha256 "bbf756f78e9606779972d3c8d0864d665eecfcda4dfbe6260ae0a6b63f84cb65"
 
-  url "https://gdl.square-enix.com/ffxiv/inst/#{version}/FINAL_FANTASY_XIV_ONLINE_x64.dmg",
-      verified: "square-enix.com/ffxiv/inst/"
+  url "https://gdl.square-enix.com/ffxiv/inst/#{version}/FINAL_FANTASY_XIV_ONLINE_x64.dmg"
   name "Final Fantasy XIV"
   desc "Story-driven massively multiplayer online role-playing game"
   homepage "https://www.finalfantasyxiv.com/"
