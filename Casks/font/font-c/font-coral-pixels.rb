@@ -2,8 +2,7 @@ cask "font-coral-pixels" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/coralpixels/CoralPixels-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/coralpixels/CoralPixels-Regular.ttf"
   name "Coral Pixels"
   homepage "https://fonts.google.com/specimen/Coral+Pixels"
 
