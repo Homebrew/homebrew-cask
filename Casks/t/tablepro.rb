@@ -5,8 +5,7 @@ cask "tablepro" do
   sha256 arm:   "e051ae9d12bef0479f458b7674e3a00d457310273340c89a741b61c303679781",
          intel: "21f9d0a88bdd528b7ebdc6a20c283f4c975565c6133c0252666cf6284d527f15"
 
-  url "https://github.com/TableProApp/TablePro/releases/download/v#{version}/TablePro-#{version}-#{arch}.dmg",
-      verified: "github.com/TableProApp/TablePro/"
+  url "https://github.com/TableProApp/TablePro/releases/download/v#{version}/TablePro-#{version}-#{arch}.dmg"
   name "TablePro"
   desc "Native database client for many database types"
   homepage "https://tablepro.app/"
