@@ -2,8 +2,7 @@ cask "elemental@6" do
   version "6.11.0"
   sha256 "604fbfcfe728ca1797bfdc921121614c11a71135e9c454fa14900370bb620eb3"
 
-  url "https://github.com/evolvedbinary/elemental/releases/download/elemental-#{version}/elemental-#{version}.dmg",
-      verified: "github.com/evolvedbinary/elemental/"
+  url "https://github.com/evolvedbinary/elemental/releases/download/elemental-#{version}/elemental-#{version}.dmg"
   name "elemental"
   desc "Native XML Database with XQuery and XSLT"
   homepage "https://www.elemental.xyz/"
