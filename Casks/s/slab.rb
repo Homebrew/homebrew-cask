@@ -5,8 +5,7 @@ cask "slab" do
   sha256 arm:   "f26cc76229610e27b96a4ad286c590598105a2986e614faa83d1b3e8580f5056",
          intel: "f84f8bcc022f1964fe1e149cfa66399d32ef8ac4307f959d15a952b8bc8daa3d"
 
-  url "https://github.com/slab/desktop-releases/releases/download/v#{version}/Slab-#{version}-darwin-#{arch}.dmg",
-      verified: "github.com/slab/desktop-releases/"
+  url "https://github.com/slab/desktop-releases/releases/download/v#{version}/Slab-#{version}-darwin-#{arch}.dmg"
   name "Slab"
   desc "Knowledge management for organisations"
   homepage "https://slab.com/"
