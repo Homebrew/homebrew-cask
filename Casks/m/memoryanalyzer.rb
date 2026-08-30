@@ -5,8 +5,7 @@ cask "memoryanalyzer" do
   sha256 arm:   "c89471ecc07b6d30d665151d5358bc7aa3a3a7d490702a812c742581197243e0",
          intel: "aac44fb5584c952a003b6396e29e8eca630b0bddda1fd6f33fd3297411fe3449"
 
-  url "https://download.eclipse.org/mat/#{version.major_minor_patch}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.#{arch}.dmg",
-      verified: "download.eclipse.org/mat/"
+  url "https://download.eclipse.org/mat/#{version.major_minor_patch}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.#{arch}.dmg"
   name "Eclipse Memory Analyzer"
   desc "Java heap analyzer"
   homepage "https://eclipse.dev/mat/"
