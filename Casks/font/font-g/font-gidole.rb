@@ -2,8 +2,7 @@ cask "font-gidole" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/gidole/Gidole-Typefaces/raw/master/gidole.zip",
-      verified: "github.com/gidole/"
+  url "https://github.com/gidole/Gidole-Typefaces/raw/master/gidole.zip"
   name "Gidole"
   homepage "https://gidole.github.io/"
 
