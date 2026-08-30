@@ -2,8 +2,7 @@ cask "subsync" do
   version "0.17.0"
   sha256 "8d81f4d8da99b5f6b023da3fd100fccadb0c2b07143e495eb57bd22bfa5a78bd"
 
-  url "https://github.com/sc0ty/subsync/releases/download/#{version.major_minor}/subsync-#{version}-mac-x86_64.dmg",
-      verified: "github.com/sc0ty/subsync/"
+  url "https://github.com/sc0ty/subsync/releases/download/#{version.major_minor}/subsync-#{version}-mac-x86_64.dmg"
   name "subsync"
   desc "Subtitle speech synchroniser"
   homepage "https://subsync.online/"
