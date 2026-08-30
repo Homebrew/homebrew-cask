@@ -5,8 +5,7 @@ cask "capacities" do
   sha256 arm:   "c4927c3a751e05a5456c2f00b140f49c8af31ad89c7f6c1fca528f77ae01c423",
          intel: "5e7e209ab9e8f2965df255f2ced0b316838e16d2af287efb153dcc39b74bece6"
 
-  url "https://2vks4.upcloudobjects.com/capacities-desktop-app/Capacities-#{version}#{arch}.dmg",
-      verified: "2vks4.upcloudobjects.com/capacities-desktop-app/"
+  url "https://2vks4.upcloudobjects.com/capacities-desktop-app/Capacities-#{version}#{arch}.dmg"
   name "Capacities"
   desc "App to write and organise your ideas"
   homepage "https://capacities.io/"
