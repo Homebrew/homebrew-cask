@@ -2,8 +2,7 @@ cask "font-jetbrains-mono" do
   version "2.304"
   sha256 "6f6376c6ed2960ea8a963cd7387ec9d76e3f629125bc33d1fdcd7eb7012f7bbf"
 
-  url "https://github.com/JetBrains/JetBrainsMono/releases/download/v#{version}/JetBrainsMono-#{version}.zip",
-      verified: "github.com/JetBrains/JetBrainsMono/"
+  url "https://github.com/JetBrains/JetBrainsMono/releases/download/v#{version}/JetBrainsMono-#{version}.zip"
   name "JetBrains Mono"
   homepage "https://www.jetbrains.com/lp/mono"
 
