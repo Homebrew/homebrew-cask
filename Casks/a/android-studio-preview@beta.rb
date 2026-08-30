@@ -5,8 +5,7 @@ cask "android-studio-preview@beta" do
   sha256 arm:   "2aa0f42cd726332b435e669334812cbeb2516730422775749884e58419c56dfe",
          intel: "4766384e812ac6343a9120fd4e8688ee3c6f8de783ad9a4fa8ef881ded33a395"
 
-  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
-      verified: "edgedl.me.gvt1.com/android/studio/install/"
+  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
   name "Android Studio Preview (Beta)"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/preview/"
