@@ -2,8 +2,7 @@ cask "tripmode" do
   version "3.2.4,1385"
   sha256 "2a5a21ac4c13b5a1a5d43e6aeb2b7588ea9af0116e41829fca19cf9752265410"
 
-  url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.third || version.csv.second}.zip",
-      verified: "tripmode-updates.ch/app/"
+  url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.third || version.csv.second}.zip"
   name "TripMode"
   desc "Control your data usage on slow or expensive networks"
   homepage "https://www.tripmode.ch/"
