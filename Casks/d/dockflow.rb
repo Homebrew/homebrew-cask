@@ -2,8 +2,7 @@ cask "dockflow" do
   version "1.77"
   sha256 "f0743c055dedc0b03ba09609b224a96c4514a6aedd05d0418ae5dd2303ec9c64"
 
-  url "https://github.com/AppitStudio/dock-flow-updates/releases/download/v#{version}/DockFlow.dmg",
-      verified: "github.com/AppitStudio/"
+  url "https://github.com/AppitStudio/dock-flow-updates/releases/download/v#{version}/DockFlow.dmg"
   name "DockFlow"
   desc "Manage Dock presets and switch between them instantly"
   homepage "https://dockflow.appitstudio.com/"
