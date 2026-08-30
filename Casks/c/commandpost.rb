@@ -19,8 +19,7 @@ cask "commandpost" do
     sha256 "b1a3ca256053a083b59dd1d1db59b68d9b2ea8b83dc2e5214d0eba921eba5e64"
   end
 
-  url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
-      verified: "github.com/CommandPost/CommandPost/"
+  url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg"
   name "CommandPost"
   desc "Workflow enhancements for Final Cut Pro"
   homepage "https://commandpost.io/"
