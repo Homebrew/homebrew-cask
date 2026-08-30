@@ -16,8 +16,7 @@ cask "craft-agents" do
     deprecate! date: "2026-06-12", because: :discontinued
   end
 
-  url "https://github.com/lukilabs/craft-agents-oss/releases/download/v#{version}/Craft-Agents-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/lukilabs/craft-agents-oss/"
+  url "https://github.com/lukilabs/craft-agents-oss/releases/download/v#{version}/Craft-Agents-#{version}-mac-#{arch}.dmg"
   name "Craft Agents"
   desc "AI assistant for connecting and working across data sources"
   homepage "https://agents.craft.do/"
