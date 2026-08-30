@@ -3,8 +3,7 @@ cask "cockatrice" do
     version "2.9.0,2023-09-14,Rings.of.the.Wild"
     sha256 "4524c5b95928e88073d1f8be46d881288d6d0bf07d8e65185fbebc0491f29e08"
 
-    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.first}-macOS-11_Big_Sur.dmg",
-        verified: "github.com/Cockatrice/Cockatrice/"
+    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.first}-macOS-11_Big_Sur.dmg"
 
     livecheck do
       skip "Legacy version"
@@ -22,8 +21,7 @@ cask "cockatrice" do
     on_ventura do
       sha256 "4137a2021c97ef47f514b44898bc3897c1448698962dcad1f4d8482632e57bb8"
 
-      url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS13_Intel.dmg",
-          verified: "github.com/Cockatrice/Cockatrice/"
+      url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS13_Intel.dmg"
 
       caveats do
         requires_rosetta
@@ -32,14 +30,12 @@ cask "cockatrice" do
     on_sonoma do
       sha256 "53bc76f1e0291af6e53c6989c6811561a7fe3f64aea574e4826ae00e370da98d"
 
-      url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS14.dmg",
-          verified: "github.com/Cockatrice/Cockatrice/"
+      url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS14.dmg"
     end
     on_sequoia :or_newer do
       sha256 "51705bcd11211ab1beb19ebb41931e64c16c1f2ec8d530473de57fdc0a9b764b"
 
-      url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS15.dmg",
-          verified: "github.com/Cockatrice/Cockatrice/"
+      url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.fourth}-macOS15.dmg"
     end
 
     livecheck do
