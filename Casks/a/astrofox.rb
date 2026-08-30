@@ -15,6 +15,7 @@ cask "astrofox" do
 
     zap trash: [
       "~/Library/Application Support/Astrofox",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.astrofox.app.sfl*",
       "~/Library/Preferences/io.astrofox.app.plist",
       "~/Library/Saved Application State/io.astrofox.app.savedState",
     ]
