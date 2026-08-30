@@ -2,8 +2,7 @@ cask "infocert-sign" do
   version "3.1.1.358"
   sha256 :no_check
 
-  url "https://rinnovofirma.infocert.it/infocertsign/international/download/darwin/latest",
-      verified: "infocert.it/"
+  url "https://rinnovofirma.infocert.it/infocertsign/international/download/darwin/latest"
   name "Infocert Sign Desktop International"
   desc "Digital signature and time stamp app, International Edition"
   homepage "https://infocert.digital/consumer/infocert-sign-suite/"
