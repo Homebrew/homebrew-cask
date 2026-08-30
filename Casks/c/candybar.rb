@@ -2,8 +2,7 @@ cask "candybar" do
   version "3.5"
   sha256 :no_check
 
-  url "https://files.iconfactory.net/software/CandyBar-SFE.zip",
-      verified: "files.iconfactory.net/software/"
+  url "https://files.iconfactory.net/software/CandyBar-SFE.zip"
   name "CandyBar"
   desc "Tool to manage file icons"
   homepage "https://blog.iconfactory.com/2022/04/candybar-sugar-free-edition/"
