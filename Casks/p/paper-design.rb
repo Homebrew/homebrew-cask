@@ -2,8 +2,7 @@ cask "paper-design" do
   version "0.5.6,2608278ikbsisiz"
   sha256 "de9f80928c1340ddbe470e5637b7d26da425de1869ce0d721067df75748a1962"
 
-  url "https://download.todesktop.com/2601167vjw8xe/Paper%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64.dmg",
-      verified: "download.todesktop.com/2601167vjw8xe/"
+  url "https://download.todesktop.com/2601167vjw8xe/Paper%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64.dmg"
   name "Paper"
   desc "Design tool for creating interfaces and prototypes"
   homepage "https://paper.design/"
