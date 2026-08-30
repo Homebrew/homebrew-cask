@@ -5,8 +5,7 @@ cask "sejda-pdf" do
   sha256 arm:   "8ad1a8fd744f36e2684ca024375acf96dec16b32a3a4fb190284a8779fded24b",
          intel: "68225c407e76c8585336a68c52b6a50412de942f3fda77226312a6972b733f76"
 
-  url "https://downloads.sejda-cdn.com/sejda-desktop_#{version}#{arch}.dmg",
-      verified: "downloads.sejda-cdn.com/"
+  url "https://downloads.sejda-cdn.com/sejda-desktop_#{version}#{arch}.dmg"
   name "Sejda PDF Desktop"
   desc "PDF editor"
   homepage "https://www.sejda.com/en/desktop"
