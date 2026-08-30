@@ -2,8 +2,7 @@ cask "font-raleway" do
   version "4.101"
   sha256 "523070d32418b4223e79f4629bf28b935723906d156d2e6af016e6a34fe6d3eb"
 
-  url "https://github.com/theleagueof/raleway/releases/download/#{version}/Raleway-#{version}.tar.xz",
-      verified: "github.com/theleagueof/raleway/"
+  url "https://github.com/theleagueof/raleway/releases/download/#{version}/Raleway-#{version}.tar.xz"
   name "Raleway"
   homepage "https://www.theleagueofmoveabletype.com/raleway"
 
