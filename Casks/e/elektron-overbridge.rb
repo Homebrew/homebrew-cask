@@ -2,8 +2,7 @@ cask "elektron-overbridge" do
   version "2.25.7"
   sha256 "e205f7cabc1908fc52347449f630181c0a012b69cb2834bbec966a3cad13cbe6"
 
-  url "https://elektron-software.s3.eu-west-1.amazonaws.com/overbridge/Elektron_Overbridge_#{version}.dmg",
-      verified: "elektron-software.s3.eu-west-1.amazonaws.com/overbridge/"
+  url "https://elektron-software.s3.eu-west-1.amazonaws.com/overbridge/Elektron_Overbridge_#{version}.dmg"
   name "Overbridge"
   desc "Integrate Elektron hardware into music software"
   homepage "https://www.elektron.se/overbridge"
