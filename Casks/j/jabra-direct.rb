@@ -2,8 +2,7 @@ cask "jabra-direct" do
   version "8.2.23201"
   sha256 :no_check
 
-  url "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg",
-      verified: "jabraxpressonlineprdstor.blob.core.windows.net/jdo/"
+  url "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg"
   name "Jabra Direct"
   desc "Optimise and personalise your Jabra headset"
   homepage "https://www.jabra.com/software-and-services/jabra-direct"
