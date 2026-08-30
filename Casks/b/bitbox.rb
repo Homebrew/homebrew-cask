@@ -23,8 +23,7 @@ cask "bitbox" do
     app_image "BitBox-#{version}-x86_64.AppImage", target: "BitBox.AppImage"
   end
 
-  url "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/download/v#{version}/BitBox-#{version}-#{url_end}",
-      verified: "github.com/BitBoxSwiss/bitbox-wallet-app/releases/download/"
+  url "https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/download/v#{version}/BitBox-#{version}-#{url_end}"
   name "BitBox"
   desc "Protect your coins with the latest Swiss made hardware wallet"
   homepage "https://bitbox.swiss/"
