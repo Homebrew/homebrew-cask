@@ -5,8 +5,7 @@ cask "heynote" do
   sha256 arm:   "6db5ca77fb01004b6d041fc2a22660c1b25de8b16f6323598aaf163f7efe90d8",
          intel: "f24a919f37e24dfd5cdd69f6e4f2c330f6033384521cead8a9b8968b8150540f"
 
-  url "https://github.com/heyman/heynote/releases/download/v#{version}/Heynote_#{version}_#{arch}.dmg",
-      verified: "github.com/heyman/heynote/"
+  url "https://github.com/heyman/heynote/releases/download/v#{version}/Heynote_#{version}_#{arch}.dmg"
   name "Heynote"
   desc "Dedicated scratchpad for developers"
   homepage "https://heynote.com/"
