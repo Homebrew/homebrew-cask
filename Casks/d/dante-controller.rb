@@ -7,8 +7,7 @@ cask "dante-controller" do
   sha256 arm:   "4515cd12b4b185e4b6317db6de7ea5306ba33381baa2fce4ee08f5fc1b6538ff",
          intel: "7902bf615848e7c886675ee950ef92e38b6e919a370d580155530455a55362a1"
 
-  url "https://audinate-software-updates.sgp1.cdn.digitaloceanspaces.com/DanteController/#{version.major}/#{version.major_minor}/#{arch_folder}DanteController-#{version}-macos-#{arch}.dmg",
-      verified: "audinate-software-updates.sgp1.cdn.digitaloceanspaces.com/DanteController/"
+  url "https://audinate-software-updates.sgp1.cdn.digitaloceanspaces.com/DanteController/#{version.major}/#{version.major_minor}/#{arch_folder}DanteController-#{version}-macos-#{arch}.dmg"
   name "Dante Controller"
   desc "Control inputs and outputs on a Dante network"
   homepage "https://www.getdante.com/products/software-essentials/dante-controller/"
