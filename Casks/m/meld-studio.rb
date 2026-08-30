@@ -19,10 +19,11 @@ cask "meld-studio" do
   app "Meld Studio.app"
 
   uninstall launchctl: [
-    "co.meldstudio.keystone.agent",
-    "co.meldstudio.keystone.xpcservice",
-    "co.meldstudio.MeldStudioUpdater.wake",
-  ]
+              "co.meldstudio.keystone.agent",
+              "co.meldstudio.keystone.xpcservice",
+              "co.meldstudio.MeldStudioUpdater.wake",
+            ],
+            quit:      "co.meldstudio.MeldStudio"
 
   zap trash: [
     "~/Library/Application Support/MeldStudio",
