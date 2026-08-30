@@ -25,8 +25,7 @@ cask "altair-graphql-client" do
     app_image "altair_#{version}_#{arch}_linux.AppImage", target: "Altair.AppImage"
   end
 
-  url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair_#{version}_#{arch}_#{os}.#{url_end}",
-      verified: "github.com/imolorhe/altair/"
+  url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair_#{version}_#{arch}_#{os}.#{url_end}"
   name "Altair GraphQL Client"
   desc "GraphQL client"
   homepage "https://altairgraphql.dev/"
