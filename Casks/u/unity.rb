@@ -6,8 +6,7 @@ cask "unity" do
   sha256 arm:   "d593a33d4354be023f6fe77cc04c76399eee31ad985bf5adf98459e740fc84b3",
          intel: "3caced4a1467d123edac25da624eb26d7dba02512d5c72f53a71ec89dfd8e44b"
 
-  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorInstaller#{arch}/Unity-#{version.csv.first}.pkg",
-      verified: "download.unity3d.com/download_unity/"
+  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorInstaller#{arch}/Unity-#{version.csv.first}.pkg"
   name "Unity Editor"
   desc "Platform for 3D content"
   homepage "https://unity.com/"
