@@ -2,8 +2,7 @@ cask "canon-eos-utility" do
   version "3.20.21.3,0200007654,4"
   sha256 "b79117d4971e344ff1688a9794fd0ae3a907a65c3a2a1e95d3071aded81b2e9f"
 
-  url "https://gdlp01.c-wss.com/gds/#{version.csv.third}/#{version.csv.second}/01/EU#{version.csv.first.major}Installer-M#{version.csv.first}.dmg.zip",
-      verified: "gdlp01.c-wss.com/"
+  url "https://gdlp01.c-wss.com/gds/#{version.csv.third}/#{version.csv.second}/01/EU#{version.csv.first.major}Installer-M#{version.csv.first}.dmg.zip"
   name "Canon EOS Utility"
   desc "Communication with Canon EOS cameras"
   homepage "https://app.ssw.imaging-saas.canon/app/en/eu.html"
