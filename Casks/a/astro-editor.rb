@@ -24,8 +24,7 @@ cask "astro-editor" do
     app_image "Astro.Editor_#{version}_amd64.AppImage", target: "AstroEditor.AppImage"
   end
 
-  url "https://github.com/dannysmith/astro-editor/releases/download/v#{version}/Astro.Editor_#{version}_#{os}.#{url_end}",
-      verified: "github.com/dannysmith/astro-editor/"
+  url "https://github.com/dannysmith/astro-editor/releases/download/v#{version}/Astro.Editor_#{version}_#{os}.#{url_end}"
   name "Astro Editor"
   desc "Markdown editor for Astro content collections"
   homepage "https://astroeditor.danny.is/"
