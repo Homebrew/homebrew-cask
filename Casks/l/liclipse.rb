@@ -10,8 +10,7 @@ cask "liclipse" do
     sha256 "9206476c44c1023d818a4599a1cb1578d6247f337049ac5a4206b8d3525e6a1b"
   end
 
-  url "https://www.mediafire.com/file_premium/#{version.csv.second}/liclipse_#{version.csv.first}_macosx.cocoa.#{arch.downcase}.tar.gz",
-      verified: "mediafire.com/file_premium/"
+  url "https://www.mediafire.com/file_premium/#{version.csv.second}/liclipse_#{version.csv.first}_macosx.cocoa.#{arch.downcase}.tar.gz"
   name "LiClipse"
   desc "Lightweight editors, theming and usability improvements for Eclipse"
   homepage "https://www.liclipse.com/"
