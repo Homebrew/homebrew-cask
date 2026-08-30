@@ -5,8 +5,7 @@ cask "voiden@beta" do
   sha256 arm:   "9769ce32513b26fc607e66166b5fcdcfec89cf5befffd41b327513a982985ba5",
          intel: "50871e23618f805f2fbba655a74ee3d873aca6c292adeb5442919354a5504305"
 
-  url "https://voiden-beta-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/#{arch}/Voiden-darwin-#{arch}-#{version}.zip",
-      verified: "voiden-beta-releases.s3.eu-west-1.amazonaws.com/"
+  url "https://voiden-beta-releases.s3.eu-west-1.amazonaws.com/voiden/darwin/#{arch}/Voiden-darwin-#{arch}-#{version}.zip"
   name "Voiden Beta"
   desc "API development tool"
   homepage "https://voiden.md/"
