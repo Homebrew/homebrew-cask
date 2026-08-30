@@ -5,8 +5,7 @@ cask "reqable" do
   sha256 arm:   "894def95a02a53fc0fbdbf9ae2f5291ccc25ba1e8cda2fd87c31dc80fe34fe4c",
          intel: "feb96a2ab938bb118119fec97666682f5b06d79195f6ffffef29fb5227ab2b9e"
 
-  url "https://github.com/reqable/reqable-app/releases/download/#{version}/reqable-app-macos-#{arch}.dmg",
-      verified: "github.com/reqable/reqable-app/"
+  url "https://github.com/reqable/reqable-app/releases/download/#{version}/reqable-app-macos-#{arch}.dmg"
   name "Reqable"
   desc "Advanced API Debugging Proxy"
   homepage "https://reqable.com/"
