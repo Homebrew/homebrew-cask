@@ -12,8 +12,7 @@ cask "copyq" do
     depends_on macos: :ventura
   end
 
-  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ-#{version}-macos-#{arch}.dmg",
-      verified: "github.com/hluk/CopyQ/"
+  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ-#{version}-macos-#{arch}.dmg"
   name "CopyQ"
   desc "Clipboard manager with advanced features"
   homepage "https://hluk.github.io/CopyQ/"
