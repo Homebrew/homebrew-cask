@@ -2,8 +2,7 @@ cask "phosphene" do
   version "1.5"
   sha256 "0f9d0adaa7f11240c479c75157674b24fa04fe99b72524263ed07bfb5030f6b1"
 
-  url "https://github.com/kageroumado/phosphene/releases/download/v#{version}/Phosphene-#{version}.dmg",
-      verified: "github.com/kageroumado/phosphene/"
+  url "https://github.com/kageroumado/phosphene/releases/download/v#{version}/Phosphene-#{version}.dmg"
   name "Phosphene"
   desc "Custom video wallpapers for the desktop and lock screen"
   homepage "https://kagerou.glass/phosphene/"
