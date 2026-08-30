@@ -2,8 +2,7 @@ cask "mellel" do
   version "6.7.1,67102"
   sha256 "c29a8f555a43b504fa4ecbfa186cfa526ac29a1f1a67a6b25d48014f4af7400d"
 
-  url "https://d1riogbqt3a9uw.cloudfront.net/mellel_#{version.csv.second}.dmg",
-      verified: "d1riogbqt3a9uw.cloudfront.net/"
+  url "https://d1riogbqt3a9uw.cloudfront.net/mellel_#{version.csv.second}.dmg"
   name "Mellel"
   desc "Advanced word processor built for long and complex documents"
   homepage "https://www.mellel.com/"
