@@ -8,7 +8,7 @@ cask "tabularis" do
   url "https://github.com/TabularisDB/tabularis/releases/download/v#{version}/tabularis_#{version}_#{arch}.dmg"
   name "Tabularis"
   desc "Lightweight database management tool"
-  homepage "https://github.com/TabularisDB/tabularis"
+  homepage "https://tabularis.dev/"
 
   livecheck do
     url :url
