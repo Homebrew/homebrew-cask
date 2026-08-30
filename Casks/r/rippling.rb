@@ -2,8 +2,7 @@ cask "rippling" do
   version "3.6.53"
   sha256 "c0ab5768116e9020a8bc4668b32247b892f39be6e6397e81d383053992707716"
 
-  url "https://public-assets.ripplingcdn.com/global/hardware-public/device_release/electron-installer/#{version}/macos/Rippling.dmg",
-      verified: "public-assets.ripplingcdn.com/"
+  url "https://public-assets.ripplingcdn.com/global/hardware-public/device_release/electron-installer/#{version}/macos/Rippling.dmg"
   name "Rippling"
   desc "MDM for Rippling"
   homepage "https://www.rippling.com/device-management"
