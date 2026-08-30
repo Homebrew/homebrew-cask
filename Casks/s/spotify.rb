@@ -4,8 +4,7 @@ cask "spotify" do
   version "1.2.98.301"
   sha256 :no_check
 
-  url "https://download.scdn.co/Spotify#{arch}.dmg",
-      verified: "download.scdn.co/"
+  url "https://download.scdn.co/Spotify#{arch}.dmg"
   name "Spotify"
   desc "Music streaming service"
   homepage "https://www.spotify.com/"
