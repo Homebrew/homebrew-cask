@@ -2,8 +2,7 @@ cask "biglybt" do
   version "4.1.0.0"
   sha256 "2e20642b6fda147ee7fd3e523235359355a07e753e5c7961e27d005a72753b0d"
 
-  url "https://github.com/BiglySoftware/BiglyBT/releases/download/v#{version}/GitHub_BiglyBT_Mac_Universal_Installer.dmg",
-      verified: "github.com/BiglySoftware/BiglyBT/"
+  url "https://github.com/BiglySoftware/BiglyBT/releases/download/v#{version}/GitHub_BiglyBT_Mac_Universal_Installer.dmg"
   name "biglybt"
   desc "Bittorrent client based on the Azureus open source project"
   homepage "https://www.biglybt.com/"
