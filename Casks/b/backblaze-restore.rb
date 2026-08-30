@@ -2,8 +2,7 @@ cask "backblaze-restore" do
   version "10.0.2.1048"
   sha256 :no_check
 
-  url "https://f000.backblazeb2.com/file/b2-computer-backup-public/macos/standalone-restore/backblaze_restore.dmg",
-      verified: "f000.backblazeb2.com/file/b2-computer-backup-public/"
+  url "https://f000.backblazeb2.com/file/b2-computer-backup-public/macos/standalone-restore/backblaze_restore.dmg"
   name "Backblaze Restore"
   desc "Computer backup restore client"
   homepage "https://backblaze.com/"
