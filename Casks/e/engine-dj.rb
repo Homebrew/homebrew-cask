@@ -2,8 +2,7 @@ cask "engine-dj" do
   version "5.0.0,68214e98c667298c,12d16a34d4"
   sha256 "fc53b91de204813ea0d9d1922bdd053f8b3922648e4fddf9770f6c836410fd76"
 
-  url "https://public.inmusiccdn.com/Engine/#{version.csv.first}/RELEASE/#{version.csv.second}/Engine_DJ_#{version.csv.first}_#{version.csv.third}_Setup.dmg",
-      verified: "public.inmusiccdn.com/Engine/"
+  url "https://public.inmusiccdn.com/Engine/#{version.csv.first}/RELEASE/#{version.csv.second}/Engine_DJ_#{version.csv.first}_#{version.csv.third}_Setup.dmg"
   name "Engine DJ Desktop"
   desc "DJ software suite"
   homepage "https://enginedj.com/"
