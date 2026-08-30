@@ -2,8 +2,7 @@ cask "distroav" do
   version "6.1.1"
   sha256 "119e88377a3920216ac2f9e29b174d45c43f855baed14c7b282e35378c0e06d3"
 
-  url "https://github.com/DistroAV/DistroAV/releases/download/#{version}/distroav-#{version}-macos-universal.pkg",
-      verified: "github.com/DistroAV/DistroAV/"
+  url "https://github.com/DistroAV/DistroAV/releases/download/#{version}/distroav-#{version}-macos-universal.pkg"
   name "DistroAV"
   desc "NDI integration for OBS Studio"
   homepage "https://distroav.org/"
