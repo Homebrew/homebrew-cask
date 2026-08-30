@@ -2,8 +2,7 @@ cask "redquits" do
   version "2.0"
   sha256 :no_check
 
-  url "https://redquits.s3.amazonaws.com/RedQuits_v#{version.major}.pkg",
-      verified: "redquits.s3.amazonaws.com/"
+  url "https://redquits.s3.amazonaws.com/RedQuits_v#{version.major}.pkg"
   name "RedQuits"
   desc "Quit an app when closing the last window"
   homepage "http://carsten-mielke.com/redquits.html"
