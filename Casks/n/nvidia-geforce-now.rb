@@ -1,5 +1,5 @@
 cask "nvidia-geforce-now" do
-  version "2.0.87.134"
+  version "2.0.88.129"
   sha256 :no_check
 
   url "https://download.nvidia.com/gfnpc/GeForceNOW-release.dmg"
@@ -19,7 +19,8 @@ cask "nvidia-geforce-now" do
 
   app "GeForceNOW.app"
 
-  uninstall signal: ["QUIT", "com.nvidia.nvcontainer"]
+  uninstall quit:   "com.nvidia.gfnpc.mall",
+            signal: ["QUIT", "com.nvidia.nvcontainer"]
 
   zap trash: [
         "~/Library/Application Support/CrashReporter/GeForceNOWContainer_*.plist",
