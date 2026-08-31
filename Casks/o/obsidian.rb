@@ -3,10 +3,12 @@ cask "obsidian" do
   os macos: "dmg", linux: "AppImage"
 
   version "1.13.7"
+  sha256 arm:          "05daa54f5e1a4458f75da29f8faaa17e8e37ae16998432537f674c626db99bce",
+         intel:        "05daa54f5e1a4458f75da29f8faaa17e8e37ae16998432537f674c626db99bce",
+         arm64_linux:  "e286fd2bb2a5d346a35a577bd764c73fd5537dddec2b99a1a3e5e35974085203",
+         x86_64_linux: "e0d8e0a611624de8c9c7dcd8a9e648279fb0a0d552faa1312b7e4f3a5fa72663"
 
   on_macos do
-    sha256 "05daa54f5e1a4458f75da29f8faaa17e8e37ae16998432537f674c626db99bce"
-
     depends_on macos: :monterey
 
     app "Obsidian.app"
@@ -20,9 +22,6 @@ cask "obsidian" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "e286fd2bb2a5d346a35a577bd764c73fd5537dddec2b99a1a3e5e35974085203",
-           x86_64_linux: "e0d8e0a611624de8c9c7dcd8a9e648279fb0a0d552faa1312b7e4f3a5fa72663"
-
     app_image "Obsidian-#{version}#{arch}.AppImage", target: "Obsidian.AppImage"
   end
 
