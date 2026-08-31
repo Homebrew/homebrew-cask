@@ -2,9 +2,9 @@ cask "remnote" do
   arch arm: "-arm64"
   livecheck_arch = on_arch_conditional arm: "_m1"
 
-  version "1.28.0"
-  sha256 arm:   "780701321011f383d957b599f69307f8f9138942627efab71d851c03413c806d",
-         intel: "e3226bc1ad6cdeea8945e6e77eeef939c1ca68e71d1b26cd4a579974bc876e0d"
+  version "1.28.9"
+  sha256 arm:   "cc8913499b50a8b6c943219921c9ab16fcdac3d537d56aa3c761a411f7808ee4",
+         intel: "85171bc385852c96eb523defa6d1afc6c460d06b83a602b07804418a31045e1d"
 
   url "https://download2.remnote.io/remnote-desktop2/RemNote-#{version}#{arch}-mac.zip"
   name "RemNote"
