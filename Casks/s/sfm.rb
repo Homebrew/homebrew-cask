@@ -1,6 +1,6 @@
 cask "sfm" do
-  version "1.13.21"
-  sha256 "63caab580829a120e849f290d2b0c8b9d777736242ed36036156b388e73ac975"
+  version "1.14.0"
+  sha256 "531de8042129d06ff89a846ec5181b56a8d62414b87584826c2b23fb0a0a813e"
 
   url "https://github.com/SagerNet/sing-box/releases/download/v#{version}/SFM-#{version}-Universal.pkg",
       verified: "github.com/SagerNet/sing-box/"
@@ -12,9 +12,9 @@ cask "sfm" do
 
   pkg "SFM-#{version}-Universal.pkg"
 
-  uninstall quit:       "io.nekohasekai.sfavt.standalone",
+  uninstall quit:       "io.nekohasekai.sfamt.standalone",
             login_item: "SFM",
-            pkgutil:    "io.nekohasekai.sfavt.standalone"
+            pkgutil:    "io.nekohasekai.sfamt.standalone"
 
   zap trash: [
     "~/Library/Application Scripts/287TTNZF8L.io.nekohasekai.sfavt",
