@@ -5,10 +5,10 @@ cask "keyclu" do
   url "https://github.com/Anze/KeyCluCask/releases/download/v#{version}/KeyClu.zip"
   name "KeyClu"
   desc "Find shortcuts for any installed application"
-  homepage "https://sergii.tatarenkov.name/keyclu/support/"
+  homepage "https://sergii.tatarenkov.name/apps/keyclu/"
 
   livecheck do
-    url "https://sergii.tatarenkov.name/keyclu/appcast.xml"
+    url "https://sergii.tatarenkov.name/apps/keyclu/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
