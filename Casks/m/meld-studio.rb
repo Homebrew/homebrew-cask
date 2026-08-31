@@ -1,5 +1,5 @@
 cask "meld-studio" do
-  version "0.10.5.3"
+  version "0.10.6.1"
   sha256 :no_check
 
   url "https://packages.streamwithmeld.com/MeldStudioInstaller.dmg"
@@ -18,17 +18,23 @@ cask "meld-studio" do
   app "Meld Studio.app"
 
   uninstall launchctl: [
-    "co.meldstudio.keystone.agent",
-    "co.meldstudio.keystone.xpcservice",
-    "co.meldstudio.MeldStudioUpdater.wake",
-  ]
+              "co.meldstudio.keystone.agent",
+              "co.meldstudio.keystone.xpcservice",
+              "co.meldstudio.MeldStudioUpdater.wake",
+            ],
+            quit:      "co.meldstudio.MeldStudio"
 
   zap trash: [
     "~/Library/Application Support/MeldStudio",
+    "~/Library/Caches/co.meldstudio.MeldStudio",
+    "~/Library/Caches/Meld Studio",
+    "~/Library/HTTPStorages/co.meldstudio.MeldStudio.binarycookies",
     "~/Library/HTTPStorages/co.meldstudio.MeldStudioUpdater",
     "~/Library/LaunchAgents/co.meldstudio.keystone.agent.plist",
     "~/Library/LaunchAgents/co.meldstudio.keystone.xpcservice.plist",
     "~/Library/LaunchAgents/co.meldstudio.MeldStudioUpdater.wake.plist",
+    "~/Library/Meld Studio",
     "~/Library/MeldStudio",
+    "~/Library/WebKit/co.meldstudio.MeldStudio",
   ]
 end
