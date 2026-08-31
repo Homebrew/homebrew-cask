@@ -44,7 +44,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install Python packages
-        run: pip3 install gftools html2text jinja2 protobuf
+        run: pip3 install gfmetadata html2text jinja2 protobuf
 
       - name: Configure Git user
         id: git-user-config
