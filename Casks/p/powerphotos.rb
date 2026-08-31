@@ -18,7 +18,7 @@ cask "powerphotos" do
     end
   end
   on_sonoma :or_newer do
-    version "3.4.4"
+    version "3.4.5"
     sha256 :no_check
 
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
