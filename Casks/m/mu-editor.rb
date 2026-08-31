@@ -9,6 +9,7 @@ cask "mu-editor" do
   homepage "https://codewith.mu/"
 
   deprecate! date: "2025-08-31", because: :unmaintained
+  disable! date: "2026-08-31", because: :unmaintained
 
   depends_on :macos
 
