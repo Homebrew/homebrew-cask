@@ -1,6 +1,6 @@
 cask "gyazo" do
-  version "11.0.0"
-  sha256 "c670af8a5781795d39e7c02a1a6a65e3454925cd63c09e1143fc4cc650aaad66"
+  version "11.1.0"
+  sha256 "9386f93eba4991847850bc1935a53d0337c97713c5a6114c70c9a292aa3dd02e"
 
   url "https://files.gyazo.com/setup/Gyazo-#{version}.pkg"
   name "Nota Gyazo GIF"
@@ -13,6 +13,7 @@ cask "gyazo" do
   end
 
   depends_on macos: :big_sur
+  depends_on maximum_macos: :sequoia
 
   pkg "Gyazo-#{version}.pkg"
 
