@@ -32,6 +32,8 @@ cask "macpilot" do
 
   app "MacPilot.app"
 
+  uninstall quit: "com.koingosw.MacPilot"
+
   zap trash: [
     "~/Library/Application Support/com.koingosw.MacPilot",
     "~/Library/Caches/com.koingosw.MacPilot",
