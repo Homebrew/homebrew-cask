@@ -41,14 +41,8 @@ class FontCask:
 
 {% if files|length == 1 %}
   url "https://github.com/google/fonts/raw/main/{{folder}}/{{files[0] | urlencode}}"
-      {%- if not 'github.com/' in homepage %},
-      verified: "github.com/google/fonts/"
-      {%- endif +%}
 {% else %}
   url "https://github.com/google/fonts.git",
-      {%- if not 'github.com/' in homepage +%}
-      verified:  "github.com/google/fonts",
-      {%- endif +%}
       branch:    "main",
       only_path: "{{folder}}"
 {% endif %}
