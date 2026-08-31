@@ -18,11 +18,14 @@ cask "neofinder" do
 
   app "NeoFinder.app"
 
+  uninstall quit: "de.wfs-apps.neofinder"
+
   zap trash: [
     "~/Library/Application Support/CrashReporter/NeoFinder_*",
     "~/Library/Application Support/NeoFinder",
     "~/Library/Caches/de.wfs-apps.neofinder",
     "~/Library/Caches/de.wfs-apps.neofinder.quicklaunch.cache",
+    "~/Library/Preferences/de.wfs-apps.neofinder.plist",
     "~/Library/Preferences/de.wfs-apps.neofinder.plist",
     "~/Library/Preferences/de.wfs-apps.neofinder.statusBar.plist",
   ]
