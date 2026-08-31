@@ -12,9 +12,9 @@ cask "sfm" do
 
   pkg "SFM-#{version}-Universal.pkg"
 
-  uninstall quit:       "io.nekohasekai.sfavt.standalone",
+  uninstall quit:       "io.nekohasekai.sfamt.standalone",
             login_item: "SFM",
-            pkgutil:    "io.nekohasekai.sfavt.standalone"
+            pkgutil:    "io.nekohasekai.sfamt.standalone"
 
   zap trash: [
     "~/Library/Application Scripts/287TTNZF8L.io.nekohasekai.sfavt",
