@@ -5,24 +5,14 @@ cask "gimp" do
   name_start = on_system_conditional macos: "gimp", linux: "GIMP"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
+  version "3.2.4"
+  sha256 arm:          "294c016dca7795999129a38b462f80fac3c13cb963e6de9d04eeb5d6e519392b",
+         intel:        "85214a388687718d30169d88b22794d6b0a89849bcc7aa456f4afb83c1326be8",
+         arm64_linux:  "7cb6f5c2b5a693302beb3e41c987c47562ff146eed4125b19ecf414ba6dca0ab",
+         x86_64_linux: "f1ce6dc671ef1c4aad87a0db9d7462e8ca9c0b5f899456337803c6ba32d0babe"
+
   on_macos do
-    version "3.2.4"
-    sha256 arm:   "294c016dca7795999129a38b462f80fac3c13cb963e6de9d04eeb5d6e519392b",
-           intel: "85214a388687718d30169d88b22794d6b0a89849bcc7aa456f4afb83c1326be8"
-
-    livecheck do
-      url "https://www.gimp.org/gimp_versions.json"
-      strategy :json do |json|
-        json["STABLE"]&.map do |release|
-          release[livecheck_os]&.map do |build|
-            next unless build["filename"]&.match?(/#{arch}/i)
-            next release["version"] unless build["revision"]
-
-            "#{release["version"]},#{build["revision"]}"
-          end
-        end&.flatten
-      end
-    end
+    depends_on macos: :big_sur
 
     app "GIMP.app"
     command_wrapper "gimp", executable: "#{appdir}/GIMP.app/Contents/MacOS/gimp"
@@ -34,24 +24,6 @@ cask "gimp" do
     ]
   end
   on_linux do
-    version "3.2.4"
-    sha256 arm64_linux:  "7cb6f5c2b5a693302beb3e41c987c47562ff146eed4125b19ecf414ba6dca0ab",
-           x86_64_linux: "f1ce6dc671ef1c4aad87a0db9d7462e8ca9c0b5f899456337803c6ba32d0babe"
-
-    livecheck do
-      url "https://www.gimp.org/gimp_versions.json"
-      strategy :json do |json|
-        json["STABLE"]&.map do |release|
-          release[livecheck_os]&.map do |build|
-            next unless build["filename"]&.match?(/#{arch}/i)
-            next release["version"] unless build["revision"]
-
-            "#{release["version"]},#{build["revision"]}"
-          end
-        end&.flatten
-      end
-    end
-
     app_image "GIMP-#{version.csv.first}-#{arch}#{"-#{version.csv.second}" if version.csv.second}.AppImage",
               target: "GIMP.AppImage"
 
@@ -63,6 +35,20 @@ cask "gimp" do
   name "GNU Image Manipulation Program"
   desc "Free and open-source image editor"
   homepage "https://www.gimp.org/"
+
+  livecheck do
+    url "https://www.gimp.org/gimp_versions.json"
+    strategy :json do |json|
+      json["STABLE"]&.map do |release|
+        release[livecheck_os]&.map do |build|
+          next unless build["filename"]&.match?(/#{arch}/i)
+          next release["version"] unless build["revision"]
+
+          "#{release["version"]},#{build["revision"]}"
+        end
+      end&.flatten
+    end
+  end
 
   conflicts_with cask: "gimp@dev"
 end
