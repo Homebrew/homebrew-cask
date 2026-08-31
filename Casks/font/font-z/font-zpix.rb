@@ -1,6 +1,6 @@
 cask "font-zpix" do
-  version "3.1.11"
-  sha256 "ed39f02845e8c0b8cdba275432250fb03e8528826f058bc151753bd62b44b744"
+  version "3.2.0"
+  sha256 "fb18664ac66d1c6f09c2663b4c1a049f9a00e678f12bfc1c080679aa8e4951d4"
 
   url "https://github.com/SolidZORO/zpix-pixel-font/releases/download/v#{version}/zpix.ttf"
   name "Zpix"
