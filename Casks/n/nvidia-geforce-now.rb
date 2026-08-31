@@ -19,7 +19,8 @@ cask "nvidia-geforce-now" do
 
   app "GeForceNOW.app"
 
-  uninstall signal: ["QUIT", "com.nvidia.nvcontainer"]
+  uninstall quit:   "com.nvidia.gfnpc.mall",
+            signal: ["QUIT", "com.nvidia.nvcontainer"]
 
   zap trash: [
         "~/Library/Application Support/CrashReporter/GeForceNOWContainer_*.plist",
