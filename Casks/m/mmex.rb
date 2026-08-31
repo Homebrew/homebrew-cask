@@ -16,6 +16,8 @@ cask "mmex" do
 
   app "mmex.app"
 
+  uninstall quit: "org.moneymanagerex.mmex"
+
   zap trash: [
     "~/Library/Application Support/MoneyManagerEx",
     "~/Library/Caches/org.moneymanagerex.mmex",
