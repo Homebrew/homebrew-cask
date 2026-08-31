@@ -10,7 +10,7 @@ cask "sidequest" do
   desc "Virtual reality content platform"
   homepage "https://sidequestvr.com/"
 
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "SideQuest.app"
 
