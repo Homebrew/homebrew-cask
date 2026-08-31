@@ -3,11 +3,11 @@ cask "headlamp" do
   os macos: "mac", linux: "linux"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "0.44.0"
-  sha256 arm:          "b9324923af6b7a4ccf6210bbf0a5cc907b885fea94f6ded7b9674f5024762e74",
-         intel:        "b4e88ee479382b469803fed0c5e60031edb9ad786e29b30bb0b9e7bb719ac59b",
-         arm64_linux:  "4b86203aa3161328acb92eb576029c10984ef273b6e4dd8b2ad9791301475f31",
-         x86_64_linux: "c34c0c0a1300910ad9ae8590a87e6d2a1247e33d9e70c752ec02f1a21266122c"
+  version "0.45.0"
+  sha256 arm:          "4f3e7de1c048f8dbe84bfd6c18ac61d0aafd4d909278ca44648d4562c80995f3",
+         intel:        "f8e402244aabc99f02a682e67ae2dc01aa06dc3dbf41de6c5bbcad1da1093021",
+         arm64_linux:  "831f13c4c04571de5f977ae6f10d29a300324290afb30c48a5c54b071d2e83c1",
+         x86_64_linux: "3c50102b99ffed5e802533187df3458efe8627ded5e790f490e54be1b4094765"
 
   on_macos do
     depends_on macos: :monterey

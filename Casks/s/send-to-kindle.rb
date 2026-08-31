@@ -2,8 +2,7 @@ cask "send-to-kindle" do
   version "1.1.1.259"
   sha256 :no_check
 
-  url "https://sendtokindle.s3.amazonaws.com/SendToKindleForMac-installer.pkg",
-      verified: "sendtokindle.s3.amazonaws.com/"
+  url "https://sendtokindle.s3.amazonaws.com/SendToKindleForMac-installer.pkg"
   name "Send to Kindle"
   desc "Tool for sending personal documents to Kindles from Macs"
   homepage "https://www.amazon.com/gp/sendtokindle/mac"

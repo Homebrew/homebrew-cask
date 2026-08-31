@@ -2,10 +2,10 @@ cask "unity-hub@beta" do
   arch arm: "arm64", intel: on_system_conditional(macos: "x64", linux: "x86_64")
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "3.21.0-beta.1"
-  sha256 arm:          "fffeedaa4f66b0d6b60b3678da121da5a1d5dc79eb9cb095bb2f9e2ffbb09ba3",
-         intel:        "f3342917ba8a07dd4a16091bd727ac3c612b9c6aa05219a3a2ccf01cdd92ff37",
-         x86_64_linux: "6b7fecace6d67d730ee72c87bcd51fc40dad0ef3cd5c2dd7bf220983584fc160"
+  version "3.21.1-beta.1"
+  sha256 arm:          "6b4e3819dfe152da56b5fba9499b6120e56256651ab18840dd829d4ce59381d8",
+         intel:        "f30b028ce25641ef0f4efc9e55017f73c54b81ac79a91374c7547232a5663ae2",
+         x86_64_linux: "d8ae42330805caf59da00778c2d941bfa14a41df0b3d1d584fc11fe8052e015d"
 
   on_macos do
     depends_on macos: :monterey

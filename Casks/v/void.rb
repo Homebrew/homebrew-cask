@@ -5,8 +5,7 @@ cask "void" do
   sha256 arm:   "fa066d553093c1c9b92e7cae0754c14cfa6e1cbdb958139a5b02569dd1d9e877",
          intel: "10f0a93722e3eacfd34d59bb7ecdd3300cc4493cf8bc7771be7db4a9678881f0"
 
-  url "https://github.com/voideditor/binaries/releases/download/#{version}/Void.#{arch}.#{version}.dmg",
-      verified: "github.com/voideditor/"
+  url "https://github.com/voideditor/binaries/releases/download/#{version}/Void.#{arch}.#{version}.dmg"
   name "Void"
   desc "AI code editor"
   homepage "https://voideditor.com/"

@@ -1,12 +1,11 @@
 cask "robloxstudio" do
   arch arm: "arm64/"
 
-  version "0.734.0.7340915,965ebff6c2694dd6"
-  sha256 arm:   "c5913fe6dc589d4f0f6d70854816c3544a5d5f305757b816d9860f5af912936b",
-         intel: "719c266b2ade23aa1de9bd831327a7b8a682cbc819e01d928ec7c571578f9fcc"
+  version "0.736.0.7361346,e1e3a8137d8040ef"
+  sha256 arm:   "c43c67711ea77d67a8ce5950ce8d08ec7bc49900a4788b89336bceda5a0dbbe3",
+         intel: "c3ec7186d45eaa5ad2c75cc0f87d3207c5ca04911dbf1f4fc913654fc7184c63"
 
-  url "https://setup.rbxcdn.com/mac/#{arch}version-#{version.csv.second}-RobloxStudioApp.zip",
-      verified: "setup.rbxcdn.com/"
+  url "https://setup.rbxcdn.com/mac/#{arch}version-#{version.csv.second}-RobloxStudioApp.zip"
   name "Roblox Studio"
   desc "Roblox IDE to build your experiences"
   homepage "https://create.roblox.com/"
@@ -27,7 +26,7 @@ cask "robloxstudio" do
 
   app "RobloxStudio.app"
 
-  uninstall quit: "com.roblox.RobloxStudio"
+  uninstall quit: "com.Roblox.RobloxStudio"
 
   zap trash: [
     "~/Library/Preferences/com.roblox.RobloxStudio.plist",

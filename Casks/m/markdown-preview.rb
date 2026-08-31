@@ -1,9 +1,8 @@
 cask "markdown-preview" do
-  version "0.0.47"
-  sha256 "1df706fcaef17993bf2ebad7e9f9197054a7e6a0b2cea84ca830b92a531e7f42"
+  version "0.0.51"
+  sha256 "a8664bb266c11588bada09cffd66a94cd496c7df15eb2e3c90c331ae854a3479"
 
-  url "https://github.com/pluk-inc/markdown-preview/releases/download/v#{version}/Markdown-Preview.dmg",
-      verified: "github.com/pluk-inc/markdown-preview/"
+  url "https://github.com/pluk-inc/markdown-preview/releases/download/v#{version}/Markdown-Preview.dmg"
   name "Markdown Preview"
   desc "Markdown previewer with bundled Quick Look extension"
   homepage "https://markdownpreview.app/"

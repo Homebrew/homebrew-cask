@@ -5,8 +5,7 @@ cask "restfox" do
   sha256 arm:   "09d35033e323a9bae998643116dfbc391bcdf6f2128b6c98224c604e07982c56",
          intel: "f5b45cbf3de8125edaee7c3d61442173183ed869c116d0672171c4f9edf03e08"
 
-  url "https://github.com/flawiddsouza/Restfox/releases/download/v#{version}/Restfox-darwin-#{arch}-#{version}.zip",
-      verified: "github.com/flawiddsouza/Restfox/releases/download/"
+  url "https://github.com/flawiddsouza/Restfox/releases/download/v#{version}/Restfox-darwin-#{arch}-#{version}.zip"
   name "Restfox"
   desc "Offline-first web HTTP client"
   homepage "https://restfox.dev/"

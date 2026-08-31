@@ -2,14 +2,7 @@ cask "mysql-shell" do
   arch arm: "arm64", intel: "x86-64bit"
 
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "8.0.27,11-x86-64bit"
-      sha256 "3214e9d35b4950cd326b0bef3b9c582cf01957fbf64cebce4b7bb85b7e38add9"
-
-      url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}.dmg",
-          user_agent: :curl
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "8.0.29,12"
       sha256 arm:   "7095eaa8c67a8952101e0e6173645ac4377b1c06df5e8f87ceddea418d79b5a6",
              intel: "971e88d93f477437b7b6507408c0c31183f36af7922b7c2f6570ec314779ad20"
@@ -31,9 +24,9 @@ cask "mysql-shell" do
     end
   end
   on_ventura :or_newer do
-    version "26.7.0,15"
-    sha256 arm:   "13e59a61b92747a293e921737600e97914c2dd60624bd8ec5d1b59daee3496a1",
-           intel: "04576701ac97346b55e8c95d04ae2fc7c74deba40a5df2435a304a730fd8136a"
+    version "26.7.1,15"
+    sha256 arm:   "67078d30c3c4f814f300e69ad7d4a3a0e99e39723bdadb0423ac906116642cfd",
+           intel: "f029ce63ff5d8c77ef2fdcda29deb848ab8fb0bc02ee4613e5b810d33fbb1aff"
 
     url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version.csv.first}-macos#{version.csv.second}-#{arch}.dmg",
         user_agent: :curl

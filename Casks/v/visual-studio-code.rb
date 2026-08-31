@@ -1,16 +1,7 @@
 cask "visual-studio-code" do
   arch arm: "darwin-arm64", intel: "darwin"
 
-  on_catalina :or_older do
-    version "1.97.2"
-    sha256 arm:   "567ba4fae5545586a0bff02eea263d59873fcf488368a9a9ccf3d4c22dfa8ebc",
-           intel: "cfe48cf7bce34830cb7a20ee7b5e8fbe575fe95a47ef49f62dce8ccf3087dd89"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "1.106.3"
     sha256 arm:   "35dd438808dde1dd1f65490ffe7713ed64102324c0809efbec0b4eb2809b218b",
            intel: "c41872149a205f3a3be3e5d3a8f04920407a0762531e607f78dc93f4d4813cda"
@@ -20,9 +11,9 @@ cask "visual-studio-code" do
     end
   end
   on_monterey :or_newer do
-    version "1.133.0"
-    sha256 arm:   "2b13ff21f640af3b1be9cf2c267fd5f0175f67004ec6e1263535600f382bf42d",
-           intel: "8fa12ce73e5c3ea5fe3927227047ac483a0ced4f9048cdc8bae7332761c3e415"
+    version "1.135.0"
+    sha256 arm:   "c9a39179c54b5b9add0307613e4c66f443672456c62d43fd68953f8aa10e7432",
+           intel: "6d0d042cc6151ebd39ad833bcc0dd362a612b90edaad9a94a7f8339e6233d1e5"
 
     livecheck do
       url "https://update.code.visualstudio.com/api/update/#{arch}/stable/latest"

@@ -3,7 +3,6 @@ cask "font-ko-pub-batang" do
   sha256 :no_check
 
   url "https://github.com/google/fonts.git",
-      verified:  "github.com/google/fonts",
       branch:    "main",
       only_path: "ofl/kopubbatang"
   name "Ko Pub Batang"

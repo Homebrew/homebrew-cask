@@ -1,6 +1,6 @@
 cask "whodb" do
-  version "0.125.0"
-  sha256 "79f4707dfef1d7955226032635c9bce790007bc9ff03fae437e0e4efa4030933"
+  version "0.127.0"
+  sha256 "91a50e027465e2e6e4a38481a14426cc672fdfdf3abdf3f3df4596c501c80605"
 
   url "https://github.com/clidey/whodb/releases/download/#{version}/whodb.dmg"
   name "WhoDB"

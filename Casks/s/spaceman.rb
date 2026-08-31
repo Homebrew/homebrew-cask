@@ -2,8 +2,7 @@ cask "spaceman" do
   version "1.0"
   sha256 "0d8b6005609fc274da11ca2e0f5b327ce4d998be88dbb670d9b3428de5995ae0"
 
-  url "https://s3.amazonaws.com/dev.jaysce.spaceman/Spaceman%20#{version}.dmg",
-      verified: "s3.amazonaws.com/dev.jaysce.spaceman/"
+  url "https://s3.amazonaws.com/dev.jaysce.spaceman/Spaceman%20#{version}.dmg"
   name "Spaceman"
   desc "View Spaces / Virtual Desktops in the menu bar"
   homepage "https://www.jaysce.dev/projects/spaceman"

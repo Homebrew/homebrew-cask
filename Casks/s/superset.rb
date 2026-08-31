@@ -1,12 +1,11 @@
 cask "superset" do
   arch arm: "-arm64"
 
-  version "1.21.0"
-  sha256 arm:   "7ea5e61b8cdd3297b9217d5dcb910ccca6ef680893edf63fed251c25bdfb4bb5",
-         intel: "46ac89008b4d81baee66346bf7e4586707aef19752dd44e728934f381bf94daf"
+  version "1.25.1"
+  sha256 arm:   "8459b48bcdebae1c9aba9d4a6e45626a666c74f5f8851a1cffc2142b4bbca5f1",
+         intel: "376c38cd9d703d2b2496f7f5d883d1f14a604da5e57604802a4f20ceb1bc8f98"
 
-  url "https://github.com/superset-sh/superset/releases/download/desktop-v#{version}/Superset-#{version}#{arch}.dmg",
-      verified: "github.com/superset-sh/superset/"
+  url "https://github.com/superset-sh/superset/releases/download/desktop-v#{version}/Superset-#{version}#{arch}.dmg"
   name "Superset"
   desc "Terminal for orchestrating agents"
   homepage "https://superset.sh/"

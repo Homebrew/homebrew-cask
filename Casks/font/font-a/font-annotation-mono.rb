@@ -2,8 +2,7 @@ cask "font-annotation-mono" do
   version "0.4"
   sha256 "c0a8c1fa9f8dbf6a0ffadf08395244dda9b3623b7f9a147ec277e23afc7e4e7d"
 
-  url "https://github.com/qwerasd205/AnnotationMono/releases/download/v#{version}/AnnotationMono_v#{version}.zip",
-      verified: "github.com/qwerasd205/AnnotationMono/"
+  url "https://github.com/qwerasd205/AnnotationMono/releases/download/v#{version}/AnnotationMono_v#{version}.zip"
   name "Annotation Mono"
   homepage "https://qwerasd205.github.io/AnnotationMono/"
 

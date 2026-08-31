@@ -5,8 +5,8 @@ cask "zettlr" do
   version "4.7.0"
   sha256 arm:          "e03e3701557707f6fa50520f4c03f8345cd65206d2810bf5ae433ef40a7ed8f8",
          intel:        "9bb4300edafb239bf4c1e383637bfd803012e96b83eccfb59d3418c7f3ffc1a7",
-         x86_64_linux: "9758e9659eaf02599396ed26d74eb069e55068cd6665be700b54dcbf6212d047",
-         arm64_linux:  "d4aa0b1536f06eba24f2b8b0c4e6aa651068b46f367de407bce65f8dd058e3cf"
+         arm64_linux:  "d4aa0b1536f06eba24f2b8b0c4e6aa651068b46f367de407bce65f8dd058e3cf",
+         x86_64_linux: "9758e9659eaf02599396ed26d74eb069e55068cd6665be700b54dcbf6212d047"
 
   on_macos do
     depends_on macos: :monterey

@@ -1,5 +1,5 @@
 cask "google-chrome" do
-  version "151.0.7922.138"
+  version "152.0.7977.65"
   sha256 :no_check
 
   url "https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg"
@@ -7,10 +7,14 @@ cask "google-chrome" do
   desc "Web browser"
   homepage "https://www.google.com/chrome/"
 
+  # The stable channel serves several releases at once and the highest version
+  # is usually a staged rollout to a fraction of users, so we only work with
+  # the release that has fully rolled out (`fraction=1`), as that's what the
+  # download URL provides.
   livecheck do
-    url :url
-    strategy :extract_plist do |items|
-      items["com.google.Chrome"]&.short_version
+    url "https://versionhistory.googleapis.com/v1/chrome/platforms/mac/channels/stable/versions/all/releases?filter=endtime%3Dnone,fraction%3D1"
+    strategy :json do |json|
+      json["releases"]&.map { |release| release["version"] }
     end
   end
 

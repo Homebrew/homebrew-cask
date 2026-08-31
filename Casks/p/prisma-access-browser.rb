@@ -1,9 +1,8 @@
 cask "prisma-access-browser" do
-  version "151.26.4.138,2f0fcec2"
-  sha256 "2280de89716a984aa00e0e59b202ded9caf04082ffd2bed196a90261231edb55"
+  version "152.8.3.65,dab55724"
+  sha256 "45d4d1d03e43303ea8eaf2c195f7c98eb483a58addeb269da2a436cc209c4427"
 
-  url "https://updates.talon-sec.com/releases/Prisma%20Access%20Browser/mac/packaged/universal/Prisma%20Access%20Browser-#{version.csv.first}-#{version.csv.second}.pkg",
-      verified: "updates.talon-sec.com/"
+  url "https://updates.talon-sec.com/releases/Prisma%20Access%20Browser/mac/packaged/universal/Prisma%20Access%20Browser-#{version.csv.first}-#{version.csv.second}.pkg"
   name "Prisma Access Browser"
   desc "Secure enterprise browser with built-in threat and data protection"
   homepage "https://get.pabrowser.com/welcome"

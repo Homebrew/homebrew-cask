@@ -2,8 +2,7 @@ cask "sogouinput" do
   version "624d"
   sha256 "a561e6a20e4b9e350ea79a8894408c038427f93b9ba457d424f7bd46a4ef060e"
 
-  url "https://ime.gtimg.com/pc/sogou_mac_#{version}.zip",
-      verified: "ime.gtimg.com/pc/"
+  url "https://ime.gtimg.com/pc/sogou_mac_#{version}.zip"
   name "Sogou Input Method"
   name "搜狗输入法"
   desc "Input method supporting full and double spelling"

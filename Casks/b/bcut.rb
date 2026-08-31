@@ -11,8 +11,7 @@ cask "bcut" do
     sha256 "457d27e80e1862d317423659597614ceacdc63b4542554ceabab6bdef97fe3ba"
   end
 
-  url "https://boss.hdslb.com/bcut_pc_pkg/static/#{version.csv.third}/BCUT-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg",
-      verified: "boss.hdslb.com/"
+  url "https://boss.hdslb.com/bcut_pc_pkg/static/#{version.csv.third}/BCUT-#{version.csv.first}-#{version.csv.second}-#{arch}.dmg"
   name "Bcut"
   name "必剪"
   desc "Professional video editing software by Bilibili"

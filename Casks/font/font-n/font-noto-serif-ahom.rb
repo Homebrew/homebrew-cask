@@ -2,8 +2,7 @@ cask "font-noto-serif-ahom" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notoserifahom/NotoSerifAhom-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notoserifahom/NotoSerifAhom-Regular.ttf"
   name "Noto Serif Ahom"
   homepage "https://fonts.google.com/specimen/Noto+Serif+Ahom"
 

@@ -1,6 +1,6 @@
 cask "font-fira-mono-nerd-font" do
-  version "3.5.0"
-  sha256 "d66833973f8331b7f8bfbf0cb1708765b86e1fe7fbe398c1c54f42f824969cc2"
+  version "3.5.1"
+  sha256 "e3112075b65d9a900ef6ca562c30f1b5eb1d1a928e97de7469962ac8c45e93d6"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/FiraMono.tar.xz"
   name "FiraMono Nerd Font (Fira)"

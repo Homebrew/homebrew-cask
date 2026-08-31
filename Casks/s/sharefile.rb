@@ -1,6 +1,6 @@
 cask "sharefile" do
-  version "26.04.20,20p795"
-  sha256 "079ab663c401f30e7a77fe243c320424c805acad642ccfc9325934866ac2f2f3"
+  version "26.08.06,06p1008"
+  sha256 "15239d2dfd790f312aceeaa4aee9e03831e78bd852c96409683b942f3d7f64a0"
 
   url "https://dl.sharefile.com/sfmac/ShareFile%20v#{version.csv.first}%20(#{version.csv.second}).dmg"
   name "ShareFile"

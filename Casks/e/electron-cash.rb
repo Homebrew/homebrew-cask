@@ -1,15 +1,18 @@
 cask "electron-cash" do
-  version "4.4.5"
-  sha256 "ea4e48d345b6466df90e4e007f7d564dd4df14857e020b401b8c8668e2a907e6"
+  arch arm: "silicon", intel: "intel"
 
-  url "https://electroncash.org/downloads/#{version.major_minor_patch}/mac/Electron-Cash-#{version}-macosx.dmg"
+  version "4.4.6"
+  sha256 arm:   "f76cb700e972179bba131e12eaeae72bde7fec9eb8c2eb904d7a87a8080578e2",
+         intel: "be1e4a94334d9b41187763334948c8d541f6cf6bf7fd80051870d1ef13bf2006"
+
+  url "https://electroncash.org/downloads/#{version.major_minor_patch}/mac/Electron-Cash-#{version}-macosx-#{arch}.dmg"
   name "Electron Cash"
   desc "Thin client for Bitcoin Cash"
   homepage "https://electroncash.org/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?Electron[._-]Cash[._-]v?(\d+(?:\.\d+)+)[._-]macosx\.dmg/i)
+    regex(/href=.*?Electron[._-]Cash[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]#{arch}\.dmg/i)
   end
 
   depends_on :macos
@@ -17,8 +20,4 @@ cask "electron-cash" do
   app "Electron-Cash.app"
 
   zap trash: "~/.electron-cash"
-
-  caveats do
-    requires_rosetta
-  end
 end

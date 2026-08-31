@@ -2,8 +2,7 @@ cask "nodebox" do
   version "3.1.0"
   sha256 "b46328edcd6fdf2f3f6dcbb87995d53b2eb4efeb6afaa36fff55943bd3873b4e"
 
-  url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.dmg",
-      verified: "github.com/nodebox/nodebox/"
+  url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.dmg"
   name "NodeBox"
   desc "Node-based data application for visualisation and generative design"
   homepage "https://www.nodebox.net/node/"

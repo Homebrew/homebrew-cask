@@ -1,12 +1,11 @@
 cask "nuclear" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.46.3"
-  sha256 arm:   "6621dad90f5780ed60fde36c34808ea010efaa78cb1c637b4a768cdae727686f",
-         intel: "c86919f1d3c1d7ce2565ba667040ec89008915aa344a03d3f68b3a96e1c1e1f0"
+  version "1.47.1"
+  sha256 arm:   "a775aa5ab00c6b9d38bbb85280808eb2ace62510e7ed419f1b14f7fecf88ec2e",
+         intel: "b316d666509eaded9573f820f30a0f6093b3311d267c9a3aa616b3011e5f3e28"
 
-  url "https://github.com/nukeop/nuclear/releases/download/player%40#{version}/Nuclear_#{version}_#{arch}.dmg",
-      verified: "github.com/nukeop/nuclear/"
+  url "https://github.com/nukeop/nuclear/releases/download/player%40#{version}/Nuclear_#{version}_#{arch}.dmg"
   name "Nuclear"
   desc "Streaming music player"
   homepage "https://nuclearplayer.com/"

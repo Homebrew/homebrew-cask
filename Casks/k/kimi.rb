@@ -1,9 +1,8 @@
 cask "kimi" do
-  version "3.1.8"
-  sha256 "3dfc53dbb658e4cb3a2e596df44829bd16c6f3f1a86063c52c8234d5ee48951b"
+  version "3.2.3"
+  sha256 "8d400811ff4edc2c995d13b8ba3bee6c712109e752adee23874b167590305970"
 
-  url "https://kimi-img.moonshot.cn/app/download/mac/kimi_#{version}.dmg",
-      verified: "kimi-img.moonshot.cn/"
+  url "https://kimi-img.moonshot.cn/app/download/mac/kimi_#{version}.dmg"
   name "kimi"
   desc "AI chat assistant from Moonshot"
   homepage "https://www.moonshot.ai/"

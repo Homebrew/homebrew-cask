@@ -2,8 +2,7 @@ cask "swift-publisher" do
   version "5.7.8"
   sha256 :no_check
 
-  url "https://belightsoft.s3.amazonaws.com/SwiftPublisher.dmg",
-      verified: "belightsoft.s3.amazonaws.com/"
+  url "https://belightsoft.s3.amazonaws.com/SwiftPublisher.dmg"
   name "Swift Publisher"
   desc "Page layout and desktop publishing application"
   homepage "https://www.swiftpublisher.com/"

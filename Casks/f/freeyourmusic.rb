@@ -5,8 +5,7 @@ cask "freeyourmusic" do
   sha256 arm:   "ca139dc304519de6165efd1460974da321bd148a372d2d22dfbf60498da81e04",
          intel: "c1d2e4a496c55735e5913eab510349148852c69ebf443e9fae03555a3d9f3101"
 
-  url "https://fym-app-production.s3.nl-ams.scw.cloud/FreeYourMusic-#{version}#{arch}.dmg",
-      verified: "fym-app-production.s3.nl-ams.scw.cloud/"
+  url "https://fym-app-production.s3.nl-ams.scw.cloud/FreeYourMusic-#{version}#{arch}.dmg"
   name "FreeYourMusic"
   desc "Move playlists, tracks, and albums between music platforms"
   homepage "https://freeyourmusic.com/"

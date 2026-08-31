@@ -2,8 +2,7 @@ cask "quakenotch" do
   version "3.3.2"
   sha256 "070185185f3f688d9c645cabc640018b98d47bb4f203ccb94b818b365a8714dd"
 
-  url "https://github.com/rohanrhu/QuakeNotch/releases/download/v#{version}/QuakeNotch.zip",
-      verified: "github.com/rohanrhu/QuakeNotch/"
+  url "https://github.com/rohanrhu/QuakeNotch/releases/download/v#{version}/QuakeNotch.zip"
   name "QuakeNotch"
   desc "MacBook Notch utility"
   homepage "https://quakenotch.com/"

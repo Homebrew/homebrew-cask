@@ -2,8 +2,7 @@ cask "geotag-photos-pro" do
   version "1.9.8"
   sha256 "2a4bf21074fb45f51d69f3ce3744a3510dff87ae8de39451040552df5e7d6017"
 
-  url "https://github.com/tappytaps/geotag-desktop-app/releases/download/v#{version}/Geotag-Photos-Pro-2-#{version}-universal.dmg",
-      verified: "github.com/tappytaps/geotag-desktop-app/"
+  url "https://github.com/tappytaps/geotag-desktop-app/releases/download/v#{version}/Geotag-Photos-Pro-2-#{version}-universal.dmg"
   name "Geotag Photos Pro"
   desc "Geotagging software"
   homepage "https://www.geotagphotos.net/"

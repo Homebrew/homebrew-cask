@@ -5,8 +5,7 @@ cask "codex-app" do
   sha256 arm:   "d948dc36b8358f5a2924b033fbf08398eea7860dc9e97cb5ab9b354490283a0a",
          intel: "5a8eb9bca0c021b994e56c93ef3502bdbc105975bcb83f99aef40f2ae56d48cc"
 
-  url "https://persistent.oaistatic.com/codex-app-prod/Codex-darwin-#{arch}-#{version}.zip",
-      verified: "persistent.oaistatic.com/codex-app-prod/"
+  url "https://persistent.oaistatic.com/codex-app-prod/Codex-darwin-#{arch}-#{version}.zip"
   name "Codex"
   desc "OpenAI's Codex desktop app for managing coding agents"
   homepage "https://openai.com/codex"

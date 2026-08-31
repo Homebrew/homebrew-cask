@@ -2,8 +2,7 @@ cask "viz" do
   version "2.3.3"
   sha256 "a08aeebb2e9ff76da5f36bfe1a3385811e58443f260f7d62b82e4d56dda0343f"
 
-  url "https://github.com/alienator88/Viz/releases/download/#{version}/Viz.zip",
-      verified: "github.com/alienator88/Viz/"
+  url "https://github.com/alienator88/Viz/releases/download/#{version}/Viz.zip"
   name "Viz"
   desc "Utility for extracting text from images, videos, QR codes and barcodes"
   homepage "https://itsalin.com/appInfo/?id=viz"

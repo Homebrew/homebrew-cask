@@ -1,9 +1,8 @@
 cask "windows-app" do
-  version "11.3.8"
-  sha256 "47052e0aba8d5b2ad9a5468349f72bee317b69c07300a40ccadefb96050b1251"
+  version "11.4.0"
+  sha256 "bdc7ccf2914960074d8eaeaa0b3661127bb3a29291f6832ab7dfdadf70c4171a"
 
-  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Windows_App_#{version}_installer.pkg",
-      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Windows_App_#{version}_installer.pkg"
   name "Windows App"
   desc "Connect to Windows"
   homepage "https://aka.ms/WindowsApp"
@@ -16,21 +15,16 @@ cask "windows-app" do
   conflicts_with cask: "microsoft-remote-desktop"
   depends_on macos: :sonoma
 
-  pkg "Windows_App_#{version}_installer.pkg"
+  pkg "Windows_App_#{version}_installer.pkg",
+      choices: [
+        {
+          "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_autoupdate_updater.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+      ]
 
-  uninstall launchctl: [
-              "com.microsoft.autoupdate.helper",
-              "com.microsoft.update.agent",
-            ],
-            quit:      [
-              "com.microsoft.autoupdate.fba",
-              "com.microsoft.autoupdate2",
-              "com.microsoft.errorreporting",
-            ],
-            pkgutil:   [
-              "com.microsoft.package.Microsoft_AutoUpdate.app",
-              "com.microsoft.rdc.macos",
-            ]
+  uninstall pkgutil: "com.microsoft.rdc.macos"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.rdc.macos",

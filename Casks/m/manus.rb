@@ -1,6 +1,6 @@
 cask "manus" do
-  version "1.7.2"
-  sha256 "48c5a46de6f7f832c7481e330bf0f779a570b5d44c12a67fe76f765e1bc45d8d"
+  version "1.7.4"
+  sha256 "399960aa73fb99703fdb2a0d12dcc2fdd567f5198aaad58381f56cebe0b498db"
 
   url "https://download.manus.im/Manus-Setup-#{version}.dmg"
   name "Manus"

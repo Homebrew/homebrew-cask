@@ -2,8 +2,7 @@ cask "chainner" do
   version "0.25.1"
   sha256 "18f1c38f86ec1c41a311a0e9db866b715bfca605b0e132acb325a45663ceabda"
 
-  url "https://github.com/chaiNNer-org/chaiNNer/releases/download/v#{version}/chaiNNer-#{version}-macos-universal.dmg",
-      verified: "github.com/chaiNNer-org/chaiNNer/"
+  url "https://github.com/chaiNNer-org/chaiNNer/releases/download/v#{version}/chaiNNer-#{version}-macos-universal.dmg"
   name "chaiNNer"
   desc "Flowchart-based image processing GUI"
   homepage "https://chainner.app/"

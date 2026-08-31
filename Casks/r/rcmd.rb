@@ -1,6 +1,6 @@
 cask "rcmd" do
-  version "3.5.3"
-  sha256 "ba7027ccf10ab47a3a1bad51537b9c081e321f48317ae7ce7f78739a3f7c11bc"
+  version "3.5.5"
+  sha256 "bfb8ed4384ce7077081d4fe93e1c339fde52bdd12e3a2cf69a3b1273b17ffb8c"
 
   url "https://files.lowtechguys.com/releases/rcmd-#{version}.dmg"
   name "rcmd"
@@ -9,7 +9,9 @@ cask "rcmd" do
 
   livecheck do
     url "https://files.lowtechguys.com/rcmd/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true

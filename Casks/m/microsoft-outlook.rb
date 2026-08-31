@@ -1,10 +1,6 @@
 cask "microsoft-outlook" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "16.66.22102801"
-      sha256 "bddede85956713be21fdb5ab72be07ecefd05552752e8e60c649e6a15fd0a2c2"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "16.77.23091703"
       sha256 "becfe797d1c799a4366385f449e42f7377bd3d6de5d4db20e37bd36ba2f24ef5"
     end
@@ -22,8 +18,8 @@ cask "microsoft-outlook" do
     end
   end
   on_sonoma :or_newer do
-    version "16.112.26081010"
-    sha256 "2fbb7a0eb2cd17d2cef3d84ab06b5c146b0dbf60c543f614ea2a34248de8f635"
+    version "16.112.26081720"
+    sha256 "5e01efb78c20a72ac0eaeed92386667959710f2489542692dda4d65e1ce09953"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525137"
@@ -31,8 +27,7 @@ cask "microsoft-outlook" do
     end
   end
 
-  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
-      verified: "res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/"
+  url "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg"
   name "Microsoft Outlook"
   desc "Email client"
   homepage "https://www.microsoft.com/en-us/microsoft-365/outlook/outlook-for-business"

@@ -2,8 +2,7 @@ cask "bbedit@14" do
   version "14.6.9"
   sha256 "8707901de03589c4b8cc3d0c35432c9c0c007ee30e53a654b997c5b3f9d4ff24"
 
-  url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
-      verified: "s3.amazonaws.com/BBSW-download/"
+  url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg"
   name "BBEdit"
   desc "Text, code, and markup editor"
   homepage "https://www.barebones.com/products/bbedit/"

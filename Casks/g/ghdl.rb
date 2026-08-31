@@ -50,8 +50,7 @@ cask "ghdl" do
     end
   end
 
-  url "https://github.com/ghdl/ghdl/releases/download/v#{version}/ghdl-llvm-#{version}-macos#{macos_version}-#{arch}.tar.gz",
-      verified: "github.com/ghdl/ghdl/"
+  url "https://github.com/ghdl/ghdl/releases/download/v#{version}/ghdl-llvm-#{version}-macos#{macos_version}-#{arch}.tar.gz"
   name "ghdl"
   desc "VHDL 2008/93/87 simulator"
   homepage "https://ghdl.github.io/ghdl/"

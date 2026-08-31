@@ -1,9 +1,9 @@
 cask "zcode" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.7.7"
-  sha256 arm:   "2a11e600a0eaaeee72b926f22925f91128dd57bdf87f685f934749a4da94ee07",
-         intel: "8abf42694fa96c6a349a46f8d26f523ae08826d4fd3a070a401ae65a5a76daab"
+  version "3.10.2"
+  sha256 arm:   "53d4205fbe9e0916d60f18093a6011f2891266a954a58296e1f42f452179600d",
+         intel: "4b22cbf0f9b86176e52bff20de90a411451925bb9abd5e266a66407c61ed04f0"
 
   url "https://cdn-zcode.z.ai/zcode/electron/releases/#{version}/macos-#{arch}/ZCode-#{version}-mac-#{arch}.dmg"
   name "ZCode"

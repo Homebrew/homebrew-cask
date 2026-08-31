@@ -2,8 +2,7 @@ cask "folx" do
   version "5.34"
   sha256 :no_check
 
-  url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg",
-      verified: "cdn.electronic.us/products/folx/"
+  url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg"
   name "Folx"
   desc "Download manager with a torrent client"
   homepage "https://mac.eltima.com/download-manager.html"

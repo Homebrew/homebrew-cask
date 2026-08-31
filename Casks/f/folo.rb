@@ -5,8 +5,7 @@ cask "folo" do
   sha256 arm:   "6fa851d93ae151e07fa28a83ffdcf60d9da95bfb2bbe96766fb2211a731a8c27",
          intel: "59504f3de6175cd264580b9cc8285dafffe61063df06c6efe3754285ba906dc0"
 
-  url "https://github.com/RSSNext/Folo/releases/download/desktop%2Fv#{version}/Folo-#{version}-macos-#{arch}.dmg",
-      verified: "github.com/RSSNext/Folo/"
+  url "https://github.com/RSSNext/Folo/releases/download/desktop%2Fv#{version}/Folo-#{version}-macos-#{arch}.dmg"
   name "Folo"
   desc "Information browser"
   homepage "https://folo.is/"

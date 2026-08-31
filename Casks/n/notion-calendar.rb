@@ -5,8 +5,7 @@ cask "notion-calendar" do
   sha256 arm:   "f1fb3dc449a1b37ccacf5c450c41fe12c0fd9b8c3f33cad1353eed1289022724",
          intel: "3783579ca79be65a8c5f673c806bf0671421d229e9a8ef8f284ddc27c91e2dc7"
 
-  url "https://calendar-desktop-release.notion-static.com/Notion%20Calendar-darwin-#{arch}-#{version}.zip",
-      verified: "calendar-desktop-release.notion-static.com/"
+  url "https://calendar-desktop-release.notion-static.com/Notion%20Calendar-darwin-#{arch}-#{version}.zip"
   name "Notion Calendar"
   desc "Calendar for professionals and teams"
   homepage "https://www.notion.com/product/calendar"

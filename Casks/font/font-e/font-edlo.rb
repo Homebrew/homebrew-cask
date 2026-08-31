@@ -2,8 +2,7 @@ cask "font-edlo" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/ehamiter/Edlo/archive/refs/heads/master.tar.gz",
-      verified: "github.com/ehamiter/Edlo/"
+  url "https://github.com/ehamiter/Edlo/archive/refs/heads/master.tar.gz"
   name "Edlo"
   homepage "https://ehamiter.github.io/Edlo/"
 

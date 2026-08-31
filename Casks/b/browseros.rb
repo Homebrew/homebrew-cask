@@ -26,8 +26,7 @@ cask "browseros" do
     app_image "BrowserOS_v#{version.csv.first}_#{arch}.AppImage", target: "BrowserOS.AppImage"
   end
 
-  url "https://github.com/browseros-ai/BrowserOS/releases/download/v#{version.csv.second || version.csv.first}/BrowserOS_v#{version.csv.first}_#{arch}.#{url_end}",
-      verified: "github.com/browseros-ai/BrowserOS/"
+  url "https://github.com/browseros-ai/BrowserOS/releases/download/v#{version.csv.second || version.csv.first}/BrowserOS_v#{version.csv.first}_#{arch}.#{url_end}"
   name "BrowserOS"
   desc "Open-source agentic browser"
   homepage "https://www.browseros.com/"

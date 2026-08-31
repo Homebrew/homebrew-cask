@@ -5,8 +5,7 @@ cask "mockoon" do
   sha256 arm:   "99c0a347b5e8c39b6f2c3059b7d4fd2b2a012af90f36ee08fbfbd65417c64d2b",
          intel: "4964ea309090b39204d2264bbd5e514ab4d23e5db4b708493810dd17d11a061e"
 
-  url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.#{arch}.dmg",
-      verified: "github.com/mockoon/mockoon/"
+  url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.#{arch}.dmg"
   name "Mockoon"
   desc "Create mock APIs in seconds"
   homepage "https://mockoon.com/"

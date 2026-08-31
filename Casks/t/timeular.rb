@@ -6,8 +6,7 @@ cask "timeular" do
   sha256 arm:   "b40fc8a340522986f789e3ba0c137a927403f434f2e8ee7b77e697935d1aceb6",
          intel: "20bc25ce6e2a7f9929cfdeb288f50c600a85457b4d7aef7c3befe6a33020ae6f"
 
-  url "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/EARLY-#{version}#{arch}.dmg",
-      verified: "timeular-desktop-packages.s3.amazonaws.com/"
+  url "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/EARLY-#{version}#{arch}.dmg"
   name "Timeular"
   desc "Time tracking aided by a physical device"
   homepage "https://early.app/"

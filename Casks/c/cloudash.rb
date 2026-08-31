@@ -25,8 +25,7 @@ cask "cloudash" do
     app_image "Cloudash-#{version}.AppImage", target: "Cloudash.AppImage"
   end
 
-  url "https://github.com/cloudashdev/cloudash/releases/download/#{version}/Cloudash-#{version}#{url_end}",
-      verified: "github.com/cloudashdev/cloudash/"
+  url "https://github.com/cloudashdev/cloudash/releases/download/#{version}/Cloudash-#{version}#{url_end}"
   name "Cloudash"
   desc "Monitoring and troubleshooting for serverless architectures"
   homepage "https://cloudash.dev/"

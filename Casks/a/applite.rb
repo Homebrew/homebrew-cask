@@ -2,8 +2,7 @@ cask "applite" do
   version "1.4.0"
   sha256 "5344b3c868a80eb9b4ce6734f35c18e13b1c4ed1559038ddec8e271257abdeab"
 
-  url "https://github.com/milanvarady/Applite/releases/download/v#{version}/Applite.dmg",
-      verified: "github.com/milanvarady/Applite/"
+  url "https://github.com/milanvarady/Applite/releases/download/v#{version}/Applite.dmg"
   name "Applite"
   desc "User-friendly GUI app for Homebrew"
   homepage "https://aerolite.dev/applite"

@@ -5,8 +5,7 @@ cask "bambu-connect" do
   sha256 arm:   "067cfef8624e937007839d84375758fe8d2db6dce5ebd5e61ccaa149979b2c7d",
          intel: "2423e89bbfdb1e1eb82b379cca23f5d01f01164fc2d5c54c646f5bdf4fb756e9"
 
-  url "https://public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/#{version}/bambu-connect-v#{version}-darwin-#{arch}.dmg",
-      verified: "public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/"
+  url "https://public-cdn.bblmw.com/upgrade/bambu-connect/updates/versions/#{version}/bambu-connect-v#{version}-darwin-#{arch}.dmg"
   name "Bambu Connect"
   desc "Tool for linking with Bambu Lab 3D printers"
   homepage "https://wiki.bambulab.com/en/software/bambu-connect"

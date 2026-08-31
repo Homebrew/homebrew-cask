@@ -2,8 +2,7 @@ cask "jbrowse" do
   version "4.3.0"
   sha256 "92174e68abf9bc088983c2c32f3d76921a56938436476fc46441b3b694d7b6d2"
 
-  url "https://github.com/GMOD/jbrowse-components/releases/download/v#{version}/jbrowse-desktop-v#{version}-mac.dmg",
-      verified: "github.com/GMOD/jbrowse-components/"
+  url "https://github.com/GMOD/jbrowse-components/releases/download/v#{version}/jbrowse-desktop-v#{version}-mac.dmg"
   name "JBrowse"
   desc "Genome browser"
   homepage "https://jbrowse.org/"

@@ -4,14 +4,8 @@ cask "qbittorrent@lt20" do
   url_end = on_system_conditional macos: ".dmg", linux: "_#{arch}.AppImage"
 
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "4.6.7"
-      sha256 "334b1c45f744b211dfcc81f18c3e2fb07510f5f725c0ef19e9ab2da6b73dcf2b"
-    end
-    on_big_sur :or_newer do
-      version "5.0.5"
-      sha256 "f0180356f89590d2de639ba700813fb9ba1d90dde1af5353fc7621a048cccbb2"
-    end
+    version "5.0.5"
+    sha256 "f0180356f89590d2de639ba700813fb9ba1d90dde1af5353fc7621a048cccbb2"
 
     livecheck do
       skip "Legacy version"

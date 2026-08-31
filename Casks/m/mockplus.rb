@@ -2,8 +2,7 @@ cask "mockplus" do
   version "3.7.1.0"
   sha256 "f9ac9457ed78346be7bd4513e1dfacb0ef730331128f3d6c43a787bfe4a96a70"
 
-  url "https://d3h2k7ug3o5pb3.cloudfront.net/software/macos/MockplusClassic_v#{version}.zip",
-      verified: "d3h2k7ug3o5pb3.cloudfront.net/software/macos/"
+  url "https://d3h2k7ug3o5pb3.cloudfront.net/software/macos/MockplusClassic_v#{version}.zip"
   name "Mockplus"
   name "摩客"
   desc "Create mockups and wireframes"

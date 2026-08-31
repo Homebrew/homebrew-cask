@@ -1,9 +1,9 @@
 cask "labymod" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.12"
-  sha256 arm:   "e291c9db10c6037a71c741a2ea31e6d090f7fbb103a060587d6e77c2a63e65bd",
-         intel: "310bcfccb8572f886b4f30adafaa470223ff0ae4732711200850012dd88e6dac"
+  version "3.0.14"
+  sha256 arm:   "49dff8c561c3c271213c3c05ae64a7524e0e91018f4d39db85fe01430327a000",
+         intel: "d2d10f58f8b99375ee0bc96d0dd977d7de457c6edb13a261d36a13e25a8f7017"
 
   url "https://releases.r2.labymod.net/launcher/darwin/#{arch}/LabyMod%20Launcher-#{version}-#{arch}.dmg"
   name "LabyMod Launcher"
@@ -17,7 +17,7 @@ cask "labymod" do
     end
   end
 
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "Laby Launcher.app"
 

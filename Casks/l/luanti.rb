@@ -5,8 +5,7 @@ cask "luanti" do
   sha256 arm:   "cbc8d041aa4ad27fdd7f5ce9185f3015cf8b3d4b7426fea980572f08958d5482",
          intel: "55cfa3218ff60037cbd81019b893d1a7cd38ef7e48cb1c57001f1a64a7586186"
 
-  url "https://github.com/luanti-org/luanti/releases/download/#{version.csv.first}/luanti_#{version.csv.first}-macos#{version.csv.second}_#{arch}.zip",
-      verified: "github.com/luanti-org/luanti/"
+  url "https://github.com/luanti-org/luanti/releases/download/#{version.csv.first}/luanti_#{version.csv.first}-macos#{version.csv.second}_#{arch}.zip"
   name "Luanti"
   desc "Voxel game-creation platform"
   homepage "https://www.luanti.org/"

@@ -1,9 +1,9 @@
 cask "openlogi" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "0.6.27"
-  sha256 arm:   "6f6fe79cbcc21ef3b8df05f6db734e8567a6603385e652ac3fc91879ae280fc4",
-         intel: "1853703bd6b580398c4a107f54e0daf9f81fbfc29cb1df3f3ae9137d17ca601a"
+  version "0.8.3"
+  sha256 arm:   "f37856be06324145c1cd5b65b16cc59b36d9823dddd8ea2834ed5cb42b8894a8",
+         intel: "30183db4df029f120094bf1bc211393b29d93d57ffae6bc3e342add9327a516d"
 
   url "https://updates.openlogi.org/releases/v#{version}/OpenLogi-v#{version}-macos-#{arch}.dmg"
   name "OpenLogi"
@@ -21,11 +21,12 @@ cask "openlogi" do
   app "OpenLogi.app"
   binary "#{appdir}/OpenLogi.app/Contents/MacOS/openlogi"
 
-  uninstall quit: [
-    "org.openlogi.agent",
-    "org.openlogi.openlogi",
-    "org.openlogi.overlay",
-  ]
+  uninstall launchctl: "org.openlogi.agent.service",
+            quit:      [
+              "org.openlogi.agent",
+              "org.openlogi.openlogi",
+              "org.openlogi.overlay",
+            ]
 
   zap trash: [
     "~/.config/openlogi",

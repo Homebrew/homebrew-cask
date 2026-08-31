@@ -2,8 +2,7 @@ cask "meta-quest-remote-desktop" do
   version "97.0.0.1.109,27556227337372775"
   sha256 "e3fa9986f40fe715b5408921c29a791651f9b8cfd2ca942e8f44bbfacce73857"
 
-  url "https://securecdn.oculus.com/binaries/download/?id=#{version.csv.second}",
-      verified: "securecdn.oculus.com/"
+  url "https://securecdn.oculus.com/binaries/download/?id=#{version.csv.second}"
   name "Meta Quest Remote Desktop"
   desc "Remote desktop companion app for Meta Quest headsets"
   homepage "https://www.meta.com/quest/"

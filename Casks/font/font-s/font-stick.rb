@@ -2,8 +2,7 @@ cask "font-stick" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/stick/Stick-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/stick/Stick-Regular.ttf"
   name "Stick"
   homepage "https://fonts.google.com/specimen/Stick"
 

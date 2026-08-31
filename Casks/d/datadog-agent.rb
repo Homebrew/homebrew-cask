@@ -1,12 +1,11 @@
 cask "datadog-agent" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "7.82.1-1"
-  sha256 arm:   "d9e30ad11d14a88a90c3851ffcdbeff838d6b0699eca32a0584c8e143306bf84",
-         intel: "43d20538b2609bd4c377c57f9ed6b18422dc307212b1074db34366c9fa40948e"
+  version "7.82.3-1"
+  sha256 arm:   "5368aff2fcf775566c50e773d9645d9521a00f5116c4f5554b3d4bde7b37d39a",
+         intel: "1c48c2b578f12f9352ab160622fc7765758a9d4a4a325617aa7e7da53cba89bb"
 
-  url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.#{arch}.dmg",
-      verified: "dd-agent.s3.amazonaws.com/"
+  url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.#{arch}.dmg"
   name "Datadog Agent"
   desc "Monitoring and security across systems, apps, and services"
   homepage "https://www.datadoghq.com/"

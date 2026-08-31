@@ -5,8 +5,7 @@ cask "meru" do
   sha256 arm:   "82577cb20a70273545f791995235b3dafcb9fcc9f03b9ff63166d025cb246c75",
          intel: "4e9a1f2b73dd5f441dc49dc90275955fee14f0b02de41bf61b7886cf28c63ec3"
 
-  url "https://github.com/zoidsh/meru/releases/download/v#{version}/Meru-#{version}#{arch}.dmg",
-      verified: "github.com/zoidsh/meru/"
+  url "https://github.com/zoidsh/meru/releases/download/v#{version}/Meru-#{version}#{arch}.dmg"
   name "Meru"
   desc "Gmail desktop app"
   homepage "https://meru.so/"

@@ -1,19 +1,18 @@
 cask "poi" do
   arch arm: "-arm64"
 
-  version "11.1.0-win7"
-  sha256 arm:   "4828c1034bc014884e9342fcd7914a9ff4b309365c3c95d18cc65b8e3918b33c",
-         intel: "42528fed19cc732b5c5946f540226a2b8b376b2b3974727d779398e6ed687aaf"
+  version "12.0.1"
+  sha256 arm:   "d63b94de386ea8835c4e23bd2100ea20e8e33edf52f940d9c0419b71722f1c55",
+         intel: "411e3e76e22b1780b281ae3b58a405e6a9bf950653dc14a484c5b5f5a0ffbe8e"
 
-  url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}#{arch}.dmg",
-      verified: "github.com/poooi/poi/"
+  url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}#{arch}.dmg"
   name "poi"
   desc "Scalable KanColle browser and tool"
   homepage "https://poi.moe/"
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
-  depends_on macos: :monterey
+  depends_on macos: :ventura
 
   app "poi.app"
 

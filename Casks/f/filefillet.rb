@@ -2,8 +2,7 @@ cask "filefillet" do
   version "2.11.1"
   sha256 "2d844ba41bdd99863d409a860b631f0ab63112127523e3ecd55991578a3bad97"
 
-  url "https://filefillet-releases.s3.eu-central-1.amazonaws.com/FileFillet_v#{version}.zip",
-      verified: "filefillet-releases.s3.eu-central-1.amazonaws.com/"
+  url "https://filefillet-releases.s3.eu-central-1.amazonaws.com/FileFillet_v#{version}.zip"
   name "FileFillet"
   desc "Efficient file organizer"
   homepage "https://www.filefillet.com/"

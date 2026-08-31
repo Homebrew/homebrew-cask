@@ -1,9 +1,8 @@
 cask "uuremote" do
-  version "4.35.0"
-  sha256 "f77e2d1fb5d7da3985ed54be658ecf6450ece8cf868c18fa36a788488890455b"
+  version "4.38.0"
+  sha256 "aab8ca71cf2adb87a593206d235ceb90ec06474271237104f2bb6f12aa683fda"
 
-  url "https://a56.gdl.netease.com/uuyc_#{version}.pkg",
-      verified: "a56.gdl.netease.com/"
+  url "https://a56.gdl.netease.com/uuyc_#{version}.pkg"
   name "UU Remote"
   name "网易UU远程"
   desc "NetEase UU remote desktop access and control tool"

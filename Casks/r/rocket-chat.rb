@@ -2,8 +2,7 @@ cask "rocket-chat" do
   version "4.16.0"
   sha256 "9635eda6fe78a49a3ca1c8a31c88d6e2d13e5c022963cea957025dec1b44ca72"
 
-  url "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version.csv.first}/rocketchat-#{version.csv.second || version.csv.first}-mac.dmg",
-      verified: "github.com/RocketChat/Rocket.Chat.Electron/"
+  url "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/#{version.csv.first}/rocketchat-#{version.csv.second || version.csv.first}-mac.dmg"
   name "Rocket.Chat"
   desc "Official desktop client for Rocket.Chat"
   homepage "https://rocket.chat/"

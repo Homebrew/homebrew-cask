@@ -1,12 +1,11 @@
 cask "open-design" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.19.0"
-  sha256 arm:   "2c55ebfc724e36cc0527aef92292698689b315b9aabc4d769c5bb867e60fc411",
-         intel: "f67e3067deac6e6b78c1956872d5e3580cf937ff470466ebacee6621dc2958d3"
+  version "0.21.1"
+  sha256 arm:   "ee312723e61fb3d8fd792fb2e6faaa679ea137eeafe02bc76d6cb8d685db4f12",
+         intel: "f04149425e284ac0ce32e8b22c9b22e4ec70d0141fa8e24d5a54ff6333cecba9"
 
-  url "https://github.com/nexu-io/open-design/releases/download/open-design-v#{version}/open-design-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/nexu-io/open-design/"
+  url "https://github.com/nexu-io/open-design/releases/download/open-design-v#{version}/open-design-#{version}-mac-#{arch}.dmg"
   name "Open Design"
   desc "Local-first, agent-native design tool"
   homepage "https://open-design.ai/"

@@ -2,8 +2,7 @@ cask "gamemaker" do
   version "2024.14.4.222"
   sha256 "8cbd33a9a92ed60ebd53734413b33afdeb8c677326ada0c80971e9f91555cc7f"
 
-  url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
-      verified: "gms.yoyogames.com/"
+  url "https://gms.yoyogames.com/GameMaker-#{version}.pkg"
   name "GameMaker"
   desc "Complete development tool for making 2D games"
   homepage "https://gamemaker.io/"

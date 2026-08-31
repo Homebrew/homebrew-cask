@@ -1,12 +1,11 @@
 cask "android-studio-preview@canary" do
   arch arm: "mac_arm", intel: "mac"
 
-  version "2026.1.4.4,quail4-canary4"
-  sha256 arm:   "9448199e645b30d67d1ca0b926d8d2a34d4c2d7e61085a7b0af57aede2871abd",
-         intel: "030c8cf1bf119c570b6c2bedf05f33a639fa27ac89b2582270bbd854afb7e463"
+  version "2026.2.1.3,rabbit1-canary3"
+  sha256 arm:   "412e982f90a41f291d9ecc9213e37220b8d900052d01f1a9e67ea494eb706d25",
+         intel: "0c5781ffff847a0532f3770f6bd77680fd62abd96f9fc2ca4801d033beb0c443"
 
-  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
-      verified: "edgedl.me.gvt1.com/android/studio/install/"
+  url "https://edgedl.me.gvt1.com/android/studio/install/#{version.csv.first}/android-studio#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
   name "Android Studio Preview (Canary)"
   desc "Tools for building Android applications"
   homepage "https://developer.android.com/studio/preview/"
@@ -28,6 +27,8 @@ cask "android-studio-preview@canary" do
 
   app "Android Studio Preview Canary.app"
   binary "#{appdir}/Android Studio Preview Canary.app/Contents/MacOS/studio", target: "studio-canary"
+
+  uninstall quit: "com.google.android.studio"
 
   zap trash: [
         "~/.android",

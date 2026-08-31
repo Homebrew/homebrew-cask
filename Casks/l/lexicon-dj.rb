@@ -1,19 +1,11 @@
 cask "lexicon-dj" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "1.11.11"
-  sha256 arm:   "806687e5d8f14998787d6fd0bb2b126783549a56b99e4e2acb44e5bd57cf6836",
-         intel: "3450525486739049b96e8d24926fc54fe28c777b19aaaa16b0c50d9a24cdce3a"
+  version "1.11.13"
+  sha256 arm:   "5ff697895c5245dfab283655502c17c5a80ad9a0aca956d3bc2198397953bf3d",
+         intel: "514287b77a02d1ca756ccedddaa11ffcaf739a5a8d7c5f1f8a92d865d9acb1c8"
 
-  on_arm do
-    depends_on macos: :big_sur
-  end
-  on_intel do
-    depends_on macos: :catalina
-  end
-
-  url "https://update.rekord.cloud/releases/lexicon/latest/lexicon-#{version}-mac-#{arch}.zip",
-      verified: "update.rekord.cloud/releases/lexicon/latest/"
+  url "https://update.rekord.cloud/releases/lexicon/latest/lexicon-#{version}-mac-#{arch}.zip"
   name "Lexicon"
   desc "Library management for professional DJs"
   homepage "https://www.lexicondj.com/"

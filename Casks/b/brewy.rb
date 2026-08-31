@@ -1,6 +1,6 @@
 cask "brewy" do
-  version "0.20.0"
-  sha256 "42488060f56c14bcd4c3406598629a63fb3381823dfb4d4f528856171e599929"
+  version "0.24.0"
+  sha256 "675041e0d1305c9635985256be115ddda1f44c1deab34de4ef4d41a54baea138"
 
   url "https://github.com/starhaven-io/Brewy/releases/download/#{version}/Brewy-#{version}.zip"
   name "Brewy"
@@ -17,6 +17,8 @@ cask "brewy" do
   depends_on macos: :sequoia
 
   app "Brewy.app"
+
+  uninstall quit: "io.linnane.brewy"
 
   zap trash: [
     "~/Library/Application Scripts/io.linnane.Brewy",

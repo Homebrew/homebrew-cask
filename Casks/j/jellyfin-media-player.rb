@@ -18,8 +18,7 @@ cask "jellyfin-media-player" do
            intel: "f6a75747c1234c929c968599cc927cfb27a0c00dfa9db9198d5b22b3090c4d34"
   end
 
-  url "https://github.com/jellyfin/jellyfin-media-player/releases/download/v#{version}/JellyfinMediaPlayer-#{version}-#{arch}.dmg",
-      verified: "github.com/jellyfin/jellyfin-media-player/"
+  url "https://github.com/jellyfin/jellyfin-media-player/releases/download/v#{version}/JellyfinMediaPlayer-#{version}-#{arch}.dmg"
   name "Jellyfin Media Player"
   desc "Jellyfin desktop client"
   homepage "https://jellyfin.org/"

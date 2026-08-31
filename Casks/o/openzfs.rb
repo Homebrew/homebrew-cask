@@ -1,11 +1,5 @@
 cask "openzfs" do
-  on_catalina :or_older do
-    arch intel: "Catalina-10.15"
-
-    version "2.4.1"
-    sha256 "dc727fd6d0cf366fdd0b46440255ee0a07b76516bc1e691ce6c59f8ad6398852"
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     arch intel: "Big.Sur-11"
 
     # Upstream didn't ship a Big Sur package after with 2.4.1
@@ -51,8 +45,7 @@ cask "openzfs" do
            intel: "24c2867bcaaac770de398ecbfbc7a023cf2189b32264f77568e0e4599daba726"
   end
 
-  url "https://github.com/openzfsonosx/openzfs-fork/releases/download/zfs-macOS-#{version}/OpenZFSonOsX-#{version}-#{arch}.pkg",
-      verified: "github.com/openzfsonosx/openzfs-fork/"
+  url "https://github.com/openzfsonosx/openzfs-fork/releases/download/zfs-macOS-#{version}/OpenZFSonOsX-#{version}-#{arch}.pkg"
   name "OpenZFS on OS X"
   desc "ZFS driver and utilities"
   homepage "https://openzfsonosx.org/"

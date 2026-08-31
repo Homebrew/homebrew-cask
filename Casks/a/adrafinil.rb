@@ -1,9 +1,8 @@
 cask "adrafinil" do
-  version "1.5.3"
-  sha256 "14c1aaf8471286a753e5d2801133644ec8350546f7858cf6d65712f481dd726a"
+  version "1.7.0"
+  sha256 "71de8cbe83cc9b8fd863d32347ba255d840ab299f5fde7082629ea20225ea783"
 
-  url "https://github.com/kageroumado/adrafinil/releases/download/v#{version}/Adrafinil-#{version}.dmg",
-      verified: "github.com/kageroumado/adrafinil/"
+  url "https://github.com/kageroumado/adrafinil/releases/download/v#{version}/Adrafinil-#{version}.dmg"
   name "Adrafinil"
   desc "Keep your computer awake while AI coding agents are working"
   homepage "https://kagerou.glass/adrafinil/"

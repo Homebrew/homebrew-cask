@@ -1,11 +1,6 @@
 cask "commandpost" do
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "1.4.13"
-      sha256 "dd0ddbf94722174760c82870f537b299ce0b1b6265875aa558d515df4338a816"
-    end
-
-    on_big_sur do
+    on_big_sur :or_older do
       version "1.4.22"
       sha256 "9115107751cda2cf605a513da378fb0dcc40d57fe7dfbd76f664420946f9f773"
     end
@@ -24,8 +19,7 @@ cask "commandpost" do
     sha256 "b1a3ca256053a083b59dd1d1db59b68d9b2ea8b83dc2e5214d0eba921eba5e64"
   end
 
-  url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
-      verified: "github.com/CommandPost/CommandPost/"
+  url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg"
   name "CommandPost"
   desc "Workflow enhancements for Final Cut Pro"
   homepage "https://commandpost.io/"

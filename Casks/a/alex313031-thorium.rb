@@ -5,8 +5,7 @@ cask "alex313031-thorium" do
   sha256  arm:   "01f77352f40445e5c39a838c6e48198a09b64c14b0ec423c83fd9b461e0d7069",
           intel: "9a31c4d3fea1f6a49f2943f30d3400ef7cffbb8ab815567e83049b88652b8778"
 
-  url "https://github.com/Alex313031/Thorium-MacOS/releases/download/#{version}/Thorium_MacOS_#{arch}.dmg",
-      verified: "github.com/Alex313031/Thorium-MacOS/"
+  url "https://github.com/Alex313031/Thorium-MacOS/releases/download/#{version}/Thorium_MacOS_#{arch}.dmg"
   name "Thorium"
   desc "Chromium-based web browser"
   homepage "https://thorium.rocks/"
@@ -14,7 +13,17 @@ cask "alex313031-thorium" do
   livecheck do
     url :url
     regex(/^(M?\d+(?:\.\d+)+)$/i)
-    strategy :github_latest
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        match = release["tag_name"]&.match(regex)
+        # Ignore releases that have `Beta` in their names
+        next if match.blank? || release["name"]&.match?(/beta/i)
+
+        match[1]
+      end
+    end
   end
 
   disable! date: "2026-09-01", because: :fails_gatekeeper_check

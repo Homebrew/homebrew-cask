@@ -5,8 +5,7 @@ cask "vertcoin-core" do
   sha256 arm:   "c83810e10bccfb5af29d8209a15a2b28e901834ba86366bece2994c89db733ad",
          intel: "38ae781c773ddefe0f91ac7a5474ebe8feb3ef095780da8776fc79b4f5918170"
 
-  url "https://github.com/vertcoin-project/vertcoin-core/releases/download/v#{version}/vertcoin-#{version}-#{arch}-apple-darwin.dmg",
-      verified: "github.com/vertcoin-project/vertcoin-core/"
+  url "https://github.com/vertcoin-project/vertcoin-core/releases/download/v#{version}/vertcoin-#{version}-#{arch}-apple-darwin.dmg"
   name "Vertcoin Core"
   desc "Vertcoin client and wallet"
   homepage "https://vertcoin.org/"

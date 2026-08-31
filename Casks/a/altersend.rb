@@ -1,11 +1,11 @@
 cask "altersend" do
   os macos: "dmg", linux: "AppImage"
 
-  version "1.8.0"
-  sha256 arm:          "f7ba7bf25eec22321f8433161c840e9f4a68ed3363433584aae7699b81c3d040",
-         intel:        "5d36979b04d95ae3c82f9e317366fab2c0ca009c036337550275e1400ea6777b",
-         arm64_linux:  "404106991daf9baac204d15e5343f1ffeed22d5e44bd0151cc84ba35166a209a",
-         x86_64_linux: "2b429aedad7bf96aa693d544715bfc582f1c90fde47e8b503aa9b8157d613656"
+  version "2.0.0"
+  sha256 arm:          "cbca1e14c05bca7d5d9d4af45f1762b5e78d0e8b8a286afd92b6e4796d537c41",
+         intel:        "242760156569be4a933d31d7d4bf500f8a2a5b6960d65b277e603f9715e6fbdb",
+         arm64_linux:  "a45c0eeaa3768da6f0df3544fcc72e0da0e9739229b76df0a9b2c3ff59d9b68b",
+         x86_64_linux: "74cb05a1cac649767c09537aa457467914c0a47a6fc214915b78c0e91a7a3dda"
 
   on_macos do
     arch arm: "-arm64"

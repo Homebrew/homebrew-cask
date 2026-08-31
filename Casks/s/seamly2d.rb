@@ -1,9 +1,8 @@
 cask "seamly2d" do
-  version "2026.8.10.212"
-  sha256 "918c1f0aea5fd637f5a22255e445b9b0ed65f792fa6c310ac2b93599cf1d364b"
+  version "2026.8.31.143"
+  sha256 "21becf1c47c463603e6bf3cbf3590235b134f88d14d0e4883e4751509792a6da"
 
-  url "https://github.com/FashionFreedom/Seamly2D/releases/download/v#{version}/Seamly2D-macos.zip",
-      verified: "github.com/FashionFreedom/Seamly2D/"
+  url "https://github.com/FashionFreedom/Seamly2D/releases/download/v#{version}/Seamly2D-macos.zip"
   name "Seamly2D"
   desc "Pattern making software"
   homepage "https://seamly.io/"
@@ -17,6 +16,8 @@ cask "seamly2d" do
   container nested: "Seamly2D.dmg"
 
   app "Seamly2D.app"
+
+  uninstall quit: "org.seamly2dproject.Seamly2D"
 
   zap trash: [
     "~/.config/Seamly2DTeam",

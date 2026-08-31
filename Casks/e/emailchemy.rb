@@ -4,8 +4,7 @@ cask "emailchemy" do
   version "15.0"
   sha256 :no_check
 
-  url "https://wksdownload.s3.amazonaws.com/emailchemy/Emailchemy-Mac#{arch}.dmg",
-      verified: "wksdownload.s3.amazonaws.com/emailchemy/"
+  url "https://wksdownload.s3.amazonaws.com/emailchemy/Emailchemy-Mac#{arch}.dmg"
   name "Emailchemy"
   desc "Email migration, conversion and archival software"
   homepage "https://weirdkid.com/emailchemy/"

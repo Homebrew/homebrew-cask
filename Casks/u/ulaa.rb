@@ -1,18 +1,17 @@
 cask "ulaa" do
   arch arm: "arm64", intel: "x64"
 
-  sha256 arm:   "9df0caa5348f7084ca6ae3c72009ef33dcd334e2dc50065f2560dceb11958967",
-         intel: "6eb1966cbf567d78d7ce9662a9f3e840f4110289e6d65c0b2af31d7d12d44f0c"
+  sha256 arm:   "4f02dfa14c06ec03c2d8b5938f65e842e6f6e28b5fcd03a473676b688c27cc84",
+         intel: "bdd98c0ab3d255a39bb1872ede922c1353eb67e04e8acac6b260d305f77d17b3"
 
   on_arm do
-    version "2.46.2"
+    version "2.47.1"
   end
   on_intel do
-    version "2.46.1"
+    version "2.47.1"
   end
 
-  url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg",
-      verified: "downloads.zohocdn.com/ulaa-browser/"
+  url "https://downloads.zohocdn.com/ulaa-browser/release/mac/stable/#{arch}/Ulaa-Browser-v#{version}-#{arch}.dmg"
   name "Ulaa Browser"
   desc "Privacy-centric browser with advanced tracking protection"
   homepage "https://ulaa.com/"

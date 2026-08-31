@@ -2,8 +2,7 @@ cask "mem" do
   version "0.43.0"
   sha256 "8b6298f6dac699be5c160679d3759149a262cf1e41ea305084648dd591de41ae"
 
-  url "https://storage.googleapis.com/mem-desktop-stable-releases/Mem-#{version}.dmg",
-      verified: "storage.googleapis.com/mem-desktop-stable-releases/"
+  url "https://storage.googleapis.com/mem-desktop-stable-releases/Mem-#{version}.dmg"
   name "Mem"
   desc "Capture and access information from anywhere"
   homepage "https://get.mem.ai/"

@@ -2,8 +2,7 @@ cask "nordlocker" do
   version "4.26.1"
   sha256 :no_check
 
-  url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest11plus/latest/NordLocker.pkg",
-      verified: "downloads.nordcdn.com/apps/macos/generic/NordLocker/"
+  url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest11plus/latest/NordLocker.pkg"
   name "NordLocker"
   desc "Store and sync files securely"
   homepage "https://nordlocker.com/"

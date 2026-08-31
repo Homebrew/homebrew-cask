@@ -2,8 +2,7 @@ cask "hhkb" do
   version "2.0.1"
   sha256 "c0e57922fc972f1d8ab6f317d8f4e9cffc25f51b2aad1f78fbf187f968f1af5a"
 
-  url "https://origin.pfultd.com/downloads/hhkb/mac/HHKBkeymapTool_#{version.no_dots}ma.dmg",
-      verified: "origin.pfultd.com/downloads/hhkb/mac/"
+  url "https://origin.pfultd.com/downloads/hhkb/mac/HHKBkeymapTool_#{version.no_dots}ma.dmg"
   name "Happy Hacking Keyboard Keymap Tool"
   desc "Allows keymap customization on HHKB HYBRID Type-S and HYBRID models"
   homepage "https://happyhackingkb.com/"

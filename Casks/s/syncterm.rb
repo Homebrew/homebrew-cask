@@ -2,8 +2,7 @@ cask "syncterm" do
   version "1.8"
   sha256 "7503af422651382e0fa81b8f439b61998cefe1a518eae22ed8b1140d04985b5c"
 
-  url "https://downloads.sourceforge.net/syncterm/syncterm/syncterm-#{version}/syncterm-#{version}-macos.zip",
-      verified: "sourceforge.net/syncterm/"
+  url "https://downloads.sourceforge.net/syncterm/syncterm/syncterm-#{version}/syncterm-#{version}-macos.zip"
   name "SyncTERM"
   desc "BBS terminal program"
   homepage "https://syncterm.bbsdev.net/"

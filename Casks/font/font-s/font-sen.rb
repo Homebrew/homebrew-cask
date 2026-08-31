@@ -2,8 +2,7 @@ cask "font-sen" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/sen/Sen%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/sen/Sen%5Bwght%5D.ttf"
   name "Sen"
   homepage "https://fonts.google.com/specimen/Sen"
 

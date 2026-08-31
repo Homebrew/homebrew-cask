@@ -3,8 +3,7 @@ cask "meituxiuxiu" do
   sha256 :no_check
 
   url "https://xiuxiupc-dl.meitudata.com/xiuxiumac_setup.dmg",
-      user_agent: :fake,
-      verified:   "xiuxiupc-dl.meitudata.com/"
+      user_agent: :fake
   name "meituxiuxiu"
   name "美图秀秀"
   desc "Photo editing and beautification software"
@@ -18,7 +17,7 @@ cask "meituxiuxiu" do
   end
 
   auto_updates true
-  depends_on macos: :catalina
+  depends_on :macos
 
   app "美图秀秀.app"
 

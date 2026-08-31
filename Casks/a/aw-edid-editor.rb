@@ -2,8 +2,7 @@ cask "aw-edid-editor" do
   version "3.0.20"
   sha256 "489fcd0fd08fb4a2633bf5fef4dd36e022f5947f425a15a1c49612b3dbb62336"
 
-  url "https://s3.eu-west-3.amazonaws.com/aw.store01/Site+Internet/Software/AW+EDID+Editor/Software/Setup+Application/awedideditor_#{version.dots_to_underscores}_macos.zip",
-      verified: "s3.eu-west-3.amazonaws.com/aw.store01/"
+  url "https://s3.eu-west-3.amazonaws.com/aw.store01/Site+Internet/Software/AW+EDID+Editor/Software/Setup+Application/awedideditor_#{version.dots_to_underscores}_macos.zip"
   name "AW EDID Editor"
   desc "Edit any standard EDID binary file, supports DisplayID and CEA-861-G extensions"
   homepage "https://www.analogway.com/products/aw-edid-editor"

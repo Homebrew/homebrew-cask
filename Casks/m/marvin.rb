@@ -6,8 +6,7 @@ cask "marvin" do
   sha256 arm:   "770c7b55c6c7fd42dc5de48bc8d04e0461b954eb99756b9ce85fc72a50d76c0e",
          intel: "0bde26b56569162ba250071e18836bc0acbcbdf9a648ee6f80483c8790e9702a"
 
-  url "https://#{hostname_arch}.s3.amazonaws.com/Marvin-#{version}#{arch}-mac.zip",
-      verified: "#{hostname_arch}.s3.amazonaws.com/"
+  url "https://#{hostname_arch}.s3.amazonaws.com/Marvin-#{version}#{arch}-mac.zip"
   name "Amazing Marvin"
   desc "Personal productivity app"
   homepage "https://www.amazingmarvin.com/"

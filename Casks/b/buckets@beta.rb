@@ -21,8 +21,7 @@ cask "buckets@beta" do
     app_image "Buckets-Beta-linux-latest-#{arch}-#{version}.AppImage", target: "Buckets Beta.AppImage"
   end
 
-  url "https://github.com/buckets/desktop-beta/releases/download/v#{version}/Buckets-Beta-#{url_mid}#{arch}-#{version}.#{url_end}",
-      verified: "github.com/buckets/desktop-beta/"
+  url "https://github.com/buckets/desktop-beta/releases/download/v#{version}/Buckets-Beta-#{url_mid}#{arch}-#{version}.#{url_end}"
   name "Buckets Beta"
   desc "Budgeting tool"
   homepage "https://www.budgetwithbuckets.com/"

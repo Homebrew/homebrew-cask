@@ -2,8 +2,7 @@ cask "font-domine" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/domine/Domine%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/domine/Domine%5Bwght%5D.ttf"
   name "Domine"
   homepage "https://fonts.google.com/specimen/Domine"
 

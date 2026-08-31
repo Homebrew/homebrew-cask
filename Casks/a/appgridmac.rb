@@ -1,9 +1,8 @@
 cask "appgridmac" do
-  version "1.1.23"
-  sha256 "a8988c2e09049426e30f37461de20b598416d898b7c7cd81424196c7ee6b090b"
+  version "1.2.4"
+  sha256 "e06f2063b1802a54b3f82f72d8e5b046ce798094ab19f07e04570b0ca88c8aeb"
 
-  url "https://zekalogic.com/appgrid/app/AppGridMac-#{version}.zip",
-      verified: "zekalogic.com/appgrid/app/"
+  url "https://zekalogic.com/appgrid/app/AppGridMac-#{version}.zip"
   name "AppGridMac"
   desc "AI-assisted Launchpad replacement"
   homepage "https://appgridmac.com/"

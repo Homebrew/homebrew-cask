@@ -1,12 +1,11 @@
 cask "executor" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.40"
-  sha256 arm:   "8830256fc7395d545e86d1da5250cd8c8d3e6d49e3bf99b700b71b3d800560e4",
-         intel: "9f03d49b35692351ae79e9930642cda3ca8a763872caae56855e1359274dfb20"
+  version "1.6.7"
+  sha256 arm:   "3d3336c3cf1e7a49105a04ad2904dcde0f13aac8a3ce1ee268c5c718bb62572c",
+         intel: "7a1edffe4385374f051b8cad2245049862bd25ddeb4a07f63b06788151472c5d"
 
-  url "https://github.com/RhysSullivan/executor/releases/download/v#{version}/executor-desktop-mac-#{arch}.dmg",
-      verified: "github.com/RhysSullivan/executor/"
+  url "https://github.com/RhysSullivan/executor/releases/download/v#{version}/executor-desktop-mac-#{arch}.dmg"
   name "Executor"
   desc "Tool discovery and execution layer for AI agents"
   homepage "https://executor.sh/"

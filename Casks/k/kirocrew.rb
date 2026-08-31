@@ -1,6 +1,6 @@
 cask "kirocrew" do
-  version "0.2.0"
-  sha256 "bdf747ed7ff49de005f4b02482074aecf331888a6ea905187ee587611c251c34"
+  version "0.4.1-insider.1"
+  sha256 "b02d8ea8a4641453b6be6f56a7445a02b55ce1a15a54733bf922d013b14b7ddb"
 
   url "https://download.crew.kiro.dev/desktop/stable/#{version}/KiroCrew.dmg"
   name "Kiro Crew"

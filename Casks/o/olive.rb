@@ -4,8 +4,7 @@ cask "olive" do
   version "0.1.0,1e3cf53"
   sha256 "9ab6afc7ee9d7fb5083d1a49adea7dc5934bdbf6d635454cae4f8667fbd7c368"
 
-  url "https://github.com/olive-editor/olive/releases/download/#{version.csv.first}/Olive-#{version.csv.second}-macOS.zip",
-      verified: "github.com/olive-editor/olive/"
+  url "https://github.com/olive-editor/olive/releases/download/#{version.csv.first}/Olive-#{version.csv.second}-macOS.zip"
   name "Olive"
   desc "Non-linear video editor"
   homepage "https://www.olivevideoeditor.org/"

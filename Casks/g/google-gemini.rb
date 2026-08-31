@@ -1,9 +1,8 @@
 cask "google-gemini" do
-  version "1.94.11.734"
+  version "1.99.2.791"
   sha256 :no_check
 
-  url "https://dl.google.com/release2/j33ro/release/Gemini.dmg",
-      verified: "dl.google.com/"
+  url "https://dl.google.com/release2/j33ro/release/Gemini.dmg"
   name "Gemini"
   desc "Native desktop AI assistant from Google"
   homepage "https://gemini.google/"
@@ -44,5 +43,6 @@ cask "google-gemini" do
         "~/Library/Group Containers/group.com.google.gemini",
         "~/Library/HTTPStorages/com.google.GeminiMacOS",
         "~/Library/Preferences/com.google.GeminiMacOS.*",
+        "~/Library/WebKit/com.google.GeminiMacOS",
       ]
 end

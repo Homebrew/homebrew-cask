@@ -1,9 +1,8 @@
 cask "virtualgl" do
-  version "3.1.4"
-  sha256 "ea12422b2e1e3378c63a1fd1b37fa11b00303b7bf885aa49a1da295523b19a30"
+  version "3.1.5"
+  sha256 "c4a5e2daabe503b9e346b50bd3a14a78011b6a943490417a0805ce332e4ede35"
 
-  url "https://github.com/VirtualGL/virtualgl/releases/download/#{version}/VirtualGL-#{version}.dmg",
-      verified: "github.com/VirtualGL/virtualgl/"
+  url "https://github.com/VirtualGL/virtualgl/releases/download/#{version}/VirtualGL-#{version}.dmg"
   name "VirtualGL"
   desc "3D without boundaries"
   homepage "https://www.virtualgl.org/"

@@ -2,8 +2,7 @@ cask "affinity-photo" do
   version "2.6.5,3782"
   sha256 "8ea03dfac76cebe9eeceef996ac585813b47624217c3f23e6921cbd9580a0788"
 
-  url "https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Photo%20#{version.csv.first.major}%20Affinity%20Store%20#{version.csv.second}.zip",
-      verified: "affinity-update.s3.amazonaws.com/"
+  url "https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Photo%20#{version.csv.first.major}%20Affinity%20Store%20#{version.csv.second}.zip"
   name "Affinity Photo #{version.csv.first.major}"
   desc "Professional image editing software"
   homepage "https://affinity.serif.com/en-us/photo/"

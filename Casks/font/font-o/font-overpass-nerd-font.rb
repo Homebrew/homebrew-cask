@@ -1,6 +1,6 @@
 cask "font-overpass-nerd-font" do
-  version "3.5.0"
-  sha256 "687e60db0a4d27cc111070d7b6aff2ed919e129f25e8789709d76f60ab627059"
+  version "3.5.1"
+  sha256 "ee7b45d4dc481371cac12d0de5c2408826c21f3031b2ef826fb157d077f7353d"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Overpass.tar.xz"
   name "Overpass Nerd Font families (Overpass)"

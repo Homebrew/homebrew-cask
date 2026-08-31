@@ -2,18 +2,17 @@ cask "brave-origin@nightly" do
   arch arm: "arm64", intel: "x64"
   folder_arch = on_arch_conditional arm: "-arm64"
 
-  sha256 arm:   "8c7fac1d1ebb92f8aabc1de00799ca476e476b759c5f31fded8f976f7a11ceca",
-         intel: "1d2ce868eebe9a6f4e511cf5ef02e2df62e68398e62eb167c8cfc500ee9376e4"
+  sha256 arm:   "9f631892d316139606c3200f67f72b55bbd6e6427fd5c3e31de1582e07865d7f",
+         intel: "eb78f4b2fd02d0fc4a8add8921472264d85fcb9a3ab48c8e62c8f46a9a786fec"
 
   on_arm do
-    version "1.95.70.0"
+    version "1.96.27.0"
   end
   on_intel do
-    version "1.95.65.0"
+    version "1.96.29.0"
   end
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/nightly#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Nightly-#{arch}.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Origin/"
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/nightly#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Nightly-#{arch}.dmg"
   name "Brave Origin Nightly"
   desc "Privacy-focused web browser"
   homepage "https://brave.com/origin/#nightly"

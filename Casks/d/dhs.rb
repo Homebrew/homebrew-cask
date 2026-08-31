@@ -2,8 +2,7 @@ cask "dhs" do
   version "1.6.0"
   sha256 "3e72ffa559332afb65a83bfbc3b5973064aac9a424dee9cc8bc57e63f86d728f"
 
-  url "https://github.com/objective-see/DylibHijackScanner/releases/download/v#{version}/DHS_#{version}.zip",
-      verified: "github.com/objective-see/"
+  url "https://github.com/objective-see/DylibHijackScanner/releases/download/v#{version}/DHS_#{version}.zip"
   name "Dylib Hijack Scanner"
   desc "Scans for dylib hijacking"
   homepage "https://objective-see.org/products/dhs.html"

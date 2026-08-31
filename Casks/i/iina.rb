@@ -7,7 +7,7 @@ cask "iina" do
       depends_on macos: :monterey
     end
     on_intel do
-      depends_on macos: :catalina
+      depends_on macos: :big_sur
     end
   end
 

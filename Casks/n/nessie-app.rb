@@ -1,9 +1,8 @@
 cask "nessie-app" do
-  version "1.4.2954"
-  sha256 "b0c68a16b528642ee542f8483ba627608bf0fe70041722ea85d2c5234aee5225"
+  version "1.4.3554"
+  sha256 "ffdb7222aaa8cedc22e0572864e619585e19259b30a5d606fecffaf3c6c51d34"
 
-  url "https://nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/Nessie_#{version}.zip",
-      verified: "nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/"
+  url "https://nessie-notes-app-auto-updates.s3.us-west-2.amazonaws.com/Nessie_#{version}.zip"
   name "Nessie"
   desc "Knowledge base from AI chats"
   homepage "https://nessielabs.com/"

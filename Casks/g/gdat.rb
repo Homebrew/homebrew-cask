@@ -2,8 +2,7 @@ cask "gdat" do
   version "2026r02,1rGnfTHdr7cuhSDDoN_oTqSYqqDzw3kkQ"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://drive.google.com/uc?export=download&id=#{version.csv.second}",
-      verified: "drive.google.com/uc?export=download&id=#{version.csv.second}"
+  url "https://drive.google.com/uc?export=download&id=#{version.csv.second}"
   name "Genealogical DNA Analysis Tool"
   desc "App that utilises autosomal DNA to aid in the research of family trees"
   homepage "https://www.getgdat.com/"

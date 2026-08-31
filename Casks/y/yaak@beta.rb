@@ -3,17 +3,17 @@ cask "yaak@beta" do
   os macos: "Yaak", linux: "yaak"
   url_end = on_system_conditional macos: "dmg", linux: "AppImage"
 
-  version "2026.5.0"
-  sha256 arm:          "c191f08eb7796475a6fadbe22b0b38bffb2fc211aa5a591d4061d7a0dc4e427a",
-         intel:        "5b2f99424e01b0c8f536c90b29ee8c96c187c8e3ac3c9e5bb774830ef6414c43",
-         arm64_linux:  "237820abde1836b338c70c6f5a1dc1f331f47f2950c7aa6e7c39283f41b7d18c",
-         x86_64_linux: "fbebec36428fd4528812261b64c23a14de42e80e9e18363fc4ab800c103d556d"
+  version "2026.7.0"
+  sha256 arm:          "b0713cba9727a2b324895a6ea189877619b16a23eda467a13bf17d78fd78d5ce",
+         intel:        "d2bc2d1afbe00037058503c8a06ebf9881455dd6750034228ff4c05a004a9d08",
+         arm64_linux:  "e59884783ac60b456f81427e27586892e330e621638c9bfccb8d63e757ada844",
+         x86_64_linux: "1b30a0cc7dbaa7c20d4b577c27f2bd3129394c9349db457a5af6ca9d3a02d257"
 
   on_macos do
     auto_updates true
     depends_on macos: :ventura
 
-    app "yaak.app"
+    app "Yaak.app"
 
     zap trash: [
       "~/Library/Application Support/app.yaak.desktop",

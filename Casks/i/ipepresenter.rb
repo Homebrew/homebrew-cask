@@ -5,8 +5,7 @@ cask "ipepresenter" do
   sha256 arm:   "bf72ed043b3cb914b3f43ba9abc376fabdee873c557d999b7d968a23ea4a5b8b",
          intel: "908c08046f01ae3c8a0a6b1af95c95b330739bcf47f12654acb266e03917a9a7"
 
-  url "https://github.com/otfried/ipe/releases/download/v#{version}/ipepresenter-#{version}-mac-#{arch}.dmg",
-      verified: "github.com/otfried/ipe/"
+  url "https://github.com/otfried/ipe/releases/download/v#{version}/ipepresenter-#{version}-mac-#{arch}.dmg"
   name "IpePresenter"
   desc "Make presentations from PDFs"
   homepage "https://ipepresenter.otfried.org/"

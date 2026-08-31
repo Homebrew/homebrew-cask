@@ -1,9 +1,8 @@
 cask "teleport-connect" do
-  version "18.10.4"
-  sha256 "153f151e777a596536331f25fd1b08457bf79b548378e6a2aefd4870df9876c6"
+  version "18.11.0"
+  sha256 "f376f69c709d799aa8bc59c62d886ca1972fb4031ffb77e90ff2af1f1be730ef"
 
-  url "https://cdn.teleport.dev/Teleport%20Connect-#{version}.dmg",
-      verified: "cdn.teleport.dev/"
+  url "https://cdn.teleport.dev/Teleport%20Connect-#{version}.dmg"
   name "Teleport Connect"
   desc "Developer-friendly browser for cloud infrastructure"
   homepage "https://goteleport.com/"

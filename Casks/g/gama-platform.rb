@@ -5,8 +5,7 @@ cask "gama-platform" do
   sha256 arm:   "e88709354ba28b05b6cf01e879401b1d964a3f4a6bbd8026ae8afc9e7c55ca05",
          intel: "9740ae814009e6d0ecb1bb560395bd083c9498916b5a54787b24aad962f3167e"
 
-  url "https://github.com/gama-platform/gama/releases/download/#{version.csv.first}/GAMA_#{version.csv.first}_MacOS#{arch}_#{version.csv.second}.dmg",
-      verified: "github.com/gama-platform/gama/"
+  url "https://github.com/gama-platform/gama/releases/download/#{version.csv.first}/GAMA_#{version.csv.first}_MacOS#{arch}_#{version.csv.second}.dmg"
   name "GAMA Platform"
   desc "IDE for building spatially explicit agent-based simulations"
   homepage "https://gama-platform.org/"

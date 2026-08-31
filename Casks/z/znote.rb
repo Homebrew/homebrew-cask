@@ -1,12 +1,11 @@
 cask "znote" do
   arch arm: "-arm64"
 
-  version "4.6.0"
-  sha256 arm:   "3ed48a0882a25138d91994ff5b6836e84986bf7eaca3655be82b7af4b02480d3",
-         intel: "aab3e80821ab0134ed08e422566cfbbfb7c7351a094041fe09dcdf3b8e443335"
+  version "4.9.1"
+  sha256 arm:   "af3bbd4e1b1d58baf9ac73455e97f3814001f0a3025f6298615be59ec574459c",
+         intel: "be7fa10810d85d64c041923c113e85331392e55f56392295755c86c8ac209a95"
 
-  url "https://github.com/alagrede/znote-app/releases/download/v#{version}/znote-#{version}#{arch}.dmg",
-      verified: "github.com/alagrede/znote-app/"
+  url "https://github.com/alagrede/znote-app/releases/download/v#{version}/znote-#{version}#{arch}.dmg"
   name "Znote"
   desc "Notes-taking app"
   homepage "https://znote.io/"

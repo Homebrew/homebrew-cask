@@ -2,8 +2,7 @@ cask "font-pompiere" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/pompiere/Pompiere-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/pompiere/Pompiere-Regular.ttf"
   name "Pompiere"
   homepage "https://fonts.google.com/specimen/Pompiere"
 

@@ -2,8 +2,7 @@ cask "captin" do
   version "2.0.1"
   sha256 :no_check
 
-  url "https://raw.githubusercontent.com/cool8jay/public/master/captin/Captin.zip",
-      verified: "raw.githubusercontent.com/cool8jay/public/master/captin/"
+  url "https://raw.githubusercontent.com/cool8jay/public/master/captin/Captin.zip"
   name "Captin"
   desc "Tool to show caps lock status"
   # https://captin.mystrikingly.com/ got redirected to some phishing site

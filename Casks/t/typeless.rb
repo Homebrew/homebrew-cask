@@ -2,12 +2,11 @@ cask "typeless" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "latest"
 
-  version "2.3.0"
-  sha256 arm:   "f21a98251a2fcef5c8f0ae409fae4964d0777ece80146bf1cfbabc970f5c4241",
-         intel: "00511ae2cd7e172b0b05808b74b15802ba90af09252a19b6779c25fc0fc8bd8c"
+  version "2.4.0"
+  sha256 arm:   "e70c6a105b191726358bd8d95fedb90f4531f4cc1b9239e9f0393f833f9b08dd",
+         intel: "37f3af3dd8bff6d8edb9ec47cc772b9a939d81946a8f3cb8664b4cded00e3518"
 
-  url "https://typeless-static.com/desktop-release/Typeless-#{version}-#{arch}.dmg",
-      verified: "typeless-static.com/"
+  url "https://typeless-static.com/desktop-release/Typeless-#{version}-#{arch}.dmg"
   name "Typeless"
   desc "AI voice dictation that turns speech into polished text"
   homepage "https://typeless.com/"

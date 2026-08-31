@@ -2,14 +2,13 @@ cask "claude-code@latest" do
   arch arm: "arm64", intel: "x64"
   os macos: "darwin", linux: "linux"
 
-  version "2.1.232"
-  sha256 arm:          "7b39c1588df919d001dea3ffd5651adb682f2451b5a0e18d42d4233296b53cc7",
-         x86_64:       "aa3d606d7bf0ea9739a6d0de11810e72a662e7a4e5061d67ee7f8bc47c8890f9",
-         x86_64_linux: "61d23f8749136907d586d5b11831ea8a5234d4c1dea40a5e55c33b52e204c6d1",
-         arm64_linux:  "20797ebc644dfc47a69865c46d5cf702c7dbedd48d4268063b8828ebd55b39d0"
+  version "2.1.251"
+  sha256 arm:          "625869b01e0050f260b2980fac248fd9cef9e462612bded4ec9d3d49ff8969a5",
+         intel:        "44221d72a3f35772faa85ad9a36a678084a516f720e64b45e26eb9015315500b",
+         arm64_linux:  "65445bd4dd042079cc3fa43791b561370a05c8599e8ec47580e25a81050abbdd",
+         x86_64_linux: "fd5f10ff0eb58daec04900466b143ea98aab50abf208a422bc008eaec13f61f7"
 
-  url "https://downloads.claude.ai/claude-code-releases/#{version}/#{os}-#{arch}/claude",
-      verified: "downloads.claude.ai/claude-code-releases/"
+  url "https://downloads.claude.ai/claude-code-releases/#{version}/#{os}-#{arch}/claude"
   name "Claude Code"
   desc "Terminal-based AI coding assistant"
   homepage "https://claude.com/product/claude-code"

@@ -1,12 +1,11 @@
 cask "plasticity" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.1.3"
-  sha256 arm:   "413cd52864518889e8e39dba073b57f922ecf5627162546d3cd546f609b126a1",
-         intel: "c15a465570df74737b3c9a77a62ddf2b46c1c8093c737d156c5cc6d96f5833fe"
+  version "26.1.4"
+  sha256 arm:   "4f61f0d3199bc2aaee6ec468e5e72f20f4781fd240db94b22282c0fa9659f70a",
+         intel: "191209da4e02ab65e35cba4fcdb4a1924fb73e31630a933c6a57e0c31803e512"
 
-  url "https://github.com/nkallen/plasticity/releases/download/v#{version}/Plasticity-darwin-#{arch}-#{version}.zip",
-      verified: "github.com/nkallen/plasticity/"
+  url "https://github.com/nkallen/plasticity/releases/download/v#{version}/Plasticity-darwin-#{arch}-#{version}.zip"
   name "Plasticity"
   desc "3D modeling software for concept artists and designers"
   homepage "https://www.plasticity.xyz/"

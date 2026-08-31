@@ -1,6 +1,6 @@
 cask "opera" do
-  version "134.0.5954.56"
-  sha256 "86cff817a54ba2cc03c500eb718f1fe3a66da7821fdec81f111262d785e2ccd1"
+  version "135.0.5973.66"
+  sha256 "8691e1f85490a5e09542fcfb796cba1ffcf74ab2bc6c219b8d9ad73567c02bb9"
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   name "Opera"
@@ -13,9 +13,11 @@ cask "opera" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :ventura
 
   app "Opera.app"
+
+  uninstall quit: "com.operasoftware.Opera"
 
   zap trash: [
     "~/Library/Application Support/com.operasoftware.Opera",

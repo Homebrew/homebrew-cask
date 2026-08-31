@@ -2,8 +2,7 @@ cask "font-anton-sc" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/antonsc/AntonSC-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/antonsc/AntonSC-Regular.ttf"
   name "Anton SC"
   homepage "https://fonts.google.com/specimen/Anton+SC"
 

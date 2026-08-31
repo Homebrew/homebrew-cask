@@ -1,12 +1,11 @@
 cask "rowboat" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.8.3"
-  sha256 arm:   "79c7f7dc53400e89883b1a25848f9ccaea74f0ecb6e3287e97b49d935e3e93d6",
-         intel: "0a5ae6bd1230e0d5ce00cbc4861e0ba515d3ac31ba3deedb050ce0402ea75c64"
+  version "0.9.1"
+  sha256 arm:   "8128a431f7c9b4dae9dc47356adcd2fb1740f10fe6b9b4dd2b179af79d443adb",
+         intel: "1658535749b4cb2db496176f913719beee186e9e23b58d5c7ac0c1d47320e8ac"
 
-  url "https://github.com/rowboatlabs/rowboat/releases/download/v#{version}/Rowboat-darwin-#{arch}-#{version}.zip",
-      verified: "github.com/rowboatlabs/rowboat/"
+  url "https://github.com/rowboatlabs/rowboat/releases/download/v#{version}/Rowboat-darwin-#{arch}-#{version}.zip"
   name "Rowboat"
   desc "Open-source AI coworker, with memory"
   homepage "https://www.rowboatlabs.com/"
@@ -18,7 +17,7 @@ cask "rowboat" do
 
   depends_on macos: :monterey
 
-  app "rowboat.app"
+  app "Rowboat.app"
 
   zap trash: [
     "~/.rowboat",

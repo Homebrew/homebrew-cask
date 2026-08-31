@@ -1,12 +1,46 @@
 cask "ferdium@nightly" do
   arch arm: "arm64", intel: "x64"
+  os macos: "mac", linux: "linux-Portable"
+  url_end = on_system_conditional macos: "#{arch}.dmg", linux: "x86_64.AppImage"
 
-  version "7.1.3-nightly.12"
-  sha256 arm:   "6de2d82b616630b44440c76556d0b1c8d87a5e158a032fb57d0c14e8b6c38603",
-         intel: "6fbfee846d210e07007db65f3fbd444435f04f41af6ac75a3083a526b0d324a1"
+  version "7.2.2-nightly.3"
 
-  url "https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-mac-#{version}-#{arch}.dmg",
-      verified: "github.com/ferdium/ferdium-app/"
+  on_macos do
+    sha256 arm:   "08d7f9d1532cd5eeadcbbc7030ff88c2eb7da9600c80d7b38cf9f25cc1c9d0c5",
+           intel: "e5e6a0f0e8fafab5114ecd260f0718f206550c63785039321c404a8e63293be4"
+
+    depends_on macos: :monterey
+
+    app "Ferdium.app"
+
+    uninstall quit:   "com.ferdium.ferdium-app",
+              delete: "/Library/Logs/DiagnosticReports/Ferdium Helper_.*wakeups_resource.diag"
+
+    zap trash: [
+      "~/Library/Application Support/Caches/ferdium-updater",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.ferdium.ferdium-app.sfl*",
+      "~/Library/Application Support/Ferdium",
+      "~/Library/Caches/com.ferdium.ferdium-app",
+      "~/Library/Caches/com.ferdium.ferdium-app.ShipIt",
+      "~/Library/Logs/Ferdium",
+      "~/Library/Preferences/ByHost/com.ferdium.ferdium-app.ShipIt.*.plist",
+      "~/Library/Preferences/com.electron.ferdium.helper.plist",
+      "~/Library/Preferences/com.electron.ferdium.plist",
+      "~/Library/Preferences/com.ferdium.ferdium-app.plist",
+      "~/Library/Preferences/org.ferdium.ferdium-app.plist",
+      "~/Library/Saved Application State/com.ferdium.ferdium-app.savedState",
+      "~/Library/Saved Application State/org.ferdium.ferdium-app.savedState",
+    ]
+  end
+  on_linux do
+    sha256 "8767b0da1b406e23b7784a828518b2ada758aa5c214c882754a58e65f0c9f58c"
+
+    depends_on arch: :x86_64
+
+    app_image "Ferdium-linux-Portable-#{version}-x86_64.AppImage", target: "Ferdium Nightly.AppImage"
+  end
+
+  url "https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-#{os}-#{version}-#{url_end}"
   name "Ferdium Nightly"
   desc "Multi-platform multi-messaging app"
   homepage "https://ferdium.org/"
@@ -18,23 +52,4 @@ cask "ferdium@nightly" do
 
   auto_updates true
   conflicts_with cask: "ferdium"
-  depends_on macos: :monterey
-
-  app "Ferdium.app"
-
-  uninstall quit:   "com.ferdium.ferdium-app",
-            delete: "/Library/Logs/DiagnosticReports/Ferdium Helper_.*wakeups_resource.diag"
-
-  zap trash: [
-    "~/Library/Application Support/Caches/ferdium-updater",
-    "~/Library/Application Support/Ferdium",
-    "~/Library/Caches/com.ferdium.ferdium-app",
-    "~/Library/Caches/com.ferdium.ferdium-app.ShipIt",
-    "~/Library/Logs/Ferdium",
-    "~/Library/Preferences/ByHost/com.ferdium.ferdium-app.ShipIt.*.plist",
-    "~/Library/Preferences/com.electron.ferdium.helper.plist",
-    "~/Library/Preferences/com.electron.ferdium.plist",
-    "~/Library/Preferences/com.ferdium.ferdium-app.plist",
-    "~/Library/Saved Application State/com.ferdium.ferdium-app.savedState",
-  ]
 end

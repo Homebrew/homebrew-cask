@@ -2,8 +2,7 @@ cask "boxy-suite" do
   version "3.0.0"
   sha256 :no_check
 
-  url "https://boxysuite.s3.amazonaws.com/release/Boxy%20Suite.dmg",
-      verified: "boxysuite.s3.amazonaws.com/release/"
+  url "https://boxysuite.s3.amazonaws.com/release/Boxy%20Suite.dmg"
   name "Boxy Suite"
   desc "Gmail, Calendar, Keep and Contacts apps"
   homepage "https://www.boxysuite.com/"

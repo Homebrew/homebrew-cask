@@ -7,9 +7,13 @@ cask "easydict" do
   desc "Dictionary and translator app"
   homepage "https://github.com/tisfeng/Easydict/"
 
+  # The Sparkle feed can contain items on the "beta" channel, so we restrict
+  # matching to the default channel.
   livecheck do
     url "https://raw.githubusercontent.com/tisfeng/Easydict/main/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true

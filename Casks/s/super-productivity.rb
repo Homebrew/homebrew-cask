@@ -1,12 +1,11 @@
 cask "super-productivity" do
   arch arm: "arm64", intel: "x64"
 
-  version "18.19.0"
-  sha256 arm:   "6f856f76877491f2ff8287db4da0b8b69a407023dd8224acd98510dddaa8252d",
-         intel: "41a3910c4ea25750f326d0d0629bc1ce086345fe630521cf2df2fbab5bdb5752"
+  version "18.21.1"
+  sha256 arm:   "724378379f5a9dad54f4649779c9b25d77baece52885d29d1536fc0fcd5ae620",
+         intel: "c40976ce8da16354b58fa09a190e1439fcbcee97d4ac5e945abff76ccca58041"
 
-  url "https://github.com/super-productivity/super-productivity/releases/download/v#{version}/superProductivity-#{arch}.dmg",
-      verified: "github.com/super-productivity/super-productivity/"
+  url "https://github.com/super-productivity/super-productivity/releases/download/v#{version}/superProductivity-#{arch}.dmg"
   name "Super Productivity"
   desc "To-do list and time tracker"
   homepage "https://super-productivity.com/"

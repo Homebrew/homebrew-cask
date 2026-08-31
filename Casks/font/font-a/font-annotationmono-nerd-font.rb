@@ -1,6 +1,6 @@
 cask "font-annotationmono-nerd-font" do
-  version "3.5.0"
-  sha256 "da61c4a57ab7270029aaa77441ee9e98367c6e1a0a32655e3b2fb170f5778378"
+  version "3.5.1"
+  sha256 "bae334fde071ee7450cc8bbdc20fc5663a81466dce54d66f93815a48f59a308c"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/AnnotationMono.tar.xz"
   name "AnnotationM Nerd Font (Annotation Mono)"

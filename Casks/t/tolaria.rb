@@ -2,11 +2,11 @@ cask "tolaria" do
   arch arm: "Silicon", intel: on_system_conditional(macos: "Intel", linux: "amd64")
   os macos: "_macOS_#{arch}.dmg", linux: "_#{arch}.AppImage"
 
-  version "2027.07.31,2027.7.31"
+  version "2027.08.28,2027.8.28"
 
   on_macos do
-    sha256 arm:   "499ae37fedfea519582ff17b2d3f45e4a1578a09b2686467c8e84287b7daf061",
-           intel: "67ce1323739b3c2552d932a8b7989115d94d525806de74f61a0312f92f4df5f8"
+    sha256 arm:   "b57971df0544d06f48d85b0ad62cc8b98b1b6442fd510cfcdc4905ec4e8919b6",
+           intel: "b70b25f97fd4da9888db9d7ca3b75adc35e2ae3dd870bbcdb73eaf882ba701c8"
 
     auto_updates true
 
@@ -23,7 +23,7 @@ cask "tolaria" do
     ]
   end
   on_linux do
-    sha256 "ac46b709cfb33ce9b2d73ab8a72264338767335ca1c4ccfd0cfe4386b23f79f5"
+    sha256 "fb64c042fbf818c744307cea175dabef8b8ad3b02f1a123bf5edcbf4ecc8c00d"
 
     depends_on arch: :x86_64
 

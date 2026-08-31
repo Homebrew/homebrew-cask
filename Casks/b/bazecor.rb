@@ -28,8 +28,7 @@ cask "bazecor" do
     app_image "Bazecor-#{version}-#{arch}.AppImage", target: "Bazecor.AppImage"
   end
 
-  url "https://github.com/Dygmalab/Bazecor/releases/download/v#{version}/Bazecor-#{version}-#{arch}.#{url_end}",
-      verified: "github.com/Dygmalab/Bazecor/"
+  url "https://github.com/Dygmalab/Bazecor/releases/download/v#{version}/Bazecor-#{version}-#{arch}.#{url_end}"
   name "Bazecor"
   desc "Graphical configurator for Dygma Raise keyboards"
   homepage "https://github.com/Dygmalab/Bazecor"

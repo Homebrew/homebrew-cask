@@ -2,8 +2,7 @@ cask "shotcut" do
   version "26.8.1"
   sha256 "7bab10bd96fe3590bb3ba0461d21d3022681574b324bb1c21366d5432cac5657"
 
-  url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.first}/shotcut-macos-#{version.csv.second || version.csv.first}.dmg",
-      verified: "github.com/mltframework/shotcut/"
+  url "https://github.com/mltframework/shotcut/releases/download/v#{version.csv.first}/shotcut-macos-#{version.csv.second || version.csv.first}.dmg"
   name "Shotcut"
   desc "Video editor"
   homepage "https://www.shotcut.org/"

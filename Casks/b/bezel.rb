@@ -2,8 +2,7 @@ cask "bezel" do
   version "4.7.0"
   sha256 "db0cf532162db8308d9d286db107f92d8e3595414cd0265ebd1f2b00f5323b1a"
 
-  url "https://download.nonstrict.eu/bezel/Bezel-#{version}.zip",
-      verified: "download.nonstrict.eu/bezel/"
+  url "https://download.nonstrict.eu/bezel/Bezel-#{version}.zip"
   name "Bezel"
   desc "iOS screen output recorder"
   homepage "https://getbezel.app/"

@@ -2,8 +2,7 @@ cask "font-computer-modern" do
   version "0.7.0"
   sha256 "2609c14450f42d0bcd40203900afcb1d693521a9b24a18c65e14b6b0585ff150"
 
-  url "https://downloads.sourceforge.net/cm-unicode/cm-unicode-#{version}-ttf.tar.xz",
-      verified: "downloads.sourceforge.net/cm-unicode/"
+  url "https://downloads.sourceforge.net/cm-unicode/cm-unicode-#{version}-ttf.tar.xz"
   name "Computer Modern"
   homepage "https://cm-unicode.sourceforge.io/"
 

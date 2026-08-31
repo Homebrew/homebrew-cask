@@ -2,8 +2,7 @@ cask "jedit-omega" do
   version "3.12"
   sha256 "2dba43a17c33c58fec0a401ade3331cb9459fdafe2ba65a45f4afba3b2eefc4a"
 
-  url "https://artman21.site/JeditOmega#{version.no_dots}.pkg",
-      verified: "artman21.site/"
+  url "https://artman21.site/JeditOmega#{version.no_dots}.pkg"
   name "Jedit Ω"
   desc "Text editor"
   homepage "https://www.artman21.com/en/sparkle/jeditomega.html"

@@ -2,10 +2,10 @@ cask "bananas" do
   arch arm: "arm64", intel: "x86_64"
   url_end = on_system_conditional macos: "universal.dmg", linux: "#{arch}.AppImage"
 
-  version "0.0.22"
+  version "0.2.1"
 
   on_macos do
-    sha256 "ba1a59997dfa31b1216a1648ee3039eb2733d56895d025ce50ffb74a4696a0b6"
+    sha256 "b540be4a27b4bb2ad791794f65628146e2334210490448a2d3157fa88084b8ab"
 
     app "bananas.app"
 
@@ -16,14 +16,13 @@ cask "bananas" do
     ]
   end
   on_linux do
-    sha256 arm64_linux:  "0f09d9e6f35d1237832a7330c67cb9ded0aab99280b7b035ca4e776b40e3f731",
-           x86_64_linux: "7236bd1210a9357d6d556d86085f7d79ef8fc2e476f2f677ccfab75c6210acc0"
+    sha256 arm64_linux:  "5e5d0adc0bca1821328b88c511eeb735a0764d6952659272f159b272ef8f9c54",
+           x86_64_linux: "b4af9a638c151a384414d6ba53b9cd5777f7fbac541b610d4e4da2cffed66947"
 
     app_image "bananas_#{arch}.AppImage", target: "Bananas.AppImage"
   end
 
-  url "https://github.com/mistweaverco/bananas/releases/download/v#{version}/bananas_#{url_end}",
-      verified: "github.com/mistweaverco/bananas/"
+  url "https://github.com/mistweaverco/bananas/releases/download/v#{version}/bananas_#{url_end}"
   name "Bananas Screen Sharing"
   desc "Cross-platform screen sharing tool"
   homepage "https://getbananas.net/"

@@ -14,8 +14,7 @@ cask "android-cli" do
     depends_on arch: :x86_64
   end
 
-  url "https://dl.google.com/android/cli/#{version}/#{os}_#{arch}/android",
-      verified: "dl.google.com/android/cli/"
+  url "https://dl.google.com/android/cli/#{version}/#{os}_#{arch}/android"
   name "Android CLI"
   desc "Command-line interface for Android app development with AI agents"
   homepage "https://developer.android.com/tools/agents/android-cli"

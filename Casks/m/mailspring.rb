@@ -5,8 +5,7 @@ cask "mailspring" do
   sha256 arm:   "a9f641d9dfc9a5f0a3ecb87b3492ab416c0a8cbdfcd3ec424d7ae99e180886ea",
          intel: "7258d79f778d13468d1799a18ba37124d2de3f1aa149265959a6b15f5373ef0c"
 
-  url "https://github.com/Foundry376/Mailspring/releases/download/#{version}/Mailspring#{arch}.zip",
-      verified: "github.com/Foundry376/Mailspring/"
+  url "https://github.com/Foundry376/Mailspring/releases/download/#{version}/Mailspring#{arch}.zip"
   name "Mailspring"
   desc "Fork of Nylas Mail"
   homepage "https://getmailspring.com/"

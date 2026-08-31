@@ -1,12 +1,11 @@
 cask "logos" do
   arch arm: "-arm"
 
-  version "52.2.0.0019"
-  sha256 arm:   "f55a0f26a34e4d156d9209add458085999da11b4ae208fbcedf78105fa822e5c",
-         intel: "809f89ea0cc968bf15066bac0f49a66d50b6603f7dd36436c1a1d79f7427b43a"
+  version "53.1.0.0002"
+  sha256 arm:   "d37a843c5a1fe5ee53bf9d774e07dcac8f1f5391e0e0c68a720f40c282970889",
+         intel: "f9d45282b396f0c124df0562334a7d34d6e413d1d2aaba6a3061949337ea33d1"
 
-  url "https://downloads.logoscdn.com/LBS10/Installer/#{version}/LogosMac#{arch}.dmg",
-      verified: "downloads.logoscdn.com/"
+  url "https://downloads.logoscdn.com/LBS10/Installer/#{version}/LogosMac#{arch}.dmg"
   name "Logos"
   desc "Bible study software"
   homepage "https://www.logos.com/"
@@ -24,9 +23,10 @@ cask "logos" do
   app "Logos.app"
 
   uninstall launchctl: "com.logos.LogosIndexer",
-            quit:      "com.logos.Logos"
+            quit:      ["com.logos.desktop.logos", "com.logos.desktop.logossplashscreen", "com.logos.Logos"]
 
   zap trash: [
+    "~/Library/Application Support/Logos4",
     "~/Library/LaunchAgents/com.logos.desktop.logosindexer.plist",
     "~/Library/Preferences/com.logos.*.plist",
   ]

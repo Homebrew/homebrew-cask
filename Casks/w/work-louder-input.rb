@@ -1,12 +1,11 @@
 cask "work-louder-input" do
   arch arm: "-arm64"
 
-  version "0.18.2"
-  sha256 arm:   "22973e1bc2459afb764d8468eaa19495d3e9abd77814246a842c1705e6f1bb1d",
-         intel: "844f453bc684b796b9db100243332ffe9d2d07f89553592843ac71d8cf3d3dd0"
+  version "0.18.4"
+  sha256 arm:   "8192f5170cac808e4ecd000c8494a5b9fd44c4a91a5bd773a802a086ddf43690",
+         intel: "25d741f24b09fc8715384bfe1934ec1c46c89c23818770f468bc2c0e9f761962"
 
-  url "https://github.com/worklouder/input-releases/releases/download/v#{version}/input-#{version}#{arch}.dmg",
-      verified: "github.com/worklouder/input-releases/"
+  url "https://github.com/worklouder/input-releases/releases/download/v#{version}/input-#{version}#{arch}.dmg"
   name "Input"
   desc "Keyboard configurator for Work Louder devices"
   homepage "https://worklouder.cc/input"

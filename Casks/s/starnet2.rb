@@ -1,66 +1,26 @@
 cask "starnet2" do
-  version "02,2023"
-  sha256 "d566cd0a59d15894a3b027354812707b4408ca0917275af36602520f4ddec918"
+  arch arm: "arm64", intel: "x64"
+  runtime = on_arch_conditional arm: "COREML", intel: "ORT"
 
-  url "https://www.starnetastro.com/wp-content/uploads/#{version.csv.second}/#{version.csv.first}/StarNet2T_MacOS.zip"
+  version "2.5.4-0214"
+  sha256 arm:   "95d318794dac837fcfc21cb87bd7fe55155da515fdaadac4bc680d5f95caaad5",
+         intel: "81320096875b6814fa565fe42f7c0f99fa288414fe86a1fb710fb768d0d577e4"
+
+  url "https://download.starnetastro.com/StarNet2_macos-#{arch}_#{version}_#{runtime}_#{arch}.pkg"
   name "starnet2"
   desc "Removes stars from astrophotography images using ML models"
-  homepage "https://www.starnetastro.com/"
+  homepage "https://starnetastro.com/"
 
   livecheck do
-    url "https://www.starnetastro.com/experimental/"
-    regex(%r{uploads/(\d+)/(\d+)/StarNet2T_MacOS\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
+    url "https://starnetastro.com/cli-tools/starnet/"
+    regex(/StarNet2[._-]macos-#{arch}[._-]v?(\d+(?:\.\d+)*-\d+)[._-]#{runtime}/i)
   end
 
   depends_on :macos
-  depends_on arch: :arm64
 
-  generated_script "StarNet2T_MacOS/installer.sh", content: <<~EOS
-    #!/bin/sh
+  pkg "StarNet2_macos-#{arch}_#{version}_#{runtime}_#{arch}.pkg"
 
-    chmod 0755 "$(dirname "$0")"/lib/*
-    mkdir -p /usr/local/lib
-    cp "$(dirname "$0")"/lib/* /usr/local/lib/
-  EOS
-  generated_script "StarNet2T_MacOS/uninstaller.sh", content: <<~EOS
-    #!/bin/sh
-
-    for lib in "$(dirname "$0")"/lib/*; do
-      test -e "${lib}" || continue
-      rm -f "/usr/local/lib/$(basename "${lib}")"
-    done
-  EOS
-  installer script: {
-    executable: "StarNet2T_MacOS/installer.sh",
-    sudo:       true,
-  }
-  command_wrapper "starnet2", content: <<~EOS
-    #!/bin/sh
-
-    cleanup() {
-      rm -f StarNet2_weights.pt
-    }
-    trap cleanup RETURN EXIT SIGINT SIGKILL
-
-    ln -sf "#{staged_path}/StarNet2T_MacOS/StarNet2_weights.pt" .
-    "#{staged_path}/StarNet2T_MacOS/starnet2" "$@"
-  EOS
-
-  postflight_steps do
-    remove "StarNet2T_MacOS/installer.sh"
-  end
-
-  uninstall_postflight_steps do
-    remove "StarNet2T_MacOS/uninstaller.sh"
-  end
-
-  uninstall script: {
-    executable: "StarNet2T_MacOS/uninstaller.sh",
-    sudo:       true,
-  }
+  uninstall pkgutil: "com.starnetastro.starnet2.cli"
 
   # No zap stanza required
 

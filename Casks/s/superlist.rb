@@ -1,9 +1,8 @@
 cask "superlist" do
-  version "1.56.4"
-  sha256 "a938c8626051d23276c9777a46368221822107d0e57365ecfa14757707595ca1"
+  version "1.57.1"
+  sha256 "01e1313e9b0ec0631ca19ea02de7fde0ffdf3bc2516000b9d9952b8388cf68ec"
 
-  url "https://storage.googleapis.com/superlist-appcast/beta/updates/Superlist-#{version}.zip",
-      verified: "storage.googleapis.com/superlist-appcast/beta/updates/"
+  url "https://storage.googleapis.com/superlist-appcast/beta/updates/Superlist-#{version}.zip"
   name "Superlist"
   desc "Collaborative to-do list app"
   homepage "https://www.superlist.com/"
@@ -18,9 +17,12 @@ cask "superlist" do
 
   app "Superlist.app"
 
+  uninstall quit: "com.superlist.superlist"
+
   zap trash: [
     "~/Library/Application Support/com.superlist.superlist*",
     "~/Library/Caches/com.superlist.superlist*",
+    "~/Library/Caches/superlist_sounds",
     "~/Library/HTTPStorages/com.superlist.superlist*",
     "~/Library/Preferences/com.superlist.superlist*.plist",
     "~/Library/Preferences/group.com.superlist.superlist.firebase.plist",

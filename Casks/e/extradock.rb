@@ -1,9 +1,8 @@
 cask "extradock" do
-  version "4.3.4"
-  sha256 "913a0a1afde1265d7ec6740d05e57d09bf95d89d383a19b3c67ad691bea008a7"
+  version "4.3.8"
+  sha256 "01645ecbb09b195f7fe08b24fbebc5a41158307ce4c5a13b24d962d8fb8aea14"
 
-  url "https://github.com/AppitStudio/extra-dock-updates/releases/download/v#{version}/extraDock.dmg",
-      verified: "github.com/AppitStudio/"
+  url "https://github.com/AppitStudio/extra-dock-updates/releases/download/v#{version}/extraDock.dmg"
   name "ExtraDock"
   desc "Add fully customizable extra docks"
   homepage "https://extradock.app/"
@@ -17,6 +16,8 @@ cask "extradock" do
   depends_on macos: :monterey
 
   app "ExtraDock.app"
+
+  uninstall quit: "dignicy.extraDock"
 
   zap trash: [
     "~/Library/Application Support/ExtraDock",

@@ -2,8 +2,7 @@ cask "canon-ufrii-driver" do
   version "10.19.25,2026"
   sha256 "103a190b3b689799ddf7921548e317f4ae9ac72d41a1c0e2df0182c26a659024"
 
-  url "https://downloads.canon.com/sss#{version.csv.second}/drivers/UFRII_v#{version.csv.first}_mac.zip",
-      verified: "downloads.canon.com/"
+  url "https://downloads.canon.com/sss#{version.csv.second}/drivers/UFRII_v#{version.csv.first}_mac.zip"
   name "Canon UFR II/UFRII LT/LIPSLX/CARPS2 Printer Driver"
   desc "Printer driver for Canon imageRUNNER office printers"
   homepage "https://oip.manual.canon/USRMA-3844-zz-DR-enUV/"

@@ -6,8 +6,7 @@ cask "github" do
   sha256 arm:   "ff99e90964b866af854eb4c0701020bf2b2e209fe06d0ba28308836ec2e34106",
          intel: "816c2b2f7d0a632a57c82f90455905d792056508607ed0c7daf8fe32b79e6308"
 
-  url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-#{arch}.zip",
-      verified: "desktop.githubusercontent.com/"
+  url "https://desktop.githubusercontent.com/releases/#{version}/GitHubDesktop-#{arch}.zip"
   name "GitHub Desktop"
   desc "Desktop client for GitHub repositories"
   homepage "https://desktop.github.com/"

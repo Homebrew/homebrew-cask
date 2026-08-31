@@ -1,10 +1,10 @@
 cask "localsend" do
   os macos: ".dmg", linux: "-linux-x86-64.AppImage"
 
-  version "1.18.0"
+  version "1.18.2"
 
   on_macos do
-    sha256 "93ab884c2703a0fabd72611097b2616c0def86c4256cea2add7a0ff36dd76b3a"
+    sha256 "126860d56f6f49b11845f601aac51de27a49b16d2b48102415da91e0e37e5155"
 
     depends_on macos: :big_sur
 
@@ -18,7 +18,7 @@ cask "localsend" do
     ]
   end
   on_linux do
-    sha256 "c873bd1480f9756e117ccca668a698bed9e506447884059a7d37d5d64fb65fe2"
+    sha256 "19f21613d1834f6caa69517113670461a3f10b80a2a315f86548c0663d9c0aaf"
 
     depends_on arch: :x86_64
 

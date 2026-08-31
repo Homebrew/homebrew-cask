@@ -2,8 +2,7 @@ cask "pcsx2" do
   version "2.6.3"
   sha256 "cb7b9e6330f1abf0cf92c94065f7eb983d0fa8affcfe6b0ccb9c2a4ebf067f1a"
 
-  url "https://github.com/PCSX2/pcsx2/releases/download/v#{version}/pcsx2-v#{version}-macos-Qt.tar.xz",
-      verified: "github.com/PCSX2/pcsx2/"
+  url "https://github.com/PCSX2/pcsx2/releases/download/v#{version}/pcsx2-v#{version}-macos-Qt.tar.xz"
   name "PCSX2"
   desc "Playstation 2 Emulator"
   homepage "https://pcsx2.net/"

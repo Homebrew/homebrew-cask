@@ -1,13 +1,5 @@
 cask "discord" do
-  on_catalina :or_older do
-    version "0.0.336"
-    sha256 "470fc7ad490d7ad42f01632af16dee69fbec6e3db7e3f79af4f2ee246e382398"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_big_sur do
+  on_big_sur :or_older do
     version "0.0.402"
     sha256 "568293a1f65fab2244b5acdac282b88b6f00efd87defd76cc77185d1b9caba64"
 
@@ -16,8 +8,8 @@ cask "discord" do
     end
   end
   on_monterey :or_newer do
-    version "0.0.407"
-    sha256 "d474e00ad0297a51c50910a40f9efab550a1fff38526f160229a98f0e2f76e9b"
+    version "0.0.409"
+    sha256 "caf8473d7f702fd67e09ccda55a05934675a5f464ae9bfca6d4b534f6d6cc511"
 
     livecheck do
       url "https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=osx&arch=x64"
@@ -27,8 +19,7 @@ cask "discord" do
     end
   end
 
-  url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg",
-      verified: "dl.discordapp.net/"
+  url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg"
   name "Discord"
   desc "Voice and text chat software"
   homepage "https://discord.com/"

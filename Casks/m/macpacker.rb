@@ -1,9 +1,8 @@
 cask "macpacker" do
-  version "0.19.0"
-  sha256 "ae19e28da057098c5dc13fe379ad7a7300ca51e5c368de5f564e5cbf9794bf46"
+  version "0.21.0"
+  sha256 "7ea217c45897c79ee877f2efd5f72b35fd17d13c42e5c750fe1e20299399d6d0"
 
-  url "https://macpacker-releases.s3.amazonaws.com/MacPacker_v#{version}.zip",
-      verified: "macpacker-releases.s3.amazonaws.com/"
+  url "https://macpacker-releases.s3.amazonaws.com/MacPacker_v#{version}.zip"
   name "MacPacker"
   desc "Archive manager"
   homepage "https://macpacker.app/"

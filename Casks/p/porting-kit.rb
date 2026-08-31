@@ -5,8 +5,7 @@ cask "porting-kit" do
   sha256 arm:   "7e33b70e326c7e5a99c531b65b678b605c44aaa107f51688777ad5dd9e5fbf5a",
          intel: "2f19f92a26d464815e10c41e2a4bda5a506ad612415bf0f0c824e5fcec36b0ab"
 
-  url "https://github.com/vitor251093/porting-kit-releases/releases/download/v#{version}/Porting.Kit-#{version}#{arch}.dmg",
-      verified: "github.com/vitor251093/porting-kit-releases/"
+  url "https://github.com/vitor251093/porting-kit-releases/releases/download/v#{version}/Porting.Kit-#{version}#{arch}.dmg"
   name "Porting Kit"
   desc "Install games and apps compiled for Microsoft Windows"
   homepage "https://portingkit.com/"

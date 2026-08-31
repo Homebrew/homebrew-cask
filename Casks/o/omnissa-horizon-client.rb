@@ -1,6 +1,6 @@
 cask "omnissa-horizon-client" do
-  version "2603-8.18.0-24230061568,CART27FQ1_MAC_2603"
-  sha256 "303f3f302cfdad7765d6534ab00b557bb791f5bd3ee0c8e0352e72922cace75f"
+  version "2606-8.19.0-32216012208,CART27FQ2_MAC_2606"
+  sha256 "decc052f456ba0909724c5e33c78f6fb9cc7d25adfd188af95c2993d46226c3f"
 
   url "https://download3.omnissa.com/software/#{version.csv.second}/Omnissa-Horizon-Client-#{version.csv.first}.dmg"
   name "Omnissa Horizon Client"

@@ -1,12 +1,11 @@
 cask "codebuddy" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.10.4.33993995,1ba59196"
-  sha256 arm:   "08746bab91a2d706cb7a63cb59f2eaf4605029c696a080ef7731976c20d4f643",
-         intel: "e068435314e4fe724ba58825f86142511666b63da51e103a0957dbb602921e4a"
+  version "4.11.3.37298507,2345dde1"
+  sha256 arm:   "3f889f5d1d3c66f4b9b9ee29523fda4266372b80a3c0563c4ed834eef7b2e100",
+         intel: "d710f4003637a248d91ecbb42e76d861162b27663aed22fa4b6c5cceef5cf2a4"
 
-  url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}.zip",
-      verified: "codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/"
+  url "https://codebuddy-1328495429.cos.accelerate.myqcloud.com/aiide/darwin-#{arch}/CodeBuddy-darwin-#{arch}-#{version.csv.first}-#{version.csv.second}.zip"
   name "CodeBuddy"
   desc "AI-powered adaptive IDE"
   homepage "https://www.codebuddy.ai/ide/"

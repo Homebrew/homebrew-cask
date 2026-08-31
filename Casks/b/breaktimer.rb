@@ -32,8 +32,7 @@ cask "breaktimer" do
     app_image "BreakTimer.AppImage", target: "BreakTimer.AppImage"
   end
 
-  url "https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.#{url_end}",
-      verified: "github.com/tom-james-watson/breaktimer-app/"
+  url "https://github.com/tom-james-watson/breaktimer-app/releases/download/v#{version}/BreakTimer.#{url_end}"
   name "BreakTimer"
   desc "Tool to manage periodic breaks"
   homepage "https://breaktimer.app/"

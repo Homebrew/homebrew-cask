@@ -24,8 +24,7 @@ cask "aya" do
     app_image "AYA-#{version}-linux-#{arch}.AppImage", target: "AYA.AppImage"
   end
 
-  url "https://github.com/liriliri/aya/releases/download/v#{version}/AYA-#{version}-#{os}-#{arch}.#{url_end}",
-      verified: "github.com/liriliri/aya/"
+  url "https://github.com/liriliri/aya/releases/download/v#{version}/AYA-#{version}-#{os}-#{arch}.#{url_end}"
   name "AYA"
   desc "Android ADB desktop app"
   homepage "https://aya.liriliri.io/"

@@ -1,12 +1,11 @@
 cask "longbridge-pro" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.38.7"
-  sha256 arm:   "1fdf1e93cf7a144869b6dda12fd7a5b44a8646edf81a5a647784dd06bb060add",
-         intel: "e776fdb96adf6e032092781886fe208bd2022846b4dd26a64942e6687651b455"
+  version "2.38.14"
+  sha256 arm:   "80652908fe2c6376ed38237f1cbd99754b5f2a40358fc7912af21ae4303bc50f",
+         intel: "ed89b4641147b04cd565b65db64a4f4c689ded7e618b5f369bf9ea361c87ad7c"
 
-  url "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-#{version}-mac-#{arch}.dmg",
-      verified: "download.lbkrs.com/longbridge-desktop/prod/"
+  url "https://download.lbkrs.com/longbridge-desktop/prod/longbridge-pro-#{version}-mac-#{arch}.dmg"
   name "Longbridge Pro"
   desc "Stock trading platform"
   homepage "https://longbridge.com/"
@@ -19,6 +18,8 @@ cask "longbridge-pro" do
   depends_on macos: :big_sur
 
   app "Longbridge Pro.app"
+
+  uninstall quit: "global.longbridge.app.desktop"
 
   zap trash: [
     "~/Library/Application Support/Longbridge Pro",

@@ -5,8 +5,7 @@ cask "poe" do
   sha256 arm:   "14260ec8e9c8d1c9a364b05c524724a93fa499488f2b59b4ac04ac73a5683bed",
          intel: "0f4fc872b341ac9e6aacb7a3e616aa9e08ea9bbc4de0b8e65734e4a8dc266ad8"
 
-  url "https://desktop-app.poecdn.net/updates/darwin_#{arch}/#{version}.zip",
-      verified: "desktop-app.poecdn.net/updates/"
+  url "https://desktop-app.poecdn.net/updates/darwin_#{arch}/#{version}.zip"
   name "Poe"
   desc "AI chat client"
   homepage "https://poe.com/"

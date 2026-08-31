@@ -23,8 +23,7 @@ cask "billy-frontier" do
     app_image "BillyFrontier-#{version}-linux-#{arch}.AppImage", target: "Billy Frontier.AppImage"
   end
 
-  url "https://github.com/jorio/BillyFrontier/releases/download/v#{version}/BillyFrontier-#{version}-#{url_end}",
-      verified: "github.com/jorio/BillyFrontier/"
+  url "https://github.com/jorio/BillyFrontier/releases/download/v#{version}/BillyFrontier-#{version}-#{url_end}"
   name "Billy Frontier"
   desc "Arcade style, cowboys in space themed action game from Pangea Software"
   homepage "https://jorio.itch.io/billyfrontier"

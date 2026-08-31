@@ -1,14 +1,15 @@
 cask "airbuddy" do
-  version "2.8.1,660"
-  sha256 "61e3b5ce63d1345e3a126b91a75e3627d491bd6cc7ada5abd7e56eaad849cec4"
+  version "3.0.1,1008"
+  sha256 "0c8e2b7349629f8176d7af8d2460cd06e37d1721edff6a925109914b53992700"
 
-  url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
+  url "https://su.airbuddy.app/lleMaylxgd/AirBuddy_v#{version.csv.first}-#{version.csv.second}.dmg",
+      user_agent: :browser
   name "AirBuddy"
   desc "AirPods companion app"
   homepage "https://airbuddy.app/"
 
   livecheck do
-    url "https://su.airbuddy.app/kCRSAmcjBc/appcast_hyeon.xml"
+    url "https://su.airbuddy.app/lleMaylxgd/appcast_taeyang.xml"
     strategy :sparkle
   end
 

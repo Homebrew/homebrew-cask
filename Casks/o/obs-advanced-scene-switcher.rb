@@ -2,8 +2,7 @@ cask "obs-advanced-scene-switcher" do
   version "1.36.1"
   sha256 "861897f67c39ef32571a96e0e3c6545e0f076820512b6994665180a7a6d51b52"
 
-  url "https://github.com/WarmUpTill/SceneSwitcher/releases/download/#{version}/advanced-scene-switcher-#{version}-macos-universal.pkg",
-      verified: "github.com/WarmUpTill/SceneSwitcher/"
+  url "https://github.com/WarmUpTill/SceneSwitcher/releases/download/#{version}/advanced-scene-switcher-#{version}-macos-universal.pkg"
   name "OBS Advanced Scene Switcher"
   desc "Automated scene switcher for OBS Studio"
   homepage "https://obsproject.com/forum/resources/advanced-scene-switcher.395"

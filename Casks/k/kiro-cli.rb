@@ -1,9 +1,8 @@
 cask "kiro-cli" do
-  version "2.18.0"
-  sha256 "5af50db253ac8032d8fac1cb9fa4432d42dd81e8c68a71d23bf4d508c8bfca45"
+  version "2.20.1"
+  sha256 "c2f435d6de81a18febed2cfdbaff71ae64662925917bb2481d84e9e41b765a56"
 
-  url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/Kiro%20CLI.dmg",
-      verified: "desktop-release.q.us-east-1.amazonaws.com/"
+  url "https://desktop-release.q.us-east-1.amazonaws.com/#{version}/Kiro%20CLI.dmg"
   name "Kiro CLI"
   desc "AI-powered productivity tool for the command-line"
   homepage "https://kiro.dev/docs/cli/"

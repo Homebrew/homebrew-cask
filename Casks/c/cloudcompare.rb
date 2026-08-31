@@ -6,8 +6,7 @@ cask "cloudcompare" do
          intel: "47a38e81e06c60fcefbef8ee8f52584cf8c156e685051721a333651a567ada12"
 
   # MacOS binaries are built by a third-party. They are linked from the official website.
-  url "https://www.simulation.openfields.fr/phocadownload/CloudCompare_#{version}_#{arch}.dmg",
-      verified: "simulation.openfields.fr/phocadownload/"
+  url "https://www.simulation.openfields.fr/phocadownload/CloudCompare_#{version}_#{arch}.dmg"
   name "CloudCompare"
   desc "3D point cloud and mesh processing software"
   homepage "https://www.danielgm.net/cc/"

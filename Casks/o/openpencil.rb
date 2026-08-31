@@ -5,11 +5,15 @@ cask "openpencil" do
   sha256 arm:   "49f368ecc7c2d3203c56a48635ff8a301142f61f4abab0dbfe8d25b6b9b3d847",
          intel: "deb65826c980dc79d29e9cb1c73cfe3f6a84bba776909755605680639bd02cc5"
 
-  url "https://github.com/open-pencil/open-pencil/releases/download/v#{version}/OpenPencil_#{arch}.app.tar.gz",
-      verified: "github.com/open-pencil/open-pencil/"
+  url "https://github.com/open-pencil/open-pencil/releases/download/v#{version}/OpenPencil_#{arch}.app.tar.gz"
   name "OpenPencil"
   desc "Open-source design editor compatible with Figma"
   homepage "https://openpencil.dev/"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   auto_updates true
   depends_on :macos

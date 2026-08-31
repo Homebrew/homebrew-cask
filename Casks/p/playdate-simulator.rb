@@ -2,8 +2,7 @@ cask "playdate-simulator" do
   version "3.1.1"
   sha256 "06b12c2b041b45c552b584b93d03e0fd1991a6772dac01833e48bff7affdcd6f"
 
-  url "https://download-cdn.panic.com/playdate_sdk/PlaydateSDK-#{version}.zip",
-      verified: "download-cdn.panic.com/playdate_sdk/"
+  url "https://download-cdn.panic.com/playdate_sdk/PlaydateSDK-#{version}.zip"
   name "Playdate SDK"
   desc "Playdate Lua and C APIs, docs and Simulator for local development"
   homepage "https://play.date/dev/"

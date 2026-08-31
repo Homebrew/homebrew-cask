@@ -5,8 +5,7 @@ cask "duplicacy-web-edition" do
   sha256 arm:   "b9ea35f1be2717c44e5ec5dcd751c254f41105a81790ce1fd1a596a4769c2150",
          intel: "4c35a5c108fe2520668a1ca013003f2f99b02260492022807f9277962b8f1392"
 
-  url "https://acrosync.com/duplicacy-web/duplicacy_web_osx_#{arch}_#{version}.dmg",
-      verified: "acrosync.com/duplicacy-web/"
+  url "https://acrosync.com/duplicacy-web/duplicacy_web_osx_#{arch}_#{version}.dmg"
   name "Duplicacy Web Edition"
   desc "Cloud backup tool"
   homepage "https://duplicacy.com/"

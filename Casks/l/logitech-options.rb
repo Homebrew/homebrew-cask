@@ -1,29 +1,8 @@
 cask "logitech-options" do
-  on_catalina :or_older do
-    version "8.54.147"
-    sha256 "7b7a8d7a498d868c90b4ffe7dfc50a7a39c25e1f61350702e87d4c771b3d6459"
+  version "10.26.49"
+  sha256 :no_check
 
-    url "https://web.archive.org/web/20210811105616/https://download01.logi.com/web/ftp/pub/techsupport/options/Options_#{version}.zip",
-        verified: "web.archive.org/web/20210811105616/https://download01.logi.com/web/ftp/pub/techsupport/options/"
-
-    # The url is unversioned, but the download returns an app with a version number
-    rename "LogiMgr Installer*.app", "LogiMgr Installer.app"
-
-    pkg "LogiMgr Installer.app/Contents/Resources/LogiMgr.pkg"
-  end
-  on_big_sur :or_newer do
-    version "10.26.49"
-    sha256 :no_check
-
-    url "https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.zip",
-        verified: "download01.logi.com/web/ftp/pub/techsupport/options/"
-
-    # The url is unversioned, but the download returns an app with a version number
-    rename "LogiMgr Installer*.app", "LogiMgr Installer.app"
-
-    pkg "LogiMgr Installer.app/Contents/Resources/LogiMgr.pkg"
-  end
-
+  url "https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.zip"
   name "Logitech Options"
   desc "Software for Logitech devices"
   homepage "https://support.logitech.com/software/options"
@@ -32,6 +11,11 @@ cask "logitech-options" do
 
   auto_updates true
   depends_on :macos
+
+  # The url is unversioned, but the download returns an app with a version number
+  rename "LogiMgr Installer*.app", "LogiMgr Installer.app"
+
+  pkg "LogiMgr Installer.app/Contents/Resources/LogiMgr.pkg"
 
   uninstall launchctl: [
               "com.logi.bolt.app",

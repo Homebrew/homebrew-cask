@@ -2,8 +2,7 @@ cask "cacher" do
   version "2.47.9"
   sha256 "03e5268ab948e68135dbea2d25c7f2504992322fd8cf5ba1c12b08d8187b364a"
 
-  url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-universal-mac.zip",
-      verified: "cacher-download.nyc3.digitaloceanspaces.com/"
+  url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-universal-mac.zip"
   name "Cacher"
   desc "Code snippet organiser"
   homepage "https://www.cacher.io/"

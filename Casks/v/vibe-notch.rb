@@ -2,8 +2,7 @@ cask "vibe-notch" do
   version "1.3.2"
   sha256 "c7595669d24cb7c05da490fae4fbee2b412c07ba0a215f86dad6d410cd0ddcc0"
 
-  url "https://github.com/farouqaldori/vibe-notch/releases/download/v#{version}/VibeNotch-#{version}.dmg",
-      verified: "github.com/farouqaldori/vibe-notch/"
+  url "https://github.com/farouqaldori/vibe-notch/releases/download/v#{version}/VibeNotch-#{version}.dmg"
   name "Vibe Notch"
   desc "Dynamic Island-style notifications for Claude Code CLI sessions"
   homepage "https://vibenotch.app/"

@@ -2,8 +2,7 @@ cask "windscribe" do
   version "2.23.11"
   sha256 "393a9c0650a66b4fea87716f9a47369a20cb70681cb2cc6ee0cef157f693d116"
 
-  url "https://deploy.totallyacdn.com/desktop-apps/#{version}/Windscribe_#{version}_universal.dmg",
-      verified: "deploy.totallyacdn.com/desktop-apps/"
+  url "https://deploy.totallyacdn.com/desktop-apps/#{version}/Windscribe_#{version}_universal.dmg"
   name "Windscribe"
   desc "VPN client for secure internet access and private browsing"
   homepage "https://windscribe.com/"

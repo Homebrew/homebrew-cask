@@ -1,9 +1,9 @@
 cask "psychopy" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2026.2.1"
-  sha256 arm:   "0c608e99672640976924a4dd267ddf709a643b8d23dc7e6bb13d4390fd693f3a",
-         intel: "7c87cf8833dd72f2aa00b63edf7ca1746546e0e24ed8abff6552491b607fb887"
+  version "2026.2.3"
+  sha256 arm:   "d715f35ea58ab3802f6bd8fa72ccc4969d84c051c65d80bce384dcdc4051fb6d",
+         intel: "0e0fe98bcac0910cbd8a96c4bda239a6865aa45b874c6e8c38d87b0b1019a642"
 
   url "https://github.com/psychopy/psychopy/releases/download/#{version}/StandalonePsychoPy-#{version}-macOS-#{arch}-3.11.dmg"
   name "PsychoPy"
@@ -18,6 +18,8 @@ cask "psychopy" do
   depends_on macos: :big_sur
 
   app "PsychoPy.app"
+
+  uninstall quit: "org.opensciencetools.psychopy"
 
   zap trash: [
     "~/.psychopy3",

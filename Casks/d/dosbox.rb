@@ -2,8 +2,7 @@ cask "dosbox" do
   version "0.74-3,3"
   sha256 "83493d149318cb7bfe5d68d98d1cd10b003db2f0519374bf06de285dc0bb2768"
 
-  url "https://downloads.sourceforge.net/dosbox/dosbox/#{version.csv.first}/DOSBox-#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "sourceforge.net/dosbox/"
+  url "https://downloads.sourceforge.net/dosbox/dosbox/#{version.csv.first}/DOSBox-#{version.csv.first}-#{version.csv.second}.dmg"
   name "DOSBox"
   desc "Emulator for x86 with DOS"
   homepage "https://www.dosbox.com/"

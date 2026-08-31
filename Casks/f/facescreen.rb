@@ -2,8 +2,7 @@ cask "facescreen" do
   version "3.1.2"
   sha256 "6ebe874358d96630904727bc631db459a1fea4f24f6a24dbd5e216c5d10bf09e"
 
-  url "https://rampatra.github.io/facescreen-updates/FaceScreen-#{version}.dmg",
-      verified: "rampatra.github.io/facescreen-updates/"
+  url "https://rampatra.github.io/facescreen-updates/FaceScreen-#{version}.dmg"
   name "FaceScreen"
   desc "Camera and text overlay for presentations and screen sharing"
   homepage "https://facescreenapp.com/"

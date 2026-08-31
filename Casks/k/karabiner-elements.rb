@@ -1,14 +1,6 @@
 cask "karabiner-elements" do
   on_monterey :or_older do
-    on_catalina :or_older do
-      version "13.7.0"
-      sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
-
-      livecheck do
-        skip "Legacy version"
-      end
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "14.13.0"
       sha256 "826270a21b7f4df9b9a8c79c9aad4de8f48021f58eaacbee1d4f150c963c6cbc"
 
@@ -26,8 +18,8 @@ cask "karabiner-elements" do
     end
   end
   on_ventura :or_newer do
-    version "16.1.0"
-    sha256 "bc8b5ee0c06472e1c687340cb2ec5d654b461e24c507808997e5fbafff093a79"
+    version "16.2.0"
+    sha256 "c4dd6ff1793c15865901ff55cd3893fc5c4c3c1ca62018986a8b55be5afb1e12"
 
     livecheck do
       url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
@@ -64,8 +56,7 @@ cask "karabiner-elements" do
     # The system extension 'org.pqrs.Karabiner-DriverKit-VirtualHIDDevice*' should not be uninstalled by Cask
   end
 
-  url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
-      verified: "github.com/pqrs-org/Karabiner-Elements/"
+  url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg"
   name "Karabiner Elements"
   desc "Keyboard customiser"
   homepage "https://karabiner-elements.pqrs.org/"

@@ -1,12 +1,11 @@
 cask "opencode-desktop" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.18.18"
-  sha256 arm:   "ad618b8d3abf66e4af57e960d596d9d693a8ce9db7c9b9041b80115e1ef2baeb",
-         intel: "67c145c45d19583e036611b221308f4e5916375e560ad39dfeb263ec68507ce9"
+  version "1.18.25"
+  sha256 arm:   "26be4a17c05bb1032ba1046ac761a46b15e36dbacb0cb2fb15c7220c5a80d0f7",
+         intel: "b1f786b315673af75728541c224a7af5e20b4067497ed893916d337ed2e1fb14"
 
-  url "https://github.com/anomalyco/opencode/releases/download/v#{version}/opencode-desktop-mac-#{arch}.dmg",
-      verified: "github.com/anomalyco/opencode/"
+  url "https://github.com/anomalyco/opencode/releases/download/v#{version}/opencode-desktop-mac-#{arch}.dmg"
   name "OpenCode"
   desc "AI coding agent desktop client"
   homepage "https://opencode.ai/"

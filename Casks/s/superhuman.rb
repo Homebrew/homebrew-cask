@@ -1,12 +1,11 @@
 cask "superhuman" do
   arch arm: "-arm64"
 
-  version "1041.0.32"
-  sha256 arm:   "771dc034520a9dc4648d98504210989eeabbdb963a1df7902c580faa004e85fd",
-         intel: "cc64dcf7ddd578f4b7c116c5c38d84bc815ef8d924ee3fc86e78f0df0d592ade"
+  version "1041.0.42"
+  sha256 arm:   "db931f80e2e1e4707425eacbea486835a1d828d090b605a8d423d468008da021",
+         intel: "a833af41e019cbdb9ccd1d49e3ac92760951a58a43c212dbd9fdfcf6c7b9b6de"
 
-  url "https://storage.googleapis.com/download.superhuman.com/supertron-update/Superhuman-#{version}#{arch}-latest-mac.zip",
-      verified: "storage.googleapis.com/download.superhuman.com/supertron-update/"
+  url "https://storage.googleapis.com/download.superhuman.com/supertron-update/Superhuman-#{version}#{arch}-latest-mac.zip"
   name "Superhuman"
   desc "Email client"
   homepage "https://superhuman.com/"

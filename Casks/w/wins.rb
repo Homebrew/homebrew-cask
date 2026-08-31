@@ -1,9 +1,8 @@
 cask "wins" do
-  version "3.5,52"
+  version "3.5.1,53"
   sha256 :no_check
 
-  url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins.zip",
-      verified: "winswebsite.s3.us-east-005.backblazeb2.com/"
+  url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins.zip"
   name "Wins"
   desc "Window manager"
   homepage "https://wins.cool/"

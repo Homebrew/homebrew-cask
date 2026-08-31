@@ -1,5 +1,5 @@
 cask "hp-easy-start" do
-  version "2.16.0,251010"
+  version "2.16.7,260722"
   sha256 :no_check
 
   url "https://ftp.hp.com/pub/softlib/software12/HP_Quick_Start/osx/HP_Easy_Start.app.zip"
@@ -12,7 +12,7 @@ cask "hp-easy-start" do
     strategy :extract_plist
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "HP Easy Start.app"
 

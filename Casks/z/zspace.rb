@@ -11,8 +11,7 @@ cask "zspace" do
     sha256 "ecfd4d1437b92f136df107cc0f3535842f14fcdeeece7992c8cfa969b89015b5"
   end
 
-  url "https://update.zenithspace.net/app/APP_ZSPACE_DESKTOP_MAC#{folder}/V#{version.csv.first}/zspace/#{version.csv.second}/zspace_mac_#{arch}_#{version.csv.first}_#{version.csv.third}.dmg",
-      verified: "update.zenithspace.net/app/"
+  url "https://update.zenithspace.net/app/APP_ZSPACE_DESKTOP_MAC#{folder}/V#{version.csv.first}/zspace/#{version.csv.second}/zspace_mac_#{arch}_#{version.csv.first}_#{version.csv.third}.dmg"
   name "zspace"
   name "极空间"
   desc "NAS Client"

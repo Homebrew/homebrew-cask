@@ -2,11 +2,11 @@ cask "warp-agent-cli" do
   arch arm: "aarch64", intel: "x86_64"
   os macos: "macos", linux: "linux"
 
-  version "0.2026.08.12.21.54.stable_00"
-  sha256 arm:          "83e22ec4e7958940ce0f0357ca695a232b879e62f2d23e5fad6e9011c53c1a38",
-         intel:        "c40ef9a5c2abda2be6711ce7407d85025e5363c52aad75b89a9a269993dfbeb4",
-         arm64_linux:  "328e24e4d4cd079a623403baa14d215029d51332cbd317de2f33d4b6c55e68e2",
-         x86_64_linux: "27c495401e4464516e22f82993eeac56404a89f2ae8a126bbb914e0ff93ee1a3"
+  version "0.2026.08.26.17.59.stable_01"
+  sha256 arm:          "6493bed43df2bf65db1c68794af33052dcee7c34c7f74ee2d8ebdd1496b0a95d",
+         intel:        "dac53bef9b9090c22768690665b440e02fefea8174a876215a9c010a46bd2eb3",
+         arm64_linux:  "ebe3ff0c7dbbbda4e3cdbdcfae019b732495922bfcb48343c090f4a828ed6e31",
+         x86_64_linux: "a8e36dd5160bc16a9358341061b0d6677b702fccf65c020f1d700049558cc757"
 
   on_macos do
     depends_on macos: :sonoma

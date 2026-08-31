@@ -1,6 +1,6 @@
 cask "font-caskaydia-cove-nerd-font" do
-  version "3.5.0"
-  sha256 "f30f67f203f9da78df857ebe558321bdfd8fc313662c72fd9e9fef9d4f4c96e7"
+  version "3.5.1"
+  sha256 "ae598e9401e2846aa3ee364513715de0490b844a4b54f0768991f45f23aa8369"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/CascadiaCode.tar.xz"
   name "CaskaydiaCove Nerd Font (Cascadia Code)"

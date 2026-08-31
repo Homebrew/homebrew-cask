@@ -1,32 +1,22 @@
 cask "klayout" do
   on_ventura :or_older do
-    on_catalina :or_older do
-      version "0.27.13"
-      sha256 "25d38cba66f4009f8ed19a755ec73863721a6f2e3b2d57257f077bf71ec5beba"
-
-      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb38.dmg",
-          verified: "klayout.org/downloads/MacOS/"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "0.27.13"
       sha256 "d0216355390d83954611461ecd93d7cab0a819f7b0f98327b1c42d92da022fa7"
 
-      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb38.dmg",
-          verified: "klayout.org/downloads/MacOS/"
+      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb38.dmg"
     end
     on_monterey do
       version "0.29.6"
       sha256 "2c324dc95d77a0167d6c56608d2beca5f78b5190259480d97ef1500b19bc7389"
 
-      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5MP-RsysPhb311.dmg",
-          verified: "klayout.org/downloads/MacOS/"
+      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5MP-RsysPhb311.dmg"
     end
     on_ventura do
       version "0.30.4"
       sha256 "5c432cecff49a27cbad8097bcf6a3169bebfec32ce87b13e92af19440b4a87f7"
 
-      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Ventura-1-qt5MP-RsysPhb311.dmg",
-          verified: "klayout.org/downloads/MacOS/"
+      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Ventura-1-qt5MP-RsysPhb311.dmg"
     end
 
     livecheck do
@@ -34,11 +24,10 @@ cask "klayout" do
     end
   end
   on_sonoma do
-    version "0.30.10"
-    sha256 "6c51fe01c9c4d6ef0b52e7df534403b131ae1e8be330993f04baa007beb3788a"
+    version "0.30.12"
+    sha256 "911bd07c1a9926247c18e59627b20408d05ff04666fb277372130a061a56339d"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sonoma-C32-1-qt5MP-RsysPhb311.dmg",
-        verified: "klayout.org/downloads/MacOS/"
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sonoma-C32-1-qt5MP-RsysPhb311.dmg"
 
     livecheck do
       url "https://www.klayout.de/build.html"
@@ -46,11 +35,10 @@ cask "klayout" do
     end
   end
   on_sequoia do
-    version "0.30.10"
-    sha256 "65bb64339cc9a1b53b0329656182bcd359ca3958efededfe133b71ce93301412"
+    version "0.30.12"
+    sha256 "8c4ec9066844b16170d3781aca0433c194c937ce13806a678bb3c71c20cfd887"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sequoia-C32-1-qt5MP-RsysPhb311.dmg",
-        verified: "klayout.org/downloads/MacOS/"
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sequoia-C32-1-qt5MP-RsysPhb311.dmg"
 
     livecheck do
       url "https://www.klayout.de/build.html"
@@ -59,11 +47,10 @@ cask "klayout" do
   end
   on_tahoe :or_newer do
     on_arm do
-      version "0.30.10"
-      sha256 "903d44aa707a38cfc464d43b3f26b59be6ef27c84b5289b6ecbd155a5b02e827"
+      version "0.30.12"
+      sha256 "1acbaf5f0863f77ef76921fb213696d7c0c1b65284ddf7cf6057b1b1d048f468"
 
-      url "https://www.klayout.org/downloads/MacOS/ARM64/arm64ST-klayout-#{version}-macOS-Tahoe-C32-1-qt5MP-RsysPsys.dmg",
-          verified: "klayout.org/downloads/MacOS/ARM64/"
+      url "https://www.klayout.org/downloads/MacOS/ARM64/arm64ST-klayout-#{version}-macOS-Tahoe-C32-1-qt5MP-RsysPsys.dmg"
 
       livecheck do
         url "https://www.klayout.de/build.html"
@@ -71,11 +58,10 @@ cask "klayout" do
       end
     end
     on_intel do
-      version "0.30.10"
-      sha256 "65bb64339cc9a1b53b0329656182bcd359ca3958efededfe133b71ce93301412"
+      version "0.30.12"
+      sha256 "8c4ec9066844b16170d3781aca0433c194c937ce13806a678bb3c71c20cfd887"
 
-      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sequoia-C32-1-qt5MP-RsysPhb311.dmg",
-          verified: "klayout.org/downloads/MacOS/"
+      url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sequoia-C32-1-qt5MP-RsysPhb311.dmg"
 
       livecheck do
         url "https://www.klayout.de/build.html"

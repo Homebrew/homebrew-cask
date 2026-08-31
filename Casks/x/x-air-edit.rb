@@ -2,8 +2,7 @@ cask "x-air-edit" do
   version "1.8.1,f592010e1fca4b82b1c5f410004c2cb8"
   sha256 "30cf6ada86da5b90fb3115b39b4c8983829e9695a16258aeca5c2656bdc1d2d3"
 
-  url "https://cdn-media.empowertribe.com/#{version.csv.second}/X-AIR-Edit_MAC_#{version.csv.first}.zip",
-      verified: "cdn-media.empowertribe.com/"
+  url "https://cdn-media.empowertribe.com/#{version.csv.second}/X-AIR-Edit_MAC_#{version.csv.first}.zip"
   name "X AIR Edit"
   desc "Remote control for the Behringer X AIR series mixers"
   homepage "https://www.behringer.com/en/products/0605-AAD"

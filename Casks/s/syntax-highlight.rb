@@ -25,12 +25,16 @@ cask "syntax-highlight" do
   binary "#{appdir}/Syntax Highlight.app/Contents/Resources/syntax_highlight_cli"
 
   zap trash: [
+    "~/Library/Application Scripts/group.org.sbarex.syntaxhighlight",
     "~/Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight",
     "~/Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight.QuicklookExtension",
+    "~/Library/Application Scripts/org.sbarex.SourceCodeSyntaxHighlight.ShortcutCommand",
     "~/Library/Application Support/Syntax Highlight",
     "~/Library/Caches/com.apple.helpd/Generated/org.sbarex.SourceCodeSyntaxHighlight.help*",
     "~/Library/Containers/org.sbarex.SourceCodeSyntaxHighlight",
     "~/Library/Containers/org.sbarex.SourceCodeSyntaxHighlight.QuicklookExtension",
+    "~/Library/Containers/org.sbarex.SourceCodeSyntaxHighlight.ShortcutCommand",
+    "~/Library/Group Containers/group.org.sbarex.syntaxhighlight",
     "~/Library/Preferences/org.sbarex.SourceCodeSyntaxHighlight.plist",
   ]
 end

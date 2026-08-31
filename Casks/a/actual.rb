@@ -27,8 +27,7 @@ cask "actual" do
     app_image "Actual-linux-#{arch}.AppImage", target: "Actual.AppImage"
   end
 
-  url "https://github.com/actualbudget/actual/releases/download/v#{version}/Actual-#{os}-#{arch}.#{url_end}",
-      verified: "github.com/actualbudget/actual/"
+  url "https://github.com/actualbudget/actual/releases/download/v#{version}/Actual-#{os}-#{arch}.#{url_end}"
   name "Actual"
   desc "Privacy-focused app for managing your finances"
   homepage "https://actualbudget.org/"

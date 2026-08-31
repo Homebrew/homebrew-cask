@@ -1,6 +1,6 @@
 cask "workspaces" do
-  version "2.1.5"
-  sha256 "90ed7596eb2ce178451d5e2aa69a2a2a6cd9e1c188ca0556bf11f2f86e3c1612"
+  version "2.2"
+  sha256 "09e1a2ab5d1b8f3c6f4c3bf4534d2e3df7be52f91c3f24d772a8dd64eb053319"
 
   url "https://www.apptorium.com/public/products/workspaces/releases/Workspaces-#{version}.zip"
   name "Workspaces"
@@ -12,9 +12,11 @@ cask "workspaces" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on :macos
+  depends_on macos: :sonoma
 
   app "Workspaces.app"
+
+  uninstall quit: "com.apptorium.Workspaces#{version.major}-paddle"
 
   zap trash: [
     "~/Library/Application Scripts/com.apptorium.Workspaces*",

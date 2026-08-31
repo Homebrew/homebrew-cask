@@ -1,10 +1,6 @@
 cask "coteditor" do
   on_sonoma :or_older do
-    on_catalina :or_older do
-      version "4.0.9"
-      sha256 "969e891f4a36146c317150806fee01559d177f956734595c73537affc8897e79"
-    end
-    on_big_sur do
+    on_big_sur :or_older do
       version "4.3.6"
       sha256 "8c1ecf6fd66a9885d428a6303d9d1c5ecb811c1c35c97bdbccdad72359d96ad9"
     end
@@ -37,8 +33,7 @@ cask "coteditor" do
     end
   end
 
-  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
-      verified: "github.com/coteditor/CotEditor/"
+  url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg"
   name "CotEditor"
   desc "Plain-text editor for web pages, program source codes and more"
   homepage "https://coteditor.com/"

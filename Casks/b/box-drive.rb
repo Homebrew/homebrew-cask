@@ -2,8 +2,7 @@ cask "box-drive" do
   version "2.53.223"
   sha256 "527dce43865032d4dfb9a68790ff52f4e108f48e24b016985a86e8824fa2fa89"
 
-  url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive-#{version}.pkg",
-      verified: "e3.boxcdn.net/desktop/releases/mac/"
+  url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive-#{version}.pkg"
   name "Box Drive"
   desc "Client for the Box cloud storage service"
   homepage "https://www.box.com/drive"

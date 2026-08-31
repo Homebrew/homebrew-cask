@@ -1,12 +1,11 @@
 cask "hackolade" do
   arch arm: "ARM64"
 
-  version "8.12.7"
-  sha256 arm:   "92584bd20ed493b622d138743ad519c39770c81bab709f375ba7ddfe2ae08ac6",
-         intel: "f2c7afe506e5ccb3a2d914f096c5f9fffda856a9b2dc6ded73f913ae08c89cd1"
+  version "8.12.10"
+  sha256 arm:   "0aeea70f9b606169b64e5a8c0affee01fd3f02a759d7d67293ba24781324ec42",
+         intel: "bd1a1e28ef54bd81e936ba33736b48d9d936972fa34f90e295d08bea2de0f9d0"
 
-  url "https://hackolade.s3.amazonaws.com/previous/v#{version}/Hackolade-mac#{arch}-setup-signed.pkg",
-      verified: "hackolade.s3.amazonaws.com/"
+  url "https://hackolade.s3.amazonaws.com/previous/v#{version}/Hackolade-mac#{arch}-setup-signed.pkg"
   name "Hackolade"
   desc "Polyglot data modelling software"
   homepage "https://hackolade.com/"

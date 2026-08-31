@@ -1,9 +1,8 @@
 cask "palmier-pro" do
-  version "0.7.4"
-  sha256 "d587b3c3c34e37dbcd18acda01d77c985aef5d1118c5d97e88995a090a9506f1"
+  version "0.8.1"
+  sha256 "666ab3c953cc0148952326f523059b9cfd2158f0241fbdd4451c23559a202529"
 
-  url "https://github.com/palmier-io/palmier-pro/releases/download/v#{version}/PalmierPro.dmg",
-      verified: "github.com/palmier-io/palmier-pro/"
+  url "https://github.com/palmier-io/palmier-pro/releases/download/v#{version}/PalmierPro.dmg"
   name "Palmier Pro"
   desc "Video Editor built for AI"
   homepage "https://www.palmier.io/"

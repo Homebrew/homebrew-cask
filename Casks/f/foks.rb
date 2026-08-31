@@ -1,9 +1,9 @@
 cask "foks" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.1.8"
-  sha256 arm:   "2286869a3b5e7fde8d6de2beb9b34d7c32d4c87f2cfe3e00687718210aadb54c",
-         intel: "b04d0c025bf317d90f563a391f93b03f0f13be4b1ff98cf228e9a3ea2cf88b14"
+  version "0.1.9"
+  sha256 arm:   "d734cb72ba23ebc0e5e8135b79d2e52093366798bb421909d51d3e8190073c30",
+         intel: "691dae1492ec896a734e5d4482b0d9f273dbfbe1f66330e3bd39da1cdc416877"
 
   url "https://pkgs.foks.pub/stable/darwin/foks-v#{version}-darwin-brew-#{arch}.zip"
   name "FOKS"

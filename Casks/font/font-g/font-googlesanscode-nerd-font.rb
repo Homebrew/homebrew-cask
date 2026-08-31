@@ -1,6 +1,6 @@
 cask "font-googlesanscode-nerd-font" do
-  version "3.5.0"
-  sha256 "5a7453ead50c7f21193dc7d67a663912432a63ac7d2b419e94d2513f1a925431"
+  version "3.5.1"
+  sha256 "b5a2a79b6ac0f021049c63b67bb42a1dcf81d5bc4e447fc6205c79d969605f42"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/GoogleSansCode.tar.xz"
   name "GoogleSansCode Nerd Font (Google Sans Code)"

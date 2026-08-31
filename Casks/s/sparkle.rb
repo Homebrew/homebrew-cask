@@ -1,9 +1,8 @@
 cask "sparkle" do
-  version "2.9.5"
-  sha256 "015336b601493e05c237964954bff6191370003d94edefe663724c88840d73cc"
+  version "2.9.6"
+  sha256 "52bf9e88cdd972fc0c81501377a880e90d47031bd8ca5462488f843e2609e192"
 
-  url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.xz",
-      verified: "github.com/sparkle-project/Sparkle/"
+  url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.xz"
   name "Sparkle"
   desc "Software update framework for Cocoa developers"
   homepage "https://sparkle-project.org/"

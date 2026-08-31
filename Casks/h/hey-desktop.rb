@@ -1,9 +1,9 @@
 cask "hey-desktop" do
   arch arm: "-arm64"
 
-  version "1.3.6"
-  sha256 arm:   "81a10fc4901c7f402d583eaf2fc71c0b4cc2fbd42287d434b4b1ba43037c5a2b",
-         intel: "bff544af4559384b1780c9090b5da9972b6b96e54c3376c764ab116fd9139f6e"
+  version "1.3.7"
+  sha256 arm:   "39e1342c4f6aee1b4bb5202ffe723828e15a36f77869f89d9a05633c7b90780f",
+         intel: "6093f7917db92702eacc7753e160f220724a9c4115013301a510c4734db61a2e"
 
   url "https://hey.com/desktop/HEY-#{version}#{arch}-mac.zip"
   name "HEY"

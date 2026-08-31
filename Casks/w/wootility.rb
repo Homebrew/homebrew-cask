@@ -5,8 +5,7 @@ cask "wootility" do
   sha256 arm:   "f76dfb789ecfcd25a427b9929f3c09574e346270b75799ceb57e54b6ec625bac",
          intel: "baf100bef61649184b77d3849da6898e10cfe27bd4631f545dad2e2813128a83"
 
-  url "https://wootility-updates.ams3.cdn.digitaloceanspaces.com/wootility-mac/Wootility-#{version}#{arch}.dmg",
-      verified: "wootility-updates.ams3.cdn.digitaloceanspaces.com/wootility-mac/"
+  url "https://wootility-updates.ams3.cdn.digitaloceanspaces.com/wootility-mac/Wootility-#{version}#{arch}.dmg"
   name "Wootility"
   desc "Configuration software for Wooting keyboards"
   homepage "https://wooting.io/wootility"

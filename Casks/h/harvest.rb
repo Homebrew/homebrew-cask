@@ -2,8 +2,7 @@ cask "harvest" do
   version "3.0.13"
   sha256 "8ce01b9a10b8a2932400bcba3c8ed00fda69a92da4930a5e870661f15444bbb1"
 
-  url "https://downloads.harvestfiles.com/harvest-desktop/darwin/universal/Harvest-darwin-universal-#{version}.zip",
-      verified: "downloads.harvestfiles.com/harvest-desktop/"
+  url "https://downloads.harvestfiles.com/harvest-desktop/darwin/universal/Harvest-darwin-universal-#{version}.zip"
   name "Harvest"
   desc "Time tracking application"
   homepage "https://www.getharvest.com/apps/mac"

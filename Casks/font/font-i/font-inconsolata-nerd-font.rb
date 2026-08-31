@@ -1,6 +1,6 @@
 cask "font-inconsolata-nerd-font" do
-  version "3.5.0"
-  sha256 "dc4a72c9da3e92ef7fbf288640ee0d59aac5f3984cf601b6bb1ad6b7ea496b30"
+  version "3.5.1"
+  sha256 "be1903b0016d398e3dc5b25814438b8d0fa44ca9e0ac5d9775130f406345d586"
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Inconsolata.tar.xz"
   name "Inconsolata Nerd Font (Inconsolata)"

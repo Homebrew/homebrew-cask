@@ -1,9 +1,8 @@
 cask "cc-pocket" do
-  version "1.113.0,211"
-  sha256 "413a73f7a0223cba80a36b03790f5417a470e18654250cb0fde67ab37e7e6dfd"
+  version "1.126.2,240"
+  sha256 "8ee471c69a85a7082a305000779abac2a503780b93968b2eb62db08a2cf49754"
 
-  url "https://github.com/K9i-0/ccpocket/releases/download/macos/v#{version.csv.first}%2B#{version.csv.second}/CC-Pocket-macos-v#{version.csv.first}.dmg",
-      verified: "github.com/K9i-0/ccpocket/"
+  url "https://github.com/K9i-0/ccpocket/releases/download/macos/v#{version.csv.first}%2B#{version.csv.second}/CC-Pocket-macos-v#{version.csv.first}.dmg"
   name "CC Pocket"
   desc "Remote client for Codex and Claude coding agents"
   homepage "https://k9i-0.github.io/ccpocket/install/"
@@ -24,7 +23,7 @@ cask "cc-pocket" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on macos: :monterey
 
   app "CC Pocket.app"
 

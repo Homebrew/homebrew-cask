@@ -2,8 +2,7 @@ cask "font-noto-serif-armenian" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notoserifarmenian/NotoSerifArmenian%5Bwdth%2Cwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notoserifarmenian/NotoSerifArmenian%5Bwdth%2Cwght%5D.ttf"
   name "Noto Serif Armenian"
   homepage "https://fonts.google.com/specimen/Noto+Serif+Armenian"
 

@@ -1,6 +1,6 @@
 cask "clarc" do
-  version "1.4.0"
-  sha256 "e44c0900cb3d221b9aec55eebf820726bd3e36a5e9dcfcf2e7075fb625b2cab0"
+  version "1.4.1"
+  sha256 "ca7a69fcc74de547d53eaeb33725a8a1fb07ff21af7f2737c9408d1189906928"
 
   url "https://github.com/ttnear/Clarc/releases/download/v#{version}/Clarc-#{version}.zip"
   name "Clarc"

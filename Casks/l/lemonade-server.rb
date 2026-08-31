@@ -1,9 +1,8 @@
 cask "lemonade-server" do
-  version "11.5.2"
-  sha256 "59e32413bab810cae380ea53c1db9d222535e803c65c93c549de5dcb9a120102"
+  version "11.8.1"
+  sha256 "404a8608e2eccc6aead9b3bc5119cdaf79b3cdffd20a258a5644310243c04746"
 
-  url "https://github.com/lemonade-sdk/lemonade/releases/download/v#{version}/Lemonade-#{version}-Darwin.pkg",
-      verified: "github.com/lemonade-sdk/lemonade/"
+  url "https://github.com/lemonade-sdk/lemonade/releases/download/v#{version}/Lemonade-#{version}-Darwin.pkg"
   name "Lemonade Server"
   desc "Local LLM server with GPU and NPU acceleration"
   homepage "https://lemonade-server.ai/"
@@ -14,10 +13,12 @@ cask "lemonade-server" do
   pkg "Lemonade-#{version}-Darwin.pkg"
 
   uninstall launchctl: [
+              "ai.lemonadeserver.server",
+              "ai.lemonadeserver.tray",
               "com.lemonade.server",
               "com.lemonade.tray",
             ],
-            pkgutil:   "com.lemonade.server.*"
+            pkgutil:   ["ai.lemonadeserver.server.*", "com.lemonade.server.*"]
 
   zap delete: [
         "/Library/Application Support/Lemonade",

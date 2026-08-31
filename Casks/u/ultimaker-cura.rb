@@ -5,8 +5,7 @@ cask "ultimaker-cura" do
   sha256 arm:   "1483806486a19728bc0f363f847d75be3f179ea43c7f074bfc327f5b5c6e05ad",
          intel: "341ea41e0bc7a75361823cf9720c1d1ded9a8b2f3c4d791de2266f8d647f5d85"
 
-  url "https://github.com/Ultimaker/Cura/releases/download/#{version.csv.second || version.csv.first}/UltiMaker-Cura-#{version.csv.first}-macos-#{arch}.dmg",
-      verified: "github.com/Ultimaker/Cura/"
+  url "https://github.com/Ultimaker/Cura/releases/download/#{version.csv.second || version.csv.first}/UltiMaker-Cura-#{version.csv.first}-macos-#{arch}.dmg"
   name "UltiMaker Cura"
   name "Cura"
   desc "3D printer and slicing GUI"

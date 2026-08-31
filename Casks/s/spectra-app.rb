@@ -5,8 +5,7 @@ cask "spectra-app" do
   sha256 arm:   "ee2baee6a52705fafb6bd26144d1a445b2888f422d500483165a521d31dd8d2a",
          intel: "a044bc1eda0e7281b230e949ddc1c320599b7b005aedb8fd2c63899d38287922"
 
-  url "https://github.com/kaochenlong/spectra-app/releases/download/v#{version}/Spectra_#{version}_#{arch}.dmg",
-      verified: "github.com/kaochenlong/spectra-app/"
+  url "https://github.com/kaochenlong/spectra-app/releases/download/v#{version}/Spectra_#{version}_#{arch}.dmg"
   name "Spectra"
   desc "OpenSpec document management desktop app"
   homepage "https://spectra.5xcamp.us/"

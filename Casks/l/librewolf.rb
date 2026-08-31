@@ -1,16 +1,15 @@
 cask "librewolf" do
   arch arm: "arm64", intel: "x86_64"
-  os macos: "macos-#{arch}-package.dmg", linux: "linux-#{arch}-appimage.AppImage"
+  os macos: "macos", linux: "linux"
+  url_end = on_system_conditional macos: "package.dmg", linux: "appimage.AppImage"
 
-  version "153.0.4,1"
-  sha256 arm:          "4971d23a262a7414d6d7de2bc0449832a7e39cb341fc3f9b7388fe181fbf24a1",
-         intel:        "7d856314effa69e6955f1db4b2e94209b30b9b3757f324499db5e3acef0ae609",
-         arm64_linux:  "eb14f8b37b454f88da8bb194717608ca1354bb4ef822824f44ca3216ba0b2731",
-         x86_64_linux: "c1b836058ce9a626cb450644a5c1cedd94a6bf61df6c88c42cb114a782a44059"
+  version "154.0.1,3"
+  sha256 arm:          "6adef16e98451bb036412d8ed274b3630da705b16727e3a4270923d817d1282a",
+         intel:        "c9c372974fcd3760918cc0e0f8800a2831c1d35f35771cfddc6962251e296eeb",
+         arm64_linux:  "b3613eeef20c0a9d1973f4f0d9b7723e3b6ea8db01f1dd8e5cce2dc9f0e66dac",
+         x86_64_linux: "23fdcd8cebc0da744f8c129df8b9ae77685bbe90dd3390e7c698fcdd39c48561"
 
   on_macos do
-    disable! date: "2026-09-01", because: :fails_gatekeeper_check
-
     app "LibreWolf.app"
     command_wrapper "librewolf",
                     executable: "#{appdir}/LibreWolf.app/Contents/MacOS/librewolf"
@@ -21,6 +20,7 @@ cask "librewolf" do
       "~/Library/Caches/LibreWolf Community",
       "~/Library/Caches/LibreWolf",
       "~/Library/Preferences/io.gitlab.librewolf-community.librewolf.plist",
+      "~/Library/Preferences/net.librewolf.librewolf.plist",
       "~/Library/Saved Application State/io.gitlab.librewolf-community.librewolf.savedState",
     ]
   end
@@ -29,7 +29,7 @@ cask "librewolf" do
               target: "LibreWolf.AppImage"
   end
 
-  url "https://codeberg.org/api/packages/librewolf/generic/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-#{os}"
+  url "https://dl.librewolf.net/librewolf/#{version.tr(",", "-")}/librewolf-#{version.tr(",", "-")}-#{os}-#{arch}-#{url_end}"
   name "LibreWolf"
   desc "Web browser"
   homepage "https://librewolf.net/"
@@ -38,7 +38,7 @@ cask "librewolf" do
   # corresponding release is created, so we check the "latest" release instead
   # of the Git tags.
   livecheck do
-    url "https://codeberg.org/api/v1/repos/librewolf/bsys6/releases/latest"
+    url "https://librewolf.dev/api/v1/repos/librewolf/bsys6/releases/latest"
     regex(/^v?(\d+(?:[.-]\d+)+)$/i)
     strategy :json do |json, regex|
       json["tag_name"]&.[](regex, 1)&.tr("-", ",")

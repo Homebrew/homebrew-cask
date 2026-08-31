@@ -2,8 +2,7 @@ cask "kvirc" do
   version "5.2.10,Quasar"
   sha256 "c439697be84fb8dc41b9541f64182bb6ee561ecfd3e5070f1f4be64ca0fe156c"
 
-  url "https://github.com/kvirc/KVIrc/releases/download/#{version.csv.first}/KVIrc-#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "github.com/kvirc/KVIrc/"
+  url "https://github.com/kvirc/KVIrc/releases/download/#{version.csv.first}/KVIrc-#{version.csv.first}-#{version.csv.second}.dmg"
   name "KVIrc"
   desc "IRC Client"
   homepage "https://www.kvirc.net/"

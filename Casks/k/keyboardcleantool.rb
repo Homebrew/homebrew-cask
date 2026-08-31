@@ -1,18 +1,19 @@
 cask "keyboardcleantool" do
-  version "7"
-  sha256 :no_check
+  version "8.3"
+  sha256 "13e2a061220626392b253ab41500871ac9bda1b92598d7a3077b483960256c93"
 
-  url "https://folivora.ai/releases/KeyboardCleanTool.zip"
+  url "https://folivora.ai/releases/KeyboardCleanTool-#{version}.zip"
   name "KeyboardCleanTool"
   desc "Blocks all Keyboard and TouchBar input"
   homepage "https://folivora.ai/keyboardcleantool"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://updates.folivora.ai/keyboardcleantool.xml"
+    strategy :sparkle, &:short_version
   end
 
-  depends_on :macos
+  auto_updates true
+  depends_on macos: :ventura
 
   app "KeyboardCleanTool.app"
 

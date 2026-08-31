@@ -2,8 +2,7 @@ cask "devknife" do
   version "1.17.0"
   sha256 "d350b751933dfa86d78fd19809f938d1061fa9e3f83f783cab37b7c955e4bceb"
 
-  url "https://files.solotuna.com/devknife/DevKnife-#{version}.dmg",
-      verified: "files.solotuna.com/devknife/"
+  url "https://files.solotuna.com/devknife/DevKnife-#{version}.dmg"
   name "DevKnife"
   desc "Collection of handy developer tools"
   homepage "https://devknife.app/"
