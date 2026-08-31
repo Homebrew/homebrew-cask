@@ -26,8 +26,7 @@ cask "cmtrace-open" do
     app_image "CMTrace.Open_#{version}_amd64.AppImage", target: "CMTrace Open.AppImage"
   end
 
-  url "https://github.com/adamgell/cmtraceopen/releases/download/v#{version}/CMTrace.Open_#{version}_#{url_end}",
-      verified: "github.com/adamgell/cmtraceopen/"
+  url "https://github.com/adamgell/cmtraceopen/releases/download/v#{version}/CMTrace.Open_#{version}_#{url_end}"
   name "CMTrace Open"
   desc "Log viewer for ConfigMgr, Intune, and Windows diagnostic logs"
   homepage "https://cmtraceopen.com/"

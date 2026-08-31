@@ -31,8 +31,7 @@ cask "sip-app" do
     end
   end
 
-  url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip-#{version}.dmg",
-      verified: "sipapp.fra1.digitaloceanspaces.com/updates/"
+  url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip-#{version}.dmg"
   name "Sip"
   desc "Collect, organise & share colours"
   homepage "https://sipapp.io/"

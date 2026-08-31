@@ -2,8 +2,7 @@ cask "playdate-mirror" do
   version "1.4.0"
   sha256 "9a963fc8769e4e81630347467787fff2d9c863f6efffc57c0aa4c8973867167e"
 
-  url "https://download-cdn.panic.com/mirror/Mirror-#{version}.zip",
-      verified: "download-cdn.panic.com/mirror/"
+  url "https://download-cdn.panic.com/mirror/Mirror-#{version}.zip"
   name "Playdate Mirror"
   desc "Application that streams gameplay audio and video from your Playdate"
   homepage "https://play.date/mirror"

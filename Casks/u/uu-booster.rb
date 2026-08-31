@@ -2,8 +2,7 @@ cask "uu-booster" do
   version "2.8.19"
   sha256 :no_check
 
-  url "https://adl.netease.com/d/g/uu/c/gw?type=mac&direct=1",
-      verified: "adl.netease.com/d/g/uu/"
+  url "https://adl.netease.com/d/g/uu/c/gw?type=mac&direct=1"
   name "UU Booster"
   desc "Network accelerator"
   homepage "https://uu.163.com/download/"

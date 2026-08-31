@@ -2,8 +2,7 @@ cask "fsmonitor" do
   version "2.0,158"
   sha256 "9e9b73568bfcd91ef64980782b847e1fc721b001ae38a0fa03fbf5de08bef6ef"
 
-  url "https://tristan-software.ch/FSMonitor/Archives/FSMonitor_#{version.csv.first}(#{version.csv.second}).zip",
-      verified: "tristan-software.ch/FSMonitor/"
+  url "https://tristan-software.ch/FSMonitor/Archives/FSMonitor_#{version.csv.first}(#{version.csv.second}).zip"
   name "FSMonitor"
   desc "Visualize filesystem changes in realtime"
   homepage "https://fsmonitor.com/"

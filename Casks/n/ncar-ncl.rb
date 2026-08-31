@@ -2,8 +2,7 @@ cask "ncar-ncl" do
   version "6.6.2"
   sha256 "e2cd644f6b1bb41f55480b8818319e60c450998e31e5e489c69a5e84f3d1f359"
 
-  url "https://www.earthsystemgrid.org/api/v1/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.14_64bit_gnu730.tar.gz",
-      verified: "earthsystemgrid.org/api/v1/dataset/"
+  url "https://www.earthsystemgrid.org/api/v1/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.14_64bit_gnu730.tar.gz"
   name "NCAR Command Language"
   name "ncl"
   desc "Interpreted language for scientific data analysis and visualization"

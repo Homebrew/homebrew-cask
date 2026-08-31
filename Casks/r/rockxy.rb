@@ -2,8 +2,7 @@ cask "rockxy" do
   version "0.37.0,54"
   sha256 "e217a1210cd3ef1b56b06bd6aa088ed7437eb9239e10160d0136ee71e7dc2708"
 
-  url "https://github.com/RockxyApp/Rockxy/releases/download/v#{version.csv.first}/Rockxy-#{version.tr(",", "-")}.dmg",
-      verified: "github.com/RockxyApp/Rockxy/"
+  url "https://github.com/RockxyApp/Rockxy/releases/download/v#{version.csv.first}/Rockxy-#{version.tr(",", "-")}.dmg"
   name "Rockxy"
   desc "HTTP proxy"
   homepage "https://rockxy.io/"

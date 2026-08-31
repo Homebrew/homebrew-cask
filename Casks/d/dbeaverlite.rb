@@ -5,8 +5,7 @@ cask "dbeaverlite" do
   sha256 arm:   "9821764efce6be58c9bc87e31730e6943d07bdb9fb1d2ccb358138b5709e0acf",
          intel: "6a99e0f9f7ad7a4b6f1f40eaaab1614a011953a449b3a7470435617f09dc150a"
 
-  url "https://downloads.dbeaver.net/lite/#{version}/dbeaver-le-#{version}-macos-#{arch}.dmg",
-      verified: "downloads.dbeaver.net/lite/"
+  url "https://downloads.dbeaver.net/lite/#{version}/dbeaver-le-#{version}-macos-#{arch}.dmg"
   name "DBeaver Lite Edition"
   desc "Universal database tool and SQL client"
   homepage "https://dbeaver.com/dbeaver-lite/"

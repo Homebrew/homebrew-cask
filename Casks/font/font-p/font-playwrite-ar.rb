@@ -2,8 +2,7 @@ cask "font-playwrite-ar" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/playwritear/PlaywriteAR%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/playwritear/PlaywriteAR%5Bwght%5D.ttf"
   name "Playwrite AR"
   homepage "https://fonts.google.com/specimen/Playwrite+AR"
 

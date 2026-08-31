@@ -2,8 +2,7 @@ cask "hyperconnect" do
   version "3.0.300"
   sha256 "651cdf44a1dbb4a969cf530feaa887566cfdad4cd30be9551d3da13c9ec35db0"
 
-  url "https://cdn.cnbj1.fds.api.mi-img.com/mijia-ios-adhoc/hyperconnect/HyperConnect-#{version}.dmg",
-      verified: "mi-img.com/mijia-ios-adhoc/hyperconnect/"
+  url "https://cdn.cnbj1.fds.api.mi-img.com/mijia-ios-adhoc/hyperconnect/HyperConnect-#{version}.dmg"
   name "HyperConnect"
   name "小米互联服务"
   desc "Cross-device interconnection service for the Xiaomi ecosystem"

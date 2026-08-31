@@ -5,8 +5,7 @@ cask "hop" do
   sha256 arm:   "a2a7b86c6aa0194a7f071562847c758c0f758b24cf82fc94bc252c9747bd6883",
          intel: "9f1508aee70c3f8233d6bdaa8a34a8ebde8438878608b731ad347bed1dba2bfc"
 
-  url "https://github.com/golbin/hop/releases/download/v#{version}/HOP-macos-#{arch}.dmg",
-      verified: "github.com/golbin/hop/"
+  url "https://github.com/golbin/hop/releases/download/v#{version}/HOP-macos-#{arch}.dmg"
   name "HOP"
   desc "View and edit HWP documents"
   homepage "https://golbin.github.io/hop/"

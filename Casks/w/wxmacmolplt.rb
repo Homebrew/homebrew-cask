@@ -2,8 +2,7 @@ cask "wxmacmolplt" do
   version "7.7.3,026tyu30ck2xeldbxhgjkmmuxvwg87mc"
   sha256 "5a822760b8f3160cfcac0ab24a32a3aff5af8fc7d16d78ea736651df1e9145df"
 
-  url "https://uofi.box.com/shared/static/#{version.csv.second}.gz",
-      verified: "uofi.box.com/shared/static/"
+  url "https://uofi.box.com/shared/static/#{version.csv.second}.gz"
   name "wxMacMolPlt"
   desc "Cross-platform GUI input generator for GAMESS"
   homepage "https://brettbode.github.io/wxmacmolplt"

@@ -10,8 +10,7 @@ cask "xtool-studio" do
     sha256 "79ac714c421359bbcbc90b5dca3a5bca1cbd4b5cfa794fa2d0fda1ab32e07526"
   end
 
-  url "https://storage.atomm.com/efficacy/atomm-package/prod/packages/#{version.csv.second}/#{version.csv.third}/xTool-Studio-#{arch}-#{version.csv.first}.dmg",
-      verified: "storage.atomm.com/efficacy/atomm-package/"
+  url "https://storage.atomm.com/efficacy/atomm-package/prod/packages/#{version.csv.second}/#{version.csv.third}/xTool-Studio-#{arch}-#{version.csv.first}.dmg"
   name "xTool Studio"
   desc "Design and control software for xTool laser machines"
   homepage "https://www.xtool.com/pages/software"

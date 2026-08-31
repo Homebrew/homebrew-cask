@@ -2,8 +2,7 @@ cask "mpluginmanager" do
   version "02.29"
   sha256 "ca72b7d6d2ac6b9061f6d22a2f8bbf75fbe911d7ba33eac99bda2c26f0d73cf7"
 
-  url "https://meldaproduction.b-cdn.net/download/mpluginmanager/MPluginManager_#{version.dots_to_underscores}_setupmac.zip",
-      verified: "meldaproduction.b-cdn.net/download/mpluginmanager/"
+  url "https://meldaproduction.b-cdn.net/download/mpluginmanager/MPluginManager_#{version.dots_to_underscores}_setupmac.zip"
   name "MPluginManager"
   desc "Installer for MeldaProduction audio plugins"
   homepage "https://www.meldaproduction.com/downloads"

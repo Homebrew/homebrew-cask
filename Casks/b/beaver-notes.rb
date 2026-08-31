@@ -25,8 +25,7 @@ cask "beaver-notes" do
     app_image "Beaver-Notes-#{version}#{arch}.AppImage", target: "Beaver Notes.AppImage"
   end
 
-  url "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/#{version}/#{name_start}-#{version}#{url_end}",
-      verified: "github.com/Beaver-Notes/Beaver-Notes/"
+  url "https://github.com/Beaver-Notes/Beaver-Notes/releases/download/#{version}/#{name_start}-#{version}#{url_end}"
   name "Beaver Notes"
   desc "Privacy-focused note-taking app"
   homepage "https://beavernotes.com/"

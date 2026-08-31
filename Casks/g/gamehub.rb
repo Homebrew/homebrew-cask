@@ -11,8 +11,7 @@ cask "gamehub" do
 
   api_region = (language == "zh-cn") ? "cn" : "international"
 
-  url "https://api-#{api_region}-gamehub.xiaoji.com/game/download/mac/#{language}",
-      verified: "api-#{api_region}-gamehub.xiaoji.com/"
+  url "https://api-#{api_region}-gamehub.xiaoji.com/game/download/mac/#{language}"
   name "GameHub"
   desc "Compatibility layer for running Windows and Steam games"
   homepage "https://www.gamemac.com/#{language}"

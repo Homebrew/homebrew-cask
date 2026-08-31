@@ -25,8 +25,7 @@ cask "drata-agent" do
     app_image "Drata-Agent-linux.AppImage", target: "DrataAgent.AppImage"
   end
 
-  url "https://github.com/drata/agent-releases/releases/download/#{version}/Drata-Agent-#{os}.#{url_end}",
-      verified: "github.com/drata/agent-releases/"
+  url "https://github.com/drata/agent-releases/releases/download/#{version}/Drata-Agent-#{os}.#{url_end}"
   name "Drata Agent"
   desc "Security audit software"
   homepage "https://drata.com/"

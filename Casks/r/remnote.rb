@@ -6,8 +6,7 @@ cask "remnote" do
   sha256 arm:   "780701321011f383d957b599f69307f8f9138942627efab71d851c03413c806d",
          intel: "e3226bc1ad6cdeea8945e6e77eeef939c1ca68e71d1b26cd4a579974bc876e0d"
 
-  url "https://download2.remnote.io/remnote-desktop2/RemNote-#{version}#{arch}-mac.zip",
-      verified: "download2.remnote.io/"
+  url "https://download2.remnote.io/remnote-desktop2/RemNote-#{version}#{arch}-mac.zip"
   name "RemNote"
   desc "Spaced-repetition powered note-taking tool"
   homepage "https://www.remnote.com/"

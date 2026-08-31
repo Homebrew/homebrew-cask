@@ -2,8 +2,7 @@ cask "activedock" do
   version "2.881"
   sha256 :no_check
 
-  url "https://macplus-software.com/downloads/ActiveDock.zip",
-      verified: "macplus-software.com/downloads/"
+  url "https://macplus-software.com/downloads/ActiveDock.zip"
   name "ActiveDock"
   desc "Customizable dock, application launcher, dock replacement"
   homepage "https://www.noteifyapp.com/activedock/"

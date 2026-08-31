@@ -6,8 +6,7 @@ cask "notion-mail" do
   sha256 arm:   "5fe12f7844399b65424351e647cdf7b25bbee1e01ae1a6ae28bd27509481acce",
          intel: "8751bc03b8cc3fd1974602538ba11ed69d3c3871cd5e71467d3f49708c106da1"
 
-  url "https://mail-desktop-release.notion-static.com/Notion%20Mail-#{version}-#{arch}.zip",
-      verified: "mail-desktop-release.notion-static.com/"
+  url "https://mail-desktop-release.notion-static.com/Notion%20Mail-#{version}-#{arch}.zip"
   name "Notion Mail"
   desc "Email client integrated with Notion workspace"
   homepage "https://www.notion.com/product/mail"

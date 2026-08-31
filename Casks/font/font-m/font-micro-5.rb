@@ -2,8 +2,7 @@ cask "font-micro-5" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/micro5/Micro5-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/micro5/Micro5-Regular.ttf"
   name "Micro 5"
   homepage "https://fonts.google.com/specimen/Micro+5"
 

@@ -5,8 +5,7 @@ cask "flyenv" do
   sha256 arm:   "c366ceda414c592297e95b299bd68c00421ca24f7064ca8184b53cc39679f35f",
          intel: "6c92991912c437d5529ef8dc659199a5f143994303ae2a405b9942b580e2b63a"
 
-  url "https://github.com/xpf0000/FlyEnv/releases/download/v#{version}/FlyEnv-#{version}#{arch}-mac.zip",
-      verified: "github.com/xpf0000/FlyEnv/"
+  url "https://github.com/xpf0000/FlyEnv/releases/download/v#{version}/FlyEnv-#{version}#{arch}-mac.zip"
   name "FlyEnv"
   desc "PHP and Web development environment manager"
   homepage "https://www.macphpstudy.com/"

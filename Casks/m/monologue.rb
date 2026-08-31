@@ -2,8 +2,7 @@ cask "monologue" do
   version "1.5.0"
   sha256 :no_check
 
-  url "https://updates.jottle.ai/Monologue.dmg",
-      verified: "updates.jottle.ai/"
+  url "https://updates.jottle.ai/Monologue.dmg"
   name "Monologue"
   desc "AI voice dictation that adapts to your writing style"
   homepage "https://www.monologue.to/"

@@ -11,8 +11,7 @@ cask "temurin@25" do
     version "25.0.4.1,1"
   end
 
-  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
-      verified: "github.com/adoptium/"
+  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
   name "Eclipse Temurin 25"
   desc "JDK from the Eclipse Foundation (Adoptium)"
   homepage "https://adoptium.net/"

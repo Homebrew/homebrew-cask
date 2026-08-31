@@ -30,8 +30,7 @@ cask "devpod" do
     app_image "DevPod_linux_amd64.AppImage", target: "DevPod.AppImage"
   end
 
-  url "https://github.com/loft-sh/devpod/releases/download/v#{version}/DevPod_#{os}_#{arch}.#{url_end}",
-      verified: "github.com/loft-sh/devpod/"
+  url "https://github.com/loft-sh/devpod/releases/download/v#{version}/DevPod_#{os}_#{arch}.#{url_end}"
   name "DevPod"
   desc "UI to create reproducible developer environments based on a devcontainer.json"
   homepage "https://devpod.sh/"

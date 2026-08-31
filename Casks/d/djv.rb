@@ -2,8 +2,7 @@ cask "djv" do
   version "3.5.0"
   sha256 "f9d991a33e3f6dd3c6cbf54b3616d64dabef88ec6e0141f608cf5aba9a4213a1"
 
-  url "https://github.com/grizzlypeak3d/DJV/releases/download/#{version}/DJV-#{version}-macOS-arm64.dmg",
-      verified: "github.com/grizzlypeak3d/DJV/"
+  url "https://github.com/grizzlypeak3d/DJV/releases/download/#{version}/DJV-#{version}-macOS-arm64.dmg"
   name "DJV"
   desc "Review software for VFX, animation, and film production"
   homepage "https://grizzlypeak3d.github.io/DJV/"

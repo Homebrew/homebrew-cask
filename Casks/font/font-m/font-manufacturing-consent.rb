@@ -2,8 +2,7 @@ cask "font-manufacturing-consent" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/manufacturingconsent/ManufacturingConsent-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/manufacturingconsent/ManufacturingConsent-Regular.ttf"
   name "Manufacturing Consent"
   homepage "https://fonts.google.com/specimen/Manufacturing+Consent"
 

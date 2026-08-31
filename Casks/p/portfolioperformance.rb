@@ -5,8 +5,7 @@ cask "portfolioperformance" do
   sha256 arm:   "1ed3bdf3ee5b0c828a0da606df05fa1509668b41176683347ddd7d64a2078fa3",
          intel: "f0a744e2ac139bc00b7af2bde75db55999acced00c6891775e45e0a625f2008f"
 
-  url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}-#{arch}.dmg",
-      verified: "github.com/buchen/portfolio/"
+  url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}-#{arch}.dmg"
   name "Portfolio Performance"
   desc "Calculate the overall performance of an investment portfolio"
   homepage "https://www.portfolio-performance.info/en/"

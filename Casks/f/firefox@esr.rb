@@ -206,8 +206,7 @@ cask "firefox@esr" do
     "zh-CN"
   end
 
-  url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}esr/mac/#{language}/Firefox%20#{version}esr.dmg",
-      verified: "download-installer.cdn.mozilla.net/pub/firefox/releases/"
+  url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}esr/mac/#{language}/Firefox%20#{version}esr.dmg"
   name "Mozilla Firefox ESR"
   name "Mozilla Firefox Extended Support Release"
   desc "Web browser"

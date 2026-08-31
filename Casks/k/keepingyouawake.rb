@@ -2,8 +2,7 @@ cask "keepingyouawake" do
   version "1.6.8"
   sha256 "8001a149b4490c008fdac19898bce9902d516c4aa6412a7eb0f9a37443b15c6b"
 
-  url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip",
-      verified: "github.com/newmarcel/KeepingYouAwake/"
+  url "https://github.com/newmarcel/KeepingYouAwake/releases/download/#{version}/KeepingYouAwake-#{version}.zip"
   name "KeepingYouAwake"
   desc "Tool to prevent the system from going into sleep mode"
   homepage "https://keepingyouawake.app/"

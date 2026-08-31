@@ -40,8 +40,7 @@ cask "ferdium" do
     app_image "Ferdium-linux-Portable-#{version}-x86_64.AppImage", target: "Ferdium.AppImage"
   end
 
-  url "https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-#{os}-#{version}-#{url_end}",
-      verified: "github.com/ferdium/ferdium-app/"
+  url "https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-#{os}-#{version}-#{url_end}"
   name "Ferdium"
   desc "Multi-platform multi-messaging app"
   homepage "https://ferdium.org/"

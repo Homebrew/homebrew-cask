@@ -5,8 +5,7 @@ cask "glide-browser" do
   sha256 arm:   "63d327c853c79bf6e8f2940bcd36b67b9e7ac997ff66c13444c676d9a4778859",
          intel: "d2a7e02bf71a3bca2a42008f7920722d46975782282a8db000cfe809abcf8c53"
 
-  url "https://github.com/glide-browser/glide/releases/download/#{version}/glide.macos-#{arch}.dmg",
-      verified: "github.com/glide-browser/glide/"
+  url "https://github.com/glide-browser/glide/releases/download/#{version}/glide.macos-#{arch}.dmg"
   name "Glide Browser"
   desc "Extensible, firefox-based web browser"
   homepage "https://glide-browser.app/"

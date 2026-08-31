@@ -2,8 +2,7 @@ cask "font-shojumaru" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/shojumaru/Shojumaru-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/shojumaru/Shojumaru-Regular.ttf"
   name "Shojumaru"
   homepage "https://fonts.google.com/specimen/Shojumaru"
 

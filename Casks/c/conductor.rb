@@ -10,8 +10,7 @@ cask "conductor" do
     sha256 "be2ddd86ca192f29a696b217be52d6d4458c97054120ee07959f3b604fceffbf"
   end
 
-  url "https://cdn.crabnebula.app/asset/#{version.csv.second}",
-      verified: "cdn.crabnebula.app/asset/"
+  url "https://cdn.crabnebula.app/asset/#{version.csv.second}"
   name "Conductor"
   desc "Claude code parallelisation"
   homepage "https://conductor.build/"

@@ -24,8 +24,7 @@ cask "colour-contrast-analyser" do
     app_image "Colour-Contrast-Analyser-Setup-#{version}.AppImage", target: "Colour Contrast Analyser.AppImage"
   end
 
-  url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/#{os}-#{version}.#{url_end}",
-      verified: "github.com/ThePacielloGroup/CCAe/"
+  url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/#{os}-#{version}.#{url_end}"
   name "Colour Contrast Analyser"
   desc "Colour contrast checker"
   homepage "https://www.tpgi.com/color-contrast-checker/"

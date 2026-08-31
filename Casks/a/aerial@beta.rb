@@ -2,8 +2,7 @@ cask "aerial@beta" do
   version "4.0.16"
   sha256 "33a6b4008b9e4b6271daf0d450363fdbddb452fd3836ff81966ba5fa80ccbfe9"
 
-  url "https://github.com/AerialScreensaver/Aerial/releases/download/v#{version}/Aerial-#{version}.zip",
-      verified: "github.com/AerialScreensaver/Aerial/"
+  url "https://github.com/AerialScreensaver/Aerial/releases/download/v#{version}/Aerial-#{version}.zip"
   name "Aerial"
   desc "Apple TV Aerial screensaver"
   homepage "https://aerialscreensaver.github.io/"

@@ -2,8 +2,7 @@ cask "tiger-trade" do
   version "9.26.2"
   sha256 "ddf5578ba565b06404c4574c6a22181196d02e513e21b8a32d5aedeca0a6f6e0"
 
-  url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version}.dmg",
-      verified: "download.tigerfintech.com/"
+  url "https://download.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version}.dmg"
   name "Tiger Trade"
   name "老虎证券"
   desc "Trading platform"

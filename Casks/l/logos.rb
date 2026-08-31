@@ -5,8 +5,7 @@ cask "logos" do
   sha256 arm:   "d37a843c5a1fe5ee53bf9d774e07dcac8f1f5391e0e0c68a720f40c282970889",
          intel: "f9d45282b396f0c124df0562334a7d34d6e413d1d2aaba6a3061949337ea33d1"
 
-  url "https://downloads.logoscdn.com/LBS10/Installer/#{version}/LogosMac#{arch}.dmg",
-      verified: "downloads.logoscdn.com/"
+  url "https://downloads.logoscdn.com/LBS10/Installer/#{version}/LogosMac#{arch}.dmg"
   name "Logos"
   desc "Bible study software"
   homepage "https://www.logos.com/"

@@ -2,8 +2,7 @@ cask "whatsyoursign" do
   version "3.2.2"
   sha256 "becd29117f4ab68d890f513eaa0d3fbdeb7dd66bd3a2268b365180435852d319"
 
-  url "https://github.com/objective-see/WhatsYourSign/releases/download/v#{version}/WhatsYourSign_#{version}.zip",
-      verified: "github.com/objective-see/"
+  url "https://github.com/objective-see/WhatsYourSign/releases/download/v#{version}/WhatsYourSign_#{version}.zip"
   name "What's Your Sign?"
   desc "Shows a files cryptographic signing information"
   homepage "https://objective-see.org/products/whatsyoursign.html"

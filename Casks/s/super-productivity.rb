@@ -5,8 +5,7 @@ cask "super-productivity" do
   sha256 arm:   "724378379f5a9dad54f4649779c9b25d77baece52885d29d1536fc0fcd5ae620",
          intel: "c40976ce8da16354b58fa09a190e1439fcbcee97d4ac5e945abff76ccca58041"
 
-  url "https://github.com/super-productivity/super-productivity/releases/download/v#{version}/superProductivity-#{arch}.dmg",
-      verified: "github.com/super-productivity/super-productivity/"
+  url "https://github.com/super-productivity/super-productivity/releases/download/v#{version}/superProductivity-#{arch}.dmg"
   name "Super Productivity"
   desc "To-do list and time tracker"
   homepage "https://super-productivity.com/"

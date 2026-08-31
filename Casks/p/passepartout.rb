@@ -5,8 +5,7 @@ cask "passepartout" do
   sha256 arm:   "94bffbf9d864e41f5890f26c1529b71fae451c0fd129df74fd2da1ffca370ee4",
          intel: "619346bf65776899de636525ae08ea2c67882905c61201ea36042422ef13ebff"
 
-  url "https://github.com/partout-io/passepartout/releases/download/v#{version}/Passepartout.#{arch}.dmg",
-      verified: "github.com/partout-io/passepartout/"
+  url "https://github.com/partout-io/passepartout/releases/download/v#{version}/Passepartout.#{arch}.dmg"
   name "Passepartout"
   desc "OpenVPN and WireGuard client"
   homepage "https://partout.io/passepartout/"

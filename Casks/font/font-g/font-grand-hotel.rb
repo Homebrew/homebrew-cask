@@ -2,8 +2,7 @@ cask "font-grand-hotel" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/grandhotel/GrandHotel-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/grandhotel/GrandHotel-Regular.ttf"
   name "Grand Hotel"
   homepage "https://fonts.google.com/specimen/Grand+Hotel"
 

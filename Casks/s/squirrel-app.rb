@@ -2,8 +2,7 @@ cask "squirrel-app" do
   version "1.1.2"
   sha256 "614746013212937623d5bbab9901e9c43d1ec937aa32307d6b6092a05e308287"
 
-  url "https://github.com/rime/squirrel/releases/download/#{version}/Squirrel-#{version}.pkg",
-      verified: "github.com/rime/squirrel/"
+  url "https://github.com/rime/squirrel/releases/download/#{version}/Squirrel-#{version}.pkg"
   name "Squirrel"
   desc "Rime input method engine"
   homepage "https://rime.im/"

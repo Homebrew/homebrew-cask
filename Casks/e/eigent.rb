@@ -5,8 +5,7 @@ cask "eigent" do
   sha256 arm:   "75635c0d03e8f6ff8df9a7645eb0c579d5706b03a4d345ed12b6ff00086de085",
          intel: "3d6a62b4932ee1eaac9014aa7a3a1cbb267d76bb7b55cb3e6d066fdd3bbd2654"
 
-  url "https://github.com/eigent-ai/eigent/releases/download/v#{version}/Eigent-#{version}#{arch}.dmg",
-      verified: "github.com/eigent-ai/eigent/"
+  url "https://github.com/eigent-ai/eigent/releases/download/v#{version}/Eigent-#{version}#{arch}.dmg"
   name "Eigent"
   desc "Desktop AI agent"
   homepage "https://www.eigent.ai/"

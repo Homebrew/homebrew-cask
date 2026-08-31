@@ -5,8 +5,7 @@ cask "ableset" do
   sha256 arm:   "e7db1c605cab897883ab76f70fb19b5b85281b94c39f8c6c7012d85dbc949e47",
          intel: "b136d22a76cf85c03cde8427c2793c41b1cb4b8c30b0df93ebf17efd6d1b9ebc"
 
-  url "https://s3.amazonaws.com/download.ableset.app/mac#{arch}/AbleSet-#{version}#{arch}.dmg",
-      verified: "s3.amazonaws.com/download.ableset.app/"
+  url "https://s3.amazonaws.com/download.ableset.app/mac#{arch}/AbleSet-#{version}#{arch}.dmg"
   name "AbleSet"
   desc "Ableton setlist manager"
   homepage "https://ableset.app/"

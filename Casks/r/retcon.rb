@@ -2,8 +2,7 @@ cask "retcon" do
   version "1.6.2"
   sha256 "bc662d787bbe1101428fcf4241a82c20579ef7ed778f24480609090e89842050"
 
-  url "https://downloads.lemon.garden/retcon/retcon-#{version}.dmg",
-      verified: "downloads.lemon.garden/retcon/"
+  url "https://downloads.lemon.garden/retcon/retcon-#{version}.dmg"
   name "Retcon"
   desc "Drag-and-drop Git history editor"
   homepage "https://retcon.app/"

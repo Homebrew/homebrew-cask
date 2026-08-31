@@ -2,8 +2,7 @@ cask "workspace-one-intelligent-hub" do
   version "26.06"
   sha256 :no_check
 
-  url "https://packages.omnissa.com/wsone/HubMacOS.pkg",
-      verified: "packages.omnissa.com/wsone/"
+  url "https://packages.omnissa.com/wsone/HubMacOS.pkg"
   name "Workspace ONE Intelligent Hub"
   desc "Digital workspace hub"
   homepage "https://www.getwsone.com/"

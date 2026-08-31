@@ -2,8 +2,7 @@ cask "ransomwhere" do
   version "2.2.0"
   sha256 "982b0b9c3027947e0aaca16d7936fe3e6639ddabe8fafe979c50c7d8c4302af1"
 
-  url "https://github.com/objective-see/RansomWhere/releases/download/v#{version}/RansomWhere_#{version}.zip",
-      verified: "github.com/objective-see/RansomWhere/"
+  url "https://github.com/objective-see/RansomWhere/releases/download/v#{version}/RansomWhere_#{version}.zip"
   name "RansomWhere"
   desc "Protect your personal files"
   homepage "https://objective-see.org/products/ransomwhere.html"

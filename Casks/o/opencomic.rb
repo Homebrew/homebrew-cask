@@ -5,8 +5,7 @@ cask "opencomic" do
   sha256 arm:   "7c324fecbf12a2ad9180e603a36de405fe1753ac5cfb8efb01ea950e1c82e346",
          intel: "ad139381c0045845aed374507e63433465531743c8c94247899c4173ef640c5b"
 
-  url "https://github.com/ollm/OpenComic/releases/download/v#{version}/OpenComic-#{version}#{arch}.dmg",
-      verified: "github.com/ollm/OpenComic/"
+  url "https://github.com/ollm/OpenComic/releases/download/v#{version}/OpenComic-#{version}#{arch}.dmg"
   name "OpenComic"
   desc "Comic and Manga reader"
   homepage "https://opencomic.app/"

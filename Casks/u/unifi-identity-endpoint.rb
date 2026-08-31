@@ -2,8 +2,7 @@ cask "unifi-identity-endpoint" do
   version "4.2.0,86d50baf-9015-49c9-a767-724803c8b8b8,c832"
   sha256 "478885182cd7a0062830e7e5d52c06da8f34ff6417b6bcf6fd8552dbefa511d7"
 
-  url "https://fw-download.ubnt.com/data/uid-identity-standard-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
-      verified: "fw-download.ubnt.com/data/uid-identity-standard-desktop-app/"
+  url "https://fw-download.ubnt.com/data/uid-identity-standard-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
   name "UniFi Identity Endpoint"
   desc "License free Wi-Fi, VPN, and Access Application for Organizations"
   homepage "https://www.ui.com/identity"

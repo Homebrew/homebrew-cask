@@ -2,8 +2,7 @@ cask "font-monaspace-nf" do
   version "1.400"
   sha256 "9b7f9505d977601d8819dfdb57fa4b49bdab61132b6d1131c2e8d092066edc5a"
 
-  url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-nerdfonts-v#{version}.zip",
-      verified: "github.com/githubnext/monaspace/"
+  url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-nerdfonts-v#{version}.zip"
   name "Monaspace NF"
   homepage "https://monaspace.githubnext.com/"
 

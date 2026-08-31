@@ -2,8 +2,7 @@ cask "font-tapestry" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/tapestry/Tapestry-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/tapestry/Tapestry-Regular.ttf"
   name "Tapestry"
   homepage "https://fonts.google.com/specimen/Tapestry"
 

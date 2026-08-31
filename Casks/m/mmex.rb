@@ -2,8 +2,7 @@ cask "mmex" do
   version "1.9.3"
   sha256 "8ee9338c435ea7e23efb7fd46daabd8723e69445a7ebdf934ee3d61dcaf1aed5"
 
-  url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex-#{version}-Darwin.dmg",
-      verified: "github.com/moneymanagerex/moneymanagerex/"
+  url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex-#{version}-Darwin.dmg"
   name "Money Manager Ex"
   desc "Money management application"
   homepage "https://moneymanagerex.org/"

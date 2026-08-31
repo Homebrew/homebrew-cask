@@ -5,8 +5,7 @@ cask "neat" do
   sha256 arm:   "77573b588f40775baa8196e97958dabd92d01b867f263cddfbb7d667c484ffcc",
          intel: "e0f71d75d855e680bd403de694ed9d295df0a37be5b97eb8a633ede8e40771eb"
 
-  url "https://github.com/neat-run/activity-feed-public/releases/download/v#{version}/Neat-#{version}#{arch}.dmg",
-      verified: "github.com/neat-run/activity-feed-public/"
+  url "https://github.com/neat-run/activity-feed-public/releases/download/v#{version}/Neat-#{version}#{arch}.dmg"
   name "Neat"
   desc "GitHub and Linear notifications on your desktop and menu bar"
   homepage "https://neat.run/"

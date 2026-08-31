@@ -2,8 +2,7 @@ cask "drivethrurpg" do
   version "3.6.3"
   sha256 "5b576c20918712c3d807cb8d744bfc5a0338fde1a0c6dd8091d12c34e0c0268f"
 
-  url "https://dtrpg-library-app.s3.amazonaws.com/DriveThruRPG_#{version}.dmg",
-      verified: "dtrpg-library-app.s3.amazonaws.com/"
+  url "https://dtrpg-library-app.s3.amazonaws.com/DriveThruRPG_#{version}.dmg"
   name "DriveThruRPG Library App"
   desc "Sync DriveThruRPG libraries to compatible devices"
   homepage "https://www.drivethrurpg.com/library_client.php"

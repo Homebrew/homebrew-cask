@@ -2,8 +2,7 @@ cask "keyscreen" do
   version "2.3.0"
   sha256 "cede25ea5b847b92871549db2434370a04c4e7c3441df7929a1e687fe256b5a1"
 
-  url "https://rampatra.github.io/keyscreen-updates/KeyScreen-#{version}.dmg",
-      verified: "rampatra.github.io/keyscreen-updates/"
+  url "https://rampatra.github.io/keyscreen-updates/KeyScreen-#{version}.dmg"
   name "KeyScreen"
   desc "Show key presses on screen"
   homepage "https://keyscreenapp.com/"

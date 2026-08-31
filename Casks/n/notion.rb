@@ -12,8 +12,7 @@ cask "notion" do
     version "7.31.3"
   end
 
-  url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg",
-      verified: "desktop-release.notion-static.com/"
+  url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg"
   name "Notion"
   desc "App to write, plan, collaborate, and get organised"
   homepage "https://www.notion.com/"

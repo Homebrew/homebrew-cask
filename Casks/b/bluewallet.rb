@@ -2,8 +2,7 @@ cask "bluewallet" do
   version "7.2.6"
   sha256 "38299c0800d1bf19656638ccf64266fa1d2e614f2845918fe544c0c1b3935328"
 
-  url "https://github.com/BlueWallet/BlueWallet/releases/download/v#{version}/BlueWallet.#{version}.dmg",
-      verified: "github.com/BlueWallet/BlueWallet/"
+  url "https://github.com/BlueWallet/BlueWallet/releases/download/v#{version}/BlueWallet.#{version}.dmg"
   name "BlueWallet"
   desc "Bitcoin wallet and Lightning wallet"
   homepage "https://bluewallet.io/"

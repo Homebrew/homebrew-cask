@@ -2,8 +2,7 @@ cask "muesli" do
   version "0.8.3"
   sha256 "ac1e689e6fd7af5dbd3c7a6b02fd00f703e03ffa2191305e425fc97c500d4018"
 
-  url "https://github.com/Muesli-HQ/muesli/releases/download/v#{version}/Muesli-#{version}.dmg",
-      verified: "github.com/Muesli-HQ/muesli/"
+  url "https://github.com/Muesli-HQ/muesli/releases/download/v#{version}/Muesli-#{version}.dmg"
   name "Muesli"
   desc "Local-first dictation and meeting transcription"
   homepage "https://muesli.works/"

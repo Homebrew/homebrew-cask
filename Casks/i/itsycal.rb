@@ -2,8 +2,7 @@ cask "itsycal" do
   version "0.15.12"
   sha256 "b03f8f546b035b5954ffc481e4cec3b9895a60a7378aaa36cdf544581ed057da"
 
-  url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip",
-      verified: "itsycal.s3.amazonaws.com/"
+  url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip"
   name "Itsycal"
   desc "Menu bar calendar"
   homepage "https://www.mowglii.com/itsycal/"

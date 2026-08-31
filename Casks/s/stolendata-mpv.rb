@@ -23,8 +23,7 @@ cask "stolendata-mpv" do
     sha256 "35ec81ad86a97b24956a8d0f4fa1ba2690b44ae7741c920e923620bcd7bd402a"
   end
 
-  url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv#{arch}-#{version}.tar.gz",
-      verified: "laboratory.stolendata.net/~djinn/mpv_osx/"
+  url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv#{arch}-#{version}.tar.gz"
   name "mpv"
   desc "Media player based on MPlayer and mplayer2"
   homepage "https://mpv.io/"

@@ -5,8 +5,7 @@ cask "openchrom" do
   sha256 arm:   "004bb15e7175ec46912118ae826ee50d9b592cc7667ef66b2aa148cff5a30573",
          intel: "f52273ba86a75a4f55a1e27655efd8fa399eb3c1b0a3276bd0888491728bdaea"
 
-  url "https://products.lablicate.com/openchrom/#{version}/OpenChrom_#{version}_#{arch}.dmg",
-      verified: "products.lablicate.com/openchrom/"
+  url "https://products.lablicate.com/openchrom/#{version}/OpenChrom_#{version}_#{arch}.dmg"
   name "OpenChrom"
   desc "Data analysis for analytical chemistry"
   homepage "https://www.openchrom.net/"

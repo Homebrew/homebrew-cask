@@ -2,8 +2,7 @@ cask "stand" do
   version "2.1.1"
   sha256 "5fce7d525ea7154d1df58b25d1902731f533a18656330593a7d3d2456fc1f314"
 
-  url "https://f001.backblazeb2.com/file/stand-app/#{version}/Stand.zip",
-      verified: "f001.backblazeb2.com/file/stand-app/"
+  url "https://f001.backblazeb2.com/file/stand-app/#{version}/Stand.zip"
   name "Stand"
   desc "Reminds you to stand up once an hour"
   homepage "https://getstandapp.com/"

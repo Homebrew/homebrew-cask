@@ -2,8 +2,7 @@ cask "font-londrina-outline" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/londrinaoutline/LondrinaOutline-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/londrinaoutline/LondrinaOutline-Regular.ttf"
   name "Londrina Outline"
   homepage "https://fonts.google.com/specimen/Londrina+Outline"
 

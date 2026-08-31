@@ -2,8 +2,7 @@ cask "font-migmix-1m" do
   version "2020.0307"
   sha256 "5b662021765d5a091cdbe6b09dd464710fbc42fb20c544d28795b3e0580a216e"
 
-  url "https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v#{version}/migmix-1m-#{version.no_dots}.zip",
-      verified: "github.com/itouhiro/mixfont-mplus-ipa/"
+  url "https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v#{version}/migmix-1m-#{version.no_dots}.zip"
   name "MigMix 1M"
   homepage "https://itouhiro.github.io/mixfont-mplus-ipa/migmix/"
 

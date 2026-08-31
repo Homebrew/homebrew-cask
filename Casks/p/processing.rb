@@ -5,8 +5,7 @@ cask "processing" do
   sha256 arm:   "f543a70d06fa43ea4f57955368734296c49960b71b24b2220da18d14806ed3fa",
          intel: "3addfee22d3c6bfd907d33b8c7a875032275564c71ce42234ffe5613bad4d8fd"
 
-  url "https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macos-#{arch}.dmg",
-      verified: "github.com/processing/processing4/"
+  url "https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macos-#{arch}.dmg"
   name "Processing"
   desc "Flexible software sketchbook and a language for learning how to code"
   homepage "https://processing.org/"

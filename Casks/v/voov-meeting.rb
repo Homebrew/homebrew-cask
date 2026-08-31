@@ -10,8 +10,7 @@ cask "voov-meeting" do
     sha256 "fa46b369a658468e77a3a11eb65b48ab5c9668dd05376e64821e82d4c2721685"
   end
 
-  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg",
-      verified: "updatecdn.meeting.qq.com/cos/"
+  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg"
   name "VooV Meeting"
   name "Tencent Meeting International Version"
   desc "Video conferencing software"

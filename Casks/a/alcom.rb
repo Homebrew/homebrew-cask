@@ -26,8 +26,7 @@ cask "alcom" do
     app_image "alcom-#{version}-#{arch}.AppImage", target: "ALCOM.AppImage"
   end
 
-  url "https://github.com/vrc-get/vrc-get/releases/download/gui-v#{version}/#{os}-#{version}-#{arch_end}.#{url_end}",
-      verified: "github.com/vrc-get/vrc-get/"
+  url "https://github.com/vrc-get/vrc-get/releases/download/gui-v#{version}/#{os}-#{version}-#{arch_end}.#{url_end}"
   name "ALCOM"
   desc "Graphical frontend of vrc-get, open source alternative to VRChat Package Manager"
   homepage "https://vrc-get.anatawa12.com/alcom"

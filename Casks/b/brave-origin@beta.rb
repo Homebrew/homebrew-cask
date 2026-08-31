@@ -12,8 +12,7 @@ cask "brave-origin@beta" do
     version "1.95.92.0"
   end
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Beta-#{arch}.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Origin/"
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/beta#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Beta-#{arch}.dmg"
   name "Brave Origin Beta"
   desc "Privacy-focused web browser"
   homepage "https://brave.com/origin/#beta"

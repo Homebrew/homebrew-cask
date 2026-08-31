@@ -2,8 +2,7 @@ cask "font-noto-kufi-arabic" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notokufiarabic/NotoKufiArabic%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notokufiarabic/NotoKufiArabic%5Bwght%5D.ttf"
   name "Noto Kufi Arabic"
   homepage "https://fonts.google.com/specimen/Noto+Kufi+Arabic"
 

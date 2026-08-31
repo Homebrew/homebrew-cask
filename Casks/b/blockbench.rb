@@ -28,8 +28,7 @@ cask "blockbench" do
     app_image "Blockbench_#{version}.AppImage", target: "Blockbench.AppImage"
   end
 
-  url "https://github.com/JannisX11/blockbench/releases/download/v#{version}/Blockbench_#{url_arch}#{version}.#{url_end}",
-      verified: "github.com/JannisX11/blockbench/"
+  url "https://github.com/JannisX11/blockbench/releases/download/v#{version}/Blockbench_#{url_arch}#{version}.#{url_end}"
   name "Blockbench"
   desc "3D model editor for boxy models and pixel art textures"
   homepage "https://www.blockbench.net/"

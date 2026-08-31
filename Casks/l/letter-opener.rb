@@ -2,8 +2,7 @@ cask "letter-opener" do
   version "16.0.7"
   sha256 "b2bf3662a2c1f27a042cf3524ce23d8fd7c8614134416a68e193a3bad7f3d1cf"
 
-  url "https://s3.amazonaws.com/LetterOpener/dmg/Letter-Opener-#{version}.zip",
-      verified: "s3.amazonaws.com/LetterOpener/dmg/"
+  url "https://s3.amazonaws.com/LetterOpener/dmg/Letter-Opener-#{version}.zip"
   name "Letter Opener"
   desc "Display winmail.dat files directly in Mail.app"
   homepage "https://winmail.help/"

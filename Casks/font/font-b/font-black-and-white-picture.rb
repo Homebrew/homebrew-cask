@@ -2,8 +2,7 @@ cask "font-black-and-white-picture" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/blackandwhitepicture/BlackAndWhitePicture-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/blackandwhitepicture/BlackAndWhitePicture-Regular.ttf"
   name "Black And White Picture"
   homepage "https://fonts.google.com/specimen/Black+And+White+Picture"
 

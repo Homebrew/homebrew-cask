@@ -25,8 +25,7 @@ cask "fedistar" do
     app_image "fedistar_#{version}_amd64.AppImage", target: "Fedistar.AppImage"
   end
 
-  url "https://github.com/h3poteto/fedistar/releases/download/v#{version}/fedistar_#{version}_#{url_end}",
-      verified: "github.com/h3poteto/fedistar/"
+  url "https://github.com/h3poteto/fedistar/releases/download/v#{version}/fedistar_#{version}_#{url_end}"
   name "fedistar"
   desc "Multi-column Mastodon, Pleroma, and Friendica client for desktop"
   homepage "https://fedistar.net/"

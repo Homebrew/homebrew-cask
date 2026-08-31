@@ -2,8 +2,7 @@ cask "launchos" do
   version "2.3.0,443"
   sha256 "3d96519f946e463791cd0f37c69c7a046ca06a546924ceec34c864b980905610"
 
-  url "https://static.remixdesign.app/launchos/LaunchOS-#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "static.remixdesign.app/launchos/"
+  url "https://static.remixdesign.app/launchos/LaunchOS-#{version.csv.first}-#{version.csv.second}.dmg"
   name "LaunchOS"
   desc "Launchpad alternative"
   homepage "https://launchosapp.com/"

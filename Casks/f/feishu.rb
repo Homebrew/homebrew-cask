@@ -11,8 +11,7 @@ cask "feishu" do
     sha256 "2a2f449b9b8665c25147638e10a825c6472241b691780142a5781a7dd1369d53"
   end
 
-  url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg",
-      verified: "sf3-cn.feishucdn.com/obj/ee-appcenter/"
+  url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg"
   name "Feishu"
   desc "Project management software"
   homepage "https://www.feishu.cn/"

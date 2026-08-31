@@ -6,8 +6,7 @@ cask "pulsar" do
   sha256 arm:   "a8e89b56872b40a1f23dadd547c13a74463b0271cf2ac9fb44306c4342756ce6",
          intel: "1aa1bb588baa44bcb3b5f11a2b3d910a59e6594ee3a7f087feb5042d133970b8"
 
-  url "https://github.com/pulsar-edit/pulsar/releases/download/v#{version}/#{arch}.Mac.Pulsar-#{version}#{arch_suffix}.dmg",
-      verified: "github.com/pulsar-edit/pulsar/"
+  url "https://github.com/pulsar-edit/pulsar/releases/download/v#{version}/#{arch}.Mac.Pulsar-#{version}#{arch_suffix}.dmg"
   name "Pulsar"
   desc "Text editor"
   homepage "https://pulsar-edit.dev/"

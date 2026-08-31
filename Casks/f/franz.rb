@@ -5,8 +5,7 @@ cask "franz" do
   sha256 arm:   "e822911913caf56fa7066c26722d2f366ec075b2635a0c513117beb6f5681e38",
          intel: "27f0f12131fcca99c3cfa7846ba8d7d2cc9aca29308aae7e006219a427e8d3b4"
 
-  url "https://github.com/meetfranz/franz-6/releases/download/v#{version}/Franz-#{arch}.dmg",
-      verified: "github.com/meetfranz/franz-6/"
+  url "https://github.com/meetfranz/franz-6/releases/download/v#{version}/Franz-#{arch}.dmg"
   name "Franz"
   desc "Messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and more"
   homepage "https://meetfranz.com/"

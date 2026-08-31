@@ -3,8 +3,7 @@ cask "kstars" do
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg",
-      user_agent: :browser,
-      verified:   "indilib.org/jdownloads/kstars/"
+      user_agent: :browser
   name "KStars"
   desc "Astronomy software"
   homepage "https://kstars.kde.org/"

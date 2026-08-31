@@ -2,8 +2,7 @@ cask "onit-sidekick" do
   version "3.0"
   sha256 "1aaeee17ffb4b05ca2a9168a2319dd9b4d31f485868433a858acfda86a23a4d8"
 
-  url "https://github.com/synth-inc/onit/releases/download/v#{version}/SideKick-#{version}.dmg",
-      verified: "github.com/synth-inc/onit/"
+  url "https://github.com/synth-inc/onit/releases/download/v#{version}/SideKick-#{version}.dmg"
   name "SideKick"
   desc "AI chat panel"
   homepage "https://www.cloudless.so/ai-sidebar"

@@ -2,8 +2,7 @@ cask "teamspeak-client" do
   version "3.6.2"
   sha256 "8a6873589aeb98fdbd9509f2a1163662770f1426aed0757704203de40d71d4d6"
 
-  url "https://files.teamspeak-services.com/releases/client/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg",
-      verified: "files.teamspeak-services.com/"
+  url "https://files.teamspeak-services.com/releases/client/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg"
   name "TeamSpeak Client"
   desc "Voice communication client"
   homepage "https://www.teamspeak.com/"

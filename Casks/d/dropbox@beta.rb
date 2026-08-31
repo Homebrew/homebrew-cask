@@ -5,8 +5,7 @@ cask "dropbox@beta" do
   sha256 arm:   "033d2f8d5613686b47a88e8d9a3605be8c3f3ca09ec43ad1600445a2e1904302",
          intel: "11878f6acb32c7f84cfff4baf20d7fc6714934579d38ce1baa9d567976e603b0"
 
-  url "https://www.dropbox.com/download?build=#{version}&plat=mac&rtoken=&type=full#{arch}",
-      verified: "dropbox.com/"
+  url "https://www.dropbox.com/download?build=#{version}&plat=mac&rtoken=&type=full#{arch}"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropboxforum.com/t5/Dropbox-desktop-client-builds/bd-p/101003016"

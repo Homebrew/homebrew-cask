@@ -6,8 +6,7 @@ cask "codexmonitor" do
   on_macos do
     sha256 "e24ba50bb4e301693ec16705419bbca9f77b9c60ec3c0f8bf830b29d1494bc1f"
 
-    url "https://github.com/Dimillian/CodexMonitor/releases/download/v#{version}/CodexMonitor.app.tar.gz",
-        verified: "github.com/Dimillian/CodexMonitor/"
+    url "https://github.com/Dimillian/CodexMonitor/releases/download/v#{version}/CodexMonitor.app.tar.gz"
 
     depends_on arch: :arm64
 
@@ -23,8 +22,7 @@ cask "codexmonitor" do
     sha256 arm64_linux:  "4b9ba31155ab01560d95788d7062204c533e324110378073ecb84e246662f557",
            x86_64_linux: "340902d138815109c3ac2f1b443a20de56404643fe3429f4648675f07c482eeb"
 
-    url "https://github.com/Dimillian/CodexMonitor/releases/download/v#{version}/Codex.Monitor_#{version}_#{arch}.AppImage",
-        verified: "github.com/Dimillian/CodexMonitor/"
+    url "https://github.com/Dimillian/CodexMonitor/releases/download/v#{version}/Codex.Monitor_#{version}_#{arch}.AppImage"
 
     app_image "Codex.Monitor_#{version}_#{arch}.AppImage", target: "Codex Monitor.AppImage"
   end

@@ -2,8 +2,7 @@ cask "granola" do
   version "7.515.1"
   sha256 "1309adae84af87cd5b2c91e9cb56f51b555f103b8aff740ddbf89ec3f0c553be"
 
-  url "https://dr2v7l5emb758.cloudfront.net/#{version}/Granola-#{version}-mac-universal.dmg",
-      verified: "dr2v7l5emb758.cloudfront.net/"
+  url "https://dr2v7l5emb758.cloudfront.net/#{version}/Granola-#{version}-mac-universal.dmg"
   name "Granola"
   desc "AI-powered notepad for meetings"
   homepage "https://www.granola.ai/"

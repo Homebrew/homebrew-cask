@@ -2,8 +2,7 @@ cask "syncmate" do
   version "8.11.604"
   sha256 "4ac24541b8c87cef6001b0c9c7063408d2c00b2299f9d112af8fa911772e8e14"
 
-  url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip",
-      verified: "cdn.electronic.us/products/syncmate/"
+  url "https://cdn.electronic.us/products/syncmate/mac/update/SyncMate_#{version}.zip"
   name "SyncMate"
   desc "All-in-one sync tool"
   homepage "https://mac.eltima.com/sync-mac.html"

@@ -2,8 +2,7 @@ cask "purevpn" do
   version "9.46.0"
   sha256 :no_check
 
-  url "https://dzglif4kkvz04.cloudfront.net/mac-2.0/packages/Production/PureVPN.pkg",
-      verified: "dzglif4kkvz04.cloudfront.net/"
+  url "https://dzglif4kkvz04.cloudfront.net/mac-2.0/packages/Production/PureVPN.pkg"
   name "PureVPN"
   desc "VPN client"
   homepage "https://www.purevpn.com/"

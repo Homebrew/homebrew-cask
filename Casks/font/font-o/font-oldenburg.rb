@@ -2,8 +2,7 @@ cask "font-oldenburg" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/oldenburg/Oldenburg-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/oldenburg/Oldenburg-Regular.ttf"
   name "Oldenburg"
   homepage "https://fonts.google.com/specimen/Oldenburg"
 

@@ -5,8 +5,7 @@ cask "uniclipboard" do
   sha256 arm:   "f633f6b9a999babb8ef76e9ea453b2556568a7e1eb26db630f479bb1e3a85152",
          intel: "aee45d012d0d890b4af55f3236639448bbb3ac09d44722cc1d381c24461163b8"
 
-  url "https://github.com/UniClipboard/UniClipboard/releases/download/v#{version}/UniClipboard_#{version}_#{arch}.dmg",
-      verified: "github.com/UniClipboard/UniClipboard/"
+  url "https://github.com/UniClipboard/UniClipboard/releases/download/v#{version}/UniClipboard_#{version}_#{arch}.dmg"
   name "UniClipboard"
   desc "Cross-device clipboard syncing tool"
   homepage "https://www.uniclipboard.app/"

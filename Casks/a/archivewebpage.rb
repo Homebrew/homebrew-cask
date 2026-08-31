@@ -29,8 +29,7 @@ cask "archivewebpage" do
     app_image "ArchiveWeb.page-#{version}.AppImage", target: "ArchiveWeb.page.AppImage"
   end
 
-  url "https://github.com/webrecorder/archiveweb.page/releases/download/v#{version}/ArchiveWeb.page-#{version}.#{url_end}",
-      verified: "github.com/webrecorder/archiveweb.page/"
+  url "https://github.com/webrecorder/archiveweb.page/releases/download/v#{version}/ArchiveWeb.page-#{version}.#{url_end}"
   name "ArchiveWeb.page"
   desc "Archive webpages manually to WARC or WACZ files as you browse the web"
   homepage "https://archiveweb.page/"

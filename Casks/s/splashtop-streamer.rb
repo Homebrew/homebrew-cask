@@ -2,8 +2,7 @@ cask "splashtop-streamer" do
   version "3.8.6.0"
   sha256 "33765596a0e9f992ee22678c39e8d27888e8749d75046331e81e179a1d97e16d"
 
-  url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_Mac_INSTALLER_v#{version}.dmg",
-      verified: "d17kmd0va0f0mp.cloudfront.net/"
+  url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_Mac_INSTALLER_v#{version}.dmg"
   name "Splashtop Streamer"
   desc "Connect to and control computers from desktop and mobile devices"
   homepage "https://www.splashtop.com/downloads"

@@ -2,8 +2,7 @@ cask "mailsteward" do
   version "18.2.2"
   sha256 "dd1695e20fb7aedec3c495d2f5869ebeb1b9b33a5de5fd261ca428dcfe330c05"
 
-  url "https://s3.amazonaws.com/mailsteward/images/MailSteward_#{version}.zip",
-      verified: "s3.amazonaws.com/mailsteward/"
+  url "https://s3.amazonaws.com/mailsteward/images/MailSteward_#{version}.zip"
   name "MailSteward"
   desc "Email management tool for Apple Mail and Postbox"
   homepage "https://mailsteward.com/"

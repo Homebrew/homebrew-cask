@@ -2,8 +2,7 @@ cask "pb" do
   version "11.0.2"
   sha256 "fdf0f2e7b820e5efbc9b0c7e69dfdcb4ac3caa3012ed7086d59a62c190f7c3e2"
 
-  url "https://github.com/sidneys/pb-for-desktop/releases/download/v#{version}/pb-for-desktop-#{version}-mac.zip",
-      verified: "github.com/sidneys/pb-for-desktop/"
+  url "https://github.com/sidneys/pb-for-desktop/releases/download/v#{version}/pb-for-desktop-#{version}-mac.zip"
   name "PB for Desktop"
   desc "Unofficial Pushbullet desktop app to get push notifications"
   homepage "https://sidneys.github.io/pb-for-desktop"

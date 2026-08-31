@@ -2,8 +2,7 @@ cask "speechify-voice-ai" do
   version "3.14.0"
   sha256 :no_check
 
-  url "https://storage.googleapis.com/speechifymobile.appspot.com/macAgentSparkle/SpeechifyVoiceAssistant.dmg",
-      verified: "storage.googleapis.com/speechifymobile.appspot.com/"
+  url "https://storage.googleapis.com/speechifymobile.appspot.com/macAgentSparkle/SpeechifyVoiceAssistant.dmg"
   name "Speechify AI Assistant"
   desc "AI-powered reading and voice assistant"
   homepage "https://www.speechify.com/"

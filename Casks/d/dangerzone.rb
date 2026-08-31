@@ -5,8 +5,7 @@ cask "dangerzone" do
   sha256 arm:   "406c3e87cd7c01fbc2b5911eb67937213ac721b0d928297c445bd2045654f0e6",
          intel: "3aa58e339cb492080cd4bd404db705234b4a85b544847db5ecffc681fc111bb8"
 
-  url "https://github.com/freedomofpress/dangerzone/releases/download/v#{version}/Dangerzone-#{version}-#{arch}.dmg",
-      verified: "github.com/freedomofpress/dangerzone/"
+  url "https://github.com/freedomofpress/dangerzone/releases/download/v#{version}/Dangerzone-#{version}-#{arch}.dmg"
   name "Dangerzone"
   desc "Convert potentially dangerous PDFs or Office documents into safe PDFs"
   homepage "https://dangerzone.rocks/"

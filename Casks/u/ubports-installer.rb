@@ -10,8 +10,7 @@ cask "ubports-installer" do
     sha256 "cd5532fff5c2a35e04f55b6b0ad03918404bfbaa1065e54a87cf9fb69609807b"
   end
 
-  url "https://github.com/ubports/ubports-installer/releases/download/#{version}/ubports-installer_#{version}_mac_#{arch}.dmg",
-      verified: "github.com/ubports/ubports-installer/"
+  url "https://github.com/ubports/ubports-installer/releases/download/#{version}/ubports-installer_#{version}_mac_#{arch}.dmg"
   name "ubports installer"
   desc "Application to install ubports on mobile devices"
   homepage "https://ubports.com/"

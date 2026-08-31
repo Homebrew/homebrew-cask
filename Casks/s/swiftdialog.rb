@@ -2,8 +2,7 @@ cask "swiftdialog" do
   version "3.1.0,4994"
   sha256 "462921537425146b00b936448e518578b58d5177c039a609532cfea349c3e166"
 
-  url "https://github.com/swiftDialog/swiftDialog/releases/download/v#{version.csv.first}/dialog-#{version.csv.first}-#{version.csv.second}.pkg",
-      verified: "github.com/swiftDialog/swiftDialog/"
+  url "https://github.com/swiftDialog/swiftDialog/releases/download/v#{version.csv.first}/dialog-#{version.csv.first}-#{version.csv.second}.pkg"
   name "swiftDialog"
   desc "Admin utility that presents custom dialogs or messages from shell scripts"
   homepage "https://swiftdialog.app/"

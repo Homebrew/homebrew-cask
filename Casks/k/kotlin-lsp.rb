@@ -8,8 +8,7 @@ cask "kotlin-lsp" do
          arm64_linux:  "2317831c6e5607d05b7ebc1da655330125ce0e3d66fbf24517dfce442debc14e",
          x86_64_linux: "2d99d8e198fbe4aa8f4481e37799724ce94803b4ea12a60b416040e3fcd7cc5e"
 
-  url "https://download-cdn.jetbrains.com/language-server/kotlin-server/#{version}/kotlin-server-#{version}#{arch}.#{os}",
-      verified: "download-cdn.jetbrains.com/language-server/kotlin-server/"
+  url "https://download-cdn.jetbrains.com/language-server/kotlin-server/#{version}/kotlin-server-#{version}#{arch}.#{os}"
   name "Kotlin LSP"
   desc "Official Kotlin Language Server"
   homepage "https://github.com/Kotlin/kotlin-lsp"

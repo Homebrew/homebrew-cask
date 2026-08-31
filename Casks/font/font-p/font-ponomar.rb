@@ -2,8 +2,7 @@ cask "font-ponomar" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/ponomar/Ponomar-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/ponomar/Ponomar-Regular.ttf"
   name "Ponomar"
   homepage "https://fonts.google.com/specimen/Ponomar"
 

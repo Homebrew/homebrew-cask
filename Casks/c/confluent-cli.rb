@@ -8,8 +8,7 @@ cask "confluent-cli" do
          arm64_linux:  "f429135dd5bbd8a7991578fc0f6271b61ff1f75da0ee3b460a5b6f3c65b74a15",
          x86_64_linux: "aeb25d3818d7fb321d660f5633d5bcc7ce0d4b9cdb3da19c7f95f3ccf262d205"
 
-  url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_#{version}_#{os}_#{arch}.tar.gz",
-      verified: "s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/"
+  url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_#{version}_#{os}_#{arch}.tar.gz"
   name "Confluent CLI"
   desc "Enables developers to manage Confluent Cloud or Confluent Platform"
   homepage "https://docs.confluent.io/confluent-cli/current/overview.html"

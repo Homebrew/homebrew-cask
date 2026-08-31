@@ -2,8 +2,7 @@ cask "banktivity" do
   version "10.0.6,427"
   sha256 "e78c3080cbbf32b216e013e41e2cedb4f1db16c160cc6c0c10159266b78a67c6"
 
-  url "https://www.iggsoft.com/banktivity/Banktivity#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "iggsoft.com/banktivity/"
+  url "https://www.iggsoft.com/banktivity/Banktivity#{version.csv.first}-#{version.csv.second}.dmg"
   name "Banktivity"
   desc "App to manage bank accounts in one place"
   homepage "https://www.iggsoftware.com/banktivity/"

@@ -2,8 +2,7 @@ cask "utm@beta" do
   version "5.0.4"
   sha256 "6a3fa4a29b7b397612d007ee22520c8a281fbf57a1e8f9d3c3523664c27ed9e0"
 
-  url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
-      verified: "github.com/utmapp/UTM/"
+  url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg"
   name "UTM"
   desc "Virtual machines UI using QEMU"
   homepage "https://mac.getutm.app/"

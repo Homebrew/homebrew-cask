@@ -5,8 +5,7 @@ cask "ossia-score" do
   sha256 arm:   "48a2e953bb175f0524f4466572c3a27beb88180dc19c44d16bf3ea8913976e95",
          intel: "87d02b89412a1d74059aaba546978f7f4d85d57e06844cdcb89b7b1c02ef7ef4"
 
-  url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg",
-      verified: "github.com/ossia/score/"
+  url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg"
   name "ossia score"
   desc "Interactive sequencer for intermedia art"
   homepage "https://ossia.io/"

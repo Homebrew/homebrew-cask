@@ -2,8 +2,7 @@ cask "fixkey" do
   version "2.9.3"
   sha256 "571e6cc6fe1d6f95e41bc68d5aaad5d6b1ecc943ec8efd43062646d7314ff520"
 
-  url "https://fixkey.download/fixkey%20#{version}.dmg",
-      verified: "fixkey.download/"
+  url "https://fixkey.download/fixkey%20#{version}.dmg"
   name "fixkey"
   desc "Keyboard-focused AI copilot for writing"
   homepage "https://fixkey.ai/"

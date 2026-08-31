@@ -30,8 +30,7 @@ cask "crosspaste" do
               target: "CrossPaste.AppImage"
   end
 
-  url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-#{url_end}",
-      verified: "github.com/CrossPaste/crosspaste-desktop/"
+  url "https://github.com/CrossPaste/crosspaste-desktop/releases/download/#{version}/crosspaste-#{version.major_minor_patch}-#{version.split(".").last}-#{url_end}"
   name "CrossPaste"
   desc "Universal Pasteboard Across Devices"
   homepage "https://crosspaste.com/en/"

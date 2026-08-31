@@ -34,8 +34,7 @@ cask "bitwarden" do
     app_image "Bitwarden-#{version}-x86_64.AppImage", target: "Bitwarden.AppImage"
   end
 
-  url "https://github.com/bitwarden/clients/releases/download/desktop-v#{version}/Bitwarden-#{version}-#{url_end}",
-      verified: "github.com/bitwarden/clients/"
+  url "https://github.com/bitwarden/clients/releases/download/desktop-v#{version}/Bitwarden-#{version}-#{url_end}"
   name "Bitwarden"
   desc "Desktop password and login vault"
   homepage "https://bitwarden.com/"

@@ -2,8 +2,7 @@ cask "bettercmdtab@beta" do
   version "26.7,20260813144806"
   sha256 "d72cdffb691b8e2fbb892afaf4d016ceb9bbf4ee99d8b2272a952db9278be67b"
 
-  url "https://github.com/rokartur/BetterCmdTab/releases/download/#{version.csv.first}/BetterCmdTab-#{version.csv.first}-#{version.csv.second}.dmg",
-      verified: "github.com/rokartur/BetterCmdTab/"
+  url "https://github.com/rokartur/BetterCmdTab/releases/download/#{version.csv.first}/BetterCmdTab-#{version.csv.first}-#{version.csv.second}.dmg"
   name "BetterCmdTab"
   desc "Replacement for the built-in Cmd+Tab app switcher"
   homepage "https://bettercmdtab.app/"

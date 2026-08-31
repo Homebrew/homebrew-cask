@@ -12,8 +12,7 @@ cask "android-platform-tools" do
     depends_on arch: :x86_64
   end
 
-  url "https://dl.google.com/android/repository/platform-tools_r#{version}-#{os}.zip",
-      verified: "google.com/android/repository/"
+  url "https://dl.google.com/android/repository/platform-tools_r#{version}-#{os}.zip"
   name "Android SDK Platform-Tools"
   desc "Android SDK component"
   homepage "https://developer.android.com/tools/releases/platform-tools"

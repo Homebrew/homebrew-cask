@@ -5,8 +5,7 @@ cask "qutebrowser" do
   sha256 arm:   "98170241bf12a2fe1deabffc8120b70dc8e00e555bb712c38751c448f04954a3",
          intel: "c51d1e9461d7f6a1ff4559f9e709caeff95effa52d4186805368a525e2fd48c7"
 
-  url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}-#{arch}.dmg",
-      verified: "github.com/qutebrowser/qutebrowser/"
+  url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}-#{arch}.dmg"
   name "qutebrowser"
   desc "Keyboard-driven, vim-like browser based on PyQt5"
   homepage "https://www.qutebrowser.org/"

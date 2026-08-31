@@ -5,8 +5,7 @@ cask "hoppscotch" do
   sha256 arm:   "a1aba6712a80cf346ac0502b649d1ddb4170747e54209e98853d20bf06cb5f36",
          intel: "dc8bdb027a189c2c112258463564d02072f4dc5fd6c78b3b22d4f1424545984d"
 
-  url "https://github.com/hoppscotch/releases/releases/download/v#{version}/Hoppscotch_mac_#{arch}.dmg",
-      verified: "github.com/hoppscotch/releases/"
+  url "https://github.com/hoppscotch/releases/releases/download/v#{version}/Hoppscotch_mac_#{arch}.dmg"
   name "Hoppscotch"
   desc "Open source API development ecosystem"
   homepage "https://hoppscotch.com/"

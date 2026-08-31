@@ -2,8 +2,7 @@ cask "splashtop-business" do
   version "3.8.6.0"
   sha256 "580c25996ea6ad7a8592a8ca09fa5a1662359eb69c948dd27eb084eeefea6868"
 
-  url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STB/Splashtop_Business_Mac_INSTALLER_v#{version}.dmg",
-      verified: "d17kmd0va0f0mp.cloudfront.net/macclient/STB/"
+  url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STB/Splashtop_Business_Mac_INSTALLER_v#{version}.dmg"
   name "Splashtop Business"
   desc "Remote access software"
   homepage "https://www.splashtop.com/business"

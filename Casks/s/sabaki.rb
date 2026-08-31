@@ -5,8 +5,7 @@ cask "sabaki" do
   sha256 arm:   "b088788113a84748d75f63067efb99a98e95e0229dfb03d565295c70c524ed50",
          intel: "c44b9f253351e84d91b40cfd51257d12fc6772980791fbdf42e253f7f17ca992"
 
-  url "https://github.com/SabakiHQ/Sabaki/releases/download/v#{version}/sabaki-v#{version}-mac-#{arch}.dmg",
-      verified: "github.com/SabakiHQ/Sabaki/"
+  url "https://github.com/SabakiHQ/Sabaki/releases/download/v#{version}/sabaki-v#{version}-mac-#{arch}.dmg"
   name "Sabaki"
   desc "Go board and SGF editor"
   homepage "https://sabaki.yichuanshen.de/"

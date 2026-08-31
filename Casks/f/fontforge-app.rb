@@ -2,8 +2,7 @@ cask "fontforge-app" do
   version "2025-10-09"
   sha256 "ba9f883389188d822a36cd447e9a9940a2bf4c4254f49f9fa3aa622a69b73110"
 
-  url "https://github.com/fontforge/fontforge/releases/download/#{version.csv.first.no_hyphens}/FontForge-#{version.csv.first}-MacOS.app.dmg",
-      verified: "github.com/fontforge/fontforge/"
+  url "https://github.com/fontforge/fontforge/releases/download/#{version.csv.first.no_hyphens}/FontForge-#{version.csv.first}-MacOS.app.dmg"
   name "FontForge"
   desc "Font editor and converter for outline and bitmap fonts"
   homepage "https://fontforge.github.io/en-US/"

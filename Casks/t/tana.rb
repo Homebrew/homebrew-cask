@@ -2,8 +2,7 @@ cask "tana" do
   version "1.523.0"
   sha256 "0ca9deac0f7be593b4a22777a8786ffea82eddf79de628c1ba12967da167fe03"
 
-  url "https://github.com/tanainc/tana-desktop-releases/releases/download/v#{version}/Tana.Outliner-#{version}-universal.dmg",
-      verified: "github.com/tanainc/tana-desktop-releases/"
+  url "https://github.com/tanainc/tana-desktop-releases/releases/download/v#{version}/Tana.Outliner-#{version}-universal.dmg"
   name "Tana"
   desc "Knowledge management workspace with AI-powered outlining"
   homepage "https://tana.inc/"

@@ -2,8 +2,7 @@ cask "notchi" do
   version "1.2.4"
   sha256 "4887bc199174f0962dcb917adfb942bc4b80b2259af2535fa116ca529501f7d8"
 
-  url "https://github.com/sk-ruban/notchi/releases/download/v#{version}/Notchi-#{version}.dmg",
-      verified: "github.com/sk-ruban/notchi/"
+  url "https://github.com/sk-ruban/notchi/releases/download/v#{version}/Notchi-#{version}.dmg"
   name "Notchi"
   desc "Notch companion for Claude Code"
   homepage "https://notchi.app/"

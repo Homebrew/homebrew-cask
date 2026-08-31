@@ -2,8 +2,7 @@ cask "font-zen-antique" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/zenantique/ZenAntique-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/zenantique/ZenAntique-Regular.ttf"
   name "Zen Antique"
   homepage "https://fonts.google.com/specimen/Zen+Antique"
 

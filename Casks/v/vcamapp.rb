@@ -2,8 +2,7 @@ cask "vcamapp" do
   version "0.15.1"
   sha256 "ca734bf53df0e2dca99acefacf17ae23efc5b4e27be5bccd516df58a870222c3"
 
-  url "https://github.com/vcamapp/app/releases/download/#{version}/VCam.#{version}.dmg",
-      verified: "github.com/vcamapp/app/"
+  url "https://github.com/vcamapp/app/releases/download/#{version}/VCam.#{version}.dmg"
   name "VCam"
   desc "Face-tracking virtual avatar app"
   homepage "https://vcamapp.com/en"

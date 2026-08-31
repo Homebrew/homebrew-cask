@@ -5,8 +5,7 @@ cask "gitkraken-on-premise-serverless" do
   sha256 arm:   "4a3d7bb805568d14ad39939a728e06666f0f12497aa440157b6d77977e088886",
          intel: "7be3fa8af5c1284fbcbaac38c3ebe9a64bcb07b56e36172547488ae08b14aa82"
 
-  url "https://api.gitkraken.dev/releases/standalone/production/darwin/#{arch}/#{version}/GitKraken-v#{version}.zip",
-      verified: "api.gitkraken.dev/releases/standalone/production/"
+  url "https://api.gitkraken.dev/releases/standalone/production/darwin/#{arch}/#{version}/GitKraken-v#{version}.zip"
   name "GitKraken Serverless"
   desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/git-client/on-premise"

@@ -6,8 +6,7 @@ cask "gitkraken" do
   sha256 arm:   "c7aec6ea8a5469d8f7d541866f8357aa22c4a813580ea20d085663e8840f8b1b",
          intel: "c65be15b4875ddd616b4579893a34c7a7bd3162a7a98f41f78e24ed1f6a1e008"
 
-  url "https://api.gitkraken.dev/releases/production/darwin/#{arch}/#{version}/GitKraken-v#{version}.zip",
-      verified: "api.gitkraken.dev/releases/production/"
+  url "https://api.gitkraken.dev/releases/production/darwin/#{arch}/#{version}/GitKraken-v#{version}.zip"
   name "GitKraken"
   desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/"

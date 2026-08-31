@@ -2,8 +2,7 @@ cask "kindle-previewer" do
   version "3.106.0"
   sha256 :no_check
 
-  url "https://d2bzeorukaqrvt.cloudfront.net/KindlePreviewerInstaller.pkg",
-      verified: "d2bzeorukaqrvt.cloudfront.net/"
+  url "https://d2bzeorukaqrvt.cloudfront.net/KindlePreviewerInstaller.pkg"
   name "Kindle Previewer"
   desc "Preview and audit Kindle eBooks"
   homepage "https://kdp.amazon.com/en_US/help/topic/G202131170"

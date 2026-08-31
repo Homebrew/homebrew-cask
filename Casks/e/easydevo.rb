@@ -2,8 +2,7 @@ cask "easydevo" do
   version "0.3.4"
   sha256 "3795f382bcb765a11b83ddb66c3f860471f23518f26a85c08ed08426a7711b79"
 
-  url "https://github.com/boring-design/EasyDevo-Distro/releases/download/v#{version}/EasyDevo-Mac-#{version}-Installer.dmg",
-      verified: "github.com/boring-design/EasyDevo-Distro/"
+  url "https://github.com/boring-design/EasyDevo-Distro/releases/download/v#{version}/EasyDevo-Mac-#{version}-Installer.dmg"
   name "EasyDevo"
   desc "Elegant tool built for coding"
   homepage "https://easydevo.boringboring.design/"

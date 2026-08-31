@@ -5,8 +5,7 @@ cask "wpsoffice-cn" do
   sha256 arm:   "324aa5dc8da0a1a16004750765b9f396882821c030bce881b12c60eaeb818eaa",
          intel: "9c5777f567a474a579eeafdd7af059c68f1b17f77c19b018301ccce3bc5bd657"
 
-  url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version}/WPS_Office_#{version}(#{version.patch})_#{arch}.dmg",
-      verified: "package.mac.wpscdn.cn/mac_wps_pkg/"
+  url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version}/WPS_Office_#{version}(#{version.patch})_#{arch}.dmg"
   name "WPS Office"
   desc "All-in-one office service platform in Chinese"
   homepage "https://mac.wps.cn/"

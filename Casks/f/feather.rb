@@ -20,8 +20,7 @@ cask "feather" do
     app_image "feather-#{version}#{linux_arch}.AppImage", target: "Feather.AppImage"
   end
 
-  url "https://github.com/feather-wallet/feather/releases/download/#{version}/feather-#{version}#{url_end}",
-      verified: "github.com/feather-wallet/feather/"
+  url "https://github.com/feather-wallet/feather/releases/download/#{version}/feather-#{version}#{url_end}"
   name "Feather"
   desc "Monero desktop wallet"
   homepage "https://featherwallet.org/"

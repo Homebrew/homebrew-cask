@@ -5,8 +5,7 @@ cask "jet-pilot" do
   sha256 arm:   "1c02e47d3ccade9abfa7851a53c7f4a1c279bb190144e5a9d1630c9244224530",
          intel: "a12d15baddf6000d6f3e70817598cca219ce2ac31fc44dcbb3422229b27645ef"
 
-  url "https://github.com/unxsist/jet-pilot/releases/download/v#{version}/JET.Pilot_#{version}_#{arch}.dmg",
-      verified: "github.com/unxsist/jet-pilot/"
+  url "https://github.com/unxsist/jet-pilot/releases/download/v#{version}/JET.Pilot_#{version}_#{arch}.dmg"
   name "JET Pilot"
   desc "Kubernetes desktop client"
   homepage "https://www.jet-pilot.app/"

@@ -2,8 +2,7 @@ cask "kindle-comic-creator" do
   version "1.160"
   sha256 :no_check
 
-  url "https://kc2.s3.amazonaws.com/KindleComicCreatorInstall.dmg",
-      verified: "kc2.s3.amazonaws.com/"
+  url "https://kc2.s3.amazonaws.com/KindleComicCreatorInstall.dmg"
   name "Kindle Comic Creator"
   desc "Turns comics, graphic novels and manga into Kindle books"
   homepage "https://www.amazon.com/b?node=23496309011"

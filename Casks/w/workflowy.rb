@@ -2,8 +2,7 @@ cask "workflowy" do
   version "4.3.2608261810"
   sha256 "20fd487cb73c18323f9f3e3474552703e07b77d75e2f97b6c7dc13cbf96b51a8"
 
-  url "https://github.com/workflowy/desktop/releases/download/v#{version}/WorkFlowy.zip",
-      verified: "github.com/workflowy/desktop/"
+  url "https://github.com/workflowy/desktop/releases/download/v#{version}/WorkFlowy.zip"
   name "WorkFlowy"
   desc "Notetaking tool"
   homepage "https://workflowy.com/downloads/mac/"

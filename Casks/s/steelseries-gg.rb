@@ -2,8 +2,7 @@ cask "steelseries-gg" do
   version "108.3.0"
   sha256 "80c2eec20da51a6144bb18c70cf511ba986941ab0ebd224151ec54dc5e6b4b41"
 
-  url "https://engine.steelseriescdn.com/SteelSeriesGG#{version}.pkg",
-      verified: "engine.steelseriescdn.com/"
+  url "https://engine.steelseriescdn.com/SteelSeriesGG#{version}.pkg"
   name "SteelSeries GG #{version.major}"
   desc "Settings for SteelSeries peripherals and accessories"
   homepage "https://steelseries.com/gg"

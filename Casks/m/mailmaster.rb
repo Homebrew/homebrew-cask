@@ -3,7 +3,6 @@ cask "mailmaster" do
   sha256 "59bcf8e773f3b42135c19523b7ce8c8a1d93ed7c0a59bb6c778d10df7ed1e64a"
 
   url "https://res.126.net/dl/client/macmail/dashi/mail#{version.major}.dmg",
-      verified:   "res.126.net/dl/client/macmail/dashi/",
       user_agent: :fake
   name "NetEase Mail Master"
   name "网易邮箱大师"

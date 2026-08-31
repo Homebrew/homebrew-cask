@@ -3,8 +3,7 @@ cask "wiso-steuer-2026" do
   version "33.10.3640-RC1,33.10.3640"
   sha256 "ed06affa6bd105a711ab86096f28a2760df851c4d2fb02690e75feac7ee0bf19"
 
-  url "https://update.buhl-data.com/Updates/Steuer/2026/Mac/Files/#{version.csv.first}/SteuerMac2026-#{version.csv.second || version.csv.first.split("-").first}.dmg",
-      verified: "update.buhl-data.com/Updates/Steuer/"
+  url "https://update.buhl-data.com/Updates/Steuer/2026/Mac/Files/#{version.csv.first}/SteuerMac2026-#{version.csv.second || version.csv.first.split("-").first}.dmg"
   name "WISO Steuer 2026"
   desc "Tax declaration for the fiscal year 2025"
   homepage "https://www.buhl.de/download/wiso-steuer-2026/"

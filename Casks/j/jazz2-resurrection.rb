@@ -5,8 +5,7 @@ cask "jazz2-resurrection" do
   version "3.8.0"
   sha256 "5a051dab4260b1bd99d2a9285242a6b062c6b5f88dba773c98b4dd786a42bab7"
 
-  url "https://github.com/deathkiller/jazz2/releases/download/#{version}/Jazz2_#{version}_MacOS.zip",
-      verified: "github.com/deathkiller/jazz2/"
+  url "https://github.com/deathkiller/jazz2/releases/download/#{version}/Jazz2_#{version}_MacOS.zip"
   name "Jazz² Resurrection"
   desc "Open-source re-implementation of Jazz Jackrabbit 2 game engine"
   homepage "https://de4th.dev/jazz2/"

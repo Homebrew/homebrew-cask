@@ -2,8 +2,7 @@ cask "mycard" do
   version "3.0.87"
   sha256 "ed302498dd66e3f0d42e428991ed1f93f953f3a7b295c568eab116a0d83a2634"
 
-  url "https://cdn02.moecube.com:444/downloads/MyCard-#{version}.dmg",
-      verified: "cdn02.moecube.com:444/downloads/"
+  url "https://cdn02.moecube.com:444/downloads/MyCard-#{version}.dmg"
   name "MyCard"
   desc "Yu-Gi-Oh! Complete Card Simulator"
   homepage "https://mycard.moe/"

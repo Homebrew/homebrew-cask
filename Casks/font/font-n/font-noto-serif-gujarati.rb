@@ -2,8 +2,7 @@ cask "font-noto-serif-gujarati" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/notoserifgujarati/NotoSerifGujarati%5Bwght%5D.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/notoserifgujarati/NotoSerifGujarati%5Bwght%5D.ttf"
   name "Noto Serif Gujarati"
   homepage "https://fonts.google.com/specimen/Noto+Serif+Gujarati"
 

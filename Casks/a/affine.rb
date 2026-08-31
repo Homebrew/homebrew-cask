@@ -28,8 +28,7 @@ cask "affine" do
     app_image "affine-#{version}-stable-linux-#{arch}.appimage", target: "AFFiNE.AppImage"
   end
 
-  url "https://github.com/toeverything/AFFiNE/releases/download/v#{version}/affine-#{version}-stable-#{os}-#{arch}#{url_end}",
-      verified: "github.com/toeverything/AFFiNE/"
+  url "https://github.com/toeverything/AFFiNE/releases/download/v#{version}/affine-#{version}-stable-#{os}-#{arch}#{url_end}"
   name "AFFiNE"
   desc "Note editor and whiteboard"
   homepage "https://affine.pro/"

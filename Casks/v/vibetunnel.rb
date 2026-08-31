@@ -2,8 +2,7 @@ cask "vibetunnel" do
   version "1.0.0-beta.18"
   sha256 "3e42340e28c908bdc7e8ba20ee4e7f6ab3c32885832bf947e6e0935f9017b8cc"
 
-  url "https://github.com/amantus-ai/vibetunnel/releases/download/v#{version}/VibeTunnel-#{version}.dmg",
-      verified: "github.com/amantus-ai/vibetunnel/"
+  url "https://github.com/amantus-ai/vibetunnel/releases/download/v#{version}/VibeTunnel-#{version}.dmg"
   name "VibeTunnel"
   desc "Turn any browser into your terminal"
   homepage "https://vibetunnel.sh/"

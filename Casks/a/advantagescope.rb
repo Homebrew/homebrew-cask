@@ -24,8 +24,7 @@ cask "advantagescope" do
     app_image "advantagescope-linux-#{arch}-v#{version}.AppImage", target: "AdvantageScope.AppImage"
   end
 
-  url "https://github.com/Mechanical-Advantage/AdvantageScope/releases/download/v#{version}/advantagescope-#{os}-#{arch}-v#{version}.#{url_end}",
-      verified: "github.com/Mechanical-Advantage/AdvantageScope/"
+  url "https://github.com/Mechanical-Advantage/AdvantageScope/releases/download/v#{version}/advantagescope-#{os}-#{arch}-v#{version}.#{url_end}"
   name "AdvantageScope"
   desc "FRC log analysis tool"
   homepage "https://docs.advantagescope.org/"

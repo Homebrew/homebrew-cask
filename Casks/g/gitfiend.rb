@@ -5,8 +5,7 @@ cask "gitfiend" do
   sha256 arm:   "f23c033b28516c6160566439d3217bb8d350dcf2441e29ac629219c6b42a54c5",
          intel: "bff456d1b422c1a40e61fdb8555736740974bee8fc37c17dd693f70bab3872e8"
 
-  url "https://github.com/GitFiend/Support/releases/download/v#{version}/GitFiend-#{version}#{arch}.dmg",
-      verified: "github.com/GitFiend/Support/"
+  url "https://github.com/GitFiend/Support/releases/download/v#{version}/GitFiend-#{version}#{arch}.dmg"
   name "GitFiend"
   desc "Git client"
   homepage "https://gitfiend.com/"

@@ -5,8 +5,7 @@ cask "satyrn" do
   sha256 arm:   "2d80f992f0f5f2673cf1b9f8ce351a69170877483857e151b7c24d41608cae25",
          intel: "f60ae84e56e1d8ffbd19c5f78ecd38b8da2caebe747dfa7389bae44f7e308118"
 
-  url "https://satyrn-updates.s3.amazonaws.com/satyrn-#{version}-#{arch}.dmg",
-      verified: "satyrn-updates.s3.amazonaws.com/"
+  url "https://satyrn-updates.s3.amazonaws.com/satyrn-#{version}-#{arch}.dmg"
   name "Satyrn"
   desc "Jupyter client"
   homepage "https://satyrn.app/"

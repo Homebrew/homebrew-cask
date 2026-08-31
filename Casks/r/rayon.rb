@@ -5,8 +5,7 @@ cask "rayon" do
   sha256 arm:   "bede59483e7dc5c3b51d232b6286a9df37ac8dcef6fd13625ae7604c9f9d6802",
          intel: "c30c659247cfd9825dd8dcb617d27e39008ad45d061dc8569fafea4632f3df2a"
 
-  url "https://rayon-electron.s3.eu-west-3.amazonaws.com/rayon-electron/rayon-electron/rayon-electron-#{version}-#{arch}.dmg",
-      verified: "rayon-electron.s3.eu-west-3.amazonaws.com/"
+  url "https://rayon-electron.s3.eu-west-3.amazonaws.com/rayon-electron/rayon-electron/rayon-electron-#{version}-#{arch}.dmg"
   name "Rayon"
   desc "AI-powered drawing for interior designers and architects"
   homepage "https://www.rayon.design/download"

@@ -5,8 +5,7 @@ cask "itch" do
   sha256 arm:   "1c1276060458c039379bfb72242366b8939064ad2362377610ad65da59ea69bd",
          intel: "7f138a32814c02325f6aabc8ca9b0b05ae311d188c6e5c655edbecd93dca5364"
 
-  url "https://github.com/itchio/itch/releases/download/v#{version}/itch-v#{version}-darwin-#{arch}.tar.gz",
-      verified: "github.com/itchio/itch/"
+  url "https://github.com/itchio/itch/releases/download/v#{version}/itch-v#{version}-darwin-#{arch}.tar.gz"
   name "itch"
   desc "Game client for itch.io"
   homepage "https://itch.io/app"

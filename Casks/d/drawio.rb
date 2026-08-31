@@ -37,8 +37,7 @@ cask "drawio" do
     app_image "drawio-#{arch}-#{version}.AppImage", target: "drawio.AppImage"
   end
 
-  url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/#{os}-#{arch}-#{version}.#{url_end}",
-      verified: "github.com/jgraph/drawio-desktop/"
+  url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/#{os}-#{arch}-#{version}.#{url_end}"
   name "draw.io Desktop"
   desc "Online diagram software"
   homepage "https://www.diagrams.net/"

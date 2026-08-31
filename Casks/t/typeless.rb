@@ -6,8 +6,7 @@ cask "typeless" do
   sha256 arm:   "e70c6a105b191726358bd8d95fedb90f4531f4cc1b9239e9f0393f833f9b08dd",
          intel: "37f3af3dd8bff6d8edb9ec47cc772b9a939d81946a8f3cb8664b4cded00e3518"
 
-  url "https://typeless-static.com/desktop-release/Typeless-#{version}-#{arch}.dmg",
-      verified: "typeless-static.com/"
+  url "https://typeless-static.com/desktop-release/Typeless-#{version}-#{arch}.dmg"
   name "Typeless"
   desc "AI voice dictation that turns speech into polished text"
   homepage "https://typeless.com/"

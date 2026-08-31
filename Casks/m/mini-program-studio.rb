@@ -5,8 +5,7 @@ cask "mini-program-studio" do
   sha256 arm:   "a32b5764862541a671cc9b0695a7e37575f5ac21637a536c794aa987964d0171",
          intel: "160f3534b79883e445848c28c2c4a13da5d0fe7814a8a76db4025fb47cff2225"
 
-  url "https://alipay-miniapp-public.oss-cn-hangzhou.aliyuncs.com/mfupload/MiniProgramStudio-#{version}#{arch}.dmg",
-      verified: "alipay-miniapp-public.oss-cn-hangzhou.aliyuncs.com/mfupload/"
+  url "https://alipay-miniapp-public.oss-cn-hangzhou.aliyuncs.com/mfupload/MiniProgramStudio-#{version}#{arch}.dmg"
   name "Mini Program Studio"
   name "小程序开发者工具"
   desc "IDE for the development of Alipay applets"

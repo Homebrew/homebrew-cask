@@ -5,8 +5,7 @@ cask "bettershot" do
   sha256 arm:   "a20dc24687a6c976631acfded3c092e4735ec557b67a889e13d9e9f910029852",
          intel: "de3d4e01af5a991077275988eb301a04797a88136664147179b3ada77ef434d1"
 
-  url "https://github.com/KartikLabhshetwar/better-shot/releases/download/v#{version}/BetterShot-#{version}_#{arch}.dmg",
-      verified: "github.com/KartikLabhshetwar/better-shot/"
+  url "https://github.com/KartikLabhshetwar/better-shot/releases/download/v#{version}/BetterShot-#{version}_#{arch}.dmg"
   name "Better Shot"
   desc "Screen capturing and editing tool"
   homepage "https://bettershot.site/"

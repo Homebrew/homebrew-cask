@@ -2,8 +2,7 @@ cask "simplemind" do
   version "2.10.0,b3379"
   sha256 "7b2cb2bcfa6741d120e82b76edfd4846a99bd413e04df9cc274fc099d2ec91d1"
 
-  url "https://modelmakertools.com/simplemind/SM2Mac_G7Ynr4BfJYzhbHtCCTr/SimpleMindMacOS#{version.csv.first.no_dots}#{version.csv.second}.dmg",
-      verified: "modelmakertools.com/simplemind/"
+  url "https://modelmakertools.com/simplemind/SM2Mac_G7Ynr4BfJYzhbHtCCTr/SimpleMindMacOS#{version.csv.first.no_dots}#{version.csv.second}.dmg"
   name "SimpleMind"
   desc "Cross-platform mind mapping tool"
   homepage "https://simpleapps.eu/"

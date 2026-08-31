@@ -25,8 +25,7 @@ cask "blockstream" do
     app_image "Blockstream-#{arch}.AppImage", target: "Blockstream.AppImage"
   end
 
-  url "https://github.com/Blockstream/green_qt/releases/download/release_#{version}/Blockstream-#{arch}.#{url_end}",
-      verified: "github.com/Blockstream/green_qt/"
+  url "https://github.com/Blockstream/green_qt/releases/download/release_#{version}/Blockstream-#{arch}.#{url_end}"
   name "Blockstream Green"
   desc "Multi-platform Bitcoin and Liquid wallet"
   homepage "https://blockstream.com/green/"

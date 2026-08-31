@@ -2,8 +2,7 @@ cask "neofinder" do
   version "9.3"
   sha256 "561829258205ca3b52171283deac5ebadcd1793f08f88a8460a1302b7011f5a5"
 
-  url "https://www.wfs-apps.de/updates/neofinder-mac.#{version}.zip",
-      verified: "wfs-apps.de/"
+  url "https://www.wfs-apps.de/updates/neofinder-mac.#{version}.zip"
   name "NeoFinder"
   desc "Digital media asset manager"
   homepage "https://www.cdfinder.de/"

@@ -5,8 +5,7 @@ cask "hoppscotch-selfhost" do
   sha256 arm:   "defcfb9fa5a16f75999edf7b03af0babc4f3437cbe228850a0cc6db72bfb2500",
          intel: "e2832d6c21015f9422da20b2a6cc371af4f14e445620ef32b7939a3d71ccf9fb"
 
-  url "https://github.com/hoppscotch/releases/releases/download/v#{version}/Hoppscotch_SelfHost_mac_#{arch}.dmg",
-      verified: "github.com/hoppscotch/releases/"
+  url "https://github.com/hoppscotch/releases/releases/download/v#{version}/Hoppscotch_SelfHost_mac_#{arch}.dmg"
   name "Hoppscotch SelfHost"
   desc "Desktop client for SelfHost version of the Hoppscotch API development ecosystem"
   homepage "https://hoppscotch.com/"

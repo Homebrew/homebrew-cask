@@ -7,8 +7,7 @@ cask "clash-party" do
     sha256 arm:   "d0eaaea4956325f42aa77bbabf7d902d613aaccbef923f5cf9e0287401112963",
            intel: "2b80a2a7311e71e6d70661f3975a4b700eb021dd6ea9a702cbf798965bd8c500"
 
-    url "https://github.com/mihomo-party-org/clash-party/releases/download/v#{version}/clash-party-catalina-#{version}-#{arch}.pkg",
-        verified: "github.com/mihomo-party-org/clash-party/"
+    url "https://github.com/mihomo-party-org/clash-party/releases/download/v#{version}/clash-party-catalina-#{version}-#{arch}.pkg"
 
     pkg "clash-party-catalina-#{version}-#{arch}.pkg"
   end
@@ -16,8 +15,7 @@ cask "clash-party" do
     sha256 arm:   "438c65bd5cdd8e0fda1fb858bee4b1de4ee7c05f031047a6a597109734edf62b",
            intel: "3e7a54146f0a740828103a9cb4103788813b6b91a8bbf26135485d74fe4e1f42"
 
-    url "https://github.com/mihomo-party-org/clash-party/releases/download/v#{version}/clash-party-macos-#{version}-#{arch}.pkg",
-        verified: "github.com/mihomo-party-org/clash-party/"
+    url "https://github.com/mihomo-party-org/clash-party/releases/download/v#{version}/clash-party-macos-#{version}-#{arch}.pkg"
 
     pkg "clash-party-macos-#{version}-#{arch}.pkg"
   end

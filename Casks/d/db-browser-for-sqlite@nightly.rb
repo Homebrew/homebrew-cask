@@ -24,8 +24,7 @@ cask "db-browser-for-sqlite@nightly" do
               target: "DBBrowserForSQLiteNightly.AppImage"
   end
 
-  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-#{os}#{version}#{url_end}",
-      verified: "github.com/sqlitebrowser/sqlitebrowser/"
+  url "https://github.com/sqlitebrowser/sqlitebrowser/releases/download/nightly/DB.Browser.for.SQLite-#{os}#{version}#{url_end}"
   name "DB Browser for SQLite Nightly"
   desc "Database browser for SQLite"
   homepage "https://sqlitebrowser.org/"

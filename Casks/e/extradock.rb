@@ -2,8 +2,7 @@ cask "extradock" do
   version "4.3.8"
   sha256 "01645ecbb09b195f7fe08b24fbebc5a41158307ce4c5a13b24d962d8fb8aea14"
 
-  url "https://github.com/AppitStudio/extra-dock-updates/releases/download/v#{version}/extraDock.dmg",
-      verified: "github.com/AppitStudio/"
+  url "https://github.com/AppitStudio/extra-dock-updates/releases/download/v#{version}/extraDock.dmg"
   name "ExtraDock"
   desc "Add fully customizable extra docks"
   homepage "https://extradock.app/"

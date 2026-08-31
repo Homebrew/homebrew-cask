@@ -5,8 +5,7 @@ cask "kdenlive" do
   sha256 arm:   "ea82cd8b81789455c987d9fb0d47ab47fe9495a632bb2d495c31b27e19992802",
          intel: "7b420b7589d91ac89fc5023b42f40242938b9cc5db06f92e28c01ac982c3fc6b"
 
-  url "https://cdn.download.kde.org/stable/kdenlive/#{version.csv.first.major_minor}/macOS/kdenlive-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
-      verified: "cdn.download.kde.org/stable/kdenlive/"
+  url "https://cdn.download.kde.org/stable/kdenlive/#{version.csv.first.major_minor}/macOS/kdenlive-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg"
   name "Kdenlive"
   desc "Free and Open Source Video Editor"
   homepage "https://kdenlive.org/"

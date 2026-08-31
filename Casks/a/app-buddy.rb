@@ -2,8 +2,7 @@ cask "app-buddy" do
   version "1.3.0"
   sha256 "1dacbc9ed625e80c16db054cc98ac6023f3ad3ed302acbab46f7dda694310289"
 
-  url "https://github.com/sindresorhus/app-buddy-meta/releases/download/v#{version}/App.Buddy.zip",
-      verified: "github.com/sindresorhus/"
+  url "https://github.com/sindresorhus/app-buddy-meta/releases/download/v#{version}/App.Buddy.zip"
   name "App Buddy"
   desc "Helper for Sindre Sorhus's apps"
   homepage "https://sindresorhus.com/app-buddy"

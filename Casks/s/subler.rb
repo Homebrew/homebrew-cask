@@ -2,8 +2,7 @@ cask "subler" do
   version "1.9.2"
   sha256 "72846b93d1b890364716b1da75545915810f2f184bd99d0e77d41d41102388e9"
 
-  url "https://github.com/SublerApp/Subler/releases/download/#{version}/Subler-#{version}.zip",
-      verified: "github.com/SublerApp/Subler/"
+  url "https://github.com/SublerApp/Subler/releases/download/#{version}/Subler-#{version}.zip"
   name "Subler"
   desc "Mux and tag mp4 files"
   homepage "https://subler.org/"

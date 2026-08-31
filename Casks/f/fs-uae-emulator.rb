@@ -5,8 +5,7 @@ cask "fs-uae-emulator" do
   sha256 arm:   "ef8115986c0ddb987dc024f159da59f788b96d20f7b77ca97b465a9f4492eff8",
          intel: "f291c2c93f575115c4ffbc73be3144bbec88e39e590a1932e443e67eb735128f"
 
-  url "https://github.com/FrodeSolheim/fs-uae/releases/download/v#{version}/FS-UAE_#{version}_macOS_#{arch}.dmg",
-      verified: "github.com/FrodeSolheim/fs-uae/"
+  url "https://github.com/FrodeSolheim/fs-uae/releases/download/v#{version}/FS-UAE_#{version}_macOS_#{arch}.dmg"
   name "FS-UAE"
   desc "Amiga emulator"
   homepage "https://fs-uae.net/"

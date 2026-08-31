@@ -25,8 +25,7 @@ cask "brickstore" do
     app_image "Linux-AppImage-BrickStore-#{version}-x86_64.AppImage", target: "BrickStore.AppImage"
   end
 
-  url "https://github.com/rgriebl/brickstore/releases/download/v#{version}/#{os}-BrickStore-#{version}#{url_end}",
-      verified: "github.com/rgriebl/brickstore/"
+  url "https://github.com/rgriebl/brickstore/releases/download/v#{version}/#{os}-BrickStore-#{version}#{url_end}"
   name "BrickStore"
   desc "BrickLink offline management tool"
   homepage "https://www.brickstore.dev/"

@@ -24,8 +24,7 @@ cask "cloudpouch" do
     app_image "CloudPouch-#{version}.AppImage", target: "CloudPouch.AppImage"
   end
 
-  url "https://github.com/CloudPouch/CloudPouch.dev/releases/download/v#{version}/CloudPouch-#{version}#{url_end}",
-      verified: "github.com/CloudPouch/CloudPouch.dev/"
+  url "https://github.com/CloudPouch/CloudPouch.dev/releases/download/v#{version}/CloudPouch-#{version}#{url_end}"
   name "CloudPouch"
   desc "AWS cloud FinOps tool"
   homepage "https://cloudpouch.dev/"

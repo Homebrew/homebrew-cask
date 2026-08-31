@@ -34,8 +34,7 @@ cask "cate" do
     app_image "Cate-#{version}.AppImage", target: "Cate.AppImage"
   end
 
-  url "https://github.com/0-AI-UG/cate/releases/download/v#{version}/Cate-#{version}#{url_end}",
-      verified: "github.com/0-AI-UG/cate/"
+  url "https://github.com/0-AI-UG/cate/releases/download/v#{version}/Cate-#{version}#{url_end}"
   name "Cate"
   desc "Infinite zoomable canvas with editor, terminal, and browser panels"
   homepage "https://cate.cero-ai.com/"

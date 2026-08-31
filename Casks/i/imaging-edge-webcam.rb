@@ -2,8 +2,7 @@ cask "imaging-edge-webcam" do
   version "120_2403a,xB4KucKqdT"
   sha256 "70f4558ad5ec37127ed58b755bde1acb268edf88b5eba61a17388641215da9fd"
 
-  url "https://di.update.sony.net/NEX/#{version.csv.second}/IEW#{version.csv.first}.dmg",
-      verified: "di.update.sony.net/NEX/"
+  url "https://di.update.sony.net/NEX/#{version.csv.second}/IEW#{version.csv.first}.dmg"
   name "Sony Imaging Edge Webcam"
   desc "Use your Sony camera as a high-quality webcam"
   homepage "https://support.d-imaging.sony.co.jp/app/webcam/en/"

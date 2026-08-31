@@ -10,7 +10,6 @@ cask "adrive" do
   end
 
   url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-#{version}#{arch}.dmg",
-      verified:   "cdn.aliyundrive.net/",
       user_agent: :fake
   name "Aliyundrive"
   name "阿里云盘"

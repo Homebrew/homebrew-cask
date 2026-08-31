@@ -2,8 +2,7 @@ cask "pika@beta" do
   version "2.0.0-beta4"
   sha256 "917d9dd79b77050168cc56bef07ac054575e7107c8c21a575b1cda05ede358d3"
 
-  url "https://github.com/superhighfives/pika/releases/download/#{version}/Pika-#{version}.dmg",
-      verified: "github.com/superhighfives/pika/"
+  url "https://github.com/superhighfives/pika/releases/download/#{version}/Pika-#{version}.dmg"
   name "Pika"
   desc "Colour picker for colours onscreen"
   homepage "https://superhighfives.com/pika"

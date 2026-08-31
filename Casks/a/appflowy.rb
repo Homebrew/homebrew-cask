@@ -27,8 +27,7 @@ cask "appflowy" do
     app_image "AppFlowy-#{version}-linux-#{arch}.AppImage", target: "AppFlowy.AppImage"
   end
 
-  url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/#{name_start}-#{version}-#{os}-#{arch}.#{url_end}",
-      verified: "github.com/AppFlowy-IO/AppFlowy/"
+  url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/#{name_start}-#{version}-#{os}-#{arch}.#{url_end}"
   name "AppFlowy"
   desc "Open-source project and knowledge management tool"
   homepage "https://www.appflowy.io/"

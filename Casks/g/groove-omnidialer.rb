@@ -2,8 +2,7 @@ cask "groove-omnidialer" do
   version "26.813.1056"
   sha256 "2c1ade537bb1090e27d3ee17c678fcffa78563742a87aa3b97a2c2c9ca66b213"
 
-  url "https://groove-dialer.s3-us-west-2.amazonaws.com/electron/Groove%20OmniDialer-#{version}-universal.dmg",
-      verified: "groove-dialer.s3-us-west-2.amazonaws.com/electron/"
+  url "https://groove-dialer.s3-us-west-2.amazonaws.com/electron/Groove%20OmniDialer-#{version}-universal.dmg"
   name "Groove OmniDialer"
   desc "Outbound sales dialer for making and managing calls"
   homepage "https://www.groove.co/"

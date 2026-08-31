@@ -2,8 +2,7 @@ cask "kontur-talk" do
   version "3.7.0"
   sha256 "abf9dbfefa9bea6af201f0a82f156537cf05dcd65d3ffd7849917720ecf65768"
 
-  url "https://st.ktalk.host/ktalk-app/mac/ktalk.#{version}-mac.dmg",
-      verified: "st.ktalk.host/"
+  url "https://st.ktalk.host/ktalk-app/mac/ktalk.#{version}-mac.dmg"
   name "Kontur Talk"
   name "Толк"
   desc "Video conferencing service"

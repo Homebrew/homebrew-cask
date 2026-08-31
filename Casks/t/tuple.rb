@@ -2,8 +2,7 @@ cask "tuple" do
   version "3.2.0,2026-08-12,9d2e82a561"
   sha256 "4167e08cae307e360d158dc1d2589535e762da84b2892762bfcadc0e8d99791d"
 
-  url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/tuple-#{version.tr(",", "-")}.zip",
-      verified: "d32ifkf9k9ezcg.cloudfront.net/"
+  url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/tuple-#{version.tr(",", "-")}.zip"
   name "Tuple"
   desc "Remote pair programming app"
   homepage "https://tuple.app/"

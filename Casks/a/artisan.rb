@@ -32,8 +32,7 @@ cask "artisan" do
     app_image "artisan-linux-#{version}.AppImage", target: "Artisan.AppImage"
   end
 
-  url "https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-#{os_arch}-#{version}.#{url_end}",
-      verified: "github.com/artisan-roaster-scope/artisan/"
+  url "https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-#{os_arch}-#{version}.#{url_end}"
   name "Artisan"
   desc "Visual scope for coffee roasters"
   homepage "https://artisan-scope.org/"

@@ -2,8 +2,7 @@ cask "nodeclipse" do
   version "2015.7,20150706"
   sha256 "674991d7c22ea05975a76800e6e9fe9231064a09a2a2412e6ec0448676bfa2e8"
 
-  url "https://downloads.sourceforge.net/nodeclipse/Enide-#{version.major}/#{version.minor}/Enide-#{version.major}-#{version.minor}-macosx-x64-#{version.csv.second}.zip",
-      verified: "sourceforge.net/nodeclipse/"
+  url "https://downloads.sourceforge.net/nodeclipse/Enide-#{version.major}/#{version.minor}/Enide-#{version.major}-#{version.minor}-macosx-x64-#{version.csv.second}.zip"
   name "Nodeclipse"
   desc "Node.js tooling with Eclipse"
   homepage "https://nodeclipse.github.io/"

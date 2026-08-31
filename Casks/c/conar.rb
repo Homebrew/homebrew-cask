@@ -5,8 +5,7 @@ cask "conar" do
   sha256 arm:   "1c024b63b492d8866b3c060a3a0be0d77e5e364b2e79cd033af9a99fe72cd863",
          intel: "1330a223ddb308073a91bc84fbf8e7dde95aa8cfcc2bb21412d6556c0f4f0a62"
 
-  url "https://download.todesktop.com/25112796k32u7/Conar%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
-      verified: "download.todesktop.com/25112796k32u7/"
+  url "https://download.todesktop.com/25112796k32u7/Conar%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip"
   name "Conar"
   desc "AI-powered database and data management tool"
   homepage "https://conar.app/"

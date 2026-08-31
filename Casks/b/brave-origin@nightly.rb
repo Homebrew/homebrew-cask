@@ -12,8 +12,7 @@ cask "brave-origin@nightly" do
     version "1.96.29.0"
   end
 
-  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/nightly#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Nightly-#{arch}.dmg",
-      verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Origin/"
+  url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Origin/nightly#{folder_arch}/#{version.major_minor_patch.sub(".", "")}/Brave-Origin-Nightly-#{arch}.dmg"
   name "Brave Origin Nightly"
   desc "Privacy-focused web browser"
   homepage "https://brave.com/origin/#nightly"

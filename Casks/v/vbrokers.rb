@@ -2,8 +2,7 @@ cask "vbrokers" do
   version "2.8.708,1110127,1785737071"
   sha256 "fc2b6b7254063905a50ce057047830272cd95ac320736156a56b37b50c6b5731"
 
-  url "https://r.hstong.com/public/app/Mac/HSTONG_Mac_#{version.csv.second}_#{version.csv.first}_#{version.csv.third}.dmg",
-      verified: "r.hstong.com/"
+  url "https://r.hstong.com/public/app/Mac/HSTONG_Mac_#{version.csv.second}_#{version.csv.first}_#{version.csv.third}.dmg"
   name "VBrokers"
   desc "Trading platform"
   homepage "https://www.vbkr.com/"

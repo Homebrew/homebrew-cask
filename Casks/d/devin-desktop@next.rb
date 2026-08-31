@@ -5,8 +5,7 @@ cask "devin-desktop@next" do
   sha256 arm:   "f6bc7622b8d00b804543f87883d14ebb802a796c34758869edb844f78f31ac81",
          intel: "303730fb48e8964e8acb9565bdd433b0c3ae74c57fee9cd4621e13c67a3299f6"
 
-  url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/next/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg",
-      verified: "windsurf-stable.codeiumdata.com/"
+  url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/next/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg"
   name "Devin Desktop Next (Beta)"
   desc "Agentic IDE with AI agent command center"
   homepage "https://codeium.com/windsurf/download-next"

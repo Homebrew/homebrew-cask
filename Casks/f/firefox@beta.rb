@@ -90,8 +90,7 @@ cask "firefox@beta" do
     "zh-CN"
   end
 
-  url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg",
-      verified: "download-installer.cdn.mozilla.net/pub/firefox/releases/"
+  url "https://download-installer.cdn.mozilla.net/pub/firefox/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg"
   name "Mozilla Firefox Beta"
   desc "Web browser"
   homepage "https://www.mozilla.org/firefox/channel/desktop/#beta"

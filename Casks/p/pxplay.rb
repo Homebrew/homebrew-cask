@@ -5,8 +5,7 @@ cask "pxplay" do
   sha256 arm:   "eecdf35a9508fe07e6994dc253cead5b7734f26f5e91408d6bbf3d48a48e88da",
          intel: "781c139f4b4f2ba5af4483ccc35a0b20114334333010eb3cf6a6e4bb058794ce"
 
-  url "https://github.com/streamingdv/PSPlay-Application-Hosting/releases/download/v#{version.csv.first}_v#{version.csv.second}/PXPlay_#{version.csv.first}_macOSX_#{arch}.dmg",
-      verified: "github.com/streamingdv/PSPlay-Application-Hosting/"
+  url "https://github.com/streamingdv/PSPlay-Application-Hosting/releases/download/v#{version.csv.first}_v#{version.csv.second}/PXPlay_#{version.csv.first}_macOSX_#{arch}.dmg"
   name "PXPlay"
   desc "Third-party Remote Play client for PlayStation consoles"
   homepage "https://streamingdv.github.io/pxplay/"

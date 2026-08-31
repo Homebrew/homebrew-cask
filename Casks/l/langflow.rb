@@ -5,8 +5,7 @@ cask "langflow" do
   sha256 arm:   "a93ded4ffcc45af9b472efc01a2f863547fb25c802a50e1824248f5fdb3f8897",
          intel: "c8b812b7071cbd100f920bcca6f68b7709c18902d2ecbffd023f9cc51381cb4e"
 
-  url "https://github.com/langflow-ai/langflow/releases/download/#{version.csv.second || version}/Langflow_#{version.csv.first}_#{arch}.dmg",
-      verified: "github.com/langflow-ai/langflow/"
+  url "https://github.com/langflow-ai/langflow/releases/download/#{version.csv.second || version}/Langflow_#{version.csv.first}_#{arch}.dmg"
   name "Langflow Desktop"
   desc "Low-code AI-workflow building tool"
   homepage "https://www.langflow.org/desktop"

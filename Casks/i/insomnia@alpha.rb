@@ -2,8 +2,7 @@ cask "insomnia@alpha" do
   version "13.2.0"
   sha256 "f0b4535e55af44c212b6e601ae5919d0fa8cdbd82c3b52c10e85a29f4f621806"
 
-  url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg",
-      verified: "github.com/Kong/insomnia/"
+  url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg"
   name "Insomnia"
   desc "HTTP and GraphQL Client"
   homepage "https://insomnia.rest/"

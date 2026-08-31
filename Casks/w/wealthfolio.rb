@@ -5,8 +5,7 @@ cask "wealthfolio" do
   sha256 arm:   "66a247c9e0ff234c0a7d7a38cfefc07aa86f2c2e4ca1f1c1bc331b6d01c79031",
          intel: "275c58952d13d521fb43bd60f59f79db31c82c706b136b79d7abedcb7d1fa916"
 
-  url "https://github.com/afadil/wealthfolio/releases/download/v#{version}/Wealthfolio_#{version}_#{arch}.dmg",
-      verified: "github.com/afadil/wealthfolio/"
+  url "https://github.com/afadil/wealthfolio/releases/download/v#{version}/Wealthfolio_#{version}_#{arch}.dmg"
   name "Wealthfolio"
   desc "Investment portfolio tracker"
   homepage "https://wealthfolio.app/"

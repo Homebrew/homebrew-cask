@@ -5,8 +5,7 @@ cask "notesnook" do
   sha256 arm:   "69916269603cb6bd4dbae95efea293af5854b90ffd813b36009aaba230057834",
          intel: "f1154eae151c1afc1d6edd99a6c9c3d82db46784c1aa8ebb7d337039c28a5871"
 
-  url "https://github.com/streetwriters/notesnook/releases/download/v#{version}/notesnook_mac_#{arch}.dmg",
-      verified: "github.com/streetwriters/notesnook/"
+  url "https://github.com/streetwriters/notesnook/releases/download/v#{version}/notesnook_mac_#{arch}.dmg"
   name "Notesnook"
   desc "Privacy-focused note taking app"
   homepage "https://notesnook.com/"

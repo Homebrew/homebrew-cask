@@ -2,8 +2,7 @@ cask "font-national-park" do
   version "1.005"
   sha256 :no_check
 
-  url "https://files.cargocollective.com/c1415345/NationalPark-All-Fonts.zip",
-      verified: "cargocollective.com/"
+  url "https://files.cargocollective.com/c1415345/NationalPark-All-Fonts.zip"
   name "National Park"
   homepage "https://nationalparktypeface.com/"
 

@@ -8,8 +8,7 @@ cask "duplicacy-cli" do
          arm64_linux:  "9c27d8ba149e67d0bc58406c6b3218661d870cb07e265aec31563540f8f20598",
          x86_64_linux: "548526d462fb38c23f2bf62ea3b1177b8ad11cc1499fa3dbe092a607d68d84f5"
 
-  url "https://github.com/gilbertchen/duplicacy/releases/download/v#{version}/duplicacy_#{os}_#{arch}_#{version}",
-      verified: "github.com/gilbertchen/duplicacy/"
+  url "https://github.com/gilbertchen/duplicacy/releases/download/v#{version}/duplicacy_#{os}_#{arch}_#{version}"
   name "Duplicacy Command Line Version"
   desc "Cloud backup tool"
   homepage "https://duplicacy.com/"

@@ -5,8 +5,7 @@ cask "devin-desktop" do
   sha256 arm:   "2d606a3cf77b0d7da96b68e22edd5a353731c6aec772f41e9724c83f74897a0e",
          intel: "d8dea3387c72e20c47d908a35c06354e68c55b06756fdb1895f75ca1b603458d"
 
-  url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/stable/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg",
-      verified: "windsurf-stable.codeiumdata.com/"
+  url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/stable/#{version.csv.second}/Devin-darwin-#{arch}-#{version.csv.first}.dmg"
   name "Devin Desktop"
   desc "Agentic IDE with AI agent command center"
   homepage "https://devin.ai/desktop"

@@ -6,8 +6,7 @@ cask "antigravity-ide" do
   sha256 arm:   "cad67d6d30a537fcb3bb9a6100330040ec6bcb686e38069f1ff16fe42306a33e",
          intel: "a6434e157a549d1553bd19f99a233fcb03f1d7f66eee30ea16683559dd112120"
 
-  url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity%20IDE.dmg",
-      verified: "edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/"
+  url "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/#{version.csv.first}-#{version.csv.second}/darwin-#{arch}/Antigravity%20IDE.dmg"
   name "Google Antigravity IDE"
   desc "AI Coding Agent IDE"
   homepage "https://antigravity.google/product/antigravity-ide"

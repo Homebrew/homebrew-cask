@@ -2,8 +2,7 @@ cask "pastebot@2" do
   version "2.4.8,24800"
   sha256 "3cd01fee94994cebce198ea81e48dce9b1aef86986836d17fc86f91fa9f047cc"
 
-  url "https://tapbots.net/pastebot#{version.major}/Pastebot.#{version.csv.second}.dmg",
-      verified: "tapbots.net/"
+  url "https://tapbots.net/pastebot#{version.major}/Pastebot.#{version.csv.second}.dmg"
   name "Pastebot"
   desc "Workflow application to improve productivity"
   homepage "https://tapbots.com/pastebot/"

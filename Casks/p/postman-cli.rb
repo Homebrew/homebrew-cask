@@ -5,8 +5,7 @@ cask "postman-cli" do
   sha256 arm:   "8ab0cace4302e76eb62168f1cd067a2259cdd63b5d607de6386c4350fa37909a",
          intel: "39cdd0b77650c2a857a86cd2bd5f0ef29d288746190153d13922bad77477b799"
 
-  url "https://dl-cli.pstmn.io/download/version/#{version}/#{arch}",
-      verified: "dl-cli.pstmn.io/download/"
+  url "https://dl-cli.pstmn.io/download/version/#{version}/#{arch}"
   name "Postman CLI"
   desc "CLI for command-line API management on Postman"
   homepage "https://www.postman.com/downloads/"

@@ -5,8 +5,7 @@ cask "emdash" do
   sha256 arm:   "09d841636e2a1d0e39be157be88c4659a0173c4a7db331fa916dc112838a64c4",
          intel: "835f4812253f39572907cea854a6be039c7712a4f9f8ca431178d441b7ddec96"
 
-  url "https://github.com/generalaction/emdash/releases/download/v#{version}/emdash-#{arch}.dmg",
-      verified: "github.com/generalaction/emdash/"
+  url "https://github.com/generalaction/emdash/releases/download/v#{version}/emdash-#{arch}.dmg"
   name "Emdash"
   desc "UI for running multiple coding agents in parallel"
   homepage "https://www.emdash.sh/"

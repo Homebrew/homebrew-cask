@@ -2,8 +2,7 @@ cask "font-bytesized" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/google/fonts/raw/main/ofl/bytesized/Bytesized-Regular.ttf",
-      verified: "github.com/google/fonts/"
+  url "https://github.com/google/fonts/raw/main/ofl/bytesized/Bytesized-Regular.ttf"
   name "Bytesized"
   homepage "https://fonts.google.com/specimen/Bytesized"
 

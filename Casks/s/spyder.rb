@@ -5,8 +5,7 @@ cask "spyder" do
   sha256 arm:   "2426f0e1c6119b3e2dbcbbeec62ab4cd16b068f3a21902adbafdd50a2820b200",
          intel: "50209a51ece4d3db3b85feddc7be928e77500e8751663b521b0675a0ccf12201"
 
-  url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder-macOS-#{arch}.pkg",
-      verified: "github.com/spyder-ide/spyder/"
+  url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder-macOS-#{arch}.pkg"
   name "Spyder"
   desc "Scientific Python IDE"
   homepage "https://www.spyder-ide.org/"

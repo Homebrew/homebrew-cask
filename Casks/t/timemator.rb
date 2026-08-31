@@ -2,8 +2,7 @@ cask "timemator" do
   version "3.2.2"
   sha256 "8450093db94e3ad856a820b2849a3c8f64abbf4d7427ae524a823462344a00c7"
 
-  url "https://timemator.s3.amazonaws.com/releases/Timemator_#{version}.dmg",
-      verified: "timemator.s3.amazonaws.com/"
+  url "https://timemator.s3.amazonaws.com/releases/Timemator_#{version}.dmg"
   name "Timemator"
   desc "Automatic time-tracking application"
   homepage "https://timemator.com/"

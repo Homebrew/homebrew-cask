@@ -2,8 +2,7 @@ cask "exelearning" do
   version "4.0.3"
   sha256 "2418ccf91da5e746113818b789ccfe2170c6bcb4457b6db4ee38a0ef78a4c20c"
 
-  url "https://github.com/exelearning/exelearning/releases/download/v#{version}/eXeLearning-#{version}-universal.dmg",
-      verified: "github.com/exelearning/exelearning/"
+  url "https://github.com/exelearning/exelearning/releases/download/v#{version}/eXeLearning-#{version}-universal.dmg"
   name "eXeLearning"
   desc "Authoring tool to create educational resources"
   homepage "https://exelearning.net/"

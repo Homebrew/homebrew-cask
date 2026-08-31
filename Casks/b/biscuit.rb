@@ -27,8 +27,7 @@ cask "biscuit" do
     app_image "Biscuit-#{version}.AppImage", target: "Biscuit.AppImage"
   end
 
-  url "https://github.com/agata/dl.biscuit/releases/download/#{version}/Biscuit-#{version}#{url_end}",
-      verified: "github.com/agata/dl.biscuit/"
+  url "https://github.com/agata/dl.biscuit/releases/download/#{version}/Biscuit-#{version}#{url_end}"
   name "Biscuit"
   desc "Browser to organise apps"
   homepage "https://eatbiscuit.com/"

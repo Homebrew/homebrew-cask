@@ -222,8 +222,7 @@ cask "thunderbird@esr" do
     "zh-CN"
   end
 
-  url "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/#{version}/mac/#{language}/Thunderbird%20#{version}.dmg",
-      verified: "download-installer.cdn.mozilla.net/pub/thunderbird/"
+  url "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/#{version}/mac/#{language}/Thunderbird%20#{version}.dmg"
   name "Mozilla Thunderbird ESR"
   name "Mozilla Thunderbird Extended Support Release"
   desc "Customizable email client"

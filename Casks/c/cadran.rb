@@ -2,8 +2,7 @@ cask "cadran" do
   version "1.3.12"
   sha256 "e994edaed3113413e4aeffd3d769bdd3329f18e0582986050bcbda5533245ac6"
 
-  url "https://github.com/Ilyomix/Cadran-releases/releases/download/v#{version}/Cadran-#{version}.dmg",
-      verified: "github.com/Ilyomix/Cadran-releases/"
+  url "https://github.com/Ilyomix/Cadran-releases/releases/download/v#{version}/Cadran-#{version}.dmg"
   name "Cadran"
   desc "Desktop clock rendered behind your icons"
   homepage "https://cadranapp.com/"

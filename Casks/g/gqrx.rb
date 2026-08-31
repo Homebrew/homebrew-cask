@@ -17,8 +17,7 @@ cask "gqrx" do
            intel: "f3743ac9ba3176f38522d90a7aa9cdab26f1c1d374217fe147c43363a1ced63d"
   end
 
-  url "https://github.com/gqrx-sdr/gqrx/releases/download/v#{version}/Gqrx-#{version}-#{arch}.dmg",
-      verified: "github.com/gqrx-sdr/gqrx/"
+  url "https://github.com/gqrx-sdr/gqrx/releases/download/v#{version}/Gqrx-#{version}-#{arch}.dmg"
   name "Gqrx"
   desc "Software-defined radio receiver powered by GNU Radio and Qt"
   homepage "https://www.gqrx.dk/"

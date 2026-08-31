@@ -2,8 +2,7 @@ cask "stremioservice" do
   version "0.1.22"
   sha256 "0b2aaf882823d16132bf1d49900d377d22f57741768ffdaa2958a8b6cef9c4f8"
 
-  url "https://github.com/Stremio/stremio-service/releases/download/v#{version}/StremioService.dmg",
-      verified: "github.com/Stremio/stremio-service/"
+  url "https://github.com/Stremio/stremio-service/releases/download/v#{version}/StremioService.dmg"
   name "Stremio Service"
   desc "Companion app for Stremio Web"
   homepage "https://web.strem.io/"

@@ -29,8 +29,7 @@ cask "blink1control" do
               target: "Blink1Control#{version.major}.AppImage"
   end
 
-  url "https://github.com/todbot/Blink1Control2/releases/download/v#{version}/Blink1Control#{version.major}-#{version}-#{url_end}",
-      verified: "github.com/todbot/Blink1Control2/"
+  url "https://github.com/todbot/Blink1Control2/releases/download/v#{version}/Blink1Control#{version.major}-#{version}-#{url_end}"
   name "Blink1Control"
   desc "Utility to control blink(1) USB RGB LED devices"
   homepage "https://blink1.thingm.com/"

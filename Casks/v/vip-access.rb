@@ -2,8 +2,7 @@ cask "vip-access" do
   version "1.0.8"
   sha256 :no_check
 
-  url "https://storage.googleapis.com/sedvip-prd-idcenter-downloads/VIPAccessSecurityCode.dmg",
-      verified: "storage.googleapis.com/sedvip-prd-idcenter-downloads/"
+  url "https://storage.googleapis.com/sedvip-prd-idcenter-downloads/VIPAccessSecurityCode.dmg"
   name "Symantec VIP Access"
   desc "Two-step authentication software"
   homepage "https://vip.symantec.com/"

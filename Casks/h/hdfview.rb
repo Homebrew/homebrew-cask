@@ -5,8 +5,7 @@ cask "hdfview" do
   sha256 arm:   "a1669bb6cbd32f65cfd3f0c1839a094cd29bcec1ad3697cfb95d704dfaefd603",
          intel: "776a87f2f6106d8b10183c8976aec303da88518de0412fa0440d433d95596c03"
 
-  url "https://github.com/HDFGroup/hdfview/releases/download/v#{version}/HDFView-#{version}App-Darwin-#{arch}.tar.gz",
-      verified: "github.com/HDFGroup/hdfview/"
+  url "https://github.com/HDFGroup/hdfview/releases/download/v#{version}/HDFView-#{version}App-Darwin-#{arch}.tar.gz"
   name "HDFView"
   desc "Tool for browsing and editing HDF files"
   homepage "https://www.hdfgroup.org/download-hdfview/"

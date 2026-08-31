@@ -2,8 +2,7 @@ cask "nani" do
   version "1.1.4"
   sha256 "b96dbe353ee16af3a1a26a0682097d5d88759b022c4152bafa0e3edcc743f80e"
 
-  url "https://nani-desktop.kiok.jp/artifacts/nani-#{version}.dmg",
-      verified: "nani-desktop.kiok.jp/artifacts/"
+  url "https://nani-desktop.kiok.jp/artifacts/nani-#{version}.dmg"
   name "Nani Translate"
   desc "AI-powered translator"
   homepage "https://nani.now/"
