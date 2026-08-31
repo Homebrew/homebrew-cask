@@ -22,6 +22,8 @@ cask "studio-3t" do
 
   app "Studio 3T.app"
 
+  uninstall quit: "com.install4j.0526-4458-1435-8154.837"
+
   zap trash: [
     "~/.3T/studio-3t",
     "~/Library/Preferences/3t.enterprise.mongochef.plist",
