@@ -21,7 +21,10 @@ cask "wondershare-uniconverter" do
 
   app "Wondershare UniConverter #{version.major}.app"
 
-  uninstall quit: "com.Wondershare.UniConverter#{version.major}"
+  uninstall quit: [
+    "com.google.Chrome",
+    "com.Wondershare.UniConverter#{version.major}",
+  ]
 
   zap trash: [
     "/Users/Shared/.Wondershare*.dat",
