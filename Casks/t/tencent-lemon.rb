@@ -24,10 +24,11 @@ cask "tencent-lemon" do
 
   app "Tencent Lemon.app"
 
-  uninstall delete: [
-    "/Library/Logs/Lemon",
-    "/Library/Preferences/LemonDaemon_packet.dat",
-  ]
+  uninstall quit:   "com.tencent.Lemon",
+            delete: [
+              "/Library/Logs/Lemon",
+              "/Library/Preferences/LemonDaemon_packet.dat",
+            ]
 
   zap trash: [
     "~/Library/Caches/com.tencent.Lemon",
