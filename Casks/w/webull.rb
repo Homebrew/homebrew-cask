@@ -20,6 +20,8 @@ cask "webull" do
 
   app "Webull Desktop.app"
 
+  uninstall quit: "com.webull.desktop.v1"
+
   zap trash: [
     "~/.config/Webull Desktop",
     "~/Library/Application Support/Webull Desktop",
