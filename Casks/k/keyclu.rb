@@ -17,7 +17,9 @@ cask "keyclu" do
 
   app "KeyClu.app"
 
-  uninstall quit: "com.0804Team.KeyClu"
+  uninstall launchctl: "com.0804Team.KeyCluXPCService",
+            quit:      "com.0804Team.KeyClu"
+            
 
   zap trash: [
     "~/Library/Application Support/KeyClu",
