@@ -1,6 +1,6 @@
 cask "keyclu" do
-  version "0.32"
-  sha256 "0f28de586ae1335621ed6ecff19255b1c320e4fe2ebb0ef2e96fc07ac0104d96"
+  version "0.33"
+  sha256 "ce92c33b3416b4f840ba2ae1d408dd774b7f1d758455c54bd8a6069fe4263244"
 
   url "https://github.com/Anze/KeyCluCask/releases/download/v#{version}/KeyClu.zip"
   name "KeyClu"
@@ -17,7 +17,8 @@ cask "keyclu" do
 
   app "KeyClu.app"
 
-  uninstall quit: "com.0804Team.KeyClu"
+  uninstall launchctl: "com.0804Team.KeyCluXPCService",
+            quit:      "com.0804Team.KeyClu"
 
   zap trash: [
     "~/Library/Application Support/KeyClu",
