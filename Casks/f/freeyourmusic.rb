@@ -1,9 +1,9 @@
 cask "freeyourmusic" do
   arch intel: "-x64"
 
-  version "9.31.1"
-  sha256 arm:   "ca139dc304519de6165efd1460974da321bd148a372d2d22dfbf60498da81e04",
-         intel: "c1d2e4a496c55735e5913eab510349148852c69ebf443e9fae03555a3d9f3101"
+  version "9.32.0"
+  sha256 arm:   "9706328b0dbeb9231ee64f6099e8428326e8ff9facf73cd71a6969eae28a7f13",
+         intel: "59a8afe9164b270a7cc5f0907a2bfc84b3086e874c76926f27245f225e26f613"
 
   url "https://fym-app-production.s3.nl-ams.scw.cloud/FreeYourMusic-#{version}#{arch}.dmg"
   name "FreeYourMusic"
@@ -19,6 +19,8 @@ cask "freeyourmusic" do
   depends_on macos: :monterey
 
   app "FreeYourMusic.app"
+
+  uninstall quit: "com.freeyourmusic.app"
 
   zap trash: [
     "~/Library/Application Support/Caches/freeyourmusic-updater",
