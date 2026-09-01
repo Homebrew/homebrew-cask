@@ -19,5 +19,9 @@ cask "maccoffee" do
 
   uninstall quit: "com.rekurt.maccoffee.direct"
 
-  zap trash: "~/Library/Preferences/com.rekurt.maccoffee.direct.plist"
+  zap trash: [
+    "~/Library/Caches/com.rekurt.maccoffee.direct",
+    "~/Library/HTTPStorages/com.rekurt.maccoffee.direct*",
+    "~/Library/Preferences/com.rekurt.maccoffee.direct.plist",
+  ]
 end
