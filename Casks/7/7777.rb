@@ -7,11 +7,6 @@ cask "7777" do
   desc "Remote AWS database on local port 7777"
   homepage "https://port7777.com/"
 
-  livecheck do
-    url "https://releases.port7777.com/latest/version.txt"
-    regex(/(\d+(?:\.\d+)+)/i)
-  end
-
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on :macos
