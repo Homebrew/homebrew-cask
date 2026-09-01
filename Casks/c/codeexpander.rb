@@ -1,5 +1,5 @@
 cask "codeexpander" do
-  version "6.1.1"
+  version "6.2.0"
   sha256 :no_check
 
   url "https://download.floweb.cn/CodeExpander_latest_universal.dmg"
@@ -18,7 +18,8 @@ cask "codeexpander" do
 
   app "CodeExpander.app"
 
-  uninstall launchctl: "CodeExpander"
+  uninstall launchctl: "CodeExpander",
+            quit:      "com.codeexpander.pro"
 
   zap trash: [
     "~/Library/Application Support/com.codeexpander",
