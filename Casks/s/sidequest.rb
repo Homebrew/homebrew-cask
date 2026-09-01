@@ -14,5 +14,15 @@ cask "sidequest" do
 
   app "SideQuest.app"
 
-  zap trash: "~/Library/Application Support/SideQuest"
+  uninstall launchctl: "com.sidequestvr.app.ShipIt"
+
+  zap trash: [
+    "~/Library/Application Support/SideQuest",
+    "~/Library/Application Support/SideQuestDesktop",
+    "~/Library/Caches/com.sidequestvr.app*",
+    "~/Library/Caches/sidequest-desktop-updater",
+    "~/Library/HTTPStorages/com.sidequestvr.app",
+    "~/Library/Preferences/ByHost/com.sidequestvr.app.ShipIt.*.plist",
+    "~/Library/Preferences/com.sidequestvr.app.plist",
+  ]
 end
