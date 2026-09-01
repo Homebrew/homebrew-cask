@@ -25,7 +25,10 @@ cask "advanced-renamer" do
 
   app "Advanced Renamer.app"
 
+  uninstall quit: "com.HulubuluSoftware.AdvancedRenamer"
+
   zap trash: [
+    "~/Library/Application Support/Advanced Renamer",
     "~/Library/Caches/com.HulubuluSoftware.AdvancedRenamer",
     "~/Library/HTTPStorages/com.HulubuluSoftware.AdvancedRenamer",
     "~/Library/Saved Application State/com.HulubuluSoftware.AdvancedRenamer.savedState",
