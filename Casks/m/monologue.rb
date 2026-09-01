@@ -17,6 +17,8 @@ cask "monologue" do
 
   app "Monologue.app"
 
+  uninstall quit: "com.zeitalabs.jottleai"
+
   zap trash: [
     "~/Library/Application Support/com.zeitalabs.jottleai",
     "~/Library/Caches/com.zeitalabs.jottleai",
