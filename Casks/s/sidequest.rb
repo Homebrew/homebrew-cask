@@ -1,9 +1,9 @@
 cask "sidequest" do
   arch arm: "-arm64"
 
-  version "1.0.0"
-  sha256 arm:   "0fdf37fcba8b5ad3c1141abe45286c7adfc99c4932ac1c41a96af34f18fa65df",
-         intel: "5b2d0c2ca61aa073a9ec8756bf507eb748597c23a1b2f95adb1eca023e79002a"
+  version "1.0.2"
+  sha256 arm:   "aa4a201d2482aa144385d6b1cd18933b6cc955b6b8b14365c34d7593317d56e6",
+         intel: "05f1659d8f4408208312e346822f87d186ced14f54a6c3967d5b6b018565adaa"
 
   url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}#{arch}.dmg"
   name "SideQuest"
@@ -14,5 +14,15 @@ cask "sidequest" do
 
   app "SideQuest.app"
 
-  zap trash: "~/Library/Application Support/SideQuest"
+  uninstall launchctl: "com.sidequestvr.app.ShipIt"
+
+  zap trash: [
+    "~/Library/Application Support/SideQuest",
+    "~/Library/Application Support/SideQuestDesktop",
+    "~/Library/Caches/com.sidequestvr.app*",
+    "~/Library/Caches/sidequest-desktop-updater",
+    "~/Library/HTTPStorages/com.sidequestvr.app",
+    "~/Library/Preferences/ByHost/com.sidequestvr.app.ShipIt.*.plist",
+    "~/Library/Preferences/com.sidequestvr.app.plist",
+  ]
 end
