@@ -17,5 +17,7 @@ cask "firealpaca" do
 
   app "FireAlpaca.app"
 
-  zap trash: "~/Library/Application Support/FireAlpaca"
+  uninstall quit: "com.firealpaca"
+
+  zap trash: ["~/Library/Caches/FireAlpaca", "~/Library/Application Support/FireAlpaca"]
 end
