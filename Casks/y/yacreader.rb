@@ -25,8 +25,11 @@ cask "yacreader" do
   app "YACReader.app"
   app "YACReaderLibrary.app"
 
+  uninstall quit: "com.yacreader.YACReader"
+
   zap trash: [
     "~/Library/Application Support/YACReader",
+    "~/Library/Caches/YACReader",
     "~/Library/Preferences/com.yacreader.YACReader.plist",
     "~/Library/Preferences/com.yacreader.YACReaderLibrary.plist",
     "~/Library/Saved Application State/com.yacreader.YACReader.savedState",
