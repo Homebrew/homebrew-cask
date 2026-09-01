@@ -7,11 +7,6 @@ cask "1kc-razer" do
   desc "Open source colour effects manager for Razer devices"
   homepage "https://github.com/1kc/razer-macos"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on :macos
