@@ -16,5 +16,7 @@ cask "xnviewmp" do
 
   app "XnViewMP.app"
 
+  uninstall quit: "com.xnview.XnView"
+
   zap trash: "~/Library/Saved Application State/com.xnview.XnView.savedState"
 end
