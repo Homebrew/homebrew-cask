@@ -1,5 +1,5 @@
 cask "firealpaca" do
-  version "2.16.0"
+  version "2.16.1"
   sha256 :no_check
 
   url "https://firealpaca.com/download/mac",
@@ -17,5 +17,7 @@ cask "firealpaca" do
 
   app "FireAlpaca.app"
 
-  zap trash: "~/Library/Application Support/FireAlpaca"
+  uninstall quit: "com.firealpaca"
+
+  zap trash: ["~/Library/Caches/FireAlpaca", "~/Library/Application Support/FireAlpaca"]
 end
