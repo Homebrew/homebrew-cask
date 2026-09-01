@@ -1,6 +1,6 @@
 cask "ticktick" do
-  version "8.0.81,914"
-  sha256 "73a108872d5092717db936839847a31a56c4a044fa1a3490e2bd7b50095f7c8e"
+  version "8.2.00,916"
+  sha256 "6c44fce60cbdc0f0ace97f15f596d3880407a4b115d39a0d3f9bb27544740dab"
 
   url "https://download.ticktick.app/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg"
   name "TickTick"
@@ -13,7 +13,7 @@ cask "ticktick" do
   end
 
   auto_updates true
-  depends_on :macos
+  depends_on macos: :monterey
 
   app "TickTick.app"
 
