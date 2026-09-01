@@ -1,6 +1,6 @@
 cask "whatsize" do
-  version "8.2.8"
-  sha256 "9c0d5cf185cc1d4485375d7614405a31aada6185be203a6234fe3a6faf91c036"
+  version "8.2.9"
+  sha256 "1d2fa5f0e4ac6832bd7174ad72d72bf6975fdc28644d50b941253a86b95072f6"
 
   url "https://www.whatsizemac.com/software/whatsize#{version.major}/whatsize_#{version}.pkg"
   name "WhatSize"
