@@ -1,6 +1,6 @@
 cask "engine-dj" do
-  version "5.0.0,68214e98c667298c,12d16a34d4"
-  sha256 "fc53b91de204813ea0d9d1922bdd053f8b3922648e4fddf9770f6c836410fd76"
+  version "5.1.0,c420dd2bb4faafb2,2acfe893c4"
+  sha256 "38c3f0c1d0349828d94d2576f265976fbb7a001545b8d9265fe8b59c2eb8f575"
 
   url "https://public.inmusiccdn.com/Engine/#{version.csv.first}/RELEASE/#{version.csv.second}/Engine_DJ_#{version.csv.first}_#{version.csv.third}_Setup.dmg"
   name "Engine DJ Desktop"
