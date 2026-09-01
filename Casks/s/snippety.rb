@@ -1,6 +1,6 @@
 cask "snippety" do
-  version "11.3.148"
-  sha256 "765cc8e3c7d32c4099d63a331e987920d40297f3a24ab9553e0ef4546e92585e"
+  version "11.4.149"
+  sha256 "1edf0fde902c6acfe9d74dbf2a10480a4df94a0a0f8b06ae3a5b28384f0394fb"
 
   url "https://snippety.app/releases/Snippety-#{version}.dmg"
   name "Snippety"
