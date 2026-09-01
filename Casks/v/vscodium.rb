@@ -6,6 +6,8 @@ cask "vscodium" do
     sha256 arm:   "e09c8fbf04c82d752ec0b4f5f4e93bab8644a06d2b9ad6c08e6b8eb6067b5f85",
            intel: "a946df0329f0e501db58793ef0c7101480972a25a4edd7ec3bd8cda6006f92e7"
 
+    url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium-darwin-#{arch}-#{version}.zip"
+
     livecheck do
       skip "Legacy version"
     end
@@ -15,6 +17,8 @@ cask "vscodium" do
     sha256 arm:   "f21ee52629eb5e39c055daea70118b7a6055c639aecf3dad05e1997a9ad83ac0",
            intel: "fa0637bf6fa511487611bc65dc47b0d4e247513e16309879bf9bd4677cf5243e"
 
+    url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium-darwin-#{arch}-#{version}.zip"
+
     livecheck do
       url "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master/stable/darwin/#{arch}/latest.json"
       strategy :json do |json|
@@ -22,27 +26,51 @@ cask "vscodium" do
       end
     end
   end
+  on_macos do
+    depends_on macos: :big_sur
 
-  url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium-darwin-#{arch}-#{version}.zip"
+    app "VSCodium.app"
+    binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/codium"
+
+    zap trash: [
+      "~/.vscode-oss",
+      "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vscodium.sfl*",
+      "~/Library/Application Support/VSCodium",
+      "~/Library/Caches/com.vscodium",
+      "~/Library/Caches/com.vscodium.ShipIt",
+      "~/Library/Caches/VSCodium",
+      "~/Library/HTTPStorages/com.vscodium",
+      "~/Library/Preferences/com.vscodium*.plist",
+      "~/Library/Saved Application State/com.vscodium.savedState",
+    ]
+  end
+  on_linux do
+    version "1.126.04524,2.34"
+    sha256 x86_64_linux: "c6d5eea23a7329b360b8c310f52316ae12b938aa7d827d2e3f96fa742e998614"
+
+    url "https://github.com/VSCodium/vscodium/releases/download/#{version.csv.first}/VSCodium-#{version.csv.first}.glibc#{version.csv.second}-x86_64.AppImage"
+
+    livecheck do
+      url "https://github.com/VSCodium/vscodium/releases?q=prerelease%3Afalse"
+      regex(/href=.*?VSCodium[._-]v?(\d+(?:\.\d+)+)\.glibc(\d+(?:\.\d+)*)-x86_64\.AppImage/i)
+      strategy :page_match do |page, regex|
+        page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+      end
+    end
+
+    depends_on arch: :x86_64
+
+    app_image "VSCodium-#{version.csv.first}.glibc#{version.csv.second}-x86_64.AppImage", target: "VSCodium.AppImage"
+
+    zap trash: [
+      "~/.config/VSCodium",
+      "~/.vscode-oss",
+    ]
+  end
+
   name "VSCodium"
   desc "Binary releases of VS Code without MS branding/telemetry/licensing"
   homepage "https://github.com/VSCodium/vscodium"
 
   auto_updates true
-  depends_on :macos
-
-  app "VSCodium.app"
-  binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/codium"
-
-  zap trash: [
-    "~/.vscode-oss",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vscodium.sfl*",
-    "~/Library/Application Support/VSCodium",
-    "~/Library/Caches/com.vscodium",
-    "~/Library/Caches/com.vscodium.ShipIt",
-    "~/Library/Caches/VSCodium",
-    "~/Library/HTTPStorages/com.vscodium",
-    "~/Library/Preferences/com.vscodium*.plist",
-    "~/Library/Saved Application State/com.vscodium.savedState",
-  ]
 end
