@@ -1,6 +1,6 @@
 cask "notepadexe" do
-  version "1.5.19"
-  sha256 "01f5d7e1945d4e255989ec3b56c335e8e4af459cbc19f258e6e73d9e8b3d12ba"
+  version "1.5.20"
+  sha256 "3faa7b3b6480bfb4ce348d069003b30a1a6d498ceea77e4fe3828a778459d8fd"
 
   url "https://github.com/notepadhq/notepadexe-public/releases/download/#{version}/Notepad.zip"
   name "Notepad.exe"
