@@ -1,9 +1,9 @@
 cask "wowup-cf" do
   arch arm: "-arm64"
 
-  version "2.23.0"
-  sha256 arm:   "b6fd067e604196f637fcfc3282bb1c40a9290da1f1a3603e02f973a6cabbe396",
-         intel: "9c03b5cfea84e08996cdfde8f98632fef844898d07ffd8bc36f64b2281a3d03a"
+  version "2.23.1"
+  sha256 arm:   "fd03196d792fdb71d71141f6c4f2ed6215880afc6d7d237ca066d1fe786a3c2e",
+         intel: "b6e6bdc1f7d6ac7a03009c4e024989cbf5f471914019fa80e5d519b144d88c64"
 
   url "https://github.com/WowUp/WowUp.CF/releases/download/v#{version}/WowUp-CF-#{version}#{arch}.dmg"
   name "WowUp-CF"
