@@ -20,6 +20,8 @@ cask "freeyourmusic" do
 
   app "FreeYourMusic.app"
 
+  uninstall quit: "com.freeyourmusic.app"
+
   zap trash: [
     "~/Library/Application Support/Caches/freeyourmusic-updater",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.freeyourmusic.app.sfl*",
