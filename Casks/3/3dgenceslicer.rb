@@ -7,16 +7,6 @@ cask "3dgenceslicer" do
   desc "Prepare files for 3D printing based on CAD models for 3DGence printers"
   homepage "https://3dgence.com/"
 
-  livecheck do
-    url "https://support.3dgence.com/software.html"
-    regex(/3DGence\s+SLICER\s+v?(\d+(?:\.\d+)+)\s+\((?:version\s+|v)?(\d+(?:\.\d+)+)\)\s+-\s+system\s+MacOS/im)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[1]},#{match[0]}"
-      end
-    end
-  end
-
   disable! date: "2026-09-01", because: :fails_gatekeeper_check
 
   depends_on :macos
