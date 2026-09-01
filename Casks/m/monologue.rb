@@ -1,5 +1,5 @@
 cask "monologue" do
-  version "1.5.0"
+  version "1.5.1"
   sha256 :no_check
 
   url "https://updates.jottle.ai/Monologue.dmg"
@@ -16,6 +16,8 @@ cask "monologue" do
   depends_on macos: :sonoma
 
   app "Monologue.app"
+
+  uninstall quit: "com.zeitalabs.jottleai"
 
   zap trash: [
     "~/Library/Application Support/com.zeitalabs.jottleai",
