@@ -19,6 +19,8 @@ cask "audacity" do
 
   app "Audacity.app"
 
+  uninstall quit: "org.audacityteam.audacity"
+
   zap trash: [
     "~/Library/Application Support/audacity",
     "~/Library/Preferences/org.audacityteam.audacity.plist",
