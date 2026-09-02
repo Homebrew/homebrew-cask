@@ -1,9 +1,9 @@
 cask "wrike" do
   arch arm: "_ARM"
 
-  version "4.6.1"
-  sha256 arm:   "4bfe955f8421b5e44770a24481970402856c9f7b3408a89cbfc11495472577a2",
-         intel: "adcb19a8076685ee8f9a16f5209f87a48d7f5076d5b82b4ded70963b3a4f50cc"
+  version "4.6.2"
+  sha256 arm:   "b8796829ac6d884df0bd65e9f5b399375c827852dbb51cfdd4420a091194c9bd",
+         intel: "92e94f94460631be8a2973312d92a1bf2b14662de7f68439d00f6d66bca50f79"
 
   url "https://dl.wrike.com/download/WrikeDesktopApp#{arch}.v#{version}.dmg"
   name "Wrike"
