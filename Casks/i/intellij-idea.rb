@@ -31,6 +31,8 @@ cask "intellij-idea" do
   command_wrapper "idea",
                   executable: "#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea"
 
+  uninstall quit: "com.jetbrains.intellij"
+
   zap trash: [
     "~/Library/Application Support/JetBrains/IntelliJIdea#{version.major_minor}",
     "~/Library/Caches/JetBrains/IntelliJIdea#{version.major_minor}",
