@@ -33,6 +33,8 @@ cask "intellij-idea-oss" do
 
   app "IntelliJ IDEA OSS.app"
 
+  uninstall quit: "com.jetbrains.intellij.ce"
+
   zap trash: [
     "~/Library/Application Support/JetBrains/IdeaIC#{version.major_minor}",
     "~/Library/Caches/JetBrains/IdeaIC#{version.major_minor}",
