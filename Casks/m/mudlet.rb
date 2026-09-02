@@ -1,9 +1,9 @@
 cask "mudlet" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "5.0.0"
-  sha256 arm:   "4b2750f9ac2bfe4b5124167b9ae26498dc3c4156c76bbc877e4f9986109dcf74",
-         intel: "9ed4ea62c188861fa36cff0523487300d0ef3c2707df3de362e23d3d7b90cb3e"
+  version "5.0.1"
+  sha256 arm:   "1727fa51fe0ca388d95930bdf88be34e2d9314c148f1ee2d78331e6a4812bfd0",
+         intel: "be527a250a9fba3cac35d3e141800e2f05df11d53b524df86625e10ff6efa3e3"
 
   url "https://github.com/Mudlet/Mudlet/releases/download/Mudlet-#{version}/Mudlet-#{version}-#{arch}.dmg"
   name "Mudlet"
