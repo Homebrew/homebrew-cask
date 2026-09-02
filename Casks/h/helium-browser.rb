@@ -4,11 +4,11 @@ cask "helium-browser" do
   file_sep = on_system_conditional macos: "_", linux: "-"
   url_end = on_system_conditional macos: "-macos.dmg", linux: ".AppImage"
 
-  version "0.16.2.1"
-  sha256 arm:          "6a88b9eba2c634686dd57872c990a56bb925ee59345b34eadf76813242a1caef",
-         intel:        "e81e5e99700d9d5e1dd7eac87724f148a3b25dfc6ce16a1c4fea70276c68c053",
-         arm64_linux:  "7f9b283ada4542dc8ae856fecc1d4e6a46e652b8b3be4f81c35177e90425c097",
-         x86_64_linux: "2d2dec8f2cd1d7249f0f42fd46e945e59832b3d1432e6f003d847f00970a0d02"
+  version "0.16.3.1"
+  sha256 arm:          "4cc271d1305f08934d9500b672525ae5f9f5aa2ed49986d8bbc625a99bd83220",
+         intel:        "4bc4cecbc19eba8fec87c00cd74edb2446592a1bb8a2fbe0a682020ef6c3f4fc",
+         arm64_linux:  "14e53a5902c53dba4f2c4b902616acbb1138bc3b01e9c58873493d0c07208419",
+         x86_64_linux: "9370a3ac5e39b3b4a2cd1a1ffd7f5e3a73cac24381f5cd40bc14a68e3ed13883"
 
   on_macos do
     depends_on macos: :ventura
