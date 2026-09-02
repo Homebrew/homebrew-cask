@@ -19,6 +19,8 @@ cask "touchdesigner" do
 
   app "TouchDesigner.app"
 
+  uninstall quit: "ca.derivative.TouchDesigner"
+
   zap trash: [
     "~/Library/Application Support/Derivative/TouchDesigner099",
     "~/Library/Saved Application State/ca.derivative.TouchDesigner.savedState",
