@@ -1,9 +1,9 @@
 cask "clion" do
   arch arm: "-aarch64"
 
-  version "2026.2.1,262.9437.136"
-  sha256 arm:   "5017110b817f95aa2128658e0cd069b16935be85c0585f6e01b4fadd6fc663d3",
-         intel: "7ef4edf409d635e4f2007860bb124acd6489cc1c8fd903749840e4028e9cdd9d"
+  version "2026.2.2,262.10315.131"
+  sha256 arm:   "514fd03e52d3f101fc798f87f08deec216beac864b6a78b04f9095e15d5ae898",
+         intel: "506dc6afd987dbeefe5616c965665fc2f78a134432f19d32dd8b0b25278380f7"
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.csv.first}#{arch}.dmg"
   name "CLion"
@@ -29,6 +29,8 @@ cask "clion" do
   app "CLion.app"
   command_wrapper "clion",
                   executable: "#{appdir}/CLion.app/Contents/MacOS/clion"
+
+  uninstall quit: "com.jetbrains.CLion"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/CLion#{version.major_minor}",
