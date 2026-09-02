@@ -7,6 +7,11 @@ cask "vcamapp" do
   desc "Face-tracking virtual avatar app"
   homepage "https://vcamapp.com/en"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: :sequoia
 
   app "VCam.app"
