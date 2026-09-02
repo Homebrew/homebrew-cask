@@ -1,6 +1,6 @@
 cask "cleanmymac" do
-  version "5.6.0,50600.0.2608201300"
-  sha256 "12eb9308835820c26927f953a1bb8a186538004539282d06a6eb0d73a3955cb8"
+  version "5.6.1,50601.0.2609011534"
+  sha256 "cecafce7591a8b78307bbbd9566760136ad19988074e5bf3540fc0bfe6f4964a"
 
   url "https://updates.cleanmymac.com/com.macpaw.cleanmymac#{version.major}/releases/CleanMyMac#{version.major}_#{version.csv.second}.zip"
   name "CleanMyMac"
