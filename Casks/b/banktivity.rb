@@ -20,6 +20,8 @@ cask "banktivity" do
 
   app "Banktivity.app"
 
+  uninstall quit: "com.iggsoftware.banktivity"
+
   zap trash: [
     "~/Library/Application Scripts/com.iggsoftware.banktivity",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iggsoftware.banktivity.sfl*",
