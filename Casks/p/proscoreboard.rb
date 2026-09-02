@@ -17,6 +17,8 @@ cask "proscoreboard" do
 
   app "ProScoreboard.app"
 
+  uninstall quit: "com.renewedvision.Scoreboard"
+
   zap trash: [
     "~/Library/Application Support/bugsnag-shared-com.renewedvision.Scoreboard",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.renewedvision.scoreboard.sfl*",
