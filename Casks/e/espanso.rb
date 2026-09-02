@@ -1,6 +1,6 @@
 cask "espanso" do
-  version "2.4.0"
-  sha256 "aaf81d7573db785e5447b867e0f2f1d6f061ea9fa1756fda02f21b0402407669"
+  version "2.4.1"
+  sha256 "e6aee2d9446d7625e57dafc6613add21fc7c9f709ba42f08b5ada844c6f7110a"
 
   url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-Universal.dmg"
   name "Espanso"
