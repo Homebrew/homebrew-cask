@@ -16,6 +16,8 @@ cask "ocenaudio" do
 
   app "ocenaudio.app"
 
+  uninstall quit: "com.ocenaudio"
+
   zap trash: [
     "~/Library/Application Support/ocenaudio",
     "~/Library/Caches/ocenaudio",
