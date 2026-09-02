@@ -1,6 +1,6 @@
 cask "openclaw" do
-  version "2026.8.1"
-  sha256 "a4c94f4f6c8684323a6c64669c7f1cfed92525d6ccc7d5219b7f9e308983814f"
+  version "2026.8.2"
+  sha256 "7a0f703e97a8ed87baf0e11c4c5e2b945c712a2db18164229e9af1756dfe115a"
 
   url "https://github.com/openclaw/openclaw/releases/download/v#{version}/OpenClaw-#{version}.dmg"
   name "OpenClaw"
