@@ -17,9 +17,14 @@ cask "egnyte" do
   app "Egnyte.app"
 
   uninstall launchctl: [
-    "com.egnyte.DesktopLaunchHelper",
-    "FELUD555VC.group.com.egnyte.DesktopApp.XPCBroker",
-  ]
+              "com.egnyte.DesktopLaunchHelper",
+              "FELUD555VC.group.com.egnyte.DesktopApp.XPCBroker",
+            ],
+            quit:      [
+              "com.egnyte.DesktopApp",
+              "com.egnyte.DesktopApp.FinderHelper",
+              "com.egnyte.UpgradeChecker",
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.egnyte.DesktopApp",
